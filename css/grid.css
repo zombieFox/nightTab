@@ -10,7 +10,7 @@
 }
 
 .grid-item-head {
-  padding: 4em 2em 2em 2em;
+  padding: 1em 2em 0 2em;
   width: 100%;
 }
 
@@ -26,7 +26,12 @@
 }
 
 @media (min-width: 700px) {
+  .grid-item-head {
+    padding: 4em 2em 2em 2em;
+  }
+
   .grid-item-body {
+    padding: 2em 2em 25vh 2em;
     grid-template-columns: repeat(3, minmax(1em, 1fr));
   }
 }
