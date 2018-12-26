@@ -16,14 +16,14 @@ var data = (function() {
 
   var save = function() {
     set(saveName, JSON.stringify(state.get()));
-    console.log(saveName + " saved");
+    console.log(saveName + " data saved");
   };
 
   var restore = function() {
     var data = JSON.parse(get(saveName));
     bookmarks.restore(data.bookmarks);
     theme.restore(data.accent);
-    console.log(saveName + " restored");
+    console.log(saveName + " data restored");
   };
 
   var wipe = function() {
