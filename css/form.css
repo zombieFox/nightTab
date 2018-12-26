@@ -4,7 +4,7 @@ input[type="password"],
 input[type="search"],
 input[type="tel"],
 input[type="text"] {
-  background-color: var(--gray-16);
+  background-color: var(--gray-14);
   padding: 0 0.5em;
   margin: 0 0 1em 0;
   color: var(--black);

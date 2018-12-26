@@ -12,8 +12,8 @@ input[type="submit"] {
   min-height: 2.5em;
   line-height: 1;
   border: 0;
-  border-top-width: 2px;
-  border-bottom-width: 2px;
+  border-top-width: 3px;
+  border-bottom-width: 3px;
   border-style: solid;
   border-color: transparent;
   border-radius: var(--radius);
@@ -29,10 +29,44 @@ input[type="submit"] {
   align-items: center;
 }
 
-.button.active {
-  border-top-width: 3px;
-  border-bottom-width: 3px;
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: var(--gray-03);
   border-bottom-color: rgb(var(--accent));
+  color: var(--white);
+  outline: 0;
+}
+
+button:active,
+.button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: var(--gray-04);
+  color: var(--white);
+  transition: none;
+}
+
+button[disabled],
+.button[disabled],
+button[disabled]:hover,
+.button[disabled]:hover,
+button[disabled]:focus,
+.button[disabled]:focus,
+button[disabled]:active,
+.button[disabled]:active {
+  background-color: var(--gray-02);
+  border-color: transparent;
+  color: var(--gray-04);
+  cursor: default;
 }
 
 button [class^="icon-"],
@@ -41,6 +75,10 @@ button [class*=" icon-"],
 .button [class*=" icon-"] {
   font-size: 1.5em;
   line-height: 1;
+}
+
+.button.active {
+  border-bottom-color: rgb(var(--accent));
 }
 
 .button-small {
@@ -68,32 +106,6 @@ button [class*=" icon-"],
 .button-group button:last-child,
 .button-group .button:last-child {
   border-radius: 0 var(--radius) var(--radius) 0;
-}
-
-button:hover,
-button:focus,
-.button:hover,
-.button:focus,
-input[type="button"]:hover,
-input[type="button"]:focus,
-input[type="reset"]:hover,
-input[type="reset"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-  background-color: var(--gray-03);
-  border-bottom-color: rgb(var(--accent));
-  color: var(--white);
-  outline: 0;
-}
-
-button:active,
-.button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-  background-color: var(--gray-04);
-  color: var(--white);
-  transition: none;
 }
 
 button [class^="button-"],

@@ -71,7 +71,6 @@
   bottom: 0;
   left: 0.25em;
   z-index: -1;
-  transition: all var(--animation-speed-medium) ease-in-out;
 }
 
 .link-control {
@@ -152,7 +151,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: all var(--animation-speed-medium) ease-in-out;
 }
 
 .link-item:hover .link-letter,
@@ -170,7 +168,6 @@
   overflow: hidden;
   opacity: 1;
   text-overflow: ellipsis;
-  transition: all var(--animation-speed-medium) ease-in-out;
 }
 
 .link-item:hover .link-name,

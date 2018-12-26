@@ -35,6 +35,12 @@
   --font-bold: "Open Sans Bold", sans-serif;
   --font-light: "Open Sans Light", sans-serif;
   --font-fjalla: "Fjalla One Regular", sans-serif;
+  /* breakpoint reference */
+  /* can not be used in @media as of yet */
+  --breakpoint-sm: 550px;
+  --breakpoint-md: 700px;
+  --breakpoint-lg: 900px;
+  --breakpoint-xl: 1300px;
 }
 
 @media (min-width: 700px) {

@@ -1,16 +1,26 @@
 .clock {
   margin: 0;
   padding: 0;
-  min-width: 6em;
+  width: 100%;
   font-family: var(--font-fjalla);
   font-size: 1.5em;
   color: var(--white);
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   transition: all var(--animation-speed-medium) ease-in-out;
 }
 
 .clock-seperator {
   color: rgb(var(--accent));
+}
+
+.clock-hour,
+.clock-minutes,
+.clock-seconds {
+  min-width: 1.75em;
+  display: block;
 }
 
 .clock-hour {

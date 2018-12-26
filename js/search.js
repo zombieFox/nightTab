@@ -24,10 +24,11 @@ var search = (function() {
     var searchInput = helper.e(".search-input");
     var searchClear = helper.e(".search-clear");
     if (searchInput.value != "") {
-      helper.removeClass(searchClear, "is-hidden");
+      console.log(1);
+      searchClear.removeAttribute("disabled");
     } else {
-      helper.addClass(searchClear, "is-hidden");
-    }
+      searchClear.setAttribute("disabled", "");
+    };
   };
 
   var _findResults = function(string) {

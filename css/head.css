@@ -1,32 +1,22 @@
 .head {
-  margin: 0;
+  --gutter: 0.5em;
+  margin: 0 calc(var(--gutter) * -1);
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .head-item {
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
 
-.head-item:first-child {
-  margin-left: 0;
-}
-
-.head-item:last-child {
-  margin-right: 0;
-}
-
-.head-item-shrink {
-  flex-shrink: 0;
-}
-
-.head-item-grow {
+.head-search {
   flex-grow: 1;
 }
