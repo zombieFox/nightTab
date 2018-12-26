@@ -28,9 +28,6 @@
   --animation-speed-fast: 0.1s;
   --animation-speed-medium: 0.2s;
   --animation-speed-slow: 0.3s;
-  --link-height: 7em;
-  --url-height: 20%;
-  --edit-height: 30%;
   --font-regular: "Open Sans Regular", sans-serif;
   --font-bold: "Open Sans Bold", sans-serif;
   --font-light: "Open Sans Light", sans-serif;
@@ -43,8 +40,20 @@
   --breakpoint-xl: 1300px;
 }
 
+:root.is-link-block {
+  --link-height: 7em;
+  --url-height: 20%;
+  --edit-height: 30%;
+}
+
+:root.is-link-list {
+  --link-height: 4em;
+  --url-height: 30%;
+  --edit-height: 50%;
+}
+
 @media (min-width: 700px) {
-  :root {
+  :root.is-link-block {
     --link-height: 9em;
   }
 }

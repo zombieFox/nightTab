@@ -21,9 +21,12 @@ var data = (function() {
 
   var restore = function() {
     var data = JSON.parse(get(saveName));
-    bookmarks.restore(data.bookmarks);
-    theme.restore(data.accent);
-    console.log(saveName + " data restored");
+    if (data) {
+      bookmarks.restore(data.bookmarks);
+      theme.restore(data.theme);
+      control.restore(data.control);
+      console.log(saveName + " data restored");
+    };
   };
 
   var wipe = function() {

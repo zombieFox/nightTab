@@ -34,9 +34,11 @@ var theme = (function() {
   };
 
   var restore = function(object) {
-    accent = object;
-    _updateInput();
-    render();
+    if (object) {
+      accent = object;
+      _updateInput();
+      render();
+    };
   };
 
   var init = function() {
