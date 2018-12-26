@@ -9,11 +9,3 @@
   z-index: 1000;
   transition: opacity var(--animation-speed-slow);
 }
-
-@media (min-width: $screen-sm) {}
-
-@media (min-width: $screen-md) {}
-
-@media (min-width: $screen-lg) {}
-
-@media (min-width: $screen-xl) {}
