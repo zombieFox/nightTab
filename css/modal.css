@@ -1,0 +1,81 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 1em;
+  z-index: 2000;
+  width: 45em;
+  max-width: calc(100% - 6em);
+  min-width: 10em;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  perspective: 1000px;
+  transition: opacity var(--animation-speed-slow);
+}
+
+.modal-large {
+  width: 65em;
+  max-width: calc(100% - 2em);
+}
+
+.modal-small {
+  width: 25em;
+}
+
+.modal-wrapper {
+  box-sizing: border-box;
+  position: relative;
+  transition: all var(--animation-speed-fast);
+}
+
+.modal-wrapper .container {
+  max-width: 100%;
+}
+
+.is-transition-end .modal-wrapper {
+  transition: all var(--animation-speed-medium);
+}
+
+.modal-body {
+  background-color: var(--gray-02);
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-bottom: 1em solid transparent;
+  border-bottom-color: var(--gray-02);
+  padding: 2em;
+  max-height: calc(90vh - 3.6666666667em);
+  overflow: scroll;
+  box-sizing: border-box;
+  z-index: 1;
+  position: relative;
+}
+
+.modal-heading {}
+
+.modal-heading:focus {
+  outline: 0;
+}
+
+.modal-controls {
+  background-color: var(--gray-02);
+  margin: -1em 0 0;
+  position: relative;
+  z-index: 2;
+  border-radius: 0 0 var(--radius) var(--radius);
+  display: flex;
+}
+
+.modal-controls .button {
+  border-radius: 0;
+  margin: 0;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  flex-basis: 50%;
+}
+
+.modal-controls .button:first-child {
+  border-radius: 0 0 0 var(--radius);
+}
+
+.modal-controls .button:last-child {
+  border-radius: 0 0 var(--radius) 0
+}

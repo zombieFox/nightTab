@@ -1,0 +1,119 @@
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: var(--gray-02);
+  padding: 0.25em 1em;
+  margin: 0 0 1em 0;
+  color: var(--gray-16);
+  font-size: 1em;
+  font-family: var(--font-regular);
+  min-height: 2.5em;
+  line-height: 1;
+  border: 0;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: var(--radius);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all var(--animation-speed-medium) ease-in-out;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.button.active {
+  border-top-width: 3px;
+  border-bottom-width: 3px;
+  border-bottom-color: rgb(var(--accent));
+}
+
+button [class^="icon-"],
+button [class*=" icon-"],
+.button [class^="icon-"],
+.button [class*=" icon-"] {
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.button-small {
+  font-size: 0.8em;
+}
+
+.button-group {
+  margin: 0 0 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.button-group button,
+.button-group .button {
+  margin: 0;
+  border-radius: 0;
+}
+
+.button-group button:first-child,
+.button-group .button:first-child {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.button-group button:last-child,
+.button-group .button:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: var(--gray-03);
+  border-bottom-color: rgb(var(--accent));
+  color: var(--white);
+  outline: 0;
+}
+
+button:active,
+.button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: var(--gray-04);
+  color: var(--white);
+  transition: none;
+}
+
+button [class^="button-"],
+button [class*=" button-"],
+.button [class^="button-"],
+.button [class*=" button-"] {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+button [class^="button-"]:first-child,
+button [class*=" button-"]:first-child,
+.button [class^="button-"]:first-child,
+.button [class*=" button-"]:first-child {
+  margin-left: 0;
+}
+
+button [class^="button-"]:last-child,
+button [class*=" button-"]:last-child,
+.button [class^="button-"]:last-child,
+.button [class*=" button-"]:last-child {
+  margin-right: 0;
+}

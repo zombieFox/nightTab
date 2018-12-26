@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/shade.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/head.css">
+  <link rel="stylesheet" href="css/clock.css">
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/links.css">
+</head>
+
+<body>
+
+  <div class="grid">
+
+    <div class="grid-item-head">
+      <div class="head">
+        <div class="head-item">
+          <p class="clock"></p>
+        </div>
+        <div class="head-item head-item-grow">
+          <form class="search" action="http://www.google.com/search" method="get">
+            <input class="search-input margin-bottom-0" type="text" placeholder="Find bookmarks or search" tabindex="1" name="q" autocomplete="off" tabindex="1">
+            <input type="submit" value="Search" class="is-hidden">
+          </form>
+        </div>
+        <div class="head-item search-clear is-hidden">
+          <button class="button margin-bottom-0" tabindex="1">
+            <span class="icon-close"></span>
+          </button>
+        </div>
+        <div class="head-item">
+          <button class="button margin-bottom-0 control-add" tabindex="1">
+            <span class="button-text">Add</span>
+          </button>
+        </div>
+        <div class="head-item">
+          <button class="button margin-bottom-0 control-edit" tabindex="1">
+            <span class="button-text">Edit</span>
+          </button>
+        </div>
+        <div class="head-item">
+          <form class="theme">
+            <label class="button margin-bottom-0 theme-label" for="accent-picker">
+              <span class="button-text">Accent</span>
+            </label>
+            <input id="accent-picker" type="color" class="theme-input" value="#ffaa33" tabindex="1">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-item-body"></div>
+
+  </div>
+
+</body>
+
+<script src="js/helper.js"></script>
+<script src="js/control.js"></script>
+<script src="js/bookmarks.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/shade.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/clock.js"></script>
+<script src="js/search.js"></script>
+<script src="js/state.js"></script>
+<script src="js/data.js"></script>
+<script src="js/links.js"></script>
+<script src="js/init.js"></script>
+
+</html>

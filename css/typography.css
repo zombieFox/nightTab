@@ -1,0 +1,145 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1em 0;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-family: var(--font-light);
+}
+
+h2 {
+  font-size: 1.5em;
+  font-family: var(--font-light);
+}
+
+h3 {
+  font-size: 1.5em;
+  font-family: var(--font-regular);
+}
+
+h4 {
+  font-size: 1.25em;
+  font-family: var(--font-bold);
+}
+
+h5 {
+  font-size: 1em;
+  font-family: var(--font-bold);
+}
+
+h6 {
+  font-size: 0.75em;
+  font-family: var(--font-bold);
+}
+
+p {
+  color: var(--black);
+  margin: 0;
+  line-height: 1.5;
+}
+
+hr {
+  border: 0;
+  border: 1px solid var(--gray-08);
+  margin: 1em 0;
+  clear: both;
+}
+
+b,
+caption,
+strong {
+  font-family: var(--font-bold);
+}
+
+a {
+  color: var(--gray-16);
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: var(--gray-16);
+}
+
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--white);
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0 0 0 1.5em;
+}
+
+ol:not(:last-child),
+ul:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+li {
+  margin: 0;
+}
+
+li>ul,
+li>ol {
+  margin: 0;
+}
+
+li:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+li>ul:not(:last-child),
+li>ol:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+table {
+  border: 0;
+  margin: 0 0 1em;
+  padding: 0;
+  width: 100%;
+  border-spacing: 0;
+}
+
+table thead tr td,
+table thead tr th {
+  background-color: var(--gray-03);
+  border: 0;
+  border-bottom: 1px solid var(--gray-04);
+  padding: 0.5em;
+  margin: 0;
+  text-align: left;
+  font-family: var(--font-bold);
+  box-sizing: border-box;
+}
+
+table tr:nth-child(odd) {
+  background-color: var(--gray-02);
+}
+
+table tbody tr td,
+table tbody tr th {
+  padding: 0.25em 0.5em;
+  margin: 0;
+  border: 0;
+  text-align: left;
+  box-sizing: border-box;
+}

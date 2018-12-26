@@ -1,0 +1,26 @@
+.clock {
+  margin: 0;
+  padding: 0;
+  min-width: 6em;
+  font-family: var(--font-fjalla);
+  font-size: 1.5em;
+  color: var(--white);
+  text-align: center;
+  transition: all var(--animation-speed-medium) ease-in-out;
+}
+
+.clock-seperator {
+  color: rgb(var(--accent));
+}
+
+.clock-hour {
+  color: var(--white);
+}
+
+.clock-minutes {
+  color: var(--gray-16);
+}
+
+.clock-seconds {
+  color: var(--gray-12);
+}

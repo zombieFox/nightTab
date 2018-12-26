@@ -1,0 +1,66 @@
+:root {
+  --black: #222222;
+  --white: #ffffff;
+  --gray-01: #262831;
+  --gray-02: #2f333e;
+  --gray-03: #393e4b;
+  --gray-04: #434958;
+  --gray-05: #4d5465;
+  --gray-06: #575f72;
+  --gray-07: #616a7f;
+  --gray-08: #6b758c;
+  --gray-09: #758099;
+  --gray-10: #7f8ba6;
+  --gray-11: #8997b4;
+  --gray-12: #95a2bb;
+  --gray-13: #a2adc3;
+  --gray-14: #aeb8cb;
+  --gray-15: #bbc3d3;
+  --gray-16: #c7ceda;
+  --gray-17: #d4d9e2;
+  --gray-18: #e0e4ea;
+  --gray-19: #edeff2;
+  --gray-20: #fafafa;
+  --root-font-size: 16px;
+  --radius: 2px;
+  --accent: 255, 170, 51;
+  --background: var(--gray-01);
+  --animation-speed-fast: 0.1s;
+  --animation-speed-medium: 0.2s;
+  --animation-speed-slow: 0.3s;
+  --link-height: 7em;
+  --url-height: 20%;
+  --edit-height: 30%;
+  --font-regular: "Open Sans Regular", sans-serif;
+  --font-bold: "Open Sans Bold", sans-serif;
+  --font-light: "Open Sans Light", sans-serif;
+  --font-fjalla: "Fjalla One Regular", sans-serif;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --link-height: 9em;
+  }
+}
+
+::selection {
+  background-color: rgb(var(--accent));
+  color: var(--white);
+}
+
+html {
+  font-size: var(--root-font-size);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--white);
+  font-size: 1rem;
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font-regular);
+}
+
+* {
+  box-sizing: border-box;
+}

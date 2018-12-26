@@ -1,0 +1,55 @@
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+
+.margin-right-0 {
+  margin-right: 0 !important;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0 !important;
+}
+
+.margin-left-0 {
+  margin-left: 0 !important;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.is-inline-block {
+  display: inline-block !important;
+}
+
+.is-block {
+  display: block !important;
+}
+
+.is-transparent {
+  opacity: 0 !important;
+}
+
+.is-opaque {
+  opacity: 1 !important;
+}
+
+.is-invisible {
+  visibility: hidden !important;
+}
+
+.is-visible {
+  visibility: visible !important;
+}
+
+.is-scrolll-disabled {
+  overflow: hidden !important;
+}
+
+.is-small {
+  transform: scale(0.5) !important;
+}
+
+.is-large {
+  transform: scale(1.5) !important;
+}
