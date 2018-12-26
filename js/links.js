@@ -312,14 +312,6 @@ var links = (function() {
             value: -1
           }]
         });
-        // var linkEditText = _makeElement({
-        //   tag: "span",
-        //   text: "Edit",
-        //   attr: [{
-        //     key: "class",
-        //     value: "button-text"
-        //   }]
-        // });
         var linkEditIcon = _makeElement({
           tag: "span",
           attr: [{
@@ -337,14 +329,6 @@ var links = (function() {
             value: -1
           }]
         });
-        // var linkDeleteText = _makeElement({
-        //   tag: "span",
-        //   text: "Delete",
-        //   attr: [{
-        //     key: "class",
-        //     value: "button-text"
-        //   }]
-        // });
         var linkDeleteIcon = _makeElement({
           tag: "span",
           attr: [{
@@ -387,7 +371,7 @@ var links = (function() {
 
   var tabindex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
-    if (control.state.edit) {
+    if (control.get().edit) {
       allLinkControlItem.forEach(function(arrayItem, index) {
         arrayItem.tabIndex = 1;
       });

@@ -123,7 +123,9 @@ var bookmarks = (function() {
   };
 
   var restore = function(array) {
-    all = array;
+    if (array) {
+      all = array;
+    };
   };
 
   // exposed methods
