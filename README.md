@@ -11,4 +11,4 @@ New-tab-page/Start-page for all browsers
 - Saves data to local storage
 - Responsive
 - Customise theme colour
-
+- Can be installed on Chrome as an extension
