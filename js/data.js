@@ -26,6 +26,10 @@ var data = (function() {
     console.log(saveName + " restored");
   };
 
+  var wipe = function() {
+    clear(saveName);
+  };
+
   var init = function() {
     if (get(saveName)) {
       restore();
@@ -40,6 +44,7 @@ var data = (function() {
     clear: clear,
     set: set,
     get: get,
+    wipe: wipe,
     restore: restore
   };
 
