@@ -30,7 +30,7 @@ var theme = (function() {
 
   var render = function(input) {
     var html = helper.e("html");
-    html.style.setProperty("--accent", accent.r + "," + accent.g + "," + accent.b);
+    html.style.setProperty("--accent", accent.r + ", " + accent.g + ", " + accent.b);
   };
 
   var restore = function(object) {
