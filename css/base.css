@@ -21,7 +21,7 @@
   --gray-18: #e0e4ea;
   --gray-19: #edeff2;
   --gray-20: #fafafa;
-  --root-font-size: 16px;
+  --root-font-size: 14px;
   --radius: 2px;
   --accent: 255, 170, 51;
   --background: var(--gray-01);
@@ -55,6 +55,7 @@
 @media (min-width: 700px) {
   :root.is-link-block {
     --link-height: 9em;
+    --root-font-size: 16px;
   }
 }
 
