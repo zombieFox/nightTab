@@ -16,7 +16,7 @@ var data = (function() {
 
   var save = function() {
     set(saveName, JSON.stringify(state.get()));
-    console.log(saveName + " data saved");
+    console.log("data saved");
   };
 
   var restore = function() {
@@ -25,7 +25,7 @@ var data = (function() {
       bookmarks.restore(data.bookmarks);
       theme.restore(data.theme);
       control.restore(data.control);
-      console.log(saveName + " data restored");
+      console.log("data restored");
     };
   };
 

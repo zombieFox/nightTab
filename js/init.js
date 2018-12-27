@@ -1,3 +1,4 @@
+console.log("nightTab v", version.get(), "loaded");
 // look for and restore data
 data.init();
 // render theme
