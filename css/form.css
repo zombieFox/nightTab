@@ -76,7 +76,6 @@ label {
 input[type="color"] {
   border: 0;
   height: 2.5em;
-  min-width: 2.5em;
   display: block;
   cursor: pointer;
   -webkit-appearance: none;
