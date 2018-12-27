@@ -19,7 +19,7 @@
   box-shadow: 0 0 0.25em 0 rgba(var(--accent), 0.6), 0 0 0.5em 0 rgba(var(--accent), 0.4);
 }
 
-.theme-input[type="color"] {
+.theme-input {
   opacity: 0;
   width: 2px;
   min-width: 2px;
@@ -27,4 +27,11 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.theme-input:focus+.theme-label {
+  background-color: var(--gray-03);
+  border-bottom-color: rgb(var(--accent));
+  color: var(--white);
+  outline: 0;
 }
