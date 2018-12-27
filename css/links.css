@@ -23,7 +23,7 @@
   border-radius: var(--radius);
   padding: 0 1em;
   width: 100%;
-  height: calc(100% - 2px);
+  height: calc(100% - 3px);
   display: flex;
   z-index: 3;
   position: relative;
