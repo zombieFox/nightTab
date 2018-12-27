@@ -9,9 +9,12 @@ New-tab-page/Start-page for all browsers
 - Clock for awesome clocky action!
 - Search bar
 - Saves data to local storage
-- Responsive
+- Responsive design
 - Customise theme colour
 - Can be installed on Chrome as an extension
+- Switch between Block and List bookmark view
+
+---
 
 ![alt Screenshot 1](screenshots/screenshot-001.png)
 ![alt Screenshot 2](screenshots/screenshot-002.png)
