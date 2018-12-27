@@ -158,22 +158,25 @@
 }
 
 .link-letter {
-  text-align: center;
   font-family: var(--font-fjalla);
   color: rgb(var(--accent));
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .is-link-block .link-letter {
   margin: 0;
   font-size: 2em;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-align: center;
+  max-width: 100%;
 }
 
 .is-link-list .link-letter {
   margin: 0 0.5em 0 0;
   font-size: 1.5em;
+  flex-shrink: 0;
+  max-width: 50%;
 }
 
 .link-item:hover .link-letter,
@@ -184,14 +187,19 @@
 .link-name {
   margin: 0;
   font-size: 0.9em;
-  text-align: center;
   font-family: var(--font-regular);
   color: var(--gray-08);
   white-space: nowrap;
   overflow: hidden;
-  opacity: 1;
+  max-width: 100%;
   text-overflow: ellipsis;
 }
+
+.is-link-block .link-name {
+  text-align: center;
+}
+
+.is-link-list .link-name {}
 
 .link-item:hover .link-name,
 .link-item:focus .link-name {
