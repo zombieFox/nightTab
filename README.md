@@ -12,3 +12,9 @@ New-tab-page/Start-page for all browsers
 - Responsive
 - Customise theme colour
 - Can be installed on Chrome as an extension
+
+![alt Screenshot 1](screenshots/screenshot-001.png)
+![alt Screenshot 2](screenshots/screenshot-002.png)
+![alt Screenshot 3](screenshots/screenshot-003.png)
+![alt Screenshot 4](screenshots/screenshot-004.png)
+![alt Screenshot 4](screenshots/screenshot-005.png)
