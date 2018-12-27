@@ -53,9 +53,11 @@
 }
 
 @media (min-width: 700px) {
+  :root {
+    --root-font-size: 16px;
+  }
   :root.is-link-block {
     --link-height: 9em;
-    --root-font-size: 16px;
   }
 }
 

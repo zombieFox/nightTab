@@ -10,7 +10,7 @@
 }
 
 .grid-item-head {
-  padding: 1em 2em 0 2em;
+  padding: 2em 2em 0 2em;
   width: 100%;
 }
 
@@ -26,12 +26,19 @@
 }
 
 @media (min-width: 700px) {
+
+  .grid-item-head,
+  .grid-item-body {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+
   .grid-item-head {
-    padding: 4em 2em 2em 2em;
+    padding-top: 3em;
   }
 
   .grid-item-body {
-    padding: 2em 2em 25vh 2em;
+    padding-bottom: 25vh;
     grid-template-columns: repeat(3, minmax(1em, 1fr));
   }
 }
@@ -40,16 +47,28 @@
 
   .grid-item-head,
   .grid-item-body {
-    padding-left: 15vw;
-    padding-right: 15vw;
+    padding-left: 11vw;
+    padding-right: 11vw;
+  }
+
+  .grid-item-head {
+    padding-top: 4em;
   }
 
   .grid-item-body {
+    padding-top: 3em;
     grid-template-columns: repeat(4, minmax(1em, 1fr));
   }
 }
 
 @media (min-width: 1300px) {
+
+  .grid-item-head,
+  .grid-item-body {
+    padding-left: 14vw;
+    padding-right: 14vw;
+  }
+
   .grid-item-body {
     grid-template-columns: repeat(5, minmax(1em, 1fr));
   }
