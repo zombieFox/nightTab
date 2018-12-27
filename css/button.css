@@ -12,8 +12,8 @@ input[type="submit"] {
   min-height: 2.5em;
   line-height: 1;
   border: 0;
-  border-top-width: 3px;
-  border-bottom-width: 3px;
+  border-top-width: var(--line-width);
+  border-bottom-width: var(--line-width);
   border-style: solid;
   border-color: transparent;
   border-radius: var(--radius);

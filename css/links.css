@@ -23,7 +23,7 @@
   border-radius: var(--radius);
   padding: 0 1em;
   width: 100%;
-  height: calc(100% - 3px);
+  height: calc(100% - var(--line-width));
   display: flex;
   z-index: 3;
   position: relative;
@@ -74,11 +74,11 @@
   content: "";
   background-color: rgb(var(--accent));
   border-radius: var(--radius);
-  width: calc(100% - 0.5em);
+  width: calc(100% - calc(var(--line-width) + var(--line-width)));
   height: calc(100% - 0.25em);
   position: absolute;
   bottom: 0;
-  left: 0.25em;
+  left: var(--line-width);
   z-index: -1;
 }
 
