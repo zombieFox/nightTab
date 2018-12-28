@@ -365,7 +365,6 @@ var links = (function() {
   };
 
   var render = function(array) {
-    console.log("render");
     var gridItemBody = helper.e(".grid-item-body");
     if (array) {
       array.forEach(function(arrayItem, index) {
