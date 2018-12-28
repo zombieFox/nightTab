@@ -1,109 +1,109 @@
 var bookmarks = (function() {
 
   var all = [{
-    url: "https://www.reddit.com/r/Android/",
+    letter: "AN",
     name: "/r/Android/",
-    letter: "AN"
+    url: "https://www.reddit.com/r/Android/"
   }, {
-    url: "https://analytics.google.com/",
+    letter: "ANA",
     name: "Analytics",
-    letter: "ANA"
+    url: "https://analytics.google.com/"
   }, {
-    url: "https://zombiefox.github.io/awesomeSheet/",
+    letter: "AS",
     name: "awesomeSheet",
-    letter: "AS"
+    url: "https://zombiefox.github.io/awesomeSheet/"
   }, {
-    url: "https://www.amazon.co.uk/",
+    letter: "AZ",
     name: "Amazon",
-    letter: "AZ"
+    url: "https://www.amazon.co.uk/"
   }, {
-    url: "https://app.box.com/login/",
+    letter: "BX",
     name: "Box",
-    letter: "BX"
+    url: "https://app.box.com/login/"
   }, {
-    url: "https://www.google.com/calendar/",
+    letter: "CAL",
     name: "Calendar",
-    letter: "CAL"
+    url: "https://www.google.com/calendar/"
   }, {
-    url: "https://citymapper.com/london/superrouter",
+    letter: "CM",
     name: "Citymapper",
-    letter: "CM"
+    url: "https://citymapper.com/london/superrouter"
   }, {
-    url: "https://contacts.google.com/",
+    letter: "CO",
     name: "Contacts",
-    letter: "CO"
+    url: "https://contacts.google.com/"
   }, {
-    url: "https://www.reddit.com/r/chromeos/",
+    letter: "COS",
     name: "/r/chromeos/",
-    letter: "COS"
+    url: "https://www.reddit.com/r/chromeos/"
   }, {
-    url: "https://drive.google.com/drive/",
+    letter: "DR",
     name: "Drive",
-    letter: "DR"
+    url: "https://drive.google.com/drive/"
   }, {
-    url: "http://devdocs.io/",
+    letter: "DEV",
     name: "Devdocs",
-    letter: "DEV"
+    url: "http://devdocs.io/"
   }, {
-    url: "https://www.facebook.com/",
+    letter: "FB",
     name: "Facebook",
-    letter: "FB"
+    url: "https://www.facebook.com/"
   }, {
-    url: "https://github.com/login",
+    letter: "GIT",
     name: "Github",
-    letter: "GIT"
+    url: "https://github.com/login"
   }, {
-    url: "https://mail.google.com/",
+    letter: "GM",
     name: "Gmail",
-    letter: "GM"
+    url: "https://mail.google.com/"
   }, {
-    url: "https://www.reddit.com/r/gameofthrones/",
+    letter: "GOT",
     name: "/r/gameofthrones/",
-    letter: "GOT"
+    url: "https://www.reddit.com/r/gameofthrones/"
   }, {
-    url: "https://keep.google.com/",
+    letter: "KP",
     name: "Keep",
-    letter: "KP"
+    url: "https://keep.google.com/"
   }, {
-    url: "https://www.google.co.uk/maps",
+    letter: "M",
     name: "Maps",
-    letter: "M"
+    url: "https://www.google.co.uk/maps"
   }, {
-    url: "https://www.reddit.com/r/monsterhunter/",
+    letter: "MHW",
     name: "/r/monsterhunter/",
-    letter: "MHW"
+    url: "https://www.reddit.com/r/monsterhunter/"
   }, {
-    url: "https://www.netflix.com/",
+    letter: "N",
     name: "Netflix",
-    letter: "N"
+    url: "https://www.netflix.com/"
   }, {
-    url: "https://www.reddit.com/r/opendirectories/",
+    letter: "OD",
     name: "/r/opendirectories/",
-    letter: "OD"
+    url: "https://www.reddit.com/r/opendirectories/"
   }, {
-    url: "https://photos.google.com/",
+    letter: "P",
     name: "Photos",
-    letter: "P"
+    url: "https://photos.google.com/"
   }, {
-    url: "https://www.reddit.com/r/Pathfinder_RPG/",
+    letter: "PRG",
     name: "/r/Pathfinder_RPG/",
-    letter: "PRG"
+    url: "https://www.reddit.com/r/Pathfinder_RPG/"
   }, {
-    url: "https://www.reddit.com/",
+    letter: "R",
     name: "Reddit",
-    letter: "R"
+    url: "https://www.reddit.com/"
   }, {
-    url: "http://content.tfl.gov.uk/standard-tube-map.pdf",
+    letter: "TFL",
     name: "TFL Map",
-    letter: "TFL"
+    url: "http://content.tfl.gov.uk/standard-tube-map.pdf"
   }, {
-    url: "https://www.reddit.com/r/videos/",
+    letter: "V",
     name: "/r/videos/",
-    letter: "V"
+    url: "https://www.reddit.com/r/videos/"
   }, {
-    url: "https://www.youtube.com/",
+    letter: "YT",
     name: "Youtube",
-    letter: "YT"
+    url: "https://www.youtube.com/"
   }];
 
   var get = function() {

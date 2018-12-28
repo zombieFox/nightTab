@@ -47,8 +47,9 @@ var search = (function() {
       var searchResult = [];
       bookmarks.get().forEach(function(arrayItem, index) {
         if (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase()) || arrayItem.name.toLowerCase().includes(searchInput.value.toLowerCase())) {
-          arrayItem.index = index;
-          searchResult.push(arrayItem);
+          var copy = JSON.parse(JSON.stringify(arrayItem));
+          copy.index = index;
+          searchResult.push(copy);
         };
       });
       links.clear();
