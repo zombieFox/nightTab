@@ -24,6 +24,7 @@ var control = (function() {
       _toggleEdit();
       render();
       links.tabIndex();
+      data.save();
     }, false);
     controlLinkBlock.addEventListener("click", function() {
       _toggleListStyle("block");
