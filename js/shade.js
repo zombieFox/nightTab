@@ -3,7 +3,7 @@ var shade = (function() {
   var previousShade = null;
 
   function destroy() {
-    var all_shade = helper.eA(".js-shade");
+    var all_shade = helper.eA(".shade");
     if (all_shade[0]) {
       for (var i = 0; i < all_shade.length; i++) {
         all_shade[i].destroy();
@@ -27,7 +27,7 @@ var shade = (function() {
     var _render_shade = function() {
       var body = helper.e("body");
       var shade = document.createElement("div");
-      shade.setAttribute("class", "m-shade js-shade");
+      shade.setAttribute("class", "shade");
       if (defaultOptions.includeHeader) {
         helper.addClass(shade, "m-shade-top");
       };

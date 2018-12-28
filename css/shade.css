@@ -1,4 +1,4 @@
-.m-shade {
+.shade {
   background-color: rgba(var(--accent), 0.5);
   position: fixed;
   top: -1em;
