@@ -1,13 +1,13 @@
 var theme = (function() {
 
-  var accent = {
+  var state = {
     r: 255,
     g: 170,
     b: 51,
   };
 
   var get = function() {
-    return accent;
+    return state;
   };
 
   var bind = function() {
@@ -20,22 +20,22 @@ var theme = (function() {
   };
 
   var _updateAcent = function(input) {
-    accent = helper.hexToRgb(input.value);
+    state = helper.hexToRgb(input.value);
   };
 
   var _updateInput = function() {
     var themeAccent = helper.e(".theme-input");
-    themeAccent.value = helper.rgbToHex(accent);
+    themeAccent.value = helper.rgbToHex(state);
   };
 
   var render = function(input) {
     var html = helper.e("html");
-    html.style.setProperty("--accent", accent.r + ", " + accent.g + ", " + accent.b);
+    html.style.setProperty("--accent", state.r + ", " + state.g + ", " + state.b);
   };
 
   var restore = function(object) {
     if (object) {
-      accent = object;
+      state = object;
       _updateInput();
       render();
     };

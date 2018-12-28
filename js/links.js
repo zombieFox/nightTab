@@ -1,5 +1,9 @@
 var links = (function() {
 
+  var currentEditIndex = null;
+
+  var currentAction = null;
+
   var _bind = function(override) {
     var options = {
       element: null,
@@ -24,9 +28,6 @@ var links = (function() {
       action[options.action]();
     }
   };
-
-  var currentEditIndex = null;
-  var currentAction = null;
 
   var add = function() {
     currentAction = "add";
@@ -76,7 +77,11 @@ var links = (function() {
     currentEditIndex = null;
     currentAction = null;
     clear();
-    render();
+    if (search.get().search) {
+      search.render();
+    } else {
+      render();
+    };
     data.save();
   };
 
@@ -84,7 +89,11 @@ var links = (function() {
     var index = parseInt(button.closest(".link-item").dataset.index, 10);
     bookmarks.remove(index);
     clear();
-    render();
+    if (search.get().search) {
+      search.render();
+    } else {
+      render();
+    };
     data.save();
   };
 
@@ -227,149 +236,152 @@ var links = (function() {
     return form;
   };
 
+  var _makeLink = function(data, index) {
+    var linkItem = _makeElement({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "link-item"
+      }, {
+        key: "data-index",
+        value: index
+      }]
+    });
+    var linkPanelFront = _makeElement({
+      tag: "a",
+      attr: [{
+        key: "class",
+        value: "link-panel-front"
+      }, {
+        key: "href",
+        value: data.url
+      }, {
+        key: "tabindex",
+        value: 1
+      }]
+    });
+    var linkPanelBack = _makeElement({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "link-panel-back"
+      }]
+    });
+    var linkLetter = _makeElement({
+      tag: "p",
+      text: data.letter,
+      attr: [{
+        key: "class",
+        value: "link-letter"
+      }, {
+        key: "data-index",
+        value: data.url
+      }]
+    });
+    var linkName = _makeElement({
+      tag: "p",
+      text: data.name,
+      attr: [{
+        key: "class",
+        value: "link-name"
+      }]
+    });
+    var linkUrl = _makeElement({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "link-url"
+      }]
+    });
+    var linkUrlText = _makeElement({
+      tag: "p",
+      text: data.url.replace(/^https?\:\/\//i, "").replace(/\/$/, ""),
+      attr: [{
+        key: "class",
+        value: "link-url-text"
+      }]
+    });
+    var linkControl = _makeElement({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "link-control"
+      }]
+    });
+    var linkEdit = _makeElement({
+      tag: "button",
+      attr: [{
+        key: "class",
+        value: "button button-small link-control-item link-edit"
+      }, {
+        key: "tabindex",
+        value: -1
+      }]
+    });
+    var linkEditIcon = _makeElement({
+      tag: "span",
+      attr: [{
+        key: "class",
+        value: "button-icon icon-edit"
+      }]
+    });
+    var linkDelete = _makeElement({
+      tag: "button",
+      attr: [{
+        key: "class",
+        value: "button button-small link-control-item link-delete"
+      }, {
+        key: "tabindex",
+        value: -1
+      }]
+    });
+    var linkDeleteIcon = _makeElement({
+      tag: "span",
+      attr: [{
+        key: "class",
+        value: "button-icon icon-close"
+      }]
+    });
+    linkPanelFront.appendChild(linkLetter);
+    linkPanelFront.appendChild(linkName);
+    linkEdit.appendChild(linkEditIcon);
+    linkDelete.appendChild(linkDeleteIcon);
+    linkControl.appendChild(linkEdit);
+    linkControl.appendChild(linkDelete);
+    linkUrl.appendChild(linkUrlText);
+    linkPanelBack.appendChild(linkUrl);
+    linkPanelBack.appendChild(linkControl);
+    linkItem.appendChild(linkPanelFront);
+    linkItem.appendChild(linkPanelBack);
+    _bind({
+      element: linkEdit,
+      action: "edit"
+    });
+    _bind({
+      element: linkDelete,
+      action: "delete"
+    });
+    return linkItem;
+  };
+
   var render = function(array) {
-    var makeLinks = function(arrayOflinks) {
-      arrayOflinks.forEach(function(item, index) {
-        var gridItemBody = helper.e(".grid-item-body");
-        var linkItem = _makeElement({
-          tag: "div",
-          attr: [{
-            key: "class",
-            value: "link-item"
-          }, {
-            key: "data-index",
-            value: index
-          }]
-        });
-        var linkPanelFront = _makeElement({
-          tag: "a",
-          attr: [{
-            key: "class",
-            value: "link-panel-front"
-          }, {
-            key: "href",
-            value: item.url
-          }, {
-            key: "tabindex",
-            value: 1
-          }]
-        });
-        var linkPanelBack = _makeElement({
-          tag: "div",
-          attr: [{
-            key: "class",
-            value: "link-panel-back"
-          }]
-        });
-        var linkLetter = _makeElement({
-          tag: "p",
-          text: item.letter,
-          attr: [{
-            key: "class",
-            value: "link-letter"
-          }, {
-            key: "data-index",
-            value: item.url
-          }]
-        });
-        var linkName = _makeElement({
-          tag: "p",
-          text: item.name,
-          attr: [{
-            key: "class",
-            value: "link-name"
-          }]
-        });
-        var linkUrl = _makeElement({
-          tag: "div",
-          attr: [{
-            key: "class",
-            value: "link-url"
-          }]
-        });
-        var linkUrlText = _makeElement({
-          tag: "p",
-          text: item.url.replace(/^https?\:\/\//i, "").replace(/\/$/, ""),
-          attr: [{
-            key: "class",
-            value: "link-url-text"
-          }]
-        });
-        var linkControl = _makeElement({
-          tag: "div",
-          attr: [{
-            key: "class",
-            value: "link-control"
-          }]
-        });
-        var linkEdit = _makeElement({
-          tag: "button",
-          attr: [{
-            key: "class",
-            value: "button button-small link-control-item link-edit"
-          }, {
-            key: "tabindex",
-            value: -1
-          }]
-        });
-        var linkEditIcon = _makeElement({
-          tag: "span",
-          attr: [{
-            key: "class",
-            value: "button-icon icon-edit"
-          }]
-        });
-        var linkDelete = _makeElement({
-          tag: "button",
-          attr: [{
-            key: "class",
-            value: "button button-small link-control-item link-delete"
-          }, {
-            key: "tabindex",
-            value: -1
-          }]
-        });
-        var linkDeleteIcon = _makeElement({
-          tag: "span",
-          attr: [{
-            key: "class",
-            value: "button-icon icon-close"
-          }]
-        });
-
-        _bind({
-          element: linkEdit,
-          action: "edit"
-        });
-        _bind({
-          element: linkDelete,
-          action: "delete"
-        });
-
-        linkPanelFront.appendChild(linkLetter);
-        linkPanelFront.appendChild(linkName);
-        linkEdit.appendChild(linkEditIcon);
-        // linkEdit.appendChild(linkEditText);
-        linkDelete.appendChild(linkDeleteIcon);
-        // linkDelete.appendChild(linkDeleteText);
-        linkControl.appendChild(linkEdit);
-        linkControl.appendChild(linkDelete);
-        linkUrl.appendChild(linkUrlText);
-        linkPanelBack.appendChild(linkUrl);
-        linkPanelBack.appendChild(linkControl);
-        linkItem.appendChild(linkPanelFront);
-        linkItem.appendChild(linkPanelBack);
-        gridItemBody.appendChild(linkItem);
-      });
-    };
+    console.log("render");
+    var gridItemBody = helper.e(".grid-item-body");
     if (array) {
-      makeLinks(array);
+      array.forEach(function(arrayItem, index) {
+        if (arrayItem.index) {
+          index = arrayItem.index;
+        };
+        gridItemBody.appendChild(_makeLink(arrayItem, index));
+      });
     } else {
-      makeLinks(bookmarks.get());
+      bookmarks.get().forEach(function(arrayItem, index) {
+        gridItemBody.appendChild(_makeLink(arrayItem, index));
+      });
     };
   };
 
-  var tabindex = function() {
+  var tabIndex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
     if (control.get().edit) {
       allLinkControlItem.forEach(function(arrayItem, index) {
@@ -402,7 +414,7 @@ var links = (function() {
     save: save,
     remove: remove,
     render: render,
-    tabindex: tabindex
+    tabIndex: tabIndex
   };
 
 })();

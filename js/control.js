@@ -2,7 +2,10 @@ var control = (function() {
 
   var state = {
     edit: false,
-    style: "block"
+    style: {
+      block: true,
+      list: false
+    }
   };
 
   var get = function() {
@@ -15,65 +18,76 @@ var control = (function() {
     var controlLinkBlock = helper.e(".control-link-blocks");
     var controlLinkList = helper.e(".control-link-list");
     controlAdd.addEventListener("click", function() {
-      _add();
+      links.add();
     }, false);
     controlEdit.addEventListener("click", function() {
-      _edit();
+      _toggleEdit();
+      render();
+      links.tabIndex();
     }, false);
     controlLinkBlock.addEventListener("click", function() {
       _toggleListStyle("block");
+      render();
       data.save();
     }, false);
     controlLinkList.addEventListener("click", function() {
       _toggleListStyle("list");
+      render();
       data.save();
     }, false);
   };
 
-  var _add = function() {
-    links.add();
-  };
-
-  var _edit = function() {
-    var body = helper.e("body");
-    var controlEdit = helper.e(".control-edit");
+  var _toggleEdit = function() {
     if (state.edit) {
-      helper.removeClass(body, "is-edit");
-      helper.removeClass(controlEdit, "active");
       state.edit = false;
-      links.tabindex();
     } else {
-      helper.addClass(body, "is-edit");
-      helper.addClass(controlEdit, "active");
       state.edit = true;
-      links.tabindex();
     };
   };
 
   var _toggleListStyle = function(style) {
-    state.style = style;
-    render();
+    var action = {
+      block: function() {
+        state.style.block = true;
+        state.style.list = false;
+      },
+      list: function() {
+        state.style.block = false;
+        state.style.list = true;
+      }
+    };
+    action[style]();
   };
 
   var render = function() {
     var html = helper.e("html");
+    var controlEdit = helper.e(".control-edit");
     var controlLinkBlock = helper.e(".control-link-blocks");
     var controlLinkList = helper.e(".control-link-list");
-    var action = {
-      block: function() {
+    var _renderEdit = function() {
+      if (state.edit) {
+        helper.addClass(html, "is-edit");
+        helper.addClass(controlEdit, "active");
+      } else {
+        helper.removeClass(html, "is-edit");
+        helper.removeClass(controlEdit, "active");
+      };
+    };
+    var _renderStyle = function() {
+      if (state.style.block) {
         helper.addClass(html, "is-link-block");
         helper.removeClass(html, "is-link-list");
         helper.addClass(controlLinkBlock, "active");
         helper.removeClass(controlLinkList, "active");
-      },
-      list: function() {
+      } else if (state.style.list) {
         helper.removeClass(html, "is-link-block");
         helper.addClass(html, "is-link-list");
         helper.removeClass(controlLinkBlock, "active");
         helper.addClass(controlLinkList, "active");
-      }
+      };
     };
-    action[state.style]();
+    _renderEdit();
+    _renderStyle();
   };
 
   var restore = function(object) {
