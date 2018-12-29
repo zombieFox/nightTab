@@ -4,12 +4,12 @@
   position: absolute;
   border-radius: var(--radius);
   top: 1em;
-  left: 1em;
+  right: 1em;
   width: calc(30vw - 2em);
   max-height: calc(100vh - 2em);
   overflow-y: scroll;
   z-index: 3000;
-  transform: translateX(-30vw);
+  transform: translateX(30vw);
   transition: all var(--animation-speed-fast) ease-in-out;
 }
 

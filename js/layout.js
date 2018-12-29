@@ -1,14 +1,17 @@
 var layout = (function() {
 
   var state = {
-    show: {
-      block: true,
-      list: false
-    }
+    view: "block"
   };
 
   var get = function() {
     return state;
+  };
+
+  var restore = function(object) {
+    if (object) {
+      state = object;
+    };
   };
 
   var toggle = function(override) {
@@ -20,9 +23,6 @@ var layout = (function() {
       options = helper.applyOptions(options, override);
     };
     if (options.path != null) {
-      for (var key in state.show) {
-        state.show[key] = false;
-      };
       helper.setObject({
         path: options.path,
         object: state,
@@ -33,19 +33,17 @@ var layout = (function() {
 
   var render = function() {
     var html = helper.e("html");
-    for (var key in state.show) {
-      if (state.show[key]) {
-        helper.addClass(html, "is-layout-" + key);
-      } else {
-        helper.removeClass(html, "is-layout-" + key);
-      };
+    var view = {
+      block: function() {
+        helper.addClass(html, "is-layout-block");
+        helper.removeClass(html, "is-layout-list");
+      },
+      list: function() {
+        helper.removeClass(html, "is-layout-block");
+        helper.addClass(html, "is-layout-list");
+      }
     };
-  };
-
-  var restore = function(object) {
-    if (object) {
-      state = object;
-    };
+    view[state.view]();
   };
 
   var init = function() {

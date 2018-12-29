@@ -6,7 +6,7 @@ input[type="submit"] {
   background-color: var(--gray-02);
   padding: 0.25em 1em;
   margin: 0 0 1em 0;
-  color: var(--gray-16);
+  color: var(--gray-12);
   font-size: 1em;
   font-family: var(--font-regular);
   min-height: 2.5em;

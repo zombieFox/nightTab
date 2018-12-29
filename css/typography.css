@@ -47,7 +47,8 @@ p {
 
 hr {
   border: 0;
-  border-top: var(--line-width) solid rgb(var(--accent));
+  border-top: 1px solid var(--gray-04);
+  border-radius: var(--radius);
   margin: 1em 0;
   clear: both;
 }

@@ -215,6 +215,66 @@ var helper = (function() {
     };
   };
 
+  function makeObject(string) {
+    var _stringOrBooleanOrNumber = function(stringToTest) {
+      console.log(stringToTest);
+      if (stringToTest == "true") {
+        return true;
+      } else if (stringToTest == "false") {
+        return false;
+      } else if (stringToTest.indexOf("#") != -1) {
+        return stringToTest.substr(1, kevValuePair[1].length);
+      } else {
+        return "\"" + stringToTest + "\"";
+      };
+    };
+    // if argument is a string
+    if (typeof string == "string") {
+      // start building the object
+      var objectString = "{";
+      // split the string on comma not followed by a space
+      // split on character if not followed by a space
+      var items = string.split(/,(?=\S)/);
+      // loop over each item
+      for (var i = 0; i < items.length; i++) {
+        // split each would be object key values pair
+        // split on character if not followed by a space
+        var kevValuePair = items[i].split(/:(?=\S)/);
+        // get the key
+        var key = "\"" + kevValuePair[0] + "\"";
+        var value;
+        // if the value has + with a space after it
+        if (/\+(?=\S)/.test(kevValuePair[1])) {
+          // remove first + symbol
+          kevValuePair[1] = kevValuePair[1].substr(1, kevValuePair[1].length);
+          // split the would be values
+          // split on character if not followed by a space
+          var all_value = kevValuePair[1].split(/\+(?=\S)/);
+          // if there are multiple values make an array
+          value = "["
+          for (var q = 0; q < all_value.length; q++) {
+            value += _stringOrBooleanOrNumber(all_value[q]) + ",";
+          };
+          // remove last comma
+          value = value.substr(0, value.length - 1);
+          // close array
+          value += "]"
+        } else {
+          value = _stringOrBooleanOrNumber(kevValuePair[1]);
+        };
+        objectString += key + ":" + value + ",";
+      };
+      // remove last comma
+      objectString = objectString.substr(0, objectString.length - 1);
+      // close object
+      objectString += "}";
+      var object = JSON.parse(objectString);
+      return object;
+    } else {
+      return false;
+    };
+  };
+
   // exposed methods
   return {
     e: e,
@@ -229,7 +289,8 @@ var helper = (function() {
     rgbToHex: rgbToHex,
     makeNode: makeNode,
     setObject: setObject,
-    getObject: getObject
+    getObject: getObject,
+    makeObject: makeObject
   };
 
 })();

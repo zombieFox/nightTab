@@ -1,8 +1,13 @@
 var links = (function() {
 
-  var currentEditIndex = null;
+  var state = {
+    currentEditIndex: null,
+    currentAction: null
+  };
 
-  var currentAction = null;
+  var get = function() {
+    return state;
+  };
 
   var _bind = function(override) {
     var options = {
@@ -30,7 +35,7 @@ var links = (function() {
   };
 
   var add = function() {
-    currentAction = "add";
+    state.currentAction = "add";
     var form = _makeLinkForm();
     modal.render({
       heading: "Add a new bookmark",
@@ -42,9 +47,9 @@ var links = (function() {
   };
 
   var edit = function(button) {
-    currentAction = "edit";
-    currentEditIndex = parseInt(button.closest(".link-item").dataset.index, 10);
-    var currentBookmark = bookmarks.get()[currentEditIndex];
+    state.currentAction = "edit";
+    state.currentEditIndex = parseInt(button.closest(".link-item").dataset.index, 10);
+    var currentBookmark = bookmarks.get()[state.currentEditIndex];
     var form = _makeLinkForm();
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
@@ -64,7 +69,7 @@ var links = (function() {
         bookmarks.add(newLinkData);
       },
       edit: function(newLinkData) {
-        bookmarks.edit(newLinkData, currentEditIndex);
+        bookmarks.edit(newLinkData, state.currentEditIndex);
       }
     };
     var form = helper.e(".link-form");
@@ -73,9 +78,9 @@ var links = (function() {
       name: form.querySelector(".link-form-input-name").value,
       url: form.querySelector(".link-form-input-url").value
     };
-    action[currentAction](newLinkData);
-    currentEditIndex = null;
-    currentAction = null;
+    action[state.currentAction](newLinkData);
+    state.currentEditIndex = null;
+    state.currentAction = null;
     clear();
     if (search.get().search) {
       search.render();
@@ -393,6 +398,7 @@ var links = (function() {
   // exposed methods
   return {
     init: init,
+    get: get,
     clear: clear,
     add: add,
     edit: edit,

@@ -10,6 +10,12 @@ var theme = (function() {
     return state;
   };
 
+  var restore = function(object) {
+    if (object) {
+      state = object;
+    };
+  };
+
   var bind = function() {
     var themeAccent = helper.e(".theme-input");
     themeAccent.addEventListener("change", function() {
@@ -31,12 +37,6 @@ var theme = (function() {
   var render = function() {
     var html = helper.e("html");
     html.style.setProperty("--accent", state.r + ", " + state.g + ", " + state.b);
-  };
-
-  var restore = function(object) {
-    if (object) {
-      state = object;
-    };
   };
 
   var init = function() {

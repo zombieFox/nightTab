@@ -12,6 +12,12 @@ var clock = (function() {
     return state;
   };
 
+  var restore = function(object) {
+    if (object) {
+      state = object;
+    };
+  };
+
   var clear = function() {
     var clock = helper.e(".clock");
     while (clock.lastChild) {
@@ -120,12 +126,6 @@ var clock = (function() {
       clear();
       render();
     }, 1000);
-  };
-
-  var restore = function(object) {
-    if (object) {
-      state = object;
-    };
   };
 
   // exposed methods

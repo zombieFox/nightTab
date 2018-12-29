@@ -12,6 +12,12 @@ var control = (function() {
     return state;
   };
 
+  var restore = function(object) {
+    if (object) {
+      state = object;
+    };
+  };
+
   var toggle = function(override) {
     var options = {
       path: null,
@@ -30,7 +36,7 @@ var control = (function() {
   };
 
   var render = function() {
-    var _renderState = function() {
+    var _state = function() {
       var html = helper.e("html");
       for (var key in state) {
         if (typeof state[key] == "boolean" && state[key]) {
@@ -40,7 +46,7 @@ var control = (function() {
         };
       };
     };
-    var _renderShow = function() {
+    var _showHide = function() {
       for (var key in state.show) {
         var headElement = helper.e(".control-" + key);
         if (state.show[key]) {
@@ -50,14 +56,48 @@ var control = (function() {
         };
       };
     };
-    _renderState();
-    _renderShow();
+    _state();
+    _showHide();
+  };
+
+  var _dependents = function(options) {
+    var all = [{
+      path: "show.clock",
+      element: [".control-toggle-clock-seconds", ".control-toggle-clock-seperator", ".control-toggle-clock-24"]
+    }];
+    all.forEach(function(arrayItem, index) {
+      if (helper.getObject({
+        path: arrayItem.path,
+        object: state
+      })) {
+        arrayItem.element.forEach(function(arrayItem, index) {
+          helper.e(arrayItem).disabled = false;
+        });
+      } else {
+        arrayItem.element.forEach(function(arrayItem, index) {
+          helper.e(arrayItem).disabled = true;
+        });
+      };
+    });
   };
 
   var _bind = function() {
     helper.e(".control-toggle-menu").addEventListener("click", function() {
       menu.toggle();
       menu.render();
+    }, false);
+
+    helper.e(".control-add").addEventListener("click", function() {
+      links.add();
+    }, false);
+
+    helper.e(".control-toggle-edit").addEventListener("change", function() {
+      toggle({
+        path: "edit",
+        value: this.checked
+      });
+      render();
+      data.save();
     }, false);
 
     helper.e(".control-toggle-search").addEventListener("change", function() {
@@ -81,6 +121,7 @@ var control = (function() {
         path: "show.clock",
         element: ".head-clock"
       });
+      _dependents();
       clock.clear();
       clock.render();
       data.save();
@@ -119,37 +160,23 @@ var control = (function() {
     helper.eA("input[name='control-layout']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
         layout.toggle({
-          path: "show." + this.value,
-          value: this.checked
+          path: "view",
+          value: this.value
         });
         layout.render();
         data.save();
       }, false);
     });
 
-    helper.e(".control-add").addEventListener("click", function() {
-      links.add();
-    }, false);
-
-    helper.e(".control-toggle-edit").addEventListener("change", function() {
-      toggle({
-        path: "edit",
-        value: this.checked
-      });
-      render();
+    helper.e(".control-sort-name").addEventListener("click", function() {
+      links.sort("name");
       data.save();
     }, false);
 
-    // var controlSortName = helper.e(".control-sort-name");
-    // var controlSortLetter = helper.e(".control-sort-letter");
-    // controlSortName.addEventListener("click", function() {
-    //   links.sort("name");
-    //   data.save();
-    // }, false);
-    // controlSortLetter.addEventListener("click", function() {
-    //   links.sort("letter");
-    //   data.save();
-    // }, false);
+    helper.e(".control-sort-letter").addEventListener("click", function() {
+      links.sort("letter");
+      data.save();
+    }, false);
   };
 
   var _update = function() {
@@ -159,23 +186,14 @@ var control = (function() {
     helper.e(".control-toggle-clock-seperator").checked = clock.get().show.seperator;
     helper.e(".control-toggle-clock-24").checked = clock.get().hour24;
     helper.e(".control-toggle-edit").checked = state.edit;
-    for (var key in layout.get().show) {
-      if (layout.get().show[key]) {
-        helper.e(".control-layout-" + key).checked = layout.get().show[key]
-      };
-    };
-  };
-
-  var restore = function(object) {
-    if (object) {
-      state = object;
-    };
+    helper.e(".control-layout-" + layout.get().view).checked = true;
   };
 
   var init = function() {
     _bind();
     _update();
     render();
+    _dependents();
   };
 
   // exposed methods
