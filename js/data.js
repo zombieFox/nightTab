@@ -23,8 +23,10 @@ var data = (function() {
     var data = JSON.parse(get(saveName));
     if (data) {
       bookmarks.restore(data.bookmarks);
-      theme.restore(data.theme);
+      layout.restore(data.layout);
       control.restore(data.control);
+      theme.restore(data.theme);
+      clock.restore(data.clock);
       console.log("data restored");
     };
   };

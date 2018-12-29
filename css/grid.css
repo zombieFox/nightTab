@@ -26,13 +26,6 @@
 }
 
 @media (min-width: 700px) {
-
-  .grid-item-head,
-  .grid-item-body {
-    padding-left: 8vw;
-    padding-right: 8vw;
-  }
-
   .grid-item-body {
     grid-template-columns: repeat(3, minmax(1em, 1fr));
   }
@@ -42,8 +35,8 @@
 
   .grid-item-head,
   .grid-item-body {
-    padding-left: 11vw;
-    padding-right: 11vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 
   .grid-item-body {
@@ -52,13 +45,6 @@
 }
 
 @media (min-width: 1300px) {
-
-  .grid-item-head,
-  .grid-item-body {
-    padding-left: 14vw;
-    padding-right: 14vw;
-  }
-
   .grid-item-head {
     padding-top: 3em;
     padding-bottom: 2em;
@@ -70,6 +56,13 @@
 }
 
 @media (min-width: 1600px) {
+
+  .grid-item-head,
+  .grid-item-body {
+    padding-left: 14vw;
+    padding-right: 14vw;
+  }
+
   .grid-item-body {
     grid-template-columns: repeat(6, minmax(1em, 1fr));
   }

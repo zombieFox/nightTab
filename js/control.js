@@ -2,9 +2,9 @@ var control = (function() {
 
   var state = {
     edit: false,
-    style: {
-      block: true,
-      list: false
+    show: {
+      clock: true,
+      search: true,
     }
   };
 
@@ -12,94 +12,169 @@ var control = (function() {
     return state;
   };
 
-  var bind = function() {
-    var controlAdd = helper.e(".control-add");
-    var controlEdit = helper.e(".control-edit");
-    var controlLinkBlock = helper.e(".control-link-blocks");
-    var controlLinkList = helper.e(".control-link-list");
-    controlAdd.addEventListener("click", function() {
-      links.add();
-    }, false);
-    controlEdit.addEventListener("click", function() {
-      _toggleEdit();
-      render();
-      links.tabIndex();
-      data.save();
-    }, false);
-    controlLinkBlock.addEventListener("click", function() {
-      _toggleListStyle("block");
-      render();
-      data.save();
-    }, false);
-    controlLinkList.addEventListener("click", function() {
-      _toggleListStyle("list");
-      render();
-      data.save();
-    }, false);
-  };
-
-  var _toggleEdit = function() {
-    if (state.edit) {
-      state.edit = false;
-    } else {
-      state.edit = true;
+  var toggle = function(override) {
+    var options = {
+      path: null,
+      value: null
     };
-  };
-
-  var _toggleListStyle = function(style) {
-    var action = {
-      block: function() {
-        state.style.block = true;
-        state.style.list = false;
-      },
-      list: function() {
-        state.style.block = false;
-        state.style.list = true;
-      }
+    if (override) {
+      options = helper.applyOptions(options, override);
     };
-    action[style]();
+    if (options.path != null) {
+      helper.setObject({
+        path: options.path,
+        object: state,
+        newValue: options.value
+      });
+    };
   };
 
   var render = function() {
-    var html = helper.e("html");
-    var controlEdit = helper.e(".control-edit");
-    var controlLinkBlock = helper.e(".control-link-blocks");
-    var controlLinkList = helper.e(".control-link-list");
-    var _renderEdit = function() {
-      if (state.edit) {
-        helper.addClass(html, "is-edit");
-        helper.addClass(controlEdit, "active");
-      } else {
-        helper.removeClass(html, "is-edit");
-        helper.removeClass(controlEdit, "active");
+    var _renderState = function() {
+      var html = helper.e("html");
+      for (var key in state) {
+        if (typeof state[key] == "boolean" && state[key]) {
+          helper.addClass(html, "is-" + key);
+        } else {
+          helper.removeClass(html, "is-" + key);
+        };
       };
     };
-    var _renderStyle = function() {
-      if (state.style.block) {
-        helper.addClass(html, "is-link-block");
-        helper.removeClass(html, "is-link-list");
-        helper.addClass(controlLinkBlock, "active");
-        helper.removeClass(controlLinkList, "active");
-      } else if (state.style.list) {
-        helper.removeClass(html, "is-link-block");
-        helper.addClass(html, "is-link-list");
-        helper.removeClass(controlLinkBlock, "active");
-        helper.addClass(controlLinkList, "active");
+    var _renderShow = function() {
+      for (var key in state.show) {
+        var headElement = helper.e(".control-" + key);
+        if (state.show[key]) {
+          helper.removeClass(headElement, "is-hidden");
+        } else {
+          helper.addClass(headElement, "is-hidden");
+        };
       };
     };
-    _renderEdit();
-    _renderStyle();
+    _renderState();
+    _renderShow();
+  };
+
+  var _bind = function() {
+    helper.e(".control-toggle-menu").addEventListener("click", function() {
+      menu.toggle();
+      menu.render();
+    }, false);
+
+    helper.e(".control-toggle-search").addEventListener("change", function() {
+      toggle({
+        path: "show.search",
+        value: this.checked
+      });
+      render({
+        path: "show.search",
+        element: ".head-search"
+      });
+      data.save();
+    }, false);
+
+    helper.e(".control-toggle-clock").addEventListener("change", function() {
+      toggle({
+        path: "show.clock",
+        value: this.checked
+      });
+      render({
+        path: "show.clock",
+        element: ".head-clock"
+      });
+      clock.clear();
+      clock.render();
+      data.save();
+    }, false);
+
+    helper.e(".control-toggle-clock-seconds").addEventListener("change", function() {
+      clock.toggle({
+        path: "show.seconds",
+        value: this.checked
+      });
+      clock.clear();
+      clock.render();
+      data.save();
+    }, false);
+
+    helper.e(".control-toggle-clock-seperator").addEventListener("change", function() {
+      clock.toggle({
+        path: "show.seperator",
+        value: this.checked
+      });
+      clock.clear();
+      clock.render();
+      data.save();
+    }, false);
+
+    helper.e(".control-toggle-clock-24").addEventListener("change", function() {
+      clock.toggle({
+        path: "hour24",
+        value: this.checked
+      });
+      clock.clear();
+      clock.render();
+      data.save();
+    }, false);
+
+    helper.eA("input[name='control-layout']").forEach(function(arrayItem, index) {
+      arrayItem.addEventListener("change", function() {
+        layout.toggle({
+          path: "show." + this.value,
+          value: this.checked
+        });
+        layout.render();
+        data.save();
+      }, false);
+    });
+
+    helper.e(".control-add").addEventListener("click", function() {
+      links.add();
+    }, false);
+
+    helper.e(".control-toggle-edit").addEventListener("change", function() {
+      toggle({
+        path: "edit",
+        value: this.checked
+      });
+      render();
+      data.save();
+    }, false);
+
+    // var controlSortName = helper.e(".control-sort-name");
+    // var controlSortLetter = helper.e(".control-sort-letter");
+    // controlSortName.addEventListener("click", function() {
+    //   links.sort("name");
+    //   data.save();
+    // }, false);
+    // controlSortLetter.addEventListener("click", function() {
+    //   links.sort("letter");
+    //   data.save();
+    // }, false);
+  };
+
+  var _update = function() {
+    helper.e(".control-toggle-search").checked = state.show.search;
+    helper.e(".control-toggle-clock").checked = state.show.clock;
+    helper.e(".control-toggle-clock-seconds").checked = clock.get().show.seconds;
+    helper.e(".control-toggle-clock-seperator").checked = clock.get().show.seperator;
+    helper.e(".control-toggle-clock-24").checked = clock.get().hour24;
+    helper.e(".control-toggle-edit").checked = state.edit;
+    for (var key in layout.get().show) {
+      if (layout.get().show[key]) {
+        helper.e(".control-layout-" + key).checked = layout.get().show[key]
+      };
+    };
   };
 
   var restore = function(object) {
     if (object) {
       state = object;
-      render();
     };
   };
 
   var init = function() {
-    bind();
+    _bind();
+    _update();
     render();
   };
 

@@ -2,7 +2,7 @@ var bookmarks = (function() {
 
   var all = [{
     letter: "AN",
-    name: "/r/Android/",
+    name: "r/Android/",
     url: "https://www.reddit.com/r/Android/"
   }, {
     letter: "ANA",
@@ -34,7 +34,7 @@ var bookmarks = (function() {
     url: "https://contacts.google.com/"
   }, {
     letter: "COS",
-    name: "/r/chromeos/",
+    name: "r/chromeos/",
     url: "https://www.reddit.com/r/chromeos/"
   }, {
     letter: "DR",
@@ -58,7 +58,7 @@ var bookmarks = (function() {
     url: "https://mail.google.com/"
   }, {
     letter: "GOT",
-    name: "/r/gameofthrones/",
+    name: "r/gameofthrones/",
     url: "https://www.reddit.com/r/gameofthrones/"
   }, {
     letter: "KP",
@@ -70,7 +70,7 @@ var bookmarks = (function() {
     url: "https://www.google.co.uk/maps"
   }, {
     letter: "MHW",
-    name: "/r/monsterhunter/",
+    name: "r/monsterhunter/",
     url: "https://www.reddit.com/r/monsterhunter/"
   }, {
     letter: "N",
@@ -78,7 +78,7 @@ var bookmarks = (function() {
     url: "https://www.netflix.com/"
   }, {
     letter: "OD",
-    name: "/r/opendirectories/",
+    name: "r/opendirectories/",
     url: "https://www.reddit.com/r/opendirectories/"
   }, {
     letter: "P",
@@ -86,7 +86,7 @@ var bookmarks = (function() {
     url: "https://photos.google.com/"
   }, {
     letter: "PRG",
-    name: "/r/Pathfinder_RPG/",
+    name: "r/Pathfinder_RPG/",
     url: "https://www.reddit.com/r/Pathfinder_RPG/"
   }, {
     letter: "R",
@@ -98,7 +98,7 @@ var bookmarks = (function() {
     url: "http://content.tfl.gov.uk/standard-tube-map.pdf"
   }, {
     letter: "V",
-    name: "/r/videos/",
+    name: "r/videos/",
     url: "https://www.reddit.com/r/videos/"
   }, {
     letter: "YT",

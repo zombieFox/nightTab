@@ -1,20 +1,12 @@
 var search = (function() {
 
-  var state = {
-    search: false
-  };
-
-  var get = function() {
-    return state;
-  };
-
   var bind = function() {
     var searchInput = helper.e(".search-input");
     var searchClear = helper.e(".search-clear");
     searchInput.addEventListener("input", function() {
       _updateState(this);
       _updateSearchClear();
-      render();
+      _findLinks();
     }, false);
     searchClear.addEventListener("click", function() {
       _updateState(this);
@@ -41,7 +33,7 @@ var search = (function() {
     };
   };
 
-  var render = function() {
+  var _findLinks = function() {
     var searchInput = helper.e(".search-input");
     if (state.search) {
       var searchResult = [];
@@ -75,8 +67,6 @@ var search = (function() {
   // exposed methods
   return {
     init: init,
-    get: get,
-    render: render,
     clear: clear
   };
 

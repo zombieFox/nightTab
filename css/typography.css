@@ -40,14 +40,14 @@ h6 {
 }
 
 p {
-  color: var(--black);
+  color: var(--white);
   margin: 0;
   line-height: 1.5;
 }
 
 hr {
   border: 0;
-  border: 1px solid var(--gray-08);
+  border-top: var(--line-width) solid rgb(var(--accent));
   margin: 1em 0;
   clear: both;
 }

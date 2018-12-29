@@ -18,7 +18,7 @@ input[type="text"] {
   border-color: transparent;
   border-radius: var(--radius);
   cursor: text;
-  transition: all var(--animation-speed-medium) ease-in-out;
+  transition: all var(--animation-speed-fast) ease-in-out;
   -moz-appearance: textfield;
 }
 
@@ -55,7 +55,7 @@ input[type="search"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="text"]::placeholder {
   color: var(--gray-10);
-  transition: all var(--animation-speed-medium) ease-in-out;
+  transition: all var(--animation-speed-fast) ease-in-out;
 }
 
 input[type="email"]:focus::placeholder,
@@ -91,4 +91,98 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 
 input[type="color"]::-webkit-color-swatch {
   border: 0;
+}
+
+.checkbox-wrap,
+.radio-wrap {
+  position: relative;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: block;
+  font-size: 1em;
+  line-height: 1;
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input[type="checkbox"]+label,
+input[type="radio"]+label {
+  line-height: 1;
+  color: var(--gray-16);
+  font-size: 1em;
+  font-family: var(--font-regular);
+  min-height: 2.5em;
+  display: inline-block;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all var(--animation-speed-fast) ease-in-out;
+}
+
+input[type="checkbox"]+label .label-icon,
+input[type="radio"]+label .label-icon {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  display: block;
+  font-size: 1.5em;
+  line-height: 1;
+  color: var(--gray-16);
+  transition: all var(--animation-speed-fast) ease-in-out;
+}
+
+input[type="checkbox"]:focus+label,
+input[type="radio"]:focus+label {
+  color: rgb(var(--accent));
+}
+
+input[type="checkbox"]:focus+label .label-icon,
+input[type="radio"]:focus+label .label-icon {
+  color: rgb(var(--accent));
+}
+
+input[type="checkbox"]+label:hover .label-icon,
+input[type="radio"]+label:hover .label-icon {
+  color: rgb(var(--accent));
+}
+
+input[type="checkbox"]:checked+label .label-icon,
+input[type="radio"]:checked+label .label-icon {
+  color: rgb(var(--accent));
+}
+
+input[type="checkbox"]+label .label-icon:before,
+input[type="radio"]+label .label-icon:before {
+  font-family: "Icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+input[type="checkbox"]+label .label-icon:before {
+  content: "\e835";
+}
+
+input[type="checkbox"]:checked+label .label-icon:before {
+  content: "\e834";
+}
+
+input[type="radio"]+label .label-icon:before {
+  content: "\e836";
+}
+
+input[type="radio"]:checked+label .label-icon:before {
+  content: "\e837";
 }

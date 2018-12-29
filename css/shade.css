@@ -5,7 +5,7 @@
   left: -1em;
   width: calc(100% + 2em);
   height: calc(100% + 2em);
-  opacity: 0.5;
+  opacity: 0;
   z-index: 1000;
-  transition: opacity var(--animation-speed-slow);
+  transition: opacity var(--animation-speed-fast) ease-in-out;
 }

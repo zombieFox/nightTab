@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="is-link-block">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/state.css">
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/typography.css">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="css/form.css">
   <link rel="stylesheet" href="css/shade.css">
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/head.css">
   <link rel="stylesheet" href="css/clock.css">
   <link rel="stylesheet" href="css/search.css">
@@ -31,41 +33,42 @@
 
     <div class="grid-item-head">
       <div class="head">
-        <div class="head-item mb-3 mb-xl-0">
+        <div class="head-item control-clock mb-3">
           <p class="clock"></p>
         </div>
-        <div class="head-item head-search mb-3 mb-xl-0">
+        <div class="head-item head-grow control-search mb-3">
           <form class="search" action="https://www.google.com/search" method="get">
-            <input class="search-input mb-0" type="text" placeholder="Find bookmarks or search" tabindex="1" name="q" autocomplete="off" tabindex="1">
+            <input class="search-input mb-0" type="text" placeholder="Find or Search" tabindex="1" name="q" autocomplete="off" tabindex="1">
             <input type="submit" value="Search" class="is-hidden">
           </form>
           <button class="button mb-0 ml-3 search-clear" tabindex="1" disabled>
             <span class="icon-close"></span>
           </button>
         </div>
-        <div class="head-item button-group mb-3 mb-xl-0">
+        <div class="head-item button-group mb-3">
           <button class="button mb-0 control-add" tabindex="1">
             <span class="button-text">Add</span>
           </button>
-          <button class="button mb-0 control-edit" tabindex="1">
+          <div class="checkbox-wrap">
+            <input id="control-toggle-edit" class="control-toggle-edit" type="checkbox" tabindex="1">
+            <label for="control-toggle-edit" class="button" tabindex="-1">Edit</label>
+          </div>
+          <!-- <button class="button mb-0 control-edit" tabindex="1">
             <span class="button-text">Edit</span>
-          </button>
+          </button> -->
         </div>
-        <div class="head-item button-group mb-3 mb-xl-0">
-          <button class="button mb-0 control-link-list" tabindex="1">
-            <span class="button-text">List</span>
-          </button>
-          <button class="button mb-0 control-link-blocks" tabindex="1">
-            <span class="button-text">Block</span>
-          </button>
-        </div>
-        <div class="head-item mb-3 mb-xl-0">
+        <div class="head-item mb-3">
           <form class="theme">
             <input id="accent-picker" type="color" class="theme-input" value="#ffaa33" tabindex="1">
             <label class="button mb-0 theme-label" for="accent-picker">
               <span class="button-text">Accent</span>
             </label>
           </form>
+        </div>
+        <div class="head-item mb-3">
+          <button class="button mb-0 control-toggle-menu" tabindex="1">
+            <span class="button-text"><span class="icon-settings"></span></span>
+          </button>
         </div>
       </div>
     </div>
@@ -74,9 +77,100 @@
 
   </div>
 
+  <div class="menu">
+    <h1 class="m-logo">
+      <span class="m-logo-text">Settings</span>
+    </h1>
+    <hr>
+    <p class="mb-3">Sort</p>
+    <button class="button control-sort-name" tabindex="1">
+      <span class="button-text">Name</span>
+    </button>
+    <button class="button control-sort-letter" tabindex="1">
+      <span class="button-text">Letter</span>
+    </button>
+    <!-- <div class="checkbox-wrap">
+      <input id="control-toggle-edit" class="control-toggle-edit" type="checkbox" tabindex="1">
+      <label for="control-toggle-edit"><span class="label-icon"></span>Edit</label>
+    </div> -->
+    <hr>
+
+    <div class="checkbox-wrap">
+      <input id="control-toggle-search" class="control-toggle-search" type="checkbox" tabindex="1">
+      <label for="control-toggle-search" tabindex="-1"><span class="label-icon"></span>Show Search</label>
+    </div>
+    <div class="checkbox-wrap">
+      <input id="control-toggle-clock" class="control-toggle-clock" type="checkbox" tabindex="1">
+      <label for="control-toggle-clock" tabindex="-1"><span class="label-icon"></span>Show Clock</label>
+    </div>
+    <div class="checkbox-wrap">
+      <input id="control-toggle-clock-seconds" class="control-toggle-clock-seconds" type="checkbox" tabindex="1">
+      <label for="control-toggle-clock-seconds" tabindex="-1"><span class="label-icon"></span>Show Clock Seconds</label>
+    </div>
+    <div class="checkbox-wrap">
+      <input id="control-toggle-clock-seperator" class="control-toggle-clock-seperator" type="checkbox" tabindex="1">
+      <label for="control-toggle-clock-seperator" tabindex="-1"><span class="label-icon"></span>Show Clock Seperator</label>
+    </div>
+    <div class="checkbox-wrap">
+      <input id="control-toggle-clock-24" class="control-toggle-clock-24" type="checkbox" tabindex="1">
+      <label for="control-toggle-clock-24" tabindex="-1"><span class="label-icon"></span>24 Hours</label>
+    </div>
+    <div class="radio-wrap">
+      <input id="control-layout-block" class="control-layout-block" type="radio" tabindex="1" name="control-layout" value="block" checked>
+      <label for="control-layout-block" tabindex="-1"><span class="label-icon"></span>Layout Block</label>
+    </div>
+    <div class="radio-wrap">
+      <input id="control-layout-list" class="control-layout-list" type="radio" tabindex="1" name="control-layout" value="list">
+      <label for="control-layout-list" tabindex="-1"><span class="label-icon"></span>Layout List</label>
+    </div>
+
+    <hr>
+    <!--
+    <button class="button control-clock-seconds" tabindex="1">
+      <span class="button-text">Toggle Seconds</span>
+    </button>
+    <button class="button control-clock-seperator" tabindex="1">
+      <span class="button-text">Toggle Seperators</span>
+    </button>
+    <button class="button control-clock-24" tabindex="1">
+      <span class="button-text">Toggle 12 / 24 Hours</span>
+    </button>
+    <p class="mb-3">Style</p>
+    <button class="button control-link-list" tabindex="1">
+      <span class="button-text">List</span>
+    </button>
+    <button class="button control-link-blocks" tabindex="1">
+      <span class="button-text">Block</span>
+    </button>
+    -->
+
+    <!-- <div class="m-5">
+
+    <div class="checkbox-wrap">
+    <input id="a" class="" type="checkbox" tabindex="1">
+    <label class="" for="a"><span class="label-icon"></span>Label</label>
+  </div>
+
+  <div class="radio-wrap">
+  <input id="b" class="" type="radio" tabindex="1" name="x">
+  <label class="" for="b"><span class="label-icon"></span>Label</label>
+  </div>
+  <div class="radio-wrap">
+  <input id="c" class="" type="radio" tabindex="1" name="x">
+  <label class="" for="c"><span class="label-icon"></span>Label</label>
+  </div>
+  <div class="radio-wrap">
+  <input id="d" class="" type="radio" tabindex="1" name="x">
+  <label class="" for="d"><span class="label-icon"></span>Label</label>
+  </div>
+
+  </div> -->
+  </div>
+
 </body>
 
 <script src="js/helper.js"></script>
+<script src="js/menu.js"></script>
 <script src="js/control.js"></script>
 <script src="js/bookmarks.js"></script>
 <script src="js/modal.js"></script>
@@ -86,6 +180,7 @@
 <script src="js/search.js"></script>
 <script src="js/state.js"></script>
 <script src="js/data.js"></script>
+<script src="js/layout.js"></script>
 <script src="js/links.js"></script>
 <script src="js/version.js"></script>
 <script src="js/init.js"></script>

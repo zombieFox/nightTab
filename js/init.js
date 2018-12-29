@@ -6,6 +6,7 @@ theme.init();
 // render links
 links.init();
 // other init
+layout.init();
 control.init();
 search.init();
 clock.init();

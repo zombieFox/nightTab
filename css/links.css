@@ -5,7 +5,7 @@
   position: relative;
   display: block;
   transform: scale(1);
-  transition: all var(--animation-speed-medium) ease-in-out;
+  transition: all var(--animation-speed-fast) ease-in-out;
 }
 
 .link-item:focus,
@@ -28,16 +28,16 @@
   z-index: 3;
   position: relative;
   user-select: none;
-  transition: all var(--animation-speed-medium) ease-in-out;
+  transition: all var(--animation-speed-fast) ease-in-out;
 }
 
-.is-link-block .link-panel-front {
+.is-layout-block .link-panel-front {
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.is-link-list .link-panel-front {
+.is-layout-list .link-panel-front {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
@@ -90,7 +90,7 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
-  transition: all var(--animation-speed-medium) ease-in-out;
+  transition: all var(--animation-speed-fast) ease-in-out;
 }
 
 .link-control-item {
@@ -131,14 +131,14 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  transition: all var(--animation-speed-medium) ease-in-out;
+  transition: all var(--animation-speed-fast) ease-in-out;
 }
 
-.is-link-block .link-url {
+.is-layout-block .link-url {
   justify-content: center;
 }
 
-.is-link-list .link-url {
+.is-layout-list .link-url {
   justify-content: flex-start;
 }
 
@@ -165,14 +165,14 @@
   text-overflow: ellipsis;
 }
 
-.is-link-block .link-letter {
+.is-layout-block .link-letter {
   margin: 0;
   font-size: 2em;
   text-align: center;
   max-width: 100%;
 }
 
-.is-link-list .link-letter {
+.is-layout-list .link-letter {
   margin: 0 0.5em 0 0;
   font-size: 1.5em;
   flex-shrink: 0;
@@ -195,11 +195,11 @@
   text-overflow: ellipsis;
 }
 
-.is-link-block .link-name {
+.is-layout-block .link-name {
   text-align: center;
 }
 
-.is-link-list .link-name {}
+.is-layout-list .link-name {}
 
 .link-item:hover .link-name,
 .link-item:focus .link-name {
@@ -226,13 +226,13 @@
   pointer-events: all;
 }
 
-.is-link-block .link-panel-front {
+.is-layout-block .link-panel-front {
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.is-link-list .link-panel-front {
+.is-layout-list .link-panel-front {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;

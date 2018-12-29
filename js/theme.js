@@ -28,7 +28,7 @@ var theme = (function() {
     themeAccent.value = helper.rgbToHex(state);
   };
 
-  var render = function(input) {
+  var render = function() {
     var html = helper.e("html");
     html.style.setProperty("--accent", state.r + ", " + state.g + ", " + state.b);
   };
@@ -36,13 +36,13 @@ var theme = (function() {
   var restore = function(object) {
     if (object) {
       state = object;
-      _updateInput();
-      render();
     };
   };
 
   var init = function() {
     bind();
+    _updateInput();
+    render();
   };
 
   // exposed methods
