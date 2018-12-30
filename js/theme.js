@@ -1,9 +1,9 @@
 var theme = (function() {
 
   var state = {
-    r: 255,
-    g: 170,
-    b: 51,
+    r: 0,
+    g: 255,
+    b: 0,
   };
 
   var get = function() {

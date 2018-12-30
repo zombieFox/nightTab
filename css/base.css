@@ -23,7 +23,7 @@
   --gray-20: #fafafa;
   --root-font-size: 14px;
   --radius: 2px;
-  --accent: 255, 170, 51;
+  --accent: 0, 255, 0;
   --line-width: 3px;
   --background: var(--gray-01);
   --gutter: 0.5em;

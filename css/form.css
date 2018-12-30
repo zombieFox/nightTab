@@ -54,11 +54,20 @@ input[type="password"]::placeholder,
 input[type="search"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="text"]::placeholder {
-  color: var(--gray-12);
+  color: var(--gray-10);
   transition: all var(--animation-speed-fast) ease-in-out;
 }
 
-input[type="email"]:focus::placeholder,
+input[type="email"]:hover::placeholder,
+input[type="number"]:hover::placeholder,
+input[type="password"]:hover::placeholder,
+input[type="search"]:hover::placeholder,
+input[type="tel"]:hover::placeholder,
+input[type="text"]:hover::placeholder {
+  color: var(--gray-12);
+}
+
+input[type="email"]:hover::placeholder,
 input[type="number"]:focus::placeholder,
 input[type="password"]:focus::placeholder,
 input[type="search"]:focus::placeholder,
