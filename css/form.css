@@ -172,6 +172,11 @@ input[type="radio"]:checked+label .label-icon {
   color: rgb(var(--accent));
 }
 
+input[type="checkbox"]:checked+.button-checkbox,
+input[type="radio"]:checked+.button-checkbox {
+  border-bottom-color: rgb(var(--accent));
+}
+
 input[type="checkbox"][disabled]+label,
 input[type="radio"][disabled]+label {
   color: var(--gray-04);

@@ -1,18 +1,43 @@
 .menu {
+  --menu-width: 100vw;
   background-color: var(--gray-02);
   padding: 2em;
   position: absolute;
   border-radius: var(--radius);
   top: 1em;
   right: 1em;
-  width: calc(30vw - 2em);
+  width: calc(var(--menu-width) - 2em);
   max-height: calc(100vh - 2em);
   overflow-y: scroll;
   z-index: 3000;
-  transform: translateX(30vw);
+  transform: translateX(var(--menu-width));
   transition: all var(--animation-speed-fast) ease-in-out;
 }
 
 .is-open .menu {
   transform: translateX(0);
+}
+
+@media (min-width: 550px) {
+  .menu {
+    --menu-width: 60vw;
+  }
+}
+
+@media (min-width: 700px) {
+  .menu {
+    --menu-width: 50vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .menu {
+    --menu-width: 45vw;
+  }
+}
+
+@media (min-width: 1100px) {
+  .menu {
+    --menu-width: 30vw;
+  }
 }

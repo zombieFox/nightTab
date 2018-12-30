@@ -107,7 +107,19 @@ var bookmarks = (function() {
   }];
 
   var get = function() {
-    return all;
+    var by = {
+      none: function(array) {
+        return array;
+      },
+      name: function(array) {
+        return helper.sortObject(array, "name");
+      },
+      letter: function(array) {
+        return helper.sortObject(array, "letter");
+      }
+    };
+    var sortedBookmarks = by[sort.get().view](JSON.parse(JSON.stringify(all)));
+    return sortedBookmarks;
   };
 
   var add = function(object) {

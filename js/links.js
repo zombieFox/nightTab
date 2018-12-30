@@ -377,19 +377,19 @@ var links = (function() {
     };
   };
 
-  var sort = function(by) {
-    var action = {
-      name: function() {
-        helper.sortObject(bookmarks.get(), "name");
-      },
-      letter: function() {
-        helper.sortObject(bookmarks.get(), "letter");
-      }
-    };
-    action[by]();
-    links.clear();
-    links.render();
-  };
+  // var sort = function(by) {
+  //   var action = {
+  //     name: function() {
+  //       helper.sortObject(bookmarks.get(), "name");
+  //     },
+  //     letter: function() {
+  //       helper.sortObject(bookmarks.get(), "letter");
+  //     }
+  //   };
+  //   action[by]();
+  //   links.clear();
+  //   links.render();
+  // };
 
   var init = function() {
     render();
@@ -403,7 +403,7 @@ var links = (function() {
     add: add,
     edit: edit,
     save: save,
-    sort: sort,
+    // sort: sort,
     remove: remove,
     render: render,
     tabIndex: tabIndex

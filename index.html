@@ -51,7 +51,7 @@
           </button>
           <div class="checkbox-wrap">
             <input id="control-toggle-edit" class="control-toggle-edit" type="checkbox" tabindex="1">
-            <label for="control-toggle-edit" class="button">
+            <label for="control-toggle-edit" class="button button-checkbox">
               <div class="button-text">Edit</div>
             </label>
           </div>
@@ -77,113 +77,62 @@
   </div>
 
   <div class="menu">
-    <h1 class="m-logo">
-      <span class="m-logo-text">Settings</span>
-    </h1>
-
-    <hr>
-
-    <p class="mb-3">Sort</p>
-    <button class="button control-sort-name" tabindex="1">
-      <span class="button-text">By Name</span>
-    </button>
-    <button class="button control-sort-letter" tabindex="1">
-      <span class="button-text">By Letter</span>
-    </button>
-
-    <hr>
-
-    <div class="checkbox-wrap">
-      <input id="control-toggle-search" class="control-toggle-search" type="checkbox" tabindex="1">
-      <label for="control-toggle-search"><span class="label-icon"></span>Show Search</label>
-    </div>
-
-    <hr>
-
     <div class="checkbox-wrap">
       <input id="control-toggle-clock" class="control-toggle-clock" type="checkbox" tabindex="1">
-      <label for="control-toggle-clock"><span class="label-icon"></span>Show Clock</label>
+      <label for="control-toggle-clock"><span class="label-icon"></span>Show clock</label>
     </div>
     <div class="checkbox-wrap">
       <input id="control-toggle-clock-seconds" class="control-toggle-clock-seconds" type="checkbox" tabindex="1">
-      <label for="control-toggle-clock-seconds"><span class="label-icon"></span>Show Clock Seconds</label>
+      <label for="control-toggle-clock-seconds"><span class="label-icon"></span>Show clock seconds</label>
     </div>
     <div class="checkbox-wrap">
       <input id="control-toggle-clock-seperator" class="control-toggle-clock-seperator" type="checkbox" tabindex="1">
-      <label for="control-toggle-clock-seperator"><span class="label-icon"></span>Show Clock Seperator</label>
+      <label for="control-toggle-clock-seperator"><span class="label-icon"></span>Show clock seperator</label>
     </div>
     <div class="checkbox-wrap">
       <input id="control-toggle-clock-24" class="control-toggle-clock-24" type="checkbox" tabindex="1">
-      <label for="control-toggle-clock-24"><span class="label-icon"></span>24 Hours</label>
+      <label for="control-toggle-clock-24"><span class="label-icon"></span>24 hours</label>
     </div>
-
     <hr>
-
+    <div class="checkbox-wrap">
+      <input id="control-toggle-search" class="control-toggle-search" type="checkbox" tabindex="1">
+      <label for="control-toggle-search"><span class="label-icon"></span>Show search</label>
+    </div>
+    <hr>
+    <div class="radio-wrap">
+      <input id="control-alignment-left" class="control-alignment-left" type="radio" tabindex="1" name="control-alignment" value="left" checked>
+      <label for="control-alignment-left"><span class="label-icon"></span>Left</label>
+    </div>
+    <div class="radio-wrap">
+      <input id="control-alignment-center" class="control-alignment-center" type="radio" tabindex="1" name="control-alignment" value="center">
+      <label for="control-alignment-center"><span class="label-icon"></span>Center</label>
+    </div>
+    <div class="radio-wrap">
+      <input id="control-alignment-right" class="control-alignment-right" type="radio" tabindex="1" name="control-alignment" value="right">
+      <label for="control-alignment-right"><span class="label-icon"></span>Right</label>
+    </div>
+    <hr>
     <div class="radio-wrap">
       <input id="control-layout-block" class="control-layout-block" type="radio" tabindex="1" name="control-layout" value="block" checked>
-      <label for="control-layout-block"><span class="label-icon"></span>Layout Block</label>
+      <label for="control-layout-block"><span class="label-icon"></span>Layout block</label>
     </div>
     <div class="radio-wrap">
       <input id="control-layout-list" class="control-layout-list" type="radio" tabindex="1" name="control-layout" value="list">
-      <label for="control-layout-list"><span class="label-icon"></span>Layout List</label>
+      <label for="control-layout-list"><span class="label-icon"></span>Layout list</label>
     </div>
-
     <hr>
-
     <div class="radio-wrap">
-      <input id="control-sort-name" class="control-sort-name" type="radio" tabindex="1" name="control-sort" value="name" checked>
-      <label for="control-sort-name"><span class="label-icon"></span>Layout Block</label>
+      <input id="control-sort-none" class="control-sort-none" type="radio" tabindex="1" name="control-sort" value="none" checked>
+      <label for="control-sort-none"><span class="label-icon"></span>None (As added)</label>
     </div>
     <div class="radio-wrap">
-      <input id="control-sort-letter" class="control-sort-letter" type="radio" tabindex="1" name="control-sort" value="letter" checked>
-      <label for="control-sort-letter"><span class="label-icon"></span>Layout Block</label>
+      <input id="control-sort-name" class="control-sort-name" type="radio" tabindex="1" name="control-sort" value="name">
+      <label for="control-sort-name"><span class="label-icon"></span>Name</label>
     </div>
     <div class="radio-wrap">
-      <input id="control-sort-natural" class="control-sort-natural" type="radio" tabindex="1" name="control-sort" value="natural" checked>
-      <label for="control-sort-natural"><span class="label-icon"></span>Layout Block</label>
+      <input id="control-sort-letter" class="control-sort-letter" type="radio" tabindex="1" name="control-sort" value="letter">
+      <label for="control-sort-letter"><span class="label-icon"></span>Letter</label>
     </div>
-
-
-    <!--
-    <button class="button control-clock-seconds" tabindex="1">
-      <span class="button-text">Toggle Seconds</span>
-    </button>
-    <button class="button control-clock-seperator" tabindex="1">
-      <span class="button-text">Toggle Seperators</span>
-    </button>
-    <button class="button control-clock-24" tabindex="1">
-      <span class="button-text">Toggle 12 / 24 Hours</span>
-    </button>
-    <p class="mb-3">Style</p>
-    <button class="button control-link-list" tabindex="1">
-      <span class="button-text">List</span>
-    </button>
-    <button class="button control-link-blocks" tabindex="1">
-      <span class="button-text">Block</span>
-    </button>
-    -->
-
-    <!-- <div class="m-5">
-
-    <div class="checkbox-wrap">
-    <input id="a" class="" type="checkbox" tabindex="1">
-    <label class="" for="a"><span class="label-icon"></span>Label</label>
-  </div>
-
-  <div class="radio-wrap">
-  <input id="b" class="" type="radio" tabindex="1" name="x">
-  <label class="" for="b"><span class="label-icon"></span>Label</label>
-  </div>
-  <div class="radio-wrap">
-  <input id="c" class="" type="radio" tabindex="1" name="x">
-  <label class="" for="c"><span class="label-icon"></span>Label</label>
-  </div>
-  <div class="radio-wrap">
-  <input id="d" class="" type="radio" tabindex="1" name="x">
-  <label class="" for="d"><span class="label-icon"></span>Label</label>
-  </div>
-
-  </div> -->
   </div>
 
 </body>
@@ -200,6 +149,7 @@
 <script src="js/state.js"></script>
 <script src="js/data.js"></script>
 <script src="js/layout.js"></script>
+<script src="js/sort.js"></script>
 <script src="js/links.js"></script>
 <script src="js/version.js"></script>
 <script src="js/init.js"></script>
