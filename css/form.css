@@ -127,6 +127,10 @@ label {
   display: block;
 }
 
+label[disabled] {
+  color: var(--gray-04);
+}
+
 input[type="color"] {
   opacity: 0;
   width: 2px;
