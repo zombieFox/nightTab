@@ -359,7 +359,7 @@ var links = (function() {
 
   var tabIndex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
-    if (control.get().edit) {
+    if (state.get().edit.active) {
       allLinkControlItem.forEach(function(arrayItem, index) {
         arrayItem.tabIndex = 1;
       });

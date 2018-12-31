@@ -81,7 +81,7 @@ button [class*=" icon-"],
   border-bottom-color: rgb(var(--accent));
 }
 
-.button-small  {
+.button-small {
   font-size: 0.8em;
 }
 

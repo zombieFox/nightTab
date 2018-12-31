@@ -1,24 +1,5 @@
 var control = (function() {
 
-  var state = {
-    edit: false,
-    alignment: "left",
-    show: {
-      clock: true,
-      search: true,
-    }
-  };
-
-  var get = function() {
-    return state;
-  };
-
-  var restore = function(object) {
-    if (object) {
-      state = object;
-    };
-  };
-
   var toggle = function(override) {
     var options = {
       path: null,
@@ -30,61 +11,66 @@ var control = (function() {
     if (options.path != null) {
       helper.setObject({
         path: options.path,
-        object: state,
+        object: state.get(),
         newValue: options.value
       });
+      console.log(state.get());
     };
   };
 
   var render = function() {
     var html = helper.e("html");
     var _edit = function() {
-      if (state.edit) {
+      if (state.get().edit.active) {
         helper.addClass(html, "is-edit");
       } else {
         helper.removeClass(html, "is-edit");
+      };
+    };
+    var _clock = function() {
+      if (state.get().clock.active) {
+        helper.addClass(html, "is-clock");
+      } else {
+        helper.removeClass(html, "is-clock");
+      };
+    };
+    var _search = function() {
+      if (state.get().search.active) {
+        helper.addClass(html, "is-search");
+      } else {
+        helper.removeClass(html, "is-search");
       };
     };
     var _alignment = function() {
       helper.removeClass(html, "is-alignment-left");
       helper.removeClass(html, "is-alignment-center");
       helper.removeClass(html, "is-alignment-right");
-      helper.addClass(html, "is-alignment-" + state.alignment);
-    };
-    var _showHide = function() {
-      for (var key in state.show) {
-        var headElement = helper.e(".control-" + key);
-        if (state.show[key]) {
-          helper.removeClass(headElement, "is-hidden");
-        } else {
-          helper.addClass(headElement, "is-hidden");
-        };
-      };
+      helper.addClass(html, "is-alignment-" + state.get().alignment);
     };
     _alignment();
     _edit();
-    _showHide();
+    _clock();
+    _search();
   };
 
   var _dependents = function(options) {
-    var all = [{
-      path: "show.clock",
-      element: [".control-toggle-clock-seconds", ".control-toggle-clock-seperator", ".control-toggle-clock-24"]
-    }];
-    all.forEach(function(arrayItem, index) {
-      if (helper.getObject({
-          path: arrayItem.path,
-          object: state
-        })) {
-        arrayItem.element.forEach(function(arrayItem, index) {
-          helper.e(arrayItem).disabled = false;
-        });
+    var _clock = function() {
+      if (state.get().clock.active) {
+        helper.e(".control-toggle-clock-seconds").disabled = false;
+        helper.e(".control-toggle-clock-seperator").disabled = false;
+        helper.e(".control-toggle-clock-24").disabled = false;
       } else {
-        arrayItem.element.forEach(function(arrayItem, index) {
-          helper.e(arrayItem).disabled = true;
-        });
+        helper.e(".control-toggle-clock-seconds").disabled = true;
+        helper.e(".control-toggle-clock-seperator").disabled = true;
+        helper.e(".control-toggle-clock-24").disabled = true;
       };
-    });
+      if (state.get().clock.active && !state.get().clock.hour24) {
+        helper.e(".control-toggle-clock-meridiem").disabled = false;
+      } else {
+        helper.e(".control-toggle-clock-meridiem").disabled = true;
+      };
+    };
+    _clock();
   };
 
   var _bind = function() {
@@ -98,8 +84,8 @@ var control = (function() {
     }, false);
 
     helper.e(".control-toggle-edit").addEventListener("change", function() {
-      toggle({
-        path: "edit",
+      state.change({
+        path: "edit.active",
         value: this.checked
       });
       render();
@@ -107,26 +93,20 @@ var control = (function() {
     }, false);
 
     helper.e(".control-toggle-search").addEventListener("change", function() {
-      toggle({
-        path: "show.search",
+      state.change({
+        path: "search.active",
         value: this.checked
       });
-      render({
-        path: "show.search",
-        element: ".head-search"
-      });
+      render();
       data.save();
     }, false);
 
     helper.e(".control-toggle-clock").addEventListener("change", function() {
-      toggle({
-        path: "show.clock",
+      state.change({
+        path: "clock.active",
         value: this.checked
       });
-      render({
-        path: "show.clock",
-        element: ".head-clock"
-      });
+      render();
       _dependents();
       clock.clear();
       clock.render();
@@ -134,8 +114,8 @@ var control = (function() {
     }, false);
 
     helper.e(".control-toggle-clock-seconds").addEventListener("change", function() {
-      clock.toggle({
-        path: "show.seconds",
+      state.change({
+        path: "clock.show.seconds",
         value: this.checked
       });
       clock.clear();
@@ -144,8 +124,8 @@ var control = (function() {
     }, false);
 
     helper.e(".control-toggle-clock-seperator").addEventListener("change", function() {
-      clock.toggle({
-        path: "show.seperator",
+      state.change({
+        path: "clock.show.seperator",
         value: this.checked
       });
       clock.clear();
@@ -154,8 +134,19 @@ var control = (function() {
     }, false);
 
     helper.e(".control-toggle-clock-24").addEventListener("change", function() {
-      clock.toggle({
-        path: "hour24",
+      state.change({
+        path: "clock.hour24",
+        value: this.checked
+      });
+      _dependents();
+      clock.clear();
+      clock.render();
+      data.save();
+    }, false);
+
+    helper.e(".control-toggle-clock-meridiem").addEventListener("change", function() {
+      state.change({
+        path: "clock.show.meridiem",
         value: this.checked
       });
       clock.clear();
@@ -165,8 +156,8 @@ var control = (function() {
 
     helper.eA("input[name='control-layout']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
-        layout.toggle({
-          path: "view",
+        state.change({
+          path: "layout.view",
           value: this.value
         });
         layout.render();
@@ -176,8 +167,8 @@ var control = (function() {
 
     helper.eA("input[name='control-sort']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
-        sort.toggle({
-          path: "view",
+        state.change({
+          path: "sort.view",
           value: this.value
         });
         links.clear();
@@ -188,26 +179,36 @@ var control = (function() {
 
     helper.eA("input[name='control-alignment']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
-        toggle({
-          path: "alignment",
+        state.change({
+          path: "layout.alignment",
           value: this.value
         });
         render();
         data.save();
       }, false);
     });
+
+    helper.e(".control-theme").addEventListener("change", function() {
+      state.change({
+        path: "theme",
+        value: helper.hexToRgb(this.value)
+      });
+      theme.render();
+      data.save();
+    });
   };
 
   var _update = function() {
-    helper.e(".control-toggle-search").checked = state.show.search;
-    helper.e(".control-toggle-clock").checked = state.show.clock;
-    helper.e(".control-toggle-clock-seconds").checked = clock.get().show.seconds;
-    helper.e(".control-toggle-clock-seperator").checked = clock.get().show.seperator;
-    helper.e(".control-toggle-clock-24").checked = clock.get().hour24;
-    helper.e(".control-toggle-edit").checked = state.edit;
-    helper.e(".control-layout-" + layout.get().view).checked = true;
-    helper.e(".control-sort-" + sort.get().view).checked = true;
-    helper.e(".control-alignment-" + state.alignment).checked = true;
+    helper.e(".control-toggle-search").checked = state.get().search.active;
+    helper.e(".control-toggle-clock").checked = state.get().clock.active;
+    helper.e(".control-toggle-clock-seconds").checked = state.get().clock.show.seconds;
+    helper.e(".control-toggle-clock-seperator").checked = state.get().clock.show.seperator;
+    helper.e(".control-toggle-clock-meridiem").checked = state.get().clock.show.meridiem;
+    helper.e(".control-toggle-clock-24").checked = state.get().clock.hour24;
+    helper.e(".control-toggle-edit").checked = state.get().edit.active;
+    helper.e(".control-layout-" + state.get().layout.view).checked = true;
+    helper.e(".control-sort-" + state.get().sort.view).checked = true;
+    helper.e(".control-alignment-" + state.get().layout.alignment).checked = true;
   };
 
   var init = function() {
@@ -220,8 +221,6 @@ var control = (function() {
   // exposed methods
   return {
     init: init,
-    get: get,
-    restore: restore,
     render: render
   };
 

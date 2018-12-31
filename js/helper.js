@@ -275,6 +275,12 @@ var helper = (function() {
     };
   };
 
+  var allEqual = function(array) {
+    return array.every(function(arrayItem) {
+      return arrayItem === array[0];
+    });
+  };
+
   // exposed methods
   return {
     e: e,
@@ -282,6 +288,7 @@ var helper = (function() {
     toggleClass: toggleClass,
     addClass: addClass,
     removeClass: removeClass,
+    allEqual: allEqual,
     getDateTime: getDateTime,
     sortObject: sortObject,
     applyOptions: applyOptions,

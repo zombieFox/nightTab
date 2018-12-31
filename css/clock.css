@@ -14,9 +14,10 @@
 }
 
 .clock-seperator,
-.clock-hour,
+.clock-hours,
 .clock-minutes,
-.clock-seconds {
+.clock-seconds,
+.clock-meridiem {
   font-size: 1.5em;
   display: flex;
   justify-content: center;
@@ -28,9 +29,10 @@
   color: rgb(var(--accent));
 }
 
-.clock-hour,
+.clock-hours,
 .clock-minutes,
-.clock-seconds {
+.clock-seconds,
+.clock-meridiem {
   min-width: 1.25em;
 }
 
@@ -44,7 +46,7 @@
   margin-right: 0.125em;
 }
 
-.clock-hour {
+.clock-hours {
   color: var(--white);
 }
 
@@ -54,4 +56,8 @@
 
 .clock-seconds {
   color: var(--gray-12);
+}
+
+.clock-meridiem {
+  color: var(--gray-10);
 }

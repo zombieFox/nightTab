@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/state.css">
   <link rel="stylesheet" href="css/utilities.css">
-  <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/spacing.css">
@@ -33,10 +32,10 @@
 
     <div class="grid-item-head">
       <div class="head">
-        <div class="head-item control-clock mb-3">
+        <div class="head-item head-clock mb-3">
           <p class="clock"></p>
         </div>
-        <div class="head-item head-grow control-search mb-3">
+        <div class="head-item head-grow head-search mb-3">
           <form class="search" action="https://www.google.com/search" method="get">
             <input class="search-input mb-0" type="text" placeholder="Find or Search" tabindex="1" name="q" autocomplete="off" tabindex="1">
             <input type="submit" value="Search" class="is-hidden">
@@ -51,18 +50,18 @@
           </button>
           <div class="checkbox-wrap">
             <input id="control-toggle-edit" class="control-toggle-edit" type="checkbox" tabindex="1">
-            <label for="control-toggle-edit" class="button button-checkbox">
+            <label for="control-toggle-edit" class="button button-checkbox mb-0">
               <div class="button-text">Edit</div>
             </label>
           </div>
         </div>
         <div class="head-item mb-3">
-          <form class="theme">
-            <input id="accent-picker" type="color" class="theme-input" value="#00ff00" tabindex="1">
-            <label class="button mb-0 theme-label" for="accent-picker">
+          <div class="input-wrap">
+            <input id="control-theme" type="color" class="control-theme" value="#00ff00" tabindex="1">
+            <label for="control-theme" class="button button-input-color mb-0">
               <span class="button-text">Accent</span>
             </label>
-          </form>
+          </div>
         </div>
         <div class="head-item mb-3">
           <button class="button mb-0 control-toggle-menu" tabindex="1">
@@ -93,6 +92,10 @@
       <input id="control-toggle-clock-24" class="control-toggle-clock-24" type="checkbox" tabindex="1">
       <label for="control-toggle-clock-24"><span class="label-icon"></span>24 Hours</label>
     </div>
+    <div class="checkbox-wrap">
+      <input id="control-toggle-clock-meridiem" class="control-toggle-clock-meridiem" type="checkbox" tabindex="1">
+      <label for="control-toggle-clock-meridiem"><span class="label-icon"></span>AM/PM</label>
+    </div>
     <hr>
     <div class="checkbox-wrap">
       <input id="control-toggle-search" class="control-toggle-search" type="checkbox" tabindex="1">
@@ -100,7 +103,7 @@
     </div>
     <hr>
     <div class="radio-wrap">
-      <input id="control-alignment-left" class="control-alignment-left" type="radio" tabindex="1" name="control-alignment" value="left" checked>
+      <input id="control-alignment-left" class="control-alignment-left" type="radio" tabindex="1" name="control-alignment" value="left">
       <label for="control-alignment-left"><span class="label-icon"></span>Left</label>
     </div>
     <div class="radio-wrap">
@@ -113,7 +116,7 @@
     </div>
     <hr>
     <div class="radio-wrap">
-      <input id="control-layout-block" class="control-layout-block" type="radio" tabindex="1" name="control-layout" value="block" checked>
+      <input id="control-layout-block" class="control-layout-block" type="radio" tabindex="1" name="control-layout" value="block">
       <label for="control-layout-block"><span class="label-icon"></span>Block</label>
     </div>
     <div class="radio-wrap">
@@ -122,7 +125,7 @@
     </div>
     <hr>
     <div class="radio-wrap">
-      <input id="control-sort-none" class="control-sort-none" type="radio" tabindex="1" name="control-sort" value="none" checked>
+      <input id="control-sort-none" class="control-sort-none" type="radio" tabindex="1" name="control-sort" value="none">
       <label for="control-sort-none"><span class="label-icon"></span>None (As added)</label>
     </div>
     <div class="radio-wrap">
@@ -138,16 +141,16 @@
 </body>
 
 <script src="js/helper.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/control.js"></script>
+<script src="js/data.js"></script>
 <script src="js/bookmarks.js"></script>
+<script src="js/state.js"></script>
+<script src="js/control.js"></script>
+<script src="js/menu.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/shade.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/clock.js"></script>
 <script src="js/search.js"></script>
-<script src="js/state.js"></script>
-<script src="js/data.js"></script>
 <script src="js/layout.js"></script>
 <script src="js/sort.js"></script>
 <script src="js/links.js"></script>

@@ -107,19 +107,20 @@ var bookmarks = (function() {
   }];
 
   var get = function() {
-    var by = {
-      none: function(array) {
-        return array;
-      },
-      name: function(array) {
-        return helper.sortObject(array, "name");
-      },
-      letter: function(array) {
-        return helper.sortObject(array, "letter");
-      }
-    };
-    var sortedBookmarks = by[sort.get().view](JSON.parse(JSON.stringify(all)));
-    return sortedBookmarks;
+    // var by = {
+    //   none: function(array) {
+    //     return array;
+    //   },
+    //   name: function(array) {
+    //     return helper.sortObject(array, "name");
+    //   },
+    //   letter: function(array) {
+    //     return helper.sortObject(array, "letter");
+    //   }
+    // };
+    // var sortedBookmarks = by[state.get().sort.view](JSON.parse(JSON.stringify(all)));
+    // return sortedBookmarks;
+    return all;
   };
 
   var add = function(object) {
@@ -134,19 +135,12 @@ var bookmarks = (function() {
     all.splice(index, 1);
   };
 
-  var restore = function(array) {
-    if (array) {
-      all = array;
-    };
-  };
-
   // exposed methods
   return {
     get: get,
     add: add,
     edit: edit,
-    remove: remove,
-    restore: restore
+    remove: remove
   };
 
 })();

@@ -25,9 +25,24 @@
 
 .is-alignment-center .head {
   justify-content: center;
-  ;
 }
 
 .is-alignment-right .head {
   justify-content: flex-end;
+}
+
+.head-search {
+  display: none;
+}
+
+.is-search .head-search {
+  display: flex;
+}
+
+.head-clock {
+  display: none;
+}
+
+.is-clock .head-clock {
+  display: flex;
 }

@@ -1,23 +1,5 @@
 var clock = (function() {
 
-  var state = {
-    hour24: true,
-    show: {
-      seconds: true,
-      seperator: true
-    }
-  };
-
-  var get = function() {
-    return state;
-  };
-
-  var restore = function(object) {
-    if (object) {
-      state = object;
-    };
-  };
-
   var clear = function() {
     var clock = helper.e(".clock");
     while (clock.lastChild) {
@@ -25,28 +7,16 @@ var clock = (function() {
     };
   };
 
-  var toggle = function(override) {
-    var options = {
-      path: null,
-      value: null
-    };
-    if (override) {
-      options = helper.applyOptions(options, override);
-    };
-    if (options.path != null) {
-      helper.setObject({
-        path: options.path,
-        object: state,
-        newValue: options.value
-      });
-    };
-  };
-
   var _makeTimeObject = function() {
     var time = helper.getDateTime();
-    if (!state.hour24) {
+    time.meridiem = "AM";
+    if (!state.get().clock.hour24) {
       if (time.hours > 12) {
+        time.meridiem = "PM";
         time.hours = time.hours - 12;
+      };
+      if (time.hours == 0) {
+        time.hours = 12;
       };
     };
     if (time.minutes < 10) {
@@ -62,12 +32,12 @@ var clock = (function() {
     var _clock = function() {
       var clock = helper.e(".clock");
       var time = _makeTimeObject();
-      var hour = helper.makeNode({
+      var hours = helper.makeNode({
         tag: "span",
         text: time.hours,
         attr: [{
           key: "class",
-          value: "clock-hour"
+          value: "clock-item clock-hours"
         }]
       });
       var minutes = helper.makeNode({
@@ -75,7 +45,7 @@ var clock = (function() {
         text: time.minutes,
         attr: [{
           key: "class",
-          value: "clock-minutes"
+          value: "clock-item clock-minutes"
         }]
       });
       var seconds = helper.makeNode({
@@ -83,7 +53,15 @@ var clock = (function() {
         text: time.seconds,
         attr: [{
           key: "class",
-          value: "clock-seconds"
+          value: "clock-item clock-seconds"
+        }]
+      });
+      var meridiem = helper.makeNode({
+        tag: "span",
+        text: time.meridiem,
+        attr: [{
+          key: "class",
+          value: "clock-item clock-meridiem"
         }]
       });
       var seperator1 = helper.makeNode({
@@ -102,19 +80,33 @@ var clock = (function() {
           value: "clock-seperator"
         }]
       });
-      clock.appendChild(hour);
-      if (state.show.seperator) {
+      var seperator3 = helper.makeNode({
+        tag: "span",
+        text: ":",
+        attr: [{
+          key: "class",
+          value: "clock-seperator"
+        }]
+      });
+      clock.appendChild(hours);
+      if (state.get().clock.show.seperator) {
         clock.appendChild(seperator1);
       };
       clock.appendChild(minutes);
-      if (state.show.seconds) {
-        if (state.show.seperator) {
+      if (state.get().clock.show.seconds) {
+        if (state.get().clock.show.seperator) {
           clock.appendChild(seperator2);
         };
         clock.appendChild(seconds);
       };
+      if (!state.get().clock.hour24 && state.get().clock.show.meridiem) {
+        if (state.get().clock.show.seperator) {
+          clock.appendChild(seperator3);
+        };
+        clock.appendChild(meridiem);
+      };
     };
-    if (control.get().show.clock) {
+    if (state.get().clock.active) {
       _clock();
     };
   };
@@ -131,10 +123,7 @@ var clock = (function() {
   // exposed methods
   return {
     init: init,
-    get: get,
     render: render,
-    restore: restore,
-    toggle: toggle,
     clear: clear
   };
 

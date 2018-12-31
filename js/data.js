@@ -22,12 +22,7 @@ var data = (function() {
   var restore = function() {
     var data = JSON.parse(get(saveName));
     if (data) {
-      bookmarks.restore(data.bookmarks);
-      layout.restore(data.layout);
-      sort.restore(data.sort);
-      control.restore(data.control);
-      theme.restore(data.theme);
-      clock.restore(data.clock);
+      state.restore(data);
       console.log("data restored");
     };
   };

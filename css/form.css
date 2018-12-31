@@ -83,8 +83,12 @@ label {
 }
 
 input[type="color"] {
-  border: 0;
-  height: 2.5em;
+  opacity: 0;
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   cursor: pointer;
   -webkit-appearance: none;
@@ -102,6 +106,23 @@ input[type="color"]::-webkit-color-swatch {
   border: 0;
 }
 
+input[type="color"]+.button-input-color {
+  padding-right: 2.25em;
+}
+
+input[type="color"]+.button-input-color:before {
+  background-color: rgb(var(--accent));
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  right: 0.5em;
+  width: 1em;
+  height: 1em;
+  z-index: 1;
+  box-shadow: 0 0 0.25em 0 rgba(var(--accent), 0.6), 0 0 0.5em 0 rgba(var(--accent), 0.4);
+}
+
+.input-wrap,
 .checkbox-wrap,
 .radio-wrap {
   position: relative;
