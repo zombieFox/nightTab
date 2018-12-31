@@ -22,6 +22,58 @@ input[type="text"] {
   -moz-appearance: textfield;
 }
 
+label+input[type="email"],
+label+input[type="number"],
+label+input[type="password"],
+label+input[type="search"],
+label+input[type="tel"],
+label+input[type="text"] {
+  margin-top: 0.5em;
+}
+
+input[type="email"][disabled],
+input[type="email"][disabled]:hover,
+input[type="email"][disabled]:focus,
+input[type="email"][disabled]::placeholder,
+input[type="email"][disabled]:hover::placeholder,
+input[type="email"][disabled]:focus::placeholder,
+input[type="number"][disabled],
+input[type="number"][disabled]:hover,
+input[type="number"][disabled]:focus,
+input[type="number"][disabled]::placeholder,
+input[type="number"][disabled]:hover::placeholder,
+input[type="number"][disabled]:focus::placeholder,
+input[type="password"][disabled],
+input[type="password"][disabled]:hover,
+input[type="password"][disabled]:focus,
+input[type="password"][disabled]::placeholder,
+input[type="password"][disabled]:hover::placeholder,
+input[type="password"][disabled]:focus::placeholder,
+input[type="search"][disabled],
+input[type="search"][disabled]:hover,
+input[type="search"][disabled]:focus,
+input[type="search"][disabled]::placeholder,
+input[type="search"][disabled]:hover::placeholder,
+input[type="search"][disabled]:focus::placeholder,
+input[type="tel"][disabled],
+input[type="tel"][disabled]:hover,
+input[type="tel"][disabled]:focus,
+input[type="tel"][disabled]::placeholder,
+input[type="tel"][disabled]:hover::placeholder,
+input[type="tel"][disabled]:focus::placeholder,
+input[type="text"][disabled],
+input[type="text"][disabled]:hover,
+input[type="text"][disabled]:focus,
+input[type="text"][disabled]::placeholder,
+input[type="text"][disabled]:hover::placeholder,
+input[type="text"][disabled]:focus::placeholder {
+  background-color: var(--gray-04);
+  color: var(--gray-08);
+  border-color: var(--gray-04);
+  cursor: default;
+  box-shadow: none;
+}
+
 input[type="email"]:hover,
 input[type="number"]:hover,
 input[type="password"]:hover,
@@ -67,7 +119,7 @@ input[type="text"]:hover::placeholder {
   color: var(--gray-12);
 }
 
-input[type="email"]:hover::placeholder,
+input[type="email"]:focus::placeholder,
 input[type="number"]:focus::placeholder,
 input[type="password"]:focus::placeholder,
 input[type="search"]:focus::placeholder,
@@ -77,7 +129,9 @@ input[type="text"]:focus::placeholder {
 }
 
 label {
+  padding: 0.5em 0;
   color: var(--gray-16);
+  margin-bottom: 0;
   font-size: 1em;
   display: block;
 }
@@ -194,6 +248,13 @@ input[type="radio"]:active+label .label-icon {
 
 input[type="checkbox"]:checked+label,
 input[type="radio"]:checked+label {
+  color: var(--gray-16);
+}
+
+input[type="checkbox"]:not([disabled]):hover:checked+label,
+input[type="checkbox"]:not([disabled]):focus:checked+label,
+input[type="radio"]:not([disabled]):hover:checked+label,
+input[type="radio"]:not([disabled]):focus:checked+label {
   color: var(--white);
 }
 

@@ -1,6 +1,6 @@
 var theme = (function() {
 
-  var _updateInput = function() {
+  var _update = function() {
     var controlTheme = helper.e(".control-theme");
     controlTheme.value = helper.rgbToHex(state.get().theme);
   };
@@ -12,7 +12,7 @@ var theme = (function() {
   };
 
   var init = function() {
-    _updateInput();
+    _update();
     render();
   };
 

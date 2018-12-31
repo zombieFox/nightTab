@@ -10,7 +10,10 @@ var state = (function() {
       view: "block"
     },
     search: {
-      active: true
+      searching: false,
+      active: true,
+      engine: "https://www.google.com/search"
+      // engine: "https://duckduckgo.com/"
     },
     sort: {
       view: "none"

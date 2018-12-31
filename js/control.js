@@ -45,7 +45,7 @@ var control = (function() {
       helper.removeClass(html, "is-alignment-left");
       helper.removeClass(html, "is-alignment-center");
       helper.removeClass(html, "is-alignment-right");
-      helper.addClass(html, "is-alignment-" + state.get().alignment);
+      helper.addClass(html, "is-alignment-" + state.get().layout.alignment);
     };
     _alignment();
     _edit();

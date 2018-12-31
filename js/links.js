@@ -82,7 +82,7 @@ var links = (function() {
     state.currentEditIndex = null;
     state.currentAction = null;
     clear();
-    if (search.get().search) {
+    if (state.get().search.searching) {
       search.render();
     } else {
       render();
@@ -94,7 +94,7 @@ var links = (function() {
     var index = parseInt(button.closest(".link-item").dataset.index, 10);
     bookmarks.remove(index);
     clear();
-    if (search.get().search) {
+    if (state.get().search.searching) {
       search.render();
     } else {
       render();
