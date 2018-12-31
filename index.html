@@ -58,7 +58,7 @@
         <div class="head-item mb-3">
           <div class="input-wrap">
             <input id="control-theme" type="color" class="control-theme" value="#00ff00" tabindex="1">
-            <label for="control-theme" class="button button-input-color mb-0">
+            <label for="control-theme" class="button label-button-color mb-0">
               <span class="button-text">Accent</span>
             </label>
           </div>
@@ -101,9 +101,21 @@
       <input id="control-search" class="control-search" type="checkbox" tabindex="1">
       <label for="control-search"><span class="label-icon"></span>Search</label>
     </div>
+    <div class="radio-wrap">
+      <input id="control-search-engine-google" class="control-search-engine-google" type="radio" tabindex="1" name="control-search-engine" value="google">
+      <label for="control-search-engine-google"><span class="label-icon"></span>Google</label>
+    </div>
+    <div class="radio-wrap">
+      <input id="control-search-engine-duckduckgo" class="control-search-engine-duckduckgo" type="radio" tabindex="1" name="control-search-engine" value="duckduckgo">
+      <label for="control-search-engine-duckduckgo"><span class="label-icon"></span>Duck Duck Go</label>
+    </div>
+    <div class="radio-wrap">
+      <input id="control-search-engine-custom" class="control-search-engine-custom" type="radio" tabindex="1" name="control-search-engine" value="custom">
+      <label for="control-search-engine-custom"><span class="label-icon"></span>Custom</label>
+    </div>
     <div class="input-wrap">
       <label for="letters">Search engine</label>
-      <input type="text" class="" placeholder="https://" tabindex="1" autocomplete="off">
+      <input type="text" class="control-search-engine-custom-url" placeholder="https://" tabindex="1" autocomplete="off">
     </div>
     <hr>
     <div class="radio-wrap">

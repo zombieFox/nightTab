@@ -10,3 +10,10 @@ layout.init();
 control.init();
 search.init();
 clock.init();
+
+
+
+
+
+menu.open();
+menu.render();

@@ -1,32 +1,24 @@
 var menu = (function() {
 
-  var state = {
-    open: false
-  };
-
-  var get = function() {
-    return state;
-  };
-
   var close = function() {
-    state.open = false;
+    state.get().menu.open = false;
   };
 
   var open = function() {
-    state.open = true;
+    state.get().menu.open = true;
   };
 
   var toggle = function() {
-    if (state.open) {
-      state.open = false;
+    if (state.get().menu.open) {
+      state.get().menu.open = false;
     } else {
-      state.open = true;
+      state.get().menu.open = true;
     };
   };
 
   var render = function() {
     var body = helper.e("body");
-    if (state.open) {
+    if (state.get().menu.open) {
       helper.addClass(body, "is-open");
       shade.render({
         action: function() {
@@ -40,7 +32,8 @@ var menu = (function() {
   };
 
   return {
-    get: get,
+    close: close,
+    open: open,
     toggle: toggle,
     render: render
   };

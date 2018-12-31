@@ -40,6 +40,7 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-search");
       };
+      helper.e(".control-search-engine-custom-url").value = state.get().search.engine[state.get().search.engine.selected].url;
     };
     var _alignment = function() {
       helper.removeClass(html, "is-alignment-left");
@@ -70,7 +71,15 @@ var control = (function() {
         helper.e(".control-clock-meridiem").disabled = true;
       };
     };
+    var _search = function() {
+      if (state.get().search.engine.selected === "custom") {
+        helper.e(".control-search-engine-custom-url").disabled = false;
+      } else {
+        helper.e(".control-search-engine-custom-url").disabled = true;
+      };
+    };
     _clock();
+    _search();
   };
 
   var _bind = function() {
@@ -188,6 +197,28 @@ var control = (function() {
       }, false);
     });
 
+    helper.eA("input[name='control-search-engine']").forEach(function(arrayItem, index) {
+      arrayItem.addEventListener("change", function() {
+        state.change({
+          path: "search.engine.selected",
+          value: this.value
+        });
+        render();
+        _dependents();
+        search.update();
+        data.save();
+      }, false);
+    });
+
+    helper.e(".control-search-engine-custom-url").addEventListener("input", function() {
+      state.change({
+        path: "search.engine.custom.url",
+        value: this.value
+      });
+      search.update();
+      data.save();
+    });
+
     helper.e(".control-theme").addEventListener("change", function() {
       state.change({
         path: "theme",
@@ -209,6 +240,8 @@ var control = (function() {
     helper.e(".control-layout-" + state.get().layout.view).checked = true;
     helper.e(".control-sort-" + state.get().sort.view).checked = true;
     helper.e(".control-alignment-" + state.get().layout.alignment).checked = true;
+    helper.e(".control-search-engine-" + state.get().search.engine.selected).checked = true;
+    helper.e(".control-search-engine-custom-url").value = state.get().search.engine[state.get().search.engine.selected].url;
   };
 
   var init = function() {

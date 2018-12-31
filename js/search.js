@@ -52,9 +52,9 @@ var search = (function() {
     };
   };
 
-  var _update = function() {
+  var update = function() {
     var search = helper.e(".search");
-    search.setAttribute("action", state.get().search.engine);
+    search.setAttribute("action", state.get().search.engine[state.get().search.engine.selected].url);
   };
 
   var clear = function() {
@@ -67,13 +67,14 @@ var search = (function() {
 
   var init = function() {
     bind();
-    _update();
+    update();
   };
 
   // exposed methods
   return {
     init: init,
     render: render,
+    update: update,
     clear: clear
   };
 

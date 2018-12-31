@@ -1,14 +1,5 @@
 var links = (function() {
 
-  var state = {
-    currentEditIndex: null,
-    currentAction: null
-  };
-
-  var get = function() {
-    return state;
-  };
-
   var _bind = function(override) {
     var options = {
       element: null,
@@ -35,7 +26,7 @@ var links = (function() {
   };
 
   var add = function() {
-    state.currentAction = "add";
+    state.get().links.action = "add";
     var form = _makeLinkForm();
     modal.render({
       heading: "Add a new bookmark",
@@ -47,9 +38,9 @@ var links = (function() {
   };
 
   var edit = function(button) {
-    state.currentAction = "edit";
-    state.currentEditIndex = parseInt(button.closest(".link-item").dataset.index, 10);
-    var currentBookmark = bookmarks.get()[state.currentEditIndex];
+    state.get().links.action = "edit";
+    state.get().links.editIndex = parseInt(button.closest(".link-item").dataset.index, 10);
+    var currentBookmark = bookmarks.get()[state.get().links.editIndex];
     var form = _makeLinkForm();
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
@@ -69,7 +60,7 @@ var links = (function() {
         bookmarks.add(newLinkData);
       },
       edit: function(newLinkData) {
-        bookmarks.edit(newLinkData, state.currentEditIndex);
+        bookmarks.edit(newLinkData, state.get().links.editIndex);
       }
     };
     var form = helper.e(".link-form");
@@ -78,9 +69,9 @@ var links = (function() {
       name: form.querySelector(".link-form-input-name").value,
       url: form.querySelector(".link-form-input-url").value
     };
-    action[state.currentAction](newLinkData);
-    state.currentEditIndex = null;
-    state.currentAction = null;
+    action[state.get().links.action](newLinkData);
+    state.get().links.editIndex = null;
+    state.get().links.action = null;
     clear();
     if (state.get().search.searching) {
       search.render();
@@ -398,7 +389,6 @@ var links = (function() {
   // exposed methods
   return {
     init: init,
-    get: get,
     clear: clear,
     add: add,
     edit: edit,

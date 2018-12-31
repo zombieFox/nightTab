@@ -22,15 +22,6 @@ input[type="text"] {
   -moz-appearance: textfield;
 }
 
-label+input[type="email"],
-label+input[type="number"],
-label+input[type="password"],
-label+input[type="search"],
-label+input[type="tel"],
-label+input[type="text"] {
-  margin-top: 0.5em;
-}
-
 input[type="email"][disabled],
 input[type="email"][disabled]:hover,
 input[type="email"][disabled]:focus,
@@ -69,7 +60,7 @@ input[type="text"][disabled]:hover::placeholder,
 input[type="text"][disabled]:focus::placeholder {
   background-color: var(--gray-04);
   color: var(--gray-08);
-  border-color: var(--gray-04);
+  border-color: transparent;
   cursor: default;
   box-shadow: none;
 }
@@ -160,11 +151,11 @@ input[type="color"]::-webkit-color-swatch {
   border: 0;
 }
 
-input[type="color"]+.button-input-color {
+input[type="color"]+.label-button-color {
   padding-right: 2.25em;
 }
 
-input[type="color"]+.button-input-color:before {
+input[type="color"]+.label-button-color:before {
   background-color: rgb(var(--accent));
   content: "";
   border-radius: 50%;

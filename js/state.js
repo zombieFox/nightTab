@@ -9,11 +9,27 @@ var state = (function() {
       alignment: "left",
       view: "block"
     },
+    links: {
+      editIndex: null,
+      action: null
+    },
     search: {
       searching: false,
       active: true,
-      engine: "https://www.google.com/search"
-      // engine: "https://duckduckgo.com/"
+      engine: {
+        selected: "google",
+        google: {
+          name: "google",
+          url: "https://www.google.com/search"
+        },
+        duckduckgo: {
+          name: "google",
+          url: "https://duckduckgo.com/"
+        },
+        custom: {
+          url: ""
+        }
+      }
     },
     sort: {
       view: "none"
@@ -31,6 +47,9 @@ var state = (function() {
       r: 0,
       g: 255,
       b: 0,
+    },
+    menu: {
+      open: false
     }
   };
 
