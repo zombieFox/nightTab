@@ -1,5 +1,12 @@
 var clock = (function() {
 
+  var bind = function() {
+    window.setInterval(function() {
+      clear();
+      render();
+    }, 1000);
+  };
+
   var clear = function() {
     var clock = helper.e(".clock");
     while (clock.lastChild) {
@@ -112,17 +119,14 @@ var clock = (function() {
   };
 
   var init = function() {
-    clear();
     render();
-    window.setInterval(function() {
-      clear();
-      render();
-    }, 1000);
+    bind();
   };
 
   // exposed methods
   return {
     init: init,
+    bind: bind,
     render: render,
     clear: clear
   };

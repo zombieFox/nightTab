@@ -1,7 +1,6 @@
 var state = (function() {
 
   var current = {
-    bookmarks: bookmarks.get(),
     edit: {
       active: false
     },
@@ -57,9 +56,9 @@ var state = (function() {
     return current;
   };
 
-  var restore = function(object) {
-    if (object) {
-      current = object;
+  var restore = function(data) {
+    if ("state" in data) {
+      current = data.state;
     };
   };
 
@@ -80,7 +79,14 @@ var state = (function() {
     };
   };
 
+  var init = function() {
+    if (data.load()) {
+      restore(data.load());
+    };
+  };
+
   return {
+    init: init,
     get: get,
     change: change,
     restore: restore

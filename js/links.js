@@ -334,18 +334,16 @@ var links = (function() {
 
   var render = function(array) {
     var gridItemBody = helper.e(".grid-item-body");
-    if (array) {
-      array.forEach(function(arrayItem, index) {
-        if (arrayItem.index) {
-          index = arrayItem.index;
-        };
-        gridItemBody.appendChild(_makeLink(arrayItem, index));
-      });
-    } else {
-      bookmarks.get().forEach(function(arrayItem, index) {
-        gridItemBody.appendChild(_makeLink(arrayItem, index));
-      });
-    };
+    var bookmarksToRender = array || bookmarks.get();
+    // var bookmarksToRender;
+    // if (array) {
+    //   bookmarksToRender = array;
+    // } else {
+    //   bookmarksToRender = bookmarks.get();
+    // };
+    bookmarksToRender.forEach(function(arrayItem) {
+      gridItemBody.appendChild(_makeLink(arrayItem, arrayItem.index));
+    });
   };
 
   var tabIndex = function() {
@@ -368,20 +366,6 @@ var links = (function() {
     };
   };
 
-  // var sort = function(by) {
-  //   var action = {
-  //     name: function() {
-  //       helper.sortObject(bookmarks.get(), "name");
-  //     },
-  //     letter: function() {
-  //       helper.sortObject(bookmarks.get(), "letter");
-  //     }
-  //   };
-  //   action[by]();
-  //   links.clear();
-  //   links.render();
-  // };
-
   var init = function() {
     render();
   };
@@ -393,7 +377,6 @@ var links = (function() {
     add: add,
     edit: edit,
     save: save,
-    // sort: sort,
     remove: remove,
     render: render,
     tabIndex: tabIndex

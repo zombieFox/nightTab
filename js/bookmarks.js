@@ -106,7 +106,20 @@ var bookmarks = (function() {
     url: "https://www.reddit.com/r/chromeos/"
   }];
 
+  // var collectLinks = all;
+
+  // var sortedBookmarks;
+
+  // var duplicateAllBookmarks = function() {
+  //   sortedBookmarks = JSON.parse(JSON.stringify(all));
+  //   sortedBookmarks.forEach(function(arrayItem, index) {
+  //     arrayItem.index = index;
+  //   });
+  // };
+
   var get = function() {
+    return all;
+    // return JSON.parse(JSON.stringify(all));
     // var by = {
     //   none: function(array) {
     //     return array;
@@ -118,9 +131,15 @@ var bookmarks = (function() {
     //     return helper.sortObject(array, "letter");
     //   }
     // };
-    // var sortedBookmarks = by[state.get().sort.view](JSON.parse(JSON.stringify(all)));
+    // duplicateAllBookmarks();
+    // sortedBookmarks = by[state.get().sort.view](sortedBookmarks)
     // return sortedBookmarks;
-    return all;
+  };
+
+  var restore = function(data) {
+    if ("bookmarks" in data) {
+      all = data.bookmarks;
+    };
   };
 
   var add = function(object) {
@@ -135,12 +154,21 @@ var bookmarks = (function() {
     all.splice(index, 1);
   };
 
+  var init = function() {
+    if (data.load()) {
+      restore(data.load());
+    };
+  };
+
   // exposed methods
   return {
+    all: all,
+    init: init,
     get: get,
     add: add,
     edit: edit,
-    remove: remove
+    remove: remove,
+    restore: restore
   };
 
 })();

@@ -1,6 +1,6 @@
 var version = (function() {
 
-  var current = 1.0;
+  var current = 2.0;
 
   var get = function() {
     return current;

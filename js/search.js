@@ -36,16 +36,16 @@ var search = (function() {
   var render = function() {
     var searchInput = helper.e(".search-input");
     if (state.get().search.searching) {
-      var searchResult = [];
+      var searchedBookmarks = [];
       bookmarks.get().forEach(function(arrayItem, index) {
         if (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase()) || arrayItem.name.toLowerCase().includes(searchInput.value.toLowerCase())) {
           var copy = JSON.parse(JSON.stringify(arrayItem));
           copy.index = index;
-          searchResult.push(copy);
+          searchedBookmarks.push(copy);
         };
       });
       links.clear();
-      links.render(searchResult);
+      links.render(searchedBookmarks);
     } else {
       links.clear();
       links.render();
