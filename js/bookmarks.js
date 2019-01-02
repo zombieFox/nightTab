@@ -177,7 +177,11 @@ var bookmarks = (function() {
   };
 
   var remove = function(index) {
-    all.splice(index, 1);
+    for (var i = 0; i < all.length; i++) {
+      if (all[i].index === index) {
+        all.splice(all.indexOf(all[i]), 1);
+      };
+    };
   };
 
   var init = function() {
