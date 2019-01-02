@@ -96,7 +96,6 @@ var control = (function() {
   var _bind = function() {
     helper.e(".control-menu").addEventListener("click", function() {
       menu.toggle();
-      menu.render();
     }, false);
 
     helper.e(".control-add").addEventListener("click", function() {

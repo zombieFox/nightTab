@@ -31,5 +31,8 @@ control.init();
 search.init();
 
 // render clock
-// bind window event
+// bind clock update
 clock.init();
+
+// bind keyboard keys
+keyboard.init();

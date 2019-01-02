@@ -2,10 +2,12 @@ var menu = (function() {
 
   var close = function() {
     state.get().menu.open = false;
+    render();
   };
 
   var open = function() {
     state.get().menu.open = true;
+    render();
   };
 
   var toggle = function() {
@@ -14,6 +16,7 @@ var menu = (function() {
     } else {
       state.get().menu.open = true;
     };
+    render();
   };
 
   var render = function() {
