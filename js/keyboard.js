@@ -4,6 +4,7 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       //  esc
       if (event.keyCode == 27) {
+        // need to add decetion on modal first
         menu.close();
         shade.destroy();
         modal.destroy();

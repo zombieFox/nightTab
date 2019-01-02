@@ -51,6 +51,9 @@ var state = (function() {
     },
     menu: {
       open: false
+    },
+    modal: {
+      active: false
     }
   };
 
