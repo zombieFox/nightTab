@@ -85,11 +85,13 @@ var control = (function() {
       if (state.get().search.active) {
         helper.e(".control-search-grow").disabled = false;
         helper.e(".control-search-engine-google").disabled = false;
+        helper.e(".control-search-engine-giphy").disabled = false;
         helper.e(".control-search-engine-duckduckgo").disabled = false;
         helper.e(".control-search-engine-custom").disabled = false;
       } else {
         helper.e(".control-search-grow").disabled = true;
         helper.e(".control-search-engine-google").disabled = true;
+        helper.e(".control-search-engine-giphy").disabled = true;
         helper.e(".control-search-engine-duckduckgo").disabled = true;
         helper.e(".control-search-engine-custom").disabled = true;
       };
