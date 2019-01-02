@@ -194,9 +194,9 @@ var bookmarks = (function() {
     };
   };
 
-  var remove = function(index) {
+  var remove = function(timeStamp) {
     for (var i = 0; i < all.length; i++) {
-      if (all[i].index === index) {
+      if (all[i].timeStamp === timeStamp) {
         all.splice(all.indexOf(all[i]), 1);
       };
     };
