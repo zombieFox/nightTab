@@ -1,6 +1,6 @@
 .menu {
   background-color: var(--gray-02);
-  position: absolute;
+  position: fixed;
   border-radius: var(--radius);
   bottom: 1em;
   left: 1em;
