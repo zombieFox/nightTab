@@ -177,6 +177,24 @@ input[type="color"]+.label-button-color:before {
   position: relative;
 }
 
+.form-input-indent-1.input-wrap,
+.form-input-indent-1.checkbox-wrap,
+.form-input-indent-1.radio-wrap {
+  margin-left: 1em;
+}
+
+.form-input-indent-2.input-wrap,
+.form-input-indent-2.checkbox-wrap,
+.form-input-indent-2.radio-wrap {
+  margin-left: 2em;
+}
+
+.form-input-indent-3.input-wrap,
+.form-input-indent-3.checkbox-wrap,
+.form-input-indent-3.radio-wrap {
+  margin-left: 3em;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
   position: absolute;
