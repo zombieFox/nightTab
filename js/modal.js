@@ -49,7 +49,7 @@ var modal = (function() {
         };
         state.change({
           path: "modal.active",
-          value: true
+          value: false
         });
       };
       var modalBody = document.createElement("div");

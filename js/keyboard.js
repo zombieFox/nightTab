@@ -4,16 +4,23 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       //  esc
       if (event.keyCode == 27) {
-        // need to add decetion on modal first
-        menu.close();
-        shade.destroy();
-        modal.destroy();
-        state.change({
-          path: "edit.active",
-          value: false
-        });
-        control.update();
-        control.render();
+        if (state.get().menu.open) {
+          console.log(1);
+          menu.close();
+          shade.destroy();
+        } else if (state.get().modal.active) {
+          console.log(2);
+          modal.destroy();
+          shade.destroy();
+        } else if (state.get().edit.active) {
+          console.log(3);
+          state.change({
+            path: "edit.active",
+            value: false
+          });
+          control.update();
+          control.render();
+        };
       };
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
