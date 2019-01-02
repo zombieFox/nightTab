@@ -40,7 +40,7 @@ var links = (function() {
   var edit = function(button) {
     state.get().links.action = "edit";
     state.get().links.editIndex = parseInt(button.closest(".link-item").dataset.index, 10);
-    var currentBookmark = bookmarks.get()[state.get().links.editIndex];
+    var currentBookmark = bookmarks.get(state.get().links.editIndex);
     var form = _makeLinkForm();
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
@@ -204,7 +204,7 @@ var links = (function() {
     return form;
   };
 
-  var _makeLink = function(data, index) {
+  var _makeLink = function(data) {
     var linkItem = helper.makeNode({
       tag: "div",
       attr: [{
@@ -212,7 +212,7 @@ var links = (function() {
         value: "link-item"
       }, {
         key: "data-index",
-        value: index
+        value: data.index
       }]
     });
     var linkPanelFront = helper.makeNode({
@@ -241,9 +241,6 @@ var links = (function() {
       attr: [{
         key: "class",
         value: "link-letter"
-      }, {
-        key: "data-index",
-        value: data.url
       }]
     });
     var linkName = helper.makeNode({
@@ -335,14 +332,8 @@ var links = (function() {
   var render = function(array) {
     var gridItemBody = helper.e(".grid-item-body");
     var bookmarksToRender = array || bookmarks.get();
-    // var bookmarksToRender;
-    // if (array) {
-    //   bookmarksToRender = array;
-    // } else {
-    //   bookmarksToRender = bookmarks.get();
-    // };
     bookmarksToRender.forEach(function(arrayItem) {
-      gridItemBody.appendChild(_makeLink(arrayItem, arrayItem.index));
+      gridItemBody.appendChild(_makeLink(arrayItem));
     });
   };
 
