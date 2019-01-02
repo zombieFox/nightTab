@@ -330,10 +330,10 @@ var links = (function() {
   };
 
   var render = function(array) {
-    var gridItemBody = helper.e(".grid-item-body");
+    var linkArea = helper.e(".link-area");
     var bookmarksToRender = array || bookmarks.get();
     bookmarksToRender.forEach(function(arrayItem) {
-      gridItemBody.appendChild(_makeLink(arrayItem));
+      linkArea.appendChild(_makeLink(arrayItem));
     });
   };
 
@@ -351,9 +351,9 @@ var links = (function() {
   };
 
   var clear = function() {
-    var gridItemBody = helper.e(".grid-item-body");
-    while (gridItemBody.lastChild) {
-      gridItemBody.removeChild(gridItemBody.lastChild);
+    var linkArea = helper.e(".link-area");
+    while (linkArea.lastChild) {
+      linkArea.removeChild(linkArea.lastChild);
     };
   };
 
