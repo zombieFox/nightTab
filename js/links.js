@@ -39,8 +39,8 @@ var links = (function() {
 
   var edit = function(button) {
     state.get().links.action = "edit";
-    state.get().links.editIndex = parseInt(button.closest(".link-item").dataset.index, 10);
-    var currentBookmark = bookmarks.get(state.get().links.editIndex);
+    state.get().links.editObject = bookmarks.get(parseInt(button.closest(".link-item").dataset.index, 10));
+    var currentBookmark = bookmarks.get(state.get().links.editObject.index);
     var form = _makeLinkForm();
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
@@ -60,17 +60,18 @@ var links = (function() {
         bookmarks.add(newLinkData);
       },
       edit: function(newLinkData) {
-        bookmarks.edit(newLinkData, state.get().links.editIndex);
+        bookmarks.edit(newLinkData, state.get().links.editObject.index);
       }
     };
     var form = helper.e(".link-form");
     var newLinkData = {
       letter: form.querySelector(".link-form-input-letter").value,
       name: form.querySelector(".link-form-input-name").value,
-      url: form.querySelector(".link-form-input-url").value
+      url: form.querySelector(".link-form-input-url").value,
+      index: state.get().links.editObject.index
     };
     action[state.get().links.action](newLinkData);
-    state.get().links.editIndex = null;
+    state.get().links.editObject = null;
     state.get().links.action = null;
     clear();
     if (state.get().search.searching) {

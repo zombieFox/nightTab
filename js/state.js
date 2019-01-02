@@ -9,12 +9,13 @@ var state = (function() {
       view: "block"
     },
     links: {
-      editIndex: null,
+      editObject: null,
       action: null
     },
     search: {
       searching: false,
       active: true,
+      grow: false,
       engine: {
         selected: "google",
         google: {
