@@ -40,6 +40,11 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-search");
       };
+      if (state.get().search.grow) {
+        helper.addClass(html, "is-search-grow");
+      } else {
+        helper.removeClass(html, "is-search-grow");
+      };
       helper.e(".control-search-engine-custom-url").value = state.get().search.engine[state.get().search.engine.selected].url;
     };
     var _alignment = function() {
@@ -78,10 +83,12 @@ var control = (function() {
     };
     var _search = function() {
       if (state.get().search.active) {
+        helper.e(".control-search-grow").disabled = false;
         helper.e(".control-search-engine-google").disabled = false;
         helper.e(".control-search-engine-duckduckgo").disabled = false;
         helper.e(".control-search-engine-custom").disabled = false;
       } else {
+        helper.e(".control-search-grow").disabled = true;
         helper.e(".control-search-engine-google").disabled = true;
         helper.e(".control-search-engine-duckduckgo").disabled = true;
         helper.e(".control-search-engine-custom").disabled = true;
@@ -116,7 +123,7 @@ var control = (function() {
       data.save();
     }, false);
 
-    helper.e(".control-clock").addEventListener("change", function() {
+    helper.e(".control-clock-active").addEventListener("change", function() {
       state.change({
         path: "clock.active",
         value: this.checked
@@ -214,9 +221,19 @@ var control = (function() {
       }, false);
     });
 
-    helper.e(".control-search").addEventListener("change", function() {
+    helper.e(".control-search-active").addEventListener("change", function() {
       state.change({
         path: "search.active",
+        value: this.checked
+      });
+      render();
+      _dependents();
+      data.save();
+    }, false);
+
+    helper.e(".control-search-grow").addEventListener("change", function() {
+      state.change({
+        path: "search.grow",
         value: this.checked
       });
       render();
@@ -257,8 +274,9 @@ var control = (function() {
   };
 
   var update = function() {
-    helper.e(".control-search").checked = state.get().search.active;
-    helper.e(".control-clock").checked = state.get().clock.active;
+    helper.e(".control-search-active").checked = state.get().search.active;
+    helper.e(".control-search-grow").checked = state.get().search.grow;
+    helper.e(".control-clock-active").checked = state.get().clock.active;
     helper.e(".control-clock-seconds").checked = state.get().clock.show.seconds;
     helper.e(".control-clock-seperator").checked = state.get().clock.show.seperator;
     helper.e(".control-clock-meridiem").checked = state.get().clock.show.meridiem;

@@ -15,10 +15,6 @@
   align-items: center;
 }
 
-.head-grow {
-  flex-grow: 1;
-}
-
 .is-alignment-left .head {
   justify-content: flex-start;
 }
@@ -33,10 +29,16 @@
 
 .head-search {
   display: none;
+  width: 20vw;
+  min-width: 15em;
 }
 
 .is-search .head-search {
   display: flex;
+}
+
+.is-search-grow .head-search {
+  flex-grow: 1;
 }
 
 .head-clock {

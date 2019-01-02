@@ -28,14 +28,14 @@
 
 <body>
 
-  <div class="grid">
+  <section class="grid">
 
     <div class="grid-item-head">
       <div class="head">
         <div class="head-item head-clock mb-3">
           <p class="clock"></p>
         </div>
-        <div class="head-item head-grow head-search mb-3">
+        <div class="head-item head-search mb-3">
           <form class="search" action="" method="get">
             <input class="search-input mb-0" type="text" placeholder="Find or Search" tabindex="1" name="q" autocomplete="off" tabindex="1">
             <input type="submit" value="Search" class="is-hidden">
@@ -75,13 +75,14 @@
       <div class="link-area"></div>
     </div>
 
-  </div>
+  </section>
 
-  <div class="menu">
+  <section class="menu">
     <div class="menu-item">
+      <h1>Clock</h1>
       <div class="checkbox-wrap">
-        <input id="control-clock" class="control-clock" type="checkbox" tabindex="1">
-        <label for="control-clock"><span class="label-icon"></span>Clock</label>
+        <input id="control-clock-active" class="control-clock-active" type="checkbox" tabindex="1">
+        <label for="control-clock-active"><span class="label-icon"></span>Show</label>
       </div>
       <div class="checkbox-wrap">
         <input id="control-clock-seconds" class="control-clock-seconds" type="checkbox" tabindex="1">
@@ -105,9 +106,14 @@
       </div>
     </div>
     <div class="menu-item">
+      <h1>Search</h1>
       <div class="checkbox-wrap">
-        <input id="control-search" class="control-search" type="checkbox" tabindex="1">
-        <label for="control-search"><span class="label-icon"></span>Search</label>
+        <input id="control-search-active" class="control-search-active" type="checkbox" tabindex="1">
+        <label for="control-search-active"><span class="label-icon"></span>Show</label>
+      </div>
+      <div class="checkbox-wrap">
+        <input id="control-search-grow" class="control-search-grow" type="checkbox" tabindex="1">
+        <label for="control-search-grow"><span class="label-icon"></span>Fill</label>
       </div>
       <div class="radio-wrap">
         <input id="control-search-engine-google" class="control-search-engine-google" type="radio" tabindex="1" name="control-search-engine" value="google">
@@ -127,30 +133,7 @@
       </div>
     </div>
     <div class="menu-item">
-      <div class="radio-wrap">
-        <input id="control-layout-block" class="control-layout-block" type="radio" tabindex="1" name="control-layout" value="block">
-        <label for="control-layout-block"><span class="label-icon"></span>Block</label>
-      </div>
-      <div class="radio-wrap">
-        <input id="control-layout-list" class="control-layout-list" type="radio" tabindex="1" name="control-layout" value="list">
-        <label for="control-layout-list"><span class="label-icon"></span>List</label>
-      </div>
-    </div>
-    <div class="menu-item">
-      <div class="radio-wrap">
-        <input id="control-sort-none" class="control-sort-none" type="radio" tabindex="1" name="control-sort" value="none">
-        <label for="control-sort-none"><span class="label-icon"></span>None (As added)</label>
-      </div>
-      <div class="radio-wrap">
-        <input id="control-sort-name" class="control-sort-name" type="radio" tabindex="1" name="control-sort" value="name">
-        <label for="control-sort-name"><span class="label-icon"></span>Name</label>
-      </div>
-      <div class="radio-wrap">
-        <input id="control-sort-letter" class="control-sort-letter" type="radio" tabindex="1" name="control-sort" value="letter">
-        <label for="control-sort-letter"><span class="label-icon"></span>Letter</label>
-      </div>
-    </div>
-    <div class="menu-item">
+      <h1>Header Alignment</h1>
       <div class="radio-wrap">
         <input id="control-alignment-left" class="control-alignment-left" type="radio" tabindex="1" name="control-alignment" value="left">
         <label for="control-alignment-left"><span class="label-icon"></span>Left</label>
@@ -164,8 +147,34 @@
         <label for="control-alignment-right"><span class="label-icon"></span>Right</label>
       </div>
     </div>
+    <div class="menu-item">
+      <h1>Layout</h1>
+      <div class="radio-wrap">
+        <input id="control-layout-block" class="control-layout-block" type="radio" tabindex="1" name="control-layout" value="block">
+        <label for="control-layout-block"><span class="label-icon"></span>Block</label>
+      </div>
+      <div class="radio-wrap">
+        <input id="control-layout-list" class="control-layout-list" type="radio" tabindex="1" name="control-layout" value="list">
+        <label for="control-layout-list"><span class="label-icon"></span>List</label>
+      </div>
+    </div>
+    <div class="menu-item">
+      <h1>Order</h1>
+      <div class="radio-wrap">
+        <input id="control-sort-none" class="control-sort-none" type="radio" tabindex="1" name="control-sort" value="none">
+        <label for="control-sort-none"><span class="label-icon"></span>None (As added)</label>
+      </div>
+      <div class="radio-wrap">
+        <input id="control-sort-name" class="control-sort-name" type="radio" tabindex="1" name="control-sort" value="name">
+        <label for="control-sort-name"><span class="label-icon"></span>Name</label>
+      </div>
+      <div class="radio-wrap">
+        <input id="control-sort-letter" class="control-sort-letter" type="radio" tabindex="1" name="control-sort" value="letter">
+        <label for="control-sort-letter"><span class="label-icon"></span>Letter</label>
+      </div>
+    </div>
     <div class="menu-item"></div>
-  </div>
+  </section>
 
 </body>
 
