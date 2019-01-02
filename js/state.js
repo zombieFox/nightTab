@@ -15,7 +15,7 @@ var state = (function() {
     search: {
       searching: false,
       active: true,
-      grow: false,
+      grow: true,
       engine: {
         selected: "google",
         google: {
