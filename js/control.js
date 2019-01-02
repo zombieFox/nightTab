@@ -45,7 +45,7 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-search-grow");
       };
-      helper.e(".control-search-engine-custom-url").value = state.get().search.engine[state.get().search.engine.selected].url;
+      helper.e(".control-search-engine-custom-url").value = state.get().search.engine.custom.url;
     };
     var _alignment = function() {
       helper.removeClass(html, "is-alignment-left");
@@ -286,7 +286,7 @@ var control = (function() {
     helper.e(".control-sort-" + state.get().sort.view).checked = true;
     helper.e(".control-alignment-" + state.get().layout.alignment).checked = true;
     helper.e(".control-search-engine-" + state.get().search.engine.selected).checked = true;
-    helper.e(".control-search-engine-custom-url").value = state.get().search.engine[state.get().search.engine.selected].url;
+    helper.e(".control-search-engine-custom-url").value = state.get().search.engine.custom.url;
   };
 
   var init = function() {

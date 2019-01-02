@@ -19,12 +19,13 @@ var state = (function() {
       engine: {
         selected: "google",
         google: {
-          name: "google",
           url: "https://www.google.com/search"
         },
         duckduckgo: {
-          name: "google",
           url: "https://duckduckgo.com/"
+        },
+        giphy: {
+          url: "https://giphy.com/search/"
         },
         custom: {
           url: ""
