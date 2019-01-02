@@ -240,7 +240,7 @@ var control = (function() {
     });
   };
 
-  var _update = function() {
+  var update = function() {
     helper.e(".control-search").checked = state.get().search.active;
     helper.e(".control-clock").checked = state.get().clock.active;
     helper.e(".control-clock-seconds").checked = state.get().clock.show.seconds;
@@ -257,7 +257,7 @@ var control = (function() {
 
   var init = function() {
     _bind();
-    _update();
+    update();
     _dependents();
     render();
   };
@@ -265,6 +265,7 @@ var control = (function() {
   // exposed methods
   return {
     init: init,
+    update: update,
     render: render
   };
 
