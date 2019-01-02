@@ -30,7 +30,7 @@
 .head-search {
   display: none;
   width: 20vw;
-  min-width: 15em;
+  min-width: 20em;
 }
 
 .is-search .head-search {

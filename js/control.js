@@ -53,10 +53,38 @@ var control = (function() {
       helper.removeClass(html, "is-alignment-right");
       helper.addClass(html, "is-alignment-" + state.get().layout.alignment);
     };
+    var _links = function() {
+      var view = {
+        block: function() {
+          helper.addClass(html, "is-links-block");
+          helper.removeClass(html, "is-links-list");
+        },
+        list: function() {
+          helper.removeClass(html, "is-links-block");
+          helper.addClass(html, "is-links-list");
+        }
+      };
+      view[state.get().links.view]();
+    };
+    var _layout = function() {
+      var view = {
+        fixed: function() {
+          helper.addClass(html, "is-layout-fixed");
+          helper.removeClass(html, "is-layout-fluid");
+        },
+        fluid: function() {
+          helper.removeClass(html, "is-layout-fixed");
+          helper.addClass(html, "is-layout-fluid");
+        }
+      };
+      view[state.get().layout.containerWidth]();
+    };
     _alignment();
     _edit();
     _clock();
     _search();
+    _links();
+    _layout();
   };
 
   var _dependents = function(options) {
@@ -188,13 +216,13 @@ var control = (function() {
       data.save();
     }, false);
 
-    helper.eA("input[name='control-layout']").forEach(function(arrayItem, index) {
+    helper.eA("input[name='control-links-view']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
         state.change({
-          path: "layout.view",
+          path: "links.view",
           value: this.value
         });
-        layout.render();
+        render();
         data.save();
       }, false);
     });
@@ -282,6 +310,17 @@ var control = (function() {
       links.render();
       data.save();
     });
+
+    helper.eA("input[name='control-container-width']").forEach(function(arrayItem, index) {
+      arrayItem.addEventListener("change", function() {
+        state.change({
+          path: "layout.containerWidth",
+          value: this.value
+        });
+        render();
+        data.save();
+      }, false);
+    });
   };
 
   var update = function() {
@@ -294,12 +333,13 @@ var control = (function() {
     helper.e(".control-clock-24").checked = state.get().clock.hour24;
     helper.e(".control-clock-leading-zero").checked = state.get().clock.show.leadingZero;
     helper.e(".control-edit").checked = state.get().edit.active;
-    helper.e(".control-layout-" + state.get().layout.view).checked = true;
+    helper.e(".control-links-view-" + state.get().links.view).checked = true;
     helper.e(".control-sort-" + state.get().sort.view).checked = true;
     helper.e(".control-alignment-" + state.get().layout.alignment).checked = true;
     helper.e(".control-search-engine-" + state.get().search.engine.selected).checked = true;
     helper.e(".control-search-engine-custom-url").value = state.get().search.engine.custom.url;
     helper.e(".control-links-new-tab").value = state.get().links.newTab;
+    helper.e(".control-container-width-" + state.get().layout.containerWidth).checked = true;
   };
 
   var init = function() {

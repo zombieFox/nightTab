@@ -42,13 +42,13 @@
   --breakpoint-xl: 1100px;
 }
 
-:root.is-layout-block {
+:root.is-links-block {
   --link-height: 7em;
   --url-height: 20%;
   --edit-height: 30%;
 }
 
-:root.is-layout-list {
+:root.is-links-list {
   --link-height: 4em;
   --url-height: 30%;
   --edit-height: 50%;
@@ -59,7 +59,7 @@
     --root-font-size: 16px;
   }
 
-  :root.is-layout-block {
+  :root.is-links-block {
     --link-height: 9em;
   }
 }

@@ -6,12 +6,13 @@ var state = (function() {
     },
     layout: {
       alignment: "left",
-      view: "block"
+      containerWidth: "fixed"
     },
     links: {
       editObject: null,
       action: null,
-      newTab: false
+      newTab: false,
+      view: "block"
     },
     search: {
       searching: false,

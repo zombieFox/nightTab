@@ -31,48 +31,52 @@
   <section class="grid">
 
     <div class="grid-item-head">
-      <div class="head">
-        <div class="head-item head-clock mb-3">
-          <p class="clock"></p>
-        </div>
-        <div class="head-item head-search mb-3">
-          <form class="search" action="" method="get">
-            <input class="search-input mb-0" type="text" placeholder="Find or Search" tabindex="1" name="q" autocomplete="off" tabindex="1">
-            <input type="submit" value="Search" class="is-hidden">
-          </form>
-          <button class="button mb-0 ml-3 search-clear" tabindex="1" disabled>
-            <span class="icon-close"></span>
-          </button>
-        </div>
-        <div class="head-item button-group mb-3">
-          <button class="button mb-0 control-add" tabindex="1">
-            <span class="button-text">Add</span>
-          </button>
-          <div class="checkbox-wrap">
-            <input id="control-edit" class="control-edit" type="checkbox" tabindex="1">
-            <label for="control-edit" class="button button-checkbox mb-0">
-              <div class="button-text">Edit</div>
-            </label>
+      <div class="grid-container">
+        <div class="head">
+          <div class="head-item head-clock mb-3">
+            <p class="clock"></p>
           </div>
-        </div>
-        <div class="head-item mb-3">
-          <div class="input-wrap">
-            <input id="control-theme" type="color" class="control-theme" value="#00ff00" tabindex="1">
-            <label for="control-theme" class="button label-button-color mb-0">
-              <span class="button-text">Accent</span>
-            </label>
+          <div class="head-item head-search mb-3">
+            <form class="search" action="" method="get">
+              <input class="search-input mb-0" type="text" placeholder="Find or Search" tabindex="1" name="q" autocomplete="off" tabindex="1">
+              <input type="submit" value="Search" class="is-hidden">
+            </form>
+            <button class="button mb-0 ml-3 search-clear" tabindex="1" disabled>
+              <span class="icon-close"></span>
+            </button>
           </div>
-        </div>
-        <div class="head-item mb-3">
-          <button class="button mb-0 control-menu" tabindex="1">
-            <span class="button-text"><span class="icon-settings"></span></span>
-          </button>
+          <div class="head-item button-group mb-3">
+            <button class="button mb-0 control-add" tabindex="1">
+              <span class="button-text">Add</span>
+            </button>
+            <div class="checkbox-wrap">
+              <input id="control-edit" class="control-edit" type="checkbox" tabindex="1">
+              <label for="control-edit" class="button button-checkbox mb-0">
+                <div class="button-text">Edit</div>
+              </label>
+            </div>
+          </div>
+          <div class="head-item mb-3">
+            <div class="input-wrap">
+              <input id="control-theme" type="color" class="control-theme" value="#00ff00" tabindex="1">
+              <label for="control-theme" class="button label-button-color mb-0">
+                <span class="button-text">Accent</span>
+              </label>
+            </div>
+          </div>
+          <div class="head-item mb-3">
+            <button class="button mb-0 control-menu" tabindex="1">
+              <span class="button-text"><span class="icon-settings"></span></span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="grid-item-body">
-      <div class="link-area"></div>
+      <div class="grid-container">
+        <div class="link-area"></div>
+      </div>
     </div>
 
   </section>
@@ -114,6 +118,14 @@
       <div class="checkbox-wrap">
         <input id="control-links-new-tab" class="control-links-new-tab" type="checkbox" tabindex="1">
         <label for="control-links-new-tab"><span class="label-icon"></span>Open in new tab</label>
+      </div>
+      <div class="radio-wrap">
+        <input id="control-links-view-block" class="control-links-view-block" type="radio" tabindex="1" name="control-links-view" value="block">
+        <label for="control-links-view-block"><span class="label-icon"></span>Block</label>
+      </div>
+      <div class="radio-wrap">
+        <input id="control-links-view-list" class="control-links-view-list" type="radio" tabindex="1" name="control-links-view" value="list">
+        <label for="control-links-view-list"><span class="label-icon"></span>List</label>
       </div>
     </div>
     <div class="menu-item">
@@ -161,12 +173,12 @@
     <div class="menu-item">
       <h1>Layout</h1>
       <div class="radio-wrap">
-        <input id="control-layout-block" class="control-layout-block" type="radio" tabindex="1" name="control-layout" value="block">
-        <label for="control-layout-block"><span class="label-icon"></span>Block</label>
+        <input id="control-container-width-fixed" class="control-container-width-fixed" type="radio" tabindex="1" name="control-container-width" value="fixed">
+        <label for="control-container-width-fixed"><span class="label-icon"></span>Fixed</label>
       </div>
       <div class="radio-wrap">
-        <input id="control-layout-list" class="control-layout-list" type="radio" tabindex="1" name="control-layout" value="list">
-        <label for="control-layout-list"><span class="label-icon"></span>List</label>
+        <input id="control-container-width-fluid" class="control-container-width-fluid" type="radio" tabindex="1" name="control-container-width" value="fluid">
+        <label for="control-container-width-fluid"><span class="label-icon"></span>Fluid</label>
       </div>
     </div>
     <div class="menu-item">
