@@ -37,6 +37,7 @@ var state = (function() {
       active: true,
       hour24: true,
       show: {
+        leadingZero: true,
         seconds: true,
         seperator: true,
         meridiem: true

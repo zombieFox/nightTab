@@ -65,6 +65,11 @@ var control = (function() {
         helper.e(".control-clock-seperator").disabled = true;
         helper.e(".control-clock-24").disabled = true;
       };
+      if (state.get().clock.active && state.get().clock.hour24) {
+        helper.e(".control-clock-leading-zero").disabled = false;
+      } else {
+        helper.e(".control-clock-leading-zero").disabled = true;
+      };
       if (state.get().clock.active && !state.get().clock.hour24) {
         helper.e(".control-clock-meridiem").disabled = false;
       } else {
@@ -146,6 +151,17 @@ var control = (function() {
     helper.e(".control-clock-24").addEventListener("change", function() {
       state.change({
         path: "clock.hour24",
+        value: this.checked
+      });
+      _dependents();
+      clock.clear();
+      clock.render();
+      data.save();
+    }, false);
+
+    helper.e(".control-clock-leading-zero").addEventListener("change", function() {
+      state.change({
+        path: "clock.show.leadingZero",
         value: this.checked
       });
       _dependents();
@@ -247,6 +263,7 @@ var control = (function() {
     helper.e(".control-clock-seperator").checked = state.get().clock.show.seperator;
     helper.e(".control-clock-meridiem").checked = state.get().clock.show.meridiem;
     helper.e(".control-clock-24").checked = state.get().clock.hour24;
+    helper.e(".control-clock-leading-zero").checked = state.get().clock.show.leadingZero;
     helper.e(".control-edit").checked = state.get().edit.active;
     helper.e(".control-layout-" + state.get().layout.view).checked = true;
     helper.e(".control-sort-" + state.get().sort.view).checked = true;

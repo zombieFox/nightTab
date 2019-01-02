@@ -17,7 +17,11 @@ var clock = (function() {
   var _makeTimeObject = function() {
     var time = helper.getDateTime();
     time.meridiem = "AM";
-    if (!state.get().clock.hour24) {
+    if (state.get().clock.hour24) {
+      if (time.hours < 10 && state.get().clock.show.leadingZero) {
+        time.hours = "0" + time.hours;
+      };
+    } else {
       if (time.hours > 12) {
         time.meridiem = "PM";
         time.hours = time.hours - 12;
