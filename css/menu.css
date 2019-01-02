@@ -14,7 +14,7 @@
   grid-template-columns: repeat(1, minmax(1em, 1fr));
 }
 
-.is-open .menu {
+.is-menu-open .menu {
   transform: translateY(0);
 }
 

@@ -20,9 +20,9 @@ var menu = (function() {
   };
 
   var render = function() {
-    var body = helper.e("body");
+    var html = helper.e("html");
     if (state.get().menu.open) {
-      helper.addClass(body, "is-open");
+      helper.addClass(html, "is-menu-open");
       shade.render({
         action: function() {
           close();
@@ -30,7 +30,7 @@ var menu = (function() {
         }
       });
     } else {
-      helper.removeClass(body, "is-open");
+      helper.removeClass(html, "is-menu-open");
     };
   };
 
