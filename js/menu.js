@@ -1,27 +1,27 @@
 var menu = (function() {
 
   var close = function() {
-    state.get().menu.open = false;
+    state.get().menu.active = false;
     render();
   };
 
   var open = function() {
-    state.get().menu.open = true;
+    state.get().menu.active = true;
     render();
   };
 
   var toggle = function() {
-    if (state.get().menu.open) {
-      state.get().menu.open = false;
+    if (state.get().menu.active) {
+      state.get().menu.active = false;
     } else {
-      state.get().menu.open = true;
+      state.get().menu.active = true;
     };
     render();
   };
 
   var render = function() {
     var html = helper.e("html");
-    if (state.get().menu.open) {
+    if (state.get().menu.active) {
       helper.addClass(html, "is-menu-open");
       shade.render({
         action: function() {

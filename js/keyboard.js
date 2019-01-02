@@ -4,16 +4,13 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       //  esc
       if (event.keyCode == 27) {
-        if (state.get().menu.open) {
-          console.log(1);
+        if (state.get().menu.active) {
           menu.close();
           shade.destroy();
         } else if (state.get().modal.active) {
-          console.log(2);
           modal.destroy();
           shade.destroy();
         } else if (state.get().edit.active) {
-          console.log(3);
           state.change({
             path: "edit.active",
             value: false
