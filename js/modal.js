@@ -2,7 +2,7 @@ var modal = (function() {
 
   var previousModal = null;
 
-  function destroy() {
+  var destroy = function() {
     var all_modal = helper.eA(".modal");
     if (all_modal[0]) {
       for (var i = 0; i < all_modal.length; i++) {
@@ -11,7 +11,7 @@ var modal = (function() {
     };
   };
 
-  function render(options) {
+  var render = function(options) {
     var defaultOptions = {
       heading: "Modal",
       content: "Body",

@@ -259,8 +259,8 @@ var control = (function() {
   var init = function() {
     _bind();
     _update();
-    render();
     _dependents();
+    render();
   };
 
   // exposed methods

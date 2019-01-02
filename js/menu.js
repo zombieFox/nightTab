@@ -31,7 +31,12 @@ var menu = (function() {
     };
   };
 
+  var init = function() {
+    close();
+  };
+
   return {
+    init: init,
     close: close,
     open: open,
     toggle: toggle,
