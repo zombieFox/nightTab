@@ -173,6 +173,7 @@ var bookmarks = (function() {
   };
 
   var edit = function(object, index) {
+    object.index = state.get().links.editObject.index;
     all[index] = object;
   };
 

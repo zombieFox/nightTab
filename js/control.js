@@ -120,7 +120,6 @@ var control = (function() {
         value: this.checked
       });
       render();
-      data.save();
     }, false);
 
     helper.e(".control-clock-active").addEventListener("change", function() {

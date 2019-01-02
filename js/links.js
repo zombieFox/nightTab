@@ -67,8 +67,7 @@ var links = (function() {
     var newLinkData = {
       letter: form.querySelector(".link-form-input-letter").value,
       name: form.querySelector(".link-form-input-name").value,
-      url: form.querySelector(".link-form-input-url").value,
-      index: state.get().links.editObject.index
+      url: form.querySelector(".link-form-input-url").value
     };
     action[state.get().links.action](newLinkData);
     state.get().links.editObject = null;
