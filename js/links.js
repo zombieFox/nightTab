@@ -39,8 +39,9 @@ var links = (function() {
 
   var edit = function(button) {
     state.get().links.action = "edit";
-    state.get().links.editObject = bookmarks.get(parseInt(button.closest(".link-item").dataset.index, 10));
-    var currentBookmark = bookmarks.get(state.get().links.editObject.index);
+    state.get().links.editObject = bookmarks.get(parseInt(button.closest(".link-item").dataset.timeStamp, 10));
+    console.log(state.get().links.editObject);
+    var currentBookmark = bookmarks.get(state.get().links.editObject.timeStamp);
     var form = _makeLinkForm();
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
@@ -57,10 +58,12 @@ var links = (function() {
   var save = function(button) {
     var action = {
       add: function(newLinkData) {
+        newLinkData.timeStamp = new Date().getTime();
         bookmarks.add(newLinkData);
       },
       edit: function(newLinkData) {
-        bookmarks.edit(newLinkData, state.get().links.editObject.index);
+        newLinkData.timeStamp = state.get().links.editObject.timeStamp;
+        bookmarks.edit(newLinkData, state.get().links.editObject.timeStamp);
       }
     };
     var form = helper.e(".link-form");
@@ -82,8 +85,8 @@ var links = (function() {
   };
 
   var remove = function(button) {
-    var index = parseInt(button.closest(".link-item").dataset.index, 10);
-    bookmarks.remove(index);
+    var timeStamp = parseInt(button.closest(".link-item").dataset.timeStamp, 10);
+    bookmarks.remove(timeStamp);
     clear();
     if (state.get().search.searching) {
       search.render();
@@ -211,8 +214,8 @@ var links = (function() {
         key: "class",
         value: "link-item"
       }, {
-        key: "data-index",
-        value: data.index
+        key: "data-time-stamp",
+        value: data.timeStamp
       }]
     });
     var linkPanelFront = helper.makeNode({
