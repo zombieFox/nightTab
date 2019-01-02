@@ -10,7 +10,8 @@ var state = (function() {
     },
     links: {
       editObject: null,
-      action: null
+      action: null,
+      newTab: false
     },
     search: {
       searching: false,

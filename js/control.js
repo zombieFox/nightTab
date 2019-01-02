@@ -272,6 +272,16 @@ var control = (function() {
       theme.render();
       data.save();
     });
+
+    helper.e(".control-links-new-tab").addEventListener("change", function() {
+      state.change({
+        path: "links.newTab",
+        value: this.checked
+      });
+      links.clear();
+      links.render();
+      data.save();
+    });
   };
 
   var update = function() {
@@ -289,6 +299,7 @@ var control = (function() {
     helper.e(".control-alignment-" + state.get().layout.alignment).checked = true;
     helper.e(".control-search-engine-" + state.get().search.engine.selected).checked = true;
     helper.e(".control-search-engine-custom-url").value = state.get().search.engine.custom.url;
+    helper.e(".control-links-new-tab").value = state.get().links.newTab;
   };
 
   var init = function() {

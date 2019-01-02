@@ -218,7 +218,7 @@ var links = (function() {
         value: data.timeStamp
       }]
     });
-    var linkPanelFront = helper.makeNode({
+    var linkOptions = {
       tag: "a",
       attr: [{
         key: "class",
@@ -230,7 +230,14 @@ var links = (function() {
         key: "tabindex",
         value: 1
       }]
-    });
+    };
+    if (state.get().links.newTab) {
+      linkOptions.attr.push({
+        key: "target",
+        value: "_blank"
+      });
+    };
+    var linkPanelFront = helper.makeNode(linkOptions);
     var linkPanelBack = helper.makeNode({
       tag: "div",
       attr: [{

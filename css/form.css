@@ -157,6 +157,8 @@ input[type="color"]::-webkit-color-swatch {
 
 input[type="color"]+.label-button-color {
   padding-right: 2.25em;
+  justify-content: center;
+  align-items: center;
 }
 
 input[type="color"]+.label-button-color:before {
@@ -212,7 +214,6 @@ input[type="radio"] {
 
 input[type="checkbox"]+label,
 input[type="radio"]+label {
-  line-height: 1;
   color: var(--gray-12);
   font-size: 1em;
   font-family: var(--font-regular);
@@ -221,7 +222,7 @@ input[type="radio"]+label {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   transition: all var(--animation-speed-fast) ease-in-out;
 }
 
@@ -274,6 +275,12 @@ input[type="radio"]:not([disabled]):focus:checked+label {
 input[type="checkbox"]:checked+label .label-icon,
 input[type="radio"]:checked+label .label-icon {
   color: rgb(var(--accent));
+}
+
+input[type="checkbox"]+.button-checkbox,
+input[type="radio"]+.button-checkbox {
+  justify-content: center;
+  align-items: center;
 }
 
 input[type="checkbox"]:checked+.button-checkbox,
