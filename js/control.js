@@ -305,6 +305,24 @@ var control = (function() {
       header.render();
       data.save();
     }, false);
+    helper.e(".control-header-edit-add-active").addEventListener("change", function() {
+      state.change({
+        path: "header.editAdd.active",
+        value: this.checked
+      });
+      render();
+      header.render();
+      data.save();
+    }, false);
+    helper.e(".control-header-accent-active").addEventListener("change", function() {
+      state.change({
+        path: "header.accent.active",
+        value: this.checked
+      });
+      render();
+      header.render();
+      data.save();
+    }, false);
     helper.eA("input[name='control-layout-alignment']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
         state.change({
@@ -325,22 +343,6 @@ var control = (function() {
         data.save();
       }, false);
     });
-    helper.e(".control-header-edit-add-active").addEventListener("change", function() {
-      state.change({
-        path: "header.editAdd.active",
-        value: this.checked
-      });
-      render();
-      data.save();
-    }, false);
-    helper.e(".control-header-accent-active").addEventListener("change", function() {
-      state.change({
-        path: "header.accent.active",
-        value: this.checked
-      });
-      render();
-      data.save();
-    }, false);
   };
 
   var update = function() {
