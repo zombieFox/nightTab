@@ -340,6 +340,7 @@ var control = (function() {
           value: this.value
         });
         render();
+        header.render();
         data.save();
       }, false);
     });
