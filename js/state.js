@@ -12,6 +12,12 @@ var state = (function() {
           meridiem: true
         }
       },
+      editAdd: {
+        active: true,
+      },
+      accent: {
+        active: true,
+      },
       search: {
         searching: false,
         active: true,

@@ -44,20 +44,20 @@
             <span class="icon-close"></span>
           </button>
         </div>
-        <div class="header-item">
+        <div class="header-item header-edit-add">
           <div class="button-group mb-0">
-            <button class="button control-add" tabindex="1">
-              <span class="button-text">Add</span>
-            </button>
             <div class="checkbox-wrap">
               <input id="control-edit" class="control-edit" type="checkbox" tabindex="1">
               <label for="control-edit" class="button button-checkbox">
                 <div class="button-text">Edit</div>
               </label>
             </div>
+            <button class="button control-add" tabindex="1">
+              <span class="button-text">Add</span>
+            </button>
           </div>
         </div>
-        <div class="header-item">
+        <div class="header-item header-accent">
           <div class="input-wrap">
             <input id="control-layout-theme" type="color" class="control-layout-theme" value="#00ff00" tabindex="1">
             <label for="control-layout-theme" class="button label-button-color mb-0">
@@ -81,6 +81,91 @@
   </section>
 
   <section class="menu">
+    <div class="menu-item">
+      <h1>Header</h1>
+      <h2>Clock</h2>
+      <div class="checkbox-wrap">
+        <input id="control-header-clock-active" class="control-header-clock-active" type="checkbox" tabindex="1">
+        <label for="control-header-clock-active"><span class="label-icon"></span>Show</label>
+      </div>
+      <div class="checkbox-wrap form-input-indent-1">
+        <input id="control-header-clock-show-seconds" class="control-header-clock-show-seconds" type="checkbox" tabindex="1">
+        <label for="control-header-clock-show-seconds"><span class="label-icon"></span>Seconds</label>
+      </div>
+      <div class="checkbox-wrap form-input-indent-1">
+        <input id="control-header-clock-show-seperator" class="control-header-clock-show-seperator" type="checkbox" tabindex="1">
+        <label for="control-header-clock-show-seperator"><span class="label-icon"></span>Seperators</label>
+      </div>
+      <div class="checkbox-wrap form-input-indent-1">
+        <input id="control-header-clock-24" class="control-header-clock-24" type="checkbox" tabindex="1">
+        <label for="control-header-clock-24"><span class="label-icon"></span>24 Hours</label>
+      </div>
+      <div class="checkbox-wrap form-input-indent-2">
+        <input id="control-header-clock-show-leading-zero" class="control-header-clock-show-leading-zero" type="checkbox" tabindex="1">
+        <label for="control-header-clock-show-leading-zero"><span class="label-icon"></span>Leading Zero</label>
+      </div>
+      <div class="checkbox-wrap form-input-indent-1">
+        <input id="control-header-clock-show-meridiem" class="control-header-clock-show-meridiem" type="checkbox" tabindex="1">
+        <label for="control-header-clock-show-meridiem"><span class="label-icon"></span>AM/PM</label>
+      </div>
+      <hr>
+      <h2>Search</h2>
+      <div class="checkbox-wrap">
+        <input id="control-header-search-active" class="control-header-search-active" type="checkbox" tabindex="1">
+        <label for="control-header-search-active"><span class="label-icon"></span>Show</label>
+      </div>
+      <div class="checkbox-wrap form-input-indent-1">
+        <input id="control-header-search-grow" class="control-header-search-grow" type="checkbox" tabindex="1">
+        <label for="control-header-search-grow"><span class="label-icon"></span>Fill</label>
+      </div>
+      <h2>Engine</h2>
+      <div class="radio-wrap form-input-indent-1">
+        <input id="control-header-search-engine-google" class="control-header-search-engine-google" type="radio" tabindex="1" name="control-header-search-engine" value="google">
+        <label for="control-header-search-engine-google"><span class="label-icon"></span>Google</label>
+      </div>
+      <div class="radio-wrap form-input-indent-1">
+        <input id="control-header-search-engine-duckduckgo" class="control-header-search-engine-duckduckgo" type="radio" tabindex="1" name="control-header-search-engine" value="duckduckgo">
+        <label for="control-header-search-engine-duckduckgo"><span class="label-icon"></span>Duck Duck Go</label>
+      </div>
+      <div class="radio-wrap form-input-indent-1">
+        <input id="control-header-search-engine-giphy" class="control-header-search-engine-giphy" type="radio" tabindex="1" name="control-header-search-engine" value="giphy">
+        <label for="control-header-search-engine-giphy"><span class="label-icon"></span>Giphy</label>
+      </div>
+      <div class="radio-wrap form-input-indent-1">
+        <input id="control-header-search-engine-custom" class="control-header-search-engine-custom" type="radio" tabindex="1" name="control-header-search-engine" value="custom">
+        <label for="control-header-search-engine-custom"><span class="label-icon"></span>Custom</label>
+      </div>
+      <div class="input-wrap form-input-indent-1">
+        <label for="control-header-search-engine-custom-url">URL</label>
+        <input id="control-header-search-engine-custom-url" type="text" class="control-header-search-engine-custom-url mb-0" placeholder="https://" tabindex="1" autocomplete="off">
+      </div>
+      <hr>
+      <h2>Edit/Add</h2>
+      <div class="checkbox-wrap">
+        <input id="control-header-edit-add-active" class="control-header-edit-add-active" type="checkbox" tabindex="1">
+        <label for="control-header-edit-add-active"><span class="label-icon"></span>Show</label>
+      </div>
+      <hr>
+      <h2>Accent</h2>
+      <div class="checkbox-wrap">
+        <input id="control-header-accent-active" class="control-header-accent-active" type="checkbox" tabindex="1">
+        <label for="control-header-accent-active"><span class="label-icon"></span>Show</label>
+      </div>
+      <hr>
+      <h2>Alignment</h2>
+      <div class="radio-wrap">
+        <input id="control-layout-alignment-left" class="control-layout-alignment-left" type="radio" tabindex="1" name="control-layout-alignment" value="left">
+        <label for="control-layout-alignment-left"><span class="label-icon"></span>Left</label>
+      </div>
+      <div class="radio-wrap">
+        <input id="control-layout-alignment-center" class="control-layout-alignment-center" type="radio" tabindex="1" name="control-layout-alignment" value="center">
+        <label for="control-layout-alignment-center"><span class="label-icon"></span>Center</label>
+      </div>
+      <div class="radio-wrap">
+        <input id="control-layout-alignment-right" class="control-layout-alignment-right" type="radio" tabindex="1" name="control-layout-alignment" value="right">
+        <label for="control-layout-alignment-right"><span class="label-icon"></span>Right</label>
+      </div>
+    </div>
     <div class="menu-item">
       <h1>Bookmarks</h1>
       <div class="checkbox-wrap">
@@ -110,81 +195,6 @@
       <div class="radio-wrap">
         <input id="control-link-sort-letter" class="control-link-sort-letter" type="radio" tabindex="1" name="control-link-sort" value="letter">
         <label for="control-link-sort-letter"><span class="label-icon"></span>Letter</label>
-      </div>
-    </div>
-    <div class="menu-item">
-      <h1>Search</h1>
-      <div class="checkbox-wrap">
-        <input id="control-header-search-active" class="control-header-search-active" type="checkbox" tabindex="1">
-        <label for="control-header-search-active"><span class="label-icon"></span>Show</label>
-      </div>
-      <div class="checkbox-wrap form-input-indent-1">
-        <input id="control-header-search-grow" class="control-header-search-grow" type="checkbox" tabindex="1">
-        <label for="control-header-search-grow"><span class="label-icon"></span>Fill</label>
-      </div>
-      <hr>
-      <h2>Engine</h2>
-      <div class="radio-wrap form-input-indent-1">
-        <input id="control-header-search-engine-google" class="control-header-search-engine-google" type="radio" tabindex="1" name="control-header-search-engine" value="google">
-        <label for="control-header-search-engine-google"><span class="label-icon"></span>Google</label>
-      </div>
-      <div class="radio-wrap form-input-indent-1">
-        <input id="control-header-search-engine-duckduckgo" class="control-header-search-engine-duckduckgo" type="radio" tabindex="1" name="control-header-search-engine" value="duckduckgo">
-        <label for="control-header-search-engine-duckduckgo"><span class="label-icon"></span>Duck Duck Go</label>
-      </div>
-      <div class="radio-wrap form-input-indent-1">
-        <input id="control-header-search-engine-giphy" class="control-header-search-engine-giphy" type="radio" tabindex="1" name="control-header-search-engine" value="giphy">
-        <label for="control-header-search-engine-giphy"><span class="label-icon"></span>Giphy</label>
-      </div>
-      <div class="radio-wrap form-input-indent-1">
-        <input id="control-header-search-engine-custom" class="control-header-search-engine-custom" type="radio" tabindex="1" name="control-header-search-engine" value="custom">
-        <label for="control-header-search-engine-custom"><span class="label-icon"></span>Custom</label>
-      </div>
-      <div class="input-wrap form-input-indent-1">
-        <label for="control-header-search-engine-custom-url">URL</label>
-        <input id="control-header-search-engine-custom-url" type="text" class="control-header-search-engine-custom-url mb-0" placeholder="https://" tabindex="1" autocomplete="off">
-      </div>
-    </div>
-    <div class="menu-item">
-      <h1>Clock</h1>
-      <div class="checkbox-wrap">
-        <input id="control-header-clock-active" class="control-header-clock-active" type="checkbox" tabindex="1">
-        <label for="control-header-clock-active"><span class="label-icon"></span>Show</label>
-      </div>
-      <div class="checkbox-wrap form-input-indent-1">
-        <input id="control-header-clock-show-seconds" class="control-header-clock-show-seconds" type="checkbox" tabindex="1">
-        <label for="control-header-clock-show-seconds"><span class="label-icon"></span>Seconds</label>
-      </div>
-      <div class="checkbox-wrap form-input-indent-1">
-        <input id="control-header-clock-show-seperator" class="control-header-clock-show-seperator" type="checkbox" tabindex="1">
-        <label for="control-header-clock-show-seperator"><span class="label-icon"></span>Seperators</label>
-      </div>
-      <div class="checkbox-wrap form-input-indent-1">
-        <input id="control-header-clock-24" class="control-header-clock-24" type="checkbox" tabindex="1">
-        <label for="control-header-clock-24"><span class="label-icon"></span>24 Hours</label>
-      </div>
-      <div class="checkbox-wrap form-input-indent-2">
-        <input id="control-header-clock-show-leading-zero" class="control-header-clock-show-leading-zero" type="checkbox" tabindex="1">
-        <label for="control-header-clock-show-leading-zero"><span class="label-icon"></span>Leading Zero</label>
-      </div>
-      <div class="checkbox-wrap form-input-indent-1">
-        <input id="control-header-clock-show-meridiem" class="control-header-clock-show-meridiem" type="checkbox" tabindex="1">
-        <label for="control-header-clock-show-meridiem"><span class="label-icon"></span>AM/PM</label>
-      </div>
-    </div>
-    <div class="menu-item">
-      <h1>Header Alignment</h1>
-      <div class="radio-wrap">
-        <input id="control-layout-alignment-left" class="control-layout-alignment-left" type="radio" tabindex="1" name="control-layout-alignment" value="left">
-        <label for="control-layout-alignment-left"><span class="label-icon"></span>Left</label>
-      </div>
-      <div class="radio-wrap">
-        <input id="control-layout-alignment-center" class="control-layout-alignment-center" type="radio" tabindex="1" name="control-layout-alignment" value="center">
-        <label for="control-layout-alignment-center"><span class="label-icon"></span>Center</label>
-      </div>
-      <div class="radio-wrap">
-        <input id="control-layout-alignment-right" class="control-layout-alignment-right" type="radio" tabindex="1" name="control-layout-alignment" value="right">
-        <label for="control-layout-alignment-right"><span class="label-icon"></span>Right</label>
       </div>
     </div>
     <div class="menu-item">

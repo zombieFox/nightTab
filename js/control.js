@@ -72,10 +72,26 @@ var control = (function() {
       helper.removeClass(html, "is-layout-thin");
       helper.addClass(html, "is-layout-" + state.get().layout.container);
     };
+    var _editAdd = function() {
+      if (state.get().header.editAdd.active) {
+        helper.addClass(html, "is-search-edit-add");
+      } else {
+        helper.removeClass(html, "is-search-edit-add");
+      };
+    };
+    var _accent = function() {
+      if (state.get().header.accent.active) {
+        helper.addClass(html, "is-search-accent");
+      } else {
+        helper.removeClass(html, "is-search-accent");
+      };
+    };
     _alignment();
     _edit();
     _clock();
     _search();
+    _editAdd();
+    _accent();
     _link();
     _layout();
   };
@@ -309,6 +325,22 @@ var control = (function() {
         data.save();
       }, false);
     });
+    helper.e(".control-header-edit-add-active").addEventListener("change", function() {
+      state.change({
+        path: "header.editAdd.active",
+        value: this.checked
+      });
+      render();
+      data.save();
+    }, false);
+    helper.e(".control-header-accent-active").addEventListener("change", function() {
+      state.change({
+        path: "header.accent.active",
+        value: this.checked
+      });
+      render();
+      data.save();
+    }, false);
   };
 
   var update = function() {
@@ -327,6 +359,8 @@ var control = (function() {
     helper.e(".control-header-clock-24").checked = state.get().header.clock.hour24;
     helper.e(".control-header-clock-show-leading-zero").checked = state.get().header.clock.show.leadingZero;
     helper.e(".control-header-clock-show-meridiem").checked = state.get().header.clock.show.meridiem;
+    helper.e(".control-header-edit-add-active").checked = state.get().header.editAdd.active;
+    helper.e(".control-header-accent-active").checked = state.get().header.accent.active;
     helper.e(".control-layout-alignment-" + state.get().layout.alignment).checked = true;
     helper.e(".control-layout-container-" + state.get().layout.container).checked = true;
   };

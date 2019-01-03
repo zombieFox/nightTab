@@ -41,24 +41,25 @@
   justify-content: flex-end;
 }
 
-.header-search {
-  display: none;
-  width: 20vw;
-  min-width: 20em;
-}
-
-.is-search .header-search {
-  display: flex;
-}
-
 .is-search-grow .header-search {
   flex-grow: 1;
 }
 
-.header-clock {
+.header-search {
+  width: 20vw;
+  min-width: 20em;
+}
+
+.header-clock,
+.header-search,
+.header-edit-add,
+.header-accent {
   display: none;
 }
 
-.is-clock .header-clock {
+.is-search .header-search,
+.is-clock .header-clock,
+.is-search-edit-add .header-edit-add,
+.is-search-accent .header-accent {
   display: flex;
 }
