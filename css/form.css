@@ -223,7 +223,7 @@ input[type="radio"]+label {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  transition: all var(--animation-speed-fast) ease-in-out;
+  /* transition: all var(--animation-speed-fast) ease-in-out; */
 }
 
 input[type="checkbox"]+label .label-icon,
@@ -258,6 +258,7 @@ input[type="radio"]:hover+label .label-icon {
 input[type="checkbox"]:active+label .label-icon,
 input[type="radio"]:active+label .label-icon {
   color: rgb(var(--accent));
+  transform: scale(0.9);
 }
 
 input[type="checkbox"]:checked+label,
@@ -275,6 +276,11 @@ input[type="radio"]:not([disabled]):focus:checked+label {
 input[type="checkbox"]:checked+label .label-icon,
 input[type="radio"]:checked+label .label-icon {
   color: rgb(var(--accent));
+}
+
+input[type="checkbox"]:checked:focus+label .label-icon,
+input[type="radio"]:checked:focus+label .label-icon {
+  transform: scale(1.2);
 }
 
 input[type="checkbox"]+.button-checkbox,
@@ -298,6 +304,11 @@ input[type="checkbox"][disabled]+label .label-icon,
 input[type="radio"][disabled]+label .label-icon {
   color: var(--gray-04);
   cursor: default;
+}
+
+input[type="checkbox"][disabled]:active+label .label-icon,
+input[type="radio"][disabled]:active+label .label-icon {
+  transform: none;
 }
 
 input[type="checkbox"]+label .label-icon:before,
