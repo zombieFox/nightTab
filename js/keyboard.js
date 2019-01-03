@@ -23,7 +23,7 @@ var keyboard = (function() {
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
         menu.close();
-        links.add();
+        link.add();
       };
       // ctrl+alt+m
       if (event.ctrlKey && event.altKey && event.keyCode == 77) {

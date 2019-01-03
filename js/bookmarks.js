@@ -152,7 +152,7 @@ var bookmarks = (function() {
           return helper.sortObject(array, "letter");
         }
       };
-      return by[state.get().sort.view](all);
+      return by[state.get().link.sort](all);
     };
     if (timeStamp) {
       return _singleBookmark(timeStamp);

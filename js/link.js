@@ -1,4 +1,4 @@
-var links = (function() {
+var link = (function() {
 
   var _bind = function(override) {
     var options = {
@@ -26,7 +26,7 @@ var links = (function() {
   };
 
   var add = function() {
-    state.get().links.action = "add";
+    state.get().link.action = "add";
     var form = _makeLinkForm();
     modal.render({
       heading: "Add a new bookmark",
@@ -38,10 +38,10 @@ var links = (function() {
   };
 
   var edit = function(button) {
-    state.get().links.action = "edit";
-    state.get().links.editObject = bookmarks.get(parseInt(button.closest(".link-item").dataset.timeStamp, 10));
-    console.log(state.get().links.editObject);
-    var currentBookmark = bookmarks.get(state.get().links.editObject.timeStamp);
+    state.get().link.action = "edit";
+    state.get().link.editObject = bookmarks.get(parseInt(button.closest(".link-item").dataset.timeStamp, 10));
+    console.log(state.get().link.editObject);
+    var currentBookmark = bookmarks.get(state.get().link.editObject.timeStamp);
     var form = _makeLinkForm();
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
@@ -62,8 +62,8 @@ var links = (function() {
         bookmarks.add(newLinkData);
       },
       edit: function(newLinkData) {
-        newLinkData.timeStamp = state.get().links.editObject.timeStamp;
-        bookmarks.edit(newLinkData, state.get().links.editObject.timeStamp);
+        newLinkData.timeStamp = state.get().link.editObject.timeStamp;
+        bookmarks.edit(newLinkData, state.get().link.editObject.timeStamp);
       }
     };
     var form = helper.e(".link-form");
@@ -72,9 +72,9 @@ var links = (function() {
       name: form.querySelector(".link-form-input-name").value,
       url: form.querySelector(".link-form-input-url").value
     };
-    action[state.get().links.action](newLinkData);
-    state.get().links.editObject = null;
-    state.get().links.action = null;
+    action[state.get().link.action](newLinkData);
+    state.get().link.editObject = null;
+    state.get().link.action = null;
     clear();
     if (state.get().search.searching) {
       search.render();
@@ -231,7 +231,7 @@ var links = (function() {
         value: 1
       }]
     };
-    if (state.get().links.newTab) {
+    if (state.get().link.newTab) {
       linkOptions.attr.push({
         key: "target",
         value: "_blank"

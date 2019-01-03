@@ -16,10 +16,7 @@ bookmarks.init();
 theme.init();
 
 // render links from bookmarks
-links.init();
-
-// render layout type
-layout.init();
+link.init();
 
 // bind controls
 // render checkboxes and radios
@@ -36,3 +33,6 @@ clock.init();
 
 // bind keyboard keys
 keyboard.init();
+
+// render header height padding
+header.init();

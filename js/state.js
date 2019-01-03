@@ -8,11 +8,12 @@ var state = (function() {
       alignment: "left",
       containerWidth: "fixed"
     },
-    links: {
+    link: {
       editObject: null,
       action: null,
       newTab: false,
-      view: "block"
+      view: "block",
+      sort: "none"
     },
     search: {
       searching: false,
@@ -33,9 +34,6 @@ var state = (function() {
           url: ""
         }
       }
-    },
-    sort: {
-      view: "none"
     },
     clock: {
       active: true,

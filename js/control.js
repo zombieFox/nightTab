@@ -53,18 +53,18 @@ var control = (function() {
       helper.removeClass(html, "is-alignment-right");
       helper.addClass(html, "is-alignment-" + state.get().layout.alignment);
     };
-    var _links = function() {
+    var _link = function() {
       var view = {
         block: function() {
-          helper.addClass(html, "is-links-block");
-          helper.removeClass(html, "is-links-list");
+          helper.addClass(html, "is-link-block");
+          helper.removeClass(html, "is-link-list");
         },
         list: function() {
-          helper.removeClass(html, "is-links-block");
-          helper.addClass(html, "is-links-list");
+          helper.removeClass(html, "is-link-block");
+          helper.addClass(html, "is-link-list");
         }
       };
-      view[state.get().links.view]();
+      view[state.get().link.view]();
     };
     var _layout = function() {
       var view = {
@@ -83,7 +83,7 @@ var control = (function() {
     _edit();
     _clock();
     _search();
-    _links();
+    _link();
     _layout();
   };
 
@@ -141,7 +141,7 @@ var control = (function() {
     }, false);
 
     helper.e(".control-add").addEventListener("click", function() {
-      links.add();
+      link.add();
     }, false);
 
     helper.e(".control-edit").addEventListener("change", function() {
@@ -217,10 +217,10 @@ var control = (function() {
       data.save();
     }, false);
 
-    helper.eA("input[name='control-links-view']").forEach(function(arrayItem, index) {
+    helper.eA("input[name='control-link-view']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
         state.change({
-          path: "links.view",
+          path: "link.view",
           value: this.value
         });
         render();
@@ -228,14 +228,14 @@ var control = (function() {
       }, false);
     });
 
-    helper.eA("input[name='control-sort']").forEach(function(arrayItem, index) {
+    helper.eA("input[name='control-link-sort']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
         state.change({
-          path: "sort.view",
+          path: "link.sort",
           value: this.value
         });
-        links.clear();
-        links.render();
+        link.clear();
+        link.render();
         data.save();
       }, false);
     });
@@ -302,13 +302,13 @@ var control = (function() {
       data.save();
     });
 
-    helper.e(".control-links-new-tab").addEventListener("change", function() {
+    helper.e(".control-link-new-tab").addEventListener("change", function() {
       state.change({
-        path: "links.newTab",
+        path: "link.newTab",
         value: this.checked
       });
-      links.clear();
-      links.render();
+      link.clear();
+      link.render();
       data.save();
     });
 
@@ -334,12 +334,12 @@ var control = (function() {
     helper.e(".control-clock-24").checked = state.get().clock.hour24;
     helper.e(".control-clock-leading-zero").checked = state.get().clock.show.leadingZero;
     helper.e(".control-edit").checked = state.get().edit.active;
-    helper.e(".control-links-view-" + state.get().links.view).checked = true;
-    helper.e(".control-sort-" + state.get().sort.view).checked = true;
+    helper.e(".control-link-view-" + state.get().link.view).checked = true;
+    helper.e(".control-link-sort-" + state.get().link.sort).checked = true;
     helper.e(".control-alignment-" + state.get().layout.alignment).checked = true;
     helper.e(".control-search-engine-" + state.get().search.engine.selected).checked = true;
     helper.e(".control-search-engine-custom-url").value = state.get().search.engine.custom.url;
-    helper.e(".control-links-new-tab").value = state.get().links.newTab;
+    helper.e(".control-link-new-tab").value = state.get().link.newTab;
     helper.e(".control-container-width-" + state.get().layout.containerWidth).checked = true;
   };
 

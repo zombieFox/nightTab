@@ -44,11 +44,11 @@ var search = (function() {
           searchedBookmarks.push(copy);
         };
       });
-      links.clear();
-      links.render(searchedBookmarks);
+      link.clear();
+      link.render(searchedBookmarks);
     } else {
-      links.clear();
-      links.render();
+      link.clear();
+      link.render();
     };
   };
 
@@ -61,8 +61,8 @@ var search = (function() {
     var searchInput = helper.e(".search-input");
     searchInput.value = "";
     searchInput.focus();
-    links.clear();
-    links.render();
+    link.clear();
+    link.render();
   };
 
   var init = function() {

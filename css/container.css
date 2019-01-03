@@ -1,0 +1,34 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.is-layout-fixed .container {
+  width: calc(100vw - 4em);
+}
+
+.is-layout-fluid .container {
+  width: calc(100vw - 4em);
+}
+
+@media (min-width: 550px) {
+  .is-layout-fixed .container {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 900px) {}
+
+@media (min-width: 1000px) {
+  .is-layout-fixed .container {
+    width: 75vw;
+  }
+}
+
+@media (min-width: 1600px) {
+  .is-layout-fixed .container {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 1600px) {}
