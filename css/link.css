@@ -19,6 +19,15 @@
   grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
 }
 
+.is-layout-thin.is-link-list .link-area {
+  grid-template-columns: 1fr;
+}
+
+.is-layout-thin.is-link-block .link-area {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
 .link-item {
   width: 100%;
   height: var(--link-height);

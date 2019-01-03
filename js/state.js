@@ -6,7 +6,7 @@ var state = (function() {
     },
     layout: {
       alignment: "left",
-      containerWidth: "fixed"
+      containerWidth: "wide"
     },
     link: {
       editObject: null,

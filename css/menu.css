@@ -1,7 +1,7 @@
 .menu {
   background-color: var(--gray-02);
   border-radius: var(--radius);
-  padding: 2em;
+  padding: calc(var(--gutter) * 4);
   position: fixed;
   bottom: 1em;
   left: 1em;
@@ -11,10 +11,10 @@
   z-index: 3000;
   display: grid;
   /* grid-template-columns: repeat(1, minmax(1em, 1fr)); */
-  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
   transform: translateY(calc(100% + 2em));
   transition: transform var(--animation-speed-fast) ease-in-out;
-  /* grid-gap: calc(var(--gutter) * 4); */
+  grid-gap: calc(var(--gutter) * 8);
 }
 
 .is-menu-open .menu {
@@ -22,19 +22,18 @@
 }
 
 .menu-item {
-  padding: 2em;
   position: relative;
 }
 
 .menu-item:not(:first-child):before {
-  content: "";
+  /* content: "";
   border-left: 1px solid var(--gray-04);
   position: absolute;
   top: 0;
-  left: 0;
+  left: -2em;
   width: calc(100% + 1px);
   height: calc(100% + 1px);
-  pointer-events: none;
+  pointer-events: none; */
 }
 
 @media (min-width: 900px) {

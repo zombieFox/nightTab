@@ -67,17 +67,10 @@ var control = (function() {
       view[state.get().link.view]();
     };
     var _layout = function() {
-      var view = {
-        fixed: function() {
-          helper.addClass(html, "is-layout-fixed");
-          helper.removeClass(html, "is-layout-fluid");
-        },
-        fluid: function() {
-          helper.removeClass(html, "is-layout-fixed");
-          helper.addClass(html, "is-layout-fluid");
-        }
-      };
-      view[state.get().layout.containerWidth]();
+      helper.removeClass(html, "is-layout-fludi");
+      helper.removeClass(html, "is-layout-wide");
+      helper.removeClass(html, "is-layout-thin");
+      helper.addClass(html, "is-layout-" + state.get().layout.containerWidth);
     };
     _alignment();
     _edit();
@@ -162,6 +155,7 @@ var control = (function() {
       _dependents();
       clock.clear();
       clock.render();
+      header.render();
       data.save();
     }, false);
 
@@ -172,6 +166,7 @@ var control = (function() {
       });
       clock.clear();
       clock.render();
+      header.render();
       data.save();
     }, false);
 
@@ -182,6 +177,7 @@ var control = (function() {
       });
       clock.clear();
       clock.render();
+      header.render();
       data.save();
     }, false);
 
@@ -193,6 +189,7 @@ var control = (function() {
       _dependents();
       clock.clear();
       clock.render();
+      header.render();
       data.save();
     }, false);
 
@@ -204,6 +201,7 @@ var control = (function() {
       _dependents();
       clock.clear();
       clock.render();
+      header.render();
       data.save();
     }, false);
 
@@ -214,6 +212,7 @@ var control = (function() {
       });
       clock.clear();
       clock.render();
+      header.render();
       data.save();
     }, false);
 
@@ -258,6 +257,7 @@ var control = (function() {
       });
       render();
       _dependents();
+      header.render();
       data.save();
     }, false);
 
@@ -268,6 +268,7 @@ var control = (function() {
       });
       render();
       _dependents();
+      header.render();
       data.save();
     }, false);
 
@@ -320,6 +321,7 @@ var control = (function() {
         });
         render();
         data.save();
+        header.render();
       }, false);
     });
   };
