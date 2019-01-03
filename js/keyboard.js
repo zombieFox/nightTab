@@ -18,6 +18,7 @@ var keyboard = (function() {
           control.update();
           control.render();
         };
+        data.save();
       };
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
@@ -45,6 +46,7 @@ var keyboard = (function() {
         };
         control.update();
         control.render();
+        data.save();
       };
     }, false);
   };
