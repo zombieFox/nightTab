@@ -1,54 +1,59 @@
 var state = (function() {
 
   var current = {
-    edit: {
-      active: false
-    },
-    layout: {
-      alignment: "left",
-      containerWidth: "wide"
+    header: {
+      clock: {
+        active: true,
+        hour24: true,
+        show: {
+          leadingZero: true,
+          seconds: true,
+          seperator: true,
+          meridiem: true
+        }
+      },
+      search: {
+        searching: false,
+        active: true,
+        grow: true,
+        engine: {
+          selected: "google",
+          google: {
+            url: "https://www.google.com/search"
+          },
+          duckduckgo: {
+            url: "https://duckduckgo.com/"
+          },
+          giphy: {
+            url: "https://giphy.com/search/"
+          },
+          custom: {
+            url: ""
+          }
+        }
+      },
+      buttons: {
+        show: true
+      }
     },
     link: {
       editObject: null,
       action: null,
       newTab: false,
-      view: "block",
+      style: "block",
       sort: "none"
     },
-    search: {
-      searching: false,
-      active: true,
-      grow: true,
-      engine: {
-        selected: "google",
-        google: {
-          url: "https://www.google.com/search"
-        },
-        duckduckgo: {
-          url: "https://duckduckgo.com/"
-        },
-        giphy: {
-          url: "https://giphy.com/search/"
-        },
-        custom: {
-          url: ""
-        }
-      }
+    layout: {
+      alignment: "left",
+      container: "wide",
+      theme: {
+        r: 0,
+        g: 255,
+        b: 0,
+      },
     },
-    clock: {
-      active: true,
-      hour24: true,
-      show: {
-        leadingZero: true,
-        seconds: true,
-        seperator: true,
-        meridiem: true
-      }
-    },
-    theme: {
-      r: 0,
-      g: 255,
-      b: 0,
+    edit: {
+      active: false
     },
     menu: {
       open: false

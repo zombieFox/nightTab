@@ -17,16 +17,16 @@ var search = (function() {
 
   var _toggle = function(input) {
     if (input.value != "") {
-      state.get().search.searching = true;
+      state.get().header.search.searching = true;
     } else {
-      state.get().search.searching = false;
+      state.get().header.search.searching = false;
     };
   };
 
   var _searchClear = function() {
     var searchInput = helper.e(".search-input");
     var searchClear = helper.e(".search-clear");
-    if (state.get().search.searching) {
+    if (state.get().header.search.searching) {
       searchClear.removeAttribute("disabled");
     } else {
       searchClear.setAttribute("disabled", "");
@@ -35,7 +35,7 @@ var search = (function() {
 
   var render = function() {
     var searchInput = helper.e(".search-input");
-    if (state.get().search.searching) {
+    if (state.get().header.search.searching) {
       var searchedBookmarks = [];
       bookmarks.get().forEach(function(arrayItem, index) {
         if (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase()) || arrayItem.name.toLowerCase().includes(searchInput.value.toLowerCase())) {
@@ -54,7 +54,7 @@ var search = (function() {
 
   var update = function() {
     var search = helper.e(".search");
-    search.setAttribute("action", state.get().search.engine[state.get().search.engine.selected].url);
+    search.setAttribute("action", state.get().header.search.engine[state.get().header.search.engine.selected].url);
   };
 
   var clear = function() {

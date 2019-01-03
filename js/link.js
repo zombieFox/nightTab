@@ -76,7 +76,7 @@ var link = (function() {
     state.get().link.editObject = null;
     state.get().link.action = null;
     clear();
-    if (state.get().search.searching) {
+    if (state.get().header.search.searching) {
       search.render();
     } else {
       render();
@@ -88,7 +88,7 @@ var link = (function() {
     var timeStamp = parseInt(button.closest(".link-item").dataset.timeStamp, 10);
     bookmarks.remove(timeStamp);
     clear();
-    if (state.get().search.searching) {
+    if (state.get().header.search.searching) {
       search.render();
     } else {
       render();

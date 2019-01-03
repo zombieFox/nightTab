@@ -28,24 +28,24 @@ var control = (function() {
       };
     };
     var _clock = function() {
-      if (state.get().clock.active) {
+      if (state.get().header.clock.active) {
         helper.addClass(html, "is-clock");
       } else {
         helper.removeClass(html, "is-clock");
       };
     };
     var _search = function() {
-      if (state.get().search.active) {
+      if (state.get().header.search.active) {
         helper.addClass(html, "is-search");
       } else {
         helper.removeClass(html, "is-search");
       };
-      if (state.get().search.grow) {
+      if (state.get().header.search.grow) {
         helper.addClass(html, "is-search-grow");
       } else {
         helper.removeClass(html, "is-search-grow");
       };
-      helper.e(".control-search-engine-custom-url").value = state.get().search.engine.custom.url;
+      helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     };
     var _alignment = function() {
       helper.removeClass(html, "is-alignment-left");
@@ -64,13 +64,13 @@ var control = (function() {
           helper.addClass(html, "is-link-list");
         }
       };
-      view[state.get().link.view]();
+      view[state.get().link.style]();
     };
     var _layout = function() {
       helper.removeClass(html, "is-layout-fludi");
       helper.removeClass(html, "is-layout-wide");
       helper.removeClass(html, "is-layout-thin");
-      helper.addClass(html, "is-layout-" + state.get().layout.containerWidth);
+      helper.addClass(html, "is-layout-" + state.get().layout.container);
     };
     _alignment();
     _edit();
@@ -82,46 +82,46 @@ var control = (function() {
 
   var _dependents = function(options) {
     var _clock = function() {
-      if (state.get().clock.active) {
-        helper.e(".control-clock-seconds").disabled = false;
-        helper.e(".control-clock-seperator").disabled = false;
-        helper.e(".control-clock-24").disabled = false;
+      if (state.get().header.clock.active) {
+        helper.e(".control-header-clock-show-seconds").disabled = false;
+        helper.e(".control-header-clock-show-seperator").disabled = false;
+        helper.e(".control-header-clock-24").disabled = false;
       } else {
         helper.e(".control-clock-seconds").disabled = true;
-        helper.e(".control-clock-seperator").disabled = true;
-        helper.e(".control-clock-24").disabled = true;
+        helper.e(".control-header-clock-show-seperator").disabled = true;
+        helper.e(".control-header-clock-24").disabled = true;
       };
-      if (state.get().clock.active && state.get().clock.hour24) {
-        helper.e(".control-clock-leading-zero").disabled = false;
+      if (state.get().header.clock.active && state.get().header.clock.hour24) {
+        helper.e(".control-header-clock-show-leading-zero").disabled = false;
       } else {
-        helper.e(".control-clock-leading-zero").disabled = true;
+        helper.e(".control-header-clock-show-leading-zero").disabled = true;
       };
-      if (state.get().clock.active && !state.get().clock.hour24) {
-        helper.e(".control-clock-meridiem").disabled = false;
+      if (state.get().header.clock.active && !state.get().header.clock.hour24) {
+        helper.e(".control-header-clock-show-meridiem").disabled = false;
       } else {
-        helper.e(".control-clock-meridiem").disabled = true;
+        helper.e(".control-header-clock-show-meridiem").disabled = true;
       };
     };
     var _search = function() {
-      if (state.get().search.active) {
-        helper.e(".control-search-grow").disabled = false;
-        helper.e(".control-search-engine-google").disabled = false;
-        helper.e(".control-search-engine-giphy").disabled = false;
-        helper.e(".control-search-engine-duckduckgo").disabled = false;
-        helper.e(".control-search-engine-custom").disabled = false;
+      if (state.get().header.search.active) {
+        helper.e(".control-header-search-grow").disabled = false;
+        helper.e(".control-header-search-engine-google").disabled = false;
+        helper.e(".control-header-search-engine-duckduckgo").disabled = false;
+        helper.e(".control-header-search-engine-giphy").disabled = false;
+        helper.e(".control-header-search-engine-custom").disabled = false;
       } else {
-        helper.e(".control-search-grow").disabled = true;
-        helper.e(".control-search-engine-google").disabled = true;
-        helper.e(".control-search-engine-giphy").disabled = true;
-        helper.e(".control-search-engine-duckduckgo").disabled = true;
-        helper.e(".control-search-engine-custom").disabled = true;
+        helper.e(".control-header-search-grow").disabled = true;
+        helper.e(".control-header-search-engine-google").disabled = true;
+        helper.e(".control-header-search-engine-duckduckgo").disabled = true;
+        helper.e(".control-header-search-engine-giphy").disabled = true;
+        helper.e(".control-header-search-engine-custom").disabled = true;
       };
-      if (state.get().search.active && state.get().search.engine.selected === "custom") {
-        helper.e("[for=control-search-engine-custom-url]").removeAttribute("disabled");
-        helper.e(".control-search-engine-custom-url").disabled = false;
+      if (state.get().header.search.active && state.get().header.search.engine.selected === "custom") {
+        helper.e("[for=control-header-search-engine-custom-url]").removeAttribute("disabled");
+        helper.e(".control-header-search-engine-custom-url").disabled = false;
       } else {
-        helper.e("[for=control-search-engine-custom-url]").setAttribute("disabled", "");
-        helper.e(".control-search-engine-custom-url").disabled = true;
+        helper.e("[for=control-header-search-engine-custom-url]").setAttribute("disabled", "");
+        helper.e(".control-header-search-engine-custom-url").disabled = true;
       };
     };
     _clock();
@@ -146,80 +146,27 @@ var control = (function() {
       data.save();
     }, false);
 
-    helper.e(".control-clock-active").addEventListener("change", function() {
+    helper.e(".control-layout-theme").addEventListener("change", function() {
       state.change({
-        path: "clock.active",
+        path: "layout.theme",
+        value: helper.hexToRgb(this.value)
+      });
+      theme.render();
+      data.save();
+    });
+    helper.e(".control-link-new-tab").addEventListener("change", function() {
+      state.change({
+        path: "link.newTab",
         value: this.checked
       });
-      render();
-      _dependents();
-      clock.clear();
-      clock.render();
-      header.render();
+      link.clear();
+      link.render();
       data.save();
-    }, false);
-
-    helper.e(".control-clock-seconds").addEventListener("change", function() {
-      state.change({
-        path: "clock.show.seconds",
-        value: this.checked
-      });
-      clock.clear();
-      clock.render();
-      header.render();
-      data.save();
-    }, false);
-
-    helper.e(".control-clock-seperator").addEventListener("change", function() {
-      state.change({
-        path: "clock.show.seperator",
-        value: this.checked
-      });
-      clock.clear();
-      clock.render();
-      header.render();
-      data.save();
-    }, false);
-
-    helper.e(".control-clock-24").addEventListener("change", function() {
-      state.change({
-        path: "clock.hour24",
-        value: this.checked
-      });
-      _dependents();
-      clock.clear();
-      clock.render();
-      header.render();
-      data.save();
-    }, false);
-
-    helper.e(".control-clock-leading-zero").addEventListener("change", function() {
-      state.change({
-        path: "clock.show.leadingZero",
-        value: this.checked
-      });
-      _dependents();
-      clock.clear();
-      clock.render();
-      header.render();
-      data.save();
-    }, false);
-
-    helper.e(".control-clock-meridiem").addEventListener("change", function() {
-      state.change({
-        path: "clock.show.meridiem",
-        value: this.checked
-      });
-      clock.clear();
-      clock.render();
-      header.render();
-      data.save();
-    }, false);
-
-    helper.eA("input[name='control-link-view']").forEach(function(arrayItem, index) {
+    });
+    helper.eA("input[name='control-link-style']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
         state.change({
-          path: "link.view",
+          path: "link.style",
           value: this.value
         });
         render();
@@ -238,8 +185,111 @@ var control = (function() {
         data.save();
       }, false);
     });
-
-    helper.eA("input[name='control-alignment']").forEach(function(arrayItem, index) {
+    helper.e(".control-header-search-active").addEventListener("change", function() {
+      state.change({
+        path: "header.search.active",
+        value: this.checked
+      });
+      render();
+      _dependents();
+      header.render();
+      data.save();
+    }, false);
+    helper.e(".control-header-search-grow").addEventListener("change", function() {
+      state.change({
+        path: "header.search.grow",
+        value: this.checked
+      });
+      render();
+      _dependents();
+      header.render();
+      data.save();
+    }, false);
+    helper.eA("input[name='control-header-search-engine']").forEach(function(arrayItem, index) {
+      arrayItem.addEventListener("change", function() {
+        state.change({
+          path: "header.search.engine.selected",
+          value: this.value
+        });
+        render();
+        _dependents();
+        search.update();
+        data.save();
+      }, false);
+    });
+    helper.e(".control-header-search-engine-custom-url").addEventListener("input", function() {
+      state.change({
+        path: "header.search.engine.custom.url",
+        value: this.value
+      });
+      search.update();
+      data.save();
+    });
+    helper.e(".control-header-clock-active").addEventListener("change", function() {
+      state.change({
+        path: "header.clock.active",
+        value: this.checked
+      });
+      render();
+      _dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+      data.save();
+    }, false);
+    helper.e(".control-header-clock-show-seconds").addEventListener("change", function() {
+      state.change({
+        path: "header.clock.show.seconds",
+        value: this.checked
+      });
+      clock.clear();
+      clock.render();
+      header.render();
+      data.save();
+    }, false);
+    helper.e(".control-header-clock-show-seperator").addEventListener("change", function() {
+      state.change({
+        path: "header.clock.show.seperator",
+        value: this.checked
+      });
+      clock.clear();
+      clock.render();
+      header.render();
+      data.save();
+    }, false);
+    helper.e(".control-header-clock-24").addEventListener("change", function() {
+      state.change({
+        path: "clock.hour24",
+        value: this.checked
+      });
+      _dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+      data.save();
+    }, false);
+    helper.e(".control-header-clock-show-leading-zero").addEventListener("change", function() {
+      state.change({
+        path: "header.clock.show.leadingZero",
+        value: this.checked
+      });
+      _dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+      data.save();
+    }, false);
+    helper.e(".control-header-clock-show-meridiem").addEventListener("change", function() {
+      state.change({
+        path: "header.clock.show.meridiem",
+        value: this.checked
+      });
+      clock.clear();
+      clock.render();
+      header.render();
+      data.save();
+    }, false);
+    helper.eA("input[name='control-layout-alignment']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
         state.change({
           path: "layout.alignment",
@@ -249,100 +299,36 @@ var control = (function() {
         data.save();
       }, false);
     });
-
-    helper.e(".control-search-active").addEventListener("change", function() {
-      state.change({
-        path: "search.active",
-        value: this.checked
-      });
-      render();
-      _dependents();
-      header.render();
-      data.save();
-    }, false);
-
-    helper.e(".control-search-grow").addEventListener("change", function() {
-      state.change({
-        path: "search.grow",
-        value: this.checked
-      });
-      render();
-      _dependents();
-      header.render();
-      data.save();
-    }, false);
-
-    helper.eA("input[name='control-search-engine']").forEach(function(arrayItem, index) {
+    helper.eA("input[name='control-layout-container']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
         state.change({
-          path: "search.engine.selected",
-          value: this.value
-        });
-        render();
-        _dependents();
-        search.update();
-        data.save();
-      }, false);
-    });
-
-    helper.e(".control-search-engine-custom-url").addEventListener("input", function() {
-      state.change({
-        path: "search.engine.custom.url",
-        value: this.value
-      });
-      search.update();
-      data.save();
-    });
-
-    helper.e(".control-theme").addEventListener("change", function() {
-      state.change({
-        path: "theme",
-        value: helper.hexToRgb(this.value)
-      });
-      theme.render();
-      data.save();
-    });
-
-    helper.e(".control-link-new-tab").addEventListener("change", function() {
-      state.change({
-        path: "link.newTab",
-        value: this.checked
-      });
-      link.clear();
-      link.render();
-      data.save();
-    });
-
-    helper.eA("input[name='control-container-width']").forEach(function(arrayItem, index) {
-      arrayItem.addEventListener("change", function() {
-        state.change({
-          path: "layout.containerWidth",
+          path: "layout.container",
           value: this.value
         });
         render();
         data.save();
-        header.render();
       }, false);
     });
   };
 
   var update = function() {
-    helper.e(".control-search-active").checked = state.get().search.active;
-    helper.e(".control-search-grow").checked = state.get().search.grow;
-    helper.e(".control-clock-active").checked = state.get().clock.active;
-    helper.e(".control-clock-seconds").checked = state.get().clock.show.seconds;
-    helper.e(".control-clock-seperator").checked = state.get().clock.show.seperator;
-    helper.e(".control-clock-meridiem").checked = state.get().clock.show.meridiem;
-    helper.e(".control-clock-24").checked = state.get().clock.hour24;
-    helper.e(".control-clock-leading-zero").checked = state.get().clock.show.leadingZero;
     helper.e(".control-edit").checked = state.get().edit.active;
-    helper.e(".control-link-view-" + state.get().link.view).checked = true;
+    helper.e(".control-layout-theme").value = helper.rgbToHex(state.get().layout.theme);
+    helper.e(".control-link-new-tab").value = state.get().link.style.newTab;
+    helper.e(".control-link-style-" + state.get().link.style).checked = true;
     helper.e(".control-link-sort-" + state.get().link.sort).checked = true;
-    helper.e(".control-alignment-" + state.get().layout.alignment).checked = true;
-    helper.e(".control-search-engine-" + state.get().search.engine.selected).checked = true;
-    helper.e(".control-search-engine-custom-url").value = state.get().search.engine.custom.url;
-    helper.e(".control-link-new-tab").value = state.get().link.newTab;
-    helper.e(".control-container-width-" + state.get().layout.containerWidth).checked = true;
+    helper.e(".control-header-search-active").checked = state.get().header.search.active;
+    helper.e(".control-header-search-grow").checked = state.get().header.search.grow;
+    helper.e(".control-header-search-engine-" + state.get().header.search.engine.selected).checked = true;
+    helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
+    helper.e(".control-header-clock-active").checked = state.get().header.clock.active;
+    helper.e(".control-header-clock-show-seconds").checked = state.get().header.clock.show.seconds;
+    helper.e(".control-header-clock-show-seperator").checked = state.get().header.clock.show.seperator;
+    helper.e(".control-header-clock-24").checked = state.get().header.clock.hour24;
+    helper.e(".control-header-clock-show-leading-zero").checked = state.get().header.clock.show.leadingZero;
+    helper.e(".control-header-clock-show-meridiem").checked = state.get().header.clock.show.meridiem;
+    helper.e(".control-layout-alignment-" + state.get().layout.alignment).checked = true;
+    helper.e(".control-layout-container-" + state.get().layout.container).checked = true;
   };
 
   var init = function() {

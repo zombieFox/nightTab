@@ -17,8 +17,8 @@ var clock = (function() {
   var _makeTimeObject = function() {
     var time = helper.getDateTime();
     time.meridiem = "AM";
-    if (state.get().clock.hour24) {
-      if (time.hours < 10 && state.get().clock.show.leadingZero) {
+    if (state.get().header.clock.hour24) {
+      if (time.hours < 10 && state.get().header.clock.show.leadingZero) {
         time.hours = "0" + time.hours;
       };
     } else {
@@ -100,24 +100,24 @@ var clock = (function() {
         }]
       });
       clock.appendChild(hours);
-      if (state.get().clock.show.seperator) {
+      if (state.get().header.clock.show.seperator) {
         clock.appendChild(seperator1);
       };
       clock.appendChild(minutes);
-      if (state.get().clock.show.seconds) {
-        if (state.get().clock.show.seperator) {
+      if (state.get().header.clock.show.seconds) {
+        if (state.get().header.clock.show.seperator) {
           clock.appendChild(seperator2);
         };
         clock.appendChild(seconds);
       };
-      if (!state.get().clock.hour24 && state.get().clock.show.meridiem) {
-        if (state.get().clock.show.seperator) {
+      if (!state.get().header.clock.hour24 && state.get().header.clock.show.meridiem) {
+        if (state.get().header.clock.show.seperator) {
           clock.appendChild(seperator3);
         };
         clock.appendChild(meridiem);
       };
     };
-    if (state.get().clock.active) {
+    if (state.get().header.clock.active) {
       _clock();
     };
   };
