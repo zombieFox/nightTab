@@ -15,40 +15,30 @@ var data = (function() {
   };
 
   var save = function() {
-    set(saveName, JSON.stringify(state.get()));
+    var data = {
+      state: state.get(),
+      bookmarks: bookmarks.get()
+    };
+    set(saveName, JSON.stringify(data));
     console.log("data saved");
   };
 
-  var restore = function() {
+  var load = function() {
     var data = JSON.parse(get(saveName));
-    if (data) {
-      bookmarks.restore(data.bookmarks);
-      theme.restore(data.theme);
-      control.restore(data.control);
-      console.log("data restored");
-    };
+    return data;
   };
 
   var wipe = function() {
     clear(saveName);
   };
 
-  var init = function() {
-    if (get(saveName)) {
-      restore();
-    } else {
-      save();
-    };
-  };
-
   return {
-    init: init,
     save: save,
     clear: clear,
     set: set,
     get: get,
     wipe: wipe,
-    restore: restore
+    load: load
   };
 
 })();

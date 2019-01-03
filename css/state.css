@@ -1,0 +1,39 @@
+.is-hidden {
+  display: none !important;
+}
+
+.is-inline-block {
+  display: inline-block !important;
+}
+
+.is-block {
+  display: block !important;
+}
+
+.is-transparent {
+  opacity: 0 !important;
+}
+
+.is-opaque {
+  opacity: 1 !important;
+}
+
+.is-invisible {
+  visibility: hidden !important;
+}
+
+.is-visible {
+  visibility: visible !important;
+}
+
+.is-scrolll-disabled {
+  overflow: hidden !important;
+}
+
+.is-small {
+  transform: scale(0.5) !important;
+}
+
+.is-large {
+  transform: scale(1.5) !important;
+}

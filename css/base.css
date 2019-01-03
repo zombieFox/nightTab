@@ -23,12 +23,13 @@
   --gray-20: #fafafa;
   --root-font-size: 14px;
   --radius: 2px;
-  --accent: 255, 170, 51;
+  --accent: 0, 255, 0;
   --line-width: 3px;
   --background: var(--gray-01);
-  --animation-speed-fast: 0.1s;
-  --animation-speed-medium: 0.2s;
-  --animation-speed-slow: 0.3s;
+  --gutter: 0.5em;
+  --animation-speed-fast: 0.2s;
+  --animation-speed-medium: 0.3s;
+  --animation-speed-slow: 0.4s;
   --font-regular: "Open Sans Regular", sans-serif;
   --font-bold: "Open Sans Bold", sans-serif;
   --font-light: "Open Sans Light", sans-serif;
@@ -38,7 +39,7 @@
   --breakpoint-sm: 550px;
   --breakpoint-md: 700px;
   --breakpoint-lg: 900px;
-  --breakpoint-xl: 1300px;
+  --breakpoint-xl: 1100px;
 }
 
 :root.is-link-block {
@@ -57,6 +58,7 @@
   :root {
     --root-font-size: 16px;
   }
+
   :root.is-link-block {
     --link-height: 9em;
   }
@@ -75,11 +77,6 @@ body {
   background-color: var(--background);
   color: var(--white);
   font-size: 1rem;
-  width: 100vw;
-  height: 100vh;
+  line-height: 1.6;
   font-family: var(--font-regular);
-}
-
-* {
-  box-sizing: border-box;
 }

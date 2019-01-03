@@ -1,3 +1,33 @@
+.link {
+  margin-bottom: 50vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.link-area {
+  width: 100%;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-gap: calc(var(--gutter) * 2);
+}
+
+.is-link-block .link-area {
+  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+}
+
+.is-link-list .link-area {
+  grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+}
+
+.is-layout-thin.is-link-list .link-area {
+  grid-template-columns: 1fr;
+}
+
+.is-layout-thin.is-link-block .link-area {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
 .link-item {
   width: 100%;
   height: var(--link-height);
@@ -5,7 +35,7 @@
   position: relative;
   display: block;
   transform: scale(1);
-  transition: all var(--animation-speed-medium) ease-in-out;
+  transition: all var(--animation-speed-fast) ease-in-out;
 }
 
 .link-item:focus,
@@ -28,7 +58,7 @@
   z-index: 3;
   position: relative;
   user-select: none;
-  transition: all var(--animation-speed-medium) ease-in-out;
+  transition: all var(--animation-speed-fast) ease-in-out;
 }
 
 .is-link-block .link-panel-front {
@@ -83,14 +113,15 @@
 }
 
 .link-control {
-  margin: 0 0.25em;
+  margin: 0;
+  padding: 0 var(--line-width);
   height: 0;
   display: flex;
   overflow: hidden;
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
-  transition: all var(--animation-speed-medium) ease-in-out;
+  transition: all var(--animation-speed-fast) ease-in-out;
 }
 
 .link-control-item {
@@ -131,7 +162,7 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  transition: all var(--animation-speed-medium) ease-in-out;
+  transition: all var(--animation-speed-fast) ease-in-out;
 }
 
 .is-link-block .link-url {
@@ -188,7 +219,7 @@
   margin: 0;
   font-size: 0.9em;
   font-family: var(--font-regular);
-  color: var(--gray-08);
+  color: var(--gray-12);
   white-space: nowrap;
   overflow: hidden;
   max-width: 100%;

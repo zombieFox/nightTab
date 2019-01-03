@@ -4,9 +4,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   background-color: var(--gray-02);
-  padding: 0.25em 1em;
+  padding: 0.125em 1em;
   margin: 0 0 1em 0;
-  color: var(--gray-16);
+  color: var(--gray-12);
   font-size: 1em;
   font-family: var(--font-regular);
   min-height: 2.5em;
@@ -22,7 +22,7 @@ input[type="submit"] {
   white-space: nowrap;
   cursor: pointer;
   box-shadow: none;
-  transition: all var(--animation-speed-medium) ease-in-out;
+  transition: all var(--animation-speed-fast) ease-in-out;
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -85,9 +85,14 @@ button [class*=" icon-"],
   font-size: 0.8em;
 }
 
+.button-block {
+  display: flex;
+  width: 100%;
+}
+
 .button-group {
   margin: 0 0 1em 0;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: stretch;
 }
@@ -99,12 +104,14 @@ button [class*=" icon-"],
 }
 
 .button-group button:first-child,
-.button-group .button:first-child {
+.button-group .button:first-child,
+.button-group .button-group-addon:first-child {
   border-radius: var(--radius) 0 0 var(--radius);
 }
 
 .button-group button:last-child,
-.button-group .button:last-child {
+.button-group .button:last-child,
+.button-group .button-group-addon:last-child {
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 

@@ -11,43 +11,49 @@ h6 {
 
 h1 {
   font-size: 1.5em;
-  font-family: var(--font-light);
+  font-family: var(--font-fjalla);
 }
 
 h2 {
-  font-size: 1.5em;
-  font-family: var(--font-light);
+  font-size: 1.2em;
+  font-family: var(--font-regular);
+  color: var(--gray-18);
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.1em;
   font-family: var(--font-regular);
+  color: var(--gray-18);
 }
 
 h4 {
-  font-size: 1.25em;
-  font-family: var(--font-bold);
+  font-size: 1em;
+  font-family: var(--font-regular);
+  color: var(--gray-18);
 }
 
 h5 {
   font-size: 1em;
   font-family: var(--font-bold);
+  color: var(--gray-18);
 }
 
 h6 {
   font-size: 0.75em;
   font-family: var(--font-bold);
+  color: var(--gray-18);
 }
 
 p {
-  color: var(--black);
+  color: var(--white);
   margin: 0;
   line-height: 1.5;
 }
 
 hr {
   border: 0;
-  border: 1px solid var(--gray-08);
+  border-top: 1px solid var(--gray-04);
+  border-radius: var(--radius);
   margin: 1em 0;
   clear: both;
 }

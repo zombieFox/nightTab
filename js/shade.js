@@ -2,7 +2,7 @@ var shade = (function() {
 
   var previousShade = null;
 
-  function destroy() {
+  var destroy = function() {
     var all_shade = helper.eA(".shade");
     if (all_shade[0]) {
       for (var i = 0; i < all_shade.length; i++) {
@@ -11,7 +11,7 @@ var shade = (function() {
     };
   };
 
-  function render(options) {
+  var render = function(options) {
     var defaultOptions = {
       action: null,
       includeHeader: false

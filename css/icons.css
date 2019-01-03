@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "icons";
+  font-family: "Icons";
   src: url("../fonts/icons/icons.eot?4e687y");
   src: url("../fonts/icons/icons.eot?4e687y#iefix") format("embedded-opentype"),
     url("../fonts/icons/icons.ttf?4e687y") format("truetype"),
@@ -12,7 +12,7 @@
 [class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icons" !important;
+  font-family: "Icons" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -71,6 +71,7 @@
 .icon-done:before {
   content: "\e876";
 }
+
 .icon-arrow-down:before {
   content: "\e313";
 }
@@ -105,6 +106,10 @@
 
 .icon-remove:before {
   content: "\e15b";
+}
+
+.icon-settings:before {
+  content: "\e8b8";
 }
 
 .icon-unfold-less:before {

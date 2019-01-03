@@ -2,7 +2,7 @@ var modal = (function() {
 
   var previousModal = null;
 
-  function destroy() {
+  var destroy = function() {
     var all_modal = helper.eA(".modal");
     if (all_modal[0]) {
       for (var i = 0; i < all_modal.length; i++) {
@@ -11,7 +11,7 @@ var modal = (function() {
     };
   };
 
-  function render(options) {
+  var render = function(options) {
     var defaultOptions = {
       heading: "Modal",
       content: "Body",
@@ -25,7 +25,10 @@ var modal = (function() {
     };
     var makeModal = function() {
       var body = helper.e("body");
-      body.dataset.modal = true;
+      state.change({
+        path: "modal.active",
+        value: true
+      });
       var modalWrapper = document.createElement("div");
       modalWrapper.setAttribute("class", "modal-wrapper");
       var modal = document.createElement("div");
@@ -44,7 +47,10 @@ var modal = (function() {
         } else {
           modal.remove();
         };
-        body.dataset.modal = false;
+        state.change({
+          path: "modal.active",
+          value: false
+        });
       };
       var modalBody = document.createElement("div");
       modalBody.setAttribute("class", "modal-body");

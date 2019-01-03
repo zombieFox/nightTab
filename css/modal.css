@@ -10,7 +10,7 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   perspective: 1000px;
-  transition: opacity var(--animation-speed-slow);
+  transition: opacity var(--animation-speed-fast) ease-in-out;
 }
 
 .modal-large {
@@ -33,7 +33,7 @@
 }
 
 .is-transition-end .modal-wrapper {
-  transition: all var(--animation-speed-medium);
+  transition: all var(--animation-speed-fast) ease-in-out;
 }
 
 .modal-body {

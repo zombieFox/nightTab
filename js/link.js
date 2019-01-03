@@ -1,8 +1,4 @@
-var links = (function() {
-
-  var currentEditIndex = null;
-
-  var currentAction = null;
+var link = (function() {
 
   var _bind = function(override) {
     var options = {
@@ -11,7 +7,7 @@ var links = (function() {
     };
     if (override) {
       options = helper.applyOptions(options, override);
-    }
+    };
     var action = {
       edit: function() {
         options.element.addEventListener("click", function() {
@@ -30,7 +26,7 @@ var links = (function() {
   };
 
   var add = function() {
-    currentAction = "add";
+    state.get().link.action = "add";
     var form = _makeLinkForm();
     modal.render({
       heading: "Add a new bookmark",
@@ -42,9 +38,10 @@ var links = (function() {
   };
 
   var edit = function(button) {
-    currentAction = "edit";
-    currentEditIndex = parseInt(button.closest(".link-item").dataset.index, 10);
-    var currentBookmark = bookmarks.get()[currentEditIndex];
+    state.get().link.action = "edit";
+    state.get().link.editObject = bookmarks.get(parseInt(button.closest(".link-item").dataset.timeStamp, 10));
+    console.log(state.get().link.editObject);
+    var currentBookmark = bookmarks.get(state.get().link.editObject.timeStamp);
     var form = _makeLinkForm();
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
@@ -61,10 +58,12 @@ var links = (function() {
   var save = function(button) {
     var action = {
       add: function(newLinkData) {
+        newLinkData.timeStamp = new Date().getTime();
         bookmarks.add(newLinkData);
       },
       edit: function(newLinkData) {
-        bookmarks.edit(newLinkData, currentEditIndex);
+        newLinkData.timeStamp = state.get().link.editObject.timeStamp;
+        bookmarks.edit(newLinkData, state.get().link.editObject.timeStamp);
       }
     };
     var form = helper.e(".link-form");
@@ -73,11 +72,11 @@ var links = (function() {
       name: form.querySelector(".link-form-input-name").value,
       url: form.querySelector(".link-form-input-url").value
     };
-    action[currentAction](newLinkData);
-    currentEditIndex = null;
-    currentAction = null;
+    action[state.get().link.action](newLinkData);
+    state.get().link.editObject = null;
+    state.get().link.action = null;
     clear();
-    if (search.get().search) {
+    if (state.get().header.search.searching) {
       search.render();
     } else {
       render();
@@ -86,10 +85,10 @@ var links = (function() {
   };
 
   var remove = function(button) {
-    var index = parseInt(button.closest(".link-item").dataset.index, 10);
-    bookmarks.remove(index);
+    var timeStamp = parseInt(button.closest(".link-item").dataset.timeStamp, 10);
+    bookmarks.remove(timeStamp);
     clear();
-    if (search.get().search) {
+    if (state.get().header.search.searching) {
       search.render();
     } else {
       render();
@@ -97,46 +96,18 @@ var links = (function() {
     data.save();
   };
 
-  var _makeElement = function(override) {
-    var options = {
-      tag: null,
-      classes: null,
-      text: null,
-      url: null,
-      index: null,
-      attr: null
-    };
-    if (override) {
-      options = helper.applyOptions(options, override);
-    };
-    var element = document.createElement(options.tag);
-    if (options.text != null) {
-      element.textContent = options.text;
-    };
-    if (options.attr != null) {
-      options.attr.forEach(function(arrayItem, index) {
-        if ("key" in arrayItem && "value" in arrayItem) {
-          element.setAttribute(arrayItem.key, arrayItem.value);
-        } else if ("key" in arrayItem) {
-          element.setAttribute(arrayItem.key, "");
-        }
-      });
-    };
-    return element;
-  };
-
   var _makeLinkForm = function() {
-    var form = _makeElement({
+    var form = helper.makeNode({
       tag: "form",
       attr: [{
         key: "class",
         value: "link-form"
       }]
     });
-    var fieldset = _makeElement({
+    var fieldset = helper.makeNode({
       tag: "fieldset"
     });
-    var letterLabel = _makeElement({
+    var letterLabel = helper.makeNode({
       tag: "label",
       text: "Letters",
       attr: [{
@@ -144,7 +115,7 @@ var links = (function() {
         value: "letters"
       }]
     });
-    var letterInput = _makeElement({
+    var letterInput = helper.makeNode({
       tag: "input",
       attr: [{
         key: "type",
@@ -166,7 +137,7 @@ var links = (function() {
         value: "off"
       }]
     });
-    var nameLabel = _makeElement({
+    var nameLabel = helper.makeNode({
       tag: "label",
       text: "Name",
       attr: [{
@@ -174,7 +145,7 @@ var links = (function() {
         value: "name"
       }]
     });
-    var nameInput = _makeElement({
+    var nameInput = helper.makeNode({
       tag: "input",
       attr: [{
         key: "type",
@@ -196,7 +167,7 @@ var links = (function() {
         value: "off"
       }]
     });
-    var urlLabel = _makeElement({
+    var urlLabel = helper.makeNode({
       tag: "label",
       text: "URL",
       attr: [{
@@ -204,7 +175,7 @@ var links = (function() {
         value: "url"
       }]
     });
-    var urlInput = _makeElement({
+    var urlInput = helper.makeNode({
       tag: "input",
       attr: [{
         key: "type",
@@ -236,18 +207,18 @@ var links = (function() {
     return form;
   };
 
-  var _makeLink = function(data, index) {
-    var linkItem = _makeElement({
+  var _makeLink = function(data) {
+    var linkItem = helper.makeNode({
       tag: "div",
       attr: [{
         key: "class",
         value: "link-item"
       }, {
-        key: "data-index",
-        value: index
+        key: "data-time-stamp",
+        value: data.timeStamp
       }]
     });
-    var linkPanelFront = _makeElement({
+    var linkOptions = {
       tag: "a",
       attr: [{
         key: "class",
@@ -259,26 +230,30 @@ var links = (function() {
         key: "tabindex",
         value: 1
       }]
-    });
-    var linkPanelBack = _makeElement({
+    };
+    if (state.get().link.newTab) {
+      linkOptions.attr.push({
+        key: "target",
+        value: "_blank"
+      });
+    };
+    var linkPanelFront = helper.makeNode(linkOptions);
+    var linkPanelBack = helper.makeNode({
       tag: "div",
       attr: [{
         key: "class",
         value: "link-panel-back"
       }]
     });
-    var linkLetter = _makeElement({
+    var linkLetter = helper.makeNode({
       tag: "p",
       text: data.letter,
       attr: [{
         key: "class",
         value: "link-letter"
-      }, {
-        key: "data-index",
-        value: data.url
       }]
     });
-    var linkName = _makeElement({
+    var linkName = helper.makeNode({
       tag: "p",
       text: data.name,
       attr: [{
@@ -286,14 +261,14 @@ var links = (function() {
         value: "link-name"
       }]
     });
-    var linkUrl = _makeElement({
+    var linkUrl = helper.makeNode({
       tag: "div",
       attr: [{
         key: "class",
         value: "link-url"
       }]
     });
-    var linkUrlText = _makeElement({
+    var linkUrlText = helper.makeNode({
       tag: "p",
       text: data.url.replace(/^https?\:\/\//i, "").replace(/\/$/, ""),
       attr: [{
@@ -301,14 +276,14 @@ var links = (function() {
         value: "link-url-text"
       }]
     });
-    var linkControl = _makeElement({
+    var linkControl = helper.makeNode({
       tag: "div",
       attr: [{
         key: "class",
         value: "link-control"
       }]
     });
-    var linkEdit = _makeElement({
+    var linkEdit = helper.makeNode({
       tag: "button",
       attr: [{
         key: "class",
@@ -318,14 +293,14 @@ var links = (function() {
         value: -1
       }]
     });
-    var linkEditIcon = _makeElement({
+    var linkEditIcon = helper.makeNode({
       tag: "span",
       attr: [{
         key: "class",
         value: "button-icon icon-edit"
       }]
     });
-    var linkDelete = _makeElement({
+    var linkDelete = helper.makeNode({
       tag: "button",
       attr: [{
         key: "class",
@@ -335,7 +310,7 @@ var links = (function() {
         value: -1
       }]
     });
-    var linkDeleteIcon = _makeElement({
+    var linkDeleteIcon = helper.makeNode({
       tag: "span",
       attr: [{
         key: "class",
@@ -365,24 +340,16 @@ var links = (function() {
   };
 
   var render = function(array) {
-    var gridItemBody = helper.e(".grid-item-body");
-    if (array) {
-      array.forEach(function(arrayItem, index) {
-        if (arrayItem.index) {
-          index = arrayItem.index;
-        };
-        gridItemBody.appendChild(_makeLink(arrayItem, index));
-      });
-    } else {
-      bookmarks.get().forEach(function(arrayItem, index) {
-        gridItemBody.appendChild(_makeLink(arrayItem, index));
-      });
-    };
+    var linkArea = helper.e(".link-area");
+    var bookmarksToRender = array || bookmarks.get();
+    bookmarksToRender.forEach(function(arrayItem) {
+      linkArea.appendChild(_makeLink(arrayItem));
+    });
   };
 
   var tabIndex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
-    if (control.get().edit) {
+    if (state.get().edit.active) {
       allLinkControlItem.forEach(function(arrayItem, index) {
         arrayItem.tabIndex = 1;
       });
@@ -394,9 +361,9 @@ var links = (function() {
   };
 
   var clear = function() {
-    var gridItemBody = helper.e(".grid-item-body");
-    while (gridItemBody.lastChild) {
-      gridItemBody.removeChild(gridItemBody.lastChild);
+    var linkArea = helper.e(".link-area");
+    while (linkArea.lastChild) {
+      linkArea.removeChild(linkArea.lastChild);
     };
   };
 
