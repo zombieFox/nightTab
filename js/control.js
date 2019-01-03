@@ -87,7 +87,7 @@ var control = (function() {
         helper.e(".control-header-clock-show-seperator").disabled = false;
         helper.e(".control-header-clock-24").disabled = false;
       } else {
-        helper.e(".control-clock-seconds").disabled = true;
+        helper.e(".control-header-clock-show-seconds").disabled = true;
         helper.e(".control-header-clock-show-seperator").disabled = true;
         helper.e(".control-header-clock-24").disabled = true;
       };
@@ -259,7 +259,7 @@ var control = (function() {
     }, false);
     helper.e(".control-header-clock-24").addEventListener("change", function() {
       state.change({
-        path: "clock.hour24",
+        path: "header.clock.hour24",
         value: this.checked
       });
       _dependents();
