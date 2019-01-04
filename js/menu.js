@@ -1,5 +1,28 @@
 var menu = (function() {
 
+  var _bind = function() {
+    var allMenuNavButton = helper.eA(".menu-nav-button");
+    allMenuNavButton.forEach(function(arrayItem, index) {
+      arrayItem.addEventListener("click", function() {
+        _tab(this);
+      }, false);
+    });
+  };
+
+  var _tab = function(button) {
+    var allMenuNavButton = helper.eA(".menu-nav-button");
+    var allMenuArea = helper.eA(".menu-area");
+    var target = helper.e(button.dataset.target);
+    allMenuNavButton.forEach(function(arrayItem, index) {
+      helper.removeClass(arrayItem, "active");
+    });
+    allMenuArea.forEach(function(arrayItem, index) {
+      helper.removeClass(arrayItem, "active");
+    });
+    helper.addClass(button, "active");
+    helper.addClass(target, "active");
+  };
+
   var close = function() {
     state.get().menu.active = false;
     render();
@@ -35,6 +58,7 @@ var menu = (function() {
   };
 
   var init = function() {
+    _bind();
     close();
   };
 
