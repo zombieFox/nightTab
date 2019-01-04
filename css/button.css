@@ -103,15 +103,21 @@ button [class*=" icon-"],
   border-radius: 0;
 }
 
-.button-group button:first-child,
-.button-group .button:first-child,
-.button-group .button-group-addon:first-child {
+.button-group>button:first-child,
+.button-group>.button:first-child {
   border-radius: var(--radius) 0 0 var(--radius);
 }
 
-.button-group button:last-child,
-.button-group .button:last-child,
-.button-group .button-group-addon:last-child {
+.button-group>button:last-child,
+.button-group>.button:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.button-group.nested-button *:first-child .button {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.button-group.nested-button *:last-child .button {
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 
