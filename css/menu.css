@@ -29,7 +29,9 @@
 .menu-nav:not(:last-child) {
   margin: 0;
 }
-
+.menu-nav-item {
+  flex-grow: 1;
+}
 .menu-nav-item:not(:last-child) {
   margin: 0;
 }
