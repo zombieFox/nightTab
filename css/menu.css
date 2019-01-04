@@ -2,33 +2,51 @@
   background-color: var(--gray-02);
   border-radius: var(--radius);
   position: fixed;
-  bottom: 1em;
-  left: 1em;
-  width: calc(100% - 2em);
-  height: calc(70vh - 2em);
+  top: 1em;
+  right: 1em;
+  width: calc(100vw - 2em);
+  max-height: calc(80vh - 2em);
   overflow-y: scroll;
   z-index: 3000;
-  transform: translateY(calc(100% + 2em));
+  transform: translateY(calc(-100% - 2em));
   transition: transform var(--animation-speed-fast) ease-in-out;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  grid-gap: var(--line-width); */
 }
 
 .is-menu-open .menu {
   transform: translateY(0);
 }
 
+.menu-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+}
+
 .menu-nav:not(:last-child) {
   margin: 0;
 }
 
-.menu-area {
-  display: none;
+.menu-nav-item:not(:last-child) {
+  margin: 0;
 }
 
-.menu-area.active {
-  display: block;
+.menu-content {
+  padding: 2em;
+}
+
+.menu-content-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-gap: 2em;
+}
+
+.menu-header {
+  padding-top: 1em;
+  border-top: var(--line-width) solid var(--gray-04);
 }
 
 .menu-nav-button {
@@ -42,38 +60,33 @@
   color: var(--white);
 }
 
-.menu-content {
-  padding: 2em;
-}
-
-.menu-sub-area {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
-  grid-gap: 2em;
-}
-
-.menu-header {
-  border-top: var(--line-width) solid var(--gray-04);
-  padding-top: 1em;
-}
-
 @media (min-width: 550px) {
   .menu {
-    height: calc(70vh - 2em);
+    max-height: calc(90vh - 2em);
+  }
+
+  .menu-header {
+    padding-top: 0;
+    padding-bottom: 1em;
+    border-top: 0;
+    border-bottom: var(--line-width) solid var(--gray-04);
   }
 
   .menu-nav {
-    display: flex;
+    flex-direction: row;
+  }
+
+  .menu-content-area {
+    grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
   }
 }
 
 @media (min-width: 900px) {
-  .menu-nav {
-    display: flex;
+  .menu {
+    width: calc(50vw - 2em);
   }
 
-  .menu-sub-area {
-    display: grid;
+  .menu-content-area {
     grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
   }
 }

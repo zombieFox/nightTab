@@ -81,20 +81,21 @@
   </section>
 
   <section class="menu">
-    <ul class="menu-nav u-list-unstyled">
-      <li class="menu-nav-item">
-        <button class="menu-nav-button button button-block button-large active" data-target=".menu-area-header">Header</button>
-      </li>
-      <li class="menu-nav-item">
-        <button class="menu-nav-button button button-block button-large" data-target=".menu-area-bookmarks">Bookmarks</button>
-      </li>
-      <li class="menu-nav-item">
-        <button class="menu-nav-button button button-block button-large" data-target=".menu-area-layout">Layout</button>
-      </li>
-    </ul>
-    <div class="menu-content">
-      <div class="menu-area menu-area-header active">
-        <div class="menu-sub-area">
+    <div class="menu-area">
+
+      <ul class="menu-nav u-list-unstyled">
+        <li class="menu-nav-item">
+          <button class="menu-nav-button button button-block button-large active" data-target=".menu-content-area-header">Header</button>
+        </li>
+        <li class="menu-nav-item">
+          <button class="menu-nav-button button button-block button-large" data-target=".menu-content-area-bookmarks">Bookmarks</button>
+        </li>
+        <li class="menu-nav-item">
+          <button class="menu-nav-button button button-block button-large" data-target=".menu-content-area-layout">Layout</button>
+        </li>
+      </ul>
+      <div class="menu-content">
+        <div class="menu-content-area menu-content-area-header">
           <div class="menu-item">
             <h1 class="menu-header">Clock</h1>
             <div class="checkbox-wrap">
@@ -132,9 +133,6 @@
               <input id="control-header-search-grow" class="control-header-search-grow" type="checkbox" tabindex="1">
               <label for="control-header-search-grow"><span class="label-icon"></span>Fill</label>
             </div>
-          </div>
-          <div class="menu-item">
-            <h1 class="menu-header">Engine</h1>
             <div class="radio-wrap">
               <input id="control-header-search-engine-google" class="control-header-search-engine-google" type="radio" tabindex="1" name="control-header-search-engine" value="google">
               <label for="control-header-search-engine-google"><span class="label-icon"></span>Google</label>
@@ -157,17 +155,14 @@
             </div>
           </div>
           <div class="menu-item">
-            <h1 class="menu-header">Edit/Add</h1>
+            <h1 class="menu-header">Buttons</h1>
             <div class="checkbox-wrap">
               <input id="control-header-edit-add-active" class="control-header-edit-add-active" type="checkbox" tabindex="1">
-              <label for="control-header-edit-add-active"><span class="label-icon"></span>Show</label>
+              <label for="control-header-edit-add-active"><span class="label-icon"></span>Show Edit/Add</label>
             </div>
-          </div>
-          <div class="menu-item">
-            <h1 class="menu-header">Accent</h1>
             <div class="checkbox-wrap">
               <input id="control-header-accent-active" class="control-header-accent-active" type="checkbox" tabindex="1">
-              <label for="control-header-accent-active"><span class="label-icon"></span>Show</label>
+              <label for="control-header-accent-active"><span class="label-icon"></span>Show Accent</label>
             </div>
           </div>
           <div class="menu-item">
@@ -186,9 +181,7 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="menu-area menu-area-bookmarks">
-        <div class="menu-sub-area">
+        <div class="menu-content-area menu-content-area-bookmarks is-hidden">
           <div class="menu-item">
             <h1 class="menu-header">Open</h1>
             <div class="checkbox-wrap">
@@ -223,9 +216,7 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="menu-area menu-area-layout">
-        <div class="menu-sub-area">
+        <div class="menu-content-area menu-content-area-layout is-hidden">
           <div class="menu-item">
             <h1 class="menu-header">Width</h1>
             <div class="radio-wrap">
@@ -250,6 +241,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </section>
 

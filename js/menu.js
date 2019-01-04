@@ -11,16 +11,16 @@ var menu = (function() {
 
   var _tab = function(button) {
     var allMenuNavButton = helper.eA(".menu-nav-button");
-    var allMenuArea = helper.eA(".menu-area");
+    var allMenuContentArea = helper.eA(".menu-content-area");
     var target = helper.e(button.dataset.target);
     allMenuNavButton.forEach(function(arrayItem, index) {
       helper.removeClass(arrayItem, "active");
     });
-    allMenuArea.forEach(function(arrayItem, index) {
-      helper.removeClass(arrayItem, "active");
+    allMenuContentArea.forEach(function(arrayItem, index) {
+      helper.addClass(arrayItem, "is-hidden");
     });
     helper.addClass(button, "active");
-    helper.addClass(target, "active");
+    helper.removeClass(target, "is-hidden");
   };
 
   var close = function() {
