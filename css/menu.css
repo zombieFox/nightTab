@@ -68,10 +68,6 @@
 }
 
 @media (min-width: 900px) {
-  .menu {
-    height: calc(50vh - 2em);
-  }
-
   .menu-nav {
     display: flex;
   }
