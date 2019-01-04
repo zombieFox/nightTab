@@ -52,6 +52,7 @@ var state = (function() {
     layout: {
       alignment: "left",
       container: "wide",
+      scrollPastEnd: true,
       theme: {
         r: 0,
         g: 255,

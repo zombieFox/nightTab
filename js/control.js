@@ -67,10 +67,15 @@ var control = (function() {
       view[state.get().link.style]();
     };
     var _layout = function() {
-      helper.removeClass(html, "is-layout-fludi");
+      helper.removeClass(html, "is-layout-fluid");
       helper.removeClass(html, "is-layout-wide");
       helper.removeClass(html, "is-layout-thin");
       helper.addClass(html, "is-layout-" + state.get().layout.container);
+      if (state.get().layout.scrollPastEnd) {
+        helper.addClass(html, "is-scroll-past-end");
+      } else {
+        helper.removeClass(html, "is-scroll-past-end");
+      };
     };
     var _editAdd = function() {
       if (state.get().header.editAdd.active) {
@@ -344,6 +349,14 @@ var control = (function() {
         data.save();
       }, false);
     });
+    helper.e(".control-layout-scroll-past-end").addEventListener("change", function() {
+      state.change({
+        path: "layout.scrollPastEnd",
+        value: this.checked
+      });
+      render();
+      data.save();
+    }, false);
   };
 
   var update = function() {
@@ -366,6 +379,7 @@ var control = (function() {
     helper.e(".control-header-accent-active").checked = state.get().header.accent.active;
     helper.e(".control-layout-alignment-" + state.get().layout.alignment).checked = true;
     helper.e(".control-layout-container-" + state.get().layout.container).checked = true;
+    helper.e(".control-layout-scroll-past-end").checked = state.get().layout.scrollPastEnd;
   };
 
   var init = function() {

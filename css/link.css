@@ -1,7 +1,11 @@
 .link {
-  margin-bottom: 50vh;
+  margin-bottom: 2em;
   width: 100vw;
   z-index: 1;
+}
+
+.is-scroll-past-end .link {
+  margin-bottom: 60vh;
 }
 
 .link-area {
@@ -26,7 +30,6 @@
 .is-layout-thin.is-link-block .link-area {
   grid-template-columns: repeat(2, 1fr);
 }
-
 
 .link-item {
   width: 100%;

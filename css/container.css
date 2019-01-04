@@ -35,9 +35,10 @@
   .is-layout-wide .container {
     width: 70vw;
   }
-    .is-layout-thin .container {
-      width: 30vw;
-    }
+
+  .is-layout-thin .container {
+    width: 30vw;
+  }
 }
 
 @media (min-width: 1600px) {}
