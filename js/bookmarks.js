@@ -88,7 +88,7 @@ var bookmarks = (function() {
   }, {
     letter: "GIT",
     name: "Github",
-    url: "https://github.com/login",
+    url: "https://github.com/",
     timeStamp: 1546453108926
   }, {
     letter: "AN",
