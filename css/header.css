@@ -41,6 +41,7 @@
   justify-content: flex-end;
 }
 
+.is-layout-thin.is-search-grow .header-search,
 .is-search-grow .header-search {
   flex-grow: 1;
   flex-basis: 100%;
