@@ -29,9 +29,11 @@
 .menu-nav:not(:last-child) {
   margin: 0;
 }
+
 .menu-nav-item {
   flex-grow: 1;
 }
+
 .menu-nav-item:not(:last-child) {
   margin: 0;
 }
@@ -46,9 +48,9 @@
   grid-gap: 2em;
 }
 
-.menu-header {
-  padding-top: 1em;
-  border-top: var(--line-width) solid var(--gray-04);
+.menu-item {
+  padding-bottom: 2em;
+  border-bottom: var(--line-width) solid var(--gray-04);
 }
 
 .menu-nav-button {
@@ -65,13 +67,6 @@
 @media (min-width: 550px) {
   .menu {
     max-height: calc(90vh - 2em);
-  }
-
-  .menu-header {
-    padding-top: 0;
-    padding-bottom: 1em;
-    border-top: 0;
-    border-bottom: var(--line-width) solid var(--gray-04);
   }
 
   .menu-nav {

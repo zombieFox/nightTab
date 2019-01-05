@@ -234,6 +234,8 @@ input[type="radio"]+label .label-icon {
   display: block;
   width: 1em;
   height: 1em;
+  transform: scale(1);
+  transition: transform 0.05s ease-in-out;
 }
 
 input[type="checkbox"]:focus+label,

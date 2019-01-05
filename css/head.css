@@ -50,6 +50,7 @@
   min-width: 20em;
 }
 
+.header-date,
 .header-clock,
 .header-search,
 .header-edit-add,
@@ -58,6 +59,7 @@
 }
 
 .is-search .header-search,
+.is-date .header-date,
 .is-clock .header-clock,
 .is-search-edit-add .header-edit-add,
 .is-search-accent .header-accent {

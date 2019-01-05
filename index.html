@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/head.css">
+  <link rel="stylesheet" href="css/date.css">
   <link rel="stylesheet" href="css/clock.css">
   <link rel="stylesheet" href="css/search.css">
   <link rel="stylesheet" href="css/link.css">
@@ -34,6 +35,9 @@
       <div class="header-area">
         <div class="header-item header-clock">
           <p class="clock"></p>
+        </div>
+        <div class="header-item header-date">
+          <p class="date"></p>
         </div>
         <div class="header-item header-search">
           <form class="search" action="" method="get">
@@ -99,28 +103,51 @@
           <div class="menu-item">
             <h1 class="menu-header">Clock</h1>
             <div class="checkbox-wrap">
-              <input id="control-header-clock-active" class="control-header-clock-active" type="checkbox" tabindex="1">
-              <label for="control-header-clock-active"><span class="label-icon"></span>Show</label>
+              <input id="control-header-clock-show-hours" class="control-header-clock-show-hours" type="checkbox" tabindex="1">
+              <label for="control-header-clock-show-hours"><span class="label-icon"></span>Hours</label>
             </div>
-            <div class="checkbox-wrap form-input-indent-1">
+            <div class="checkbox-wrap">
+              <input id="control-header-clock-show-minutes" class="control-header-clock-show-minutes" type="checkbox" tabindex="1">
+              <label for="control-header-clock-show-minutes"><span class="label-icon"></span>Minutes</label>
+            </div>
+            <div class="checkbox-wrap">
               <input id="control-header-clock-show-seconds" class="control-header-clock-show-seconds" type="checkbox" tabindex="1">
               <label for="control-header-clock-show-seconds"><span class="label-icon"></span>Seconds</label>
             </div>
-            <div class="checkbox-wrap form-input-indent-1">
+            <div class="checkbox-wrap">
               <input id="control-header-clock-show-seperator" class="control-header-clock-show-seperator" type="checkbox" tabindex="1">
               <label for="control-header-clock-show-seperator"><span class="label-icon"></span>Seperators</label>
             </div>
-            <div class="checkbox-wrap form-input-indent-1">
+            <div class="checkbox-wrap">
               <input id="control-header-clock-24" class="control-header-clock-24" type="checkbox" tabindex="1">
               <label for="control-header-clock-24"><span class="label-icon"></span>24 Hours</label>
             </div>
-            <div class="checkbox-wrap form-input-indent-2">
-              <input id="control-header-clock-show-leading-zero" class="control-header-clock-show-leading-zero" type="checkbox" tabindex="1">
-              <label for="control-header-clock-show-leading-zero"><span class="label-icon"></span>Leading Zero</label>
-            </div>
-            <div class="checkbox-wrap form-input-indent-1">
+            <div class="checkbox-wrap">
               <input id="control-header-clock-show-meridiem" class="control-header-clock-show-meridiem" type="checkbox" tabindex="1">
               <label for="control-header-clock-show-meridiem"><span class="label-icon"></span>AM/PM</label>
+            </div>
+          </div>
+          <div class="menu-item">
+            <h1 class="menu-header">Date</h1>
+            <div class="checkbox-wrap">
+              <input id="control-header-date-show-date" class="control-header-date-show-date" type="checkbox" tabindex="1">
+              <label for="control-header-date-show-date"><span class="label-icon"></span>Date</label>
+            </div>
+            <div class="checkbox-wrap">
+              <input id="control-header-date-show-day" class="control-header-date-show-day" type="checkbox" tabindex="1">
+              <label for="control-header-date-show-day"><span class="label-icon"></span>Day</label>
+            </div>
+            <div class="checkbox-wrap">
+              <input id="control-header-date-show-month" class="control-header-date-show-month" type="checkbox" tabindex="1">
+              <label for="control-header-date-show-month"><span class="label-icon"></span>Month</label>
+            </div>
+            <div class="checkbox-wrap">
+              <input id="control-header-date-show-year" class="control-header-date-show-year" type="checkbox" tabindex="1">
+              <label for="control-header-date-show-year"><span class="label-icon"></span>Year</label>
+            </div>
+            <div class="checkbox-wrap">
+              <input id="control-header-date-show-seperator" class="control-header-date-show-seperator" type="checkbox" tabindex="1">
+              <label for="control-header-date-show-seperator"><span class="label-icon"></span>Seperators</label>
             </div>
           </div>
           <div class="menu-item">
@@ -257,6 +284,7 @@
 <script src="js/modal.js"></script>
 <script src="js/shade.js"></script>
 <script src="js/theme.js"></script>
+<script src="js/date.js"></script>
 <script src="js/clock.js"></script>
 <script src="js/search.js"></script>
 <script src="js/link.js"></script>

@@ -27,6 +27,10 @@ control.init();
 // render search engine
 search.init();
 
+// render date
+// bind date update
+date.init();
+
 // render clock
 // bind clock update
 clock.init();
@@ -36,3 +40,4 @@ keyboard.init();
 
 // render header height padding
 header.init();
+menu.open();

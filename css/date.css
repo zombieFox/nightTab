@@ -1,0 +1,47 @@
+.date {
+  margin: 0;
+  padding: 0;
+  border-radius: var(--radius);
+  font-size: 1em;
+  font-family: var(--font-fjalla);
+  color: var(--white);
+  width: 100%;
+  min-height: 2.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.date-seperator,
+.date-date,
+.date-day,
+.date-month,
+.date-year {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.date-seperator {
+  min-width: 0.5em;
+  color: rgb(var(--accent));
+}
+
+.date-date,
+.date-day,
+.date-month,
+.date-year {
+  min-width: 1.25em;
+}
+
+.date [class^="date-"]:not(:first-child),
+.date [class*=" date-"]:not(:first-child) {
+  margin-left: 0.125em;
+}
+
+.date [class^="date-"]:not(:last-child),
+.date [class*=" date-"]:not(:last-child) {
+  margin-right: 0.125em;
+}
