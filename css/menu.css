@@ -7,9 +7,9 @@
   width: calc(100vw - 2em);
   max-height: calc(80vh - 2em);
   overflow-y: scroll;
-  z-index: 3000;
   transform: translateY(calc(-100% - 2em));
   transition: transform var(--animation-speed-fast) ease-in-out;
+  z-index: var(--z-index-menu);
 }
 
 .is-menu-open .menu {

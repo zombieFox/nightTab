@@ -40,6 +40,12 @@
   --breakpoint-md: 700px;
   --breakpoint-lg: 900px;
   --breakpoint-xl: 1100px;
+  --breakpoint-xxl: 1600px;
+  --z-index-link: 1000;
+  --z-index-header: 2000;
+  --z-index-shade: 3000;
+  --z-index-modal: 4000;
+  --z-index-menu: 5000;
 }
 
 :root.is-link-block {

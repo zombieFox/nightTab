@@ -21,7 +21,7 @@
 
 @media (min-width: 900px) {}
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
   .is-layout-wide .container {
     width: 75vw;
   }
