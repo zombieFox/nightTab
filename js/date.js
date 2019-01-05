@@ -23,6 +23,12 @@ var date = (function() {
     var _date = function() {
       var date = helper.e(".date");
       var time = _makeTimeObject();
+      time.day = helper.day(time.day - 1);
+      time.month = helper.month(time.month);
+      if (state.get().header.date.characterLength == "short") {
+        time.day = time.day.substring(0, 3);
+        time.month = time.month.substring(0, 3);
+      };
       var sepCha = "/";
       var dateNumber = helper.makeNode({
         tag: "span",
@@ -34,7 +40,7 @@ var date = (function() {
       });
       var day = helper.makeNode({
         tag: "span",
-        text: helper.day(time.day - 1),
+        text: time.day,
         attr: [{
           key: "class",
           value: "date-item date-day"
@@ -42,7 +48,7 @@ var date = (function() {
       });
       var month = helper.makeNode({
         tag: "span",
-        text: helper.month(time.month),
+        text: time.month,
         attr: [{
           key: "class",
           value: "date-item date-month"

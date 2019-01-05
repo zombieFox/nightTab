@@ -179,22 +179,22 @@ input[type="color"]+.label-button-color:before {
   position: relative;
 }
 
-.form-input-indent-1.input-wrap,
-.form-input-indent-1.checkbox-wrap,
-.form-input-indent-1.radio-wrap {
-  margin-left: 1em;
+.form-indent-1,
+.form-indent-1,
+.form-indent-1 {
+  margin-left: 2.25em;
 }
 
-.form-input-indent-2.input-wrap,
-.form-input-indent-2.checkbox-wrap,
-.form-input-indent-2.radio-wrap {
-  margin-left: 2em;
+.form-indent-2,
+.form-indent-2,
+.form-indent-2 {
+  margin-left: 4.5em;
 }
 
-.form-input-indent-3.input-wrap,
-.form-input-indent-3.checkbox-wrap,
-.form-input-indent-3.radio-wrap {
-  margin-left: 3em;
+.form-indent-3,
+.form-indent-3,
+.form-indent-3 {
+  margin-left: 6.75em;
 }
 
 input[type="checkbox"],
