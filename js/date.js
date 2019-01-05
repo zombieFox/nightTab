@@ -56,30 +56,6 @@ var date = (function() {
           value: "date-item date-year"
         }]
       });
-      var seperator1 = helper.makeNode({
-        tag: "span",
-        text: sepCha,
-        attr: [{
-          key: "class",
-          value: "date-seperator"
-        }]
-      });
-      var seperator2 = helper.makeNode({
-        tag: "span",
-        text: sepCha,
-        attr: [{
-          key: "class",
-          value: "date-seperator"
-        }]
-      });
-      var seperator3 = helper.makeNode({
-        tag: "span",
-        text: sepCha,
-        attr: [{
-          key: "class",
-          value: "date-seperator"
-        }]
-      });
       if (state.get().header.date.show.date) {
         date.appendChild(dateNumber);
       };
@@ -93,14 +69,21 @@ var date = (function() {
         date.appendChild(year);
       };
       if (state.get().header.date.show.seperator) {
-        if (state.get().header.date.show.date && state.get().header.date.show.day) {
-          date.insertBefore(seperator1, date.querySelector(".date-day"));
-        };
-        if (state.get().header.date.show.day && state.get().header.date.show.month) {
-          date.insertBefore(seperator2, date.querySelector(".date-month"));
-        };
-        if (state.get().header.date.show.month && state.get().header.date.show.year) {
-          date.insertBefore(seperator3, date.querySelector(".date-year"));
+        var parts = date.querySelectorAll("span");
+        if (parts.length > 1) {
+          parts.forEach(function(arrayItem, index) {
+            if (index > 0) {
+              var seperator = helper.makeNode({
+                tag: "span",
+                text: sepCha,
+                attr: [{
+                  key: "class",
+                  value: "date-seperator"
+                }]
+              });
+              date.insertBefore(seperator, arrayItem);
+            };
+          });
         };
       };
     };

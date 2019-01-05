@@ -45,3 +45,19 @@
 .date [class*=" date-"]:not(:last-child) {
   margin-right: 0.125em;
 }
+
+.date-date {
+  color: var(--white);
+}
+
+.date-day {
+  color: var(--gray-16);
+}
+
+.date-month {
+  color: var(--gray-12);
+}
+
+.date-year {
+  color: var(--gray-10);
+}

@@ -76,22 +76,6 @@ var clock = (function() {
           value: "clock-item clock-meridiem"
         }]
       });
-      var seperator1 = helper.makeNode({
-        tag: "span",
-        text: sepCha,
-        attr: [{
-          key: "class",
-          value: "clock-seperator"
-        }]
-      });
-      var seperator2 = helper.makeNode({
-        tag: "span",
-        text: sepCha,
-        attr: [{
-          key: "class",
-          value: "clock-seperator"
-        }]
-      });
       if (state.get().header.clock.show.hours) {
         clock.appendChild(hours);
       };
@@ -105,14 +89,21 @@ var clock = (function() {
         clock.appendChild(meridiem);
       };
       if (state.get().header.clock.show.seperator) {
-        if (state.get().header.clock.show.hours && state.get().header.clock.show.minutes) {
-          clock.insertBefore(seperator1, clock.querySelector(".clock-minutes"));
-        };
-        if (state.get().header.clock.show.minutes && state.get().header.clock.show.seconds) {
-          clock.insertBefore(seperator2, clock.querySelector(".clock-seconds"));
-        };
-        if (state.get().header.clock.show.hours && state.get().header.clock.show.seconds) {
-          clock.insertBefore(seperator2, clock.querySelector(".clock-seconds"));
+        var parts = clock.querySelectorAll("span");
+        if (parts.length > 1) {
+          parts.forEach(function(arrayItem, index) {
+            if (index > 0 && !arrayItem.classList.contains("clock-meridiem")) {
+              var seperator = helper.makeNode({
+                tag: "span",
+                text: sepCha,
+                attr: [{
+                  key: "class",
+                  value: "clock-seperator"
+                }]
+              });
+              clock.insertBefore(seperator, arrayItem);
+            };
+          });
         };
       };
     };

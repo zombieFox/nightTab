@@ -9,10 +9,10 @@ var state = (function() {
         show: {
           leadingZero: true,
           date: true,
-          day: true,
+          day: false,
           month: true,
           year: true,
-          seperator: true
+          seperator: false
         }
       },
       clock: {
