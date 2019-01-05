@@ -53,6 +53,12 @@
   border-bottom: var(--line-width) solid var(--gray-04);
 }
 
+.menu-item:last-child,
+.menu-item:nth-last-child(2):nth-child(odd) {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
 .menu-nav-button {
   margin: 0;
   padding: 1.5em 2em;
