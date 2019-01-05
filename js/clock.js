@@ -88,20 +88,20 @@ var clock = (function() {
       if (!state.get().header.clock.hour24 && state.get().header.clock.show.meridiem) {
         clock.appendChild(meridiem);
       };
-      if (state.get().header.clock.show.seperator) {
+      if (state.get().header.clock.show.separator) {
         var parts = clock.querySelectorAll("span");
         if (parts.length > 1) {
           parts.forEach(function(arrayItem, index) {
             if (index > 0 && !arrayItem.classList.contains("clock-meridiem")) {
-              var seperator = helper.makeNode({
+              var separator = helper.makeNode({
                 tag: "span",
                 text: sepCha,
                 attr: [{
                   key: "class",
-                  value: "clock-seperator"
+                  value: "clock-separator"
                 }]
               });
-              clock.insertBefore(seperator, arrayItem);
+              clock.insertBefore(separator, arrayItem);
             };
           });
         };

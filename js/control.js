@@ -118,9 +118,9 @@ var control = (function() {
         };
       });
       if (activeCount >= 2 && (state.get().header.date.show.date || state.get().header.date.show.day || state.get().header.date.show.month || state.get().header.date.show.year)) {
-        helper.e(".control-header-date-show-seperator").disabled = false;
+        helper.e(".control-header-date-show-separator").disabled = false;
       } else {
-        helper.e(".control-header-date-show-seperator").disabled = true;
+        helper.e(".control-header-date-show-separator").disabled = true;
       };
       if (state.get().header.date.show.day || state.get().header.date.show.month) {
         helper.e(".control-header-date-character-length-short").disabled = false;
@@ -139,9 +139,9 @@ var control = (function() {
         };
       });
       if (activeCount >= 2 && (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours)) {
-        helper.e(".control-header-clock-show-seperator").disabled = false;
+        helper.e(".control-header-clock-show-separator").disabled = false;
       } else {
-        helper.e(".control-header-clock-show-seperator").disabled = true;
+        helper.e(".control-header-clock-show-separator").disabled = true;
       };
       if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
         helper.e(".control-header-clock-24").disabled = false;
@@ -327,9 +327,9 @@ var control = (function() {
       header.render();
       data.save();
     }, false);
-    helper.e(".control-header-date-show-seperator").addEventListener("change", function() {
+    helper.e(".control-header-date-show-separator").addEventListener("change", function() {
       state.change({
-        path: "header.date.show.seperator",
+        path: "header.date.show.separator",
         value: this.checked
       });
       render();
@@ -388,9 +388,9 @@ var control = (function() {
       header.render();
       data.save();
     }, false);
-    helper.e(".control-header-clock-show-seperator").addEventListener("change", function() {
+    helper.e(".control-header-clock-show-separator").addEventListener("change", function() {
       state.change({
-        path: "header.clock.show.seperator",
+        path: "header.clock.show.separator",
         value: this.checked
       });
       clock.clear();
@@ -482,11 +482,11 @@ var control = (function() {
     helper.e(".control-header-date-show-day").checked = state.get().header.date.show.day;
     helper.e(".control-header-date-show-month").checked = state.get().header.date.show.month;
     helper.e(".control-header-date-show-year").checked = state.get().header.date.show.year;
-    helper.e(".control-header-date-show-seperator").checked = state.get().header.date.show.seperator;
+    helper.e(".control-header-date-show-separator").checked = state.get().header.date.show.separator;
     helper.e(".control-header-clock-show-seconds").checked = state.get().header.clock.show.seconds;
     helper.e(".control-header-clock-show-minutes").checked = state.get().header.clock.show.minutes;
     helper.e(".control-header-clock-show-hours").checked = state.get().header.clock.show.hours;
-    helper.e(".control-header-clock-show-seperator").checked = state.get().header.clock.show.seperator;
+    helper.e(".control-header-clock-show-separator").checked = state.get().header.clock.show.separator;
     helper.e(".control-header-clock-24").checked = state.get().header.clock.hour24;
     helper.e(".control-header-clock-show-meridiem").checked = state.get().header.clock.show.meridiem;
     helper.e(".control-header-edit-add-active").checked = state.get().header.editAdd.active;

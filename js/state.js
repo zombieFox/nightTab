@@ -9,7 +9,7 @@ var state = (function() {
           day: false,
           month: true,
           year: false,
-          seperator: true
+          separator: true
         }
       },
       clock: {
@@ -18,7 +18,7 @@ var state = (function() {
           seconds: true,
           minutes: true,
           hours: true,
-          seperator: true,
+          separator: true,
           meridiem: true
         }
       },

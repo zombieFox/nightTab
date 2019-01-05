@@ -74,20 +74,20 @@ var date = (function() {
       if (state.get().header.date.show.year) {
         date.appendChild(year);
       };
-      if (state.get().header.date.show.seperator) {
+      if (state.get().header.date.show.separator) {
         var parts = date.querySelectorAll("span");
         if (parts.length > 1) {
           parts.forEach(function(arrayItem, index) {
             if (index > 0) {
-              var seperator = helper.makeNode({
+              var separator = helper.makeNode({
                 tag: "span",
                 text: sepCha,
                 attr: [{
                   key: "class",
-                  value: "date-seperator"
+                  value: "date-separator"
                 }]
               });
-              date.insertBefore(seperator, arrayItem);
+              date.insertBefore(separator, arrayItem);
             };
           });
         };

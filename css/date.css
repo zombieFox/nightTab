@@ -13,7 +13,7 @@
   flex-wrap: nowrap;
 }
 
-.date-seperator,
+.date-separator,
 .date-date,
 .date-day,
 .date-month,
@@ -24,7 +24,7 @@
   align-items: center;
 }
 
-.date-seperator {
+.date-separator {
   min-width: 0.5em;
   color: rgb(var(--accent));
 }

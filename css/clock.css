@@ -13,7 +13,7 @@
   flex-wrap: nowrap;
 }
 
-.clock-seperator,
+.clock-separator,
 .clock-hours,
 .clock-minutes,
 .clock-seconds,
@@ -24,7 +24,7 @@
   align-items: center;
 }
 
-.clock-seperator {
+.clock-separator {
   min-width: 0.5em;
   color: rgb(var(--accent));
 }
