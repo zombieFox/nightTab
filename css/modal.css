@@ -3,7 +3,6 @@
   top: 50%;
   left: 50%;
   font-size: 1em;
-  z-index: 2000;
   width: 45em;
   max-width: calc(100% - 6em);
   min-width: 10em;
@@ -11,6 +10,7 @@
   opacity: 0;
   perspective: 1000px;
   transition: opacity var(--animation-speed-fast) ease-in-out;
+  z-index: var(--z-index-modal);
 }
 
 .modal-large {

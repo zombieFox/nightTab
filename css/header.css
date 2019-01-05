@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: var(--z-index-header);
 }
 
 .header-area {
@@ -43,13 +43,21 @@
 
 .is-search-grow .header-search {
   flex-grow: 1;
+  flex-basis: 100%;
+}
+
+@media (min-width: 550px) {
+  .is-search-grow .header-search {
+    flex-basis: initial;
+  }
 }
 
 .header-search {
-  width: 20vw;
-  min-width: 20em;
+  width: 15vw;
+  min-width: 15em;
 }
 
+.header-date,
 .header-clock,
 .header-search,
 .header-edit-add,
@@ -58,6 +66,7 @@
 }
 
 .is-search .header-search,
+.is-date .header-date,
 .is-clock .header-clock,
 .is-search-edit-add .header-edit-add,
 .is-search-accent .header-accent {

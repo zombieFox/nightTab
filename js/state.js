@@ -2,12 +2,22 @@ var state = (function() {
 
   var current = {
     header: {
+      date: {
+        characterLength: "short",
+        show: {
+          date: true,
+          day: false,
+          month: true,
+          year: false,
+          seperator: true
+        }
+      },
       clock: {
-        active: true,
         hour24: true,
         show: {
-          leadingZero: true,
           seconds: true,
+          minutes: true,
+          hours: true,
           seperator: true,
           meridiem: true
         }

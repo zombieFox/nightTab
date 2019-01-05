@@ -38,6 +38,16 @@ var helper = (function() {
     return object;
   };
 
+  var month = function(index) {
+    var all = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    return all[index];
+  };
+
+  var day = function(index) {
+    var all = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    return all[index];
+  };
+
   var sortObject = function(object, key) {
     object.sort(function(a, b) {
       var textA = a[key];
@@ -296,6 +306,8 @@ var helper = (function() {
     removeClass: removeClass,
     allEqual: allEqual,
     getDateTime: getDateTime,
+    month: month,
+    day: day,
     sortObject: sortObject,
     applyOptions: applyOptions,
     hexToRgb: hexToRgb,

@@ -1,7 +1,8 @@
 .link {
   margin-bottom: 2em;
   width: 100vw;
-  z-index: 1;
+  position: relative;
+  z-index: var(--z-index-link);
 }
 
 .is-scroll-past-end .link {

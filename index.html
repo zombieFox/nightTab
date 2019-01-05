@@ -20,7 +20,8 @@
   <link rel="stylesheet" href="css/shade.css">
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/head.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/date.css">
   <link rel="stylesheet" href="css/clock.css">
   <link rel="stylesheet" href="css/search.css">
   <link rel="stylesheet" href="css/link.css">
@@ -34,6 +35,9 @@
       <div class="header-area">
         <div class="header-item header-clock">
           <p class="clock"></p>
+        </div>
+        <div class="header-item header-date">
+          <p class="date"></p>
         </div>
         <div class="header-item header-search">
           <form class="search" action="" method="get">
@@ -99,28 +103,59 @@
           <div class="menu-item">
             <h1 class="menu-header">Clock</h1>
             <div class="checkbox-wrap">
-              <input id="control-header-clock-active" class="control-header-clock-active" type="checkbox" tabindex="1">
-              <label for="control-header-clock-active"><span class="label-icon"></span>Show</label>
+              <input id="control-header-clock-show-hours" class="control-header-clock-show-hours" type="checkbox" tabindex="1">
+              <label for="control-header-clock-show-hours"><span class="label-icon"></span>Hours</label>
             </div>
-            <div class="checkbox-wrap form-input-indent-1">
+            <div class="checkbox-wrap">
+              <input id="control-header-clock-show-minutes" class="control-header-clock-show-minutes" type="checkbox" tabindex="1">
+              <label for="control-header-clock-show-minutes"><span class="label-icon"></span>Minutes</label>
+            </div>
+            <div class="checkbox-wrap">
               <input id="control-header-clock-show-seconds" class="control-header-clock-show-seconds" type="checkbox" tabindex="1">
               <label for="control-header-clock-show-seconds"><span class="label-icon"></span>Seconds</label>
             </div>
-            <div class="checkbox-wrap form-input-indent-1">
+            <div class="checkbox-wrap">
               <input id="control-header-clock-show-seperator" class="control-header-clock-show-seperator" type="checkbox" tabindex="1">
               <label for="control-header-clock-show-seperator"><span class="label-icon"></span>Seperators</label>
             </div>
-            <div class="checkbox-wrap form-input-indent-1">
+            <div class="checkbox-wrap">
               <input id="control-header-clock-24" class="control-header-clock-24" type="checkbox" tabindex="1">
               <label for="control-header-clock-24"><span class="label-icon"></span>24 Hours</label>
             </div>
-            <div class="checkbox-wrap form-input-indent-2">
-              <input id="control-header-clock-show-leading-zero" class="control-header-clock-show-leading-zero" type="checkbox" tabindex="1">
-              <label for="control-header-clock-show-leading-zero"><span class="label-icon"></span>Leading Zero</label>
-            </div>
-            <div class="checkbox-wrap form-input-indent-1">
+            <div class="checkbox-wrap">
               <input id="control-header-clock-show-meridiem" class="control-header-clock-show-meridiem" type="checkbox" tabindex="1">
               <label for="control-header-clock-show-meridiem"><span class="label-icon"></span>AM/PM</label>
+            </div>
+          </div>
+          <div class="menu-item">
+            <h1 class="menu-header">Date</h1>
+            <div class="checkbox-wrap">
+              <input id="control-header-date-show-date" class="control-header-date-show-date" type="checkbox" tabindex="1">
+              <label for="control-header-date-show-date"><span class="label-icon"></span>Date</label>
+            </div>
+            <div class="checkbox-wrap">
+              <input id="control-header-date-show-day" class="control-header-date-show-day" type="checkbox" tabindex="1">
+              <label for="control-header-date-show-day"><span class="label-icon"></span>Day</label>
+            </div>
+            <div class="checkbox-wrap">
+              <input id="control-header-date-show-month" class="control-header-date-show-month" type="checkbox" tabindex="1">
+              <label for="control-header-date-show-month"><span class="label-icon"></span>Month</label>
+            </div>
+            <div class="checkbox-wrap">
+              <input id="control-header-date-show-year" class="control-header-date-show-year" type="checkbox" tabindex="1">
+              <label for="control-header-date-show-year"><span class="label-icon"></span>Year</label>
+            </div>
+            <div class="checkbox-wrap">
+              <input id="control-header-date-show-seperator" class="control-header-date-show-seperator" type="checkbox" tabindex="1">
+              <label for="control-header-date-show-seperator"><span class="label-icon"></span>Seperators</label>
+            </div>
+            <div class="radio-wrap">
+              <input id="control-header-date-character-length-short" class="control-header-date-character-length-short" type="radio" tabindex="1" name="control-header-date-character-length" value="short">
+              <label for="control-header-date-character-length-short"><span class="label-icon"></span>Short text</label>
+            </div>
+            <div class="radio-wrap">
+              <input id="control-header-date-character-length-long" class="control-header-date-character-length-long" type="radio" tabindex="1" name="control-header-date-character-length" value="long">
+              <label for="control-header-date-character-length-long"><span class="label-icon"></span>Long text</label>
             </div>
           </div>
           <div class="menu-item">
@@ -129,27 +164,28 @@
               <input id="control-header-search-active" class="control-header-search-active" type="checkbox" tabindex="1">
               <label for="control-header-search-active"><span class="label-icon"></span>Show</label>
             </div>
-            <div class="checkbox-wrap form-input-indent-1">
+            <div class="checkbox-wrap form-indent-1">
               <input id="control-header-search-grow" class="control-header-search-grow" type="checkbox" tabindex="1">
               <label for="control-header-search-grow"><span class="label-icon"></span>Fill</label>
             </div>
-            <div class="radio-wrap">
+            <label class="control-header-search-engine-label form-indent-1 mb-1">Engine</label>
+            <div class="radio-wrap form-indent-1">
               <input id="control-header-search-engine-google" class="control-header-search-engine-google" type="radio" tabindex="1" name="control-header-search-engine" value="google">
               <label for="control-header-search-engine-google"><span class="label-icon"></span>Google</label>
             </div>
-            <div class="radio-wrap">
+            <div class="radio-wrap form-indent-1">
               <input id="control-header-search-engine-duckduckgo" class="control-header-search-engine-duckduckgo" type="radio" tabindex="1" name="control-header-search-engine" value="duckduckgo">
               <label for="control-header-search-engine-duckduckgo"><span class="label-icon"></span>Duck Duck Go</label>
             </div>
-            <div class="radio-wrap">
+            <div class="radio-wrap form-indent-1">
               <input id="control-header-search-engine-giphy" class="control-header-search-engine-giphy" type="radio" tabindex="1" name="control-header-search-engine" value="giphy">
               <label for="control-header-search-engine-giphy"><span class="label-icon"></span>Giphy</label>
             </div>
-            <div class="radio-wrap">
+            <div class="radio-wrap form-indent-1">
               <input id="control-header-search-engine-custom" class="control-header-search-engine-custom" type="radio" tabindex="1" name="control-header-search-engine" value="custom">
               <label for="control-header-search-engine-custom"><span class="label-icon"></span>Custom</label>
             </div>
-            <div class="input-wrap">
+            <div class="input-wrap form-indent-2">
               <label for="control-header-search-engine-custom-url">URL</label>
               <input id="control-header-search-engine-custom-url" type="text" class="control-header-search-engine-custom-url mb-0" placeholder="https://" tabindex="1" autocomplete="off">
             </div>
@@ -257,6 +293,7 @@
 <script src="js/modal.js"></script>
 <script src="js/shade.js"></script>
 <script src="js/theme.js"></script>
+<script src="js/date.js"></script>
 <script src="js/clock.js"></script>
 <script src="js/search.js"></script>
 <script src="js/link.js"></script>

@@ -18,7 +18,7 @@ var clock = (function() {
     var time = helper.getDateTime();
     time.meridiem = "AM";
     if (state.get().header.clock.hour24) {
-      if (time.hours < 10 && state.get().header.clock.show.leadingZero) {
+      if (time.hours < 10) {
         time.hours = "0" + time.hours;
       };
     } else {
@@ -43,6 +43,7 @@ var clock = (function() {
     var _clock = function() {
       var clock = helper.e(".clock");
       var time = _makeTimeObject();
+      var sepCha = ":";
       var hours = helper.makeNode({
         tag: "span",
         text: time.hours,
@@ -75,49 +76,38 @@ var clock = (function() {
           value: "clock-item clock-meridiem"
         }]
       });
-      var seperator1 = helper.makeNode({
-        tag: "span",
-        text: ":",
-        attr: [{
-          key: "class",
-          value: "clock-seperator"
-        }]
-      });
-      var seperator2 = helper.makeNode({
-        tag: "span",
-        text: ":",
-        attr: [{
-          key: "class",
-          value: "clock-seperator"
-        }]
-      });
-      var seperator3 = helper.makeNode({
-        tag: "span",
-        text: ":",
-        attr: [{
-          key: "class",
-          value: "clock-seperator"
-        }]
-      });
-      clock.appendChild(hours);
-      if (state.get().header.clock.show.seperator) {
-        clock.appendChild(seperator1);
+      if (state.get().header.clock.show.hours) {
+        clock.appendChild(hours);
       };
-      clock.appendChild(minutes);
+      if (state.get().header.clock.show.minutes) {
+        clock.appendChild(minutes);
+      };
       if (state.get().header.clock.show.seconds) {
-        if (state.get().header.clock.show.seperator) {
-          clock.appendChild(seperator2);
-        };
         clock.appendChild(seconds);
       };
       if (!state.get().header.clock.hour24 && state.get().header.clock.show.meridiem) {
-        if (state.get().header.clock.show.seperator) {
-          clock.appendChild(seperator3);
-        };
         clock.appendChild(meridiem);
       };
+      if (state.get().header.clock.show.seperator) {
+        var parts = clock.querySelectorAll("span");
+        if (parts.length > 1) {
+          parts.forEach(function(arrayItem, index) {
+            if (index > 0 && !arrayItem.classList.contains("clock-meridiem")) {
+              var seperator = helper.makeNode({
+                tag: "span",
+                text: sepCha,
+                attr: [{
+                  key: "class",
+                  value: "clock-seperator"
+                }]
+              });
+              clock.insertBefore(seperator, arrayItem);
+            };
+          });
+        };
+      };
     };
-    if (state.get().header.clock.active) {
+    if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
       _clock();
     };
   };

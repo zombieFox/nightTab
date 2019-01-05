@@ -40,7 +40,6 @@ var link = (function() {
   var edit = function(button) {
     state.get().link.action = "edit";
     state.get().link.editObject = bookmarks.get(parseInt(button.closest(".link-item").dataset.timeStamp, 10));
-    console.log(state.get().link.editObject);
     var currentBookmark = bookmarks.get(state.get().link.editObject.timeStamp);
     var form = _makeLinkForm();
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
