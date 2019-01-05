@@ -110,7 +110,14 @@ var control = (function() {
 
   var _dependents = function(options) {
     var _date = function() {
-      if (state.get().header.date.show.date || state.get().header.date.show.day || state.get().header.date.show.month || state.get().header.date.show.year) {
+      var activeCount = 0;
+      var toCheck = [state.get().header.date.show.date, state.get().header.date.show.day, state.get().header.date.show.month, state.get().header.date.show.year];
+      toCheck.forEach(function(arrayItem, index) {
+        if (arrayItem == true) {
+          activeCount++;
+        };
+      });
+      if (activeCount >= 2 && (state.get().header.date.show.date || state.get().header.date.show.day || state.get().header.date.show.month || state.get().header.date.show.year)) {
         helper.e(".control-header-date-show-seperator").disabled = false;
       } else {
         helper.e(".control-header-date-show-seperator").disabled = true;
@@ -124,15 +131,23 @@ var control = (function() {
       };
     };
     var _clock = function() {
-      if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
+      var activeCount = 0;
+      var toCheck = [state.get().header.clock.show.seconds, state.get().header.clock.show.minutes, state.get().header.clock.show.hours];
+      toCheck.forEach(function(arrayItem, index) {
+        if (arrayItem == true) {
+          activeCount++;
+        };
+      });
+      if (activeCount >= 2 && (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours)) {
         helper.e(".control-header-clock-show-seperator").disabled = false;
-        helper.e(".control-header-clock-24").disabled = false;
-
-        helper.e(".control-header-clock-show-meridiem").disabled = false;
       } else {
         helper.e(".control-header-clock-show-seperator").disabled = true;
+      };
+      if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
+        helper.e(".control-header-clock-24").disabled = false;
+        helper.e(".control-header-clock-show-meridiem").disabled = false;
+      } else {
         helper.e(".control-header-clock-24").disabled = true;
-
         helper.e(".control-header-clock-show-meridiem").disabled = true;
       };
       if ((state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) && !state.get().header.clock.hour24) {

@@ -61,7 +61,8 @@
 
 .menu-nav-button {
   margin: 0;
-  padding: 1.5em 2em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   border-radius: 0;
 }
 
