@@ -7,17 +7,33 @@ New-tab-page/Start-page for all browsers
 - Add and remove bookmarks
 - Filter bookmarks with keyword
 - Clock for awesome clocky action!
-- Search bar
+- Date too because time is difficult
+- Search bar to find bookmarks
+- Search bar again but this time with options to customise the search engine
 - Saves data to local storage
 - Responsive design
-- Customise theme colour
+- Customise Accent colour!
 - Can be installed on Chrome as an extension
-- Switch between Block and List bookmark view
+
+All options available:
+- Header
+  - Clock, hours, minutes, seconds, 24 hours, separators
+  - Date, day, month, year, separators, text length
+  - Search, bar length, search engine
+  - Show/hide Edit/Add and Accent buttons
+  - Header alignment
+- Bookmarks
+  - Open in a new tab
+  - Block and List style
+  - Sort by Name, Letter or order added
+- Layout
+  - Fluid, Wide or Thin
+  - Scroll past end of page
 
 ---
-
-![alt Screenshot 1](screenshots/screenshot-001.png)
-![alt Screenshot 2](screenshots/screenshot-002.png)
-![alt Screenshot 3](screenshots/screenshot-003.png)
-![alt Screenshot 4](screenshots/screenshot-004.png)
-![alt Screenshot 4](screenshots/screenshot-005.png)
+[![nightTab Demo](screenshots/screenshot-001.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/screenshot-002.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/screenshot-003.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/screenshot-004.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/screenshot-005.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/screenshot-006.gif)](https://zombiefox.github.io/nightTab/)
