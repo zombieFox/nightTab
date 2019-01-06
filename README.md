@@ -11,6 +11,11 @@ New-tab-page/Start-page for all browsers
 - Search bar to find bookmarks
 - Search bar again but this time with options to customise the search engine
 - Saves data to local storage
+- Keybaord shortcuts
+  - esc to dismiss most things
+  - ctrl+alt+a to add a new bookmark
+  - ctrl+alt+m to open menu
+  - ctrl+alt+e to toggle edit state
 - Responsive design
 - Customise Accent colour!
 - Can be installed on Chrome as an extension
