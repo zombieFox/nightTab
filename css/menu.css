@@ -44,7 +44,7 @@
 
 .menu-content-area {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 2em;
 }
 
@@ -81,16 +81,19 @@
   }
 
   .menu-content-area {
-    grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 900px) {
   .menu {
-    width: calc(50vw - 2em);
+    width: calc(60vw - 2em);
+    max-height: calc(100vh - 2em);
   }
+}
 
-  .menu-content-area {
-    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+@media (min-width: 1100px) {
+  .menu {
+    width: calc(50vw - 2em);
   }
 }
