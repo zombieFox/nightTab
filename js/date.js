@@ -23,7 +23,7 @@ var date = (function() {
     var _date = function() {
       var date = helper.e(".date");
       var time = _makeTimeObject();
-      time.day = helper.day(time.day - 1);
+      time.day = helper.day(time.day);
       time.month = helper.month(time.month);
       if (state.get().header.date.characterLength == "short") {
         time.day = time.day.substring(0, 3);

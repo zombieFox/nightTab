@@ -44,7 +44,7 @@ var helper = (function() {
   };
 
   var day = function(index) {
-    var all = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    var all = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     return all[index];
   };
 
