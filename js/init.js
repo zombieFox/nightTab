@@ -38,5 +38,8 @@ clock.init();
 // bind keyboard keys
 keyboard.init();
 
+// bind tips
+tip.init();
+
 // render header height padding
 header.init();

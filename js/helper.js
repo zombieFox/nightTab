@@ -233,7 +233,6 @@ var helper = (function() {
 
   function makeObject(string) {
     var _stringOrBooleanOrNumber = function(stringToTest) {
-      console.log(stringToTest);
       if (stringToTest == "true") {
         return true;
       } else if (stringToTest == "false") {

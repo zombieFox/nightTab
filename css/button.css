@@ -69,6 +69,10 @@ button[disabled]:active,
   cursor: default;
 }
 
+.button-text {
+  pointer-events: none;
+}
+
 button [class^="icon-"],
 button [class*=" icon-"],
 .button [class^="icon-"],
