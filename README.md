@@ -11,7 +11,7 @@ New-tab-page/Start-page for all browsers
 - Search bar to find bookmarks
 - Search bar again but this time with options to customise the search engine
 - Saves data to local storage
-- Keybaord shortcuts
+- Keyboard shortcuts
   - esc to dismiss most things
   - ctrl+alt+a to add a new bookmark
   - ctrl+alt+m to open menu
