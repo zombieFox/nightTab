@@ -16,6 +16,7 @@ var data = (function() {
 
   var save = function() {
     var data = {
+      version: version.get(),
       state: state.get(),
       bookmarks: bookmarks.get()
     };
@@ -28,17 +29,37 @@ var data = (function() {
     return data;
   };
 
+  var _checkForSavedData = function(data) {
+    if (data) {
+      console.log("data loaded");
+      if (!("version" in data) || data.version != version.get()) {
+        console.log("data version found less than current");
+        data = update.render(data);
+        set(saveName, JSON.stringify(data));
+      } else {
+        console.log("data version =", version.get());
+      };
+    } else {
+      console.log("no data found to load");
+    };
+  };
+
+  var init = function() {
+    _checkForSavedData(load());
+  };
+
   var wipe = function() {
     clear(saveName);
   };
 
   return {
+    init: init,
     save: save,
     clear: clear,
     set: set,
     get: get,
-    wipe: wipe,
-    load: load
+    load: load,
+    wipe: wipe
   };
 
 })();

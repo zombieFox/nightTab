@@ -108,7 +108,7 @@ var control = (function() {
     _layout();
   };
 
-  var _dependents = function(options) {
+  var _dependents = function() {
     var _date = function() {
       var activeCount = 0;
       var toCheck = [state.get().header.date.show.date, state.get().header.date.show.day, state.get().header.date.show.month, state.get().header.date.show.year];

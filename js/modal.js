@@ -11,8 +11,8 @@ var modal = (function() {
     };
   };
 
-  var render = function(options) {
-    var defaultOptions = {
+  var render = function(override) {
+    var options = {
       heading: "Modal",
       content: "Body",
       action: null,
@@ -20,8 +20,8 @@ var modal = (function() {
       cancelText: "Cancel",
       size: "medium"
     };
-    if (options) {
-      defaultOptions = helper.applyOptions(defaultOptions, options);
+    if (override) {
+      options = helper.applyOptions(options, override);
     };
     var makeModal = function() {
       var body = helper.e("body");
@@ -32,11 +32,11 @@ var modal = (function() {
       var modalWrapper = document.createElement("div");
       modalWrapper.setAttribute("class", "modal-wrapper");
       var modal = document.createElement("div");
-      if (defaultOptions.size == "large") {
+      if (options.size == "large") {
         modal.setAttribute("class", "modal modal-large");
-      } else if (defaultOptions.size == "small") {
+      } else if (options.size == "small") {
         modal.setAttribute("class", "modal modal-small");
-      } else if (defaultOptions.size) {
+      } else if (options.size) {
         modal.setAttribute("class", "modal");
       };
       modal.destroy = function() {
@@ -59,30 +59,30 @@ var modal = (function() {
       var actionButton = document.createElement("button");
       actionButton.setAttribute("tabindex", "1");
       actionButton.setAttribute("class", "button button-primary button-block");
-      actionButton.textContent = defaultOptions.actionText;
+      actionButton.textContent = options.actionText;
       var cancelButton = document.createElement("button");
       cancelButton.setAttribute("tabindex", "1");
       cancelButton.setAttribute("class", "button button-primary button-block");
-      cancelButton.textContent = defaultOptions.cancelText;
+      cancelButton.textContent = options.cancelText;
       modalControls.appendChild(cancelButton);
       modalControls.appendChild(actionButton);
-      if (defaultOptions.heading != null) {
+      if (options.heading != null) {
         var modalHeading = document.createElement("h1");
         modalHeading.setAttribute("tabindex", "1");
         modalHeading.setAttribute("class", "modal-heading");
-        modalHeading.textContent = defaultOptions.heading;
+        modalHeading.textContent = options.heading;
         modalBody.appendChild(modalHeading);
       };
-      if (defaultOptions.content) {
-        if (typeof defaultOptions.content == "string") {
+      if (options.content) {
+        if (typeof options.content == "string") {
           var container = document.createElement("div");
           container.setAttribute("class", "container");
           var para = document.createElement("p");
-          para.textContent = defaultOptions.content;
+          para.textContent = options.content;
           container.appendChild(para);
           modalBody.appendChild(container);
         } else {
-          modalBody.appendChild(defaultOptions.content);
+          modalBody.appendChild(options.content);
         };
       };
       modalWrapper.appendChild(modalBody);
@@ -99,8 +99,8 @@ var modal = (function() {
       actionButton.addEventListener("click", function(event) {
         this.destroy();
         shade.destroy();
-        if (defaultOptions.action) {
-          defaultOptions.action();
+        if (options.action) {
+          options.action();
         };
       }.bind(modal), false);
       cancelButton.addEventListener("click", function(event) {

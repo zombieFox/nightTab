@@ -1,15 +1,18 @@
 // log version
 console.log("nightTab v", version.get(), "loaded");
 
+// check for old versions
+data.init();
+
 // bind and update controls
 // render states
 state.init();
 
-// close menu if left open
-menu.init();
-
 // restore bookmarks
 bookmarks.init();
+
+// close menu if left open
+menu.init();
 
 // render input color value
 // render css accent var

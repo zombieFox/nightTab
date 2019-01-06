@@ -69,16 +69,16 @@ var helper = (function() {
     return object;
   };
 
-  var applyOptions = function(defaultOptions, options) {
-    if (defaultOptions && options) {
-      if (options) {
-        for (var key in options) {
-          if (key in defaultOptions) {
-            defaultOptions[key] = options[key];
+  var applyOptions = function(options, override) {
+    if (options && override) {
+      if (override) {
+        for (var key in override) {
+          if (key in options) {
+            options[key] = override[key];
           };
         };
       };
-      return defaultOptions;
+      return options;
     } else {
       return null;
     };
@@ -156,75 +156,75 @@ var helper = (function() {
     return array;
   };
 
-  function setObject(options) {
-    var defaultOptions = {
+  function setObject(override) {
+    var options = {
       path: null,
       object: null,
       newValue: null
     };
-    if (options) {
-      var defaultOptions = applyOptions(defaultOptions, options);
+    if (override) {
+      var options = applyOptions(options, override);
     };
-    var address = _makeAddress(defaultOptions.path);
+    var address = _makeAddress(options.path);
     var _setData = function() {
       while (address.length > 1) {
         // shift off and store the first key
         var currentKey = address.shift();
         // if the key is not found make a new object
-        if (!(currentKey in defaultOptions.object)) {
+        if (!(currentKey in options.object)) {
           // make an empty object in the current object level
           if (isNaN(currentKey)) {
-            defaultOptions.object[currentKey] = {};
+            options.object[currentKey] = {};
           } else {
-            defaultOptions.object[currentKey] = [];
+            options.object[currentKey] = [];
           };
         };
         // drill down the object with the first key
-        defaultOptions.object = defaultOptions.object[currentKey];
+        options.object = options.object[currentKey];
       };
       var finalKey = address.shift();
-      defaultOptions.object[finalKey] = defaultOptions.newValue;
+      options.object[finalKey] = options.newValue;
     };
-    if (defaultOptions.object != null && defaultOptions.path != null && defaultOptions.newValue != null) {
+    if (options.object != null && options.path != null && options.newValue != null) {
       _setData();
     } else {
       return false;
     };
   };
 
-  function getObject(options) {
-    var defaultOptions = {
+  function getObject(override) {
+    var options = {
       object: null,
       path: null
     };
-    if (options) {
-      var defaultOptions = applyOptions(defaultOptions, options);
+    if (override) {
+      var options = applyOptions(options, override);
     };
-    var address = _makeAddress(defaultOptions.path);
+    var address = _makeAddress(options.path);
     var _getData = function() {
       while (address.length > 1) {
         // shift off and store the first key
         var currentKey = address.shift();
         // if the key is not found make a new object
-        if (!(currentKey in defaultOptions.object)) {
+        if (!(currentKey in options.object)) {
           // make an empty object in the current object level
           if (isNaN(currentKey)) {
-            defaultOptions.object[currentKey] = {};
+            options.object[currentKey] = {};
           } else {
-            defaultOptions.object[currentKey] = [];
+            options.object[currentKey] = [];
           };
         };
         // drill down the object with the first key
-        defaultOptions.object = defaultOptions.object[currentKey];
+        options.object = options.object[currentKey];
       };
       var finalKey = address.shift();
-      if (!(finalKey in defaultOptions.object)) {
+      if (!(finalKey in options.object)) {
         return "";
       } else {
-        return defaultOptions.object[finalKey];
+        return options.object[finalKey];
       };
     };
-    if (defaultOptions.object != null && defaultOptions.path != null) {
+    if (options.object != null && options.path != null) {
       return _getData();
     } else {
       return false;

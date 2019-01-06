@@ -215,8 +215,7 @@ var bookmarks = (function() {
     get: get,
     add: add,
     edit: edit,
-    remove: remove,
-    restore: restore
+    remove: remove
   };
 
 })();

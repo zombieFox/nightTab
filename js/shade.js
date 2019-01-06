@@ -11,13 +11,13 @@ var shade = (function() {
     };
   };
 
-  var render = function(options) {
-    var defaultOptions = {
+  var render = function(override) {
+    var options = {
       action: null,
       includeHeader: false
     };
-    if (options) {
-      defaultOptions = helper.applyOptions(defaultOptions, options);
+    if (override) {
+      options = helper.applyOptions(options, override);
     };
     var _destroy_previousShade = function() {
       if (previousShade != null) {
@@ -28,7 +28,7 @@ var shade = (function() {
       var body = helper.e("body");
       var shade = document.createElement("div");
       shade.setAttribute("class", "shade");
-      if (defaultOptions.includeHeader) {
+      if (options.includeHeader) {
         helper.addClass(shade, "m-shade-top");
       };
       shade.destroy = function() {
@@ -49,8 +49,8 @@ var shade = (function() {
       }.bind(shade), false);
       shade.addEventListener("click", function() {
         this.destroy();
-        if (defaultOptions.action) {
-          defaultOptions.action();
+        if (options.action) {
+          options.action();
         };
       }, false);
       previousShade = shade;

@@ -116,8 +116,7 @@ var state = (function() {
   return {
     init: init,
     get: get,
-    change: change,
-    restore: restore
+    change: change
   };
 
 })();
