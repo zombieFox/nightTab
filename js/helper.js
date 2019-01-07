@@ -296,6 +296,10 @@ var helper = (function() {
     });
   };
 
+  var randomNumber = function(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
+
   // exposed methods
   return {
     e: e,
@@ -314,7 +318,8 @@ var helper = (function() {
     makeNode: makeNode,
     setObject: setObject,
     getObject: getObject,
-    makeObject: makeObject
+    makeObject: makeObject,
+    randomNumber: randomNumber
   };
 
 })();

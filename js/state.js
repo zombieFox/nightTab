@@ -64,9 +64,12 @@ var state = (function() {
       container: "wide",
       scrollPastEnd: true,
       theme: {
-        r: 0,
-        g: 255,
-        b: 0,
+        current: {
+          r: 0,
+          g: 255,
+          b: 0,
+        },
+        random: false
       },
     },
     edit: {

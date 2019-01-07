@@ -202,8 +202,16 @@ var control = (function() {
     }, false);
     helper.e(".control-layout-theme").addEventListener("change", function() {
       state.change({
-        path: "layout.theme",
+        path: "layout.theme.current",
         value: helper.hexToRgb(this.value)
+      });
+      theme.render();
+      data.save();
+    }, false);
+    helper.e(".control-layout-theme-random").addEventListener("change", function() {
+      state.change({
+        path: "layout.theme.random",
+        value: this.checked
       });
       theme.render();
       data.save();
@@ -227,7 +235,6 @@ var control = (function() {
         data.save();
       }, false);
     });
-
     helper.eA("input[name='control-link-sort']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
         state.change({
@@ -470,7 +477,8 @@ var control = (function() {
 
   var update = function() {
     helper.e(".control-edit").checked = state.get().edit.active;
-    helper.e(".control-layout-theme").value = helper.rgbToHex(state.get().layout.theme);
+    helper.e(".control-layout-theme").value = helper.rgbToHex(state.get().layout.theme.current);
+    helper.e(".control-layout-theme-random").checked = state.get().layout.theme.random;
     helper.e(".control-link-new-tab").value = state.get().link.style.newTab;
     helper.e(".control-link-style-" + state.get().link.style).checked = true;
     helper.e(".control-link-sort-" + state.get().link.sort).checked = true;
