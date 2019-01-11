@@ -3,7 +3,8 @@ var link = (function() {
   var _bind = function(override) {
     var options = {
       element: null,
-      action: null
+      action: null,
+      data: null
     };
     if (override) {
       options = helper.applyOptions(options, override);
@@ -11,12 +12,12 @@ var link = (function() {
     var action = {
       edit: function() {
         options.element.addEventListener("click", function() {
-          edit(this);
+          edit(options.data);
         }, false);
       },
       delete: function() {
         options.element.addEventListener("click", function() {
-          remove(this);
+          remove(options.data);
         }, false);
       }
     };
@@ -37,10 +38,13 @@ var link = (function() {
     });
   };
 
-  var edit = function(button) {
+  var edit = function(data) {
     state.get().link.action = "edit";
-    state.get().link.editObject = bookmarks.get(parseInt(button.closest(".link-item").dataset.timeStamp, 10));
-    var currentBookmark = bookmarks.get(state.get().link.editObject.timeStamp);
+    var currentBookmark = bookmarks.get(data.timeStamp);
+    state.change({
+      path: "link.editObject",
+      value: currentBookmark
+    });
     var form = _makeLinkForm();
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
@@ -72,8 +76,14 @@ var link = (function() {
       url: form.querySelector(".link-form-input-url").value
     };
     action[state.get().link.action](newLinkData);
-    state.get().link.editObject = null;
-    state.get().link.action = null;
+    state.change({
+      path: "link.editObject",
+      value: null
+    });
+    state.change({
+      path: "link.action",
+      value: null
+    });
     clear();
     if (state.get().header.search.searching) {
       search.render();
@@ -212,9 +222,6 @@ var link = (function() {
       attr: [{
         key: "class",
         value: "link-item"
-      }, {
-        key: "data-time-stamp",
-        value: data.timeStamp
       }]
     });
     var linkOptions = {
@@ -329,11 +336,13 @@ var link = (function() {
     linkItem.appendChild(linkPanelBack);
     _bind({
       element: linkEdit,
-      action: "edit"
+      action: "edit",
+      data: data
     });
     _bind({
       element: linkDelete,
-      action: "delete"
+      action: "delete",
+      data: data
     });
     return linkItem;
   };
