@@ -38,7 +38,7 @@ var search = (function() {
     if (state.get().header.search.searching) {
       var searchedBookmarks = [];
       bookmarks.get().forEach(function(arrayItem, index) {
-        if (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase()) || arrayItem.name.toLowerCase().includes(searchInput.value.toLowerCase())) {
+        if (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, "")) || arrayItem.name.toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, ""))) {
           var copy = JSON.parse(JSON.stringify(arrayItem));
           copy.index = index;
           searchedBookmarks.push(copy);
