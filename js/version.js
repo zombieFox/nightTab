@@ -1,5 +1,6 @@
 var version = (function() {
 
+  // version is normally bumped when the state needs changing or any new functionality is added
   var current = "2.1.0";
 
   var get = function() {
