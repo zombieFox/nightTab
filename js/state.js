@@ -54,7 +54,6 @@ var state = (function() {
     },
     link: {
       editObject: null,
-      action: null,
       newTab: false,
       style: "block",
       sort: "none"

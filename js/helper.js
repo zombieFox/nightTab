@@ -113,10 +113,7 @@ var helper = (function() {
   var makeNode = function(override) {
     var options = {
       tag: null,
-      classes: null,
       text: null,
-      url: null,
-      index: null,
       attr: null
     };
     if (override) {

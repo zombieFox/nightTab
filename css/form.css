@@ -72,7 +72,7 @@ input[type="search"]:hover,
 input[type="tel"]:hover,
 input[type="text"]:hover {
   background-color: var(--gray-16);
-  border-color: rgb(var(--accent));
+  border-color: var(--gray-10);
   color: var(--black);
   outline: 0;
 }
@@ -300,9 +300,15 @@ input[type="checkbox"]:focus+.input-label-button,
 input[type="radio"]:hover+.input-label-button,
 input[type="radio"]:focus+.input-label-button {
   background-color: var(--gray-03);
-  border-bottom-color: rgb(var(--accent));
+  border-bottom-color: var(--gray-10);
   color: var(--white);
   outline: 0;
+}
+
+input[type="color"]:active+.input-label-button,
+input[type="checkbox"]:active+.input-label-button,
+input[type="radio"]:active+.input-label-button {
+  border-bottom-color: rgb(var(--accent));
 }
 
 input[type="color"]:checked+.input-label-button,

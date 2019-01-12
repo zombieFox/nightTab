@@ -4,7 +4,7 @@ var link = (function() {
     var options = {
       element: null,
       action: null,
-      data: null
+      bookmarkData: null
     };
     if (override) {
       options = helper.applyOptions(options, override);
@@ -12,78 +12,84 @@ var link = (function() {
     var action = {
       edit: function() {
         options.element.addEventListener("click", function() {
-          edit(options.data);
+          edit(options.bookmarkData);
         }, false);
       },
-      delete: function() {
+      remove: function() {
         options.element.addEventListener("click", function() {
-          remove(options.data);
+          remove(options.bookmarkData);
         }, false);
       }
     };
     if (options.element != null) {
       action[options.action]();
-    }
+    };
   };
 
-  var add = function() {
-    state.get().link.action = "add";
-    var form = _makeLinkForm();
-    modal.render({
-      heading: "Add a new bookmark",
-      action: save,
-      actionText: "Add",
-      size: "small",
-      content: form
-    });
-  };
-
-  var edit = function(data) {
-    state.get().link.action = "edit";
-    var currentBookmark = bookmarks.get(data.timeStamp);
-    state.change({
-      path: "link.editObject",
-      value: currentBookmark
-    });
+  var edit = function(bookmarkData) {
+    var currentBookmark = bookmarks.get(bookmarkData.timeStamp);
     var form = _makeLinkForm();
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
     form.querySelector(".link-form-input-url").value = currentBookmark.url;
     modal.render({
       heading: "Edit " + currentBookmark.name,
-      action: save,
+      action: function() {
+        save({
+          action: "edit",
+          form: form,
+          bookmarkData: bookmarkData
+        })
+      },
       actionText: "Save",
       size: "small",
       content: form
     });
   };
 
-  var save = function(button) {
-    var action = {
-      add: function(newLinkData) {
-        newLinkData.timeStamp = new Date().getTime();
-        bookmarks.add(newLinkData);
+  var add = function() {
+    var form = _makeLinkForm();
+    modal.render({
+      heading: "Add a new bookmark",
+      action: function() {
+        save({
+          action: "add",
+          form: form
+        })
       },
-      edit: function(newLinkData) {
-        newLinkData.timeStamp = state.get().link.editObject.timeStamp;
-        bookmarks.edit(newLinkData, state.get().link.editObject.timeStamp);
+      actionText: "Add",
+      size: "small",
+      content: form
+    });
+  };
+
+  var save = function(override) {
+    var options = {
+      action: null,
+      form: null,
+      bookmarkData: null
+    };
+    if (override) {
+      options = helper.applyOptions(options, override);
+    };
+    var action = {
+      add: function() {
+        var newBookmarkData = {
+          letter: options.form.querySelector(".link-form-input-letter").value,
+          name: options.form.querySelector(".link-form-input-name").value,
+          url: options.form.querySelector(".link-form-input-url").value,
+          timeStamp: new Date().getTime()
+        };
+        bookmarks.add(newBookmarkData);
+      },
+      edit: function() {
+        options.bookmarkData.letter = options.form.querySelector(".link-form-input-letter").value;
+        options.bookmarkData.name = options.form.querySelector(".link-form-input-name").value;
+        options.bookmarkData.url = options.form.querySelector(".link-form-input-url").value;
+        bookmarks.edit(options.bookmarkData, options.bookmarkData.timeStamp);
       }
     };
-    var form = helper.e(".link-form");
-    var newLinkData = {
-      letter: form.querySelector(".link-form-input-letter").value,
-      name: form.querySelector(".link-form-input-name").value,
-      url: form.querySelector(".link-form-input-url").value
-    };
-    action[state.get().link.action](newLinkData);
-    state.change({
-      path: "link.editObject",
-      value: null
-    });
-    state.change({
-      path: "link.action",
-      value: null
-    });
+    action[options.action]();
     clear();
     if (state.get().header.search.searching) {
       search.render();
@@ -93,9 +99,8 @@ var link = (function() {
     data.save();
   };
 
-  var remove = function(button) {
-    var timeStamp = parseInt(button.closest(".link-item").dataset.timeStamp, 10);
-    bookmarks.remove(timeStamp);
+  var remove = function(bookmarkData) {
+    bookmarks.remove(bookmarkData.timeStamp);
     clear();
     if (state.get().header.search.searching) {
       search.render();
@@ -293,7 +298,7 @@ var link = (function() {
       tag: "button",
       attr: [{
         key: "class",
-        value: "button button-small link-control-item link-edit"
+        value: "button button-small link-control-item"
       }, {
         key: "tabindex",
         value: -1
@@ -306,17 +311,17 @@ var link = (function() {
         value: "button-icon icon-edit"
       }]
     });
-    var linkDelete = helper.makeNode({
+    var linkRemove = helper.makeNode({
       tag: "button",
       attr: [{
         key: "class",
-        value: "button button-small link-control-item link-delete"
+        value: "button button-small link-control-item"
       }, {
         key: "tabindex",
         value: -1
       }]
     });
-    var linkDeleteIcon = helper.makeNode({
+    var linkRemoveIcon = helper.makeNode({
       tag: "span",
       attr: [{
         key: "class",
@@ -326,9 +331,9 @@ var link = (function() {
     linkPanelFront.appendChild(linkLetter);
     linkPanelFront.appendChild(linkName);
     linkEdit.appendChild(linkEditIcon);
-    linkDelete.appendChild(linkDeleteIcon);
+    linkRemove.appendChild(linkRemoveIcon);
     linkControl.appendChild(linkEdit);
-    linkControl.appendChild(linkDelete);
+    linkControl.appendChild(linkRemove);
     linkUrl.appendChild(linkUrlText);
     linkPanelBack.appendChild(linkUrl);
     linkPanelBack.appendChild(linkControl);
@@ -337,12 +342,12 @@ var link = (function() {
     _bind({
       element: linkEdit,
       action: "edit",
-      data: data
+      bookmarkData: data
     });
     _bind({
-      element: linkDelete,
-      action: "delete",
-      data: data
+      element: linkRemove,
+      action: "remove",
+      bookmarkData: data
     });
     return linkItem;
   };
