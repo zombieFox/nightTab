@@ -352,12 +352,43 @@ var link = (function() {
     return linkItem;
   };
 
+  var _makeEmpty = function() {
+    var searchInput = helper.e(".search-input");
+    var div = helper.makeNode({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "link-empty"
+      }]
+    });
+    var h1 = helper.makeNode({
+      tag: "h1",
+      attr: [{
+        key: "class",
+        value: "link-empty-heading"
+      }],
+      text: "No bookmarks found matching \"" + searchInput.value.trim() + "\""
+    });
+    div.appendChild(h1);
+    return div;
+  };
+
   var render = function(array) {
     var linkArea = helper.e(".link-area");
     var bookmarksToRender = array || bookmarks.get();
-    bookmarksToRender.forEach(function(arrayItem) {
-      linkArea.appendChild(_makeLink(arrayItem));
-    });
+    var _renderLinks = function() {
+      bookmarksToRender.forEach(function(arrayItem) {
+        linkArea.appendChild(_makeLink(arrayItem));
+      });
+    };
+    var _renderEmpty = function() {
+      linkArea.appendChild(_makeEmpty());
+    };
+    if (bookmarksToRender.length > 0) {
+      _renderLinks();
+    } else {
+      _renderEmpty();
+    };
   };
 
   var tabIndex = function() {

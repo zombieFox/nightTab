@@ -230,6 +230,16 @@
   text-overflow: ellipsis;
 }
 
+.link-empty {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  text-align: center;
+}
+
+.link-empty-heading {
+  color: var(--gray-10);
+}
+
 .is-link-block .link-name {
   text-align: center;
 }
