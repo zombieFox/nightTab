@@ -317,6 +317,15 @@ input[type="radio"]:checked+.input-label-button {
   border-bottom-color: rgb(var(--accent));
 }
 
+input[type="color"][disabled]+.input-label-button,
+input[type="checkbox"][disabled]+.input-label-button,
+input[type="radio"][disabled]+.input-label-button {
+  background-color: var(--gray-02);
+  border-color: transparent;
+  color: var(--gray-04);
+  cursor: default;
+}
+
 input[type="checkbox"][disabled]+label,
 input[type="radio"][disabled]+label {
   color: var(--gray-04);

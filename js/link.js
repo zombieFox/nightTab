@@ -18,6 +18,8 @@ var link = (function() {
       remove: function() {
         options.element.addEventListener("click", function() {
           remove(options.bookmarkData);
+          control.dependents();
+          control.render();
         }, false);
       }
     };
@@ -56,6 +58,8 @@ var link = (function() {
           action: "add",
           form: form
         });
+        control.dependents();
+        control.render();
       },
       actionText: "Add",
       size: "small",
