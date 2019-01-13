@@ -10,7 +10,7 @@ var data = (function() {
     return localStorage.getItem(key);
   };
 
-  var clear = function(key) {
+  var remove = function(key) {
     localStorage.removeItem(key);
   };
 
@@ -22,6 +22,10 @@ var data = (function() {
     };
     set(saveName, JSON.stringify(data));
     console.log("data saved");
+  };
+
+  var wipe = function() {
+    remove(saveName);
   };
 
   var load = function() {
@@ -48,14 +52,10 @@ var data = (function() {
     _checkForSavedData(load());
   };
 
-  var wipe = function() {
-    clear(saveName);
-  };
-
   return {
     init: init,
     save: save,
-    clear: clear,
+    remove: remove,
     set: set,
     get: get,
     load: load,

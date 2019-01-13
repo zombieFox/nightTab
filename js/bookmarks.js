@@ -134,14 +134,16 @@ var bookmarks = (function() {
 
   var get = function(timeStamp) {
     var _singleBookmark = function() {
+      var found = false;
       for (var i = 0; i < all.length; i++) {
         if (all[i].timeStamp === timeStamp) {
-          return all[i];
+          found = all[i];
         };
       };
+      return found;
     };
     var _allBookmarks = function() {
-      var by = {
+      var action = {
         none: function(array) {
           return helper.sortObject(array, "timeStamp");
         },
@@ -152,9 +154,9 @@ var bookmarks = (function() {
           return helper.sortObject(array, "letter");
         }
       };
-      return by[state.get().link.sort](all);
+      return action[state.get().link.sort](all);
     };
-    if (timeStamp) {
+    if (timeStamp && typeof timeStamp == "number") {
       return _singleBookmark(timeStamp);
     } else {
       return _allBookmarks();

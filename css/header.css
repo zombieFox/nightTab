@@ -19,9 +19,6 @@
 }
 
 .header-item {
-  margin-left: var(--gutter);
-  margin-right: var(--gutter);
-  margin-bottom: 1em;
   margin: var(--gutter);
   display: flex;
   flex-wrap: nowrap;

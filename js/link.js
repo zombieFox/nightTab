@@ -3,7 +3,8 @@ var link = (function() {
   var _bind = function(override) {
     var options = {
       element: null,
-      action: null
+      action: null,
+      bookmarkData: null
     };
     if (override) {
       options = helper.applyOptions(options, override);
@@ -11,88 +12,98 @@ var link = (function() {
     var action = {
       edit: function() {
         options.element.addEventListener("click", function() {
-          edit(this);
+          edit(options.bookmarkData);
         }, false);
       },
-      delete: function() {
+      remove: function() {
         options.element.addEventListener("click", function() {
-          remove(this);
+          remove(options.bookmarkData);
+          control.dependents();
+          control.render();
         }, false);
       }
     };
     if (options.element != null) {
       action[options.action]();
-    }
+    };
   };
 
-  var add = function() {
-    state.get().link.action = "add";
-    var form = _makeLinkForm();
-    modal.render({
-      heading: "Add a new bookmark",
-      action: save,
-      actionText: "Add",
-      size: "small",
-      content: form
-    });
-  };
-
-  var edit = function(button) {
-    state.get().link.action = "edit";
-    state.get().link.editObject = bookmarks.get(parseInt(button.closest(".link-item").dataset.timeStamp, 10));
-    var currentBookmark = bookmarks.get(state.get().link.editObject.timeStamp);
+  var edit = function(bookmarkData) {
+    var currentBookmark = bookmarks.get(bookmarkData.timeStamp);
     var form = _makeLinkForm();
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
     form.querySelector(".link-form-input-url").value = currentBookmark.url;
     modal.render({
       heading: "Edit " + currentBookmark.name,
-      action: save,
+      action: function() {
+        save({
+          action: "edit",
+          form: form,
+          bookmarkData: bookmarkData
+        });
+      },
       actionText: "Save",
       size: "small",
       content: form
     });
   };
 
-  var save = function(button) {
-    var action = {
-      add: function(newLinkData) {
-        newLinkData.timeStamp = new Date().getTime();
-        bookmarks.add(newLinkData);
+  var add = function() {
+    var form = _makeLinkForm();
+    modal.render({
+      heading: "Add a new bookmark",
+      action: function() {
+        save({
+          action: "add",
+          form: form
+        });
+        control.dependents();
+        control.render();
       },
-      edit: function(newLinkData) {
-        newLinkData.timeStamp = state.get().link.editObject.timeStamp;
-        bookmarks.edit(newLinkData, state.get().link.editObject.timeStamp);
-      }
-    };
-    var form = helper.e(".link-form");
-    var newLinkData = {
-      letter: form.querySelector(".link-form-input-letter").value,
-      name: form.querySelector(".link-form-input-name").value,
-      url: form.querySelector(".link-form-input-url").value
-    };
-    action[state.get().link.action](newLinkData);
-    state.get().link.editObject = null;
-    state.get().link.action = null;
-    clear();
-    if (state.get().header.search.searching) {
-      search.render();
-    } else {
-      render();
-    };
-    data.save();
+      actionText: "Add",
+      size: "small",
+      content: form
+    });
   };
 
-  var remove = function(button) {
-    var timeStamp = parseInt(button.closest(".link-item").dataset.timeStamp, 10);
-    bookmarks.remove(timeStamp);
-    clear();
-    if (state.get().header.search.searching) {
-      search.render();
-    } else {
-      render();
+  var save = function(override) {
+    var options = {
+      action: null,
+      form: null,
+      bookmarkData: null
     };
+    if (override) {
+      options = helper.applyOptions(options, override);
+    };
+    var action = {
+      add: function() {
+        var newBookmarkData = {
+          letter: options.form.querySelector(".link-form-input-letter").value,
+          name: options.form.querySelector(".link-form-input-name").value,
+          url: options.form.querySelector(".link-form-input-url").value,
+          timeStamp: new Date().getTime()
+        };
+        bookmarks.add(newBookmarkData);
+      },
+      edit: function() {
+        options.bookmarkData.letter = options.form.querySelector(".link-form-input-letter").value;
+        options.bookmarkData.name = options.form.querySelector(".link-form-input-name").value;
+        options.bookmarkData.url = options.form.querySelector(".link-form-input-url").value;
+        bookmarks.edit(options.bookmarkData, options.bookmarkData.timeStamp);
+      }
+    };
+    action[options.action]();
     data.save();
+    clear();
+    render();
+  };
+
+  var remove = function(bookmarkData) {
+    bookmarks.remove(bookmarkData.timeStamp);
+    data.save();
+    clear();
+    render();
   };
 
   var _makeLinkForm = function() {
@@ -212,9 +223,6 @@ var link = (function() {
       attr: [{
         key: "class",
         value: "link-item"
-      }, {
-        key: "data-time-stamp",
-        value: data.timeStamp
       }]
     });
     var linkOptions = {
@@ -286,7 +294,7 @@ var link = (function() {
       tag: "button",
       attr: [{
         key: "class",
-        value: "button button-small link-control-item link-edit"
+        value: "button button-small link-control-item"
       }, {
         key: "tabindex",
         value: -1
@@ -299,17 +307,17 @@ var link = (function() {
         value: "button-icon icon-edit"
       }]
     });
-    var linkDelete = helper.makeNode({
+    var linkRemove = helper.makeNode({
       tag: "button",
       attr: [{
         key: "class",
-        value: "button button-small link-control-item link-delete"
+        value: "button button-small link-control-item"
       }, {
         key: "tabindex",
         value: -1
       }]
     });
-    var linkDeleteIcon = helper.makeNode({
+    var linkRemoveIcon = helper.makeNode({
       tag: "span",
       attr: [{
         key: "class",
@@ -319,9 +327,9 @@ var link = (function() {
     linkPanelFront.appendChild(linkLetter);
     linkPanelFront.appendChild(linkName);
     linkEdit.appendChild(linkEditIcon);
-    linkDelete.appendChild(linkDeleteIcon);
+    linkRemove.appendChild(linkRemoveIcon);
     linkControl.appendChild(linkEdit);
-    linkControl.appendChild(linkDelete);
+    linkControl.appendChild(linkRemove);
     linkUrl.appendChild(linkUrlText);
     linkPanelBack.appendChild(linkUrl);
     linkPanelBack.appendChild(linkControl);
@@ -329,21 +337,105 @@ var link = (function() {
     linkItem.appendChild(linkPanelBack);
     _bind({
       element: linkEdit,
-      action: "edit"
+      action: "edit",
+      bookmarkData: data
     });
     _bind({
-      element: linkDelete,
-      action: "delete"
+      element: linkRemove,
+      action: "remove",
+      bookmarkData: data
     });
     return linkItem;
   };
 
-  var render = function(array) {
-    var linkArea = helper.e(".link-area");
-    var bookmarksToRender = array || bookmarks.get();
-    bookmarksToRender.forEach(function(arrayItem) {
-      linkArea.appendChild(_makeLink(arrayItem));
+  var _makeEmptySearch = function() {
+    var searchInput = helper.e(".search-input");
+    var div = helper.makeNode({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "link-empty"
+      }]
     });
+    var h1 = helper.makeNode({
+      tag: "h1",
+      attr: [{
+        key: "class",
+        value: "link-empty-heading"
+      }],
+      text: "No matching bookmarks found"
+    });
+    div.appendChild(h1);
+    return div;
+  };
+
+  var _makeEmptyBookmarks = function() {
+    var searchInput = helper.e(".search-input");
+    var div = helper.makeNode({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "link-empty"
+      }]
+    });
+    var h1 = helper.makeNode({
+      tag: "h1",
+      attr: [{
+        key: "class",
+        value: "link-empty-heading"
+      }],
+      text: "No bookmarks added"
+    });
+    div.appendChild(h1);
+    return div;
+  };
+
+  var render = function() {
+    var linkArea = helper.e(".link-area");
+    var bookmarksToRender = false;
+    if (state.get().header.search.searching) {
+      bookmarksToRender = search.get();
+    } else {
+      bookmarksToRender = bookmarks.get();
+    };
+    var action = {
+      render: {
+        bookmarks: function(array) {
+          array.forEach(function(arrayItem, index) {
+            linkArea.appendChild(_makeLink(arrayItem));
+          });
+        },
+        empty: {
+          search: function() {
+            linkArea.appendChild(_makeEmptySearch());
+          },
+          bookmarks: function() {
+            linkArea.appendChild(_makeEmptyBookmarks());
+          }
+        }
+      }
+    };
+    // if searching
+    if (state.get().header.search.searching) {
+      // if bookmarks exist to be searched
+      if (bookmarksToRender.total > 0) {
+        // if matching bookmarks found
+        if (bookmarksToRender.matching.length > 0) {
+          action.render.bookmarks(bookmarksToRender.matching);
+        } else {
+          action.render.empty.search();
+        };
+      } else {
+        action.render.empty.bookmarks();
+      };
+    } else {
+      // if bookmarks exist
+      if (bookmarksToRender.length > 0) {
+        action.render.bookmarks(bookmarksToRender);
+      } else {
+        action.render.empty.bookmarks();
+      };
+    };
   };
 
   var tabIndex = function() {

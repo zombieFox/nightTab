@@ -108,7 +108,19 @@ var control = (function() {
     _layout();
   };
 
-  var _dependents = function() {
+  var dependents = function() {
+    var _edit = function() {
+      if (bookmarks.get().length > 0) {
+        helper.e(".control-edit").disabled = false;
+      } else {
+        helper.e(".control-edit").disabled = true;
+        helper.e(".control-edit").checked = false;
+        state.change({
+          path: "edit.active",
+          value: false
+        });
+      };
+    };
     var _date = function() {
       var activeCount = 0;
       var toCheck = [state.get().header.date.show.date, state.get().header.date.show.day, state.get().header.date.show.month, state.get().header.date.show.year];
@@ -180,6 +192,7 @@ var control = (function() {
         helper.e(".control-header-search-engine-custom-url").disabled = true;
       };
     };
+    _edit();
     _date();
     _clock();
     _search();
@@ -198,6 +211,7 @@ var control = (function() {
         value: this.checked
       });
       render();
+      dependents();
       data.save();
     }, false);
     helper.e(".control-layout-theme").addEventListener("change", function() {
@@ -252,7 +266,7 @@ var control = (function() {
         value: this.checked
       });
       render();
-      _dependents();
+      dependents();
       header.render();
       data.save();
     }, false);
@@ -262,7 +276,7 @@ var control = (function() {
         value: this.checked
       });
       render();
-      _dependents();
+      dependents();
       header.render();
       data.save();
     }, false);
@@ -273,7 +287,7 @@ var control = (function() {
           value: this.value
         });
         render();
-        _dependents();
+        dependents();
         search.update();
         data.save();
       }, false);
@@ -292,7 +306,7 @@ var control = (function() {
         value: this.checked
       });
       render();
-      _dependents();
+      dependents();
       date.clear();
       date.render();
       header.render();
@@ -304,7 +318,7 @@ var control = (function() {
         value: this.checked
       });
       render();
-      _dependents();
+      dependents();
       date.clear();
       date.render();
       header.render();
@@ -316,7 +330,7 @@ var control = (function() {
         value: this.checked
       });
       render();
-      _dependents();
+      dependents();
       date.clear();
       date.render();
       header.render();
@@ -328,7 +342,7 @@ var control = (function() {
         value: this.checked
       });
       render();
-      _dependents();
+      dependents();
       date.clear();
       date.render();
       header.render();
@@ -340,7 +354,7 @@ var control = (function() {
         value: this.checked
       });
       render();
-      _dependents();
+      dependents();
       date.clear();
       date.render();
       header.render();
@@ -365,7 +379,7 @@ var control = (function() {
         value: this.checked
       });
       render();
-      _dependents();
+      dependents();
       clock.clear();
       clock.render();
       header.render();
@@ -377,7 +391,7 @@ var control = (function() {
         value: this.checked
       });
       render();
-      _dependents();
+      dependents();
       clock.clear();
       clock.render();
       header.render();
@@ -389,7 +403,7 @@ var control = (function() {
         value: this.checked
       });
       render();
-      _dependents();
+      dependents();
       clock.clear();
       clock.render();
       header.render();
@@ -410,7 +424,7 @@ var control = (function() {
         path: "header.clock.hour24",
         value: this.checked
       });
-      _dependents();
+      dependents();
       clock.clear();
       clock.render();
       header.render();
@@ -508,15 +522,16 @@ var control = (function() {
   var init = function() {
     _bind();
     update();
-    _dependents();
+    dependents();
     render();
   };
 
   // exposed methods
   return {
     init: init,
-    update: update,
-    render: render
+    render: render,
+    dependents: dependents,
+    update: update
   };
 
 })();

@@ -6,7 +6,8 @@ var search = (function() {
     searchInput.addEventListener("input", function() {
       _toggle(this);
       _searchClear();
-      render();
+      link.clear();
+      link.render();
     }, false);
     searchClear.addEventListener("click", function() {
       _toggle(this);
@@ -17,9 +18,15 @@ var search = (function() {
 
   var _toggle = function(input) {
     if (input.value != "") {
-      state.get().header.search.searching = true;
+      state.change({
+        path: "header.search.searching",
+        value: true
+      })
     } else {
-      state.get().header.search.searching = false;
+      state.change({
+        path: "header.search.searching",
+        value: false
+      })
     };
   };
 
@@ -33,22 +40,21 @@ var search = (function() {
     };
   };
 
-  var render = function() {
+  var get = function() {
     var searchInput = helper.e(".search-input");
     if (state.get().header.search.searching) {
-      var searchedBookmarks = [];
+      var searchedBookmarks = {
+        total: 0,
+        matching: []
+      };
+      searchedBookmarks.total = bookmarks.get().length;
       bookmarks.get().forEach(function(arrayItem, index) {
-        if (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase()) || arrayItem.name.toLowerCase().includes(searchInput.value.toLowerCase())) {
-          var copy = JSON.parse(JSON.stringify(arrayItem));
-          copy.index = index;
-          searchedBookmarks.push(copy);
+        if (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, "")) || arrayItem.name.toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, ""))) {
+          var bookmarkDataCopy = JSON.parse(JSON.stringify(arrayItem));
+          searchedBookmarks.matching.push(bookmarkDataCopy);
         };
       });
-      link.clear();
-      link.render(searchedBookmarks);
-    } else {
-      link.clear();
-      link.render();
+      return searchedBookmarks;
     };
   };
 
@@ -73,7 +79,7 @@ var search = (function() {
   // exposed methods
   return {
     init: init,
-    render: render,
+    get: get,
     update: update,
     clear: clear
   };

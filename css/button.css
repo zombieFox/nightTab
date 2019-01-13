@@ -40,7 +40,7 @@ input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   background-color: var(--gray-03);
-  border-bottom-color: rgb(var(--accent));
+  border-bottom-color: var(--gray-08);
   color: var(--white);
   outline: 0;
 }
@@ -51,6 +51,7 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   background-color: var(--gray-04);
+  border-bottom-color: rgb(var(--accent));
   color: var(--white);
   transition: none;
 }
