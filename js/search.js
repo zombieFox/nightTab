@@ -6,7 +6,8 @@ var search = (function() {
     searchInput.addEventListener("input", function() {
       _toggle(this);
       _searchClear();
-      render();
+      link.clear();
+      link.render();
     }, false);
     searchClear.addEventListener("click", function() {
       _toggle(this);
@@ -17,9 +18,15 @@ var search = (function() {
 
   var _toggle = function(input) {
     if (input.value != "") {
-      state.get().header.search.searching = true;
+      state.change({
+        path: "header.search.searching",
+        value: true
+      })
     } else {
-      state.get().header.search.searching = false;
+      state.change({
+        path: "header.search.searching",
+        value: false
+      })
     };
   };
 
@@ -33,7 +40,7 @@ var search = (function() {
     };
   };
 
-  var render = function() {
+  var get = function() {
     var searchInput = helper.e(".search-input");
     if (state.get().header.search.searching) {
       var searchedBookmarks = [];
@@ -44,11 +51,11 @@ var search = (function() {
           searchedBookmarks.push(copy);
         };
       });
-      link.clear();
-      link.render(searchedBookmarks);
-    } else {
-      link.clear();
-      link.render();
+      if (searchedBookmarks.length > 0) {
+        return searchedBookmarks;
+      } else {
+        return false;
+      };
     };
   };
 
@@ -73,7 +80,7 @@ var search = (function() {
   // exposed methods
   return {
     init: init,
-    render: render,
+    get: get,
     update: update,
     clear: clear
   };

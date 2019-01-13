@@ -39,7 +39,7 @@ var link = (function() {
           action: "edit",
           form: form,
           bookmarkData: bookmarkData
-        })
+        });
       },
       actionText: "Save",
       size: "small",
@@ -55,7 +55,7 @@ var link = (function() {
         save({
           action: "add",
           form: form
-        })
+        });
       },
       actionText: "Add",
       size: "small",
@@ -90,24 +90,16 @@ var link = (function() {
       }
     };
     action[options.action]();
-    clear();
-    if (state.get().header.search.searching) {
-      search.render();
-    } else {
-      render();
-    };
     data.save();
+    clear();
+    render();
   };
 
   var remove = function(bookmarkData) {
     bookmarks.remove(bookmarkData.timeStamp);
-    clear();
-    if (state.get().header.search.searching) {
-      search.render();
-    } else {
-      render();
-    };
     data.save();
+    clear();
+    render();
   };
 
   var _makeLinkForm = function() {
@@ -367,15 +359,20 @@ var link = (function() {
         key: "class",
         value: "link-empty-heading"
       }],
-      text: "No bookmarks found matching \"" + searchInput.value.trim() + "\""
+      text: "No matching bookmarks found"
     });
     div.appendChild(h1);
     return div;
   };
 
-  var render = function(array) {
+  var render = function() {
     var linkArea = helper.e(".link-area");
-    var bookmarksToRender = array || bookmarks.get();
+    var bookmarksToRender = false;
+    if (state.get().header.search.searching) {
+      bookmarksToRender = search.get();
+    } else {
+      bookmarksToRender = bookmarks.get();
+    };
     var _renderLinks = function() {
       bookmarksToRender.forEach(function(arrayItem) {
         linkArea.appendChild(_makeLink(arrayItem));
@@ -384,7 +381,7 @@ var link = (function() {
     var _renderEmpty = function() {
       linkArea.appendChild(_makeEmpty());
     };
-    if (bookmarksToRender.length > 0) {
+    if (bookmarksToRender) {
       _renderLinks();
     } else {
       _renderEmpty();
