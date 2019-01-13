@@ -43,19 +43,18 @@ var search = (function() {
   var get = function() {
     var searchInput = helper.e(".search-input");
     if (state.get().header.search.searching) {
-      var searchedBookmarks = [];
+      var searchedBookmarks = {
+        total: 0,
+        matching: []
+      };
+      searchedBookmarks.total = bookmarks.get().length;
       bookmarks.get().forEach(function(arrayItem, index) {
         if (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, "")) || arrayItem.name.toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, ""))) {
-          var copy = JSON.parse(JSON.stringify(arrayItem));
-          copy.index = index;
-          searchedBookmarks.push(copy);
+          var bookmarkDataCopy = JSON.parse(JSON.stringify(arrayItem));
+          searchedBookmarks.matching.push(bookmarkDataCopy);
         };
       });
-      if (searchedBookmarks.length > 0) {
-        return searchedBookmarks;
-      } else {
-        return false;
-      };
+      return searchedBookmarks;
     };
   };
 

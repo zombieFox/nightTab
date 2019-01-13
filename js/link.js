@@ -344,7 +344,7 @@ var link = (function() {
     return linkItem;
   };
 
-  var _makeEmpty = function() {
+  var _makeEmptySearch = function() {
     var searchInput = helper.e(".search-input");
     var div = helper.makeNode({
       tag: "div",
@@ -365,6 +365,27 @@ var link = (function() {
     return div;
   };
 
+  var _makeEmptyBookmarks = function() {
+    var searchInput = helper.e(".search-input");
+    var div = helper.makeNode({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "link-empty"
+      }]
+    });
+    var h1 = helper.makeNode({
+      tag: "h1",
+      attr: [{
+        key: "class",
+        value: "link-empty-heading"
+      }],
+      text: "No bookmarks added"
+    });
+    div.appendChild(h1);
+    return div;
+  };
+
   var render = function() {
     var linkArea = helper.e(".link-area");
     var bookmarksToRender = false;
@@ -373,18 +394,43 @@ var link = (function() {
     } else {
       bookmarksToRender = bookmarks.get();
     };
-    var _renderLinks = function() {
-      bookmarksToRender.forEach(function(arrayItem) {
-        linkArea.appendChild(_makeLink(arrayItem));
-      });
+    var action = {
+      render: {
+        bookmarks: function(array) {
+          array.forEach(function(arrayItem, index) {
+            linkArea.appendChild(_makeLink(arrayItem));
+          });
+        },
+        empty: {
+          search: function() {
+            linkArea.appendChild(_makeEmptySearch());
+          },
+          bookmarks: function() {
+            linkArea.appendChild(_makeEmptyBookmarks());
+          }
+        }
+      }
     };
-    var _renderEmpty = function() {
-      linkArea.appendChild(_makeEmpty());
-    };
-    if (bookmarksToRender) {
-      _renderLinks();
+    // if searching
+    if (state.get().header.search.searching) {
+      // if bookmarks exist to be searched
+      if (bookmarksToRender.total > 0) {
+        // if matching bookmarks found
+        if (bookmarksToRender.matching.length > 0) {
+          action.render.bookmarks(bookmarksToRender.matching);
+        } else {
+          action.render.empty.search();
+        };
+      } else {
+        action.render.empty.bookmarks();
+      };
     } else {
-      _renderEmpty();
+      // if bookmarks exist
+      if (bookmarksToRender.length > 0) {
+        action.render.bookmarks(bookmarksToRender);
+      } else {
+        action.render.empty.bookmarks();
+      };
     };
   };
 
