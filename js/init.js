@@ -46,3 +46,7 @@ tip.init();
 
 // render header height padding
 header.init();
+
+
+
+menu.open();

@@ -23,7 +23,16 @@
 
 .menu-nav {
   display: flex;
+  flex-direction: column-reverse;
+}
+
+.menu-nav-area {
+  display: flex;
   flex-direction: column;
+}
+
+.menu-nav-area-grow {
+  flex-grow: 1;
 }
 
 .menu-nav:not(:last-child) {
@@ -59,11 +68,25 @@
   border-bottom: 0;
 }
 
+.menu-close {
+  margin: 0;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-radius: 0;
+}
+
 .menu-nav-button {
   margin: 0;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   border-radius: 0;
+}
+
+.menu-nav-button [class^="icon-"],
+.menu-nav-button [class*=" icon-"] {
+  line-height: 1;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .menu-nav-button.active {
