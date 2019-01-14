@@ -15,8 +15,8 @@ var theme = (function() {
         light: function() {
           return {
             h: randomVal(0, 360),
-            s: 100,
-            l: 50
+            s: randomVal(50, 100),
+            l: randomVal(50, 100)
           };
         },
         dark: function() {
