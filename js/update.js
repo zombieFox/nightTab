@@ -32,6 +32,15 @@ var update = (function() {
     return data;
   };
 
+  var _update_230 = function(data) {
+    data.state.layout.theme.random = {
+      active: data.state.layout.theme.random,
+      style: "any"
+    };
+    data.version = 2.30;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -49,6 +58,10 @@ var update = (function() {
     if (data.version < 2.10) {
       console.log("\trunning update", 2.10);
       data = _update_210(data);
+    };
+    if (data.version < 2.30) {
+      console.log("\trunning update", 2.30);
+      data = _update_230(data);
     };
     // if (data.version < 3.00) {
     //   console.log("\t# running update", 3.00);

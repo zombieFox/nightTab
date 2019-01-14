@@ -192,10 +192,22 @@ var control = (function() {
         helper.e(".control-header-search-engine-custom-url").disabled = true;
       };
     };
+    var _theme = function() {
+      if (state.get().layout.theme.random.active) {
+        helper.eA("input[name='control-layout-theme-style']").forEach(function(arrayItem, index) {
+          arrayItem.disabled = false;
+        });
+      } else {
+        helper.eA("input[name='control-layout-theme-style']").forEach(function(arrayItem, index) {
+          arrayItem.disabled = true;
+        });
+      };
+    };
     _edit();
     _date();
     _clock();
     _search();
+    _theme();
   };
 
   var _bind = function() {
@@ -224,12 +236,23 @@ var control = (function() {
     }, false);
     helper.e(".control-layout-theme-random").addEventListener("change", function() {
       state.change({
-        path: "layout.theme.random",
+        path: "layout.theme.random.active",
         value: this.checked
       });
       theme.render();
+      dependents();
       data.save();
     }, false);
+    helper.eA("input[name='control-layout-theme-style']").forEach(function(arrayItem, index) {
+      arrayItem.addEventListener("change", function() {
+        state.change({
+          path: "layout.theme.random.style",
+          value: this.value
+        });
+        render();
+        data.save();
+      }, false);
+    });
     helper.e(".control-link-new-tab").addEventListener("change", function() {
       state.change({
         path: "link.newTab",
@@ -492,7 +515,8 @@ var control = (function() {
   var update = function() {
     helper.e(".control-edit").checked = state.get().edit.active;
     helper.e(".control-layout-theme").value = helper.rgbToHex(state.get().layout.theme.current);
-    helper.e(".control-layout-theme-random").checked = state.get().layout.theme.random;
+    helper.e(".control-layout-theme-random").checked = state.get().layout.theme.random.active;
+    helper.e(".control-layout-theme-style-" + state.get().layout.theme.random.style).checked = true;
     helper.e(".control-link-new-tab").value = state.get().link.style.newTab;
     helper.e(".control-link-style-" + state.get().link.style).checked = true;
     helper.e(".control-link-sort-" + state.get().link.sort).checked = true;
