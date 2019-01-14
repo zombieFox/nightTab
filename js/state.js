@@ -68,7 +68,10 @@ var state = (function() {
           g: 255,
           b: 0,
         },
-        random: false
+        random: {
+          active: false,
+          style: "light"
+        }
       },
     },
     edit: {

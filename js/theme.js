@@ -7,7 +7,7 @@ var theme = (function() {
   };
 
   var random = function() {
-    if (state.get().layout.theme.random) {
+    if (state.get().layout.theme.random.active) {
       var randomVal = function(min, max) {
         return Math.floor(Math.random() * (max - min) + 1) + min;
       };
@@ -15,8 +15,8 @@ var theme = (function() {
         light: function() {
           return {
             h: randomVal(0, 360),
-            s: randomVal(50, 100),
-            l: randomVal(50, 90)
+            s: 100,
+            l: 50
           };
         },
         dark: function() {
@@ -27,7 +27,7 @@ var theme = (function() {
           };
         }
       };
-      var hsl = color.light();
+      var hsl = color[state.get().layout.theme.random.style]();
       var randomColor = helper.hslToRgb({
         h: hsl.h,
         s: (hsl.s / 100),
