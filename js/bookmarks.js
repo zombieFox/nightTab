@@ -22,8 +22,8 @@ var bookmarks = (function() {
     timeStamp: 1546453102671
   }, {
     letter: "MHW",
-    name: "r/monsterhunter/",
-    url: "https://www.reddit.com/r/monsterhunter/",
+    name: "r/monsterhunterworld/",
+    url: "https://www.reddit.com/r/monsterhunterworld/",
     timeStamp: 1546453103110
   }, {
     letter: "M",
