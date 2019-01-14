@@ -70,8 +70,8 @@
 
 .menu-close {
   margin: 0;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
   border-radius: 0;
 }
 
@@ -100,6 +100,10 @@
   }
 
   .menu-nav {
+    flex-direction: row;
+  }
+
+  .menu-nav-area {
     flex-direction: row;
   }
 
