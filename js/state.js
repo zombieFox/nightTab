@@ -70,7 +70,7 @@ var state = (function() {
         },
         random: {
           active: false,
-          style: "light"
+          style: "any"
         }
       },
     },

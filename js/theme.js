@@ -12,18 +12,39 @@ var theme = (function() {
         return Math.floor(Math.random() * (max - min) + 1) + min;
       };
       var color = {
+        any: function() {
+          return {
+            h: randomVal(0, 360),
+            s: randomVal(0, 100),
+            l: randomVal(0, 100)
+          };
+        },
         light: function() {
           return {
             h: randomVal(0, 360),
-            s: randomVal(50, 100),
-            l: randomVal(50, 100)
+            s: randomVal(50, 90),
+            l: randomVal(50, 90)
           };
         },
         dark: function() {
           return {
             h: randomVal(0, 360),
-            s: randomVal(0, 50),
-            l: randomVal(0, 40)
+            s: randomVal(10, 50),
+            l: randomVal(10, 50)
+          };
+        },
+        pastel: function() {
+          return {
+            h: randomVal(0, 360),
+            s: 100,
+            l: 80
+          };
+        },
+        saturated: function() {
+          return {
+            h: randomVal(0, 360),
+            s: 100,
+            l: 50
           };
         }
       };

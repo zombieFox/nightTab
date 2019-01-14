@@ -35,7 +35,7 @@ var update = (function() {
   var _update_230 = function(data) {
     data.state.layout.theme.random = {
       active: data.state.layout.theme.random,
-      style: "light"
+      style: "any"
     };
     data.version = 2.30;
     return data;
