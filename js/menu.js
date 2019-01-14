@@ -2,11 +2,16 @@ var menu = (function() {
 
   var _bind = function() {
     var allMenuNavButton = helper.eA(".menu-nav-button");
+    var menuClose = helper.e(".menu-close");
     allMenuNavButton.forEach(function(arrayItem, index) {
       arrayItem.addEventListener("click", function() {
         _tab(this);
       }, false);
     });
+    menuClose.addEventListener("click", function() {
+      close();
+      shade.destroy();
+    }, false);
   };
 
   var _tab = function(button) {
