@@ -28,10 +28,6 @@
   grid-template-columns: 1fr;
 }
 
-.is-layout-thin.is-link-block .link-area {
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .link-item {
   width: 100%;
   height: var(--link-height);
