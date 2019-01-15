@@ -36,7 +36,7 @@ var theme = (function() {
         pastel: function() {
           return {
             h: randomVal(0, 360),
-            s: 100,
+            s: 50,
             l: 80
           };
         },
