@@ -4,6 +4,11 @@ var header = (function() {
     window.addEventListener("resize", function(event) {
       render();
     }, false);
+    helper.eA(".container").forEach(function(arrayItem, index) {
+      arrayItem.addEventListener("transitionend", function() {
+        render();
+      }, false);
+    });
   };
 
   var render = function() {
