@@ -48,6 +48,12 @@ var keyboard = (function() {
         control.render();
         data.save();
       };
+      // ctrl+alt+r
+      if (event.ctrlKey && event.altKey && event.keyCode == 82) {
+        theme.random();
+        theme.render();
+        data.save();
+      };
     }, false);
   };
 
