@@ -98,7 +98,7 @@ var helper = (function() {
     var green;
     var blue;
 
-    if (huePrime === 0) {
+    if (huePrime === 0 || huePrime === 6) {
       red = chroma;
       green = secondComponent;
       blue = 0;
