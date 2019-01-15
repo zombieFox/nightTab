@@ -12,6 +12,10 @@
   z-index: var(--z-index-menu);
 }
 
+.menu:focus {
+  outline: 0;
+}
+
 .is-menu-open .menu {
   transform: translateY(0);
 }
@@ -89,11 +93,6 @@
   padding-bottom: 1.5em;
 }
 
-.menu-nav-button.active {
-  background-color: var(--gray-04);
-  color: var(--white);
-}
-
 @media (min-width: 550px) {
   .menu {
     max-height: calc(90vh - 2em);
@@ -116,11 +115,13 @@
   .menu {
     width: calc(60vw - 2em);
     max-height: calc(100vh - 2em);
+    max-width: 40em;
   }
 }
 
 @media (min-width: 1100px) {
   .menu {
     width: calc(50vw - 2em);
+    max-width: 50em;
   }
 }

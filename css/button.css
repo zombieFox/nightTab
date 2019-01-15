@@ -84,6 +84,7 @@ button [class*=" icon-"],
 
 .button.active {
   border-bottom-color: rgb(var(--accent));
+  color: var(--white);
 }
 
 .button-small {

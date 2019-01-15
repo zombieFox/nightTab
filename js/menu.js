@@ -51,7 +51,7 @@ var menu = (function() {
     var html = helper.e("html");
     if (state.get().menu.active) {
       helper.addClass(html, "is-menu-open");
-      helper.e(".menu-nav-button.active").focus();
+      helper.e(".menu").focus();
       shade.render({
         action: function() {
           close();
