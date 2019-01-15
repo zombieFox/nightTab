@@ -16,6 +16,7 @@ New-tab-page/Start-page for all browsers
   - ctrl+alt+a to add a new bookmark
   - ctrl+alt+m to open menu
   - ctrl+alt+e to toggle edit state
+  - ctrl+alt+r random theme if option is turned on in menu > layout > random Accent colour
 - Responsive design
 - Customise Accent colour!
 - Can be installed on Chrome as an extension
@@ -34,6 +35,7 @@ All options available:
 - Layout
   - Fluid, Wide or Thin
   - Scroll past end of page
+  - Random theme colour
 
 ---
 [![nightTab Demo](screenshots/screenshot-001.gif)](https://zombiefox.github.io/nightTab/)
