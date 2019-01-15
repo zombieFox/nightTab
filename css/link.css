@@ -42,6 +42,7 @@
   transition: all var(--animation-speed-fast) ease-in-out;
 }
 
+.link-item:focus-within,
 .link-item:focus,
 .link-item:hover {
   transform: scale(1.06);
@@ -77,13 +78,16 @@
   justify-content: flex-start;
 }
 
+.link-panel-front:hover,
 .link-panel-front:focus {
   background-color: var(--gray-03);
   outline: 0;
+  text-decoration: none;
 }
 
-.link-item:hover .link-panel-front,
-.link-item:focus .link-panel-front {
+.link-item:focus .link-panel-front,
+.link-item:focus-within .link-panel-front,
+.link-item:hover .link-panel-front {
   text-decoration: none;
   outline: 0;
   background-color: var(--gray-03);
@@ -177,8 +181,9 @@
   justify-content: flex-start;
 }
 
-.link-item:hover .link-url,
-.link-item:focus .link-url {
+.link-item:focus-within .link-url,
+.link-item:focus .link-url,
+.link-item:hover .link-url {
   height: var(--url-height);
 }
 
@@ -198,6 +203,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: all var(--animation-speed-fast) ease-in-out;
 }
 
 .is-link-block .link-letter {
@@ -219,6 +225,10 @@
   color: var(--white);
 }
 
+.link-panel-front:focus .link-letter {
+  color: var(--white);
+}
+
 .link-name {
   margin: 0;
   font-size: 0.9em;
@@ -228,6 +238,16 @@
   overflow: hidden;
   max-width: 100%;
   text-overflow: ellipsis;
+  transition: all var(--animation-speed-fast) ease-in-out;
+}
+
+.link-item:hover .link-name,
+.link-item:focus .link-name {
+  color: var(--white);
+}
+
+.link-panel-front:focus .link-name {
+  color: var(--white);
 }
 
 .link-empty {
@@ -242,13 +262,6 @@
 
 .is-link-block .link-name {
   text-align: center;
-}
-
-.is-link-list .link-name {}
-
-.link-item:hover .link-name,
-.link-item:focus .link-name {
-  color: var(--white);
 }
 
 .is-edit .link-panel-front,
