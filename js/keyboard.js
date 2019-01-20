@@ -22,8 +22,10 @@ var keyboard = (function() {
       };
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
-        menu.close();
-        link.add();
+        if (state.get().link.show.active) {
+          menu.close();
+          link.add();
+        };
       };
       // ctrl+alt+m
       if (event.ctrlKey && event.altKey && event.keyCode == 77) {

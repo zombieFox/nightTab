@@ -1,14 +1,31 @@
 .header {
-  background-color: var(--background);
+  width: 100%;
+}
+
+.is-link .header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: var(--z-index-header);
 }
 
+.is-link .header:before {
+  background-color: var(--background);
+  background-image: url("../20180116194717.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  width: 100%;
+  height: calc(100% - 1em);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .header-area {
-  margin: calc(var(--gutter) * 4) calc(var(--gutter) * -1) calc(var(--gutter) * 2) calc(var(--gutter) * -1);
+  margin: calc(var(--gutter) * 4) calc(var(--gutter) * -1);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

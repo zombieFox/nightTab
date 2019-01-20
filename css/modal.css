@@ -37,10 +37,10 @@
 }
 
 .modal-body {
-  background-color: var(--gray-02);
+  background-color: rgb(var(--gray-02));
   border-radius: var(--radius) var(--radius) 0 0;
   border-bottom: 1em solid transparent;
-  border-bottom-color: var(--gray-02);
+  border-bottom-color: rgb(var(--gray-02));
   padding: 2em;
   max-height: calc(90vh - 3.6666666667em);
   overflow: scroll;
@@ -56,7 +56,7 @@
 }
 
 .modal-controls {
-  background-color: var(--gray-02);
+  background-color: rgb(var(--gray-02));
   margin: -1em 0 0;
   position: relative;
   z-index: 2;

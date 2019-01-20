@@ -71,6 +71,21 @@ var control = (function() {
         }
       };
       view[state.get().link.style]();
+      if (state.get().link.show.active) {
+        helper.addClass(html, "is-link");
+      } else {
+        helper.removeClass(html, "is-link");
+      };
+      if (state.get().link.show.name) {
+        helper.addClass(html, "is-link-name");
+      } else {
+        helper.removeClass(html, "is-link-name");
+      };
+      if (state.get().link.show.url) {
+        helper.addClass(html, "is-link-url");
+      } else {
+        helper.removeClass(html, "is-link-url");
+      };
     };
     var _layout = function() {
       helper.removeClass(html, "is-layout-fluid");
@@ -203,11 +218,33 @@ var control = (function() {
         });
       };
     };
+    var _link = function() {
+      if (state.get().link.show.active) {
+        helper.e(".control-link-show-name").disabled = false;
+        helper.e(".control-link-show-url").disabled = false;
+        helper.e(".control-link-style-block").disabled = false;
+        helper.e(".control-link-style-list").disabled = false;
+        helper.e(".control-link-new-tab").disabled = false;
+        helper.e(".control-link-sort-none").disabled = false;
+        helper.e(".control-link-sort-name").disabled = false;
+        helper.e(".control-link-sort-letter").disabled = false;
+      } else {
+        helper.e(".control-link-show-name").disabled = true;
+        helper.e(".control-link-show-url").disabled = true;
+        helper.e(".control-link-style-block").disabled = true;
+        helper.e(".control-link-style-list").disabled = true;
+        helper.e(".control-link-new-tab").disabled = true;
+        helper.e(".control-link-sort-none").disabled = true;
+        helper.e(".control-link-sort-name").disabled = true;
+        helper.e(".control-link-sort-letter").disabled = true;
+      };
+    };
     _edit();
     _date();
     _clock();
     _search();
     _theme();
+    _link();
   };
 
   var _bind = function() {
@@ -260,6 +297,34 @@ var control = (function() {
       });
       link.clear();
       link.render();
+      data.save();
+    });
+    helper.e(".control-link-show-active").addEventListener("change", function() {
+      state.change({
+        path: "link.show.active",
+        value: this.checked
+      });
+      render();
+      dependents();
+      header.render();
+      data.save();
+    });
+    helper.e(".control-link-show-name").addEventListener("change", function() {
+      state.change({
+        path: "link.show.name",
+        value: this.checked
+      });
+      render();
+      dependents();
+      data.save();
+    });
+    helper.e(".control-link-show-url").addEventListener("change", function() {
+      state.change({
+        path: "link.show.url",
+        value: this.checked
+      });
+      render();
+      dependents();
       data.save();
     });
     helper.eA("input[name='control-link-style']").forEach(function(arrayItem, index) {
@@ -510,6 +575,14 @@ var control = (function() {
       render();
       data.save();
     }, false);
+    helper.e(".control-background").addEventListener("input", function() {
+      var body = helper.e("body");
+      if (this.value != "") {
+        body.style.backgroundImage = "url(" + this.value + ")";
+      } else {
+        body.style.backgroundImage = "none";
+      };
+    }, false);
   };
 
   var update = function() {
@@ -518,6 +591,9 @@ var control = (function() {
     helper.e(".control-layout-theme-random").checked = state.get().layout.theme.random.active;
     helper.e(".control-layout-theme-style-" + state.get().layout.theme.random.style).checked = true;
     helper.e(".control-link-new-tab").value = state.get().link.style.newTab;
+    helper.e(".control-link-show-active").checked = state.get().link.show.active;
+    helper.e(".control-link-show-name").checked = state.get().link.show.name;
+    helper.e(".control-link-show-url").checked = state.get().link.show.url;
     helper.e(".control-link-style-" + state.get().link.style).checked = true;
     helper.e(".control-link-sort-" + state.get().link.sort).checked = true;
     helper.e(".control-header-search-active").checked = state.get().header.search.active;

@@ -17,7 +17,8 @@ var header = (function() {
     var link = helper.e(".link");
     var height = parseInt(getComputedStyle(header).height, 10);
     var fontSize = parseInt(getComputedStyle(html).fontSize, 10);
-    link.style.marginTop = (height + fontSize) + "px";
+    // link.style.marginTop = (height + fontSize) + "px";
+    link.style.marginTop = height + "px";
   };
 
   var init = function() {

@@ -1,5 +1,5 @@
 .menu {
-  background-color: var(--gray-02);
+  background-color: rgb(var(--gray-02));
   border-radius: var(--radius);
   position: fixed;
   top: 1em;
@@ -63,7 +63,7 @@
 
 .menu-item {
   padding-bottom: 2em;
-  border-bottom: var(--line-width) solid var(--gray-04);
+  border-bottom: var(--line-width) solid rgb(var(--gray-04));
 }
 
 .menu-item:last-child,

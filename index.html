@@ -42,7 +42,7 @@
         </div>
         <div class="header-item header-search">
           <form class="search" action="" method="get">
-            <input class="search-input mb-0" type="text" placeholder="Find or Search" tabindex="1" name="q" autocomplete="off" tabindex="1">
+            <input class="search-input mb-0" type="text" placeholder="Find or Search" name="q" autocomplete="off" tabindex="1">
             <input type="submit" value="Search" class="is-hidden">
           </form>
           <button class="button mb-0 ml-3 search-clear" tabindex="1" disabled>
@@ -69,6 +69,9 @@
               <span class="button-text">Accent</span>
             </label>
           </div>
+        </div>
+        <div class="header-item">
+          <input class="control-background mb-0" type="text" placeholder="Relative file path" autocomplete="off" tabindex="1">
         </div>
         <div class="header-item header-menu">
           <button class="button mb-0 control-menu" tabindex="1">
@@ -225,6 +228,21 @@
         </div>
         <div class="menu-content-area menu-content-area-bookmarks is-hidden">
           <div class="menu-item">
+            <h1 class="menu-header">Bookmarks</h1>
+            <div class="checkbox-wrap">
+              <input id="control-link-show-active" class="control-link-show-active" type="checkbox" tabindex="1">
+              <label for="control-link-show-active"><span class="label-icon"></span>Show</label>
+            </div>
+            <div class="checkbox-wrap form-indent-1">
+              <input id="control-link-show-name" class="control-link-show-name" type="checkbox" tabindex="1">
+              <label for="control-link-show-name"><span class="label-icon"></span>Names</label>
+            </div>
+            <div class="checkbox-wrap form-indent-1">
+              <input id="control-link-show-url" class="control-link-show-url" type="checkbox" tabindex="1">
+              <label for="control-link-show-url"><span class="label-icon"></span>URL (on hover)</label>
+            </div>
+          </div>
+          <div class="menu-item">
             <h1 class="menu-header">Open</h1>
             <div class="checkbox-wrap">
               <input id="control-link-new-tab" class="control-link-new-tab" type="checkbox" tabindex="1">
@@ -246,7 +264,7 @@
             <h1 class="menu-header">Sort</h1>
             <div class="radio-wrap">
               <input id="control-link-sort-none" class="control-link-sort-none" type="radio" tabindex="1" name="control-link-sort" value="none">
-              <label for="control-link-sort-none"><span class="label-icon"></span>None (As added)</label>
+              <label for="control-link-sort-none"><span class="label-icon"></span>None (as added)</label>
             </div>
             <div class="radio-wrap">
               <input id="control-link-sort-name" class="control-link-sort-name" type="radio" tabindex="1" name="control-link-sort" value="name">

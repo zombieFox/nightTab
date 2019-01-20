@@ -3,10 +3,11 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: var(--gray-02);
+  background-color: rgba(var(--gray-02), 0.6);
+  background-color: transparent;
   padding: 0.125em 1em;
   margin: 0 0 1em 0;
-  color: var(--gray-12);
+  color: rgb(var(--gray-12));
   font-size: 1em;
   font-family: var(--font-regular);
   min-height: 2.5em;
@@ -39,9 +40,9 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: var(--gray-03);
-  border-bottom-color: var(--gray-08);
-  color: var(--white);
+  background-color: rgb(var(--gray-03));
+  border-bottom-color: rgb(var(--gray-08));
+  color: rgb(var(--white));
   outline: 0;
 }
 
@@ -50,9 +51,9 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  background-color: var(--gray-04);
+  background-color: rgb(var(--gray-04));
   border-bottom-color: rgb(var(--accent));
-  color: var(--white);
+  color: rgb(var(--white));
   transition: none;
 }
 
@@ -64,9 +65,9 @@ button[disabled]:focus,
 .button[disabled]:focus,
 button[disabled]:active,
 .button[disabled]:active {
-  background-color: var(--gray-02);
+  background-color: rgba(var(--gray-02), 0.6);
   border-color: transparent;
-  color: var(--gray-04);
+  color: rgb(var(--gray-04));
   cursor: default;
 }
 
@@ -84,7 +85,7 @@ button [class*=" icon-"],
 
 .button.active {
   border-bottom-color: rgb(var(--accent));
-  color: var(--white);
+  color: rgb(var(--white));
 }
 
 .button-small {

@@ -53,6 +53,11 @@ var state = (function() {
       }
     },
     link: {
+      show: {
+        active: true,
+        name: true,
+        url: true
+      },
       editObject: null,
       newTab: false,
       style: "block",
