@@ -46,18 +46,12 @@
   margin-right: 0.125em;
 }
 
-.date-date {
+.date-day {
   color: rgb(var(--white));
 }
 
-.date-day {
-  color: rgb(var(--gray-16));
-}
-
-.date-month {
-  color: rgb(var(--gray-12));
-}
-
+.date-date,
+.date-month,
 .date-year {
-  color: rgb(var(--gray-10));
+  color: rgb(var(--gray-18));
 }

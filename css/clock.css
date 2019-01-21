@@ -50,14 +50,8 @@
   color: rgb(var(--white));
 }
 
-.clock-minutes {
-  color: rgb(var(--gray-16));
-}
-
-.clock-seconds {
-  color: rgb(var(--gray-12));
-}
-
+.clock-minutes,
+.clock-seconds,
 .clock-meridiem {
-  color: rgb(var(--gray-10));
+  color: rgb(var(--gray-18));
 }

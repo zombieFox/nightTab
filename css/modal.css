@@ -52,7 +52,7 @@
 .modal-heading {}
 
 .modal-heading:focus {
-  outline: 0;
+  outline: none;
 }
 
 .modal-controls {

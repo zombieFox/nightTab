@@ -42,7 +42,7 @@ input[type="submit"]:focus {
   background-color: rgb(var(--gray-03));
   border-bottom-color: rgb(var(--gray-08));
   color: rgb(var(--white));
-  outline: 0;
+  outline: none;
 }
 
 button:active,
@@ -64,7 +64,7 @@ button[disabled]:focus,
 .button[disabled]:focus,
 button[disabled]:active,
 .button[disabled]:active {
-  background-color: rgba(var(--gray-02), 0.4);
+  background-color: rgba(var(--gray-02), 0.2);
   border-color: transparent;
   color: rgb(var(--gray-04));
   cursor: default;

@@ -13,7 +13,7 @@
 }
 
 .menu:focus {
-  outline: 0;
+  outline: none;
 }
 
 .is-menu-open .menu {

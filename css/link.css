@@ -82,7 +82,7 @@
 .link-panel-front:hover,
 .link-panel-front:focus {
   background-color: rgb(var(--gray-03));
-  outline: 0;
+  outline: none;
   text-decoration: none;
 }
 
@@ -90,7 +90,7 @@
 .link-item:focus-within .link-panel-front,
 .link-item:hover .link-panel-front {
   text-decoration: none;
-  outline: 0;
+  outline: none;
   background-color: rgb(var(--gray-03));
   box-shadow: 0 2px 1em 0 rgba(0, 0, 0, 0.4);
 }
