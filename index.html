@@ -72,9 +72,6 @@
             </label>
           </div>
         </div>
-        <div class="header-item">
-          <input class="control-background mb-0" type="text" placeholder="Relative file path" autocomplete="off" tabindex="1">
-        </div>
         <div class="header-item header-menu">
           <button class="button mb-0 control-menu" tabindex="1">
             <span class="button-text"><span class="icon-settings"></span></span>
@@ -103,6 +100,9 @@
           </li>
           <li class="menu-nav-item">
             <button class="menu-nav-button button button-block button-large" data-target=".menu-content-area-layout" tabindex="1">Layout</button>
+          </li>
+          <li class="menu-nav-item">
+            <button class="menu-nav-button button button-block button-large" data-target=".menu-content-area-background" tabindex="1">Background</button>
           </li>
         </ul>
         <div class="menu-nav-area">
@@ -342,6 +342,31 @@
             <div class="radio-wrap form-indent-1">
               <input id="control-layout-theme-style-saturated" class="control-layout-theme-style-saturated" type="radio" tabindex="1" name="control-layout-theme-style" value="saturated">
               <label for="control-layout-theme-style-saturated"><span class="label-icon"></span>Saturated colours</label>
+            </div>
+          </div>
+        </div>
+        <div class="menu-content-area menu-content-area-background is-hidden">
+          <div class="menu-item">
+            <h1 class="menu-header">Image</h1>
+            <div class="checkbox-wrap">
+              <input id="control-background-image-active" class="control-background-image-active" type="checkbox" tabindex="1">
+              <label for="control-background-image-active"><span class="label-icon"></span>Show</label>
+            </div>
+            <div class="input-wrap form-indent-1">
+              <label for="control-background-image-url">URL</label>
+              <input id="control-background-image-url" type="text" class="control-background-image-url" placeholder="Path to file" tabindex="1" autocomplete="off">
+            </div>
+            <div class="input-wrap form-indent-1">
+              <label for="control-background-image-opacity">Opacity</label>
+              <input id="control-background-image-opacity" type="range" min="0" max="100" value="0" class="control-background-image-opacity mb-0" placeholder="Path to file" tabindex="1" autocomplete="off">
+            </div>
+            <div class="input-wrap form-indent-1">
+              <label for="control-background-image-blur">Blur</label>
+              <input id="control-background-image-blur" type="range" min="0" max="30" value="0" class="control-background-image-blur mb-0" placeholder="Path to file" tabindex="1" autocomplete="off">
+            </div>
+            <div class="input-wrap form-indent-1">
+              <label for="control-background-image-accent-opacity">Accent overlay</label>
+              <input id="control-background-image-accent-opacity" type="range" min="0" max="100" value="0" class="control-background-image-accent-opacity mb-0" placeholder="URL or path to file" tabindex="1" autocomplete="off">
             </div>
           </div>
         </div>

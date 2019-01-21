@@ -82,6 +82,15 @@ var state = (function() {
         }
       },
     },
+    background: {
+      image: {
+        active: false,
+        url: "../background/sample.jpg",
+        blur: 0,
+        opacity: 1,
+        accentOpacity: 0
+      }
+    },
     edit: {
       active: false
     },

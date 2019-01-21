@@ -1,22 +1,34 @@
 .background {
-  background-image: var(--background-image);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
   z-index: var(--z-index-background);
-  /* filter: blur(5px); */
+}
+
+.background:before {
+  background-image: var(--background-image);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: block;
+  opacity: var(--background-opacity);
+  filter: blur(var(--background-blur));
 }
 
 .background:after {
   content: "";
-  /* background-color: rgba(var(--accent), 0.2); */
-  position: relative;
+  background-color: rgba(var(--accent), var(--background-accent-opacity));
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

@@ -7,21 +7,11 @@
   position: fixed;
   top: 0;
   left: 0;
+  transition: background-color var(--animation-speed-medium) ease;
 }
 
-.is-link .header:before {
-  background-color: var(--background);
-  background-image: var(--background-image);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  content: "";
-  width: 100%;
-  height: calc(100% - 1em);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+.header-background {
+  background-color: rgba(var(--gray-01), 0.9);
 }
 
 .header-area {

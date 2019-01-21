@@ -249,12 +249,34 @@ var control = (function() {
         helper.e(".control-layout-alignment-vertical-bottom").disabled = false;
       };
     };
+    var _background = function() {
+      if (state.get().background.image.active) {
+        helper.e("[for=control-background-image-url]").removeAttribute("disabled");
+        helper.e(".control-background-image-url").disabled = false;
+        helper.e("[for=control-background-image-opacity]").removeAttribute("disabled");
+        helper.e(".control-background-image-opacity").disabled = false;
+        helper.e("[for=control-background-image-blur]").removeAttribute("disabled");
+        helper.e(".control-background-image-blur").disabled = false;
+        helper.e("[for=control-background-image-accent-opacity]").removeAttribute("disabled");
+        helper.e(".control-background-image-accent-opacity").disabled = false;
+      } else {
+        helper.e("[for=control-background-image-url]").setAttribute("disabled", "");
+        helper.e(".control-background-image-url").disabled = true;
+        helper.e("[for=control-background-image-opacity]").setAttribute("disabled", "");
+        helper.e(".control-background-image-opacity").disabled = true;
+        helper.e("[for=control-background-image-blur]").setAttribute("disabled", "");
+        helper.e(".control-background-image-blur").disabled = true;
+        helper.e("[for=control-background-image-accent-opacity]").setAttribute("disabled", "");
+        helper.e(".control-background-image-accent-opacity").disabled = true;
+      };
+    };
     _edit();
     _date();
     _clock();
     _search();
     _theme();
     _link();
+    _background();
   };
 
   var _bind = function() {
@@ -595,15 +617,47 @@ var control = (function() {
       render();
       data.save();
     }, false);
-    helper.e(".control-background").addEventListener("input", function() {
-      console.log(this.value);
-      var html = helper.e("html");
-      if (this.value != "") {
-        html.style.setProperty("--background-image", "url(" + this.value + ")");
-      } else {
-        html.style.setProperty("--background-image", "url(\"../background/sample.jpg\")");
-        // body.style.removeProperty("--background-image");
-      };
+    helper.e(".control-background-image-active").addEventListener("change", function() {
+      state.change({
+        path: "background.image.active",
+        value: this.checked
+      });
+      render();
+      dependents();
+      background.render();
+      data.save();
+    }, false);
+    helper.e(".control-background-image-url").addEventListener("input", function() {
+      state.change({
+        path: "background.image.url",
+        value: this.value
+      });
+      background.render();
+      data.save();
+    }, false);
+    helper.e(".control-background-image-opacity").addEventListener("input", function() {
+      state.change({
+        path: "background.image.opacity",
+        value: (parseInt(this.value, 10) / 100)
+      });
+      background.render();
+      data.save();
+    }, false);
+    helper.e(".control-background-image-blur").addEventListener("input", function() {
+      state.change({
+        path: "background.image.blur",
+        value: parseInt(this.value, 10)
+      });
+      background.render();
+      data.save();
+    }, false);
+    helper.e(".control-background-image-accent-opacity").addEventListener("input", function() {
+      state.change({
+        path: "background.image.accentOpacity",
+        value: (parseInt(this.value, 10) / 100)
+      });
+      background.render();
+      data.save();
     }, false);
   };
 
@@ -640,6 +694,11 @@ var control = (function() {
     helper.e(".control-layout-alignment-vertical-" + state.get().layout.alignment.vertical).checked = true;
     helper.e(".control-layout-container-" + state.get().layout.container).checked = true;
     helper.e(".control-layout-scroll-past-end").checked = state.get().layout.scrollPastEnd;
+    helper.e(".control-background-image-active").checked = state.get().background.image.active;
+    helper.e(".control-background-image-url").value = state.get().background.image.url;
+    helper.e(".control-background-image-opacity").value = (state.get().background.image.opacity * 100);
+    helper.e(".control-background-image-blur").value = state.get().background.image.blur;
+    helper.e(".control-background-image-accent-opacity").value = (state.get().background.image.accentOpacity * 100);
   };
 
   var init = function() {

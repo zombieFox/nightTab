@@ -35,20 +35,22 @@ var keyboard = (function() {
       };
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
-        if (state.get().edit.active) {
-          state.change({
-            path: "edit.active",
-            value: false
-          });
-        } else {
-          state.change({
-            path: "edit.active",
-            value: true
-          });
+        if (state.get().link.show.active) {
+          if (state.get().edit.active) {
+            state.change({
+              path: "edit.active",
+              value: false
+            });
+          } else {
+            state.change({
+              path: "edit.active",
+              value: true
+            });
+          };
+          control.update();
+          control.render();
+          data.save();
         };
-        control.update();
-        control.render();
-        data.save();
       };
       // ctrl+alt+r
       if (event.ctrlKey && event.altKey && event.keyCode == 82) {

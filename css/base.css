@@ -34,13 +34,6 @@
   --font-bold: "Open Sans Bold", sans-serif;
   --font-light: "Open Sans Light", sans-serif;
   --font-fjalla: "Fjalla One Regular", sans-serif;
-  /* breakpoint reference */
-  /* can not be used in @media as of yet */
-  --breakpoint-sm: 550px;
-  --breakpoint-md: 700px;
-  --breakpoint-lg: 900px;
-  --breakpoint-xl: 1100px;
-  --breakpoint-xxl: 1600px;
   --z-index-background: 1000;
   --z-index-link: 2000;
   --z-index-header: 3000;
@@ -48,7 +41,17 @@
   --z-index-shade: 5000;
   --z-index-modal: 6000;
   --z-index-menu: 7000;
-  --background-image: url("../background/sample.jpg");
+  --background-image: none;
+  --background-opacity: 1;
+  --background-accent-opacity: 0;
+  --background-blur: 0;
+  /* breakpoint reference */
+  /* can not be used in @media as of yet */
+  --breakpoint-sm: 550px;
+  --breakpoint-md: 700px;
+  --breakpoint-lg: 900px;
+  --breakpoint-xl: 1100px;
+  --breakpoint-xxl: 1600px;
 }
 
 :root.is-link-block {
