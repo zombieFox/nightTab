@@ -64,7 +64,10 @@ var state = (function() {
       sort: "none"
     },
     layout: {
-      alignment: "left",
+      alignment: {
+        horizontal: "left",
+        vertical: "top"
+      },
       container: "wide",
       scrollPastEnd: true,
       theme: {

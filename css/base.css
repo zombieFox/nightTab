@@ -41,12 +41,14 @@
   --breakpoint-lg: 900px;
   --breakpoint-xl: 1100px;
   --breakpoint-xxl: 1600px;
-  --z-index-link: 1000;
-  --z-index-header: 2000;
-  --z-index-tip: 3000;
-  --z-index-shade: 4000;
-  --z-index-modal: 5000;
-  --z-index-menu: 6000;
+  --z-index-background: 1000;
+  --z-index-link: 2000;
+  --z-index-header: 3000;
+  --z-index-tip: 4000;
+  --z-index-shade: 5000;
+  --z-index-modal: 6000;
+  --z-index-menu: 7000;
+  --background-image: url("../background/sample.jpg");
 }
 
 :root.is-link-block {
@@ -88,12 +90,19 @@ body {
   font-family: var(--font-regular);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 100vh;
-  background-image: url("../20180116194717.png");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+}
+
+.is-alignment-vertical-top body {
+  justify-content: flex-start;
+}
+
+.is-alignment-vertical-center body {
+  justify-content: center;
+}
+
+.is-alignment-vertical-bottom body {
+  justify-content: flex-end;
 }
 
 .is-link body {

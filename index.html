@@ -25,11 +25,13 @@
   <link rel="stylesheet" href="css/date.css">
   <link rel="stylesheet" href="css/clock.css">
   <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/link.css">
 </head>
 
 <body>
 
+  <div class="background"></div>
 
   <header class="header">
     <div class="container">
@@ -211,18 +213,34 @@
             </div>
           </div>
           <div class="menu-item">
-            <h1 class="menu-header">Alignment</h1>
+            <h1 class="menu-header">Horizontal Alignment</h1>
             <div class="radio-wrap">
-              <input id="control-layout-alignment-left" class="control-layout-alignment-left" type="radio" tabindex="1" name="control-layout-alignment" value="left">
-              <label for="control-layout-alignment-left"><span class="label-icon"></span>Left</label>
+              <input id="control-layout-alignment-horizontal-left" class="control-layout-alignment-horizontal-left" type="radio" tabindex="1" name="control-layout-alignment-horizontal" value="left">
+              <label for="control-layout-alignment-horizontal-left"><span class="label-icon"></span>Left</label>
             </div>
             <div class="radio-wrap">
-              <input id="control-layout-alignment-center" class="control-layout-alignment-center" type="radio" tabindex="1" name="control-layout-alignment" value="center">
-              <label for="control-layout-alignment-center"><span class="label-icon"></span>Center</label>
+              <input id="control-layout-alignment-horizontal-center" class="control-layout-alignment-horizontal-center" type="radio" tabindex="1" name="control-layout-alignment-horizontal" value="center">
+              <label for="control-layout-alignment-horizontal-center"><span class="label-icon"></span>Center</label>
             </div>
             <div class="radio-wrap">
-              <input id="control-layout-alignment-right" class="control-layout-alignment-right" type="radio" tabindex="1" name="control-layout-alignment" value="right">
-              <label for="control-layout-alignment-right"><span class="label-icon"></span>Right</label>
+              <input id="control-layout-alignment-horizontal-right" class="control-layout-alignment-horizontal-right" type="radio" tabindex="1" name="control-layout-alignment-horizontal" value="right">
+              <label for="control-layout-alignment-horizontal-right"><span class="label-icon"></span>Right</label>
+            </div>
+          </div>
+          <div class="menu-item">
+            <h1 class="menu-header">Vertical Alignment</h1>
+            <p>Available when Bookmarks are note shown.</p>
+            <div class="radio-wrap">
+              <input id="control-layout-alignment-vertical-top" class="control-layout-alignment-vertical-top" type="radio" tabindex="1" name="control-layout-alignment-vertical" value="top">
+              <label for="control-layout-alignment-vertical-top"><span class="label-icon"></span>Top</label>
+            </div>
+            <div class="radio-wrap">
+              <input id="control-layout-alignment-vertical-center" class="control-layout-alignment-vertical-center" type="radio" tabindex="1" name="control-layout-alignment-vertical" value="center">
+              <label for="control-layout-alignment-vertical-center"><span class="label-icon"></span>Center</label>
+            </div>
+            <div class="radio-wrap">
+              <input id="control-layout-alignment-vertical-bottom" class="control-layout-alignment-vertical-bottom" type="radio" tabindex="1" name="control-layout-alignment-vertical" value="bottom">
+              <label for="control-layout-alignment-vertical-bottom"><span class="label-icon"></span>Bottom</label>
             </div>
           </div>
         </div>
@@ -352,6 +370,7 @@
 <script src="js/link.js"></script>
 <script src="js/version.js"></script>
 <script src="js/keyboard.js"></script>
+<script src="js/background.js"></script>
 <script src="js/init.js"></script>
 
 </html>

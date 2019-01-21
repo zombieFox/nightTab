@@ -46,3 +46,6 @@ tip.init();
 
 // render header height padding
 header.init();
+
+// render background image
+background.init();

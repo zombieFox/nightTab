@@ -54,10 +54,14 @@ var control = (function() {
       helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     };
     var _alignment = function() {
-      helper.removeClass(html, "is-alignment-left");
-      helper.removeClass(html, "is-alignment-center");
-      helper.removeClass(html, "is-alignment-right");
-      helper.addClass(html, "is-alignment-" + state.get().layout.alignment);
+      helper.removeClass(html, "is-alignment-horizontal-left");
+      helper.removeClass(html, "is-alignment-horizontal-center");
+      helper.removeClass(html, "is-alignment-horizontal-right");
+      helper.removeClass(html, "is-alignment-vertical-top");
+      helper.removeClass(html, "is-alignment-vertical-center");
+      helper.removeClass(html, "is-alignment-vertical-bottom");
+      helper.addClass(html, "is-alignment-horizontal-" + state.get().layout.alignment.horizontal);
+      helper.addClass(html, "is-alignment-vertical-" + state.get().layout.alignment.vertical);
     };
     var _link = function() {
       var view = {
@@ -228,6 +232,9 @@ var control = (function() {
         helper.e(".control-link-sort-none").disabled = false;
         helper.e(".control-link-sort-name").disabled = false;
         helper.e(".control-link-sort-letter").disabled = false;
+        helper.e(".control-layout-alignment-vertical-top").disabled = true;
+        helper.e(".control-layout-alignment-vertical-center").disabled = true;
+        helper.e(".control-layout-alignment-vertical-bottom").disabled = true;
       } else {
         helper.e(".control-link-show-name").disabled = true;
         helper.e(".control-link-show-url").disabled = true;
@@ -237,6 +244,9 @@ var control = (function() {
         helper.e(".control-link-sort-none").disabled = true;
         helper.e(".control-link-sort-name").disabled = true;
         helper.e(".control-link-sort-letter").disabled = true;
+        helper.e(".control-layout-alignment-vertical-top").disabled = false;
+        helper.e(".control-layout-alignment-vertical-center").disabled = false;
+        helper.e(".control-layout-alignment-vertical-bottom").disabled = false;
       };
     };
     _edit();
@@ -546,10 +556,20 @@ var control = (function() {
       header.render();
       data.save();
     }, false);
-    helper.eA("input[name='control-layout-alignment']").forEach(function(arrayItem, index) {
+    helper.eA("input[name='control-layout-alignment-horizontal']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
         state.change({
-          path: "layout.alignment",
+          path: "layout.alignment.horizontal",
+          value: this.value
+        });
+        render();
+        data.save();
+      }, false);
+    });
+    helper.eA("input[name='control-layout-alignment-vertical']").forEach(function(arrayItem, index) {
+      arrayItem.addEventListener("change", function() {
+        state.change({
+          path: "layout.alignment.vertical",
           value: this.value
         });
         render();
@@ -576,11 +596,13 @@ var control = (function() {
       data.save();
     }, false);
     helper.e(".control-background").addEventListener("input", function() {
-      var body = helper.e("body");
+      console.log(this.value);
+      var html = helper.e("html");
       if (this.value != "") {
-        body.style.backgroundImage = "url(" + this.value + ")";
+        html.style.setProperty("--background-image", "url(" + this.value + ")");
       } else {
-        body.style.backgroundImage = "none";
+        html.style.setProperty("--background-image", "url(\"../background/sample.jpg\")");
+        // body.style.removeProperty("--background-image");
       };
     }, false);
   };
@@ -614,7 +636,8 @@ var control = (function() {
     helper.e(".control-header-edit-add-active").checked = state.get().header.editAdd.active;
     helper.e(".control-header-accent-active").checked = state.get().header.accent.active;
     helper.e(".control-header-date-character-length-" + state.get().header.date.characterLength).checked = true;
-    helper.e(".control-layout-alignment-" + state.get().layout.alignment).checked = true;
+    helper.e(".control-layout-alignment-horizontal-" + state.get().layout.alignment.horizontal).checked = true;
+    helper.e(".control-layout-alignment-vertical-" + state.get().layout.alignment.vertical).checked = true;
     helper.e(".control-layout-container-" + state.get().layout.container).checked = true;
     helper.e(".control-layout-scroll-past-end").checked = state.get().layout.scrollPastEnd;
   };

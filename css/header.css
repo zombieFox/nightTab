@@ -1,17 +1,17 @@
 .header {
   width: 100%;
+  z-index: var(--z-index-header);
 }
 
 .is-link .header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: var(--z-index-header);
 }
 
 .is-link .header:before {
   background-color: var(--background);
-  background-image: url("../20180116194717.png");
+  background-image: var(--background-image);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -43,15 +43,15 @@
   align-items: center;
 }
 
-.is-alignment-left .header-area {
+.is-alignment-horizontal-left .header-area {
   justify-content: flex-start;
 }
 
-.is-alignment-center .header-area {
+.is-alignment-horizontal-center .header-area {
   justify-content: center;
 }
 
-.is-alignment-right .header-area {
+.is-alignment-horizontal-right .header-area {
   justify-content: flex-end;
 }
 
