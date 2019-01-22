@@ -257,6 +257,8 @@ var control = (function() {
         helper.e(".control-background-image-opacity").disabled = false;
         helper.e("[for=control-background-image-blur]").removeAttribute("disabled");
         helper.e(".control-background-image-blur").disabled = false;
+        helper.e("[for=control-background-image-grayscale]").removeAttribute("disabled");
+        helper.e(".control-background-image-grayscale").disabled = false;
         helper.e("[for=control-background-image-accent-opacity]").removeAttribute("disabled");
         helper.e(".control-background-image-accent-opacity").disabled = false;
       } else {
@@ -266,6 +268,8 @@ var control = (function() {
         helper.e(".control-background-image-opacity").disabled = true;
         helper.e("[for=control-background-image-blur]").setAttribute("disabled", "");
         helper.e(".control-background-image-blur").disabled = true;
+        helper.e("[for=control-background-image-grayscale]").setAttribute("disabled", "");
+        helper.e(".control-background-image-grayscale").disabled = true;
         helper.e("[for=control-background-image-accent-opacity]").setAttribute("disabled", "");
         helper.e(".control-background-image-accent-opacity").disabled = true;
       };
@@ -651,10 +655,18 @@ var control = (function() {
       background.render();
       data.save();
     }, false);
+    helper.e(".control-background-image-grayscale").addEventListener("input", function() {
+      state.change({
+        path: "background.image.grayscale",
+        value: parseInt(this.value, 10) / 100
+      });
+      background.render();
+      data.save();
+    }, false);
     helper.e(".control-background-image-accent-opacity").addEventListener("input", function() {
       state.change({
         path: "background.image.accentOpacity",
-        value: (parseInt(this.value, 10) / 100)
+        value: parseInt(this.value, 10) / 100
       });
       background.render();
       data.save();
@@ -698,6 +710,7 @@ var control = (function() {
     helper.e(".control-background-image-url").value = state.get().background.image.url;
     helper.e(".control-background-image-opacity").value = 100 - (state.get().background.image.opacity * 100);
     helper.e(".control-background-image-blur").value = state.get().background.image.blur;
+    helper.e(".control-background-image-grayscale").value = state.get().background.image.grayscale * 100;
     helper.e(".control-background-image-accent-opacity").value = (state.get().background.image.accentOpacity * 100);
   };
 

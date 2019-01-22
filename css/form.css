@@ -65,12 +65,12 @@ input[type="text"][disabled]:focus::placeholder {
   box-shadow: none;
 }
 
-input[type="email"][disabled]+.input-helper,
-input[type="number"][disabled]+.input-helper,
-input[type="password"][disabled]+.input-helper,
-input[type="search"][disabled]+.input-helper,
-input[type="tel"][disabled]+.input-helper,
-input[type="text"][disabled]+.input-helper {
+input[type="email"][disabled]~.input-helper,
+input[type="number"][disabled]~.input-helper,
+input[type="password"][disabled]~.input-helper,
+input[type="search"][disabled]~.input-helper,
+input[type="tel"][disabled]~.input-helper,
+input[type="text"][disabled]~.input-helper {
   color: rgb(var(--gray-06));
 }
 

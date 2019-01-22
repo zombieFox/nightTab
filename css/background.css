@@ -8,13 +8,12 @@
   z-index: var(--z-index-background);
 }
 
-.background:before {
+.background-image {
   background-image: var(--background-image);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -22,13 +21,12 @@
   pointer-events: none;
   display: block;
   opacity: var(--background-opacity);
-  filter: blur(var(--background-blur));
+  filter: blur(var(--background-blur)) grayscale(var(--background-grayscale));
 }
 
-.background:after {
-  content: "";
+.background-accent {
   background-color: rgba(var(--accent), var(--background-accent-opacity));
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;

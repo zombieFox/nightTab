@@ -45,6 +45,7 @@
 
 .menu-nav-item {
   flex-grow: 1;
+  flex-basis: 0;
 }
 
 .menu-nav-item:not(:last-child) {

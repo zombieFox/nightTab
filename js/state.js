@@ -88,6 +88,7 @@ var state = (function() {
         url: "../background/sample.jpg",
         blur: 0,
         opacity: 1,
+        grayscale: 0,
         accentOpacity: 0
       }
     },

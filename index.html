@@ -31,7 +31,10 @@
 
 <body>
 
-  <div class="background"></div>
+  <div class="background">
+    <div class="background-image"></div>
+    <div class="background-accent"></div>
+  </div>
 
   <header class="header">
     <div class="container">
@@ -44,7 +47,7 @@
         </div>
         <div class="header-item header-search">
           <form class="search" action="" method="get">
-            <input class="search-input mb-0" type="text" placeholder="Find or Search" name="q" autocomplete="off" tabindex="1">
+            <input class="search-input mb-0" type="text" placeholder="Find or Search" name="q" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="1">
             <input type="submit" value="Search" class="is-hidden">
           </form>
           <button class="button mb-0 ml-3 search-clear" tabindex="1" disabled>
@@ -198,7 +201,7 @@
             </div>
             <div class="input-wrap form-indent-2">
               <label for="control-header-search-engine-custom-url">URL</label>
-              <input id="control-header-search-engine-custom-url" type="text" class="control-header-search-engine-custom-url mb-0" placeholder="https://" tabindex="1" autocomplete="off">
+              <input id="control-header-search-engine-custom-url" type="text" class="control-header-search-engine-custom-url mb-0" placeholder="https://" tabindex="1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
             </div>
           </div>
           <div class="menu-item">
@@ -353,21 +356,27 @@
               <label for="control-background-image-active"><span class="label-icon"></span>Show</label>
             </div>
             <div class="input-wrap form-indent-1">
-              <label for="control-background-image-url">URL</label>
-              <input id="control-background-image-url" type="text" class="control-background-image-url" placeholder="Path to file" tabindex="1" autocomplete="off">
-              <p class="input-helper small muted">Use relative path for local files or full URLs. Eg:</p>
+              <label for="control-background-image-url">URL or path</label>
+              <input id="control-background-image-url" type="text" class="control-background-image-url" placeholder="http:// or ../path/to/file" tabindex="1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+              <p class="input-helper small muted">Use relative path for local files, eg:</p>
+              <p class="input-helper small muted">../background/abstract.jpg</p>
+              <p class="input-helper small muted">../background/gray-steps.jpg</p>
             </div>
             <div class="input-wrap form-indent-1">
               <label for="control-background-image-opacity">Opacity</label>
-              <input id="control-background-image-opacity" type="range" min="0" max="100" value="0" class="control-background-image-opacity mb-0" placeholder="Path to file" tabindex="1" autocomplete="off">
+              <input id="control-background-image-opacity" type="range" min="0" max="100" value="0" class="control-background-image-opacity mb-0" placeholder="Path to file" tabindex="1">
+            </div>
+            <div class="input-wrap form-indent-1">
+              <label for="control-background-image-grayscale">Grayscale</label>
+              <input id="control-background-image-grayscale" type="range" min="0" max="100" value="0" class="control-background-image-grayscale mb-0" placeholder="Path to file" tabindex="1">
             </div>
             <div class="input-wrap form-indent-1">
               <label for="control-background-image-blur">Blur</label>
-              <input id="control-background-image-blur" type="range" min="0" max="30" value="0" class="control-background-image-blur mb-0" placeholder="Path to file" tabindex="1" autocomplete="off">
+              <input id="control-background-image-blur" type="range" min="0" max="30" value="0" class="control-background-image-blur mb-0" placeholder="Path to file" tabindex="1">
             </div>
             <div class="input-wrap form-indent-1">
               <label for="control-background-image-accent-opacity">Accent overlay</label>
-              <input id="control-background-image-accent-opacity" type="range" min="0" max="20" value="0" class="control-background-image-accent-opacity mb-0" placeholder="URL or path to file" tabindex="1" autocomplete="off">
+              <input id="control-background-image-accent-opacity" type="range" min="0" max="20" value="0" class="control-background-image-accent-opacity mb-0" placeholder="URL or path to file" tabindex="1">
             </div>
           </div>
         </div>
