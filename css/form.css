@@ -370,24 +370,43 @@ input[type="radio"]:checked+label .label-icon:before {
 }
 
 input[type="range"] {
-  background-color: rgb(var(--gray-08));
+  /* background-color: rgb(var(--gray-08)); */
+  background-color: transparent;
   padding: 0;
   margin: 0 0 1em 0;
   color: rgb(var(--black));
   font-size: 1em;
   font-family: var(--font-regular);
-  height: var(--line-width);
+  height: 2em;
   width: 100%;
   border: 0;
   border-radius: var(--radius);
-  transition: all var(--animation-speed-fast) ease-in-out;
+  cursor: pointer;
+  position: relative;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-appearance: none;
 }
 
+input[type="range"]:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: rgb(var(--gray-08));
+  height: var(--line-width);
+  width: 100%;
+  border: 0;
+  border-radius: var(--radius);
+  transform: translate(0, -50%);
+  transition: all var(--animation-speed-fast) ease-in-out;
+}
+
 input[type="range"]:focus {
-  background-color: rgb(var(--white));
   outline: none;
+}
+
+input[type="range"]:focus:before {
+  background-color: rgb(var(--white));
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
