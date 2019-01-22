@@ -7,11 +7,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  transition: background-color var(--animation-speed-medium) ease;
+  transition: background-color var(--animation-speed-fast) ease-in-out;
 }
 
 .header-background {
-  background-color: rgba(var(--gray-01), 0.9);
+  background-color: rgba(var(--gray-01), 0.95);
 }
 
 .header-area {

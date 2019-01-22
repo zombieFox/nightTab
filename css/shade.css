@@ -1,5 +1,6 @@
 .shade {
-  background-color: rgba(var(--accent), 0.2);
+  /* background-color: rgba(var(--accent), 0.2); */
+  background-color: rgba(var(--black), 0.4);
   position: fixed;
   top: -1em;
   left: -1em;

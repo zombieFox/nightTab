@@ -638,7 +638,7 @@ var control = (function() {
     helper.e(".control-background-image-opacity").addEventListener("input", function() {
       state.change({
         path: "background.image.opacity",
-        value: (parseInt(this.value, 10) / 100)
+        value: (100 - parseInt(this.value)) / 100
       });
       background.render();
       data.save();
@@ -696,7 +696,7 @@ var control = (function() {
     helper.e(".control-layout-scroll-past-end").checked = state.get().layout.scrollPastEnd;
     helper.e(".control-background-image-active").checked = state.get().background.image.active;
     helper.e(".control-background-image-url").value = state.get().background.image.url;
-    helper.e(".control-background-image-opacity").value = (state.get().background.image.opacity * 100);
+    helper.e(".control-background-image-opacity").value = 100 - (state.get().background.image.opacity * 100);
     helper.e(".control-background-image-blur").value = state.get().background.image.blur;
     helper.e(".control-background-image-accent-opacity").value = (state.get().background.image.accentOpacity * 100);
   };
