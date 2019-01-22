@@ -3,7 +3,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: rgba(var(--gray-02), 0.4);
+  background-color: rgb(var(--gray-02));
   padding: 0.125em 1em;
   margin: 0 0 1em 0;
   color: rgb(var(--gray-12));
@@ -64,7 +64,7 @@ button[disabled]:focus,
 .button[disabled]:focus,
 button[disabled]:active,
 .button[disabled]:active {
-  background-color: rgba(var(--gray-02), 0.2);
+  background-color: rgb(var(--gray-02));
   border-color: transparent;
   color: rgb(var(--gray-04));
   cursor: default;
