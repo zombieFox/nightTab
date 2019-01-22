@@ -53,5 +53,5 @@
 .clock-minutes,
 .clock-seconds,
 .clock-meridiem {
-  color: rgb(var(--gray-18));
+  color: rgb(var(--gray-19));
 }
