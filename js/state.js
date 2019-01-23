@@ -85,7 +85,7 @@ var state = (function() {
     background: {
       image: {
         active: false,
-        url: "../background/sample.jpg",
+        url: "../background/gray-steps.jpg",
         blur: 0,
         opacity: 1,
         grayscale: 0,

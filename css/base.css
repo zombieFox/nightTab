@@ -27,9 +27,9 @@
   --line-width: 0.2em;
   --background: rgb(var(--gray-01));
   --gutter: 0.5em;
-  --animation-speed-fast: 0.1s;
-  --animation-speed-medium: 0.3s;
-  --animation-speed-slow: 0.5s;
+  --animation-speed-fast: 0.2s;
+  --animation-speed-medium: 0.4s;
+  --animation-speed-slow: 0.6s;
   --font-regular: "Open Sans Regular", sans-serif;
   --font-bold: "Open Sans Bold", sans-serif;
   --font-light: "Open Sans Light", sans-serif;

@@ -21,7 +21,7 @@
   pointer-events: none;
   display: block;
   opacity: var(--background-opacity);
-  filter: blur(var(--background-blur)) grayscale(var(--background-grayscale));
+  /* filter: blur(var(--background-blur)) grayscale(var(--background-grayscale)); */
 }
 
 .background-accent {
