@@ -75,15 +75,15 @@
 
 .menu-close {
   margin: 0;
-  padding-top: 1.25em;
-  padding-bottom: 1.25em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
   border-radius: 0;
 }
 
 .menu-nav-button {
   margin: 0;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   border-radius: 0;
 }
 
@@ -96,7 +96,13 @@
 
 @media (min-width: 550px) {
   .menu {
-    max-height: calc(90vh - 2em);
+    max-height: inherit;
+  }
+
+  .menu-content {
+    padding: 2em;
+    max-height: 70vh;
+    overflow-y: scroll;
   }
 
   .menu-nav {
