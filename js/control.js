@@ -190,6 +190,7 @@ var control = (function() {
     var _search = function() {
       if (state.get().header.search.active) {
         helper.e(".control-header-search-grow").disabled = false;
+        helper.e(".control-header-search-focus").disabled = false;
         helper.e(".control-header-search-engine-google").disabled = false;
         helper.e(".control-header-search-engine-duckduckgo").disabled = false;
         helper.e(".control-header-search-engine-giphy").disabled = false;
@@ -197,6 +198,7 @@ var control = (function() {
         helper.e(".control-header-search-engine-label").removeAttribute("disabled");
       } else {
         helper.e(".control-header-search-grow").disabled = true;
+        helper.e(".control-header-search-focus").disabled = true;
         helper.e(".control-header-search-engine-google").disabled = true;
         helper.e(".control-header-search-engine-duckduckgo").disabled = true;
         helper.e(".control-header-search-engine-giphy").disabled = true;
@@ -400,8 +402,14 @@ var control = (function() {
         value: this.checked
       });
       render();
-      dependents();
       header.render();
+      data.save();
+    }, false);
+    helper.e(".control-header-search-focus").addEventListener("change", function() {
+      state.change({
+        path: "header.search.focus",
+        value: this.checked
+      });
       data.save();
     }, false);
     helper.eA("input[name='control-header-search-engine']").forEach(function(arrayItem, index) {
@@ -686,6 +694,7 @@ var control = (function() {
     helper.e(".control-link-sort-" + state.get().link.sort).checked = true;
     helper.e(".control-header-search-active").checked = state.get().header.search.active;
     helper.e(".control-header-search-grow").checked = state.get().header.search.grow;
+    helper.e(".control-header-search-focus").checked = state.get().header.search.focus;
     helper.e(".control-header-search-engine-" + state.get().header.search.engine.selected).checked = true;
     helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     helper.e(".control-header-date-show-date").checked = state.get().header.date.show.date;

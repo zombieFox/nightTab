@@ -6,6 +6,7 @@
   height: 100vh;
   pointer-events: none;
   z-index: var(--z-index-background);
+  animation: appear var(--animation-speed-slow) 1;
 }
 
 .background-image {
@@ -33,4 +34,14 @@
   height: 100%;
   pointer-events: none;
   display: block;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
