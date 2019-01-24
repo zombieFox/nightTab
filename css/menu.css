@@ -1,5 +1,5 @@
 .menu {
-  background-color: rgba(var(--gray-02), 0.96);
+  background-color: rgb(var(--gray-01));
   border-radius: var(--radius);
   position: fixed;
   top: 1em;
@@ -74,6 +74,7 @@
 }
 
 .menu-close {
+  background-color: transparent;
   margin: 0;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
@@ -81,6 +82,7 @@
 }
 
 .menu-nav-button {
+  background-color: transparent;
   margin: 0;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -115,6 +117,7 @@
 
   .menu-content-area {
     grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10vh;
   }
 }
 

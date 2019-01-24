@@ -436,7 +436,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  background-color: rgb(var(--gray-02));
+  background-color: rgb(var(--gray-01));
   color: rgb(var(--gray-12));
   margin: 0;
   padding: 0;
@@ -500,7 +500,7 @@ input[type="range"]::-moz-range-track {
 }
 
 input[type="range"]::-moz-range-thumb {
-  background-color: rgb(var(--gray-02));
+  background-color: rgb(var(--gray-01));
   color: rgb(var(--gray-12));
   margin: 0;
   padding: 0;
@@ -541,6 +541,8 @@ input[type="range"]::-moz-range-thumb:active {
 
 input[type="range"]::-moz-range-progress {
   background-color: rgb(var(--accent));
+  height: calc(var(--line-width) * 1.5);
+  border-radius: var(--radius);
 }
 
 input[type="range"][disabled]::-moz-range-track {
