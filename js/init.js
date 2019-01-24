@@ -26,10 +26,6 @@ link.init();
 // render states
 control.init();
 
-// bind search box
-// render search engine
-search.init();
-
 // render date
 // bind date update
 date.init();
@@ -49,3 +45,8 @@ header.init();
 
 // render background image
 background.init();
+
+// bind search box
+// render search engine
+// focus seach input
+search.init();

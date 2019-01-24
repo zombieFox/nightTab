@@ -71,9 +71,19 @@ var search = (function() {
     link.render();
   };
 
+  var _focus = function() {
+    if (state.get().header.search.focus) {
+      window.addEventListener("load", function(event) {
+        console.log("loaded");
+        helper.e(".search-input").focus();
+      });
+    };
+  };
+
   var init = function() {
     bind();
     update();
+    _focus();
   };
 
   // exposed methods
