@@ -99,7 +99,7 @@ var update = (function() {
     };
     if (data.version < 2.50) {
       console.log("\trunning update", 2.50);
-      data = _update_240(data);
+      data = _update_250(data);
     };
     // if (data.version < 3.00) {
     //   console.log("\t# running update", 3.00);
