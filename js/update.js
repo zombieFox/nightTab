@@ -48,7 +48,7 @@ var update = (function() {
       url: true
     };
     data.state.layout.alignment = {
-      horizontal: data.state.layout.alignment,
+      horizontal: "left",
       vertical: "top"
     };
     data.state.background = {
