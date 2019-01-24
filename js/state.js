@@ -53,13 +53,21 @@ var state = (function() {
       }
     },
     link: {
+      show: {
+        active: true,
+        name: true,
+        url: true
+      },
       editObject: null,
       newTab: false,
       style: "block",
       sort: "none"
     },
     layout: {
-      alignment: "left",
+      alignment: {
+        horizontal: "left",
+        vertical: "top"
+      },
       container: "wide",
       scrollPastEnd: true,
       theme: {
@@ -73,6 +81,16 @@ var state = (function() {
           style: "any"
         }
       },
+    },
+    background: {
+      image: {
+        active: false,
+        url: "../background/gray-steps.jpg",
+        blur: 0,
+        opacity: 1,
+        grayscale: 0,
+        accentOpacity: 0
+      }
     },
     edit: {
       active: false

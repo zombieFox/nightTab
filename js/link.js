@@ -192,7 +192,7 @@ var link = (function() {
         value: "text"
       }, {
         key: "class",
-        value: "link-form-input-url"
+        value: "link-form-input-url mb-0"
       }, {
         key: "id",
         value: "url"

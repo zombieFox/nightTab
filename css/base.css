@@ -1,39 +1,50 @@
 :root {
-  --black: #222222;
-  --white: #ffffff;
-  --gray-01: #262831;
-  --gray-02: #2f333e;
-  --gray-03: #393e4b;
-  --gray-04: #434958;
-  --gray-05: #4d5465;
-  --gray-06: #575f72;
-  --gray-07: #616a7f;
-  --gray-08: #6b758c;
-  --gray-09: #758099;
-  --gray-10: #7f8ba6;
-  --gray-11: #8997b4;
-  --gray-12: #95a2bb;
-  --gray-13: #a2adc3;
-  --gray-14: #aeb8cb;
-  --gray-15: #bbc3d3;
-  --gray-16: #c7ceda;
-  --gray-17: #d4d9e2;
-  --gray-18: #e0e4ea;
-  --gray-19: #edeff2;
-  --gray-20: #fafafa;
-  --root-font-size: 14px;
-  --radius: 2px;
+  --black: 0, 0, 0;
+  --white: 255, 255, 255;
+  --gray-01: 38, 40, 49;
+  --gray-02: 47, 51, 62;
+  --gray-03: 57, 62, 75;
+  --gray-04: 67, 73, 88;
+  --gray-05: 77, 84, 101;
+  --gray-06: 87, 95, 114;
+  --gray-07: 97, 106, 127;
+  --gray-08: 107, 117, 140;
+  --gray-09: 117, 128, 153;
+  --gray-10: 127, 139, 166;
+  --gray-11: 137, 151, 180;
+  --gray-12: 149, 162, 187;
+  --gray-13: 162, 173, 195;
+  --gray-14: 174, 184, 203;
+  --gray-15: 187, 195, 211;
+  --gray-16: 199, 206, 218;
+  --gray-17: 212, 217, 226;
+  --gray-18: 224, 228, 234;
+  --gray-19: 237, 239, 242;
+  --gray-20: 250, 250, 250;
   --accent: 0, 255, 0;
-  --line-width: 3px;
-  --background: var(--gray-01);
+  --root-font-size: 14px;
+  --radius: 0.2em;
+  --line-width: 0.2em;
+  --background: rgb(var(--gray-01));
   --gutter: 0.5em;
   --animation-speed-fast: 0.2s;
-  --animation-speed-medium: 0.3s;
-  --animation-speed-slow: 0.4s;
+  --animation-speed-medium: 0.4s;
+  --animation-speed-slow: 0.6s;
   --font-regular: "Open Sans Regular", sans-serif;
   --font-bold: "Open Sans Bold", sans-serif;
   --font-light: "Open Sans Light", sans-serif;
   --font-fjalla: "Fjalla One Regular", sans-serif;
+  --z-index-background: 1000;
+  --z-index-link: 2000;
+  --z-index-header: 3000;
+  --z-index-tip: 4000;
+  --z-index-shade: 5000;
+  --z-index-modal: 6000;
+  --z-index-menu: 7000;
+  --background-image: none;
+  --background-opacity: 1;
+  --background-accent-opacity: 0;
+  --background-blur: 0;
   /* breakpoint reference */
   /* can not be used in @media as of yet */
   --breakpoint-sm: 550px;
@@ -41,12 +52,6 @@
   --breakpoint-lg: 900px;
   --breakpoint-xl: 1100px;
   --breakpoint-xxl: 1600px;
-  --z-index-link: 1000;
-  --z-index-header: 2000;
-  --z-index-tip: 3000;
-  --z-index-shade: 4000;
-  --z-index-modal: 5000;
-  --z-index-menu: 6000;
 }
 
 :root.is-link-block {
@@ -73,7 +78,7 @@
 
 ::selection {
   background-color: rgb(var(--accent));
-  color: var(--white);
+  color: rgb(var(--white));
 }
 
 html {
@@ -82,8 +87,28 @@ html {
 
 body {
   background-color: var(--background);
-  color: var(--white);
+  color: rgb(var(--white));
   font-size: 1rem;
   line-height: 1.6;
   font-family: var(--font-regular);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.is-alignment-vertical-top body {
+  justify-content: flex-start;
+}
+
+.is-alignment-vertical-center body {
+  justify-content: center;
+}
+
+.is-alignment-vertical-bottom body {
+  justify-content: flex-end;
+}
+
+.is-link body {
+  display: inherit;
+  height: inherit;
 }

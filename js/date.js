@@ -62,11 +62,11 @@ var date = (function() {
           value: "date-item date-year"
         }]
       });
-      if (state.get().header.date.show.date) {
-        date.appendChild(dateNumber);
-      };
       if (state.get().header.date.show.day) {
         date.appendChild(day);
+      };
+      if (state.get().header.date.show.date) {
+        date.appendChild(dateNumber);
       };
       if (state.get().header.date.show.month) {
         date.appendChild(month);

@@ -32,7 +32,7 @@ body {
 }
 
 [tabindex="-1"]:focus {
-  outline: 0 !important;
+  outline: none !important;
 }
 
 hr {
@@ -141,7 +141,7 @@ a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
 }
 
 a:not([href]):not([tabindex]):focus {
-  outline: 0;
+  outline: none;
 }
 
 pre,

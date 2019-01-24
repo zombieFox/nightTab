@@ -58,11 +58,11 @@ var modal = (function() {
       modalControls.setAttribute("class", "modal-controls");
       var actionButton = document.createElement("button");
       actionButton.setAttribute("tabindex", "1");
-      actionButton.setAttribute("class", "button button-primary button-block");
+      actionButton.setAttribute("class", "modal-button button button-primary button-block");
       actionButton.textContent = options.actionText;
       var cancelButton = document.createElement("button");
       cancelButton.setAttribute("tabindex", "1");
-      cancelButton.setAttribute("class", "button button-primary button-block");
+      cancelButton.setAttribute("class", "modal-button button button-primary button-block");
       cancelButton.textContent = options.cancelText;
       modalControls.appendChild(cancelButton);
       modalControls.appendChild(actionButton);

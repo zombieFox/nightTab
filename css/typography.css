@@ -17,42 +17,42 @@ h1 {
 h2 {
   font-size: 1.2em;
   font-family: var(--font-regular);
-  color: var(--gray-18);
+  color: rgb(var(--gray-18));
 }
 
 h3 {
   font-size: 1.1em;
   font-family: var(--font-regular);
-  color: var(--gray-18);
+  color: rgb(var(--gray-18));
 }
 
 h4 {
   font-size: 1em;
   font-family: var(--font-regular);
-  color: var(--gray-18);
+  color: rgb(var(--gray-18));
 }
 
 h5 {
   font-size: 1em;
   font-family: var(--font-bold);
-  color: var(--gray-18);
+  color: rgb(var(--gray-18));
 }
 
 h6 {
   font-size: 0.75em;
   font-family: var(--font-bold);
-  color: var(--gray-18);
+  color: rgb(var(--gray-18));
 }
 
 p {
-  color: var(--white);
-  margin: 0;
+  color: rgb(var(--white));
+  margin: 0 0 1em 0;
   line-height: 1.5;
 }
 
 hr {
   border: 0;
-  border-top: 1px solid var(--gray-04);
+  border-top: 1px solid rgb(var(--gray-04));
   border-radius: var(--radius);
   margin: 1em 0;
   clear: both;
@@ -65,27 +65,27 @@ strong {
 }
 
 a {
-  color: var(--gray-16);
+  color: rgb(var(--gray-16));
   text-decoration: none;
 }
 
 a:link,
 a:visited {
-  color: var(--gray-16);
+  color: rgb(var(--gray-16));
 }
 
 a:focus {
   text-decoration: none;
-  outline: 0;
+  outline: none;
 }
 
 a:hover {
-  color: var(--white);
+  color: rgb(var(--white));
   text-decoration: underline;
 }
 
 a:active {
-  color: var(--white);
+  color: rgb(var(--white));
 }
 
 ol,
@@ -127,9 +127,9 @@ table {
 
 table thead tr td,
 table thead tr th {
-  background-color: var(--gray-03);
+  background-color: rgb(var(--gray-03));
   border: 0;
-  border-bottom: 1px solid var(--gray-04);
+  border-bottom: 1px solid rgb(var(--gray-04));
   padding: 0.5em;
   margin: 0;
   text-align: left;
@@ -138,7 +138,7 @@ table thead tr th {
 }
 
 table tr:nth-child(odd) {
-  background-color: var(--gray-02);
+  background-color: rgb(var(--gray-02));
 }
 
 table tbody tr td,

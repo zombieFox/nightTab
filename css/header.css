@@ -1,14 +1,21 @@
 .header {
-  background-color: var(--background);
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: var(--z-index-header);
 }
 
+.is-link .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: background-color var(--animation-speed-fast) ease-in-out;
+}
+
+.header-background {
+  background-color: rgba(var(--gray-01), 0.95);
+}
+
 .header-area {
-  margin: calc(var(--gutter) * 4) calc(var(--gutter) * -1) calc(var(--gutter) * 2) calc(var(--gutter) * -1);
+  margin: calc(var(--gutter) * 4) calc(var(--gutter) * -1);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -24,17 +31,28 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.is-alignment-left .header-area {
+.header-search-input[type="text"] {
+  padding-right: 3em;
+}
+
+.header-search-clear {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.is-alignment-horizontal-left .header-area {
   justify-content: flex-start;
 }
 
-.is-alignment-center .header-area {
+.is-alignment-horizontal-center .header-area {
   justify-content: center;
 }
 
-.is-alignment-right .header-area {
+.is-alignment-horizontal-right .header-area {
   justify-content: flex-end;
 }
 

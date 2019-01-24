@@ -37,10 +37,8 @@
 }
 
 .modal-body {
-  background-color: var(--gray-02);
+  background-color: rgb(var(--gray-01));
   border-radius: var(--radius) var(--radius) 0 0;
-  border-bottom: 1em solid transparent;
-  border-bottom-color: var(--gray-02);
   padding: 2em;
   max-height: calc(90vh - 3.6666666667em);
   overflow: scroll;
@@ -52,19 +50,19 @@
 .modal-heading {}
 
 .modal-heading:focus {
-  outline: 0;
+  outline: none;
 }
 
 .modal-controls {
-  background-color: var(--gray-02);
-  margin: -1em 0 0;
+  background-color: rgb(var(--gray-01));
   position: relative;
   z-index: 2;
   border-radius: 0 0 var(--radius) var(--radius);
   display: flex;
 }
 
-.modal-controls .button {
+.modal-button {
+  background-color: transparent;
   border-radius: 0;
   margin: 0;
   padding-top: 1.5em;
@@ -72,10 +70,10 @@
   flex-basis: 50%;
 }
 
-.modal-controls .button:first-child {
+.modal-controls .modal-button:first-child {
   border-radius: 0 0 0 var(--radius);
 }
 
-.modal-controls .button:last-child {
+.modal-controls .modal-button:last-child {
   border-radius: 0 0 var(--radius) 0
 }

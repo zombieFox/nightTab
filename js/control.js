@@ -54,10 +54,14 @@ var control = (function() {
       helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     };
     var _alignment = function() {
-      helper.removeClass(html, "is-alignment-left");
-      helper.removeClass(html, "is-alignment-center");
-      helper.removeClass(html, "is-alignment-right");
-      helper.addClass(html, "is-alignment-" + state.get().layout.alignment);
+      helper.removeClass(html, "is-alignment-horizontal-left");
+      helper.removeClass(html, "is-alignment-horizontal-center");
+      helper.removeClass(html, "is-alignment-horizontal-right");
+      helper.removeClass(html, "is-alignment-vertical-top");
+      helper.removeClass(html, "is-alignment-vertical-center");
+      helper.removeClass(html, "is-alignment-vertical-bottom");
+      helper.addClass(html, "is-alignment-horizontal-" + state.get().layout.alignment.horizontal);
+      helper.addClass(html, "is-alignment-vertical-" + state.get().layout.alignment.vertical);
     };
     var _link = function() {
       var view = {
@@ -71,6 +75,21 @@ var control = (function() {
         }
       };
       view[state.get().link.style]();
+      if (state.get().link.show.active) {
+        helper.addClass(html, "is-link");
+      } else {
+        helper.removeClass(html, "is-link");
+      };
+      if (state.get().link.show.name) {
+        helper.addClass(html, "is-link-name");
+      } else {
+        helper.removeClass(html, "is-link-name");
+      };
+      if (state.get().link.show.url) {
+        helper.addClass(html, "is-link-url");
+      } else {
+        helper.removeClass(html, "is-link-url");
+      };
     };
     var _layout = function() {
       helper.removeClass(html, "is-layout-fluid");
@@ -203,11 +222,65 @@ var control = (function() {
         });
       };
     };
+    var _link = function() {
+      if (state.get().link.show.active) {
+        helper.e(".control-link-show-name").disabled = false;
+        helper.e(".control-link-show-url").disabled = false;
+        helper.e(".control-link-style-block").disabled = false;
+        helper.e(".control-link-style-list").disabled = false;
+        helper.e(".control-link-new-tab").disabled = false;
+        helper.e(".control-link-sort-none").disabled = false;
+        helper.e(".control-link-sort-name").disabled = false;
+        helper.e(".control-link-sort-letter").disabled = false;
+        helper.e(".control-layout-alignment-vertical-top").disabled = true;
+        helper.e(".control-layout-alignment-vertical-center").disabled = true;
+        helper.e(".control-layout-alignment-vertical-bottom").disabled = true;
+      } else {
+        helper.e(".control-link-show-name").disabled = true;
+        helper.e(".control-link-show-url").disabled = true;
+        helper.e(".control-link-style-block").disabled = true;
+        helper.e(".control-link-style-list").disabled = true;
+        helper.e(".control-link-new-tab").disabled = true;
+        helper.e(".control-link-sort-none").disabled = true;
+        helper.e(".control-link-sort-name").disabled = true;
+        helper.e(".control-link-sort-letter").disabled = true;
+        helper.e(".control-layout-alignment-vertical-top").disabled = false;
+        helper.e(".control-layout-alignment-vertical-center").disabled = false;
+        helper.e(".control-layout-alignment-vertical-bottom").disabled = false;
+      };
+    };
+    var _background = function() {
+      if (state.get().background.image.active) {
+        helper.e("[for=control-background-image-url]").removeAttribute("disabled");
+        helper.e(".control-background-image-url").disabled = false;
+        helper.e("[for=control-background-image-opacity]").removeAttribute("disabled");
+        helper.e(".control-background-image-opacity").disabled = false;
+        helper.e("[for=control-background-image-blur]").removeAttribute("disabled");
+        helper.e(".control-background-image-blur").disabled = false;
+        helper.e("[for=control-background-image-grayscale]").removeAttribute("disabled");
+        helper.e(".control-background-image-grayscale").disabled = false;
+        helper.e("[for=control-background-image-accent-opacity]").removeAttribute("disabled");
+        helper.e(".control-background-image-accent-opacity").disabled = false;
+      } else {
+        helper.e("[for=control-background-image-url]").setAttribute("disabled", "");
+        helper.e(".control-background-image-url").disabled = true;
+        helper.e("[for=control-background-image-opacity]").setAttribute("disabled", "");
+        helper.e(".control-background-image-opacity").disabled = true;
+        helper.e("[for=control-background-image-blur]").setAttribute("disabled", "");
+        helper.e(".control-background-image-blur").disabled = true;
+        helper.e("[for=control-background-image-grayscale]").setAttribute("disabled", "");
+        helper.e(".control-background-image-grayscale").disabled = true;
+        helper.e("[for=control-background-image-accent-opacity]").setAttribute("disabled", "");
+        helper.e(".control-background-image-accent-opacity").disabled = true;
+      };
+    };
     _edit();
     _date();
     _clock();
     _search();
     _theme();
+    _link();
+    _background();
   };
 
   var _bind = function() {
@@ -260,6 +333,34 @@ var control = (function() {
       });
       link.clear();
       link.render();
+      data.save();
+    });
+    helper.e(".control-link-show-active").addEventListener("change", function() {
+      state.change({
+        path: "link.show.active",
+        value: this.checked
+      });
+      render();
+      dependents();
+      header.render();
+      data.save();
+    });
+    helper.e(".control-link-show-name").addEventListener("change", function() {
+      state.change({
+        path: "link.show.name",
+        value: this.checked
+      });
+      render();
+      dependents();
+      data.save();
+    });
+    helper.e(".control-link-show-url").addEventListener("change", function() {
+      state.change({
+        path: "link.show.url",
+        value: this.checked
+      });
+      render();
+      dependents();
       data.save();
     });
     helper.eA("input[name='control-link-style']").forEach(function(arrayItem, index) {
@@ -481,10 +582,20 @@ var control = (function() {
       header.render();
       data.save();
     }, false);
-    helper.eA("input[name='control-layout-alignment']").forEach(function(arrayItem, index) {
+    helper.eA("input[name='control-layout-alignment-horizontal']").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("change", function() {
         state.change({
-          path: "layout.alignment",
+          path: "layout.alignment.horizontal",
+          value: this.value
+        });
+        render();
+        data.save();
+      }, false);
+    });
+    helper.eA("input[name='control-layout-alignment-vertical']").forEach(function(arrayItem, index) {
+      arrayItem.addEventListener("change", function() {
+        state.change({
+          path: "layout.alignment.vertical",
           value: this.value
         });
         render();
@@ -510,6 +621,56 @@ var control = (function() {
       render();
       data.save();
     }, false);
+    helper.e(".control-background-image-active").addEventListener("change", function() {
+      state.change({
+        path: "background.image.active",
+        value: this.checked
+      });
+      render();
+      dependents();
+      background.render();
+      data.save();
+    }, false);
+    helper.e(".control-background-image-url").addEventListener("input", function() {
+      state.change({
+        path: "background.image.url",
+        value: this.value
+      });
+      background.render();
+      data.save();
+    }, false);
+    helper.e(".control-background-image-opacity").addEventListener("input", function() {
+      state.change({
+        path: "background.image.opacity",
+        value: (100 - parseInt(this.value)) / 100
+      });
+      background.render();
+      data.save();
+    }, false);
+    helper.e(".control-background-image-blur").addEventListener("input", function() {
+      state.change({
+        path: "background.image.blur",
+        value: parseInt(this.value, 10)
+      });
+      background.render();
+      data.save();
+    }, false);
+    helper.e(".control-background-image-grayscale").addEventListener("input", function() {
+      state.change({
+        path: "background.image.grayscale",
+        value: parseInt(this.value, 10) / 100
+      });
+      background.render();
+      data.save();
+    }, false);
+    helper.e(".control-background-image-accent-opacity").addEventListener("input", function() {
+      state.change({
+        path: "background.image.accentOpacity",
+        value: parseInt(this.value, 10) / 100
+      });
+      background.render();
+      data.save();
+    }, false);
   };
 
   var update = function() {
@@ -518,6 +679,9 @@ var control = (function() {
     helper.e(".control-layout-theme-random").checked = state.get().layout.theme.random.active;
     helper.e(".control-layout-theme-style-" + state.get().layout.theme.random.style).checked = true;
     helper.e(".control-link-new-tab").value = state.get().link.style.newTab;
+    helper.e(".control-link-show-active").checked = state.get().link.show.active;
+    helper.e(".control-link-show-name").checked = state.get().link.show.name;
+    helper.e(".control-link-show-url").checked = state.get().link.show.url;
     helper.e(".control-link-style-" + state.get().link.style).checked = true;
     helper.e(".control-link-sort-" + state.get().link.sort).checked = true;
     helper.e(".control-header-search-active").checked = state.get().header.search.active;
@@ -538,9 +702,16 @@ var control = (function() {
     helper.e(".control-header-edit-add-active").checked = state.get().header.editAdd.active;
     helper.e(".control-header-accent-active").checked = state.get().header.accent.active;
     helper.e(".control-header-date-character-length-" + state.get().header.date.characterLength).checked = true;
-    helper.e(".control-layout-alignment-" + state.get().layout.alignment).checked = true;
+    helper.e(".control-layout-alignment-horizontal-" + state.get().layout.alignment.horizontal).checked = true;
+    helper.e(".control-layout-alignment-vertical-" + state.get().layout.alignment.vertical).checked = true;
     helper.e(".control-layout-container-" + state.get().layout.container).checked = true;
     helper.e(".control-layout-scroll-past-end").checked = state.get().layout.scrollPastEnd;
+    helper.e(".control-background-image-active").checked = state.get().background.image.active;
+    helper.e(".control-background-image-url").value = state.get().background.image.url;
+    helper.e(".control-background-image-opacity").value = 100 - (state.get().background.image.opacity * 100);
+    helper.e(".control-background-image-blur").value = state.get().background.image.blur;
+    helper.e(".control-background-image-grayscale").value = state.get().background.image.grayscale * 100;
+    helper.e(".control-background-image-accent-opacity").value = (state.get().background.image.accentOpacity * 100);
   };
 
   var init = function() {

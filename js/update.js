@@ -41,6 +41,29 @@ var update = (function() {
     return data;
   };
 
+  var _update_240 = function(data) {
+    data.state.link.show = {
+      active: true,
+      name: true,
+      url: true
+    };
+    data.state.layout.alignment = {
+      horizontal: data.state.layout.alignment,
+      vertical: "top"
+    };
+    data.state.background = {
+      image: {
+        active: false,
+        url: "../background/gray-steps.jpg",
+        blur: 0,
+        opacity: 1,
+        accentOpacity: 0
+      }
+    };
+    data.version = 2.40;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -62,6 +85,10 @@ var update = (function() {
     if (data.version < 2.30) {
       console.log("\trunning update", 2.30);
       data = _update_230(data);
+    };
+    if (data.version < 2.40) {
+      console.log("\trunning update", 2.40);
+      data = _update_240(data);
     };
     // if (data.version < 3.00) {
     //   console.log("\t# running update", 3.00);

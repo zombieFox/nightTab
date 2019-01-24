@@ -25,11 +25,16 @@
   <link rel="stylesheet" href="css/date.css">
   <link rel="stylesheet" href="css/clock.css">
   <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/link.css">
 </head>
 
 <body>
 
+  <div class="background">
+    <div class="background-image"></div>
+    <div class="background-accent"></div>
+  </div>
 
   <header class="header">
     <div class="container">
@@ -42,10 +47,10 @@
         </div>
         <div class="header-item header-search">
           <form class="search" action="" method="get">
-            <input class="search-input mb-0" type="text" placeholder="Find or Search" tabindex="1" name="q" autocomplete="off" tabindex="1">
+            <input class="header-search-input search-input mb-0" type="text" placeholder="Find or Search" name="q" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="1">
             <input type="submit" value="Search" class="is-hidden">
           </form>
-          <button class="button mb-0 ml-3 search-clear" tabindex="1" disabled>
+          <button class="button button-link mb-0 header-search-clear search-clear" tabindex="1" disabled>
             <span class="icon-close"></span>
           </button>
         </div>
@@ -89,7 +94,7 @@
     <div class="menu-area">
 
       <div class="menu-nav">
-        <ul class="menu-nav-area menu-nav-area-grow mb-0 u-list-unstyled">
+        <ul class="menu-nav-area menu-nav-area-grow mb-0 list-unstyled">
           <li class="menu-nav-item">
             <button class="menu-nav-button button button-block button-large active" data-target=".menu-content-area-header" tabindex="1">Header</button>
           </li>
@@ -98,6 +103,9 @@
           </li>
           <li class="menu-nav-item">
             <button class="menu-nav-button button button-block button-large" data-target=".menu-content-area-layout" tabindex="1">Layout</button>
+          </li>
+          <li class="menu-nav-item">
+            <button class="menu-nav-button button button-block button-large" data-target=".menu-content-area-background" tabindex="1">Background</button>
           </li>
         </ul>
         <div class="menu-nav-area">
@@ -136,12 +144,12 @@
           <div class="menu-item">
             <h1 class="menu-header">Date</h1>
             <div class="checkbox-wrap">
-              <input id="control-header-date-show-date" class="control-header-date-show-date" type="checkbox" tabindex="1">
-              <label for="control-header-date-show-date"><span class="label-icon"></span>Date</label>
-            </div>
-            <div class="checkbox-wrap">
               <input id="control-header-date-show-day" class="control-header-date-show-day" type="checkbox" tabindex="1">
               <label for="control-header-date-show-day"><span class="label-icon"></span>Day</label>
+            </div>
+            <div class="checkbox-wrap">
+              <input id="control-header-date-show-date" class="control-header-date-show-date" type="checkbox" tabindex="1">
+              <label for="control-header-date-show-date"><span class="label-icon"></span>Date</label>
             </div>
             <div class="checkbox-wrap">
               <input id="control-header-date-show-month" class="control-header-date-show-month" type="checkbox" tabindex="1">
@@ -193,7 +201,7 @@
             </div>
             <div class="input-wrap form-indent-2">
               <label for="control-header-search-engine-custom-url">URL</label>
-              <input id="control-header-search-engine-custom-url" type="text" class="control-header-search-engine-custom-url mb-0" placeholder="https://" tabindex="1" autocomplete="off">
+              <input id="control-header-search-engine-custom-url" type="text" class="control-header-search-engine-custom-url mb-0" placeholder="https://" tabindex="1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
             </div>
           </div>
           <div class="menu-item">
@@ -208,22 +216,53 @@
             </div>
           </div>
           <div class="menu-item">
-            <h1 class="menu-header">Alignment</h1>
+            <h1 class="menu-header">Horizontal Alignment</h1>
             <div class="radio-wrap">
-              <input id="control-layout-alignment-left" class="control-layout-alignment-left" type="radio" tabindex="1" name="control-layout-alignment" value="left">
-              <label for="control-layout-alignment-left"><span class="label-icon"></span>Left</label>
+              <input id="control-layout-alignment-horizontal-left" class="control-layout-alignment-horizontal-left" type="radio" tabindex="1" name="control-layout-alignment-horizontal" value="left">
+              <label for="control-layout-alignment-horizontal-left"><span class="label-icon"></span>Left</label>
             </div>
             <div class="radio-wrap">
-              <input id="control-layout-alignment-center" class="control-layout-alignment-center" type="radio" tabindex="1" name="control-layout-alignment" value="center">
-              <label for="control-layout-alignment-center"><span class="label-icon"></span>Center</label>
+              <input id="control-layout-alignment-horizontal-center" class="control-layout-alignment-horizontal-center" type="radio" tabindex="1" name="control-layout-alignment-horizontal" value="center">
+              <label for="control-layout-alignment-horizontal-center"><span class="label-icon"></span>Center</label>
             </div>
             <div class="radio-wrap">
-              <input id="control-layout-alignment-right" class="control-layout-alignment-right" type="radio" tabindex="1" name="control-layout-alignment" value="right">
-              <label for="control-layout-alignment-right"><span class="label-icon"></span>Right</label>
+              <input id="control-layout-alignment-horizontal-right" class="control-layout-alignment-horizontal-right" type="radio" tabindex="1" name="control-layout-alignment-horizontal" value="right">
+              <label for="control-layout-alignment-horizontal-right"><span class="label-icon"></span>Right</label>
             </div>
+          </div>
+          <div class="menu-item">
+            <h1 class="menu-header">Vertical Alignment</h1>
+            <div class="radio-wrap">
+              <input id="control-layout-alignment-vertical-top" class="control-layout-alignment-vertical-top" type="radio" tabindex="1" name="control-layout-alignment-vertical" value="top">
+              <label for="control-layout-alignment-vertical-top"><span class="label-icon"></span>Top</label>
+            </div>
+            <div class="radio-wrap">
+              <input id="control-layout-alignment-vertical-center" class="control-layout-alignment-vertical-center" type="radio" tabindex="1" name="control-layout-alignment-vertical" value="center">
+              <label for="control-layout-alignment-vertical-center"><span class="label-icon"></span>Center</label>
+            </div>
+            <div class="radio-wrap">
+              <input id="control-layout-alignment-vertical-bottom" class="control-layout-alignment-vertical-bottom" type="radio" tabindex="1" name="control-layout-alignment-vertical" value="bottom">
+              <label for="control-layout-alignment-vertical-bottom"><span class="label-icon"></span>Bottom</label>
+            </div>
+            <p class="input-helper small muted">Available when Bookmarks are not shown.</p>
           </div>
         </div>
         <div class="menu-content-area menu-content-area-bookmarks is-hidden">
+          <div class="menu-item">
+            <h1 class="menu-header">Bookmarks</h1>
+            <div class="checkbox-wrap">
+              <input id="control-link-show-active" class="control-link-show-active" type="checkbox" tabindex="1">
+              <label for="control-link-show-active"><span class="label-icon"></span>Show</label>
+            </div>
+            <div class="checkbox-wrap form-indent-1">
+              <input id="control-link-show-name" class="control-link-show-name" type="checkbox" tabindex="1">
+              <label for="control-link-show-name"><span class="label-icon"></span>Names</label>
+            </div>
+            <div class="checkbox-wrap form-indent-1">
+              <input id="control-link-show-url" class="control-link-show-url" type="checkbox" tabindex="1">
+              <label for="control-link-show-url"><span class="label-icon"></span>URL (on hover)</label>
+            </div>
+          </div>
           <div class="menu-item">
             <h1 class="menu-header">Open</h1>
             <div class="checkbox-wrap">
@@ -246,7 +285,7 @@
             <h1 class="menu-header">Sort</h1>
             <div class="radio-wrap">
               <input id="control-link-sort-none" class="control-link-sort-none" type="radio" tabindex="1" name="control-link-sort" value="none">
-              <label for="control-link-sort-none"><span class="label-icon"></span>None (As added)</label>
+              <label for="control-link-sort-none"><span class="label-icon"></span>None (as added)</label>
             </div>
             <div class="radio-wrap">
               <input id="control-link-sort-name" class="control-link-sort-name" type="radio" tabindex="1" name="control-link-sort" value="name">
@@ -309,6 +348,39 @@
             </div>
           </div>
         </div>
+        <div class="menu-content-area menu-content-area-background is-hidden">
+          <div class="menu-item">
+            <h1 class="menu-header">Image</h1>
+            <div class="checkbox-wrap">
+              <input id="control-background-image-active" class="control-background-image-active" type="checkbox" tabindex="1">
+              <label for="control-background-image-active"><span class="label-icon"></span>Show</label>
+            </div>
+            <div class="input-wrap form-indent-1">
+              <label for="control-background-image-url">URL or path</label>
+              <input id="control-background-image-url" type="text" class="control-background-image-url" placeholder="http:// or ../path/to/file" tabindex="1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+              <p class="input-helper small muted">Enter a URL to an image file or a path to a local file.</p>
+              <p class="input-helper small muted">To use local files enter a relative file path, eg:</p>
+              <p class="input-helper small muted">../background/abstract.jpg</p>
+              <p class="input-helper small muted">../background/gray-steps.jpg</p>
+            </div>
+            <div class="input-wrap form-indent-1">
+              <label for="control-background-image-opacity">Opacity</label>
+              <input id="control-background-image-opacity" type="range" min="0" max="100" value="0" class="control-background-image-opacity mb-0" placeholder="Path to file" tabindex="1">
+            </div>
+            <div class="input-wrap form-indent-1">
+              <label for="control-background-image-grayscale">Grayscale</label>
+              <input id="control-background-image-grayscale" type="range" min="0" max="100" value="0" class="control-background-image-grayscale mb-0" placeholder="Path to file" tabindex="1">
+            </div>
+            <div class="input-wrap form-indent-1">
+              <label for="control-background-image-blur">Blur</label>
+              <input id="control-background-image-blur" type="range" min="0" max="100" value="0" class="control-background-image-blur mb-0" placeholder="Path to file" tabindex="1">
+            </div>
+            <div class="input-wrap form-indent-1">
+              <label for="control-background-image-accent-opacity">Accent overlay</label>
+              <input id="control-background-image-accent-opacity" type="range" min="0" max="50" value="0" class="control-background-image-accent-opacity mb-0" placeholder="URL or path to file" tabindex="1">
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -334,6 +406,7 @@
 <script src="js/link.js"></script>
 <script src="js/version.js"></script>
 <script src="js/keyboard.js"></script>
+<script src="js/background.js"></script>
 <script src="js/init.js"></script>
 
 </html>

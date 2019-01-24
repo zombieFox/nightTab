@@ -4,7 +4,7 @@
   border-radius: var(--radius);
   font-size: 1em;
   font-family: var(--font-fjalla);
-  color: var(--white);
+  color: rgb(var(--white));
   width: 100%;
   min-height: 2.5em;
   display: flex;
@@ -46,18 +46,12 @@
   margin-right: 0.125em;
 }
 
-.date-date {
-  color: var(--white);
-}
-
 .date-day {
-  color: var(--gray-16);
+  color: rgb(var(--white));
 }
 
-.date-month {
-  color: var(--gray-12);
-}
-
+.date-date,
+.date-month,
 .date-year {
-  color: var(--gray-10);
+  color: rgb(var(--gray-19));
 }
