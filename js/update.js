@@ -65,6 +65,12 @@ var update = (function() {
     return data;
   };
 
+  var _update_250 = function(data) {
+    data.state.header.search.focus = false;
+    data.version = 2.50;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -89,6 +95,10 @@ var update = (function() {
     };
     if (data.version < 2.40) {
       console.log("\trunning update", 2.40);
+      data = _update_240(data);
+    };
+    if (data.version < 2.50) {
+      console.log("\trunning update", 2.50);
       data = _update_240(data);
     };
     // if (data.version < 3.00) {

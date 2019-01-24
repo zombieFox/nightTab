@@ -402,7 +402,6 @@ var control = (function() {
         value: this.checked
       });
       render();
-      dependents();
       header.render();
       data.save();
     }, false);
