@@ -74,7 +74,6 @@ var search = (function() {
   var _focus = function() {
     if (state.get().header.search.focus) {
       window.addEventListener("load", function(event) {
-        console.log("loaded");
         helper.e(".search-input").focus();
       });
     };
