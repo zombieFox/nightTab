@@ -19,7 +19,7 @@ var header = (function() {
     var header = helper.e(".header");
     var scrollPosition = document.documentElement.scrollTop;
     var fontSize = parseInt(getComputedStyle(html).fontSize, 10);
-    if (scrollPosition > fontSize) {
+    if (scrollPosition > (fontSize * 2)) {
       helper.addClass(header, "header-background");
     } else {
       helper.removeClass(header, "header-background");

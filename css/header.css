@@ -31,6 +31,17 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.header-search-input[type="text"] {
+  padding-right: 3em;
+}
+
+.header-search-clear {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .is-alignment-horizontal-left .header-area {

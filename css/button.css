@@ -148,3 +148,31 @@ button [class*=" button-"]:last-child,
 .button [class*=" button-"]:last-child {
   margin-right: 0;
 }
+
+.button-link {
+  background-color: transparent;
+  border: 0;
+  color: rgb(var(--gray-10));
+}
+
+.button-link[disabled] {
+  background-color: transparent;
+  color: transparent;
+}
+
+.button-link:hover[disabled],
+.button-link:focus[disabled] {
+  background-color: transparent;
+  color: transparent;
+}
+
+.button-link:hover,
+.button-link:focus {
+  background-color: transparent;
+  color: rgb(var(--gray-14));
+}
+
+.button-link:active {
+  background-color: transparent;
+  color: rgb(var(--gray-18));
+}

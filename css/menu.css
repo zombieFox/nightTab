@@ -1,5 +1,5 @@
 .menu {
-  background-color: rgb(var(--gray-02));
+  background-color: rgba(var(--gray-02), 0.96);
   border-radius: var(--radius);
   position: fixed;
   top: 1em;
