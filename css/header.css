@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  transition: background-color var(--animation-speed-fast) ease-in-out;
+  transition: background-color var(--animation-speed-slow) ease-in-out;
 }
 
 .header-background {

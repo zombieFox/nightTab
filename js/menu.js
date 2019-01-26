@@ -14,8 +14,13 @@ var menu = (function() {
     }, false);
   };
 
+  var _scrollToTop = function(element) {
+    element.scrollTop = 0;
+  };
+
   var _tab = function(button) {
     var allMenuNavButton = helper.eA(".menu-nav-button");
+    var menuContent = helper.e(".menu-content");
     var allMenuContentArea = helper.eA(".menu-content-area");
     var target = helper.e(button.dataset.target);
     allMenuNavButton.forEach(function(arrayItem, index) {
@@ -26,6 +31,7 @@ var menu = (function() {
     });
     helper.addClass(button, "active");
     helper.removeClass(target, "is-hidden");
+    _scrollToTop(menuContent);
   };
 
   var close = function() {
@@ -34,6 +40,7 @@ var menu = (function() {
   };
 
   var open = function() {
+    _scrollToTop(helper.e(".menu-content"));
     state.get().menu.active = true;
     render();
   };
@@ -42,6 +49,7 @@ var menu = (function() {
     if (state.get().menu.active) {
       state.get().menu.active = false;
     } else {
+      _scrollToTop(helper.e(".menu-content"));
       state.get().menu.active = true;
     };
     render();
