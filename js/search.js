@@ -33,7 +33,7 @@ var search = (function() {
   var _searchClear = function() {
     var searchInput = helper.e(".search-input");
     var searchClear = helper.e(".search-clear");
-    if (state.get().control.header.search.searching) {
+    if (state.get().header.search.searching) {
       searchClear.removeAttribute("disabled");
     } else {
       searchClear.setAttribute("disabled", "");
@@ -42,7 +42,7 @@ var search = (function() {
 
   var get = function() {
     var searchInput = helper.e(".search-input");
-    if (state.get().control.header.search.searching) {
+    if (state.get().header.search.searching) {
       var searchedBookmarks = {
         total: 0,
         matching: []
@@ -60,7 +60,7 @@ var search = (function() {
 
   var update = function() {
     var search = helper.e(".search");
-    search.setAttribute("action", state.get().control.header.search.engine[state.get().control.header.search.engine.selected].url);
+    search.setAttribute("action", state.get().header.search.engine[state.get().header.search.engine.selected].url);
   };
 
   var clear = function() {
@@ -72,7 +72,7 @@ var search = (function() {
   };
 
   var _focus = function() {
-    if (state.get().control.header.search.focus) {
+    if (state.get().header.search.focus) {
       window.addEventListener("load", function(event) {
         helper.e(".search-input").focus();
       });

@@ -25,7 +25,7 @@ var date = (function() {
       var time = _makeTimeObject();
       time.day = helper.day(time.day);
       time.month = helper.month(time.month);
-      if (state.get().control.header.date.character.length == "short") {
+      if (state.get().header.date.character.length == "short") {
         time.day = time.day.substring(0, 3);
         time.month = time.month.substring(0, 3);
       };
@@ -62,19 +62,19 @@ var date = (function() {
           value: "date-item date-year"
         }]
       });
-      if (state.get().control.header.date.show.day) {
+      if (state.get().header.date.show.day) {
         date.appendChild(day);
       };
-      if (state.get().control.header.date.show.date) {
+      if (state.get().header.date.show.date) {
         date.appendChild(dateNumber);
       };
-      if (state.get().control.header.date.show.month) {
+      if (state.get().header.date.show.month) {
         date.appendChild(month);
       };
-      if (state.get().control.header.date.show.year) {
+      if (state.get().header.date.show.year) {
         date.appendChild(year);
       };
-      if (state.get().control.header.date.show.separator) {
+      if (state.get().header.date.show.separator) {
         var parts = date.querySelectorAll("span");
         if (parts.length > 1) {
           parts.forEach(function(arrayItem, index) {
@@ -93,7 +93,7 @@ var date = (function() {
         };
       };
     };
-    if (state.get().control.header.date.show.date || state.get().control.header.date.show.day || state.get().control.header.date.show.month || state.get().control.header.date.show.year) {
+    if (state.get().header.date.show.date || state.get().header.date.show.day || state.get().header.date.show.month || state.get().header.date.show.year) {
       _date();
     };
   };

@@ -238,7 +238,7 @@ var link = (function() {
         value: 1
       }]
     };
-    if (state.get().control.bookmarks.newTab) {
+    if (state.get().bookmarks.newTab) {
       linkOptions.attr.push({
         key: "target",
         value: "_blank"

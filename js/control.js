@@ -232,7 +232,6 @@ var control = (function() {
     };
     var valueType = {
       checkbox: function(object) {
-        console.log(object);
         return object.element.checked;
       },
       radio: function(object) {
@@ -279,10 +278,18 @@ var control = (function() {
           newValue = valueMod[arrayItem](newValue, object);
         });
       };
-      state.change({
+      helper.setObject({
+        object: state.get(),
         path: object.path,
-        value: newValue
+        newValue: newValue
       });
+      console.log(
+        object.path,
+        helper.getObject({
+          object: state.get(),
+          path: object.path
+        })
+      );
     };
     var bindControl = function(object) {
       var action = {
@@ -554,31 +561,31 @@ var control = (function() {
       };
     };
     var _date = function() {
-      if (state.get().control.header.date.show.date || state.get().control.header.date.show.day || state.get().control.header.date.show.month || state.get().control.header.date.show.year) {
+      if (state.get().header.date.show.date || state.get().header.date.show.day || state.get().header.date.show.month || state.get().header.date.show.year) {
         helper.addClass(html, "is-date");
       } else {
         helper.removeClass(html, "is-date");
       };
     };
     var _clock = function() {
-      if (state.get().control.header.clock.show.seconds || state.get().control.header.clock.show.minutes || state.get().control.header.clock.show.hours) {
+      if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
         helper.addClass(html, "is-clock");
       } else {
         helper.removeClass(html, "is-clock");
       };
     };
     var _search = function() {
-      if (state.get().control.header.search.show) {
+      if (state.get().header.search.show) {
         helper.addClass(html, "is-search");
       } else {
         helper.removeClass(html, "is-search");
       };
-      if (state.get().control.header.search.grow) {
+      if (state.get().header.search.grow) {
         helper.addClass(html, "is-search-grow");
       } else {
         helper.removeClass(html, "is-search-grow");
       };
-      helper.e(".control-header-search-engine-custom-url").value = state.get().control.header.search.engine.custom.url;
+      helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     };
     var _alignment = function() {
       helper.removeClass(html, "is-alignment-horizontal-left");
@@ -587,8 +594,8 @@ var control = (function() {
       helper.removeClass(html, "is-alignment-vertical-top");
       helper.removeClass(html, "is-alignment-vertical-center");
       helper.removeClass(html, "is-alignment-vertical-bottom");
-      helper.addClass(html, "is-alignment-horizontal-" + state.get().control.header.alignment.horizontal);
-      helper.addClass(html, "is-alignment-vertical-" + state.get().control.header.alignment.vertical);
+      helper.addClass(html, "is-alignment-horizontal-" + state.get().header.alignment.horizontal);
+      helper.addClass(html, "is-alignment-vertical-" + state.get().header.alignment.vertical);
     };
     var _link = function() {
       var view = {
@@ -601,18 +608,18 @@ var control = (function() {
           helper.addClass(html, "is-link-list");
         }
       };
-      view[state.get().control.bookmarks.style]();
-      if (state.get().control.bookmarks.show.link) {
+      view[state.get().bookmarks.style]();
+      if (state.get().bookmarks.show.link) {
         helper.addClass(html, "is-link");
       } else {
         helper.removeClass(html, "is-link");
       };
-      if (state.get().control.bookmarks.show.name) {
+      if (state.get().bookmarks.show.name) {
         helper.addClass(html, "is-link-name");
       } else {
         helper.removeClass(html, "is-link-name");
       };
-      if (state.get().control.bookmarks.show.url) {
+      if (state.get().bookmarks.show.url) {
         helper.addClass(html, "is-link-url");
       } else {
         helper.removeClass(html, "is-link-url");
@@ -622,22 +629,22 @@ var control = (function() {
       helper.removeClass(html, "is-layout-fluid");
       helper.removeClass(html, "is-layout-wide");
       helper.removeClass(html, "is-layout-thin");
-      helper.addClass(html, "is-layout-" + state.get().control.layout.width);
-      if (state.get().control.layout.scrollPastEnd) {
+      helper.addClass(html, "is-layout-" + state.get().layout.width);
+      if (state.get().layout.scrollPastEnd) {
         helper.addClass(html, "is-scroll-past-end");
       } else {
         helper.removeClass(html, "is-scroll-past-end");
       };
     };
     var _editAdd = function() {
-      if (state.get().control.header.editAdd.show) {
+      if (state.get().header.editAdd.show) {
         helper.addClass(html, "is-search-edit-add");
       } else {
         helper.removeClass(html, "is-search-edit-add");
       };
     };
     var _accent = function() {
-      if (state.get().control.header.accent.show) {
+      if (state.get().header.accent.show) {
         helper.addClass(html, "is-search-accent");
       } else {
         helper.removeClass(html, "is-search-accent");
@@ -669,18 +676,18 @@ var control = (function() {
     };
     var _date = function() {
       var activeCount = 0;
-      var toCheck = [state.get().control.header.date.show.date, state.get().control.header.date.show.day, state.get().control.header.date.show.month, state.get().control.header.date.show.year];
+      var toCheck = [state.get().header.date.show.date, state.get().header.date.show.day, state.get().header.date.show.month, state.get().header.date.show.year];
       toCheck.forEach(function(arrayItem, index) {
         if (arrayItem == true) {
           activeCount++;
         };
       });
-      if (activeCount >= 2 && (state.get().control.header.date.show.date || state.get().control.header.date.show.day || state.get().control.header.date.show.month || state.get().control.header.date.show.year)) {
+      if (activeCount >= 2 && (state.get().header.date.show.date || state.get().header.date.show.day || state.get().header.date.show.month || state.get().header.date.show.year)) {
         helper.e(".control-header-date-show-separator").disabled = false;
       } else {
         helper.e(".control-header-date-show-separator").disabled = true;
       };
-      if (state.get().control.header.date.show.day || state.get().control.header.date.show.month) {
+      if (state.get().header.date.show.day || state.get().header.date.show.month) {
         helper.e(".control-header-date-character-length-short").disabled = false;
         helper.e(".control-header-date-character-length-long").disabled = false;
       } else {
@@ -690,32 +697,32 @@ var control = (function() {
     };
     var _clock = function() {
       var activeCount = 0;
-      var toCheck = [state.get().control.header.clock.show.seconds, state.get().control.header.clock.show.minutes, state.get().control.header.clock.show.hours];
+      var toCheck = [state.get().header.clock.show.seconds, state.get().header.clock.show.minutes, state.get().header.clock.show.hours];
       toCheck.forEach(function(arrayItem, index) {
         if (arrayItem == true) {
           activeCount++;
         };
       });
-      if (activeCount >= 2 && (state.get().control.header.clock.show.seconds || state.get().control.header.clock.show.minutes || state.get().control.header.clock.show.hours)) {
+      if (activeCount >= 2 && (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours)) {
         helper.e(".control-header-clock-show-separator").disabled = false;
       } else {
         helper.e(".control-header-clock-show-separator").disabled = true;
       };
-      if (state.get().control.header.clock.show.seconds || state.get().control.header.clock.show.minutes || state.get().control.header.clock.show.hours) {
+      if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
         helper.e(".control-header-clock-24").disabled = false;
         helper.e(".control-header-clock-show-meridiem").disabled = false;
       } else {
         helper.e(".control-header-clock-24").disabled = true;
         helper.e(".control-header-clock-show-meridiem").disabled = true;
       };
-      if ((state.get().control.header.clock.show.seconds || state.get().control.header.clock.show.minutes || state.get().control.header.clock.show.hours) && !state.get().control.header.clock.hour24) {
+      if ((state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) && !state.get().header.clock.hour24) {
         helper.e(".control-header-clock-show-meridiem").disabled = false;
       } else {
         helper.e(".control-header-clock-show-meridiem").disabled = true;
       };
     };
     var _search = function() {
-      if (state.get().control.header.search.show) {
+      if (state.get().header.search.show) {
         helper.e(".control-header-search-grow").disabled = false;
         helper.e(".control-header-search-focus").disabled = false;
         helper.e(".control-header-search-engine-google").disabled = false;
@@ -732,7 +739,7 @@ var control = (function() {
         helper.e(".control-header-search-engine-custom").disabled = true;
         helper.e(".control-header-search-engine-label").setAttribute("disabled", "");
       };
-      if (state.get().control.header.search.show && state.get().control.header.search.engine.selected === "custom") {
+      if (state.get().header.search.show && state.get().header.search.engine.selected === "custom") {
         helper.e("[for=control-header-search-engine-custom-url]").removeAttribute("disabled");
         helper.e(".control-header-search-engine-custom-url").disabled = false;
       } else {
@@ -741,7 +748,7 @@ var control = (function() {
       };
     };
     var _theme = function() {
-      if (state.get().control.layout.theme.random.active) {
+      if (state.get().layout.theme.random.active) {
         helper.eA("input[name='control-layout-theme-style']").forEach(function(arrayItem, index) {
           arrayItem.disabled = false;
         });
@@ -752,7 +759,7 @@ var control = (function() {
       };
     };
     var _link = function() {
-      if (state.get().control.bookmarks.show.link) {
+      if (state.get().bookmarks.show.link) {
         helper.e(".control-link-show-name").disabled = false;
         helper.e(".control-link-show-url").disabled = false;
         helper.e(".control-link-style-block").disabled = false;
@@ -779,7 +786,7 @@ var control = (function() {
       };
     };
     var _background = function() {
-      if (state.get().control.background.image.show) {
+      if (state.get().background.image.show) {
         helper.e("[for=control-background-image-url]").removeAttribute("disabled");
         helper.e(".control-background-image-url").disabled = false;
         helper.e("[for=control-background-image-opacity]").removeAttribute("disabled");

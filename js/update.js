@@ -122,10 +122,10 @@ var update = (function() {
     //   layout: data.state.layout,
     //   background: data.state.background
     // };
-    delete data.state.header;
-    delete data.state.bookmarks;
-    delete data.state.background;
-    delete data.state.layout;
+    // delete data.state.header;
+    // delete data.state.bookmarks;
+    // delete data.state.background;
+    // delete data.state.layout;
     // update version
     data.version = 2.70;
     return data;

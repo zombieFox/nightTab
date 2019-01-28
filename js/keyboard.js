@@ -22,7 +22,7 @@ var keyboard = (function() {
       };
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
-        if (state.get().control.bookmarks.show.link) {
+        if (state.get().bookmarks.show.link) {
           menu.close();
           link.add();
         };
@@ -35,7 +35,7 @@ var keyboard = (function() {
       };
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
-        if (state.get().control.bookmarks.show.link) {
+        if (state.get().bookmarks.show.link) {
           if (state.get().edit.active) {
             state.change({
               path: "edit.active",

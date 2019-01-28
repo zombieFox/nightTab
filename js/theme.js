@@ -2,12 +2,12 @@ var theme = (function() {
 
   var render = function() {
     var html = helper.e("html");
-    var color = state.get().control.layout.theme.current;
+    var color = state.get().layout.theme.current;
     html.style.setProperty("--accent", color.r + ", " + color.g + ", " + color.b);
   };
 
   var random = function() {
-    if (state.get().control.layout.theme.random.active) {
+    if (state.get().layout.theme.random.active) {
       var randomVal = function(min, max) {
         return Math.floor(Math.random() * (max - min) + 1) + min;
       };
@@ -48,7 +48,7 @@ var theme = (function() {
           };
         }
       };
-      var hsl = color[state.get().control.layout.theme.random.style]();
+      var hsl = color[state.get().layout.theme.random.style]();
       var randomColor = helper.hslToRgb({
         h: hsl.h,
         s: (hsl.s / 100),
