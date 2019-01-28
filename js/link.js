@@ -238,7 +238,7 @@ var link = (function() {
         value: 1
       }]
     };
-    if (state.get().link.newTab) {
+    if (state.get().control.bookmarks.newTab) {
       linkOptions.attr.push({
         key: "target",
         value: "_blank"
@@ -393,7 +393,7 @@ var link = (function() {
   var render = function() {
     var linkArea = helper.e(".link-area");
     var bookmarksToRender = false;
-    if (state.get().header.search.searching) {
+    if (state.get().search.active) {
       bookmarksToRender = search.get();
     } else {
       bookmarksToRender = bookmarks.get();
@@ -416,7 +416,7 @@ var link = (function() {
       }
     };
     // if searching
-    if (state.get().header.search.searching) {
+    if (state.get().search.active) {
       // if bookmarks exist to be searched
       if (bookmarksToRender.total > 0) {
         // if matching bookmarks found

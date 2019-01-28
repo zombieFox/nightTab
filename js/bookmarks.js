@@ -154,7 +154,7 @@ var bookmarks = (function() {
           return helper.sortObject(array, "letter");
         }
       };
-      return action[state.get().link.sort](all);
+      return action[state.get().control.bookmarks.sort](all);
     };
     if (timeStamp && typeof timeStamp == "number") {
       return _singleBookmark(timeStamp);

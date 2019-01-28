@@ -2,35 +2,30 @@ var state = (function() {
 
   var current = {
     header: {
-      date: {
-        characterLength: "short",
-        show: {
-          date: true,
-          day: false,
-          month: true,
-          year: false,
-          separator: true
-        }
-      },
       clock: {
         hour24: true,
         show: {
-          seconds: true,
-          minutes: true,
           hours: true,
+          minutes: true,
+          seconds: true,
           separator: true,
           meridiem: true
         }
       },
-      editAdd: {
-        active: true,
-      },
-      accent: {
-        active: true,
+      date: {
+        show: {
+          day: false,
+          date: true,
+          month: true,
+          year: false,
+          separator: true
+        },
+        character: {
+          length: "short"
+        }
       },
       search: {
-        searching: false,
-        active: true,
+        show: true,
         grow: true,
         focus: false,
         engine: {
@@ -49,27 +44,30 @@ var state = (function() {
           }
         }
       },
-      buttons: {
-        show: true
-      }
-    },
-    link: {
-      show: {
-        active: true,
-        name: true,
-        url: true
-      },
-      editObject: null,
-      newTab: false,
-      style: "block",
-      sort: "none"
-    },
-    layout: {
       alignment: {
         horizontal: "left",
         vertical: "top"
       },
-      container: "wide",
+      editAdd: {
+        show: true,
+      },
+      accent: {
+        show: true,
+      }
+    },
+    bookmarks: {
+      show: {
+        link: true,
+        name: true,
+        url: true
+      },
+      newTab: false,
+      editObject: null,
+      style: "block",
+      sort: "none"
+    },
+    layout: {
+      width: "wide",
       scrollPastEnd: true,
       theme: {
         current: {
@@ -81,23 +79,26 @@ var state = (function() {
           active: false,
           style: "any"
         }
-      },
+      }
     },
     background: {
       image: {
-        active: false,
+        show: false,
         url: "../background/gray-steps.jpg",
         blur: 0,
         opacity: 1,
         grayscale: 0,
-        accentOpacity: 0
+        accent: 0
       }
+    },
+    search: {
+      active: false
     },
     edit: {
       active: false
     },
     menu: {
-      open: false
+      show: false
     },
     modal: {
       active: false
