@@ -1,224 +1,463 @@
 var control = (function() {
 
   var _allControl = [{
-    element: helper.e(".control-layout-theme-current"),
-    path: "control.layout.theme.current",
-    type: "color"
+    element: helper.e(".control-menu"),
+    type: "button",
+    func: function() {
+      menu.toggle();
+    }
   }, {
-    element: helper.e(".button"),
-    path: "menu.show",
-    type: "button"
+    element: helper.e(".control-add"),
+    type: "button",
+    func: function() {
+      link.add();
+    }
+  }, {
+    element: helper.e(".control-edit"),
+    path: "bookmarks.edit",
+    type: "checkbox",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-theme-current"),
+    path: "layout.theme.current",
+    type: "color",
+    func: function() {
+      theme.render();
+    }
   }, {
     element: helper.e(".control-header-clock-show-hours"),
-    path: "control.header.clock.show.hours",
-    type: "checkbox"
+    path: "header.clock.show.hours",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-clock-show-minutes"),
-    path: "control.header.clock.show.minutes",
-    type: "checkbox"
+    path: "header.clock.show.minutes",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-clock-show-seconds"),
-    path: "control.header.clock.show.seconds",
-    type: "checkbox"
+    path: "header.clock.show.seconds",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-clock-show-separator"),
-    path: "control.header.clock.show.separator",
-    type: "checkbox"
+    path: "header.clock.show.separator",
+    type: "checkbox",
+    func: function() {
+      clock.clear();
+      clock.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-clock-24"),
-    path: "control.header.clock.hour24",
-    type: "checkbox"
+    path: "header.clock.hour24",
+    type: "checkbox",
+    func: function() {
+      // dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-clock-show-meridiem"),
-    path: "control.header.clock.show.meridiem",
-    type: "checkbox"
+    path: "header.clock.show.meridiem",
+    type: "checkbox",
+    func: function() {
+      // dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-date-show-day"),
-    path: "control.header.date.show.day",
-    type: "checkbox"
+    path: "header.date.show.day",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-date-show-date"),
-    path: "control.header.date.show.date",
-    type: "checkbox"
+    path: "header.date.show.date",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-date-show-month"),
-    path: "control.header.date.show.month",
-    type: "checkbox"
+    path: "header.date.show.month",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-date-show-year"),
-    path: "control.header.date.show.year",
-    type: "checkbox"
+    path: "header.date.show.year",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-date-show-separator"),
-    path: "control.header.date.show.separator",
-    type: "checkbox"
+    path: "header.date.show.separator",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-date-character-length-short"),
-    path: "control.header.date.character.length",
-    type: "radio"
+    path: "header.date.character.length",
+    type: "radio",
+    func: function() {
+      render();
+      date.clear();
+      date.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-date-character-length-long"),
-    path: "control.header.date.character.length",
-    type: "radio"
+    path: "header.date.character.length",
+    type: "radio",
+    func: function() {
+      render();
+      date.clear();
+      date.render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-search-show"),
-    path: "control.header.search.show",
-    type: "checkbox"
+    path: "header.search.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-search-grow"),
-    path: "control.header.search.grow",
-    type: "checkbox"
+    path: "header.search.grow",
+    type: "checkbox",
+    func: function() {
+      render();
+      header.render();
+    }
   }, {
     element: helper.e(".control-header-search-focus"),
-    path: "control.header.search.focus",
-    type: "checkbox"
+    path: "header.search.focus",
+    type: "checkbox",
+    func: function() {}
   }, {
     element: helper.e(".control-header-search-engine-google"),
-    path: "control.header.search.engine.selected",
-    type: "radio"
+    path: "header.search.engine.selected",
+    type: "radio",
+    func: function() {
+      render();
+      // dependents();
+      search.update();
+    }
   }, {
     element: helper.e(".control-header-search-engine-duckduckgo"),
-    path: "control.header.search.engine.selected",
-    type: "radio"
+    path: "header.search.engine.selected",
+    type: "radio",
+    func: function() {
+      render();
+      // dependents();
+      search.update();
+    }
   }, {
     element: helper.e(".control-header-search-engine-giphy"),
-    path: "control.header.search.engine.selected",
-    type: "radio"
+    path: "header.search.engine.selected",
+    type: "radio",
+    func: function() {
+      render();
+      // dependents();
+      search.update();
+    }
   }, {
     element: helper.e(".control-header-search-engine-custom"),
-    path: "control.header.search.engine.selected",
-    type: "radio"
+    path: "header.search.engine.selected",
+    type: "radio",
+    func: function() {
+      render();
+      // dependents();
+      search.update();
+    }
   }, {
     element: helper.e(".control-header-search-engine-custom-url"),
-    path: "control.header.accent.show",
-    type: "checkbox"
+    path: "header.accent.show",
+    type: "checkbox",
+    func: function() {
+      search.update();
+    }
   }, {
     element: helper.e(".control-layout-alignment-horizontal-left"),
-    path: "control.header.alignment.horizontal",
-    type: "radio"
+    path: "header.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-alignment-horizontal-center"),
-    path: "control.header.alignment.horizontal",
-    type: "radio"
+    path: "header.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-alignment-horizontal-right"),
-    path: "control.header.alignment.horizontal",
-    type: "radio"
+    path: "header.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-alignment-vertical-top"),
-    path: "control.header.alignment.vertical",
-    type: "radio"
+    path: "header.alignment.vertical",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-alignment-vertical-center"),
-    path: "control.header.alignment.vertical",
-    type: "radio"
+    path: "header.alignment.vertical",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-alignment-vertical-bottom"),
-    path: "control.header.alignment.vertical",
-    type: "radio"
+    path: "header.alignment.vertical",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-bookmarks-show-link"),
-    path: "control.bookmarks.show.link",
-    type: "checkbox"
+    path: "bookmarks.show.link",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+      header.render();
+    }
   }, {
     element: helper.e(".control-bookmarks-show-name"),
-    path: "control.bookmarks.show.name",
-    type: "checkbox"
+    path: "bookmarks.show.name",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+    }
   }, {
     element: helper.e(".control-bookmarks-show-url"),
-    path: "control.bookmarks.show.url",
-    type: "checkbox"
+    path: "bookmarks.show.url",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+    }
   }, {
     element: helper.e(".control-bookmarks-new-tab"),
-    path: "control.bookmarks.newTab",
-    type: "checkbox"
+    path: "bookmarks.newTab",
+    type: "checkbox",
+    func: function() {
+      link.clear();
+      link.render();
+    }
   }, {
     element: helper.e(".control-bookmarks-style-block"),
-    path: "control.bookmarks.style",
-    type: "radio"
+    path: "bookmarks.style",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-bookmarks-style-list"),
-    path: "control.bookmarks.style",
-    type: "radio"
+    path: "bookmarks.style",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-bookmarks-sort-none"),
-    path: "control.bookmarks.sort",
-    type: "radio"
+    path: "bookmarks.sort",
+    type: "radio",
+    func: function() {
+      link.clear();
+      link.render();
+    }
   }, {
     element: helper.e(".control-bookmarks-sort-name"),
-    path: "control.bookmarks.sort",
-    type: "radio"
+    path: "bookmarks.sort",
+    type: "radio",
+    func: function() {
+      link.clear();
+      link.render();
+    }
   }, {
     element: helper.e(".control-bookmarks-sort-letter"),
-    path: "control.bookmarks.sort",
-    type: "radio"
+    path: "bookmarks.sort",
+    type: "radio",
+    func: function() {
+      link.clear();
+      link.render();
+    }
   }, {
     element: helper.e(".control-layout-width-fluid"),
-    path: "control.layout.width",
-    type: "radio"
+    path: "layout.width",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-width-wide"),
-    path: "control.layout.width",
-    type: "radio"
+    path: "layout.width",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-width-thin"),
-    path: "control.layout.width",
-    type: "radio"
+    path: "layout.width",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-scroll-past-end"),
-    path: "control.layout.scrollPastEnd",
-    type: "checkbox"
+    path: "layout.scrollPastEnd",
+    type: "checkbox",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-theme-random-active"),
-    path: "control.layout.theme.random.active",
-    type: "checkbox"
+    path: "layout.theme.random.active",
+    type: "checkbox",
+    func: function() {
+      theme.render();
+    }
   }, {
     element: helper.e(".control-layout-theme-style-any"),
-    path: "control.layout.theme.random.style",
-    type: "radio"
+    path: "layout.theme.random.style",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-theme-style-light"),
-    path: "control.layout.theme.random.style",
-    type: "radio"
+    path: "layout.theme.random.style",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-theme-style-dark"),
-    path: "control.layout.theme.random.style",
-    type: "radio"
+    path: "layout.theme.random.style",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-theme-style-pastel"),
-    path: "control.layout.theme.random.style",
-    type: "radio"
+    path: "layout.theme.random.style",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-layout-theme-style-saturated"),
-    path: "control.layout.theme.random.style",
-    type: "radio"
+    path: "layout.theme.random.style",
+    type: "radio",
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-background-image-show"),
-    path: "control.background.image.show",
-    type: "checkbox"
+    path: "background.image.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      // dependents();
+      background.render();
+    }
   }, {
     element: helper.e(".control-background-image-url"),
-    path: "control.background.image.url",
-    type: "text"
+    path: "background.image.url",
+    type: "text",
+    func: function() {
+      background.render();
+    }
   }, {
     element: helper.e(".control-background-image-opacity"),
-    path: "control.background.image.opacity",
+    path: "background.image.opacity",
     type: "range",
-    valueMod: ["reverse", "float"]
+    valueMod: ["reverse", "float"],
+    func: function() {
+      background.render();
+    }
   }, {
     element: helper.e(".control-background-image-grayscale"),
-    path: "control.background.image.grayscale",
+    path: "background.image.grayscale",
     type: "range",
-    valueMod: ["float"]
+    valueMod: ["float"],
+    func: function() {
+      background.render();
+    }
   }, {
     element: helper.e(".control-background-image-blur"),
-    path: "control.background.image.blur",
-    type: "range"
+    path: "background.image.blur",
+    type: "range",
+    func: function() {
+      background.render();
+    }
   }, {
     element: helper.e(".control-background-image-accent"),
-    path: "control.background.image.accent",
+    path: "background.image.accent",
     type: "range",
-    valueMod: ["float"]
+    valueMod: ["float"],
+    func: function() {
+      background.render();
+    }
   }];
 
   var _bind = function() {
@@ -249,6 +488,8 @@ var control = (function() {
     };
     var valueMod = {
       reverse: function(value, object) {
+        console.log(value);
+        console.log(parseInt(object.element.max, 10) - value);
         return parseInt(object.element.max, 10) - value;
       },
       float: function(value, object) {
@@ -272,289 +513,56 @@ var control = (function() {
       };
     };
     var changeValue = function(object) {
-      var newValue = valueType[object.type](object);
-      if (object.valueMod) {
-        object.valueMod.forEach(function(arrayItem, index) {
-          newValue = valueMod[arrayItem](newValue, object);
-        });
-      };
-      helper.setObject({
-        object: state.get(),
-        path: object.path,
-        newValue: newValue
-      });
-      console.log(
-        object.path,
-        helper.getObject({
+      if (object.path) {
+        var newValue = valueType[object.type](object);
+        if (object.valueMod) {
+          object.valueMod.forEach(function(arrayItem, index) {
+            newValue = valueMod[arrayItem](newValue, object);
+          });
+        };
+        helper.setObject({
           object: state.get(),
-          path: object.path
-        })
-      );
+          path: object.path,
+          newValue: newValue
+        });
+        console.log(
+          object.path,
+          helper.getObject({
+            object: state.get(),
+            path: object.path
+          })
+        );
+      };
     };
     var bindControl = function(object) {
       var action = {
         input: function(object) {
           changeValue(object);
+          if (object.func) {
+            object.func();
+          };
         },
         button: function(object) {
-          toggleValue(object);
+          if (object.func) {
+            object.func();
+          };
+          // toggleValue(object);
         }
       };
       object.element.addEventListener(eventType[object.type], function() {
         action[object.element.tagName.toLowerCase()](object);
-        // if (object.element.invoke) {
-        //   object.element.invoke.forEach(function(arrayItem, index) {
-        //     invoke[arrayItem]();
-        //   });
-        // };
+        data.save();
       }, false);
     };
     _allControl.forEach(function(arrayItem, index) {
       bindControl(arrayItem);
     });
-    // helper.e(".control-menu").addEventListener("click", function() {
-    //   menu.toggle();
-    // }, false);
-    // helper.e(".control-add").addEventListener("click", function() {
-    //   link.add();
-    // }, false);
-    // helper.e(".control-edit").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-layout-theme").addEventListener("change", function() {
-    //   theme.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-layout-theme-random").addEventListener("change", function() {
-    //   theme.render();
-    //   dependents();
-    //   data.save();
-    // }, false);
-    // helper.eA("input[name='control-layout-theme-style']").forEach(function(arrayItem, index) {
-    //   arrayItem.addEventListener("change", function() {
-    //     render();
-    //     data.save();
-    //   }, false);
-    // });
-    // helper.e(".control-link-new-tab").addEventListener("change", function() {
-    //   link.clear();
-    //   link.render();
-    //   data.save();
-    // });
-    // helper.e(".control-link-show-active").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   header.render();
-    //   data.save();
-    // });
-    // helper.e(".control-link-show-name").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   data.save();
-    // });
-    // helper.e(".control-link-show-url").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   data.save();
-    // });
-    // helper.eA("input[name='control-link-style']").forEach(function(arrayItem, index) {
-    //   arrayItem.addEventListener("change", function() {
-    //     render();
-    //     data.save();
-    //   }, false);
-    // });
-    // helper.eA("input[name='control-link-sort']").forEach(function(arrayItem, index) {
-    //   arrayItem.addEventListener("change", function() {
-    //     link.clear();
-    //     link.render();
-    //     data.save();
-    //   }, false);
-    // });
-    // helper.e(".control-header-search-active").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-search-grow").addEventListener("change", function() {
-    //   render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-search-focus").addEventListener("change", function() {
-    //   data.save();
-    // }, false);
-    // helper.eA("input[name='control-header-search-engine']").forEach(function(arrayItem, index) {
-    //   arrayItem.addEventListener("change", function() {
-    //     render();
-    //     dependents();
-    //     search.update();
-    //     data.save();
-    //   }, false);
-    // });
-    // helper.e(".control-header-search-engine-custom-url").addEventListener("input", function() {
-    //   search.update();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-date-show-date").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   date.clear();
-    //   date.render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-date-show-day").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   date.clear();
-    //   date.render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-date-show-month").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   date.clear();
-    //   date.render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-date-show-year").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   date.clear();
-    //   date.render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-date-show-separator").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   date.clear();
-    //   date.render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.eA("input[name='control-header-date-character-length']").forEach(function(arrayItem, index) {
-    //   arrayItem.addEventListener("change", function() {
-    //     render();
-    //     date.clear();
-    //     date.render();
-    //     header.render();
-    //     data.save();
-    //   }, false);
-    // });
-    // helper.e(".control-header-clock-show-seconds").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   clock.clear();
-    //   clock.render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-clock-show-minutes").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   clock.clear();
-    //   clock.render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-clock-show-hours").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   clock.clear();
-    //   clock.render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-clock-show-separator").addEventListener("change", function() {
-    //   clock.clear();
-    //   clock.render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-clock-24").addEventListener("change", function() {
-    //   dependents();
-    //   clock.clear();
-    //   clock.render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-clock-show-meridiem").addEventListener("change", function() {
-    //   clock.clear();
-    //   clock.render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-edit-add-active").addEventListener("change", function() {
-    //   render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-header-accent-active").addEventListener("change", function() {
-    //   render();
-    //   header.render();
-    //   data.save();
-    // }, false);
-    // helper.eA("input[name='control-layout-alignment-horizontal']").forEach(function(arrayItem, index) {
-    //   arrayItem.addEventListener("change", function() {
-    //     render();
-    //     data.save();
-    //   }, false);
-    // });
-    // helper.eA("input[name='control-layout-alignment-vertical']").forEach(function(arrayItem, index) {
-    //   arrayItem.addEventListener("change", function() {
-    //     render();
-    //     data.save();
-    //   }, false);
-    // });
-    // helper.eA("input[name='control-layout-container']").forEach(function(arrayItem, index) {
-    //   arrayItem.addEventListener("change", function() {
-    //     render();
-    //     header.render();
-    //     data.save();
-    //   }, false);
-    // });
-    // helper.e(".control-layout-scroll-past-end").addEventListener("change", function() {
-    //   render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-background-image-active").addEventListener("change", function() {
-    //   render();
-    //   dependents();
-    //   background.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-background-image-url").addEventListener("input", function() {
-    //   background.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-background-image-opacity").addEventListener("input", function() {
-    //   background.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-background-image-blur").addEventListener("input", function() {
-    //   background.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-background-image-grayscale").addEventListener("input", function() {
-    //   background.render();
-    //   data.save();
-    // }, false);
-    // helper.e(".control-background-image-accent-opacity").addEventListener("input", function() {
-    //   background.render();
-    //   data.save();
-    // }, false);
   };
 
   var render = function() {
     var html = helper.e("html");
     var _edit = function() {
-      if (state.get().edit.active) {
+      if (state.get().bookmarks.edit) {
         helper.addClass(html, "is-edit");
       } else {
         helper.removeClass(html, "is-edit");
@@ -820,7 +828,6 @@ var control = (function() {
   };
 
   var update = function() {
-    var allControls = helper.eA("[data-control-options]");
     var eventType = {
       button: "click",
       checkbox: "change",
@@ -830,55 +837,54 @@ var control = (function() {
       color: "change"
     };
     var valueMod = {
-      reverse: function(value, control) {
-        return parseInt(control.max, 10) - value;
+      reverse: function(value, element) {
+        return parseInt(element.max, 10) - value;
       },
-      float: function(value, control) {
+      float: function(value, element) {
         return value * 100;
       }
     };
     var setValue = {
-      checkbox: function(control, options) {
-        control.checked = helper.getObject({
+      checkbox: function(object) {
+        object.element.checked = helper.getObject({
           object: state.get(),
-          path: options.path
+          path: object.path
         });
       },
-      radio: function(control, options) {
-        helper.e("." + control.className.substring(0, control.className.lastIndexOf("-") + 1) + helper.getObject({
+      radio: function(object) {
+        helper.e("." + object.element.className.substring(0, object.element.className.lastIndexOf("-") + 1) + helper.getObject({
           object: state.get(),
-          path: options.path
+          path: object.path
         })).checked = true;
       },
-      text: function(control, options) {
-        control.value = helper.getObject({
+      text: function(object) {
+        object.element.value = helper.getObject({
           object: state.get(),
-          path: options.path
+          path: object.path
         });
       },
-      range: function(control, options) {
+      range: function(object) {
         var newValue = helper.getObject({
           object: state.get(),
-          path: options.path
+          path: object.path
         });
-        if (options.valueMod) {
-          options.valueMod.reverse().forEach(function(arrayItem, index) {
-            newValue = valueMod[arrayItem](newValue, control);
+        if (object.valueMod) {
+          object.valueMod.reverse().forEach(function(arrayItem, index) {
+            newValue = valueMod[arrayItem](newValue, object.element);
           });
         };
-        control.value = newValue;
+        object.element.value = newValue;
       },
-      color: function(control, options) {
-        control.value = helper.rgbToHex(helper.getObject({
+      color: function(object) {
+        object.element.value = helper.rgbToHex(helper.getObject({
           object: state.get(),
-          path: options.path
+          path: object.path
         }));
       }
     };
-    allControls.forEach(function(arrayItem, index) {
-      var options = helper.makeObject(arrayItem.dataset.controlOptions);
-      if (arrayItem.tagName.toLowerCase() == "input") {
-        setValue[options.type](arrayItem, options);
+    _allControl.forEach(function(arrayItem, index) {
+      if (arrayItem.element.tagName.toLowerCase() == "input") {
+        setValue[arrayItem.type](arrayItem);
       };
     });
   };

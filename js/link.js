@@ -440,7 +440,7 @@ var link = (function() {
 
   var tabIndex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
-    if (state.get().edit.active) {
+    if (state.get().bookmarks.edit) {
       allLinkControlItem.forEach(function(arrayItem, index) {
         arrayItem.tabIndex = 1;
       });

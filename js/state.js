@@ -62,6 +62,7 @@ var state = (function() {
         url: true
       },
       newTab: false,
+      edit: false,
       editObject: null,
       style: "block",
       sort: "none"
@@ -91,18 +92,9 @@ var state = (function() {
         accent: 0
       }
     },
-    search: {
-      active: false
-    },
-    edit: {
-      active: false
-    },
-    menu: {
-      show: false
-    },
-    modal: {
-      active: false
-    }
+    search: false,
+    menu: false,
+    modal: false
   };
 
   var get = function() {

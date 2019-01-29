@@ -102,6 +102,9 @@ var update = (function() {
     // change bookmarks show
     data.state.bookmarks.show.link = data.state.bookmarks.show.active;
     delete data.state.bookmarks.show.active;
+    // move edit
+    data.state.bookmarks.edit = false;
+    delete data.state.edit;
     // change layout width
     data.state.layout.width = data.state.layout.container;
     delete data.state.layout.container;
@@ -115,17 +118,6 @@ var update = (function() {
     data.state.menu.show = data.state.menu.active;
     delete data.state.menu.active;
     delete data.state.menu.open;
-    // move into control
-    // data.state.control = {
-    //   header: data.state.header,
-    //   bookmarks: data.state.bookmarks,
-    //   layout: data.state.layout,
-    //   background: data.state.background
-    // };
-    // delete data.state.header;
-    // delete data.state.bookmarks;
-    // delete data.state.background;
-    // delete data.state.layout;
     // update version
     data.version = 2.70;
     return data;

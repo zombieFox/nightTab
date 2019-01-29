@@ -8,7 +8,6 @@
   max-height: calc(80vh - 2em);
   overflow-y: auto;
   transform: translateY(calc(-100% - 2em));
-    transform: translateY(0);
   transition: transform var(--animation-speed-fast) ease-in-out;
   z-index: var(--z-index-menu);
 }

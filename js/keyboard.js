@@ -10,7 +10,7 @@ var keyboard = (function() {
         } else if (state.get().modal.active) {
           modal.destroy();
           shade.destroy();
-        } else if (state.get().edit.active) {
+        } else if (state.get().bookmarks.edit) {
           state.change({
             path: "edit.active",
             value: false
@@ -36,7 +36,7 @@ var keyboard = (function() {
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
         if (state.get().bookmarks.show.link) {
-          if (state.get().edit.active) {
+          if (state.get().bookmarks.edit) {
             state.change({
               path: "edit.active",
               value: false
