@@ -488,8 +488,6 @@ var control = (function() {
     };
     var valueMod = {
       reverse: function(value, object) {
-        console.log(value);
-        console.log(parseInt(object.element.max, 10) - value);
         return parseInt(object.element.max, 10) - value;
       },
       float: function(value, object) {
@@ -869,7 +867,7 @@ var control = (function() {
           path: object.path
         });
         if (object.valueMod) {
-          object.valueMod.reverse().forEach(function(arrayItem, index) {
+          object.valueMod.slice().reverse().forEach(function(arrayItem, index) {
             newValue = valueMod[arrayItem](newValue, object.element);
           });
         };
