@@ -32,7 +32,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
       clock.clear();
       clock.render();
       header.render();
@@ -43,7 +43,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
       clock.clear();
       clock.render();
       header.render();
@@ -54,7 +54,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
       clock.clear();
       clock.render();
       header.render();
@@ -73,7 +73,7 @@ var control = (function() {
     path: "header.clock.hour24",
     type: "checkbox",
     func: function() {
-      // dependents();
+      dependents();
       clock.clear();
       clock.render();
       header.render();
@@ -83,7 +83,7 @@ var control = (function() {
     path: "header.clock.show.meridiem",
     type: "checkbox",
     func: function() {
-      // dependents();
+      dependents();
       clock.clear();
       clock.render();
       header.render();
@@ -94,7 +94,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
       date.clear();
       date.render();
       header.render();
@@ -105,7 +105,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
       date.clear();
       date.render();
       header.render();
@@ -116,7 +116,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
       date.clear();
       date.render();
       header.render();
@@ -127,7 +127,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
       date.clear();
       date.render();
       header.render();
@@ -138,7 +138,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
       date.clear();
       date.render();
       header.render();
@@ -169,7 +169,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
       header.render();
     }
   }, {
@@ -191,7 +191,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      // dependents();
+      dependents();
       search.update();
     }
   }, {
@@ -200,7 +200,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      // dependents();
+      dependents();
       search.update();
     }
   }, {
@@ -209,7 +209,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      // dependents();
+      dependents();
       search.update();
     }
   }, {
@@ -218,7 +218,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      // dependents();
+      dependents();
       search.update();
     }
   }, {
@@ -276,7 +276,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
       header.render();
     }
   }, {
@@ -285,7 +285,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
     }
   }, {
     element: helper.e(".control-bookmarks-show-url"),
@@ -293,7 +293,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
     }
   }, {
     element: helper.e(".control-bookmarks-new-tab"),
@@ -417,7 +417,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      // dependents();
+      dependents();
       background.render();
     }
   }, {
@@ -766,26 +766,26 @@ var control = (function() {
     };
     var _link = function() {
       if (state.get().bookmarks.show.link) {
-        helper.e(".control-link-show-name").disabled = false;
-        helper.e(".control-link-show-url").disabled = false;
-        helper.e(".control-link-style-block").disabled = false;
-        helper.e(".control-link-style-list").disabled = false;
-        helper.e(".control-link-new-tab").disabled = false;
-        helper.e(".control-link-sort-none").disabled = false;
-        helper.e(".control-link-sort-name").disabled = false;
-        helper.e(".control-link-sort-letter").disabled = false;
+        helper.e(".control-bookmarks-show-name").disabled = false;
+        helper.e(".control-bookmarks-show-url").disabled = false;
+        helper.e(".control-bookmarks-style-block").disabled = false;
+        helper.e(".control-bookmarks-style-list").disabled = false;
+        helper.e(".control-bookmarks-new-tab").disabled = false;
+        helper.e(".control-bookmarks-sort-none").disabled = false;
+        helper.e(".control-bookmarks-sort-name").disabled = false;
+        helper.e(".control-bookmarks-sort-letter").disabled = false;
         helper.e(".control-layout-alignment-vertical-top").disabled = true;
         helper.e(".control-layout-alignment-vertical-center").disabled = true;
         helper.e(".control-layout-alignment-vertical-bottom").disabled = true;
       } else {
-        helper.e(".control-link-show-name").disabled = true;
-        helper.e(".control-link-show-url").disabled = true;
-        helper.e(".control-link-style-block").disabled = true;
-        helper.e(".control-link-style-list").disabled = true;
-        helper.e(".control-link-new-tab").disabled = true;
-        helper.e(".control-link-sort-none").disabled = true;
-        helper.e(".control-link-sort-name").disabled = true;
-        helper.e(".control-link-sort-letter").disabled = true;
+        helper.e(".control-bookmarks-show-name").disabled = true;
+        helper.e(".control-bookmarks-show-url").disabled = true;
+        helper.e(".control-bookmarks-style-block").disabled = true;
+        helper.e(".control-bookmarks-style-list").disabled = true;
+        helper.e(".control-bookmarks-new-tab").disabled = true;
+        helper.e(".control-bookmarks-sort-none").disabled = true;
+        helper.e(".control-bookmarks-sort-name").disabled = true;
+        helper.e(".control-bookmarks-sort-letter").disabled = true;
         helper.e(".control-layout-alignment-vertical-top").disabled = false;
         helper.e(".control-layout-alignment-vertical-center").disabled = false;
         helper.e(".control-layout-alignment-vertical-bottom").disabled = false;
@@ -801,8 +801,8 @@ var control = (function() {
         helper.e(".control-background-image-blur").disabled = false;
         helper.e("[for=control-background-image-grayscale]").removeAttribute("disabled");
         helper.e(".control-background-image-grayscale").disabled = false;
-        helper.e("[for=control-background-image-accent-opacity]").removeAttribute("disabled");
-        helper.e(".control-background-image-accent-opacity").disabled = false;
+        helper.e("[for=control-background-image-accent]").removeAttribute("disabled");
+        helper.e(".control-background-image-accent").disabled = false;
       } else {
         helper.e("[for=control-background-image-url]").setAttribute("disabled", "");
         helper.e(".control-background-image-url").disabled = true;
@@ -812,8 +812,8 @@ var control = (function() {
         helper.e(".control-background-image-blur").disabled = true;
         helper.e("[for=control-background-image-grayscale]").setAttribute("disabled", "");
         helper.e(".control-background-image-grayscale").disabled = true;
-        helper.e("[for=control-background-image-accent-opacity]").setAttribute("disabled", "");
-        helper.e(".control-background-image-accent-opacity").disabled = true;
+        helper.e("[for=control-background-image-accent]").setAttribute("disabled", "");
+        helper.e(".control-background-image-accent").disabled = true;
       };
     };
     _edit();
@@ -890,7 +890,7 @@ var control = (function() {
   var init = function() {
     _bind();
     update();
-    // dependents();
+    dependents();
     render();
   };
 
