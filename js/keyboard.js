@@ -11,9 +11,10 @@ var keyboard = (function() {
           modal.destroy();
           shade.destroy();
         } else if (state.get().bookmarks.edit) {
-          state.change({
+          helper.setObject({
+            object: state.get(),
             path: "edit.active",
-            value: false
+            newValue: false
           });
           control.update();
           control.render();
@@ -37,14 +38,16 @@ var keyboard = (function() {
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
         if (state.get().bookmarks.show.link) {
           if (state.get().bookmarks.edit) {
-            state.change({
+            helper.setObject({
+              object: state.get(),
               path: "edit.active",
-              value: false
+              newValue: false
             });
           } else {
-            state.change({
+            helper.setObject({
+              object: state.get(),
               path: "edit.active",
-              value: true
+              newValue: true
             });
           };
           control.update();

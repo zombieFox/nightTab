@@ -18,15 +18,17 @@ var search = (function() {
 
   var _toggle = function(input) {
     if (input.value != "") {
-      state.change({
-        path: "header.search.searching",
-        value: true
-      })
+      helper.setObject({
+        object: state.get(),
+        path: "search",
+        newValue: true
+      });
     } else {
-      state.change({
-        path: "header.search.searching",
-        value: false
-      })
+      helper.setObject({
+        object: state.get(),
+        path: "search",
+        newValue: false
+      });
     };
   };
 

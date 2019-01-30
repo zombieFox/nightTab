@@ -1,7 +1,6 @@
 var background = (function() {
 
   var render = function() {
-    console.log(state.get().background.image.show);
     var html = helper.e("html");
     var background = helper.e(".background");
     var backgroundImage = helper.e(".background-image");

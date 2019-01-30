@@ -11,9 +11,10 @@ var update = (function() {
   };
 
   var _update_200 = function(data) {
-    state.change({
+    helper.setObject({
+      object: state.get(),
       path: "layout.theme",
-      value: data.theme
+      newValue: data.theme
     });
     data = {
       state: state.get(),

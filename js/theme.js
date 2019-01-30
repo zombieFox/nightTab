@@ -54,9 +54,10 @@ var theme = (function() {
         s: (hsl.s / 100),
         l: (hsl.l / 100)
       });
-      state.change({
+      helper.setObject({
+        object: state.get(),
         path: "layout.theme.current",
-        value: randomColor
+        newValue: randomColor
       });
     };
   };

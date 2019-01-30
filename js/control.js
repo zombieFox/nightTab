@@ -223,10 +223,24 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-header-search-engine-custom-url"),
-    path: "header.accent.show",
+    path: "header.search.engine.custom.url",
     type: "checkbox",
     func: function() {
       search.update();
+    }
+  }, {
+    element: helper.e(".control-header-edit-add-show"),
+    path: "header.editAdd.show",
+    type: "checkbox",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-accent-show"),
+    path: "header.accent.show",
+    type: "checkbox",
+    func: function() {
+      render();
     }
   }, {
     element: helper.e(".control-layout-alignment-horizontal-left"),
@@ -494,22 +508,20 @@ var control = (function() {
         return value / 100;
       }
     };
-    var toggleValue = function(object) {
-      if (helper.getObject({
-          object: state.get(),
-          path: object.path
-        })) {
-        state.change({
-          path: object.path,
-          value: false
-        });
-      } else {
-        state.change({
-          path: object.path,
-          value: true
-        });
-      };
-    };
+    // var toggleValue = function(object) {
+    //   var value = false;
+    //   if (helper.getObject({
+    //       object: state.get(),
+    //       path: object.path
+    //     })) {
+    //     value = true;
+    //   };
+    //   helper.setObject({
+    //     path: object.path,
+    //     object: state.get(),
+    //     newValue: value
+    //   });
+    // };
     var changeValue = function(object) {
       if (object.path) {
         var newValue = valueType[object.type](object);
@@ -523,13 +535,10 @@ var control = (function() {
           path: object.path,
           newValue: newValue
         });
-        console.log(
-          object.path,
-          helper.getObject({
-            object: state.get(),
-            path: object.path
-          })
-        );
+        // console.log(object.path, helper.getObject({
+        //   object: state.get(),
+        //   path: object.path
+        // }));
       };
     };
     var bindControl = function(object) {
@@ -674,9 +683,10 @@ var control = (function() {
       } else {
         helper.e(".control-edit").disabled = true;
         helper.e(".control-edit").checked = false;
-        state.change({
+        helper.setObject({
+          object: state.get(),
           path: "edit.active",
-          value: false
+          newValue: false
         });
       };
     };
