@@ -388,6 +388,7 @@ var control = (function() {
     path: "layout.theme.random.active",
     type: "checkbox",
     func: function() {
+      dependents();
       theme.render();
     }
   }, {

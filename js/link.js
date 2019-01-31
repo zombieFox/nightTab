@@ -393,7 +393,7 @@ var link = (function() {
   var render = function() {
     var linkArea = helper.e(".link-area");
     var bookmarksToRender = false;
-    if (state.get().search.active) {
+    if (state.get().search) {
       bookmarksToRender = search.get();
     } else {
       bookmarksToRender = bookmarks.get();
@@ -416,7 +416,7 @@ var link = (function() {
       }
     };
     // if searching
-    if (state.get().search.active) {
+    if (state.get().search) {
       // if bookmarks exist to be searched
       if (bookmarksToRender.total > 0) {
         // if matching bookmarks found

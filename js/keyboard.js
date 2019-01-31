@@ -4,10 +4,10 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       //  esc
       if (event.keyCode == 27) {
-        if (state.get().menu.show) {
+        if (state.get().menu) {
           menu.close();
           shade.destroy();
-        } else if (state.get().modal.active) {
+        } else if (state.get().modal) {
           modal.destroy();
           shade.destroy();
         } else if (state.get().bookmarks.edit) {
