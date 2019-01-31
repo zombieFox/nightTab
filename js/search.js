@@ -35,7 +35,7 @@ var search = (function() {
   var _searchClear = function() {
     var searchInput = helper.e(".search-input");
     var searchClear = helper.e(".search-clear");
-    if (state.get().header.search.searching) {
+    if (state.get().search) {
       searchClear.removeAttribute("disabled");
     } else {
       searchClear.setAttribute("disabled", "");
@@ -44,7 +44,7 @@ var search = (function() {
 
   var get = function() {
     var searchInput = helper.e(".search-input");
-    if (state.get().header.search.searching) {
+    if (state.get().search) {
       var searchedBookmarks = {
         total: 0,
         matching: []

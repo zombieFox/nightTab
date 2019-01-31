@@ -224,7 +224,7 @@ var control = (function() {
   }, {
     element: helper.e(".control-header-search-engine-custom-url"),
     path: "header.search.engine.custom.url",
-    type: "checkbox",
+    type: "text",
     func: function() {
       search.update();
     }
