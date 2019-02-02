@@ -77,7 +77,8 @@
 .header-clock,
 .header-search,
 .header-edit-add,
-.header-accent {
+.header-accent,
+.header-menu {
   display: none;
 }
 
@@ -85,6 +86,7 @@
 .is-date .header-date,
 .is-clock .header-clock,
 .is-search-edit-add .header-edit-add,
-.is-search-accent .header-accent {
+.is-search-accent .header-accent,
+.is-menu .header-menu {
   display: flex;
 }

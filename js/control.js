@@ -569,6 +569,9 @@ var control = (function() {
 
   var render = function() {
     var html = helper.e("html");
+    var _menu = function() {
+      helper.addClass(html, "is-menu");
+    };
     var _edit = function() {
       if (state.get().bookmarks.edit) {
         helper.addClass(html, "is-edit");
@@ -666,6 +669,7 @@ var control = (function() {
         helper.removeClass(html, "is-search-accent");
       };
     };
+    _menu();
     _alignment();
     _edit();
     _date();
