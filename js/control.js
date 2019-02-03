@@ -509,20 +509,6 @@ var control = (function() {
         return value / 100;
       }
     };
-    // var toggleValue = function(object) {
-    //   var value = false;
-    //   if (helper.getObject({
-    //       object: state.get(),
-    //       path: object.path
-    //     })) {
-    //     value = true;
-    //   };
-    //   helper.setObject({
-    //     path: object.path,
-    //     object: state.get(),
-    //     newValue: value
-    //   });
-    // };
     var changeValue = function(object) {
       if (object.path) {
         var newValue = valueType[object.type](object);
@@ -554,7 +540,6 @@ var control = (function() {
           if (object.func) {
             object.func();
           };
-          // toggleValue(object);
         }
       };
       object.element.addEventListener(eventType[object.type], function() {

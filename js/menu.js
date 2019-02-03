@@ -35,22 +35,38 @@ var menu = (function() {
   };
 
   var close = function() {
-    state.get().menu = false;
+    helper.setObject({
+      object: state.get(),
+      path: "menu",
+      newValue: false
+    });
     render();
   };
 
   var open = function() {
     _scrollToTop(helper.e(".menu-content"));
-    state.get().menu = true;
+    helper.setObject({
+      object: state.get(),
+      path: "menu",
+      newValue: true
+    });
     render();
   };
 
   var toggle = function() {
     if (state.get().menu) {
-      state.get().menu = false;
+      helper.setObject({
+        object: state.get(),
+        path: "menu",
+        newValue: false
+      });
     } else {
       _scrollToTop(helper.e(".menu-content"));
-      state.get().menu = true;
+      helper.setObject({
+        object: state.get(),
+        path: "menu",
+        newValue: true
+      });
     };
     render();
   };
