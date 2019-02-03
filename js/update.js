@@ -11,9 +11,10 @@ var update = (function() {
   };
 
   var _update_200 = function(data) {
-    state.change({
+    helper.setObject({
+      object: state.get(),
       path: "layout.theme",
-      value: data.theme
+      newValue: data.theme
     });
     data = {
       state: state.get(),
@@ -71,12 +72,64 @@ var update = (function() {
     return data;
   };
 
+  var _update_270 = function(data) {
+    // update date character length
+    data.state.header.date.character = {
+      length: data.state.header.date.characterLength
+    };
+    // change editAdd active to show
+    data.state.header.editAdd.show = data.state.header.editAdd.active;
+    delete data.state.header.editAdd.active;
+    // change editAdd active to show
+    data.state.header.accent.show = data.state.header.accent.active;
+    delete data.state.header.accent.active;
+    // move alignment into header
+    data.state.header.alignment = {
+      horizontal: data.state.layout.alignment.horizontal,
+      vertical: data.state.layout.alignment.vertical
+    };
+    delete data.state.layout.alignment;
+    // change header search
+    data.state.header.search.show = data.state.header.search.active;
+    delete data.state.header.search.active;
+    // move searching
+    data.state.search = {
+      active: false
+    };
+    delete data.state.header.search.searching;
+    // change links to bookmarks
+    data.state.bookmarks = data.state.link;
+    delete data.state.link;
+    // change bookmarks show
+    data.state.bookmarks.show.link = data.state.bookmarks.show.active;
+    delete data.state.bookmarks.show.active;
+    // move edit
+    data.state.bookmarks.edit = false;
+    delete data.state.edit;
+    // change layout width
+    data.state.layout.width = data.state.layout.container;
+    delete data.state.layout.container;
+    // change background active
+    data.state.background.image.show = data.state.background.image.active;
+    delete data.state.background.image.active;
+    // change background accent
+    data.state.background.image.accent = data.state.background.image.accentOpacity;
+    delete data.state.background.image.accentOpacity;
+    // change menu active
+    data.state.menu.show = data.state.menu.active;
+    delete data.state.menu.active;
+    delete data.state.menu.open;
+    // update version
+    data.version = 2.70;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
   // };
 
-  function render(data) {
+  function run(data) {
     if (!("version" in data)) {
       console.log("\trunning update", 1.00);
       data = _update_100(data);
@@ -101,6 +154,10 @@ var update = (function() {
       console.log("\trunning update", 2.50);
       data = _update_250(data);
     };
+    if (data.version < 2.70) {
+      console.log("\trunning update", 2.70);
+      data = _update_270(data);
+    };
     // if (data.version < 3.00) {
     //   console.log("\t# running update", 3.00);
     //   data = _update_300(data);
@@ -110,7 +167,7 @@ var update = (function() {
 
   // exposed methods
   return {
-    render: render
+    run: run
   };
 
 })();

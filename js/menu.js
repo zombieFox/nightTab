@@ -35,29 +35,29 @@ var menu = (function() {
   };
 
   var close = function() {
-    state.get().menu.active = false;
+    state.get().menu = false;
     render();
   };
 
   var open = function() {
     _scrollToTop(helper.e(".menu-content"));
-    state.get().menu.active = true;
+    state.get().menu = true;
     render();
   };
 
   var toggle = function() {
-    if (state.get().menu.active) {
-      state.get().menu.active = false;
+    if (state.get().menu) {
+      state.get().menu = false;
     } else {
       _scrollToTop(helper.e(".menu-content"));
-      state.get().menu.active = true;
+      state.get().menu = true;
     };
     render();
   };
 
   var render = function() {
     var html = helper.e("html");
-    if (state.get().menu.active) {
+    if (state.get().menu) {
       helper.addClass(html, "is-menu-open");
       helper.e(".menu").focus();
       shade.render({

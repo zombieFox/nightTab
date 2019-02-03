@@ -4,16 +4,17 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       //  esc
       if (event.keyCode == 27) {
-        if (state.get().menu.active) {
+        if (state.get().menu) {
           menu.close();
           shade.destroy();
-        } else if (state.get().modal.active) {
+        } else if (state.get().modal) {
           modal.destroy();
           shade.destroy();
-        } else if (state.get().edit.active) {
-          state.change({
+        } else if (state.get().bookmarks.edit) {
+          helper.setObject({
+            object: state.get(),
             path: "edit.active",
-            value: false
+            newValue: false
           });
           control.update();
           control.render();
@@ -22,7 +23,7 @@ var keyboard = (function() {
       };
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
-        if (state.get().link.show.active) {
+        if (state.get().bookmarks.show.link) {
           menu.close();
           link.add();
         };
@@ -35,16 +36,18 @@ var keyboard = (function() {
       };
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
-        if (state.get().link.show.active) {
-          if (state.get().edit.active) {
-            state.change({
-              path: "edit.active",
-              value: false
+        if (state.get().bookmarks.show.link) {
+          if (state.get().bookmarks.edit) {
+            helper.setObject({
+              object: state.get(),
+              path: "bookmarks.edit",
+              newValue: false
             });
           } else {
-            state.change({
-              path: "edit.active",
-              value: true
+            helper.setObject({
+              object: state.get(),
+              path: "bookmarks.edit",
+              newValue: true
             });
           };
           control.update();

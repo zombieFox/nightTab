@@ -37,8 +37,8 @@ var data = (function() {
     if (data) {
       console.log("data loaded");
       if (!("version" in data) || data.version != version.get()) {
-        console.log("data version found less than current");
-        data = update.render(data);
+        console.log("data version", data.version, "found less than current");
+        data = update.run(data);
         set(saveName, JSON.stringify(data));
       } else {
         console.log("data version =", version.get());

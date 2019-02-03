@@ -2,35 +2,30 @@ var state = (function() {
 
   var current = {
     header: {
-      date: {
-        characterLength: "short",
-        show: {
-          date: true,
-          day: false,
-          month: true,
-          year: false,
-          separator: true
-        }
-      },
       clock: {
         hour24: true,
         show: {
-          seconds: true,
-          minutes: true,
           hours: true,
+          minutes: true,
+          seconds: true,
           separator: true,
           meridiem: true
         }
       },
-      editAdd: {
-        active: true,
-      },
-      accent: {
-        active: true,
+      date: {
+        show: {
+          day: false,
+          date: true,
+          month: true,
+          year: false,
+          separator: true
+        },
+        character: {
+          length: "short"
+        }
       },
       search: {
-        searching: false,
-        active: true,
+        show: true,
         grow: true,
         focus: false,
         engine: {
@@ -49,27 +44,31 @@ var state = (function() {
           }
         }
       },
-      buttons: {
-        show: true
-      }
-    },
-    link: {
-      show: {
-        active: true,
-        name: true,
-        url: true
-      },
-      editObject: null,
-      newTab: false,
-      style: "block",
-      sort: "none"
-    },
-    layout: {
       alignment: {
         horizontal: "left",
         vertical: "top"
       },
-      container: "wide",
+      editAdd: {
+        show: true,
+      },
+      accent: {
+        show: true,
+      }
+    },
+    bookmarks: {
+      show: {
+        link: true,
+        name: true,
+        url: true
+      },
+      newTab: false,
+      edit: false,
+      editObject: null,
+      style: "block",
+      sort: "none"
+    },
+    layout: {
+      width: "wide",
       scrollPastEnd: true,
       theme: {
         current: {
@@ -81,27 +80,21 @@ var state = (function() {
           active: false,
           style: "any"
         }
-      },
+      }
     },
     background: {
       image: {
-        active: false,
+        show: false,
         url: "../background/gray-steps.jpg",
         blur: 0,
         opacity: 1,
         grayscale: 0,
-        accentOpacity: 0
+        accent: 0
       }
     },
-    edit: {
-      active: false
-    },
-    menu: {
-      open: false
-    },
-    modal: {
-      active: false
-    }
+    search: false,
+    menu: false,
+    modal: false
   };
 
   var get = function() {
@@ -114,22 +107,22 @@ var state = (function() {
     };
   };
 
-  var change = function(override) {
-    var options = {
-      path: null,
-      value: null
-    };
-    if (override) {
-      options = helper.applyOptions(options, override);
-    };
-    if (options.path != null) {
-      helper.setObject({
-        path: options.path,
-        object: current,
-        newValue: options.value
-      });
-    };
-  };
+  // var change = function(override) {
+  //   var options = {
+  //     path: null,
+  //     value: null
+  //   };
+  //   if (override) {
+  //     options = helper.applyOptions(options, override);
+  //   };
+  //   if (options.path != null) {
+  //     helper.setObject({
+  //       path: options.path,
+  //       object: current,
+  //       newValue: options.value
+  //     });
+  //   };
+  // };
 
   var init = function() {
     if (data.load()) {
@@ -139,8 +132,7 @@ var state = (function() {
 
   return {
     init: init,
-    get: get,
-    change: change
+    get: get
   };
 
 })();

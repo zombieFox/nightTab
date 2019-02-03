@@ -145,6 +145,15 @@ var link = (function() {
       }, {
         key: "autocomplete",
         value: "off"
+      }, {
+        key: "autocorrect",
+        value: "off"
+      }, {
+        key: "autocapitalize",
+        value: "off"
+      }, {
+        key: "spellcheck",
+        value: "false"
       }]
     });
     var nameLabel = helper.makeNode({
@@ -175,6 +184,15 @@ var link = (function() {
       }, {
         key: "autocomplete",
         value: "off"
+      }, {
+        key: "autocorrect",
+        value: "off"
+      }, {
+        key: "autocapitalize",
+        value: "off"
+      }, {
+        key: "spellcheck",
+        value: "false"
       }]
     });
     var urlLabel = helper.makeNode({
@@ -205,6 +223,15 @@ var link = (function() {
       }, {
         key: "autocomplete",
         value: "off"
+      }, {
+        key: "autocorrect",
+        value: "off"
+      }, {
+        key: "autocapitalize",
+        value: "off"
+      }, {
+        key: "spellcheck",
+        value: "false"
       }]
     });
     fieldset.appendChild(letterLabel);
@@ -238,7 +265,7 @@ var link = (function() {
         value: 1
       }]
     };
-    if (state.get().link.newTab) {
+    if (state.get().bookmarks.newTab) {
       linkOptions.attr.push({
         key: "target",
         value: "_blank"
@@ -393,7 +420,7 @@ var link = (function() {
   var render = function() {
     var linkArea = helper.e(".link-area");
     var bookmarksToRender = false;
-    if (state.get().header.search.searching) {
+    if (state.get().search) {
       bookmarksToRender = search.get();
     } else {
       bookmarksToRender = bookmarks.get();
@@ -416,7 +443,7 @@ var link = (function() {
       }
     };
     // if searching
-    if (state.get().header.search.searching) {
+    if (state.get().search) {
       // if bookmarks exist to be searched
       if (bookmarksToRender.total > 0) {
         // if matching bookmarks found
@@ -440,7 +467,7 @@ var link = (function() {
 
   var tabIndex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
-    if (state.get().edit.active) {
+    if (state.get().bookmarks.edit) {
       allLinkControlItem.forEach(function(arrayItem, index) {
         arrayItem.tabIndex = 1;
       });

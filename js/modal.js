@@ -25,9 +25,10 @@ var modal = (function() {
     };
     var makeModal = function() {
       var body = helper.e("body");
-      state.change({
+      helper.setObject({
+        object: state.get(),
         path: "modal.active",
-        value: true
+        newValue: true
       });
       var modalWrapper = document.createElement("div");
       modalWrapper.setAttribute("class", "modal-wrapper");
@@ -47,9 +48,10 @@ var modal = (function() {
         } else {
           modal.remove();
         };
-        state.change({
+        helper.setObject({
+          object: state.get(),
           path: "modal.active",
-          value: false
+          newValue: false
         });
       };
       var modalBody = document.createElement("div");
