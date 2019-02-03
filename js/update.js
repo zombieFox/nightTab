@@ -124,6 +124,12 @@ var update = (function() {
     return data;
   };
 
+  var _update_280 = function(data) {
+    data.state.layout.title = "New Tab";
+    data.version = 2.80;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -157,6 +163,10 @@ var update = (function() {
     if (data.version < 2.70) {
       console.log("\trunning update", 2.70);
       data = _update_270(data);
+    };
+    if (data.version < 2.80) {
+      console.log("\trunning update", 2.80);
+      data = _update_280(data);
     };
     // if (data.version < 3.00) {
     //   console.log("\t# running update", 3.00);

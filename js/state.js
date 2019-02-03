@@ -70,6 +70,7 @@ var state = (function() {
     layout: {
       width: "wide",
       scrollPastEnd: true,
+      title: "New Tab",
       theme: {
         current: {
           r: 0,

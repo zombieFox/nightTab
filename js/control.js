@@ -384,6 +384,13 @@ var control = (function() {
       render();
     }
   }, {
+    element: helper.e(".control-layout-title"),
+    path: "layout.title",
+    type: "text",
+    func: function() {
+      title.render();
+    }
+  }, {
     element: helper.e(".control-layout-theme-random-active"),
     path: "layout.theme.random.active",
     type: "checkbox",

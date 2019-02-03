@@ -51,3 +51,6 @@ background.init();
 // render search engine
 // focus seach input
 search.init();
+
+// render page title
+title.init();
