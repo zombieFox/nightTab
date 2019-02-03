@@ -79,7 +79,6 @@
   padding-bottom: 1em;
   border-radius: 0;
   flex-grow: 1;
-  flex-basis: 0;
 }
 
 .menu-nav-button:first-child {
@@ -116,6 +115,10 @@
   .menu-content-area {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 10vh;
+  }
+
+  .menu-nav-button {
+    flex-basis: 0;
   }
 }
 
