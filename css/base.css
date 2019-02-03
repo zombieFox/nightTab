@@ -54,13 +54,13 @@
   --breakpoint-xxl: 1600px;
 }
 
-:root.is-link-block {
+:root.is-bookmarks-style-block {
   --link-height: 7em;
   --url-height: 20%;
   --edit-height: 30%;
 }
 
-:root.is-link-list {
+:root.is-bookmarks-style-list {
   --link-height: 4em;
   --url-height: 30%;
   --edit-height: 50%;
@@ -71,7 +71,7 @@
     --root-font-size: 16px;
   }
 
-  :root.is-link-block {
+  :root.is-bookmarks-style-block {
     --link-height: 9em;
   }
 }
@@ -96,19 +96,19 @@ body {
   height: 100vh;
 }
 
-.is-alignment-vertical-top body {
+.is-header-alignment-vertical-top body {
   justify-content: flex-start;
 }
 
-.is-alignment-vertical-center body {
+.is-header-alignment-vertical-center body {
   justify-content: center;
 }
 
-.is-alignment-vertical-bottom body {
+.is-header-alignment-vertical-bottom body {
   justify-content: flex-end;
 }
 
-.is-link body {
+.is-bookmarks-show-link body {
   display: inherit;
   height: inherit;
 }

@@ -4,18 +4,18 @@
   transition: all var(--animation-speed-fast) ease-in-out;
 }
 
-.is-layout-fluid .container,
-.is-layout-wide .container,
-.is-layout-thin .container {
+.is-layout-width-fluid .container,
+.is-layout-width-wide .container,
+.is-layout-width-thin .container {
   width: calc(100vw - 4em);
 }
 
 @media (min-width: 550px) {
-  .is-layout-wide .container {
+  .is-layout-width-wide .container {
     width: 80vw;
   }
 
-  .is-layout-thin .container {
+  .is-layout-width-thin .container {
     width: 60vw;
   }
 }
@@ -23,21 +23,21 @@
 @media (min-width: 900px) {}
 
 @media (min-width: 1100px) {
-  .is-layout-wide .container {
+  .is-layout-width-wide .container {
     width: 75vw;
   }
 
-  .is-layout-thin .container {
+  .is-layout-width-thin .container {
     width: 40vw;
   }
 }
 
 @media (min-width: 1600px) {
-  .is-layout-wide .container {
+  .is-layout-width-wide .container {
     width: 70vw;
   }
 
-  .is-layout-thin .container {
+  .is-layout-width-thin .container {
     width: 30vw;
   }
 }

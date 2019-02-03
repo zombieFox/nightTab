@@ -1,6 +1,6 @@
 .shade {
   /* background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0, rgba(var(--accent), 0.6) 100%); */
-  background-color: rgba(var(--accent), 0.5);
+  background-color: rgba(var(--accent), 0.4);
   /* background-color: rgba(var(--black), 0.5); */
   /* box-shadow: 0 0 5em 0 rgba(var(--accent), 1) inset; */
   position: fixed;
@@ -13,6 +13,6 @@
   z-index: var(--z-index-shade);
 }
 
-.is-background-image .shade {
+.is-background-image-show .shade {
   background-color: rgba(var(--black), 0.5);
 }

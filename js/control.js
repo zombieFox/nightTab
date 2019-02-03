@@ -574,108 +574,108 @@ var control = (function() {
     };
     var _edit = function() {
       if (state.get().bookmarks.edit) {
-        helper.addClass(html, "is-edit");
+        helper.addClass(html, "is-bookmarks-edit");
         link.tabIndex();
       } else {
-        helper.removeClass(html, "is-edit");
+        helper.removeClass(html, "is-bookmarks-edit");
         link.tabIndex();
       };
     };
     var _date = function() {
       if (state.get().header.date.show.date || state.get().header.date.show.day || state.get().header.date.show.month || state.get().header.date.show.year) {
-        helper.addClass(html, "is-date");
+        helper.addClass(html, "is-header-date-show");
       } else {
-        helper.removeClass(html, "is-date");
+        helper.removeClass(html, "is-header-date-show");
       };
     };
     var _clock = function() {
       if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
-        helper.addClass(html, "is-clock");
+        helper.addClass(html, "is-header-clock-show");
       } else {
-        helper.removeClass(html, "is-clock");
+        helper.removeClass(html, "is-header-clock-show");
       };
     };
     var _search = function() {
       if (state.get().header.search.show) {
-        helper.addClass(html, "is-search");
+        helper.addClass(html, "is-header-search-show");
       } else {
-        helper.removeClass(html, "is-search");
+        helper.removeClass(html, "is-header-search-show");
       };
       if (state.get().header.search.grow) {
-        helper.addClass(html, "is-search-grow");
+        helper.addClass(html, "is-header-search-grow");
       } else {
-        helper.removeClass(html, "is-search-grow");
+        helper.removeClass(html, "is-header-search-grow");
       };
       helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     };
     var _alignment = function() {
-      helper.removeClass(html, "is-alignment-horizontal-left");
-      helper.removeClass(html, "is-alignment-horizontal-center");
-      helper.removeClass(html, "is-alignment-horizontal-right");
-      helper.removeClass(html, "is-alignment-vertical-top");
-      helper.removeClass(html, "is-alignment-vertical-center");
-      helper.removeClass(html, "is-alignment-vertical-bottom");
-      helper.addClass(html, "is-alignment-horizontal-" + state.get().header.alignment.horizontal);
-      helper.addClass(html, "is-alignment-vertical-" + state.get().header.alignment.vertical);
+      helper.removeClass(html, "is-header-alignment-horizontal-left");
+      helper.removeClass(html, "is-header-alignment-horizontal-center");
+      helper.removeClass(html, "is-header-alignment-horizontal-right");
+      helper.removeClass(html, "is-header-alignment-vertical-top");
+      helper.removeClass(html, "is-header-alignment-vertical-center");
+      helper.removeClass(html, "is-header-alignment-vertical-bottom");
+      helper.addClass(html, "is-header-alignment-horizontal-" + state.get().header.alignment.horizontal);
+      helper.addClass(html, "is-header-alignment-vertical-" + state.get().header.alignment.vertical);
     };
     var _link = function() {
       var view = {
         block: function() {
-          helper.addClass(html, "is-link-block");
-          helper.removeClass(html, "is-link-list");
+          helper.addClass(html, "is-bookmarks-style-block");
+          helper.removeClass(html, "is-bookmarks-style-list");
         },
         list: function() {
-          helper.removeClass(html, "is-link-block");
-          helper.addClass(html, "is-link-list");
+          helper.removeClass(html, "is-bookmarks-style-block");
+          helper.addClass(html, "is-bookmarks-style-list");
         }
       };
       view[state.get().bookmarks.style]();
       if (state.get().bookmarks.show.link) {
-        helper.addClass(html, "is-link");
+        helper.addClass(html, "is-bookmarks-show-link");
       } else {
-        helper.removeClass(html, "is-link");
+        helper.removeClass(html, "is-bookmarks-show-link");
       };
       if (state.get().bookmarks.show.name) {
-        helper.addClass(html, "is-link-name");
+        helper.addClass(html, "is-bookmarks-show-name");
       } else {
-        helper.removeClass(html, "is-link-name");
+        helper.removeClass(html, "is-bookmarks-show-name");
       };
       if (state.get().bookmarks.show.url) {
-        helper.addClass(html, "is-link-url");
+        helper.addClass(html, "is-bookmarks-show-url");
       } else {
-        helper.removeClass(html, "is-link-url");
+        helper.removeClass(html, "is-bookmarks-show-url");
       };
     };
     var _layout = function() {
-      helper.removeClass(html, "is-layout-fluid");
-      helper.removeClass(html, "is-layout-wide");
-      helper.removeClass(html, "is-layout-thin");
-      helper.addClass(html, "is-layout-" + state.get().layout.width);
+      helper.removeClass(html, "is-layout-width-fluid");
+      helper.removeClass(html, "is-layout-width-wide");
+      helper.removeClass(html, "is-layout-width-thin");
+      helper.addClass(html, "is-layout-width-" + state.get().layout.width);
       if (state.get().layout.scrollPastEnd) {
-        helper.addClass(html, "is-scroll-past-end");
+        helper.addClass(html, "is-layout-scroll-past-end");
       } else {
-        helper.removeClass(html, "is-scroll-past-end");
+        helper.removeClass(html, "is-layout-scroll-past-end");
       };
     };
     var _editAdd = function() {
       if (state.get().header.editAdd.show) {
-        helper.addClass(html, "is-search-edit-add");
+        helper.addClass(html, "is-header-edit-add");
       } else {
-        helper.removeClass(html, "is-search-edit-add");
+        helper.removeClass(html, "is-header-edit-add");
       };
     };
     var _accent = function() {
       if (state.get().header.accent.show) {
-        helper.addClass(html, "is-search-accent");
+        helper.addClass(html, "is-header-accent");
       } else {
-        helper.removeClass(html, "is-search-accent");
+        helper.removeClass(html, "is-header-accent");
       };
     };
     var _background = function() {
       if (state.get().background.image.show) {
-        helper.addClass(html, "is-background-image");
+        helper.addClass(html, "is-background-image-show");
       } else {
-        helper.removeClass(html, "is-background-image");
+        helper.removeClass(html, "is-background-image-show");
       };
     };
     _menu();
