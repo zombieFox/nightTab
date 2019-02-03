@@ -159,13 +159,13 @@
 
 .link-control-item:focus,
 .link-control-item:hover {
-  color: rgb(var(--black));
-  background-color: rgba(0, 0, 0, 0.1);
+  color: rgb(var(--white));
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .link-control-item:active {
   color: rgb(var(--white));
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   transition: none;
 }
 

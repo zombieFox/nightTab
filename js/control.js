@@ -671,6 +671,13 @@ var control = (function() {
         helper.removeClass(html, "is-search-accent");
       };
     };
+    var _background = function() {
+      if (state.get().background.image.show) {
+        helper.addClass(html, "is-background-image");
+      } else {
+        helper.removeClass(html, "is-background-image");
+      };
+    };
     _menu();
     _alignment();
     _edit();
@@ -681,6 +688,7 @@ var control = (function() {
     _accent();
     _link();
     _layout();
+    _background();
   };
 
   var dependents = function() {
