@@ -1,7 +1,7 @@
 .shade {
   /* background: linear-gradient(45deg, rgba(0, 0, 0, 0) 0, rgba(var(--accent), 0.6) 100%); */
-  /* background-color: rgba(var(--accent), 0.5); */
-  background-color: rgba(var(--black), 0.3);
+  background-color: rgba(var(--accent), 0.5);
+  /* background-color: rgba(var(--black), 0.3); */
   position: fixed;
   top: -1em;
   left: -1em;

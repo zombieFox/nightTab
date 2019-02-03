@@ -145,6 +145,15 @@ var link = (function() {
       }, {
         key: "autocomplete",
         value: "off"
+      }, {
+        key: "autocorrect",
+        value: "off"
+      }, {
+        key: "autocapitalize",
+        value: "off"
+      }, {
+        key: "spellcheck",
+        value: "false"
       }]
     });
     var nameLabel = helper.makeNode({
@@ -175,6 +184,15 @@ var link = (function() {
       }, {
         key: "autocomplete",
         value: "off"
+      }, {
+        key: "autocorrect",
+        value: "off"
+      }, {
+        key: "autocapitalize",
+        value: "off"
+      }, {
+        key: "spellcheck",
+        value: "false"
       }]
     });
     var urlLabel = helper.makeNode({
@@ -205,6 +223,15 @@ var link = (function() {
       }, {
         key: "autocomplete",
         value: "off"
+      }, {
+        key: "autocorrect",
+        value: "off"
+      }, {
+        key: "autocapitalize",
+        value: "off"
+      }, {
+        key: "spellcheck",
+        value: "false"
       }]
     });
     fieldset.appendChild(letterLabel);

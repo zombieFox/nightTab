@@ -575,8 +575,10 @@ var control = (function() {
     var _edit = function() {
       if (state.get().bookmarks.edit) {
         helper.addClass(html, "is-edit");
+        link.tabIndex();
       } else {
         helper.removeClass(html, "is-edit");
+        link.tabIndex();
       };
     };
     var _date = function() {

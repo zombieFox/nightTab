@@ -160,12 +160,12 @@
 .link-control-item:focus,
 .link-control-item:hover {
   color: rgb(var(--black));
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .link-control-item:active {
-  color: rgb(var(--black));
-  background-color: rgba(255, 255, 255, 0.4);
+  color: rgb(var(--white));
+  background-color: rgba(0, 0, 0, 0.2);
   transition: none;
 }
 
@@ -284,6 +284,12 @@
 .is-edit .link-item:focus .link-panel-front {
   height: calc(100% - var(--edit-height));
   box-shadow: 0 2px 1em 0 rgba(0, 0, 0, 0.4);
+}
+
+.is-edit.is-link-url .link-item:focus .link-panel-front,
+.is-edit.is-link-url .link-item:focus-within .link-panel-front,
+.is-edit.is-link-url .link-item:hover .link-panel-front {
+  height: calc(100% - var(--edit-height));
 }
 
 .is-edit .link-control {

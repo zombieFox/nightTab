@@ -40,13 +40,13 @@ var keyboard = (function() {
           if (state.get().bookmarks.edit) {
             helper.setObject({
               object: state.get(),
-              path: "edit.active",
+              path: "bookmarks.edit",
               newValue: false
             });
           } else {
             helper.setObject({
               object: state.get(),
-              path: "edit.active",
+              path: "bookmarks.edit",
               newValue: true
             });
           };
