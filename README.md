@@ -12,7 +12,7 @@ New-tab-page/Start-page for all browsers
 - Search bar again but this time with options to customise the search engine
 - Saves data to local storage
 - Keyboard shortcuts
-  - esc to dismiss most things
+  - <kbd>esc</kbd> *to dismiss most things*
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>a</kbd> *to add a new bookmark*
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>m</kbd> *to open menu*
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>e</kbd> *to toggle edit state*
