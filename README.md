@@ -13,10 +13,10 @@ New-tab-page/Start-page for all browsers
 - Saves data to local storage
 - Keyboard shortcuts
   - esc to dismiss most things
-  - ctrl+alt+a to add a new bookmark
-  - ctrl+alt+m to open menu
-  - ctrl+alt+e to toggle edit state
-  - ctrl+alt+r random theme if option is turned on in menu > layout > random Accent colour
+  - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>a</kbd> *to add a new bookmark*
+  - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>m</kbd> *to open menu*
+  - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>e</kbd> *to toggle edit state*
+  - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>r</kbd> *random theme if option is turned on in menu > layout > random Accent colour*
 - Responsive design
 - Customise Accent colour!
 - Can be installed on Chrome as an extension
