@@ -35,7 +35,7 @@ var header = (function() {
     var scrollPosition = document.documentElement.scrollTop;
     var _headerMargin = function() {
       var margin;
-      if (state.get().background.image.show || (state.get().header.shade.show && state.get().header.shade.style == "always")) {
+      if (state.get().background.image.show && (state.get().header.shade.show && state.get().header.shade.style == "always") || state.get().header.shade.style == "always") {
         margin = (height + fontSize);
       } else {
         margin = height;
