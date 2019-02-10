@@ -10,8 +10,8 @@
   transition: background-color var(--animation-speed-slow) ease-in-out;
 }
 
-.header-background {
-  background-color: rgba(var(--gray-01), 0.95);
+.is-header-shade-show .header {
+  background-color: rgba(var(--header-shade-color), var(--header-shade-opacity));
 }
 
 .header-area {

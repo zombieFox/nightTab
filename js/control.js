@@ -285,6 +285,40 @@ var control = (function() {
       render();
     }
   }, {
+    element: helper.e(".control-header-shade-show"),
+    path: "header.shade.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-style-always"),
+    path: "header.shade.style",
+    type: "radio",
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-style-scroll"),
+    path: "header.shade.style",
+    type: "radio",
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-opacity"),
+    path: "header.shade.opacity",
+    type: "range",
+    valueMod: ["reverse", "float"],
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
     element: helper.e(".control-bookmarks-show-link"),
     path: "bookmarks.show.link",
     type: "checkbox",
@@ -441,6 +475,7 @@ var control = (function() {
       render();
       dependents();
       background.render();
+      header.render();
     }
   }, {
     element: helper.e(".control-background-image-url"),
@@ -670,6 +705,16 @@ var control = (function() {
         helper.removeClass(html, "is-background-image-show");
       };
     };
+    var _headerShade = function() {
+      if (state.get().header.shade.show) {
+        helper.addClass(html, "is-header-shade-show");
+        helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
+      } else {
+        helper.removeClass(html, "is-header-shade-show");
+        helper.removeClass(html, "is-header-shade-style-always");
+        helper.removeClass(html, "is-header-shade-style-scroll");
+      };
+    };
     _menu();
     _alignment();
     _edit();
@@ -681,6 +726,7 @@ var control = (function() {
     _link();
     _layout();
     _background();
+    _headerShade();
   };
 
   var dependents = function() {
@@ -833,6 +879,19 @@ var control = (function() {
         helper.e(".control-background-image-accent").disabled = true;
       };
     };
+    var _headerShade = function() {
+      if (state.get().header.shade.show) {
+        helper.e(".control-header-shade-style-always").disabled = false;
+        helper.e(".control-header-shade-style-scroll").disabled = false;
+        helper.e("[for=control-header-shade-opacity]").removeAttribute("disabled");
+        helper.e(".control-header-shade-opacity").disabled = false;
+      } else {
+        helper.e(".control-header-shade-style-always").disabled = true;
+        helper.e(".control-header-shade-style-scroll").disabled = true;
+        helper.e("[for=control-header-shade-opacity]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-opacity").disabled = true;
+      };
+    };
     _edit();
     _date();
     _clock();
@@ -840,6 +899,7 @@ var control = (function() {
     _theme();
     _link();
     _background();
+    _headerShade();
   };
 
   var update = function() {

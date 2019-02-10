@@ -41,6 +41,10 @@
   --z-index-shade: 5000;
   --z-index-modal: 6000;
   --z-index-menu: 7000;
+  /* --header-shade-color: var(--gray-01); */
+  --header-shade-color: transparent;
+  --header-shade-opacity: none;
+  --header-height: 0px;
   --background-image: none;
   --background-opacity: 1;
   --background-accent-opacity: 0;
