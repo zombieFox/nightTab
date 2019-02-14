@@ -53,15 +53,15 @@ var header = (function() {
             html.style.setProperty("--header-shade-opacity", state.get().header.shade.opacity);
           } else {
             html.style.setProperty("--header-shade-color", "transparent");
-            html.style.setProperty("--header-shade-opacity", "none");
+            // html.style.setProperty("--header-shade-opacity", "none");
           };
         } else {
           html.style.setProperty("--header-shade-color", "transparent");
-          html.style.setProperty("--header-shade-opacity", "none");
+          // html.style.setProperty("--header-shade-opacity", "none");
         };
       } else {
         html.style.setProperty("--header-shade-color", "transparent");
-        html.style.setProperty("--header-shade-opacity", "none");
+        // html.style.setProperty("--header-shade-opacity", "none");
         _headerMargin();
       };
     };

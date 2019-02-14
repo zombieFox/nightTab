@@ -76,12 +76,12 @@ var menu = (function() {
     if (state.get().menu) {
       helper.addClass(html, "is-menu-open");
       helper.e(".menu").focus();
-      // shade.render({
-      //   action: function() {
-      //     close();
-      //     render();
-      //   }
-      // });
+      shade.render({
+        action: function() {
+          close();
+          render();
+        }
+      });
     } else {
       helper.removeClass(html, "is-menu-open");
     };

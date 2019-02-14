@@ -5,7 +5,7 @@
   position: relative;
   z-index: var(--z-index-link);
   display: none;
-  transition: margin-top var(--animation-speed-fast) ease-in-out;
+  /* transition: margin-top var(--animation-speed-fast) ease-in-out; */
 }
 
 .is-bookmarks-show-link .link {

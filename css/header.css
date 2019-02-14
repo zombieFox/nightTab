@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+  position: relative;
   z-index: var(--z-index-header);
 }
 
@@ -7,11 +8,28 @@
   position: fixed;
   top: 0;
   left: 0;
-  transition: background-color var(--animation-speed-slow) ease-in-out;
 }
 
-.is-header-shade-show .header {
-  background-color: rgba(var(--header-shade-color), var(--header-shade-opacity));
+.header:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  animation: appear var(--animation-speed-slow) 1;
+}
+
+.is-header-shade-style-scroll .header:before {
+  transition: background-color var(--animation-speed-slow) ease-in-out;
+  animation: none;
+}
+
+.is-header-shade-show .header:before {
+  background-color: rgb(var(--header-shade-color));
+  opacity: var(--header-shade-opacity);
 }
 
 .header-area {
