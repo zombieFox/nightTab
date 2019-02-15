@@ -57,7 +57,8 @@ var state = (function() {
       shade: {
         show: true,
         style: "scroll",
-        opacity: 0.95
+        opacity: 0.95,
+        border: false
       }
     },
     bookmarks: {

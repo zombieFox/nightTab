@@ -21,6 +21,17 @@
   pointer-events: none;
 }
 
+.header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: var(--line-width);
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+
 .is-header-shade-style-scroll .header:before {
   transition: background-color var(--animation-speed-fast) ease-in-out;
   animation: none;
@@ -29,6 +40,10 @@
 .is-header-shade-show .header:before {
   background-color: rgb(var(--header-shade-color));
   opacity: var(--header-shade-opacity);
+}
+
+.is-header-shade-border .header:after {
+  background-color: rgb(var(--accent));
 }
 
 .header-area {
