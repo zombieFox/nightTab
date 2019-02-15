@@ -319,12 +319,19 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-shade-border"),
-    path: "header.shade.border",
+    element: helper.e(".control-header-shade-border-top"),
+    path: "header.shade.border.top",
     type: "checkbox",
     func: function() {
       render();
-      dependents();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-border-bottom"),
+    path: "header.shade.border.bottom",
+    type: "checkbox",
+    func: function() {
+      render();
       header.render();
     }
   }, {
@@ -718,16 +725,22 @@ var control = (function() {
       if (state.get().header.shade.show) {
         helper.addClass(html, "is-header-shade-show");
         helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
-        if (state.get().header.shade.border) {
-          helper.addClass(html, "is-header-shade-border");
+        if (state.get().header.shade.border.top) {
+          helper.addClass(html, "is-header-shade-border-top");
         } else {
-          helper.removeClass(html, "is-header-shade-border");
+          helper.removeClass(html, "is-header-shade-border-top");
+        };
+        if (state.get().header.shade.border.bottom) {
+          helper.addClass(html, "is-header-shade-border-bottom");
+        } else {
+          helper.removeClass(html, "is-header-shade-border-bottom");
         };
       } else {
         helper.removeClass(html, "is-header-shade-show");
         helper.removeClass(html, "is-header-shade-style-always");
         helper.removeClass(html, "is-header-shade-style-scroll");
-        helper.removeClass(html, "is-header-shade-border");
+        helper.removeClass(html, "is-header-shade-border-top");
+        helper.removeClass(html, "is-header-shade-border-bottom");
       };
     };
     _menu();
@@ -900,13 +913,15 @@ var control = (function() {
         helper.e(".control-header-shade-style-scroll").disabled = false;
         helper.e("[for=control-header-shade-opacity]").removeAttribute("disabled");
         helper.e(".control-header-shade-opacity").disabled = false;
-        helper.e(".control-header-shade-border").disabled = false;
+        helper.e(".control-header-shade-border-top").disabled = false;
+        helper.e(".control-header-shade-border-bottom").disabled = false;
       } else {
         helper.e(".control-header-shade-style-always").disabled = true;
         helper.e(".control-header-shade-style-scroll").disabled = true;
         helper.e("[for=control-header-shade-opacity]").setAttribute("disabled", "");
         helper.e(".control-header-shade-opacity").disabled = true;
-        helper.e(".control-header-shade-border").disabled = true;
+        helper.e(".control-header-shade-border-top").disabled = true;
+        helper.e(".control-header-shade-border-bottom").disabled = true;
       };
     };
     _edit();

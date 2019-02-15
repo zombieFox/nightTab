@@ -58,7 +58,10 @@ var state = (function() {
         show: true,
         style: "scroll",
         opacity: 0.95,
-        border: false
+        border: {
+          top: false,
+          bottom: false
+        }
       }
     },
     bookmarks: {

@@ -23,7 +23,7 @@ var header = (function() {
     var scrollPosition = document.documentElement.scrollTop;
     var _margin = function() {
       var marginValue;
-      if (state.get().background.image.show && (state.get().header.shade.show && state.get().header.shade.style == "always") || state.get().header.shade.style == "always" || state.get().header.shade.border) {
+      if (state.get().background.image.show && (state.get().header.shade.show && state.get().header.shade.style == "always") || state.get().header.shade.style == "always" || state.get().header.shade.border.bottom) {
         marginValue = (height + fontSize);
       } else {
         marginValue = height;
