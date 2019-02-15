@@ -14,18 +14,6 @@ var header = (function() {
     });
   };
 
-  var _addHeaderBackground = function() {
-    // var html = helper.e("html");
-    // var header = helper.e(".header");
-    // var scrollPosition = document.documentElement.scrollTop;
-    // var fontSize = parseInt(getComputedStyle(html).fontSize, 10);
-    // if (scrollPosition > (fontSize * 2)) {
-    //   helper.addClass(header, "header-background");
-    // } else {
-    //   helper.removeClass(header, "header-background");
-    // };
-  };
-
   var render = function(event) {
     var html = helper.e("html");
     var header = helper.e(".header");

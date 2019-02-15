@@ -19,7 +19,6 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  animation: appear var(--animation-speed-slow) 1;
 }
 
 .is-header-shade-style-scroll .header:before {
@@ -38,9 +37,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
-  /* display: grid; */
-  /* grid-template-columns: auto 1fr auto auto auto; */
-  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
 }
 
 .header-item {
