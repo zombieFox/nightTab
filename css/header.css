@@ -22,7 +22,7 @@
 }
 
 .is-header-shade-style-scroll .header:before {
-  transition: background-color var(--animation-speed-slow) ease-in-out;
+  transition: background-color var(--animation-speed-fast) ease-in-out;
   animation: none;
 }
 

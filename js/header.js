@@ -21,40 +21,40 @@ var header = (function() {
     var height = parseInt(getComputedStyle(header).height, 10);
     var fontSize = parseInt(getComputedStyle(html).fontSize, 10);
     var scrollPosition = document.documentElement.scrollTop;
-    var _headerMargin = function() {
-      var margin;
+    var _margin = function() {
+      var marginValue;
       if (state.get().background.image.show && (state.get().header.shade.show && state.get().header.shade.style == "always") || state.get().header.shade.style == "always") {
-        margin = (height + fontSize);
+        marginValue = (height + fontSize);
       } else {
-        margin = height;
+        marginValue = height;
       };
-      html.style.setProperty("--header-height", margin + "px");
+      html.style.setProperty("--header-height", marginValue + "px");
     };
-    var _headerShade = function() {
+    var _color = function() {
       if (state.get().header.shade.show) {
         if (state.get().header.shade.style == "always") {
           html.style.setProperty("--header-shade-color", "var(--gray-01)");
-          html.style.setProperty("--header-shade-opacity", state.get().header.shade.opacity);
         } else if (state.get().header.shade.style == "scroll") {
           if (scrollPosition > (fontSize * 2)) {
             html.style.setProperty("--header-shade-color", "var(--gray-01)");
-            html.style.setProperty("--header-shade-opacity", state.get().header.shade.opacity);
           } else {
             html.style.setProperty("--header-shade-color", "transparent");
-            // html.style.setProperty("--header-shade-opacity", "none");
           };
         } else {
           html.style.setProperty("--header-shade-color", "transparent");
-          // html.style.setProperty("--header-shade-opacity", "none");
         };
       } else {
         html.style.setProperty("--header-shade-color", "transparent");
-        // html.style.setProperty("--header-shade-opacity", "none");
-        _headerMargin();
       };
     };
-    _headerMargin();
-    _headerShade();
+    var _opacity = function() {
+      if (state.get().header.shade.show) {
+        html.style.setProperty("--header-shade-opacity", state.get().header.shade.opacity);
+      };
+    };
+    _color();
+    _opacity();
+    _margin();
   };
 
   var init = function() {
