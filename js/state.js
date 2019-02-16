@@ -53,6 +53,16 @@ var state = (function() {
       },
       accent: {
         show: true,
+      },
+      shade: {
+        show: true,
+        padding: 4,
+        style: "scroll",
+        opacity: 0.95,
+        border: {
+          top: false,
+          bottom: false
+        }
       }
     },
     bookmarks: {

@@ -285,6 +285,64 @@ var control = (function() {
       render();
     }
   }, {
+    element: helper.e(".control-header-shade-show"),
+    path: "header.shade.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-style-always"),
+    path: "header.shade.style",
+    type: "radio",
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-style-scroll"),
+    path: "header.shade.style",
+    type: "radio",
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-opacity"),
+    path: "header.shade.opacity",
+    type: "range",
+    valueMod: ["reverse", "float"],
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-padding"),
+    path: "header.shade.padding",
+    type: "range",
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-border-top"),
+    path: "header.shade.border.top",
+    type: "checkbox",
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-border-bottom"),
+    path: "header.shade.border.bottom",
+    type: "checkbox",
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
     element: helper.e(".control-bookmarks-show-link"),
     path: "bookmarks.show.link",
     type: "checkbox",
@@ -441,6 +499,7 @@ var control = (function() {
       render();
       dependents();
       background.render();
+      header.render();
     }
   }, {
     element: helper.e(".control-background-image-url"),
@@ -670,6 +729,28 @@ var control = (function() {
         helper.removeClass(html, "is-background-image-show");
       };
     };
+    var _header = function() {
+      if (state.get().header.shade.show) {
+        helper.addClass(html, "is-header-shade-show");
+        helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
+        if (state.get().header.shade.border.top) {
+          helper.addClass(html, "is-header-shade-border-top");
+        } else {
+          helper.removeClass(html, "is-header-shade-border-top");
+        };
+        if (state.get().header.shade.border.bottom) {
+          helper.addClass(html, "is-header-shade-border-bottom");
+        } else {
+          helper.removeClass(html, "is-header-shade-border-bottom");
+        };
+      } else {
+        helper.removeClass(html, "is-header-shade-show");
+        helper.removeClass(html, "is-header-shade-style-always");
+        helper.removeClass(html, "is-header-shade-style-scroll");
+        helper.removeClass(html, "is-header-shade-border-top");
+        helper.removeClass(html, "is-header-shade-border-bottom");
+      };
+    };
     _menu();
     _alignment();
     _edit();
@@ -681,6 +762,7 @@ var control = (function() {
     _link();
     _layout();
     _background();
+    _header();
   };
 
   var dependents = function() {
@@ -833,6 +915,27 @@ var control = (function() {
         helper.e(".control-background-image-accent").disabled = true;
       };
     };
+    var _header = function() {
+      if (state.get().header.shade.show) {
+        helper.e(".control-header-shade-style-always").disabled = false;
+        helper.e(".control-header-shade-style-scroll").disabled = false;
+        helper.e("[for=control-header-shade-opacity]").removeAttribute("disabled");
+        helper.e(".control-header-shade-opacity").disabled = false;
+        helper.e("[for=control-header-shade-padding]").removeAttribute("disabled");
+        helper.e(".control-header-shade-padding").disabled = false;
+        helper.e(".control-header-shade-border-top").disabled = false;
+        helper.e(".control-header-shade-border-bottom").disabled = false;
+      } else {
+        helper.e(".control-header-shade-style-always").disabled = true;
+        helper.e(".control-header-shade-style-scroll").disabled = true;
+        helper.e("[for=control-header-shade-opacity]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-opacity").disabled = true;
+        helper.e("[for=control-header-shade-padding]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-padding").disabled = true;
+        helper.e(".control-header-shade-border-top").disabled = true;
+        helper.e(".control-header-shade-border-bottom").disabled = true;
+      };
+    };
     _edit();
     _date();
     _clock();
@@ -840,6 +943,7 @@ var control = (function() {
     _theme();
     _link();
     _background();
+    _header();
   };
 
   var update = function() {

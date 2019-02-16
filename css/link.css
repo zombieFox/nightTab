@@ -1,9 +1,11 @@
 .link {
   margin-bottom: 2em;
+  margin-top: var(--header-height);
   width: 100vw;
   position: relative;
   z-index: var(--z-index-link);
   display: none;
+  /* transition: margin-top var(--animation-speed-fast) ease-in-out; */
 }
 
 .is-bookmarks-show-link .link {

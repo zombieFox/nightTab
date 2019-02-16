@@ -130,6 +130,21 @@ var update = (function() {
     return data;
   };
 
+  var _update_290 = function(data) {
+    data.state.header.shade = {
+      show: true,
+      padding: 4,
+      style: "scroll",
+      opacity: 0.95,
+      border: {
+        top: false,
+        bottom: false
+      }
+    };
+    data.version = 2.90;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -167,6 +182,10 @@ var update = (function() {
     if (data.version < 2.80) {
       console.log("\trunning update", 2.80);
       data = _update_280(data);
+    };
+    if (data.version < 2.90) {
+      console.log("\trunning update", 2.90);
+      data = _update_290(data);
     };
     // if (data.version < 3.00) {
     //   console.log("\t# running update", 3.00);
