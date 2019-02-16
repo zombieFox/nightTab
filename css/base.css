@@ -43,7 +43,8 @@
   --z-index-menu: 7000;
   --header-shade-color: transparent;
   --header-shade-opacity: none;
-  --header-height: 0px;
+  --header-height: 0;
+  --header-shade-padding: 4;
   --background-image: none;
   --background-opacity: 1;
   --background-accent-opacity: 0;

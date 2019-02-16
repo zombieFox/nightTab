@@ -319,6 +319,14 @@ var control = (function() {
       header.render();
     }
   }, {
+    element: helper.e(".control-header-shade-padding"),
+    path: "header.shade.padding",
+    type: "range",
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
     element: helper.e(".control-header-shade-border-top"),
     path: "header.shade.border.top",
     type: "checkbox",
@@ -721,7 +729,7 @@ var control = (function() {
         helper.removeClass(html, "is-background-image-show");
       };
     };
-    var _headerShade = function() {
+    var _header = function() {
       if (state.get().header.shade.show) {
         helper.addClass(html, "is-header-shade-show");
         helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
@@ -754,7 +762,7 @@ var control = (function() {
     _link();
     _layout();
     _background();
-    _headerShade();
+    _header();
   };
 
   var dependents = function() {
@@ -907,12 +915,14 @@ var control = (function() {
         helper.e(".control-background-image-accent").disabled = true;
       };
     };
-    var _headerShade = function() {
+    var _header = function() {
       if (state.get().header.shade.show) {
         helper.e(".control-header-shade-style-always").disabled = false;
         helper.e(".control-header-shade-style-scroll").disabled = false;
         helper.e("[for=control-header-shade-opacity]").removeAttribute("disabled");
         helper.e(".control-header-shade-opacity").disabled = false;
+        helper.e("[for=control-header-shade-padding]").removeAttribute("disabled");
+        helper.e(".control-header-shade-padding").disabled = false;
         helper.e(".control-header-shade-border-top").disabled = false;
         helper.e(".control-header-shade-border-bottom").disabled = false;
       } else {
@@ -920,6 +930,8 @@ var control = (function() {
         helper.e(".control-header-shade-style-scroll").disabled = true;
         helper.e("[for=control-header-shade-opacity]").setAttribute("disabled", "");
         helper.e(".control-header-shade-opacity").disabled = true;
+        helper.e("[for=control-header-shade-padding]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-padding").disabled = true;
         helper.e(".control-header-shade-border-top").disabled = true;
         helper.e(".control-header-shade-border-bottom").disabled = true;
       };
@@ -931,7 +943,7 @@ var control = (function() {
     _theme();
     _link();
     _background();
-    _headerShade();
+    _header();
   };
 
   var update = function() {

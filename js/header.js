@@ -1,11 +1,11 @@
 var header = (function() {
 
   var _bind = function() {
-    window.addEventListener("resize", function(event) {
-      render(event);
+    window.addEventListener("resize", function() {
+      render();
     }, false);
-    window.addEventListener("scroll", function(event) {
-      render(event);
+    window.addEventListener("scroll", function() {
+      render();
     }, false);
     helper.eA(".container").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("transitionend", function() {
@@ -14,14 +14,14 @@ var header = (function() {
     });
   };
 
-  var render = function(event) {
+  var render = function() {
     var html = helper.e("html");
     var header = helper.e(".header");
     var link = helper.e(".link");
-    var height = parseInt(getComputedStyle(header).height, 10);
     var fontSize = parseInt(getComputedStyle(html).fontSize, 10);
     var scrollPosition = document.documentElement.scrollTop;
     var _margin = function() {
+      var height = parseInt(getComputedStyle(header).height, 10);
       var marginValue;
       if (state.get().background.image.show && (state.get().header.shade.show && state.get().header.shade.style == "always") || state.get().header.shade.style == "always" || state.get().header.shade.border.bottom) {
         marginValue = (height + fontSize);
@@ -52,8 +52,12 @@ var header = (function() {
         html.style.setProperty("--header-shade-opacity", state.get().header.shade.opacity);
       };
     };
+    var _padding = function() {
+      html.style.setProperty("--header-shade-padding", state.get().header.shade.padding);
+    };
     _color();
     _opacity();
+    _padding();
     _margin();
   };
 
