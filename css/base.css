@@ -100,6 +100,10 @@ body {
   height: 100vh;
 }
 
+.is-menu-open body {
+  overflow: hidden;
+}
+
 .is-header-alignment-vertical-top body {
   justify-content: flex-start;
 }
