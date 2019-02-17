@@ -158,6 +158,7 @@ button [class*=" button-"]:last-child,
 .button-link[disabled] {
   background-color: transparent;
   color: transparent;
+  pointer-events: none;
 }
 
 .button-link:hover[disabled],
