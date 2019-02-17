@@ -49,7 +49,7 @@
 }
 
 .menu-content {
-  padding: 2em;
+  padding: 2em 2em 20vh 2em;
 }
 
 .menu-content-area {
@@ -118,13 +118,11 @@
   }
 
   .menu-content {
-    padding: 2em;
     overflow-y: auto;
   }
 
   .menu-content-area {
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 10vh;
   }
 
   .menu-nav-button {
