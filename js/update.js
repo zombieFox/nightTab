@@ -187,6 +187,10 @@ var update = (function() {
       console.log("\trunning update", 2.90);
       data = _update_290(data);
     };
+    if (data.version < 2.91) {
+      console.log("\trunning update", 2.91);
+      data.version = 2.91;
+    };
     // if (data.version < 3.00) {
     //   console.log("\t# running update", 3.00);
     //   data = _update_300(data);
