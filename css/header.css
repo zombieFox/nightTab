@@ -24,7 +24,7 @@
 }
 
 .is-header-shade-style-scroll .header .header-shade {
-  transition: background-color var(--animation-speed-fast) ease-in-out;
+  transition: background-color var(--animation-speed-slow) ease-in-out;
   animation: none;
 }
 
