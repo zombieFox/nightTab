@@ -38,6 +38,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .menu-nav-area-grow {
@@ -110,7 +111,7 @@
     overflow-y: inherit;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 100fr;
+    grid-template-rows: auto 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     justify-items: stretch;
