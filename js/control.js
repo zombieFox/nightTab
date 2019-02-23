@@ -492,6 +492,13 @@ var control = (function() {
       render();
     }
   }, {
+    element: helper.e(".control-layout-theme-randomise"),
+    type: "button",
+    func: function() {
+      theme.random();
+      theme.render();
+    }
+  }, {
     element: helper.e(".control-background-image-show"),
     path: "background.image.show",
     type: "checkbox",
@@ -856,10 +863,12 @@ var control = (function() {
       if (state.get().layout.theme.random.active) {
         helper.eA("input[name='control-layout-theme-style']").forEach(function(arrayItem, index) {
           arrayItem.disabled = false;
+          helper.e(".control-layout-theme-randomise").disabled = false;
         });
       } else {
         helper.eA("input[name='control-layout-theme-style']").forEach(function(arrayItem, index) {
           arrayItem.disabled = true;
+          helper.e(".control-layout-theme-randomise").disabled = true;
         });
       };
     };
