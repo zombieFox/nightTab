@@ -1,7 +1,7 @@
 var version = (function() {
 
   // version is normally bumped when the state needs changing or any new functionality is added
-  var current = "2.9.1";
+  var current = "2.9.2";
 
   var get = function() {
     var number = current.split(".");

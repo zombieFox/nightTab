@@ -152,49 +152,51 @@ var update = (function() {
 
   function run(data) {
     if (!("version" in data)) {
-      console.log("\trunning update", 1.00);
+      console.log("\t -- running update", 1.00);
       data = _update_100(data);
     };
     if (data.version < 2.00) {
-      console.log("\trunning update", 2.00);
+      console.log("\t -- running update", 2.00);
       data = _update_200(data);
     };
     if (data.version < 2.10) {
-      console.log("\trunning update", 2.10);
+      console.log("\t -- running update", 2.10);
       data = _update_210(data);
     };
     if (data.version < 2.30) {
-      console.log("\trunning update", 2.30);
+      console.log("\t -- running update", 2.30);
       data = _update_230(data);
     };
     if (data.version < 2.40) {
-      console.log("\trunning update", 2.40);
+      console.log("\t -- running update", 2.40);
       data = _update_240(data);
     };
     if (data.version < 2.50) {
-      console.log("\trunning update", 2.50);
+      console.log("\t -- running update", 2.50);
       data = _update_250(data);
     };
     if (data.version < 2.70) {
-      console.log("\trunning update", 2.70);
+      console.log("\t -- running update", 2.70);
       data = _update_270(data);
     };
     if (data.version < 2.80) {
-      console.log("\trunning update", 2.80);
+      console.log("\t -- running update", 2.80);
       data = _update_280(data);
     };
     if (data.version < 2.90) {
-      console.log("\trunning update", 2.90);
+      console.log("\t -- running update", 2.90);
       data = _update_290(data);
     };
     if (data.version < 2.91) {
-      console.log("\trunning update", 2.91);
+      console.log("\t -- running update", 2.91);
       data.version = 2.91;
     };
-    // if (data.version < 3.00) {
-    //   console.log("\t# running update", 3.00);
-    //   data = _update_300(data);
-    // };
+    // if no update is needed
+    // version bump
+    if (data.version < version.get()) {
+      console.log("\t -- nothing to update, version bump to", version.get());
+      data.version = version.get();
+    };
     return data;
   };
 
