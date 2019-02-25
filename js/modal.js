@@ -27,7 +27,7 @@ var modal = (function() {
       var body = helper.e("body");
       helper.setObject({
         object: state.get(),
-        path: "modal.active",
+        path: "modal",
         newValue: true
       });
       var modalWrapper = document.createElement("div");
@@ -50,7 +50,7 @@ var modal = (function() {
         };
         helper.setObject({
           object: state.get(),
-          path: "modal.active",
+          path: "modal",
           newValue: false
         });
       };
