@@ -779,11 +779,6 @@ var control = (function() {
       } else {
         helper.e(".control-edit").disabled = true;
         helper.e(".control-edit").checked = false;
-        helper.setObject({
-          object: state.get(),
-          path: "edit.active",
-          newValue: false
-        });
       };
     };
     var _date = function() {
