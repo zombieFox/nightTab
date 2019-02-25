@@ -13,7 +13,7 @@ var keyboard = (function() {
         } else if (state.get().bookmarks.edit) {
           helper.setObject({
             object: state.get(),
-            path: "edit.active",
+            path: "bookmarks.edit",
             newValue: false
           });
           control.update();

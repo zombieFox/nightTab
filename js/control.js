@@ -956,14 +956,6 @@ var control = (function() {
   };
 
   var update = function() {
-    var eventType = {
-      button: "click",
-      checkbox: "change",
-      radio: "change",
-      text: "input",
-      range: "input",
-      color: "change"
-    };
     var valueMod = {
       reverse: function(value, element) {
         return parseInt(element.max, 10) - value;
