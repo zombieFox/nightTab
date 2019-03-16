@@ -101,9 +101,20 @@ var link = (function() {
 
   var remove = function(bookmarkData) {
     bookmarks.remove(bookmarkData.timeStamp);
+    _checkCount();
     data.save();
     clear();
     render();
+  };
+
+  var _checkCount = function() {
+    if (bookmarks.get().length <= 0) {
+      helper.setObject({
+        object: state.get(),
+        path: "bookmarks.edit",
+        newValue: false
+      });
+    };
   };
 
   var _makeLinkForm = function() {
