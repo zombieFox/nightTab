@@ -90,7 +90,10 @@ var link = (function() {
         options.bookmarkData.letter = options.form.querySelector(".link-form-input-letter").value;
         options.bookmarkData.name = options.form.querySelector(".link-form-input-name").value;
         options.bookmarkData.url = options.form.querySelector(".link-form-input-url").value;
-        bookmarks.edit(options.bookmarkData, options.bookmarkData.timeStamp);
+        bookmarks.edit({
+          bookmarkData: options.bookmarkData,
+          timeStamp: options.bookmarkData.timeStamp
+        });
       }
     };
     action[options.action]();

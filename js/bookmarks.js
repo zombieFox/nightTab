@@ -188,10 +188,17 @@ var bookmarks = (function() {
     all.push(newBookmark);
   };
 
-  var edit = function(object, timeStamp) {
+  var edit = function(override) {
+    var options = {
+      bookmarkData: null,
+      timeStamp: null
+    };
+    if (override) {
+      options = helper.applyOptions(options, override);
+    };
     for (var i = 0; i < all.length; i++) {
-      if (all[i].timeStamp === timeStamp) {
-        all[i] = object;
+      if (all[i].timeStamp === options.timeStamp) {
+        all[i] = options.bookmarkData;
       };
     };
   };
