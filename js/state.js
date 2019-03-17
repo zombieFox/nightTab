@@ -118,23 +118,6 @@ var state = (function() {
     };
   };
 
-  // var change = function(override) {
-  //   var options = {
-  //     path: null,
-  //     value: null
-  //   };
-  //   if (override) {
-  //     options = helper.applyOptions(options, override);
-  //   };
-  //   if (options.path != null) {
-  //     helper.setObject({
-  //       path: options.path,
-  //       object: current,
-  //       newValue: options.value
-  //     });
-  //   };
-  // };
-
   var init = function() {
     if (data.load()) {
       restore(data.load());
