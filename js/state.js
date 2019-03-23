@@ -63,7 +63,13 @@ var state = (function() {
           top: false,
           bottom: false
         }
-      }
+        },
+        greeting:
+        {
+            show: true,
+            name: "NightTab"
+
+        }
     },
     bookmarks: {
       show: {
@@ -77,6 +83,7 @@ var state = (function() {
       style: "block",
       sort: "none"
     },
+
     layout: {
       width: "wide",
       scrollPastEnd: true,
