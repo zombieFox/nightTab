@@ -359,6 +359,22 @@ var control = (function() {
       render();
       dependents();
     }
+  },{
+    element: helper.e(".control-header-greeting-name"),
+    path: "header.greeting.name",
+    type: "text",
+    func: function() {
+           render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-show"),
+    path: "header.greeting.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+    }
   }, {
     element: helper.e(".control-bookmarks-show-url"),
     path: "bookmarks.show.url",
