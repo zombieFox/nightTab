@@ -371,6 +371,39 @@ var control = (function() {
       header.render();
     }
   }, {
+    element: helper.e(".control-header-greeting-type-good"),
+    path: "header.greeting.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-type-hello"),
+    path: "header.greeting.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-type-hi"),
+    path: "header.greeting.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
     element: helper.e(".control-header-greeting-name"),
     path: "header.greeting.name",
     type: "text",
@@ -836,9 +869,15 @@ var control = (function() {
       if (state.get().header.greeting.show) {
         helper.e("[for=control-header-greeting-name]").removeAttribute("disabled", "");
         helper.e(".control-header-greeting-name").disabled = false;
+        helper.e(".control-header-greeting-type-good").disabled = false;
+        helper.e(".control-header-greeting-type-hello").disabled = false;
+        helper.e(".control-header-greeting-type-hi").disabled = false;
       } else {
         helper.e("[for=control-header-greeting-name]").setAttribute("disabled", "");
         helper.e(".control-header-greeting-name").disabled = true;
+        helper.e(".control-header-greeting-type-good").disabled = true;
+        helper.e(".control-header-greeting-type-hello").disabled = true;
+        helper.e(".control-header-greeting-type-hi").disabled = true;
       };
     };
     var _clock = function() {

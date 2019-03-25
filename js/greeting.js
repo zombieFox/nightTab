@@ -10,9 +10,20 @@ var greeting = (function() {
   var render = function() {
     var _greeting = function() {
       var greeting = helper.e(".greeting");
-      var time = helper.getDateTime();
-      var message = ["Good night", "Good morning", "Good afternoon", "Good evening"];
-      var greetingMessage = message[Math.floor(time.hours / 6)];
+      var message = {
+        hi: function() {
+          return "Hi";
+        },
+        hello: function() {
+          return "Hello";
+        },
+        good: function() {
+          var time = helper.getDateTime();
+          var message = ["Good night", "Good morning", "Good afternoon", "Good evening"];
+          return message[Math.floor(time.hours / 6)];
+        }
+      };
+      var greetingMessage = message[state.get().header.greeting.type]();
       if (state.get().header.greeting.name != "" && state.get().header.greeting.name != undefined) {
         greetingMessage = greetingMessage + ", " + state.get().header.greeting.name;
       };

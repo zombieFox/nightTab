@@ -66,6 +66,7 @@ var state = (function() {
       },
       greeting: {
         show: false,
+        type: "good",
         name: ""
       }
     },

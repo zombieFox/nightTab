@@ -203,6 +203,7 @@ var update = (function() {
         console.log("\t -- running update", "2.11.0");
         data.state.header.greeting = {
           show: false,
+          type: "good",
           name: ""
         };
         data.version = "2.11.0";
