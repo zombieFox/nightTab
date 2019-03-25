@@ -63,6 +63,11 @@ var state = (function() {
           top: false,
           bottom: false
         }
+      },
+      greeting: {
+        show: false,
+        type: "good",
+        name: ""
       }
     },
     bookmarks: {

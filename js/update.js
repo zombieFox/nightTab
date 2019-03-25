@@ -197,13 +197,17 @@ var update = (function() {
         console.log("\t -- running update", "2.10.0");
         data.version = "2.10.0";
       };
-    } else if (typeof data.version == "string") {
-      // new updates will go here
-      // example update compare check
-      // if (version.compare(data.version, "2.11.0") == -1) {
-      //   console.log("\t -- running update", "2.11.0");
-      //   data.version = "2.11.0";
-      // };
+    };
+    if (typeof data.version == "string") {
+      if (version.compare(data.version, "2.11.0") == -1) {
+        console.log("\t -- running update", "2.11.0");
+        data.state.header.greeting = {
+          show: false,
+          type: "good",
+          name: ""
+        };
+        data.version = "2.11.0";
+      };
     };
     // if no update is needed
     // version bump

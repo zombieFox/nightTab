@@ -9,7 +9,7 @@
   min-height: 2.5em;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: nowrap;
 }
 
@@ -20,7 +20,7 @@
 .date-year {
   font-size: 1.5em;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 

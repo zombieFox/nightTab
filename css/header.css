@@ -51,9 +51,10 @@
 
 .header-item {
   margin: var(--gutter);
+  max-width: calc(100% - var(--gutter) * 2);
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
 }
@@ -102,6 +103,7 @@
 .header-search,
 .header-edit-add,
 .header-accent,
+.header-greeting,
 .header-menu {
   display: none;
 }
@@ -111,6 +113,7 @@
 .is-header-clock-show .header-clock,
 .is-header-edit-add .header-edit-add,
 .is-header-accent .header-accent,
+.is-header-greeting .header-greeting,
 .is-menu .header-menu {
   display: flex;
 }
