@@ -81,7 +81,6 @@ var state = (function() {
       style: "block",
       sort: "none"
     },
-
     layout: {
       width: "wide",
       scrollPastEnd: true,
