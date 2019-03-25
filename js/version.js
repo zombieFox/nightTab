@@ -27,8 +27,6 @@ var version = (function() {
 
   var get = function() {
     return current;
-    // var number = current.split(".");
-    // return parseFloat(number.shift() + "." + number.join(""));
   };
 
   // exposed methods
