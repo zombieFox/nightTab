@@ -156,7 +156,6 @@ var update = (function() {
       data = _update_100(data);
     };
     if (typeof data.version == "number") {
-      console.log(1);
       if (data.version < 2.00) {
         console.log("\t -- running update", 2.00);
         data = _update_200(data);
@@ -194,20 +193,24 @@ var update = (function() {
         data.version = 2.91;
       };
       if (data.version < 2.96) {
-      // if (version.compare(version.get(), data.version)) {
+        // introduction of a new semantic version check function so the version is being bumped to 2.10.0 and changed to a string
         console.log("\t -- running update", "2.10.0");
         data.version = "2.10.0";
       };
     } else if (typeof data.version == "string") {
-      console.log(2);
-      console.log(version.compare(data.version, version.get()));
+      // new updates will go here
+      // example update compare check
+      // if (version.compare(data.version, "2.11.0") == -1) {
+      //   console.log("\t -- running update", "2.11.0");
+      //   data.version = "2.11.0";
+      // };
     };
     // if no update is needed
     // version bump
-    // if (data.version < version.get()) {
-    //   console.log("\t -- nothing to update, version bump to", version.get());
-    //   data.version = version.get();
-    // };
+    if (version.compare(data.version, version.get()) == -1) {
+      console.log("\t -- nothing to update, version bump to", version.get());
+      data.version = version.get();
+    };
     return data;
   };
 
