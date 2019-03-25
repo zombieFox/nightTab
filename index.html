@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,6 +26,7 @@
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/date.css">
   <link rel="stylesheet" href="css/clock.css">
+  <link rel="stylesheet" href="css/greeting.css">
   <link rel="stylesheet" href="css/search.css">
   <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/link.css">
@@ -42,6 +44,9 @@
     <div class="header-border"></div>
     <div class="container">
       <div class="header-area">
+        <div class="header-item header-greeting">
+          <p class="greeting"></p>
+        </div>
         <div class="header-item header-clock">
           <p class="clock"></p>
         </div>
@@ -111,6 +116,17 @@
       <div class="menu-content">
 
         <div class="menu-content-area menu-content-area-header">
+          <div class="menu-item">
+            <h1 class="menu-header">Greeting</h1>
+            <div class="checkbox-wrap">
+              <input id="control-header-greeting-show" class="control-header-greeting-show" type="checkbox" tabindex="1">
+              <label for="control-header-greeting-show"><span class="label-icon"></span>Show</label>
+            </div>
+            <div class="input-wrap form-indent-1">
+              <label for="control-header-greeting-name">Name</label>
+              <input id="control-header-greeting-name" class="control-header-greeting-name" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Name or nickname" tabindex="1">
+            </div>
+          </div>
           <div class="menu-item">
             <h1 class="menu-header">Clock</h1>
             <div class="checkbox-wrap">
@@ -203,7 +219,7 @@
             </div>
             <div class="input-wrap form-indent-2">
               <label for="control-header-search-engine-custom-url">URL</label>
-              <input id="control-header-search-engine-custom-url" class="control-header-search-engine-custom-url mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="https://" tabindex="1">
+              <input id="control-header-search-engine-custom-url" class="control-header-search-engine-custom-url" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="https://" tabindex="1">
             </div>
           </div>
           <div class="menu-item">
@@ -279,17 +295,6 @@
             <div class="checkbox-wrap form-indent-1">
               <input id="control-header-shade-border-bottom" class="control-header-shade-border-bottom" type="checkbox" value="always" tabindex="1">
               <label for="control-header-shade-border-bottom"><span class="label-icon"></span>Bottom border</label>
-            </div>
-          </div>
-          <div class="menu-item">
-            <h1 class="menu-header">Greeting</h1>
-			<div class="checkbox-wrap">
-              <input id="control-header-greeting-show" class="control-header-greeting-show" type="checkbox" tabindex="1">
-              <label for="control-header-greeting-show"><span class="label-icon"></span>Show</label>
-            </div>
-             <div class="input-wrap form-indent-1">
-              <label for="control-header-greeting-name">Name</label>
-              <input id="control-header-greeting-name" class="control-header-greeting-name mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="" tabindex="1">
             </div>
           </div>
         </div>
@@ -457,6 +462,7 @@
 <script src="js/shade.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/date.js"></script>
+<script src="js/greeting.js"></script>
 <script src="js/clock.js"></script>
 <script src="js/search.js"></script>
 <script src="js/link.js"></script>

@@ -29,6 +29,10 @@ control.init();
 
 // render date
 // bind date update
+greeting.init();
+
+// render date
+// bind date update
 date.init();
 
 // render clock

@@ -1,5 +1,5 @@
 var date = (function() {
- var userName = ""
+
   var bind = function() {
     window.setInterval(function() {
       clear();
@@ -62,39 +62,6 @@ var date = (function() {
           value: "date-item date-year"
         }]
       });
-	  
-	  let currentTime = new Date();
-	  let dateTitle = ""
-	let partOfDay = Math.floor(currentTime.getHours() / 6);
-  switch (partOfDay) {
-    case 0:
-      dateTitle = "Night";
-      break;
-    case 1:
-      dateTitle = "Morning";
-      break;
-    case 2:
-      dateTitle = "Afternoon";
-      break;
-    case 3:
-      dateTitle ="Evening";
-      break;
-  }
-	   userName = state.get().header.greeting.name;
-	   
-	   if(userName != "")
-	   {
-		   userName = ", " + userName;
-		}
-	  var datetitleNode = helper.makeNode({
-        tag: "span",
-        text: "Good " + dateTitle + userName,
-        attr: [{
-          key: "class",
-          value: "date-item date-year"
-        }]
-      });
-	  
       if (state.get().header.date.show.day) {
         date.appendChild(day);
       };
@@ -107,11 +74,6 @@ var date = (function() {
       if (state.get().header.date.show.year) {
         date.appendChild(year);
       };
-	   if(state.get().header.greeting.show)
-	   {
-      date.appendChild(datetitleNode);
-	   }
-      
       if (state.get().header.date.show.separator) {
         var parts = date.querySelectorAll("span");
         if (parts.length > 1) {
@@ -136,10 +98,6 @@ var date = (function() {
     };
   };
 
- 
-   
-  
-  
   var init = function() {
     render();
     bind();

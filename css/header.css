@@ -102,6 +102,7 @@
 .header-search,
 .header-edit-add,
 .header-accent,
+.header-greeting,
 .header-menu {
   display: none;
 }
@@ -111,6 +112,7 @@
 .is-header-clock-show .header-clock,
 .is-header-edit-add .header-edit-add,
 .is-header-accent .header-accent,
+.is-header-greeting .header-greeting,
 .is-menu .header-menu {
   display: flex;
 }

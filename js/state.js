@@ -63,13 +63,11 @@ var state = (function() {
           top: false,
           bottom: false
         }
-        },
-        greeting:
-        {
-            show: true,
-            name: "NightTab"
-
-        }
+      },
+      greeting: {
+        show: false,
+        name: ""
+      }
     },
     bookmarks: {
       show: {

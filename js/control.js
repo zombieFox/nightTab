@@ -359,14 +359,6 @@ var control = (function() {
       render();
       dependents();
     }
-  },{
-    element: helper.e(".control-header-greeting-name"),
-    path: "header.greeting.name",
-    type: "text",
-    func: function() {
-           render();
-      dependents();
-    }
   }, {
     element: helper.e(".control-header-greeting-show"),
     path: "header.greeting.show",
@@ -374,6 +366,20 @@ var control = (function() {
     func: function() {
       render();
       dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-name"),
+    path: "header.greeting.name",
+    type: "text",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
     }
   }, {
     element: helper.e(".control-bookmarks-show-url"),
@@ -745,6 +751,13 @@ var control = (function() {
         helper.removeClass(html, "is-header-accent");
       };
     };
+    var _greeting = function() {
+      if (state.get().header.greeting.show) {
+        helper.addClass(html, "is-header-greeting");
+      } else {
+        helper.removeClass(html, "is-header-greeting");
+      };
+    };
     var _background = function() {
       if (state.get().background.image.show) {
         helper.addClass(html, "is-background-image-show");
@@ -777,6 +790,7 @@ var control = (function() {
     _menu();
     _alignment();
     _edit();
+    _greeting();
     _date();
     _clock();
     _search();
@@ -816,6 +830,15 @@ var control = (function() {
       } else {
         helper.e(".control-header-date-character-length-short").disabled = true;
         helper.e(".control-header-date-character-length-long").disabled = true;
+      };
+    };
+    var _greeting = function() {
+      if (state.get().header.greeting.show) {
+        helper.e("[for=control-header-greeting-name]").removeAttribute("disabled", "");
+        helper.e(".control-header-greeting-name").disabled = false;
+      } else {
+        helper.e("[for=control-header-greeting-name]").setAttribute("disabled", "");
+        helper.e(".control-header-greeting-name").disabled = true;
       };
     };
     var _clock = function() {
@@ -957,6 +980,7 @@ var control = (function() {
       };
     };
     _edit();
+    _greeting();
     _date();
     _clock();
     _search();
