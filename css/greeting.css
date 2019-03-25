@@ -15,7 +15,14 @@
 
 .greeting-item {
   font-size: 1.5em;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.greeting-item-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

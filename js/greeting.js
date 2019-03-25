@@ -18,12 +18,20 @@ var greeting = (function() {
       };
       var greetingItem = helper.makeNode({
         tag: "span",
-        text: greetingMessage,
         attr: [{
           key: "class",
           value: "greeting-item"
         }]
       });
+      var greetingItemText = helper.makeNode({
+        tag: "span",
+        text: greetingMessage,
+        attr: [{
+          key: "class",
+          value: "greeting-item-text"
+        }]
+      });
+      greetingItem.appendChild(greetingItemText);
       greeting.appendChild(greetingItem);
     };
     if (state.get().header.greeting.show) {
