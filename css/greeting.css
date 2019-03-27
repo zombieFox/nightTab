@@ -5,6 +5,7 @@
   font-size: 1em;
   font-family: var(--font-fjalla);
   color: rgb(var(--white));
+  color: rgb(var(--black));
   width: 100%;
   min-height: 2.5em;
   display: flex;

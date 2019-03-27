@@ -17,4 +17,5 @@
 
 .muted {
   color: rgb(var(--gray-12));
+  color: rgb(var(--gray-08));
 }

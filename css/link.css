@@ -58,6 +58,7 @@
 
 .link-panel-front {
   background-color: rgb(var(--gray-02));
+  background-color: rgb(var(--gray-18));
   border-radius: var(--radius);
   padding: 0 1em;
   width: 100%;
@@ -84,6 +85,7 @@
 .link-panel-front:hover,
 .link-panel-front:focus {
   background-color: rgb(var(--gray-03));
+  background-color: rgb(var(--gray-17));
   outline: none;
   text-decoration: none;
 }
@@ -94,6 +96,7 @@
   text-decoration: none;
   outline: none;
   background-color: rgb(var(--gray-03));
+  background-color: rgb(var(--gray-17));
   box-shadow: 0 2px 1em 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -118,6 +121,7 @@
 
 .link-panel-back:before {
   content: "";
+  background-color: rgb(var(--accent));
   background-color: rgb(var(--accent));
   border-radius: var(--radius);
   width: calc(100% - calc(var(--line-width) + var(--line-width)));
@@ -147,6 +151,7 @@
   padding-left: 0;
   padding-right: 0;
   color: rgb(var(--gray-02));
+  color: rgb(var(--gray-18));
   flex-grow: 1;
   flex-basis: 50%;
 }
@@ -162,11 +167,13 @@
 .link-control-item:focus,
 .link-control-item:hover {
   color: rgb(var(--white));
+  color: rgb(var(--black));
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .link-control-item:active {
   color: rgb(var(--white));
+  color: rgb(var(--black));
   background-color: rgba(0, 0, 0, 0.3);
   transition: none;
 }
@@ -203,6 +210,7 @@
   margin: 0;
   font-size: 0.7em;
   color: rgb(var(--black));
+  color: rgb(var(--black));
   font-family: var(--font-regular);
   white-space: nowrap;
   overflow: hidden;
@@ -211,6 +219,7 @@
 
 .link-letter {
   font-family: var(--font-fjalla);
+  color: rgb(var(--accent));
   color: rgb(var(--accent));
   white-space: nowrap;
   overflow: hidden;
@@ -235,10 +244,12 @@
 .link-item:hover .link-letter,
 .link-item:focus .link-letter {
   color: rgb(var(--white));
+  color: rgb(var(--black));
 }
 
 .link-panel-front:focus .link-letter {
   color: rgb(var(--white));
+  color: rgb(var(--black));
 }
 
 .link-name {
@@ -246,6 +257,7 @@
   font-size: 0.9em;
   font-family: var(--font-regular);
   color: rgb(var(--gray-12));
+  color: rgb(var(--gray-08));
   white-space: nowrap;
   overflow: hidden;
   max-width: 100%;
@@ -261,10 +273,12 @@
 .link-item:hover .link-name,
 .link-item:focus .link-name {
   color: rgb(var(--white));
+  color: rgb(var(--black));
 }
 
 .link-panel-front:focus .link-name {
   color: rgb(var(--white));
+  color: rgb(var(--black));
 }
 
 .link-empty {
@@ -275,6 +289,7 @@
 
 .link-empty-heading {
   color: rgb(var(--gray-16));
+  color: rgb(var(--gray-04));
 }
 
 .is-bookmarks-style-block .link-name {

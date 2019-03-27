@@ -25,7 +25,6 @@
   --root-font-size: 14px;
   --radius: 0.2em;
   --line-width: 0.2em;
-  --background: rgb(var(--gray-01));
   --gutter: 0.5em;
   --animation-speed-fast: 0.2s;
   --animation-speed-medium: 0.4s;
@@ -90,8 +89,10 @@ html {
 }
 
 body {
-  background-color: var(--background);
+  background-color: rgb(var(--gray-01));
+  background-color: rgb(var(--gray-20));
   color: rgb(var(--white));
+  color: rgb(var(--black));
   font-size: 1rem;
   line-height: 1.6;
   font-family: var(--font-regular);

@@ -4,9 +4,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   background-color: rgb(var(--gray-02));
+  background-color: rgb(var(--gray-18));
   padding: 0.125em 1em;
   margin: 0 0 1em 0;
   color: rgb(var(--gray-12));
+  color: rgb(var(--gray-08));
   font-size: 1em;
   font-family: var(--font-regular);
   min-height: 2.5em;
@@ -40,8 +42,11 @@ input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   background-color: rgb(var(--gray-03));
+  background-color: rgb(var(--gray-17));
   border-bottom-color: rgb(var(--gray-08));
+  border-bottom-color: rgb(var(--gray-12));
   color: rgb(var(--white));
+  color: rgb(var(--black));
   outline: none;
 }
 
@@ -51,8 +56,10 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   background-color: rgb(var(--gray-04));
+  background-color: rgb(var(--gray-16));
   border-bottom-color: rgb(var(--accent));
   color: rgb(var(--white));
+  color: rgb(var(--black));
   transition: none;
 }
 
@@ -65,8 +72,10 @@ button[disabled]:focus,
 button[disabled]:active,
 .button[disabled]:active {
   background-color: rgb(var(--gray-02));
+  background-color: rgb(var(--gray-18));
   border-color: transparent;
   color: rgb(var(--gray-04));
+  color: rgb(var(--gray-16));
   cursor: default;
 }
 
@@ -85,6 +94,7 @@ button [class*=" icon-"],
 .button.active {
   border-bottom-color: rgb(var(--accent));
   color: rgb(var(--white));
+  color: rgb(var(--black));
 }
 
 .button-small {

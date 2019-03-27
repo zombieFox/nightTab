@@ -18,30 +18,35 @@ h2 {
   font-size: 1.2em;
   font-family: var(--font-regular);
   color: rgb(var(--gray-18));
+  color: rgb(var(--gray-02));
 }
 
 h3 {
   font-size: 1.1em;
   font-family: var(--font-regular);
   color: rgb(var(--gray-18));
+  color: rgb(var(--gray-02));
 }
 
 h4 {
   font-size: 1em;
   font-family: var(--font-regular);
   color: rgb(var(--gray-18));
+  color: rgb(var(--gray-02));
 }
 
 h5 {
   font-size: 1em;
   font-family: var(--font-bold);
   color: rgb(var(--gray-18));
+  color: rgb(var(--gray-02));
 }
 
 h6 {
   font-size: 0.75em;
   font-family: var(--font-bold);
   color: rgb(var(--gray-18));
+  color: rgb(var(--gray-02));
 }
 
 p {
