@@ -30,14 +30,14 @@
   --button-link-text-hover-focus: var(--gray-14);
   --button-link-text-active: var(--gray-18);
   --button-link-text-disabled: var(--gray-04);
-  --form-input-text: var(--gray-12);
+  --form-input-text: var(--gray-16);
   --form-input-text-hover: var(--mode-neutral-text);
   --form-input-text-focus: var(--mode-neutral-text);
   --form-input-text-disabled: var(--gray-04);
   --form-input-text-disabled-helper-text: var(--gray-04);
-  --form-input-placeholder: var(--gray-08);
+  --form-input-placeholder: var(--gray-06);
   --form-input-placeholder-hover-focus: var(--gray-10);
-  --form-input-placeholder-disabled: var(--gray-02);
+  --form-input-placeholder-disabled: var(--gray-04);
   --form-label: var(--gray-16);
   --form-label-disabled: var(--gray-04);
   --form-checkbox-radio-label: var(--gray-12);
@@ -105,7 +105,7 @@
 
 ::selection {
   background-color: rgb(var(--accent));
-  color: rgb(var(--mode-neutral-text));
+  color: rgb(var(--white));
 }
 
 html {

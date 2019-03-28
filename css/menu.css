@@ -26,6 +26,7 @@
   height: 100%;
   overflow-y: auto;
   pointer-events: all;
+  transition: background-color var(--animation-speed-medium) ease-in-out;
 }
 
 .menu-nav {

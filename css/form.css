@@ -5,7 +5,7 @@ input[type="search"],
 input[type="tel"],
 input[type="text"] {
   background-color: rgb(var(--gray-02));
-  padding: 0 0.5em;
+  padding: 0 1em;
   margin: 0 0 1em 0;
   color: rgb(var(--form-input-text));
   font-size: 1em;
@@ -13,7 +13,9 @@ input[type="text"] {
   line-height: 2.5em;
   height: 2.5em;
   width: 100%;
-  border-width: var(--line-width);
+  border-width: 0;
+  /* border-top-width: var(--line-width); */
+  /* border-bottom-width: var(--line-width); */
   border-style: solid;
   border-color: transparent;
   border-radius: var(--radius);
@@ -29,9 +31,10 @@ input[type="search"]:hover,
 input[type="tel"]:hover,
 input[type="text"]:hover {
   background-color: rgb(var(--gray-03));
-  border-color: rgb(var(--gray-06));
+  /* border-bottom-color: rgb(var(--gray-08)); */
   color: rgb(var(--form-input-text-hover));
   outline: none;
+  box-shadow: 0 0 0 var(--line-width) rgb(var(--gray-06));
 }
 
 input[type="email"]:focus,
@@ -41,11 +44,12 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="text"]:focus {
   background-color: rgb(var(--gray-02));
-  border-color: transparent;
+  /* border-bottom-color: rgb(var(--accent)); */
+  /* border-color: transparent; */
   color: rgb(var(--form-input-text-focus));
   outline: none;
   z-index: 2;
-  box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 var(--line-width) rgb(var(--accent));
+  box-shadow: 0 0 0 var(--line-width) rgb(var(--accent)), 0 0 0 calc(var(--line-width) * 2) rgba(var(--accent), 0.25);
 }
 
 input[type="email"][disabled],
@@ -55,7 +59,9 @@ input[type="search"][disabled],
 input[type="tel"][disabled],
 input[type="text"][disabled] {
   background-color: transparent;
+  padding: 0 calc(1em - var(--line-width));
   color: rgb(var(--form-input-text-disabled));
+  border-width: var(--line-width);
   border-color: rgb(var(--gray-02));
   cursor: default;
   box-shadow: none;
@@ -309,6 +315,7 @@ input[type="checkbox"]+.input-label-button,
 input[type="radio"]+.input-label-button {
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 input[type="color"]:hover+.input-label-button,
@@ -317,8 +324,8 @@ input[type="checkbox"]:hover+.input-label-button,
 input[type="checkbox"]:focus+.input-label-button,
 input[type="radio"]:hover+.input-label-button,
 input[type="radio"]:focus+.input-label-button {
-  background-color: rgb(var(--gray-03));
-  border-bottom-color: rgb(var(--gray-10));
+  background-color: rgb(var(--gray-04));
+  border-bottom-color: rgb(var(--gray-08));
   color: rgb(var(--mode-neutral-text));
   outline: none;
 }

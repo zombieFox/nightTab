@@ -34,11 +34,9 @@ var header = (function() {
       if (state.get().header.shade.show) {
         if (state.get().header.shade.style == "always") {
           html.style.setProperty("--header-shade-color", "var(--gray-01)");
-          html.style.setProperty("--header-shade-color", "var(--gray-20)");
         } else if (state.get().header.shade.style == "scroll") {
           if (scrollPosition > (fontSize * 2)) {
             html.style.setProperty("--header-shade-color", "var(--gray-01)");
-            html.style.setProperty("--header-shade-color", "var(--gray-20)");
           } else {
             html.style.setProperty("--header-shade-color", "transparent");
           };
