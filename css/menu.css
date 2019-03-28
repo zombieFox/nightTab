@@ -21,7 +21,6 @@
 
 .menu-area {
   background-color: rgb(var(--gray-01));
-  background-color: rgb(var(--gray-20));
   border-radius: var(--radius);
   width: 100%;
   height: 100%;
@@ -63,7 +62,6 @@
 .menu-item {
   padding-bottom: 2em;
   border-bottom: var(--line-width) solid rgb(var(--gray-04));
-  border-bottom: var(--line-width) solid rgb(var(--gray-16));
 }
 
 .menu-item:last-child,

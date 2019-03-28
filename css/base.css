@@ -21,10 +21,34 @@
   --gray-18: 224, 228, 234;
   --gray-19: 237, 239, 242;
   --gray-20: 250, 250, 250;
+  --mode-neutral-text: 255, 255, 255;
+  --button-text: var(--gray-12);
+  --button-text-hover-focus: var(--mode-neutral-text);
+  --button-text-active: var(--mode-neutral-text);
+  --button-text-disabled: var(--gray-04);
+  --button-link-text: var(--gray-10);
+  --button-link-text-hover-focus: var(--gray-14);
+  --button-link-text-active: var(--gray-18);
+  --button-link-text-disabled: var(--gray-04);
+  --form-input-text: var(--gray-12);
+  --form-input-text-hover: var(--mode-neutral-text);
+  --form-input-text-focus: var(--mode-neutral-text);
+  --form-input-text-disabled: var(--gray-04);
+  --form-input-text-disabled-helper-text: var(--gray-04);
+  --form-input-placeholder: var(--gray-08);
+  --form-input-placeholder-hover-focus: var(--gray-10);
+  --form-input-placeholder-disabled: var(--gray-02);
+  --form-label: var(--gray-16);
+  --form-label-disabled: var(--gray-04);
+  --form-checkbox-radio-label: var(--gray-12);
+  --form-checkbox-radio-chcked-label: var(--gray-16);
+  --form-checkbox-radio-disabled-label: var(--gray-04);
+  --form-range-thumb: var(--gray-12);
   --accent: 0, 255, 0;
   --root-font-size: 14px;
   --radius: 0.2em;
   --line-width: 0.2em;
+  --background: rgb(var(--gray-01));
   --gutter: 0.5em;
   --animation-speed-fast: 0.2s;
   --animation-speed-medium: 0.4s;
@@ -81,7 +105,7 @@
 
 ::selection {
   background-color: rgb(var(--accent));
-  color: rgb(var(--white));
+  color: rgb(var(--mode-neutral-text));
 }
 
 html {
@@ -89,10 +113,8 @@ html {
 }
 
 body {
-  background-color: rgb(var(--gray-01));
-  background-color: rgb(var(--gray-20));
-  color: rgb(var(--white));
-  color: rgb(var(--black));
+  background-color: var(--background);
+  color: rgb(var(--mode-neutral-text));
   font-size: 1rem;
   line-height: 1.6;
   font-family: var(--font-regular);

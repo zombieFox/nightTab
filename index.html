@@ -77,8 +77,8 @@
         </div>
         <div class="header-item header-accent">
           <div class="input-wrap">
-            <input id="control-layout-theme-current" class="control-layout-theme-current" type="color" value="#00ff00" tabindex="1">
-            <label for="control-layout-theme-current" class="button input-label-button mb-0">
+            <input id="control-layout-theme-accent-current" class="control-layout-theme-accent-current" type="color" value="#00ff00" tabindex="1">
+            <label for="control-layout-theme-accent-current" class="button input-label-button mb-0">
               <span class="button-text">Accent</span>
             </label>
           </div>
@@ -314,16 +314,24 @@
           <div class="menu-item">
             <h1 class="menu-header">Bookmarks</h1>
             <div class="checkbox-wrap">
-              <input id="control-bookmarks-show-link" class="control-bookmarks-show-link" type="checkbox" tabindex="1">
-              <label for="control-bookmarks-show-link"><span class="label-icon"></span>Show</label>
+              <input id="control-bookmarks-link-show" class="control-bookmarks-link-show" type="checkbox" tabindex="1">
+              <label for="control-bookmarks-link-show"><span class="label-icon"></span>Show</label>
             </div>
             <div class="checkbox-wrap form-indent-1">
-              <input id="control-bookmarks-show-name" class="control-bookmarks-show-name" type="checkbox" tabindex="1">
-              <label for="control-bookmarks-show-name"><span class="label-icon"></span>Names</label>
+              <input id="control-bookmarks-name-show" class="control-bookmarks-name-show" type="checkbox" tabindex="1">
+              <label for="control-bookmarks-name-show"><span class="label-icon"></span>Names</label>
             </div>
             <div class="checkbox-wrap form-indent-1">
-              <input id="control-bookmarks-show-url" class="control-bookmarks-show-url" type="checkbox" tabindex="1">
-              <label for="control-bookmarks-show-url"><span class="label-icon"></span>URL on hover</label>
+              <input id="control-bookmarks-url-show" class="control-bookmarks-url-show" type="checkbox" tabindex="1">
+              <label for="control-bookmarks-url-show"><span class="label-icon"></span>URL on hover</label>
+            </div>
+            <div class="radio-wrap form-indent-2">
+              <input id="control-bookmarks-url-style-dark" class="control-bookmarks-url-style-dark" type="radio" name="control-bookmarks-url-style" value="dark" tabindex="1">
+              <label for="control-bookmarks-url-style-dark"><span class="label-icon"></span>Dark text</label>
+            </div>
+            <div class="radio-wrap form-indent-2">
+              <input id="control-bookmarks-url-style-light" class="control-bookmarks-url-style-light" type="radio" name="control-bookmarks-url-style" value="light" tabindex="1">
+              <label for="control-bookmarks-url-style-light"><span class="label-icon"></span>Light text</label>
             </div>
           </div>
           <div class="menu-item">
@@ -390,32 +398,44 @@
           </div>
           <div class="menu-item">
             <h1 class="menu-header">Theme</h1>
+            <div class="radio-wrap">
+              <input id="control-layout-theme-mode-dark" class="control-layout-theme-mode-dark" type="radio" name="control-layout-theme-mode" value="dark" tabindex="1">
+              <label for="control-layout-theme-mode-dark"><span class="label-icon"></span>Dark</label>
+            </div>
+            <div class="radio-wrap">
+              <input id="control-layout-theme-mode-light" class="control-layout-theme-mode-light" type="radio" name="control-layout-theme-mode" value="light" tabindex="1">
+              <label for="control-layout-theme-mode-light"><span class="label-icon"></span>Light</label>
+              <p class="input-helper small muted">Accent colour may need to be changed to best fit the Theme.</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <h1 class="menu-header">Accent</h1>
             <div class="checkbox-wrap">
-              <input id="control-layout-theme-random-active" class="control-layout-theme-random-active" type="checkbox" tabindex="1">
-              <label for="control-layout-theme-random-active"><span class="label-icon"></span>Random Accent colour on load/refresh</label>
+              <input id="control-layout-theme-accent-random-active" class="control-layout-theme-accent-random-active" type="checkbox" tabindex="1">
+              <label for="control-layout-theme-accent-random-active"><span class="label-icon"></span>Random Accent colour on load/refresh</label>
             </div>
             <div class="radio-wrap form-indent-1">
-              <input id="control-layout-theme-style-any" class="control-layout-theme-style-any" type="radio" name="control-layout-theme-style" value="any" tabindex="1">
-              <label for="control-layout-theme-style-any"><span class="label-icon"></span>Any colour</label>
+              <input id="control-layout-theme-accent-random-style-any" class="control-layout-theme-accent-random-style-any" type="radio" name="control-layout-theme-accent-random-style" value="any" tabindex="1">
+              <label for="control-layout-theme-accent-random-style-any"><span class="label-icon"></span>Any colour</label>
             </div>
             <div class="radio-wrap form-indent-1">
-              <input id="control-layout-theme-style-light" class="control-layout-theme-style-light" type="radio" name="control-layout-theme-style" value="light" tabindex="1">
-              <label for="control-layout-theme-style-light"><span class="label-icon"></span>Light colours</label>
+              <input id="control-layout-theme-accent-random-style-light" class="control-layout-theme-accent-random-style-light" type="radio" name="control-layout-theme-accent-random-style" value="light" tabindex="1">
+              <label for="control-layout-theme-accent-random-style-light"><span class="label-icon"></span>Light colours</label>
             </div>
             <div class="radio-wrap form-indent-1">
-              <input id="control-layout-theme-style-dark" class="control-layout-theme-style-dark" type="radio" name="control-layout-theme-style" value="dark" tabindex="1">
-              <label for="control-layout-theme-style-dark"><span class="label-icon"></span>Dark colours</label>
+              <input id="control-layout-theme-accent-random-style-dark" class="control-layout-theme-accent-random-style-dark" type="radio" name="control-layout-theme-accent-random-style" value="dark" tabindex="1">
+              <label for="control-layout-theme-accent-random-style-dark"><span class="label-icon"></span>Dark colours</label>
             </div>
             <div class="radio-wrap form-indent-1">
-              <input id="control-layout-theme-style-pastel" class="control-layout-theme-style-pastel" type="radio" name="control-layout-theme-style" value="pastel" tabindex="1">
-              <label for="control-layout-theme-style-pastel"><span class="label-icon"></span>Pastel colours</label>
+              <input id="control-layout-theme-accent-random-style-pastel" class="control-layout-theme-accent-random-style-pastel" type="radio" name="control-layout-theme-accent-random-style" value="pastel" tabindex="1">
+              <label for="control-layout-theme-accent-random-style-pastel"><span class="label-icon"></span>Pastel colours</label>
             </div>
             <div class="radio-wrap form-indent-1 mb-3">
-              <input id="control-layout-theme-style-saturated" class="control-layout-theme-style-saturated" type="radio" name="control-layout-theme-style" value="saturated" tabindex="1">
-              <label for="control-layout-theme-style-saturated"><span class="label-icon"></span>Saturated colours</label>
+              <input id="control-layout-theme-accent-random-style-saturated" class="control-layout-theme-accent-random-style-saturated" type="radio" name="control-layout-theme-accent-random-style" value="saturated" tabindex="1">
+              <label for="control-layout-theme-accent-random-style-saturated"><span class="label-icon"></span>Saturated colours</label>
             </div>
             <div class="button-wrap form-indent-1">
-              <button class="control-layout-theme-randomise" type="button">Randomise now</button>
+              <button class="control-layout-theme-accent-randomise" type="button">Randomise now</button>
             </div>
           </div>
         </div>

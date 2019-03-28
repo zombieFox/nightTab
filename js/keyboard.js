@@ -23,7 +23,7 @@ var keyboard = (function() {
       };
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
-        if (state.get().bookmarks.show.link) {
+        if (state.get().bookmarks.link.show) {
           menu.close();
           link.add();
         };
@@ -36,7 +36,7 @@ var keyboard = (function() {
       };
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
-        if (state.get().bookmarks.show.link && bookmarks.get().length > 0) {
+        if (state.get().bookmarks.link.show && bookmarks.get().length > 0) {
           if (state.get().bookmarks.edit) {
             helper.setObject({
               object: state.get(),

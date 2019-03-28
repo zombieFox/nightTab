@@ -4,11 +4,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   background-color: rgb(var(--gray-02));
-  background-color: rgb(var(--gray-18));
   padding: 0.125em 1em;
   margin: 0 0 1em 0;
-  color: rgb(var(--gray-12));
-  color: rgb(var(--gray-08));
+  color: rgb(var(--button-text));
   font-size: 1em;
   font-family: var(--font-regular);
   min-height: 2.5em;
@@ -42,11 +40,8 @@ input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   background-color: rgb(var(--gray-03));
-  background-color: rgb(var(--gray-17));
   border-bottom-color: rgb(var(--gray-08));
-  border-bottom-color: rgb(var(--gray-12));
-  color: rgb(var(--white));
-  color: rgb(var(--black));
+  color: rgb(var(--button-text-hover-focus));
   outline: none;
 }
 
@@ -56,10 +51,8 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   background-color: rgb(var(--gray-04));
-  background-color: rgb(var(--gray-16));
   border-bottom-color: rgb(var(--accent));
-  color: rgb(var(--white));
-  color: rgb(var(--black));
+  color: rgb(var(--button-text-active));
   transition: none;
 }
 
@@ -72,10 +65,8 @@ button[disabled]:focus,
 button[disabled]:active,
 .button[disabled]:active {
   background-color: rgb(var(--gray-02));
-  background-color: rgb(var(--gray-18));
   border-color: transparent;
-  color: rgb(var(--gray-04));
-  color: rgb(var(--gray-16));
+  color: rgb(var(--button-text-disabled));
   cursor: default;
 }
 
@@ -93,8 +84,7 @@ button [class*=" icon-"],
 
 .button.active {
   border-bottom-color: rgb(var(--accent));
-  color: rgb(var(--white));
-  color: rgb(var(--black));
+  color: rgb(var(--button-text-active));
 }
 
 .button-small {
@@ -162,7 +152,18 @@ button [class*=" button-"]:last-child,
 .button-link {
   background-color: transparent;
   border: 0;
-  color: rgb(var(--gray-10));
+  color: rgb(var(--button-link-text));
+}
+
+.button-link:hover,
+.button-link:focus {
+  background-color: transparent;
+  color: rgb(var(--button-link-text-hover-focus));
+}
+
+.button-link:active {
+  background-color: transparent;
+  color: rgb(var(--button-link-text-active));
 }
 
 .button-link[disabled] {
@@ -175,15 +176,4 @@ button [class*=" button-"]:last-child,
 .button-link:focus[disabled] {
   background-color: transparent;
   color: transparent;
-}
-
-.button-link:hover,
-.button-link:focus {
-  background-color: transparent;
-  color: rgb(var(--gray-14));
-}
-
-.button-link:active {
-  background-color: transparent;
-  color: rgb(var(--gray-18));
 }
