@@ -324,7 +324,7 @@ input[type="checkbox"]:hover+.input-label-button,
 input[type="checkbox"]:focus+.input-label-button,
 input[type="radio"]:hover+.input-label-button,
 input[type="radio"]:focus+.input-label-button {
-  background-color: rgb(var(--gray-04));
+  background-color: rgb(var(--gray-03));
   border-bottom-color: rgb(var(--gray-08));
   color: rgb(var(--mode-neutral-text));
   outline: none;
