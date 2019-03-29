@@ -28,6 +28,12 @@ var keyboard = (function() {
           link.add();
         };
       };
+      // ctrl+alt+d
+      if (event.ctrlKey && event.altKey && event.keyCode == 68) {
+        theme.toggle();
+        control.render();
+        control.update();
+      };
       // ctrl+alt+m
       if (event.ctrlKey && event.altKey && event.keyCode == 77) {
         shade.destroy();
@@ -57,8 +63,8 @@ var keyboard = (function() {
       };
       // ctrl+alt+r
       if (event.ctrlKey && event.altKey && event.keyCode == 82) {
-        theme.random();
-        theme.render();
+        accent.random();
+        accent.render();
         data.save();
       };
     }, false);

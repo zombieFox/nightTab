@@ -24,7 +24,7 @@ var control = (function() {
     path: "layout.theme.accent.current",
     type: "color",
     func: function() {
-      theme.render();
+      accent.render();
     }
   }, {
     element: helper.e(".control-header-clock-show-hours"),
@@ -523,7 +523,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      theme.render();
+      accent.render();
     }
   }, {
     element: helper.e(".control-layout-theme-mode-light"),
@@ -531,7 +531,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      theme.render();
+      accent.render();
     }
   }, {
     element: helper.e(".control-layout-theme-accent-random-active"),
@@ -539,7 +539,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       dependents();
-      theme.render();
+      accent.render();
     }
   }, {
     element: helper.e(".control-layout-theme-accent-random-style-any"),
@@ -580,8 +580,8 @@ var control = (function() {
     element: helper.e(".control-layout-theme-accent-randomise"),
     type: "button",
     func: function() {
-      theme.random();
-      theme.render();
+      accent.random();
+      accent.render();
     }
   }, {
     element: helper.e(".control-background-image-show"),
