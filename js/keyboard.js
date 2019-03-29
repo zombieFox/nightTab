@@ -33,6 +33,7 @@ var keyboard = (function() {
         theme.toggle();
         control.render();
         control.update();
+        data.save();
       };
       // ctrl+alt+m
       if (event.ctrlKey && event.altKey && event.keyCode == 77) {
