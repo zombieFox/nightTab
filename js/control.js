@@ -810,9 +810,9 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-layout-scroll-past-end");
       };
-      // helper.removeClass(html, "is-layout-theme-mode-dark");
-      // helper.removeClass(html, "is-layout-theme-mode-light");
-      // helper.addClass(html, "is-layout-theme-mode-" + state.get().layout.theme.mode);
+      helper.removeClass(html, "is-layout-theme-mode-dark");
+      helper.removeClass(html, "is-layout-theme-mode-light");
+      helper.addClass(html, "is-layout-theme-mode-" + state.get().layout.theme.mode);
     };
     var _editAdd = function() {
       if (state.get().header.editAdd.show) {
