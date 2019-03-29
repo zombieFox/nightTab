@@ -121,6 +121,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  transition: background-color var(--animation-speed-medium) ease-in-out;
 }
 
 .is-menu-open body {
