@@ -1,7 +1,6 @@
 :root {
   --black: 0, 0, 0;
   --white: 255, 255, 255;
-  /* dark */
   --shade-01: 38, 40, 49;
   --shade-02: 47, 51, 62;
   --shade-03: 57, 62, 75;
@@ -22,18 +21,17 @@
   --shade-18: 224, 228, 234;
   --shade-19: 237, 239, 242;
   --shade-20: 250, 250, 250;
-  /* light */
   --button-text: var(--gray-12);
-  --button-text-hover-focus: var(--mode-neutral-text);
-  --button-text-active: var(--mode-neutral-text);
+  --button-text-hover-focus: var(--style-neutral-text);
+  --button-text-active: var(--style-neutral-text);
   --button-text-disabled: var(--gray-04);
   --button-link-text: var(--gray-10);
   --button-link-text-hover-focus: var(--gray-14);
   --button-link-text-active: var(--gray-18);
   --button-link-text-disabled: var(--gray-04);
   --form-input-text: var(--gray-16);
-  --form-input-text-hover: var(--mode-neutral-text);
-  --form-input-text-focus: var(--mode-neutral-text);
+  --form-input-text-hover: var(--style-neutral-text);
+  --form-input-text-focus: var(--style-neutral-text);
   --form-input-text-disabled: var(--gray-04);
   --form-input-text-disabled-helper-text: var(--gray-04);
   --form-input-placeholder: var(--gray-06);
@@ -115,7 +113,7 @@ html {
 
 body {
   background-color: var(--background);
-  color: rgb(var(--mode-neutral-text));
+  color: rgb(var(--style-neutral-text));
   font-size: 1rem;
   line-height: 1.6;
   font-family: var(--font-regular);
@@ -146,7 +144,7 @@ body {
   height: inherit;
 }
 
-.is-layout-theme-mode-dark {
+.is-theme-style-dark {
   --gray-01: var(--shade-01);
   --gray-02: var(--shade-02);
   --gray-03: var(--shade-03);
@@ -167,10 +165,10 @@ body {
   --gray-18: var(--shade-18);
   --gray-19: var(--shade-19);
   --gray-20: var(--shade-20);
-  --mode-neutral-text: var(--white);
+  --style-neutral-text: var(--white);
 }
 
-.is-layout-theme-mode-light {
+.is-theme-style-light {
   --gray-01: var(--shade-20);
   --gray-02: var(--shade-19);
   --gray-03: var(--shade-18);
@@ -191,5 +189,5 @@ body {
   --gray-18: var(--shade-03);
   --gray-19: var(--shade-02);
   --gray-20: var(--shade-01);
-  --mode-neutral-text: var(--black);
+  --style-neutral-text: var(--black);
 }

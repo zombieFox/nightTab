@@ -2,12 +2,12 @@ var accent = (function() {
 
   var render = function() {
     var html = helper.e("html");
-    var color = state.get().layout.theme.accent.current;
+    var color = state.get().theme.accent.current;
     html.style.setProperty("--accent", color.r + ", " + color.g + ", " + color.b);
   };
 
   var random = function() {
-    if (state.get().layout.theme.accent.random.active) {
+    if (state.get().theme.accent.random.active) {
       var randomVal = function(min, max) {
         return Math.floor(Math.random() * (max - min) + 1) + min;
       };
@@ -48,7 +48,7 @@ var accent = (function() {
           };
         }
       };
-      var hsl = color[state.get().layout.theme.accent.random.style]();
+      var hsl = color[state.get().theme.accent.random.style]();
       var randomColor = helper.hslToRgb({
         h: hsl.h,
         s: (hsl.s / 100),
@@ -56,7 +56,7 @@ var accent = (function() {
       });
       helper.setObject({
         object: state.get(),
-        path: "layout.theme.accent.current",
+        path: "theme.accent.current",
         newValue: randomColor
       });
     };

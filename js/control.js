@@ -20,8 +20,8 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-accent-current"),
-    path: "layout.theme.accent.current",
+    element: helper.e(".control-theme-accent-current"),
+    path: "theme.accent.current",
     type: "color",
     func: function() {
       accent.render();
@@ -518,66 +518,66 @@ var control = (function() {
       title.render();
     }
   }, {
-    element: helper.e(".control-layout-theme-mode-dark"),
-    path: "layout.theme.mode",
+    element: helper.e(".control-theme-style-dark"),
+    path: "theme.style",
     type: "radio",
     func: function() {
       render();
       accent.render();
     }
   }, {
-    element: helper.e(".control-layout-theme-mode-light"),
-    path: "layout.theme.mode",
+    element: helper.e(".control-theme-style-light"),
+    path: "theme.style",
     type: "radio",
     func: function() {
       render();
       accent.render();
     }
   }, {
-    element: helper.e(".control-layout-theme-accent-random-active"),
-    path: "layout.theme.accent.random.active",
+    element: helper.e(".control-theme-accent-random-active"),
+    path: "theme.accent.random.active",
     type: "checkbox",
     func: function() {
       dependents();
       accent.render();
     }
   }, {
-    element: helper.e(".control-layout-theme-accent-random-style-any"),
-    path: "layout.theme.accent.random.style",
+    element: helper.e(".control-theme-accent-random-style-any"),
+    path: "theme.accent.random.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-accent-random-style-light"),
-    path: "layout.theme.accent.random.style",
+    element: helper.e(".control-theme-accent-random-style-light"),
+    path: "theme.accent.random.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-accent-random-style-dark"),
-    path: "layout.theme.accent.random.style",
+    element: helper.e(".control-theme-accent-random-style-dark"),
+    path: "theme.accent.random.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-accent-random-style-pastel"),
-    path: "layout.theme.accent.random.style",
+    element: helper.e(".control-theme-accent-random-style-pastel"),
+    path: "theme.accent.random.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-accent-random-style-saturated"),
-    path: "layout.theme.accent.random.style",
+    element: helper.e(".control-theme-accent-random-style-saturated"),
+    path: "theme.accent.random.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-accent-randomise"),
+    element: helper.e(".control-theme-accent-randomise"),
     type: "button",
     func: function() {
       accent.random();
@@ -810,9 +810,11 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-layout-scroll-past-end");
       };
-      helper.removeClass(html, "is-layout-theme-mode-dark");
-      helper.removeClass(html, "is-layout-theme-mode-light");
-      helper.addClass(html, "is-layout-theme-mode-" + state.get().layout.theme.mode);
+    };
+    var _theme = function() {
+    helper.removeClass(html, "is-theme-style-dark");
+    helper.removeClass(html, "is-theme-style-light");
+    helper.addClass(html, "is-theme-style-" + state.get().theme.style);
     };
     var _editAdd = function() {
       if (state.get().header.editAdd.show) {
@@ -875,6 +877,7 @@ var control = (function() {
     _accent();
     _link();
     _layout();
+    _theme();
     _background();
     _header();
   };
@@ -977,15 +980,15 @@ var control = (function() {
       };
     };
     var _theme = function() {
-      if (state.get().layout.theme.accent.random.active) {
-        helper.eA("input[name='control-layout-theme-accent-random-style']").forEach(function(arrayItem, index) {
+      if (state.get().theme.accent.random.active) {
+        helper.eA("input[name='control-theme-accent-random-style']").forEach(function(arrayItem, index) {
           arrayItem.disabled = false;
-          helper.e(".control-layout-theme-accent-randomise").disabled = false;
+          helper.e(".control-theme-accent-randomise").disabled = false;
         });
       } else {
-        helper.eA("input[name='control-layout-theme-accent-random-style']").forEach(function(arrayItem, index) {
+        helper.eA("input[name='control-theme-accent-random-style']").forEach(function(arrayItem, index) {
           arrayItem.disabled = true;
-          helper.e(".control-layout-theme-accent-randomise").disabled = true;
+          helper.e(".control-theme-accent-randomise").disabled = true;
         });
       };
     };

@@ -90,21 +90,21 @@ var state = (function() {
     layout: {
       width: "wide",
       scrollPastEnd: true,
-      title: "New Tab",
-      theme: {
-        accent: {
-          current: {
-            r: 0,
-            g: 255,
-            b: 0,
-          },
-          random: {
-            active: false,
-            style: "any"
-          }
+      title: "New Tab"
+    },
+    theme: {
+      accent: {
+        current: {
+          r: 0,
+          g: 255,
+          b: 0,
         },
-        mode: "dark"
-      }
+        random: {
+          active: false,
+          style: "any"
+        }
+      },
+      style: "dark"
     },
     background: {
       image: {

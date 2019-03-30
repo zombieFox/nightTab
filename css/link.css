@@ -161,12 +161,12 @@
 
 .link-control-item:focus,
 .link-control-item:hover {
-  color: rgb(var(--mode-neutral-text));
+  color: rgb(var(--style-neutral-text));
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .link-control-item:active {
-  color: rgb(var(--mode-neutral-text));
+  color: rgb(var(--style-neutral-text));
   background-color: rgba(0, 0, 0, 0.3);
   transition: none;
 }
@@ -241,11 +241,11 @@
 
 .link-item:hover .link-letter,
 .link-item:focus .link-letter {
-  color: rgb(var(--mode-neutral-text));
+  color: rgb(var(--style-neutral-text));
 }
 
 .link-panel-front:focus .link-letter {
-  color: rgb(var(--mode-neutral-text));
+  color: rgb(var(--style-neutral-text));
 }
 
 .link-name {
@@ -267,11 +267,11 @@
 
 .link-item:hover .link-name,
 .link-item:focus .link-name {
-  color: rgb(var(--mode-neutral-text));
+  color: rgb(var(--style-neutral-text));
 }
 
 .link-panel-front:focus .link-name {
-  color: rgb(var(--mode-neutral-text));
+  color: rgb(var(--style-neutral-text));
 }
 
 .link-empty {

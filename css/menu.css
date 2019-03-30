@@ -134,11 +134,11 @@
 
 @media (min-width: 900px) {
   .menu {
-    width: 60vw;
+    width: 70vw;
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1600px) {
   .menu {
     width: 50vw;
   }

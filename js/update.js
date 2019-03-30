@@ -221,13 +221,14 @@ var update = (function() {
           style: "dark"
         };
         delete data.state.bookmarks.show;
-        data.state.layout.theme = {
+        data.state.theme = {
           accent: {
             current: data.state.layout.theme.current,
             random: data.state.layout.theme.random
           },
-          mode: "dark"
+          style: "dark"
         };
+        delete data.state.layout.theme;
         data.version = "2.12.0";
       };
     };

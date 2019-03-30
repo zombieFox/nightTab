@@ -1,23 +1,23 @@
 var theme = (function() {
 
   var toggle = function() {
-    var mode = {
+    var style = {
       dark: function() {
         helper.setObject({
           object: state.get(),
-          path: "layout.theme.mode",
+          path: "theme.style",
           newValue: "light"
         })
       },
       light: function() {
         helper.setObject({
           object: state.get(),
-          path: "layout.theme.mode",
+          path: "theme.style",
           newValue: "dark"
         })
       }
     };
-    mode[state.get().layout.theme.mode]();
+    style[state.get().theme.style]();
   };
 
   // exposed methods
