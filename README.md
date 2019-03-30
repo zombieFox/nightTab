@@ -16,6 +16,7 @@ New-tab-page/Start-page for all browsers
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>a</kbd> *to add a new bookmark*
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>m</kbd> *to open menu*
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>e</kbd> *to toggle edit state*
+  - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>d</kbd> *to toggle dark and light mode`
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>r</kbd> *random theme if option is turned on in* `menu > layout > random Accent colour`
 - Responsive design
 - Customise Accent colour!

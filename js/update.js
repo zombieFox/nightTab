@@ -208,6 +208,28 @@ var update = (function() {
         };
         data.version = "2.11.0";
       };
+      if (version.compare(data.version, "2.12.0") == -1) {
+        console.log("\t -- running update", "2.12.0");
+        data.state.bookmarks.link = {
+          show: data.state.bookmarks.show.link
+        };
+        data.state.bookmarks.name = {
+          show: data.state.bookmarks.show.name
+        };
+        data.state.bookmarks.url = {
+          show: data.state.bookmarks.show.url,
+          style: "dark"
+        };
+        delete data.state.bookmarks.show;
+        data.state.layout.theme = {
+          accent: {
+            current: data.state.layout.theme.current,
+            random: data.state.layout.theme.random
+          },
+          mode: "dark"
+        };
+        data.version = "2.12.0";
+      };
     };
     // if no update is needed
     // version bump
