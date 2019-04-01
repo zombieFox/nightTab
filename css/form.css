@@ -4,16 +4,18 @@ input[type="password"],
 input[type="search"],
 input[type="tel"],
 input[type="text"] {
-  background-color: rgb(var(--gray-14));
-  padding: 0 0.5em;
+  background-color: rgb(var(--gray-02));
+  padding: 0 1em;
   margin: 0 0 1em 0;
-  color: rgb(var(--black));
+  color: rgb(var(--form-input-text));
   font-size: 1em;
   font-family: var(--font-regular);
   line-height: 2.5em;
   height: 2.5em;
   width: 100%;
-  border-width: var(--line-width);
+  border-width: 0;
+  /* border-top-width: var(--line-width); */
+  /* border-bottom-width: var(--line-width); */
   border-style: solid;
   border-color: transparent;
   border-radius: var(--radius);
@@ -22,47 +24,62 @@ input[type="text"] {
   -moz-appearance: textfield;
 }
 
+input[type="email"]:hover,
+input[type="number"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="text"]:hover {
+  background-color: rgb(var(--gray-03));
+  /* border-bottom-color: rgb(var(--gray-08)); */
+  color: rgb(var(--form-input-text-hover));
+  outline: none;
+  box-shadow: 0 0 0 var(--line-width) rgb(var(--gray-06));
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus {
+  background-color: rgb(var(--gray-02));
+  /* border-bottom-color: rgb(var(--accent)); */
+  /* border-color: transparent; */
+  color: rgb(var(--form-input-text-focus));
+  outline: none;
+  z-index: 2;
+  box-shadow: 0 0 0 var(--line-width) rgb(var(--accent)), 0 0 0 calc(var(--line-width) * 2) rgba(var(--accent), 0.25);
+}
+
 input[type="email"][disabled],
-input[type="email"][disabled]:hover,
-input[type="email"][disabled]:focus,
-input[type="email"][disabled]::placeholder,
-input[type="email"][disabled]:hover::placeholder,
-input[type="email"][disabled]:focus::placeholder,
 input[type="number"][disabled],
-input[type="number"][disabled]:hover,
-input[type="number"][disabled]:focus,
-input[type="number"][disabled]::placeholder,
-input[type="number"][disabled]:hover::placeholder,
-input[type="number"][disabled]:focus::placeholder,
 input[type="password"][disabled],
-input[type="password"][disabled]:hover,
-input[type="password"][disabled]:focus,
-input[type="password"][disabled]::placeholder,
-input[type="password"][disabled]:hover::placeholder,
-input[type="password"][disabled]:focus::placeholder,
 input[type="search"][disabled],
-input[type="search"][disabled]:hover,
-input[type="search"][disabled]:focus,
-input[type="search"][disabled]::placeholder,
-input[type="search"][disabled]:hover::placeholder,
-input[type="search"][disabled]:focus::placeholder,
 input[type="tel"][disabled],
-input[type="tel"][disabled]:hover,
-input[type="tel"][disabled]:focus,
-input[type="tel"][disabled]::placeholder,
-input[type="tel"][disabled]:hover::placeholder,
-input[type="tel"][disabled]:focus::placeholder,
-input[type="text"][disabled],
-input[type="text"][disabled]:hover,
-input[type="text"][disabled]:focus,
-input[type="text"][disabled]::placeholder,
-input[type="text"][disabled]:hover::placeholder,
-input[type="text"][disabled]:focus::placeholder {
-  background-color: rgb(var(--gray-04));
-  color: rgb(var(--gray-08));
-  border-color: transparent;
+input[type="text"][disabled] {
+  background-color: transparent;
+  padding: 0 calc(1em - var(--line-width));
+  color: rgb(var(--form-input-text-disabled));
+  border-width: var(--line-width);
+  border-color: rgb(var(--gray-02));
   cursor: default;
   box-shadow: none;
+}
+
+input[type="email"][disabled]:hover,
+input[type="email"][disabled]:focus,
+input[type="number"][disabled]:hover,
+input[type="number"][disabled]:focus,
+input[type="password"][disabled]:hover,
+input[type="password"][disabled]:focus,
+input[type="search"][disabled]:hover,
+input[type="search"][disabled]:focus,
+input[type="tel"][disabled]:hover,
+input[type="tel"][disabled]:focus,
+input[type="text"][disabled]:hover,
+input[type="text"][disabled]:focus {
+  color: rgb(var(--form-input-text-disabled));
 }
 
 input[type="checkbox"][disabled]~.input-helper,
@@ -73,33 +90,7 @@ input[type="password"][disabled]~.input-helper,
 input[type="search"][disabled]~.input-helper,
 input[type="tel"][disabled]~.input-helper,
 input[type="text"][disabled]~.input-helper {
-  color: rgb(var(--gray-04));
-}
-
-input[type="email"]:hover,
-input[type="number"]:hover,
-input[type="password"]:hover,
-input[type="search"]:hover,
-input[type="tel"]:hover,
-input[type="text"]:hover {
-  background-color: rgb(var(--gray-16));
-  border-color: rgb(var(--gray-10));
-  color: rgb(var(--black));
-  outline: none;
-}
-
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="text"]:focus {
-  background-color: rgb(var(--white));
-  border-color: transparent;
-  color: rgb(var(--black));
-  outline: none;
-  z-index: 2;
-  box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 var(--line-width) rgb(var(--accent));
+  color: rgb(var(--form-input-text-disabled-helper-text));
 }
 
 input[type="email"]::placeholder,
@@ -108,7 +99,7 @@ input[type="password"]::placeholder,
 input[type="search"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="text"]::placeholder {
-  color: rgb(var(--gray-10));
+  color: rgb(var(--form-input-placeholder));
   transition: all var(--animation-speed-fast) ease-in-out;
 }
 
@@ -118,7 +109,7 @@ input[type="password"]:hover::placeholder,
 input[type="search"]:hover::placeholder,
 input[type="tel"]:hover::placeholder,
 input[type="text"]:hover::placeholder {
-  color: rgb(var(--gray-12));
+  color: rgb(var(--form-input-placeholder-hover-focus));
 }
 
 input[type="email"]:focus::placeholder,
@@ -127,19 +118,40 @@ input[type="password"]:focus::placeholder,
 input[type="search"]:focus::placeholder,
 input[type="tel"]:focus::placeholder,
 input[type="text"]:focus::placeholder {
-  color: rgb(var(--gray-14));
+  color: rgb(var(--form-input-placeholder-hover-focus));
+}
+
+input[type="email"][disabled]::placeholder,
+input[type="email"][disabled]:hover::placeholder,
+input[type="email"][disabled]:focus::placeholder,
+input[type="number"][disabled]::placeholder,
+input[type="number"][disabled]:hover::placeholder,
+input[type="number"][disabled]:focus::placeholder,
+input[type="password"][disabled]::placeholder,
+input[type="password"][disabled]:hover::placeholder,
+input[type="password"][disabled]:focus::placeholder,
+input[type="search"][disabled]::placeholder,
+input[type="search"][disabled]:hover::placeholder,
+input[type="search"][disabled]:focus::placeholder,
+input[type="tel"][disabled]::placeholder,
+input[type="tel"][disabled]:hover::placeholder,
+input[type="tel"][disabled]:focus::placeholder,
+input[type="text"][disabled]::placeholder,
+input[type="text"][disabled]:hover::placeholder,
+input[type="text"][disabled]:focus::placeholder {
+  color: rgb(var(--form-input-placeholder-disabled));
 }
 
 label {
   padding: 0.5em 0;
-  color: rgb(var(--gray-16));
+  color: rgb(var(--form-label));
   margin-bottom: 0;
   font-size: 1em;
   display: block;
 }
 
 label[disabled] {
-  color: rgb(var(--gray-04));
+  color: rgb(var(--form-label-disabled));
 }
 
 input[type="color"] {
@@ -222,11 +234,12 @@ input[type="radio"] {
   pointer-events: none;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* transition: all var(--animation-speed-fast) ease-in-out; */
 }
 
 input[type="checkbox"]+label,
 input[type="radio"]+label {
-  color: rgb(var(--gray-12));
+  color: rgb(var(--form-checkbox-radio-label));
   font-size: 1em;
   font-family: var(--font-regular);
   min-height: 2.5em;
@@ -254,19 +267,19 @@ input[type="checkbox"]:focus+label,
 input[type="checkbox"]:hover+label,
 input[type="radio"]:focus+label,
 input[type="radio"]:hover+label {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
 }
 
 input[type="checkbox"]:active+label,
 input[type="radio"]:active+label {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
 }
 
 input[type="checkbox"]:focus+label .label-icon,
 input[type="checkbox"]:hover+label .label-icon,
 input[type="radio"]:focus+label .label-icon,
 input[type="radio"]:hover+label .label-icon {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
 }
 
 input[type="checkbox"]:active+label .label-icon,
@@ -277,14 +290,14 @@ input[type="radio"]:active+label .label-icon {
 
 input[type="checkbox"]:checked+label,
 input[type="radio"]:checked+label {
-  color: rgb(var(--gray-16));
+  color: rgb(var(--form-checkbox-radio-chcked-label));
 }
 
 input[type="checkbox"]:not([disabled]):hover:checked+label,
 input[type="checkbox"]:not([disabled]):focus:checked+label,
 input[type="radio"]:not([disabled]):hover:checked+label,
 input[type="radio"]:not([disabled]):focus:checked+label {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
 }
 
 input[type="checkbox"]:checked+label .label-icon,
@@ -302,6 +315,7 @@ input[type="checkbox"]+.input-label-button,
 input[type="radio"]+.input-label-button {
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 input[type="color"]:hover+.input-label-button,
@@ -311,8 +325,8 @@ input[type="checkbox"]:focus+.input-label-button,
 input[type="radio"]:hover+.input-label-button,
 input[type="radio"]:focus+.input-label-button {
   background-color: rgb(var(--gray-03));
-  border-bottom-color: rgb(var(--gray-10));
-  color: rgb(var(--white));
+  border-bottom-color: rgb(var(--gray-08));
+  color: rgb(var(--style-neutral-text));
   outline: none;
 }
 
@@ -333,19 +347,19 @@ input[type="checkbox"][disabled]+.input-label-button,
 input[type="radio"][disabled]+.input-label-button {
   background-color: rgb(var(--gray-02));
   border-color: transparent;
-  color: rgb(var(--gray-04));
+  color: rgb(var(--form-checkbox-radio-disabled-label));
   cursor: default;
 }
 
 input[type="checkbox"][disabled]+label,
 input[type="radio"][disabled]+label {
-  color: rgb(var(--gray-04));
+  color: rgb(var(--form-checkbox-radio-disabled-label));
   cursor: default;
 }
 
 input[type="checkbox"][disabled]+label .label-icon,
 input[type="radio"][disabled]+label .label-icon {
-  color: rgb(var(--gray-04));
+  color: rgb(var(--form-checkbox-radio-disabled-label));
   cursor: default;
 }
 
@@ -385,7 +399,7 @@ input[type="range"] {
   background-color: transparent;
   padding: 0;
   margin: 0 0 1em 0;
-  color: rgb(var(--black));
+  color: rgb(var(--style-neutral-text));
   font-size: 1em;
   font-family: var(--font-regular);
   height: 2em;
@@ -417,7 +431,7 @@ input[type="range"]:focus {
 }
 
 input[type="range"]:focus:before {
-  background-color: rgb(var(--white));
+  background-color: rgb(var(--style-neutral-text));
 }
 
 input[type="range"][disabled] {
@@ -439,7 +453,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 
 input[type="range"]::-webkit-slider-thumb {
   background-color: rgb(var(--gray-01));
-  color: rgb(var(--gray-12));
+  color: rgb(var(--form-range-thumb));
   margin: 0;
   padding: 0;
   border-width: var(--line-width);
@@ -503,7 +517,7 @@ input[type="range"]::-moz-range-track {
 
 input[type="range"]::-moz-range-thumb {
   background-color: rgb(var(--gray-01));
-  color: rgb(var(--gray-12));
+  color: rgb(var(--form-range-thumb));
   margin: 0;
   padding: 0;
   border-width: var(--line-width);

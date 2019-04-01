@@ -4,7 +4,7 @@
   border-radius: var(--radius);
   font-size: 1em;
   font-family: var(--font-fjalla);
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
   width: 100%;
   min-height: 2.5em;
   display: flex;
@@ -47,7 +47,7 @@
 }
 
 .date-day {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
 }
 
 .date-date,

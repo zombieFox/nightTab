@@ -94,7 +94,7 @@
   text-decoration: none;
   outline: none;
   background-color: rgb(var(--gray-03));
-  box-shadow: 0 2px 1em 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
 }
 
 .is-bookmarks-show-url .link-item:focus .link-panel-front,
@@ -161,12 +161,12 @@
 
 .link-control-item:focus,
 .link-control-item:hover {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 .link-control-item:active {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
   background-color: rgba(0, 0, 0, 0.3);
   transition: none;
 }
@@ -202,11 +202,18 @@
 .link-url-text {
   margin: 0;
   font-size: 0.7em;
-  color: rgb(var(--black));
   font-family: var(--font-regular);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.bookmarks-url-dark .link-url-text {
+  color: rgb(var(--black));
+}
+
+.bookmarks-url-light .link-url-text {
+  color: rgb(var(--white));
 }
 
 .link-letter {
@@ -234,11 +241,11 @@
 
 .link-item:hover .link-letter,
 .link-item:focus .link-letter {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
 }
 
 .link-panel-front:focus .link-letter {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
 }
 
 .link-name {
@@ -260,11 +267,11 @@
 
 .link-item:hover .link-name,
 .link-item:focus .link-name {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
 }
 
 .link-panel-front:focus .link-name {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
 }
 
 .link-empty {
@@ -285,7 +292,7 @@
 .is-bookmarks-edit .link-item:hover .link-panel-front,
 .is-bookmarks-edit .link-item:focus .link-panel-front {
   height: calc(100% - var(--edit-height));
-  box-shadow: 0 2px 1em 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
 }
 
 .is-bookmarks-edit.is-bookmarks-show-url .link-item:focus .link-panel-front,

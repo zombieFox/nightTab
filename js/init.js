@@ -15,9 +15,8 @@ bookmarks.init();
 // bind menu tabs
 menu.init();
 
-// render input color value
 // render css accent var
-theme.init();
+accent.init();
 
 // render links from bookmarks
 link.init();

@@ -45,7 +45,7 @@ h6 {
 }
 
 p {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
   margin: 0 0 1em 0;
   line-height: 1.5;
 }
@@ -80,12 +80,12 @@ a:focus {
 }
 
 a:hover {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
   text-decoration: underline;
 }
 
 a:active {
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
 }
 
 ol,

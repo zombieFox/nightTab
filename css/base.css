@@ -1,26 +1,48 @@
 :root {
   --black: 0, 0, 0;
   --white: 255, 255, 255;
-  --gray-01: 38, 40, 49;
-  --gray-02: 47, 51, 62;
-  --gray-03: 57, 62, 75;
-  --gray-04: 67, 73, 88;
-  --gray-05: 77, 84, 101;
-  --gray-06: 87, 95, 114;
-  --gray-07: 97, 106, 127;
-  --gray-08: 107, 117, 140;
-  --gray-09: 117, 128, 153;
-  --gray-10: 127, 139, 166;
-  --gray-11: 137, 151, 180;
-  --gray-12: 149, 162, 187;
-  --gray-13: 162, 173, 195;
-  --gray-14: 174, 184, 203;
-  --gray-15: 187, 195, 211;
-  --gray-16: 199, 206, 218;
-  --gray-17: 212, 217, 226;
-  --gray-18: 224, 228, 234;
-  --gray-19: 237, 239, 242;
-  --gray-20: 250, 250, 250;
+  --shade-01: 38, 40, 49;
+  --shade-02: 47, 51, 62;
+  --shade-03: 57, 62, 75;
+  --shade-04: 67, 73, 88;
+  --shade-05: 77, 84, 101;
+  --shade-06: 87, 95, 114;
+  --shade-07: 97, 106, 127;
+  --shade-08: 107, 117, 140;
+  --shade-09: 117, 128, 153;
+  --shade-10: 127, 139, 166;
+  --shade-11: 137, 151, 180;
+  --shade-12: 149, 162, 187;
+  --shade-13: 162, 173, 195;
+  --shade-14: 174, 184, 203;
+  --shade-15: 187, 195, 211;
+  --shade-16: 199, 206, 218;
+  --shade-17: 212, 217, 226;
+  --shade-18: 224, 228, 234;
+  --shade-19: 237, 239, 242;
+  --shade-20: 250, 250, 250;
+  --button-text: var(--gray-12);
+  --button-text-hover-focus: var(--style-neutral-text);
+  --button-text-active: var(--style-neutral-text);
+  --button-text-disabled: var(--gray-04);
+  --button-link-text: var(--gray-10);
+  --button-link-text-hover-focus: var(--gray-14);
+  --button-link-text-active: var(--gray-18);
+  --button-link-text-disabled: var(--gray-04);
+  --form-input-text: var(--gray-16);
+  --form-input-text-hover: var(--style-neutral-text);
+  --form-input-text-focus: var(--style-neutral-text);
+  --form-input-text-disabled: var(--gray-04);
+  --form-input-text-disabled-helper-text: var(--gray-04);
+  --form-input-placeholder: var(--gray-06);
+  --form-input-placeholder-hover-focus: var(--gray-10);
+  --form-input-placeholder-disabled: var(--gray-04);
+  --form-label: var(--gray-16);
+  --form-label-disabled: var(--gray-04);
+  --form-checkbox-radio-label: var(--gray-12);
+  --form-checkbox-radio-chcked-label: var(--gray-16);
+  --form-checkbox-radio-disabled-label: var(--gray-04);
+  --form-range-thumb: var(--gray-12);
   --accent: 0, 255, 0;
   --root-font-size: 14px;
   --radius: 0.2em;
@@ -91,13 +113,14 @@ html {
 
 body {
   background-color: var(--background);
-  color: rgb(var(--white));
+  color: rgb(var(--style-neutral-text));
   font-size: 1rem;
   line-height: 1.6;
   font-family: var(--font-regular);
   display: flex;
   flex-direction: column;
   height: 100vh;
+  transition: background-color var(--animation-speed-fast) ease-in-out;
 }
 
 .is-menu-open body {
@@ -119,4 +142,52 @@ body {
 .is-bookmarks-show-link body {
   display: inherit;
   height: inherit;
+}
+
+.is-theme-style-dark {
+  --gray-01: var(--shade-01);
+  --gray-02: var(--shade-02);
+  --gray-03: var(--shade-03);
+  --gray-04: var(--shade-04);
+  --gray-05: var(--shade-05);
+  --gray-06: var(--shade-06);
+  --gray-07: var(--shade-07);
+  --gray-08: var(--shade-08);
+  --gray-09: var(--shade-09);
+  --gray-10: var(--shade-10);
+  --gray-11: var(--shade-11);
+  --gray-12: var(--shade-12);
+  --gray-13: var(--shade-13);
+  --gray-14: var(--shade-14);
+  --gray-15: var(--shade-15);
+  --gray-16: var(--shade-16);
+  --gray-17: var(--shade-17);
+  --gray-18: var(--shade-18);
+  --gray-19: var(--shade-19);
+  --gray-20: var(--shade-20);
+  --style-neutral-text: var(--white);
+}
+
+.is-theme-style-light {
+  --gray-01: var(--shade-20);
+  --gray-02: var(--shade-19);
+  --gray-03: var(--shade-18);
+  --gray-04: var(--shade-17);
+  --gray-05: var(--shade-16);
+  --gray-06: var(--shade-15);
+  --gray-07: var(--shade-14);
+  --gray-08: var(--shade-13);
+  --gray-09: var(--shade-12);
+  --gray-10: var(--shade-11);
+  --gray-11: var(--shade-10);
+  --gray-12: var(--shade-09);
+  --gray-13: var(--shade-08);
+  --gray-14: var(--shade-07);
+  --gray-15: var(--shade-06);
+  --gray-16: var(--shade-05);
+  --gray-17: var(--shade-04);
+  --gray-18: var(--shade-03);
+  --gray-19: var(--shade-02);
+  --gray-20: var(--shade-01);
+  --style-neutral-text: var(--black);
 }

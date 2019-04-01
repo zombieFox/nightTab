@@ -71,10 +71,15 @@ var state = (function() {
       }
     },
     bookmarks: {
-      show: {
-        link: true,
-        name: true,
-        url: true
+      link: {
+        show: true
+      },
+      name: {
+        show: true
+      },
+      url: {
+        show: true,
+        style: "dark"
       },
       newTab: false,
       edit: false,
@@ -85,8 +90,10 @@ var state = (function() {
     layout: {
       width: "wide",
       scrollPastEnd: true,
-      title: "New Tab",
-      theme: {
+      title: "New Tab"
+    },
+    theme: {
+      accent: {
         current: {
           r: 0,
           g: 255,
@@ -96,7 +103,8 @@ var state = (function() {
           active: false,
           style: "any"
         }
-      }
+      },
+      style: "dark"
     },
     background: {
       image: {
