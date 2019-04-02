@@ -135,13 +135,11 @@
 @media (min-width: 900px) {
   .menu {
     width: 70vw;
-    height: 80vh;
   }
 }
 
 @media (min-width: 1600px) {
   .menu {
     width: 50vw;
-    height: 70vh;
   }
 }

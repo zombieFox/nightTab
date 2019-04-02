@@ -62,7 +62,7 @@ input[type="text"][disabled] {
   padding: 0 calc(1em - var(--line-width));
   color: rgb(var(--form-input-text-disabled));
   border-width: var(--line-width);
-  border-color: rgb(var(--gray-02));
+  border-color: rgb(var(--form-input-text-disabled));;
   cursor: default;
   box-shadow: none;
 }
