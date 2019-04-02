@@ -1,5 +1,12 @@
 var greeting = (function() {
 
+  var bind = function() {
+    window.setInterval(function() {
+      clear();
+      render();
+    }, 1000);
+  };
+
   var clear = function() {
     var greeting = helper.e(".greeting");
     while (greeting.lastChild) {
@@ -51,6 +58,7 @@ var greeting = (function() {
   };
 
   var init = function() {
+    bind();
     render();
   };
 
