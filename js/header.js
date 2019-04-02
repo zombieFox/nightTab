@@ -14,6 +14,26 @@ var header = (function() {
     });
   };
 
+  var edge = function(action) {
+    var header = helper.e(".header");
+    var container = helper.makeNode({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "header-edge"
+      }]
+    });
+    var state = {
+      show: function() {
+        header.appendChild(container);
+      },
+      hide: function() {
+        header.removeChild(helper.e(".header-edge"));
+      }
+    };
+    state[action]();
+  };
+
   var render = function() {
     var html = helper.e("html");
     var header = helper.e(".header");
@@ -68,8 +88,9 @@ var header = (function() {
 
   // exposed methods
   return {
-    init: init,
-    render: render
+    edge: edge,
+    render: render,
+    init: init
   };
 
 })();

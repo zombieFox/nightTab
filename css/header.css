@@ -41,6 +41,18 @@
   border-bottom: var(--line-width) solid rgb(var(--accent));
 }
 
+.header-edge {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-top: var(--line-width) solid rgb(var(--accent));
+  border-bottom: var(--line-width) solid rgb(var(--accent));
+}
+
 .header-area {
   margin: 0 calc(var(--gutter) * -1);
   display: flex;
