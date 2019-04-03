@@ -233,7 +233,7 @@ var update = (function() {
       };
       if (version.compare(data.version, "2.14.0") == -1) {
         console.log("\t -- running update", "2.14.0");
-        data.state.layout.width = 70;
+        data.state.layout.width = 72;
         data.version = "2.14.0";
       };
     };
