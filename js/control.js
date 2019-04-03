@@ -192,7 +192,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      search.update();
+      search.render();
     }
   }, {
     element: helper.e(".control-header-search-engine-duckduckgo"),
@@ -201,7 +201,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      search.update();
+      search.render();
     }
   }, {
     element: helper.e(".control-header-search-engine-giphy"),
@@ -210,7 +210,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      search.update();
+      search.render();
     }
   }, {
     element: helper.e(".control-header-search-engine-custom"),
@@ -219,14 +219,14 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      search.update();
+      search.render();
     }
   }, {
     element: helper.e(".control-header-search-engine-custom-url"),
     path: "header.search.engine.custom.url",
     type: "text",
     func: function() {
-      search.update();
+      search.render();
     }
   }, {
     element: helper.e(".control-header-edit-add-show"),
@@ -361,6 +361,7 @@ var control = (function() {
       render();
       dependents();
       header.render();
+      search.render();
     }
   }, {
     element: helper.e(".control-bookmarks-name-show"),

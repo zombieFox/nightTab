@@ -60,8 +60,14 @@ var search = (function() {
     };
   };
 
-  var update = function() {
+  var render = function() {
     var search = helper.e(".search");
+    var searchInput = helper.e(".search-input");
+    if (state.get().bookmarks.link.show) {
+      searchInput.setAttribute("placeholder", "Find or Search");
+    } else {
+      searchInput.setAttribute("placeholder", "Search");
+    };
     search.setAttribute("action", state.get().header.search.engine[state.get().header.search.engine.selected].url);
   };
 
@@ -83,7 +89,7 @@ var search = (function() {
 
   var init = function() {
     bind();
-    update();
+    render();
     _focus();
   };
 
@@ -91,7 +97,7 @@ var search = (function() {
   return {
     init: init,
     get: get,
-    update: update,
+    render: render,
     clear: clear
   };
 
