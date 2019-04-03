@@ -7,7 +7,7 @@
 
 .container-edge {
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   width: calc(var(--layout-width) + var(--gutter) * 4);

@@ -9,7 +9,7 @@ var layout = (function() {
   };
 
   var edge = function(action) {
-    var html = helper.e("html");
+    var body = helper.e("body");
     var container = helper.makeNode({
       tag: "div",
       attr: [{
@@ -19,10 +19,10 @@ var layout = (function() {
     });
     var state = {
       show: function() {
-        html.appendChild(container);
+        body.appendChild(container);
       },
       hide: function() {
-        html.removeChild(helper.e(".container-edge"));
+        body.removeChild(helper.e(".container-edge"));
       }
     };
     state[action]();
