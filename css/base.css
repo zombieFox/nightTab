@@ -60,9 +60,10 @@
   --z-index-link: 2000;
   --z-index-header: 3000;
   --z-index-tip: 4000;
-  --z-index-shade: 5000;
-  --z-index-modal: 6000;
-  --z-index-menu: 7000;
+  --z-container-edge: 5000;
+  --z-index-shade: 6000;
+  --z-index-modal: 7000;
+  --z-index-menu: 8000;
   --header-shade-color: transparent;
   --header-shade-opacity: none;
   --header-height: 0;
@@ -71,6 +72,8 @@
   --background-opacity: 1;
   --background-accent-opacity: 0;
   --background-blur: 0;
+  --layout-width: calc(70vw - var(--layout-width-gutter));
+  --layout-width-gutter: var(--gutter) * 8;
   /* breakpoint reference */
   /* can not be used in @media as of yet */
   --breakpoint-sm: 550px;

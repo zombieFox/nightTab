@@ -259,6 +259,7 @@
               <input id="control-layout-alignment-horizontal-right" class="control-layout-alignment-horizontal-right" type="radio" name="control-layout-alignment-horizontal" value="right" tabindex="1">
               <label for="control-layout-alignment-horizontal-right"><span class="label-icon"></span>Right</label>
             </div>
+            <p class="input-helper small muted">Effects may not be visible if the Search box is set to grow to fill available space.</p>
           </div>
           <div class="menu-item">
             <h1 class="menu-header">Vertical Alignment</h1>
@@ -298,7 +299,7 @@
             </div>
             <div class="input-wrap form-indent-1">
               <label for="control-header-shade-padding">Top & bottom padding</label>
-              <input id="control-header-shade-padding" class="control-header-shade-padding" type="range" min="2" max="20" value="0" tabindex="1">
+              <input id="control-header-shade-padding" class="control-header-shade-padding" type="range" min="1" max="25" value="0" tabindex="1">
             </div>
             <div class="checkbox-wrap form-indent-1">
               <input id="control-header-shade-border-top" class="control-header-shade-border-top" type="checkbox" value="always" tabindex="1">
@@ -416,18 +417,10 @@
 
         <div class="menu-content-area menu-content-area-layout is-hidden">
           <div class="menu-item">
-            <h1 class="menu-header">Width</h1>
-            <div class="radio-wrap">
-              <input id="control-layout-width-fluid" class="control-layout-width-fluid" type="radio" name="control-layout-width" value="fluid" tabindex="1">
-              <label for="control-layout-width-fluid"><span class="label-icon"></span>Fluid</label>
-            </div>
-            <div class="radio-wrap">
-              <input id="control-layout-width-wide" class="control-layout-width-wide" type="radio" name="control-layout-width" value="wide" tabindex="1">
-              <label for="control-layout-width-wide"><span class="label-icon"></span>Wide</label>
-            </div>
-            <div class="radio-wrap">
-              <input id="control-layout-width-thin" class="control-layout-width-thin" type="radio" name="control-layout-width" value="thin" tabindex="1">
-              <label for="control-layout-width-thin"><span class="label-icon"></span>Thin</label>
+            <h1 class="menu-header">Content container</h1>
+            <div class="input-wrap">
+              <label for="control-layout-width">Width</label>
+              <input id="control-layout-width" class="control-layout-width" type="range" min="30" max="100" value="0" tabindex="1">
             </div>
           </div>
           <div class="menu-item">
@@ -506,6 +499,7 @@
 <script src="js/keyboard.js"></script>
 <script src="js/background.js"></script>
 <script src="js/title.js"></script>
+<script src="js/layout.js"></script>
 <script src="js/init.js"></script>
 
 </html>

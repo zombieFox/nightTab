@@ -231,6 +231,11 @@ var update = (function() {
         delete data.state.layout.theme;
         data.version = "2.12.0";
       };
+      if (version.compare(data.version, "2.14.0") == -1) {
+        console.log("\t -- running update", "2.14.0");
+        data.state.layout.width = 72;
+        data.version = "2.14.0";
+      };
     };
     // if no update is needed
     // version bump

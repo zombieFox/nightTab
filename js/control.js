@@ -322,6 +322,17 @@ var control = (function() {
     element: helper.e(".control-header-shade-padding"),
     path: "header.shade.padding",
     type: "range",
+    additionalEvents: [{
+      event: "mousedown",
+      action: function() {
+        header.edge("show");
+      }
+    }, {
+      event: "mouseup",
+      action: function() {
+        header.edge("hide");
+      }
+    }],
     func: function() {
       render();
       header.render();
@@ -483,25 +494,24 @@ var control = (function() {
       link.render();
     }
   }, {
-    element: helper.e(".control-layout-width-fluid"),
+    element: helper.e(".control-layout-width"),
     path: "layout.width",
-    type: "radio",
+    type: "range",
+    additionalEvents: [{
+      event: "mousedown",
+      action: function() {
+        layout.edge("show");
+      }
+    }, {
+      event: "mouseup",
+      action: function() {
+        layout.edge("hide");
+      }
+    }],
     func: function() {
       render();
-    }
-  }, {
-    element: helper.e(".control-layout-width-wide"),
-    path: "layout.width",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-width-thin"),
-    path: "layout.width",
-    type: "radio",
-    func: function() {
-      render();
+      layout.render();
+      header.render();
     }
   }, {
     element: helper.e(".control-layout-scroll-past-end"),
@@ -680,10 +690,10 @@ var control = (function() {
           path: object.path,
           newValue: newValue
         });
-        // console.log(object.path, helper.getObject({
-        //   object: state.get(),
-        //   path: object.path
-        // }));
+        console.log(object.path, helper.getObject({
+          object: state.get(),
+          path: object.path
+        }));
       };
     };
     var bindControl = function(object) {
@@ -704,6 +714,13 @@ var control = (function() {
         action[object.element.tagName.toLowerCase()](object);
         data.save();
       }, false);
+      if (object.additionalEvents) {
+        object.additionalEvents.forEach(function(item, index) {
+          object.element.addEventListener(item.event, function() {
+            item.action();
+          }, false);
+        });
+      };
     };
     _allControl.forEach(function(arrayItem, index) {
       bindControl(arrayItem);
@@ -801,10 +818,6 @@ var control = (function() {
       urlText[state.get().bookmarks.url.style]();
     };
     var _layout = function() {
-      helper.removeClass(html, "is-layout-width-fluid");
-      helper.removeClass(html, "is-layout-width-wide");
-      helper.removeClass(html, "is-layout-width-thin");
-      helper.addClass(html, "is-layout-width-" + state.get().layout.width);
       if (state.get().layout.scrollPastEnd) {
         helper.addClass(html, "is-layout-scroll-past-end");
       } else {
@@ -812,9 +825,9 @@ var control = (function() {
       };
     };
     var _theme = function() {
-    helper.removeClass(html, "is-theme-style-dark");
-    helper.removeClass(html, "is-theme-style-light");
-    helper.addClass(html, "is-theme-style-" + state.get().theme.style);
+      helper.removeClass(html, "is-theme-style-dark");
+      helper.removeClass(html, "is-theme-style-light");
+      helper.addClass(html, "is-theme-style-" + state.get().theme.style);
     };
     var _editAdd = function() {
       if (state.get().header.editAdd.show) {
