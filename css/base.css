@@ -72,7 +72,8 @@
   --background-opacity: 1;
   --background-accent-opacity: 0;
   --background-blur: 0;
-  --layout-width: calc(70vw - var(--gutter) * 4);
+  --layout-width: calc(70vw - var(--layout-width-gutter));
+  --layout-width-gutter: var(--gutter) * 8;
   /* breakpoint reference */
   /* can not be used in @media as of yet */
   --breakpoint-sm: 550px;

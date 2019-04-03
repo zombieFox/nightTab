@@ -10,13 +10,12 @@
   position: fixed;
   top: 0;
   left: 50%;
-  width: calc(var(--layout-width) + var(--gutter) * 4);
+  width: calc(var(--layout-width) + var(--layout-width-gutter));
   height: 100vh;
   transform: translate(-50%, 0);
   z-index: var(--z-container-edge);
   pointer-events: none;
-  border-left: var(--line-width) solid rgb(var(--accent));
-  border-right: var(--line-width) solid rgb(var(--accent));
+  box-shadow: inset 0 0 0 var(--line-width) rgb(var(--accent)), inset 0 0 0 calc(var(--line-width) * 2) rgba(var(--accent), 0.25);
 }
 
 @media (min-width: 550px) {}

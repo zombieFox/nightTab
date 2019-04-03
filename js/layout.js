@@ -5,7 +5,7 @@ var layout = (function() {
     html.style.setProperty("--layout-width", "calc(" + helper.getObject({
       object: state.get(),
       path: "layout.width"
-    }) + "vw - var(--gutter) * 4)");
+    }) + "vw - var(--layout-width-gutter))");
   };
 
   var edge = function(action) {

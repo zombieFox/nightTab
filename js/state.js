@@ -88,7 +88,7 @@ var state = (function() {
       sort: "none"
     },
     layout: {
-      width: 70,
+      width: 72,
       scrollPastEnd: true,
       title: "New Tab"
     },
