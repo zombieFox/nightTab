@@ -261,6 +261,15 @@ var update = (function() {
         data.state.header.search.engine.giphy.name = "Giphy";
         data.version = "2.17.0";
       };
+      if (version.compare(data.version, "2.19.0") == -1) {
+        console.log("\t -- running update", "2.19.0");
+        data.state.header.search.engine.youtube = {
+          url: "https://www.youtube.com/results?search_query=",
+          name: "YouTube"
+        };
+        data.state.header.search.engine.custom.name = "";
+        data.version = "2.19.0";
+      };
     };
     // if no update is needed
     // version bump

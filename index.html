@@ -222,6 +222,10 @@
               <label for="control-header-search-engine-duckduckgo"><span class="label-icon"></span>Duck Duck Go</label>
             </div>
             <div class="radio-wrap form-indent-1">
+              <input id="control-header-search-engine-youtube" class="control-header-search-engine-youtube" type="radio" name="control-header-search-engine" value="youtube" tabindex="1">
+              <label for="control-header-search-engine-youtube"><span class="label-icon"></span>YouTube</label>
+            </div>
+            <div class="radio-wrap form-indent-1">
               <input id="control-header-search-engine-giphy" class="control-header-search-engine-giphy" type="radio" name="control-header-search-engine" value="giphy" tabindex="1">
               <label for="control-header-search-engine-giphy"><span class="label-icon"></span>Giphy</label>
             </div>
@@ -230,8 +234,14 @@
               <label for="control-header-search-engine-custom"><span class="label-icon"></span>Custom</label>
             </div>
             <div class="input-wrap form-indent-2">
+              <label for="control-header-search-engine-custom-name">Name</label>
+              <input id="control-header-search-engine-custom-name" class="control-header-search-engine-custom-name" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search engine name" tabindex="1">
+            </div>
+            <div class="input-wrap form-indent-2">
               <label for="control-header-search-engine-custom-url">URL</label>
               <input id="control-header-search-engine-custom-url" class="control-header-search-engine-custom-url" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="https://" tabindex="1">
+              <p class="input-helper small muted">Eneter a web address with the search parameters, eg: "https://vimeo.com/search?q="</p>
+              <p class="input-helper small muted">nightTab would add the search term entered into the Search input at the end of the above URL</p>
             </div>
           </div>
           <div class="menu-item">
@@ -258,8 +268,8 @@
             <div class="radio-wrap">
               <input id="control-layout-alignment-horizontal-right" class="control-layout-alignment-horizontal-right" type="radio" name="control-layout-alignment-horizontal" value="right" tabindex="1">
               <label for="control-layout-alignment-horizontal-right"><span class="label-icon"></span>Right</label>
+              <p class="input-helper small muted">Effects may not be visible if the Search box is set to grow to fill available space.</p>
             </div>
-            <p class="input-helper small muted">Effects may not be visible if the Search box is set to grow to fill available space.</p>
           </div>
           <div class="menu-item">
             <h1 class="menu-header">Vertical Alignment</h1>

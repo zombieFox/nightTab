@@ -38,12 +38,17 @@ var state = (function() {
             url: "https://duckduckgo.com/",
             name: "Duck Duck Go"
           },
+          youtube: {
+            url: "https://www.youtube.com/results?search_query=",
+            name: "YouTube"
+          },
           giphy: {
             url: "https://giphy.com/search/",
             name: "Giphy"
           },
           custom: {
-            url: ""
+            url: "",
+            name: ""
           }
         }
       },

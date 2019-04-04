@@ -72,9 +72,7 @@ var search = (function() {
     } else {
       placeholder = "Search";
     };
-    if (state.get().header.search.engine.selected != "custom") {
-      placeholder = placeholder + " " + state.get().header.search.engine[state.get().header.search.engine.selected].name;
-    };
+    placeholder = placeholder + " " + state.get().header.search.engine[state.get().header.search.engine.selected].name;
     searchInput.setAttribute("placeholder", placeholder);
     search.setAttribute("action", state.get().header.search.engine[state.get().header.search.engine.selected].url);
   };

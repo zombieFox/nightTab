@@ -204,6 +204,15 @@ var control = (function() {
       search.render();
     }
   }, {
+    element: helper.e(".control-header-search-engine-youtube"),
+    path: "header.search.engine.selected",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      search.render();
+    }
+  }, {
     element: helper.e(".control-header-search-engine-giphy"),
     path: "header.search.engine.selected",
     type: "radio",
@@ -219,6 +228,12 @@ var control = (function() {
     func: function() {
       render();
       dependents();
+      search.render();
+    }
+  }, {
+    element: helper.e(".control-header-search-engine-custom-name"),
+    path: "header.search.engine.custom.name",
+    func: function() {
       search.render();
     }
   }, {
@@ -802,6 +817,7 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-header-search-grow");
       };
+      helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
       helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     };
     var _alignment = function() {
@@ -1021,9 +1037,13 @@ var control = (function() {
         helper.e(".control-header-search-engine-label").setAttribute("disabled", "");
       };
       if (state.get().header.search.show && state.get().header.search.engine.selected === "custom") {
+        helper.e("[for=control-header-search-engine-custom-name]").removeAttribute("disabled");
+        helper.e(".control-header-search-engine-custom-name").disabled = false;
         helper.e("[for=control-header-search-engine-custom-url]").removeAttribute("disabled");
         helper.e(".control-header-search-engine-custom-url").disabled = false;
       } else {
+        helper.e("[for=control-header-search-engine-custom-name]").setAttribute("disabled", "");
+        helper.e(".control-header-search-engine-custom-name").disabled = true;
         helper.e("[for=control-header-search-engine-custom-url]").setAttribute("disabled", "");
         helper.e(".control-header-search-engine-custom-url").disabled = true;
       };
