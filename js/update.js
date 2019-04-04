@@ -236,6 +236,24 @@ var update = (function() {
         data.state.layout.width = 72;
         data.version = "2.14.0";
       };
+      if (version.compare(data.version, "2.16.0") == -1) {
+        console.log("\t -- running update", "2.16.0");
+        data.state.header.shade.padding = {
+          top: data.state.header.shade.padding,
+          bottom: data.state.header.shade.padding
+        };
+        data.state.header.shade.border = {
+          top: {
+            show: data.state.header.shade.border.top,
+            width: 1
+          },
+          bottom: {
+            show: data.state.header.shade.border.bottom,
+            width: 1
+          }
+        };
+        data.version = "2.16.0";
+      };
     };
     // if no update is needed
     // version bump
