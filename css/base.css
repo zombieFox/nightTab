@@ -67,7 +67,12 @@
   --header-shade-color: transparent;
   --header-shade-opacity: none;
   --header-height: 0;
-  --header-shade-padding: 4;
+  --header-shade-padding: calc(var(--line-width) * var(--header-shade-padding-multiplier));
+  --header-shade-padding-multiplier: 4;
+  --header-border-width-top: calc(var(--line-width) * var(--header-border-width-multiplier-top));
+  --header-border-width-bottom: calc(var(--line-width) * var(--header-border-width-multiplier-bottom));
+  --header-border-width-multiplier-top: 1;
+  --header-border-width-multiplier-bottom: 1;
   --background-image: none;
   --background-opacity: 1;
   --background-accent-opacity: 0;

@@ -1,5 +1,5 @@
 .header {
-  padding: calc(var(--gutter) * var(--header-shade-padding)) 0;
+  padding: var(--header-shade-padding) 0;
   width: 100%;
   position: relative;
   z-index: var(--z-index-header);
@@ -33,12 +33,12 @@
   opacity: var(--header-shade-opacity);
 }
 
-.is-header-shade-border-top .header .header-border {
-  border-top: var(--line-width) solid rgb(var(--accent));
+.is-header-shade-border-top-show .header .header-border {
+  border-top: var(--header-border-width-top) solid rgb(var(--accent));
 }
 
-.is-header-shade-border-bottom .header .header-border {
-  border-bottom: var(--line-width) solid rgb(var(--accent));
+.is-header-shade-border-bottom-show .header .header-border {
+  border-bottom: var(--header-border-width-bottom) solid rgb(var(--accent));
 }
 
 .header-edge {

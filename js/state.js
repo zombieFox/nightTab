@@ -60,8 +60,14 @@ var state = (function() {
         style: "scroll",
         opacity: 0.95,
         border: {
-          top: false,
-          bottom: false
+          top: {
+            show: false,
+            width: 1
+          },
+          bottom: {
+            show: false,
+            width: 1
+          }
         }
       },
       greeting: {
