@@ -17,18 +17,21 @@ var search = (function() {
   };
 
   var _toggle = function(input) {
+    var html = helper.e("html");
     if (input.value != "") {
       helper.setObject({
         object: state.get(),
         path: "search",
         newValue: true
       });
+      helper.addClass(html, "is-header-searching");
     } else {
       helper.setObject({
         object: state.get(),
         path: "search",
         newValue: false
       });
+      helper.removeClass(html, "is-header-searching");
     };
   };
 

@@ -31,10 +31,6 @@
   grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
 }
 
-.is-layout-width-thin.is-bookmarks-style-list .link-area {
-  grid-template-columns: 1fr;
-}
-
 .link-item {
   width: 100%;
   height: var(--link-height);

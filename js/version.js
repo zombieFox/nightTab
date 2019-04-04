@@ -1,7 +1,7 @@
 var version = (function() {
 
   // version is normally bumped when the state needs changing or any new functionality is added
-  var current = "2.17.0";
+  var current = "2.18.0";
 
   var compare = function(a, b) {
     var pa = a.split(".");
