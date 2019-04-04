@@ -63,11 +63,16 @@ var search = (function() {
   var render = function() {
     var search = helper.e(".search");
     var searchInput = helper.e(".search-input");
+    var placeholder = "";
     if (state.get().bookmarks.link.show) {
-      searchInput.setAttribute("placeholder", "Find or Search");
+      placeholder = "Find bookmarks or search";
     } else {
-      searchInput.setAttribute("placeholder", "Search");
+      placeholder = "Search";
     };
+    if (state.get().header.search.engine.selected != "custom") {
+      placeholder = placeholder + " " + state.get().header.search.engine[state.get().header.search.engine.selected].name;
+    };
+    searchInput.setAttribute("placeholder", placeholder);
     search.setAttribute("action", state.get().header.search.engine[state.get().header.search.engine.selected].url);
   };
 

@@ -254,6 +254,13 @@ var update = (function() {
         };
         data.version = "2.16.0";
       };
+      if (version.compare(data.version, "2.17.0") == -1) {
+        console.log("\t -- running update", "2.17.0");
+        data.state.header.search.engine.google.name = "Google";
+        data.state.header.search.engine.duckduckgo.name = "Duck Duck Go";
+        data.state.header.search.engine.giphy.name = "Giphy";
+        data.version = "2.17.0";
+      };
     };
     // if no update is needed
     // version bump

@@ -31,13 +31,16 @@ var state = (function() {
         engine: {
           selected: "google",
           google: {
-            url: "https://www.google.com/search"
+            url: "https://www.google.com/search",
+            name: "Google"
           },
           duckduckgo: {
-            url: "https://duckduckgo.com/"
+            url: "https://duckduckgo.com/",
+            name: "Duck Duck Go"
           },
           giphy: {
-            url: "https://giphy.com/search/"
+            url: "https://giphy.com/search/",
+            name: "Giphy"
           },
           custom: {
             url: ""
