@@ -319,8 +319,8 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-shade-padding"),
-    path: "header.shade.padding",
+    element: helper.e(".control-header-shade-padding-top"),
+    path: "header.shade.padding.top",
     type: "range",
     additionalEvents: [{
       event: "mousedown",
@@ -338,19 +338,54 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-shade-border-top"),
-    path: "header.shade.border.top",
-    type: "checkbox",
+    element: helper.e(".control-header-shade-padding-bottom"),
+    path: "header.shade.padding.bottom",
+    type: "range",
+    additionalEvents: [{
+      event: "mousedown",
+      action: function() {
+        header.edge("show");
+      }
+    }, {
+      event: "mouseup",
+      action: function() {
+        header.edge("hide");
+      }
+    }],
     func: function() {
       render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-shade-border-bottom"),
-    path: "header.shade.border.bottom",
+    element: helper.e(".control-header-shade-border-top-show"),
+    path: "header.shade.border.top.show",
     type: "checkbox",
     func: function() {
       render();
+      dependents();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-border-top-width"),
+    path: "header.shade.border.top.width",
+    type: "range",
+    func: function() {
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-border-bottom-show"),
+    path: "header.shade.border.bottom.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-border-bottom-width"),
+    path: "header.shade.border.bottom.width",
+    type: "range",
+    func: function() {
       header.render();
     }
   }, {
@@ -691,10 +726,10 @@ var control = (function() {
           path: object.path,
           newValue: newValue
         });
-        console.log(object.path, helper.getObject({
-          object: state.get(),
-          path: object.path
-        }));
+        // console.log(object.path, helper.getObject({
+        //   object: state.get(),
+        //   path: object.path
+        // }));
       };
     };
     var bindControl = function(object) {
@@ -862,22 +897,22 @@ var control = (function() {
       if (state.get().header.shade.show) {
         helper.addClass(html, "is-header-shade-show");
         helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
-        if (state.get().header.shade.border.top) {
-          helper.addClass(html, "is-header-shade-border-top");
+        if (state.get().header.shade.border.top.show) {
+          helper.addClass(html, "is-header-shade-border-top-show");
         } else {
-          helper.removeClass(html, "is-header-shade-border-top");
+          helper.removeClass(html, "is-header-shade-border-top-show");
         };
-        if (state.get().header.shade.border.bottom) {
-          helper.addClass(html, "is-header-shade-border-bottom");
+        if (state.get().header.shade.border.bottom.show) {
+          helper.addClass(html, "is-header-shade-border-bottom-show");
         } else {
-          helper.removeClass(html, "is-header-shade-border-bottom");
+          helper.removeClass(html, "is-header-shade-border-bottom-show");
         };
       } else {
         helper.removeClass(html, "is-header-shade-show");
         helper.removeClass(html, "is-header-shade-style-always");
         helper.removeClass(html, "is-header-shade-style-scroll");
-        helper.removeClass(html, "is-header-shade-border-top");
-        helper.removeClass(html, "is-header-shade-border-bottom");
+        helper.removeClass(html, "is-header-shade-border-top-show");
+        helper.removeClass(html, "is-header-shade-border-bottom-show");
       };
     };
     _menu();
@@ -1071,19 +1106,45 @@ var control = (function() {
         helper.e(".control-header-shade-style-scroll").disabled = false;
         helper.e("[for=control-header-shade-opacity]").removeAttribute("disabled");
         helper.e(".control-header-shade-opacity").disabled = false;
-        helper.e("[for=control-header-shade-padding]").removeAttribute("disabled");
-        helper.e(".control-header-shade-padding").disabled = false;
-        helper.e(".control-header-shade-border-top").disabled = false;
-        helper.e(".control-header-shade-border-bottom").disabled = false;
+        helper.e("[for=control-header-shade-padding-top]").removeAttribute("disabled");
+        helper.e(".control-header-shade-padding-top").disabled = false;
+        helper.e("[for=control-header-shade-padding-bottom]").removeAttribute("disabled");
+        helper.e(".control-header-shade-padding-bottom").disabled = false;
+        helper.e(".control-header-shade-border-top-show").disabled = false;
+        helper.e(".control-header-shade-border-bottom-show").disabled = false;
+        helper.e("[for=control-header-shade-border-top-width]").removeAttribute("disabled");
+        helper.e(".control-header-shade-border-top-width").disabled = false;
+        helper.e("[for=control-header-shade-border-bottom-width]").removeAttribute("disabled");
+        helper.e(".control-header-shade-border-bottom-width").disabled = false;
       } else {
         helper.e(".control-header-shade-style-always").disabled = true;
         helper.e(".control-header-shade-style-scroll").disabled = true;
         helper.e("[for=control-header-shade-opacity]").setAttribute("disabled", "");
         helper.e(".control-header-shade-opacity").disabled = true;
-        helper.e("[for=control-header-shade-padding]").setAttribute("disabled", "");
-        helper.e(".control-header-shade-padding").disabled = true;
-        helper.e(".control-header-shade-border-top").disabled = true;
-        helper.e(".control-header-shade-border-bottom").disabled = true;
+        helper.e("[for=control-header-shade-padding-top]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-padding-top").disabled = true;
+        helper.e("[for=control-header-shade-padding-bottom]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-padding-bottom").disabled = true;
+        helper.e(".control-header-shade-border-top-show").disabled = true;
+        helper.e(".control-header-shade-border-bottom-show").disabled = true;
+        helper.e("[for=control-header-shade-border-top-width]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-border-top-width").disabled = true;
+        helper.e("[for=control-header-shade-border-bottom-width]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-border-bottom-width").disabled = true;
+      };
+      if (state.get().header.shade.show && state.get().header.shade.border.top.show) {
+        helper.e("[for=control-header-shade-border-top-width]").removeAttribute("disabled");
+        helper.e(".control-header-shade-border-top-width").disabled = false;
+      } else {
+        helper.e("[for=control-header-shade-border-top-width]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-border-top-width").disabled = true;
+      };
+      if (state.get().header.shade.show && state.get().header.shade.border.bottom.show) {
+        helper.e("[for=control-header-shade-border-bottom-width]").removeAttribute("disabled");
+        helper.e(".control-header-shade-border-bottom-width").disabled = false;
+      } else {
+        helper.e("[for=control-header-shade-border-bottom-width]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-border-bottom-width").disabled = true;
       };
     };
     _edit();

@@ -73,11 +73,17 @@ var header = (function() {
       };
     };
     var _padding = function() {
-      html.style.setProperty("--header-shade-padding", state.get().header.shade.padding);
+      html.style.setProperty("--header-shade-padding-multiplier-top", state.get().header.shade.padding.top);
+      html.style.setProperty("--header-shade-padding-multiplier-bottom", state.get().header.shade.padding.bottom);
+    };
+    var _border = function() {
+      html.style.setProperty("--header-border-width-multiplier-top", state.get().header.shade.border.top.width);
+      html.style.setProperty("--header-border-width-multiplier-bottom", state.get().header.shade.border.bottom.width);
     };
     _color();
     _opacity();
     _padding();
+    _border();
     _margin();
   };
 
