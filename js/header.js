@@ -43,7 +43,7 @@ var header = (function() {
     var _margin = function() {
       var height = parseInt(getComputedStyle(header).height, 10);
       var marginValue;
-      if (state.get().background.image.show && (state.get().header.shade.show && state.get().header.shade.style == "always") || state.get().header.shade.style == "always" || state.get().header.shade.border.bottom) {
+      if (state.get().background.image.show && (state.get().header.shade.show && state.get().header.shade.style == "always") || state.get().header.shade.style == "always" || state.get().header.shade.border.bottom.show) {
         marginValue = (height + fontSize);
       } else {
         marginValue = height;
