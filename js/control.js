@@ -233,6 +233,7 @@ var control = (function() {
   }, {
     element: helper.e(".control-header-search-engine-custom-name"),
     path: "header.search.engine.custom.name",
+    type: "text",
     func: function() {
       search.render();
     }
