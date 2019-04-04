@@ -1,5 +1,6 @@
 .header {
-  padding: var(--header-shade-padding) 0;
+  padding-top: var(--header-shade-padding-top);
+  padding-bottom: var(--header-shade-padding-bottom);
   width: 100%;
   position: relative;
   z-index: var(--z-index-header);

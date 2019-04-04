@@ -319,8 +319,27 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-shade-padding"),
-    path: "header.shade.padding",
+    element: helper.e(".control-header-shade-padding-top"),
+    path: "header.shade.padding.top",
+    type: "range",
+    additionalEvents: [{
+      event: "mousedown",
+      action: function() {
+        header.edge("show");
+      }
+    }, {
+      event: "mouseup",
+      action: function() {
+        header.edge("hide");
+      }
+    }],
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-padding-bottom"),
+    path: "header.shade.padding.bottom",
     type: "range",
     additionalEvents: [{
       event: "mousedown",
@@ -707,10 +726,10 @@ var control = (function() {
           path: object.path,
           newValue: newValue
         });
-        console.log(object.path, helper.getObject({
-          object: state.get(),
-          path: object.path
-        }));
+        // console.log(object.path, helper.getObject({
+        //   object: state.get(),
+        //   path: object.path
+        // }));
       };
     };
     var bindControl = function(object) {
@@ -1087,8 +1106,10 @@ var control = (function() {
         helper.e(".control-header-shade-style-scroll").disabled = false;
         helper.e("[for=control-header-shade-opacity]").removeAttribute("disabled");
         helper.e(".control-header-shade-opacity").disabled = false;
-        helper.e("[for=control-header-shade-padding]").removeAttribute("disabled");
-        helper.e(".control-header-shade-padding").disabled = false;
+        helper.e("[for=control-header-shade-padding-top]").removeAttribute("disabled");
+        helper.e(".control-header-shade-padding-top").disabled = false;
+        helper.e("[for=control-header-shade-padding-bottom]").removeAttribute("disabled");
+        helper.e(".control-header-shade-padding-bottom").disabled = false;
         helper.e(".control-header-shade-border-top-show").disabled = false;
         helper.e(".control-header-shade-border-bottom-show").disabled = false;
         helper.e("[for=control-header-shade-border-top-width]").removeAttribute("disabled");
@@ -1100,8 +1121,10 @@ var control = (function() {
         helper.e(".control-header-shade-style-scroll").disabled = true;
         helper.e("[for=control-header-shade-opacity]").setAttribute("disabled", "");
         helper.e(".control-header-shade-opacity").disabled = true;
-        helper.e("[for=control-header-shade-padding]").setAttribute("disabled", "");
-        helper.e(".control-header-shade-padding").disabled = true;
+        helper.e("[for=control-header-shade-padding-top]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-padding-top").disabled = true;
+        helper.e("[for=control-header-shade-padding-bottom]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-padding-bottom").disabled = true;
         helper.e(".control-header-shade-border-top-show").disabled = true;
         helper.e(".control-header-shade-border-bottom-show").disabled = true;
         helper.e("[for=control-header-shade-border-top-width]").setAttribute("disabled", "");

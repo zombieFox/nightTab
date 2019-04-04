@@ -56,7 +56,10 @@ var state = (function() {
       },
       shade: {
         show: true,
-        padding: 4,
+        padding: {
+          top: 4,
+          bottom: 4
+        },
         style: "scroll",
         opacity: 0.95,
         border: {
