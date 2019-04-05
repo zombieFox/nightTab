@@ -1025,6 +1025,7 @@ var control = (function() {
         helper.e(".control-header-search-focus").disabled = false;
         helper.e(".control-header-search-engine-google").disabled = false;
         helper.e(".control-header-search-engine-duckduckgo").disabled = false;
+        helper.e(".control-header-search-engine-youtube").disabled = false;
         helper.e(".control-header-search-engine-giphy").disabled = false;
         helper.e(".control-header-search-engine-custom").disabled = false;
         helper.e(".control-header-search-engine-label").removeAttribute("disabled");
@@ -1033,6 +1034,7 @@ var control = (function() {
         helper.e(".control-header-search-focus").disabled = true;
         helper.e(".control-header-search-engine-google").disabled = true;
         helper.e(".control-header-search-engine-duckduckgo").disabled = true;
+        helper.e(".control-header-search-engine-youtube").disabled = true;
         helper.e(".control-header-search-engine-giphy").disabled = true;
         helper.e(".control-header-search-engine-custom").disabled = true;
         helper.e(".control-header-search-engine-label").setAttribute("disabled", "");
