@@ -1,5 +1,6 @@
 .header {
-  padding: calc(var(--gutter) * var(--header-shade-padding)) 0;
+  padding-top: var(--header-shade-padding-top);
+  padding-bottom: var(--header-shade-padding-bottom);
   width: 100%;
   position: relative;
   z-index: var(--z-index-header);
@@ -33,12 +34,23 @@
   opacity: var(--header-shade-opacity);
 }
 
-.is-header-shade-border-top .header .header-border {
-  border-top: var(--line-width) solid rgb(var(--accent));
+.is-header-shade-border-top-show .header .header-border {
+  border-top: var(--header-border-width-top) solid rgb(var(--accent));
 }
 
-.is-header-shade-border-bottom .header .header-border {
-  border-bottom: var(--line-width) solid rgb(var(--accent));
+.is-header-shade-border-bottom-show .header .header-border {
+  border-bottom: var(--header-border-width-bottom) solid rgb(var(--accent));
+}
+
+.header-edge {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 var(--line-width) rgb(var(--accent)), inset 0 0 0 calc(var(--line-width) * 2) rgba(var(--accent), 0.25);
 }
 
 .header-area {
@@ -51,15 +63,16 @@
 
 .header-item {
   margin: var(--gutter);
+  max-width: calc(100% - var(--gutter) * 2);
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
 }
 
-.header-search-input[type="text"] {
-  padding-right: 3em;
+.is-header-searching .header-search-input[type="text"] {
+  padding-right: 3.5em;
 }
 
 .header-search-clear {
@@ -80,7 +93,6 @@
   justify-content: flex-end;
 }
 
-.is-layout-width-thin.is-header-search-grow .header-search,
 .is-header-search-grow .header-search {
   flex-grow: 1;
   flex-basis: 100%;
@@ -102,6 +114,7 @@
 .header-search,
 .header-edit-add,
 .header-accent,
+.header-greeting,
 .header-menu {
   display: none;
 }
@@ -111,6 +124,7 @@
 .is-header-clock-show .header-clock,
 .is-header-edit-add .header-edit-add,
 .is-header-accent .header-accent,
+.is-header-greeting .header-greeting,
 .is-menu .header-menu {
   display: flex;
 }

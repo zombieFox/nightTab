@@ -23,10 +23,17 @@ var keyboard = (function() {
       };
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
-        if (state.get().bookmarks.show.link) {
+        if (state.get().bookmarks.link.show) {
           menu.close();
           link.add();
         };
+      };
+      // ctrl+alt+d
+      if (event.ctrlKey && event.altKey && event.keyCode == 68) {
+        theme.toggle();
+        control.render();
+        control.update();
+        data.save();
       };
       // ctrl+alt+m
       if (event.ctrlKey && event.altKey && event.keyCode == 77) {
@@ -36,7 +43,7 @@ var keyboard = (function() {
       };
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
-        if (state.get().bookmarks.show.link && bookmarks.get().length > 0) {
+        if (state.get().bookmarks.link.show && bookmarks.get().length > 0) {
           if (state.get().bookmarks.edit) {
             helper.setObject({
               object: state.get(),
@@ -57,8 +64,8 @@ var keyboard = (function() {
       };
       // ctrl+alt+r
       if (event.ctrlKey && event.altKey && event.keyCode == 82) {
-        theme.random();
-        theme.render();
+        accent.random();
+        accent.render();
         data.save();
       };
     }, false);

@@ -322,6 +322,9 @@ var link = (function() {
       attr: [{
         key: "class",
         value: "link-url-text"
+      }, {
+        key: "title",
+        value: data.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "")
       }]
     });
     var linkControl = helper.makeNode({

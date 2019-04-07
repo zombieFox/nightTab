@@ -31,16 +31,24 @@ var state = (function() {
         engine: {
           selected: "google",
           google: {
-            url: "https://www.google.com/search"
+            url: "https://www.google.com/search",
+            name: "Google"
           },
           duckduckgo: {
-            url: "https://duckduckgo.com/"
+            url: "https://duckduckgo.com/",
+            name: "Duck Duck Go"
+          },
+          youtube: {
+            url: "https://www.youtube.com/results?search_query=",
+            name: "YouTube"
           },
           giphy: {
-            url: "https://giphy.com/search/"
+            url: "https://giphy.com/search/",
+            name: "Giphy"
           },
           custom: {
-            url: ""
+            url: "",
+            name: ""
           }
         }
       },
@@ -56,20 +64,39 @@ var state = (function() {
       },
       shade: {
         show: true,
-        padding: 4,
+        padding: {
+          top: 10,
+          bottom: 10
+        },
         style: "scroll",
         opacity: 0.95,
         border: {
-          top: false,
-          bottom: false
+          top: {
+            show: false,
+            width: 1
+          },
+          bottom: {
+            show: false,
+            width: 1
+          }
         }
+      },
+      greeting: {
+        show: false,
+        type: "good",
+        name: ""
       }
     },
     bookmarks: {
-      show: {
-        link: true,
-        name: true,
-        url: true
+      link: {
+        show: true
+      },
+      name: {
+        show: true
+      },
+      url: {
+        show: true,
+        style: "dark"
       },
       newTab: false,
       edit: false,
@@ -78,10 +105,12 @@ var state = (function() {
       sort: "none"
     },
     layout: {
-      width: "wide",
+      width: 72,
       scrollPastEnd: true,
-      title: "New Tab",
-      theme: {
+      title: "New Tab"
+    },
+    theme: {
+      accent: {
         current: {
           r: 0,
           g: 255,
@@ -91,7 +120,8 @@ var state = (function() {
           active: false,
           style: "any"
         }
-      }
+      },
+      style: "dark"
     },
     background: {
       image: {

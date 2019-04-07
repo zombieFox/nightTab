@@ -14,6 +14,26 @@ var header = (function() {
     });
   };
 
+  var edge = function(action) {
+    var header = helper.e(".header");
+    var container = helper.makeNode({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "header-edge"
+      }]
+    });
+    var state = {
+      show: function() {
+        header.appendChild(container);
+      },
+      hide: function() {
+        header.removeChild(helper.e(".header-edge"));
+      }
+    };
+    state[action]();
+  };
+
   var render = function() {
     var html = helper.e("html");
     var header = helper.e(".header");
@@ -23,7 +43,7 @@ var header = (function() {
     var _margin = function() {
       var height = parseInt(getComputedStyle(header).height, 10);
       var marginValue;
-      if (state.get().background.image.show && (state.get().header.shade.show && state.get().header.shade.style == "always") || state.get().header.shade.style == "always" || state.get().header.shade.border.bottom) {
+      if (state.get().background.image.show && (state.get().header.shade.show && state.get().header.shade.style == "always") || state.get().header.shade.style == "always" || state.get().header.shade.border.bottom.show) {
         marginValue = (height + fontSize);
       } else {
         marginValue = height;
@@ -53,11 +73,17 @@ var header = (function() {
       };
     };
     var _padding = function() {
-      html.style.setProperty("--header-shade-padding", state.get().header.shade.padding);
+      html.style.setProperty("--header-shade-padding-multiplier-top", state.get().header.shade.padding.top);
+      html.style.setProperty("--header-shade-padding-multiplier-bottom", state.get().header.shade.padding.bottom);
+    };
+    var _border = function() {
+      html.style.setProperty("--header-border-width-multiplier-top", state.get().header.shade.border.top.width);
+      html.style.setProperty("--header-border-width-multiplier-bottom", state.get().header.shade.border.bottom.width);
     };
     _color();
     _opacity();
     _padding();
+    _border();
     _margin();
   };
 
@@ -68,8 +94,9 @@ var header = (function() {
 
   // exposed methods
   return {
-    init: init,
-    render: render
+    edge: edge,
+    render: render,
+    init: init
   };
 
 })();

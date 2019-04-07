@@ -17,18 +17,21 @@ var search = (function() {
   };
 
   var _toggle = function(input) {
+    var html = helper.e("html");
     if (input.value != "") {
       helper.setObject({
         object: state.get(),
         path: "search",
         newValue: true
       });
+      helper.addClass(html, "is-header-searching");
     } else {
       helper.setObject({
         object: state.get(),
         path: "search",
         newValue: false
       });
+      helper.removeClass(html, "is-header-searching");
     };
   };
 
@@ -60,8 +63,17 @@ var search = (function() {
     };
   };
 
-  var update = function() {
+  var render = function() {
     var search = helper.e(".search");
+    var searchInput = helper.e(".search-input");
+    var placeholder = "";
+    if (state.get().bookmarks.link.show) {
+      placeholder = "Find bookmarks or search";
+    } else {
+      placeholder = "Search";
+    };
+    placeholder = placeholder + " " + state.get().header.search.engine[state.get().header.search.engine.selected].name;
+    searchInput.setAttribute("placeholder", placeholder);
     search.setAttribute("action", state.get().header.search.engine[state.get().header.search.engine.selected].url);
   };
 
@@ -83,7 +95,7 @@ var search = (function() {
 
   var init = function() {
     bind();
-    update();
+    render();
     _focus();
   };
 
@@ -91,7 +103,7 @@ var search = (function() {
   return {
     init: init,
     get: get,
-    update: update,
+    render: render,
     clear: clear
   };
 

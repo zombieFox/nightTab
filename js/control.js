@@ -20,11 +20,11 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-current"),
-    path: "layout.theme.current",
+    element: helper.e(".control-theme-accent-current"),
+    path: "theme.accent.current",
     type: "color",
     func: function() {
-      theme.render();
+      accent.render();
     }
   }, {
     element: helper.e(".control-header-clock-show-hours"),
@@ -192,7 +192,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      search.update();
+      search.render();
     }
   }, {
     element: helper.e(".control-header-search-engine-duckduckgo"),
@@ -201,7 +201,16 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      search.update();
+      search.render();
+    }
+  }, {
+    element: helper.e(".control-header-search-engine-youtube"),
+    path: "header.search.engine.selected",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      search.render();
     }
   }, {
     element: helper.e(".control-header-search-engine-giphy"),
@@ -210,7 +219,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      search.update();
+      search.render();
     }
   }, {
     element: helper.e(".control-header-search-engine-custom"),
@@ -219,14 +228,21 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      search.update();
+      search.render();
+    }
+  }, {
+    element: helper.e(".control-header-search-engine-custom-name"),
+    path: "header.search.engine.custom.name",
+    type: "text",
+    func: function() {
+      search.render();
     }
   }, {
     element: helper.e(".control-header-search-engine-custom-url"),
     path: "header.search.engine.custom.url",
     type: "text",
     func: function() {
-      search.update();
+      search.render();
     }
   }, {
     element: helper.e(".control-header-edit-add-show"),
@@ -319,32 +335,62 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-shade-padding"),
-    path: "header.shade.padding",
+    element: helper.e(".control-header-shade-padding-top"),
+    path: "header.shade.padding.top",
+    type: "range",
+    additionalEvents: [{
+      event: "mousedown",
+      action: function() {
+        header.edge("show");
+      }
+    }, {
+      event: "mouseup",
+      action: function() {
+        header.edge("hide");
+      }
+    }],
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-padding-bottom"),
+    path: "header.shade.padding.bottom",
+    type: "range",
+    additionalEvents: [{
+      event: "mousedown",
+      action: function() {
+        header.edge("show");
+      }
+    }, {
+      event: "mouseup",
+      action: function() {
+        header.edge("hide");
+      }
+    }],
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-border-top-show"),
+    path: "header.shade.border.top.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-shade-border-top-width"),
+    path: "header.shade.border.top.width",
     type: "range",
     func: function() {
-      render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-shade-border-top"),
-    path: "header.shade.border.top",
-    type: "checkbox",
-    func: function() {
-      render();
-      header.render();
-    }
-  }, {
-    element: helper.e(".control-header-shade-border-bottom"),
-    path: "header.shade.border.bottom",
-    type: "checkbox",
-    func: function() {
-      render();
-      header.render();
-    }
-  }, {
-    element: helper.e(".control-bookmarks-show-link"),
-    path: "bookmarks.show.link",
+    element: helper.e(".control-header-shade-border-bottom-show"),
+    path: "header.shade.border.bottom.show",
     type: "checkbox",
     func: function() {
       render();
@@ -352,20 +398,106 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-bookmarks-show-name"),
-    path: "bookmarks.show.name",
+    element: helper.e(".control-header-shade-border-bottom-width"),
+    path: "header.shade.border.bottom.width",
+    type: "range",
+    func: function() {
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-link-show"),
+    path: "bookmarks.link.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      header.render();
+      search.render();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-name-show"),
+    path: "bookmarks.name.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
     }
   }, {
-    element: helper.e(".control-bookmarks-show-url"),
-    path: "bookmarks.show.url",
+    element: helper.e(".control-header-greeting-show"),
+    path: "header.greeting.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-type-good"),
+    path: "header.greeting.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-type-hello"),
+    path: "header.greeting.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-type-hi"),
+    path: "header.greeting.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-name"),
+    path: "header.greeting.name",
+    type: "text",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-url-show"),
+    path: "bookmarks.url.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-url-style-dark"),
+    path: "bookmarks.url.style",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-url-style-light"),
+    path: "bookmarks.url.style",
+    type: "radio",
+    func: function() {
+      render();
     }
   }, {
     element: helper.e(".control-bookmarks-new-tab"),
@@ -414,25 +546,24 @@ var control = (function() {
       link.render();
     }
   }, {
-    element: helper.e(".control-layout-width-fluid"),
+    element: helper.e(".control-layout-width"),
     path: "layout.width",
-    type: "radio",
+    type: "range",
+    additionalEvents: [{
+      event: "mousedown",
+      action: function() {
+        layout.edge("show");
+      }
+    }, {
+      event: "mouseup",
+      action: function() {
+        layout.edge("hide");
+      }
+    }],
     func: function() {
       render();
-    }
-  }, {
-    element: helper.e(".control-layout-width-wide"),
-    path: "layout.width",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-width-thin"),
-    path: "layout.width",
-    type: "radio",
-    func: function() {
-      render();
+      layout.render();
+      header.render();
     }
   }, {
     element: helper.e(".control-layout-scroll-past-end"),
@@ -449,54 +580,70 @@ var control = (function() {
       title.render();
     }
   }, {
-    element: helper.e(".control-layout-theme-random-active"),
-    path: "layout.theme.random.active",
+    element: helper.e(".control-theme-style-dark"),
+    path: "theme.style",
+    type: "radio",
+    func: function() {
+      render();
+      accent.render();
+    }
+  }, {
+    element: helper.e(".control-theme-style-light"),
+    path: "theme.style",
+    type: "radio",
+    func: function() {
+      render();
+      accent.render();
+    }
+  }, {
+    element: helper.e(".control-theme-accent-random-active"),
+    path: "theme.accent.random.active",
     type: "checkbox",
     func: function() {
       dependents();
-      theme.render();
+      accent.render();
     }
   }, {
-    element: helper.e(".control-layout-theme-style-any"),
-    path: "layout.theme.random.style",
+    element: helper.e(".control-theme-accent-random-style-any"),
+    path: "theme.accent.random.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-style-light"),
-    path: "layout.theme.random.style",
+    element: helper.e(".control-theme-accent-random-style-light"),
+    path: "theme.accent.random.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-style-dark"),
-    path: "layout.theme.random.style",
+    element: helper.e(".control-theme-accent-random-style-dark"),
+    path: "theme.accent.random.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-style-pastel"),
-    path: "layout.theme.random.style",
+    element: helper.e(".control-theme-accent-random-style-pastel"),
+    path: "theme.accent.random.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-style-saturated"),
-    path: "layout.theme.random.style",
+    element: helper.e(".control-theme-accent-random-style-saturated"),
+    path: "theme.accent.random.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-theme-randomise"),
+    element: helper.e(".control-theme-accent-randomise"),
     type: "button",
     func: function() {
-      theme.random();
-      theme.render();
+      accent.random();
+      accent.render();
     }
   }, {
     element: helper.e(".control-background-image-show"),
@@ -619,6 +766,13 @@ var control = (function() {
         action[object.element.tagName.toLowerCase()](object);
         data.save();
       }, false);
+      if (object.additionalEvents) {
+        object.additionalEvents.forEach(function(item, index) {
+          object.element.addEventListener(item.event, function() {
+            item.action();
+          }, false);
+        });
+      };
     };
     _allControl.forEach(function(arrayItem, index) {
       bindControl(arrayItem);
@@ -664,6 +818,7 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-header-search-grow");
       };
+      helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
       helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     };
     var _alignment = function() {
@@ -688,32 +843,44 @@ var control = (function() {
         }
       };
       view[state.get().bookmarks.style]();
-      if (state.get().bookmarks.show.link) {
+      if (state.get().bookmarks.link.show) {
         helper.addClass(html, "is-bookmarks-show-link");
       } else {
         helper.removeClass(html, "is-bookmarks-show-link");
       };
-      if (state.get().bookmarks.show.name) {
+      if (state.get().bookmarks.name.show) {
         helper.addClass(html, "is-bookmarks-show-name");
       } else {
         helper.removeClass(html, "is-bookmarks-show-name");
       };
-      if (state.get().bookmarks.show.url) {
+      if (state.get().bookmarks.url.show) {
         helper.addClass(html, "is-bookmarks-show-url");
       } else {
         helper.removeClass(html, "is-bookmarks-show-url");
       };
+      var urlText = {
+        dark: function() {
+          helper.addClass(html, "bookmarks-url-dark");
+          helper.removeClass(html, "bookmarks-url-light");
+        },
+        light: function() {
+          helper.removeClass(html, "bookmarks-url-dark");
+          helper.addClass(html, "bookmarks-url-light");
+        }
+      };
+      urlText[state.get().bookmarks.url.style]();
     };
     var _layout = function() {
-      helper.removeClass(html, "is-layout-width-fluid");
-      helper.removeClass(html, "is-layout-width-wide");
-      helper.removeClass(html, "is-layout-width-thin");
-      helper.addClass(html, "is-layout-width-" + state.get().layout.width);
       if (state.get().layout.scrollPastEnd) {
         helper.addClass(html, "is-layout-scroll-past-end");
       } else {
         helper.removeClass(html, "is-layout-scroll-past-end");
       };
+    };
+    var _theme = function() {
+      helper.removeClass(html, "is-theme-style-dark");
+      helper.removeClass(html, "is-theme-style-light");
+      helper.addClass(html, "is-theme-style-" + state.get().theme.style);
     };
     var _editAdd = function() {
       if (state.get().header.editAdd.show) {
@@ -729,6 +896,13 @@ var control = (function() {
         helper.removeClass(html, "is-header-accent");
       };
     };
+    var _greeting = function() {
+      if (state.get().header.greeting.show) {
+        helper.addClass(html, "is-header-greeting");
+      } else {
+        helper.removeClass(html, "is-header-greeting");
+      };
+    };
     var _background = function() {
       if (state.get().background.image.show) {
         helper.addClass(html, "is-background-image-show");
@@ -740,27 +914,28 @@ var control = (function() {
       if (state.get().header.shade.show) {
         helper.addClass(html, "is-header-shade-show");
         helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
-        if (state.get().header.shade.border.top) {
-          helper.addClass(html, "is-header-shade-border-top");
+        if (state.get().header.shade.border.top.show) {
+          helper.addClass(html, "is-header-shade-border-top-show");
         } else {
-          helper.removeClass(html, "is-header-shade-border-top");
+          helper.removeClass(html, "is-header-shade-border-top-show");
         };
-        if (state.get().header.shade.border.bottom) {
-          helper.addClass(html, "is-header-shade-border-bottom");
+        if (state.get().header.shade.border.bottom.show) {
+          helper.addClass(html, "is-header-shade-border-bottom-show");
         } else {
-          helper.removeClass(html, "is-header-shade-border-bottom");
+          helper.removeClass(html, "is-header-shade-border-bottom-show");
         };
       } else {
         helper.removeClass(html, "is-header-shade-show");
         helper.removeClass(html, "is-header-shade-style-always");
         helper.removeClass(html, "is-header-shade-style-scroll");
-        helper.removeClass(html, "is-header-shade-border-top");
-        helper.removeClass(html, "is-header-shade-border-bottom");
+        helper.removeClass(html, "is-header-shade-border-top-show");
+        helper.removeClass(html, "is-header-shade-border-bottom-show");
       };
     };
     _menu();
     _alignment();
     _edit();
+    _greeting();
     _date();
     _clock();
     _search();
@@ -768,6 +943,7 @@ var control = (function() {
     _accent();
     _link();
     _layout();
+    _theme();
     _background();
     _header();
   };
@@ -802,6 +978,21 @@ var control = (function() {
         helper.e(".control-header-date-character-length-long").disabled = true;
       };
     };
+    var _greeting = function() {
+      if (state.get().header.greeting.show) {
+        helper.e("[for=control-header-greeting-name]").removeAttribute("disabled", "");
+        helper.e(".control-header-greeting-name").disabled = false;
+        helper.e(".control-header-greeting-type-good").disabled = false;
+        helper.e(".control-header-greeting-type-hello").disabled = false;
+        helper.e(".control-header-greeting-type-hi").disabled = false;
+      } else {
+        helper.e("[for=control-header-greeting-name]").setAttribute("disabled", "");
+        helper.e(".control-header-greeting-name").disabled = true;
+        helper.e(".control-header-greeting-type-good").disabled = true;
+        helper.e(".control-header-greeting-type-hello").disabled = true;
+        helper.e(".control-header-greeting-type-hi").disabled = true;
+      };
+    };
     var _clock = function() {
       var activeCount = 0;
       var toCheck = [state.get().header.clock.show.seconds, state.get().header.clock.show.minutes, state.get().header.clock.show.hours];
@@ -834,6 +1025,7 @@ var control = (function() {
         helper.e(".control-header-search-focus").disabled = false;
         helper.e(".control-header-search-engine-google").disabled = false;
         helper.e(".control-header-search-engine-duckduckgo").disabled = false;
+        helper.e(".control-header-search-engine-youtube").disabled = false;
         helper.e(".control-header-search-engine-giphy").disabled = false;
         helper.e(".control-header-search-engine-custom").disabled = false;
         helper.e(".control-header-search-engine-label").removeAttribute("disabled");
@@ -842,35 +1034,40 @@ var control = (function() {
         helper.e(".control-header-search-focus").disabled = true;
         helper.e(".control-header-search-engine-google").disabled = true;
         helper.e(".control-header-search-engine-duckduckgo").disabled = true;
+        helper.e(".control-header-search-engine-youtube").disabled = true;
         helper.e(".control-header-search-engine-giphy").disabled = true;
         helper.e(".control-header-search-engine-custom").disabled = true;
         helper.e(".control-header-search-engine-label").setAttribute("disabled", "");
       };
       if (state.get().header.search.show && state.get().header.search.engine.selected === "custom") {
+        helper.e("[for=control-header-search-engine-custom-name]").removeAttribute("disabled");
+        helper.e(".control-header-search-engine-custom-name").disabled = false;
         helper.e("[for=control-header-search-engine-custom-url]").removeAttribute("disabled");
         helper.e(".control-header-search-engine-custom-url").disabled = false;
       } else {
+        helper.e("[for=control-header-search-engine-custom-name]").setAttribute("disabled", "");
+        helper.e(".control-header-search-engine-custom-name").disabled = true;
         helper.e("[for=control-header-search-engine-custom-url]").setAttribute("disabled", "");
         helper.e(".control-header-search-engine-custom-url").disabled = true;
       };
     };
     var _theme = function() {
-      if (state.get().layout.theme.random.active) {
-        helper.eA("input[name='control-layout-theme-style']").forEach(function(arrayItem, index) {
+      if (state.get().theme.accent.random.active) {
+        helper.eA("input[name='control-theme-accent-random-style']").forEach(function(arrayItem, index) {
           arrayItem.disabled = false;
-          helper.e(".control-layout-theme-randomise").disabled = false;
+          helper.e(".control-theme-accent-randomise").disabled = false;
         });
       } else {
-        helper.eA("input[name='control-layout-theme-style']").forEach(function(arrayItem, index) {
+        helper.eA("input[name='control-theme-accent-random-style']").forEach(function(arrayItem, index) {
           arrayItem.disabled = true;
-          helper.e(".control-layout-theme-randomise").disabled = true;
+          helper.e(".control-theme-accent-randomise").disabled = true;
         });
       };
     };
     var _link = function() {
-      if (state.get().bookmarks.show.link) {
-        helper.e(".control-bookmarks-show-name").disabled = false;
-        helper.e(".control-bookmarks-show-url").disabled = false;
+      if (state.get().bookmarks.link.show) {
+        helper.e(".control-bookmarks-name-show").disabled = false;
+        helper.e(".control-bookmarks-url-show").disabled = false;
         helper.e(".control-bookmarks-style-block").disabled = false;
         helper.e(".control-bookmarks-style-list").disabled = false;
         helper.e(".control-bookmarks-new-tab").disabled = false;
@@ -881,8 +1078,8 @@ var control = (function() {
         helper.e(".control-layout-alignment-vertical-center").disabled = true;
         helper.e(".control-layout-alignment-vertical-bottom").disabled = true;
       } else {
-        helper.e(".control-bookmarks-show-name").disabled = true;
-        helper.e(".control-bookmarks-show-url").disabled = true;
+        helper.e(".control-bookmarks-name-show").disabled = true;
+        helper.e(".control-bookmarks-url-show").disabled = true;
         helper.e(".control-bookmarks-style-block").disabled = true;
         helper.e(".control-bookmarks-style-list").disabled = true;
         helper.e(".control-bookmarks-new-tab").disabled = true;
@@ -893,6 +1090,13 @@ var control = (function() {
         helper.e(".control-layout-alignment-vertical-center").disabled = false;
         helper.e(".control-layout-alignment-vertical-bottom").disabled = false;
       };
+      if (state.get().bookmarks.link.show && state.get().bookmarks.url.show) {
+        helper.e(".control-bookmarks-url-style-dark").disabled = false;
+        helper.e(".control-bookmarks-url-style-light").disabled = false;
+      } else {
+        helper.e(".control-bookmarks-url-style-dark").disabled = true;
+        helper.e(".control-bookmarks-url-style-light").disabled = true;
+      }
     };
     var _background = function() {
       if (state.get().background.image.show) {
@@ -925,22 +1129,49 @@ var control = (function() {
         helper.e(".control-header-shade-style-scroll").disabled = false;
         helper.e("[for=control-header-shade-opacity]").removeAttribute("disabled");
         helper.e(".control-header-shade-opacity").disabled = false;
-        helper.e("[for=control-header-shade-padding]").removeAttribute("disabled");
-        helper.e(".control-header-shade-padding").disabled = false;
-        helper.e(".control-header-shade-border-top").disabled = false;
-        helper.e(".control-header-shade-border-bottom").disabled = false;
+        helper.e("[for=control-header-shade-padding-top]").removeAttribute("disabled");
+        helper.e(".control-header-shade-padding-top").disabled = false;
+        helper.e("[for=control-header-shade-padding-bottom]").removeAttribute("disabled");
+        helper.e(".control-header-shade-padding-bottom").disabled = false;
+        helper.e(".control-header-shade-border-top-show").disabled = false;
+        helper.e(".control-header-shade-border-bottom-show").disabled = false;
+        helper.e("[for=control-header-shade-border-top-width]").removeAttribute("disabled");
+        helper.e(".control-header-shade-border-top-width").disabled = false;
+        helper.e("[for=control-header-shade-border-bottom-width]").removeAttribute("disabled");
+        helper.e(".control-header-shade-border-bottom-width").disabled = false;
       } else {
         helper.e(".control-header-shade-style-always").disabled = true;
         helper.e(".control-header-shade-style-scroll").disabled = true;
         helper.e("[for=control-header-shade-opacity]").setAttribute("disabled", "");
         helper.e(".control-header-shade-opacity").disabled = true;
-        helper.e("[for=control-header-shade-padding]").setAttribute("disabled", "");
-        helper.e(".control-header-shade-padding").disabled = true;
-        helper.e(".control-header-shade-border-top").disabled = true;
-        helper.e(".control-header-shade-border-bottom").disabled = true;
+        helper.e("[for=control-header-shade-padding-top]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-padding-top").disabled = true;
+        helper.e("[for=control-header-shade-padding-bottom]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-padding-bottom").disabled = true;
+        helper.e(".control-header-shade-border-top-show").disabled = true;
+        helper.e(".control-header-shade-border-bottom-show").disabled = true;
+        helper.e("[for=control-header-shade-border-top-width]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-border-top-width").disabled = true;
+        helper.e("[for=control-header-shade-border-bottom-width]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-border-bottom-width").disabled = true;
+      };
+      if (state.get().header.shade.show && state.get().header.shade.border.top.show) {
+        helper.e("[for=control-header-shade-border-top-width]").removeAttribute("disabled");
+        helper.e(".control-header-shade-border-top-width").disabled = false;
+      } else {
+        helper.e("[for=control-header-shade-border-top-width]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-border-top-width").disabled = true;
+      };
+      if (state.get().header.shade.show && state.get().header.shade.border.bottom.show) {
+        helper.e("[for=control-header-shade-border-bottom-width]").removeAttribute("disabled");
+        helper.e(".control-header-shade-border-bottom-width").disabled = false;
+      } else {
+        helper.e("[for=control-header-shade-border-bottom-width]").setAttribute("disabled", "");
+        helper.e(".control-header-shade-border-bottom-width").disabled = true;
       };
     };
     _edit();
+    _greeting();
     _date();
     _clock();
     _search();
