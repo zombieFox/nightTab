@@ -1082,6 +1082,10 @@ var control = (function() {
         helper.e(".control-header-search-engine-youtube").disabled = false;
         helper.e(".control-header-search-engine-giphy").disabled = false;
         helper.e(".control-header-search-engine-custom").disabled = false;
+        helper.e(".control-header-search-text-align-label").removeAttribute("disabled");
+        helper.e(".control-header-search-text-align-left").disabled = false;
+        helper.e(".control-header-search-text-align-center").disabled = false;
+        helper.e(".control-header-search-text-align-right").disabled = false;
       } else {
         helper.e(".control-header-search-width-label").setAttribute("disabled", "");
         helper.e(".control-header-search-width-style-auto").disabled = true;
@@ -1095,6 +1099,10 @@ var control = (function() {
         helper.e(".control-header-search-engine-youtube").disabled = true;
         helper.e(".control-header-search-engine-giphy").disabled = true;
         helper.e(".control-header-search-engine-custom").disabled = true;
+        helper.e(".control-header-search-text-align-label").setAttribute("disabled", "");
+        helper.e(".control-header-search-text-align-left").disabled = true;
+        helper.e(".control-header-search-text-align-center").disabled = true;
+        helper.e(".control-header-search-text-align-right").disabled = true;
       };
       if (state.get().header.search.show && state.get().header.search.engine.selected === "custom") {
         helper.e("[for=control-header-search-engine-custom-name]").removeAttribute("disabled");
