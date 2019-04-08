@@ -1,5 +1,5 @@
 // log version
-console.log("nightTab v", version.get(), "loaded");
+console.log("nightTab version", version.get());
 
 // check for old versions
 data.init();
