@@ -780,10 +780,10 @@ var control = (function() {
           path: object.path,
           newValue: newValue
         });
-        console.log(object.path, helper.getObject({
-          object: state.get(),
-          path: object.path
-        }));
+        // console.log(object.path, helper.getObject({
+        //   object: state.get(),
+        //   path: object.path
+        // }));
       };
     };
     var bindControl = function(object) {
@@ -909,11 +909,11 @@ var control = (function() {
       };
       var urlText = {
         dark: function() {
-          helper.addClass(html, "bookmarks-url-dark");
+          helper.addClass(html, "is-bookmarks-url-dark");
           helper.removeClass(html, "bookmarks-url-light");
         },
         light: function() {
-          helper.removeClass(html, "bookmarks-url-dark");
+          helper.removeClass(html, "is-bookmarks-url-dark");
           helper.addClass(html, "bookmarks-url-light");
         }
       };

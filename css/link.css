@@ -204,7 +204,7 @@
   text-overflow: ellipsis;
 }
 
-.bookmarks-url-dark .link-url-text {
+.is-bookmarks-url-dark .link-url-text {
   color: rgb(var(--black));
 }
 
