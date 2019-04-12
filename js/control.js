@@ -851,18 +851,9 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-header-search-show");
       };
-      if (state.get().header.search.show && state.get().header.search.width.style === "auto") {
-        helper.addClass(html, "is-header-search-width-auto");
-        helper.removeClass(html, "is-header-search-width-custom");
-      } else if (state.get().header.search.show && state.get().header.search.width.style === "custom") {
-        helper.removeClass(html, "is-header-search-width-auto");
-        helper.addClass(html, "is-header-search-width-custom");
-      };
-      if (state.get().header.search.width.style === "auto") {
-        helper.addClass(html, "is-header-search-grow");
-      } else {
-        helper.removeClass(html, "is-header-search-grow");
-      };
+      helper.removeClass(html, "is-header-search-width-custom");
+      helper.addClass(html, "is-header-search-width-auto");
+      helper.addClass(html, "is-header-search-width-" + state.get().header.search.width.style);
       helper.removeClass(html, "is-header-search-text-align-left");
       helper.removeClass(html, "is-header-search-text-align-center");
       helper.removeClass(html, "is-header-search-text-align-right");

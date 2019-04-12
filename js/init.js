@@ -47,9 +47,6 @@ tip.init();
 // render page title
 layout.init();
 
-// render header height padding
-header.init();
-
 // render background image
 background.init();
 
@@ -60,3 +57,6 @@ search.init();
 
 // render page title
 title.init();
+
+// render header height padding
+header.init();
