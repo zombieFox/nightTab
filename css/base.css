@@ -67,7 +67,7 @@
   --header-shade-color: transparent;
   --header-shade-opacity: none;
   --header-height: 0;
-  --header-search-width: 30%;
+  --header-search-width: 0%;
   --header-shade-padding-top: calc(var(--line-width) * var(--header-shade-padding-multiplier-top));
   --header-shade-padding-bottom: calc(var(--line-width) * var(--header-shade-padding-multiplier-bottom));
   --header-shade-padding-multiplier-top: 4;

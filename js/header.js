@@ -12,6 +12,9 @@ var header = (function() {
         render();
       }, false);
     });
+    document.fonts.ready.then(function() {
+      render();
+    });
   };
 
   var edge = function(action) {

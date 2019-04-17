@@ -288,6 +288,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
+      header.render();
     }
   }, {
     element: helper.e(".control-header-accent-show"),
@@ -295,6 +296,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
+      header.render();
     }
   }, {
     element: helper.e(".control-layout-alignment-horizontal-left"),
@@ -852,7 +854,7 @@ var control = (function() {
         helper.removeClass(html, "is-header-search-show");
       };
       helper.removeClass(html, "is-header-search-width-custom");
-      helper.addClass(html, "is-header-search-width-auto");
+      helper.removeClass(html, "is-header-search-width-auto");
       helper.addClass(html, "is-header-search-width-" + state.get().header.search.width.style);
       helper.removeClass(html, "is-header-search-text-align-left");
       helper.removeClass(html, "is-header-search-text-align-center");

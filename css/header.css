@@ -105,6 +105,10 @@
   justify-content: flex-end;
 }
 
+.header-search {
+  width: var(--header-search-width);
+}
+
 .is-header-search-width-auto .header-search {
   flex-grow: 1;
 }
