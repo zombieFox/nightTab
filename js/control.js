@@ -89,15 +89,48 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-show-day"),
-    path: "header.date.show.day",
+    element: helper.e(".control-header-date-day-show"),
+    path: "header.date.day.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
-      date.clear();
-      date.render();
-      header.render();
+      // render();
+      // dependents();
+      // date.clear();
+      // date.render();
+      // header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-day-display-number"),
+    path: "header.date.day.display",
+    type: "radio",
+    func: function() {
+      // render();
+      // dependents();
+      // date.clear();
+      // date.render();
+      // header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-day-display-word"),
+    path: "header.date.day.display",
+    type: "radio",
+    func: function() {
+      // render();
+      // dependents();
+      // date.clear();
+      // date.render();
+      // header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-day-length"),
+    path: "header.date.day.length",
+    type: "number",
+    func: function() {
+      // render();
+      // dependents();
+      // date.clear();
+      // date.render();
+      // header.render();
     }
   }, {
     element: helper.e(".control-header-date-show-date"),
@@ -741,6 +774,7 @@ var control = (function() {
       checkbox: "change",
       radio: "change",
       text: "input",
+      number: "input",
       range: "input",
       color: "change"
     };
@@ -753,6 +787,9 @@ var control = (function() {
       },
       text: function(object) {
         return object.element.value;
+      },
+      number: function(object) {
+        return parseInt(object.element.value, 10);
       },
       range: function(object) {
         return parseInt(object.element.value, 10);
@@ -782,10 +819,10 @@ var control = (function() {
           path: object.path,
           newValue: newValue
         });
-        // console.log(object.path, helper.getObject({
-        //   object: state.get(),
-        //   path: object.path
-        // }));
+        console.log(object.path, helper.getObject({
+          object: state.get(),
+          path: object.path
+        }));
       };
     };
     var bindControl = function(object) {
@@ -1269,6 +1306,12 @@ var control = (function() {
         })).checked = true;
       },
       text: function(object) {
+        object.element.value = helper.getObject({
+          object: state.get(),
+          path: object.path
+        });
+      },
+      number: function(object) {
         object.element.value = helper.getObject({
           object: state.get(),
           path: object.path

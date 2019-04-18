@@ -62,7 +62,7 @@
           </button>
         </div>
         <div class="header-item header-edit-add">
-          <div class="button-group nested-button mb-0">
+          <div class="form-group nested-button mb-0">
             <div class="checkbox-wrap">
               <input id="control-edit" class="control-edit" type="checkbox" tabindex="1">
               <label for="control-edit" class="button input-label-button">
@@ -169,8 +169,29 @@
           <div class="menu-item">
             <h1 class="menu-header">Date</h1>
             <div class="checkbox-wrap">
-              <input id="control-header-date-show-day" class="control-header-date-show-day" type="checkbox" tabindex="1">
-              <label for="control-header-date-show-day"><span class="label-icon"></span>Day</label>
+              <input id="control-header-date-day-show" class="control-header-date-day-show" type="checkbox" tabindex="1">
+              <label for="control-header-date-day-show"><span class="label-icon"></span>Day</label>
+            </div>
+            <div class="radio-wrap form-indent-1">
+              <input id="control-header-date-day-display-number" class="control-header-date-day-display-number" type="radio" name="control-header-date-day-display" value="number" tabindex="1">
+              <label for="control-header-date-day-display-number"><span class="label-icon"></span>Number</label>
+            </div>
+            <div class="radio-wrap form-indent-1">
+              <input id="control-header-date-day-display-word" class="control-header-date-day-display-word" type="radio" name="control-header-date-day-display" value="word" tabindex="1">
+              <label for="control-header-date-day-display-word"><span class="label-icon"></span>Word</label>
+            </div>
+            <div class="input-wrap form-indent-2">
+              <label for="control-header-date-day-length">Length</label>
+              <div class="form-group">
+                <button class="button button-small" tabindex="1">
+                  <span class="icon-remove"></span>
+                </button>
+                <input id="control-header-date-day-length" class="control-header-date-day-length mb-0" type="number" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Characters to show" tabindex="1" min="1">
+                <button class="button button-small" tabindex="1">
+                  <span class="icon-add"></span>
+                </button>
+              </div>
+              <p class="input-helper small muted">Leave empty to show full text.</p>
             </div>
             <div class="checkbox-wrap">
               <input id="control-header-date-show-date" class="control-header-date-show-date" type="checkbox" tabindex="1">

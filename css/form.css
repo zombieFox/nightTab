@@ -22,6 +22,16 @@ input[type="text"] {
   -moz-appearance: textfield;
 }
 
+input[type="number"] {
+  text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 input[type="email"]:hover,
 input[type="number"]:hover,
 input[type="password"]:hover,
@@ -573,4 +583,76 @@ input[type="range"][disabled]:focus::-moz-range-thumb {
 
 input[type="range"][disabled]::-moz-range-progress {
   background-color: rgb(var(--gray-08));
+}
+
+.form-group {
+  margin: 0 0 1em 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+.form-group button,
+.form-group .button,
+.form-group>input[type="email"],
+.form-group>input[type="number"],
+.form-group>input[type="password"],
+.form-group>input[type="search"],
+.form-group>input[type="tel"],
+.form-group>input[type="text"] {
+  margin: 0;
+  border-radius: 0;
+}
+
+.form-group>input[type="email"],
+.form-group>input[type="number"],
+.form-group>input[type="password"],
+.form-group>input[type="search"],
+.form-group>input[type="tel"],
+.form-group>input[type="text"] {
+  padding: 0 0.5em;
+}
+
+.form-group>* {
+  z-index: 1;
+}
+
+.form-group>*:hover {
+  z-index: 2;
+}
+
+.form-group>*:active,
+.form-group>*:focus {
+  z-index: 3;
+}
+
+.form-group>button:first-child,
+.form-group>.button:first-child,
+.form-group>input[type="email"]:first-child,
+.form-group>input[type="number"]:first-child,
+.form-group>input[type="password"]:first-child,
+.form-group>input[type="search"]:first-child,
+.form-group>input[type="tel"]:first-child,
+.form-group>input[type="text"]:first-child {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.form-group>button:last-child,
+.form-group>.button:last-child,
+.form-group>input[type="email"]:last-child,
+.form-group>input[type="number"]:last-child,
+.form-group>input[type="password"]:last-child,
+.form-group>input[type="search"]:last-child,
+.form-group>input[type="tel"]:last-child,
+.form-group>input[type="text"]:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.form-group.nested-button *:first-child .button {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.form-group.nested-button *:last-child .button {
+  border-radius: 0 var(--radius) var(--radius) 0;
 }

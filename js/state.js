@@ -13,6 +13,11 @@ var state = (function() {
         }
       },
       date: {
+        day: {
+          show: true,
+          display: "word",
+          length: 3
+        },
         show: {
           day: false,
           date: true,

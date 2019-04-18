@@ -96,37 +96,6 @@ button [class*=" icon-"],
   width: 100%;
 }
 
-.button-group {
-  margin: 0 0 1em 0;
-  display: inline-flex;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.button-group button,
-.button-group .button {
-  margin: 0;
-  border-radius: 0;
-}
-
-.button-group>button:first-child,
-.button-group>.button:first-child {
-  border-radius: var(--radius) 0 0 var(--radius);
-}
-
-.button-group>button:last-child,
-.button-group>.button:last-child {
-  border-radius: 0 var(--radius) var(--radius) 0;
-}
-
-.button-group.nested-button *:first-child .button {
-  border-radius: var(--radius) 0 0 var(--radius);
-}
-
-.button-group.nested-button *:last-child .button {
-  border-radius: 0 var(--radius) var(--radius) 0;
-}
-
 button [class^="button-"],
 button [class*=" button-"],
 .button [class^="button-"],
