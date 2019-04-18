@@ -145,6 +145,106 @@ var update = (function() {
     return data;
   };
 
+  var _update_2110 = function(data) {
+    data.state.header.greeting = {
+      show: false,
+      type: "good",
+      name: ""
+    };
+    data.version = "2.11.0";
+    return data;
+  };
+
+  var _update_2110 = function(data) {
+    data.state.header.greeting = {
+      show: false,
+      type: "good",
+      name: ""
+    };
+    data.version = "2.11.0";
+    return data;
+  };
+
+  var _update_2120 = function(data) {
+    data.state.bookmarks.link = {
+      show: data.state.bookmarks.show.link
+    };
+    data.state.bookmarks.name = {
+      show: data.state.bookmarks.show.name
+    };
+    data.state.bookmarks.url = {
+      show: data.state.bookmarks.show.url,
+      style: "dark"
+    };
+    delete data.state.bookmarks.show;
+    data.state.theme = {
+      accent: {
+        current: data.state.layout.theme.current,
+        random: data.state.layout.theme.random
+      },
+      style: "dark"
+    };
+    delete data.state.layout.theme;
+    data.version = "2.12.0";
+    return data;
+  };
+
+  var _update_2140 = function(data) {
+    data.state.layout.width = 72;
+    data.version = "2.14.0";
+    return data;
+  };
+
+  var _update_2160 = function(data) {
+    data.state.header.shade.padding = {
+      top: data.state.header.shade.padding,
+      bottom: data.state.header.shade.padding
+    };
+    data.state.header.shade.border = {
+      top: {
+        show: data.state.header.shade.border.top,
+        width: 1
+      },
+      bottom: {
+        show: data.state.header.shade.border.bottom,
+        width: 1
+      }
+    };
+    data.version = "2.16.0";
+    return data;
+  };
+
+  var _update_2170 = function(data) {
+    data.state.header.search.engine.google.name = "Google";
+    data.state.header.search.engine.duckduckgo.name = "Duck Duck Go";
+    data.state.header.search.engine.giphy.name = "Giphy";
+    data.version = "2.17.0";
+    return data;
+  };
+
+  var _update_2190 = function(data) {
+    data.state.header.search.engine.youtube = {
+      url: "https://www.youtube.com/results?search_query=",
+      name: "YouTube"
+    };
+    data.state.header.search.engine.custom.name = "";
+    data.version = "2.19.0";
+    return data;
+  };
+
+  var _update_2200 = function(data) {
+    data.version = "2.20.0";
+    data.state.header.search.width = {
+      style: "auto",
+      custom: 30
+    };
+    data.state.header.search.text = {
+      align: "left"
+    };
+    delete data.state.header.search.grow;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -152,129 +252,86 @@ var update = (function() {
 
   function run(data) {
     if (!("version" in data)) {
-      console.log("\t -- running update", 1.00);
+      console.log("\t= running update", 1.00);
       data = _update_100(data);
     };
     if (typeof data.version == "number") {
       if (data.version < 2.00) {
-        console.log("\t -- running update", 2.00);
+        console.log("\t= running update 2.0.0");
         data = _update_200(data);
       };
       if (data.version < 2.10) {
-        console.log("\t -- running update", 2.10);
+        console.log("\t= running update 2.1.0");
         data = _update_210(data);
       };
       if (data.version < 2.30) {
-        console.log("\t -- running update", 2.30);
+        console.log("\t= running update 2.3.0");
         data = _update_230(data);
       };
       if (data.version < 2.40) {
-        console.log("\t -- running update", 2.40);
+        console.log("\t= running update 2.4.0");
         data = _update_240(data);
       };
       if (data.version < 2.50) {
-        console.log("\t -- running update", 2.50);
+        console.log("\t= running update 2.5.0");
         data = _update_250(data);
       };
       if (data.version < 2.70) {
-        console.log("\t -- running update", 2.70);
+        console.log("\t= running update 2.7.0");
         data = _update_270(data);
       };
       if (data.version < 2.80) {
-        console.log("\t -- running update", 2.80);
+        console.log("\t= running update 2.8.0");
         data = _update_280(data);
       };
       if (data.version < 2.90) {
-        console.log("\t -- running update", 2.90);
+        console.log("\t= running update 2.9.0");
         data = _update_290(data);
       };
       if (data.version < 2.91) {
-        console.log("\t -- running update", 2.91);
+        console.log("\t= running update 2.9.1");
         data.version = 2.91;
       };
       if (data.version < 2.96) {
         // introduction of a new semantic version check function so the version is being bumped to 2.10.0 and changed to a string
-        console.log("\t -- running update", "2.10.0");
+        console.log("\t= running update 2.10.0");
         data.version = "2.10.0";
       };
     };
     if (typeof data.version == "string") {
       if (version.compare(data.version, "2.11.0") == -1) {
-        console.log("\t -- running update", "2.11.0");
-        data.state.header.greeting = {
-          show: false,
-          type: "good",
-          name: ""
-        };
-        data.version = "2.11.0";
+        console.log("\t= running update 2.11.0");
+        data = _update_2110(data);
       };
       if (version.compare(data.version, "2.12.0") == -1) {
-        console.log("\t -- running update", "2.12.0");
-        data.state.bookmarks.link = {
-          show: data.state.bookmarks.show.link
-        };
-        data.state.bookmarks.name = {
-          show: data.state.bookmarks.show.name
-        };
-        data.state.bookmarks.url = {
-          show: data.state.bookmarks.show.url,
-          style: "dark"
-        };
-        delete data.state.bookmarks.show;
-        data.state.theme = {
-          accent: {
-            current: data.state.layout.theme.current,
-            random: data.state.layout.theme.random
-          },
-          style: "dark"
-        };
-        delete data.state.layout.theme;
-        data.version = "2.12.0";
+        console.log("\t= running update 2.12.0");
+        data = _update_2120(data);
       };
       if (version.compare(data.version, "2.14.0") == -1) {
-        console.log("\t -- running update", "2.14.0");
-        data.state.layout.width = 72;
-        data.version = "2.14.0";
+        console.log("\t= running update 2.14.0");
+        data = _update_2140(data);
       };
       if (version.compare(data.version, "2.16.0") == -1) {
-        console.log("\t -- running update", "2.16.0");
-        data.state.header.shade.padding = {
-          top: data.state.header.shade.padding,
-          bottom: data.state.header.shade.padding
-        };
-        data.state.header.shade.border = {
-          top: {
-            show: data.state.header.shade.border.top,
-            width: 1
-          },
-          bottom: {
-            show: data.state.header.shade.border.bottom,
-            width: 1
-          }
-        };
-        data.version = "2.16.0";
+        console.log("\t= running update 2.16.0");
+        data = _update_2160(data);
       };
       if (version.compare(data.version, "2.17.0") == -1) {
-        console.log("\t -- running update", "2.17.0");
-        data.state.header.search.engine.google.name = "Google";
-        data.state.header.search.engine.duckduckgo.name = "Duck Duck Go";
-        data.state.header.search.engine.giphy.name = "Giphy";
-        data.version = "2.17.0";
+        console.log("\t= running update 2.17.0");
+        data = _update_2170(data);
       };
       if (version.compare(data.version, "2.19.0") == -1) {
-        console.log("\t -- running update", "2.19.0");
-        data.state.header.search.engine.youtube = {
-          url: "https://www.youtube.com/results?search_query=",
-          name: "YouTube"
-        };
-        data.state.header.search.engine.custom.name = "";
-        data.version = "2.19.0";
+        console.log("\t= running update 2.19.0");
+        data = _update_2190(data);
+      };
+      if (version.compare(data.version, "2.20.0") == -1) {
+        console.log("\t= running update 2.20.0");
+        data = _update_2200(data);
       };
     };
     // if no update is needed
     // version bump
     if (version.compare(data.version, version.get()) == -1) {
-      console.log("\t -- nothing to update, version bump to", version.get());
+      console.log("\t= nothing to update, version bump to", version.get());
       data.version = version.get();
     };
     return data;

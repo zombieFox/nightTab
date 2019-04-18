@@ -26,7 +26,10 @@ var state = (function() {
       },
       search: {
         show: true,
-        grow: true,
+        width: {
+          style: "auto",
+          custom: 30
+        },
         focus: false,
         engine: {
           selected: "google",
@@ -50,6 +53,9 @@ var state = (function() {
             url: "",
             name: ""
           }
+        },
+        text: {
+          align: "left"
         }
       },
       alignment: {

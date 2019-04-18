@@ -12,6 +12,9 @@ var header = (function() {
         render();
       }, false);
     });
+    document.fonts.ready.then(function() {
+      render();
+    });
   };
 
   var edge = function(action) {
@@ -80,6 +83,14 @@ var header = (function() {
       html.style.setProperty("--header-border-width-multiplier-top", state.get().header.shade.border.top.width);
       html.style.setProperty("--header-border-width-multiplier-bottom", state.get().header.shade.border.bottom.width);
     };
+    var _search = function() {
+      if (state.get().header.search.show && state.get().header.search.width.style === "custom") {
+        html.style.setProperty("--header-search-width", state.get().header.search.width.custom + "%");
+      } else {
+        html.style.removeProperty("--header-search-width");
+      };
+    };
+    _search();
     _color();
     _opacity();
     _padding();

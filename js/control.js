@@ -173,9 +173,27 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-search-grow"),
-    path: "header.search.grow",
-    type: "checkbox",
+    element: helper.e(".control-header-search-width-style-auto"),
+    path: "header.search.width.style",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-search-width-style-custom"),
+    path: "header.search.width.style",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-search-width-custom"),
+    path: "header.search.width.custom",
+    type: "range",
     func: function() {
       render();
       header.render();
@@ -183,8 +201,7 @@ var control = (function() {
   }, {
     element: helper.e(".control-header-search-focus"),
     path: "header.search.focus",
-    type: "checkbox",
-    func: function() {}
+    type: "checkbox"
   }, {
     element: helper.e(".control-header-search-engine-google"),
     path: "header.search.engine.selected",
@@ -245,11 +262,33 @@ var control = (function() {
       search.render();
     }
   }, {
+    element: helper.e(".control-header-search-text-align-left"),
+    path: "header.search.text.align",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-search-text-align-center"),
+    path: "header.search.text.align",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-search-text-align-right"),
+    path: "header.search.text.align",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
     element: helper.e(".control-header-edit-add-show"),
     path: "header.editAdd.show",
     type: "checkbox",
     func: function() {
       render();
+      header.render();
     }
   }, {
     element: helper.e(".control-header-accent-show"),
@@ -257,6 +296,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
+      header.render();
     }
   }, {
     element: helper.e(".control-layout-alignment-horizontal-left"),
@@ -813,11 +853,13 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-header-search-show");
       };
-      if (state.get().header.search.grow) {
-        helper.addClass(html, "is-header-search-grow");
-      } else {
-        helper.removeClass(html, "is-header-search-grow");
-      };
+      helper.removeClass(html, "is-header-search-width-custom");
+      helper.removeClass(html, "is-header-search-width-auto");
+      helper.addClass(html, "is-header-search-width-" + state.get().header.search.width.style);
+      helper.removeClass(html, "is-header-search-text-align-left");
+      helper.removeClass(html, "is-header-search-text-align-center");
+      helper.removeClass(html, "is-header-search-text-align-right");
+      helper.addClass(html, "is-header-search-text-align-" + state.get().header.search.text.align);
       helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
       helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     };
@@ -860,11 +902,11 @@ var control = (function() {
       };
       var urlText = {
         dark: function() {
-          helper.addClass(html, "bookmarks-url-dark");
+          helper.addClass(html, "is-bookmarks-url-dark");
           helper.removeClass(html, "bookmarks-url-light");
         },
         light: function() {
-          helper.removeClass(html, "bookmarks-url-dark");
+          helper.removeClass(html, "is-bookmarks-url-dark");
           helper.addClass(html, "bookmarks-url-light");
         }
       };
@@ -1021,23 +1063,39 @@ var control = (function() {
     };
     var _search = function() {
       if (state.get().header.search.show) {
-        helper.e(".control-header-search-grow").disabled = false;
+        helper.e(".control-header-search-width-label").removeAttribute("disabled");
+        helper.e(".control-header-search-width-style-auto").disabled = false;
+        helper.e(".control-header-search-width-style-custom").disabled = false;
+        helper.e("[for=control-header-search-width-custom]").removeAttribute("disabled");
+        helper.e(".control-header-search-width-custom").disabled = false;
         helper.e(".control-header-search-focus").disabled = false;
+        helper.e(".control-header-search-engine-label").removeAttribute("disabled");
         helper.e(".control-header-search-engine-google").disabled = false;
         helper.e(".control-header-search-engine-duckduckgo").disabled = false;
         helper.e(".control-header-search-engine-youtube").disabled = false;
         helper.e(".control-header-search-engine-giphy").disabled = false;
         helper.e(".control-header-search-engine-custom").disabled = false;
-        helper.e(".control-header-search-engine-label").removeAttribute("disabled");
+        helper.e(".control-header-search-text-align-label").removeAttribute("disabled");
+        helper.e(".control-header-search-text-align-left").disabled = false;
+        helper.e(".control-header-search-text-align-center").disabled = false;
+        helper.e(".control-header-search-text-align-right").disabled = false;
       } else {
-        helper.e(".control-header-search-grow").disabled = true;
+        helper.e(".control-header-search-width-label").setAttribute("disabled", "");
+        helper.e(".control-header-search-width-style-auto").disabled = true;
+        helper.e(".control-header-search-width-style-custom").disabled = true;
+        helper.e("[for=control-header-search-width-custom]").setAttribute("disabled", "");
+        helper.e(".control-header-search-width-custom").disabled = true;
         helper.e(".control-header-search-focus").disabled = true;
+        helper.e(".control-header-search-engine-label").setAttribute("disabled", "");
         helper.e(".control-header-search-engine-google").disabled = true;
         helper.e(".control-header-search-engine-duckduckgo").disabled = true;
         helper.e(".control-header-search-engine-youtube").disabled = true;
         helper.e(".control-header-search-engine-giphy").disabled = true;
         helper.e(".control-header-search-engine-custom").disabled = true;
-        helper.e(".control-header-search-engine-label").setAttribute("disabled", "");
+        helper.e(".control-header-search-text-align-label").setAttribute("disabled", "");
+        helper.e(".control-header-search-text-align-left").disabled = true;
+        helper.e(".control-header-search-text-align-center").disabled = true;
+        helper.e(".control-header-search-text-align-right").disabled = true;
       };
       if (state.get().header.search.show && state.get().header.search.engine.selected === "custom") {
         helper.e("[for=control-header-search-engine-custom-name]").removeAttribute("disabled");
@@ -1049,6 +1107,13 @@ var control = (function() {
         helper.e(".control-header-search-engine-custom-name").disabled = true;
         helper.e("[for=control-header-search-engine-custom-url]").setAttribute("disabled", "");
         helper.e(".control-header-search-engine-custom-url").disabled = true;
+      };
+      if (state.get().header.search.show && state.get().header.search.width.style === "custom") {
+        helper.e("[for=control-header-search-width-custom]").removeAttribute("disabled");
+        helper.e(".control-header-search-width-custom").disabled = false;
+      } else {
+        helper.e("[for=control-header-search-width-custom]").setAttribute("disabled", "");
+        helper.e(".control-header-search-width-custom").disabled = true;
       };
     };
     var _theme = function() {
