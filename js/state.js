@@ -16,7 +16,25 @@ var state = (function() {
         day: {
           show: true,
           display: "word",
-          length: 3
+          weekStart: "monday"
+        },
+        date: {
+          show: true,
+          display: "number"
+        },
+        month: {
+          show: true,
+          display: "word"
+        },
+        year: {
+          show: true,
+          display: "number"
+        },
+        separator: {
+          show: true
+        },
+        character: {
+          length: "short"
         },
         show: {
           day: false,
@@ -24,9 +42,6 @@ var state = (function() {
           month: true,
           year: false,
           separator: true
-        },
-        character: {
-          length: "short"
         }
       },
       search: {

@@ -207,22 +207,13 @@ input[type="color"]+.input-label-button:before {
   position: relative;
 }
 
-.form-indent-1,
-.form-indent-1,
-.form-indent-1 {
+.form-indent {
   margin-left: 2.25em;
 }
 
-.form-indent-2,
-.form-indent-2,
-.form-indent-2 {
-  margin-left: 4.5em;
-}
-
-.form-indent-3,
-.form-indent-3,
-.form-indent-3 {
-  margin-left: 6.75em;
+.form-inline {
+  display: inline-block;
+  margin-right: 1.5em;
 }
 
 input[type="checkbox"],
@@ -614,16 +605,36 @@ input[type="range"][disabled]::-moz-range-progress {
   padding: 0 0.5em;
 }
 
-.form-group>* {
+.form-group>input[type="email"],
+.form-group>input[type="number"],
+.form-group>input[type="password"],
+.form-group>input[type="search"],
+.form-group>input[type="tel"],
+.form-group>input[type="text"] {
   z-index: 1;
 }
 
-.form-group>*:hover {
+.form-group>input[type="email"]:hover,
+.form-group>input[type="number"]:hover,
+.form-group>input[type="password"]:hover,
+.form-group>input[type="search"]:hover,
+.form-group>input[type="tel"]:hover,
+.form-group>input[type="text"]:hover {
   z-index: 2;
 }
 
-.form-group>*:active,
-.form-group>*:focus {
+.form-group>input[type="email"]:active,
+.form-group>input[type="email"]:focus,
+.form-group>input[type="number"]:active,
+.form-group>input[type="number"]:focus,
+.form-group>input[type="password"]:active,
+.form-group>input[type="password"]:focus,
+.form-group>input[type="search"]:active,
+.form-group>input[type="search"]:focus,
+.form-group>input[type="tel"]:active,
+.form-group>input[type="tel"]:focus,
+.form-group>input[type="text"]:active,
+.form-group>input[type="text"]:focus {
   z-index: 3;
 }
 

@@ -93,48 +93,59 @@ var control = (function() {
     path: "header.date.day.show",
     type: "checkbox",
     func: function() {
-      // render();
-      // dependents();
-      // date.clear();
-      // date.render();
-      // header.render();
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-display-number"),
     path: "header.date.day.display",
     type: "radio",
     func: function() {
-      // render();
-      // dependents();
-      // date.clear();
-      // date.render();
-      // header.render();
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-day-week-start-monday"),
+    path: "header.date.day.weekStart",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-day-week-start-sunday"),
+    path: "header.date.day.weekStart",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-display-word"),
     path: "header.date.day.display",
     type: "radio",
     func: function() {
-      // render();
-      // dependents();
-      // date.clear();
-      // date.render();
-      // header.render();
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
     }
   }, {
-    element: helper.e(".control-header-date-day-length"),
-    path: "header.date.day.length",
-    type: "number",
-    func: function() {
-      // render();
-      // dependents();
-      // date.clear();
-      // date.render();
-      // header.render();
-    }
-  }, {
-    element: helper.e(".control-header-date-show-date"),
-    path: "header.date.show.date",
+    element: helper.e(".control-header-date-date-show"),
+    path: "header.date.date.show",
     type: "checkbox",
     func: function() {
       render();
@@ -144,8 +155,30 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-show-month"),
-    path: "header.date.show.month",
+    element: helper.e(".control-header-date-date-display-number"),
+    path: "header.date.date.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-date-display-word"),
+    path: "header.date.date.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-month-show"),
+    path: "header.date.month.show",
     type: "checkbox",
     func: function() {
       render();
@@ -155,8 +188,30 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-show-year"),
-    path: "header.date.show.year",
+    element: helper.e(".control-header-date-month-display-number"),
+    path: "header.date.month.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-month-display-word"),
+    path: "header.date.month.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-year-show"),
+    path: "header.date.year.show",
     type: "checkbox",
     func: function() {
       render();
@@ -166,8 +221,30 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-show-separator"),
-    path: "header.date.show.separator",
+    element: helper.e(".control-header-date-year-display-number"),
+    path: "header.date.year.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-year-display-word"),
+    path: "header.date.year.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-separator-show"),
+    path: "header.date.separator.show",
     type: "checkbox",
     func: function() {
       render();
@@ -871,7 +948,7 @@ var control = (function() {
       };
     };
     var _date = function() {
-      if (state.get().header.date.show.date || state.get().header.date.show.day || state.get().header.date.show.month || state.get().header.date.show.year) {
+      if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show) {
         helper.addClass(html, "is-header-date-show");
       } else {
         helper.removeClass(html, "is-header-date-show");
@@ -1038,23 +1115,62 @@ var control = (function() {
     };
     var _date = function() {
       var activeCount = 0;
-      var toCheck = [state.get().header.date.show.date, state.get().header.date.show.day, state.get().header.date.show.month, state.get().header.date.show.year];
+      var toCheck = [state.get().header.date.day.show, state.get().header.date.date.show, state.get().header.date.month.show, state.get().header.date.year.show];
       toCheck.forEach(function(arrayItem, index) {
         if (arrayItem == true) {
           activeCount++;
         };
       });
-      if (activeCount >= 2 && (state.get().header.date.show.date || state.get().header.date.show.day || state.get().header.date.show.month || state.get().header.date.show.year)) {
-        helper.e(".control-header-date-show-separator").disabled = false;
+      if (activeCount >= 2 && (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show)) {
+        helper.e(".control-header-date-separator-show").disabled = false;
       } else {
-        helper.e(".control-header-date-show-separator").disabled = true;
+        helper.e(".control-header-date-separator-show").disabled = true;
       };
-      if (state.get().header.date.show.day || state.get().header.date.show.month) {
+      if (state.get().header.date.day.show) {
+        helper.e(".control-header-date-day-display-number").disabled = false;
+        helper.e(".control-header-date-day-display-word").disabled = false;
+      } else {
+        helper.e(".control-header-date-day-display-number").disabled = true;
+        helper.e(".control-header-date-day-display-word").disabled = true;
+      };
+      if (state.get().header.date.date.show) {
+        helper.e(".control-header-date-date-display-number").disabled = false;
+        helper.e(".control-header-date-date-display-word").disabled = false;
+      } else {
+        helper.e(".control-header-date-date-display-number").disabled = true;
+        helper.e(".control-header-date-date-display-word").disabled = true;
+      };
+      if (state.get().header.date.month.show) {
+        helper.e(".control-header-date-month-display-number").disabled = false;
+        helper.e(".control-header-date-month-display-word").disabled = false;
+      } else {
+        helper.e(".control-header-date-month-display-number").disabled = true;
+        helper.e(".control-header-date-month-display-word").disabled = true;
+      };
+      if (state.get().header.date.year.show) {
+        helper.e(".control-header-date-year-display-number").disabled = false;
+        helper.e(".control-header-date-year-display-word").disabled = false;
+      } else {
+        helper.e(".control-header-date-year-display-number").disabled = true;
+        helper.e(".control-header-date-year-display-word").disabled = true;
+      };
+      if ((state.get().header.date.day.show && state.get().header.date.day.display == "word") || (state.get().header.date.date.show && state.get().header.date.date.display == "word") || (state.get().header.date.month.show && state.get().header.date.month.display == "word") || (state.get().header.date.year.show && state.get().header.date.year.display == "word")) {
+        helper.e(".control-header-date-character-length-label").removeAttribute("disabled");
         helper.e(".control-header-date-character-length-short").disabled = false;
         helper.e(".control-header-date-character-length-long").disabled = false;
       } else {
+        helper.e(".control-header-date-character-length-label").setAttribute("disabled", "");
         helper.e(".control-header-date-character-length-short").disabled = true;
         helper.e(".control-header-date-character-length-long").disabled = true;
+      };
+      if (state.get().header.date.day.show && state.get().header.date.day.display == "number") {
+        helper.e(".control-header-date-day-week-start-label").removeAttribute("disabled");
+        helper.e(".control-header-date-day-week-start-monday").disabled = false;
+        helper.e(".control-header-date-day-week-start-sunday").disabled = false;
+      } else {
+        helper.e(".control-header-date-day-week-start-label").setAttribute("disabled", "");
+        helper.e(".control-header-date-day-week-start-monday").disabled = true;
+        helper.e(".control-header-date-day-week-start-sunday").disabled = true;
       };
     };
     var _greeting = function() {
