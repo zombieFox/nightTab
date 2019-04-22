@@ -29,19 +29,6 @@ var date = (function() {
     return all[index];
   };
 
-  var _numberToWords = function(number) {
-    var a = ["", "One ", "Two ", "Three ", "Four ", "Five ", "Six ", "Seven ", "Eight ", "Nine ", "Ten ", "Eleven ", "Twelve ", "Thirteen ", "Fourteen ", "Fifteen ", "Sixteen ", "Seventeen ", "Eighteen ", "Nineteen "];
-    var b = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
-    var n = ("000000000" + number).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
-    var string = "";
-    string += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + " " + a[n[1][1]]) + "Crore " : "";
-    string += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + " " + a[n[2][1]]) + "Lakh " : "";
-    string += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + " " + a[n[3][1]]) + "Thousand " : "";
-    string += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + " " + a[n[4][1]]) + "Hundred " : "";
-    string += (n[5] != 0) ? ((string != "") ? "and " : "") + (a[Number(n[5])] || b[n[5][0]] + " " + a[n[5][1]]) : "";
-    return string.trim();
-  };
-
   var render = function() {
     var _date = function() {
       var date = helper.e(".date");
@@ -63,7 +50,7 @@ var date = (function() {
         },
         date: {
           word: function(value) {
-            return _numberToWords(value);
+            return helper.toWords(value);
           },
           number: function(value) {
             return value;
@@ -79,10 +66,10 @@ var date = (function() {
         },
         year: {
           word: function(value) {
-            return value;
+            return helper.toWords(value);
           },
           number: function(value) {
-            return _numberToWords(value);
+            return value;
           }
         }
       };
