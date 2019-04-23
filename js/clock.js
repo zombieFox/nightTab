@@ -42,60 +42,89 @@ var clock = (function() {
   var render = function() {
     var _clock = function() {
       var clock = helper.e(".clock");
-      var time = _makeTimeObject();
-      var sepCha = ":";
-      var hours = helper.makeNode({
+      var timeObject = _makeTimeObject();
+      var action = {
+        hours: {
+          word: function(value) {
+            return helper.toWords(value);
+          },
+          number: function(value) {
+            return value;
+          }
+        },
+        minutes: {
+          word: function(value) {
+            return helper.toWords(value);
+          },
+          number: function(value) {
+            return value;
+          }
+        },
+        seconds: {
+          word: function(value) {
+            return helper.toWords(value);
+          },
+          number: function(value) {
+            return value;
+          }
+        }
+      };
+      timeObject.hours = action.hours[state.get().header.clock.hours.display](timeObject.hours);
+      timeObject.minutes = action.minutes[state.get().header.clock.minutes.display](timeObject.minutes);
+      timeObject.seconds = action.seconds[state.get().header.clock.seconds.display](timeObject.seconds);
+      var elementHours = helper.makeNode({
         tag: "span",
-        text: time.hours,
+        text: timeObject.hours,
         attr: [{
           key: "class",
           value: "clock-item clock-hours"
         }]
       });
-      var minutes = helper.makeNode({
+      var elementMinutes = helper.makeNode({
         tag: "span",
-        text: time.minutes,
+        text: timeObject.minutes,
         attr: [{
           key: "class",
           value: "clock-item clock-minutes"
         }]
       });
-      var seconds = helper.makeNode({
+      var elementSeconds = helper.makeNode({
         tag: "span",
-        text: time.seconds,
+        text: timeObject.seconds,
         attr: [{
           key: "class",
           value: "clock-item clock-seconds"
         }]
       });
-      var meridiem = helper.makeNode({
+      var elementMeridiem = helper.makeNode({
         tag: "span",
-        text: time.meridiem,
+        text: timeObject.meridiem,
         attr: [{
           key: "class",
           value: "clock-item clock-meridiem"
         }]
       });
-      if (state.get().header.clock.show.hours) {
-        clock.appendChild(hours);
+      if (state.get().header.clock.hours.show) {
+        clock.appendChild(elementHours);
       };
-      if (state.get().header.clock.show.minutes) {
-        clock.appendChild(minutes);
+      if (state.get().header.clock.minutes.show) {
+        clock.appendChild(elementMinutes);
       };
-      if (state.get().header.clock.show.seconds) {
-        clock.appendChild(seconds);
+      if (state.get().header.clock.seconds.show) {
+        clock.appendChild(elementSeconds);
       };
-      if (!state.get().header.clock.hour24 && state.get().header.clock.show.meridiem) {
-        clock.appendChild(meridiem);
+      if (!state.get().header.clock.hour24 && state.get().header.clock.meridiem.show) {
+        clock.appendChild(elementMeridiem);
       };
-      if (state.get().header.clock.show.separator) {
+      if (state.get().header.clock.separator.show) {
+        var separatorCharacter = ":";
         var parts = clock.querySelectorAll("span");
         if (parts.length > 1) {
           parts.forEach(function(arrayItem, index) {
             if (index > 0 && !arrayItem.classList.contains("clock-meridiem")) {
               var separator = helper.makeNode({
                 tag: "span",
-                text: sepCha,
+                text: separatorCharacter,
                 attr: [{
                   key: "class",
                   value: "clock-separator"
@@ -107,7 +136,7 @@ var clock = (function() {
         };
       };
     };
-    if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
+    if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
       _clock();
     };
   };

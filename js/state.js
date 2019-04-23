@@ -3,6 +3,24 @@ var state = (function() {
   var current = {
     header: {
       clock: {
+        hours: {
+          show: true,
+          display: "number"
+        },
+        minutes: {
+          show: true,
+          display: "number"
+        },
+        seconds: {
+          show: true,
+          display: "number"
+        },
+        separator: {
+          show: true
+        },
+        meridiem: {
+          show: true
+        },
         hour24: true,
         show: {
           hours: true,
@@ -36,14 +54,7 @@ var state = (function() {
         separator: {
           show: true
         },
-        format: "datemonth",
-        show: {
-          day: false,
-          date: true,
-          month: true,
-          year: false,
-          separator: true
-        }
+        format: "datemonth"
       },
       search: {
         show: true,

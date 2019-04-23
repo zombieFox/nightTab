@@ -62,7 +62,7 @@
 
 .menu-item {
   padding-bottom: 2em;
-  border-bottom: var(--line-width) solid rgb(var(--gray-04));
+  border-bottom: var(--line-width) solid rgb(var(--gray-06));
 }
 
 .menu-item:last-child,

@@ -15,8 +15,8 @@ var date = (function() {
   };
 
   var _makeTimeObject = function() {
-    var time = helper.getDateTime();
-    return time;
+    var date = helper.getDateTime();
+    return date;
   };
 
   var _month = function(index) {
@@ -32,7 +32,7 @@ var date = (function() {
   var render = function() {
     var _date = function() {
       var date = helper.e(".date");
-      var time = _makeTimeObject();
+      var dateObject = _makeTimeObject();
       var action = {
         day: {
           word: function(value) {
@@ -82,19 +82,19 @@ var date = (function() {
           }
         }
       };
-      time.day = action.day[state.get().header.date.day.display](time.day);
-      time.date = action.date[state.get().header.date.date.display](time.date);
-      time.month = action.month[state.get().header.date.month.display](time.month);
-      time.year = action.year[state.get().header.date.year.display](time.year);
+      dateObject.day = action.day[state.get().header.date.day.display](dateObject.day);
+      dateObject.date = action.date[state.get().header.date.date.display](dateObject.date);
+      dateObject.month = action.month[state.get().header.date.month.display](dateObject.month);
+      dateObject.year = action.year[state.get().header.date.year.display](dateObject.year);
       if (state.get().header.date.day.display == "word" && state.get().header.date.day.length == "short") {
-        time.day = time.day.substring(0, 3);
+        dateObject.day = dateObject.day.substring(0, 3);
       };
       if (state.get().header.date.month.display == "word" && state.get().header.date.month.length == "short") {
-        time.month = time.month.substring(0, 3);
+        dateObject.month = dateObject.month.substring(0, 3);
       };
       var elementDay = helper.makeNode({
         tag: "span",
-        text: time.day,
+        text: dateObject.day,
         attr: [{
           key: "class",
           value: "date-item date-day"
@@ -102,7 +102,7 @@ var date = (function() {
       });
       var elementDate = helper.makeNode({
         tag: "span",
-        text: time.date,
+        text: dateObject.date,
         attr: [{
           key: "class",
           value: "date-item date-date"
@@ -110,7 +110,7 @@ var date = (function() {
       });
       var elementMonth = helper.makeNode({
         tag: "span",
-        text: time.month,
+        text: dateObject.month,
         attr: [{
           key: "class",
           value: "date-item date-month"
@@ -118,7 +118,7 @@ var date = (function() {
       });
       var elementyear = helper.makeNode({
         tag: "span",
-        text: time.year,
+        text: dateObject.year,
         attr: [{
           key: "class",
           value: "date-item date-year"

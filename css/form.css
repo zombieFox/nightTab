@@ -94,7 +94,8 @@ input[type="number"][disabled]~.input-helper,
 input[type="password"][disabled]~.input-helper,
 input[type="search"][disabled]~.input-helper,
 input[type="tel"][disabled]~.input-helper,
-input[type="text"][disabled]~.input-helper {
+input[type="text"][disabled]~.input-helper,
+input[type="range"][disabled]~.input-helper {
   color: rgb(var(--form-input-text-disabled-helper-text));
 }
 

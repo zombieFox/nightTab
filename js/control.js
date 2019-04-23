@@ -27,8 +27,8 @@ var control = (function() {
       accent.render();
     }
   }, {
-    element: helper.e(".control-header-clock-show-hours"),
-    path: "header.clock.show.hours",
+    element: helper.e(".control-header-clock-hours-show"),
+    path: "header.clock.hours.show",
     type: "checkbox",
     func: function() {
       render();
@@ -38,8 +38,30 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-clock-show-minutes"),
-    path: "header.clock.show.minutes",
+    element: helper.e(".control-header-clock-hours-number"),
+    path: "header.clock.hours.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-hours-word"),
+    path: "header.clock.hours.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-minutes-show"),
+    path: "header.clock.minutes.show",
     type: "checkbox",
     func: function() {
       render();
@@ -49,8 +71,30 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-clock-show-seconds"),
-    path: "header.clock.show.seconds",
+    element: helper.e(".control-header-clock-minutes-number"),
+    path: "header.clock.minutes.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-minutes-word"),
+    path: "header.clock.minutes.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-seconds-show"),
+    path: "header.clock.seconds.show",
     type: "checkbox",
     func: function() {
       render();
@@ -60,8 +104,30 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-clock-show-separator"),
-    path: "header.clock.show.separator",
+    element: helper.e(".control-header-clock-seconds-number"),
+    path: "header.clock.seconds.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-seconds-word"),
+    path: "header.clock.seconds.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-separator-show"),
+    path: "header.clock.separator.show",
     type: "checkbox",
     func: function() {
       clock.clear();
@@ -79,8 +145,8 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-clock-show-meridiem"),
-    path: "header.clock.show.meridiem",
+    element: helper.e(".control-header-clock-meridiem-show"),
+    path: "header.clock.meridiem.show",
     type: "checkbox",
     func: function() {
       dependents();
@@ -111,6 +177,17 @@ var control = (function() {
       header.render();
     }
   }, {
+    element: helper.e(".control-header-date-day-display-word"),
+    path: "header.date.day.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
     element: helper.e(".control-header-date-day-week-start-monday"),
     path: "header.date.day.weekStart",
     type: "radio",
@@ -124,17 +201,6 @@ var control = (function() {
   }, {
     element: helper.e(".control-header-date-day-week-start-sunday"),
     path: "header.date.day.weekStart",
-    type: "radio",
-    func: function() {
-      render();
-      dependents();
-      date.clear();
-      date.render();
-      header.render();
-    }
-  }, {
-    element: helper.e(".control-header-date-day-display-word"),
-    path: "header.date.day.display",
     type: "radio",
     func: function() {
       render();
@@ -1008,7 +1074,7 @@ var control = (function() {
       };
     };
     var _clock = function() {
-      if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
+      if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
         helper.addClass(html, "is-header-clock-show");
       } else {
         helper.removeClass(html, "is-header-clock-show");
@@ -1263,28 +1329,49 @@ var control = (function() {
     };
     var _clock = function() {
       var activeCount = 0;
-      var toCheck = [state.get().header.clock.show.seconds, state.get().header.clock.show.minutes, state.get().header.clock.show.hours];
+      var toCheck = [state.get().header.clock.seconds.show, state.get().header.clock.minutes.show, state.get().header.clock.hours.show];
       toCheck.forEach(function(arrayItem, index) {
         if (arrayItem == true) {
           activeCount++;
         };
       });
-      if (activeCount >= 2 && (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours)) {
-        helper.e(".control-header-clock-show-separator").disabled = false;
+      if (activeCount >= 2 && (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
+        helper.e(".control-header-clock-separator-show").disabled = false;
       } else {
-        helper.e(".control-header-clock-show-separator").disabled = true;
+        helper.e(".control-header-clock-separator-show").disabled = true;
       };
-      if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
+      if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
         helper.e(".control-header-clock-24").disabled = false;
-        helper.e(".control-header-clock-show-meridiem").disabled = false;
+        helper.e(".control-header-clock-meridiem-show").disabled = false;
       } else {
         helper.e(".control-header-clock-24").disabled = true;
-        helper.e(".control-header-clock-show-meridiem").disabled = true;
+        helper.e(".control-header-clock-meridiem-show").disabled = true;
       };
-      if ((state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) && !state.get().header.clock.hour24) {
-        helper.e(".control-header-clock-show-meridiem").disabled = false;
+      if ((state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) && !state.get().header.clock.hour24) {
+        helper.e(".control-header-clock-meridiem-show").disabled = false;
       } else {
-        helper.e(".control-header-clock-show-meridiem").disabled = true;
+        helper.e(".control-header-clock-meridiem-show").disabled = true;
+      };
+      if (state.get().header.clock.hours.show) {
+        helper.e(".control-header-clock-hours-number").disabled = false;
+        helper.e(".control-header-clock-hours-word").disabled = false;
+      } else {
+        helper.e(".control-header-clock-hours-number").disabled = true;
+        helper.e(".control-header-clock-hours-word").disabled = true;
+      };
+      if (state.get().header.clock.minutes.show) {
+        helper.e(".control-header-clock-minutes-number").disabled = false;
+        helper.e(".control-header-clock-minutes-word").disabled = false;
+      } else {
+        helper.e(".control-header-clock-minutes-number").disabled = true;
+        helper.e(".control-header-clock-minutes-word").disabled = true;
+      };
+      if (state.get().header.clock.seconds.show) {
+        helper.e(".control-header-clock-seconds-number").disabled = false;
+        helper.e(".control-header-clock-seconds-word").disabled = false;
+      } else {
+        helper.e(".control-header-clock-seconds-number").disabled = true;
+        helper.e(".control-header-clock-seconds-word").disabled = true;
       };
     };
     var _search = function() {
