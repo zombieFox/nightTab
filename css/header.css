@@ -111,6 +111,7 @@
 
 .is-header-search-width-auto .header-search {
   flex-grow: 1;
+  min-width: 10em;
 }
 
 .is-header-search-width-custom .header-search {
