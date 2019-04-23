@@ -188,11 +188,23 @@
                 <div class="radio-wrap">
                   <input id="control-header-date-day-week-start-sunday" class="control-header-date-day-week-start-sunday" type="radio" name="control-header-date-day-week-start" value="sunday" tabindex="1">
                   <label for="control-header-date-day-week-start-sunday"><span class="label-icon"></span>Sunday</label>
+                  <p class="input-helper small muted">Define what day "1" represents, either Monday or Sunday.</p>
                 </div>
               </div>
               <div class="radio-wrap">
                 <input id="control-header-date-day-display-word" class="control-header-date-day-display-word" type="radio" name="control-header-date-day-display" value="word" tabindex="1">
                 <label for="control-header-date-day-display-word"><span class="label-icon"></span>Display as word</label>
+              </div>
+              <div class="form-indent">
+                <label class="control-header-date-day-length-label">Text length</label>
+                <div class="radio-wrap">
+                  <input id="control-header-date-day-length-long" class="control-header-date-day-length-long" type="radio" name="control-header-date-day-length" value="long" tabindex="1">
+                  <label for="control-header-date-day-length-long"><span class="label-icon"></span>Long</label>
+                </div>
+                <div class="radio-wrap">
+                  <input id="control-header-date-day-length-short" class="control-header-date-day-length-short" type="radio" name="control-header-date-day-length" value="short" tabindex="1">
+                  <label for="control-header-date-day-length-short"><span class="label-icon"></span>Short</label>
+                </div>
               </div>
             </div>
             <div class="checkbox-wrap">
@@ -208,6 +220,11 @@
                 <input id="control-header-date-date-display-word" class="control-header-date-date-display-word" type="radio" name="control-header-date-date-display" value="word" tabindex="1">
                 <label for="control-header-date-date-display-word"><span class="label-icon"></span>Display as word</label>
               </div>
+              <div class="checkbox-wrap">
+                <input id="control-header-date-date-ordinal" class="control-header-date-date-ordinal" type="checkbox" tabindex="1">
+                <label for="control-header-date-date-ordinal"><span class="label-icon"></span>Ordinal numbers</label>
+                <p class="input-helper small muted">Display date as as 1st, 2nd, 3rd, 4th etc.</p>
+              </div>
             </div>
             <div class="checkbox-wrap">
               <input id="control-header-date-month-show" class="control-header-date-month-show" type="checkbox" tabindex="1">
@@ -221,6 +238,17 @@
               <div class="radio-wrap">
                 <input id="control-header-date-month-display-word" class="control-header-date-month-display-word" type="radio" name="control-header-date-month-display" value="word" tabindex="1">
                 <label for="control-header-date-month-display-word"><span class="label-icon"></span>Display as word</label>
+              </div>
+              <div class="form-indent">
+                <label class="control-header-date-month-length-label">Text length</label>
+                <div class="radio-wrap">
+                  <input id="control-header-date-month-length-long" class="control-header-date-month-length-long" type="radio" name="control-header-date-month-length" value="long" tabindex="1">
+                  <label for="control-header-date-month-length-long"><span class="label-icon"></span>Long</label>
+                </div>
+                <div class="radio-wrap">
+                  <input id="control-header-date-month-length-short" class="control-header-date-month-length-short" type="radio" name="control-header-date-month-length" value="short" tabindex="1">
+                  <label for="control-header-date-month-length-short"><span class="label-icon"></span>Short</label>
+                </div>
               </div>
             </div>
             <div class="checkbox-wrap">
@@ -241,40 +269,15 @@
               <input id="control-header-date-separator-show" class="control-header-date-separator-show" type="checkbox" tabindex="1">
               <label for="control-header-date-separator-show"><span class="label-icon"></span>Separators</label>
             </div>
-            <label class="control-header-date-character-length-label">Text length</label>
+            <label class="control-header-date-format-label">Format</label>
             <div class="radio-wrap">
-              <input id="control-header-date-character-length-long" class="control-header-date-character-length-long" type="radio" name="control-header-date-character-length" value="long" tabindex="1">
-              <label for="control-header-date-character-length-long"><span class="label-icon"></span>Long</label>
+              <input id="control-header-date-format-datemonth" class="control-header-date-format-datemonth" type="radio" name="control-header-date-format" value="datemonth" tabindex="1">
+              <label for="control-header-date-format-datemonth"><span class="label-icon"></span>Date / Month</label>
             </div>
             <div class="radio-wrap">
-              <input id="control-header-date-character-length-short" class="control-header-date-character-length-short" type="radio" name="control-header-date-character-length" value="short" tabindex="1">
-              <label for="control-header-date-character-length-short"><span class="label-icon"></span>Short</label>
+              <input id="control-header-date-format-monthdate" class="control-header-date-format-monthdate" type="radio" name="control-header-date-format" value="monthdate" tabindex="1">
+              <label for="control-header-date-format-monthdate"><span class="label-icon"></span>Month / Date</label>
             </div>
-            <!-- <div class="input-wrap">
-              <label for="control-header-date-day-length">Length</label>
-              <div class="form-group">
-                <button class="button" tabindex="1">
-                  <span class="icon-remove"></span>
-                </button>
-                <input id="control-header-date-day-length" class="control-header-date-day-length mb-0" type="number" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Characters to show" tabindex="1" min="1">
-                <button class="button" tabindex="1">
-                  <span class="icon-add"></span>
-                </button>
-              </div>
-              <p class="input-helper small muted">Leave empty to show full text.</p>
-            </div> -->
-            <!-- <div class="checkbox-wrap">
-              <input id="control-header-date-show-date" class="control-header-date-show-date" type="checkbox" tabindex="1">
-              <label for="control-header-date-show-date"><span class="label-icon"></span>Date</label>
-            </div>
-            <div class="checkbox-wrap">
-              <input id="control-header-date-show-month" class="control-header-date-show-month" type="checkbox" tabindex="1">
-              <label for="control-header-date-show-month"><span class="label-icon"></span>Month</label>
-            </div>
-            <div class="checkbox-wrap">
-              <input id="control-header-date-show-year" class="control-header-date-show-year" type="checkbox" tabindex="1">
-              <label for="control-header-date-show-year"><span class="label-icon"></span>Year</label>
-            </div> -->
           </div>
           <div class="menu-item">
             <h1 class="menu-header">Search</h1>
@@ -283,8 +286,7 @@
               <label for="control-header-search-show"><span class="label-icon"></span>Show</label>
             </div>
             <div class="form-indent">
-
-              <label class="control-header-search-width-label">Search box size</label>
+              <label class="control-header-search-width-style-label">Search box size</label>
               <div class="radio-wrap">
                 <input id="control-header-search-width-style-auto" class="control-header-search-width-style-auto" type="radio" name="control-header-search-width" value="auto" tabindex="1">
                 <label for="control-header-search-width-style-auto"><span class="label-icon"></span>Auto</label>

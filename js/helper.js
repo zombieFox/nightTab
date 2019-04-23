@@ -408,6 +408,57 @@ var helper = (function() {
     return _generateWords(num);
   };
 
+  var ordinalWords = function(words) {
+    var endsWithDoubleZeroPattern = /(hundred|thousand|(m|b|tr|quadr)illion)$/;
+    var endsWithTeenPattern = /teen$/;
+    var endsWithYPattern = /y$/;
+    var endsWithZeroThroughTwelvePattern = /(Zero|One|Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten|Eleven|Twelve)$/;
+    var ordinalLessThanThirteen = {
+      Zero: "Zeroth",
+      One: "First",
+      Two: "Second",
+      Three: "Third",
+      Four: "Fourth",
+      Five: "Fifth",
+      Six: "Sixth",
+      Seven: "Seventh",
+      Eight: "Eighth",
+      Nine: "Ninth",
+      Ten: "Tenth",
+      Eleven: "Eleventh",
+      Twelve: "Twelfth"
+    };
+    var replaceWithOrdinalVariant = function(match, numberWord) {
+      return ordinalLessThanThirteen[numberWord];
+    };
+    // Ends with *00 (100, 1000, etc.) or *teen (13, 14, 15, 16, 17, 18, 19)
+    if (endsWithDoubleZeroPattern.test(words) || endsWithTeenPattern.test(words)) {
+      return words + "th";
+      // Ends with *y (20, 30, 40, 50, 60, 70, 80, 90)
+    } else if (endsWithYPattern.test(words)) {
+      return words.replace(endsWithYPattern, "ieth");
+      // Ends with one through twelve
+    } else if (endsWithZeroThroughTwelvePattern.test(words)) {
+      return words.replace(endsWithZeroThroughTwelvePattern, replaceWithOrdinalVariant);
+    };
+    return words;
+  };
+
+  var ordinalNumber = function(number) {
+    var j = number % 10;
+    var k = number % 100;
+    if (j == 1 && k != 11) {
+      return number + "st";
+    };
+    if (j == 2 && k != 12) {
+      return number + "nd";
+    };
+    if (j == 3 && k != 13) {
+      return number + "rd";
+    };
+    return number + "th";
+  };
+
   // exposed methods
   return {
     e: e,
@@ -427,7 +478,9 @@ var helper = (function() {
     getObject: getObject,
     makeObject: makeObject,
     randomNumber: randomNumber,
-    toWords: toWords
+    toWords: toWords,
+    ordinalWords: ordinalWords,
+    ordinalNumber: ordinalNumber
   };
 
 })();

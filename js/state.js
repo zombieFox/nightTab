@@ -16,15 +16,18 @@ var state = (function() {
         day: {
           show: true,
           display: "word",
-          weekStart: "monday"
+          weekStart: "monday",
+          length: "long"
         },
         date: {
           show: true,
-          display: "number"
+          display: "number",
+          ordinal: true
         },
         month: {
           show: true,
-          display: "word"
+          display: "word",
+          length: "long"
         },
         year: {
           show: true,
@@ -33,9 +36,7 @@ var state = (function() {
         separator: {
           show: true
         },
-        character: {
-          length: "short"
-        },
+        format: "datemonth",
         show: {
           day: false,
           date: true,

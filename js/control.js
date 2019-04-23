@@ -144,6 +144,26 @@ var control = (function() {
       header.render();
     }
   }, {
+    element: helper.e(".control-header-date-day-length-long"),
+    path: "header.date.day.length",
+    type: "radio",
+    func: function() {
+      render();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-day-length-short"),
+    path: "header.date.day.length",
+    type: "radio",
+    func: function() {
+      render();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
     element: helper.e(".control-header-date-date-show"),
     path: "header.date.date.show",
     type: "checkbox",
@@ -169,6 +189,17 @@ var control = (function() {
     element: helper.e(".control-header-date-date-display-word"),
     path: "header.date.date.display",
     type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-date-ordinal"),
+    path: "header.date.date.ordinal",
+    type: "checkbox",
     func: function() {
       render();
       dependents();
@@ -210,6 +241,26 @@ var control = (function() {
       header.render();
     }
   }, {
+    element: helper.e(".control-header-date-month-length-long"),
+    path: "header.date.month.length",
+    type: "radio",
+    func: function() {
+      render();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-month-length-short"),
+    path: "header.date.month.length",
+    type: "radio",
+    func: function() {
+      render();
+      date.clear();
+      date.render();
+      header.render();
+    }
+  }, {
     element: helper.e(".control-header-date-year-show"),
     path: "header.date.year.show",
     type: "checkbox",
@@ -243,9 +294,9 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-separator-show"),
-    path: "header.date.separator.show",
-    type: "checkbox",
+    element: helper.e(".control-header-date-format-datemonth"),
+    path: "header.date.format",
+    type: "radio",
     func: function() {
       render();
       dependents();
@@ -254,21 +305,23 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-character-length-short"),
-    path: "header.date.character.length",
+    element: helper.e(".control-header-date-format-monthdate"),
+    path: "header.date.format",
     type: "radio",
     func: function() {
       render();
+      dependents();
       date.clear();
       date.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-character-length-long"),
-    path: "header.date.character.length",
-    type: "radio",
+    element: helper.e(".control-header-date-separator-show"),
+    path: "header.date.separator.show",
+    type: "checkbox",
     func: function() {
       render();
+      dependents();
       date.clear();
       date.render();
       header.render();
@@ -1126,6 +1179,15 @@ var control = (function() {
       } else {
         helper.e(".control-header-date-separator-show").disabled = true;
       };
+      if (state.get().header.date.date.show && state.get().header.date.month.show) {
+        helper.e(".control-header-date-format-label").removeAttribute("disabled");
+        helper.e(".control-header-date-format-datemonth").disabled = false;
+        helper.e(".control-header-date-format-monthdate").disabled = false;
+      } else {
+        helper.e(".control-header-date-format-label").setAttribute("disabled", "");
+        helper.e(".control-header-date-format-datemonth").disabled = true;
+        helper.e(".control-header-date-format-monthdate").disabled = true;
+      };
       if (state.get().header.date.day.show) {
         helper.e(".control-header-date-day-display-number").disabled = false;
         helper.e(".control-header-date-day-display-word").disabled = false;
@@ -1136,9 +1198,11 @@ var control = (function() {
       if (state.get().header.date.date.show) {
         helper.e(".control-header-date-date-display-number").disabled = false;
         helper.e(".control-header-date-date-display-word").disabled = false;
+        helper.e(".control-header-date-date-ordinal").disabled = false;
       } else {
         helper.e(".control-header-date-date-display-number").disabled = true;
         helper.e(".control-header-date-date-display-word").disabled = true;
+        helper.e(".control-header-date-date-ordinal").disabled = true;
       };
       if (state.get().header.date.month.show) {
         helper.e(".control-header-date-month-display-number").disabled = false;
@@ -1154,15 +1218,6 @@ var control = (function() {
         helper.e(".control-header-date-year-display-number").disabled = true;
         helper.e(".control-header-date-year-display-word").disabled = true;
       };
-      if ((state.get().header.date.day.show && state.get().header.date.day.display == "word") || (state.get().header.date.date.show && state.get().header.date.date.display == "word") || (state.get().header.date.month.show && state.get().header.date.month.display == "word") || (state.get().header.date.year.show && state.get().header.date.year.display == "word")) {
-        helper.e(".control-header-date-character-length-label").removeAttribute("disabled");
-        helper.e(".control-header-date-character-length-short").disabled = false;
-        helper.e(".control-header-date-character-length-long").disabled = false;
-      } else {
-        helper.e(".control-header-date-character-length-label").setAttribute("disabled", "");
-        helper.e(".control-header-date-character-length-short").disabled = true;
-        helper.e(".control-header-date-character-length-long").disabled = true;
-      };
       if (state.get().header.date.day.show && state.get().header.date.day.display == "number") {
         helper.e(".control-header-date-day-week-start-label").removeAttribute("disabled");
         helper.e(".control-header-date-day-week-start-monday").disabled = false;
@@ -1171,6 +1226,24 @@ var control = (function() {
         helper.e(".control-header-date-day-week-start-label").setAttribute("disabled", "");
         helper.e(".control-header-date-day-week-start-monday").disabled = true;
         helper.e(".control-header-date-day-week-start-sunday").disabled = true;
+      };
+      if (state.get().header.date.day.show && state.get().header.date.day.display == "word") {
+        helper.e(".control-header-date-day-length-label").removeAttribute("disabled");
+        helper.e(".control-header-date-day-length-long").disabled = false;
+        helper.e(".control-header-date-day-length-short").disabled = false;
+      } else {
+        helper.e(".control-header-date-day-length-label").setAttribute("disabled", "");
+        helper.e(".control-header-date-day-length-long").disabled = true;
+        helper.e(".control-header-date-day-length-short").disabled = true;
+      };
+      if (state.get().header.date.month.show && state.get().header.date.month.display == "word") {
+        helper.e(".control-header-date-month-length-label").removeAttribute("disabled");
+        helper.e(".control-header-date-month-length-long").disabled = false;
+        helper.e(".control-header-date-month-length-short").disabled = false;
+      } else {
+        helper.e(".control-header-date-month-length-label").setAttribute("disabled", "");
+        helper.e(".control-header-date-month-length-long").disabled = true;
+        helper.e(".control-header-date-month-length-short").disabled = true;
       };
     };
     var _greeting = function() {
@@ -1216,7 +1289,7 @@ var control = (function() {
     };
     var _search = function() {
       if (state.get().header.search.show) {
-        helper.e(".control-header-search-width-label").removeAttribute("disabled");
+        helper.e(".control-header-search-width-style-label").removeAttribute("disabled");
         helper.e(".control-header-search-width-style-auto").disabled = false;
         helper.e(".control-header-search-width-style-custom").disabled = false;
         helper.e("[for=control-header-search-width-custom]").removeAttribute("disabled");
@@ -1233,7 +1306,7 @@ var control = (function() {
         helper.e(".control-header-search-text-align-center").disabled = false;
         helper.e(".control-header-search-text-align-right").disabled = false;
       } else {
-        helper.e(".control-header-search-width-label").setAttribute("disabled", "");
+        helper.e(".control-header-search-width-style-label").setAttribute("disabled", "");
         helper.e(".control-header-search-width-style-auto").disabled = true;
         helper.e(".control-header-search-width-style-custom").disabled = true;
         helper.e("[for=control-header-search-width-custom]").setAttribute("disabled", "");
