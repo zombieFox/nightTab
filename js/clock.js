@@ -46,7 +46,11 @@ var clock = (function() {
       var action = {
         hours: {
           word: function(value) {
-            return helper.toWords(value);
+            if (state.get().header.clock.hour24 && value < 10) {
+              return "Zero " + helper.toWords(value);
+            } else {
+              return helper.toWords(value);
+            };
           },
           number: function(value) {
             return value;
@@ -54,7 +58,11 @@ var clock = (function() {
         },
         minutes: {
           word: function(value) {
-            return helper.toWords(value);
+            if (value < 10) {
+              return "Zero " + helper.toWords(value);
+            } else {
+              return helper.toWords(value);
+            };
           },
           number: function(value) {
             return value;

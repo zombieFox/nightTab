@@ -360,7 +360,7 @@ var helper = (function() {
         words = arguments[1];
       // We’re done
       if (number === 0) {
-        return !words ? "zero" : words.join(" ").replace(/,$/, "");
+        return !words ? "Zero" : words.join(" ").replace(/,$/, "");
       };
       // First run
       if (!words) {

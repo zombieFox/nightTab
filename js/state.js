@@ -21,14 +21,7 @@ var state = (function() {
         meridiem: {
           show: true
         },
-        hour24: true,
-        show: {
-          hours: true,
-          minutes: true,
-          seconds: true,
-          separator: true,
-          meridiem: true
-        }
+        hour24: true
       },
       date: {
         day: {
@@ -120,9 +113,15 @@ var state = (function() {
         }
       },
       greeting: {
-        show: false,
-        type: "good",
-        name: ""
+        message: {
+          show: false,
+          type: "good",
+          name: ""
+        },
+        transitional: {
+          show: false,
+          type: "timeanddate"
+        }
       }
     },
     bookmarks: {

@@ -30,9 +30,36 @@ var greeting = (function() {
           return message[Math.floor(time.hours / 6)];
         }
       };
-      var greetingMessage = message[state.get().header.greeting.type]();
-      if (state.get().header.greeting.name != "" && state.get().header.greeting.name != undefined) {
-        greetingMessage = greetingMessage + ", " + state.get().header.greeting.name;
+      var transitional = {
+        timeanddate: function() {
+          if ((state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show) && (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
+            if (state.get().header.date.day.show && !state.get().header.date.date.show && !state.get().header.date.month.show && !state.get().header.date.year.show) {
+              return "the time and day is";
+            } else {
+              return "the time and date is";
+            };
+          } else if (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show) {
+            if (state.get().header.date.day.show && !state.get().header.date.date.show && !state.get().header.date.month.show && !state.get().header.date.year.show) {
+              return "the day is";
+            } else {
+              return "the date is";
+            };
+          } else if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+            return "the time is";
+          };
+        },
+        its: function() {
+          return "it's";
+        }
+      };
+      var greetingMessage = message[state.get().header.greeting.message.type]();
+      if (state.get().header.greeting.message.name != "" && state.get().header.greeting.message.name != undefined) {
+        greetingMessage = greetingMessage + ", " + state.get().header.greeting.message.name;
+      };
+      if (state.get().header.greeting.transitional.show) {
+        if ((state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show) || (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
+          greetingMessage = greetingMessage + ", " + transitional[state.get().header.greeting.transitional.type]();
+        };
       };
       var greetingItem = helper.makeNode({
         tag: "span",
@@ -52,7 +79,7 @@ var greeting = (function() {
       greetingItem.appendChild(greetingItemText);
       greeting.appendChild(greetingItem);
     };
-    if (state.get().header.greeting.show) {
+    if (state.get().header.greeting.message.show) {
       _greeting();
     };
   };

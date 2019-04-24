@@ -35,6 +35,8 @@ var control = (function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -46,6 +48,8 @@ var control = (function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -57,6 +61,8 @@ var control = (function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -68,6 +74,8 @@ var control = (function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -79,6 +87,8 @@ var control = (function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -90,6 +100,8 @@ var control = (function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -101,6 +113,8 @@ var control = (function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -112,6 +126,8 @@ var control = (function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -123,6 +139,8 @@ var control = (function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -132,6 +150,8 @@ var control = (function() {
     func: function() {
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -142,6 +162,8 @@ var control = (function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -152,6 +174,8 @@ var control = (function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -163,6 +187,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -174,6 +200,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -185,6 +213,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -196,6 +226,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -207,6 +239,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -217,6 +251,8 @@ var control = (function() {
       render();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -227,6 +263,8 @@ var control = (function() {
       render();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -238,6 +276,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -249,6 +289,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -260,6 +302,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -271,6 +315,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -282,6 +328,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -293,6 +341,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -304,6 +354,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -314,6 +366,8 @@ var control = (function() {
       render();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -324,6 +378,8 @@ var control = (function() {
       render();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -335,6 +391,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -346,6 +404,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -357,6 +417,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -368,6 +430,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -379,6 +443,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -390,6 +456,8 @@ var control = (function() {
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
@@ -692,8 +760,8 @@ var control = (function() {
       dependents();
     }
   }, {
-    element: helper.e(".control-header-greeting-show"),
-    path: "header.greeting.show",
+    element: helper.e(".control-header-greeting-message-show"),
+    path: "header.greeting.message.show",
     type: "checkbox",
     func: function() {
       render();
@@ -703,8 +771,8 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-greeting-type-good"),
-    path: "header.greeting.type",
+    element: helper.e(".control-header-greeting-message-type-good"),
+    path: "header.greeting.message.type",
     type: "radio",
     func: function() {
       render();
@@ -714,8 +782,8 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-greeting-type-hello"),
-    path: "header.greeting.type",
+    element: helper.e(".control-header-greeting-message-type-hello"),
+    path: "header.greeting.message.type",
     type: "radio",
     func: function() {
       render();
@@ -725,8 +793,8 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-greeting-type-hi"),
-    path: "header.greeting.type",
+    element: helper.e(".control-header-greeting-message-type-hi"),
+    path: "header.greeting.message.type",
     type: "radio",
     func: function() {
       render();
@@ -736,9 +804,42 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-greeting-name"),
-    path: "header.greeting.name",
+    element: helper.e(".control-header-greeting-message-name"),
+    path: "header.greeting.message.name",
     type: "text",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-transitional-show"),
+    path: "header.greeting.transitional.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-transitional-type-timeanddate"),
+    path: "header.greeting.transitional.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-transitional-type-its"),
+    path: "header.greeting.transitional.type",
+    type: "radio",
     func: function() {
       render();
       dependents();
@@ -1172,7 +1273,7 @@ var control = (function() {
       };
     };
     var _greeting = function() {
-      if (state.get().header.greeting.show) {
+      if (state.get().header.greeting.message.show) {
         helper.addClass(html, "is-header-greeting");
       } else {
         helper.removeClass(html, "is-header-greeting");
@@ -1313,18 +1414,27 @@ var control = (function() {
       };
     };
     var _greeting = function() {
-      if (state.get().header.greeting.show) {
-        helper.e("[for=control-header-greeting-name]").removeAttribute("disabled", "");
-        helper.e(".control-header-greeting-name").disabled = false;
-        helper.e(".control-header-greeting-type-good").disabled = false;
-        helper.e(".control-header-greeting-type-hello").disabled = false;
-        helper.e(".control-header-greeting-type-hi").disabled = false;
+      if (state.get().header.greeting.message.show) {
+        helper.e("[for=control-header-greeting-message-name]").removeAttribute("disabled", "");
+        helper.e(".control-header-greeting-message-name").disabled = false;
+        helper.e(".control-header-greeting-message-type-good").disabled = false;
+        helper.e(".control-header-greeting-message-type-hello").disabled = false;
+        helper.e(".control-header-greeting-message-type-hi").disabled = false;
+        helper.e(".control-header-greeting-transitional-show").disabled = false;
       } else {
-        helper.e("[for=control-header-greeting-name]").setAttribute("disabled", "");
-        helper.e(".control-header-greeting-name").disabled = true;
-        helper.e(".control-header-greeting-type-good").disabled = true;
-        helper.e(".control-header-greeting-type-hello").disabled = true;
-        helper.e(".control-header-greeting-type-hi").disabled = true;
+        helper.e("[for=control-header-greeting-message-name]").setAttribute("disabled", "");
+        helper.e(".control-header-greeting-message-name").disabled = true;
+        helper.e(".control-header-greeting-message-type-good").disabled = true;
+        helper.e(".control-header-greeting-message-type-hello").disabled = true;
+        helper.e(".control-header-greeting-message-type-hi").disabled = true;
+        helper.e(".control-header-greeting-transitional-show").disabled = true;
+      };
+      if (state.get().header.greeting.message.show && state.get().header.greeting.transitional.show) {
+        helper.e(".control-header-greeting-transitional-type-timeanddate").disabled = false;
+        helper.e(".control-header-greeting-transitional-type-its").disabled = false;
+      } else {
+        helper.e(".control-header-greeting-transitional-type-timeanddate").disabled = true;
+        helper.e(".control-header-greeting-transitional-type-its").disabled = true;
       };
     };
     var _clock = function() {
