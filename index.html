@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="css/date.css">
   <link rel="stylesheet" href="css/clock.css">
   <link rel="stylesheet" href="css/greeting.css">
+  <link rel="stylesheet" href="css/transitional.css">
   <link rel="stylesheet" href="css/search.css">
   <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/link.css">
@@ -45,6 +46,9 @@
       <div class="header-area">
         <div class="header-item header-greeting">
           <p class="greeting"></p>
+        </div>
+        <div class="header-item header-transitional">
+          <p class="transitional"></p>
         </div>
         <div class="header-item header-clock">
           <p class="clock"></p>
@@ -117,45 +121,45 @@
 
         <div class="menu-content-area menu-content-area-header">
           <div class="menu-item">
-            <h1 class="menu-header"></h1>
+            <h1 class="menu-header">Greeting</h1>
             <div class="checkbox-wrap">
-              <input id="control-header-greeting-message-show" class="control-header-greeting-message-show" type="checkbox" tabindex="1">
-              <label for="control-header-greeting-message-show"><span class="label-icon"></span>Show</label>
+              <input id="control-header-greeting-show" class="control-header-greeting-show" type="checkbox" tabindex="1">
+              <label for="control-header-greeting-show"><span class="label-icon"></span>Show</label>
             </div>
             <div class="form-indent">
               <div class="radio-wrap">
-                <input id="control-header-greeting-message-type-good" class="control-header-greeting-message-type-good" type="radio" name="control-header-greeting-message-type" value="good" tabindex="1">
-                <label for="control-header-greeting-message-type-good"><span class="label-icon"></span>"Good morning..."</label>
+                <input id="control-header-greeting-type-good" class="control-header-greeting-type-good" type="radio" name="control-header-greeting-type" value="good" tabindex="1">
+                <label for="control-header-greeting-type-good"><span class="label-icon"></span>"Good morning..."</label>
               </div>
               <div class="radio-wrap">
-                <input id="control-header-greeting-message-type-hello" class="control-header-greeting-message-type-hello" type="radio" name="control-header-greeting-message-type" value="hello" tabindex="1">
-                <label for="control-header-greeting-message-type-hello"><span class="label-icon"></span>"Hello..."</label>
+                <input id="control-header-greeting-type-hello" class="control-header-greeting-type-hello" type="radio" name="control-header-greeting-type" value="hello" tabindex="1">
+                <label for="control-header-greeting-type-hello"><span class="label-icon"></span>"Hello..."</label>
               </div>
               <div class="radio-wrap">
-                <input id="control-header-greeting-message-type-hi" class="control-header-greeting-message-type-hi" type="radio" name="control-header-greeting-message-type" value="hi" tabindex="1">
-                <label for="control-header-greeting-message-type-hi"><span class="label-icon"></span>"Hi..."</label>
+                <input id="control-header-greeting-type-hi" class="control-header-greeting-type-hi" type="radio" name="control-header-greeting-type" value="hi" tabindex="1">
+                <label for="control-header-greeting-type-hi"><span class="label-icon"></span>"Hi..."</label>
               </div>
               <hr>
               <div class="input-wrap">
-                <label for="control-header-greeting-message-name">Name</label>
-                <input id="control-header-greeting-message-name" class="control-header-greeting-message-name" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Nickname, alias or superhero name" tabindex="1">
+                <label for="control-header-greeting-name">Name</label>
+                <input id="control-header-greeting-name" class="control-header-greeting-name" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Nickname, alias or superhero name" tabindex="1">
               </div>
-              <hr>
+            </div>
+          </div>
+          <div class="menu-item">
+            <h1 class="menu-header">Transitional</h1>
+            <div class="checkbox-wrap">
+              <input id="control-header-transitional-show" class="control-header-transitional-show" type="checkbox" tabindex="1">
+              <label for="control-header-transitional-show"><span class="label-icon"></span>Show</label>
             </div>
             <div class="form-indent">
-              <div class="checkbox-wrap">
-                <input id="control-header-greeting-transitional-show" class="control-header-greeting-transitional-show" type="checkbox" tabindex="1">
-                <label for="control-header-greeting-transitional-show"><span class="label-icon"></span>Transitional words</label>
+              <div class="radio-wrap">
+                <input id="control-header-transitional-type-timeanddate" class="control-header-transitional-type-timeanddate" type="radio" name="control-header-transitional-type" value="timeanddate" tabindex="1">
+                <label for="control-header-transitional-type-timeanddate"><span class="label-icon"></span>"The time and date is"</label>
               </div>
-              <div class="form-indent">
-                <div class="radio-wrap">
-                  <input id="control-header-greeting-transitional-type-timeanddate" class="control-header-greeting-transitional-type-timeanddate" type="radio" name="control-header-greeting-transitional-type" value="timeanddate" tabindex="1">
-                  <label for="control-header-greeting-transitional-type-timeanddate"><span class="label-icon"></span>"the time and date is"</label>
-                </div>
-                <div class="radio-wrap">
-                  <input id="control-header-greeting-transitional-type-its" class="control-header-greeting-transitional-type-its" type="radio" name="control-header-greeting-transitional-type" value="its" tabindex="1">
-                  <label for="control-header-greeting-transitional-type-its"><span class="label-icon"></span>"it's"</label>
-                </div>
+              <div class="radio-wrap">
+                <input id="control-header-transitional-type-its" class="control-header-transitional-type-its" type="radio" name="control-header-transitional-type" value="its" tabindex="1">
+                <label for="control-header-transitional-type-its"><span class="label-icon"></span>"It's"</label>
               </div>
             </div>
           </div>
@@ -276,7 +280,7 @@
               <div class="checkbox-wrap">
                 <input id="control-header-date-date-ordinal" class="control-header-date-date-ordinal" type="checkbox" tabindex="1">
                 <label for="control-header-date-date-ordinal"><span class="label-icon"></span>Ordinal numbers</label>
-                <p class="input-helper small muted">Display date as as 1st, 2nd, 3rd, 4th etc.</p>
+                <p class="input-helper small muted">Display Date as 1st, 2nd, 3rd, 4th etc.</p>
               </div>
               <hr>
             </div>
@@ -288,6 +292,13 @@
               <div class="radio-wrap">
                 <input id="control-header-date-month-display-number" class="control-header-date-month-display-number" type="radio" name="control-header-date-month-display" value="number" tabindex="1">
                 <label for="control-header-date-month-display-number"><span class="label-icon"></span>As number</label>
+              </div>
+              <div class="form-indent">
+                <div class="checkbox-wrap">
+                  <input id="control-header-date-month-ordinal" class="control-header-date-month-ordinal" type="checkbox" tabindex="1">
+                  <label for="control-header-date-month-ordinal"><span class="label-icon"></span>Ordinal numbers</label>
+                  <p class="input-helper small muted">Display Month as 1st, 2nd, 3rd, 4th etc.</p>
+                </div>
               </div>
               <div class="radio-wrap">
                 <input id="control-header-date-month-display-word" class="control-header-date-month-display-word" type="radio" name="control-header-date-month-display" value="word" tabindex="1">
@@ -514,6 +525,7 @@
             </div>
           </div>
         </div>
+
         <div class="menu-content-area menu-content-area-bookmarks is-hidden">
           <div class="menu-item">
             <h1 class="menu-header">Bookmarks</h1>
@@ -706,6 +718,7 @@
 <script src="js/theme.js"></script>
 <script src="js/date.js"></script>
 <script src="js/greeting.js"></script>
+<script src="js/transitional.js"></script>
 <script src="js/clock.js"></script>
 <script src="js/search.js"></script>
 <script src="js/link.js"></script>

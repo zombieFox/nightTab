@@ -38,7 +38,8 @@ var state = (function() {
         month: {
           show: true,
           display: "word",
-          length: "long"
+          length: "long",
+          ordinal: true
         },
         year: {
           show: true,
@@ -113,15 +114,13 @@ var state = (function() {
         }
       },
       greeting: {
-        message: {
-          show: false,
-          type: "good",
-          name: ""
-        },
-        transitional: {
-          show: false,
-          type: "timeanddate"
-        }
+        show: false,
+        type: "good",
+        name: ""
+      },
+      transitional: {
+        show: false,
+        type: "timeanddate"
       }
     },
     bookmarks: {

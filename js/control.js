@@ -37,6 +37,8 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -50,6 +52,8 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -63,6 +67,8 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -76,6 +82,8 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -89,6 +97,8 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -102,6 +112,8 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -115,6 +127,8 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -128,6 +142,8 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -141,6 +157,8 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -164,6 +182,8 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -176,6 +196,8 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -189,6 +211,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -202,6 +226,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -215,6 +241,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -228,6 +256,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -241,6 +271,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -253,6 +285,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -265,6 +299,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -278,6 +314,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -291,6 +329,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -304,6 +344,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -317,6 +359,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -330,6 +374,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -343,6 +389,23 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-month-ordinal"),
+    path: "header.date.month.ordinal",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -356,6 +419,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -368,6 +433,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -380,6 +447,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -393,6 +462,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -406,6 +477,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -419,6 +492,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -432,6 +507,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -445,6 +522,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -458,6 +537,8 @@ var control = (function() {
       date.render();
       greeting.clear();
       greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -760,8 +841,8 @@ var control = (function() {
       dependents();
     }
   }, {
-    element: helper.e(".control-header-greeting-message-show"),
-    path: "header.greeting.message.show",
+    element: helper.e(".control-header-greeting-show"),
+    path: "header.greeting.show",
     type: "checkbox",
     func: function() {
       render();
@@ -771,8 +852,8 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-greeting-message-type-good"),
-    path: "header.greeting.message.type",
+    element: helper.e(".control-header-greeting-type-good"),
+    path: "header.greeting.type",
     type: "radio",
     func: function() {
       render();
@@ -782,8 +863,8 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-greeting-message-type-hello"),
-    path: "header.greeting.message.type",
+    element: helper.e(".control-header-greeting-type-hello"),
+    path: "header.greeting.type",
     type: "radio",
     func: function() {
       render();
@@ -793,8 +874,8 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-greeting-message-type-hi"),
-    path: "header.greeting.message.type",
+    element: helper.e(".control-header-greeting-type-hi"),
+    path: "header.greeting.type",
     type: "radio",
     func: function() {
       render();
@@ -804,8 +885,8 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-greeting-message-name"),
-    path: "header.greeting.message.name",
+    element: helper.e(".control-header-greeting-name"),
+    path: "header.greeting.name",
     type: "text",
     func: function() {
       render();
@@ -815,36 +896,36 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-greeting-transitional-show"),
-    path: "header.greeting.transitional.show",
+    element: helper.e(".control-header-transitional-show"),
+    path: "header.transitional.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
-      greeting.clear();
-      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-greeting-transitional-type-timeanddate"),
-    path: "header.greeting.transitional.type",
+    element: helper.e(".control-header-transitional-type-timeanddate"),
+    path: "header.transitional.type",
     type: "radio",
     func: function() {
       render();
       dependents();
-      greeting.clear();
-      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-greeting-transitional-type-its"),
-    path: "header.greeting.transitional.type",
+    element: helper.e(".control-header-transitional-type-its"),
+    path: "header.transitional.type",
     type: "radio",
     func: function() {
       render();
       dependents();
-      greeting.clear();
-      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -1273,10 +1354,17 @@ var control = (function() {
       };
     };
     var _greeting = function() {
-      if (state.get().header.greeting.message.show) {
+      if (state.get().header.greeting.show) {
         helper.addClass(html, "is-header-greeting");
       } else {
         helper.removeClass(html, "is-header-greeting");
+      };
+    };
+    var _transitional = function() {
+      if (state.get().header.transitional.show && state.get().header.greeting.show && (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
+        helper.addClass(html, "is-header-transitional");
+      } else {
+        helper.removeClass(html, "is-header-transitional");
       };
     };
     var _background = function() {
@@ -1312,6 +1400,7 @@ var control = (function() {
     _alignment();
     _edit();
     _greeting();
+    _transitional();
     _date();
     _clock();
     _search();
@@ -1412,29 +1501,39 @@ var control = (function() {
         helper.e(".control-header-date-month-length-long").disabled = true;
         helper.e(".control-header-date-month-length-short").disabled = true;
       };
+      if (state.get().header.date.month.show && state.get().header.date.month.display == "number") {
+        helper.e(".control-header-date-month-ordinal").disabled = false;
+      } else {
+        helper.e(".control-header-date-month-ordinal").disabled = true;
+      };
     };
     var _greeting = function() {
-      if (state.get().header.greeting.message.show) {
-        helper.e("[for=control-header-greeting-message-name]").removeAttribute("disabled", "");
-        helper.e(".control-header-greeting-message-name").disabled = false;
-        helper.e(".control-header-greeting-message-type-good").disabled = false;
-        helper.e(".control-header-greeting-message-type-hello").disabled = false;
-        helper.e(".control-header-greeting-message-type-hi").disabled = false;
-        helper.e(".control-header-greeting-transitional-show").disabled = false;
+      if (state.get().header.greeting.show) {
+        helper.e("[for=control-header-greeting-name]").removeAttribute("disabled", "");
+        helper.e(".control-header-greeting-name").disabled = false;
+        helper.e(".control-header-greeting-type-good").disabled = false;
+        helper.e(".control-header-greeting-type-hello").disabled = false;
+        helper.e(".control-header-greeting-type-hi").disabled = false;
       } else {
-        helper.e("[for=control-header-greeting-message-name]").setAttribute("disabled", "");
-        helper.e(".control-header-greeting-message-name").disabled = true;
-        helper.e(".control-header-greeting-message-type-good").disabled = true;
-        helper.e(".control-header-greeting-message-type-hello").disabled = true;
-        helper.e(".control-header-greeting-message-type-hi").disabled = true;
-        helper.e(".control-header-greeting-transitional-show").disabled = true;
+        helper.e("[for=control-header-greeting-name]").setAttribute("disabled", "");
+        helper.e(".control-header-greeting-name").disabled = true;
+        helper.e(".control-header-greeting-type-good").disabled = true;
+        helper.e(".control-header-greeting-type-hello").disabled = true;
+        helper.e(".control-header-greeting-type-hi").disabled = true;
       };
-      if (state.get().header.greeting.message.show && state.get().header.greeting.transitional.show) {
-        helper.e(".control-header-greeting-transitional-type-timeanddate").disabled = false;
-        helper.e(".control-header-greeting-transitional-type-its").disabled = false;
+    };
+    var _transitional = function() {
+      if (state.get().header.greeting.show) {
+        helper.e(".control-header-transitional-show").disabled = false;
       } else {
-        helper.e(".control-header-greeting-transitional-type-timeanddate").disabled = true;
-        helper.e(".control-header-greeting-transitional-type-its").disabled = true;
+        helper.e(".control-header-transitional-show").disabled = true;
+      };
+      if (state.get().header.greeting.show && state.get().header.transitional.show) {
+        helper.e(".control-header-transitional-type-timeanddate").disabled = false;
+        helper.e(".control-header-transitional-type-its").disabled = false;
+      } else {
+        helper.e(".control-header-transitional-type-timeanddate").disabled = true;
+        helper.e(".control-header-transitional-type-its").disabled = true;
       };
     };
     var _clock = function() {
@@ -1659,9 +1758,10 @@ var control = (function() {
       };
     };
     _edit();
-    _greeting();
     _date();
     _clock();
+    _greeting();
+    _transitional();
     _search();
     _theme();
     _link();

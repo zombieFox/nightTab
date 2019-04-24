@@ -124,6 +124,7 @@
 .header-edit-add,
 .header-accent,
 .header-greeting,
+.header-transitional,
 .header-menu {
   display: none;
 }
@@ -134,6 +135,7 @@
 .is-header-edit-add .header-edit-add,
 .is-header-accent .header-accent,
 .is-header-greeting .header-greeting,
+.is-header-transitional .header-transitional,
 .is-menu .header-menu {
   display: flex;
 }

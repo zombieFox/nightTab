@@ -1,10 +1,10 @@
 var date = (function() {
 
   var bind = function() {
-    window.setInterval(function() {
-      clear();
-      render();
-    }, 1000);
+    // window.setInterval(function() {
+    //   clear();
+    //   render();
+    // }, 1000);
   };
 
   var clear = function() {
@@ -70,7 +70,12 @@ var date = (function() {
             return _month(value);
           },
           number: function(value) {
-            return value + 1;
+            if (state.get().header.date.month.ordinal) {
+              return helper.ordinalNumber(value + 1);
+              return value + 1;
+            } else {
+              return value + 1;
+            };
           }
         },
         year: {
