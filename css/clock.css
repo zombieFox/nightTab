@@ -27,7 +27,7 @@
 
 .clock-separator {
   justify-content: center;
-  min-width: 0.5em;
+  /* min-width: 0.5em; */
   color: rgb(var(--accent));
 }
 

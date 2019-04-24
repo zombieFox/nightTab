@@ -1361,7 +1361,7 @@ var control = (function() {
       };
     };
     var _transitional = function() {
-      if (state.get().header.transitional.show && state.get().header.greeting.show && (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
+      if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
         helper.addClass(html, "is-header-transitional");
       } else {
         helper.removeClass(html, "is-header-transitional");
@@ -1523,12 +1523,12 @@ var control = (function() {
       };
     };
     var _transitional = function() {
-      if (state.get().header.greeting.show) {
+      if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
         helper.e(".control-header-transitional-show").disabled = false;
       } else {
         helper.e(".control-header-transitional-show").disabled = true;
       };
-      if (state.get().header.greeting.show && state.get().header.transitional.show) {
+      if (state.get().header.transitional.show && ((state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show))) {
         helper.e(".control-header-transitional-type-timeanddate").disabled = false;
         helper.e(".control-header-transitional-type-its").disabled = false;
       } else {

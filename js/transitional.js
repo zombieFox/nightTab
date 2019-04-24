@@ -27,7 +27,7 @@ var transitional = (function() {
             };
           } else if (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show) {
             if (state.get().header.date.day.show && !state.get().header.date.date.show && !state.get().header.date.month.show && !state.get().header.date.year.show) {
-              return "The day is";
+              return "Today is";
             } else if (!state.get().header.date.day.show && state.get().header.date.date.show && !state.get().header.date.month.show && !state.get().header.date.year.show) {
               return "The date is";
             } else if (!state.get().header.date.day.show && !state.get().header.date.date.show && state.get().header.date.month.show && !state.get().header.date.year.show) {
