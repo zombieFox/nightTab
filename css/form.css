@@ -462,7 +462,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 1em;
   cursor: pointer;
   box-sizing: border-box;
-  z-index: 2;
+  /* z-index: 2; */
   transform: scale(1);
   transition: all var(--animation-speed-fast) ease-in-out;
   -webkit-appearance: none;
@@ -526,7 +526,7 @@ input[type="range"]::-moz-range-thumb {
   width: 1em;
   cursor: pointer;
   box-sizing: border-box;
-  z-index: 2;
+  /* z-index: 2; */
   transform: scale(1);
   transition: all var(--animation-speed-fast) ease-in-out;
   -webkit-appearance: none;
