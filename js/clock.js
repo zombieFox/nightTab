@@ -17,7 +17,7 @@ var clock = (function() {
   var _makeTimeObject = function() {
     var time = helper.getDateTime();
     time.meridiem = "AM";
-    if (state.get().header.clock.hour24) {
+    if (state.get().header.clock.hour24.show) {
       if (time.hours < 10) {
         time.hours = "0" + time.hours;
       };
@@ -46,7 +46,7 @@ var clock = (function() {
       var action = {
         hours: {
           word: function(value) {
-            if (state.get().header.clock.hour24 && value < 10) {
+            if (state.get().header.clock.hour24.show && value < 10) {
               return "Zero " + helper.toWords(value);
             } else {
               return helper.toWords(value);
@@ -121,7 +121,7 @@ var clock = (function() {
       if (state.get().header.clock.seconds.show) {
         clock.appendChild(elementSeconds);
       };
-      if (!state.get().header.clock.hour24 && state.get().header.clock.meridiem.show) {
+      if (!state.get().header.clock.hour24.show && state.get().header.clock.meridiem.show) {
         clock.appendChild(elementMeridiem);
       };
       if (state.get().header.clock.separator.show) {

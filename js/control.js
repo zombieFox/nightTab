@@ -173,8 +173,8 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-clock-24"),
-    path: "header.clock.hour24",
+    element: helper.e(".control-header-clock-hour24-show"),
+    path: "header.clock.hour24.show",
     type: "checkbox",
     func: function() {
       dependents();
@@ -1550,13 +1550,13 @@ var control = (function() {
         helper.e(".control-header-clock-separator-show").disabled = true;
       };
       if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
-        helper.e(".control-header-clock-24").disabled = false;
+        helper.e(".control-header-clock-hour24-show").disabled = false;
         helper.e(".control-header-clock-meridiem-show").disabled = false;
       } else {
-        helper.e(".control-header-clock-24").disabled = true;
+        helper.e(".control-header-clock-hour24-show").disabled = true;
         helper.e(".control-header-clock-meridiem-show").disabled = true;
       };
-      if ((state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) && !state.get().header.clock.hour24) {
+      if ((state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) && !state.get().header.clock.hour24.show) {
         helper.e(".control-header-clock-meridiem-show").disabled = false;
       } else {
         helper.e(".control-header-clock-meridiem-show").disabled = true;

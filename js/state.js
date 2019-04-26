@@ -21,7 +21,9 @@ var state = (function() {
         meridiem: {
           show: true
         },
-        hour24: true
+        hour24: {
+          show: true
+        },
       },
       date: {
         day: {

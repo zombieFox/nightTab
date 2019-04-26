@@ -245,6 +245,66 @@ var update = (function() {
     return data;
   };
 
+  var _update_2210 = function(data) {
+    data.version = "2.21.0";
+    data.state.header.clock = {
+      hours: {
+        show: data.state.header.clock.show.hours,
+        display: "number"
+      },
+      minutes: {
+        show: data.state.header.clock.show.minutes,
+        display: "number"
+      },
+      seconds: {
+        show: data.state.header.clock.show.seconds,
+        display: "number"
+      },
+      separator: {
+        show: data.state.header.clock.show.separator
+      },
+      meridiem: {
+        show: data.state.header.clock.show.meridiem
+      },
+      hour24: {
+        show: data.state.header.clock.hour24
+      }
+    };
+    console.log(data.state.header.date);
+    data.state.header.date = {
+      day: {
+        show: data.state.header.date.show.day,
+        display: "word",
+        weekStart: "monday",
+        length: data.state.header.date.character.length
+      },
+      date: {
+        show: data.state.header.date.show.date,
+        display: "number",
+        ordinal: true
+      },
+      month: {
+        show: data.state.header.date.show.month,
+        display: "word",
+        length: data.state.header.date.character.length,
+        ordinal: true
+      },
+      year: {
+        show: data.state.header.date.show.year,
+        display: "number"
+      },
+      separator: {
+        show: data.state.header.date.show.separator
+      },
+      format: "datemonth"
+    };
+    data.state.header.transitional = {
+      show: false,
+      type: "timeanddate"
+    };
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -326,6 +386,10 @@ var update = (function() {
       if (version.compare(data.version, "2.20.0") == -1) {
         console.log("\t= running update 2.20.0");
         data = _update_2200(data);
+      };
+      if (version.compare(data.version, "2.21.0") == -1) {
+        console.log("\t= running update 2.21.0");
+        data = _update_2210(data);
       };
     };
     // if no update is needed
