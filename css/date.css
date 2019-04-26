@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .date-separator,
@@ -22,11 +22,12 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  white-space: nowrap;
 }
 
 .date-separator {
   justify-content: center;
-  min-width: 0.5em;
+  /* min-width: 0.5em; */
   color: rgb(var(--accent));
 }
 
@@ -54,5 +55,5 @@
 .date-date,
 .date-month,
 .date-year {
-  color: rgb(var(--gray-19));
+  color: rgb(var(--gray-16));
 }

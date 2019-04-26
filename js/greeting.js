@@ -18,21 +18,21 @@ var greeting = (function() {
     var _greeting = function() {
       var greeting = helper.e(".greeting");
       var message = {
-        hi: function() {
-          return "Hi";
-        },
-        hello: function() {
-          return "Hello";
-        },
         good: function() {
           var time = helper.getDateTime();
           var message = ["Good night", "Good morning", "Good afternoon", "Good evening"];
           return message[Math.floor(time.hours / 6)];
+        },
+        hello: function() {
+          return "Hello";
+        },
+        hi: function() {
+          return "Hi";
         }
       };
-      var greetingMessage = message[state.get().header.greeting.type]();
+      var string = message[state.get().header.greeting.type]();
       if (state.get().header.greeting.name != "" && state.get().header.greeting.name != undefined) {
-        greetingMessage = greetingMessage + ", " + state.get().header.greeting.name;
+        string = string + ", " + state.get().header.greeting.name;
       };
       var greetingItem = helper.makeNode({
         tag: "span",
@@ -43,7 +43,7 @@ var greeting = (function() {
       });
       var greetingItemText = helper.makeNode({
         tag: "span",
-        text: greetingMessage,
+        text: string,
         attr: [{
           key: "class",
           value: "greeting-item-text"

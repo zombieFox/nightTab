@@ -9,8 +9,8 @@
   min-height: 2.5em;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  flex-wrap: nowrap;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .clock-separator,
@@ -22,11 +22,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 }
 
 .clock-separator {
   justify-content: center;
-  min-width: 0.5em;
+  /* min-width: 0.5em; */
   color: rgb(var(--accent));
 }
 
@@ -55,5 +56,5 @@
 .clock-minutes,
 .clock-seconds,
 .clock-meridiem {
-  color: rgb(var(--gray-19));
+  color: rgb(var(--gray-16));
 }

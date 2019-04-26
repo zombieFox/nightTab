@@ -26,9 +26,12 @@ link.init();
 // render states
 control.init();
 
-// render date
-// bind date update
+// render greeting
+// bind greeting update
 greeting.init();
+
+// render transitional
+transitional.init();
 
 // render date
 // bind date update

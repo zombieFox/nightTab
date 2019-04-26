@@ -3,26 +3,54 @@ var state = (function() {
   var current = {
     header: {
       clock: {
-        hour24: true,
-        show: {
-          hours: true,
-          minutes: true,
-          seconds: true,
-          separator: true,
-          meridiem: true
-        }
+        hours: {
+          show: true,
+          display: "number"
+        },
+        minutes: {
+          show: true,
+          display: "number"
+        },
+        seconds: {
+          show: true,
+          display: "number"
+        },
+        separator: {
+          show: true
+        },
+        meridiem: {
+          show: true
+        },
+        hour24: {
+          show: true
+        },
       },
       date: {
-        show: {
-          day: false,
-          date: true,
-          month: true,
-          year: false,
-          separator: true
+        day: {
+          show: true,
+          display: "word",
+          weekStart: "monday",
+          length: "long"
         },
-        character: {
-          length: "short"
-        }
+        date: {
+          show: true,
+          display: "number",
+          ordinal: true
+        },
+        month: {
+          show: true,
+          display: "word",
+          length: "long",
+          ordinal: true
+        },
+        year: {
+          show: true,
+          display: "number"
+        },
+        separator: {
+          show: true
+        },
+        format: "datemonth"
       },
       search: {
         show: true,
@@ -91,6 +119,10 @@ var state = (function() {
         show: false,
         type: "good",
         name: ""
+      },
+      transitional: {
+        show: false,
+        type: "timeanddate"
       }
     },
     bookmarks: {

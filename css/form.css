@@ -22,6 +22,16 @@ input[type="text"] {
   -moz-appearance: textfield;
 }
 
+input[type="number"] {
+  text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 input[type="email"]:hover,
 input[type="number"]:hover,
 input[type="password"]:hover,
@@ -84,7 +94,8 @@ input[type="number"][disabled]~.input-helper,
 input[type="password"][disabled]~.input-helper,
 input[type="search"][disabled]~.input-helper,
 input[type="tel"][disabled]~.input-helper,
-input[type="text"][disabled]~.input-helper {
+input[type="text"][disabled]~.input-helper,
+input[type="range"][disabled]~.input-helper {
   color: rgb(var(--form-input-text-disabled-helper-text));
 }
 
@@ -197,22 +208,13 @@ input[type="color"]+.input-label-button:before {
   position: relative;
 }
 
-.form-indent-1,
-.form-indent-1,
-.form-indent-1 {
+.form-indent {
   margin-left: 2.25em;
 }
 
-.form-indent-2,
-.form-indent-2,
-.form-indent-2 {
-  margin-left: 4.5em;
-}
-
-.form-indent-3,
-.form-indent-3,
-.form-indent-3 {
-  margin-left: 6.75em;
+.form-inline {
+  display: inline-block;
+  margin-right: 1.5em;
 }
 
 input[type="checkbox"],
@@ -460,7 +462,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 1em;
   cursor: pointer;
   box-sizing: border-box;
-  z-index: 2;
+  /* z-index: 2; */
   transform: scale(1);
   transition: all var(--animation-speed-fast) ease-in-out;
   -webkit-appearance: none;
@@ -524,7 +526,7 @@ input[type="range"]::-moz-range-thumb {
   width: 1em;
   cursor: pointer;
   box-sizing: border-box;
-  z-index: 2;
+  /* z-index: 2; */
   transform: scale(1);
   transition: all var(--animation-speed-fast) ease-in-out;
   -webkit-appearance: none;
@@ -573,4 +575,96 @@ input[type="range"][disabled]:focus::-moz-range-thumb {
 
 input[type="range"][disabled]::-moz-range-progress {
   background-color: rgb(var(--gray-08));
+}
+
+.form-group {
+  margin: 0 0 1em 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+.form-group button,
+.form-group .button,
+.form-group>input[type="email"],
+.form-group>input[type="number"],
+.form-group>input[type="password"],
+.form-group>input[type="search"],
+.form-group>input[type="tel"],
+.form-group>input[type="text"] {
+  margin: 0;
+  border-radius: 0;
+}
+
+.form-group>input[type="email"],
+.form-group>input[type="number"],
+.form-group>input[type="password"],
+.form-group>input[type="search"],
+.form-group>input[type="tel"],
+.form-group>input[type="text"] {
+  padding: 0 0.5em;
+}
+
+.form-group>input[type="email"],
+.form-group>input[type="number"],
+.form-group>input[type="password"],
+.form-group>input[type="search"],
+.form-group>input[type="tel"],
+.form-group>input[type="text"] {
+  z-index: 1;
+}
+
+.form-group>input[type="email"]:hover,
+.form-group>input[type="number"]:hover,
+.form-group>input[type="password"]:hover,
+.form-group>input[type="search"]:hover,
+.form-group>input[type="tel"]:hover,
+.form-group>input[type="text"]:hover {
+  z-index: 2;
+}
+
+.form-group>input[type="email"]:active,
+.form-group>input[type="email"]:focus,
+.form-group>input[type="number"]:active,
+.form-group>input[type="number"]:focus,
+.form-group>input[type="password"]:active,
+.form-group>input[type="password"]:focus,
+.form-group>input[type="search"]:active,
+.form-group>input[type="search"]:focus,
+.form-group>input[type="tel"]:active,
+.form-group>input[type="tel"]:focus,
+.form-group>input[type="text"]:active,
+.form-group>input[type="text"]:focus {
+  z-index: 3;
+}
+
+.form-group>button:first-child,
+.form-group>.button:first-child,
+.form-group>input[type="email"]:first-child,
+.form-group>input[type="number"]:first-child,
+.form-group>input[type="password"]:first-child,
+.form-group>input[type="search"]:first-child,
+.form-group>input[type="tel"]:first-child,
+.form-group>input[type="text"]:first-child {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.form-group>button:last-child,
+.form-group>.button:last-child,
+.form-group>input[type="email"]:last-child,
+.form-group>input[type="number"]:last-child,
+.form-group>input[type="password"]:last-child,
+.form-group>input[type="search"]:last-child,
+.form-group>input[type="tel"]:last-child,
+.form-group>input[type="text"]:last-child {
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.form-group.nested-button *:first-child .button {
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.form-group.nested-button *:last-child .button {
+  border-radius: 0 var(--radius) var(--radius) 0;
 }

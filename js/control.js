@@ -27,140 +27,518 @@ var control = (function() {
       accent.render();
     }
   }, {
-    element: helper.e(".control-header-clock-show-hours"),
-    path: "header.clock.show.hours",
+    element: helper.e(".control-header-clock-hours-show"),
+    path: "header.clock.hours.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-clock-show-minutes"),
-    path: "header.clock.show.minutes",
+    element: helper.e(".control-header-clock-hours-number"),
+    path: "header.clock.hours.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-hours-word"),
+    path: "header.clock.hours.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-minutes-show"),
+    path: "header.clock.minutes.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-clock-show-seconds"),
-    path: "header.clock.show.seconds",
+    element: helper.e(".control-header-clock-minutes-number"),
+    path: "header.clock.minutes.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-minutes-word"),
+    path: "header.clock.minutes.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-seconds-show"),
+    path: "header.clock.seconds.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-clock-show-separator"),
-    path: "header.clock.show.separator",
+    element: helper.e(".control-header-clock-seconds-number"),
+    path: "header.clock.seconds.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-seconds-word"),
+    path: "header.clock.seconds.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      clock.clear();
+      clock.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-separator-show"),
+    path: "header.clock.separator.show",
     type: "checkbox",
     func: function() {
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-clock-24"),
-    path: "header.clock.hour24",
+    element: helper.e(".control-header-clock-hour24-show"),
+    path: "header.clock.hour24.show",
     type: "checkbox",
     func: function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-clock-show-meridiem"),
-    path: "header.clock.show.meridiem",
+    element: helper.e(".control-header-clock-meridiem-show"),
+    path: "header.clock.meridiem.show",
     type: "checkbox",
     func: function() {
       dependents();
       clock.clear();
       clock.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-show-day"),
-    path: "header.date.show.day",
+    element: helper.e(".control-header-date-day-show"),
+    path: "header.date.day.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-show-date"),
-    path: "header.date.show.date",
-    type: "checkbox",
+    element: helper.e(".control-header-date-day-display-number"),
+    path: "header.date.day.display",
+    type: "radio",
     func: function() {
       render();
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-show-month"),
-    path: "header.date.show.month",
-    type: "checkbox",
+    element: helper.e(".control-header-date-day-display-word"),
+    path: "header.date.day.display",
+    type: "radio",
     func: function() {
       render();
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-show-year"),
-    path: "header.date.show.year",
-    type: "checkbox",
+    element: helper.e(".control-header-date-day-week-start-monday"),
+    path: "header.date.day.weekStart",
+    type: "radio",
     func: function() {
       render();
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-show-separator"),
-    path: "header.date.show.separator",
-    type: "checkbox",
+    element: helper.e(".control-header-date-day-week-start-sunday"),
+    path: "header.date.day.weekStart",
+    type: "radio",
     func: function() {
       render();
       dependents();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-character-length-short"),
-    path: "header.date.character.length",
+    element: helper.e(".control-header-date-day-length-long"),
+    path: "header.date.day.length",
     type: "radio",
     func: function() {
       render();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-date-character-length-long"),
-    path: "header.date.character.length",
+    element: helper.e(".control-header-date-day-length-short"),
+    path: "header.date.day.length",
     type: "radio",
     func: function() {
       render();
       date.clear();
       date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-date-show"),
+    path: "header.date.date.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-date-display-number"),
+    path: "header.date.date.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-date-display-word"),
+    path: "header.date.date.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-date-ordinal"),
+    path: "header.date.date.ordinal",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-month-show"),
+    path: "header.date.month.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-month-display-number"),
+    path: "header.date.month.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-month-ordinal"),
+    path: "header.date.month.ordinal",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-month-display-word"),
+    path: "header.date.month.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-month-length-long"),
+    path: "header.date.month.length",
+    type: "radio",
+    func: function() {
+      render();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-month-length-short"),
+    path: "header.date.month.length",
+    type: "radio",
+    func: function() {
+      render();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-year-show"),
+    path: "header.date.year.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-year-display-number"),
+    path: "header.date.year.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-year-display-word"),
+    path: "header.date.year.display",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-format-datemonth"),
+    path: "header.date.format",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-format-monthdate"),
+    path: "header.date.format",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-separator-show"),
+    path: "header.date.separator.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
       header.render();
     }
   }, {
@@ -518,6 +896,39 @@ var control = (function() {
       header.render();
     }
   }, {
+    element: helper.e(".control-header-transitional-show"),
+    path: "header.transitional.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-transitional-type-timeanddate"),
+    path: "header.transitional.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-transitional-type-its"),
+    path: "header.transitional.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      transitional.clear();
+      transitional.render();
+      header.render();
+    }
+  }, {
     element: helper.e(".control-bookmarks-url-show"),
     path: "bookmarks.url.show",
     type: "checkbox",
@@ -741,6 +1152,7 @@ var control = (function() {
       checkbox: "change",
       radio: "change",
       text: "input",
+      number: "input",
       range: "input",
       color: "change"
     };
@@ -753,6 +1165,9 @@ var control = (function() {
       },
       text: function(object) {
         return object.element.value;
+      },
+      number: function(object) {
+        return parseInt(object.element.value, 10);
       },
       range: function(object) {
         return parseInt(object.element.value, 10);
@@ -782,10 +1197,10 @@ var control = (function() {
           path: object.path,
           newValue: newValue
         });
-        // console.log(object.path, helper.getObject({
-        //   object: state.get(),
-        //   path: object.path
-        // }));
+        console.log(object.path, helper.getObject({
+          object: state.get(),
+          path: object.path
+        }));
       };
     };
     var bindControl = function(object) {
@@ -834,14 +1249,14 @@ var control = (function() {
       };
     };
     var _date = function() {
-      if (state.get().header.date.show.date || state.get().header.date.show.day || state.get().header.date.show.month || state.get().header.date.show.year) {
+      if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show) {
         helper.addClass(html, "is-header-date-show");
       } else {
         helper.removeClass(html, "is-header-date-show");
       };
     };
     var _clock = function() {
-      if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
+      if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
         helper.addClass(html, "is-header-clock-show");
       } else {
         helper.removeClass(html, "is-header-clock-show");
@@ -945,6 +1360,13 @@ var control = (function() {
         helper.removeClass(html, "is-header-greeting");
       };
     };
+    var _transitional = function() {
+      if (state.get().header.transitional.show && (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
+        helper.addClass(html, "is-header-transitional");
+      } else {
+        helper.removeClass(html, "is-header-transitional");
+      };
+    };
     var _background = function() {
       if (state.get().background.image.show) {
         helper.addClass(html, "is-background-image-show");
@@ -978,6 +1400,7 @@ var control = (function() {
     _alignment();
     _edit();
     _greeting();
+    _transitional();
     _date();
     _clock();
     _search();
@@ -1001,23 +1424,87 @@ var control = (function() {
     };
     var _date = function() {
       var activeCount = 0;
-      var toCheck = [state.get().header.date.show.date, state.get().header.date.show.day, state.get().header.date.show.month, state.get().header.date.show.year];
+      var toCheck = [state.get().header.date.day.show, state.get().header.date.date.show, state.get().header.date.month.show, state.get().header.date.year.show];
       toCheck.forEach(function(arrayItem, index) {
         if (arrayItem == true) {
           activeCount++;
         };
       });
-      if (activeCount >= 2 && (state.get().header.date.show.date || state.get().header.date.show.day || state.get().header.date.show.month || state.get().header.date.show.year)) {
-        helper.e(".control-header-date-show-separator").disabled = false;
+      if (activeCount >= 2 && (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show)) {
+        helper.e(".control-header-date-separator-show").disabled = false;
       } else {
-        helper.e(".control-header-date-show-separator").disabled = true;
+        helper.e(".control-header-date-separator-show").disabled = true;
       };
-      if (state.get().header.date.show.day || state.get().header.date.show.month) {
-        helper.e(".control-header-date-character-length-short").disabled = false;
-        helper.e(".control-header-date-character-length-long").disabled = false;
+      if (state.get().header.date.date.show && state.get().header.date.month.show) {
+        helper.e(".control-header-date-format-label").removeAttribute("disabled");
+        helper.e(".control-header-date-format-datemonth").disabled = false;
+        helper.e(".control-header-date-format-monthdate").disabled = false;
       } else {
-        helper.e(".control-header-date-character-length-short").disabled = true;
-        helper.e(".control-header-date-character-length-long").disabled = true;
+        helper.e(".control-header-date-format-label").setAttribute("disabled", "");
+        helper.e(".control-header-date-format-datemonth").disabled = true;
+        helper.e(".control-header-date-format-monthdate").disabled = true;
+      };
+      if (state.get().header.date.day.show) {
+        helper.e(".control-header-date-day-display-number").disabled = false;
+        helper.e(".control-header-date-day-display-word").disabled = false;
+      } else {
+        helper.e(".control-header-date-day-display-number").disabled = true;
+        helper.e(".control-header-date-day-display-word").disabled = true;
+      };
+      if (state.get().header.date.date.show) {
+        helper.e(".control-header-date-date-display-number").disabled = false;
+        helper.e(".control-header-date-date-display-word").disabled = false;
+        helper.e(".control-header-date-date-ordinal").disabled = false;
+      } else {
+        helper.e(".control-header-date-date-display-number").disabled = true;
+        helper.e(".control-header-date-date-display-word").disabled = true;
+        helper.e(".control-header-date-date-ordinal").disabled = true;
+      };
+      if (state.get().header.date.month.show) {
+        helper.e(".control-header-date-month-display-number").disabled = false;
+        helper.e(".control-header-date-month-display-word").disabled = false;
+      } else {
+        helper.e(".control-header-date-month-display-number").disabled = true;
+        helper.e(".control-header-date-month-display-word").disabled = true;
+      };
+      if (state.get().header.date.year.show) {
+        helper.e(".control-header-date-year-display-number").disabled = false;
+        helper.e(".control-header-date-year-display-word").disabled = false;
+      } else {
+        helper.e(".control-header-date-year-display-number").disabled = true;
+        helper.e(".control-header-date-year-display-word").disabled = true;
+      };
+      if (state.get().header.date.day.show && state.get().header.date.day.display == "number") {
+        helper.e(".control-header-date-day-week-start-label").removeAttribute("disabled");
+        helper.e(".control-header-date-day-week-start-monday").disabled = false;
+        helper.e(".control-header-date-day-week-start-sunday").disabled = false;
+      } else {
+        helper.e(".control-header-date-day-week-start-label").setAttribute("disabled", "");
+        helper.e(".control-header-date-day-week-start-monday").disabled = true;
+        helper.e(".control-header-date-day-week-start-sunday").disabled = true;
+      };
+      if (state.get().header.date.day.show && state.get().header.date.day.display == "word") {
+        helper.e(".control-header-date-day-length-label").removeAttribute("disabled");
+        helper.e(".control-header-date-day-length-long").disabled = false;
+        helper.e(".control-header-date-day-length-short").disabled = false;
+      } else {
+        helper.e(".control-header-date-day-length-label").setAttribute("disabled", "");
+        helper.e(".control-header-date-day-length-long").disabled = true;
+        helper.e(".control-header-date-day-length-short").disabled = true;
+      };
+      if (state.get().header.date.month.show && state.get().header.date.month.display == "word") {
+        helper.e(".control-header-date-month-length-label").removeAttribute("disabled");
+        helper.e(".control-header-date-month-length-long").disabled = false;
+        helper.e(".control-header-date-month-length-short").disabled = false;
+      } else {
+        helper.e(".control-header-date-month-length-label").setAttribute("disabled", "");
+        helper.e(".control-header-date-month-length-long").disabled = true;
+        helper.e(".control-header-date-month-length-short").disabled = true;
+      };
+      if (state.get().header.date.month.show && state.get().header.date.month.display == "number") {
+        helper.e(".control-header-date-month-ordinal").disabled = false;
+      } else {
+        helper.e(".control-header-date-month-ordinal").disabled = true;
       };
     };
     var _greeting = function() {
@@ -1035,35 +1522,70 @@ var control = (function() {
         helper.e(".control-header-greeting-type-hi").disabled = true;
       };
     };
+    var _transitional = function() {
+      if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+        helper.e(".control-header-transitional-show").disabled = false;
+      } else {
+        helper.e(".control-header-transitional-show").disabled = true;
+      };
+      if (state.get().header.transitional.show && ((state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show))) {
+        helper.e(".control-header-transitional-type-timeanddate").disabled = false;
+        helper.e(".control-header-transitional-type-its").disabled = false;
+      } else {
+        helper.e(".control-header-transitional-type-timeanddate").disabled = true;
+        helper.e(".control-header-transitional-type-its").disabled = true;
+      };
+    };
     var _clock = function() {
       var activeCount = 0;
-      var toCheck = [state.get().header.clock.show.seconds, state.get().header.clock.show.minutes, state.get().header.clock.show.hours];
+      var toCheck = [state.get().header.clock.seconds.show, state.get().header.clock.minutes.show, state.get().header.clock.hours.show];
       toCheck.forEach(function(arrayItem, index) {
         if (arrayItem == true) {
           activeCount++;
         };
       });
-      if (activeCount >= 2 && (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours)) {
-        helper.e(".control-header-clock-show-separator").disabled = false;
+      if (activeCount >= 2 && (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
+        helper.e(".control-header-clock-separator-show").disabled = false;
       } else {
-        helper.e(".control-header-clock-show-separator").disabled = true;
+        helper.e(".control-header-clock-separator-show").disabled = true;
       };
-      if (state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) {
-        helper.e(".control-header-clock-24").disabled = false;
-        helper.e(".control-header-clock-show-meridiem").disabled = false;
+      if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+        helper.e(".control-header-clock-hour24-show").disabled = false;
+        helper.e(".control-header-clock-meridiem-show").disabled = false;
       } else {
-        helper.e(".control-header-clock-24").disabled = true;
-        helper.e(".control-header-clock-show-meridiem").disabled = true;
+        helper.e(".control-header-clock-hour24-show").disabled = true;
+        helper.e(".control-header-clock-meridiem-show").disabled = true;
       };
-      if ((state.get().header.clock.show.seconds || state.get().header.clock.show.minutes || state.get().header.clock.show.hours) && !state.get().header.clock.hour24) {
-        helper.e(".control-header-clock-show-meridiem").disabled = false;
+      if ((state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) && !state.get().header.clock.hour24.show) {
+        helper.e(".control-header-clock-meridiem-show").disabled = false;
       } else {
-        helper.e(".control-header-clock-show-meridiem").disabled = true;
+        helper.e(".control-header-clock-meridiem-show").disabled = true;
+      };
+      if (state.get().header.clock.hours.show) {
+        helper.e(".control-header-clock-hours-number").disabled = false;
+        helper.e(".control-header-clock-hours-word").disabled = false;
+      } else {
+        helper.e(".control-header-clock-hours-number").disabled = true;
+        helper.e(".control-header-clock-hours-word").disabled = true;
+      };
+      if (state.get().header.clock.minutes.show) {
+        helper.e(".control-header-clock-minutes-number").disabled = false;
+        helper.e(".control-header-clock-minutes-word").disabled = false;
+      } else {
+        helper.e(".control-header-clock-minutes-number").disabled = true;
+        helper.e(".control-header-clock-minutes-word").disabled = true;
+      };
+      if (state.get().header.clock.seconds.show) {
+        helper.e(".control-header-clock-seconds-number").disabled = false;
+        helper.e(".control-header-clock-seconds-word").disabled = false;
+      } else {
+        helper.e(".control-header-clock-seconds-number").disabled = true;
+        helper.e(".control-header-clock-seconds-word").disabled = true;
       };
     };
     var _search = function() {
       if (state.get().header.search.show) {
-        helper.e(".control-header-search-width-label").removeAttribute("disabled");
+        helper.e(".control-header-search-width-style-label").removeAttribute("disabled");
         helper.e(".control-header-search-width-style-auto").disabled = false;
         helper.e(".control-header-search-width-style-custom").disabled = false;
         helper.e("[for=control-header-search-width-custom]").removeAttribute("disabled");
@@ -1080,7 +1602,7 @@ var control = (function() {
         helper.e(".control-header-search-text-align-center").disabled = false;
         helper.e(".control-header-search-text-align-right").disabled = false;
       } else {
-        helper.e(".control-header-search-width-label").setAttribute("disabled", "");
+        helper.e(".control-header-search-width-style-label").setAttribute("disabled", "");
         helper.e(".control-header-search-width-style-auto").disabled = true;
         helper.e(".control-header-search-width-style-custom").disabled = true;
         helper.e("[for=control-header-search-width-custom]").setAttribute("disabled", "");
@@ -1236,9 +1758,10 @@ var control = (function() {
       };
     };
     _edit();
-    _greeting();
     _date();
     _clock();
+    _greeting();
+    _transitional();
     _search();
     _theme();
     _link();
@@ -1269,6 +1792,12 @@ var control = (function() {
         })).checked = true;
       },
       text: function(object) {
+        object.element.value = helper.getObject({
+          object: state.get(),
+          path: object.path
+        });
+      },
+      number: function(object) {
         object.element.value = helper.getObject({
           object: state.get(),
           path: object.path
