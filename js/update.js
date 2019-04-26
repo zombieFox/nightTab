@@ -270,7 +270,6 @@ var update = (function() {
         show: data.state.header.clock.hour24
       }
     };
-    console.log(data.state.header.date);
     data.state.header.date = {
       day: {
         show: data.state.header.date.show.day,
