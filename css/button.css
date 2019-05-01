@@ -146,3 +146,22 @@ button [class*=" button-"]:last-child,
   background-color: transparent;
   color: transparent;
 }
+
+.button-input-color {
+  padding-right: 2.25em;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.button-input-color:before {
+  background-color: rgb(var(--accent));
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  right: 0.5em;
+  width: 1em;
+  height: 1em;
+  z-index: 1;
+  box-shadow: 0 0 0.25em 0 rgba(var(--accent), 0.6), 0 0 0.5em 0 rgba(var(--accent), 0.4);
+}

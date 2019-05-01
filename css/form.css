@@ -1,3 +1,21 @@
+.form-indent {
+  margin-left: 2.25em;
+}
+
+.form-inline {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+.input-wrap,
+.checkbox-wrap,
+.radio-wrap {
+  padding: 0.5em 0;
+  position: relative;
+  width: 100%;
+}
+
+/* email, number, password, search, tel, text */
 input[type="email"],
 input[type="number"],
 input[type="password"],
@@ -6,7 +24,7 @@ input[type="tel"],
 input[type="text"] {
   background-color: rgb(var(--gray-02));
   padding: 0 1em;
-  margin: 0 0 1em 0;
+  margin: 0;
   color: rgb(var(--form-input-text));
   font-size: 1em;
   font-family: var(--font-regular);
@@ -87,18 +105,6 @@ input[type="text"][disabled]:focus {
   color: rgb(var(--form-input-text-disabled));
 }
 
-input[type="checkbox"][disabled]~.input-helper,
-input[type="radio"][disabled]~.input-helper,
-input[type="email"][disabled]~.input-helper,
-input[type="number"][disabled]~.input-helper,
-input[type="password"][disabled]~.input-helper,
-input[type="search"][disabled]~.input-helper,
-input[type="tel"][disabled]~.input-helper,
-input[type="text"][disabled]~.input-helper,
-input[type="range"][disabled]~.input-helper {
-  color: rgb(var(--form-input-text-disabled-helper-text));
-}
-
 input[type="email"]::placeholder,
 input[type="number"]::placeholder,
 input[type="password"]::placeholder,
@@ -148,77 +154,27 @@ input[type="text"][disabled]:focus::placeholder {
   color: rgb(var(--form-input-placeholder-disabled));
 }
 
+/* label */
 label {
-  padding: 0.5em 0;
+  padding: 0;
   color: rgb(var(--form-label));
   margin-bottom: 0;
   font-size: 1em;
   display: block;
 }
 
+label:not(:only-child):not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
 label[disabled] {
   color: rgb(var(--form-label-disabled));
 }
 
-input[type="color"] {
-  opacity: 0;
-  width: 2px;
-  height: 2px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  cursor: pointer;
-  -webkit-appearance: none;
-}
-
-input[type="color"]:focus {
-  outline: none;
-}
-
-input[type="color"]::-webkit-color-swatch-wrapper {
-  padding: 0;
-}
-
-input[type="color"]::-webkit-color-swatch {
-  border: 0;
-}
-
-input[type="color"]+.input-label-button {
-  padding-right: 2.25em;
-  justify-content: center;
-  align-items: center;
-}
-
-input[type="color"]+.input-label-button:before {
-  background-color: rgb(var(--accent));
-  content: "";
-  border-radius: 50%;
-  position: absolute;
-  right: 0.5em;
-  width: 1em;
-  height: 1em;
-  z-index: 1;
-  box-shadow: 0 0 0.25em 0 rgba(var(--accent), 0.6), 0 0 0.5em 0 rgba(var(--accent), 0.4);
-}
-
-.input-wrap,
-.checkbox-wrap,
-.radio-wrap {
-  position: relative;
-}
-
-.form-indent {
-  margin-left: 2.25em;
-}
-
-.form-inline {
-  display: inline-block;
-  margin-right: 1.5em;
-}
-
+/* checkbox and radio */
 input[type="checkbox"],
 input[type="radio"] {
+  margin-bottom: 0;
   position: absolute;
   top: 0;
   left: 50%;
@@ -237,14 +193,15 @@ input[type="radio"] {
 input[type="checkbox"]+label,
 input[type="radio"]+label {
   color: rgb(var(--form-checkbox-radio-label));
+  /* margin-bottom: 0.5em; */
   font-size: 1em;
   font-family: var(--font-regular);
-  min-height: 2.5em;
+  /* min-height: 2.5em; */
   cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   /* transition: all var(--animation-speed-fast) ease-in-out; */
 }
 
@@ -391,11 +348,86 @@ input[type="radio"]:checked+label .label-icon:before {
   content: "\e837";
 }
 
+/* color */
+input[type="color"]:focus {
+  outline: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: 0;
+}
+
+.input-color-hide input[type="color"] {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-appearance: none;
+}
+
+.input-color-show {
+  width: 100%;
+  height: 2.5em;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: var(--radius);
+  transition: border-color var(--animation-speed-fast) ease-in-out, box-shadow var(--animation-speed-fast) ease-in-out;
+}
+
+.input-color-show input[type="color"] {
+  width: 150%;
+  height: 200%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.input-color-show:active,
+.input-color-show:hover {
+  background-color: rgb(var(--gray-03));
+  outline: none;
+  box-shadow: 0 0 0 var(--line-width) rgb(var(--gray-06));
+}
+
+.input-color-show:focus-within {
+  background-color: rgb(var(--gray-02));
+  outline: none;
+  z-index: 2;
+  /* box-shadow: 0 0 0 var(--line-width) rgb(var(--accent)), 0 0 0 calc(var(--line-width) * 2) rgba(var(--accent), 0.25); */
+}
+
+.input-color-show input[type="color"] {
+  opacity: 1;
+  width: 150%;
+  height: 200%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+/* range */
 input[type="range"] {
-  /* background-color: rgb(var(--gray-08)); */
   background-color: transparent;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0;
   color: rgb(var(--style-neutral-text));
   font-size: 1em;
   font-family: var(--font-regular);
@@ -489,7 +521,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 input[type="range"][disabled]::-webkit-slider-thumb {
-  border-color: rgb(var(--gray-08));
+  border-color: rgb(var(--gray-04));
   cursor: default;
 }
 
@@ -563,7 +595,7 @@ input[type="range"][disabled]::-moz-range-track {
 }
 
 input[type="range"][disabled]::-moz-range-thumb {
-  border-color: rgb(var(--gray-08));
+  border-color: rgb(var(--gray-04));
   cursor: default;
 }
 
@@ -577,6 +609,28 @@ input[type="range"][disabled]::-moz-range-progress {
   background-color: rgb(var(--gray-08));
 }
 
+/* input helper */
+.input-helper {
+  margin-bottom: 0
+}
+
+.input-helper:not(:only-child):not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+input[type="checkbox"][disabled]~.input-helper,
+input[type="radio"][disabled]~.input-helper,
+input[type="email"][disabled]~.input-helper,
+input[type="number"][disabled]~.input-helper,
+input[type="password"][disabled]~.input-helper,
+input[type="search"][disabled]~.input-helper,
+input[type="tel"][disabled]~.input-helper,
+input[type="text"][disabled]~.input-helper,
+input[type="range"][disabled]~.input-helper {
+  color: rgb(var(--form-input-text-disabled-helper-text));
+}
+
+/* form group */
 .form-group {
   margin: 0 0 1em 0;
   display: inline-flex;
