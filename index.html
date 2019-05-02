@@ -67,36 +67,32 @@
         </div>
         <div class="header-item header-edit-add">
           <div class="form-group nested-button mb-0">
-            <div class="input-wrap py-0">
+            <div class="input-wrap input-button input-hide py-0">
               <input id="control-edit" class="control-edit" type="checkbox" tabindex="1">
-              <label for="control-edit" class="button input-label-button">
-                <span class="button-text">Edit</span>
-              </label>
+              <label for="control-edit" class=" mb-0">Edit</label>
             </div>
             <button class="button control-add" tabindex="1">
               <span class="button-text">Add</span>
             </button>
           </div>
         </div>
-        <div class="header-item header-accent" style="width:10em">
-
-          <div class="input-wrap">
-            <label for="xxx">Color</label>
-            <span class="input-color-show">
-              <input id="xxx" class="xxx" type="color" value="#00ff00" tabindex="1">
-            </span>
+        <div class="header-item header-accent">
+          <div class="input-wrap py-0">
+            <label for="xxx" class="">Color</label>
+            <input id="xxx" class="xxx" type="color" value="#00ff00" tabindex="1">
           </div>
-
         </div>
         <div class="header-item header-accent">
-
-          <div class="input-wrap py-0">
-            <input id="control-theme-accent-current" class="control-theme-accent-current input-color-hide" type="color" tabindex="1">
-            <label for="control-theme-accent-current" class="button input-label-button input-color-label-button mb-0">
-              <span class="button-text">Accent</span>
-            </label>
+          <div class="input-wrap input-button input-color-dot py-0">
+            <input id="yyy" class="yyy" type="color" value="#00ff00" tabindex="1">
+            <label for="yyy" class="">Color</label>
           </div>
-
+        </div>
+        <div class="header-item header-accent">
+          <div class="input-wrap input-button input-color-dot input-color-dot-accent py-0">
+            <input id="control-theme-accent-current" class="control-theme-accent-current" type="color" tabindex="1">
+            <label for="control-theme-accent-current">Accent</label>
+          </div>
         </div>
         <div class="header-item header-menu">
           <button id="control-menu" class="control-menu button mb-0" tabindex="1">
@@ -139,20 +135,20 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-header-greeting-show" class="control-header-greeting-show" type="checkbox" tabindex="1">
-                <label for="control-header-greeting-show"><span class="label-icon"></span>Show</label>
+                <label for="control-header-greeting-show">Show</label>
               </div>
               <div class="form-indent">
               <div class="input-wrap">
                 <input id="control-header-greeting-type-good" class="control-header-greeting-type-good" type="radio" name="control-header-greeting-type" value="good" tabindex="1">
-                <label for="control-header-greeting-type-good"><span class="label-icon"></span>"Good morning..."</label>
+                <label for="control-header-greeting-type-good">"Good morning..."</label>
               </div>
               <div class="input-wrap">
                 <input id="control-header-greeting-type-hello" class="control-header-greeting-type-hello" type="radio" name="control-header-greeting-type" value="hello" tabindex="1">
-                <label for="control-header-greeting-type-hello"><span class="label-icon"></span>"Hello..."</label>
+                <label for="control-header-greeting-type-hello">"Hello..."</label>
               </div>
               <div class="input-wrap">
                 <input id="control-header-greeting-type-hi" class="control-header-greeting-type-hi" type="radio" name="control-header-greeting-type" value="hi" tabindex="1">
-                <label for="control-header-greeting-type-hi"><span class="label-icon"></span>"Hi..."</label>
+                <label for="control-header-greeting-type-hi">"Hi..."</label>
               </div>
               <hr>
               <div class="input-wrap">
@@ -169,17 +165,17 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-header-transitional-show" class="control-header-transitional-show" type="checkbox" tabindex="1">
-                <label for="control-header-transitional-show"><span class="label-icon"></span>Show</label>
+                <label for="control-header-transitional-show">Show</label>
                 <p class="input-helper small muted">Available when Date or Time is shown.</p>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
                   <input id="control-header-transitional-type-timeanddate" class="control-header-transitional-type-timeanddate" type="radio" name="control-header-transitional-type" value="timeanddate" tabindex="1">
-                  <label for="control-header-transitional-type-timeanddate"><span class="label-icon"></span>"The time and date is"</label>
+                  <label for="control-header-transitional-type-timeanddate">"The time and date is"</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-transitional-type-its" class="control-header-transitional-type-its" type="radio" name="control-header-transitional-type" value="its" tabindex="1">
-                  <label for="control-header-transitional-type-its"><span class="label-icon"></span>"It's"</label>
+                  <label for="control-header-transitional-type-its">"It's"</label>
                 </div>
               </div>
             </div>
@@ -191,61 +187,61 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-header-clock-hours-show" class="control-header-clock-hours-show" type="checkbox" tabindex="1">
-                <label for="control-header-clock-hours-show"><span class="label-icon"></span>Hours</label>
+                <label for="control-header-clock-hours-show">Hours</label>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
                   <input id="control-header-clock-hours-number" class="control-header-clock-hours-number" type="radio" name="control-header-clock-hours" value="number" tabindex="1">
-                  <label for="control-header-clock-hours-number"><span class="label-icon"></span>As number</label>
+                  <label for="control-header-clock-hours-number">As number</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-clock-hours-word" class="control-header-clock-hours-word" type="radio" name="control-header-clock-hours" value="word" tabindex="1">
-                  <label for="control-header-clock-hours-word"><span class="label-icon"></span>As word</label>
+                  <label for="control-header-clock-hours-word">As word</label>
                 </div>
                 <hr>
               </div>
               <div class="input-wrap">
                 <input id="control-header-clock-minutes-show" class="control-header-clock-minutes-show" type="checkbox" tabindex="1">
-                <label for="control-header-clock-minutes-show"><span class="label-icon"></span>Minutes</label>
+                <label for="control-header-clock-minutes-show">Minutes</label>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
                   <input id="control-header-clock-minutes-number" class="control-header-clock-minutes-number" type="radio" name="control-header-clock-minutes" value="number" tabindex="1">
-                  <label for="control-header-clock-minutes-number"><span class="label-icon"></span>As number</label>
+                  <label for="control-header-clock-minutes-number">As number</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-clock-minutes-word" class="control-header-clock-minutes-word" type="radio" name="control-header-clock-minutes" value="word" tabindex="1">
-                  <label for="control-header-clock-minutes-word"><span class="label-icon"></span>As word</label>
+                  <label for="control-header-clock-minutes-word">As word</label>
                 </div>
                 <hr>
               </div>
               <div class="input-wrap">
                 <input id="control-header-clock-seconds-show" class="control-header-clock-seconds-show" type="checkbox" tabindex="1">
-                <label for="control-header-clock-seconds-show"><span class="label-icon"></span>Seconds</label>
+                <label for="control-header-clock-seconds-show">Seconds</label>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
                   <input id="control-header-clock-seconds-number" class="control-header-clock-seconds-number" type="radio" name="control-header-clock-seconds" value="number" tabindex="1">
-                  <label for="control-header-clock-seconds-number"><span class="label-icon"></span>As number</label>
+                  <label for="control-header-clock-seconds-number">As number</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-clock-seconds-word" class="control-header-clock-seconds-word" type="radio" name="control-header-clock-seconds" value="word" tabindex="1">
-                  <label for="control-header-clock-seconds-word"><span class="label-icon"></span>As word</label>
+                  <label for="control-header-clock-seconds-word">As word</label>
                 </div>
               </div>
               <hr>
               <div class="input-wrap">
                 <input id="control-header-clock-separator-show" class="control-header-clock-separator-show" type="checkbox" tabindex="1">
-                <label for="control-header-clock-separator-show"><span class="label-icon"></span>Separators</label>
+                <label for="control-header-clock-separator-show">Separators</label>
               </div>
               <hr>
               <div class="input-wrap">
                 <input id="control-header-clock-hour24-show" class="control-header-clock-hour24-show" type="checkbox" tabindex="1">
-                <label for="control-header-clock-hour24-show"><span class="label-icon"></span>24 Hours</label>
+                <label for="control-header-clock-hour24-show">24 Hours</label>
               </div>
               <div class="input-wrap">
                 <input id="control-header-clock-meridiem-show" class="control-header-clock-meridiem-show" type="checkbox" tabindex="1">
-                <label for="control-header-clock-meridiem-show"><span class="label-icon"></span>AM/PM</label>
+                <label for="control-header-clock-meridiem-show">AM/PM</label>
               </div>
             </div>
           </div>
@@ -256,123 +252,123 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-header-date-day-show" class="control-header-date-day-show" type="checkbox" tabindex="1">
-                <label for="control-header-date-day-show"><span class="label-icon"></span>Day</label>
+                <label for="control-header-date-day-show">Day</label>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
                   <input id="control-header-date-day-display-number" class="control-header-date-day-display-number" type="radio" name="control-header-date-day-display" value="number" tabindex="1">
-                  <label for="control-header-date-day-display-number"><span class="label-icon"></span>As number</label>
+                  <label for="control-header-date-day-display-number">As number</label>
                 </div>
                 <div class="form-indent">
                   <label class="control-header-date-day-week-start-label">Start of the week</label>
                   <div class="input-wrap">
                     <input id="control-header-date-day-week-start-monday" class="control-header-date-day-week-start-monday" type="radio" name="control-header-date-day-week-start" value="monday" tabindex="1">
-                    <label for="control-header-date-day-week-start-monday"><span class="label-icon"></span>Monday</label>
+                    <label for="control-header-date-day-week-start-monday">Monday</label>
                   </div>
                   <div class="input-wrap">
                     <input id="control-header-date-day-week-start-sunday" class="control-header-date-day-week-start-sunday" type="radio" name="control-header-date-day-week-start" value="sunday" tabindex="1">
-                    <label for="control-header-date-day-week-start-sunday"><span class="label-icon"></span>Sunday</label>
+                    <label for="control-header-date-day-week-start-sunday">Sunday</label>
                     <p class="input-helper small muted">Define what day "1" represents, either Monday or Sunday.</p>
                   </div>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-date-day-display-word" class="control-header-date-day-display-word" type="radio" name="control-header-date-day-display" value="word" tabindex="1">
-                  <label for="control-header-date-day-display-word"><span class="label-icon"></span>As word</label>
+                  <label for="control-header-date-day-display-word">As word</label>
                 </div>
                 <div class="form-indent">
                   <label class="control-header-date-day-length-label">Word length</label>
                   <div class="input-wrap">
                     <input id="control-header-date-day-length-long" class="control-header-date-day-length-long" type="radio" name="control-header-date-day-length" value="long" tabindex="1">
-                    <label for="control-header-date-day-length-long"><span class="label-icon"></span>Long</label>
+                    <label for="control-header-date-day-length-long">Long</label>
                   </div>
                   <div class="input-wrap">
                     <input id="control-header-date-day-length-short" class="control-header-date-day-length-short" type="radio" name="control-header-date-day-length" value="short" tabindex="1">
-                    <label for="control-header-date-day-length-short"><span class="label-icon"></span>Short</label>
+                    <label for="control-header-date-day-length-short">Short</label>
                   </div>
                 </div>
                 <hr>
               </div>
               <div class="input-wrap">
                 <input id="control-header-date-date-show" class="control-header-date-date-show" type="checkbox" tabindex="1">
-                <label for="control-header-date-date-show"><span class="label-icon"></span>Date</label>
+                <label for="control-header-date-date-show">Date</label>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
                   <input id="control-header-date-date-display-number" class="control-header-date-date-display-number" type="radio" name="control-header-date-date-display" value="number" tabindex="1">
-                  <label for="control-header-date-date-display-number"><span class="label-icon"></span>As number</label>
+                  <label for="control-header-date-date-display-number">As number</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-date-date-display-word" class="control-header-date-date-display-word" type="radio" name="control-header-date-date-display" value="word" tabindex="1">
-                  <label for="control-header-date-date-display-word"><span class="label-icon"></span>As word</label>
+                  <label for="control-header-date-date-display-word">As word</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-date-date-ordinal" class="control-header-date-date-ordinal" type="checkbox" tabindex="1">
-                  <label for="control-header-date-date-ordinal"><span class="label-icon"></span>Ordinal numbers</label>
+                  <label for="control-header-date-date-ordinal">Ordinal numbers</label>
                   <p class="input-helper small muted">Display Date as 1st, 2nd, 3rd, 4th etc.</p>
                 </div>
                 <hr>
               </div>
               <div class="input-wrap">
                 <input id="control-header-date-month-show" class="control-header-date-month-show" type="checkbox" tabindex="1">
-                <label for="control-header-date-month-show"><span class="label-icon"></span>Month</label>
+                <label for="control-header-date-month-show">Month</label>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
                   <input id="control-header-date-month-display-number" class="control-header-date-month-display-number" type="radio" name="control-header-date-month-display" value="number" tabindex="1">
-                  <label for="control-header-date-month-display-number"><span class="label-icon"></span>As number</label>
+                  <label for="control-header-date-month-display-number">As number</label>
                 </div>
                 <div class="form-indent">
                   <div class="input-wrap">
                     <input id="control-header-date-month-ordinal" class="control-header-date-month-ordinal" type="checkbox" tabindex="1">
-                    <label for="control-header-date-month-ordinal"><span class="label-icon"></span>Ordinal numbers</label>
+                    <label for="control-header-date-month-ordinal">Ordinal numbers</label>
                     <p class="input-helper small muted">Display Month as 1st, 2nd, 3rd, 4th etc.</p>
                   </div>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-date-month-display-word" class="control-header-date-month-display-word" type="radio" name="control-header-date-month-display" value="word" tabindex="1">
-                  <label for="control-header-date-month-display-word"><span class="label-icon"></span>As word</label>
+                  <label for="control-header-date-month-display-word">As word</label>
                 </div>
                 <div class="form-indent">
                   <label class="control-header-date-month-length-label">Word length</label>
                   <div class="input-wrap">
                     <input id="control-header-date-month-length-long" class="control-header-date-month-length-long" type="radio" name="control-header-date-month-length" value="long" tabindex="1">
-                    <label for="control-header-date-month-length-long"><span class="label-icon"></span>Long</label>
+                    <label for="control-header-date-month-length-long">Long</label>
                   </div>
                   <div class="input-wrap">
                     <input id="control-header-date-month-length-short" class="control-header-date-month-length-short" type="radio" name="control-header-date-month-length" value="short" tabindex="1">
-                    <label for="control-header-date-month-length-short"><span class="label-icon"></span>Short</label>
+                    <label for="control-header-date-month-length-short">Short</label>
                   </div>
                 </div>
                 <hr>
               </div>
               <div class="input-wrap">
                 <input id="control-header-date-year-show" class="control-header-date-year-show" type="checkbox" tabindex="1">
-                <label for="control-header-date-year-show"><span class="label-icon"></span>Year</label>
+                <label for="control-header-date-year-show">Year</label>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
                   <input id="control-header-date-year-display-number" class="control-header-date-year-display-number" type="radio" name="control-header-date-year-display" value="number" tabindex="1">
-                  <label for="control-header-date-year-display-number"><span class="label-icon"></span>As number</label>
+                  <label for="control-header-date-year-display-number">As number</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-date-year-display-word" class="control-header-date-year-display-word" type="radio" name="control-header-date-year-display" value="word" tabindex="1">
-                  <label for="control-header-date-year-display-word"><span class="label-icon"></span>As word</label>
+                  <label for="control-header-date-year-display-word">As word</label>
                 </div>
               </div>
               <hr>
               <div class="input-wrap">
                 <input id="control-header-date-separator-show" class="control-header-date-separator-show" type="checkbox" tabindex="1">
-                <label for="control-header-date-separator-show"><span class="label-icon"></span>Separators</label>
+                <label for="control-header-date-separator-show">Separators</label>
               </div>
               <hr>
               <label class="control-header-date-format-label">Format</label>
               <div class="input-wrap">
                 <input id="control-header-date-format-datemonth" class="control-header-date-format-datemonth" type="radio" name="control-header-date-format" value="datemonth" tabindex="1">
-                <label for="control-header-date-format-datemonth"><span class="label-icon"></span>Date / Month</label>
+                <label for="control-header-date-format-datemonth">Date / Month</label>
               </div>
               <div class="input-wrap">
                 <input id="control-header-date-format-monthdate" class="control-header-date-format-monthdate" type="radio" name="control-header-date-format" value="monthdate" tabindex="1">
-                <label for="control-header-date-format-monthdate"><span class="label-icon"></span>Month / Date</label>
+                <label for="control-header-date-format-monthdate">Month / Date</label>
               </div>
             </div>
           </div>
@@ -383,18 +379,18 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-header-search-show" class="control-header-search-show" type="checkbox" tabindex="1">
-                <label for="control-header-search-show"><span class="label-icon"></span>Show</label>
+                <label for="control-header-search-show">Show</label>
               </div>
               <div class="form-indent">
                 <label class="control-header-search-width-style-label">Search box size</label>
                 <div class="input-wrap">
                   <input id="control-header-search-width-style-auto" class="control-header-search-width-style-auto" type="radio" name="control-header-search-width" value="auto" tabindex="1">
-                  <label for="control-header-search-width-style-auto"><span class="label-icon"></span>Auto</label>
+                  <label for="control-header-search-width-style-auto">Auto</label>
                   <p class="input-helper small muted">Search box will grow to best fit available space.</p>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-search-width-style-custom" class="control-header-search-width-style-custom" type="radio" name="control-header-search-width" value="custom" tabindex="1">
-                  <label for="control-header-search-width-style-custom"><span class="label-icon"></span>Custom</label>
+                  <label for="control-header-search-width-style-custom">Custom</label>
                 </div>
                 <div class="form-indent">
                   <div class="input-wrap">
@@ -406,30 +402,30 @@
                 <hr>
                 <div class="input-wrap">
                   <input id="control-header-search-focus" class="control-header-search-focus" type="checkbox" tabindex="1">
-                  <label for="control-header-search-focus"><span class="label-icon"></span>Focus on load/refresh</label>
+                  <label for="control-header-search-focus">Focus on load/refresh</label>
                   <p class="input-helper small muted">May not work in Chrome.</p>
                 </div>
                 <hr>
                 <label class="control-header-search-engine-label">Engine</label>
                 <div class="input-wrap">
                   <input id="control-header-search-engine-google" class="control-header-search-engine-google" type="radio" name="control-header-search-engine" value="google" tabindex="1">
-                  <label for="control-header-search-engine-google"><span class="label-icon"></span>Google</label>
+                  <label for="control-header-search-engine-google">Google</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-search-engine-duckduckgo" class="control-header-search-engine-duckduckgo" type="radio" name="control-header-search-engine" value="duckduckgo" tabindex="1">
-                  <label for="control-header-search-engine-duckduckgo"><span class="label-icon"></span>Duck Duck Go</label>
+                  <label for="control-header-search-engine-duckduckgo">Duck Duck Go</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-search-engine-youtube" class="control-header-search-engine-youtube" type="radio" name="control-header-search-engine" value="youtube" tabindex="1">
-                  <label for="control-header-search-engine-youtube"><span class="label-icon"></span>YouTube</label>
+                  <label for="control-header-search-engine-youtube">YouTube</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-search-engine-giphy" class="control-header-search-engine-giphy" type="radio" name="control-header-search-engine" value="giphy" tabindex="1">
-                  <label for="control-header-search-engine-giphy"><span class="label-icon"></span>Giphy</label>
+                  <label for="control-header-search-engine-giphy">Giphy</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-search-engine-custom" class="control-header-search-engine-custom" type="radio" name="control-header-search-engine" value="custom" tabindex="1">
-                  <label for="control-header-search-engine-custom"><span class="label-icon"></span>Custom</label>
+                  <label for="control-header-search-engine-custom">Custom</label>
                 </div>
                 <div class="form-indent">
                   <div class="input-wrap">
@@ -447,15 +443,15 @@
                 <label class="control-header-search-text-align-label">Text align</label>
                 <div class="input-wrap">
                   <input id="control-header-search-text-align-left" class="control-header-search-text-align-left" type="radio" name="control-header-search-text-align" value="left" tabindex="1">
-                  <label for="control-header-search-text-align-left"><span class="label-icon"></span>Left</label>
+                  <label for="control-header-search-text-align-left">Left</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-search-text-align-center" class="control-header-search-text-align-center" type="radio" name="control-header-search-text-align" value="center" tabindex="1">
-                  <label for="control-header-search-text-align-center"><span class="label-icon"></span>Center</label>
+                  <label for="control-header-search-text-align-center">Center</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-search-text-align-right" class="control-header-search-text-align-right" type="radio" name="control-header-search-text-align" value="right" tabindex="1">
-                  <label for="control-header-search-text-align-right"><span class="label-icon"></span>Right</label>
+                  <label for="control-header-search-text-align-right">Right</label>
                 </div>
               </div>
             </div>
@@ -467,11 +463,11 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-header-edit-add-show" class="control-header-edit-add-show" type="checkbox" tabindex="1">
-                <label for="control-header-edit-add-show"><span class="label-icon"></span>Show Edit/Add</label>
+                <label for="control-header-edit-add-show">Show Edit/Add</label>
               </div>
               <div class="input-wrap">
                 <input id="control-header-accent-show" class="control-header-accent-show" type="checkbox" tabindex="1">
-                <label for="control-header-accent-show"><span class="label-icon"></span>Show Accent</label>
+                <label for="control-header-accent-show">Show Accent</label>
               </div>
             </div>
           </div>
@@ -482,15 +478,15 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-layout-alignment-horizontal-left" class="control-layout-alignment-horizontal-left" type="radio" name="control-layout-alignment-horizontal" value="left" tabindex="1">
-                <label for="control-layout-alignment-horizontal-left"><span class="label-icon"></span>Left</label>
+                <label for="control-layout-alignment-horizontal-left">Left</label>
               </div>
               <div class="input-wrap">
                 <input id="control-layout-alignment-horizontal-center" class="control-layout-alignment-horizontal-center" type="radio" name="control-layout-alignment-horizontal" value="center" tabindex="1">
-                <label for="control-layout-alignment-horizontal-center"><span class="label-icon"></span>Center</label>
+                <label for="control-layout-alignment-horizontal-center">Center</label>
               </div>
               <div class="input-wrap">
                 <input id="control-layout-alignment-horizontal-right" class="control-layout-alignment-horizontal-right" type="radio" name="control-layout-alignment-horizontal" value="right" tabindex="1">
-                <label for="control-layout-alignment-horizontal-right"><span class="label-icon"></span>Right</label>
+                <label for="control-layout-alignment-horizontal-right">Right</label>
                 <p class="input-helper small muted">Effects may not be visible if the Search box size is set to Auto and grows to fill available space.</p>
               </div>
             </div>
@@ -502,15 +498,15 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-layout-alignment-vertical-top" class="control-layout-alignment-vertical-top" type="radio" name="control-layout-alignment-vertical" value="top" tabindex="1">
-                <label for="control-layout-alignment-vertical-top"><span class="label-icon"></span>Top</label>
+                <label for="control-layout-alignment-vertical-top">Top</label>
               </div>
               <div class="input-wrap">
                 <input id="control-layout-alignment-vertical-center" class="control-layout-alignment-vertical-center" type="radio" name="control-layout-alignment-vertical" value="center" tabindex="1">
-                <label for="control-layout-alignment-vertical-center"><span class="label-icon"></span>Center</label>
+                <label for="control-layout-alignment-vertical-center">Center</label>
               </div>
               <div class="input-wrap">
                 <input id="control-layout-alignment-vertical-bottom" class="control-layout-alignment-vertical-bottom" type="radio" name="control-layout-alignment-vertical" value="bottom" tabindex="1">
-                <label for="control-layout-alignment-vertical-bottom"><span class="label-icon"></span>Bottom</label>
+                <label for="control-layout-alignment-vertical-bottom">Bottom</label>
                 <p class="input-helper small muted">Available when Bookmarks are not shown.</p>
               </div>
             </div>
@@ -522,17 +518,17 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-header-shade-show" class="control-header-shade-show" type="checkbox" tabindex="1">
-                <label for="control-header-shade-show"><span class="label-icon"></span>Show</label>
+                <label for="control-header-shade-show">Show</label>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
                   <input id="control-header-shade-style-always" class="control-header-shade-style-always" type="radio" name="control-header-shade-style" value="always" tabindex="1">
-                  <label for="control-header-shade-style-always"><span class="label-icon"></span>Always visible</label>
+                  <label for="control-header-shade-style-always">Always visible</label>
                   <p class="input-helper small muted">Useful for when a Background Image is shown.</p>
                 </div>
                 <div class="input-wrap">
                   <input id="control-header-shade-style-scroll" class="control-header-shade-style-scroll" type="radio" name="control-header-shade-style" value="scroll" tabindex="1">
-                  <label for="control-header-shade-style-scroll"><span class="label-icon"></span>Visible on scroll</label>
+                  <label for="control-header-shade-style-scroll">Visible on scroll</label>
                   <p class="input-helper small muted">The page will not scroll if Bookmarks are not shown.</p>
                 </div>
                 <hr>
@@ -551,7 +547,7 @@
                 <hr>
                 <div class="input-wrap">
                   <input id="control-header-shade-border-top-show" class="control-header-shade-border-top-show" type="checkbox" value="always" tabindex="1">
-                  <label for="control-header-shade-border-top-show"><span class="label-icon"></span>Top border</label>
+                  <label for="control-header-shade-border-top-show">Top border</label>
                 </div>
                 <div class="form-indent">
                   <div class="input-wrap">
@@ -562,7 +558,7 @@
                 <hr>
                 <div class="input-wrap">
                   <input id="control-header-shade-border-bottom-show" class="control-header-shade-border-bottom-show" type="checkbox" value="always" tabindex="1">
-                  <label for="control-header-shade-border-bottom-show"><span class="label-icon"></span>Bottom border</label>
+                  <label for="control-header-shade-border-bottom-show">Bottom border</label>
                 </div>
                 <div class="form-indent">
                   <div class="input-wrap">
@@ -583,25 +579,25 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-bookmarks-link-show" class="control-bookmarks-link-show" type="checkbox" tabindex="1">
-                <label for="control-bookmarks-link-show"><span class="label-icon"></span>Show</label>
+                <label for="control-bookmarks-link-show">Show</label>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
                   <input id="control-bookmarks-name-show" class="control-bookmarks-name-show" type="checkbox" tabindex="1">
-                  <label for="control-bookmarks-name-show"><span class="label-icon"></span>Names</label>
+                  <label for="control-bookmarks-name-show">Names</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-bookmarks-url-show" class="control-bookmarks-url-show" type="checkbox" tabindex="1">
-                  <label for="control-bookmarks-url-show"><span class="label-icon"></span>URL on hover</label>
+                  <label for="control-bookmarks-url-show">URL on hover</label>
                 </div>
                 <div class="form-indent">
                   <div class="input-wrap">
                     <input id="control-bookmarks-url-style-dark" class="control-bookmarks-url-style-dark" type="radio" name="control-bookmarks-url-style" value="dark" tabindex="1">
-                    <label for="control-bookmarks-url-style-dark"><span class="label-icon"></span>Dark text</label>
+                    <label for="control-bookmarks-url-style-dark">Dark text</label>
                   </div>
                   <div class="input-wrap">
                     <input id="control-bookmarks-url-style-light" class="control-bookmarks-url-style-light" type="radio" name="control-bookmarks-url-style" value="light" tabindex="1">
-                    <label for="control-bookmarks-url-style-light"><span class="label-icon"></span>Light text</label>
+                    <label for="control-bookmarks-url-style-light">Light text</label>
                   </div>
                 </div>
               </div>
@@ -614,7 +610,7 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-bookmarks-new-tab" class="control-bookmarks-new-tab" type="checkbox" tabindex="1">
-                <label for="control-bookmarks-new-tab"><span class="label-icon"></span>In a new tab</label>
+                <label for="control-bookmarks-new-tab">In a new tab</label>
               </div>
             </div>
           </div>
@@ -625,11 +621,11 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-bookmarks-style-block" class="control-bookmarks-style-block" type="radio" name="control-bookmarks-style" value="block" tabindex="1">
-                <label for="control-bookmarks-style-block"><span class="label-icon"></span>Block</label>
+                <label for="control-bookmarks-style-block">Block</label>
               </div>
               <div class="input-wrap">
                 <input id="control-bookmarks-style-list" class="control-bookmarks-style-list" type="radio" name="control-bookmarks-style" value="list" tabindex="1">
-                <label for="control-bookmarks-style-list"><span class="label-icon"></span>List</label>
+                <label for="control-bookmarks-style-list">List</label>
               </div>
             </div>
           </div>
@@ -640,15 +636,15 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-bookmarks-sort-none" class="control-bookmarks-sort-none" type="radio" name="control-bookmarks-sort" value="none" tabindex="1">
-                <label for="control-bookmarks-sort-none"><span class="label-icon"></span>None (as added)</label>
+                <label for="control-bookmarks-sort-none">None (as added)</label>
               </div>
               <div class="input-wrap">
                 <input id="control-bookmarks-sort-name" class="control-bookmarks-sort-name" type="radio" name="control-bookmarks-sort" value="name" tabindex="1">
-                <label for="control-bookmarks-sort-name"><span class="label-icon"></span>Name</label>
+                <label for="control-bookmarks-sort-name">Name</label>
               </div>
               <div class="input-wrap">
                 <input id="control-bookmarks-sort-letter" class="control-bookmarks-sort-letter" type="radio" name="control-bookmarks-sort" value="letter" tabindex="1">
-                <label for="control-bookmarks-sort-letter"><span class="label-icon"></span>Letter</label>
+                <label for="control-bookmarks-sort-letter">Letter</label>
               </div>
             </div>
           </div>
@@ -662,11 +658,11 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-theme-style-dark" class="control-theme-style-dark" type="radio" name="control-theme-style" value="dark" tabindex="1">
-                <label for="control-theme-style-dark"><span class="label-icon"></span>Dark</label>
+                <label for="control-theme-style-dark">Dark</label>
               </div>
               <div class="input-wrap">
                 <input id="control-theme-style-light" class="control-theme-style-light" type="radio" name="control-theme-style" value="light" tabindex="1">
-                <label for="control-theme-style-light"><span class="label-icon"></span>Light</label>
+                <label for="control-theme-style-light">Light</label>
                 <p class="input-helper small muted">Accent colour may need to be changed to best fit the Theme Style.</p>
               </div>
             </div>
@@ -678,28 +674,28 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-theme-accent-random-active" class="control-theme-accent-random-active" type="checkbox" tabindex="1">
-                <label for="control-theme-accent-random-active"><span class="label-icon"></span>Random Accent colour on load/refresh</label>
+                <label for="control-theme-accent-random-active">Random Accent colour on load/refresh</label>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
                   <input id="control-theme-accent-random-style-any" class="control-theme-accent-random-style-any" type="radio" name="control-theme-accent-random-style" value="any" tabindex="1">
-                  <label for="control-theme-accent-random-style-any"><span class="label-icon"></span>Any colour</label>
+                  <label for="control-theme-accent-random-style-any">Any colour</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-theme-accent-random-style-light" class="control-theme-accent-random-style-light" type="radio" name="control-theme-accent-random-style" value="light" tabindex="1">
-                  <label for="control-theme-accent-random-style-light"><span class="label-icon"></span>Light colours</label>
+                  <label for="control-theme-accent-random-style-light">Light colours</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-theme-accent-random-style-dark" class="control-theme-accent-random-style-dark" type="radio" name="control-theme-accent-random-style" value="dark" tabindex="1">
-                  <label for="control-theme-accent-random-style-dark"><span class="label-icon"></span>Dark colours</label>
+                  <label for="control-theme-accent-random-style-dark">Dark colours</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-theme-accent-random-style-pastel" class="control-theme-accent-random-style-pastel" type="radio" name="control-theme-accent-random-style" value="pastel" tabindex="1">
-                  <label for="control-theme-accent-random-style-pastel"><span class="label-icon"></span>Pastel colours</label>
+                  <label for="control-theme-accent-random-style-pastel">Pastel colours</label>
                 </div>
                 <div class="input-wrap">
                   <input id="control-theme-accent-random-style-saturated" class="control-theme-accent-random-style-saturated" type="radio" name="control-theme-accent-random-style" value="saturated" tabindex="1">
-                  <label for="control-theme-accent-random-style-saturated"><span class="label-icon"></span>Saturated colours</label>
+                  <label for="control-theme-accent-random-style-saturated">Saturated colours</label>
                 </div>
                 <hr>
                 <div class="button-wrap">
@@ -729,7 +725,7 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-layout-scroll-past-end" class="control-layout-scroll-past-end" type="checkbox" tabindex="1">
-                <label for="control-layout-scroll-past-end"><span class="label-icon"></span>Scroll past end</label>
+                <label for="control-layout-scroll-past-end">Scroll past end</label>
               </div>
               <hr>
               <div class="input-wrap">
@@ -748,7 +744,7 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <input id="control-background-image-show" class="control-background-image-show" type="checkbox" tabindex="1">
-                <label for="control-background-image-show"><span class="label-icon"></span>Show</label>
+                <label for="control-background-image-show">Show</label>
               </div>
               <div class="form-indent">
                 <div class="input-wrap">
