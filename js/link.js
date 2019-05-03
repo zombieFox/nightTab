@@ -34,6 +34,7 @@ var link = (function() {
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
     form.querySelector(".link-form-input-url").value = currentBookmark.url;
+    form.querySelector(".link-form-input-color").value = helper.rgbToHex(currentBookmark.color) || helper.rgbToHex(state.get().theme.accent.current);
     modal.render({
       heading: "Edit " + currentBookmark.name,
       action: function() {
@@ -82,7 +83,7 @@ var link = (function() {
           letter: options.form.querySelector(".link-form-input-letter").value,
           name: options.form.querySelector(".link-form-input-name").value,
           url: options.form.querySelector(".link-form-input-url").value,
-          color: options.form.querySelector(".link-form-input-color").value,
+          color: helper.hexToRgb(options.form.querySelector(".link-form-input-color").value),
           timeStamp: new Date().getTime()
         };
         bookmarks.add(newBookmarkData);
@@ -91,7 +92,7 @@ var link = (function() {
         options.bookmarkData.letter = options.form.querySelector(".link-form-input-letter").value;
         options.bookmarkData.name = options.form.querySelector(".link-form-input-name").value;
         options.bookmarkData.url = options.form.querySelector(".link-form-input-url").value;
-        options.bookmarkData.color = options.form.querySelector(".link-form-input-color").value;
+        options.bookmarkData.color = helper.hexToRgb(options.form.querySelector(".link-form-input-color").value);
         bookmarks.edit({
           bookmarkData: options.bookmarkData,
           timeStamp: options.bookmarkData.timeStamp
@@ -257,12 +258,19 @@ var link = (function() {
         value: "input-wrap py-0"
       }]
     });
+    var colorFormGroup = helper.makeNode({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "form-group"
+      }]
+    });
     var colorInputLabel = helper.makeNode({
       tag: "label",
       text: "Accent override",
       attr: [{
         key: "for",
-        value: "ccc"
+        value: "color"
       }]
     });
     var colorInputInput = helper.makeNode({
@@ -284,43 +292,57 @@ var link = (function() {
         value: "1"
       }]
     });
+    var colorButtonRevert = helper.makeNode({
+      tag: "button",
+      text: "Revert",
+      attr: [{
+        key: "id",
+        value: "revert"
+      }, {
+        key: "class",
+        value: "button mb-0"
+      }, {
+        key: "type",
+        value: "button"
+      }, {
+        key: "tabindex",
+        value: "1"
+      }]
+    });
+    colorButtonRevert.addEventListener("click", function(event) {
+      colorInputInput.value = helper.rgbToHex(state.get().theme.accent.current);
+    }, false);
     fieldset.appendChild(letterLabel);
     fieldset.appendChild(letterInput);
     fieldset.appendChild(nameLabel);
     fieldset.appendChild(nameInput);
     fieldset.appendChild(urlLabel);
     fieldset.appendChild(urlInput);
-    colorInputWrap.appendChild(colorInputLabel);
-    colorInputWrap.appendChild(colorInputInput);
+    fieldset.appendChild(colorInputLabel);
+    colorFormGroup.appendChild(colorInputInput);
+    colorFormGroup.appendChild(colorButtonRevert);
+    colorInputWrap.appendChild(colorFormGroup);
     fieldset.appendChild(colorInputWrap);
     form.appendChild(fieldset);
     return form;
   };
 
   var _makeLink = function(data) {
-    var linkItem;
+    var linkItemOptions = {
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "link-item"
+      }]
+    };
     if (data.color) {
-      var color = helper.hexToRgb(data.color);
-      linkItem = helper.makeNode({
-        tag: "div",
-        attr: [{
-          key: "class",
-          value: "link-item"
-        }, {
-          key: "style",
-          value: "--accent: " + color.r + ", " + color.g + ", " + color.b
-        }]
-      });
-    } else {
-      linkItem = helper.makeNode({
-        tag: "div",
-        attr: [{
-          key: "class",
-          value: "link-item"
-        }]
+      linkItemOptions.attr.push({
+        key: "style",
+        value: "--accent: " + data.color.r + ", " + data.color.g + ", " + data.color.b
       });
     };
-    var linkOptions = {
+    var linkItem = helper.makeNode(linkItemOptions);
+    var linkPanelFrontOptions = {
       tag: "a",
       attr: [{
         key: "class",
@@ -334,12 +356,12 @@ var link = (function() {
       }]
     };
     if (state.get().bookmarks.newTab) {
-      linkOptions.attr.push({
+      linkPanelFrontOptions.attr.push({
         key: "target",
         value: "_blank"
       });
     };
-    var linkPanelFront = helper.makeNode(linkOptions);
+    var linkPanelFront = helper.makeNode(linkPanelFrontOptions);
     var linkPanelBack = helper.makeNode({
       tag: "div",
       attr: [{

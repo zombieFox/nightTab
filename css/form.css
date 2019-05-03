@@ -291,10 +291,9 @@ input[type="radio"]:checked+label:before {
 
 /* color */
 input[type="color"] {
+  background-color: transparent;
   padding: 0;
   margin: 0 0 1em 0;
-  border-radius: var(--radius);
-  overflow: hidden;
   width: 100%;
   height: 2.5em;
   display: block;
@@ -302,6 +301,7 @@ input[type="color"] {
   border-style: solid;
   border-color: transparent;
   border-radius: var(--radius);
+  overflow: hidden;
   cursor: pointer;
   transition: border-color var(--animation-speed-fast) ease-in-out, box-shadow var(--animation-speed-fast) ease-in-out;
 }
@@ -547,6 +547,11 @@ input[type="range"][disabled]~.input-helper {
   width: 100%;
 }
 
+.input-wrap.input-button {
+  width: initial;
+  display: inline-block;
+}
+
 .input-button input[type="checkbox"]+label,
 .input-button input[type="radio"]+label,
 .input-button input[type="color"]+label {
@@ -625,13 +630,14 @@ input[type="range"][disabled]~.input-helper {
 }
 
 .input-color-dot input[type="color"] {
-  border-radius: 50%;
+  margin: 0;
   position: absolute;
   top: 50%;
   right: 0.5em;
   width: 1em;
   height: 1em;
   z-index: 1;
+  border-radius: 50%;
   transform: translateY(-50%);
   transition: none;
 }
@@ -699,7 +705,8 @@ input[type="range"][disabled]~.input-helper {
 .form-group>input[type="password"],
 .form-group>input[type="search"],
 .form-group>input[type="tel"],
-.form-group>input[type="text"] {
+.form-group>input[type="text"],
+.form-group>input[type="color"] {
   margin: 0;
   border-radius: 0;
 }
@@ -718,7 +725,8 @@ input[type="range"][disabled]~.input-helper {
 .form-group>input[type="password"],
 .form-group>input[type="search"],
 .form-group>input[type="tel"],
-.form-group>input[type="text"] {
+.form-group>input[type="text"],
+.form-group>input[type="color"] {
   z-index: 1;
 }
 
@@ -727,7 +735,8 @@ input[type="range"][disabled]~.input-helper {
 .form-group>input[type="password"]:hover,
 .form-group>input[type="search"]:hover,
 .form-group>input[type="tel"]:hover,
-.form-group>input[type="text"]:hover {
+.form-group>input[type="text"]:hover,
+.form-group>input[type="color"]:hover {
   z-index: 2;
 }
 
@@ -742,7 +751,9 @@ input[type="range"][disabled]~.input-helper {
 .form-group>input[type="tel"]:active,
 .form-group>input[type="tel"]:focus,
 .form-group>input[type="text"]:active,
-.form-group>input[type="text"]:focus {
+.form-group>input[type="text"]:focus,
+.form-group>input[type="color"]:active,
+.form-group>input[type="color"]:focus {
   z-index: 3;
 }
 
@@ -753,7 +764,8 @@ input[type="range"][disabled]~.input-helper {
 .form-group>input[type="password"]:first-child,
 .form-group>input[type="search"]:first-child,
 .form-group>input[type="tel"]:first-child,
-.form-group>input[type="text"]:first-child {
+.form-group>input[type="text"]:first-child,
+.form-group>input[type="color"]:first-child {
   border-radius: var(--radius) 0 0 var(--radius);
 }
 
@@ -764,7 +776,8 @@ input[type="range"][disabled]~.input-helper {
 .form-group>input[type="password"]:last-child,
 .form-group>input[type="search"]:last-child,
 .form-group>input[type="tel"]:last-child,
-.form-group>input[type="text"]:last-child {
+.form-group>input[type="text"]:last-child,
+.form-group>input[type="color"]:last-child {
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 
