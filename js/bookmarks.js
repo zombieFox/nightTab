@@ -174,6 +174,7 @@ var bookmarks = (function() {
       letter: null,
       name: null,
       url: null,
+      color: null,
       timeStamp: null
     };
     if (override) {
@@ -183,8 +184,10 @@ var bookmarks = (function() {
       letter: options.letter,
       name: options.name,
       url: options.url,
+      color: options.color,
       timeStamp: options.timeStamp
     };
+    console.log(newBookmark);
     all.push(newBookmark);
   };
 

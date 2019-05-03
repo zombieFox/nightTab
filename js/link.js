@@ -82,6 +82,7 @@ var link = (function() {
           letter: options.form.querySelector(".link-form-input-letter").value,
           name: options.form.querySelector(".link-form-input-name").value,
           url: options.form.querySelector(".link-form-input-url").value,
+          color: options.form.querySelector(".link-form-input-color").value,
           timeStamp: new Date().getTime()
         };
         bookmarks.add(newBookmarkData);
@@ -90,6 +91,7 @@ var link = (function() {
         options.bookmarkData.letter = options.form.querySelector(".link-form-input-letter").value;
         options.bookmarkData.name = options.form.querySelector(".link-form-input-name").value;
         options.bookmarkData.url = options.form.querySelector(".link-form-input-url").value;
+        options.bookmarkData.color = options.form.querySelector(".link-form-input-color").value;
         bookmarks.edit({
           bookmarkData: options.bookmarkData,
           timeStamp: options.bookmarkData.timeStamp
@@ -224,7 +226,7 @@ var link = (function() {
         value: "text"
       }, {
         key: "class",
-        value: "link-form-input-url mb-0"
+        value: "link-form-input-url"
       }, {
         key: "id",
         value: "url"
@@ -248,24 +250,76 @@ var link = (function() {
         value: "false"
       }]
     });
+    var colorInputWrap = helper.makeNode({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "input-wrap py-0"
+      }]
+    });
+    var colorInputLabel = helper.makeNode({
+      tag: "label",
+      text: "Accent override",
+      attr: [{
+        key: "for",
+        value: "ccc"
+      }]
+    });
+    var colorInputInput = helper.makeNode({
+      tag: "input",
+      attr: [{
+        key: "id",
+        value: "color"
+      }, {
+        key: "class",
+        value: "link-form-input-color mb-0"
+      }, {
+        key: "type",
+        value: "color"
+      }, {
+        key: "value",
+        value: helper.rgbToHex(state.get().theme.accent.current)
+      }, {
+        key: "tabindex",
+        value: "1"
+      }]
+    });
     fieldset.appendChild(letterLabel);
     fieldset.appendChild(letterInput);
     fieldset.appendChild(nameLabel);
     fieldset.appendChild(nameInput);
     fieldset.appendChild(urlLabel);
     fieldset.appendChild(urlInput);
+    colorInputWrap.appendChild(colorInputLabel);
+    colorInputWrap.appendChild(colorInputInput);
+    fieldset.appendChild(colorInputWrap);
     form.appendChild(fieldset);
     return form;
   };
 
   var _makeLink = function(data) {
-    var linkItem = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "link-item"
-      }]
-    });
+    var linkItem;
+    if (data.color) {
+      var color = helper.hexToRgb(data.color);
+      linkItem = helper.makeNode({
+        tag: "div",
+        attr: [{
+          key: "class",
+          value: "link-item"
+        }, {
+          key: "style",
+          value: "--accent: " + color.r + ", " + color.g + ", " + color.b
+        }]
+      });
+    } else {
+      linkItem = helper.makeNode({
+        tag: "div",
+        attr: [{
+          key: "class",
+          value: "link-item"
+        }]
+      });
+    };
     var linkOptions = {
       tag: "a",
       attr: [{
