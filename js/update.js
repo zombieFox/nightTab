@@ -304,6 +304,21 @@ var update = (function() {
     return data;
   };
 
+  var _update_2220 = function(data) {
+    data.version = "2.22.0";
+    data.bookmarks.forEach(function(item, index) {
+      item.accent = {
+        override: false,
+        color: {
+          r: null,
+          g: null,
+          b: null
+        }
+      };
+    });
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -389,6 +404,10 @@ var update = (function() {
       if (version.compare(data.version, "2.21.0") == -1) {
         console.log("\t= running update 2.21.0");
         data = _update_2210(data);
+      };
+      if (version.compare(data.version, "2.22.0") == -1) {
+        console.log("\t= running update 2.22.0");
+        data = _update_2220(data);
       };
     };
     // if no update is needed

@@ -34,7 +34,11 @@ var link = (function() {
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
     form.querySelector(".link-form-input-url").value = currentBookmark.url;
-    form.querySelector(".link-form-input-color").value = helper.rgbToHex(currentBookmark.color) || helper.rgbToHex(state.get().theme.accent.current);
+    if (currentBookmark.accent.override) {
+      form.querySelector(".link-form-input-color").value = helper.rgbToHex(currentBookmark.accent.color);
+    } else {
+      form.querySelector(".link-form-input-color").value = helper.rgbToHex(state.get().theme.accent.current);
+    };
     modal.render({
       heading: "Edit " + currentBookmark.name,
       action: function() {
@@ -83,8 +87,19 @@ var link = (function() {
           letter: options.form.querySelector(".link-form-input-letter").value,
           name: options.form.querySelector(".link-form-input-name").value,
           url: options.form.querySelector(".link-form-input-url").value,
-          color: helper.hexToRgb(options.form.querySelector(".link-form-input-color").value),
-          timeStamp: new Date().getTime()
+          timeStamp: new Date().getTime(),
+          accent: {
+            override: false,
+            color: {
+              r: null,
+              g: null,
+              b: null
+            }
+          }
+        };
+        if (options.form.querySelector(".link-form-input-color").value != helper.rgbToHex(state.get().theme.accent.current)) {
+          newBookmarkData.accent.override = true;
+          newBookmarkData.accent.color = helper.hexToRgb(options.form.querySelector(".link-form-input-color").value);
         };
         bookmarks.add(newBookmarkData);
       },
@@ -92,7 +107,17 @@ var link = (function() {
         options.bookmarkData.letter = options.form.querySelector(".link-form-input-letter").value;
         options.bookmarkData.name = options.form.querySelector(".link-form-input-name").value;
         options.bookmarkData.url = options.form.querySelector(".link-form-input-url").value;
-        options.bookmarkData.color = helper.hexToRgb(options.form.querySelector(".link-form-input-color").value);
+        if (options.form.querySelector(".link-form-input-color").value != helper.rgbToHex(state.get().theme.accent.current)) {
+          options.bookmarkData.accent.override = true;
+          options.bookmarkData.accent.color = helper.hexToRgb(options.form.querySelector(".link-form-input-color").value);
+        } else {
+          options.bookmarkData.accent.override = false;
+          options.bookmarkData.accent.color = {
+            r: null,
+            g: null,
+            b: null
+          };
+        };
         bookmarks.edit({
           bookmarkData: options.bookmarkData,
           timeStamp: options.bookmarkData.timeStamp
@@ -309,6 +334,14 @@ var link = (function() {
         value: "1"
       }]
     });
+    var colorPara = helper.makeNode({
+      tag: "p",
+      text: "Use this color to override the global Accent colour.",
+      attr: [{
+        key: "class",
+        value: "input-helper small muted"
+      }]
+    });
     colorButtonRevert.addEventListener("click", function(event) {
       colorInputInput.value = helper.rgbToHex(state.get().theme.accent.current);
     }, false);
@@ -323,6 +356,7 @@ var link = (function() {
     colorFormGroup.appendChild(colorButtonRevert);
     colorInputWrap.appendChild(colorFormGroup);
     fieldset.appendChild(colorInputWrap);
+    fieldset.appendChild(colorPara);
     form.appendChild(fieldset);
     return form;
   };
@@ -335,10 +369,10 @@ var link = (function() {
         value: "link-item"
       }]
     };
-    if (data.color) {
+    if (data.accent.override) {
       linkItemOptions.attr.push({
         key: "style",
-        value: "--accent: " + data.color.r + ", " + data.color.g + ", " + data.color.b
+        value: "--accent: " + data.accent.color.r + ", " + data.accent.color.g + ", " + data.accent.color.b
       });
     };
     var linkItem = helper.makeNode(linkItemOptions);
