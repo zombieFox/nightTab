@@ -119,3 +119,7 @@
 .icon-unfold-more:before {
   content: "\e5d7";
 }
+
+.icon-refresh:before {
+  content: "\e900";
+}

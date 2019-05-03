@@ -317,13 +317,9 @@ var link = (function() {
         value: "1"
       }]
     });
-    var colorButtonRevert = helper.makeNode({
+    var colorButtonRefresh = helper.makeNode({
       tag: "button",
-      text: "Revert",
       attr: [{
-        key: "id",
-        value: "revert"
-      }, {
         key: "class",
         value: "button mb-0"
       }, {
@@ -334,6 +330,13 @@ var link = (function() {
         value: "1"
       }]
     });
+    var colorButtonRefreshIcon = helper.makeNode({
+      tag: "span",
+      attr: [{
+        key: "class",
+        value: "icon-refresh"
+      }]
+    });
     var colorPara = helper.makeNode({
       tag: "p",
       text: "Use this color to override the global Accent colour.",
@@ -342,7 +345,7 @@ var link = (function() {
         value: "input-helper small muted"
       }]
     });
-    colorButtonRevert.addEventListener("click", function(event) {
+    colorButtonRefresh.addEventListener("click", function(event) {
       colorInputInput.value = helper.rgbToHex(state.get().theme.accent.current);
     }, false);
     fieldset.appendChild(letterLabel);
@@ -353,7 +356,8 @@ var link = (function() {
     fieldset.appendChild(urlInput);
     fieldset.appendChild(colorInputLabel);
     colorFormGroup.appendChild(colorInputInput);
-    colorFormGroup.appendChild(colorButtonRevert);
+    colorButtonRefresh.appendChild(colorButtonRefreshIcon);
+    colorFormGroup.appendChild(colorButtonRefresh);
     colorInputWrap.appendChild(colorFormGroup);
     fieldset.appendChild(colorInputWrap);
     fieldset.appendChild(colorPara);

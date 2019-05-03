@@ -382,7 +382,7 @@ var bookmarks = (function() {
       letter: null,
       name: null,
       url: null,
-      color: null,
+      accent: null,
       timeStamp: null
     };
     if (override) {
@@ -392,11 +392,8 @@ var bookmarks = (function() {
       letter: options.letter,
       name: options.name,
       url: options.url,
-      timeStamp: options.timeStamp
-    };
-    console.log(options.color);
-    if (options.color) {
-      newBookmark.color = options.color;
+      timeStamp: options.timeStamp,
+      accent: options.accent
     };
     all.push(newBookmark);
   };
