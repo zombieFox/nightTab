@@ -66,7 +66,7 @@
 }
 
 .menu-item:not(:last-child) {
-  border-bottom: var(--line-width) solid rgb(var(--gray-02));
+  border-bottom: var(--menu-border);
 }
 
 .menu-close {
@@ -143,9 +143,9 @@
     height: 100%;
     position: absolute;
     top: 0;
-    right: calc(-2em - calc(var(--line-width) / 2));
+    right: calc(-2em - calc(var(--menu-border-width) / 2));
     border-radius: 1em;
-    border-right: var(--line-width) solid rgb(var(--gray-03));
+    border-right: var(--menu-border);
   }
 
   .menu-item:not(:nth-last-child(2)):not(:last-child):before {
@@ -154,9 +154,9 @@
     height: 0;
     position: absolute;
     left: 0;
-    bottom: calc(-2em - calc(var(--line-width) / 2));
+    bottom: calc(-2em - calc(var(--menu-border-width) / 2));
     border-radius: 1em;
-    border-bottom: var(--line-width) solid rgb(var(--gray-03));
+    border-bottom: var(--menu-border);
   }
 
   .menu-item {
@@ -191,7 +191,7 @@
     top: 0;
     right: calc(-2em - calc(var(--line-width) / 2));
     border-radius: 1em;
-    border-right: var(--line-width) solid rgb(var(--gray-03));
+    border-right: var(--menu-border);
   }
 
   .menu-item:not(:nth-last-child(2)):not(:last-child):before {
@@ -206,6 +206,6 @@
     left: 0;
     bottom: calc(-2em - calc(var(--line-width) / 2));
     border-radius: 1em;
-    border-bottom: var(--line-width) solid rgb(var(--gray-03));
+    border-bottom: var(--menu-border);
   }
 }

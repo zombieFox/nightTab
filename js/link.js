@@ -34,6 +34,11 @@ var link = (function() {
     form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
     form.querySelector(".link-form-input-name").value = currentBookmark.name;
     form.querySelector(".link-form-input-url").value = currentBookmark.url;
+    if (currentBookmark.accent.override) {
+      form.querySelector(".link-form-input-color").value = helper.rgbToHex(currentBookmark.accent.color);
+    } else {
+      form.querySelector(".link-form-input-color").value = helper.rgbToHex(state.get().theme.accent.current);
+    };
     modal.render({
       heading: "Edit " + currentBookmark.name,
       action: function() {
@@ -82,7 +87,19 @@ var link = (function() {
           letter: options.form.querySelector(".link-form-input-letter").value,
           name: options.form.querySelector(".link-form-input-name").value,
           url: options.form.querySelector(".link-form-input-url").value,
-          timeStamp: new Date().getTime()
+          timeStamp: new Date().getTime(),
+          accent: {
+            override: false,
+            color: {
+              r: null,
+              g: null,
+              b: null
+            }
+          }
+        };
+        if (options.form.querySelector(".link-form-input-color").value != helper.rgbToHex(state.get().theme.accent.current)) {
+          newBookmarkData.accent.override = true;
+          newBookmarkData.accent.color = helper.hexToRgb(options.form.querySelector(".link-form-input-color").value);
         };
         bookmarks.add(newBookmarkData);
       },
@@ -90,6 +107,17 @@ var link = (function() {
         options.bookmarkData.letter = options.form.querySelector(".link-form-input-letter").value;
         options.bookmarkData.name = options.form.querySelector(".link-form-input-name").value;
         options.bookmarkData.url = options.form.querySelector(".link-form-input-url").value;
+        if (options.form.querySelector(".link-form-input-color").value != helper.rgbToHex(state.get().theme.accent.current)) {
+          options.bookmarkData.accent.override = true;
+          options.bookmarkData.accent.color = helper.hexToRgb(options.form.querySelector(".link-form-input-color").value);
+        } else {
+          options.bookmarkData.accent.override = false;
+          options.bookmarkData.accent.color = {
+            r: null,
+            g: null,
+            b: null
+          };
+        };
         bookmarks.edit({
           bookmarkData: options.bookmarkData,
           timeStamp: options.bookmarkData.timeStamp
@@ -224,7 +252,7 @@ var link = (function() {
         value: "text"
       }, {
         key: "class",
-        value: "link-form-input-url mb-0"
+        value: "link-form-input-url"
       }, {
         key: "id",
         value: "url"
@@ -248,25 +276,111 @@ var link = (function() {
         value: "false"
       }]
     });
+    var colorInputWrap = helper.makeNode({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "input-wrap py-0"
+      }]
+    });
+    var colorFormGroup = helper.makeNode({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "form-group"
+      }]
+    });
+    var colorInputLabel = helper.makeNode({
+      tag: "label",
+      text: "Accent override",
+      attr: [{
+        key: "for",
+        value: "color"
+      }]
+    });
+    var colorInputInput = helper.makeNode({
+      tag: "input",
+      attr: [{
+        key: "id",
+        value: "color"
+      }, {
+        key: "class",
+        value: "link-form-input-color mb-0"
+      }, {
+        key: "type",
+        value: "color"
+      }, {
+        key: "value",
+        value: helper.rgbToHex(state.get().theme.accent.current)
+      }, {
+        key: "tabindex",
+        value: "1"
+      }]
+    });
+    var colorButtonRefresh = helper.makeNode({
+      tag: "button",
+      attr: [{
+        key: "class",
+        value: "button mb-0"
+      }, {
+        key: "type",
+        value: "button"
+      }, {
+        key: "tabindex",
+        value: "1"
+      }]
+    });
+    var colorButtonRefreshIcon = helper.makeNode({
+      tag: "span",
+      attr: [{
+        key: "class",
+        value: "icon-refresh"
+      }]
+    });
+    var colorPara = helper.makeNode({
+      tag: "p",
+      text: "Use this color to override the global Accent colour.",
+      attr: [{
+        key: "class",
+        value: "input-helper small muted"
+      }]
+    });
+    colorButtonRefresh.addEventListener("click", function(event) {
+      colorInputInput.value = helper.rgbToHex(state.get().theme.accent.current);
+    }, false);
     fieldset.appendChild(letterLabel);
     fieldset.appendChild(letterInput);
     fieldset.appendChild(nameLabel);
     fieldset.appendChild(nameInput);
     fieldset.appendChild(urlLabel);
     fieldset.appendChild(urlInput);
+    fieldset.appendChild(colorInputLabel);
+    colorFormGroup.appendChild(colorInputInput);
+    colorButtonRefresh.appendChild(colorButtonRefreshIcon);
+    colorFormGroup.appendChild(colorButtonRefresh);
+    colorInputWrap.appendChild(colorFormGroup);
+    fieldset.appendChild(colorInputWrap);
+    fieldset.appendChild(colorPara);
     form.appendChild(fieldset);
     return form;
   };
 
   var _makeLink = function(data) {
-    var linkItem = helper.makeNode({
+    var linkItemOptions = {
       tag: "div",
       attr: [{
         key: "class",
         value: "link-item"
       }]
-    });
-    var linkOptions = {
+    };
+    if (data.accent.override) {
+      linkItemOptions.attr.push({
+        key: "style",
+        value: "--accent: " + data.accent.color.r + ", " + data.accent.color.g + ", " + data.accent.color.b
+      });
+    };
+    var linkItem = helper.makeNode(linkItemOptions);
+    var linkPanelFrontOptions = {
       tag: "a",
       attr: [{
         key: "class",
@@ -280,12 +394,12 @@ var link = (function() {
       }]
     };
     if (state.get().bookmarks.newTab) {
-      linkOptions.attr.push({
+      linkPanelFrontOptions.attr.push({
         key: "target",
         value: "_blank"
       });
     };
-    var linkPanelFront = helper.makeNode(linkOptions);
+    var linkPanelFront = helper.makeNode(linkPanelFrontOptions);
     var linkPanelBack = helper.makeNode({
       tag: "div",
       attr: [{
