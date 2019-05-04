@@ -82,6 +82,8 @@
   --background-blur: 0;
   --layout-width: calc(70vw - var(--layout-width-gutter));
   --layout-width-gutter: var(--gutter) * 8;
+  --menu-border-width: 2px;
+  --menu-border: var(--menu-border-width) solid rgb(var(--gray-02));
   /* breakpoint reference */
   /* can not be used in @media as of yet */
   --breakpoint-sm: 550px;
