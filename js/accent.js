@@ -59,6 +59,7 @@ var accent = (function() {
         path: "theme.accent.current",
         newValue: randomColor
       });
+      helper.e(".control-theme-accent-current").value = helper.rgbToHex(randomColor);
     };
   };
 
