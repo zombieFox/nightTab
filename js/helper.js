@@ -182,6 +182,55 @@ var helper = (function() {
     return element;
   };
 
+  var node = function(string) {
+    // set element
+    var tag;
+    if (string.indexOf("|") > 0) {
+      tag = string.slice(0, string.indexOf("|"));
+    } else {
+      tag = string;
+    };
+    var text = false;
+    if (tag.indexOf(":") > 0) {
+      var pair = tag.split(":");
+      tag = pair[0];
+      text = pair[1];
+    };
+    var element = document.createElement(tag);
+    if (text && text != "") {
+      element.textContent = text;
+    };
+    var attributes = string.slice(string.indexOf("|") + 1, string.length).split(",");
+    // set attributes
+    if (string.indexOf("|") > 0 && string.indexOf("|") < string.length - 1) {
+      attributes.forEach(function(arrayItem, index) {
+        if (arrayItem.indexOf(":") > 0) {
+          // if key and value
+          var pair = arrayItem.substring(0, arrayItem.indexOf(":")) + "," + arrayItem.substring((arrayItem.indexOf(":") + 1), arrayItem.length);
+          pair = pair.split(",");
+          attributes[index] = {
+            key: pair[0],
+            value: pair[1]
+          };
+        } else {
+          // if key only
+          attributes[index] = {
+            key: arrayItem,
+            value: undefined
+          };
+        };
+      });
+      attributes.forEach(function(arrayItem, index) {
+        if (("key" in arrayItem && arrayItem.key != undefined) && ("value" in arrayItem && arrayItem.value != undefined)) {
+          element.setAttribute(arrayItem.key, arrayItem.value);
+        } else if ("key" in arrayItem && arrayItem.key != undefined) {
+          element.setAttribute(arrayItem.key, "");
+        }
+      });
+    };
+    return element;
+  };
+
   function _makeAddress(path) {
     var array;
     if (path.indexOf("[") != -1 && path.indexOf("]") != -1) {
@@ -474,6 +523,7 @@ var helper = (function() {
     rgbToHex: rgbToHex,
     hslToRgb: hslToRgb,
     makeNode: makeNode,
+    node: node,
     setObject: setObject,
     getObject: getObject,
     makeObject: makeObject,

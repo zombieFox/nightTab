@@ -149,211 +149,94 @@ var link = (function() {
   };
 
   var _makeLinkForm = function() {
-    var form = helper.makeNode({
-      tag: "form",
-      attr: [{
-        key: "class",
-        value: "link-form"
-      }]
+
+    var form = helper.node("form|class:link-form");
+    var fieldset = helper.node("fieldset");
+    var letterFormIndet = helper.node("div|class:form-indent");
+    // var letterLabel = helper.node("label:Letters|for:link-form-input-letter");
+    var letterInput = helper.node("input|type:text,class:link-form-input-letter,id:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+    var iconFormIndet = helper.node("div|class:form-indent");
+    var iconAutoSuggest = helper.node("div|class:auto-suggest-field");
+    var iconFormGroup = helper.node("div|class:form-group");
+    // var iconLabel = helper.node("label:Icon|for:link-form-input-icon");
+    var iconInput = helper.node("input|type:text,class:link-form-input-icon auto-suggest-field,id:link-form-input-icon,placeholder:Egg,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
+    var iconFormGroupText = helper.node("div|class:form-group-text,disabled");
+    var iconFormGroupIcon = helper.node("span|id:link-form-icon,class:link-form-icon fas fa-egg");
+    var iconPara = helper.node("p:Search for an Icon.|class:input-helper small muted,disabled");
+    var nameLabel = helper.node("label:Name|for:link-form-input-name");
+    var nameInput = helper.node("input|type:text,class:link-form-input-name,id:link-form-input-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+    var urlLabel = helper.node("label:URL|for:link-form-input-url");
+    var urlInput = helper.node("input|type:text,class:link-form-input-url mb-0,id:link-form-input-url,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+    var colorInputWrap = helper.node("div|class:input-wrap py-0");
+    var colorFormGroup = helper.node("div|class:form-group");
+    var colorInputLabel = helper.node("label:Accent override|for:link-form-input-color");
+    var colorInputInput = helper.node("input|id:link-form-input-color,class:link-form-input-color mb-0,type:color,value:" + helper.rgbToHex(state.get().theme.accent.current) + ",tabindex:1");
+    var colorButtonRefresh = helper.node("button|class:button mb-0,type:button,tabindex:1");
+    var colorButtonRefreshIcon = helper.node("span|class:icon-refresh");
+    var colorPara = helper.node("p:Use this colour to override the global Accent colour.|class:input-helper small muted");
+    var letterRadioInputWrap = helper.node("div|class:input-wrap");
+    var letterRadioInput = helper.node("input|class:link-form-input-display-letter,id:link-form-input-display-letter,type:radio,name:link-form-input-display,tabindex:1,checked");
+    var letterRadioLable = helper.node("label:Letters|for:link-form-input-display-letter");
+    var iconRadioInputWrap = helper.node("div|class:input-wrap");
+    var iconRadioInput = helper.node("input|class:link-form-input-display-icon,id:link-form-input-display-icon,type:radio,name:link-form-input-display,tabindex:1");
+    var iconRadioLable = helper.node("label:Icon|for:link-form-input-display-icon");
+
+    autoSuggest.bind({
+      input: iconInput,
+      type: "fontawesomeIcon"
     });
-    var fieldset = helper.makeNode({
-      tag: "fieldset"
-    });
-    var letterLabel = helper.makeNode({
-      tag: "label",
-      text: "Letters",
-      attr: [{
-        key: "for",
-        value: "letters"
-      }]
-    });
-    var letterInput = helper.makeNode({
-      tag: "input",
-      attr: [{
-        key: "type",
-        value: "text"
-      }, {
-        key: "class",
-        value: "link-form-input-letter"
-      }, {
-        key: "id",
-        value: "letters"
-      }, {
-        key: "placeholder",
-        value: "E"
-      }, {
-        key: "tabindex",
-        value: "1"
-      }, {
-        key: "autocomplete",
-        value: "off"
-      }, {
-        key: "autocorrect",
-        value: "off"
-      }, {
-        key: "autocapitalize",
-        value: "off"
-      }, {
-        key: "spellcheck",
-        value: "false"
-      }]
-    });
-    var nameLabel = helper.makeNode({
-      tag: "label",
-      text: "Name",
-      attr: [{
-        key: "for",
-        value: "name"
-      }]
-    });
-    var nameInput = helper.makeNode({
-      tag: "input",
-      attr: [{
-        key: "type",
-        value: "text"
-      }, {
-        key: "class",
-        value: "link-form-input-name"
-      }, {
-        key: "id",
-        value: "name"
-      }, {
-        key: "placeholder",
-        value: "Example"
-      }, {
-        key: "tabindex",
-        value: "1"
-      }, {
-        key: "autocomplete",
-        value: "off"
-      }, {
-        key: "autocorrect",
-        value: "off"
-      }, {
-        key: "autocapitalize",
-        value: "off"
-      }, {
-        key: "spellcheck",
-        value: "false"
-      }]
-    });
-    var urlLabel = helper.makeNode({
-      tag: "label",
-      text: "URL",
-      attr: [{
-        key: "for",
-        value: "url"
-      }]
-    });
-    var urlInput = helper.makeNode({
-      tag: "input",
-      attr: [{
-        key: "type",
-        value: "text"
-      }, {
-        key: "class",
-        value: "link-form-input-url"
-      }, {
-        key: "id",
-        value: "url"
-      }, {
-        key: "placeholder",
-        value: "https://www.example.com/"
-      }, {
-        key: "tabindex",
-        value: "1"
-      }, {
-        key: "autocomplete",
-        value: "off"
-      }, {
-        key: "autocorrect",
-        value: "off"
-      }, {
-        key: "autocapitalize",
-        value: "off"
-      }, {
-        key: "spellcheck",
-        value: "false"
-      }]
-    });
-    var colorInputWrap = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "input-wrap py-0"
-      }]
-    });
-    var colorFormGroup = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "form-group"
-      }]
-    });
-    var colorInputLabel = helper.makeNode({
-      tag: "label",
-      text: "Accent override",
-      attr: [{
-        key: "for",
-        value: "color"
-      }]
-    });
-    var colorInputInput = helper.makeNode({
-      tag: "input",
-      attr: [{
-        key: "id",
-        value: "color"
-      }, {
-        key: "class",
-        value: "link-form-input-color mb-0"
-      }, {
-        key: "type",
-        value: "color"
-      }, {
-        key: "value",
-        value: helper.rgbToHex(state.get().theme.accent.current)
-      }, {
-        key: "tabindex",
-        value: "1"
-      }]
-    });
-    var colorButtonRefresh = helper.makeNode({
-      tag: "button",
-      attr: [{
-        key: "class",
-        value: "button mb-0"
-      }, {
-        key: "type",
-        value: "button"
-      }, {
-        key: "tabindex",
-        value: "1"
-      }]
-    });
-    var colorButtonRefreshIcon = helper.makeNode({
-      tag: "span",
-      attr: [{
-        key: "class",
-        value: "icon-refresh"
-      }]
-    });
-    var colorPara = helper.makeNode({
-      tag: "p",
-      text: "Use this color to override the global Accent colour.",
-      attr: [{
-        key: "class",
-        value: "input-helper small muted"
-      }]
-    });
+
+    iconInput.addEventListener("focus", function(event) {
+      console.log("focus");
+    }, false);
+
+    iconInput.addEventListener("blur", function(event) {
+      console.log("blur");
+    }, false);
+
+    letterRadioInput.addEventListener("change", function(event) {
+      letterInput.removeAttribute("disabled");
+      iconInput.setAttribute("disabled", "");
+      iconFormGroupText.setAttribute("disabled", "");
+      iconPara.setAttribute("disabled", "");
+    }, false);
+
+    iconRadioInput.addEventListener("change", function(event) {
+      letterInput.setAttribute("disabled", "");
+      iconInput.removeAttribute("disabled");
+      iconFormGroupText.removeAttribute("disabled");
+      iconPara.removeAttribute("disabled");
+    }, false);
+
     colorButtonRefresh.addEventListener("click", function(event) {
       colorInputInput.value = helper.rgbToHex(state.get().theme.accent.current);
     }, false);
-    fieldset.appendChild(letterLabel);
-    fieldset.appendChild(letterInput);
+
+    letterRadioInputWrap.appendChild(letterRadioInput);
+    letterRadioInputWrap.appendChild(letterRadioLable);
+    fieldset.appendChild(letterRadioInputWrap);
+    // letterFormIndet.appendChild(letterLabel);
+    letterFormIndet.appendChild(letterInput);
+    fieldset.appendChild(letterFormIndet);
+
+    iconRadioInputWrap.appendChild(iconRadioInput);
+    iconRadioInputWrap.appendChild(iconRadioLable);
+    fieldset.appendChild(iconRadioInputWrap);
+    // iconFormIndet.appendChild(iconLabel);
+    iconFormGroupText.appendChild(iconFormGroupIcon);
+    iconFormGroup.appendChild(iconInput);
+    iconFormGroup.appendChild(iconFormGroupText);
+    iconAutoSuggest.appendChild(iconFormGroup);
+    iconFormIndet.appendChild(iconAutoSuggest);
+    iconFormIndet.appendChild(iconPara);
+    fieldset.appendChild(iconFormIndet);
+
+    fieldset.appendChild(helper.node("hr"));
     fieldset.appendChild(nameLabel);
     fieldset.appendChild(nameInput);
     fieldset.appendChild(urlLabel);
     fieldset.appendChild(urlInput);
+    fieldset.appendChild(helper.node("hr"));
     fieldset.appendChild(colorInputLabel);
     colorFormGroup.appendChild(colorInputInput);
     colorButtonRefresh.appendChild(colorButtonRefreshIcon);
