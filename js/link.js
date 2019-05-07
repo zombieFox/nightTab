@@ -149,20 +149,16 @@ var link = (function() {
   };
 
   var _makeLinkForm = function() {
-
     var form = helper.node("form|class:link-form");
     var fieldset = helper.node("fieldset");
     var letterFormIndet = helper.node("div|class:form-indent");
-    // var letterLabel = helper.node("label:Letters|for:link-form-input-letter");
     var letterInput = helper.node("input|type:text,class:link-form-input-letter,id:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
     var iconFormIndet = helper.node("div|class:form-indent");
-    var iconAutoSuggest = helper.node("div|class:auto-suggest-field");
     var iconFormGroup = helper.node("div|class:form-group");
-    // var iconLabel = helper.node("label:Icon|for:link-form-input-icon");
-    var iconInput = helper.node("input|type:text,class:link-form-input-icon auto-suggest-field,id:link-form-input-icon,placeholder:Egg,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
+    var iconInput = helper.node("input|type:text,class:link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for an icon,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled,value:google");
     var iconFormGroupText = helper.node("div|class:form-group-text,disabled");
     var iconFormGroupIcon = helper.node("span|id:link-form-icon,class:link-form-icon fas fa-egg");
-    var iconPara = helper.node("p:Search for an Icon.|class:input-helper small muted,disabled");
+    var iconPara = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set.|class:input-helper small muted,disabled");
     var nameLabel = helper.node("label:Name|for:link-form-input-name");
     var nameInput = helper.node("input|type:text,class:link-form-input-name,id:link-form-input-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
     var urlLabel = helper.node("label:URL|for:link-form-input-url");
@@ -186,14 +182,6 @@ var link = (function() {
       type: "fontawesomeIcon"
     });
 
-    iconInput.addEventListener("focus", function(event) {
-      console.log("focus");
-    }, false);
-
-    iconInput.addEventListener("blur", function(event) {
-      console.log("blur");
-    }, false);
-
     letterRadioInput.addEventListener("change", function(event) {
       letterInput.removeAttribute("disabled");
       iconInput.setAttribute("disabled", "");
@@ -215,19 +203,16 @@ var link = (function() {
     letterRadioInputWrap.appendChild(letterRadioInput);
     letterRadioInputWrap.appendChild(letterRadioLable);
     fieldset.appendChild(letterRadioInputWrap);
-    // letterFormIndet.appendChild(letterLabel);
     letterFormIndet.appendChild(letterInput);
     fieldset.appendChild(letterFormIndet);
 
     iconRadioInputWrap.appendChild(iconRadioInput);
     iconRadioInputWrap.appendChild(iconRadioLable);
     fieldset.appendChild(iconRadioInputWrap);
-    // iconFormIndet.appendChild(iconLabel);
     iconFormGroupText.appendChild(iconFormGroupIcon);
     iconFormGroup.appendChild(iconInput);
     iconFormGroup.appendChild(iconFormGroupText);
-    iconAutoSuggest.appendChild(iconFormGroup);
-    iconFormIndet.appendChild(iconAutoSuggest);
+    iconFormIndet.appendChild(iconFormGroup);
     iconFormIndet.appendChild(iconPara);
     fieldset.appendChild(iconFormIndet);
 

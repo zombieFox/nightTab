@@ -3,11 +3,11 @@ var autoSuggest = (function() {
   var _timer_autoSuggest = null;
   var _currentInput;
 
-  function _delayRender(options) {
+  var _delayRender = function(options) {
     render(options);
   };
 
-  function bind(override) {
+  var bind = function(override) {
     var options = {
       input: null,
       type: null
@@ -20,96 +20,157 @@ var autoSuggest = (function() {
     };
   };
 
-  function _bind_autoSuggest(options) {
+  var _bind_autoSuggest = function(options) {
     if (options.input) {
       options.input.addEventListener("focus", function() {
-        clearTimeout(_timer_autoSuggest);
-        _timer_autoSuggest = setTimeout(_delayRender, 200, options);
+        render(options);
       }, false);
       options.input.addEventListener("input", function() {
-        clearTimeout(_timer_autoSuggest);
-        _timer_autoSuggest = setTimeout(_delayRender, 200, options);
+        render(options);
       }, false);
       options.input.addEventListener("keydown", function(event) {
         if (event.keyCode == 13) {
-          destroy(options);
+          destroy();
         };
       }, false);
     };
   };
 
-  function _navigateResults(event) {
-    var elementToFocus;
-    var currentFocus = null;
+  var _navigateResults = function(event) {
+    var elementToFocus = null;
+    var focusIndex = null;
     var all_anchor = helper.eA(".auto-suggest-link");
     var _findInput = function() {
-      if (event.target.classList.contains("auto-suggest-field")) {
+      if (event.target.classList.contains("auto-suggest-input")) {
         _currentInput = event.target;
       };
     };
     var _findFocus = function() {
       for (var i = 0; i < all_anchor.length; i++) {
         if (all_anchor[i] == document.activeElement) {
-          currentFocus = i;
+          focusIndex = i;
+        };
+      };
+    };
+    var _keyEvents = function() {
+      // up
+      if (event.keyCode == 38) {
+        event.preventDefault();
+        if (focusIndex == null) {
+          elementToFocus = all_anchor[all_anchor.length - 1];
+        } else {
+          if (focusIndex > 2 && focusIndex <= all_anchor.length - 1) {
+            elementToFocus = all_anchor[focusIndex - 3];
+          } else {
+            elementToFocus = _currentInput;
+          };
+        };
+      };
+      // down
+      if (event.keyCode == 40) {
+        event.preventDefault();
+        if (focusIndex == null) {
+          elementToFocus = all_anchor[0];
+        } else {
+          if (focusIndex < all_anchor.length - 3) {
+            elementToFocus = all_anchor[focusIndex + 3];
+          } else {
+            elementToFocus = _currentInput;
+          };
+        };
+      };
+      // right
+      if (event.keyCode == 39 || event.keyCode == 9) {
+        if (document.activeElement != _currentInput) {
+          event.preventDefault();
+          if (focusIndex == null) {
+            elementToFocus = all_anchor[0];
+          } else {
+            if (focusIndex >= 0 && focusIndex < all_anchor.length - 1) {
+              elementToFocus = all_anchor[focusIndex + 1];
+            } else {
+              elementToFocus = _currentInput;
+            };
+          };
+        };
+      };
+      // left
+      if (event.keyCode == 37 || event.keyCode == 9 && event.shiftKey) {
+        if (document.activeElement != _currentInput) {
+          event.preventDefault();
+          if (focusIndex == null) {
+            elementToFocus = all_anchor[all_anchor.length - 1];
+          } else {
+            if (focusIndex > 0 && focusIndex <= all_anchor.length - 1) {
+              elementToFocus = all_anchor[focusIndex - 1];
+            } else {
+              elementToFocus = _currentInput;
+            };
+          };
+        };
+      };
+      // tab
+      if (event.keyCode == 9) {
+        event.preventDefault();
+        if (focusIndex == null) {
+          elementToFocus = all_anchor[0];
+        } else {
+          if (focusIndex >= 0 && focusIndex < all_anchor.length - 1) {
+            elementToFocus = all_anchor[focusIndex + 1];
+          } else {
+            elementToFocus = _currentInput;
+          };
+        };
+      };
+      // shift tab
+      if (event.shiftKey && event.keyCode == 9) {
+        event.preventDefault();
+        if (focusIndex == null) {
+          elementToFocus = all_anchor[all_anchor.length - 1];
+        } else {
+          if (focusIndex > 0 && focusIndex <= all_anchor.length - 1) {
+            elementToFocus = all_anchor[focusIndex - 1];
+          } else {
+            elementToFocus = _currentInput;
+          };
         };
       };
     };
     _findInput();
     _findFocus();
-    // down key or right key or tab key
-    if (event.keyCode == 40 || event.keyCode == 39 || event.keyCode == 9) {
-      event.preventDefault();
-      if (currentFocus == null) {
-        elementToFocus = all_anchor[0];
-      } else {
-        if (currentFocus < all_anchor.length - 1) {
-          elementToFocus = all_anchor[currentFocus + 1];
-        } else {
-          elementToFocus = all_anchor[currentFocus];
-        };
-      };
-      elementToFocus.focus();
-    };
-    // up key or left key or tab and shift key
-    if (event.keyCode == 38 || event.keyCode == 37 || event.keyCode == 9 && event.shiftKey) {
-      event.preventDefault();
-      if (currentFocus == null) {
-        elementToFocus = _currentInput;
-      } else {
-        if (currentFocus == 0) {
-          elementToFocus = _currentInput;
-        } else if (currentFocus > 0) {
-          elementToFocus = all_anchor[currentFocus - 1];
-        } else {
-          elementToFocus = all_anchor[0];
-        };
-      };
+    _keyEvents();
+    if (elementToFocus) {
       elementToFocus.focus();
     };
   };
 
-  function _addDocumentEvent() {
+  var _addDocumentEvent = function() {
     document.addEventListener("click", _checkClick, false);
     document.addEventListener("keydown", _navigateResults, false);
   };
 
-  function _removeDocumentEvent() {
+  var _removeDocumentEvent = function() {
     document.removeEventListener("click", _checkClick, false);
     document.removeEventListener("keydown", _navigateResults, false);
   };
 
-  function _checkClick(event) {
-    if (!(event.target.classList.contains("auto-suggest-field"))) {
+  var _checkClick = function(event) {
+    if (!(event.target.classList.contains("auto-suggest-input"))) {
       destroy();
     };
   };
 
-  function destroy() {
+  var destroy = function() {
     var autoSuggestList = helper.e(".auto-suggest-list");
     if (autoSuggestList) {
       autoSuggestList.remove();
+      _removeDocumentEvent();
+      helper.setObject({
+        object: state.get(),
+        path: "autoSuggest",
+        newValue: false
+      });
     };
-    _removeDocumentEvent();
   };
 
   var _getSuggestItems = function(options) {
@@ -137,7 +198,7 @@ var autoSuggest = (function() {
     return action[options.type]();
   };
 
-  function render(options) {
+  var render = function(options) {
     _currentInput = options.input;
     var body = helper.e("body");
     var suggestItems = _getSuggestItems(options);
@@ -196,6 +257,11 @@ var autoSuggest = (function() {
     // if (searchTerm != "") {
     //   console.log(suggestItems);
     if (suggestItems.length > 0) {
+      helper.setObject({
+        object: state.get(),
+        path: "autoSuggest",
+        newValue: true
+      });
       _render_autoSuggestList();
     } else {
       destroy();

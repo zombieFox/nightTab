@@ -20,6 +20,36 @@ var helper = (function() {
     element.classList.remove(theClassName);
   };
 
+  var getClosest = function(element, selector) {
+    var firstChar = selector.charAt(0);
+    // Get closest match
+    for (; element && element !== document; element = element.parentNode) {
+      // If selector is a class
+      if (firstChar === ".") {
+        if (element.classList.contains(selector.substr(1))) {
+          return element;
+        };
+      };
+      // If selector is an ID
+      if (firstChar === "#") {
+        if (element.id === selector.substr(1)) {
+          return element;
+        };
+      };
+      // If selector is a data attribute
+      if (firstChar === "[") {
+        if (element.hasAttribute(selector.substr(1, selector.length - 2))) {
+          return element;
+        };
+      };
+      // If selector is a tag
+      if (element.tagName.toLowerCase() === selector) {
+        return element;
+      };
+    };
+    return false;
+  };
+
   var getDateTime = function() {
     var dateStamp = new Date();
     var object = {
@@ -515,6 +545,7 @@ var helper = (function() {
     toggleClass: toggleClass,
     addClass: addClass,
     removeClass: removeClass,
+    getClosest: getClosest,
     allEqual: allEqual,
     getDateTime: getDateTime,
     sortObject: sortObject,

@@ -7,7 +7,7 @@
 .auto-suggest-list {
   background-color: rgb(var(--gray-02));
   margin-top: 0.5em;
-  padding: 0.5em;
+  padding: 1em;
   position: absolute;
   top: 0;
   left: 0;
@@ -19,6 +19,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  box-shadow: var(--shadow-large);
 }
 
 .auto-suggest-list-item {

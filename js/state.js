@@ -173,7 +173,8 @@ var state = (function() {
     },
     search: false,
     menu: false,
-    modal: false
+    modal: false,
+    autoSuggest: false,
   };
 
   var get = function() {
