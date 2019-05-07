@@ -767,6 +767,7 @@ input[type="range"][disabled]~.input-helper {
   z-index: 2;
 }
 
+.form-group>.form-group-text:hover,
 .form-group>input[type="email"]:hover,
 .form-group>input[type="number"]:hover,
 .form-group>input[type="password"]:hover,
@@ -777,6 +778,8 @@ input[type="range"][disabled]~.input-helper {
   z-index: 3;
 }
 
+.form-group>.form-group-text:active,
+.form-group>.form-group-text:focus,
 .form-group>input[type="email"]:active,
 .form-group>input[type="email"]:focus,
 .form-group>input[type="number"]:active,

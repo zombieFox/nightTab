@@ -1,7 +1,8 @@
 var autoSuggest = (function() {
-
+  
   var _timer_autoSuggest = null;
   var _currentInput;
+  var fontAwesomeSelection;
 
   var _delayRender = function(options) {
     render(options);
@@ -23,10 +24,12 @@ var autoSuggest = (function() {
   var _bind_autoSuggest = function(options) {
     if (options.input) {
       options.input.addEventListener("focus", function() {
-        render(options);
+        clearTimeout(_timer_autoSuggest);
+        _timer_autoSuggest = setTimeout(_delayRender, 200, options);
       }, false);
       options.input.addEventListener("input", function() {
-        render(options);
+        clearTimeout(_timer_autoSuggest);
+        _timer_autoSuggest = setTimeout(_delayRender, 200, options);
       }, false);
       options.input.addEventListener("keydown", function(event) {
         if (event.keyCode == 13) {
@@ -190,6 +193,11 @@ var autoSuggest = (function() {
                 match = true;
               };
             });
+            item.styles.forEach(function(item, index) {
+              if (item.toLowerCase().includes(searchTerm)) {
+                match = true;
+              };
+            });
             return match;
           });
         };
@@ -216,6 +224,7 @@ var autoSuggest = (function() {
               helper.addClass(icon, "fab");
             };
             anchor.addEventListener("click", function() {
+              autoSuggest.fontAwesomeSelection = arrayItem;
               if (arrayItem.styles.includes("solid")) {
                 helper.e("#link-form-icon").setAttribute("class", "link-form-icon fas fa-" + arrayItem.name);
               } else if (arrayItem.styles.includes("brands")) {
@@ -223,9 +232,9 @@ var autoSuggest = (function() {
               };
               helper.e(".link-form-input-icon").value = arrayItem.name;
             }, false);
-            var text = helper.node("span:" + arrayItem.label + "|class:auto-suggest-icon-text");
+            // var text = helper.node("span:" + arrayItem.label + "|class:auto-suggest-icon-text");
             anchor.appendChild(icon);
-            anchor.appendChild(text);
+            // anchor.appendChild(text);
             li.appendChild(anchor);
             list.appendChild(li);
           });
@@ -252,10 +261,9 @@ var autoSuggest = (function() {
         _addDocumentEvent();
       };
       _populateList(autoSuggestList);
+      autoSuggestList.scrollTop = 0;
     };
-    //
-    // if (searchTerm != "") {
-    //   console.log(suggestItems);
+
     if (suggestItems.length > 0) {
       helper.setObject({
         object: state.get(),
@@ -266,13 +274,11 @@ var autoSuggest = (function() {
     } else {
       destroy();
     };
-    // } else {
-    //   destroy();
-    // };
   };
 
   // exposed methods
   return {
+    fontAwesomeSelection: fontAwesomeSelection,
     bind: bind,
     destroy: destroy
   };

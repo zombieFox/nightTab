@@ -1,7 +1,14 @@
 var bookmarks = (function() {
 
   var all = [{
+    display: "letter",
     letter: "CM",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Citymapper",
     url: "https://citymapper.com/london/superrouter",
     accent: {
@@ -14,7 +21,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453100455
   }, {
+    display: "letter",
     letter: "DEV",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Devdocs",
     url: "http://devdocs.io/",
     accent: {
@@ -27,7 +41,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453101749
   }, {
+    display: "letter",
     letter: "OD",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "r/opendirectories/",
     url: "https://www.reddit.com/r/opendirectories/",
     accent: {
@@ -40,7 +61,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453102199
   }, {
+    display: "letter",
     letter: "KP",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Keep",
     url: "https://keep.google.com/",
     accent: {
@@ -53,7 +81,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453102671
   }, {
+    display: "letter",
     letter: "MHW",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "r/monsterhunterworld/",
     url: "https://www.reddit.com/r/monsterhunterworld/",
     accent: {
@@ -66,7 +101,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453103110
   }, {
+    display: "letter",
     letter: "M",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Maps",
     url: "https://www.google.co.uk/maps",
     accent: {
@@ -79,7 +121,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453103560
   }, {
+    display: "letter",
     letter: "AS",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "awesomeSheet",
     url: "https://zombiefox.github.io/awesomeSheet/",
     accent: {
@@ -92,7 +141,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453104010
   }, {
+    display: "letter",
     letter: "N",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Netflix",
     url: "https://www.netflix.com/",
     accent: {
@@ -105,7 +161,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453104460
   }, {
+    display: "letter",
     letter: "P",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Photos",
     url: "https://photos.google.com/",
     accent: {
@@ -118,7 +181,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453104910
   }, {
+    display: "letter",
     letter: "FB",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Facebook",
     url: "https://www.facebook.com/",
     accent: {
@@ -131,7 +201,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453105349
   }, {
+    display: "letter",
     letter: "GOT",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "r/gameofthrones/",
     url: "https://www.reddit.com/r/gameofthrones/",
     accent: {
@@ -144,7 +221,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453105844
   }, {
+    display: "letter",
     letter: "BX",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Box",
     url: "https://app.box.com/login/",
     accent: {
@@ -157,7 +241,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453106272
   }, {
+    display: "letter",
     letter: "TFL",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "TFL Map",
     url: "http://content.tfl.gov.uk/standard-tube-map.pdf",
     accent: {
@@ -170,7 +261,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453106734
   }, {
+    display: "letter",
     letter: "PRG",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "r/Pathfinder_RPG/",
     url: "https://www.reddit.com/r/Pathfinder_RPG/",
     accent: {
@@ -183,7 +281,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453107194
   }, {
+    display: "letter",
     letter: "AZ",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Amazon",
     url: "https://www.amazon.co.uk/",
     accent: {
@@ -196,7 +301,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453107633
   }, {
+    display: "letter",
     letter: "YT",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Youtube",
     url: "https://www.youtube.com/",
     accent: {
@@ -209,7 +321,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453108071
   }, {
+    display: "letter",
     letter: "CO",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Contacts",
     url: "https://contacts.google.com/",
     accent: {
@@ -222,7 +341,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453108501
   }, {
+    display: "letter",
     letter: "GIT",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Github",
     url: "https://github.com/",
     accent: {
@@ -235,7 +361,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453108926
   }, {
+    display: "letter",
     letter: "AN",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "r/Android/",
     url: "https://www.reddit.com/r/Android/",
     accent: {
@@ -248,7 +381,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453109355
   }, {
+    display: "letter",
     letter: "V",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "r/videos/",
     url: "https://www.reddit.com/r/videos/",
     accent: {
@@ -261,7 +401,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453109840
   }, {
+    display: "letter",
     letter: "GM",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Gmail",
     url: "https://mail.google.com/",
     accent: {
@@ -274,7 +421,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453110265
   }, {
+    display: "letter",
     letter: "CAL",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Calendar",
     url: "https://www.google.com/calendar/",
     accent: {
@@ -287,7 +441,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453110885
   }, {
+    display: "letter",
     letter: "R",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Reddit",
     url: "https://www.reddit.com/",
     accent: {
@@ -300,7 +461,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453111491
   }, {
+    display: "letter",
     letter: "DR",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Drive",
     url: "https://drive.google.com/drive/",
     accent: {
@@ -313,7 +481,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453111953
   }, {
+    display: "letter",
     letter: "ANA",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "Analytics",
     url: "https://analytics.google.com/",
     accent: {
@@ -326,7 +501,14 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453112357
   }, {
+    display: "letter",
     letter: "COS",
+    icon: {
+      name: null,
+      search: [],
+      styles: [],
+      label: null
+    },
     name: "r/chromeos/",
     url: "https://www.reddit.com/r/chromeos/",
     accent: {
@@ -360,6 +542,9 @@ var bookmarks = (function() {
         },
         letter: function(array) {
           return helper.sortObject(array, "letter");
+        },
+        icon: function(array) {
+          return helper.sortObject(array, "icon");
         }
       };
       return action[state.get().bookmarks.sort](all);
@@ -379,7 +564,14 @@ var bookmarks = (function() {
 
   var add = function(override) {
     var options = {
+      display: null,
       letter: null,
+      icon: {
+        name: null,
+        search: [],
+        styles: [],
+        label: null
+      },
       name: null,
       url: null,
       accent: null,
@@ -389,7 +581,9 @@ var bookmarks = (function() {
       options = helper.applyOptions(options, override);
     };
     var newBookmark = {
+      display: options.display,
       letter: options.letter,
+      icon: options.icon,
       name: options.name,
       url: options.url,
       timeStamp: options.timeStamp,

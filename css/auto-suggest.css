@@ -73,11 +73,11 @@
 }
 
 .auto-suggest-icon {
-  margin-bottom: 0.25em;
-  font-size: 2em;
+  font-size: 3.5em;
 }
 
 .auto-suggest-icon-text {
+  margin-top: 0.25em;
   font-size: 0.5em;
   text-align: center;
 }
