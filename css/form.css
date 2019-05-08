@@ -709,10 +709,12 @@ input[type="range"][disabled]~.input-helper {
   padding: 0 1em;
   margin: 0;
   color: rgb(var(--style-neutral-text));
+  min-width: 4em;
   font-size: 1em;
   font-family: var(--font-regular);
   display: flex;
   align-items: center;
+  justify-content: center;
   border-width: var(--form-input-border);
   border-style: solid;
   border-color: transparent;
@@ -721,9 +723,8 @@ input[type="range"][disabled]~.input-helper {
 }
 
 .form-group-text[disabled] {
-  background-color: transparent;
+  background-color: rgb(var(--gray-02));
   color: rgb(var(--form-input-placeholder-disabled));
-  border-color: rgb(var(--form-input-text-disabled));
   box-shadow: none;
   cursor: default;
 }

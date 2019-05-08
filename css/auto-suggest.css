@@ -24,7 +24,6 @@
 
 .auto-suggest-list-item {
   flex-basis: 33.3333333333%;
-  min-height: 5em;
 }
 
 .auto-suggest-list-item:not(:last-child) {
@@ -41,7 +40,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   transition: background-color var(--animation-speed-fast) ease-in-out, color var(--animation-speed-fast) ease-in-out, border-color var(--animation-speed-fast) ease-in-out, box-shadow var(--animation-speed-fast) ease-in-out;
 }
@@ -73,11 +72,12 @@
 }
 
 .auto-suggest-icon {
-  font-size: 3.5em;
+  font-size: 2em;
 }
 
 .auto-suggest-icon-text {
-  margin-top: 0.25em;
-  font-size: 0.5em;
+  color: rgb(var(--gray-08));
+  margin-top: 0.5em;
+  font-size: 0.6em;
   text-align: center;
 }

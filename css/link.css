@@ -338,6 +338,23 @@
   justify-content: flex-start;
 }
 
+.link-form-text-icon {
+  position: relative;
+}
+
+.link-form-text-icon.link-form-text-icon-empty:before {
+  content: "";
+  background-color: rgb(var(--gray-04));
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+}
+
 .link-form-text-icon .link-form-icon {
   transform: scale(1) rotate(0deg);
   transition: transform var(--animation-speed-fast) ease-in-out;

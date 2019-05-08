@@ -1,5 +1,5 @@
 var autoSuggest = (function() {
-  
+
   var _timer_autoSuggest = null;
   var _currentInput;
   var fontAwesomeSelection;
@@ -158,7 +158,7 @@ var autoSuggest = (function() {
   };
 
   var _checkClick = function(event) {
-    if (!(event.target.classList.contains("auto-suggest-input"))) {
+    if (!(event.target.classList.contains("auto-suggest-list")) && !(event.target.classList.contains("auto-suggest-input"))) {
       destroy();
     };
   };
@@ -224,17 +224,19 @@ var autoSuggest = (function() {
               helper.addClass(icon, "fab");
             };
             anchor.addEventListener("click", function() {
-              autoSuggest.fontAwesomeSelection = arrayItem;
+              link.stagedBookmarkData.icon.name = arrayItem.name;
               if (arrayItem.styles.includes("solid")) {
-                helper.e("#link-form-icon").setAttribute("class", "link-form-icon fas fa-" + arrayItem.name);
+                link.stagedBookmarkData.icon.prefix = "fas";
               } else if (arrayItem.styles.includes("brands")) {
-                helper.e("#link-form-icon").setAttribute("class", "link-form-icon fab fa-" + arrayItem.name);
+                link.stagedBookmarkData.icon.prefix = "fab";
               };
-              helper.e(".link-form-input-icon").value = arrayItem.name;
+              helper.e(".link-form-input-icon").value = "";
+              helper.e(".link-form-text-icon").classList.remove("link-form-text-icon-empty");
+              helper.e(".link-form-icon").classList = "link-form-icon " + link.stagedBookmarkData.icon.prefix + " fa-" + link.stagedBookmarkData.icon.name;
             }, false);
-            // var text = helper.node("span:" + arrayItem.label + "|class:auto-suggest-icon-text");
+            var text = helper.node("span:" + arrayItem.label + "|class:auto-suggest-icon-text");
             anchor.appendChild(icon);
-            // anchor.appendChild(text);
+            anchor.appendChild(text);
             li.appendChild(anchor);
             list.appendChild(li);
           });
@@ -244,6 +246,7 @@ var autoSuggest = (function() {
     };
 
     var _render_autoSuggestList = function() {
+      var autoSuggestWrapper = helper.e(".auto-suggest-wrapper");
       var autoSuggestList = helper.e(".auto-suggest-list");
       if (autoSuggestList) {
         while (autoSuggestList.lastChild) {
@@ -251,9 +254,9 @@ var autoSuggest = (function() {
         };
       } else {
         var style = {
-          left: _currentInput.getBoundingClientRect().left,
-          top: _currentInput.getBoundingClientRect().bottom + window.scrollY,
-          width: _currentInput.getBoundingClientRect().width
+          left: autoSuggestWrapper.getBoundingClientRect().left,
+          top: autoSuggestWrapper.getBoundingClientRect().bottom + window.scrollY,
+          width: autoSuggestWrapper.getBoundingClientRect().width
         };
         var autoSuggestList = helper.node("ul|class:auto-suggest-list list-unstyled");
         body.appendChild(autoSuggestList);

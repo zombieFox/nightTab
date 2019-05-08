@@ -15,7 +15,8 @@ var modal = (function() {
     var options = {
       heading: "Modal",
       content: "Body",
-      action: null,
+      successAction: null,
+      cancelAction: null,
       actionText: "OK",
       cancelText: "Cancel",
       size: "medium"
@@ -101,18 +102,24 @@ var modal = (function() {
       actionButton.addEventListener("click", function(event) {
         this.destroy();
         shade.destroy();
-        if (options.action) {
-          options.action();
+        if (options.successAction) {
+          options.successAction();
         };
       }.bind(modal), false);
       cancelButton.addEventListener("click", function(event) {
         this.destroy();
         shade.destroy();
+        if (options.cancelAction) {
+          options.cancelAction();
+        };
       }.bind(modal), false);
       previousModal = modal;
       shade.render({
         action: function() {
           modal.destroy();
+          if (options.cancelAction) {
+            options.cancelAction();
+          };
         },
         includeHeader: true
       });
