@@ -46,7 +46,7 @@ var link = (function() {
       heading: "Add a new bookmark",
       successAction: function() {
         link.stagedBookmarkData.timeStamp = new Date().getTime();
-        bookmarks.add(link.stagedBookmarkData);
+        bookmarks.add(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
         data.save();
         clear();
         render();
@@ -95,7 +95,7 @@ var link = (function() {
     modal.render({
       heading: "Edit " + link.stagedBookmarkData.name,
       successAction: function() {
-        bookmarks.edit(link.stagedBookmarkData);
+        bookmarks.edit(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
         data.save();
         clear();
         render();
