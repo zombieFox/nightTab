@@ -756,6 +756,12 @@ input[type="range"][disabled]~.input-helper {
   border-radius: 0;
   z-index: 1;
   position: relative;
+  transition: box-shadow var(--animation-speed-fast) ease-in-out;
+}
+
+.form-group .form-group-text:focus {
+  outline: none;
+  box-shadow: 0 0 0 var(--line-width) rgb(var(--accent)), 0 0 0 calc(var(--line-width) * 2) rgba(var(--accent), 0.25);
 }
 
 .form-group>input[type="email"],

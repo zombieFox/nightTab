@@ -204,7 +204,6 @@ var autoSuggest = (function() {
     _currentInput = options.input;
     var body = helper.e("body");
     var suggestItems = _getSuggestItems(options);
-    // console.log(suggestItems);
     var _populateList = function(list) {
       var action = {
         fontawesomeIcon: function() {

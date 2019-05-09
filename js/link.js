@@ -138,7 +138,7 @@ var link = (function() {
     var iconFormIndet = helper.node("div|class:form-indent");
     var iconFormGroup = helper.node("div|class:form-group auto-suggest-wrapper");
     var iconInput = helper.node("input|type:text,class:link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
-    var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,disabled");
+    var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,tabindex:1,disabled");
     var iconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
     var iconFormGroupClearIcon = helper.node("span|class:icon-close");
     var iconPara = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-helper-icon input-helper small muted,disabled");
@@ -427,6 +427,7 @@ var link = (function() {
     };
     helper.e(".link-form-input-icon").value = autoSuggestData.label;
     helper.e(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + link.stagedBookmarkData.icon.prefix + " fa-" + link.stagedBookmarkData.icon.name));
+    helper.e(".link-form-text-icon").focus();
   };
 
   var _makeEmptySearch = function() {
