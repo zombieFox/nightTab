@@ -5,7 +5,8 @@ var bookmarks = (function() {
     letter: "CM",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Citymapper",
     url: "https://citymapper.com/london/superrouter",
@@ -23,7 +24,8 @@ var bookmarks = (function() {
     letter: "DEV",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Devdocs",
     url: "http://devdocs.io/",
@@ -41,7 +43,8 @@ var bookmarks = (function() {
     letter: "OD",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "r/opendirectories/",
     url: "https://www.reddit.com/r/opendirectories/",
@@ -59,7 +62,8 @@ var bookmarks = (function() {
     letter: "KP",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Keep",
     url: "https://keep.google.com/",
@@ -77,7 +81,8 @@ var bookmarks = (function() {
     letter: "MHW",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "r/monsterhunterworld/",
     url: "https://www.reddit.com/r/monsterhunterworld/",
@@ -95,7 +100,8 @@ var bookmarks = (function() {
     letter: "M",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Maps",
     url: "https://www.google.co.uk/maps",
@@ -113,7 +119,8 @@ var bookmarks = (function() {
     letter: "AS",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "awesomeSheet",
     url: "https://zombiefox.github.io/awesomeSheet/",
@@ -131,7 +138,8 @@ var bookmarks = (function() {
     letter: "N",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Netflix",
     url: "https://www.netflix.com/",
@@ -149,7 +157,8 @@ var bookmarks = (function() {
     letter: "P",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Photos",
     url: "https://photos.google.com/",
@@ -167,7 +176,8 @@ var bookmarks = (function() {
     letter: "FB",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Facebook",
     url: "https://www.facebook.com/",
@@ -185,7 +195,8 @@ var bookmarks = (function() {
     letter: "GOT",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "r/gameofthrones/",
     url: "https://www.reddit.com/r/gameofthrones/",
@@ -203,7 +214,8 @@ var bookmarks = (function() {
     letter: "BX",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Box",
     url: "https://app.box.com/login/",
@@ -221,7 +233,8 @@ var bookmarks = (function() {
     letter: "TFL",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "TFL Map",
     url: "http://content.tfl.gov.uk/standard-tube-map.pdf",
@@ -239,7 +252,8 @@ var bookmarks = (function() {
     letter: "PRG",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "r/Pathfinder_RPG/",
     url: "https://www.reddit.com/r/Pathfinder_RPG/",
@@ -257,7 +271,8 @@ var bookmarks = (function() {
     letter: "AZ",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Amazon",
     url: "https://www.amazon.co.uk/",
@@ -275,7 +290,8 @@ var bookmarks = (function() {
     letter: "YT",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Youtube",
     url: "https://www.youtube.com/",
@@ -293,7 +309,8 @@ var bookmarks = (function() {
     letter: "CO",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Contacts",
     url: "https://contacts.google.com/",
@@ -311,7 +328,8 @@ var bookmarks = (function() {
     letter: "GIT",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Github",
     url: "https://github.com/",
@@ -329,7 +347,8 @@ var bookmarks = (function() {
     letter: "AN",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "r/Android/",
     url: "https://www.reddit.com/r/Android/",
@@ -347,7 +366,8 @@ var bookmarks = (function() {
     letter: "V",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "r/videos/",
     url: "https://www.reddit.com/r/videos/",
@@ -365,7 +385,8 @@ var bookmarks = (function() {
     letter: "GM",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Gmail",
     url: "https://mail.google.com/",
@@ -383,7 +404,8 @@ var bookmarks = (function() {
     letter: "CAL",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Calendar",
     url: "https://www.google.com/calendar/",
@@ -401,7 +423,8 @@ var bookmarks = (function() {
     letter: "R",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Reddit",
     url: "https://www.reddit.com/",
@@ -419,7 +442,8 @@ var bookmarks = (function() {
     letter: "DR",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Drive",
     url: "https://drive.google.com/drive/",
@@ -437,7 +461,8 @@ var bookmarks = (function() {
     letter: "ANA",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "Analytics",
     url: "https://analytics.google.com/",
@@ -455,7 +480,8 @@ var bookmarks = (function() {
     letter: "COS",
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: "r/chromeos/",
     url: "https://www.reddit.com/r/chromeos/",
@@ -492,7 +518,7 @@ var bookmarks = (function() {
           return helper.sortObject(array, "letter");
         },
         icon: function(array) {
-          return helper.sortObject(array, "icon");
+          return helper.sortObject(array, "icon.name");
         }
       };
       return action[state.get().bookmarks.sort](all);

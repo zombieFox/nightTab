@@ -69,11 +69,17 @@ var helper = (function() {
 
   var sortObject = function(object, key) {
     object.sort(function(a, b) {
-      var textA = a[key];
+      var textA = getObject({
+        object: a,
+        path: key
+      });
       if (typeof textA == "string") {
         textA = textA.toLowerCase();
       };
-      var textB = b[key];
+      var textB = getObject({
+        object: b,
+        path: key
+      });
       if (typeof textB == "string") {
         textB = textB.toLowerCase();
       };

@@ -342,7 +342,7 @@
   position: relative;
 }
 
-.link-form-text-icon.link-form-text-icon-empty:before {
+.link-form-text-icon:empty:before {
   content: "";
   background-color: rgb(var(--gray-04));
   top: 50%;

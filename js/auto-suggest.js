@@ -2,7 +2,6 @@ var autoSuggest = (function() {
 
   var _timer_autoSuggest = null;
   var _currentInput;
-  var fontAwesomeSelection;
 
   var _delayRender = function(options) {
     render(options);
@@ -25,16 +24,11 @@ var autoSuggest = (function() {
     if (options.input) {
       options.input.addEventListener("focus", function() {
         clearTimeout(_timer_autoSuggest);
-        _timer_autoSuggest = setTimeout(_delayRender, 200, options);
+        _timer_autoSuggest = setTimeout(_delayRender, 300, options);
       }, false);
       options.input.addEventListener("input", function() {
         clearTimeout(_timer_autoSuggest);
-        _timer_autoSuggest = setTimeout(_delayRender, 200, options);
-      }, false);
-      options.input.addEventListener("keydown", function(event) {
-        if (event.keyCode == 13) {
-          destroy();
-        };
+        _timer_autoSuggest = setTimeout(_delayRender, 300, options);
       }, false);
     };
   };
@@ -224,15 +218,7 @@ var autoSuggest = (function() {
               helper.addClass(icon, "fab");
             };
             anchor.addEventListener("click", function() {
-              link.stagedBookmarkData.icon.name = arrayItem.name;
-              if (arrayItem.styles.includes("solid")) {
-                link.stagedBookmarkData.icon.prefix = "fas";
-              } else if (arrayItem.styles.includes("brands")) {
-                link.stagedBookmarkData.icon.prefix = "fab";
-              };
-              helper.e(".link-form-input-icon").value = "";
-              helper.e(".link-form-text-icon").classList.remove("link-form-text-icon-empty");
-              helper.e(".link-form-icon").classList = "link-form-icon " + link.stagedBookmarkData.icon.prefix + " fa-" + link.stagedBookmarkData.icon.name;
+              link.autoSuggestIconAction(arrayItem);
             }, false);
             var text = helper.node("span:" + arrayItem.label + "|class:auto-suggest-icon-text");
             anchor.appendChild(icon);
@@ -281,7 +267,6 @@ var autoSuggest = (function() {
 
   // exposed methods
   return {
-    fontAwesomeSelection: fontAwesomeSelection,
     bind: bind,
     destroy: destroy
   };

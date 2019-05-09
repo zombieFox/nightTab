@@ -5,7 +5,8 @@ var link = (function() {
     letter: null,
     icon: {
       name: null,
-      prefix: null
+      prefix: null,
+      label: null
     },
     name: null,
     url: null,
@@ -30,6 +31,7 @@ var link = (function() {
     link.stagedBookmarkData.letter = null;
     link.stagedBookmarkData.icon.name = null;
     link.stagedBookmarkData.icon.prefix = null;
+    link.stagedBookmarkData.icon.label = null;
     link.stagedBookmarkData.name = null;
     link.stagedBookmarkData.url = null;
     link.stagedBookmarkData.timeStamp = null;
@@ -73,20 +75,20 @@ var link = (function() {
       form.querySelector(".link-form-input-icon").setAttribute("disabled", "");
       form.querySelector(".link-form-input-helper-icon").setAttribute("disabled", "");
       form.querySelector(".link-form-icon-clear").setAttribute("disabled", "");
-      form.querySelector(".link-form-input-display-letter").checked = true;
     } else if (link.stagedBookmarkData.display == "icon") {
       form.querySelector(".link-form-input-letter").setAttribute("disabled", "");
       form.querySelector(".link-form-input-icon").removeAttribute("disabled");
       form.querySelector(".form-group-text").removeAttribute("disabled");
-      form.querySelector(".form-group-text").classList.remove("link-form-text-icon-empty");
       form.querySelector(".link-form-input-icon").removeAttribute("disabled");
       form.querySelector(".link-form-input-helper-icon").removeAttribute("disabled");
       form.querySelector(".link-form-icon-clear").removeAttribute("disabled");
       form.querySelector(".link-form-input-display-icon").checked = true;
-      form.querySelector(".link-form-icon").className = "link-form-icon " + link.stagedBookmarkData.icon.prefix + " fa-" + link.stagedBookmarkData.icon.name;
+    };
+    if (link.stagedBookmarkData.icon.name != null && link.stagedBookmarkData.icon.prefix != null && link.stagedBookmarkData.icon.label != null) {
+      form.querySelector(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + link.stagedBookmarkData.icon.prefix + " fa-" + link.stagedBookmarkData.icon.name));
     };
     form.querySelector(".link-form-input-letter").value = link.stagedBookmarkData.letter;
-    // form.querySelector(".link-form-input-icon").value = link.stagedBookmarkData.icon.name;
+    form.querySelector(".link-form-input-icon").value = link.stagedBookmarkData.icon.label;
     form.querySelector(".link-form-input-name").value = link.stagedBookmarkData.name;
     form.querySelector(".link-form-input-url").value = link.stagedBookmarkData.url;
     if (link.stagedBookmarkData.accent.override) {
@@ -136,8 +138,8 @@ var link = (function() {
     var iconFormIndet = helper.node("div|class:form-indent");
     var iconFormGroup = helper.node("div|class:form-group auto-suggest-wrapper");
     var iconInput = helper.node("input|type:text,class:link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
-    var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon link-form-text-icon-empty,disabled");
-    var iconFormGroupIcon = helper.node("span|id:link-form-icon,class:link-form-icon,disabled");
+    var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,disabled");
+    // var iconFormGroupIcon = helper.node("span|id:link-form-icon,class:link-form-icon,disabled");
     var iconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
     var iconFormGroupClearIcon = helper.node("span|class:icon-close");
     var iconPara = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-helper-icon input-helper small muted,disabled");
@@ -167,7 +169,7 @@ var link = (function() {
     iconRadioInputWrap.appendChild(iconRadioInput);
     iconRadioInputWrap.appendChild(iconRadioLable);
     fieldset.appendChild(iconRadioInputWrap);
-    iconFormGroupText.appendChild(iconFormGroupIcon);
+    // iconFormGroupText.appendChild(iconFormGroupIcon);
     iconFormGroupClear.appendChild(iconFormGroupClearIcon);
     iconFormGroup.appendChild(iconInput);
     iconFormGroup.appendChild(iconFormGroupText);
@@ -221,14 +223,14 @@ var link = (function() {
     iconFormGroupClear.addEventListener("click", function(event) {
       link.stagedBookmarkData.icon.name = null;
       link.stagedBookmarkData.icon.prefix = null;
-      iconFormGroupText.classList.add("link-form-text-icon-empty");
-      iconFormGroupIcon.classList = "link-form-icon";
+      link.stagedBookmarkData.icon.label = null;
+      helper.e(".link-form-icon").remove();
+      iconInput.value = "";
     });
     letterRadioInput.addEventListener("change", function(event) {
       letterInput.removeAttribute("disabled");
       iconInput.setAttribute("disabled", "");
       iconFormGroupText.setAttribute("disabled", "");
-      iconFormGroupIcon.setAttribute("disabled", "");
       iconPara.setAttribute("disabled", "");
       iconFormGroupClear.setAttribute("disabled", "");
     }, false);
@@ -236,7 +238,6 @@ var link = (function() {
       letterInput.setAttribute("disabled", "");
       iconInput.removeAttribute("disabled");
       iconFormGroupText.removeAttribute("disabled");
-      iconFormGroupIcon.removeAttribute("disabled");
       iconPara.removeAttribute("disabled");
       iconFormGroupClear.removeAttribute("disabled");
     }, false);
@@ -411,6 +412,22 @@ var link = (function() {
     return linkItem;
   };
 
+  var autoSuggestIconAction = function(autoSuggestData) {
+    link.stagedBookmarkData.icon.label = autoSuggestData.label;
+    link.stagedBookmarkData.icon.name = autoSuggestData.name;
+    if (autoSuggestData.styles.includes("solid")) {
+      link.stagedBookmarkData.icon.prefix = "fas";
+    } else if (autoSuggestData.styles.includes("brands")) {
+      link.stagedBookmarkData.icon.prefix = "fab";
+    };
+    var existingIcon = helper.e(".link-form-icon");
+    if (existingIcon) {
+      existingIcon.remove();
+    };
+    helper.e(".link-form-input-icon").value = autoSuggestData.label;
+    helper.e(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + link.stagedBookmarkData.icon.prefix + " fa-" + link.stagedBookmarkData.icon.name));
+  };
+
   var _makeEmptySearch = function() {
     var searchInput = helper.e(".search-input");
     var div = helper.makeNode({
@@ -528,6 +545,7 @@ var link = (function() {
   // exposed methods
   return {
     stagedBookmarkData: stagedBookmarkData,
+    autoSuggestIconAction: autoSuggestIconAction,
     init: init,
     clear: clear,
     add: add,
