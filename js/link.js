@@ -1,5 +1,14 @@
 var link = (function() {
 
+  var _previousFocusLink = null;
+
+  var _returnToPreviousFocusLink = function() {
+    if (_previousFocusLink != null) {
+      helper.eA(".link-panel-back")[_previousFocusLink].querySelectorAll(".link-control-item")[0].focus();
+      _previousFocusLink = null
+    };
+  };
+
   var stagedBookmarkData = {
     display: null,
     letter: null,
@@ -52,6 +61,7 @@ var link = (function() {
         data.save();
         clear();
         render();
+        tabIndex();
         control.dependents();
         control.render();
         resetStagedBookmarkData();
@@ -101,9 +111,12 @@ var link = (function() {
         data.save();
         clear();
         render();
+        tabIndex();
+        _returnToPreviousFocusLink();
         resetStagedBookmarkData();
       },
       cancelAction: function() {
+        _returnToPreviousFocusLink();
         resetStagedBookmarkData();
       },
       actionText: "Save",
@@ -192,23 +205,23 @@ var link = (function() {
 
     letterRadioInput.addEventListener("change", function(event) {
       link.stagedBookmarkData.display = this.value;
-    });
+    }, false);
     iconRadioInput.addEventListener("change", function(event) {
       link.stagedBookmarkData.display = this.value;
-    });
+    }, false);
     letterInput.addEventListener("input", function(event) {
       link.stagedBookmarkData.letter = this.value;
-    });
+    }, false);
     nameInput.addEventListener("input", function(event) {
       link.stagedBookmarkData.name = this.value;
-    });
+    }, false);
     urlInput.addEventListener("input", function(event) {
       link.stagedBookmarkData.url = this.value;
-    });
+    }, false);
     colorInputInput.addEventListener("change", function(event) {
       link.stagedBookmarkData.accent.override = true;
       link.stagedBookmarkData.accent.color = helper.hexToRgb(this.value);
-    });
+    }, false);
     colorButtonRefresh.addEventListener("click", function(event) {
       colorInputInput.value = helper.rgbToHex(state.get().theme.accent.current);
       link.stagedBookmarkData.accent.override = false;
@@ -217,7 +230,7 @@ var link = (function() {
         g: null,
         b: null
       };
-    });
+    }, false);
     iconFormGroupClear.addEventListener("click", function(event) {
       link.stagedBookmarkData.icon.name = null;
       link.stagedBookmarkData.icon.prefix = null;
@@ -227,7 +240,7 @@ var link = (function() {
         existingIcon.remove();
       };
       iconInput.value = "";
-    });
+    }, false);
     letterRadioInput.addEventListener("change", function(event) {
       letterInput.removeAttribute("disabled");
       iconInput.setAttribute("disabled", "");
@@ -249,7 +262,7 @@ var link = (function() {
     return form;
   };
 
-  var _makeLink = function(data) {
+  var _makeLink = function(data, index) {
     var linkItemOptions = {
       tag: "div",
       attr: [{
@@ -402,6 +415,7 @@ var link = (function() {
     linkItem.appendChild(linkPanelBack);
 
     linkEdit.addEventListener("click", function() {
+      _previousFocusLink = index;
       edit(data);
     }, false);
     linkRemove.addEventListener("click", function() {
@@ -484,7 +498,7 @@ var link = (function() {
       render: {
         bookmarks: function(array) {
           array.forEach(function(arrayItem, index) {
-            linkArea.appendChild(_makeLink(arrayItem));
+            linkArea.appendChild(_makeLink(arrayItem, index));
           });
         },
         empty: {

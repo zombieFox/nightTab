@@ -38,6 +38,9 @@ var shade = (function() {
         } else {
           shade.remove();
         };
+        if (options.action) {
+          options.action();
+        };
       };
       shade.addEventListener("transitionend", function(event, elapsed) {
         if (event.propertyName === "opacity" && getComputedStyle(this).opacity == 0) {
@@ -49,9 +52,6 @@ var shade = (function() {
       }.bind(shade), false);
       shade.addEventListener("click", function() {
         this.destroy();
-        if (options.action) {
-          options.action();
-        };
       }, false);
       previousShade = shade;
       body.appendChild(shade);
