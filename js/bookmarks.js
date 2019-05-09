@@ -20,12 +20,12 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453100455
   }, {
-    display: "letter",
+    display: "icon",
     letter: "DEV",
     icon: {
-      name: null,
-      prefix: null,
-      label: null
+      name: "code",
+      prefix: "fas",
+      label: "Code"
     },
     name: "Devdocs",
     url: "http://devdocs.io/",
@@ -115,12 +115,12 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453103560
   }, {
-    display: "letter",
+    display: "icon",
     letter: "AS",
     icon: {
-      name: null,
-      prefix: null,
-      label: null
+      name: "dice-d20",
+      prefix: "fas",
+      label: "Dice D20"
     },
     name: "awesomeSheet",
     url: "https://zombiefox.github.io/awesomeSheet/",
@@ -134,12 +134,12 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453104010
   }, {
-    display: "letter",
+    display: "icon",
     letter: "N",
     icon: {
-      name: null,
-      prefix: null,
-      label: null
+      name: "film",
+      prefix: "fas",
+      label: "Film"
     },
     name: "Netflix",
     url: "https://www.netflix.com/",
@@ -267,12 +267,12 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453107194
   }, {
-    display: "letter",
+    display: "icon",
     letter: "AZ",
     icon: {
-      name: null,
-      prefix: null,
-      label: null
+      name: "amazon",
+      prefix: "fab",
+      label: "Amazon"
     },
     name: "Amazon",
     url: "https://www.amazon.co.uk/",
@@ -286,12 +286,12 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453107633
   }, {
-    display: "letter",
+    display: "icon",
     letter: "YT",
     icon: {
-      name: null,
-      prefix: null,
-      label: null
+      name: "youtube",
+      prefix: "fab",
+      label: "YouTube"
     },
     name: "Youtube",
     url: "https://www.youtube.com/",
@@ -324,12 +324,12 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453108501
   }, {
-    display: "letter",
+    display: "icon",
     letter: "GIT",
     icon: {
-      name: null,
-      prefix: null,
-      label: null
+      name: "github",
+      prefix: "fab",
+      label: "GitHub"
     },
     name: "Github",
     url: "https://github.com/",
@@ -381,12 +381,12 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453109840
   }, {
-    display: "letter",
+    display: "icon",
     letter: "GM",
     icon: {
-      name: null,
-      prefix: null,
-      label: null
+      name: "envelope",
+      prefix: "fas",
+      label: "Envelope"
     },
     name: "Gmail",
     url: "https://mail.google.com/",
@@ -419,12 +419,12 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453110885
   }, {
-    display: "letter",
+    display: "icon",
     letter: "R",
     icon: {
-      name: null,
-      prefix: null,
-      label: null
+      name: "reddit-alien",
+      prefix: "fab",
+      label: "reddit Alien"
     },
     name: "Reddit",
     url: "https://www.reddit.com/",

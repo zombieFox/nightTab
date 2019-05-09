@@ -65,9 +65,7 @@ input[type="search"][disabled],
 input[type="tel"][disabled],
 input[type="text"][disabled] {
   background-color: transparent;
-  /* padding: 0 calc(1em - var(--form-input-border)); */
   color: rgb(var(--form-input-text-disabled));
-  /* border-width: var(--form-input-border); */
   border-color: rgb(var(--form-input-text-disabled));
   cursor: default;
   box-shadow: none;
