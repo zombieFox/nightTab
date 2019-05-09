@@ -83,6 +83,7 @@ var menu = (function() {
         action: function() {
           close();
           render();
+          page.update();
         }
       });
     } else {

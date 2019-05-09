@@ -3,10 +3,10 @@ var shade = (function() {
   var previousShade = null;
 
   var destroy = function() {
-    var all_shade = helper.eA(".shade");
-    if (all_shade[0]) {
-      for (var i = 0; i < all_shade.length; i++) {
-        all_shade[i].destroy();
+    var allShade = helper.eA(".shade");
+    if (allShade[0]) {
+      for (var i = 0; i < allShade.length; i++) {
+        allShade[i].destroy();
       };
     };
   };
@@ -19,12 +19,12 @@ var shade = (function() {
     if (override) {
       options = helper.applyOptions(options, override);
     };
-    var _destroy_previousShade = function() {
+    var _destroyPreviousShade = function() {
       if (previousShade != null) {
         destroy();
       };
     };
-    var _render_shade = function() {
+    var _makeShade = function() {
       var body = helper.e("body");
       var shade = document.createElement("div");
       shade.setAttribute("class", "shade");
@@ -59,8 +59,8 @@ var shade = (function() {
       helper.removeClass(shade, "is-transparent");
       helper.addClass(shade, "is-opaque");
     };
-    _destroy_previousShade();
-    _render_shade();
+    _destroyPreviousShade();
+    _makeShade();
   };
 
   // exposed methods

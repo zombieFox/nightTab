@@ -139,7 +139,6 @@ var link = (function() {
     var iconFormGroup = helper.node("div|class:form-group auto-suggest-wrapper");
     var iconInput = helper.node("input|type:text,class:link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
     var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,disabled");
-    // var iconFormGroupIcon = helper.node("span|id:link-form-icon,class:link-form-icon,disabled");
     var iconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
     var iconFormGroupClearIcon = helper.node("span|class:icon-close");
     var iconPara = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-helper-icon input-helper small muted,disabled");
@@ -169,7 +168,6 @@ var link = (function() {
     iconRadioInputWrap.appendChild(iconRadioInput);
     iconRadioInputWrap.appendChild(iconRadioLable);
     fieldset.appendChild(iconRadioInputWrap);
-    // iconFormGroupText.appendChild(iconFormGroupIcon);
     iconFormGroupClear.appendChild(iconFormGroupClearIcon);
     iconFormGroup.appendChild(iconInput);
     iconFormGroup.appendChild(iconFormGroupText);
@@ -224,7 +222,10 @@ var link = (function() {
       link.stagedBookmarkData.icon.name = null;
       link.stagedBookmarkData.icon.prefix = null;
       link.stagedBookmarkData.icon.label = null;
-      helper.e(".link-form-icon").remove();
+      var existingIcon = helper.e(".link-form-icon");
+      if (existingIcon) {
+        existingIcon.remove();
+      };
       iconInput.value = "";
     });
     letterRadioInput.addEventListener("change", function(event) {

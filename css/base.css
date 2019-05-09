@@ -144,10 +144,6 @@ body {
   transition: background-color var(--animation-speed-fast) ease-in-out;
 }
 
-.is-menu-open body {
-  overflow: hidden;
-}
-
 .is-header-alignment-vertical-top body {
   justify-content: flex-start;
 }

@@ -5,6 +5,7 @@ var control = (function() {
     type: "button",
     func: function() {
       menu.toggle();
+      page.update();
     }
   }, {
     element: helper.e(".control-add"),

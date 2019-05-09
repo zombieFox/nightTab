@@ -3,10 +3,10 @@ var modal = (function() {
   var previousModal = null;
 
   var destroy = function() {
-    var all_modal = helper.eA(".modal");
-    if (all_modal[0]) {
-      for (var i = 0; i < all_modal.length; i++) {
-        all_modal[i].destroy();
+    var allModal = helper.eA(".modal");
+    if (allModal[0]) {
+      for (var i = 0; i < allModal.length; i++) {
+        allModal[i].destroy();
       };
     };
   };
@@ -24,7 +24,7 @@ var modal = (function() {
     if (override) {
       options = helper.applyOptions(options, override);
     };
-    var makeModal = function() {
+    var _makeModal = function() {
       var body = helper.e("body");
       helper.setObject({
         object: state.get(),
@@ -102,6 +102,7 @@ var modal = (function() {
       actionButton.addEventListener("click", function(event) {
         this.destroy();
         shade.destroy();
+        page.update();
         if (options.successAction) {
           options.successAction();
         };
@@ -109,6 +110,7 @@ var modal = (function() {
       cancelButton.addEventListener("click", function(event) {
         this.destroy();
         shade.destroy();
+        page.update();
         if (options.cancelAction) {
           options.cancelAction();
         };
@@ -117,6 +119,7 @@ var modal = (function() {
       shade.render({
         action: function() {
           modal.destroy();
+          page.update();
           if (options.cancelAction) {
             options.cancelAction();
           };
@@ -132,7 +135,8 @@ var modal = (function() {
     if (previousModal != null) {
       destroy();
     };
-    makeModal();
+    _makeModal();
+    page.lock();
   };
 
   // exposed methods

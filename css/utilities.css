@@ -18,3 +18,15 @@
 .muted {
   color: rgb(var(--gray-12));
 }
+
+.scroll-disabled {
+  overflow: hidden;
+}
+
+.scroll-x-disabled {
+  overflow-x: hidden;
+}
+
+.scroll-y-disabled {
+  overflow-y: hidden;
+}
