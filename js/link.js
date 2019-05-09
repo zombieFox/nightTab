@@ -64,7 +64,7 @@ var link = (function() {
   };
 
   var edit = function(bookmarkData) {
-    link.stagedBookmarkData = bookmarkData;
+    link.stagedBookmarkData = JSON.parse(JSON.stringify(bookmarkData));
     var form = _makeLinkForm();
     if (link.stagedBookmarkData.display == "letter" || link.stagedBookmarkData.display == null) {
       form.querySelector(".link-form-input-letter").removeAttribute("disabled");
