@@ -32,14 +32,14 @@ var shade = (function() {
         helper.addClass(shade, "m-shade-top");
       };
       shade.destroy = function() {
+        if (options.action) {
+          options.action();
+        };
         if (shade.classList.contains("is-opaque")) {
           helper.removeClass(shade, "is-opaque");
           helper.addClass(shade, "is-transparent");
         } else {
           shade.remove();
-        };
-        if (options.action) {
-          options.action();
         };
       };
       shade.addEventListener("transitionend", function(event, elapsed) {

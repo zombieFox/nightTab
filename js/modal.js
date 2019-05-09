@@ -100,29 +100,29 @@ var modal = (function() {
         };
       }.bind(modal), false);
       actionButton.addEventListener("click", function(event) {
-        this.destroy();
-        shade.destroy();
-        page.update();
         if (options.successAction) {
           options.successAction();
         };
-      }.bind(modal), false);
-      cancelButton.addEventListener("click", function(event) {
+        page.update();
         this.destroy();
         shade.destroy();
-        page.update();
+      }.bind(modal), false);
+      cancelButton.addEventListener("click", function(event) {
         if (options.cancelAction) {
           options.cancelAction();
         };
+        page.update();
+        this.destroy();
+        shade.destroy();
       }.bind(modal), false);
       previousModal = modal;
       shade.render({
         action: function() {
-          modal.destroy();
-          page.update();
           if (options.cancelAction) {
             options.cancelAction();
           };
+          page.update();
+          modal.destroy();
         },
         includeHeader: true
       });
