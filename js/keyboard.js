@@ -7,6 +7,8 @@ var keyboard = (function() {
         if (state.get().menu) {
           menu.close();
           shade.destroy();
+        } else if (state.get().autoSuggest) {
+          autoSuggest.destroy();
         } else if (state.get().modal) {
           modal.destroy();
           shade.destroy();

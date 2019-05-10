@@ -1,70 +1,73 @@
 var link = (function() {
 
-  var _bind = function(override) {
-    var options = {
-      element: null,
-      action: null,
-      bookmarkData: null
-    };
-    if (override) {
-      options = helper.applyOptions(options, override);
-    };
-    var action = {
-      edit: function() {
-        options.element.addEventListener("click", function() {
-          edit(options.bookmarkData);
-        }, false);
-      },
-      remove: function() {
-        options.element.addEventListener("click", function() {
-          remove(options.bookmarkData);
-          control.dependents();
-          control.render();
-        }, false);
-      }
-    };
-    if (options.element != null) {
-      action[options.action]();
+  var _previousFocusLink = null;
+
+  var _returnToPreviousFocusLink = function() {
+    if (_previousFocusLink != null) {
+      helper.eA(".link-panel-back")[_previousFocusLink].querySelectorAll(".link-control-item")[0].focus();
+      _previousFocusLink = null
     };
   };
 
-  var edit = function(bookmarkData) {
-    var currentBookmark = bookmarks.get(bookmarkData.timeStamp);
-    var form = _makeLinkForm();
-    form.querySelector(".link-form-input-letter").value = currentBookmark.letter;
-    form.querySelector(".link-form-input-name").value = currentBookmark.name;
-    form.querySelector(".link-form-input-url").value = currentBookmark.url;
-    if (currentBookmark.accent.override) {
-      form.querySelector(".link-form-input-color").value = helper.rgbToHex(currentBookmark.accent.color);
-    } else {
-      form.querySelector(".link-form-input-color").value = helper.rgbToHex(state.get().theme.accent.current);
-    };
-    modal.render({
-      heading: "Edit " + currentBookmark.name,
-      action: function() {
-        save({
-          action: "edit",
-          form: form,
-          bookmarkData: bookmarkData
-        });
-      },
-      actionText: "Save",
-      size: "small",
-      content: form
-    });
+  var stagedBookmarkData = {
+    display: null,
+    letter: null,
+    icon: {
+      name: null,
+      prefix: null,
+      label: null
+    },
+    name: null,
+    url: null,
+    timeStamp: null,
+    accent: {
+      override: null,
+      color: {
+        r: null,
+        g: null,
+        b: null
+      }
+    }
+  };
+
+  var initStagedBookmarkData = function() {
+    link.stagedBookmarkData.display = "letter";
+    link.stagedBookmarkData.accent.override = false;
+  };
+
+  var resetStagedBookmarkData = function() {
+    link.stagedBookmarkData.display = null;
+    link.stagedBookmarkData.letter = null;
+    link.stagedBookmarkData.icon.name = null;
+    link.stagedBookmarkData.icon.prefix = null;
+    link.stagedBookmarkData.icon.label = null;
+    link.stagedBookmarkData.name = null;
+    link.stagedBookmarkData.url = null;
+    link.stagedBookmarkData.timeStamp = null;
+    link.stagedBookmarkData.accent.override = null;
+    link.stagedBookmarkData.accent.color.r = null;
+    link.stagedBookmarkData.accent.color.g = null;
+    link.stagedBookmarkData.accent.color.b = null;
   };
 
   var add = function() {
+    initStagedBookmarkData();
     var form = _makeLinkForm();
     modal.render({
       heading: "Add a new bookmark",
-      action: function() {
-        save({
-          action: "add",
-          form: form
-        });
+      successAction: function() {
+        link.stagedBookmarkData.timeStamp = new Date().getTime();
+        bookmarks.add(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
+        data.save();
+        clear();
+        render();
+        tabIndex();
         control.dependents();
         control.render();
+        resetStagedBookmarkData();
+      },
+      cancelAction: function() {
+        resetStagedBookmarkData();
       },
       actionText: "Add",
       size: "small",
@@ -72,66 +75,58 @@ var link = (function() {
     });
   };
 
-  var save = function(override) {
-    var options = {
-      action: null,
-      form: null,
-      bookmarkData: null
+  var edit = function(bookmarkData) {
+    link.stagedBookmarkData = JSON.parse(JSON.stringify(bookmarkData));
+    var form = _makeLinkForm();
+    if (link.stagedBookmarkData.display == "letter" || link.stagedBookmarkData.display == null) {
+      form.querySelector(".link-form-input-letter").removeAttribute("disabled");
+      form.querySelector(".link-form-input-icon").setAttribute("disabled", "");
+      form.querySelector(".form-group-text").setAttribute("disabled", "");
+      form.querySelector(".link-form-input-icon").setAttribute("disabled", "");
+      form.querySelector(".link-form-input-helper-icon").setAttribute("disabled", "");
+      form.querySelector(".link-form-icon-clear").setAttribute("disabled", "");
+    } else if (link.stagedBookmarkData.display == "icon") {
+      form.querySelector(".link-form-input-letter").setAttribute("disabled", "");
+      form.querySelector(".link-form-input-icon").removeAttribute("disabled");
+      form.querySelector(".form-group-text").removeAttribute("disabled");
+      form.querySelector(".link-form-input-icon").removeAttribute("disabled");
+      form.querySelector(".link-form-input-helper-icon").removeAttribute("disabled");
+      form.querySelector(".link-form-icon-clear").removeAttribute("disabled");
+      form.querySelector(".link-form-input-display-icon").checked = true;
     };
-    if (override) {
-      options = helper.applyOptions(options, override);
+    if (link.stagedBookmarkData.icon.name != null && link.stagedBookmarkData.icon.prefix != null && link.stagedBookmarkData.icon.label != null) {
+      form.querySelector(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + link.stagedBookmarkData.icon.prefix + " fa-" + link.stagedBookmarkData.icon.name));
     };
-    var action = {
-      add: function() {
-        var newBookmarkData = {
-          letter: options.form.querySelector(".link-form-input-letter").value,
-          name: options.form.querySelector(".link-form-input-name").value,
-          url: options.form.querySelector(".link-form-input-url").value,
-          timeStamp: new Date().getTime(),
-          accent: {
-            override: false,
-            color: {
-              r: null,
-              g: null,
-              b: null
-            }
-          }
-        };
-        if (options.form.querySelector(".link-form-input-color").value != helper.rgbToHex(state.get().theme.accent.current)) {
-          newBookmarkData.accent.override = true;
-          newBookmarkData.accent.color = helper.hexToRgb(options.form.querySelector(".link-form-input-color").value);
-        };
-        bookmarks.add(newBookmarkData);
+    form.querySelector(".link-form-input-letter").value = link.stagedBookmarkData.letter;
+    form.querySelector(".link-form-input-icon").value = link.stagedBookmarkData.icon.label;
+    form.querySelector(".link-form-input-name").value = link.stagedBookmarkData.name;
+    form.querySelector(".link-form-input-url").value = link.stagedBookmarkData.url;
+    if (link.stagedBookmarkData.accent.override) {
+      form.querySelector(".link-form-input-color").value = helper.rgbToHex(link.stagedBookmarkData.accent.color);
+    };
+    modal.render({
+      heading: "Edit " + link.stagedBookmarkData.name,
+      successAction: function() {
+        bookmarks.edit(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
+        data.save();
+        clear();
+        render();
+        tabIndex();
+        _returnToPreviousFocusLink();
+        resetStagedBookmarkData();
       },
-      edit: function() {
-        options.bookmarkData.letter = options.form.querySelector(".link-form-input-letter").value;
-        options.bookmarkData.name = options.form.querySelector(".link-form-input-name").value;
-        options.bookmarkData.url = options.form.querySelector(".link-form-input-url").value;
-        if (options.form.querySelector(".link-form-input-color").value != helper.rgbToHex(state.get().theme.accent.current)) {
-          options.bookmarkData.accent.override = true;
-          options.bookmarkData.accent.color = helper.hexToRgb(options.form.querySelector(".link-form-input-color").value);
-        } else {
-          options.bookmarkData.accent.override = false;
-          options.bookmarkData.accent.color = {
-            r: null,
-            g: null,
-            b: null
-          };
-        };
-        bookmarks.edit({
-          bookmarkData: options.bookmarkData,
-          timeStamp: options.bookmarkData.timeStamp
-        });
-      }
-    };
-    action[options.action]();
-    data.save();
-    clear();
-    render();
+      cancelAction: function() {
+        _returnToPreviousFocusLink();
+        resetStagedBookmarkData();
+      },
+      actionText: "Save",
+      size: "small",
+      content: form
+    });
   };
 
   var remove = function(bookmarkData) {
-    bookmarks.remove(bookmarkData.timeStamp);
+    bookmarks.remove(bookmarkData);
     _checkCount();
     data.save();
     clear();
@@ -149,211 +144,56 @@ var link = (function() {
   };
 
   var _makeLinkForm = function() {
-    var form = helper.makeNode({
-      tag: "form",
-      attr: [{
-        key: "class",
-        value: "link-form"
-      }]
-    });
-    var fieldset = helper.makeNode({
-      tag: "fieldset"
-    });
-    var letterLabel = helper.makeNode({
-      tag: "label",
-      text: "Letters",
-      attr: [{
-        key: "for",
-        value: "letters"
-      }]
-    });
-    var letterInput = helper.makeNode({
-      tag: "input",
-      attr: [{
-        key: "type",
-        value: "text"
-      }, {
-        key: "class",
-        value: "link-form-input-letter"
-      }, {
-        key: "id",
-        value: "letters"
-      }, {
-        key: "placeholder",
-        value: "E"
-      }, {
-        key: "tabindex",
-        value: "1"
-      }, {
-        key: "autocomplete",
-        value: "off"
-      }, {
-        key: "autocorrect",
-        value: "off"
-      }, {
-        key: "autocapitalize",
-        value: "off"
-      }, {
-        key: "spellcheck",
-        value: "false"
-      }]
-    });
-    var nameLabel = helper.makeNode({
-      tag: "label",
-      text: "Name",
-      attr: [{
-        key: "for",
-        value: "name"
-      }]
-    });
-    var nameInput = helper.makeNode({
-      tag: "input",
-      attr: [{
-        key: "type",
-        value: "text"
-      }, {
-        key: "class",
-        value: "link-form-input-name"
-      }, {
-        key: "id",
-        value: "name"
-      }, {
-        key: "placeholder",
-        value: "Example"
-      }, {
-        key: "tabindex",
-        value: "1"
-      }, {
-        key: "autocomplete",
-        value: "off"
-      }, {
-        key: "autocorrect",
-        value: "off"
-      }, {
-        key: "autocapitalize",
-        value: "off"
-      }, {
-        key: "spellcheck",
-        value: "false"
-      }]
-    });
-    var urlLabel = helper.makeNode({
-      tag: "label",
-      text: "URL",
-      attr: [{
-        key: "for",
-        value: "url"
-      }]
-    });
-    var urlInput = helper.makeNode({
-      tag: "input",
-      attr: [{
-        key: "type",
-        value: "text"
-      }, {
-        key: "class",
-        value: "link-form-input-url"
-      }, {
-        key: "id",
-        value: "url"
-      }, {
-        key: "placeholder",
-        value: "https://www.example.com/"
-      }, {
-        key: "tabindex",
-        value: "1"
-      }, {
-        key: "autocomplete",
-        value: "off"
-      }, {
-        key: "autocorrect",
-        value: "off"
-      }, {
-        key: "autocapitalize",
-        value: "off"
-      }, {
-        key: "spellcheck",
-        value: "false"
-      }]
-    });
-    var colorInputWrap = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "input-wrap py-0"
-      }]
-    });
-    var colorFormGroup = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "form-group"
-      }]
-    });
-    var colorInputLabel = helper.makeNode({
-      tag: "label",
-      text: "Accent override",
-      attr: [{
-        key: "for",
-        value: "color"
-      }]
-    });
-    var colorInputInput = helper.makeNode({
-      tag: "input",
-      attr: [{
-        key: "id",
-        value: "color"
-      }, {
-        key: "class",
-        value: "link-form-input-color mb-0"
-      }, {
-        key: "type",
-        value: "color"
-      }, {
-        key: "value",
-        value: helper.rgbToHex(state.get().theme.accent.current)
-      }, {
-        key: "tabindex",
-        value: "1"
-      }]
-    });
-    var colorButtonRefresh = helper.makeNode({
-      tag: "button",
-      attr: [{
-        key: "class",
-        value: "button mb-0"
-      }, {
-        key: "type",
-        value: "button"
-      }, {
-        key: "tabindex",
-        value: "1"
-      }]
-    });
-    var colorButtonRefreshIcon = helper.makeNode({
-      tag: "span",
-      attr: [{
-        key: "class",
-        value: "icon-refresh"
-      }]
-    });
-    var colorPara = helper.makeNode({
-      tag: "p",
-      text: "Use this color to override the global Accent colour.",
-      attr: [{
-        key: "class",
-        value: "input-helper small muted"
-      }]
-    });
-    colorButtonRefresh.addEventListener("click", function(event) {
-      colorInputInput.value = helper.rgbToHex(state.get().theme.accent.current);
-    }, false);
-    fieldset.appendChild(letterLabel);
-    fieldset.appendChild(letterInput);
+    var form = helper.node("form|class:link-form");
+    var fieldset = helper.node("fieldset");
+    var letterFormIndet = helper.node("div|class:form-indent");
+    var letterInput = helper.node("input|type:text,class:link-form-input-letter,id:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+    var iconFormIndet = helper.node("div|class:form-indent");
+    var iconFormGroup = helper.node("div|class:form-group auto-suggest-wrapper");
+    var iconInput = helper.node("input|type:text,class:link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
+    var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,tabindex:1,disabled");
+    var iconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
+    var iconFormGroupClearIcon = helper.node("span|class:icon-close");
+    var iconPara = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-helper-icon input-helper small muted,disabled");
+    var nameLabel = helper.node("label:Name|for:link-form-input-name");
+    var nameInput = helper.node("input|type:text,class:link-form-input-name,id:link-form-input-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+    var urlLabel = helper.node("label:URL|for:link-form-input-url");
+    var urlInput = helper.node("input|type:text,class:link-form-input-url mb-0,id:link-form-input-url,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+    var colorInputWrap = helper.node("div|class:input-wrap py-0");
+    var colorFormGroup = helper.node("div|class:form-group");
+    var colorInputLabel = helper.node("label:Accent override|for:link-form-input-color");
+    var colorInputInput = helper.node("input|id:link-form-input-color,class:link-form-input-color mb-0,type:color,value:" + helper.rgbToHex(state.get().theme.accent.current) + ",tabindex:1");
+    var colorButtonRefresh = helper.node("button|class:button mb-0,type:button,tabindex:1");
+    var colorButtonRefreshIcon = helper.node("span|class:icon-refresh");
+    var colorPara = helper.node("p:Use this colour to override the global Accent colour.|class:input-helper small muted");
+    var letterRadioInputWrap = helper.node("div|class:input-wrap");
+    var letterRadioInput = helper.node("input|class:link-form-input-display-letter,id:link-form-input-display-letter,type:radio,name:link-form-input-display,tabindex:1,checked,value:letter");
+    var letterRadioLable = helper.node("label:Letters|for:link-form-input-display-letter");
+    var iconRadioInputWrap = helper.node("div|class:input-wrap");
+    var iconRadioInput = helper.node("input|class:link-form-input-display-icon,id:link-form-input-display-icon,type:radio,name:link-form-input-display,tabindex:1,value:icon");
+    var iconRadioLable = helper.node("label:Icon|for:link-form-input-display-icon");
+
+    letterRadioInputWrap.appendChild(letterRadioInput);
+    letterRadioInputWrap.appendChild(letterRadioLable);
+    fieldset.appendChild(letterRadioInputWrap);
+    letterFormIndet.appendChild(letterInput);
+    fieldset.appendChild(letterFormIndet);
+    iconRadioInputWrap.appendChild(iconRadioInput);
+    iconRadioInputWrap.appendChild(iconRadioLable);
+    fieldset.appendChild(iconRadioInputWrap);
+    iconFormGroupClear.appendChild(iconFormGroupClearIcon);
+    iconFormGroup.appendChild(iconInput);
+    iconFormGroup.appendChild(iconFormGroupText);
+    iconFormGroup.appendChild(iconFormGroupClear);
+    iconFormIndet.appendChild(iconFormGroup);
+    iconFormIndet.appendChild(iconPara);
+    fieldset.appendChild(iconFormIndet);
+    fieldset.appendChild(helper.node("hr"));
     fieldset.appendChild(nameLabel);
     fieldset.appendChild(nameInput);
     fieldset.appendChild(urlLabel);
     fieldset.appendChild(urlInput);
+    fieldset.appendChild(helper.node("hr"));
     fieldset.appendChild(colorInputLabel);
     colorFormGroup.appendChild(colorInputInput);
     colorButtonRefresh.appendChild(colorButtonRefreshIcon);
@@ -362,10 +202,67 @@ var link = (function() {
     fieldset.appendChild(colorInputWrap);
     fieldset.appendChild(colorPara);
     form.appendChild(fieldset);
+
+    letterRadioInput.addEventListener("change", function(event) {
+      link.stagedBookmarkData.display = this.value;
+    }, false);
+    iconRadioInput.addEventListener("change", function(event) {
+      link.stagedBookmarkData.display = this.value;
+    }, false);
+    letterInput.addEventListener("input", function(event) {
+      link.stagedBookmarkData.letter = this.value;
+    }, false);
+    nameInput.addEventListener("input", function(event) {
+      link.stagedBookmarkData.name = this.value;
+    }, false);
+    urlInput.addEventListener("input", function(event) {
+      link.stagedBookmarkData.url = this.value;
+    }, false);
+    colorInputInput.addEventListener("change", function(event) {
+      link.stagedBookmarkData.accent.override = true;
+      link.stagedBookmarkData.accent.color = helper.hexToRgb(this.value);
+    }, false);
+    colorButtonRefresh.addEventListener("click", function(event) {
+      colorInputInput.value = helper.rgbToHex(state.get().theme.accent.current);
+      link.stagedBookmarkData.accent.override = false;
+      link.stagedBookmarkData.accent.color = {
+        r: null,
+        g: null,
+        b: null
+      };
+    }, false);
+    iconFormGroupClear.addEventListener("click", function(event) {
+      link.stagedBookmarkData.icon.name = null;
+      link.stagedBookmarkData.icon.prefix = null;
+      link.stagedBookmarkData.icon.label = null;
+      var existingIcon = helper.e(".link-form-icon");
+      if (existingIcon) {
+        existingIcon.remove();
+      };
+      iconInput.value = "";
+    }, false);
+    letterRadioInput.addEventListener("change", function(event) {
+      letterInput.removeAttribute("disabled");
+      iconInput.setAttribute("disabled", "");
+      iconFormGroupText.setAttribute("disabled", "");
+      iconPara.setAttribute("disabled", "");
+      iconFormGroupClear.setAttribute("disabled", "");
+    }, false);
+    iconRadioInput.addEventListener("change", function(event) {
+      letterInput.setAttribute("disabled", "");
+      iconInput.removeAttribute("disabled");
+      iconFormGroupText.removeAttribute("disabled");
+      iconPara.removeAttribute("disabled");
+      iconFormGroupClear.removeAttribute("disabled");
+    }, false);
+    autoSuggest.bind({
+      input: iconInput,
+      type: "fontawesomeIcon"
+    });
     return form;
   };
 
-  var _makeLink = function(data) {
+  var _makeLink = function(data, index) {
     var linkItemOptions = {
       tag: "div",
       attr: [{
@@ -407,14 +304,33 @@ var link = (function() {
         value: "link-panel-back"
       }]
     });
-    var linkLetter = helper.makeNode({
-      tag: "p",
-      text: data.letter,
-      attr: [{
-        key: "class",
-        value: "link-letter"
-      }]
-    });
+    var linkDisplay;
+    if (data.display == "letter") {
+      linkDisplay = helper.makeNode({
+        tag: "p",
+        text: data.letter,
+        attr: [{
+          key: "class",
+          value: "link-display-letter"
+        }]
+      });
+    } else if (data.display == "icon" && data.icon.prefix != null && data.icon.name != null) {
+      linkDisplay = helper.makeNode({
+        tag: "div",
+        attr: [{
+          key: "class",
+          value: "link-display-icon " + data.icon.prefix + " fa-" + data.icon.name
+        }]
+      });
+    } else {
+      linkDisplay = helper.makeNode({
+        tag: "div",
+        attr: [{
+          key: "class",
+          value: "link-display"
+        }]
+      });
+    };
     var linkName = helper.makeNode({
       tag: "p",
       text: data.name,
@@ -430,15 +346,19 @@ var link = (function() {
         value: "link-url"
       }]
     });
+    var url = "";
+    if (data.url != null) {
+      url = data.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "");
+    };
     var linkUrlText = helper.makeNode({
       tag: "p",
-      text: data.url.replace(/^https?\:\/\//i, "").replace(/\/$/, ""),
+      text: url,
       attr: [{
         key: "class",
         value: "link-url-text"
       }, {
         key: "title",
-        value: data.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "")
+        value: url
       }]
     });
     var linkControl = helper.makeNode({
@@ -482,7 +402,7 @@ var link = (function() {
         value: "button-icon icon-close"
       }]
     });
-    linkPanelFront.appendChild(linkLetter);
+    linkPanelFront.appendChild(linkDisplay);
     linkPanelFront.appendChild(linkName);
     linkEdit.appendChild(linkEditIcon);
     linkRemove.appendChild(linkRemoveIcon);
@@ -493,17 +413,35 @@ var link = (function() {
     linkPanelBack.appendChild(linkControl);
     linkItem.appendChild(linkPanelFront);
     linkItem.appendChild(linkPanelBack);
-    _bind({
-      element: linkEdit,
-      action: "edit",
-      bookmarkData: data
-    });
-    _bind({
-      element: linkRemove,
-      action: "remove",
-      bookmarkData: data
-    });
+
+    linkEdit.addEventListener("click", function() {
+      _previousFocusLink = index;
+      edit(data);
+    }, false);
+    linkRemove.addEventListener("click", function() {
+      remove(data);
+      control.dependents();
+      control.render();
+    }, false);
+
     return linkItem;
+  };
+
+  var autoSuggestIconAction = function(autoSuggestData) {
+    link.stagedBookmarkData.icon.label = autoSuggestData.label;
+    link.stagedBookmarkData.icon.name = autoSuggestData.name;
+    if (autoSuggestData.styles.includes("solid")) {
+      link.stagedBookmarkData.icon.prefix = "fas";
+    } else if (autoSuggestData.styles.includes("brands")) {
+      link.stagedBookmarkData.icon.prefix = "fab";
+    };
+    var existingIcon = helper.e(".link-form-icon");
+    if (existingIcon) {
+      existingIcon.remove();
+    };
+    helper.e(".link-form-input-icon").value = autoSuggestData.label;
+    helper.e(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + link.stagedBookmarkData.icon.prefix + " fa-" + link.stagedBookmarkData.icon.name));
+    helper.e(".link-form-text-icon").focus();
   };
 
   var _makeEmptySearch = function() {
@@ -560,7 +498,7 @@ var link = (function() {
       render: {
         bookmarks: function(array) {
           array.forEach(function(arrayItem, index) {
-            linkArea.appendChild(_makeLink(arrayItem));
+            linkArea.appendChild(_makeLink(arrayItem, index));
           });
         },
         empty: {
@@ -622,11 +560,12 @@ var link = (function() {
 
   // exposed methods
   return {
+    stagedBookmarkData: stagedBookmarkData,
+    autoSuggestIconAction: autoSuggestIconAction,
     init: init,
     clear: clear,
     add: add,
     edit: edit,
-    save: save,
     remove: remove,
     render: render,
     tabIndex: tabIndex

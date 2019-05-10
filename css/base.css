@@ -30,14 +30,15 @@
   --button-link-text-active: var(--gray-18);
   --button-link-text-disabled: var(--gray-04);
   --form-input-text: var(--gray-16);
+  --form-input-border: 2;
   --form-input-text-hover: var(--style-neutral-text);
   --form-input-text-focus: var(--style-neutral-text);
-  --form-input-text-disabled: var(--gray-04);
+  --form-input-text-disabled: var(--gray-02);
   --form-input-text-disabled-helper-text: var(--gray-04);
   --form-input-placeholder: var(--gray-06);
   --form-input-placeholder-hover-focus: var(--gray-10);
   --form-input-placeholder-disabled: var(--gray-04);
-  --form-label: var(--gray-16);
+  --form-label: var(--gray-12);
   --form-label-disabled: var(--gray-04);
   --form-checkbox-radio-label: var(--gray-12);
   --form-checkbox-radio-chcked-label: var(--gray-16);
@@ -64,6 +65,7 @@
   --z-index-shade: 6000;
   --z-index-modal: 7000;
   --z-index-menu: 8000;
+  --z-index-auto-suggest-list: 8000;
   --header-shade-color: transparent;
   --header-shade-opacity: none;
   --header-height: 0;
@@ -84,6 +86,12 @@
   --layout-width-gutter: var(--gutter) * 8;
   --menu-border-width: 2px;
   --menu-border: var(--menu-border-width) solid rgb(var(--gray-02));
+  --shadow-small: 0 2px 1px rgba(0, 0, 0, 0.1), 0 3px 2px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.1), 0 6px 15px rgba(0, 0, 0, 0.1);
+  --shadow-large: 0 4px 10px rgba(0, 0, 0, 0.1), 0 6px 30px rgba(0, 0, 0, 0.1);
+  --shadow-small-inset: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  --shadow-medium-inset: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+  --shadow-large-inset: inset 0 3px 3px rgba(0, 0, 0, 0.15);
   /* breakpoint reference */
   /* can not be used in @media as of yet */
   --breakpoint-sm: 550px;
@@ -134,10 +142,6 @@ body {
   flex-direction: column;
   height: 100vh;
   transition: background-color var(--animation-speed-fast) ease-in-out;
-}
-
-.is-menu-open body {
-  overflow: hidden;
 }
 
 .is-header-alignment-vertical-top body {

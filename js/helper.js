@@ -20,6 +20,36 @@ var helper = (function() {
     element.classList.remove(theClassName);
   };
 
+  var getClosest = function(element, selector) {
+    var firstChar = selector.charAt(0);
+    // Get closest match
+    for (; element && element !== document; element = element.parentNode) {
+      // If selector is a class
+      if (firstChar === ".") {
+        if (element.classList.contains(selector.substr(1))) {
+          return element;
+        };
+      };
+      // If selector is an ID
+      if (firstChar === "#") {
+        if (element.id === selector.substr(1)) {
+          return element;
+        };
+      };
+      // If selector is a data attribute
+      if (firstChar === "[") {
+        if (element.hasAttribute(selector.substr(1, selector.length - 2))) {
+          return element;
+        };
+      };
+      // If selector is a tag
+      if (element.tagName.toLowerCase() === selector) {
+        return element;
+      };
+    };
+    return false;
+  };
+
   var getDateTime = function() {
     var dateStamp = new Date();
     var object = {
@@ -39,11 +69,17 @@ var helper = (function() {
 
   var sortObject = function(object, key) {
     object.sort(function(a, b) {
-      var textA = a[key];
+      var textA = getObject({
+        object: a,
+        path: key
+      });
       if (typeof textA == "string") {
         textA = textA.toLowerCase();
       };
-      var textB = b[key];
+      var textB = getObject({
+        object: b,
+        path: key
+      });
       if (typeof textB == "string") {
         textB = textB.toLowerCase();
       };
@@ -175,6 +211,55 @@ var helper = (function() {
         if ("key" in arrayItem && "value" in arrayItem) {
           element.setAttribute(arrayItem.key, arrayItem.value);
         } else if ("key" in arrayItem) {
+          element.setAttribute(arrayItem.key, "");
+        }
+      });
+    };
+    return element;
+  };
+
+  var node = function(string) {
+    // set element
+    var tag;
+    if (string.indexOf("|") > 0) {
+      tag = string.slice(0, string.indexOf("|"));
+    } else {
+      tag = string;
+    };
+    var text = false;
+    if (tag.indexOf(":") > 0) {
+      var pair = tag.split(":");
+      tag = pair[0];
+      text = pair[1];
+    };
+    var element = document.createElement(tag);
+    if (text && text != "") {
+      element.textContent = text;
+    };
+    var attributes = string.slice(string.indexOf("|") + 1, string.length).split(",");
+    // set attributes
+    if (string.indexOf("|") > 0 && string.indexOf("|") < string.length - 1) {
+      attributes.forEach(function(arrayItem, index) {
+        if (arrayItem.indexOf(":") > 0) {
+          // if key and value
+          var pair = arrayItem.substring(0, arrayItem.indexOf(":")) + "," + arrayItem.substring((arrayItem.indexOf(":") + 1), arrayItem.length);
+          pair = pair.split(",");
+          attributes[index] = {
+            key: pair[0],
+            value: pair[1]
+          };
+        } else {
+          // if key only
+          attributes[index] = {
+            key: arrayItem,
+            value: undefined
+          };
+        };
+      });
+      attributes.forEach(function(arrayItem, index) {
+        if (("key" in arrayItem && arrayItem.key != undefined) && ("value" in arrayItem && arrayItem.value != undefined)) {
+          element.setAttribute(arrayItem.key, arrayItem.value);
+        } else if ("key" in arrayItem && arrayItem.key != undefined) {
           element.setAttribute(arrayItem.key, "");
         }
       });
@@ -466,6 +551,7 @@ var helper = (function() {
     toggleClass: toggleClass,
     addClass: addClass,
     removeClass: removeClass,
+    getClosest: getClosest,
     allEqual: allEqual,
     getDateTime: getDateTime,
     sortObject: sortObject,
@@ -474,6 +560,7 @@ var helper = (function() {
     rgbToHex: rgbToHex,
     hslToRgb: hslToRgb,
     makeNode: makeNode,
+    node: node,
     setObject: setObject,
     getObject: getObject,
     makeObject: makeObject,
