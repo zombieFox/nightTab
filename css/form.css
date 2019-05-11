@@ -14,7 +14,7 @@ input[type="text"] {
   line-height: 2.5em;
   height: 2.5em;
   width: 100%;
-  border-width: 0;
+  border-width: var(--form-input-border);
   border-style: solid;
   border-color: transparent;
   border-radius: var(--radius);
@@ -51,7 +51,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="text"]:focus {
-  background-color: rgb(var(--gray-02));
+  background-color: rgb(var(--gray-01));
   color: rgb(var(--form-input-text-focus));
   outline: none;
   z-index: 2;
@@ -65,9 +65,7 @@ input[type="search"][disabled],
 input[type="tel"][disabled],
 input[type="text"][disabled] {
   background-color: transparent;
-  padding: 0 calc(1em - var(--line-width));
   color: rgb(var(--form-input-text-disabled));
-  border-width: var(--line-width);
   border-color: rgb(var(--form-input-text-disabled));
   cursor: default;
   box-shadow: none;
@@ -147,7 +145,7 @@ label {
 }
 
 label:not(:only-child):not(:last-child) {
-  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 label[disabled] {
@@ -540,6 +538,7 @@ input[type="range"][disabled]::-moz-range-progress {
   margin-bottom: 0.5em;
 }
 
+.input-helper[disabled],
 input[type="checkbox"][disabled]~.input-helper,
 input[type="radio"][disabled]~.input-helper,
 input[type="email"][disabled]~.input-helper,
@@ -700,6 +699,47 @@ input[type="range"][disabled]~.input-helper {
 .form-inline {
   display: inline-block;
   margin-right: 1.5em;
+  width: initial;
+}
+
+.form-group-text {
+  background-color: rgb(var(--gray-02));
+  padding: 0 1em;
+  margin: 0;
+  color: rgb(var(--style-neutral-text));
+  min-width: 4em;
+  font-size: 1em;
+  font-family: var(--font-regular);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-top-width: var(--line-width);
+  border-bottom-width: var(--line-width);
+  border-style: solid;
+  border-color: transparent;
+  border-radius: var(--radius);
+  transition: background-color var(--animation-speed-fast) ease-in-out, border-color var(--animation-speed-fast) ease-in-out;
+}
+
+.form-group-text:hover,
+.form-group-text:focus {
+  background-color: rgb(var(--gray-03));
+  border-bottom-color: rgb(var(--gray-08));
+  outline: none;
+}
+
+.form-group-text[disabled] {
+  background-color: rgb(var(--gray-02));
+  color: rgb(var(--form-input-placeholder-disabled));
+  box-shadow: none;
+  cursor: default;
+}
+
+.form-group-text[disabled]:hover,
+.form-group-text[disabled]:focus {
+  background-color: rgb(var(--gray-02));
+  border-color: transparent;
 }
 
 .form-group {
@@ -723,13 +763,12 @@ input[type="range"][disabled]~.input-helper {
   border-radius: 0;
 }
 
-.form-group>input[type="email"],
-.form-group>input[type="number"],
-.form-group>input[type="password"],
-.form-group>input[type="search"],
-.form-group>input[type="tel"],
-.form-group>input[type="text"] {
-  padding: 0 0.5em;
+.form-group .form-group-text {
+  margin-bottom: 0;
+  margin-left: calc(-1px * var(--form-input-border));
+  border-radius: 0;
+  z-index: 1;
+  position: relative;
 }
 
 .form-group>input[type="email"],
@@ -739,9 +778,10 @@ input[type="range"][disabled]~.input-helper {
 .form-group>input[type="tel"],
 .form-group>input[type="text"],
 .form-group>input[type="color"] {
-  z-index: 1;
+  z-index: 2;
 }
 
+.form-group>.form-group-text:hover,
 .form-group>input[type="email"]:hover,
 .form-group>input[type="number"]:hover,
 .form-group>input[type="password"]:hover,
@@ -749,9 +789,11 @@ input[type="range"][disabled]~.input-helper {
 .form-group>input[type="tel"]:hover,
 .form-group>input[type="text"]:hover,
 .form-group>input[type="color"]:hover {
-  z-index: 2;
+  z-index: 3;
 }
 
+.form-group>.form-group-text:active,
+.form-group>.form-group-text:focus,
 .form-group>input[type="email"]:active,
 .form-group>input[type="email"]:focus,
 .form-group>input[type="number"]:active,
@@ -766,9 +808,10 @@ input[type="range"][disabled]~.input-helper {
 .form-group>input[type="text"]:focus,
 .form-group>input[type="color"]:active,
 .form-group>input[type="color"]:focus {
-  z-index: 3;
+  z-index: 4;
 }
 
+.form-group>.form-group-text:first-child,
 .form-group>button:first-child,
 .form-group>.button:first-child,
 .form-group>input[type="email"]:first-child,
@@ -781,6 +824,7 @@ input[type="range"][disabled]~.input-helper {
   border-radius: var(--radius) 0 0 var(--radius);
 }
 
+.form-group>.form-group-text:last-child,
 .form-group>button:last-child,
 .form-group>.button:last-child,
 .form-group>input[type="email"]:last-child,

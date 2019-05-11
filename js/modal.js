@@ -3,10 +3,10 @@ var modal = (function() {
   var previousModal = null;
 
   var destroy = function() {
-    var all_modal = helper.eA(".modal");
-    if (all_modal[0]) {
-      for (var i = 0; i < all_modal.length; i++) {
-        all_modal[i].destroy();
+    var allModal = helper.eA(".modal");
+    if (allModal[0]) {
+      for (var i = 0; i < allModal.length; i++) {
+        allModal[i].destroy();
       };
     };
   };
@@ -15,7 +15,8 @@ var modal = (function() {
     var options = {
       heading: "Modal",
       content: "Body",
-      action: null,
+      successAction: null,
+      cancelAction: null,
       actionText: "OK",
       cancelText: "Cancel",
       size: "medium"
@@ -23,7 +24,7 @@ var modal = (function() {
     if (override) {
       options = helper.applyOptions(options, override);
     };
-    var makeModal = function() {
+    var _makeModal = function() {
       var body = helper.e("body");
       helper.setObject({
         object: state.get(),
@@ -99,20 +100,29 @@ var modal = (function() {
         };
       }.bind(modal), false);
       actionButton.addEventListener("click", function(event) {
+        if (options.successAction) {
+          options.successAction();
+        };
         this.destroy();
         shade.destroy();
-        if (options.action) {
-          options.action();
-        };
+        page.update();
       }.bind(modal), false);
       cancelButton.addEventListener("click", function(event) {
+        if (options.cancelAction) {
+          options.cancelAction();
+        };
         this.destroy();
         shade.destroy();
+        page.update();
       }.bind(modal), false);
       previousModal = modal;
       shade.render({
         action: function() {
+          if (options.cancelAction) {
+            options.cancelAction();
+          };
           modal.destroy();
+          page.update();
         },
         includeHeader: true
       });
@@ -125,7 +135,8 @@ var modal = (function() {
     if (previousModal != null) {
       destroy();
     };
-    makeModal();
+    _makeModal();
+    page.update();
   };
 
   // exposed methods

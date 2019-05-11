@@ -212,7 +212,7 @@
   color: rgb(var(--white));
 }
 
-.link-letter {
+.link-display-letter {
   font-family: var(--font-fjalla);
   color: rgb(var(--accent));
   white-space: nowrap;
@@ -221,26 +221,42 @@
   transition: all var(--animation-speed-fast) ease-in-out;
 }
 
-.is-bookmarks-style-block .link-letter {
+.link-display-icon {
+  color: rgb(var(--accent));
+  transition: all var(--animation-speed-fast) ease-in-out;
+}
+
+.is-bookmarks-style-block .link-display-letter {
   margin: 0;
   font-size: 2em;
   text-align: center;
   max-width: 100%;
 }
 
-.is-bookmarks-style-list .link-letter {
+.is-bookmarks-style-block .link-display-icon {
+  margin-bottom: 0.25em;
+  font-size: 2.5em;
+  text-align: center;
+  max-width: 100%;
+}
+
+.is-bookmarks-style-list .link-display-letter,
+.is-bookmarks-style-list .link-display-icon {
   margin: 0 0.5em 0 0;
   font-size: 1.5em;
   flex-shrink: 0;
   max-width: 50%;
 }
 
-.link-item:hover .link-letter,
-.link-item:focus .link-letter {
+.link-item:hover .link-display-letter,
+.link-item:focus .link-display-letter,
+.link-item:hover .link-display-icon,
+.link-item:focus .link-display-icon {
   color: rgb(var(--style-neutral-text));
 }
 
-.link-panel-front:focus .link-letter {
+.link-panel-front:focus .link-display-letter,
+.link-panel-front:focus .link-display-icon {
   color: rgb(var(--style-neutral-text));
 }
 
@@ -320,4 +336,39 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+}
+
+.link-form-text-icon {
+  position: relative;
+}
+
+.link-form-text-icon:empty:before {
+  content: "";
+  background-color: rgb(var(--gray-04));
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+}
+
+.link-form-text-icon .link-form-icon {
+  transform: scale(1) rotate(0deg);
+  transition: transform var(--animation-speed-fast) ease-in-out;
+}
+
+.link-form-text-icon:not([disabled]):hover .link-form-icon {
+  transform: scale(2) rotate(360deg);
+  z-index: 1;
+}
+
+.link-form-text-icon:not([disabled]):active .link-form-icon {
+  transform: scale(4) rotate(360deg);
+}
+
+.link-form-icon {
+  font-size: 1.5em;
 }

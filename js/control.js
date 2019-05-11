@@ -5,6 +5,7 @@ var control = (function() {
     type: "button",
     func: function() {
       menu.toggle();
+      page.update();
     }
   }, {
     element: helper.e(".control-add"),
@@ -981,7 +982,7 @@ var control = (function() {
       link.render();
     }
   }, {
-    element: helper.e(".control-bookmarks-sort-name"),
+    element: helper.e(".control-bookmarks-sort-letter"),
     path: "bookmarks.sort",
     type: "radio",
     func: function() {
@@ -989,7 +990,15 @@ var control = (function() {
       link.render();
     }
   }, {
-    element: helper.e(".control-bookmarks-sort-letter"),
+    element: helper.e(".control-bookmarks-sort-icon"),
+    path: "bookmarks.sort",
+    type: "radio",
+    func: function() {
+      link.clear();
+      link.render();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-sort-name"),
     path: "bookmarks.sort",
     type: "radio",
     func: function() {

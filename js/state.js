@@ -143,7 +143,7 @@ var state = (function() {
       sort: "none"
     },
     layout: {
-      width: 72,
+      width: 80,
       scrollPastEnd: true,
       title: "New Tab"
     },
@@ -151,8 +151,8 @@ var state = (function() {
       accent: {
         current: {
           r: 0,
-          g: 255,
-          b: 0,
+          g: 130,
+          b: 200,
         },
         random: {
           active: false,
@@ -173,7 +173,8 @@ var state = (function() {
     },
     search: false,
     menu: false,
-    modal: false
+    modal: false,
+    autoSuggest: false,
   };
 
   var get = function() {

@@ -319,6 +319,19 @@ var update = (function() {
     return data;
   };
 
+  var _update_3000 = function(data) {
+    data.version = "3.0.0";
+    data.bookmarks.forEach(function(item, index) {
+      item.display = "letter";
+      item.icon = {
+        name: null,
+        prefix: null,
+        label: null
+      };
+    });
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -408,6 +421,10 @@ var update = (function() {
       if (version.compare(data.version, "2.22.0") == -1) {
         console.log("\t= running update 2.22.0");
         data = _update_2220(data);
+      };
+      if (version.compare(data.version, "3.0.0") == -1) {
+        console.log("\t= running update 3.0.0");
+        data = _update_3000(data);
       };
     };
     // if no update is needed
