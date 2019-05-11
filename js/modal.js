@@ -103,17 +103,17 @@ var modal = (function() {
         if (options.successAction) {
           options.successAction();
         };
-        page.update();
         this.destroy();
         shade.destroy();
+        page.update();
       }.bind(modal), false);
       cancelButton.addEventListener("click", function(event) {
         if (options.cancelAction) {
           options.cancelAction();
         };
-        page.update();
         this.destroy();
         shade.destroy();
+        page.update();
       }.bind(modal), false);
       previousModal = modal;
       shade.render({
@@ -121,8 +121,8 @@ var modal = (function() {
           if (options.cancelAction) {
             options.cancelAction();
           };
-          page.update();
           modal.destroy();
+          page.update();
         },
         includeHeader: true
       });
@@ -136,7 +136,7 @@ var modal = (function() {
       destroy();
     };
     _makeModal();
-    page.lock();
+    page.update();
   };
 
   // exposed methods

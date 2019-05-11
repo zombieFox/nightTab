@@ -85,6 +85,7 @@ var link = (function() {
       form.querySelector(".link-form-input-icon").setAttribute("disabled", "");
       form.querySelector(".link-form-input-helper-icon").setAttribute("disabled", "");
       form.querySelector(".link-form-icon-clear").setAttribute("disabled", "");
+      form.querySelector(".link-form-text-icon").tabIndex = -1;
     } else if (link.stagedBookmarkData.display == "icon") {
       form.querySelector(".link-form-input-letter").setAttribute("disabled", "");
       form.querySelector(".link-form-input-icon").removeAttribute("disabled");
@@ -93,6 +94,7 @@ var link = (function() {
       form.querySelector(".link-form-input-helper-icon").removeAttribute("disabled");
       form.querySelector(".link-form-icon-clear").removeAttribute("disabled");
       form.querySelector(".link-form-input-display-icon").checked = true;
+      form.querySelector(".link-form-text-icon").tabIndex = 1;
     };
     if (link.stagedBookmarkData.icon.name != null && link.stagedBookmarkData.icon.prefix != null && link.stagedBookmarkData.icon.label != null) {
       form.querySelector(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + link.stagedBookmarkData.icon.prefix + " fa-" + link.stagedBookmarkData.icon.name));
@@ -151,7 +153,7 @@ var link = (function() {
     var iconFormIndet = helper.node("div|class:form-indent");
     var iconFormGroup = helper.node("div|class:form-group auto-suggest-wrapper");
     var iconInput = helper.node("input|type:text,class:link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
-    var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,tabindex:1,disabled");
+    var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,tabindex:-1,disabled");
     var iconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
     var iconFormGroupClearIcon = helper.node("span|class:icon-close");
     var iconPara = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-helper-icon input-helper small muted,disabled");
@@ -247,6 +249,7 @@ var link = (function() {
       iconFormGroupText.setAttribute("disabled", "");
       iconPara.setAttribute("disabled", "");
       iconFormGroupClear.setAttribute("disabled", "");
+      iconFormGroupText.tabIndex = -1;
     }, false);
     iconRadioInput.addEventListener("change", function(event) {
       letterInput.setAttribute("disabled", "");
@@ -254,10 +257,12 @@ var link = (function() {
       iconFormGroupText.removeAttribute("disabled");
       iconPara.removeAttribute("disabled");
       iconFormGroupClear.removeAttribute("disabled");
+      iconFormGroupText.tabIndex = 1;
     }, false);
     autoSuggest.bind({
       input: iconInput,
-      type: "fontawesomeIcon"
+      type: "fontawesomeIcon",
+      postFocus: iconFormGroupText
     });
     return form;
   };

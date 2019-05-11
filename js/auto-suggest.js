@@ -1,7 +1,8 @@
 var autoSuggest = (function() {
 
-  var _timer_autoSuggest = null;
-  var _currentInput;
+  var _timer = null;
+  var _currentInputOptions = {};
+  var _autoSuggestActive = false;
 
   var _delayRender = function(options) {
     render(options);
@@ -10,25 +11,22 @@ var autoSuggest = (function() {
   var bind = function(override) {
     var options = {
       input: null,
-      type: null
+      type: null,
+      postFocus: null
     };
     if (override) {
       options = helper.applyOptions(options, override);
     };
     if (options.input) {
-      _bind_autoSuggest(options);
-    };
-  };
-
-  var _bind_autoSuggest = function(options) {
-    if (options.input) {
       options.input.addEventListener("focus", function() {
-        clearTimeout(_timer_autoSuggest);
-        _timer_autoSuggest = setTimeout(_delayRender, 300, options);
+        if (!_autoSuggestActive) {
+          clearTimeout(_timer);
+          _timer = setTimeout(_delayRender, 300, options);
+        };
       }, false);
       options.input.addEventListener("input", function() {
-        clearTimeout(_timer_autoSuggest);
-        _timer_autoSuggest = setTimeout(_delayRender, 300, options);
+        clearTimeout(_timer);
+        _timer = setTimeout(_delayRender, 300, options);
       }, false);
     };
   };
@@ -36,15 +34,15 @@ var autoSuggest = (function() {
   var _navigateResults = function(event) {
     var elementToFocus = null;
     var focusIndex = null;
-    var all_anchor = helper.eA(".auto-suggest-link");
+    var allSuggestItems = helper.eA(".auto-suggest-link");
     var _findInput = function() {
       if (event.target.classList.contains("auto-suggest-input")) {
-        _currentInput = event.target;
+        _currentInputOptions.input = event.target;
       };
     };
     var _findFocus = function() {
-      for (var i = 0; i < all_anchor.length; i++) {
-        if (all_anchor[i] == document.activeElement) {
+      for (var i = 0; i < allSuggestItems.length; i++) {
+        if (allSuggestItems[i] == document.activeElement) {
           focusIndex = i;
         };
       };
@@ -54,12 +52,12 @@ var autoSuggest = (function() {
       if (event.keyCode == 38) {
         event.preventDefault();
         if (focusIndex == null) {
-          elementToFocus = all_anchor[all_anchor.length - 1];
+          elementToFocus = allSuggestItems[allSuggestItems.length - 1];
         } else {
-          if (focusIndex > 2 && focusIndex <= all_anchor.length - 1) {
-            elementToFocus = all_anchor[focusIndex - 3];
+          if (focusIndex > 2 && focusIndex <= allSuggestItems.length - 1) {
+            elementToFocus = allSuggestItems[focusIndex - 3];
           } else {
-            elementToFocus = _currentInput;
+            elementToFocus = _currentInputOptions.input;
           };
         };
       };
@@ -67,70 +65,58 @@ var autoSuggest = (function() {
       if (event.keyCode == 40) {
         event.preventDefault();
         if (focusIndex == null) {
-          elementToFocus = all_anchor[0];
+          elementToFocus = allSuggestItems[0];
         } else {
-          if (focusIndex < all_anchor.length - 3) {
-            elementToFocus = all_anchor[focusIndex + 3];
+          if (focusIndex < allSuggestItems.length - 3) {
+            elementToFocus = allSuggestItems[focusIndex + 3];
           } else {
-            elementToFocus = _currentInput;
+            elementToFocus = _currentInputOptions.input;
           };
         };
       };
       // right
-      if (event.keyCode == 39 || event.keyCode == 9) {
-        if (document.activeElement != _currentInput) {
-          event.preventDefault();
-          if (focusIndex == null) {
-            elementToFocus = all_anchor[0];
+      if (event.keyCode == 39 && document.activeElement != _currentInputOptions.input) {
+        event.preventDefault();
+        if (focusIndex == null) {
+          elementToFocus = allSuggestItems[0];
+        } else {
+          if (focusIndex >= 0 && focusIndex < allSuggestItems.length - 1) {
+            elementToFocus = allSuggestItems[focusIndex + 1];
           } else {
-            if (focusIndex >= 0 && focusIndex < all_anchor.length - 1) {
-              elementToFocus = all_anchor[focusIndex + 1];
-            } else {
-              elementToFocus = _currentInput;
-            };
+            elementToFocus = _currentInputOptions.input;
           };
         };
       };
       // left
-      if (event.keyCode == 37 || event.keyCode == 9 && event.shiftKey) {
-        if (document.activeElement != _currentInput) {
-          event.preventDefault();
-          if (focusIndex == null) {
-            elementToFocus = all_anchor[all_anchor.length - 1];
+      if (event.keyCode == 37 && document.activeElement != _currentInputOptions.input) {
+        event.preventDefault();
+        if (focusIndex == null) {
+          elementToFocus = allSuggestItems[allSuggestItems.length - 1];
+        } else {
+          if (focusIndex > 0 && focusIndex <= allSuggestItems.length - 1) {
+            elementToFocus = allSuggestItems[focusIndex - 1];
           } else {
-            if (focusIndex > 0 && focusIndex <= all_anchor.length - 1) {
-              elementToFocus = all_anchor[focusIndex - 1];
-            } else {
-              elementToFocus = _currentInput;
-            };
+            elementToFocus = _currentInputOptions.input;
           };
         };
       };
       // tab
-      if (event.keyCode == 9) {
+      if (!event.shiftKey && event.keyCode == 9 && document.activeElement == _currentInputOptions.input) {
         event.preventDefault();
-        if (focusIndex == null) {
-          elementToFocus = all_anchor[0];
-        } else {
-          if (focusIndex >= 0 && focusIndex < all_anchor.length - 1) {
-            elementToFocus = all_anchor[focusIndex + 1];
-          } else {
-            elementToFocus = _currentInput;
-          };
-        };
+        elementToFocus = allSuggestItems[0];
+      };
+      if (!event.shiftKey && event.keyCode == 9 && document.activeElement == allSuggestItems[allSuggestItems.length - 1]) {
+        event.preventDefault();
+        elementToFocus = _currentInputOptions.postFocus;
+        destroy();
       };
       // shift tab
-      if (event.shiftKey && event.keyCode == 9) {
+      if (event.shiftKey && event.keyCode == 9 && document.activeElement == allSuggestItems[0]) {
         event.preventDefault();
-        if (focusIndex == null) {
-          elementToFocus = all_anchor[all_anchor.length - 1];
-        } else {
-          if (focusIndex > 0 && focusIndex <= all_anchor.length - 1) {
-            elementToFocus = all_anchor[focusIndex - 1];
-          } else {
-            elementToFocus = _currentInput;
-          };
-        };
+        elementToFocus = _currentInputOptions.input;
+      };
+      if (event.shiftKey && event.keyCode == 9 && document.activeElement == _currentInputOptions.input) {
+        destroy();
       };
     };
     _findInput();
@@ -167,11 +153,13 @@ var autoSuggest = (function() {
         path: "autoSuggest",
         newValue: false
       });
+      _currentInputOptions = {};
+      _autoSuggestActive = false;
     };
   };
 
-  var _getSuggestItems = function(options) {
-    var searchTerm = options.input.value.replace(/^\s+/, "").replace(/\s+$/, "").toLowerCase();
+  var _getSuggestItems = function() {
+    var searchTerm = _currentInputOptions.input.value.replace(/^\s+/, "").replace(/\s+$/, "").toLowerCase();
     var action = {
       fontawesomeIcon: function() {
         if (searchTerm == "" || searchTerm == undefined) {
@@ -197,11 +185,11 @@ var autoSuggest = (function() {
         };
       }
     };
-    return action[options.type]();
+    return action[_currentInputOptions.type]();
   };
 
   var render = function(options) {
-    _currentInput = options.input;
+    _currentInputOptions = options;
     var body = helper.e("body");
     var suggestItems = _getSuggestItems(options);
     var _populateList = function(list) {
@@ -227,7 +215,7 @@ var autoSuggest = (function() {
           });
         }
       };
-      action[options.type]();
+      action[_currentInputOptions.type]();
     };
 
     var _render_autoSuggestList = function() {
@@ -249,10 +237,9 @@ var autoSuggest = (function() {
         _addDocumentEvent();
       };
       _populateList(autoSuggestList);
-      autoSuggestList.scrollTop = 0;
     };
-
     if (suggestItems.length > 0) {
+      _autoSuggestActive = true;
       helper.setObject({
         object: state.get(),
         path: "autoSuggest",

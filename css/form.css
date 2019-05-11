@@ -713,11 +713,20 @@ input[type="range"][disabled]~.input-helper {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-width: var(--form-input-border);
+  border: 0;
+  border-top-width: var(--line-width);
+  border-bottom-width: var(--line-width);
   border-style: solid;
   border-color: transparent;
   border-radius: var(--radius);
-  transition: background-color var(--animation-speed-fast) ease-in-out, color var(--animation-speed-fast) ease-in-out, border-color var(--animation-speed-fast) ease-in-out;
+  transition: background-color var(--animation-speed-fast) ease-in-out, border-color var(--animation-speed-fast) ease-in-out;
+}
+
+.form-group-text:hover,
+.form-group-text:focus {
+  background-color: rgb(var(--gray-03));
+  border-bottom-color: rgb(var(--gray-08));
+  outline: none;
 }
 
 .form-group-text[disabled] {
@@ -725,6 +734,12 @@ input[type="range"][disabled]~.input-helper {
   color: rgb(var(--form-input-placeholder-disabled));
   box-shadow: none;
   cursor: default;
+}
+
+.form-group-text[disabled]:hover,
+.form-group-text[disabled]:focus {
+  background-color: rgb(var(--gray-02));
+  border-color: transparent;
 }
 
 .form-group {
@@ -754,12 +769,6 @@ input[type="range"][disabled]~.input-helper {
   border-radius: 0;
   z-index: 1;
   position: relative;
-  transition: box-shadow var(--animation-speed-fast) ease-in-out;
-}
-
-.form-group .form-group-text:focus {
-  outline: none;
-  box-shadow: 0 0 0 var(--line-width) rgb(var(--accent)), 0 0 0 calc(var(--line-width) * 2) rgba(var(--accent), 0.25);
 }
 
 .form-group>input[type="email"],
