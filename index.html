@@ -44,8 +44,7 @@
   <header class="header">
     <div class="header-shade"></div>
     <div class="header-border"></div>
-    <div class="container">
-      <div class="header-area">
+    <div class="header-area">
         <div class="header-item header-greeting">
           <p class="greeting"></p>
         </div>
@@ -90,13 +89,10 @@
           </button>
         </div>
       </div>
-    </div>
   </header>
 
   <section class="link">
-    <div class="container">
-      <div class="link-area"></div>
-    </div>
+    <div class="link-area"></div>
   </section>
 
   <section class="menu" tabindex="1">
@@ -463,46 +459,6 @@
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
-              <h1 class="menu-item-header-text">Horizontal Alignment</h1>
-            </div>
-            <div class="menu-item-form">
-              <div class="input-wrap">
-                <input id="control-layout-alignment-horizontal-left" class="control-layout-alignment-horizontal-left" type="radio" name="control-layout-alignment-horizontal" value="left" tabindex="1">
-                <label for="control-layout-alignment-horizontal-left">Left</label>
-              </div>
-              <div class="input-wrap">
-                <input id="control-layout-alignment-horizontal-center" class="control-layout-alignment-horizontal-center" type="radio" name="control-layout-alignment-horizontal" value="center" tabindex="1">
-                <label for="control-layout-alignment-horizontal-center">Center</label>
-              </div>
-              <div class="input-wrap">
-                <input id="control-layout-alignment-horizontal-right" class="control-layout-alignment-horizontal-right" type="radio" name="control-layout-alignment-horizontal" value="right" tabindex="1">
-                <label for="control-layout-alignment-horizontal-right">Right</label>
-                <p class="input-helper small muted">Effects may not be visible if the Search box size is set to Auto and grows to fill available space.</p>
-              </div>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <h1 class="menu-item-header-text">Vertical Alignment</h1>
-            </div>
-            <div class="menu-item-form">
-              <div class="input-wrap">
-                <input id="control-layout-alignment-vertical-top" class="control-layout-alignment-vertical-top" type="radio" name="control-layout-alignment-vertical" value="top" tabindex="1">
-                <label for="control-layout-alignment-vertical-top">Top</label>
-              </div>
-              <div class="input-wrap">
-                <input id="control-layout-alignment-vertical-center" class="control-layout-alignment-vertical-center" type="radio" name="control-layout-alignment-vertical" value="center" tabindex="1">
-                <label for="control-layout-alignment-vertical-center">Center</label>
-              </div>
-              <div class="input-wrap">
-                <input id="control-layout-alignment-vertical-bottom" class="control-layout-alignment-vertical-bottom" type="radio" name="control-layout-alignment-vertical" value="bottom" tabindex="1">
-                <label for="control-layout-alignment-vertical-bottom">Bottom</label>
-                <p class="input-helper small muted">Available when Bookmarks are not shown.</p>
-              </div>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
               <h1 class="menu-item-header-text">Background Shade</h1>
             </div>
             <div class="menu-item-form">
@@ -528,11 +484,11 @@
                 </div>
                 <div class="input-wrap">
                   <label for="control-header-shade-padding-top">Top padding</label>
-                  <input id="control-header-shade-padding-top" class="control-header-shade-padding-top" type="range" min="1" max="50" value="0" tabindex="1">
+                  <input id="control-header-shade-padding-top" class="control-header-shade-padding-top" type="range" min="0" max="50" value="0" tabindex="1">
                 </div>
                 <div class="input-wrap">
                   <label for="control-header-shade-padding-bottom">Bottom padding</label>
-                  <input id="control-header-shade-padding-bottom" class="control-header-shade-padding-bottom mb-0" type="range" min="1" max="50" value="0" tabindex="1">
+                  <input id="control-header-shade-padding-bottom" class="control-header-shade-padding-bottom mb-0" type="range" min="0" max="50" value="0" tabindex="1">
                 </div>
                 <hr>
                 <div class="input-wrap">
@@ -572,6 +528,25 @@
                 <label for="control-bookmarks-link-show">Show</label>
               </div>
               <div class="form-indent">
+                <label class="control-header-date-day-length-label">Link arrangement</label>
+                <div class="input-wrap">
+                  <input id="control-bookmarks-fit-best" class="control-bookmarks-fit-best" type="radio" name="control-bookmarks-fit" value="best" tabindex="1">
+                  <label for="control-bookmarks-fit-best">Best fit</label>
+                </div>
+                <div class="input-wrap">
+                  <input id="control-bookmarks-fit-custom" class="control-bookmarks-fit-custom" type="radio" name="control-bookmarks-fit" value="custom" tabindex="1">
+                  <label for="control-bookmarks-fit-custom">Custom</label>
+                </div>
+                <div class="form-indent">
+                  <div class="input-wrap">
+                    <label for="control-bookmarks-link-width">Width</label>
+                    <input id="control-bookmarks-link-width" class="control-bookmarks-link-width" type="range" min="30" max="200" value="0" tabindex="1">
+                  </div>
+                  <div class="input-wrap">
+                    <label for="control-bookmarks-link-height">Height</label>
+                    <input id="control-bookmarks-link-height" class="control-layout-height" type="range" min="30" max="200" value="0" tabindex="1">
+                  </div>
+                </div>
                 <div class="input-wrap">
                   <input id="control-bookmarks-name-show" class="control-bookmarks-name-show" type="checkbox" tabindex="1">
                   <label for="control-bookmarks-name-show">Names</label>
@@ -701,6 +676,44 @@
         </div>
 
         <div class="menu-content-area menu-content-area-layout is-hidden">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Horizontal Alignment</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap">
+                <input id="control-layout-alignment-horizontal-left" class="control-layout-alignment-horizontal-left" type="radio" name="control-layout-alignment-horizontal" value="left" tabindex="1">
+                <label for="control-layout-alignment-horizontal-left">Left</label>
+              </div>
+              <div class="input-wrap">
+                <input id="control-layout-alignment-horizontal-center" class="control-layout-alignment-horizontal-center" type="radio" name="control-layout-alignment-horizontal" value="center" tabindex="1">
+                <label for="control-layout-alignment-horizontal-center">Center</label>
+              </div>
+              <div class="input-wrap">
+                <input id="control-layout-alignment-horizontal-right" class="control-layout-alignment-horizontal-right" type="radio" name="control-layout-alignment-horizontal" value="right" tabindex="1">
+                <label for="control-layout-alignment-horizontal-right">Right</label>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Vertical Alignment</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap">
+                <input id="control-layout-alignment-vertical-top" class="control-layout-alignment-vertical-top" type="radio" name="control-layout-alignment-vertical" value="top" tabindex="1">
+                <label for="control-layout-alignment-vertical-top">Top</label>
+              </div>
+              <div class="input-wrap">
+                <input id="control-layout-alignment-vertical-center" class="control-layout-alignment-vertical-center" type="radio" name="control-layout-alignment-vertical" value="center" tabindex="1">
+                <label for="control-layout-alignment-vertical-center">Center</label>
+              </div>
+              <div class="input-wrap">
+                <input id="control-layout-alignment-vertical-bottom" class="control-layout-alignment-vertical-bottom" type="radio" name="control-layout-alignment-vertical" value="bottom" tabindex="1">
+                <label for="control-layout-alignment-vertical-bottom">Bottom</label>
+              </div>
+            </div>
+          </div>
           <div class="menu-item">
             <div class="menu-item-header">
               <h1 class="menu-item-header-text">Content container</h1>

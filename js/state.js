@@ -86,10 +86,6 @@ var state = (function() {
           align: "left"
         }
       },
-      alignment: {
-        horizontal: "left",
-        vertical: "top"
-      },
       editAdd: {
         show: true,
       },
@@ -99,8 +95,8 @@ var state = (function() {
       shade: {
         show: true,
         padding: {
-          top: 10,
-          bottom: 10
+          top: 0,
+          bottom: 0
         },
         style: "scroll",
         opacity: 0.95,
@@ -127,7 +123,9 @@ var state = (function() {
     },
     bookmarks: {
       link: {
-        show: true
+        show: true,
+        width: 10,
+        height: 10
       },
       name: {
         show: true
@@ -136,15 +134,19 @@ var state = (function() {
         show: true,
         style: "dark"
       },
+      fit: "best",
       newTab: false,
       edit: false,
-      editObject: null,
       style: "block",
       sort: "none"
     },
     layout: {
+      alignment: {
+        horizontal: "center",
+        vertical: "center"
+      },
       width: 80,
-      scrollPastEnd: true,
+      scrollPastEnd: false,
       title: "New Tab"
     },
     theme: {

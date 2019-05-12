@@ -678,48 +678,6 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-layout-alignment-horizontal-left"),
-    path: "header.alignment.horizontal",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-horizontal-center"),
-    path: "header.alignment.horizontal",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-horizontal-right"),
-    path: "header.alignment.horizontal",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-vertical-top"),
-    path: "header.alignment.vertical",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-vertical-center"),
-    path: "header.alignment.vertical",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-vertical-bottom"),
-    path: "header.alignment.vertical",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
     element: helper.e(".control-header-shade-show"),
     path: "header.shade.show",
     type: "checkbox",
@@ -824,6 +782,20 @@ var control = (function() {
       header.render();
     }
   }, {
+  //   element: helper.e(".control-bookmarks-link-width"),
+  //   path: "bookmarks.link.width",
+  //   type: "range",
+  //   func: function() {
+  //     render();
+  //   }
+  // }, {
+  //   element: helper.e(".control-bookmarks-link-height"),
+  //   path: "bookmarks.link.height",
+  //   type: "range",
+  //   func: function() {
+  //     render();
+  //   }
+  // }, {
     element: helper.e(".control-bookmarks-link-show"),
     path: "bookmarks.link.show",
     type: "checkbox",
@@ -1004,6 +976,48 @@ var control = (function() {
     func: function() {
       link.clear();
       link.render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-horizontal-left"),
+    path: "layout.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-horizontal-center"),
+    path: "layout.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-horizontal-right"),
+    path: "layout.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-vertical-top"),
+    path: "layout.alignment.vertical",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-vertical-center"),
+    path: "layout.alignment.vertical",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-vertical-bottom"),
+    path: "layout.alignment.vertical",
+    type: "radio",
+    func: function() {
+      render();
     }
   }, {
     element: helper.e(".control-layout-width"),
@@ -1287,16 +1301,6 @@ var control = (function() {
       helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
       helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     };
-    var _alignment = function() {
-      helper.removeClass(html, "is-header-alignment-horizontal-left");
-      helper.removeClass(html, "is-header-alignment-horizontal-center");
-      helper.removeClass(html, "is-header-alignment-horizontal-right");
-      helper.removeClass(html, "is-header-alignment-vertical-top");
-      helper.removeClass(html, "is-header-alignment-vertical-center");
-      helper.removeClass(html, "is-header-alignment-vertical-bottom");
-      helper.addClass(html, "is-header-alignment-horizontal-" + state.get().header.alignment.horizontal);
-      helper.addClass(html, "is-header-alignment-vertical-" + state.get().header.alignment.vertical);
-    };
     var _link = function() {
       var view = {
         block: function() {
@@ -1342,6 +1346,14 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-layout-scroll-past-end");
       };
+      helper.removeClass(html, "is-layout-alignment-horizontal-left");
+      helper.removeClass(html, "is-layout-alignment-horizontal-center");
+      helper.removeClass(html, "is-layout-alignment-horizontal-right");
+      helper.removeClass(html, "is-layout-alignment-vertical-top");
+      helper.removeClass(html, "is-layout-alignment-vertical-center");
+      helper.removeClass(html, "is-layout-alignment-vertical-bottom");
+      helper.addClass(html, "is-layout-alignment-horizontal-" + state.get().layout.alignment.horizontal);
+      helper.addClass(html, "is-layout-alignment-vertical-" + state.get().layout.alignment.vertical);
     };
     var _theme = function() {
       helper.removeClass(html, "is-theme-style-dark");
@@ -1406,7 +1418,6 @@ var control = (function() {
       };
     };
     _menu();
-    _alignment();
     _edit();
     _greeting();
     _transitional();
@@ -1670,9 +1681,6 @@ var control = (function() {
         helper.e(".control-bookmarks-sort-none").disabled = false;
         helper.e(".control-bookmarks-sort-name").disabled = false;
         helper.e(".control-bookmarks-sort-letter").disabled = false;
-        helper.e(".control-layout-alignment-vertical-top").disabled = true;
-        helper.e(".control-layout-alignment-vertical-center").disabled = true;
-        helper.e(".control-layout-alignment-vertical-bottom").disabled = true;
       } else {
         helper.e(".control-bookmarks-name-show").disabled = true;
         helper.e(".control-bookmarks-url-show").disabled = true;
@@ -1682,9 +1690,6 @@ var control = (function() {
         helper.e(".control-bookmarks-sort-none").disabled = true;
         helper.e(".control-bookmarks-sort-name").disabled = true;
         helper.e(".control-bookmarks-sort-letter").disabled = true;
-        helper.e(".control-layout-alignment-vertical-top").disabled = false;
-        helper.e(".control-layout-alignment-vertical-center").disabled = false;
-        helper.e(".control-layout-alignment-vertical-bottom").disabled = false;
       };
       if (state.get().bookmarks.link.show && state.get().bookmarks.url.show) {
         helper.e(".control-bookmarks-url-style-dark").disabled = false;

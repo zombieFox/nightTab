@@ -2,10 +2,10 @@ var layout = (function() {
 
   var render = function() {
     var html = helper.e("html");
-    html.style.setProperty("--layout-width", "calc(" + helper.getObject({
+    html.style.setProperty("--layout-width",  helper.getObject({
       object: state.get(),
       path: "layout.width"
-    }) + "vw - var(--layout-width-gutter))");
+    }) + "%");
   };
 
   var edge = function(action) {

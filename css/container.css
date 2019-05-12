@@ -1,8 +1,7 @@
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   position: relative;
-  width: var(--layout-width);
 }
 
 .container-edge {
@@ -10,7 +9,7 @@
   position: fixed;
   top: 0;
   left: 50%;
-  width: calc(var(--layout-width) + var(--layout-width-gutter));
+  width: var(--layout-width);
   height: 100vh;
   transform: translate(-50%, 0);
   z-index: var(--z-container-edge);
