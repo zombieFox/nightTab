@@ -782,20 +782,36 @@ var control = (function() {
       header.render();
     }
   }, {
-  //   element: helper.e(".control-bookmarks-link-width"),
-  //   path: "bookmarks.link.width",
-  //   type: "range",
-  //   func: function() {
-  //     render();
-  //   }
-  // }, {
-  //   element: helper.e(".control-bookmarks-link-height"),
-  //   path: "bookmarks.link.height",
-  //   type: "range",
-  //   func: function() {
-  //     render();
-  //   }
-  // }, {
+    element: helper.e(".control-bookmarks-fit-best"),
+    path: "bookmarks.fit",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-fit-custom"),
+    path: "bookmarks.fit",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-link-width"),
+    path: "bookmarks.link.width",
+    type: "range",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-link-height"),
+    path: "bookmarks.link.height",
+    type: "range",
+    func: function() {
+      render();
+    }
+  }, {
     element: helper.e(".control-bookmarks-link-show"),
     path: "bookmarks.link.show",
     type: "checkbox",
@@ -1313,6 +1329,17 @@ var control = (function() {
         }
       };
       view[state.get().bookmarks.style]();
+      var fit = {
+        best: function() {
+          helper.addClass(html, "is-bookmarks-fit-best");
+          helper.removeClass(html, "is-bookmarks-fit-custom");
+        },
+        custom: function() {
+          helper.removeClass(html, "is-bookmarks-fit-best");
+          helper.addClass(html, "is-bookmarks-fit-custom");
+        }
+      };
+      fit[state.get().bookmarks.fit]();
       if (state.get().bookmarks.link.show) {
         helper.addClass(html, "is-bookmarks-show-link");
       } else {
@@ -1398,6 +1425,8 @@ var control = (function() {
     var _header = function() {
       if (state.get().header.shade.show) {
         helper.addClass(html, "is-header-shade-show");
+        helper.removeClass(html, "is-header-shade-style-always");
+        helper.removeClass(html, "is-header-shade-style-scroll");
         helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
         if (state.get().header.shade.border.top.show) {
           helper.addClass(html, "is-header-shade-border-top-show");
@@ -1529,7 +1558,7 @@ var control = (function() {
     };
     var _greeting = function() {
       if (state.get().header.greeting.show) {
-        helper.e("[for=control-header-greeting-name]").removeAttribute("disabled", "");
+        helper.e("[for=control-header-greeting-name]").removeAttribute("disabled");
         helper.e(".control-header-greeting-name").disabled = false;
         helper.e(".control-header-greeting-type-good").disabled = false;
         helper.e(".control-header-greeting-type-hello").disabled = false;
@@ -1673,6 +1702,9 @@ var control = (function() {
     };
     var _link = function() {
       if (state.get().bookmarks.link.show) {
+        helper.e(".control-bookmarks-fit-label").removeAttribute("disabled");
+        helper.e(".control-bookmarks-fit-best").disabled = false;
+        helper.e(".control-bookmarks-fit-custom").disabled = false;
         helper.e(".control-bookmarks-name-show").disabled = false;
         helper.e(".control-bookmarks-url-show").disabled = false;
         helper.e(".control-bookmarks-style-block").disabled = false;
@@ -1682,6 +1714,9 @@ var control = (function() {
         helper.e(".control-bookmarks-sort-name").disabled = false;
         helper.e(".control-bookmarks-sort-letter").disabled = false;
       } else {
+        helper.e(".control-bookmarks-fit-label").setAttribute("disabled", "");
+        helper.e(".control-bookmarks-fit-best").disabled = true;
+        helper.e(".control-bookmarks-fit-custom").disabled = true;
         helper.e(".control-bookmarks-name-show").disabled = true;
         helper.e(".control-bookmarks-url-show").disabled = true;
         helper.e(".control-bookmarks-style-block").disabled = true;
@@ -1697,7 +1732,18 @@ var control = (function() {
       } else {
         helper.e(".control-bookmarks-url-style-dark").disabled = true;
         helper.e(".control-bookmarks-url-style-light").disabled = true;
-      }
+      };
+      if (state.get().bookmarks.link.show && state.get().bookmarks.fit == "custom") {
+        helper.e("[for=control-bookmarks-link-width]").removeAttribute("disabled");
+        helper.e(".control-bookmarks-link-width").disabled = false;
+        helper.e("[for=control-bookmarks-link-height]").removeAttribute("disabled");
+        helper.e(".control-bookmarks-link-height").disabled = false;
+      } else {
+        helper.e("[for=control-bookmarks-link-width]").setAttribute("disabled", "");
+        helper.e(".control-bookmarks-link-width").disabled = true;
+        helper.e("[for=control-bookmarks-link-height]").setAttribute("disabled", "");
+        helper.e(".control-bookmarks-link-height").disabled = true;
+      };
     };
     var _background = function() {
       if (state.get().background.image.show) {

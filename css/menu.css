@@ -1,5 +1,4 @@
 .menu {
-  opacity: 0.6;
   padding: 1em;
   position: fixed;
   top: 0;
@@ -22,6 +21,7 @@
 
 .menu-area {
   background-color: rgb(var(--gray-01));
+  background-color: rgba(var(--gray-01), 0.9);
   border-radius: var(--radius);
   width: 100%;
   height: 100%;

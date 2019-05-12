@@ -14,15 +14,24 @@
 }
 
 .link-area {
-  margin-bottom: calc(var(--gutter) * 3);
-  margin-left: calc(var(--gutter) * 3);
-  margin-right: calc(var(--gutter) * 3);
+  margin: calc(var(--gutter) * 3);
+}
+
+.is-bookmarks-fit-best .link-area {
+  margin-top: calc(var(--gutter) * 1.5);
+  margin-bottom: calc(var(--gutter) * 4);
+  margin-left: calc(var(--gutter) * 4);
+  margin-right: calc(var(--gutter) * 4);
   display: grid;
   grid-auto-rows: 1fr;
-  /* grid-gap: calc(var(--gutter) * 2); */
-  /* display: flex;
+  grid-gap: calc(var(--gutter) * 2);
+}
+
+.is-bookmarks-fit-custom .link-area {
+  margin-top: calc(var(--gutter) * 0.5);
+  display: flex;
   flex-direction: row;
-  flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
 .is-layout-alignment-horizontal-left .link-area {
@@ -37,23 +46,30 @@
   justify-content: flex-end;
 }
 
-.is-bookmarks-style-block .link-area {
-  grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+.is-bookmarks-fit-best.is-bookmarks-style-block .link-area {
+  grid-template-columns: repeat(auto-fill, minmax(11em, 1fr));
 }
 
-.is-bookmarks-style-list .link-area {
+.is-bookmarks-fit-best.is-bookmarks-style-list .link-area {
   grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
 }
 
 .link-item {
-  height: var(--link-height);
-  /* width: var(--link-width); */
-  margin: var(--gutter);
   font-size: 1em;
   position: relative;
   display: block;
   transform: scale(1);
   transition: all var(--animation-speed-fast) ease-in-out;
+}
+
+.is-bookmarks-fit-best .link-item {
+  height: var(--link-height);
+}
+
+.is-bookmarks-fit-custom .link-item {
+  height: var(--link-height);
+  width: var(--link-width);
+  margin: var(--gutter);
 }
 
 .link-item:focus-within,
