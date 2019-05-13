@@ -65,11 +65,11 @@
 }
 
 .is-bookmarks-show-link .header-area {
-  margin-bottom: calc(var(--gutter) * 1.5);
+  /* margin-bottom: calc(var(--gutter) * 1.5); */
 }
 
 .is-header-shade-style-always .header-area {
-  margin-bottom: calc(var(--gutter) * 3);
+  /* margin-bottom: calc(var(--gutter) * 3); */
 }
 
 .is-header-search-text-align-left .header-search-input {

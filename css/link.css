@@ -14,11 +14,13 @@
 }
 
 .link-area {
-  margin: calc(var(--gutter) * 3);
+  margin-bottom: calc(var(--gutter) * 3);
+  margin-left: calc(var(--gutter) * 3);
+  margin-right: calc(var(--gutter) * 3);
 }
 
 .is-bookmarks-fit-best .link-area {
-  margin-top: calc(var(--gutter) * 1.5);
+  /* margin-top: calc(var(--gutter) * 1.5); */
   margin-bottom: calc(var(--gutter) * 4);
   margin-left: calc(var(--gutter) * 4);
   margin-right: calc(var(--gutter) * 4);
@@ -28,10 +30,14 @@
 }
 
 .is-bookmarks-fit-custom .link-area {
-  margin-top: calc(var(--gutter) * 0.5);
+  margin-top: calc(var(--gutter) * -1);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.is-header-shade-style-always .link-area {
+  margin-top: calc(var(--gutter) * 3);
 }
 
 .is-layout-alignment-horizontal-left .link-area {
@@ -59,7 +65,7 @@
   position: relative;
   display: block;
   transform: scale(1);
-  transition: all var(--animation-speed-fast) ease-in-out;
+  transition: transform var(--animation-speed-fast) ease-in-out;
 }
 
 .is-bookmarks-fit-best .link-item {
