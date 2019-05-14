@@ -119,6 +119,9 @@ var state = (function() {
       transitional: {
         show: false,
         type: "timeanddate"
+      },
+      alignment: {
+        horizontal: "center"
       }
     },
     bookmarks: {

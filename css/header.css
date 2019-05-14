@@ -94,15 +94,15 @@
   right: 0;
 }
 
-.is-layout-alignment-horizontal-left .header-area {
+.is-header-alignment-horizontal-left .header-area {
   justify-content: flex-start;
 }
 
-.is-layout-alignment-horizontal-center .header-area {
+.is-header-alignment-horizontal-center .header-area {
   justify-content: center;
 }
 
-.is-layout-alignment-horizontal-right .header-area {
+.is-header-alignment-horizontal-right .header-area {
   justify-content: flex-end;
 }
 

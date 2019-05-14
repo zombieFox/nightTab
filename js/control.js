@@ -687,6 +687,30 @@ var control = (function() {
       header.render();
     }
   }, {
+    element: helper.e(".control-header-alignment-horizontal-left"),
+    path: "header.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-alignment-horizontal-center"),
+    path: "header.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-alignment-horizontal-right"),
+    path: "header.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
     element: helper.e(".control-header-shade-style-always"),
     path: "header.shade.style",
     type: "radio",
@@ -1428,6 +1452,10 @@ var control = (function() {
         helper.removeClass(html, "is-header-shade-style-always");
         helper.removeClass(html, "is-header-shade-style-scroll");
         helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
+        helper.removeClass(html, "is-header-alignment-horizontal-left");
+        helper.removeClass(html, "is-header-alignment-horizontal-center");
+        helper.removeClass(html, "is-header-alignment-horizontal-right");
+        helper.addClass(html, "is-header-alignment-horizontal-" + state.get().header.alignment.horizontal);
         if (state.get().header.shade.border.top.show) {
           helper.addClass(html, "is-header-shade-border-top-show");
         } else {
@@ -1445,6 +1473,7 @@ var control = (function() {
         helper.removeClass(html, "is-header-shade-border-top-show");
         helper.removeClass(html, "is-header-shade-border-bottom-show");
       };
+      state.get().header.alignment.horizontal
     };
     _menu();
     _edit();

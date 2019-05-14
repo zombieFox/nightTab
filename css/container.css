@@ -8,13 +8,27 @@
   background-color: transparent;
   position: fixed;
   top: 0;
-  left: 50%;
   width: var(--layout-width);
   height: 100vh;
-  transform: translate(-50%, 0);
   z-index: var(--z-container-edge);
   pointer-events: none;
   box-shadow: inset 0 0 0 var(--line-width) rgb(var(--accent)), inset 0 0 0 calc(var(--line-width) * 2) rgba(var(--accent), 0.25);
+}
+
+.is-layout-alignment-horizontal-left .container-edge {
+  left: 0;
+  transform: translateX(0);
+}
+
+.is-layout-alignment-horizontal-center .container-edge {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.is-layout-alignment-horizontal-right .container-edge {
+  left: inherit;
+  right: 0;
+  transform: translateX(0);
 }
 
 @media (min-width: 550px) {}

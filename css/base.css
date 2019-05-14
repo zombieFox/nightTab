@@ -143,6 +143,18 @@ body {
   transition: background-color var(--animation-speed-fast) ease-in-out;
 }
 
+.is-layout-alignment-horizontal-left body {
+  align-items: flex-start;
+}
+
+.is-layout-alignment-horizontal-center body {
+  align-items: center;
+}
+
+.is-layout-alignment-horizontal-right body {
+  align-items: flex-end;
+}
+
 .is-layout-alignment-vertical-top body {
   justify-content: flex-start;
 }
