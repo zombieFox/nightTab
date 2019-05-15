@@ -1,6 +1,5 @@
 .link {
   position: relative;
-  width: var(--layout-width);
   z-index: var(--z-index-link);
   display: none;
 }
@@ -40,15 +39,15 @@
   margin-top: calc(var(--gutter) * 3);
 }
 
-.is-layout-alignment-horizontal-left .link-area {
+.is-link-alignment-horizontal-left .link-area {
   justify-content: flex-start;
 }
 
-.is-layout-alignment-horizontal-center .link-area {
+.is-link-alignment-horizontal-center .link-area {
   justify-content: center;
 }
 
-.is-layout-alignment-horizontal-right .link-area {
+.is-link-alignment-horizontal-right .link-area {
   justify-content: flex-end;
 }
 

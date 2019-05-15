@@ -1,31 +1,31 @@
 var layout = (function() {
 
+  var _timer = null;
+
   var render = function() {
     var html = helper.e("html");
-    html.style.setProperty("--layout-width",  helper.getObject({
+    html.style.setProperty("--layout-width", helper.getObject({
       object: state.get(),
       path: "layout.width"
     }) + "%");
   };
 
-  var edge = function(action) {
-    var body = helper.e("body");
-    var container = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "container container-edge"
-      }]
-    });
-    var state = {
+  var edge = function(type) {
+    var html = helper.e("html");
+    var action = {
       show: function() {
-        body.appendChild(container);
+        helper.addClass(html, "is-layout-edge");
       },
       hide: function() {
-        body.removeChild(helper.e(".container-edge"));
+        helper.removeClass(html, "is-layout-edge");
+      },
+      flash: function() {
+        helper.addClass(html, "is-layout-edge");
+        clearTimeout(_timer);
+        _timer = setTimeout(edge, 500, "hide");
       }
     };
-    state[action]();
+    action[type]();
   };
 
   var init = function() {

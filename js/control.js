@@ -1021,6 +1021,12 @@ var control = (function() {
     element: helper.e(".control-layout-alignment-horizontal-left"),
     path: "layout.alignment.horizontal",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        layout.edge("flash");
+      }
+    }],
     func: function() {
       render();
     }
@@ -1028,6 +1034,12 @@ var control = (function() {
     element: helper.e(".control-layout-alignment-horizontal-center"),
     path: "layout.alignment.horizontal",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        layout.edge("flash");
+      }
+    }],
     func: function() {
       render();
     }
@@ -1035,6 +1047,12 @@ var control = (function() {
     element: helper.e(".control-layout-alignment-horizontal-right"),
     path: "layout.alignment.horizontal",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        layout.edge("flash");
+      }
+    }],
     func: function() {
       render();
     }
@@ -1042,6 +1060,12 @@ var control = (function() {
     element: helper.e(".control-layout-alignment-vertical-top"),
     path: "layout.alignment.vertical",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        layout.edge("flash");
+      }
+    }],
     func: function() {
       render();
     }
@@ -1049,6 +1073,12 @@ var control = (function() {
     element: helper.e(".control-layout-alignment-vertical-center"),
     path: "layout.alignment.vertical",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        layout.edge("flash");
+      }
+    }],
     func: function() {
       render();
     }
@@ -1056,6 +1086,12 @@ var control = (function() {
     element: helper.e(".control-layout-alignment-vertical-bottom"),
     path: "layout.alignment.vertical",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        layout.edge("flash");
+      }
+    }],
     func: function() {
       render();
     }

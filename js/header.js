@@ -1,5 +1,7 @@
 var header = (function() {
 
+  var _timer = null;
+
   var _bind = function() {
     window.addEventListener("resize", function() {
       render();
@@ -17,24 +19,22 @@ var header = (function() {
     });
   };
 
-  var edge = function(action) {
-    var header = helper.e(".header");
-    var container = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "header-edge"
-      }]
-    });
-    var state = {
+  var edge = function(type) {
+    var html = helper.e("html");
+    var action = {
       show: function() {
-        header.appendChild(container);
+        helper.addClass(html, "is-header-edge");
       },
       hide: function() {
-        header.removeChild(helper.e(".header-edge"));
+        helper.removeClass(html, "is-header-edge");
+      },
+      flash: function() {
+        helper.addClass(html, "is-header-edge");
+        clearTimeout(_timer);
+        _timer = setTimeout(edge, 500, "hide");
       }
     };
-    state[action]();
+    action[type]();
   };
 
   var render = function() {

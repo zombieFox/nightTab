@@ -1,0 +1,23 @@
+.main {
+  position: relative;
+  width: var(--layout-width);
+}
+
+.main:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--edge);
+  z-index: var(--z-index-edge);
+  pointer-events: none;
+  transition: opacity var(--animation-speed-fast) ease-in-out;
+}
+
+.is-layout-edge .main:before {
+  opacity: 1;
+}

@@ -8,13 +8,13 @@
   <title>New Tab</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/state.css">
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/typography.css">
-  <link rel="stylesheet" href="css/container.css">
   <link rel="stylesheet" href="css/spacing.css">
   <link rel="stylesheet" href="css/button.css">
   <link rel="stylesheet" href="css/form.css">
@@ -41,10 +41,12 @@
     <div class="background-accent"></div>
   </div>
 
-  <header class="header">
-    <div class="header-shade"></div>
-    <div class="header-border"></div>
-    <div class="header-area">
+  <main class="main">
+
+    <header class="header">
+      <div class="header-shade"></div>
+      <div class="header-border"></div>
+      <div class="header-area">
         <div class="header-item header-greeting">
           <p class="greeting"></p>
         </div>
@@ -89,11 +91,14 @@
           </button>
         </div>
       </div>
-  </header>
+    </header>
 
-  <section class="link">
-    <div class="link-area"></div>
-  </section>
+    <section class="link">
+      <div class="link-area"></div>
+    </section>
+
+  </main>
+
 
   <section class="menu" tabindex="1">
     <div class="menu-area">
@@ -124,24 +129,24 @@
                 <label for="control-header-greeting-show">Show</label>
               </div>
               <div class="form-indent">
-              <div class="input-wrap">
-                <input id="control-header-greeting-type-good" class="control-header-greeting-type-good" type="radio" name="control-header-greeting-type" value="good" tabindex="1">
-                <label for="control-header-greeting-type-good">"Good morning..."</label>
+                <div class="input-wrap">
+                  <input id="control-header-greeting-type-good" class="control-header-greeting-type-good" type="radio" name="control-header-greeting-type" value="good" tabindex="1">
+                  <label for="control-header-greeting-type-good">"Good morning..."</label>
+                </div>
+                <div class="input-wrap">
+                  <input id="control-header-greeting-type-hello" class="control-header-greeting-type-hello" type="radio" name="control-header-greeting-type" value="hello" tabindex="1">
+                  <label for="control-header-greeting-type-hello">"Hello..."</label>
+                </div>
+                <div class="input-wrap">
+                  <input id="control-header-greeting-type-hi" class="control-header-greeting-type-hi" type="radio" name="control-header-greeting-type" value="hi" tabindex="1">
+                  <label for="control-header-greeting-type-hi">"Hi..."</label>
+                </div>
+                <hr>
+                <div class="input-wrap">
+                  <label for="control-header-greeting-name">Name</label>
+                  <input id="control-header-greeting-name" class="control-header-greeting-name" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Nickname, alias or superhero name" tabindex="1">
+                </div>
               </div>
-              <div class="input-wrap">
-                <input id="control-header-greeting-type-hello" class="control-header-greeting-type-hello" type="radio" name="control-header-greeting-type" value="hello" tabindex="1">
-                <label for="control-header-greeting-type-hello">"Hello..."</label>
-              </div>
-              <div class="input-wrap">
-                <input id="control-header-greeting-type-hi" class="control-header-greeting-type-hi" type="radio" name="control-header-greeting-type" value="hi" tabindex="1">
-                <label for="control-header-greeting-type-hi">"Hi..."</label>
-              </div>
-              <hr>
-              <div class="input-wrap">
-                <label for="control-header-greeting-name">Name</label>
-                <input id="control-header-greeting-name" class="control-header-greeting-name" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Nickname, alias or superhero name" tabindex="1">
-              </div>
-            </div>
             </div>
           </div>
           <div class="menu-item">

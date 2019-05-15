@@ -66,6 +66,7 @@
   --z-index-modal: 7000;
   --z-index-menu: 8000;
   --z-index-auto-suggest-list: 8000;
+  --z-index-edge: 9000;
   --header-shade-color: transparent;
   --header-shade-opacity: none;
   --header-search-width: 0%;
@@ -91,6 +92,7 @@
   --shadow-small-inset: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   --shadow-medium-inset: inset 0 2px 2px rgba(0, 0, 0, 0.1);
   --shadow-large-inset: inset 0 3px 3px rgba(0, 0, 0, 0.15);
+  --edge: inset 0 0 0 1px rgb(var(--accent)), inset 0 0 0 calc(var(--line-width) * 4) rgba(var(--accent), 0.25), 0 0 0 calc(var(--line-width) * 4) rgba(var(--accent), 0.25);
   /* breakpoint reference */
   /* can not be used in @media as of yet */
   --breakpoint-sm: 550px;
