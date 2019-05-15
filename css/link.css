@@ -13,30 +13,17 @@
 }
 
 .link-area {
-  margin-bottom: calc(var(--gutter) * 3);
-  margin-left: calc(var(--gutter) * 3);
-  margin-right: calc(var(--gutter) * 3);
-}
-
-.is-bookmarks-fit-best .link-area {
-  /* margin-top: calc(var(--gutter) * 1.5); */
-  margin-bottom: calc(var(--gutter) * 4);
-  margin-left: calc(var(--gutter) * 4);
-  margin-right: calc(var(--gutter) * 4);
+  padding-top: calc(var(--gutter) * 2);
+  padding-bottom: calc(var(--gutter) * 4);
+  padding-left: calc(var(--gutter) * 4);
+  padding-right: calc(var(--gutter) * 4);
   display: grid;
   grid-auto-rows: 1fr;
   grid-gap: calc(var(--gutter) * 2);
 }
 
-.is-bookmarks-fit-custom .link-area {
-  margin-top: calc(var(--gutter) * -1);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
 .is-header-shade-style-always .link-area {
-  margin-top: calc(var(--gutter) * 3);
+  padding-top: calc(var(--gutter) * 4);
 }
 
 .is-link-alignment-horizontal-left .link-area {
