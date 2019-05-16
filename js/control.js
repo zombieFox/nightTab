@@ -740,14 +740,14 @@ var control = (function() {
     path: "header.shade.padding.top",
     type: "range",
     additionalEvents: [{
-      event: "mousedown",
+      event: "input",
       action: function() {
-        header.edge("show");
+        edge.render("show", helper.e(".header-area"));
       }
     }, {
-      event: "mouseup",
+      event: "change",
       action: function() {
-        header.edge("hide");
+        edge.render("hide");
       }
     }],
     func: function() {
@@ -759,14 +759,14 @@ var control = (function() {
     path: "header.shade.padding.bottom",
     type: "range",
     additionalEvents: [{
-      event: "mousedown",
+      event: "input",
       action: function() {
-        header.edge("show");
+        edge.render("show", helper.e(".header-area"));
       }
     }, {
-      event: "mouseup",
+      event: "change",
       action: function() {
-        header.edge("hide");
+        edge.render("hide");
       }
     }],
     func: function() {
@@ -1024,7 +1024,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        layout.edge("flash");
+        edge.render("flash", helper.e(".main"));
       }
     }],
     func: function() {
@@ -1037,7 +1037,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        layout.edge("flash");
+        edge.render("flash", helper.e(".main"));
       }
     }],
     func: function() {
@@ -1050,7 +1050,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        layout.edge("flash");
+        edge.render("flash", helper.e(".main"));
       }
     }],
     func: function() {
@@ -1063,7 +1063,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        layout.edge("flash");
+        edge.render("flash", helper.e(".main"));
       }
     }],
     func: function() {
@@ -1076,7 +1076,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        layout.edge("flash");
+        edge.render("flash", helper.e(".main"));
       }
     }],
     func: function() {
@@ -1089,7 +1089,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        layout.edge("flash");
+        edge.render("flash", helper.e(".main"));
       }
     }],
     func: function() {
@@ -1100,14 +1100,14 @@ var control = (function() {
     path: "layout.width",
     type: "range",
     additionalEvents: [{
-      event: "mousedown",
+      event: "input",
       action: function() {
-        layout.edge("show");
+        edge.render("show", helper.e(".main"));
       }
     }, {
-      event: "mouseup",
+      event: "change",
       action: function() {
-        layout.edge("hide");
+        edge.render("hide");
       }
     }],
     func: function() {

@@ -1,0 +1,14 @@
+.edge {
+  background-color: rgba(var(--style-neutral-text), 0.1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--edge);
+  z-index: var(--z-index-edge);
+  pointer-events: none;
+  transition: opacity var(--animation-speed-fast) ease-in-out;
+}

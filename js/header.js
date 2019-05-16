@@ -19,24 +19,6 @@ var header = (function() {
     });
   };
 
-  var edge = function(type) {
-    var html = helper.e("html");
-    var action = {
-      show: function() {
-        helper.addClass(html, "is-header-edge");
-      },
-      hide: function() {
-        helper.removeClass(html, "is-header-edge");
-      },
-      flash: function() {
-        helper.addClass(html, "is-header-edge");
-        clearTimeout(_timer);
-        _timer = setTimeout(edge, 500, "hide");
-      }
-    };
-    action[type]();
-  };
-
   var render = function() {
     var html = helper.e("html");
     var header = helper.e(".header");
@@ -94,7 +76,6 @@ var header = (function() {
 
   // exposed methods
   return {
-    edge: edge,
     render: render,
     init: init
   };
