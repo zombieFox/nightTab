@@ -5,21 +5,6 @@ var edge = (function() {
 
   var render = function(type, elementToMirror) {
     var body = helper.e("body");
-    var display = helper.node("div|class:edge");
-    display.destroy = function() {
-      if (display.classList.contains("is-opaque")) {
-        helper.removeClass(display, "is-opaque");
-        helper.addClass(display, "is-transparent");
-      } else {
-        display.remove();
-      };
-    };
-    display.addEventListener("transitionend", function(event, elapsed) {
-      if (event.propertyName === "opacity" && getComputedStyle(this).opacity == 0) {
-        this.parentElement.removeChild(this);
-        _cuurentEdge = null;
-      };
-    }, false);
     var resize = function(element) {
       var size = elementToMirror.getBoundingClientRect();
       element.style.width = size.width + "px";
@@ -30,18 +15,34 @@ var edge = (function() {
     var action = {
       show: function() {
         if (_cuurentEdge == null) {
-          _cuurentEdge = display;
+          var display = helper.node("div|class:edge is-transparent");
+          display.destroy = function() {
+            if (display.classList.contains("is-opaque")) {
+              helper.removeClass(display, "is-opaque");
+              helper.addClass(display, "is-transparent");
+            } else {
+              display.remove();
+            };
+          };
+          display.addEventListener("transitionend", function(event, elapsed) {
+            if (event.propertyName === "opacity" && getComputedStyle(this).opacity == 0) {
+              this.parentElement.removeChild(this);
+              _cuurentEdge = null;
+            };
+          }, false);
           body.appendChild(display);
           getComputedStyle(display).opacity;
           helper.removeClass(display, "is-transparent");
           helper.addClass(display, "is-opaque");
-          resize(_cuurentEdge);
+          resize(display);
+          _cuurentEdge = display;
         } else {
           resize(_cuurentEdge);
         };
       },
       hide: function() {
         if (_cuurentEdge != null) {
+          clearTimeout(_timer);
           _cuurentEdge.destroy();
         };
       },
