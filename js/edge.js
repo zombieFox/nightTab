@@ -1,5 +1,6 @@
 var edge = (function() {
 
+  var _timer = null;
   var _currentEdge = null;
 
   var destroy = function() {
@@ -11,9 +12,16 @@ var edge = (function() {
     };
   };
 
-  var render = function(elementToMirror, delay) {
+  var render = function(override) {
+    var options = {
+      element: null,
+      delay: null
+    };
+    if (override) {
+      options = helper.applyOptions(options, override);
+    };
     var _resize = function() {
-      var rect = elementToMirror.getBoundingClientRect();
+      var rect = options.element.getBoundingClientRect();
       _currentEdge.style.width = rect.width + "px";
       _currentEdge.style.height = rect.height + "px";
       _currentEdge.style.top = rect.top + "px";
@@ -48,10 +56,9 @@ var edge = (function() {
           helper.removeClass(html, "is-edge");
         };
       }, false);
-      if (delay) {
-        window.setInterval(function() {
-          edgeElement.destroy();
-        }, delay);
+      if (options.delay) {
+        clearTimeout(_timer);
+        _timer = setTimeout(edgeElement.destroy, options.delay);
       };
       helper.addClass(html, "is-edge");
       body.appendChild(edgeElement);

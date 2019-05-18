@@ -20,7 +20,7 @@
 }
 
 .menu-area {
-  background-color: rgba(var(--gray-01), 0.9);
+  background-color: rgb(var(--gray-01));
   border-radius: var(--radius);
   width: 100%;
   max-height: 100%;

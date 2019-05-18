@@ -576,12 +576,16 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       action: function() {
-        edge.render(helper.e(".header-search-input"));
+        edge.render({
+          element: helper.e(".header-search-input"),
+        });
       }
     }, {
       event: "mousedown",
       action: function() {
-        edge.render(helper.e(".header-search-input"));
+        edge.render({
+          element: helper.e(".header-search-input"),
+        });
       }
     }, {
       event: "mouseup",
@@ -591,7 +595,9 @@ var control = (function() {
     }, {
       event: "keydown",
       action: function() {
-        edge.render(helper.e(".header-search-input"));
+        edge.render({
+          element: helper.e(".header-search-input"),
+        });
       }
     }, {
       event: "keyup",
@@ -768,12 +774,16 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       action: function() {
-        edge.render(helper.e(".header-area"));
+        edge.render({
+          element: helper.e(".header-area"),
+        });
       }
     }, {
       event: "mousedown",
       action: function() {
-        edge.render(helper.e(".header-area"));
+        edge.render({
+          element: helper.e(".header-area"),
+        });
       }
     }, {
       event: "mouseup",
@@ -783,7 +793,9 @@ var control = (function() {
     }, {
       event: "keydown",
       action: function() {
-        edge.render(helper.e(".header-area"));
+        edge.render({
+          element: helper.e(".header-area"),
+        });
       }
     }, {
       event: "keyup",
@@ -802,12 +814,16 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       action: function() {
-        edge.render(helper.e(".header-area"));
+        edge.render({
+          element: helper.e(".header-area"),
+        });
       }
     }, {
       event: "mousedown",
       action: function() {
-        edge.render(helper.e(".header-area"));
+        edge.render({
+          element: helper.e(".header-area"),
+        });
       }
     }, {
       event: "mouseup",
@@ -817,7 +833,9 @@ var control = (function() {
     }, {
       event: "keydown",
       action: function() {
-        edge.render(helper.e(".header-area"));
+        edge.render({
+          element: helper.e(".header-area"),
+        });
       }
     }, {
       event: "keyup",
@@ -1080,7 +1098,10 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render(helper.e(".main"), 500);
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
       }
     }],
     func: function() {
@@ -1093,7 +1114,10 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render(helper.e(".main"), 500);
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
       }
     }],
     func: function() {
@@ -1106,7 +1130,10 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render(helper.e(".main"), 500);
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
       }
     }],
     func: function() {
@@ -1119,7 +1146,10 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render(helper.e(".main"), 500);
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
       }
     }],
     func: function() {
@@ -1132,7 +1162,10 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render(helper.e(".main"), 500);
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
       }
     }],
     func: function() {
@@ -1145,7 +1178,10 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render(helper.e(".main"), 500);
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
       }
     }],
     func: function() {
@@ -1158,12 +1194,16 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       action: function() {
-        edge.render(helper.e(".main"));
+        edge.render({
+          element: helper.e(".main"),
+        });
       }
     }, {
       event: "mousedown",
       action: function() {
-        edge.render(helper.e(".main"));
+        edge.render({
+          element: helper.e(".main"),
+        });
       }
     }, {
       event: "mouseup",
@@ -1173,7 +1213,9 @@ var control = (function() {
     }, {
       event: "keydown",
       action: function() {
-        edge.render(helper.e(".main"));
+        edge.render({
+          element: helper.e(".main"),
+        });
       }
     }, {
       event: "keyup",
