@@ -576,12 +576,22 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       action: function() {
-        edge.render("show", helper.e(".header-search-input"));
+        edge.render(helper.e(".header-search-input"));
+      }
+    }, {
+      event: "mousedown",
+      action: function() {
+        edge.render(helper.e(".header-search-input"));
       }
     }, {
       event: "mouseup",
       action: function() {
         edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      action: function() {
+        edge.render(helper.e(".header-search-input"));
       }
     }, {
       event: "keyup",
@@ -758,10 +768,25 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       action: function() {
-        edge.render("show", helper.e(".header-area"));
+        edge.render(helper.e(".header-area"));
+      }
+    }, {
+      event: "mousedown",
+      action: function() {
+        edge.render(helper.e(".header-area"));
       }
     }, {
       event: "mouseup",
+      action: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      action: function() {
+        edge.render(helper.e(".header-area"));
+      }
+    }, {
+      event: "keyup",
       action: function() {
         edge.destroy();
       }
@@ -777,10 +802,25 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       action: function() {
-        edge.render("show", helper.e(".header-area"));
+        edge.render(helper.e(".header-area"));
+      }
+    }, {
+      event: "mousedown",
+      action: function() {
+        edge.render(helper.e(".header-area"));
       }
     }, {
       event: "mouseup",
+      action: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      action: function() {
+        edge.render(helper.e(".header-area"));
+      }
+    }, {
+      event: "keyup",
       action: function() {
         edge.destroy();
       }
@@ -1040,7 +1080,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render("flash", helper.e(".main"));
+        edge.render(helper.e(".main"), 500);
       }
     }],
     func: function() {
@@ -1053,7 +1093,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render("flash", helper.e(".main"));
+        edge.render(helper.e(".main"), 500);
       }
     }],
     func: function() {
@@ -1066,7 +1106,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render("flash", helper.e(".main"));
+        edge.render(helper.e(".main"), 500);
       }
     }],
     func: function() {
@@ -1079,7 +1119,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render("flash", helper.e(".main"));
+        edge.render(helper.e(".main"), 500);
       }
     }],
     func: function() {
@@ -1092,7 +1132,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render("flash", helper.e(".main"));
+        edge.render(helper.e(".main"), 500);
       }
     }],
     func: function() {
@@ -1105,7 +1145,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       action: function() {
-        edge.render("flash", helper.e(".main"));
+        edge.render(helper.e(".main"), 500);
       }
     }],
     func: function() {
@@ -1118,10 +1158,25 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       action: function() {
-        edge.render("show", helper.e(".main"));
+        edge.render(helper.e(".main"));
+      }
+    }, {
+      event: "mousedown",
+      action: function() {
+        edge.render(helper.e(".main"));
       }
     }, {
       event: "mouseup",
+      action: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      action: function() {
+        edge.render(helper.e(".main"));
+      }
+    }, {
+      event: "keyup",
       action: function() {
         edge.destroy();
       }

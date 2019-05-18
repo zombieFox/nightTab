@@ -176,6 +176,7 @@ var state = (function() {
         accent: 0
       }
     },
+    edge: false,
     search: false,
     menu: false,
     modal: false,

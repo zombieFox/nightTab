@@ -4,7 +4,9 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       //  esc
       if (event.keyCode == 27) {
-        if (state.get().menu) {
+        if (state.get().edge) {
+          edge.destroy();
+        } else if (state.get().menu) {
           menu.close();
           shade.destroy();
         } else if (state.get().autoSuggest) {

@@ -1,67 +1,71 @@
 var edge = (function() {
 
-  var _timer = null;
-  var _cuurentEdge = null;
+  var _currentEdge = null;
 
   var destroy = function() {
-    var html = helper.e("html");
     var allEdge = helper.eA(".edge");
     if (allEdge[0]) {
-      helper.removeClass(html, "is-edge");
       for (var i = 0; i < allEdge.length; i++) {
-        _cuurentEdge = null;
         allEdge[i].destroy();
       };
     };
   };
 
-  var render = function(type, elementToMirror) {
-    var html = helper.e("html");
-    var body = helper.e("body");
-    var resize = function(element) {
-      var size = elementToMirror.getBoundingClientRect();
-      element.style.width = size.width + "px";
-      element.style.height = size.height + "px";
-      element.style.top = size.top + "px";
-      element.style.left = size.left + "px";
+  var render = function(elementToMirror, delay) {
+    var _resize = function() {
+      var rect = elementToMirror.getBoundingClientRect();
+      _currentEdge.style.width = rect.width + "px";
+      _currentEdge.style.height = rect.height + "px";
+      _currentEdge.style.top = rect.top + "px";
+      _currentEdge.style.left = rect.left + "px";
     };
-    var action = {
-      show: function() {
-        if (_cuurentEdge == null) {
-          helper.addClass(html, "is-edge");
-          var display = helper.node("div|class:edge is-transparent");
-          display.destroy = function() {
-            if (display.classList.contains("is-opaque")) {
-              helper.removeClass(display, "is-opaque");
-              helper.addClass(display, "is-transparent");
-            } else {
-              display.remove();
-              clearTimeout(_timer);
-            };
-          };
-          display.addEventListener("transitionend", function(event, elapsed) {
-            if (event.propertyName === "opacity" && getComputedStyle(this).opacity == 0) {
-              this.parentElement.removeChild(this);
-            };
-          }, false);
-          body.appendChild(display);
-          getComputedStyle(display).opacity;
-          helper.removeClass(display, "is-transparent");
-          helper.addClass(display, "is-opaque");
-          resize(display);
-          _cuurentEdge = display;
+    var _makeEdge = function() {
+      helper.setObject({
+        object: state.get(),
+        path: "edge",
+        newValue: true
+      });
+      var html = helper.e("html");
+      var body = helper.e("body");
+      var edgeElement = helper.node("div|class:edge is-transparent");
+      edgeElement.destroy = function() {
+        if (edgeElement.classList.contains("is-opaque")) {
+          helper.removeClass(edgeElement, "is-opaque");
+          helper.addClass(edgeElement, "is-transparent");
         } else {
-          helper.addClass(html, "is-edge");
-          resize(_cuurentEdge);
+          edgeElement.remove();
         };
-      },
-      flash: function() {
-        render("show", elementToMirror);
-        clearTimeout(_timer);
-        _timer = setTimeout(destroy, 1000);
-      }
+        _currentEdge = null;
+        helper.setObject({
+          object: state.get(),
+          path: "edge",
+          newValue: false
+        });
+      };
+      edgeElement.addEventListener("transitionend", function(event, elapsed) {
+        if (event.propertyName === "opacity" && getComputedStyle(this).opacity == 0) {
+          this.parentElement.removeChild(this);
+          helper.removeClass(html, "is-edge");
+        };
+      }, false);
+      if (delay) {
+        window.setInterval(function() {
+          edgeElement.destroy();
+        }, delay);
+      };
+      helper.addClass(html, "is-edge");
+      body.appendChild(edgeElement);
+      getComputedStyle(edgeElement).opacity;
+      helper.removeClass(edgeElement, "is-transparent");
+      helper.addClass(edgeElement, "is-opaque");
+      _currentEdge = edgeElement;
     };
-    action[type]();
+    if (_currentEdge == null) {
+      _makeEdge();
+      _resize();
+    } else {
+      _resize();
+    };
   };
 
   // exposed methods
