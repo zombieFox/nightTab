@@ -146,7 +146,7 @@ var state = (function() {
     layout: {
       alignment: {
         horizontal: "center",
-        vertical: "center"
+        vertical: "top"
       },
       width: 80,
       scrollPastEnd: false,
