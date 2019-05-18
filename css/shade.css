@@ -13,6 +13,7 @@
   z-index: var(--z-index-shade);
 }
 
+.is-edge .shade,
 .is-background-image-show .shade {
   background-color: rgba(var(--black), 0.5);
 }

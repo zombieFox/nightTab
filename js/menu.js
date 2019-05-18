@@ -47,7 +47,7 @@ var menu = (function() {
   };
 
   var open = function() {
-  _scrollToTop();
+    _scrollToTop();
     helper.setObject({
       object: state.get(),
       path: "menu",
@@ -64,7 +64,7 @@ var menu = (function() {
         newValue: false
       });
     } else {
-    _scrollToTop();
+      _scrollToTop();
       helper.setObject({
         object: state.get(),
         path: "menu",
@@ -82,7 +82,6 @@ var menu = (function() {
       shade.render({
         action: function() {
           close();
-          render();
           page.update();
         }
       });

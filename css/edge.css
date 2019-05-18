@@ -1,15 +1,13 @@
 .edge {
+  background-color: rgba(var(--accent), 0.10);
   width: 0;
   height: 0;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
-  border-radius: var(--radius);
-  box-shadow:
-  inset 0 0 0 1px rgb(var(--accent)),
-  0 0 0 calc(var(--line-width) * 3) rgba(var(--accent), 0.25),
-  inset 0 0 0 calc(var(--line-width) * 3) rgba(var(--accent), 0.25);
+  border-radius: calc(var(--radius) * 2);
+  box-shadow: inset 0 0 0 var(--line-width) rgb(var(--accent)), inset 0 0 0 calc(var(--line-width) * 3) rgba(var(--accent), 0.25);
   z-index: var(--z-index-edge);
   pointer-events: none;
   transition: opacity var(--animation-speed-fast) ease-in-out;

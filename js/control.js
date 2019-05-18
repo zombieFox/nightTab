@@ -573,6 +573,22 @@ var control = (function() {
     element: helper.e(".control-header-search-width-custom"),
     path: "header.search.width.custom",
     type: "range",
+    additionalEvents: [{
+      event: "input",
+      action: function() {
+        edge.render("show", helper.e(".header-search-input"));
+      }
+    }, {
+      event: "mouseup",
+      action: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keyup",
+      action: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       render();
       header.render();
@@ -745,9 +761,9 @@ var control = (function() {
         edge.render("show", helper.e(".header-area"));
       }
     }, {
-      event: "change",
+      event: "mouseup",
       action: function() {
-        edge.render("hide");
+        edge.destroy();
       }
     }],
     func: function() {
@@ -764,9 +780,9 @@ var control = (function() {
         edge.render("show", helper.e(".header-area"));
       }
     }, {
-      event: "change",
+      event: "mouseup",
       action: function() {
-        edge.render("hide");
+        edge.destroy();
       }
     }],
     func: function() {
@@ -1105,9 +1121,9 @@ var control = (function() {
         edge.render("show", helper.e(".main"));
       }
     }, {
-      event: "change",
+      event: "mouseup",
       action: function() {
-        edge.render("hide");
+        edge.destroy();
       }
     }],
     func: function() {

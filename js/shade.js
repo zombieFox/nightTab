@@ -13,8 +13,7 @@ var shade = (function() {
 
   var render = function(override) {
     var options = {
-      action: null,
-      includeHeader: false
+      action: null
     };
     if (override) {
       options = helper.applyOptions(options, override);
@@ -28,13 +27,7 @@ var shade = (function() {
       var body = helper.e("body");
       var shade = document.createElement("div");
       shade.setAttribute("class", "shade");
-      if (options.includeHeader) {
-        helper.addClass(shade, "m-shade-top");
-      };
       shade.destroy = function() {
-        if (options.action) {
-          options.action();
-        };
         if (shade.classList.contains("is-opaque")) {
           helper.removeClass(shade, "is-opaque");
           helper.addClass(shade, "is-transparent");
@@ -52,6 +45,9 @@ var shade = (function() {
       }.bind(shade), false);
       shade.addEventListener("click", function() {
         this.destroy();
+        if (options.action) {
+          options.action();
+        };
       }, false);
       previousShade = shade;
       body.appendChild(shade);
