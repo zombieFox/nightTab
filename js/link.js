@@ -139,7 +139,7 @@ var link = (function() {
     if (bookmarks.get().length <= 0) {
       helper.setObject({
         object: state.get(),
-        path: "bookmarks.edit",
+        path: "link.edit",
         newValue: false
       });
     };
@@ -295,7 +295,7 @@ var link = (function() {
         value: 1
       }]
     };
-    if (state.get().bookmarks.newTab) {
+    if (state.get().link.newTab) {
       linkPanelFrontOptions.attr.push({
         key: "target",
         value: "_blank"
@@ -541,7 +541,7 @@ var link = (function() {
 
   var tabIndex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
-    if (state.get().bookmarks.edit) {
+    if (state.get().link.edit) {
       allLinkControlItem.forEach(function(arrayItem, index) {
         arrayItem.tabIndex = 1;
       });

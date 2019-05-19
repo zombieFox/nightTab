@@ -1,4 +1,5 @@
 :root {
+  --accent: 250, 130, 0;
   --black: 0, 0, 0;
   --white: 255, 255, 255;
   --shade-01: 38, 40, 49;
@@ -44,7 +45,6 @@
   --form-checkbox-radio-chcked-label: var(--gray-16);
   --form-checkbox-radio-disabled-label: var(--gray-04);
   --form-range-thumb: var(--gray-12);
-  --accent: 0, 255, 0;
   --root-font-size: 14px;
   --radius: 0.2em;
   --line-width: 0.2em;

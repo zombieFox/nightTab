@@ -745,7 +745,7 @@ input[type="range"][disabled]~.input-helper {
 .form-group {
   margin: 0 0 1em 0;
   display: inline-flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   width: 100%;
 }

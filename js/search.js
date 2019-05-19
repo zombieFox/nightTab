@@ -67,7 +67,7 @@ var search = (function() {
     var search = helper.e(".search");
     var searchInput = helper.e(".search-input");
     var placeholder = "";
-    if (state.get().bookmarks.link.show) {
+    if (state.get().link.show) {
       placeholder = "Find bookmarks or search";
     } else {
       placeholder = "Search";

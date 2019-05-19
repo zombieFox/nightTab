@@ -5,7 +5,7 @@ var state = (function() {
       area: {
         width: 100,
         alignment: {
-          horizontal: "center"
+          horizontal: "left"
         }
       },
       items: {
@@ -55,11 +55,11 @@ var state = (function() {
           ordinal: true
         },
         year: {
-          show: true,
+          show: false,
           display: "number"
         },
         separator: {
-          show: true
+          show: false
         },
         format: "datemonth"
       },
@@ -132,17 +132,12 @@ var state = (function() {
         type: "timeanddate"
       }
     },
-    bookmarks: {
+    link: {
       area: {
         width: 100,
         alignment: {
           horizontal: "center"
         }
-      },
-      link: {
-        show: true,
-        width: 10,
-        height: 10
       },
       name: {
         show: true
@@ -151,6 +146,7 @@ var state = (function() {
         show: true,
         style: "dark"
       },
+      show: true,
       fit: "best",
       newTab: false,
       edit: false,
@@ -160,9 +156,9 @@ var state = (function() {
     layout: {
       alignment: {
         horizontal: "center",
-        vertical: "top"
+        vertical: "center"
       },
-      width: 80,
+      width: 90,
       scrollPastEnd: false,
       title: "New Tab"
     },
@@ -171,7 +167,7 @@ var state = (function() {
         current: {
           r: 0,
           g: 130,
-          b: 200,
+          b: 250,
         },
         random: {
           active: false,

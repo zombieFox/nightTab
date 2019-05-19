@@ -15,7 +15,7 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-edit"),
-    path: "bookmarks.edit",
+    path: "link.edit",
     type: "checkbox",
     func: function() {
       render();
@@ -998,7 +998,7 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-bookmarks-fit-best"),
-    path: "bookmarks.fit",
+    path: "link.fit",
     type: "radio",
     func: function() {
       render();
@@ -1006,29 +1006,15 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-bookmarks-fit-custom"),
-    path: "bookmarks.fit",
+    path: "link.fit",
     type: "radio",
     func: function() {
       render();
       dependents();
     }
   }, {
-    element: helper.e(".control-bookmarks-link-width"),
-    path: "bookmarks.link.width",
-    type: "range",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-bookmarks-link-height"),
-    path: "bookmarks.link.height",
-    type: "range",
-    func: function() {
-      render();
-    }
-  }, {
     element: helper.e(".control-bookmarks-link-show"),
-    path: "bookmarks.link.show",
+    path: "link.show",
     type: "checkbox",
     func: function() {
       render();
@@ -1038,7 +1024,7 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-bookmarks-name-show"),
-    path: "bookmarks.name.show",
+    path: "link.name.show",
     type: "checkbox",
     func: function() {
       render();
@@ -1134,7 +1120,7 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-bookmarks-url-show"),
-    path: "bookmarks.url.show",
+    path: "link.url.show",
     type: "checkbox",
     func: function() {
       render();
@@ -1142,21 +1128,21 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-bookmarks-url-style-dark"),
-    path: "bookmarks.url.style",
+    path: "link.url.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
     element: helper.e(".control-bookmarks-url-style-light"),
-    path: "bookmarks.url.style",
+    path: "link.url.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
     element: helper.e(".control-bookmarks-new-tab"),
-    path: "bookmarks.newTab",
+    path: "link.newTab",
     type: "checkbox",
     func: function() {
       link.clear();
@@ -1164,21 +1150,21 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-bookmarks-style-block"),
-    path: "bookmarks.style",
+    path: "link.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
     element: helper.e(".control-bookmarks-style-list"),
-    path: "bookmarks.style",
+    path: "link.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
     element: helper.e(".control-bookmarks-sort-none"),
-    path: "bookmarks.sort",
+    path: "link.sort",
     type: "radio",
     func: function() {
       link.clear();
@@ -1186,7 +1172,7 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-bookmarks-sort-letter"),
-    path: "bookmarks.sort",
+    path: "link.sort",
     type: "radio",
     func: function() {
       link.clear();
@@ -1194,7 +1180,7 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-bookmarks-sort-icon"),
-    path: "bookmarks.sort",
+    path: "link.sort",
     type: "radio",
     func: function() {
       link.clear();
@@ -1202,7 +1188,7 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-bookmarks-sort-name"),
-    path: "bookmarks.sort",
+    path: "link.sort",
     type: "radio",
     func: function() {
       link.clear();
@@ -1569,7 +1555,7 @@ var control = (function() {
       helper.addClass(html, "is-menu");
     };
     var _edit = function() {
-      if (state.get().bookmarks.edit) {
+      if (state.get().link.edit) {
         helper.addClass(html, "is-bookmarks-edit");
         link.tabIndex();
       } else {
@@ -1618,7 +1604,7 @@ var control = (function() {
           helper.addClass(html, "is-bookmarks-style-list");
         }
       };
-      view[state.get().bookmarks.style]();
+      view[state.get().link.style]();
       var fit = {
         best: function() {
           helper.addClass(html, "is-bookmarks-fit-best");
@@ -1629,18 +1615,18 @@ var control = (function() {
           helper.addClass(html, "is-bookmarks-fit-custom");
         }
       };
-      fit[state.get().bookmarks.fit]();
-      if (state.get().bookmarks.link.show) {
+      fit[state.get().link.fit]();
+      if (state.get().link.show) {
         helper.addClass(html, "is-bookmarks-show-link");
       } else {
         helper.removeClass(html, "is-bookmarks-show-link");
       };
-      if (state.get().bookmarks.name.show) {
+      if (state.get().link.name.show) {
         helper.addClass(html, "is-bookmarks-show-name");
       } else {
         helper.removeClass(html, "is-bookmarks-show-name");
       };
-      if (state.get().bookmarks.url.show) {
+      if (state.get().link.url.show) {
         helper.addClass(html, "is-bookmarks-show-url");
       } else {
         helper.removeClass(html, "is-bookmarks-show-url");
@@ -1655,7 +1641,7 @@ var control = (function() {
           helper.addClass(html, "bookmarks-url-light");
         }
       };
-      urlText[state.get().bookmarks.url.style]();
+      urlText[state.get().link.url.style]();
     };
     var _layout = function() {
       if (state.get().layout.scrollPastEnd) {
@@ -2000,7 +1986,7 @@ var control = (function() {
       };
     };
     var _link = function() {
-      if (state.get().bookmarks.link.show) {
+      if (state.get().link.show) {
         helper.e(".control-bookmarks-fit-label").removeAttribute("disabled");
         helper.e(".control-bookmarks-fit-best").disabled = false;
         helper.e(".control-bookmarks-fit-custom").disabled = false;
@@ -2012,6 +1998,7 @@ var control = (function() {
         helper.e(".control-bookmarks-sort-none").disabled = false;
         helper.e(".control-bookmarks-sort-name").disabled = false;
         helper.e(".control-bookmarks-sort-letter").disabled = false;
+        helper.e(".control-bookmarks-sort-icon").disabled = false;
       } else {
         helper.e(".control-bookmarks-fit-label").setAttribute("disabled", "");
         helper.e(".control-bookmarks-fit-best").disabled = true;
@@ -2024,24 +2011,14 @@ var control = (function() {
         helper.e(".control-bookmarks-sort-none").disabled = true;
         helper.e(".control-bookmarks-sort-name").disabled = true;
         helper.e(".control-bookmarks-sort-letter").disabled = true;
+        helper.e(".control-bookmarks-sort-icon").disabled = true;
       };
-      if (state.get().bookmarks.link.show && state.get().bookmarks.url.show) {
+      if (state.get().link.show && state.get().link.url.show) {
         helper.e(".control-bookmarks-url-style-dark").disabled = false;
         helper.e(".control-bookmarks-url-style-light").disabled = false;
       } else {
         helper.e(".control-bookmarks-url-style-dark").disabled = true;
         helper.e(".control-bookmarks-url-style-light").disabled = true;
-      };
-      if (state.get().bookmarks.link.show && state.get().bookmarks.fit == "custom") {
-        helper.e("[for=control-bookmarks-link-width]").removeAttribute("disabled");
-        helper.e(".control-bookmarks-link-width").disabled = false;
-        helper.e("[for=control-bookmarks-link-height]").removeAttribute("disabled");
-        helper.e(".control-bookmarks-link-height").disabled = false;
-      } else {
-        helper.e("[for=control-bookmarks-link-width]").setAttribute("disabled", "");
-        helper.e(".control-bookmarks-link-width").disabled = true;
-        helper.e("[for=control-bookmarks-link-height]").setAttribute("disabled", "");
-        helper.e(".control-bookmarks-link-height").disabled = true;
       };
     };
     var _background = function() {

@@ -14,10 +14,10 @@ var keyboard = (function() {
         } else if (state.get().modal) {
           modal.destroy();
           shade.destroy();
-        } else if (state.get().bookmarks.edit) {
+        } else if (state.get().link.edit) {
           helper.setObject({
             object: state.get(),
-            path: "bookmarks.edit",
+            path: "link.edit",
             newValue: false
           });
           control.update();
@@ -27,7 +27,7 @@ var keyboard = (function() {
       };
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
-        if (state.get().bookmarks.link.show) {
+        if (state.get().link.show) {
           menu.close();
           link.add();
         };
@@ -47,17 +47,17 @@ var keyboard = (function() {
       };
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
-        if (state.get().bookmarks.link.show && bookmarks.get().length > 0) {
-          if (state.get().bookmarks.edit) {
+        if (state.get().link.show && bookmarks.get().length > 0) {
+          if (state.get().link.edit) {
             helper.setObject({
               object: state.get(),
-              path: "bookmarks.edit",
+              path: "link.edit",
               newValue: false
             });
           } else {
             helper.setObject({
               object: state.get(),
-              path: "bookmarks.edit",
+              path: "link.edit",
               newValue: true
             });
           };
