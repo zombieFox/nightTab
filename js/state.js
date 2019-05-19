@@ -2,6 +2,17 @@ var state = (function() {
 
   var current = {
     header: {
+      area: {
+        width: 100,
+        alignment: {
+          horizontal: "center"
+        }
+      },
+      items: {
+        alignment: {
+          horizontal: "left"
+        }
+      },
       clock: {
         hours: {
           show: true,
@@ -119,12 +130,15 @@ var state = (function() {
       transitional: {
         show: false,
         type: "timeanddate"
-      },
-      alignment: {
-        horizontal: "center"
       }
     },
     bookmarks: {
+      area: {
+        width: 100,
+        alignment: {
+          horizontal: "center"
+        }
+      },
       link: {
         show: true,
         width: 10,

@@ -135,7 +135,7 @@ var clock = (function() {
                 text: separatorCharacter,
                 attr: [{
                   key: "class",
-                  value: "clock-separator"
+                  value: "clock-item clock-separator"
                 }]
               });
               clock.insertBefore(separator, arrayItem);

@@ -8,15 +8,13 @@
   display: block;
 }
 
-.is-layout-scroll-past-end .link {
-  margin-bottom: 60vh;
-}
-
 .link-area {
   padding-top: calc(var(--gutter) * 2);
   padding-bottom: calc(var(--gutter) * 4);
   padding-left: calc(var(--gutter) * 4);
   padding-right: calc(var(--gutter) * 4);
+  position: relative;
+  width: var(--link-area-width);
   display: grid;
   grid-auto-rows: 1fr;
   grid-gap: calc(var(--gutter) * 2);

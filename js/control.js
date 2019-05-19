@@ -719,25 +719,142 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-header-alignment-horizontal-left"),
-    path: "header.alignment.horizontal",
+    element: helper.e(".control-header-area-width"),
+    path: "header.area.width",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      action: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      action: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      action: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      action: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+        });
+      }
+    }, {
+      event: "keyup",
+      action: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-area-alignment-horizontal-left"),
+    path: "header.area.alignment.horizontal",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-alignment-horizontal-center"),
-    path: "header.alignment.horizontal",
+    element: helper.e(".control-header-area-alignment-horizontal-center"),
+    path: "header.area.alignment.horizontal",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       render();
       header.render();
     }
   }, {
-    element: helper.e(".control-header-alignment-horizontal-right"),
-    path: "header.alignment.horizontal",
+    element: helper.e(".control-header-area-alignment-horizontal-right"),
+    path: "header.area.alignment.horizontal",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-items-alignment-horizontal-left"),
+    path: "header.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-items-alignment-horizontal-center"),
+    path: "header.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+      header.render();
+    }
+  }, {
+    element: helper.e(".control-header-items-alignment-horizontal-right"),
+    path: "header.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       render();
       header.render();
@@ -1601,10 +1718,14 @@ var control = (function() {
         helper.removeClass(html, "is-header-shade-style-always");
         helper.removeClass(html, "is-header-shade-style-scroll");
         helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
-        helper.removeClass(html, "is-header-alignment-horizontal-left");
-        helper.removeClass(html, "is-header-alignment-horizontal-center");
-        helper.removeClass(html, "is-header-alignment-horizontal-right");
-        helper.addClass(html, "is-header-alignment-horizontal-" + state.get().header.alignment.horizontal);
+        helper.removeClass(html, "is-header-area-alignment-horizontal-left");
+        helper.removeClass(html, "is-header-area-alignment-horizontal-center");
+        helper.removeClass(html, "is-header-area-alignment-horizontal-right");
+        helper.addClass(html, "is-header-area-alignment-horizontal-" + state.get().header.area.alignment.horizontal);
+        helper.removeClass(html, "is-header-items-alignment-horizontal-left");
+        helper.removeClass(html, "is-header-items-alignment-horizontal-center");
+        helper.removeClass(html, "is-header-items-alignment-horizontal-right");
+        helper.addClass(html, "is-header-items-alignment-horizontal-" + state.get().header.items.alignment.horizontal);
         if (state.get().header.shade.border.top.show) {
           helper.addClass(html, "is-header-shade-border-top-show");
         } else {
@@ -1622,7 +1743,7 @@ var control = (function() {
         helper.removeClass(html, "is-header-shade-border-top-show");
         helper.removeClass(html, "is-header-shade-border-bottom-show");
       };
-      state.get().header.alignment.horizontal
+      state.get().header.area.alignment.horizontal
     };
     _menu();
     _edit();
