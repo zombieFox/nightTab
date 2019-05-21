@@ -246,8 +246,8 @@ var bookmarks = (function() {
   };
 
   var restore = function(data) {
-    if ("link" in data) {
-      all = data.link;
+    if ("bookmarks" in data) {
+      all = data.bookmarks;
     };
   };
 
@@ -284,7 +284,8 @@ var bookmarks = (function() {
     get: get,
     add: add,
     edit: edit,
-    remove: remove
+    remove: remove,
+    restore: restore
   };
 
 })();
