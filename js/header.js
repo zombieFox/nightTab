@@ -1,7 +1,5 @@
 var header = (function() {
 
-  var _timer = null;
-
   var _bind = function() {
     window.addEventListener("resize", function() {
       render();

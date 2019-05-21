@@ -997,40 +997,6 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-bookmarks-fit-best"),
-    path: "link.fit",
-    type: "radio",
-    func: function() {
-      render();
-      dependents();
-    }
-  }, {
-    element: helper.e(".control-bookmarks-fit-custom"),
-    path: "link.fit",
-    type: "radio",
-    func: function() {
-      render();
-      dependents();
-    }
-  }, {
-    element: helper.e(".control-bookmarks-link-show"),
-    path: "link.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-      header.render();
-      search.render();
-    }
-  }, {
-    element: helper.e(".control-bookmarks-name-show"),
-    path: "link.name.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-    }
-  }, {
     element: helper.e(".control-header-greeting-show"),
     path: "header.greeting.show",
     type: "checkbox",
@@ -1117,6 +1083,40 @@ var control = (function() {
       transitional.clear();
       transitional.render();
       header.render();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-link-show"),
+    path: "link.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      header.render();
+      search.render();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-name-show"),
+    path: "link.name.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-fit-best"),
+    path: "link.fit",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-bookmarks-fit-custom"),
+    path: "link.fit",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
     }
   }, {
     element: helper.e(".control-bookmarks-url-show"),

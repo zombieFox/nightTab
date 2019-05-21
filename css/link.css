@@ -1,11 +1,12 @@
 .link {
-  position: relative;
-  z-index: var(--z-index-link);
   display: none;
+  position: relative;
+  flex-direction: row;
+  z-index: var(--z-index-link);
 }
 
 .is-bookmarks-show-link .link {
-  display: block;
+  display: flex;
 }
 
 .link-area {

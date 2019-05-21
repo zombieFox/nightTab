@@ -1,7 +1,5 @@
 var layout = (function() {
 
-  var _timer = null;
-
   var render = function() {
     var html = helper.e("html");
     html.style.setProperty("--layout-width", helper.getObject({

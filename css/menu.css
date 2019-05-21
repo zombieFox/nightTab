@@ -134,6 +134,7 @@
 
   .menu-content {
     overflow-y: auto;
+    padding-bottom: 50vh;
   }
 
   .menu-item {
@@ -141,17 +142,18 @@
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 1fr;
     align-items: flex-start;
+    grid-gap: 2em;
   }
 
   .menu-item-header {
-    padding: 2em 1em 2em 2em;
+    padding: 2em 0 2em 2em;
     position: sticky;
     top: 0;
     z-index: 3;
   }
 
   .menu-item-form {
-    padding: 2em 2em 2em 1em;
+    padding: 2em 2em 2em 0;
     z-index: 2;
   }
 }
