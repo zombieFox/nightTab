@@ -1085,7 +1085,46 @@ var control = (function() {
       header.render();
     }
   }, {
-    element: helper.e(".control-bookmarks-link-show"),
+    element: helper.e(".control-link-area-width"),
+    path: "link.area.width",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      action: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      action: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      action: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      action: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+        });
+      }
+    }, {
+      event: "keyup",
+      action: function() {
+        edge.destroy();
+      }
+    }],
+    // func: function() {
+    //   header.render();
+    // }
+  }, {
+    element: helper.e(".control-link-link-show"),
     path: "link.show",
     type: "checkbox",
     func: function() {
@@ -1095,7 +1134,7 @@ var control = (function() {
       search.render();
     }
   }, {
-    element: helper.e(".control-bookmarks-name-show"),
+    element: helper.e(".control-link-name-show"),
     path: "link.name.show",
     type: "checkbox",
     func: function() {
@@ -1103,7 +1142,7 @@ var control = (function() {
       dependents();
     }
   }, {
-    element: helper.e(".control-bookmarks-fit-best"),
+    element: helper.e(".control-link-fit-best"),
     path: "link.fit",
     type: "radio",
     func: function() {
@@ -1111,7 +1150,7 @@ var control = (function() {
       dependents();
     }
   }, {
-    element: helper.e(".control-bookmarks-fit-custom"),
+    element: helper.e(".control-link-fit-custom"),
     path: "link.fit",
     type: "radio",
     func: function() {
@@ -1119,7 +1158,7 @@ var control = (function() {
       dependents();
     }
   }, {
-    element: helper.e(".control-bookmarks-url-show"),
+    element: helper.e(".control-link-url-show"),
     path: "link.url.show",
     type: "checkbox",
     func: function() {
@@ -1127,21 +1166,21 @@ var control = (function() {
       dependents();
     }
   }, {
-    element: helper.e(".control-bookmarks-url-style-dark"),
+    element: helper.e(".control-link-url-style-dark"),
     path: "link.url.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-bookmarks-url-style-light"),
+    element: helper.e(".control-link-url-style-light"),
     path: "link.url.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-bookmarks-new-tab"),
+    element: helper.e(".control-link-new-tab"),
     path: "link.newTab",
     type: "checkbox",
     func: function() {
@@ -1149,21 +1188,21 @@ var control = (function() {
       link.render();
     }
   }, {
-    element: helper.e(".control-bookmarks-style-block"),
+    element: helper.e(".control-link-style-block"),
     path: "link.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-bookmarks-style-list"),
+    element: helper.e(".control-link-style-list"),
     path: "link.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-bookmarks-sort-none"),
+    element: helper.e(".control-link-sort-none"),
     path: "link.sort",
     type: "radio",
     func: function() {
@@ -1171,7 +1210,7 @@ var control = (function() {
       link.render();
     }
   }, {
-    element: helper.e(".control-bookmarks-sort-letter"),
+    element: helper.e(".control-link-sort-letter"),
     path: "link.sort",
     type: "radio",
     func: function() {
@@ -1179,7 +1218,7 @@ var control = (function() {
       link.render();
     }
   }, {
-    element: helper.e(".control-bookmarks-sort-icon"),
+    element: helper.e(".control-link-sort-icon"),
     path: "link.sort",
     type: "radio",
     func: function() {
@@ -1187,7 +1226,7 @@ var control = (function() {
       link.render();
     }
   }, {
-    element: helper.e(".control-bookmarks-sort-name"),
+    element: helper.e(".control-link-sort-name"),
     path: "link.sort",
     type: "radio",
     func: function() {
@@ -1987,38 +2026,38 @@ var control = (function() {
     };
     var _link = function() {
       if (state.get().link.show) {
-        helper.e(".control-bookmarks-fit-label").removeAttribute("disabled");
-        helper.e(".control-bookmarks-fit-best").disabled = false;
-        helper.e(".control-bookmarks-fit-custom").disabled = false;
-        helper.e(".control-bookmarks-name-show").disabled = false;
-        helper.e(".control-bookmarks-url-show").disabled = false;
-        helper.e(".control-bookmarks-style-block").disabled = false;
-        helper.e(".control-bookmarks-style-list").disabled = false;
-        helper.e(".control-bookmarks-new-tab").disabled = false;
-        helper.e(".control-bookmarks-sort-none").disabled = false;
-        helper.e(".control-bookmarks-sort-name").disabled = false;
-        helper.e(".control-bookmarks-sort-letter").disabled = false;
-        helper.e(".control-bookmarks-sort-icon").disabled = false;
+        helper.e(".control-link-fit-label").removeAttribute("disabled");
+        helper.e(".control-link-fit-best").disabled = false;
+        helper.e(".control-link-fit-custom").disabled = false;
+        helper.e(".control-link-name-show").disabled = false;
+        helper.e(".control-link-url-show").disabled = false;
+        helper.e(".control-link-style-block").disabled = false;
+        helper.e(".control-link-style-list").disabled = false;
+        helper.e(".control-link-new-tab").disabled = false;
+        helper.e(".control-link-sort-none").disabled = false;
+        helper.e(".control-link-sort-name").disabled = false;
+        helper.e(".control-link-sort-letter").disabled = false;
+        helper.e(".control-link-sort-icon").disabled = false;
       } else {
-        helper.e(".control-bookmarks-fit-label").setAttribute("disabled", "");
-        helper.e(".control-bookmarks-fit-best").disabled = true;
-        helper.e(".control-bookmarks-fit-custom").disabled = true;
-        helper.e(".control-bookmarks-name-show").disabled = true;
-        helper.e(".control-bookmarks-url-show").disabled = true;
-        helper.e(".control-bookmarks-style-block").disabled = true;
-        helper.e(".control-bookmarks-style-list").disabled = true;
-        helper.e(".control-bookmarks-new-tab").disabled = true;
-        helper.e(".control-bookmarks-sort-none").disabled = true;
-        helper.e(".control-bookmarks-sort-name").disabled = true;
-        helper.e(".control-bookmarks-sort-letter").disabled = true;
-        helper.e(".control-bookmarks-sort-icon").disabled = true;
+        helper.e(".control-link-fit-label").setAttribute("disabled", "");
+        helper.e(".control-link-fit-best").disabled = true;
+        helper.e(".control-link-fit-custom").disabled = true;
+        helper.e(".control-link-name-show").disabled = true;
+        helper.e(".control-link-url-show").disabled = true;
+        helper.e(".control-link-style-block").disabled = true;
+        helper.e(".control-link-style-list").disabled = true;
+        helper.e(".control-link-new-tab").disabled = true;
+        helper.e(".control-link-sort-none").disabled = true;
+        helper.e(".control-link-sort-name").disabled = true;
+        helper.e(".control-link-sort-letter").disabled = true;
+        helper.e(".control-link-sort-icon").disabled = true;
       };
       if (state.get().link.show && state.get().link.url.show) {
-        helper.e(".control-bookmarks-url-style-dark").disabled = false;
-        helper.e(".control-bookmarks-url-style-light").disabled = false;
+        helper.e(".control-link-url-style-dark").disabled = false;
+        helper.e(".control-link-url-style-light").disabled = false;
       } else {
-        helper.e(".control-bookmarks-url-style-dark").disabled = true;
-        helper.e(".control-bookmarks-url-style-light").disabled = true;
+        helper.e(".control-link-url-style-dark").disabled = true;
+        helper.e(".control-link-url-style-light").disabled = true;
       };
     };
     var _background = function() {
