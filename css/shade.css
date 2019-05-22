@@ -5,7 +5,6 @@
   left: -1em;
   width: calc(100% + 2em);
   height: calc(100% + 2em);
-  opacity: 0;
   transition: opacity var(--animation-speed-fast) ease-in-out, background-color var(--animation-speed-fast) ease-in-out;
   z-index: var(--z-index-shade);
 }

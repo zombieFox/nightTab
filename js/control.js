@@ -540,33 +540,35 @@ var control = (function() {
     type: "range",
     additionalEvents: [{
       event: "input",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-search-input"),
         });
       }
     }, {
       event: "mousedown",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-search-input"),
         });
       }
     }, {
       event: "mouseup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }, {
       event: "keydown",
-      action: function() {
-        edge.render({
-          element: helper.e(".header-search-input"),
-        });
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".header-search-input"),
+          });
+        };
       }
     }, {
       event: "keyup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }],
@@ -687,33 +689,35 @@ var control = (function() {
     type: "range",
     additionalEvents: [{
       event: "input",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
         });
       }
     }, {
       event: "mousedown",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
         });
       }
     }, {
       event: "mouseup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }, {
       event: "keydown",
-      action: function() {
-        edge.render({
-          element: helper.e(".header-area"),
-        });
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".header-area"),
+          });
+        };
       }
     }, {
       event: "keyup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }],
@@ -726,7 +730,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
           delay: 500
@@ -742,7 +746,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
           delay: 500
@@ -758,7 +762,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
           delay: 500
@@ -774,7 +778,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
           delay: 500
@@ -790,7 +794,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
           delay: 500
@@ -806,7 +810,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
           delay: 500
@@ -847,33 +851,35 @@ var control = (function() {
     type: "range",
     additionalEvents: [{
       event: "input",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
         });
       }
     }, {
       event: "mousedown",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
         });
       }
     }, {
       event: "mouseup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }, {
       event: "keydown",
-      action: function() {
-        edge.render({
-          element: helper.e(".header-area"),
-        });
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".header-area"),
+          });
+        };
       }
     }, {
       event: "keyup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }],
@@ -887,33 +893,35 @@ var control = (function() {
     type: "range",
     additionalEvents: [{
       event: "input",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
         });
       }
     }, {
       event: "mousedown",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".header-area"),
         });
       }
     }, {
       event: "mouseup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }, {
       event: "keydown",
-      action: function() {
-        edge.render({
-          element: helper.e(".header-area"),
-        });
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".header-area"),
+          });
+        };
       }
     }, {
       event: "keyup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }],
@@ -1039,33 +1047,35 @@ var control = (function() {
     type: "range",
     additionalEvents: [{
       event: "input",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".link-area"),
         });
       }
     }, {
       event: "mousedown",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".link-area"),
         });
       }
     }, {
       event: "mouseup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }, {
       event: "keydown",
-      action: function() {
-        edge.render({
-          element: helper.e(".link-area"),
-        });
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".link-area"),
+          });
+        };
       }
     }, {
       event: "keyup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }],
@@ -1078,7 +1088,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".link-area"),
           delay: 500
@@ -1094,7 +1104,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".link-area"),
           delay: 500
@@ -1110,39 +1120,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
-        edge.render({
-          element: helper.e(".link-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-link-items-direction-ltr"),
-    path: "link.items.direction",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      action: function() {
-        edge.render({
-          element: helper.e(".link-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-link-items-direction-rtl"),
-    path: "link.items.direction",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".link-area"),
           delay: 500
@@ -1184,6 +1162,95 @@ var control = (function() {
     func: function() {
       render();
       dependents();
+    }
+  }, {
+    element: helper.e(".control-link-items-width"),
+    path: "link.items.width",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-item"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-item"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".link-item"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      link.render.items();
+    }
+  }, {
+    element: helper.e(".control-link-items-alignment-horizontal-left"),
+    path: "link.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-items-alignment-horizontal-center"),
+    path: "link.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-items-alignment-horizontal-right"),
+    path: "link.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
     }
   }, {
     element: helper.e(".control-link-url-show"),
@@ -1267,7 +1334,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".main"),
           delay: 500
@@ -1283,7 +1350,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".main"),
           delay: 500
@@ -1299,7 +1366,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".main"),
           delay: 500
@@ -1315,7 +1382,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".main"),
           delay: 500
@@ -1331,7 +1398,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".main"),
           delay: 500
@@ -1347,7 +1414,7 @@ var control = (function() {
     type: "radio",
     additionalEvents: [{
       event: "change",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".main"),
           delay: 500
@@ -1363,33 +1430,35 @@ var control = (function() {
     type: "range",
     additionalEvents: [{
       event: "input",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".main"),
         });
       }
     }, {
       event: "mousedown",
-      action: function() {
+      func: function() {
         edge.render({
           element: helper.e(".main"),
         });
       }
     }, {
       event: "mouseup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }, {
       event: "keydown",
-      action: function() {
-        edge.render({
-          element: helper.e(".main"),
-        });
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".main"),
+          });
+        };
       }
     }, {
       event: "keyup",
-      action: function() {
+      func: function() {
         edge.destroy();
       }
     }],
@@ -1586,26 +1655,26 @@ var control = (function() {
     };
     var bindControl = function(object) {
       var action = {
-        input: function(object) {
+        input: function(object, event) {
           changeValue(object);
           if (object.func) {
             object.func();
           };
         },
-        button: function(object) {
+        button: function(object, event) {
           if (object.func) {
             object.func();
           };
         }
       };
-      object.element.addEventListener(eventType[object.type], function() {
-        action[object.element.tagName.toLowerCase()](object);
+      object.element.addEventListener(eventType[object.type], function(event) {
+        action[object.element.tagName.toLowerCase()](object, event);
         data.save();
       }, false);
       if (object.additionalEvents) {
         object.additionalEvents.forEach(function(item, index) {
-          object.element.addEventListener(item.event, function() {
-            item.action();
+          object.element.addEventListener(item.event, function(event) {
+            item.func(event);
           }, false);
         });
       };
@@ -1664,9 +1733,10 @@ var control = (function() {
       helper.removeClass(html, "is-link-area-alignment-horizontal-center");
       helper.removeClass(html, "is-link-area-alignment-horizontal-right");
       helper.addClass(html, "is-link-area-alignment-horizontal-" + state.get().link.area.alignment.horizontal);
-      helper.removeClass(html, "is-link-items-direction-ltr");
-      helper.removeClass(html, "is-link-items-direction-rtl");
-      helper.addClass(html, "is-link-items-direction-" + state.get().link.items.direction);
+      helper.removeClass(html, "is-link-items-alignment-horizontal-left");
+      helper.removeClass(html, "is-link-items-alignment-horizontal-center");
+      helper.removeClass(html, "is-link-items-alignment-horizontal-right");
+      helper.addClass(html, "is-link-items-alignment-horizontal-" + state.get().link.items.alignment.horizontal);
       var view = {
         block: function() {
           helper.addClass(html, "is-bookmarks-style-block");
@@ -2092,6 +2162,21 @@ var control = (function() {
       } else {
         helper.e(".control-link-url-style-dark").disabled = true;
         helper.e(".control-link-url-style-light").disabled = true;
+      };
+      if (state.get().link.show && state.get().link.fit == "best") {
+        helper.e("[for=control-link-items-width]").setAttribute("disabled", "");
+        helper.e(".control-link-items-width").disabled = true;
+        helper.e(".control-link-items-alignment-horizontal-label").setAttribute("disabled", "");
+        helper.e(".control-link-items-alignment-horizontal-left").disabled = true;
+        helper.e(".control-link-items-alignment-horizontal-center").disabled = true;
+        helper.e(".control-link-items-alignment-horizontal-right").disabled = true;
+      } else if (state.get().link.show && state.get().link.fit == "custom") {
+        helper.e("[for=control-link-items-width]").removeAttribute("disabled");
+        helper.e(".control-link-items-width").disabled = false;
+        helper.e(".control-link-items-alignment-horizontal-label").removeAttribute("disabled");
+        helper.e(".control-link-items-alignment-horizontal-left").disabled = false;
+        helper.e(".control-link-items-alignment-horizontal-center").disabled = false;
+        helper.e(".control-link-items-alignment-horizontal-right").disabled = false;
       };
     };
     var _background = function() {

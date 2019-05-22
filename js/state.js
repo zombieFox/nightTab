@@ -140,7 +140,10 @@ var state = (function() {
         }
       },
       items: {
-        direction: "ltr"
+        width: 20,
+        alignment: {
+          horizontal: "left"
+        }
       },
       name: {
         show: true

@@ -497,6 +497,9 @@ var link = (function() {
     },
     width: function() {
       _width();
+    },
+    items: function() {
+      _items();
     }
   };
 
@@ -551,6 +554,11 @@ var link = (function() {
   var _width = function() {
     var html = helper.e("html");
     html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
+  };
+
+  var _items = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-items-width", state.get().link.items.width + "%");
   };
 
   var tabIndex = function() {

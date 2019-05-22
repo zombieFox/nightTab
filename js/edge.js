@@ -67,11 +67,13 @@ var edge = (function() {
       helper.addClass(edgeElement, "is-opaque");
       _currentEdge = edgeElement;
     };
-    if (_currentEdge == null) {
-      _makeEdge();
-      _resize();
-    } else {
-      _resize();
+    if (options.element != null) {
+      if (_currentEdge == null) {
+        _makeEdge();
+        _resize();
+      } else {
+        _resize();
+      };
     };
   };
 

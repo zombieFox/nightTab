@@ -102,15 +102,15 @@
 }
 
 :root.is-bookmarks-style-block {
-  --link-width: 12em;
-  --link-height: 10em;
+  --link-items-width: 20%;
+  --link-items-height: 10em;
   --url-height: 20%;
   --edit-height: 30%;
 }
 
 :root.is-bookmarks-style-list {
-  --link-width: 4em;
-  --link-height: 4em;
+  --link-items-width: 20%;
+  --link-items-height: 4em;
   --url-height: 30%;
   --edit-height: 50%;
 }

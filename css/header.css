@@ -79,7 +79,7 @@
 }
 
 .is-bookmarks-show-link .header-area {
-  padding-bottom: calc(var(--gutter) * 2 + var(--header-shade-padding-bottom));
+  padding-bottom: calc(var(--gutter) * 1 + var(--header-shade-padding-bottom));
 }
 
 .is-header-shade-style-always .header-area {
