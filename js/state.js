@@ -136,8 +136,11 @@ var state = (function() {
       area: {
         width: 100,
         alignment: {
-          horizontal: "center"
+          horizontal: "left"
         }
+      },
+      items: {
+        direction: "ltr"
       },
       name: {
         show: true

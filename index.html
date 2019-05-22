@@ -130,7 +130,7 @@
                 <input id="control-layout-width" class="control-layout-width" type="range" min="15" max="100" value="0" tabindex="1">
               </div>
               <hr>
-              <label class="control-layout-alignment-horizontal-label">Horizontal Alignment</label>
+              <label class="control-layout-alignment-horizontal-label">Layout Horizontal Alignment</label>
               <p class="input-helper small muted">Effects may not be visible if the Layout Area is full width.</p>
               <div class="input-wrap">
                 <input id="control-layout-alignment-horizontal-left" class="control-layout-alignment-horizontal-left" type="radio" name="control-layout-alignment-horizontal" value="left" tabindex="1">
@@ -145,7 +145,7 @@
                 <label for="control-layout-alignment-horizontal-right">Right</label>
               </div>
               <hr>
-              <label class="control-layout-alignment-vertical-label">Vertical Alignment</label>
+              <label class="control-layout-alignment-vertical-label">Layout Vertical Alignment</label>
               <p class="input-helper small muted">Effects may not be visible if Bookmarks fill the page.</p>
               <div class="input-wrap">
                 <input id="control-layout-alignment-vertical-top" class="control-layout-alignment-vertical-top" type="radio" name="control-layout-alignment-vertical" value="top" tabindex="1">
@@ -187,10 +187,12 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <label for="control-header-area-width">Width</label>
+                <p class="input-helper small muted">Max width is defined by Layout Area Width.</p>
                 <input id="control-header-area-width" class="control-header-area-width" type="range" min="10" max="100" value="0" tabindex="1">
               </div>
               <hr>
-              <label class="control-header-area-alignment-horizontal-label">Align Header</label>
+              <label class="control-header-area-alignment-horizontal-label">Header Area Horizontal Alignment</label>
+              <p class="input-helper small muted">Effects may not be visible if the Header Area is full width.</p>
               <div class="input-wrap">
                 <input id="control-header-area-alignment-horizontal-left" class="control-header-area-alignment-horizontal-left" type="radio" name="control-header-area-alignment-horizontal" value="left" tabindex="1">
                 <label for="control-header-area-alignment-horizontal-left">Left</label>
@@ -202,10 +204,10 @@
               <div class="input-wrap">
                 <input id="control-header-area-alignment-horizontal-right" class="control-header-area-alignment-horizontal-right" type="radio" name="control-header-area-alignment-horizontal" value="right" tabindex="1">
                 <label for="control-header-area-alignment-horizontal-right">Right</label>
-                <p class="input-helper small muted">Effects may not be visible if the Header Area is full width.</p>
               </div>
               <hr>
-              <label class="control-header-items-alignment-horizontal-label">Align Header Items</label>
+              <label class="control-header-items-alignment-horizontal-label">Header Items Horizontal Alignment</label>
+              <p class="input-helper small muted">Effects may not be visible if the Search box size is set to Auto and grows to fill available space.</p>
               <div class="input-wrap">
                 <input id="control-header-items-alignment-horizontal-left" class="control-header-items-alignment-horizontal-left" type="radio" name="control-header-items-alignment-horizontal" value="left" tabindex="1">
                 <label for="control-header-items-alignment-horizontal-left">Left</label>
@@ -217,7 +219,6 @@
               <div class="input-wrap">
                 <input id="control-header-items-alignment-horizontal-right" class="control-header-items-alignment-horizontal-right" type="radio" name="control-header-items-alignment-horizontal" value="right" tabindex="1">
                 <label for="control-header-items-alignment-horizontal-right">Right</label>
-                <p class="input-helper small muted">Effects may not be visible if the Search box size is set to Auto and grows to fill available space.</p>
               </div>
             </div>
           </div>
@@ -565,7 +566,7 @@
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
-              <h1 class="menu-item-header-text">Background Shade</h1>
+              <h1 class="menu-item-header-text">Shade</h1>
             </div>
             <div class="menu-item-form">
               <div class="input-wrap">
@@ -631,10 +632,12 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <label for="control-link-area-width">Width</label>
+                <p class="input-helper small muted">Max width is defined by Layout Area Width.</p>
                 <input id="control-link-area-width" class="control-link-area-width" type="range" min="10" max="100" value="0" tabindex="1">
               </div>
               <hr>
-              <label class="control-link-area-alignment-horizontal-label">Align Links</label>
+              <label class="control-link-area-alignment-horizontal-label">Links Area Horizontal Alignment</label>
+              <p class="input-helper small muted">Effects may not be visible if the Link Area is full width.</p>
               <div class="input-wrap">
                 <input id="control-link-area-alignment-horizontal-left" class="control-link-area-alignment-horizontal-left" type="radio" name="control-link-area-alignment-horizontal" value="left" tabindex="1">
                 <label for="control-link-area-alignment-horizontal-left">Left</label>
@@ -646,22 +649,16 @@
               <div class="input-wrap">
                 <input id="control-link-area-alignment-horizontal-right" class="control-link-area-alignment-horizontal-right" type="radio" name="control-link-area-alignment-horizontal" value="right" tabindex="1">
                 <label for="control-link-area-alignment-horizontal-right">Right</label>
-                <!-- <p class="input-helper small muted">Effects may not be visible if the Header Area is full width.</p> -->
               </div>
               <hr>
-              <label class="control-link-items-alignment-horizontal-label">Align Links Items</label>
+              <label class="control-link-items-direction-label">Links Items Direction</label>
               <div class="input-wrap">
-                <input id="control-link-items-alignment-horizontal-left" class="control-link-items-alignment-horizontal-left" type="radio" name="control-link-items-alignment-horizontal" value="left" tabindex="1">
-                <label for="control-link-items-alignment-horizontal-left">Left</label>
+                <input id="control-link-items-direction-ltr" class="control-link-items-direction-ltr" type="radio" name="control-link-items-direction" value="ltr" tabindex="1">
+                <label for="control-link-items-direction-ltr">Left to right</label>
               </div>
               <div class="input-wrap">
-                <input id="control-link-items-alignment-horizontal-center" class="control-link-items-alignment-horizontal-center" type="radio" name="control-link-items-alignment-horizontal" value="center" tabindex="1">
-                <label for="control-link-items-alignment-horizontal-center">Center</label>
-              </div>
-              <div class="input-wrap">
-                <input id="control-link-items-alignment-horizontal-right" class="control-link-items-alignment-horizontal-right" type="radio" name="control-link-items-alignment-horizontal" value="right" tabindex="1">
-                <label for="control-link-items-alignment-horizontal-right">Right</label>
-                <!-- <p class="input-helper small muted">Effects may not be visible if the Search box size is set to Auto and grows to fill available space.</p> -->
+                <input id="control-link-items-direction-rtl" class="control-link-items-direction-rtl" type="radio" name="control-link-items-direction" value="rtl" tabindex="1">
+                <label for="control-link-items-direction-rtl">Right to left</label>
               </div>
             </div>
           </div>

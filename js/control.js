@@ -40,7 +40,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-hours-number"),
@@ -55,7 +54,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-hours-word"),
@@ -70,7 +68,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-minutes-show"),
@@ -85,7 +82,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-minutes-number"),
@@ -100,7 +96,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-minutes-word"),
@@ -115,7 +110,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-seconds-show"),
@@ -130,7 +124,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-seconds-number"),
@@ -145,7 +138,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-seconds-word"),
@@ -160,7 +152,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-separator-show"),
@@ -171,7 +162,6 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-hour24-show"),
@@ -185,7 +175,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-meridiem-show"),
@@ -199,7 +188,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-show"),
@@ -214,7 +202,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-display-number"),
@@ -229,7 +216,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-display-word"),
@@ -244,7 +230,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-week-start-monday"),
@@ -259,7 +244,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-week-start-sunday"),
@@ -274,7 +258,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-length-long"),
@@ -288,7 +271,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-length-short"),
@@ -302,7 +284,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-date-show"),
@@ -317,7 +298,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-date-display-number"),
@@ -332,7 +312,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-date-display-word"),
@@ -347,7 +326,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-date-ordinal"),
@@ -362,7 +340,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-show"),
@@ -377,7 +354,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-display-number"),
@@ -392,7 +368,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-ordinal"),
@@ -407,7 +382,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-display-word"),
@@ -422,7 +396,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-length-long"),
@@ -436,7 +409,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-length-short"),
@@ -450,7 +422,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-year-show"),
@@ -465,7 +436,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-year-display-number"),
@@ -480,7 +450,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-year-display-word"),
@@ -495,7 +464,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-format-datemonth"),
@@ -510,7 +478,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-format-monthdate"),
@@ -525,7 +492,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-separator-show"),
@@ -540,7 +506,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-search-show"),
@@ -549,7 +514,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.search();
     }
   }, {
     element: helper.e(".control-header-search-width-style-auto"),
@@ -558,7 +523,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.search();
     }
   }, {
     element: helper.e(".control-header-search-width-style-custom"),
@@ -567,7 +532,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.search();
     }
   }, {
     element: helper.e(".control-header-search-width-custom"),
@@ -607,7 +572,7 @@ var control = (function() {
     }],
     func: function() {
       render();
-      header.render();
+      header.render.search();
     }
   }, {
     element: helper.e(".control-header-search-focus"),
@@ -699,7 +664,6 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-accent-show"),
@@ -707,7 +671,6 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-shade-show"),
@@ -716,7 +679,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.shade();
     }
   }, {
     element: helper.e(".control-header-area-width"),
@@ -755,7 +718,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      header.render();
+      header.render.width();
     }
   }, {
     element: helper.e(".control-header-area-alignment-horizontal-left"),
@@ -772,7 +735,6 @@ var control = (function() {
     }],
     func: function() {
       render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-area-alignment-horizontal-center"),
@@ -789,7 +751,6 @@ var control = (function() {
     }],
     func: function() {
       render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-area-alignment-horizontal-right"),
@@ -806,7 +767,6 @@ var control = (function() {
     }],
     func: function() {
       render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-items-alignment-horizontal-left"),
@@ -823,7 +783,6 @@ var control = (function() {
     }],
     func: function() {
       render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-items-alignment-horizontal-center"),
@@ -840,7 +799,6 @@ var control = (function() {
     }],
     func: function() {
       render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-items-alignment-horizontal-right"),
@@ -857,7 +815,6 @@ var control = (function() {
     }],
     func: function() {
       render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-shade-style-always"),
@@ -865,7 +822,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      header.render();
+      header.render.shade();
     }
   }, {
     element: helper.e(".control-header-shade-style-scroll"),
@@ -873,7 +830,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      header.render();
+      header.render.shade();
     }
   }, {
     element: helper.e(".control-header-shade-opacity"),
@@ -882,7 +839,7 @@ var control = (function() {
     valueMod: ["reverse", "float"],
     func: function() {
       render();
-      header.render();
+      header.render.opacity();
     }
   }, {
     element: helper.e(".control-header-shade-padding-top"),
@@ -922,7 +879,7 @@ var control = (function() {
     }],
     func: function() {
       render();
-      header.render();
+      header.render.padding();
     }
   }, {
     element: helper.e(".control-header-shade-padding-bottom"),
@@ -962,7 +919,7 @@ var control = (function() {
     }],
     func: function() {
       render();
-      header.render();
+      header.render.padding();
     }
   }, {
     element: helper.e(".control-header-shade-border-top-show"),
@@ -971,14 +928,14 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.border();
     }
   }, {
     element: helper.e(".control-header-shade-border-top-width"),
     path: "header.shade.border.top.width",
     type: "range",
     func: function() {
-      header.render();
+      header.render.border();
     }
   }, {
     element: helper.e(".control-header-shade-border-bottom-show"),
@@ -987,14 +944,14 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.border();
     }
   }, {
     element: helper.e(".control-header-shade-border-bottom-width"),
     path: "header.shade.border.bottom.width",
     type: "range",
     func: function() {
-      header.render();
+      header.render.border();
     }
   }, {
     element: helper.e(".control-header-greeting-show"),
@@ -1005,7 +962,6 @@ var control = (function() {
       dependents();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-greeting-type-good"),
@@ -1016,7 +972,6 @@ var control = (function() {
       dependents();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-greeting-type-hello"),
@@ -1027,7 +982,6 @@ var control = (function() {
       dependents();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-greeting-type-hi"),
@@ -1038,7 +992,6 @@ var control = (function() {
       dependents();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-greeting-name"),
@@ -1049,7 +1002,6 @@ var control = (function() {
       dependents();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-transitional-show"),
@@ -1060,7 +1012,6 @@ var control = (function() {
       dependents();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-transitional-type-timeanddate"),
@@ -1071,7 +1022,6 @@ var control = (function() {
       dependents();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-transitional-type-its"),
@@ -1082,7 +1032,6 @@ var control = (function() {
       dependents();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-link-area-width"),
@@ -1120,9 +1069,89 @@ var control = (function() {
         edge.destroy();
       }
     }],
-    // func: function() {
-    //   header.render();
-    // }
+    func: function() {
+      link.render.width();
+    }
+  }, {
+    element: helper.e(".control-link-area-alignment-horizontal-left"),
+    path: "link.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-area-alignment-horizontal-center"),
+    path: "link.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-area-alignment-horizontal-right"),
+    path: "link.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-items-direction-ltr"),
+    path: "link.items.direction",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-items-direction-rtl"),
+    path: "link.items.direction",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      action: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
   }, {
     element: helper.e(".control-link-link-show"),
     path: "link.show",
@@ -1130,7 +1159,6 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
       search.render();
     }
   }, {
@@ -1185,7 +1213,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       link.clear();
-      link.render();
+      link.render.link();
     }
   }, {
     element: helper.e(".control-link-style-block"),
@@ -1207,7 +1235,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       link.clear();
-      link.render();
+      link.render.link();
     }
   }, {
     element: helper.e(".control-link-sort-letter"),
@@ -1215,7 +1243,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       link.clear();
-      link.render();
+      link.render.link();
     }
   }, {
     element: helper.e(".control-link-sort-icon"),
@@ -1223,7 +1251,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       link.clear();
-      link.render();
+      link.render.link();
     }
   }, {
     element: helper.e(".control-link-sort-name"),
@@ -1231,7 +1259,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       link.clear();
-      link.render();
+      link.render.link();
     }
   }, {
     element: helper.e(".control-layout-alignment-horizontal-left"),
@@ -1368,7 +1396,6 @@ var control = (function() {
     func: function() {
       render();
       layout.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-layout-scroll-past-end"),
@@ -1458,7 +1485,7 @@ var control = (function() {
       render();
       dependents();
       background.render();
-      header.render();
+
     }
   }, {
     element: helper.e(".control-background-image-url"),
@@ -1633,6 +1660,13 @@ var control = (function() {
       helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     };
     var _link = function() {
+      helper.removeClass(html, "is-link-area-alignment-horizontal-left");
+      helper.removeClass(html, "is-link-area-alignment-horizontal-center");
+      helper.removeClass(html, "is-link-area-alignment-horizontal-right");
+      helper.addClass(html, "is-link-area-alignment-horizontal-" + state.get().link.area.alignment.horizontal);
+      helper.removeClass(html, "is-link-items-direction-ltr");
+      helper.removeClass(html, "is-link-items-direction-rtl");
+      helper.addClass(html, "is-link-items-direction-" + state.get().link.items.direction);
       var view = {
         block: function() {
           helper.addClass(html, "is-bookmarks-style-block");

@@ -9,6 +9,18 @@
   display: flex;
 }
 
+.is-link-area-alignment-horizontal-left .link {
+  justify-content: flex-start;
+}
+
+.is-link-area-alignment-horizontal-center .link {
+  justify-content: center;
+}
+
+.is-link-area-alignment-horizontal-right .link {
+  justify-content: flex-end;
+}
+
 .link-area {
   padding-top: calc(var(--gutter) * 2);
   padding-bottom: calc(var(--gutter) * 4);
@@ -19,6 +31,14 @@
   display: grid;
   grid-auto-rows: 1fr;
   grid-gap: calc(var(--gutter) * 2);
+}
+
+.is-link-items-direction-ltr .link-area {
+  direction: ltr;
+}
+
+.is-link-items-direction-rtl .link-area {
+  direction: rtl;
 }
 
 .is-header-shade-style-always .link-area {
@@ -51,6 +71,7 @@
   display: block;
   transform: scale(1);
   transition: transform var(--animation-speed-fast) ease-in-out;
+  direction: ltr;
 }
 
 .is-bookmarks-fit-best .link-item {

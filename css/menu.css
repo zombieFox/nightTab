@@ -26,7 +26,12 @@
   max-height: 100%;
   overflow-y: auto;
   pointer-events: all;
-  transition: background-color var(--animation-speed-fast) ease-in-out;
+  opacity: 1;
+  transition: background-color var(--animation-speed-fast) ease-in-out, opacity var(--animation-speed-fast) ease-in-out;
+}
+
+.is-edge:not(.is-background-image-show) .menu-area {
+  opacity: 0.2;
 }
 
 .menu-nav {
@@ -117,7 +122,7 @@
 
 @media (min-width: 700px) {
   .menu {
-    width: 70vw;
+    width: 60vw;
     height: 100%;
     overflow-y: inherit;
     max-height: inherit;
@@ -134,7 +139,6 @@
 
   .menu-content {
     overflow-y: auto;
-    padding-bottom: 50vh;
   }
 
   .menu-item {
@@ -170,6 +174,6 @@
 
 @media (min-width: 1600px) {
   .menu {
-    width: 50vw;
+    width: 40vw;
   }
 }
