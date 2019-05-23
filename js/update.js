@@ -319,7 +319,7 @@ var update = (function() {
     return data;
   };
 
-  var _update_3000 = function(data) {
+  var _update_300 = function(data) {
     data.version = "3.0.0";
     data.bookmarks.forEach(function(item, index) {
       item.display = "letter";
@@ -329,6 +329,46 @@ var update = (function() {
         label: null
       };
     });
+    return data;
+  };
+
+  var _update_310 = function(data) {
+    data.version = "3.1.0";
+    data.state.header.area = {
+      width: 90,
+      alignment: {
+        horizontal: "center"
+      }
+    };
+    data.state.header.items = {
+      alignment: {
+        horizontal: "left"
+      }
+    };
+    delete data.state.header.alignment;
+    data.state.link = data.state.bookmarks;
+    delete data.state.bookmarks;
+    data.state.link.area = {
+      width: 90,
+      alignment: {
+        horizontal: "center"
+      }
+    };
+    data.state.link.items = {
+      width: 12,
+      alignment: {
+        horizontal: "left"
+      }
+    };
+    data.state.link.show = data.state.link.link.show;
+    delete data.state.link.link;
+    data.state.link.fit = "best";
+    delete data.state.link.editObject;
+    data.state.layout.alignment = {
+      horizontal: "center",
+      vertical: "center"
+    };
+    data.state.edge = false;
     return data;
   };
 
@@ -424,7 +464,11 @@ var update = (function() {
       };
       if (version.compare(data.version, "3.0.0") == -1) {
         console.log("\t= running update 3.0.0");
-        data = _update_3000(data);
+        data = _update_300(data);
+      };
+      if (version.compare(data.version, "3.1.0") == -1) {
+        console.log("\t= running update 3.1.0");
+        data = _update_310(data);
       };
     };
     // if no update is needed
