@@ -558,6 +558,11 @@ var control = (function() {
         edge.destroy();
       }
     }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
@@ -703,6 +708,11 @@ var control = (function() {
       }
     }, {
       event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
       func: function() {
         edge.destroy();
       }
@@ -890,6 +900,11 @@ var control = (function() {
         edge.destroy();
       }
     }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
@@ -928,6 +943,11 @@ var control = (function() {
       }
     }, {
       event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
       func: function() {
         edge.destroy();
       }
@@ -1086,6 +1106,11 @@ var control = (function() {
         edge.destroy();
       }
     }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
@@ -1225,6 +1250,11 @@ var control = (function() {
       }
     }, {
       event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
       func: function() {
         edge.destroy();
       }
@@ -1486,6 +1516,11 @@ var control = (function() {
       }
     }, {
       event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
       func: function() {
         edge.destroy();
       }
