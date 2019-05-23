@@ -369,6 +369,7 @@ var update = (function() {
       vertical: "center"
     };
     data.state.edge = false;
+    data.state.autoSuggest = false;
     return data;
   };
 
