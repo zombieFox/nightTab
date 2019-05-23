@@ -1,25 +1,6 @@
 var bookmarks = (function() {
 
   var all = [{
-    display: "letter",
-    letter: "CM",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "Citymapper",
-    url: "https://citymapper.com/london/superrouter",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453100455
-  }, {
     display: "icon",
     letter: "DEV",
     icon: {
@@ -38,63 +19,6 @@ var bookmarks = (function() {
       }
     },
     timeStamp: 1546453101749
-  }, {
-    display: "letter",
-    letter: "OD",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "r/opendirectories/",
-    url: "https://www.reddit.com/r/opendirectories/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453102199
-  }, {
-    display: "letter",
-    letter: "KP",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "Keep",
-    url: "https://keep.google.com/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453102671
-  }, {
-    display: "letter",
-    letter: "MHW",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "r/monsterhunterworld/",
-    url: "https://www.reddit.com/r/monsterhunterworld/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453103110
   }, {
     display: "letter",
     letter: "M",
@@ -154,44 +78,6 @@ var bookmarks = (function() {
     timeStamp: 1546453104460
   }, {
     display: "letter",
-    letter: "P",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "Photos",
-    url: "https://photos.google.com/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453104910
-  }, {
-    display: "letter",
-    letter: "FB",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "Facebook",
-    url: "https://www.facebook.com/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453105349
-  }, {
-    display: "letter",
     letter: "GOT",
     icon: {
       name: null,
@@ -210,63 +96,6 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453105844
   }, {
-    display: "letter",
-    letter: "BX",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "Box",
-    url: "https://app.box.com/login/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453106272
-  }, {
-    display: "letter",
-    letter: "TFL",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "TFL Map",
-    url: "http://content.tfl.gov.uk/standard-tube-map.pdf",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453106734
-  }, {
-    display: "letter",
-    letter: "PRG",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "r/Pathfinder_RPG/",
-    url: "https://www.reddit.com/r/Pathfinder_RPG/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453107194
-  }, {
     display: "icon",
     letter: "AZ",
     icon: {
@@ -277,11 +106,11 @@ var bookmarks = (function() {
     name: "Amazon",
     url: "https://www.amazon.co.uk/",
     accent: {
-      override: false,
+      override: true,
       color: {
-        r: null,
-        g: null,
-        b: null
+        r: 255,
+        g: 168,
+        b: 0
       }
     },
     timeStamp: 1546453107633
@@ -305,25 +134,6 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453108071
   }, {
-    display: "letter",
-    letter: "CO",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "Contacts",
-    url: "https://contacts.google.com/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453108501
-  }, {
     display: "icon",
     letter: "GIT",
     icon: {
@@ -342,44 +152,6 @@ var bookmarks = (function() {
       }
     },
     timeStamp: 1546453108926
-  }, {
-    display: "letter",
-    letter: "AN",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "r/Android/",
-    url: "https://www.reddit.com/r/Android/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453109355
-  }, {
-    display: "letter",
-    letter: "V",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "r/videos/",
-    url: "https://www.reddit.com/r/videos/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453109840
   }, {
     display: "icon",
     letter: "GM",
@@ -400,25 +172,6 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453110265
   }, {
-    display: "letter",
-    letter: "CAL",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "Calendar",
-    url: "https://www.google.com/calendar/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453110885
-  }, {
     display: "icon",
     letter: "R",
     icon: {
@@ -429,11 +182,11 @@ var bookmarks = (function() {
     name: "Reddit",
     url: "https://www.reddit.com/",
     accent: {
-      override: false,
+      override: true,
       color: {
-        r: null,
-        g: null,
-        b: null
+        r: 255,
+        g: 69,
+        b: 0
       }
     },
     timeStamp: 1546453111491
@@ -456,44 +209,6 @@ var bookmarks = (function() {
       }
     },
     timeStamp: 1546453111953
-  }, {
-    display: "letter",
-    letter: "ANA",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "Analytics",
-    url: "https://analytics.google.com/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453112357
-  }, {
-    display: "letter",
-    letter: "COS",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "r/chromeos/",
-    url: "https://www.reddit.com/r/chromeos/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453112797
   }];
 
   var get = function(data) {
@@ -521,7 +236,7 @@ var bookmarks = (function() {
           return helper.sortObject(array, "icon.name");
         }
       };
-      return action[state.get().bookmarks.sort](all);
+      return action[state.get().link.sort](all);
     };
     if (data && typeof data.timeStamp == "number") {
       return _singleBookmark();
@@ -569,7 +284,8 @@ var bookmarks = (function() {
     get: get,
     add: add,
     edit: edit,
-    remove: remove
+    remove: remove,
+    restore: restore
   };
 
 })();

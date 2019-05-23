@@ -60,7 +60,7 @@ var link = (function() {
         bookmarks.add(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
         data.save();
         clear();
-        render();
+        render.link();
         tabIndex();
         control.dependents();
         control.render();
@@ -112,7 +112,7 @@ var link = (function() {
         bookmarks.edit(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
         data.save();
         clear();
-        render();
+        render.link();
         tabIndex();
         _returnToPreviousFocusLink();
         resetStagedBookmarkData();
@@ -132,14 +132,14 @@ var link = (function() {
     _checkCount();
     data.save();
     clear();
-    render();
+    render.link();
   };
 
   var _checkCount = function() {
     if (bookmarks.get().length <= 0) {
       helper.setObject({
         object: state.get(),
-        path: "bookmarks.edit",
+        path: "link.edit",
         newValue: false
       });
     };
@@ -295,7 +295,7 @@ var link = (function() {
         value: 1
       }]
     };
-    if (state.get().bookmarks.newTab) {
+    if (state.get().link.newTab) {
       linkPanelFrontOptions.attr.push({
         key: "target",
         value: "_blank"
@@ -491,7 +491,24 @@ var link = (function() {
     return div;
   };
 
-  var render = function() {
+  var render = {
+    width: {
+      set: function() {
+        _width();
+      },
+      match: function() {
+        _match();
+      }
+    },
+    link: function() {
+      _link();
+    },
+    items: function() {
+      _items();
+    }
+  };
+
+  var _link = function() {
     var linkArea = helper.e(".link-area");
     var bookmarksToRender = false;
     if (state.get().search) {
@@ -539,9 +556,28 @@ var link = (function() {
     };
   };
 
+  var _width = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
+  };
+
+  var _match = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "link.area.width",
+      newValue: state.get().header.area.width
+    });
+    render.width.set();
+  };
+
+  var _items = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-items-width", state.get().link.items.width + "%");
+  };
+
   var tabIndex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
-    if (state.get().bookmarks.edit) {
+    if (state.get().link.edit) {
       allLinkControlItem.forEach(function(arrayItem, index) {
         arrayItem.tabIndex = 1;
       });
@@ -560,7 +596,9 @@ var link = (function() {
   };
 
   var init = function() {
-    render();
+    render.link();
+    render.width.set();
+    render.items();
   };
 
   // exposed methods

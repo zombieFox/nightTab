@@ -1,10 +1,10 @@
 var date = (function() {
 
   var bind = function() {
-    // window.setInterval(function() {
-    //   clear();
-    //   render();
-    // }, 1000);
+    window.setInterval(function() {
+      clear();
+      render();
+    }, 1000);
   };
 
   var clear = function() {
@@ -170,7 +170,7 @@ var date = (function() {
                 text: separatorCharacter,
                 attr: [{
                   key: "class",
-                  value: "date-separator"
+                  value: "date-item date-separator"
                 }]
               });
               date.insertBefore(separator, arrayItem);

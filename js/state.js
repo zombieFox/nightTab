@@ -2,6 +2,17 @@ var state = (function() {
 
   var current = {
     header: {
+      area: {
+        width: 90,
+        alignment: {
+          horizontal: "center"
+        }
+      },
+      items: {
+        alignment: {
+          horizontal: "left"
+        }
+      },
       clock: {
         hours: {
           show: true,
@@ -44,7 +55,7 @@ var state = (function() {
           ordinal: true
         },
         year: {
-          show: true,
+          show: false,
           display: "number"
         },
         separator: {
@@ -83,12 +94,8 @@ var state = (function() {
           }
         },
         text: {
-          align: "left"
+          align: "center"
         }
-      },
-      alignment: {
-        horizontal: "left",
-        vertical: "top"
       },
       editAdd: {
         show: true,
@@ -99,8 +106,8 @@ var state = (function() {
       shade: {
         show: true,
         padding: {
-          top: 10,
-          bottom: 10
+          top: 0,
+          bottom: 0
         },
         style: "scroll",
         opacity: 0.95,
@@ -125,9 +132,18 @@ var state = (function() {
         type: "timeanddate"
       }
     },
-    bookmarks: {
-      link: {
-        show: true
+    link: {
+      area: {
+        width: 90,
+        alignment: {
+          horizontal: "center"
+        }
+      },
+      items: {
+        width: 12,
+        alignment: {
+          horizontal: "left"
+        }
       },
       name: {
         show: true
@@ -136,15 +152,20 @@ var state = (function() {
         show: true,
         style: "dark"
       },
+      show: true,
+      fit: "best",
       newTab: false,
       edit: false,
-      editObject: null,
       style: "block",
       sort: "none"
     },
     layout: {
-      width: 80,
-      scrollPastEnd: true,
+      alignment: {
+        horizontal: "center",
+        vertical: "center"
+      },
+      width: 100,
+      scrollPastEnd: false,
       title: "New Tab"
     },
     theme: {
@@ -152,7 +173,7 @@ var state = (function() {
         current: {
           r: 0,
           g: 130,
-          b: 200,
+          b: 250,
         },
         random: {
           active: false,
@@ -171,6 +192,7 @@ var state = (function() {
         accent: 0
       }
     },
+    edge: false,
     search: false,
     menu: false,
     modal: false,

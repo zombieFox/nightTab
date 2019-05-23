@@ -25,12 +25,12 @@ var modal = (function() {
       options = helper.applyOptions(options, override);
     };
     var _makeModal = function() {
-      var body = helper.e("body");
       helper.setObject({
         object: state.get(),
         path: "modal",
         newValue: true
       });
+      var body = helper.e("body");
       var modalWrapper = document.createElement("div");
       modalWrapper.setAttribute("class", "modal-wrapper");
       var modal = document.createElement("div");

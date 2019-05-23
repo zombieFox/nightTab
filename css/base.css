@@ -1,4 +1,5 @@
 :root {
+  --accent: 250, 130, 0;
   --black: 0, 0, 0;
   --white: 255, 255, 255;
   --shade-01: 38, 40, 49;
@@ -44,7 +45,6 @@
   --form-checkbox-radio-chcked-label: var(--gray-16);
   --form-checkbox-radio-disabled-label: var(--gray-04);
   --form-range-thumb: var(--gray-12);
-  --accent: 0, 255, 0;
   --root-font-size: 14px;
   --radius: 0.2em;
   --line-width: 0.2em;
@@ -66,9 +66,10 @@
   --z-index-modal: 7000;
   --z-index-menu: 8000;
   --z-index-auto-suggest-list: 8000;
+  --z-index-edge: 9000;
+  --header-area-width: 100%;
   --header-shade-color: transparent;
   --header-shade-opacity: none;
-  --header-height: 0;
   --header-search-width: 0%;
   --header-shade-padding-top: calc(var(--line-width) * var(--header-shade-padding-multiplier-top));
   --header-shade-padding-bottom: calc(var(--line-width) * var(--header-shade-padding-multiplier-bottom));
@@ -78,14 +79,13 @@
   --header-border-width-bottom: calc(var(--line-width) * var(--header-border-width-multiplier-bottom));
   --header-border-width-multiplier-top: 1;
   --header-border-width-multiplier-bottom: 1;
+  --link-area-width: 100%;
   --background-image: none;
   --background-opacity: 1;
   --background-accent-opacity: 0;
   --background-blur: 0;
-  --layout-width: calc(70vw - var(--layout-width-gutter));
-  --layout-width-gutter: var(--gutter) * 8;
-  --menu-border-width: 2px;
-  --menu-border: var(--menu-border-width) solid rgb(var(--gray-02));
+  --layout-width: 80%;
+  --menu-border: calc(var(--line-width) * 1) solid rgb(var(--gray-03));
   --shadow-small: 0 2px 1px rgba(0, 0, 0, 0.1), 0 3px 2px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.1), 0 6px 15px rgba(0, 0, 0, 0.1);
   --shadow-large: 0 4px 10px rgba(0, 0, 0, 0.1), 0 6px 30px rgba(0, 0, 0, 0.1);
@@ -102,13 +102,15 @@
 }
 
 :root.is-bookmarks-style-block {
-  --link-height: 7em;
+  --link-items-width: 20%;
+  --link-items-height: 10em;
   --url-height: 20%;
   --edit-height: 30%;
 }
 
 :root.is-bookmarks-style-list {
-  --link-height: 4em;
+  --link-items-width: 20%;
+  --link-items-height: 4em;
   --url-height: 30%;
   --edit-height: 50%;
 }
@@ -116,10 +118,6 @@
 @media (min-width: 700px) {
   :root {
     --root-font-size: 16px;
-  }
-
-  :root.is-bookmarks-style-block {
-    --link-height: 9em;
   }
 }
 
@@ -140,25 +138,38 @@ body {
   font-family: var(--font-regular);
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   transition: background-color var(--animation-speed-fast) ease-in-out;
 }
 
-.is-header-alignment-vertical-top body {
+.is-layout-scroll-past-end body {
+  margin-bottom: 40vh;
+}
+
+.is-layout-alignment-horizontal-left body {
+  align-items: flex-start;
+}
+
+.is-layout-alignment-horizontal-center body {
+  align-items: center;
+}
+
+.is-layout-alignment-horizontal-right body {
+  align-items: flex-end;
+}
+
+.is-layout-alignment-vertical-top body {
   justify-content: flex-start;
 }
 
-.is-header-alignment-vertical-center body {
+.is-layout-alignment-vertical-center body {
   justify-content: center;
 }
 
-.is-header-alignment-vertical-bottom body {
+.is-layout-alignment-vertical-bottom body {
   justify-content: flex-end;
-}
-
-.is-bookmarks-show-link body {
-  display: inherit;
-  height: inherit;
 }
 
 .is-theme-style-dark {

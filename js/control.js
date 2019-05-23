@@ -15,7 +15,7 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-edit"),
-    path: "bookmarks.edit",
+    path: "link.edit",
     type: "checkbox",
     func: function() {
       render();
@@ -40,7 +40,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-hours-number"),
@@ -55,7 +54,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-hours-word"),
@@ -70,7 +68,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-minutes-show"),
@@ -85,7 +82,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-minutes-number"),
@@ -100,7 +96,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-minutes-word"),
@@ -115,7 +110,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-seconds-show"),
@@ -130,7 +124,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-seconds-number"),
@@ -145,7 +138,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-seconds-word"),
@@ -160,7 +152,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-separator-show"),
@@ -171,7 +162,6 @@ var control = (function() {
       clock.render();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-hour24-show"),
@@ -185,7 +175,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-clock-meridiem-show"),
@@ -199,7 +188,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-show"),
@@ -214,7 +202,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-display-number"),
@@ -229,7 +216,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-display-word"),
@@ -244,7 +230,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-week-start-monday"),
@@ -259,7 +244,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-week-start-sunday"),
@@ -274,7 +258,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-length-long"),
@@ -288,7 +271,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-day-length-short"),
@@ -302,7 +284,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-date-show"),
@@ -317,7 +298,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-date-display-number"),
@@ -332,7 +312,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-date-display-word"),
@@ -347,7 +326,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-date-ordinal"),
@@ -362,7 +340,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-show"),
@@ -377,7 +354,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-display-number"),
@@ -392,7 +368,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-ordinal"),
@@ -407,7 +382,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-display-word"),
@@ -422,7 +396,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-length-long"),
@@ -436,7 +409,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-month-length-short"),
@@ -450,7 +422,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-year-show"),
@@ -465,7 +436,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-year-display-number"),
@@ -480,7 +450,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-year-display-word"),
@@ -495,7 +464,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-format-datemonth"),
@@ -510,7 +478,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-format-monthdate"),
@@ -525,7 +492,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-date-separator-show"),
@@ -540,7 +506,6 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-search-show"),
@@ -549,7 +514,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.search();
     }
   }, {
     element: helper.e(".control-header-search-width-style-auto"),
@@ -558,7 +523,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.search();
     }
   }, {
     element: helper.e(".control-header-search-width-style-custom"),
@@ -567,15 +532,49 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.search();
     }
   }, {
     element: helper.e(".control-header-search-width-custom"),
     path: "header.search.width.custom",
     type: "range",
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".header-search-input"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       render();
-      header.render();
+      header.render.search();
     }
   }, {
     element: helper.e(".control-header-search-focus"),
@@ -667,55 +666,11 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-accent-show"),
     path: "header.accent.show",
     type: "checkbox",
-    func: function() {
-      render();
-      header.render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-horizontal-left"),
-    path: "header.alignment.horizontal",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-horizontal-center"),
-    path: "header.alignment.horizontal",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-horizontal-right"),
-    path: "header.alignment.horizontal",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-vertical-top"),
-    path: "header.alignment.vertical",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-vertical-center"),
-    path: "header.alignment.vertical",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-vertical-bottom"),
-    path: "header.alignment.vertical",
-    type: "radio",
     func: function() {
       render();
     }
@@ -726,7 +681,165 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.shade();
+    }
+  }, {
+    element: helper.e(".control-header-area-width"),
+    path: "header.area.width",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area")
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area")
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".header-area"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      header.render.width.set();
+    }
+  }, {
+    element: helper.e(".control-header-area-width-match"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      header.render.width.match();
+      update();
+    }
+  }, {
+    element: helper.e(".control-header-area-alignment-horizontal-left"),
+    path: "header.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-area-alignment-horizontal-center"),
+    path: "header.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-area-alignment-horizontal-right"),
+    path: "header.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-items-alignment-horizontal-left"),
+    path: "header.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-items-alignment-horizontal-center"),
+    path: "header.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-items-alignment-horizontal-right"),
+    path: "header.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
     }
   }, {
     element: helper.e(".control-header-shade-style-always"),
@@ -734,7 +847,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      header.render();
+      header.render.shade();
     }
   }, {
     element: helper.e(".control-header-shade-style-scroll"),
@@ -742,7 +855,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      header.render();
+      header.render.shade();
     }
   }, {
     element: helper.e(".control-header-shade-opacity"),
@@ -751,45 +864,91 @@ var control = (function() {
     valueMod: ["reverse", "float"],
     func: function() {
       render();
-      header.render();
+      header.render.opacity();
     }
   }, {
     element: helper.e(".control-header-shade-padding-top"),
     path: "header.shade.padding.top",
     type: "range",
     additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area")
+        });
+      }
+    }, {
       event: "mousedown",
-      action: function() {
-        header.edge("show");
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area")
+        });
       }
     }, {
       event: "mouseup",
-      action: function() {
-        header.edge("hide");
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".header-area"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
       }
     }],
     func: function() {
       render();
-      header.render();
+      header.render.padding();
     }
   }, {
     element: helper.e(".control-header-shade-padding-bottom"),
     path: "header.shade.padding.bottom",
     type: "range",
     additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area")
+        });
+      }
+    }, {
       event: "mousedown",
-      action: function() {
-        header.edge("show");
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area")
+        });
       }
     }, {
       event: "mouseup",
-      action: function() {
-        header.edge("hide");
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".header-area"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
       }
     }],
     func: function() {
       render();
-      header.render();
+      header.render.padding();
     }
   }, {
     element: helper.e(".control-header-shade-border-top-show"),
@@ -798,14 +957,14 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.border();
     }
   }, {
     element: helper.e(".control-header-shade-border-top-width"),
     path: "header.shade.border.top.width",
     type: "range",
     func: function() {
-      header.render();
+      header.render.border();
     }
   }, {
     element: helper.e(".control-header-shade-border-bottom-show"),
@@ -814,32 +973,14 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render();
+      header.render.border();
     }
   }, {
     element: helper.e(".control-header-shade-border-bottom-width"),
     path: "header.shade.border.bottom.width",
     type: "range",
     func: function() {
-      header.render();
-    }
-  }, {
-    element: helper.e(".control-bookmarks-link-show"),
-    path: "bookmarks.link.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-      header.render();
-      search.render();
-    }
-  }, {
-    element: helper.e(".control-bookmarks-name-show"),
-    path: "bookmarks.name.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
+      header.render.border();
     }
   }, {
     element: helper.e(".control-header-greeting-show"),
@@ -850,7 +991,6 @@ var control = (function() {
       dependents();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-greeting-type-good"),
@@ -861,7 +1001,6 @@ var control = (function() {
       dependents();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-greeting-type-hello"),
@@ -872,7 +1011,6 @@ var control = (function() {
       dependents();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-greeting-type-hi"),
@@ -883,7 +1021,6 @@ var control = (function() {
       dependents();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-greeting-name"),
@@ -894,7 +1031,6 @@ var control = (function() {
       dependents();
       greeting.clear();
       greeting.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-transitional-show"),
@@ -905,7 +1041,6 @@ var control = (function() {
       dependents();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-transitional-type-timeanddate"),
@@ -916,7 +1051,6 @@ var control = (function() {
       dependents();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-header-transitional-type-its"),
@@ -927,103 +1061,452 @@ var control = (function() {
       dependents();
       transitional.clear();
       transitional.render();
-      header.render();
     }
   }, {
-    element: helper.e(".control-bookmarks-url-show"),
-    path: "bookmarks.url.show",
+    element: helper.e(".control-link-area-width"),
+    path: "link.area.width",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".link-area"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      link.render.width.set();
+    }
+  }, {
+    element: helper.e(".control-link-area-width-match"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      link.render.width.match();
+      update();
+    }
+  }, {
+    element: helper.e(".control-link-area-alignment-horizontal-left"),
+    path: "link.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-area-alignment-horizontal-center"),
+    path: "link.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-area-alignment-horizontal-right"),
+    path: "link.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-link-show"),
+    path: "link.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      search.render();
+    }
+  }, {
+    element: helper.e(".control-link-name-show"),
+    path: "link.name.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
     }
   }, {
-    element: helper.e(".control-bookmarks-url-style-dark"),
-    path: "bookmarks.url.style",
+    element: helper.e(".control-link-fit-best"),
+    path: "link.fit",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-link-fit-custom"),
+    path: "link.fit",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-link-items-width"),
+    path: "link.items.width",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-item"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-item"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".link-item"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      link.render.items();
+    }
+  }, {
+    element: helper.e(".control-link-items-alignment-horizontal-left"),
+    path: "link.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-items-alignment-horizontal-center"),
+    path: "link.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-items-alignment-horizontal-right"),
+    path: "link.items.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-url-show"),
+    path: "link.url.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-link-url-style-dark"),
+    path: "link.url.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-bookmarks-url-style-light"),
-    path: "bookmarks.url.style",
+    element: helper.e(".control-link-url-style-light"),
+    path: "link.url.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-bookmarks-new-tab"),
-    path: "bookmarks.newTab",
+    element: helper.e(".control-link-new-tab"),
+    path: "link.newTab",
     type: "checkbox",
     func: function() {
       link.clear();
-      link.render();
+      link.render.link();
     }
   }, {
-    element: helper.e(".control-bookmarks-style-block"),
-    path: "bookmarks.style",
+    element: helper.e(".control-link-style-block"),
+    path: "link.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-bookmarks-style-list"),
-    path: "bookmarks.style",
+    element: helper.e(".control-link-style-list"),
+    path: "link.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-bookmarks-sort-none"),
-    path: "bookmarks.sort",
+    element: helper.e(".control-link-sort-none"),
+    path: "link.sort",
     type: "radio",
     func: function() {
       link.clear();
-      link.render();
+      link.render.link();
     }
   }, {
-    element: helper.e(".control-bookmarks-sort-letter"),
-    path: "bookmarks.sort",
+    element: helper.e(".control-link-sort-letter"),
+    path: "link.sort",
     type: "radio",
     func: function() {
       link.clear();
-      link.render();
+      link.render.link();
     }
   }, {
-    element: helper.e(".control-bookmarks-sort-icon"),
-    path: "bookmarks.sort",
+    element: helper.e(".control-link-sort-icon"),
+    path: "link.sort",
     type: "radio",
     func: function() {
       link.clear();
-      link.render();
+      link.render.link();
     }
   }, {
-    element: helper.e(".control-bookmarks-sort-name"),
-    path: "bookmarks.sort",
+    element: helper.e(".control-link-sort-name"),
+    path: "link.sort",
     type: "radio",
     func: function() {
       link.clear();
-      link.render();
+      link.render.link();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-horizontal-left"),
+    path: "layout.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-horizontal-center"),
+    path: "layout.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-horizontal-right"),
+    path: "layout.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-vertical-top"),
+    path: "layout.alignment.vertical",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-vertical-center"),
+    path: "layout.alignment.vertical",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-vertical-bottom"),
+    path: "layout.alignment.vertical",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
     }
   }, {
     element: helper.e(".control-layout-width"),
     path: "layout.width",
     type: "range",
     additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
+      }
+    }, {
       event: "mousedown",
-      action: function() {
-        layout.edge("show");
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
       }
     }, {
       event: "mouseup",
-      action: function() {
-        layout.edge("hide");
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".main"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
       }
     }],
     func: function() {
       render();
       layout.render();
-      header.render();
     }
   }, {
     element: helper.e(".control-layout-scroll-past-end"),
@@ -1113,7 +1596,7 @@ var control = (function() {
       render();
       dependents();
       background.render();
-      header.render();
+
     }
   }, {
     element: helper.e(".control-background-image-url"),
@@ -1214,26 +1697,26 @@ var control = (function() {
     };
     var bindControl = function(object) {
       var action = {
-        input: function(object) {
+        input: function(object, event) {
           changeValue(object);
           if (object.func) {
             object.func();
           };
         },
-        button: function(object) {
+        button: function(object, event) {
           if (object.func) {
             object.func();
           };
         }
       };
-      object.element.addEventListener(eventType[object.type], function() {
-        action[object.element.tagName.toLowerCase()](object);
+      object.element.addEventListener(eventType[object.type], function(event) {
+        action[object.element.tagName.toLowerCase()](object, event);
         data.save();
       }, false);
       if (object.additionalEvents) {
         object.additionalEvents.forEach(function(item, index) {
-          object.element.addEventListener(item.event, function() {
-            item.action();
+          object.element.addEventListener(item.event, function(event) {
+            item.func(event);
           }, false);
         });
       };
@@ -1249,7 +1732,7 @@ var control = (function() {
       helper.addClass(html, "is-menu");
     };
     var _edit = function() {
-      if (state.get().bookmarks.edit) {
+      if (state.get().link.edit) {
         helper.addClass(html, "is-bookmarks-edit");
         link.tabIndex();
       } else {
@@ -1287,17 +1770,15 @@ var control = (function() {
       helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
       helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
     };
-    var _alignment = function() {
-      helper.removeClass(html, "is-header-alignment-horizontal-left");
-      helper.removeClass(html, "is-header-alignment-horizontal-center");
-      helper.removeClass(html, "is-header-alignment-horizontal-right");
-      helper.removeClass(html, "is-header-alignment-vertical-top");
-      helper.removeClass(html, "is-header-alignment-vertical-center");
-      helper.removeClass(html, "is-header-alignment-vertical-bottom");
-      helper.addClass(html, "is-header-alignment-horizontal-" + state.get().header.alignment.horizontal);
-      helper.addClass(html, "is-header-alignment-vertical-" + state.get().header.alignment.vertical);
-    };
     var _link = function() {
+      helper.removeClass(html, "is-link-area-alignment-horizontal-left");
+      helper.removeClass(html, "is-link-area-alignment-horizontal-center");
+      helper.removeClass(html, "is-link-area-alignment-horizontal-right");
+      helper.addClass(html, "is-link-area-alignment-horizontal-" + state.get().link.area.alignment.horizontal);
+      helper.removeClass(html, "is-link-items-alignment-horizontal-left");
+      helper.removeClass(html, "is-link-items-alignment-horizontal-center");
+      helper.removeClass(html, "is-link-items-alignment-horizontal-right");
+      helper.addClass(html, "is-link-items-alignment-horizontal-" + state.get().link.items.alignment.horizontal);
       var view = {
         block: function() {
           helper.addClass(html, "is-bookmarks-style-block");
@@ -1308,18 +1789,29 @@ var control = (function() {
           helper.addClass(html, "is-bookmarks-style-list");
         }
       };
-      view[state.get().bookmarks.style]();
-      if (state.get().bookmarks.link.show) {
+      view[state.get().link.style]();
+      var fit = {
+        best: function() {
+          helper.addClass(html, "is-bookmarks-fit-best");
+          helper.removeClass(html, "is-bookmarks-fit-custom");
+        },
+        custom: function() {
+          helper.removeClass(html, "is-bookmarks-fit-best");
+          helper.addClass(html, "is-bookmarks-fit-custom");
+        }
+      };
+      fit[state.get().link.fit]();
+      if (state.get().link.show) {
         helper.addClass(html, "is-bookmarks-show-link");
       } else {
         helper.removeClass(html, "is-bookmarks-show-link");
       };
-      if (state.get().bookmarks.name.show) {
+      if (state.get().link.name.show) {
         helper.addClass(html, "is-bookmarks-show-name");
       } else {
         helper.removeClass(html, "is-bookmarks-show-name");
       };
-      if (state.get().bookmarks.url.show) {
+      if (state.get().link.url.show) {
         helper.addClass(html, "is-bookmarks-show-url");
       } else {
         helper.removeClass(html, "is-bookmarks-show-url");
@@ -1334,7 +1826,7 @@ var control = (function() {
           helper.addClass(html, "bookmarks-url-light");
         }
       };
-      urlText[state.get().bookmarks.url.style]();
+      urlText[state.get().link.url.style]();
     };
     var _layout = function() {
       if (state.get().layout.scrollPastEnd) {
@@ -1342,6 +1834,14 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-layout-scroll-past-end");
       };
+      helper.removeClass(html, "is-layout-alignment-horizontal-left");
+      helper.removeClass(html, "is-layout-alignment-horizontal-center");
+      helper.removeClass(html, "is-layout-alignment-horizontal-right");
+      helper.removeClass(html, "is-layout-alignment-vertical-top");
+      helper.removeClass(html, "is-layout-alignment-vertical-center");
+      helper.removeClass(html, "is-layout-alignment-vertical-bottom");
+      helper.addClass(html, "is-layout-alignment-horizontal-" + state.get().layout.alignment.horizontal);
+      helper.addClass(html, "is-layout-alignment-vertical-" + state.get().layout.alignment.vertical);
     };
     var _theme = function() {
       helper.removeClass(html, "is-theme-style-dark");
@@ -1386,7 +1886,17 @@ var control = (function() {
     var _header = function() {
       if (state.get().header.shade.show) {
         helper.addClass(html, "is-header-shade-show");
+        helper.removeClass(html, "is-header-shade-style-always");
+        helper.removeClass(html, "is-header-shade-style-scroll");
         helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
+        helper.removeClass(html, "is-header-area-alignment-horizontal-left");
+        helper.removeClass(html, "is-header-area-alignment-horizontal-center");
+        helper.removeClass(html, "is-header-area-alignment-horizontal-right");
+        helper.addClass(html, "is-header-area-alignment-horizontal-" + state.get().header.area.alignment.horizontal);
+        helper.removeClass(html, "is-header-items-alignment-horizontal-left");
+        helper.removeClass(html, "is-header-items-alignment-horizontal-center");
+        helper.removeClass(html, "is-header-items-alignment-horizontal-right");
+        helper.addClass(html, "is-header-items-alignment-horizontal-" + state.get().header.items.alignment.horizontal);
         if (state.get().header.shade.border.top.show) {
           helper.addClass(html, "is-header-shade-border-top-show");
         } else {
@@ -1404,9 +1914,9 @@ var control = (function() {
         helper.removeClass(html, "is-header-shade-border-top-show");
         helper.removeClass(html, "is-header-shade-border-bottom-show");
       };
+      state.get().header.area.alignment.horizontal
     };
     _menu();
-    _alignment();
     _edit();
     _greeting();
     _transitional();
@@ -1518,7 +2028,7 @@ var control = (function() {
     };
     var _greeting = function() {
       if (state.get().header.greeting.show) {
-        helper.e("[for=control-header-greeting-name]").removeAttribute("disabled", "");
+        helper.e("[for=control-header-greeting-name]").removeAttribute("disabled");
         helper.e(".control-header-greeting-name").disabled = false;
         helper.e(".control-header-greeting-type-good").disabled = false;
         helper.e(".control-header-greeting-type-hello").disabled = false;
@@ -1661,38 +2171,69 @@ var control = (function() {
       };
     };
     var _link = function() {
-      if (state.get().bookmarks.link.show) {
-        helper.e(".control-bookmarks-name-show").disabled = false;
-        helper.e(".control-bookmarks-url-show").disabled = false;
-        helper.e(".control-bookmarks-style-block").disabled = false;
-        helper.e(".control-bookmarks-style-list").disabled = false;
-        helper.e(".control-bookmarks-new-tab").disabled = false;
-        helper.e(".control-bookmarks-sort-none").disabled = false;
-        helper.e(".control-bookmarks-sort-name").disabled = false;
-        helper.e(".control-bookmarks-sort-letter").disabled = false;
-        helper.e(".control-layout-alignment-vertical-top").disabled = true;
-        helper.e(".control-layout-alignment-vertical-center").disabled = true;
-        helper.e(".control-layout-alignment-vertical-bottom").disabled = true;
+      if (state.get().link.show) {
+        helper.e("[for=control-link-area-width]").removeAttribute("disabled");
+        helper.e(".control-link-area-width").disabled = false;
+        helper.e(".control-link-area-width-match").disabled = false;
+        helper.e(".control-link-area-alignment-horizontal-label").removeAttribute("disabled");
+        helper.e(".control-link-area-alignment-horizontal-left").disabled = false;
+        helper.e(".control-link-area-alignment-horizontal-center").disabled = false;
+        helper.e(".control-link-area-alignment-horizontal-right").disabled = false;
+        helper.e(".control-link-fit-label").removeAttribute("disabled");
+        helper.e(".control-link-fit-best").disabled = false;
+        helper.e(".control-link-fit-custom").disabled = false;
+        helper.e(".control-link-name-show").disabled = false;
+        helper.e(".control-link-url-show").disabled = false;
+        helper.e(".control-link-style-block").disabled = false;
+        helper.e(".control-link-style-list").disabled = false;
+        helper.e(".control-link-new-tab").disabled = false;
+        helper.e(".control-link-sort-none").disabled = false;
+        helper.e(".control-link-sort-name").disabled = false;
+        helper.e(".control-link-sort-letter").disabled = false;
+        helper.e(".control-link-sort-icon").disabled = false;
       } else {
-        helper.e(".control-bookmarks-name-show").disabled = true;
-        helper.e(".control-bookmarks-url-show").disabled = true;
-        helper.e(".control-bookmarks-style-block").disabled = true;
-        helper.e(".control-bookmarks-style-list").disabled = true;
-        helper.e(".control-bookmarks-new-tab").disabled = true;
-        helper.e(".control-bookmarks-sort-none").disabled = true;
-        helper.e(".control-bookmarks-sort-name").disabled = true;
-        helper.e(".control-bookmarks-sort-letter").disabled = true;
-        helper.e(".control-layout-alignment-vertical-top").disabled = false;
-        helper.e(".control-layout-alignment-vertical-center").disabled = false;
-        helper.e(".control-layout-alignment-vertical-bottom").disabled = false;
+        helper.e("[for=control-link-area-width]").setAttribute("disabled", "");
+        helper.e(".control-link-area-width").disabled = true;
+        helper.e(".control-link-area-width-match").disabled = true;
+        helper.e(".control-link-area-alignment-horizontal-label").setAttribute("disabled", "");
+        helper.e(".control-link-area-alignment-horizontal-left").disabled = true;
+        helper.e(".control-link-area-alignment-horizontal-center").disabled = true;
+        helper.e(".control-link-area-alignment-horizontal-right").disabled = true;
+        helper.e(".control-link-fit-label").setAttribute("disabled", "");
+        helper.e(".control-link-fit-best").disabled = true;
+        helper.e(".control-link-fit-custom").disabled = true;
+        helper.e(".control-link-name-show").disabled = true;
+        helper.e(".control-link-url-show").disabled = true;
+        helper.e(".control-link-style-block").disabled = true;
+        helper.e(".control-link-style-list").disabled = true;
+        helper.e(".control-link-new-tab").disabled = true;
+        helper.e(".control-link-sort-none").disabled = true;
+        helper.e(".control-link-sort-name").disabled = true;
+        helper.e(".control-link-sort-letter").disabled = true;
+        helper.e(".control-link-sort-icon").disabled = true;
       };
-      if (state.get().bookmarks.link.show && state.get().bookmarks.url.show) {
-        helper.e(".control-bookmarks-url-style-dark").disabled = false;
-        helper.e(".control-bookmarks-url-style-light").disabled = false;
+      if (state.get().link.show && state.get().link.url.show) {
+        helper.e(".control-link-url-style-dark").disabled = false;
+        helper.e(".control-link-url-style-light").disabled = false;
       } else {
-        helper.e(".control-bookmarks-url-style-dark").disabled = true;
-        helper.e(".control-bookmarks-url-style-light").disabled = true;
-      }
+        helper.e(".control-link-url-style-dark").disabled = true;
+        helper.e(".control-link-url-style-light").disabled = true;
+      };
+      if (state.get().link.show && state.get().link.fit == "best") {
+        helper.e("[for=control-link-items-width]").setAttribute("disabled", "");
+        helper.e(".control-link-items-width").disabled = true;
+        helper.e(".control-link-items-alignment-horizontal-label").setAttribute("disabled", "");
+        helper.e(".control-link-items-alignment-horizontal-left").disabled = true;
+        helper.e(".control-link-items-alignment-horizontal-center").disabled = true;
+        helper.e(".control-link-items-alignment-horizontal-right").disabled = true;
+      } else if (state.get().link.show && state.get().link.fit == "custom") {
+        helper.e("[for=control-link-items-width]").removeAttribute("disabled");
+        helper.e(".control-link-items-width").disabled = false;
+        helper.e(".control-link-items-alignment-horizontal-label").removeAttribute("disabled");
+        helper.e(".control-link-items-alignment-horizontal-left").disabled = false;
+        helper.e(".control-link-items-alignment-horizontal-center").disabled = false;
+        helper.e(".control-link-items-alignment-horizontal-right").disabled = false;
+      };
     };
     var _background = function() {
       if (state.get().background.image.show) {

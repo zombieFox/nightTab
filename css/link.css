@@ -1,44 +1,102 @@
 .link {
-  margin-bottom: 2em;
-  margin-top: var(--header-height);
-  width: 100vw;
-  position: relative;
-  z-index: var(--z-index-link);
   display: none;
-  /* transition: margin-top var(--animation-speed-fast) ease-in-out; */
+  position: relative;
+  flex-direction: row;
+  z-index: var(--z-index-link);
 }
 
 .is-bookmarks-show-link .link {
-  display: block;
+  display: flex;
 }
 
-.is-layout-scroll-past-end .link {
-  margin-bottom: 60vh;
+.is-link-area-alignment-horizontal-left .link {
+  justify-content: flex-start;
+}
+
+.is-link-area-alignment-horizontal-center .link {
+  justify-content: center;
+}
+
+.is-link-area-alignment-horizontal-right .link {
+  justify-content: flex-end;
 }
 
 .link-area {
-  width: 100%;
+  padding-bottom: calc(var(--gutter) * 4);
+  padding-left: calc(var(--gutter) * 4);
+  padding-right: calc(var(--gutter) * 4);
+  position: relative;
+  width: var(--link-area-width);
+}
+
+.is-bookmarks-fit-best .link-area {
   display: grid;
   grid-auto-rows: 1fr;
   grid-gap: calc(var(--gutter) * 2);
 }
 
-.is-bookmarks-style-block .link-area {
-  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+.is-bookmarks-fit-custom .link-area {
+  margin-top: calc(var(--gutter) * -1);
+  padding-bottom: calc(var(--gutter) * 3);
+  padding-left: calc(var(--gutter) * 3);
+  padding-right: calc(var(--gutter) * 3);
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.is-bookmarks-style-list .link-area {
-  grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+.is-link-items-alignment-horizontal-left .link-area {
+  justify-content: flex-start;
+}
+
+.is-link-items-alignment-horizontal-center .link-area {
+  justify-content: center;
+}
+
+.is-link-items-alignment-horizontal-right .link-area {
+  justify-content: flex-end;
+}
+
+.is-header-shade-style-always .link-area {
+  padding-top: calc(var(--gutter) * 4);
+}
+
+.is-link-alignment-horizontal-left .link-area {
+  justify-content: flex-start;
+}
+
+.is-link-alignment-horizontal-center .link-area {
+  justify-content: center;
+}
+
+.is-link-alignment-horizontal-right .link-area {
+  justify-content: flex-end;
+}
+
+.is-bookmarks-fit-best.is-bookmarks-style-block .link-area {
+  grid-template-columns: repeat(auto-fill, minmax(11em, 1fr));
+}
+
+.is-bookmarks-fit-best.is-bookmarks-style-list .link-area {
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
 }
 
 .link-item {
-  width: 100%;
-  height: var(--link-height);
   font-size: 1em;
   position: relative;
   display: block;
   transform: scale(1);
-  transition: all var(--animation-speed-fast) ease-in-out;
+  transition: transform var(--animation-speed-fast) ease-in-out;
+  direction: ltr;
+}
+
+.is-bookmarks-fit-best .link-item {
+  height: var(--link-items-height);
+}
+
+.is-bookmarks-fit-custom .link-item {
+  height: var(--link-items-height);
+  width: var(--link-items-width);
+  margin: var(--gutter);
 }
 
 .link-item:focus-within,
@@ -287,13 +345,20 @@
 }
 
 .link-empty {
-  grid-column-start: 1;
-  grid-column-end: -1;
   text-align: center;
 }
 
 .link-empty-heading {
   color: rgb(var(--gray-16));
+}
+
+.is-bookmarks-fit-best .link-empty {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.is-bookmarks-fit-custom .link-empty {
+  margin: 1em;
 }
 
 .is-bookmarks-style-block .link-name {

@@ -33,7 +33,7 @@ var data = (function() {
     return data;
   };
 
-  var _checkForSavedData = function(data) {
+  var restore = function(data) {
     if (data) {
       if (!("version" in data) || data.version != version.get()) {
         console.log("data version " + data.version + " found less than current");
@@ -48,7 +48,7 @@ var data = (function() {
   };
 
   var init = function() {
-    _checkForSavedData(load());
+    restore(load());
   };
 
   return {
@@ -58,7 +58,8 @@ var data = (function() {
     set: set,
     get: get,
     load: load,
-    wipe: wipe
+    wipe: wipe,
+    restore: restore
   };
 
 })();

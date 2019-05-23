@@ -7,7 +7,7 @@ var search = (function() {
       _toggle(this);
       _searchClear();
       link.clear();
-      link.render();
+      link.render.link();
     }, false);
     searchClear.addEventListener("click", function() {
       _toggle(this);
@@ -67,7 +67,7 @@ var search = (function() {
     var search = helper.e(".search");
     var searchInput = helper.e(".search-input");
     var placeholder = "";
-    if (state.get().bookmarks.link.show) {
+    if (state.get().link.show) {
       placeholder = "Find bookmarks or search";
     } else {
       placeholder = "Search";
@@ -82,7 +82,7 @@ var search = (function() {
     searchInput.value = "";
     searchInput.focus();
     link.clear();
-    link.render();
+    link.render.link();
   };
 
   var _focus = function() {
