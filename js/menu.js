@@ -6,12 +6,12 @@ var menu = (function() {
     allMenuNavButton.forEach(function(arrayItem, index) {
       arrayItem.addEventListener("click", function() {
         _tab(this);
-        page.update();
       }, false);
     });
     menuClose.addEventListener("click", function() {
       close();
       shade.destroy();
+      page.update();
     }, false);
   };
 
