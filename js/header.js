@@ -18,8 +18,13 @@ var header = (function() {
   };
 
   var render = {
-    width: function() {
-      _width();
+    width: {
+      set: function() {
+        _width();
+      },
+      match: function() {
+        _match();
+      }
     },
     shade: function() {
       _shade();
@@ -41,6 +46,15 @@ var header = (function() {
   var _width = function() {
     var html = helper.e("html");
     html.style.setProperty("--header-area-width", state.get().header.area.width + "%");
+  };
+
+  var _match = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "header.area.width",
+      newValue: state.get().link.area.width
+    });
+    render.width.set();
   };
 
   var _shade = function() {
@@ -94,7 +108,7 @@ var header = (function() {
 
   var init = function() {
     _bind();
-    render.width();
+    render.width.set();
     render.search();
     render.shade();
     render.opacity();

@@ -492,11 +492,16 @@ var link = (function() {
   };
 
   var render = {
+    width: {
+      set: function() {
+        _width();
+      },
+      match: function() {
+        _match();
+      }
+    },
     link: function() {
       _link();
-    },
-    width: function() {
-      _width();
     },
     items: function() {
       _items();
@@ -556,6 +561,15 @@ var link = (function() {
     html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
   };
 
+  var _match = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "link.area.width",
+      newValue: state.get().header.area.width
+    });
+    render.width.set();
+  };
+
   var _items = function() {
     var html = helper.e("html");
     html.style.setProperty("--link-items-width", state.get().link.items.width + "%");
@@ -583,7 +597,7 @@ var link = (function() {
 
   var init = function() {
     render.link();
-    render.width();
+    render.width.set();
     render.items();
   };
 

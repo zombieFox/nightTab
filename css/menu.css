@@ -30,7 +30,7 @@
   transition: background-color var(--animation-speed-fast) ease-in-out, opacity var(--animation-speed-fast) ease-in-out;
 }
 
-.is-edge:not(.is-background-image-show) .menu-area {
+.is-edge .menu-area {
   opacity: 0.2;
 }
 

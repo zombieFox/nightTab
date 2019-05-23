@@ -691,14 +691,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.render({
-          element: helper.e(".header-area"),
+          element: helper.e(".header-area")
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.render({
-          element: helper.e(".header-area"),
+          element: helper.e(".header-area")
         });
       }
     }, {
@@ -722,7 +722,28 @@ var control = (function() {
       }
     }],
     func: function() {
-      header.render.width();
+      header.render.width.set();
+    }
+  }, {
+    element: helper.e(".control-header-area-width-match"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      header.render.width.match();
+      update();
     }
   }, {
     element: helper.e(".control-header-area-alignment-horizontal-left"),
@@ -853,14 +874,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.render({
-          element: helper.e(".header-area"),
+          element: helper.e(".header-area")
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.render({
-          element: helper.e(".header-area"),
+          element: helper.e(".header-area")
         });
       }
     }, {
@@ -895,14 +916,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.render({
-          element: helper.e(".header-area"),
+          element: helper.e(".header-area")
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.render({
-          element: helper.e(".header-area"),
+          element: helper.e(".header-area")
         });
       }
     }, {
@@ -1080,7 +1101,28 @@ var control = (function() {
       }
     }],
     func: function() {
-      link.render.width();
+      link.render.width.set();
+    }
+  }, {
+    element: helper.e(".control-link-area-width-match"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      link.render.width.match();
+      update();
     }
   }, {
     element: helper.e(".control-link-area-alignment-horizontal-left"),
@@ -2130,6 +2172,13 @@ var control = (function() {
     };
     var _link = function() {
       if (state.get().link.show) {
+        helper.e("[for=control-link-area-width]").removeAttribute("disabled");
+        helper.e(".control-link-area-width").disabled = false;
+        helper.e(".control-link-area-width-match").disabled = false;
+        helper.e(".control-link-area-alignment-horizontal-label").removeAttribute("disabled");
+        helper.e(".control-link-area-alignment-horizontal-left").disabled = false;
+        helper.e(".control-link-area-alignment-horizontal-center").disabled = false;
+        helper.e(".control-link-area-alignment-horizontal-right").disabled = false;
         helper.e(".control-link-fit-label").removeAttribute("disabled");
         helper.e(".control-link-fit-best").disabled = false;
         helper.e(".control-link-fit-custom").disabled = false;
@@ -2143,6 +2192,13 @@ var control = (function() {
         helper.e(".control-link-sort-letter").disabled = false;
         helper.e(".control-link-sort-icon").disabled = false;
       } else {
+        helper.e("[for=control-link-area-width]").setAttribute("disabled", "");
+        helper.e(".control-link-area-width").disabled = true;
+        helper.e(".control-link-area-width-match").disabled = true;
+        helper.e(".control-link-area-alignment-horizontal-label").setAttribute("disabled", "");
+        helper.e(".control-link-area-alignment-horizontal-left").disabled = true;
+        helper.e(".control-link-area-alignment-horizontal-center").disabled = true;
+        helper.e(".control-link-area-alignment-horizontal-right").disabled = true;
         helper.e(".control-link-fit-label").setAttribute("disabled", "");
         helper.e(".control-link-fit-best").disabled = true;
         helper.e(".control-link-fit-custom").disabled = true;
