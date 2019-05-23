@@ -59,7 +59,7 @@ var state = (function() {
           display: "number"
         },
         separator: {
-          show: false
+          show: true
         },
         format: "datemonth"
       },

@@ -106,11 +106,11 @@ var bookmarks = (function() {
     name: "Amazon",
     url: "https://www.amazon.co.uk/",
     accent: {
-      override: false,
+      override: true,
       color: {
-        r: null,
-        g: null,
-        b: null
+        r: 255,
+        g: 168,
+        b: 0
       }
     },
     timeStamp: 1546453107633
@@ -182,11 +182,11 @@ var bookmarks = (function() {
     name: "Reddit",
     url: "https://www.reddit.com/",
     accent: {
-      override: false,
+      override: true,
       color: {
-        r: null,
-        g: null,
-        b: null
+        r: 255,
+        g: 69,
+        b: 0
       }
     },
     timeStamp: 1546453111491
