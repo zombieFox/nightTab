@@ -68,6 +68,7 @@ var link = (function() {
       },
       cancelAction: function() {
         resetStagedBookmarkData();
+        autoSuggest.destroy();
       },
       actionText: "Add",
       size: "small",
