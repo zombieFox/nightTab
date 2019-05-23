@@ -346,13 +346,20 @@
 }
 
 .link-empty {
-  grid-column-start: 1;
-  grid-column-end: -1;
   text-align: center;
 }
 
 .link-empty-heading {
   color: rgb(var(--gray-16));
+}
+
+.is-bookmarks-fit-best .link-empty {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.is-bookmarks-fit-custom .link-empty {
+  margin: 1em;
 }
 
 .is-bookmarks-style-block .link-name {

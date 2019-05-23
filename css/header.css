@@ -110,7 +110,6 @@
 
 .header-item {
   margin: var(--gutter);
-  max-width: calc(100% - var(--gutter) * 2);
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;

@@ -584,6 +584,7 @@ var link = (function() {
   var init = function() {
     render.link();
     render.width();
+    render.items();
   };
 
   // exposed methods

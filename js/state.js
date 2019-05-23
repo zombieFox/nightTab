@@ -94,7 +94,7 @@ var state = (function() {
           }
         },
         text: {
-          align: "left"
+          align: "center"
         }
       },
       editAdd: {
