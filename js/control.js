@@ -1752,6 +1752,7 @@ var control = (function() {
         object.additionalEvents.forEach(function(item, index) {
           object.element.addEventListener(item.event, function(event) {
             item.func(event);
+            data.save();
           }, false);
         });
       };
