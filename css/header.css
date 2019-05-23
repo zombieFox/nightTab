@@ -78,14 +78,6 @@
   justify-content: flex-end;
 }
 
-.is-bookmarks-show-link .header-area {
-  padding-bottom: calc(var(--gutter) * 1 + var(--header-shade-padding-bottom));
-}
-
-.is-header-shade-style-always .header-area {
-  padding-bottom: calc(var(--gutter) * 3 + var(--header-shade-padding-bottom));
-}
-
 .is-header-search-text-align-left .header-search-input {
   text-align: left;
 }

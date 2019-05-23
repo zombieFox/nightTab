@@ -22,7 +22,6 @@
 }
 
 .link-area {
-  padding-top: calc(var(--gutter) * 2);
   padding-bottom: calc(var(--gutter) * 4);
   padding-left: calc(var(--gutter) * 4);
   padding-right: calc(var(--gutter) * 4);
@@ -37,7 +36,6 @@
 }
 
 .is-bookmarks-fit-custom .link-area {
-  padding-top: calc(var(--gutter) * 1);
   padding-bottom: calc(var(--gutter) * 3);
   padding-left: calc(var(--gutter) * 3);
   padding-right: calc(var(--gutter) * 3);
