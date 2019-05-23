@@ -3,9 +3,9 @@ var state = (function() {
   var current = {
     header: {
       area: {
-        width: 100,
+        width: 90,
         alignment: {
-          horizontal: "left"
+          horizontal: "center"
         }
       },
       items: {
@@ -134,13 +134,13 @@ var state = (function() {
     },
     link: {
       area: {
-        width: 100,
+        width: 90,
         alignment: {
-          horizontal: "left"
+          horizontal: "center"
         }
       },
       items: {
-        width: 20,
+        width: 12,
         alignment: {
           horizontal: "left"
         }
@@ -164,7 +164,7 @@ var state = (function() {
         horizontal: "center",
         vertical: "center"
       },
-      width: 90,
+      width: 100,
       scrollPastEnd: false,
       title: "New Tab"
     },

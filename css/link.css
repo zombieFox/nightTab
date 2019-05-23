@@ -36,6 +36,7 @@
 }
 
 .is-bookmarks-fit-custom .link-area {
+  margin-top: calc(var(--gutter) * -1);
   padding-bottom: calc(var(--gutter) * 3);
   padding-left: calc(var(--gutter) * 3);
   padding-right: calc(var(--gutter) * 3);
