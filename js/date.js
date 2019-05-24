@@ -72,7 +72,6 @@ var date = (function() {
           number: function(value) {
             if (state.get().header.date.month.ordinal) {
               return helper.ordinalNumber(value + 1);
-              return value + 1;
             } else {
               return value + 1;
             };
