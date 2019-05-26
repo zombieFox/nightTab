@@ -29,8 +29,7 @@ var data = (function() {
   };
 
   var load = function() {
-    var data = JSON.parse(get(saveName));
-    return data;
+    return JSON.parse(get(saveName));
   };
 
   var restore = function(data) {
