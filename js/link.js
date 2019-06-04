@@ -61,7 +61,7 @@ var link = (function() {
         data.save();
         clear();
         render.link();
-        tabIndex();
+        render.tabIndex();
         control.dependents();
         control.render();
         resetStagedBookmarkData();
@@ -114,7 +114,7 @@ var link = (function() {
         data.save();
         clear();
         render.link();
-        tabIndex();
+        render.tabIndex();
         _returnToPreviousFocusLink();
         resetStagedBookmarkData();
       },
@@ -514,6 +514,9 @@ var link = (function() {
     link: function() {
       _link();
     },
+    tabIndex: function() {
+      _tabIndex();
+    },
     items: function() {
       _items();
     }
@@ -592,7 +595,7 @@ var link = (function() {
     html.style.setProperty("--link-items-width", state.get().link.items.width + "%");
   };
 
-  var tabIndex = function() {
+  var _tabIndex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
     if (state.get().link.edit) {
       allLinkControlItem.forEach(function(arrayItem, index) {
@@ -628,8 +631,7 @@ var link = (function() {
     add: add,
     edit: edit,
     remove: remove,
-    render: render,
-    tabIndex: tabIndex
+    render: render
   };
 
 })();

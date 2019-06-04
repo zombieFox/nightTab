@@ -1809,10 +1809,10 @@ var control = (function() {
     var _edit = function() {
       if (state.get().link.edit) {
         helper.addClass(html, "is-link-edit");
-        link.tabIndex();
+        link.render.tabIndex();
       } else {
         helper.removeClass(html, "is-link-edit");
-        link.tabIndex();
+        link.render.tabIndex();
       };
     };
     var _date = function() {
