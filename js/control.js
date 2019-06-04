@@ -1855,11 +1855,11 @@ var control = (function() {
       var urlText = {
         dark: function() {
           helper.addClass(html, "is-bookmarks-url-dark");
-          helper.removeClass(html, "bookmarks-url-light");
+          helper.removeClass(html, "is-bookmarks-url-light");
         },
         light: function() {
           helper.removeClass(html, "is-bookmarks-url-dark");
-          helper.addClass(html, "bookmarks-url-light");
+          helper.addClass(html, "is-bookmarks-url-light");
         }
       };
       urlText[state.get().link.url.style]();

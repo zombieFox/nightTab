@@ -267,7 +267,7 @@
   color: rgb(var(--black));
 }
 
-.bookmarks-url-light .link-url-text {
+.is-bookmarks-url-light .link-url-text {
   color: rgb(var(--white));
 }
 
@@ -277,23 +277,26 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: all var(--animation-speed-fast) ease-in-out;
+  transition: color var(--animation-speed-fast) ease-in-out;
 }
 
 .link-display-icon {
   color: rgb(var(--accent));
-  transition: all var(--animation-speed-fast) ease-in-out;
+  transition: color var(--animation-speed-fast) ease-in-out;
+}
+
+.link-display-letter,
+.link-display-icon {
+  margin: 0;
 }
 
 .is-bookmarks-style-block .link-display-letter {
-  margin: 0;
   font-size: 2em;
   text-align: center;
   max-width: 100%;
 }
 
 .is-bookmarks-style-block .link-display-icon {
-  margin-bottom: 0.25em;
   font-size: 2.5em;
   text-align: center;
   max-width: 100%;
@@ -301,10 +304,19 @@
 
 .is-bookmarks-style-list .link-display-letter,
 .is-bookmarks-style-list .link-display-icon {
-  margin: 0 0.5em 0 0;
   font-size: 1.5em;
   flex-shrink: 0;
   max-width: 50%;
+}
+
+.is-bookmarks-show-name.is-bookmarks-style-block .link-display-letter,
+.is-bookmarks-show-name.is-bookmarks-style-block .link-display-icon {
+  margin-bottom: 0.25em;
+}
+
+.is-bookmarks-show-name.is-bookmarks-style-list .link-display-letter,
+.is-bookmarks-show-name.is-bookmarks-style-list .link-display-icon {
+  margin-right: 0.5em
 }
 
 .link-item:hover .link-display-letter,
