@@ -145,6 +145,20 @@ var state = (function() {
           horizontal: "left"
         }
       },
+      display: {
+        show: true,
+        size: 2,
+        alignment: {
+          horizontal: "center",
+          vertical: "center"
+        },
+        letter: {
+          size: 2
+        },
+        icon: {
+          size: 2.50
+        }
+      },
       name: {
         show: true
       },

@@ -80,6 +80,8 @@
   --header-border-width-multiplier-top: 1;
   --header-border-width-multiplier-bottom: 1;
   --link-area-width: 100%;
+  --link-display-letter-size: 2em;
+  --link-display-icon-size: 2.5em;
   --background-image: none;
   --background-opacity: 1;
   --background-accent-opacity: 0;

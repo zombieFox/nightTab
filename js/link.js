@@ -310,9 +310,17 @@ var link = (function() {
         value: "link-panel-back"
       }]
     });
-    var linkDisplay;
+    var linkDisplay = helper.makeNode({
+      tag: "div",
+      attr: [{
+        key: "class",
+        value: "link-display"
+      }]
+    });
+    var linkDisplayLetter = null;
+    var linkDisplayIcon = null;
     if (data.display == "letter") {
-      linkDisplay = helper.makeNode({
+      linkDisplayLetter = helper.makeNode({
         tag: "p",
         text: data.letter,
         attr: [{
@@ -321,19 +329,11 @@ var link = (function() {
         }]
       });
     } else if (data.display == "icon" && data.icon.prefix != null && data.icon.name != null) {
-      linkDisplay = helper.makeNode({
+      linkDisplayIcon = helper.makeNode({
         tag: "div",
         attr: [{
           key: "class",
           value: "link-display-icon " + data.icon.prefix + " fa-" + data.icon.name
-        }]
-      });
-    } else {
-      linkDisplay = helper.makeNode({
-        tag: "div",
-        attr: [{
-          key: "class",
-          value: "link-display"
         }]
       });
     };
@@ -408,6 +408,11 @@ var link = (function() {
         value: "button-icon icon-close"
       }]
     });
+    if (data.display == "letter") {
+      linkDisplay.appendChild(linkDisplayLetter);
+    } else if (data.display == "icon" && data.icon.prefix != null && data.icon.name != null) {
+      linkDisplay.appendChild(linkDisplayIcon);
+    };
     linkPanelFront.appendChild(linkDisplay);
     linkPanelFront.appendChild(linkName);
     linkEdit.appendChild(linkEditIcon);
@@ -501,6 +506,11 @@ var link = (function() {
         _match();
       }
     },
+    displayLetterIcon: {
+      size: function() {
+        _size();
+      },
+    },
     link: function() {
       _link();
     },
@@ -562,6 +572,12 @@ var link = (function() {
     html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
   };
 
+  var _size = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-display-letter-size", state.get().link.display.letter.size + "em");
+    html.style.setProperty("--link-display-icon-size", state.get().link.display.icon.size + "em");
+  };
+
   var _match = function() {
     helper.setObject({
       object: state.get(),
@@ -598,6 +614,7 @@ var link = (function() {
 
   var init = function() {
     render.link();
+    render.displayLetterIcon.size();
     render.width.set();
     render.items();
   };

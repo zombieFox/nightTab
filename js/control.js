@@ -1198,13 +1198,12 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-link-show"),
-    path: "link.show",
+    element: helper.e(".control-link-display-show"),
+    path: "link.display.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
-      search.render();
     }
   }, {
     element: helper.e(".control-link-name-show"),
@@ -1212,7 +1211,73 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
+    }
+  }, {
+    element: helper.e(".control-link-display-letter-size"),
+    path: "link.display.letter.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      link.render.displayLetterIcon.size();
+    }
+  }, {
+    element: helper.e(".control-link-display-icon-size"),
+    path: "link.display.icon.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      link.render.displayLetterIcon.size();
+    }
+  }, {
+    element: helper.e(".control-link-display-alignment-horizontal-left"),
+    path: "link.display.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-display-alignment-horizontal-center"),
+    path: "link.display.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-display-alignment-horizontal-right"),
+    path: "link.display.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-display-alignment-vertical-top"),
+    path: "link.display.alignment.vertical",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-display-alignment-vertical-center"),
+    path: "link.display.alignment.vertical",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-display-alignment-vertical-bottom"),
+    path: "link.display.alignment.vertical",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-link-show"),
+    path: "link.show",
+    type: "checkbox",
+    func: function() {
+      render();
       dependents();
+      search.render();
     }
   }, {
     element: helper.e(".control-link-fit-best"),
@@ -1815,6 +1880,14 @@ var control = (function() {
       helper.removeClass(html, "is-link-items-alignment-horizontal-center");
       helper.removeClass(html, "is-link-items-alignment-horizontal-right");
       helper.addClass(html, "is-link-items-alignment-horizontal-" + state.get().link.items.alignment.horizontal);
+      helper.removeClass(html, "is-link-display-alignment-horizontal-left");
+      helper.removeClass(html, "is-link-display-alignment-horizontal-center");
+      helper.removeClass(html, "is-link-display-alignment-horizontal-right");
+      helper.addClass(html, "is-link-display-alignment-horizontal-" + state.get().link.display.alignment.horizontal);
+      helper.removeClass(html, "is-link-display-alignment-vertical-top");
+      helper.removeClass(html, "is-link-display-alignment-vertical-center");
+      helper.removeClass(html, "is-link-display-alignment-vertical-bottom");
+      helper.addClass(html, "is-link-display-alignment-vertical-" + state.get().link.display.alignment.vertical);
       var view = {
         block: function() {
           helper.addClass(html, "is-bookmarks-style-block");
@@ -1846,6 +1919,11 @@ var control = (function() {
         helper.addClass(html, "is-bookmarks-show-name");
       } else {
         helper.removeClass(html, "is-bookmarks-show-name");
+      };
+      if (state.get().link.display.show) {
+        helper.addClass(html, "is-bookmarks-show-display");
+      } else {
+        helper.removeClass(html, "is-bookmarks-show-display");
       };
       if (state.get().link.url.show) {
         helper.addClass(html, "is-bookmarks-show-url");
@@ -2218,6 +2296,7 @@ var control = (function() {
         helper.e(".control-link-fit-label").removeAttribute("disabled");
         helper.e(".control-link-fit-best").disabled = false;
         helper.e(".control-link-fit-custom").disabled = false;
+        helper.e(".control-link-display-show").disabled = false;
         helper.e(".control-link-name-show").disabled = false;
         helper.e(".control-link-url-show").disabled = false;
         helper.e(".control-link-style-block").disabled = false;
@@ -2227,6 +2306,18 @@ var control = (function() {
         helper.e(".control-link-sort-name").disabled = false;
         helper.e(".control-link-sort-letter").disabled = false;
         helper.e(".control-link-sort-icon").disabled = false;
+        helper.e("[for=control-link-display-letter-size]").removeAttribute("disabled");
+        helper.e(".control-link-display-letter-size").disabled = false;
+        helper.e("[for=control-link-display-icon-size]").removeAttribute("disabled");
+        helper.e(".control-link-display-icon-size").disabled = false;
+        helper.e(".control-link-display-alignment-horizontal-label").removeAttribute("disabled");
+        helper.e(".control-link-display-alignment-horizontal-left").disabled = false;
+        helper.e(".control-link-display-alignment-horizontal-center").disabled = false;
+        helper.e(".control-link-display-alignment-horizontal-right").disabled = false;
+        helper.e(".control-link-display-alignment-vertical-label").removeAttribute("disabled");
+        helper.e(".control-link-display-alignment-vertical-top").disabled = false;
+        helper.e(".control-link-display-alignment-vertical-center").disabled = false;
+        helper.e(".control-link-display-alignment-vertical-bottom").disabled = false;
       } else {
         helper.e("[for=control-link-area-width]").setAttribute("disabled", "");
         helper.e(".control-link-area-width").disabled = true;
@@ -2238,6 +2329,7 @@ var control = (function() {
         helper.e(".control-link-fit-label").setAttribute("disabled", "");
         helper.e(".control-link-fit-best").disabled = true;
         helper.e(".control-link-fit-custom").disabled = true;
+        helper.e(".control-link-display-show").disabled = true;
         helper.e(".control-link-name-show").disabled = true;
         helper.e(".control-link-url-show").disabled = true;
         helper.e(".control-link-style-block").disabled = true;
@@ -2247,6 +2339,29 @@ var control = (function() {
         helper.e(".control-link-sort-name").disabled = true;
         helper.e(".control-link-sort-letter").disabled = true;
         helper.e(".control-link-sort-icon").disabled = true;
+        helper.e("[for=control-link-display-letter-size]").setAttribute("disabled", "");
+        helper.e(".control-link-display-letter-size").disabled = true;
+        helper.e("[for=control-link-display-icon-size]").setAttribute("disabled", "");
+        helper.e(".control-link-display-icon-size").disabled = true;
+        helper.e(".control-link-display-alignment-horizontal-label").setAttribute("disabled", "");
+        helper.e(".control-link-display-alignment-horizontal-left").disabled = true;
+        helper.e(".control-link-display-alignment-horizontal-center").disabled = true;
+        helper.e(".control-link-display-alignment-horizontal-right").disabled = true;
+        helper.e(".control-link-display-alignment-vertical-label").setAttribute("disabled", "");
+        helper.e(".control-link-display-alignment-vertical-top").disabled = true;
+        helper.e(".control-link-display-alignment-vertical-center").disabled = true;
+        helper.e(".control-link-display-alignment-vertical-bottom").disabled = true;
+      };
+      if (state.get().link.show && state.get().link.display.show) {
+        helper.e("[for=control-link-display-letter-size]").removeAttribute("disabled");
+        helper.e(".control-link-display-letter-size").disabled = false;
+        helper.e("[for=control-link-display-icon-size]").removeAttribute("disabled");
+        helper.e(".control-link-display-icon-size").disabled = false;
+      } else {
+        helper.e("[for=control-link-display-letter-size]").setAttribute("disabled", "");
+        helper.e(".control-link-display-letter-size").disabled = true;
+        helper.e("[for=control-link-display-icon-size]").setAttribute("disabled", "");
+        helper.e(".control-link-display-icon-size").disabled = true;
       };
       if (state.get().link.show && state.get().link.url.show) {
         helper.e(".control-link-url-style-dark").disabled = false;
@@ -2269,6 +2384,13 @@ var control = (function() {
         helper.e(".control-link-items-alignment-horizontal-left").disabled = false;
         helper.e(".control-link-items-alignment-horizontal-center").disabled = false;
         helper.e(".control-link-items-alignment-horizontal-right").disabled = false;
+      } else {
+        helper.e("[for=control-link-items-width]").setAttribute("disabled", "");
+        helper.e(".control-link-items-width").disabled = true;
+        helper.e(".control-link-items-alignment-horizontal-label").setAttribute("disabled", "");
+        helper.e(".control-link-items-alignment-horizontal-left").disabled = true;
+        helper.e(".control-link-items-alignment-horizontal-center").disabled = true;
+        helper.e(".control-link-items-alignment-horizontal-right").disabled = true;
       };
     };
     var _background = function() {
