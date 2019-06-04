@@ -41,13 +41,15 @@
   border-radius: var(--radius) var(--radius) 0 0;
   padding: 2em;
   max-height: calc(90vh - 3.6666666667em);
-  overflow: auto;
+  overflow-y: auto;
   box-sizing: border-box;
   z-index: 1;
   position: relative;
 }
 
-.modal-heading {}
+.modal-heading {
+  overflow-x: hidden;
+}
 
 .modal-heading:focus {
   outline: none;
