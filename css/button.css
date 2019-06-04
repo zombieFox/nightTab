@@ -146,3 +146,9 @@ button [class*=" button-"]:last-child,
   background-color: transparent;
   color: transparent;
 }
+
+.button-wrap {
+  padding: 0.5em 0;
+  position: relative;
+  width: 100%;
+}

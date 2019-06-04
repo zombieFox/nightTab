@@ -3,7 +3,7 @@ var state = (function() {
   var current = {
     header: {
       area: {
-        width: 90,
+        width: 100,
         alignment: {
           horizontal: "center"
         }
@@ -134,7 +134,7 @@ var state = (function() {
     },
     link: {
       area: {
-        width: 90,
+        width: 100,
         alignment: {
           horizontal: "center"
         }
@@ -156,7 +156,7 @@ var state = (function() {
           size: 2
         },
         icon: {
-          size: 2.50
+          size: 2.5
         }
       },
       name: {
@@ -178,7 +178,7 @@ var state = (function() {
         horizontal: "center",
         vertical: "center"
       },
-      width: 100,
+      width: 80,
       scrollPastEnd: false,
       title: "New Tab"
     },

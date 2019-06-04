@@ -385,7 +385,7 @@ var update = (function() {
         size: 2
       },
       icon: {
-        size: 2.50
+        size: 2.5
       }
     };
     return data;

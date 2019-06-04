@@ -28,6 +28,379 @@ var control = (function() {
       accent.render();
     }
   }, {
+    element: helper.e(".control-layout-width"),
+    path: "layout.width",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".main"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      render();
+      layout.render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-horizontal-left"),
+    path: "layout.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-horizontal-center"),
+    path: "layout.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-horizontal-right"),
+    path: "layout.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-vertical-top"),
+    path: "layout.alignment.vertical",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-vertical-center"),
+    path: "layout.alignment.vertical",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-vertical-bottom"),
+    path: "layout.alignment.vertical",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-title"),
+    path: "layout.title",
+    type: "text",
+    func: function() {
+      title.render();
+    }
+  }, {
+    element: helper.e(".control-layout-scroll-past-end"),
+    path: "layout.scrollPastEnd",
+    type: "checkbox",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-area-width"),
+    path: "header.area.width",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area")
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area")
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".header-area"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      header.render.width.set();
+    }
+  }, {
+    element: helper.e(".control-header-area-width-match"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      header.render.width.match();
+      update();
+    }
+  }, {
+    element: helper.e(".control-header-area-alignment-horizontal-left"),
+    path: "header.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-area-alignment-horizontal-center"),
+    path: "header.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-area-alignment-horizontal-right"),
+    path: "header.area.alignment.horizontal",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-items-alignment-horizontal-left"),
+    path: "header.items.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-items-alignment-horizontal-center"),
+    path: "header.items.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-items-alignment-horizontal-right"),
+    path: "header.items.alignment.horizontal",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-show"),
+    path: "header.greeting.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-type-good"),
+    path: "header.greeting.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-type-hello"),
+    path: "header.greeting.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-type-hi"),
+    path: "header.greeting.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+    }
+  }, {
+    element: helper.e(".control-header-greeting-name"),
+    path: "header.greeting.name",
+    type: "text",
+    func: function() {
+      render();
+      dependents();
+      greeting.clear();
+      greeting.render();
+    }
+  }, {
+    element: helper.e(".control-header-transitional-show"),
+    path: "header.transitional.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      transitional.clear();
+      transitional.render();
+    }
+  }, {
+    element: helper.e(".control-header-transitional-type-timeanddate"),
+    path: "header.transitional.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      transitional.clear();
+      transitional.render();
+    }
+  }, {
+    element: helper.e(".control-header-transitional-type-its"),
+    path: "header.transitional.type",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      transitional.clear();
+      transitional.render();
+    }
+  }, {
     element: helper.e(".control-header-clock-hours-show"),
     path: "header.clock.hours.show",
     type: "checkbox",
@@ -42,7 +415,7 @@ var control = (function() {
       transitional.render();
     }
   }, {
-    element: helper.e(".control-header-clock-hours-number"),
+    element: helper.e(".control-header-clock-hours-display-number"),
     path: "header.clock.hours.display",
     type: "radio",
     func: function() {
@@ -56,7 +429,7 @@ var control = (function() {
       transitional.render();
     }
   }, {
-    element: helper.e(".control-header-clock-hours-word"),
+    element: helper.e(".control-header-clock-hours-display-word"),
     path: "header.clock.hours.display",
     type: "radio",
     func: function() {
@@ -84,7 +457,7 @@ var control = (function() {
       transitional.render();
     }
   }, {
-    element: helper.e(".control-header-clock-minutes-number"),
+    element: helper.e(".control-header-clock-minutes-display-number"),
     path: "header.clock.minutes.display",
     type: "radio",
     func: function() {
@@ -98,7 +471,7 @@ var control = (function() {
       transitional.render();
     }
   }, {
-    element: helper.e(".control-header-clock-minutes-word"),
+    element: helper.e(".control-header-clock-minutes-display-word"),
     path: "header.clock.minutes.display",
     type: "radio",
     func: function() {
@@ -126,7 +499,7 @@ var control = (function() {
       transitional.render();
     }
   }, {
-    element: helper.e(".control-header-clock-seconds-number"),
+    element: helper.e(".control-header-clock-seconds-display-number"),
     path: "header.clock.seconds.display",
     type: "radio",
     func: function() {
@@ -140,7 +513,7 @@ var control = (function() {
       transitional.render();
     }
   }, {
-    element: helper.e(".control-header-clock-seconds-word"),
+    element: helper.e(".control-header-clock-seconds-display-word"),
     path: "header.clock.seconds.display",
     type: "radio",
     func: function() {
@@ -218,20 +591,6 @@ var control = (function() {
       transitional.render();
     }
   }, {
-    element: helper.e(".control-header-date-day-display-word"),
-    path: "header.date.day.display",
-    type: "radio",
-    func: function() {
-      render();
-      dependents();
-      date.clear();
-      date.render();
-      greeting.clear();
-      greeting.render();
-      transitional.clear();
-      transitional.render();
-    }
-  }, {
     element: helper.e(".control-header-date-day-week-start-monday"),
     path: "header.date.day.weekStart",
     type: "radio",
@@ -248,6 +607,20 @@ var control = (function() {
   }, {
     element: helper.e(".control-header-date-day-week-start-sunday"),
     path: "header.date.day.weekStart",
+    type: "radio",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+    }
+  }, {
+    element: helper.e(".control-header-date-day-display-word"),
+    path: "header.date.day.display",
     type: "radio",
     func: function() {
       render();
@@ -466,6 +839,20 @@ var control = (function() {
       transitional.render();
     }
   }, {
+    element: helper.e(".control-header-date-separator-show"),
+    path: "header.date.separator.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      date.clear();
+      date.render();
+      greeting.clear();
+      greeting.render();
+      transitional.clear();
+      transitional.render();
+    }
+  }, {
     element: helper.e(".control-header-date-format-datemonth"),
     path: "header.date.format",
     type: "radio",
@@ -483,20 +870,6 @@ var control = (function() {
     element: helper.e(".control-header-date-format-monthdate"),
     path: "header.date.format",
     type: "radio",
-    func: function() {
-      render();
-      dependents();
-      date.clear();
-      date.render();
-      greeting.clear();
-      greeting.render();
-      transitional.clear();
-      transitional.render();
-    }
-  }, {
-    element: helper.e(".control-header-date-separator-show"),
-    path: "header.date.separator.show",
-    type: "checkbox",
     func: function() {
       render();
       dependents();
@@ -689,169 +1062,6 @@ var control = (function() {
       header.render.shade();
     }
   }, {
-    element: helper.e(".control-header-area-width"),
-    path: "header.area.width",
-    type: "range",
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render({
-            element: helper.e(".header-area"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.destroy();
-      }
-    }],
-    func: function() {
-      header.render.width.set();
-    }
-  }, {
-    element: helper.e(".control-header-area-width-match"),
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.destroy();
-      }
-    }],
-    func: function() {
-      header.render.width.match();
-      update();
-    }
-  }, {
-    element: helper.e(".control-header-area-alignment-horizontal-left"),
-    path: "header.area.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-header-area-alignment-horizontal-center"),
-    path: "header.area.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-header-area-alignment-horizontal-right"),
-    path: "header.area.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-header-items-alignment-horizontal-left"),
-    path: "header.items.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-header-items-alignment-horizontal-center"),
-    path: "header.items.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-header-items-alignment-horizontal-right"),
-    path: "header.items.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
     element: helper.e(".control-header-shade-style-always"),
     path: "header.shade.style",
     type: "radio",
@@ -1003,86 +1213,6 @@ var control = (function() {
       header.render.border();
     }
   }, {
-    element: helper.e(".control-header-greeting-show"),
-    path: "header.greeting.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-      greeting.clear();
-      greeting.render();
-    }
-  }, {
-    element: helper.e(".control-header-greeting-type-good"),
-    path: "header.greeting.type",
-    type: "radio",
-    func: function() {
-      render();
-      dependents();
-      greeting.clear();
-      greeting.render();
-    }
-  }, {
-    element: helper.e(".control-header-greeting-type-hello"),
-    path: "header.greeting.type",
-    type: "radio",
-    func: function() {
-      render();
-      dependents();
-      greeting.clear();
-      greeting.render();
-    }
-  }, {
-    element: helper.e(".control-header-greeting-type-hi"),
-    path: "header.greeting.type",
-    type: "radio",
-    func: function() {
-      render();
-      dependents();
-      greeting.clear();
-      greeting.render();
-    }
-  }, {
-    element: helper.e(".control-header-greeting-name"),
-    path: "header.greeting.name",
-    type: "text",
-    func: function() {
-      render();
-      dependents();
-      greeting.clear();
-      greeting.render();
-    }
-  }, {
-    element: helper.e(".control-header-transitional-show"),
-    path: "header.transitional.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-      transitional.clear();
-      transitional.render();
-    }
-  }, {
-    element: helper.e(".control-header-transitional-type-timeanddate"),
-    path: "header.transitional.type",
-    type: "radio",
-    func: function() {
-      render();
-      dependents();
-      transitional.clear();
-      transitional.render();
-    }
-  }, {
-    element: helper.e(".control-header-transitional-type-its"),
-    path: "header.transitional.type",
-    type: "radio",
-    func: function() {
-      render();
-      dependents();
-      transitional.clear();
-      transitional.render();
-    }
-  }, {
     element: helper.e(".control-link-area-width"),
     path: "link.area.width",
     type: "range",
@@ -1198,19 +1328,21 @@ var control = (function() {
       render();
     }
   }, {
+    element: helper.e(".control-link-link-show"),
+    path: "link.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      search.render();
+    }
+  }, {
     element: helper.e(".control-link-display-show"),
     path: "link.display.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
-    }
-  }, {
-    element: helper.e(".control-link-name-show"),
-    path: "link.name.show",
-    type: "checkbox",
-    func: function() {
-      render();
     }
   }, {
     element: helper.e(".control-link-display-letter-size"),
@@ -1227,6 +1359,36 @@ var control = (function() {
     valueMod: ["float"],
     func: function() {
       link.render.displayLetterIcon.size();
+    }
+  }, {
+    element: helper.e(".control-link-name-show"),
+    path: "link.name.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-link-url-show"),
+    path: "link.url.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-link-url-style-dark"),
+    path: "link.url.style",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-url-style-light"),
+    path: "link.url.style",
+    type: "radio",
+    func: function() {
+      render();
     }
   }, {
     element: helper.e(".control-link-display-alignment-horizontal-left"),
@@ -1269,15 +1431,6 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-    }
-  }, {
-    element: helper.e(".control-link-link-show"),
-    path: "link.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-      search.render();
     }
   }, {
     element: helper.e(".control-link-fit-best"),
@@ -1390,28 +1543,6 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-url-show"),
-    path: "link.url.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-    }
-  }, {
-    element: helper.e(".control-link-url-style-dark"),
-    path: "link.url.style",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-link-url-style-light"),
-    path: "link.url.style",
-    type: "radio",
-    func: function() {
-      render();
-    }
-  }, {
     element: helper.e(".control-link-new-tab"),
     path: "link.newTab",
     type: "checkbox",
@@ -1464,163 +1595,6 @@ var control = (function() {
     func: function() {
       link.clear();
       link.render.link();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-horizontal-left"),
-    path: "layout.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".main"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-horizontal-center"),
-    path: "layout.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".main"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-horizontal-right"),
-    path: "layout.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".main"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-vertical-top"),
-    path: "layout.alignment.vertical",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".main"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-vertical-center"),
-    path: "layout.alignment.vertical",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".main"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-alignment-vertical-bottom"),
-    path: "layout.alignment.vertical",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".main"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-width"),
-    path: "layout.width",
-    type: "range",
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.render({
-          element: helper.e(".main"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.render({
-          element: helper.e(".main"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render({
-            element: helper.e(".main"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.destroy();
-      }
-    }],
-    func: function() {
-      render();
-      layout.render();
-    }
-  }, {
-    element: helper.e(".control-layout-scroll-past-end"),
-    path: "layout.scrollPastEnd",
-    type: "checkbox",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-layout-title"),
-    path: "layout.title",
-    type: "text",
-    func: function() {
-      title.render();
     }
   }, {
     element: helper.e(".control-theme-style-dark"),
@@ -1834,10 +1808,10 @@ var control = (function() {
     };
     var _edit = function() {
       if (state.get().link.edit) {
-        helper.addClass(html, "is-bookmarks-edit");
+        helper.addClass(html, "is-link-edit");
         link.tabIndex();
       } else {
-        helper.removeClass(html, "is-bookmarks-edit");
+        helper.removeClass(html, "is-link-edit");
         link.tabIndex();
       };
     };
@@ -1861,9 +1835,9 @@ var control = (function() {
       } else {
         helper.removeClass(html, "is-header-search-show");
       };
-      helper.removeClass(html, "is-header-search-width-custom");
-      helper.removeClass(html, "is-header-search-width-auto");
-      helper.addClass(html, "is-header-search-width-" + state.get().header.search.width.style);
+      helper.removeClass(html, "is-header-search-width-style-custom");
+      helper.removeClass(html, "is-header-search-width-style-auto");
+      helper.addClass(html, "is-header-search-width-style-" + state.get().header.search.width.style);
       helper.removeClass(html, "is-header-search-text-align-left");
       helper.removeClass(html, "is-header-search-text-align-center");
       helper.removeClass(html, "is-header-search-text-align-right");
@@ -1890,54 +1864,54 @@ var control = (function() {
       helper.addClass(html, "is-link-display-alignment-vertical-" + state.get().link.display.alignment.vertical);
       var view = {
         block: function() {
-          helper.addClass(html, "is-bookmarks-style-block");
-          helper.removeClass(html, "is-bookmarks-style-list");
+          helper.addClass(html, "is-link-style-block");
+          helper.removeClass(html, "is-link-style-list");
         },
         list: function() {
-          helper.removeClass(html, "is-bookmarks-style-block");
-          helper.addClass(html, "is-bookmarks-style-list");
+          helper.removeClass(html, "is-link-style-block");
+          helper.addClass(html, "is-link-style-list");
         }
       };
       view[state.get().link.style]();
       var fit = {
         best: function() {
-          helper.addClass(html, "is-bookmarks-fit-best");
-          helper.removeClass(html, "is-bookmarks-fit-custom");
+          helper.addClass(html, "is-link-fit-best");
+          helper.removeClass(html, "is-link-fit-custom");
         },
         custom: function() {
-          helper.removeClass(html, "is-bookmarks-fit-best");
-          helper.addClass(html, "is-bookmarks-fit-custom");
+          helper.removeClass(html, "is-link-fit-best");
+          helper.addClass(html, "is-link-fit-custom");
         }
       };
       fit[state.get().link.fit]();
       if (state.get().link.show) {
-        helper.addClass(html, "is-bookmarks-show-link");
+        helper.addClass(html, "is-link-show");
       } else {
-        helper.removeClass(html, "is-bookmarks-show-link");
+        helper.removeClass(html, "is-link-show");
       };
       if (state.get().link.name.show) {
-        helper.addClass(html, "is-bookmarks-show-name");
+        helper.addClass(html, "is-link-name-show");
       } else {
-        helper.removeClass(html, "is-bookmarks-show-name");
+        helper.removeClass(html, "is-link-name-show");
       };
       if (state.get().link.display.show) {
-        helper.addClass(html, "is-bookmarks-show-display");
+        helper.addClass(html, "is-link-display-show");
       } else {
-        helper.removeClass(html, "is-bookmarks-show-display");
+        helper.removeClass(html, "is-link-display-show");
       };
       if (state.get().link.url.show) {
-        helper.addClass(html, "is-bookmarks-show-url");
+        helper.addClass(html, "is-link-show-url");
       } else {
-        helper.removeClass(html, "is-bookmarks-show-url");
+        helper.removeClass(html, "is-link-show-url");
       };
       var urlText = {
         dark: function() {
-          helper.addClass(html, "is-bookmarks-url-dark");
-          helper.removeClass(html, "is-bookmarks-url-light");
+          helper.addClass(html, "is-link-url-dark");
+          helper.removeClass(html, "is-link-url-light");
         },
         light: function() {
-          helper.removeClass(html, "is-bookmarks-url-dark");
-          helper.addClass(html, "is-bookmarks-url-light");
+          helper.removeClass(html, "is-link-url-dark");
+          helper.addClass(html, "is-link-url-light");
         }
       };
       urlText[state.get().link.url.style]();
@@ -1964,30 +1938,30 @@ var control = (function() {
     };
     var _editAdd = function() {
       if (state.get().header.editAdd.show) {
-        helper.addClass(html, "is-header-edit-add");
+        helper.addClass(html, "is-header-edit-add-show");
       } else {
-        helper.removeClass(html, "is-header-edit-add");
+        helper.removeClass(html, "is-header-edit-add-show");
       };
     };
     var _accent = function() {
       if (state.get().header.accent.show) {
-        helper.addClass(html, "is-header-accent");
+        helper.addClass(html, "is-header-accent-show");
       } else {
-        helper.removeClass(html, "is-header-accent");
+        helper.removeClass(html, "is-header-accent-show");
       };
     };
     var _greeting = function() {
       if (state.get().header.greeting.show) {
-        helper.addClass(html, "is-header-greeting");
+        helper.addClass(html, "is-header-greeting-show");
       } else {
-        helper.removeClass(html, "is-header-greeting");
+        helper.removeClass(html, "is-header-greeting-show");
       };
     };
     var _transitional = function() {
       if (state.get().header.transitional.show && (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
-        helper.addClass(html, "is-header-transitional");
+        helper.addClass(html, "is-header-transitional-show");
       } else {
-        helper.removeClass(html, "is-header-transitional");
+        helper.removeClass(html, "is-header-transitional-show");
       };
     };
     var _background = function() {
@@ -2195,25 +2169,25 @@ var control = (function() {
         helper.e(".control-header-clock-meridiem-show").disabled = true;
       };
       if (state.get().header.clock.hours.show) {
-        helper.e(".control-header-clock-hours-number").disabled = false;
-        helper.e(".control-header-clock-hours-word").disabled = false;
+        helper.e(".control-header-clock-hours-display-number").disabled = false;
+        helper.e(".control-header-clock-hours-display-word").disabled = false;
       } else {
-        helper.e(".control-header-clock-hours-number").disabled = true;
-        helper.e(".control-header-clock-hours-word").disabled = true;
+        helper.e(".control-header-clock-hours-display-number").disabled = true;
+        helper.e(".control-header-clock-hours-display-word").disabled = true;
       };
       if (state.get().header.clock.minutes.show) {
-        helper.e(".control-header-clock-minutes-number").disabled = false;
-        helper.e(".control-header-clock-minutes-word").disabled = false;
+        helper.e(".control-header-clock-minutes-display-number").disabled = false;
+        helper.e(".control-header-clock-minutes-display-word").disabled = false;
       } else {
-        helper.e(".control-header-clock-minutes-number").disabled = true;
-        helper.e(".control-header-clock-minutes-word").disabled = true;
+        helper.e(".control-header-clock-minutes-display-number").disabled = true;
+        helper.e(".control-header-clock-minutes-display-word").disabled = true;
       };
       if (state.get().header.clock.seconds.show) {
-        helper.e(".control-header-clock-seconds-number").disabled = false;
-        helper.e(".control-header-clock-seconds-word").disabled = false;
+        helper.e(".control-header-clock-seconds-display-number").disabled = false;
+        helper.e(".control-header-clock-seconds-display-word").disabled = false;
       } else {
-        helper.e(".control-header-clock-seconds-number").disabled = true;
-        helper.e(".control-header-clock-seconds-word").disabled = true;
+        helper.e(".control-header-clock-seconds-display-number").disabled = true;
+        helper.e(".control-header-clock-seconds-display-word").disabled = true;
       };
     };
     var _search = function() {
@@ -2343,6 +2317,25 @@ var control = (function() {
         helper.e(".control-link-display-letter-size").disabled = true;
         helper.e("[for=control-link-display-icon-size]").setAttribute("disabled", "");
         helper.e(".control-link-display-icon-size").disabled = true;
+        helper.e(".control-link-display-alignment-horizontal-label").setAttribute("disabled", "");
+        helper.e(".control-link-display-alignment-horizontal-left").disabled = true;
+        helper.e(".control-link-display-alignment-horizontal-center").disabled = true;
+        helper.e(".control-link-display-alignment-horizontal-right").disabled = true;
+        helper.e(".control-link-display-alignment-vertical-label").setAttribute("disabled", "");
+        helper.e(".control-link-display-alignment-vertical-top").disabled = true;
+        helper.e(".control-link-display-alignment-vertical-center").disabled = true;
+        helper.e(".control-link-display-alignment-vertical-bottom").disabled = true;
+      };
+      if (state.get().link.show && (state.get().link.display.show || state.get().link.name.show || state.get().link.url.show)) {
+        helper.e(".control-link-display-alignment-horizontal-label").removeAttribute("disabled");
+        helper.e(".control-link-display-alignment-horizontal-left").disabled = false;
+        helper.e(".control-link-display-alignment-horizontal-center").disabled = false;
+        helper.e(".control-link-display-alignment-horizontal-right").disabled = false;
+        helper.e(".control-link-display-alignment-vertical-label").removeAttribute("disabled");
+        helper.e(".control-link-display-alignment-vertical-top").disabled = false;
+        helper.e(".control-link-display-alignment-vertical-center").disabled = false;
+        helper.e(".control-link-display-alignment-vertical-bottom").disabled = false;
+      } else {
         helper.e(".control-link-display-alignment-horizontal-label").setAttribute("disabled", "");
         helper.e(".control-link-display-alignment-horizontal-left").disabled = true;
         helper.e(".control-link-display-alignment-horizontal-center").disabled = true;
