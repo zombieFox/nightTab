@@ -45,17 +45,17 @@
   opacity: var(--header-shade-opacity);
 }
 
-.is-header-shade-border-top-show .header-border {
+.is-header-border-top-show .header-border {
   border-top: var(--header-border-width-top) solid rgb(var(--accent));
 }
 
-.is-header-shade-border-bottom-show .header-border {
+.is-header-border-bottom-show .header-border {
   border-bottom: var(--header-border-width-bottom) solid rgb(var(--accent));
 }
 
 .header-area {
-  padding-top: calc(var(--gutter) * 3 + var(--header-shade-padding-top));
-  padding-bottom: calc(var(--gutter) * 3 + var(--header-shade-padding-bottom));
+  padding-top: calc(var(--gutter) * 3 + var(--header-padding-top));
+  padding-bottom: calc(var(--gutter) * 3 + var(--header-padding-bottom));
   padding-left: calc(var(--gutter) * 3);
   padding-right: calc(var(--gutter) * 3);
   position: relative;

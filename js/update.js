@@ -391,6 +391,15 @@ var update = (function() {
     return data;
   };
 
+  var _update_340 = function(data) {
+    data.version = "3.4.0";
+    data.state.header.padding = data.state.header.shade.padding;
+    delete data.state.header.shade.padding;
+    data.state.header.border = data.state.header.shade.border;
+    delete data.state.header.shade.border;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -492,6 +501,10 @@ var update = (function() {
       if (version.compare(data.version, "3.2.0") == -1) {
         console.log("\t= running update 3.2.0");
         data = _update_320(data);
+      };
+      if (version.compare(data.version, "3.4.0") == -1) {
+        console.log("\t= running update 3.4.0");
+        data = _update_340(data);
       };
     };
     // if no update is needed

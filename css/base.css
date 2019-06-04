@@ -71,10 +71,10 @@
   --header-shade-color: transparent;
   --header-shade-opacity: none;
   --header-search-width: 0%;
-  --header-shade-padding-top: calc(var(--line-width) * var(--header-shade-padding-multiplier-top));
-  --header-shade-padding-bottom: calc(var(--line-width) * var(--header-shade-padding-multiplier-bottom));
-  --header-shade-padding-multiplier-top: 4;
-  --header-shade-padding-multiplier-bottom: 4;
+  --header-padding-top: calc(var(--line-width) * var(--header-padding-multiplier-top));
+  --header-padding-bottom: calc(var(--line-width) * var(--header-padding-multiplier-bottom));
+  --header-padding-multiplier-top: 4;
+  --header-padding-multiplier-bottom: 4;
   --header-border-width-top: calc(var(--line-width) * var(--header-border-width-multiplier-top));
   --header-border-width-bottom: calc(var(--line-width) * var(--header-border-width-multiplier-bottom));
   --header-border-width-multiplier-top: 1;

@@ -105,21 +105,21 @@ var state = (function() {
       },
       shade: {
         show: true,
-        padding: {
-          top: 0,
-          bottom: 0
-        },
         style: "scroll",
         opacity: 0.95,
-        border: {
-          top: {
-            show: false,
-            width: 1
-          },
-          bottom: {
-            show: false,
-            width: 1
-          }
+      },
+      padding: {
+        top: 0,
+        bottom: 0
+      },
+      border: {
+        top: {
+          show: false,
+          width: 1
+        },
+        bottom: {
+          show: false,
+          width: 1
         }
       },
       greeting: {

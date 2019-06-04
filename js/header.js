@@ -87,14 +87,14 @@ var header = (function() {
 
   var _padding = function() {
     var html = helper.e("html");
-    html.style.setProperty("--header-shade-padding-multiplier-top", state.get().header.shade.padding.top);
-    html.style.setProperty("--header-shade-padding-multiplier-bottom", state.get().header.shade.padding.bottom);
+    html.style.setProperty("--header-padding-multiplier-top", state.get().header.padding.top);
+    html.style.setProperty("--header-padding-multiplier-bottom", state.get().header.padding.bottom);
   };
 
   var _border = function() {
     var html = helper.e("html");
-    html.style.setProperty("--header-border-width-multiplier-top", state.get().header.shade.border.top.width);
-    html.style.setProperty("--header-border-width-multiplier-bottom", state.get().header.shade.border.bottom.width);
+    html.style.setProperty("--header-border-width-multiplier-top", state.get().header.border.top.width);
+    html.style.setProperty("--header-border-width-multiplier-bottom", state.get().header.border.bottom.width);
   };
 
   var _search = function() {

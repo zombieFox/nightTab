@@ -335,8 +335,6 @@ var control = (function() {
     path: "header.greeting.type",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       greeting.clear();
       greeting.render();
     }
@@ -345,8 +343,6 @@ var control = (function() {
     path: "header.greeting.type",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       greeting.clear();
       greeting.render();
     }
@@ -355,8 +351,6 @@ var control = (function() {
     path: "header.greeting.type",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       greeting.clear();
       greeting.render();
     }
@@ -365,8 +359,6 @@ var control = (function() {
     path: "header.greeting.name",
     type: "text",
     func: function() {
-      render();
-      dependents();
       greeting.clear();
       greeting.render();
     }
@@ -385,8 +377,6 @@ var control = (function() {
     path: "header.transitional.type",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       transitional.clear();
       transitional.render();
     }
@@ -395,8 +385,6 @@ var control = (function() {
     path: "header.transitional.type",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       transitional.clear();
       transitional.render();
     }
@@ -419,8 +407,6 @@ var control = (function() {
     path: "header.clock.hours.display",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       clock.clear();
       clock.render();
       greeting.clear();
@@ -433,8 +419,6 @@ var control = (function() {
     path: "header.clock.hours.display",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       clock.clear();
       clock.render();
       greeting.clear();
@@ -461,8 +445,6 @@ var control = (function() {
     path: "header.clock.minutes.display",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       clock.clear();
       clock.render();
       greeting.clear();
@@ -475,8 +457,6 @@ var control = (function() {
     path: "header.clock.minutes.display",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       clock.clear();
       clock.render();
       greeting.clear();
@@ -503,8 +483,6 @@ var control = (function() {
     path: "header.clock.seconds.display",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       clock.clear();
       clock.render();
       greeting.clear();
@@ -517,8 +495,6 @@ var control = (function() {
     path: "header.clock.seconds.display",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       clock.clear();
       clock.render();
       greeting.clear();
@@ -581,7 +557,6 @@ var control = (function() {
     path: "header.date.day.display",
     type: "radio",
     func: function() {
-      render();
       dependents();
       date.clear();
       date.render();
@@ -595,8 +570,6 @@ var control = (function() {
     path: "header.date.day.weekStart",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       date.clear();
       date.render();
       greeting.clear();
@@ -609,8 +582,6 @@ var control = (function() {
     path: "header.date.day.weekStart",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       date.clear();
       date.render();
       greeting.clear();
@@ -623,7 +594,6 @@ var control = (function() {
     path: "header.date.day.display",
     type: "radio",
     func: function() {
-      render();
       dependents();
       date.clear();
       date.render();
@@ -637,7 +607,6 @@ var control = (function() {
     path: "header.date.day.length",
     type: "radio",
     func: function() {
-      render();
       date.clear();
       date.render();
       greeting.clear();
@@ -650,7 +619,6 @@ var control = (function() {
     path: "header.date.day.length",
     type: "radio",
     func: function() {
-      render();
       date.clear();
       date.render();
       greeting.clear();
@@ -677,8 +645,6 @@ var control = (function() {
     path: "header.date.date.display",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       date.clear();
       date.render();
       greeting.clear();
@@ -691,8 +657,6 @@ var control = (function() {
     path: "header.date.date.display",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       date.clear();
       date.render();
       greeting.clear();
@@ -705,8 +669,6 @@ var control = (function() {
     path: "header.date.date.ordinal",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
       date.clear();
       date.render();
       greeting.clear();
@@ -733,7 +695,6 @@ var control = (function() {
     path: "header.date.month.display",
     type: "radio",
     func: function() {
-      render();
       dependents();
       date.clear();
       date.render();
@@ -747,8 +708,6 @@ var control = (function() {
     path: "header.date.month.ordinal",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
       date.clear();
       date.render();
       greeting.clear();
@@ -761,7 +720,6 @@ var control = (function() {
     path: "header.date.month.display",
     type: "radio",
     func: function() {
-      render();
       dependents();
       date.clear();
       date.render();
@@ -775,7 +733,6 @@ var control = (function() {
     path: "header.date.month.length",
     type: "radio",
     func: function() {
-      render();
       date.clear();
       date.render();
       greeting.clear();
@@ -788,7 +745,6 @@ var control = (function() {
     path: "header.date.month.length",
     type: "radio",
     func: function() {
-      render();
       date.clear();
       date.render();
       greeting.clear();
@@ -815,8 +771,6 @@ var control = (function() {
     path: "header.date.year.display",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       date.clear();
       date.render();
       greeting.clear();
@@ -829,8 +783,6 @@ var control = (function() {
     path: "header.date.year.display",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       date.clear();
       date.render();
       greeting.clear();
@@ -843,8 +795,6 @@ var control = (function() {
     path: "header.date.separator.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
       date.clear();
       date.render();
       greeting.clear();
@@ -857,8 +807,6 @@ var control = (function() {
     path: "header.date.format",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       date.clear();
       date.render();
       greeting.clear();
@@ -871,8 +819,6 @@ var control = (function() {
     path: "header.date.format",
     type: "radio",
     func: function() {
-      render();
-      dependents();
       date.clear();
       date.render();
       greeting.clear();
@@ -951,7 +897,6 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
       header.render.search();
     }
   }, {
@@ -963,7 +908,6 @@ var control = (function() {
     path: "header.search.engine.selected",
     type: "radio",
     func: function() {
-      render();
       dependents();
       search.render();
     }
@@ -972,7 +916,6 @@ var control = (function() {
     path: "header.search.engine.selected",
     type: "radio",
     func: function() {
-      render();
       dependents();
       search.render();
     }
@@ -981,7 +924,6 @@ var control = (function() {
     path: "header.search.engine.selected",
     type: "radio",
     func: function() {
-      render();
       dependents();
       search.render();
     }
@@ -990,7 +932,6 @@ var control = (function() {
     path: "header.search.engine.selected",
     type: "radio",
     func: function() {
-      render();
       dependents();
       search.render();
     }
@@ -999,7 +940,6 @@ var control = (function() {
     path: "header.search.engine.selected",
     type: "radio",
     func: function() {
-      render();
       dependents();
       search.render();
     }
@@ -1083,12 +1023,11 @@ var control = (function() {
     type: "range",
     valueMod: ["reverse", "float"],
     func: function() {
-      render();
       header.render.opacity();
     }
   }, {
-    element: helper.e(".control-header-shade-padding-top"),
-    path: "header.shade.padding.top",
+    element: helper.e(".control-header-padding-top"),
+    path: "header.padding.top",
     type: "range",
     additionalEvents: [{
       event: "input",
@@ -1130,12 +1069,11 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
       header.render.padding();
     }
   }, {
-    element: helper.e(".control-header-shade-padding-bottom"),
-    path: "header.shade.padding.bottom",
+    element: helper.e(".control-header-padding-bottom"),
+    path: "header.padding.bottom",
     type: "range",
     additionalEvents: [{
       event: "input",
@@ -1177,12 +1115,11 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
       header.render.padding();
     }
   }, {
-    element: helper.e(".control-header-shade-border-top-show"),
-    path: "header.shade.border.top.show",
+    element: helper.e(".control-header-border-top-show"),
+    path: "header.border.top.show",
     type: "checkbox",
     func: function() {
       render();
@@ -1190,15 +1127,15 @@ var control = (function() {
       header.render.border();
     }
   }, {
-    element: helper.e(".control-header-shade-border-top-width"),
-    path: "header.shade.border.top.width",
+    element: helper.e(".control-header-border-top-width"),
+    path: "header.border.top.width",
     type: "range",
     func: function() {
       header.render.border();
     }
   }, {
-    element: helper.e(".control-header-shade-border-bottom-show"),
-    path: "header.shade.border.bottom.show",
+    element: helper.e(".control-header-border-bottom-show"),
+    path: "header.border.bottom.show",
     type: "checkbox",
     func: function() {
       render();
@@ -1206,8 +1143,8 @@ var control = (function() {
       header.render.border();
     }
   }, {
-    element: helper.e(".control-header-shade-border-bottom-width"),
-    path: "header.shade.border.bottom.width",
+    element: helper.e(".control-header-border-bottom-width"),
+    path: "header.border.bottom.width",
     type: "range",
     func: function() {
       header.render.border();
@@ -1712,7 +1649,7 @@ var control = (function() {
     }
   }];
 
-  var _bind = function() {
+  var bind = function() {
     var eventType = {
       button: "click",
       checkbox: "change",
@@ -1806,122 +1743,158 @@ var control = (function() {
     var _menu = function() {
       helper.addClass(html, "is-menu");
     };
-    var _edit = function() {
-      if (state.get().link.edit) {
-        helper.addClass(html, "is-link-edit");
-        link.render.tabIndex();
-      } else {
-        helper.removeClass(html, "is-link-edit");
-        link.render.tabIndex();
+    var _header = function() {
+      var _area = function() {
+        helper.removeClass(html, "is-header-area-alignment-horizontal-left");
+        helper.removeClass(html, "is-header-area-alignment-horizontal-center");
+        helper.removeClass(html, "is-header-area-alignment-horizontal-right");
+        helper.addClass(html, "is-header-area-alignment-horizontal-" + state.get().header.area.alignment.horizontal);
       };
-    };
-    var _date = function() {
-      if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show) {
-        helper.addClass(html, "is-header-date-show");
-      } else {
-        helper.removeClass(html, "is-header-date-show");
+      var _items = function() {
+        helper.removeClass(html, "is-header-items-alignment-horizontal-left");
+        helper.removeClass(html, "is-header-items-alignment-horizontal-center");
+        helper.removeClass(html, "is-header-items-alignment-horizontal-right");
+        helper.addClass(html, "is-header-items-alignment-horizontal-" + state.get().header.items.alignment.horizontal);
       };
-    };
-    var _clock = function() {
-      if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
-        helper.addClass(html, "is-header-clock-show");
-      } else {
-        helper.removeClass(html, "is-header-clock-show");
+      var _clock = function() {
+        if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+          helper.addClass(html, "is-header-clock-show");
+        } else {
+          helper.removeClass(html, "is-header-clock-show");
+        };
       };
-    };
-    var _search = function() {
-      if (state.get().header.search.show) {
-        helper.addClass(html, "is-header-search-show");
-      } else {
+      var _date = function() {
+        if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show) {
+          helper.addClass(html, "is-header-date-show");
+        } else {
+          helper.removeClass(html, "is-header-date-show");
+        };
+      };
+      var _search = function() {
         helper.removeClass(html, "is-header-search-show");
+        helper.removeClass(html, "is-header-search-width-style-custom");
+        helper.removeClass(html, "is-header-search-width-style-auto");
+        helper.removeClass(html, "is-header-search-text-align-left");
+        helper.removeClass(html, "is-header-search-text-align-center");
+        helper.removeClass(html, "is-header-search-text-align-right");
+        if (state.get().header.search.show) {
+          helper.addClass(html, "is-header-search-show");
+          helper.addClass(html, "is-header-search-width-style-" + state.get().header.search.width.style);
+          helper.addClass(html, "is-header-search-text-align-" + state.get().header.search.text.align);
+        };
+        helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
+        helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
       };
-      helper.removeClass(html, "is-header-search-width-style-custom");
-      helper.removeClass(html, "is-header-search-width-style-auto");
-      helper.addClass(html, "is-header-search-width-style-" + state.get().header.search.width.style);
-      helper.removeClass(html, "is-header-search-text-align-left");
-      helper.removeClass(html, "is-header-search-text-align-center");
-      helper.removeClass(html, "is-header-search-text-align-right");
-      helper.addClass(html, "is-header-search-text-align-" + state.get().header.search.text.align);
-      helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
-      helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
+      var _editAdd = function() {
+        if (state.get().header.editAdd.show) {
+          helper.addClass(html, "is-header-edit-add-show");
+        } else {
+          helper.removeClass(html, "is-header-edit-add-show");
+        };
+      };
+      var _accent = function() {
+        if (state.get().header.accent.show) {
+          helper.addClass(html, "is-header-accent-show");
+        } else {
+          helper.removeClass(html, "is-header-accent-show");
+        };
+      };
+      var _greeting = function() {
+        if (state.get().header.greeting.show) {
+          helper.addClass(html, "is-header-greeting-show");
+        } else {
+          helper.removeClass(html, "is-header-greeting-show");
+        };
+      };
+      var _transitional = function() {
+        if (state.get().header.transitional.show && (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
+          helper.addClass(html, "is-header-transitional-show");
+        } else {
+          helper.removeClass(html, "is-header-transitional-show");
+        };
+      };
+      var _shade = function() {
+        helper.removeClass(html, "is-header-shade-show");
+        helper.removeClass(html, "is-header-shade-style-always");
+        helper.removeClass(html, "is-header-shade-style-scroll");
+        if (state.get().header.shade.show) {
+          helper.addClass(html, "is-header-shade-show");
+          helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
+        };
+      };
+      var _border = function() {
+        helper.removeClass(html, "is-header-border-top-show");
+        helper.removeClass(html, "is-header-border-bottom-show");
+        if (state.get().header.border.top.show) {
+          helper.addClass(html, "is-header-border-top-show");
+        };
+        if (state.get().header.border.bottom.show) {
+          helper.addClass(html, "is-header-border-bottom-show");
+        };
+      };
+      _area();
+      _items();
+      _clock();
+      _date();
+      _search();
+      _editAdd();
+      _accent();
+      _shade();
+      _border();
+      _greeting();
+      _transitional();
     };
     var _link = function() {
+      helper.removeClass(html, "is-link-show");
       helper.removeClass(html, "is-link-area-alignment-horizontal-left");
       helper.removeClass(html, "is-link-area-alignment-horizontal-center");
       helper.removeClass(html, "is-link-area-alignment-horizontal-right");
-      helper.addClass(html, "is-link-area-alignment-horizontal-" + state.get().link.area.alignment.horizontal);
-      helper.removeClass(html, "is-link-items-alignment-horizontal-left");
-      helper.removeClass(html, "is-link-items-alignment-horizontal-center");
-      helper.removeClass(html, "is-link-items-alignment-horizontal-right");
-      helper.addClass(html, "is-link-items-alignment-horizontal-" + state.get().link.items.alignment.horizontal);
+      helper.removeClass(html, "is-link-name-show");
+      helper.removeClass(html, "is-link-display-show");
       helper.removeClass(html, "is-link-display-alignment-horizontal-left");
       helper.removeClass(html, "is-link-display-alignment-horizontal-center");
       helper.removeClass(html, "is-link-display-alignment-horizontal-right");
-      helper.addClass(html, "is-link-display-alignment-horizontal-" + state.get().link.display.alignment.horizontal);
       helper.removeClass(html, "is-link-display-alignment-vertical-top");
       helper.removeClass(html, "is-link-display-alignment-vertical-center");
       helper.removeClass(html, "is-link-display-alignment-vertical-bottom");
-      helper.addClass(html, "is-link-display-alignment-vertical-" + state.get().link.display.alignment.vertical);
-      var view = {
-        block: function() {
-          helper.addClass(html, "is-link-style-block");
-          helper.removeClass(html, "is-link-style-list");
-        },
-        list: function() {
-          helper.removeClass(html, "is-link-style-block");
-          helper.addClass(html, "is-link-style-list");
-        }
-      };
-      view[state.get().link.style]();
-      var fit = {
-        best: function() {
-          helper.addClass(html, "is-link-fit-best");
-          helper.removeClass(html, "is-link-fit-custom");
-        },
-        custom: function() {
-          helper.removeClass(html, "is-link-fit-best");
-          helper.addClass(html, "is-link-fit-custom");
-        }
-      };
-      fit[state.get().link.fit]();
+      helper.removeClass(html, "is-link-url-show");
+      helper.removeClass(html, "is-link-url-style-light");
+      helper.removeClass(html, "is-link-url-style-dark");
+      helper.removeClass(html, "is-link-fit-custom");
+      helper.removeClass(html, "is-link-fit-best");
+      helper.removeClass(html, "is-link-items-alignment-horizontal-left");
+      helper.removeClass(html, "is-link-items-alignment-horizontal-center");
+      helper.removeClass(html, "is-link-items-alignment-horizontal-right");
+      helper.removeClass(html, "is-link-style-list");
+      helper.removeClass(html, "is-link-style-block");
+      helper.removeClass(html, "is-link-edit");
+      link.render.tabIndex();
       if (state.get().link.show) {
         helper.addClass(html, "is-link-show");
-      } else {
-        helper.removeClass(html, "is-link-show");
+        helper.addClass(html, "is-link-area-alignment-horizontal-" + state.get().link.area.alignment.horizontal);
+        helper.addClass(html, "is-link-items-alignment-horizontal-" + state.get().link.items.alignment.horizontal);
+        helper.addClass(html, "is-link-display-alignment-horizontal-" + state.get().link.display.alignment.horizontal);
+        helper.addClass(html, "is-link-display-alignment-vertical-" + state.get().link.display.alignment.vertical);
+        helper.addClass(html, "is-link-style-" + state.get().link.style);
+        helper.addClass(html, "is-link-fit-" + state.get().link.fit);
+        helper.addClass(html, "is-link-url-style-" + state.get().link.url.style);
+        if (state.get().link.name.show) {
+          helper.addClass(html, "is-link-name-show");
+        };
+        if (state.get().link.display.show) {
+          helper.addClass(html, "is-link-display-show");
+        };
+        if (state.get().link.url.show) {
+          helper.addClass(html, "is-link-url-show");
+        };
+        if (state.get().link.edit) {
+          helper.addClass(html, "is-link-edit");
+          link.render.tabIndex();
+        };
       };
-      if (state.get().link.name.show) {
-        helper.addClass(html, "is-link-name-show");
-      } else {
-        helper.removeClass(html, "is-link-name-show");
-      };
-      if (state.get().link.display.show) {
-        helper.addClass(html, "is-link-display-show");
-      } else {
-        helper.removeClass(html, "is-link-display-show");
-      };
-      if (state.get().link.url.show) {
-        helper.addClass(html, "is-link-show-url");
-      } else {
-        helper.removeClass(html, "is-link-show-url");
-      };
-      var urlText = {
-        dark: function() {
-          helper.addClass(html, "is-link-url-dark");
-          helper.removeClass(html, "is-link-url-light");
-        },
-        light: function() {
-          helper.removeClass(html, "is-link-url-dark");
-          helper.addClass(html, "is-link-url-light");
-        }
-      };
-      urlText[state.get().link.url.style]();
     };
     var _layout = function() {
-      if (state.get().layout.scrollPastEnd) {
-        helper.addClass(html, "is-layout-scroll-past-end");
-      } else {
-        helper.removeClass(html, "is-layout-scroll-past-end");
-      };
+      helper.removeClass(html, "is-layout-scroll-past-end");
       helper.removeClass(html, "is-layout-alignment-horizontal-left");
       helper.removeClass(html, "is-layout-alignment-horizontal-center");
       helper.removeClass(html, "is-layout-alignment-horizontal-right");
@@ -1930,39 +1903,14 @@ var control = (function() {
       helper.removeClass(html, "is-layout-alignment-vertical-bottom");
       helper.addClass(html, "is-layout-alignment-horizontal-" + state.get().layout.alignment.horizontal);
       helper.addClass(html, "is-layout-alignment-vertical-" + state.get().layout.alignment.vertical);
+      if (state.get().layout.scrollPastEnd) {
+        helper.addClass(html, "is-layout-scroll-past-end");
+      };
     };
     var _theme = function() {
       helper.removeClass(html, "is-theme-style-dark");
       helper.removeClass(html, "is-theme-style-light");
       helper.addClass(html, "is-theme-style-" + state.get().theme.style);
-    };
-    var _editAdd = function() {
-      if (state.get().header.editAdd.show) {
-        helper.addClass(html, "is-header-edit-add-show");
-      } else {
-        helper.removeClass(html, "is-header-edit-add-show");
-      };
-    };
-    var _accent = function() {
-      if (state.get().header.accent.show) {
-        helper.addClass(html, "is-header-accent-show");
-      } else {
-        helper.removeClass(html, "is-header-accent-show");
-      };
-    };
-    var _greeting = function() {
-      if (state.get().header.greeting.show) {
-        helper.addClass(html, "is-header-greeting-show");
-      } else {
-        helper.removeClass(html, "is-header-greeting-show");
-      };
-    };
-    var _transitional = function() {
-      if (state.get().header.transitional.show && (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
-        helper.addClass(html, "is-header-transitional-show");
-      } else {
-        helper.removeClass(html, "is-header-transitional-show");
-      };
     };
     var _background = function() {
       if (state.get().background.image.show) {
@@ -1971,291 +1919,275 @@ var control = (function() {
         helper.removeClass(html, "is-background-image-show");
       };
     };
-    var _header = function() {
-      if (state.get().header.shade.show) {
-        helper.addClass(html, "is-header-shade-show");
-        helper.removeClass(html, "is-header-shade-style-always");
-        helper.removeClass(html, "is-header-shade-style-scroll");
-        helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
-        helper.removeClass(html, "is-header-area-alignment-horizontal-left");
-        helper.removeClass(html, "is-header-area-alignment-horizontal-center");
-        helper.removeClass(html, "is-header-area-alignment-horizontal-right");
-        helper.addClass(html, "is-header-area-alignment-horizontal-" + state.get().header.area.alignment.horizontal);
-        helper.removeClass(html, "is-header-items-alignment-horizontal-left");
-        helper.removeClass(html, "is-header-items-alignment-horizontal-center");
-        helper.removeClass(html, "is-header-items-alignment-horizontal-right");
-        helper.addClass(html, "is-header-items-alignment-horizontal-" + state.get().header.items.alignment.horizontal);
-        if (state.get().header.shade.border.top.show) {
-          helper.addClass(html, "is-header-shade-border-top-show");
-        } else {
-          helper.removeClass(html, "is-header-shade-border-top-show");
-        };
-        if (state.get().header.shade.border.bottom.show) {
-          helper.addClass(html, "is-header-shade-border-bottom-show");
-        } else {
-          helper.removeClass(html, "is-header-shade-border-bottom-show");
-        };
-      } else {
-        helper.removeClass(html, "is-header-shade-show");
-        helper.removeClass(html, "is-header-shade-style-always");
-        helper.removeClass(html, "is-header-shade-style-scroll");
-        helper.removeClass(html, "is-header-shade-border-top-show");
-        helper.removeClass(html, "is-header-shade-border-bottom-show");
-      };
-      state.get().header.area.alignment.horizontal
-    };
     _menu();
-    _edit();
-    _greeting();
-    _transitional();
-    _date();
-    _clock();
-    _search();
-    _editAdd();
-    _accent();
+    _header();
     _link();
     _layout();
     _theme();
     _background();
-    _header();
   };
 
   var dependents = function() {
+    var _header = function() {
+      var _clock = function() {
+        var activeCount = 0;
+        var toCheck = [state.get().header.clock.seconds.show, state.get().header.clock.minutes.show, state.get().header.clock.hours.show];
+        toCheck.forEach(function(arrayItem, index) {
+          if (arrayItem == true) {
+            activeCount++;
+          };
+        });
+        if (activeCount >= 2 && (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
+          helper.e(".control-header-clock-separator-show").disabled = false;
+        } else {
+          helper.e(".control-header-clock-separator-show").disabled = true;
+        };
+        if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+          helper.e(".control-header-clock-hour24-show").disabled = false;
+          helper.e(".control-header-clock-meridiem-show").disabled = false;
+        } else {
+          helper.e(".control-header-clock-hour24-show").disabled = true;
+          helper.e(".control-header-clock-meridiem-show").disabled = true;
+        };
+        if ((state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) && !state.get().header.clock.hour24.show) {
+          helper.e(".control-header-clock-meridiem-show").disabled = false;
+        } else {
+          helper.e(".control-header-clock-meridiem-show").disabled = true;
+        };
+        if (state.get().header.clock.hours.show) {
+          helper.e(".control-header-clock-hours-display-number").disabled = false;
+          helper.e(".control-header-clock-hours-display-word").disabled = false;
+        } else {
+          helper.e(".control-header-clock-hours-display-number").disabled = true;
+          helper.e(".control-header-clock-hours-display-word").disabled = true;
+        };
+        if (state.get().header.clock.minutes.show) {
+          helper.e(".control-header-clock-minutes-display-number").disabled = false;
+          helper.e(".control-header-clock-minutes-display-word").disabled = false;
+        } else {
+          helper.e(".control-header-clock-minutes-display-number").disabled = true;
+          helper.e(".control-header-clock-minutes-display-word").disabled = true;
+        };
+        if (state.get().header.clock.seconds.show) {
+          helper.e(".control-header-clock-seconds-display-number").disabled = false;
+          helper.e(".control-header-clock-seconds-display-word").disabled = false;
+        } else {
+          helper.e(".control-header-clock-seconds-display-number").disabled = true;
+          helper.e(".control-header-clock-seconds-display-word").disabled = true;
+        };
+      };
+      var _date = function() {
+        var activeCount = 0;
+        var toCheck = [state.get().header.date.day.show, state.get().header.date.date.show, state.get().header.date.month.show, state.get().header.date.year.show];
+        toCheck.forEach(function(arrayItem, index) {
+          if (arrayItem == true) {
+            activeCount++;
+          };
+        });
+        if (activeCount >= 2 && (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show)) {
+          helper.e(".control-header-date-separator-show").disabled = false;
+        } else {
+          helper.e(".control-header-date-separator-show").disabled = true;
+        };
+        if (state.get().header.date.date.show && state.get().header.date.month.show) {
+          helper.e(".control-header-date-format-label").removeAttribute("disabled");
+          helper.e(".control-header-date-format-datemonth").disabled = false;
+          helper.e(".control-header-date-format-monthdate").disabled = false;
+        } else {
+          helper.e(".control-header-date-format-label").setAttribute("disabled", "");
+          helper.e(".control-header-date-format-datemonth").disabled = true;
+          helper.e(".control-header-date-format-monthdate").disabled = true;
+        };
+        if (state.get().header.date.day.show) {
+          helper.e(".control-header-date-day-display-number").disabled = false;
+          helper.e(".control-header-date-day-display-word").disabled = false;
+        } else {
+          helper.e(".control-header-date-day-display-number").disabled = true;
+          helper.e(".control-header-date-day-display-word").disabled = true;
+        };
+        if (state.get().header.date.date.show) {
+          helper.e(".control-header-date-date-display-number").disabled = false;
+          helper.e(".control-header-date-date-display-word").disabled = false;
+          helper.e(".control-header-date-date-ordinal").disabled = false;
+        } else {
+          helper.e(".control-header-date-date-display-number").disabled = true;
+          helper.e(".control-header-date-date-display-word").disabled = true;
+          helper.e(".control-header-date-date-ordinal").disabled = true;
+        };
+        if (state.get().header.date.month.show) {
+          helper.e(".control-header-date-month-display-number").disabled = false;
+          helper.e(".control-header-date-month-display-word").disabled = false;
+        } else {
+          helper.e(".control-header-date-month-display-number").disabled = true;
+          helper.e(".control-header-date-month-display-word").disabled = true;
+        };
+        if (state.get().header.date.year.show) {
+          helper.e(".control-header-date-year-display-number").disabled = false;
+          helper.e(".control-header-date-year-display-word").disabled = false;
+        } else {
+          helper.e(".control-header-date-year-display-number").disabled = true;
+          helper.e(".control-header-date-year-display-word").disabled = true;
+        };
+        if (state.get().header.date.day.show && state.get().header.date.day.display == "number") {
+          helper.e(".control-header-date-day-week-start-label").removeAttribute("disabled");
+          helper.e(".control-header-date-day-week-start-monday").disabled = false;
+          helper.e(".control-header-date-day-week-start-sunday").disabled = false;
+        } else {
+          helper.e(".control-header-date-day-week-start-label").setAttribute("disabled", "");
+          helper.e(".control-header-date-day-week-start-monday").disabled = true;
+          helper.e(".control-header-date-day-week-start-sunday").disabled = true;
+        };
+        if (state.get().header.date.day.show && state.get().header.date.day.display == "word") {
+          helper.e(".control-header-date-day-length-label").removeAttribute("disabled");
+          helper.e(".control-header-date-day-length-long").disabled = false;
+          helper.e(".control-header-date-day-length-short").disabled = false;
+        } else {
+          helper.e(".control-header-date-day-length-label").setAttribute("disabled", "");
+          helper.e(".control-header-date-day-length-long").disabled = true;
+          helper.e(".control-header-date-day-length-short").disabled = true;
+        };
+        if (state.get().header.date.month.show && state.get().header.date.month.display == "word") {
+          helper.e(".control-header-date-month-length-label").removeAttribute("disabled");
+          helper.e(".control-header-date-month-length-long").disabled = false;
+          helper.e(".control-header-date-month-length-short").disabled = false;
+        } else {
+          helper.e(".control-header-date-month-length-label").setAttribute("disabled", "");
+          helper.e(".control-header-date-month-length-long").disabled = true;
+          helper.e(".control-header-date-month-length-short").disabled = true;
+        };
+        if (state.get().header.date.month.show && state.get().header.date.month.display == "number") {
+          helper.e(".control-header-date-month-ordinal").disabled = false;
+        } else {
+          helper.e(".control-header-date-month-ordinal").disabled = true;
+        };
+      };
+      var _shade = function() {
+        if (state.get().header.shade.show) {
+          helper.e(".control-header-shade-style-always").disabled = false;
+          helper.e(".control-header-shade-style-scroll").disabled = false;
+          helper.e("[for=control-header-shade-opacity]").removeAttribute("disabled");
+          helper.e(".control-header-shade-opacity").disabled = false;
+        } else {
+          helper.e(".control-header-shade-style-always").disabled = true;
+          helper.e(".control-header-shade-style-scroll").disabled = true;
+          helper.e("[for=control-header-shade-opacity]").setAttribute("disabled", "");
+          helper.e(".control-header-shade-opacity").disabled = true;
+        };
+      };
+      var _border = function() {
+        if (state.get().header.border.top.show) {
+          helper.e("[for=control-header-border-top-width]").removeAttribute("disabled");
+          helper.e(".control-header-border-top-width").disabled = false;
+        } else {
+          helper.e("[for=control-header-border-top-width]").setAttribute("disabled", "");
+          helper.e(".control-header-border-top-width").disabled = true;
+        };
+        if (state.get().header.border.bottom.show) {
+          helper.e("[for=control-header-border-bottom-width]").removeAttribute("disabled");
+          helper.e(".control-header-border-bottom-width").disabled = false;
+        } else {
+          helper.e("[for=control-header-border-bottom-width]").setAttribute("disabled", "");
+          helper.e(".control-header-border-bottom-width").disabled = true;
+        };
+      };
+      var _search = function() {
+        if (state.get().header.search.show) {
+          helper.e(".control-header-search-width-style-label").removeAttribute("disabled");
+          helper.e(".control-header-search-width-style-auto").disabled = false;
+          helper.e(".control-header-search-width-style-custom").disabled = false;
+          helper.e("[for=control-header-search-width-custom]").removeAttribute("disabled");
+          helper.e(".control-header-search-width-custom").disabled = false;
+          helper.e(".control-header-search-focus").disabled = false;
+          helper.e(".control-header-search-engine-label").removeAttribute("disabled");
+          helper.e(".control-header-search-engine-google").disabled = false;
+          helper.e(".control-header-search-engine-duckduckgo").disabled = false;
+          helper.e(".control-header-search-engine-youtube").disabled = false;
+          helper.e(".control-header-search-engine-giphy").disabled = false;
+          helper.e(".control-header-search-engine-custom").disabled = false;
+          helper.e(".control-header-search-text-align-label").removeAttribute("disabled");
+          helper.e(".control-header-search-text-align-left").disabled = false;
+          helper.e(".control-header-search-text-align-center").disabled = false;
+          helper.e(".control-header-search-text-align-right").disabled = false;
+        } else {
+          helper.e(".control-header-search-width-style-label").setAttribute("disabled", "");
+          helper.e(".control-header-search-width-style-auto").disabled = true;
+          helper.e(".control-header-search-width-style-custom").disabled = true;
+          helper.e("[for=control-header-search-width-custom]").setAttribute("disabled", "");
+          helper.e(".control-header-search-width-custom").disabled = true;
+          helper.e(".control-header-search-focus").disabled = true;
+          helper.e(".control-header-search-engine-label").setAttribute("disabled", "");
+          helper.e(".control-header-search-engine-google").disabled = true;
+          helper.e(".control-header-search-engine-duckduckgo").disabled = true;
+          helper.e(".control-header-search-engine-youtube").disabled = true;
+          helper.e(".control-header-search-engine-giphy").disabled = true;
+          helper.e(".control-header-search-engine-custom").disabled = true;
+          helper.e(".control-header-search-text-align-label").setAttribute("disabled", "");
+          helper.e(".control-header-search-text-align-left").disabled = true;
+          helper.e(".control-header-search-text-align-center").disabled = true;
+          helper.e(".control-header-search-text-align-right").disabled = true;
+        };
+        if (state.get().header.search.show && state.get().header.search.engine.selected === "custom") {
+          helper.e("[for=control-header-search-engine-custom-name]").removeAttribute("disabled");
+          helper.e(".control-header-search-engine-custom-name").disabled = false;
+          helper.e("[for=control-header-search-engine-custom-url]").removeAttribute("disabled");
+          helper.e(".control-header-search-engine-custom-url").disabled = false;
+        } else {
+          helper.e("[for=control-header-search-engine-custom-name]").setAttribute("disabled", "");
+          helper.e(".control-header-search-engine-custom-name").disabled = true;
+          helper.e("[for=control-header-search-engine-custom-url]").setAttribute("disabled", "");
+          helper.e(".control-header-search-engine-custom-url").disabled = true;
+        };
+        if (state.get().header.search.show && state.get().header.search.width.style === "custom") {
+          helper.e("[for=control-header-search-width-custom]").removeAttribute("disabled");
+          helper.e(".control-header-search-width-custom").disabled = false;
+        } else {
+          helper.e("[for=control-header-search-width-custom]").setAttribute("disabled", "");
+          helper.e(".control-header-search-width-custom").disabled = true;
+        };
+      };
+      var _greeting = function() {
+        if (state.get().header.greeting.show) {
+          helper.e("[for=control-header-greeting-name]").removeAttribute("disabled");
+          helper.e(".control-header-greeting-name").disabled = false;
+          helper.e(".control-header-greeting-type-good").disabled = false;
+          helper.e(".control-header-greeting-type-hello").disabled = false;
+          helper.e(".control-header-greeting-type-hi").disabled = false;
+        } else {
+          helper.e("[for=control-header-greeting-name]").setAttribute("disabled", "");
+          helper.e(".control-header-greeting-name").disabled = true;
+          helper.e(".control-header-greeting-type-good").disabled = true;
+          helper.e(".control-header-greeting-type-hello").disabled = true;
+          helper.e(".control-header-greeting-type-hi").disabled = true;
+        };
+      };
+      var _transitional = function() {
+        if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+          helper.e(".control-header-transitional-show").disabled = false;
+        } else {
+          helper.e(".control-header-transitional-show").disabled = true;
+        };
+        if (state.get().header.transitional.show && ((state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show))) {
+          helper.e(".control-header-transitional-type-timeanddate").disabled = false;
+          helper.e(".control-header-transitional-type-its").disabled = false;
+        } else {
+          helper.e(".control-header-transitional-type-timeanddate").disabled = true;
+          helper.e(".control-header-transitional-type-its").disabled = true;
+        };
+      };
+      _clock();
+      _date();
+      _border();
+      _shade();
+      _search();
+      _greeting();
+      _transitional();
+    };
     var _edit = function() {
       if (bookmarks.get().length > 0) {
         helper.e(".control-edit").disabled = false;
       } else {
         helper.e(".control-edit").disabled = true;
         helper.e(".control-edit").checked = false;
-      };
-    };
-    var _date = function() {
-      var activeCount = 0;
-      var toCheck = [state.get().header.date.day.show, state.get().header.date.date.show, state.get().header.date.month.show, state.get().header.date.year.show];
-      toCheck.forEach(function(arrayItem, index) {
-        if (arrayItem == true) {
-          activeCount++;
-        };
-      });
-      if (activeCount >= 2 && (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show)) {
-        helper.e(".control-header-date-separator-show").disabled = false;
-      } else {
-        helper.e(".control-header-date-separator-show").disabled = true;
-      };
-      if (state.get().header.date.date.show && state.get().header.date.month.show) {
-        helper.e(".control-header-date-format-label").removeAttribute("disabled");
-        helper.e(".control-header-date-format-datemonth").disabled = false;
-        helper.e(".control-header-date-format-monthdate").disabled = false;
-      } else {
-        helper.e(".control-header-date-format-label").setAttribute("disabled", "");
-        helper.e(".control-header-date-format-datemonth").disabled = true;
-        helper.e(".control-header-date-format-monthdate").disabled = true;
-      };
-      if (state.get().header.date.day.show) {
-        helper.e(".control-header-date-day-display-number").disabled = false;
-        helper.e(".control-header-date-day-display-word").disabled = false;
-      } else {
-        helper.e(".control-header-date-day-display-number").disabled = true;
-        helper.e(".control-header-date-day-display-word").disabled = true;
-      };
-      if (state.get().header.date.date.show) {
-        helper.e(".control-header-date-date-display-number").disabled = false;
-        helper.e(".control-header-date-date-display-word").disabled = false;
-        helper.e(".control-header-date-date-ordinal").disabled = false;
-      } else {
-        helper.e(".control-header-date-date-display-number").disabled = true;
-        helper.e(".control-header-date-date-display-word").disabled = true;
-        helper.e(".control-header-date-date-ordinal").disabled = true;
-      };
-      if (state.get().header.date.month.show) {
-        helper.e(".control-header-date-month-display-number").disabled = false;
-        helper.e(".control-header-date-month-display-word").disabled = false;
-      } else {
-        helper.e(".control-header-date-month-display-number").disabled = true;
-        helper.e(".control-header-date-month-display-word").disabled = true;
-      };
-      if (state.get().header.date.year.show) {
-        helper.e(".control-header-date-year-display-number").disabled = false;
-        helper.e(".control-header-date-year-display-word").disabled = false;
-      } else {
-        helper.e(".control-header-date-year-display-number").disabled = true;
-        helper.e(".control-header-date-year-display-word").disabled = true;
-      };
-      if (state.get().header.date.day.show && state.get().header.date.day.display == "number") {
-        helper.e(".control-header-date-day-week-start-label").removeAttribute("disabled");
-        helper.e(".control-header-date-day-week-start-monday").disabled = false;
-        helper.e(".control-header-date-day-week-start-sunday").disabled = false;
-      } else {
-        helper.e(".control-header-date-day-week-start-label").setAttribute("disabled", "");
-        helper.e(".control-header-date-day-week-start-monday").disabled = true;
-        helper.e(".control-header-date-day-week-start-sunday").disabled = true;
-      };
-      if (state.get().header.date.day.show && state.get().header.date.day.display == "word") {
-        helper.e(".control-header-date-day-length-label").removeAttribute("disabled");
-        helper.e(".control-header-date-day-length-long").disabled = false;
-        helper.e(".control-header-date-day-length-short").disabled = false;
-      } else {
-        helper.e(".control-header-date-day-length-label").setAttribute("disabled", "");
-        helper.e(".control-header-date-day-length-long").disabled = true;
-        helper.e(".control-header-date-day-length-short").disabled = true;
-      };
-      if (state.get().header.date.month.show && state.get().header.date.month.display == "word") {
-        helper.e(".control-header-date-month-length-label").removeAttribute("disabled");
-        helper.e(".control-header-date-month-length-long").disabled = false;
-        helper.e(".control-header-date-month-length-short").disabled = false;
-      } else {
-        helper.e(".control-header-date-month-length-label").setAttribute("disabled", "");
-        helper.e(".control-header-date-month-length-long").disabled = true;
-        helper.e(".control-header-date-month-length-short").disabled = true;
-      };
-      if (state.get().header.date.month.show && state.get().header.date.month.display == "number") {
-        helper.e(".control-header-date-month-ordinal").disabled = false;
-      } else {
-        helper.e(".control-header-date-month-ordinal").disabled = true;
-      };
-    };
-    var _greeting = function() {
-      if (state.get().header.greeting.show) {
-        helper.e("[for=control-header-greeting-name]").removeAttribute("disabled");
-        helper.e(".control-header-greeting-name").disabled = false;
-        helper.e(".control-header-greeting-type-good").disabled = false;
-        helper.e(".control-header-greeting-type-hello").disabled = false;
-        helper.e(".control-header-greeting-type-hi").disabled = false;
-      } else {
-        helper.e("[for=control-header-greeting-name]").setAttribute("disabled", "");
-        helper.e(".control-header-greeting-name").disabled = true;
-        helper.e(".control-header-greeting-type-good").disabled = true;
-        helper.e(".control-header-greeting-type-hello").disabled = true;
-        helper.e(".control-header-greeting-type-hi").disabled = true;
-      };
-    };
-    var _transitional = function() {
-      if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
-        helper.e(".control-header-transitional-show").disabled = false;
-      } else {
-        helper.e(".control-header-transitional-show").disabled = true;
-      };
-      if (state.get().header.transitional.show && ((state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show))) {
-        helper.e(".control-header-transitional-type-timeanddate").disabled = false;
-        helper.e(".control-header-transitional-type-its").disabled = false;
-      } else {
-        helper.e(".control-header-transitional-type-timeanddate").disabled = true;
-        helper.e(".control-header-transitional-type-its").disabled = true;
-      };
-    };
-    var _clock = function() {
-      var activeCount = 0;
-      var toCheck = [state.get().header.clock.seconds.show, state.get().header.clock.minutes.show, state.get().header.clock.hours.show];
-      toCheck.forEach(function(arrayItem, index) {
-        if (arrayItem == true) {
-          activeCount++;
-        };
-      });
-      if (activeCount >= 2 && (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
-        helper.e(".control-header-clock-separator-show").disabled = false;
-      } else {
-        helper.e(".control-header-clock-separator-show").disabled = true;
-      };
-      if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
-        helper.e(".control-header-clock-hour24-show").disabled = false;
-        helper.e(".control-header-clock-meridiem-show").disabled = false;
-      } else {
-        helper.e(".control-header-clock-hour24-show").disabled = true;
-        helper.e(".control-header-clock-meridiem-show").disabled = true;
-      };
-      if ((state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) && !state.get().header.clock.hour24.show) {
-        helper.e(".control-header-clock-meridiem-show").disabled = false;
-      } else {
-        helper.e(".control-header-clock-meridiem-show").disabled = true;
-      };
-      if (state.get().header.clock.hours.show) {
-        helper.e(".control-header-clock-hours-display-number").disabled = false;
-        helper.e(".control-header-clock-hours-display-word").disabled = false;
-      } else {
-        helper.e(".control-header-clock-hours-display-number").disabled = true;
-        helper.e(".control-header-clock-hours-display-word").disabled = true;
-      };
-      if (state.get().header.clock.minutes.show) {
-        helper.e(".control-header-clock-minutes-display-number").disabled = false;
-        helper.e(".control-header-clock-minutes-display-word").disabled = false;
-      } else {
-        helper.e(".control-header-clock-minutes-display-number").disabled = true;
-        helper.e(".control-header-clock-minutes-display-word").disabled = true;
-      };
-      if (state.get().header.clock.seconds.show) {
-        helper.e(".control-header-clock-seconds-display-number").disabled = false;
-        helper.e(".control-header-clock-seconds-display-word").disabled = false;
-      } else {
-        helper.e(".control-header-clock-seconds-display-number").disabled = true;
-        helper.e(".control-header-clock-seconds-display-word").disabled = true;
-      };
-    };
-    var _search = function() {
-      if (state.get().header.search.show) {
-        helper.e(".control-header-search-width-style-label").removeAttribute("disabled");
-        helper.e(".control-header-search-width-style-auto").disabled = false;
-        helper.e(".control-header-search-width-style-custom").disabled = false;
-        helper.e("[for=control-header-search-width-custom]").removeAttribute("disabled");
-        helper.e(".control-header-search-width-custom").disabled = false;
-        helper.e(".control-header-search-focus").disabled = false;
-        helper.e(".control-header-search-engine-label").removeAttribute("disabled");
-        helper.e(".control-header-search-engine-google").disabled = false;
-        helper.e(".control-header-search-engine-duckduckgo").disabled = false;
-        helper.e(".control-header-search-engine-youtube").disabled = false;
-        helper.e(".control-header-search-engine-giphy").disabled = false;
-        helper.e(".control-header-search-engine-custom").disabled = false;
-        helper.e(".control-header-search-text-align-label").removeAttribute("disabled");
-        helper.e(".control-header-search-text-align-left").disabled = false;
-        helper.e(".control-header-search-text-align-center").disabled = false;
-        helper.e(".control-header-search-text-align-right").disabled = false;
-      } else {
-        helper.e(".control-header-search-width-style-label").setAttribute("disabled", "");
-        helper.e(".control-header-search-width-style-auto").disabled = true;
-        helper.e(".control-header-search-width-style-custom").disabled = true;
-        helper.e("[for=control-header-search-width-custom]").setAttribute("disabled", "");
-        helper.e(".control-header-search-width-custom").disabled = true;
-        helper.e(".control-header-search-focus").disabled = true;
-        helper.e(".control-header-search-engine-label").setAttribute("disabled", "");
-        helper.e(".control-header-search-engine-google").disabled = true;
-        helper.e(".control-header-search-engine-duckduckgo").disabled = true;
-        helper.e(".control-header-search-engine-youtube").disabled = true;
-        helper.e(".control-header-search-engine-giphy").disabled = true;
-        helper.e(".control-header-search-engine-custom").disabled = true;
-        helper.e(".control-header-search-text-align-label").setAttribute("disabled", "");
-        helper.e(".control-header-search-text-align-left").disabled = true;
-        helper.e(".control-header-search-text-align-center").disabled = true;
-        helper.e(".control-header-search-text-align-right").disabled = true;
-      };
-      if (state.get().header.search.show && state.get().header.search.engine.selected === "custom") {
-        helper.e("[for=control-header-search-engine-custom-name]").removeAttribute("disabled");
-        helper.e(".control-header-search-engine-custom-name").disabled = false;
-        helper.e("[for=control-header-search-engine-custom-url]").removeAttribute("disabled");
-        helper.e(".control-header-search-engine-custom-url").disabled = false;
-      } else {
-        helper.e("[for=control-header-search-engine-custom-name]").setAttribute("disabled", "");
-        helper.e(".control-header-search-engine-custom-name").disabled = true;
-        helper.e("[for=control-header-search-engine-custom-url]").setAttribute("disabled", "");
-        helper.e(".control-header-search-engine-custom-url").disabled = true;
-      };
-      if (state.get().header.search.show && state.get().header.search.width.style === "custom") {
-        helper.e("[for=control-header-search-width-custom]").removeAttribute("disabled");
-        helper.e(".control-header-search-width-custom").disabled = false;
-      } else {
-        helper.e("[for=control-header-search-width-custom]").setAttribute("disabled", "");
-        helper.e(".control-header-search-width-custom").disabled = true;
-      };
-    };
-    var _theme = function() {
-      if (state.get().theme.accent.random.active) {
-        helper.eA("input[name='control-theme-accent-random-style']").forEach(function(arrayItem, index) {
-          arrayItem.disabled = false;
-          helper.e(".control-theme-accent-randomise").disabled = false;
-        });
-      } else {
-        helper.eA("input[name='control-theme-accent-random-style']").forEach(function(arrayItem, index) {
-          arrayItem.disabled = true;
-          helper.e(".control-theme-accent-randomise").disabled = true;
-        });
       };
     };
     var _link = function() {
@@ -2386,6 +2318,23 @@ var control = (function() {
         helper.e(".control-link-items-alignment-horizontal-right").disabled = true;
       };
     };
+    var _theme = function() {
+      if (state.get().theme.accent.random.active) {
+        helper.e(".control-theme-accent-random-style-any").disabled = false;
+        helper.e(".control-theme-accent-random-style-light").disabled = false;
+        helper.e(".control-theme-accent-random-style-dark").disabled = false;
+        helper.e(".control-theme-accent-random-style-pastel").disabled = false;
+        helper.e(".control-theme-accent-random-style-saturated").disabled = false;
+        helper.e(".control-theme-accent-randomise").disabled = false;
+      } else {
+        helper.e(".control-theme-accent-random-style-any").disabled = true;
+        helper.e(".control-theme-accent-random-style-light").disabled = true;
+        helper.e(".control-theme-accent-random-style-dark").disabled = true;
+        helper.e(".control-theme-accent-random-style-pastel").disabled = true;
+        helper.e(".control-theme-accent-random-style-saturated").disabled = true;
+        helper.e(".control-theme-accent-randomise").disabled = true;
+      };
+    };
     var _background = function() {
       if (state.get().background.image.show) {
         helper.e("[for=control-background-image-url]").removeAttribute("disabled");
@@ -2411,63 +2360,11 @@ var control = (function() {
         helper.e(".control-background-image-accent").disabled = true;
       };
     };
-    var _header = function() {
-      if (state.get().header.shade.show) {
-        helper.e(".control-header-shade-style-always").disabled = false;
-        helper.e(".control-header-shade-style-scroll").disabled = false;
-        helper.e("[for=control-header-shade-opacity]").removeAttribute("disabled");
-        helper.e(".control-header-shade-opacity").disabled = false;
-        helper.e("[for=control-header-shade-padding-top]").removeAttribute("disabled");
-        helper.e(".control-header-shade-padding-top").disabled = false;
-        helper.e("[for=control-header-shade-padding-bottom]").removeAttribute("disabled");
-        helper.e(".control-header-shade-padding-bottom").disabled = false;
-        helper.e(".control-header-shade-border-top-show").disabled = false;
-        helper.e(".control-header-shade-border-bottom-show").disabled = false;
-        helper.e("[for=control-header-shade-border-top-width]").removeAttribute("disabled");
-        helper.e(".control-header-shade-border-top-width").disabled = false;
-        helper.e("[for=control-header-shade-border-bottom-width]").removeAttribute("disabled");
-        helper.e(".control-header-shade-border-bottom-width").disabled = false;
-      } else {
-        helper.e(".control-header-shade-style-always").disabled = true;
-        helper.e(".control-header-shade-style-scroll").disabled = true;
-        helper.e("[for=control-header-shade-opacity]").setAttribute("disabled", "");
-        helper.e(".control-header-shade-opacity").disabled = true;
-        helper.e("[for=control-header-shade-padding-top]").setAttribute("disabled", "");
-        helper.e(".control-header-shade-padding-top").disabled = true;
-        helper.e("[for=control-header-shade-padding-bottom]").setAttribute("disabled", "");
-        helper.e(".control-header-shade-padding-bottom").disabled = true;
-        helper.e(".control-header-shade-border-top-show").disabled = true;
-        helper.e(".control-header-shade-border-bottom-show").disabled = true;
-        helper.e("[for=control-header-shade-border-top-width]").setAttribute("disabled", "");
-        helper.e(".control-header-shade-border-top-width").disabled = true;
-        helper.e("[for=control-header-shade-border-bottom-width]").setAttribute("disabled", "");
-        helper.e(".control-header-shade-border-bottom-width").disabled = true;
-      };
-      if (state.get().header.shade.show && state.get().header.shade.border.top.show) {
-        helper.e("[for=control-header-shade-border-top-width]").removeAttribute("disabled");
-        helper.e(".control-header-shade-border-top-width").disabled = false;
-      } else {
-        helper.e("[for=control-header-shade-border-top-width]").setAttribute("disabled", "");
-        helper.e(".control-header-shade-border-top-width").disabled = true;
-      };
-      if (state.get().header.shade.show && state.get().header.shade.border.bottom.show) {
-        helper.e("[for=control-header-shade-border-bottom-width]").removeAttribute("disabled");
-        helper.e(".control-header-shade-border-bottom-width").disabled = false;
-      } else {
-        helper.e("[for=control-header-shade-border-bottom-width]").setAttribute("disabled", "");
-        helper.e(".control-header-shade-border-bottom-width").disabled = true;
-      };
-    };
-    _edit();
-    _date();
-    _clock();
-    _greeting();
-    _transitional();
-    _search();
-    _theme();
-    _link();
-    _background();
     _header();
+    _edit();
+    _link();
+    _theme();
+    _background();
   };
 
   var update = function() {
@@ -2531,7 +2428,7 @@ var control = (function() {
   };
 
   var init = function() {
-    _bind();
+    bind();
     update();
     dependents();
     render();
@@ -2540,6 +2437,7 @@ var control = (function() {
   // exposed methods
   return {
     init: init,
+    bind: bind,
     render: render,
     dependents: dependents,
     update: update
