@@ -430,9 +430,18 @@ var link = (function() {
       edit(data);
     }, false);
     linkRemove.addEventListener("click", function() {
-      remove(data);
-      control.dependents();
-      control.render();
+      modal.render({
+        heading: "Remove " + data.name + " bookmark",
+        content: "Are you sure you want to remove this bookmark? This can not be undone.",
+        successAction: function() {
+          remove(data);
+          control.dependents();
+          control.render();
+        },
+        actionText: "Remove",
+        cancelText: "Cancel",
+        size: "small"
+      });
     }, false);
 
     return linkItem;
