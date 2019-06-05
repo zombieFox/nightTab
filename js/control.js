@@ -1265,6 +1265,21 @@ var control = (function() {
       render();
     }
   }, {
+    element: helper.e(".control-link-size"),
+    path: "link.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      link.render.item.size.set();
+    }
+  }, {
+    element: helper.e(".control-link-size-default"),
+    type: "button",
+    func: function() {
+      link.render.item.size.default();
+      update();
+    }
+  }, {
     element: helper.e(".control-link-link-show"),
     path: "link.show",
     type: "checkbox",
@@ -1287,7 +1302,7 @@ var control = (function() {
     type: "range",
     valueMod: ["float"],
     func: function() {
-      link.render.displayLetterIcon.size();
+      link.render.item.display();
     }
   }, {
     element: helper.e(".control-link-display-icon-size"),
@@ -1295,7 +1310,7 @@ var control = (function() {
     type: "range",
     valueMod: ["float"],
     func: function() {
-      link.render.displayLetterIcon.size();
+      link.render.item.display();
     }
   }, {
     element: helper.e(".control-link-name-show"),
@@ -1370,122 +1385,12 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-fit-best"),
-    path: "link.fit",
-    type: "radio",
-    func: function() {
-      render();
-      dependents();
-    }
-  }, {
-    element: helper.e(".control-link-fit-custom"),
-    path: "link.fit",
-    type: "radio",
-    func: function() {
-      render();
-      dependents();
-    }
-  }, {
-    element: helper.e(".control-link-items-width"),
-    path: "link.items.width",
-    type: "range",
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.render({
-          element: helper.e(".link-item"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.render({
-          element: helper.e(".link-item"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render({
-            element: helper.e(".link-item"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.destroy();
-      }
-    }],
-    func: function() {
-      link.render.items();
-    }
-  }, {
-    element: helper.e(".control-link-items-alignment-horizontal-left"),
-    path: "link.items.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".link-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-link-items-alignment-horizontal-center"),
-    path: "link.items.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".link-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-link-items-alignment-horizontal-right"),
-    path: "link.items.alignment.horizontal",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".link-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render();
-    }
-  }, {
     element: helper.e(".control-link-new-tab"),
     path: "link.newTab",
     type: "checkbox",
     func: function() {
       link.clear();
-      link.render.link();
+      link.render.item.all();
     }
   }, {
     element: helper.e(".control-link-style-block"),
@@ -1507,7 +1412,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       link.clear();
-      link.render.link();
+      link.render.item.all();
     }
   }, {
     element: helper.e(".control-link-sort-letter"),
@@ -1515,7 +1420,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       link.clear();
-      link.render.link();
+      link.render.item.all();
     }
   }, {
     element: helper.e(".control-link-sort-icon"),
@@ -1523,7 +1428,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       link.clear();
-      link.render.link();
+      link.render.item.all();
     }
   }, {
     element: helper.e(".control-link-sort-name"),
@@ -1531,7 +1436,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       link.clear();
-      link.render.link();
+      link.render.item.all();
     }
   }, {
     element: helper.e(".control-theme-style-dark"),
@@ -1860,8 +1765,6 @@ var control = (function() {
       helper.removeClass(html, "is-link-url-show");
       helper.removeClass(html, "is-link-url-style-light");
       helper.removeClass(html, "is-link-url-style-dark");
-      helper.removeClass(html, "is-link-fit-custom");
-      helper.removeClass(html, "is-link-fit-best");
       helper.removeClass(html, "is-link-items-alignment-horizontal-left");
       helper.removeClass(html, "is-link-items-alignment-horizontal-center");
       helper.removeClass(html, "is-link-items-alignment-horizontal-right");
@@ -1872,11 +1775,9 @@ var control = (function() {
       if (state.get().link.show) {
         helper.addClass(html, "is-link-show");
         helper.addClass(html, "is-link-area-alignment-horizontal-" + state.get().link.area.alignment.horizontal);
-        helper.addClass(html, "is-link-items-alignment-horizontal-" + state.get().link.items.alignment.horizontal);
         helper.addClass(html, "is-link-display-alignment-horizontal-" + state.get().link.display.alignment.horizontal);
         helper.addClass(html, "is-link-display-alignment-vertical-" + state.get().link.display.alignment.vertical);
         helper.addClass(html, "is-link-style-" + state.get().link.style);
-        helper.addClass(html, "is-link-fit-" + state.get().link.fit);
         helper.addClass(html, "is-link-url-style-" + state.get().link.url.style);
         if (state.get().link.name.show) {
           helper.addClass(html, "is-link-name-show");
@@ -2199,9 +2100,6 @@ var control = (function() {
         helper.e(".control-link-area-alignment-horizontal-left").disabled = false;
         helper.e(".control-link-area-alignment-horizontal-center").disabled = false;
         helper.e(".control-link-area-alignment-horizontal-right").disabled = false;
-        helper.e(".control-link-fit-label").removeAttribute("disabled");
-        helper.e(".control-link-fit-best").disabled = false;
-        helper.e(".control-link-fit-custom").disabled = false;
         helper.e(".control-link-display-show").disabled = false;
         helper.e(".control-link-name-show").disabled = false;
         helper.e(".control-link-url-show").disabled = false;
@@ -2232,9 +2130,6 @@ var control = (function() {
         helper.e(".control-link-area-alignment-horizontal-left").disabled = true;
         helper.e(".control-link-area-alignment-horizontal-center").disabled = true;
         helper.e(".control-link-area-alignment-horizontal-right").disabled = true;
-        helper.e(".control-link-fit-label").setAttribute("disabled", "");
-        helper.e(".control-link-fit-best").disabled = true;
-        helper.e(".control-link-fit-custom").disabled = true;
         helper.e(".control-link-display-show").disabled = true;
         helper.e(".control-link-name-show").disabled = true;
         helper.e(".control-link-url-show").disabled = true;
@@ -2294,28 +2189,6 @@ var control = (function() {
       } else {
         helper.e(".control-link-url-style-dark").disabled = true;
         helper.e(".control-link-url-style-light").disabled = true;
-      };
-      if (state.get().link.show && state.get().link.fit == "best") {
-        helper.e("[for=control-link-items-width]").setAttribute("disabled", "");
-        helper.e(".control-link-items-width").disabled = true;
-        helper.e(".control-link-items-alignment-horizontal-label").setAttribute("disabled", "");
-        helper.e(".control-link-items-alignment-horizontal-left").disabled = true;
-        helper.e(".control-link-items-alignment-horizontal-center").disabled = true;
-        helper.e(".control-link-items-alignment-horizontal-right").disabled = true;
-      } else if (state.get().link.show && state.get().link.fit == "custom") {
-        helper.e("[for=control-link-items-width]").removeAttribute("disabled");
-        helper.e(".control-link-items-width").disabled = false;
-        helper.e(".control-link-items-alignment-horizontal-label").removeAttribute("disabled");
-        helper.e(".control-link-items-alignment-horizontal-left").disabled = false;
-        helper.e(".control-link-items-alignment-horizontal-center").disabled = false;
-        helper.e(".control-link-items-alignment-horizontal-right").disabled = false;
-      } else {
-        helper.e("[for=control-link-items-width]").setAttribute("disabled", "");
-        helper.e(".control-link-items-width").disabled = true;
-        helper.e(".control-link-items-alignment-horizontal-label").setAttribute("disabled", "");
-        helper.e(".control-link-items-alignment-horizontal-left").disabled = true;
-        helper.e(".control-link-items-alignment-horizontal-center").disabled = true;
-        helper.e(".control-link-items-alignment-horizontal-right").disabled = true;
       };
     };
     var _theme = function() {

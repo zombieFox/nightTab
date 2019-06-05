@@ -139,12 +139,6 @@ var state = (function() {
           horizontal: "center"
         }
       },
-      items: {
-        width: 12,
-        alignment: {
-          horizontal: "left"
-        }
-      },
       display: {
         show: true,
         size: 2,
@@ -166,8 +160,8 @@ var state = (function() {
         show: true,
         style: "dark"
       },
+      size: 1,
       show: true,
-      fit: "best",
       newTab: false,
       edit: false,
       style: "block",

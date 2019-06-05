@@ -60,7 +60,7 @@ var link = (function() {
         bookmarks.add(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
         data.save();
         clear();
-        render.link();
+        render.item.all();
         render.tabIndex();
         control.dependents();
         control.render();
@@ -113,7 +113,7 @@ var link = (function() {
         bookmarks.edit(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
         data.save();
         clear();
-        render.link();
+        render.item.all();
         render.tabIndex();
         _returnToPreviousFocusLink();
         resetStagedBookmarkData();
@@ -133,7 +133,7 @@ var link = (function() {
     _checkCount();
     data.save();
     clear();
-    render.link();
+    render.item.all();
   };
 
   var _checkCount = function() {
@@ -509,29 +509,34 @@ var link = (function() {
   var render = {
     width: {
       set: function() {
-        _width();
+        _renderWidthSet();
       },
       match: function() {
-        _match();
+        _renderWidthMatch();
       }
     },
-    displayLetterIcon: {
-      size: function() {
-        _size();
+    item: {
+      all: function() {
+        _renderItemAll();
+      },
+      display: function() {
+        _renderItemDisplay();
+      },
+      size: {
+        set: function() {
+          _renderItemSizeSet();
+        },
+        default: function() {
+          _renderItemSizeDefault();
+        }
       },
     },
-    link: function() {
-      _link();
-    },
     tabIndex: function() {
-      _tabIndex();
-    },
-    items: function() {
-      _items();
+      _renderTabIndex();
     }
   };
 
-  var _link = function() {
+  var _renderItemAll = function() {
     var linkArea = helper.e(".link-area");
     var bookmarksToRender = false;
     if (state.get().search) {
@@ -579,18 +584,32 @@ var link = (function() {
     };
   };
 
-  var _width = function() {
+  var _renderWidthSet = function() {
     var html = helper.e("html");
     html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
   };
 
-  var _size = function() {
+  var _renderItemDisplay = function() {
     var html = helper.e("html");
     html.style.setProperty("--link-display-letter-size", state.get().link.display.letter.size + "em");
     html.style.setProperty("--link-display-icon-size", state.get().link.display.icon.size + "em");
   };
 
-  var _match = function() {
+  var _renderItemSizeSet = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-size", state.get().link.size + "em");
+  };
+
+  var _renderItemSizeDefault = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "link.size",
+      newValue: 1
+    });
+    render.item.size.set();
+  };
+
+  var _renderWidthMatch = function() {
     helper.setObject({
       object: state.get(),
       path: "link.area.width",
@@ -599,12 +618,7 @@ var link = (function() {
     render.width.set();
   };
 
-  var _items = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--link-items-width", state.get().link.items.width + "%");
-  };
-
-  var _tabIndex = function() {
+  var _renderTabIndex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
     if (state.get().link.edit) {
       allLinkControlItem.forEach(function(arrayItem, index) {
@@ -625,10 +639,10 @@ var link = (function() {
   };
 
   var init = function() {
-    render.link();
-    render.displayLetterIcon.size();
+    render.item.all();
+    render.item.display();
+    render.item.size.set();
     render.width.set();
-    render.items();
   };
 
   // exposed methods
