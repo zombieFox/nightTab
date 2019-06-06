@@ -8,7 +8,7 @@ var state = (function() {
           horizontal: "center"
         }
       },
-      items: {
+      item: {
         alignment: {
           horizontal: "left"
         }
@@ -134,33 +134,37 @@ var state = (function() {
     },
     link: {
       area: {
+        gap: 2,
         width: 100,
         alignment: {
           horizontal: "center"
         }
       },
-      display: {
-        show: true,
-        size: 2,
-        alignment: {
-          horizontal: "center",
-          vertical: "center"
+      item: {
+        size: 1,
+        display: {
+          show: true,
+          size: 2,
+          alignment: {
+            horizontal: "right",
+            vertical: "bottom"
+          },
+          letter: {
+            size: 2
+          },
+          icon: {
+            size: 2
+          }
         },
-        letter: {
-          size: 2
+        name: {
+          show: true,
+          size: 0.9,
         },
-        icon: {
-          size: 2.5
-        }
+        url: {
+          show: true,
+          style: "dark"
+        },
       },
-      name: {
-        show: true
-      },
-      url: {
-        show: true,
-        style: "dark"
-      },
-      size: 1,
       show: true,
       newTab: false,
       edit: false,

@@ -507,6 +507,11 @@ var link = (function() {
   };
 
   var render = {
+    area: {
+      gap: function() {
+        _areaGap();
+      }
+    },
     width: {
       set: function() {
         _renderWidthSet();
@@ -519,8 +524,31 @@ var link = (function() {
       all: function() {
         _renderItemAll();
       },
-      display: function() {
-        _renderItemDisplay();
+      display: {
+        letter: {
+          set: function() {
+            _renderItemDisplayLetterSet();
+          },
+          default: function() {
+            _renderItemDisplayLetterDefault();
+          }
+        },
+        icon: {
+          set: function() {
+            _renderItemDisplayIconSet();
+          },
+          default: function() {
+            _renderItemDisplayIconDefault();
+          }
+        }
+      },
+      name: {
+        set: function() {
+          _renderItemNameSet();
+        },
+        default: function() {
+          _renderItemNameDefault();
+        }
       },
       size: {
         set: function() {
@@ -534,6 +562,11 @@ var link = (function() {
     tabIndex: function() {
       _renderTabIndex();
     }
+  };
+
+  var _areaGap = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-area-gutter-multiplier", state.get().link.area.gap);
   };
 
   var _renderItemAll = function() {
@@ -589,21 +622,57 @@ var link = (function() {
     html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
   };
 
-  var _renderItemDisplay = function() {
+  var _renderItemDisplayLetterSet = function() {
     var html = helper.e("html");
-    html.style.setProperty("--link-display-letter-size", state.get().link.display.letter.size + "em");
-    html.style.setProperty("--link-display-icon-size", state.get().link.display.icon.size + "em");
+    html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
+  };
+
+  var _renderItemDisplayLetterDefault = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "link.item.display.letter.size",
+      newValue: 2
+    });
+    render.item.display.letter.set();
+  };
+
+  var _renderItemDisplayIconSet = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.icon.size + "em");
+  };
+
+  var _renderItemDisplayIconDefault = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "link.item.display.icon.size",
+      newValue: 2
+    });
+    render.item.display.icon.set();
+  };
+
+  var _renderItemNameSet = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-item-name-size", state.get().link.item.name.size + "em");
+  };
+
+  var _renderItemNameDefault = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "link.item.name.size",
+      newValue: 0.9
+    });
+    render.item.name.set();
   };
 
   var _renderItemSizeSet = function() {
     var html = helper.e("html");
-    html.style.setProperty("--link-size", state.get().link.size + "em");
+    html.style.setProperty("--link-item-size", state.get().link.item.size + "em");
   };
 
   var _renderItemSizeDefault = function() {
     helper.setObject({
       object: state.get(),
-      path: "link.size",
+      path: "link.item.size",
       newValue: 1
     });
     render.item.size.set();
@@ -639,9 +708,13 @@ var link = (function() {
   };
 
   var init = function() {
+    render.area.gap();
     render.item.all();
-    render.item.display();
     render.item.size.set();
+    render.item.display.letter.set();
+    render.item.display.icon.set();
+    render.item.name.set();
+    render.item.name.default();
     render.width.set();
   };
 

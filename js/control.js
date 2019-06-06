@@ -300,22 +300,22 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-items-alignment-horizontal-left"),
-    path: "header.items.alignment.horizontal",
+    element: helper.e(".control-header-item-alignment-horizontal-left"),
+    path: "header.item.alignment.horizontal",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-items-alignment-horizontal-center"),
-    path: "header.items.alignment.horizontal",
+    element: helper.e(".control-header-item-alignment-horizontal-center"),
+    path: "header.item.alignment.horizontal",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-items-alignment-horizontal-right"),
-    path: "header.items.alignment.horizontal",
+    element: helper.e(".control-header-item-alignment-horizontal-right"),
+    path: "header.item.alignment.horizontal",
     type: "radio",
     func: function() {
       render();
@@ -1265,22 +1265,70 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-size"),
-    path: "link.size",
+    element: helper.e(".control-link-item-size"),
+    path: "link.item.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-item"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-item"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".link-item"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       link.render.item.size.set();
     }
   }, {
-    element: helper.e(".control-link-size-default"),
+    element: helper.e(".control-link-item-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".link-item"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       link.render.item.size.default();
       update();
     }
   }, {
-    element: helper.e(".control-link-link-show"),
+    element: helper.e(".control-link-show"),
     path: "link.show",
     type: "checkbox",
     func: function() {
@@ -1289,97 +1337,133 @@ var control = (function() {
       search.render();
     }
   }, {
-    element: helper.e(".control-link-display-show"),
-    path: "link.display.show",
+    element: helper.e(".control-link-item-display-show"),
+    path: "link.item.display.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
     }
   }, {
-    element: helper.e(".control-link-display-letter-size"),
-    path: "link.display.letter.size",
+    element: helper.e(".control-link-item-display-letter-size"),
+    path: "link.item.display.letter.size",
     type: "range",
     valueMod: ["float"],
     func: function() {
-      link.render.item.display();
+      link.render.item.display.letter.set();
     }
   }, {
-    element: helper.e(".control-link-display-icon-size"),
-    path: "link.display.icon.size",
+    element: helper.e(".control-link-item-display-letter-size-default"),
+    type: "button",
+    func: function() {
+      link.render.item.display.letter.default();
+      update();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-icon-size"),
+    path: "link.item.display.icon.size",
     type: "range",
     valueMod: ["float"],
     func: function() {
-      link.render.item.display();
+      link.render.item.display.icon.set();
     }
   }, {
-    element: helper.e(".control-link-name-show"),
-    path: "link.name.show",
+    element: helper.e(".control-link-item-display-icon-size-default"),
+    type: "button",
+    func: function() {
+      link.render.item.display.icon.default();
+      update();
+    }
+  }, {
+    element: helper.e(".control-link-item-name-show"),
+    path: "link.item.name.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
     }
   }, {
-    element: helper.e(".control-link-url-show"),
-    path: "link.url.show",
+    element: helper.e(".control-link-item-name-size"),
+    path: "link.item.name.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      link.render.item.name.set();
+    }
+  }, {
+    element: helper.e(".control-link-item-name-size-default"),
+    type: "button",
+    func: function() {
+      link.render.item.name.default();
+      update();
+    }
+  }, {
+    element: helper.e(".control-link-item-url-show"),
+    path: "link.item.url.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
     }
   }, {
-    element: helper.e(".control-link-url-style-dark"),
-    path: "link.url.style",
+    element: helper.e(".control-link-item-url-style-dark"),
+    path: "link.item.url.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-url-style-light"),
-    path: "link.url.style",
+    element: helper.e(".control-link-item-url-style-light"),
+    path: "link.item.url.style",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-display-alignment-horizontal-left"),
-    path: "link.display.alignment.horizontal",
+    element: helper.e(".control-link-area-gap"),
+    path: "link.area.gap",
+    type: "range",
+    func: function() {
+      link.render.area.gap();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-alignment-horizontal-left"),
+    path: "link.item.display.alignment.horizontal",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-display-alignment-horizontal-center"),
-    path: "link.display.alignment.horizontal",
+    element: helper.e(".control-link-item-display-alignment-horizontal-center"),
+    path: "link.item.display.alignment.horizontal",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-display-alignment-horizontal-right"),
-    path: "link.display.alignment.horizontal",
+    element: helper.e(".control-link-item-display-alignment-horizontal-right"),
+    path: "link.item.display.alignment.horizontal",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-display-alignment-vertical-top"),
-    path: "link.display.alignment.vertical",
+    element: helper.e(".control-link-item-display-alignment-vertical-top"),
+    path: "link.item.display.alignment.vertical",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-display-alignment-vertical-center"),
-    path: "link.display.alignment.vertical",
+    element: helper.e(".control-link-item-display-alignment-vertical-center"),
+    path: "link.item.display.alignment.vertical",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-display-alignment-vertical-bottom"),
-    path: "link.display.alignment.vertical",
+    element: helper.e(".control-link-item-display-alignment-vertical-bottom"),
+    path: "link.item.display.alignment.vertical",
     type: "radio",
     func: function() {
       render();
@@ -1655,11 +1739,11 @@ var control = (function() {
         helper.removeClass(html, "is-header-area-alignment-horizontal-right");
         helper.addClass(html, "is-header-area-alignment-horizontal-" + state.get().header.area.alignment.horizontal);
       };
-      var _items = function() {
-        helper.removeClass(html, "is-header-items-alignment-horizontal-left");
-        helper.removeClass(html, "is-header-items-alignment-horizontal-center");
-        helper.removeClass(html, "is-header-items-alignment-horizontal-right");
-        helper.addClass(html, "is-header-items-alignment-horizontal-" + state.get().header.items.alignment.horizontal);
+      var _item = function() {
+        helper.removeClass(html, "is-header-item-alignment-horizontal-left");
+        helper.removeClass(html, "is-header-item-alignment-horizontal-center");
+        helper.removeClass(html, "is-header-item-alignment-horizontal-right");
+        helper.addClass(html, "is-header-item-alignment-horizontal-" + state.get().header.item.alignment.horizontal);
       };
       var _clock = function() {
         if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
@@ -1738,7 +1822,7 @@ var control = (function() {
         };
       };
       _area();
-      _items();
+      _item();
       _clock();
       _date();
       _search();
@@ -1765,9 +1849,9 @@ var control = (function() {
       helper.removeClass(html, "is-link-url-show");
       helper.removeClass(html, "is-link-url-style-light");
       helper.removeClass(html, "is-link-url-style-dark");
-      helper.removeClass(html, "is-link-items-alignment-horizontal-left");
-      helper.removeClass(html, "is-link-items-alignment-horizontal-center");
-      helper.removeClass(html, "is-link-items-alignment-horizontal-right");
+      helper.removeClass(html, "is-link-item-alignment-horizontal-left");
+      helper.removeClass(html, "is-link-item-alignment-horizontal-center");
+      helper.removeClass(html, "is-link-item-alignment-horizontal-right");
       helper.removeClass(html, "is-link-style-list");
       helper.removeClass(html, "is-link-style-block");
       helper.removeClass(html, "is-link-edit");
@@ -1775,17 +1859,17 @@ var control = (function() {
       if (state.get().link.show) {
         helper.addClass(html, "is-link-show");
         helper.addClass(html, "is-link-area-alignment-horizontal-" + state.get().link.area.alignment.horizontal);
-        helper.addClass(html, "is-link-display-alignment-horizontal-" + state.get().link.display.alignment.horizontal);
-        helper.addClass(html, "is-link-display-alignment-vertical-" + state.get().link.display.alignment.vertical);
+        helper.addClass(html, "is-link-display-alignment-horizontal-" + state.get().link.item.display.alignment.horizontal);
+        helper.addClass(html, "is-link-display-alignment-vertical-" + state.get().link.item.display.alignment.vertical);
         helper.addClass(html, "is-link-style-" + state.get().link.style);
-        helper.addClass(html, "is-link-url-style-" + state.get().link.url.style);
-        if (state.get().link.name.show) {
+        helper.addClass(html, "is-link-url-style-" + state.get().link.item.url.style);
+        if (state.get().link.item.name.show) {
           helper.addClass(html, "is-link-name-show");
         };
-        if (state.get().link.display.show) {
+        if (state.get().link.item.display.show) {
           helper.addClass(html, "is-link-display-show");
         };
-        if (state.get().link.url.show) {
+        if (state.get().link.item.url.show) {
           helper.addClass(html, "is-link-url-show");
         };
         if (state.get().link.edit) {
@@ -2092,6 +2176,47 @@ var control = (function() {
       };
     };
     var _link = function() {
+      helper.e("[for=control-link-area-width]").setAttribute("disabled", "");
+      helper.e(".control-link-area-width").disabled = true;
+      helper.e(".control-link-area-width-match").disabled = true;
+      helper.e(".control-link-area-alignment-horizontal-label").setAttribute("disabled", "");
+      helper.e(".control-link-area-alignment-horizontal-left").disabled = true;
+      helper.e(".control-link-area-alignment-horizontal-center").disabled = true;
+      helper.e(".control-link-area-alignment-horizontal-right").disabled = true;
+      helper.e("[for=control-link-item-size]").setAttribute("disabled", "");
+      helper.e(".control-link-item-size").disabled = true;
+      helper.e(".control-link-item-size-default").disabled = true;
+      helper.e(".control-link-item-display-show").disabled = true;
+      helper.e("[for=control-link-item-display-letter-size]").setAttribute("disabled", "");
+      helper.e(".control-link-item-display-letter-size").disabled = true;
+      helper.e(".control-link-item-display-letter-size-default").disabled = true;
+      helper.e("[for=control-link-item-display-icon-size]").setAttribute("disabled", "");
+      helper.e(".control-link-item-display-icon-size").disabled = true;
+      helper.e(".control-link-item-display-icon-size-default").disabled = true;
+      helper.e(".control-link-item-name-show").disabled = true;
+      helper.e("[for=control-link-item-name-size]").setAttribute("disabled", "");
+      helper.e(".control-link-item-name-size").disabled = true;
+      helper.e(".control-link-item-name-size-default").disabled = true;
+      helper.e(".control-link-item-url-show").disabled = true;
+      helper.e(".control-link-item-url-style-dark").disabled = true;
+      helper.e(".control-link-item-url-style-light").disabled = true;
+      helper.e("[for=control-link-area-gap]").setAttribute("disabled", "");
+      helper.e(".control-link-area-gap").disabled = true;
+      helper.e(".control-link-item-display-alignment-horizontal-label").setAttribute("disabled", "");
+      helper.e(".control-link-item-display-alignment-horizontal-left").disabled = true;
+      helper.e(".control-link-item-display-alignment-horizontal-center").disabled = true;
+      helper.e(".control-link-item-display-alignment-horizontal-right").disabled = true;
+      helper.e(".control-link-item-display-alignment-vertical-label").setAttribute("disabled", "");
+      helper.e(".control-link-item-display-alignment-vertical-top").disabled = true;
+      helper.e(".control-link-item-display-alignment-vertical-center").disabled = true;
+      helper.e(".control-link-item-display-alignment-vertical-bottom").disabled = true;
+      helper.e(".control-link-new-tab").disabled = true;
+      helper.e(".control-link-style-block").disabled = true;
+      helper.e(".control-link-style-list").disabled = true;
+      helper.e(".control-link-sort-none").disabled = true;
+      helper.e(".control-link-sort-name").disabled = true;
+      helper.e(".control-link-sort-letter").disabled = true;
+      helper.e(".control-link-sort-icon").disabled = true;
       if (state.get().link.show) {
         helper.e("[for=control-link-area-width]").removeAttribute("disabled");
         helper.e(".control-link-area-width").disabled = false;
@@ -2100,95 +2225,48 @@ var control = (function() {
         helper.e(".control-link-area-alignment-horizontal-left").disabled = false;
         helper.e(".control-link-area-alignment-horizontal-center").disabled = false;
         helper.e(".control-link-area-alignment-horizontal-right").disabled = false;
-        helper.e(".control-link-display-show").disabled = false;
-        helper.e(".control-link-name-show").disabled = false;
-        helper.e(".control-link-url-show").disabled = false;
+        helper.e("[for=control-link-item-size]").removeAttribute("disabled");
+        helper.e(".control-link-item-size").disabled = false;
+        helper.e(".control-link-item-size-default").disabled = false;
+        helper.e(".control-link-item-display-show").disabled = false;
+        helper.e(".control-link-item-name-show").disabled = false;
+        helper.e(".control-link-item-url-show").disabled = false;
+        helper.e("[for=control-link-area-gap]").removeAttribute("disabled");
+        helper.e(".control-link-area-gap").disabled = false;
+        helper.e(".control-link-new-tab").disabled = false;
         helper.e(".control-link-style-block").disabled = false;
         helper.e(".control-link-style-list").disabled = false;
-        helper.e(".control-link-new-tab").disabled = false;
         helper.e(".control-link-sort-none").disabled = false;
         helper.e(".control-link-sort-name").disabled = false;
         helper.e(".control-link-sort-letter").disabled = false;
         helper.e(".control-link-sort-icon").disabled = false;
-        helper.e("[for=control-link-display-letter-size]").removeAttribute("disabled");
-        helper.e(".control-link-display-letter-size").disabled = false;
-        helper.e("[for=control-link-display-icon-size]").removeAttribute("disabled");
-        helper.e(".control-link-display-icon-size").disabled = false;
-        helper.e(".control-link-display-alignment-horizontal-label").removeAttribute("disabled");
-        helper.e(".control-link-display-alignment-horizontal-left").disabled = false;
-        helper.e(".control-link-display-alignment-horizontal-center").disabled = false;
-        helper.e(".control-link-display-alignment-horizontal-right").disabled = false;
-        helper.e(".control-link-display-alignment-vertical-label").removeAttribute("disabled");
-        helper.e(".control-link-display-alignment-vertical-top").disabled = false;
-        helper.e(".control-link-display-alignment-vertical-center").disabled = false;
-        helper.e(".control-link-display-alignment-vertical-bottom").disabled = false;
-      } else {
-        helper.e("[for=control-link-area-width]").setAttribute("disabled", "");
-        helper.e(".control-link-area-width").disabled = true;
-        helper.e(".control-link-area-width-match").disabled = true;
-        helper.e(".control-link-area-alignment-horizontal-label").setAttribute("disabled", "");
-        helper.e(".control-link-area-alignment-horizontal-left").disabled = true;
-        helper.e(".control-link-area-alignment-horizontal-center").disabled = true;
-        helper.e(".control-link-area-alignment-horizontal-right").disabled = true;
-        helper.e(".control-link-display-show").disabled = true;
-        helper.e(".control-link-name-show").disabled = true;
-        helper.e(".control-link-url-show").disabled = true;
-        helper.e(".control-link-style-block").disabled = true;
-        helper.e(".control-link-style-list").disabled = true;
-        helper.e(".control-link-new-tab").disabled = true;
-        helper.e(".control-link-sort-none").disabled = true;
-        helper.e(".control-link-sort-name").disabled = true;
-        helper.e(".control-link-sort-letter").disabled = true;
-        helper.e(".control-link-sort-icon").disabled = true;
-        helper.e("[for=control-link-display-letter-size]").setAttribute("disabled", "");
-        helper.e(".control-link-display-letter-size").disabled = true;
-        helper.e("[for=control-link-display-icon-size]").setAttribute("disabled", "");
-        helper.e(".control-link-display-icon-size").disabled = true;
-        helper.e(".control-link-display-alignment-horizontal-label").setAttribute("disabled", "");
-        helper.e(".control-link-display-alignment-horizontal-left").disabled = true;
-        helper.e(".control-link-display-alignment-horizontal-center").disabled = true;
-        helper.e(".control-link-display-alignment-horizontal-right").disabled = true;
-        helper.e(".control-link-display-alignment-vertical-label").setAttribute("disabled", "");
-        helper.e(".control-link-display-alignment-vertical-top").disabled = true;
-        helper.e(".control-link-display-alignment-vertical-center").disabled = true;
-        helper.e(".control-link-display-alignment-vertical-bottom").disabled = true;
-      };
-      if (state.get().link.show && (state.get().link.display.show || state.get().link.name.show || state.get().link.url.show)) {
-        helper.e(".control-link-display-alignment-horizontal-label").removeAttribute("disabled");
-        helper.e(".control-link-display-alignment-horizontal-left").disabled = false;
-        helper.e(".control-link-display-alignment-horizontal-center").disabled = false;
-        helper.e(".control-link-display-alignment-horizontal-right").disabled = false;
-        helper.e(".control-link-display-alignment-vertical-label").removeAttribute("disabled");
-        helper.e(".control-link-display-alignment-vertical-top").disabled = false;
-        helper.e(".control-link-display-alignment-vertical-center").disabled = false;
-        helper.e(".control-link-display-alignment-vertical-bottom").disabled = false;
-      } else {
-        helper.e(".control-link-display-alignment-horizontal-label").setAttribute("disabled", "");
-        helper.e(".control-link-display-alignment-horizontal-left").disabled = true;
-        helper.e(".control-link-display-alignment-horizontal-center").disabled = true;
-        helper.e(".control-link-display-alignment-horizontal-right").disabled = true;
-        helper.e(".control-link-display-alignment-vertical-label").setAttribute("disabled", "");
-        helper.e(".control-link-display-alignment-vertical-top").disabled = true;
-        helper.e(".control-link-display-alignment-vertical-center").disabled = true;
-        helper.e(".control-link-display-alignment-vertical-bottom").disabled = true;
-      };
-      if (state.get().link.show && state.get().link.display.show) {
-        helper.e("[for=control-link-display-letter-size]").removeAttribute("disabled");
-        helper.e(".control-link-display-letter-size").disabled = false;
-        helper.e("[for=control-link-display-icon-size]").removeAttribute("disabled");
-        helper.e(".control-link-display-icon-size").disabled = false;
-      } else {
-        helper.e("[for=control-link-display-letter-size]").setAttribute("disabled", "");
-        helper.e(".control-link-display-letter-size").disabled = true;
-        helper.e("[for=control-link-display-icon-size]").setAttribute("disabled", "");
-        helper.e(".control-link-display-icon-size").disabled = true;
-      };
-      if (state.get().link.show && state.get().link.url.show) {
-        helper.e(".control-link-url-style-dark").disabled = false;
-        helper.e(".control-link-url-style-light").disabled = false;
-      } else {
-        helper.e(".control-link-url-style-dark").disabled = true;
-        helper.e(".control-link-url-style-light").disabled = true;
+        if (state.get().link.item.display.show) {
+          helper.e("[for=control-link-item-display-letter-size]").removeAttribute("disabled");
+          helper.e(".control-link-item-display-letter-size").disabled = false;
+          helper.e(".control-link-item-display-letter-size-default").disabled = false;
+          helper.e("[for=control-link-item-display-icon-size]").removeAttribute("disabled");
+          helper.e(".control-link-item-display-icon-size").disabled = false;
+          helper.e(".control-link-item-display-icon-size-default").disabled = false;
+        };
+        if (state.get().link.item.name.show) {
+          helper.e("[for=control-link-item-name-size]").removeAttribute("disabled");
+          helper.e(".control-link-item-name-size").disabled = false;
+          helper.e(".control-link-item-name-size-default").disabled = false;
+        };
+        if (state.get().link.item.display.show || state.get().link.item.name.show || state.get().link.item.url.show) {
+          helper.e(".control-link-item-display-alignment-horizontal-label").removeAttribute("disabled");
+          helper.e(".control-link-item-display-alignment-horizontal-left").disabled = false;
+          helper.e(".control-link-item-display-alignment-horizontal-center").disabled = false;
+          helper.e(".control-link-item-display-alignment-horizontal-right").disabled = false;
+          helper.e(".control-link-item-display-alignment-vertical-label").removeAttribute("disabled");
+          helper.e(".control-link-item-display-alignment-vertical-top").disabled = false;
+          helper.e(".control-link-item-display-alignment-vertical-center").disabled = false;
+          helper.e(".control-link-item-display-alignment-vertical-bottom").disabled = false;
+        };
+        if (state.get().link.item.url.show) {
+          helper.e(".control-link-item-url-style-dark").disabled = false;
+          helper.e(".control-link-item-url-style-light").disabled = false;
+        };
       };
     };
     var _theme = function() {

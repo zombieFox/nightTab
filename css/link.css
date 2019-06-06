@@ -25,13 +25,13 @@
   padding-bottom: calc(var(--gutter) * 4);
   padding-left: calc(var(--gutter) * 4);
   padding-right: calc(var(--gutter) * 4);
-  font-size: calc(var(--link-size) * 1);
+  font-size: calc(var(--link-item-size) * 1);
   position: relative;
   width: var(--link-area-width);
   display: grid;
   grid-auto-rows: 1fr;
-  grid-gap: calc(var(--gutter) * 2);
-  grid-template-columns: repeat(auto-fill, minmax(var(--link-items-width), 1fr));
+  grid-gap: calc(var(--gutter) * var(--link-area-gutter-multiplier));
+  grid-template-columns: repeat(auto-fill, minmax(var(--link-item-width), 1fr));
 }
 
 .is-header-border-bottom-show .link-area,
@@ -42,17 +42,18 @@
 .link-item {
   font-size: 1em;
   position: relative;
-  height: var(--link-items-height);
+  height: var(--link-item-height);
   display: block;
   transform: scale(1);
   transition: transform var(--animation-speed-fast) ease-in-out;
-  direction: ltr;
+  z-index: 1;
 }
 
 .link-item:focus-within,
 .link-item:focus,
 .link-item:hover {
   transform: scale(1.06);
+  z-index: 2;
 }
 
 .link-item:active {
@@ -70,7 +71,7 @@
   overflow: hidden;
   position: relative;
   user-select: none;
-  transition: background-color var(--animation-speed-fast) ease-in-out, height var(--animation-speed-fast) ease-in-out;
+  transition: background-color var(--animation-speed-fast) ease-in-out, height var(--animation-speed-fast) ease-in-out, box-shadow var(--animation-speed-fast) ease-in-out;
 }
 
 .link-panel-front:hover,
@@ -300,12 +301,12 @@
 
 .is-link-style-block .link-display-letter,
 .is-link-style-list .link-display-letter {
-  font-size: var(--link-display-letter-size);
+  font-size: var(--link-item-display-letter-size);
 }
 
 .is-link-style-block .link-display-icon,
 .is-link-style-list .link-display-icon {
-  font-size: var(--link-display-icon-size);
+  font-size: var(--link-item-display-icon-size);
 }
 
 .is-link-style-block.is-link-name-show.is-link-display-show .link-panel-front>*:not(:only-child):not(:last-child) {
@@ -330,7 +331,7 @@
 
 .link-name {
   margin: 0;
-  font-size: 0.9em;
+  font-size: var(--link-item-name-size);
   font-family: var(--font-regular);
   color: rgb(var(--gray-12));
   display: none;
@@ -364,13 +365,14 @@
 }
 
 .link-empty {
+  grid-column-start: 1;
+  grid-column-end: -1;
   text-align: center;
 }
 
 .link-empty-heading {
-  grid-column-start: 1;
-  grid-column-end: -1;
   color: rgb(var(--gray-16));
+  font-size: 1.5rem;
 }
 
 .is-link-style-list .link-name {
