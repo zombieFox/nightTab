@@ -66,15 +66,15 @@
   align-items: stretch;
 }
 
-.is-header-items-alignment-horizontal-left .header-area {
+.is-header-item-alignment-horizontal-left .header-area {
   justify-content: flex-start;
 }
 
-.is-header-items-alignment-horizontal-center .header-area {
+.is-header-item-alignment-horizontal-center .header-area {
   justify-content: center;
 }
 
-.is-header-items-alignment-horizontal-right .header-area {
+.is-header-item-alignment-horizontal-right .header-area {
   justify-content: flex-end;
 }
 

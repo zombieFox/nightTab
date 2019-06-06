@@ -13,15 +13,15 @@
   flex-wrap: wrap;
 }
 
-.is-header-items-alignment-horizontal-left .clock {
+.is-header-item-alignment-horizontal-left .clock {
   justify-content: flex-start;
 }
 
-.is-header-items-alignment-horizontal-center .clock {
+.is-header-item-alignment-horizontal-center .clock {
   justify-content: center;
 }
 
-.is-header-items-alignment-horizontal-right .clock {
+.is-header-item-alignment-horizontal-right .clock {
   justify-content: flex-end;
 }
 
@@ -50,17 +50,17 @@
   min-width: 1.25em;
 }
 
-.is-header-items-alignment-horizontal-left .clock-item:not(:last-child) {
+.is-header-item-alignment-horizontal-left .clock-item:not(:last-child) {
   margin-right: 0.2em;
 }
 
-.is-header-items-alignment-horizontal-center .clock-item:not(:first-child),
-.is-header-items-alignment-horizontal-center .clock-item:not(:last-child) {
+.is-header-item-alignment-horizontal-center .clock-item:not(:first-child),
+.is-header-item-alignment-horizontal-center .clock-item:not(:last-child) {
   margin-left: 0.1em;
   margin-right: 0.1em;
 }
 
-.is-header-items-alignment-horizontal-right .clock-item:not(:first-child) {
+.is-header-item-alignment-horizontal-right .clock-item:not(:first-child) {
   margin-left: 0.2em;
 }
 

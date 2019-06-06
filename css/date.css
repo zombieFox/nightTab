@@ -13,15 +13,15 @@
   flex-wrap: wrap;
 }
 
-.is-header-items-alignment-horizontal-left .date {
+.is-header-item-alignment-horizontal-left .date {
   justify-content: flex-start;
 }
 
-.is-header-items-alignment-horizontal-center .date {
+.is-header-item-alignment-horizontal-center .date {
   justify-content: center;
 }
 
-.is-header-items-alignment-horizontal-right .date {
+.is-header-item-alignment-horizontal-right .date {
   justify-content: flex-end;
 }
 
@@ -49,17 +49,17 @@
   justify-content: center;
 }
 
-.is-header-items-alignment-horizontal-left .date-item:not(:last-child) {
+.is-header-item-alignment-horizontal-left .date-item:not(:last-child) {
   margin-right: 0.2em;
 }
 
-.is-header-items-alignment-horizontal-center .date-item:not(:first-child),
-.is-header-items-alignment-horizontal-center .date-item:not(:last-child) {
+.is-header-item-alignment-horizontal-center .date-item:not(:first-child),
+.is-header-item-alignment-horizontal-center .date-item:not(:last-child) {
   margin-left: 0.1em;
   margin-right: 0.1em;
 }
 
-.is-header-items-alignment-horizontal-right .date-item:not(:first-child) {
+.is-header-item-alignment-horizontal-right .date-item:not(:first-child) {
   margin-left: 0.2em;
 }
 

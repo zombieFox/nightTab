@@ -209,19 +209,19 @@
                 <p class="input-helper small muted">Effects may not be visible if the Header Area is full width.</p>
               </div>
               <hr>
-              <label class="control-header-items-alignment-horizontal-label">Item Horizontal Alignment</label>
+              <label class="control-header-item-alignment-horizontal-label">Item Horizontal Alignment</label>
               <p class="input-helper small muted">Effects may not be visible if the Search box size is set to Auto and grows to fill available space.</p>
               <div class="input-wrap">
-                <input id="control-header-items-alignment-horizontal-left" class="control-header-items-alignment-horizontal-left" type="radio" name="control-header-items-alignment-horizontal" value="left" tabindex="1">
-                <label for="control-header-items-alignment-horizontal-left">Left</label>
+                <input id="control-header-item-alignment-horizontal-left" class="control-header-item-alignment-horizontal-left" type="radio" name="control-header-item-alignment-horizontal" value="left" tabindex="1">
+                <label for="control-header-item-alignment-horizontal-left">Left</label>
               </div>
               <div class="input-wrap">
-                <input id="control-header-items-alignment-horizontal-center" class="control-header-items-alignment-horizontal-center" type="radio" name="control-header-items-alignment-horizontal" value="center" tabindex="1">
-                <label for="control-header-items-alignment-horizontal-center">Centre</label>
+                <input id="control-header-item-alignment-horizontal-center" class="control-header-item-alignment-horizontal-center" type="radio" name="control-header-item-alignment-horizontal" value="center" tabindex="1">
+                <label for="control-header-item-alignment-horizontal-center">Centre</label>
               </div>
               <div class="input-wrap">
-                <input id="control-header-items-alignment-horizontal-right" class="control-header-items-alignment-horizontal-right" type="radio" name="control-header-items-alignment-horizontal" value="right" tabindex="1">
-                <label for="control-header-items-alignment-horizontal-right">Right</label>
+                <input id="control-header-item-alignment-horizontal-right" class="control-header-item-alignment-horizontal-right" type="radio" name="control-header-item-alignment-horizontal" value="right" tabindex="1">
+                <label for="control-header-item-alignment-horizontal-right">Right</label>
               </div>
             </div>
           </div>
@@ -683,103 +683,101 @@
             </div>
             <div class="menu-item-form">
               <div class="input-wrap">
-                <input id="control-link-link-show" class="control-link-link-show" type="checkbox" tabindex="1">
-                <label for="control-link-link-show">Show</label>
+                <input id="control-link-show" class="control-link-show" type="checkbox" tabindex="1">
+                <label for="control-link-show">Show</label>
               </div>
               <div class="form-indent">
                 <hr>
                 <div class="input-wrap">
-                  <input id="control-link-display-show" class="control-link-display-show" type="checkbox" tabindex="1">
-                  <label for="control-link-display-show">Letter/Icon</label>
+                  <label for="control-link-item-size">Tile Size</label>
+                  <input id="control-link-item-size" class="control-link-item-size" type="range" min="50" max="500" value="0" tabindex="1">
+                </div>
+                <div class="button-wrap">
+                  <button class="button control-link-item-size-default mb-0" type="button">Defaul tile size</button>
+                </div>
+                <hr>
+                <div class="input-wrap">
+                  <input id="control-link-item-display-show" class="control-link-item-display-show" type="checkbox" tabindex="1">
+                  <label for="control-link-item-display-show">Letter/Icon</label>
                 </div>
                 <div class="form-indent">
                   <div class="input-wrap">
-                    <label for="control-link-display-letter-size">Letter size</label>
-                    <input id="control-link-display-letter-size" class="control-link-display-letter-size" type="range" min="1" max="3000" value="0" tabindex="1">
+                    <label for="control-link-item-display-letter-size">Letter size</label>
+                    <input id="control-link-item-display-letter-size" class="control-link-item-display-letter-size" type="range" min="1" max="3000" value="0" tabindex="1">
                   </div>
-                  <div class="input-wrap">
-                    <label for="control-link-display-icon-size">Icon size</label>
-                    <input id="control-link-display-icon-size" class="control-link-display-icon-size" type="range" min="1" max="3000" value="0" tabindex="1">
-                  </div>
-                </div>
-                <hr>
-                <div class="input-wrap">
-                  <input id="control-link-name-show" class="control-link-name-show" type="checkbox" tabindex="1">
-                  <label for="control-link-name-show">Names</label>
-                </div>
-                <hr>
-                <div class="input-wrap">
-                  <input id="control-link-url-show" class="control-link-url-show" type="checkbox" tabindex="1">
-                  <label for="control-link-url-show">URL on hover</label>
-                </div>
-                <div class="form-indent">
-                  <div class="input-wrap">
-                    <input id="control-link-url-style-dark" class="control-link-url-style-dark" type="radio" name="control-link-url-style" value="dark" tabindex="1">
-                    <label for="control-link-url-style-dark">Dark text</label>
-                  </div>
-                  <div class="input-wrap">
-                    <input id="control-link-url-style-light" class="control-link-url-style-light" type="radio" name="control-link-url-style" value="light" tabindex="1">
-                    <label for="control-link-url-style-light">Light text</label>
-                  </div>
-                </div>
-                <hr>
-                <label class="control-link-display-alignment-horizontal-label">Content Horizontal Alignment</label>
-                <div class="input-wrap">
-                  <input id="control-link-display-alignment-horizontal-left" class="control-link-display-alignment-horizontal-left" type="radio" name="control-link-display-alignment-horizontal" value="left" tabindex="1">
-                  <label for="control-link-display-alignment-horizontal-left">Left</label>
-                </div>
-                <div class="input-wrap">
-                  <input id="control-link-display-alignment-horizontal-center" class="control-link-display-alignment-horizontal-center" type="radio" name="control-link-display-alignment-horizontal" value="center" tabindex="1">
-                  <label for="control-link-display-alignment-horizontal-center">Centre</label>
-                </div>
-                <div class="input-wrap">
-                  <input id="control-link-display-alignment-horizontal-right" class="control-link-display-alignment-horizontal-right" type="radio" name="control-link-display-alignment-horizontal" value="right" tabindex="1">
-                  <label for="control-link-display-alignment-horizontal-right">Right</label>
-                </div>
-                <hr>
-                <label class="control-link-display-alignment-vertical-label">Content Vertical Alignment</label>
-                <div class="input-wrap">
-                  <input id="control-link-display-alignment-vertical-top" class="control-link-display-alignment-vertical-top" type="radio" name="control-link-display-alignment-vertical" value="top" tabindex="1">
-                  <label for="control-link-display-alignment-vertical-top">Top</label>
-                </div>
-                <div class="input-wrap">
-                  <input id="control-link-display-alignment-vertical-center" class="control-link-display-alignment-vertical-center" type="radio" name="control-link-display-alignment-vertical" value="center" tabindex="1">
-                  <label for="control-link-display-alignment-vertical-center">Centre</label>
-                </div>
-                <div class="input-wrap">
-                  <input id="control-link-display-alignment-vertical-bottom" class="control-link-display-alignment-vertical-bottom" type="radio" name="control-link-display-alignment-vertical" value="bottom" tabindex="1">
-                  <label for="control-link-display-alignment-vertical-bottom">Bottom</label>
-                </div>
-                <hr>
-                <label class="control-link-fit-label">Bookmark size</label>
-                <div class="input-wrap">
-                  <input id="control-link-fit-best" class="control-link-fit-best" type="radio" name="control-link-fit" value="best" tabindex="1">
-                  <label for="control-link-fit-best">Best fit</label>
-                </div>
-                <div class="input-wrap">
-                  <input id="control-link-fit-custom" class="control-link-fit-custom" type="radio" name="control-link-fit" value="custom" tabindex="1">
-                  <label for="control-link-fit-custom">Custom</label>
-                </div>
-                <div class="form-indent">
-                  <div class="input-wrap">
-                    <label for="control-link-items-width">Width</label>
-                    <input id="control-link-items-width" class="control-link-items-width" type="range" min="5" max="100" value="0" tabindex="1">
-                    <p class="input-helper small muted">Max width is defined by Layout Area Width.</p>
+                  <div class="button-wrap">
+                    <button class="button control-link-item-display-letter-size-default mb-0" type="button">Default letter size</button>
                   </div>
                   <hr>
-                  <label class="control-link-items-alignment-horizontal-label">Bookmark Horizontal Alignment</label>
                   <div class="input-wrap">
-                    <input id="control-link-items-alignment-horizontal-left" class="control-link-items-alignment-horizontal-left" type="radio" name="control-link-items-alignment-horizontal" value="left" tabindex="1">
-                    <label for="control-link-items-alignment-horizontal-left">Left</label>
+                    <label for="control-link-item-display-icon-size">Icon size</label>
+                    <input id="control-link-item-display-icon-size" class="control-link-item-display-icon-size" type="range" min="1" max="3000" value="0" tabindex="1">
+                  </div>
+                  <div class="button-wrap">
+                    <button class="button control-link-item-display-icon-size-default mb-0" type="button">Default icon size</button>
+                  </div>
+                </div>
+                <hr>
+                <div class="input-wrap">
+                  <input id="control-link-item-name-show" class="control-link-item-name-show" type="checkbox" tabindex="1">
+                  <label for="control-link-item-name-show">Names</label>
+                  <div class="form-indent">
+                    <div class="input-wrap">
+                      <label for="control-link-item-name-size">Names size</label>
+                      <input id="control-link-item-name-size" class="control-link-item-name-size" type="range" min="1" max="1500" value="0" tabindex="1">
+                    </div>
+                    <div class="button-wrap">
+                      <button class="button control-link-item-name-size-default mb-0" type="button">Default icon size</button>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="input-wrap">
+                  <input id="control-link-item-url-show" class="control-link-item-url-show" type="checkbox" tabindex="1">
+                  <label for="control-link-item-url-show">URL on hover</label>
+                </div>
+                <div class="form-indent">
+                  <div class="input-wrap">
+                    <input id="control-link-item-url-style-dark" class="control-link-item-url-style-dark" type="radio" name="control-link-item-url-style" value="dark" tabindex="1">
+                    <label for="control-link-item-url-style-dark">Dark text</label>
                   </div>
                   <div class="input-wrap">
-                    <input id="control-link-items-alignment-horizontal-center" class="control-link-items-alignment-horizontal-center" type="radio" name="control-link-items-alignment-horizontal" value="center" tabindex="1">
-                    <label for="control-link-items-alignment-horizontal-center">Centre</label>
+                    <input id="control-link-item-url-style-light" class="control-link-item-url-style-light" type="radio" name="control-link-item-url-style" value="light" tabindex="1">
+                    <label for="control-link-item-url-style-light">Light text</label>
                   </div>
-                  <div class="input-wrap">
-                    <input id="control-link-items-alignment-horizontal-right" class="control-link-items-alignment-horizontal-right" type="radio" name="control-link-items-alignment-horizontal" value="right" tabindex="1">
-                    <label for="control-link-items-alignment-horizontal-right">Right</label>
-                  </div>
+                </div>
+                <hr>
+                <div class="input-wrap">
+                  <label for="control-link-area-gap">Gap size</label>
+                  <input id="control-link-area-gap" class="control-link-area-gap" type="range" min="0" max="20" value="0" tabindex="1">
+                </div>
+                <hr>
+                <label class="control-link-item-display-alignment-horizontal-label">Content Horizontal Alignment</label>
+                <div class="input-wrap">
+                  <input id="control-link-item-display-alignment-horizontal-left" class="control-link-item-display-alignment-horizontal-left" type="radio" name="control-link-item-display-alignment-horizontal" value="left" tabindex="1">
+                  <label for="control-link-item-display-alignment-horizontal-left">Left</label>
+                </div>
+                <div class="input-wrap">
+                  <input id="control-link-item-display-alignment-horizontal-center" class="control-link-item-display-alignment-horizontal-center" type="radio" name="control-link-item-display-alignment-horizontal" value="center" tabindex="1">
+                  <label for="control-link-item-display-alignment-horizontal-center">Centre</label>
+                </div>
+                <div class="input-wrap">
+                  <input id="control-link-item-display-alignment-horizontal-right" class="control-link-item-display-alignment-horizontal-right" type="radio" name="control-link-item-display-alignment-horizontal" value="right" tabindex="1">
+                  <label for="control-link-item-display-alignment-horizontal-right">Right</label>
+                </div>
+                <hr>
+                <label class="control-link-item-display-alignment-vertical-label">Content Vertical Alignment</label>
+                <div class="input-wrap">
+                  <input id="control-link-item-display-alignment-vertical-top" class="control-link-item-display-alignment-vertical-top" type="radio" name="control-link-item-display-alignment-vertical" value="top" tabindex="1">
+                  <label for="control-link-item-display-alignment-vertical-top">Top</label>
+                </div>
+                <div class="input-wrap">
+                  <input id="control-link-item-display-alignment-vertical-center" class="control-link-item-display-alignment-vertical-center" type="radio" name="control-link-item-display-alignment-vertical" value="center" tabindex="1">
+                  <label for="control-link-item-display-alignment-vertical-center">Centre</label>
+                </div>
+                <div class="input-wrap">
+                  <input id="control-link-item-display-alignment-vertical-bottom" class="control-link-item-display-alignment-vertical-bottom" type="radio" name="control-link-item-display-alignment-vertical" value="bottom" tabindex="1">
+                  <label for="control-link-item-display-alignment-vertical-bottom">Bottom</label>
                 </div>
               </div>
             </div>
@@ -803,10 +801,12 @@
               <div class="input-wrap">
                 <input id="control-link-style-block" class="control-link-style-block" type="radio" name="control-link-style" value="block" tabindex="1">
                 <label for="control-link-style-block">Block</label>
+                <p class="input-helper small muted">Bookmark tiles more square shaped with content stacked vertically.</p>
               </div>
               <div class="input-wrap">
                 <input id="control-link-style-list" class="control-link-style-list" type="radio" name="control-link-style" value="list" tabindex="1">
                 <label for="control-link-style-list">List</label>
+                <p class="input-helper small muted">Bookmark tiles more short and wide with content stacked horizontally.</p>
               </div>
             </div>
           </div>

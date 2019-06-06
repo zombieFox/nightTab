@@ -7,7 +7,7 @@ var search = (function() {
       _toggle(this);
       _searchClear();
       link.clear();
-      link.render.link();
+      link.render.item.all();
     }, false);
     searchClear.addEventListener("click", function() {
       _toggle(this);
@@ -82,7 +82,7 @@ var search = (function() {
     searchInput.value = "";
     searchInput.focus();
     link.clear();
-    link.render.link();
+    link.render.item.all();
   };
 
   var _focus = function() {

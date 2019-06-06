@@ -60,7 +60,7 @@ var link = (function() {
         bookmarks.add(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
         data.save();
         clear();
-        render.link();
+        render.item.all();
         render.tabIndex();
         control.dependents();
         control.render();
@@ -113,7 +113,7 @@ var link = (function() {
         bookmarks.edit(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
         data.save();
         clear();
-        render.link();
+        render.item.all();
         render.tabIndex();
         _returnToPreviousFocusLink();
         resetStagedBookmarkData();
@@ -133,7 +133,7 @@ var link = (function() {
     _checkCount();
     data.save();
     clear();
-    render.link();
+    render.item.all();
   };
 
   var _checkCount = function() {
@@ -507,31 +507,69 @@ var link = (function() {
   };
 
   var render = {
-    width: {
-      set: function() {
-        _width();
-      },
-      match: function() {
-        _match();
+    area: {
+      gap: function() {
+        _areaGap();
       }
     },
-    displayLetterIcon: {
-      size: function() {
-        _size();
+    width: {
+      set: function() {
+        _renderWidthSet();
+      },
+      match: function() {
+        _renderWidthMatch();
+      }
+    },
+    item: {
+      all: function() {
+        _renderItemAll();
+      },
+      display: {
+        letter: {
+          set: function() {
+            _renderItemDisplayLetterSet();
+          },
+          default: function() {
+            _renderItemDisplayLetterDefault();
+          }
+        },
+        icon: {
+          set: function() {
+            _renderItemDisplayIconSet();
+          },
+          default: function() {
+            _renderItemDisplayIconDefault();
+          }
+        }
+      },
+      name: {
+        set: function() {
+          _renderItemNameSet();
+        },
+        default: function() {
+          _renderItemNameDefault();
+        }
+      },
+      size: {
+        set: function() {
+          _renderItemSizeSet();
+        },
+        default: function() {
+          _renderItemSizeDefault();
+        }
       },
     },
-    link: function() {
-      _link();
-    },
     tabIndex: function() {
-      _tabIndex();
-    },
-    items: function() {
-      _items();
+      _renderTabIndex();
     }
   };
 
-  var _link = function() {
+  var _areaGap = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-area-gutter-multiplier", state.get().link.area.gap);
+  };
+
+  var _renderItemAll = function() {
     var linkArea = helper.e(".link-area");
     var bookmarksToRender = false;
     if (state.get().search) {
@@ -579,18 +617,68 @@ var link = (function() {
     };
   };
 
-  var _width = function() {
+  var _renderWidthSet = function() {
     var html = helper.e("html");
     html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
   };
 
-  var _size = function() {
+  var _renderItemDisplayLetterSet = function() {
     var html = helper.e("html");
-    html.style.setProperty("--link-display-letter-size", state.get().link.display.letter.size + "em");
-    html.style.setProperty("--link-display-icon-size", state.get().link.display.icon.size + "em");
+    html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
   };
 
-  var _match = function() {
+  var _renderItemDisplayLetterDefault = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "link.item.display.letter.size",
+      newValue: 2
+    });
+    render.item.display.letter.set();
+  };
+
+  var _renderItemDisplayIconSet = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.icon.size + "em");
+  };
+
+  var _renderItemDisplayIconDefault = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "link.item.display.icon.size",
+      newValue: 2
+    });
+    render.item.display.icon.set();
+  };
+
+  var _renderItemNameSet = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-item-name-size", state.get().link.item.name.size + "em");
+  };
+
+  var _renderItemNameDefault = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "link.item.name.size",
+      newValue: 0.9
+    });
+    render.item.name.set();
+  };
+
+  var _renderItemSizeSet = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-item-size", state.get().link.item.size + "em");
+  };
+
+  var _renderItemSizeDefault = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "link.item.size",
+      newValue: 1
+    });
+    render.item.size.set();
+  };
+
+  var _renderWidthMatch = function() {
     helper.setObject({
       object: state.get(),
       path: "link.area.width",
@@ -599,12 +687,7 @@ var link = (function() {
     render.width.set();
   };
 
-  var _items = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--link-items-width", state.get().link.items.width + "%");
-  };
-
-  var _tabIndex = function() {
+  var _renderTabIndex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
     if (state.get().link.edit) {
       allLinkControlItem.forEach(function(arrayItem, index) {
@@ -625,10 +708,14 @@ var link = (function() {
   };
 
   var init = function() {
-    render.link();
-    render.displayLetterIcon.size();
+    render.area.gap();
+    render.item.all();
+    render.item.size.set();
+    render.item.display.letter.set();
+    render.item.display.icon.set();
+    render.item.name.set();
+    render.item.name.default();
     render.width.set();
-    render.items();
   };
 
   // exposed methods
