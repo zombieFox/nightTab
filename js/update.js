@@ -400,9 +400,22 @@ var update = (function() {
     return data;
   };
 
-  var _update_350 = function(data) {
-    data.version = "3.5.0";
-    data.state.link.size = 1;
+  var _update_360 = function(data) {
+    data.version = "3.6.0";
+    data.state.header.item = data.state.header.items;
+    delete data.state.header.items;
+    data.state.link.area.gap = 2;
+    delete data.state.link.items;
+    data.state.link.item = {
+      size: 1,
+      display: data.state.link.display,
+      name: data.state.link.name,
+      url: data.state.link.url
+    };
+    data.state.link.item.name.size = 0.9;
+    delete data.state.link.display;
+    delete data.state.link.name;
+    delete data.state.link.url;
     return data;
   };
 
@@ -512,9 +525,9 @@ var update = (function() {
         console.log("\t= running update 3.4.0");
         data = _update_340(data);
       };
-      if (version.compare(data.version, "3.5.0") == -1) {
-        console.log("\t= running update 3.5.0");
-        data = _update_350(data);
+      if (version.compare(data.version, "3.6.0") == -1) {
+        console.log("\t= running update 3.6.0");
+        data = _update_360(data);
       };
     };
     // if no update is needed
