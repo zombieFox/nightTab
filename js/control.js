@@ -1420,6 +1420,13 @@ var control = (function() {
       render();
     }
   }, {
+    element: helper.e(".control-link-item-line-show"),
+    path: "link.item.line.show",
+    type: "checkbox",
+    func: function() {
+      render();
+    }
+  }, {
     element: helper.e(".control-link-area-gap"),
     path: "link.area.gap",
     type: "range",
@@ -1849,6 +1856,7 @@ var control = (function() {
       helper.removeClass(html, "is-link-url-show");
       helper.removeClass(html, "is-link-url-style-light");
       helper.removeClass(html, "is-link-url-style-dark");
+      helper.removeClass(html, "is-link-item-line-show");
       helper.removeClass(html, "is-link-item-alignment-horizontal-left");
       helper.removeClass(html, "is-link-item-alignment-horizontal-center");
       helper.removeClass(html, "is-link-item-alignment-horizontal-right");
@@ -1871,6 +1879,9 @@ var control = (function() {
         };
         if (state.get().link.item.url.show) {
           helper.addClass(html, "is-link-url-show");
+        };
+        if (state.get().link.item.line.show) {
+          helper.addClass(html, "is-link-item-line-show");
         };
         if (state.get().link.edit) {
           helper.addClass(html, "is-link-edit");
@@ -2200,6 +2211,7 @@ var control = (function() {
       helper.e(".control-link-item-url-show").disabled = true;
       helper.e(".control-link-item-url-style-dark").disabled = true;
       helper.e(".control-link-item-url-style-light").disabled = true;
+      helper.e(".control-link-item-line-show").disabled = true;
       helper.e("[for=control-link-area-gap]").setAttribute("disabled", "");
       helper.e(".control-link-area-gap").disabled = true;
       helper.e(".control-link-item-display-alignment-horizontal-label").setAttribute("disabled", "");
@@ -2231,6 +2243,7 @@ var control = (function() {
         helper.e(".control-link-item-display-show").disabled = false;
         helper.e(".control-link-item-name-show").disabled = false;
         helper.e(".control-link-item-url-show").disabled = false;
+        helper.e(".control-link-item-line-show").disabled = false;
         helper.e("[for=control-link-area-gap]").removeAttribute("disabled");
         helper.e(".control-link-area-gap").disabled = false;
         helper.e(".control-link-new-tab").disabled = false;

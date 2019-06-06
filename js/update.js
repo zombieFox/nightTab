@@ -419,6 +419,14 @@ var update = (function() {
     return data;
   };
 
+  var _update_370 = function(data) {
+    data.version = "3.7.0";
+    data.state.link.item.line = {
+      show: true
+    };
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -528,6 +536,10 @@ var update = (function() {
       if (version.compare(data.version, "3.6.0") == -1) {
         console.log("\t= running update 3.6.0");
         data = _update_360(data);
+      };
+      if (version.compare(data.version, "3.7.0") == -1) {
+        console.log("\t= running update 3.7.0");
+        data = _update_370(data);
       };
     };
     // if no update is needed

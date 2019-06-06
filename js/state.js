@@ -164,6 +164,9 @@ var state = (function() {
           show: true,
           style: "dark"
         },
+        line: {
+          show: true
+        }
       },
       show: true,
       newTab: false,

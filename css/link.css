@@ -65,13 +65,17 @@
   background-color: rgb(var(--gray-02));
   border-radius: var(--radius);
   width: 100%;
-  height: calc(100% - var(--line-width));
+  height: 100%;
   display: flex;
   z-index: 3;
   overflow: hidden;
   position: relative;
   user-select: none;
   transition: background-color var(--animation-speed-fast) ease-in-out, height var(--animation-speed-fast) ease-in-out, box-shadow var(--animation-speed-fast) ease-in-out;
+}
+
+.is-link-item-line-show .link-panel-front {
+  height: calc(100% - var(--line-width));
 }
 
 .link-panel-front:hover,
