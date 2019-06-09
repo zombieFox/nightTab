@@ -228,7 +228,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      header.render.width.set();
+      header.render.width();
     }
   }, {
     element: helper.e(".control-header-area-width-match"),
@@ -248,7 +248,8 @@ var control = (function() {
       }
     }],
     func: function() {
-      header.render.width.match();
+      header.set.match();
+      header.render.width();
       update();
     }
   }, {
@@ -362,6 +363,44 @@ var control = (function() {
       greeting.clear();
       greeting.render();
     }
+  }, {
+    element: helper.e(".control-header-greeting-size"),
+    path: "header.greeting.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      header.render.greeting.size();
+    }
+  }, {
+    element: helper.e(".control-header-transitional-size"),
+    path: "header.transitional.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {}
+  }, {
+    element: helper.e(".control-header-clock-size"),
+    path: "header.clock.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {}
+  }, {
+    element: helper.e(".control-header-date-size"),
+    path: "header.date.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {}
+  }, {
+    element: helper.e(".control-header-search-size"),
+    path: "header.search.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {}
+  }, {
+    element: helper.e(".control-header-button-size"),
+    path: "header.button.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {}
   }, {
     element: helper.e(".control-header-transitional-show"),
     path: "header.transitional.show",
@@ -979,15 +1018,15 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-edit-add-show"),
-    path: "header.editAdd.show",
+    element: helper.e(".control-header-button-edit-add-show"),
+    path: "header.button.editAdd.show",
     type: "checkbox",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-accent-show"),
-    path: "header.accent.show",
+    element: helper.e(".control-header-button-accent-show"),
+    path: "header.button.accent.show",
     type: "checkbox",
     func: function() {
       render();
@@ -1193,7 +1232,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      link.render.width.set();
+      link.render.area.width();
     }
   }, {
     element: helper.e(".control-link-area-width-match"),
@@ -1213,7 +1252,11 @@ var control = (function() {
       }
     }],
     func: function() {
-      link.render.width.match();
+      _setValue("link.area.width", helper.getObject({
+        object: state.get(),
+        path: "header.area.width"
+      }));
+      link.render.area.width();
       update();
     }
   }, {
@@ -1309,7 +1352,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      link.render.item.size.set();
+      link.render.item.size();
     }
   }, {
     element: helper.e(".control-link-item-size-default"),
@@ -1324,7 +1367,8 @@ var control = (function() {
       }
     }],
     func: function() {
-      link.render.item.size.default();
+      _setValue("link.item.size", 1);
+      link.render.item.size();
       update();
     }
   }, {
@@ -1350,13 +1394,14 @@ var control = (function() {
     type: "range",
     valueMod: ["float"],
     func: function() {
-      link.render.item.display.letter.set();
+      link.render.item.display.letter();
     }
   }, {
     element: helper.e(".control-link-item-display-letter-size-default"),
     type: "button",
     func: function() {
-      link.render.item.display.letter.default();
+      _setValue("link.item.display.letter.size", 2);
+      link.render.item.display.letter();
       update();
     }
   }, {
@@ -1365,13 +1410,14 @@ var control = (function() {
     type: "range",
     valueMod: ["float"],
     func: function() {
-      link.render.item.display.icon.set();
+      link.render.item.display.icon();
     }
   }, {
     element: helper.e(".control-link-item-display-icon-size-default"),
     type: "button",
     func: function() {
-      link.render.item.display.icon.default();
+      _setValue("link.item.display.icon.size", 2);
+      link.render.item.icon.letter();
       update();
     }
   }, {
@@ -1394,7 +1440,8 @@ var control = (function() {
     element: helper.e(".control-link-item-name-size-default"),
     type: "button",
     func: function() {
-      link.render.item.name.default();
+      _setValue("link.item.display.icon.size", 0.9);
+      link.render.item.name.set();
       update();
     }
   }, {
@@ -1645,6 +1692,19 @@ var control = (function() {
     }
   }];
 
+  var _setValue = function(path, value) {
+    helper.setObject({
+      object: state.get(),
+      path: path,
+      newValue: value
+    });
+  };
+
+  var _renderItemDisplayLetter = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
+  };
+
   var bind = function() {
     var eventType = {
       button: "click",
@@ -1782,17 +1842,17 @@ var control = (function() {
         helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
       };
       var _editAdd = function() {
-        if (state.get().header.editAdd.show) {
-          helper.addClass(html, "is-header-edit-add-show");
+        if (state.get().header.button.editAdd.show) {
+          helper.addClass(html, "is-header-button-edit-add-show");
         } else {
-          helper.removeClass(html, "is-header-edit-add-show");
+          helper.removeClass(html, "is-header-button-edit-add-show");
         };
       };
       var _accent = function() {
-        if (state.get().header.accent.show) {
-          helper.addClass(html, "is-header-accent-show");
+        if (state.get().header.button.accent.show) {
+          helper.addClass(html, "is-header-button-accent-show");
         } else {
-          helper.removeClass(html, "is-header-accent-show");
+          helper.removeClass(html, "is-header-button-accent-show");
         };
       };
       var _greeting = function() {

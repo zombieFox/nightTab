@@ -65,4 +65,4 @@ title.init();
 header.init();
 
 
-// menu.open();
+menu.open();

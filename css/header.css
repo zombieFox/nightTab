@@ -122,6 +122,25 @@
   width: var(--header-search-width);
 }
 
+.header-date {
+  font-size: var(--header-date-size);
+}
+.header-clock {
+  font-size: var(--header-clock-size);
+}
+.header-search {
+  font-size: var(--header-search-size);
+}
+.header-button {
+  font-size: var(--header-button-size);
+}
+.header-greeting {
+  font-size: var(--header-greeting-size);
+}
+.header-transitional {
+  font-size: var(--header-transitional-size);
+}
+
 .header-date,
 .header-clock,
 .header-search,
@@ -136,8 +155,8 @@
 .is-header-search-show .header-search,
 .is-header-date-show .header-date,
 .is-header-clock-show .header-clock,
-.is-header-edit-add-show .header-edit-add,
-.is-header-accent-show .header-accent,
+.is-header-button-edit-add-show .header-edit-add,
+.is-header-button-accent-show .header-accent,
 .is-header-greeting-show .header-greeting,
 .is-header-transitional-show .header-transitional,
 .is-menu .header-menu {
