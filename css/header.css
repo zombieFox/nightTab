@@ -46,11 +46,11 @@
 }
 
 .is-header-border-top-show .header-border {
-  border-top: var(--header-border-width-top) solid rgb(var(--accent));
+  border-top: var(--header-border-width-top) solid rgb(var(--theme-accent));
 }
 
 .is-header-border-bottom-show .header-border {
-  border-bottom: var(--header-border-width-bottom) solid rgb(var(--accent));
+  border-bottom: var(--header-border-width-bottom) solid rgb(var(--theme-accent));
 }
 
 .header-area {
@@ -121,18 +121,23 @@
 .header-date {
   font-size: var(--header-date-size);
 }
+
 .header-clock {
   font-size: var(--header-clock-size);
 }
+
 .header-search {
   font-size: var(--header-search-size);
 }
+
 .header-button {
   font-size: var(--header-button-size);
 }
+
 .header-greeting {
   font-size: var(--header-greeting-size);
 }
+
 .header-transitional {
   font-size: var(--header-transitional-size);
 }

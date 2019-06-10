@@ -47,7 +47,7 @@
   padding: 0.5em 1em;
   background-color: rgb(var(--gray-04));
   border: 0;
-  border-radius: calc(var(--radius) * 2);
+  border-radius: calc(var(--theme-radius) * 2);
   color: rgb(var(--gray-18));
   font-size: 0.8em;
   font-family: var(--font-regular);

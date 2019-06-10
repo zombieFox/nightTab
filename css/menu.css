@@ -20,8 +20,8 @@
 }
 
 .menu-area {
-  background-color: rgb(var(--gray-01));
-  border-radius: var(--radius);
+  background-color: rgba(var(--gray-01), 0.95);
+  border-radius: var(--theme-radius);
   width: 100%;
   max-height: 100%;
   overflow-y: auto;
@@ -65,7 +65,7 @@
 }
 
 .menu-item:not(:last-child) {
-  border-bottom: var(--menu-border);
+  border-bottom: calc(var(--line-width) * 2) solid rgb(var(--gray-03));
 }
 
 .menu-item-header {
@@ -85,7 +85,7 @@
   margin: 0;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
-  border-radius: 0 var(--radius) 0 0;
+  border-radius: 0 var(--theme-radius) 0 0;
 }
 
 .menu-nav-button {
@@ -99,7 +99,7 @@
 }
 
 .menu-nav-button:first-child {
-  border-radius: var(--radius) 0 0 0;
+  border-radius: var(--theme-radius) 0 0 0;
 }
 
 .menu-nav-button [class^="icon-"],

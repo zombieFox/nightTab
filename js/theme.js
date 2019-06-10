@@ -28,7 +28,7 @@ var theme = (function() {
 
   var _renderRadius = function() {
     var html = helper.e("html");
-    html.style.setProperty("--radius", state.get().theme.radius + "rem");
+    html.style.setProperty("--theme-radius", state.get().theme.radius + "rem");
   };
 
   var init = function() {

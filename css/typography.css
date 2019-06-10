@@ -53,7 +53,7 @@ p {
 hr {
   border: 0;
   border-top: 1px solid rgb(var(--gray-02));
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   margin: 1em 0;
   clear: both;
 }

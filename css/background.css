@@ -26,7 +26,7 @@
 }
 
 .background-accent {
-  background-color: rgba(var(--accent), var(--background-accent-opacity));
+  background-color: rgba(var(--theme-accent), var(--background-accent-opacity));
   position: absolute;
   top: 0;
   left: 0;

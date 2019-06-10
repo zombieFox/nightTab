@@ -3,7 +3,7 @@ var accent = (function() {
   var render = function() {
     var html = helper.e("html");
     var color = state.get().theme.accent.current;
-    html.style.setProperty("--accent", color.r + ", " + color.g + ", " + color.b);
+    html.style.setProperty("--theme-accent", color.r + ", " + color.g + ", " + color.b);
   };
 
   var random = function() {
