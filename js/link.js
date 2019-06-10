@@ -506,6 +506,13 @@ var link = (function() {
     return div;
   };
 
+  var clear = function() {
+    var linkArea = helper.e(".link-area");
+    while (linkArea.lastChild) {
+      linkArea.removeChild(linkArea.lastChild);
+    };
+  };
+
   var render = {
     area: {
       gap: function() {
@@ -528,7 +535,7 @@ var link = (function() {
         }
       },
       name: function() {
-        _renderItemNameSet();
+        _renderItemName();
       },
       size: function() {
         _renderItemSize();
@@ -607,7 +614,7 @@ var link = (function() {
     html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.icon.size + "em");
   };
 
-  var _renderItemNameSet = function() {
+  var _renderItemName = function() {
     var html = helper.e("html");
     html.style.setProperty("--link-item-name-size", state.get().link.item.name.size + "em");
   };
@@ -627,13 +634,6 @@ var link = (function() {
       allLinkControlItem.forEach(function(arrayItem, index) {
         arrayItem.tabIndex = -1;
       });
-    };
-  };
-
-  var clear = function() {
-    var linkArea = helper.e(".link-area");
-    while (linkArea.lastChild) {
-      linkArea.removeChild(linkArea.lastChild);
     };
   };
 

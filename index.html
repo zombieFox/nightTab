@@ -69,24 +69,24 @@
             <span class="icon-close"></span>
           </button>
         </div>
-        <div class="header-item header-edit-add">
+        <div class="header-item header-button header-edit-add">
           <div class="form-group nested-button mb-0">
             <div class="input-wrap input-button input-hide py-0">
-              <input id="control-edit" class="control-edit" type="checkbox" tabindex="1">
-              <label for="control-edit" class=" mb-0">Edit</label>
+              <input id="control-link-edit" class="control-link-edit" type="checkbox" tabindex="1">
+              <label for="control-link-edit" class=" mb-0">Edit</label>
             </div>
-            <button class="button control-add" tabindex="1">
+            <button class="button control-link-add" tabindex="1">
               <span class="button-text">Add</span>
             </button>
           </div>
         </div>
-        <div class="header-item header-accent">
+        <div class="header-item header-button header-accent">
           <div class="input-wrap input-button input-color-dot input-color-dot-accent py-0">
             <input id="control-theme-accent-current" class="control-theme-accent-current" type="color" tabindex="1">
             <label for="control-theme-accent-current">Accent</label>
           </div>
         </div>
-        <div class="header-item header-menu">
+        <div class="header-item header-button header-menu">
           <button id="control-menu" class="control-menu button mb-0" tabindex="1">
             <span class="button-text"><span class="icon-settings"></span></span>
           </button>
@@ -256,7 +256,7 @@
                 <hr>
                 <div class="input-wrap">
                   <label for="control-header-greeting-size">Size</label>
-                  <input id="control-header-greeting-size" class="control-header-greeting-size" type="range" min="50" max="300" value="0" tabindex="1">
+                  <input id="control-header-greeting-size" class="control-header-greeting-size" type="range" min="20" max="500" value="0" step="20" tabindex="1">
                 </div>
                 <div class="button-wrap">
                   <button class="button control-header-greeting-size-default mb-0" type="button">Defaul greeting size</button>
@@ -287,7 +287,10 @@
                 <hr>
                 <div class="input-wrap">
                   <label for="control-header-transitional-size">Size</label>
-                  <input id="control-header-transitional-size" class="control-header-transitional-size" type="range" min="50" max="300" value="0" tabindex="1">
+                  <input id="control-header-transitional-size" class="control-header-transitional-size" type="range" min="20" max="500" value="0" step="20" tabindex="1">
+                </div>
+                <div class="button-wrap">
+                  <button class="button control-header-transitional-size-default mb-0" type="button">Defaul transitional size</button>
                 </div>
               </div>
             </div>
@@ -358,7 +361,10 @@
               <hr>
               <div class="input-wrap">
                 <label for="control-header-clock-size">Size</label>
-                <input id="control-header-clock-size" class="control-header-clock-size" type="range" min="50" max="300" value="0" tabindex="1">
+                <input id="control-header-clock-size" class="control-header-clock-size" type="range" min="20" max="500" value="0" step="20" tabindex="1">
+              </div>
+              <div class="button-wrap">
+                <button class="button control-header-clock-size-default mb-0" type="button">Defaul clock size</button>
               </div>
             </div>
           </div>
@@ -490,7 +496,10 @@
               <hr>
               <div class="input-wrap">
                 <label for="control-header-date-size">Size</label>
-                <input id="control-header-date-size" class="control-header-date-size" type="range" min="50" max="300" value="0" tabindex="1">
+                <input id="control-header-date-size" class="control-header-date-size" type="range" min="20" max="500" value="0" step="20" tabindex="1">
+              </div>
+              <div class="button-wrap">
+                <button class="button control-header-date-size-default mb-0" type="button">Defaul date size</button>
               </div>
             </div>
           </div>
@@ -505,20 +514,21 @@
               </div>
               <div class="form-indent">
                 <hr>
-                <label class="control-header-search-width-style-label">Search box size</label>
+                <label class="control-header-search-style-label">Search box width</label>
                 <div class="input-wrap">
-                  <input id="control-header-search-width-style-auto" class="control-header-search-width-style-auto" type="radio" name="control-header-search-width" value="auto" tabindex="1">
-                  <label for="control-header-search-width-style-auto">Auto</label>
+                  <input id="control-header-search-style-auto" class="control-header-search-style-auto" type="radio" name="control-header-search-width" value="auto" tabindex="1">
+                  <label for="control-header-search-style-auto">Auto</label>
                   <p class="input-helper small muted">Search box will grow to best fit available space.</p>
                 </div>
                 <div class="input-wrap">
-                  <input id="control-header-search-width-style-custom" class="control-header-search-width-style-custom" type="radio" name="control-header-search-width" value="custom" tabindex="1">
-                  <label for="control-header-search-width-style-custom">Custom</label>
+                  <input id="control-header-search-style-custom" class="control-header-search-style-custom" type="radio" name="control-header-search-width" value="custom" tabindex="1">
+                  <label for="control-header-search-style-custom">Custom</label>
+                  <p class="input-helper small muted">Define how wide the Search box should be inside the Header Area.</p>
                 </div>
                 <div class="form-indent">
                   <div class="input-wrap">
-                    <label for="control-header-search-width-custom">Width</label>
-                    <input id="control-header-search-width-custom" class="control-header-search-width-custom" type="range" min="10" max="100" value="0" tabindex="1">
+                    <label for="control-header-search-width">Width</label>
+                    <input id="control-header-search-width" class="control-header-search-width" type="range" min="10" max="100" value="0" tabindex="1">
                   </div>
                 </div>
                 <hr>
@@ -578,7 +588,10 @@
                 <hr>
                 <div class="input-wrap">
                   <label for="control-header-search-size">Size</label>
-                  <input id="control-header-search-size" class="control-header-search-size" type="range" min="50" max="300" value="0" tabindex="1">
+                  <input id="control-header-search-size" class="control-header-search-size" type="range" min="20" max="500" value="0" step="20" tabindex="1">
+                </div>
+                <div class="button-wrap">
+                  <button class="button control-header-search-size-default mb-0" type="button">Defaul search size</button>
                 </div>
               </div>
             </div>
@@ -600,7 +613,10 @@
               <hr>
               <div class="input-wrap">
                 <label for="control-header-button-size">Size</label>
-                <input id="control-header-button-size" class="control-header-button-size" type="range" min="50" max="300" value="0" tabindex="1">
+                <input id="control-header-button-size" class="control-header-button-size" type="range" min="20" max="500" value="0" step="20" tabindex="1">
+              </div>
+              <div class="button-wrap">
+                <button class="button control-header-button-size-default mb-0" type="button">Defaul button size</button>
               </div>
             </div>
           </div>
@@ -887,6 +903,14 @@
                 <input id="control-theme-style-light" class="control-theme-style-light" type="radio" name="control-theme-style" value="light" tabindex="1">
                 <label for="control-theme-style-light">Light</label>
                 <p class="input-helper small muted">Accent Colour and Background Image may need to be changed to best fit the Theme Style.</p>
+              </div>
+              <hr>
+              <div class="input-wrap">
+                <label for="control-theme-radius">Radius</label>
+                <input id="control-theme-radius" class="control-theme-radius" type="range" min="0" max="300" value="0" step="20" tabindex="1">
+              </div>
+              <div class="button-wrap">
+                <button class="button control-theme-radius-default mb-0" type="button">Defaul radius size</button>
               </div>
             </div>
           </div>

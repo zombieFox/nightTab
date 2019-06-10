@@ -67,10 +67,8 @@ var state = (function() {
       },
       search: {
         show: true,
-        width: {
-          style: "auto",
-          custom: 30
-        },
+        style: "auto",
+        width: 30,
         focus: false,
         engine: {
           selected: "google",
@@ -203,7 +201,8 @@ var state = (function() {
           style: "any"
         }
       },
-      style: "dark"
+      style: "dark",
+      radius: 0.2
     },
     background: {
       image: {

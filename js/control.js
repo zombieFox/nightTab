@@ -8,13 +8,13 @@ var control = (function() {
       page.update();
     }
   }, {
-    element: helper.e(".control-add"),
+    element: helper.e(".control-link-add"),
     type: "button",
     func: function() {
       link.add();
     }
   }, {
-    element: helper.e(".control-edit"),
+    element: helper.e(".control-link-edit"),
     path: "link.edit",
     type: "checkbox",
     func: function() {
@@ -228,7 +228,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      header.render.width();
+      header.render.area.width();
     }
   }, {
     element: helper.e(".control-header-area-width-match"),
@@ -248,8 +248,11 @@ var control = (function() {
       }
     }],
     func: function() {
-      header.set.match();
-      header.render.width();
+      _setValue("header.area.width", helper.getObject({
+        object: state.get(),
+        path: "link.area.width"
+      }));
+      header.render.area.width();
       update();
     }
   }, {
@@ -372,35 +375,93 @@ var control = (function() {
       header.render.greeting.size();
     }
   }, {
+    element: helper.e(".control-header-greeting-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("header.greeting.size", 1);
+      header.render.greeting.size();
+      update();
+    }
+  }, {
     element: helper.e(".control-header-transitional-size"),
     path: "header.transitional.size",
     type: "range",
     valueMod: ["float"],
-    func: function() {}
+    func: function() {
+      header.render.transitional.size();
+    }
+  }, {
+    element: helper.e(".control-header-transitional-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("header.transitional.size", 1);
+      header.render.transitional.size();
+      update();
+    }
   }, {
     element: helper.e(".control-header-clock-size"),
     path: "header.clock.size",
     type: "range",
     valueMod: ["float"],
-    func: function() {}
+    func: function() {
+      header.render.clock.size();
+    }
+  }, {
+    element: helper.e(".control-header-clock-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("header.clock.size", 1);
+      header.render.clock.size();
+      update();
+    }
   }, {
     element: helper.e(".control-header-date-size"),
     path: "header.date.size",
     type: "range",
     valueMod: ["float"],
-    func: function() {}
+    func: function() {
+      header.render.date.size();
+    }
+  }, {
+    element: helper.e(".control-header-date-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("header.date.size", 1);
+      header.render.date.size();
+      update();
+    }
   }, {
     element: helper.e(".control-header-search-size"),
     path: "header.search.size",
     type: "range",
     valueMod: ["float"],
-    func: function() {}
+    func: function() {
+      header.render.search.size();
+    }
+  }, {
+    element: helper.e(".control-header-search-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("header.search.size", 1);
+      header.render.search.size();
+      update();
+    }
   }, {
     element: helper.e(".control-header-button-size"),
     path: "header.button.size",
     type: "range",
     valueMod: ["float"],
-    func: function() {}
+    func: function() {
+      header.render.button.size();
+    }
+  }, {
+    element: helper.e(".control-header-button-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("header.button.size", 1);
+      header.render.button.size();
+      update();
+    }
   }, {
     element: helper.e(".control-header-transitional-show"),
     path: "header.transitional.show",
@@ -872,29 +933,29 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      header.render.search();
+      header.render.search.width();
     }
   }, {
-    element: helper.e(".control-header-search-width-style-auto"),
-    path: "header.search.width.style",
+    element: helper.e(".control-header-search-style-auto"),
+    path: "header.search.style",
     type: "radio",
     func: function() {
       render();
       dependents();
-      header.render.search();
+      header.render.search.width();
     }
   }, {
-    element: helper.e(".control-header-search-width-style-custom"),
-    path: "header.search.width.style",
+    element: helper.e(".control-header-search-style-custom"),
+    path: "header.search.style",
     type: "radio",
     func: function() {
       render();
       dependents();
-      header.render.search();
+      header.render.search.width();
     }
   }, {
-    element: helper.e(".control-header-search-width-custom"),
-    path: "header.search.width.custom",
+    element: helper.e(".control-header-search-width"),
+    path: "header.search.width",
     type: "range",
     additionalEvents: [{
       event: "input",
@@ -936,7 +997,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      header.render.search();
+      header.render.search.width();
     }
   }, {
     element: helper.e(".control-header-search-focus"),
@@ -1593,6 +1654,22 @@ var control = (function() {
       accent.render();
     }
   }, {
+    element: helper.e(".control-theme-radius"),
+    path: "theme.radius",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      theme.render.radius();
+    }
+  }, {
+    element: helper.e(".control-theme-radius-default"),
+    type: "button",
+    func: function() {
+      _setValue("theme.radius", 0.2);
+      theme.render.radius();
+      update();
+    }
+  }, {
     element: helper.e(".control-theme-accent-random-active"),
     path: "theme.accent.random.active",
     type: "checkbox",
@@ -1828,14 +1905,14 @@ var control = (function() {
       };
       var _search = function() {
         helper.removeClass(html, "is-header-search-show");
-        helper.removeClass(html, "is-header-search-width-style-custom");
-        helper.removeClass(html, "is-header-search-width-style-auto");
+        helper.removeClass(html, "is-header-search-style-custom");
+        helper.removeClass(html, "is-header-search-style-auto");
         helper.removeClass(html, "is-header-search-text-align-left");
         helper.removeClass(html, "is-header-search-text-align-center");
         helper.removeClass(html, "is-header-search-text-align-right");
         if (state.get().header.search.show) {
           helper.addClass(html, "is-header-search-show");
-          helper.addClass(html, "is-header-search-width-style-" + state.get().header.search.width.style);
+          helper.addClass(html, "is-header-search-style-" + state.get().header.search.style);
           helper.addClass(html, "is-header-search-text-align-" + state.get().header.search.text.align);
         };
         helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
@@ -2148,11 +2225,11 @@ var control = (function() {
       };
       var _search = function() {
         if (state.get().header.search.show) {
-          helper.e(".control-header-search-width-style-label").removeAttribute("disabled");
-          helper.e(".control-header-search-width-style-auto").disabled = false;
-          helper.e(".control-header-search-width-style-custom").disabled = false;
-          helper.e("[for=control-header-search-width-custom]").removeAttribute("disabled");
-          helper.e(".control-header-search-width-custom").disabled = false;
+          helper.e(".control-header-search-style-label").removeAttribute("disabled");
+          helper.e(".control-header-search-style-auto").disabled = false;
+          helper.e(".control-header-search-style-custom").disabled = false;
+          helper.e("[for=control-header-search-width]").removeAttribute("disabled");
+          helper.e(".control-header-search-width").disabled = false;
           helper.e(".control-header-search-focus").disabled = false;
           helper.e(".control-header-search-engine-label").removeAttribute("disabled");
           helper.e(".control-header-search-engine-google").disabled = false;
@@ -2165,11 +2242,11 @@ var control = (function() {
           helper.e(".control-header-search-text-align-center").disabled = false;
           helper.e(".control-header-search-text-align-right").disabled = false;
         } else {
-          helper.e(".control-header-search-width-style-label").setAttribute("disabled", "");
-          helper.e(".control-header-search-width-style-auto").disabled = true;
-          helper.e(".control-header-search-width-style-custom").disabled = true;
-          helper.e("[for=control-header-search-width-custom]").setAttribute("disabled", "");
-          helper.e(".control-header-search-width-custom").disabled = true;
+          helper.e(".control-header-search-style-label").setAttribute("disabled", "");
+          helper.e(".control-header-search-style-auto").disabled = true;
+          helper.e(".control-header-search-style-custom").disabled = true;
+          helper.e("[for=control-header-search-width]").setAttribute("disabled", "");
+          helper.e(".control-header-search-width").disabled = true;
           helper.e(".control-header-search-focus").disabled = true;
           helper.e(".control-header-search-engine-label").setAttribute("disabled", "");
           helper.e(".control-header-search-engine-google").disabled = true;
@@ -2193,12 +2270,12 @@ var control = (function() {
           helper.e("[for=control-header-search-engine-custom-url]").setAttribute("disabled", "");
           helper.e(".control-header-search-engine-custom-url").disabled = true;
         };
-        if (state.get().header.search.show && state.get().header.search.width.style === "custom") {
-          helper.e("[for=control-header-search-width-custom]").removeAttribute("disabled");
-          helper.e(".control-header-search-width-custom").disabled = false;
+        if (state.get().header.search.show && state.get().header.search.style === "custom") {
+          helper.e("[for=control-header-search-width]").removeAttribute("disabled");
+          helper.e(".control-header-search-width").disabled = false;
         } else {
-          helper.e("[for=control-header-search-width-custom]").setAttribute("disabled", "");
-          helper.e(".control-header-search-width-custom").disabled = true;
+          helper.e("[for=control-header-search-width]").setAttribute("disabled", "");
+          helper.e(".control-header-search-width").disabled = true;
         };
       };
       var _greeting = function() {
@@ -2240,10 +2317,10 @@ var control = (function() {
     };
     var _edit = function() {
       if (bookmarks.get().length > 0) {
-        helper.e(".control-edit").disabled = false;
+        helper.e(".control-link-edit").disabled = false;
       } else {
-        helper.e(".control-edit").disabled = true;
-        helper.e(".control-edit").checked = false;
+        helper.e(".control-link-edit").disabled = true;
+        helper.e(".control-link-edit").checked = false;
       };
     };
     var _link = function() {

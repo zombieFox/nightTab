@@ -17,20 +17,11 @@ var header = (function() {
     });
   };
 
-  var setSizeDefault = function(pathCurrent, pathDefault) {
-    helper.setObject({
-      object: state.get(),
-      path: pathCurrent,
-      newValue: helper.getObject({
-        object: state.get(),
-        path: pathDefault
-      })
-    });
-  };
-
   var render = {
-    width: function() {
-      _renderWidth();
+    area: {
+      width: function() {
+        _renderWidth();
+      }
     },
     shade: function() {
       _renderShade();
@@ -44,12 +35,37 @@ var header = (function() {
     border: function() {
       _renderBorder();
     },
-    search: function() {
-      _renderSearch();
+    search: {
+      width: function() {
+        _renderSearchWidth();
+      },
+      size: function() {
+        _renderSearchSize();
+      }
     },
     greeting: {
       size: function() {
         _renderGreetingSize();
+      }
+    },
+    transitional: {
+      size: function() {
+        _renderTransitionalSize();
+      }
+    },
+    clock: {
+      size: function() {
+        _renderClockSize();
+      }
+    },
+    date: {
+      size: function() {
+        _renderDateSize();
+      }
+    },
+    button: {
+      size: function() {
+        _renderButtonSize();
       }
     }
   };
@@ -99,13 +115,14 @@ var header = (function() {
     html.style.setProperty("--header-border-width-bottom-multiplier", state.get().header.border.bottom.width);
   };
 
-  var _renderSearch = function() {
+  var _renderSearchWidth = function() {
     var html = helper.e("html");
-    if (state.get().header.search.show && state.get().header.search.width.style === "custom") {
-      html.style.setProperty("--header-search-width", state.get().header.search.width.custom + "%");
-    } else {
-      html.style.removeProperty("--header-search-width");
-    };
+    html.style.setProperty("--header-search-width", state.get().header.search.width + "%");
+  };
+
+  var _renderSearchSize = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--header-search-size", state.get().header.search.size + "em");
   };
 
   var _renderGreetingSize = function() {
@@ -113,20 +130,44 @@ var header = (function() {
     html.style.setProperty("--header-greeting-size", state.get().header.greeting.size + "em");
   };
 
+  var _renderTransitionalSize = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--header-transitional-size", state.get().header.transitional.size + "em");
+  };
+
+  var _renderClockSize = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--header-clock-size", state.get().header.clock.size + "em");
+  };
+
+  var _renderDateSize = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--header-date-size", state.get().header.date.size + "em");
+  };
+
+  var _renderButtonSize = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--header-button-size", state.get().header.button.size + "em");
+  };
+
   var init = function() {
     _bind();
-    render.width();
-    render.search();
+    render.area.width();
     render.shade();
     render.opacity();
     render.padding();
     render.border();
     render.greeting.size();
+    render.transitional.size();
+    render.clock.size();
+    render.date.size();
+    render.search.width();
+    render.search.size();
+    render.button.size();
   };
 
   // exposed methods
   return {
-    setSizeDefault: setSizeDefault,
     render: render,
     init: init
   };

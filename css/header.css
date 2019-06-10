@@ -109,16 +109,12 @@
   position: relative;
 }
 
-.header-search {
-  width: var(--header-search-width);
-}
-
-.is-header-search-width-style-auto .header-search {
+.is-header-search-style-auto .header-search {
   flex-grow: 1;
   min-width: 10em;
 }
 
-.is-header-search-width-style-custom .header-search {
+.is-header-search-style-custom .header-search {
   width: var(--header-search-width);
 }
 

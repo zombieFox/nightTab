@@ -93,7 +93,7 @@ input[type="search"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="text"]::placeholder {
   color: rgb(var(--form-input-placeholder));
-  transition: all var(--animation-speed-fast) ease-in-out;
+  transition: color var(--animation-speed-fast) ease-in-out;
 }
 
 input[type="email"]:hover::placeholder,
@@ -585,7 +585,7 @@ input[type="range"][disabled]~.input-helper {
   white-space: nowrap;
   cursor: pointer;
   box-shadow: none;
-  transition: all var(--animation-speed-fast) ease-in-out;
+  transition: background-color var(--animation-speed-fast) ease-in-out, color var(--animation-speed-fast) ease-in-out, border var(--animation-speed-fast) ease-in-out;
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
