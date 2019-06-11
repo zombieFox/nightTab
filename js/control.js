@@ -383,86 +383,6 @@ var control = (function() {
       update();
     }
   }, {
-    element: helper.e(".control-header-transitional-size"),
-    path: "header.transitional.size",
-    type: "range",
-    valueMod: ["float"],
-    func: function() {
-      header.render.transitional.size();
-    }
-  }, {
-    element: helper.e(".control-header-transitional-size-default"),
-    type: "button",
-    func: function() {
-      _setValue("header.transitional.size", 1);
-      header.render.transitional.size();
-      update();
-    }
-  }, {
-    element: helper.e(".control-header-clock-size"),
-    path: "header.clock.size",
-    type: "range",
-    valueMod: ["float"],
-    func: function() {
-      header.render.clock.size();
-    }
-  }, {
-    element: helper.e(".control-header-clock-size-default"),
-    type: "button",
-    func: function() {
-      _setValue("header.clock.size", 1);
-      header.render.clock.size();
-      update();
-    }
-  }, {
-    element: helper.e(".control-header-date-size"),
-    path: "header.date.size",
-    type: "range",
-    valueMod: ["float"],
-    func: function() {
-      header.render.date.size();
-    }
-  }, {
-    element: helper.e(".control-header-date-size-default"),
-    type: "button",
-    func: function() {
-      _setValue("header.date.size", 1);
-      header.render.date.size();
-      update();
-    }
-  }, {
-    element: helper.e(".control-header-search-size"),
-    path: "header.search.size",
-    type: "range",
-    valueMod: ["float"],
-    func: function() {
-      header.render.search.size();
-    }
-  }, {
-    element: helper.e(".control-header-search-size-default"),
-    type: "button",
-    func: function() {
-      _setValue("header.search.size", 1);
-      header.render.search.size();
-      update();
-    }
-  }, {
-    element: helper.e(".control-header-button-size"),
-    path: "header.button.size",
-    type: "range",
-    valueMod: ["float"],
-    func: function() {
-      header.render.button.size();
-    }
-  }, {
-    element: helper.e(".control-header-button-size-default"),
-    type: "button",
-    func: function() {
-      _setValue("header.button.size", 1);
-      header.render.button.size();
-      update();
-    }
-  }, {
     element: helper.e(".control-header-transitional-show"),
     path: "header.transitional.show",
     type: "checkbox",
@@ -487,6 +407,22 @@ var control = (function() {
     func: function() {
       transitional.clear();
       transitional.render();
+    }
+  }, {
+    element: helper.e(".control-header-transitional-size"),
+    path: "header.transitional.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      header.render.transitional.size();
+    }
+  }, {
+    element: helper.e(".control-header-transitional-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("header.transitional.size", 1);
+      header.render.transitional.size();
+      update();
     }
   }, {
     element: helper.e(".control-header-clock-hours-show"),
@@ -637,6 +573,22 @@ var control = (function() {
       greeting.render();
       transitional.clear();
       transitional.render();
+    }
+  }, {
+    element: helper.e(".control-header-clock-size"),
+    path: "header.clock.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      header.render.clock.size();
+    }
+  }, {
+    element: helper.e(".control-header-clock-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("header.clock.size", 1);
+      header.render.clock.size();
+      update();
     }
   }, {
     element: helper.e(".control-header-date-day-show"),
@@ -927,6 +879,22 @@ var control = (function() {
       transitional.render();
     }
   }, {
+    element: helper.e(".control-header-date-size"),
+    path: "header.date.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      header.render.date.size();
+    }
+  }, {
+    element: helper.e(".control-header-date-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("header.date.size", 1);
+      header.render.date.size();
+      update();
+    }
+  }, {
     element: helper.e(".control-header-search-show"),
     path: "header.search.show",
     type: "checkbox",
@@ -1079,11 +1047,28 @@ var control = (function() {
       render();
     }
   }, {
+    element: helper.e(".control-header-search-size"),
+    path: "header.search.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      header.render.search.size();
+    }
+  }, {
+    element: helper.e(".control-header-search-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("header.search.size", 1);
+      header.render.search.size();
+      update();
+    }
+  }, {
     element: helper.e(".control-header-button-edit-add-show"),
     path: "header.button.editAdd.show",
     type: "checkbox",
     func: function() {
       render();
+      dependents();
     }
   }, {
     element: helper.e(".control-header-button-accent-show"),
@@ -1091,6 +1076,23 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-header-button-size"),
+    path: "header.button.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      header.render.button.size();
+    }
+  }, {
+    element: helper.e(".control-header-button-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("header.button.size", 1);
+      header.render.button.size();
+      update();
     }
   }, {
     element: helper.e(".control-header-shade-show"),
@@ -2108,6 +2110,15 @@ var control = (function() {
           helper.e(".control-header-clock-seconds-display-number").disabled = true;
           helper.e(".control-header-clock-seconds-display-word").disabled = true;
         };
+        if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+          helper.e("[for=control-header-clock-size]").removeAttribute("disabled");
+          helper.e(".control-header-clock-size").disabled = false;
+          helper.e(".control-header-clock-size-default").disabled = false;
+        } else {
+          helper.e("[for=control-header-clock-size]").setAttribute("disabled", "");
+          helper.e(".control-header-clock-size").disabled = true;
+          helper.e(".control-header-clock-size-default").disabled = true;
+        };
       };
       var _date = function() {
         var activeCount = 0;
@@ -2193,6 +2204,15 @@ var control = (function() {
         } else {
           helper.e(".control-header-date-month-ordinal").disabled = true;
         };
+        if (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show) {
+          helper.e("[for=control-header-date-size]").removeAttribute("disabled");
+          helper.e(".control-header-date-size").disabled = false;
+          helper.e(".control-header-date-size-default").disabled = false;
+        } else {
+          helper.e("[for=control-header-date-size]").setAttribute("disabled", "");
+          helper.e(".control-header-date-size").disabled = true;
+          helper.e(".control-header-date-size-default").disabled = true;
+        };
       };
       var _shade = function() {
         if (state.get().header.shade.show) {
@@ -2241,6 +2261,9 @@ var control = (function() {
           helper.e(".control-header-search-text-align-left").disabled = false;
           helper.e(".control-header-search-text-align-center").disabled = false;
           helper.e(".control-header-search-text-align-right").disabled = false;
+          helper.e("[for=control-header-search-size]").removeAttribute("disabled");
+          helper.e(".control-header-search-size").disabled = false;
+          helper.e(".control-header-search-size-default").disabled = false;
         } else {
           helper.e(".control-header-search-style-label").setAttribute("disabled", "");
           helper.e(".control-header-search-style-auto").disabled = true;
@@ -2258,6 +2281,9 @@ var control = (function() {
           helper.e(".control-header-search-text-align-left").disabled = true;
           helper.e(".control-header-search-text-align-center").disabled = true;
           helper.e(".control-header-search-text-align-right").disabled = true;
+          helper.e("[for=control-header-search-size]").setAttribute("disabled", "");
+          helper.e(".control-header-search-size").disabled = true;
+          helper.e(".control-header-search-size-default").disabled = true;
         };
         if (state.get().header.search.show && state.get().header.search.engine.selected === "custom") {
           helper.e("[for=control-header-search-engine-custom-name]").removeAttribute("disabled");
@@ -2285,12 +2311,18 @@ var control = (function() {
           helper.e(".control-header-greeting-type-good").disabled = false;
           helper.e(".control-header-greeting-type-hello").disabled = false;
           helper.e(".control-header-greeting-type-hi").disabled = false;
+          helper.e("[for=control-header-greeting-size]").removeAttribute("disabled");
+          helper.e(".control-header-greeting-size").disabled = false;
+          helper.e(".control-header-greeting-size-default").disabled = false;
         } else {
           helper.e("[for=control-header-greeting-name]").setAttribute("disabled", "");
           helper.e(".control-header-greeting-name").disabled = true;
           helper.e(".control-header-greeting-type-good").disabled = true;
           helper.e(".control-header-greeting-type-hello").disabled = true;
           helper.e(".control-header-greeting-type-hi").disabled = true;
+          helper.e("[for=control-header-greeting-size]").setAttribute("disabled", "");
+          helper.e(".control-header-greeting-size").disabled = true;
+          helper.e(".control-header-greeting-size-default").disabled = true;
         };
       };
       var _transitional = function() {
@@ -2302,9 +2334,15 @@ var control = (function() {
         if (state.get().header.transitional.show && ((state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show))) {
           helper.e(".control-header-transitional-type-timeanddate").disabled = false;
           helper.e(".control-header-transitional-type-its").disabled = false;
+          helper.e("[for=control-header-transitional-size]").removeAttribute("disabled");
+          helper.e(".control-header-transitional-size").disabled = false;
+          helper.e(".control-header-transitional-size-default").disabled = false;
         } else {
           helper.e(".control-header-transitional-type-timeanddate").disabled = true;
           helper.e(".control-header-transitional-type-its").disabled = true;
+          helper.e("[for=control-header-transitional-size]").setAttribute("disabled", "");
+          helper.e(".control-header-transitional-size").disabled = true;
+          helper.e(".control-header-transitional-size-default").disabled = true;
         };
       };
       _clock();

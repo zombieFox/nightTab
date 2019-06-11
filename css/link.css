@@ -162,16 +162,33 @@
   background-color: rgb(var(--theme-accent));
   border-radius: var(--theme-radius);
   width: calc(100% - calc(var(--line-width) * 2));
-  height: 100%;
+  height: calc(100% - calc(var(--line-width) * 2));
   position: absolute;
-  top: 0;
+  top: var(--line-width);
   left: var(--line-width);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: stretch;
   z-index: 2;
+  transition: height var(--animation-speed-fast) ease-in-out, top var(--animation-speed-fast) ease-in-out;
 }
+
+.is-link-item-line-show .link-panel-back {
+  height: calc(100% - var(--line-width));
+}
+
+.is-link-url-show:not(.is-link-item-line-show) .link-item:focus .link-panel-back,
+.is-link-url-show:not(.is-link-item-line-show) .link-item:focus-within .link-panel-back,
+.is-link-url-show:not(.is-link-item-line-show) .link-item:hover .link-panel-back {
+  top: calc(var(--line-width) * 2);
+}
+
+/* .is-link-item-line-show.is-link-url-show .link-item:focus .link-panel-back,
+.is-link-item-line-show.is-link-url-show .link-item:focus-within .link-panel-back,
+.is-link-item-line-show.is-link-url-show .link-item:hover .link-panel-back {
+  top: var(--line-width);
+} */
 
 .link-control {
   margin: 0;
