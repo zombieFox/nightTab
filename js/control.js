@@ -1480,7 +1480,7 @@ var control = (function() {
     type: "button",
     func: function() {
       _setValue("link.item.display.icon.size", 2);
-      link.render.item.icon.letter();
+      link.render.item.display.icon();
       update();
     }
   }, {
@@ -1503,7 +1503,7 @@ var control = (function() {
     element: helper.e(".control-link-item-name-size-default"),
     type: "button",
     func: function() {
-      _setValue("link.item.display.icon.size", 0.9);
+      _setValue("link.item.name.size", 0.9);
       link.render.item.name();
       update();
     }
