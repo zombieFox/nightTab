@@ -1,5 +1,5 @@
 .shade {
-  background-color: rgba(var(--accent), 0.4);
+  background-color: rgba(var(--theme-accent), 0.4);
   position: fixed;
   top: -1em;
   left: -1em;
@@ -14,5 +14,5 @@
 }
 
 .is-edge:not(.is-background-image-show) .shade {
-  background-color: rgba(var(--accent), 0.05);
+  background-color: rgba(var(--theme-accent), 0.05);
 }

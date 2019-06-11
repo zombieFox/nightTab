@@ -13,7 +13,7 @@
   left: 0;
   width: 100%;
   max-height: 40vh;
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   overflow-y: auto;
   z-index: var(--z-index-auto-suggest-list);
   display: flex;
@@ -35,7 +35,7 @@
   border-width: var(--form-input-border);
   border-style: solid;
   border-color: transparent;
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   width: 100%;
   height: 100%;
   display: flex;
@@ -64,7 +64,7 @@
   color: rgb(var(--form-input-text-focus));
   outline: none;
   text-decoration: none;
-  box-shadow: 0 0 0 var(--line-width) rgb(var(--accent)), 0 0 0 calc(var(--line-width) * 2) rgba(var(--accent), 0.25);
+  box-shadow: 0 0 0 var(--line-width) rgb(var(--theme-accent)), 0 0 0 calc(var(--line-width) * 2) rgba(var(--theme-accent), 0.25);
 }
 
 .auto-suggest-link:active {

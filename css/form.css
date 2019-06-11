@@ -17,7 +17,7 @@ input[type="text"] {
   border-width: var(--form-input-border);
   border-style: solid;
   border-color: transparent;
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   cursor: text;
   transition: background-color var(--animation-speed-fast) ease-in-out, color var(--animation-speed-fast) ease-in-out, border-color var(--animation-speed-fast) ease-in-out, box-shadow var(--animation-speed-fast) ease-in-out;
   -moz-appearance: textfield;
@@ -55,7 +55,7 @@ input[type="text"]:focus {
   color: rgb(var(--form-input-text-focus));
   outline: none;
   z-index: 2;
-  box-shadow: 0 0 0 var(--line-width) rgb(var(--accent)), 0 0 0 calc(var(--line-width) * 2) rgba(var(--accent), 0.25);
+  box-shadow: 0 0 0 var(--line-width) rgb(var(--theme-accent)), 0 0 0 calc(var(--line-width) * 2) rgba(var(--theme-accent), 0.25);
 }
 
 input[type="email"][disabled],
@@ -93,7 +93,7 @@ input[type="search"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="text"]::placeholder {
   color: rgb(var(--form-input-placeholder));
-  transition: all var(--animation-speed-fast) ease-in-out;
+  transition: color var(--animation-speed-fast) ease-in-out;
 }
 
 input[type="email"]:hover::placeholder,
@@ -218,7 +218,7 @@ input[type="radio"]:hover+label:before {
 
 input[type="checkbox"]:active+label:before,
 input[type="radio"]:active+label:before {
-  color: rgb(var(--accent));
+  color: rgb(var(--theme-accent));
   transform: scale(0.9);
 }
 
@@ -236,7 +236,7 @@ input[type="radio"]:not([disabled]):focus:checked+label {
 
 input[type="checkbox"]:checked+label:before,
 input[type="radio"]:checked+label:before {
-  color: rgb(var(--accent));
+  color: rgb(var(--theme-accent));
 }
 
 input[type="checkbox"]:checked:focus+label:before,
@@ -298,7 +298,7 @@ input[type="color"] {
   border-width: 0;
   border-style: solid;
   border-color: transparent;
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   overflow: hidden;
   cursor: pointer;
   transition: border-color var(--animation-speed-fast) ease-in-out, box-shadow var(--animation-speed-fast) ease-in-out;
@@ -354,7 +354,7 @@ input[type="range"] {
   height: 2em;
   width: 100%;
   border: 0;
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   cursor: pointer;
   position: relative;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -370,7 +370,7 @@ input[type="range"]:before {
   height: var(--line-width);
   width: 100%;
   border: 0;
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   transform: translate(0, -50%);
   transition: all var(--animation-speed-fast) ease-in-out;
 }
@@ -407,7 +407,7 @@ input[type="range"]::-webkit-slider-thumb {
   padding: 0;
   border-width: var(--line-width);
   border-style: solid;
-  border-color: rgb(var(--accent));
+  border-color: rgb(var(--theme-accent));
   border-radius: 100%;
   position: relative;
   height: 1em;
@@ -459,7 +459,7 @@ input[type="range"]::-moz-range-track {
   height: var(--line-width);
   width: 100%;
   border: 0;
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   transition: all var(--animation-speed-fast) ease-in-out;
   -webkit-appearance: none;
 }
@@ -471,7 +471,7 @@ input[type="range"]::-moz-range-thumb {
   padding: 0;
   border-width: var(--line-width);
   border-style: solid;
-  border-color: rgb(var(--accent));
+  border-color: rgb(var(--theme-accent));
   border-radius: 100%;
   position: relative;
   height: 1em;
@@ -505,9 +505,9 @@ input[type="range"]::-moz-range-thumb:active {
 }
 
 input[type="range"]::-moz-range-progress {
-  background-color: rgb(var(--accent));
+  background-color: rgb(var(--theme-accent));
   height: calc(var(--line-width) * 1.5);
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
 }
 
 input[type="range"][disabled]::-moz-range-track {
@@ -526,7 +526,7 @@ input[type="range"][disabled]:focus::-moz-range-thumb {
 }
 
 input[type="range"][disabled]::-moz-range-progress {
-  background-color: rgb(var(--gray-08));
+  background-color: rgb(var(--gray-04));
 }
 
 /* input helper */
@@ -579,13 +579,13 @@ input[type="range"][disabled]~.input-helper {
   border-bottom-width: var(--line-width);
   border-style: solid;
   border-color: transparent;
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
   box-shadow: none;
-  transition: all var(--animation-speed-fast) ease-in-out;
+  transition: background-color var(--animation-speed-fast) ease-in-out, color var(--animation-speed-fast) ease-in-out, border var(--animation-speed-fast) ease-in-out;
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -608,7 +608,7 @@ input[type="range"][disabled]~.input-helper {
 .input-button input[type="radio"]:active+label,
 .input-button input[type="color"]:active+label {
   background-color: rgb(var(--gray-04));
-  border-bottom-color: rgb(var(--accent));
+  border-bottom-color: rgb(var(--theme-accent));
   color: rgb(var(--button-text-active));
   transition: none;
 }
@@ -617,7 +617,7 @@ input[type="range"][disabled]~.input-helper {
 .input-button input[type="radio"]:checked+label,
 .input-button input[type="color"]:checked+label {
   background-color: rgb(var(--gray-04));
-  border-bottom-color: rgb(var(--accent));
+  border-bottom-color: rgb(var(--theme-accent));
   color: rgb(var(--button-text-active));
   transition: none;
 }
@@ -666,7 +666,7 @@ input[type="range"][disabled]~.input-helper {
 .input-color-dot-accent input[type="color"],
 .input-color-dot-accent input[type="color"]:hover,
 .input-color-dot-accent input[type="color"]:focus {
-  box-shadow: 0 0 0.25em 0 rgba(var(--accent), 0.6), 0 0 0.5em 0 rgba(var(--accent), 0.4);
+  box-shadow: 0 0 0.25em 0 rgba(var(--theme-accent), 0.6), 0 0 0.5em 0 rgba(var(--theme-accent), 0.4);
 }
 
 .input-color-dot input[type="color"]+label {
@@ -718,7 +718,7 @@ input[type="range"][disabled]~.input-helper {
   border-bottom-width: var(--line-width);
   border-style: solid;
   border-color: transparent;
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   transition: background-color var(--animation-speed-fast) ease-in-out, border-color var(--animation-speed-fast) ease-in-out;
 }
 
@@ -821,7 +821,7 @@ input[type="range"][disabled]~.input-helper {
 .form-group>input[type="tel"]:first-child,
 .form-group>input[type="text"]:first-child,
 .form-group>input[type="color"]:first-child {
-  border-radius: var(--radius) 0 0 var(--radius);
+  border-radius: var(--theme-radius) 0 0 var(--theme-radius);
 }
 
 .form-group>.form-group-text:last-child,
@@ -834,7 +834,7 @@ input[type="range"][disabled]~.input-helper {
 .form-group>input[type="tel"]:last-child,
 .form-group>input[type="text"]:last-child,
 .form-group>input[type="color"]:last-child {
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-radius: 0 var(--theme-radius) var(--theme-radius) 0;
 }
 
 .form-group.nested-button * .button,
@@ -848,12 +848,12 @@ input[type="range"][disabled]~.input-helper {
 .form-group.nested-button *:first-child input[type="checkbox"]+label,
 .form-group.nested-button *:first-child input[type="radio"]+label,
 .form-group.nested-button *:first-child input[type="color"]+label {
-  border-radius: var(--radius) 0 0 var(--radius);
+  border-radius: var(--theme-radius) 0 0 var(--theme-radius);
 }
 
 .form-group.nested-button *:last-child .button,
 .form-group.nested-button *:last-child input[type="checkbox"]+label,
 .form-group.nested-button *:last-child input[type="radio"]+label,
 .form-group.nested-button *:last-child input[type="color"]+label {
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-radius: 0 var(--theme-radius) var(--theme-radius) 0;
 }

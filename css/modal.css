@@ -38,7 +38,7 @@
 
 .modal-body {
   background-color: rgb(var(--gray-01));
-  border-radius: var(--radius) var(--radius) 0 0;
+  border-radius: var(--theme-radius) var(--theme-radius) 0 0;
   padding: 2em;
   max-height: calc(90vh - 3.6666666667em);
   overflow-y: auto;
@@ -59,7 +59,7 @@
   background-color: rgb(var(--gray-01));
   position: relative;
   z-index: 2;
-  border-radius: 0 0 var(--radius) var(--radius);
+  border-radius: 0 0 var(--theme-radius) var(--theme-radius);
   display: flex;
 }
 
@@ -73,9 +73,9 @@
 }
 
 .modal-controls .modal-button:first-child {
-  border-radius: 0 0 0 var(--radius);
+  border-radius: 0 0 0 var(--theme-radius);
 }
 
 .modal-controls .modal-button:last-child {
-  border-radius: 0 0 var(--radius) 0
+  border-radius: 0 0 var(--theme-radius) 0
 }

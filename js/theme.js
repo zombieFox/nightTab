@@ -20,9 +20,26 @@ var theme = (function() {
     style[state.get().theme.style]();
   };
 
+  var render = {
+    radius: function() {
+      _renderRadius();
+    }
+  };
+
+  var _renderRadius = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--theme-radius", state.get().theme.radius + "rem");
+  };
+
+  var init = function() {
+    render.radius();
+  };
+
   // exposed methods
   return {
-    toggle: toggle
+    render: render,
+    toggle: toggle,
+    init: init
   };
 
 })();

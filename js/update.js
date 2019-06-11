@@ -427,6 +427,30 @@ var update = (function() {
     return data;
   };
 
+  var _update_380 = function(data) {
+    data.version = "3.8.0";
+    data.state.header.clock.size = 1;
+    data.state.header.date.size = 1;
+    data.state.header.greeting.size = 1;
+    data.state.header.transitional.size = 1;
+    data.state.header.search.style = data.state.header.search.width.style;
+    data.state.header.search.width = data.state.header.search.width.custom;
+    data.state.header.search.size = 1;
+    data.state.header.button = {
+      editAdd: {
+        show: data.state.header.editAdd.show
+      },
+      accent: {
+        show: data.state.header.accent.show
+      },
+      size: 1
+    };
+    delete data.state.header.editAdd;
+    delete data.state.header.accent;
+    data.state.theme.radius = 0.2;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -540,6 +564,10 @@ var update = (function() {
       if (version.compare(data.version, "3.7.0") == -1) {
         console.log("\t= running update 3.7.0");
         data = _update_370(data);
+      };
+      if (version.compare(data.version, "3.8.0") == -1) {
+        console.log("\t= running update 3.8.0");
+        data = _update_380(data);
       };
     };
     // if no update is needed

@@ -1,7 +1,7 @@
 .transitional {
   margin: 0;
   padding: 0;
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   font-size: 1em;
   font-family: var(--font-fjalla);
   color: rgb(var(--gray-14));

@@ -16,13 +16,13 @@ input[type="submit"] {
   border-bottom-width: var(--line-width);
   border-style: solid;
   border-color: transparent;
-  border-radius: var(--radius);
+  border-radius: var(--theme-radius);
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
   box-shadow: none;
-  transition: all var(--animation-speed-fast) ease-in-out;
+  transition: background-color var(--animation-speed-fast) ease-in-out, color var(--animation-speed-fast) ease-in-out, border var(--animation-speed-fast) ease-in-out;
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -51,7 +51,7 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   background-color: rgb(var(--gray-04));
-  border-bottom-color: rgb(var(--accent));
+  border-bottom-color: rgb(var(--theme-accent));
   color: rgb(var(--button-text-active));
   transition: none;
 }
@@ -83,7 +83,7 @@ button [class*=" icon-"],
 }
 
 .button.active {
-  border-bottom-color: rgb(var(--accent));
+  border-bottom-color: rgb(var(--theme-accent));
   color: rgb(var(--button-text-active));
 }
 

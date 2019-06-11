@@ -35,6 +35,7 @@ var state = (function() {
         hour24: {
           show: true
         },
+        size: 1
       },
       date: {
         day: {
@@ -61,14 +62,13 @@ var state = (function() {
         separator: {
           show: true
         },
-        format: "datemonth"
+        format: "datemonth",
+        size: 1
       },
       search: {
         show: true,
-        width: {
-          style: "auto",
-          custom: 30
-        },
+        style: "auto",
+        width: 30,
         focus: false,
         engine: {
           selected: "google",
@@ -95,13 +95,17 @@ var state = (function() {
         },
         text: {
           align: "center"
-        }
+        },
+        size: 1
       },
-      editAdd: {
-        show: true,
-      },
-      accent: {
-        show: true,
+      button: {
+        editAdd: {
+          show: true,
+        },
+        accent: {
+          show: true,
+        },
+        size: 1
       },
       shade: {
         show: true,
@@ -125,11 +129,13 @@ var state = (function() {
       greeting: {
         show: false,
         type: "good",
-        name: ""
+        name: "",
+        size: 1
       },
       transitional: {
         show: false,
-        type: "timeanddate"
+        type: "timeanddate",
+        size: 1
       }
     },
     link: {
@@ -195,7 +201,8 @@ var state = (function() {
           style: "any"
         }
       },
-      style: "dark"
+      style: "dark",
+      radius: 0.2
     },
     background: {
       image: {

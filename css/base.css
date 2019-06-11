@@ -1,5 +1,5 @@
 :root {
-  --accent: 250, 130, 0;
+  --root-font-size: 14px;
   --black: 0, 0, 0;
   --white: 255, 255, 255;
   --shade-01: 38, 40, 49;
@@ -45,40 +45,33 @@
   --form-checkbox-radio-chcked-label: var(--gray-16);
   --form-checkbox-radio-disabled-label: var(--gray-04);
   --form-range-thumb: var(--gray-12);
-  --root-font-size: 14px;
-  --radius: 0.2em;
+  --theme-accent: 250, 130, 0;
+  --theme-radius: 0.2rem;
   --line-width: 0.2em;
   --background: rgb(var(--gray-01));
   --gutter: 0.5rem;
-  --animation-speed-fast: 0.2s;
-  --animation-speed-medium: 0.4s;
-  --animation-speed-slow: 0.6s;
   --font-regular: "Open Sans Regular", sans-serif;
   --font-bold: "Open Sans Bold", sans-serif;
   --font-light: "Open Sans Light", sans-serif;
   --font-fjalla: "Fjalla One Regular", sans-serif;
-  --z-index-background: 1000;
-  --z-index-link: 2000;
-  --z-index-header: 3000;
-  --z-index-tip: 4000;
-  --z-container-edge: 5000;
-  --z-index-shade: 6000;
-  --z-index-modal: 7000;
-  --z-index-menu: 8000;
-  --z-index-auto-suggest-list: 8000;
-  --z-index-edge: 9000;
   --header-area-width: 100%;
   --header-shade-color: transparent;
   --header-shade-opacity: none;
   --header-search-width: 0%;
-  --header-padding-top: calc(var(--line-width) * var(--header-padding-multiplier-top));
-  --header-padding-bottom: calc(var(--line-width) * var(--header-padding-multiplier-bottom));
-  --header-padding-multiplier-top: 4;
-  --header-padding-multiplier-bottom: 4;
-  --header-border-width-top: calc(var(--line-width) * var(--header-border-width-multiplier-top));
-  --header-border-width-bottom: calc(var(--line-width) * var(--header-border-width-multiplier-bottom));
-  --header-border-width-multiplier-top: 1;
-  --header-border-width-multiplier-bottom: 1;
+  --header-padding-top: calc(var(--line-width) * var(--header-padding-top-multiplier));
+  --header-padding-bottom: calc(var(--line-width) * var(--header-padding-bottom-multiplier));
+  --header-padding-top-multiplier: 4;
+  --header-padding-bottom-multiplier: 4;
+  --header-border-width-top: calc(var(--line-width) * var(--header-border-width-top-multiplier));
+  --header-border-width-bottom: calc(var(--line-width) * var(--header-border-width-bottom-multiplier));
+  --header-border-width-top-multiplier: 1;
+  --header-border-width-bottom-multiplier: 1;
+  --header-date-size: 1em;
+  --header-clock-size: 1em;
+  --header-search-size: 1em;
+  --header-button-size: 1em;
+  --header-greeting-size: 1em;
+  --header-transitional-size: 1em;
   --link-area-width: 100%;
   --link-area-gutter-multiplier: 2;
   --link-item-size: 1em;
@@ -90,13 +83,24 @@
   --background-accent-opacity: 0;
   --background-blur: 0;
   --layout-width: 80%;
-  --menu-border: calc(var(--line-width) * 1) solid rgb(var(--gray-03));
+  --animation-speed-fast: 0.2s;
+  --animation-speed-medium: 0.4s;
+  --animation-speed-slow: 0.6s;
   --shadow-small: 0 2px 1px rgba(0, 0, 0, 0.1), 0 3px 2px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.1), 0 6px 15px rgba(0, 0, 0, 0.1);
   --shadow-large: 0 4px 10px rgba(0, 0, 0, 0.1), 0 6px 30px rgba(0, 0, 0, 0.1);
   --shadow-small-inset: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   --shadow-medium-inset: inset 0 2px 2px rgba(0, 0, 0, 0.1);
   --shadow-large-inset: inset 0 3px 3px rgba(0, 0, 0, 0.15);
+  --z-index-background: 1000;
+  --z-index-link: 2000;
+  --z-index-header: 3000;
+  --z-index-tip: 4000;
+  --z-index-shade: 5000;
+  --z-index-modal: 6000;
+  --z-index-menu: 7000;
+  --z-index-auto-suggest-list: 8000;
+  --z-index-edge: 9000;
   /* breakpoint reference */
   /* can not be used in @media as of yet */
   --breakpoint-sm: 550px;
@@ -109,15 +113,15 @@
 :root.is-link-style-block {
   --link-item-width: 11em;
   --link-item-height: 10em;
-  --url-height: 20%;
-  --edit-height: 30%;
+  --link-item-url-height: 20%;
+  --link-item-edit-height: 30%;
 }
 
 :root.is-link-style-list {
   --link-item-width: 20em;
   --link-item-height: 4em;
-  --url-height: 30%;
-  --edit-height: 50%;
+  --link-item-url-height: 30%;
+  --link-item-edit-height: 50%;
 }
 
 @media (min-width: 700px) {
@@ -127,7 +131,7 @@
 }
 
 ::selection {
-  background-color: rgb(var(--accent));
+  background-color: rgb(var(--theme-accent));
   color: rgb(var(--white));
 }
 

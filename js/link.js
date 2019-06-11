@@ -150,22 +150,26 @@ var link = (function() {
     var form = helper.node("form|class:link-form");
     var fieldset = helper.node("fieldset");
     var letterFormIndet = helper.node("div|class:form-indent");
-    var letterInput = helper.node("input|type:text,class:link-form-input-letter,id:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+    var letterInputWrap = helper.node("div|class:input-wrap");
+    var letterInput = helper.node("input|type:text,class:link-form-input-letter mb-0,id:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
     var iconFormIndet = helper.node("div|class:form-indent");
+    var iconFormGroupWrap = helper.node("div|class:input-wrap");
     var iconFormGroup = helper.node("div|class:form-group auto-suggest-wrapper");
     var iconInput = helper.node("input|type:text,class:link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
     var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,tabindex:-1,disabled");
     var iconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
     var iconFormGroupClearIcon = helper.node("span|class:icon-close");
     var iconPara = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-helper-icon input-helper small muted,disabled");
+    var nameInputWrap = helper.node("div|class:input-wrap");
     var nameLabel = helper.node("label:Name|for:link-form-input-name");
-    var nameInput = helper.node("input|type:text,class:link-form-input-name,id:link-form-input-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+    var nameInput = helper.node("input|type:text,class:link-form-input-name mb-0,id:link-form-input-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+    var urlInputWrap = helper.node("div|class:input-wrap");
     var urlLabel = helper.node("label:URL|for:link-form-input-url");
     var urlInput = helper.node("input|type:text,class:link-form-input-url mb-0,id:link-form-input-url,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
-    var colorInputWrap = helper.node("div|class:input-wrap py-0");
+    var colorWrap = helper.node("div|class:input-wrap");
     var colorFormGroup = helper.node("div|class:form-group");
-    var colorInputLabel = helper.node("label:Accent override|for:link-form-input-color");
-    var colorInputInput = helper.node("input|id:link-form-input-color,class:link-form-input-color mb-0,type:color,value:" + helper.rgbToHex(state.get().theme.accent.current) + ",tabindex:1");
+    var colorLabel = helper.node("label:Accent override|for:link-form-input-color");
+    var colorInput = helper.node("input|id:link-form-input-color,class:link-form-input-color mb-0,type:color,value:" + helper.rgbToHex(state.get().theme.accent.current) + ",tabindex:1");
     var colorButtonRefresh = helper.node("button|class:button mb-0,type:button,tabindex:1");
     var colorButtonRefreshIcon = helper.node("span|class:icon-refresh");
     var colorPara = helper.node("p:Use this colour to override the global Accent colour.|class:input-helper small muted");
@@ -179,7 +183,8 @@ var link = (function() {
     letterRadioInputWrap.appendChild(letterRadioInput);
     letterRadioInputWrap.appendChild(letterRadioLable);
     fieldset.appendChild(letterRadioInputWrap);
-    letterFormIndet.appendChild(letterInput);
+    letterInputWrap.appendChild(letterInput);
+    letterFormIndet.appendChild(letterInputWrap);
     fieldset.appendChild(letterFormIndet);
     iconRadioInputWrap.appendChild(iconRadioInput);
     iconRadioInputWrap.appendChild(iconRadioLable);
@@ -188,22 +193,25 @@ var link = (function() {
     iconFormGroup.appendChild(iconInput);
     iconFormGroup.appendChild(iconFormGroupText);
     iconFormGroup.appendChild(iconFormGroupClear);
-    iconFormIndet.appendChild(iconFormGroup);
-    iconFormIndet.appendChild(iconPara);
+    iconFormGroupWrap.appendChild(iconFormGroup);
+    iconFormGroupWrap.appendChild(iconPara);
+    iconFormIndet.appendChild(iconFormGroupWrap);
     fieldset.appendChild(iconFormIndet);
     fieldset.appendChild(helper.node("hr"));
-    fieldset.appendChild(nameLabel);
-    fieldset.appendChild(nameInput);
-    fieldset.appendChild(urlLabel);
-    fieldset.appendChild(urlInput);
+    nameInputWrap.appendChild(nameLabel);
+    nameInputWrap.appendChild(nameInput);
+    fieldset.appendChild(nameInputWrap);
+    urlInputWrap.appendChild(urlLabel);
+    urlInputWrap.appendChild(urlInput);
+    fieldset.appendChild(urlInputWrap);
     fieldset.appendChild(helper.node("hr"));
-    fieldset.appendChild(colorInputLabel);
-    colorFormGroup.appendChild(colorInputInput);
+    colorFormGroup.appendChild(colorInput);
     colorButtonRefresh.appendChild(colorButtonRefreshIcon);
     colorFormGroup.appendChild(colorButtonRefresh);
-    colorInputWrap.appendChild(colorFormGroup);
-    fieldset.appendChild(colorInputWrap);
-    fieldset.appendChild(colorPara);
+    colorWrap.appendChild(colorLabel);
+    colorWrap.appendChild(colorFormGroup);
+    colorWrap.appendChild(colorPara);
+    fieldset.appendChild(colorWrap);
     form.appendChild(fieldset);
 
     letterRadioInput.addEventListener("change", function(event) {
@@ -221,12 +229,12 @@ var link = (function() {
     urlInput.addEventListener("input", function(event) {
       link.stagedBookmarkData.url = this.value;
     }, false);
-    colorInputInput.addEventListener("change", function(event) {
+    colorInput.addEventListener("change", function(event) {
       link.stagedBookmarkData.accent.override = true;
       link.stagedBookmarkData.accent.color = helper.hexToRgb(this.value);
     }, false);
     colorButtonRefresh.addEventListener("click", function(event) {
-      colorInputInput.value = helper.rgbToHex(state.get().theme.accent.current);
+      colorInput.value = helper.rgbToHex(state.get().theme.accent.current);
       link.stagedBookmarkData.accent.override = false;
       link.stagedBookmarkData.accent.color = {
         r: null,
@@ -279,7 +287,7 @@ var link = (function() {
     if (data.accent.override) {
       linkItemOptions.attr.push({
         key: "style",
-        value: "--accent: " + data.accent.color.r + ", " + data.accent.color.g + ", " + data.accent.color.b
+        value: "--theme-accent: " + data.accent.color.r + ", " + data.accent.color.g + ", " + data.accent.color.b
       });
     };
     var linkItem = helper.makeNode(linkItemOptions);
@@ -506,18 +514,20 @@ var link = (function() {
     return div;
   };
 
+  var clear = function() {
+    var linkArea = helper.e(".link-area");
+    while (linkArea.lastChild) {
+      linkArea.removeChild(linkArea.lastChild);
+    };
+  };
+
   var render = {
     area: {
       gap: function() {
-        _areaGap();
-      }
-    },
-    width: {
-      set: function() {
-        _renderWidthSet();
+        _renderAreaGap();
       },
-      match: function() {
-        _renderWidthMatch();
+      width: function() {
+        _renderAreaWidth();
       }
     },
     item: {
@@ -525,48 +535,33 @@ var link = (function() {
         _renderItemAll();
       },
       display: {
-        letter: {
-          set: function() {
-            _renderItemDisplayLetterSet();
-          },
-          default: function() {
-            _renderItemDisplayLetterDefault();
-          }
+        letter: function() {
+          _renderItemDisplayLetter();
         },
-        icon: {
-          set: function() {
-            _renderItemDisplayIconSet();
-          },
-          default: function() {
-            _renderItemDisplayIconDefault();
-          }
+        icon: function() {
+          _renderItemDisplayIcon();
         }
       },
-      name: {
-        set: function() {
-          _renderItemNameSet();
-        },
-        default: function() {
-          _renderItemNameDefault();
-        }
+      name: function() {
+        _renderItemName();
       },
-      size: {
-        set: function() {
-          _renderItemSizeSet();
-        },
-        default: function() {
-          _renderItemSizeDefault();
-        }
-      },
+      size: function() {
+        _renderItemSize();
+      }
     },
     tabIndex: function() {
       _renderTabIndex();
     }
   };
 
-  var _areaGap = function() {
+  var _renderAreaGap = function() {
     var html = helper.e("html");
     html.style.setProperty("--link-area-gutter-multiplier", state.get().link.area.gap);
+  };
+
+  var _renderAreaWidth = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
   };
 
   var _renderItemAll = function() {
@@ -617,74 +612,24 @@ var link = (function() {
     };
   };
 
-  var _renderWidthSet = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
-  };
-
-  var _renderItemDisplayLetterSet = function() {
+  var _renderItemDisplayLetter = function() {
     var html = helper.e("html");
     html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
   };
 
-  var _renderItemDisplayLetterDefault = function() {
-    helper.setObject({
-      object: state.get(),
-      path: "link.item.display.letter.size",
-      newValue: 2
-    });
-    render.item.display.letter.set();
-  };
-
-  var _renderItemDisplayIconSet = function() {
+  var _renderItemDisplayIcon = function() {
     var html = helper.e("html");
     html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.icon.size + "em");
   };
 
-  var _renderItemDisplayIconDefault = function() {
-    helper.setObject({
-      object: state.get(),
-      path: "link.item.display.icon.size",
-      newValue: 2
-    });
-    render.item.display.icon.set();
-  };
-
-  var _renderItemNameSet = function() {
+  var _renderItemName = function() {
     var html = helper.e("html");
     html.style.setProperty("--link-item-name-size", state.get().link.item.name.size + "em");
   };
 
-  var _renderItemNameDefault = function() {
-    helper.setObject({
-      object: state.get(),
-      path: "link.item.name.size",
-      newValue: 0.9
-    });
-    render.item.name.set();
-  };
-
-  var _renderItemSizeSet = function() {
+  var _renderItemSize = function() {
     var html = helper.e("html");
     html.style.setProperty("--link-item-size", state.get().link.item.size + "em");
-  };
-
-  var _renderItemSizeDefault = function() {
-    helper.setObject({
-      object: state.get(),
-      path: "link.item.size",
-      newValue: 1
-    });
-    render.item.size.set();
-  };
-
-  var _renderWidthMatch = function() {
-    helper.setObject({
-      object: state.get(),
-      path: "link.area.width",
-      newValue: state.get().header.area.width
-    });
-    render.width.set();
   };
 
   var _renderTabIndex = function() {
@@ -700,22 +645,14 @@ var link = (function() {
     };
   };
 
-  var clear = function() {
-    var linkArea = helper.e(".link-area");
-    while (linkArea.lastChild) {
-      linkArea.removeChild(linkArea.lastChild);
-    };
-  };
-
   var init = function() {
     render.area.gap();
+    render.area.width();
     render.item.all();
-    render.item.size.set();
-    render.item.display.letter.set();
-    render.item.display.icon.set();
-    render.item.name.set();
-    render.item.name.default();
-    render.width.set();
+    render.item.size();
+    render.item.display.letter();
+    render.item.display.icon();
+    render.item.name();
   };
 
   // exposed methods
