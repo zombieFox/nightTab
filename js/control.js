@@ -1497,14 +1497,14 @@ var control = (function() {
     type: "range",
     valueMod: ["float"],
     func: function() {
-      link.render.item.name.set();
+      link.render.item.name();
     }
   }, {
     element: helper.e(".control-link-item-name-size-default"),
     type: "button",
     func: function() {
       _setValue("link.item.display.icon.size", 0.9);
-      link.render.item.name.set();
+      link.render.item.name();
       update();
     }
   }, {
