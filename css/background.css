@@ -10,7 +10,8 @@
 }
 
 .background-image {
-  background-image: var(--background-image);
+  /* background-image: var(--background-image); */
+  background-image: url(https://source.unsplash.com/random/1920x1080/?nightlife);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -22,7 +23,6 @@
   pointer-events: none;
   display: block;
   opacity: var(--background-opacity);
-  /* filter: blur(var(--background-blur)) grayscale(var(--background-grayscale)); */
 }
 
 .background-accent {

@@ -111,6 +111,7 @@ var state = (function() {
         show: true,
         style: "scroll",
         opacity: 0.95,
+        radius: false
       },
       padding: {
         top: 0,
@@ -185,6 +186,8 @@ var state = (function() {
         horizontal: "center",
         vertical: "center"
       },
+      padding: 4,
+      gutter: 2,
       width: 80,
       scrollPastEnd: false,
       title: "New Tab"

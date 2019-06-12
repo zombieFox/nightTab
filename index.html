@@ -45,51 +45,51 @@
   <main class="main">
 
     <header class="header">
-      <div class="header-shade"></div>
-      <div class="header-border"></div>
       <div class="header-area">
-        <div class="header-item header-greeting">
-          <p class="greeting"></p>
-        </div>
-        <div class="header-item header-transitional">
-          <p class="transitional"></p>
-        </div>
-        <div class="header-item header-clock">
-          <p class="clock"></p>
-        </div>
-        <div class="header-item header-date">
-          <p class="date"></p>
-        </div>
-        <div class="header-item header-search">
-          <form class="search" action="" method="get">
-            <input class="header-search-input search-input mb-0" type="text" placeholder="Find or Search" name="q" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="1">
-            <input type="submit" value="Search" class="is-hidden">
-          </form>
-          <button class="header-search-clear search-clear button button-link mb-0" tabindex="1" disabled>
-            <span class="icon-close"></span>
-          </button>
-        </div>
-        <div class="header-item header-button header-edit-add">
-          <div class="form-group nested-button mb-0">
-            <div class="input-wrap input-button input-hide py-0">
-              <input id="control-link-edit" class="control-link-edit" type="checkbox" tabindex="1">
-              <label for="control-link-edit" class=" mb-0">Edit</label>
-            </div>
-            <button class="control-link-add button" tabindex="1">
-              <span class="button-text">Add</span>
+        <div class="header-item-grid">
+          <div class="header-item header-greeting">
+            <p class="greeting"></p>
+          </div>
+          <div class="header-item header-transitional">
+            <p class="transitional"></p>
+          </div>
+          <div class="header-item header-clock">
+            <p class="clock"></p>
+          </div>
+          <div class="header-item header-date">
+            <p class="date"></p>
+          </div>
+          <div class="header-item header-search">
+            <form class="search" action="" method="get">
+              <input class="header-search-input search-input mb-0" type="text" placeholder="Find or Search" name="q" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="1">
+              <input type="submit" value="Search" class="is-hidden">
+            </form>
+            <button class="header-search-clear search-clear button button-link mb-0" tabindex="1" disabled>
+              <span class="icon-close"></span>
             </button>
           </div>
-        </div>
-        <div class="header-item header-button header-accent">
-          <div class="input-wrap input-button input-color-dot input-color-dot-accent py-0">
-            <input id="control-theme-accent-current" class="control-theme-accent-current" type="color" tabindex="1">
-            <label for="control-theme-accent-current">Accent</label>
+          <div class="header-item header-button header-edit-add">
+            <div class="form-group nested-button mb-0">
+              <div class="input-wrap input-button input-hide py-0">
+                <input id="control-link-edit" class="control-link-edit" type="checkbox" tabindex="1">
+                <label for="control-link-edit" class=" mb-0">Edit</label>
+              </div>
+              <button class="control-link-add button" tabindex="1">
+                <span class="button-text">Add</span>
+              </button>
+            </div>
           </div>
-        </div>
-        <div class="header-item header-button header-menu">
-          <button id="control-menu" class="control-menu button mb-0" tabindex="1">
+          <div class="header-item header-button header-accent">
+            <div class="input-wrap input-button input-color-dot input-color-dot-accent py-0">
+              <input id="control-theme-accent-current" class="control-theme-accent-current" type="color" tabindex="1">
+              <label for="control-theme-accent-current">Accent</label>
+            </div>
+          </div>
+          <div class="header-item header-button header-menu">
+          <button class="control-menu button mb-0" tabindex="1">
             <span class="button-text"><span class="icon-settings"></span></span>
           </button>
+        </div>
         </div>
       </div>
     </header>
@@ -127,7 +127,7 @@
             <div class="menu-item-form">
               <div class="input-wrap">
                 <label for="control-layout-width">Width</label>
-                <input id="control-layout-width" class="control-layout-width" type="range" min="15" max="100" value="0" tabindex="1">
+                <input id="control-layout-width" class="control-layout-width" type="range" min="5" max="100" value="0" tabindex="1">
               </div>
               <hr>
               <label class="control-layout-alignment-horizontal-label">Horizontal Alignment</label>
@@ -163,6 +163,28 @@
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Padding</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap">
+                <label for="control-layout-padding">Padding on outer sides</label>
+                <input id="control-layout-padding" class="control-layout-padding" type="range" min="0" max="40" value="0" tabindex="1">
+              </div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Gutter</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap">
+                <label for="control-layout-gutter">Gutter between Header and Link items</label>
+                <input id="control-layout-gutter" class="control-layout-gutter" type="range" min="0" max="40" value="0" tabindex="1">
+              </div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
               <h1 class="menu-item-header-text">Page</h1>
             </div>
             <div class="menu-item-form">
@@ -191,7 +213,7 @@
                 <p class="input-helper small muted">Max width is defined by Layout Area Width.</p>
               </div>
               <div class="button-wrap">
-                <button class="control-header-area-width-match button mb-0" type="button">Match Bookmarks Area Width</button>
+                <button class="control-header-area-width-match button mb-0" tabindex="1">Match Bookmarks Area Width</button>
               </div>
               <hr>
               <label class="control-header-area-alignment-horizontal-label">Area Horizontal Alignment</label>
@@ -259,7 +281,7 @@
                   <input id="control-header-greeting-size" class="control-header-greeting-size" type="range" min="20" max="500" value="0" step="20" tabindex="1">
                 </div>
                 <div class="button-wrap">
-                  <button class="control-header-greeting-size-default button mb-0" type="button">Default greeting size</button>
+                  <button class="control-header-greeting-size-default button mb-0" tabindex="1">Default greeting size</button>
                 </div>
               </div>
             </div>
@@ -290,7 +312,7 @@
                   <input id="control-header-transitional-size" class="control-header-transitional-size" type="range" min="20" max="500" value="0" step="20" tabindex="1">
                 </div>
                 <div class="button-wrap">
-                  <button class="control-header-transitional-size-default button mb-0" type="button">Default transitional size</button>
+                  <button class="control-header-transitional-size-default button mb-0" tabindex="1">Default transitional size</button>
                 </div>
               </div>
             </div>
@@ -364,7 +386,7 @@
                 <input id="control-header-clock-size" class="control-header-clock-size" type="range" min="20" max="500" value="0" step="20" tabindex="1">
               </div>
               <div class="button-wrap">
-                <button class="control-header-clock-size-default button mb-0" type="button">Default clock size</button>
+                <button class="control-header-clock-size-default button mb-0" tabindex="1">Default clock size</button>
               </div>
             </div>
           </div>
@@ -499,7 +521,7 @@
                 <input id="control-header-date-size" class="control-header-date-size" type="range" min="20" max="500" value="0" step="20" tabindex="1">
               </div>
               <div class="button-wrap">
-                <button class="control-header-date-size-default button mb-0" type="button">Default date size</button>
+                <button class="control-header-date-size-default button mb-0" tabindex="1">Default date size</button>
               </div>
             </div>
           </div>
@@ -592,7 +614,7 @@
                   <p class="input-helper small muted">Only the Search box width control will change the Width of the Search box.</p>
                 </div>
                 <div class="button-wrap">
-                  <button class="control-header-search-size-default button mb-0" type="button">Default search size</button>
+                  <button class="control-header-search-size-default button mb-0" tabindex="1">Default search size</button>
                 </div>
               </div>
             </div>
@@ -617,7 +639,7 @@
                 <input id="control-header-button-size" class="control-header-button-size" type="range" min="20" max="500" value="0" step="20" tabindex="1">
               </div>
               <div class="button-wrap">
-                <button class="control-header-button-size-default button mb-0" type="button">Default button size</button>
+                <button class="control-header-button-size-default button mb-0" tabindex="1">Default button size</button>
               </div>
             </div>
           </div>
@@ -649,7 +671,7 @@
               <div class="form-indent">
                 <div class="input-wrap">
                   <label for="control-header-border-top-width">Border width</label>
-                  <input id="control-header-border-top-width" class="control-header-border-top-width mb-0" type="range" min="1" max="10" value="0" tabindex="1">
+                  <input id="control-header-border-top-width" class="control-header-border-top-width mb-0" type="range" min="1" max="100" value="0" tabindex="1">
                 </div>
               </div>
               <hr>
@@ -660,7 +682,7 @@
               <div class="form-indent">
                 <div class="input-wrap">
                   <label for="control-header-border-bottom-width">Border width</label>
-                  <input id="control-header-border-bottom-width" class="control-header-border-bottom-width" type="range" min="1" max="10" value="0" tabindex="1">
+                  <input id="control-header-border-bottom-width" class="control-header-border-bottom-width" type="range" min="1" max="100" value="0" tabindex="1">
                 </div>
               </div>
             </div>
@@ -691,6 +713,11 @@
                   <label for="control-header-shade-opacity">Opacity</label>
                   <input id="control-header-shade-opacity" class="control-header-shade-opacity" type="range" min="0" max="100" value="0" tabindex="1">
                 </div>
+                <hr>
+                <div class="input-wrap">
+                  <input id="control-header-shade-radius" class="control-header-shade-radius" type="checkbox" tabindex="1">
+                  <label for="control-header-shade-radius">Corner radius</label>
+                </div>
               </div>
             </div>
           </div>
@@ -708,7 +735,7 @@
                 <p class="input-helper small muted">Max width is defined by Layout Area Width.</p>
               </div>
               <div class="button-wrap">
-                <button class="control-link-area-width-match button mb-0" type="button">Match Header Area Width</button>
+                <button class="control-link-area-width-match button mb-0" tabindex="1">Match Header Area Width</button>
               </div>
               <hr>
               <label class="control-link-area-alignment-horizontal-label">Horizontal Alignment</label>
@@ -743,7 +770,7 @@
                   <input id="control-link-item-size" class="control-link-item-size" type="range" min="20" max="500" value="0" step="10" tabindex="1">
                 </div>
                 <div class="button-wrap">
-                  <button class="control-link-item-size-default button mb-0" type="button">Default tile size</button>
+                  <button class="control-link-item-size-default button mb-0" tabindex="1">Default tile size</button>
                 </div>
                 <hr>
                 <div class="input-wrap">
@@ -756,7 +783,7 @@
                     <input id="control-link-item-display-letter-size" class="control-link-item-display-letter-size" type="range" min="1" max="3000" value="0" tabindex="1">
                   </div>
                   <div class="button-wrap">
-                    <button class="control-link-item-display-letter-size-default button mb-0" type="button">Default letter size</button>
+                    <button class="control-link-item-display-letter-size-default button mb-0" tabindex="1">Default letter size</button>
                   </div>
                   <hr>
                   <div class="input-wrap">
@@ -764,20 +791,20 @@
                     <input id="control-link-item-display-icon-size" class="control-link-item-display-icon-size" type="range" min="1" max="3000" value="0" tabindex="1">
                   </div>
                   <div class="button-wrap">
-                    <button class="control-link-item-display-icon-size-default button mb-0" type="button">Default icon size</button>
+                    <button class="control-link-item-display-icon-size-default button mb-0" tabindex="1">Default icon size</button>
                   </div>
                 </div>
                 <hr>
                 <div class="input-wrap">
                   <input id="control-link-item-name-show" class="control-link-item-name-show" type="checkbox" tabindex="1">
-                  <label for="control-link-item-name-show">Names</label>
+                  <label for="control-link-item-name-show">Name</label>
                   <div class="form-indent">
                     <div class="input-wrap">
-                      <label for="control-link-item-name-size">Names size</label>
+                      <label for="control-link-item-name-size">Name size</label>
                       <input id="control-link-item-name-size" class="control-link-item-name-size" type="range" min="1" max="1500" value="0" tabindex="1">
                     </div>
                     <div class="button-wrap">
-                      <button class="control-link-item-name-size-default button mb-0" type="button">Default icon size</button>
+                      <button class="control-link-item-name-size-default button mb-0" tabindex="1">Default icon size</button>
                     </div>
                   </div>
                 </div>
@@ -911,7 +938,7 @@
                 <input id="control-theme-radius" class="control-theme-radius" type="range" min="0" max="300" value="0" step="20" tabindex="1">
               </div>
               <div class="button-wrap">
-                <button class="control-theme-radius-default button mb-0" type="button">Default radius size</button>
+                <button class="control-theme-radius-default button mb-0" tabindex="1">Default radius size</button>
               </div>
             </div>
           </div>
@@ -946,7 +973,7 @@
                   <label for="control-theme-accent-random-style-saturated">Saturated colours</label>
                 </div>
                 <div class="button-wrap">
-                  <button class="control-theme-accent-randomise button mb-0" type="button">Randomise now</button>
+                  <button class="control-theme-accent-randomise button mb-0" tabindex="1">Randomise now</button>
                 </div>
               </div>
             </div>

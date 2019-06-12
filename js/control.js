@@ -72,7 +72,7 @@ var control = (function() {
     }],
     func: function() {
       render();
-      layout.render();
+      layout.render.width();
     }
   }, {
     element: helper.e(".control-layout-alignment-horizontal-left"),
@@ -169,6 +169,98 @@ var control = (function() {
     }],
     func: function() {
       render();
+    }
+  }, {
+    element: helper.e(".control-layout-padding"),
+    path: "layout.padding",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".main"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      layout.render.padding();
+    }
+  }, {
+    element: helper.e(".control-layout-gutter"),
+    path: "layout.gutter",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".main"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      layout.render.gutter();
     }
   }, {
     element: helper.e(".control-layout-title"),
@@ -1128,6 +1220,13 @@ var control = (function() {
       header.render.opacity();
     }
   }, {
+    element: helper.e(".control-header-shade-radius"),
+    path: "header.shade.radius",
+    type: "checkbox",
+    func: function() {
+      render();
+    }
+  }, {
     element: helper.e(".control-header-padding-top"),
     path: "header.padding.top",
     type: "range",
@@ -1955,6 +2054,11 @@ var control = (function() {
         if (state.get().header.shade.show) {
           helper.addClass(html, "is-header-shade-show");
           helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
+        };
+        if (state.get().header.shade.radius) {
+          helper.addClass(html, "is-header-shade-radius");
+        } else {
+          helper.removeClass(html, "is-header-shade-radius");
         };
       };
       var _border = function() {

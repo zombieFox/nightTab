@@ -1,7 +1,6 @@
 .greeting {
   margin: 0;
   padding: 0;
-  border-radius: var(--theme-radius);
   font-size: 1em;
   font-family: var(--font-fjalla);
   color: rgb(var(--style-neutral-text));
@@ -11,6 +10,18 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
+}
+
+.is-header-item-alignment-horizontal-left .greeting {
+  justify-content: flex-start;
+}
+
+.is-header-item-alignment-horizontal-center .greeting {
+  justify-content: center;
+}
+
+.is-header-item-alignment-horizontal-right .greeting {
+  justify-content: flex-end;
 }
 
 .greeting-item {
