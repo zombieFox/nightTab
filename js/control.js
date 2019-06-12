@@ -463,12 +463,60 @@ var control = (function() {
     path: "header.greeting.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".greeting"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".greeting"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".greeting"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.greeting.size();
     }
   }, {
     element: helper.e(".control-header-greeting-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".greeting"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.greeting.size", 1);
       header.render.greeting.size();
@@ -505,12 +553,60 @@ var control = (function() {
     path: "header.transitional.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".transitional"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".transitional"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".transitional"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.transitional.size();
     }
   }, {
     element: helper.e(".control-header-transitional-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".transitional"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.transitional.size", 1);
       header.render.transitional.size();
@@ -671,12 +767,60 @@ var control = (function() {
     path: "header.clock.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".clock"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".clock"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".clock"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.clock.size();
     }
   }, {
     element: helper.e(".control-header-clock-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".clock"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.clock.size", 1);
       header.render.clock.size();
@@ -975,12 +1119,60 @@ var control = (function() {
     path: "header.date.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".date"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".date"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".date"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.date.size();
     }
   }, {
     element: helper.e(".control-header-date-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".date"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.date.size", 1);
       header.render.date.size();
@@ -999,6 +1191,15 @@ var control = (function() {
     element: helper.e(".control-header-search-style-auto"),
     path: "header.search.style",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       render();
       dependents();
@@ -1008,6 +1209,15 @@ var control = (function() {
     element: helper.e(".control-header-search-style-custom"),
     path: "header.search.style",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       render();
       dependents();
@@ -1143,12 +1353,60 @@ var control = (function() {
     path: "header.search.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".header-search-input"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.search.size();
     }
   }, {
     element: helper.e(".control-header-search-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.search.size", 1);
       header.render.search.size();
@@ -1175,12 +1433,60 @@ var control = (function() {
     path: "header.button.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".control-menu"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".control-menu"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".control-menu"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.button.size();
     }
   }, {
     element: helper.e(".control-header-button-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".control-menu"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.button.size", 1);
       header.render.button.size();
@@ -1934,10 +2240,10 @@ var control = (function() {
           path: object.path,
           newValue: newValue
         });
-        // console.log(object.path, helper.getObject({
-        //   object: state.get(),
-        //   path: object.path
-        // }));
+        console.log("state set", object.path, helper.getObject({
+          object: state.get(),
+          path: object.path
+        }));
       };
     };
     var bindControl = function(object) {
