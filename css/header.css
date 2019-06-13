@@ -24,6 +24,7 @@
 }
 
 .header-shade {
+  background-color: transparent;
   content: "";
   display: block;
   position: absolute;
@@ -42,6 +43,11 @@
   background-color: rgba(var(--header-shade-color), var(--header-shade-opacity));
 }
 
+.is-header-shade-style-scroll .header-shade {
+  transition: background-color var(--animation-speed-slow) ease-in-out;
+  animation: none;
+}
+
 .header-area {
   padding: calc(var(--gutter) * var(--layout-padding-multiplier));
   position: relative;
@@ -58,11 +64,6 @@
 
 .is-header-radius .header-area {
   border-radius: calc(var(--theme-radius) * 4);
-}
-
-.is-header-shade-style-scroll .header-area {
-  transition: background-color var(--animation-speed-slow) ease-in-out;
-  animation: none;
 }
 
 .is-header-search-text-align-left .header-search-input {
