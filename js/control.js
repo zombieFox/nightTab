@@ -2537,11 +2537,13 @@ var control = (function() {
           helper.e(".control-header-shade-style-scroll").disabled = false;
           helper.e("[for=control-header-shade-opacity]").removeAttribute("disabled");
           helper.e(".control-header-shade-opacity").disabled = false;
+          helper.e(".control-header-radius").disabled = false;
         } else {
           helper.e(".control-header-shade-style-always").disabled = true;
           helper.e(".control-header-shade-style-scroll").disabled = true;
           helper.e("[for=control-header-shade-opacity]").setAttribute("disabled", "");
           helper.e(".control-header-shade-opacity").disabled = true;
+          helper.e(".control-header-radius").disabled = true;
         };
       };
       var _search = function() {
