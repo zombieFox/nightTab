@@ -56,7 +56,7 @@
   --font-fjalla: "Fjalla One Regular", sans-serif;
   --header-area-width: 100%;
   --header-shade-color: transparent;
-  --header-shade-opacity: none;
+  --header-shade-opacity: 0.95;
   --header-search-width: 0%;
   --header-border-top: 0;
   --header-border-bottom: 0;
