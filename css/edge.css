@@ -1,5 +1,5 @@
 .edge {
-  background-color: rgba(var(--theme-accent), 0.10);
+  background-color: rgba(var(--theme-accent), 0.2);
   width: 0;
   height: 0;
   position: absolute;

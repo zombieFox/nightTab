@@ -168,7 +168,7 @@
             </div>
             <div class="menu-item-form">
               <div class="input-wrap">
-                <label for="control-layout-padding">Padding on outer sides</label>
+                <label for="control-layout-padding">Padding outside Header and Bookmark Area</label>
                 <input id="control-layout-padding" class="control-layout-padding" type="range" min="0" max="40" value="0" tabindex="1">
               </div>
             </div>
@@ -179,7 +179,7 @@
             </div>
             <div class="menu-item-form">
               <div class="input-wrap">
-                <label for="control-layout-gutter">Gutter between Header and Link items</label>
+                <label for="control-layout-gutter">Gutter between Header and Bookmark items</label>
                 <input id="control-layout-gutter" class="control-layout-gutter" type="range" min="0" max="40" value="0" tabindex="1">
               </div>
             </div>
@@ -214,7 +214,7 @@
                 <p class="input-helper small muted">Max width is defined by Layout Area Width.</p>
               </div>
               <div class="button-wrap">
-                <button class="control-header-area-width-match button mb-0" tabindex="1">Match Bookmarks Area Width</button>
+                <button class="control-header-area-width-match button mb-0" tabindex="1">Match Bookmarks Area</button>
               </div>
               <hr>
               <label class="control-header-area-alignment-horizontal-label">Area Horizontal Alignment</label>
@@ -708,7 +708,7 @@
                 <p class="input-helper small muted">Max width is defined by Layout Area Width.</p>
               </div>
               <div class="button-wrap">
-                <button class="control-link-area-width-match button mb-0" tabindex="1">Match Header Area Width</button>
+                <button class="control-link-area-width-match button mb-0" tabindex="1">Match Header Area</button>
               </div>
               <hr>
               <label class="control-link-area-alignment-horizontal-label">Horizontal Alignment</label>
@@ -963,10 +963,12 @@
                 <div class="input-wrap">
                   <label for="control-background-image-url">URL or path</label>
                   <input id="control-background-image-url" class="control-background-image-url" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="http:// or ../path/to/file" tabindex="1">
-                  <p class="input-helper small muted">Enter a URL to an image file or a path to a local file.</p>
-                  <p class="input-helper small muted">To use local files enter a relative file path, eg:</p>
-                  <p class="input-helper small muted">../background/abstract.jpg</p>
-                  <p class="input-helper small muted">../background/gray-steps.jpg</p>
+                  <p class="input-helper small muted">Use a URL or file path to an image. Local files use relative file paths, eg:</p>
+                  <p class="input-helper small muted"><i>../background/abstract.jpg</i></p>
+                  <p class="input-helper small muted"><i>../background/gray-steps.jpg</i></p>
+                  <p class="input-helper small muted">Use Unsplash for random images, eg:</p>
+                  <p class="input-helper small muted"><i>https://source.unsplash.com/random/1920x1080/?night,day,sky</i></p>
+                  <p class="input-helper small muted">Change parameters after <i>.../ramdom/</i> for more options. Loading times may vary when using Unsplash.</p>
                 </div>
                 <hr>
                 <div class="input-wrap">
