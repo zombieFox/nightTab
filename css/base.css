@@ -80,6 +80,7 @@
   --link-item-name-size: 0.9em;
   --background-image: none;
   --background-opacity: 1;
+  --background-scale: 1;
   --background-accent-opacity: 0;
   --background-blur: 0;
   --layout-width: 80%;

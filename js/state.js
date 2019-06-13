@@ -110,12 +110,7 @@ var state = (function() {
       shade: {
         show: true,
         style: "scroll",
-        opacity: 0.95,
-        radius: false
-      },
-      padding: {
-        top: 0,
-        bottom: 0
+        opacity: 0.95
       },
       border: {
         top: {
@@ -137,7 +132,8 @@ var state = (function() {
         show: false,
         type: "timeanddate",
         size: 1
-      }
+      },
+      radius: false
     },
     link: {
       area: {
@@ -212,6 +208,7 @@ var state = (function() {
         show: false,
         url: "../background/gray-steps.jpg",
         blur: 0,
+        scale: 1,
         opacity: 1,
         grayscale: 0,
         accent: 0

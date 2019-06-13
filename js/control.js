@@ -1526,103 +1526,11 @@ var control = (function() {
       header.render.opacity();
     }
   }, {
-    element: helper.e(".control-header-shade-radius"),
-    path: "header.shade.radius",
+    element: helper.e(".control-header-radius"),
+    path: "header.radius",
     type: "checkbox",
     func: function() {
       render();
-    }
-  }, {
-    element: helper.e(".control-header-padding-top"),
-    path: "header.padding.top",
-    type: "range",
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render({
-            element: helper.e(".header-area"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.destroy();
-      }
-    }],
-    func: function() {
-      header.render.padding();
-    }
-  }, {
-    element: helper.e(".control-header-padding-bottom"),
-    path: "header.padding.bottom",
-    type: "range",
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render({
-            element: helper.e(".header-area"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.destroy();
-      }
-    }],
-    func: function() {
-      header.render.padding();
     }
   }, {
     element: helper.e(".control-header-border-top-show"),
@@ -2174,6 +2082,14 @@ var control = (function() {
     func: function() {
       background.render();
     }
+  }, {
+    element: helper.e(".control-background-image-scale"),
+    path: "background.image.scale",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      background.render();
+    }
   }];
 
   var _setValue = function(path, value) {
@@ -2361,10 +2277,10 @@ var control = (function() {
           helper.addClass(html, "is-header-shade-show");
           helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
         };
-        if (state.get().header.shade.radius) {
-          helper.addClass(html, "is-header-shade-radius");
+        if (state.get().header.radius) {
+          helper.addClass(html, "is-header-radius");
         } else {
-          helper.removeClass(html, "is-header-shade-radius");
+          helper.removeClass(html, "is-header-radius");
         };
       };
       var _border = function() {
@@ -2896,6 +2812,8 @@ var control = (function() {
         helper.e(".control-background-image-grayscale").disabled = false;
         helper.e("[for=control-background-image-accent]").removeAttribute("disabled");
         helper.e(".control-background-image-accent").disabled = false;
+        helper.e("[for=control-background-image-scale]").removeAttribute("disabled");
+        helper.e(".control-background-image-scale").disabled = false;
       } else {
         helper.e("[for=control-background-image-url]").setAttribute("disabled", "");
         helper.e(".control-background-image-url").disabled = true;
@@ -2907,6 +2825,8 @@ var control = (function() {
         helper.e(".control-background-image-grayscale").disabled = true;
         helper.e("[for=control-background-image-accent]").setAttribute("disabled", "");
         helper.e(".control-background-image-accent").disabled = true;
+        helper.e("[for=control-background-image-scale]").setAttribute("disabled", "");
+        helper.e(".control-background-image-scale").disabled = true;
       };
     };
     _header();

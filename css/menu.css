@@ -125,7 +125,7 @@
 
 @media (min-width: 700px) {
   .menu {
-    width: 60vw;
+    width: 70vw;
     height: 100%;
     overflow-y: inherit;
     max-height: inherit;
@@ -167,7 +167,7 @@
 
 @media (min-width: 900px) {
   .menu {
-    width: 60vw;
+    width: 70vw;
   }
 
   .menu-item {
@@ -177,6 +177,6 @@
 
 @media (min-width: 1600px) {
   .menu {
-    width: 40vw;
+    width: 50vw;
   }
 }

@@ -7,11 +7,16 @@
   pointer-events: none;
   z-index: var(--z-index-background);
   animation: appear var(--animation-speed-slow) 1;
+  display: none;
+}
+
+.is-background-image-show .background {
+  display: block;
 }
 
 .background-image {
-  /* background-image: var(--background-image); */
-  background-image: url(https://source.unsplash.com/random/1920x1080/?nightlife);
+  background-image: var(--background-image);
+  /* background-image: url(https://source.unsplash.com/random/1920x1080/?night); */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -23,6 +28,8 @@
   pointer-events: none;
   display: block;
   opacity: var(--background-opacity);
+  transform: scale(var(--background-scale));
+  filter: blur(var(--background-blur)) grayscale(var(--background-grayscale));
 }
 
 .background-accent {

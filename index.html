@@ -45,6 +45,7 @@
   <main class="main">
 
     <header class="header">
+      <div class="header-shade"></div>
       <div class="header-area">
         <div class="header-item-grid">
           <div class="header-item header-greeting">
@@ -645,22 +646,6 @@
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
-              <h1 class="menu-item-header-text">Padding</h1>
-            </div>
-            <div class="menu-item-form">
-              <div class="input-wrap">
-                <label for="control-header-padding-top">Top padding</label>
-                <input id="control-header-padding-top" class="control-header-padding-top" type="range" min="0" max="50" value="0" tabindex="1">
-              </div>
-              <hr>
-              <div class="input-wrap">
-                <label for="control-header-padding-bottom">Bottom padding</label>
-                <input id="control-header-padding-bottom" class="control-header-padding-bottom" type="range" min="0" max="50" value="0" tabindex="1">
-              </div>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
               <h1 class="menu-item-header-text">Border</h1>
             </div>
             <div class="menu-item-form">
@@ -715,8 +700,8 @@
                 </div>
                 <hr>
                 <div class="input-wrap">
-                  <input id="control-header-shade-radius" class="control-header-shade-radius" type="checkbox" tabindex="1">
-                  <label for="control-header-shade-radius">Corner radius</label>
+                  <input id="control-header-radius" class="control-header-radius" type="checkbox" tabindex="1">
+                  <label for="control-header-radius">Corner radius</label>
                 </div>
               </div>
             </div>
@@ -1015,7 +1000,11 @@
                 </div>
                 <div class="input-wrap">
                   <label for="control-background-image-accent">Accent overlay</label>
-                  <input id="control-background-image-accent" class="control-background-image-accent" type="range" min="0" max="50" value="0" tabindex="1">
+                  <input id="control-background-image-accent" class="control-background-image-accent" type="range" min="0" max="90" value="0" tabindex="1">
+                </div>
+                <div class="input-wrap">
+                  <label for="control-background-image-scale">Size</label>
+                  <input id="control-background-image-scale" class="control-background-image-scale" type="range" min="100" max="300" value="0" tabindex="1">
                 </div>
               </div>
             </div>

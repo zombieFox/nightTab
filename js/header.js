@@ -29,9 +29,6 @@ var header = (function() {
     opacity: function() {
       _renderOpacity();
     },
-    padding: function() {
-      _renderPadding();
-    },
     border: function() {
       _renderBorder();
     },
@@ -103,12 +100,6 @@ var header = (function() {
     };
   };
 
-  var _renderPadding = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--header-padding-top-multiplier", state.get().header.padding.top);
-    html.style.setProperty("--header-padding-bottom-multiplier", state.get().header.padding.bottom);
-  };
-
   var _renderBorder = function() {
     var html = helper.e("html");
     html.style.setProperty("--header-border-width-top-multiplier", state.get().header.border.top.width);
@@ -155,7 +146,6 @@ var header = (function() {
     render.area.width();
     render.shade();
     render.opacity();
-    render.padding();
     render.border();
     render.greeting.size();
     render.transitional.size();
