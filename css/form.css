@@ -640,6 +640,52 @@ input[type="range"][disabled]~.input-helper {
   cursor: default;
 }
 
+.input-button-link input[type="checkbox"]+label,
+.input-button-link input[type="radio"]+label,
+.input-button-link input[type="color"]+label {
+  background-color: transparent;
+  border: 0;
+  color: rgb(var(--button-link-text));
+}
+
+.input-button-link input[type="checkbox"]:hover+label,
+.input-button-link input[type="checkbox"]:focus+label,
+.input-button-link input[type="checkbox"]:checked+label,
+.input-button-link input[type="radio"]:hover+label,
+.input-button-link input[type="radio"]:focus+label,
+.input-button-link input[type="radio"]:checked+label,
+.input-button-link input[type="color"]:hover+label,
+.input-button-link input[type="color"]:focus+label,
+.input-button-link input[type="color"]:checked+label {
+  background-color: transparent;
+  color: rgb(var(--button-link-text-hover-focus));
+}
+
+.input-button-link input[type="checkbox"]:active+label,
+.input-button-link input[type="radio"]:active+label,
+.input-button-link input[type="color"]:active+label {
+  background-color: transparent;
+  color: rgb(var(--button-link-text-active));
+}
+
+.input-button-link input[disabled][type="checkbox"]+label,
+.input-button-link input[disabled][type="radio"]+label,
+.input-button-link input[disabled][type="color"]+label {
+  background-color: transparent;
+  color: transparent;
+  pointer-events: none;
+}
+
+.input-button-link input[disabled][type="checkbox"]:hover+label,
+.input-button-link input[disabled][type="checkbox"]:focus+label,
+.input-button-link input[disabled][type="radio"]:hover+label,
+.input-button-link input[disabled][type="radio"]:focus+label,
+.input-button-link input[disabled][type="color"]:hover+label,
+.input-button-link input[disabled][type="color"]:focus+label {
+  background-color: transparent;
+  color: transparent;
+}
+
 .input-color-dot input[type="color"] {
   margin: 0;
   position: absolute;

@@ -63,6 +63,9 @@ var header = (function() {
     button: {
       size: function() {
         _renderButtonSize();
+      },
+      style: function() {
+        _renderButtonStyle();
       }
     }
   };
@@ -141,6 +144,24 @@ var header = (function() {
     html.style.setProperty("--header-button-size", state.get().header.button.size + "em");
   };
 
+  var _renderButtonStyle = function() {
+    var action = {
+      box: function() {
+        helper.removeClass(helper.getClosest(helper.e(".control-link-edit"), ".input-wrap"), "input-button-link");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current"), ".input-wrap"), "input-button-link");
+        helper.removeClass(helper.e(".control-link-add"), "button-link");
+        helper.removeClass(helper.e(".control-menu"), "button-link");
+      },
+      clear: function() {
+        helper.addClass(helper.getClosest(helper.e(".control-link-edit"), ".input-wrap"), "input-button-link");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current"), ".input-wrap"), "input-button-link");
+        helper.addClass(helper.e(".control-link-add"), "button-link");
+        helper.addClass(helper.e(".control-menu"), "button-link");
+      }
+    };
+    action[state.get().header.button.style]();
+  };
+
   var init = function() {
     _bind();
     render.area.width();
@@ -154,6 +175,7 @@ var header = (function() {
     render.search.width();
     render.search.size();
     render.button.size();
+    render.button.style();
   };
 
   // exposed methods

@@ -465,6 +465,12 @@ var update = (function() {
     return data;
   };
 
+  var _update_3100 = function(data) {
+    data.version = "3.10.0";
+    data.state.header.button.style = "box";
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -586,6 +592,10 @@ var update = (function() {
       if (version.compare(data.version, "3.9.0") == -1) {
         console.log("\t= running update 3.9.0");
         data = _update_390(data);
+      };
+      if (version.compare(data.version, "3.10.0") == -1) {
+        console.log("\t= running update 3.10.0");
+        data = _update_3100(data);
       };
     };
     // if no update is needed

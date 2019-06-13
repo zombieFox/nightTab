@@ -1413,6 +1413,20 @@ var control = (function() {
       update();
     }
   }, {
+    element: helper.e(".control-header-button-style-box"),
+    path: "header.button.style",
+    type: "radio",
+    func: function() {
+      header.render.button.style();
+    }
+  }, {
+    element: helper.e(".control-header-button-style-clear"),
+    path: "header.button.style",
+    type: "radio",
+    func: function() {
+      header.render.button.style();
+    }
+  }, {
     element: helper.e(".control-header-button-edit-add-show"),
     path: "header.button.editAdd.show",
     type: "checkbox",

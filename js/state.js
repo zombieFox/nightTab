@@ -105,6 +105,7 @@ var state = (function() {
         accent: {
           show: true,
         },
+        style: "box",
         size: 1
       },
       shade: {

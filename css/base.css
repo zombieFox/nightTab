@@ -26,9 +26,9 @@
   --button-text-hover-focus: var(--style-neutral-text);
   --button-text-active: var(--style-neutral-text);
   --button-text-disabled: var(--gray-04);
-  --button-link-text: var(--gray-10);
-  --button-link-text-hover-focus: var(--gray-14);
-  --button-link-text-active: var(--gray-18);
+  --button-link-text: var(--gray-12);
+  --button-link-text-hover-focus: var(--style-neutral-text);
+  --button-link-text-active: var(--style-neutral-text);
   --button-link-text-disabled: var(--gray-04);
   --form-input-text: var(--gray-16);
   --form-input-border: 2;
