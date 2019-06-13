@@ -455,8 +455,8 @@ var update = (function() {
     delete data.state.header.padding;
     data.state.header.radius = false;
     data.state.header.border = {
-      top: data.state.header.border.top.width,
-      bottom: data.state.header.border.bottom.width
+      top: 0,
+      bottom: 0
     };
     data.state.layout.padding = 4;
     data.state.layout.gutter = 2;
