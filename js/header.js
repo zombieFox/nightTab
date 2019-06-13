@@ -102,8 +102,8 @@ var header = (function() {
 
   var _renderBorder = function() {
     var html = helper.e("html");
-    html.style.setProperty("--header-border-width-top-multiplier", state.get().header.border.top.width);
-    html.style.setProperty("--header-border-width-bottom-multiplier", state.get().header.border.bottom.width);
+    html.style.setProperty("--header-border-top", state.get().header.border.top);
+    html.style.setProperty("--header-border-bottom", state.get().header.border.bottom);
   };
 
   var _renderSearchWidth = function() {

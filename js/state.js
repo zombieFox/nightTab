@@ -113,14 +113,8 @@ var state = (function() {
         opacity: 0.95
       },
       border: {
-        top: {
-          show: false,
-          width: 1
-        },
-        bottom: {
-          show: false,
-          width: 1
-        }
+        top: 0,
+        bottom: 0
       },
       greeting: {
         show: false,
@@ -137,7 +131,6 @@ var state = (function() {
     },
     link: {
       area: {
-        gap: 2,
         width: 100,
         alignment: {
           horizontal: "center"

@@ -454,9 +454,14 @@ var update = (function() {
     data.version = "3.9.0";
     delete data.state.header.padding;
     data.state.header.radius = false;
+    data.state.header.border = {
+      top: data.state.header.border.top.width,
+      bottom: data.state.header.border.bottom.width
+    };
     data.state.layout.padding = 4;
     data.state.layout.gutter = 2;
     data.state.background.image.scale = 1;
+    delete data.state.link.area.gap;
     return data;
   };
 

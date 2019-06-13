@@ -1533,36 +1533,20 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-border-top-show"),
-    path: "header.border.top.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-      header.render.border();
-    }
-  }, {
-    element: helper.e(".control-header-border-top-width"),
-    path: "header.border.top.width",
+    element: helper.e(".control-header-border-top"),
+    path: "header.border.top",
     type: "range",
     func: function() {
       header.render.border();
-    }
-  }, {
-    element: helper.e(".control-header-border-bottom-show"),
-    path: "header.border.bottom.show",
-    type: "checkbox",
-    func: function() {
       render();
-      dependents();
-      header.render.border();
     }
   }, {
-    element: helper.e(".control-header-border-bottom-width"),
-    path: "header.border.bottom.width",
+    element: helper.e(".control-header-border-bottom"),
+    path: "header.border.bottom",
     type: "range",
     func: function() {
       header.render.border();
+      render();
     }
   }, {
     element: helper.e(".control-link-area-width"),
@@ -1848,13 +1832,6 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
-    }
-  }, {
-    element: helper.e(".control-link-area-gap"),
-    path: "link.area.gap",
-    type: "range",
-    func: function() {
-      link.render.area.gap();
     }
   }, {
     element: helper.e(".control-link-item-display-alignment-horizontal-left"),
@@ -2284,13 +2261,13 @@ var control = (function() {
         };
       };
       var _border = function() {
-        helper.removeClass(html, "is-header-border-top-show");
-        helper.removeClass(html, "is-header-border-bottom-show");
-        if (state.get().header.border.top.show) {
-          helper.addClass(html, "is-header-border-top-show");
+        helper.removeClass(html, "is-header-border-top");
+        helper.removeClass(html, "is-header-border-bottom");
+        if (state.get().header.border.top > 0) {
+          helper.addClass(html, "is-header-border-top");
         };
-        if (state.get().header.border.bottom.show) {
-          helper.addClass(html, "is-header-border-bottom-show");
+        if (state.get().header.border.bottom > 0) {
+          helper.addClass(html, "is-header-border-bottom");
         };
       };
       _area();
@@ -2553,22 +2530,6 @@ var control = (function() {
           helper.e(".control-header-shade-opacity").disabled = true;
         };
       };
-      var _border = function() {
-        if (state.get().header.border.top.show) {
-          helper.e("[for=control-header-border-top-width]").removeAttribute("disabled");
-          helper.e(".control-header-border-top-width").disabled = false;
-        } else {
-          helper.e("[for=control-header-border-top-width]").setAttribute("disabled", "");
-          helper.e(".control-header-border-top-width").disabled = true;
-        };
-        if (state.get().header.border.bottom.show) {
-          helper.e("[for=control-header-border-bottom-width]").removeAttribute("disabled");
-          helper.e(".control-header-border-bottom-width").disabled = false;
-        } else {
-          helper.e("[for=control-header-border-bottom-width]").setAttribute("disabled", "");
-          helper.e(".control-header-border-bottom-width").disabled = true;
-        };
-      };
       var _search = function() {
         if (state.get().header.search.show) {
           helper.e(".control-header-search-style-label").removeAttribute("disabled");
@@ -2673,7 +2634,6 @@ var control = (function() {
       };
       _clock();
       _date();
-      _border();
       _shade();
       _search();
       _greeting();
@@ -2713,8 +2673,6 @@ var control = (function() {
       helper.e(".control-link-item-url-style-dark").disabled = true;
       helper.e(".control-link-item-url-style-light").disabled = true;
       helper.e(".control-link-item-line-show").disabled = true;
-      helper.e("[for=control-link-area-gap]").setAttribute("disabled", "");
-      helper.e(".control-link-area-gap").disabled = true;
       helper.e(".control-link-item-display-alignment-horizontal-label").setAttribute("disabled", "");
       helper.e(".control-link-item-display-alignment-horizontal-left").disabled = true;
       helper.e(".control-link-item-display-alignment-horizontal-center").disabled = true;
@@ -2745,8 +2703,6 @@ var control = (function() {
         helper.e(".control-link-item-name-show").disabled = false;
         helper.e(".control-link-item-url-show").disabled = false;
         helper.e(".control-link-item-line-show").disabled = false;
-        helper.e("[for=control-link-area-gap]").removeAttribute("disabled");
-        helper.e(".control-link-area-gap").disabled = false;
         helper.e(".control-link-new-tab").disabled = false;
         helper.e(".control-link-style-block").disabled = false;
         helper.e(".control-link-style-list").disabled = false;

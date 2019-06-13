@@ -48,12 +48,12 @@
   width: var(--header-area-width);
 }
 
-.is-header-border-top-show .header-area {
-  border-top: var(--header-border-width-top) solid rgb(var(--theme-accent));
+.is-header-border-top .header-area {
+  border-top: calc(var(--line-width) * var(--header-border-top)) solid rgb(var(--theme-accent));
 }
 
-.is-header-border-bottom-show .header-area {
-  border-bottom: var(--header-border-width-bottom) solid rgb(var(--theme-accent));
+.is-header-border-bottom .header-area {
+  border-bottom: calc(var(--line-width) * var(--header-border-bottom)) solid rgb(var(--theme-accent));
 }
 
 .is-header-radius .header-area {

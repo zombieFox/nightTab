@@ -34,7 +34,7 @@
   grid-template-columns: repeat(auto-fill, minmax(var(--link-item-width), 1fr));
 }
 
-.is-header-border-bottom-show .link-area,
+.is-header-border-bottom .link-area,
 .is-header-shade-style-always .link-area {
   padding-top: calc(var(--gutter) * var(--layout-padding-multiplier));
 }
