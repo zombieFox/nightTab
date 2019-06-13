@@ -110,21 +110,11 @@ var state = (function() {
       shade: {
         show: true,
         style: "scroll",
-        opacity: 0.95,
-      },
-      padding: {
-        top: 0,
-        bottom: 0
+        opacity: 0.95
       },
       border: {
-        top: {
-          show: false,
-          width: 1
-        },
-        bottom: {
-          show: false,
-          width: 1
-        }
+        top: 0,
+        bottom: 0
       },
       greeting: {
         show: false,
@@ -136,11 +126,11 @@ var state = (function() {
         show: false,
         type: "timeanddate",
         size: 1
-      }
+      },
+      radius: false
     },
     link: {
       area: {
-        gap: 2,
         width: 100,
         alignment: {
           horizontal: "center"
@@ -185,6 +175,8 @@ var state = (function() {
         horizontal: "center",
         vertical: "center"
       },
+      padding: 4,
+      gutter: 2,
       width: 80,
       scrollPastEnd: false,
       title: "New Tab"
@@ -209,6 +201,7 @@ var state = (function() {
         show: false,
         url: "../background/gray-steps.jpg",
         blur: 0,
+        scale: 1,
         opacity: 1,
         grayscale: 0,
         accent: 0

@@ -21,7 +21,7 @@ var data = (function() {
       bookmarks: bookmarks.get()
     };
     set(saveName, JSON.stringify(data));
-    console.log("data saved");
+    // console.log("data saved");
   };
 
   var wipe = function() {

@@ -20,25 +20,6 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453101749
   }, {
-    display: "letter",
-    letter: "M",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "Maps",
-    url: "https://www.google.co.uk/maps",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453103560
-  }, {
     display: "icon",
     letter: "AS",
     icon: {
@@ -76,25 +57,6 @@ var bookmarks = (function() {
       }
     },
     timeStamp: 1546453104460
-  }, {
-    display: "letter",
-    letter: "GOT",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "r/gameofthrones/",
-    url: "https://www.reddit.com/r/gameofthrones/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453105844
   }, {
     display: "icon",
     letter: "AZ",

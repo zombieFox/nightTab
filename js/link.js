@@ -523,9 +523,6 @@ var link = (function() {
 
   var render = {
     area: {
-      gap: function() {
-        _renderAreaGap();
-      },
       width: function() {
         _renderAreaWidth();
       }
@@ -552,11 +549,6 @@ var link = (function() {
     tabIndex: function() {
       _renderTabIndex();
     }
-  };
-
-  var _renderAreaGap = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--link-area-gutter-multiplier", state.get().link.area.gap);
   };
 
   var _renderAreaWidth = function() {
@@ -646,7 +638,6 @@ var link = (function() {
   };
 
   var init = function() {
-    render.area.gap();
     render.area.width();
     render.item.all();
     render.item.size();

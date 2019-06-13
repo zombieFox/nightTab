@@ -446,8 +446,22 @@ var update = (function() {
       size: 1
     };
     delete data.state.header.editAdd;
-    delete data.state.header.accent;
     data.state.theme.radius = 0.2;
+    return data;
+  };
+
+  var _update_390 = function(data) {
+    data.version = "3.9.0";
+    delete data.state.header.padding;
+    data.state.header.radius = false;
+    data.state.header.border = {
+      top: data.state.header.border.top.width,
+      bottom: data.state.header.border.bottom.width
+    };
+    data.state.layout.padding = 4;
+    data.state.layout.gutter = 2;
+    data.state.background.image.scale = 1;
+    delete data.state.link.area.gap;
     return data;
   };
 
@@ -568,6 +582,10 @@ var update = (function() {
       if (version.compare(data.version, "3.8.0") == -1) {
         console.log("\t= running update 3.8.0");
         data = _update_380(data);
+      };
+      if (version.compare(data.version, "3.9.0") == -1) {
+        console.log("\t= running update 3.9.0");
+        data = _update_390(data);
       };
     };
     // if no update is needed

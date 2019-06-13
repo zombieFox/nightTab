@@ -1,7 +1,6 @@
 .transitional {
   margin: 0;
   padding: 0;
-  border-radius: var(--theme-radius);
   font-size: 1em;
   font-family: var(--font-fjalla);
   color: rgb(var(--gray-14));
@@ -19,4 +18,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.is-header-item-alignment-horizontal-left .transitional {
+  text-align: left;
+}
+
+.is-header-item-alignment-horizontal-center .transitional {
+  text-align: center;
+}
+
+.is-header-item-alignment-horizontal-right .transitional {
+  text-align: right;
 }

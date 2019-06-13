@@ -72,7 +72,7 @@ var control = (function() {
     }],
     func: function() {
       render();
-      layout.render();
+      layout.render.width();
     }
   }, {
     element: helper.e(".control-layout-alignment-horizontal-left"),
@@ -169,6 +169,98 @@ var control = (function() {
     }],
     func: function() {
       render();
+    }
+  }, {
+    element: helper.e(".control-layout-padding"),
+    path: "layout.padding",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".main"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      layout.render.padding();
+    }
+  }, {
+    element: helper.e(".control-layout-gutter"),
+    path: "layout.gutter",
+    type: "range",
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".main"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".main"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
+    func: function() {
+      layout.render.gutter();
     }
   }, {
     element: helper.e(".control-layout-title"),
@@ -371,12 +463,60 @@ var control = (function() {
     path: "header.greeting.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".greeting"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".greeting"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".greeting"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.greeting.size();
     }
   }, {
     element: helper.e(".control-header-greeting-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".greeting"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.greeting.size", 1);
       header.render.greeting.size();
@@ -413,12 +553,60 @@ var control = (function() {
     path: "header.transitional.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".transitional"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".transitional"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".transitional"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.transitional.size();
     }
   }, {
     element: helper.e(".control-header-transitional-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".transitional"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.transitional.size", 1);
       header.render.transitional.size();
@@ -579,12 +767,60 @@ var control = (function() {
     path: "header.clock.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".clock"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".clock"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".clock"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.clock.size();
     }
   }, {
     element: helper.e(".control-header-clock-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".clock"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.clock.size", 1);
       header.render.clock.size();
@@ -883,12 +1119,60 @@ var control = (function() {
     path: "header.date.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".date"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".date"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".date"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.date.size();
     }
   }, {
     element: helper.e(".control-header-date-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".date"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.date.size", 1);
       header.render.date.size();
@@ -907,6 +1191,15 @@ var control = (function() {
     element: helper.e(".control-header-search-style-auto"),
     path: "header.search.style",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       render();
       dependents();
@@ -916,6 +1209,15 @@ var control = (function() {
     element: helper.e(".control-header-search-style-custom"),
     path: "header.search.style",
     type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       render();
       dependents();
@@ -1051,12 +1353,60 @@ var control = (function() {
     path: "header.search.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".header-search-input"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.search.size();
     }
   }, {
     element: helper.e(".control-header-search-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".header-search-input"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.search.size", 1);
       header.render.search.size();
@@ -1083,12 +1433,60 @@ var control = (function() {
     path: "header.button.size",
     type: "range",
     valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.render({
+          element: helper.e(".control-menu"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.render({
+          element: helper.e(".control-menu"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.destroy();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.render({
+            element: helper.e(".control-menu"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.destroy();
+      }
+    }],
     func: function() {
       header.render.button.size();
     }
   }, {
     element: helper.e(".control-header-button-size-default"),
     type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.render({
+          element: helper.e(".control-menu"),
+          delay: 500
+        });
+      }
+    }],
     func: function() {
       _setValue("header.button.size", 1);
       header.render.button.size();
@@ -1128,128 +1526,27 @@ var control = (function() {
       header.render.opacity();
     }
   }, {
-    element: helper.e(".control-header-padding-top"),
-    path: "header.padding.top",
-    type: "range",
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render({
-            element: helper.e(".header-area"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.destroy();
-      }
-    }],
-    func: function() {
-      header.render.padding();
-    }
-  }, {
-    element: helper.e(".control-header-padding-bottom"),
-    path: "header.padding.bottom",
-    type: "range",
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.render({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.destroy();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render({
-            element: helper.e(".header-area"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.destroy();
-      }
-    }],
-    func: function() {
-      header.render.padding();
-    }
-  }, {
-    element: helper.e(".control-header-border-top-show"),
-    path: "header.border.top.show",
+    element: helper.e(".control-header-radius"),
+    path: "header.radius",
     type: "checkbox",
     func: function() {
       render();
-      dependents();
-      header.render.border();
     }
   }, {
-    element: helper.e(".control-header-border-top-width"),
-    path: "header.border.top.width",
+    element: helper.e(".control-header-border-top"),
+    path: "header.border.top",
     type: "range",
     func: function() {
       header.render.border();
-    }
-  }, {
-    element: helper.e(".control-header-border-bottom-show"),
-    path: "header.border.bottom.show",
-    type: "checkbox",
-    func: function() {
       render();
-      dependents();
-      header.render.border();
     }
   }, {
-    element: helper.e(".control-header-border-bottom-width"),
-    path: "header.border.bottom.width",
+    element: helper.e(".control-header-border-bottom"),
+    path: "header.border.bottom",
     type: "range",
     func: function() {
       header.render.border();
+      render();
     }
   }, {
     element: helper.e(".control-link-area-width"),
@@ -1537,13 +1834,6 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-area-gap"),
-    path: "link.area.gap",
-    type: "range",
-    func: function() {
-      link.render.area.gap();
-    }
-  }, {
     element: helper.e(".control-link-item-display-alignment-horizontal-left"),
     path: "link.item.display.alignment.horizontal",
     type: "radio",
@@ -1769,6 +2059,14 @@ var control = (function() {
     func: function() {
       background.render();
     }
+  }, {
+    element: helper.e(".control-background-image-scale"),
+    path: "background.image.scale",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      background.render();
+    }
   }];
 
   var _setValue = function(path, value) {
@@ -1835,7 +2133,7 @@ var control = (function() {
           path: object.path,
           newValue: newValue
         });
-        // console.log(object.path, helper.getObject({
+        // console.log("state set", object.path, helper.getObject({
         //   object: state.get(),
         //   path: object.path
         // }));
@@ -1956,15 +2254,20 @@ var control = (function() {
           helper.addClass(html, "is-header-shade-show");
           helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
         };
+        if (state.get().header.radius) {
+          helper.addClass(html, "is-header-radius");
+        } else {
+          helper.removeClass(html, "is-header-radius");
+        };
       };
       var _border = function() {
-        helper.removeClass(html, "is-header-border-top-show");
-        helper.removeClass(html, "is-header-border-bottom-show");
-        if (state.get().header.border.top.show) {
-          helper.addClass(html, "is-header-border-top-show");
+        helper.removeClass(html, "is-header-border-top");
+        helper.removeClass(html, "is-header-border-bottom");
+        if (state.get().header.border.top > 0) {
+          helper.addClass(html, "is-header-border-top");
         };
-        if (state.get().header.border.bottom.show) {
-          helper.addClass(html, "is-header-border-bottom-show");
+        if (state.get().header.border.bottom > 0) {
+          helper.addClass(html, "is-header-border-bottom");
         };
       };
       _area();
@@ -2227,22 +2530,6 @@ var control = (function() {
           helper.e(".control-header-shade-opacity").disabled = true;
         };
       };
-      var _border = function() {
-        if (state.get().header.border.top.show) {
-          helper.e("[for=control-header-border-top-width]").removeAttribute("disabled");
-          helper.e(".control-header-border-top-width").disabled = false;
-        } else {
-          helper.e("[for=control-header-border-top-width]").setAttribute("disabled", "");
-          helper.e(".control-header-border-top-width").disabled = true;
-        };
-        if (state.get().header.border.bottom.show) {
-          helper.e("[for=control-header-border-bottom-width]").removeAttribute("disabled");
-          helper.e(".control-header-border-bottom-width").disabled = false;
-        } else {
-          helper.e("[for=control-header-border-bottom-width]").setAttribute("disabled", "");
-          helper.e(".control-header-border-bottom-width").disabled = true;
-        };
-      };
       var _search = function() {
         if (state.get().header.search.show) {
           helper.e(".control-header-search-style-label").removeAttribute("disabled");
@@ -2347,7 +2634,6 @@ var control = (function() {
       };
       _clock();
       _date();
-      _border();
       _shade();
       _search();
       _greeting();
@@ -2387,8 +2673,6 @@ var control = (function() {
       helper.e(".control-link-item-url-style-dark").disabled = true;
       helper.e(".control-link-item-url-style-light").disabled = true;
       helper.e(".control-link-item-line-show").disabled = true;
-      helper.e("[for=control-link-area-gap]").setAttribute("disabled", "");
-      helper.e(".control-link-area-gap").disabled = true;
       helper.e(".control-link-item-display-alignment-horizontal-label").setAttribute("disabled", "");
       helper.e(".control-link-item-display-alignment-horizontal-left").disabled = true;
       helper.e(".control-link-item-display-alignment-horizontal-center").disabled = true;
@@ -2419,8 +2703,6 @@ var control = (function() {
         helper.e(".control-link-item-name-show").disabled = false;
         helper.e(".control-link-item-url-show").disabled = false;
         helper.e(".control-link-item-line-show").disabled = false;
-        helper.e("[for=control-link-area-gap]").removeAttribute("disabled");
-        helper.e(".control-link-area-gap").disabled = false;
         helper.e(".control-link-new-tab").disabled = false;
         helper.e(".control-link-style-block").disabled = false;
         helper.e(".control-link-style-list").disabled = false;
@@ -2486,6 +2768,8 @@ var control = (function() {
         helper.e(".control-background-image-grayscale").disabled = false;
         helper.e("[for=control-background-image-accent]").removeAttribute("disabled");
         helper.e(".control-background-image-accent").disabled = false;
+        helper.e("[for=control-background-image-scale]").removeAttribute("disabled");
+        helper.e(".control-background-image-scale").disabled = false;
       } else {
         helper.e("[for=control-background-image-url]").setAttribute("disabled", "");
         helper.e(".control-background-image-url").disabled = true;
@@ -2497,6 +2781,8 @@ var control = (function() {
         helper.e(".control-background-image-grayscale").disabled = true;
         helper.e("[for=control-background-image-accent]").setAttribute("disabled", "");
         helper.e(".control-background-image-accent").disabled = true;
+        helper.e("[for=control-background-image-scale]").setAttribute("disabled", "");
+        helper.e(".control-background-image-scale").disabled = true;
       };
     };
     _header();
