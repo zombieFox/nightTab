@@ -143,14 +143,14 @@ var state = (function() {
           show: true,
           size: 2,
           alignment: {
-            horizontal: "right",
-            vertical: "bottom"
+            horizontal: "center",
+            vertical: "center"
           },
           letter: {
-            size: 2
+            size: 3
           },
           icon: {
-            size: 2
+            size: 3
           }
         },
         name: {

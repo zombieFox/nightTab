@@ -1774,7 +1774,7 @@ var control = (function() {
     element: helper.e(".control-link-item-display-letter-size-default"),
     type: "button",
     func: function() {
-      _setValue("link.item.display.letter.size", 2);
+      _setValue("link.item.display.letter.size", 3);
       link.render.item.display.letter();
       update();
     }
@@ -1790,7 +1790,7 @@ var control = (function() {
     element: helper.e(".control-link-item-display-icon-size-default"),
     type: "button",
     func: function() {
-      _setValue("link.item.display.icon.size", 2);
+      _setValue("link.item.display.icon.size", 3);
       link.render.item.display.icon();
       update();
     }
