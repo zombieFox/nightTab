@@ -4,8 +4,17 @@ var link = (function() {
 
   var _returnToPreviousFocusLink = function() {
     if (_previousFocusLink != null) {
-      helper.eA(".link-panel-back")[_previousFocusLink].querySelectorAll(".link-control-item")[0].focus();
-      _previousFocusLink = null
+      var linkPanelFront = helper.eA(".link-panel-front");
+      if (linkPanelFront.length > 0) {
+        if (_previousFocusLink >= 0) {
+          linkPanelFront[_previousFocusLink].focus();
+        } else {
+          linkPanelFront[0].focus();
+        };
+      } else {
+        helper.e("body").focus();
+      };
+      _previousFocusLink = null;
     };
   };
 
@@ -129,11 +138,26 @@ var link = (function() {
   };
 
   var remove = function(bookmarkData) {
-    bookmarks.remove(bookmarkData);
-    _checkCount();
-    data.save();
-    clear();
-    render.item.all();
+    modal.render({
+      heading: "Remove " + bookmarkData.name + " bookmark",
+      content: "Are you sure you want to remove this bookmark? This can not be undone.",
+      successAction: function() {
+        _previousFocusLink = _previousFocusLink - 1;
+        bookmarks.remove(bookmarkData);
+        _checkCount();
+        data.save();
+        clear();
+        render.item.all();
+        control.dependents();
+        control.render();
+        _returnToPreviousFocusLink();
+      },
+      cancelAction: function() {
+        _returnToPreviousFocusLink();
+      },
+      actionText: "Remove",
+      size: "small"
+    });
   };
 
   var _checkCount = function() {
@@ -438,18 +462,8 @@ var link = (function() {
       edit(data);
     }, false);
     linkRemove.addEventListener("click", function() {
-      modal.render({
-        heading: "Remove " + data.name + " bookmark",
-        content: "Are you sure you want to remove this bookmark? This can not be undone.",
-        successAction: function() {
-          remove(data);
-          control.dependents();
-          control.render();
-        },
-        actionText: "Remove",
-        cancelText: "Cancel",
-        size: "small"
-      });
+      _previousFocusLink = index;
+      remove(data);
     }, false);
 
     return linkItem;
