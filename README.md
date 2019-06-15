@@ -4,12 +4,24 @@ New-tab-page/Start-page for all browsers
 ## [See it in action](https://zombiefox.github.io/nightTab/)
 
 ### Features
-- Add and remove bookmarks
-- Filter bookmarks with keyword
-- Clock for awesome clocky action!
-- Date too because time is difficult
-- Search bar to find bookmarks
-- Search bar again but this time with options to customise the search engine
+- Header
+  - Greeting
+    - Name, Style, Size
+  - Clock
+    - Hours, Minutes, Seconds, Separator, Meridiem, Hour/24, Size
+  - Date
+    - Day, Date, Month, Year, Separator, D/M or M/D format, Size
+  - Search
+    - Filter, Search engine, Size
+  - Add and remove, Accent
+- Bookmarks
+  - Letter or icon, Names, URLs, Open in new tab, Size
+- Layout
+  - Vertical and horizontal alignment, Padding, Gutter, Width, Title
+- Theme
+  - Accent colour, Random accent colour, Light/Dark theme, Radius
+- Background
+  - Image, Blur, Scale, Opacity, Grayscale, Accent colour
 - Saves data to local storage
 - Keyboard shortcuts
   - <kbd>esc</kbd> *to dismiss most things*
@@ -19,29 +31,11 @@ New-tab-page/Start-page for all browsers
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>d</kbd> *to toggle dark and light mode*
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>r</kbd> *random theme if option is turned on in* `menu > layout > random Accent colour`
 - Responsive design
-- Customise Accent colour!
-- Can be installed on Chrome as an extension
-
-All options available:
-- Header
-  - Clock, hours, minutes, seconds, 24 hours, separators
-  - Date, day, month, year, separators, text length
-  - Search, bar length, search engine
-  - Show/hide Edit/Add and Accent buttons
-  - Header alignment
-- Bookmarks
-  - Open in a new tab
-  - Block and List style
-  - Sort by Name, Letter or order added
-- Layout
-  - Fluid, Wide or Thin
-  - Scroll past end of page
-  - Random theme colour
 
 ---
-[![nightTab Demo](screenshots/screenshot-001.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/screenshot-002.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/screenshot-003.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/screenshot-004.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/screenshot-005.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/screenshot-006.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/demo-001.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/demo-002.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/demo-003.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/demo-004.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/demo-005.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/demo-006.gif)](https://zombiefox.github.io/nightTab/)
