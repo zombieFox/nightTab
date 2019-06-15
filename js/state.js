@@ -185,8 +185,8 @@ var state = (function() {
       accent: {
         current: {
           r: 0,
-          g: 130,
-          b: 250,
+          g: 80,
+          b: 255
         },
         random: {
           active: false,
