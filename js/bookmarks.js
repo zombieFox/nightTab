@@ -58,7 +58,7 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453104460
   }, {
-    display: "icon",
+    display: "letter",
     letter: "AZ",
     icon: {
       name: "amazon",
@@ -96,7 +96,7 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453108071
   }, {
-    display: "icon",
+    display: "letter",
     letter: "GIT",
     icon: {
       name: "github",
@@ -115,7 +115,7 @@ var bookmarks = (function() {
     },
     timeStamp: 1546453108926
   }, {
-    display: "icon",
+    display: "letter",
     letter: "GM",
     icon: {
       name: "envelope",
