@@ -49,15 +49,15 @@
   z-index: 1;
 }
 
-.link-item:focus-within,
-.link-item:focus,
-.link-item:hover {
+.is-link-item-hover-scale .link-item:focus-within,
+.is-link-item-hover-scale .link-item:focus,
+.is-link-item-hover-scale .link-item:hover {
   transform: scale(1.05);
   z-index: 2;
   outline: 0;
 }
 
-.link-item:active {
+.is-link-item-hover-scale .link-item:active {
   transform: scale(1.04);
   transition: none;
 }
@@ -75,7 +75,7 @@
   transition: background-color var(--animation-speed-fast) ease-in-out, height var(--animation-speed-fast) ease-in-out, box-shadow var(--animation-speed-fast) ease-in-out;
 }
 
-.is-link-item-line-show .link-panel-front {
+.is-link-item-line .link-panel-front {
   height: calc(100% - var(--line-width));
 }
 
@@ -175,14 +175,14 @@
   transition: height var(--animation-speed-fast) ease-in-out, top var(--animation-speed-fast) ease-in-out;
 }
 
-.is-link-item-line-show .link-panel-back {
+.is-link-item-line .link-panel-back {
   height: calc(100% - var(--line-width));
 }
 
 .is-link-edit .link-panel-back,
-.is-link-url-show:not(.is-link-item-line-show) .link-item:focus .link-panel-back,
-.is-link-url-show:not(.is-link-item-line-show) .link-item:focus-within .link-panel-back,
-.is-link-url-show:not(.is-link-item-line-show) .link-item:hover .link-panel-back {
+.is-link-url-show:not(.is-link-item-line) .link-item:focus .link-panel-back,
+.is-link-url-show:not(.is-link-item-line) .link-item:focus-within .link-panel-back,
+.is-link-url-show:not(.is-link-item-line) .link-item:hover .link-panel-back {
   top: 0;
   height: 100%;
 }

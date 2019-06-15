@@ -471,6 +471,13 @@ var update = (function() {
     return data;
   };
 
+  var _update_3110 = function(data) {
+    data.version = "3.11.0";
+    data.state.link.item.line = data.state.link.item.line.show;
+    data.state.link.item.hoverScale = true;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -596,6 +603,10 @@ var update = (function() {
       if (version.compare(data.version, "3.10.0") == -1) {
         console.log("\t= running update 3.10.0");
         data = _update_3100(data);
+      };
+      if (version.compare(data.version, "3.11.0") == -1) {
+        console.log("\t= running update 3.11.0");
+        data = _update_3110(data);
       };
     };
     // if no update is needed

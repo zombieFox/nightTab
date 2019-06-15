@@ -138,7 +138,6 @@ var state = (function() {
         }
       },
       item: {
-        size: 1,
         display: {
           show: true,
           size: 2,
@@ -161,9 +160,9 @@ var state = (function() {
           show: true,
           style: "dark"
         },
-        line: {
-          show: true
-        }
+        size: 1,
+        line: true,
+        hoverScale: true
       },
       show: true,
       newTab: false,
