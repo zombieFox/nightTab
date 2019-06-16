@@ -1,9 +1,8 @@
 # NIGHTTAB
 A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab -- a custom start page.
 
-[![nightTab Demo](banners/banner-1400-560.png)](https://zombiefox.github.io/nightTab/)
+![nightTab Demo](banners/banner-1400-560.png)
 
-## [See it in action](https://zombiefox.github.io/nightTab/)
 ### [Install Chrome Extension](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki)
 ### [Install Firefox Add On](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/)
 
@@ -37,9 +36,9 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 - Responsive design
 
 ---
-[![nightTab Demo](screenshots/demo-001.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/demo-002.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/demo-003.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/demo-004.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/demo-005.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/demo-006.gif)](https://zombiefox.github.io/nightTab/)
+![nightTab Demo](screenshots/demo-001.gif)
+![nightTab Demo](screenshots/demo-002.gif)
+![nightTab Demo](screenshots/demo-003.gif)
+![nightTab Demo](screenshots/demo-004.gif)
+![nightTab Demo](screenshots/demo-005.gif)
+![nightTab Demo](screenshots/demo-006.gif)
