@@ -3,8 +3,12 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 
 ![nightTab Demo](banners/banner-1400-560.png)
 
-### [Install Chrome Extension](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki)
-### [Install Firefox Add On](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/)
+---
+
+### [Chrome Extension](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki)
+### [Firefox Add On](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/)
+
+---
 
 ### Features
 - Header
