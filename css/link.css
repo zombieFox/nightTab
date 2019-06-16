@@ -49,12 +49,17 @@
   z-index: 1;
 }
 
+.link-item:focus-within,
+.link-item:focus,
+.link-item:hover {
+  z-index: 2;
+  outline: 0;
+}
+
 .is-link-item-hover-scale .link-item:focus-within,
 .is-link-item-hover-scale .link-item:focus,
 .is-link-item-hover-scale .link-item:hover {
   transform: scale(1.05);
-  z-index: 2;
-  outline: 0;
 }
 
 .is-link-item-hover-scale .link-item:active {
