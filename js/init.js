@@ -1,10 +1,19 @@
 // log version
-if ("runtime" in chrome) {
-  console.log("nightTab version", version.get());
-} else {
+var demoMessage = function() {
   console.log("nightTab running in demo mode");
   console.log("all bookmarks or preference changes will not persist in demo mode");
 };
+
+if ("runtime" in chrome) {
+  if ("getManifest" in chrome.runtime) {
+    console.log("nightTab version", version.get());
+  } else {
+    demoMessage();
+  };
+} else {
+  demoMessage();
+};
+
 data.init();
 state.init();
 bookmarks.init();

@@ -38,12 +38,14 @@ var data = (function() {
     var data = load();
     if (data) {
       if ("runtime" in chrome) {
-        if (!("version" in data) || data.version != version.get()) {
-          console.log("data version " + data.version + " found less than current");
-          data = update.run(data);
-          set(saveName, JSON.stringify(data));
-        } else {
-          console.log("data version " + version.get() + " no need to run update");
+        if ("getManifest" in chrome.runtime) {
+          if (!("version" in data) || data.version != version.get()) {
+            console.log("data version " + data.version + " found less than current");
+            data = update.run(data);
+            set(saveName, JSON.stringify(data));
+          } else {
+            console.log("data version " + version.get() + " no need to run update");
+          };
         };
       };
     };
