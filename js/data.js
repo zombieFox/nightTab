@@ -15,15 +15,16 @@ var data = (function() {
   };
 
   var save = function() {
-    var data = {
-      version: version.get(),
-      state: state.get(),
-      bookmarks: bookmarks.get()
-    };
     if ("runtime" in chrome) {
-      set(saveName, JSON.stringify(data));
+      if ("getManifest" in chrome.runtime) {
+        var data = {
+          version: version.get(),
+          state: state.get(),
+          bookmarks: bookmarks.get()
+        };
+        set(saveName, JSON.stringify(data));
+      };
     };
-    // console.log("data saved");
   };
 
   var wipe = function() {
