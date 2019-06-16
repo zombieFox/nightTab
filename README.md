@@ -1,9 +1,11 @@
-# nightTab
+# NIGHTTAB
 A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab -- a custom start page.
 
 [![nightTab Demo](banners/banner-1400-560.png)](https://zombiefox.github.io/nightTab/)
 
 ## [See it in action](https://zombiefox.github.io/nightTab/)
+### [Install Chrome Extension](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki)
+### [Install Firefox Add On](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/)
 
 ### Features
 - Header
