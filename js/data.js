@@ -20,7 +20,9 @@ var data = (function() {
       state: state.get(),
       bookmarks: bookmarks.get()
     };
-    set(saveName, JSON.stringify(data));
+    if ("runtime" in chrome) {
+      set(saveName, JSON.stringify(data));
+    };
     // console.log("data saved");
   };
 
@@ -32,22 +34,23 @@ var data = (function() {
     return JSON.parse(get(saveName));
   };
 
-  var restore = function(data) {
+  var restore = function() {
+    var data = load();
     if (data) {
-      if (!("version" in data) || data.version != version.get()) {
-        console.log("data version " + data.version + " found less than current");
-        data = update.run(data);
-        set(saveName, JSON.stringify(data));
-      } else {
-        console.log("data version " + version.get() + " no need to run update");
+      if ("runtime" in chrome) {
+        if (!("version" in data) || data.version != version.get()) {
+          console.log("data version " + data.version + " found less than current");
+          data = update.run(data);
+          set(saveName, JSON.stringify(data));
+        } else {
+          console.log("data version " + version.get() + " no need to run update");
+        };
       };
-    } else {
-      console.log("no data found to load");
     };
   };
 
   var init = function() {
-    restore(load());
+    restore();
   };
 
   return {

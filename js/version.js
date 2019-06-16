@@ -18,7 +18,7 @@ var version = (function() {
       if (isNaN(na) && !isNaN(nb)) {
         return -1;
       };
-    }
+    };
     return 0;
   };
 
