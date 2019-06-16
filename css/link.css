@@ -97,7 +97,7 @@
   text-decoration: none;
   outline: none;
   background-color: rgb(var(--gray-03));
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-large);
 }
 
 .is-link-style-block .link-panel-front {
@@ -395,7 +395,7 @@
 .is-link-edit .link-item:hover .link-panel-front,
 .is-link-edit .link-item:focus .link-panel-front {
   height: calc(100% - var(--link-item-edit-height));
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-medium);
 }
 
 .is-link-edit.is-link-url-show .link-item:focus .link-panel-front,
