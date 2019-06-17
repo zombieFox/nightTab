@@ -5,8 +5,6 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 
 [See the demo in action](https://zombiefox.github.io/nightTab/)
 
-*All bookmarks or preference changes will not persist in demo mode.*
-
 ---
 
 ### [Chrome Extension](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki)

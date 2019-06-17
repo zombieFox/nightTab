@@ -1,5 +1,7 @@
 var version = (function() {
 
+  var current = "3.14.0";
+
   var compare = function(a, b) {
     var pa = a.split(".");
     var pb = b.split(".");
@@ -23,7 +25,8 @@ var version = (function() {
   };
 
   var get = function() {
-    return chrome.runtime.getManifest().version;
+    // return chrome.runtime.getManifest().version;
+    return current;
   };
 
   // exposed methods

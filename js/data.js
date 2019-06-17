@@ -15,16 +15,12 @@ var data = (function() {
   };
 
   var save = function() {
-    if ("runtime" in chrome) {
-      if ("getManifest" in chrome.runtime) {
-        var data = {
-          version: version.get(),
-          state: state.get(),
-          bookmarks: bookmarks.get()
-        };
-        set(saveName, JSON.stringify(data));
-      };
+    var data = {
+      version: version.get(),
+      state: state.get(),
+      bookmarks: bookmarks.get()
     };
+    set(saveName, JSON.stringify(data));
   };
 
   var wipe = function() {
@@ -38,17 +34,15 @@ var data = (function() {
   var restore = function() {
     var data = load();
     if (data) {
-      if ("runtime" in chrome) {
-        if ("getManifest" in chrome.runtime) {
-          if (!("version" in data) || data.version != version.get()) {
-            console.log("data version " + data.version + " found less than current");
-            data = update.run(data);
-            set(saveName, JSON.stringify(data));
-          } else {
-            console.log("data version " + version.get() + " no need to run update");
-          };
-        };
+      if (!("version" in data) || data.version != version.get()) {
+        console.log("data version " + data.version + " found less than current");
+        data = update.run(data);
+        set(saveName, JSON.stringify(data));
+      } else {
+        console.log("data version " + version.get() + " no need to run update");
       };
+    } else {
+      console.log("no data found to load");
     };
   };
 
