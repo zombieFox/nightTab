@@ -24,6 +24,7 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
     - Filter, Search engine, Size
   - Add and remove, Accent
 - Bookmarks
+  - Drag and drop sort, sort by Letter, Icon, Name
   - Letter or icon, Names, URLs, Open in new tab, Size
 - Layout
   - Vertical and horizontal alignment, Padding, Gutter, Width, Title
@@ -48,3 +49,4 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 [![nightTab Demo](screenshots/demo-004.gif)](https://zombiefox.github.io/nightTab/)
 [![nightTab Demo](screenshots/demo-005.gif)](https://zombiefox.github.io/nightTab/)
 [![nightTab Demo](screenshots/demo-006.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](screenshots/demo-007.gif)](https://zombiefox.github.io/nightTab/)
