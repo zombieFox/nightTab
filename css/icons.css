@@ -123,3 +123,7 @@
 .icon-refresh:before {
   content: "\e900";
 }
+
+.icon-reorder:before {
+  content: "\e901";
+}

@@ -3,6 +3,7 @@ var link = (function() {
   var bind = function() {
     sortable(".link-area", {
       items: ".link-item",
+      handle: ".link-control-item-handle",
       placeholder: helper.node("div|class:link-item-placeholder")
     });
     sortable(".link-area")[0].addEventListener("sortupdate", function(event) {
@@ -85,6 +86,7 @@ var link = (function() {
         control.dependents();
         control.render();
         resetStagedBookmarkData();
+        sortable(".link-area");
       },
       cancelAction: function() {
         resetStagedBookmarkData();
@@ -137,6 +139,7 @@ var link = (function() {
         render.tabIndex();
         _returnToPreviousFocusLink();
         resetStagedBookmarkData();
+        sortable(".link-area");
       },
       cancelAction: function() {
         _returnToPreviousFocusLink();
@@ -162,6 +165,7 @@ var link = (function() {
         control.dependents();
         control.render();
         _returnToPreviousFocusLink();
+        sortable(".link-area");
       },
       cancelAction: function() {
         _returnToPreviousFocusLink();
@@ -417,14 +421,37 @@ var link = (function() {
         value: "link-control"
       }]
     });
+    var linkHandle = helper.makeNode({
+      tag: "button",
+      attr: [{
+        key: "class",
+        value: "button button-small link-control-item link-control-item-handle"
+      }, {
+        key: "tabindex",
+        value: -1
+      }, {
+        key: "title",
+        value: "Drag and drop to reorder"
+      }]
+    });
+    var linkHandleIcon = helper.makeNode({
+      tag: "span",
+      attr: [{
+        key: "class",
+        value: "button-icon icon-reorder"
+      }]
+    });
     var linkEdit = helper.makeNode({
       tag: "button",
       attr: [{
         key: "class",
-        value: "button button-small link-control-item"
+        value: "button button-small link-control-item link-control-item-edit"
       }, {
         key: "tabindex",
         value: -1
+      }, {
+        key: "title",
+        value: "Edit this bookmark"
       }]
     });
     var linkEditIcon = helper.makeNode({
@@ -438,10 +465,13 @@ var link = (function() {
       tag: "button",
       attr: [{
         key: "class",
-        value: "button button-small link-control-item"
+        value: "button button-small link-control-item link-control-item-remove"
       }, {
         key: "tabindex",
         value: -1
+      }, {
+        key: "title",
+        value: "Remove this bookmark"
       }]
     });
     var linkRemoveIcon = helper.makeNode({
@@ -458,9 +488,11 @@ var link = (function() {
     };
     linkPanelFront.appendChild(linkDisplay);
     linkPanelFront.appendChild(linkName);
+    linkHandle.appendChild(linkHandleIcon);
+    linkControl.appendChild(linkHandle);
     linkEdit.appendChild(linkEditIcon);
-    linkRemove.appendChild(linkRemoveIcon);
     linkControl.appendChild(linkEdit);
+    linkRemove.appendChild(linkRemoveIcon);
     linkControl.appendChild(linkRemove);
     linkUrl.appendChild(linkUrlText);
     linkPanelBack.appendChild(linkUrl);
