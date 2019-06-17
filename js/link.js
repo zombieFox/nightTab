@@ -422,7 +422,7 @@ var link = (function() {
       }]
     });
     var linkHandle = helper.makeNode({
-      tag: "button",
+      tag: "div",
       attr: [{
         key: "class",
         value: "button button-small link-control-item link-control-item-handle"
