@@ -183,27 +183,10 @@ var bookmarks = (function() {
       };
       return found;
     };
-    var _allBookmarks = function() {
-      var action = {
-        none: function(array) {
-          return helper.sortObject(array, "timeStamp");
-        },
-        name: function(array) {
-          return helper.sortObject(array, "name");
-        },
-        letter: function(array) {
-          return helper.sortObject(array, "letter");
-        },
-        icon: function(array) {
-          return helper.sortObject(array, "icon.name");
-        }
-      };
-      return action[state.get().link.sort](all);
-    };
     if (data && typeof data.timeStamp == "number") {
       return _singleBookmark();
     } else {
-      return _allBookmarks();
+      return all;
     };
   };
 
@@ -233,6 +216,25 @@ var bookmarks = (function() {
     };
   };
 
+  var sort = function(by) {
+    var action = {
+      name: function(array) {
+        return helper.sortObject(array, "name");
+      },
+      letter: function(array) {
+        return helper.sortObject(array, "letter");
+      },
+      icon: function(array) {
+        return helper.sortObject(array, "icon.name");
+      }
+    };
+    all = action[by](all);
+  };
+
+  var move = function(origin, destination) {
+    all = helper.moveArrayItem(all, origin, destination);
+  };
+
   var init = function() {
     if (data.load()) {
       restore(data.load());
@@ -246,6 +248,8 @@ var bookmarks = (function() {
     get: get,
     add: add,
     edit: edit,
+    sort: sort,
+    move: move,
     remove: remove,
     restore: restore
   };

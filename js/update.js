@@ -478,6 +478,12 @@ var update = (function() {
     return data;
   };
 
+  var _update_3150 = function(data) {
+    data.version = "3.15.0";
+    delete data.state.link.sort;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -607,6 +613,10 @@ var update = (function() {
       if (version.compare(data.version, "3.11.0") == -1) {
         console.log("\t= running update 3.11.0");
         data = _update_3110(data);
+      };
+      if (version.compare(data.version, "3.15.0") == -1) {
+        console.log("\t= running update 3.15.0");
+        data = _update_3150(data);
       };
     };
     // if no update is needed

@@ -12,7 +12,6 @@ transitional.init();
 date.init();
 clock.init();
 keyboard.init();
-tip.init();
 layout.init();
 background.init();
 search.init();

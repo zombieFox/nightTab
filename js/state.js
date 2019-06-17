@@ -167,8 +167,7 @@ var state = (function() {
       show: true,
       newTab: false,
       edit: false,
-      style: "block",
-      sort: "none"
+      style: "block"
     },
     layout: {
       alignment: {

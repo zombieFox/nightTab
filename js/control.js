@@ -1919,34 +1919,26 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-sort-none"),
-    path: "link.sort",
-    type: "radio",
-    func: function() {
-      link.clear();
-      link.render.item.all();
-    }
-  }, {
     element: helper.e(".control-link-sort-letter"),
-    path: "link.sort",
-    type: "radio",
+    type: "button",
     func: function() {
+      bookmarks.sort("letter");
       link.clear();
       link.render.item.all();
     }
   }, {
     element: helper.e(".control-link-sort-icon"),
-    path: "link.sort",
-    type: "radio",
+    type: "button",
     func: function() {
+      bookmarks.sort("icon");
       link.clear();
       link.render.item.all();
     }
   }, {
     element: helper.e(".control-link-sort-name"),
-    path: "link.sort",
-    type: "radio",
+    type: "button",
     func: function() {
+      bookmarks.sort("name");
       link.clear();
       link.render.item.all();
     }
@@ -2712,7 +2704,6 @@ var control = (function() {
       helper.e(".control-link-new-tab").disabled = true;
       helper.e(".control-link-style-block").disabled = true;
       helper.e(".control-link-style-list").disabled = true;
-      helper.e(".control-link-sort-none").disabled = true;
       helper.e(".control-link-sort-name").disabled = true;
       helper.e(".control-link-sort-letter").disabled = true;
       helper.e(".control-link-sort-icon").disabled = true;
@@ -2735,7 +2726,6 @@ var control = (function() {
         helper.e(".control-link-new-tab").disabled = false;
         helper.e(".control-link-style-block").disabled = false;
         helper.e(".control-link-style-list").disabled = false;
-        helper.e(".control-link-sort-none").disabled = false;
         helper.e(".control-link-sort-name").disabled = false;
         helper.e(".control-link-sort-letter").disabled = false;
         helper.e(".control-link-sort-icon").disabled = false;

@@ -875,21 +875,14 @@
               <h1 class="menu-item-header-text">Sort</h1>
             </div>
             <div class="menu-item-form">
-              <div class="input-wrap">
-                <input id="control-link-sort-none" class="control-link-sort-none" type="radio" name="control-link-sort" value="none" tabindex="1">
-                <label for="control-link-sort-none">None (as added)</label>
+              <div class="button-wrap">
+                <button class="control-link-sort-letter button mb-0" tabindex="1">By Letter</button>
               </div>
-              <div class="input-wrap">
-                <input id="control-link-sort-letter" class="control-link-sort-letter" type="radio" name="control-link-sort" value="letter" tabindex="1">
-                <label for="control-link-sort-letter">Letter</label>
+              <div class="button-wrap">
+                <button class="control-link-sort-icon button mb-0" tabindex="1">By Icon</button>
               </div>
-              <div class="input-wrap">
-                <input id="control-link-sort-icon" class="control-link-sort-icon" type="radio" name="control-link-sort" value="icon" tabindex="1">
-                <label for="control-link-sort-icon">Icon</label>
-              </div>
-              <div class="input-wrap">
-                <input id="control-link-sort-name" class="control-link-sort-name" type="radio" name="control-link-sort" value="name" tabindex="1">
-                <label for="control-link-sort-name">Name</label>
+              <div class="button-wrap">
+                <button class="control-link-sort-name button mb-0" tabindex="1">By Name</button>
               </div>
             </div>
           </div>
@@ -1010,6 +1003,9 @@
 
 </body>
 
+<!-- vendor -->
+<script src="js/vendor/html5sortable.min.js"></script>
+<!-- nightTab -->
 <script src="js/helper.js"></script>
 <script src="js/data.js"></script>
 <script src="js/fontawesome.js"></script>

@@ -1,5 +1,16 @@
 var link = (function() {
 
+  var bind = function() {
+    sortable(".link-area", {
+      items: ".link-item",
+      placeholder: helper.node("div|class:link-item-placeholder")
+    });
+    sortable(".link-area")[0].addEventListener("sortupdate", function(event) {
+      bookmarks.move(event.detail.origin.index, event.detail.destination.index);
+      data.save();
+    });
+  };
+
   var _previousFocusLink = null;
 
   var _returnToPreviousFocusLink = function() {
@@ -658,6 +669,7 @@ var link = (function() {
     render.item.display.letter();
     render.item.display.icon();
     render.item.name();
+    bind();
   };
 
   // exposed methods

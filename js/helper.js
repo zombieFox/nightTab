@@ -267,7 +267,7 @@ var helper = (function() {
     return element;
   };
 
-  function _makeAddress(path) {
+  var _makeAddress = function(path) {
     var array;
     if (path.indexOf("[") != -1 && path.indexOf("]") != -1) {
       array = path.split(".").join(",").split("[").join(",").split("]").join(",").split(",");
@@ -285,7 +285,7 @@ var helper = (function() {
     return array;
   };
 
-  function setObject(override) {
+  var setObject = function(override) {
     var options = {
       path: null,
       object: null,
@@ -321,7 +321,7 @@ var helper = (function() {
     };
   };
 
-  function getObject(override) {
+  var getObject = function(override) {
     var options = {
       object: null,
       path: null
@@ -360,7 +360,7 @@ var helper = (function() {
     };
   };
 
-  function makeObject(string) {
+  var makeObject = function(string) {
     var _stringOrBooleanOrNumber = function(stringToTest) {
       if (stringToTest == "true") {
         return true;
@@ -417,6 +417,17 @@ var helper = (function() {
     } else {
       return false;
     };
+  };
+
+  var moveArrayItem = function(array, oldIndex, newIndex) {
+    if (newIndex >= array.length) {
+      var k = newIndex - array.length + 1;
+      while (k--) {
+        array.push(undefined);
+      };
+    };
+    array.splice(newIndex, 0, array.splice(oldIndex, 1)[0]);
+    return array;
   };
 
   var allEqual = function(array) {
@@ -564,6 +575,7 @@ var helper = (function() {
     setObject: setObject,
     getObject: getObject,
     makeObject: makeObject,
+    moveArrayItem: moveArrayItem,
     randomNumber: randomNumber,
     toWords: toWords,
     ordinalWords: ordinalWords,
