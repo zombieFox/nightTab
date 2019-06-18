@@ -8,6 +8,7 @@ var search = (function() {
       _searchClear();
       link.clear();
       link.render.item.all();
+      sortable(".link-area");
     }, false);
     searchClear.addEventListener("click", function() {
       _toggle(this);
@@ -83,6 +84,7 @@ var search = (function() {
     searchInput.focus();
     link.clear();
     link.render.item.all();
+    sortable(".link-area");
   };
 
   var _focus = function() {

@@ -1903,6 +1903,7 @@ var control = (function() {
     func: function() {
       link.clear();
       link.render.item.all();
+      sortable(".link-area");
     }
   }, {
     element: helper.e(".control-link-style-block"),
@@ -1925,6 +1926,7 @@ var control = (function() {
       bookmarks.sort("letter");
       link.clear();
       link.render.item.all();
+      sortable(".link-area");
     }
   }, {
     element: helper.e(".control-link-sort-icon"),
@@ -1933,6 +1935,7 @@ var control = (function() {
       bookmarks.sort("icon");
       link.clear();
       link.render.item.all();
+      sortable(".link-area");
     }
   }, {
     element: helper.e(".control-link-sort-name"),
@@ -1941,6 +1944,7 @@ var control = (function() {
       bookmarks.sort("name");
       link.clear();
       link.render.item.all();
+      sortable(".link-area");
     }
   }, {
     element: helper.e(".control-theme-style-dark"),
