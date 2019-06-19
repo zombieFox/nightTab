@@ -2084,6 +2084,25 @@ var control = (function() {
     func: function() {
       background.render();
     }
+  }, {
+    element: helper.e(".control-data-import"),
+    type: "file",
+    func: function() {
+      data.importData();
+    }
+  }, {
+    element: helper.e(".control-data-export"),
+    type: "a",
+    func: function() {
+      data.exportData();
+    }
+  }, {
+    element: helper.e(".control-data-clear"),
+    type: "a",
+    func: function() {
+      menu.close();
+      data.clearData();
+    }
   }];
 
   var _setValue = function(path, value) {
@@ -2101,13 +2120,15 @@ var control = (function() {
 
   var bind = function() {
     var eventType = {
+      a: "click",
       button: "click",
       checkbox: "change",
       radio: "change",
       text: "input",
       number: "input",
       range: "input",
-      color: "change"
+      color: "change",
+      file: "change"
     };
     var valueType = {
       checkbox: function(object) {
@@ -2158,13 +2179,18 @@ var control = (function() {
     };
     var bindControl = function(object) {
       var action = {
-        input: function(object, event) {
-          changeValue(object);
+        a: function(object, event) {
           if (object.func) {
             object.func();
           };
         },
         button: function(object, event) {
+          if (object.func) {
+            object.func();
+          };
+        },
+        input: function(object, event) {
+          changeValue(object);
           if (object.func) {
             object.func();
           };
@@ -2868,8 +2894,9 @@ var control = (function() {
         }));
       }
     };
+    var supportedType = ["checkbox", "radio", "text", "number", "range", "color"];
     _allControl.forEach(function(arrayItem, index) {
-      if (arrayItem.element.tagName.toLowerCase() == "input") {
+      if (supportedType.includes(arrayItem.element.type)) {
         setValue[arrayItem.type](arrayItem);
       };
     });

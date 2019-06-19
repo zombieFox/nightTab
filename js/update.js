@@ -554,6 +554,12 @@ var update = (function() {
     return data;
   };
 
+  var _update_3180 = function(data) {
+    data.version = "3.18.0";
+    data.nighttab = true;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -687,6 +693,10 @@ var update = (function() {
       if (version.compare(data.version, "3.15.0") == -1) {
         console.log("\t= running update 3.15.0");
         data = _update_3150(data);
+      };
+      if (version.compare(data.version, "3.18.0") == -1) {
+        console.log("\t= running update 3.18.0");
+        data = _update_3180(data);
       };
     };
     // if no update is needed

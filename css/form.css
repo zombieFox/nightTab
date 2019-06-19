@@ -565,7 +565,8 @@ input[type="range"][disabled]~.input-helper {
 
 .input-button input[type="checkbox"]+label,
 .input-button input[type="radio"]+label,
-.input-button input[type="color"]+label {
+.input-button input[type="color"]+label,
+.input-button input[type="file"]+label {
   background-color: rgb(var(--gray-02));
   padding: 0.125em 1em;
   margin: 0;
@@ -597,7 +598,9 @@ input[type="range"][disabled]~.input-helper {
 .input-button input[type="radio"]:hover+label,
 .input-button input[type="radio"]:focus+label,
 .input-button input[type="color"]:hover+label,
-.input-button input[type="color"]:focus+label {
+.input-button input[type="color"]:focus+label,
+.input-button input[type="file"]:hover+label,
+.input-button input[type="file"]:focus+label {
   background-color: rgb(var(--gray-03));
   border-bottom-color: rgb(var(--gray-08));
   color: rgb(var(--button-text-hover-focus));
@@ -606,7 +609,8 @@ input[type="range"][disabled]~.input-helper {
 
 .input-button input[type="checkbox"]:active+label,
 .input-button input[type="radio"]:active+label,
-.input-button input[type="color"]:active+label {
+.input-button input[type="color"]:active+label,
+.input-button input[type="file"]:active+label {
   background-color: rgb(var(--gray-04));
   border-bottom-color: rgb(var(--theme-accent));
   color: rgb(var(--button-text-active));
@@ -615,7 +619,8 @@ input[type="range"][disabled]~.input-helper {
 
 .input-button input[type="checkbox"]:checked+label,
 .input-button input[type="radio"]:checked+label,
-.input-button input[type="color"]:checked+label {
+.input-button input[type="color"]:checked+label,
+.input-button input[type="file"]:checked+label {
   background-color: rgb(var(--gray-04));
   border-bottom-color: rgb(var(--theme-accent));
   color: rgb(var(--button-text-active));
@@ -633,7 +638,11 @@ input[type="range"][disabled]~.input-helper {
 .input-button input[type="color"][disabled]+label,
 .input-button input[type="color"][disabled]:hover+label,
 .input-button input[type="color"][disabled]:focus+label,
-.input-button input[type="color"][disabled]:active+label {
+.input-button input[type="color"][disabled]:active+label,
+.input-button input[type="file"][disabled]+label,
+.input-button input[type="file"][disabled]:hover+label,
+.input-button input[type="file"][disabled]:focus+label,
+.input-button input[type="file"][disabled]:active+label {
   background-color: rgb(var(--gray-02));
   border-color: transparent;
   color: rgb(var(--button-text-disabled));
@@ -642,7 +651,8 @@ input[type="range"][disabled]~.input-helper {
 
 .input-button-link input[type="checkbox"]+label,
 .input-button-link input[type="radio"]+label,
-.input-button-link input[type="color"]+label {
+.input-button-link input[type="color"]+label,
+.input-button-link input[type="file"]+label {
   background-color: transparent;
   border: 0;
   color: rgb(var(--button-link-text));
@@ -656,21 +666,26 @@ input[type="range"][disabled]~.input-helper {
 .input-button-link input[type="radio"]:checked+label,
 .input-button-link input[type="color"]:hover+label,
 .input-button-link input[type="color"]:focus+label,
-.input-button-link input[type="color"]:checked+label {
+.input-button-link input[type="color"]:checked+label,
+.input-button-link input[type="file"]:hover+label,
+.input-button-link input[type="file"]:focus+label,
+.input-button-link input[type="file"]:checked+label {
   background-color: transparent;
   color: rgb(var(--button-link-text-hover-focus));
 }
 
 .input-button-link input[type="checkbox"]:active+label,
 .input-button-link input[type="radio"]:active+label,
-.input-button-link input[type="color"]:active+label {
+.input-button-link input[type="color"]:active+label,
+.input-button-link input[type="file"]:active+label {
   background-color: transparent;
   color: rgb(var(--button-link-text-active));
 }
 
 .input-button-link input[disabled][type="checkbox"]+label,
 .input-button-link input[disabled][type="radio"]+label,
-.input-button-link input[disabled][type="color"]+label {
+.input-button-link input[disabled][type="color"]+label,
+.input-button-link input[disabled][type="file"]+label {
   background-color: transparent;
   color: transparent;
   pointer-events: none;
@@ -681,7 +696,9 @@ input[type="range"][disabled]~.input-helper {
 .input-button-link input[disabled][type="radio"]:hover+label,
 .input-button-link input[disabled][type="radio"]:focus+label,
 .input-button-link input[disabled][type="color"]:hover+label,
-.input-button-link input[disabled][type="color"]:focus+label {
+.input-button-link input[disabled][type="color"]:focus+label,
+.input-button-link input[disabled][type="file"]:hover+label,
+.input-button-link input[disabled][type="file"]:focus+label {
   background-color: transparent;
   color: transparent;
 }
@@ -723,11 +740,14 @@ input[type="range"][disabled]~.input-helper {
 .input-hide input[type="checkbox"]+label:before,
 .input-hide input[type="checkbox"]:checked+label:before,
 .input-hide input[type="radio"]+label:before,
-.input-hide input[type="radio"]:checked+label:before {
+.input-hide input[type="radio"]:checked+label:before,
+.input-hide input[type="file"]+label:before,
+.input-hide input[type="file"]:checked+label:before {
   content: none;
 }
 
-.input-hide input[type="color"] {
+.input-hide input[type="color"],
+.input-hide input[type="file"] {
   opacity: 0;
   width: 1px;
   height: 1px;
@@ -902,4 +922,11 @@ input[type="range"][disabled]~.input-helper {
 .form-group.nested-button *:last-child input[type="radio"]+label,
 .form-group.nested-button *:last-child input[type="color"]+label {
   border-radius: 0 var(--theme-radius) var(--theme-radius) 0;
+}
+
+.form-feedback {
+  margin-bottom: 0.5em;
+  padding: 0.5em 1em;
+  background-color: rgb(var(--gray-03));
+  border-radius: var(--theme-radius);
 }

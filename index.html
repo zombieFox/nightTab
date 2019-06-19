@@ -112,6 +112,7 @@
           <button class="menu-nav-button button button-large" data-target=".menu-content-area-bookmarks" tabindex="1">Bookmarks</button>
           <button class="menu-nav-button button button-large" data-target=".menu-content-area-theme" tabindex="1">Theme</button>
           <button class="menu-nav-button button button-large" data-target=".menu-content-area-background" tabindex="1">Background</button>
+          <button class="menu-nav-button button button-large" data-target=".menu-content-area-data" tabindex="1">Data</button>
         </div>
         <div class="menu-nav-area">
           <button class="menu-close button button-block button-large mb-0" tabindex="1"><span class="icon-close"></span></button>
@@ -992,6 +993,45 @@
                   <input id="control-background-image-scale" class="control-background-image-scale" type="range" min="100" max="300" value="0" tabindex="1">
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-content-area menu-content-area-data is-hidden">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Restore</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap input-button input-hide">
+                <input id="control-data-import" class="control-data-import" type="file">
+                <label for="control-data-import">Import data</label>
+              </div>
+              <p class="control-data-import-feedback form-feedback small is-hidden"></p>
+              <p class="input-helper small muted">Restore a previously exported nightTab backup.</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Backup</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="button-wrap">
+                <button class="control-data-export button mb-0" href="#">Export data</button>
+              </div>
+              <p class="input-helper small muted">Download a backup of your nightTab Bookmarks and Settings.</p>
+              <p class="input-helper small muted">This file can later be imported on this or another deivce.</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Clear</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="button-wrap">
+                <button class="control-data-clear button mb-0" href="#">Clear data</button>
+              </div>
+              <p class="input-helper small muted">Wipe all data and restore nightTab to default state.</p>
             </div>
           </div>
         </div>
