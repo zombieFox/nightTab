@@ -531,43 +531,21 @@ var link = (function() {
 
   var _makeEmptySearch = function() {
     var searchInput = helper.e(".search-input");
-    var div = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "link-empty"
-      }]
-    });
-    var h1 = helper.makeNode({
-      tag: "h1",
-      attr: [{
-        key: "class",
-        value: "link-empty-heading"
-      }],
-      text: "No matching bookmarks found"
-    });
+    var div = helper.node("div|class:link-empty");
+    var h1 = helper.node("h1:No matching bookmarks found|class:link-empty-heading");
+    var para = helper.node("p:Enter to Search " + state.get().header.search.engine[state.get().header.search.engine.selected].name + "|class:small muted");
     div.appendChild(h1);
+    div.appendChild(para);
     return div;
   };
 
   var _makeEmptyBookmarks = function() {
     var searchInput = helper.e(".search-input");
-    var div = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "link-empty"
-      }]
-    });
-    var h1 = helper.makeNode({
-      tag: "h1",
-      attr: [{
-        key: "class",
-        value: "link-empty-heading"
-      }],
-      text: "No bookmarks added"
-    });
+    var div = helper.node("div|class:link-empty");
+    var h1 = helper.node("h1:No bookmarks added|class:link-empty-heading");
+    var para = helper.node("p:Why not add some?|class:small muted");
     div.appendChild(h1);
+    div.appendChild(para);
     return div;
   };
 
