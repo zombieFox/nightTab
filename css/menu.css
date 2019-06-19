@@ -117,10 +117,6 @@
   .menu {
     width: 80vw;
   }
-
-  .menu-nav-button {
-    flex-basis: 0;
-  }
 }
 
 @media (min-width: 700px) {
@@ -172,6 +168,12 @@
 
   .menu-item {
     grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .menu-nav-button {
+    flex-basis: 0;
   }
 }
 

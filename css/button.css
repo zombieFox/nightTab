@@ -94,6 +94,10 @@ button [class*=" icon-"],
   font-size: 0.8em;
 }
 
+.button-large {
+  font-size: 1.2em;
+}
+
 .button-block {
   display: flex;
   width: 100%;
