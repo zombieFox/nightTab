@@ -1,32 +1,102 @@
 var update = (function() {
 
   var _update_100 = function(data) {
-    var time = new Date().getTime();
-    data.bookmarks.forEach(function(arrayItem, index) {
-      time = time + 1;
-      arrayItem.timeStamp = time;
-    });
     data.version = 1.00;
     return data;
   };
 
   var _update_200 = function(data) {
-    helper.setObject({
-      object: state.get(),
-      path: "layout.theme",
-      newValue: data.theme
-    });
-    data = {
-      state: state.get(),
-      bookmarks: data.bookmarks
+    data.state = {
+      header: {
+        date: {
+          characterLength: "short",
+          show: {
+            date: true,
+            day: false,
+            month: true,
+            year: false,
+            separator: true
+          }
+        },
+        clock: {
+          hour24: true,
+          show: {
+            seconds: true,
+            minutes: true,
+            hours: true,
+            separator: true,
+            meridiem: true
+          }
+        },
+        editAdd: {
+          active: true
+        },
+        accent: {
+          active: true
+        },
+        search: {
+          searching: false,
+          active: true,
+          grow: true,
+          engine: {
+            selected: "google",
+            google: {
+              url: "https://www.google.com/search"
+            },
+            duckduckgo: {
+              url: "https://duckduckgo.com/"
+            },
+            giphy: {
+              url: "https://giphy.com/search/"
+            },
+            custom: {
+              url: ""
+            }
+          }
+        },
+        buttons: {
+          show: true
+        }
+      },
+      link: {
+        editObject: null,
+        action: null,
+        newTab: false,
+        style: "block",
+        sort: "none"
+      },
+      layout: {
+        alignment: "left",
+        container: "wide",
+        scrollPastEnd: true,
+        theme: {
+          current: {
+            r: 255,
+            g: 170,
+            b: 51
+          },
+          random: false
+        }
+      },
+      edit: {
+        active: false
+      },
+      menu: {
+        open: false,
+        active: false
+      },
+      modal: {
+        active: false
+      }
     };
+    data.bookmarks = [];
     data.version = 2.00;
     return data;
   };
 
   var _update_210 = function(data) {
     data.state.layout.theme = {
-      current: data.state.layout.theme,
+      current: data.state.layout.theme.current,
       random: false
     };
     data.version = 2.10;
@@ -491,7 +561,7 @@ var update = (function() {
 
   function run(data) {
     if (!("version" in data)) {
-      console.log("\t= running update", 1.00);
+      console.log("\t= running update", "1.0.0");
       data = _update_100(data);
     };
     if (typeof data.version == "number") {
