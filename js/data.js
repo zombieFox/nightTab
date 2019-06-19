@@ -6,7 +6,15 @@ var data = (function() {
     localStorage.setItem(key, data);
   };
 
-  var get = function(key) {
+  var setOption = function(options) {
+    options && localStorage.setItem(options.key || saveName, JSON.stringify({
+      version: options.version || version.get(),
+      state: options.state || state.get(),
+      bookmarks: options.bookmarks || bookmarks.get()
+    }));
+  };
+
+  var get = function(key = saveName) {
     return localStorage.getItem(key);
   };
 
@@ -58,7 +66,8 @@ var data = (function() {
     get: get,
     load: load,
     wipe: wipe,
-    restore: restore
+    restore: restore,
+    setOption: setOption,
   };
 
 })();

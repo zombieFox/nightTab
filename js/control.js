@@ -1947,6 +1947,46 @@ var control = (function() {
       sortable(".link-area");
     }
   }, {
+    element: helper.e(".control-link-export"),
+    type: "button",
+    func: function() {
+        file.create(`backup.${version.get()}`, JSON.stringify(data.get()));
+    }
+  }, {
+    element: helper.e(".control-link-import-bookmarks"),
+    type: "button",
+    func: () => {
+        file.open((fileContent) => {
+            // I dont know why I have to parse it twice, but it works :)
+            data.setOption({bookmarks: JSON.parse(JSON.parse(fileContent)).bookmarks})
+            data.restore();
+            bookmarks.init();
+            link.clear();
+            link.init();
+        })
+    }
+  }, {
+    element: helper.e(".control-link-import-settings"),
+    type: "button",
+    func: () => {
+        file.open((fileContent) => {
+            data.setOption({state: JSON.parse(JSON.parse(fileContent)).state})
+            location.reload();
+        })
+    }
+  }, {
+    element: helper.e(".control-link-import-everything"),
+    type: "button",
+    func: () => {
+        file.open((fileContent) => {
+            data.setOption({
+                bookmarks: JSON.parse(JSON.parse(fileContent)).bookmarks,
+                state: JSON.parse(JSON.parse(fileContent)).state,
+            })
+            location.reload();
+        })
+    }
+  }, {
     element: helper.e(".control-theme-style-dark"),
     path: "theme.style",
     type: "radio",
