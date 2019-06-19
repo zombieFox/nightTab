@@ -4,22 +4,26 @@ var search = (function() {
     var searchInput = helper.e(".search-input");
     var searchClear = helper.e(".search-clear");
     searchInput.addEventListener("input", function() {
-      _toggle(this);
-      _searchClear();
+      _toggle();
+      render.clear.button();
       link.clear();
       link.render.item.all();
       sortable(".link-area");
     }, false);
     searchClear.addEventListener("click", function() {
-      _toggle(this);
-      _searchClear();
-      clear();
+      render.clear.input();
+      _toggle();
+      render.clear.button();
+      link.clear();
+      link.render.item.all();
+      sortable(".link-area");
     }, false);
   };
 
-  var _toggle = function(input) {
+  var _toggle = function() {
     var html = helper.e("html");
-    if (input.value != "") {
+    var searchInput = helper.e(".search-input");
+    if (searchInput.value != "") {
       helper.setObject({
         object: state.get(),
         path: "search",
@@ -33,16 +37,6 @@ var search = (function() {
         newValue: false
       });
       helper.removeClass(html, "is-header-searching");
-    };
-  };
-
-  var _searchClear = function() {
-    var searchInput = helper.e(".search-input");
-    var searchClear = helper.e(".search-clear");
-    if (state.get().search) {
-      searchClear.removeAttribute("disabled");
-    } else {
-      searchClear.setAttribute("disabled", "");
     };
   };
 
@@ -71,7 +65,21 @@ var search = (function() {
     };
   };
 
-  var render = function() {
+  var render = {
+    engine: function() {
+      _renderEngine();
+    },
+    clear: {
+      input: function() {
+        _renderClearInput();
+      },
+      button: function() {
+        _renderClearButton();
+      }
+    }
+  };
+
+  var _renderEngine = function() {
     var search = helper.e(".search");
     var searchInput = helper.e(".search-input");
     var placeholder = "";
@@ -85,13 +93,19 @@ var search = (function() {
     search.setAttribute("action", state.get().header.search.engine[state.get().header.search.engine.selected].url);
   };
 
-  var clear = function() {
+  var _renderClearButton = function() {
+    var searchClear = helper.e(".search-clear");
+    if (state.get().search) {
+      searchClear.removeAttribute("disabled");
+    } else {
+      searchClear.setAttribute("disabled", "");
+    };
+  };
+
+  var _renderClearInput = function() {
     var searchInput = helper.e(".search-input");
     searchInput.value = "";
     searchInput.focus();
-    link.clear();
-    link.render.item.all();
-    sortable(".link-area");
   };
 
   var _focus = function() {
@@ -104,7 +118,8 @@ var search = (function() {
 
   var init = function() {
     bind();
-    render();
+    render.engine();
+    _toggle();
     _focus();
   };
 
@@ -112,8 +127,7 @@ var search = (function() {
   return {
     init: init,
     get: get,
-    render: render,
-    clear: clear
+    render: render
   };
 
 })();

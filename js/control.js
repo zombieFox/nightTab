@@ -1279,7 +1279,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      search.render();
+      search.render.engine();
     }
   }, {
     element: helper.e(".control-header-search-engine-duckduckgo"),
@@ -1287,7 +1287,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      search.render();
+      search.render.engine();
     }
   }, {
     element: helper.e(".control-header-search-engine-youtube"),
@@ -1295,7 +1295,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      search.render();
+      search.render.engine();
     }
   }, {
     element: helper.e(".control-header-search-engine-giphy"),
@@ -1303,7 +1303,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      search.render();
+      search.render.engine();
     }
   }, {
     element: helper.e(".control-header-search-engine-custom"),
@@ -1311,21 +1311,21 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      search.render();
+      search.render.engine();
     }
   }, {
     element: helper.e(".control-header-search-engine-custom-name"),
     path: "header.search.engine.custom.name",
     type: "text",
     func: function() {
-      search.render();
+      search.render.engine();
     }
   }, {
     element: helper.e(".control-header-search-engine-custom-url"),
     path: "header.search.engine.custom.url",
     type: "text",
     func: function() {
-      search.render();
+      search.render.engine();
     }
   }, {
     element: helper.e(".control-header-search-text-align-left"),
@@ -1752,7 +1752,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      search.render();
+      search.render.engine();
     }
   }, {
     element: helper.e(".control-link-item-display-show"),
