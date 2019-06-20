@@ -925,8 +925,12 @@ input[type="range"][disabled]~.input-helper {
 }
 
 .form-feedback {
-  margin-bottom: 0.5em;
-  padding: 0.5em 1em;
-  background-color: rgb(var(--gray-03));
+  padding: 1em 1.5em;
+  background-color: rgb(var(--gray-02));
+  /* border-bottom: var(--line-width) solid rgb(var(--gray-04)); */
   border-radius: var(--theme-radius);
+}
+
+.form-feedback:not(:last-child) {
+  margin-bottom: 1em;
 }

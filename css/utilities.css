@@ -35,6 +35,6 @@
   animation: shake var(--animation-speed-slow) 1;
 }
 
-.is-heart-beat {
-  animation: heart-beat var(--animation-speed-slow) 1;
+.is-pop {
+  animation: pop var(--animation-speed-fast) 1;
 }

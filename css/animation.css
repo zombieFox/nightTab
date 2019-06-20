@@ -22,16 +22,16 @@
   }
 }
 
-@keyframes heart-beat {
+@keyframes pop {
   0% {
     transform: scale(1);
   }
 
-  25% {
-    transform: scale(1.2);
+  50% {
+    transform: scale(1.1);
   }
 
-  50% {
+  100% {
     transform: scale(1);
   }
 }
