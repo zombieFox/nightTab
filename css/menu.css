@@ -22,6 +22,7 @@
 .menu-area {
   background-color: rgba(var(--gray-01), 0.95);
   border-radius: var(--theme-radius);
+  box-shadow: var(--shadow-large);
   width: 100%;
   max-height: 100%;
   overflow-y: auto;

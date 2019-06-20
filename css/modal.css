@@ -4,7 +4,7 @@
   left: 50%;
   font-size: 1em;
   width: 45em;
-  max-width: calc(100% - 6em);
+  max-width: calc(100% - 2em);
   min-width: 10em;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -23,9 +23,18 @@
 }
 
 .modal-wrapper {
-  box-sizing: border-box;
+  background-color: rgb(var(--gray-01));
+  border-radius: var(--theme-radius);
+  box-shadow: var(--shadow-large);
   position: relative;
-  transition: all var(--animation-speed-fast);
+  max-height: calc(100vh - 2em);
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  justify-items: stretch;
+  align-items: stretch;
+  transition: opacity var(--animation-speed-fast);
 }
 
 .modal-wrapper .container {
@@ -33,14 +42,12 @@
 }
 
 .is-transition-end .modal-wrapper {
-  transition: all var(--animation-speed-fast) ease-in-out;
+  transition: opacity var(--animation-speed-fast) ease-in-out;
 }
 
 .modal-body {
-  background-color: rgb(var(--gray-01));
   border-radius: var(--theme-radius) var(--theme-radius) 0 0;
   padding: 2em;
-  max-height: calc(90vh - 3.6666666667em);
   overflow-y: auto;
   box-sizing: border-box;
   z-index: 1;
@@ -57,9 +64,9 @@
 
 .modal-controls {
   background-color: rgb(var(--gray-01));
+  border-radius: 0 0 var(--theme-radius) var(--theme-radius);
   position: relative;
   z-index: 2;
-  border-radius: 0 0 var(--theme-radius) var(--theme-radius);
   display: flex;
 }
 
