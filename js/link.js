@@ -533,7 +533,7 @@ var link = (function() {
     var searchInput = helper.e(".search-input");
     var div = helper.node("div|class:link-empty");
     var h1 = helper.node("h1:No matching bookmarks found|class:link-empty-heading");
-    var para = helper.node("p:Enter to Search " + state.get().header.search.engine[state.get().header.search.engine.selected].name + "|class:small muted");
+    var para = helper.node("p:\"Enter\" to Search " + state.get().header.search.engine[state.get().header.search.engine.selected].name + "|class:small muted");
     div.appendChild(h1);
     div.appendChild(para);
     return div;

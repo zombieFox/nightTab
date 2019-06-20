@@ -43,6 +43,7 @@ input[type="submit"]:focus {
   border-bottom-color: rgb(var(--gray-08));
   color: rgb(var(--button-text-hover-focus));
   outline: none;
+  text-decoration: none;
 }
 
 button:active,
@@ -54,6 +55,7 @@ input[type="submit"]:active {
   border-bottom-color: rgb(var(--theme-accent));
   color: rgb(var(--button-text-active));
   transition: none;
+  text-decoration: none;
 }
 
 button[disabled],
@@ -68,6 +70,7 @@ button[disabled]:active,
   border-color: transparent;
   color: rgb(var(--button-text-disabled));
   cursor: default;
+  text-decoration: none;
 }
 
 .button-text {
@@ -89,6 +92,10 @@ button [class*=" icon-"],
 
 .button-small {
   font-size: 0.8em;
+}
+
+.button-large {
+  font-size: 1.2em;
 }
 
 .button-block {

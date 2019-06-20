@@ -555,6 +555,15 @@ var helper = (function() {
     return number + "th";
   };
 
+  var isJsonString = function(string) {
+    try {
+      JSON.parse(string);
+    } catch (error) {
+      return false;
+    };
+    return true;
+  };
+
   // exposed methods
   return {
     e: e,
@@ -579,7 +588,8 @@ var helper = (function() {
     randomNumber: randomNumber,
     toWords: toWords,
     ordinalWords: ordinalWords,
-    ordinalNumber: ordinalNumber
+    ordinalNumber: ordinalNumber,
+    isJsonString: isJsonString
   };
 
 })();

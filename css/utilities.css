@@ -30,3 +30,11 @@
 .scroll-y-disabled {
   overflow-y: hidden;
 }
+
+.is-shake {
+  animation: shake var(--animation-speed-slow) 1;
+}
+
+.is-pop {
+  animation: pop var(--animation-speed-fast) 1;
+}
