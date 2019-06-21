@@ -16,7 +16,7 @@
 }
 
 .muted {
-  color: rgb(var(--gray-12));
+  color: rgb(var(--theme-gray-12));
 }
 
 .scroll-disabled {
@@ -32,9 +32,9 @@
 }
 
 .is-shake {
-  animation: shake var(--animation-speed-slow) 1;
+  animation: shake var(--layout-animation-speed-slow) 1;
 }
 
 .is-pop {
-  animation: pop var(--animation-speed-fast) 1;
+  animation: pop var(--layout-animation-speed-fast) 1;
 }

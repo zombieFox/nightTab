@@ -3,7 +3,7 @@
   padding: 0;
   font-size: 1em;
   font-family: var(--font-fjalla);
-  color: rgb(var(--style-neutral-text));
+  color: rgb(var(--theme-style-text));
   width: 100%;
   min-height: 2.5em;
   display: flex;
@@ -64,11 +64,11 @@
 }
 
 .clock-hours {
-  color: rgb(var(--style-neutral-text));
+  color: rgb(var(--theme-style-text));
 }
 
 .clock-minutes,
 .clock-seconds,
 .clock-meridiem {
-  color: rgb(var(--gray-16));
+  color: rgb(var(--theme-gray-16));
 }

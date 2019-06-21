@@ -17,35 +17,35 @@ h1 {
 h2 {
   font-size: 1.2em;
   font-family: var(--font-regular);
-  color: rgb(var(--gray-18));
+  color: rgb(var(--theme-gray-18));
 }
 
 h3 {
   font-size: 1.1em;
   font-family: var(--font-regular);
-  color: rgb(var(--gray-18));
+  color: rgb(var(--theme-gray-18));
 }
 
 h4 {
   font-size: 1em;
   font-family: var(--font-regular);
-  color: rgb(var(--gray-18));
+  color: rgb(var(--theme-gray-18));
 }
 
 h5 {
   font-size: 1em;
   font-family: var(--font-bold);
-  color: rgb(var(--gray-18));
+  color: rgb(var(--theme-gray-18));
 }
 
 h6 {
   font-size: 0.75em;
   font-family: var(--font-bold);
-  color: rgb(var(--gray-18));
+  color: rgb(var(--theme-gray-18));
 }
 
 p {
-  color: rgb(var(--style-neutral-text));
+  color: rgb(var(--theme-style-text));
   margin: 0;
   line-height: 1.5;
 }
@@ -56,7 +56,7 @@ p:not(:last-child) {
 
 hr {
   border: 0;
-  border-top: 1px solid rgb(var(--gray-02));
+  border-top: 1px solid rgb(var(--theme-gray-02));
   border-radius: var(--theme-radius);
   margin: 1em 0;
   clear: both;
@@ -69,13 +69,13 @@ strong {
 }
 
 a {
-  color: rgb(var(--gray-16));
+  color: rgb(var(--theme-gray-16));
   text-decoration: none;
 }
 
 a:link,
 a:visited {
-  color: rgb(var(--gray-16));
+  color: rgb(var(--theme-gray-16));
 }
 
 a:focus {
@@ -84,12 +84,12 @@ a:focus {
 }
 
 a:hover {
-  color: rgb(var(--style-neutral-text));
+  color: rgb(var(--theme-style-text));
   text-decoration: underline;
 }
 
 a:active {
-  color: rgb(var(--style-neutral-text));
+  color: rgb(var(--theme-style-text));
 }
 
 ol,
@@ -131,9 +131,9 @@ table {
 
 table thead tr td,
 table thead tr th {
-  background-color: rgb(var(--gray-03));
+  background-color: rgb(var(--theme-gray-03));
   border: 0;
-  border-bottom: 1px solid rgb(var(--gray-04));
+  border-bottom: 1px solid rgb(var(--theme-gray-04));
   padding: 0.5em;
   margin: 0;
   text-align: left;
@@ -142,7 +142,7 @@ table thead tr th {
 }
 
 table tr:nth-child(odd) {
-  background-color: rgb(var(--gray-02));
+  background-color: rgb(var(--theme-gray-02));
 }
 
 table tbody tr td,

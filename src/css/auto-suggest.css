@@ -5,7 +5,7 @@
 }
 
 .auto-suggest-list {
-  background-color: rgb(var(--gray-02));
+  background-color: rgb(var(--theme-gray-02));
   margin-top: 0.5em;
   padding: 1em;
   position: absolute;
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  box-shadow: var(--shadow-large);
+  box-shadow: var(--layout-shadow-large);
 }
 
 .auto-suggest-list-item {
@@ -42,33 +42,33 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  transition: background-color var(--animation-speed-fast) ease-in-out, color var(--animation-speed-fast) ease-in-out, border-color var(--animation-speed-fast) ease-in-out, box-shadow var(--animation-speed-fast) ease-in-out;
+  transition: background-color var(--layout-animation-speed-fast) ease-in-out, color var(--layout-animation-speed-fast) ease-in-out, border-color var(--layout-animation-speed-fast) ease-in-out, box-shadow var(--layout-animation-speed-fast) ease-in-out;
 }
 
 .auto-suggest-link:link,
 .auto-suggest-link:visited {
-  color: rgb(var(--gray-16));
+  color: rgb(var(--theme-gray-16));
   text-decoration: none;
 }
 
 .auto-suggest-link:hover {
-  background-color: rgb(var(--gray-03));
+  background-color: rgb(var(--theme-gray-03));
   color: rgb(var(--form-input-text-hover));
   outline: none;
   text-decoration: none;
-  box-shadow: 0 0 0 var(--line-width) rgb(var(--gray-06));
+  box-shadow: 0 0 0 var(--layout-line-width) rgb(var(--theme-gray-06));
 }
 
 .auto-suggest-link:focus {
-  background-color: rgb(var(--gray-01));
+  background-color: rgb(var(--theme-gray-01));
   color: rgb(var(--form-input-text-focus));
   outline: none;
   text-decoration: none;
-  box-shadow: 0 0 0 var(--line-width) rgb(var(--theme-accent)), 0 0 0 calc(var(--line-width) * 2) rgba(var(--theme-accent), 0.25);
+  box-shadow: 0 0 0 var(--layout-line-width) rgb(var(--theme-accent)), 0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
 }
 
 .auto-suggest-link:active {
-  color: rgb(var(--style-neutral-text));
+  color: rgb(var(--theme-style-text));
 }
 
 .auto-suggest-icon {
@@ -76,7 +76,7 @@
 }
 
 .auto-suggest-icon-text {
-  color: rgb(var(--gray-08));
+  color: rgb(var(--theme-gray-08));
   margin-top: 0.5em;
   font-size: 0.6em;
   text-align: center;

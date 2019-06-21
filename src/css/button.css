@@ -3,7 +3,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: rgb(var(--gray-02));
+  background-color: rgb(var(--theme-gray-02));
   padding: 0.125em 1em;
   margin: 0 0 1em 0;
   color: rgb(var(--button-text));
@@ -12,8 +12,8 @@ input[type="submit"] {
   min-height: 2.5em;
   line-height: 1;
   border: 0;
-  border-top-width: var(--line-width);
-  border-bottom-width: var(--line-width);
+  border-top-width: var(--layout-line-width);
+  border-bottom-width: var(--layout-line-width);
   border-style: solid;
   border-color: transparent;
   border-radius: var(--theme-radius);
@@ -22,7 +22,7 @@ input[type="submit"] {
   white-space: nowrap;
   cursor: pointer;
   box-shadow: none;
-  transition: background-color var(--animation-speed-fast) ease-in-out, color var(--animation-speed-fast) ease-in-out, border var(--animation-speed-fast) ease-in-out;
+  transition: background-color var(--layout-animation-speed-fast) ease-in-out, color var(--layout-animation-speed-fast) ease-in-out, border var(--layout-animation-speed-fast) ease-in-out;
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -39,8 +39,8 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: rgb(var(--gray-03));
-  border-bottom-color: rgb(var(--gray-08));
+  background-color: rgb(var(--theme-gray-03));
+  border-bottom-color: rgb(var(--theme-gray-08));
   color: rgb(var(--button-text-hover-focus));
   outline: none;
   text-decoration: none;
@@ -51,7 +51,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  background-color: rgb(var(--gray-04));
+  background-color: rgb(var(--theme-gray-04));
   border-bottom-color: rgb(var(--theme-accent));
   color: rgb(var(--button-text-active));
   transition: none;
@@ -66,7 +66,7 @@ button[disabled]:focus,
 .button[disabled]:focus,
 button[disabled]:active,
 .button[disabled]:active {
-  background-color: rgb(var(--gray-02));
+  background-color: rgb(var(--theme-gray-02));
   border-color: transparent;
   color: rgb(var(--button-text-disabled));
   cursor: default;
