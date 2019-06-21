@@ -1,7 +1,7 @@
 # NIGHTTAB
 A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab -- a custom start page.
 
-[![nightTab Demo](banners/banner-1400-560.png)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/banner/banner-1400-560.png)](https://zombiefox.github.io/nightTab/)
 
 [See the demo in action](https://zombiefox.github.io/nightTab/)
 
