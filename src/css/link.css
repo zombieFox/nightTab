@@ -201,8 +201,9 @@
 .is-link-url-show:not(.is-link-item-line) .link-item:focus .link-panel-back,
 .is-link-url-show:not(.is-link-item-line) .link-item:focus-within .link-panel-back,
 .is-link-url-show:not(.is-link-item-line) .link-item:hover .link-panel-back {
-  top: 0;
   height: 100%;
+  top: 0;
+  clip-path: polygon(0 var(--layout-line-width), 100% var(--layout-line-width), 100% 100%, 0 100%);
 }
 
 .link-control {
