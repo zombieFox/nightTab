@@ -328,6 +328,17 @@ var link = (function() {
         key: "style",
         value: "--theme-accent: " + data.accent.color.r + ", " + data.accent.color.g + ", " + data.accent.color.b
       });
+      if (invert(data.accent.color, true) == "#000000") {
+        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-dark";
+      } else if (invert(data.accent.color, true) == "#ffffff") {
+        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-light";
+      };
+    } else {
+      if (invert(state.get().theme.accent.current, true) == "#000000") {
+        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-dark";
+      } else if (invert(state.get().theme.accent.current, true) == "#ffffff") {
+        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-light";
+      };
     };
     var linkItem = helper.makeNode(linkItemOptions);
     var linkPanelFrontOptions = {

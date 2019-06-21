@@ -70,6 +70,9 @@ var keyboard = (function() {
       if (event.ctrlKey && event.altKey && event.keyCode == 82) {
         accent.random();
         accent.render();
+        link.clear();
+        link.render.item.all();
+        sortable(".link-area");
         data.save();
       };
     }, false);

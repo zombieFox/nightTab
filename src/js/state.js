@@ -156,10 +156,7 @@ var state = (function() {
           show: true,
           size: 0.9,
         },
-        url: {
-          show: true,
-          style: "dark"
-        },
+        url: true,
         size: 1,
         line: true,
         hoverScale: true
