@@ -316,12 +316,29 @@ var link = (function() {
   };
 
   var _makeLink = function(data, index) {
-    var linkItemOptions = {
+    var linkItemOptions;
+    var accent;
+    if (data.accent.override) {
+      accent = data.accent.color;
+    } else {
+      accent = state.get().theme.accent.current;
+    };
+    if (invert(accent, true) == "#000000") {
+    linkItemOptions = {
       tag: "div",
       attr: [{
         key: "class",
-        value: "link-item"
+        value: "link-item link-url-text-dark"
       }]
+    };
+    } else if (invert(accent, true) == "#ffffff") {
+      linkItemOptions = {
+        tag: "div",
+        attr: [{
+          key: "class",
+          value: "link-item link-url-text-light"
+        }]
+      };
     };
     if (data.accent.override) {
       linkItemOptions.attr.push({

@@ -560,6 +560,12 @@ var update = (function() {
     return data;
   };
 
+  var _update_3200 = function(data) {
+    data.version = "3.20.0";
+    data.state.link.item.url = data.state.link.item.url.show;
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -697,6 +703,10 @@ var update = (function() {
       if (version.compare(data.version, "3.18.0") == -1) {
         console.log("\t= running update 3.18.0");
         data = _update_3180(data);
+      };
+      if (version.compare(data.version, "3.20.0") == -1) {
+        console.log("\t= running update 3.20.0");
+        data = _update_3200(data);
       };
     };
     // if no update is needed
