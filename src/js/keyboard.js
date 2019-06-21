@@ -67,7 +67,7 @@ var keyboard = (function() {
         };
       };
       // ctrl+alt+r
-      if (event.ctrlKey && event.altKey && event.keyCode == 82) {
+      if (state.get().theme.accent.random.active && event.ctrlKey && event.altKey && event.keyCode == 82) {
         accent.random();
         accent.render();
         link.clear();
