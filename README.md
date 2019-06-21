@@ -43,10 +43,10 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 - Responsive design
 
 ---
-[![nightTab Demo](screenshots/demo-001.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/demo-002.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/demo-003.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/demo-004.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/demo-005.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/demo-006.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](screenshots/demo-007.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/demo/demo-001.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/demo/demo-002.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/demo/demo-003.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/demo/demo-004.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/demo/demo-005.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/demo/demo-006.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/demo/demo-007.gif)](https://zombiefox.github.io/nightTab/)
