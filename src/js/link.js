@@ -316,35 +316,29 @@ var link = (function() {
   };
 
   var _makeLink = function(data, index) {
-    var linkItemOptions;
-    var accent;
-    if (data.accent.override) {
-      accent = data.accent.color;
-    } else {
-      accent = state.get().theme.accent.current;
-    };
-    if (invert(accent, true) == "#000000") {
-    linkItemOptions = {
+    var linkItemOptions = {
       tag: "div",
       attr: [{
         key: "class",
-        value: "link-item link-url-text-dark"
+        value: "link-item"
       }]
-    };
-    } else if (invert(accent, true) == "#ffffff") {
-      linkItemOptions = {
-        tag: "div",
-        attr: [{
-          key: "class",
-          value: "link-item link-url-text-light"
-        }]
-      };
     };
     if (data.accent.override) {
       linkItemOptions.attr.push({
         key: "style",
         value: "--theme-accent: " + data.accent.color.r + ", " + data.accent.color.g + ", " + data.accent.color.b
       });
+      if (invert(data.accent.color, true) == "#000000") {
+        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-dark";
+      } else if (invert(data.accent.color, true) == "#ffffff") {
+        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-light";
+      };
+    } else {
+      if (invert(state.get().theme.accent.current, true) == "#000000") {
+        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-dark";
+      } else if (invert(state.get().theme.accent.current, true) == "#ffffff") {
+        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-light";
+      };
     };
     var linkItem = helper.makeNode(linkItemOptions);
     var linkPanelFrontOptions = {
