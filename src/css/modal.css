@@ -9,7 +9,7 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   perspective: 1000px;
-  transition: opacity var(--layout-animation-speed-fast) ease-in-out;
+  transition: opacity var(--layout-transition-speed-fast) ease-in-out;
   z-index: var(--z-index-modal);
 }
 
@@ -34,7 +34,7 @@
   grid-template-rows: 1fr auto;
   justify-items: stretch;
   align-items: stretch;
-  transition: opacity var(--layout-animation-speed-fast);
+  transition: opacity var(--layout-transition-speed-fast);
 }
 
 .modal-wrapper .container {
@@ -42,7 +42,7 @@
 }
 
 .is-transition-end .modal-wrapper {
-  transition: opacity var(--layout-animation-speed-fast) ease-in-out;
+  transition: opacity var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .modal-body {

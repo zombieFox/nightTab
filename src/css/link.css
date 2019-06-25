@@ -57,7 +57,7 @@
   height: var(--link-item-height);
   display: block;
   transform: scale(1);
-  transition: transform var(--layout-animation-speed-fast) ease-in-out;
+  transition: transform var(--layout-transition-speed-fast) ease-in-out;
   z-index: 1;
 }
 
@@ -102,7 +102,7 @@
   overflow: hidden;
   position: relative;
   user-select: none;
-  transition: background-color var(--layout-animation-speed-fast) ease-in-out, height var(--layout-animation-speed-fast) ease-in-out, box-shadow var(--layout-animation-speed-fast) ease-in-out;
+  transition: background-color var(--layout-transition-speed-fast) ease-in-out, height var(--layout-transition-speed-fast) ease-in-out, box-shadow var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .is-link-item-line .link-panel-front {
@@ -202,7 +202,7 @@
   justify-content: flex-end;
   align-items: stretch;
   z-index: 2;
-  transition: height var(--layout-animation-speed-fast) ease-in-out, top var(--layout-animation-speed-fast) ease-in-out;
+  transition: height var(--layout-transition-speed-fast) ease-in-out, top var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .is-link-item-line .link-panel-back {
@@ -227,7 +227,7 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
-  transition: all var(--layout-animation-speed-fast) ease-in-out;
+  transition: all var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .link-control-item {
@@ -286,7 +286,7 @@
   overflow: hidden;
   display: none;
   align-items: center;
-  transition: all var(--layout-animation-speed-fast) ease-in-out;
+  transition: all var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .is-link-url-show .link-url {
@@ -348,12 +348,12 @@
   color: rgb(var(--theme-accent));
   line-height: 1;
   white-space: nowrap;
-  transition: color var(--layout-animation-speed-fast) ease-in-out;
+  transition: color var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .link-display-icon {
   color: rgb(var(--theme-accent));
-  transition: color var(--layout-animation-speed-fast) ease-in-out;
+  transition: color var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .is-link-style-block .link-display-letter,
@@ -393,7 +393,7 @@
   color: rgb(var(--theme-gray-12));
   display: none;
   text-align: center;
-  transition: color var(--layout-animation-speed-fast) ease-in-out;
+  transition: color var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .is-link-display-alignment-horizontal-left .link-name {
@@ -481,7 +481,7 @@
 
 .link-form-text-icon .link-form-icon {
   transform: scale(1) rotate(0deg);
-  transition: transform var(--layout-animation-speed-fast) ease-in-out;
+  transition: transform var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .link-form-text-icon:not([disabled]):hover .link-form-icon {

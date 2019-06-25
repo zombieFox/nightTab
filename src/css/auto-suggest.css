@@ -42,7 +42,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  transition: background-color var(--layout-animation-speed-fast) ease-in-out, color var(--layout-animation-speed-fast) ease-in-out, border-color var(--layout-animation-speed-fast) ease-in-out, box-shadow var(--layout-animation-speed-fast) ease-in-out;
+  transition: background-color var(--layout-transition-speed-fast) ease-in-out, color var(--layout-transition-speed-fast) ease-in-out, border-color var(--layout-transition-speed-fast) ease-in-out, box-shadow var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .auto-suggest-link:link,

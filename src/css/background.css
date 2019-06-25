@@ -6,7 +6,7 @@
   height: 100vh;
   pointer-events: none;
   z-index: var(--z-index-background);
-  animation: appear var(--layout-animation-speed-slow) 1;
+  animation: appear var(--layout-transition-speed-slow) 1;
   display: none;
 }
 

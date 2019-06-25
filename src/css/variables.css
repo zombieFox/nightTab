@@ -51,9 +51,9 @@
   --layout-width: 80%;
   --layout-padding-multiplier: 4;
   --layout-gutter-multiplier: 4;
-  --layout-animation-speed-fast: 0.2s;
-  --layout-animation-speed-medium: 0.4s;
-  --layout-animation-speed-slow: 0.6s;
+  --layout-transition-speed-fast: 0.2s;
+  --layout-transition-speed-medium: 0.4s;
+  --layout-transition-speed-slow: 0.6s;
   --layout-shadow-small: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
   --layout-shadow-medium: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
   --layout-shadow-large: 0 3px 6px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.2);

@@ -6,7 +6,7 @@
   width: 100%;
   height: 80vh;
   transform: translateY(calc(-100% - 2em));
-  transition: transform var(--layout-animation-speed-fast) ease-in-out;
+  transition: transform var(--layout-transition-speed-fast) ease-in-out;
   z-index: var(--z-index-menu);
   pointer-events: none;
 }
@@ -28,7 +28,7 @@
   overflow-y: auto;
   pointer-events: all;
   opacity: 1;
-  transition: background-color var(--layout-animation-speed-fast) ease-in-out, opacity var(--layout-animation-speed-fast) ease-in-out;
+  transition: background-color var(--layout-transition-speed-fast) ease-in-out, opacity var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .is-edge .menu-area {
