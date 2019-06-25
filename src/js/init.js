@@ -18,3 +18,4 @@ search.init();
 title.init();
 header.init();
 theme.init();
+version.init();

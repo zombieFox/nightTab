@@ -1,6 +1,6 @@
 var version = (function() {
 
-  var current = "3.22.0";
+  var current = "3.23.0";
 
   var compare = function(a, b) {
     var pa = a.split(".");
@@ -29,10 +29,20 @@ var version = (function() {
     return current;
   };
 
+  var render = function() {
+    helper.e(".display-version").textContent = get();
+  };
+
+  var init = function() {
+    render();
+  };
+
   // exposed methods
   return {
+    init: init,
     get: get,
-    compare: compare
+    compare: compare,
+    render: render
   };
 
 })();

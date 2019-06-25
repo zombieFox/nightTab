@@ -45,13 +45,17 @@ h6 {
 }
 
 p {
-  color: rgb(var(--theme-style-text));
+  color: rgb(var(--theme-gray-16));
   margin: 0;
   line-height: 1.5;
 }
 
 p:not(:last-child) {
   margin-bottom: 0.5em;
+}
+
+.p-wrap {
+  padding: 0.5em 0;
 }
 
 hr {
@@ -65,6 +69,7 @@ hr {
 b,
 caption,
 strong {
+  color: rgb(var(--theme-style-text));
   font-family: var(--font-bold);
 }
 
@@ -75,7 +80,7 @@ a {
 
 a:link,
 a:visited {
-  color: rgb(var(--theme-gray-16));
+  color: rgb(var(--theme-gray-18));
 }
 
 a:focus {
@@ -90,6 +95,19 @@ a:hover {
 
 a:active {
   color: rgb(var(--theme-style-text));
+}
+
+.a-underline {
+  padding-bottom: var(--layout-line-width);
+  border-bottom-width: calc(var(--layout-line-width) / 2);
+  border-bottom-style: solid;
+  border-bottom-color: rgb(var(--theme-gray-06));
+  transition: color var(--layout-animation-speed-fast), border-color var(--layout-animation-speed-fast);
+}
+
+.a-underline:hover {
+  text-decoration: none;
+  border-bottom-color: rgb(var(--theme-accent));
 }
 
 ol,

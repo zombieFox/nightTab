@@ -96,11 +96,9 @@
 .menu-nav-button {
   background-color: transparent;
   margin: 0;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
   border-radius: 0;
   flex-grow: 1;
-  flex-basis: 33%;
 }
 
 .menu-nav-button:first-child {
@@ -117,6 +115,11 @@
 @media (min-width: 550px) {
   .menu {
     width: 80vw;
+  }
+
+  .menu-nav-button {
+    flex-basis: 33%;
+    max-width: 33%;
   }
 }
 
@@ -157,6 +160,11 @@
     z-index: 3;
   }
 
+  .menu-nav-button {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+
   .menu-item-form {
     padding: 2em 0;
     z-index: 2;
@@ -171,11 +179,17 @@
   .menu-item {
     grid-template-columns: 1fr 2fr;
   }
+
+  .menu-nav-button {
+    flex-basis: 33%;
+    max-width: 33%;
+  }
 }
 
 @media (min-width: 1100px) {
   .menu-nav-button {
     flex-basis: 0;
+    max-width: inherit;
   }
 }
 
