@@ -81,28 +81,35 @@ var header = (function() {
     var scrollTop = document.documentElement.scrollTop;
     var scrollHeight = document.documentElement.scrollHeight;
     var innerHeight = window.innerHeight;
+    // if shade show
     if (state.get().header.shade.show) {
+      // shade always
       if (state.get().header.shade.style == "always") {
-        html.style.setProperty("--header-shade-color", "var(--theme-gray-01)");
+        helper.removeClass(html, "is-header-shade-style-scroll");
+        helper.addClass(html, "is-header-shade-style-always");
+        // shade scroll
       } else if (state.get().header.shade.style == "scroll") {
+        helper.removeClass(html, "is-header-shade-style-always");
+        // check header position
         if (state.get().layout.order == "headerLink") {
+          // check scroll position
           if (scrollTop > fontSize * 2) {
-            html.style.setProperty("--header-shade-color", "var(--theme-gray-01)");
+            helper.addClass(html, "is-header-shade-style-scroll");
           } else {
-            html.style.setProperty("--header-shade-color", "transparent");
+            helper.removeClass(html, "is-header-shade-style-scroll");
           };
         } else if (state.get().layout.order == "linkHeader") {
+          // check scroll position
           if (scrollTop < (scrollHeight - innerHeight) - (fontSize * 2)) {
-            html.style.setProperty("--header-shade-color", "var(--theme-gray-01)");
+            helper.addClass(html, "is-header-shade-style-scroll");
           } else {
-            html.style.setProperty("--header-shade-color", "transparent");
+            helper.removeClass(html, "is-header-shade-style-scroll");
           };
         };
-      } else {
-        html.style.setProperty("--header-shade-color", "transparent");
       };
     } else {
-      html.style.setProperty("--header-shade-color", "transparent");
+      helper.removeClass(html, "is-header-shade-style-scroll");
+      helper.removeClass(html, "is-header-shade-style-always");
     };
   };
 

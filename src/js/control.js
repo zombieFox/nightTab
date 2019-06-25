@@ -2320,11 +2320,8 @@ var control = (function() {
       };
       var _shade = function() {
         helper.removeClass(html, "is-header-shade-show");
-        helper.removeClass(html, "is-header-shade-style-always");
-        helper.removeClass(html, "is-header-shade-style-scroll");
         if (state.get().header.shade.show) {
           helper.addClass(html, "is-header-shade-show");
-          helper.addClass(html, "is-header-shade-style-" + state.get().header.shade.style);
         };
         if (state.get().header.radius) {
           helper.addClass(html, "is-header-radius");
