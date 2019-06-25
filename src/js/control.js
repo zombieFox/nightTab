@@ -314,6 +314,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
+      header.render.shade();
     }
   }, {
     element: helper.e(".control-header-area-width"),
