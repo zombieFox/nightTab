@@ -19,8 +19,15 @@
 
 .is-link-show .header {
   position: sticky;
-  top: 0;
   left: 0;
+}
+
+.is-layout-order-headerLink.is-link-show .header {
+  top: 0;
+}
+
+.is-layout-order-linkHeader.is-link-show .header {
+  bottom: 0;
 }
 
 .header-shade {

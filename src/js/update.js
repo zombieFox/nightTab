@@ -566,6 +566,12 @@ var update = (function() {
     return data;
   };
 
+  var _update_3210 = function(data) {
+    data.version = "3.21.0";
+    data.state.layout.order = "headerLink";
+    return data;
+  };
+
   // var _update_300 = function(data) {
   //   data.version = 3.00;
   //   return data;
@@ -707,6 +713,10 @@ var update = (function() {
       if (version.compare(data.version, "3.20.0") == -1) {
         console.log("\t= running update 3.20.0");
         data = _update_3200(data);
+      };
+      if (version.compare(data.version, "3.21.0") == -1) {
+        console.log("\t= running update 3.21.0");
+        data = _update_3210(data);
       };
     };
     // if no update is needed
