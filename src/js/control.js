@@ -38,14 +38,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
         });
       }
     }, {
@@ -63,7 +63,7 @@ var control = (function() {
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
           edge.render({
-            element: helper.e(".main"),
+            element: helper.e(".layout"),
           });
         };
       }
@@ -85,7 +85,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
           delay: 500
         });
       }
@@ -101,7 +101,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
           delay: 500
         });
       }
@@ -117,7 +117,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
           delay: 500
         });
       }
@@ -133,7 +133,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
           delay: 500
         });
       }
@@ -149,7 +149,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
           delay: 500
         });
       }
@@ -165,12 +165,48 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
           delay: 500
         });
       }
     }],
     func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-order-headerLink"),
+    path: "layout.order",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".layout"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      layout.render.order();
+      header.render.shade();
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-order-linkHeader"),
+    path: "layout.order",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.render({
+          element: helper.e(".layout"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      layout.render.order();
+      header.render.shade();
       render();
     }
   }, {
@@ -181,14 +217,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
         });
       }
     }, {
@@ -206,7 +242,7 @@ var control = (function() {
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
           edge.render({
-            element: helper.e(".main"),
+            element: helper.e(".layout"),
           });
         };
       }
@@ -227,14 +263,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.render({
-          element: helper.e(".main"),
+          element: helper.e(".layout"),
         });
       }
     }, {
@@ -252,7 +288,7 @@ var control = (function() {
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
           edge.render({
-            element: helper.e(".main"),
+            element: helper.e(".layout"),
           });
         };
       }
@@ -278,6 +314,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
+      header.render.shade();
     }
   }, {
     element: helper.e(".control-header-area-width"),
@@ -2375,8 +2412,11 @@ var control = (function() {
       helper.removeClass(html, "is-layout-alignment-vertical-top");
       helper.removeClass(html, "is-layout-alignment-vertical-center");
       helper.removeClass(html, "is-layout-alignment-vertical-bottom");
+      helper.removeClass(html, "is-layout-order-headerLink");
+      helper.removeClass(html, "is-layout-order-linkHeader");
       helper.addClass(html, "is-layout-alignment-horizontal-" + state.get().layout.alignment.horizontal);
       helper.addClass(html, "is-layout-alignment-vertical-" + state.get().layout.alignment.vertical);
+      helper.addClass(html, "is-layout-order-" + state.get().layout.order);
       if (state.get().layout.scrollPastEnd) {
         helper.addClass(html, "is-layout-scroll-past-end");
       };
@@ -2686,6 +2726,8 @@ var control = (function() {
       };
     };
     var _link = function() {
+      helper.e(".control-layout-order-headerLink").disabled = true;
+      helper.e(".control-layout-order-linkHeader").disabled = true;
       helper.e("[for=control-link-area-width]").setAttribute("disabled", "");
       helper.e(".control-link-area-width").disabled = true;
       helper.e(".control-link-area-width-match").disabled = true;
@@ -2725,6 +2767,8 @@ var control = (function() {
       helper.e(".control-link-sort-letter").disabled = true;
       helper.e(".control-link-sort-icon").disabled = true;
       if (state.get().link.show) {
+        helper.e(".control-layout-order-headerLink").disabled = false;
+        helper.e(".control-layout-order-linkHeader").disabled = false;
         helper.e("[for=control-link-area-width]").removeAttribute("disabled");
         helper.e(".control-link-area-width").disabled = false;
         helper.e(".control-link-area-width-match").disabled = false;

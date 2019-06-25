@@ -171,6 +171,7 @@ var state = (function() {
         horizontal: "center",
         vertical: "center"
       },
+      order: "headerLink",
       padding: 4,
       gutter: 2,
       width: 80,

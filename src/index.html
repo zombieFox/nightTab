@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/edge.css">
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/fonts.css">
@@ -43,7 +43,7 @@
     <div class="background-accent"></div>
   </div>
 
-  <main class="main">
+  <main class="layout">
 
     <header class="header">
       <div class="header-shade"></div>
@@ -162,6 +162,21 @@
                 <label for="control-layout-alignment-vertical-bottom">Bottom</label>
               </div>
               <p class="input-helper small muted">Effects may not be visible if Bookmarks fill the page.</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Area order</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap">
+                <input id="control-layout-order-headerLink" class="control-layout-order-headerLink" type="radio" name="control-layout-order" value="headerLink" tabindex="1">
+                <label for="control-layout-order-headerLink">Header then Bookmarks</label>
+              </div>
+              <div class="input-wrap">
+                <input id="control-layout-order-linkHeader" class="control-layout-order-linkHeader" type="radio" name="control-layout-order" value="linkHeader" tabindex="1">
+                <label for="control-layout-order-linkHeader">Bookmarks then Header</label>
+              </div>
             </div>
           </div>
           <div class="menu-item">

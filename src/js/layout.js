@@ -9,6 +9,9 @@ var layout = (function() {
     },
     gutter: function() {
       _renderGutter();
+    },
+    order: function() {
+      _renderOrder();
     }
   };
 
@@ -27,10 +30,23 @@ var layout = (function() {
     html.style.setProperty("--layout-gutter-multiplier", state.get().layout.gutter);
   };
 
+  var _renderOrder = function() {
+    var html = helper.e("html");
+    var layout = helper.e(".layout");
+    var header = helper.e(".header");
+    var link = helper.e(".link");
+    if (state.get().layout.order == "headerLink") {
+      layout.insertBefore(header, link);
+    } else if (state.get().layout.order == "linkHeader") {
+      layout.insertBefore(link, header);
+    };
+  };
+
   var init = function() {
     render.width();
     render.padding();
     render.gutter();
+    render.order();
   };
 
   // exposed methods

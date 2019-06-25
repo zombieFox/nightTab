@@ -78,15 +78,25 @@ var header = (function() {
   var _renderShade = function() {
     var html = helper.e("html");
     var fontSize = parseInt(getComputedStyle(html).fontSize, 10);
-    var scrollPosition = document.documentElement.scrollTop;
+    var scrollTop = document.documentElement.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight;
+    var innerHeight = window.innerHeight;
     if (state.get().header.shade.show) {
       if (state.get().header.shade.style == "always") {
         html.style.setProperty("--header-shade-color", "var(--theme-gray-01)");
       } else if (state.get().header.shade.style == "scroll") {
-        if (scrollPosition > (fontSize * 2)) {
-          html.style.setProperty("--header-shade-color", "var(--theme-gray-01)");
-        } else {
-          html.style.setProperty("--header-shade-color", "transparent");
+        if (state.get().layout.order == "headerLink") {
+          if (scrollTop > fontSize * 2) {
+            html.style.setProperty("--header-shade-color", "var(--theme-gray-01)");
+          } else {
+            html.style.setProperty("--header-shade-color", "transparent");
+          };
+        } else if (state.get().layout.order == "linkHeader") {
+          if (scrollTop < (scrollHeight - innerHeight) - (fontSize * 2)) {
+            html.style.setProperty("--header-shade-color", "var(--theme-gray-01)");
+          } else {
+            html.style.setProperty("--header-shade-color", "transparent");
+          };
         };
       } else {
         html.style.setProperty("--header-shade-color", "transparent");
