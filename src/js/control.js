@@ -1973,6 +1973,24 @@ var control = (function() {
       sortable(".link-area");
     }
   }, {
+    element: helper.e(".control-link-accent-clear"),
+    type: "button",
+    func: function() {
+      link.accent.clear();
+      link.clear();
+      link.render.item.all();
+      sortable(".link-area");
+    }
+  }, {
+    element: helper.e(".control-link-accent-set"),
+    type: "button",
+    func: function() {
+      link.accent.set();
+      link.clear();
+      link.render.item.all();
+      sortable(".link-area");
+    }
+  }, {
     element: helper.e(".control-theme-style-dark"),
     path: "theme.style",
     type: "radio",

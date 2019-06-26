@@ -683,6 +683,34 @@ var link = (function() {
     };
   };
 
+  var accent = {
+    set: function() {
+      var units = 360 / bookmarks.get().length;
+      var degree = 0;
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.accent.override = true;
+        arrayItem.accent.color = helper.hslToRgb({
+          h: degree,
+          s: 1,
+          l: 0.5
+        });
+        degree = degree + units;
+      });
+    },
+    clear: function() {
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.accent = {
+          override: false,
+          color: {
+            r: null,
+            g: null,
+            b: null
+          }
+        };
+      });
+    }
+  };
+
   var init = function() {
     render.area.width();
     render.item.all();
@@ -697,6 +725,7 @@ var link = (function() {
   return {
     stagedBookmarkData: stagedBookmarkData,
     autoSuggestIconAction: autoSuggestIconAction,
+    accent: accent,
     init: init,
     clear: clear,
     add: add,
