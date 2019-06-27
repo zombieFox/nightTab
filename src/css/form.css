@@ -758,38 +758,42 @@ input[type="range"][disabled]~.input-helper {
 }
 
 /* form variants */
-.form-grid {
+.form-grid-wrap {
   padding: 0.5em 0;
-  /* margin: 0.5em 0; */
-  /* padding: calc(var(--layout-line-width) * 2); */
+  position: relative;
+  width: 100%;
+}
+
+.form-grid {
+  padding: calc(var(--layout-line-width) * 2);
   display: grid;
-  grid-gap: calc(var(--layout-line-width) * 2);
-  /* border-radius: calc(var(--layout-line-width) * 4); */
-  /* border-width: calc(var(--layout-line-width) / 2); */
-  /* border-style: solid; */
-  /* border-color: rgb(var(--form-checkbox-radio-label)); */
+  border-radius: calc(var(--layout-line-width) * 6);
+  border-width: var(--layout-line-width);
+  border-style: solid;
+  border-color: rgb(var(--form-checkbox-radio-label));
   transition: all var(--layout-transition-speed-fast) ease-in-out;
 }
 
-/* .form-grid:focus-within {
+.form-grid:focus,
+.form-grid:focus-within {
+  outline: 0;
   border-color: rgb(var(--theme-style-text));
-} */
+}
 
 .form-grid-x3-y3 {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  width: 14vw;
-  height: 14vh;
-  min-width: 4em;
-  min-height: 4em;
+  width: 12vw;
+  height: 12vh;
+  min-width: 5em;
+  min-height: 5em;
 }
 
 .form-grid-x3-y1 {
   grid-template-columns: repeat(3, 1fr);
-  width: 14vw;
-  height: calc(14vh / 3);
-  min-width: 4em;
-  min-height: 4em;
+  width: 12vw;
+  height: 2.5em;
+  min-width: 5em;
 }
 
 .form-grid .input-wrap {
@@ -801,36 +805,23 @@ input[type="range"][disabled]~.input-helper {
   display: block;
   width: 100%;
   height: 100%;
-  transition: all var(--layout-animation-speed-fast) ease-in-out;
-  border-width: var(--layout-line-width);
+  border-width: calc(var(--layout-line-width) / 2);
   border-style: solid;
-  border-color: rgb(var(--form-checkbox-radio-label));
-  /* border-radius: 0.5em; */
-}
-
-.form-grid input[type="checkbox"]+label:before,
-.form-grid input[type="radio"]+label:before {
-  content: "";
-  margin-right: 0;
-  font-size: 1em;
-  width: 100%;
-  height: 100%;
-  display: block;
+  border-color: transparent;
+  position: relative;
+  transition: none;
 }
 
 .form-grid input[type="checkbox"]:focus+label,
 .form-grid input[type="checkbox"]:hover+label,
 .form-grid input[type="radio"]:focus+label,
 .form-grid input[type="radio"]:hover+label {
-  border-width: var(--layout-line-width);
-  border-style: solid;
   border-color: rgb(var(--theme-style-text));
 }
 
 .form-grid input[type="checkbox"]:active+label,
 .form-grid input[type="radio"]:active+label {
   border-color: rgb(var(--theme-accent));
-  transform: scale(0.9);
 }
 
 .form-grid input[type="checkbox"]:checked+label,
@@ -842,140 +833,120 @@ input[type="range"][disabled]~.input-helper {
 .form-grid input[type="checkbox"]:not([disabled]):focus:checked+label,
 .form-grid input[type="radio"]:not([disabled]):hover:checked+label,
 .form-grid input[type="radio"]:not([disabled]):focus:checked+label {
-  color: rgb(var(--theme-style-text));
-}
-
-.form-grid input[type="checkbox"][disabled]+label,
-.form-grid input[type="radio"][disabled]+label {
-  color: rgb(var(--form-checkbox-radio-disabled-label));
-  cursor: default;
-}
-
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(1) input[type="checkbox"]+label,
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(1) input[type="radio"]+label {
-  border-top-left-radius: calc(var(--layout-line-width) * 4);
-}
-
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(3) input[type="checkbox"]+label,
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(3) input[type="radio"]+label {
-  border-top-right-radius: calc(var(--layout-line-width) * 4);
-}
-
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(7) input[type="checkbox"]+label,
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(7) input[type="radio"]+label {
-  border-bottom-left-radius: calc(var(--layout-line-width) * 4);
-}
-
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(9) input[type="checkbox"]+label,
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(9) input[type="radio"]+label {
-  border-bottom-right-radius: calc(var(--layout-line-width) * 4);
-}
-
-.form-grid.form-grid-x3-y1 .input-wrap:nth-child(1) input[type="checkbox"]+label,
-.form-grid.form-grid-x3-y1 .input-wrap:nth-child(1) input[type="radio"]+label {
-  border-top-left-radius: calc(var(--layout-line-width) * 4);
-  border-bottom-left-radius: calc(var(--layout-line-width) * 4);
-}
-
-.form-grid.form-grid-x3-y1 .input-wrap:nth-child(3) input[type="checkbox"]+label,
-.form-grid.form-grid-x3-y1 .input-wrap:nth-child(3) input[type="radio"]+label {
-  border-top-right-radius: calc(var(--layout-line-width) * 4);
-  border-bottom-right-radius: calc(var(--layout-line-width) * 4);
-}
-
-/* .form-grid input[type="checkbox"]+label,
-.form-grid input[type="radio"]+label {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
+  border-color: rgb(var(--theme-accent));
 }
 
 .form-grid input[type="checkbox"]+label:before,
 .form-grid input[type="radio"]+label:before {
   content: "";
+  margin-right: 0;
   font-size: 1em;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+  /* margin: var(--layout-line-width); */
+  width: inherit;
+  height: inherit;
+  width: calc(100% - calc(var(--layout-line-width) * 4));
+  height: calc(100% - calc(var(--layout-line-width) * 4));
+  position: absolute;
+  top: calc(var(--layout-line-width) * 2);
+  left: calc(var(--layout-line-width) * 2);
   display: block;
-  border-width: calc(var(--layout-line-width) / 2);
-  border-style: solid;
-  border-color: rgb(var(--form-checkbox-radio-label));
+  transform: scale(1);
+  transition: transform 0.05s ease-in-out;
 }
 
 .form-grid input[type="checkbox"]:focus+label:before,
 .form-grid input[type="checkbox"]:hover+label:before,
 .form-grid input[type="radio"]:focus+label:before,
 .form-grid input[type="radio"]:hover+label:before {
-  border: calc(var(--layout-line-width) / 2) solid rgb(var(--theme-style-text));
+  transform: scale(1);
 }
-
-.form-grid input[type="checkbox"]:active+label:before,
-.form-grid input[type="radio"]:active+label:before {
-  color: rgb(var(--theme-style-text));
-}
-
-.form-grid input[type="checkbox"]:focus+label:before,
-.form-grid input[type="radio"]:focus+label:before {}
 
 .form-grid input[type="checkbox"]:checked+label:before,
 .form-grid input[type="radio"]:checked+label:before {
-  border: calc(var(--layout-line-width) / 2) solid rgb(var(--theme-accent));
+  background-color: rgb(var(--theme-accent));
+  transform: scale(1);
 }
 
-.form-grid input[type="checkbox"]+label:after,
-.form-grid input[type="radio"]+label:after {
-  content: "";
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  width: calc(100% - calc(var(--layout-line-width) * 4));
-  height: calc(100% - calc(var(--layout-line-width) * 4));
-  top: 50%;
-  left: 50%;
-  display: block;
-  transform: translate(-50%, -50%);
-}
-
-.form-grid input[type="checkbox"]:checked+label:after,
-.form-grid input[type="radio"]:checked+label:after {
+.form-grid input[type="checkbox"]:checked+label:before,
+.form-grid input[type="radio"]:checked+label:before {
   background-color: rgb(var(--theme-accent));
 }
 
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(1) input[type="checkbox"]+label:after,
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(1) input[type="radio"]+label:after {
-  border-top-left-radius: calc(1em - calc(var(--layout-line-width) * 4));
+.form-grid input[type="checkbox"][disabled]+label,
+.form-grid input[type="radio"][disabled]+label {
+  border-color: rgb(var(--form-checkbox-radio-disabled-label));
+  transform: scale(1);
 }
 
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(3) input[type="checkbox"]+label:after,
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(3) input[type="radio"]+label:after {
-  border-top-right-radius: calc(1em - calc(var(--layout-line-width) * 4));
+.form-grid input[type="checkbox"][disabled]+label:before,
+.form-grid input[type="radio"][disabled]+label:before {
+  background-color: rgb(var(--form-checkbox-radio-disabled-label));
 }
 
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(7) input[type="checkbox"]+label:after,
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(7) input[type="radio"]+label:after {
-  border-bottom-left-radius: calc(1em - calc(var(--layout-line-width) * 4));
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(1) input[type="checkbox"]+label,
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(1) input[type="radio"]+label {
+  border-top-left-radius: calc(var(--layout-line-width) * 3);
 }
 
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(9) input[type="checkbox"]+label:after,
-.form-grid.form-grid-x3-y3 .input-wrap:nth-child(9) input[type="radio"]+label:after {
-  border-bottom-right-radius: calc(1em - calc(var(--layout-line-width) * 4));
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(1) input[type="checkbox"]+label:before,
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(1) input[type="radio"]+label:before {
+  border-top-left-radius: calc(var(--layout-line-width) * 1);
 }
 
-.form-grid.form-grid-x3-y1 .input-wrap:nth-child(1) input[type="checkbox"]+label:after,
-.form-grid.form-grid-x3-y1 .input-wrap:nth-child(1) input[type="radio"]+label:after {
-  border-top-left-radius: calc(1em - calc(var(--layout-line-width) * 4));
-  border-bottom-left-radius: calc(1em - calc(var(--layout-line-width) * 4));
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(3) input[type="checkbox"]+label,
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(3) input[type="radio"]+label {
+  border-top-right-radius: calc(var(--layout-line-width) * 3);
 }
 
-.form-grid.form-grid-x3-y1 .input-wrap:nth-child(3) input[type="checkbox"]+label:after,
-.form-grid.form-grid-x3-y1 .input-wrap:nth-child(3) input[type="radio"]+label:after {
-  border-top-right-radius: calc(1em - calc(var(--layout-line-width) * 4));
-  border-bottom-right-radius: calc(1em - calc(var(--layout-line-width) * 4));
-} */
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(3) input[type="checkbox"]+label:before,
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(3) input[type="radio"]+label:before {
+  border-top-right-radius: calc(var(--layout-line-width) * 1);
+}
+
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(7) input[type="checkbox"]+label,
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(7) input[type="radio"]+label {
+  border-bottom-left-radius: calc(var(--layout-line-width) * 3);
+}
+
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(7) input[type="checkbox"]+label:before,
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(7) input[type="radio"]+label:before {
+  border-bottom-left-radius: calc(var(--layout-line-width) * 1);
+}
+
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(9) input[type="checkbox"]+label,
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(9) input[type="radio"]+label {
+  border-bottom-right-radius: calc(var(--layout-line-width) * 3);
+}
+
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(9) input[type="checkbox"]+label:before,
+.form-grid.form-grid-x3-y3 .input-wrap:nth-child(9) input[type="radio"]+label:before {
+  border-bottom-right-radius: calc(var(--layout-line-width) * 1);
+}
+
+.form-grid.form-grid-x3-y1 .input-wrap:nth-child(1) input[type="checkbox"]+label,
+.form-grid.form-grid-x3-y1 .input-wrap:nth-child(1) input[type="radio"]+label {
+  border-top-left-radius: calc(var(--layout-line-width) * 3);
+  border-bottom-left-radius: calc(var(--layout-line-width) * 3);
+}
+
+.form-grid.form-grid-x3-y1 .input-wrap:nth-child(1) input[type="checkbox"]+label:before,
+.form-grid.form-grid-x3-y1 .input-wrap:nth-child(1) input[type="radio"]+label:before {
+  border-top-left-radius: calc(var(--layout-line-width) * 1);
+  border-bottom-left-radius: calc(var(--layout-line-width) * 1);
+}
+
+.form-grid.form-grid-x3-y1 .input-wrap:nth-child(3) input[type="checkbox"]+label,
+.form-grid.form-grid-x3-y1 .input-wrap:nth-child(3) input[type="radio"]+label {
+  border-top-right-radius: calc(var(--layout-line-width) * 3);
+  border-bottom-right-radius: calc(var(--layout-line-width) * 3);
+}
+
+.form-grid.form-grid-x3-y1 .input-wrap:nth-child(3) input[type="checkbox"]+label:before,
+.form-grid.form-grid-x3-y1 .input-wrap:nth-child(3) input[type="radio"]+label:before {
+  border-top-right-radius: calc(var(--layout-line-width) * 1);
+  border-bottom-right-radius: calc(var(--layout-line-width) * 1);
+}
+
 .form-indent {
   margin-left: 2.25em;
 }
