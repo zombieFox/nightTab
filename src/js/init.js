@@ -19,3 +19,5 @@ title.init();
 header.init();
 theme.init();
 version.init();
+
+menu.open();

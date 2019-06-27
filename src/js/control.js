@@ -78,98 +78,65 @@ var control = (function() {
       layout.render.width();
     }
   }, {
-    element: helper.e(".control-layout-alignment-horizontal-left"),
-    path: "layout.alignment.horizontal",
+    element: helper.e(".control-layout-alignment-topleft"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-alignment-horizontal-center"),
-    path: "layout.alignment.horizontal",
+    element: helper.e(".control-layout-alignment-topcenter"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-alignment-horizontal-right"),
-    path: "layout.alignment.horizontal",
+    element: helper.e(".control-layout-alignment-topright"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-alignment-vertical-top"),
-    path: "layout.alignment.vertical",
+    element: helper.e(".control-layout-alignment-centerleft"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-alignment-vertical-center"),
-    path: "layout.alignment.vertical",
+    element: helper.e(".control-layout-alignment-centercenter"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-alignment-vertical-bottom"),
-    path: "layout.alignment.vertical",
+    element: helper.e(".control-layout-alignment-centerright"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-bottomleft"),
+    path: "layout.alignment",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-bottomcenter"),
+    path: "layout.alignment",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-bottomright"),
+    path: "layout.alignment",
+    type: "radio",
     func: function() {
       render();
     }
@@ -2421,17 +2388,16 @@ var control = (function() {
     };
     var _layout = function() {
       helper.removeClass(html, "is-layout-scroll-past-end");
-      helper.removeClass(html, "is-layout-alignment-horizontal-left");
-      helper.removeClass(html, "is-layout-alignment-horizontal-center");
-      helper.removeClass(html, "is-layout-alignment-horizontal-right");
-      helper.removeClass(html, "is-layout-alignment-vertical-top");
-      helper.removeClass(html, "is-layout-alignment-vertical-center");
-      helper.removeClass(html, "is-layout-alignment-vertical-bottom");
-      helper.removeClass(html, "is-layout-order-headerLink");
-      helper.removeClass(html, "is-layout-order-linkHeader");
-      helper.addClass(html, "is-layout-alignment-horizontal-" + state.get().layout.alignment.horizontal);
-      helper.addClass(html, "is-layout-alignment-vertical-" + state.get().layout.alignment.vertical);
-      helper.addClass(html, "is-layout-order-" + state.get().layout.order);
+      helper.removeClass(html, "is-layout-alignment-topleft");
+      helper.removeClass(html, "is-layout-alignment-topcenter");
+      helper.removeClass(html, "is-layout-alignment-topright");
+      helper.removeClass(html, "is-layout-alignment-centerleft");
+      helper.removeClass(html, "is-layout-alignment-centercenter");
+      helper.removeClass(html, "is-layout-alignment-centerright");
+      helper.removeClass(html, "is-layout-alignment-bottomleft");
+      helper.removeClass(html, "is-layout-alignment-bottomcenter");
+      helper.removeClass(html, "is-layout-alignment-bottomright");
+      helper.addClass(html, "is-layout-alignment-" + state.get().layout.alignment);
       if (state.get().layout.scrollPastEnd) {
         helper.addClass(html, "is-layout-scroll-past-end");
       };

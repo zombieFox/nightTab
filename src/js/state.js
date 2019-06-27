@@ -167,10 +167,7 @@ var state = (function() {
       style: "block"
     },
     layout: {
-      alignment: {
-        horizontal: "center",
-        vertical: "center"
-      },
+      alignment: "centercenter",
       order: "headerLink",
       padding: 4,
       gutter: 2,
