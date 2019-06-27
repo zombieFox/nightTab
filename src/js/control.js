@@ -1848,43 +1848,64 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-horizontal-left"),
-    path: "link.item.display.alignment.horizontal",
+    element: helper.e(".control-link-item-display-alignment-topleft"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-horizontal-center"),
-    path: "link.item.display.alignment.horizontal",
+    element: helper.e(".control-link-item-display-alignment-topcenter"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-horizontal-right"),
-    path: "link.item.display.alignment.horizontal",
+    element: helper.e(".control-link-item-display-alignment-topright"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-vertical-top"),
-    path: "link.item.display.alignment.vertical",
+    element: helper.e(".control-link-item-display-alignment-centerleft"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-vertical-center"),
-    path: "link.item.display.alignment.vertical",
+    element: helper.e(".control-link-item-display-alignment-centercenter"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-vertical-bottom"),
-    path: "link.item.display.alignment.vertical",
+    element: helper.e(".control-link-item-display-alignment-centerright"),
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-alignment-bottomleft"),
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-alignment-bottomcenter"),
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-alignment-bottomright"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
@@ -2343,12 +2364,15 @@ var control = (function() {
       helper.removeClass(html, "is-link-area-alignment-horizontal-right");
       helper.removeClass(html, "is-link-name-show");
       helper.removeClass(html, "is-link-display-show");
-      helper.removeClass(html, "is-link-display-alignment-horizontal-left");
-      helper.removeClass(html, "is-link-display-alignment-horizontal-center");
-      helper.removeClass(html, "is-link-display-alignment-horizontal-right");
-      helper.removeClass(html, "is-link-display-alignment-vertical-top");
-      helper.removeClass(html, "is-link-display-alignment-vertical-center");
-      helper.removeClass(html, "is-link-display-alignment-vertical-bottom");
+      helper.removeClass(html, "is-link-display-alignment-topleft");
+      helper.removeClass(html, "is-link-display-alignment-topcenter");
+      helper.removeClass(html, "is-link-display-alignment-topright");
+      helper.removeClass(html, "is-link-display-alignment-centerleft");
+      helper.removeClass(html, "is-link-display-alignment-centercenter");
+      helper.removeClass(html, "is-link-display-alignment-centerright");
+      helper.removeClass(html, "is-link-display-alignment-bottomleft");
+      helper.removeClass(html, "is-link-display-alignment-bottomcenter");
+      helper.removeClass(html, "is-link-display-alignment-bottomright");
       helper.removeClass(html, "is-link-url-show");
       helper.removeClass(html, "is-link-item-line");
       helper.removeClass(html, "is-link-item-hover-scale");
@@ -2362,8 +2386,7 @@ var control = (function() {
       if (state.get().link.show) {
         helper.addClass(html, "is-link-show");
         helper.addClass(html, "is-link-area-alignment-horizontal-" + state.get().link.area.alignment.horizontal);
-        helper.addClass(html, "is-link-display-alignment-horizontal-" + state.get().link.item.display.alignment.horizontal);
-        helper.addClass(html, "is-link-display-alignment-vertical-" + state.get().link.item.display.alignment.vertical);
+        helper.addClass(html, "is-link-display-alignment-" + state.get().link.item.display.alignment);
         helper.addClass(html, "is-link-style-" + state.get().link.style);
         if (state.get().link.item.name.show) {
           helper.addClass(html, "is-link-name-show");
@@ -2733,14 +2756,16 @@ var control = (function() {
       helper.e(".control-link-item-url-show").disabled = true;
       helper.e(".control-link-item-line").disabled = true;
       helper.e(".control-link-item-hover-scale").disabled = true;
-      helper.e(".control-link-item-display-alignment-horizontal-label").setAttribute("disabled", "");
-      helper.e(".control-link-item-display-alignment-horizontal-left").disabled = true;
-      helper.e(".control-link-item-display-alignment-horizontal-center").disabled = true;
-      helper.e(".control-link-item-display-alignment-horizontal-right").disabled = true;
-      helper.e(".control-link-item-display-alignment-vertical-label").setAttribute("disabled", "");
-      helper.e(".control-link-item-display-alignment-vertical-top").disabled = true;
-      helper.e(".control-link-item-display-alignment-vertical-center").disabled = true;
-      helper.e(".control-link-item-display-alignment-vertical-bottom").disabled = true;
+      helper.e(".control-link-item-display-alignment-label").setAttribute("disabled", "");
+      helper.e(".control-link-item-display-alignment-topleft").disabled = true;
+      helper.e(".control-link-item-display-alignment-topcenter").disabled = true;
+      helper.e(".control-link-item-display-alignment-topright").disabled = true;
+      helper.e(".control-link-item-display-alignment-centerleft").disabled = true;
+      helper.e(".control-link-item-display-alignment-centercenter").disabled = true;
+      helper.e(".control-link-item-display-alignment-centerright").disabled = true;
+      helper.e(".control-link-item-display-alignment-bottomleft").disabled = true;
+      helper.e(".control-link-item-display-alignment-bottomcenter").disabled = true;
+      helper.e(".control-link-item-display-alignment-bottomright").disabled = true;
       helper.e(".control-link-new-tab").disabled = true;
       helper.e(".control-link-style-block").disabled = true;
       helper.e(".control-link-style-list").disabled = true;
@@ -2784,15 +2809,17 @@ var control = (function() {
           helper.e(".control-link-item-name-size").disabled = false;
           helper.e(".control-link-item-name-size-default").disabled = false;
         };
-        if (state.get().link.item.display.show || state.get().link.item.name.show || state.get().link.item.url) {
-          helper.e(".control-link-item-display-alignment-horizontal-label").removeAttribute("disabled");
-          helper.e(".control-link-item-display-alignment-horizontal-left").disabled = false;
-          helper.e(".control-link-item-display-alignment-horizontal-center").disabled = false;
-          helper.e(".control-link-item-display-alignment-horizontal-right").disabled = false;
-          helper.e(".control-link-item-display-alignment-vertical-label").removeAttribute("disabled");
-          helper.e(".control-link-item-display-alignment-vertical-top").disabled = false;
-          helper.e(".control-link-item-display-alignment-vertical-center").disabled = false;
-          helper.e(".control-link-item-display-alignment-vertical-bottom").disabled = false;
+        if (state.get().link.item.display.show || state.get().link.item.name.show) {
+          helper.e(".control-link-item-display-alignment-label").removeAttribute("disabled");
+          helper.e(".control-link-item-display-alignment-topleft").disabled = false;
+          helper.e(".control-link-item-display-alignment-topcenter").disabled = false;
+          helper.e(".control-link-item-display-alignment-topright").disabled = false;
+          helper.e(".control-link-item-display-alignment-centerleft").disabled = false;
+          helper.e(".control-link-item-display-alignment-centercenter").disabled = false;
+          helper.e(".control-link-item-display-alignment-centerright").disabled = false;
+          helper.e(".control-link-item-display-alignment-bottomleft").disabled = false;
+          helper.e(".control-link-item-display-alignment-bottomcenter").disabled = false;
+          helper.e(".control-link-item-display-alignment-bottomright").disabled = false;
         };
       };
     };

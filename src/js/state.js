@@ -141,10 +141,7 @@ var state = (function() {
         display: {
           show: true,
           size: 2,
-          alignment: {
-            horizontal: "center",
-            vertical: "center"
-          },
+          alignment: "centercenter",
           letter: {
             size: 3
           },
