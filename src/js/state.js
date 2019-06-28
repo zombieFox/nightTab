@@ -4,14 +4,10 @@ var state = (function() {
     header: {
       area: {
         width: 100,
-        alignment: {
-          horizontal: "center"
-        }
+        alignment: "center"
       },
       item: {
-        alignment: {
-          horizontal: "left"
-        }
+        alignment: "left"
       },
       clock: {
         hours: {
@@ -94,7 +90,7 @@ var state = (function() {
           }
         },
         text: {
-          align: "center"
+          alignment: "center"
         },
         size: 1
       },
@@ -133,9 +129,7 @@ var state = (function() {
     link: {
       area: {
         width: 100,
-        alignment: {
-          horizontal: "center"
-        }
+        alignment: "center"
       },
       item: {
         display: {

@@ -86,15 +86,15 @@
   border-radius: calc(var(--theme-radius) * 4);
 }
 
-.is-header-search-text-align-left .header-search-input {
+.is-header-search-text-alignment-left .header-search-input {
   text-align: left;
 }
 
-.is-header-search-text-align-center .header-search-input {
+.is-header-search-text-alignment-center .header-search-input {
   text-align: center;
 }
 
-.is-header-search-text-align-right .header-search-input {
+.is-header-search-text-alignment-right .header-search-input {
   text-align: right;
 }
 
@@ -116,15 +116,15 @@
   align-items: stretch;
 }
 
-.is-header-item-alignment-horizontal-left .header-item-grid {
+.is-header-item-alignment-left .header-item-grid {
   justify-content: flex-start;
 }
 
-.is-header-item-alignment-horizontal-center .header-item-grid {
+.is-header-item-alignment-center .header-item-grid {
   justify-content: center;
 }
 
-.is-header-item-alignment-horizontal-right .header-item-grid {
+.is-header-item-alignment-right .header-item-grid {
   justify-content: flex-end;
 }
 
