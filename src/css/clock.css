@@ -53,9 +53,10 @@
   margin-right: 0.2em;
 }
 
-.is-header-item-alignment-horizontal-center .clock-item:not(:first-child),
-.is-header-item-alignment-horizontal-center .clock-item:not(:last-child) {
+.is-header-item-alignment-horizontal-center .clock-item:not(:first-child) {
   margin-left: 0.1em;
+}
+.is-header-item-alignment-horizontal-center .clock-item:not(:last-child) {
   margin-right: 0.1em;
 }
 

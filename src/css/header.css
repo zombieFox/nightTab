@@ -10,15 +10,15 @@
   pointer-events: all;
 }
 
-.is-header-area-alignment-horizontal-left .header {
+.is-header-area-alignment-left .header {
   justify-content: flex-start;
 }
 
-.is-header-area-alignment-horizontal-center .header {
+.is-header-area-alignment-center .header {
   justify-content: center;
 }
 
-.is-header-area-alignment-horizontal-right .header {
+.is-header-area-alignment-right .header {
   justify-content: flex-end;
 }
 
