@@ -2735,6 +2735,7 @@ var control = (function() {
       helper.e("[for=control-link-area-width]").setAttribute("disabled", "");
       helper.e(".control-link-area-width").disabled = true;
       helper.e(".control-link-area-width-match").disabled = true;
+      helper.e(".control-link-area-alignment-grid").setAttribute("disabled", "");
       helper.e(".control-link-area-alignment-label").setAttribute("disabled", "");
       helper.e(".control-link-area-alignment-left").disabled = true;
       helper.e(".control-link-area-alignment-center").disabled = true;
@@ -2756,6 +2757,7 @@ var control = (function() {
       helper.e(".control-link-item-url-show").disabled = true;
       helper.e(".control-link-item-line").disabled = true;
       helper.e(".control-link-item-hover-scale").disabled = true;
+      helper.e(".control-link-item-display-alignment-grid").setAttribute("disabled", "");
       helper.e(".control-link-item-display-alignment-label").setAttribute("disabled", "");
       helper.e(".control-link-item-display-alignment-topleft").disabled = true;
       helper.e(".control-link-item-display-alignment-topcenter").disabled = true;
@@ -2772,12 +2774,15 @@ var control = (function() {
       helper.e(".control-link-sort-name").disabled = true;
       helper.e(".control-link-sort-letter").disabled = true;
       helper.e(".control-link-sort-icon").disabled = true;
+      helper.e(".control-link-accent-clear").disabled = true;
+      helper.e(".control-link-accent-set").disabled = true;
       if (state.get().link.show) {
         helper.e(".control-layout-order-headerLink").disabled = false;
         helper.e(".control-layout-order-linkHeader").disabled = false;
         helper.e("[for=control-link-area-width]").removeAttribute("disabled");
         helper.e(".control-link-area-width").disabled = false;
         helper.e(".control-link-area-width-match").disabled = false;
+        helper.e(".control-link-area-alignment-grid").removeAttribute("disabled");
         helper.e(".control-link-area-alignment-label").removeAttribute("disabled");
         helper.e(".control-link-area-alignment-left").disabled = false;
         helper.e(".control-link-area-alignment-center").disabled = false;
@@ -2796,6 +2801,8 @@ var control = (function() {
         helper.e(".control-link-sort-name").disabled = false;
         helper.e(".control-link-sort-letter").disabled = false;
         helper.e(".control-link-sort-icon").disabled = false;
+        helper.e(".control-link-accent-clear").disabled = false;
+        helper.e(".control-link-accent-set").disabled = false;
         if (state.get().link.item.display.show) {
           helper.e("[for=control-link-item-display-letter-size]").removeAttribute("disabled");
           helper.e(".control-link-item-display-letter-size").disabled = false;
@@ -2810,6 +2817,7 @@ var control = (function() {
           helper.e(".control-link-item-name-size-default").disabled = false;
         };
         if (state.get().link.item.display.show || state.get().link.item.name.show) {
+          helper.e(".control-link-item-display-alignment-grid").removeAttribute("disabled");
           helper.e(".control-link-item-display-alignment-label").removeAttribute("disabled");
           helper.e(".control-link-item-display-alignment-topleft").disabled = false;
           helper.e(".control-link-item-display-alignment-topcenter").disabled = false;
