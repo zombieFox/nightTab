@@ -767,7 +767,7 @@ input[type="range"][disabled]~.input-helper {
 .form-grid {
   padding: calc(var(--layout-line-width) * 2);
   display: grid;
-  border-radius: calc(var(--layout-line-width) * 4);
+  border-radius: calc(var(--layout-line-width) * 6);
   border-width: var(--layout-line-width);
   border-style: solid;
   border-color: rgb(var(--form-checkbox-radio-label));
@@ -920,7 +920,7 @@ input[type="range"][disabled]~.input-helper {
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(1) input[type="checkbox"]+label,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(1) input[type="radio"]+label {
-  border-top-left-radius: calc(var(--layout-line-width) * 2);
+  border-top-left-radius: calc(var(--layout-line-width) * 3);
 }
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(1) input[type="checkbox"]+label:before,
@@ -930,7 +930,7 @@ input[type="range"][disabled]~.input-helper {
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(3) input[type="checkbox"]+label,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(3) input[type="radio"]+label {
-  border-top-right-radius: calc(var(--layout-line-width) * 2);
+  border-top-right-radius: calc(var(--layout-line-width) * 3);
 }
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(3) input[type="checkbox"]+label:before,
@@ -940,7 +940,7 @@ input[type="range"][disabled]~.input-helper {
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(7) input[type="checkbox"]+label,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(7) input[type="radio"]+label {
-  border-bottom-left-radius: calc(var(--layout-line-width) * 2);
+  border-bottom-left-radius: calc(var(--layout-line-width) * 3);
 }
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(7) input[type="checkbox"]+label:before,
@@ -950,7 +950,7 @@ input[type="range"][disabled]~.input-helper {
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(9) input[type="checkbox"]+label,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(9) input[type="radio"]+label {
-  border-bottom-right-radius: calc(var(--layout-line-width) * 2);
+  border-bottom-right-radius: calc(var(--layout-line-width) * 3);
 }
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(9) input[type="checkbox"]+label:before,
@@ -960,8 +960,8 @@ input[type="range"][disabled]~.input-helper {
 
 .form-grid.form-grid-3x1 .input-wrap:nth-child(1) input[type="checkbox"]+label,
 .form-grid.form-grid-3x1 .input-wrap:nth-child(1) input[type="radio"]+label {
-  border-top-left-radius: calc(var(--layout-line-width) * 2);
-  border-bottom-left-radius: calc(var(--layout-line-width) * 2);
+  border-top-left-radius: calc(var(--layout-line-width) * 3);
+  border-bottom-left-radius: calc(var(--layout-line-width) * 3);
 }
 
 .form-grid.form-grid-3x1 .input-wrap:nth-child(1) input[type="checkbox"]+label:before,
@@ -972,8 +972,8 @@ input[type="range"][disabled]~.input-helper {
 
 .form-grid.form-grid-3x1 .input-wrap:nth-child(3) input[type="checkbox"]+label,
 .form-grid.form-grid-3x1 .input-wrap:nth-child(3) input[type="radio"]+label {
-  border-top-right-radius: calc(var(--layout-line-width) * 2);
-  border-bottom-right-radius: calc(var(--layout-line-width) * 2);
+  border-top-right-radius: calc(var(--layout-line-width) * 3);
+  border-bottom-right-radius: calc(var(--layout-line-width) * 3);
 }
 
 .form-grid.form-grid-3x1 .input-wrap:nth-child(3) input[type="checkbox"]+label:before,

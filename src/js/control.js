@@ -2420,7 +2420,10 @@ var control = (function() {
       helper.removeClass(html, "is-layout-alignment-bottomleft");
       helper.removeClass(html, "is-layout-alignment-bottomcenter");
       helper.removeClass(html, "is-layout-alignment-bottomright");
+      helper.removeClass(html, "is-layout-order-headerLink");
+      helper.removeClass(html, "is-layout-order-linkHeader");
       helper.addClass(html, "is-layout-alignment-" + state.get().layout.alignment);
+      helper.addClass(html, "is-layout-order-" + state.get().layout.order);
       if (state.get().layout.scrollPastEnd) {
         helper.addClass(html, "is-layout-scroll-past-end");
       };
