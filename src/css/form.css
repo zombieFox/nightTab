@@ -764,6 +764,10 @@ input[type="range"][disabled]~.input-helper {
   width: 100%;
 }
 
+.form-grid-wrap .input-helper:not(:only-child) {
+  padding-top: 0.5em;
+}
+
 .form-grid {
   padding: calc(var(--layout-line-width) * 2);
   display: grid;
@@ -782,6 +786,10 @@ input[type="range"][disabled]~.input-helper {
 
 .form-grid[disabled] {
   border-color: rgb(var(--form-checkbox-radio-disabled-label));
+}
+
+.form-grid[disabled]+.input-helper {
+  color: rgb(var(--form-input-text-disabled-helper-text));
 }
 
 .form-grid[disabled]:focus,
