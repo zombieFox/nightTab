@@ -1,4 +1,5 @@
 var update = (function() {
+
   var _update_100 = function(data) {
     data.version = 1.00;
     return data;
@@ -47,9 +48,6 @@ var update = (function() {
             },
             giphy: {
               url: "https://giphy.com/search/"
-            },
-            bing: {
-              url: "https://www.bing.com/search?q="
             },
             custom: {
               url: ""
@@ -185,8 +183,7 @@ var update = (function() {
     data.state.background.image.show = data.state.background.image.active;
     delete data.state.background.image.active;
     // change background accent
-    data.state.background.image.accent =
-      data.state.background.image.accentOpacity;
+    data.state.background.image.accent = data.state.background.image.accentOpacity;
     delete data.state.background.image.accentOpacity;
     // change menu active
     data.state.menu.show = data.state.menu.active;
@@ -589,12 +586,23 @@ var update = (function() {
   //   return data;
   // };
   //
-  // Always add the version in increasing order so the 
+  // Always add the version in increasing order so the
   // most recent version is last.
   var versionUpdates = {};
 
-  // Add Bing as a option for the search engines. 
   versionUpdates["3.27.0"] = function(data) {
+    data.state.header.area.alignment = data.state.header.area.alignment.horizontal;
+    data.state.header.item.alignment = data.state.header.item.alignment.horizontal;
+    data.state.header.search.text.alignment = data.state.header.search.text.align;
+    delete data.state.header.search.text.align;
+    data.state.link.area.alignment = data.state.link.area.alignment.horizontal;
+    data.state.link.item.display.alignment = data.state.link.item.display.alignment.horizontal + data.state.link.item.display.alignment.vertical;
+    data.state.layout.alignment = data.state.layout.alignment.horizontal + data.state.layout.alignment.vertical;
+    return data;
+  };
+
+  // Add Bing as a option for the search engines.
+  versionUpdates["3.28.0"] = function(data) {
     data.state.header.search.engine.bing = {
       url: "https://www.bing.com/search?q=",
       name: "Bing"
@@ -606,143 +614,143 @@ var update = (function() {
     if (!("version" in data)) {
       console.log("\t= running update", "1.0.0");
       data = _update_100(data);
-    }
+    };
     if (typeof data.version == "number") {
       if (data.version < 2.0) {
         console.log("\t= running update 2.0.0");
         data = _update_200(data);
-      }
+      };
       if (data.version < 2.1) {
         console.log("\t= running update 2.1.0");
         data = _update_210(data);
-      }
+      };
       if (data.version < 2.3) {
         console.log("\t= running update 2.3.0");
         data = _update_230(data);
-      }
+      };
       if (data.version < 2.4) {
         console.log("\t= running update 2.4.0");
         data = _update_240(data);
-      }
+      };
       if (data.version < 2.5) {
         console.log("\t= running update 2.5.0");
         data = _update_250(data);
-      }
+      };
       if (data.version < 2.7) {
         console.log("\t= running update 2.7.0");
         data = _update_270(data);
-      }
+      };
       if (data.version < 2.8) {
         console.log("\t= running update 2.8.0");
         data = _update_280(data);
-      }
+      };
       if (data.version < 2.9) {
         console.log("\t= running update 2.9.0");
         data = _update_290(data);
-      }
+      };
       if (data.version < 2.91) {
         console.log("\t= running update 2.9.1");
         data.version = 2.91;
-      }
+      };
       if (data.version < 2.96) {
         // introduction of a new semantic version check function so the version is being bumped to 2.10.0 and changed to a string
         console.log("\t= running update 2.10.0");
         data.version = "2.10.0";
-      }
-    }
+      };
+    };
     if (typeof data.version == "string") {
       if (version.compare(data.version, "2.11.0") == -1) {
         console.log("\t= running update 2.11.0");
         data = _update_2110(data);
-      }
+      };
       if (version.compare(data.version, "2.12.0") == -1) {
         console.log("\t= running update 2.12.0");
         data = _update_2120(data);
-      }
+      };
       if (version.compare(data.version, "2.14.0") == -1) {
         console.log("\t= running update 2.14.0");
         data = _update_2140(data);
-      }
+      };
       if (version.compare(data.version, "2.16.0") == -1) {
         console.log("\t= running update 2.16.0");
         data = _update_2160(data);
-      }
+      };
       if (version.compare(data.version, "2.17.0") == -1) {
         console.log("\t= running update 2.17.0");
         data = _update_2170(data);
-      }
+      };
       if (version.compare(data.version, "2.19.0") == -1) {
         console.log("\t= running update 2.19.0");
         data = _update_2190(data);
-      }
+      };
       if (version.compare(data.version, "2.20.0") == -1) {
         console.log("\t= running update 2.20.0");
         data = _update_2200(data);
-      }
+      };
       if (version.compare(data.version, "2.21.0") == -1) {
         console.log("\t= running update 2.21.0");
         data = _update_2210(data);
-      }
+      };
       if (version.compare(data.version, "2.22.0") == -1) {
         console.log("\t= running update 2.22.0");
         data = _update_2220(data);
-      }
+      };
       if (version.compare(data.version, "3.0.0") == -1) {
         console.log("\t= running update 3.0.0");
         data = _update_300(data);
-      }
+      };
       if (version.compare(data.version, "3.1.0") == -1) {
         console.log("\t= running update 3.1.0");
         data = _update_310(data);
-      }
+      };
       if (version.compare(data.version, "3.2.0") == -1) {
         console.log("\t= running update 3.2.0");
         data = _update_320(data);
-      }
+      };
       if (version.compare(data.version, "3.4.0") == -1) {
         console.log("\t= running update 3.4.0");
         data = _update_340(data);
-      }
+      };
       if (version.compare(data.version, "3.6.0") == -1) {
         console.log("\t= running update 3.6.0");
         data = _update_360(data);
-      }
+      };
       if (version.compare(data.version, "3.7.0") == -1) {
         console.log("\t= running update 3.7.0");
         data = _update_370(data);
-      }
+      };
       if (version.compare(data.version, "3.8.0") == -1) {
         console.log("\t= running update 3.8.0");
         data = _update_380(data);
-      }
+      };
       if (version.compare(data.version, "3.9.0") == -1) {
         console.log("\t= running update 3.9.0");
         data = _update_390(data);
-      }
+      };
       if (version.compare(data.version, "3.10.0") == -1) {
         console.log("\t= running update 3.10.0");
         data = _update_3100(data);
-      }
+      };
       if (version.compare(data.version, "3.11.0") == -1) {
         console.log("\t= running update 3.11.0");
         data = _update_3110(data);
-      }
+      };
       if (version.compare(data.version, "3.15.0") == -1) {
         console.log("\t= running update 3.15.0");
         data = _update_3150(data);
-      }
+      };
       if (version.compare(data.version, "3.18.0") == -1) {
         console.log("\t= running update 3.18.0");
         data = _update_3180(data);
-      }
+      };
       if (version.compare(data.version, "3.20.0") == -1) {
         console.log("\t= running update 3.20.0");
         data = _update_3200(data);
-      }
+      };
       if (version.compare(data.version, "3.21.0") == -1) {
         console.log("\t= running update 3.21.0");
         data = _update_3210(data);
-      }
+      };
 
       // Shift to a associate array for the configuration update as
       // there less code to maintain.
@@ -751,21 +759,23 @@ var update = (function() {
           console.log("\t= running update", key);
           data = versionUpdates[key](data);
           data.version = key;
-        }
-      }
-    }
+        };
+      };
+    };
 
     // if no update is needed
     // version bump
     if (version.compare(data.version, version.get()) == -1) {
       console.log("\t= nothing to update, version bump to", version.get());
       data.version = version.get();
-    }
+    };
+
     return data;
-  }
+  };
 
   // exposed methods
   return {
     run: run
   };
+
 })();

@@ -91,7 +91,8 @@ var state = (function() {
           bing: {
             url: "https://www.bing.com/search?q=",
             name: "Bing"
-          },          custom: {
+          },
+          custom: {
             url: "",
             name: ""
           }
