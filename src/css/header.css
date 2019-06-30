@@ -109,7 +109,7 @@
 }
 
 .header-item-grid {
-  margin: calc(-1 * calc(var(--layout-gutter) * calc(var(--layout-gutter-multiplier) / 2)));
+  margin: calc(-1 * calc(var(--layout-gutter) * var(--layout-gutter-multiplier))) 0 0 calc(-1 * calc(var(--layout-gutter) * var(--layout-gutter-multiplier)));
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -129,7 +129,7 @@
 }
 
 .header-item {
-  margin: calc(var(--layout-gutter) * calc(var(--layout-gutter-multiplier) / 2));
+  margin: calc(var(--layout-gutter) * var(--layout-gutter-multiplier)) 0 0 calc(var(--layout-gutter) * var(--layout-gutter-multiplier));
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;

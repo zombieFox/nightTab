@@ -144,15 +144,6 @@ var control = (function() {
     element: helper.e(".control-layout-order-headerLink"),
     path: "layout.order",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       layout.render.order();
       header.render.shade();
@@ -162,15 +153,6 @@ var control = (function() {
     element: helper.e(".control-layout-order-linkHeader"),
     path: "layout.order",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       layout.render.order();
       header.render.shade();
