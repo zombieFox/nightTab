@@ -10,15 +10,15 @@
   pointer-events: all;
 }
 
-.is-header-area-alignment-horizontal-left .header {
+.is-header-area-alignment-left .header {
   justify-content: flex-start;
 }
 
-.is-header-area-alignment-horizontal-center .header {
+.is-header-area-alignment-center .header {
   justify-content: center;
 }
 
-.is-header-area-alignment-horizontal-right .header {
+.is-header-area-alignment-right .header {
   justify-content: flex-end;
 }
 
@@ -46,7 +46,7 @@
   left: 0;
   opacity: 0;
   pointer-events: none;
-  transition: background-color var(--layout-transition-speed-slow) ease-in-out, border-radius var(--layout-transition-speed-fast) ease-in-out;
+  transition: background-color var(--layout-transition-speed-slow) ease-in-out, opacity var(--layout-transition-speed-slow) ease-in-out, border-radius var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .is-header-radius .header-shade {
@@ -86,15 +86,15 @@
   border-radius: calc(var(--theme-radius) * 4);
 }
 
-.is-header-search-text-align-left .header-search-input {
+.is-header-search-text-alignment-left .header-search-input {
   text-align: left;
 }
 
-.is-header-search-text-align-center .header-search-input {
+.is-header-search-text-alignment-center .header-search-input {
   text-align: center;
 }
 
-.is-header-search-text-align-right .header-search-input {
+.is-header-search-text-alignment-right .header-search-input {
   text-align: right;
 }
 
@@ -109,27 +109,27 @@
 }
 
 .header-item-grid {
-  margin: calc(-1 * calc(var(--layout-gutter) * calc(var(--layout-gutter-multiplier) / 2)));
+  margin: calc(-1 * calc(var(--layout-gutter) * var(--layout-gutter-multiplier))) 0 0 calc(-1 * calc(var(--layout-gutter) * var(--layout-gutter-multiplier)));
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
 }
 
-.is-header-item-alignment-horizontal-left .header-item-grid {
+.is-header-item-alignment-left .header-item-grid {
   justify-content: flex-start;
 }
 
-.is-header-item-alignment-horizontal-center .header-item-grid {
+.is-header-item-alignment-center .header-item-grid {
   justify-content: center;
 }
 
-.is-header-item-alignment-horizontal-right .header-item-grid {
+.is-header-item-alignment-right .header-item-grid {
   justify-content: flex-end;
 }
 
 .header-item {
-  margin: calc(var(--layout-gutter) * calc(var(--layout-gutter-multiplier) / 2));
+  margin: calc(var(--layout-gutter) * var(--layout-gutter-multiplier)) 0 0 calc(var(--layout-gutter) * var(--layout-gutter-multiplier));
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
