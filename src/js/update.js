@@ -572,8 +572,20 @@ var update = (function() {
     return data;
   };
 
-  var _update_3270 = function(data) {
-    data.version = "3.27.0";
+  // This associative array contains all the updates. Add
+  // a new entry if you need to modify data.
+  //
+  // Example, this assumes the previous version is less than
+  // 3.28.0, so 3.27.0 would be upgraded in this case.
+  // versionUpdates["3.28.0"] = function(data) {
+  //   return data;
+  // };
+  //
+  // Always add the version in increasing order so the
+  // most recent version is last.
+  var versionUpdates = {};
+
+  versionUpdates["3.27.0"] = function(data) {
     data.state.header.area.alignment = data.state.header.area.alignment.horizontal;
     data.state.header.item.alignment = data.state.header.item.alignment.horizontal;
     data.state.header.search.text.alignment = data.state.header.search.text.align;
@@ -584,10 +596,14 @@ var update = (function() {
     return data;
   };
 
-  // var _update_300 = function(data) {
-  //   data.version = 3.00;
-  //   return data;
-  // };
+  // Add Bing as a option for the search engines.
+  versionUpdates["3.28.0"] = function(data) {
+    data.state.header.search.engine.bing = {
+      url: "https://www.bing.com/search?q=",
+      name: "Bing"
+    };
+    return data;
+  };
 
   function run(data) {
     if (!("version" in data)) {
@@ -595,35 +611,35 @@ var update = (function() {
       data = _update_100(data);
     };
     if (typeof data.version == "number") {
-      if (data.version < 2.00) {
+      if (data.version < 2.0) {
         console.log("\t= running update 2.0.0");
         data = _update_200(data);
       };
-      if (data.version < 2.10) {
+      if (data.version < 2.1) {
         console.log("\t= running update 2.1.0");
         data = _update_210(data);
       };
-      if (data.version < 2.30) {
+      if (data.version < 2.3) {
         console.log("\t= running update 2.3.0");
         data = _update_230(data);
       };
-      if (data.version < 2.40) {
+      if (data.version < 2.4) {
         console.log("\t= running update 2.4.0");
         data = _update_240(data);
       };
-      if (data.version < 2.50) {
+      if (data.version < 2.5) {
         console.log("\t= running update 2.5.0");
         data = _update_250(data);
       };
-      if (data.version < 2.70) {
+      if (data.version < 2.7) {
         console.log("\t= running update 2.7.0");
         data = _update_270(data);
       };
-      if (data.version < 2.80) {
+      if (data.version < 2.8) {
         console.log("\t= running update 2.8.0");
         data = _update_280(data);
       };
-      if (data.version < 2.90) {
+      if (data.version < 2.9) {
         console.log("\t= running update 2.9.0");
         data = _update_290(data);
       };
@@ -730,17 +746,24 @@ var update = (function() {
         console.log("\t= running update 3.21.0");
         data = _update_3210(data);
       };
-      if (version.compare(data.version, "3.27.0") == -1) {
-        console.log("\t= running update 3.27.0");
-        data = _update_3270(data);
+      // Shift to a associate array for the configuration update as
+      // there less code to maintain.
+      for (var key in versionUpdates) {
+        if (version.compare(data.version, key) == -1) {
+          console.log("\t= running update", key);
+          data = versionUpdates[key](data);
+          data.version = key;
+        };
       };
     };
+
     // if no update is needed
     // version bump
     if (version.compare(data.version, version.get()) == -1) {
       console.log("\t= nothing to update, version bump to", version.get());
       data.version = version.get();
     };
+
     return data;
   };
 
