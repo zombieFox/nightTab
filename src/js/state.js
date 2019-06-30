@@ -84,6 +84,10 @@ var state = (function() {
             url: "https://giphy.com/search/",
             name: "Giphy"
           },
+          bing: {
+            url: "https://www.bing.com/search?q=",
+            name: "Bing"
+          },
           custom: {
             url: "",
             name: ""

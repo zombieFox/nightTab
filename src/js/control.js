@@ -1295,6 +1295,14 @@ var control = (function() {
       search.render.engine();
     }
   }, {
+    element: helper.e(".control-header-search-engine-bing"),
+    path: "header.search.engine.selected",
+    type: "radio",
+    func: function() {
+      dependents();
+      search.render.engine();
+    }
+  }, {
     element: helper.e(".control-header-search-engine-custom"),
     path: "header.search.engine.selected",
     type: "radio",
@@ -2610,6 +2618,7 @@ var control = (function() {
           helper.e(".control-header-search-engine-duckduckgo").disabled = false;
           helper.e(".control-header-search-engine-youtube").disabled = false;
           helper.e(".control-header-search-engine-giphy").disabled = false;
+          helper.e(".control-header-search-engine-bing").disabled = false;
           helper.e(".control-header-search-engine-custom").disabled = false;
           helper.e(".control-header-search-text-alignment-label").removeAttribute("disabled");
           helper.e(".control-header-search-text-alignment-left").disabled = false;
@@ -2630,6 +2639,7 @@ var control = (function() {
           helper.e(".control-header-search-engine-duckduckgo").disabled = true;
           helper.e(".control-header-search-engine-youtube").disabled = true;
           helper.e(".control-header-search-engine-giphy").disabled = true;
+          helper.e(".control-header-search-engine-bing").disabled = true;
           helper.e(".control-header-search-engine-custom").disabled = true;
           helper.e(".control-header-search-text-alignment-label").setAttribute("disabled", "");
           helper.e(".control-header-search-text-alignment-left").disabled = true;
