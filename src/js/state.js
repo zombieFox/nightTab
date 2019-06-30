@@ -4,14 +4,10 @@ var state = (function() {
     header: {
       area: {
         width: 100,
-        alignment: {
-          horizontal: "center"
-        }
+        alignment: "center"
       },
       item: {
-        alignment: {
-          horizontal: "left"
-        }
+        alignment: "left"
       },
       clock: {
         hours: {
@@ -98,7 +94,7 @@ var state = (function() {
           }
         },
         text: {
-          align: "center"
+          alignment: "center"
         },
         size: 1
       },
@@ -137,18 +133,13 @@ var state = (function() {
     link: {
       area: {
         width: 100,
-        alignment: {
-          horizontal: "center"
-        }
+        alignment: "center"
       },
       item: {
         display: {
           show: true,
           size: 2,
-          alignment: {
-            horizontal: "center",
-            vertical: "center"
-          },
+          alignment: "centercenter",
           letter: {
             size: 3
           },
@@ -171,10 +162,7 @@ var state = (function() {
       style: "block"
     },
     layout: {
-      alignment: {
-        horizontal: "center",
-        vertical: "center"
-      },
+      alignment: "centercenter",
       order: "headerLink",
       padding: 4,
       gutter: 2,

@@ -77,7 +77,7 @@
   --form-label: var(--theme-gray-12);
   --form-label-disabled: var(--theme-gray-04);
   --form-checkbox-radio-label: var(--theme-gray-12);
-  --form-checkbox-radio-chcked-label: var(--theme-gray-16);
+  --form-checkbox-radio-checked-label: var(--theme-gray-16);
   --form-checkbox-radio-disabled-label: var(--theme-gray-04);
   --form-range-thumb: var(--theme-gray-12);
   /* button */

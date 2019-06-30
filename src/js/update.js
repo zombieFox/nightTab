@@ -572,10 +572,17 @@ var update = (function() {
     return data;
   };
 
-  // var _update_300 = function(data) {
-  //   data.version = 3.00;
-  //   return data;
-  // };
+  var _update_3270 = function(data) {
+    data.version = "3.27.0";
+    data.state.header.area.alignment = data.state.header.area.alignment.horizontal;
+    data.state.header.item.alignment = data.state.header.item.alignment.horizontal;
+    data.state.header.search.text.alignment = data.state.header.search.text.align;
+    delete data.state.header.search.text.align;
+    data.state.link.area.alignment = data.state.link.area.alignment.horizontal;
+    data.state.link.item.display.alignment = data.state.link.item.display.alignment.horizontal + data.state.link.item.display.alignment.vertical;
+    data.state.layout.alignment = data.state.layout.alignment.horizontal + data.state.layout.alignment.vertical;
+    return data;
+  };
 
   // This associative array contains all the updates. Add
   // a new entry if you need to modify data.

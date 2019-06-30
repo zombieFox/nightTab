@@ -78,98 +78,65 @@ var control = (function() {
       layout.render.width();
     }
   }, {
-    element: helper.e(".control-layout-alignment-horizontal-left"),
-    path: "layout.alignment.horizontal",
+    element: helper.e(".control-layout-alignment-topleft"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-alignment-horizontal-center"),
-    path: "layout.alignment.horizontal",
+    element: helper.e(".control-layout-alignment-topcenter"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-alignment-horizontal-right"),
-    path: "layout.alignment.horizontal",
+    element: helper.e(".control-layout-alignment-topright"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-alignment-vertical-top"),
-    path: "layout.alignment.vertical",
+    element: helper.e(".control-layout-alignment-centerleft"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-alignment-vertical-center"),
-    path: "layout.alignment.vertical",
+    element: helper.e(".control-layout-alignment-centercenter"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-alignment-vertical-bottom"),
-    path: "layout.alignment.vertical",
+    element: helper.e(".control-layout-alignment-centerright"),
+    path: "layout.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-bottomleft"),
+    path: "layout.alignment",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-bottomcenter"),
+    path: "layout.alignment",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-layout-alignment-bottomright"),
+    path: "layout.alignment",
+    type: "radio",
     func: function() {
       render();
     }
@@ -177,15 +144,6 @@ var control = (function() {
     element: helper.e(".control-layout-order-headerLink"),
     path: "layout.order",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       layout.render.order();
       header.render.shade();
@@ -195,15 +153,6 @@ var control = (function() {
     element: helper.e(".control-layout-order-linkHeader"),
     path: "layout.order",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.render({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       layout.render.order();
       header.render.shade();
@@ -388,8 +337,8 @@ var control = (function() {
       update();
     }
   }, {
-    element: helper.e(".control-header-area-alignment-horizontal-left"),
-    path: "header.area.alignment.horizontal",
+    element: helper.e(".control-header-area-alignment-left"),
+    path: "header.area.alignment",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -404,8 +353,8 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-area-alignment-horizontal-center"),
-    path: "header.area.alignment.horizontal",
+    element: helper.e(".control-header-area-alignment-center"),
+    path: "header.area.alignment",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -420,8 +369,8 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-area-alignment-horizontal-right"),
-    path: "header.area.alignment.horizontal",
+    element: helper.e(".control-header-area-alignment-right"),
+    path: "header.area.alignment",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -436,22 +385,22 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-item-alignment-horizontal-left"),
-    path: "header.item.alignment.horizontal",
+    element: helper.e(".control-header-item-alignment-left"),
+    path: "header.item.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-item-alignment-horizontal-center"),
-    path: "header.item.alignment.horizontal",
+    element: helper.e(".control-header-item-alignment-center"),
+    path: "header.item.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-item-alignment-horizontal-right"),
-    path: "header.item.alignment.horizontal",
+    element: helper.e(".control-header-item-alignment-right"),
+    path: "header.item.alignment",
     type: "radio",
     func: function() {
       render();
@@ -1376,22 +1325,22 @@ var control = (function() {
       search.render.engine();
     }
   }, {
-    element: helper.e(".control-header-search-text-align-left"),
-    path: "header.search.text.align",
+    element: helper.e(".control-header-search-text-alignment-left"),
+    path: "header.search.text.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-search-text-align-center"),
-    path: "header.search.text.align",
+    element: helper.e(".control-header-search-text-alignment-center"),
+    path: "header.search.text.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-header-search-text-align-right"),
-    path: "header.search.text.align",
+    element: helper.e(".control-header-search-text-alignment-right"),
+    path: "header.search.text.alignment",
     type: "radio",
     func: function() {
       render();
@@ -1682,8 +1631,8 @@ var control = (function() {
       update();
     }
   }, {
-    element: helper.e(".control-link-area-alignment-horizontal-left"),
-    path: "link.area.alignment.horizontal",
+    element: helper.e(".control-link-area-alignment-left"),
+    path: "link.area.alignment",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -1698,8 +1647,8 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-area-alignment-horizontal-center"),
-    path: "link.area.alignment.horizontal",
+    element: helper.e(".control-link-area-alignment-center"),
+    path: "link.area.alignment",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -1714,8 +1663,8 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-area-alignment-horizontal-right"),
-    path: "link.area.alignment.horizontal",
+    element: helper.e(".control-link-area-alignment-right"),
+    path: "link.area.alignment",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -1889,43 +1838,64 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-horizontal-left"),
-    path: "link.item.display.alignment.horizontal",
+    element: helper.e(".control-link-item-display-alignment-topleft"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-horizontal-center"),
-    path: "link.item.display.alignment.horizontal",
+    element: helper.e(".control-link-item-display-alignment-topcenter"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-horizontal-right"),
-    path: "link.item.display.alignment.horizontal",
+    element: helper.e(".control-link-item-display-alignment-topright"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-vertical-top"),
-    path: "link.item.display.alignment.vertical",
+    element: helper.e(".control-link-item-display-alignment-centerleft"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-vertical-center"),
-    path: "link.item.display.alignment.vertical",
+    element: helper.e(".control-link-item-display-alignment-centercenter"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-item-display-alignment-vertical-bottom"),
-    path: "link.item.display.alignment.vertical",
+    element: helper.e(".control-link-item-display-alignment-centerright"),
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-alignment-bottomleft"),
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-alignment-bottomcenter"),
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-alignment-bottomright"),
+    path: "link.item.display.alignment",
     type: "radio",
     func: function() {
       render();
@@ -2276,16 +2246,16 @@ var control = (function() {
     };
     var _header = function() {
       var _area = function() {
-        helper.removeClass(html, "is-header-area-alignment-horizontal-left");
-        helper.removeClass(html, "is-header-area-alignment-horizontal-center");
-        helper.removeClass(html, "is-header-area-alignment-horizontal-right");
-        helper.addClass(html, "is-header-area-alignment-horizontal-" + state.get().header.area.alignment.horizontal);
+        helper.removeClass(html, "is-header-area-alignment-left");
+        helper.removeClass(html, "is-header-area-alignment-center");
+        helper.removeClass(html, "is-header-area-alignment-right");
+        helper.addClass(html, "is-header-area-alignment-" + state.get().header.area.alignment);
       };
       var _item = function() {
-        helper.removeClass(html, "is-header-item-alignment-horizontal-left");
-        helper.removeClass(html, "is-header-item-alignment-horizontal-center");
-        helper.removeClass(html, "is-header-item-alignment-horizontal-right");
-        helper.addClass(html, "is-header-item-alignment-horizontal-" + state.get().header.item.alignment.horizontal);
+        helper.removeClass(html, "is-header-item-alignment-left");
+        helper.removeClass(html, "is-header-item-alignment-center");
+        helper.removeClass(html, "is-header-item-alignment-right");
+        helper.addClass(html, "is-header-item-alignment-" + state.get().header.item.alignment);
       };
       var _clock = function() {
         if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
@@ -2305,13 +2275,13 @@ var control = (function() {
         helper.removeClass(html, "is-header-search-show");
         helper.removeClass(html, "is-header-search-style-custom");
         helper.removeClass(html, "is-header-search-style-auto");
-        helper.removeClass(html, "is-header-search-text-align-left");
-        helper.removeClass(html, "is-header-search-text-align-center");
-        helper.removeClass(html, "is-header-search-text-align-right");
+        helper.removeClass(html, "is-header-search-text-alignment-left");
+        helper.removeClass(html, "is-header-search-text-alignment-center");
+        helper.removeClass(html, "is-header-search-text-alignment-right");
         if (state.get().header.search.show) {
           helper.addClass(html, "is-header-search-show");
           helper.addClass(html, "is-header-search-style-" + state.get().header.search.style);
-          helper.addClass(html, "is-header-search-text-align-" + state.get().header.search.text.align);
+          helper.addClass(html, "is-header-search-text-alignment-" + state.get().header.search.text.alignment);
         };
         helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
         helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
@@ -2379,32 +2349,34 @@ var control = (function() {
     };
     var _link = function() {
       helper.removeClass(html, "is-link-show");
-      helper.removeClass(html, "is-link-area-alignment-horizontal-left");
-      helper.removeClass(html, "is-link-area-alignment-horizontal-center");
-      helper.removeClass(html, "is-link-area-alignment-horizontal-right");
+      helper.removeClass(html, "is-link-area-alignment-left");
+      helper.removeClass(html, "is-link-area-alignment-center");
+      helper.removeClass(html, "is-link-area-alignment-right");
       helper.removeClass(html, "is-link-name-show");
       helper.removeClass(html, "is-link-display-show");
-      helper.removeClass(html, "is-link-display-alignment-horizontal-left");
-      helper.removeClass(html, "is-link-display-alignment-horizontal-center");
-      helper.removeClass(html, "is-link-display-alignment-horizontal-right");
-      helper.removeClass(html, "is-link-display-alignment-vertical-top");
-      helper.removeClass(html, "is-link-display-alignment-vertical-center");
-      helper.removeClass(html, "is-link-display-alignment-vertical-bottom");
+      helper.removeClass(html, "is-link-display-alignment-topleft");
+      helper.removeClass(html, "is-link-display-alignment-topcenter");
+      helper.removeClass(html, "is-link-display-alignment-topright");
+      helper.removeClass(html, "is-link-display-alignment-centerleft");
+      helper.removeClass(html, "is-link-display-alignment-centercenter");
+      helper.removeClass(html, "is-link-display-alignment-centerright");
+      helper.removeClass(html, "is-link-display-alignment-bottomleft");
+      helper.removeClass(html, "is-link-display-alignment-bottomcenter");
+      helper.removeClass(html, "is-link-display-alignment-bottomright");
       helper.removeClass(html, "is-link-url-show");
       helper.removeClass(html, "is-link-item-line");
       helper.removeClass(html, "is-link-item-hover-scale");
-      helper.removeClass(html, "is-link-item-alignment-horizontal-left");
-      helper.removeClass(html, "is-link-item-alignment-horizontal-center");
-      helper.removeClass(html, "is-link-item-alignment-horizontal-right");
+      helper.removeClass(html, "is-link-item-alignment-left");
+      helper.removeClass(html, "is-link-item-alignment-center");
+      helper.removeClass(html, "is-link-item-alignment-right");
       helper.removeClass(html, "is-link-style-list");
       helper.removeClass(html, "is-link-style-block");
       helper.removeClass(html, "is-link-edit");
       link.render.tabIndex();
       if (state.get().link.show) {
         helper.addClass(html, "is-link-show");
-        helper.addClass(html, "is-link-area-alignment-horizontal-" + state.get().link.area.alignment.horizontal);
-        helper.addClass(html, "is-link-display-alignment-horizontal-" + state.get().link.item.display.alignment.horizontal);
-        helper.addClass(html, "is-link-display-alignment-vertical-" + state.get().link.item.display.alignment.vertical);
+        helper.addClass(html, "is-link-area-alignment-" + state.get().link.area.alignment);
+        helper.addClass(html, "is-link-display-alignment-" + state.get().link.item.display.alignment);
         helper.addClass(html, "is-link-style-" + state.get().link.style);
         if (state.get().link.item.name.show) {
           helper.addClass(html, "is-link-name-show");
@@ -2429,16 +2401,18 @@ var control = (function() {
     };
     var _layout = function() {
       helper.removeClass(html, "is-layout-scroll-past-end");
-      helper.removeClass(html, "is-layout-alignment-horizontal-left");
-      helper.removeClass(html, "is-layout-alignment-horizontal-center");
-      helper.removeClass(html, "is-layout-alignment-horizontal-right");
-      helper.removeClass(html, "is-layout-alignment-vertical-top");
-      helper.removeClass(html, "is-layout-alignment-vertical-center");
-      helper.removeClass(html, "is-layout-alignment-vertical-bottom");
+      helper.removeClass(html, "is-layout-alignment-topleft");
+      helper.removeClass(html, "is-layout-alignment-topcenter");
+      helper.removeClass(html, "is-layout-alignment-topright");
+      helper.removeClass(html, "is-layout-alignment-centerleft");
+      helper.removeClass(html, "is-layout-alignment-centercenter");
+      helper.removeClass(html, "is-layout-alignment-centerright");
+      helper.removeClass(html, "is-layout-alignment-bottomleft");
+      helper.removeClass(html, "is-layout-alignment-bottomcenter");
+      helper.removeClass(html, "is-layout-alignment-bottomright");
       helper.removeClass(html, "is-layout-order-headerLink");
       helper.removeClass(html, "is-layout-order-linkHeader");
-      helper.addClass(html, "is-layout-alignment-horizontal-" + state.get().layout.alignment.horizontal);
-      helper.addClass(html, "is-layout-alignment-vertical-" + state.get().layout.alignment.vertical);
+      helper.addClass(html, "is-layout-alignment-" + state.get().layout.alignment);
       helper.addClass(html, "is-layout-order-" + state.get().layout.order);
       if (state.get().layout.scrollPastEnd) {
         helper.addClass(html, "is-layout-scroll-past-end");
@@ -2646,10 +2620,10 @@ var control = (function() {
           helper.e(".control-header-search-engine-giphy").disabled = false;
           helper.e(".control-header-search-engine-bing").disabled = false;
           helper.e(".control-header-search-engine-custom").disabled = false;
-          helper.e(".control-header-search-text-align-label").removeAttribute("disabled");
-          helper.e(".control-header-search-text-align-left").disabled = false;
-          helper.e(".control-header-search-text-align-center").disabled = false;
-          helper.e(".control-header-search-text-align-right").disabled = false;
+          helper.e(".control-header-search-text-alignment-label").removeAttribute("disabled");
+          helper.e(".control-header-search-text-alignment-left").disabled = false;
+          helper.e(".control-header-search-text-alignment-center").disabled = false;
+          helper.e(".control-header-search-text-alignment-right").disabled = false;
           helper.e("[for=control-header-search-size]").removeAttribute("disabled");
           helper.e(".control-header-search-size").disabled = false;
           helper.e(".control-header-search-size-default").disabled = false;
@@ -2667,10 +2641,10 @@ var control = (function() {
           helper.e(".control-header-search-engine-giphy").disabled = true;
           helper.e(".control-header-search-engine-bing").disabled = true;
           helper.e(".control-header-search-engine-custom").disabled = true;
-          helper.e(".control-header-search-text-align-label").setAttribute("disabled", "");
-          helper.e(".control-header-search-text-align-left").disabled = true;
-          helper.e(".control-header-search-text-align-center").disabled = true;
-          helper.e(".control-header-search-text-align-right").disabled = true;
+          helper.e(".control-header-search-text-alignment-label").setAttribute("disabled", "");
+          helper.e(".control-header-search-text-alignment-left").disabled = true;
+          helper.e(".control-header-search-text-alignment-center").disabled = true;
+          helper.e(".control-header-search-text-alignment-right").disabled = true;
           helper.e("[for=control-header-search-size]").setAttribute("disabled", "");
           helper.e(".control-header-search-size").disabled = true;
           helper.e(".control-header-search-size-default").disabled = true;
@@ -2756,10 +2730,11 @@ var control = (function() {
       helper.e("[for=control-link-area-width]").setAttribute("disabled", "");
       helper.e(".control-link-area-width").disabled = true;
       helper.e(".control-link-area-width-match").disabled = true;
-      helper.e(".control-link-area-alignment-horizontal-label").setAttribute("disabled", "");
-      helper.e(".control-link-area-alignment-horizontal-left").disabled = true;
-      helper.e(".control-link-area-alignment-horizontal-center").disabled = true;
-      helper.e(".control-link-area-alignment-horizontal-right").disabled = true;
+      helper.e(".control-link-area-alignment-grid").setAttribute("disabled", "");
+      helper.e(".control-link-area-alignment-label").setAttribute("disabled", "");
+      helper.e(".control-link-area-alignment-left").disabled = true;
+      helper.e(".control-link-area-alignment-center").disabled = true;
+      helper.e(".control-link-area-alignment-right").disabled = true;
       helper.e("[for=control-link-item-size]").setAttribute("disabled", "");
       helper.e(".control-link-item-size").disabled = true;
       helper.e(".control-link-item-size-default").disabled = true;
@@ -2777,30 +2752,36 @@ var control = (function() {
       helper.e(".control-link-item-url-show").disabled = true;
       helper.e(".control-link-item-line").disabled = true;
       helper.e(".control-link-item-hover-scale").disabled = true;
-      helper.e(".control-link-item-display-alignment-horizontal-label").setAttribute("disabled", "");
-      helper.e(".control-link-item-display-alignment-horizontal-left").disabled = true;
-      helper.e(".control-link-item-display-alignment-horizontal-center").disabled = true;
-      helper.e(".control-link-item-display-alignment-horizontal-right").disabled = true;
-      helper.e(".control-link-item-display-alignment-vertical-label").setAttribute("disabled", "");
-      helper.e(".control-link-item-display-alignment-vertical-top").disabled = true;
-      helper.e(".control-link-item-display-alignment-vertical-center").disabled = true;
-      helper.e(".control-link-item-display-alignment-vertical-bottom").disabled = true;
+      helper.e(".control-link-item-display-alignment-grid").setAttribute("disabled", "");
+      helper.e(".control-link-item-display-alignment-label").setAttribute("disabled", "");
+      helper.e(".control-link-item-display-alignment-topleft").disabled = true;
+      helper.e(".control-link-item-display-alignment-topcenter").disabled = true;
+      helper.e(".control-link-item-display-alignment-topright").disabled = true;
+      helper.e(".control-link-item-display-alignment-centerleft").disabled = true;
+      helper.e(".control-link-item-display-alignment-centercenter").disabled = true;
+      helper.e(".control-link-item-display-alignment-centerright").disabled = true;
+      helper.e(".control-link-item-display-alignment-bottomleft").disabled = true;
+      helper.e(".control-link-item-display-alignment-bottomcenter").disabled = true;
+      helper.e(".control-link-item-display-alignment-bottomright").disabled = true;
       helper.e(".control-link-new-tab").disabled = true;
       helper.e(".control-link-style-block").disabled = true;
       helper.e(".control-link-style-list").disabled = true;
       helper.e(".control-link-sort-name").disabled = true;
       helper.e(".control-link-sort-letter").disabled = true;
       helper.e(".control-link-sort-icon").disabled = true;
+      helper.e(".control-link-accent-clear").disabled = true;
+      helper.e(".control-link-accent-set").disabled = true;
       if (state.get().link.show) {
         helper.e(".control-layout-order-headerLink").disabled = false;
         helper.e(".control-layout-order-linkHeader").disabled = false;
         helper.e("[for=control-link-area-width]").removeAttribute("disabled");
         helper.e(".control-link-area-width").disabled = false;
         helper.e(".control-link-area-width-match").disabled = false;
-        helper.e(".control-link-area-alignment-horizontal-label").removeAttribute("disabled");
-        helper.e(".control-link-area-alignment-horizontal-left").disabled = false;
-        helper.e(".control-link-area-alignment-horizontal-center").disabled = false;
-        helper.e(".control-link-area-alignment-horizontal-right").disabled = false;
+        helper.e(".control-link-area-alignment-grid").removeAttribute("disabled");
+        helper.e(".control-link-area-alignment-label").removeAttribute("disabled");
+        helper.e(".control-link-area-alignment-left").disabled = false;
+        helper.e(".control-link-area-alignment-center").disabled = false;
+        helper.e(".control-link-area-alignment-right").disabled = false;
         helper.e("[for=control-link-item-size]").removeAttribute("disabled");
         helper.e(".control-link-item-size").disabled = false;
         helper.e(".control-link-item-size-default").disabled = false;
@@ -2815,6 +2796,8 @@ var control = (function() {
         helper.e(".control-link-sort-name").disabled = false;
         helper.e(".control-link-sort-letter").disabled = false;
         helper.e(".control-link-sort-icon").disabled = false;
+        helper.e(".control-link-accent-clear").disabled = false;
+        helper.e(".control-link-accent-set").disabled = false;
         if (state.get().link.item.display.show) {
           helper.e("[for=control-link-item-display-letter-size]").removeAttribute("disabled");
           helper.e(".control-link-item-display-letter-size").disabled = false;
@@ -2828,15 +2811,18 @@ var control = (function() {
           helper.e(".control-link-item-name-size").disabled = false;
           helper.e(".control-link-item-name-size-default").disabled = false;
         };
-        if (state.get().link.item.display.show || state.get().link.item.name.show || state.get().link.item.url) {
-          helper.e(".control-link-item-display-alignment-horizontal-label").removeAttribute("disabled");
-          helper.e(".control-link-item-display-alignment-horizontal-left").disabled = false;
-          helper.e(".control-link-item-display-alignment-horizontal-center").disabled = false;
-          helper.e(".control-link-item-display-alignment-horizontal-right").disabled = false;
-          helper.e(".control-link-item-display-alignment-vertical-label").removeAttribute("disabled");
-          helper.e(".control-link-item-display-alignment-vertical-top").disabled = false;
-          helper.e(".control-link-item-display-alignment-vertical-center").disabled = false;
-          helper.e(".control-link-item-display-alignment-vertical-bottom").disabled = false;
+        if (state.get().link.item.display.show || state.get().link.item.name.show) {
+          helper.e(".control-link-item-display-alignment-grid").removeAttribute("disabled");
+          helper.e(".control-link-item-display-alignment-label").removeAttribute("disabled");
+          helper.e(".control-link-item-display-alignment-topleft").disabled = false;
+          helper.e(".control-link-item-display-alignment-topcenter").disabled = false;
+          helper.e(".control-link-item-display-alignment-topright").disabled = false;
+          helper.e(".control-link-item-display-alignment-centerleft").disabled = false;
+          helper.e(".control-link-item-display-alignment-centercenter").disabled = false;
+          helper.e(".control-link-item-display-alignment-centerright").disabled = false;
+          helper.e(".control-link-item-display-alignment-bottomleft").disabled = false;
+          helper.e(".control-link-item-display-alignment-bottomcenter").disabled = false;
+          helper.e(".control-link-item-display-alignment-bottomright").disabled = false;
         };
       };
     };
