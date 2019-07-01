@@ -3,10 +3,6 @@
   width: var(--layout-width);
 }
 
-.is-layout-scroll-past-end body {
-  margin-bottom: 40vh;
-}
-
 .is-layout-alignment-horizontal-left body {
   align-items: flex-start;
 }
