@@ -98,7 +98,7 @@ var header = (function() {
           } else {
             helper.removeClass(html, "is-header-shade-style-scroll");
           };
-        } else if (state.get().layout.order == "linkHeader") {
+        } else if (state.get().layout.order == "linkheader") {
           // check scroll position
           if (scrollTop < (scrollHeight - innerHeight) - (fontSize * 2)) {
             helper.addClass(html, "is-header-shade-style-scroll");

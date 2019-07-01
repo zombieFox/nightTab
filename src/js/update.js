@@ -547,6 +547,23 @@ var update = (function() {
         name: "Bing"
       };
       return data;
+    },
+    "3.29.0": function(data) {
+      // move new tab into link
+      data.state.link.item.newTab = data.state.link.newTab;
+      delete data.state.link.newTab;
+      // bring url and line inline with other show controls
+      data.state.link.item.url = {
+        show: data.state.link.item.url
+      };
+      data.state.link.item.line = {
+        show: data.state.link.item.line
+      };
+      data.state.link.item.hoverScale = {
+        show: data.state.link.item.hoverScale
+      };
+      data.state.layout.order = data.state.layout.order.toLowerCase();
+      return data;
     }
   };
 

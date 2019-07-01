@@ -21,7 +21,7 @@ body {
   transition: background-color var(--layout-transition-speed-fast) ease-in-out;
 }
 
-.is-layout-scroll-past-end body {
+.is-layout-scrollpastend body {
   margin-bottom: 40vh;
 }
 

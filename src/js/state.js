@@ -151,19 +151,25 @@ var state = (function() {
           show: true,
           size: 0.9,
         },
-        url: true,
+        url: {
+          show: true
+        },
+        line: {
+          show: true
+        },
+        hoverScale: {
+          show: true
+        },
         size: 1,
-        line: true,
-        hoverScale: true
+        newTab: false
       },
       show: true,
-      newTab: false,
       edit: false,
       style: "block"
     },
     layout: {
       alignment: "centercenter",
-      order: "headerLink",
+      order: "headerlink",
       padding: 4,
       gutter: 2,
       width: 80,

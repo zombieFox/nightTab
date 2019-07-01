@@ -141,7 +141,7 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-order-headerLink"),
+    element: helper.e(".control-layout-order-headerlink"),
     path: "layout.order",
     type: "radio",
     func: function() {
@@ -150,7 +150,7 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-order-linkHeader"),
+    element: helper.e(".control-layout-order-linkheader"),
     path: "layout.order",
     type: "radio",
     func: function() {
@@ -258,7 +258,7 @@ var control = (function() {
       title.render();
     }
   }, {
-    element: helper.e(".control-layout-scroll-past-end"),
+    element: helper.e(".control-layout-scrollpastend"),
     path: "layout.scrollPastEnd",
     type: "checkbox",
     func: function() {
@@ -1424,7 +1424,7 @@ var control = (function() {
       header.render.button.style();
     }
   }, {
-    element: helper.e(".control-header-button-edit-add-show"),
+    element: helper.e(".control-header-button-editadd-show"),
     path: "header.button.editAdd.show",
     type: "checkbox",
     func: function() {
@@ -1817,15 +1817,15 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-link-item-url-show"),
-    path: "link.item.url",
+    path: "link.item.url.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
     }
   }, {
-    element: helper.e(".control-link-item-line"),
-    path: "link.item.line",
+    element: helper.e(".control-link-item-line-show"),
+    path: "link.item.line.show",
     type: "checkbox",
     func: function() {
       render();
@@ -1901,7 +1901,7 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-new-tab"),
+    element: helper.e(".control-link-newtab"),
     path: "link.newTab",
     type: "checkbox",
     func: function() {
@@ -2286,14 +2286,12 @@ var control = (function() {
         helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
         helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
       };
-      var _editAdd = function() {
+      var _button = function() {
         if (state.get().header.button.editAdd.show) {
-          helper.addClass(html, "is-header-button-edit-add-show");
+          helper.addClass(html, "is-header-button-editadd-show");
         } else {
-          helper.removeClass(html, "is-header-button-edit-add-show");
+          helper.removeClass(html, "is-header-button-editadd-show");
         };
-      };
-      var _accent = function() {
         if (state.get().header.button.accent.show) {
           helper.addClass(html, "is-header-button-accent-show");
         } else {
@@ -2340,8 +2338,7 @@ var control = (function() {
       _clock();
       _date();
       _search();
-      _editAdd();
-      _accent();
+      _button();
       _shade();
       _border();
       _greeting();
@@ -2364,7 +2361,7 @@ var control = (function() {
       helper.removeClass(html, "is-link-display-alignment-bottomcenter");
       helper.removeClass(html, "is-link-display-alignment-bottomright");
       helper.removeClass(html, "is-link-url-show");
-      helper.removeClass(html, "is-link-item-line");
+      helper.removeClass(html, "is-link-item-line-show");
       helper.removeClass(html, "is-link-item-hover-scale");
       helper.removeClass(html, "is-link-item-alignment-left");
       helper.removeClass(html, "is-link-item-alignment-center");
@@ -2384,11 +2381,11 @@ var control = (function() {
         if (state.get().link.item.display.show) {
           helper.addClass(html, "is-link-display-show");
         };
-        if (state.get().link.item.url) {
+        if (state.get().link.item.url.show) {
           helper.addClass(html, "is-link-url-show");
         };
-        if (state.get().link.item.line) {
-          helper.addClass(html, "is-link-item-line");
+        if (state.get().link.item.line.show) {
+          helper.addClass(html, "is-link-item-line-show");
         };
         if (state.get().link.item.hoverScale) {
           helper.addClass(html, "is-link-item-hover-scale");
@@ -2400,7 +2397,7 @@ var control = (function() {
       };
     };
     var _layout = function() {
-      helper.removeClass(html, "is-layout-scroll-past-end");
+      helper.removeClass(html, "is-layout-scrollpastend");
       helper.removeClass(html, "is-layout-alignment-topleft");
       helper.removeClass(html, "is-layout-alignment-topcenter");
       helper.removeClass(html, "is-layout-alignment-topright");
@@ -2410,12 +2407,12 @@ var control = (function() {
       helper.removeClass(html, "is-layout-alignment-bottomleft");
       helper.removeClass(html, "is-layout-alignment-bottomcenter");
       helper.removeClass(html, "is-layout-alignment-bottomright");
-      helper.removeClass(html, "is-layout-order-headerLink");
-      helper.removeClass(html, "is-layout-order-linkHeader");
+      helper.removeClass(html, "is-layout-order-headerlink");
+      helper.removeClass(html, "is-layout-order-linkheader");
       helper.addClass(html, "is-layout-alignment-" + state.get().layout.alignment);
       helper.addClass(html, "is-layout-order-" + state.get().layout.order);
       if (state.get().layout.scrollPastEnd) {
-        helper.addClass(html, "is-layout-scroll-past-end");
+        helper.addClass(html, "is-layout-scrollpastend");
       };
     };
     var _theme = function() {
@@ -2725,8 +2722,8 @@ var control = (function() {
       };
     };
     var _link = function() {
-      helper.e(".control-layout-order-headerLink").disabled = true;
-      helper.e(".control-layout-order-linkHeader").disabled = true;
+      helper.e(".control-layout-order-headerlink").disabled = true;
+      helper.e(".control-layout-order-linkheader").disabled = true;
       helper.e("[for=control-link-area-width]").setAttribute("disabled", "");
       helper.e(".control-link-area-width").disabled = true;
       helper.e(".control-link-area-width-match").disabled = true;
@@ -2750,7 +2747,7 @@ var control = (function() {
       helper.e(".control-link-item-name-size").disabled = true;
       helper.e(".control-link-item-name-size-default").disabled = true;
       helper.e(".control-link-item-url-show").disabled = true;
-      helper.e(".control-link-item-line").disabled = true;
+      helper.e(".control-link-item-line-show").disabled = true;
       helper.e(".control-link-item-hover-scale").disabled = true;
       helper.e(".control-link-item-display-alignment-grid").setAttribute("disabled", "");
       helper.e(".control-link-item-display-alignment-label").setAttribute("disabled", "");
@@ -2763,7 +2760,7 @@ var control = (function() {
       helper.e(".control-link-item-display-alignment-bottomleft").disabled = true;
       helper.e(".control-link-item-display-alignment-bottomcenter").disabled = true;
       helper.e(".control-link-item-display-alignment-bottomright").disabled = true;
-      helper.e(".control-link-new-tab").disabled = true;
+      helper.e(".control-link-newtab").disabled = true;
       helper.e(".control-link-style-block").disabled = true;
       helper.e(".control-link-style-list").disabled = true;
       helper.e(".control-link-sort-name").disabled = true;
@@ -2772,8 +2769,8 @@ var control = (function() {
       helper.e(".control-link-accent-clear").disabled = true;
       helper.e(".control-link-accent-set").disabled = true;
       if (state.get().link.show) {
-        helper.e(".control-layout-order-headerLink").disabled = false;
-        helper.e(".control-layout-order-linkHeader").disabled = false;
+        helper.e(".control-layout-order-headerlink").disabled = false;
+        helper.e(".control-layout-order-linkheader").disabled = false;
         helper.e("[for=control-link-area-width]").removeAttribute("disabled");
         helper.e(".control-link-area-width").disabled = false;
         helper.e(".control-link-area-width-match").disabled = false;
@@ -2788,9 +2785,9 @@ var control = (function() {
         helper.e(".control-link-item-display-show").disabled = false;
         helper.e(".control-link-item-name-show").disabled = false;
         helper.e(".control-link-item-url-show").disabled = false;
-        helper.e(".control-link-item-line").disabled = false;
+        helper.e(".control-link-item-line-show").disabled = false;
         helper.e(".control-link-item-hover-scale").disabled = false;
-        helper.e(".control-link-new-tab").disabled = false;
+        helper.e(".control-link-newtab").disabled = false;
         helper.e(".control-link-style-block").disabled = false;
         helper.e(".control-link-style-list").disabled = false;
         helper.e(".control-link-sort-name").disabled = false;

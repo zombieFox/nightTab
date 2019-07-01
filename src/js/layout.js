@@ -35,9 +35,9 @@ var layout = (function() {
     var layout = helper.e(".layout");
     var header = helper.e(".header");
     var link = helper.e(".link");
-    if (state.get().layout.order == "headerLink") {
+    if (state.get().layout.order == "headerlink") {
       layout.insertBefore(header, link);
-    } else if (state.get().layout.order == "linkHeader") {
+    } else if (state.get().layout.order == "linkheader") {
       layout.insertBefore(link, header);
     };
   };
