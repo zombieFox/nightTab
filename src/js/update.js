@@ -591,8 +591,8 @@ var update = (function() {
     data.state.header.search.text.alignment = data.state.header.search.text.align;
     delete data.state.header.search.text.align;
     data.state.link.area.alignment = data.state.link.area.alignment.horizontal;
-    data.state.link.item.display.alignment = data.state.link.item.display.alignment.horizontal + data.state.link.item.display.alignment.vertical;
-    data.state.layout.alignment = data.state.layout.alignment.horizontal + data.state.layout.alignment.vertical;
+    data.state.link.item.display.alignment = data.state.link.item.display.alignment.vertical + data.state.link.item.display.alignment.horizontal;
+    data.state.layout.alignment = data.state.layout.alignment.vertical + data.state.layout.alignment.horizontal;
     return data;
   };
 
