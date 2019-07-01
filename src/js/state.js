@@ -169,7 +169,7 @@ var state = (function() {
     },
     layout: {
       alignment: "centercenter",
-      order: "headerLink",
+      order: "headerlink",
       padding: 4,
       gutter: 2,
       width: 80,

@@ -562,6 +562,7 @@ var update = (function() {
       data.state.link.item.hoverScale = {
         show: data.state.link.hoverScale
       };
+      data.state.layout.order = data.state.layout.order.toLowerCase();
       return data;
     }
   };

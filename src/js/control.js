@@ -141,7 +141,7 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-order-headerLink"),
+    element: helper.e(".control-layout-order-headerlink"),
     path: "layout.order",
     type: "radio",
     func: function() {
@@ -150,7 +150,7 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-layout-order-linkHeader"),
+    element: helper.e(".control-layout-order-linkheader"),
     path: "layout.order",
     type: "radio",
     func: function() {
@@ -258,7 +258,7 @@ var control = (function() {
       title.render();
     }
   }, {
-    element: helper.e(".control-layout-scroll-past-end"),
+    element: helper.e(".control-layout-scrollpastend"),
     path: "layout.scrollPastEnd",
     type: "checkbox",
     func: function() {
@@ -1424,7 +1424,7 @@ var control = (function() {
       header.render.button.style();
     }
   }, {
-    element: helper.e(".control-header-button-edit-add-show"),
+    element: helper.e(".control-header-button-editadd-show"),
     path: "header.button.editAdd.show",
     type: "checkbox",
     func: function() {
@@ -2286,14 +2286,12 @@ var control = (function() {
         helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
         helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
       };
-      var _editAdd = function() {
+      var _button = function() {
         if (state.get().header.button.editAdd.show) {
-          helper.addClass(html, "is-header-button-edit-add-show");
+          helper.addClass(html, "is-header-button-editadd-show");
         } else {
-          helper.removeClass(html, "is-header-button-edit-add-show");
+          helper.removeClass(html, "is-header-button-editadd-show");
         };
-      };
-      var _accent = function() {
         if (state.get().header.button.accent.show) {
           helper.addClass(html, "is-header-button-accent-show");
         } else {
@@ -2340,8 +2338,7 @@ var control = (function() {
       _clock();
       _date();
       _search();
-      _editAdd();
-      _accent();
+      _button();
       _shade();
       _border();
       _greeting();
@@ -2400,7 +2397,7 @@ var control = (function() {
       };
     };
     var _layout = function() {
-      helper.removeClass(html, "is-layout-scroll-past-end");
+      helper.removeClass(html, "is-layout-scrollpastend");
       helper.removeClass(html, "is-layout-alignment-topleft");
       helper.removeClass(html, "is-layout-alignment-topcenter");
       helper.removeClass(html, "is-layout-alignment-topright");
@@ -2410,12 +2407,12 @@ var control = (function() {
       helper.removeClass(html, "is-layout-alignment-bottomleft");
       helper.removeClass(html, "is-layout-alignment-bottomcenter");
       helper.removeClass(html, "is-layout-alignment-bottomright");
-      helper.removeClass(html, "is-layout-order-headerLink");
-      helper.removeClass(html, "is-layout-order-linkHeader");
+      helper.removeClass(html, "is-layout-order-headerlink");
+      helper.removeClass(html, "is-layout-order-linkheader");
       helper.addClass(html, "is-layout-alignment-" + state.get().layout.alignment);
       helper.addClass(html, "is-layout-order-" + state.get().layout.order);
       if (state.get().layout.scrollPastEnd) {
-        helper.addClass(html, "is-layout-scroll-past-end");
+        helper.addClass(html, "is-layout-scrollpastend");
       };
     };
     var _theme = function() {
@@ -2725,8 +2722,8 @@ var control = (function() {
       };
     };
     var _link = function() {
-      helper.e(".control-layout-order-headerLink").disabled = true;
-      helper.e(".control-layout-order-linkHeader").disabled = true;
+      helper.e(".control-layout-order-headerlink").disabled = true;
+      helper.e(".control-layout-order-linkheader").disabled = true;
       helper.e("[for=control-link-area-width]").setAttribute("disabled", "");
       helper.e(".control-link-area-width").disabled = true;
       helper.e(".control-link-area-width-match").disabled = true;
@@ -2772,8 +2769,8 @@ var control = (function() {
       helper.e(".control-link-accent-clear").disabled = true;
       helper.e(".control-link-accent-set").disabled = true;
       if (state.get().link.show) {
-        helper.e(".control-layout-order-headerLink").disabled = false;
-        helper.e(".control-layout-order-linkHeader").disabled = false;
+        helper.e(".control-layout-order-headerlink").disabled = false;
+        helper.e(".control-layout-order-linkheader").disabled = false;
         helper.e("[for=control-link-area-width]").removeAttribute("disabled");
         helper.e(".control-link-area-width").disabled = false;
         helper.e(".control-link-area-width-match").disabled = false;
