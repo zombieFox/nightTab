@@ -554,13 +554,13 @@ var update = (function() {
       delete data.state.link.newTab;
       // bring url and line inline with other show controls
       data.state.link.item.url = {
-        show: data.state.link.url
+        show: data.state.link.item.url
       };
       data.state.link.item.line = {
-        show: data.state.link.line
+        show: data.state.link.item.line
       };
       data.state.link.item.hoverScale = {
-        show: data.state.link.hoverScale
+        show: data.state.link.item.hoverScale
       };
       data.state.layout.order = data.state.layout.order.toLowerCase();
       return data;
