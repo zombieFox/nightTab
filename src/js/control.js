@@ -1817,15 +1817,15 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-link-item-url-show"),
-    path: "link.item.url",
+    path: "link.item.url.show",
     type: "checkbox",
     func: function() {
       render();
       dependents();
     }
   }, {
-    element: helper.e(".control-link-item-line"),
-    path: "link.item.line",
+    element: helper.e(".control-link-item-line-show"),
+    path: "link.item.line.show",
     type: "checkbox",
     func: function() {
       render();
@@ -1901,7 +1901,7 @@ var control = (function() {
       render();
     }
   }, {
-    element: helper.e(".control-link-new-tab"),
+    element: helper.e(".control-link-newtab"),
     path: "link.newTab",
     type: "checkbox",
     func: function() {
@@ -2364,7 +2364,7 @@ var control = (function() {
       helper.removeClass(html, "is-link-display-alignment-bottomcenter");
       helper.removeClass(html, "is-link-display-alignment-bottomright");
       helper.removeClass(html, "is-link-url-show");
-      helper.removeClass(html, "is-link-item-line");
+      helper.removeClass(html, "is-link-item-line-show");
       helper.removeClass(html, "is-link-item-hover-scale");
       helper.removeClass(html, "is-link-item-alignment-left");
       helper.removeClass(html, "is-link-item-alignment-center");
@@ -2384,11 +2384,11 @@ var control = (function() {
         if (state.get().link.item.display.show) {
           helper.addClass(html, "is-link-display-show");
         };
-        if (state.get().link.item.url) {
+        if (state.get().link.item.url.show) {
           helper.addClass(html, "is-link-url-show");
         };
-        if (state.get().link.item.line) {
-          helper.addClass(html, "is-link-item-line");
+        if (state.get().link.item.line.show) {
+          helper.addClass(html, "is-link-item-line-show");
         };
         if (state.get().link.item.hoverScale) {
           helper.addClass(html, "is-link-item-hover-scale");
@@ -2750,7 +2750,7 @@ var control = (function() {
       helper.e(".control-link-item-name-size").disabled = true;
       helper.e(".control-link-item-name-size-default").disabled = true;
       helper.e(".control-link-item-url-show").disabled = true;
-      helper.e(".control-link-item-line").disabled = true;
+      helper.e(".control-link-item-line-show").disabled = true;
       helper.e(".control-link-item-hover-scale").disabled = true;
       helper.e(".control-link-item-display-alignment-grid").setAttribute("disabled", "");
       helper.e(".control-link-item-display-alignment-label").setAttribute("disabled", "");
@@ -2763,7 +2763,7 @@ var control = (function() {
       helper.e(".control-link-item-display-alignment-bottomleft").disabled = true;
       helper.e(".control-link-item-display-alignment-bottomcenter").disabled = true;
       helper.e(".control-link-item-display-alignment-bottomright").disabled = true;
-      helper.e(".control-link-new-tab").disabled = true;
+      helper.e(".control-link-newtab").disabled = true;
       helper.e(".control-link-style-block").disabled = true;
       helper.e(".control-link-style-list").disabled = true;
       helper.e(".control-link-sort-name").disabled = true;
@@ -2788,9 +2788,9 @@ var control = (function() {
         helper.e(".control-link-item-display-show").disabled = false;
         helper.e(".control-link-item-name-show").disabled = false;
         helper.e(".control-link-item-url-show").disabled = false;
-        helper.e(".control-link-item-line").disabled = false;
+        helper.e(".control-link-item-line-show").disabled = false;
         helper.e(".control-link-item-hover-scale").disabled = false;
-        helper.e(".control-link-new-tab").disabled = false;
+        helper.e(".control-link-newtab").disabled = false;
         helper.e(".control-link-style-block").disabled = false;
         helper.e(".control-link-style-list").disabled = false;
         helper.e(".control-link-sort-name").disabled = false;
