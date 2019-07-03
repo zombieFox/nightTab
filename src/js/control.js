@@ -145,18 +145,18 @@ var control = (function() {
     path: "layout.order",
     type: "radio",
     func: function() {
+      render();
       layout.render.order();
       header.render.shade();
-      render();
     }
   }, {
     element: helper.e(".control-layout-order-linkheader"),
     path: "layout.order",
     type: "radio",
     func: function() {
+      render();
       layout.render.order();
       header.render.shade();
-      render();
     }
   }, {
     element: helper.e(".control-layout-padding"),
