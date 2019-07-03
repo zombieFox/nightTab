@@ -1726,6 +1726,15 @@ var control = (function() {
       link.render.item.size();
     }
   }, {
+    element: helper.e(".control-link-show"),
+    path: "link.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+      search.render.engine();
+    }
+  }, {
     element: helper.e(".control-link-item-size-default"),
     type: "button",
     additionalEvents: [{
@@ -1741,101 +1750,6 @@ var control = (function() {
       _setValue("link.item.size", 1);
       link.render.item.size();
       update();
-    }
-  }, {
-    element: helper.e(".control-link-show"),
-    path: "link.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-      search.render.engine();
-    }
-  }, {
-    element: helper.e(".control-link-item-display-show"),
-    path: "link.item.display.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-    }
-  }, {
-    element: helper.e(".control-link-item-display-letter-size"),
-    path: "link.item.display.letter.size",
-    type: "range",
-    valueMod: ["float"],
-    func: function() {
-      link.render.item.display.letter();
-    }
-  }, {
-    element: helper.e(".control-link-item-display-letter-size-default"),
-    type: "button",
-    func: function() {
-      _setValue("link.item.display.letter.size", 3);
-      link.render.item.display.letter();
-      update();
-    }
-  }, {
-    element: helper.e(".control-link-item-display-icon-size"),
-    path: "link.item.display.icon.size",
-    type: "range",
-    valueMod: ["float"],
-    func: function() {
-      link.render.item.display.icon();
-    }
-  }, {
-    element: helper.e(".control-link-item-display-icon-size-default"),
-    type: "button",
-    func: function() {
-      _setValue("link.item.display.icon.size", 3);
-      link.render.item.display.icon();
-      update();
-    }
-  }, {
-    element: helper.e(".control-link-item-name-show"),
-    path: "link.item.name.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-    }
-  }, {
-    element: helper.e(".control-link-item-name-size"),
-    path: "link.item.name.size",
-    type: "range",
-    valueMod: ["float"],
-    func: function() {
-      link.render.item.name();
-    }
-  }, {
-    element: helper.e(".control-link-item-name-size-default"),
-    type: "button",
-    func: function() {
-      _setValue("link.item.name.size", 0.9);
-      link.render.item.name();
-      update();
-    }
-  }, {
-    element: helper.e(".control-link-item-url-show"),
-    path: "link.item.url.show",
-    type: "checkbox",
-    func: function() {
-      render();
-      dependents();
-    }
-  }, {
-    element: helper.e(".control-link-item-line-show"),
-    path: "link.item.line.show",
-    type: "checkbox",
-    func: function() {
-      render();
-    }
-  }, {
-    element: helper.e(".control-link-item-hover-scale"),
-    path: "link.item.hoverScale",
-    type: "checkbox",
-    func: function() {
-      render();
     }
   }, {
     element: helper.e(".control-link-item-display-alignment-topleft"),
@@ -1897,6 +1811,110 @@ var control = (function() {
     element: helper.e(".control-link-item-display-alignment-bottomright"),
     path: "link.item.display.alignment",
     type: "radio",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-show"),
+    path: "link.item.display.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-letter-size"),
+    path: "link.item.display.letter.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      link.render.item.display.letter();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-letter-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("link.item.display.letter.size", 3);
+      link.render.item.display.letter();
+      update();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-icon-size"),
+    path: "link.item.display.icon.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      link.render.item.display.icon();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-icon-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("link.item.display.icon.size", 3);
+      link.render.item.display.icon();
+      update();
+    }
+  }, {
+    element: helper.e(".control-link-item-name-size"),
+    path: "link.item.name.size",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      link.render.item.name();
+    }
+  }, {
+    element: helper.e(".control-link-item-name-size-default"),
+    type: "button",
+    func: function() {
+      _setValue("link.item.name.size", 0.9);
+      link.render.item.name();
+      update();
+    }
+  }, {
+    element: helper.e(".control-link-item-order-displayname"),
+    path: "link.item.order",
+    type: "radio",
+    func: function() {
+      link.clear();
+      link.render.item.all();
+      sortable(".link-area");
+    }
+  }, {
+    element: helper.e(".control-link-item-order-namedisplay"),
+    path: "link.item.order",
+    type: "radio",
+    func: function() {
+      link.clear();
+      link.render.item.all();
+      sortable(".link-area");
+    }
+  }, {
+    element: helper.e(".control-link-item-url-show"),
+    path: "link.item.url.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-link-item-line-show"),
+    path: "link.item.line.show",
+    type: "checkbox",
+    func: function() {
+      render();
+    }
+  }, {
+    element: helper.e(".control-link-item-name-show"),
+    path: "link.item.name.show",
+    type: "checkbox",
+    func: function() {
+      render();
+      dependents();
+    }
+  }, {
+    element: helper.e(".control-link-item-hoverscale"),
+    path: "link.item.hoverScale",
+    type: "checkbox",
     func: function() {
       render();
     }
@@ -2362,7 +2380,7 @@ var control = (function() {
       helper.removeClass(html, "is-link-display-alignment-bottomright");
       helper.removeClass(html, "is-link-url-show");
       helper.removeClass(html, "is-link-item-line-show");
-      helper.removeClass(html, "is-link-item-hover-scale");
+      helper.removeClass(html, "is-link-item-hoverscale");
       helper.removeClass(html, "is-link-item-alignment-left");
       helper.removeClass(html, "is-link-item-alignment-center");
       helper.removeClass(html, "is-link-item-alignment-right");
@@ -2388,7 +2406,7 @@ var control = (function() {
           helper.addClass(html, "is-link-item-line-show");
         };
         if (state.get().link.item.hoverScale) {
-          helper.addClass(html, "is-link-item-hover-scale");
+          helper.addClass(html, "is-link-item-hoverscale");
         };
         if (state.get().link.edit) {
           helper.addClass(html, "is-link-edit");
@@ -2748,7 +2766,7 @@ var control = (function() {
       helper.e(".control-link-item-name-size-default").disabled = true;
       helper.e(".control-link-item-url-show").disabled = true;
       helper.e(".control-link-item-line-show").disabled = true;
-      helper.e(".control-link-item-hover-scale").disabled = true;
+      helper.e(".control-link-item-hoverscale").disabled = true;
       helper.e(".control-link-item-display-alignment-grid").setAttribute("disabled", "");
       helper.e(".control-link-item-display-alignment-label").setAttribute("disabled", "");
       helper.e(".control-link-item-display-alignment-topleft").disabled = true;
@@ -2786,7 +2804,7 @@ var control = (function() {
         helper.e(".control-link-item-name-show").disabled = false;
         helper.e(".control-link-item-url-show").disabled = false;
         helper.e(".control-link-item-line-show").disabled = false;
-        helper.e(".control-link-item-hover-scale").disabled = false;
+        helper.e(".control-link-item-hoverscale").disabled = false;
         helper.e(".control-link-newtab").disabled = false;
         helper.e(".control-link-style-block").disabled = false;
         helper.e(".control-link-style-list").disabled = false;

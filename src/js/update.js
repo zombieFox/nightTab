@@ -564,6 +564,10 @@ var update = (function() {
       };
       data.state.layout.order = data.state.layout.order.toLowerCase();
       return data;
+    },
+    "3.30.0": function(data) {
+      data.state.link.item.order = "displayname";
+      return data;
     }
   };
 

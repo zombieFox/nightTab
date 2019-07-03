@@ -497,8 +497,13 @@ var link = (function() {
     } else if (data.display == "icon" && data.icon.prefix != null && data.icon.name != null) {
       linkDisplay.appendChild(linkDisplayIcon);
     };
-    linkPanelFront.appendChild(linkDisplay);
-    linkPanelFront.appendChild(linkName);
+    if (state.get().link.item.order == "displayname") {
+      linkPanelFront.appendChild(linkDisplay);
+      linkPanelFront.appendChild(linkName);
+    } else if (state.get().link.item.order == "namedisplay") {
+      linkPanelFront.appendChild(linkName);
+      linkPanelFront.appendChild(linkDisplay);
+    };
     linkHandle.appendChild(linkHandleIcon);
     linkControl.appendChild(linkHandle);
     linkEdit.appendChild(linkEditIcon);

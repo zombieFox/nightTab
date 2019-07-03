@@ -160,6 +160,7 @@ var state = (function() {
         hoverScale: {
           show: true
         },
+        order: "displayname",
         size: 1,
         newTab: false
       },
