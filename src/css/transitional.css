@@ -12,22 +12,22 @@
   flex-wrap: nowrap;
 }
 
+.is-header-item-alignment-left .transitional {
+  text-align: left;
+}
+
+.is-header-item-alignment-center .transitional {
+  text-align: center;
+}
+
+.is-header-item-alignment-right .transitional {
+  text-align: right;
+}
+
 .transitional-item {
   font-size: 1.5em;
   max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.is-header-item-alignment-horizontal-left .transitional {
-  text-align: left;
-}
-
-.is-header-item-alignment-horizontal-center .transitional {
-  text-align: center;
-}
-
-.is-header-item-alignment-horizontal-right .transitional {
-  text-align: right;
 }

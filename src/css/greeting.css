@@ -12,16 +12,16 @@
   flex-wrap: nowrap;
 }
 
-.is-header-item-alignment-horizontal-left .greeting {
-  justify-content: flex-start;
+.is-header-item-alignment-left .greeting {
+  text-align: left;
 }
 
-.is-header-item-alignment-horizontal-center .greeting {
-  justify-content: center;
+.is-header-item-alignment-center .greeting {
+  text-align: center;
 }
 
-.is-header-item-alignment-horizontal-right .greeting {
-  justify-content: flex-end;
+.is-header-item-alignment-right .greeting {
+  text-align: right;
 }
 
 .greeting-item {
