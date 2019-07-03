@@ -21,11 +21,13 @@ var edge = (function() {
       options = helper.applyOptions(options, override);
     };
     var _resize = function() {
+      var scrollTop = document.documentElement.scrollTop;
+      var scrollLeft = document.documentElement.scrollLeft;
       var rect = options.element.getBoundingClientRect();
       _currentEdge.style.width = rect.width + "px";
       _currentEdge.style.height = rect.height + "px";
-      _currentEdge.style.top = rect.top + "px";
-      _currentEdge.style.left = rect.left + "px";
+      _currentEdge.style.top = rect.top + scrollTop + "px";
+      _currentEdge.style.left = rect.left + scrollLeft + "px";
     };
     var _makeEdge = function() {
       helper.setObject({
