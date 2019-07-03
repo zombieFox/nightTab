@@ -2764,6 +2764,8 @@ var control = (function() {
       helper.e("[for=control-link-item-name-size]").setAttribute("disabled", "");
       helper.e(".control-link-item-name-size").disabled = true;
       helper.e(".control-link-item-name-size-default").disabled = true;
+      helper.e(".control-link-item-order-displayname").disabled = true;
+      helper.e(".control-link-item-order-namedisplay").disabled = true;
       helper.e(".control-link-item-url-show").disabled = true;
       helper.e(".control-link-item-line-show").disabled = true;
       helper.e(".control-link-item-hoverscale").disabled = true;
@@ -2838,6 +2840,10 @@ var control = (function() {
           helper.e(".control-link-item-display-alignment-bottomleft").disabled = false;
           helper.e(".control-link-item-display-alignment-bottomcenter").disabled = false;
           helper.e(".control-link-item-display-alignment-bottomright").disabled = false;
+        };
+        if (state.get().link.item.display.show && state.get().link.item.name.show) {
+          helper.e(".control-link-item-order-displayname").disabled = false;
+          helper.e(".control-link-item-order-namedisplay").disabled = false;
         };
       };
     };
