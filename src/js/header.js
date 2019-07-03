@@ -78,9 +78,10 @@ var header = (function() {
   var _renderShade = function() {
     var html = helper.e("html");
     var headerRect = helper.e(".header").getBoundingClientRect();
+    var layoutRect = helper.e(".layout").getBoundingClientRect();
     var fontSize = parseInt(getComputedStyle(html).fontSize, 10);
     var scrollTop = document.documentElement.scrollTop;
-    var scrollHeight = document.documentElement.scrollHeight;
+    // var scrollHeight = document.documentElement.scrollHeight;
     var innerHeight = window.innerHeight;
     // if shade show
     if (state.get().header.shade.show) {
@@ -101,9 +102,7 @@ var header = (function() {
           };
         } else if (state.get().layout.order == "linkheader") {
           // check scroll position
-          console.log(scrollTop, scrollHeight - innerHeight, scrollTop < (scrollHeight - innerHeight));
-          //  && headerRect.bottom == innerHeight
-          if (scrollTop < (scrollHeight - innerHeight) + (fontSize * 2)) {
+          if (headerRect.bottom == innerHeight && (scrollTop + innerHeight) < ((scrollTop + layoutRect.bottom) - (fontSize * 2))) {
             helper.addClass(html, "is-header-shade-style-scroll");
           } else {
             helper.removeClass(html, "is-header-shade-style-scroll");
