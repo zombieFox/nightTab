@@ -187,7 +187,8 @@ var update = (function() {
       data.state.menu.show = data.state.menu.active;
       delete data.state.menu.active;
       delete data.state.menu.open;
-      // update version
+      data.state.menu = false;
+      data.state.modal = false;
       return data;
     },
     "2.8.0": function(data) {
