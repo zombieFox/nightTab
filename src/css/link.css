@@ -440,7 +440,6 @@
   font-family: var(--font-regular);
   color: rgb(var(--theme-gray-12));
   display: none;
-  text-align: center;
   transition: color var(--layout-transition-speed-fast) ease-in-out;
 }
 
@@ -449,15 +448,21 @@
   margin-bottom: 0;
 }
 
-.is-link-display-alignment-left .link-name {
+.is-link-display-alignment-topleft .link-name,
+.is-link-display-alignment-centerleft .link-name,
+.is-link-display-alignment-bottomleft .link-name {
   text-align: left;
 }
 
-.is-link-display-alignment-center .link-name {
+.is-link-display-alignment-topcenter .link-name,
+.is-link-display-alignment-centercenter .link-name,
+.is-link-display-alignment-bottomcenter .link-name {
   text-align: center;
 }
 
-.is-link-display-alignment-right .link-name {
+.is-link-display-alignment-topright .link-name,
+.is-link-display-alignment-centerright .link-name,
+.is-link-display-alignment-bottomright .link-name {
   text-align: right;
 }
 
