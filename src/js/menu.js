@@ -44,7 +44,8 @@ var menu = (function() {
       path: "menu",
       newValue: false
     });
-    render();
+    render.menu();
+    render.tabindex();
   };
 
   var open = function() {
@@ -54,7 +55,8 @@ var menu = (function() {
       path: "menu",
       newValue: true
     });
-    render();
+    render.menu();
+    render.tabindex();
   };
 
   var toggle = function() {
@@ -72,10 +74,20 @@ var menu = (function() {
         newValue: true
       });
     };
-    render();
+    render.menu();
+    render.tabindex();
   };
 
-  var render = function() {
+  var render = {
+    tabindex: function() {
+      renderTabindex();
+    },
+    menu: function() {
+      renderMenu();
+    }
+  };
+
+  var renderMenu = function() {
     var html = helper.e("html");
     if (state.get().menu) {
       helper.addClass(html, "is-menu-open");
@@ -88,6 +100,23 @@ var menu = (function() {
       });
     } else {
       helper.removeClass(html, "is-menu-open");
+    };
+  };
+
+  var renderTabindex = function() {
+    var menu = helper.e(".menu");
+    if (state.get().menu) {
+      menu.tabIndex = 1;
+      menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
+        arrayItem.tabIndex = 1;
+        console.log(arrayItem);
+      });
+    } else {
+      menu.tabIndex = -1;
+      menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
+        arrayItem.tabIndex = -1;
+        console.log(arrayItem);
+      });
     };
   };
 
