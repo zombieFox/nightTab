@@ -2156,11 +2156,6 @@ var control = (function() {
     });
   };
 
-  var _renderItemDisplayLetter = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
-  };
-
   var bind = function() {
     var eventType = {
       a: "click",
