@@ -1,0 +1,34 @@
+{
+  "name": "nighttab",
+  "version": "3.30.8",
+  "description": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zombieFox/nightTab.git"
+  },
+  "keywords": [
+    "startpage",
+    "start-page",
+    "newtabpage",
+    "new-tab-page",
+    "tab",
+    "chrome-extension",
+    "extension",
+    "bookmarks",
+    "links"
+  ],
+  "author": "zombieFox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zombieFox/nightTab/issues"
+  },
+  "homepage": "https://github.com/zombieFox/nightTab#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1"
+  }
+}
