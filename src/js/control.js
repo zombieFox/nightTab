@@ -1991,16 +1991,14 @@ var control = (function() {
     path: "theme.style",
     type: "radio",
     func: function() {
-      render();
-      theme.render.accent.color();
+      theme.render.theme();
     }
   }, {
     element: helper.e(".control-theme-style-light"),
     path: "theme.style",
     type: "radio",
     func: function() {
-      render();
-      theme.render.accent.color();
+      theme.render.theme();
     }
   }, {
     element: helper.e(".control-theme-radius"),
