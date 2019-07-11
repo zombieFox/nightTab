@@ -464,6 +464,14 @@ input[type="range"]::-moz-range-track {
   -webkit-appearance: none;
 }
 
+input[type="range"]:focus::-moz-range-track {
+  background-color: rgb(var(--theme-style-text));
+}
+
+input[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+
 input[type="range"]::-moz-range-thumb {
   background-color: rgb(var(--theme-gray-01));
   color: rgb(var(--form-range-thumb));
