@@ -109,13 +109,11 @@ var menu = (function() {
       menu.tabIndex = 1;
       menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
         arrayItem.tabIndex = 1;
-        console.log(arrayItem);
       });
     } else {
       menu.tabIndex = -1;
       menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
         arrayItem.tabIndex = -1;
-        console.log(arrayItem);
       });
     };
   };
