@@ -118,8 +118,8 @@
   }
 
   .menu-nav-button {
-    flex-basis: 33%;
-    max-width: 33%;
+    flex-basis: 33.3333333333%;
+    max-width: 33.3333333333%;
   }
 }
 
@@ -181,8 +181,8 @@
   }
 
   .menu-nav-button {
-    flex-basis: 33%;
-    max-width: 33%;
+    flex-basis: 33.3333333333%;
+    max-width: 33.3333333333%;
   }
 }
 
