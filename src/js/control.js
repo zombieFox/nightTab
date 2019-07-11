@@ -2077,7 +2077,34 @@ var control = (function() {
       render();
       dependents();
       background.render();
-
+    }
+  }, {
+    element: helper.e(".control-background-image-from-local"),
+    path: "background.image.from",
+    type: "radio",
+    func: function() {
+      dependents();
+      background.render();
+    }
+  }, {
+    element: helper.e(".control-background-image-local"),
+    type: "file",
+    func: function() {
+      background.importData();
+    }
+  }, {
+    element: helper.e(".control-background-image-local-clear"),
+    type: "button",
+    func: function() {
+      background.render();
+    }
+  }, {
+    element: helper.e(".control-background-image-from-url"),
+    path: "background.image.from",
+    type: "radio",
+    func: function() {
+      dependents();
+      background.render();
     }
   }, {
     element: helper.e(".control-background-image-url"),
@@ -2855,8 +2882,8 @@ var control = (function() {
     };
     var _background = function() {
       if (state.get().background.image.show) {
-        helper.e("[for=control-background-image-url]").removeAttribute("disabled");
-        helper.e(".control-background-image-url").disabled = false;
+        helper.e(".control-background-image-from-local").disabled = false;
+        helper.e(".control-background-image-from-url").disabled = false;
         helper.e("[for=control-background-image-opacity]").removeAttribute("disabled");
         helper.e(".control-background-image-opacity").disabled = false;
         helper.e("[for=control-background-image-blur]").removeAttribute("disabled");
@@ -2868,8 +2895,8 @@ var control = (function() {
         helper.e("[for=control-background-image-scale]").removeAttribute("disabled");
         helper.e(".control-background-image-scale").disabled = false;
       } else {
-        helper.e("[for=control-background-image-url]").setAttribute("disabled", "");
-        helper.e(".control-background-image-url").disabled = true;
+        helper.e(".control-background-image-from-local").disabled = true;
+        helper.e(".control-background-image-from-url").disabled = true;
         helper.e("[for=control-background-image-opacity]").setAttribute("disabled", "");
         helper.e(".control-background-image-opacity").disabled = true;
         helper.e("[for=control-background-image-blur]").setAttribute("disabled", "");
@@ -2880,6 +2907,18 @@ var control = (function() {
         helper.e(".control-background-image-accent").disabled = true;
         helper.e("[for=control-background-image-scale]").setAttribute("disabled", "");
         helper.e(".control-background-image-scale").disabled = true;
+      };
+      if (state.get().background.image.show && state.get().background.image.from == "local") {
+        helper.e(".control-background-image-local").disabled = false;
+        helper.e(".control-background-image-local-clear").disabled = false;
+      } else {
+        helper.e(".control-background-image-local").disabled = true;
+        helper.e(".control-background-image-local-clear").disabled = true;
+      };
+      if (state.get().background.image.show && state.get().background.image.from == "url") {
+        helper.e(".control-background-image-url").disabled = false;
+      } else {
+        helper.e(".control-background-image-url").disabled = true;
       };
     };
     _header();

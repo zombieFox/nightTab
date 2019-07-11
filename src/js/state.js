@@ -195,6 +195,7 @@ var state = (function() {
     background: {
       image: {
         show: false,
+        from: "local",
         url: "",
         blur: 0,
         scale: 1,
