@@ -35,7 +35,7 @@ var keyboard = (function() {
       // ctrl+alt+d
       if (event.ctrlKey && event.altKey && event.keyCode == 68) {
         theme.toggle();
-        control.render();
+        theme.render.theme();
         control.update();
         data.save();
       };

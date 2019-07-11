@@ -25,7 +25,7 @@ var control = (function() {
     path: "theme.accent.current",
     type: "color",
     func: function() {
-      accent.render();
+      theme.render.accent.color();
       link.clear();
       link.render.item.all();
       sortable(".link-area");
@@ -1992,7 +1992,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      accent.render();
+      theme.render.accent.color();
     }
   }, {
     element: helper.e(".control-theme-style-light"),
@@ -2000,7 +2000,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render();
-      accent.render();
+      theme.render.accent.color();
     }
   }, {
     element: helper.e(".control-theme-radius"),
@@ -2024,7 +2024,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       dependents();
-      accent.render();
+      theme.render.accent.color();
     }
   }, {
     element: helper.e(".control-theme-accent-random-style-any"),
@@ -2065,8 +2065,8 @@ var control = (function() {
     element: helper.e(".control-theme-accent-randomise"),
     type: "button",
     func: function() {
-      accent.random();
-      accent.render();
+      theme.render.accent.random();
+      theme.render.accent.color();
       link.clear();
       link.render.item.all();
       sortable(".link-area");
@@ -2428,11 +2428,6 @@ var control = (function() {
         helper.addClass(html, "is-layout-scrollpastend");
       };
     };
-    var _theme = function() {
-      helper.removeClass(html, "is-theme-style-dark");
-      helper.removeClass(html, "is-theme-style-light");
-      helper.addClass(html, "is-theme-style-" + state.get().theme.style);
-    };
     var _background = function() {
       if (state.get().background.image.show) {
         helper.addClass(html, "is-background-image-show");
@@ -2444,7 +2439,6 @@ var control = (function() {
     _header();
     _link();
     _layout();
-    _theme();
     _background();
   };
 
