@@ -1,0 +1,187 @@
+:root {
+  /* theme */
+  --theme-root-font-size: 14px;
+  --theme-accent: 250, 130, 0;
+  --theme-radius: 0.2rem;
+  --theme-black: 0, 0, 0;
+  --theme-white: 255, 255, 255;
+  --theme-shade-01: 38, 40, 49;
+  --theme-shade-02: 47, 51, 62;
+  --theme-shade-03: 57, 62, 75;
+  --theme-shade-04: 67, 73, 88;
+  --theme-shade-05: 77, 84, 101;
+  --theme-shade-06: 87, 95, 114;
+  --theme-shade-07: 97, 106, 127;
+  --theme-shade-08: 107, 117, 140;
+  --theme-shade-09: 117, 128, 153;
+  --theme-shade-10: 127, 139, 166;
+  --theme-shade-11: 137, 151, 180;
+  --theme-shade-12: 149, 162, 187;
+  --theme-shade-13: 162, 173, 195;
+  --theme-shade-14: 174, 184, 203;
+  --theme-shade-15: 187, 195, 211;
+  --theme-shade-16: 199, 206, 218;
+  --theme-shade-17: 212, 217, 226;
+  --theme-shade-18: 224, 228, 234;
+  --theme-shade-19: 237, 239, 242;
+  --theme-shade-20: 250, 250, 250;
+  /* header */
+  --header-area-width: 100%;
+  --header-shade-color: var(--theme-gray-01);
+  --header-shade-opacity: 0.95;
+  --header-search-width: 0%;
+  --header-border-top: 0;
+  --header-border-bottom: 0;
+  --header-date-size: 1em;
+  --header-clock-size: 1em;
+  --header-search-size: 1em;
+  --header-button-size: 1em;
+  --header-greeting-size: 1em;
+  --header-transitional-size: 1em;
+  /* link */
+  --link-area-width: 100%;
+  --link-area-gutter-multiplier: 2;
+  --link-item-size: 1em;
+  --link-item-display-letter-size: 2em;
+  --link-item-display-icon-size: 2.5em;
+  --link-item-name-size: 0.9em;
+  /* layout */
+  --layout-line-width: 0.2em;
+  --layout-gutter: 0.5rem;
+  --layout-width: 80%;
+  --layout-padding-multiplier: 4;
+  --layout-gutter-multiplier: 4;
+  --layout-transition-speed-fast: 0.2s;
+  --layout-transition-speed-medium: 0.4s;
+  --layout-transition-speed-slow: 0.6s;
+  --layout-shadow-small: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+  --layout-shadow-medium: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
+  --layout-shadow-large: 0 3px 6px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.2);
+  /* background */
+  --background: rgb(var(--theme-gray-01));
+  --background-image: none;
+  --background-opacity: 1;
+  --background-scale: 1;
+  --background-accent-opacity: 0;
+  --background-blur: 0;
+  /* form */
+  --form-input-text: var(--theme-gray-16);
+  --form-input-border: 2;
+  --form-input-text-hover: var(--theme-style-text);
+  --form-input-text-focus: var(--theme-style-text);
+  --form-input-text-disabled: var(--theme-gray-02);
+  --form-input-text-disabled-helper-text: var(--theme-gray-04);
+  --form-input-placeholder: var(--theme-gray-06);
+  --form-input-placeholder-hover-focus: var(--theme-gray-10);
+  --form-input-placeholder-disabled: var(--theme-gray-04);
+  --form-label: var(--theme-gray-12);
+  --form-label-disabled: var(--theme-gray-04);
+  --form-checkbox-radio-label: var(--theme-gray-12);
+  --form-checkbox-radio-checked-label: var(--theme-gray-16);
+  --form-checkbox-radio-disabled-label: var(--theme-gray-04);
+  --form-range-thumb: var(--theme-gray-12);
+  /* button */
+  --button-text: var(--theme-gray-12);
+  --button-text-hover-focus: var(--theme-style-text);
+  --button-text-active: var(--theme-style-text);
+  --button-text-disabled: var(--theme-gray-04);
+  --button-link-text: var(--theme-gray-12);
+  --button-link-text-hover-focus: var(--theme-style-text);
+  --button-link-text-active: var(--theme-style-text);
+  --button-link-text-disabled: var(--theme-gray-04);
+  /* font */
+  --font-regular: "Open Sans Regular", sans-serif;
+  --font-bold: "Open Sans Bold", sans-serif;
+  --font-light: "Open Sans Light", sans-serif;
+  --font-fjalla: "Fjalla One Regular", sans-serif;
+  /* z index */
+  --z-index-background: 1000;
+  --z-index-link: 2000;
+  --z-index-header: 3000;
+  --z-index-tip: 4000;
+  --z-index-shade: 5000;
+  --z-index-modal: 6000;
+  --z-index-menu: 7000;
+  --z-index-auto-suggest-list: 8000;
+  --z-index-edge: 9000;
+  /* breakpoint */
+  /* can not be used in @media as of yet */
+  --breakpoint-sm: 550px;
+  --breakpoint-md: 700px;
+  --breakpoint-lg: 900px;
+  --breakpoint-xl: 1100px;
+  --breakpoint-xxl: 1600px;
+}
+
+.is-theme-style-dark {
+  /* theme */
+  --theme-gray-01: var(--theme-shade-01);
+  --theme-gray-02: var(--theme-shade-02);
+  --theme-gray-03: var(--theme-shade-03);
+  --theme-gray-04: var(--theme-shade-04);
+  --theme-gray-05: var(--theme-shade-05);
+  --theme-gray-06: var(--theme-shade-06);
+  --theme-gray-07: var(--theme-shade-07);
+  --theme-gray-08: var(--theme-shade-08);
+  --theme-gray-09: var(--theme-shade-09);
+  --theme-gray-10: var(--theme-shade-10);
+  --theme-gray-11: var(--theme-shade-11);
+  --theme-gray-12: var(--theme-shade-12);
+  --theme-gray-13: var(--theme-shade-13);
+  --theme-gray-14: var(--theme-shade-14);
+  --theme-gray-15: var(--theme-shade-15);
+  --theme-gray-16: var(--theme-shade-16);
+  --theme-gray-17: var(--theme-shade-17);
+  --theme-gray-18: var(--theme-shade-18);
+  --theme-gray-19: var(--theme-shade-19);
+  --theme-gray-20: var(--theme-shade-20);
+  --theme-style-text: var(--theme-white);
+}
+
+.is-theme-style-light {
+  /* theme */
+  --theme-gray-01: var(--theme-shade-20);
+  --theme-gray-02: var(--theme-shade-19);
+  --theme-gray-03: var(--theme-shade-18);
+  --theme-gray-04: var(--theme-shade-17);
+  --theme-gray-05: var(--theme-shade-16);
+  --theme-gray-06: var(--theme-shade-15);
+  --theme-gray-07: var(--theme-shade-14);
+  --theme-gray-08: var(--theme-shade-13);
+  --theme-gray-09: var(--theme-shade-12);
+  --theme-gray-10: var(--theme-shade-11);
+  --theme-gray-11: var(--theme-shade-10);
+  --theme-gray-12: var(--theme-shade-09);
+  --theme-gray-13: var(--theme-shade-08);
+  --theme-gray-14: var(--theme-shade-07);
+  --theme-gray-15: var(--theme-shade-06);
+  --theme-gray-16: var(--theme-shade-05);
+  --theme-gray-17: var(--theme-shade-04);
+  --theme-gray-18: var(--theme-shade-03);
+  --theme-gray-19: var(--theme-shade-02);
+  --theme-gray-20: var(--theme-shade-01);
+  --theme-style-text: var(--theme-black);
+}
+
+.is-link-style-block {
+  /* link */
+  --link-item-width: 11em;
+  --link-item-height: 10em;
+  --link-item-url-height: 20%;
+  --link-item-edit-height: 30%;
+}
+
+.is-link-style-list {
+  /* link */
+  --link-item-width: 20em;
+  --link-item-height: 4em;
+  --link-item-url-height: 30%;
+  --link-item-edit-height: 50%;
+}
+
+@media (min-width: 700px) {
+  :root {
+    /* theme */
+    --theme-root-font-size: 16px;
+  }
+}

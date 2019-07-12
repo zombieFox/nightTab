@@ -1,0 +1,44 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: var(--z-index-background);
+  animation: appear var(--layout-transition-speed-slow) 1;
+  display: none;
+}
+
+.is-background-image-show .background {
+  display: block;
+}
+
+.background-image {
+  background-image: var(--background-image);
+  /* background-image: url(https://source.unsplash.com/random/1920x1080/?night); */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: block;
+  opacity: var(--background-opacity);
+  transform: scale(var(--background-scale));
+  filter: blur(var(--background-blur)) grayscale(var(--background-grayscale));
+}
+
+.background-accent {
+  background-color: rgba(var(--theme-accent), var(--background-accent-opacity));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: block;
+}

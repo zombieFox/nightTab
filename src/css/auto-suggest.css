@@ -1,0 +1,83 @@
+.auto-suggest {
+  position: relative;
+  z-index: 1;
+  font-size: 1em;
+}
+
+.auto-suggest-list {
+  background-color: rgb(var(--theme-gray-02));
+  margin-top: 0.5em;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 40vh;
+  border-radius: var(--theme-radius);
+  overflow-y: auto;
+  z-index: var(--z-index-auto-suggest-list);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-shadow: var(--layout-shadow-large);
+}
+
+.auto-suggest-list-item {
+  flex-basis: 33.3333333333%;
+}
+
+.auto-suggest-list-item:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.auto-suggest-link {
+  padding: 0.5em;
+  border-width: var(--form-input-border);
+  border-style: solid;
+  border-color: transparent;
+  border-radius: var(--theme-radius);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: background-color var(--layout-transition-speed-fast) ease-in-out, color var(--layout-transition-speed-fast) ease-in-out, border-color var(--layout-transition-speed-fast) ease-in-out, box-shadow var(--layout-transition-speed-fast) ease-in-out;
+}
+
+.auto-suggest-link:link,
+.auto-suggest-link:visited {
+  color: rgb(var(--theme-gray-16));
+  text-decoration: none;
+}
+
+.auto-suggest-link:hover {
+  background-color: rgb(var(--theme-gray-03));
+  color: rgb(var(--form-input-text-hover));
+  outline: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 var(--layout-line-width) rgb(var(--theme-gray-06));
+}
+
+.auto-suggest-link:focus {
+  background-color: rgb(var(--theme-gray-01));
+  color: rgb(var(--form-input-text-focus));
+  outline: none;
+  text-decoration: none;
+  box-shadow: 0 0 0 var(--layout-line-width) rgb(var(--theme-accent)), 0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
+}
+
+.auto-suggest-link:active {
+  color: rgb(var(--theme-style-text));
+}
+
+.auto-suggest-icon {
+  font-size: 2em;
+}
+
+.auto-suggest-icon-text {
+  color: rgb(var(--theme-gray-08));
+  margin-top: 0.5em;
+  font-size: 0.6em;
+  text-align: center;
+}

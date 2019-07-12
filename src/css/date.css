@@ -1,0 +1,75 @@
+.date {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: var(--font-fjalla);
+  color: rgb(var(--theme-style-text));
+  width: 100%;
+  min-height: 2.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.is-header-item-alignment-left .date {
+  justify-content: flex-start;
+}
+
+.is-header-item-alignment-center .date {
+  justify-content: center;
+}
+
+.is-header-item-alignment-right .date {
+  justify-content: flex-end;
+}
+
+.date-separator,
+.date-date,
+.date-day,
+.date-month,
+.date-year {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.date-separator {
+  justify-content: center;
+  color: rgb(var(--theme-accent));
+}
+
+.date-date,
+.date-day,
+.date-month,
+.date-year {
+  justify-content: center;
+}
+
+.is-header-item-alignment-left .date-item:not(:last-child) {
+  margin-right: 0.2em;
+}
+
+.is-header-item-alignment-center .date-item:not(:first-child) {
+  margin-left: 0.1em;
+}
+
+.is-header-item-alignment-center .date-item:not(:last-child) {
+  margin-right: 0.1em;
+}
+
+.is-header-item-alignment-right .date-item:not(:first-child) {
+  margin-left: 0.2em;
+}
+
+.date-day {
+  color: rgb(var(--theme-style-text));
+}
+
+.date-date,
+.date-month,
+.date-year {
+  color: rgb(var(--theme-gray-16));
+}

@@ -1,0 +1,76 @@
+.clock {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: var(--font-fjalla);
+  color: rgb(var(--theme-style-text));
+  width: 100%;
+  min-height: 2.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.is-header-item-alignment-left .clock {
+  justify-content: flex-start;
+}
+
+.is-header-item-alignment-center .clock {
+  justify-content: center;
+}
+
+.is-header-item-alignment-right .clock {
+  justify-content: flex-end;
+}
+
+.clock-separator,
+.clock-hours,
+.clock-minutes,
+.clock-seconds,
+.clock-meridiem {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.clock-separator {
+  justify-content: center;
+  color: rgb(var(--theme-accent));
+}
+
+.clock-hours,
+.clock-minutes,
+.clock-seconds,
+.clock-meridiem {
+  justify-content: center;
+  min-width: 1.25em;
+}
+
+.is-header-item-alignment-left .clock-item:not(:last-child) {
+  margin-right: 0.2em;
+}
+
+.is-header-item-alignment-center .clock-item:not(:first-child) {
+  margin-left: 0.1em;
+}
+
+.is-header-item-alignment-center .clock-item:not(:last-child) {
+  margin-right: 0.1em;
+}
+
+.is-header-item-alignment-right .clock-item:not(:first-child) {
+  margin-left: 0.2em;
+}
+
+.clock-hours {
+  color: rgb(var(--theme-style-text));
+}
+
+.clock-minutes,
+.clock-seconds,
+.clock-meridiem {
+  color: rgb(var(--theme-gray-16));
+}

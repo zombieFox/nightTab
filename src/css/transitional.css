@@ -1,0 +1,33 @@
+.transitional {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: var(--font-fjalla);
+  color: rgb(var(--theme-gray-14));
+  width: 100%;
+  min-height: 2.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.is-header-item-alignment-left .transitional {
+  text-align: left;
+}
+
+.is-header-item-alignment-center .transitional {
+  text-align: center;
+}
+
+.is-header-item-alignment-right .transitional {
+  text-align: right;
+}
+
+.transitional-item {
+  font-size: 1.5em;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,19 @@
+.shade {
+  background-color: rgba(var(--theme-accent), 0.4);
+  position: fixed;
+  top: -1em;
+  left: -1em;
+  width: calc(100% + 2em);
+  height: calc(100% + 2em);
+  opacity: 0;
+  transition: opacity var(--layout-transition-speed-fast) ease-in-out, background-color var(--layout-transition-speed-fast) ease-in-out;
+  z-index: var(--z-index-shade);
+}
+
+.is-background-image-show .shade {
+  background-color: rgba(var(--theme-black), 0.5);
+}
+
+.is-edge:not(.is-background-image-show) .shade {
+  background-color: rgba(var(--theme-accent), 0.05);
+}
