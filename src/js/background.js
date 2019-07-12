@@ -17,15 +17,27 @@ var background = (function() {
       path: "background.image.file.data",
       newValue: ""
     });
-  };
-
-  var _setFile = function() {
-    
+    render.feedback("empty");
   };
 
   var render = {
-    all: function() {
-      _renderAll();
+    image: function() {
+      _renderImage();
+    },
+    blur: function() {
+      _renderBlur();
+    },
+    grayscale: function() {
+      _renderGrayscale();
+    },
+    opacity: function() {
+      _renderOpacity();
+    },
+    accent: function() {
+      _renderAccent();
+    },
+    scale: function() {
+      _renderScale();
     },
     feedback: function() {
       if (state.get().background.image.file.name != "") {
@@ -36,15 +48,46 @@ var background = (function() {
     }
   };
 
-  var _renderAll = function() {
+  var _renderImage = function() {
     var html = helper.e("html");
-    html.style.setProperty("--background-image", "url(" + state.get().background.image.url + ")");
-    html.style.setProperty("--background-blur", state.get().background.image.blur + "px");
-    html.style.setProperty("--background-grayscale", state.get().background.image.grayscale);
-    html.style.setProperty("--background-opacity", state.get().background.image.opacity);
-    html.style.setProperty("--background-scale", state.get().background.image.scale);
-    html.style.setProperty("--background-accent-opacity", state.get().background.image.accent);
+    if (state.get().background.image.show) {
+      if (state.get().background.image.from == "local") {
+        html.style.setProperty("--background-image", "url(" + state.get().background.image.file.data + ")");
+      } else if (state.get().background.image.from == "url") {
+        html.style.setProperty("--background-image", "url(" + state.get().background.image.url + ")");
+      };
+    } else {
+      html.style.setProperty("--background-image", "url()");
+    };
   };
+
+  var _renderBlur = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--background-blur", state.get().background.image.blur + "px");
+  };
+
+  var _renderGrayscale = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--background-grayscale", state.get().background.image.grayscale);
+  };
+
+  var _renderOpacity = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--background-opacity", state.get().background.image.opacity);
+  };
+
+  var _renderScale = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--background-scale", state.get().background.image.scale);
+  };
+
+  var _renderAccent = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--background-accent", state.get().background.image.accent);
+  };
+
+
+  var _renderAll = function() {};
 
   var _renderFeedback = function(type) {
     var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
@@ -111,22 +154,35 @@ var background = (function() {
     var reader = new FileReader();
     // define the on load event for the reader
     reader.onload = function(event) {
-      // console.log(event.target.result);
-      // if (state.get().background.image.file.name != "") {};
       if (fileList.item(0).type.split("/")[0] == "image") {
+        helper.setObject({
+          object: state.get(),
+          path: "background.image.file.name",
+          newValue: fileList[0].name
+        });
+        helper.setObject({
+          object: state.get(),
+          path: "background.image.file.data",
+          newValue: event.target.result
+        });
+        data.save();
+        render.image();
         _renderFeedback("success");
       } else {
         _renderFeedback("fail");
       };
-      // var html = helper.e("html");
-      // html.style.setProperty("--background-image", "url(" + reader.result + ")");
     };
     // invoke the reader
     reader.readAsDataURL(fileList.item(0));
   };
 
   var init = function() {
-    render.all();
+    render.image();
+    render.blur();
+    render.grayscale();
+    render.opacity();
+    render.scale();
+    render.accent();
     render.feedback();
   };
 

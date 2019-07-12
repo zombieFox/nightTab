@@ -62,7 +62,7 @@
   --background-image: none;
   --background-opacity: 1;
   --background-scale: 1;
-  --background-accent-opacity: 0;
+  --background-accent: 0;
   --background-blur: 0;
   /* form */
   --form-input-text: var(--theme-gray-16);

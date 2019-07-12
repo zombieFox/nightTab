@@ -2076,7 +2076,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      background.render.all();
+      background.render.image();
     }
   }, {
     element: helper.e(".control-background-image-from-local"),
@@ -2084,7 +2084,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      background.render.all();
+      background.render.image();
     }
   }, {
     element: helper.e(".control-background-image-local"),
@@ -2097,8 +2097,7 @@ var control = (function() {
     type: "button",
     func: function() {
       background.clear.file();
-      background.render.all();
-      background.render.feedback();
+      background.render.image();
     }
   }, {
     element: helper.e(".control-background-image-from-url"),
@@ -2106,14 +2105,14 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      background.render.all();
+      background.render.image();
     }
   }, {
     element: helper.e(".control-background-image-url"),
     path: "background.image.url",
     type: "text",
     func: function() {
-      background.render.all();
+      background.render.image();
     }
   }, {
     element: helper.e(".control-background-image-opacity"),
@@ -2121,7 +2120,7 @@ var control = (function() {
     type: "range",
     valueMod: ["reverse", "float"],
     func: function() {
-      background.render.all();
+      background.render.opacity();
     }
   }, {
     element: helper.e(".control-background-image-grayscale"),
@@ -2129,14 +2128,14 @@ var control = (function() {
     type: "range",
     valueMod: ["float"],
     func: function() {
-      background.render.all();
+      background.render.grayscale();
     }
   }, {
     element: helper.e(".control-background-image-blur"),
     path: "background.image.blur",
     type: "range",
     func: function() {
-      background.render.all();
+      background.render.blur();
     }
   }, {
     element: helper.e(".control-background-image-accent"),
@@ -2144,7 +2143,7 @@ var control = (function() {
     type: "range",
     valueMod: ["float"],
     func: function() {
-      background.render.all();
+      background.render.accent();
     }
   }, {
     element: helper.e(".control-background-image-scale"),
@@ -2152,7 +2151,7 @@ var control = (function() {
     type: "range",
     valueMod: ["float"],
     func: function() {
-      background.render.all();
+      background.render.scale();
     }
   }, {
     element: helper.e(".control-data-import"),
