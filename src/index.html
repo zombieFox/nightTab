@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: rgba(38, 40, 49)">
+<html lang="en" style="background-color: rgb(38, 40, 49)">
 <head>
   <meta charset="utf-8">
   <meta name="theme-color" content="#262831">
@@ -1040,6 +1040,9 @@
                   <label for="control-background-image-from-local">Use local file</label>
                 </div>
                 <div class="form-indent">
+                  <div class="feedback-wrap">
+                    <div class="control-background-image-local-feedback form-feedback"></div>
+                  </div>
                   <div class="input-wrap input-button input-hide">
                     <input id="control-background-image-local" class="control-background-image-local" type="file">
                     <label for="control-background-image-local">Select image</label>
@@ -1048,7 +1051,6 @@
                     <button class="control-background-image-local-clear button mb-0" href="#">Clear image</button>
                   </div>
                   <p class="input-helper small muted">Take care with large files, they may impact performance.</p>
-                  <div class="control-background-image-local-feedback form-feedback is-hidden"></div>
                 </div>
                 <div class="input-wrap">
                   <input id="control-background-image-from-url" class="control-background-image-from-url" type="radio" name="control-background-image-from" value="url" tabindex="1">
@@ -1099,7 +1101,9 @@
                 <label for="control-data-import">Import data</label>
               </div>
               <p class="input-helper small muted">Restore a previously exported nightTab backup.</p>
-              <div class="control-data-import-feedback form-feedback is-hidden"></div>
+              <div class="feedback-wrap">
+                <div class="control-data-import-feedback form-feedback"></div>
+              </div>
             </div>
           </div>
           <div class="menu-item">

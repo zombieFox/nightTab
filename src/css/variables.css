@@ -80,6 +80,9 @@
   --form-checkbox-radio-checked-label: var(--theme-gray-16);
   --form-checkbox-radio-disabled-label: var(--theme-gray-04);
   --form-range-thumb: var(--theme-gray-12);
+  --form-feedback-text: var(--theme-gray-16);
+  --form-feedback-text-muted: var(--theme-gray-12);
+  --form-feedback-text-disabled: var(--theme-gray-04);
   /* button */
   --button-text: var(--theme-gray-12);
   --button-text-hover-focus: var(--theme-style-text);

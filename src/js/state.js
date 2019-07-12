@@ -196,6 +196,10 @@ var state = (function() {
       image: {
         show: false,
         from: "local",
+        file: {
+          name: "fdsafsdaf.jpg",
+          data: ""
+        },
         url: "",
         blur: 0,
         scale: 1,

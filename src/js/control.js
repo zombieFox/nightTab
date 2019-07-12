@@ -2076,7 +2076,7 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      background.render();
+      background.render.all();
     }
   }, {
     element: helper.e(".control-background-image-from-local"),
@@ -2084,7 +2084,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      background.render();
+      background.render.all();
     }
   }, {
     element: helper.e(".control-background-image-local"),
@@ -2096,7 +2096,9 @@ var control = (function() {
     element: helper.e(".control-background-image-local-clear"),
     type: "button",
     func: function() {
-      background.render();
+      background.clear.file();
+      background.render.all();
+      background.render.feedback();
     }
   }, {
     element: helper.e(".control-background-image-from-url"),
@@ -2104,14 +2106,14 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      background.render();
+      background.render.all();
     }
   }, {
     element: helper.e(".control-background-image-url"),
     path: "background.image.url",
     type: "text",
     func: function() {
-      background.render();
+      background.render.all();
     }
   }, {
     element: helper.e(".control-background-image-opacity"),
@@ -2119,7 +2121,7 @@ var control = (function() {
     type: "range",
     valueMod: ["reverse", "float"],
     func: function() {
-      background.render();
+      background.render.all();
     }
   }, {
     element: helper.e(".control-background-image-grayscale"),
@@ -2127,14 +2129,14 @@ var control = (function() {
     type: "range",
     valueMod: ["float"],
     func: function() {
-      background.render();
+      background.render.all();
     }
   }, {
     element: helper.e(".control-background-image-blur"),
     path: "background.image.blur",
     type: "range",
     func: function() {
-      background.render();
+      background.render.all();
     }
   }, {
     element: helper.e(".control-background-image-accent"),
@@ -2142,7 +2144,7 @@ var control = (function() {
     type: "range",
     valueMod: ["float"],
     func: function() {
-      background.render();
+      background.render.all();
     }
   }, {
     element: helper.e(".control-background-image-scale"),
@@ -2150,7 +2152,7 @@ var control = (function() {
     type: "range",
     valueMod: ["float"],
     func: function() {
-      background.render();
+      background.render.all();
     }
   }, {
     element: helper.e(".control-data-import"),
@@ -2909,9 +2911,11 @@ var control = (function() {
         helper.e(".control-background-image-scale").disabled = true;
       };
       if (state.get().background.image.show && state.get().background.image.from == "local") {
+        helper.e(".control-background-image-local-feedback").removeAttribute("disabled");
         helper.e(".control-background-image-local").disabled = false;
         helper.e(".control-background-image-local-clear").disabled = false;
       } else {
+        helper.e(".control-background-image-local-feedback").setAttribute("disabled", "");
         helper.e(".control-background-image-local").disabled = true;
         helper.e(".control-background-image-local-clear").disabled = true;
       };
