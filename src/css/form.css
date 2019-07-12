@@ -1004,7 +1004,7 @@ input[type="range"][disabled]~.input-helper {
 
 .form-inline {
   display: inline-block;
-  margin-right: 1.5em;
+  margin-right: 0.5em;
   width: initial;
 }
 
