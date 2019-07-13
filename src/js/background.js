@@ -109,7 +109,8 @@ var background = (function() {
       empty: "No image selected.",
       current: "Image loaded.",
       success: "Success! Setting Background image.",
-      fail: "Not the right kind of file. Make sure the selected file is an image."
+      fail: "Not the right kind of file. Make sure the selected file is an image.",
+      size: "File size is too big. Max file size of 5MB."
     };
     var action = {
       empty: function() {
@@ -133,6 +134,11 @@ var background = (function() {
         var para1 = helper.node("p:" + feedbackMessage.fail);
         controlBackgroundImageLocalFeedback.appendChild(para1);
         _setFeedbackAnimation("is-shake");
+      },
+      size: function() {
+        var para1 = helper.node("p:" + feedbackMessage.size);
+        controlBackgroundImageLocalFeedback.appendChild(para1);
+        _setFeedbackAnimation("is-shake");
       }
     };
     clear();
@@ -154,22 +160,26 @@ var background = (function() {
     var reader = new FileReader();
     // define the on load event for the reader
     reader.onload = function(event) {
-      if (fileList.item(0).type.split("/")[0] == "image") {
-        helper.setObject({
-          object: state.get(),
-          path: "background.image.file.name",
-          newValue: fileList[0].name
-        });
-        helper.setObject({
-          object: state.get(),
-          path: "background.image.file.data",
-          newValue: event.target.result
-        });
-        data.save();
-        render.image();
-        _renderFeedback("success");
+      if (fileList.item(0).size <= 5000000) {
+        if (fileList.item(0).type.split("/")[0] == "image") {
+          helper.setObject({
+            object: state.get(),
+            path: "background.image.file.name",
+            newValue: fileList[0].name
+          });
+          helper.setObject({
+            object: state.get(),
+            path: "background.image.file.data",
+            newValue: event.target.result
+          });
+          data.save();
+          render.image();
+          _renderFeedback("success");
+        } else {
+          _renderFeedback("fail");
+        };
       } else {
-        _renderFeedback("fail");
+        _renderFeedback("size");
       };
     };
     // invoke the reader
