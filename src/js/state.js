@@ -197,7 +197,7 @@ var state = (function() {
         show: false,
         from: "local",
         file: {
-          name: "fdsafsdaf.jpg",
+          name: "",
           data: ""
         },
         url: "",

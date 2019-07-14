@@ -86,9 +86,6 @@ var background = (function() {
     html.style.setProperty("--background-accent", state.get().background.image.accent);
   };
 
-
-  var _renderAll = function() {};
-
   var _renderFeedback = function(type) {
     var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
     var _setFeedbackAnimation = function(animationClass) {

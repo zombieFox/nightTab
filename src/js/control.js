@@ -2469,6 +2469,27 @@ var control = (function() {
   };
 
   var dependents = function() {
+    var disable = {
+      input: function(input, disabled) {
+        if (disabled) {
+          helper.e(input).disabled = true;
+        } else {
+          helper.e(input).disabled = false;
+        };
+      },
+      element: function(className, disabled) {
+        var allHelper = helper.eA(className);
+        if (disabled) {
+          allHelper.forEach(function(arrayItem, index) {
+            helper.addClass(arrayItem, "disabled");
+          });
+        } else {
+          allHelper.forEach(function(arrayItem, index) {
+            helper.removeClass(arrayItem, "disabled");
+          });
+        };
+      }
+    };
     var _header = function() {
       var _clock = function() {
         var activeCount = 0;
@@ -2479,51 +2500,51 @@ var control = (function() {
           };
         });
         if (activeCount >= 2 && (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
-          helper.e(".control-header-clock-separator-show").disabled = false;
+          disable.input(".control-header-clock-separator-show", false);
         } else {
-          helper.e(".control-header-clock-separator-show").disabled = true;
+          disable.input(".control-header-clock-separator-show", true);
         };
         if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
-          helper.e(".control-header-clock-hour24-show").disabled = false;
-          helper.e(".control-header-clock-meridiem-show").disabled = false;
+          disable.input(".control-header-clock-hour24-show", false);
+          disable.input(".control-header-clock-meridiem-show", false);
         } else {
-          helper.e(".control-header-clock-hour24-show").disabled = true;
-          helper.e(".control-header-clock-meridiem-show").disabled = true;
+          disable.input(".control-header-clock-hour24-show", true);
+          disable.input(".control-header-clock-meridiem-show", true);
         };
         if ((state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) && !state.get().header.clock.hour24.show) {
-          helper.e(".control-header-clock-meridiem-show").disabled = false;
+          disable.input(".control-header-clock-meridiem-show", false);
         } else {
-          helper.e(".control-header-clock-meridiem-show").disabled = true;
+          disable.input(".control-header-clock-meridiem-show", true);
         };
         if (state.get().header.clock.hours.show) {
-          helper.e(".control-header-clock-hours-display-number").disabled = false;
-          helper.e(".control-header-clock-hours-display-word").disabled = false;
+          disable.input(".control-header-clock-hours-display-number", false);
+          disable.input(".control-header-clock-hours-display-word", false);
         } else {
-          helper.e(".control-header-clock-hours-display-number").disabled = true;
-          helper.e(".control-header-clock-hours-display-word").disabled = true;
+          disable.input(".control-header-clock-hours-display-number", true);
+          disable.input(".control-header-clock-hours-display-word", true);
         };
         if (state.get().header.clock.minutes.show) {
-          helper.e(".control-header-clock-minutes-display-number").disabled = false;
-          helper.e(".control-header-clock-minutes-display-word").disabled = false;
+          disable.input(".control-header-clock-minutes-display-number", false);
+          disable.input(".control-header-clock-minutes-display-word", false);
         } else {
-          helper.e(".control-header-clock-minutes-display-number").disabled = true;
-          helper.e(".control-header-clock-minutes-display-word").disabled = true;
+          disable.input(".control-header-clock-minutes-display-number", true);
+          disable.input(".control-header-clock-minutes-display-word", true);
         };
         if (state.get().header.clock.seconds.show) {
-          helper.e(".control-header-clock-seconds-display-number").disabled = false;
-          helper.e(".control-header-clock-seconds-display-word").disabled = false;
+          disable.input(".control-header-clock-seconds-display-number", false);
+          disable.input(".control-header-clock-seconds-display-word", false);
         } else {
-          helper.e(".control-header-clock-seconds-display-number").disabled = true;
-          helper.e(".control-header-clock-seconds-display-word").disabled = true;
+          disable.input(".control-header-clock-seconds-display-number", true);
+          disable.input(".control-header-clock-seconds-display-word", true);
         };
         if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
-          helper.e("[for=control-header-clock-size]").removeAttribute("disabled");
-          helper.e(".control-header-clock-size").disabled = false;
-          helper.e(".control-header-clock-size-default").disabled = false;
+          disable.element("[for=control-header-clock-size]", false);
+          disable.input(".control-header-clock-size", false);
+          disable.input(".control-header-clock-size-default", false);
         } else {
-          helper.e("[for=control-header-clock-size]").setAttribute("disabled", "");
-          helper.e(".control-header-clock-size").disabled = true;
-          helper.e(".control-header-clock-size-default").disabled = true;
+          disable.element("[for=control-header-clock-size]", true);
+          disable.input(".control-header-clock-size", true);
+          disable.input(".control-header-clock-size-default", true);
         };
       };
       var _date = function() {
@@ -2535,210 +2556,232 @@ var control = (function() {
           };
         });
         if (activeCount >= 2 && (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show)) {
-          helper.e(".control-header-date-separator-show").disabled = false;
+          disable.input(".control-header-date-separator-show", false);
         } else {
-          helper.e(".control-header-date-separator-show").disabled = true;
+          disable.input(".control-header-date-separator-show", true);
         };
         if (state.get().header.date.date.show && state.get().header.date.month.show) {
-          helper.e(".control-header-date-format-label").removeAttribute("disabled");
-          helper.e(".control-header-date-format-datemonth").disabled = false;
-          helper.e(".control-header-date-format-monthdate").disabled = false;
+          disable.element(".control-header-date-format-label", false);
+          disable.input(".control-header-date-format-datemonth", false);
+          disable.input(".control-header-date-format-monthdate", false);
         } else {
-          helper.e(".control-header-date-format-label").setAttribute("disabled", "");
-          helper.e(".control-header-date-format-datemonth").disabled = true;
-          helper.e(".control-header-date-format-monthdate").disabled = true;
+          disable.element(".control-header-date-format-label", true);
+          disable.input(".control-header-date-format-datemonth", true);
+          disable.input(".control-header-date-format-monthdate", true);
         };
         if (state.get().header.date.day.show) {
-          helper.e(".control-header-date-day-display-number").disabled = false;
-          helper.e(".control-header-date-day-display-word").disabled = false;
+          disable.input(".control-header-date-day-display-number", false);
+          disable.input(".control-header-date-day-display-word", false);
         } else {
-          helper.e(".control-header-date-day-display-number").disabled = true;
-          helper.e(".control-header-date-day-display-word").disabled = true;
+          disable.input(".control-header-date-day-display-number", true);
+          disable.input(".control-header-date-day-display-word", true);
         };
         if (state.get().header.date.date.show) {
-          helper.e(".control-header-date-date-display-number").disabled = false;
-          helper.e(".control-header-date-date-display-word").disabled = false;
-          helper.e(".control-header-date-date-ordinal").disabled = false;
+          disable.input(".control-header-date-date-display-number", false);
+          disable.input(".control-header-date-date-display-word", false);
+          disable.input(".control-header-date-date-ordinal", false);
+          disable.element(".control-header-date-date-ordinal-helper", false);
         } else {
-          helper.e(".control-header-date-date-display-number").disabled = true;
-          helper.e(".control-header-date-date-display-word").disabled = true;
-          helper.e(".control-header-date-date-ordinal").disabled = true;
+          disable.input(".control-header-date-date-display-number", true);
+          disable.input(".control-header-date-date-display-word", true);
+          disable.input(".control-header-date-date-ordinal", true);
+          disable.element(".control-header-date-date-ordinal-helper", true);
         };
         if (state.get().header.date.month.show) {
-          helper.e(".control-header-date-month-display-number").disabled = false;
-          helper.e(".control-header-date-month-display-word").disabled = false;
+          disable.input(".control-header-date-month-display-number", false);
+          disable.input(".control-header-date-month-display-word", false);
         } else {
-          helper.e(".control-header-date-month-display-number").disabled = true;
-          helper.e(".control-header-date-month-display-word").disabled = true;
+          disable.input(".control-header-date-month-display-number", true);
+          disable.input(".control-header-date-month-display-word", true);
         };
         if (state.get().header.date.year.show) {
-          helper.e(".control-header-date-year-display-number").disabled = false;
-          helper.e(".control-header-date-year-display-word").disabled = false;
+          disable.input(".control-header-date-year-display-number", false);
+          disable.input(".control-header-date-year-display-word", false);
         } else {
-          helper.e(".control-header-date-year-display-number").disabled = true;
-          helper.e(".control-header-date-year-display-word").disabled = true;
+          disable.input(".control-header-date-year-display-number", true);
+          disable.input(".control-header-date-year-display-word", true);
         };
         if (state.get().header.date.day.show && state.get().header.date.day.display == "number") {
-          helper.e(".control-header-date-day-week-start-label").removeAttribute("disabled");
-          helper.e(".control-header-date-day-week-start-monday").disabled = false;
-          helper.e(".control-header-date-day-week-start-sunday").disabled = false;
+          disable.element(".control-header-date-day-week-start-label", false);
+          disable.input(".control-header-date-day-week-start-monday", false);
+          disable.input(".control-header-date-day-week-start-sunday", false);
+          disable.element(".control-header-date-day-week-start-helper", false);
         } else {
-          helper.e(".control-header-date-day-week-start-label").setAttribute("disabled", "");
-          helper.e(".control-header-date-day-week-start-monday").disabled = true;
-          helper.e(".control-header-date-day-week-start-sunday").disabled = true;
+          disable.element(".control-header-date-day-week-start-label", true);
+          disable.input(".control-header-date-day-week-start-monday", true);
+          disable.input(".control-header-date-day-week-start-sunday", true);
+          disable.element(".control-header-date-day-week-start-helper", true);
         };
         if (state.get().header.date.day.show && state.get().header.date.day.display == "word") {
-          helper.e(".control-header-date-day-length-label").removeAttribute("disabled");
-          helper.e(".control-header-date-day-length-long").disabled = false;
-          helper.e(".control-header-date-day-length-short").disabled = false;
+          disable.element(".control-header-date-day-length-label", false);
+          disable.input(".control-header-date-day-length-long", false);
+          disable.input(".control-header-date-day-length-short", false);
         } else {
-          helper.e(".control-header-date-day-length-label").setAttribute("disabled", "");
-          helper.e(".control-header-date-day-length-long").disabled = true;
-          helper.e(".control-header-date-day-length-short").disabled = true;
+          disable.element(".control-header-date-day-length-label", true);
+          disable.input(".control-header-date-day-length-long", true);
+          disable.input(".control-header-date-day-length-short", true);
         };
         if (state.get().header.date.month.show && state.get().header.date.month.display == "word") {
-          helper.e(".control-header-date-month-length-label").removeAttribute("disabled");
-          helper.e(".control-header-date-month-length-long").disabled = false;
-          helper.e(".control-header-date-month-length-short").disabled = false;
+          disable.element(".control-header-date-month-length-label", false);
+          disable.input(".control-header-date-month-length-long", false);
+          disable.input(".control-header-date-month-length-short", false);
         } else {
-          helper.e(".control-header-date-month-length-label").setAttribute("disabled", "");
-          helper.e(".control-header-date-month-length-long").disabled = true;
-          helper.e(".control-header-date-month-length-short").disabled = true;
+          disable.element(".control-header-date-month-length-label", true);
+          disable.input(".control-header-date-month-length-long", true);
+          disable.input(".control-header-date-month-length-short", true);
         };
         if (state.get().header.date.month.show && state.get().header.date.month.display == "number") {
-          helper.e(".control-header-date-month-ordinal").disabled = false;
+          disable.input(".control-header-date-month-ordinal", false);
+          disable.element(".control-header-date-month-ordinal-helper", false);
         } else {
-          helper.e(".control-header-date-month-ordinal").disabled = true;
+          disable.input(".control-header-date-month-ordinal", true);
+          disable.element(".control-header-date-month-ordinal-helper", true);
         };
         if (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show) {
-          helper.e("[for=control-header-date-size]").removeAttribute("disabled");
-          helper.e(".control-header-date-size").disabled = false;
-          helper.e(".control-header-date-size-default").disabled = false;
+          disable.element("[for=control-header-date-size]", false);
+          disable.input(".control-header-date-size", false);
+          disable.input(".control-header-date-size-default", false);
         } else {
-          helper.e("[for=control-header-date-size]").setAttribute("disabled", "");
-          helper.e(".control-header-date-size").disabled = true;
-          helper.e(".control-header-date-size-default").disabled = true;
+          disable.element("[for=control-header-date-size]", true);
+          disable.input(".control-header-date-size", true);
+          disable.input(".control-header-date-size-default", true);
         };
       };
       var _shade = function() {
         if (state.get().header.shade.show) {
-          helper.e(".control-header-shade-style-always").disabled = false;
-          helper.e(".control-header-shade-style-scroll").disabled = false;
-          helper.e("[for=control-header-shade-opacity]").removeAttribute("disabled");
-          helper.e(".control-header-shade-opacity").disabled = false;
-          helper.e(".control-header-radius").disabled = false;
+          disable.input(".control-header-shade-style-always", false);
+          disable.element(".control-header-shade-style-always-helper", false);
+          disable.input(".control-header-shade-style-scroll", false);
+          disable.element(".control-header-shade-style-scroll-helper", false);
+          disable.element("[for=control-header-shade-opacity]", false);
+          disable.input(".control-header-shade-opacity", false);
+          disable.input(".control-header-radius", false);
         } else {
-          helper.e(".control-header-shade-style-always").disabled = true;
-          helper.e(".control-header-shade-style-scroll").disabled = true;
-          helper.e("[for=control-header-shade-opacity]").setAttribute("disabled", "");
-          helper.e(".control-header-shade-opacity").disabled = true;
-          helper.e(".control-header-radius").disabled = true;
+          disable.input(".control-header-shade-style-always", true);
+          disable.element(".control-header-shade-style-always-helper", true);
+          disable.input(".control-header-shade-style-scroll", true);
+          disable.element(".control-header-shade-style-scroll-helper", true);
+          disable.element("[for=control-header-shade-opacity]", true);
+          disable.input(".control-header-shade-opacity", true);
+          disable.input(".control-header-radius", true);
         };
       };
       var _search = function() {
         if (state.get().header.search.show) {
-          helper.e(".control-header-search-style-label").removeAttribute("disabled");
-          helper.e(".control-header-search-style-auto").disabled = false;
-          helper.e(".control-header-search-style-custom").disabled = false;
-          helper.e("[for=control-header-search-width]").removeAttribute("disabled");
-          helper.e(".control-header-search-width").disabled = false;
-          helper.e(".control-header-search-focus").disabled = false;
-          helper.e(".control-header-search-engine-label").removeAttribute("disabled");
-          helper.e(".control-header-search-engine-google").disabled = false;
-          helper.e(".control-header-search-engine-duckduckgo").disabled = false;
-          helper.e(".control-header-search-engine-youtube").disabled = false;
-          helper.e(".control-header-search-engine-giphy").disabled = false;
-          helper.e(".control-header-search-engine-bing").disabled = false;
-          helper.e(".control-header-search-engine-custom").disabled = false;
-          helper.e(".control-header-search-text-alignment-grid").removeAttribute("disabled");
-          helper.e(".control-header-search-text-alignment-label").removeAttribute("disabled");
-          helper.e(".control-header-search-text-alignment-left").disabled = false;
-          helper.e(".control-header-search-text-alignment-center").disabled = false;
-          helper.e(".control-header-search-text-alignment-right").disabled = false;
-          helper.e("[for=control-header-search-size]").removeAttribute("disabled");
-          helper.e(".control-header-search-size").disabled = false;
-          helper.e(".control-header-search-size-default").disabled = false;
+          disable.element(".control-header-search-style-label", false);
+          disable.input(".control-header-search-style-auto", false);
+          disable.element(".control-header-search-style-auto-helper", false);
+          disable.input(".control-header-search-style-custom", false);
+          disable.element(".control-header-search-style-custom-helper", false);
+          disable.element("[for=control-header-search-width]", false);
+          disable.input(".control-header-search-width", false);
+          disable.input(".control-header-search-focus", false);
+          disable.element(".control-header-search-focus-helper", false);
+          disable.element(".control-header-search-engine-label", false);
+          disable.input(".control-header-search-engine-google", false);
+          disable.input(".control-header-search-engine-duckduckgo", false);
+          disable.input(".control-header-search-engine-youtube", false);
+          disable.input(".control-header-search-engine-giphy", false);
+          disable.input(".control-header-search-engine-bing", false);
+          disable.input(".control-header-search-engine-custom", false);
+          disable.element(".control-header-search-text-alignment-grid", false);
+          disable.element(".control-header-search-text-alignment-label", false);
+          disable.input(".control-header-search-text-alignment-left", false);
+          disable.input(".control-header-search-text-alignment-center", false);
+          disable.input(".control-header-search-text-alignment-right", false);
+          disable.element("[for=control-header-search-size]", false);
+          disable.input(".control-header-search-size", false);
+          disable.input(".control-header-search-size-default", false);
+          disable.element(".control-header-search-size-helper", false);
         } else {
-          helper.e(".control-header-search-style-label").setAttribute("disabled", "");
-          helper.e(".control-header-search-style-auto").disabled = true;
-          helper.e(".control-header-search-style-custom").disabled = true;
-          helper.e("[for=control-header-search-width]").setAttribute("disabled", "");
-          helper.e(".control-header-search-width").disabled = true;
-          helper.e(".control-header-search-focus").disabled = true;
-          helper.e(".control-header-search-engine-label").setAttribute("disabled", "");
-          helper.e(".control-header-search-engine-google").disabled = true;
-          helper.e(".control-header-search-engine-duckduckgo").disabled = true;
-          helper.e(".control-header-search-engine-youtube").disabled = true;
-          helper.e(".control-header-search-engine-giphy").disabled = true;
-          helper.e(".control-header-search-engine-bing").disabled = true;
-          helper.e(".control-header-search-engine-custom").disabled = true;
-          helper.e(".control-header-search-text-alignment-grid").setAttribute("disabled", "");
-          helper.e(".control-header-search-text-alignment-label").setAttribute("disabled", "");
-          helper.e(".control-header-search-text-alignment-left").disabled = true;
-          helper.e(".control-header-search-text-alignment-center").disabled = true;
-          helper.e(".control-header-search-text-alignment-right").disabled = true;
-          helper.e("[for=control-header-search-size]").setAttribute("disabled", "");
-          helper.e(".control-header-search-size").disabled = true;
-          helper.e(".control-header-search-size-default").disabled = true;
+          disable.element(".control-header-search-style-label", true);
+          disable.input(".control-header-search-style-auto", true);
+          disable.element(".control-header-search-style-auto-helper", true);
+          disable.input(".control-header-search-style-custom", true);
+          disable.element(".control-header-search-style-custom-helper", true);
+          disable.element("[for=control-header-search-width]", true);
+          disable.input(".control-header-search-width", true);
+          disable.input(".control-header-search-focus", true);
+          disable.element(".control-header-search-focus-helper", true);
+          disable.element(".control-header-search-engine-label", true);
+          disable.input(".control-header-search-engine-google", true);
+          disable.input(".control-header-search-engine-duckduckgo", true);
+          disable.input(".control-header-search-engine-youtube", true);
+          disable.input(".control-header-search-engine-giphy", true);
+          disable.input(".control-header-search-engine-bing", true);
+          disable.input(".control-header-search-engine-custom", true);
+          disable.element(".control-header-search-text-alignment-grid", true);
+          disable.element(".control-header-search-text-alignment-label", true);
+          disable.input(".control-header-search-text-alignment-left", true);
+          disable.input(".control-header-search-text-alignment-center", true);
+          disable.input(".control-header-search-text-alignment-right", true);
+          disable.element("[for=control-header-search-size]", true);
+          disable.input(".control-header-search-size", true);
+          disable.input(".control-header-search-size-default", true);
+          disable.element(".control-header-search-size-helper", true);
         };
         if (state.get().header.search.show && state.get().header.search.engine.selected === "custom") {
-          helper.e("[for=control-header-search-engine-custom-name]").removeAttribute("disabled");
-          helper.e(".control-header-search-engine-custom-name").disabled = false;
-          helper.e("[for=control-header-search-engine-custom-url]").removeAttribute("disabled");
-          helper.e(".control-header-search-engine-custom-url").disabled = false;
+          disable.element("[for=control-header-search-engine-custom-name]", false);
+          disable.input(".control-header-search-engine-custom-name", false);
+          disable.element("[for=control-header-search-engine-custom-url]", false);
+          disable.input(".control-header-search-engine-custom-url", false);
+          disable.element(".control-header-search-engine-custom-helper", false);
         } else {
-          helper.e("[for=control-header-search-engine-custom-name]").setAttribute("disabled", "");
-          helper.e(".control-header-search-engine-custom-name").disabled = true;
-          helper.e("[for=control-header-search-engine-custom-url]").setAttribute("disabled", "");
-          helper.e(".control-header-search-engine-custom-url").disabled = true;
+          disable.element("[for=control-header-search-engine-custom-name]", true);
+          disable.input(".control-header-search-engine-custom-name", true);
+          disable.element("[for=control-header-search-engine-custom-url]", true);
+          disable.input(".control-header-search-engine-custom-url", true);
+          disable.element(".control-header-search-engine-custom-helper", true);
         };
         if (state.get().header.search.show && state.get().header.search.style === "custom") {
-          helper.e("[for=control-header-search-width]").removeAttribute("disabled");
-          helper.e(".control-header-search-width").disabled = false;
+          disable.element("[for=control-header-search-width]", false);
+          disable.input(".control-header-search-width", false);
         } else {
-          helper.e("[for=control-header-search-width]").setAttribute("disabled", "");
-          helper.e(".control-header-search-width").disabled = true;
+          disable.element("[for=control-header-search-width]", true);
+          disable.input(".control-header-search-width", true);
         };
       };
       var _greeting = function() {
         if (state.get().header.greeting.show) {
-          helper.e("[for=control-header-greeting-name]").removeAttribute("disabled");
-          helper.e(".control-header-greeting-name").disabled = false;
-          helper.e(".control-header-greeting-type-good").disabled = false;
-          helper.e(".control-header-greeting-type-hello").disabled = false;
-          helper.e(".control-header-greeting-type-hi").disabled = false;
-          helper.e("[for=control-header-greeting-size]").removeAttribute("disabled");
-          helper.e(".control-header-greeting-size").disabled = false;
-          helper.e(".control-header-greeting-size-default").disabled = false;
+          disable.element("[for=control-header-greeting-name]", false);
+          disable.input(".control-header-greeting-name", false);
+          disable.input(".control-header-greeting-type-good", false);
+          disable.input(".control-header-greeting-type-hello", false);
+          disable.input(".control-header-greeting-type-hi", false);
+          disable.element("[for=control-header-greeting-size]", false);
+          disable.input(".control-header-greeting-size", false);
+          disable.input(".control-header-greeting-size-default", false);
         } else {
-          helper.e("[for=control-header-greeting-name]").setAttribute("disabled", "");
-          helper.e(".control-header-greeting-name").disabled = true;
-          helper.e(".control-header-greeting-type-good").disabled = true;
-          helper.e(".control-header-greeting-type-hello").disabled = true;
-          helper.e(".control-header-greeting-type-hi").disabled = true;
-          helper.e("[for=control-header-greeting-size]").setAttribute("disabled", "");
-          helper.e(".control-header-greeting-size").disabled = true;
-          helper.e(".control-header-greeting-size-default").disabled = true;
+          disable.element("[for=control-header-greeting-name]", true);
+          disable.input(".control-header-greeting-name", true);
+          disable.input(".control-header-greeting-type-good", true);
+          disable.input(".control-header-greeting-type-hello", true);
+          disable.input(".control-header-greeting-type-hi", true);
+          disable.element("[for=control-header-greeting-size]", true);
+          disable.input(".control-header-greeting-size", true);
+          disable.input(".control-header-greeting-size-default", true);
         };
       };
       var _transitional = function() {
         if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
-          helper.e(".control-header-transitional-show").disabled = false;
+          disable.input(".control-header-transitional-show", false);
+          disable.element(".control-header-transitional-show-helper", false);
         } else {
-          helper.e(".control-header-transitional-show").disabled = true;
+          disable.input(".control-header-transitional-show", true);
+          disable.element(".control-header-transitional-show-helper", true);
         };
         if (state.get().header.transitional.show && ((state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show))) {
-          helper.e(".control-header-transitional-type-timeanddate").disabled = false;
-          helper.e(".control-header-transitional-type-its").disabled = false;
-          helper.e("[for=control-header-transitional-size]").removeAttribute("disabled");
-          helper.e(".control-header-transitional-size").disabled = false;
-          helper.e(".control-header-transitional-size-default").disabled = false;
+          disable.input(".control-header-transitional-type-timeanddate", false);
+          disable.input(".control-header-transitional-type-its", false);
+          disable.element("[for=control-header-transitional-size]", false);
+          disable.input(".control-header-transitional-size", false);
+          disable.input(".control-header-transitional-size-default", false);
         } else {
-          helper.e(".control-header-transitional-type-timeanddate").disabled = true;
-          helper.e(".control-header-transitional-type-its").disabled = true;
-          helper.e("[for=control-header-transitional-size]").setAttribute("disabled", "");
-          helper.e(".control-header-transitional-size").disabled = true;
-          helper.e(".control-header-transitional-size-default").disabled = true;
+          disable.input(".control-header-transitional-type-timeanddate", true);
+          disable.input(".control-header-transitional-type-its", true);
+          disable.element("[for=control-header-transitional-size]", true);
+          disable.input(".control-header-transitional-size", true);
+          disable.input(".control-header-transitional-size-default", true);
         };
       };
       _clock();
@@ -2750,178 +2793,194 @@ var control = (function() {
     };
     var _edit = function() {
       if (bookmarks.get().length > 0) {
-        helper.e(".control-link-edit").disabled = false;
+        disable.input(".control-link-edit", false);
       } else {
-        helper.e(".control-link-edit").disabled = true;
-        helper.e(".control-link-edit").checked = false;
+        disable.input(".control-link-edit", true);
+        disable.input(".control-link-edit", false);
       };
     };
     var _link = function() {
-      helper.e(".control-layout-order-headerlink").disabled = true;
-      helper.e(".control-layout-order-linkheader").disabled = true;
-      helper.e("[for=control-link-area-width]").setAttribute("disabled", "");
-      helper.e(".control-link-area-width").disabled = true;
-      helper.e(".control-link-area-width-match").disabled = true;
-      helper.e(".control-link-area-alignment-grid").setAttribute("disabled", "");
-      helper.e(".control-link-area-alignment-label").setAttribute("disabled", "");
-      helper.e(".control-link-area-alignment-left").disabled = true;
-      helper.e(".control-link-area-alignment-center").disabled = true;
-      helper.e(".control-link-area-alignment-right").disabled = true;
-      helper.e("[for=control-link-item-size]").setAttribute("disabled", "");
-      helper.e(".control-link-item-size").disabled = true;
-      helper.e(".control-link-item-size-default").disabled = true;
-      helper.e(".control-link-item-display-show").disabled = true;
-      helper.e("[for=control-link-item-display-letter-size]").setAttribute("disabled", "");
-      helper.e(".control-link-item-display-letter-size").disabled = true;
-      helper.e(".control-link-item-display-letter-size-default").disabled = true;
-      helper.e("[for=control-link-item-display-icon-size]").setAttribute("disabled", "");
-      helper.e(".control-link-item-display-icon-size").disabled = true;
-      helper.e(".control-link-item-display-icon-size-default").disabled = true;
-      helper.e(".control-link-item-name-show").disabled = true;
-      helper.e("[for=control-link-item-name-size]").setAttribute("disabled", "");
-      helper.e(".control-link-item-name-size").disabled = true;
-      helper.e(".control-link-item-name-size-default").disabled = true;
-      helper.e(".control-link-item-order-displayname").disabled = true;
-      helper.e(".control-link-item-order-namedisplay").disabled = true;
-      helper.e(".control-link-item-url-show").disabled = true;
-      helper.e(".control-link-item-line-show").disabled = true;
-      helper.e(".control-link-item-hoverscale").disabled = true;
-      helper.e(".control-link-item-display-alignment-grid").setAttribute("disabled", "");
-      helper.e(".control-link-item-display-alignment-label").setAttribute("disabled", "");
-      helper.e(".control-link-item-display-alignment-topleft").disabled = true;
-      helper.e(".control-link-item-display-alignment-topcenter").disabled = true;
-      helper.e(".control-link-item-display-alignment-topright").disabled = true;
-      helper.e(".control-link-item-display-alignment-centerleft").disabled = true;
-      helper.e(".control-link-item-display-alignment-centercenter").disabled = true;
-      helper.e(".control-link-item-display-alignment-centerright").disabled = true;
-      helper.e(".control-link-item-display-alignment-bottomleft").disabled = true;
-      helper.e(".control-link-item-display-alignment-bottomcenter").disabled = true;
-      helper.e(".control-link-item-display-alignment-bottomright").disabled = true;
-      helper.e(".control-link-newtab").disabled = true;
-      helper.e(".control-link-style-block").disabled = true;
-      helper.e(".control-link-style-list").disabled = true;
-      helper.e(".control-link-sort-name").disabled = true;
-      helper.e(".control-link-sort-letter").disabled = true;
-      helper.e(".control-link-sort-icon").disabled = true;
-      helper.e(".control-link-accent-clear").disabled = true;
-      helper.e(".control-link-accent-set").disabled = true;
+      disable.input(".control-layout-order-headerlink", true);
+      disable.input(".control-layout-order-linkheader", true);
+      disable.element(".control-layout-order-helper", true);
+      disable.element("[for=control-link-area-width]", true);
+      disable.input(".control-link-area-width", true);
+      disable.input(".control-link-area-width-match", true);
+      disable.element(".control-link-area-width-helper", true);
+      disable.element(".control-link-area-alignment-grid", true);
+      disable.element(".control-link-area-alignment-label", true);
+      disable.input(".control-link-area-alignment-left", true);
+      disable.input(".control-link-area-alignment-center", true);
+      disable.input(".control-link-area-alignment-right", true);
+      disable.element(".control-link-area-alignment-helper", true);
+      disable.element("[for=control-link-item-size]", true);
+      disable.input(".control-link-item-size", true);
+      disable.input(".control-link-item-size-default", true);
+      disable.input(".control-link-item-display-show", true);
+      disable.element("[for=control-link-item-display-letter-size]", true);
+      disable.input(".control-link-item-display-letter-size", true);
+      disable.input(".control-link-item-display-letter-size-default", true);
+      disable.element("[for=control-link-item-display-icon-size]", true);
+      disable.input(".control-link-item-display-icon-size", true);
+      disable.input(".control-link-item-display-icon-size-default", true);
+      disable.input(".control-link-item-name-show", true);
+      disable.element("[for=control-link-item-name-size]", true);
+      disable.input(".control-link-item-name-size", true);
+      disable.input(".control-link-item-name-size-default", true);
+      disable.input(".control-link-item-order-displayname", true);
+      disable.input(".control-link-item-order-namedisplay", true);
+      disable.element(".control-link-item-order-namedisplay-helper", true);
+      disable.input(".control-link-item-url-show", true);
+      disable.input(".control-link-item-line-show", true);
+      disable.input(".control-link-item-hoverscale", true);
+      disable.element(".control-link-item-display-alignment-grid", true);
+      disable.element(".control-link-item-display-alignment-label", true);
+      disable.input(".control-link-item-display-alignment-topleft", true);
+      disable.input(".control-link-item-display-alignment-topcenter", true);
+      disable.input(".control-link-item-display-alignment-topright", true);
+      disable.input(".control-link-item-display-alignment-centerleft", true);
+      disable.input(".control-link-item-display-alignment-centercenter", true);
+      disable.input(".control-link-item-display-alignment-centerright", true);
+      disable.input(".control-link-item-display-alignment-bottomleft", true);
+      disable.input(".control-link-item-display-alignment-bottomcenter", true);
+      disable.input(".control-link-item-display-alignment-bottomright", true);
+      disable.input(".control-link-newtab", true);
+      disable.input(".control-link-style-block", true);
+      disable.element(".control-link-style-block-helper", true);
+      disable.input(".control-link-style-list", true);
+      disable.element(".control-link-style-list-helper", true);
+      disable.input(".control-link-sort-name", true);
+      disable.input(".control-link-sort-letter", true);
+      disable.input(".control-link-sort-icon", true);
+      disable.input(".control-link-accent-clear", true);
+      disable.input(".control-link-accent-set", true);
       if (state.get().link.show) {
-        helper.e(".control-layout-order-headerlink").disabled = false;
-        helper.e(".control-layout-order-linkheader").disabled = false;
-        helper.e("[for=control-link-area-width]").removeAttribute("disabled");
-        helper.e(".control-link-area-width").disabled = false;
-        helper.e(".control-link-area-width-match").disabled = false;
-        helper.e(".control-link-area-alignment-grid").removeAttribute("disabled");
-        helper.e(".control-link-area-alignment-label").removeAttribute("disabled");
-        helper.e(".control-link-area-alignment-left").disabled = false;
-        helper.e(".control-link-area-alignment-center").disabled = false;
-        helper.e(".control-link-area-alignment-right").disabled = false;
-        helper.e("[for=control-link-item-size]").removeAttribute("disabled");
-        helper.e(".control-link-item-size").disabled = false;
-        helper.e(".control-link-item-size-default").disabled = false;
-        helper.e(".control-link-item-display-show").disabled = false;
-        helper.e(".control-link-item-name-show").disabled = false;
-        helper.e(".control-link-item-url-show").disabled = false;
-        helper.e(".control-link-item-line-show").disabled = false;
-        helper.e(".control-link-item-hoverscale").disabled = false;
-        helper.e(".control-link-newtab").disabled = false;
-        helper.e(".control-link-style-block").disabled = false;
-        helper.e(".control-link-style-list").disabled = false;
-        helper.e(".control-link-sort-name").disabled = false;
-        helper.e(".control-link-sort-letter").disabled = false;
-        helper.e(".control-link-sort-icon").disabled = false;
-        helper.e(".control-link-accent-clear").disabled = false;
-        helper.e(".control-link-accent-set").disabled = false;
+        disable.input(".control-layout-order-headerlink", false);
+        disable.input(".control-layout-order-linkheader", false);
+        disable.element(".control-layout-order-helper", false);
+        disable.element("[for=control-link-area-width]", false);
+        disable.input(".control-link-area-width", false);
+        disable.input(".control-link-area-width-match", false);
+        disable.element(".control-link-area-width-helper", false);
+        disable.element(".control-link-area-alignment-grid", false);
+        disable.element(".control-link-area-alignment-label", false);
+        disable.input(".control-link-area-alignment-left", false);
+        disable.input(".control-link-area-alignment-center", false);
+        disable.input(".control-link-area-alignment-right", false);
+        disable.element(".control-link-area-alignment-helper", false);
+        disable.element("[for=control-link-item-size]", false);
+        disable.input(".control-link-item-size", false);
+        disable.input(".control-link-item-size-default", false);
+        disable.input(".control-link-item-display-show", false);
+        disable.input(".control-link-item-name-show", false);
+        disable.input(".control-link-item-url-show", false);
+        disable.input(".control-link-item-line-show", false);
+        disable.input(".control-link-item-hoverscale", false);
+        disable.input(".control-link-newtab", false);
+        disable.input(".control-link-style-block", false);
+        disable.element(".control-link-style-block-helper", false);
+        disable.input(".control-link-style-list", false);
+        disable.element(".control-link-style-list-helper", false);
+        disable.input(".control-link-sort-name", false);
+        disable.input(".control-link-sort-letter", false);
+        disable.input(".control-link-sort-icon", false);
+        disable.input(".control-link-accent-clear", false);
+        disable.input(".control-link-accent-set", false);
         if (state.get().link.item.display.show) {
-          helper.e("[for=control-link-item-display-letter-size]").removeAttribute("disabled");
-          helper.e(".control-link-item-display-letter-size").disabled = false;
-          helper.e(".control-link-item-display-letter-size-default").disabled = false;
-          helper.e("[for=control-link-item-display-icon-size]").removeAttribute("disabled");
-          helper.e(".control-link-item-display-icon-size").disabled = false;
-          helper.e(".control-link-item-display-icon-size-default").disabled = false;
+          disable.element("[for=control-link-item-display-letter-size]", false);
+          disable.input(".control-link-item-display-letter-size", false);
+          disable.input(".control-link-item-display-letter-size-default", false);
+          disable.element("[for=control-link-item-display-icon-size]", false);
+          disable.input(".control-link-item-display-icon-size", false);
+          disable.input(".control-link-item-display-icon-size-default", false);
         };
         if (state.get().link.item.name.show) {
-          helper.e("[for=control-link-item-name-size]").removeAttribute("disabled");
-          helper.e(".control-link-item-name-size").disabled = false;
-          helper.e(".control-link-item-name-size-default").disabled = false;
+          disable.element("[for=control-link-item-name-size]", false);
+          disable.input(".control-link-item-name-size", false);
+          disable.input(".control-link-item-name-size-default", false);
         };
         if (state.get().link.item.display.show || state.get().link.item.name.show) {
-          helper.e(".control-link-item-display-alignment-grid").removeAttribute("disabled");
-          helper.e(".control-link-item-display-alignment-label").removeAttribute("disabled");
-          helper.e(".control-link-item-display-alignment-topleft").disabled = false;
-          helper.e(".control-link-item-display-alignment-topcenter").disabled = false;
-          helper.e(".control-link-item-display-alignment-topright").disabled = false;
-          helper.e(".control-link-item-display-alignment-centerleft").disabled = false;
-          helper.e(".control-link-item-display-alignment-centercenter").disabled = false;
-          helper.e(".control-link-item-display-alignment-centerright").disabled = false;
-          helper.e(".control-link-item-display-alignment-bottomleft").disabled = false;
-          helper.e(".control-link-item-display-alignment-bottomcenter").disabled = false;
-          helper.e(".control-link-item-display-alignment-bottomright").disabled = false;
+          disable.element(".control-link-item-display-alignment-grid", false);
+          disable.element(".control-link-item-display-alignment-label", false);
+          disable.input(".control-link-item-display-alignment-topleft", false);
+          disable.input(".control-link-item-display-alignment-topcenter", false);
+          disable.input(".control-link-item-display-alignment-topright", false);
+          disable.input(".control-link-item-display-alignment-centerleft", false);
+          disable.input(".control-link-item-display-alignment-centercenter", false);
+          disable.input(".control-link-item-display-alignment-centerright", false);
+          disable.input(".control-link-item-display-alignment-bottomleft", false);
+          disable.input(".control-link-item-display-alignment-bottomcenter", false);
+          disable.input(".control-link-item-display-alignment-bottomright", false);
         };
         if (state.get().link.item.display.show && state.get().link.item.name.show) {
-          helper.e(".control-link-item-order-displayname").disabled = false;
-          helper.e(".control-link-item-order-namedisplay").disabled = false;
+          disable.input(".control-link-item-order-displayname", false);
+          disable.input(".control-link-item-order-namedisplay", false);
+          disable.element(".control-link-item-order-namedisplay-helper", false);
         };
       };
     };
     var _theme = function() {
       if (state.get().theme.accent.random.active) {
-        helper.e(".control-theme-accent-random-style-any").disabled = false;
-        helper.e(".control-theme-accent-random-style-light").disabled = false;
-        helper.e(".control-theme-accent-random-style-dark").disabled = false;
-        helper.e(".control-theme-accent-random-style-pastel").disabled = false;
-        helper.e(".control-theme-accent-random-style-saturated").disabled = false;
-        helper.e(".control-theme-accent-randomise").disabled = false;
+        disable.input(".control-theme-accent-random-style-any", false);
+        disable.input(".control-theme-accent-random-style-light", false);
+        disable.input(".control-theme-accent-random-style-dark", false);
+        disable.input(".control-theme-accent-random-style-pastel", false);
+        disable.input(".control-theme-accent-random-style-saturated", false);
+        disable.input(".control-theme-accent-randomise", false);
       } else {
-        helper.e(".control-theme-accent-random-style-any").disabled = true;
-        helper.e(".control-theme-accent-random-style-light").disabled = true;
-        helper.e(".control-theme-accent-random-style-dark").disabled = true;
-        helper.e(".control-theme-accent-random-style-pastel").disabled = true;
-        helper.e(".control-theme-accent-random-style-saturated").disabled = true;
-        helper.e(".control-theme-accent-randomise").disabled = true;
+        disable.input(".control-theme-accent-random-style-any", true);
+        disable.input(".control-theme-accent-random-style-light", true);
+        disable.input(".control-theme-accent-random-style-dark", true);
+        disable.input(".control-theme-accent-random-style-pastel", true);
+        disable.input(".control-theme-accent-random-style-saturated", true);
+        disable.input(".control-theme-accent-randomise", true);
       };
     };
     var _background = function() {
       if (state.get().background.image.show) {
-        helper.e(".control-background-image-from-local").disabled = false;
-        helper.e(".control-background-image-from-url").disabled = false;
-        helper.e("[for=control-background-image-opacity]").removeAttribute("disabled");
-        helper.e(".control-background-image-opacity").disabled = false;
-        helper.e("[for=control-background-image-blur]").removeAttribute("disabled");
-        helper.e(".control-background-image-blur").disabled = false;
-        helper.e("[for=control-background-image-grayscale]").removeAttribute("disabled");
-        helper.e(".control-background-image-grayscale").disabled = false;
-        helper.e("[for=control-background-image-accent]").removeAttribute("disabled");
-        helper.e(".control-background-image-accent").disabled = false;
-        helper.e("[for=control-background-image-scale]").removeAttribute("disabled");
-        helper.e(".control-background-image-scale").disabled = false;
+        disable.input(".control-background-image-from-local", false);
+        disable.input(".control-background-image-from-url", false);
+        disable.element("[for=control-background-image-opacity]", false);
+        disable.input(".control-background-image-opacity", false);
+        disable.element("[for=control-background-image-blur]", false);
+        disable.input(".control-background-image-blur", false);
+        disable.element("[for=control-background-image-grayscale]", false);
+        disable.input(".control-background-image-grayscale", false);
+        disable.element("[for=control-background-image-accent]", false);
+        disable.input(".control-background-image-accent", false);
+        disable.element("[for=control-background-image-scale]", false);
+        disable.input(".control-background-image-scale", false);
       } else {
-        helper.e(".control-background-image-from-local").disabled = true;
-        helper.e(".control-background-image-from-url").disabled = true;
-        helper.e("[for=control-background-image-opacity]").setAttribute("disabled", "");
-        helper.e(".control-background-image-opacity").disabled = true;
-        helper.e("[for=control-background-image-blur]").setAttribute("disabled", "");
-        helper.e(".control-background-image-blur").disabled = true;
-        helper.e("[for=control-background-image-grayscale]").setAttribute("disabled", "");
-        helper.e(".control-background-image-grayscale").disabled = true;
-        helper.e("[for=control-background-image-accent]").setAttribute("disabled", "");
-        helper.e(".control-background-image-accent").disabled = true;
-        helper.e("[for=control-background-image-scale]").setAttribute("disabled", "");
-        helper.e(".control-background-image-scale").disabled = true;
+        disable.input(".control-background-image-from-local", true);
+        disable.input(".control-background-image-from-url", true);
+        disable.element("[for=control-background-image-opacity]", true);
+        disable.input(".control-background-image-opacity", true);
+        disable.element("[for=control-background-image-blur]", true);
+        disable.input(".control-background-image-blur", true);
+        disable.element("[for=control-background-image-grayscale]", true);
+        disable.input(".control-background-image-grayscale", true);
+        disable.element("[for=control-background-image-accent]", true);
+        disable.input(".control-background-image-accent", true);
+        disable.element("[for=control-background-image-scale]", true);
+        disable.input(".control-background-image-scale", true);
       };
       if (state.get().background.image.show && state.get().background.image.from == "local") {
-        helper.e(".control-background-image-local-feedback").removeAttribute("disabled");
-        helper.e(".control-background-image-local").disabled = false;
-        helper.e(".control-background-image-local-clear").disabled = false;
+        disable.element(".control-background-image-local-feedback", false);
+        disable.input(".control-background-image-local", false);
+        disable.input(".control-background-image-local-clear", false);
+        disable.element(".control-background-image-local-helper", false);
       } else {
-        helper.e(".control-background-image-local-feedback").setAttribute("disabled", "");
-        helper.e(".control-background-image-local").disabled = true;
-        helper.e(".control-background-image-local-clear").disabled = true;
+        disable.element(".control-background-image-local-feedback", true);
+        disable.input(".control-background-image-local", true);
+        disable.input(".control-background-image-local-clear", true);
+        disable.element(".control-background-image-local-helper", true);
       };
       if (state.get().background.image.show && state.get().background.image.from == "url") {
-        helper.e(".control-background-image-url").disabled = false;
+        disable.input(".control-background-image-url", false);
+        disable.element(".control-background-image-url-helper", false);
       } else {
-        helper.e(".control-background-image-url").disabled = true;
+        disable.input(".control-background-image-url", true);
+        disable.element(".control-background-image-url-helper", true);
       };
     };
     _header();

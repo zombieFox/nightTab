@@ -70,7 +70,6 @@
   --form-input-text-hover: var(--theme-style-text);
   --form-input-text-focus: var(--theme-style-text);
   --form-input-text-disabled: var(--theme-gray-02);
-  --form-input-text-disabled-helper-text: var(--theme-gray-04);
   --form-input-placeholder: var(--theme-gray-06);
   --form-input-placeholder-hover-focus: var(--theme-gray-10);
   --form-input-placeholder-disabled: var(--theme-gray-04);
@@ -83,6 +82,8 @@
   --form-feedback-text: var(--theme-gray-16);
   --form-feedback-text-muted: var(--theme-gray-12);
   --form-feedback-text-disabled: var(--theme-gray-04);
+  --form-helper: var(--theme-gray-12);
+  --form-helper-disabled: var(--theme-gray-06);
   /* button */
   --button-text: var(--theme-gray-12);
   --button-text-hover-focus: var(--theme-style-text);
