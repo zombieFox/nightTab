@@ -36,7 +36,7 @@
 }
 
 .is-pop {
-  animation: pop var(--layout-transition-speed-fast) 1;
+  animation: pop var(--layout-transition-speed-slow) 1;
 }
 
 .sr-only {

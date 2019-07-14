@@ -17,38 +17,38 @@ var background = (function() {
       path: "background.image.file.data",
       newValue: ""
     });
-    render.feedback("empty");
+    render.feedback.clear();
+    render.feedback.empty();
   };
 
-  var render = {
-    image: function() {
-      _renderImage();
-    },
-    blur: function() {
-      _renderBlur();
-    },
-    grayscale: function() {
-      _renderGrayscale();
-    },
-    opacity: function() {
-      _renderOpacity();
-    },
-    accent: function() {
-      _renderAccent();
-    },
-    scale: function() {
-      _renderScale();
-    },
-    feedback: function() {
-      if (state.get().background.image.file.name != "") {
-        _renderFeedback("current");
-      } else {
-        _renderFeedback("empty");
-      };
+  var bind = {
+    feedback: {
+      animation: {}
     }
   };
 
-  var _renderImage = function() {
+  bind.feedback.animation.set = function(animationClass, action) {
+    var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+    helper.addClass(controlBackgroundImageLocalFeedback, animationClass);
+    var animationEndAction = function() {
+      if (action) {
+        action();
+      };
+      bind.feedback.animation.reset();
+    };
+    controlBackgroundImageLocalFeedback.addEventListener("animationend", animationEndAction, false);
+  };
+
+  bind.feedback.animation.reset = function() {
+    var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+    helper.removeClass(controlBackgroundImageLocalFeedback, "is-shake");
+    helper.removeClass(controlBackgroundImageLocalFeedback, "is-pop");
+    controlBackgroundImageLocalFeedback.removeEventListener("animationend", bind.feedback.animation.reset, false);
+  };
+
+  var render = {};
+
+  render.image = function() {
     var html = helper.e("html");
     if (state.get().background.image.show) {
       if (state.get().background.image.from == "local") {
@@ -61,85 +61,89 @@ var background = (function() {
     };
   };
 
-  var _renderBlur = function() {
+  render.blur = function() {
     var html = helper.e("html");
     html.style.setProperty("--background-blur", state.get().background.image.blur + "px");
   };
 
-  var _renderGrayscale = function() {
+  render.grayscale = function() {
     var html = helper.e("html");
     html.style.setProperty("--background-grayscale", state.get().background.image.grayscale);
   };
 
-  var _renderOpacity = function() {
+  render.opacity = function() {
     var html = helper.e("html");
     html.style.setProperty("--background-opacity", state.get().background.image.opacity);
   };
 
-  var _renderScale = function() {
+  render.scale = function() {
     var html = helper.e("html");
     html.style.setProperty("--background-scale", state.get().background.image.scale);
   };
 
-  var _renderAccent = function() {
+  render.accent = function() {
     var html = helper.e("html");
     html.style.setProperty("--background-accent", state.get().background.image.accent);
   };
 
-  var _renderFeedback = function(type) {
-    var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
-    var _setFeedbackAnimation = function(animationClass) {
-      helper.addClass(controlBackgroundImageLocalFeedback, animationClass);
-      controlBackgroundImageLocalFeedback.addEventListener("animationend", _resetFeedbackAnimation, false);
-    };
-    var _resetFeedbackAnimation = function() {
-      helper.removeClass(controlBackgroundImageLocalFeedback, "is-shake");
-      helper.removeClass(controlBackgroundImageLocalFeedback, "is-pop");
-      controlBackgroundImageLocalFeedback.removeEventListener("animationend", _resetFeedbackAnimation, false);
-    };
-    var clear = function() {
+  render.input = {
+    clear: function() {
+      helper.e(".control-background-image-local").value = "";
+    }
+  };
+
+  render.feedback = {
+    init: function() {
+      if (state.get().background.image.file.name != "") {
+        render.feedback.current();
+      } else {
+        render.feedback.empty();
+      };
+    },
+    empty: function() {
+      var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+      var para1 = helper.node("p:No image selected.|class:muted small");
+      controlBackgroundImageLocalFeedback.appendChild(para1);
+    },
+    current: function() {
+      var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+      var para1 = helper.node("p:Image loaded.|class:muted small");
+      var para2 = helper.node("p:" + state.get().background.image.file.name);
+      controlBackgroundImageLocalFeedback.appendChild(para1);
+      controlBackgroundImageLocalFeedback.appendChild(para2);
+    },
+    success: function(action) {
+      var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+      var para1 = helper.node("p:Success! Setting Background image.|class:muted small");
+      var para2 = helper.node("p:" + state.get().background.image.file.name);
+      controlBackgroundImageLocalFeedback.appendChild(para1);
+      controlBackgroundImageLocalFeedback.appendChild(para2);
+      bind.feedback.animation.set("is-pop", action);
+    },
+    clear: function() {
+      var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
       while (controlBackgroundImageLocalFeedback.lastChild) {
         controlBackgroundImageLocalFeedback.removeChild(controlBackgroundImageLocalFeedback.lastChild);
       };
-    };
-    var feedbackMessage = {
-      empty: "No image selected.",
-      current: "Image loaded.",
-      success: "Success! Setting Background image.",
-      fail: "Not the right kind of file. Make sure the selected file is an image.",
-      size: "File size is too big. Max file size of 5MB."
-    };
-    var action = {
-      empty: function() {
-        var para1 = helper.node("p:" + feedbackMessage.empty + "|class:muted small");
-        controlBackgroundImageLocalFeedback.appendChild(para1);
-      },
-      current: function() {
-        var para1 = helper.node("p:" + feedbackMessage.current + "|class:muted small");
-        var para2 = helper.node("p:" + state.get().background.image.file.name);
+    },
+    fail: {
+      filetype: function(name) {
+        var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+        var para1 = helper.node("p:Not the right kind of file. Make sure the selected file is an image.");
+        var para2 = helper.node("p:" + name);
         controlBackgroundImageLocalFeedback.appendChild(para1);
         controlBackgroundImageLocalFeedback.appendChild(para2);
+        bind.feedback.animation.set("is-shake");
       },
-      success: function() {
-        var para1 = helper.node("p:" + feedbackMessage.current + "|class:muted small");
-        var para2 = helper.node("p:" + state.get().background.image.file.name);
+      size: function(name) {
+        var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+        var para1 = helper.node("p:File size is too big. Max file size of 5MB.");
+        var para2 = helper.node("p:" + name);
         controlBackgroundImageLocalFeedback.appendChild(para1);
         controlBackgroundImageLocalFeedback.appendChild(para2);
-        _setFeedbackAnimation("is-pop");
-      },
-      fail: function() {
-        var para1 = helper.node("p:" + feedbackMessage.fail);
-        controlBackgroundImageLocalFeedback.appendChild(para1);
-        _setFeedbackAnimation("is-shake");
-      },
-      size: function() {
-        var para1 = helper.node("p:" + feedbackMessage.size);
-        controlBackgroundImageLocalFeedback.appendChild(para1);
-        _setFeedbackAnimation("is-shake");
+        bind.feedback.animation.set("is-shake");
       }
-    };
-    clear();
-    action[type]();
+    }
   };
 
   var importData = function() {
@@ -169,14 +173,19 @@ var background = (function() {
             path: "background.image.file.data",
             newValue: event.target.result
           });
-          data.save();
-          render.image();
-          _renderFeedback("success");
+          data.save();;
+          render.feedback.clear();
+          render.feedback.success(render.image);
+          render.input.clear();
         } else {
-          _renderFeedback("fail");
+          render.feedback.clear();
+          render.feedback.fail.filetype(fileList[0].name);
+          render.input.clear();
         };
       } else {
-        _renderFeedback("size");
+        render.feedback.clear();
+        render.feedback.fail.size(fileList[0].name);
+        render.input.clear();
       };
     };
     // invoke the reader
@@ -190,7 +199,7 @@ var background = (function() {
     render.opacity();
     render.scale();
     render.accent();
-    render.feedback();
+    render.feedback.init();
   };
 
   // exposed methods
