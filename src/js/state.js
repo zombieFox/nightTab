@@ -195,7 +195,7 @@ var state = (function() {
     background: {
       image: {
         show: false,
-        from: "local",
+        from: "file",
         file: {
           name: "",
           data: ""

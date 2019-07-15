@@ -22,21 +22,21 @@ var background = (function() {
   bind.feedback = {
     animation: {
       set: function(animationClass, action) {
-        var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
-        helper.addClass(controlBackgroundImageLocalFeedback, animationClass);
+        var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
+        helper.addClass(controlBackgroundImageFileFeedback, animationClass);
         var animationEndAction = function() {
           if (action) {
             action();
           };
           bind.feedback.animation.reset();
         };
-        controlBackgroundImageLocalFeedback.addEventListener("animationend", animationEndAction, false);
+        controlBackgroundImageFileFeedback.addEventListener("animationend", animationEndAction, false);
       },
       reset: function() {
-        var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
-        helper.removeClass(controlBackgroundImageLocalFeedback, "is-shake");
-        helper.removeClass(controlBackgroundImageLocalFeedback, "is-pop");
-        controlBackgroundImageLocalFeedback.removeEventListener("animationend", bind.feedback.animation.reset, false);
+        var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
+        helper.removeClass(controlBackgroundImageFileFeedback, "is-shake");
+        helper.removeClass(controlBackgroundImageFileFeedback, "is-pop");
+        controlBackgroundImageFileFeedback.removeEventListener("animationend", bind.feedback.animation.reset, false);
       }
     }
   };
@@ -46,7 +46,7 @@ var background = (function() {
   render.image = function() {
     var html = helper.e("html");
     if (state.get().background.image.show) {
-      if (state.get().background.image.from == "local") {
+      if (state.get().background.image.from == "file") {
         html.style.setProperty("--background-image", "url(" + state.get().background.image.file.data + ")");
       } else if (state.get().background.image.from == "url") {
         html.style.setProperty("--background-image", "url(" + state.get().background.image.url + ")");
@@ -83,7 +83,7 @@ var background = (function() {
 
   render.input = {
     clear: function() {
-      var input = helper.e(".control-background-image-local");
+      var input = helper.e(".control-background-image-file");
       input.value = "";
     }
   };
@@ -97,46 +97,46 @@ var background = (function() {
       };
     },
     empty: function() {
-      var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+      var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
       var para1 = helper.node("p:No image selected.|class:muted small");
-      controlBackgroundImageLocalFeedback.appendChild(para1);
+      controlBackgroundImageFileFeedback.appendChild(para1);
     },
     current: function() {
-      var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+      var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
       var para1 = helper.node("p:Image loaded.|class:muted small");
       var para2 = helper.node("p:" + state.get().background.image.file.name);
-      controlBackgroundImageLocalFeedback.appendChild(para1);
-      controlBackgroundImageLocalFeedback.appendChild(para2);
+      controlBackgroundImageFileFeedback.appendChild(para1);
+      controlBackgroundImageFileFeedback.appendChild(para2);
     },
     success: function(action) {
-      var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+      var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
       var para1 = helper.node("p:Success! Setting Background image.|class:muted small");
       var para2 = helper.node("p:" + state.get().background.image.file.name);
-      controlBackgroundImageLocalFeedback.appendChild(para1);
-      controlBackgroundImageLocalFeedback.appendChild(para2);
+      controlBackgroundImageFileFeedback.appendChild(para1);
+      controlBackgroundImageFileFeedback.appendChild(para2);
       bind.feedback.animation.set("is-pop", action);
     },
     clear: function() {
-      var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
-      while (controlBackgroundImageLocalFeedback.lastChild) {
-        controlBackgroundImageLocalFeedback.removeChild(controlBackgroundImageLocalFeedback.lastChild);
+      var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
+      while (controlBackgroundImageFileFeedback.lastChild) {
+        controlBackgroundImageFileFeedback.removeChild(controlBackgroundImageFileFeedback.lastChild);
       };
     },
     fail: {
       filetype: function(name) {
-        var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+        var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
         var para1 = helper.node("p:Not the right kind of file. Make sure the selected file is an image.|class:small muted");
         var para2 = helper.node("p:" + name);
-        controlBackgroundImageLocalFeedback.appendChild(para1);
-        controlBackgroundImageLocalFeedback.appendChild(para2);
+        controlBackgroundImageFileFeedback.appendChild(para1);
+        controlBackgroundImageFileFeedback.appendChild(para2);
         bind.feedback.animation.set("is-shake");
       },
       size: function(name) {
-        var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+        var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
         var para1 = helper.node("p:File size is too big. Max file size of 5MB.|class:small muted");
         var para2 = helper.node("p:" + name);
-        controlBackgroundImageLocalFeedback.appendChild(para1);
-        controlBackgroundImageLocalFeedback.appendChild(para2);
+        controlBackgroundImageFileFeedback.appendChild(para1);
+        controlBackgroundImageFileFeedback.appendChild(para2);
         bind.feedback.animation.set("is-shake");
       }
     }
@@ -144,7 +144,7 @@ var background = (function() {
 
   var importData = function() {
     // get files from input
-    var fileList = helper.e(".control-background-image-local").files;
+    var fileList = helper.e(".control-background-image-file").files;
     // if file was added
     if (fileList.length > 0) {
       // validate the file

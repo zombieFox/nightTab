@@ -2079,7 +2079,7 @@ var control = (function() {
       background.render.image();
     }
   }, {
-    element: helper.e(".control-background-image-from-local"),
+    element: helper.e(".control-background-image-from-file"),
     path: "background.image.from",
     type: "radio",
     func: function() {
@@ -2087,13 +2087,13 @@ var control = (function() {
       background.render.image();
     }
   }, {
-    element: helper.e(".control-background-image-local"),
+    element: helper.e(".control-background-image-file"),
     type: "file",
     func: function() {
       background.importData();
     }
   }, {
-    element: helper.e(".control-background-image-local-clear"),
+    element: helper.e(".control-background-image-file-clear"),
     type: "button",
     func: function() {
       background.mod.clear.file();
@@ -2941,7 +2941,7 @@ var control = (function() {
     };
     var _background = function() {
       if (state.get().background.image.show) {
-        disable.input(".control-background-image-from-local", false);
+        disable.input(".control-background-image-from-file", false);
         disable.input(".control-background-image-from-url", false);
         disable.element("[for=control-background-image-opacity]", false);
         disable.input(".control-background-image-opacity", false);
@@ -2954,7 +2954,7 @@ var control = (function() {
         disable.element("[for=control-background-image-scale]", false);
         disable.input(".control-background-image-scale", false);
       } else {
-        disable.input(".control-background-image-from-local", true);
+        disable.input(".control-background-image-from-file", true);
         disable.input(".control-background-image-from-url", true);
         disable.element("[for=control-background-image-opacity]", true);
         disable.input(".control-background-image-opacity", true);
@@ -2967,16 +2967,16 @@ var control = (function() {
         disable.element("[for=control-background-image-scale]", true);
         disable.input(".control-background-image-scale", true);
       };
-      if (state.get().background.image.show && state.get().background.image.from == "local") {
-        disable.element(".control-background-image-local-feedback", false);
-        disable.input(".control-background-image-local", false);
-        disable.input(".control-background-image-local-clear", false);
-        disable.element(".control-background-image-local-helper", false);
+      if (state.get().background.image.show && state.get().background.image.from == "file") {
+        disable.element(".control-background-image-file-feedback", false);
+        disable.input(".control-background-image-file", false);
+        disable.input(".control-background-image-file-clear", false);
+        disable.element(".control-background-image-file-helper", false);
       } else {
-        disable.element(".control-background-image-local-feedback", true);
-        disable.input(".control-background-image-local", true);
-        disable.input(".control-background-image-local-clear", true);
-        disable.element(".control-background-image-local-helper", true);
+        disable.element(".control-background-image-file-feedback", true);
+        disable.input(".control-background-image-file", true);
+        disable.input(".control-background-image-file-clear", true);
+        disable.element(".control-background-image-file-helper", true);
       };
       if (state.get().background.image.show && state.get().background.image.from == "url") {
         disable.input(".control-background-image-url", false);
