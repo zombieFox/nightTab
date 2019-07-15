@@ -5,7 +5,7 @@ var keyboard = (function() {
       //  esc
       if (event.keyCode == 27) {
         if (state.get().edge) {
-          edge.destroy();
+          edge.render.clear();
         } else if (state.get().menu) {
           menu.close();
           shade.destroy();

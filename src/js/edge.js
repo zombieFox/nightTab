@@ -3,7 +3,9 @@ var edge = (function() {
   var _timer = null;
   var _currentEdge = null;
 
-  var destroy = function() {
+  var render = {};
+
+  render.clear = function() {
     var allEdge = helper.eA(".edge");
     if (allEdge[0]) {
       for (var i = 0; i < allEdge.length; i++) {
@@ -12,7 +14,7 @@ var edge = (function() {
     };
   };
 
-  var render = function(override) {
+  render.box = function(override) {
     var options = {
       element: null,
       delay: null
@@ -81,8 +83,7 @@ var edge = (function() {
 
   // exposed methods
   return {
-    render: render,
-    destroy: destroy
+    render: render
   };
 
 })();

@@ -47,42 +47,6 @@ var data = (function() {
     };
   };
 
-  var importData = function() {
-    // get files from input
-    var fileList = helper.e(".control-data-import").files;
-    // if file was added
-    if (fileList.length > 0) {
-      // validate the file
-      _validateJsonFile(fileList);
-    };
-  };
-
-  var exportData = function() {
-    var tempAchor = helper.node("a");
-    var timeStamp = helper.getDateTime();
-    var _timeStampPrefix = function(value) {
-      if (value < 10) {
-        value = "0" + value;
-      };
-      return value
-    };
-    timeStamp.hours = _timeStampPrefix(timeStamp.hours);
-    timeStamp.minutes = _timeStampPrefix(timeStamp.minutes);
-    timeStamp.seconds = _timeStampPrefix(timeStamp.seconds);
-    timeStamp.date = _timeStampPrefix(timeStamp.date);
-    timeStamp.month = _timeStampPrefix(timeStamp.month + 1);
-    timeStamp.year = _timeStampPrefix(timeStamp.year);
-    timeStamp = timeStamp.hours + " " + timeStamp.minutes + " " + timeStamp.seconds + " - " + timeStamp.date + "." + timeStamp.month + "." + timeStamp.year;
-    console.log(timeStamp);
-    var fileName = "nightTab backup - " + timeStamp + ".json";
-    var exportData = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(load()));
-    tempAchor.setAttribute("href", exportData);
-    tempAchor.setAttribute("download", fileName);
-    helper.e("html").appendChild(tempAchor);
-    tempAchor.click();
-    tempAchor.remove();
-  };
-
   var clearData = function() {
     var clearContent = helper.node("div");
     var para1 = helper.node("p:Are you sure you want to clear all nightTab Bookmarks and Settings?. nightTab will restore to the default state.");
@@ -101,32 +65,94 @@ var data = (function() {
     });
   };
 
-  var _validateJsonFile = function(fileList) {
+  var exportData = function() {
+    var tempAchor = helper.node("a");
+    var timeStamp = helper.getDateTime();
+    var _timeStampPrefix = function(value) {
+      if (value < 10) {
+        value = "0" + value;
+      };
+      return value;
+    };
+    timeStamp.hours = _timeStampPrefix(timeStamp.hours);
+    timeStamp.minutes = _timeStampPrefix(timeStamp.minutes);
+    timeStamp.seconds = _timeStampPrefix(timeStamp.seconds);
+    timeStamp.date = _timeStampPrefix(timeStamp.date);
+    timeStamp.month = _timeStampPrefix(timeStamp.month + 1);
+    timeStamp.year = _timeStampPrefix(timeStamp.year);
+    timeStamp = timeStamp.hours + " " + timeStamp.minutes + " " + timeStamp.seconds + " - " + timeStamp.date + "." + timeStamp.month + "." + timeStamp.year;
+    console.log(timeStamp);
+    var fileName = "nightTab backup - " + timeStamp + ".json";
+    var exportData = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(load()));
+    tempAchor.setAttribute("href", exportData);
+    tempAchor.setAttribute("download", fileName);
+    helper.e("html").appendChild(tempAchor);
+    tempAchor.click();
+    tempAchor.remove();
+  };
+
+  var render = {
+    feedback: function(type) {
+      _renderFeedback(type);
+    }
+  };
+
+  var _renderFeedback = function(type, data) {
     var controlDataImportFeedback = helper.e(".control-data-import-feedback");
+    var _setFeedbackAnimation = function(animationClass) {
+      helper.addClass(controlDataImportFeedback, animationClass);
+      controlDataImportFeedback.addEventListener("animationend", _resetFeedbackAnimation, false);
+    };
+    var _resetFeedbackAnimation = function() {
+      helper.removeClass(controlDataImportFeedback, "is-shake");
+      helper.removeClass(controlDataImportFeedback, "is-pop");
+      controlDataImportFeedback.removeEventListener("animationend", _resetFeedbackAnimation, false);
+    };
+    var clear = function() {
+      while (controlDataImportFeedback.lastChild) {
+        controlDataImportFeedback.removeChild(controlDataImportFeedback.lastChild);
+      };
+    };
     var feedbackMessage = {
+      empty: "No file selected.",
       success: "Success! Restoring nightTab Bookmarks and Settings.",
       fail: {
         notNightTabJson: "Not the right kind of JSON file. Make sure the selected file came from nightTab.",
         notJson: "Not a JSON file. Make sure the selected file came from nightTab."
       }
     };
-    var _feedback = function(message, animationClass) {
-      while (controlDataImportFeedback.lastChild) {
-        controlDataImportFeedback.removeChild(controlDataImportFeedback.lastChild);
-      };
-      var name = helper.node("p:" + fileList[0].name);
-      var messageText = helper.node("p:" + message + "|class:muted small");
-      controlDataImportFeedback.appendChild(name);
-      controlDataImportFeedback.appendChild(messageText);
-      controlDataImportFeedback.addEventListener("animationend", _resetFeedback, false);
-      helper.removeClass(controlDataImportFeedback, "is-hidden");
-      helper.addClass(controlDataImportFeedback, animationClass);
+    var action = {
+      empty: function() {
+        var para1 = helper.node("p:" + feedbackMessage.empty + "|class:muted small");
+        controlDataImportFeedback.appendChild(para1);
+      },
+      success: function() {
+        var para1 = helper.node("p:" + feedbackMessage.current + "|class:muted small");
+        var para2 = helper.node("p:" + state.get().background.image.file.name);
+        controlDataImportFeedback.appendChild(para1);
+        controlDataImportFeedback.appendChild(para2);
+        controlDataImportFeedback.addEventListener("animationend", function() {
+          restore(JSON.parse(data));
+          location.reload();
+        }, false);
+        _setFeedbackAnimation("is-pop");
+      }
     };
-    var _resetFeedback = function() {
-      helper.removeClass(controlDataImportFeedback, "is-shake");
-      helper.removeClass(controlDataImportFeedback, "is-pop");
-      controlDataImportFeedback.removeEventListener("animationend", _resetFeedback, false);
+    clear();
+    action[type]();
+  };
+
+  var importData = function() {
+    // get files from input
+    var fileList = helper.e(".control-data-import").files;
+    // if file was added
+    if (fileList.length > 0) {
+      // validate the file
+      _validateJsonFile(fileList);
     };
+  };
+
+  var _validateJsonFile = function(fileList) {
     // make new file reader
     var reader = new FileReader();
     // define the on load event for the reader
@@ -135,19 +161,21 @@ var data = (function() {
       if (helper.isJsonString(event.target.result)) {
         // is this a nightTab JSON
         if (JSON.parse(event.target.result).nighttab) {
+          _renderFeedback("success", event.target.result);
           // console.log("is a JSON and a nightTab file");
-          _feedback(feedbackMessage.success, "is-pop");
-          controlDataImportFeedback.addEventListener("animationend", function() {
-            restore(JSON.parse(event.target.result));
-            location.reload();
-          }, false);
+          // controlDataImportFeedback.addEventListener("animationend", function() {
+          //   restore(JSON.parse(event.target.result));
+          //   location.reload();
+          // }, false);
         } else {
+          _renderFeedback("fail");
           // console.log("is a JSON file but not a nightTab file");
-          _feedback(feedbackMessage.fail.notNightTabJson, "is-shake");
+          // _feedback(feedbackMessage.fail.notNightTabJson, "is-shake");
         };
       } else {
+        _renderFeedback("fail");
         // console.log("not a JSON file");
-        _feedback(feedbackMessage.fail.notJson, "is-shake");
+        // _feedback(feedbackMessage.fail.notJson, "is-shake");
       };
     };
     // invoke the reader
@@ -156,6 +184,7 @@ var data = (function() {
 
   var init = function() {
     restore(data.load());
+    render.feedback("empty");
   };
 
   return {
