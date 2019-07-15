@@ -412,40 +412,40 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
     }
   }, {
     element: helper.e(".control-header-greeting-type-good"),
     path: "header.greeting.type",
     type: "radio",
     func: function() {
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
     }
   }, {
     element: helper.e(".control-header-greeting-type-hello"),
     path: "header.greeting.type",
     type: "radio",
     func: function() {
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
     }
   }, {
     element: helper.e(".control-header-greeting-type-hi"),
     path: "header.greeting.type",
     type: "radio",
     func: function() {
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
     }
   }, {
     element: helper.e(".control-header-greeting-name"),
     path: "header.greeting.name",
     type: "text",
     func: function() {
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
     }
   }, {
     element: helper.e(".control-header-greeting-size"),
@@ -610,8 +610,8 @@ var control = (function() {
       dependents();
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -622,8 +622,8 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -634,8 +634,8 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -648,8 +648,8 @@ var control = (function() {
       dependents();
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -660,8 +660,8 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -672,8 +672,8 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -686,8 +686,8 @@ var control = (function() {
       dependents();
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -698,8 +698,8 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -710,8 +710,8 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -722,8 +722,8 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-hour24-show"),
@@ -733,8 +733,8 @@ var control = (function() {
       dependents();
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -746,8 +746,8 @@ var control = (function() {
       dependents();
       clock.render.clear();
       clock.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -824,8 +824,8 @@ var control = (function() {
       dependents();
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -837,8 +837,8 @@ var control = (function() {
       dependents();
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -849,8 +849,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -861,8 +861,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -874,8 +874,8 @@ var control = (function() {
       dependents();
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -886,8 +886,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -898,8 +898,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -912,8 +912,8 @@ var control = (function() {
       dependents();
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -924,8 +924,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -936,8 +936,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -948,8 +948,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -962,8 +962,8 @@ var control = (function() {
       dependents();
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -975,8 +975,8 @@ var control = (function() {
       dependents();
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -987,8 +987,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -1000,8 +1000,8 @@ var control = (function() {
       dependents();
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -1012,8 +1012,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -1024,8 +1024,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -1038,8 +1038,8 @@ var control = (function() {
       dependents();
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -1050,8 +1050,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -1062,8 +1062,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -1074,8 +1074,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -1086,8 +1086,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }
@@ -1098,8 +1098,8 @@ var control = (function() {
     func: function() {
       date.render.clear();
       date.render.all();
-      greeting.clear();
-      greeting.render();
+      greeting.render.clear();
+      greeting.render.all();
       transitional.clear();
       transitional.render();
     }

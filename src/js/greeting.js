@@ -1,21 +1,25 @@
 var greeting = (function() {
 
-  var bind = function() {
+  var bind = {};
+
+  bind.tick = function() {
     window.setInterval(function() {
-      clear();
-      render();
+      render.clear();
+      render.all();
     }, 1000);
   };
 
-  var clear = function() {
+  var render = {};
+
+  render.clear = function() {
     var greeting = helper.e(".greeting");
     while (greeting.lastChild) {
       greeting.removeChild(greeting.lastChild);
     };
   };
 
-  var render = function() {
-    var _greeting = function() {
+  render.all = function() {
+    if (state.get().header.greeting.show) {
       var greeting = helper.e(".greeting");
       var message = {
         good: function() {
@@ -34,39 +38,22 @@ var greeting = (function() {
       if (state.get().header.greeting.name != "" && state.get().header.greeting.name != undefined) {
         string = string + ", " + state.get().header.greeting.name;
       };
-      var greetingItem = helper.makeNode({
-        tag: "span",
-        attr: [{
-          key: "class",
-          value: "greeting-item"
-        }]
-      });
-      var greetingItemText = helper.makeNode({
-        tag: "span",
-        text: string,
-        attr: [{
-          key: "class",
-          value: "greeting-item-text"
-        }]
-      });
+      var greetingItem = helper.node("span|class:greeting-item");
+      var greetingItemText = helper.node("span:" + string + "|class:greeting-item-text");
       greetingItem.appendChild(greetingItemText);
       greeting.appendChild(greetingItem);
-    };
-    if (state.get().header.greeting.show) {
-      _greeting();
     };
   };
 
   var init = function() {
-    bind();
-    render();
+    bind.tick();
+    render.all();
   };
 
   // exposed methods
   return {
     init: init,
-    render: render,
-    clear: clear
+    render: render
   };
 
 })();
