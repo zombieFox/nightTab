@@ -1,9 +1,14 @@
 var header = (function() {
 
-  var _bind = function() {
+  var bind = {};
+
+  bind.resize = function() {
     window.addEventListener("resize", function() {
       render.shade();
     }, false);
+  };
+
+  bind.scroll = function() {
     window.addEventListener("scroll", function() {
       render.shade();
     }, false);
@@ -12,6 +17,9 @@ var header = (function() {
         render.shade();
       }, false);
     });
+  };
+
+  bind.fonts = function() {
     document.fonts.ready.then(function() {
       render.shade();
     });
@@ -143,7 +151,9 @@ var header = (function() {
   };
 
   var init = function() {
-    _bind();
+    bind.resize();
+    bind.scroll();
+    bind.fonts();
     render.area.width();
     render.shade();
     render.opacity();

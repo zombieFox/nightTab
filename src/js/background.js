@@ -1,49 +1,44 @@
 var background = (function() {
 
-  var clear = {
+  var mod = {};
+
+  mod.clear = {
     file: function() {
-      _clearFile();
+      helper.setObject({
+        object: state.get(),
+        path: "background.image.file.name",
+        newValue: ""
+      });
+      helper.setObject({
+        object: state.get(),
+        path: "background.image.file.data",
+        newValue: ""
+      });
     }
   };
 
-  var _clearFile = function() {
-    helper.setObject({
-      object: state.get(),
-      path: "background.image.file.name",
-      newValue: ""
-    });
-    helper.setObject({
-      object: state.get(),
-      path: "background.image.file.data",
-      newValue: ""
-    });
-    render.feedback.clear();
-    render.feedback.empty();
-  };
+  var bind = {};
 
-  var bind = {
-    feedback: {
-      animation: {}
+  bind.feedback = {
+    animation: {
+      set: function(animationClass, action) {
+        var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+        helper.addClass(controlBackgroundImageLocalFeedback, animationClass);
+        var animationEndAction = function() {
+          if (action) {
+            action();
+          };
+          bind.feedback.animation.reset();
+        };
+        controlBackgroundImageLocalFeedback.addEventListener("animationend", animationEndAction, false);
+      },
+      reset: function() {
+        var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
+        helper.removeClass(controlBackgroundImageLocalFeedback, "is-shake");
+        helper.removeClass(controlBackgroundImageLocalFeedback, "is-pop");
+        controlBackgroundImageLocalFeedback.removeEventListener("animationend", bind.feedback.animation.reset, false);
+      }
     }
-  };
-
-  bind.feedback.animation.set = function(animationClass, action) {
-    var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
-    helper.addClass(controlBackgroundImageLocalFeedback, animationClass);
-    var animationEndAction = function() {
-      if (action) {
-        action();
-      };
-      bind.feedback.animation.reset();
-    };
-    controlBackgroundImageLocalFeedback.addEventListener("animationend", animationEndAction, false);
-  };
-
-  bind.feedback.animation.reset = function() {
-    var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
-    helper.removeClass(controlBackgroundImageLocalFeedback, "is-shake");
-    helper.removeClass(controlBackgroundImageLocalFeedback, "is-pop");
-    controlBackgroundImageLocalFeedback.removeEventListener("animationend", bind.feedback.animation.reset, false);
   };
 
   var render = {};
@@ -88,7 +83,8 @@ var background = (function() {
 
   render.input = {
     clear: function() {
-      helper.e(".control-background-image-local").value = "";
+      var input = helper.e(".control-background-image-local");
+      input.value = "";
     }
   };
 
@@ -204,10 +200,11 @@ var background = (function() {
 
   // exposed methods
   return {
+    init: init,
+    mod: mod,
+    bind: bind,
     render: render,
-    clear: clear,
-    importData: importData,
-    init: init
+    importData: importData
   };
 
 })();

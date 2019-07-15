@@ -608,8 +608,8 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -620,8 +620,8 @@ var control = (function() {
     path: "header.clock.hours.display",
     type: "radio",
     func: function() {
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -632,8 +632,8 @@ var control = (function() {
     path: "header.clock.hours.display",
     type: "radio",
     func: function() {
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -646,8 +646,8 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -658,8 +658,8 @@ var control = (function() {
     path: "header.clock.minutes.display",
     type: "radio",
     func: function() {
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -670,8 +670,8 @@ var control = (function() {
     path: "header.clock.minutes.display",
     type: "radio",
     func: function() {
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -684,8 +684,8 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -696,8 +696,8 @@ var control = (function() {
     path: "header.clock.seconds.display",
     type: "radio",
     func: function() {
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -708,8 +708,8 @@ var control = (function() {
     path: "header.clock.seconds.display",
     type: "radio",
     func: function() {
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -720,8 +720,8 @@ var control = (function() {
     path: "header.clock.separator.show",
     type: "checkbox",
     func: function() {
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
     }
@@ -731,8 +731,8 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       dependents();
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -744,8 +744,8 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       dependents();
-      clock.clear();
-      clock.render();
+      clock.render.clear();
+      clock.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -2096,8 +2096,11 @@ var control = (function() {
     element: helper.e(".control-background-image-local-clear"),
     type: "button",
     func: function() {
-      background.clear.file();
+      background.mod.clear.file();
+      background.render.input.clear();
       background.render.image();
+      background.render.feedback.clear();
+      background.render.feedback.empty();
     }
   }, {
     element: helper.e(".control-background-image-from-url"),
