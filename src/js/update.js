@@ -569,6 +569,18 @@ var update = (function() {
     "3.30.0": function(data) {
       data.state.link.item.order = "displayname";
       return data;
+    },
+    "3.32.0": function(data) {
+      if (data.state.background.image.url == "") {
+        data.state.background.image.from = "file";
+      } else {
+        data.state.background.image.from = "url";
+      };
+      data.state.background.image.file = {
+        name: "",
+        data: ""
+      };
+      return data;
     }
   };
 
