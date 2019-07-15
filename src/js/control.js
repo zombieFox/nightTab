@@ -518,24 +518,24 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-transitional-type-timeanddate"),
     path: "header.transitional.type",
     type: "radio",
     func: function() {
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-transitional-type-its"),
     path: "header.transitional.type",
     type: "radio",
     func: function() {
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-transitional-size"),
@@ -612,8 +612,8 @@ var control = (function() {
       clock.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-hours-display-number"),
@@ -624,8 +624,8 @@ var control = (function() {
       clock.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-hours-display-word"),
@@ -636,8 +636,8 @@ var control = (function() {
       clock.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-minutes-show"),
@@ -650,8 +650,8 @@ var control = (function() {
       clock.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-minutes-display-number"),
@@ -662,8 +662,8 @@ var control = (function() {
       clock.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-minutes-display-word"),
@@ -674,8 +674,8 @@ var control = (function() {
       clock.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-seconds-show"),
@@ -688,8 +688,8 @@ var control = (function() {
       clock.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-seconds-display-number"),
@@ -700,8 +700,8 @@ var control = (function() {
       clock.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-seconds-display-word"),
@@ -712,8 +712,8 @@ var control = (function() {
       clock.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-separator-show"),
@@ -735,8 +735,8 @@ var control = (function() {
       clock.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-meridiem-show"),
@@ -748,8 +748,8 @@ var control = (function() {
       clock.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-clock-size"),
@@ -826,8 +826,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-day-display-number"),
@@ -839,8 +839,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-day-week-start-monday"),
@@ -851,8 +851,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-day-week-start-sunday"),
@@ -863,8 +863,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-day-display-word"),
@@ -876,8 +876,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-day-length-long"),
@@ -888,8 +888,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-day-length-short"),
@@ -900,8 +900,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-date-show"),
@@ -914,8 +914,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-date-display-number"),
@@ -926,8 +926,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-date-display-word"),
@@ -938,8 +938,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-date-ordinal"),
@@ -950,8 +950,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-month-show"),
@@ -964,8 +964,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-month-display-number"),
@@ -977,8 +977,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-month-ordinal"),
@@ -989,8 +989,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-month-display-word"),
@@ -1002,8 +1002,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-month-length-long"),
@@ -1014,8 +1014,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-month-length-short"),
@@ -1026,8 +1026,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-year-show"),
@@ -1040,8 +1040,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-year-display-number"),
@@ -1052,8 +1052,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-year-display-word"),
@@ -1064,8 +1064,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-separator-show"),
@@ -1076,8 +1076,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-format-datemonth"),
@@ -1088,8 +1088,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-format-monthdate"),
@@ -1100,8 +1100,8 @@ var control = (function() {
       date.render.all();
       greeting.render.clear();
       greeting.render.all();
-      transitional.clear();
-      transitional.render();
+      transitional.render.clear();
+      transitional.render.all();
     }
   }, {
     element: helper.e(".control-header-date-size"),

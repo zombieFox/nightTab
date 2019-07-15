@@ -1,21 +1,25 @@
 var transitional = (function() {
 
-  var bind = function() {
+  var bind = {};
+
+  bind.tick = function() {
     window.setInterval(function() {
-      clear();
-      render();
+      render.clear();
+      render.all();
     }, 1000);
   };
 
-  var clear = function() {
+  var render = {};
+
+  render.clear = function() {
     var transitional = helper.e(".transitional");
     while (transitional.lastChild) {
       transitional.removeChild(transitional.lastChild);
     };
   };
 
-  var render = function() {
-    var _transitional = function() {
+  render.all = function() {
+    if (state.get().header.transitional.show) {
       var transitional = helper.e(".transitional");
       var message = {
         timeanddate: function() {
@@ -46,39 +50,22 @@ var transitional = (function() {
         }
       };
       var string = message[state.get().header.transitional.type]();
-      var transitionalItem = helper.makeNode({
-        tag: "span",
-        attr: [{
-          key: "class",
-          value: "transitional-item"
-        }]
-      });
-      var transitionalItemText = helper.makeNode({
-        tag: "span",
-        text: string,
-        attr: [{
-          key: "class",
-          value: "transitional-item-text"
-        }]
-      });
+      var transitionalItem = helper.node("span|class:transitional-item");
+      var transitionalItemText = helper.node("span:" + string + "|class:transitional-item-text");
       transitionalItem.appendChild(transitionalItemText);
       transitional.appendChild(transitionalItem);
-    };
-    if (state.get().header.transitional.show) {
-      _transitional();
     };
   };
 
   var init = function() {
-    bind();
-    render();
+    bind.tick();
+    render.all();
   };
 
   // exposed methods
   return {
     init: init,
-    render: render,
-    clear: clear
+    render: render
   };
 
 })();
