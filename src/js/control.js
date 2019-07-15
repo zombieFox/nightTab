@@ -255,7 +255,7 @@ var control = (function() {
     path: "layout.title",
     type: "text",
     func: function() {
-      title.render();
+      title.render.name();
     }
   }, {
     element: helper.e(".control-layout-scrollpastend"),
