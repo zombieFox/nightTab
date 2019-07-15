@@ -11,7 +11,7 @@ var menu = (function() {
     menuClose.addEventListener("click", function() {
       close();
       shade.destroy();
-      page.update();
+      pagelock.render.toggle();
     }, false);
   };
 
@@ -88,7 +88,7 @@ var menu = (function() {
       shade.render({
         action: function() {
           close();
-          page.update();
+          pagelock.render.toggle();
         }
       });
     } else {

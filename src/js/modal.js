@@ -105,7 +105,7 @@ var modal = (function() {
         };
         this.destroy();
         shade.destroy();
-        page.update();
+        pagelock.render.toggle();
       }.bind(modal), false);
       cancelButton.addEventListener("click", function(event) {
         if (options.cancelAction) {
@@ -113,7 +113,7 @@ var modal = (function() {
         };
         this.destroy();
         shade.destroy();
-        page.update();
+        pagelock.render.toggle();
       }.bind(modal), false);
       previousModal = modal;
       shade.render({
@@ -122,7 +122,7 @@ var modal = (function() {
             options.cancelAction();
           };
           modal.destroy();
-          page.update();
+          pagelock.render.toggle();
         },
         includeHeader: true
       });
@@ -136,7 +136,7 @@ var modal = (function() {
       destroy();
     };
     _makeModal();
-    page.update();
+    pagelock.render.toggle();
   };
 
   // exposed methods

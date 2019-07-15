@@ -1,6 +1,8 @@
-var page = (function() {
+var pagelock = (function() {
 
-  var update = function() {
+  var render = {};
+
+  render.toggle = function() {
     var body = helper.e("body");
     var menu = state.get().menu;
     var modal = state.get().modal;
@@ -12,21 +14,19 @@ var page = (function() {
     };
   };
 
-  var lock = function() {
+  render.lock = function() {
     var body = helper.e("body");
     helper.addClass(body, "scroll-disabled");
   };
 
-  var unlock = function() {
+  render.unlock = function() {
     var body = helper.e("body");
     helper.removeClass(body, "scroll-disabled");
   };
 
   // exposed methods
   return {
-    lock: lock,
-    unlock: unlock,
-    update: update
+    render: render
   };
 
 })();

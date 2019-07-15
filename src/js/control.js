@@ -5,7 +5,7 @@ var control = (function() {
     type: "button",
     func: function() {
       menu.toggle();
-      page.update();
+      pagelock.render.toggle();
     }
   }, {
     element: helper.e(".control-link-add"),
