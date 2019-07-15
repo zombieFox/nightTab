@@ -1,17 +1,12 @@
 var clock = (function() {
 
-  var bind = function() {
-    window.setInterval(function() {
-      clear();
-      render();
-    }, 1000);
-  };
+  var bind = {};
 
-  var clear = function() {
-    var clock = helper.e(".clock");
-    while (clock.lastChild) {
-      clock.removeChild(clock.lastChild);
-    };
+  bind.tick = function() {
+    window.setInterval(function() {
+      render.clear();
+      render.all();
+    }, 1000);
   };
 
   var _makeTimeObject = function() {
@@ -39,8 +34,17 @@ var clock = (function() {
     return time;
   };
 
-  var render = function() {
-    var _clock = function() {
+  var render = {};
+
+  render.clear = function() {
+    var clock = helper.e(".clock");
+    while (clock.lastChild) {
+      clock.removeChild(clock.lastChild);
+    };
+  };
+
+  render.all = function() {
+    if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
       var clock = helper.e(".clock");
       var timeObject = _makeTimeObject();
       var action = {
@@ -144,22 +148,18 @@ var clock = (function() {
         };
       };
     };
-    if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
-      _clock();
-    };
   };
 
   var init = function() {
-    render();
-    bind();
+    bind.tick();
+    render.all();
   };
 
   // exposed methods
   return {
     init: init,
     bind: bind,
-    render: render,
-    clear: clear
+    render: render
   };
 
 })();

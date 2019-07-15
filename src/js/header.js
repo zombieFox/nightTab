@@ -1,9 +1,14 @@
 var header = (function() {
 
-  var _bind = function() {
+  var bind = {};
+
+  bind.resize = function() {
     window.addEventListener("resize", function() {
       render.shade();
     }, false);
+  };
+
+  bind.scroll = function() {
     window.addEventListener("scroll", function() {
       render.shade();
     }, false);
@@ -12,70 +17,24 @@ var header = (function() {
         render.shade();
       }, false);
     });
+  };
+
+  bind.fonts = function() {
     document.fonts.ready.then(function() {
       render.shade();
     });
   };
 
-  var render = {
-    area: {
-      width: function() {
-        _renderWidth();
-      }
-    },
-    shade: function() {
-      _renderShade();
-    },
-    opacity: function() {
-      _renderOpacity();
-    },
-    border: function() {
-      _renderBorder();
-    },
-    search: {
-      width: function() {
-        _renderSearchWidth();
-      },
-      size: function() {
-        _renderSearchSize();
-      }
-    },
-    greeting: {
-      size: function() {
-        _renderGreetingSize();
-      }
-    },
-    transitional: {
-      size: function() {
-        _renderTransitionalSize();
-      }
-    },
-    clock: {
-      size: function() {
-        _renderClockSize();
-      }
-    },
-    date: {
-      size: function() {
-        _renderDateSize();
-      }
-    },
-    button: {
-      size: function() {
-        _renderButtonSize();
-      },
-      style: function() {
-        _renderButtonStyle();
-      }
+  var render = {};
+
+  render.area = {
+    width: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-area-width", state.get().header.area.width + "%");
     }
   };
 
-  var _renderWidth = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--header-area-width", state.get().header.area.width + "%");
-  };
-
-  var _renderShade = function() {
+  render.shade = function() {
     var html = helper.e("html");
     var headerRect = helper.e(".header").getBoundingClientRect();
     var layoutRect = helper.e(".layout").getBoundingClientRect();
@@ -115,74 +74,86 @@ var header = (function() {
     };
   };
 
-  var _renderOpacity = function() {
+  render.opacity = function() {
     var html = helper.e("html");
     if (state.get().header.shade.show) {
       html.style.setProperty("--header-shade-opacity", state.get().header.shade.opacity);
     };
   };
 
-  var _renderBorder = function() {
+  render.border = function() {
     var html = helper.e("html");
     html.style.setProperty("--header-border-top", state.get().header.border.top);
     html.style.setProperty("--header-border-bottom", state.get().header.border.bottom);
   };
 
-  var _renderSearchWidth = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--header-search-width", state.get().header.search.width + "%");
+  render.search = {
+    width: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-search-width", state.get().header.search.width + "%");
+    },
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-search-size", state.get().header.search.size + "em");
+    }
   };
 
-  var _renderSearchSize = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--header-search-size", state.get().header.search.size + "em");
+  render.greeting = {
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-greeting-size", state.get().header.greeting.size + "em");
+    }
   };
 
-  var _renderGreetingSize = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--header-greeting-size", state.get().header.greeting.size + "em");
+  render.transitional = {
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-transitional-size", state.get().header.transitional.size + "em");
+    }
   };
 
-  var _renderTransitionalSize = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--header-transitional-size", state.get().header.transitional.size + "em");
+  render.clock = {
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-clock-size", state.get().header.clock.size + "em");
+    }
   };
 
-  var _renderClockSize = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--header-clock-size", state.get().header.clock.size + "em");
+  render.date = {
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-date-size", state.get().header.date.size + "em");
+    }
   };
 
-  var _renderDateSize = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--header-date-size", state.get().header.date.size + "em");
-  };
-
-  var _renderButtonSize = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--header-button-size", state.get().header.button.size + "em");
-  };
-
-  var _renderButtonStyle = function() {
-    var action = {
-      box: function() {
-        helper.removeClass(helper.getClosest(helper.e(".control-link-edit"), ".input-wrap"), "input-button-link");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current"), ".input-wrap"), "input-button-link");
-        helper.removeClass(helper.e(".control-link-add"), "button-link");
-        helper.removeClass(helper.e(".control-menu"), "button-link");
-      },
-      clear: function() {
-        helper.addClass(helper.getClosest(helper.e(".control-link-edit"), ".input-wrap"), "input-button-link");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current"), ".input-wrap"), "input-button-link");
-        helper.addClass(helper.e(".control-link-add"), "button-link");
-        helper.addClass(helper.e(".control-menu"), "button-link");
-      }
-    };
-    action[state.get().header.button.style]();
+  render.button = {
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-button-size", state.get().header.button.size + "em");
+    },
+    style: function() {
+      var action = {
+        box: function() {
+          helper.removeClass(helper.getClosest(helper.e(".control-link-edit"), ".input-wrap"), "input-button-link");
+          helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current"), ".input-wrap"), "input-button-link");
+          helper.removeClass(helper.e(".control-link-add"), "button-link");
+          helper.removeClass(helper.e(".control-menu"), "button-link");
+        },
+        clear: function() {
+          helper.addClass(helper.getClosest(helper.e(".control-link-edit"), ".input-wrap"), "input-button-link");
+          helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current"), ".input-wrap"), "input-button-link");
+          helper.addClass(helper.e(".control-link-add"), "button-link");
+          helper.addClass(helper.e(".control-menu"), "button-link");
+        }
+      };
+      action[state.get().header.button.style]();
+    }
   };
 
   var init = function() {
-    _bind();
+    bind.resize();
+    bind.scroll();
+    bind.fonts();
     render.area.width();
     render.shade();
     render.opacity();

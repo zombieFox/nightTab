@@ -1,18 +1,11 @@
 var search = (function() {
 
-  var bind = function() {
+  var bind = {};
+
+  bind.input = function() {
     var searchInput = helper.e(".search-input");
-    var searchClear = helper.e(".search-clear");
     searchInput.addEventListener("input", function() {
-      _toggle();
-      render.clear.button();
-      link.clear();
-      link.render.item.all();
-      sortable(".link-area");
-    }, false);
-    searchClear.addEventListener("click", function() {
-      render.clear.input();
-      _toggle();
+      mod.searching.set();
       render.clear.button();
       link.clear();
       link.render.item.all();
@@ -20,24 +13,28 @@ var search = (function() {
     }, false);
   };
 
-  var _toggle = function() {
-    var html = helper.e("html");
-    var searchInput = helper.e(".search-input");
-    if (searchInput.value != "") {
+  bind.clear = function() {
+    var searchClear = helper.e(".search-clear");
+    searchClear.addEventListener("click", function() {
+      render.clear.input();
+      mod.searching.set();
+      render.clear.button();
+      link.clear();
+      link.render.item.all();
+      sortable(".link-area");
+    }, false);
+  };
+
+  var mod = {};
+
+  mod.searching = {
+    set: function() {
       helper.setObject({
         object: state.get(),
         path: "search",
-        newValue: true
+        newValue: helper.e(".search-input").value != ""
       });
-      helper.addClass(html, "is-header-searching");
-    } else {
-      helper.setObject({
-        object: state.get(),
-        path: "search",
-        newValue: false
-      });
-      helper.removeClass(html, "is-header-searching");
-    };
+    }
   };
 
   var get = function() {
@@ -65,21 +62,9 @@ var search = (function() {
     };
   };
 
-  var render = {
-    engine: function() {
-      _renderEngine();
-    },
-    clear: {
-      input: function() {
-        _renderClearInput();
-      },
-      button: function() {
-        _renderClearButton();
-      }
-    }
-  };
+  var render = {};
 
-  var _renderEngine = function() {
+  render.engine = function() {
     var search = helper.e(".search");
     var searchInput = helper.e(".search-input");
     var placeholder = "";
@@ -93,7 +78,15 @@ var search = (function() {
     search.setAttribute("action", state.get().header.search.engine[state.get().header.search.engine.selected].url);
   };
 
-  var _renderClearButton = function() {
+  render.clear = {};
+
+  render.clear.input = function() {
+    var searchInput = helper.e(".search-input");
+    searchInput.value = "";
+    searchInput.focus();
+  };
+
+  render.clear.button = function() {
     var searchClear = helper.e(".search-clear");
     if (state.get().search) {
       searchClear.removeAttribute("disabled");
@@ -102,13 +95,7 @@ var search = (function() {
     };
   };
 
-  var _renderClearInput = function() {
-    var searchInput = helper.e(".search-input");
-    searchInput.value = "";
-    searchInput.focus();
-  };
-
-  var _focus = function() {
+  render.focus = function() {
     if (state.get().header.search.focus) {
       window.addEventListener("load", function(event) {
         helper.e(".search-input").focus();
@@ -116,11 +103,23 @@ var search = (function() {
     };
   };
 
+  render.searching = function() {
+    var html = helper.e("html");
+    var searchInput = helper.e(".search-input");
+    if (searchInput.value != "") {
+      helper.addClass(html, "is-header-searching");
+    } else {
+      helper.removeClass(html, "is-header-searching");
+    };
+  };
+
   var init = function() {
-    bind();
+    bind.input();
+    bind.clear();
+    mod.searching.set();
     render.engine();
-    _toggle();
-    _focus();
+    render.focus();
+    render.searching();
   };
 
   // exposed methods

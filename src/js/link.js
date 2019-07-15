@@ -572,110 +572,86 @@ var link = (function() {
     };
   };
 
-  var render = {
+  var render = {};
+
+  render = {
     area: {
       width: function() {
-        _renderAreaWidth();
+        var html = helper.e("html");
+        html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
       }
-    },
-    item: {
-      all: function() {
-        _renderItemAll();
-      },
-      display: {
-        letter: function() {
-          _renderItemDisplayLetter();
-        },
-        icon: function() {
-          _renderItemDisplayIcon();
-        }
-      },
-      name: function() {
-        _renderItemName();
-      },
-      size: function() {
-        _renderItemSize();
-      }
-    },
-    tabIndex: function() {
-      _renderTabIndex();
     }
   };
 
-  var _renderAreaWidth = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
-  };
-
-  var _renderItemAll = function() {
-    var linkArea = helper.e(".link-area");
-    var bookmarksToRender = false;
-    if (state.get().search) {
-      bookmarksToRender = search.get();
-    } else {
-      bookmarksToRender = bookmarks.get();
-    };
-    var action = {
-      render: {
-        bookmarks: function(array) {
-          array.forEach(function(arrayItem, index) {
-            linkArea.appendChild(_makeLink(arrayItem, index));
-          });
-        },
-        empty: {
-          search: function() {
-            linkArea.appendChild(_makeEmptySearch());
+  render.item = {
+    all: function() {
+      var linkArea = helper.e(".link-area");
+      var bookmarksToRender = false;
+      if (state.get().search) {
+        bookmarksToRender = search.get();
+      } else {
+        bookmarksToRender = bookmarks.get();
+      };
+      var action = {
+        render: {
+          bookmarks: function(array) {
+            array.forEach(function(arrayItem, index) {
+              linkArea.appendChild(_makeLink(arrayItem, index));
+            });
           },
-          bookmarks: function() {
-            linkArea.appendChild(_makeEmptyBookmarks());
+          empty: {
+            search: function() {
+              linkArea.appendChild(_makeEmptySearch());
+            },
+            bookmarks: function() {
+              linkArea.appendChild(_makeEmptyBookmarks());
+            }
           }
         }
-      }
-    };
-    // if searching
-    if (state.get().search) {
-      // if bookmarks exist to be searched
-      if (bookmarksToRender.total > 0) {
-        // if matching bookmarks found
-        if (bookmarksToRender.matching.length > 0) {
-          action.render.bookmarks(bookmarksToRender.matching);
+      };
+      // if searching
+      if (state.get().search) {
+        // if bookmarks exist to be searched
+        if (bookmarksToRender.total > 0) {
+          // if matching bookmarks found
+          if (bookmarksToRender.matching.length > 0) {
+            action.render.bookmarks(bookmarksToRender.matching);
+          } else {
+            action.render.empty.search();
+          };
         } else {
-          action.render.empty.search();
+          action.render.empty.bookmarks();
         };
       } else {
-        action.render.empty.bookmarks();
+        // if bookmarks exist
+        if (bookmarksToRender.length > 0) {
+          action.render.bookmarks(bookmarksToRender);
+        } else {
+          action.render.empty.bookmarks();
+        };
       };
-    } else {
-      // if bookmarks exist
-      if (bookmarksToRender.length > 0) {
-        action.render.bookmarks(bookmarksToRender);
-      } else {
-        action.render.empty.bookmarks();
-      };
-    };
+    },
+    display: {
+      letter: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
+      },
+      icon: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.icon.size + "em");
+      }
+    },
+    name: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-item-name-size", state.get().link.item.name.size + "em");
+    },
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-item-size", state.get().link.item.size + "em");
+    }
   };
 
-  var _renderItemDisplayLetter = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
-  };
-
-  var _renderItemDisplayIcon = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.icon.size + "em");
-  };
-
-  var _renderItemName = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--link-item-name-size", state.get().link.item.name.size + "em");
-  };
-
-  var _renderItemSize = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--link-item-size", state.get().link.item.size + "em");
-  };
-
-  var _renderTabIndex = function() {
+  render.tabIndex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
     if (state.get().link.edit) {
       allLinkControlItem.forEach(function(arrayItem, index) {
@@ -688,32 +664,33 @@ var link = (function() {
     };
   };
 
-  var accent = {
-    set: function() {
-      var units = 360 / bookmarks.get().length;
-      var degree = 0;
-      bookmarks.get().forEach(function(arrayItem, index) {
-        arrayItem.accent.override = true;
-        arrayItem.accent.color = helper.hslToRgb({
-          h: degree,
-          s: 1,
-          l: 0.5
-        });
-        degree = degree + units;
+  var accent = {};
+
+  accent.set = function() {
+    var units = 360 / bookmarks.get().length;
+    var degree = 0;
+    bookmarks.get().forEach(function(arrayItem, index) {
+      arrayItem.accent.override = true;
+      arrayItem.accent.color = helper.hslToRgb({
+        h: degree,
+        s: 1,
+        l: 0.5
       });
-    },
-    clear: function() {
-      bookmarks.get().forEach(function(arrayItem, index) {
-        arrayItem.accent = {
-          override: false,
-          color: {
-            r: null,
-            g: null,
-            b: null
-          }
-        };
-      });
-    }
+      degree = degree + units;
+    });
+  };
+
+  accent.clear = function() {
+    bookmarks.get().forEach(function(arrayItem, index) {
+      arrayItem.accent = {
+        override: false,
+        color: {
+          r: null,
+          g: null,
+          b: null
+        }
+      };
+    });
   };
 
   var init = function() {

@@ -78,16 +78,9 @@ var menu = (function() {
     render.tabindex();
   };
 
-  var render = {
-    tabindex: function() {
-      renderTabindex();
-    },
-    menu: function() {
-      renderMenu();
-    }
-  };
+  var render = {};
 
-  var renderMenu = function() {
+  render.menu = function() {
     var html = helper.e("html");
     if (state.get().menu) {
       helper.addClass(html, "is-menu-open");
@@ -103,7 +96,7 @@ var menu = (function() {
     };
   };
 
-  var renderTabindex = function() {
+  render.tabindex = function() {
     var menu = helper.e(".menu");
     if (state.get().menu) {
       menu.tabIndex = 1;

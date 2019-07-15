@@ -62,7 +62,7 @@
   --background-image: none;
   --background-opacity: 1;
   --background-scale: 1;
-  --background-accent-opacity: 0;
+  --background-accent: 0;
   --background-blur: 0;
   /* form */
   --form-input-text: var(--theme-gray-16);
@@ -70,7 +70,6 @@
   --form-input-text-hover: var(--theme-style-text);
   --form-input-text-focus: var(--theme-style-text);
   --form-input-text-disabled: var(--theme-gray-02);
-  --form-input-text-disabled-helper-text: var(--theme-gray-04);
   --form-input-placeholder: var(--theme-gray-06);
   --form-input-placeholder-hover-focus: var(--theme-gray-10);
   --form-input-placeholder-disabled: var(--theme-gray-04);
@@ -80,6 +79,11 @@
   --form-checkbox-radio-checked-label: var(--theme-gray-16);
   --form-checkbox-radio-disabled-label: var(--theme-gray-04);
   --form-range-thumb: var(--theme-gray-12);
+  --form-feedback-text: var(--theme-gray-16);
+  --form-feedback-text-muted: var(--theme-gray-12);
+  --form-feedback-text-disabled: var(--theme-gray-04);
+  --form-helper: var(--theme-gray-12);
+  --form-helper-disabled: var(--theme-gray-06);
   /* button */
   --button-text: var(--theme-gray-12);
   --button-text-hover-focus: var(--theme-style-text);

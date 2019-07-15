@@ -16,7 +16,6 @@
 
 .background-image {
   background-image: var(--background-image);
-  /* background-image: url(https://source.unsplash.com/random/1920x1080/?night); */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -33,7 +32,7 @@
 }
 
 .background-accent {
-  background-color: rgba(var(--theme-accent), var(--background-accent-opacity));
+  background-color: rgba(var(--theme-accent), var(--background-accent));
   position: absolute;
   top: 0;
   left: 0;
