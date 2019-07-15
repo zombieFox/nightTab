@@ -1,14 +1,5 @@
 var clock = (function() {
 
-  var bind = {};
-
-  bind.tick = function() {
-    window.setInterval(function() {
-      render.clear();
-      render.all();
-    }, 1000);
-  };
-
   var _makeTimeObject = function() {
     var time = helper.getDateTime();
     time.meridiem = "AM";
@@ -32,6 +23,15 @@ var clock = (function() {
       time.seconds = "0" + time.seconds;
     };
     return time;
+  };
+
+  var bind = {};
+
+  bind.tick = function() {
+    window.setInterval(function() {
+      render.clear();
+      render.all();
+    }, 1000);
   };
 
   var render = {};
