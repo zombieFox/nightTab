@@ -15,6 +15,5 @@ keyboard.init();
 layout.init();
 background.init();
 search.init();
-title.init();
 header.init();
 version.init();

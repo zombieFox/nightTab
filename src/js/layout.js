@@ -29,6 +29,11 @@ var layout = (function() {
     };
   };
 
+  render.title = function() {
+    var title = helper.e("title");
+    title.textContent = state.get().layout.title;
+  };
+
   var init = function() {
     render.width();
     render.padding();
