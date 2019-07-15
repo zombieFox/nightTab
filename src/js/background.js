@@ -129,7 +129,7 @@ var background = (function() {
     fail: {
       filetype: function(name) {
         var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
-        var para1 = helper.node("p:Not the right kind of file. Make sure the selected file is an image.");
+        var para1 = helper.node("p:Not the right kind of file. Make sure the selected file is an image.|class:small muted");
         var para2 = helper.node("p:" + name);
         controlBackgroundImageLocalFeedback.appendChild(para1);
         controlBackgroundImageLocalFeedback.appendChild(para2);
@@ -137,7 +137,7 @@ var background = (function() {
       },
       size: function(name) {
         var controlBackgroundImageLocalFeedback = helper.e(".control-background-image-local-feedback");
-        var para1 = helper.node("p:File size is too big. Max file size of 5MB.");
+        var para1 = helper.node("p:File size is too big. Max file size of 5MB.|class:small muted");
         var para2 = helper.node("p:" + name);
         controlBackgroundImageLocalFeedback.appendChild(para1);
         controlBackgroundImageLocalFeedback.appendChild(para2);

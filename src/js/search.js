@@ -65,21 +65,9 @@ var search = (function() {
     };
   };
 
-  var render = {
-    engine: function() {
-      _renderEngine();
-    },
-    clear: {
-      input: function() {
-        _renderClearInput();
-      },
-      button: function() {
-        _renderClearButton();
-      }
-    }
-  };
+  var render = {};
 
-  var _renderEngine = function() {
+  render.engine = function() {
     var search = helper.e(".search");
     var searchInput = helper.e(".search-input");
     var placeholder = "";
@@ -93,19 +81,20 @@ var search = (function() {
     search.setAttribute("action", state.get().header.search.engine[state.get().header.search.engine.selected].url);
   };
 
-  var _renderClearButton = function() {
-    var searchClear = helper.e(".search-clear");
-    if (state.get().search) {
-      searchClear.removeAttribute("disabled");
-    } else {
-      searchClear.setAttribute("disabled", "");
-    };
-  };
-
-  var _renderClearInput = function() {
-    var searchInput = helper.e(".search-input");
-    searchInput.value = "";
-    searchInput.focus();
+  render.clear = {
+    input: function() {
+      var searchInput = helper.e(".search-input");
+      searchInput.value = "";
+      searchInput.focus();
+    },
+    button: function() {
+      var searchClear = helper.e(".search-clear");
+      if (state.get().search) {
+        searchClear.removeAttribute("disabled");
+      } else {
+        searchClear.setAttribute("disabled", "");
+      };
+    }
   };
 
   var _focus = function() {
