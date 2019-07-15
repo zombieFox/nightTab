@@ -11,7 +11,7 @@ var control = (function() {
     element: helper.e(".control-link-add"),
     type: "button",
     func: function() {
-      link.add();
+      link.render.add();
     }
   }, {
     element: helper.e(".control-link-edit"),
@@ -26,7 +26,7 @@ var control = (function() {
     type: "color",
     func: function() {
       theme.render.accent.color();
-      link.clear();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }
@@ -1875,7 +1875,7 @@ var control = (function() {
     path: "link.item.order",
     type: "radio",
     func: function() {
-      link.clear();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }
@@ -1884,7 +1884,7 @@ var control = (function() {
     path: "link.item.order",
     type: "radio",
     func: function() {
-      link.clear();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }
@@ -1923,7 +1923,7 @@ var control = (function() {
     path: "link.newTab",
     type: "checkbox",
     func: function() {
-      link.clear();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }
@@ -1946,7 +1946,7 @@ var control = (function() {
     type: "button",
     func: function() {
       bookmarks.sort("letter");
-      link.clear();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }
@@ -1955,7 +1955,7 @@ var control = (function() {
     type: "button",
     func: function() {
       bookmarks.sort("icon");
-      link.clear();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }
@@ -1964,7 +1964,7 @@ var control = (function() {
     type: "button",
     func: function() {
       bookmarks.sort("name");
-      link.clear();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }
@@ -1972,8 +1972,8 @@ var control = (function() {
     element: helper.e(".control-link-accent-clear"),
     type: "button",
     func: function() {
-      link.accent.clear();
-      link.clear();
+      link.mod.accent.clear();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }
@@ -1981,8 +1981,8 @@ var control = (function() {
     element: helper.e(".control-link-accent-set"),
     type: "button",
     func: function() {
-      link.accent.set();
-      link.clear();
+      link.mod.accent.rainbow();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }
@@ -2065,7 +2065,7 @@ var control = (function() {
     func: function() {
       theme.render.accent.random();
       theme.render.accent.color();
-      link.clear();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }
@@ -2798,7 +2798,6 @@ var control = (function() {
       if (bookmarks.get().length > 0) {
         disable.input(".control-link-edit", false);
       } else {
-        disable.input(".control-link-edit", true);
         disable.input(".control-link-edit", false);
       };
     };

@@ -7,7 +7,7 @@ var search = (function() {
     searchInput.addEventListener("input", function() {
       mod.searching.set();
       render.clear.button();
-      link.clear();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }, false);
@@ -19,7 +19,7 @@ var search = (function() {
       render.clear.input();
       mod.searching.set();
       render.clear.button();
-      link.clear();
+      link.render.clear();
       link.render.item.all();
       sortable(".link-area");
     }, false);

@@ -147,6 +147,11 @@ var header = (function() {
         }
       };
       action[state.get().header.button.style]();
+    },
+    edit: function() {
+      if (!state.get().link.edit) {
+        helper.e(".control-link-edit").checked = false;
+      };
     }
   };
 

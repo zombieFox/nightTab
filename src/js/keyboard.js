@@ -36,7 +36,7 @@ var keyboard = (function() {
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
         if (state.get().link.show) {
           menu.close();
-          link.add();
+          link.render.add();
         };
       };
     }, false);
@@ -97,7 +97,7 @@ var keyboard = (function() {
       if (state.get().theme.accent.random.active && event.ctrlKey && event.altKey && event.keyCode == 82) {
         theme.render.accent.random();
         theme.render.accent.color();
-        link.clear();
+        link.render.clear();
         link.render.item.all();
         sortable(".link-area");
         data.save();

@@ -205,7 +205,7 @@ var autoSuggest = (function() {
               helper.addClass(icon, "fab");
             };
             anchor.addEventListener("click", function() {
-              link.autoSuggestIconAction(arrayItem);
+              link.render.autoSuggestIconAction(arrayItem);
             }, false);
             var text = helper.node("span:" + arrayItem.label + "|class:auto-suggest-icon-text");
             anchor.appendChild(icon);

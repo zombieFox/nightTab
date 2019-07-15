@@ -1,6 +1,8 @@
 var link = (function() {
 
-  var bind = function() {
+  var bind = {};
+
+  bind.sort = function() {
     sortable(".link-area", {
       items: ".link-item",
       handle: ".link-control-item-handle",
@@ -12,25 +14,11 @@ var link = (function() {
     });
   };
 
-  var _previousFocusLink = null;
+  var _previousFocus = null;
 
-  var _returnToPreviousFocusLink = function() {
-    if (_previousFocusLink != null) {
-      var linkPanelFront = helper.eA(".link-panel-front");
-      if (linkPanelFront.length > 0) {
-        if (_previousFocusLink >= 0) {
-          linkPanelFront[_previousFocusLink].focus();
-        } else {
-          linkPanelFront[0].focus();
-        };
-      } else {
-        helper.e("body").focus();
-      };
-      _previousFocusLink = null;
-    };
-  };
+  var stagedLink = {};
 
-  var stagedBookmarkData = {
+  stagedLink.data = {
     display: null,
     letter: null,
     icon: {
@@ -51,45 +39,47 @@ var link = (function() {
     }
   };
 
-  var initStagedBookmarkData = function() {
-    link.stagedBookmarkData.display = "letter";
-    link.stagedBookmarkData.accent.override = false;
+  stagedLink.init = function() {
+    stagedLink.data.display = "letter";
+    stagedLink.data.accent.override = false;
   };
 
-  var resetStagedBookmarkData = function() {
-    link.stagedBookmarkData.display = null;
-    link.stagedBookmarkData.letter = null;
-    link.stagedBookmarkData.icon.name = null;
-    link.stagedBookmarkData.icon.prefix = null;
-    link.stagedBookmarkData.icon.label = null;
-    link.stagedBookmarkData.name = null;
-    link.stagedBookmarkData.url = null;
-    link.stagedBookmarkData.timeStamp = null;
-    link.stagedBookmarkData.accent.override = null;
-    link.stagedBookmarkData.accent.color.r = null;
-    link.stagedBookmarkData.accent.color.g = null;
-    link.stagedBookmarkData.accent.color.b = null;
+  stagedLink.reset = function() {
+    stagedLink.data.display = null;
+    stagedLink.data.letter = null;
+    stagedLink.data.icon.name = null;
+    stagedLink.data.icon.prefix = null;
+    stagedLink.data.icon.label = null;
+    stagedLink.data.name = null;
+    stagedLink.data.url = null;
+    stagedLink.data.timeStamp = null;
+    stagedLink.data.accent.override = null;
+    stagedLink.data.accent.color.r = null;
+    stagedLink.data.accent.color.g = null;
+    stagedLink.data.accent.color.b = null;
   };
 
-  var add = function() {
-    initStagedBookmarkData();
-    var form = _makeLinkForm();
+  var render = {};
+
+  render.add = function() {
+    stagedLink.init();
+    var form = render.form();
     modal.render({
       heading: "Add a new bookmark",
       successAction: function() {
-        link.stagedBookmarkData.timeStamp = new Date().getTime();
-        bookmarks.add(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
+        stagedLink.data.timeStamp = new Date().getTime();
+        bookmarks.add(JSON.parse(JSON.stringify(stagedLink.data)));
         data.save();
-        clear();
+        render.clear();
         render.item.all();
         render.tabIndex();
+        sortable(".link-area");
         control.dependents();
         control.render();
-        resetStagedBookmarkData();
-        sortable(".link-area");
+        stagedLink.reset();
       },
       cancelAction: function() {
-        resetStagedBookmarkData();
+        stagedLink.reset();
         autoSuggest.destroy();
       },
       actionText: "Add",
@@ -98,10 +88,10 @@ var link = (function() {
     });
   };
 
-  var edit = function(bookmarkData) {
-    link.stagedBookmarkData = JSON.parse(JSON.stringify(bookmarkData));
-    var form = _makeLinkForm();
-    if (link.stagedBookmarkData.display == "letter" || link.stagedBookmarkData.display == null) {
+  render.edit = function(bookmarkData) {
+    stagedLink.data = JSON.parse(JSON.stringify(bookmarkData));
+    var form = render.form();
+    if (stagedLink.data.display == "letter" || stagedLink.data.display == null) {
       form.querySelector(".link-form-input-letter").removeAttribute("disabled");
       form.querySelector(".link-form-input-icon").setAttribute("disabled", "");
       form.querySelector(".form-group-text").setAttribute("disabled", "");
@@ -109,7 +99,7 @@ var link = (function() {
       form.querySelector(".link-form-input-helper-icon").setAttribute("disabled", "");
       form.querySelector(".link-form-icon-clear").setAttribute("disabled", "");
       form.querySelector(".link-form-text-icon").tabIndex = -1;
-    } else if (link.stagedBookmarkData.display == "icon") {
+    } else if (stagedLink.data.display == "icon") {
       form.querySelector(".link-form-input-letter").setAttribute("disabled", "");
       form.querySelector(".link-form-input-icon").removeAttribute("disabled");
       form.querySelector(".form-group-text").removeAttribute("disabled");
@@ -119,31 +109,31 @@ var link = (function() {
       form.querySelector(".link-form-input-display-icon").checked = true;
       form.querySelector(".link-form-text-icon").tabIndex = 1;
     };
-    if (link.stagedBookmarkData.icon.name != null && link.stagedBookmarkData.icon.prefix != null && link.stagedBookmarkData.icon.label != null) {
-      form.querySelector(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + link.stagedBookmarkData.icon.prefix + " fa-" + link.stagedBookmarkData.icon.name));
+    if (stagedLink.data.icon.name != null && stagedLink.data.icon.prefix != null && stagedLink.data.icon.label != null) {
+      form.querySelector(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + stagedLink.data.icon.prefix + " fa-" + stagedLink.data.icon.name));
     };
-    form.querySelector(".link-form-input-letter").value = link.stagedBookmarkData.letter;
-    form.querySelector(".link-form-input-icon").value = link.stagedBookmarkData.icon.label;
-    form.querySelector(".link-form-input-name").value = link.stagedBookmarkData.name;
-    form.querySelector(".link-form-input-url").value = link.stagedBookmarkData.url;
-    if (link.stagedBookmarkData.accent.override) {
-      form.querySelector(".link-form-input-color").value = helper.rgbToHex(link.stagedBookmarkData.accent.color);
+    form.querySelector(".link-form-input-letter").value = stagedLink.data.letter;
+    form.querySelector(".link-form-input-icon").value = stagedLink.data.icon.label;
+    form.querySelector(".link-form-input-name").value = stagedLink.data.name;
+    form.querySelector(".link-form-input-url").value = stagedLink.data.url;
+    if (stagedLink.data.accent.override) {
+      form.querySelector(".link-form-input-color").value = helper.rgbToHex(stagedLink.data.accent.color);
     };
     modal.render({
-      heading: "Edit " + link.stagedBookmarkData.name,
+      heading: "Edit " + stagedLink.data.name,
       successAction: function() {
-        bookmarks.edit(JSON.parse(JSON.stringify(link.stagedBookmarkData)));
+        bookmarks.edit(JSON.parse(JSON.stringify(stagedLink.data)));
         data.save();
-        clear();
+        render.clear();
         render.item.all();
         render.tabIndex();
-        _returnToPreviousFocusLink();
-        resetStagedBookmarkData();
+        render.previousFocus();
         sortable(".link-area");
+        stagedLink.reset();
       },
       cancelAction: function() {
-        _returnToPreviousFocusLink();
-        resetStagedBookmarkData();
+        render.previousFocus();
+        stagedLink.reset();
       },
       actionText: "Save",
       size: "small",
@@ -151,41 +141,372 @@ var link = (function() {
     });
   };
 
-  var remove = function(bookmarkData) {
+  render.remove = function(bookmarkData) {
     modal.render({
       heading: "Remove " + bookmarkData.name + " bookmark",
       content: "Are you sure you want to remove this bookmark? This can not be undone.",
       successAction: function() {
-        _previousFocusLink = _previousFocusLink - 1;
+        _previousFocus = _previousFocus - 1;
         bookmarks.remove(bookmarkData);
-        _checkCount();
+        mod.edit();
+        header.render.button.edit();
         data.save();
-        clear();
+        render.clear();
         render.item.all();
+        render.previousFocus();
+        sortable(".link-area");
         control.dependents();
         control.render();
-        _returnToPreviousFocusLink();
-        sortable(".link-area");
       },
       cancelAction: function() {
-        _returnToPreviousFocusLink();
+        render.previousFocus();
       },
       actionText: "Remove",
       size: "small"
     });
   };
 
-  var _checkCount = function() {
-    if (bookmarks.get().length <= 0) {
-      helper.setObject({
-        object: state.get(),
-        path: "link.edit",
-        newValue: false
+  render.clear = function() {
+    var linkArea = helper.e(".link-area");
+    while (linkArea.lastChild) {
+      linkArea.removeChild(linkArea.lastChild);
+    };
+  };
+
+  render.area = {
+    width: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
+    }
+  };
+
+  render.item = {
+    all: function() {
+      var linkArea = helper.e(".link-area");
+      var bookmarksToRender = false;
+      if (state.get().search) {
+        bookmarksToRender = search.get();
+      } else {
+        bookmarksToRender = bookmarks.get();
+      };
+      var action = {
+        bookmarks: function(array) {
+          array.forEach(function(arrayItem, index) {
+            linkArea.appendChild(render.item.link(arrayItem, index));
+          });
+        },
+        empty: {
+          search: function() {
+            linkArea.appendChild(render.empty.search());
+          },
+          bookmarks: function() {
+            linkArea.appendChild(render.empty.bookmarks());
+          }
+        }
+      };
+      // if searching
+      if (state.get().search) {
+        // if bookmarks exist to be searched
+        if (bookmarksToRender.total > 0) {
+          // if matching bookmarks found
+          if (bookmarksToRender.matching.length > 0) {
+            action.bookmarks(bookmarksToRender.matching);
+          } else {
+            action.empty.search();
+          };
+        } else {
+          action.empty.bookmarks();
+        };
+      } else {
+        // if bookmarks exist
+        if (bookmarksToRender.length > 0) {
+          action.bookmarks(bookmarksToRender);
+        } else {
+          action.empty.bookmarks();
+        };
+      };
+    },
+    display: {
+      letter: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
+      },
+      icon: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.icon.size + "em");
+      }
+    },
+    name: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-item-name-size", state.get().link.item.name.size + "em");
+    },
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-item-size", state.get().link.item.size + "em");
+    },
+    link: function(data, index) {
+      var linkItemOptions = {
+        tag: "div",
+        attr: [{
+          key: "class",
+          value: "link-item"
+        }]
+      };
+      if (data.accent.override) {
+        linkItemOptions.attr.push({
+          key: "style",
+          value: "--theme-accent: " + data.accent.color.r + ", " + data.accent.color.g + ", " + data.accent.color.b
+        });
+        if (invert(data.accent.color, true) == "#000000") {
+          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-dark";
+        } else if (invert(data.accent.color, true) == "#ffffff") {
+          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-light";
+        };
+      } else {
+        if (invert(state.get().theme.accent.current, true) == "#000000") {
+          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-dark";
+        } else if (invert(state.get().theme.accent.current, true) == "#ffffff") {
+          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-light";
+        };
+      };
+      var linkItem = helper.makeNode(linkItemOptions);
+      var linkPanelFrontOptions = {
+        tag: "a",
+        attr: [{
+          key: "class",
+          value: "link-panel-front"
+        }, {
+          key: "href",
+          value: data.url
+        }, {
+          key: "tabindex",
+          value: 1
+        }]
+      };
+      if (state.get().link.newTab) {
+        linkPanelFrontOptions.attr.push({
+          key: "target",
+          value: "_blank"
+        });
+      };
+      var linkPanelFront = helper.makeNode(linkPanelFrontOptions);
+      var linkPanelBack = helper.makeNode({
+        tag: "div",
+        attr: [{
+          key: "class",
+          value: "link-panel-back"
+        }]
+      });
+      var linkDisplay = helper.makeNode({
+        tag: "div",
+        attr: [{
+          key: "class",
+          value: "link-display"
+        }]
+      });
+      var linkDisplayLetter = null;
+      var linkDisplayIcon = null;
+      if (data.display == "letter") {
+        linkDisplayLetter = helper.makeNode({
+          tag: "p",
+          text: data.letter,
+          attr: [{
+            key: "class",
+            value: "link-display-letter"
+          }]
+        });
+      } else if (data.display == "icon" && data.icon.prefix != null && data.icon.name != null) {
+        linkDisplayIcon = helper.makeNode({
+          tag: "div",
+          attr: [{
+            key: "class",
+            value: "link-display-icon " + data.icon.prefix + " fa-" + data.icon.name
+          }]
+        });
+      };
+      var linkName = helper.makeNode({
+        tag: "p",
+        text: data.name,
+        attr: [{
+          key: "class",
+          value: "link-name"
+        }]
+      });
+      var linkUrl = helper.makeNode({
+        tag: "div",
+        attr: [{
+          key: "class",
+          value: "link-url"
+        }]
+      });
+      var url = "";
+      if (data.url != null) {
+        url = data.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "");
+      };
+      var linkUrlText = helper.makeNode({
+        tag: "p",
+        text: url,
+        attr: [{
+          key: "class",
+          value: "link-url-text"
+        }, {
+          key: "title",
+          value: url
+        }]
+      });
+      var linkControl = helper.makeNode({
+        tag: "div",
+        attr: [{
+          key: "class",
+          value: "link-control"
+        }]
+      });
+      var linkHandle = helper.makeNode({
+        tag: "div",
+        attr: [{
+          key: "class",
+          value: "button button-small link-control-item link-control-item-handle"
+        }, {
+          key: "tabindex",
+          value: -1
+        }, {
+          key: "title",
+          value: "Drag and drop to reorder"
+        }]
+      });
+      var linkHandleIcon = helper.makeNode({
+        tag: "span",
+        attr: [{
+          key: "class",
+          value: "button-icon icon-reorder"
+        }]
+      });
+      var linkEdit = helper.makeNode({
+        tag: "button",
+        attr: [{
+          key: "class",
+          value: "button button-small link-control-item link-control-item-edit"
+        }, {
+          key: "tabindex",
+          value: -1
+        }, {
+          key: "title",
+          value: "Edit this bookmark"
+        }]
+      });
+      var linkEditIcon = helper.makeNode({
+        tag: "span",
+        attr: [{
+          key: "class",
+          value: "button-icon icon-edit"
+        }]
+      });
+      var linkRemove = helper.makeNode({
+        tag: "button",
+        attr: [{
+          key: "class",
+          value: "button button-small link-control-item link-control-item-remove"
+        }, {
+          key: "tabindex",
+          value: -1
+        }, {
+          key: "title",
+          value: "Remove this bookmark"
+        }]
+      });
+      var linkRemoveIcon = helper.makeNode({
+        tag: "span",
+        attr: [{
+          key: "class",
+          value: "button-icon icon-close"
+        }]
+      });
+      if (data.display == "letter") {
+        linkDisplay.appendChild(linkDisplayLetter);
+      } else if (data.display == "icon" && data.icon.prefix != null && data.icon.name != null) {
+        linkDisplay.appendChild(linkDisplayIcon);
+      };
+      if (state.get().link.item.order == "displayname") {
+        linkPanelFront.appendChild(linkDisplay);
+        linkPanelFront.appendChild(linkName);
+      } else if (state.get().link.item.order == "namedisplay") {
+        linkPanelFront.appendChild(linkName);
+        linkPanelFront.appendChild(linkDisplay);
+      };
+      linkHandle.appendChild(linkHandleIcon);
+      linkControl.appendChild(linkHandle);
+      linkEdit.appendChild(linkEditIcon);
+      linkControl.appendChild(linkEdit);
+      linkRemove.appendChild(linkRemoveIcon);
+      linkControl.appendChild(linkRemove);
+      linkUrl.appendChild(linkUrlText);
+      linkPanelBack.appendChild(linkUrl);
+      linkPanelBack.appendChild(linkControl);
+      linkItem.appendChild(linkPanelFront);
+      linkItem.appendChild(linkPanelBack);
+
+      linkEdit.addEventListener("click", function() {
+        _previousFocus = index;
+        render.edit(data);
+      }, false);
+      linkRemove.addEventListener("click", function() {
+        _previousFocus = index;
+        render.remove(data);
+      }, false);
+
+      return linkItem;
+    }
+  };
+
+  render.empty = {
+    search: function() {
+      var div = helper.node("div|class:link-empty");
+      var h1 = helper.node("h1:No matching bookmarks found|class:link-empty-heading");
+      var para = helper.node("p:\"Enter\" to Search " + state.get().header.search.engine[state.get().header.search.engine.selected].name + "|class:small muted");
+      div.appendChild(h1);
+      div.appendChild(para);
+      return div;
+    },
+    bookmarks: function() {
+      var div = helper.node("div|class:link-empty");
+      var h1 = helper.node("h1:No bookmarks added|class:link-empty-heading");
+      var para = helper.node("p:Why not add some?|class:small muted");
+      div.appendChild(h1);
+      div.appendChild(para);
+      return div;
+    }
+  };
+
+  render.tabIndex = function() {
+    var allLinkControlItem = helper.eA(".link-control-item");
+    if (state.get().link.edit) {
+      allLinkControlItem.forEach(function(arrayItem, index) {
+        arrayItem.tabIndex = 1;
+      });
+    } else {
+      allLinkControlItem.forEach(function(arrayItem, index) {
+        arrayItem.tabIndex = -1;
       });
     };
   };
 
-  var _makeLinkForm = function() {
+  render.previousFocus = function() {
+    if (_previousFocus != null) {
+      var linkPanelFront = helper.eA(".link-panel-front");
+      if (linkPanelFront.length > 0) {
+        if (_previousFocus >= 0) {
+          linkPanelFront[_previousFocus].focus();
+        } else {
+          linkPanelFront[0].focus();
+        };
+      } else {
+        helper.e("body").focus();
+      };
+      _previousFocus = null;
+    };
+  };
+
+  render.form = function() {
     var form = helper.node("form|class:link-form");
     var fieldset = helper.node("fieldset");
     var letterFormIndet = helper.node("div|class:form-indent");
@@ -254,37 +575,37 @@ var link = (function() {
     form.appendChild(fieldset);
 
     letterRadioInput.addEventListener("change", function(event) {
-      link.stagedBookmarkData.display = this.value;
+      stagedLink.data.display = this.value;
     }, false);
     iconRadioInput.addEventListener("change", function(event) {
-      link.stagedBookmarkData.display = this.value;
+      stagedLink.data.display = this.value;
     }, false);
     letterInput.addEventListener("input", function(event) {
-      link.stagedBookmarkData.letter = this.value;
+      stagedLink.data.letter = this.value;
     }, false);
     nameInput.addEventListener("input", function(event) {
-      link.stagedBookmarkData.name = this.value;
+      stagedLink.data.name = this.value;
     }, false);
     urlInput.addEventListener("input", function(event) {
-      link.stagedBookmarkData.url = this.value;
+      stagedLink.data.url = this.value;
     }, false);
     colorInput.addEventListener("change", function(event) {
-      link.stagedBookmarkData.accent.override = true;
-      link.stagedBookmarkData.accent.color = helper.hexToRgb(this.value);
+      stagedLink.data.accent.override = true;
+      stagedLink.data.accent.color = helper.hexToRgb(this.value);
     }, false);
     colorButtonRefresh.addEventListener("click", function(event) {
       colorInput.value = helper.rgbToHex(state.get().theme.accent.current);
-      link.stagedBookmarkData.accent.override = false;
-      link.stagedBookmarkData.accent.color = {
+      stagedLink.data.accent.override = false;
+      stagedLink.data.accent.color = {
         r: null,
         g: null,
         b: null
       };
     }, false);
     iconFormGroupClear.addEventListener("click", function(event) {
-      link.stagedBookmarkData.icon.name = null;
-      link.stagedBookmarkData.icon.prefix = null;
-      link.stagedBookmarkData.icon.label = null;
+      stagedLink.data.icon.name = null;
+      stagedLink.data.icon.prefix = null;
+      stagedLink.data.icon.label = null;
       var existingIcon = helper.e(".link-form-icon");
       if (existingIcon) {
         existingIcon.remove();
@@ -315,382 +636,61 @@ var link = (function() {
     return form;
   };
 
-  var _makeLink = function(data, index) {
-    var linkItemOptions = {
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "link-item"
-      }]
-    };
-    if (data.accent.override) {
-      linkItemOptions.attr.push({
-        key: "style",
-        value: "--theme-accent: " + data.accent.color.r + ", " + data.accent.color.g + ", " + data.accent.color.b
-      });
-      if (invert(data.accent.color, true) == "#000000") {
-        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-dark";
-      } else if (invert(data.accent.color, true) == "#ffffff") {
-        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-light";
-      };
-    } else {
-      if (invert(state.get().theme.accent.current, true) == "#000000") {
-        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-dark";
-      } else if (invert(state.get().theme.accent.current, true) == "#ffffff") {
-        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-light";
-      };
-    };
-    var linkItem = helper.makeNode(linkItemOptions);
-    var linkPanelFrontOptions = {
-      tag: "a",
-      attr: [{
-        key: "class",
-        value: "link-panel-front"
-      }, {
-        key: "href",
-        value: data.url
-      }, {
-        key: "tabindex",
-        value: 1
-      }]
-    };
-    if (state.get().link.newTab) {
-      linkPanelFrontOptions.attr.push({
-        key: "target",
-        value: "_blank"
-      });
-    };
-    var linkPanelFront = helper.makeNode(linkPanelFrontOptions);
-    var linkPanelBack = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "link-panel-back"
-      }]
-    });
-    var linkDisplay = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "link-display"
-      }]
-    });
-    var linkDisplayLetter = null;
-    var linkDisplayIcon = null;
-    if (data.display == "letter") {
-      linkDisplayLetter = helper.makeNode({
-        tag: "p",
-        text: data.letter,
-        attr: [{
-          key: "class",
-          value: "link-display-letter"
-        }]
-      });
-    } else if (data.display == "icon" && data.icon.prefix != null && data.icon.name != null) {
-      linkDisplayIcon = helper.makeNode({
-        tag: "div",
-        attr: [{
-          key: "class",
-          value: "link-display-icon " + data.icon.prefix + " fa-" + data.icon.name
-        }]
-      });
-    };
-    var linkName = helper.makeNode({
-      tag: "p",
-      text: data.name,
-      attr: [{
-        key: "class",
-        value: "link-name"
-      }]
-    });
-    var linkUrl = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "link-url"
-      }]
-    });
-    var url = "";
-    if (data.url != null) {
-      url = data.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "");
-    };
-    var linkUrlText = helper.makeNode({
-      tag: "p",
-      text: url,
-      attr: [{
-        key: "class",
-        value: "link-url-text"
-      }, {
-        key: "title",
-        value: url
-      }]
-    });
-    var linkControl = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "link-control"
-      }]
-    });
-    var linkHandle = helper.makeNode({
-      tag: "div",
-      attr: [{
-        key: "class",
-        value: "button button-small link-control-item link-control-item-handle"
-      }, {
-        key: "tabindex",
-        value: -1
-      }, {
-        key: "title",
-        value: "Drag and drop to reorder"
-      }]
-    });
-    var linkHandleIcon = helper.makeNode({
-      tag: "span",
-      attr: [{
-        key: "class",
-        value: "button-icon icon-reorder"
-      }]
-    });
-    var linkEdit = helper.makeNode({
-      tag: "button",
-      attr: [{
-        key: "class",
-        value: "button button-small link-control-item link-control-item-edit"
-      }, {
-        key: "tabindex",
-        value: -1
-      }, {
-        key: "title",
-        value: "Edit this bookmark"
-      }]
-    });
-    var linkEditIcon = helper.makeNode({
-      tag: "span",
-      attr: [{
-        key: "class",
-        value: "button-icon icon-edit"
-      }]
-    });
-    var linkRemove = helper.makeNode({
-      tag: "button",
-      attr: [{
-        key: "class",
-        value: "button button-small link-control-item link-control-item-remove"
-      }, {
-        key: "tabindex",
-        value: -1
-      }, {
-        key: "title",
-        value: "Remove this bookmark"
-      }]
-    });
-    var linkRemoveIcon = helper.makeNode({
-      tag: "span",
-      attr: [{
-        key: "class",
-        value: "button-icon icon-close"
-      }]
-    });
-    if (data.display == "letter") {
-      linkDisplay.appendChild(linkDisplayLetter);
-    } else if (data.display == "icon" && data.icon.prefix != null && data.icon.name != null) {
-      linkDisplay.appendChild(linkDisplayIcon);
-    };
-    if (state.get().link.item.order == "displayname") {
-      linkPanelFront.appendChild(linkDisplay);
-      linkPanelFront.appendChild(linkName);
-    } else if (state.get().link.item.order == "namedisplay") {
-      linkPanelFront.appendChild(linkName);
-      linkPanelFront.appendChild(linkDisplay);
-    };
-    linkHandle.appendChild(linkHandleIcon);
-    linkControl.appendChild(linkHandle);
-    linkEdit.appendChild(linkEditIcon);
-    linkControl.appendChild(linkEdit);
-    linkRemove.appendChild(linkRemoveIcon);
-    linkControl.appendChild(linkRemove);
-    linkUrl.appendChild(linkUrlText);
-    linkPanelBack.appendChild(linkUrl);
-    linkPanelBack.appendChild(linkControl);
-    linkItem.appendChild(linkPanelFront);
-    linkItem.appendChild(linkPanelBack);
-
-    linkEdit.addEventListener("click", function() {
-      _previousFocusLink = index;
-      edit(data);
-    }, false);
-    linkRemove.addEventListener("click", function() {
-      _previousFocusLink = index;
-      remove(data);
-    }, false);
-
-    return linkItem;
-  };
-
-  var autoSuggestIconAction = function(autoSuggestData) {
-    link.stagedBookmarkData.icon.label = autoSuggestData.label;
-    link.stagedBookmarkData.icon.name = autoSuggestData.name;
+  render.autoSuggestIconAction = function(autoSuggestData) {
+    stagedLink.data.icon.label = autoSuggestData.label;
+    stagedLink.data.icon.name = autoSuggestData.name;
     if (autoSuggestData.styles.includes("solid")) {
-      link.stagedBookmarkData.icon.prefix = "fas";
+      stagedLink.data.icon.prefix = "fas";
     } else if (autoSuggestData.styles.includes("brands")) {
-      link.stagedBookmarkData.icon.prefix = "fab";
+      stagedLink.data.icon.prefix = "fab";
     };
     var existingIcon = helper.e(".link-form-icon");
     if (existingIcon) {
       existingIcon.remove();
     };
     helper.e(".link-form-input-icon").value = autoSuggestData.label;
-    helper.e(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + link.stagedBookmarkData.icon.prefix + " fa-" + link.stagedBookmarkData.icon.name));
+    helper.e(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + stagedLink.data.icon.prefix + " fa-" + stagedLink.data.icon.name));
     helper.e(".link-form-text-icon").focus();
   };
 
-  var _makeEmptySearch = function() {
-    var searchInput = helper.e(".search-input");
-    var div = helper.node("div|class:link-empty");
-    var h1 = helper.node("h1:No matching bookmarks found|class:link-empty-heading");
-    var para = helper.node("p:\"Enter\" to Search " + state.get().header.search.engine[state.get().header.search.engine.selected].name + "|class:small muted");
-    div.appendChild(h1);
-    div.appendChild(para);
-    return div;
-  };
+  var mod = {};
 
-  var _makeEmptyBookmarks = function() {
-    var searchInput = helper.e(".search-input");
-    var div = helper.node("div|class:link-empty");
-    var h1 = helper.node("h1:No bookmarks added|class:link-empty-heading");
-    var para = helper.node("p:Why not add some?|class:small muted");
-    div.appendChild(h1);
-    div.appendChild(para);
-    return div;
-  };
-
-  var clear = function() {
-    var linkArea = helper.e(".link-area");
-    while (linkArea.lastChild) {
-      linkArea.removeChild(linkArea.lastChild);
-    };
-  };
-
-  var render = {};
-
-  render = {
-    area: {
-      width: function() {
-        var html = helper.e("html");
-        html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
-      }
-    }
-  };
-
-  render.item = {
-    all: function() {
-      var linkArea = helper.e(".link-area");
-      var bookmarksToRender = false;
-      if (state.get().search) {
-        bookmarksToRender = search.get();
-      } else {
-        bookmarksToRender = bookmarks.get();
-      };
-      var action = {
-        render: {
-          bookmarks: function(array) {
-            array.forEach(function(arrayItem, index) {
-              linkArea.appendChild(_makeLink(arrayItem, index));
-            });
-          },
-          empty: {
-            search: function() {
-              linkArea.appendChild(_makeEmptySearch());
-            },
-            bookmarks: function() {
-              linkArea.appendChild(_makeEmptyBookmarks());
-            }
+  mod.accent = {
+    clear: function() {
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.accent = {
+          override: false,
+          color: {
+            r: null,
+            g: null,
+            b: null
           }
-        }
-      };
-      // if searching
-      if (state.get().search) {
-        // if bookmarks exist to be searched
-        if (bookmarksToRender.total > 0) {
-          // if matching bookmarks found
-          if (bookmarksToRender.matching.length > 0) {
-            action.render.bookmarks(bookmarksToRender.matching);
-          } else {
-            action.render.empty.search();
-          };
-        } else {
-          action.render.empty.bookmarks();
         };
-      } else {
-        // if bookmarks exist
-        if (bookmarksToRender.length > 0) {
-          action.render.bookmarks(bookmarksToRender);
-        } else {
-          action.render.empty.bookmarks();
-        };
-      };
+      });
     },
-    display: {
-      letter: function() {
-        var html = helper.e("html");
-        html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
-      },
-      icon: function() {
-        var html = helper.e("html");
-        html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.icon.size + "em");
-      }
-    },
-    name: function() {
-      var html = helper.e("html");
-      html.style.setProperty("--link-item-name-size", state.get().link.item.name.size + "em");
-    },
-    size: function() {
-      var html = helper.e("html");
-      html.style.setProperty("--link-item-size", state.get().link.item.size + "em");
+    rainbow: function() {
+      var units = 360 / bookmarks.get().length;
+      var degree = 0;
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.accent.override = true;
+        arrayItem.accent.color = helper.hslToRgb({
+          h: degree,
+          s: 1,
+          l: 0.5
+        });
+        degree = degree + units;
+      });
     }
   };
 
-  render.tabIndex = function() {
-    var allLinkControlItem = helper.eA(".link-control-item");
-    if (state.get().link.edit) {
-      allLinkControlItem.forEach(function(arrayItem, index) {
-        arrayItem.tabIndex = 1;
-      });
-    } else {
-      allLinkControlItem.forEach(function(arrayItem, index) {
-        arrayItem.tabIndex = -1;
+  mod.edit = function() {
+    if (bookmarks.get().length <= 0) {
+      helper.setObject({
+        object: state.get(),
+        path: "link.edit",
+        newValue: false
       });
     };
-  };
-
-  var accent = {};
-
-  accent.set = function() {
-    var units = 360 / bookmarks.get().length;
-    var degree = 0;
-    bookmarks.get().forEach(function(arrayItem, index) {
-      arrayItem.accent.override = true;
-      arrayItem.accent.color = helper.hslToRgb({
-        h: degree,
-        s: 1,
-        l: 0.5
-      });
-      degree = degree + units;
-    });
-  };
-
-  accent.clear = function() {
-    bookmarks.get().forEach(function(arrayItem, index) {
-      arrayItem.accent = {
-        override: false,
-        color: {
-          r: null,
-          g: null,
-          b: null
-        }
-      };
-    });
   };
 
   var init = function() {
@@ -700,19 +700,13 @@ var link = (function() {
     render.item.display.letter();
     render.item.display.icon();
     render.item.name();
-    bind();
+    bind.sort();
   };
 
   // exposed methods
   return {
-    stagedBookmarkData: stagedBookmarkData,
-    autoSuggestIconAction: autoSuggestIconAction,
-    accent: accent,
     init: init,
-    clear: clear,
-    add: add,
-    edit: edit,
-    remove: remove,
+    mod: mod,
     render: render
   };
 
