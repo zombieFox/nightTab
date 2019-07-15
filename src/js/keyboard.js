@@ -1,6 +1,8 @@
 var keyboard = (function() {
 
-  var _bind = function() {
+  var bind = {};
+
+  bind.esc = function() {
     window.addEventListener("keydown", function(event) {
       //  esc
       if (event.keyCode == 27) {
@@ -25,6 +27,11 @@ var keyboard = (function() {
         };
         data.save();
       };
+    }, false);
+  };
+
+  bind.ctrAltA = function() {
+    window.addEventListener("keydown", function(event) {
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
         if (state.get().link.show) {
@@ -32,6 +39,11 @@ var keyboard = (function() {
           link.add();
         };
       };
+    }, false);
+  };
+
+  bind.ctrAltD = function() {
+    window.addEventListener("keydown", function(event) {
       // ctrl+alt+d
       if (event.ctrlKey && event.altKey && event.keyCode == 68) {
         theme.toggle();
@@ -39,12 +51,22 @@ var keyboard = (function() {
         control.update();
         data.save();
       };
+    }, false);
+  };
+
+  bind.ctrAltM = function() {
+    window.addEventListener("keydown", function(event) {
       // ctrl+alt+m
       if (event.ctrlKey && event.altKey && event.keyCode == 77) {
         shade.destroy();
         modal.destroy();
         menu.toggle();
       };
+    }, false);
+  };
+
+  bind.ctrAltE = function() {
+    window.addEventListener("keydown", function(event) {
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
         if (state.get().link.show && bookmarks.get().length > 0) {
@@ -66,10 +88,15 @@ var keyboard = (function() {
           data.save();
         };
       };
+    }, false);
+  };
+
+  bind.ctrAltR = function() {
+    window.addEventListener("keydown", function(event) {
       // ctrl+alt+r
       if (state.get().theme.accent.random.active && event.ctrlKey && event.altKey && event.keyCode == 82) {
-        accent.random();
-        accent.render();
+        theme.render.accent.random();
+        theme.render.accent.color();
         link.clear();
         link.render.item.all();
         sortable(".link-area");
@@ -79,11 +106,17 @@ var keyboard = (function() {
   };
 
   var init = function() {
-    _bind();
+    bind.esc();
+    bind.ctrAltA();
+    bind.ctrAltD();
+    bind.ctrAltM();
+    bind.ctrAltE();
+    bind.ctrAltR();
   };
 
   return {
-    init: init
+    init: init,
+    bind: bind
   };
 
 })();

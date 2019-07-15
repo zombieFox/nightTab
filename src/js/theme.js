@@ -98,7 +98,6 @@ var theme = (function() {
     }
   };
 
-
   var init = function() {
     render.theme();
     render.accent.random();
