@@ -822,8 +822,8 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -835,8 +835,8 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -847,8 +847,8 @@ var control = (function() {
     path: "header.date.day.weekStart",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -859,8 +859,8 @@ var control = (function() {
     path: "header.date.day.weekStart",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -872,8 +872,8 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -884,8 +884,8 @@ var control = (function() {
     path: "header.date.day.length",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -896,8 +896,8 @@ var control = (function() {
     path: "header.date.day.length",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -910,8 +910,8 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -922,8 +922,8 @@ var control = (function() {
     path: "header.date.date.display",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -934,8 +934,8 @@ var control = (function() {
     path: "header.date.date.display",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -946,8 +946,8 @@ var control = (function() {
     path: "header.date.date.ordinal",
     type: "checkbox",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -960,8 +960,8 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -973,8 +973,8 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -985,8 +985,8 @@ var control = (function() {
     path: "header.date.month.ordinal",
     type: "checkbox",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -998,8 +998,8 @@ var control = (function() {
     type: "radio",
     func: function() {
       dependents();
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -1010,8 +1010,8 @@ var control = (function() {
     path: "header.date.month.length",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -1022,8 +1022,8 @@ var control = (function() {
     path: "header.date.month.length",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -1036,8 +1036,8 @@ var control = (function() {
     func: function() {
       render();
       dependents();
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -1048,8 +1048,8 @@ var control = (function() {
     path: "header.date.year.display",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -1060,8 +1060,8 @@ var control = (function() {
     path: "header.date.year.display",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -1072,8 +1072,8 @@ var control = (function() {
     path: "header.date.separator.show",
     type: "checkbox",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -1084,8 +1084,8 @@ var control = (function() {
     path: "header.date.format",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();
@@ -1096,8 +1096,8 @@ var control = (function() {
     path: "header.date.format",
     type: "radio",
     func: function() {
-      date.clear();
-      date.render();
+      date.render.clear();
+      date.render.all();
       greeting.clear();
       greeting.render();
       transitional.clear();

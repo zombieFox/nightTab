@@ -1,22 +1,7 @@
 var date = (function() {
 
-  var bind = function() {
-    window.setInterval(function() {
-      clear();
-      render();
-    }, 1000);
-  };
-
-  var clear = function() {
-    var date = helper.e(".date");
-    while (date.lastChild) {
-      date.removeChild(date.lastChild);
-    };
-  };
-
   var _makeTimeObject = function() {
-    var date = helper.getDateTime();
-    return date;
+    return helper.getDateTime();
   };
 
   var _month = function(index) {
@@ -29,11 +14,29 @@ var date = (function() {
     return all[index];
   };
 
-  var render = function() {
-    var _date = function() {
+  var bind = {};
+
+  bind.tick = function() {
+    window.setInterval(function() {
+      render.clear();
+      render.all();
+    }, 1000);
+  };
+
+  var render = {};
+
+  render.clear = function() {
+    var date = helper.e(".date");
+    while (date.lastChild) {
+      date.removeChild(date.lastChild);
+    };
+  };
+
+  render.all = function() {
+    if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show) {
       var date = helper.e(".date");
       var dateObject = _makeTimeObject();
-      var action = {
+      var wordOrNumber = {
         day: {
           word: function(value) {
             return _day(value);
@@ -86,48 +89,20 @@ var date = (function() {
           }
         }
       };
-      dateObject.day = action.day[state.get().header.date.day.display](dateObject.day);
-      dateObject.date = action.date[state.get().header.date.date.display](dateObject.date);
-      dateObject.month = action.month[state.get().header.date.month.display](dateObject.month);
-      dateObject.year = action.year[state.get().header.date.year.display](dateObject.year);
+      dateObject.day = wordOrNumber.day[state.get().header.date.day.display](dateObject.day);
+      dateObject.date = wordOrNumber.date[state.get().header.date.date.display](dateObject.date);
+      dateObject.month = wordOrNumber.month[state.get().header.date.month.display](dateObject.month);
+      dateObject.year = wordOrNumber.year[state.get().header.date.year.display](dateObject.year);
       if (state.get().header.date.day.display == "word" && state.get().header.date.day.length == "short") {
         dateObject.day = dateObject.day.substring(0, 3);
       };
       if (state.get().header.date.month.display == "word" && state.get().header.date.month.length == "short") {
         dateObject.month = dateObject.month.substring(0, 3);
       };
-      var elementDay = helper.makeNode({
-        tag: "span",
-        text: dateObject.day,
-        attr: [{
-          key: "class",
-          value: "date-item date-day"
-        }]
-      });
-      var elementDate = helper.makeNode({
-        tag: "span",
-        text: dateObject.date,
-        attr: [{
-          key: "class",
-          value: "date-item date-date"
-        }]
-      });
-      var elementMonth = helper.makeNode({
-        tag: "span",
-        text: dateObject.month,
-        attr: [{
-          key: "class",
-          value: "date-item date-month"
-        }]
-      });
-      var elementyear = helper.makeNode({
-        tag: "span",
-        text: dateObject.year,
-        attr: [{
-          key: "class",
-          value: "date-item date-year"
-        }]
-      });
+      var elementDay = helper.node("span:" + dateObject.day + "|class:date-item date-day");
+      var elementDate = helper.node("span:" + dateObject.date + "|class:date-item date-date");
+      var elementMonth = helper.node("span:" + dateObject.month + "|class:date-item date-month");
+      var elementyear = helper.node("span:" + dateObject.year + "|class:date-item date-year");
       if (state.get().header.date.day.show) {
         date.appendChild(elementDay);
       };
@@ -178,22 +153,18 @@ var date = (function() {
         };
       };
     };
-    if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show) {
-      _date();
-    };
   };
 
   var init = function() {
-    render();
-    bind();
+    render.all();
+    bind.tick();
   };
 
   // exposed methods
   return {
     init: init,
     bind: bind,
-    render: render,
-    clear: clear
+    render: render
   };
 
 })();
