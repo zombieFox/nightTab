@@ -1,10 +1,64 @@
 var control = (function() {
 
   var _allControl = [{
-    element: helper.e(".control-menu"),
+    element: helper.e(".control-menu-open"),
     type: "button",
     func: function() {
-      menu.toggle();
+      menu.mod.open();
+      menu.render.toggle();
+      menu.render.tabindex.toggle();
+      pagelock.render.toggle();
+    }
+  }, {
+    element: helper.e(".control-menu-layout"),
+    type: "button",
+    func: function() {
+      menu.render.tab(this.element, helper.e(".menu-content-area-layout"));
+    }
+  }, {
+    element: helper.e(".control-menu-header"),
+    type: "button",
+    func: function() {
+      menu.render.tab(this.element, helper.e(".menu-content-area-header"));
+    }
+  }, {
+    element: helper.e(".control-menu-bookmarks"),
+    type: "button",
+    func: function() {
+      menu.render.tab(this.element, helper.e(".menu-content-area-bookmarks"));
+    }
+  }, {
+    element: helper.e(".control-menu-theme"),
+    type: "button",
+    func: function() {
+      menu.render.tab(this.element, helper.e(".menu-content-area-theme"));
+    }
+  }, {
+    element: helper.e(".control-menu-background"),
+    type: "button",
+    func: function() {
+      menu.render.tab(this.element, helper.e(".menu-content-area-background"));
+    }
+  }, {
+    element: helper.e(".control-menu-data"),
+    type: "button",
+    func: function() {
+      menu.render.tab(this.element, helper.e(".menu-content-area-data"));
+    }
+  }, {
+    element: helper.e(".control-menu-nightTab"),
+    type: "button",
+    func: function() {
+      menu.render.tab(this.element, helper.e(".menu-content-area-nightTab"));
+    }
+  }, {
+    element: helper.e(".control-menu-close"),
+    type: "button",
+    func: function() {
+      shade.destroy();
+      menu.mod.close();
+      menu.render.toggle();
+      menu.render.tabindex.toggle();
       pagelock.render.toggle();
     }
   }, {
@@ -1448,14 +1502,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.render.box({
-          element: helper.e(".control-menu"),
+          element: helper.e(".control-menu-open"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.render.box({
-          element: helper.e(".control-menu"),
+          element: helper.e(".control-menu-open"),
         });
       }
     }, {
@@ -1473,7 +1527,7 @@ var control = (function() {
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
           edge.render.box({
-            element: helper.e(".control-menu"),
+            element: helper.e(".control-menu-open"),
           });
         };
       }
@@ -1493,7 +1547,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.render.box({
-          element: helper.e(".control-menu"),
+          element: helper.e(".control-menu-open"),
           delay: 500
         });
       }
