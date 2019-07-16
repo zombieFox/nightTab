@@ -91,55 +91,83 @@ var data = (function() {
     tempAchor.remove();
   };
 
-  var render = {
-    feedback: function(type) {
-      _renderFeedback(type);
+  var bind = {};
+
+  bind.feedback = {
+    animation: {
+      set: function(animationClass, action) {
+        var controlDataImportFeedback = helper.e(".control-data-import-feedback");
+        helper.addClass(controlDataImportFeedback, animationClass);
+        var animationEndAction = function() {
+          if (action) {
+            action();
+          };
+          bind.feedback.animation.reset();
+        };
+        controlDataImportFeedback.addEventListener("animationend", animationEndAction, false);
+      },
+      reset: function() {
+        var controlDataImportFeedback = helper.e(".control-data-import-feedback");
+        helper.removeClass(controlDataImportFeedback, "is-shake");
+        helper.removeClass(controlDataImportFeedback, "is-pop");
+        controlDataImportFeedback.removeEventListener("animationend", bind.feedback.animation.reset, false);
+      }
     }
   };
 
-  var _renderFeedback = function(type, data) {
-    var controlDataImportFeedback = helper.e(".control-data-import-feedback");
-    var _setFeedbackAnimation = function(animationClass) {
-      helper.addClass(controlDataImportFeedback, animationClass);
-      controlDataImportFeedback.addEventListener("animationend", _resetFeedbackAnimation, false);
-    };
-    var _resetFeedbackAnimation = function() {
-      helper.removeClass(controlDataImportFeedback, "is-shake");
-      helper.removeClass(controlDataImportFeedback, "is-pop");
-      controlDataImportFeedback.removeEventListener("animationend", _resetFeedbackAnimation, false);
-    };
-    var clear = function() {
+  var render = {};
+
+  render.reload = function() {
+    location.reload();
+  };
+
+  render.input = {
+    clear: function() {
+      var input = helper.e(".control-data-import");
+      input.value = "";
+    }
+  };
+
+  render.feedback = {
+    empty: function() {
+      var controlDataImportFeedback = helper.e(".control-data-import-feedback");
+      var para1 = helper.node("p:No JSON file selected.|class:muted small");
+      controlDataImportFeedback.appendChild(para1);
+    },
+    success: function(name, action) {
+      var controlDataImportFeedback = helper.e(".control-data-import-feedback");
+      var para1 = helper.node("p:Success! Restoring nightTab Bookmarks and Settings.|class:muted small");
+      var para2 = helper.node("p:" + name);
+      controlDataImportFeedback.appendChild(para1);
+      controlDataImportFeedback.appendChild(para2);
+      if (action) {
+        bind.feedback.animation.set("is-pop", action);
+      };
+    },
+    clear: function() {
+      var controlDataImportFeedback = helper.e(".control-data-import-feedback");
       while (controlDataImportFeedback.lastChild) {
         controlDataImportFeedback.removeChild(controlDataImportFeedback.lastChild);
       };
-    };
-    var feedbackMessage = {
-      empty: "No file selected.",
-      success: "Success! Restoring nightTab Bookmarks and Settings.",
-      fail: {
-        notNightTabJson: "Not the right kind of JSON file. Make sure the selected file came from nightTab.",
-        notJson: "Not a JSON file. Make sure the selected file came from nightTab."
-      }
-    };
-    var action = {
-      empty: function() {
-        var para1 = helper.node("p:" + feedbackMessage.empty + "|class:muted small");
-        controlDataImportFeedback.appendChild(para1);
-      },
-      success: function() {
-        var para1 = helper.node("p:" + feedbackMessage.current + "|class:muted small");
-        var para2 = helper.node("p:" + state.get().background.image.file.name);
+    },
+    fail: {
+      notJson: function(name) {
+        var controlDataImportFeedback = helper.e(".control-data-import-feedback");
+        var para1 = helper.node("p:Not a JSON file. Make sure the selected file came from nightTab.|class:small muted");
+        var para2 = helper.node("p:" + name);
         controlDataImportFeedback.appendChild(para1);
         controlDataImportFeedback.appendChild(para2);
-        controlDataImportFeedback.addEventListener("animationend", function() {
-          restore(JSON.parse(data));
-          location.reload();
-        }, false);
-        _setFeedbackAnimation("is-pop");
+        bind.feedback.animation.set("is-shake");
+      },
+      notNightTabJson: function(name) {
+        var controlDataImportFeedback = helper.e(".control-data-import-feedback");
+        var para1 = helper.node("p:Not the right kind of JSON file. Make sure the selected file came from nightTab.|class:small muted");
+        var para2 = helper.node("p:" + name);
+        controlDataImportFeedback.appendChild(para1);
+        controlDataImportFeedback.appendChild(para2);
+        bind.feedback.animation.set("is-shake");
       }
-    };
-    clear();
-    action[type]();
+    }
   };
 
   var importData = function() {
@@ -161,21 +189,23 @@ var data = (function() {
       if (helper.isJsonString(event.target.result)) {
         // is this a nightTab JSON
         if (JSON.parse(event.target.result).nighttab) {
-          _renderFeedback("success", event.target.result);
-          // console.log("is a JSON and a nightTab file");
-          // controlDataImportFeedback.addEventListener("animationend", function() {
-          //   restore(JSON.parse(event.target.result));
-          //   location.reload();
-          // }, false);
+          render.feedback.clear();
+          render.feedback.success(fileList[0].name, function() {
+            restore(JSON.parse(event.target.result));
+            render.reload();
+          });
+          render.input.clear();
         } else {
-          _renderFeedback("fail");
-          // console.log("is a JSON file but not a nightTab file");
-          // _feedback(feedbackMessage.fail.notNightTabJson, "is-shake");
+          // not a nightTab JSON file
+          render.feedback.clear();
+          render.feedback.fail.notNightTabJson(fileList[0].name);
+          render.input.clear();
         };
       } else {
-        _renderFeedback("fail");
-        // console.log("not a JSON file");
-        // _feedback(feedbackMessage.fail.notJson, "is-shake");
+        // not a JSON file
+        render.feedback.clear();
+        render.feedback.fail.notJson(fileList[0].name);
+        render.input.clear();
       };
     };
     // invoke the reader
@@ -184,7 +214,7 @@ var data = (function() {
 
   var init = function() {
     restore(data.load());
-    render.feedback("empty");
+    render.feedback.empty();
   };
 
   return {

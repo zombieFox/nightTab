@@ -17,6 +17,21 @@ var background = (function() {
     }
   };
 
+  mod.image = {
+    file: function(name, data) {
+      helper.setObject({
+        object: state.get(),
+        path: "background.image.file.name",
+        newValue: name
+      });
+      helper.setObject({
+        object: state.get(),
+        path: "background.image.file.data",
+        newValue: data
+      });
+    }
+  };
+
   var bind = {};
 
   bind.feedback = {
@@ -108,13 +123,15 @@ var background = (function() {
       controlBackgroundImageFileFeedback.appendChild(para1);
       controlBackgroundImageFileFeedback.appendChild(para2);
     },
-    success: function(action) {
+    success: function(name, action) {
       var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
       var para1 = helper.node("p:Success! Setting Background image.|class:muted small");
-      var para2 = helper.node("p:" + state.get().background.image.file.name);
+      var para2 = helper.node("p:" + name);
       controlBackgroundImageFileFeedback.appendChild(para1);
       controlBackgroundImageFileFeedback.appendChild(para2);
-      bind.feedback.animation.set("is-pop", action);
+      if (action) {
+        bind.feedback.animation.set("is-pop", action);
+      };
     },
     clear: function() {
       var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
@@ -159,26 +176,19 @@ var background = (function() {
     reader.onload = function(event) {
       if (fileList.item(0).size <= 5000000) {
         if (fileList.item(0).type.split("/")[0] == "image") {
-          helper.setObject({
-            object: state.get(),
-            path: "background.image.file.name",
-            newValue: fileList[0].name
-          });
-          helper.setObject({
-            object: state.get(),
-            path: "background.image.file.data",
-            newValue: event.target.result
-          });
-          data.save();;
+          mod.image.file(fileList[0].name, event.target.result);
+          data.save();
           render.feedback.clear();
-          render.feedback.success(render.image);
+          render.feedback.success(fileList[0].name, render.image);
           render.input.clear();
         } else {
+          // not an image file
           render.feedback.clear();
           render.feedback.fail.filetype(fileList[0].name);
           render.input.clear();
         };
       } else {
+        // file size too big
         render.feedback.clear();
         render.feedback.fail.size(fileList[0].name);
         render.input.clear();
