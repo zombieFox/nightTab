@@ -166,6 +166,7 @@ var state = (function() {
       },
       show: true,
       edit: false,
+      add: false,
       style: "block"
     },
     layout: {

@@ -4,10 +4,7 @@ var control = (function() {
     element: helper.e(".control-menu-open"),
     type: "button",
     func: function() {
-      menu.mod.open();
-      menu.render.toggle();
-      menu.render.tabindex.toggle();
-      pagelock.render.toggle();
+      menu.open();
     }
   }, {
     element: helper.e(".control-menu-layout"),
@@ -55,17 +52,13 @@ var control = (function() {
     element: helper.e(".control-menu-close"),
     type: "button",
     func: function() {
-      shade.destroy();
-      menu.mod.close();
-      menu.render.toggle();
-      menu.render.tabindex.toggle();
-      pagelock.render.toggle();
+      menu.close();
     }
   }, {
     element: helper.e(".control-link-add"),
     type: "button",
     func: function() {
-      link.render.add();
+      link.add();
     }
   }, {
     element: helper.e(".control-link-edit"),
@@ -73,6 +66,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render();
+      link.render.tabindex();
     }
   }, {
     element: helper.e(".control-theme-accent-current"),
@@ -2144,7 +2138,7 @@ var control = (function() {
     element: helper.e(".control-background-image-file"),
     type: "file",
     func: function() {
-      background.importData();
+      background.mod.import();
     }
   }, {
     element: helper.e(".control-background-image-file-clear"),
@@ -2214,20 +2208,20 @@ var control = (function() {
     element: helper.e(".control-data-import"),
     type: "file",
     func: function() {
-      data.importData();
+      data.mod.import();
     }
   }, {
     element: helper.e(".control-data-export"),
     type: "a",
     func: function() {
-      data.exportData();
+      data.mod.export();
     }
   }, {
     element: helper.e(".control-data-clear"),
     type: "a",
     func: function() {
       menu.close();
-      data.clearData();
+      data.render.clear();
     }
   }];
 
@@ -2465,7 +2459,6 @@ var control = (function() {
       helper.removeClass(html, "is-link-style-list");
       helper.removeClass(html, "is-link-style-block");
       helper.removeClass(html, "is-link-edit");
-      link.render.tabIndex();
       if (state.get().link.show) {
         helper.addClass(html, "is-link-show");
         helper.addClass(html, "is-link-area-alignment-" + state.get().link.area.alignment);
@@ -2488,7 +2481,6 @@ var control = (function() {
         };
         if (state.get().link.edit) {
           helper.addClass(html, "is-link-edit");
-          link.render.tabIndex();
         };
       };
     };

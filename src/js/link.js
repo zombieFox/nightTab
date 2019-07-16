@@ -30,14 +30,77 @@ var link = (function() {
     }
   };
 
-  mod.edit = function() {
-    if (bookmarks.get().length <= 0) {
+  mod.edit = {
+    open: function() {
+      helper.setObject({
+        object: state.get(),
+        path: "link.edit",
+        newValue: true
+      });
+    },
+    close: function() {
       helper.setObject({
         object: state.get(),
         path: "link.edit",
         newValue: false
       });
-    };
+    },
+    toggle: function() {
+      if (state.get().link.edit) {
+        helper.setObject({
+          object: state.get(),
+          path: "link.edit",
+          newValue: false
+        });
+      } else {
+        helper.setObject({
+          object: state.get(),
+          path: "link.edit",
+          newValue: true
+        });
+      };
+    },
+    check: function() {
+      if (bookmarks.get().length <= 0) {
+        helper.setObject({
+          object: state.get(),
+          path: "link.edit",
+          newValue: false
+        });
+      };
+    }
+  };
+
+  mod.add = {
+    open: function() {
+      helper.setObject({
+        object: state.get(),
+        path: "link.add",
+        newValue: true
+      });
+    },
+    close: function() {
+      helper.setObject({
+        object: state.get(),
+        path: "link.add",
+        newValue: false
+      });
+    },
+    toggle: function() {
+      if (state.get().link.add) {
+        helper.setObject({
+          object: state.get(),
+          path: "link.add",
+          newValue: false
+        });
+      } else {
+        helper.setObject({
+          object: state.get(),
+          path: "link.add",
+          newValue: true
+        });
+      };
+    }
   };
 
   var bind = {};
@@ -104,21 +167,23 @@ var link = (function() {
   render.add = function() {
     stagedLink.init();
     var form = render.form();
-    modal.render({
+    modal.render.make({
       heading: "Add a new bookmark",
       successAction: function() {
         stagedLink.data.timeStamp = new Date().getTime();
         bookmarks.add(JSON.parse(JSON.stringify(stagedLink.data)));
         data.save();
+        mod.add.close();
         render.clear();
         render.item.all();
-        render.tabIndex();
+        render.tabindex();
         sortable(".link-area");
         control.dependents();
         control.render();
         stagedLink.reset();
       },
       cancelAction: function() {
+        mod.add.close();
         stagedLink.reset();
         autoSuggest.destroy();
       },
@@ -159,14 +224,14 @@ var link = (function() {
     if (stagedLink.data.accent.override) {
       form.querySelector(".link-form-input-color").value = helper.rgbToHex(stagedLink.data.accent.color);
     };
-    modal.render({
+    modal.render.make({
       heading: "Edit " + stagedLink.data.name,
       successAction: function() {
         bookmarks.edit(JSON.parse(JSON.stringify(stagedLink.data)));
         data.save();
         render.clear();
         render.item.all();
-        render.tabIndex();
+        render.tabindex();
         render.previousFocus();
         sortable(".link-area");
         stagedLink.reset();
@@ -182,13 +247,13 @@ var link = (function() {
   };
 
   render.remove = function(bookmarkData) {
-    modal.render({
+    modal.render.make({
       heading: "Remove " + bookmarkData.name + " bookmark",
       content: "Are you sure you want to remove this bookmark? This can not be undone.",
       successAction: function() {
         _previousFocus = _previousFocus - 1;
         bookmarks.remove(bookmarkData);
-        mod.edit();
+        mod.edit.check();
         header.render.button.edit();
         data.save();
         render.clear();
@@ -517,7 +582,7 @@ var link = (function() {
     }
   };
 
-  render.tabIndex = function() {
+  render.tabindex = function() {
     var allLinkControlItem = helper.eA(".link-control-item");
     if (state.get().link.edit) {
       allLinkControlItem.forEach(function(arrayItem, index) {
@@ -694,7 +759,8 @@ var link = (function() {
   };
 
   var add = function() {
-    link.render.add();
+    mod.add.open();
+    render.add();
   };
 
   var init = function() {

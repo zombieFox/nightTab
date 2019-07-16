@@ -10,11 +10,10 @@ var keyboard = (function() {
           edge.render.clear();
         } else if (state.get().menu) {
           menu.close();
-          shade.destroy();
         } else if (state.get().autoSuggest) {
           autoSuggest.destroy();
         } else if (state.get().modal) {
-          modal.destroy();
+          modal.render.clear();
           shade.destroy();
         } else if (state.get().link.edit) {
           helper.setObject({
@@ -34,9 +33,14 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
-        if (state.get().link.show) {
-          menu.close();
-          link.render.add();
+        if (!state.get().link.add) {
+          if (state.get().menu) {
+            menu.close();
+          };
+          if (state.get().modal) {
+            modal.render.clear();
+          };
+          link.add();
         };
       };
     }, false);
@@ -58,8 +62,9 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+m
       if (event.ctrlKey && event.altKey && event.keyCode == 77) {
-        shade.destroy();
-        modal.destroy();
+        if (state.get().modal) {
+          modal.render.clear();
+        };
         menu.toggle();
       };
     }, false);
@@ -69,24 +74,11 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
-        if (state.get().link.show && bookmarks.get().length > 0) {
-          if (state.get().link.edit) {
-            helper.setObject({
-              object: state.get(),
-              path: "link.edit",
-              newValue: false
-            });
-          } else {
-            helper.setObject({
-              object: state.get(),
-              path: "link.edit",
-              newValue: true
-            });
-          };
-          control.update();
-          control.render();
-          data.save();
-        };
+        link.mod.edit.toggle();
+        link.render.tabindex();
+        control.update();
+        control.render();
+        data.save();
       };
     }, false);
   };
