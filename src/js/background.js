@@ -2,6 +2,16 @@ var background = (function() {
 
   var mod = {};
 
+  mod.import = function() {
+    // get files from input
+    var fileList = helper.e(".control-background-image-file").files;
+    // if file was added
+    if (fileList.length > 0) {
+      // validate the file
+      _validateImageFile(fileList);
+    };
+  };
+
   mod.clear = {
     file: function() {
       helper.setObject({
@@ -159,16 +169,6 @@ var background = (function() {
     }
   };
 
-  var importData = function() {
-    // get files from input
-    var fileList = helper.e(".control-background-image-file").files;
-    // if file was added
-    if (fileList.length > 0) {
-      // validate the file
-      _validateImageFile(fileList);
-    };
-  };
-
   var _validateImageFile = function(fileList) {
     // make new file reader
     var reader = new FileReader();
@@ -212,9 +212,8 @@ var background = (function() {
   return {
     init: init,
     mod: mod,
-    bind: bind,
     render: render,
-    importData: importData
+    bind: bind
   };
 
 })();
