@@ -1,10 +1,19 @@
 var control = (function() {
 
   var _allControl = [{
-    element: helper.e(".control-menu"),
+    element: helper.e(".control-menu-open"),
     type: "button",
     func: function() {
-      menu.toggle();
+      menu.mod.open();
+      menu.render.toggle();
+      pagelock.render.toggle();
+    }
+  }, {
+    element: helper.e(".control-menu-close"),
+    type: "button",
+    func: function() {
+      menu.mod.close();
+      menu.render.toggle();
       pagelock.render.toggle();
     }
   }, {
@@ -1448,14 +1457,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.render.box({
-          element: helper.e(".control-menu"),
+          element: helper.e(".control-menu-open"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.render.box({
-          element: helper.e(".control-menu"),
+          element: helper.e(".control-menu-open"),
         });
       }
     }, {
@@ -1473,7 +1482,7 @@ var control = (function() {
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
           edge.render.box({
-            element: helper.e(".control-menu"),
+            element: helper.e(".control-menu-open"),
           });
         };
       }
@@ -1493,7 +1502,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.render.box({
-          element: helper.e(".control-menu"),
+          element: helper.e(".control-menu-open"),
           delay: 500
         });
       }

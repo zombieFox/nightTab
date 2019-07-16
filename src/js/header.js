@@ -137,13 +137,13 @@ var header = (function() {
           helper.removeClass(helper.getClosest(helper.e(".control-link-edit"), ".input-wrap"), "input-button-link");
           helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current"), ".input-wrap"), "input-button-link");
           helper.removeClass(helper.e(".control-link-add"), "button-link");
-          helper.removeClass(helper.e(".control-menu"), "button-link");
+          helper.removeClass(helper.e(".control-menu-open"), "button-link");
         },
         clear: function() {
           helper.addClass(helper.getClosest(helper.e(".control-link-edit"), ".input-wrap"), "input-button-link");
           helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current"), ".input-wrap"), "input-button-link");
           helper.addClass(helper.e(".control-link-add"), "button-link");
-          helper.addClass(helper.e(".control-menu"), "button-link");
+          helper.addClass(helper.e(".control-menu-open"), "button-link");
         }
       };
       action[state.get().header.button.style]();

@@ -17,3 +17,5 @@ background.init();
 search.init();
 header.init();
 version.init();
+menu.mod.open();
+menu.render.toggle();

@@ -1,21 +1,85 @@
 var menu = (function() {
 
-  var _bind = function() {
-    var allMenuNavButton = helper.eA(".menu-nav-button");
-    var menuClose = helper.e(".menu-close");
-    allMenuNavButton.forEach(function(arrayItem, index) {
-      arrayItem.addEventListener("click", function() {
-        _tab(this);
-      }, false);
+  var bind = {};
+
+  // bind.nav = function() {
+  //   var allMenuNavButton = helper.eA(".menu-nav-button");
+  //   allMenuNavButton.forEach(function(arrayItem, index) {
+  //     arrayItem.addEventListener("click", function() {
+  //       render.tab(this);
+  //     }, false);
+  //   });
+  // };
+  //
+  // bind.close = function() {
+  //   var menuClose = helper.e(".menu-close");
+  //   menuClose.addEventListener("click", function() {
+  //     mod.close();
+  //     render.toggle();
+  //     shade.destroy();
+  //     pagelock.render.toggle();
+  //   }, false);
+  // };
+
+  var mod = {};
+
+  mod.open = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "menu",
+      newValue: true
     });
-    menuClose.addEventListener("click", function() {
-      close();
-      shade.destroy();
-      pagelock.render.toggle();
-    }, false);
   };
 
-  var _scrollToTop = function() {
+  mod.close = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "menu",
+      newValue: false
+    });
+  };
+
+  mod.toggle = function() {
+    if (state.get().menu) {
+      helper.setObject({
+        object: state.get(),
+        path: "menu",
+        newValue: false
+      });
+    } else {
+      render.scrollToTop();
+      helper.setObject({
+        object: state.get(),
+        path: "menu",
+        newValue: true
+      });
+    };
+  };
+
+  // var close = function() {
+  //   helper.setObject({
+  //     object: state.get(),
+  //     path: "menu",
+  //     newValue: false
+  //   });
+  //   render.toggle();
+  //   render.tabindex();
+  // };
+  //
+  // var open = function() {
+  //   render.scrollToTop();
+  //   helper.setObject({
+  //     object: state.get(),
+  //     path: "menu",
+  //     newValue: true
+  //   });
+  //   render.toggle();
+  //   render.tabindex();
+  // };
+
+  var render = {};
+
+  render.scrollToTop = function() {
     if (window.innerWidth < 550) {
       helper.e(".menu-area").scrollTop = 0;
     } else {
@@ -23,7 +87,7 @@ var menu = (function() {
     };
   };
 
-  var _tab = function(button) {
+  render.tab = function(button) {
     var allMenuNavButton = helper.eA(".menu-nav-button");
     var allMenuContentArea = helper.eA(".menu-content-area");
     var target = helper.e(button.dataset.target);
@@ -35,59 +99,19 @@ var menu = (function() {
     });
     helper.addClass(button, "active");
     helper.removeClass(target, "is-hidden");
-    _scrollToTop();
+    render.scrollToTop();
   };
 
-  var close = function() {
-    helper.setObject({
-      object: state.get(),
-      path: "menu",
-      newValue: false
-    });
-    render.menu();
-    render.tabindex();
-  };
-
-  var open = function() {
-    _scrollToTop();
-    helper.setObject({
-      object: state.get(),
-      path: "menu",
-      newValue: true
-    });
-    render.menu();
-    render.tabindex();
-  };
-
-  var toggle = function() {
-    if (state.get().menu) {
-      helper.setObject({
-        object: state.get(),
-        path: "menu",
-        newValue: false
-      });
-    } else {
-      _scrollToTop();
-      helper.setObject({
-        object: state.get(),
-        path: "menu",
-        newValue: true
-      });
-    };
-    render.menu();
-    render.tabindex();
-  };
-
-  var render = {};
-
-  render.menu = function() {
+  render.toggle = function() {
     var html = helper.e("html");
     if (state.get().menu) {
       helper.addClass(html, "is-menu-open");
       helper.e(".menu").focus();
       shade.render({
         action: function() {
-          close();
+          mod.close();
+          render.toggle();
+          shade.destroy();
           pagelock.render.toggle();
         }
       });
@@ -112,15 +136,15 @@ var menu = (function() {
   };
 
   var init = function() {
-    _bind();
-    close();
+    // bind.nav();
+    // bind.close();
+    mod.close();
+    render.toggle();
   };
 
   return {
     init: init,
-    close: close,
-    open: open,
-    toggle: toggle,
+    mod: mod,
     render: render
   };
 
