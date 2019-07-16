@@ -1,5 +1,45 @@
 var link = (function() {
 
+  var mod = {};
+
+  mod.accent = {
+    clear: function() {
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.accent = {
+          override: false,
+          color: {
+            r: null,
+            g: null,
+            b: null
+          }
+        };
+      });
+    },
+    rainbow: function() {
+      var units = 360 / bookmarks.get().length;
+      var degree = 0;
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.accent.override = true;
+        arrayItem.accent.color = helper.hslToRgb({
+          h: degree,
+          s: 1,
+          l: 0.5
+        });
+        degree = degree + units;
+      });
+    }
+  };
+
+  mod.edit = function() {
+    if (bookmarks.get().length <= 0) {
+      helper.setObject({
+        object: state.get(),
+        path: "link.edit",
+        newValue: false
+      });
+    };
+  };
+
   var bind = {};
 
   bind.sort = function() {
@@ -653,44 +693,8 @@ var link = (function() {
     helper.e(".link-form-text-icon").focus();
   };
 
-  var mod = {};
-
-  mod.accent = {
-    clear: function() {
-      bookmarks.get().forEach(function(arrayItem, index) {
-        arrayItem.accent = {
-          override: false,
-          color: {
-            r: null,
-            g: null,
-            b: null
-          }
-        };
-      });
-    },
-    rainbow: function() {
-      var units = 360 / bookmarks.get().length;
-      var degree = 0;
-      bookmarks.get().forEach(function(arrayItem, index) {
-        arrayItem.accent.override = true;
-        arrayItem.accent.color = helper.hslToRgb({
-          h: degree,
-          s: 1,
-          l: 0.5
-        });
-        degree = degree + units;
-      });
-    }
-  };
-
-  mod.edit = function() {
-    if (bookmarks.get().length <= 0) {
-      helper.setObject({
-        object: state.get(),
-        path: "link.edit",
-        newValue: false
-      });
-    };
+  var add = function() {
+    link.render.add();
   };
 
   var init = function() {
@@ -707,7 +711,8 @@ var link = (function() {
   return {
     init: init,
     mod: mod,
-    render: render
+    render: render,
+    add: add
   };
 
 })();
