@@ -1,26 +1,5 @@
 var menu = (function() {
 
-  var bind = {};
-
-  // bind.nav = function() {
-  //   var allMenuNavButton = helper.eA(".menu-nav-button");
-  //   allMenuNavButton.forEach(function(arrayItem, index) {
-  //     arrayItem.addEventListener("click", function() {
-  //       render.tab(this);
-  //     }, false);
-  //   });
-  // };
-  //
-  // bind.close = function() {
-  //   var menuClose = helper.e(".menu-close");
-  //   menuClose.addEventListener("click", function() {
-  //     mod.close();
-  //     render.toggle();
-  //     shade.destroy();
-  //     pagelock.render.toggle();
-  //   }, false);
-  // };
-
   var mod = {};
 
   mod.open = function() {
@@ -56,27 +35,6 @@ var menu = (function() {
     };
   };
 
-  // var close = function() {
-  //   helper.setObject({
-  //     object: state.get(),
-  //     path: "menu",
-  //     newValue: false
-  //   });
-  //   render.toggle();
-  //   render.tabindex();
-  // };
-  //
-  // var open = function() {
-  //   render.scrollToTop();
-  //   helper.setObject({
-  //     object: state.get(),
-  //     path: "menu",
-  //     newValue: true
-  //   });
-  //   render.toggle();
-  //   render.tabindex();
-  // };
-
   var render = {};
 
   render.scrollToTop = function() {
@@ -87,18 +45,17 @@ var menu = (function() {
     };
   };
 
-  render.tab = function(button) {
+  render.tab = function(menuNavButton, menuContentArea) {
     var allMenuNavButton = helper.eA(".menu-nav-button");
     var allMenuContentArea = helper.eA(".menu-content-area");
-    var target = helper.e(button.dataset.target);
     allMenuNavButton.forEach(function(arrayItem, index) {
       helper.removeClass(arrayItem, "active");
     });
     allMenuContentArea.forEach(function(arrayItem, index) {
       helper.addClass(arrayItem, "is-hidden");
     });
-    helper.addClass(button, "active");
-    helper.removeClass(target, "is-hidden");
+    helper.addClass(menuNavButton, "active");
+    helper.removeClass(menuContentArea, "is-hidden");
     render.scrollToTop();
   };
 
@@ -111,7 +68,7 @@ var menu = (function() {
         action: function() {
           mod.close();
           render.toggle();
-          shade.destroy();
+          menu.render.tabindex.toggle();
           pagelock.render.toggle();
         }
       });
@@ -120,24 +77,24 @@ var menu = (function() {
     };
   };
 
-  render.tabindex = function() {
-    var menu = helper.e(".menu");
-    if (state.get().menu) {
-      menu.tabIndex = 1;
-      menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
-        arrayItem.tabIndex = 1;
-      });
-    } else {
-      menu.tabIndex = -1;
-      menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
-        arrayItem.tabIndex = -1;
-      });
-    };
+  render.tabindex = {
+    toggle: function() {
+      var menu = helper.e(".menu");
+      if (state.get().menu) {
+        menu.tabIndex = 1;
+        menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = 1;
+        });
+      } else {
+        menu.tabIndex = -1;
+        menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = -1;
+        });
+      };
+    }
   };
 
   var init = function() {
-    // bind.nav();
-    // bind.close();
     mod.close();
     render.toggle();
   };
