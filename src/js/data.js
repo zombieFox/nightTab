@@ -2,70 +2,16 @@ var data = (function() {
 
   var _saveName = "nitghTab";
 
-  var set = function(key, data) {
-    localStorage.setItem(key, data);
-  };
+  var mod = {};
 
-  var get = function(key) {
-    return localStorage.getItem(key);
-  };
-
-  var remove = function(key) {
-    localStorage.removeItem(key);
-  };
-
-  var save = function() {
-    var data = {
-      nighttab: true,
-      version: version.get(),
-      state: state.get(),
-      bookmarks: bookmarks.get()
-    };
-    set(_saveName, JSON.stringify(data));
-  };
-
-  var wipe = function() {
-    remove(_saveName);
-  };
-
-  var load = function() {
-    return JSON.parse(get(_saveName));
-  };
-
-  var restore = function(data) {
-    if (data) {
-      if (!("version" in data) || data.version != version.get()) {
-        console.log("data version " + data.version + " found less than current");
-        data = update.run(data);
-        set(_saveName, JSON.stringify(data));
-      } else {
-        console.log("data version " + version.get() + " no need to run update");
-        set(_saveName, JSON.stringify(data));
-      };
-    } else {
-      console.log("no data found to load");
+  mod.import = function() {
+    var fileList = helper.e(".control-data-import").files;
+    if (fileList.length > 0) {
+      _validateJsonFile(fileList);
     };
   };
 
-  var clearData = function() {
-    var clearContent = helper.node("div");
-    var para1 = helper.node("p:Are you sure you want to clear all nightTab Bookmarks and Settings?. nightTab will restore to the default state.");
-    var para2 = helper.node("p:This can not be undone.");
-    clearContent.appendChild(para1);
-    clearContent.appendChild(para2);
-    modal.render({
-      heading: "Clear all nightTab data?",
-      content: clearContent,
-      successAction: function() {
-        wipe();
-        location.reload();
-      },
-      actionText: "Clear all data",
-      size: "small"
-    });
-  };
-
-  var exportData = function() {
+  mod.export = function() {
     var tempAchor = helper.node("a");
     var timeStamp = helper.getDateTime();
     var _timeStampPrefix = function(value) {
@@ -81,14 +27,40 @@ var data = (function() {
     timeStamp.month = _timeStampPrefix(timeStamp.month + 1);
     timeStamp.year = _timeStampPrefix(timeStamp.year);
     timeStamp = timeStamp.hours + " " + timeStamp.minutes + " " + timeStamp.seconds + " - " + timeStamp.date + "." + timeStamp.month + "." + timeStamp.year;
-    console.log(timeStamp);
     var fileName = "nightTab backup - " + timeStamp + ".json";
-    var exportData = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(load()));
-    tempAchor.setAttribute("href", exportData);
+    var data = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(load()));
+    tempAchor.setAttribute("href", data);
     tempAchor.setAttribute("download", fileName);
     helper.e("html").appendChild(tempAchor);
     tempAchor.click();
     tempAchor.remove();
+  };
+
+  mod.restore = function(data) {
+    if (data) {
+      if (!("version" in data) || data.version != version.get()) {
+        console.log("data version " + data.version + " found less than current");
+        data = update.run(data);
+        mod.set(_saveName, JSON.stringify(data));
+      } else {
+        console.log("data version " + version.get() + " no need to run update");
+        mod.set(_saveName, JSON.stringify(data));
+      };
+    } else {
+      console.log("no data found to load");
+    };
+  };
+
+  mod.set = function(key, data) {
+    localStorage.setItem(key, data);
+  };
+
+  mod.get = function(key) {
+    return localStorage.getItem(key);
+  };
+
+  mod.remove = function(key) {
+    localStorage.removeItem(key);
   };
 
   var bind = {};
@@ -116,6 +88,24 @@ var data = (function() {
   };
 
   var render = {};
+
+  render.clear = function() {
+    var clearContent = helper.node("div");
+    var para1 = helper.node("p:Are you sure you want to clear all nightTab Bookmarks and Settings?. nightTab will restore to the default state.");
+    var para2 = helper.node("p:This can not be undone.");
+    clearContent.appendChild(para1);
+    clearContent.appendChild(para2);
+    modal.render({
+      heading: "Clear all nightTab data?",
+      content: clearContent,
+      successAction: function() {
+        wipe();
+        render.reload();
+      },
+      actionText: "Clear all data",
+      size: "small"
+    });
+  };
 
   render.reload = function() {
     location.reload();
@@ -170,16 +160,6 @@ var data = (function() {
     }
   };
 
-  var importData = function() {
-    // get files from input
-    var fileList = helper.e(".control-data-import").files;
-    // if file was added
-    if (fileList.length > 0) {
-      // validate the file
-      _validateJsonFile(fileList);
-    };
-  };
-
   var _validateJsonFile = function(fileList) {
     // make new file reader
     var reader = new FileReader();
@@ -191,7 +171,7 @@ var data = (function() {
         if (JSON.parse(event.target.result).nighttab) {
           render.feedback.clear();
           render.feedback.success(fileList[0].name, function() {
-            restore(JSON.parse(event.target.result));
+            mod.restore(JSON.parse(event.target.result));
             render.reload();
           });
           render.input.clear();
@@ -212,23 +192,36 @@ var data = (function() {
     reader.readAsText(fileList.item(0));
   };
 
+  var save = function() {
+    mod.set(_saveName, JSON.stringify({
+      nighttab: true,
+      version: version.get(),
+      state: state.get(),
+      bookmarks: bookmarks.get()
+    }));
+  };
+
+  var load = function() {
+    return JSON.parse(mod.get(_saveName));
+  };
+
+  var wipe = function() {
+    mod.remove(_saveName);
+    render.reload();
+  };
+
   var init = function() {
-    restore(data.load());
+    mod.restore(data.load());
     render.feedback.empty();
   };
 
   return {
     init: init,
+    mod: mod,
+    render: render,
     save: save,
-    remove: remove,
-    set: set,
-    get: get,
     load: load,
-    wipe: wipe,
-    restore: restore,
-    importData: importData,
-    exportData: exportData,
-    clearData: clearData
+    wipe: wipe
   };
 
 })();
