@@ -63,7 +63,8 @@ var menu = (function() {
     var html = helper.e("html");
     if (state.get().menu) {
       helper.addClass(html, "is-menu-open");
-      helper.e(".menu").focus();
+      render.focus();
+      render.scrollToTop();
       shade.render({
         action: function() {
           mod.close();
@@ -93,6 +94,10 @@ var menu = (function() {
         });
       };
     }
+  };
+
+  render.focus = function() {
+    helper.e(".menu").focus();
   };
 
   var toggle = function() {
