@@ -68,12 +68,13 @@ var menu = (function() {
         action: function() {
           mod.close();
           render.toggle();
-          menu.render.tabindex.toggle();
+          render.tabindex.toggle();
           pagelock.render.toggle();
         }
       });
     } else {
       helper.removeClass(html, "is-menu-open");
+      shade.destroy();
     };
   };
 
@@ -94,6 +95,27 @@ var menu = (function() {
     }
   };
 
+  var toggle = function() {
+    mod.toggle();
+    render.toggle();
+    render.tabindex.toggle();
+    pagelock.render.toggle();
+  };
+
+  var open = function() {
+    mod.open();
+    render.toggle();
+    render.tabindex.toggle();
+    pagelock.render.toggle();
+  };
+
+  var close = function() {
+    mod.close();
+    render.toggle();
+    render.tabindex.toggle();
+    pagelock.render.toggle();
+  };
+
   var init = function() {
     mod.close();
     render.toggle();
@@ -102,7 +124,10 @@ var menu = (function() {
   return {
     init: init,
     mod: mod,
-    render: render
+    render: render,
+    open: open,
+    close: close,
+    toggle: toggle
   };
 
 })();
