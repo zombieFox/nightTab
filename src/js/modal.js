@@ -2,16 +2,36 @@ var modal = (function() {
 
   var previousModal = null;
 
-  var destroy = function() {
+  var mod = {};
+
+  mod.open = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "modal",
+      newValue: true
+    });
+  };
+
+  mod.close = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "modal",
+      newValue: false
+    });
+  };
+
+  var render = {};
+
+  render.clear = function() {
     var allModal = helper.eA(".modal");
     if (allModal[0]) {
       for (var i = 0; i < allModal.length; i++) {
-        allModal[i].destroy();
+        allModal[i].clear();
       };
     };
   };
 
-  var render = function(override) {
+  render.make = function(override) {
     var options = {
       heading: "Modal",
       content: "Body",
@@ -25,11 +45,7 @@ var modal = (function() {
       options = helper.applyOptions(options, override);
     };
     var _makeModal = function() {
-      helper.setObject({
-        object: state.get(),
-        path: "modal",
-        newValue: true
-      });
+      mod.open();
       var body = helper.e("body");
       var modalWrapper = document.createElement("div");
       modalWrapper.setAttribute("class", "modal-wrapper");
@@ -41,7 +57,7 @@ var modal = (function() {
       } else if (options.size) {
         modal.setAttribute("class", "modal");
       };
-      modal.destroy = function() {
+      modal.clear = function() {
         if (modal.classList.contains("is-opaque")) {
           helper.removeClass(modal, "is-opaque");
           helper.addClass(modal, "is-transparent");
@@ -49,11 +65,7 @@ var modal = (function() {
         } else {
           modal.remove();
         };
-        helper.setObject({
-          object: state.get(),
-          path: "modal",
-          newValue: false
-        });
+        mod.close();
       };
       var modalBody = document.createElement("div");
       modalBody.setAttribute("class", "modal-body");
@@ -103,7 +115,7 @@ var modal = (function() {
         if (options.successAction) {
           options.successAction();
         };
-        this.destroy();
+        this.clear();
         shade.destroy();
         pagelock.render.toggle();
       }.bind(modal), false);
@@ -111,7 +123,7 @@ var modal = (function() {
         if (options.cancelAction) {
           options.cancelAction();
         };
-        this.destroy();
+        this.clear();
         shade.destroy();
         pagelock.render.toggle();
       }.bind(modal), false);
@@ -121,7 +133,7 @@ var modal = (function() {
           if (options.cancelAction) {
             options.cancelAction();
           };
-          modal.destroy();
+          modal.clear();
           pagelock.render.toggle();
         },
         includeHeader: true
@@ -133,15 +145,21 @@ var modal = (function() {
       modalHeading.focus(this);
     };
     if (previousModal != null) {
-      destroy();
+      render.clear();
     };
     _makeModal();
     pagelock.render.toggle();
   };
 
+  var init = function() {
+    mod.close();
+    render.clear();
+  };
+
   // exposed methods
   return {
-    destroy: destroy,
+    init: init,
+    mod: mod,
     render: render
   };
 

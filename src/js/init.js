@@ -16,4 +16,5 @@ layout.init();
 background.init();
 search.init();
 header.init();
+modal.init();
 version.init();
