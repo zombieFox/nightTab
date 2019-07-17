@@ -95,7 +95,7 @@ var data = (function() {
     var para2 = helper.node("p:This can not be undone.");
     clearContent.appendChild(para1);
     clearContent.appendChild(para2);
-    modal.render.make({
+    modal.open({
       heading: "Clear all nightTab data?",
       content: clearContent,
       successAction: function() {

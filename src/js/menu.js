@@ -18,23 +18,6 @@ var menu = (function() {
     });
   };
 
-  mod.toggle = function() {
-    if (state.get().menu) {
-      helper.setObject({
-        object: state.get(),
-        path: "menu",
-        newValue: false
-      });
-    } else {
-      render.scrollToTop();
-      helper.setObject({
-        object: state.get(),
-        path: "menu",
-        newValue: true
-      });
-    };
-  };
-
   var render = {};
 
   render.scrollToTop = function() {
@@ -45,7 +28,7 @@ var menu = (function() {
     };
   };
 
-  render.tab = function(menuNavButton, menuContentArea) {
+  render.nav = function(menuNavButton, menuContentArea) {
     var allMenuNavButton = helper.eA(".menu-nav-button");
     var allMenuContentArea = helper.eA(".menu-content-area");
     allMenuNavButton.forEach(function(arrayItem, index) {
@@ -56,27 +39,6 @@ var menu = (function() {
     });
     helper.addClass(menuNavButton, "active");
     helper.removeClass(menuContentArea, "is-hidden");
-    render.scrollToTop();
-  };
-
-  render.toggle = function() {
-    var html = helper.e("html");
-    if (state.get().menu) {
-      helper.addClass(html, "is-menu-open");
-      render.focus();
-      render.scrollToTop();
-      shade.render({
-        action: function() {
-          mod.close();
-          render.toggle();
-          render.tabindex.toggle();
-          pagelock.render.toggle();
-        }
-      });
-    } else {
-      helper.removeClass(html, "is-menu-open");
-      shade.destroy();
-    };
   };
 
   render.tabindex = {
@@ -100,30 +62,54 @@ var menu = (function() {
     helper.e(".menu").focus();
   };
 
-  var toggle = function() {
-    mod.toggle();
-    render.toggle();
+  render.open = function() {
+    helper.addClass(helper.e("html"), "is-menu-open");
+    render.focus();
+    render.scrollToTop();
     render.tabindex.toggle();
-    pagelock.render.toggle();
+  };
+
+  render.close = function() {
+    helper.removeClass(helper.e("html"), "is-menu-open");
+    render.tabindex.toggle();
+  };
+
+  var nav = function(button, area) {
+    render.nav(button, area);
+    render.scrollToTop();
+  };
+
+  var toggle = function() {
+    if (state.get().menu) {
+      close();
+    } else {
+      open();
+    };
   };
 
   var open = function() {
     mod.open();
-    render.toggle();
-    render.tabindex.toggle();
-    pagelock.render.toggle();
+    render.open();
+    shade.open({
+      action: function() {
+        mod.close();
+        render.close();
+        pagelock.unlock();
+      }
+    });
+    pagelock.lock();
   };
 
   var close = function() {
     mod.close();
-    render.toggle();
-    render.tabindex.toggle();
-    pagelock.render.toggle();
+    render.close();
+    shade.close();
+    pagelock.unlock();
   };
 
   var init = function() {
     mod.close();
-    render.toggle();
+    render.close();
   };
 
   return {
@@ -132,7 +118,8 @@ var menu = (function() {
     render: render,
     open: open,
     close: close,
-    toggle: toggle
+    toggle: toggle,
+    nav: nav
   };
 
 })();

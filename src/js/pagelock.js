@@ -1,32 +1,71 @@
 var pagelock = (function() {
 
-  var render = {};
+  var mod = {};
 
-  render.toggle = function() {
-    var body = helper.e("body");
-    var menu = state.get().menu;
-    var modal = state.get().modal;
-    var autoSuggest = state.get().autoSuggest;
-    if (menu || modal || autoSuggest) {
-      helper.addClass(body, "scroll-disabled");
+  mod.lock = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "pagelock",
+      newValue: true
+    });
+  };
+
+  mod.unlock = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "pagelock",
+      newValue: false
+    });
+  };
+
+  mod.toggle = function() {
+    if (state.get().menu || state.get().modal || state.get().autoSuggest) {
+      mod.lock();
     } else {
-      helper.removeClass(body, "scroll-disabled");
+      mod.unlock();
     };
   };
 
+  var render = {};
+
   render.lock = function() {
-    var body = helper.e("body");
-    helper.addClass(body, "scroll-disabled");
+    helper.addClass(helper.e("body"), "scroll-disabled");
   };
 
   render.unlock = function() {
-    var body = helper.e("body");
-    helper.removeClass(body, "scroll-disabled");
+    helper.removeClass(helper.e("body"), "scroll-disabled");
+  };
+
+  render.toggle = function() {
+    if (state.get().pagelock) {
+      render.lock();
+    } else {
+      render.unlock();
+    };
+  };
+
+  var lock = function() {
+    mod.lock();
+    render.toggle();
+  };
+
+  var unlock = function() {
+    mod.unlock();
+    render.unlock();
+  };
+
+  var toggle = function() {
+    mod.toggle();
+    render.toggle();
   };
 
   // exposed methods
   return {
-    render: render
+    mod: mod,
+    render: render,
+    toggle: toggle,
+    lock: lock,
+    unlock: unlock
   };
 
 })();

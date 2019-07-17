@@ -1,39 +1,80 @@
 var shade = (function() {
 
-  var previousShade = null;
+  var _previousShade = null;
 
-  var destroy = function() {
+  var mod = {};
+
+  mod.open = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "shade",
+      newValue: true
+    });
+  };
+
+  mod.close = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "shade",
+      newValue: false
+    });
+  };
+
+  mod.toggle = function() {
+    if (state.get().shade) {
+      helper.setObject({
+        object: state.get(),
+        path: "shade",
+        newValue: false
+      });
+    } else {
+      helper.setObject({
+        object: state.get(),
+        path: "shade",
+        newValue: true
+      });
+    };
+  };
+
+  var render = {};
+
+  render.toggle = function(override) {
+    if (state.get().shade) {
+      render.open(override);
+    } else {
+      render.close();
+    };
+  };
+
+  render.close = function() {
     var allShade = helper.eA(".shade");
     if (allShade[0]) {
       for (var i = 0; i < allShade.length; i++) {
-        allShade[i].destroy();
+        allShade[i].close();
       };
     };
   };
 
-  var render = function(override) {
+  render.open = function(override) {
     var options = {
       action: null
     };
     if (override) {
       options = helper.applyOptions(options, override);
     };
-    var _destroyPreviousShade = function() {
-      if (previousShade != null) {
-        destroy();
-      };
-    };
     var _makeShade = function() {
+      mod.open();
       var body = helper.e("body");
       var shade = document.createElement("div");
       shade.setAttribute("class", "shade");
-      shade.destroy = function() {
+      shade.close = function() {
         if (shade.classList.contains("is-opaque")) {
           helper.removeClass(shade, "is-opaque");
           helper.addClass(shade, "is-transparent");
         } else {
           shade.remove();
         };
+        mod.close();
       };
       shade.addEventListener("transitionend", function(event, elapsed) {
         if (event.propertyName === "opacity" && getComputedStyle(this).opacity == 0) {
@@ -44,25 +85,46 @@ var shade = (function() {
         };
       }.bind(shade), false);
       shade.addEventListener("click", function() {
-        this.destroy();
         if (options.action) {
           options.action();
         };
+        this.close();
       }, false);
-      previousShade = shade;
+      _previousShade = shade;
       body.appendChild(shade);
       getComputedStyle(shade).opacity;
       helper.removeClass(shade, "is-transparent");
       helper.addClass(shade, "is-opaque");
     };
-    _destroyPreviousShade();
+    if (_previousShade != null) {
+      render.close();
+    };
     _makeShade();
+  };
+
+  var open = function(override) {
+    mod.open();
+    render.open(override);
+  };
+
+  var close = function() {
+    mod.close();
+    render.close();
+  };
+
+  var init = function() {
+    mod.close();
+    render.close();
   };
 
   // exposed methods
   return {
-    destroy: destroy,
-    render: render
+    init: init,
+    mod: mod,
+    render: render,
+    open: open,
+    close: close,
+    toggle: toggle
   };
 
 })();

@@ -1,6 +1,6 @@
 var modal = (function() {
 
-  var previousModal = null;
+  var _previousModal = null;
 
   var mod = {};
 
@@ -22,16 +22,24 @@ var modal = (function() {
 
   var render = {};
 
-  render.clear = function() {
+  render.toggle = function(override) {
+    if (state.get().modal) {
+      render.open(override);
+    } else {
+      render.close();
+    };
+  };
+
+  render.close = function() {
     var allModal = helper.eA(".modal");
     if (allModal[0]) {
       for (var i = 0; i < allModal.length; i++) {
-        allModal[i].clear();
+        allModal[i].close();
       };
     };
   };
 
-  render.make = function(override) {
+  render.open = function(override) {
     var options = {
       heading: "Modal",
       content: "Body",
@@ -57,7 +65,7 @@ var modal = (function() {
       } else if (options.size) {
         modal.setAttribute("class", "modal");
       };
-      modal.clear = function() {
+      modal.close = function() {
         if (modal.classList.contains("is-opaque")) {
           helper.removeClass(modal, "is-opaque");
           helper.addClass(modal, "is-transparent");
@@ -115,52 +123,49 @@ var modal = (function() {
         if (options.successAction) {
           options.successAction();
         };
-        this.clear();
-        shade.destroy();
-        pagelock.render.toggle();
+        this.close();
       }.bind(modal), false);
       cancelButton.addEventListener("click", function(event) {
         if (options.cancelAction) {
           options.cancelAction();
         };
-        this.clear();
-        shade.destroy();
-        pagelock.render.toggle();
+        this.close();
       }.bind(modal), false);
-      previousModal = modal;
-      shade.render({
-        action: function() {
-          if (options.cancelAction) {
-            options.cancelAction();
-          };
-          modal.clear();
-          pagelock.render.toggle();
-        },
-        includeHeader: true
-      });
+      _previousModal = modal;
       body.appendChild(modal);
       getComputedStyle(modal).opacity;
       helper.removeClass(modal, "is-transparent");
       helper.addClass(modal, "is-opaque");
       modalHeading.focus(this);
     };
-    if (previousModal != null) {
-      render.clear();
+    if (_previousModal != null) {
+      render.close();
     };
     _makeModal();
-    pagelock.render.toggle();
+  };
+
+  var open = function(override) {
+    mod.open();
+    render.open(override);
+  };
+
+  var close = function() {
+    mod.close();
+    render.close();
   };
 
   var init = function() {
     mod.close();
-    render.clear();
+    render.close();
   };
 
   // exposed methods
   return {
     init: init,
     mod: mod,
-    render: render
+    render: render,
+    open: open,
+    close: close
   };
 
 })();

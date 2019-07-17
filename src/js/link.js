@@ -31,6 +31,13 @@ var link = (function() {
   };
 
   mod.edit = {
+    toggle: function() {
+      if (state.get().link.edit) {
+        mod.edit.close()
+      } else {
+        mod.edit.open()
+      };
+    },
     open: function() {
       helper.setObject({
         object: state.get(),
@@ -44,21 +51,6 @@ var link = (function() {
         path: "link.edit",
         newValue: false
       });
-    },
-    toggle: function() {
-      if (state.get().link.edit) {
-        helper.setObject({
-          object: state.get(),
-          path: "link.edit",
-          newValue: false
-        });
-      } else {
-        helper.setObject({
-          object: state.get(),
-          path: "link.edit",
-          newValue: true
-        });
-      };
     },
     check: function() {
       if (bookmarks.get().length <= 0) {
@@ -66,38 +58,6 @@ var link = (function() {
           object: state.get(),
           path: "link.edit",
           newValue: false
-        });
-      };
-    }
-  };
-
-  mod.add = {
-    open: function() {
-      helper.setObject({
-        object: state.get(),
-        path: "link.add",
-        newValue: true
-      });
-    },
-    close: function() {
-      helper.setObject({
-        object: state.get(),
-        path: "link.add",
-        newValue: false
-      });
-    },
-    toggle: function() {
-      if (state.get().link.add) {
-        helper.setObject({
-          object: state.get(),
-          path: "link.add",
-          newValue: false
-        });
-      } else {
-        helper.setObject({
-          object: state.get(),
-          path: "link.add",
-          newValue: true
         });
       };
     }
@@ -164,90 +124,8 @@ var link = (function() {
 
   var render = {};
 
-  render.add = function() {
-    stagedLink.init();
-    var form = render.form();
-    modal.render.make({
-      heading: "Add a new bookmark",
-      successAction: function() {
-        stagedLink.data.timeStamp = new Date().getTime();
-        bookmarks.add(JSON.parse(JSON.stringify(stagedLink.data)));
-        data.save();
-        mod.add.close();
-        render.clear();
-        render.item.all();
-        render.tabindex();
-        sortable(".link-area");
-        control.dependents();
-        control.render();
-        stagedLink.reset();
-      },
-      cancelAction: function() {
-        mod.add.close();
-        stagedLink.reset();
-        autoSuggest.destroy();
-      },
-      actionText: "Add",
-      size: "small",
-      content: form
-    });
-  };
-
-  render.edit = function(bookmarkData) {
-    stagedLink.data = JSON.parse(JSON.stringify(bookmarkData));
-    var form = render.form();
-    if (stagedLink.data.display == "letter" || stagedLink.data.display == null) {
-      form.querySelector(".link-form-input-letter").removeAttribute("disabled");
-      form.querySelector(".link-form-input-icon").setAttribute("disabled", "");
-      form.querySelector(".form-group-text").setAttribute("disabled", "");
-      form.querySelector(".link-form-input-icon").setAttribute("disabled", "");
-      form.querySelector(".link-form-input-helper-icon").setAttribute("disabled", "");
-      form.querySelector(".link-form-icon-clear").setAttribute("disabled", "");
-      form.querySelector(".link-form-text-icon").tabIndex = -1;
-    } else if (stagedLink.data.display == "icon") {
-      form.querySelector(".link-form-input-letter").setAttribute("disabled", "");
-      form.querySelector(".link-form-input-icon").removeAttribute("disabled");
-      form.querySelector(".form-group-text").removeAttribute("disabled");
-      form.querySelector(".link-form-input-icon").removeAttribute("disabled");
-      form.querySelector(".link-form-input-helper-icon").removeAttribute("disabled");
-      form.querySelector(".link-form-icon-clear").removeAttribute("disabled");
-      form.querySelector(".link-form-input-display-icon").checked = true;
-      form.querySelector(".link-form-text-icon").tabIndex = 1;
-    };
-    if (stagedLink.data.icon.name != null && stagedLink.data.icon.prefix != null && stagedLink.data.icon.label != null) {
-      form.querySelector(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + stagedLink.data.icon.prefix + " fa-" + stagedLink.data.icon.name));
-    };
-    form.querySelector(".link-form-input-letter").value = stagedLink.data.letter;
-    form.querySelector(".link-form-input-icon").value = stagedLink.data.icon.label;
-    form.querySelector(".link-form-input-name").value = stagedLink.data.name;
-    form.querySelector(".link-form-input-url").value = stagedLink.data.url;
-    if (stagedLink.data.accent.override) {
-      form.querySelector(".link-form-input-color").value = helper.rgbToHex(stagedLink.data.accent.color);
-    };
-    modal.render.make({
-      heading: "Edit " + stagedLink.data.name,
-      successAction: function() {
-        bookmarks.edit(JSON.parse(JSON.stringify(stagedLink.data)));
-        data.save();
-        render.clear();
-        render.item.all();
-        render.tabindex();
-        render.previousFocus();
-        sortable(".link-area");
-        stagedLink.reset();
-      },
-      cancelAction: function() {
-        render.previousFocus();
-        stagedLink.reset();
-      },
-      actionText: "Save",
-      size: "small",
-      content: form
-    });
-  };
-
   render.remove = function(bookmarkData) {
-    modal.render.make({
+    modal.open({
       heading: "Remove " + bookmarkData.name + " bookmark",
       content: "Are you sure you want to remove this bookmark? This can not be undone.",
       successAction: function() {
@@ -258,17 +136,29 @@ var link = (function() {
         data.save();
         render.clear();
         render.item.all();
+        render.item.tabindex();
         render.previousFocus();
         sortable(".link-area");
         control.dependents();
         control.render();
+        shade.close();
+        pagelock.unlock();
       },
       cancelAction: function() {
         render.previousFocus();
+        shade.close();
+        pagelock.unlock();
       },
       actionText: "Remove",
       size: "small"
     });
+    shade.open({
+      action: function() {
+        modal.close();
+        pagelock.unlock();
+      }
+    });
+    pagelock.lock();
   };
 
   render.clear = function() {
@@ -552,7 +442,7 @@ var link = (function() {
 
       linkEdit.addEventListener("click", function() {
         _previousFocus = index;
-        render.edit(data);
+        render.item.edit(data);
       }, false);
       linkRemove.addEventListener("click", function() {
         _previousFocus = index;
@@ -560,6 +450,81 @@ var link = (function() {
       }, false);
 
       return linkItem;
+    },
+    edit: function(bookmarkData) {
+      stagedLink.data = JSON.parse(JSON.stringify(bookmarkData));
+      var form = render.form();
+      if (stagedLink.data.display == "letter" || stagedLink.data.display == null) {
+        form.querySelector(".link-form-input-letter").removeAttribute("disabled");
+        form.querySelector(".link-form-input-icon").setAttribute("disabled", "");
+        form.querySelector(".form-group-text").setAttribute("disabled", "");
+        form.querySelector(".link-form-input-icon").setAttribute("disabled", "");
+        form.querySelector(".link-form-input-helper-icon").setAttribute("disabled", "");
+        form.querySelector(".link-form-icon-clear").setAttribute("disabled", "");
+        form.querySelector(".link-form-text-icon").tabIndex = -1;
+      } else if (stagedLink.data.display == "icon") {
+        form.querySelector(".link-form-input-letter").setAttribute("disabled", "");
+        form.querySelector(".link-form-input-icon").removeAttribute("disabled");
+        form.querySelector(".form-group-text").removeAttribute("disabled");
+        form.querySelector(".link-form-input-icon").removeAttribute("disabled");
+        form.querySelector(".link-form-input-helper-icon").removeAttribute("disabled");
+        form.querySelector(".link-form-icon-clear").removeAttribute("disabled");
+        form.querySelector(".link-form-input-display-icon").checked = true;
+        form.querySelector(".link-form-text-icon").tabIndex = 1;
+      };
+      if (stagedLink.data.icon.name != null && stagedLink.data.icon.prefix != null && stagedLink.data.icon.label != null) {
+        form.querySelector(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + stagedLink.data.icon.prefix + " fa-" + stagedLink.data.icon.name));
+      };
+      form.querySelector(".link-form-input-letter").value = stagedLink.data.letter;
+      form.querySelector(".link-form-input-icon").value = stagedLink.data.icon.label;
+      form.querySelector(".link-form-input-name").value = stagedLink.data.name;
+      form.querySelector(".link-form-input-url").value = stagedLink.data.url;
+      if (stagedLink.data.accent.override) {
+        form.querySelector(".link-form-input-color").value = helper.rgbToHex(stagedLink.data.accent.color);
+      };
+      modal.open({
+        heading: "Edit " + stagedLink.data.name,
+        successAction: function() {
+          bookmarks.edit(JSON.parse(JSON.stringify(stagedLink.data)));
+          data.save();
+          render.clear();
+          render.item.all();
+          render.item.tabindex();
+          render.previousFocus();
+          sortable(".link-area");
+          stagedLink.reset();
+          shade.close();
+          pagelock.unlock();
+        },
+        cancelAction: function() {
+          render.previousFocus();
+          stagedLink.reset();
+          autoSuggest.destroy();
+          shade.close();
+          pagelock.unlock();
+        },
+        actionText: "Save",
+        size: "small",
+        content: form
+      });
+      shade.open({
+        action: function() {
+          modal.close();
+          pagelock.unlock();
+        }
+      });
+    },
+    tabindex: function() {
+      var allLinkControlItem = helper.eA(".link-control-item");
+      if (state.get().link.edit) {
+        allLinkControlItem.forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = 1;
+        });
+      } else {
+        allLinkControlItem.forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = -1;
+        });
+      };
     }
   };
 
@@ -580,19 +545,6 @@ var link = (function() {
       div.appendChild(para);
       return div;
     }
-  };
-
-  render.tabindex = function() {
-    var allLinkControlItem = helper.eA(".link-control-item");
-    if (state.get().link.edit) {
-      allLinkControlItem.forEach(function(arrayItem, index) {
-        arrayItem.tabIndex = 1;
-      });
-    } else {
-      allLinkControlItem.forEach(function(arrayItem, index) {
-        arrayItem.tabIndex = -1;
-      });
-    };
   };
 
   render.previousFocus = function() {
@@ -759,13 +711,54 @@ var link = (function() {
   };
 
   var add = function() {
-    mod.add.open();
-    render.add();
+    stagedLink.init();
+    modal.open({
+      heading: "Add a new bookmark",
+      successAction: function() {
+        stagedLink.data.timeStamp = new Date().getTime();
+        bookmarks.add(JSON.parse(JSON.stringify(stagedLink.data)));
+        data.save();
+        render.clear();
+        render.item.all();
+        render.item.tabindex();
+        sortable(".link-area");
+        control.dependents();
+        control.render();
+        stagedLink.reset();
+        shade.close();
+        pagelock.unlock();
+      },
+      cancelAction: function() {
+        stagedLink.reset();
+        autoSuggest.destroy();
+        shade.close();
+        pagelock.unlock();
+      },
+      actionText: "Add",
+      size: "small",
+      content: render.form()
+    });
+    shade.open({
+      action: function() {
+        modal.close();
+        pagelock.unlock();
+      }
+    });
+    pagelock.lock();
+  };
+
+  var edit = function() {
+    mod.edit.toggle();
+  };
+
+  var tabindex = function() {
+    render.item.tabindex();
   };
 
   var init = function() {
     render.area.width();
     render.item.all();
+    render.item.tabindex();
     render.item.size();
     render.item.display.letter();
     render.item.display.icon();
@@ -778,7 +771,9 @@ var link = (function() {
     init: init,
     mod: mod,
     render: render,
-    add: add
+    add: add,
+    edit: edit,
+    tabindex: tabindex
   };
 
 })();

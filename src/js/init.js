@@ -17,4 +17,5 @@ background.init();
 search.init();
 header.init();
 modal.init();
+shade.init();
 version.init();

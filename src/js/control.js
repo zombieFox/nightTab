@@ -10,43 +10,43 @@ var control = (function() {
     element: helper.e(".control-menu-layout"),
     type: "button",
     func: function() {
-      menu.render.tab(this.element, helper.e(".menu-content-area-layout"));
+      menu.nav(this.element, helper.e(".menu-content-area-layout"));
     }
   }, {
     element: helper.e(".control-menu-header"),
     type: "button",
     func: function() {
-      menu.render.tab(this.element, helper.e(".menu-content-area-header"));
+      menu.nav(this.element, helper.e(".menu-content-area-header"));
     }
   }, {
     element: helper.e(".control-menu-bookmarks"),
     type: "button",
     func: function() {
-      menu.render.tab(this.element, helper.e(".menu-content-area-bookmarks"));
+      menu.nav(this.element, helper.e(".menu-content-area-bookmarks"));
     }
   }, {
     element: helper.e(".control-menu-theme"),
     type: "button",
     func: function() {
-      menu.render.tab(this.element, helper.e(".menu-content-area-theme"));
+      menu.nav(this.element, helper.e(".menu-content-area-theme"));
     }
   }, {
     element: helper.e(".control-menu-background"),
     type: "button",
     func: function() {
-      menu.render.tab(this.element, helper.e(".menu-content-area-background"));
+      menu.nav(this.element, helper.e(".menu-content-area-background"));
     }
   }, {
     element: helper.e(".control-menu-data"),
     type: "button",
     func: function() {
-      menu.render.tab(this.element, helper.e(".menu-content-area-data"));
+      menu.nav(this.element, helper.e(".menu-content-area-data"));
     }
   }, {
     element: helper.e(".control-menu-nightTab"),
     type: "button",
     func: function() {
-      menu.render.tab(this.element, helper.e(".menu-content-area-nightTab"));
+      menu.nav(this.element, helper.e(".menu-content-area-nightTab"));
     }
   }, {
     element: helper.e(".control-menu-close"),
@@ -65,8 +65,8 @@ var control = (function() {
     path: "link.edit",
     type: "checkbox",
     func: function() {
+      link.tabindex();
       render();
-      link.render.tabindex();
     }
   }, {
     element: helper.e(".control-theme-accent-current"),

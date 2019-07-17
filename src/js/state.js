@@ -166,7 +166,6 @@ var state = (function() {
       },
       show: true,
       edit: false,
-      add: false,
       style: "block"
     },
     layout: {
@@ -209,6 +208,8 @@ var state = (function() {
         accent: 0
       }
     },
+    pagelock: false,
+    shade: false,
     edge: false,
     search: false,
     menu: false,

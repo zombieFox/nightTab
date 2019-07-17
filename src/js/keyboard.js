@@ -10,11 +10,14 @@ var keyboard = (function() {
           edge.render.clear();
         } else if (state.get().menu) {
           menu.close();
+          shade.close();
+          pagelock.unlock();
         } else if (state.get().autoSuggest) {
           autoSuggest.destroy();
         } else if (state.get().modal) {
-          modal.render.clear();
-          shade.destroy();
+          modal.close();
+          shade.close();
+          pagelock.unlock();
         } else if (state.get().link.edit) {
           helper.setObject({
             object: state.get(),
@@ -38,9 +41,15 @@ var keyboard = (function() {
             menu.close();
           };
           if (state.get().modal) {
-            modal.render.clear();
+            modal.close();
           };
           link.add();
+          shade.open({
+            action: function() {
+              modal.close();
+              pagelock.unlock();
+            }
+          });
         };
       };
     }, false);
@@ -63,7 +72,8 @@ var keyboard = (function() {
       // ctrl+alt+m
       if (event.ctrlKey && event.altKey && event.keyCode == 77) {
         if (state.get().modal) {
-          modal.render.clear();
+          modal.close();
+          shade.close();
         };
         menu.toggle();
       };
@@ -74,8 +84,8 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
-        link.mod.edit.toggle();
-        link.render.tabindex();
+        link.edit();
+        link.tabindex();
         control.update();
         control.render();
         data.save();

@@ -581,6 +581,11 @@ var update = (function() {
         data: ""
       };
       return data;
+    },
+    "3.50.0": function(data) {
+      data.state.pagelock = false;
+      data.state.shade = false;
+      return data;
     }
   };
 
