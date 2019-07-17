@@ -123,8 +123,7 @@ var shade = (function() {
     mod: mod,
     render: render,
     open: open,
-    close: close,
-    toggle: toggle
+    close: close
   };
 
 })();
