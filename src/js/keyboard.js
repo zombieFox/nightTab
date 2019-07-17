@@ -44,12 +44,6 @@ var keyboard = (function() {
             modal.close();
           };
           link.add();
-          shade.open({
-            action: function() {
-              modal.close();
-              pagelock.unlock();
-            }
-          });
         };
       };
     }, false);

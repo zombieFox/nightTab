@@ -63,6 +63,23 @@ var link = (function() {
     }
   };
 
+  mod.add = {
+    open: function() {
+      helper.setObject({
+        object: state.get(),
+        path: "link.add",
+        newValue: true
+      });
+    },
+    close: function() {
+      helper.setObject({
+        object: state.get(),
+        path: "link.add",
+        newValue: false
+      });
+    }
+  };
+
   var bind = {};
 
   bind.sort = function() {
@@ -711,6 +728,7 @@ var link = (function() {
   };
 
   var add = function() {
+    mod.add.open();
     stagedLink.init();
     modal.open({
       heading: "Add a new bookmark",
@@ -718,6 +736,7 @@ var link = (function() {
         stagedLink.data.timeStamp = new Date().getTime();
         bookmarks.add(JSON.parse(JSON.stringify(stagedLink.data)));
         data.save();
+        mod.add.close();
         render.clear();
         render.item.all();
         render.item.tabindex();
@@ -729,6 +748,7 @@ var link = (function() {
         pagelock.unlock();
       },
       cancelAction: function() {
+        mod.add.close();
         stagedLink.reset();
         autoSuggest.destroy();
         shade.close();
@@ -740,6 +760,7 @@ var link = (function() {
     });
     shade.open({
       action: function() {
+        mod.add.close();
         modal.close();
         pagelock.unlock();
       }
@@ -756,6 +777,7 @@ var link = (function() {
   };
 
   var init = function() {
+    mod.add.close();
     render.area.width();
     render.item.all();
     render.item.tabindex();

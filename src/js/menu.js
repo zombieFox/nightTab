@@ -64,14 +64,10 @@ var menu = (function() {
 
   render.open = function() {
     helper.addClass(helper.e("html"), "is-menu-open");
-    render.focus();
-    render.scrollToTop();
-    render.tabindex.toggle();
   };
 
   render.close = function() {
     helper.removeClass(helper.e("html"), "is-menu-open");
-    render.tabindex.toggle();
   };
 
   var nav = function(button, area) {
@@ -90,6 +86,9 @@ var menu = (function() {
   var open = function() {
     mod.open();
     render.open();
+    render.focus();
+    render.scrollToTop();
+    render.tabindex.toggle();
     shade.open({
       action: function() {
         mod.close();
@@ -103,6 +102,7 @@ var menu = (function() {
   var close = function() {
     mod.close();
     render.close();
+    render.tabindex.toggle();
     shade.close();
     pagelock.unlock();
   };

@@ -586,6 +586,10 @@ var update = (function() {
       data.state.pagelock = false;
       data.state.shade = false;
       return data;
+    },
+    "3.51.0": function(data) {
+      data.state.link.add = false;
+      return data;
     }
   };
 

@@ -165,6 +165,7 @@ var state = (function() {
         newTab: false
       },
       show: true,
+      add: false,
       edit: false,
       style: "block"
     },
