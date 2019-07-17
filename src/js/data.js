@@ -101,10 +101,23 @@ var data = (function() {
       successAction: function() {
         wipe();
         render.reload();
+        shade.close();
+        pagelock.unlock();
+      },
+      cancelAction: function() {
+        shade.close();
+        pagelock.unlock();
       },
       actionText: "Clear all data",
       size: "small"
     });
+    shade.open({
+      action: function() {
+        modal.close();
+        pagelock.unlock();
+      }
+    });
+    pagelock.lock();
   };
 
   render.reload = function() {
