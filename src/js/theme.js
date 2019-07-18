@@ -1,23 +1,29 @@
 var theme = (function() {
 
-  var toggle = function() {
-    var style = {
-      dark: function() {
-        helper.setObject({
-          object: state.get(),
-          path: "theme.style",
-          newValue: "light"
-        })
-      },
-      light: function() {
-        helper.setObject({
-          object: state.get(),
-          path: "theme.style",
-          newValue: "dark"
-        })
-      }
-    };
-    style[state.get().theme.style]();
+  var mod = {};
+
+  mod.theme = {
+    light: function() {
+      helper.setObject({
+        object: state.get(),
+        path: "theme.style",
+        newValue: "light"
+      });
+    },
+    dark: function() {
+      helper.setObject({
+        object: state.get(),
+        path: "theme.style",
+        newValue: "dark"
+      });
+    },
+    toggle: function() {
+      if (state.get().theme.style == "dark") {
+        mod.theme.light();
+      } else if (state.get().theme.style == "light") {
+        mod.theme.dark();
+      };
+    }
   };
 
   var render = {};
@@ -98,6 +104,18 @@ var theme = (function() {
     }
   };
 
+  var toggle = function() {
+    mod.theme.toggle();
+    render.theme();
+  };
+
+  var accent = function() {
+    theme.render.accent.color();
+    link.render.clear();
+    link.render.item.all();
+    sortable(".link-area");
+  };
+
   var init = function() {
     render.theme();
     render.accent.random();
@@ -107,9 +125,10 @@ var theme = (function() {
 
   // exposed methods
   return {
+    init: init,
     render: render,
     toggle: toggle,
-    init: init
+    accent: accent
   };
 
 })();

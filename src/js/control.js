@@ -73,10 +73,7 @@ var control = (function() {
     path: "theme.accent.current",
     type: "color",
     func: function() {
-      theme.render.accent.color();
-      link.render.clear();
-      link.render.item.all();
-      sortable(".link-area");
+      theme.accent();
     }
   }, {
     element: helper.e(".control-layout-width"),

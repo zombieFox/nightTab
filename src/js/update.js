@@ -610,7 +610,7 @@ var update = (function() {
     // loop over all updates in _update object
     for (var key in _update) {
       if (version.compare(data.version, key) == -1) {
-        console.log("\t= running update", key);
+        console.log("\t > running update", key);
         data = _update[key](data);
         data.version = key;
       };
@@ -618,7 +618,7 @@ var update = (function() {
 
     // if no update is needed version bump
     if (version.compare(data.version, version.get()) == -1) {
-      console.log("\t= nothing to update, version bump to", version.get());
+      console.log("\t > nothing to update, version bump to", version.get());
       data.version = version.get();
     };
 

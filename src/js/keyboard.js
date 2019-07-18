@@ -55,7 +55,6 @@ var keyboard = (function() {
       // ctrl+alt+d
       if (event.ctrlKey && event.altKey && event.keyCode == 68) {
         theme.toggle();
-        theme.render.theme();
         control.update();
         data.save();
       };
