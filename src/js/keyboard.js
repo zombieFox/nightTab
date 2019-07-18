@@ -11,13 +11,14 @@ var keyboard = (function() {
         } else if (state.get().menu) {
           menu.close();
           shade.close();
-          pagelock.unlock();
         } else if (state.get().autoSuggest) {
           autoSuggest.destroy();
+        } else if (state.get().link.add) {
+          link.add.close();
+          shade.close();
         } else if (state.get().modal) {
           modal.close();
           shade.close();
-          pagelock.unlock();
         } else if (state.get().link.edit) {
           helper.setObject({
             object: state.get(),
@@ -43,7 +44,7 @@ var keyboard = (function() {
           if (state.get().modal) {
             modal.close();
           };
-          link.add();
+          link.add.open();
         };
       };
     }, false);
@@ -65,7 +66,10 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+m
       if (event.ctrlKey && event.altKey && event.keyCode == 77) {
-        if (state.get().modal) {
+        if (state.get().link.add) {
+          link.add.close();
+          shade.close();
+        } else if (state.get().modal) {
           modal.close();
           shade.close();
         };

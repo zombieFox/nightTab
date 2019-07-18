@@ -58,7 +58,7 @@ var control = (function() {
     element: helper.e(".control-link-add"),
     type: "button",
     func: function() {
-      link.add();
+      link.add.open();
     }
   }, {
     element: helper.e(".control-link-edit"),

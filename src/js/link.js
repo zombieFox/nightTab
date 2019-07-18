@@ -727,45 +727,53 @@ var link = (function() {
     helper.e(".link-form-text-icon").focus();
   };
 
-  var add = function() {
-    mod.add.open();
-    stagedLink.init();
-    modal.open({
-      heading: "Add a new bookmark",
-      successAction: function() {
-        stagedLink.data.timeStamp = new Date().getTime();
-        bookmarks.add(JSON.parse(JSON.stringify(stagedLink.data)));
-        data.save();
-        mod.add.close();
-        render.clear();
-        render.item.all();
-        render.item.tabindex();
-        sortable(".link-area");
-        control.dependents();
-        control.render();
-        stagedLink.reset();
-        shade.close();
-        pagelock.unlock();
-      },
-      cancelAction: function() {
-        mod.add.close();
-        stagedLink.reset();
-        autoSuggest.destroy();
-        shade.close();
-        pagelock.unlock();
-      },
-      actionText: "Add",
-      size: "small",
-      content: render.form()
-    });
-    shade.open({
-      action: function() {
-        mod.add.close();
-        modal.close();
-        pagelock.unlock();
-      }
-    });
-    pagelock.lock();
+  var add = {
+    open: function() {
+      mod.add.open();
+      stagedLink.init();
+      modal.open({
+        heading: "Add a new bookmark",
+        successAction: function() {
+          stagedLink.data.timeStamp = new Date().getTime();
+          bookmarks.add(JSON.parse(JSON.stringify(stagedLink.data)));
+          data.save();
+          mod.add.close();
+          render.clear();
+          render.item.all();
+          render.item.tabindex();
+          sortable(".link-area");
+          control.dependents();
+          control.render();
+          stagedLink.reset();
+          shade.close();
+          pagelock.unlock();
+        },
+        cancelAction: function() {
+          console.log("hit");
+          mod.add.close();
+          stagedLink.reset();
+          autoSuggest.destroy();
+          shade.close();
+          pagelock.unlock();
+        },
+        actionText: "Add",
+        size: "small",
+        content: render.form()
+      });
+      shade.open({
+        action: function() {
+          mod.add.close();
+          modal.close();
+          pagelock.unlock();
+        }
+      });
+      pagelock.lock();
+    },
+    close: function() {
+      mod.add.close();
+      modal.close();
+      pagelock.unlock();
+    }
   };
 
   var edit = function() {
