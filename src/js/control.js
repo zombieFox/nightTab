@@ -74,6 +74,7 @@ var control = (function() {
     type: "color",
     func: function() {
       theme.accent();
+      // link.items();
     }
   }, {
     element: helper.e(".control-layout-width"),
@@ -1920,18 +1921,14 @@ var control = (function() {
     path: "link.item.order",
     type: "radio",
     func: function() {
-      link.render.clear();
-      link.render.item.all();
-      sortable(".link-area");
+      link.items();
     }
   }, {
     element: helper.e(".control-link-item-order-namedisplay"),
     path: "link.item.order",
     type: "radio",
     func: function() {
-      link.render.clear();
-      link.render.item.all();
-      sortable(".link-area");
+      link.items();
     }
   }, {
     element: helper.e(".control-link-item-url-show"),
@@ -1968,9 +1965,7 @@ var control = (function() {
     path: "link.newTab",
     type: "checkbox",
     func: function() {
-      link.render.clear();
-      link.render.item.all();
-      sortable(".link-area");
+      link.items();
     }
   }, {
     element: helper.e(".control-link-style-block"),
@@ -1991,45 +1986,35 @@ var control = (function() {
     type: "button",
     func: function() {
       bookmarks.sort("letter");
-      link.render.clear();
-      link.render.item.all();
-      sortable(".link-area");
+      link.items();
     }
   }, {
     element: helper.e(".control-link-sort-icon"),
     type: "button",
     func: function() {
       bookmarks.sort("icon");
-      link.render.clear();
-      link.render.item.all();
-      sortable(".link-area");
+      link.items();
     }
   }, {
     element: helper.e(".control-link-sort-name"),
     type: "button",
     func: function() {
       bookmarks.sort("name");
-      link.render.clear();
-      link.render.item.all();
-      sortable(".link-area");
+      link.items();
     }
   }, {
     element: helper.e(".control-link-accent-clear"),
     type: "button",
     func: function() {
       link.mod.accent.clear();
-      link.render.clear();
-      link.render.item.all();
-      sortable(".link-area");
+      link.items();
     }
   }, {
     element: helper.e(".control-link-accent-set"),
     type: "button",
     func: function() {
       link.mod.accent.rainbow();
-      link.render.clear();
-      link.render.item.all();
-      sortable(".link-area");
+      link.items();
     }
   }, {
     element: helper.e(".control-theme-style-dark"),
@@ -2110,9 +2095,7 @@ var control = (function() {
     func: function() {
       theme.render.accent.random();
       theme.render.accent.color();
-      link.render.clear();
-      link.render.item.all();
-      sortable(".link-area");
+      link.items();
     }
   }, {
     element: helper.e(".control-background-image-show"),

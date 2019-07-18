@@ -784,6 +784,12 @@ var link = (function() {
     render.item.tabindex();
   };
 
+  var items = function() {
+    render.clear();
+    render.item.all();
+    sortable(".link-area");
+  };
+
   var init = function() {
     mod.add.close();
     render.area.width();
@@ -803,6 +809,7 @@ var link = (function() {
     render: render,
     add: add,
     edit: edit,
+    items: items,
     tabindex: tabindex
   };
 

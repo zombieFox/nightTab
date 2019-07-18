@@ -111,9 +111,6 @@ var theme = (function() {
 
   var accent = function() {
     theme.render.accent.color();
-    link.render.clear();
-    link.render.item.all();
-    sortable(".link-area");
   };
 
   var init = function() {

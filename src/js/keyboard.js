@@ -96,9 +96,7 @@ var keyboard = (function() {
       if (state.get().theme.accent.random.active && event.ctrlKey && event.altKey && event.keyCode == 82) {
         theme.render.accent.random();
         theme.render.accent.color();
-        link.render.clear();
-        link.render.item.all();
-        sortable(".link-area");
+        link.items();
         data.save();
       };
     }, false);
