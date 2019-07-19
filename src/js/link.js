@@ -516,7 +516,7 @@ var link = (function() {
         cancelAction: function() {
           render.previousFocus();
           stagedLink.reset();
-          autoSuggest.destroy();
+          autoSuggest.close();
           shade.close();
           pagelock.unlock();
         },
@@ -702,7 +702,7 @@ var link = (function() {
       iconFormGroupClear.removeAttribute("disabled");
       iconFormGroupText.tabIndex = 1;
     }, false);
-    autoSuggest.bind({
+    autoSuggest.bind.input({
       input: iconInput,
       type: "fontawesomeIcon",
       postFocus: iconFormGroupText
@@ -752,7 +752,7 @@ var link = (function() {
           console.log("hit");
           mod.add.close();
           stagedLink.reset();
-          autoSuggest.destroy();
+          autoSuggest.close();
           shade.close();
           pagelock.unlock();
         },

@@ -12,7 +12,7 @@ var keyboard = (function() {
           menu.close();
           shade.close();
         } else if (state.get().autoSuggest) {
-          autoSuggest.destroy();
+          autoSuggest.close();
         } else if (state.get().link.add) {
           link.add.close();
           shade.close();

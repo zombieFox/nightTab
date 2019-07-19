@@ -4,11 +4,27 @@ var autoSuggest = (function() {
   var _currentInputOptions = {};
   var _autoSuggestActive = false;
 
-  var _delayRender = function(options) {
-    render(options);
+  var mod = {};
+
+  mod.open = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "autoSuggest",
+      newValue: true
+    });
   };
 
-  var bind = function(override) {
+  mod.close = function() {
+    helper.setObject({
+      object: state.get(),
+      path: "autoSuggest",
+      newValue: false
+    });
+  };
+
+  var bind = {};
+
+  bind.input = function(override) {
     var options = {
       input: null,
       type: null,
@@ -21,17 +37,17 @@ var autoSuggest = (function() {
       options.input.addEventListener("focus", function() {
         if (!_autoSuggestActive) {
           clearTimeout(_timer);
-          _timer = setTimeout(_delayRender, 300, options);
+          _timer = setTimeout(render.delay, 300, options);
         };
       }, false);
       options.input.addEventListener("input", function() {
         clearTimeout(_timer);
-        _timer = setTimeout(_delayRender, 300, options);
+        _timer = setTimeout(render.delay, 300, options);
       }, false);
     };
   };
 
-  var _navigateResults = function(event) {
+  bind.navigateResults = function(event) {
     var elementToFocus = null;
     var focusIndex = null;
     var allSuggestItems = helper.eA(".auto-suggest-link");
@@ -108,7 +124,7 @@ var autoSuggest = (function() {
       if (!event.shiftKey && event.keyCode == 9 && document.activeElement == allSuggestItems[allSuggestItems.length - 1]) {
         event.preventDefault();
         elementToFocus = _currentInputOptions.postFocus;
-        destroy();
+        render.close();
       };
       // shift tab
       if (event.shiftKey && event.keyCode == 9 && document.activeElement == allSuggestItems[0]) {
@@ -116,7 +132,7 @@ var autoSuggest = (function() {
         elementToFocus = _currentInputOptions.input;
       };
       if (event.shiftKey && event.keyCode == 9 && document.activeElement == _currentInputOptions.input) {
-        destroy();
+        render.close();
       };
     };
     _findInput();
@@ -127,38 +143,100 @@ var autoSuggest = (function() {
     };
   };
 
-  var _addDocumentEvent = function() {
-    document.addEventListener("click", _checkClick, false);
-    document.addEventListener("keydown", _navigateResults, false);
+  var documentEvent = {};
+
+  documentEvent.add = function() {
+    document.addEventListener("click", documentEvent.clickOut, false);
+    document.addEventListener("keydown", bind.navigateResults, false);
   };
 
-  var _removeDocumentEvent = function() {
-    document.removeEventListener("click", _checkClick, false);
-    document.removeEventListener("keydown", _navigateResults, false);
+  documentEvent.remove = function() {
+    document.removeEventListener("click", documentEvent.clickOut, false);
+    document.removeEventListener("keydown", bind.navigateResults, false);
   };
 
-  var _checkClick = function(event) {
+  documentEvent.clickOut = function(event) {
     if (!(event.target.classList.contains("auto-suggest-list")) && !(event.target.classList.contains("auto-suggest-input"))) {
-      destroy();
+      render.close();
     };
   };
 
-  var destroy = function() {
+  var render = {};
+
+  render.delay = function(options) {
+    mod.open();
+    render.open(options);
+  };
+
+  render.open = function(options) {
+    _currentInputOptions = options;
+    var body = helper.e("body");
+    var suggestItems = render.suggestItems(options);
+    var _populateList = function(list) {
+      var action = {
+        fontawesomeIcon: function() {
+          suggestItems.forEach(function(arrayItem) {
+            var li = helper.node("li|class:auto-suggest-list-item");
+            var anchor = helper.node("a|href:#,tabindex:1,class:auto-suggest-link");
+            var icon = helper.node("span|class:auto-suggest-icon fa-" + arrayItem.name);
+            if (arrayItem.styles.includes("solid")) {
+              helper.addClass(icon, "fas");
+            } else if (arrayItem.styles.includes("brands")) {
+              helper.addClass(icon, "fab");
+            };
+            anchor.addEventListener("click", function() {
+              link.render.autoSuggestIconAction(arrayItem);
+            }, false);
+            var text = helper.node("span:" + arrayItem.label + "|class:auto-suggest-icon-text");
+            anchor.appendChild(icon);
+            anchor.appendChild(text);
+            li.appendChild(anchor);
+            list.appendChild(li);
+          });
+        }
+      };
+      action[_currentInputOptions.type]();
+    };
+    var _renderAutoSuggestList = function() {
+      var autoSuggestWrapper = helper.e(".auto-suggest-wrapper");
+      var autoSuggestList = helper.e(".auto-suggest-list");
+      if (autoSuggestList) {
+        while (autoSuggestList.lastChild) {
+          autoSuggestList.removeChild(autoSuggestList.lastChild);
+        };
+      } else {
+        var style = {
+          left: autoSuggestWrapper.getBoundingClientRect().left,
+          top: autoSuggestWrapper.getBoundingClientRect().bottom + window.scrollY,
+          width: autoSuggestWrapper.getBoundingClientRect().width
+        };
+        var autoSuggestList = helper.node("ul|class:auto-suggest-list list-unstyled");
+        body.appendChild(autoSuggestList);
+        autoSuggestList.setAttribute("style", "width: " + style.width + "px; top: " + style.top + "px; left: " + style.left + "px;");
+        documentEvent.add();
+      };
+      _populateList(autoSuggestList);
+    };
+    if (suggestItems.length > 0) {
+      _autoSuggestActive = true;
+      _renderAutoSuggestList();
+    } else {
+      render.close();
+    };
+  };
+
+  render.close = function() {
+    mod.close();
     var autoSuggestList = helper.e(".auto-suggest-list");
     if (autoSuggestList) {
       autoSuggestList.remove();
-      _removeDocumentEvent();
-      helper.setObject({
-        object: state.get(),
-        path: "autoSuggest",
-        newValue: false
-      });
+      documentEvent.remove();
       _currentInputOptions = {};
       _autoSuggestActive = false;
     };
   };
 
-  var _getSuggestItems = function() {
+  render.suggestItems = function() {
     var searchTerm = _currentInputOptions.input.value.replace(/^\s+/, "").replace(/\s+$/, "").toLowerCase();
     var action = {
       fontawesomeIcon: function() {
@@ -188,73 +266,15 @@ var autoSuggest = (function() {
     return action[_currentInputOptions.type]();
   };
 
-  var render = function(options) {
-    _currentInputOptions = options;
-    var body = helper.e("body");
-    var suggestItems = _getSuggestItems(options);
-    var _populateList = function(list) {
-      var action = {
-        fontawesomeIcon: function() {
-          suggestItems.forEach(function(arrayItem) {
-            var li = helper.node("li|class:auto-suggest-list-item");
-            var anchor = helper.node("a|href:#,tabindex:1,class:auto-suggest-link");
-            var icon = helper.node("span|class:auto-suggest-icon fa-" + arrayItem.name);
-            if (arrayItem.styles.includes("solid")) {
-              helper.addClass(icon, "fas");
-            } else if (arrayItem.styles.includes("brands")) {
-              helper.addClass(icon, "fab");
-            };
-            anchor.addEventListener("click", function() {
-              link.render.autoSuggestIconAction(arrayItem);
-            }, false);
-            var text = helper.node("span:" + arrayItem.label + "|class:auto-suggest-icon-text");
-            anchor.appendChild(icon);
-            anchor.appendChild(text);
-            li.appendChild(anchor);
-            list.appendChild(li);
-          });
-        }
-      };
-      action[_currentInputOptions.type]();
-    };
-
-    var _render_autoSuggestList = function() {
-      var autoSuggestWrapper = helper.e(".auto-suggest-wrapper");
-      var autoSuggestList = helper.e(".auto-suggest-list");
-      if (autoSuggestList) {
-        while (autoSuggestList.lastChild) {
-          autoSuggestList.removeChild(autoSuggestList.lastChild);
-        };
-      } else {
-        var style = {
-          left: autoSuggestWrapper.getBoundingClientRect().left,
-          top: autoSuggestWrapper.getBoundingClientRect().bottom + window.scrollY,
-          width: autoSuggestWrapper.getBoundingClientRect().width
-        };
-        var autoSuggestList = helper.node("ul|class:auto-suggest-list list-unstyled");
-        body.appendChild(autoSuggestList);
-        autoSuggestList.setAttribute("style", "width: " + style.width + "px; top: " + style.top + "px; left: " + style.left + "px;");
-        _addDocumentEvent();
-      };
-      _populateList(autoSuggestList);
-    };
-    if (suggestItems.length > 0) {
-      _autoSuggestActive = true;
-      helper.setObject({
-        object: state.get(),
-        path: "autoSuggest",
-        newValue: true
-      });
-      _render_autoSuggestList();
-    } else {
-      destroy();
-    };
+  var close = function() {
+    render.close();
   };
 
   // exposed methods
   return {
     bind: bind,
-    destroy: destroy
+    render: render,
+    close: close
   };
 
 })();
