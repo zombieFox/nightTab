@@ -83,32 +83,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".layout"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".layout"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".layout"),
           });
         };
@@ -116,7 +116,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -211,32 +211,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".layout"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".layout"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".layout"),
           });
         };
@@ -244,7 +244,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -257,32 +257,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".layout"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".layout"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".layout"),
           });
         };
@@ -290,7 +290,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -318,32 +318,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-area")
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-area")
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".header-area"),
           });
         };
@@ -351,7 +351,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -363,7 +363,7 @@ var control = (function() {
     additionalEvents: [{
       event: "click",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-area"),
           delay: 500
         });
@@ -371,7 +371,7 @@ var control = (function() {
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -389,7 +389,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-area"),
           delay: 500
         });
@@ -405,7 +405,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-area"),
           delay: 500
         });
@@ -421,7 +421,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-area"),
           delay: 500
         });
@@ -501,32 +501,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".greeting"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".greeting"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".greeting"),
           });
         };
@@ -534,7 +534,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -546,7 +546,7 @@ var control = (function() {
     additionalEvents: [{
       event: "click",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".greeting"),
           delay: 500
         });
@@ -591,32 +591,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".transitional"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".transitional"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".transitional"),
           });
         };
@@ -624,7 +624,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -636,7 +636,7 @@ var control = (function() {
     additionalEvents: [{
       event: "click",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".transitional"),
           delay: 500
         });
@@ -805,32 +805,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".clock"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".clock"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".clock"),
           });
         };
@@ -838,7 +838,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -850,7 +850,7 @@ var control = (function() {
     additionalEvents: [{
       event: "click",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".clock"),
           delay: 500
         });
@@ -1157,32 +1157,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".date"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".date"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".date"),
           });
         };
@@ -1190,7 +1190,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -1202,7 +1202,7 @@ var control = (function() {
     additionalEvents: [{
       event: "click",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".date"),
           delay: 500
         });
@@ -1229,7 +1229,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-search-input"),
           delay: 500
         });
@@ -1247,7 +1247,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-search-input"),
           delay: 500
         });
@@ -1265,32 +1265,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-search-input"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-search-input"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".header-search-input"),
           });
         };
@@ -1298,7 +1298,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -1399,32 +1399,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-search-input"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-search-input"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".header-search-input"),
           });
         };
@@ -1432,7 +1432,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -1444,7 +1444,7 @@ var control = (function() {
     additionalEvents: [{
       event: "click",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".header-search-input"),
           delay: 500
         });
@@ -1493,32 +1493,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".control-menu-open"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".control-menu-open"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".control-menu-open"),
           });
         };
@@ -1526,7 +1526,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -1538,7 +1538,7 @@ var control = (function() {
     additionalEvents: [{
       event: "click",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".control-menu-open"),
           delay: 500
         });
@@ -1612,32 +1612,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".link-area"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".link-area"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".link-area"),
           });
         };
@@ -1645,7 +1645,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -1657,7 +1657,7 @@ var control = (function() {
     additionalEvents: [{
       event: "click",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".link-area"),
           delay: 500
         });
@@ -1665,7 +1665,7 @@ var control = (function() {
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -1683,7 +1683,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".link-area"),
           delay: 500
         });
@@ -1699,7 +1699,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".link-area"),
           delay: 500
         });
@@ -1715,7 +1715,7 @@ var control = (function() {
     additionalEvents: [{
       event: "change",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".link-area"),
           delay: 500
         });
@@ -1732,32 +1732,32 @@ var control = (function() {
     additionalEvents: [{
       event: "input",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".link-item"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".link-item"),
         });
       }
     }, {
       event: "mouseup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "touchend",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }, {
       event: "keydown",
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.render.box({
+          edge.box.open({
             element: helper.e(".link-item"),
           });
         };
@@ -1765,7 +1765,7 @@ var control = (function() {
     }, {
       event: "keyup",
       func: function() {
-        edge.render.clear();
+        edge.box.close();
       }
     }],
     func: function() {
@@ -1786,7 +1786,7 @@ var control = (function() {
     additionalEvents: [{
       event: "click",
       func: function() {
-        edge.render.box({
+        edge.box.open({
           element: helper.e(".link-item"),
           delay: 500
         });
