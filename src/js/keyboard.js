@@ -25,8 +25,8 @@ var keyboard = (function() {
             path: "link.edit",
             newValue: false
           });
-          control.update();
-          control.render();
+          control.render.update();
+          control.render.class();
         };
         data.save();
       };
@@ -55,7 +55,7 @@ var keyboard = (function() {
       // ctrl+alt+d
       if (event.ctrlKey && event.altKey && event.keyCode == 68) {
         theme.toggle();
-        control.update();
+        control.render.update();
         data.save();
       };
     }, false);
@@ -83,8 +83,8 @@ var keyboard = (function() {
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
         link.edit();
         link.tabindex();
-        control.update();
-        control.render();
+        control.render.update();
+        control.render.class();
         data.save();
       };
     }, false);

@@ -66,7 +66,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       link.tabindex();
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-accent-current"),
@@ -120,7 +120,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
+      render.class();
       layout.render.width();
     }
   }, {
@@ -128,70 +128,70 @@ var control = (function() {
     path: "layout.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-layout-alignment-topcenter"),
     path: "layout.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-layout-alignment-topright"),
     path: "layout.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-layout-alignment-centerleft"),
     path: "layout.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-layout-alignment-centercenter"),
     path: "layout.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-layout-alignment-centerright"),
     path: "layout.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-layout-alignment-bottomleft"),
     path: "layout.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-layout-alignment-bottomcenter"),
     path: "layout.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-layout-alignment-bottomright"),
     path: "layout.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-layout-order-headerlink"),
     path: "layout.order",
     type: "radio",
     func: function() {
-      render();
+      render.class();
       layout.render.order();
       header.render.shade();
     }
@@ -200,7 +200,7 @@ var control = (function() {
     path: "layout.order",
     type: "radio",
     func: function() {
-      render();
+      render.class();
       layout.render.order();
       header.render.shade();
     }
@@ -308,7 +308,7 @@ var control = (function() {
     path: "layout.scrollPastEnd",
     type: "checkbox",
     func: function() {
-      render();
+      render.class();
       header.render.shade();
     }
   }, {
@@ -375,12 +375,12 @@ var control = (function() {
       }
     }],
     func: function() {
-      _setValue("header.area.width", helper.getObject({
+      mod.setValue("header.area.width", helper.getObject({
         object: state.get(),
         path: "link.area.width"
       }));
       header.render.area.width();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-header-area-alignment-left"),
@@ -396,7 +396,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-header-area-alignment-center"),
@@ -412,7 +412,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-header-area-alignment-right"),
@@ -428,36 +428,36 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-header-item-alignment-left"),
     path: "header.item.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-header-item-alignment-center"),
     path: "header.item.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-header-item-alignment-right"),
     path: "header.item.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-header-greeting-show"),
     path: "header.greeting.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       greeting.render.clear();
       greeting.render.all();
     }
@@ -553,17 +553,17 @@ var control = (function() {
       }
     }],
     func: function() {
-      _setValue("header.greeting.size", 1);
+      mod.setValue("header.greeting.size", 1);
       header.render.greeting.size();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-header-transitional-show"),
     path: "header.transitional.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       transitional.render.clear();
       transitional.render.all();
     }
@@ -643,17 +643,17 @@ var control = (function() {
       }
     }],
     func: function() {
-      _setValue("header.transitional.size", 1);
+      mod.setValue("header.transitional.size", 1);
       header.render.transitional.size();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-header-clock-hours-show"),
     path: "header.clock.hours.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       clock.render.clear();
       clock.render.all();
       greeting.render.clear();
@@ -690,8 +690,8 @@ var control = (function() {
     path: "header.clock.minutes.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       clock.render.clear();
       clock.render.all();
       greeting.render.clear();
@@ -728,8 +728,8 @@ var control = (function() {
     path: "header.clock.seconds.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       clock.render.clear();
       clock.render.all();
       greeting.render.clear();
@@ -776,7 +776,7 @@ var control = (function() {
     path: "header.clock.hour24.show",
     type: "checkbox",
     func: function() {
-      dependents();
+      render.dependents();
       clock.render.clear();
       clock.render.all();
       greeting.render.clear();
@@ -789,7 +789,7 @@ var control = (function() {
     path: "header.clock.meridiem.show",
     type: "checkbox",
     func: function() {
-      dependents();
+      render.dependents();
       clock.render.clear();
       clock.render.all();
       greeting.render.clear();
@@ -857,17 +857,17 @@ var control = (function() {
       }
     }],
     func: function() {
-      _setValue("header.clock.size", 1);
+      mod.setValue("header.clock.size", 1);
       header.render.clock.size();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-header-date-day-show"),
     path: "header.date.day.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       date.render.clear();
       date.render.all();
       greeting.render.clear();
@@ -880,7 +880,7 @@ var control = (function() {
     path: "header.date.day.display",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       date.render.clear();
       date.render.all();
       greeting.render.clear();
@@ -917,7 +917,7 @@ var control = (function() {
     path: "header.date.day.display",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       date.render.clear();
       date.render.all();
       greeting.render.clear();
@@ -954,8 +954,8 @@ var control = (function() {
     path: "header.date.date.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       date.render.clear();
       date.render.all();
       greeting.render.clear();
@@ -1004,8 +1004,8 @@ var control = (function() {
     path: "header.date.month.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       date.render.clear();
       date.render.all();
       greeting.render.clear();
@@ -1018,7 +1018,7 @@ var control = (function() {
     path: "header.date.month.display",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       date.render.clear();
       date.render.all();
       greeting.render.clear();
@@ -1043,7 +1043,7 @@ var control = (function() {
     path: "header.date.month.display",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       date.render.clear();
       date.render.all();
       greeting.render.clear();
@@ -1080,8 +1080,8 @@ var control = (function() {
     path: "header.date.year.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       date.render.clear();
       date.render.all();
       greeting.render.clear();
@@ -1209,17 +1209,17 @@ var control = (function() {
       }
     }],
     func: function() {
-      _setValue("header.date.size", 1);
+      mod.setValue("header.date.size", 1);
       header.render.date.size();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-header-search-show"),
     path: "header.search.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       header.render.search.width();
     }
   }, {
@@ -1236,8 +1236,8 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       header.render.search.width();
     }
   }, {
@@ -1254,8 +1254,8 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       header.render.search.width();
     }
   }, {
@@ -1313,7 +1313,7 @@ var control = (function() {
     path: "header.search.engine.selected",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       search.render.engine();
     }
   }, {
@@ -1321,7 +1321,7 @@ var control = (function() {
     path: "header.search.engine.selected",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       search.render.engine();
     }
   }, {
@@ -1329,7 +1329,7 @@ var control = (function() {
     path: "header.search.engine.selected",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       search.render.engine();
     }
   }, {
@@ -1337,7 +1337,7 @@ var control = (function() {
     path: "header.search.engine.selected",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       search.render.engine();
     }
   }, {
@@ -1345,7 +1345,7 @@ var control = (function() {
     path: "header.search.engine.selected",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       search.render.engine();
     }
   }, {
@@ -1353,7 +1353,7 @@ var control = (function() {
     path: "header.search.engine.selected",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       search.render.engine();
     }
   }, {
@@ -1375,21 +1375,21 @@ var control = (function() {
     path: "header.search.text.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-header-search-text-alignment-center"),
     path: "header.search.text.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-header-search-text-alignment-right"),
     path: "header.search.text.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-header-search-size"),
@@ -1451,9 +1451,9 @@ var control = (function() {
       }
     }],
     func: function() {
-      _setValue("header.search.size", 1);
+      mod.setValue("header.search.size", 1);
       header.render.search.size();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-header-button-style-box"),
@@ -1474,16 +1474,16 @@ var control = (function() {
     path: "header.button.editAdd.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
     }
   }, {
     element: helper.e(".control-header-button-accent-show"),
     path: "header.button.accent.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
     }
   }, {
     element: helper.e(".control-header-button-size"),
@@ -1545,17 +1545,17 @@ var control = (function() {
       }
     }],
     func: function() {
-      _setValue("header.button.size", 1);
+      mod.setValue("header.button.size", 1);
       header.render.button.size();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-header-shade-show"),
     path: "header.shade.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       header.render.shade();
     }
   }, {
@@ -1563,7 +1563,7 @@ var control = (function() {
     path: "header.shade.style",
     type: "radio",
     func: function() {
-      render();
+      render.class();
       header.render.shade();
     }
   }, {
@@ -1571,7 +1571,7 @@ var control = (function() {
     path: "header.shade.style",
     type: "radio",
     func: function() {
-      render();
+      render.class();
       header.render.shade();
     }
   }, {
@@ -1587,7 +1587,7 @@ var control = (function() {
     path: "header.radius",
     type: "checkbox",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-header-border-top"),
@@ -1595,7 +1595,7 @@ var control = (function() {
     type: "range",
     func: function() {
       header.render.border();
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-header-border-bottom"),
@@ -1603,7 +1603,7 @@ var control = (function() {
     type: "range",
     func: function() {
       header.render.border();
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-area-width"),
@@ -1669,12 +1669,12 @@ var control = (function() {
       }
     }],
     func: function() {
-      _setValue("link.area.width", helper.getObject({
+      mod.setValue("link.area.width", helper.getObject({
         object: state.get(),
         path: "header.area.width"
       }));
       link.render.area.width();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-link-area-alignment-left"),
@@ -1690,7 +1690,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-area-alignment-center"),
@@ -1706,7 +1706,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-area-alignment-right"),
@@ -1722,7 +1722,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-size"),
@@ -1776,8 +1776,8 @@ var control = (function() {
     path: "link.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       search.render.engine();
     }
   }, {
@@ -1793,80 +1793,80 @@ var control = (function() {
       }
     }],
     func: function() {
-      _setValue("link.item.size", 1);
+      mod.setValue("link.item.size", 1);
       link.render.item.size();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-link-item-display-alignment-topleft"),
     path: "link.item.display.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-display-alignment-topcenter"),
     path: "link.item.display.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-display-alignment-topright"),
     path: "link.item.display.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-display-alignment-centerleft"),
     path: "link.item.display.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-display-alignment-centercenter"),
     path: "link.item.display.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-display-alignment-centerright"),
     path: "link.item.display.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-display-alignment-bottomleft"),
     path: "link.item.display.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-display-alignment-bottomcenter"),
     path: "link.item.display.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-display-alignment-bottomright"),
     path: "link.item.display.alignment",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-display-show"),
     path: "link.item.display.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
     }
   }, {
     element: helper.e(".control-link-item-display-letter-size"),
@@ -1880,9 +1880,9 @@ var control = (function() {
     element: helper.e(".control-link-item-display-letter-size-default"),
     type: "button",
     func: function() {
-      _setValue("link.item.display.letter.size", 3);
+      mod.setValue("link.item.display.letter.size", 3);
       link.render.item.display.letter();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-link-item-display-icon-size"),
@@ -1896,9 +1896,9 @@ var control = (function() {
     element: helper.e(".control-link-item-display-icon-size-default"),
     type: "button",
     func: function() {
-      _setValue("link.item.display.icon.size", 3);
+      mod.setValue("link.item.display.icon.size", 3);
       link.render.item.display.icon();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-link-item-name-size"),
@@ -1912,9 +1912,9 @@ var control = (function() {
     element: helper.e(".control-link-item-name-size-default"),
     type: "button",
     func: function() {
-      _setValue("link.item.name.size", 0.9);
+      mod.setValue("link.item.name.size", 0.9);
       link.render.item.name();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-link-item-order-displayname"),
@@ -1935,30 +1935,30 @@ var control = (function() {
     path: "link.item.url.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
     }
   }, {
     element: helper.e(".control-link-item-line-show"),
     path: "link.item.line.show",
     type: "checkbox",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-name-show"),
     path: "link.item.name.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
     }
   }, {
     element: helper.e(".control-link-item-hoverscale"),
     path: "link.item.hoverScale",
     type: "checkbox",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-newtab"),
@@ -1972,14 +1972,14 @@ var control = (function() {
     path: "link.style",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-style-list"),
     path: "link.style",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-sort-letter"),
@@ -2042,16 +2042,16 @@ var control = (function() {
     element: helper.e(".control-theme-radius-default"),
     type: "button",
     func: function() {
-      _setValue("theme.radius", 0.2);
+      mod.setValue("theme.radius", 0.2);
       theme.render.radius();
-      update();
+      render.update();
     }
   }, {
     element: helper.e(".control-theme-accent-random-active"),
     path: "theme.accent.random.active",
     type: "checkbox",
     func: function() {
-      dependents();
+      render.dependents();
       theme.render.accent.color();
     }
   }, {
@@ -2059,35 +2059,35 @@ var control = (function() {
     path: "theme.accent.random.style",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-accent-random-style-light"),
     path: "theme.accent.random.style",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-accent-random-style-dark"),
     path: "theme.accent.random.style",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-accent-random-style-pastel"),
     path: "theme.accent.random.style",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-accent-random-style-saturated"),
     path: "theme.accent.random.style",
     type: "radio",
     func: function() {
-      render();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-accent-randomise"),
@@ -2102,8 +2102,8 @@ var control = (function() {
     path: "background.image.show",
     type: "checkbox",
     func: function() {
-      render();
-      dependents();
+      render.class();
+      render.dependents();
       background.render.image();
     }
   }, {
@@ -2111,7 +2111,7 @@ var control = (function() {
     path: "background.image.from",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       background.render.image();
     }
   }, {
@@ -2135,7 +2135,7 @@ var control = (function() {
     path: "background.image.from",
     type: "radio",
     func: function() {
-      dependents();
+      render.dependents();
       background.render.image();
     }
   }, {
@@ -2205,7 +2205,9 @@ var control = (function() {
     }
   }];
 
-  var _setValue = function(path, value) {
+  var mod = {};
+
+  mod.setValue = function(path, value) {
     helper.setObject({
       object: state.get(),
       path: path,
@@ -2213,7 +2215,9 @@ var control = (function() {
     });
   };
 
-  var bind = function() {
+  var bind = {};
+
+  bind.controls = function() {
     var eventType = {
       a: "click",
       button: "click",
@@ -2273,7 +2277,7 @@ var control = (function() {
       };
     };
     var bindControl = function(object) {
-      var action = {
+      var controlType = {
         a: function(object, event) {
           if (object.func) {
             object.func();
@@ -2292,7 +2296,7 @@ var control = (function() {
         }
       };
       object.element.addEventListener(eventType[object.type], function(event) {
-        action[object.element.tagName.toLowerCase()](object, event);
+        controlType[object.element.tagName.toLowerCase()](object, event);
         data.save();
       }, false);
       if (object.additionalEvents) {
@@ -2309,7 +2313,9 @@ var control = (function() {
     });
   };
 
-  var render = function() {
+  var render = {};
+
+  render.class = function() {
     var html = helper.e("html");
     var _menu = function() {
       helper.addClass(html, "is-menu");
@@ -2497,8 +2503,8 @@ var control = (function() {
     _background();
   };
 
-  var dependents = function() {
-    var disable = {
+  render.dependents = function() {
+    var _disable = {
       input: function(input, disabled) {
         if (disabled) {
           helper.e(input).disabled = true;
@@ -2529,51 +2535,51 @@ var control = (function() {
           };
         });
         if (activeCount >= 2 && (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
-          disable.input(".control-header-clock-separator-show", false);
+          _disable.input(".control-header-clock-separator-show", false);
         } else {
-          disable.input(".control-header-clock-separator-show", true);
+          _disable.input(".control-header-clock-separator-show", true);
         };
         if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
-          disable.input(".control-header-clock-hour24-show", false);
-          disable.input(".control-header-clock-meridiem-show", false);
+          _disable.input(".control-header-clock-hour24-show", false);
+          _disable.input(".control-header-clock-meridiem-show", false);
         } else {
-          disable.input(".control-header-clock-hour24-show", true);
-          disable.input(".control-header-clock-meridiem-show", true);
+          _disable.input(".control-header-clock-hour24-show", true);
+          _disable.input(".control-header-clock-meridiem-show", true);
         };
         if ((state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) && !state.get().header.clock.hour24.show) {
-          disable.input(".control-header-clock-meridiem-show", false);
+          _disable.input(".control-header-clock-meridiem-show", false);
         } else {
-          disable.input(".control-header-clock-meridiem-show", true);
+          _disable.input(".control-header-clock-meridiem-show", true);
         };
         if (state.get().header.clock.hours.show) {
-          disable.input(".control-header-clock-hours-display-number", false);
-          disable.input(".control-header-clock-hours-display-word", false);
+          _disable.input(".control-header-clock-hours-display-number", false);
+          _disable.input(".control-header-clock-hours-display-word", false);
         } else {
-          disable.input(".control-header-clock-hours-display-number", true);
-          disable.input(".control-header-clock-hours-display-word", true);
+          _disable.input(".control-header-clock-hours-display-number", true);
+          _disable.input(".control-header-clock-hours-display-word", true);
         };
         if (state.get().header.clock.minutes.show) {
-          disable.input(".control-header-clock-minutes-display-number", false);
-          disable.input(".control-header-clock-minutes-display-word", false);
+          _disable.input(".control-header-clock-minutes-display-number", false);
+          _disable.input(".control-header-clock-minutes-display-word", false);
         } else {
-          disable.input(".control-header-clock-minutes-display-number", true);
-          disable.input(".control-header-clock-minutes-display-word", true);
+          _disable.input(".control-header-clock-minutes-display-number", true);
+          _disable.input(".control-header-clock-minutes-display-word", true);
         };
         if (state.get().header.clock.seconds.show) {
-          disable.input(".control-header-clock-seconds-display-number", false);
-          disable.input(".control-header-clock-seconds-display-word", false);
+          _disable.input(".control-header-clock-seconds-display-number", false);
+          _disable.input(".control-header-clock-seconds-display-word", false);
         } else {
-          disable.input(".control-header-clock-seconds-display-number", true);
-          disable.input(".control-header-clock-seconds-display-word", true);
+          _disable.input(".control-header-clock-seconds-display-number", true);
+          _disable.input(".control-header-clock-seconds-display-word", true);
         };
         if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
-          disable.element("[for=control-header-clock-size]", false);
-          disable.input(".control-header-clock-size", false);
-          disable.input(".control-header-clock-size-default", false);
+          _disable.element("[for=control-header-clock-size]", false);
+          _disable.input(".control-header-clock-size", false);
+          _disable.input(".control-header-clock-size-default", false);
         } else {
-          disable.element("[for=control-header-clock-size]", true);
-          disable.input(".control-header-clock-size", true);
-          disable.input(".control-header-clock-size-default", true);
+          _disable.element("[for=control-header-clock-size]", true);
+          _disable.input(".control-header-clock-size", true);
+          _disable.input(".control-header-clock-size-default", true);
         };
       };
       var _date = function() {
@@ -2585,232 +2591,232 @@ var control = (function() {
           };
         });
         if (activeCount >= 2 && (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show)) {
-          disable.input(".control-header-date-separator-show", false);
+          _disable.input(".control-header-date-separator-show", false);
         } else {
-          disable.input(".control-header-date-separator-show", true);
+          _disable.input(".control-header-date-separator-show", true);
         };
         if (state.get().header.date.date.show && state.get().header.date.month.show) {
-          disable.element(".control-header-date-format-label", false);
-          disable.input(".control-header-date-format-datemonth", false);
-          disable.input(".control-header-date-format-monthdate", false);
+          _disable.element(".control-header-date-format-label", false);
+          _disable.input(".control-header-date-format-datemonth", false);
+          _disable.input(".control-header-date-format-monthdate", false);
         } else {
-          disable.element(".control-header-date-format-label", true);
-          disable.input(".control-header-date-format-datemonth", true);
-          disable.input(".control-header-date-format-monthdate", true);
+          _disable.element(".control-header-date-format-label", true);
+          _disable.input(".control-header-date-format-datemonth", true);
+          _disable.input(".control-header-date-format-monthdate", true);
         };
         if (state.get().header.date.day.show) {
-          disable.input(".control-header-date-day-display-number", false);
-          disable.input(".control-header-date-day-display-word", false);
+          _disable.input(".control-header-date-day-display-number", false);
+          _disable.input(".control-header-date-day-display-word", false);
         } else {
-          disable.input(".control-header-date-day-display-number", true);
-          disable.input(".control-header-date-day-display-word", true);
+          _disable.input(".control-header-date-day-display-number", true);
+          _disable.input(".control-header-date-day-display-word", true);
         };
         if (state.get().header.date.date.show) {
-          disable.input(".control-header-date-date-display-number", false);
-          disable.input(".control-header-date-date-display-word", false);
-          disable.input(".control-header-date-date-ordinal", false);
-          disable.element(".control-header-date-date-ordinal-helper", false);
+          _disable.input(".control-header-date-date-display-number", false);
+          _disable.input(".control-header-date-date-display-word", false);
+          _disable.input(".control-header-date-date-ordinal", false);
+          _disable.element(".control-header-date-date-ordinal-helper", false);
         } else {
-          disable.input(".control-header-date-date-display-number", true);
-          disable.input(".control-header-date-date-display-word", true);
-          disable.input(".control-header-date-date-ordinal", true);
-          disable.element(".control-header-date-date-ordinal-helper", true);
+          _disable.input(".control-header-date-date-display-number", true);
+          _disable.input(".control-header-date-date-display-word", true);
+          _disable.input(".control-header-date-date-ordinal", true);
+          _disable.element(".control-header-date-date-ordinal-helper", true);
         };
         if (state.get().header.date.month.show) {
-          disable.input(".control-header-date-month-display-number", false);
-          disable.input(".control-header-date-month-display-word", false);
+          _disable.input(".control-header-date-month-display-number", false);
+          _disable.input(".control-header-date-month-display-word", false);
         } else {
-          disable.input(".control-header-date-month-display-number", true);
-          disable.input(".control-header-date-month-display-word", true);
+          _disable.input(".control-header-date-month-display-number", true);
+          _disable.input(".control-header-date-month-display-word", true);
         };
         if (state.get().header.date.year.show) {
-          disable.input(".control-header-date-year-display-number", false);
-          disable.input(".control-header-date-year-display-word", false);
+          _disable.input(".control-header-date-year-display-number", false);
+          _disable.input(".control-header-date-year-display-word", false);
         } else {
-          disable.input(".control-header-date-year-display-number", true);
-          disable.input(".control-header-date-year-display-word", true);
+          _disable.input(".control-header-date-year-display-number", true);
+          _disable.input(".control-header-date-year-display-word", true);
         };
         if (state.get().header.date.day.show && state.get().header.date.day.display == "number") {
-          disable.element(".control-header-date-day-week-start-label", false);
-          disable.input(".control-header-date-day-week-start-monday", false);
-          disable.input(".control-header-date-day-week-start-sunday", false);
-          disable.element(".control-header-date-day-week-start-helper", false);
+          _disable.element(".control-header-date-day-week-start-label", false);
+          _disable.input(".control-header-date-day-week-start-monday", false);
+          _disable.input(".control-header-date-day-week-start-sunday", false);
+          _disable.element(".control-header-date-day-week-start-helper", false);
         } else {
-          disable.element(".control-header-date-day-week-start-label", true);
-          disable.input(".control-header-date-day-week-start-monday", true);
-          disable.input(".control-header-date-day-week-start-sunday", true);
-          disable.element(".control-header-date-day-week-start-helper", true);
+          _disable.element(".control-header-date-day-week-start-label", true);
+          _disable.input(".control-header-date-day-week-start-monday", true);
+          _disable.input(".control-header-date-day-week-start-sunday", true);
+          _disable.element(".control-header-date-day-week-start-helper", true);
         };
         if (state.get().header.date.day.show && state.get().header.date.day.display == "word") {
-          disable.element(".control-header-date-day-length-label", false);
-          disable.input(".control-header-date-day-length-long", false);
-          disable.input(".control-header-date-day-length-short", false);
+          _disable.element(".control-header-date-day-length-label", false);
+          _disable.input(".control-header-date-day-length-long", false);
+          _disable.input(".control-header-date-day-length-short", false);
         } else {
-          disable.element(".control-header-date-day-length-label", true);
-          disable.input(".control-header-date-day-length-long", true);
-          disable.input(".control-header-date-day-length-short", true);
+          _disable.element(".control-header-date-day-length-label", true);
+          _disable.input(".control-header-date-day-length-long", true);
+          _disable.input(".control-header-date-day-length-short", true);
         };
         if (state.get().header.date.month.show && state.get().header.date.month.display == "word") {
-          disable.element(".control-header-date-month-length-label", false);
-          disable.input(".control-header-date-month-length-long", false);
-          disable.input(".control-header-date-month-length-short", false);
+          _disable.element(".control-header-date-month-length-label", false);
+          _disable.input(".control-header-date-month-length-long", false);
+          _disable.input(".control-header-date-month-length-short", false);
         } else {
-          disable.element(".control-header-date-month-length-label", true);
-          disable.input(".control-header-date-month-length-long", true);
-          disable.input(".control-header-date-month-length-short", true);
+          _disable.element(".control-header-date-month-length-label", true);
+          _disable.input(".control-header-date-month-length-long", true);
+          _disable.input(".control-header-date-month-length-short", true);
         };
         if (state.get().header.date.month.show && state.get().header.date.month.display == "number") {
-          disable.input(".control-header-date-month-ordinal", false);
-          disable.element(".control-header-date-month-ordinal-helper", false);
+          _disable.input(".control-header-date-month-ordinal", false);
+          _disable.element(".control-header-date-month-ordinal-helper", false);
         } else {
-          disable.input(".control-header-date-month-ordinal", true);
-          disable.element(".control-header-date-month-ordinal-helper", true);
+          _disable.input(".control-header-date-month-ordinal", true);
+          _disable.element(".control-header-date-month-ordinal-helper", true);
         };
         if (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show) {
-          disable.element("[for=control-header-date-size]", false);
-          disable.input(".control-header-date-size", false);
-          disable.input(".control-header-date-size-default", false);
+          _disable.element("[for=control-header-date-size]", false);
+          _disable.input(".control-header-date-size", false);
+          _disable.input(".control-header-date-size-default", false);
         } else {
-          disable.element("[for=control-header-date-size]", true);
-          disable.input(".control-header-date-size", true);
-          disable.input(".control-header-date-size-default", true);
+          _disable.element("[for=control-header-date-size]", true);
+          _disable.input(".control-header-date-size", true);
+          _disable.input(".control-header-date-size-default", true);
         };
       };
       var _shade = function() {
         if (state.get().header.shade.show) {
-          disable.input(".control-header-shade-style-always", false);
-          disable.element(".control-header-shade-style-always-helper", false);
-          disable.input(".control-header-shade-style-scroll", false);
-          disable.element(".control-header-shade-style-scroll-helper", false);
-          disable.element("[for=control-header-shade-opacity]", false);
-          disable.input(".control-header-shade-opacity", false);
-          disable.input(".control-header-radius", false);
+          _disable.input(".control-header-shade-style-always", false);
+          _disable.element(".control-header-shade-style-always-helper", false);
+          _disable.input(".control-header-shade-style-scroll", false);
+          _disable.element(".control-header-shade-style-scroll-helper", false);
+          _disable.element("[for=control-header-shade-opacity]", false);
+          _disable.input(".control-header-shade-opacity", false);
+          _disable.input(".control-header-radius", false);
         } else {
-          disable.input(".control-header-shade-style-always", true);
-          disable.element(".control-header-shade-style-always-helper", true);
-          disable.input(".control-header-shade-style-scroll", true);
-          disable.element(".control-header-shade-style-scroll-helper", true);
-          disable.element("[for=control-header-shade-opacity]", true);
-          disable.input(".control-header-shade-opacity", true);
-          disable.input(".control-header-radius", true);
+          _disable.input(".control-header-shade-style-always", true);
+          _disable.element(".control-header-shade-style-always-helper", true);
+          _disable.input(".control-header-shade-style-scroll", true);
+          _disable.element(".control-header-shade-style-scroll-helper", true);
+          _disable.element("[for=control-header-shade-opacity]", true);
+          _disable.input(".control-header-shade-opacity", true);
+          _disable.input(".control-header-radius", true);
         };
       };
       var _search = function() {
         if (state.get().header.search.show) {
-          disable.element(".control-header-search-style-label", false);
-          disable.input(".control-header-search-style-auto", false);
-          disable.element(".control-header-search-style-auto-helper", false);
-          disable.input(".control-header-search-style-custom", false);
-          disable.element(".control-header-search-style-custom-helper", false);
-          disable.element("[for=control-header-search-width]", false);
-          disable.input(".control-header-search-width", false);
-          disable.input(".control-header-search-focus", false);
-          disable.element(".control-header-search-focus-helper", false);
-          disable.element(".control-header-search-engine-label", false);
-          disable.input(".control-header-search-engine-google", false);
-          disable.input(".control-header-search-engine-duckduckgo", false);
-          disable.input(".control-header-search-engine-youtube", false);
-          disable.input(".control-header-search-engine-giphy", false);
-          disable.input(".control-header-search-engine-bing", false);
-          disable.input(".control-header-search-engine-custom", false);
-          disable.element(".control-header-search-text-alignment-grid", false);
-          disable.element(".control-header-search-text-alignment-label", false);
-          disable.input(".control-header-search-text-alignment-left", false);
-          disable.input(".control-header-search-text-alignment-center", false);
-          disable.input(".control-header-search-text-alignment-right", false);
-          disable.element("[for=control-header-search-size]", false);
-          disable.input(".control-header-search-size", false);
-          disable.input(".control-header-search-size-default", false);
-          disable.element(".control-header-search-size-helper", false);
+          _disable.element(".control-header-search-style-label", false);
+          _disable.input(".control-header-search-style-auto", false);
+          _disable.element(".control-header-search-style-auto-helper", false);
+          _disable.input(".control-header-search-style-custom", false);
+          _disable.element(".control-header-search-style-custom-helper", false);
+          _disable.element("[for=control-header-search-width]", false);
+          _disable.input(".control-header-search-width", false);
+          _disable.input(".control-header-search-focus", false);
+          _disable.element(".control-header-search-focus-helper", false);
+          _disable.element(".control-header-search-engine-label", false);
+          _disable.input(".control-header-search-engine-google", false);
+          _disable.input(".control-header-search-engine-duckduckgo", false);
+          _disable.input(".control-header-search-engine-youtube", false);
+          _disable.input(".control-header-search-engine-giphy", false);
+          _disable.input(".control-header-search-engine-bing", false);
+          _disable.input(".control-header-search-engine-custom", false);
+          _disable.element(".control-header-search-text-alignment-grid", false);
+          _disable.element(".control-header-search-text-alignment-label", false);
+          _disable.input(".control-header-search-text-alignment-left", false);
+          _disable.input(".control-header-search-text-alignment-center", false);
+          _disable.input(".control-header-search-text-alignment-right", false);
+          _disable.element("[for=control-header-search-size]", false);
+          _disable.input(".control-header-search-size", false);
+          _disable.input(".control-header-search-size-default", false);
+          _disable.element(".control-header-search-size-helper", false);
         } else {
-          disable.element(".control-header-search-style-label", true);
-          disable.input(".control-header-search-style-auto", true);
-          disable.element(".control-header-search-style-auto-helper", true);
-          disable.input(".control-header-search-style-custom", true);
-          disable.element(".control-header-search-style-custom-helper", true);
-          disable.element("[for=control-header-search-width]", true);
-          disable.input(".control-header-search-width", true);
-          disable.input(".control-header-search-focus", true);
-          disable.element(".control-header-search-focus-helper", true);
-          disable.element(".control-header-search-engine-label", true);
-          disable.input(".control-header-search-engine-google", true);
-          disable.input(".control-header-search-engine-duckduckgo", true);
-          disable.input(".control-header-search-engine-youtube", true);
-          disable.input(".control-header-search-engine-giphy", true);
-          disable.input(".control-header-search-engine-bing", true);
-          disable.input(".control-header-search-engine-custom", true);
-          disable.element(".control-header-search-text-alignment-grid", true);
-          disable.element(".control-header-search-text-alignment-label", true);
-          disable.input(".control-header-search-text-alignment-left", true);
-          disable.input(".control-header-search-text-alignment-center", true);
-          disable.input(".control-header-search-text-alignment-right", true);
-          disable.element("[for=control-header-search-size]", true);
-          disable.input(".control-header-search-size", true);
-          disable.input(".control-header-search-size-default", true);
-          disable.element(".control-header-search-size-helper", true);
+          _disable.element(".control-header-search-style-label", true);
+          _disable.input(".control-header-search-style-auto", true);
+          _disable.element(".control-header-search-style-auto-helper", true);
+          _disable.input(".control-header-search-style-custom", true);
+          _disable.element(".control-header-search-style-custom-helper", true);
+          _disable.element("[for=control-header-search-width]", true);
+          _disable.input(".control-header-search-width", true);
+          _disable.input(".control-header-search-focus", true);
+          _disable.element(".control-header-search-focus-helper", true);
+          _disable.element(".control-header-search-engine-label", true);
+          _disable.input(".control-header-search-engine-google", true);
+          _disable.input(".control-header-search-engine-duckduckgo", true);
+          _disable.input(".control-header-search-engine-youtube", true);
+          _disable.input(".control-header-search-engine-giphy", true);
+          _disable.input(".control-header-search-engine-bing", true);
+          _disable.input(".control-header-search-engine-custom", true);
+          _disable.element(".control-header-search-text-alignment-grid", true);
+          _disable.element(".control-header-search-text-alignment-label", true);
+          _disable.input(".control-header-search-text-alignment-left", true);
+          _disable.input(".control-header-search-text-alignment-center", true);
+          _disable.input(".control-header-search-text-alignment-right", true);
+          _disable.element("[for=control-header-search-size]", true);
+          _disable.input(".control-header-search-size", true);
+          _disable.input(".control-header-search-size-default", true);
+          _disable.element(".control-header-search-size-helper", true);
         };
         if (state.get().header.search.show && state.get().header.search.engine.selected === "custom") {
-          disable.element("[for=control-header-search-engine-custom-name]", false);
-          disable.input(".control-header-search-engine-custom-name", false);
-          disable.element("[for=control-header-search-engine-custom-url]", false);
-          disable.input(".control-header-search-engine-custom-url", false);
-          disable.element(".control-header-search-engine-custom-helper", false);
+          _disable.element("[for=control-header-search-engine-custom-name]", false);
+          _disable.input(".control-header-search-engine-custom-name", false);
+          _disable.element("[for=control-header-search-engine-custom-url]", false);
+          _disable.input(".control-header-search-engine-custom-url", false);
+          _disable.element(".control-header-search-engine-custom-helper", false);
         } else {
-          disable.element("[for=control-header-search-engine-custom-name]", true);
-          disable.input(".control-header-search-engine-custom-name", true);
-          disable.element("[for=control-header-search-engine-custom-url]", true);
-          disable.input(".control-header-search-engine-custom-url", true);
-          disable.element(".control-header-search-engine-custom-helper", true);
+          _disable.element("[for=control-header-search-engine-custom-name]", true);
+          _disable.input(".control-header-search-engine-custom-name", true);
+          _disable.element("[for=control-header-search-engine-custom-url]", true);
+          _disable.input(".control-header-search-engine-custom-url", true);
+          _disable.element(".control-header-search-engine-custom-helper", true);
         };
         if (state.get().header.search.show && state.get().header.search.style === "custom") {
-          disable.element("[for=control-header-search-width]", false);
-          disable.input(".control-header-search-width", false);
+          _disable.element("[for=control-header-search-width]", false);
+          _disable.input(".control-header-search-width", false);
         } else {
-          disable.element("[for=control-header-search-width]", true);
-          disable.input(".control-header-search-width", true);
+          _disable.element("[for=control-header-search-width]", true);
+          _disable.input(".control-header-search-width", true);
         };
       };
       var _greeting = function() {
         if (state.get().header.greeting.show) {
-          disable.element("[for=control-header-greeting-name]", false);
-          disable.input(".control-header-greeting-name", false);
-          disable.input(".control-header-greeting-type-good", false);
-          disable.input(".control-header-greeting-type-hello", false);
-          disable.input(".control-header-greeting-type-hi", false);
-          disable.element("[for=control-header-greeting-size]", false);
-          disable.input(".control-header-greeting-size", false);
-          disable.input(".control-header-greeting-size-default", false);
+          _disable.element("[for=control-header-greeting-name]", false);
+          _disable.input(".control-header-greeting-name", false);
+          _disable.input(".control-header-greeting-type-good", false);
+          _disable.input(".control-header-greeting-type-hello", false);
+          _disable.input(".control-header-greeting-type-hi", false);
+          _disable.element("[for=control-header-greeting-size]", false);
+          _disable.input(".control-header-greeting-size", false);
+          _disable.input(".control-header-greeting-size-default", false);
         } else {
-          disable.element("[for=control-header-greeting-name]", true);
-          disable.input(".control-header-greeting-name", true);
-          disable.input(".control-header-greeting-type-good", true);
-          disable.input(".control-header-greeting-type-hello", true);
-          disable.input(".control-header-greeting-type-hi", true);
-          disable.element("[for=control-header-greeting-size]", true);
-          disable.input(".control-header-greeting-size", true);
-          disable.input(".control-header-greeting-size-default", true);
+          _disable.element("[for=control-header-greeting-name]", true);
+          _disable.input(".control-header-greeting-name", true);
+          _disable.input(".control-header-greeting-type-good", true);
+          _disable.input(".control-header-greeting-type-hello", true);
+          _disable.input(".control-header-greeting-type-hi", true);
+          _disable.element("[for=control-header-greeting-size]", true);
+          _disable.input(".control-header-greeting-size", true);
+          _disable.input(".control-header-greeting-size-default", true);
         };
       };
       var _transitional = function() {
         if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
-          disable.input(".control-header-transitional-show", false);
-          disable.element(".control-header-transitional-show-helper", false);
+          _disable.input(".control-header-transitional-show", false);
+          _disable.element(".control-header-transitional-show-helper", false);
         } else {
-          disable.input(".control-header-transitional-show", true);
-          disable.element(".control-header-transitional-show-helper", true);
+          _disable.input(".control-header-transitional-show", true);
+          _disable.element(".control-header-transitional-show-helper", true);
         };
         if (state.get().header.transitional.show && ((state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show))) {
-          disable.input(".control-header-transitional-type-timeanddate", false);
-          disable.input(".control-header-transitional-type-its", false);
-          disable.element("[for=control-header-transitional-size]", false);
-          disable.input(".control-header-transitional-size", false);
-          disable.input(".control-header-transitional-size-default", false);
+          _disable.input(".control-header-transitional-type-timeanddate", false);
+          _disable.input(".control-header-transitional-type-its", false);
+          _disable.element("[for=control-header-transitional-size]", false);
+          _disable.input(".control-header-transitional-size", false);
+          _disable.input(".control-header-transitional-size-default", false);
         } else {
-          disable.input(".control-header-transitional-type-timeanddate", true);
-          disable.input(".control-header-transitional-type-its", true);
-          disable.element("[for=control-header-transitional-size]", true);
-          disable.input(".control-header-transitional-size", true);
-          disable.input(".control-header-transitional-size-default", true);
+          _disable.input(".control-header-transitional-type-timeanddate", true);
+          _disable.input(".control-header-transitional-type-its", true);
+          _disable.element("[for=control-header-transitional-size]", true);
+          _disable.input(".control-header-transitional-size", true);
+          _disable.input(".control-header-transitional-size-default", true);
         };
       };
       _clock();
@@ -2822,193 +2828,193 @@ var control = (function() {
     };
     var _edit = function() {
       if (bookmarks.get().length > 0) {
-        disable.input(".control-link-edit", false);
+        _disable.input(".control-link-edit", false);
       } else {
-        disable.input(".control-link-edit", false);
+        _disable.input(".control-link-edit", false);
       };
     };
     var _link = function() {
-      disable.input(".control-layout-order-headerlink", true);
-      disable.input(".control-layout-order-linkheader", true);
-      disable.element(".control-layout-order-helper", true);
-      disable.element("[for=control-link-area-width]", true);
-      disable.input(".control-link-area-width", true);
-      disable.input(".control-link-area-width-match", true);
-      disable.element(".control-link-area-width-helper", true);
-      disable.element(".control-link-area-alignment-grid", true);
-      disable.element(".control-link-area-alignment-label", true);
-      disable.input(".control-link-area-alignment-left", true);
-      disable.input(".control-link-area-alignment-center", true);
-      disable.input(".control-link-area-alignment-right", true);
-      disable.element(".control-link-area-alignment-helper", true);
-      disable.element("[for=control-link-item-size]", true);
-      disable.input(".control-link-item-size", true);
-      disable.input(".control-link-item-size-default", true);
-      disable.input(".control-link-item-display-show", true);
-      disable.element("[for=control-link-item-display-letter-size]", true);
-      disable.input(".control-link-item-display-letter-size", true);
-      disable.input(".control-link-item-display-letter-size-default", true);
-      disable.element("[for=control-link-item-display-icon-size]", true);
-      disable.input(".control-link-item-display-icon-size", true);
-      disable.input(".control-link-item-display-icon-size-default", true);
-      disable.input(".control-link-item-name-show", true);
-      disable.element("[for=control-link-item-name-size]", true);
-      disable.input(".control-link-item-name-size", true);
-      disable.input(".control-link-item-name-size-default", true);
-      disable.input(".control-link-item-order-displayname", true);
-      disable.input(".control-link-item-order-namedisplay", true);
-      disable.element(".control-link-item-order-namedisplay-helper", true);
-      disable.input(".control-link-item-url-show", true);
-      disable.input(".control-link-item-line-show", true);
-      disable.input(".control-link-item-hoverscale", true);
-      disable.element(".control-link-item-display-alignment-grid", true);
-      disable.element(".control-link-item-display-alignment-label", true);
-      disable.input(".control-link-item-display-alignment-topleft", true);
-      disable.input(".control-link-item-display-alignment-topcenter", true);
-      disable.input(".control-link-item-display-alignment-topright", true);
-      disable.input(".control-link-item-display-alignment-centerleft", true);
-      disable.input(".control-link-item-display-alignment-centercenter", true);
-      disable.input(".control-link-item-display-alignment-centerright", true);
-      disable.input(".control-link-item-display-alignment-bottomleft", true);
-      disable.input(".control-link-item-display-alignment-bottomcenter", true);
-      disable.input(".control-link-item-display-alignment-bottomright", true);
-      disable.input(".control-link-newtab", true);
-      disable.input(".control-link-style-block", true);
-      disable.element(".control-link-style-block-helper", true);
-      disable.input(".control-link-style-list", true);
-      disable.element(".control-link-style-list-helper", true);
-      disable.input(".control-link-sort-name", true);
-      disable.input(".control-link-sort-letter", true);
-      disable.input(".control-link-sort-icon", true);
-      disable.input(".control-link-accent-clear", true);
-      disable.input(".control-link-accent-set", true);
+      _disable.input(".control-layout-order-headerlink", true);
+      _disable.input(".control-layout-order-linkheader", true);
+      _disable.element(".control-layout-order-helper", true);
+      _disable.element("[for=control-link-area-width]", true);
+      _disable.input(".control-link-area-width", true);
+      _disable.input(".control-link-area-width-match", true);
+      _disable.element(".control-link-area-width-helper", true);
+      _disable.element(".control-link-area-alignment-grid", true);
+      _disable.element(".control-link-area-alignment-label", true);
+      _disable.input(".control-link-area-alignment-left", true);
+      _disable.input(".control-link-area-alignment-center", true);
+      _disable.input(".control-link-area-alignment-right", true);
+      _disable.element(".control-link-area-alignment-helper", true);
+      _disable.element("[for=control-link-item-size]", true);
+      _disable.input(".control-link-item-size", true);
+      _disable.input(".control-link-item-size-default", true);
+      _disable.input(".control-link-item-display-show", true);
+      _disable.element("[for=control-link-item-display-letter-size]", true);
+      _disable.input(".control-link-item-display-letter-size", true);
+      _disable.input(".control-link-item-display-letter-size-default", true);
+      _disable.element("[for=control-link-item-display-icon-size]", true);
+      _disable.input(".control-link-item-display-icon-size", true);
+      _disable.input(".control-link-item-display-icon-size-default", true);
+      _disable.input(".control-link-item-name-show", true);
+      _disable.element("[for=control-link-item-name-size]", true);
+      _disable.input(".control-link-item-name-size", true);
+      _disable.input(".control-link-item-name-size-default", true);
+      _disable.input(".control-link-item-order-displayname", true);
+      _disable.input(".control-link-item-order-namedisplay", true);
+      _disable.element(".control-link-item-order-namedisplay-helper", true);
+      _disable.input(".control-link-item-url-show", true);
+      _disable.input(".control-link-item-line-show", true);
+      _disable.input(".control-link-item-hoverscale", true);
+      _disable.element(".control-link-item-display-alignment-grid", true);
+      _disable.element(".control-link-item-display-alignment-label", true);
+      _disable.input(".control-link-item-display-alignment-topleft", true);
+      _disable.input(".control-link-item-display-alignment-topcenter", true);
+      _disable.input(".control-link-item-display-alignment-topright", true);
+      _disable.input(".control-link-item-display-alignment-centerleft", true);
+      _disable.input(".control-link-item-display-alignment-centercenter", true);
+      _disable.input(".control-link-item-display-alignment-centerright", true);
+      _disable.input(".control-link-item-display-alignment-bottomleft", true);
+      _disable.input(".control-link-item-display-alignment-bottomcenter", true);
+      _disable.input(".control-link-item-display-alignment-bottomright", true);
+      _disable.input(".control-link-newtab", true);
+      _disable.input(".control-link-style-block", true);
+      _disable.element(".control-link-style-block-helper", true);
+      _disable.input(".control-link-style-list", true);
+      _disable.element(".control-link-style-list-helper", true);
+      _disable.input(".control-link-sort-name", true);
+      _disable.input(".control-link-sort-letter", true);
+      _disable.input(".control-link-sort-icon", true);
+      _disable.input(".control-link-accent-clear", true);
+      _disable.input(".control-link-accent-set", true);
       if (state.get().link.show) {
-        disable.input(".control-layout-order-headerlink", false);
-        disable.input(".control-layout-order-linkheader", false);
-        disable.element(".control-layout-order-helper", false);
-        disable.element("[for=control-link-area-width]", false);
-        disable.input(".control-link-area-width", false);
-        disable.input(".control-link-area-width-match", false);
-        disable.element(".control-link-area-width-helper", false);
-        disable.element(".control-link-area-alignment-grid", false);
-        disable.element(".control-link-area-alignment-label", false);
-        disable.input(".control-link-area-alignment-left", false);
-        disable.input(".control-link-area-alignment-center", false);
-        disable.input(".control-link-area-alignment-right", false);
-        disable.element(".control-link-area-alignment-helper", false);
-        disable.element("[for=control-link-item-size]", false);
-        disable.input(".control-link-item-size", false);
-        disable.input(".control-link-item-size-default", false);
-        disable.input(".control-link-item-display-show", false);
-        disable.input(".control-link-item-name-show", false);
-        disable.input(".control-link-item-url-show", false);
-        disable.input(".control-link-item-line-show", false);
-        disable.input(".control-link-item-hoverscale", false);
-        disable.input(".control-link-newtab", false);
-        disable.input(".control-link-style-block", false);
-        disable.element(".control-link-style-block-helper", false);
-        disable.input(".control-link-style-list", false);
-        disable.element(".control-link-style-list-helper", false);
-        disable.input(".control-link-sort-name", false);
-        disable.input(".control-link-sort-letter", false);
-        disable.input(".control-link-sort-icon", false);
-        disable.input(".control-link-accent-clear", false);
-        disable.input(".control-link-accent-set", false);
+        _disable.input(".control-layout-order-headerlink", false);
+        _disable.input(".control-layout-order-linkheader", false);
+        _disable.element(".control-layout-order-helper", false);
+        _disable.element("[for=control-link-area-width]", false);
+        _disable.input(".control-link-area-width", false);
+        _disable.input(".control-link-area-width-match", false);
+        _disable.element(".control-link-area-width-helper", false);
+        _disable.element(".control-link-area-alignment-grid", false);
+        _disable.element(".control-link-area-alignment-label", false);
+        _disable.input(".control-link-area-alignment-left", false);
+        _disable.input(".control-link-area-alignment-center", false);
+        _disable.input(".control-link-area-alignment-right", false);
+        _disable.element(".control-link-area-alignment-helper", false);
+        _disable.element("[for=control-link-item-size]", false);
+        _disable.input(".control-link-item-size", false);
+        _disable.input(".control-link-item-size-default", false);
+        _disable.input(".control-link-item-display-show", false);
+        _disable.input(".control-link-item-name-show", false);
+        _disable.input(".control-link-item-url-show", false);
+        _disable.input(".control-link-item-line-show", false);
+        _disable.input(".control-link-item-hoverscale", false);
+        _disable.input(".control-link-newtab", false);
+        _disable.input(".control-link-style-block", false);
+        _disable.element(".control-link-style-block-helper", false);
+        _disable.input(".control-link-style-list", false);
+        _disable.element(".control-link-style-list-helper", false);
+        _disable.input(".control-link-sort-name", false);
+        _disable.input(".control-link-sort-letter", false);
+        _disable.input(".control-link-sort-icon", false);
+        _disable.input(".control-link-accent-clear", false);
+        _disable.input(".control-link-accent-set", false);
         if (state.get().link.item.display.show) {
-          disable.element("[for=control-link-item-display-letter-size]", false);
-          disable.input(".control-link-item-display-letter-size", false);
-          disable.input(".control-link-item-display-letter-size-default", false);
-          disable.element("[for=control-link-item-display-icon-size]", false);
-          disable.input(".control-link-item-display-icon-size", false);
-          disable.input(".control-link-item-display-icon-size-default", false);
+          _disable.element("[for=control-link-item-display-letter-size]", false);
+          _disable.input(".control-link-item-display-letter-size", false);
+          _disable.input(".control-link-item-display-letter-size-default", false);
+          _disable.element("[for=control-link-item-display-icon-size]", false);
+          _disable.input(".control-link-item-display-icon-size", false);
+          _disable.input(".control-link-item-display-icon-size-default", false);
         };
         if (state.get().link.item.name.show) {
-          disable.element("[for=control-link-item-name-size]", false);
-          disable.input(".control-link-item-name-size", false);
-          disable.input(".control-link-item-name-size-default", false);
+          _disable.element("[for=control-link-item-name-size]", false);
+          _disable.input(".control-link-item-name-size", false);
+          _disable.input(".control-link-item-name-size-default", false);
         };
         if (state.get().link.item.display.show || state.get().link.item.name.show) {
-          disable.element(".control-link-item-display-alignment-grid", false);
-          disable.element(".control-link-item-display-alignment-label", false);
-          disable.input(".control-link-item-display-alignment-topleft", false);
-          disable.input(".control-link-item-display-alignment-topcenter", false);
-          disable.input(".control-link-item-display-alignment-topright", false);
-          disable.input(".control-link-item-display-alignment-centerleft", false);
-          disable.input(".control-link-item-display-alignment-centercenter", false);
-          disable.input(".control-link-item-display-alignment-centerright", false);
-          disable.input(".control-link-item-display-alignment-bottomleft", false);
-          disable.input(".control-link-item-display-alignment-bottomcenter", false);
-          disable.input(".control-link-item-display-alignment-bottomright", false);
+          _disable.element(".control-link-item-display-alignment-grid", false);
+          _disable.element(".control-link-item-display-alignment-label", false);
+          _disable.input(".control-link-item-display-alignment-topleft", false);
+          _disable.input(".control-link-item-display-alignment-topcenter", false);
+          _disable.input(".control-link-item-display-alignment-topright", false);
+          _disable.input(".control-link-item-display-alignment-centerleft", false);
+          _disable.input(".control-link-item-display-alignment-centercenter", false);
+          _disable.input(".control-link-item-display-alignment-centerright", false);
+          _disable.input(".control-link-item-display-alignment-bottomleft", false);
+          _disable.input(".control-link-item-display-alignment-bottomcenter", false);
+          _disable.input(".control-link-item-display-alignment-bottomright", false);
         };
         if (state.get().link.item.display.show && state.get().link.item.name.show) {
-          disable.input(".control-link-item-order-displayname", false);
-          disable.input(".control-link-item-order-namedisplay", false);
-          disable.element(".control-link-item-order-namedisplay-helper", false);
+          _disable.input(".control-link-item-order-displayname", false);
+          _disable.input(".control-link-item-order-namedisplay", false);
+          _disable.element(".control-link-item-order-namedisplay-helper", false);
         };
       };
     };
     var _theme = function() {
       if (state.get().theme.accent.random.active) {
-        disable.input(".control-theme-accent-random-style-any", false);
-        disable.input(".control-theme-accent-random-style-light", false);
-        disable.input(".control-theme-accent-random-style-dark", false);
-        disable.input(".control-theme-accent-random-style-pastel", false);
-        disable.input(".control-theme-accent-random-style-saturated", false);
-        disable.input(".control-theme-accent-randomise", false);
+        _disable.input(".control-theme-accent-random-style-any", false);
+        _disable.input(".control-theme-accent-random-style-light", false);
+        _disable.input(".control-theme-accent-random-style-dark", false);
+        _disable.input(".control-theme-accent-random-style-pastel", false);
+        _disable.input(".control-theme-accent-random-style-saturated", false);
+        _disable.input(".control-theme-accent-randomise", false);
       } else {
-        disable.input(".control-theme-accent-random-style-any", true);
-        disable.input(".control-theme-accent-random-style-light", true);
-        disable.input(".control-theme-accent-random-style-dark", true);
-        disable.input(".control-theme-accent-random-style-pastel", true);
-        disable.input(".control-theme-accent-random-style-saturated", true);
-        disable.input(".control-theme-accent-randomise", true);
+        _disable.input(".control-theme-accent-random-style-any", true);
+        _disable.input(".control-theme-accent-random-style-light", true);
+        _disable.input(".control-theme-accent-random-style-dark", true);
+        _disable.input(".control-theme-accent-random-style-pastel", true);
+        _disable.input(".control-theme-accent-random-style-saturated", true);
+        _disable.input(".control-theme-accent-randomise", true);
       };
     };
     var _background = function() {
       if (state.get().background.image.show) {
-        disable.input(".control-background-image-from-file", false);
-        disable.input(".control-background-image-from-url", false);
-        disable.element("[for=control-background-image-opacity]", false);
-        disable.input(".control-background-image-opacity", false);
-        disable.element("[for=control-background-image-blur]", false);
-        disable.input(".control-background-image-blur", false);
-        disable.element("[for=control-background-image-grayscale]", false);
-        disable.input(".control-background-image-grayscale", false);
-        disable.element("[for=control-background-image-accent]", false);
-        disable.input(".control-background-image-accent", false);
-        disable.element("[for=control-background-image-scale]", false);
-        disable.input(".control-background-image-scale", false);
+        _disable.input(".control-background-image-from-file", false);
+        _disable.input(".control-background-image-from-url", false);
+        _disable.element("[for=control-background-image-opacity]", false);
+        _disable.input(".control-background-image-opacity", false);
+        _disable.element("[for=control-background-image-blur]", false);
+        _disable.input(".control-background-image-blur", false);
+        _disable.element("[for=control-background-image-grayscale]", false);
+        _disable.input(".control-background-image-grayscale", false);
+        _disable.element("[for=control-background-image-accent]", false);
+        _disable.input(".control-background-image-accent", false);
+        _disable.element("[for=control-background-image-scale]", false);
+        _disable.input(".control-background-image-scale", false);
       } else {
-        disable.input(".control-background-image-from-file", true);
-        disable.input(".control-background-image-from-url", true);
-        disable.element("[for=control-background-image-opacity]", true);
-        disable.input(".control-background-image-opacity", true);
-        disable.element("[for=control-background-image-blur]", true);
-        disable.input(".control-background-image-blur", true);
-        disable.element("[for=control-background-image-grayscale]", true);
-        disable.input(".control-background-image-grayscale", true);
-        disable.element("[for=control-background-image-accent]", true);
-        disable.input(".control-background-image-accent", true);
-        disable.element("[for=control-background-image-scale]", true);
-        disable.input(".control-background-image-scale", true);
+        _disable.input(".control-background-image-from-file", true);
+        _disable.input(".control-background-image-from-url", true);
+        _disable.element("[for=control-background-image-opacity]", true);
+        _disable.input(".control-background-image-opacity", true);
+        _disable.element("[for=control-background-image-blur]", true);
+        _disable.input(".control-background-image-blur", true);
+        _disable.element("[for=control-background-image-grayscale]", true);
+        _disable.input(".control-background-image-grayscale", true);
+        _disable.element("[for=control-background-image-accent]", true);
+        _disable.input(".control-background-image-accent", true);
+        _disable.element("[for=control-background-image-scale]", true);
+        _disable.input(".control-background-image-scale", true);
       };
       if (state.get().background.image.show && state.get().background.image.from == "file") {
-        disable.element(".control-background-image-file-feedback", false);
-        disable.input(".control-background-image-file", false);
-        disable.input(".control-background-image-file-clear", false);
-        disable.element(".control-background-image-file-helper", false);
+        _disable.element(".control-background-image-file-feedback", false);
+        _disable.input(".control-background-image-file", false);
+        _disable.input(".control-background-image-file-clear", false);
+        _disable.element(".control-background-image-file-helper", false);
       } else {
-        disable.element(".control-background-image-file-feedback", true);
-        disable.input(".control-background-image-file", true);
-        disable.input(".control-background-image-file-clear", true);
-        disable.element(".control-background-image-file-helper", true);
+        _disable.element(".control-background-image-file-feedback", true);
+        _disable.input(".control-background-image-file", true);
+        _disable.input(".control-background-image-file-clear", true);
+        _disable.element(".control-background-image-file-helper", true);
       };
       if (state.get().background.image.show && state.get().background.image.from == "url") {
-        disable.input(".control-background-image-url", false);
-        disable.element(".control-background-image-url-helper", false);
+        _disable.input(".control-background-image-url", false);
+        _disable.element(".control-background-image-url-helper", false);
       } else {
-        disable.input(".control-background-image-url", true);
-        disable.element(".control-background-image-url-helper", true);
+        _disable.input(".control-background-image-url", true);
+        _disable.element(".control-background-image-url-helper", true);
       };
     };
     _header();
@@ -3018,7 +3024,7 @@ var control = (function() {
     _background();
   };
 
-  var update = function() {
+  render.update = function() {
     var valueMod = {
       reverse: function(value, element) {
         return parseInt(element.max, 10) - value;
@@ -3080,19 +3086,18 @@ var control = (function() {
   };
 
   var init = function() {
-    bind();
-    update();
-    dependents();
-    render();
+    bind.controls();
+    render.update();
+    render.dependents();
+    render.class();
   };
 
   // exposed methods
   return {
     init: init,
+    mod: mod,
     bind: bind,
-    render: render,
-    dependents: dependents,
-    update: update
+    render: render
   };
 
 })();

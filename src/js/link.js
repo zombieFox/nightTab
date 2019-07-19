@@ -156,8 +156,8 @@ var link = (function() {
         render.item.tabindex();
         render.previousFocus();
         sortable(".link-area");
-        control.dependents();
-        control.render();
+        control.render.dependents();
+        control.render.class();
         shade.close();
         pagelock.unlock();
       },
@@ -742,8 +742,8 @@ var link = (function() {
           render.item.all();
           render.item.tabindex();
           sortable(".link-area");
-          control.dependents();
-          control.render();
+          control.render.dependents();
+          control.render.class();
           stagedLink.reset();
           shade.close();
           pagelock.unlock();
