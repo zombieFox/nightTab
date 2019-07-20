@@ -1,12 +1,14 @@
 var update = (function() {
 
+  var mod = {};
+
   // this associative array contains all the updates. add a new entry if you need to modify data.
   // example, this assumes the previous version is less than 3.28.0:
   // "3.28.0": function(data) {
   //   return data;
   // };
   // always add the version in increasing order so the most recent version is last.
-  var _update = {
+  mod.all = {
     "1.0.0": function(data) {
       data.version = "1.0.0";
       return data;
@@ -593,10 +595,10 @@ var update = (function() {
     }
   };
 
-  function run(data) {
+  mod.run = function(data) {
     // legacy update as first version of nightTab did not have a version number stored in the state object
     if (!("version" in data)) {
-      data = _update["1.0.0"](data);
+      data = mod.all["1.0.0"](data);
     };
 
     // old version numbers were type of number
@@ -607,11 +609,11 @@ var update = (function() {
       data.version = data.version.join(".");
     };
 
-    // loop over all updates in _update object
-    for (var key in _update) {
+    // loop over all updates in mod.all object
+    for (var key in mod.all) {
       if (version.compare(data.version, key) == -1) {
         console.log("\t > running update", key);
-        data = _update[key](data);
+        data = mod.all[key](data);
         data.version = key;
       };
     };
@@ -625,9 +627,13 @@ var update = (function() {
     return data;
   };
 
+  var run = function(data) {
+    return mod.run(data);
+  };
+
   // exposed methods
   return {
-    _update: _update,
+    mod: mod,
     run: run
   };
 
