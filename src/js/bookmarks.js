@@ -178,9 +178,9 @@ var bookmarks = (function() {
   mod.get = function(data) {
     var _singleBookmark = function() {
       var found = false;
-      for (var i = 0; i < all.length; i++) {
-        if (all[i].timeStamp === data.timeStamp) {
-          found = all[i];
+      for (var i = 0; i < mod.all.length; i++) {
+        if (mod.all[i].timeStamp === data.timeStamp) {
+          found = mod.all[i];
         };
       };
       return found;
@@ -188,32 +188,32 @@ var bookmarks = (function() {
     if (data && typeof data.timeStamp == "number") {
       return _singleBookmark();
     } else {
-      return all;
+      return mod.all;
     };
   };
 
   mod.restore = function(data) {
     if ("bookmarks" in data) {
-      all = data.bookmarks;
+      mod.all = data.bookmarks;
     };
   };
 
   mod.add = function(data) {
-    all.push(data);
+    mod.all.push(data);
   };
 
   mod.edit = function(data) {
-    for (var i = 0; i < all.length; i++) {
-      if (all[i].timeStamp === data.timeStamp) {
-        all[i] = data;
+    for (var i = 0; i < mod.all.length; i++) {
+      if (mod.all[i].timeStamp === data.timeStamp) {
+        mod.all[i] = data;
       };
     };
   };
 
   mod.remove = function(data) {
-    for (var i = 0; i < all.length; i++) {
-      if (all[i].timeStamp === data.timeStamp) {
-        all.splice(all.indexOf(all[i]), 1);
+    for (var i = 0; i < mod.all.length; i++) {
+      if (mod.all[i].timeStamp === data.timeStamp) {
+        mod.all.splice(mod.all.indexOf(mod.all[i]), 1);
       };
     };
   };
@@ -230,11 +230,11 @@ var bookmarks = (function() {
         return helper.sortObject(array, "icon.name");
       }
     };
-    all = action[by](all);
+    mod.all = action[by](mod.all);
   };
 
   mod.move = function(origin, destination) {
-    all = helper.moveArrayItem(all, origin, destination);
+    mod.all = helper.moveArrayItem(mod.all, origin, destination);
   };
 
   var get = function(data) {

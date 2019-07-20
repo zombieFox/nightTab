@@ -221,12 +221,12 @@ var state = (function() {
   };
 
   mod.get = function() {
-    return current;
+    return mod.current;
   };
 
   mod.restore = function(data) {
     if ("state" in data) {
-      current = data.state;
+      mod.current = data.state;
     };
   };
 
