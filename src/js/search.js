@@ -42,16 +42,11 @@ var search = (function() {
       };
       searchedBookmarks.total = bookmarks.get().length;
       bookmarks.get().forEach(function(arrayItem, index) {
-        if (arrayItem.url != null) {
-          if (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, ""))) {
-            var bookmarkDataCopy = JSON.parse(JSON.stringify(arrayItem));
-            searchedBookmarks.matching.push(bookmarkDataCopy);
-          };
-        } else if (arrayItem.name != null) {
-          if (arrayItem.name.toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, ""))) {
-            var bookmarkDataCopy = JSON.parse(JSON.stringify(arrayItem));
-            searchedBookmarks.matching.push(bookmarkDataCopy);
-          };
+        var matchUrl = (arrayItem.url != null) && (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, "")));
+        var matchName = (arrayItem.name != null) && (arrayItem.name.toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, "")));
+        if (matchUrl || matchName) {
+          var bookmarkDataCopy = JSON.parse(JSON.stringify(arrayItem));
+          searchedBookmarks.matching.push(bookmarkDataCopy);
         };
       });
       return searchedBookmarks;

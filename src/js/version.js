@@ -1,6 +1,6 @@
 var version = (function() {
 
-  var current = "3.60.0";
+  var current = "3.61.0";
 
   var compare = function(a, b) {
     var pa = a.split(".");
