@@ -1,6 +1,8 @@
 var bookmarks = (function() {
 
-  var all = [{
+  var mod = {};
+
+  mod.all = [{
     display: "icon",
     letter: "DEV",
     icon: {
@@ -173,7 +175,7 @@ var bookmarks = (function() {
     timeStamp: 1546453111953
   }];
 
-  var get = function(data) {
+  mod.get = function(data) {
     var _singleBookmark = function() {
       var found = false;
       for (var i = 0; i < all.length; i++) {
@@ -190,17 +192,17 @@ var bookmarks = (function() {
     };
   };
 
-  var restore = function(data) {
+  mod.restore = function(data) {
     if ("bookmarks" in data) {
       all = data.bookmarks;
     };
   };
 
-  var add = function(data) {
+  mod.add = function(data) {
     all.push(data);
   };
 
-  var edit = function(data) {
+  mod.edit = function(data) {
     for (var i = 0; i < all.length; i++) {
       if (all[i].timeStamp === data.timeStamp) {
         all[i] = data;
@@ -208,7 +210,7 @@ var bookmarks = (function() {
     };
   };
 
-  var remove = function(data) {
+  mod.remove = function(data) {
     for (var i = 0; i < all.length; i++) {
       if (all[i].timeStamp === data.timeStamp) {
         all.splice(all.indexOf(all[i]), 1);
@@ -216,7 +218,7 @@ var bookmarks = (function() {
     };
   };
 
-  var sort = function(by) {
+  mod.sort = function(by) {
     var action = {
       name: function(array) {
         return helper.sortObject(array, "name");
@@ -231,27 +233,50 @@ var bookmarks = (function() {
     all = action[by](all);
   };
 
-  var move = function(origin, destination) {
+  mod.move = function(origin, destination) {
     all = helper.moveArrayItem(all, origin, destination);
+  };
+
+  var get = function(data) {
+    return mod.get(data);
+  };
+
+  var add = function(data) {
+    mod.add(data);
+  };
+
+  var edit = function(data) {
+    mod.edit(data);
+  };
+
+  var sort = function(by) {
+    mod.sort(by);
+  };
+
+  var move = function(origin, destination) {
+    mod.move(origin, destination);
+  };
+
+  var remove = function(data) {
+    mod.remove(data);
   };
 
   var init = function() {
     if (data.load()) {
-      restore(data.load());
+      mod.restore(data.load());
     };
   };
 
   // exposed methods
   return {
-    all: all,
     init: init,
+    mod: mod,
     get: get,
     add: add,
     edit: edit,
     sort: sort,
     move: move,
-    remove: remove,
-    restore: restore
+    remove: remove
   };
 
 })();
