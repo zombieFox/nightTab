@@ -1,6 +1,8 @@
 var state = (function() {
 
-  var current = {
+  var mod = {};
+
+  mod.current = {
     header: {
       area: {
         width: 100,
@@ -218,11 +220,11 @@ var state = (function() {
     autoSuggest: false,
   };
 
-  var get = function() {
+  mod.get = function() {
     return current;
   };
 
-  var restore = function(data) {
+  mod.restore = function(data) {
     if ("state" in data) {
       current = data.state;
     };
@@ -230,12 +232,17 @@ var state = (function() {
 
   var init = function() {
     if (data.load()) {
-      restore(data.load());
+      mod.restore(data.load());
     };
+  };
+
+  var get = function() {
+    return mod.get();
   };
 
   return {
     init: init,
+    mod: mod,
     get: get
   };
 
