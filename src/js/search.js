@@ -43,7 +43,7 @@ var search = (function() {
       searchedBookmarks.total = bookmarks.get().length;
       bookmarks.get().forEach(function(arrayItem, index) {
         var matchUrl = (arrayItem.url != null) && (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, "")));
-        var matchName = (arrayItem.name != null) && (arrayItem.name.toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, "")));
+        var matchName = (arrayItem.name != null) && (arrayItem.name.toLowerCase().replace(/\s/g, "").includes(searchInput.value.toLowerCase().replace(/\s/g, "")));
         if (matchUrl || matchName) {
           var bookmarkDataCopy = JSON.parse(JSON.stringify(arrayItem));
           searchedBookmarks.matching.push(bookmarkDataCopy);
