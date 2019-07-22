@@ -39,6 +39,7 @@ var layout = (function() {
     render.padding();
     render.gutter();
     render.order();
+    render.title();
   };
 
   // exposed methods
