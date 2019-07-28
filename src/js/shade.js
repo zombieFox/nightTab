@@ -80,9 +80,6 @@ var shade = (function() {
         if (event.propertyName === "opacity" && getComputedStyle(this).opacity == 0) {
           this.parentElement.removeChild(this);
         };
-        if (event.propertyName === "opacity" && getComputedStyle(this).opacity == 1) {
-          helper.addClass(this, "is-transition-end");
-        };
       }.bind(shade), false);
       shade.addEventListener("click", function() {
         if (options.action) {

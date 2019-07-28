@@ -34,15 +34,11 @@
   grid-template-rows: 1fr auto;
   justify-items: stretch;
   align-items: stretch;
-  transition: opacity var(--layout-transition-speed-fast);
+  transition: opacity var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .modal-wrapper .container {
   max-width: 100%;
-}
-
-.is-transition-end .modal-wrapper {
-  transition: opacity var(--layout-transition-speed-fast) ease-in-out;
 }
 
 .modal-body {
