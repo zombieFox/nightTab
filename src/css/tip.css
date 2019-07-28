@@ -6,7 +6,7 @@
   top: 0;
   opacity: 1;
   z-index: var(--z-index-tip);
-  transition: opacity var(--layout-transition-speed-fast) ease-in-out;
+  transition: opacity var(--layout-transition-fast);
   transform-origin: bottom center;
   pointer-events: none;
 }

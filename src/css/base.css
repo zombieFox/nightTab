@@ -18,7 +18,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  transition: background-color var(--layout-transition-speed-fast) ease-in-out;
+  transition: background-color var(--layout-transition-fast);
 }
 
 .is-layout-scrollpastend body {

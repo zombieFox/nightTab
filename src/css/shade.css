@@ -6,7 +6,7 @@
   width: calc(100% + 2em);
   height: calc(100% + 2em);
   opacity: 0;
-  transition: opacity var(--layout-transition-speed-fast) ease-in-out, background-color var(--layout-transition-speed-fast) ease-in-out;
+  transition: opacity var(--layout-transition-fast), background-color var(--layout-transition-fast);
   z-index: var(--z-index-shade);
 }
 
