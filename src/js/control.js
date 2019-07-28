@@ -2127,7 +2127,9 @@ var control = (function() {
       background.mod.clear.file();
       background.render.input.clear();
       background.render.image();
-      background.render.feedback.clear();
+      background.render.feedback.clear({
+        animate: true
+      });
       background.render.feedback.empty();
     }
   }, {

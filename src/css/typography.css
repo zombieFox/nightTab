@@ -102,7 +102,7 @@ a:active {
   border-bottom-width: calc(var(--layout-line-width) / 2);
   border-bottom-style: solid;
   border-bottom-color: rgb(var(--theme-gray-06));
-  transition: color var(--layout-transition-speed-fast), border-color var(--layout-transition-speed-fast);
+  transition: color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast);
 }
 
 .a-underline:hover {

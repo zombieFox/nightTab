@@ -82,6 +82,7 @@ var data = (function() {
         var controlDataImportFeedback = helper.e(".control-data-import-feedback");
         helper.removeClass(controlDataImportFeedback, "is-shake");
         helper.removeClass(controlDataImportFeedback, "is-pop");
+        helper.removeClass(controlDataImportFeedback, "is-jello");
         controlDataImportFeedback.removeEventListener("animationend", bind.feedback.animation.reset, false);
       }
     }
@@ -147,10 +148,19 @@ var data = (function() {
         bind.feedback.animation.set("is-pop", action);
       };
     },
-    clear: function() {
+    clear: function(override) {
+      var options = {
+        animate: null
+      };
+      if (override) {
+        options = helper.applyOptions(options, override);
+      };
       var controlDataImportFeedback = helper.e(".control-data-import-feedback");
       while (controlDataImportFeedback.lastChild) {
         controlDataImportFeedback.removeChild(controlDataImportFeedback.lastChild);
+      };
+      if (options.animate) {
+        bind.feedback.animation.set("is-jello");
       };
     },
     fail: {

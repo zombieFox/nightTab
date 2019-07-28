@@ -32,11 +32,15 @@
 }
 
 .is-shake {
-  animation: shake var(--layout-transition-speed-slow) 1;
+  animation: shake var(--layout-timing-slow) 1;
 }
 
 .is-pop {
-  animation: pop var(--layout-transition-speed-slow) 1;
+  animation: pop var(--layout-timing-medium) 1;
+}
+
+.is-jello {
+  animation: jello var(--layout-timing-slow) 1;
 }
 
 .sr-only {

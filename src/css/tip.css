@@ -6,7 +6,7 @@
   top: 0;
   opacity: 1;
   z-index: var(--z-index-tip);
-  transition: opacity var(--layout-transition-fast);
+  transition: opacity var(--layout-timing-extra-fast);
   transform-origin: bottom center;
   pointer-events: none;
 }
@@ -36,11 +36,11 @@
 }
 
 .tip-intro {
-  animation: grow var(--layout-transition-speed-slow) 1;
+  animation: grow var(--layout-timing-medium) 1;
 }
 
 .tip-outro {
-  animation: shirnk var(--layout-transition-speed-slow) 1;
+  animation: shirnk var(--layout-timing-medium) 1;
 }
 
 .tip-message {

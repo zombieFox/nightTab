@@ -57,7 +57,7 @@
   height: var(--link-item-height);
   display: block;
   transform: scale(1);
-  transition: transform var(--layout-transition-fast);
+  transition: transform var(--layout-timing-extra-fast);
   z-index: 1;
 }
 
@@ -102,7 +102,7 @@
   overflow: hidden;
   position: relative;
   user-select: none;
-  transition: background-color var(--layout-transition-fast), height var(--layout-transition-fast), box-shadow var(--layout-transition-fast);
+  transition: background-color var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
 }
 
 .is-link-item-line-show .link-panel-front {
@@ -244,7 +244,7 @@
   justify-content: flex-end;
   align-items: stretch;
   z-index: 2;
-  transition: height var(--layout-transition-fast), top var(--layout-transition-fast);
+  transition: height var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast);
 }
 
 .is-link-item-line-show .link-panel-back {
@@ -269,7 +269,7 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
-  transition: all var(--layout-transition-fast);
+  transition: all var(--layout-timing-extra-fast);
 }
 
 .link-control-item {
@@ -328,7 +328,7 @@
   overflow: hidden;
   display: none;
   align-items: center;
-  transition: all var(--layout-transition-fast);
+  transition: all var(--layout-timing-extra-fast);
 }
 
 .is-link-url-show .link-url {
@@ -396,12 +396,12 @@
   color: rgb(var(--theme-accent));
   line-height: 1;
   white-space: nowrap;
-  transition: color var(--layout-transition-fast);
+  transition: color var(--layout-timing-extra-fast);
 }
 
 .link-display-icon {
   color: rgb(var(--theme-accent));
-  transition: color var(--layout-transition-fast);
+  transition: color var(--layout-timing-extra-fast);
 }
 
 .is-link-style-block .link-display-letter,
@@ -440,7 +440,7 @@
   font-family: var(--font-regular);
   color: rgb(var(--theme-gray-12));
   display: none;
-  transition: color var(--layout-transition-fast);
+  transition: color var(--layout-timing-extra-fast);
 }
 
 .link-name,
@@ -539,7 +539,7 @@
 
 .link-form-text-icon .link-form-icon {
   transform: scale(1) rotate(0deg);
-  transition: transform var(--layout-transition-fast);
+  transition: transform var(--layout-timing-extra-fast);
 }
 
 .link-form-text-icon:not([disabled]):hover .link-form-icon {

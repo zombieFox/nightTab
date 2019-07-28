@@ -61,6 +61,7 @@ var background = (function() {
         var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
         helper.removeClass(controlBackgroundImageFileFeedback, "is-shake");
         helper.removeClass(controlBackgroundImageFileFeedback, "is-pop");
+        helper.removeClass(controlBackgroundImageFileFeedback, "is-jello");
         controlBackgroundImageFileFeedback.removeEventListener("animationend", bind.feedback.animation.reset, false);
       }
     }
@@ -143,10 +144,19 @@ var background = (function() {
         bind.feedback.animation.set("is-pop", action);
       };
     },
-    clear: function() {
+    clear: function(override) {
+      var options = {
+        animate: null
+      };
+      if (override) {
+        options = helper.applyOptions(options, override);
+      };
       var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
       while (controlBackgroundImageFileFeedback.lastChild) {
         controlBackgroundImageFileFeedback.removeChild(controlBackgroundImageFileFeedback.lastChild);
+      };
+      if (options.animate) {
+        bind.feedback.animation.set("is-jello");
       };
     },
     fail: {

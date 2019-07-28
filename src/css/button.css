@@ -22,7 +22,7 @@ input[type="submit"] {
   white-space: nowrap;
   cursor: pointer;
   box-shadow: none;
-  transition: background-color var(--layout-transition-fast), color var(--layout-transition-fast), border var(--layout-transition-fast);
+  transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), border var(--layout-timing-extra-fast);
   display: inline-flex;
   flex-direction: row;
   justify-content: center;

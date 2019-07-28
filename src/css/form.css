@@ -19,7 +19,7 @@ input[type="text"] {
   border-color: transparent;
   border-radius: var(--theme-radius);
   cursor: text;
-  transition: background-color var(--layout-transition-fast), color var(--layout-transition-fast), border-color var(--layout-transition-fast), box-shadow var(--layout-transition-fast);
+  transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
   -moz-appearance: textfield;
 }
 
@@ -93,7 +93,7 @@ input[type="search"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="text"]::placeholder {
   color: rgb(var(--form-input-placeholder));
-  transition: color var(--layout-transition-fast);
+  transition: color var(--layout-timing-extra-fast);
 }
 
 input[type="email"]:hover::placeholder,
@@ -168,7 +168,7 @@ input[type="radio"] {
   pointer-events: none;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  transition: color var(--layout-transition-fast);
+  transition: color var(--layout-timing-extra-fast);
 }
 
 input[type="checkbox"]+label,
@@ -181,7 +181,7 @@ input[type="radio"]+label {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  transition: transform var(--layout-transition-fast), color var(--layout-transition-fast);
+  transition: transform var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast);
 }
 
 input[type="checkbox"]+label:before,
@@ -200,7 +200,7 @@ input[type="radio"]+label:before {
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  transition: transform var(--layout-transition-fast), color var(--layout-transition-fast);
+  transition: transform var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast);
 }
 
 input[type="checkbox"]+label:before {
@@ -297,7 +297,7 @@ input[type="color"] {
   border-radius: var(--theme-radius);
   overflow: hidden;
   cursor: pointer;
-  transition: border-color var(--layout-transition-fast), box-shadow var(--layout-transition-fast);
+  transition: border-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
 }
 
 input[type="color"]:hover {
@@ -368,7 +368,7 @@ input[type="range"]:before {
   border: 0;
   border-radius: var(--theme-radius);
   transform: translate(0, -50%);
-  transition: all var(--layout-transition-fast);
+  transition: all var(--layout-timing-extra-fast);
 }
 
 input[type="range"]:focus {
@@ -412,7 +412,7 @@ input[type="range"]::-webkit-slider-thumb {
   box-sizing: border-box;
   /* z-index: 2; */
   transform: scale(1);
-  transition: all var(--layout-transition-fast);
+  transition: all var(--layout-timing-extra-fast);
   -webkit-appearance: none;
 }
 
@@ -456,7 +456,7 @@ input[type="range"]::-moz-range-track {
   width: 100%;
   border: 0;
   border-radius: var(--theme-radius);
-  transition: all var(--layout-transition-fast);
+  transition: all var(--layout-timing-extra-fast);
   -webkit-appearance: none;
 }
 
@@ -484,7 +484,7 @@ input[type="range"]::-moz-range-thumb {
   box-sizing: border-box;
   /* z-index: 2; */
   transform: scale(1);
-  transition: all var(--layout-transition-fast);
+  transition: all var(--layout-timing-extra-fast);
   -webkit-appearance: none;
 }
 
@@ -537,7 +537,7 @@ input[type="range"][disabled]::-moz-range-progress {
 .form-helper {
   padding: 0.5em 0;
   color: rgb(var(--form-helper));
-  transition: color var(--layout-transition-fast);
+  transition: color var(--layout-timing-extra-fast);
 }
 
 .form-helper.disabled {
@@ -583,7 +583,7 @@ input[type="range"][disabled]::-moz-range-progress {
   white-space: nowrap;
   cursor: pointer;
   box-shadow: none;
-  transition: background-color var(--layout-transition-fast), color var(--layout-transition-fast), border var(--layout-transition-fast);
+  transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), border var(--layout-timing-extra-fast);
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -768,7 +768,7 @@ input[type="range"][disabled]::-moz-range-progress {
   border-width: var(--layout-line-width);
   border-style: solid;
   border-color: rgb(var(--form-checkbox-radio-label));
-  transition: border-color var(--layout-transition-fast);
+  transition: border-color var(--layout-timing-extra-fast);
 }
 
 .form-grid:focus,
@@ -826,7 +826,7 @@ input[type="range"][disabled]::-moz-range-progress {
   border-color: transparent;
   position: relative;
   transition: none;
-  transition: border-color var(--layout-transition-fast);
+  transition: border-color var(--layout-timing-extra-fast);
 }
 
 .form-grid input[type="checkbox"]:focus+label,
@@ -885,7 +885,7 @@ input[type="range"][disabled]::-moz-range-progress {
   left: calc(var(--layout-line-width) * 2);
   display: block;
   transform: scale(1);
-  transition: transform var(--layout-transition-fast), background-color var(--layout-transition-fast);
+  transition: transform var(--layout-timing-extra-fast), background-color var(--layout-timing-extra-fast);
 }
 
 .form-grid input[type="checkbox"]:focus+label:before,
@@ -1007,7 +1007,7 @@ input[type="range"][disabled]::-moz-range-progress {
   border-style: solid;
   border-color: transparent;
   border-radius: var(--theme-radius);
-  transition: background-color var(--layout-transition-fast), border-color var(--layout-transition-fast);
+  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast);
 }
 
 .form-group-text:hover,
