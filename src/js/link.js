@@ -476,7 +476,7 @@ var link = (function() {
         form.querySelector(".link-form-input-icon").setAttribute("disabled", "");
         form.querySelector(".form-group-text").setAttribute("disabled", "");
         form.querySelector(".link-form-input-icon").setAttribute("disabled", "");
-        form.querySelector(".link-form-input-helper-icon").setAttribute("disabled", "");
+        helper.addClass(form.querySelector(".link-form-input-icon-helper"), "disabled");
         form.querySelector(".link-form-icon-clear").setAttribute("disabled", "");
         form.querySelector(".link-form-text-icon").tabIndex = -1;
       } else if (stagedLink.data.display == "icon") {
@@ -484,7 +484,7 @@ var link = (function() {
         form.querySelector(".link-form-input-icon").removeAttribute("disabled");
         form.querySelector(".form-group-text").removeAttribute("disabled");
         form.querySelector(".link-form-input-icon").removeAttribute("disabled");
-        form.querySelector(".link-form-input-helper-icon").removeAttribute("disabled");
+        helper.removeClass(form.querySelector(".link-form-input-icon-helper"), "disabled");
         form.querySelector(".link-form-icon-clear").removeAttribute("disabled");
         form.querySelector(".link-form-input-display-icon").checked = true;
         form.querySelector(".link-form-text-icon").tabIndex = 1;
@@ -593,7 +593,7 @@ var link = (function() {
     var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,tabindex:-1,disabled");
     var iconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
     var iconFormGroupClearIcon = helper.node("span|class:icon-close");
-    var iconPara = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-helper-icon input-helper small muted,disabled");
+    var iconPara = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-icon-helper form-helper small muted disabled");
     var nameInputWrap = helper.node("div|class:input-wrap");
     var nameLabel = helper.node("label:Name|for:link-form-input-name");
     var nameInput = helper.node("input|type:text,class:link-form-input-name mb-0,id:link-form-input-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
@@ -601,12 +601,12 @@ var link = (function() {
     var urlLabel = helper.node("label:URL|for:link-form-input-url");
     var urlInput = helper.node("input|type:text,class:link-form-input-url mb-0,id:link-form-input-url,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
     var colorWrap = helper.node("div|class:input-wrap");
-    var colorFormGroup = helper.node("div|class:form-group");
+    var colorFormGroup = helper.node("div|class:form-group mb-0");
     var colorLabel = helper.node("label:Accent override|for:link-form-input-color");
     var colorInput = helper.node("input|id:link-form-input-color,class:link-form-input-color mb-0,type:color,value:" + helper.rgbToHex(state.get().theme.accent.current) + ",tabindex:1");
     var colorButtonRefresh = helper.node("button|class:button mb-0,type:button,tabindex:1");
     var colorButtonRefreshIcon = helper.node("span|class:icon-refresh");
-    var colorPara = helper.node("p:Use this colour to override the global Accent colour.|class:input-helper small muted");
+    var colorInputHelper = helper.node("p:Use this colour to override the global Accent colour.|class:form-helper small muted");
     var letterRadioInputWrap = helper.node("div|class:input-wrap");
     var letterRadioInput = helper.node("input|class:link-form-input-display-letter,id:link-form-input-display-letter,type:radio,name:link-form-input-display,tabindex:1,checked,value:letter");
     var letterRadioLable = helper.node("label:Letters|for:link-form-input-display-letter");
@@ -644,8 +644,8 @@ var link = (function() {
     colorFormGroup.appendChild(colorButtonRefresh);
     colorWrap.appendChild(colorLabel);
     colorWrap.appendChild(colorFormGroup);
-    colorWrap.appendChild(colorPara);
     fieldset.appendChild(colorWrap);
+    fieldset.appendChild(colorInputHelper);
     form.appendChild(fieldset);
 
     letterRadioInput.addEventListener("change", function(event) {
@@ -690,7 +690,7 @@ var link = (function() {
       letterInput.removeAttribute("disabled");
       iconInput.setAttribute("disabled", "");
       iconFormGroupText.setAttribute("disabled", "");
-      iconPara.setAttribute("disabled", "");
+      helper.addClass(form.querySelector(".link-form-input-icon-helper"), "disabled");
       iconFormGroupClear.setAttribute("disabled", "");
       iconFormGroupText.tabIndex = -1;
     }, false);
@@ -698,7 +698,7 @@ var link = (function() {
       letterInput.setAttribute("disabled", "");
       iconInput.removeAttribute("disabled");
       iconFormGroupText.removeAttribute("disabled");
-      iconPara.removeAttribute("disabled");
+      helper.removeClass(form.querySelector(".link-form-input-icon-helper"), "disabled");
       iconFormGroupClear.removeAttribute("disabled");
       iconFormGroupText.tabIndex = 1;
     }, false);
