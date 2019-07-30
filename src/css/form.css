@@ -311,7 +311,8 @@ input[type="color"]:focus {
 }
 
 input[type="color"][disabled] {
-  opacity: 0.5;
+  opacity: 0.25;
+  cursor: default;
 }
 
 input[type="color"][disabled]:hover,

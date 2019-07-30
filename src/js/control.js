@@ -2098,6 +2098,29 @@ var control = (function() {
       link.items();
     }
   }, {
+    element: helper.e(".control-background-color-by-theme"),
+    path: "background.color.by",
+    type: "radio",
+    func: function() {
+      render.dependents();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-background-color-by-custom"),
+    path: "background.color.by",
+    type: "radio",
+    func: function() {
+      render.dependents();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-background-color-custom-current"),
+    path: "background.color.custom",
+    type: "color",
+    func: function() {
+      background.render.color();
+    }
+  }, {
     element: helper.e(".control-background-image-show"),
     path: "background.image.show",
     type: "checkbox",
@@ -2492,6 +2515,9 @@ var control = (function() {
       };
     };
     var _background = function() {
+      helper.removeClass(html, "is-background-color-by-theme");
+      helper.removeClass(html, "is-background-color-by-custom");
+      helper.addClass(html, "is-background-color-by-" + state.get().background.color.by);
       if (state.get().background.image.show) {
         helper.addClass(html, "is-background-image-show");
       } else {
@@ -3017,6 +3043,13 @@ var control = (function() {
       } else {
         _disable.input(".control-background-image-url", true);
         _disable.element(".control-background-image-url-helper", true);
+      };
+      if (state.get().background.color.by == "theme") {
+        _disable.input(".control-background-color-custom-current", true);
+        _disable.element(".control-background-color-theme-helper", true);
+      } else if (state.get().background.color.by == "custom") {
+        _disable.input(".control-background-color-custom-current", false);
+        _disable.element(".control-background-color-theme-helper", false);
       };
     };
     _header();

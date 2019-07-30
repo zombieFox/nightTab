@@ -196,6 +196,14 @@ var state = (function() {
       radius: 0.2
     },
     background: {
+      color: {
+        by: "theme",
+        custom: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
+      },
       image: {
         show: false,
         from: "file",

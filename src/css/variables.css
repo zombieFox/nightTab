@@ -60,7 +60,8 @@
   --layout-shadow-medium: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
   --layout-shadow-large: 0 3px 6px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.2);
   /* background */
-  --background: rgb(var(--theme-gray-01));
+  --background-color-theme: rgb(var(--theme-gray-01));
+  --background-color-custom: rgb(0, 0, 0);
   --background-image: none;
   --background-opacity: 1;
   --background-scale: 1;

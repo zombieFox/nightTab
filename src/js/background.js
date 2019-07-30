@@ -69,6 +69,11 @@ var background = (function() {
 
   var render = {};
 
+  render.color = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--background-color-custom", "rgb(" + state.get().background.color.custom.r + ", " + state.get().background.color.custom.g + ", " + state.get().background.color.custom.b + ")");
+  };
+
   render.image = function() {
     var html = helper.e("html");
     if (state.get().background.image.show) {
@@ -209,6 +214,7 @@ var background = (function() {
   };
 
   var init = function() {
+    render.color();
     render.image();
     render.blur();
     render.grayscale();

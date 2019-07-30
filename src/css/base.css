@@ -8,7 +8,6 @@ html {
 }
 
 body {
-  background-color: var(--background);
   color: rgb(var(--theme-style-text));
   font-size: 1rem;
   line-height: 1.6;
@@ -19,6 +18,14 @@ body {
   align-items: center;
   min-height: 100vh;
   transition: background-color var(--layout-timing-extra-fast);
+}
+
+.is-background-color-by-theme body {
+  background-color: var(--background-color-theme);
+}
+
+.is-background-color-by-custom body {
+  background-color: var(--background-color-custom);
 }
 
 .is-layout-scrollpastend body {

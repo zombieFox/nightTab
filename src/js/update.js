@@ -592,6 +592,17 @@ var update = (function() {
     "3.51.0": function(data) {
       data.state.link.add = false;
       return data;
+    },
+    "3.66.0": function(data) {
+      data.state.background.color = {
+        by: "theme",
+        custom: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
+      };
+      return data;
     }
   };
 
