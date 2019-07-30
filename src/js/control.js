@@ -74,7 +74,7 @@ var control = (function() {
     type: "color",
     func: function() {
       theme.accent();
-      // link.items();
+      link.items();
     }
   }, {
     element: helper.e(".control-layout-width"),
