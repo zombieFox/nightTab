@@ -38,7 +38,7 @@ var data = (function() {
     var str = JSON.stringify(load());
     var data = encode(str);
     var blob = new Blob([data], {
-      type: 'application/octet-stream'
+      type: "application/json"
     });
     var url = URL.createObjectURL(blob);
     var link = document.createElement("a");
