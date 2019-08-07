@@ -1,74 +1,106 @@
-const { src, dest, parallel } = require('gulp');
+const {
+  src,
+  dest,
+  parallel
+} = require('gulp');
 const minifyCSS = require('gulp-csso');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const replace = require('gulp-replace');
+const folder = {
+  src: {
+    root: 'src'
+  },
+  build: {
+    root: 'build/web'
+  }
+}
+folder.src.icons = folder.src.root + '/icons';
+folder.src.fonts = folder.src.root + '/fonts';
+folder.src.css = folder.src.root + '/css';
+folder.src.js = folder.src.root + '/js';
+folder.build.icons = folder.build.root + '/icons';
+folder.build.fonts = folder.build.root + '/fonts';
+folder.build.css = folder.build.root + '/css';
+folder.build.js = folder.build.root + '/js';
+const filename = {
+  css: "nighttab.min.css",
+  js: "nighttab.min.js"
+}
 
-const buildFolder = "build/web"
+function manifest() {
+  return src(folder.src.root + '/manifest.json')
+    .pipe(dest(folder.build.root))
+}
 
 function html() {
-  return src('src/index.html')
-    .pipe(replace(/\<\!\-\-\ js\-block\ \-\-\>([\s\S]*)\<\!\-\-\ end\-js\-block\ \-\-\>/mg, '<script src="js/app.min.js"></script>'))
-    .pipe(replace(/\<\!\-\-\ css\-block\ \-\-\>([\s\S]*)\<\!\-\-\ end\-css\-block\ \-\-\>/mg, '<link rel="stylesheet" href="css/style.min.css">'))
-    .pipe(dest(buildFolder))
+  return src(folder.src.root + '/index.html')
+    .pipe(replace(/\<\!\-\-\ css\-block\ \-\-\>([\s\S]*)\<\!\-\-\ end\-css\-block\ \-\-\>/mg, '<link rel="stylesheet" href="css/' + filename.css + '">'))
+    .pipe(replace(/\<\!\-\-\ js\-block\ \-\-\>([\s\S]*)\<\!\-\-\ end\-js\-block\ \-\-\>/mg, '<script src="js/' + filename.js + '"></script>'))
+    .pipe(dest(folder.build.root))
 }
 
 function fonts() {
-  return src('src/fonts/**/*.*')
-    .pipe(dest(buildFolder + '/fonts'))
+  return src(folder.src.fonts + '/**/*.*')
+    .pipe(dest(folder.build.fonts))
 }
 
 function icons() {
-  return src('src/icons/**/*.*')
-    .pipe(dest(buildFolder + '/icons'))
+  return src(folder.src.icons + '/**/*.*')
+    .pipe(dest(folder.build.icons))
 }
 
 function css() {
-  return src('src/css/*.css')
-    .pipe(concat('style.min.css'))
-    .pipe(minifyCSS())
-    .pipe(dest(buildFolder + '/css'))
+  return src(folder.src.css + '/*.css')
+    .pipe(concat(filename.css))
+    .pipe(minifyCSS({
+      sourceMap: true
+    }))
+    .pipe(dest(folder.build.css))
 }
 
 function js() {
   return src([
-    'src/js/vendor/*.js',
-    'src/js/helper.js',
-    'src/js/data.js',
-    'src/js/fontawesome.js',
-    'src/js/update.js',
-    'src/js/state.js',
-    'src/js/bookmarks.js',
-    'src/js/control.js',
-    'src/js/menu.js',
-    'src/js/header.js',
-    'src/js/modal.js',
-    'src/js/tip.js',
-    'src/js/shade.js',
-    'src/js/theme.js',
-    'src/js/date.js',
-    'src/js/greeting.js',
-    'src/js/transitional.js',
-    'src/js/clock.js',
-    'src/js/search.js',
-    'src/js/link.js',
-    'src/js/version.js',
-    'src/js/keyboard.js',
-    'src/js/background.js',
-    'src/js/layout.js',
-    'src/js/auto-suggest.js',
-    'src/js/pagelock.js',
-    'src/js/edge.js',
-    'src/js/init.js'
-  ], { sourcemaps: true })
-    .pipe(concat('app.min.js'))
+      folder.src.js + '/vendor/*.js',
+      folder.src.js + '/helper.js',
+      folder.src.js + '/data.js',
+      folder.src.js + '/fontawesome.js',
+      folder.src.js + '/update.js',
+      folder.src.js + '/state.js',
+      folder.src.js + '/bookmarks.js',
+      folder.src.js + '/control.js',
+      folder.src.js + '/menu.js',
+      folder.src.js + '/header.js',
+      folder.src.js + '/modal.js',
+      folder.src.js + '/tip.js',
+      folder.src.js + '/shade.js',
+      folder.src.js + '/theme.js',
+      folder.src.js + '/date.js',
+      folder.src.js + '/greeting.js',
+      folder.src.js + '/transitional.js',
+      folder.src.js + '/clock.js',
+      folder.src.js + '/search.js',
+      folder.src.js + '/link.js',
+      folder.src.js + '/version.js',
+      folder.src.js + '/keyboard.js',
+      folder.src.js + '/background.js',
+      folder.src.js + '/layout.js',
+      folder.src.js + '/auto-suggest.js',
+      folder.src.js + '/pagelock.js',
+      folder.src.js + '/edge.js',
+      folder.src.js + '/init.js',
+    ])
+    .pipe(concat(filename.js))
     .pipe(uglify())
-    .pipe(dest(buildFolder + '/js', { sourcemaps: '.' }))
+    .pipe(dest(folder.build.js, {
+      sourcemaps: '.'
+    }))
 }
 
-exports.js = js;
-exports.css = css;
+exports.manifest = manifest;
 exports.html = html;
 exports.fonts = fonts;
 exports.icons = icons;
-exports.default = parallel(fonts, icons, html, css, js);
+exports.css = css;
+exports.js = js;
+exports.default = parallel(manifest, html, fonts, icons, css, js);
