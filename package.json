@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run build-web ; npm run build-webext",
+    "build": "npm run clean; npm run build-web; npm run build-webext",
     "build-web": "gulp",
-    "build-webext": "web-ext build -s src -a build/webext",
+    "build-webext": "web-ext build -s build/web -a build/webext",
     "lint-webext": "web-ext lint -s",
     "clean": "rm -rf build"
   },
