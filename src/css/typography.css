@@ -7,6 +7,7 @@ h6 {
   margin: 0 0 1em 0;
   font-weight: normal;
   line-height: 1.5;
+  color: rgb(var(--theme-gray-18));
 }
 
 h1 {
@@ -17,31 +18,26 @@ h1 {
 h2 {
   font-size: 1.2em;
   font-family: var(--font-regular);
-  color: rgb(var(--theme-gray-18));
 }
 
 h3 {
   font-size: 1.1em;
   font-family: var(--font-regular);
-  color: rgb(var(--theme-gray-18));
 }
 
 h4 {
   font-size: 1em;
   font-family: var(--font-regular);
-  color: rgb(var(--theme-gray-18));
 }
 
 h5 {
   font-size: 1em;
   font-family: var(--font-bold);
-  color: rgb(var(--theme-gray-18));
 }
 
 h6 {
   font-size: 0.75em;
   font-family: var(--font-bold);
-  color: rgb(var(--theme-gray-18));
 }
 
 p {
