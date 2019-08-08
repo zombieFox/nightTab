@@ -3,14 +3,22 @@ const {
   dest,
   parallel
 } = require('gulp');
-const minifyCSS = require('gulp-csso');
+
+const csso = require('gulp-csso');
+
 const concat = require('gulp-concat');
+
 const uglify = require('gulp-uglify');
+
 const replace = require('gulp-replace');
+
+const htmlmin = require('gulp-htmlmin');
+
 const folder = {
   src: 'src',
   build: 'build/web'
 }
+
 const filename = {
   css: "nighttab.min.css",
   js: "nighttab.min.js"
@@ -25,6 +33,9 @@ function html() {
   return src(folder.src + '/index.html')
     .pipe(replace(/\<\!\-\-\ css\-block\ \-\-\>([\s\S]*)\<\!\-\-\ end\-css\-block\ \-\-\>/mg, '<link rel="stylesheet" href="css/' + filename.css + '">'))
     .pipe(replace(/\<\!\-\-\ js\-block\ \-\-\>([\s\S]*)\<\!\-\-\ end\-js\-block\ \-\-\>/mg, '<script src="js/' + filename.js + '"></script>'))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(dest(folder.build))
 }
 
@@ -41,7 +52,7 @@ function icons() {
 function css() {
   return src(folder.src + '/css/*.css')
     .pipe(concat(filename.css))
-    .pipe(minifyCSS())
+    .pipe(csso())
     .pipe(dest(folder.build + '/css'))
 }
 

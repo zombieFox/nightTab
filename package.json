@@ -39,6 +39,7 @@
     "gulp-csso": "^3.0.1",
     "gulp-replace": "^1.0.0",
     "gulp-uglify": "^3.0.2",
+    "gulp-htmlmin": "^5.0.1",
     "web-ext": "^3.1.1"
   }
 }
