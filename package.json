@@ -1,0 +1,45 @@
+{
+  "name": "nighttab",
+  "version": "3.68.0",
+  "description": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean; npm run build-web; npm run build-webext",
+    "build-web": "gulp",
+    "build-webext": "web-ext build -s build/web -a build/webext",
+    "lint-webext": "web-ext lint -s",
+    "clean": "rm -rf build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zombieFox/nightTab.git"
+  },
+  "keywords": [
+    "startpage",
+    "start-page",
+    "newtabpage",
+    "new-tab-page",
+    "tab",
+    "chrome-extension",
+    "extension",
+    "bookmarks",
+    "links"
+  ],
+  "author": "zombieFox",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/zombieFox/nightTab/issues"
+  },
+  "homepage": "https://github.com/zombieFox/nightTab#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "web-ext": "^3.1.1"
+  }
+}
