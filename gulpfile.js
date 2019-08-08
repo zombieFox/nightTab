@@ -16,7 +16,8 @@ const htmlmin = require('gulp-htmlmin');
 
 const folder = {
   src: 'src',
-  dest: 'dest/web'
+  dest: 'dest/web',
+  nodeModules: 'node_modules',
 }
 
 const filename = {
@@ -58,7 +59,8 @@ function css() {
 
 function js() {
   return src([
-      folder.src + '/js/vendor/*.js',
+      folder.nodeModules + '/html5sortable/dist/html5sortable.min.js',
+      folder.nodeModules + '/invert-color/lib/invert.min.js',
       folder.src + '/js/helper.js',
       folder.src + '/js/data.js',
       folder.src + '/js/fontawesome.js',
