@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean; npm run build-web; npm run build-webext",
+    "build": "npm run clean; npm run build-web; npm run build-extension",
     "build-web": "gulp",
-    "build-webext": "web-ext build -s build/web -a build/webext",
+    "build-extension": "web-ext build -s dest/web -a dest/extension",
     "lint-webext": "web-ext lint -s",
-    "clean": "rm -rf build"
+    "clean": "rm -rf dest"
   },
   "repository": {
     "type": "git",

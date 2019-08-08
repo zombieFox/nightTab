@@ -16,7 +16,7 @@ const htmlmin = require('gulp-htmlmin');
 
 const folder = {
   src: 'src',
-  build: 'build/web'
+  dest: 'dest/web'
 }
 
 const filename = {
@@ -26,7 +26,7 @@ const filename = {
 
 function manifest() {
   return src(folder.src + '/manifest.json')
-    .pipe(dest(folder.build))
+    .pipe(dest(folder.dest))
 }
 
 function html() {
@@ -36,24 +36,24 @@ function html() {
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
-    .pipe(dest(folder.build))
+    .pipe(dest(folder.dest))
 }
 
 function fonts() {
   return src(folder.src + '/fonts/**/*.*')
-    .pipe(dest(folder.build + '/fonts'))
+    .pipe(dest(folder.dest + '/fonts'))
 }
 
 function icons() {
   return src(folder.src + '/icons/**/*.*')
-    .pipe(dest(folder.build + '/icons'))
+    .pipe(dest(folder.dest + '/icons'))
 }
 
 function css() {
   return src(folder.src + '/css/*.css')
     .pipe(concat(filename.css))
     .pipe(csso())
-    .pipe(dest(folder.build + '/css'))
+    .pipe(dest(folder.dest + '/css'))
 }
 
 function js() {
@@ -89,7 +89,7 @@ function js() {
     ])
     .pipe(concat(filename.js))
     .pipe(uglify())
-    .pipe(dest(folder.build + '/js', {
+    .pipe(dest(folder.dest + '/js', {
       sourcemaps: '.'
     }))
 }
