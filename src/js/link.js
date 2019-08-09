@@ -600,6 +600,14 @@ var link = (function() {
     var urlInputWrap = helper.node("div|class:input-wrap");
     var urlLabel = helper.node("label:URL|for:link-form-input-url");
     var urlInput = helper.node("input|type:text,class:link-form-input-url mb-0,id:link-form-input-url,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+    var urlInputHelper = helper.makeNode({
+      tag: "p",
+      text: "Be sure to use the full URL and include \"http://\" or \"https://\".",
+      attr: [{
+        key: "class",
+        value: "form-helper small muted"
+      }]
+    });
     var colorWrap = helper.node("div|class:input-wrap");
     var colorFormGroup = helper.node("div|class:form-group mb-0");
     var colorLabel = helper.node("label:Accent override|for:link-form-input-color");
@@ -638,6 +646,7 @@ var link = (function() {
     urlInputWrap.appendChild(urlLabel);
     urlInputWrap.appendChild(urlInput);
     fieldset.appendChild(urlInputWrap);
+    fieldset.appendChild(urlInputHelper);
     fieldset.appendChild(helper.node("hr"));
     colorFormGroup.appendChild(colorInput);
     colorButtonRefresh.appendChild(colorButtonRefreshIcon);
