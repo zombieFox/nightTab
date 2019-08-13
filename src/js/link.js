@@ -497,7 +497,21 @@ var link = (function() {
       form.querySelector(".link-form-input-name").value = stagedLink.data.name;
       form.querySelector(".link-form-input-url").value = stagedLink.data.url;
       if (stagedLink.data.accent.override) {
-        form.querySelector(".link-form-input-color").value = helper.rgbToHex(stagedLink.data.accent.color);
+        form.querySelector(".link-form-input-accent-global").checked = false;
+        form.querySelector(".link-form-input-accent-custom").checked = true;
+        form.querySelector(".link-form-input-accent-picker").removeAttribute("disabled");
+        form.querySelector(".link-form-input-accent-hex").removeAttribute("disabled");
+        helper.removeClass(form.querySelector(".link-form-input-accent-helper"), "disabled");
+      } else {
+        form.querySelector(".link-form-input-accent-global").checked = true;
+        form.querySelector(".link-form-input-accent-custom").checked = false;
+        form.querySelector(".link-form-input-accent-picker").setAttribute("disabled", "");
+        form.querySelector(".link-form-input-accent-hex").setAttribute("disabled", "");
+        helper.addClass(form.querySelector(".link-form-input-accent-helper"), "disabled");
+      };
+      if (stagedLink.data.accent.color.r != null && stagedLink.data.accent.color.g != null && stagedLink.data.accent.color.b != null) {
+        form.querySelector(".link-form-input-accent-picker").value = helper.rgbToHex(stagedLink.data.accent.color);
+        form.querySelector(".link-form-input-accent-hex").value = helper.rgbToHex(stagedLink.data.accent.color);
       };
       modal.open({
         heading: "Edit " + stagedLink.data.name,
@@ -583,17 +597,17 @@ var link = (function() {
   render.form = function() {
     var form = helper.node("form|class:link-form");
     var fieldset = helper.node("fieldset");
-    var letterFormIndet = helper.node("div|class:form-indent");
+    var letterFormIndent = helper.node("div|class:form-indent");
     var letterInputWrap = helper.node("div|class:input-wrap");
     var letterInput = helper.node("input|type:text,class:link-form-input-letter mb-0,id:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
-    var iconFormIndet = helper.node("div|class:form-indent");
+    var iconFormIndent = helper.node("div|class:form-indent");
     var iconFormGroupWrap = helper.node("div|class:input-wrap");
-    var iconFormGroup = helper.node("div|class:form-group auto-suggest-wrapper");
-    var iconInput = helper.node("input|type:text,class:link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
+    var iconFormGroup = helper.node("div|class:form-group mb-0 auto-suggest-wrapper");
+    var iconInput = helper.node("input|type:text,class:form-group-item-grow link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
     var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,tabindex:-1,disabled");
     var iconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
     var iconFormGroupClearIcon = helper.node("span|class:icon-close");
-    var iconPara = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-icon-helper form-helper small muted disabled");
+    var iconHelper = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-icon-helper form-helper small muted disabled");
     var nameInputWrap = helper.node("div|class:input-wrap");
     var nameLabel = helper.node("label:Name|for:link-form-input-name");
     var nameInput = helper.node("input|type:text,class:link-form-input-name mb-0,id:link-form-input-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
@@ -608,26 +622,32 @@ var link = (function() {
         value: "form-helper small muted"
       }]
     });
-    var colorWrap = helper.node("div|class:input-wrap");
-    var colorFormGroup = helper.node("div|class:form-group mb-0");
-    var colorLabel = helper.node("label:Accent override|for:link-form-input-color");
-    var colorInput = helper.node("input|id:link-form-input-color,class:link-form-input-color mb-0,type:color,value:" + helper.rgbToHex(state.get().theme.accent.current) + ",tabindex:1");
-    var colorButtonRefresh = helper.node("button|class:button mb-0,type:button,tabindex:1");
-    var colorButtonRefreshIcon = helper.node("span|class:icon-refresh");
-    var colorInputHelper = helper.node("p:Use this colour to override the global Accent colour.|class:form-helper small muted");
     var letterRadioInputWrap = helper.node("div|class:input-wrap");
     var letterRadioInput = helper.node("input|class:link-form-input-display-letter,id:link-form-input-display-letter,type:radio,name:link-form-input-display,tabindex:1,checked,value:letter");
     var letterRadioLable = helper.node("label:Letters|for:link-form-input-display-letter");
     var iconRadioInputWrap = helper.node("div|class:input-wrap");
     var iconRadioInput = helper.node("input|class:link-form-input-display-icon,id:link-form-input-display-icon,type:radio,name:link-form-input-display,tabindex:1,value:icon");
     var iconRadioLable = helper.node("label:Icon|for:link-form-input-display-icon");
+    var accentLabel = helper.node("label:Accent colour");
+    var accentGlobalRadioInputWrap = helper.node("div|class:input-wrap");
+    var accentGlobalRadioInput = helper.node("input|class:link-form-input-accent-global,id:link-form-input-accent-global,type:radio,name:link-form-input-accent,tabindex:1,checked,value:global");
+    var accentGlobalRadioLabel = helper.node("label:Global|for:link-form-input-accent-global");
+    var accentCustomRadioInputWrap = helper.node("div|class:input-wrap");
+    var accentCustomRadioInput = helper.node("input|class:link-form-input-accent-custom,id:link-form-input-accent-custom,type:radio,name:link-form-input-accent,tabindex:1,value:custom");
+    var accentCustomRadioLabel = helper.node("label:Custom|for:link-form-input-accent-custom");
+    var accentFormIndent = helper.node("div|class:form-indent");
+    var accentColorInputWrap = helper.node("div|class:input-wrap");
+    var accentColorFormGroup = helper.node("div|class:form-group mb-0");
+    var accentColorPicker = helper.node("input|id:link-form-input-accent-picker,class:form-group-item-half link-form-input-accent-picker mb-0,type:color,value:#000000,tabindex:1,disabled");
+    var accentColorHex = helper.node("input|id:link-form-input-accent-hex,class:form-group-item-half link-form-input-accent-hex mb-0,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
+    var accentCustomInputHelper = helper.node("p:Use this colour to override the global Accent colour.|class:link-form-input-accent-helper form-helper small muted disabled");
 
     letterRadioInputWrap.appendChild(letterRadioInput);
     letterRadioInputWrap.appendChild(letterRadioLable);
     fieldset.appendChild(letterRadioInputWrap);
     letterInputWrap.appendChild(letterInput);
-    letterFormIndet.appendChild(letterInputWrap);
-    fieldset.appendChild(letterFormIndet);
+    letterFormIndent.appendChild(letterInputWrap);
+    fieldset.appendChild(letterFormIndent);
     iconRadioInputWrap.appendChild(iconRadioInput);
     iconRadioInputWrap.appendChild(iconRadioLable);
     fieldset.appendChild(iconRadioInputWrap);
@@ -636,9 +656,9 @@ var link = (function() {
     iconFormGroup.appendChild(iconFormGroupText);
     iconFormGroup.appendChild(iconFormGroupClear);
     iconFormGroupWrap.appendChild(iconFormGroup);
-    iconFormGroupWrap.appendChild(iconPara);
-    iconFormIndet.appendChild(iconFormGroupWrap);
-    fieldset.appendChild(iconFormIndet);
+    iconFormIndent.appendChild(iconFormGroupWrap);
+    iconFormIndent.appendChild(iconHelper);
+    fieldset.appendChild(iconFormIndent);
     fieldset.appendChild(helper.node("hr"));
     nameInputWrap.appendChild(nameLabel);
     nameInputWrap.appendChild(nameInput);
@@ -648,13 +668,19 @@ var link = (function() {
     fieldset.appendChild(urlInputWrap);
     fieldset.appendChild(urlInputHelper);
     fieldset.appendChild(helper.node("hr"));
-    colorFormGroup.appendChild(colorInput);
-    colorButtonRefresh.appendChild(colorButtonRefreshIcon);
-    colorFormGroup.appendChild(colorButtonRefresh);
-    colorWrap.appendChild(colorLabel);
-    colorWrap.appendChild(colorFormGroup);
-    fieldset.appendChild(colorWrap);
-    fieldset.appendChild(colorInputHelper);
+    fieldset.appendChild(accentLabel);
+    accentGlobalRadioInputWrap.appendChild(accentGlobalRadioInput);
+    accentGlobalRadioInputWrap.appendChild(accentGlobalRadioLabel);
+    fieldset.appendChild(accentGlobalRadioInputWrap);
+    accentCustomRadioInputWrap.appendChild(accentCustomRadioInput);
+    accentCustomRadioInputWrap.appendChild(accentCustomRadioLabel);
+    fieldset.appendChild(accentCustomRadioInputWrap);
+    accentColorFormGroup.appendChild(accentColorPicker);
+    accentColorFormGroup.appendChild(accentColorHex);
+    accentColorInputWrap.appendChild(accentColorFormGroup);
+    accentFormIndent.appendChild(accentColorInputWrap);
+    accentFormIndent.appendChild(accentCustomInputHelper);
+    fieldset.appendChild(accentFormIndent);
     form.appendChild(fieldset);
 
     letterRadioInput.addEventListener("change", function(event) {
@@ -672,17 +698,29 @@ var link = (function() {
     urlInput.addEventListener("input", function(event) {
       stagedLink.data.url = this.value;
     }, false);
-    colorInput.addEventListener("change", function(event) {
-      stagedLink.data.accent.override = true;
-      stagedLink.data.accent.color = helper.hexToRgb(this.value);
-    }, false);
-    colorButtonRefresh.addEventListener("click", function(event) {
-      colorInput.value = helper.rgbToHex(state.get().theme.accent.current);
+    accentGlobalRadioInput.addEventListener("change", function() {
       stagedLink.data.accent.override = false;
-      stagedLink.data.accent.color = {
-        r: null,
-        g: null,
-        b: null
+      accentColorPicker.setAttribute("disabled", "");
+      accentColorHex.setAttribute("disabled", "");
+      helper.addClass(accentCustomInputHelper, "disabled");
+    }, false);
+    accentCustomRadioInput.addEventListener("change", function() {
+      stagedLink.data.accent.override = true;
+      stagedLink.data.accent.color = helper.hexToRgb(accentColorPicker.value);
+      accentColorPicker.removeAttribute("disabled");
+      accentColorHex.removeAttribute("disabled");
+      helper.removeClass(accentCustomInputHelper, "disabled");
+    }, false);
+    accentColorPicker.addEventListener("change", function() {
+      if (helper.isHexNumber(this.value)) {
+        stagedLink.data.accent.color = helper.hexToRgb(this.value);
+        accentColorHex.value = this.value;
+      };
+    }, false);
+    accentColorHex.addEventListener("input", function() {
+      if (helper.isHexNumber(this.value)) {
+        stagedLink.data.accent.color = helper.hexToRgb(this.value);
+        accentColorPicker.value = this.value;
       };
     }, false);
     iconFormGroupClear.addEventListener("click", function(event) {
@@ -758,7 +796,6 @@ var link = (function() {
           pagelock.unlock();
         },
         cancelAction: function() {
-          console.log("hit");
           mod.add.close();
           stagedLink.reset();
           autoSuggest.close();

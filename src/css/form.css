@@ -13,6 +13,7 @@ input[type="text"] {
   font-family: var(--font-regular);
   line-height: 2.5em;
   height: 2.5em;
+  min-width: 0;
   width: 100%;
   border-width: var(--form-input-border);
   border-style: solid;
@@ -1037,6 +1038,18 @@ input[type="range"][disabled]::-moz-range-progress {
   justify-content: flex-start;
   align-items: stretch;
   width: 100%;
+}
+
+.form-group-item-shrink {
+  flex-grow: 0;
+}
+
+.form-group-item-grow {
+  flex-grow: 1;
+}
+
+.form-group-item-half {
+  flex-basis: 50%;
 }
 
 .form-group button,

@@ -564,6 +564,15 @@ var helper = (function() {
     return true;
   };
 
+  var isHexNumber = function(string) {
+    var regex = /[0-9A-Fa-f]{6}/g;
+    if (regex.test(string) && string.length == 7 && string.substring(0, 1) == "#") {
+      return true;
+    } else {
+      return false;
+    };
+  };
+
   // exposed methods
   return {
     e: e,
@@ -589,7 +598,8 @@ var helper = (function() {
     toWords: toWords,
     ordinalWords: ordinalWords,
     ordinalNumber: ordinalNumber,
-    isJsonString: isJsonString
+    isJsonString: isJsonString,
+    isHexNumber: isHexNumber
   };
 
 })();
