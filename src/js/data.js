@@ -107,7 +107,7 @@ var data = (function() {
 
   render.clear = function() {
     var clearContent = helper.node("div");
-    var para1 = helper.node("p:Are you sure you want to clear all nightTab Bookmarks and Settings?. nightTab will restore to the default state.");
+    var para1 = helper.node("p:Are you sure you want to clear all nightTab Bookmarks and Settings? nightTab will be restore to the default state.");
     var para2 = helper.node("p:This can not be undone.");
     clearContent.appendChild(para1);
     clearContent.appendChild(para2);
