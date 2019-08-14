@@ -44,8 +44,11 @@ var data = (function() {
     var link = document.createElement("a");
     link.setAttribute("href", url);
     link.setAttribute("download", fileName);
+    link.addEventListener("click", function(event) {
+      this.remove();
+    }, false);
+    helper.e("body").appendChild(link);
     link.click();
-    link.remove();
   };
 
   mod.restore = function(data) {
