@@ -597,20 +597,34 @@ var link = (function() {
   render.form = function() {
     var form = helper.node("form|class:link-form");
     var fieldset = helper.node("fieldset");
-    var letterFormIndent = helper.node("div|class:form-indent");
-    var letterInputWrap = helper.node("div|class:input-wrap");
-    var letterInput = helper.node("input|type:text,class:link-form-input-letter mb-0,id:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
-    var iconFormIndent = helper.node("div|class:form-indent");
-    var iconFormGroupWrap = helper.node("div|class:input-wrap");
-    var iconFormGroup = helper.node("div|class:form-group mb-0 auto-suggest-wrapper");
-    var iconInput = helper.node("input|type:text,class:form-group-item-grow link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
-    var iconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,tabindex:-1,disabled");
-    var iconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
-    var iconFormGroupClearIcon = helper.node("span|class:icon-close");
-    var iconHelper = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-icon-helper form-helper small muted disabled");
+
+    // letter
+    var displayLetterRadioWrap = helper.node("div|class:input-wrap");
+    var displayLetterRadio = helper.node("input|class:link-form-input-display-letter,id:link-form-input-display-letter,type:radio,name:link-form-input-display,tabindex:1,checked,value:letter");
+    var displayLetterLable = helper.node("label:Letters|for:link-form-input-display-letter");
+    var displayLetterFormIndent = helper.node("div|class:form-indent");
+    var displayLetterInputWrap = helper.node("div|class:input-wrap");
+    var displayLetterInput = helper.node("input|type:text,class:link-form-input-letter mb-0,id:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+
+    // icon
+    var displayIconRadiotWrap = helper.node("div|class:input-wrap");
+    var displayIconRadio = helper.node("input|class:link-form-input-display-icon,id:link-form-input-display-icon,type:radio,name:link-form-input-display,tabindex:1,value:icon");
+    var displayIconLable = helper.node("label:Icon|for:link-form-input-display-icon");
+    var displayIconFormIndent = helper.node("div|class:form-indent");
+    var displayIconInputWrap = helper.node("div|class:input-wrap");
+    var displayIconFormGroup = helper.node("div|class:form-group mb-0 auto-suggest-wrapper");
+    var displayIconInput = helper.node("input|type:text,class:form-group-item-grow link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
+    var displayIconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,tabindex:-1,disabled");
+    var displayIconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
+    var displayIconFormGroupClearIcon = helper.node("span|class:icon-close");
+    var displayIconHelper = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-icon-helper form-helper small muted disabled");
+
+    // name
     var nameInputWrap = helper.node("div|class:input-wrap");
     var nameLabel = helper.node("label:Name|for:link-form-input-name");
     var nameInput = helper.node("input|type:text,class:link-form-input-name mb-0,id:link-form-input-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+
+    // url
     var urlInputWrap = helper.node("div|class:input-wrap");
     var urlLabel = helper.node("label:URL|for:link-form-input-url");
     var urlInput = helper.node("input|type:text,class:link-form-input-url mb-0,id:link-form-input-url,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
@@ -622,43 +636,39 @@ var link = (function() {
         value: "form-helper small muted"
       }]
     });
-    var letterRadioInputWrap = helper.node("div|class:input-wrap");
-    var letterRadioInput = helper.node("input|class:link-form-input-display-letter,id:link-form-input-display-letter,type:radio,name:link-form-input-display,tabindex:1,checked,value:letter");
-    var letterRadioLable = helper.node("label:Letters|for:link-form-input-display-letter");
-    var iconRadioInputWrap = helper.node("div|class:input-wrap");
-    var iconRadioInput = helper.node("input|class:link-form-input-display-icon,id:link-form-input-display-icon,type:radio,name:link-form-input-display,tabindex:1,value:icon");
-    var iconRadioLable = helper.node("label:Icon|for:link-form-input-display-icon");
+
+    // accent
     var accentLabel = helper.node("label:Accent colour");
-    var accentGlobalRadioInputWrap = helper.node("div|class:input-wrap");
-    var accentGlobalRadioInput = helper.node("input|class:link-form-input-accent-global,id:link-form-input-accent-global,type:radio,name:link-form-input-accent,tabindex:1,checked,value:global");
-    var accentGlobalRadioLabel = helper.node("label:Global|for:link-form-input-accent-global");
-    var accentCustomRadioInputWrap = helper.node("div|class:input-wrap");
-    var accentCustomRadioInput = helper.node("input|class:link-form-input-accent-custom,id:link-form-input-accent-custom,type:radio,name:link-form-input-accent,tabindex:1,value:custom");
-    var accentCustomRadioLabel = helper.node("label:Custom|for:link-form-input-accent-custom");
-    var accentFormIndent = helper.node("div|class:form-indent");
+    var accentGlobalRadioWrap = helper.node("div|class:input-wrap");
+    var accentGlobalRadio = helper.node("input|class:link-form-input-accent-global,id:link-form-input-accent-global,type:radio,name:link-form-input-accent,tabindex:1,checked,value:global");
+    var accentGlobalLabel = helper.node("label:Global|for:link-form-input-accent-global");
+    var accentCustomInputWrap = helper.node("div|class:input-wrap");
+    var accentCustomRadio = helper.node("input|class:link-form-input-accent-custom,id:link-form-input-accent-custom,type:radio,name:link-form-input-accent,tabindex:1,value:custom");
+    var accentCustomLabel = helper.node("label:Custom|for:link-form-input-accent-custom");
+    var accentColorFormIndent = helper.node("div|class:form-indent");
     var accentColorInputWrap = helper.node("div|class:input-wrap");
     var accentColorFormGroup = helper.node("div|class:form-group mb-0");
     var accentColorPicker = helper.node("input|id:link-form-input-accent-picker,class:form-group-item-half link-form-input-accent-picker mb-0,type:color,value:#000000,tabindex:1,disabled");
     var accentColorHex = helper.node("input|id:link-form-input-accent-hex,class:form-group-item-half link-form-input-accent-hex mb-0,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
-    var accentCustomInputHelper = helper.node("p:Use this colour to override the global Accent colour.|class:link-form-input-accent-helper form-helper small muted disabled");
+    var accentColorInputHelper = helper.node("p:Use this colour to override the global Accent colour.|class:link-form-input-accent-helper form-helper small muted disabled");
 
-    letterRadioInputWrap.appendChild(letterRadioInput);
-    letterRadioInputWrap.appendChild(letterRadioLable);
-    fieldset.appendChild(letterRadioInputWrap);
-    letterInputWrap.appendChild(letterInput);
-    letterFormIndent.appendChild(letterInputWrap);
-    fieldset.appendChild(letterFormIndent);
-    iconRadioInputWrap.appendChild(iconRadioInput);
-    iconRadioInputWrap.appendChild(iconRadioLable);
-    fieldset.appendChild(iconRadioInputWrap);
-    iconFormGroupClear.appendChild(iconFormGroupClearIcon);
-    iconFormGroup.appendChild(iconInput);
-    iconFormGroup.appendChild(iconFormGroupText);
-    iconFormGroup.appendChild(iconFormGroupClear);
-    iconFormGroupWrap.appendChild(iconFormGroup);
-    iconFormIndent.appendChild(iconFormGroupWrap);
-    iconFormIndent.appendChild(iconHelper);
-    fieldset.appendChild(iconFormIndent);
+    displayLetterRadioWrap.appendChild(displayLetterRadio);
+    displayLetterRadioWrap.appendChild(displayLetterLable);
+    fieldset.appendChild(displayLetterRadioWrap);
+    displayLetterInputWrap.appendChild(displayLetterInput);
+    displayLetterFormIndent.appendChild(displayLetterInputWrap);
+    fieldset.appendChild(displayLetterFormIndent);
+    displayIconRadiotWrap.appendChild(displayIconRadio);
+    displayIconRadiotWrap.appendChild(displayIconLable);
+    fieldset.appendChild(displayIconRadiotWrap);
+    displayIconFormGroupClear.appendChild(displayIconFormGroupClearIcon);
+    displayIconFormGroup.appendChild(displayIconInput);
+    displayIconFormGroup.appendChild(displayIconFormGroupText);
+    displayIconFormGroup.appendChild(displayIconFormGroupClear);
+    displayIconInputWrap.appendChild(displayIconFormGroup);
+    displayIconFormIndent.appendChild(displayIconInputWrap);
+    displayIconFormIndent.appendChild(displayIconHelper);
+    fieldset.appendChild(displayIconFormIndent);
     fieldset.appendChild(helper.node("hr"));
     nameInputWrap.appendChild(nameLabel);
     nameInputWrap.appendChild(nameInput);
@@ -669,27 +679,27 @@ var link = (function() {
     fieldset.appendChild(urlInputHelper);
     fieldset.appendChild(helper.node("hr"));
     fieldset.appendChild(accentLabel);
-    accentGlobalRadioInputWrap.appendChild(accentGlobalRadioInput);
-    accentGlobalRadioInputWrap.appendChild(accentGlobalRadioLabel);
-    fieldset.appendChild(accentGlobalRadioInputWrap);
-    accentCustomRadioInputWrap.appendChild(accentCustomRadioInput);
-    accentCustomRadioInputWrap.appendChild(accentCustomRadioLabel);
-    fieldset.appendChild(accentCustomRadioInputWrap);
+    accentGlobalRadioWrap.appendChild(accentGlobalRadio);
+    accentGlobalRadioWrap.appendChild(accentGlobalLabel);
+    fieldset.appendChild(accentGlobalRadioWrap);
+    accentCustomInputWrap.appendChild(accentCustomRadio);
+    accentCustomInputWrap.appendChild(accentCustomLabel);
+    fieldset.appendChild(accentCustomInputWrap);
     accentColorFormGroup.appendChild(accentColorPicker);
     accentColorFormGroup.appendChild(accentColorHex);
     accentColorInputWrap.appendChild(accentColorFormGroup);
-    accentFormIndent.appendChild(accentColorInputWrap);
-    accentFormIndent.appendChild(accentCustomInputHelper);
-    fieldset.appendChild(accentFormIndent);
+    accentColorFormIndent.appendChild(accentColorInputWrap);
+    accentColorFormIndent.appendChild(accentColorInputHelper);
+    fieldset.appendChild(accentColorFormIndent);
     form.appendChild(fieldset);
 
-    letterRadioInput.addEventListener("change", function(event) {
+    displayLetterRadio.addEventListener("change", function(event) {
       stagedLink.data.display = this.value;
     }, false);
-    iconRadioInput.addEventListener("change", function(event) {
+    displayIconRadio.addEventListener("change", function(event) {
       stagedLink.data.display = this.value;
     }, false);
-    letterInput.addEventListener("input", function(event) {
+    displayLetterInput.addEventListener("input", function(event) {
       stagedLink.data.letter = this.value;
     }, false);
     nameInput.addEventListener("input", function(event) {
@@ -698,18 +708,18 @@ var link = (function() {
     urlInput.addEventListener("input", function(event) {
       stagedLink.data.url = this.value;
     }, false);
-    accentGlobalRadioInput.addEventListener("change", function() {
+    accentGlobalRadio.addEventListener("change", function() {
       stagedLink.data.accent.override = false;
       accentColorPicker.setAttribute("disabled", "");
       accentColorHex.setAttribute("disabled", "");
-      helper.addClass(accentCustomInputHelper, "disabled");
+      helper.addClass(accentColorInputHelper, "disabled");
     }, false);
-    accentCustomRadioInput.addEventListener("change", function() {
+    accentCustomRadio.addEventListener("change", function() {
       stagedLink.data.accent.override = true;
       stagedLink.data.accent.color = helper.hexToRgb(accentColorPicker.value);
       accentColorPicker.removeAttribute("disabled");
       accentColorHex.removeAttribute("disabled");
-      helper.removeClass(accentCustomInputHelper, "disabled");
+      helper.removeClass(accentColorInputHelper, "disabled");
     }, false);
     accentColorPicker.addEventListener("change", function() {
       if (helper.isHexNumber(this.value)) {
@@ -723,7 +733,7 @@ var link = (function() {
         accentColorPicker.value = this.value;
       };
     }, false);
-    iconFormGroupClear.addEventListener("click", function(event) {
+    displayIconFormGroupClear.addEventListener("click", function(event) {
       stagedLink.data.icon.name = null;
       stagedLink.data.icon.prefix = null;
       stagedLink.data.icon.label = null;
@@ -731,28 +741,28 @@ var link = (function() {
       if (existingIcon) {
         existingIcon.remove();
       };
-      iconInput.value = "";
+      displayIconInput.value = "";
     }, false);
-    letterRadioInput.addEventListener("change", function(event) {
-      letterInput.removeAttribute("disabled");
-      iconInput.setAttribute("disabled", "");
-      iconFormGroupText.setAttribute("disabled", "");
+    displayLetterRadio.addEventListener("change", function(event) {
+      displayLetterInput.removeAttribute("disabled");
+      displayIconInput.setAttribute("disabled", "");
+      displayIconFormGroupText.setAttribute("disabled", "");
       helper.addClass(form.querySelector(".link-form-input-icon-helper"), "disabled");
-      iconFormGroupClear.setAttribute("disabled", "");
-      iconFormGroupText.tabIndex = -1;
+      displayIconFormGroupClear.setAttribute("disabled", "");
+      displayIconFormGroupText.tabIndex = -1;
     }, false);
-    iconRadioInput.addEventListener("change", function(event) {
-      letterInput.setAttribute("disabled", "");
-      iconInput.removeAttribute("disabled");
-      iconFormGroupText.removeAttribute("disabled");
+    displayIconRadio.addEventListener("change", function(event) {
+      displayLetterInput.setAttribute("disabled", "");
+      displayIconInput.removeAttribute("disabled");
+      displayIconFormGroupText.removeAttribute("disabled");
       helper.removeClass(form.querySelector(".link-form-input-icon-helper"), "disabled");
-      iconFormGroupClear.removeAttribute("disabled");
-      iconFormGroupText.tabIndex = 1;
+      displayIconFormGroupClear.removeAttribute("disabled");
+      displayIconFormGroupText.tabIndex = 1;
     }, false);
     autoSuggest.bind.input({
-      input: iconInput,
+      input: displayIconInput,
       type: "fontawesomeIcon",
-      postFocus: iconFormGroupText
+      postFocus: displayIconFormGroupText
     });
     return form;
   };
