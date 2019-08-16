@@ -9,7 +9,8 @@
     "build-web": "gulp",
     "build-extension": "web-ext build -s dest/web -a dest/extension",
     "lint-webext": "web-ext lint -s",
-    "clean": "rm -rf dest"
+    "clean": "rm -rf dest",
+    "deploy-gh-pages": "npm run clean; gulp; gh-pages -d dest/web"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "gulp-htmlmin": "^5.0.1",
     "web-ext": "^3.1.1",
     "html5sortable": "^0.9.16",
-    "invert-color": "^2.0.0"
+    "invert-color": "^2.0.0",
+    "gh-pages": "^2.1.1"
   }
 }
