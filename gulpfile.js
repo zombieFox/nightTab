@@ -1,6 +1,7 @@
 const {
   src,
   dest,
+  series,
   parallel
 } = require('gulp');
 
@@ -16,7 +17,9 @@ const htmlmin = require('gulp-htmlmin');
 
 const watch = require('gulp-watch');
 
-const folder = {
+const clean = require('gulp-clean');
+
+const path = {
   src: 'src',
   dev: 'dev',
   build: 'build/web',
@@ -25,118 +28,139 @@ const folder = {
 
 const filename = {
   css: "nighttab.min.css",
+  jsDependencies: "nighttab.dependencies.js",
+  jsFiles: "nighttab.files.js",
   js: "nighttab.min.js"
 }
 
+const jsDependencies = [
+  path.nodeModules + '/html5sortable/dist/html5sortable.min.js',
+  path.nodeModules + '/invert-color/lib/invert.min.js'
+]
+
 const jsFiles = [
-  folder.nodeModules + '/html5sortable/dist/html5sortable.min.js',
-  folder.nodeModules + '/invert-color/lib/invert.min.js',
-  folder.src + '/js/helper.js',
-  folder.src + '/js/data.js',
-  folder.src + '/js/fontawesome.js',
-  folder.src + '/js/update.js',
-  folder.src + '/js/state.js',
-  folder.src + '/js/bookmarks.js',
-  folder.src + '/js/control.js',
-  folder.src + '/js/menu.js',
-  folder.src + '/js/header.js',
-  folder.src + '/js/modal.js',
-  folder.src + '/js/tip.js',
-  folder.src + '/js/shade.js',
-  folder.src + '/js/theme.js',
-  folder.src + '/js/date.js',
-  folder.src + '/js/greeting.js',
-  folder.src + '/js/transitional.js',
-  folder.src + '/js/clock.js',
-  folder.src + '/js/search.js',
-  folder.src + '/js/link.js',
-  folder.src + '/js/version.js',
-  folder.src + '/js/keyboard.js',
-  folder.src + '/js/background.js',
-  folder.src + '/js/layout.js',
-  folder.src + '/js/auto-suggest.js',
-  folder.src + '/js/pagelock.js',
-  folder.src + '/js/edge.js',
-  folder.src + '/js/init.js'
+  path.src + '/js/helper.js',
+  path.src + '/js/data.js',
+  path.src + '/js/fontawesome.js',
+  path.src + '/js/update.js',
+  path.src + '/js/state.js',
+  path.src + '/js/bookmarks.js',
+  path.src + '/js/control.js',
+  path.src + '/js/menu.js',
+  path.src + '/js/header.js',
+  path.src + '/js/modal.js',
+  path.src + '/js/tip.js',
+  path.src + '/js/shade.js',
+  path.src + '/js/theme.js',
+  path.src + '/js/date.js',
+  path.src + '/js/greeting.js',
+  path.src + '/js/transitional.js',
+  path.src + '/js/clock.js',
+  path.src + '/js/search.js',
+  path.src + '/js/link.js',
+  path.src + '/js/version.js',
+  path.src + '/js/keyboard.js',
+  path.src + '/js/background.js',
+  path.src + '/js/layout.js',
+  path.src + '/js/auto-suggest.js',
+  path.src + '/js/pagelock.js',
+  path.src + '/js/edge.js',
+  path.src + '/js/init.js'
 ]
 
 const build = {
   manifest: function() {
-    return src(folder.src + '/manifest.json')
-      .pipe(dest(folder.build))
+    return src(path.src + '/manifest.json')
+      .pipe(dest(path.build))
   },
   html: function() {
-    return src(folder.src + '/index.html')
+    return src(path.src + '/index.html')
       .pipe(replace(/\<\!\-\-\ css\-block\ \-\-\>([\s\S]*)\<\!\-\-\ end\-css\-block\ \-\-\>/mg, '<link rel="stylesheet" href="css/' + filename.css + '">'))
       .pipe(replace(/\<\!\-\-\ js\-block\ \-\-\>([\s\S]*)\<\!\-\-\ end\-js\-block\ \-\-\>/mg, '<script src="js/' + filename.js + '"></script>'))
       .pipe(htmlmin({
         collapseWhitespace: true
       }))
-      .pipe(dest(folder.build))
+      .pipe(dest(path.build))
   },
   fonts: function() {
-    return src(folder.src + '/fonts/**/*.*')
-      .pipe(dest(folder.build + '/fonts'))
+    return src(path.src + '/fonts/**/*.*')
+      .pipe(dest(path.build + '/fonts'))
   },
   icons: function() {
-    return src(folder.src + '/icons/**/*.*')
-      .pipe(dest(folder.build + '/icons'))
+    return src(path.src + '/icons/**/*.*')
+      .pipe(dest(path.build + '/icons'))
   },
   css: function() {
-    return src(folder.src + '/css/*.css')
+    return src(path.src + '/css/*.css')
       .pipe(concat(filename.css))
       .pipe(csso())
-      .pipe(dest(folder.build + '/css'))
+      .pipe(dest(path.build + '/css'))
   },
-  js: function() {
+  jsDependencies: function() {
+    return src(jsDependencies)
+      .pipe(concat(filename.jsDependencies))
+      .pipe(dest(path.build + '/js'))
+  },
+  jsFiles: function() {
     return src(jsFiles)
-      .pipe(concat(filename.js))
+      .pipe(concat(filename.jsFiles))
       .pipe(uglify())
-      .pipe(dest(folder.build + '/js', {
+      .pipe(dest(path.build + '/js', {
         sourcemaps: '.'
       }))
+  },
+  js: function() {
+    return src([path.build + '/js/' + filename.jsDependencies, path.build + '/js/' + filename.jsFiles])
+      .pipe(concat(filename.js))
+      .pipe(dest(path.build + '/js', {
+        sourcemaps: '.'
+      }))
+  },
+  jsClean: function() {
+    return src([path.build + '/js/' + filename.jsDependencies, path.build + '/js/' + filename.jsFiles])
+      .pipe(clean())
   }
 }
 
 const dev = {
   manifest: function() {
-    watch(folder.src + '/manifest.json', {
+    watch(path.src + '/manifest.json', {
       ignoreInitial: false
     }, function() {
-      return src(folder.src + '/manifest.json')
-        .pipe(dest(folder.dev))
+      return src(path.src + '/manifest.json')
+        .pipe(dest(path.dev))
     })
   },
   html: function() {
-    watch(folder.src + '/index.html', {
+    watch(path.src + '/index.html', {
       ignoreInitial: false
     }, function() {
-      return src(folder.src + '/index.html')
-        .pipe(dest(folder.dev))
+      return src(path.src + '/index.html')
+        .pipe(dest(path.dev))
     })
   },
   fonts: function() {
-    watch(folder.src + '/fonts/**/*.*', {
+    watch(path.src + '/fonts/**/*.*', {
       ignoreInitial: false
     }, function() {
-      return src(folder.src + '/fonts/**/*.*')
-        .pipe(dest(folder.dev + '/fonts'))
+      return src(path.src + '/fonts/**/*.*')
+        .pipe(dest(path.dev + '/fonts'))
     })
   },
   icons: function() {
-    watch(folder.src + '/icons/**/*.*', {
+    watch(path.src + '/icons/**/*.*', {
       ignoreInitial: false
     }, function() {
-      return src(folder.src + '/icons/**/*.*')
-        .pipe(dest(folder.dev + '/icons'))
+      return src(path.src + '/icons/**/*.*')
+        .pipe(dest(path.dev + '/icons'))
     })
   },
   css: function() {
-    watch(folder.src + '/css/*.css', {
+    watch(path.src + '/css/*.css', {
       ignoreInitial: false
     }, function() {
-      return src(folder.src + '/css/*.css')
-        .pipe(dest(folder.dev + '/css'))
+      return src(path.src + '/css/*.css')
+        .pipe(dest(path.dev + '/css'))
     })
   },
   js: function() {
@@ -144,11 +168,10 @@ const dev = {
       ignoreInitial: false
     }, function() {
       return src(jsFiles)
-        .pipe(dest(folder.dev + '/js'))
+        .pipe(dest(path.dev + '/js'))
     })
   }
 }
 
-// exports.dev = dev;
 exports.dev = parallel(dev.manifest, dev.html, dev.fonts, dev.icons, dev.css, dev.js)
-exports.build = parallel(build.manifest, build.html, build.fonts, build.icons, build.css, build.js)
+exports.build = series(parallel(build.manifest, build.html, build.fonts, build.icons, build.css), series(build.jsDependencies, build.jsFiles, build.js), build.jsClean)
