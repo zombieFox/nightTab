@@ -46,13 +46,17 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 
 ### Development
 
-Make changes on files in the `/src/` directory. When ready the following can be used to build the project:
+When developing use:
+- `npm run dev`
 
-- build web files with `npm run build-web`
-- build extension zip with `npm run build-extension`
-- build both web files and extension zip with `npm run build`
+A Development copy will be created in `/dev/`. Open `/dev/index.html` in a browsers to test. Make changes on files in the `/src/` directory and refresh browser to see changes.
 
-Build files can be found in `/dest/`
+
+To build the project use:
+- `npm run build`
+
+A web ready folder will be created in `/build/web/`.
+A browser addon/extension ready zip will be created at `/build/extension/`.
 
 ---
 
