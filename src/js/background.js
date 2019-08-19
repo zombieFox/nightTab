@@ -71,6 +71,7 @@ var background = (function() {
 
   render.color = function() {
     var html = helper.e("html");
+    html.style.backgroundColor = "rgb(" + state.get().background.color.custom.r + ", " + state.get().background.color.custom.g + ", " + state.get().background.color.custom.b + ")";
     html.style.setProperty("--background-color-custom", state.get().background.color.custom.r + ", " + state.get().background.color.custom.g + ", " + state.get().background.color.custom.b);
   };
 
