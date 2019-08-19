@@ -9,7 +9,9 @@
     "build": "npm run clean-build; npm run build-web; npm run build-extension",
     "build-web": "gulp build",
     "build-extension": "web-ext build -s build/web -a build/extension",
-    "lint-webext": "web-ext lint -s",
+    "lint": "npm run lint-extension",
+    "lint-extension": "web-ext lint -s build/web",
+    "clean": "npm run clean-dev; npm run clean-build",
     "clean-dev": "rm -rf dev",
     "clean-build": "rm -rf build",
     "deploy-gh-pages": "npm run clean-build; gulp build; gh-pages -d build/web"
