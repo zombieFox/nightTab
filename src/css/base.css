@@ -22,11 +22,11 @@ body {
 }
 
 .is-background-color-by-theme body {
-  background-color: var(--background-color-theme);
+  background-color: rgb(var(--background-color-theme));
 }
 
 .is-background-color-by-custom body {
-  background-color: var(--background-color-custom);
+  background-color: rgb(var(--background-color-custom));
 }
 
 .is-layout-scrollpastend body {
