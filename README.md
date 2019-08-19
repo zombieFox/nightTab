@@ -49,14 +49,14 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 When developing use:
 - `npm run dev`
 
-A Development copy will be created in `/dev/`. Open `/dev/index.html` in a browsers to test. Make changes on files in the `/src/` directory and refresh browser to see changes.
+A Development copy will be created in `/dev/`. Open `/dev/index.html` in a browser to test. Make changes to files in the `/src/` directory and refresh browser to see changes.
 
 
 To build the project use:
 - `npm run build`
 
 A web ready folder will be created in `/build/web/`.
-A browser addon/extension ready zip will be created at `/build/extension/`.
+A browser addon/extension ready zip will be created in `/build/extension/`.
 
 ---
 
