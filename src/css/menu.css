@@ -9,6 +9,11 @@
   transition: transform var(--layout-timing-extra-fast);
   z-index: var(--z-index-menu);
   pointer-events: none;
+  display: none;
+}
+
+.is-menu .menu {
+  display: block;
 }
 
 .menu:focus {
