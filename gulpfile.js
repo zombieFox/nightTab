@@ -94,7 +94,9 @@ const build = {
       .pipe(dest(path.build + '/css'))
   },
   js: function() {
-    const noVendors = filter(jsFiles, {restore: true});
+    const noVendors = filter(jsFiles, {
+      restore: true
+    });
 
     return src(jsDependencies.concat(jsFiles), {
       sourcemaps: true
