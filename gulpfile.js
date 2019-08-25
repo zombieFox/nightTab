@@ -27,10 +27,10 @@ const path = {
 }
 
 const filename = {
-  css: "nighttab.min.css",
-  jsDependencies: "nighttab.dependencies.js",
-  jsFiles: "nighttab.files.js",
-  js: "nighttab.min.js"
+  css: 'nighttab.min.css',
+  jsDependencies: 'nighttab.dependencies.js',
+  jsFiles: 'nighttab.files.js',
+  js: 'nighttab.min.js'
 }
 
 const jsDependencies = [
