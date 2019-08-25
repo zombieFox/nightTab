@@ -1,7 +1,6 @@
 const {
   src,
   dest,
-  series,
   parallel
 } = require('gulp');
 
@@ -16,8 +15,6 @@ const replace = require('gulp-replace');
 const htmlmin = require('gulp-htmlmin');
 
 const watch = require('gulp-watch');
-
-const clean = require('gulp-clean');
 
 const filter = require('gulp-filter');
 
