@@ -99,8 +99,22 @@ var theme = (function() {
           path: "theme.accent.current",
           newValue: randomColor
         });
-        helper.e(".control-theme-accent-current").value = helper.rgbToHex(randomColor);
+        helper.e(".control-theme-accent-current-quick").value = helper.rgbToHex(randomColor);
+        helper.e(".control-theme-accent-current-picker").value = helper.rgbToHex(randomColor);
+        helper.e(".control-theme-accent-current-hex").value = helper.rgbToHex(randomColor);
       };
+    }
+  };
+
+  render.input = {
+    quick: function() {
+      helper.e(".control-theme-accent-current-quick").value = helper.rgbToHex(state.get().theme.accent.current);
+    },
+    picker: function() {
+      helper.e(".control-theme-accent-current-picker").value = helper.rgbToHex(state.get().theme.accent.current);
+    },
+    hex: function() {
+      helper.e(".control-theme-accent-current-hex").value = helper.rgbToHex(state.get().theme.accent.current);
     }
   };
 

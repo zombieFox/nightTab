@@ -69,11 +69,13 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-accent-current"),
+    element: helper.e(".control-theme-accent-current-quick"),
     path: "theme.accent.current",
     type: "color",
     func: function() {
       theme.accent();
+      theme.render.input.picker();
+      theme.render.input.hex();
       link.items();
     }
   }, {
@@ -2017,6 +2019,27 @@ var control = (function() {
       link.items();
     }
   }, {
+    element: helper.e(".control-theme-accent-current-picker"),
+    path: "theme.accent.current",
+    type: "color",
+    func: function() {
+      theme.accent();
+      theme.render.input.quick();
+      theme.render.input.hex();
+      link.items();
+    }
+  }, {
+    element: helper.e(".control-theme-accent-current-hex"),
+    path: "theme.accent.current",
+    type: "text",
+    valueMod: ["hexTextString"],
+    func: function() {
+      theme.accent();
+      theme.render.input.picker();
+      theme.render.input.quick();
+      link.items();
+    }
+  }, {
     element: helper.e(".control-theme-style-dark"),
     path: "theme.style",
     type: "radio",
@@ -2280,6 +2303,9 @@ var control = (function() {
       },
       float: function(value, object) {
         return value / 100;
+      },
+      hexTextString: function(value, object) {
+        return helper.hexToRgb(value);
       }
     };
     var changeValue = function(object) {
@@ -3066,6 +3092,9 @@ var control = (function() {
       },
       float: function(value, element) {
         return value * 100;
+      },
+      hexTextString: function(value, element) {
+        return helper.rgbToHex(value);
       }
     };
     var setValue = {
@@ -3082,10 +3111,16 @@ var control = (function() {
         })).checked = true;
       },
       text: function(object) {
-        object.element.value = helper.getObject({
+        var newValue = helper.getObject({
           object: state.get(),
           path: object.path
         });
+        if (object.valueMod) {
+          object.valueMod.slice().reverse().forEach(function(arrayItem, index) {
+            newValue = valueMod[arrayItem](newValue, object.element);
+          });
+        };
+        object.element.value = newValue;
       },
       number: function(object) {
         object.element.value = helper.getObject({

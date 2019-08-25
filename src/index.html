@@ -86,8 +86,8 @@
           </div>
           <div class="header-item header-button header-accent">
             <div class="input-wrap input-button input-color-dot input-color-dot-accent py-0">
-              <input id="control-theme-accent-current" class="control-theme-accent-current" type="color" tabindex="1">
-              <label for="control-theme-accent-current">Accent</label>
+              <input id="control-theme-accent-current-quick" class="control-theme-accent-current-quick" type="color" tabindex="1">
+              <label for="control-theme-accent-current-quick">Accent</label>
             </div>
           </div>
           <div class="header-item header-button header-menu">
@@ -104,7 +104,6 @@
     </section>
 
   </main>
-
 
   <section class="menu" tabindex="-1">
     <div class="menu-area">
@@ -967,33 +966,17 @@
         <div class="menu-content-area menu-content-area-theme is-hidden">
           <div class="menu-item">
             <div class="menu-item-header">
-              <h1 class="menu-item-header-text">Style</h1>
-            </div>
-            <div class="menu-item-form">
-              <div class="input-wrap">
-                <input id="control-theme-style-dark" class="control-theme-style-dark" type="radio" name="control-theme-style" value="dark" tabindex="-1">
-                <label for="control-theme-style-dark">Dark</label>
-              </div>
-              <div class="input-wrap">
-                <input id="control-theme-style-light" class="control-theme-style-light" type="radio" name="control-theme-style" value="light" tabindex="-1">
-                <label for="control-theme-style-light">Light</label>
-              </div>
-              <p class="control-theme-style-light-helper form-helper small">Accent Colour and Background Image may need to be changed to best fit the Theme Style.</p>
-              <hr>
-              <div class="input-wrap">
-                <label for="control-theme-radius">Radius</label>
-                <input id="control-theme-radius" class="control-theme-radius" type="range" min="0" max="300" value="0" step="20" tabindex="-1">
-              </div>
-              <div class="button-wrap">
-                <button class="control-theme-radius-default button mb-0" tabindex="-1">Default radius</button>
-              </div>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
               <h1 class="menu-item-header-text">Accent</h1>
             </div>
             <div class="menu-item-form">
+              <label for="control-theme-accent-current-picker">Colour</label>
+              <div class="input-wrap"><div class="form-group mb-0">
+                  <input id="control-theme-accent-current-picker" class="form-group-item-half control-theme-accent-current-picker mb-0" type="color" value="#000000" tabindex="1">
+                  <input id="control-theme-accent-current-hex" class="form-group-item-half control-theme-accent-current-hex mb-0" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7">
+                </div>
+              </div>
+              <p class="control-theme-style-light-helper form-helper small">Accent Colour can also be changed from the Header area.</p>
+              <hr>
               <div class="input-wrap">
                 <input id="control-theme-accent-random-active" class="control-theme-accent-random-active" type="checkbox" tabindex="-1">
                 <label for="control-theme-accent-random-active">Random Accent colour on load/refresh</label>
@@ -1022,6 +1005,30 @@
                 <div class="button-wrap">
                   <button class="control-theme-accent-randomise button mb-0" tabindex="-1">Randomise now</button>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Style</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap">
+                <input id="control-theme-style-dark" class="control-theme-style-dark" type="radio" name="control-theme-style" value="dark" tabindex="-1">
+                <label for="control-theme-style-dark">Dark</label>
+              </div>
+              <div class="input-wrap">
+                <input id="control-theme-style-light" class="control-theme-style-light" type="radio" name="control-theme-style" value="light" tabindex="-1">
+                <label for="control-theme-style-light">Light</label>
+              </div>
+              <p class="control-theme-style-light-helper form-helper small">Accent Colour and Background Image may need to be changed to best fit the Theme Style.</p>
+              <hr>
+              <div class="input-wrap">
+                <label for="control-theme-radius">Radius</label>
+                <input id="control-theme-radius" class="control-theme-radius" type="range" min="0" max="300" value="0" step="20" tabindex="-1">
+              </div>
+              <div class="button-wrap">
+                <button class="control-theme-radius-default button mb-0" tabindex="-1">Default radius</button>
               </div>
             </div>
           </div>
