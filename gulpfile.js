@@ -97,10 +97,9 @@ const build = {
     const noVendors = filter(jsFiles, {
       restore: true
     });
-
     return src(jsDependencies.concat(jsFiles), {
-      sourcemaps: true
-    })
+        sourcemaps: true
+      })
       .pipe(noVendors)
       .pipe(uglify())
       .pipe(noVendors.restore)
