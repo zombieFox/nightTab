@@ -35,6 +35,37 @@ const jsDependencies = [
   path.nodeModules + '/invert-color/lib/invert.min.js'
 ]
 
+const cssFiles = [
+  path.src + '/css/reset.css',
+  path.src + '/css/variables.css',
+  path.src + '/css/utilities.css',
+  path.src + '/css/base.css',
+  path.src + '/css/layout.css',
+  path.src + '/css/edge.css',
+  path.src + '/css/animation.css',
+  path.src + '/css/fonts.css',
+  path.src + '/css/icons.css',
+  path.src + '/css/state.css',
+  path.src + '/css/typography.css',
+  path.src + '/css/spacing.css',
+  path.src + '/css/button.css',
+  path.src + '/css/form.css',
+  path.src + '/css/shade.css',
+  path.src + '/css/modal.css',
+  path.src + '/css/tip.css',
+  path.src + '/css/menu.css',
+  path.src + '/css/header.css',
+  path.src + '/css/date.css',
+  path.src + '/css/clock.css',
+  path.src + '/css/greeting.css',
+  path.src + '/css/transitional.css',
+  path.src + '/css/search.css',
+  path.src + '/css/background.css',
+  path.src + '/css/link.css',
+  path.src + '/css/auto-suggest.css',
+  path.src + '/css/fontawesome.css'
+]
+
 const jsFiles = [
   path.src + '/js/helper.js',
   path.src + '/js/data.js',
@@ -88,7 +119,7 @@ const build = {
       .pipe(dest(path.build + '/icons'))
   },
   css: function() {
-    return src(path.src + '/css/*.css')
+    return src(cssFiles)
       .pipe(concat(filename.css))
       .pipe(csso())
       .pipe(dest(path.build + '/css'))
@@ -144,10 +175,10 @@ const dev = {
     })
   },
   css: function() {
-    watch(path.src + '/css/*.css', {
+    watch(cssFiles, {
       ignoreInitial: false
     }, function() {
-      return src(path.src + '/css/*.css')
+      return src(cssFiles)
         .pipe(dest(path.dev + '/css'))
     })
   },
