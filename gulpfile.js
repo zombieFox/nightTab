@@ -97,27 +97,41 @@ const build = {
       .pipe(dest(path.build + '/css'))
   },
   jsDependencies: function() {
-    return src(jsDependencies)
+    return src(jsDependencies, {
+        sourcemaps: true
+      })
       .pipe(concat(filename.jsDependencies))
-      .pipe(dest(path.build + '/js'))
+      .pipe(dest(path.build + '/js', {
+        sourcemaps: true
+      }))
   },
   jsFiles: function() {
-    return src(jsFiles)
+    return src(jsFiles, {
+        sourcemaps: true
+      })
       .pipe(concat(filename.jsFiles))
       .pipe(uglify())
       .pipe(dest(path.build + '/js', {
-        sourcemaps: '.'
+        sourcemaps: true
       }))
   },
   js: function() {
-    return src([path.build + '/js/' + filename.jsDependencies, path.build + '/js/' + filename.jsFiles])
+    return src([
+        path.build + '/js/' + filename.jsDependencies,
+        path.build + '/js/' + filename.jsFiles
+      ], {
+        sourcemaps: true
+      })
       .pipe(concat(filename.js))
       .pipe(dest(path.build + '/js', {
         sourcemaps: '.'
       }))
   },
   jsClean: function() {
-    return src([path.build + '/js/' + filename.jsDependencies, path.build + '/js/' + filename.jsFiles])
+    return src([
+        path.build + '/js/' + filename.jsDependencies,
+        path.build + '/js/' + filename.jsFiles
+      ])
       .pipe(clean())
   }
 }
