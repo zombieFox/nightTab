@@ -1,7 +1,6 @@
 const {
   src,
   dest,
-  series,
   parallel
 } = require('gulp');
 
@@ -17,7 +16,7 @@ const htmlmin = require('gulp-htmlmin');
 
 const watch = require('gulp-watch');
 
-const clean = require('gulp-clean');
+const filter = require('gulp-filter');
 
 const path = {
   src: 'src',
@@ -28,8 +27,6 @@ const path = {
 
 const filename = {
   css: 'nighttab.min.css',
-  jsDependencies: 'nighttab.dependencies.js',
-  jsFiles: 'nighttab.files.js',
   js: 'nighttab.min.js'
 }
 
@@ -96,43 +93,20 @@ const build = {
       .pipe(csso())
       .pipe(dest(path.build + '/css'))
   },
-  jsDependencies: function() {
-    return src(jsDependencies, {
-        sourcemaps: true
-      })
-      .pipe(concat(filename.jsDependencies))
-      .pipe(dest(path.build + '/js', {
-        sourcemaps: true
-      }))
-  },
-  jsFiles: function() {
-    return src(jsFiles, {
-        sourcemaps: true
-      })
-      .pipe(concat(filename.jsFiles))
-      .pipe(uglify())
-      .pipe(dest(path.build + '/js', {
-        sourcemaps: true
-      }))
-  },
   js: function() {
-    return src([
-        path.build + '/js/' + filename.jsDependencies,
-        path.build + '/js/' + filename.jsFiles
-      ], {
+    const noVendors = filter(jsFiles, {
+      restore: true
+    });
+    return src(jsDependencies.concat(jsFiles), {
         sourcemaps: true
       })
+      .pipe(noVendors)
+      .pipe(uglify())
+      .pipe(noVendors.restore)
       .pipe(concat(filename.js))
       .pipe(dest(path.build + '/js', {
         sourcemaps: '.'
       }))
-  },
-  jsClean: function() {
-    return src([
-        path.build + '/js/' + filename.jsDependencies,
-        path.build + '/js/' + filename.jsFiles
-      ])
-      .pipe(clean())
   }
 }
 
@@ -188,4 +162,4 @@ const dev = {
 }
 
 exports.dev = parallel(dev.manifest, dev.html, dev.fonts, dev.icons, dev.css, dev.js)
-exports.build = series(parallel(build.manifest, build.html, build.fonts, build.icons, build.css), series(build.jsDependencies, build.jsFiles, build.js), build.jsClean)
+exports.build = parallel(build.manifest, build.html, build.fonts, build.icons, build.css, build.js)

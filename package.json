@@ -40,10 +40,10 @@
   "devDependencies": {
     "gh-pages": "^2.1.1",
     "gulp": "^4.0.2",
-    "gulp-clean": "^0.4.0",
     "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
+    "gulp-filter": "^6.0.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-replace": "^1.0.0",
     "gulp-uglify": "^3.0.2",
