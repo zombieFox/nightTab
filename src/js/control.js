@@ -2137,11 +2137,21 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-background-color-custom-current"),
+    element: helper.e(".control-background-color-custom-current-picker"),
     path: "background.color.custom",
     type: "color",
     func: function() {
       background.render.color();
+      background.render.input.hex();
+    }
+  }, {
+    element: helper.e(".control-background-color-custom-current-hex"),
+    path: "background.color.custom",
+    type: "text",
+    valueMod: ["hexTextString"],
+    func: function() {
+      background.render.color();
+      background.render.input.picker();
     }
   }, {
     element: helper.e(".control-background-image-show"),
@@ -3071,10 +3081,12 @@ var control = (function() {
         _disable.element(".control-background-image-url-helper", true);
       };
       if (state.get().background.color.by == "theme") {
-        _disable.input(".control-background-color-custom-current", true);
+        _disable.input(".control-background-color-custom-current-picker", true);
+        _disable.input(".control-background-color-custom-current-hex", true);
         _disable.element(".control-background-color-theme-helper", true);
       } else if (state.get().background.color.by == "custom") {
-        _disable.input(".control-background-color-custom-current", false);
+        _disable.input(".control-background-color-custom-current-picker", false);
+        _disable.input(".control-background-color-custom-current-hex", false);
         _disable.element(".control-background-color-theme-helper", false);
       };
     };

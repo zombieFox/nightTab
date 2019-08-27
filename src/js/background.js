@@ -115,8 +115,13 @@ var background = (function() {
 
   render.input = {
     clear: function() {
-      var input = helper.e(".control-background-image-file");
-      input.value = "";
+      helper.e(".control-background-image-file").value = "";
+    },
+    picker: function() {
+      helper.e(".control-background-color-custom-current-picker").value = helper.rgbToHex(state.get().background.color.custom);
+    },
+    hex: function() {
+      helper.e(".control-background-color-custom-current-hex").value = helper.rgbToHex(state.get().background.color.custom);
     }
   };
 
