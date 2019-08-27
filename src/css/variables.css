@@ -46,7 +46,7 @@
   --link-item-display-icon-size: 2.5em;
   --link-item-name-size: 0.9em;
   /* layout */
-  --layout-line-width: 0.2rem;
+  --layout-line-width: 0.2em;
   --layout-gutter: 0.5rem;
   --layout-width: 80%;
   --layout-padding-multiplier: 4;
