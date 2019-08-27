@@ -21,10 +21,12 @@ body {
   /* transition: background-color var(--layout-timing-extra-fast); */
 }
 
+html.is-background-color-by-theme,
 .is-background-color-by-theme body {
   background-color: rgb(var(--background-color-theme));
 }
 
+html.is-background-color-by-custom,
 .is-background-color-by-custom body {
   background-color: rgb(var(--background-color-custom));
 }

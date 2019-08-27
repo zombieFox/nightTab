@@ -2141,7 +2141,7 @@ var control = (function() {
     path: "background.color.custom",
     type: "color",
     func: function() {
-      background.render.color();
+      background.render.color.custom();
       background.render.input.hex();
     }
   }, {
@@ -2150,7 +2150,7 @@ var control = (function() {
     type: "text",
     valueMod: ["hexTextString"],
     func: function() {
-      background.render.color();
+      background.render.color.custom();
       background.render.input.picker();
     }
   }, {

@@ -69,10 +69,13 @@ var background = (function() {
 
   var render = {};
 
-  render.color = function() {
-    var html = helper.e("html");
-    html.style.backgroundColor = "rgb(" + state.get().background.color.custom.r + ", " + state.get().background.color.custom.g + ", " + state.get().background.color.custom.b + ")";
-    html.style.setProperty("--background-color-custom", state.get().background.color.custom.r + ", " + state.get().background.color.custom.g + ", " + state.get().background.color.custom.b);
+  render.color = {
+    custom: function() {
+      helper.e("html").style.setProperty("--background-color-custom", state.get().background.color.custom.r + ", " + state.get().background.color.custom.g + ", " + state.get().background.color.custom.b);
+    },
+    clearHTML: function() {
+      helper.e("html").style.backgroundColor = "";
+    }
   };
 
   render.image = function() {
@@ -220,7 +223,8 @@ var background = (function() {
   };
 
   var init = function() {
-    render.color();
+    render.color.clearHTML();
+    render.color.custom();
     render.image();
     render.blur();
     render.grayscale();
