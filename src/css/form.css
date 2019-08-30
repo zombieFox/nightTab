@@ -1,3 +1,73 @@
+/* textarea */
+textarea {
+  background-color: rgb(var(--theme-gray-02));
+  padding: 0 1em;
+  margin: 0 0 1em 0;
+  color: rgb(var(--form-input-text));
+  font-size: 1em;
+  font-family: var(--font-regular);
+  line-height: 2em;
+  height: 5em;
+  min-height: 2.5em;
+  min-width: 0;
+  width: 100%;
+  border-width: var(--form-input-border);
+  border-style: solid;
+  border-color: transparent;
+  border-radius: var(--theme-radius);
+  cursor: text;
+  resize: vertical;
+  display: block;
+  transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  -moz-appearance: textfield;
+}
+
+textarea:hover {
+  background-color: rgb(var(--theme-gray-03));
+  color: rgb(var(--form-input-text-hover));
+  outline: none;
+  box-shadow: 0 0 0 var(--layout-line-width) rgb(var(--theme-gray-06));
+}
+
+textarea:focus {
+  background-color: rgb(var(--theme-gray-01));
+  color: rgb(var(--form-input-text-focus));
+  outline: none;
+  z-index: 2;
+  box-shadow: 0 0 0 var(--layout-line-width) rgb(var(--theme-accent)), 0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
+}
+
+textarea[disabled] {
+  background-color: transparent;
+  color: rgb(var(--form-input-text-disabled));
+  border-color: rgb(var(--form-input-text-disabled));
+  cursor: default;
+  box-shadow: none;
+}
+
+textarea[disabled]:hover,
+textarea[disabled]:focus {
+  color: rgb(var(--form-input-text-disabled));
+}
+
+textarea::placeholder {
+  color: rgb(var(--form-input-placeholder));
+  transition: color var(--layout-timing-extra-fast);
+}
+
+textarea:hover::placeholder {
+  color: rgb(var(--form-input-placeholder-hover-focus));
+}
+
+textarea:focus::placeholder {
+  color: rgb(var(--form-input-placeholder-hover-focus));
+}
+
+textarea[disabled]:hover::placeholder,
+textarea[disabled]:focus::placeholder {
+  color: rgb(var(--form-input-placeholder-disabled));
+}
+
 /* email, number, password, search, tel, text */
 input[type="email"],
 input[type="number"],
