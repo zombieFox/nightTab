@@ -58,14 +58,14 @@ input[type="submit"]:active {
   text-decoration: none;
 }
 
-button[disabled],
-.button[disabled],
-button[disabled]:hover,
-.button[disabled]:hover,
-button[disabled]:focus,
-.button[disabled]:focus,
-button[disabled]:active,
-.button[disabled]:active {
+button:disabled,
+.button:disabled,
+button:disabled:hover,
+.button:disabled:hover,
+button:disabled:focus,
+.button:disabled:focus,
+button:disabled:active,
+.button:disabled:active {
   background-color: rgb(var(--theme-gray-02));
   border-color: transparent;
   color: rgb(var(--button-text-disabled));
@@ -142,14 +142,14 @@ button [class*=" button-"]:last-child,
   color: rgb(var(--button-link-text-active));
 }
 
-.button-link[disabled] {
+.button-link:disabled {
   background-color: transparent;
   color: transparent;
   pointer-events: none;
 }
 
-.button-link:hover[disabled],
-.button-link:focus[disabled] {
+.button-link:hover:disabled,
+.button-link:focus:disabled {
   background-color: transparent;
   color: transparent;
 }
