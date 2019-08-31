@@ -84,7 +84,13 @@ var background = (function() {
       if (state.get().background.image.from == "file") {
         html.style.setProperty("--background-image", "url(" + state.get().background.image.file.data + ")");
       } else if (state.get().background.image.from == "url") {
-        html.style.setProperty("--background-image", "url(" + state.get().background.image.url + ")");
+        if (/\s+/g.test(state.get().background.image.url)) {
+          var allUrls = state.get().background.image.url.split(/\s+/);
+          var randomUrl = allUrls[Math.floor(Math.random() * allUrls.length)];
+          html.style.setProperty("--background-image", "url(" + randomUrl + ")");
+        } else {
+          html.style.setProperty("--background-image", "url(" + state.get().background.image.url + ")");
+        };
       };
     } else {
       html.style.setProperty("--background-image", "url()");
