@@ -2282,6 +2282,7 @@ var control = (function() {
       checkbox: "change",
       radio: "change",
       text: "input",
+      textarea: "input",
       number: "input",
       range: "input",
       color: "change",
@@ -2295,6 +2296,9 @@ var control = (function() {
         return object.element.value;
       },
       text: function(object) {
+        return object.element.value;
+      },
+      textarea: function(object) {
         return object.element.value;
       },
       number: function(object) {
@@ -2350,6 +2354,12 @@ var control = (function() {
           };
         },
         input: function(object, event) {
+          changeValue(object);
+          if (object.func) {
+            object.func();
+          };
+        },
+        textarea: function(object, event) {
           changeValue(object);
           if (object.func) {
             object.func();
@@ -3134,6 +3144,18 @@ var control = (function() {
         };
         object.element.value = newValue;
       },
+      textarea: function(object) {
+        var newValue = helper.getObject({
+          object: state.get(),
+          path: object.path
+        });
+        if (object.valueMod) {
+          object.valueMod.slice().reverse().forEach(function(arrayItem, index) {
+            newValue = valueMod[arrayItem](newValue, object.element);
+          });
+        };
+        object.element.value = newValue;
+      },
       number: function(object) {
         object.element.value = helper.getObject({
           object: state.get(),
@@ -3159,7 +3181,7 @@ var control = (function() {
         }));
       }
     };
-    var supportedType = ["checkbox", "radio", "text", "number", "range", "color"];
+    var supportedType = ["checkbox", "radio", "text", "number", "range", "color", "textarea"];
     _allControl.forEach(function(arrayItem, index) {
       if (supportedType.includes(arrayItem.element.type)) {
         setValue[arrayItem.type](arrayItem);
