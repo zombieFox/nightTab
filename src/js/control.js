@@ -2199,7 +2199,7 @@ var control = (function() {
   }, {
     element: helper.e(".control-background-image-url"),
     path: "background.image.url",
-    type: "text",
+    type: "textarea",
     func: function() {
       background.render.image();
     }
