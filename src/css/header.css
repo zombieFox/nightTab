@@ -63,7 +63,7 @@
 }
 
 .header-area {
-  padding: calc(var(--layout-gutter) * var(--layout-padding-multiplier));
+  padding: calc(var(--layout-space) * var(--layout-padding));
   position: relative;
   width: var(--header-area-width);
   pointer-events: none;
@@ -122,7 +122,7 @@
 }
 
 .header-item-grid {
-  margin: calc(-1 * calc(var(--layout-gutter) * var(--layout-gutter-multiplier))) 0 0 calc(-1 * calc(var(--layout-gutter) * var(--layout-gutter-multiplier)));
+  margin: calc(-1 * calc(var(--layout-space) * var(--layout-gutter))) 0 0 calc(-1 * calc(var(--layout-space) * var(--layout-gutter)));
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -142,7 +142,7 @@
 }
 
 .header-item {
-  margin: calc(var(--layout-gutter) * var(--layout-gutter-multiplier)) 0 0 calc(var(--layout-gutter) * var(--layout-gutter-multiplier));
+  margin: calc(var(--layout-space) * var(--layout-gutter)) 0 0 calc(var(--layout-space) * var(--layout-gutter));
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;

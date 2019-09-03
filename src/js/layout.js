@@ -9,12 +9,12 @@ var layout = (function() {
 
   render.padding = function() {
     var html = helper.e("html");
-    html.style.setProperty("--layout-padding-multiplier", state.get().layout.padding);
+    html.style.setProperty("--layout-padding", state.get().layout.padding);
   };
 
   render.gutter = function() {
     var html = helper.e("html");
-    html.style.setProperty("--layout-gutter-multiplier", state.get().layout.gutter);
+    html.style.setProperty("--layout-gutter", state.get().layout.gutter);
   };
 
   render.order = function() {

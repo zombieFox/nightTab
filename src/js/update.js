@@ -603,6 +603,11 @@ var update = (function() {
         }
       };
       return data;
+    },
+    "3.80.0": function(data) {
+      delete data.state.link.item.newtab;
+      data.state.link.item.border = 0;
+      return data;
     }
   };
 

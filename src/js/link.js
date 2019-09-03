@@ -556,6 +556,10 @@ var link = (function() {
           arrayItem.tabIndex = -1;
         });
       };
+    },
+    border: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-item-border", state.get().link.item.border);
     }
   };
 
@@ -855,6 +859,7 @@ var link = (function() {
     render.item.display.letter();
     render.item.display.icon();
     render.item.name();
+    render.item.border();
     bind.sort();
   };
 

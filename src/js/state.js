@@ -164,7 +164,7 @@ var state = (function() {
         },
         order: "displayname",
         size: 1,
-        newTab: false
+        border: 0
       },
       show: true,
       add: false,

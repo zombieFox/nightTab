@@ -1970,6 +1970,14 @@ var control = (function() {
       link.items();
     }
   }, {
+    element: helper.e(".control-link-item-border"),
+    path: "link.item.border",
+    type: "range",
+    func: function() {
+      render.class();
+      link.render.item.border();
+    }
+  }, {
     element: helper.e(".control-link-style-block"),
     path: "link.style",
     type: "radio",
@@ -2496,8 +2504,8 @@ var control = (function() {
       helper.removeClass(html, "is-link-area-alignment-left");
       helper.removeClass(html, "is-link-area-alignment-center");
       helper.removeClass(html, "is-link-area-alignment-right");
-      helper.removeClass(html, "is-link-name-show");
-      helper.removeClass(html, "is-link-display-show");
+      helper.removeClass(html, "is-link-item-name-show");
+      helper.removeClass(html, "is-link-display-item-show");
       helper.removeClass(html, "is-link-display-alignment-topleft");
       helper.removeClass(html, "is-link-display-alignment-topcenter");
       helper.removeClass(html, "is-link-display-alignment-topright");
@@ -2507,12 +2515,13 @@ var control = (function() {
       helper.removeClass(html, "is-link-display-alignment-bottomleft");
       helper.removeClass(html, "is-link-display-alignment-bottomcenter");
       helper.removeClass(html, "is-link-display-alignment-bottomright");
-      helper.removeClass(html, "is-link-url-show");
+      helper.removeClass(html, "is-link-item-url-show");
       helper.removeClass(html, "is-link-item-line-show");
       helper.removeClass(html, "is-link-item-hoverscale");
       helper.removeClass(html, "is-link-item-alignment-left");
       helper.removeClass(html, "is-link-item-alignment-center");
       helper.removeClass(html, "is-link-item-alignment-right");
+      helper.removeClass(html, "is-link-item-border");
       helper.removeClass(html, "is-link-style-list");
       helper.removeClass(html, "is-link-style-block");
       helper.removeClass(html, "is-link-edit");
@@ -2522,19 +2531,22 @@ var control = (function() {
         helper.addClass(html, "is-link-display-alignment-" + state.get().link.item.display.alignment);
         helper.addClass(html, "is-link-style-" + state.get().link.style);
         if (state.get().link.item.name.show) {
-          helper.addClass(html, "is-link-name-show");
+          helper.addClass(html, "is-link-item-name-show");
         };
         if (state.get().link.item.display.show) {
-          helper.addClass(html, "is-link-display-show");
+          helper.addClass(html, "is-link-display-item-show");
         };
         if (state.get().link.item.url.show) {
-          helper.addClass(html, "is-link-url-show");
+          helper.addClass(html, "is-link-item-url-show");
         };
         if (state.get().link.item.line.show) {
           helper.addClass(html, "is-link-item-line-show");
         };
         if (state.get().link.item.hoverScale) {
           helper.addClass(html, "is-link-item-hoverscale");
+        };
+        if (state.get().link.item.border > 0) {
+          helper.addClass(html, "is-link-item-border");
         };
         if (state.get().link.edit) {
           helper.addClass(html, "is-link-edit");
