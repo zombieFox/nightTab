@@ -1992,6 +1992,20 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: helper.e(".control-link-orientation-top"),
+    path: "link.orientation",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-link-orientation-bottom"),
+    path: "link.orientation",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
     element: helper.e(".control-link-sort-letter"),
     type: "button",
     func: function() {
@@ -2524,12 +2538,15 @@ var control = (function() {
       helper.removeClass(html, "is-link-item-border");
       helper.removeClass(html, "is-link-style-list");
       helper.removeClass(html, "is-link-style-block");
+      helper.removeClass(html, "is-link-orientation-top");
+      helper.removeClass(html, "is-link-orientation-bottom");
       helper.removeClass(html, "is-link-edit");
       if (state.get().link.show) {
         helper.addClass(html, "is-link-show");
         helper.addClass(html, "is-link-area-alignment-" + state.get().link.area.alignment);
         helper.addClass(html, "is-link-display-alignment-" + state.get().link.item.display.alignment);
         helper.addClass(html, "is-link-style-" + state.get().link.style);
+        helper.addClass(html, "is-link-orientation-" + state.get().link.orientation);
         if (state.get().link.item.name.show) {
           helper.addClass(html, "is-link-item-name-show");
         };
@@ -2969,6 +2986,9 @@ var control = (function() {
       _disable.element(".control-link-style-block-helper", true);
       _disable.input(".control-link-style-list", true);
       _disable.element(".control-link-style-list-helper", true);
+      _disable.input(".control-link-orientation-top", true);
+      _disable.input(".control-link-orientation-bottom", true);
+      _disable.element(".control-link-orientation-helper", true);
       _disable.input(".control-link-sort-name", true);
       _disable.input(".control-link-sort-letter", true);
       _disable.input(".control-link-sort-icon", true);
@@ -3001,6 +3021,9 @@ var control = (function() {
         _disable.element(".control-link-style-block-helper", false);
         _disable.input(".control-link-style-list", false);
         _disable.element(".control-link-style-list-helper", false);
+        _disable.input(".control-link-orientation-top", false);
+        _disable.input(".control-link-orientation-bottom", false);
+        _disable.element(".control-link-orientation-helper", false);
         _disable.input(".control-link-sort-name", false);
         _disable.input(".control-link-sort-letter", false);
         _disable.input(".control-link-sort-icon", false);

@@ -2,7 +2,7 @@
   "name": "nightTab",
   "short_name": "nightTab",
   "description": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab.",
-  "version": "3.80.0",
+  "version": "3.81.0",
   "manifest_version": 2,
   "chrome_url_overrides": {
     "newtab": "index.html"
