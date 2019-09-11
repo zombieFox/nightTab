@@ -159,6 +159,9 @@ var state = (function() {
         line: {
           show: true
         },
+        shadow: {
+          show: true
+        },
         hoverScale: {
           show: true
         },

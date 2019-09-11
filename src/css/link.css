@@ -131,12 +131,9 @@
   text-decoration: none;
 }
 
-.link-item:focus .link-panel-front,
-.link-item:focus-within .link-panel-front,
-.link-item:hover .link-panel-front {
-  text-decoration: none;
-  outline: none;
-  background-color: rgb(var(--theme-gray-03));
+.is-link-item-shadow-show .link-item:focus .link-panel-front,
+.is-link-item-shadow-show .link-item:focus-within .link-panel-front,
+.is-link-item-shadow-show .link-item:hover .link-panel-front {
   box-shadow: var(--layout-shadow-large);
 }
 
@@ -547,7 +544,12 @@
 .is-link-edit .link-item:hover .link-panel-front,
 .is-link-edit .link-item:focus .link-panel-front {
   height: calc(100% - var(--link-item-edit-height));
-  box-shadow: var(--layout-shadow-small);
+}
+
+.is-link-item-shadow-show.is-link-edit .link-panel-front,
+.is-link-item-shadow-show.is-link-edit .link-item:hover .link-panel-front,
+.is-link-item-shadow-show.is-link-edit .link-item:focus .link-panel-front {
+  box-shadow: var(--layout-shadow-medium);
 }
 
 .is-link-edit.is-link-item-url-show .link-item:focus .link-panel-front,

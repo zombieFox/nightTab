@@ -612,6 +612,12 @@ var update = (function() {
     "3.81.0": function(data) {
       data.state.link.orientation = "bottom";
       return data;
+    },
+    "3.82.0": function(data) {
+      data.state.link.item.shadow = {
+        show: true
+      };
+      return data;
     }
   };
 
