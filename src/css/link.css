@@ -337,11 +337,19 @@
   color: rgb(var(--theme-white));
 }
 
-.link-control-item:first-child {
+.is-link-orientation-top .link-control-item:first-child {
+  border-radius: var(--theme-radius) 0 0 0;
+}
+
+.is-link-orientation-top .link-control-item:last-child {
+  border-radius: 0 var(--theme-radius) 0 0
+}
+
+.is-link-orientation-bottom .link-control-item:first-child {
   border-radius: 0 0 0 var(--theme-radius);
 }
 
-.link-control-item:last-child {
+.is-link-orientation-bottom .link-control-item:last-child {
   border-radius: 0 0 var(--theme-radius) 0
 }
 

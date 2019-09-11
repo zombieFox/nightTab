@@ -1,6 +1,6 @@
 {
   "name": "nighttab",
-  "version": "3.82.0",
+  "version": "3.82.1",
   "description": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab.",
   "main": "index.js",
   "scripts": {
