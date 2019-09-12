@@ -125,7 +125,10 @@
 }
 
 .link-panel-front:hover,
-.link-panel-front:focus {
+.link-panel-front:focus,
+.link-item:focus-within .link-panel-front,
+.link-item:focus .link-panel-front,
+.link-item:hover .link-panel-front {
   background-color: rgb(var(--theme-gray-03));
   outline: none;
   text-decoration: none;
