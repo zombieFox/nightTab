@@ -56,9 +56,9 @@
   --layout-timing-medium: 0.6s ease-in-out;
   --layout-timing-slow: 0.8s ease-in-out;
   --layout-timing-extra-slow: 1s ease-in-out;
-  --layout-shadow-small: 0 0 2px rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.1);
-  --layout-shadow-medium: 0 0 4px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.1);
-  --layout-shadow-large: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 12px rgba(0, 0, 0, 0.1);
+  --layout-shadow-small: 0 0 4px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.1);
+  --layout-shadow-medium: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 16px rgba(0, 0, 0, 0.1);
+  --layout-shadow-large: 0 0 16px rgba(0, 0, 0, 0.2), 0 0 32px rgba(0, 0, 0, 0.1);
   /* background */
   --background-color-theme: var(--theme-gray-01);
   --background-color-custom: rgb(0, 0, 0);
