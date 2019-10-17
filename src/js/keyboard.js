@@ -7,7 +7,7 @@ var keyboard = (function() {
       //  esc
       if (event.keyCode == 27) {
         if (state.get().edge) {
-          edge.render.clear();
+          edge.box.close();
         } else if (state.get().menu) {
           menu.close();
           shade.close();

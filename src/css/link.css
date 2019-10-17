@@ -551,6 +551,7 @@
 
 .link-empty {
   background-color: rgba(var(--theme-gray-04), 0.2);
+  padding: 1em 0;
   border-radius: var(--theme-radius);
   grid-column-start: 1;
   grid-column-end: -1;
@@ -558,6 +559,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.is-sorting .link-empty {
+  display: none;
 }
 
 .link-empty-heading {

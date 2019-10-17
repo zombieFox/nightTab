@@ -230,6 +230,14 @@ var link = (function() {
       });
       bind.sort.update.remove.item();
       helper.eA(".group-body").forEach(function(arrayItem, index) {
+        sortable(arrayItem)[0].addEventListener("sortstart", function() {
+          var html = helper.e("html");
+          helper.addClass(html, "is-sorting");
+        }, false);
+        sortable(arrayItem)[0].addEventListener("sortstop", function() {
+          var html = helper.e("html");
+          helper.removeClass(html, "is-sorting");
+        }, false);
         sortable(arrayItem)[0].addEventListener("sortupdate", bind.sort.update.func.item, false, event);
       });
     }
@@ -1183,14 +1191,9 @@ var link = (function() {
     if (state.get().search) {
       // if bookmarks exist to be searched
       if (bookmarksToRender.total > 0) {
-        // if matching bookmarks found
-        if (bookmarksToRender.matching.length > 0) {
-          make.bookmarks(bookmarksToRender.matching);
-        } else {
-          make.empty.search();
-        };
+        make.bookmarks(bookmarksToRender.matching);
       } else {
-        make.empty.bookmarks();
+        make.empty.search();
       };
     } else {
       // if bookmarks exist
