@@ -35,6 +35,7 @@ var search = (function() {
 
   var get = function() {
     var searchInput = helper.e(".search-input");
+    var string = searchInput.value.toLowerCase().replace(/\s/g, "");
     if (state.get().search) {
       var searchedBookmarks = {
         total: 0,
@@ -42,12 +43,25 @@ var search = (function() {
       };
       searchedBookmarks.total = bookmarks.get().length;
       bookmarks.get().forEach(function(arrayItem, index) {
-        var matchUrl = (arrayItem.url != null) && (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(searchInput.value.toLowerCase().replace(/\s/g, "")));
-        var matchName = (arrayItem.name != null) && (arrayItem.name.toLowerCase().replace(/\s/g, "").includes(searchInput.value.toLowerCase().replace(/\s/g, "")));
-        if (matchUrl || matchName) {
-          var bookmarkDataCopy = JSON.parse(JSON.stringify(arrayItem));
-          searchedBookmarks.matching.push(bookmarkDataCopy);
+        var currentGroup = JSON.parse(JSON.stringify(arrayItem));
+        var matchingItems = [];
+        currentGroup.items.forEach(function(arrayItem, index) {
+          var matchUrl = (arrayItem.url != null) && (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(string));
+          var matchName = (arrayItem.name != null) && (arrayItem.name.toLowerCase().replace(/\s/g, "").includes(string));
+          if (matchUrl || matchName) {
+            currentGroup.items.splice(index, 1);
+            matchingItems.push(JSON.parse(JSON.stringify(arrayItem)));
+          };
+        });
+        if (matchingItems.length > 0) {
+          currentGroup.items = matchingItems;
+          searchedBookmarks.matching.push(currentGroup);
         };
+        var count = 0;
+        searchedBookmarks.matching.forEach(function(arrayItem, index) {
+          count = count + arrayItem.items.length
+        });
+        searchedBookmarks.total = count;
       });
       return searchedBookmarks;
     };
