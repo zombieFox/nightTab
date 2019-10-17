@@ -76,7 +76,7 @@ var control = (function() {
       theme.accent();
       theme.render.input.picker();
       theme.render.input.hex();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-layout-width"),
@@ -1615,14 +1615,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
         });
       }
     }, {
@@ -1640,7 +1640,7 @@ var control = (function() {
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
           edge.box.open({
-            element: helper.e(".link-area"),
+            element: helper.e(".group"),
           });
         };
       }
@@ -1660,7 +1660,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
           delay: 500
         });
       }
@@ -1686,7 +1686,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
           delay: 500
         });
       }
@@ -1702,7 +1702,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
           delay: 500
         });
       }
@@ -1718,7 +1718,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
           delay: 500
         });
       }
@@ -1923,14 +1923,14 @@ var control = (function() {
     path: "link.item.order",
     type: "radio",
     func: function() {
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-item-order-namedisplay"),
     path: "link.item.order",
     type: "radio",
     func: function() {
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-item-url-show"),
@@ -1974,7 +1974,7 @@ var control = (function() {
     path: "link.newTab",
     type: "checkbox",
     func: function() {
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-item-border"),
@@ -2017,35 +2017,35 @@ var control = (function() {
     type: "button",
     func: function() {
       bookmarks.sort("letter");
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-sort-icon"),
     type: "button",
     func: function() {
       bookmarks.sort("icon");
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-sort-name"),
     type: "button",
     func: function() {
       bookmarks.sort("name");
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-accent-clear"),
     type: "button",
     func: function() {
       link.mod.accent.clear();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-accent-set"),
     type: "button",
     func: function() {
       link.mod.accent.rainbow();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-theme-accent-current-picker"),
@@ -2055,7 +2055,7 @@ var control = (function() {
       theme.accent();
       theme.render.input.quick();
       theme.render.input.hex();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-theme-accent-current-hex"),
@@ -2066,7 +2066,7 @@ var control = (function() {
       theme.accent();
       theme.render.input.picker();
       theme.render.input.quick();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-theme-style-dark"),
@@ -2147,7 +2147,7 @@ var control = (function() {
     func: function() {
       theme.render.accent.random();
       theme.render.accent.color();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-background-color-by-theme"),

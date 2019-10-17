@@ -61,6 +61,7 @@ const cssFiles = [
   path.src + '/css/transitional.css',
   path.src + '/css/search.css',
   path.src + '/css/background.css',
+  path.src + '/css/group.css',
   path.src + '/css/link.css',
   path.src + '/css/auto-suggest.css',
   path.src + '/css/fontawesome.css'

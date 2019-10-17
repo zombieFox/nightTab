@@ -87,6 +87,7 @@
   --form-feedback-text-disabled: var(--theme-gray-04);
   --form-helper: var(--theme-gray-12);
   --form-helper-disabled: var(--theme-gray-06);
+  --form-arrow-size: 5px;
   /* button */
   --button-text: var(--theme-gray-12);
   --button-text-hover-focus: var(--theme-style-text);
@@ -175,7 +176,7 @@
   --link-item-width: 11em;
   --link-item-height: 10em;
   --link-item-url-height: 20%;
-  --link-item-edit-height: 30%;
+  --link-item-edit-height: 50%;
 }
 
 .is-link-style-list {

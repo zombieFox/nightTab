@@ -7,7 +7,7 @@ var search = (function() {
     searchInput.addEventListener("input", function() {
       mod.searching.set();
       render.clear.button();
-      link.items();
+      link.groupAndItems();
     }, false);
   };
 
@@ -17,7 +17,7 @@ var search = (function() {
       render.clear.input();
       mod.searching.set();
       render.clear.button();
-      link.items();
+      link.groupAndItems();
     }, false);
   };
 

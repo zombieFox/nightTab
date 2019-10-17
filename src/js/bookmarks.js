@@ -3,185 +3,176 @@ var bookmarks = (function() {
   var mod = {};
 
   mod.all = [{
-    display: "icon",
-    letter: "DEV",
-    icon: {
-      name: "code",
-      prefix: "fas",
-      label: "Code"
-    },
-    name: "Devdocs",
-    url: "http://devdocs.io/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453101749
+    name: "Cool stuff",
+    items: [{
+      display: "icon",
+      letter: "AS",
+      icon: {
+        name: "dice-d20",
+        prefix: "fas",
+        label: "Dice D20"
+      },
+      name: "awesomeSheet",
+      url: "https://zombiefox.github.io/awesomeSheet/",
+      accent: {
+        override: false,
+        color: {
+          r: null,
+          g: null,
+          b: null
+        }
+      },
+      timeStamp: 1546453104010
+    }, {
+      display: "letter",
+      letter: "AZ",
+      icon: {
+        name: "amazon",
+        prefix: "fab",
+        label: "Amazon"
+      },
+      name: "Amazon",
+      url: "https://www.amazon.co.uk/",
+      accent: {
+        override: false,
+        color: {
+          r: null,
+          g: null,
+          b: null
+        }
+      },
+      timeStamp: 1546453107633
+    }, {
+      display: "letter",
+      letter: "GM",
+      icon: {
+        name: "envelope",
+        prefix: "fas",
+        label: "Envelope"
+      },
+      name: "Gmail",
+      url: "https://mail.google.com/",
+      accent: {
+        override: false,
+        color: {
+          r: null,
+          g: null,
+          b: null
+        }
+      },
+      timeStamp: 1546453110265
+    }, {
+      display: "icon",
+      letter: "R",
+      icon: {
+        name: "reddit-alien",
+        prefix: "fab",
+        label: "reddit Alien"
+      },
+      name: "Reddit",
+      url: "https://www.reddit.com/",
+      accent: {
+        override: false,
+        color: {
+          r: null,
+          g: null,
+          b: null
+        }
+      },
+      timeStamp: 1546453111491
+    }, {
+      display: "icon",
+      letter: "N",
+      icon: {
+        name: "film",
+        prefix: "fas",
+        label: "Film"
+      },
+      name: "Netflix",
+      url: "https://www.netflix.com/",
+      accent: {
+        override: false,
+        color: {
+          r: null,
+          g: null,
+          b: null
+        }
+      },
+      timeStamp: 1546453104460
+    }, {
+      display: "letter",
+      letter: "DR",
+      icon: {
+        name: null,
+        prefix: null,
+        label: null
+      },
+      name: "Drive",
+      url: "https://drive.google.com/drive/",
+      accent: {
+        override: false,
+        color: {
+          r: null,
+          g: null,
+          b: null
+        }
+      },
+      timeStamp: 1546453111953
+    }]
   }, {
-    display: "icon",
-    letter: "AS",
-    icon: {
-      name: "dice-d20",
-      prefix: "fas",
-      label: "Dice D20"
-    },
-    name: "awesomeSheet",
-    url: "https://zombiefox.github.io/awesomeSheet/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453104010
-  }, {
-    display: "icon",
-    letter: "N",
-    icon: {
-      name: "film",
-      prefix: "fas",
-      label: "Film"
-    },
-    name: "Netflix",
-    url: "https://www.netflix.com/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453104460
-  }, {
-    display: "letter",
-    letter: "AZ",
-    icon: {
-      name: "amazon",
-      prefix: "fab",
-      label: "Amazon"
-    },
-    name: "Amazon",
-    url: "https://www.amazon.co.uk/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453107633
-  }, {
-    display: "icon",
-    letter: "YT",
-    icon: {
-      name: "youtube",
-      prefix: "fab",
-      label: "YouTube"
-    },
-    name: "Youtube",
-    url: "https://www.youtube.com/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453108071
-  }, {
-    display: "letter",
-    letter: "GIT",
-    icon: {
-      name: "github",
-      prefix: "fab",
-      label: "GitHub"
-    },
-    name: "Github",
-    url: "https://github.com/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453108926
-  }, {
-    display: "letter",
-    letter: "GM",
-    icon: {
-      name: "envelope",
-      prefix: "fas",
-      label: "Envelope"
-    },
-    name: "Gmail",
-    url: "https://mail.google.com/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453110265
-  }, {
-    display: "icon",
-    letter: "R",
-    icon: {
-      name: "reddit-alien",
-      prefix: "fab",
-      label: "reddit Alien"
-    },
-    name: "Reddit",
-    url: "https://www.reddit.com/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453111491
-  }, {
-    display: "letter",
-    letter: "DR",
-    icon: {
-      name: null,
-      prefix: null,
-      label: null
-    },
-    name: "Drive",
-    url: "https://drive.google.com/drive/",
-    accent: {
-      override: false,
-      color: {
-        r: null,
-        g: null,
-        b: null
-      }
-    },
-    timeStamp: 1546453111953
+    name: "Dev sites",
+    items: [{
+      display: "icon",
+      letter: "DEV",
+      icon: {
+        name: "code",
+        prefix: "fas",
+        label: "Code"
+      },
+      name: "Devdocs",
+      url: "http://devdocs.io/",
+      accent: {
+        override: false,
+        color: {
+          r: null,
+          g: null,
+          b: null
+        }
+      },
+      timeStamp: 1546453101749
+    }, {
+      display: "icon",
+      letter: "GIT",
+      icon: {
+        name: "github",
+        prefix: "fab",
+        label: "GitHub"
+      },
+      name: "Github",
+      url: "https://github.com/",
+      accent: {
+        override: false,
+        color: {
+          r: null,
+          g: null,
+          b: null
+        }
+      },
+      timeStamp: 1546453108926
+    }]
   }];
 
   mod.get = function(data) {
     var _singleBookmark = function() {
       var found = false;
-      for (var i = 0; i < mod.all.length; i++) {
-        if (mod.all[i].timeStamp === data.timeStamp) {
-          found = mod.all[i];
-        };
+      if (mod.all.length > 0) {
+        mod.all.forEach(function(arrayItem, index) {
+          arrayItem.forEach(function(arrayItem, index) {
+            if (arrayItem[index].timeStamp === data.timeStamp) {
+              found = arrayItem[index];
+            };
+          });
+        });
       };
       return found;
     };
@@ -198,24 +189,52 @@ var bookmarks = (function() {
     };
   };
 
-  mod.add = function(data) {
-    mod.all.push(data);
+  mod.add = {
+    link: function(data) {
+      if (data.position.group.new) {
+        mod.add.group(data);
+      };
+      mod.all[data.position.destination.group].items.splice(data.position.destination.item, 0, data.link);
+    },
+    group: function(data) {
+      var name = data.position.group.name;
+      if (name != null && typeof name == "string") {
+        name = name.trim();
+      };
+      if (name == "" || name == null || name == undefined) {
+        var count = get().length + 1;
+        name = "Group " + count;
+      };
+      mod.all.push({
+        name: name,
+        items: []
+      });
+    }
   };
 
-  mod.edit = function(data) {
-    for (var i = 0; i < mod.all.length; i++) {
-      if (mod.all[i].timeStamp === data.timeStamp) {
-        mod.all[i] = data;
+  mod.edit = {
+    link: function(data) {
+      if (data.position.group.new) {
+        mod.add.group(data);
       };
-    };
+      var item = JSON.parse(JSON.stringify(data.link));
+      mod.all[data.position.origin.group].items.splice(data.position.origin.item, 1);
+      mod.all[data.position.destination.group].items.splice(data.position.destination.item, 0, item);
+    },
+    group: function(data) {
+      var group = JSON.parse(JSON.stringify(data.group));
+      mod.all.splice(data.position.origin, 1);
+      mod.all.splice(data.position.destination, 0, group);
+    }
   };
 
-  mod.remove = function(data) {
-    for (var i = 0; i < mod.all.length; i++) {
-      if (mod.all[i].timeStamp === data.timeStamp) {
-        mod.all.splice(mod.all.indexOf(mod.all[i]), 1);
-      };
-    };
+  mod.remove = {
+    link: function(data) {
+      mod.all[data.position.origin.group].items.splice(data.position.origin.item, 1);
+    },
+    group: function(data) {
+      mod.all.splice(data.position.origin, 1);
+    }
   };
 
   mod.sort = function(by) {
@@ -230,35 +249,51 @@ var bookmarks = (function() {
         return helper.sortObject(array, "icon.name");
       }
     };
-    mod.all = action[by](mod.all);
+    mod.all.forEach(function(arrayItem, index) {
+      arrayItem.items = action[by](arrayItem.items);
+    });
   };
 
-  mod.move = function(origin, destination) {
-    mod.all = helper.moveArrayItem(mod.all, origin, destination);
+  mod.move = {
+    link: function(data) {
+      var item = JSON.parse(JSON.stringify(mod.all[data.position.origin.group].items[data.position.origin.item]));
+      mod.all[data.position.origin.group].items.splice(data.position.origin.item, 1);
+      mod.all[data.position.destination.group].items.splice(data.position.destination.item, 0, item);
+    },
+    group: function(data) {
+      var group = JSON.parse(JSON.stringify(mod.all[data.position.origin]));
+      mod.all.splice(data.position.origin, 1);
+      mod.all.splice(data.position.destination, 0, group);
+    }
+  };
+
+  mod.count = function() {
+    var count = 0;
+    mod.all.forEach(function(arrayItem, index) {
+      count = count + arrayItem.items.length
+    });
+    return count;
+  };
+
+  var count = function() {
+    return mod.count();
   };
 
   var get = function(data) {
     return mod.get(data);
   };
 
-  var add = function(data) {
-    mod.add(data);
-  };
-
-  var edit = function(data) {
-    mod.edit(data);
-  };
-
   var sort = function(by) {
     mod.sort(by);
   };
 
-  var move = function(origin, destination) {
-    mod.move(origin, destination);
-  };
-
-  var remove = function(data) {
-    mod.remove(data);
+  var remove = {
+    link: function(data) {
+      mod.remove.link(data);
+    },
+    group: function(data) {
+      mod.remove.group(data);
+    }
   };
 
   var init = function() {
@@ -272,10 +307,8 @@ var bookmarks = (function() {
     init: init,
     mod: mod,
     get: get,
-    add: add,
-    edit: edit,
     sort: sort,
-    move: move,
+    count: count,
     remove: remove
   };
 
