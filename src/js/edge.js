@@ -10,7 +10,6 @@ var edge = (function() {
   bind.tick = {
     set: function() {
       _tick = window.setTimeout(function() {
-        console.log("hit");
         render.update();
         bind.tick.set();
       }, 100);
