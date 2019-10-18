@@ -329,23 +329,11 @@ var link = (function() {
       var groupHeader = helper.node("div|class:group-header");
       var groupName = helper.node("div|class:group-name");
       var groupNameText = helper.node("h1:" + stagedGroup.group.name + "|class:group-name-text");
-      var groupControlOptions = {
-        tag: "div",
-        attr: [{
-          key: "class",
-          value: "group-control form-group"
-        }]
-      };
-      if (invert(state.get().theme.accent.current, true) == "#000000") {
-        groupControlOptions.attr[0].value = groupControlOptions.attr[0].value + " group-control-text-dark";
-      } else if (invert(stagedLink.link.accent.color, true) == "#ffffff") {
-        groupControlOptions.attr[0].value = groupControlOptions.attr[0].value + " group-control-text-light";
-      };
-      var groupControl = helper.makeNode(groupControlOptions);
+      var groupControl = helper.node("div|class:group-control form-group");
 
       groupName.appendChild(groupNameText);
-      groupHeader.appendChild(groupControl);
       groupHeader.appendChild(groupName);
+      groupHeader.appendChild(groupControl);
       group.appendChild(groupHeader);
 
       var groupBody = helper.node("div|class:group-body");
@@ -483,18 +471,6 @@ var link = (function() {
       });
       pagelock.lock();
     },
-    tabindex: function() {
-      var allGroupControlItem = helper.eA(".group-control-item");
-      if (state.get().link.edit) {
-        allGroupControlItem.forEach(function(arrayItem, index) {
-          arrayItem.tabIndex = 1;
-        });
-      } else {
-        allGroupControlItem.forEach(function(arrayItem, index) {
-          arrayItem.tabIndex = -1;
-        });
-      };
-    },
     form: function(override) {
       var options = {
         useStagedGroup: null
@@ -548,6 +524,22 @@ var link = (function() {
       }, false);
 
       return form;
+    },
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--group-name-size", state.get().group.name.size + "em");
+    },
+    tabindex: function() {
+      var allGroupControlItem = helper.eA(".group-control-item");
+      if (state.get().link.edit) {
+        allGroupControlItem.forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = 1;
+        });
+      } else {
+        allGroupControlItem.forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = -1;
+        });
+      };
     }
   };
 
@@ -1459,6 +1451,7 @@ var link = (function() {
   var init = function() {
     mod.add.close();
     groupAndItems();
+    render.group.size();
     render.item.size();
     render.item.display.letter();
     render.item.display.icon();

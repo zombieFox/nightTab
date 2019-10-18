@@ -175,6 +175,12 @@ var state = (function() {
       style: "block",
       orientation: "bottom"
     },
+    group: {
+      name: {
+        show: true,
+        size: 1
+      }
+    },
     layout: {
       alignment: "centercenter",
       order: "headerlink",

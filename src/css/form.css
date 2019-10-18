@@ -488,6 +488,7 @@ input[type="range"] {
   color: rgb(var(--theme-style-text));
   font-size: 1em;
   font-family: var(--font-regular);
+  display: block;
   height: 2em;
   width: 100%;
   border: 0;

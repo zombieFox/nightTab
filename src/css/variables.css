@@ -38,6 +38,8 @@
   --header-button-size: 1em;
   --header-greeting-size: 1em;
   --header-transitional-size: 1em;
+  /* group */
+  --group-name-size: 1em;
   /* link */
   --link-area-width: 100%;
   --link-item-size: 1em;
