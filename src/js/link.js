@@ -332,8 +332,8 @@ var link = (function() {
       var groupControl = helper.node("div|class:group-control form-group");
 
       groupName.appendChild(groupNameText);
-      groupHeader.appendChild(groupName);
       groupHeader.appendChild(groupControl);
+      groupHeader.appendChild(groupName);
       group.appendChild(groupHeader);
 
       var groupBody = helper.node("div|class:group-body");
@@ -516,6 +516,12 @@ var link = (function() {
         populateForm();
       };
 
+      form.addEventListener("keydown", function(event) {
+        if (event.keyCode == 13) {
+          event.preventDefault();
+          return false;
+        };
+      }, false);
       groupFormPositionSelect.addEventListener("change", function(event) {
         stagedGroup.position.destination = this.selectedIndex;
       }, false);
@@ -1035,6 +1041,12 @@ var link = (function() {
         populateForm();
       };
 
+      form.addEventListener("keydown", function(event) {
+        if (event.keyCode == 13) {
+          event.preventDefault();
+          return false;
+        };
+      }, false);
       groupExistingRadio.addEventListener("change", function(event) {
         stagedLink.position.destination.group = groupExistingGroup.selectedIndex;
         stagedLink.position.group.new = false;

@@ -624,6 +624,12 @@ var update = (function() {
         name: "Group 1",
         items: data.bookmarks
       }];
+      data.state.group = {
+        name: {
+          show: true,
+          size: 1
+        }
+      };
       return data;
     }
   };

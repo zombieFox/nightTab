@@ -17,16 +17,14 @@
 .group-header {
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  transition: padding var(--layout-timing-extra-fast);
 }
 
 .is-group-name-show .group-header,
 .is-link-edit .group-header {
-  /* padding-bottom: 1em; */
   padding-bottom: calc(var(--layout-space) * var(--layout-gutter));
 }
 
@@ -48,19 +46,28 @@
 }
 
 .group-control {
-  margin-top: 0;
+  margin-right: 0;
   margin-bottom: 0;
   overflow: hidden;
   height: 0;
-  transition: height var(--layout-timing-extra-fast), margin-top var(--layout-timing-extra-fast);
+  width: 0;
+  transition:
+    width var(--layout-timing-extra-fast),
+    height var(--layout-timing-extra-fast) var(--layout-duration-04),
+    margin var(--layout-timing-extra-fast);
 }
 
 .is-link-edit .group-control {
   height: 2.5em;
+  width: 16em;
+  transition:
+    width var(--layout-timing-extra-fast) var(--layout-duration-04),
+    height var(--layout-timing-extra-fast),
+    margin var(--layout-timing-extra-fast) var(--layout-duration-04);
 }
 
 .is-link-edit.is-group-name-show .group-control {
-  margin-top: 0.5em;
+  margin-right: 1em;
 }
 
 .group-control-item {
