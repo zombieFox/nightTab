@@ -458,6 +458,7 @@
 }
 
 .link-display-letter {
+  padding-top: 8%;
   font-family: var(--font-fjalla);
   color: rgb(var(--theme-accent));
   line-height: 1;
