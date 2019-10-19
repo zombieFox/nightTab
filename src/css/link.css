@@ -448,7 +448,7 @@
 }
 
 .is-link-display-item-show .link-display {
-  display: block;
+  display: flex;
 }
 
 .link-display-letter,
