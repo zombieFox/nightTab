@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="css/transitional.css">
   <link rel="stylesheet" href="css/search.css">
   <link rel="stylesheet" href="css/background.css">
+  <link rel="stylesheet" href="css/group.css">
   <link rel="stylesheet" href="css/link.css">
   <link rel="stylesheet" href="css/auto-suggest.css">
   <link rel="stylesheet" href="css/fontawesome.css">
@@ -99,9 +100,7 @@
       </div>
     </header>
 
-    <section class="link">
-      <div class="link-area"></div>
-    </section>
+    <section class="link"></section>
 
   </main>
 
@@ -112,6 +111,7 @@
         <div class="menu-nav-area-tab menu-nav-area-grow mb-0 list-unstyled">
           <button class="menu-nav-button control-menu-layout button mb-0 active" tabindex="-1">Layout</button>
           <button class="menu-nav-button control-menu-header button mb-0" tabindex="-1">Header</button>
+          <button class="menu-nav-button control-menu-groups button mb-0" tabindex="-1">Groups</button>
           <button class="menu-nav-button control-menu-bookmarks button mb-0" tabindex="-1">Bookmarks</button>
           <button class="menu-nav-button control-menu-theme button mb-0" tabindex="-1">Theme</button>
           <button class="menu-nav-button control-menu-background button mb-0" tabindex="-1">Background</button>
@@ -752,6 +752,29 @@
           </div>
         </div>
 
+        <div class="menu-content-area menu-content-area-groups is-hidden">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Names</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap">
+                <input id="control-group-name-show" class="control-group-name-show" type="checkbox" tabindex="-1">
+                <label for="control-group-name-show">Show</label>
+              </div>
+              <div class="form-indent">
+                <div class="input-wrap">
+                  <label for="control-group-name-size">Name Size</label>
+                  <input id="control-group-name-size" class="control-group-name-size" type="range" min="20" max="500" value="0" step="20" tabindex="-1">
+                </div>
+                <div class="button-wrap">
+                  <button class="control-group-name-size-default button mb-0" tabindex="-1">Default name size</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="menu-content-area menu-content-area-bookmarks is-hidden">
           <div class="menu-item">
             <div class="menu-item-header">
@@ -1001,8 +1024,9 @@
               <h1 class="menu-item-header-text">Accent</h1>
             </div>
             <div class="menu-item-form">
-              <label for="control-theme-accent-current-picker">Colour</label>
-              <div class="input-wrap"><div class="form-group mb-0">
+              <div class="input-wrap">
+                <label for="control-theme-accent-current-picker">Colour</label>
+                <div class="form-group mb-0">
                   <input id="control-theme-accent-current-picker" class="form-group-item-half control-theme-accent-current-picker mb-0" type="color" value="#000000" tabindex="1">
                   <input id="control-theme-accent-current-hex" class="form-group-item-half control-theme-accent-current-hex mb-0" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                 </div>

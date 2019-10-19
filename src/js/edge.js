@@ -1,7 +1,24 @@
 var edge = (function() {
 
   var _timer = null;
+  var _tick = null;
+  var _currentElement = null;
   var _currentEdge = null;
+
+  var bind = {};
+
+  bind.tick = {
+    set: function() {
+      _tick = window.setTimeout(function() {
+        render.update();
+        bind.tick.set();
+      }, 100);
+    },
+    remove: function() {
+      window.clearTimeout(_tick);
+      _tick = null;
+    }
+  };
 
   var mod = {};
 
@@ -40,6 +57,7 @@ var edge = (function() {
     if (override) {
       options = helper.applyOptions(options, override);
     };
+    _currentElement = options.element;
     var _resize = function() {
       var scrollTop = document.documentElement.scrollTop;
       var scrollLeft = document.documentElement.scrollLeft;
@@ -60,7 +78,9 @@ var edge = (function() {
         } else {
           edgeElement.remove();
         };
+        bind.tick.remove();
         _currentEdge = null;
+        _currentElement = null;
       };
       edgeElement.addEventListener("transitionend", function(event, elapsed) {
         if (event.propertyName === "opacity" && getComputedStyle(this).opacity == 0) {
@@ -82,10 +102,23 @@ var edge = (function() {
     if (options.element != null) {
       if (_currentEdge == null) {
         _makeEdge();
-        _resize();
+        render.update();
+        bind.tick.set();
       } else {
-        _resize();
+        render.update();
       };
+    };
+  };
+
+  render.update = function() {
+    if (_currentEdge != null) {
+      var scrollTop = document.documentElement.scrollTop;
+      var scrollLeft = document.documentElement.scrollLeft;
+      var rect = _currentElement.getBoundingClientRect();
+      _currentEdge.style.width = rect.width + "px";
+      _currentEdge.style.height = rect.height + "px";
+      _currentEdge.style.top = rect.top + scrollTop + "px";
+      _currentEdge.style.left = rect.left + scrollLeft + "px";
     };
   };
 
@@ -103,6 +136,7 @@ var edge = (function() {
   // exposed methods
   return {
     mod: mod,
+    bind: bind,
     render: render,
     box: box
   };

@@ -618,6 +618,19 @@ var update = (function() {
         show: true
       };
       return data;
+    },
+    "4.0.0": function(data) {
+      data.bookmarks = [{
+        name: "Group 1",
+        items: data.bookmarks
+      }];
+      data.state.group = {
+        name: {
+          show: true,
+          size: 1
+        }
+      };
+      return data;
     }
   };
 

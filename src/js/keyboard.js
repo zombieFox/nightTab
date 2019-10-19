@@ -7,7 +7,7 @@ var keyboard = (function() {
       //  esc
       if (event.keyCode == 27) {
         if (state.get().edge) {
-          edge.render.clear();
+          edge.box.close();
         } else if (state.get().menu) {
           menu.close();
           shade.close();
@@ -16,17 +16,14 @@ var keyboard = (function() {
         } else if (state.get().link.add) {
           link.add.close();
           shade.close();
+        } else if (state.get().link.edit) {
+          link.add.close();
+          shade.close();
+          control.render.update();
+          control.render.class();
         } else if (state.get().modal) {
           modal.close();
           shade.close();
-        } else if (state.get().link.edit) {
-          helper.setObject({
-            object: state.get(),
-            path: "link.edit",
-            newValue: false
-          });
-          control.render.update();
-          control.render.class();
         };
         data.save();
       };
@@ -96,7 +93,7 @@ var keyboard = (function() {
       if (state.get().theme.accent.random.active && event.ctrlKey && event.altKey && event.keyCode == 82) {
         theme.render.accent.random();
         theme.render.accent.color();
-        link.items();
+        link.groupAndItems();
         data.save();
       };
     }, false);

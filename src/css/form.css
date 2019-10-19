@@ -1,3 +1,71 @@
+/* select */
+select {
+  background-color: rgb(var(--theme-gray-02));
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgb(var(--form-input-text)) 50%),
+    linear-gradient(135deg, rgb(var(--form-input-text)) 50%, transparent 50%);
+  background-position:
+    calc(100% - calc(var(--form-arrow-size) * 5)) 50%,
+    calc(100% - calc(var(--form-arrow-size) * 4)) 50%;
+  background-size:
+    var(--form-arrow-size) var(--form-arrow-size),
+    var(--form-arrow-size) var(--form-arrow-size);
+  background-repeat: no-repeat;
+  padding: 0 calc(var(--form-arrow-size) * 10) 0 1em;
+  margin: 0 0 1em 0;
+  color: rgb(var(--form-input-text));
+  font-size: 1em;
+  font-family: var(--font-regular);
+  min-height: 2.5em;
+  min-width: 0;
+  width: 100%;
+  border-width: var(--form-input-border);
+  border-style: solid;
+  border-color: transparent;
+  border-radius: var(--theme-radius);
+  cursor: pointer;
+  transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select:hover {
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgb(var(--form-input-text-hover)) 50%),
+    linear-gradient(135deg, rgb(var(--form-input-text-hover)) 50%, transparent 50%);
+  background-color: rgb(var(--theme-gray-03));
+  color: rgb(var(--form-input-text-hover));
+  outline: none;
+  box-shadow: 0 0 0 var(--layout-line-width) rgb(var(--theme-gray-06));
+}
+
+select:focus,
+select:active {
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgb(var(--form-input-text-focus)) 50%),
+    linear-gradient(135deg, rgb(var(--form-input-text-focus)) 50%, transparent 50%);
+  background-color: rgb(var(--theme-gray-01));
+  color: rgb(var(--form-input-text-focus));
+  outline: none;
+  z-index: 2;
+  box-shadow: 0 0 0 var(--layout-line-width) rgb(var(--theme-accent)), 0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
+}
+
+select:disabled,
+select:disabled:hover,
+select:disabled:focus,
+select:disabled:active {
+  background-color: transparent;
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgb(var(--form-input-text-disabled)) 50%),
+    linear-gradient(135deg, rgb(var(--form-input-text-disabled)) 50%, transparent 50%);
+  color: rgb(var(--form-input-text-disabled));
+  border-color: rgb(var(--form-input-text-disabled));
+  cursor: default;
+  box-shadow: none;
+}
+
 /* textarea */
 textarea {
   background-color: rgb(var(--theme-gray-02));
@@ -420,6 +488,7 @@ input[type="range"] {
   color: rgb(var(--theme-style-text));
   font-size: 1em;
   font-family: var(--font-regular);
+  display: block;
   height: 2em;
   width: 100%;
   border: 0;
@@ -846,7 +915,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-grid:focus,
 .form-grid:focus-within {
-  outline: 0;
+  outline: none;
   border-color: rgb(var(--theme-style-text));
 }
 
@@ -1085,20 +1154,20 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group-text:hover,
 .form-group-text:focus {
-  background-color: rgb(var(--theme-gray-03));
-  border-bottom-color: rgb(var(--theme-gray-08));
+  /* background-color: rgb(var(--theme-gray-03)); */
+  /* border-bottom-color: rgb(var(--theme-gray-08)); */
   outline: none;
 }
 
-.form-group-text:disabled {
+.form-group-text.disabled {
   background-color: rgb(var(--theme-gray-02));
   color: rgb(var(--form-input-placeholder-disabled));
   box-shadow: none;
   cursor: default;
 }
 
-.form-group-text:disabled:hover,
-.form-group-text:disabled:focus {
+.form-group-text.disabled:hover,
+.form-group-text.disabled:focus {
   background-color: rgb(var(--theme-gray-02));
   border-color: transparent;
 }
@@ -1138,7 +1207,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group .form-group-text {
   margin-bottom: 0;
-  margin-left: calc(-1px * var(--form-input-border));
+  /* margin-left: calc(-1px * var(--form-input-border)); */
   border-radius: 0;
   z-index: 1;
   position: relative;

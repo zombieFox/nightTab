@@ -19,6 +19,12 @@ var control = (function() {
       menu.nav(this.element, helper.e(".menu-content-area-header"));
     }
   }, {
+    element: helper.e(".control-menu-groups"),
+    type: "button",
+    func: function() {
+      menu.nav(this.element, helper.e(".menu-content-area-groups"));
+    }
+  }, {
     element: helper.e(".control-menu-bookmarks"),
     type: "button",
     func: function() {
@@ -76,7 +82,7 @@ var control = (function() {
       theme.accent();
       theme.render.input.picker();
       theme.render.input.hex();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-layout-width"),
@@ -1592,6 +1598,78 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: helper.e(".control-group-name-show"),
+    path: "group.name.show",
+    type: "checkbox",
+    func: function() {
+      render.class();
+      render.dependents();
+    }
+  }, {
+    element: helper.e(".control-group-name-size"),
+    path: "group.name.size",
+    type: "range",
+    valueMod: ["float"],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-name-text"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-name-text"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.box.open({
+            element: helper.e(".group-name-text"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
+    func: function() {
+      link.render.group.size();
+    }
+  }, {
+    element: helper.e(".control-group-name-size-default"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-name-text"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.setValue("group.name.size", 1);
+      link.render.group.size();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-header-border-top"),
     path: "header.border.top",
     type: "range",
@@ -1615,14 +1693,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
         });
       }
     }, {
@@ -1640,7 +1718,7 @@ var control = (function() {
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
           edge.box.open({
-            element: helper.e(".link-area"),
+            element: helper.e(".group"),
           });
         };
       }
@@ -1660,7 +1738,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
           delay: 500
         });
       }
@@ -1686,7 +1764,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
           delay: 500
         });
       }
@@ -1702,7 +1780,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
           delay: 500
         });
       }
@@ -1718,7 +1796,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.box.open({
-          element: helper.e(".link-area"),
+          element: helper.e(".group"),
           delay: 500
         });
       }
@@ -1923,14 +2001,14 @@ var control = (function() {
     path: "link.item.order",
     type: "radio",
     func: function() {
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-item-order-namedisplay"),
     path: "link.item.order",
     type: "radio",
     func: function() {
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-item-url-show"),
@@ -1974,7 +2052,7 @@ var control = (function() {
     path: "link.newTab",
     type: "checkbox",
     func: function() {
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-item-border"),
@@ -2017,35 +2095,35 @@ var control = (function() {
     type: "button",
     func: function() {
       bookmarks.sort("letter");
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-sort-icon"),
     type: "button",
     func: function() {
       bookmarks.sort("icon");
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-sort-name"),
     type: "button",
     func: function() {
       bookmarks.sort("name");
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-accent-clear"),
     type: "button",
     func: function() {
       link.mod.accent.clear();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-link-accent-set"),
     type: "button",
     func: function() {
       link.mod.accent.rainbow();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-theme-accent-current-picker"),
@@ -2055,7 +2133,7 @@ var control = (function() {
       theme.accent();
       theme.render.input.quick();
       theme.render.input.hex();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-theme-accent-current-hex"),
@@ -2066,7 +2144,7 @@ var control = (function() {
       theme.accent();
       theme.render.input.picker();
       theme.render.input.quick();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-theme-style-dark"),
@@ -2147,7 +2225,7 @@ var control = (function() {
     func: function() {
       theme.render.accent.random();
       theme.render.accent.color();
-      link.items();
+      link.groupAndItems();
     }
   }, {
     element: helper.e(".control-background-color-by-theme"),
@@ -2520,6 +2598,13 @@ var control = (function() {
       _greeting();
       _transitional();
     };
+    var _group = function() {
+      if (state.get().group.name.show) {
+        helper.addClass(html, "is-group-name-show");
+      } else {
+        helper.removeClass(html, "is-group-name-show");
+      };
+    };
     var _link = function() {
       helper.removeClass(html, "is-link-show");
       helper.removeClass(html, "is-link-area-alignment-left");
@@ -2612,6 +2697,7 @@ var control = (function() {
     };
     _menu();
     _header();
+    _group();
     _link();
     _layout();
     _background();
@@ -2947,6 +3033,17 @@ var control = (function() {
         _disable.input(".control-link-edit", false);
       };
     };
+    var _group = function() {
+      if (state.get().group.name.show) {
+        _disable.input(".control-group-name-size", false);
+        _disable.element("[for=control-group-name-size]", false);
+        _disable.input(".control-group-name-size-default", false);
+      } else {
+        _disable.input(".control-group-name-size", true);
+        _disable.element("[for=control-group-name-size]", true);
+        _disable.input(".control-group-name-size-default", true);
+      };
+    };
     var _link = function() {
       _disable.input(".control-layout-order-headerlink", true);
       _disable.input(".control-layout-order-linkheader", true);
@@ -3150,6 +3247,7 @@ var control = (function() {
     };
     _header();
     _edit();
+    _group();
     _link();
     _theme();
     _background();

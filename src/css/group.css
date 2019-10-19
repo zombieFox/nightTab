@@ -1,0 +1,89 @@
+.group {
+  padding-top: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
+  padding-bottom: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
+  padding-left: calc(var(--layout-space) * var(--layout-padding));
+  padding-right: calc(var(--layout-space) * var(--layout-padding));
+  width: var(--link-area-width);
+}
+
+.group:first-child {
+  padding-top: calc(var(--layout-space) * var(--layout-padding));
+}
+
+.group:last-child {
+  padding-bottom: calc(var(--layout-space) * var(--layout-padding));
+}
+
+.group-header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: padding var(--layout-timing-extra-fast) var(--layout-duration-04);
+}
+
+.is-group-name-show .group-header,
+.is-link-edit .group-header {
+  padding-bottom: calc(var(--layout-space) * var(--layout-gutter));
+  transition: padding var(--layout-timing-extra-fast);
+}
+
+.group-name {
+  margin-right: 0;
+  display: none;
+  align-items: center;
+  min-height: 2.5em;
+  font-size: var(--group-name-size);
+}
+
+.is-group-name-show .group-name {
+  display: flex;
+}
+
+.group-name-text {
+  font-family: var(--font-fjalla);
+  margin-bottom: 0;
+}
+
+.group-control {
+  margin-right: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  transition:
+    width var(--layout-timing-extra-fast),
+    height var(--layout-timing-extra-fast) var(--layout-duration-04),
+    margin var(--layout-timing-extra-fast);
+}
+
+.is-link-edit .group-control {
+  height: 2.5em;
+  width: 16em;
+  transition:
+    width var(--layout-timing-extra-fast) var(--layout-duration-04),
+    height var(--layout-timing-extra-fast),
+    margin var(--layout-timing-extra-fast) var(--layout-duration-04);
+}
+
+.is-link-edit.is-group-name-show .group-control {
+  margin-right: 1em;
+}
+
+.group-control-item {
+  width: 4em;
+  flex-shrink: 0;
+}
+
+.group-body {
+  font-size: calc(var(--link-item-size) * 1);
+  background-color: transparent;
+  position: relative;
+  min-height: var(--link-item-height);
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-gap: calc(var(--layout-space) * var(--layout-gutter));
+  grid-template-columns: repeat(auto-fill, minmax(var(--link-item-width), 1fr));
+}
