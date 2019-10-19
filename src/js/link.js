@@ -619,7 +619,17 @@ var link = (function() {
       if (stagedLink.link.url != null) {
         url = stagedLink.link.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "");
       };
-      var linkUrlText = helper.node("p:" + url + "|class:link-url-text,title:" + url);
+      var linkUrlText = helper.makeNode({
+        tag: "p",
+        text: url,
+        attr: [{
+          key: "class",
+          value: "link-url-text"
+        }, {
+          key: "title",
+          value: url
+        }]
+      });
       var linkControl = helper.node("div|class:link-control");
       var linkHandle = helper.node("div|class:button button-small link-control-item link-control-item-handle,tabindex:-1,title:Drag and drop to reorder");
       var linkHandleIcon = helper.node("span|class:button-icon icon-reorder");
