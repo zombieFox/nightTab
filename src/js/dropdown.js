@@ -1,5 +1,7 @@
 var dropdown = (function() {
 
+  var _currentFormDropdown = null;
+
   var mod = {};
 
   mod.open = function() {
@@ -36,6 +38,22 @@ var dropdown = (function() {
 
   var bind = {};
 
+  var documentEvent = {};
+
+  documentEvent.add = function() {
+    document.addEventListener("click", documentEvent.clickOut, false);
+  };
+
+  documentEvent.remove = function() {
+    document.removeEventListener("click", documentEvent.clickOut, false);
+  };
+
+  documentEvent.clickOut = function() {
+    if (!event.path.includes(_currentFormDropdown)) {
+      close();
+    };
+  };
+
   bind.formDropdown = function() {
     var allFormDropdown = helper.eA(".form-dropdown");
     allFormDropdown.forEach(function(arrayItem, index) {
@@ -43,14 +61,14 @@ var dropdown = (function() {
       var formDropdownToggle = formDropdown.querySelector(".form-dropdown-toggle");
       var allFormDropdownMenuItem = formDropdown.querySelectorAll(".form-dropdown-menu-item");
       formDropdownToggle.addEventListener("click", function() {
+        _currentFormDropdown = formDropdown;
         mod.toggle();
-        render.toggle(formDropdown);
-        render.offset(formDropdown);
+        render.toggle();
       }, false);
       allFormDropdownMenuItem.forEach(function(arrayItem, index) {
         arrayItem.addEventListener("click", function() {
           mod.close();
-          render.close(formDropdown);
+          render.close();
         }, false);
       });
     });
@@ -58,8 +76,8 @@ var dropdown = (function() {
 
   var render = {};
 
-  render.offset = function(formDropdown) {
-    var formDropdownMenu = formDropdown.querySelector(".form-dropdown-menu");
+  render.offset = function() {
+    var formDropdownMenu = _currentFormDropdown.querySelector(".form-dropdown-menu");
     var box = formDropdownMenu.getBoundingClientRect();
     if (box.left + box.width > window.innerWidth) {
       formDropdownMenu.style.right = "0";
@@ -69,28 +87,33 @@ var dropdown = (function() {
     };
   };
 
-  render.toggle = function(formDropdown) {
-    if (formDropdown.classList.contains("form-dropdown-open")) {
+  render.toggle = function() {
+    if (_currentFormDropdown.classList.contains("form-dropdown-open")) {
       mod.close();
-      helper.removeClass(formDropdown, "form-dropdown-open");
+      helper.removeClass(_currentFormDropdown, "form-dropdown-open");
+      documentEvent.remove();
+      render.offset();
+      _currentFormDropdown = null;
     } else {
       mod.open();
-      helper.addClass(formDropdown, "form-dropdown-open");
+      _currentFormDropdown = _currentFormDropdown;
+      helper.addClass(_currentFormDropdown, "form-dropdown-open");
+      documentEvent.add(_currentFormDropdown);
+      render.offset();
     };
   };
 
-  render.close = function(formDropdown) {
+  render.close = function() {
     mod.close();
-    helper.removeClass(formDropdown, "form-dropdown-open");
-  };
-
-  render.open = function(formDropdown) {
-    mod.open();
-    helper.addClass(formDropdown, "form-dropdown-open");
+    helper.removeClass(_currentFormDropdown, "form-dropdown-open");
+    documentEvent.remove();
+    render.offset();
+    _currentFormDropdown = null;
   };
 
   var close = function() {
     mod.close();
+    render.close();
     var allFormDropdown = helper.eA(".form-dropdown");
     allFormDropdown.forEach(function(arrayItem, index) {
       helper.removeClass(arrayItem, "form-dropdown-open");

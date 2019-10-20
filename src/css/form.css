@@ -1308,7 +1308,7 @@ input[type="range"]:disabled::-moz-range-progress {
   border-radius: var(--theme-radius);
   padding: 0.5em 0;
   position: absolute;
-  top: calc(100% + calc(var(--layout-line-width) * 2));
+  top: 100%;
   left: 0;
   width: 100%;
   min-width: 12em;
