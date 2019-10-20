@@ -18,4 +18,5 @@ search.init();
 header.init();
 modal.init();
 shade.init();
+dropdown.init();
 version.init();

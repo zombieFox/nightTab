@@ -1207,7 +1207,6 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group .form-group-text {
   margin-bottom: 0;
-  /* margin-left: calc(-1px * var(--form-input-border)); */
   border-radius: 0;
   z-index: 1;
   position: relative;
@@ -1298,6 +1297,48 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group.nested-button *:last-child input[type="radio"]+label,
 .form-group.nested-button *:last-child input[type="color"]+label {
   border-radius: 0 var(--theme-radius) var(--theme-radius) 0;
+}
+
+.form-dropdown {
+  position: relative;
+}
+
+.form-dropdown-menu {
+  background-color: rgb(var(--theme-gray-02));
+  border-radius: var(--theme-radius);
+  padding: 0.5em 0;
+  position: absolute;
+  top: calc(100% + calc(var(--layout-line-width) * 2));
+  left: 0;
+  width: 100%;
+  min-width: 12em;
+  box-shadow: var(--layout-shadow-large);
+  display: none;
+  z-index: var(--z-index-dropdown);
+}
+
+.form-dropdown-open .form-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-dropdown-menu button,
+.form-dropdown-menu .button {
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  justify-content: flex-start;
+}
+
+.form-group.nested-button .form-dropdown-menu *:first-child .button,
+.form-group.nested-button .form-dropdown-menu *:last-child .button,
+.form-group.nested-button .form-dropdown-menu *:first-child input[type="checkbox"]+label,
+.form-group.nested-button .form-dropdown-menu *:last-child input[type="checkbox"]+label,
+.form-group.nested-button .form-dropdown-menu *:first-child input[type="radio"]+label,
+.form-group.nested-button .form-dropdown-menu *:last-child input[type="radio"]+label,
+.form-group.nested-button .form-dropdown-menu *:first-child input[type="color"]+label,
+.form-group.nested-button .form-dropdown-menu *:last-child input[type="color"]+label {
+  border-radius: 0;
 }
 
 .feedback-wrap {

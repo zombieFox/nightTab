@@ -11,10 +11,15 @@ var keyboard = (function() {
         } else if (state.get().menu) {
           menu.close();
           shade.close();
+        } else if (state.get().dropdown) {
+          dropdown.close();
         } else if (state.get().autoSuggest) {
           autoSuggest.close();
         } else if (state.get().link.add) {
-          link.add.close();
+          link.add.item.close();
+          shade.close();
+        } else if (state.get().group.add) {
+          link.add.group.close();
           shade.close();
         } else if (state.get().link.edit) {
           link.add.close();
@@ -34,6 +39,9 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
+        if (state.get().group.add) {
+          link.add.group.close();
+        };
         if (!state.get().link.add) {
           if (state.get().menu) {
             menu.close();
@@ -41,7 +49,27 @@ var keyboard = (function() {
           if (state.get().modal) {
             modal.close();
           };
-          link.add.open();
+          link.add.item.open();
+        };
+      };
+    }, false);
+  };
+
+  bind.ctrAltG = function() {
+    window.addEventListener("keydown", function(event) {
+      // ctrl+alt+g
+      if (event.ctrlKey && event.altKey && event.keyCode == 71) {
+        if (state.get().link.add) {
+          link.add.item.close();
+        };
+        if (!state.get().group.add) {
+          if (state.get().menu) {
+            menu.close();
+          };
+          if (state.get().modal) {
+            modal.close();
+          };
+          link.add.group.open();
         };
       };
     }, false);
@@ -63,7 +91,8 @@ var keyboard = (function() {
       // ctrl+alt+m
       if (event.ctrlKey && event.altKey && event.keyCode == 77) {
         if (state.get().link.add) {
-          link.add.close();
+          link.add.item.close();
+          link.add.group.close();
           shade.close();
         } else if (state.get().modal) {
           modal.close();
@@ -102,6 +131,7 @@ var keyboard = (function() {
   var init = function() {
     bind.esc();
     bind.ctrAltA();
+    bind.ctrAltG();
     bind.ctrAltD();
     bind.ctrAltM();
     bind.ctrAltE();

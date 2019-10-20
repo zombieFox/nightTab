@@ -11,6 +11,10 @@ var link = (function() {
     }
   };
 
+  stagedGroup.init = function() {
+    stagedGroup.group.items = [];
+  };
+
   stagedGroup.reset = function() {
     stagedGroup.position.origin = null;
     stagedGroup.position.destination = null;
@@ -154,19 +158,37 @@ var link = (function() {
   };
 
   mod.add = {
-    open: function() {
-      helper.setObject({
-        object: state.get(),
-        path: "link.add",
-        newValue: true
-      });
+    item: {
+      open: function() {
+        helper.setObject({
+          object: state.get(),
+          path: "link.add",
+          newValue: true
+        });
+      },
+      close: function() {
+        helper.setObject({
+          object: state.get(),
+          path: "link.add",
+          newValue: false
+        });
+      }
     },
-    close: function() {
-      helper.setObject({
-        object: state.get(),
-        path: "link.add",
-        newValue: false
-      });
+    group: {
+      open: function() {
+        helper.setObject({
+          object: state.get(),
+          path: "group.add",
+          newValue: true
+        });
+      },
+      close: function() {
+        helper.setObject({
+          object: state.get(),
+          path: "group.add",
+          newValue: false
+        });
+      }
     }
   };
 
@@ -375,104 +397,18 @@ var link = (function() {
       }, false);
 
       itemGroupControlItemEdit.addEventListener("click", function() {
-        render.group.edit(copyStagedGroup);
+        render.edit.group(copyStagedGroup);
       }, false);
 
       itemGroupControlItemRemove.addEventListener("click", function() {
-        render.group.remove(copyStagedGroup);
+        render.remove.group(copyStagedGroup);
       }, false);
 
       return group;
     },
-    edit: function(copyStagedGroup) {
-      stagedGroup.group = JSON.parse(JSON.stringify(copyStagedGroup.group));
-      stagedGroup.position = JSON.parse(JSON.stringify(copyStagedGroup.position));
-      var form = render.group.form({
-        useStagedGroup: true
-      });
-      var heading = "Edit " + stagedGroup.group.name;
-      var successAction = function() {
-        var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
-        bookmarks.mod.edit.group(copyStagedGroup);
-        data.save();
-        groupAndItems();
-        render.focus.group.current.edit(copyStagedGroup);
-        stagedGroup.reset();
-        autoSuggest.close();
-        shade.close();
-        pagelock.unlock();
-      };
-      var cancelAction = function() {
-        stagedGroup.reset();
-        autoSuggest.close();
-        pagelock.unlock();
-        shade.close();
-      };
-      modal.open({
-        heading: heading,
-        successAction: successAction,
-        cancelAction: cancelAction,
-        actionText: "Save",
-        size: "small",
-        content: form
-      });
-      shade.open({
-        action: function() {
-          stagedGroup.reset();
-          autoSuggest.close();
-          pagelock.unlock();
-          modal.close();
-        }
-      });
-    },
-    remove: function(copyStagedGroup) {
-      stagedGroup.group = JSON.parse(JSON.stringify(copyStagedGroup.group));
-      stagedGroup.position = JSON.parse(JSON.stringify(copyStagedGroup.position));
-      var heading;
-      if (stagedGroup.group.name != null && stagedGroup.group.name != "") {
-        heading = "Remove " + stagedGroup.group.name + " group";
-      } else {
-        heading = "Remove unnamed group";
-      };
-      var successAction = function() {
-        var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
-        bookmarks.remove.group(copyStagedGroup);
-        data.save();
-        mod.edit.check();
-        header.render.button.edit();
-        groupAndItems();
-        render.focus.group.previous.remove(copyStagedGroup);
-        stagedGroup.reset();
-        control.render.dependents();
-        control.render.class();
-        shade.close();
-        pagelock.unlock();
-      };
-      var cancelAction = function() {
-        stagedGroup.reset();
-        shade.close();
-        pagelock.unlock();
-      };
-      modal.open({
-        heading: heading,
-        content: "Are you sure you want to remove this group and all the bookmarks within? This can not be undone.",
-        successAction: successAction,
-        cancelAction: cancelAction,
-        actionText: "Remove",
-        size: "small"
-      });
-      shade.open({
-        action: function() {
-          stagedGroup.reset();
-          autoSuggest.close();
-          pagelock.unlock();
-          modal.close();
-        }
-      });
-      pagelock.lock();
-    },
     form: function(override) {
       var options = {
+        new: null,
         useStagedGroup: null
       };
       if (override) {
@@ -495,12 +431,15 @@ var link = (function() {
       groupFormPositionInputWrap.appendChild(groupFormPositionSelect);
       groupFormNameInputWrap.appendChild(groupFormInputLabel);
       groupFormNameInputWrap.appendChild(groupFormInputName);
-      fieldset.appendChild(groupFormPositionInputWrap);
       fieldset.appendChild(groupFormNameInputWrap);
+      fieldset.appendChild(groupFormPositionInputWrap);
       form.appendChild(fieldset);
 
       var makeGroupOptions = function() {
         var optionCount = bookmarks.get().length;
+        if (options.new) {
+          optionCount = optionCount + 1;
+        };
         for (var i = 1; i <= optionCount; i++) {
           groupFormPositionSelect.appendChild(helper.node("option:" + helper.ordinalNumber(i)));
         };
@@ -511,9 +450,17 @@ var link = (function() {
         groupFormInputName.value = stagedGroup.group.name;
       };
 
+      var setLastPosition = function() {
+        groupFormPositionSelect.selectedIndex = groupFormPositionSelect.length - 1;
+        stagedGroup.position.destination = groupFormPositionSelect.selectedIndex;
+      };
+
       makeGroupOptions();
       if (options.useStagedGroup) {
         populateForm();
+      };
+      if (options.new) {
+        setLastPosition();
       };
 
       form.addEventListener("keydown", function(event) {
@@ -681,140 +628,14 @@ var link = (function() {
       }, false);
 
       linkEdit.addEventListener("click", function() {
-        render.item.edit(copyStagedLink);
+        render.edit.item(copyStagedLink);
       }, false);
 
       linkRemove.addEventListener("click", function() {
-        render.item.remove(copyStagedLink);
+        render.remove.item(copyStagedLink);
       }, false);
 
       return linkItem;
-    },
-    edit: function(copyStagedLink) {
-      stagedLink.link = JSON.parse(JSON.stringify(copyStagedLink.link));
-      stagedLink.position = JSON.parse(JSON.stringify(copyStagedLink.position));
-      var form = render.item.form({
-        useStagedLink: true
-      });
-      var heading;
-      if (stagedLink.link.name != null && stagedLink.link.name != "") {
-        heading = "Edit " + stagedLink.link.name;
-      } else {
-        heading = "Edit unnamed bookmark";
-      };
-      var successAction = function() {
-        var copyStagedLink = JSON.parse(JSON.stringify(stagedLink));
-        bookmarks.mod.edit.link(copyStagedLink);
-        data.save();
-        groupAndItems();
-        render.focus.item.current.edit(copyStagedLink);
-        stagedLink.reset();
-        autoSuggest.close();
-        shade.close();
-        pagelock.unlock();
-      };
-      var cancelAction = function() {
-        stagedLink.reset();
-        autoSuggest.close();
-        pagelock.unlock();
-        shade.close();
-      };
-      modal.open({
-        heading: heading,
-        successAction: successAction,
-        cancelAction: cancelAction,
-        actionText: "Save",
-        size: "small",
-        content: form
-      });
-      shade.open({
-        action: function() {
-          stagedLink.reset();
-          autoSuggest.close();
-          pagelock.unlock();
-          modal.close();
-        }
-      });
-    },
-    remove: function(copyStagedLink) {
-      stagedLink.link = JSON.parse(JSON.stringify(copyStagedLink.link));
-      stagedLink.position = JSON.parse(JSON.stringify(copyStagedLink.position));
-      var heading;
-      if (stagedLink.link.name != null && stagedLink.link.name != "") {
-        heading = "Remove " + stagedLink.link.name + " bookmark";
-      } else {
-        heading = "Remove unnamed bookmark";
-      };
-      var successAction = function() {
-        var copyStagedLink = JSON.parse(JSON.stringify(stagedLink));
-        bookmarks.remove.link(copyStagedLink);
-        data.save();
-        mod.edit.check();
-        header.render.button.edit();
-        groupAndItems();
-        render.focus.item.previous.remove(copyStagedLink);
-        stagedLink.reset();
-        control.render.dependents();
-        control.render.class();
-        shade.close();
-        pagelock.unlock();
-      };
-      var cancelAction = function() {
-        stagedLink.reset();
-        shade.close();
-        pagelock.unlock();
-      };
-      modal.open({
-        heading: heading,
-        content: "Are you sure you want to remove this bookmark? This can not be undone.",
-        successAction: successAction,
-        cancelAction: cancelAction,
-        actionText: "Remove",
-        size: "small"
-      });
-      shade.open({
-        action: function() {
-          stagedLink.reset();
-          autoSuggest.close();
-          pagelock.unlock();
-          modal.close();
-        }
-      });
-      pagelock.lock();
-    },
-    display: {
-      letter: function() {
-        var html = helper.e("html");
-        html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
-      },
-      icon: function() {
-        var html = helper.e("html");
-        html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.icon.size + "em");
-      }
-    },
-    name: function() {
-      var html = helper.e("html");
-      html.style.setProperty("--link-item-name-size", state.get().link.item.name.size + "em");
-    },
-    size: function() {
-      var html = helper.e("html");
-      html.style.setProperty("--link-item-size", state.get().link.item.size + "em");
-    },
-    tabindex: function() {
-      var allLinkControlItem = helper.eA(".link-control-item");
-      if (state.get().link.edit) {
-        allLinkControlItem.forEach(function(arrayItem, index) {
-          arrayItem.tabIndex = 1;
-        });
-      } else {
-        allLinkControlItem.forEach(function(arrayItem, index) {
-          arrayItem.tabIndex = -1;
-        });
-      };
-    },
-    border: function() {
-      var html = helper.e("html");
-      html.style.setProperty("--link-item-border", state.get().link.item.border);
     },
     form: function(override) {
       var options = {
@@ -1156,6 +977,40 @@ var link = (function() {
         postFocus: displayIconFormGroupText
       });
       return form;
+    },
+    display: {
+      letter: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
+      },
+      icon: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.icon.size + "em");
+      }
+    },
+    name: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-item-name-size", state.get().link.item.name.size + "em");
+    },
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-item-size", state.get().link.item.size + "em");
+    },
+    tabindex: function() {
+      var allLinkControlItem = helper.eA(".link-control-item");
+      if (state.get().link.edit) {
+        allLinkControlItem.forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = 1;
+        });
+      } else {
+        allLinkControlItem.forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = -1;
+        });
+      };
+    },
+    border: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-item-border", state.get().link.item.border);
     }
   };
 
@@ -1400,16 +1255,216 @@ var link = (function() {
     helper.e(".link-form-text-icon").focus();
   };
 
-  var add = {
-    open: function() {
-      mod.add.open();
-      stagedLink.init();
+  render.add = {
+    item: {
+      open: function() {
+        mod.add.item.open();
+        stagedLink.init();
+        var successAction = function() {
+          stagedLink.link.timeStamp = new Date().getTime();
+          bookmarks.mod.add.link(JSON.parse(JSON.stringify(stagedLink)));
+          data.save();
+          mod.add.item.close();
+          groupAndItems();
+          stagedLink.reset();
+          control.render.dependents();
+          control.render.class();
+          shade.close();
+          pagelock.unlock();
+        };
+        var cancelAction = function() {
+          mod.add.item.close();
+          stagedLink.reset();
+          autoSuggest.close();
+          shade.close();
+          pagelock.unlock();
+        };
+        modal.open({
+          heading: "Add a new bookmark",
+          successAction: successAction,
+          cancelAction: cancelAction,
+          actionText: "Add",
+          size: "small",
+          content: render.item.form()
+        });
+        shade.open({
+          action: function() {
+            mod.add.item.close();
+            stagedLink.reset();
+            autoSuggest.close();
+            modal.close();
+            pagelock.unlock();
+          }
+        });
+        stagedLink.position.destination.item = helper.e(".link-form-position").selectedIndex;
+        pagelock.lock();
+      },
+      close: function() {
+        mod.add.item.close();
+        modal.close();
+        stagedLink.reset();
+        pagelock.unlock();
+      }
+    },
+    group: {
+      open: function() {
+        mod.add.group.open();
+        stagedGroup.init();
+        var successAction = function() {
+          bookmarks.mod.add.group(JSON.parse(JSON.stringify(stagedGroup)));
+          data.save();
+          mod.add.group.close();
+          groupAndItems();
+          stagedGroup.reset();
+          shade.close();
+          pagelock.unlock();
+        };
+        var cancelAction = function() {
+          mod.add.group.close();
+          stagedGroup.reset();
+          autoSuggest.close();
+          shade.close();
+          pagelock.unlock();
+        };
+        modal.open({
+          heading: "Add a new group",
+          successAction: successAction,
+          cancelAction: cancelAction,
+          actionText: "Add",
+          size: "small",
+          content: render.group.form({
+            new: true
+          })
+        });
+        shade.open({
+          action: function() {
+            mod.add.group.close();
+            stagedGroup.reset();
+            autoSuggest.close();
+            modal.close();
+            pagelock.unlock();
+          }
+        });
+        stagedGroup.position.destination = helper.e(".group-form-position").selectedIndex;
+        pagelock.lock();
+      },
+      close: function() {
+        mod.add.group.close();
+        modal.close();
+        stagedGroup.reset();
+        pagelock.unlock();
+      }
+    }
+  };
+
+  render.edit = {
+    item: function(copyStagedLink) {
+      stagedLink.link = JSON.parse(JSON.stringify(copyStagedLink.link));
+      stagedLink.position = JSON.parse(JSON.stringify(copyStagedLink.position));
+      var form = render.item.form({
+        useStagedLink: true
+      });
+      var heading;
+      if (stagedLink.link.name != null && stagedLink.link.name != "") {
+        heading = "Edit " + stagedLink.link.name;
+      } else {
+        heading = "Edit unnamed bookmark";
+      };
       var successAction = function() {
-        stagedLink.link.timeStamp = new Date().getTime();
-        bookmarks.mod.add.link(JSON.parse(JSON.stringify(stagedLink)));
+        var copyStagedLink = JSON.parse(JSON.stringify(stagedLink));
+        bookmarks.mod.edit.link(copyStagedLink);
         data.save();
-        mod.add.close();
         groupAndItems();
+        render.focus.item.current.edit(copyStagedLink);
+        stagedLink.reset();
+        autoSuggest.close();
+        shade.close();
+        pagelock.unlock();
+      };
+      var cancelAction = function() {
+        stagedLink.reset();
+        autoSuggest.close();
+        pagelock.unlock();
+        shade.close();
+      };
+      modal.open({
+        heading: heading,
+        successAction: successAction,
+        cancelAction: cancelAction,
+        actionText: "Save",
+        size: "small",
+        content: form
+      });
+      shade.open({
+        action: function() {
+          stagedLink.reset();
+          autoSuggest.close();
+          pagelock.unlock();
+          modal.close();
+        }
+      });
+    },
+    group: function(copyStagedGroup) {
+      stagedGroup.group = JSON.parse(JSON.stringify(copyStagedGroup.group));
+      stagedGroup.position = JSON.parse(JSON.stringify(copyStagedGroup.position));
+      var form = render.group.form({
+        useStagedGroup: true
+      });
+      var heading = "Edit " + stagedGroup.group.name;
+      var successAction = function() {
+        var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
+        bookmarks.mod.edit.group(copyStagedGroup);
+        data.save();
+        groupAndItems();
+        render.focus.group.current.edit(copyStagedGroup);
+        stagedGroup.reset();
+        autoSuggest.close();
+        shade.close();
+        pagelock.unlock();
+      };
+      var cancelAction = function() {
+        stagedGroup.reset();
+        autoSuggest.close();
+        pagelock.unlock();
+        shade.close();
+      };
+      modal.open({
+        heading: heading,
+        successAction: successAction,
+        cancelAction: cancelAction,
+        actionText: "Save",
+        size: "small",
+        content: form
+      });
+      shade.open({
+        action: function() {
+          stagedGroup.reset();
+          autoSuggest.close();
+          pagelock.unlock();
+          modal.close();
+        }
+      });
+    }
+  };
+
+  render.remove = {
+    item: function(copyStagedLink) {
+      stagedLink.link = JSON.parse(JSON.stringify(copyStagedLink.link));
+      stagedLink.position = JSON.parse(JSON.stringify(copyStagedLink.position));
+      var heading;
+      if (stagedLink.link.name != null && stagedLink.link.name != "") {
+        heading = "Remove " + stagedLink.link.name + " bookmark";
+      } else {
+        heading = "Remove unnamed bookmark";
+      };
+      var successAction = function() {
+        var copyStagedLink = JSON.parse(JSON.stringify(stagedLink));
+        bookmarks.remove.link(copyStagedLink);
+        data.save();
+        mod.edit.check();
+        header.render.button.edit();
+        groupAndItems();
+        render.focus.item.previous.remove(copyStagedLink);
         stagedLink.reset();
         control.render.dependents();
         control.render.class();
@@ -1417,37 +1472,92 @@ var link = (function() {
         pagelock.unlock();
       };
       var cancelAction = function() {
-        mod.add.close();
         stagedLink.reset();
-        autoSuggest.close();
         shade.close();
         pagelock.unlock();
       };
       modal.open({
-        heading: "Add a new bookmark",
+        heading: heading,
+        content: "Are you sure you want to remove this bookmark? This can not be undone.",
         successAction: successAction,
         cancelAction: cancelAction,
-        actionText: "Add",
-        size: "small",
-        content: render.item.form()
+        actionText: "Remove",
+        size: "small"
       });
       shade.open({
         action: function() {
-          mod.add.close();
           stagedLink.reset();
           autoSuggest.close();
           pagelock.unlock();
           modal.close();
         }
       });
-      stagedLink.position.destination.item = helper.e(".link-form-position").selectedIndex;
       pagelock.lock();
     },
-    close: function() {
-      mod.add.close();
-      modal.close();
-      stagedLink.reset();
-      pagelock.unlock();
+    group: function(copyStagedGroup) {
+      stagedGroup.group = JSON.parse(JSON.stringify(copyStagedGroup.group));
+      stagedGroup.position = JSON.parse(JSON.stringify(copyStagedGroup.position));
+      var heading;
+      if (stagedGroup.group.name != null && stagedGroup.group.name != "") {
+        heading = "Remove " + stagedGroup.group.name + " group";
+      } else {
+        heading = "Remove unnamed group";
+      };
+      var successAction = function() {
+        var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
+        bookmarks.remove.group(copyStagedGroup);
+        data.save();
+        mod.edit.check();
+        header.render.button.edit();
+        groupAndItems();
+        render.focus.group.previous.remove(copyStagedGroup);
+        stagedGroup.reset();
+        control.render.dependents();
+        control.render.class();
+        shade.close();
+        pagelock.unlock();
+      };
+      var cancelAction = function() {
+        stagedGroup.reset();
+        shade.close();
+        pagelock.unlock();
+      };
+      modal.open({
+        heading: heading,
+        content: "Are you sure you want to remove this group and all the bookmarks within? This can not be undone.",
+        successAction: successAction,
+        cancelAction: cancelAction,
+        actionText: "Remove",
+        size: "small"
+      });
+      shade.open({
+        action: function() {
+          stagedGroup.reset();
+          autoSuggest.close();
+          pagelock.unlock();
+          modal.close();
+        }
+      });
+      pagelock.lock();
+    }
+  };
+
+  var add = {
+    item: {
+      open: function() {
+        render.add.item.open();
+      },
+      close: function() {
+        render.add.item.close();
+      }
+    },
+    group: {
+      open: function() {
+        render.add.group.open();
+      },
+      close: function() {
+        render.add.group.close();
+      }
     }
   };
 
@@ -1471,7 +1581,8 @@ var link = (function() {
   };
 
   var init = function() {
-    mod.add.close();
+    mod.add.item.close();
+    mod.add.group.close();
     groupAndItems();
     render.group.size();
     render.item.size();
@@ -1491,7 +1602,8 @@ var link = (function() {
     edit: edit,
     tabindex: tabindex,
     groupAndItems: groupAndItems,
-    stagedLink: stagedLink
+    stagedLink: stagedLink,
+    stagedGroup: stagedGroup
   };
 
 })();

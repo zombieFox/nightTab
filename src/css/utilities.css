@@ -7,6 +7,10 @@
   list-style-type: none;
 }
 
+.list-unstyled li:not(:last-child) {
+  margin-bottom: 0;
+}
+
 .list-inline li {
   display: inline-block;
 }

@@ -64,7 +64,13 @@ var control = (function() {
     element: helper.e(".control-link-add"),
     type: "button",
     func: function() {
-      link.add.open();
+      link.add.item.open();
+    }
+  }, {
+    element: helper.e(".control-group-add"),
+    type: "button",
+    func: function() {
+      link.add.group.open();
     }
   }, {
     element: helper.e(".control-link-edit"),

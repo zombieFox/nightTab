@@ -179,7 +179,8 @@ var state = (function() {
       name: {
         show: true,
         size: 1
-      }
+      },
+      add: false
     },
     layout: {
       alignment: "centercenter",
@@ -235,6 +236,7 @@ var state = (function() {
     search: false,
     menu: false,
     modal: false,
+    dropdown: false,
     autoSuggest: false
   };
 

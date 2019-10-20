@@ -192,23 +192,31 @@ var bookmarks = (function() {
   mod.add = {
     link: function(data) {
       if (data.position.group.new) {
-        mod.add.group(data);
+        mod.add.group();
       };
       mod.all[data.position.destination.group].items.splice(data.position.destination.item, 0, data.link);
     },
     group: function(data) {
-      var name = data.position.group.name;
-      if (name != null && typeof name == "string") {
-        name = name.trim();
-      };
-      if (name == "" || name == null || name == undefined) {
+      var makeName = function() {
         var count = get().length + 1;
-        name = "Group " + count;
+        return "Group " + count;
       };
-      mod.all.push({
-        name: name,
-        items: []
-      });
+      if (data) {
+        if (data.group.name == null) {
+          data.group.name = makeName();
+        } else if (typeof data.group.name == "string") {
+          data.group.name = data.group.name.trim();
+          if (data.group.name == "") {
+            data.group.name = makeName();
+          };
+        };
+        mod.all.splice(data.position.destination, 0, data.group);
+      } else {
+        mod.all.push({
+          name: makeName(),
+          items: []
+        });
+      };
     }
   };
 

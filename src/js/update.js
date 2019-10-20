@@ -628,8 +628,10 @@ var update = (function() {
         name: {
           show: true,
           size: 1
-        }
+        },
+        add: false
       };
+      data.state.dropdown = false;
       return data;
     }
   };
