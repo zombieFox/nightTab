@@ -22,7 +22,7 @@ var keyboard = (function() {
           link.add.group.close();
           shade.close();
         } else if (state.get().link.edit) {
-          link.add.close();
+          link.add.item.close();
           shade.close();
           control.render.update();
           control.render.class();
