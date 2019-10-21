@@ -223,7 +223,16 @@ var bookmarks = (function() {
   mod.edit = {
     link: function(data) {
       if (data.position.group.new) {
-        mod.add.group(data);
+        mod.add.group({
+          position: {
+            origin: null,
+            destination: data.position.destination.group
+          },
+          group: {
+            name: data.position.group.name,
+            items: []
+          }
+        });
       };
       var item = JSON.parse(JSON.stringify(data.link));
       mod.all[data.position.origin.group].items.splice(data.position.origin.item, 1);
