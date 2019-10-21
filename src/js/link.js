@@ -254,11 +254,11 @@ var link = (function() {
       helper.eA(".group-body").forEach(function(arrayItem, index) {
         sortable(arrayItem)[0].addEventListener("sortstart", function() {
           var html = helper.e("html");
-          helper.addClass(html, "is-sorting");
+          helper.addClass(html, "is-sorting-link");
         }, false);
         sortable(arrayItem)[0].addEventListener("sortstop", function() {
           var html = helper.e("html");
-          helper.removeClass(html, "is-sorting");
+          helper.removeClass(html, "is-sorting-link");
         }, false);
         sortable(arrayItem)[0].addEventListener("sortupdate", bind.sort.update.func.item, false, event);
       });
@@ -361,27 +361,27 @@ var link = (function() {
       var groupBody = helper.node("div|class:group-body");
       group.appendChild(groupBody);
 
-      var itemGroupControlItemUp = helper.node("button|class:button button-small group-control-item group-control-item-up,tabindex:-1,title:Move this bookmark up");
+      var itemGroupControlItemUp = helper.node("button|class:button button-small group-control-item group-control-item-up,tabindex:-1,title:Move this group up");
       var itemGroupControlItemUpIcon = helper.node("span|class:button-icon icon-arrow-up");
       itemGroupControlItemUp.appendChild(itemGroupControlItemUpIcon);
       groupControl.appendChild(itemGroupControlItemUp);
 
-      var itemGroupControlItemHandle = helper.node("div|class:button button-small group-control-item group-control-item-handle,tabindex:-1,title:Drag and drop to reorder");
+      var itemGroupControlItemHandle = helper.node("div|class:button button-small group-control-item group-control-item-handle,tabindex:-1,title:Drag group to reorder");
       var itemGroupControlItemHandleIcon = helper.node("span|class:button-icon icon-reorder");
       itemGroupControlItemHandle.appendChild(itemGroupControlItemHandleIcon);
       groupControl.appendChild(itemGroupControlItemHandle);
 
-      var itemGroupControlItemDown = helper.node("button|class:button button-small group-control-item group-control-item-down,tabindex:-1,title:Move this bookmark down");
+      var itemGroupControlItemDown = helper.node("button|class:button button-small group-control-item group-control-item-down,tabindex:-1,title:Move this group down");
       var itemGroupControlItemDownIcon = helper.node("span|class:button-icon icon-arrow-down");
       itemGroupControlItemDown.appendChild(itemGroupControlItemDownIcon);
       groupControl.appendChild(itemGroupControlItemDown);
 
-      var itemGroupControlItemEdit = helper.node("button|class:button button-small group-control-item group-control-item-edit,tabindex:-1,title:Edit this bookmark");
+      var itemGroupControlItemEdit = helper.node("button|class:button button-small group-control-item group-control-item-edit,tabindex:-1,title:Edit this group");
       var itemGroupControlItemEditIcon = helper.node("span|class:button-icon icon-edit");
       itemGroupControlItemEdit.appendChild(itemGroupControlItemEditIcon);
       groupControl.appendChild(itemGroupControlItemEdit);
 
-      var itemGroupControlItemRemove = helper.node("button|class:button button-small group-control-item group-control-item-remove,tabindex:-1,title:Remove this bookmark");
+      var itemGroupControlItemRemove = helper.node("button|class:button button-small group-control-item group-control-item-remove,tabindex:-1,title:Remove this group");
       var itemGroupControlItemRemoveIcon = helper.node("span|class:button-icon icon-close");
       itemGroupControlItemRemove.appendChild(itemGroupControlItemRemoveIcon);
       groupControl.appendChild(itemGroupControlItemRemove);
@@ -578,7 +578,7 @@ var link = (function() {
         }]
       });
       var linkControl = helper.node("div|class:link-control");
-      var linkHandle = helper.node("div|class:button button-small link-control-item link-control-item-handle,tabindex:-1,title:Drag and drop to reorder");
+      var linkHandle = helper.node("div|class:button button-small link-control-item link-control-item-handle,tabindex:-1,title:Drag bookmark to reorder");
       var linkHandleIcon = helper.node("span|class:button-icon icon-reorder");
       var linkEdit = helper.node("button|class:button button-small link-control-item link-control-item-edit,tabindex:-1,title:Edit this bookmark");
       var linkEditIcon = helper.node("span|class:button-icon icon-edit");
