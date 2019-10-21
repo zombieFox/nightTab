@@ -1079,28 +1079,30 @@ var link = (function() {
       var group = helper.node("div|class:group");
       var groupBody = helper.node("div|class:group-body");
       var linkEmpty = helper.node("div|class:link-empty");
-      var h1 = helper.node("h1:No bookmarks added|class:link-empty-heading");
-      var para = helper.node("p:Why not add some?|class:small muted");
-      linkEmpty.appendChild(h1);
-      linkEmpty.appendChild(para);
+      var para1 = helper.node("p:No groups or bookmarks");
+      var para2 = helper.node("p:Why not add a one?|class:small muted");
+      linkEmpty.appendChild(para1);
+      linkEmpty.appendChild(para2);
       groupBody.appendChild(linkEmpty);
       group.appendChild(groupBody);
       return group;
     },
     item: function() {
       var linkEmpty = helper.node("div|class:link-empty");
-      var para = helper.node("para:Empty group|class:link-empty-heading");
-      linkEmpty.appendChild(para);
+      var para1 = helper.node("p:Empty group");
+      var para2 = helper.node("p:Why not add a bookmark?|class:small muted");
+      linkEmpty.appendChild(para1);
+      linkEmpty.appendChild(para2);
       return linkEmpty;
     },
     search: function() {
       var group = helper.node("div|class:group");
       var groupBody = helper.node("div|class:group-body");
       var linkEmpty = helper.node("div|class:link-empty");
-      var h1 = helper.node("h1:No matching bookmarks found|class:link-empty-heading");
-      var para = helper.node("p:\"Enter\" to Search " + state.get().header.search.engine[state.get().header.search.engine.selected].name + "|class:small muted");
-      linkEmpty.appendChild(h1);
-      linkEmpty.appendChild(para);
+      var para1 = helper.node("p:No matching bookmarks found");
+      var para2 = helper.node("p:\"Enter\" to Search " + state.get().header.search.engine[state.get().header.search.engine.selected].name + "|class:small muted");
+      linkEmpty.appendChild(para1);
+      linkEmpty.appendChild(para2);
       groupBody.appendChild(linkEmpty);
       group.appendChild(groupBody);
       return group;

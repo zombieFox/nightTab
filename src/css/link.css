@@ -566,15 +566,6 @@
   display: none;
 }
 
-.link-empty-heading {
-  color: rgb(var(--theme-style-text));
-  margin-bottom: 0;
-}
-
-.link-empty-heading:not(:only-child) {
-  margin-bottom: 0.5em;
-}
-
 .is-link-style-list .link-name {
   white-space: nowrap;
 }
