@@ -1676,6 +1676,14 @@ var control = (function() {
       render.update();
     }
   }, {
+    element: helper.e(".control-group-border"),
+    path: "group.border",
+    type: "range",
+    func: function() {
+      link.render.group.border();
+      render.class();
+    }
+  }, {
     element: helper.e(".control-header-border-top"),
     path: "header.border.top",
     type: "range",
@@ -2605,11 +2613,21 @@ var control = (function() {
       _transitional();
     };
     var _group = function() {
-      if (state.get().group.name.show) {
-        helper.addClass(html, "is-group-name-show");
-      } else {
-        helper.removeClass(html, "is-group-name-show");
+      var _name = function() {
+        if (state.get().group.name.show) {
+          helper.addClass(html, "is-group-name-show");
+        } else {
+          helper.removeClass(html, "is-group-name-show");
+        };
       };
+      var _border = function() {
+        helper.removeClass(html, "is-group-border");
+        if (state.get().group.border > 0) {
+          helper.addClass(html, "is-group-border");
+        };
+      };
+      _name();
+      _border();
     };
     var _link = function() {
       helper.removeClass(html, "is-link-show");

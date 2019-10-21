@@ -40,6 +40,7 @@
   --header-transitional-size: 1em;
   /* group */
   --group-name-size: 1em;
+  --group-border: 0;
   /* link */
   --link-area-width: 100%;
   --link-item-size: 1em;

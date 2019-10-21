@@ -629,6 +629,7 @@ var update = (function() {
           show: true,
           size: 1
         },
+        border: 0,
         add: false
       };
       data.state.dropdown = false;

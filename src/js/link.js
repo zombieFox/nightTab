@@ -482,6 +482,10 @@ var link = (function() {
       var html = helper.e("html");
       html.style.setProperty("--group-name-size", state.get().group.name.size + "em");
     },
+    border: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--group-border", state.get().group.border);
+    },
     tabindex: function() {
       var allGroupControlItem = helper.eA(".group-control-item");
       if (state.get().link.edit) {
@@ -1587,6 +1591,7 @@ var link = (function() {
     mod.add.group.close();
     groupAndItems();
     render.group.size();
+    render.group.border();
     render.item.size();
     render.item.display.letter();
     render.item.display.icon();

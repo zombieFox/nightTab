@@ -6,11 +6,20 @@
   width: var(--link-area-width);
 }
 
+.is-group-border .group:not(:first-child):not(:only-child) {
+  border-top: calc(var(--layout-line-width) * var(--group-border)) solid rgb(var(--theme-accent));
+}
+
 .group:first-child {
   padding-top: calc(var(--layout-space) * var(--layout-padding));
 }
 
 .group:last-child {
+  padding-bottom: calc(var(--layout-space) * var(--layout-padding));
+}
+
+.is-group-border .group {
+  padding-top: calc(var(--layout-space) * var(--layout-padding));
   padding-bottom: calc(var(--layout-space) * var(--layout-padding));
 }
 
