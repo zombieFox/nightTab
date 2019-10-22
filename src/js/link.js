@@ -350,7 +350,14 @@ var link = (function() {
 
       var groupHeader = helper.node("div|class:group-header");
       var groupName = helper.node("div|class:group-name");
-      var groupNameText = helper.node("h1:" + stagedGroup.group.name + "|class:group-name-text");
+      var groupNameText = helper.makeNode({
+        tag: "h1",
+        text: stagedGroup.group.name,
+        attr: [{
+          key: "class",
+          value: "group-name-text"
+        }]
+      });
       var groupControl = helper.node("div|class:group-control form-group");
 
       groupName.appendChild(groupNameText);
