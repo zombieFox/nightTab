@@ -1149,6 +1149,7 @@ input[type="range"]:disabled::-moz-range-progress {
   border-style: solid;
   border-color: transparent;
   border-radius: var(--theme-radius);
+  white-space: nowrap;
   transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast);
 }
 
@@ -1192,8 +1193,9 @@ input[type="range"]:disabled::-moz-range-progress {
   flex-basis: 50%;
 }
 
-.form-group button,
+.form-group .form-group-text,
 .form-group .button,
+.form-group>select,
 .form-group>input[type="email"],
 .form-group>input[type="number"],
 .form-group>input[type="password"],
@@ -1203,26 +1205,34 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group>input[type="color"] {
   margin: 0;
   border-radius: 0;
+  height: inherit;
+  min-height: 2.5em;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  z-index: 1;
 }
 
 .form-group .form-group-text {
-  margin-bottom: 0;
-  border-radius: 0;
-  z-index: 1;
-  position: relative;
+  flex-shrink: 0;
 }
 
-.form-group>input[type="email"],
-.form-group>input[type="number"],
-.form-group>input[type="password"],
-.form-group>input[type="search"],
-.form-group>input[type="tel"],
-.form-group>input[type="text"],
-.form-group>input[type="color"] {
+.form-group .form-group-text:focus,
+.form-group .button:focus,
+.form-group>select:focus,
+.form-group>input[type="email"]:focus,
+.form-group>input[type="number"]:focus,
+.form-group>input[type="password"]:focus,
+.form-group>input[type="search"]:focus,
+.form-group>input[type="tel"]:focus,
+.form-group>input[type="text"]:focus,
+.form-group>input[type="color"]:focus {
   z-index: 2;
 }
 
-.form-group>.form-group-text:hover,
+.form-group .form-group-text:hover,
+.form-group .button:hover,
+.form-group>select:hover,
 .form-group>input[type="email"]:hover,
 .form-group>input[type="number"]:hover,
 .form-group>input[type="password"]:hover,
@@ -1233,28 +1243,9 @@ input[type="range"]:disabled::-moz-range-progress {
   z-index: 3;
 }
 
-.form-group>.form-group-text:active,
-.form-group>.form-group-text:focus,
-.form-group>input[type="email"]:active,
-.form-group>input[type="email"]:focus,
-.form-group>input[type="number"]:active,
-.form-group>input[type="number"]:focus,
-.form-group>input[type="password"]:active,
-.form-group>input[type="password"]:focus,
-.form-group>input[type="search"]:active,
-.form-group>input[type="search"]:focus,
-.form-group>input[type="tel"]:active,
-.form-group>input[type="tel"]:focus,
-.form-group>input[type="text"]:active,
-.form-group>input[type="text"]:focus,
-.form-group>input[type="color"]:active,
-.form-group>input[type="color"]:focus {
-  z-index: 4;
-}
-
-.form-group>.form-group-text:first-child,
-.form-group>button:first-child,
-.form-group>.button:first-child,
+.form-group .form-group-text:first-child,
+.form-group .button:first-child,
+.form-group>select:first-child,
 .form-group>input[type="email"]:first-child,
 .form-group>input[type="number"]:first-child,
 .form-group>input[type="password"]:first-child,
@@ -1265,9 +1256,9 @@ input[type="range"]:disabled::-moz-range-progress {
   border-radius: var(--theme-radius) 0 0 var(--theme-radius);
 }
 
-.form-group>.form-group-text:last-child,
-.form-group>button:last-child,
-.form-group>.button:last-child,
+.form-group .form-group-text:last-child,
+.form-group .button:last-child,
+.form-group>select:last-child,
 .form-group>input[type="email"]:last-child,
 .form-group>input[type="number"]:last-child,
 .form-group>input[type="password"]:last-child,
