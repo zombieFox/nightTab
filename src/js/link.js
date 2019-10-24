@@ -1387,9 +1387,9 @@ var link = (function() {
         var copyStagedLink = JSON.parse(JSON.stringify(stagedLink));
         bookmarks.mod.edit.link(copyStagedLink);
         data.save();
+        stagedLink.reset();
         groupAndItems();
         render.focus.item.current.edit(copyStagedLink);
-        stagedLink.reset();
         autoSuggest.close();
         shade.close();
         pagelock.unlock();
@@ -1428,9 +1428,9 @@ var link = (function() {
         var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
         bookmarks.mod.edit.group(copyStagedGroup);
         data.save();
+        stagedGroup.reset();
         groupAndItems();
         render.focus.group.current.edit(copyStagedGroup);
-        stagedGroup.reset();
         autoSuggest.close();
         shade.close();
         pagelock.unlock();
