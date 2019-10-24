@@ -30,7 +30,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  transition: padding var(--layout-timing-extra-fast);
+  transition: padding var(--layout-timing-extra-fast) var(--layout-duration-04);
 }
 
 .is-group-name-show .group-header,
@@ -46,7 +46,6 @@
   height: 0;
   overflow: hidden;
   font-size: var(--group-name-size);
-  transition: height var(--layout-timing-extra-fast);
   transition: height var(--layout-timing-extra-fast);
 }
 
@@ -89,6 +88,11 @@
 .group-control-item {
   width: 4em;
   flex-shrink: 0;
+}
+
+.group-control-item .button-icon {
+  padding-left: 0.175em;
+  padding-right: 0.175em;
 }
 
 .group-body {
