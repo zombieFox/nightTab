@@ -176,6 +176,9 @@ var state = (function() {
       orientation: "bottom"
     },
     group: {
+      area: {
+        alignment: "left"
+      },
       name: {
         show: true,
         size: 1

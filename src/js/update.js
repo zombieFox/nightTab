@@ -625,6 +625,9 @@ var update = (function() {
         items: data.bookmarks
       }];
       data.state.group = {
+        area: {
+          alignment: "left"
+        },
         name: {
           show: true,
           size: 1

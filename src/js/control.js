@@ -1676,6 +1676,54 @@ var control = (function() {
       render.update();
     }
   }, {
+    element: helper.e(".control-group-area-alignment-left"),
+    path: "group.area.alignment",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-header"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-group-area-alignment-center"),
+    path: "group.area.alignment",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-header"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-group-area-alignment-right"),
+    path: "group.area.alignment",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-header"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render.class();
+    }
+  }, {
     element: helper.e(".control-group-border"),
     path: "group.border",
     type: "range",
@@ -2613,6 +2661,12 @@ var control = (function() {
       _transitional();
     };
     var _group = function() {
+      var _area = function() {
+        helper.removeClass(html, "is-group-area-alignment-left");
+        helper.removeClass(html, "is-group-area-alignment-center");
+        helper.removeClass(html, "is-group-area-alignment-right");
+        helper.addClass(html, "is-group-area-alignment-" + state.get().group.area.alignment);
+      };
       var _name = function() {
         if (state.get().group.name.show) {
           helper.addClass(html, "is-group-name-show");
@@ -2626,6 +2680,7 @@ var control = (function() {
           helper.addClass(html, "is-group-border");
         };
       };
+      _area();
       _name();
       _border();
     };
