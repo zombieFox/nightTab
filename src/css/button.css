@@ -3,7 +3,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: rgb(var(--theme-gray-02));
+  background-color: rgb(var(--button-background));
   padding: 0.125em 1em;
   margin: 0 0 1em 0;
   color: rgb(var(--button-text));
@@ -39,9 +39,9 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: rgb(var(--theme-gray-03));
+  background-color: rgb(var(--button-background-focus-hover));
   border-bottom-color: rgb(var(--theme-gray-08));
-  color: rgb(var(--button-text-hover-focus));
+  color: rgb(var(--button-text-hover));
   outline: none;
   text-decoration: none;
 }
@@ -87,7 +87,7 @@ button [class*=" icon-"],
 
 .button.active {
   border-bottom-color: rgb(var(--theme-accent));
-  color: rgb(var(--button-text-active));
+  color: rgb(var(--button-text-focus-active));
 }
 
 .button-small {
@@ -134,7 +134,7 @@ button [class*=" button-"]:last-child,
 .button-link:hover,
 .button-link:focus {
   background-color: transparent;
-  color: rgb(var(--button-link-text-hover-focus));
+  color: rgb(var(--button-link-text-focus-hover));
 }
 
 .button-link:active {

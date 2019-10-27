@@ -42,18 +42,21 @@
 <body>
 
   <main class="layout my-5">
-    <p>Buttons</p>
-    <div class="button-wrap">
-      <button class="button button-small mb-0" tabindex="1">Small</button>
-    </div>
-    <div class="button-wrap">
-      <button class="button mb-0" tabindex="1">Medium</button>
-    </div>
-    <div class="button-wrap">
-      <button class="button button-large mb-0" tabindex="1">Large</button>
+    <div class="form-group">
+      <button class="button mb-0 style-guide-control disable-on" tabindex="1">Disabled On</button>
+      <button class="button mb-0 style-guide-control disable-off" tabindex="1">Disabled Off</button>
     </div>
     <hr>
-    <p>Form</p>
+    <div class="button-wrap">
+      <button class="button button-small mb-0" tabindex="1">Button Small</button>
+    </div>
+    <div class="button-wrap">
+      <button class="button mb-0" tabindex="1">Button Medium</button>
+    </div>
+    <div class="button-wrap">
+      <button class="button button-large mb-0" tabindex="1">Button Large</button>
+    </div>
+    <hr>
     <div class="input-wrap">
       <input id="style-guide-checkbox" type="checkbox" tabindex="1">
       <label for="style-guide-checkbox">Checkbox</label>
@@ -72,11 +75,11 @@
     </div>
     <div class="input-wrap">
       <label for="input-text">Input Text</label>
-      <input id="input-text" class="mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="placeholder" tabindex="1">
+      <input id="input-text" class="mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Placeholder" tabindex="1">
     </div>
     <div class="input-wrap">
       <label for="textarea">Textarea</label>
-      <textarea id="textarea" class="textarea mb-0" spellcheck="false" placeholder="placeholder" tabindex="1"></textarea>
+      <textarea id="textarea" class="textarea mb-0" spellcheck="false" placeholder="Placeholder" tabindex="1"></textarea>
     </div>
     <div class="input-wrap">
       <label for="input-range">Input Range</label>
@@ -96,7 +99,7 @@
     </div>
     <div class="input-wrap">
       <label for="form-group-1">Form Group</label>
-      <div class="form-group mb-0">
+      <div class="form-group form-group-block mb-0">
         <input id="form-group-1" class="form-group-item-half mb-0" type="text" placeholder="Placeholder" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
         <input id="form-group-3" class="form-group-item-half mb-0" type="color" value="#000000" tabindex="1">
         <button class="button mb-0" tabindex="1">Button</button>
@@ -109,6 +112,52 @@
       </div>
     </div>
   </main>
+
+  <script src="js/helper.js"></script>
+  <script type="text/javascript">
+    var formElements = ["button", "input", "textarea", "select"];
+    var textElements = ["label", ".form-group-text"];
+    var disable = {
+      on: function() {
+        formElements.forEach(function(arrayItem, index) {
+          helper.eA(arrayItem).forEach(function(arrayItem, index) {
+            if (!arrayItem.classList.contains("style-guide-control")) {
+              arrayItem.setAttribute("disabled", "");
+            };
+          });
+        });
+        textElements.forEach(function(arrayItem, index) {
+          helper.eA(arrayItem).forEach(function(arrayItem, index) {
+            if (!arrayItem.classList.contains("style-guide-control")) {
+              helper.addClass(arrayItem, "disabled");
+            };
+          });
+        });
+      },
+      off: function() {
+        formElements.forEach(function(arrayItem, index) {
+          helper.eA(arrayItem).forEach(function(arrayItem, index) {
+            if (!arrayItem.classList.contains("style-guide-control")) {
+              arrayItem.removeAttribute("disabled");
+            };
+          });
+        });
+        textElements.forEach(function(arrayItem, index) {
+          helper.eA(arrayItem).forEach(function(arrayItem, index) {
+            if (!arrayItem.classList.contains("style-guide-control")) {
+              helper.removeClass(arrayItem, "disabled");
+            };
+          });
+        });
+      }
+    };
+    helper.e(".disable-on").addEventListener("click", function() {
+      disable.on();
+    }, false);
+    helper.e(".disable-off").addEventListener("click", function() {
+      disable.off();
+    }, false);
+  </script>
 
 </body>
 
