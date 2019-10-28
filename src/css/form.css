@@ -924,26 +924,34 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-grid {
+  background-color: rgb(var(--form-grid-background));
   padding: calc(var(--layout-line-width) * 2);
-  display: grid;
   border-radius: calc(var(--layout-line-width) * 6);
-  border-width: var(--layout-line-width);
-  border-style: solid;
-  border-color: rgb(var(--form-grid-border));
-  transition: border-color var(--layout-timing-extra-fast);
+  /* border-width: var(--layout-line-width); */
+  /* border-style: solid; */
+  /* border-color: rgb(var(--form-grid-border)); */
+  display: grid;
+  transition: border-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+}
+
+.form-grid:hover  {
+  outline: none;
+  /* border-color: rgb(var(--form-grid-icon-hover-focus)); */
+  box-shadow: var(--form-hover-ring);
 }
 
 .form-grid:focus,
-.form-grid:hover,
 .form-grid:focus-within {
   outline: none;
-  border-color: rgb(var(--form-grid-icon-hover-focus));
+  box-shadow: var(--form-focus-ring);
 }
 
 .form-grid.disabled,
 .form-grid.disabled:focus,
 .form-grid.disabled:focus-within {
-  border-color: rgb(var(--form-grid-border-disabled));
+  /* border-color: rgb(var(--form-grid-border-disabled)); */
+    background-color: rgb(var(--form-grid-background-disabled));
+    box-shadow: none;
 }
 
 .form-grid-3x3 {

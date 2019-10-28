@@ -89,6 +89,11 @@
   --form-input-border-focus-active: var(--theme-gray-01);
   --form-input-border-disabled: var(--theme-gray-01);
 
+  --form-grid-background: var(--theme-gray-02);
+  --form-grid-background-hover: var(--theme-gray-02);
+  --form-grid-background-focus-active: var(--theme-gray-01);
+  --form-grid-background-disabled: var(--theme-gray-02);
+
   --form-grid-border: var(--theme-gray-08);
   --form-grid-border-hover-focus: var(--theme-gray-20);
   --form-grid-border-active: var(--theme-accent);
