@@ -929,23 +929,21 @@ input[type="range"]:disabled::-moz-range-progress {
   border-radius: calc(var(--layout-line-width) * 6);
   border-width: var(--layout-line-width);
   border-style: solid;
-  border-color: rgb(var(--form-checkbox-radio-label));
+  border-color: rgb(var(--form-grid-border));
   transition: border-color var(--layout-timing-extra-fast);
 }
 
 .form-grid:focus,
+.form-grid:hover,
 .form-grid:focus-within {
   outline: none;
-  border-color: rgb(var(--theme-style-text));
+  border-color: rgb(var(--form-grid-icon-hover-focus));
 }
 
-.form-grid.disabled {
-  border-color: rgb(var(--form-checkbox-radio-disabled-label));
-}
-
+.form-grid.disabled,
 .form-grid.disabled:focus,
 .form-grid.disabled:focus-within {
-  border-color: rgb(var(--form-checkbox-radio-disabled-label));
+  border-color: rgb(var(--form-grid-border-disabled));
 }
 
 .form-grid-3x3 {
