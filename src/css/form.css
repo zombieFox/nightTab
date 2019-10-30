@@ -762,7 +762,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .input-button input[type="file"]:focus+label {
   background-color: rgb(var(--button-background-focus-hover));
   border-bottom-color: rgb(var(--theme-gray-08));
-  color: rgb(var(--button-text-hover));
+  color: rgb(var(--button-text-focus-hover));
   outline: none;
 }
 
@@ -926,7 +926,8 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-grid {
   background-color: rgb(var(--form-grid-background));
   padding: calc(var(--layout-line-width) * 2);
-  border-radius: calc(var(--layout-line-width) * 6);
+  border-radius: var(--theme-radius);
+  /* border-radius: calc(var(--layout-line-width) * 6); */
   /* border-width: var(--layout-line-width); */
   /* border-style: solid; */
   /* border-color: rgb(var(--form-grid-border)); */
@@ -934,7 +935,7 @@ input[type="range"]:disabled::-moz-range-progress {
   transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
 }
 
-.form-grid:hover  {
+.form-grid:hover {
   outline: none;
   /* border-color: rgb(var(--form-grid-icon-hover-focus)); */
   background-color: rgb(var(--form-grid-background-hover));
@@ -945,15 +946,15 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-grid:focus-within {
   outline: none;
   background-color: rgb(var(--form-grid-background-focus));
-  box-shadow: var(--form-focus-ring);
+  box-shadow: var(--form-hover-ring);
 }
 
 .form-grid.disabled,
 .form-grid.disabled:focus,
 .form-grid.disabled:focus-within {
   /* border-color: rgb(var(--form-grid-border-disabled)); */
-    background-color: rgb(var(--form-grid-background-disabled));
-    box-shadow: none;
+  background-color: rgb(var(--form-grid-background-disabled));
+  box-shadow: none;
 }
 
 .form-grid-3x3 {
@@ -972,7 +973,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-grid-rectangle {
   width: 7em;
-  height: 3em;
+  height: 2.5em;
 }
 
 .form-grid-viewport {
@@ -1058,6 +1059,11 @@ input[type="range"]:disabled::-moz-range-progress {
   transition: transform var(--layout-timing-extra-fast), background-color var(--layout-timing-extra-fast);
 }
 
+.form-grid input[type="checkbox"]:not(:disabled):active:checked+label:before,
+.form-grid input[type="radio"]:not(:disabled):active:checked+label:before {
+  box-shadow: var(--form-focus-ring);
+}
+
 .form-grid input[type="checkbox"]:focus+label:before,
 .form-grid input[type="checkbox"]:hover+label:before,
 .form-grid input[type="radio"]:focus+label:before,
@@ -1088,66 +1094,66 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(1) input[type="checkbox"]+label,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(1) input[type="radio"]+label {
-  border-top-left-radius: calc(var(--layout-line-width) * 3);
+  border-top-left-radius: calc(var(--theme-radius) / 2);
 }
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(1) input[type="checkbox"]+label:before,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(1) input[type="radio"]+label:before {
-  border-top-left-radius: var(--layout-line-width);
+  border-top-left-radius: calc(var(--theme-radius) / 4);
 }
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(3) input[type="checkbox"]+label,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(3) input[type="radio"]+label {
-  border-top-right-radius: calc(var(--layout-line-width) * 3);
+  border-top-right-radius: calc(var(--theme-radius) / 2);
 }
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(3) input[type="checkbox"]+label:before,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(3) input[type="radio"]+label:before {
-  border-top-right-radius: var(--layout-line-width);
+  border-top-right-radius: calc(var(--theme-radius) / 4);
 }
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(7) input[type="checkbox"]+label,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(7) input[type="radio"]+label {
-  border-bottom-left-radius: calc(var(--layout-line-width) * 3);
+  border-bottom-left-radius: calc(var(--theme-radius) / 2);
 }
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(7) input[type="checkbox"]+label:before,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(7) input[type="radio"]+label:before {
-  border-bottom-left-radius: var(--layout-line-width);
+  border-bottom-left-radius: calc(var(--theme-radius) / 4);
 }
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(9) input[type="checkbox"]+label,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(9) input[type="radio"]+label {
-  border-bottom-right-radius: calc(var(--layout-line-width) * 3);
+  border-bottom-right-radius: calc(var(--theme-radius) / 2);
 }
 
 .form-grid.form-grid-3x3 .input-wrap:nth-child(9) input[type="checkbox"]+label:before,
 .form-grid.form-grid-3x3 .input-wrap:nth-child(9) input[type="radio"]+label:before {
-  border-bottom-right-radius: var(--layout-line-width);
+  border-bottom-right-radius: calc(var(--theme-radius) / 4);
 }
 
 .form-grid.form-grid-3x1 .input-wrap:nth-child(1) input[type="checkbox"]+label,
 .form-grid.form-grid-3x1 .input-wrap:nth-child(1) input[type="radio"]+label {
-  border-top-left-radius: calc(var(--layout-line-width) * 3);
-  border-bottom-left-radius: calc(var(--layout-line-width) * 3);
+  border-top-left-radius: calc(var(--theme-radius) / 2);
+  border-bottom-left-radius: calc(var(--theme-radius) / 2);
 }
 
 .form-grid.form-grid-3x1 .input-wrap:nth-child(1) input[type="checkbox"]+label:before,
 .form-grid.form-grid-3x1 .input-wrap:nth-child(1) input[type="radio"]+label:before {
-  border-top-left-radius: var(--layout-line-width);
-  border-bottom-left-radius: var(--layout-line-width);
+  border-top-left-radius: calc(var(--theme-radius) / 4);
+  border-bottom-left-radius: calc(var(--theme-radius) / 4);
 }
 
 .form-grid.form-grid-3x1 .input-wrap:nth-child(3) input[type="checkbox"]+label,
 .form-grid.form-grid-3x1 .input-wrap:nth-child(3) input[type="radio"]+label {
-  border-top-right-radius: calc(var(--layout-line-width) * 3);
-  border-bottom-right-radius: calc(var(--layout-line-width) * 3);
+  border-top-right-radius: calc(var(--theme-radius) / 2);
+  border-bottom-right-radius: calc(var(--theme-radius) / 2);
 }
 
 .form-grid.form-grid-3x1 .input-wrap:nth-child(3) input[type="checkbox"]+label:before,
 .form-grid.form-grid-3x1 .input-wrap:nth-child(3) input[type="radio"]+label:before {
-  border-top-right-radius: var(--layout-line-width);
-  border-bottom-right-radius: var(--layout-line-width);
+  border-top-right-radius: calc(var(--theme-radius) / 4);
+  border-bottom-right-radius: calc(var(--theme-radius) / 4);
 }
 
 .form-indent {

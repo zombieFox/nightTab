@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: rgb(38, 40, 49)" class="is-theme-style-dark">
+<html lang="en" class="is-background-color-by-theme is-theme-style-dark">
 
 <head>
   <meta charset="utf-8">
@@ -45,6 +45,8 @@
     <div class="form-group">
       <button class="button mb-0 style-guide-control disable-on" tabindex="1">Disable</button>
       <button class="button mb-0 style-guide-control disable-off" tabindex="1">Enable</button>
+      <button class="button mb-0 style-guide-control theme-dark" tabindex="1">Dark</button>
+      <button class="button mb-0 style-guide-control theme-light" tabindex="1">Light</button>
     </div>
     <hr>
     <div class="button-wrap">
@@ -76,7 +78,7 @@
     <div class="form-grid-wrap">
       <div class="form-grid form-grid-3x3 form-grid-square">
         <div class="input-wrap">
-          <input id="style-guide-form-grid-topleft" class="style-guide-form-grid-topleft" type="radio" name="style-guide-form-grid-3x3" value="topleft" tabindex="1">
+          <input id="style-guide-form-grid-topleft" class="style-guide-form-grid-topleft" type="radio" name="style-guide-form-grid-3x3" value="topleft" tabindex="1" checked>
           <label for="style-guide-form-grid-topleft"><span class="sr-only">Top left</span></label>
         </div>
         <div class="input-wrap">
@@ -208,11 +210,27 @@
         });
       }
     };
+    var theme = {
+      dark: function() {
+        helper.removeClass(helper.e("html"), "is-theme-style-light");
+        helper.addClass(helper.e("html"), "is-theme-style-dark");
+      },
+      light: function() {
+        helper.addClass(helper.e("html"), "is-theme-style-light");
+        helper.removeClass(helper.e("html"), "is-theme-style-dark");
+      },
+    };
     helper.e(".disable-on").addEventListener("click", function() {
       disable.on();
     }, false);
     helper.e(".disable-off").addEventListener("click", function() {
       disable.off();
+    }, false);
+    helper.e(".theme-dark").addEventListener("click", function() {
+      theme.dark();
+    }, false);
+    helper.e(".theme-light").addEventListener("click", function() {
+      theme.light();
     }, false);
   </script>
 

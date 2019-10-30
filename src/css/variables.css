@@ -3,6 +3,7 @@
   --theme-root-font-size: 14px;
   --theme-accent: 250, 130, 0;
   --theme-radius: 0.2rem;
+  --theme-radius: 1rem;
   --theme-black: 0, 0, 0;
   --theme-white: 255, 255, 255;
   --theme-shade-01: 38, 40, 49;
@@ -88,18 +89,15 @@
   --form-input-border-hover: var(--theme-gray-02);
   --form-input-border-focus-active: var(--theme-gray-01);
   --form-input-border-disabled: var(--theme-gray-01);
-
   --form-grid-background: var(--theme-gray-02);
-  --form-grid-background-hover: var(--theme-gray-21);
-  --form-grid-background-focus: var(--theme-gray-01);
+  --form-grid-background-hover: var(--theme-gray-02);
+  --form-grid-background-focus: var(--theme-gray-02);
   --form-grid-background-disabled: var(--theme-gray-02);
-
   --form-grid-border: var(--theme-gray-08);
   --form-grid-border-hover-focus: var(--theme-gray-20);
   --form-grid-border-active: var(--theme-accent);
   --form-grid-border-checked: var(--theme-accent);
   --form-grid-border-disabled: var(--theme-gray-04);
-
   --form-group-text-background: var(--theme-gray-02);
   --form-group-text-background-focus-hover: var(--theme-gray-02);
   --form-group-text-background-active: var(--theme-gray-02);
@@ -111,13 +109,11 @@
   --form-label-focus-active: var(--theme-style-text);
   --form-label-checked: var(--theme-style-text);
   --form-label-disabled: var(--theme-gray-04);
-
   --form-icon: var(--theme-gray-08);
   --form-icon-hover-focus: var(--theme-gray-20);
   --form-icon-active: var(--theme-accent);
   --form-icon-checked: var(--theme-accent);
   --form-icon-disabled: var(--theme-gray-04);
-
   --form-placeholder: var(--theme-gray-06);
   --form-placeholder-focus-hover: var(--theme-gray-10);
   --form-placeholder-disabled: var(--theme-gray-03);
@@ -149,8 +145,12 @@
   --button-background: var(--theme-gray-02);
   --button-background-focus-hover: var(--theme-gray-03);
   --button-background-active: var(--theme-gray-04);
+  --button-background-disabled: var(--theme-gray-02);
+  --button-border: var(--theme-gray-02);
+  --button-border-focus-hover: var(--theme-gray-08);
+  --button-border-active: var(--theme-accent);
   --button-text: var(--theme-gray-12);
-  --button-text-hover: var(--theme-style-text);
+  --button-text-focus-hover: var(--theme-style-text);
   --button-text-focus-active: var(--theme-style-text);
   --button-text-disabled: var(--theme-gray-04);
   --button-link-text: var(--theme-gray-12);
