@@ -48,6 +48,10 @@
       <button class="button mb-0 style-guide-control theme-dark" tabindex="1">Dark</button>
       <button class="button mb-0 style-guide-control theme-light" tabindex="1">Light</button>
     </div>
+    <div class="input-wrap">
+      <label for="radius" class="style-guide-control">Radius</label>
+      <input id="radius" class="style-guide-control radius" type="range" min="0" max="300" value="0" step="20" tabindex="-1">
+    </div>
     <hr>
     <div class="button-wrap">
       <button class="button button-small mb-0" tabindex="1">Button Small</button>
@@ -74,10 +78,6 @@
     <div class="input-wrap">
       <input id="style-guide-radio-3" type="radio" name="style-guide-radio" tabindex="1">
       <label for="style-guide-radio-3">Radio 3</label>
-    </div>
-    <div class="input-wrap">
-      <label for="control-theme-radius">Radius</label>
-      <input id="control-theme-radius" class="control-theme-radius" type="range" min="0" max="300" value="0" step="20" tabindex="-1">
     </div>
     <div class="form-grid-wrap">
       <div class="form-grid form-grid-3x3 form-grid-square">
@@ -122,7 +122,7 @@
     <div class="form-grid-wrap">
       <div class="form-grid form-grid-3x1 form-grid-rectangle">
         <div class="input-wrap">
-          <input id="style-guide-form-grid-left" class="style-guide-form-grid-left" type="radio" name="style-guide-form-grid-3x1" value="centerleft" tabindex="1">
+          <input id="style-guide-form-grid-left" class="style-guide-form-grid-left" type="radio" name="style-guide-form-grid-3x1" value="centerleft" tabindex="1" checked>
           <label for="style-guide-form-grid-left"><span class="sr-only">Center left</span></label>
         </div>
         <div class="input-wrap">
@@ -236,7 +236,7 @@
     helper.e(".theme-light").addEventListener("click", function() {
       theme.light();
     }, false);
-    helper.e(".control-theme-radius").addEventListener("input", function() {
+    helper.e(".radius").addEventListener("input", function() {
       var html = helper.e("html");
       html.style.setProperty("--theme-radius", (parseInt(this.value, 10) / 100) + "rem");
     }, false);

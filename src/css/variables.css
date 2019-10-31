@@ -135,7 +135,7 @@
 --form-grid-input-background: var(--theme-gray-12);
 --form-grid-input-background-focus-hover: var(--theme-gray-16);
 --form-grid-input-background-active: var(--theme-style-text);
---form-grid-input-background-checked: var(--theme-gray-12);
+--form-grid-input-background-checked: var(--theme-accent);
 --form-grid-input-background-disabled: var(--theme-gray-04);
 
 
