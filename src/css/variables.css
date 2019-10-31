@@ -3,7 +3,6 @@
   --theme-root-font-size: 14px;
   --theme-accent: 250, 130, 0;
   --theme-radius: 0.2rem;
-  --theme-radius: 1rem;
   --theme-black: 0, 0, 0;
   --theme-white: 255, 255, 255;
   --theme-shade-01: 38, 40, 49;
@@ -89,15 +88,6 @@
   --form-input-border-hover: var(--theme-gray-02);
   --form-input-border-focus-active: var(--theme-gray-01);
   --form-input-border-disabled: var(--theme-gray-01);
-  --form-grid-background: var(--theme-gray-02);
-  --form-grid-background-hover: var(--theme-gray-02);
-  --form-grid-background-focus: var(--theme-gray-02);
-  --form-grid-background-disabled: var(--theme-gray-02);
-  --form-grid-border: var(--theme-gray-08);
-  --form-grid-border-hover-focus: var(--theme-gray-20);
-  --form-grid-border-active: var(--theme-accent);
-  --form-grid-border-checked: var(--theme-accent);
-  --form-grid-border-disabled: var(--theme-gray-04);
   --form-group-text-background: var(--theme-gray-02);
   --form-group-text-background-focus-hover: var(--theme-gray-02);
   --form-group-text-background-active: var(--theme-gray-02);
@@ -140,6 +130,24 @@
   --form-hover-ring: 0 0 0 var(--layout-line-width) rgb(var(--theme-gray-06));
   --form-focus-ring: 0 0 0 var(--layout-line-width) rgb(var(--theme-gray-10)), 0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-gray-10), 0.25);
   --form-focus-ring-accent: 0 0 0 var(--layout-line-width) rgb(var(--theme-accent)), 0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
+
+
+--form-grid-input-background: var(--theme-gray-12);
+--form-grid-input-background-focus-hover: var(--theme-gray-16);
+--form-grid-input-background-active: var(--theme-style-text);
+--form-grid-input-background-checked: var(--theme-gray-12);
+--form-grid-input-background-disabled: var(--theme-gray-04);
+
+
+  --form-grid-background: var(--theme-gray-02);
+  --form-grid-background-hover: var(--theme-gray-02);
+  --form-grid-background-focus: var(--theme-gray-02);
+  --form-grid-background-disabled: var(--theme-gray-02);
+  --form-grid-border: var(--theme-gray-08);
+  --form-grid-border-hover-focus: var(--theme-gray-20);
+  --form-grid-border-active: var(--theme-accent);
+  --form-grid-border-checked: var(--theme-accent);
+  --form-grid-border-disabled: var(--theme-gray-04);
   --form-arrow-size: 5px;
   /* button */
   --button-background: var(--theme-gray-02);
