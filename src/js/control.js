@@ -3170,6 +3170,8 @@ var control = (function() {
       _disable.input(".control-link-item-display-alignment-bottomcenter", true);
       _disable.input(".control-link-item-display-alignment-bottomright", true);
       _disable.input(".control-link-newtab", true);
+      _disable.element("[for=control-link-item-border]", true);
+      _disable.input(".control-link-item-border", true);
       _disable.input(".control-link-style-block", true);
       _disable.element(".control-link-style-block-helper", true);
       _disable.input(".control-link-style-list", true);
@@ -3206,6 +3208,8 @@ var control = (function() {
         _disable.input(".control-link-item-shadow-show", false);
         _disable.input(".control-link-item-hoverscale", false);
         _disable.input(".control-link-newtab", false);
+        _disable.element("[for=control-link-item-border]", false);
+        _disable.input(".control-link-item-border", false);
         _disable.input(".control-link-style-block", false);
         _disable.element(".control-link-style-block-helper", false);
         _disable.input(".control-link-style-list", false);
