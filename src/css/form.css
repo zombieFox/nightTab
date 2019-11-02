@@ -549,7 +549,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin: 0;
   padding: 0;
   border-width: 0;
-  border-radius: 100%;
+  border-radius: calc(var(--theme-radius) / 2);
   position: relative;
   height: 1.5em;
   width: 1.5em;
@@ -925,12 +925,8 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-grid {
   background-color: rgb(var(--form-grid-background));
-  padding: calc(var(--layout-line-width) * 2);
-  /* border-radius: calc(var(--layout-line-width) * 6); */
-  /* border-width: var(--layout-line-width); */
-  /* border-style: solid; */
-  /* border-color: rgb(var(--form-grid-border)); */
-  display: grid;
+  padding: calc(var(--layout-line-width) * 4);
+  display: inline-grid;
   grid-gap: var(--layout-line-width);
   overflow: hidden;
   transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
@@ -938,7 +934,6 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-grid:hover {
   outline: none;
-  /* border-color: rgb(var(--form-grid-icon-hover-focus)); */
   background-color: rgb(var(--form-grid-background-hover));
   box-shadow: var(--form-hover-ring);
 }
@@ -953,7 +948,6 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-grid.disabled,
 .form-grid.disabled:focus,
 .form-grid.disabled:focus-within {
-  /* border-color: rgb(var(--form-grid-border-disabled)); */
   background-color: rgb(var(--form-grid-background-disabled));
   box-shadow: none;
 }
@@ -967,16 +961,6 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-grid-3x1 {
   grid-template-columns: repeat(3, 1fr);
   border-radius: var(--theme-radius);
-}
-
-.form-grid-square {
-  height: calc(1.5em * 3 + calc(var(--layout-line-width) * 6));
-  width: calc(1.5em * 3 + calc(var(--layout-line-width) * 6));
-}
-
-.form-grid-rectangle {
-  height: calc(1.5em * 1 + calc(var(--layout-line-width) * 4));
-  width: calc(1.5em * 3 + calc(var(--layout-line-width) * 6));
 }
 
 .form-grid-viewport {
@@ -995,10 +979,9 @@ input[type="range"]:disabled::-moz-range-progress {
   background-color: rgb(var(--form-grid-input-background));
   background-color: transparent;
   display: block;
-  width: 100%;
-  height: 100%;
-  /* border-radius: var(--theme-radius); */
-  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: calc(var(--theme-radius) / 2);
   position: relative;
   transition: none;
   z-index: 1;
