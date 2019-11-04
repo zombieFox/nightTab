@@ -63,6 +63,19 @@
       <button class="button button-large mb-0" tabindex="1">Button Large</button>
     </div>
     <hr>
+    <div class="input-wrap input-button">
+      <input id="style-guide-input-button-1" type="checkbox" tabindex="1">
+      <label for="style-guide-input-button-1" class="mb-0">Checkbox Button</label>
+    </div>
+    <div class="input-wrap input-button input-hide">
+      <input id="style-guide-input-button-2" type="checkbox" tabindex="1">
+      <label for="style-guide-input-button-2" class="mb-0">Checkbox Hidden Button</label>
+    </div>
+    <div class="input-wrap input-button input-button-inline input-color-dot">
+      <input id="style-guide-input-button-3" type="color" tabindex="1">
+      <label for="style-guide-input-button-3">Input Colour Button</label>
+    </div>
+    <hr>
     <div class="input-wrap">
       <input id="style-guide-checkbox" type="checkbox" tabindex="1">
       <label for="style-guide-checkbox">Checkbox</label>
@@ -137,33 +150,33 @@
     </div>
     <hr>
     <div class="input-wrap">
-      <label for="input-text">Input Text</label>
-      <input id="input-text" class="mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Placeholder" tabindex="1">
+      <label for="style-guide-input-text">Input Text</label>
+      <input id="style-guide-input-text" class="mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Placeholder" tabindex="1">
     </div>
     <div class="input-wrap">
-      <label for="textarea">Textarea</label>
-      <textarea id="textarea" class="textarea mb-0" spellcheck="false" placeholder="Placeholder" tabindex="1"></textarea>
+      <label for="style-guide-textarea">Textarea</label>
+      <textarea id="style-guide-textarea" class="textarea mb-0" spellcheck="false" placeholder="Placeholder" tabindex="1"></textarea>
     </div>
     <div class="input-wrap">
-      <label for="input-range">Input Range</label>
-      <input id="input-range" class="mb-0" type="range" min="1" max="100" value="1" tabindex="1">
+      <label for="style-guide-input-range">Input Range</label>
+      <input id="style-guide-input-range" class="mb-0" type="range" min="1" max="100" value="1" tabindex="1">
     </div>
     <div class="input-wrap">
-      <label for="input-colour">Input Colour</label>
-      <input id="input-colour" class="mb-0" type="color" value="#000000" tabindex="1">
+      <label for="style-guide-input-colour">Input Colour</label>
+      <input id="style-guide-input-colour" class="mb-0" type="color" value="#000000" tabindex="1">
     </div>
     <div class="input-wrap">
-      <label for="select-1">Select</label>
-      <select id="select-1" class="mb-0" tabindex="1">
+      <label for="style-guide-select-1">Select</label>
+      <select id="style-guide-select-1" class="mb-0" tabindex="1">
         <option>Option 1</option>
         <option>Option 2</option>
         <option>Option 3</option>
       </select>
     </div>
     <div class="input-wrap">
-      <label for="form-group-1">Form Group</label>
+      <label for="style-guide-form-group-1">Form Group</label>
       <div class="form-group form-group-block mb-0">
-        <input id="form-group-1" class="form-group-item-half mb-0" type="text" placeholder="Placeholder" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        <input id="style-guide-form-group-1" class="form-group-item-half mb-0" type="text" placeholder="Placeholder" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
         <input id="form-group-3" class="form-group-item-half mb-0" type="color" value="#000000" tabindex="1">
         <button class="button mb-0" tabindex="1">Button</button>
         <select id="select-2" class="mb-0" tabindex="1">
@@ -174,12 +187,18 @@
         <div class="form-group-text" tabindex="1">Form Group Text</div>
       </div>
     </div>
+    <div class="feedback-wrap">
+      <div class="form-feedback">
+        <p class="muted">Form feedback.</p>
+        <p class="muted small">With some small text.</p>
+      </div>
+    </div>
   </main>
 
   <script src="js/helper.js"></script>
   <script type="text/javascript">
     var formElements = ["button", "input", "textarea", "select"];
-    var textElements = ["label", ".form-group-text", ".form-grid"];
+    var textElements = ["label", ".form-group-text", ".form-grid", ".form-feedback"];
     var disable = {
       on: function() {
         formElements.forEach(function(arrayItem, index) {

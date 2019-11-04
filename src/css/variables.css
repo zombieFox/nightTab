@@ -84,7 +84,7 @@
   --form-input-background-hover: var(--theme-gray-02);
   --form-input-background-focus-active: var(--theme-gray-01);
   --form-input-background-disabled: var(--theme-gray-02);
-  --form-input-border: var(--theme-gray-03);
+  --form-input-border: var(--theme-gray-02);
   --form-input-border-hover: var(--theme-gray-02);
   --form-input-border-focus-active: var(--theme-gray-01);
   --form-input-border-disabled: var(--theme-gray-01);
@@ -144,6 +144,11 @@
   --form-grid-border-active: var(--theme-accent);
   --form-grid-border-checked: var(--theme-accent);
   --form-grid-border-disabled: var(--theme-gray-04);
+  --form-dropdown-background: var(--theme-gray-02);
+  --form-feedback-background: var(--theme-gray-02);
+  --form-feedback-background-disabled: var(--theme-gray-02);
+  --form-feedback-border: var(--theme-gray-04);
+  --form-feedback-border-disabled: var(--theme-gray-02);
   --form-arrow-size: 5px;
   /* button */
   --button-background: var(--theme-gray-02);

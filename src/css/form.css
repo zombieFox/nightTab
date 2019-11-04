@@ -36,9 +36,10 @@ select {
   min-height: 2.5em;
   min-width: 0;
   width: 100%;
-  border-width: var(--form-input-border);
+  border: 0;
+  /* border-width: var(--layout-line-width);
   border-style: solid;
-  border-color: transparent;
+  border-color: transparent); */
   border-radius: var(--theme-radius);
   cursor: pointer;
   transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
@@ -78,7 +79,7 @@ select:disabled:active {
     linear-gradient(45deg, transparent 50%, rgb(var(--form-input-text-disabled)) 50%),
     linear-gradient(135deg, rgb(var(--form-input-text-disabled)) 50%, transparent 50%);
   color: rgb(var(--form-input-text-disabled));
-  border-color: rgb(var(--form-border-disabled));
+  /* border-color: rgb(var(--form-border-disabled)); */
   cursor: default;
   box-shadow: none;
 }
@@ -86,19 +87,20 @@ select:disabled:active {
 /* textarea */
 textarea {
   background-color: rgb(var(--form-input-background));
-  padding: 0 1em;
+  padding: 0.25em 1em;
   margin: 0 0 1em 0;
   color: rgb(var(--form-input-text));
   font-size: 1em;
   font-family: var(--font-regular);
-  line-height: 2em;
+  line-height: 2;
   height: 10em;
   min-height: 2.5em;
   min-width: 0;
   width: 100%;
-  border-width: var(--form-input-border);
+  border: 0;
+  /* border-width: var(--layout-line-width);
   border-style: solid;
-  border-color: transparent;
+  border-color: transparent; */
   border-radius: var(--theme-radius);
   cursor: text;
   resize: vertical;
@@ -125,7 +127,7 @@ textarea:active {
 textarea:disabled {
   background-color: rgb(var(--form-input-background-disabled));
   color: rgb(var(--form-input-text-disabled));
-  border-color: rgb(var(--form-input-border-disabled));
+  /* border-color: rgb(var(--form-input-border-disabled)); */
   cursor: default;
   box-shadow: none;
   resize: none;
@@ -172,9 +174,10 @@ input[type="text"] {
   height: 2.5em;
   min-width: 0;
   width: 100%;
-  border-width: var(--layout-line-width);
+  border: 0;
+  /* border-width: var(--layout-line-width);
   border-style: solid;
-  border-color: transparent;
+  border-color: transparent; */
   border-radius: var(--theme-radius);
   cursor: text;
   transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
@@ -230,7 +233,7 @@ input[type="tel"]:disabled,
 input[type="text"]:disabled {
   background-color: rgb(var(--form-input-background-disabled));
   color: rgb(var(--form-input-text-disabled));
-  border-color: rgb(var(--form-input-border-disabled));
+  /* border-color: rgb(var(--form-input-border-disabled)); */
   cursor: default;
   box-shadow: none;
 }
@@ -432,9 +435,10 @@ input[type="color"] {
   width: 100%;
   height: 2.5em;
   display: block;
-  border-width: 0;
+  border: 0;
+  /* border-width: 0;
   border-style: solid;
-  border-color: transparent;
+  border-color: transparent; */
   border-radius: var(--theme-radius);
   overflow: hidden;
   cursor: pointer;
@@ -549,7 +553,7 @@ input[type="range"]::-webkit-slider-thumb {
   margin: 0;
   padding: 0;
   border-width: 0;
-  border-radius: calc(var(--theme-radius) / 2);
+  border-radius: 50%;
   position: relative;
   height: 1.5em;
   width: 1.5em;
@@ -603,7 +607,6 @@ input[type="range"]::-moz-range-track {
   background-color: rgb(var(--form-range-track-background));
   margin: 0 -0.5em;
   padding: 0;
-  border: 0;
   height: var(--layout-line-width);
   width: 100%;
   border: 0;
@@ -715,9 +718,10 @@ input[type="range"]:disabled::-moz-range-progress {
   padding: 0.5em 0;
   position: relative;
   width: 100%;
+  display: block;
 }
 
-.input-wrap.input-button {
+.input-button-inline {
   width: initial;
   display: inline-block;
 }
@@ -752,6 +756,23 @@ input[type="range"]:disabled::-moz-range-progress {
   align-items: center;
 }
 
+.input-button input[type="checkbox"]+label:before,
+.input-button input[type="radio"]+label:before {
+  font-size: 1em;
+  margin-right: 1em;
+  transform: scale(1.5);
+}
+
+.input-button input[type="checkbox"]:active+label:before,
+.input-button input[type="radio"]:active+label:before {
+  transform: scale(1.3);
+}
+
+.input-button input[type="checkbox"]:checked:focus+label:before,
+.input-button input[type="radio"]:checked:focus+label:before {
+  transform: scale(1.7);
+}
+
 .input-button input[type="checkbox"]:hover+label,
 .input-button input[type="checkbox"]:focus+label,
 .input-button input[type="radio"]:hover+label,
@@ -761,7 +782,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .input-button input[type="file"]:hover+label,
 .input-button input[type="file"]:focus+label {
   background-color: rgb(var(--button-background-focus-hover));
-  border-bottom-color: rgb(var(--theme-gray-08));
+  border-bottom-color: rgb(var(--button-border-focus-hover));
   color: rgb(var(--button-text-focus-hover));
   outline: none;
 }
@@ -770,8 +791,8 @@ input[type="range"]:disabled::-moz-range-progress {
 .input-button input[type="radio"]:active+label,
 .input-button input[type="color"]:active+label,
 .input-button input[type="file"]:active+label {
-  background-color: rgb(var(--theme-gray-04));
-  border-bottom-color: rgb(var(--theme-accent));
+  background-color: rgb(var(--button-background-active));
+  border-bottom-color: rgb(var(--button-border-active));
   color: rgb(var(--button-text-focus-active));
   transition: none;
 }
@@ -780,7 +801,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .input-button input[type="radio"]:checked+label,
 .input-button input[type="color"]:checked+label,
 .input-button input[type="file"]:checked+label {
-  background-color: rgb(var(--theme-gray-04));
+  background-color: rgb(var(--button-background-active));
   border-bottom-color: rgb(var(--theme-accent));
   color: rgb(var(--button-text-focus-active));
   transition: none;
@@ -802,7 +823,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .input-button input[type="file"]:disabled:hover+label,
 .input-button input[type="file"]:disabled:focus+label,
 .input-button input[type="file"]:disabled:active+label {
-  background-color: rgb(var(--theme-gray-02));
+  background-color: rgb(var(--button-background-disabled));
   border-color: transparent;
   color: rgb(var(--button-text-disabled));
   cursor: default;
@@ -981,7 +1002,7 @@ input[type="range"]:disabled::-moz-range-progress {
   display: block;
   width: 1.5em;
   height: 1.5em;
-  border-radius: calc(var(--theme-radius) / 2);
+  border-radius: 50%;
   position: relative;
   transition: none;
   z-index: 1;
@@ -1032,6 +1053,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-grid input[type="radio"]:disabled:focus+label,
 .form-grid input[type="radio"]:disabled:hover+label {
   background-color: transparent;
+  box-shadow: none;
 }
 
 .form-grid input[type="checkbox"]:disabled:active+label,
@@ -1355,7 +1377,7 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-dropdown-menu {
-  background-color: rgb(var(--theme-gray-02));
+  background-color: rgb(var(--form-dropdown-background));
   border-radius: var(--theme-radius);
   padding: 0.5em 0;
   position: absolute;
@@ -1400,11 +1422,11 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-feedback {
   padding: 0.5em 1.5em 0.5em 1em;
-  background-color: rgb(var(--theme-gray-02));
+  background-color: rgb(var(--form-feedback-background));
   border-width: 0;
   border-left-width: calc(var(--layout-line-width) * 2);
   border-style: solid;
-  border-color: rgb(var(--theme-gray-04));
+  border-color: rgb(var(--form-feedback-border));
   border-top-right-radius: var(--theme-radius);
   border-bottom-right-radius: var(--theme-radius);
 }
@@ -1418,8 +1440,8 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-feedback.disabled {
-  background-color: transparent;
-  border-color: rgb(var(--theme-gray-02));
+  background-color: rgb(var(--form-feedback-background-disabled));
+  border-color: rgb(var(--form-feedback-border-disabled));
 }
 
 .form-feedback.disabled p {
