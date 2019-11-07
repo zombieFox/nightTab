@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: rgb(38, 40, 49)" class="is-theme-style-dark">
+<html lang="en" class="is-background-color-by-theme is-theme-style-dark">
 
 <head>
   <meta charset="utf-8">
@@ -42,18 +42,40 @@
 <body>
 
   <main class="layout my-5">
-    <p>Buttons</p>
-    <div class="button-wrap">
-      <button class="button button-small mb-0" tabindex="1">Small</button>
+    <div class="form-group">
+      <button class="button mb-0 style-guide-control disable-on" tabindex="1">Disable</button>
+      <button class="button mb-0 style-guide-control disable-off" tabindex="1">Enable</button>
+      <button class="button mb-0 style-guide-control theme-dark" tabindex="1">Dark</button>
+      <button class="button mb-0 style-guide-control theme-light" tabindex="1">Light</button>
     </div>
-    <div class="button-wrap">
-      <button class="button mb-0" tabindex="1">Medium</button>
-    </div>
-    <div class="button-wrap">
-      <button class="button button-large mb-0" tabindex="1">Large</button>
+    <div class="input-wrap">
+      <label for="radius" class="style-guide-control">Radius</label>
+      <input id="radius" class="style-guide-control radius" type="range" min="0" max="500" value="0" step="20" tabindex="-1">
     </div>
     <hr>
-    <p>Form</p>
+    <div class="button-wrap">
+      <button class="button button-small mb-0" tabindex="1">Button Small</button>
+    </div>
+    <div class="button-wrap">
+      <button class="button mb-0" tabindex="1">Button Medium</button>
+    </div>
+    <div class="button-wrap">
+      <button class="button button-large mb-0" tabindex="1">Button Large</button>
+    </div>
+    <hr>
+    <div class="input-wrap input-button">
+      <input id="style-guide-input-button-1" type="checkbox" tabindex="1">
+      <label for="style-guide-input-button-1" class="mb-0">Checkbox Button</label>
+    </div>
+    <div class="input-wrap input-button input-hide">
+      <input id="style-guide-input-button-2" type="checkbox" tabindex="1">
+      <label for="style-guide-input-button-2" class="mb-0">Checkbox Hidden Button</label>
+    </div>
+    <div class="input-wrap input-button input-button-inline input-color-dot">
+      <input id="style-guide-input-button-3" type="color" tabindex="1">
+      <label for="style-guide-input-button-3">Input Colour Button</label>
+    </div>
+    <hr>
     <div class="input-wrap">
       <input id="style-guide-checkbox" type="checkbox" tabindex="1">
       <label for="style-guide-checkbox">Checkbox</label>
@@ -70,34 +92,91 @@
       <input id="style-guide-radio-3" type="radio" name="style-guide-radio" tabindex="1">
       <label for="style-guide-radio-3">Radio 3</label>
     </div>
+    <div class="form-grid-wrap">
+      <div class="form-grid form-grid-3x3">
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-topleft" class="style-guide-form-grid-topleft" type="radio" name="style-guide-form-grid-3x3" value="topleft" tabindex="1" checked>
+          <label for="style-guide-form-grid-topleft"><span class="sr-only">Top left</span></label>
+        </div>
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-topcenter" class="style-guide-form-grid-topcenter" type="radio" name="style-guide-form-grid-3x3" value="topcenter" tabindex="1">
+          <label for="style-guide-form-grid-topcenter"><span class="sr-only">Top center</span></label>
+        </div>
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-topright" class="style-guide-form-grid-topright" type="radio" name="style-guide-form-grid-3x3" value="topright" tabindex="1">
+          <label for="style-guide-form-grid-topright"><span class="sr-only">Top right</span></label>
+        </div>
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-centerleft" class="style-guide-form-grid-centerleft" type="radio" name="style-guide-form-grid-3x3" value="centerleft" tabindex="1">
+          <label for="style-guide-form-grid-centerleft"><span class="sr-only">Center left</span></label>
+        </div>
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-centercenter" class="style-guide-form-grid-centercenter" type="radio" name="style-guide-form-grid-3x3" value="centercenter" tabindex="1">
+          <label for="style-guide-form-grid-centercenter"><span class="sr-only">Center center</span></label>
+        </div>
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-centerright" class="style-guide-form-grid-centerright" type="radio" name="style-guide-form-grid-3x3" value="centerright" tabindex="1">
+          <label for="style-guide-form-grid-centerright"><span class="sr-only">Center right</span></label>
+        </div>
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-bottomleft" class="style-guide-form-grid-bottomleft" type="radio" name="style-guide-form-grid-3x3" value="bottomleft" tabindex="1">
+          <label for="style-guide-form-grid-bottomleft"><span class="sr-only">Bottom left</span></label>
+        </div>
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-bottomcenter" class="style-guide-form-grid-bottomcenter" type="radio" name="style-guide-form-grid-3x3" value="bottomcenter" tabindex="1">
+          <label for="style-guide-form-grid-bottomcenter"><span class="sr-only">Bottom Center</span></label>
+        </div>
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-bottomright" class="style-guide-form-grid-bottomright" type="radio" name="style-guide-form-grid-3x3" value="bottomright" tabindex="1">
+          <label for="style-guide-form-grid-bottomright"><span class="sr-only">Bottom right</span></label>
+        </div>
+      </div>
+    </div>
+    <div class="form-grid-wrap">
+      <div class="form-grid form-grid-3x1">
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-left" class="style-guide-form-grid-left" type="radio" name="style-guide-form-grid-3x1" value="centerleft" tabindex="1" checked>
+          <label for="style-guide-form-grid-left"><span class="sr-only">Center left</span></label>
+        </div>
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-center" class="style-guide-form-grid-center" type="radio" name="style-guide-form-grid-3x1" value="centercenter" tabindex="1">
+          <label for="style-guide-form-grid-center"><span class="sr-only">Center center</span></label>
+        </div>
+        <div class="input-wrap">
+          <input id="style-guide-form-grid-right" class="style-guide-form-grid-right" type="radio" name="style-guide-form-grid-3x1" value="centerright" tabindex="1">
+          <label for="style-guide-form-grid-right"><span class="sr-only">Center right</span></label>
+        </div>
+      </div>
+    </div>
+    <hr>
     <div class="input-wrap">
-      <label for="input-text">Input Text</label>
-      <input id="input-text" class="mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="placeholder" tabindex="1">
+      <label for="style-guide-input-text">Input Text</label>
+      <input id="style-guide-input-text" class="mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Placeholder" tabindex="1">
     </div>
     <div class="input-wrap">
-      <label for="textarea">Textarea</label>
-      <textarea id="textarea" class="textarea mb-0" spellcheck="false" placeholder="placeholder" tabindex="1"></textarea>
+      <label for="style-guide-textarea">Textarea</label>
+      <textarea id="style-guide-textarea" class="textarea mb-0" spellcheck="false" placeholder="Placeholder" tabindex="1"></textarea>
     </div>
     <div class="input-wrap">
-      <label for="input-range">Input Range</label>
-      <input id="input-range" class="mb-0" type="range" min="1" max="100" value="1" tabindex="1">
+      <label for="style-guide-input-range">Input Range</label>
+      <input id="style-guide-input-range" class="mb-0" type="range" min="1" max="100" value="1" tabindex="1">
     </div>
     <div class="input-wrap">
-      <label for="input-colour">Input Colour</label>
-      <input id="input-colour" class="mb-0" type="color" value="#000000" tabindex="1">
+      <label for="style-guide-input-colour">Input Colour</label>
+      <input id="style-guide-input-colour" class="mb-0" type="color" value="#000000" tabindex="1">
     </div>
     <div class="input-wrap">
-      <label for="select-1">Select</label>
-      <select id="select-1" class="mb-0" tabindex="1">
+      <label for="style-guide-select-1">Select</label>
+      <select id="style-guide-select-1" class="mb-0" tabindex="1">
         <option>Option 1</option>
         <option>Option 2</option>
         <option>Option 3</option>
       </select>
     </div>
     <div class="input-wrap">
-      <label for="form-group-1">Form Group</label>
-      <div class="form-group mb-0">
-        <input id="form-group-1" class="form-group-item-half mb-0" type="text" placeholder="Placeholder" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <label for="style-guide-form-group-1">Form Group</label>
+      <div class="form-group form-group-block mb-0">
+        <input id="style-guide-form-group-1" class="form-group-item-half mb-0" type="text" placeholder="Placeholder" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
         <input id="form-group-3" class="form-group-item-half mb-0" type="color" value="#000000" tabindex="1">
         <button class="button mb-0" tabindex="1">Button</button>
         <select id="select-2" class="mb-0" tabindex="1">
@@ -108,7 +187,79 @@
         <div class="form-group-text" tabindex="1">Form Group Text</div>
       </div>
     </div>
+    <div class="feedback-wrap">
+      <div class="form-feedback">
+        <p class="muted">Form feedback.</p>
+        <p class="muted small">With some small text.</p>
+      </div>
+    </div>
   </main>
+
+  <script src="js/helper.js"></script>
+  <script type="text/javascript">
+    var formElements = ["button", "input", "textarea", "select"];
+    var textElements = ["label", ".form-group-text", ".form-grid", ".form-feedback"];
+    var disable = {
+      on: function() {
+        formElements.forEach(function(arrayItem, index) {
+          helper.eA(arrayItem).forEach(function(arrayItem, index) {
+            if (!arrayItem.classList.contains("style-guide-control")) {
+              arrayItem.setAttribute("disabled", "");
+            };
+          });
+        });
+        textElements.forEach(function(arrayItem, index) {
+          helper.eA(arrayItem).forEach(function(arrayItem, index) {
+            if (!arrayItem.classList.contains("style-guide-control")) {
+              helper.addClass(arrayItem, "disabled");
+            };
+          });
+        });
+      },
+      off: function() {
+        formElements.forEach(function(arrayItem, index) {
+          helper.eA(arrayItem).forEach(function(arrayItem, index) {
+            if (!arrayItem.classList.contains("style-guide-control")) {
+              arrayItem.removeAttribute("disabled");
+            };
+          });
+        });
+        textElements.forEach(function(arrayItem, index) {
+          helper.eA(arrayItem).forEach(function(arrayItem, index) {
+            if (!arrayItem.classList.contains("style-guide-control")) {
+              helper.removeClass(arrayItem, "disabled");
+            };
+          });
+        });
+      }
+    };
+    var theme = {
+      dark: function() {
+        helper.removeClass(helper.e("html"), "is-theme-style-light");
+        helper.addClass(helper.e("html"), "is-theme-style-dark");
+      },
+      light: function() {
+        helper.addClass(helper.e("html"), "is-theme-style-light");
+        helper.removeClass(helper.e("html"), "is-theme-style-dark");
+      },
+    };
+    helper.e(".disable-on").addEventListener("click", function() {
+      disable.on();
+    }, false);
+    helper.e(".disable-off").addEventListener("click", function() {
+      disable.off();
+    }, false);
+    helper.e(".theme-dark").addEventListener("click", function() {
+      theme.dark();
+    }, false);
+    helper.e(".theme-light").addEventListener("click", function() {
+      theme.light();
+    }, false);
+    helper.e(".radius").addEventListener("input", function() {
+      var html = helper.e("html");
+      html.style.setProperty("--theme-radius", (parseInt(this.value, 10) / 100) + "rem");
+    }, false);
+  </script>
 
 </body>
 

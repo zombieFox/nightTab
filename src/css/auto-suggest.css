@@ -56,15 +56,15 @@
   color: rgb(var(--form-input-text-hover));
   outline: none;
   text-decoration: none;
-  box-shadow: 0 0 0 var(--layout-line-width) rgb(var(--theme-gray-06));
+  box-shadow: var(--form-hover-ring);
 }
 
 .auto-suggest-link:focus {
   background-color: rgb(var(--theme-gray-01));
-  color: rgb(var(--form-input-text-focus));
+  color: rgb(var(--form-input-text-focus-active));
   outline: none;
   text-decoration: none;
-  box-shadow: 0 0 0 var(--layout-line-width) rgb(var(--theme-accent)), 0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
+  box-shadow: var(--form-focus-ring-accent);
 }
 
 .auto-suggest-link:active {

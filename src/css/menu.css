@@ -37,7 +37,7 @@
 }
 
 .is-edge .menu-area {
-  opacity: 0.2;
+  opacity: 0.8;
 }
 
 .menu-nav {
@@ -96,6 +96,7 @@
 
 .menu-nav-button {
   background-color: transparent;
+  border-bottom-color: transparent;
   border-radius: 0;
   margin: 0;
   padding-top: 0;

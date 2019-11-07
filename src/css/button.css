@@ -3,7 +3,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: rgb(var(--theme-gray-02));
+  background-color: rgb(var(--button-background));
   padding: 0.125em 1em;
   margin: 0 0 1em 0;
   color: rgb(var(--button-text));
@@ -15,7 +15,8 @@ input[type="submit"] {
   border-top-width: var(--layout-line-width);
   border-bottom-width: var(--layout-line-width);
   border-style: solid;
-  border-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: rgb(var(--button-border));
   border-radius: var(--theme-radius);
   text-align: center;
   text-decoration: none;
@@ -39,9 +40,9 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: rgb(var(--theme-gray-03));
-  border-bottom-color: rgb(var(--theme-gray-08));
-  color: rgb(var(--button-text-hover-focus));
+  background-color: rgb(var(--button-background-focus-hover));
+  border-bottom-color: rgb(var(--button-border-focus-hover));
+  color: rgb(var(--button-text-focus-hover));
   outline: none;
   text-decoration: none;
 }
@@ -51,8 +52,8 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  background-color: rgb(var(--theme-gray-04));
-  border-bottom-color: rgb(var(--theme-accent));
+  background-color: rgb(var(--button-background-active));
+  border-bottom-color: rgb(var(--button-border-active));
   color: rgb(var(--button-text-active));
   transition: none;
   text-decoration: none;
@@ -66,7 +67,7 @@ button:disabled:focus,
 .button:disabled:focus,
 button:disabled:active,
 .button:disabled:active {
-  background-color: rgb(var(--theme-gray-02));
+  background-color: rgb(var(--button-background-disabled));
   border-color: transparent;
   color: rgb(var(--button-text-disabled));
   cursor: default;
@@ -87,7 +88,7 @@ button [class*=" icon-"],
 
 .button.active {
   border-bottom-color: rgb(var(--theme-accent));
-  color: rgb(var(--button-text-active));
+  color: rgb(var(--button-text-focus-active));
 }
 
 .button-small {
@@ -134,7 +135,7 @@ button [class*=" button-"]:last-child,
 .button-link:hover,
 .button-link:focus {
   background-color: transparent;
-  color: rgb(var(--button-link-text-hover-focus));
+  color: rgb(var(--button-link-text-focus-hover));
 }
 
 .button-link:active {
