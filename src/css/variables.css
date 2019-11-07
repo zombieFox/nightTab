@@ -134,14 +134,14 @@
   --form-range-progress-background-focus-hover:        var(--theme-accent);
   --form-range-progress-background-active:             var(--theme-accent);
   --form-range-progress-background-disabled:           var(--theme-gray-02);
-  --form-grid-input-background:                        var(--theme-gray-12);
+  --form-grid-input-background:                        var(--theme-gray-03);
   --form-grid-input-background-focus-hover:            var(--theme-gray-16);
   --form-grid-input-background-active:                 var(--theme-style-text);
   --form-grid-input-background-checked:                var(--theme-gray-14);
-  --form-grid-input-background-disabled:               var(--theme-gray-04);
+  --form-grid-input-background-disabled:               var(--theme-gray-03);
   --form-grid-background:                              var(--theme-gray-02);
-  --form-grid-background-hover:                        var(--theme-gray-02);
-  --form-grid-background-focus:                        var(--theme-gray-02);
+  --form-grid-background-hover:                        var(--theme-gray-01);
+  --form-grid-background-focus:                        var(--theme-gray-01);
   --form-grid-background-disabled:                     var(--theme-gray-01);
   --form-grid-border:                                  var(--theme-gray-08);
   --form-grid-border-hover-focus:                      var(--theme-gray-20);
