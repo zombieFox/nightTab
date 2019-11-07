@@ -4,7 +4,7 @@
 }
 
 html {
-  font-size: var(--root-font-size);
+  font-size: var(--theme-root-font-size);
 }
 
 body {
