@@ -1243,7 +1243,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-dropdown-menu {
   background-color: rgb(var(--form-dropdown-background));
   border-radius: var(--theme-radius);
-  padding: var(--theme-radius) 0;
+  padding: 0.5em 0;
   position: absolute;
   top: calc(100% + calc(var(--layout-line-width) * 2));
   left: 0;
@@ -1251,6 +1251,7 @@ input[type="range"]:disabled::-moz-range-progress {
   min-width: 12em;
   box-shadow: var(--layout-shadow-large);
   z-index: var(--z-index-dropdown);
+  overflow: hidden;
   display: none;
 }
 

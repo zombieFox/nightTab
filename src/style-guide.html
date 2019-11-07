@@ -53,27 +53,42 @@
       <input id="radius" class="style-guide-control radius" type="range" min="0" max="500" value="0" step="20" tabindex="-1">
     </div>
     <hr>
-    <div class="button-wrap">
+    <div class="button-wrap form-inline">
       <button class="button button-small mb-0" tabindex="1">Button Small</button>
     </div>
-    <div class="button-wrap">
+    <div class="button-wrap form-inline">
       <button class="button mb-0" tabindex="1">Button Medium</button>
     </div>
-    <div class="button-wrap">
+    <div class="button-wrap form-inline">
       <button class="button button-large mb-0" tabindex="1">Button Large</button>
     </div>
     <hr>
-    <div class="input-wrap input-button">
+    <div class="input-wrap input-button form-inline">
       <input id="style-guide-input-button-1" type="checkbox" tabindex="1">
       <label for="style-guide-input-button-1" class="mb-0">Checkbox Button</label>
     </div>
-    <div class="input-wrap input-button input-hide">
+    <div class="input-wrap input-button input-hide form-inline">
       <input id="style-guide-input-button-2" type="checkbox" tabindex="1">
       <label for="style-guide-input-button-2" class="mb-0">Checkbox Hidden Button</label>
     </div>
-    <div class="input-wrap input-button input-button-inline input-color-dot">
+    <div class="input-wrap input-button form-inline input-color-dot">
       <input id="style-guide-input-button-3" type="color" tabindex="1">
       <label for="style-guide-input-button-3">Input Colour Button</label>
+    </div>
+    <div class="button-wrap form-inline">
+      <div class="style-guide-form-dropdown form-dropdown">
+        <button class="form-dropdown-toggle button mb-0" tabindex="1">
+          <span class="button-text">Button Dropdown</span>
+        </button>
+        <ul class="list-unstyled form-dropdown-menu">
+          <li>
+            <button class="button button-block text-left form-dropdown-menu-item" tabindex="1"><span class="button-text">Option 1</span></button>
+          </li>
+          <li>
+            <button class="button button-block text-left form-dropdown-menu-item" tabindex="1"><span class="button-text">Option 2</span></button>
+          </li>
+        </ul>
+      </div>
     </div>
     <hr>
     <div class="input-wrap">
@@ -258,6 +273,9 @@
     helper.e(".radius").addEventListener("input", function() {
       var html = helper.e("html");
       html.style.setProperty("--theme-radius", (parseInt(this.value, 10) / 100) + "rem");
+    }, false);
+    helper.e(".style-guide-form-dropdown").addEventListener("click", function() {
+      helper.toggleClass(this, "form-dropdown-open");
     }, false);
   </script>
 
