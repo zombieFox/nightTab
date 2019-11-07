@@ -192,7 +192,16 @@ var bookmarks = (function() {
   mod.add = {
     link: function(data) {
       if (data.position.group.new) {
-        mod.add.group();
+        mod.add.group({
+          position: {
+            origin: null,
+            destination: data.position.destination.group
+          },
+          group: {
+            name: data.position.group.name,
+            items: []
+          }
+        });
       };
       mod.all[data.position.destination.group].items.splice(data.position.destination.item, 0, data.link);
     },
