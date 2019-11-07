@@ -119,7 +119,7 @@
   --form-feedback-border-disabled: var(--theme-gray-02);
   --form-helper: var(--theme-gray-12);
   --form-helper-disabled: var(--theme-gray-04);
-  --form-range-thumb-background: var(--theme-gray-12);
+  --form-range-thumb-background: var(--theme-gray-14);
   --form-range-thumb-background-focus-hover: var(--theme-gray-16);
   --form-range-thumb-background-active: var(--theme-style-text);
   --form-range-thumb-background-disabled: var(--theme-gray-04);
@@ -137,7 +137,7 @@
   --form-grid-input-background: var(--theme-gray-12);
   --form-grid-input-background-focus-hover: var(--theme-gray-16);
   --form-grid-input-background-active: var(--theme-style-text);
-  --form-grid-input-background-checked: var(--theme-gray-12);
+  --form-grid-input-background-checked: var(--theme-gray-14);
   --form-grid-input-background-disabled: var(--theme-gray-04);
   --form-grid-background: var(--theme-gray-02);
   --form-grid-background-hover: var(--theme-gray-02);
