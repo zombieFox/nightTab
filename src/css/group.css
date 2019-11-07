@@ -26,11 +26,23 @@
 .group-header {
   position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
   transition: padding var(--layout-timing-extra-fast);
+}
+
+.is-group-area-alignment-left .group-header {
+  flex-direction: row;
+}
+
+.is-group-area-alignment-center .group-header {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.is-group-area-alignment-right .group-header {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
 }
 
 .is-group-name-show .group-header,
@@ -77,13 +89,21 @@
 }
 
 .is-link-edit .group-control {
-  margin-right: 1em;
   height: 2.5em;
   width: 16em;
   transition:
     width var(--layout-timing-extra-fast) var(--layout-duration-04),
     height var(--layout-timing-extra-fast),
     margin var(--layout-timing-extra-fast) var(--layout-duration-04);
+}
+
+.is-group-area-alignment-left .group-control,
+.is-group-area-alignment-center .group-control {
+  margin-right: 1em;
+}
+
+.is-group-area-alignment-right .group-control {
+  margin-left: 1em;
 }
 
 .group-control-item {
