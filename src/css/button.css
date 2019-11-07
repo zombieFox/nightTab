@@ -14,9 +14,9 @@ input[type="submit"] {
   border: 0;
   border-top-width: var(--layout-line-width);
   border-bottom-width: var(--layout-line-width);
-  border-style: solid;
   border-top-color: transparent;
   border-bottom-color: rgb(var(--button-border));
+  border-style: solid;
   border-radius: var(--theme-radius);
   text-align: center;
   text-decoration: none;
@@ -68,7 +68,7 @@ button:disabled:focus,
 button:disabled:active,
 .button:disabled:active {
   background-color: rgb(var(--button-background-disabled));
-  border-color: transparent;
+  border-bottom-color: rgb(var(--button-border-disabled));
   color: rgb(var(--button-text-disabled));
   cursor: default;
   text-decoration: none;

@@ -32,9 +32,7 @@
 
 .auto-suggest-link {
   padding: 0.5em;
-  border-width: var(--form-input-border);
-  border-style: solid;
-  border-color: transparent;
+  border: 0;
   border-radius: var(--theme-radius);
   width: 100%;
   height: 100%;

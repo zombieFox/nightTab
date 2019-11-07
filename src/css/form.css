@@ -36,10 +36,12 @@ select {
   min-height: 2.5em;
   min-width: 0;
   width: 100%;
-  border: 0;
+  border-color: rgb(var(--form-input-border));
+  border-width: var(--theme-line-width);
+  border-style: solid;
   border-radius: var(--theme-radius);
   cursor: pointer;
-  transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -50,6 +52,7 @@ select:hover {
     linear-gradient(45deg, transparent 50%, rgb(var(--form-label-hover)) 50%),
     linear-gradient(135deg, rgb(var(--form-label-hover)) 50%, transparent 50%);
   background-color: rgb(var(--form-input-background-hover));
+  border-color: rgb(var(--form-input-border-hover));
   color: rgb(var(--form-label-hover));
   outline: none;
   box-shadow: var(--form-hover-ring);
@@ -60,7 +63,8 @@ select:active {
   background-image:
     linear-gradient(45deg, transparent 50%, rgb(var(--form-label-hover)) 50%),
     linear-gradient(135deg, rgb(var(--form-label-hover)) 50%, transparent 50%);
-  background-color: rgb(var(--form-input-background-focus-active));
+  background-color: rgb(var(--form-input-background-border-focus-active));
+  border-color: rgb(var(--form-input-border-focus-active));
   color: rgb(var(--form-label-focus-active));
   outline: none;
   z-index: 2;
@@ -75,6 +79,7 @@ select:disabled:active {
   background-image:
     linear-gradient(45deg, transparent 50%, rgb(var(--form-input-text-disabled)) 50%),
     linear-gradient(135deg, rgb(var(--form-input-text-disabled)) 50%, transparent 50%);
+  border-color: rgb(var(--form-input-border-disabled));
   color: rgb(var(--form-input-text-disabled));
   cursor: default;
   box-shadow: none;
@@ -93,17 +98,20 @@ textarea {
   min-height: 2.5em;
   min-width: 0;
   width: 100%;
-  border: 0;
+  border-color: rgb(var(--form-input-border));
+  border-width: var(--theme-line-width);
+  border-style: solid;
   border-radius: var(--theme-radius);
   cursor: text;
   resize: vertical;
   display: block;
-  transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
   -moz-appearance: textfield;
 }
 
 textarea:hover {
   background-color: rgb(var(--form-input-background-hover));
+  border-color: rgb(var(--form-input-border-hover));
   color: rgb(var(--form-input-text-hover));
   outline: none;
   box-shadow: var(--form-hover-ring);
@@ -112,6 +120,7 @@ textarea:hover {
 textarea:focus,
 textarea:active {
   background-color: rgb(var(--form-input-background-focus-active));
+  border-color: rgb(var(--form-input-border-focus-active));
   color: rgb(var(--form-input-text-focus-active));
   outline: none;
   box-shadow: var(--form-focus-ring-accent);
@@ -119,6 +128,7 @@ textarea:active {
 
 textarea:disabled {
   background-color: rgb(var(--form-input-background-disabled));
+  border-color: rgb(var(--form-input-border-disabled));
   color: rgb(var(--form-input-text-disabled));
   cursor: default;
   box-shadow: none;
@@ -166,10 +176,12 @@ input[type="text"] {
   height: 2.5em;
   min-width: 0;
   width: 100%;
-  border: 0;
+  border-color: rgb(var(--form-input-border));
+  border-width: var(--theme-line-width);
+  border-style: solid;
   border-radius: var(--theme-radius);
   cursor: text;
-  transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
   -moz-appearance: textfield;
 }
 
@@ -190,6 +202,7 @@ input[type="search"]:hover,
 input[type="tel"]:hover,
 input[type="text"]:hover {
   background-color: rgb(var(--form-input-background-hover));
+  border-color: rgb(var(--form-input-border-hover));
   color: rgb(var(--form-input-text-hover));
   outline: none;
   box-shadow: var(--form-hover-ring);
@@ -208,6 +221,7 @@ input[type="tel"]:active,
 input[type="text"]:focus,
 input[type="text"]:active {
   background-color: rgb(var(--form-input-background-focus-active));
+  border-color: rgb(var(--form-input-border-focus-active));
   color: rgb(var(--form-input-text-focus-active));
   outline: none;
   z-index: 2;
@@ -221,6 +235,7 @@ input[type="search"]:disabled,
 input[type="tel"]:disabled,
 input[type="text"]:disabled {
   background-color: rgb(var(--form-input-background-disabled));
+  border-color: rgb(var(--form-input-border-disabled));
   color: rgb(var(--form-input-text-disabled));
   cursor: default;
   box-shadow: none;
@@ -623,10 +638,10 @@ input[type="range"]::-moz-range-thumb {
   margin: 0;
   padding: 0;
   border-width: 0;
-  border-radius: 100%;
+  border-radius: 50%;
   position: relative;
-  height: 1.25em;
-  width: 1.25em;
+  height: 1.5em;
+  width: 1.5em;
   cursor: pointer;
   box-sizing: border-box;
   transition: background-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
@@ -809,7 +824,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .input-button input[type="file"]:disabled:focus+label,
 .input-button input[type="file"]:disabled:active+label {
   background-color: rgb(var(--button-background-disabled));
-  border-color: transparent;
+  border-bottom-color: rgb(var(--button-border-disabled));
   color: rgb(var(--button-text-disabled));
   cursor: default;
 }
@@ -1101,45 +1116,38 @@ input[type="range"]:disabled::-moz-range-progress {
   align-items: center;
   justify-content: center;
   border: 0;
-  border-top-width: var(--layout-line-width);
-  border-bottom-width: var(--layout-line-width);
+  border-width: var(--layout-line-width);
+  border-color: rgb(var(--form-group-text-border));
   border-style: solid;
-  border-color: transparent;
   border-radius: var(--theme-radius);
   white-space: nowrap;
-  transition: background-color var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast);
 }
 
 .form-group-text:hover,
 .form-group-text:focus {
   background-color: rgb(var(--form-group-text-background-focus-hover));
+  border-color: rgb(var(--form-group-text-border-focus-hover));
   color: rgb(var(--form-input-text-hover));
   outline: none;
 }
 
 .form-group-text:active {
   background-color: rgb(var(--form-group-text-background-active));
+  border-color: rgb(var(--form-group-text-border-active));
   color: rgb(var(--form-input-text-hover));
   outline: none;
 }
 
-.form-group-text.disabled {
+.form-group-text.disabled,
+.form-group-text.disabled:hover,
+.form-group-text.disabled:focus,
+.form-group-text.disable:active {
   background-color: rgb(var(--form-group-text-background-disabled));
+  border-color: rgb(var(--form-group-text-border-disabled));
   color: rgb(var(--form-input-text-disabled));
   box-shadow: none;
   cursor: default;
-}
-
-.form-group-text.disabled:hover,
-.form-group-text.disabled:focus {
-  background-color: rgb(var(--form-group-text-background-disabled));
-  color: rgb(var(--form-input-text-disabled));
-}
-
-.form-group-text.disable:active {
-  background-color: rgb(var(--form-group-text-background-disabled));
-  color: rgb(var(--form-input-text-disabled));
-  outline: none;
 }
 
 .form-group {
@@ -1270,15 +1278,15 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-dropdown-menu {
   background-color: rgb(var(--form-dropdown-background));
   border-radius: var(--theme-radius);
-  padding: 0.5em 0;
+  padding: var(--theme-radius) 0;
   position: absolute;
   top: calc(100% + calc(var(--layout-line-width) * 2));
   left: 0;
   width: 100%;
   min-width: 12em;
   box-shadow: var(--layout-shadow-large);
-  display: none;
   z-index: var(--z-index-dropdown);
+  display: none;
 }
 
 .form-dropdown-open .form-dropdown-menu {

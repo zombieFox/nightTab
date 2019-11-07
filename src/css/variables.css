@@ -88,7 +88,7 @@
   --form-input-background:                             var(--theme-gray-02);
   --form-input-background-hover:                       var(--theme-gray-02);
   --form-input-background-focus-active:                var(--theme-gray-01);
-  --form-input-background-disabled:                    var(--theme-gray-02);
+  --form-input-background-disabled:                    var(--theme-gray-01);
   --form-input-border:                                 var(--theme-gray-02);
   --form-input-border-hover:                           var(--theme-gray-02);
   --form-input-border-focus-active:                    var(--theme-gray-01);
@@ -96,8 +96,11 @@
   --form-group-text-background:                        var(--theme-gray-02);
   --form-group-text-background-focus-hover:            var(--theme-gray-02);
   --form-group-text-background-active:                 var(--theme-gray-02);
-  --form-group-text-background-disabled:               var(--theme-gray-02);
-  --form-input-border-disabled:                        var(--theme-gray-02);
+  --form-group-text-background-disabled:               var(--theme-gray-01);
+  --form-group-text-border:                            var(--theme-gray-02);
+  --form-group-text-border-focus-hover:                var(--theme-gray-02);
+  --form-group-text-border-active:                     var(--theme-gray-02);
+  --form-group-text-border-disabled:                   var(--theme-gray-01);
   --form-border-disabled:                              var(--theme-gray-02);
   --form-icon:                                         var(--theme-gray-08);
   --form-icon-hover-focus:                             var(--theme-gray-20);
@@ -114,7 +117,7 @@
   --form-feedback-text-muted:                          var(--theme-gray-12);
   --form-feedback-text-disabled:                       var(--theme-gray-04);
   --form-feedback-background:                          var(--theme-gray-02);
-  --form-feedback-background-disabled:                 var(--theme-gray-02);
+  --form-feedback-background-disabled:                 var(--theme-gray-01);
   --form-feedback-border:                              var(--theme-gray-04);
   --form-feedback-border-disabled:                     var(--theme-gray-02);
   --form-helper:                                       var(--theme-gray-12);
@@ -122,7 +125,7 @@
   --form-range-thumb-background:                       var(--theme-gray-14);
   --form-range-thumb-background-focus-hover:           var(--theme-gray-16);
   --form-range-thumb-background-active:                var(--theme-style-text);
-  --form-range-thumb-background-disabled:              var(--theme-gray-04);
+  --form-range-thumb-background-disabled:              var(--theme-gray-03);
   --form-range-track-background:                       var(--theme-gray-06);
   --form-range-track-background-focus-hover:           var(--theme-gray-04);
   --form-range-track-background-active:                var(--theme-gray-03);
@@ -139,7 +142,7 @@
   --form-grid-background:                              var(--theme-gray-02);
   --form-grid-background-hover:                        var(--theme-gray-02);
   --form-grid-background-focus:                        var(--theme-gray-02);
-  --form-grid-background-disabled:                     var(--theme-gray-02);
+  --form-grid-background-disabled:                     var(--theme-gray-01);
   --form-grid-border:                                  var(--theme-gray-08);
   --form-grid-border-hover-focus:                      var(--theme-gray-20);
   --form-grid-border-active:                           var(--theme-accent);
@@ -154,10 +157,11 @@
   --button-background:                                 var(--theme-gray-02);
   --button-background-focus-hover:                     var(--theme-gray-03);
   --button-background-active:                          var(--theme-gray-04);
-  --button-background-disabled:                        var(--theme-gray-02);
+  --button-background-disabled:                        var(--theme-gray-01);
   --button-border:                                     var(--theme-gray-02);
   --button-border-focus-hover:                         var(--theme-gray-08);
   --button-border-active:                              var(--theme-accent);
+  --button-border-disabled:                            var(--theme-gray-01);
   --button-text:                                       var(--theme-gray-12);
   --button-text-focus-hover:                           var(--theme-style-text);
   --button-text-focus-active:                          var(--theme-style-text);
