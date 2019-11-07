@@ -133,7 +133,7 @@
   --form-range-progress-background:                    var(--theme-accent);
   --form-range-progress-background-focus-hover:        var(--theme-accent);
   --form-range-progress-background-active:             var(--theme-accent);
-  --form-range-progress-background-disabled:           var(--theme-gray-04);
+  --form-range-progress-background-disabled:           var(--theme-gray-02);
   --form-grid-input-background:                        var(--theme-gray-12);
   --form-grid-input-background-focus-hover:            var(--theme-gray-16);
   --form-grid-input-background-active:                 var(--theme-style-text);
