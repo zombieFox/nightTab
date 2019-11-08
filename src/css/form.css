@@ -692,6 +692,11 @@ input[type="range"]::-moz-range-progress {
   background-color: rgb(var(--form-range-progress-background));
   height: calc(var(--layout-line-width) * 2);
   border-radius: var(--theme-radius);
+  transition: background-color var(--layout-timing-extra-fast);
+}
+
+input[type="range"]:active::-moz-range-progress {
+  background-color: rgb(var(--form-range-progress-background-active));
 }
 
 input[type="range"]:disabled::-moz-range-progress {
@@ -946,7 +951,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-grid {
   background-color: rgb(var(--form-grid-background));
-  padding: calc(var(--layout-line-width) * 4);
+  padding: 0.75em;
   display: inline-grid;
   overflow: hidden;
   transition: background-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
