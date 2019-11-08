@@ -19,16 +19,16 @@ label.disabled {
 select {
   background-color: rgb(var(--form-input-background));
   background-image:
-    linear-gradient(45deg, transparent 50%, rgb(var(--form-label)) 50%),
-    linear-gradient(135deg, rgb(var(--form-label)) 50%, transparent 50%);
+    linear-gradient(45deg, transparent 60%, rgb(var(--form-label)) 60%),
+    linear-gradient(135deg, rgb(var(--form-label)) 40%, transparent 40%);
   background-position:
-    calc(100% - calc(var(--form-arrow-size) * 5)) 50%,
-    calc(100% - calc(var(--form-arrow-size) * 4)) 50%;
+    calc(100% - calc(var(--form-arrow-size) * 4)) 50%,
+    calc(100% - calc(var(--form-arrow-size) * 3)) 50%;
   background-size:
-    var(--form-arrow-size) var(--form-arrow-size),
-    var(--form-arrow-size) var(--form-arrow-size);
+    var(--form-arrow-size) calc(var(--form-arrow-size) * 0.75),
+    var(--form-arrow-size) calc(var(--form-arrow-size) * 0.75);
   background-repeat: no-repeat;
-  padding: 0 calc(var(--form-arrow-size) * 10) 0 1em;
+  padding: 0 calc(var(--form-arrow-size) * 8) 0 1em;
   margin: 0 0 1em 0;
   color: rgb(var(--form-label));
   font-size: 1em;
@@ -49,8 +49,8 @@ select {
 
 select:hover {
   background-image:
-    linear-gradient(45deg, transparent 50%, rgb(var(--form-label-hover)) 50%),
-    linear-gradient(135deg, rgb(var(--form-label-hover)) 50%, transparent 50%);
+    linear-gradient(45deg, transparent 60%, rgb(var(--form-label-hover)) 60%),
+    linear-gradient(135deg, rgb(var(--form-label-hover)) 40%, transparent 40%);
   background-color: rgb(var(--form-input-background-hover));
   border-color: rgb(var(--form-input-border-hover));
   color: rgb(var(--form-label-hover));
@@ -61,8 +61,8 @@ select:hover {
 select:focus,
 select:active {
   background-image:
-    linear-gradient(45deg, transparent 50%, rgb(var(--form-label-hover)) 50%),
-    linear-gradient(135deg, rgb(var(--form-label-hover)) 50%, transparent 50%);
+    linear-gradient(45deg, transparent 60%, rgb(var(--form-label-focus-active)) 60%),
+    linear-gradient(135deg, rgb(var(--form-label-focus-active)) 40%, transparent 40%);
   background-color: rgb(var(--form-input-background-border-focus-active));
   border-color: rgb(var(--form-input-border-focus-active));
   color: rgb(var(--form-label-focus-active));
