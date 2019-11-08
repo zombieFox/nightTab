@@ -130,6 +130,7 @@ var state = (function() {
         type: "timeanddate",
         size: 1
       },
+      position: "sticky",
       radius: false
     },
     link: {

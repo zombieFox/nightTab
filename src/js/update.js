@@ -624,6 +624,7 @@ var update = (function() {
         name: "Group 1",
         items: data.bookmarks
       }];
+      data.state.header.position = "sticky";
       data.state.group = {
         area: {
           alignment: "left"

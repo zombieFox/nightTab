@@ -1,5 +1,4 @@
 .header {
-  position: relative;
   display: flex;
   flex-direction: row;
   z-index: var(--z-index-header);
@@ -22,8 +21,13 @@
   justify-content: flex-end;
 }
 
-.is-link-show .header {
+.is-link-show.is-header-position-sticky .header {
   position: sticky;
+  left: 0;
+}
+
+.is-link-show.is-header-position-inline .header {
+  position: relative;
   left: 0;
 }
 

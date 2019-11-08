@@ -1748,6 +1748,20 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: helper.e(".control-header-position-sticky"),
+    path: "header.position",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-header-position-inline"),
+    path: "header.position",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
     element: helper.e(".control-link-area-width"),
     path: "link.area.width",
     type: "range",
@@ -2649,6 +2663,11 @@ var control = (function() {
           helper.addClass(html, "is-header-border-bottom");
         };
       };
+      var _position = function() {
+        helper.removeClass(html, "is-header-position-sticky");
+        helper.removeClass(html, "is-header-position-inline");
+        helper.addClass(html, "is-header-position-" + state.get().header.position);
+      };
       _area();
       _item();
       _clock();
@@ -2658,6 +2677,7 @@ var control = (function() {
       _shade();
       _border();
       _greeting();
+      _position();
       _transitional();
     };
     var _group = function() {
