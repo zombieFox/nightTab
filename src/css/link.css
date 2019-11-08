@@ -306,11 +306,16 @@
   transition: all var(--layout-timing-extra-fast);
 }
 
-.is-link-style-list .link-control {
+.is-link-orientation-top.is-link-style-list .link-control,
+.is-link-orientation-bottom.is-link-style-list .link-control {
   flex-wrap: nowrap;
 }
 
-.is-link-style-block .link-control {
+.is-link-orientation-top.is-link-style-block .link-control {
+  flex-wrap: wrap-reverse;
+}
+
+.is-link-orientation-bottom.is-link-style-block .link-control {
   flex-wrap: wrap;
 }
 
@@ -340,20 +345,36 @@
   color: rgb(var(--theme-white));
 }
 
-.is-link-orientation-top .link-control-item:first-child {
-  border-radius: var(--theme-radius) 0 0 0;
+.is-link-orientation-top.is-link-style-list .link-control-item:nth-child(1) {
+  border-top-left-radius: var(--theme-radius);
 }
 
-.is-link-orientation-top .link-control-item:last-child {
-  border-radius: 0 var(--theme-radius) 0 0
+.is-link-orientation-top.is-link-style-list .link-control-item:nth-child(5) {
+  border-top-right-radius: var(--theme-radius);
 }
 
-.is-link-orientation-bottom .link-control-item:first-child {
-  border-radius: 0 0 0 var(--theme-radius);
+.is-link-orientation-bottom.is-link-style-list .link-control-item:nth-child(1) {
+  border-bottom-left-radius: var(--theme-radius);
 }
 
-.is-link-orientation-bottom .link-control-item:last-child {
-  border-radius: 0 0 var(--theme-radius) 0
+.is-link-orientation-bottom.is-link-style-list .link-control-item:nth-child(5) {
+  border-bottom-right-radius: var(--theme-radius);
+}
+
+.is-link-orientation-top.is-link-style-block .link-control-item:nth-child(4) {
+  border-top-left-radius: var(--theme-radius);
+}
+
+.is-link-orientation-top.is-link-style-block .link-control-item:nth-child(5) {
+  border-top-right-radius: var(--theme-radius);
+}
+
+.is-link-orientation-bottom.is-link-style-block .link-control-item:nth-child(4) {
+  border-bottom-left-radius: var(--theme-radius);
+}
+
+.is-link-orientation-bottom.is-link-style-block .link-control-item:nth-child(5) {
+  border-bottom-right-radius: var(--theme-radius);
 }
 
 .link-url-text-dark .link-control-item:focus,
