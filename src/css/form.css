@@ -22,13 +22,13 @@ select {
     linear-gradient(45deg, transparent 60%, rgb(var(--form-label)) 60%),
     linear-gradient(135deg, rgb(var(--form-label)) 40%, transparent 40%);
   background-position:
-    calc(100% - calc(var(--form-arrow-size) * 4)) 50%,
-    calc(100% - calc(var(--form-arrow-size) * 3)) 50%;
+    calc(100% - 2em) 50%,
+    calc(100% - 1.5em) 50%;
   background-size:
-    var(--form-arrow-size) calc(var(--form-arrow-size) * 0.75),
-    var(--form-arrow-size) calc(var(--form-arrow-size) * 0.75);
+    0.5em 0.375em,
+    0.5em 0.375em;
   background-repeat: no-repeat;
-  padding: 0 calc(var(--form-arrow-size) * 8) 0 1em;
+  padding: 0 calc(0.5em * 8) 0 1em;
   margin: 0 0 1em 0;
   color: rgb(var(--form-label));
   font-size: 1em;

@@ -148,7 +148,6 @@
   --form-grid-border-checked:                          var(--theme-accent);
   --form-grid-border-disabled:                         var(--theme-gray-04);
   --form-dropdown-background:                          var(--theme-gray-02);
-  --form-arrow-size:                                   calc(var(--theme-root-font-size) * 0.5);
   --form-hover-ring:                                   0 0 0 var(--layout-line-width) rgb(var(--theme-gray-06));
   --form-focus-ring:                                   0 0 0 var(--layout-line-width) rgb(var(--theme-gray-10)), 0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-gray-10), 0.25);
   --form-focus-ring-accent:                            0 0 0 var(--layout-line-width) rgb(var(--theme-accent)), 0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
