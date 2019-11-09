@@ -122,6 +122,7 @@
   --form-feedback-border-disabled:                     var(--theme-gray-02);
   --form-helper:                                       var(--theme-gray-12);
   --form-helper-disabled:                              var(--theme-gray-04);
+  --form-thumb-size:                                   1.25em;
   --form-range-thumb-background:                       var(--theme-gray-14);
   --form-range-thumb-background-focus-hover:           var(--theme-gray-16);
   --form-range-thumb-background-active:                var(--theme-style-text);
