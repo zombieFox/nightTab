@@ -661,7 +661,9 @@ var link = (function() {
       // group existing
       var groupExistingRadioWrap = helper.node("div|class:input-wrap");
       var groupExistingRadio = helper.node("input|class:link-form-input-group-existing,id:link-form-input-group-existing,type:radio,name:link-form-input-group,tabindex:1,checked,value:existing");
-      var groupExistingLable = helper.node("label:Existing group|for:link-form-input-group-existing");
+      var groupExistingLable = helper.node("label|for:link-form-input-group-existing");
+      var groupExistingLableText = helper.node("span:Existing group");
+      var groupExistingLableIcon = helper.node("span|class:label-icon");
       var groupExistingFormIndent = helper.node("div|class:form-indent");
       var groupExistingGroupInputWrap = helper.node("div|class:input-wrap");
       var groupExistingGroup = helper.node("select|id:link-form-select-group,class:link-form-select-group mb-0,tabindex:1");
@@ -672,7 +674,9 @@ var link = (function() {
       // group new
       var groupNewRadioWrap = helper.node("div|class:input-wrap");
       var groupNewRadio = helper.node("input|class:link-form-input-group-new,id:link-form-input-group-new,type:radio,name:link-form-input-group,tabindex:1,value:new");
-      var groupNewLable = helper.node("label:New group|for:link-form-input-group-new");
+      var groupNewLable = helper.node("label|for:link-form-input-group-new");
+      var groupNewLableLableText = helper.node("span:New group");
+      var groupNewLableLableIcon = helper.node("span|class:label-icon");
       var groupNewFormIndent = helper.node("div|class:form-indent");
       var groupNewInputWrap = helper.node("div|class:input-wrap");
       var groupNewInput = helper.node("input|type:text,class:link-form-input-new-group mb-0,id:link-form-input-new-group,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
@@ -680,7 +684,9 @@ var link = (function() {
       // letter
       var displayLetterRadioWrap = helper.node("div|class:input-wrap");
       var displayLetterRadio = helper.node("input|class:link-form-input-display-letter,id:link-form-input-display-letter,type:radio,name:link-form-input-display,tabindex:1,checked,value:letter");
-      var displayLetterLable = helper.node("label:Letters|for:link-form-input-display-letter");
+      var displayLetterLable = helper.node("label|for:link-form-input-display-letter");
+      var displayLetterLableText = helper.node("span:Letters");
+      var displayLetterLableIcon = helper.node("span|class:label-icon");
       var displayLetterFormIndent = helper.node("div|class:form-indent");
       var displayLetterInputWrap = helper.node("div|class:input-wrap");
       var displayLetterInput = helper.node("input|type:text,class:link-form-input-letter mb-0,id:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
@@ -688,7 +694,9 @@ var link = (function() {
       // icon
       var displayIconRadiotWrap = helper.node("div|class:input-wrap");
       var displayIconRadio = helper.node("input|class:link-form-input-display-icon,id:link-form-input-display-icon,type:radio,name:link-form-input-display,tabindex:1,value:icon");
-      var displayIconLable = helper.node("label:Icon|for:link-form-input-display-icon");
+      var displayIconLable = helper.node("label|for:link-form-input-display-icon");
+      var displayIconLableText = helper.node("span:Icon");
+      var displayIconLableIcon = helper.node("span|class:label-icon");
       var displayIconFormIndent = helper.node("div|class:form-indent");
       var displayIconInputWrap = helper.node("div|class:input-wrap");
       var displayIconFormGroup = helper.node("div|class:form-group form-group-block mb-0 auto-suggest-wrapper");
@@ -720,10 +728,14 @@ var link = (function() {
       var accentLabel = helper.node("label:Accent colour");
       var accentGlobalRadioWrap = helper.node("div|class:input-wrap");
       var accentGlobalRadio = helper.node("input|class:link-form-input-accent-global,id:link-form-input-accent-global,type:radio,name:link-form-input-accent,tabindex:1,checked,value:global");
-      var accentGlobalLabel = helper.node("label:Global|for:link-form-input-accent-global");
+      var accentGlobalLabel = helper.node("label|for:link-form-input-accent-global");
+      var accentGlobalLabelText = helper.node("span:Global");
+      var accentGlobalLabelIcon = helper.node("span|class:label-icon");
       var accentCustomInputWrap = helper.node("div|class:input-wrap");
       var accentCustomRadio = helper.node("input|class:link-form-input-accent-custom,id:link-form-input-accent-custom,type:radio,name:link-form-input-accent,tabindex:1,value:custom");
-      var accentCustomLabel = helper.node("label:Custom|for:link-form-input-accent-custom");
+      var accentCustomLabel = helper.node("label|for:link-form-input-accent-custom");
+      var accentCustomLabelText = helper.node("span:Custom");
+      var accentCustomLabelIcon = helper.node("span|class:label-icon");
       var accentColorFormIndent = helper.node("div|class:form-indent");
       var accentColorInputWrap = helper.node("div|class:input-wrap");
       var accentColorFormGroup = helper.node("div|class:form-group form-group-block mb-0");
@@ -732,6 +744,8 @@ var link = (function() {
       var accentColorInputHelper = helper.node("p:Use this colour to override the global Accent colour.|class:link-form-input-accent-helper form-helper small muted disabled");
 
       groupExistingRadioWrap.appendChild(groupExistingRadio);
+      groupExistingLable.appendChild(groupExistingLableIcon);
+      groupExistingLable.appendChild(groupExistingLableText);
       groupExistingRadioWrap.appendChild(groupExistingLable);
       groupExistingGroupInputWrap.appendChild(groupExistingGroup);
       groupExistingPositionInputWrap.appendChild(groupExistingPositionLabel);
@@ -742,6 +756,8 @@ var link = (function() {
       fieldset.appendChild(groupExistingFormIndent);
 
       groupNewRadioWrap.appendChild(groupNewRadio);
+      groupNewLable.appendChild(groupNewLableLableIcon);
+      groupNewLable.appendChild(groupNewLableLableText);
       groupNewRadioWrap.appendChild(groupNewLable);
       groupNewInputWrap.appendChild(groupNewInput);
       groupNewFormIndent.appendChild(groupNewInputWrap);
@@ -750,12 +766,16 @@ var link = (function() {
       fieldset.appendChild(helper.node("hr"));
 
       displayLetterRadioWrap.appendChild(displayLetterRadio);
+      displayLetterLable.appendChild(displayLetterLableIcon);
+      displayLetterLable.appendChild(displayLetterLableText);
       displayLetterRadioWrap.appendChild(displayLetterLable);
       fieldset.appendChild(displayLetterRadioWrap);
       displayLetterInputWrap.appendChild(displayLetterInput);
       displayLetterFormIndent.appendChild(displayLetterInputWrap);
       fieldset.appendChild(displayLetterFormIndent);
       displayIconRadiotWrap.appendChild(displayIconRadio);
+      displayIconLable.appendChild(displayIconLableIcon);
+      displayIconLable.appendChild(displayIconLableText);
       displayIconRadiotWrap.appendChild(displayIconLable);
       fieldset.appendChild(displayIconRadiotWrap);
       displayIconFormGroupClear.appendChild(displayIconFormGroupClearIcon);
@@ -777,9 +797,13 @@ var link = (function() {
       fieldset.appendChild(helper.node("hr"));
       fieldset.appendChild(accentLabel);
       accentGlobalRadioWrap.appendChild(accentGlobalRadio);
+      accentGlobalLabel.appendChild(accentGlobalLabelIcon);
+      accentGlobalLabel.appendChild(accentGlobalLabelText);
       accentGlobalRadioWrap.appendChild(accentGlobalLabel);
       fieldset.appendChild(accentGlobalRadioWrap);
       accentCustomInputWrap.appendChild(accentCustomRadio);
+      accentCustomLabel.appendChild(accentCustomLabelIcon);
+      accentCustomLabel.appendChild(accentCustomLabelText);
       accentCustomInputWrap.appendChild(accentCustomLabel);
       fieldset.appendChild(accentCustomInputWrap);
       accentColorFormGroup.appendChild(accentColorPicker);

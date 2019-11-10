@@ -329,6 +329,10 @@
   flex-grow: 1;
 }
 
+.link-control-item:after {
+  content: none;
+}
+
 .is-link-style-list .link-control-item {
   flex-basis: inherit;
 }

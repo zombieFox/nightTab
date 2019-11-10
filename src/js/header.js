@@ -141,8 +141,8 @@ var header = (function() {
         },
         clear: function() {
           helper.addClass(helper.getClosest(helper.e(".control-link-edit"), ".input-wrap"), "input-button-link");
+          helper.addClass(helper.e(".control-add-toggle"), "button-link");
           helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-button-link");
-          helper.addClass(helper.e(".control-link-add"), "button-link");
           helper.addClass(helper.e(".control-menu-open"), "button-link");
         }
       };

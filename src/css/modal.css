@@ -68,11 +68,14 @@
 
 .modal-button {
   background-color: transparent;
-  border-color: transparent;
   margin: 0;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   flex-basis: 50%;
+}
+
+.modal-button:after {
+  background-color: transparent;
 }
 
 .modal-controls .modal-button:first-child {

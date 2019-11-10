@@ -96,14 +96,19 @@
 
 .menu-nav-button {
   background-color: transparent;
-  border-bottom-color: transparent;
-  border-radius: 0;
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
+  border-radius: 0;
   height: 3.25em;
   line-height: 1;
   flex-grow: 1;
+}
+
+.menu-nav-button:after,
+.menu-nav-button:after {
+  background-color: transparent;
+  border-radius: 0;
 }
 
 .menu-nav-area-tab .menu-nav-button:first-child {
@@ -190,7 +195,7 @@
 
 @media (min-width: 1100px) {
   .menu-nav-area-tab .menu-nav-button {
-    flex-basis: 0;
+    flex-basis: auto;
     max-width: inherit;
   }
 }

@@ -4,7 +4,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   background-color: rgb(var(--button-background));
-  padding: 0.125em 1em;
+  padding: 0.25em 1em;
   margin: 0 0 1em 0;
   color: rgb(var(--button-text));
   font-size: 1em;
@@ -12,36 +12,30 @@ input[type="submit"] {
   min-height: 2.5em;
   line-height: 1;
   border: 0;
-  border-top-width: var(--layout-line-width);
-  border-bottom-width: var(--layout-line-width);
-  border-top-color: transparent;
-  border-bottom-color: rgb(var(--button-border));
-  border-style: solid;
   border-radius: var(--theme-radius);
+  position: relative;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
-  box-shadow: none;
-  transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), border var(--layout-timing-extra-fast);
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast);
 }
 
-button:hover,
 button:focus,
-.button:hover,
+button:hover,
 .button:focus,
-input[type="button"]:hover,
+.button:hover,
 input[type="button"]:focus,
-input[type="reset"]:hover,
+input[type="button"]:hover,
 input[type="reset"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover {
   background-color: rgb(var(--button-background-focus-hover));
-  border-bottom-color: rgb(var(--button-border-focus-hover));
   color: rgb(var(--button-text-focus-hover));
   outline: none;
   text-decoration: none;
@@ -53,25 +47,75 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   background-color: rgb(var(--button-background-active));
-  border-bottom-color: rgb(var(--button-border-active));
   color: rgb(var(--button-text-active));
-  transition: none;
+  outline: none;
   text-decoration: none;
+  transition: none;
 }
 
 button:disabled,
-.button:disabled,
 button:disabled:hover,
-.button:disabled:hover,
 button:disabled:focus,
-.button:disabled:focus,
 button:disabled:active,
+.button:disabled,
+.button:disabled:hover,
+.button:disabled:focus,
 .button:disabled:active {
   background-color: rgb(var(--button-background-disabled));
-  border-bottom-color: rgb(var(--button-border-disabled));
   color: rgb(var(--button-text-disabled));
   cursor: default;
   text-decoration: none;
+}
+
+button:after,
+.button:after,
+input[type="button"]:after,
+input[type="reset"]:after,
+input[type="submit"]:after {
+  content: "";
+  background: rgb(var(--button-border));
+  border-radius: var(--theme-radius);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 calc(100% - var(--layout-line-width)), 100% calc(100% - var(--layout-line-width)), 100% 100%, 0% 100%);
+  transition: background-color var(--layout-timing-extra-fast);
+  pointer-events: none;
+}
+
+button:focus:after,
+button:hover:after,
+.button:focus:after,
+.button:hover:after,
+input[type="button"]:focus:after,
+input[type="button"]:hover:after,
+input[type="reset"]:focus:after,
+input[type="reset"]:hover:after,
+input[type="submit"]:focus:after,
+input[type="submit"]:hover:after {
+  background-color: rgb(var(--button-border-focus-hover));
+}
+
+button:active:after,
+.button:active:after,
+input[type="button"]:active:after,
+input[type="reset"]:active:after,
+input[type="submit"]:active:after {
+  background-color: rgb(var(--button-border-active));
+  transition: none;
+}
+
+button:disabled:after,
+.button:disabled:after,
+button:disabled:hover:after,
+.button:disabled:hover:after,
+button:disabled:focus:after,
+.button:disabled:focus:after,
+button:disabled:active:after,
+.button:disabled:active:after {
+  background-color: rgb(var(--button-border-disabled));
 }
 
 .button-text {
@@ -87,8 +131,11 @@ button [class*=" icon-"],
 }
 
 .button.active {
-  border-bottom-color: rgb(var(--theme-accent));
   color: rgb(var(--button-text-focus-active));
+}
+
+.button.active:after {
+  background-color: rgb(var(--theme-accent));
 }
 
 .button-small {
@@ -132,6 +179,10 @@ button [class*=" button-"]:last-child,
   color: rgb(var(--button-link-text));
 }
 
+.button-link:after {
+  content: none;
+}
+
 .button-link:hover,
 .button-link:focus {
   background-color: transparent;
@@ -159,4 +210,10 @@ button [class*=" button-"]:last-child,
   padding: 0.5em 0;
   position: relative;
   width: 100%;
+  display: block;
+}
+
+.button-wrap-inline {
+  width: initial;
+  display: inline-block;
 }
