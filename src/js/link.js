@@ -429,7 +429,7 @@ var link = (function() {
       var groupFormPositionLabel = helper.node("label:Position|for:group-form-position");
       var groupFormPositionSelect = helper.node("select|id:group-form-position,class:group-form-position mb-0,tabindex:1");
       var groupFormRandomNameButtonWrap = helper.node("div|class:button-wrap");
-      var groupFormRandomNameButton = helper.node("button:Random Group Name|class:button mb-0,type:button,tabindex:1");
+      var groupFormRandomNameButton = helper.node("button:Random Group name|class:button mb-0,type:button,tabindex:1");
 
       // group name
       var groupFormNameInputWrap = helper.node("div|class:input-wrap");
@@ -671,7 +671,7 @@ var link = (function() {
       var groupExistingRadioWrap = helper.node("div|class:input-wrap");
       var groupExistingRadio = helper.node("input|class:link-form-input-group-existing,id:link-form-input-group-existing,type:radio,name:link-form-input-group,tabindex:1,checked,value:existing");
       var groupExistingLable = helper.node("label|for:link-form-input-group-existing");
-      var groupExistingLableText = helper.node("span:Existing group");
+      var groupExistingLableText = helper.node("span:Existing Group");
       var groupExistingLableIcon = helper.node("span|class:label-icon");
       var groupExistingFormIndent = helper.node("div|class:form-indent");
       var groupExistingGroupInputWrap = helper.node("div|class:input-wrap");
@@ -684,13 +684,13 @@ var link = (function() {
       var groupNewRadioWrap = helper.node("div|class:input-wrap");
       var groupNewRadio = helper.node("input|class:link-form-input-group-new,id:link-form-input-group-new,type:radio,name:link-form-input-group,tabindex:1,value:new");
       var groupNewLable = helper.node("label|for:link-form-input-group-new");
-      var groupNewLableLableText = helper.node("span:New group");
+      var groupNewLableLableText = helper.node("span:New Group");
       var groupNewLableLableIcon = helper.node("span|class:label-icon");
       var groupNewFormIndent = helper.node("div|class:form-indent");
       var groupNewInputWrap = helper.node("div|class:input-wrap");
       var groupNewInput = helper.node("input|type:text,class:link-form-input-new-group mb-0,id:link-form-input-new-group,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
       var groupNewRandomNameButtonWrap = helper.node("div|class:button-wrap");
-      var groupNewRandomNameButton = helper.node("button:Random Group Name|class:button mb-0,type:button,tabindex:1,disabled");
+      var groupNewRandomNameButton = helper.node("button:Random Group name|class:button mb-0,type:button,tabindex:1,disabled");
 
       // letter
       var displayLetterRadioWrap = helper.node("div|class:input-wrap");
@@ -752,7 +752,7 @@ var link = (function() {
       var accentColorFormGroup = helper.node("div|class:form-group form-group-block mb-0");
       var accentColorPicker = helper.node("input|id:link-form-input-accent-picker,class:form-group-item-half link-form-input-accent-picker mb-0,type:color,value:#000000,tabindex:1,disabled");
       var accentColorHex = helper.node("input|id:link-form-input-accent-hex,class:form-group-item-half link-form-input-accent-hex mb-0,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
-      var accentColorInputHelper = helper.node("p:Use this colour to override the global Accent colour.|class:link-form-input-accent-helper form-helper small muted disabled");
+      var accentColorInputHelper = helper.node("p:Use this colour to override the global accent colour.|class:link-form-input-accent-helper form-helper small muted disabled");
 
       groupExistingRadioWrap.appendChild(groupExistingRadio);
       groupExistingLable.appendChild(groupExistingLableIcon);
@@ -1150,7 +1150,7 @@ var link = (function() {
     },
     item: function() {
       var linkEmpty = helper.node("div|class:link-empty");
-      var para1 = helper.node("p:Empty group");
+      var para1 = helper.node("p:Empty Group");
       var buttonWrap = helper.node("div|class:button-wrap mb-0");
       var addButton = helper.node("button:Add a Bookmark|class:button mb-0,type:button,tabindex:1");
       buttonWrap.appendChild(addButton);
@@ -1348,7 +1348,7 @@ var link = (function() {
           pagelock.unlock();
         };
         modal.open({
-          heading: "Add a new bookmark",
+          heading: "Add a new Bookmark",
           successAction: successAction,
           cancelAction: cancelAction,
           actionText: "Add",
@@ -1395,7 +1395,7 @@ var link = (function() {
           pagelock.unlock();
         };
         modal.open({
-          heading: "Add a new group",
+          heading: "Add a new Group",
           successAction: successAction,
           cancelAction: cancelAction,
           actionText: "Add",
@@ -1521,7 +1521,7 @@ var link = (function() {
       stagedLink.position = JSON.parse(JSON.stringify(copyStagedLink.position));
       var heading;
       if (stagedLink.link.name != null && stagedLink.link.name != "") {
-        heading = "Remove " + stagedLink.link.name + " bookmark";
+        heading = "Remove " + stagedLink.link.name;
       } else {
         heading = "Remove unnamed bookmark";
       };
@@ -1567,7 +1567,7 @@ var link = (function() {
       stagedGroup.position = JSON.parse(JSON.stringify(copyStagedGroup.position));
       var heading;
       if (stagedGroup.group.name != null && stagedGroup.group.name != "") {
-        heading = "Remove " + stagedGroup.group.name + " group";
+        heading = "Remove " + stagedGroup.group.name;
       } else {
         heading = "Remove unnamed group";
       };
