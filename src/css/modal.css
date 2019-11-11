@@ -78,10 +78,12 @@
   background-color: transparent;
 }
 
-.modal-controls .modal-button:first-child {
+.modal-controls .modal-button:first-child,
+.modal-controls .modal-button:first-child:after {
   border-radius: 0 0 0 var(--theme-radius);
 }
 
-.modal-controls .modal-button:last-child {
+.modal-controls .modal-button:last-child,
+.modal-controls .modal-button:last-child:after {
   border-radius: 0 0 var(--theme-radius) 0
 }
