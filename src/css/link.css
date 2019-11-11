@@ -88,7 +88,7 @@
   z-index: 3;
   overflow: hidden;
   user-select: none;
-  transition: background-color var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
 }
 
 .is-link-orientation-top .link-panel-front {
@@ -231,6 +231,20 @@
   height: calc(100% - var(--link-item-url-height));
 }
 
+.is-link-orientation-top.is-link-item-url-show .link-item:focus .link-panel-front,
+.is-link-orientation-top.is-link-item-url-show .link-item:focus-within .link-panel-front,
+.is-link-orientation-top.is-link-item-url-show .link-item:hover .link-panel-front {
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+}
+
+.is-link-orientation-bottom.is-link-item-url-show .link-item:focus .link-panel-front,
+.is-link-orientation-bottom.is-link-item-url-show .link-item:focus-within .link-panel-front,
+.is-link-orientation-bottom.is-link-item-url-show .link-item:hover .link-panel-front {
+  border-bottom-left-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+}
+
 .link-panel-back {
   background-color: rgb(var(--theme-accent));
   border-radius: var(--theme-radius);
@@ -243,7 +257,7 @@
   align-items: stretch;
   justify-content: flex-end;
   z-index: 2;
-  transition: height var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast), clip-path var(--layout-timing-extra-fast);
+  transition: height var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast), clip-path var(--layout-timing-extra-fast);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -599,6 +613,20 @@
 .is-link-edit .link-item:hover .link-panel-front,
 .is-link-edit .link-item:focus .link-panel-front {
   height: calc(100% - var(--link-item-edit-height));
+}
+
+.is-link-orientation-top.is-link-edit .link-panel-front,
+.is-link-orientation-top.is-link-edit .link-item:hover .link-panel-front,
+.is-link-orientation-top.is-link-edit .link-item:focus .link-panel-front {
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+}
+
+.is-link-orientation-bottom.is-link-edit .link-panel-front,
+.is-link-orientation-bottom.is-link-edit .link-item:hover .link-panel-front,
+.is-link-orientation-bottom.is-link-edit .link-item:focus .link-panel-front {
+  border-bottom-left-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
 }
 
 .is-link-item-shadow-show.is-link-edit .link-panel-front,
