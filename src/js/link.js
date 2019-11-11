@@ -487,7 +487,9 @@ var link = (function() {
         stagedGroup.group.name = this.value;
       }, false);
       groupFormRandomNameButton.addEventListener("click", function(event) {
-        var randomName = helper.randomString();
+        var randomName = helper.randomString({
+          mix: true
+        });
         stagedGroup.group.name = randomName;
         groupFormInputName.value = randomName;
       }, false);
@@ -957,7 +959,9 @@ var link = (function() {
         stagedLink.position.group.name = this.value;
       }, false);
       groupNewRandomNameButton.addEventListener("click", function(event) {
-        var randomName = helper.randomString();
+        var randomName = helper.randomString({
+          mix: true
+        });
         stagedLink.position.group.name = randomName;
         groupNewInput.value = randomName;
       }, false);
