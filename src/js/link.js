@@ -1135,20 +1135,30 @@ var link = (function() {
       var group = helper.node("div|class:group");
       var groupBody = helper.node("div|class:group-body");
       var linkEmpty = helper.node("div|class:link-empty");
-      var para1 = helper.node("p:No groups or bookmarks");
-      var para2 = helper.node("p:Why not add a one?|class:small muted");
+      var para1 = helper.node("p:No Groups or Bookmarks");
+      var buttonWrap = helper.node("div|class:button-wrap mb-0");
+      var addButton = helper.node("button:Add a Bookmark|class:button mb-0,type:button,tabindex:1");
+      buttonWrap.appendChild(addButton);
       linkEmpty.appendChild(para1);
-      linkEmpty.appendChild(para2);
+      linkEmpty.appendChild(buttonWrap);
       groupBody.appendChild(linkEmpty);
       group.appendChild(groupBody);
+      addButton.addEventListener("click", function(event) {
+        link.add.item.open();
+      }, false);
       return group;
     },
     item: function() {
       var linkEmpty = helper.node("div|class:link-empty");
       var para1 = helper.node("p:Empty group");
-      var para2 = helper.node("p:Why not add a bookmark?|class:small muted");
+      var buttonWrap = helper.node("div|class:button-wrap mb-0");
+      var addButton = helper.node("button:Add a Bookmark|class:button mb-0,type:button,tabindex:1");
+      buttonWrap.appendChild(addButton);
       linkEmpty.appendChild(para1);
-      linkEmpty.appendChild(para2);
+      linkEmpty.appendChild(buttonWrap);
+      addButton.addEventListener("click", function(event) {
+        link.add.item.open();
+      }, false);
       return linkEmpty;
     },
     search: function() {
