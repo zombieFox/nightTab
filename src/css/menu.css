@@ -36,10 +36,6 @@
   transition: background-color var(--layout-timing-extra-fast), opacity var(--layout-timing-extra-fast);
 }
 
-.is-edge .menu-area {
-  opacity: 0.8;
-}
-
 .menu-nav {
   display: flex;
   flex-direction: row;
