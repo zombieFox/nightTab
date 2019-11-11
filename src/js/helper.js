@@ -1335,6 +1335,7 @@ var helper = (function() {
       "Zealous",
       "Zesty",
       "Zippy",
+      "Zombiesque",
       "Zonked"
     ];
     return adjectives[Math.floor(Math.random() * adjectives.length)] + " " + animals[Math.floor(Math.random() * animals.length)];
