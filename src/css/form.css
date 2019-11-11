@@ -92,7 +92,7 @@ textarea {
   margin: 0 0 1em 0;
   color: rgb(var(--form-input-text));
   font-size: 1em;
-  line-height: 1.8;
+  line-height: 1.6;
   font-family: var(--font-regular);
   height: 10em;
   min-height: 2.5em;
