@@ -53,12 +53,12 @@ var data = (function() {
 
   mod.restore = function(data) {
     if (data) {
-      if (!("version" in data) || data.version != version.get()) {
+      if (!("version" in data) || data.version != version.get().number) {
         console.log("data version " + data.version + " found less than current");
         data = update.run(data);
         mod.set(_saveName, JSON.stringify(data));
       } else {
-        console.log("data version " + version.get() + " no need to run update");
+        console.log("data version " + version.get().number + " no need to run update");
         mod.set(_saveName, JSON.stringify(data));
       };
     } else {
@@ -233,7 +233,7 @@ var data = (function() {
   var save = function() {
     mod.set(_saveName, JSON.stringify({
       nighttab: true,
-      version: version.get(),
+      version: version.get().number,
       state: state.get(),
       bookmarks: bookmarks.get()
     }));

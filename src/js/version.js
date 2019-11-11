@@ -2,6 +2,8 @@ var version = (function() {
 
   var current = "4.0.0";
 
+  var name = "Enchanting Aardvark";
+
   var compare = function(a, b) {
     var pa = a.split(".");
     var pb = b.split(".");
@@ -26,11 +28,15 @@ var version = (function() {
 
   var get = function() {
     // return chrome.runtime.getManifest().version;
-    return current;
+    return {
+      number: current,
+      name: name
+    };
   };
 
   var render = function() {
-    helper.e(".display-version").textContent = get();
+    helper.e(".display-version").textContent = get().number;
+    helper.e(".display-name").textContent = get().name;
   };
 
   var init = function() {
