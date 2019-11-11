@@ -33,6 +33,7 @@ select {
   color: rgb(var(--form-label));
   font-size: 1em;
   font-family: var(--font-regular);
+  line-height: 2;
   min-height: 2.5em;
   min-width: 0;
   width: 100%;
@@ -172,7 +173,7 @@ input[type="text"] {
   color: rgb(var(--form-input-text));
   font-size: 1em;
   font-family: var(--font-regular);
-  line-height: 2.5em;
+  line-height: 1.6em;
   height: 2.5em;
   min-width: 0;
   width: 100%;
