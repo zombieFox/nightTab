@@ -428,6 +428,8 @@ var link = (function() {
       var groupFormPositionInputWrap = helper.node("div|class:input-wrap");
       var groupFormPositionLabel = helper.node("label:Position|for:group-form-position");
       var groupFormPositionSelect = helper.node("select|id:group-form-position,class:group-form-position mb-0,tabindex:1");
+      var groupFormRandomNameButtonWrap = helper.node("div|class:button-wrap");
+      var groupFormRandomNameButton = helper.node("button:Random Group Name|class:button mb-0,type:button,tabindex:1");
 
       // group name
       var groupFormNameInputWrap = helper.node("div|class:input-wrap");
@@ -436,9 +438,11 @@ var link = (function() {
 
       groupFormPositionInputWrap.appendChild(groupFormPositionLabel);
       groupFormPositionInputWrap.appendChild(groupFormPositionSelect);
+      groupFormRandomNameButtonWrap.appendChild(groupFormRandomNameButton);
       groupFormNameInputWrap.appendChild(groupFormInputLabel);
       groupFormNameInputWrap.appendChild(groupFormInputName);
       fieldset.appendChild(groupFormNameInputWrap);
+      fieldset.appendChild(groupFormRandomNameButtonWrap);
       fieldset.appendChild(groupFormPositionInputWrap);
       form.appendChild(fieldset);
 
@@ -481,6 +485,11 @@ var link = (function() {
       }, false);
       groupFormInputName.addEventListener("input", function(event) {
         stagedGroup.group.name = this.value;
+      }, false);
+      groupFormRandomNameButton.addEventListener("click", function(event) {
+        var randomName = helper.randomString();
+        stagedGroup.group.name = randomName;
+        groupFormInputName.value = randomName;
       }, false);
 
       return form;
@@ -680,6 +689,8 @@ var link = (function() {
       var groupNewFormIndent = helper.node("div|class:form-indent");
       var groupNewInputWrap = helper.node("div|class:input-wrap");
       var groupNewInput = helper.node("input|type:text,class:link-form-input-new-group mb-0,id:link-form-input-new-group,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
+      var groupNewRandomNameButtonWrap = helper.node("div|class:button-wrap");
+      var groupNewRandomNameButton = helper.node("button:Random Group Name|class:button mb-0,type:button,tabindex:1,disabled");
 
       // letter
       var displayLetterRadioWrap = helper.node("div|class:input-wrap");
@@ -760,7 +771,9 @@ var link = (function() {
       groupNewLable.appendChild(groupNewLableLableText);
       groupNewRadioWrap.appendChild(groupNewLable);
       groupNewInputWrap.appendChild(groupNewInput);
+      groupNewRandomNameButtonWrap.appendChild(groupNewRandomNameButton);
       groupNewFormIndent.appendChild(groupNewInputWrap);
+      groupNewFormIndent.appendChild(groupNewRandomNameButtonWrap);
       fieldset.appendChild(groupNewRadioWrap);
       fieldset.appendChild(groupNewFormIndent);
       fieldset.appendChild(helper.node("hr"));
@@ -826,6 +839,7 @@ var link = (function() {
           helper.addClass(groupExistingPositionLabel, "disabled");
           groupExistingPosition.setAttribute("disabled", "");
           groupNewInput.removeAttribute("disabled");
+          groupNewRandomNameButton.removeAttribute("disabled");
           stagedLink.position.group.new = true;
         };
       };
@@ -920,6 +934,7 @@ var link = (function() {
         groupExistingPosition.removeAttribute("disabled");
         helper.removeClass(groupExistingPositionLabel, "disabled");
         groupNewInput.setAttribute("disabled", "");
+        groupNewRandomNameButton.setAttribute("disabled", "");
       }, false);
       groupExistingGroup.addEventListener("change", function(event) {
         stagedLink.position.destination.group = this.selectedIndex;
@@ -936,9 +951,15 @@ var link = (function() {
         groupExistingPosition.setAttribute("disabled", "");
         helper.addClass(groupExistingPositionLabel, "disabled");
         groupNewInput.removeAttribute("disabled");
+        groupNewRandomNameButton.removeAttribute("disabled");
       }, false);
       groupNewInput.addEventListener("input", function(event) {
         stagedLink.position.group.name = this.value;
+      }, false);
+      groupNewRandomNameButton.addEventListener("click", function(event) {
+        var randomName = helper.randomString();
+        stagedLink.position.group.name = randomName;
+        groupNewInput.value = randomName;
       }, false);
       displayLetterRadio.addEventListener("change", function(event) {
         stagedLink.link.display = this.value;
