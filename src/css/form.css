@@ -984,9 +984,9 @@ input[type="range"]:disabled::-moz-range-progress {
   margin: 0;
   position: absolute;
   top: 50%;
-  right: 0.5em;
-  width: 1em;
-  height: 1em;
+  right: 1em;
+  width: calc(var(--form-thumb-size) * 0.8);
+  height: calc(var(--form-thumb-size) * 0.8);
   z-index: 1;
   border-radius: 50%;
   transform: translateY(-50%);
@@ -1010,7 +1010,7 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .input-color-dot input[type="color"]+label {
-  padding-right: 2.25em;
+  padding-right: calc(calc(var(--form-thumb-size) * 0.8) + 2em);
   position: relative;
 }
 
