@@ -1550,7 +1550,7 @@ var link = (function() {
       };
       modal.open({
         heading: heading,
-        content: "Are you sure you want to remove this bookmark? This can not be undone.",
+        content: "Are you sure you want to remove this Bookmark? This can not be undone.",
         successAction: successAction,
         cancelAction: cancelAction,
         actionText: "Remove",
@@ -1596,7 +1596,7 @@ var link = (function() {
       };
       modal.open({
         heading: heading,
-        content: "Are you sure you want to remove this group and all the bookmarks within? This can not be undone.",
+        content: "Are you sure you want to remove this Group and all the Bookmarks within? This can not be undone.",
         successAction: successAction,
         cancelAction: cancelAction,
         actionText: "Remove",
