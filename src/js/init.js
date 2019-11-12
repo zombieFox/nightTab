@@ -1,5 +1,5 @@
 // log version
-console.log("nightTab version", version.get().number, "(" + version.get().name + ")");
+console.log("nightTab version", version.get().number, version.get().name);
 data.init();
 state.init();
 bookmarks.init();

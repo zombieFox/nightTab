@@ -25,15 +25,14 @@
 }
 
 .menu-area {
-  background-color: rgba(var(--theme-gray-01), 0.95);
+  background-color: rgb(var(--theme-gray-01));
   border-radius: var(--theme-radius);
   box-shadow: var(--layout-shadow-large);
   width: 100%;
   max-height: 100%;
   overflow-y: auto;
   pointer-events: all;
-  opacity: 1;
-  transition: background-color var(--layout-timing-extra-fast), opacity var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-timing-extra-fast);
 }
 
 .menu-nav {
