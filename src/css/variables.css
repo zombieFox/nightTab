@@ -105,9 +105,10 @@
   --form-icon:                                         var(--theme-gray-08);
   --form-icon-focus-hover:                             var(--theme-gray-18);
   --form-icon-active:                                  var(--theme-style-text);
-  --form-icon-disabled:                                var(--theme-gray-04);
   --form-icon-checked:                                 var(--theme-style-text);
-  --form-icon-symbol:                                  var(--theme-gray-02);
+  --form-icon-disabled:                                var(--theme-gray-04);
+  --form-icon-symbol:                                  var(--theme-gray-01);
+  --form-icon-symbol-active:                           var(--theme-gray-01);
   --form-icon-symbol-disabled:                         var(--theme-gray-01);
   --form-placeholder:                                  var(--theme-gray-06);
   --form-placeholder-focus-hover:                      var(--theme-gray-10);
