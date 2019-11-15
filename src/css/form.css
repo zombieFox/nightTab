@@ -439,7 +439,7 @@ input[type="radio"]+label .label-icon:after {
   transform: scale(0.7);
   transform-origin: center;
   z-index: 3;
-  transition: background-color var(--layout-timing-extra-fast), border-radius  var(--layout-timing-extra-fast), transform var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast), transform var(--layout-timing-extra-fast);
   /* transition: background-color var(--layout-timing-extra-fast), transform var(--layout-timing-extra-fast), clip-path var(--layout-timing-extra-fast); */
 }
 
@@ -503,6 +503,7 @@ input[type="color"] {
   padding: 0;
   margin: 0 0 1em 0;
   width: 100%;
+  min-width: 3em;
   height: 2.5em;
   display: block;
   border: 0;
@@ -1012,6 +1013,7 @@ input[type="range"]:disabled::-moz-range-progress {
   right: 1em;
   width: calc(var(--form-thumb-size) * 0.8);
   height: calc(var(--form-thumb-size) * 0.8);
+  min-width: inherit;
   z-index: 1;
   border-radius: 50%;
   transform: translateY(-50%);
@@ -1135,76 +1137,6 @@ input[type="range"]:disabled::-moz-range-progress {
   transform: translate(-50%, -50%);
 }
 
-/* .form-grid input[type="checkbox"]+label:before,
-.form-grid input[type="radio"]+label:before {
-  content: "";
-  background-color: rgb(var(--form-grid-input-background));
-  margin: 0;
-  font-size: 1em;
-  display: block;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(var(--form-thumb-size) / 2);
-  height: calc(var(--form-thumb-size) / 2);
-  transform: scale(1) translate(-50%, -50%);
-  transition: background-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), width var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast), left var(--layout-timing-extra-fast);
-}
-
-.form-grid input[type="checkbox"]:focus+label:before,
-.form-grid input[type="checkbox"]:hover+label:before,
-.form-grid input[type="radio"]:focus+label:before,
-.form-grid input[type="radio"]:hover+label:before {
-  background-color: rgb(var(--form-grid-input-background-focus-hover));
-  box-shadow: var(--form-hover-ring);
-  transform: scale(1) translate(-50%, -50%);
-}
-
-.form-grid input[type="checkbox"]:active+label:before,
-.form-grid input[type="radio"]:active+label:before {
-  background-color: rgb(var(--form-grid-input-background-active));
-  width: var(--form-thumb-size);
-  height: var(--form-thumb-size);
-  box-shadow: var(--form-focus-ring-accent);
-  transform: scale(1) translate(-50%, -50%);
-}
-
-.form-grid input[type="checkbox"]:checked+label:before,
-.form-grid input[type="radio"]:checked+label:before {
-  background-color: rgb(var(--form-grid-input-background-checked));
-  width: var(--form-thumb-size);
-  height: var(--form-thumb-size);
-  transform: scale(1) translate(-50%, -50%);
-}
-
-.form-grid input[type="checkbox"]:checked:active+label:before,
-.form-grid input[type="radio"]:checked:active+label:before {
-  background-color: rgb(var(--form-grid-input-background-active));
-  transform: scale(1) translate(-50%, -50%);
-}
-
-.form-grid input[type="checkbox"]:disabled+label:before,
-.form-grid input[type="checkbox"]:disabled:focus+label:before,
-.form-grid input[type="checkbox"]:disabled:hover+label:before,
-.form-grid input[type="checkbox"]:disabled:active+label:before,
-.form-grid input[type="radio"]:disabled+label:before,
-.form-grid input[type="radio"]:disabled:focus+label:before,
-.form-grid input[type="radio"]:disabled:hover+label:before,
-.form-grid input[type="radio"]:disabled:active+label:before {
-  background-color: rgb(var(--form-grid-input-background-disabled));
-  width: calc(var(--form-thumb-size) / 2);
-  height: calc(var(--form-thumb-size) / 2);
-  box-shadow: none;
-}
-
-.form-grid input[type="checkbox"]:disabled:checked+label:before,
-.form-grid input[type="radio"]:disabled:checked+label:before {
-  background-color: rgb(var(--form-grid-input-background-disabled));
-  width: var(--form-thumb-size);
-  height: var(--form-thumb-size);
-  box-shadow: none;
-} */
 .form-indent {
   margin-left: 2.25em;
 }

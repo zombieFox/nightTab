@@ -49,6 +49,10 @@
       <button class="button mb-0 style-guide-control theme-light" tabindex="1">Light</button>
     </div>
     <div class="input-wrap">
+      <label for="style-guide-control-theme-color">Accent Colour</label>
+      <input id="style-guide-control-theme-color" class="style-guide-control theme-color" class="form-group-item-half mb-0" type="color" value="#fa8200" tabindex="1">
+    </div>
+    <div class="input-wrap">
       <label for="radius" class="style-guide-control">Radius</label>
       <input id="radius" class="style-guide-control radius" type="range" min="0" max="600" value="0" step="1" tabindex="1">
     </div>
@@ -128,11 +132,19 @@
     </div>
     <hr>
     <div class="input-wrap">
-      <input id="style-guide-checkbox" type="checkbox" tabindex="1">
-      <label for="style-guide-checkbox"><span class="label-icon"></span> Checkbox</label>
+      <input id="style-guide-checkbox-1" type="checkbox" tabindex="1" checked>
+      <label for="style-guide-checkbox-1"><span class="label-icon"></span> Checkbox 1</label>
     </div>
     <div class="input-wrap">
-      <input id="style-guide-radio-7" type="radio" name="style-guide-radio-3" tabindex="1">
+      <input id="style-guide-checkbox-2" type="checkbox" tabindex="1">
+      <label for="style-guide-checkbox-2"><span class="label-icon"></span> Checkbox 2</label>
+    </div>
+    <div class="input-wrap">
+      <input id="style-guide-checkbox-3" type="checkbox" tabindex="1">
+      <label for="style-guide-checkbox-3"><span class="label-icon"></span> Checkbox 3</label>
+    </div>
+    <div class="input-wrap">
+      <input id="style-guide-radio-7" type="radio" name="style-guide-radio-3" tabindex="1" checked>
       <label for="style-guide-radio-7"><span class="label-icon"></span> Radio 1</label>
     </div>
     <div class="input-wrap">
@@ -312,6 +324,10 @@
     }, false);
     helper.e(".style-guide-form-dropdown").addEventListener("click", function() {
       helper.toggleClass(helper.e(".form-dropdown"), "form-dropdown-open");
+    }, false);
+    helper.e(".theme-color").addEventListener("change", function() {
+      var color = helper.hexToRgb(this.value);
+      helper.e("html").style.setProperty("--theme-accent", color.r + ", " + color.g + ", " + color.b);
     }, false);
   </script>
 
