@@ -312,8 +312,7 @@ input[type="radio"] {
   margin-bottom: 0;
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   opacity: 0;
   display: block;
   font-size: 1em;

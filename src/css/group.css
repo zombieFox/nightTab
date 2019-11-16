@@ -113,7 +113,6 @@
 }
 
 .group-body {
-  font-size: calc(var(--link-item-size) * 1);
   background-color: transparent;
   position: relative;
   min-height: var(--link-item-height);

@@ -234,7 +234,7 @@ var link = (function() {
         items: ".group",
         handle: ".group-control-item-handle",
         orientation: "vertical",
-        placeholder: helper.node("div|class:link-placeholder"),
+        placeholder: helper.node("div|class:link-sort-placeholder"),
         forcePlaceholderSize: true
       });
       bind.sort.update.remove.group();
@@ -246,20 +246,12 @@ var link = (function() {
       sortable(".group-body", {
         items: ".link-item",
         handle: ".link-control-item-handle",
-        acceptFrom: '.group-body',
-        placeholder: helper.node("div|class:link-placeholder"),
+        acceptFrom: ".group-body",
+        placeholder: helper.node("div|class:link-sort-placeholder"),
         forcePlaceholderSize: true
       });
       bind.sort.update.remove.item();
       helper.eA(".group-body").forEach(function(arrayItem, index) {
-        sortable(arrayItem)[0].addEventListener("sortstart", function() {
-          var html = helper.e("html");
-          helper.addClass(html, "is-sorting-link");
-        }, false);
-        sortable(arrayItem)[0].addEventListener("sortstop", function() {
-          var html = helper.e("html");
-          helper.removeClass(html, "is-sorting-link");
-        }, false);
         sortable(arrayItem)[0].addEventListener("sortupdate", bind.sort.update.func.item, false, event);
       });
     }
@@ -533,15 +525,15 @@ var link = (function() {
           value: "--theme-accent: " + stagedLink.link.accent.color.r + ", " + stagedLink.link.accent.color.g + ", " + stagedLink.link.accent.color.b
         });
         if (invert(stagedLink.link.accent.color, true) == "#000000") {
-          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-dark";
+          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-dark";
         } else if (invert(stagedLink.link.accent.color, true) == "#ffffff") {
-          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-light";
+          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-light";
         };
       } else {
         if (invert(state.get().theme.accent.current, true) == "#000000") {
-          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-dark";
+          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-dark";
         } else if (invert(state.get().theme.accent.current, true) == "#ffffff") {
-          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-url-text-light";
+          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-light";
         };
       };
       var linkItem = helper.makeNode(linkItemOptions);
@@ -1138,12 +1130,14 @@ var link = (function() {
     group: function() {
       var group = helper.node("div|class:group");
       var groupBody = helper.node("div|class:group-body");
-      var linkEmpty = helper.node("div|class:link-empty");
-      var para1 = helper.node("p:No Groups or Bookmarks");
-      var buttonWrap = helper.node("div|class:button-wrap mb-0");
+      var linkEmpty = helper.node("div|class:link-empty link-item");
+      var paraWrap = helper.node("div|class:p-wrap");
+      var para = helper.node("p:No Groups or Bookmarks|class:pb-0");
+      var buttonWrap = helper.node("div|class:button-wrap form-inline mb-0 mr-0");
       var addButton = helper.node("button:Add a Bookmark|class:button mb-0,type:button,tabindex:1");
       buttonWrap.appendChild(addButton);
-      linkEmpty.appendChild(para1);
+      paraWrap.appendChild(para);
+      linkEmpty.appendChild(paraWrap);
       linkEmpty.appendChild(buttonWrap);
       groupBody.appendChild(linkEmpty);
       group.appendChild(groupBody);
@@ -1153,12 +1147,14 @@ var link = (function() {
       return group;
     },
     item: function() {
-      var linkEmpty = helper.node("div|class:link-empty");
-      var para1 = helper.node("p:Empty Group");
-      var buttonWrap = helper.node("div|class:button-wrap mb-0");
+      var linkEmpty = helper.node("div|class:link-empty link-item");
+      var paraWrap = helper.node("div|class:p-wrap");
+      var para = helper.node("p:Empty Group|class:pb-0");
+      var buttonWrap = helper.node("div|class:button-wrap form-inline mb-0 mr-0");
       var addButton = helper.node("button:Add a Bookmark|class:button mb-0,type:button,tabindex:1");
       buttonWrap.appendChild(addButton);
-      linkEmpty.appendChild(para1);
+      paraWrap.appendChild(para);
+      linkEmpty.appendChild(paraWrap);
       linkEmpty.appendChild(buttonWrap);
       addButton.addEventListener("click", function(event) {
         link.add.item.open();
@@ -1168,11 +1164,15 @@ var link = (function() {
     search: function() {
       var group = helper.node("div|class:group");
       var groupBody = helper.node("div|class:group-body");
-      var linkEmpty = helper.node("div|class:link-empty");
-      var para1 = helper.node("p:No matching bookmarks found");
-      var para2 = helper.node("p:\"Enter\" to Search " + state.get().header.search.engine[state.get().header.search.engine.selected].name + "|class:small muted");
-      linkEmpty.appendChild(para1);
-      linkEmpty.appendChild(para2);
+      var linkEmpty = helper.node("div|class:link-empty link-item");
+      var paraWrap1 = helper.node("div|class:p-wrap");
+      var paraWrap2 = helper.node("div|class:p-wrap");
+      var para1 = helper.node("p:No bookmarks matching \"" + helper.e(".header-search-input").value + "\" found.|class:mb-0");
+      var para2 = helper.node("p:\"Enter\" to Search " + state.get().header.search.engine[state.get().header.search.engine.selected].name + ".|class:small muted mb-0");
+      paraWrap1.appendChild(para1);
+      paraWrap2.appendChild(para2);
+      linkEmpty.appendChild(paraWrap1);
+      linkEmpty.appendChild(paraWrap2);
       groupBody.appendChild(linkEmpty);
       group.appendChild(groupBody);
       return group;
