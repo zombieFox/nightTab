@@ -116,7 +116,6 @@
 /* link panel front */
 .link-panel-front {
   background-color: rgb(var(--theme-gray-02));
-  border-radius: var(--theme-radius);
   position: absolute;
   left: 0;
   width: 100%;
@@ -126,6 +125,10 @@
   overflow: hidden;
   user-select: none;
   transition: background-color var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
+}
+
+.is-theme-radius .link-panel-front {
+  border-radius: var(--theme-radius);
 }
 
 .is-link-orientation-top .link-panel-front {
@@ -288,16 +291,16 @@
   height: calc(100% - var(--link-item-edit-height));
 }
 
-.is-link-orientation-top.is-link-edit .link-panel-front,
-.is-link-orientation-top.is-link-edit .link-item:hover .link-panel-front,
-.is-link-orientation-top.is-link-edit .link-item:focus .link-panel-front {
+.is-theme-radius.is-link-edit.is-link-orientation-top .link-panel-front,
+.is-theme-radius.is-link-edit.is-link-orientation-top .link-item:hover .link-panel-front,
+.is-theme-radius.is-link-edit.is-link-orientation-top .link-item:focus .link-panel-front {
   border-top-left-radius: 0.25em;
   border-top-right-radius: 0.25em;
 }
 
-.is-link-orientation-bottom.is-link-edit .link-panel-front,
-.is-link-orientation-bottom.is-link-edit .link-item:hover .link-panel-front,
-.is-link-orientation-bottom.is-link-edit .link-item:focus .link-panel-front {
+.is-theme-radius.is-link-edit.is-link-orientation-bottom .link-panel-front,
+.is-theme-radius.is-link-edit.is-link-orientation-bottom .link-item:hover .link-panel-front,
+.is-theme-radius.is-link-edit.is-link-orientation-bottom .link-item:focus .link-panel-front {
   border-bottom-left-radius: 0.25em;
   border-bottom-right-radius: 0.25em;
 }

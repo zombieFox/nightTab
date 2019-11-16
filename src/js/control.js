@@ -2243,6 +2243,7 @@ var control = (function() {
     valueMod: ["float"],
     func: function() {
       theme.render.radius();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-radius-default"),
@@ -2765,6 +2766,13 @@ var control = (function() {
         };
       };
     };
+    var _theme = function() {
+      if (state.get().theme.radius > 0) {
+        helper.addClass(html, "is-theme-radius");
+      } else {
+        helper.removeClass(html, "is-theme-radius");
+      };
+    };
     var _layout = function() {
       helper.removeClass(html, "is-layout-scrollpastend");
       helper.removeClass(html, "is-layout-alignment-topleft");
@@ -2798,6 +2806,7 @@ var control = (function() {
     _header();
     _group();
     _link();
+    _theme();
     _layout();
     _background();
   };
