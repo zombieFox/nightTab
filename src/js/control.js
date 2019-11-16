@@ -3204,6 +3204,7 @@ var control = (function() {
       _disable.input(".control-link-sort-icon", true);
       _disable.input(".control-link-accent-clear", true);
       _disable.input(".control-link-accent-set", true);
+      _disable.element(".control-link-accent-set-helper", true);
       if (state.get().link.show) {
         _disable.input(".control-layout-order-headerlink", false);
         _disable.input(".control-layout-order-linkheader", false);
@@ -3242,6 +3243,7 @@ var control = (function() {
         _disable.input(".control-link-sort-icon", false);
         _disable.input(".control-link-accent-clear", false);
         _disable.input(".control-link-accent-set", false);
+        _disable.element(".control-link-accent-set-helper", false);
         if (state.get().link.item.display.show) {
           _disable.element("[for=control-link-item-display-letter-size]", false);
           _disable.input(".control-link-item-display-letter-size", false);
