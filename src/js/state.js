@@ -185,6 +185,7 @@ var state = (function() {
         size: 1
       },
       border: 0,
+      order: "headerbody",
       add: false
     },
     layout: {

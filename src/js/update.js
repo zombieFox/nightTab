@@ -634,6 +634,7 @@ var update = (function() {
           size: 1
         },
         border: 0,
+        order: "headerbody",
         add: false
       };
       data.state.dropdown = false;

@@ -1724,6 +1724,20 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: helper.e(".control-group-order-headerbody"),
+    path: "group.order",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-group-order-bodyheader"),
+    path: "group.order",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
     element: helper.e(".control-group-border"),
     path: "group.border",
     type: "range",
@@ -2695,6 +2709,11 @@ var control = (function() {
           helper.removeClass(html, "is-group-name-show");
         };
       };
+      var _order = function() {
+        helper.removeClass(html, "is-group-order-headerbody");
+        helper.removeClass(html, "is-group-order-bodyheader");
+        helper.addClass(html, "is-group-order-" + state.get().group.order);
+      };
       var _border = function() {
         helper.removeClass(html, "is-group-border");
         if (state.get().group.border > 0) {
@@ -2703,6 +2722,7 @@ var control = (function() {
       };
       _area();
       _name();
+      _order();
       _border();
     };
     var _link = function() {
