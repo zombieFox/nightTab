@@ -1383,14 +1383,28 @@ input[type="range"]:disabled::-moz-range-progress {
   border-radius: var(--theme-radius);
   padding: 0.5em 0;
   position: absolute;
-  top: calc(100% + calc(var(--layout-line-width) * 2));
-  left: 0;
   width: 100%;
   min-width: 12em;
   box-shadow: var(--layout-shadow-large);
   z-index: var(--z-index-dropdown);
   overflow: hidden;
   display: none;
+}
+
+.form-dropdown-menu-left {
+  right: 0;
+}
+
+.form-dropdown-menu-right {
+  left: 0;
+}
+
+.form-dropdown-menu-top {
+  bottom: calc(100% + calc(var(--layout-line-width) * 2));
+}
+
+.form-dropdown-menu-bottom {
+  top: calc(100% + calc(var(--layout-line-width) * 2));
 }
 
 .form-dropdown-open .form-dropdown-menu {

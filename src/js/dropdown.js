@@ -78,37 +78,45 @@ var dropdown = (function() {
 
   render.offset = function() {
     var formDropdownMenu = _currentFormDropdown.querySelector(".form-dropdown-menu");
-    var box = formDropdownMenu.getBoundingClientRect();
-    if (box.left + box.width > window.innerWidth) {
-      formDropdownMenu.style.right = "0";
-      formDropdownMenu.style.left = "inherit";
+    if (state.get().dropdown) {
+      var box = formDropdownMenu.getBoundingClientRect();
+      if (box.right > window.innerWidth) {
+        helper.addClass(formDropdownMenu, "form-dropdown-menu-left");
+      } else {
+        helper.addClass(formDropdownMenu, "form-dropdown-menu-right");
+      };
+      if (box.bottom > window.innerHeight) {
+        helper.addClass(formDropdownMenu, "form-dropdown-menu-top");
+      } else {
+        helper.addClass(formDropdownMenu, "form-dropdown-menu-bottom");
+      };
     } else {
-      formDropdownMenu.removeAttribute("style");
+      helper.removeClass(formDropdownMenu, "form-dropdown-menu-left");
+      helper.removeClass(formDropdownMenu, "form-dropdown-menu-right");
+      helper.removeClass(formDropdownMenu, "form-dropdown-menu-top");
+      helper.removeClass(formDropdownMenu, "form-dropdown-menu-bottom");
     };
   };
 
   render.toggle = function() {
-    if (_currentFormDropdown.classList.contains("form-dropdown-open")) {
-      mod.close();
-      helper.removeClass(_currentFormDropdown, "form-dropdown-open");
-      documentEvent.remove();
-      render.offset();
-      _currentFormDropdown = null;
+    if (state.get().dropdown) {
+      render.open();
     } else {
-      mod.open();
-      _currentFormDropdown = _currentFormDropdown;
-      helper.addClass(_currentFormDropdown, "form-dropdown-open");
-      documentEvent.add(_currentFormDropdown);
-      render.offset();
+      render.close();
     };
   };
 
   render.close = function() {
-    mod.close();
     helper.removeClass(_currentFormDropdown, "form-dropdown-open");
-    documentEvent.remove();
     render.offset();
+    documentEvent.remove();
     _currentFormDropdown = null;
+  };
+
+  render.open = function() {
+    helper.addClass(_currentFormDropdown, "form-dropdown-open");
+    render.offset();
+    documentEvent.add();
   };
 
   var close = function() {
