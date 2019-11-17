@@ -54,7 +54,7 @@
   color: rgb(var(--form-input-text-hover));
   outline: none;
   text-decoration: none;
-  box-shadow: var(--form-hover-ring);
+  box-shadow: var(--form-ring-hover);
 }
 
 .auto-suggest-link:focus {
@@ -62,7 +62,7 @@
   color: rgb(var(--form-input-text-focus-active));
   outline: none;
   text-decoration: none;
-  box-shadow: var(--form-focus-ring-accent);
+  box-shadow: var(--form-ring-accent);
 }
 
 .auto-suggest-link:active {
