@@ -34,7 +34,7 @@ var clock = (function() {
             if (!state.get().header.clock.hour24.show && timeDateNow.hours() > 12) {
               timeStrings.hours = timeStrings.hours - 12;
             };
-            timeStrings.hours = helper.toWords(timeDateNow.hours());
+            timeStrings.hours = helper.toWords(timeStrings.hours);
             if (state.get().header.clock.hour24.show && timeDateNow.hours() > 0 && timeDateNow.hours() < 10) {
               timeStrings.hours = "Zero " + timeStrings.hours;
             };
