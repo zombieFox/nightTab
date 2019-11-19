@@ -1,19 +1,5 @@
 var date = (function() {
 
-  var _makeTimeObject = function() {
-    return helper.getDateTime();
-  };
-
-  var _month = function(index) {
-    var all = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    return all[index];
-  };
-
-  var _day = function(index) {
-    var all = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    return all[index];
-  };
-
   var bind = {};
 
   bind.tick = function() {
@@ -34,75 +20,82 @@ var date = (function() {
 
   render.all = function() {
     if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show) {
-      var date = helper.e(".date");
-      var dateObject = _makeTimeObject();
+      var timeDateNow = moment();
+      var dateStrings = {
+        day: null,
+        date: null,
+        month: null,
+        year: null
+      };
       var wordOrNumber = {
         day: {
-          word: function(value) {
-            return _day(value);
+          word: function() {
+            dateStrings.day = timeDateNow.format("dddd");
+            if (state.get().header.date.day.length == "short") {
+              dateStrings.day = dateStrings.day.substring(0, 3);
+              console.log(dateStrings.day);
+            };
           },
-          number: function(value) {
+          number: function() {
+            dateStrings.day = timeDateNow.day();
             if (state.get().header.date.day.weekStart == "monday") {
-              if (value == 0) {
-                value = 7;
+              if (dateStrings.day == 0) {
+                dateStrings.day = 7;
               };
             } else if (state.get().header.date.day.weekStart == "sunday") {
-              value = value + 1;
+              dateStrings.day = dateStrings.day + 1;
             };
-            return value;
           }
         },
         date: {
-          word: function(value) {
+          word: function() {
             if (state.get().header.date.date.ordinal) {
-              return helper.ordinalWords(helper.toWords(value));
+              dateStrings.date = helper.ordinalWords(helper.toWords(timeDateNow.date()));
             } else {
-              return helper.toWords(value);
+              dateStrings.date = helper.toWords(timeDateNow.date());
             };
           },
-          number: function(value) {
+          number: function() {
             if (state.get().header.date.date.ordinal) {
-              return helper.ordinalNumber(value);
+              dateStrings.date = timeDateNow.format("Do");
             } else {
-              return value;
+              dateStrings.date = timeDateNow.format("DD");
             };
           }
         },
         month: {
-          word: function(value) {
-            return _month(value);
+          word: function() {
+            dateStrings.month = timeDateNow.format("MMMM");
+            if (state.get().header.date.month.length == "short") {
+              dateStrings.month = dateStrings.month.substring(0, 3);
+            };
           },
-          number: function(value) {
+          number: function() {
             if (state.get().header.date.month.ordinal) {
-              return helper.ordinalNumber(value + 1);
+              dateStrings.month = helper.ordinalNumber(timeDateNow.month() + 1);
             } else {
-              return value + 1;
+              dateStrings.month = timeDateNow.month() + 1;
             };
           }
         },
         year: {
-          word: function(value) {
-            return helper.toWords(value);
+          word: function() {
+            dateStrings.year = helper.toWords(timeDateNow.format("YYYY"));
           },
-          number: function(value) {
-            return value;
+          number: function() {
+            dateStrings.year = timeDateNow.format("YYYY");
           }
         }
       };
-      dateObject.day = wordOrNumber.day[state.get().header.date.day.display](dateObject.day);
-      dateObject.date = wordOrNumber.date[state.get().header.date.date.display](dateObject.date);
-      dateObject.month = wordOrNumber.month[state.get().header.date.month.display](dateObject.month);
-      dateObject.year = wordOrNumber.year[state.get().header.date.year.display](dateObject.year);
-      if (state.get().header.date.day.display == "word" && state.get().header.date.day.length == "short") {
-        dateObject.day = dateObject.day.substring(0, 3);
-      };
-      if (state.get().header.date.month.display == "word" && state.get().header.date.month.length == "short") {
-        dateObject.month = dateObject.month.substring(0, 3);
-      };
-      var elementDay = helper.node("span:" + dateObject.day + "|class:date-item date-day");
-      var elementDate = helper.node("span:" + dateObject.date + "|class:date-item date-date");
-      var elementMonth = helper.node("span:" + dateObject.month + "|class:date-item date-month");
-      var elementyear = helper.node("span:" + dateObject.year + "|class:date-item date-year");
+      wordOrNumber.day[state.get().header.date.day.display]();
+      wordOrNumber.date[state.get().header.date.date.display]();
+      wordOrNumber.month[state.get().header.date.month.display]();
+      wordOrNumber.year[state.get().header.date.year.display]();
+      var elementDay = helper.node("span:" + dateStrings.day + "|class:date-item date-day");
+      var elementDate = helper.node("span:" + dateStrings.date + "|class:date-item date-date");
+      var elementMonth = helper.node("span:" + dateStrings.month + "|class:date-item date-month");
+      var elementYear = helper.node("span:" + dateStrings.year + "|class:date-item date-year");
+      var date = helper.e(".date");
       if (state.get().header.date.day.show) {
         date.appendChild(elementDay);
       };
@@ -131,7 +124,7 @@ var date = (function() {
         };
       };
       if (state.get().header.date.year.show) {
-        date.appendChild(elementyear);
+        date.appendChild(elementYear);
       };
       if (state.get().header.date.separator.show) {
         var separatorCharacter = "/";

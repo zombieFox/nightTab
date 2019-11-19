@@ -32,7 +32,8 @@ const filename = {
 
 const jsDependencies = [
   path.nodeModules + '/html5sortable/dist/html5sortable.min.js',
-  path.nodeModules + '/invert-color/lib/invert.min.js'
+  path.nodeModules + '/invert-color/lib/invert.min.js',
+  path.nodeModules + '/moment/min/moment.min.js'
 ]
 
 const cssFiles = [
