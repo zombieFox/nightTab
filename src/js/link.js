@@ -883,7 +883,7 @@ var link = (function() {
         displayLetterInput.value = stagedLink.link.letter;
         displayIconInput.value = stagedLink.link.icon.label;
         nameInput.value = stagedLink.link.name;
-        urlLabel.value = stagedLink.link.url;
+        urlInput.value = stagedLink.link.url;
         if (stagedLink.link.accent.override) {
           accentGlobalRadio.checked = false;
           accentCustomRadio.checked = true;
