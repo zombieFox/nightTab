@@ -33,7 +33,6 @@ var date = (function() {
             dateStrings.day = timeDateNow.format("dddd");
             if (state.get().header.date.day.length == "short") {
               dateStrings.day = dateStrings.day.substring(0, 3);
-              console.log(dateStrings.day);
             };
           },
           number: function() {
