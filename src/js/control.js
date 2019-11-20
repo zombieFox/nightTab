@@ -1679,15 +1679,6 @@ var control = (function() {
     element: helper.e(".control-group-area-alignment-left"),
     path: "group.area.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-header"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render.class();
     }
@@ -1695,15 +1686,6 @@ var control = (function() {
     element: helper.e(".control-group-area-alignment-center"),
     path: "group.area.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-header"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render.class();
     }
@@ -1711,15 +1693,6 @@ var control = (function() {
     element: helper.e(".control-group-area-alignment-right"),
     path: "group.area.alignment",
     type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-header"),
-          delay: 500
-        });
-      }
-    }],
     func: function() {
       render.class();
     }
