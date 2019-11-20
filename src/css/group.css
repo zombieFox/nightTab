@@ -127,6 +127,7 @@
 
 .group-body {
   background-color: transparent;
+  font-size: var(--link-item-size);
   position: relative;
   min-height: var(--link-item-height);
   display: grid;
