@@ -203,7 +203,6 @@ var link = (function() {
           bookmarks.mod.move.group(stagedGroup);
           data.save();
           groupAndItems();
-          stagedGroup.reset();
         },
         item: function(event) {
           stagedLink.position.origin.group = Array.from(helper.getClosest(event.detail.origin.container, ".group").parentNode.children).indexOf(helper.getClosest(event.detail.origin.container, ".group"));
@@ -213,7 +212,6 @@ var link = (function() {
           bookmarks.mod.move.link(stagedLink);
           data.save();
           groupAndItems();
-          stagedLink.reset();
         }
       },
       remove: {
@@ -272,7 +270,6 @@ var link = (function() {
         data.save();
         groupAndItems();
         render.focus.group.previous.up(copyStagedGroup);
-        stagedGroup.reset();
       },
       down: function(copyStagedGroup) {
         stagedGroup.group = JSON.parse(JSON.stringify(copyStagedGroup.group));
@@ -282,7 +279,6 @@ var link = (function() {
         data.save();
         groupAndItems();
         render.focus.group.next.down(copyStagedGroup);
-        stagedGroup.reset();
       }
     },
     link: {
@@ -297,7 +293,6 @@ var link = (function() {
         data.save();
         groupAndItems();
         render.focus.item.previous.left(copyStagedLink);
-        stagedLink.reset();
       },
       right: function(copyStagedLink) {
         stagedLink.link = JSON.parse(JSON.stringify(copyStagedLink.link));
@@ -307,7 +302,6 @@ var link = (function() {
         data.save();
         groupAndItems();
         render.focus.item.next.right(copyStagedLink);
-        stagedLink.reset();
       }
     }
   };
@@ -1338,7 +1332,6 @@ var link = (function() {
           data.save();
           mod.add.item.close();
           groupAndItems();
-          stagedLink.reset();
           control.render.dependents();
           control.render.class();
           shade.close();
@@ -1373,8 +1366,8 @@ var link = (function() {
       },
       close: function() {
         mod.add.item.close();
-        modal.close();
         stagedLink.reset();
+        modal.close();
         pagelock.unlock();
       }
     },
@@ -1387,7 +1380,6 @@ var link = (function() {
           data.save();
           mod.add.group.close();
           groupAndItems();
-          stagedGroup.reset();
           shade.close();
           pagelock.unlock();
         };
@@ -1422,8 +1414,8 @@ var link = (function() {
       },
       close: function() {
         mod.add.group.close();
-        modal.close();
         stagedGroup.reset();
+        modal.close();
         pagelock.unlock();
       }
     }
@@ -1446,7 +1438,6 @@ var link = (function() {
         var copyStagedLink = JSON.parse(JSON.stringify(stagedLink));
         bookmarks.mod.edit.link(copyStagedLink);
         data.save();
-        stagedLink.reset();
         groupAndItems();
         render.focus.item.current.edit(copyStagedLink);
         autoSuggest.close();
@@ -1487,7 +1478,6 @@ var link = (function() {
         var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
         bookmarks.mod.edit.group(copyStagedGroup);
         data.save();
-        stagedGroup.reset();
         groupAndItems();
         render.focus.group.current.edit(copyStagedGroup);
         autoSuggest.close();
@@ -1537,7 +1527,6 @@ var link = (function() {
         header.render.button.edit();
         groupAndItems();
         render.focus.item.previous.remove(copyStagedLink);
-        stagedLink.reset();
         control.render.dependents();
         control.render.class();
         shade.close();
@@ -1583,7 +1572,6 @@ var link = (function() {
         header.render.button.edit();
         groupAndItems();
         render.focus.group.previous.remove(copyStagedGroup);
-        stagedGroup.reset();
         control.render.dependents();
         control.render.class();
         shade.close();
