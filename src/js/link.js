@@ -1466,6 +1466,7 @@ var link = (function() {
           modal.close();
         }
       });
+      pagelock.lock();
     },
     group: function(copyStagedGroup) {
       stagedGroup.group = JSON.parse(JSON.stringify(copyStagedGroup.group));
@@ -1506,6 +1507,7 @@ var link = (function() {
           modal.close();
         }
       });
+      pagelock.lock();
     }
   };
 
