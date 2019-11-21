@@ -507,15 +507,11 @@
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
-  transition: all var(--layout-timing-extra-fast);
+  transition: height var(--layout-timing-extra-fast);
 }
 
 .is-link-edit .link-control {
   height: var(--link-item-edit-height);
-}
-
-.is-link-edit .link-control-item {
-  /* pointer-events: all; */
 }
 
 .link-control-item {
