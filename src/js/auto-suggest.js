@@ -177,49 +177,52 @@ var autoSuggest = (function() {
         fontawesomeIcon: function() {
           suggestItems.forEach(function(arrayItem) {
             var li = helper.node("li|class:auto-suggest-list-item");
-            var anchor = helper.node("a|href:#,tabindex:1,class:auto-suggest-link");
+            var button = helper.node("button|tabindex:1,class:auto-suggest-item");
             var icon = helper.node("span|class:auto-suggest-icon fa-" + arrayItem.name);
             if (arrayItem.styles.includes("solid")) {
               helper.addClass(icon, "fas");
             } else if (arrayItem.styles.includes("brands")) {
               helper.addClass(icon, "fab");
             };
-            anchor.addEventListener("click", function() {
+            button.addEventListener("click", function() {
               link.render.autoSuggestIconAction(arrayItem);
             }, false);
             var text = helper.node("span:" + arrayItem.label + "|class:auto-suggest-icon-text");
-            anchor.appendChild(icon);
-            anchor.appendChild(text);
-            li.appendChild(anchor);
+            button.appendChild(icon);
+            button.appendChild(text);
+            li.appendChild(button);
             list.appendChild(li);
           });
         }
       };
       action[_currentInputOptions.type]();
     };
-    var _renderAutoSuggestList = function() {
-      var autoSuggestWrapper = helper.e(".auto-suggest-wrapper");
+    var _renderAutoSuggest = function() {
+      var autoSuggestInput = helper.e(".auto-suggest-input");
+      var autoSuggest = helper.e(".auto-suggest");
       var autoSuggestList = helper.e(".auto-suggest-list");
-      if (autoSuggestList) {
+      if (autoSuggest) {
         while (autoSuggestList.lastChild) {
           autoSuggestList.removeChild(autoSuggestList.lastChild);
         };
       } else {
-        var style = {
-          left: autoSuggestWrapper.getBoundingClientRect().left,
-          top: autoSuggestWrapper.getBoundingClientRect().bottom + window.scrollY,
-          width: autoSuggestWrapper.getBoundingClientRect().width
+        var box = {
+          left: autoSuggestInput.getBoundingClientRect().left,
+          top: autoSuggestInput.getBoundingClientRect().bottom + window.scrollY,
+          width: autoSuggestInput.getBoundingClientRect().width
         };
+        var autoSuggest = helper.node("div|class:auto-suggest list-unstyled");
         var autoSuggestList = helper.node("ul|class:auto-suggest-list list-unstyled");
-        body.appendChild(autoSuggestList);
-        autoSuggestList.setAttribute("style", "width: " + style.width + "px; top: " + style.top + "px; left: " + style.left + "px;");
+        autoSuggest.appendChild(autoSuggestList);
+        body.appendChild(autoSuggest);
+        autoSuggest.setAttribute("style", "width: " + box.width + "px; top: " + box.top + "px; left: " + box.left + "px;");
         documentEvent.add();
       };
       _populateList(autoSuggestList);
     };
     if (suggestItems.length > 0) {
       _autoSuggestActive = true;
-      _renderAutoSuggestList();
+      _renderAutoSuggest();
     } else {
       render.close();
     };
@@ -227,9 +230,9 @@ var autoSuggest = (function() {
 
   render.close = function() {
     mod.close();
-    var autoSuggestList = helper.e(".auto-suggest-list");
-    if (autoSuggestList) {
-      autoSuggestList.remove();
+    var autoSuggest = helper.e(".auto-suggest");
+    if (autoSuggest) {
+      autoSuggest.remove();
       documentEvent.remove();
       _currentInputOptions = {};
       _autoSuggestActive = false;

@@ -191,7 +191,7 @@
   --z-index-shade:                                      5000;
   --z-index-modal:                                      6000;
   --z-index-menu:                                       7000;
-  --z-index-auto-suggest-list:                          8000;
+  --z-index-auto-suggest:                               8000;
   --z-index-dropdown:                                   9000;
   --z-index-edge:                                       10000;
   /* breakpoint */
