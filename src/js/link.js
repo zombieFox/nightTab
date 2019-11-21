@@ -1086,7 +1086,7 @@ var link = (function() {
               group.querySelector(".group-body").appendChild(render.item.link());
             });
           } else {
-            group.querySelector(".group-body").appendChild(render.empty.item());
+            group.querySelector(".group-body").appendChild(render.empty.item(stagedGroup.position.destination));
           };
           linkSection.appendChild(group);
           stagedGroup.reset();
@@ -1140,7 +1140,7 @@ var link = (function() {
       }, false);
       return group;
     },
-    item: function() {
+    item: function(groupIndex) {
       var linkEmpty = helper.node("div|class:link-empty link-item");
       var paraWrap = helper.node("div|class:p-wrap");
       var para = helper.node("p:Empty Group|class:pb-0");
@@ -1152,6 +1152,7 @@ var link = (function() {
       linkEmpty.appendChild(buttonWrap);
       addButton.addEventListener("click", function(event) {
         link.add.item.open();
+        link.add.item.selectGroup(groupIndex);
       }, false);
       return linkEmpty;
     },
@@ -1369,6 +1370,10 @@ var link = (function() {
         stagedLink.reset();
         modal.close();
         pagelock.unlock();
+      },
+      selectGroup: function(groupIndex) {
+        stagedLink.position.destination.group = groupIndex;
+        helper.e(".link-form-select-group").selectedIndex = stagedLink.position.destination.group;
       }
     },
     group: {
@@ -1611,6 +1616,9 @@ var link = (function() {
       },
       close: function() {
         render.add.item.close();
+      },
+      selectGroup: function(groupIndex) {
+        render.add.item.selectGroup(groupIndex);
       }
     },
     group: {
