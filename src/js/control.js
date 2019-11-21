@@ -2105,7 +2105,7 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-link-item-hoverscale"),
-    path: "link.item.hoverScale",
+    path: "link.item.hoverScale.show",
     type: "checkbox",
     func: function() {
       render.class();
@@ -2717,7 +2717,7 @@ var control = (function() {
       helper.removeClass(html, "is-link-item-url-show");
       helper.removeClass(html, "is-link-item-line-show");
       helper.removeClass(html, "is-link-item-shadow-show");
-      helper.removeClass(html, "is-link-item-hoverscale");
+      helper.removeClass(html, "is-link-item-hoverscale-show");
       helper.removeClass(html, "is-link-item-alignment-left");
       helper.removeClass(html, "is-link-item-alignment-center");
       helper.removeClass(html, "is-link-item-alignment-right");
@@ -2748,8 +2748,8 @@ var control = (function() {
         if (state.get().link.item.shadow.show) {
           helper.addClass(html, "is-link-item-shadow-show");
         };
-        if (state.get().link.item.hoverScale) {
-          helper.addClass(html, "is-link-item-hoverscale");
+        if (state.get().link.item.hoverScale.show) {
+          helper.addClass(html, "is-link-item-hoverscale-show");
         };
         if (state.get().link.item.border > 0) {
           helper.addClass(html, "is-link-item-border");

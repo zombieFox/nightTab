@@ -76,7 +76,7 @@
   margin-right: 0.5em;
 }
 
-.is-link-item-hoverscale .link-item.link-empty:hover {
+.is-link-item-hoverscale-show .link-item.link-empty:hover {
   transform: scale(1);
 }
 
@@ -102,13 +102,13 @@
   outline: 0;
 }
 
-.is-link-item-hoverscale .link-item:focus-within,
-.is-link-item-hoverscale .link-item:focus,
-.is-link-item-hoverscale .link-item:hover {
+.is-link-item-hoverscale-show .link-item:focus-within,
+.is-link-item-hoverscale-show .link-item:focus,
+.is-link-item-hoverscale-show .link-item:hover {
   transform: scale(1.05);
 }
 
-.is-link-item-hoverscale .link-item:active {
+.is-link-item-hoverscale-show .link-item:active {
   transform: scale(1.04);
   transition: none;
 }
