@@ -110,12 +110,12 @@
     margin var(--layout-timing-extra-fast) var(--layout-duration-04);
 }
 
-.is-link-edit.is-group-area-alignment-left .group-control,
-.is-link-edit.is-group-area-alignment-center .group-control {
+.is-link-edit.is-group-name-show.is-group-area-alignment-left .group-control,
+.is-link-edit.is-group-name-show.is-group-area-alignment-center .group-control {
   margin-right: 1em;
 }
 
-.is-link-edit.is-group-area-alignment-right .group-control {
+.is-link-edit.is-group-name-show.is-group-area-alignment-right .group-control {
   margin-left: 1em;
 }
 
