@@ -1083,6 +1083,8 @@ var link = (function() {
               stagedLink.link = JSON.parse(JSON.stringify(arrayItem));
               stagedLink.position.origin.item = index;
               stagedLink.position.destination.item = index;
+              stagedLink.position.group.new = null;
+              stagedLink.position.group.name = null;
               group.querySelector(".group-body").appendChild(render.item.link());
             });
           } else {
