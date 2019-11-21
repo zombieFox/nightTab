@@ -1361,8 +1361,8 @@ var link = (function() {
             pagelock.unlock();
           }
         });
-        stagedLink.position.destination.item = helper.e(".link-form-position").selectedIndex;
         pagelock.lock();
+        stagedLink.position.destination.item = helper.e(".link-form-position").selectedIndex;
       },
       close: function() {
         mod.add.item.close();
@@ -1409,8 +1409,8 @@ var link = (function() {
             pagelock.unlock();
           }
         });
-        stagedGroup.position.destination = helper.e(".group-form-position").selectedIndex;
         pagelock.lock();
+        stagedGroup.position.destination = helper.e(".group-form-position").selectedIndex;
       },
       close: function() {
         mod.add.group.close();
