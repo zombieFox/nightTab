@@ -625,6 +625,14 @@ var update = (function() {
         items: data.bookmarks
       }];
       data.state.header.position = "sticky";
+      data.state.link.item.display.rotate = 0;
+      data.state.link.item.display.translate = {
+        x: 0,
+        y: 0
+      };
+      data.state.link.item.hoverScale = {
+        show: true
+      };
       data.state.group = {
         area: {
           alignment: "left"
@@ -638,6 +646,7 @@ var update = (function() {
         add: false
       };
       data.state.dropdown = false;
+      delete data.state.link.item.display.size;
       return data;
     }
   };

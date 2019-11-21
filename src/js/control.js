@@ -2004,7 +2004,7 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-link-item-display-show"),
+    element: helper.e(".control-link-item-display-iconLetter-show"),
     path: "link.item.display.show",
     type: "checkbox",
     func: function() {
@@ -2044,7 +2044,15 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-link-item-name-size"),
+    element: helper.e(".control-link-item-name-show"),
+    path: "link.item.name.show",
+    type: "checkbox",
+    func: function() {
+      render.class();
+      render.dependents();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-name-size"),
     path: "link.item.name.size",
     type: "range",
     valueMod: ["float"],
@@ -2052,11 +2060,58 @@ var control = (function() {
       link.render.item.name();
     }
   }, {
-    element: helper.e(".control-link-item-name-size-default"),
+    element: helper.e(".control-link-item-display-name-size-default"),
     type: "button",
     func: function() {
       mod.setValue("link.item.name.size", 0.9);
       link.render.item.name();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-rotate"),
+    path: "link.item.display.rotate",
+    type: "range",
+    func: function() {
+      link.render.item.rotate();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-rotate-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("link.item.display.rotate", 0);
+      link.render.item.rotate();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-translate-x"),
+    path: "link.item.display.translate.x",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      link.render.item.translate.x();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-translate-x-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("link.item.display.translate.x", 0);
+      link.render.item.translate.x();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-translate-y"),
+    path: "link.item.display.translate.y",
+    type: "range",
+    valueMod: ["float"],
+    func: function() {
+      link.render.item.translate.y();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-translate-y-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("link.item.display.translate.y", 0);
+      link.render.item.translate.y();
       render.update();
     }
   }, {
@@ -2094,14 +2149,6 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render.class();
-    }
-  }, {
-    element: helper.e(".control-link-item-name-show"),
-    path: "link.item.name.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
     }
   }, {
     element: helper.e(".control-link-item-hoverscale"),
@@ -3162,7 +3209,7 @@ var control = (function() {
       _disable.element("[for=control-link-item-size]", true);
       _disable.input(".control-link-item-size", true);
       _disable.input(".control-link-item-size-default", true);
-      _disable.input(".control-link-item-display-show", true);
+      _disable.input(".control-link-item-display-iconLetter-show", true);
       _disable.element("[for=control-link-item-display-letter-size]", true);
       _disable.input(".control-link-item-display-letter-size", true);
       _disable.input(".control-link-item-display-letter-size-default", true);
@@ -3170,9 +3217,12 @@ var control = (function() {
       _disable.input(".control-link-item-display-icon-size", true);
       _disable.input(".control-link-item-display-icon-size-default", true);
       _disable.input(".control-link-item-name-show", true);
-      _disable.element("[for=control-link-item-name-size]", true);
-      _disable.input(".control-link-item-name-size", true);
-      _disable.input(".control-link-item-name-size-default", true);
+      _disable.element("[for=control-link-item-display-name-size]", true);
+      _disable.input(".control-link-item-display-name-size", true);
+      _disable.input(".control-link-item-display-name-size-default", true);
+      _disable.element("[for=control-link-item-display-rotate]", true);
+      _disable.input(".control-link-item-display-rotate", true);
+      _disable.input(".control-link-item-display-rotate-default", true);
       _disable.input(".control-link-item-order-displayname", true);
       _disable.input(".control-link-item-order-namedisplay", true);
       _disable.element(".control-link-item-order-namedisplay-helper", true);
@@ -3224,7 +3274,7 @@ var control = (function() {
         _disable.element("[for=control-link-item-size]", false);
         _disable.input(".control-link-item-size", false);
         _disable.input(".control-link-item-size-default", false);
-        _disable.input(".control-link-item-display-show", false);
+        _disable.input(".control-link-item-display-iconLetter-show", false);
         _disable.input(".control-link-item-name-show", false);
         _disable.input(".control-link-item-url-show", false);
         _disable.input(".control-link-item-line-show", false);
@@ -3255,9 +3305,9 @@ var control = (function() {
           _disable.input(".control-link-item-display-icon-size-default", false);
         };
         if (state.get().link.item.name.show) {
-          _disable.element("[for=control-link-item-name-size]", false);
-          _disable.input(".control-link-item-name-size", false);
-          _disable.input(".control-link-item-name-size-default", false);
+          _disable.element("[for=control-link-item-display-name-size]", false);
+          _disable.input(".control-link-item-display-name-size", false);
+          _disable.input(".control-link-item-display-name-size-default", false);
         };
         if (state.get().link.item.display.show || state.get().link.item.name.show) {
           _disable.element(".control-link-item-display-alignment-grid", false);
@@ -3271,6 +3321,9 @@ var control = (function() {
           _disable.input(".control-link-item-display-alignment-bottomleft", false);
           _disable.input(".control-link-item-display-alignment-bottomcenter", false);
           _disable.input(".control-link-item-display-alignment-bottomright", false);
+          _disable.element("[for=control-link-item-display-rotate]", false);
+          _disable.input(".control-link-item-display-rotate", false);
+          _disable.input(".control-link-item-display-rotate-default", false);
         };
         if (state.get().link.item.display.show && state.get().link.item.name.show) {
           _disable.input(".control-link-item-order-displayname", false);

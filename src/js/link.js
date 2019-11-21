@@ -552,6 +552,7 @@ var link = (function() {
       };
       var linkPanelFront = helper.makeNode(linkPanelFrontOptions);
       var linkPanelBack = helper.node("div|class:link-panel-back");
+      var linkDisplayWrapper = helper.node("div|class:link-display-wrapper");
       var linkDisplay = helper.node("div|class:link-display");
       var linkDisplayLetter = null;
       var linkDisplayIcon = null;
@@ -603,12 +604,13 @@ var link = (function() {
         linkDisplay.appendChild(linkDisplayIcon);
       };
       if (state.get().link.item.order == "displayname") {
-        linkPanelFront.appendChild(linkDisplay);
-        linkPanelFront.appendChild(linkName);
+        linkDisplayWrapper.appendChild(linkDisplay);
+        linkDisplayWrapper.appendChild(linkName);
       } else if (state.get().link.item.order == "namedisplay") {
-        linkPanelFront.appendChild(linkName);
-        linkPanelFront.appendChild(linkDisplay);
+        linkDisplayWrapper.appendChild(linkName);
+        linkDisplayWrapper.appendChild(linkDisplay);
       };
+      linkPanelFront.appendChild(linkDisplayWrapper);
       linkLeft.appendChild(linkLeftIcon);
       linkControl.appendChild(linkLeft);
       linkHandle.appendChild(linkHandleIcon);
@@ -1036,7 +1038,7 @@ var link = (function() {
     },
     name: function() {
       var html = helper.e("html");
-      html.style.setProperty("--link-item-name-size", state.get().link.item.name.size + "em");
+      html.style.setProperty("--link-item-display-name-size", state.get().link.item.name.size + "em");
     },
     size: function() {
       var html = helper.e("html");
@@ -1057,6 +1059,20 @@ var link = (function() {
     border: function() {
       var html = helper.e("html");
       html.style.setProperty("--link-item-border", state.get().link.item.border);
+    },
+    rotate: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-item-display-rotate", state.get().link.item.display.rotate + "deg");
+    },
+    translate: {
+      x: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--link-item-display-translate-x", state.get().link.item.display.translate.x + "em");
+      },
+      y: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--link-item-display-translate-y", state.get().link.item.display.translate.y + "em");
+      }
     }
   };
 
@@ -1669,6 +1685,9 @@ var link = (function() {
     render.item.display.icon();
     render.item.name();
     render.item.border();
+    render.item.rotate();
+    render.item.translate.x();
+    render.item.translate.y();
     render.area.width();
   };
 
