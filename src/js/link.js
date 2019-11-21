@@ -1375,7 +1375,13 @@ var link = (function() {
       },
       selectGroup: function(groupIndex) {
         stagedLink.position.destination.group = groupIndex;
+        stagedLink.position.destination.item = 0;
         helper.e(".link-form-select-group").selectedIndex = stagedLink.position.destination.group;
+        var linkFormPosition = helper.e(".link-form-position");
+        while (linkFormPosition.lastChild) {
+          linkFormPosition.removeChild(linkFormPosition.lastChild);
+        };
+        linkFormPosition.appendChild(helper.node("option:" + helper.ordinalNumber(1)));
       }
     },
     group: {
