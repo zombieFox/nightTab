@@ -552,10 +552,13 @@ var link = (function() {
       };
       var linkPanelFront = helper.makeNode(linkPanelFrontOptions);
       var linkPanelBack = helper.node("div|class:link-panel-back");
-      var linkDisplayWrapper = helper.node("div|class:link-display-wrapper");
+
       var linkDisplay = helper.node("div|class:link-display");
+      var linkDisplayLetcon = helper.node("div|class:link-display-letcon");
+
       var linkDisplayLetter = null;
       var linkDisplayIcon = null;
+
       if (stagedLink.link.display == "letter") {
         var letterText = stagedLink.link.letter;
         if (letterText == null) {
@@ -569,7 +572,8 @@ var link = (function() {
       if (nameText == null) {
         nameText = "";
       };
-      var linkName = helper.node("p:" + nameText + "|class:link-name");
+      var linkName = helper.node("p:" + nameText + "|class:link-display-name");
+
       var linkUrl = helper.node("div|class:link-url");
       var url = "";
       if (stagedLink.link.url != null) {
@@ -599,18 +603,18 @@ var link = (function() {
       var linkRemoveIcon = helper.node("span|class:button-icon icon-close");
 
       if (stagedLink.link.display == "letter") {
-        linkDisplay.appendChild(linkDisplayLetter);
+        linkDisplayLetcon.appendChild(linkDisplayLetter);
       } else if (stagedLink.link.display == "icon" && stagedLink.link.icon.prefix != null && stagedLink.link.icon.name != null) {
-        linkDisplay.appendChild(linkDisplayIcon);
+        linkDisplayLetcon.appendChild(linkDisplayIcon);
       };
       if (state.get().link.item.order == "displayname") {
-        linkDisplayWrapper.appendChild(linkDisplay);
-        linkDisplayWrapper.appendChild(linkName);
+        linkDisplay.appendChild(linkDisplayLetcon);
+        linkDisplay.appendChild(linkName);
       } else if (state.get().link.item.order == "namedisplay") {
-        linkDisplayWrapper.appendChild(linkName);
-        linkDisplayWrapper.appendChild(linkDisplay);
+        linkDisplay.appendChild(linkName);
+        linkDisplay.appendChild(linkDisplayLetcon);
       };
-      linkPanelFront.appendChild(linkDisplayWrapper);
+      linkPanelFront.appendChild(linkDisplay);
       linkLeft.appendChild(linkLeftIcon);
       linkControl.appendChild(linkLeft);
       linkHandle.appendChild(linkHandleIcon);
@@ -1029,16 +1033,16 @@ var link = (function() {
     display: {
       letter: function() {
         var html = helper.e("html");
-        html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letter.size + "em");
+        html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letcon.letter.size + "em");
       },
       icon: function() {
         var html = helper.e("html");
-        html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.icon.size + "em");
+        html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.letcon.icon.size + "em");
       }
     },
     name: function() {
       var html = helper.e("html");
-      html.style.setProperty("--link-item-display-name-size", state.get().link.item.name.size + "em");
+      html.style.setProperty("--link-item-display-name-size", state.get().link.item.display.name.size + "em");
     },
     size: function() {
       var html = helper.e("html");

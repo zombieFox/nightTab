@@ -140,7 +140,7 @@ var state = (function() {
       },
       item: {
         display: {
-          iconLetter: {
+          letcon: {
             show: true,
             letter: {
               size: 3
