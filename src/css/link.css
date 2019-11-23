@@ -274,7 +274,7 @@
   font-size: 1em;
   transform: rotate(var(--link-item-display-rotate));
   transform-origin: center;
-  transition: font-size var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast), left var(--layout-timing-extra-fast), transform var(--layout-timing-extra-fast);
+  transition: font-size var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast), left var(--layout-timing-extra-fast);
 }
 
 .is-link-edit .link-display {
@@ -389,7 +389,7 @@
   display: none;
 }
 
-.is-link-display-item-show .link-display-letcon {
+.is-link-item-display-letcon-show .link-display-letcon {
   display: block;
 }
 
@@ -417,11 +417,11 @@
   font-size: var(--link-item-display-icon-size);
 }
 
-.is-link-style-block.is-link-item-name-show.is-link-display-item-show .link-display>*:not(:only-child):not(:last-child) {
+.is-link-style-block.is-link-item-display-name-show.is-link-item-display-letcon-show .link-display>*:not(:only-child):not(:last-child) {
   margin-bottom: 0.5em;
 }
 
-.is-link-style-list.is-link-item-name-show.is-link-display-item-show .link-display>*:not(:only-child):not(:last-child) {
+.is-link-style-list.is-link-item-display-name-show.is-link-item-display-letcon-show .link-display>*:not(:only-child):not(:last-child) {
   margin-right: 0.5em
 }
 
@@ -470,7 +470,7 @@
   text-align: right;
 }
 
-.is-link-item-name-show .link-display-name {
+.is-link-item-display-name-show .link-display-name {
   display: block;
 }
 

@@ -647,6 +647,25 @@ var update = (function() {
       };
       data.state.dropdown = false;
       delete data.state.link.item.display.size;
+      data.state.link.item.display.name = data.state.link.item.name;
+      delete data.state.link.item.name;
+      data.state.link.item.display.letcon = {
+        show: data.state.link.item.display.show,
+        letter: {
+          size: data.state.link.item.display.letter.size
+        },
+        icon: {
+          size: data.state.link.item.display.icon.size
+        }
+      };
+      data.state.link.item.display.rotate = 0;
+      data.state.link.item.display.translate = {
+        x: 0,
+        y: 0
+      };
+      delete data.state.link.item.display.show;
+      delete data.state.link.item.display.letter;
+      delete data.state.link.item.display.icon;
       return data;
     }
   };

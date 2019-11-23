@@ -172,6 +172,7 @@ var state = (function() {
         hoverScale: {
           show: true
         },
+        newTab: false,
         order: "displayname",
         size: 1,
         border: 0

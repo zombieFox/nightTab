@@ -2750,8 +2750,8 @@ var control = (function() {
       helper.removeClass(html, "is-link-area-alignment-left");
       helper.removeClass(html, "is-link-area-alignment-center");
       helper.removeClass(html, "is-link-area-alignment-right");
-      helper.removeClass(html, "is-link-item-name-show");
-      helper.removeClass(html, "is-link-display-item-show");
+      helper.removeClass(html, "is-link-item-display-name-show");
+      helper.removeClass(html, "is-link-item-display-letcon-show");
       helper.removeClass(html, "is-link-display-alignment-topleft");
       helper.removeClass(html, "is-link-display-alignment-topcenter");
       helper.removeClass(html, "is-link-display-alignment-topright");
@@ -2781,11 +2781,10 @@ var control = (function() {
         helper.addClass(html, "is-link-style-" + state.get().link.style);
         helper.addClass(html, "is-link-orientation-" + state.get().link.orientation);
         if (state.get().link.item.display.letcon.show) {
-          helper.addClass(html, "is-link-display-item-show");
-          helper.addClass(html, "is-link-item-display-iconLetter-show");
+          helper.addClass(html, "is-link-item-display-letcon-show");
         };
         if (state.get().link.item.display.name.show) {
-          helper.addClass(html, "is-link-item-name-show");
+          helper.addClass(html, "is-link-item-display-name-show");
         };
         if (state.get().link.item.url.show) {
           helper.addClass(html, "is-link-item-url-show");
