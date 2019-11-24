@@ -46,7 +46,10 @@
   --link-item-size:                                     1em;
   --link-item-display-letter-size:                      2em;
   --link-item-display-icon-size:                        2.5em;
-  --link-item-name-size:                                0.9em;
+  --link-item-display-rotate:                           0deg;
+  --link-item-display-translate-x:                      0em;
+  --link-item-display-translate-y:                      0em;
+  --link-item-display-name-size:                        0.9em;
   --link-item-border:                                   1;
   /* layout */
   --layout-width:                                       80%;

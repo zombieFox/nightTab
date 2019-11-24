@@ -140,19 +140,25 @@ var state = (function() {
       },
       item: {
         display: {
-          show: true,
-          size: 2,
-          alignment: "centercenter",
-          letter: {
-            size: 3
+          letcon: {
+            show: true,
+            letter: {
+              size: 3
+            },
+            icon: {
+              size: 3
+            }
           },
-          icon: {
-            size: 3
+          name: {
+            show: true,
+            size: 0.9
+          },
+          alignment: "centercenter",
+          rotate: 0,
+          translate: {
+            x: 0,
+            y: 0
           }
-        },
-        name: {
-          show: true,
-          size: 0.9
         },
         url: {
           show: true
@@ -166,6 +172,7 @@ var state = (function() {
         hoverScale: {
           show: true
         },
+        newTab: false,
         order: "displayname",
         size: 1,
         border: 0

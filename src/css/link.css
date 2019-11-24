@@ -121,10 +121,19 @@
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   z-index: 3;
   overflow: hidden;
   user-select: none;
   transition: background-color var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
+}
+
+.is-link-style-block .link-panel-front {
+  padding: 1em;
+}
+
+.is-link-style-list .link-panel-front {
+  padding: 0.5em 1em;
 }
 
 .is-theme-radius .link-panel-front {
@@ -165,102 +174,47 @@
   box-shadow: var(--layout-shadow-large);
 }
 
-.is-link-style-block .link-panel-front {
-  padding: 1em;
-  flex-direction: column;
-}
-
-.is-link-style-block.is-link-display-alignment-topleft .link-panel-front {
+.is-link-display-alignment-topleft .link-panel-front {
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.is-link-style-block.is-link-display-alignment-topcenter .link-panel-front {
+.is-link-display-alignment-topcenter .link-panel-front {
   justify-content: flex-start;
   align-items: center;
 }
 
-.is-link-style-block.is-link-display-alignment-topright .link-panel-front {
+.is-link-display-alignment-topright .link-panel-front {
   justify-content: flex-start;
   align-items: flex-end;
 }
 
-.is-link-style-block.is-link-display-alignment-centerleft .link-panel-front {
+.is-link-display-alignment-centerleft .link-panel-front {
   justify-content: center;
   align-items: flex-start;
 }
 
-.is-link-style-block.is-link-display-alignment-centercenter .link-panel-front {
+.is-link-display-alignment-centercenter .link-panel-front {
   justify-content: center;
   align-items: center;
 }
 
-.is-link-style-block.is-link-display-alignment-centerright .link-panel-front {
+.is-link-display-alignment-centerright .link-panel-front {
   justify-content: center;
   align-items: flex-end;
 }
 
-.is-link-style-block.is-link-display-alignment-bottomleft .link-panel-front {
+.is-link-display-alignment-bottomleft .link-panel-front {
   justify-content: flex-end;
   align-items: flex-start;
 }
 
-.is-link-style-block.is-link-display-alignment-bottomcenter .link-panel-front {
+.is-link-display-alignment-bottomcenter .link-panel-front {
   justify-content: flex-end;
   align-items: center;
 }
 
-.is-link-style-block.is-link-display-alignment-bottomright .link-panel-front {
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.is-link-style-list .link-panel-front {
-  padding: 0.5em 1em;
-  flex-direction: row;
-}
-
-.is-link-style-list.is-link-display-alignment-topleft .link-panel-front {
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.is-link-style-list.is-link-display-alignment-topcenter .link-panel-front {
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.is-link-style-list.is-link-display-alignment-topright .link-panel-front {
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.is-link-style-list.is-link-display-alignment-centerleft .link-panel-front {
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.is-link-style-list.is-link-display-alignment-centercenter .link-panel-front {
-  justify-content: center;
-  align-items: center;
-}
-
-.is-link-style-list.is-link-display-alignment-centerright .link-panel-front {
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.is-link-style-list.is-link-display-alignment-bottomleft .link-panel-front {
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-
-.is-link-style-list.is-link-display-alignment-bottomcenter .link-panel-front {
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.is-link-style-list.is-link-display-alignment-bottomright .link-panel-front {
+.is-link-display-alignment-bottomright .link-panel-front {
   justify-content: flex-end;
   align-items: flex-end;
 }
@@ -313,27 +267,130 @@
 
 /* link display */
 .link-display {
+  display: flex;
+  position: relative;
+  top: var(--link-item-display-translate-y);
+  left: var(--link-item-display-translate-x);
   font-size: 1em;
-  display: none;
-  transition: font-size var(--layout-timing-extra-fast), margin var(--layout-timing-extra-fast);
+  transform: rotate(var(--link-item-display-rotate));
+  transform-origin: center;
+  transition: font-size var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast), left var(--layout-timing-extra-fast);
 }
 
-.is-link-edit.is-link-style-list .link-display {
-  font-size: 0.5em;
-}
-
-.is-link-edit.is-link-style-block .link-display {
+.is-link-edit .link-display {
   font-size: 0.6em;
 }
 
-.is-link-display-item-show .link-display {
-  display: flex;
+.is-link-style-block .link-display {
+  flex-direction: column;
+}
+
+.is-link-style-list .link-display {
+  flex-direction: row;
+}
+
+.is-link-style-block.is-link-display-alignment-topleft .link-display {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.is-link-style-block.is-link-display-alignment-topcenter .link-display {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.is-link-style-block.is-link-display-alignment-topright .link-display {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.is-link-style-block.is-link-display-alignment-centerleft .link-display {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.is-link-style-block.is-link-display-alignment-centercenter .link-display {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-link-style-block.is-link-display-alignment-centerright .link-display {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.is-link-style-block.is-link-display-alignment-bottomleft .link-display {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.is-link-style-block.is-link-display-alignment-bottomcenter .link-display {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.is-link-style-block.is-link-display-alignment-bottomright .link-display {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.is-link-style-list.is-link-display-alignment-topleft .link-display {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.is-link-style-list.is-link-display-alignment-topcenter .link-display {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.is-link-style-list.is-link-display-alignment-topright .link-display {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.is-link-style-list.is-link-display-alignment-centerleft .link-display {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.is-link-style-list.is-link-display-alignment-centercenter .link-display {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-link-style-list.is-link-display-alignment-centerright .link-display {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.is-link-style-list.is-link-display-alignment-bottomleft .link-display {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.is-link-style-list.is-link-display-alignment-bottomcenter .link-display {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.is-link-style-list.is-link-display-alignment-bottomright .link-display {
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .link-display-letter,
 .link-display-icon {
   margin: 0;
   text-align: center;
+}
+
+.link-display-letcon {
+  display: none;
+}
+
+.is-link-item-display-letcon-show .link-display-letcon {
+  display: block;
 }
 
 .link-display-letter {
@@ -360,11 +417,11 @@
   font-size: var(--link-item-display-icon-size);
 }
 
-.is-link-style-block.is-link-item-name-show.is-link-display-item-show .link-panel-front>*:not(:only-child):not(:last-child) {
+.is-link-style-block.is-link-item-display-name-show.is-link-item-display-letcon-show .link-display>*:not(:only-child):not(:last-child) {
   margin-bottom: 0.5em;
 }
 
-.is-link-style-list.is-link-item-name-show.is-link-display-item-show .link-panel-front>*:not(:only-child):not(:last-child) {
+.is-link-style-list.is-link-item-display-name-show.is-link-item-display-letcon-show .link-display>*:not(:only-child):not(:last-child) {
   margin-right: 0.5em
 }
 
@@ -381,56 +438,52 @@
 }
 
 /* link name */
-.link-name {
+.link-display-name {
   margin: 0;
-  font-size: var(--link-item-name-size);
+  font-size: var(--link-item-display-name-size);
   font-family: var(--font-regular);
   color: rgb(var(--theme-gray-12));
   display: none;
-  transition: color var(--layout-timing-extra-fast), font-size var(--layout-timing-extra-fast);
+  transition: color var(--layout-timing-extra-fast);
 }
 
-.is-link-edit .link-name {
-  font-size: 0.6em;
-}
-
-.link-name,
-.link-name:not(:last-child) {
+.link-display-name,
+.link-display-name:not(:last-child) {
   margin-bottom: 0;
 }
 
-.is-link-display-alignment-topleft .link-name,
-.is-link-display-alignment-centerleft .link-name,
-.is-link-display-alignment-bottomleft .link-name {
+.is-link-display-alignment-topleft .link-display-name,
+.is-link-display-alignment-centerleft .link-display-name,
+.is-link-display-alignment-bottomleft .link-display-name {
   text-align: left;
 }
 
-.is-link-display-alignment-topcenter .link-name,
-.is-link-display-alignment-centercenter .link-name,
-.is-link-display-alignment-bottomcenter .link-name {
+.is-link-display-alignment-topcenter .link-display-name,
+.is-link-display-alignment-centercenter .link-display-name,
+.is-link-display-alignment-bottomcenter .link-display-name {
   text-align: center;
 }
 
-.is-link-display-alignment-topright .link-name,
-.is-link-display-alignment-centerright .link-name,
-.is-link-display-alignment-bottomright .link-name {
+.is-link-display-alignment-topright .link-display-name,
+.is-link-display-alignment-centerright .link-display-name,
+.is-link-display-alignment-bottomright .link-display-name {
   text-align: right;
 }
 
-.is-link-item-name-show .link-name {
+.is-link-item-display-name-show .link-display-name {
   display: block;
 }
 
-.link-item:hover .link-name,
-.link-item:focus .link-name {
+.link-item:hover .link-display-name,
+.link-item:focus .link-display-name {
   color: rgb(var(--theme-style-text));
 }
 
-.link-panel-front:focus .link-name {
+.link-panel-front:focus .link-display-name {
   color: rgb(var(--theme-style-text));
 }
 
-.is-link-style-list .link-name {
+.is-link-style-list .link-display-name {
   white-space: nowrap;
 }
 
