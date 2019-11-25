@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   display: flex;
   flex-direction: row;
   z-index: var(--z-index-header);
