@@ -73,6 +73,7 @@
                                                         0 0 1em rgba(0, 0, 0, 0.1);
   --layout-shadow-large:                                0 0 1em rgba(0, 0, 0, 0.2),
                                                         0 0 2em rgba(0, 0, 0, 0.1);
+  --horizontal-rule:                                    calc(var(--layout-line-width) / 2) solid rgb(var(--theme-gray-02));
   /* background */
   --background-color-theme:                             var(--theme-gray-01);
   --background-color-custom:                            rgb(0, 0, 0);

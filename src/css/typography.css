@@ -56,7 +56,7 @@ p:not(:last-child) {
 
 hr {
   border: 0;
-  border-top: 2px solid rgb(var(--theme-gray-02));
+  border-top: var(--horizontal-rule);
   border-radius: var(--theme-radius);
   margin: 1em 0;
   clear: both;
