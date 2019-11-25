@@ -49,7 +49,8 @@ var dropdown = (function() {
   };
 
   documentEvent.clickOut = function() {
-    if (!event.path.includes(_currentFormDropdown)) {
+    var path = event.composedPath();
+    if (!path.includes(_currentFormDropdown)) {
       close();
     };
   };
