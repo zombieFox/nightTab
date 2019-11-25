@@ -572,7 +572,7 @@ var link = (function() {
       if (nameText == null) {
         nameText = "";
       };
-      var linkName = helper.node("p:" + nameText + "|class:link-display-name");
+      var linkDisplayName = helper.node("p:" + nameText + "|class:link-display-name");
 
       var linkUrl = helper.node("div|class:link-url");
       var url = "";
@@ -607,13 +607,8 @@ var link = (function() {
       } else if (stagedLink.link.display == "icon" && stagedLink.link.icon.prefix != null && stagedLink.link.icon.name != null) {
         linkDisplayLetcon.appendChild(linkDisplayIcon);
       };
-      if (state.get().link.item.order == "displayname") {
-        linkDisplay.appendChild(linkDisplayLetcon);
-        linkDisplay.appendChild(linkName);
-      } else if (state.get().link.item.order == "namedisplay") {
-        linkDisplay.appendChild(linkName);
-        linkDisplay.appendChild(linkDisplayLetcon);
-      };
+      linkDisplay.appendChild(linkDisplayLetcon);
+      linkDisplay.appendChild(linkDisplayName);
       linkPanelFront.appendChild(linkDisplay);
       linkLeft.appendChild(linkLeftIcon);
       linkControl.appendChild(linkLeft);

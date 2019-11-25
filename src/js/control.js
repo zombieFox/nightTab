@@ -2115,18 +2115,32 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-link-item-order-displayname"),
-    path: "link.item.order",
+    element: helper.e(".control-link-item-display-direction-horizontal"),
+    path: "link.item.display.direction",
     type: "radio",
     func: function() {
-      link.groupAndItems();
+      render.class();
     }
   }, {
-    element: helper.e(".control-link-item-order-namedisplay"),
-    path: "link.item.order",
+    element: helper.e(".control-link-item-display-direction-vertical"),
+    path: "link.item.display.direction",
     type: "radio",
     func: function() {
-      link.groupAndItems();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-order-letconname"),
+    path: "link.item.display.order",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-order-nameletcon"),
+    path: "link.item.display.order",
+    type: "radio",
+    func: function() {
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-url-show"),
@@ -2750,8 +2764,6 @@ var control = (function() {
       helper.removeClass(html, "is-link-area-alignment-left");
       helper.removeClass(html, "is-link-area-alignment-center");
       helper.removeClass(html, "is-link-area-alignment-right");
-      helper.removeClass(html, "is-link-item-display-name-show");
-      helper.removeClass(html, "is-link-item-display-letcon-show");
       helper.removeClass(html, "is-link-display-alignment-topleft");
       helper.removeClass(html, "is-link-display-alignment-topcenter");
       helper.removeClass(html, "is-link-display-alignment-topright");
@@ -2761,13 +2773,16 @@ var control = (function() {
       helper.removeClass(html, "is-link-display-alignment-bottomleft");
       helper.removeClass(html, "is-link-display-alignment-bottomcenter");
       helper.removeClass(html, "is-link-display-alignment-bottomright");
+      helper.removeClass(html, "is-link-item-display-direction-horizontal");
+      helper.removeClass(html, "is-link-item-display-direction-vertical");
+      helper.removeClass(html, "is-link-item-display-order-letconname");
+      helper.removeClass(html, "is-link-item-display-order-nameletcon");
+      helper.removeClass(html, "is-link-item-display-name-show");
+      helper.removeClass(html, "is-link-item-display-letcon-show");
       helper.removeClass(html, "is-link-item-url-show");
       helper.removeClass(html, "is-link-item-line-show");
       helper.removeClass(html, "is-link-item-shadow-show");
       helper.removeClass(html, "is-link-item-hoverscale-show");
-      helper.removeClass(html, "is-link-item-alignment-left");
-      helper.removeClass(html, "is-link-item-alignment-center");
-      helper.removeClass(html, "is-link-item-alignment-right");
       helper.removeClass(html, "is-link-item-border");
       helper.removeClass(html, "is-link-style-list");
       helper.removeClass(html, "is-link-style-block");
@@ -2777,6 +2792,8 @@ var control = (function() {
       if (state.get().link.show) {
         helper.addClass(html, "is-link-show");
         helper.addClass(html, "is-link-area-alignment-" + state.get().link.area.alignment);
+        helper.addClass(html, "is-link-item-display-direction-" + state.get().link.item.display.direction);
+        helper.addClass(html, "is-link-item-display-order-" + state.get().link.item.display.order);
         helper.addClass(html, "is-link-display-alignment-" + state.get().link.item.display.alignment);
         helper.addClass(html, "is-link-style-" + state.get().link.style);
         helper.addClass(html, "is-link-orientation-" + state.get().link.orientation);
@@ -3229,9 +3246,12 @@ var control = (function() {
       _disable.element("[for=control-link-item-display-translate-y]", true);
       _disable.input(".control-link-item-display-translate-y", true);
       _disable.input(".control-link-item-display-translate-y-default", true);
-      _disable.input(".control-link-item-order-displayname", true);
-      _disable.input(".control-link-item-order-namedisplay", true);
-      _disable.element(".control-link-item-order-namedisplay-helper", true);
+      _disable.input(".control-link-item-display-direction-horizontal", true);
+      _disable.input(".control-link-item-display-direction-vertical", true);
+      _disable.input(".control-link-item-display-order-letconname", true);
+      _disable.input(".control-link-item-display-order-nameletcon", true);
+      _disable.element(".control-link-item-display-direction-helper", true);
+      _disable.element(".control-link-item-display-order-helper", true);
       _disable.input(".control-link-item-url-show", true);
       _disable.input(".control-link-item-line-show", true);
       _disable.input(".control-link-item-shadow-show", true);
@@ -3338,9 +3358,12 @@ var control = (function() {
           _disable.input(".control-link-item-display-translate-y-default", false);
         };
         if (state.get().link.item.display.letcon.show && state.get().link.item.display.name.show) {
-          _disable.input(".control-link-item-order-displayname", false);
-          _disable.input(".control-link-item-order-namedisplay", false);
-          _disable.element(".control-link-item-order-namedisplay-helper", false);
+          _disable.input(".control-link-item-display-direction-horizontal", false);
+          _disable.input(".control-link-item-display-direction-vertical", false);
+          _disable.input(".control-link-item-display-order-letconname", false);
+          _disable.input(".control-link-item-display-order-nameletcon", false);
+          _disable.element(".control-link-item-display-direction-helper", false);
+          _disable.element(".control-link-item-display-order-helper", false);
         };
       };
     };

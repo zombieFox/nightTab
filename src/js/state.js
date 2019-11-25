@@ -153,6 +153,8 @@ var state = (function() {
             show: true,
             size: 0.9
           },
+          direction: "vertical",
+          order: "letconname",
           alignment: "centercenter",
           rotate: 0,
           translate: {
@@ -173,7 +175,6 @@ var state = (function() {
           show: true
         },
         newTab: false,
-        order: "displayname",
         size: 1,
         border: 0
       },

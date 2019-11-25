@@ -658,14 +658,26 @@ var update = (function() {
           size: data.state.link.item.display.icon.size
         }
       };
+      delete data.state.link.item.display.show;
+      delete data.state.link.item.display.letter;
+      delete data.state.link.item.display.icon;
       data.state.link.item.display.rotate = 0;
       data.state.link.item.display.translate = {
         x: 0,
         y: 0
       };
-      delete data.state.link.item.display.show;
-      delete data.state.link.item.display.letter;
-      delete data.state.link.item.display.icon;
+      if (data.state.link.item.order == "displayname") {
+        data.state.link.item.display.order = "letconname";
+      } else if (data.state.link.item.order == "namedisplay") {
+        data.state.link.item.display.order = "nameletcon";
+      };
+      delete data.state.link.item.order;
+      if (data.state.link.style == "block") {
+        data.state.link.item.display.direction = "vertical";
+      } else if (data.state.link.style == "list") {
+        data.state.link.item.display.direction = "horizontal";
+      };
+      delete data.state.link.fit;
       return data;
     }
   };
