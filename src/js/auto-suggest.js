@@ -50,7 +50,7 @@ var autoSuggest = (function() {
   bind.navigateResults = function(event) {
     var elementToFocus = null;
     var focusIndex = null;
-    var allSuggestItems = helper.eA(".auto-suggest-link");
+    var allSuggestItems = helper.eA(".auto-suggest-item");
     var _findInput = function() {
       if (event.target.classList.contains("auto-suggest-input")) {
         _currentInputOptions.input = event.target;
