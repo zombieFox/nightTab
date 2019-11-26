@@ -225,18 +225,16 @@
   height: calc(100% - var(--link-item-url-height));
 }
 
-.is-link-orientation-top.is-link-item-url-show .link-item:focus .link-panel-front,
-.is-link-orientation-top.is-link-item-url-show .link-item:focus-within .link-panel-front,
-.is-link-orientation-top.is-link-item-url-show .link-item:hover .link-panel-front {
-  border-top-left-radius: 0.25em;
-  border-top-right-radius: 0.25em;
+.is-theme-radius.is-link-item-url-show.is-link-orientation-top .link-item:hover .link-panel-front,
+.is-theme-radius.is-link-item-url-show.is-link-orientation-top .link-item:focus .link-panel-front {
+  border-top-left-radius: calc(var(--theme-radius) / 4);
+  border-top-right-radius: calc(var(--theme-radius) / 4);
 }
 
-.is-link-orientation-bottom.is-link-item-url-show .link-item:focus .link-panel-front,
-.is-link-orientation-bottom.is-link-item-url-show .link-item:focus-within .link-panel-front,
-.is-link-orientation-bottom.is-link-item-url-show .link-item:hover .link-panel-front {
-  border-bottom-left-radius: 0.25em;
-  border-bottom-right-radius: 0.25em;
+.is-theme-radius.is-link-item-url-show.is-link-orientation-bottom .link-item:hover .link-panel-front,
+.is-theme-radius.is-link-item-url-show.is-link-orientation-bottom .link-item:focus .link-panel-front {
+  border-bottom-left-radius: calc(var(--theme-radius) / 4);
+  border-bottom-right-radius: calc(var(--theme-radius) / 4);
 }
 
 .is-link-edit .link-panel-front,
@@ -248,15 +246,15 @@
 .is-theme-radius.is-link-edit.is-link-orientation-top .link-panel-front,
 .is-theme-radius.is-link-edit.is-link-orientation-top .link-item:hover .link-panel-front,
 .is-theme-radius.is-link-edit.is-link-orientation-top .link-item:focus .link-panel-front {
-  border-top-left-radius: 0.25em;
-  border-top-right-radius: 0.25em;
+  border-top-left-radius: calc(var(--theme-radius) / 4);
+  border-top-right-radius: calc(var(--theme-radius) / 4);
 }
 
 .is-theme-radius.is-link-edit.is-link-orientation-bottom .link-panel-front,
 .is-theme-radius.is-link-edit.is-link-orientation-bottom .link-item:hover .link-panel-front,
 .is-theme-radius.is-link-edit.is-link-orientation-bottom .link-item:focus .link-panel-front {
-  border-bottom-left-radius: 0.25em;
-  border-bottom-right-radius: 0.25em;
+  border-bottom-left-radius: calc(var(--theme-radius) / 4);
+  border-bottom-right-radius: calc(var(--theme-radius) / 4);
 }
 
 .is-link-item-shadow-show.is-link-edit .link-panel-front,
@@ -585,31 +583,42 @@
   top: var(--layout-line-width);
 }
 
-.is-link-orientation-top.is-link-edit .link-panel-back,
-.is-link-orientation-bottom.is-link-edit .link-panel-back {
+.is-link-item-url-show.is-link-orientation-top .link-item:focus .link-panel-back,
+.is-link-item-url-show.is-link-orientation-top .link-item:focus-within .link-panel-back,
+.is-link-item-url-show.is-link-orientation-top .link-item:hover .link-panel-back {
   height: 100%;
   top: 0;
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--link-item-url-height) + 10%), 0 calc(var(--link-item-url-height) + 10%));
 }
 
-.link-item:focus .link-panel-back,
-.link-item:focus-within .link-panel-back,
-.link-item:hover .link-panel-back {
+.is-link-item-url-show.is-link-orientation-bottom .link-item:focus .link-panel-back,
+.is-link-item-url-show.is-link-orientation-bottom .link-item:focus-within .link-panel-back,
+.is-link-item-url-show.is-link-orientation-bottom .link-item:hover .link-panel-back {
   height: 100%;
   top: 0;
+  clip-path: polygon(0 calc(100% - calc(var(--link-item-url-height) + 10%)), 100% calc(100% - calc(var(--link-item-url-height) + 10%)), 100% 100%, 0 100%);
 }
 
-.is-link-orientation-top.is-link-edit .link-panel-back,
-.is-link-orientation-top .link-item:focus .link-panel-back,
-.is-link-orientation-top .link-item:focus-within .link-panel-back,
-.is-link-orientation-top .link-item:hover .link-panel-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--layout-line-width)), 0 calc(100% - var(--layout-line-width)));
+.is-link-edit.is-link-orientation-top .link-panel-back,
+.is-link-edit.is-link-orientation-top .link-panel-back,
+.is-link-edit.is-link-orientation-top .link-panel-back,
+.is-link-edit.is-link-orientation-top .link-item:focus .link-panel-back,
+.is-link-edit.is-link-orientation-top .link-item:focus-within .link-panel-back,
+.is-link-edit.is-link-orientation-top .link-item:hover .link-panel-back {
+  height: 100%;
+  top: 0;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - calc(var(--link-item-edit-height) - 10%)), 0 calc(100% - calc(var(--link-item-edit-height) - 10%)))
 }
 
-.is-link-orientation-bottom.is-link-edit .link-panel-back,
-.is-link-orientation-bottom .link-item:focus .link-panel-back,
-.is-link-orientation-bottom .link-item:focus-within .link-panel-back,
-.is-link-orientation-bottom .link-item:hover .link-panel-back {
-  clip-path: polygon(0 var(--layout-line-width), 100% var(--layout-line-width), 100% 100%, 0 100%);
+.is-link-edit.is-link-orientation-bottom .link-panel-back,
+.is-link-edit.is-link-orientation-bottom .link-panel-back,
+.is-link-edit.is-link-orientation-bottom .link-panel-back,
+.is-link-edit.is-link-orientation-bottom .link-item:focus .link-panel-back,
+.is-link-edit.is-link-orientation-bottom .link-item:focus-within .link-panel-back,
+.is-link-edit.is-link-orientation-bottom .link-item:hover .link-panel-back {
+  height: 100%;
+  top: 0;
+  clip-path: polygon(0 calc(100% - calc(var(--link-item-edit-height) + 10%)), 100% calc(100% - calc(var(--link-item-edit-height) + 10%)), 100% 100%, 0 100%);
 }
 
 .link-control {
