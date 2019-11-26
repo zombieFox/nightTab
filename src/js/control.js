@@ -3002,10 +3002,12 @@ var control = (function() {
         if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
           _disable.element("[for=control-header-clock-size]", false);
           _disable.input(".control-header-clock-size", false);
+          _disable.element(".control-header-clock-size-count", false);
           _disable.input(".control-header-clock-size-default", false);
         } else {
           _disable.element("[for=control-header-clock-size]", true);
           _disable.input(".control-header-clock-size", true);
+          _disable.element(".control-header-clock-size-count", true);
           _disable.input(".control-header-clock-size-default", true);
         };
       };
@@ -3102,10 +3104,12 @@ var control = (function() {
         if (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show) {
           _disable.element("[for=control-header-date-size]", false);
           _disable.input(".control-header-date-size", false);
+          _disable.element(".control-header-date-size-count", false);
           _disable.input(".control-header-date-size-default", false);
         } else {
           _disable.element("[for=control-header-date-size]", true);
           _disable.input(".control-header-date-size", true);
+          _disable.element(".control-header-date-size-count", true);
           _disable.input(".control-header-date-size-default", true);
         };
       };
@@ -3117,6 +3121,7 @@ var control = (function() {
           _disable.element(".control-header-shade-style-scroll-helper", false);
           _disable.element("[for=control-header-shade-opacity]", false);
           _disable.input(".control-header-shade-opacity", false);
+          _disable.element(".control-header-shade-opacity-count", false);
           _disable.input(".control-header-radius", false);
         } else {
           _disable.input(".control-header-shade-style-always", true);
@@ -3125,6 +3130,7 @@ var control = (function() {
           _disable.element(".control-header-shade-style-scroll-helper", true);
           _disable.element("[for=control-header-shade-opacity]", true);
           _disable.input(".control-header-shade-opacity", true);
+          _disable.element(".control-header-shade-opacity-count", true);
           _disable.input(".control-header-radius", true);
         };
       };
@@ -3137,6 +3143,7 @@ var control = (function() {
           _disable.element(".control-header-search-style-custom-helper", false);
           _disable.element("[for=control-header-search-width]", false);
           _disable.input(".control-header-search-width", false);
+          _disable.element(".control-header-search-width-count", false);
           _disable.input(".control-header-search-focus", false);
           _disable.element(".control-header-search-focus-helper", false);
           _disable.element(".control-header-search-engine-label", false);
@@ -3153,6 +3160,7 @@ var control = (function() {
           _disable.input(".control-header-search-text-alignment-right", false);
           _disable.element("[for=control-header-search-size]", false);
           _disable.input(".control-header-search-size", false);
+          _disable.element(".control-header-search-size-count", false);
           _disable.input(".control-header-search-size-default", false);
           _disable.element(".control-header-search-size-helper", false);
         } else {
@@ -3163,6 +3171,7 @@ var control = (function() {
           _disable.element(".control-header-search-style-custom-helper", true);
           _disable.element("[for=control-header-search-width]", true);
           _disable.input(".control-header-search-width", true);
+          _disable.element(".control-header-search-width-count", true);
           _disable.input(".control-header-search-focus", true);
           _disable.element(".control-header-search-focus-helper", true);
           _disable.element(".control-header-search-engine-label", true);
@@ -3179,6 +3188,7 @@ var control = (function() {
           _disable.input(".control-header-search-text-alignment-right", true);
           _disable.element("[for=control-header-search-size]", true);
           _disable.input(".control-header-search-size", true);
+          _disable.element(".control-header-search-size-count", true);
           _disable.input(".control-header-search-size-default", true);
           _disable.element(".control-header-search-size-helper", true);
         };
@@ -3198,9 +3208,11 @@ var control = (function() {
         if (state.get().header.search.show && state.get().header.search.style === "custom") {
           _disable.element("[for=control-header-search-width]", false);
           _disable.input(".control-header-search-width", false);
+          _disable.element(".control-header-search-width-count", false);
         } else {
           _disable.element("[for=control-header-search-width]", true);
           _disable.input(".control-header-search-width", true);
+          _disable.element(".control-header-search-width-count", true);
         };
       };
       var _greeting = function() {
@@ -3212,6 +3224,7 @@ var control = (function() {
           _disable.input(".control-header-greeting-type-hi", false);
           _disable.element("[for=control-header-greeting-size]", false);
           _disable.input(".control-header-greeting-size", false);
+          _disable.element(".control-header-greeting-size-count", false);
           _disable.input(".control-header-greeting-size-default", false);
         } else {
           _disable.element("[for=control-header-greeting-name]", true);
@@ -3221,6 +3234,7 @@ var control = (function() {
           _disable.input(".control-header-greeting-type-hi", true);
           _disable.element("[for=control-header-greeting-size]", true);
           _disable.input(".control-header-greeting-size", true);
+          _disable.element(".control-header-greeting-size-count", true);
           _disable.input(".control-header-greeting-size-default", true);
         };
       };
@@ -3237,12 +3251,14 @@ var control = (function() {
           _disable.input(".control-header-transitional-type-its", false);
           _disable.element("[for=control-header-transitional-size]", false);
           _disable.input(".control-header-transitional-size", false);
+          _disable.element(".control-header-transitional-size-count", false);
           _disable.input(".control-header-transitional-size-default", false);
         } else {
           _disable.input(".control-header-transitional-type-timeanddate", true);
           _disable.input(".control-header-transitional-type-its", true);
           _disable.element("[for=control-header-transitional-size]", true);
           _disable.input(".control-header-transitional-size", true);
+          _disable.element(".control-header-transitional-size-count", true);
           _disable.input(".control-header-transitional-size-default", true);
         };
       };
@@ -3262,12 +3278,14 @@ var control = (function() {
     };
     var _group = function() {
       if (state.get().group.name.show) {
-        _disable.input(".control-group-name-size", false);
         _disable.element("[for=control-group-name-size]", false);
+        _disable.input(".control-group-name-size", false);
+        _disable.element(".control-group-name-size-count", false);
         _disable.input(".control-group-name-size-default", false);
       } else {
-        _disable.input(".control-group-name-size", true);
         _disable.element("[for=control-group-name-size]", true);
+        _disable.input(".control-group-name-size", true);
+        _disable.element(".control-group-name-size-count", true);
         _disable.input(".control-group-name-size-default", true);
       };
     };
@@ -3277,6 +3295,7 @@ var control = (function() {
       _disable.element(".control-layout-order-helper", true);
       _disable.element("[for=control-link-area-width]", true);
       _disable.input(".control-link-area-width", true);
+      _disable.element(".control-link-area-width-count", true);
       _disable.input(".control-link-area-width-match", true);
       _disable.element(".control-link-area-width-helper", true);
       _disable.element(".control-link-area-alignment-grid", true);
@@ -3287,26 +3306,33 @@ var control = (function() {
       _disable.element(".control-link-area-alignment-helper", true);
       _disable.element("[for=control-link-item-size]", true);
       _disable.input(".control-link-item-size", true);
+      _disable.element(".control-link-item-size-count", true);
       _disable.input(".control-link-item-size-default", true);
       _disable.input(".control-link-item-display-letcon-show", true);
       _disable.element("[for=control-link-item-display-letcon-letter-size]", true);
       _disable.input(".control-link-item-display-letcon-letter-size", true);
+      _disable.element(".control-link-item-display-letcon-letter-size-count", true);
       _disable.input(".control-link-item-display-letcon-letter-size-default", true);
       _disable.element("[for=control-link-item-display-letcon-icon-size]", true);
       _disable.input(".control-link-item-display-letcon-icon-size", true);
+      _disable.element(".control-link-item-display-letcon-icon-size-count", true);
       _disable.input(".control-link-item-display-letcon-icon-size-default", true);
       _disable.input(".control-link-item-display-name-show", true);
       _disable.element("[for=control-link-item-display-name-size]", true);
       _disable.input(".control-link-item-display-name-size", true);
+      _disable.element(".control-link-item-display-name-size-count", true);
       _disable.input(".control-link-item-display-name-size-default", true);
       _disable.element("[for=control-link-item-display-rotate]", true);
       _disable.input(".control-link-item-display-rotate", true);
+      _disable.element(".control-link-item-display-rotate-count", true);
       _disable.input(".control-link-item-display-rotate-default", true);
       _disable.element("[for=control-link-item-display-translate-x]", true);
       _disable.input(".control-link-item-display-translate-x", true);
+      _disable.element(".control-link-item-display-translate-x-count", true);
       _disable.input(".control-link-item-display-translate-x-default", true);
       _disable.element("[for=control-link-item-display-translate-y]", true);
       _disable.input(".control-link-item-display-translate-y", true);
+      _disable.element(".control-link-item-display-translate-y-count", true);
       _disable.input(".control-link-item-display-translate-y-default", true);
       _disable.input(".control-link-item-display-direction-horizontal", true);
       _disable.input(".control-link-item-display-direction-vertical", true);
@@ -3332,6 +3358,7 @@ var control = (function() {
       _disable.input(".control-link-newtab", true);
       _disable.element("[for=control-link-item-border]", true);
       _disable.input(".control-link-item-border", true);
+      _disable.element(".control-link-item-border-count", true);
       _disable.input(".control-link-style-block", true);
       _disable.element(".control-link-style-block-helper", true);
       _disable.input(".control-link-style-list", true);
@@ -3351,6 +3378,7 @@ var control = (function() {
         _disable.element(".control-layout-order-helper", false);
         _disable.element("[for=control-link-area-width]", false);
         _disable.input(".control-link-area-width", false);
+        _disable.element(".control-link-area-width-count", false);
         _disable.input(".control-link-area-width-match", false);
         _disable.element(".control-link-area-width-helper", false);
         _disable.element(".control-link-area-alignment-grid", false);
@@ -3361,6 +3389,7 @@ var control = (function() {
         _disable.element(".control-link-area-alignment-helper", false);
         _disable.element("[for=control-link-item-size]", false);
         _disable.input(".control-link-item-size", false);
+        _disable.element(".control-link-item-size-count", false);
         _disable.input(".control-link-item-size-default", false);
         _disable.input(".control-link-item-display-letcon-show", false);
         _disable.input(".control-link-item-display-name-show", false);
@@ -3371,6 +3400,7 @@ var control = (function() {
         _disable.input(".control-link-newtab", false);
         _disable.element("[for=control-link-item-border]", false);
         _disable.input(".control-link-item-border", false);
+        _disable.element(".control-link-item-border-count", false);
         _disable.input(".control-link-style-block", false);
         _disable.element(".control-link-style-block-helper", false);
         _disable.input(".control-link-style-list", false);
@@ -3387,14 +3417,17 @@ var control = (function() {
         if (state.get().link.item.display.letcon.show) {
           _disable.element("[for=control-link-item-display-letcon-letter-size]", false);
           _disable.input(".control-link-item-display-letcon-letter-size", false);
+          _disable.element(".control-link-item-display-letcon-letter-size-count", false);
           _disable.input(".control-link-item-display-letcon-letter-size-default", false);
           _disable.element("[for=control-link-item-display-letcon-icon-size]", false);
           _disable.input(".control-link-item-display-letcon-icon-size", false);
+          _disable.element(".control-link-item-display-letcon-icon-size-count", false);
           _disable.input(".control-link-item-display-letcon-icon-size-default", false);
         };
         if (state.get().link.item.display.name.show) {
           _disable.element("[for=control-link-item-display-name-size]", false);
           _disable.input(".control-link-item-display-name-size", false);
+          _disable.element(".control-link-item-display-name-size-count", false);
           _disable.input(".control-link-item-display-name-size-default", false);
         };
         if (state.get().link.item.display.letcon.show || state.get().link.item.display.name.show) {
@@ -3411,12 +3444,15 @@ var control = (function() {
           _disable.input(".control-link-item-display-alignment-bottomright", false);
           _disable.element("[for=control-link-item-display-rotate]", false);
           _disable.input(".control-link-item-display-rotate", false);
+          _disable.element(".control-link-item-display-rotate-count", false);
           _disable.input(".control-link-item-display-rotate-default", false);
           _disable.element("[for=control-link-item-display-translate-x]", false);
           _disable.input(".control-link-item-display-translate-x", false);
+          _disable.element(".control-link-item-display-translate-x-count", false);
           _disable.input(".control-link-item-display-translate-x-default", false);
           _disable.element("[for=control-link-item-display-translate-y]", false);
           _disable.input(".control-link-item-display-translate-y", false);
+          _disable.element(".control-link-item-display-translate-y-count", false);
           _disable.input(".control-link-item-display-translate-y-default", false);
         };
         if (state.get().link.item.display.letcon.show && state.get().link.item.display.name.show) {
@@ -3452,27 +3488,37 @@ var control = (function() {
         _disable.input(".control-background-image-from-url", false);
         _disable.element("[for=control-background-image-opacity]", false);
         _disable.input(".control-background-image-opacity", false);
+        _disable.element(".control-background-image-opacity-count", false);
         _disable.element("[for=control-background-image-blur]", false);
         _disable.input(".control-background-image-blur", false);
+        _disable.element(".control-background-image-blur-count", false);
         _disable.element("[for=control-background-image-grayscale]", false);
         _disable.input(".control-background-image-grayscale", false);
+        _disable.element(".control-background-image-grayscale-count", false);
         _disable.element("[for=control-background-image-accent]", false);
         _disable.input(".control-background-image-accent", false);
+        _disable.element(".control-background-image-accent-count", false);
         _disable.element("[for=control-background-image-scale]", false);
         _disable.input(".control-background-image-scale", false);
+        _disable.element(".control-background-image-scale-count", false);
       } else {
         _disable.input(".control-background-image-from-file", true);
         _disable.input(".control-background-image-from-url", true);
         _disable.element("[for=control-background-image-opacity]", true);
         _disable.input(".control-background-image-opacity", true);
+        _disable.element(".control-background-image-opacity-count", true);
         _disable.element("[for=control-background-image-blur]", true);
         _disable.input(".control-background-image-blur", true);
+        _disable.element(".control-background-image-blur-count", true);
         _disable.element("[for=control-background-image-grayscale]", true);
         _disable.input(".control-background-image-grayscale", true);
+        _disable.element(".control-background-image-grayscale-count", true);
         _disable.element("[for=control-background-image-accent]", true);
         _disable.input(".control-background-image-accent", true);
+        _disable.element(".control-background-image-accent-count", true);
         _disable.element("[for=control-background-image-scale]", true);
         _disable.input(".control-background-image-scale", true);
+        _disable.element(".control-background-image-scale-count", true);
       };
       if (state.get().background.image.show && state.get().background.image.from == "file") {
         _disable.element(".control-background-image-file-feedback", false);

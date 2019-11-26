@@ -1241,23 +1241,23 @@ input[type="range"]:disabled::-moz-range-progress {
   cursor: default;
 }
 
-.form-group-text-small,
-.form-group-text-medium,
-.form-group-text-large {
+.form-group-small,
+.form-group-medium,
+.form-group-large {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
 
-.form-group-text-small {
-  min-width: 3em;
+.form-group-small {
+  width: 3em;
 }
 
-.form-group-text-medium {
-  min-width: 6em;
+.form-group-medium {
+  width: 6em;
 }
 
-.form-group-text-large {
-  min-width: 9em;
+.form-group-large {
+  width: 9em;
 }
 
 .form-group {
