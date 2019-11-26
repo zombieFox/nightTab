@@ -94,6 +94,7 @@ var control = (function() {
     element: helper.e(".control-layout-width"),
     path: "layout.width",
     type: "range",
+    rangeCountElement: helper.e(".control-layout-width-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -136,6 +137,7 @@ var control = (function() {
     func: function() {
       render.class();
       layout.render.width();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-layout-alignment-topleft"),
@@ -222,6 +224,7 @@ var control = (function() {
     element: helper.e(".control-layout-padding"),
     path: "layout.padding",
     type: "range",
+    rangeCountElement: helper.e(".control-layout-padding-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -263,11 +266,13 @@ var control = (function() {
     }],
     func: function() {
       layout.render.padding();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-layout-gutter"),
     path: "layout.gutter",
     type: "range",
+    rangeCountElement: helper.e(".control-layout-gutter-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -309,6 +314,7 @@ var control = (function() {
     }],
     func: function() {
       layout.render.gutter();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-layout-title"),
@@ -329,6 +335,7 @@ var control = (function() {
     element: helper.e(".control-header-area-width"),
     path: "header.area.width",
     type: "range",
+    rangeCountElement: helper.e(".control-header-area-width-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -370,6 +377,7 @@ var control = (function() {
     }],
     func: function() {
       header.render.area.width();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-area-width-match"),
@@ -512,6 +520,7 @@ var control = (function() {
     path: "header.greeting.size",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-header-greeting-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -553,6 +562,7 @@ var control = (function() {
     }],
     func: function() {
       header.render.greeting.size();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-greeting-size-default"),
@@ -602,6 +612,7 @@ var control = (function() {
     path: "header.transitional.size",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-header-transitional-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -643,6 +654,7 @@ var control = (function() {
     }],
     func: function() {
       header.render.transitional.size();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-transitional-size-default"),
@@ -816,6 +828,7 @@ var control = (function() {
     path: "header.clock.size",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-header-clock-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -857,6 +870,7 @@ var control = (function() {
     }],
     func: function() {
       header.render.clock.size();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-clock-size-default"),
@@ -1168,6 +1182,7 @@ var control = (function() {
     path: "header.date.size",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-header-date-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1209,6 +1224,7 @@ var control = (function() {
     }],
     func: function() {
       header.render.date.size();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-date-size-default"),
@@ -1276,6 +1292,7 @@ var control = (function() {
     element: helper.e(".control-header-search-width"),
     path: "header.search.width",
     type: "range",
+    rangeCountElement: helper.e(".control-header-search-width-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1317,6 +1334,7 @@ var control = (function() {
     }],
     func: function() {
       header.render.search.width();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-search-focus"),
@@ -1410,6 +1428,7 @@ var control = (function() {
     path: "header.search.size",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-header-search-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1451,6 +1470,7 @@ var control = (function() {
     }],
     func: function() {
       header.render.search.size();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-search-size-default"),
@@ -1504,6 +1524,7 @@ var control = (function() {
     path: "header.button.size",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-header-button-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1545,6 +1566,7 @@ var control = (function() {
     }],
     func: function() {
       header.render.button.size();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-button-size-default"),
@@ -1593,8 +1615,10 @@ var control = (function() {
     path: "header.shade.opacity",
     type: "range",
     valueMod: ["reverse", "float"],
+    rangeCountElement: helper.e(".control-header-shade-opacity-count"),
     func: function() {
       header.render.opacity();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-radius"),
@@ -1616,6 +1640,7 @@ var control = (function() {
     path: "group.name.size",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-group-name-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1657,6 +1682,7 @@ var control = (function() {
     }],
     func: function() {
       link.render.group.size();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-group-name-size-default"),
@@ -1714,25 +1740,31 @@ var control = (function() {
     element: helper.e(".control-group-border"),
     path: "group.border",
     type: "range",
+    rangeCountElement: helper.e(".control-group-border-count"),
     func: function() {
       link.render.group.border();
       render.class();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-border-top"),
     path: "header.border.top",
     type: "range",
+    rangeCountElement: helper.e(".control-header-border-top-count"),
     func: function() {
       header.render.border();
       render.class();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-border-bottom"),
     path: "header.border.bottom",
     type: "range",
+    rangeCountElement: helper.e(".control-header-border-bottom-count"),
     func: function() {
       header.render.border();
       render.class();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-position-sticky"),
@@ -1752,6 +1784,7 @@ var control = (function() {
     element: helper.e(".control-link-area-width"),
     path: "link.area.width",
     type: "range",
+    rangeCountElement: helper.e(".control-link-area-width-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1793,6 +1826,7 @@ var control = (function() {
     }],
     func: function() {
       link.render.area.width();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-area-width-match"),
@@ -1872,6 +1906,7 @@ var control = (function() {
     path: "link.item.size",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-link-item-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1913,6 +1948,7 @@ var control = (function() {
     }],
     func: function() {
       link.render.item.size();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-show"),
@@ -2016,8 +2052,10 @@ var control = (function() {
     path: "link.item.display.letcon.letter.size",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-link-item-display-letcon-letter-size-count"),
     func: function() {
       link.render.item.display.letter();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-letcon-letter-size-default"),
@@ -2032,8 +2070,10 @@ var control = (function() {
     path: "link.item.display.letcon.icon.size",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-link-item-display-letcon-icon-size-count"),
     func: function() {
       link.render.item.display.icon();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-letcon-icon-size-default"),
@@ -2056,8 +2096,10 @@ var control = (function() {
     path: "link.item.display.name.size",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-link-item-display-name-size-count"),
     func: function() {
       link.render.item.name();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-name-size-default"),
@@ -2071,8 +2113,10 @@ var control = (function() {
     element: helper.e(".control-link-item-display-rotate"),
     path: "link.item.display.rotate",
     type: "range",
+    rangeCountElement: helper.e(".control-link-item-display-rotate-count"),
     func: function() {
       link.render.item.rotate();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-rotate-default"),
@@ -2087,8 +2131,10 @@ var control = (function() {
     path: "link.item.display.translate.x",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-link-item-display-translate-x-count"),
     func: function() {
       link.render.item.translate.x();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-translate-x-default"),
@@ -2103,8 +2149,10 @@ var control = (function() {
     path: "link.item.display.translate.y",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-link-item-display-translate-y-count"),
     func: function() {
       link.render.item.translate.y();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-translate-y-default"),
@@ -2182,9 +2230,11 @@ var control = (function() {
     element: helper.e(".control-link-item-border"),
     path: "link.item.border",
     type: "range",
+    rangeCountElement: helper.e(".control-link-item-border-count"),
     func: function() {
       render.class();
       link.render.item.border();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-style-block"),
@@ -2289,9 +2339,11 @@ var control = (function() {
     path: "theme.radius",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-theme-radius-count"),
     func: function() {
       theme.render.radius();
       render.class();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-theme-radius-default"),
@@ -2440,39 +2492,49 @@ var control = (function() {
     path: "background.image.opacity",
     type: "range",
     valueMod: ["reverse", "float"],
+    rangeCountElement: helper.e(".control-background-image-opacity-count"),
     func: function() {
       background.render.opacity();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-background-image-grayscale"),
     path: "background.image.grayscale",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-background-image-grayscale-count"),
     func: function() {
       background.render.grayscale();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-background-image-blur"),
     path: "background.image.blur",
     type: "range",
+    rangeCountElement: helper.e(".control-background-image-blur-count"),
     func: function() {
       background.render.blur();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-background-image-accent"),
     path: "background.image.accent",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-background-image-accent-count"),
     func: function() {
       background.render.accent();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-background-image-scale"),
     path: "background.image.scale",
     type: "range",
     valueMod: ["float"],
+    rangeCountElement: helper.e(".control-background-image-scale-count"),
     func: function() {
       background.render.scale();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-data-import"),
@@ -3527,7 +3589,16 @@ var control = (function() {
       if (supportedType.includes(arrayItem.element.type)) {
         setValue[arrayItem.type](arrayItem);
       };
+      if (arrayItem.rangeCountElement) {
+        render.range.count(arrayItem);
+      };
     });
+  };
+
+  render.range = {
+    count: function(control) {
+      control.rangeCountElement.textContent = control.element.value;
+    }
   };
 
   var init = function() {
