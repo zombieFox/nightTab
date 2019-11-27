@@ -140,6 +140,23 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-layout-width-default"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".layout"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.setValue("layout.width", 80);
+      layout.render.width();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-layout-alignment-topleft"),
     path: "layout.alignment",
     type: "radio",
