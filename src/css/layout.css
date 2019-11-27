@@ -1,6 +1,7 @@
 .layout {
   position: relative;
   width: var(--layout-width);
+  font-size: calc(1em * var(--layout-size));
 }
 
 .is-layout-alignment-horizontal-left body {

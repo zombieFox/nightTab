@@ -54,28 +54,39 @@
       <div class="header-area">
         <div class="header-item-grid">
           <div class="header-item header-greeting">
-            <p class="greeting"></p>
+            <div class="header-greeting-body">
+              <p class="greeting"></p>
+            </div>
           </div>
           <div class="header-item header-transitional">
-            <p class="transitional"></p>
+            <div class="header-transitional-body">
+              <p class="transitional"></p>
+            </div>
           </div>
           <div class="header-item header-clock">
-            <p class="clock"></p>
+            <div class="header-clock-body">
+              <p class="clock"></p>
+            </div>
           </div>
           <div class="header-item header-date">
-            <p class="date"></p>
+            <div class="header-date-body">
+              <p class="date"></p>
+            </div>
           </div>
           <div class="header-item header-search">
-            <form class="search" action="" method="get">
-              <input class="header-search-input search-input mb-0" type="text" placeholder="Find or Search" name="q" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="1">
-              <input type="submit" value="Search" class="is-hidden">
-            </form>
-            <button class="header-search-clear search-clear button button-link mb-0" tabindex="1" disabled>
-              <span class="icon-close"></span>
-            </button>
+            <div class="header-search-body">
+              <form class="search" action="" method="get">
+                <input class="header-search-input search-input mb-0" type="text" placeholder="Find or Search" name="q" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="1">
+                <input type="submit" value="Search" class="is-hidden">
+              </form>
+              <button class="header-search-clear search-clear button button-link mb-0" tabindex="1" disabled>
+                <span class="icon-close"></span>
+              </button>
+            </div>
           </div>
           <div class="header-item header-button header-edit-add">
-            <div class="form-group nested-button mb-0">
+            <div class="header-button-body">
+              <div class="form-group nested-button mb-0">
               <div class="input-wrap input-button input-hide py-0">
                 <input id="control-link-edit" class="control-link-edit" type="checkbox" tabindex="1">
                 <label for="control-link-edit" class="mb-0"><span class="label-icon"></span> Edit</label>
@@ -96,17 +107,22 @@
                 </div>
               </div>
             </div>
+            </div>
           </div>
           <div class="header-item header-button header-accent">
-            <div class="input-wrap input-button input-color-dot input-color-dot-accent py-0">
-              <input id="control-theme-accent-current-quick" class="control-theme-accent-current-quick" type="color" tabindex="1">
-              <label for="control-theme-accent-current-quick">Accent</label>
+            <div class="header-button-body">
+              <div class="input-wrap input-button input-color-dot input-color-dot-accent py-0">
+                <input id="control-theme-accent-current-quick" class="control-theme-accent-current-quick" type="color" tabindex="1">
+                <label for="control-theme-accent-current-quick">Accent</label>
+              </div>
             </div>
           </div>
           <div class="header-item header-button header-menu">
-            <button class="control-menu-open button mb-0" tabindex="1">
-              <span class="button-text"><span class="icon-settings"></span></span>
-            </button>
+            <div class="header-button-body">
+              <button class="control-menu-open button mb-0" tabindex="1">
+                <span class="button-text"><span class="icon-settings"></span></span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -223,6 +239,9 @@
                   <div class="control-layout-padding-count form-group-text form-group-medium form-group-radius-left"></div>
                 </div>
               </div>
+              <div class="button-wrap">
+                <button class="control-layout-padding-default button mb-0" tabindex="1">Default Padding size</button>
+              </div>
             </div>
           </div>
           <div class="menu-item">
@@ -236,6 +255,27 @@
                   <input id="control-layout-gutter" class="control-layout-gutter mr-3" type="range" min="0" max="40" value="0" tabindex="-1">
                   <div class="control-layout-gutter-count form-group-text form-group-medium form-group-radius-left"></div>
                 </div>
+              </div>
+              <div class="button-wrap">
+                <button class="control-layout-gutter-default button mb-0" tabindex="1">Default Gutter size</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Global scaling</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap">
+                <label for="control-layout-size">Size</label>
+                <div class="form-group form-group-block mb-0">
+                  <input id="control-layout-size" class="control-layout-size mr-3" type="range" min="50" max="200" value="0" step="5" tabindex="-1">
+                  <div class="control-layout-size-count form-group-text form-group-medium form-group-radius-left"></div>
+                </div>
+              </div>
+              <p class="control-layout-size-helper form-helper small">Resize all elements on the page.</p>
+              <div class="button-wrap">
+                <button class="control-layout-size-default button mb-0" tabindex="1">Default Global scaling size</button>
               </div>
             </div>
           </div>
