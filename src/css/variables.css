@@ -52,9 +52,10 @@
   --link-item-display-name-size:                        0.9em;
   --link-item-border:                                   1;
   /* layout */
+  --layout-size:                                        1;
   --layout-width:                                       80%;
   --layout-line-width:                                  0.2em;
-  --layout-space:                                       0.5rem;
+  --layout-space:                                       0.5em;
   --layout-padding:                                     4;
   --layout-gutter:                                      4;
   --layout-duration-02:                                 0.2s;

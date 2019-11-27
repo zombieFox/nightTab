@@ -201,6 +201,7 @@ var state = (function() {
       order: "headerlink",
       padding: 4,
       gutter: 2,
+      size: 1,
       width: 80,
       scrollPastEnd: false,
       title: "New Tab"

@@ -286,6 +286,23 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-layout-padding-default"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".layout"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.setValue("layout.padding", 4);
+      layout.render.padding();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-layout-gutter"),
     path: "layout.gutter",
     type: "range",
@@ -332,6 +349,89 @@ var control = (function() {
     func: function() {
       layout.render.gutter();
       render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-layout-gutter-default"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".layout"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.setValue("layout.gutter", 2);
+      layout.render.gutter();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-layout-size"),
+    path: "layout.size",
+    type: "range",
+    valueMod: ["float"],
+    rangeCountElement: helper.e(".control-layout-size-count"),
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".layout"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".layout"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.box.open({
+            element: helper.e(".layout"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
+    func: function() {
+      layout.render.size();
+      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-layout-size-default"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".layout"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.setValue("layout.size", 1);
+      layout.render.size();
+      render.update();
     }
   }, {
     element: helper.e(".control-layout-title"),

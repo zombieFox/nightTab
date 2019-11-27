@@ -17,6 +17,11 @@ var layout = (function() {
     html.style.setProperty("--layout-gutter", state.get().layout.gutter);
   };
 
+  render.size = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--layout-size", state.get().layout.size);
+  };
+
   render.order = function() {
     var html = helper.e("html");
     var layout = helper.e(".layout");
@@ -38,6 +43,7 @@ var layout = (function() {
     render.width();
     render.padding();
     render.gutter();
+    render.size();
     render.order();
     render.title();
   };

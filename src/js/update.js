@@ -624,6 +624,7 @@ var update = (function() {
         name: "Group 1",
         items: data.bookmarks
       }];
+      data.state.layout.size = 1;
       data.state.header.position = "sticky";
       data.state.link.item.display.rotate = 0;
       data.state.link.item.display.translate = {
