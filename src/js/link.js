@@ -1386,6 +1386,7 @@ var link = (function() {
         mod.add.item.close();
         stagedLink.reset();
         modal.close();
+        shade.close();
         pagelock.unlock();
       },
       selectGroup: function(groupIndex) {
@@ -1444,6 +1445,7 @@ var link = (function() {
         mod.add.group.close();
         stagedGroup.reset();
         modal.close();
+        shade.close();
         pagelock.unlock();
       }
     }
@@ -1654,8 +1656,28 @@ var link = (function() {
     }
   };
 
-  var edit = function() {
-    mod.edit.toggle();
+  var edit = {
+    toggle: function() {
+      mod.edit.toggle();
+      render.group.tabindex();
+      render.item.tabindex();
+      control.render.update();
+      control.render.class();
+    },
+    open: function() {
+      mod.edit.open();
+      render.group.tabindex();
+      render.item.tabindex();
+      control.render.update();
+      control.render.class();
+    },
+    close: function() {
+      mod.edit.close();
+      render.group.tabindex();
+      render.item.tabindex();
+      control.render.update();
+      control.render.class();
+    }
   };
 
   var tabindex = function() {

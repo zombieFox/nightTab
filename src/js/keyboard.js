@@ -10,22 +10,17 @@ var keyboard = (function() {
           edge.box.close();
         } else if (state.get().menu) {
           menu.close();
-          shade.close();
         } else if (state.get().dropdown) {
           dropdown.close();
         } else if (state.get().autoSuggest) {
           autoSuggest.close();
         } else if (state.get().link.add) {
           link.add.item.close();
-          shade.close();
         } else if (state.get().group.add) {
           link.add.group.close();
-          shade.close();
         } else if (state.get().link.edit) {
-          link.add.item.close();
-          shade.close();
-          control.render.update();
-          control.render.class();
+          link.edit.close();
+          data.save();
         } else if (state.get().modal) {
           modal.close();
           shade.close();
@@ -93,7 +88,6 @@ var keyboard = (function() {
         if (state.get().link.add) {
           link.add.item.close();
           link.add.group.close();
-          shade.close();
         } else if (state.get().modal) {
           modal.close();
           shade.close();
@@ -107,10 +101,7 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
-        link.edit();
-        link.tabindex();
-        control.render.update();
-        control.render.class();
+        link.edit.toggle();
         data.save();
       };
     }, false);
