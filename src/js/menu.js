@@ -70,6 +70,10 @@ var menu = (function() {
     helper.removeClass(helper.e("html"), "is-menu-open");
   };
 
+  render.removeStyle = function() {
+    helper.e(".menu").removeAttribute("style");
+  };
+
   var nav = function(button, area) {
     render.nav(button, area);
     render.scrollToTop();
@@ -108,6 +112,7 @@ var menu = (function() {
   var init = function() {
     mod.close();
     render.close();
+    render.removeStyle();
   };
 
   return {
