@@ -6,9 +6,9 @@
   width: 100%;
   height: 80vh;
   transform: translateY(calc(-100% - 2em));
-  transition: transform var(--layout-timing-extra-fast);
   z-index: var(--z-index-menu);
   pointer-events: none;
+  transition: transform var(--layout-timing-extra-fast);
 }
 
 .menu:focus {
@@ -22,12 +22,16 @@
 .menu-area {
   background-color: rgb(var(--theme-gray-01));
   border-radius: var(--theme-radius);
-  box-shadow: var(--layout-shadow-large);
   width: 100%;
   max-height: 100%;
   overflow-y: auto;
+  box-shadow: var(--layout-shadow-large);
   pointer-events: all;
   transition: background-color var(--layout-timing-extra-fast);
+}
+
+.is-edge .menu-area {
+  background-color: rgba(var(--theme-gray-01), 0.8);
 }
 
 .menu-nav {
