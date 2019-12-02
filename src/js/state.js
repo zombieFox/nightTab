@@ -219,7 +219,7 @@ var state = (function() {
         }
       },
       style: "dark",
-      radius: 0.2
+      radius: 0.25
     },
     background: {
       color: {

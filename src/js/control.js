@@ -2466,7 +2466,7 @@ var control = (function() {
     element: helper.e(".control-theme-radius-default"),
     type: "button",
     func: function() {
-      mod.setValue("theme.radius", 0.2);
+      mod.setValue("theme.radius", 0.25);
       theme.render.radius();
       render.update();
     }
