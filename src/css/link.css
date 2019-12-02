@@ -133,7 +133,7 @@
 }
 
 .is-link-style-list .link-panel-front {
-  padding: 0.5em 1em;
+  padding: 0.5em 1.5em;
 }
 
 .is-theme-radius .link-panel-front {
@@ -456,7 +456,9 @@
 }
 
 .is-link-item-display-letcon-show .link-display-letcon {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .link-display-letter {
