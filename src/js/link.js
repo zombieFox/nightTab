@@ -819,7 +819,15 @@ var link = (function() {
       var makeGroupOptions = function() {
         if (bookmarks.get().length > 0) {
           bookmarks.get().forEach(function(arrayItem, index) {
-            groupExistingGroup.appendChild(helper.node("option:" + arrayItem.name + "|value:" + arrayItem.name));
+            var option = helper.makeNode({
+              tag: "option",
+              text: arrayItem.name,
+              attr: [{
+                key: "value",
+                value: arrayItem.name
+              }]
+            });
+            groupExistingGroup.appendChild(option);
           });
         } else {
           groupNewRadio.checked = true;
