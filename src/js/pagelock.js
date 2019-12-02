@@ -4,7 +4,7 @@ var pagelock = (function() {
 
   mod.lock = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "pagelock",
       newValue: true
     });
@@ -12,14 +12,14 @@ var pagelock = (function() {
 
   mod.unlock = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "pagelock",
       newValue: false
     });
   };
 
   mod.toggle = function() {
-    if (state.get().menu || state.get().modal || state.get().autoSuggest) {
+    if (state.get.current().menu || state.get.current().modal || state.get.current().autoSuggest) {
       mod.lock();
     } else {
       mod.unlock();
@@ -37,7 +37,7 @@ var pagelock = (function() {
   };
 
   render.toggle = function() {
-    if (state.get().pagelock) {
+    if (state.get.current().pagelock) {
       render.lock();
     } else {
       render.unlock();

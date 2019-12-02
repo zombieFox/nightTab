@@ -4,7 +4,7 @@ var menu = (function() {
 
   mod.open = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "menu",
       newValue: true
     });
@@ -12,7 +12,7 @@ var menu = (function() {
 
   mod.close = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "menu",
       newValue: false
     });
@@ -44,7 +44,7 @@ var menu = (function() {
   render.tabindex = {
     toggle: function() {
       var menu = helper.e(".menu");
-      if (state.get().menu) {
+      if (state.get.current().menu) {
         menu.tabIndex = 1;
         menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
           arrayItem.tabIndex = 1;
@@ -80,7 +80,7 @@ var menu = (function() {
   };
 
   var toggle = function() {
-    if (state.get().menu) {
+    if (state.get.current().menu) {
       close();
     } else {
       open();

@@ -126,7 +126,7 @@ var link = (function() {
 
   mod.edit = {
     toggle: function() {
-      if (state.get().link.edit) {
+      if (state.get.current().link.edit) {
         mod.edit.close();
       } else {
         mod.edit.open();
@@ -134,14 +134,14 @@ var link = (function() {
     },
     open: function() {
       helper.setObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "link.edit",
         newValue: true
       });
     },
     close: function() {
       helper.setObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "link.edit",
         newValue: false
       });
@@ -149,7 +149,7 @@ var link = (function() {
     check: function() {
       if (bookmarks.get().length <= 0) {
         helper.setObject({
-          object: state.get(),
+          object: state.get.current(),
           path: "link.edit",
           newValue: false
         });
@@ -161,14 +161,14 @@ var link = (function() {
     item: {
       open: function() {
         helper.setObject({
-          object: state.get(),
+          object: state.get.current(),
           path: "link.add",
           newValue: true
         });
       },
       close: function() {
         helper.setObject({
-          object: state.get(),
+          object: state.get.current(),
           path: "link.add",
           newValue: false
         });
@@ -177,14 +177,14 @@ var link = (function() {
     group: {
       open: function() {
         helper.setObject({
-          object: state.get(),
+          object: state.get.current(),
           path: "group.add",
           newValue: true
         });
       },
       close: function() {
         helper.setObject({
-          object: state.get(),
+          object: state.get.current(),
           path: "group.add",
           newValue: false
         });
@@ -326,7 +326,7 @@ var link = (function() {
   render.area = {
     width: function() {
       var html = helper.e("html");
-      html.style.setProperty("--link-area-width", state.get().link.area.width + "%");
+      html.style.setProperty("--link-area-width", state.get.current().link.area.width + "%");
     }
   };
 
@@ -484,15 +484,15 @@ var link = (function() {
     },
     size: function() {
       var html = helper.e("html");
-      html.style.setProperty("--group-name-size", state.get().group.name.size + "em");
+      html.style.setProperty("--group-name-size", state.get.current().group.name.size + "em");
     },
     border: function() {
       var html = helper.e("html");
-      html.style.setProperty("--group-border", state.get().group.border);
+      html.style.setProperty("--group-border", state.get.current().group.border);
     },
     tabindex: function() {
       var allGroupControlItem = helper.eA(".group-control-item");
-      if (state.get().link.edit) {
+      if (state.get.current().link.edit) {
         allGroupControlItem.forEach(function(arrayItem, index) {
           arrayItem.tabIndex = 1;
         });
@@ -524,9 +524,9 @@ var link = (function() {
           linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-light";
         };
       } else {
-        if (invert(state.get().theme.accent.current, true) == "#000000") {
+        if (invert(state.get.current().theme.accent.current, true) == "#000000") {
           linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-dark";
-        } else if (invert(state.get().theme.accent.current, true) == "#ffffff") {
+        } else if (invert(state.get.current().theme.accent.current, true) == "#ffffff") {
           linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-light";
         };
       };
@@ -544,7 +544,7 @@ var link = (function() {
           value: 1
         }]
       };
-      if (state.get().link.newTab) {
+      if (state.get.current().link.newTab) {
         linkPanelFrontOptions.attr.push({
           key: "target",
           value: "_blank"
@@ -1036,24 +1036,24 @@ var link = (function() {
     display: {
       letter: function() {
         var html = helper.e("html");
-        html.style.setProperty("--link-item-display-letter-size", state.get().link.item.display.letcon.letter.size + "em");
+        html.style.setProperty("--link-item-display-letter-size", state.get.current().link.item.display.letcon.letter.size + "em");
       },
       icon: function() {
         var html = helper.e("html");
-        html.style.setProperty("--link-item-display-icon-size", state.get().link.item.display.letcon.icon.size + "em");
+        html.style.setProperty("--link-item-display-icon-size", state.get.current().link.item.display.letcon.icon.size + "em");
       }
     },
     name: function() {
       var html = helper.e("html");
-      html.style.setProperty("--link-item-display-name-size", state.get().link.item.display.name.size + "em");
+      html.style.setProperty("--link-item-display-name-size", state.get.current().link.item.display.name.size + "em");
     },
     size: function() {
       var html = helper.e("html");
-      html.style.setProperty("--link-item-size", state.get().link.item.size + "em");
+      html.style.setProperty("--link-item-size", state.get.current().link.item.size + "em");
     },
     tabindex: function() {
       var allLinkControlItem = helper.eA(".link-control-item");
-      if (state.get().link.edit) {
+      if (state.get.current().link.edit) {
         allLinkControlItem.forEach(function(arrayItem, index) {
           arrayItem.tabIndex = 1;
         });
@@ -1065,20 +1065,20 @@ var link = (function() {
     },
     border: function() {
       var html = helper.e("html");
-      html.style.setProperty("--link-item-border", state.get().link.item.border);
+      html.style.setProperty("--link-item-border", state.get.current().link.item.border);
     },
     rotate: function() {
       var html = helper.e("html");
-      html.style.setProperty("--link-item-display-rotate", state.get().link.item.display.rotate + "deg");
+      html.style.setProperty("--link-item-display-rotate", state.get.current().link.item.display.rotate + "deg");
     },
     translate: {
       x: function() {
         var html = helper.e("html");
-        html.style.setProperty("--link-item-display-translate-x", state.get().link.item.display.translate.x + "em");
+        html.style.setProperty("--link-item-display-translate-x", state.get.current().link.item.display.translate.x + "em");
       },
       y: function() {
         var html = helper.e("html");
-        html.style.setProperty("--link-item-display-translate-y", state.get().link.item.display.translate.y + "em");
+        html.style.setProperty("--link-item-display-translate-y", state.get.current().link.item.display.translate.y + "em");
       }
     }
   };
@@ -1086,7 +1086,7 @@ var link = (function() {
   render.all = function() {
     var linkSection = helper.e(".link");
     var bookmarksToRender = false;
-    if (state.get().search) {
+    if (state.get.current().search) {
       bookmarksToRender = search.get();
     } else {
       bookmarksToRender = bookmarks.get();
@@ -1128,7 +1128,7 @@ var link = (function() {
       }
     };
     // if searching
-    if (state.get().search) {
+    if (state.get.current().search) {
       // if bookmarks exist to be searched
       if (bookmarksToRender.total > 0) {
         make.bookmarks(bookmarksToRender.matching);
@@ -1188,7 +1188,7 @@ var link = (function() {
       var paraWrap1 = helper.node("div|class:p-wrap");
       var paraWrap2 = helper.node("div|class:p-wrap");
       var para1 = helper.node("p:No bookmarks matching \"" + helper.e(".header-search-input").value + "\" found.|class:mb-0");
-      var para2 = helper.node("p:\"Enter\" to Search " + state.get().header.search.engine[state.get().header.search.engine.selected].name + ".|class:small muted mb-0");
+      var para2 = helper.node("p:\"Enter\" to Search " + state.get.current().header.search.engine[state.get.current().header.search.engine.selected].name + ".|class:small muted mb-0");
       paraWrap1.appendChild(para1);
       paraWrap2.appendChild(para2);
       linkEmpty.appendChild(paraWrap1);

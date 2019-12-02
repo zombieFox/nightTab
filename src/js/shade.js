@@ -6,7 +6,7 @@ var shade = (function() {
 
   mod.open = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "shade",
       newValue: true
     });
@@ -14,22 +14,22 @@ var shade = (function() {
 
   mod.close = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "shade",
       newValue: false
     });
   };
 
   mod.toggle = function() {
-    if (state.get().shade) {
+    if (state.get.current().shade) {
       helper.setObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "shade",
         newValue: false
       });
     } else {
       helper.setObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "shade",
         newValue: true
       });
@@ -39,7 +39,7 @@ var shade = (function() {
   var render = {};
 
   render.toggle = function(override) {
-    if (state.get().shade) {
+    if (state.get.current().shade) {
       render.open(override);
     } else {
       render.close();

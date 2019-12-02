@@ -19,7 +19,7 @@ var greeting = (function() {
   };
 
   render.all = function() {
-    if (state.get().header.greeting.show) {
+    if (state.get.current().header.greeting.show) {
       var greeting = helper.e(".greeting");
       var message = {
         good: function() {
@@ -34,9 +34,9 @@ var greeting = (function() {
           return "Hi";
         }
       };
-      var string = message[state.get().header.greeting.type]();
-      if (state.get().header.greeting.name != "" && state.get().header.greeting.name != undefined) {
-        string = string + ", " + state.get().header.greeting.name;
+      var string = message[state.get.current().header.greeting.type]();
+      if (state.get.current().header.greeting.name != "" && state.get.current().header.greeting.name != undefined) {
+        string = string + ", " + state.get.current().header.greeting.name;
       };
       var greetingItem = helper.node("span|class:greeting-item");
       var greetingItemText = helper.node("span:" + string + "|class:greeting-item-text");

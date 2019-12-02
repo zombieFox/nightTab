@@ -234,7 +234,7 @@ var data = (function() {
     mod.set(_saveName, JSON.stringify({
       nighttab: true,
       version: version.get().number,
-      state: state.get(),
+      state: state.get.current(),
       bookmarks: bookmarks.get()
     }));
   };

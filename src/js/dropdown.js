@@ -6,7 +6,7 @@ var dropdown = (function() {
 
   mod.open = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "dropdown",
       newValue: true
     });
@@ -14,22 +14,22 @@ var dropdown = (function() {
 
   mod.close = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "dropdown",
       newValue: false
     });
   };
 
   mod.toggle = function() {
-    if (state.get().dropdown) {
+    if (state.get.current().dropdown) {
       helper.setObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "dropdown",
         newValue: false
       });
     } else {
       helper.setObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "dropdown",
         newValue: true
       });
@@ -79,7 +79,7 @@ var dropdown = (function() {
 
   render.offset = function() {
     var formDropdownMenu = _currentFormDropdown.querySelector(".form-dropdown-menu");
-    if (state.get().dropdown) {
+    if (state.get.current().dropdown) {
       var box = formDropdownMenu.getBoundingClientRect();
       if (box.right > window.innerWidth) {
         helper.addClass(formDropdownMenu, "form-dropdown-menu-left");
@@ -100,7 +100,7 @@ var dropdown = (function() {
   };
 
   render.toggle = function() {
-    if (state.get().dropdown) {
+    if (state.get.current().dropdown) {
       render.open();
     } else {
       render.close();

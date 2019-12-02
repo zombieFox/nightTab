@@ -4,22 +4,22 @@ var layout = (function() {
 
   render.width = function() {
     var html = helper.e("html");
-    html.style.setProperty("--layout-width", state.get().layout.width + "%");
+    html.style.setProperty("--layout-width", state.get.current().layout.width + "%");
   };
 
   render.padding = function() {
     var html = helper.e("html");
-    html.style.setProperty("--layout-padding", state.get().layout.padding);
+    html.style.setProperty("--layout-padding", state.get.current().layout.padding);
   };
 
   render.gutter = function() {
     var html = helper.e("html");
-    html.style.setProperty("--layout-gutter", state.get().layout.gutter);
+    html.style.setProperty("--layout-gutter", state.get.current().layout.gutter);
   };
 
   render.size = function() {
     var html = helper.e("html");
-    html.style.setProperty("--layout-size", state.get().layout.size);
+    html.style.setProperty("--layout-size", state.get.current().layout.size);
   };
 
   render.order = function() {
@@ -27,16 +27,16 @@ var layout = (function() {
     var layout = helper.e(".layout");
     var header = helper.e(".header");
     var link = helper.e(".link");
-    if (state.get().layout.order == "headerlink") {
+    if (state.get.current().layout.order == "headerlink") {
       layout.insertBefore(header, link);
-    } else if (state.get().layout.order == "linkheader") {
+    } else if (state.get.current().layout.order == "linkheader") {
       layout.insertBefore(link, header);
     };
   };
 
   render.title = function() {
     var title = helper.e("title");
-    title.textContent = state.get().layout.title;
+    title.textContent = state.get.current().layout.title;
   };
 
   var init = function() {

@@ -15,12 +15,12 @@ var background = (function() {
   mod.clear = {
     file: function() {
       helper.setObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "background.image.file.name",
         newValue: ""
       });
       helper.setObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "background.image.file.data",
         newValue: ""
       });
@@ -30,12 +30,12 @@ var background = (function() {
   mod.image = {
     file: function(name, data) {
       helper.setObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "background.image.file.name",
         newValue: name
       });
       helper.setObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "background.image.file.data",
         newValue: data
       });
@@ -71,7 +71,7 @@ var background = (function() {
 
   render.color = {
     custom: function() {
-      helper.e("html").style.setProperty("--background-color-custom", state.get().background.color.custom.r + ", " + state.get().background.color.custom.g + ", " + state.get().background.color.custom.b);
+      helper.e("html").style.setProperty("--background-color-custom", state.get.current().background.color.custom.r + ", " + state.get.current().background.color.custom.g + ", " + state.get.current().background.color.custom.b);
     },
     clearHTML: function() {
       helper.e("html").style.backgroundColor = "";
@@ -80,16 +80,16 @@ var background = (function() {
 
   render.image = function() {
     var html = helper.e("html");
-    if (state.get().background.image.show) {
-      if (state.get().background.image.from == "file") {
-        html.style.setProperty("--background-image", "url(" + state.get().background.image.file.data + ")");
-      } else if (state.get().background.image.from == "url") {
-        if (/\s+/g.test(state.get().background.image.url)) {
-          var allUrls = state.get().background.image.url.split(/\s+/);
+    if (state.get.current().background.image.show) {
+      if (state.get.current().background.image.from == "file") {
+        html.style.setProperty("--background-image", "url(" + state.get.current().background.image.file.data + ")");
+      } else if (state.get.current().background.image.from == "url") {
+        if (/\s+/g.test(state.get.current().background.image.url)) {
+          var allUrls = state.get.current().background.image.url.split(/\s+/);
           var randomUrl = allUrls[Math.floor(Math.random() * allUrls.length)];
           html.style.setProperty("--background-image", "url(" + randomUrl + ")");
         } else {
-          html.style.setProperty("--background-image", "url(" + state.get().background.image.url + ")");
+          html.style.setProperty("--background-image", "url(" + state.get.current().background.image.url + ")");
         };
       };
     } else {
@@ -99,27 +99,27 @@ var background = (function() {
 
   render.blur = function() {
     var html = helper.e("html");
-    html.style.setProperty("--background-blur", state.get().background.image.blur + "px");
+    html.style.setProperty("--background-blur", state.get.current().background.image.blur + "px");
   };
 
   render.grayscale = function() {
     var html = helper.e("html");
-    html.style.setProperty("--background-grayscale", state.get().background.image.grayscale);
+    html.style.setProperty("--background-grayscale", state.get.current().background.image.grayscale);
   };
 
   render.opacity = function() {
     var html = helper.e("html");
-    html.style.setProperty("--background-opacity", state.get().background.image.opacity);
+    html.style.setProperty("--background-opacity", state.get.current().background.image.opacity);
   };
 
   render.scale = function() {
     var html = helper.e("html");
-    html.style.setProperty("--background-scale", state.get().background.image.scale);
+    html.style.setProperty("--background-scale", state.get.current().background.image.scale);
   };
 
   render.accent = function() {
     var html = helper.e("html");
-    html.style.setProperty("--background-accent", state.get().background.image.accent);
+    html.style.setProperty("--background-accent", state.get.current().background.image.accent);
   };
 
   render.input = {
@@ -127,16 +127,16 @@ var background = (function() {
       helper.e(".control-background-image-file").value = "";
     },
     picker: function() {
-      helper.e(".control-background-color-custom-current-picker").value = helper.rgbToHex(state.get().background.color.custom);
+      helper.e(".control-background-color-custom-current-picker").value = helper.rgbToHex(state.get.current().background.color.custom);
     },
     hex: function() {
-      helper.e(".control-background-color-custom-current-hex").value = helper.rgbToHex(state.get().background.color.custom);
+      helper.e(".control-background-color-custom-current-hex").value = helper.rgbToHex(state.get.current().background.color.custom);
     }
   };
 
   render.feedback = {
     init: function() {
-      if (state.get().background.image.file.name != "") {
+      if (state.get.current().background.image.file.name != "") {
         render.feedback.current();
       } else {
         render.feedback.empty();
@@ -150,7 +150,7 @@ var background = (function() {
     current: function() {
       var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
       var para1 = helper.node("p:Image loaded.|class:muted small");
-      var para2 = helper.node("p:" + state.get().background.image.file.name);
+      var para2 = helper.node("p:" + state.get.current().background.image.file.name);
       controlBackgroundImageFileFeedback.appendChild(para1);
       controlBackgroundImageFileFeedback.appendChild(para2);
     },

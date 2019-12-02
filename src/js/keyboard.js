@@ -6,24 +6,24 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       //  esc
       if (event.keyCode == 27) {
-        if (state.get().edge) {
+        if (state.get.current().edge) {
           edge.box.close();
-        } else if (state.get().menu) {
+        } else if (state.get.current().menu) {
           menu.close();
-        } else if (state.get().dropdown) {
+        } else if (state.get.current().dropdown) {
           dropdown.close();
-        } else if (state.get().autoSuggest) {
+        } else if (state.get.current().autoSuggest) {
           autoSuggest.close();
-        } else if (state.get().link.add) {
+        } else if (state.get.current().link.add) {
           link.add.item.close();
-        } else if (state.get().group.add) {
+        } else if (state.get.current().group.add) {
           link.add.group.close();
-        } else if (state.get().link.edit && state.get().modal) {
+        } else if (state.get.current().link.edit && state.get.current().modal) {
           link.add.item.close();
-        } else if (state.get().link.edit) {
+        } else if (state.get.current().link.edit) {
           link.edit.close();
           data.save();
-        } else if (state.get().modal) {
+        } else if (state.get.current().modal) {
           modal.close();
           shade.close();
         };
@@ -36,14 +36,14 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
-        if (state.get().group.add) {
+        if (state.get.current().group.add) {
           link.add.group.close();
         };
-        if (!state.get().link.add) {
-          if (state.get().menu) {
+        if (!state.get.current().link.add) {
+          if (state.get.current().menu) {
             menu.close();
           };
-          if (state.get().modal) {
+          if (state.get.current().modal) {
             modal.close();
           };
           link.add.item.open();
@@ -56,14 +56,14 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+g
       if (event.ctrlKey && event.altKey && event.keyCode == 71) {
-        if (state.get().link.add) {
+        if (state.get.current().link.add) {
           link.add.item.close();
         };
-        if (!state.get().group.add) {
-          if (state.get().menu) {
+        if (!state.get.current().group.add) {
+          if (state.get.current().menu) {
             menu.close();
           };
-          if (state.get().modal) {
+          if (state.get.current().modal) {
             modal.close();
           };
           link.add.group.open();
@@ -87,10 +87,10 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+m
       if (event.ctrlKey && event.altKey && event.keyCode == 77) {
-        if (state.get().link.add) {
+        if (state.get.current().link.add) {
           link.add.item.close();
           link.add.group.close();
-        } else if (state.get().modal) {
+        } else if (state.get.current().modal) {
           modal.close();
           shade.close();
         };
@@ -112,7 +112,7 @@ var keyboard = (function() {
   bind.ctrAltR = function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+r
-      if (state.get().theme.accent.random.active && event.ctrlKey && event.altKey && event.keyCode == 82) {
+      if (state.get.current().theme.accent.random.active && event.ctrlKey && event.altKey && event.keyCode == 82) {
         theme.render.accent.random();
         theme.render.accent.color();
         link.groupAndItems();

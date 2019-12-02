@@ -152,7 +152,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("layout.width", 80);
+      mod.setValue("layout.width", helper.getObject({
+        object: state.mod.default,
+        path: "layout.width"
+      }));
       layout.render.width();
       render.update();
     }
@@ -298,7 +301,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("layout.padding", 4);
+      mod.setValue("layout.padding", helper.getObject({
+        object: state.mod.default,
+        path: "layout.padding"
+      }));
       layout.render.padding();
       render.update();
     }
@@ -363,7 +369,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("layout.gutter", 2);
+      mod.setValue("layout.gutter", helper.getObject({
+        object: state.mod.default,
+        path: "layout.gutter"
+      }));
       layout.render.gutter();
       render.update();
     }
@@ -429,7 +438,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("layout.size", 1);
+      mod.setValue("layout.size", helper.getObject({
+        object: state.mod.default,
+        path: "layout.size"
+      }));
       layout.render.size();
       render.update();
     }
@@ -515,7 +527,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("header.area.width", helper.getObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "link.area.width"
       }));
       header.render.area.width();
@@ -694,7 +706,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("header.greeting.size", 1);
+      mod.setValue("header.greeting.size", helper.getObject({
+        object: state.mod.default,
+        path: "header.greeting.size"
+      }));
       header.render.greeting.size();
       render.update();
     }
@@ -786,7 +801,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("header.transitional.size", 1);
+      mod.setValue("header.transitional.size", helper.getObject({
+        object: state.mod.default,
+        path: "header.transitional.size"
+      }));
       header.render.transitional.size();
       render.update();
     }
@@ -1002,7 +1020,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("header.clock.size", 1);
+      mod.setValue("header.clock.size", helper.getObject({
+        object: state.mod.default,
+        path: "header.clock.size"
+      }));
       header.render.clock.size();
       render.update();
     }
@@ -1356,7 +1377,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("header.date.size", 1);
+      mod.setValue("header.date.size", helper.getObject({
+        object: state.mod.default,
+        path: "header.date.size"
+      }));
       header.render.date.size();
       render.update();
     }
@@ -1602,7 +1626,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("header.search.size", 1);
+      mod.setValue("header.search.size", helper.getObject({
+        object: state.mod.default,
+        path: "header.search.size"
+      }));
       header.render.search.size();
       render.update();
     }
@@ -1698,7 +1725,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("header.button.size", 1);
+      mod.setValue("header.button.size", helper.getObject({
+        object: state.mod.default,
+        path: "header.button.size"
+      }));
       header.render.button.size();
       render.update();
     }
@@ -1814,7 +1844,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("group.name.size", 1);
+      mod.setValue("group.name.size", helper.getObject({
+        object: state.mod.default,
+        path: "group.name.size"
+      }));
       link.render.group.size();
       render.update();
     }
@@ -1964,7 +1997,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("link.area.width", helper.getObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "header.area.width"
       }));
       link.render.area.width();
@@ -2089,7 +2122,10 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.setValue("link.item.size", 1);
+      mod.setValue("link.item.size", helper.getObject({
+        object: state.mod.default,
+        path: "link.item.size"
+      }));
       link.render.item.size();
       render.update();
     }
@@ -2178,7 +2214,10 @@ var control = (function() {
     element: helper.e(".control-link-item-display-letcon-letter-size-default"),
     type: "button",
     func: function() {
-      mod.setValue("link.item.display.letcon.letter.size", 3);
+      mod.setValue("link.item.display.letcon.letter.size", helper.getObject({
+        object: state.mod.default,
+        path: "link.item.display.letcon.letter.size"
+      }));
       link.render.item.display.letter();
       render.update();
     }
@@ -2196,7 +2235,10 @@ var control = (function() {
     element: helper.e(".control-link-item-display-letcon-icon-size-default"),
     type: "button",
     func: function() {
-      mod.setValue("link.item.display.letcon.icon.size", 3);
+      mod.setValue("link.item.display.letcon.icon.size", helper.getObject({
+        object: state.mod.default,
+        path: "link.item.display.letcon.icon.size"
+      }));
       link.render.item.display.icon();
       render.update();
     }
@@ -2222,7 +2264,10 @@ var control = (function() {
     element: helper.e(".control-link-item-display-name-size-default"),
     type: "button",
     func: function() {
-      mod.setValue("link.item.display.name.size", 0.9);
+      mod.setValue("link.item.display.name.size", helper.getObject({
+        object: state.mod.default,
+        path: "link.item.display.name.size"
+      }));
       link.render.item.name();
       render.update();
     }
@@ -2239,7 +2284,10 @@ var control = (function() {
     element: helper.e(".control-link-item-display-rotate-default"),
     type: "button",
     func: function() {
-      mod.setValue("link.item.display.rotate", 0);
+      mod.setValue("link.item.display.rotate", helper.getObject({
+        object: state.mod.default,
+        path: "link.item.display.rotate"
+      }));
       link.render.item.rotate();
       render.update();
     }
@@ -2257,7 +2305,10 @@ var control = (function() {
     element: helper.e(".control-link-item-display-translate-x-default"),
     type: "button",
     func: function() {
-      mod.setValue("link.item.display.translate.x", 0);
+      mod.setValue("link.item.display.translate.x", helper.getObject({
+        object: state.mod.default,
+        path: "link.item.display.translate.x"
+      }));
       link.render.item.translate.x();
       render.update();
     }
@@ -2275,7 +2326,10 @@ var control = (function() {
     element: helper.e(".control-link-item-display-translate-y-default"),
     type: "button",
     func: function() {
-      mod.setValue("link.item.display.translate.y", 0);
+      mod.setValue("link.item.display.translate.y", helper.getObject({
+        object: state.mod.default,
+        path: "link.item.display.translate.y"
+      }));
       link.render.item.translate.y();
       render.update();
     }
@@ -2466,7 +2520,10 @@ var control = (function() {
     element: helper.e(".control-theme-radius-default"),
     type: "button",
     func: function() {
-      mod.setValue("theme.radius", 0.25);
+      mod.setValue("theme.radius", helper.getObject({
+        object: state.mod.default,
+        path: "theme.radius"
+      }));
       theme.render.radius();
       render.update();
     }
@@ -2678,7 +2735,7 @@ var control = (function() {
 
   mod.setValue = function(path, value) {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: path,
       newValue: value
     });
@@ -2742,12 +2799,12 @@ var control = (function() {
           });
         };
         helper.setObject({
-          object: state.get(),
+          object: state.get.current(),
           path: object.path,
           newValue: newValue
         });
         // console.log("state set", object.path, helper.getObject({
-        //   object: state.get(),
+        //   object: state.get.current(),
         //   path: object.path
         // }));
       };
@@ -2807,23 +2864,23 @@ var control = (function() {
         helper.removeClass(html, "is-header-area-alignment-left");
         helper.removeClass(html, "is-header-area-alignment-center");
         helper.removeClass(html, "is-header-area-alignment-right");
-        helper.addClass(html, "is-header-area-alignment-" + state.get().header.area.alignment);
+        helper.addClass(html, "is-header-area-alignment-" + state.get.current().header.area.alignment);
       };
       var _item = function() {
         helper.removeClass(html, "is-header-item-alignment-left");
         helper.removeClass(html, "is-header-item-alignment-center");
         helper.removeClass(html, "is-header-item-alignment-right");
-        helper.addClass(html, "is-header-item-alignment-" + state.get().header.item.alignment);
+        helper.addClass(html, "is-header-item-alignment-" + state.get.current().header.item.alignment);
       };
       var _clock = function() {
-        if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+        if (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
           helper.addClass(html, "is-header-clock-show");
         } else {
           helper.removeClass(html, "is-header-clock-show");
         };
       };
       var _date = function() {
-        if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show) {
+        if (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show) {
           helper.addClass(html, "is-header-date-show");
         } else {
           helper.removeClass(html, "is-header-date-show");
@@ -2836,35 +2893,35 @@ var control = (function() {
         helper.removeClass(html, "is-header-search-text-alignment-left");
         helper.removeClass(html, "is-header-search-text-alignment-center");
         helper.removeClass(html, "is-header-search-text-alignment-right");
-        if (state.get().header.search.show) {
+        if (state.get.current().header.search.show) {
           helper.addClass(html, "is-header-search-show");
-          helper.addClass(html, "is-header-search-style-" + state.get().header.search.style);
-          helper.addClass(html, "is-header-search-text-alignment-" + state.get().header.search.text.alignment);
+          helper.addClass(html, "is-header-search-style-" + state.get.current().header.search.style);
+          helper.addClass(html, "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment);
         };
-        helper.e(".control-header-search-engine-custom-name").value = state.get().header.search.engine.custom.name;
-        helper.e(".control-header-search-engine-custom-url").value = state.get().header.search.engine.custom.url;
+        helper.e(".control-header-search-engine-custom-name").value = state.get.current().header.search.engine.custom.name;
+        helper.e(".control-header-search-engine-custom-url").value = state.get.current().header.search.engine.custom.url;
       };
       var _button = function() {
-        if (state.get().header.button.editAdd.show) {
+        if (state.get.current().header.button.editAdd.show) {
           helper.addClass(html, "is-header-button-editadd-show");
         } else {
           helper.removeClass(html, "is-header-button-editadd-show");
         };
-        if (state.get().header.button.accent.show) {
+        if (state.get.current().header.button.accent.show) {
           helper.addClass(html, "is-header-button-accent-show");
         } else {
           helper.removeClass(html, "is-header-button-accent-show");
         };
       };
       var _greeting = function() {
-        if (state.get().header.greeting.show) {
+        if (state.get.current().header.greeting.show) {
           helper.addClass(html, "is-header-greeting-show");
         } else {
           helper.removeClass(html, "is-header-greeting-show");
         };
       };
       var _transitional = function() {
-        if (state.get().header.transitional.show && (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
+        if (state.get.current().header.transitional.show && (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show || state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) {
           helper.addClass(html, "is-header-transitional-show");
         } else {
           helper.removeClass(html, "is-header-transitional-show");
@@ -2872,10 +2929,10 @@ var control = (function() {
       };
       var _shade = function() {
         helper.removeClass(html, "is-header-shade-show");
-        if (state.get().header.shade.show) {
+        if (state.get.current().header.shade.show) {
           helper.addClass(html, "is-header-shade-show");
         };
-        if (state.get().header.radius) {
+        if (state.get.current().header.radius) {
           helper.addClass(html, "is-header-radius");
         } else {
           helper.removeClass(html, "is-header-radius");
@@ -2884,17 +2941,17 @@ var control = (function() {
       var _border = function() {
         helper.removeClass(html, "is-header-border-top");
         helper.removeClass(html, "is-header-border-bottom");
-        if (state.get().header.border.top > 0) {
+        if (state.get.current().header.border.top > 0) {
           helper.addClass(html, "is-header-border-top");
         };
-        if (state.get().header.border.bottom > 0) {
+        if (state.get.current().header.border.bottom > 0) {
           helper.addClass(html, "is-header-border-bottom");
         };
       };
       var _position = function() {
         helper.removeClass(html, "is-header-position-sticky");
         helper.removeClass(html, "is-header-position-inline");
-        helper.addClass(html, "is-header-position-" + state.get().header.position);
+        helper.addClass(html, "is-header-position-" + state.get.current().header.position);
       };
       _area();
       _item();
@@ -2913,10 +2970,10 @@ var control = (function() {
         helper.removeClass(html, "is-group-area-alignment-left");
         helper.removeClass(html, "is-group-area-alignment-center");
         helper.removeClass(html, "is-group-area-alignment-right");
-        helper.addClass(html, "is-group-area-alignment-" + state.get().group.area.alignment);
+        helper.addClass(html, "is-group-area-alignment-" + state.get.current().group.area.alignment);
       };
       var _name = function() {
-        if (state.get().group.name.show) {
+        if (state.get.current().group.name.show) {
           helper.addClass(html, "is-group-name-show");
         } else {
           helper.removeClass(html, "is-group-name-show");
@@ -2925,11 +2982,11 @@ var control = (function() {
       var _order = function() {
         helper.removeClass(html, "is-group-order-headerbody");
         helper.removeClass(html, "is-group-order-bodyheader");
-        helper.addClass(html, "is-group-order-" + state.get().group.order);
+        helper.addClass(html, "is-group-order-" + state.get.current().group.order);
       };
       var _border = function() {
         helper.removeClass(html, "is-group-border");
-        if (state.get().group.border > 0) {
+        if (state.get.current().group.border > 0) {
           helper.addClass(html, "is-group-border");
         };
       };
@@ -2968,42 +3025,42 @@ var control = (function() {
       helper.removeClass(html, "is-link-orientation-top");
       helper.removeClass(html, "is-link-orientation-bottom");
       helper.removeClass(html, "is-link-edit");
-      if (state.get().link.show) {
+      if (state.get.current().link.show) {
         helper.addClass(html, "is-link-show");
-        helper.addClass(html, "is-link-area-alignment-" + state.get().link.area.alignment);
-        helper.addClass(html, "is-link-item-display-direction-" + state.get().link.item.display.direction);
-        helper.addClass(html, "is-link-item-display-order-" + state.get().link.item.display.order);
-        helper.addClass(html, "is-link-display-alignment-" + state.get().link.item.display.alignment);
-        helper.addClass(html, "is-link-style-" + state.get().link.style);
-        helper.addClass(html, "is-link-orientation-" + state.get().link.orientation);
-        if (state.get().link.item.display.letcon.show) {
+        helper.addClass(html, "is-link-area-alignment-" + state.get.current().link.area.alignment);
+        helper.addClass(html, "is-link-item-display-direction-" + state.get.current().link.item.display.direction);
+        helper.addClass(html, "is-link-item-display-order-" + state.get.current().link.item.display.order);
+        helper.addClass(html, "is-link-display-alignment-" + state.get.current().link.item.display.alignment);
+        helper.addClass(html, "is-link-style-" + state.get.current().link.style);
+        helper.addClass(html, "is-link-orientation-" + state.get.current().link.orientation);
+        if (state.get.current().link.item.display.letcon.show) {
           helper.addClass(html, "is-link-item-display-letcon-show");
         };
-        if (state.get().link.item.display.name.show) {
+        if (state.get.current().link.item.display.name.show) {
           helper.addClass(html, "is-link-item-display-name-show");
         };
-        if (state.get().link.item.url.show) {
+        if (state.get.current().link.item.url.show) {
           helper.addClass(html, "is-link-item-url-show");
         };
-        if (state.get().link.item.line.show) {
+        if (state.get.current().link.item.line.show) {
           helper.addClass(html, "is-link-item-line-show");
         };
-        if (state.get().link.item.shadow.show) {
+        if (state.get.current().link.item.shadow.show) {
           helper.addClass(html, "is-link-item-shadow-show");
         };
-        if (state.get().link.item.hoverScale.show) {
+        if (state.get.current().link.item.hoverScale.show) {
           helper.addClass(html, "is-link-item-hoverscale-show");
         };
-        if (state.get().link.item.border > 0) {
+        if (state.get.current().link.item.border > 0) {
           helper.addClass(html, "is-link-item-border");
         };
-        if (state.get().link.edit) {
+        if (state.get.current().link.edit) {
           helper.addClass(html, "is-link-edit");
         };
       };
     };
     var _theme = function() {
-      if (state.get().theme.radius > 0) {
+      if (state.get.current().theme.radius > 0) {
         helper.addClass(html, "is-theme-radius");
       } else {
         helper.removeClass(html, "is-theme-radius");
@@ -3022,17 +3079,17 @@ var control = (function() {
       helper.removeClass(html, "is-layout-alignment-bottomright");
       helper.removeClass(html, "is-layout-order-headerlink");
       helper.removeClass(html, "is-layout-order-linkheader");
-      helper.addClass(html, "is-layout-alignment-" + state.get().layout.alignment);
-      helper.addClass(html, "is-layout-order-" + state.get().layout.order);
-      if (state.get().layout.scrollPastEnd) {
+      helper.addClass(html, "is-layout-alignment-" + state.get.current().layout.alignment);
+      helper.addClass(html, "is-layout-order-" + state.get.current().layout.order);
+      if (state.get.current().layout.scrollPastEnd) {
         helper.addClass(html, "is-layout-scrollpastend");
       };
     };
     var _background = function() {
       helper.removeClass(html, "is-background-color-by-theme");
       helper.removeClass(html, "is-background-color-by-custom");
-      helper.addClass(html, "is-background-color-by-" + state.get().background.color.by);
-      if (state.get().background.image.show) {
+      helper.addClass(html, "is-background-color-by-" + state.get.current().background.color.by);
+      if (state.get.current().background.image.show) {
         helper.addClass(html, "is-background-image-show");
       } else {
         helper.removeClass(html, "is-background-image-show");
@@ -3072,51 +3129,51 @@ var control = (function() {
     var _header = function() {
       var _clock = function() {
         var activeCount = 0;
-        var toCheck = [state.get().header.clock.seconds.show, state.get().header.clock.minutes.show, state.get().header.clock.hours.show];
+        var toCheck = [state.get.current().header.clock.seconds.show, state.get.current().header.clock.minutes.show, state.get.current().header.clock.hours.show];
         toCheck.forEach(function(arrayItem, index) {
           if (arrayItem == true) {
             activeCount++;
           };
         });
-        if (activeCount >= 2 && (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show)) {
+        if (activeCount >= 2 && (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) {
           _disable.input(".control-header-clock-separator-show", false);
         } else {
           _disable.input(".control-header-clock-separator-show", true);
         };
-        if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+        if (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
           _disable.input(".control-header-clock-hour24-show", false);
           _disable.input(".control-header-clock-meridiem-show", false);
         } else {
           _disable.input(".control-header-clock-hour24-show", true);
           _disable.input(".control-header-clock-meridiem-show", true);
         };
-        if ((state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) && !state.get().header.clock.hour24.show) {
+        if ((state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) && !state.get.current().header.clock.hour24.show) {
           _disable.input(".control-header-clock-meridiem-show", false);
         } else {
           _disable.input(".control-header-clock-meridiem-show", true);
         };
-        if (state.get().header.clock.hours.show) {
+        if (state.get.current().header.clock.hours.show) {
           _disable.input(".control-header-clock-hours-display-number", false);
           _disable.input(".control-header-clock-hours-display-word", false);
         } else {
           _disable.input(".control-header-clock-hours-display-number", true);
           _disable.input(".control-header-clock-hours-display-word", true);
         };
-        if (state.get().header.clock.minutes.show) {
+        if (state.get.current().header.clock.minutes.show) {
           _disable.input(".control-header-clock-minutes-display-number", false);
           _disable.input(".control-header-clock-minutes-display-word", false);
         } else {
           _disable.input(".control-header-clock-minutes-display-number", true);
           _disable.input(".control-header-clock-minutes-display-word", true);
         };
-        if (state.get().header.clock.seconds.show) {
+        if (state.get.current().header.clock.seconds.show) {
           _disable.input(".control-header-clock-seconds-display-number", false);
           _disable.input(".control-header-clock-seconds-display-word", false);
         } else {
           _disable.input(".control-header-clock-seconds-display-number", true);
           _disable.input(".control-header-clock-seconds-display-word", true);
         };
-        if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+        if (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
           _disable.element("[for=control-header-clock-size]", false);
           _disable.input(".control-header-clock-size", false);
           _disable.element(".control-header-clock-size-count", false);
@@ -3130,18 +3187,18 @@ var control = (function() {
       };
       var _date = function() {
         var activeCount = 0;
-        var toCheck = [state.get().header.date.day.show, state.get().header.date.date.show, state.get().header.date.month.show, state.get().header.date.year.show];
+        var toCheck = [state.get.current().header.date.day.show, state.get.current().header.date.date.show, state.get.current().header.date.month.show, state.get.current().header.date.year.show];
         toCheck.forEach(function(arrayItem, index) {
           if (arrayItem == true) {
             activeCount++;
           };
         });
-        if (activeCount >= 2 && (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show)) {
+        if (activeCount >= 2 && (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show)) {
           _disable.input(".control-header-date-separator-show", false);
         } else {
           _disable.input(".control-header-date-separator-show", true);
         };
-        if (state.get().header.date.date.show && state.get().header.date.month.show) {
+        if (state.get.current().header.date.date.show && state.get.current().header.date.month.show) {
           _disable.element(".control-header-date-format-label", false);
           _disable.input(".control-header-date-format-datemonth", false);
           _disable.input(".control-header-date-format-monthdate", false);
@@ -3150,14 +3207,14 @@ var control = (function() {
           _disable.input(".control-header-date-format-datemonth", true);
           _disable.input(".control-header-date-format-monthdate", true);
         };
-        if (state.get().header.date.day.show) {
+        if (state.get.current().header.date.day.show) {
           _disable.input(".control-header-date-day-display-number", false);
           _disable.input(".control-header-date-day-display-word", false);
         } else {
           _disable.input(".control-header-date-day-display-number", true);
           _disable.input(".control-header-date-day-display-word", true);
         };
-        if (state.get().header.date.date.show) {
+        if (state.get.current().header.date.date.show) {
           _disable.input(".control-header-date-date-display-number", false);
           _disable.input(".control-header-date-date-display-word", false);
           _disable.input(".control-header-date-date-ordinal", false);
@@ -3168,21 +3225,21 @@ var control = (function() {
           _disable.input(".control-header-date-date-ordinal", true);
           _disable.element(".control-header-date-date-ordinal-helper", true);
         };
-        if (state.get().header.date.month.show) {
+        if (state.get.current().header.date.month.show) {
           _disable.input(".control-header-date-month-display-number", false);
           _disable.input(".control-header-date-month-display-word", false);
         } else {
           _disable.input(".control-header-date-month-display-number", true);
           _disable.input(".control-header-date-month-display-word", true);
         };
-        if (state.get().header.date.year.show) {
+        if (state.get.current().header.date.year.show) {
           _disable.input(".control-header-date-year-display-number", false);
           _disable.input(".control-header-date-year-display-word", false);
         } else {
           _disable.input(".control-header-date-year-display-number", true);
           _disable.input(".control-header-date-year-display-word", true);
         };
-        if (state.get().header.date.day.show && state.get().header.date.day.display == "number") {
+        if (state.get.current().header.date.day.show && state.get.current().header.date.day.display == "number") {
           _disable.element(".control-header-date-day-week-start-label", false);
           _disable.input(".control-header-date-day-week-start-monday", false);
           _disable.input(".control-header-date-day-week-start-sunday", false);
@@ -3193,7 +3250,7 @@ var control = (function() {
           _disable.input(".control-header-date-day-week-start-sunday", true);
           _disable.element(".control-header-date-day-week-start-helper", true);
         };
-        if (state.get().header.date.day.show && state.get().header.date.day.display == "word") {
+        if (state.get.current().header.date.day.show && state.get.current().header.date.day.display == "word") {
           _disable.element(".control-header-date-day-length-label", false);
           _disable.input(".control-header-date-day-length-long", false);
           _disable.input(".control-header-date-day-length-short", false);
@@ -3202,7 +3259,7 @@ var control = (function() {
           _disable.input(".control-header-date-day-length-long", true);
           _disable.input(".control-header-date-day-length-short", true);
         };
-        if (state.get().header.date.month.show && state.get().header.date.month.display == "word") {
+        if (state.get.current().header.date.month.show && state.get.current().header.date.month.display == "word") {
           _disable.element(".control-header-date-month-length-label", false);
           _disable.input(".control-header-date-month-length-long", false);
           _disable.input(".control-header-date-month-length-short", false);
@@ -3211,14 +3268,14 @@ var control = (function() {
           _disable.input(".control-header-date-month-length-long", true);
           _disable.input(".control-header-date-month-length-short", true);
         };
-        if (state.get().header.date.month.show && state.get().header.date.month.display == "number") {
+        if (state.get.current().header.date.month.show && state.get.current().header.date.month.display == "number") {
           _disable.input(".control-header-date-month-ordinal", false);
           _disable.element(".control-header-date-month-ordinal-helper", false);
         } else {
           _disable.input(".control-header-date-month-ordinal", true);
           _disable.element(".control-header-date-month-ordinal-helper", true);
         };
-        if (state.get().header.date.day.show || state.get().header.date.date.show || state.get().header.date.month.show || state.get().header.date.year.show) {
+        if (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show) {
           _disable.element("[for=control-header-date-size]", false);
           _disable.input(".control-header-date-size", false);
           _disable.element(".control-header-date-size-count", false);
@@ -3231,7 +3288,7 @@ var control = (function() {
         };
       };
       var _shade = function() {
-        if (state.get().header.shade.show) {
+        if (state.get.current().header.shade.show) {
           _disable.input(".control-header-shade-style-always", false);
           _disable.element(".control-header-shade-style-always-helper", false);
           _disable.input(".control-header-shade-style-scroll", false);
@@ -3252,7 +3309,7 @@ var control = (function() {
         };
       };
       var _search = function() {
-        if (state.get().header.search.show) {
+        if (state.get.current().header.search.show) {
           _disable.element(".control-header-search-style-label", false);
           _disable.input(".control-header-search-style-auto", false);
           _disable.element(".control-header-search-style-auto-helper", false);
@@ -3309,7 +3366,7 @@ var control = (function() {
           _disable.input(".control-header-search-size-default", true);
           _disable.element(".control-header-search-size-helper", true);
         };
-        if (state.get().header.search.show && state.get().header.search.engine.selected === "custom") {
+        if (state.get.current().header.search.show && state.get.current().header.search.engine.selected === "custom") {
           _disable.element("[for=control-header-search-engine-custom-name]", false);
           _disable.input(".control-header-search-engine-custom-name", false);
           _disable.element("[for=control-header-search-engine-custom-url]", false);
@@ -3322,7 +3379,7 @@ var control = (function() {
           _disable.input(".control-header-search-engine-custom-url", true);
           _disable.element(".control-header-search-engine-custom-helper", true);
         };
-        if (state.get().header.search.show && state.get().header.search.style === "custom") {
+        if (state.get.current().header.search.show && state.get.current().header.search.style === "custom") {
           _disable.element("[for=control-header-search-width]", false);
           _disable.input(".control-header-search-width", false);
           _disable.element(".control-header-search-width-count", false);
@@ -3333,7 +3390,7 @@ var control = (function() {
         };
       };
       var _greeting = function() {
-        if (state.get().header.greeting.show) {
+        if (state.get.current().header.greeting.show) {
           _disable.element("[for=control-header-greeting-name]", false);
           _disable.input(".control-header-greeting-name", false);
           _disable.input(".control-header-greeting-type-good", false);
@@ -3356,14 +3413,14 @@ var control = (function() {
         };
       };
       var _transitional = function() {
-        if (state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+        if (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show || state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
           _disable.input(".control-header-transitional-show", false);
           _disable.element(".control-header-transitional-show-helper", false);
         } else {
           _disable.input(".control-header-transitional-show", true);
           _disable.element(".control-header-transitional-show-helper", true);
         };
-        if (state.get().header.transitional.show && ((state.get().header.date.date.show || state.get().header.date.day.show || state.get().header.date.month.show || state.get().header.date.year.show || state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show))) {
+        if (state.get.current().header.transitional.show && ((state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show || state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show))) {
           _disable.input(".control-header-transitional-type-timeanddate", false);
           _disable.input(".control-header-transitional-type-its", false);
           _disable.element("[for=control-header-transitional-size]", false);
@@ -3394,7 +3451,7 @@ var control = (function() {
       };
     };
     var _group = function() {
-      if (state.get().group.name.show) {
+      if (state.get.current().group.name.show) {
         _disable.element("[for=control-group-name-size]", false);
         _disable.input(".control-group-name-size", false);
         _disable.element(".control-group-name-size-count", false);
@@ -3489,7 +3546,7 @@ var control = (function() {
       _disable.input(".control-link-accent-clear", true);
       _disable.input(".control-link-accent-set", true);
       _disable.element(".control-link-accent-set-helper", true);
-      if (state.get().link.show) {
+      if (state.get.current().link.show) {
         _disable.input(".control-layout-order-headerlink", false);
         _disable.input(".control-layout-order-linkheader", false);
         _disable.element(".control-layout-order-helper", false);
@@ -3531,7 +3588,7 @@ var control = (function() {
         _disable.input(".control-link-accent-clear", false);
         _disable.input(".control-link-accent-set", false);
         _disable.element(".control-link-accent-set-helper", false);
-        if (state.get().link.item.display.letcon.show) {
+        if (state.get.current().link.item.display.letcon.show) {
           _disable.element("[for=control-link-item-display-letcon-letter-size]", false);
           _disable.input(".control-link-item-display-letcon-letter-size", false);
           _disable.element(".control-link-item-display-letcon-letter-size-count", false);
@@ -3541,13 +3598,13 @@ var control = (function() {
           _disable.element(".control-link-item-display-letcon-icon-size-count", false);
           _disable.input(".control-link-item-display-letcon-icon-size-default", false);
         };
-        if (state.get().link.item.display.name.show) {
+        if (state.get.current().link.item.display.name.show) {
           _disable.element("[for=control-link-item-display-name-size]", false);
           _disable.input(".control-link-item-display-name-size", false);
           _disable.element(".control-link-item-display-name-size-count", false);
           _disable.input(".control-link-item-display-name-size-default", false);
         };
-        if (state.get().link.item.display.letcon.show || state.get().link.item.display.name.show) {
+        if (state.get.current().link.item.display.letcon.show || state.get.current().link.item.display.name.show) {
           _disable.element(".control-link-item-display-alignment-grid", false);
           _disable.element(".control-link-item-display-alignment-label", false);
           _disable.input(".control-link-item-display-alignment-topleft", false);
@@ -3572,7 +3629,7 @@ var control = (function() {
           _disable.element(".control-link-item-display-translate-y-count", false);
           _disable.input(".control-link-item-display-translate-y-default", false);
         };
-        if (state.get().link.item.display.letcon.show && state.get().link.item.display.name.show) {
+        if (state.get.current().link.item.display.letcon.show && state.get.current().link.item.display.name.show) {
           _disable.input(".control-link-item-display-direction-horizontal", false);
           _disable.input(".control-link-item-display-direction-vertical", false);
           _disable.input(".control-link-item-display-order-letconname", false);
@@ -3583,7 +3640,7 @@ var control = (function() {
       };
     };
     var _theme = function() {
-      if (state.get().theme.accent.random.active) {
+      if (state.get.current().theme.accent.random.active) {
         _disable.input(".control-theme-accent-random-style-any", false);
         _disable.input(".control-theme-accent-random-style-light", false);
         _disable.input(".control-theme-accent-random-style-dark", false);
@@ -3600,7 +3657,7 @@ var control = (function() {
       };
     };
     var _background = function() {
-      if (state.get().background.image.show) {
+      if (state.get.current().background.image.show) {
         _disable.input(".control-background-image-from-file", false);
         _disable.input(".control-background-image-from-url", false);
         _disable.element("[for=control-background-image-opacity]", false);
@@ -3637,7 +3694,7 @@ var control = (function() {
         _disable.input(".control-background-image-scale", true);
         _disable.element(".control-background-image-scale-count", true);
       };
-      if (state.get().background.image.show && state.get().background.image.from == "file") {
+      if (state.get.current().background.image.show && state.get.current().background.image.from == "file") {
         _disable.element(".control-background-image-file-feedback", false);
         _disable.input(".control-background-image-file", false);
         _disable.input(".control-background-image-file-clear", false);
@@ -3648,18 +3705,18 @@ var control = (function() {
         _disable.input(".control-background-image-file-clear", true);
         _disable.element(".control-background-image-file-helper", true);
       };
-      if (state.get().background.image.show && state.get().background.image.from == "url") {
+      if (state.get.current().background.image.show && state.get.current().background.image.from == "url") {
         _disable.input(".control-background-image-url", false);
         _disable.element(".control-background-image-url-helper", false);
       } else {
         _disable.input(".control-background-image-url", true);
         _disable.element(".control-background-image-url-helper", true);
       };
-      if (state.get().background.color.by == "theme") {
+      if (state.get.current().background.color.by == "theme") {
         _disable.input(".control-background-color-custom-current-picker", true);
         _disable.input(".control-background-color-custom-current-hex", true);
         _disable.element(".control-background-color-theme-helper", true);
-      } else if (state.get().background.color.by == "custom") {
+      } else if (state.get.current().background.color.by == "custom") {
         _disable.input(".control-background-color-custom-current-picker", false);
         _disable.input(".control-background-color-custom-current-hex", false);
         _disable.element(".control-background-color-theme-helper", false);
@@ -3688,19 +3745,19 @@ var control = (function() {
     var setValue = {
       checkbox: function(object) {
         object.element.checked = helper.getObject({
-          object: state.get(),
+          object: state.get.current(),
           path: object.path
         });
       },
       radio: function(object) {
         helper.e("." + object.element.className.substring(0, object.element.className.lastIndexOf("-") + 1) + helper.getObject({
-          object: state.get(),
+          object: state.get.current(),
           path: object.path
         })).checked = true;
       },
       text: function(object) {
         var newValue = helper.getObject({
-          object: state.get(),
+          object: state.get.current(),
           path: object.path
         });
         if (object.valueMod) {
@@ -3712,7 +3769,7 @@ var control = (function() {
       },
       textarea: function(object) {
         var newValue = helper.getObject({
-          object: state.get(),
+          object: state.get.current(),
           path: object.path
         });
         if (object.valueMod) {
@@ -3724,13 +3781,13 @@ var control = (function() {
       },
       number: function(object) {
         object.element.value = helper.getObject({
-          object: state.get(),
+          object: state.get.current(),
           path: object.path
         });
       },
       range: function(object) {
         var newValue = helper.getObject({
-          object: state.get(),
+          object: state.get.current(),
           path: object.path
         });
         if (object.valueMod) {
@@ -3742,7 +3799,7 @@ var control = (function() {
       },
       color: function(object) {
         object.element.value = helper.rgbToHex(helper.getObject({
-          object: state.get(),
+          object: state.get.current(),
           path: object.path
         }));
       }

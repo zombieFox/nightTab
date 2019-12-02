@@ -24,7 +24,7 @@ var edge = (function() {
 
   mod.open = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "edge",
       newValue: true
     });
@@ -32,7 +32,7 @@ var edge = (function() {
 
   mod.close = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "edge",
       newValue: false
     });

@@ -26,7 +26,7 @@ var search = (function() {
   mod.searching = {
     set: function() {
       helper.setObject({
-        object: state.get(),
+        object: state.get.current(),
         path: "search",
         newValue: helper.e(".search-input").value != ""
       });
@@ -36,7 +36,7 @@ var search = (function() {
   var get = function() {
     var searchInput = helper.e(".search-input");
     var string = searchInput.value.toLowerCase().replace(/\s/g, "");
-    if (state.get().search) {
+    if (state.get.current().search) {
       var searchedBookmarks = {
         total: 0,
         matching: []
@@ -73,14 +73,14 @@ var search = (function() {
     var search = helper.e(".search");
     var searchInput = helper.e(".search-input");
     var placeholder = "";
-    if (state.get().link.show) {
+    if (state.get.current().link.show) {
       placeholder = "Find bookmarks or search";
     } else {
       placeholder = "Search";
     };
-    placeholder = placeholder + " " + state.get().header.search.engine[state.get().header.search.engine.selected].name;
+    placeholder = placeholder + " " + state.get.current().header.search.engine[state.get.current().header.search.engine.selected].name;
     searchInput.setAttribute("placeholder", placeholder);
-    search.setAttribute("action", state.get().header.search.engine[state.get().header.search.engine.selected].url);
+    search.setAttribute("action", state.get.current().header.search.engine[state.get.current().header.search.engine.selected].url);
   };
 
   render.clear = {};
@@ -93,7 +93,7 @@ var search = (function() {
 
   render.clear.button = function() {
     var searchClear = helper.e(".search-clear");
-    if (state.get().search) {
+    if (state.get.current().search) {
       searchClear.removeAttribute("disabled");
     } else {
       searchClear.setAttribute("disabled", "");
@@ -101,7 +101,7 @@ var search = (function() {
   };
 
   render.focus = function() {
-    if (state.get().header.search.focus) {
+    if (state.get.current().header.search.focus) {
       window.addEventListener("load", function(event) {
         helper.e(".search-input").focus();
       });

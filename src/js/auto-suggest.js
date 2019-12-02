@@ -8,7 +8,7 @@ var autoSuggest = (function() {
 
   mod.open = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "autoSuggest",
       newValue: true
     });
@@ -16,7 +16,7 @@ var autoSuggest = (function() {
 
   mod.close = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "autoSuggest",
       newValue: false
     });

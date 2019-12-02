@@ -6,7 +6,7 @@ var modal = (function() {
 
   mod.open = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "modal",
       newValue: true
     });
@@ -14,7 +14,7 @@ var modal = (function() {
 
   mod.close = function() {
     helper.setObject({
-      object: state.get(),
+      object: state.get.current(),
       path: "modal",
       newValue: false
     });
@@ -23,7 +23,7 @@ var modal = (function() {
   var render = {};
 
   render.toggle = function(override) {
-    if (state.get().modal) {
+    if (state.get.current().modal) {
       render.open(override);
     } else {
       render.close();

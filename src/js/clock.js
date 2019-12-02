@@ -19,7 +19,7 @@ var clock = (function() {
   };
 
   render.all = function() {
-    if (state.get().header.clock.seconds.show || state.get().header.clock.minutes.show || state.get().header.clock.hours.show) {
+    if (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
       var timeDateNow = moment();
       var timeStrings = {
         hours: null,
@@ -31,20 +31,20 @@ var clock = (function() {
         hours: {
           word: function() {
             timeStrings.hours = timeDateNow.hours();
-            if (!state.get().header.clock.hour24.show && timeDateNow.hours() > 12) {
+            if (!state.get.current().header.clock.hour24.show && timeDateNow.hours() > 12) {
               timeStrings.hours = timeStrings.hours - 12;
             };
             timeStrings.hours = helper.toWords(timeStrings.hours);
-            if (state.get().header.clock.hour24.show && timeDateNow.hours() > 0 && timeDateNow.hours() < 10) {
+            if (state.get.current().header.clock.hour24.show && timeDateNow.hours() > 0 && timeDateNow.hours() < 10) {
               timeStrings.hours = "Zero " + timeStrings.hours;
             };
           },
           number: function() {
             timeStrings.hours = timeDateNow.hours();
-            if (!state.get().header.clock.hour24.show && timeDateNow.hours() > 12) {
+            if (!state.get.current().header.clock.hour24.show && timeDateNow.hours() > 12) {
               timeStrings.hours = timeStrings.hours - 12;
             };
-            if (state.get().header.clock.hour24.show && timeDateNow.hours() < 10) {
+            if (state.get.current().header.clock.hour24.show && timeDateNow.hours() < 10) {
               timeStrings.hours = "0" + timeStrings.hours;
             };
           }
@@ -81,28 +81,28 @@ var clock = (function() {
           timeStrings.meridiem = timeDateNow.format("A");
         }
       };
-      action.hours[state.get().header.clock.hours.display]();
-      action.minutes[state.get().header.clock.minutes.display]();
-      action.seconds[state.get().header.clock.seconds.display]();
+      action.hours[state.get.current().header.clock.hours.display]();
+      action.minutes[state.get.current().header.clock.minutes.display]();
+      action.seconds[state.get.current().header.clock.seconds.display]();
       action.meridiem();
       var clock = helper.e(".clock");
       var elementHours = helper.node("span:" + timeStrings.hours + "|class:clock-item clock-hours");
       var elementMinutes = helper.node("span:" + timeStrings.minutes + "|class:clock-item clock-minutes");
       var elementSeconds = helper.node("span:" + timeStrings.seconds + "|class:clock-item clock-seconds");
       var elementMeridiem = helper.node("span:" + timeStrings.meridiem + "|class:clock-item clock-meridiem");
-      if (state.get().header.clock.hours.show) {
+      if (state.get.current().header.clock.hours.show) {
         clock.appendChild(elementHours);
       };
-      if (state.get().header.clock.minutes.show) {
+      if (state.get.current().header.clock.minutes.show) {
         clock.appendChild(elementMinutes);
       };
-      if (state.get().header.clock.seconds.show) {
+      if (state.get.current().header.clock.seconds.show) {
         clock.appendChild(elementSeconds);
       };
-      if (!state.get().header.clock.hour24.show && state.get().header.clock.meridiem.show) {
+      if (!state.get.current().header.clock.hour24.show && state.get.current().header.clock.meridiem.show) {
         clock.appendChild(elementMeridiem);
       };
-      if (state.get().header.clock.separator.show) {
+      if (state.get.current().header.clock.separator.show) {
         var separatorCharacter = ":";
         var parts = clock.querySelectorAll("span");
         if (parts.length > 1) {

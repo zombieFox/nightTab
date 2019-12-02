@@ -255,8 +255,79 @@ var state = (function() {
     autoSuggest: false
   };
 
-  mod.get = function() {
-    return mod.current;
+  mod.default = {
+    header: {
+      area: {
+        width: 100
+      },
+      clock: {
+        size: 1
+      },
+      date: {
+        size: 1
+      },
+      search: {
+        size: 1
+      },
+      button: {
+        size: 1
+      },
+      greeting: {
+        size: 1
+      },
+      transitional: {
+        size: 1
+      }
+    },
+    group: {
+      name: {
+        size: 1
+      }
+    },
+    link: {
+      area: {
+        width: 100
+      },
+      item: {
+        display: {
+          letcon: {
+            letter: {
+              size: 3
+            },
+            icon: {
+              size: 3
+            }
+          },
+          name: {
+            size: 0.9
+          },
+          rotate: 0,
+          translate: {
+            x: 0,
+            y: 0
+          }
+        },
+        size: 1
+      }
+    },
+    layout: {
+      padding: 4,
+      gutter: 2,
+      size: 1,
+      width: 80
+    },
+    theme: {
+      radius: 0.25
+    }
+  };
+
+  mod.get = {
+    current: function() {
+      return mod.current;
+    },
+    default: function() {
+      return mod.default;
+    }
   };
 
   mod.restore = function(data) {
@@ -271,8 +342,13 @@ var state = (function() {
     };
   };
 
-  var get = function() {
-    return mod.get();
+  var get = {
+    current: function() {
+      return mod.get.current();
+    },
+    default: function() {
+      return mod.get.default();
+    }
   };
 
   return {
