@@ -679,6 +679,7 @@ var update = (function() {
         data.state.link.item.display.direction = "horizontal";
       };
       delete data.state.link.fit;
+      data.state.header.search.engine.duckduckgo.name = "DuckDuckGo";
       return data;
     }
   };

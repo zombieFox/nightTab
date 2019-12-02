@@ -76,7 +76,7 @@ var state = (function() {
           },
           duckduckgo: {
             url: "https://duckduckgo.com/",
-            name: "Duck Duck Go"
+            name: "DuckDuckGo"
           },
           youtube: {
             url: "https://www.youtube.com/results?search_query=",
