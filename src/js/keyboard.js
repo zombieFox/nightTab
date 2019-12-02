@@ -18,6 +18,8 @@ var keyboard = (function() {
           link.add.item.close();
         } else if (state.get().group.add) {
           link.add.group.close();
+        } else if (state.get().link.edit && state.get().modal) {
+          link.add.item.close();
         } else if (state.get().link.edit) {
           link.edit.close();
           data.save();
