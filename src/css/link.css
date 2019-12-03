@@ -294,20 +294,20 @@
   flex-direction: column-reverse;
 }
 
-.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname .link-display>*:not(:only-child):first-child {
+.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname .link-display-letcon {
   margin-right: 0.5em;
 }
 
-.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon .link-display>*:not(:only-child):last-child {
-  margin-right: 0.5em;
+.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon .link-display-letcon {
+  margin-left: 0.5em;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-letconname .link-display>*:not(:only-child):first-child {
+.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-vertical.is-link-item-display-order-letconname .link-display-letcon {
   margin-bottom: 0.5em;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon .link-display>*:not(:only-child):last-child {
-  margin-bottom: 0.5em;
+.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon .link-display-letcon {
+  margin-top: 0.5em;
 }
 
 .is-link-display-alignment-topleft .link-display {
