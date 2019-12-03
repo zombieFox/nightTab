@@ -346,103 +346,224 @@
   transform-origin: bottom right;
 }
 
-.is-link-item-display-direction-vertical.is-link-display-alignment-topleft .link-display {
+/* vertical letcon name */
+.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-topleft .link-display {
   justify-content: flex-start;
   align-items: flex-start;
   transform-origin: top left;
 }
 
-.is-link-item-display-direction-vertical.is-link-display-alignment-topcenter .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-topcenter .link-display {
   justify-content: flex-start;
   align-items: center;
   transform-origin: top center;
 }
 
-.is-link-item-display-direction-vertical.is-link-display-alignment-topright .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-topright .link-display {
   justify-content: flex-start;
   align-items: flex-end;
   transform-origin: top right;
 }
 
-.is-link-item-display-direction-vertical.is-link-display-alignment-centerleft .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-centerleft .link-display {
   justify-content: center;
   align-items: flex-start;
   transform-origin: center left;
 }
 
-.is-link-item-display-direction-vertical.is-link-display-alignment-centercenter .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-centercenter .link-display {
   justify-content: center;
   align-items: center;
   transform-origin: center;
 }
 
-.is-link-item-display-direction-vertical.is-link-display-alignment-centerright .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-centerright .link-display {
   justify-content: center;
   align-items: flex-end;
   transform-origin: center right;
 }
 
-.is-link-item-display-direction-vertical.is-link-display-alignment-bottomleft .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-bottomleft .link-display {
   justify-content: flex-end;
   align-items: flex-start;
   transform-origin: bottom left;
 }
 
-.is-link-item-display-direction-vertical.is-link-display-alignment-bottomcenter .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-bottomcenter .link-display {
   justify-content: flex-end;
   align-items: center;
   transform-origin: bottom center;
 }
 
-.is-link-item-display-direction-vertical.is-link-display-alignment-bottomright .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-bottomright .link-display {
   justify-content: flex-end;
   align-items: flex-end;
   transform-origin: bottom right;
 }
 
-.is-link-item-display-direction-horizontal.is-link-display-alignment-topleft .link-display {
+/* vertical name letcon */
+.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-topleft .link-display {
   justify-content: flex-end;
   align-items: flex-start;
+  transform-origin: top left;
 }
 
-.is-link-item-display-direction-horizontal.is-link-display-alignment-topcenter .link-display {
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.is-link-item-display-direction-horizontal.is-link-display-alignment-topright .link-display {
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.is-link-item-display-direction-horizontal.is-link-display-alignment-centerleft .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-topcenter .link-display {
   justify-content: flex-end;
   align-items: center;
+  transform-origin: top center;
 }
 
-.is-link-item-display-direction-horizontal.is-link-display-alignment-centercenter .link-display {
-  justify-content: center;
-  align-items: center;
-}
-
-.is-link-item-display-direction-horizontal.is-link-display-alignment-centerright .link-display {
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.is-link-item-display-direction-horizontal.is-link-display-alignment-bottomleft .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-topright .link-display {
   justify-content: flex-end;
   align-items: flex-end;
+  transform-origin: top right;
 }
 
-.is-link-item-display-direction-horizontal.is-link-display-alignment-bottomcenter .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-centerleft .link-display {
+  justify-content: center;
+  align-items: flex-start;
+  transform-origin: center left;
+}
+
+.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-centercenter .link-display {
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+}
+
+.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-centerright .link-display {
   justify-content: center;
   align-items: flex-end;
+  transform-origin: center right;
 }
 
-.is-link-item-display-direction-horizontal.is-link-display-alignment-bottomright .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomleft .link-display {
+  justify-content: flex-start;
+  align-items: flex-start;
+  transform-origin: bottom left;
+}
+
+.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomcenter .link-display {
+  justify-content: flex-start;
+  align-items: center;
+  transform-origin: bottom center;
+}
+
+.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomright .link-display {
   justify-content: flex-start;
   align-items: flex-end;
+  transform-origin: bottom right;
+}
+
+/* horizontal letcon name */
+.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-topleft .link-display {
+  justify-content: flex-start;
+  align-items: flex-start;
+  transform-origin: top left;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-topcenter .link-display {
+  justify-content: center;
+  align-items: flex-start;
+  transform-origin: top center;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-topright .link-display {
+  justify-content: flex-end;
+  align-items: flex-start;
+  transform-origin: top right;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-centerleft .link-display {
+  justify-content: flex-start;
+  align-items: center;
+  transform-origin: center left;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-centercenter .link-display {
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-centerright .link-display {
+  justify-content: flex-end;
+  align-items: center;
+  transform-origin: center right;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-bottomleft .link-display {
+  justify-content: flex-start;
+  align-items: flex-end;
+  transform-origin: bottom left;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-bottomcenter .link-display {
+  justify-content: center;
+  align-items: flex-end;
+  transform-origin: bottom center;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-bottomright .link-display {
+  justify-content: flex-end;
+  align-items: flex-end;
+  transform-origin: bottom right;
+}
+
+/* horizontal name letcon */
+.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-topleft .link-display {
+  justify-content: flex-end;
+  align-items: flex-start;
+  transform-origin: top left;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-topcenter .link-display {
+  justify-content: center;
+  align-items: flex-start;
+  transform-origin: top center;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-topright .link-display {
+  justify-content: flex-start;
+  align-items: flex-start;
+  transform-origin: top right;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-centerleft .link-display {
+  justify-content: flex-end;
+  align-items: center;
+  transform-origin: top left;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-centercenter .link-display {
+  justify-content: center;
+  align-items: center;
+  transform-origin: top center;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-centerright .link-display {
+  justify-content: flex-start;
+  align-items: center;
+  transform-origin: top right;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomleft .link-display {
+  justify-content: flex-end;
+  align-items: flex-end;
+  transform-origin: top left;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomcenter .link-display {
+  justify-content: center;
+  align-items: flex-end;
+  transform-origin: top center;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomright .link-display {
+  justify-content: flex-start;
+  align-items: flex-end;
+  transform-origin: top right;
 }
 
 .link-display-letter,
@@ -510,6 +631,7 @@
 
 .is-link-item-display-name-show .link-display-name {
   display: block;
+  flex-basis: 100%;
 }
 
 .link-display-name,
