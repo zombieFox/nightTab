@@ -153,6 +153,7 @@ var state = (function() {
             show: true,
             size: 0.9
           },
+          gutter: 2,
           direction: "vertical",
           order: "letconname",
           alignment: "centercenter",
@@ -301,6 +302,7 @@ var state = (function() {
           name: {
             size: 0.9
           },
+          gutter: 2,
           rotate: 0,
           translate: {
             x: 0,

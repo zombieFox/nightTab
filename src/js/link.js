@@ -1080,6 +1080,10 @@ var link = (function() {
         var html = helper.e("html");
         html.style.setProperty("--link-item-display-translate-y", state.get.current().link.item.display.translate.y + "em");
       }
+    },
+    gutter: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-item-display-gutter", state.get.current().link.item.display.gutter);
     }
   };
 
@@ -1717,6 +1721,7 @@ var link = (function() {
     render.item.rotate();
     render.item.translate.x();
     render.item.translate.y();
+    render.item.gutter();
     render.area.width();
   };
 

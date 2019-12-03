@@ -2334,6 +2334,26 @@ var control = (function() {
       render.update();
     }
   }, {
+    element: helper.e(".control-link-item-display-gutter"),
+    path: "link.item.display.gutter",
+    type: "range",
+    rangeCountElement: helper.e(".control-link-item-display-gutter-count"),
+    func: function() {
+      link.render.item.gutter();
+      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-link-item-display-gutter-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("link.item.display.gutter", helper.getObject({
+        object: state.mod.default,
+        path: "link.item.display.gutter"
+      }));
+      link.render.item.gutter();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-link-item-display-direction-horizontal"),
     path: "link.item.display.direction",
     type: "radio",
@@ -3508,6 +3528,10 @@ var control = (function() {
       _disable.input(".control-link-item-display-translate-y", true);
       _disable.element(".control-link-item-display-translate-y-count", true);
       _disable.input(".control-link-item-display-translate-y-default", true);
+      _disable.element("[for=control-link-item-display-gutter]", true);
+      _disable.input(".control-link-item-display-gutter", true);
+      _disable.element(".control-link-item-display-gutter-count", true);
+      _disable.input(".control-link-item-display-gutter-default", true);
       _disable.input(".control-link-item-display-direction-horizontal", true);
       _disable.input(".control-link-item-display-direction-vertical", true);
       _disable.input(".control-link-item-display-order-letconname", true);
@@ -3636,6 +3660,10 @@ var control = (function() {
           _disable.input(".control-link-item-display-order-nameletcon", false);
           _disable.element(".control-link-item-display-direction-helper", false);
           _disable.element(".control-link-item-display-order-helper", false);
+          _disable.element("[for=control-link-item-display-gutter]", false);
+          _disable.input(".control-link-item-display-gutter", false);
+          _disable.element(".control-link-item-display-gutter-count", false);
+          _disable.input(".control-link-item-display-gutter-default", false);
         };
       };
     };

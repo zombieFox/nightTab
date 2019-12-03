@@ -295,19 +295,19 @@
 }
 
 .is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname .link-display-letcon {
-  margin-right: 0.5em;
+  margin-right: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
 .is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon .link-display-letcon {
-  margin-left: 0.5em;
+  margin-left: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
 .is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-vertical.is-link-item-display-order-letconname .link-display-letcon {
-  margin-bottom: 0.5em;
+  margin-bottom: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
 .is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon .link-display-letcon {
-  margin-top: 0.5em;
+  margin-top: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
 .is-link-display-alignment-topleft .link-display {

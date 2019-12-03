@@ -681,6 +681,10 @@ var update = (function() {
       delete data.state.link.fit;
       data.state.header.search.engine.duckduckgo.name = "DuckDuckGo";
       return data;
+    },
+    "4.1.0": function(data) {
+      data.state.link.item.display.gutter = 2;
+      return data;
     }
   };
 
