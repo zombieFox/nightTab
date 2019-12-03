@@ -595,7 +595,6 @@
 
 .is-link-item-display-name-show .link-display-name {
   display: block;
-  flex-basis: 100%;
 }
 
 .link-display-name,
