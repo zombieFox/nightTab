@@ -1191,7 +1191,14 @@ var link = (function() {
       var linkEmpty = helper.node("div|class:link-empty link-item");
       var paraWrap1 = helper.node("div|class:p-wrap");
       var paraWrap2 = helper.node("div|class:p-wrap");
-      var para1 = helper.node("p:No bookmarks matching \"" + helper.e(".header-search-input").value + "\" found.|class:mb-0");
+      var para1 = helper.makeNode({
+        tag: "p",
+        text: "No bookmarks matching \"" + helper.e(".header-search-input").value + "\" found",
+        attr: [{
+          key: "class",
+          value: "mb-0"
+        }]
+      });
       var para2 = helper.node("p:\"Enter\" to Search " + state.get.current().header.search.engine[state.get.current().header.search.engine.selected].name + ".|class:small muted mb-0");
       paraWrap1.appendChild(para1);
       paraWrap2.appendChild(para2);
