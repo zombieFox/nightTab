@@ -588,7 +588,6 @@
   font-size: var(--link-item-display-name-size);
   font-family: var(--font-regular);
   color: rgb(var(--theme-gray-12));
-  flex-basis: 1%;
   display: none;
   transition: color var(--layout-timing-extra-fast);
 }
