@@ -149,7 +149,7 @@ var header = (function() {
       action[state.get.current().header.button.style]();
     },
     edit: function() {
-      if (!state.get.current().link.edit) {
+      if (!state.get.current().edit) {
         helper.e(".control-link-edit").checked = false;
       };
     }

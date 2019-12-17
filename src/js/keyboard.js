@@ -14,14 +14,16 @@ var keyboard = (function() {
           dropdown.close();
         } else if (state.get.current().autoSuggest) {
           autoSuggest.close();
+        } else if (state.get.current().edit) {
+          link.edit.mode.close();
+          data.save();
         } else if (state.get.current().link.add) {
           link.add.item.close();
+          shade.close();
+          data.save();
         } else if (state.get.current().group.add) {
           link.add.group.close();
-        } else if (state.get.current().link.edit && state.get.current().modal) {
-          link.add.item.close();
-        } else if (state.get.current().link.edit) {
-          link.edit.close();
+          shade.close();
           data.save();
         } else if (state.get.current().modal) {
           modal.close();
@@ -103,7 +105,7 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
-        link.edit.toggle();
+        link.edit.mode.toggle();
         data.save();
       };
     }, false);

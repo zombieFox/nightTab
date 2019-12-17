@@ -74,7 +74,7 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-link-edit"),
-    path: "link.edit",
+    path: "edit",
     type: "checkbox",
     func: function() {
       link.tabindex();
@@ -2876,6 +2876,12 @@ var control = (function() {
 
   render.class = function() {
     var html = helper.e("html");
+    var _edit = function() {
+      helper.removeClass(html, "is-edit");
+      if (state.get.current().edit) {
+        helper.addClass(html, "is-edit");
+      };
+    };
     var _menu = function() {
       helper.addClass(html, "is-menu");
     };
@@ -3044,7 +3050,6 @@ var control = (function() {
       helper.removeClass(html, "is-link-style-block");
       helper.removeClass(html, "is-link-orientation-top");
       helper.removeClass(html, "is-link-orientation-bottom");
-      helper.removeClass(html, "is-link-edit");
       if (state.get.current().link.show) {
         helper.addClass(html, "is-link-show");
         helper.addClass(html, "is-link-area-alignment-" + state.get.current().link.area.alignment);
@@ -3073,9 +3078,6 @@ var control = (function() {
         };
         if (state.get.current().link.item.border > 0) {
           helper.addClass(html, "is-link-item-border");
-        };
-        if (state.get.current().link.edit) {
-          helper.addClass(html, "is-link-edit");
         };
       };
     };
@@ -3115,6 +3117,7 @@ var control = (function() {
         helper.removeClass(html, "is-background-image-show");
       };
     };
+    _edit();
     _menu();
     _header();
     _group();

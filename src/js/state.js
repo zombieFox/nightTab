@@ -246,6 +246,7 @@ var state = (function() {
         accent: 0
       }
     },
+    edit: false,
     pagelock: false,
     shade: false,
     edge: false,

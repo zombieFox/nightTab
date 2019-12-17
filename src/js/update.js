@@ -685,6 +685,10 @@ var update = (function() {
     "4.1.0": function(data) {
       data.state.link.item.display.gutter = 2;
       return data;
+    },
+    "4.2.0": function(data) {
+      data.state.link.edit = false;
+      return data;
     }
   };
 
