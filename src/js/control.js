@@ -73,7 +73,7 @@ var control = (function() {
       link.add.group.open();
     }
   }, {
-    element: helper.e(".control-link-edit"),
+    element: helper.e(".control-edit"),
     path: "edit",
     type: "checkbox",
     func: function() {
@@ -3468,9 +3468,9 @@ var control = (function() {
     };
     var _edit = function() {
       if (bookmarks.get().length > 0) {
-        _disable.input(".control-link-edit", false);
+        _disable.input(".control-edit", false);
       } else {
-        _disable.input(".control-link-edit", false);
+        _disable.input(".control-edit", false);
       };
     };
     var _group = function() {

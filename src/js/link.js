@@ -1581,13 +1581,12 @@ var link = (function() {
       var successAction = function() {
         var copyStagedLink = JSON.parse(JSON.stringify(stagedLink));
         bookmarks.remove.link(copyStagedLink);
+        edit.mode.check();
         data.save();
-        edit.item.check();
-        header.render.button.edit();
         groupAndItems();
-        render.focus.item.previous.remove(copyStagedLink);
         control.render.dependents();
         control.render.class();
+        render.focus.item.previous.remove(copyStagedLink);
         shade.close();
         pagelock.unlock();
       };
@@ -1626,13 +1625,12 @@ var link = (function() {
       var successAction = function() {
         var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
         bookmarks.remove.group(copyStagedGroup);
+        edit.mode.check();
         data.save();
-        edit.group.check();
-        header.render.button.edit();
         groupAndItems();
-        render.focus.group.previous.remove(copyStagedGroup);
         control.render.dependents();
         control.render.class();
+        render.focus.group.previous.remove(copyStagedGroup);
         shade.close();
         pagelock.unlock();
       };
