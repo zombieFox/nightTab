@@ -3467,7 +3467,6 @@ var control = (function() {
       _transitional();
     };
     var _edit = function() {
-      console.log("hit");
       if (bookmarks.get().length > 0) {
         _disable.input(".control-edit", false);
       } else {

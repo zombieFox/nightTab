@@ -113,7 +113,11 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+e
       if (event.ctrlKey && event.altKey && event.keyCode == 69) {
-        link.edit.mode.toggle();
+        if (bookmarks.get().length > 0) {
+          link.edit.mode.toggle();
+        } else {
+          link.edit.mode.close();
+        };
         data.save();
       };
     }, false);
