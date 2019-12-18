@@ -1708,6 +1708,7 @@ var link = (function() {
         } else {
           edit.mode.open();
         };
+        render.item.tabindex();
       }
     },
     item: {
