@@ -299,7 +299,7 @@ var link = (function() {
         render.focus.group.next.down(copyStagedGroup);
       }
     },
-    link: {
+    item: {
       left: function(copyStagedLink) {
         stagedLink.link = JSON.parse(JSON.stringify(copyStagedLink.link));
         stagedLink.position = JSON.parse(JSON.stringify(copyStagedLink.position));
@@ -647,11 +647,11 @@ var link = (function() {
       var copyStagedLink = JSON.parse(JSON.stringify(stagedLink));
 
       linkLeft.addEventListener("click", function() {
-        render.move.link.left(copyStagedLink);
+        render.move.item.left(copyStagedLink);
       }, false);
 
       linkRight.addEventListener("click", function() {
-        render.move.link.right(copyStagedLink);
+        render.move.item.right(copyStagedLink);
       }, false);
 
       linkEdit.addEventListener("click", function() {
