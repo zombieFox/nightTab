@@ -14,11 +14,16 @@ var keyboard = (function() {
           dropdown.close();
         } else if (state.get.current().autoSuggest) {
           autoSuggest.close();
-        } else if (state.get.current().edit) {
-          link.edit.mode.close();
+        } else if (state.get.current().link.edit) {
+          link.edit.item.close();
+          shade.close();
           data.save();
         } else if (state.get.current().link.add) {
           link.add.item.close();
+          shade.close();
+          data.save();
+        } else if (state.get.current().group.edit) {
+          link.edit.group.close();
           shade.close();
           data.save();
         } else if (state.get.current().group.add) {
@@ -28,6 +33,9 @@ var keyboard = (function() {
         } else if (state.get.current().modal) {
           modal.close();
           shade.close();
+        } else if (state.get.current().edit) {
+          link.edit.mode.close();
+          data.save();
         };
         data.save();
       };

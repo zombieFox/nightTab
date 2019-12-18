@@ -687,7 +687,9 @@ var update = (function() {
       return data;
     },
     "4.2.0": function(data) {
+      data.state.edit = false;
       data.state.link.edit = false;
+      data.state.group.edit = false;
       return data;
     }
   };

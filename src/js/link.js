@@ -408,7 +408,7 @@ var link = (function() {
       }, false);
 
       itemGroupControlItemEdit.addEventListener("click", function() {
-        render.edit.group.open(copyStagedGroup);
+        edit.group.open(copyStagedGroup);
       }, false);
 
       itemGroupControlItemRemove.addEventListener("click", function() {
@@ -655,7 +655,7 @@ var link = (function() {
       }, false);
 
       linkEdit.addEventListener("click", function() {
-        render.edit.item.open(copyStagedLink);
+        edit.item.open(copyStagedLink);
       }, false);
 
       linkRemove.addEventListener("click", function() {
@@ -1713,9 +1713,9 @@ var link = (function() {
       }
     },
     item: {
-      open: function() {
+      open: function(copyStagedLink) {
         mod.edit.item.open();
-        render.edit.item.open();
+        render.edit.item.open(copyStagedLink);
       },
       close: function() {
         mod.edit.item.close();
@@ -1723,9 +1723,9 @@ var link = (function() {
       }
     },
     group: {
-      open: function() {
+      open: function(copyStagedGroup) {
         mod.edit.group.open();
-        render.edit.group.open();
+        render.edit.group.open(copyStagedGroup);
       },
       close: function() {
         mod.edit.group.close();
@@ -1733,30 +1733,6 @@ var link = (function() {
       }
     }
   };
-
-  // var edit = {
-  //   toggle: function() {
-  //     mod.edit.toggle();
-  //     render.group.tabindex();
-  //     render.item.tabindex();
-  //     control.render.update();
-  //     control.render.class();
-  //   },
-  //   open: function() {
-  //     mod.edit.open();
-  //     render.group.tabindex();
-  //     render.item.tabindex();
-  //     control.render.update();
-  //     control.render.class();
-  //   },
-  //   close: function() {
-  //     mod.edit.close();
-  //     render.group.tabindex();
-  //     render.item.tabindex();
-  //     control.render.update();
-  //     control.render.class();
-  //   }
-  // };
 
   var tabindex = function() {
     render.group.tabindex();
