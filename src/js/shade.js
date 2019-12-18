@@ -75,6 +75,7 @@ var shade = (function() {
           shade.remove();
         };
         mod.close();
+        _previousShade = null;
       };
       shade.addEventListener("transitionend", function(event, elapsed) {
         if (event.propertyName === "opacity" && getComputedStyle(this).opacity == 0) {

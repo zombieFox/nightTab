@@ -95,7 +95,10 @@ var menu = (function() {
     render.tabindex.toggle();
     shade.open({
       action: function() {
-        close();
+        mod.close();
+        render.close();
+        render.tabindex.toggle();
+        pagelock.unlock();
       }
     });
     pagelock.lock();

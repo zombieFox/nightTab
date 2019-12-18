@@ -55,12 +55,12 @@
 }
 
 .is-group-order-headerbody.is-group-name-show .group-header,
-.is-group-order-headerbody.is-link-edit .group-header {
+.is-group-order-headerbody.is-edit .group-header {
   padding-bottom: calc(var(--layout-space) * var(--layout-gutter));
 }
 
 .is-group-order-bodyheader.is-group-name-show .group-header,
-.is-group-order-bodyheader.is-link-edit .group-header {
+.is-group-order-bodyheader.is-edit .group-header {
   padding-top: calc(var(--layout-space) * var(--layout-gutter));
 }
 
@@ -101,7 +101,7 @@
     margin var(--layout-timing-extra-fast);
 }
 
-.is-link-edit .group-control {
+.is-edit .group-control {
   height: 2.5em;
   width: 16em;
   transition:
@@ -110,12 +110,12 @@
     margin var(--layout-timing-extra-fast) var(--layout-duration-04);
 }
 
-.is-link-edit.is-group-name-show.is-group-area-alignment-left .group-control,
-.is-link-edit.is-group-name-show.is-group-area-alignment-center .group-control {
+.is-edit.is-group-name-show.is-group-area-alignment-left .group-control,
+.is-edit.is-group-name-show.is-group-area-alignment-center .group-control {
   margin-right: 1em;
 }
 
-.is-link-edit.is-group-name-show.is-group-area-alignment-right .group-control {
+.is-edit.is-group-name-show.is-group-area-alignment-right .group-control {
   margin-left: 1em;
 }
 

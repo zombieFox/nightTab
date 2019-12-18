@@ -237,29 +237,29 @@
   border-bottom-right-radius: calc(var(--theme-radius) / 4);
 }
 
-.is-link-edit .link-panel-front,
-.is-link-edit .link-item:hover .link-panel-front,
-.is-link-edit .link-item:focus .link-panel-front {
+.is-edit .link-panel-front,
+.is-edit .link-item:hover .link-panel-front,
+.is-edit .link-item:focus .link-panel-front {
   height: calc(100% - var(--link-item-edit-height));
 }
 
-.is-theme-radius.is-link-edit.is-link-orientation-top .link-panel-front,
-.is-theme-radius.is-link-edit.is-link-orientation-top .link-item:hover .link-panel-front,
-.is-theme-radius.is-link-edit.is-link-orientation-top .link-item:focus .link-panel-front {
+.is-theme-radius.is-edit.is-link-orientation-top .link-panel-front,
+.is-theme-radius.is-edit.is-link-orientation-top .link-item:hover .link-panel-front,
+.is-theme-radius.is-edit.is-link-orientation-top .link-item:focus .link-panel-front {
   border-top-left-radius: calc(var(--theme-radius) / 4);
   border-top-right-radius: calc(var(--theme-radius) / 4);
 }
 
-.is-theme-radius.is-link-edit.is-link-orientation-bottom .link-panel-front,
-.is-theme-radius.is-link-edit.is-link-orientation-bottom .link-item:hover .link-panel-front,
-.is-theme-radius.is-link-edit.is-link-orientation-bottom .link-item:focus .link-panel-front {
+.is-theme-radius.is-edit.is-link-orientation-bottom .link-panel-front,
+.is-theme-radius.is-edit.is-link-orientation-bottom .link-item:hover .link-panel-front,
+.is-theme-radius.is-edit.is-link-orientation-bottom .link-item:focus .link-panel-front {
   border-bottom-left-radius: calc(var(--theme-radius) / 4);
   border-bottom-right-radius: calc(var(--theme-radius) / 4);
 }
 
-.is-link-item-shadow-show.is-link-edit .link-panel-front,
-.is-link-item-shadow-show.is-link-edit .link-item:hover .link-panel-front,
-.is-link-item-shadow-show.is-link-edit .link-item:focus .link-panel-front {
+.is-link-item-shadow-show.is-edit .link-panel-front,
+.is-link-item-shadow-show.is-edit .link-item:hover .link-panel-front,
+.is-link-item-shadow-show.is-edit .link-item:focus .link-panel-front {
   box-shadow: var(--layout-shadow-medium);
 }
 
@@ -274,7 +274,7 @@
   transition: font-size var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast), left var(--layout-timing-extra-fast);
 }
 
-.is-link-edit .link-display {
+.is-edit .link-display {
   font-size: 0.6em;
 }
 
@@ -681,23 +681,23 @@
   clip-path: polygon(0 calc(100% - calc(var(--link-item-url-height) + 10%)), 100% calc(100% - calc(var(--link-item-url-height) + 10%)), 100% 100%, 0 100%);
 }
 
-.is-link-edit.is-link-orientation-top .link-panel-back,
-.is-link-edit.is-link-orientation-top .link-panel-back,
-.is-link-edit.is-link-orientation-top .link-panel-back,
-.is-link-edit.is-link-orientation-top .link-item:focus .link-panel-back,
-.is-link-edit.is-link-orientation-top .link-item:focus-within .link-panel-back,
-.is-link-edit.is-link-orientation-top .link-item:hover .link-panel-back {
+.is-edit.is-link-orientation-top .link-panel-back,
+.is-edit.is-link-orientation-top .link-panel-back,
+.is-edit.is-link-orientation-top .link-panel-back,
+.is-edit.is-link-orientation-top .link-item:focus .link-panel-back,
+.is-edit.is-link-orientation-top .link-item:focus-within .link-panel-back,
+.is-edit.is-link-orientation-top .link-item:hover .link-panel-back {
   height: 100%;
   top: 0;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - calc(var(--link-item-edit-height) - 10%)), 0 calc(100% - calc(var(--link-item-edit-height) - 10%)))
 }
 
-.is-link-edit.is-link-orientation-bottom .link-panel-back,
-.is-link-edit.is-link-orientation-bottom .link-panel-back,
-.is-link-edit.is-link-orientation-bottom .link-panel-back,
-.is-link-edit.is-link-orientation-bottom .link-item:focus .link-panel-back,
-.is-link-edit.is-link-orientation-bottom .link-item:focus-within .link-panel-back,
-.is-link-edit.is-link-orientation-bottom .link-item:hover .link-panel-back {
+.is-edit.is-link-orientation-bottom .link-panel-back,
+.is-edit.is-link-orientation-bottom .link-panel-back,
+.is-edit.is-link-orientation-bottom .link-panel-back,
+.is-edit.is-link-orientation-bottom .link-item:focus .link-panel-back,
+.is-edit.is-link-orientation-bottom .link-item:focus-within .link-panel-back,
+.is-edit.is-link-orientation-bottom .link-item:hover .link-panel-back {
   height: 100%;
   top: 0;
   clip-path: polygon(0 calc(100% - calc(var(--link-item-edit-height) + 10%)), 100% calc(100% - calc(var(--link-item-edit-height) + 10%)), 100% 100%, 0 100%);
@@ -715,7 +715,7 @@
   transition: height var(--layout-timing-extra-fast);
 }
 
-.is-link-edit .link-control {
+.is-edit .link-control {
   height: var(--link-item-edit-height);
 }
 
@@ -848,9 +848,9 @@
   justify-content: flex-end;
 }
 
-.is-link-item-url-show:not(.is-link-edit) .link-item:focus-within .link-url,
-.is-link-item-url-show:not(.is-link-edit) .link-item:focus .link-url,
-.is-link-item-url-show:not(.is-link-edit) .link-item:hover .link-url {
+.is-link-item-url-show:not(.is-edit) .link-item:focus-within .link-url,
+.is-link-item-url-show:not(.is-edit) .link-item:focus .link-url,
+.is-link-item-url-show:not(.is-edit) .link-item:hover .link-url {
   height: var(--link-item-url-height);
 }
 
@@ -871,14 +871,14 @@
   color: rgb(var(--theme-white));
 }
 
-.is-link-edit.is-link-item-url-show .link-item:focus .link-panel-front,
-.is-link-edit.is-link-item-url-show .link-item:focus-within .link-panel-front,
-.is-link-edit.is-link-item-url-show .link-item:hover .link-panel-front {
+.is-edit.is-link-item-url-show .link-item:focus .link-panel-front,
+.is-edit.is-link-item-url-show .link-item:focus-within .link-panel-front,
+.is-edit.is-link-item-url-show .link-item:hover .link-panel-front {
   height: calc(100% - var(--link-item-edit-height));
 }
 
-.is-link-edit .link-item:hover .link-url,
-.is-link-edit .link-item:focus .link-url {
+.is-edit .link-item:hover .link-url,
+.is-edit .link-item:focus .link-url {
   height: 0;
 }
 
