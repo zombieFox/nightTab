@@ -1383,8 +1383,8 @@ var link = (function() {
         var successAction = function() {
           stagedLink.link.timeStamp = new Date().getTime();
           bookmarks.mod.add.link(JSON.parse(JSON.stringify(stagedLink)));
-          data.save();
           add.item.close();
+          data.save();
           groupAndItems();
           control.render.dependents();
           control.render.class();
@@ -1433,8 +1433,8 @@ var link = (function() {
         stagedGroup.init();
         var successAction = function() {
           bookmarks.mod.add.group(JSON.parse(JSON.stringify(stagedGroup)));
-          data.save();
           add.group.close();
+          data.save();
           groupAndItems();
           control.render.dependents();
           control.render.class();
