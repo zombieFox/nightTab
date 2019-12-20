@@ -691,6 +691,14 @@ var update = (function() {
       data.state.link.edit = false;
       data.state.group.edit = false;
       return data;
+    },
+    "4.30.0": function(data) {
+      data.state.theme.color = {
+        r: 127,
+        g: 139,
+        b: 166
+      };
+      return data;
     }
   };
 

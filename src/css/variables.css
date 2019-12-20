@@ -5,6 +5,7 @@
   --theme-radius:                                       0.2rem;
   --theme-black:                                        0, 0, 0;
   --theme-white:                                        255, 255, 255;
+  /*
   --theme-shade-01:                                     38, 40, 49;
   --theme-shade-02:                                     47, 51, 62;
   --theme-shade-03:                                     57, 62, 75;
@@ -25,6 +26,29 @@
   --theme-shade-18:                                     224, 228, 234;
   --theme-shade-19:                                     237, 239, 242;
   --theme-shade-20:                                     250, 250, 250;
+  */
+  --theme-shade-neg-10:                                 127, 127, 127;
+  --theme-shade-neg-09:                                 127, 127, 127;
+  --theme-shade-neg-08:                                 127, 127, 127;
+  --theme-shade-neg-07:                                 127, 127, 127;
+  --theme-shade-neg-06:                                 127, 127, 127;
+  --theme-shade-neg-05:                                 127, 127, 127;
+  --theme-shade-neg-04:                                 127, 127, 127;
+  --theme-shade-neg-03:                                 127, 127, 127;
+  --theme-shade-neg-02:                                 127, 127, 127;
+  --theme-shade-neg-01:                                 127, 127, 127;
+  --theme-shade:                                        127, 127, 127;
+  --theme-shade-pos-01:                                 127, 127, 127;
+  --theme-shade-pos-02:                                 127, 127, 127;
+  --theme-shade-pos-03:                                 127, 127, 127;
+  --theme-shade-pos-04:                                 127, 127, 127;
+  --theme-shade-pos-05:                                 127, 127, 127;
+  --theme-shade-pos-06:                                 127, 127, 127;
+  --theme-shade-pos-07:                                 127, 127, 127;
+  --theme-shade-pos-08:                                 127, 127, 127;
+  --theme-shade-pos-09:                                 127, 127, 127;
+  --theme-shade-pos-10:                                 127, 127, 127;
+
   /* header */
   --header-area-width:                                  100%;
   --header-shade-color:                                 var(--theme-gray-01);
@@ -212,51 +236,53 @@
 
 .is-theme-style-dark {
   /* theme */
-  --theme-gray-01:                                      var(--theme-shade-01);
-  --theme-gray-02:                                      var(--theme-shade-02);
-  --theme-gray-03:                                      var(--theme-shade-03);
-  --theme-gray-04:                                      var(--theme-shade-04);
-  --theme-gray-05:                                      var(--theme-shade-05);
-  --theme-gray-06:                                      var(--theme-shade-06);
-  --theme-gray-07:                                      var(--theme-shade-07);
-  --theme-gray-08:                                      var(--theme-shade-08);
-  --theme-gray-09:                                      var(--theme-shade-09);
-  --theme-gray-10:                                      var(--theme-shade-10);
-  --theme-gray-11:                                      var(--theme-shade-11);
-  --theme-gray-12:                                      var(--theme-shade-12);
-  --theme-gray-13:                                      var(--theme-shade-13);
-  --theme-gray-14:                                      var(--theme-shade-14);
-  --theme-gray-15:                                      var(--theme-shade-15);
-  --theme-gray-16:                                      var(--theme-shade-16);
-  --theme-gray-17:                                      var(--theme-shade-17);
-  --theme-gray-18:                                      var(--theme-shade-18);
-  --theme-gray-19:                                      var(--theme-shade-19);
-  --theme-gray-20:                                      var(--theme-shade-20);
+  --theme-gray-01:                                      var(--theme-shade-neg-10);
+  --theme-gray-02:                                      var(--theme-shade-neg-09);
+  --theme-gray-03:                                      var(--theme-shade-neg-08);
+  --theme-gray-04:                                      var(--theme-shade-neg-07);
+  --theme-gray-05:                                      var(--theme-shade-neg-06);
+  --theme-gray-06:                                      var(--theme-shade-neg-05);
+  --theme-gray-07:                                      var(--theme-shade-neg-04);
+  --theme-gray-08:                                      var(--theme-shade-neg-03);
+  --theme-gray-09:                                      var(--theme-shade-neg-02);
+  --theme-gray-10:                                      var(--theme-shade-neg-01);
+  --theme-gray:                                         var(--theme-shade);
+  --theme-gray-11:                                      var(--theme-shade-pos-01);
+  --theme-gray-12:                                      var(--theme-shade-pos-02);
+  --theme-gray-13:                                      var(--theme-shade-pos-03);
+  --theme-gray-14:                                      var(--theme-shade-pos-04);
+  --theme-gray-15:                                      var(--theme-shade-pos-05);
+  --theme-gray-16:                                      var(--theme-shade-pos-06);
+  --theme-gray-17:                                      var(--theme-shade-pos-07);
+  --theme-gray-18:                                      var(--theme-shade-pos-08);
+  --theme-gray-19:                                      var(--theme-shade-pos-09);
+  --theme-gray-20:                                      var(--theme-shade-pos-10);
   --theme-style-text:                                   var(--theme-white);
 }
 
 .is-theme-style-light {
   /* theme */
-  --theme-gray-01:                                      var(--theme-shade-20);
-  --theme-gray-02:                                      var(--theme-shade-19);
-  --theme-gray-03:                                      var(--theme-shade-18);
-  --theme-gray-04:                                      var(--theme-shade-17);
-  --theme-gray-05:                                      var(--theme-shade-16);
-  --theme-gray-06:                                      var(--theme-shade-15);
-  --theme-gray-07:                                      var(--theme-shade-14);
-  --theme-gray-08:                                      var(--theme-shade-13);
-  --theme-gray-09:                                      var(--theme-shade-12);
-  --theme-gray-10:                                      var(--theme-shade-11);
-  --theme-gray-11:                                      var(--theme-shade-10);
-  --theme-gray-12:                                      var(--theme-shade-09);
-  --theme-gray-13:                                      var(--theme-shade-08);
-  --theme-gray-14:                                      var(--theme-shade-07);
-  --theme-gray-15:                                      var(--theme-shade-06);
-  --theme-gray-16:                                      var(--theme-shade-05);
-  --theme-gray-17:                                      var(--theme-shade-04);
-  --theme-gray-18:                                      var(--theme-shade-03);
-  --theme-gray-19:                                      var(--theme-shade-02);
-  --theme-gray-20:                                      var(--theme-shade-01);
+  --theme-gray-01:                                      var(--theme-shade-pos-10);
+  --theme-gray-02:                                      var(--theme-shade-pos-09);
+  --theme-gray-03:                                      var(--theme-shade-pos-08);
+  --theme-gray-04:                                      var(--theme-shade-pos-07);
+  --theme-gray-05:                                      var(--theme-shade-pos-06);
+  --theme-gray-06:                                      var(--theme-shade-pos-05);
+  --theme-gray-07:                                      var(--theme-shade-pos-04);
+  --theme-gray-08:                                      var(--theme-shade-pos-03);
+  --theme-gray-09:                                      var(--theme-shade-pos-02);
+  --theme-gray-10:                                      var(--theme-shade-pos-01);
+  --theme-gray:                                         var(--theme-shade);
+  --theme-gray-11:                                      var(--theme-shade-neg-01);
+  --theme-gray-12:                                      var(--theme-shade-neg-02);
+  --theme-gray-13:                                      var(--theme-shade-neg-03);
+  --theme-gray-14:                                      var(--theme-shade-neg-04);
+  --theme-gray-15:                                      var(--theme-shade-neg-05);
+  --theme-gray-16:                                      var(--theme-shade-neg-06);
+  --theme-gray-17:                                      var(--theme-shade-neg-07);
+  --theme-gray-18:                                      var(--theme-shade-neg-08);
+  --theme-gray-19:                                      var(--theme-shade-neg-09);
+  --theme-gray-20:                                      var(--theme-shade-neg-10);
   --theme-style-text:                                   var(--theme-black);
 }
 

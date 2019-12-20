@@ -86,9 +86,18 @@ var control = (function() {
     type: "color",
     func: function() {
       theme.accent();
-      theme.render.input.picker();
-      theme.render.input.hex();
+      theme.render.accent.input.picker();
+      theme.render.accent.input.hex();
       link.groupAndItems();
+    }
+  }, {
+    element: helper.e(".control-theme-color-quick"),
+    path: "theme.color",
+    type: "color",
+    func: function() {
+      theme.render.color.spread();
+      theme.render.color.input.picker();
+      theme.render.color.input.hex();
     }
   }, {
     element: helper.e(".control-layout-width"),
@@ -2496,8 +2505,8 @@ var control = (function() {
     type: "color",
     func: function() {
       theme.accent();
-      theme.render.input.quick();
-      theme.render.input.hex();
+      theme.render.accent.input.quick();
+      theme.render.accent.input.hex();
       link.groupAndItems();
     }
   }, {
@@ -2507,8 +2516,8 @@ var control = (function() {
     valueMod: ["hexTextString"],
     func: function() {
       theme.accent();
-      theme.render.input.picker();
-      theme.render.input.quick();
+      theme.render.accent.input.picker();
+      theme.render.accent.input.quick();
       link.groupAndItems();
     }
   }, {
@@ -2545,6 +2554,36 @@ var control = (function() {
         path: "theme.radius"
       }));
       theme.render.radius();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-picker"),
+    path: "theme.color",
+    type: "color",
+    func: function() {
+      theme.render.color.spread();
+      theme.render.color.input.quick();
+      theme.render.color.input.hex();
+    }
+  }, {
+    element: helper.e(".control-theme-color-hex"),
+    path: "theme.color",
+    type: "text",
+    valueMod: ["hexTextString"],
+    func: function() {
+      theme.render.color.spread();
+      theme.render.color.input.quick();
+      theme.render.color.input.picker();
+    }
+  }, {
+    element: helper.e(".control-theme-color-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.color", helper.getObject({
+        object: state.mod.default,
+        path: "theme.color"
+      }));
+      theme.render.color.spread();
       render.update();
     }
   }, {

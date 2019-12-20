@@ -111,9 +111,15 @@
           </div>
           <div class="header-item header-button header-accent">
             <div class="header-button-body">
-              <div class="input-wrap input-button input-color-dot input-color-dot-accent py-0">
-                <input id="control-theme-accent-current-quick" class="control-theme-accent-current-quick" type="color" tabindex="1">
-                <label for="control-theme-accent-current-quick">Accent</label>
+              <div class="form-group nested-button mb-0">
+                <div class="input-wrap input-button input-color-dot input-color-dot-theme py-0">
+                  <input id="control-theme-color-quick" class="form-group-item-half control-theme-color-quick mb-0" type="color" value="#000000" tabindex="1">
+                  <label for="control-theme-color-quick">Color</label>
+                </div>
+                <div class="input-wrap input-button input-color-dot input-color-dot-accent py-0">
+                  <input id="control-theme-accent-current-quick" class="control-theme-accent-current-quick" type="color" value="#000000" tabindex="1">
+                  <label for="control-theme-accent-current-quick">Accent</label>
+                </div>
               </div>
             </div>
           </div>
@@ -1264,6 +1270,69 @@
         </div>
 
         <div class="menu-content-area menu-content-area-theme is-hidden">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Color</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap">
+                <label for="control-theme-color-picker">Shade colour</label>
+                <div class="form-group form-group-block mb-0">
+                  <input id="control-theme-color-picker" class="form-group-item-half control-theme-color-picker mb-0" type="color" value="#000000" tabindex="1">
+                  <input id="control-theme-color-hex" class="form-group-item-half control-theme-color-hex mb-0" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="control-theme-color-default button mb-0" tabindex="-1">Default shade color</button>
+              </div>
+              <div class="color-demo">
+                <div class="color-box color-box-neg-10"></div>
+                <div class="color-box color-box-neg-09"></div>
+                <div class="color-box color-box-neg-08"></div>
+                <div class="color-box color-box-neg-07"></div>
+                <div class="color-box color-box-neg-06"></div>
+                <div class="color-box color-box-neg-05"></div>
+                <div class="color-box color-box-neg-04"></div>
+                <div class="color-box color-box-neg-03"></div>
+                <div class="color-box color-box-neg-02"></div>
+                <div class="color-box color-box-neg-01"></div>
+                <div class="color-box color-box-wide color-box-mid"></div>
+                <div class="color-box color-box-pos-01"></div>
+                <div class="color-box color-box-pos-02"></div>
+                <div class="color-box color-box-pos-03"></div>
+                <div class="color-box color-box-pos-04"></div>
+                <div class="color-box color-box-pos-05"></div>
+                <div class="color-box color-box-pos-06"></div>
+                <div class="color-box color-box-pos-07"></div>
+                <div class="color-box color-box-pos-08"></div>
+                <div class="color-box color-box-pos-09"></div>
+                <div class="color-box color-box-pos-10"></div>
+              </div>
+              <!-- <div class="color-demo">
+                <div class="color-box" style="background-color: rgb(32, 35, 42)"></div>
+                <div class="color-box" style="background-color: rgb(41, 45, 54)"></div>
+                <div class="color-box" style="background-color: rgb(51, 56, 66)"></div>
+                <div class="color-box" style="background-color: rgb(60, 66, 79)"></div>
+                <div class="color-box" style="background-color: rgb(70, 77, 91)"></div>
+                <div class="color-box" style="background-color: rgb(79, 87, 104)"></div>
+                <div class="color-box" style="background-color: rgb(89, 97, 116)"></div>
+                <div class="color-box" style="background-color: rgb(98, 108, 129)"></div>
+                <div class="color-box" style="background-color: rgb(108, 118, 141)"></div>
+                <div class="color-box" style="background-color: rgb(118, 129, 154)"></div>
+                <div class="color-box color-box-wide" style="background-color: rgb(127, 139, 166)"></div>
+                <div class="color-box" style="background-color: rgb(139, 150, 175)"></div>
+                <div class="color-box" style="background-color: rgb(151, 161, 183)"></div>
+                <div class="color-box" style="background-color: rgb(164, 172, 191)"></div>
+                <div class="color-box" style="background-color: rgb(176, 183, 200)"></div>
+                <div class="color-box" style="background-color: rgb(188, 194, 208)"></div>
+                <div class="color-box" style="background-color: rgb(200, 205, 217)"></div>
+                <div class="color-box" style="background-color: rgb(212, 216, 225)"></div>
+                <div class="color-box" style="background-color: rgb(224, 227, 234)"></div>
+                <div class="color-box" style="background-color: rgb(236, 238, 242)"></div>
+                <div class="color-box" style="background-color: rgb(249, 249, 251)"></div>
+              </div> -->
+            </div>
+          </div>
           <div class="menu-item">
             <div class="menu-item-header">
               <h1 class="menu-item-header-text">Accent</h1>

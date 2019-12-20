@@ -220,6 +220,11 @@ var state = (function() {
           style: "any"
         }
       },
+      color: {
+        r: 127,
+        g: 139,
+        b: 166
+      },
       style: "dark",
       radius: 0.25
     },
@@ -321,6 +326,11 @@ var state = (function() {
       width: 80
     },
     theme: {
+      color: {
+        r: 127,
+        g: 139,
+        b: 166
+      },
       radius: 0.25
     }
   };
