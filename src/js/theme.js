@@ -217,9 +217,6 @@ var theme = (function() {
 
     },
     input: {
-      quick: function() {
-        helper.e(".control-theme-color-quick").value = helper.rgbToHex(state.get.current().theme.color);
-      },
       picker: function() {
         helper.e(".control-theme-color-picker").value = helper.rgbToHex(state.get.current().theme.color);
       },

@@ -111,15 +111,9 @@
           </div>
           <div class="header-item header-button header-accent">
             <div class="header-button-body">
-              <div class="form-group nested-button mb-0">
-                <div class="input-wrap input-button input-color-dot input-color-dot-theme py-0">
-                  <input id="control-theme-color-quick" class="form-group-item-half control-theme-color-quick mb-0" type="color" value="#000000" tabindex="1">
-                  <label for="control-theme-color-quick">Color</label>
-                </div>
-                <div class="input-wrap input-button input-color-dot input-color-dot-accent py-0">
-                  <input id="control-theme-accent-current-quick" class="control-theme-accent-current-quick" type="color" value="#000000" tabindex="1">
-                  <label for="control-theme-accent-current-quick">Accent</label>
-                </div>
+              <div class="input-wrap input-button input-color-dot input-color-dot-accent py-0">
+                <input id="control-theme-accent-current-quick" class="control-theme-accent-current-quick" type="color" value="#000000" tabindex="1">
+                <label for="control-theme-accent-current-quick">Accent</label>
               </div>
             </div>
           </div>
@@ -1272,6 +1266,33 @@
         <div class="menu-content-area menu-content-area-theme is-hidden">
           <div class="menu-item">
             <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Style</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap">
+                <input id="control-theme-style-dark" class="control-theme-style-dark" type="radio" name="control-theme-style" value="dark" tabindex="-1">
+                <label for="control-theme-style-dark"><span class="label-icon"></span> Dark</label>
+              </div>
+              <div class="input-wrap">
+                <input id="control-theme-style-light" class="control-theme-style-light" type="radio" name="control-theme-style" value="light" tabindex="-1">
+                <label for="control-theme-style-light"><span class="label-icon"></span> Light</label>
+              </div>
+              <p class="control-theme-style-light-helper form-helper small">Accent Colour and Background Image may need to be changed to best fit the Theme Style.</p>
+              <hr>
+              <div class="input-wrap">
+                <label for="control-theme-radius">Radius</label>
+                <div class="form-group form-group-block mb-0">
+                  <input id="control-theme-radius" class="control-theme-radius mr-3" type="range" min="0" max="300" value="0" step="5" tabindex="-1">
+                  <div class="control-theme-radius-count form-group-text form-group-medium form-group-radius-left"></div>
+                </div>
+              </div>
+              <div class="button-wrap">
+                <button class="control-theme-radius-default button mb-0" tabindex="-1">Default radius</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
               <h1 class="menu-item-header-text">Color</h1>
             </div>
             <div class="menu-item-form">
@@ -1282,9 +1303,11 @@
                   <input id="control-theme-color-hex" class="form-group-item-half control-theme-color-hex mb-0" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                 </div>
               </div>
+              <p class="control-theme-color-helper form-helper small">nightTab used shades of light and dark colours from this colour.</p>
               <div class="button-wrap">
                 <button class="control-theme-color-default button mb-0" tabindex="-1">Default shade color</button>
               </div>
+              <hr>
               <div class="color-demo">
                 <div class="color-box color-box-neg-10"></div>
                 <div class="color-box color-box-neg-09"></div>
@@ -1308,6 +1331,9 @@
                 <div class="color-box color-box-pos-09"></div>
                 <div class="color-box color-box-pos-10"></div>
               </div>
+              <p class="control-theme-color-helper form-helper small">Backgrounds, Bookmarks and Modals use shades from the left.</p>
+              <p class="control-theme-color-helper form-helper small">Text and form elements use shades from the right.</p>
+              <p class="control-theme-color-helper form-helper small">For a light look switch to the Light Style and then selecting a Shade colour.</p>
               <!-- <div class="color-demo">
                 <div class="color-box" style="background-color: rgb(32, 35, 42)"></div>
                 <div class="color-box" style="background-color: rgb(41, 45, 54)"></div>
@@ -1375,33 +1401,6 @@
                 <div class="button-wrap">
                   <button class="control-theme-accent-randomise button mb-0" tabindex="-1">Randomise now</button>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <h1 class="menu-item-header-text">Style</h1>
-            </div>
-            <div class="menu-item-form">
-              <div class="input-wrap">
-                <input id="control-theme-style-dark" class="control-theme-style-dark" type="radio" name="control-theme-style" value="dark" tabindex="-1">
-                <label for="control-theme-style-dark"><span class="label-icon"></span> Dark</label>
-              </div>
-              <div class="input-wrap">
-                <input id="control-theme-style-light" class="control-theme-style-light" type="radio" name="control-theme-style" value="light" tabindex="-1">
-                <label for="control-theme-style-light"><span class="label-icon"></span> Light</label>
-              </div>
-              <p class="control-theme-style-light-helper form-helper small">Accent Colour and Background Image may need to be changed to best fit the Theme Style.</p>
-              <hr>
-              <div class="input-wrap">
-                <label for="control-theme-radius">Radius</label>
-                <div class="form-group form-group-block mb-0">
-                  <input id="control-theme-radius" class="control-theme-radius mr-3" type="range" min="0" max="300" value="0" step="5" tabindex="-1">
-                  <div class="control-theme-radius-count form-group-text form-group-medium form-group-radius-left"></div>
-                </div>
-              </div>
-              <div class="button-wrap">
-                <button class="control-theme-radius-default button mb-0" tabindex="-1">Default radius</button>
               </div>
             </div>
           </div>

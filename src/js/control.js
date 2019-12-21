@@ -91,15 +91,6 @@ var control = (function() {
       link.groupAndItems();
     }
   }, {
-    element: helper.e(".control-theme-color-quick"),
-    path: "theme.color",
-    type: "color",
-    func: function() {
-      theme.render.color.spread();
-      theme.render.color.input.picker();
-      theme.render.color.input.hex();
-    }
-  }, {
     element: helper.e(".control-layout-width"),
     path: "layout.width",
     type: "range",
@@ -2562,7 +2553,6 @@ var control = (function() {
     type: "color",
     func: function() {
       theme.render.color.spread();
-      theme.render.color.input.quick();
       theme.render.color.input.hex();
     }
   }, {
@@ -2572,7 +2562,6 @@ var control = (function() {
     valueMod: ["hexTextString"],
     func: function() {
       theme.render.color.spread();
-      theme.render.color.input.quick();
       theme.render.color.input.picker();
     }
   }, {
