@@ -45,10 +45,10 @@
 
 .tip-message {
   padding: 0.5em 1em;
-  background-color: rgb(var(--theme-gray-04));
+  background-color: rgb(var(--theme-color-04));
   border: 0;
   border-radius: calc(var(--theme-radius) * 2);
-  color: rgb(var(--theme-gray-18));
+  color: rgb(var(--theme-color-18));
   font-size: 0.8em;
   font-family: var(--font-regular);
   text-align: center;
@@ -59,7 +59,7 @@
 
 .tip-arrow {
   border: 0.5em solid transparent;
-  border-top-color: rgb(var(--theme-gray-04));
+  border-top-color: rgb(var(--theme-color-04));
   position: absolute;
   width: 0;
   height: 0;

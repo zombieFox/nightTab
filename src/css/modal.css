@@ -23,7 +23,7 @@
 }
 
 .modal-wrapper {
-  background-color: rgb(var(--theme-gray-01));
+  background-color: rgb(var(--theme-color-01));
   border-radius: var(--theme-radius);
   box-shadow: var(--layout-shadow-large);
   position: relative;
@@ -59,7 +59,7 @@
 }
 
 .modal-controls {
-  background-color: rgb(var(--theme-gray-01));
+  background-color: rgb(var(--theme-color-01));
   border-radius: 0 0 var(--theme-radius) var(--theme-radius);
   position: relative;
   z-index: 2;

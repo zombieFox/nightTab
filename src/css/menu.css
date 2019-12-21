@@ -22,7 +22,7 @@
 }
 
 .menu-area {
-  background-color: rgb(var(--theme-gray-01));
+  background-color: rgb(var(--theme-color-01));
   border-radius: var(--theme-radius);
   width: 100%;
   max-height: 100%;
@@ -33,7 +33,7 @@
 }
 
 .is-edge .menu-area {
-  background-color: rgba(var(--theme-gray-01), 0.8);
+  background-color: rgba(var(--theme-color-01), 0.8);
 }
 
 .menu-nav {
