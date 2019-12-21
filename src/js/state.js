@@ -221,9 +221,9 @@ var state = (function() {
         }
       },
       color: {
-        r: 127,
-        g: 139,
-        b: 166
+        r: 125,
+        g: 130,
+        b: 155
       },
       style: "dark",
       radius: 0.25
@@ -327,9 +327,9 @@ var state = (function() {
     },
     theme: {
       color: {
-        r: 127,
-        g: 139,
-        b: 166
+        r: 125,
+        g: 130,
+        b: 155
       },
       radius: 0.25
     }

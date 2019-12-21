@@ -119,100 +119,139 @@ var theme = (function() {
 
   render.color = {
     spread: function() {
+
       var hsl = helper.convert.rgb.hsl([state.get.current().theme.color.r, state.get.current().theme.color.g, state.get.current().theme.color.b]);
-
-      console.log(helper.convert.hsl.rgb([hsl[0], hsl[1], hsl[2]]));
-
-      var sMod = 4;
-      var lMod = 0;
-
-      // helper.e(".menu-content").style.setProperty("background-color", "hsl(" + hsl[0] + "," + hsl[1] + "%," + hsl[2] + "%)");
-
-      helper.e("html").style.setProperty("--theme-shade-neg-10", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 10)), 10), parseInt((hsl[2] - (sMod * 10)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-neg-09", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 9)), 10), parseInt((hsl[2] - (sMod * 9)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-neg-08", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 8)), 10), parseInt((hsl[2] - (sMod * 8)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-neg-07", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 7)), 10), parseInt((hsl[2] - (sMod * 7)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-neg-06", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 6)), 10), parseInt((hsl[2] - (sMod * 6)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-neg-05", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 5)), 10), parseInt((hsl[2] - (sMod * 5)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-neg-04", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 4)), 10), parseInt((hsl[2] - (sMod * 4)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-neg-03", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 3)), 10), parseInt((hsl[2] - (sMod * 3)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-neg-02", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 2)), 10), parseInt((hsl[2] - (sMod * 2)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-neg-01", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 1)), 10), parseInt((hsl[2] - (sMod * 1)), 10)]
-      ));
+      var shadeSteps = 10;
+      var sMod = 0;
+      var lMod = 4;
+      var html = helper.e("html");
 
 
-      helper.e("html").style.setProperty("--theme-shade", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt(hsl[1], 10), parseInt(hsl[2], 10)]
-      ));
+      var rgb = helper.convert.hsl.rgb(hsl);
+      console.log(parseInt(rgb[0], 10) + ", " +  parseInt(rgb[1], 10) + ", " + parseInt(rgb[2], 10));
+      // base color
+      html.style.setProperty("--theme-shade", parseInt(rgb[0], 10) + ", " +  parseInt(rgb[1], 10) + ", " + parseInt(rgb[2], 10));
+
+      for (var i = 1; i <= shadeSteps; i++) {
+        var h = hsl[0];
+        var s = (hsl[1] - (sMod * i));
+        var l = (hsl[2] - (lMod * i));
+        var rgb = helper.convert.hsl.rgb([h, s, l]);
+        var number;
+        if (i < 10) {
+          number = "0" + i;
+        } else {
+          number = i
+        };
+        console.log(parseInt(rgb[0], 10) + ", " + parseInt(rgb[1], 10) + ", " + parseInt(rgb[2], 10));
+        // dark shades
+        html.style.setProperty("--theme-shade-neg-" + number, parseInt(rgb[0], 10) + ", " + parseInt(rgb[1], 10) + ", " + parseInt(rgb[2], 10));
+      };
+
+      for (var i = 1; i <= shadeSteps; i++) {
+        var h = hsl[0];
+        var s = (hsl[1] + (sMod * i));
+        var l = (hsl[2] + (lMod * i));
+        var rgb = helper.convert.hsl.rgb([h, s, l]);
+        var number;
+        if (i < 10) {
+          number = "0" + i;
+        } else {
+          number = i
+        };
+        // light shades
+        console.log(parseInt(rgb[0], 10) + ", " + parseInt(rgb[1], 10) + ", " + parseInt(rgb[2], 10));
+        html.style.setProperty("--theme-shade-pos-" + number, parseInt(rgb[0], 10) + ", " + parseInt(rgb[1], 10) + ", " + parseInt(rgb[2], 10));
+      };
 
 
-      helper.e("html").style.setProperty("--theme-shade-pos-01", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 1)), 10), parseInt((hsl[2] + (sMod * 1)), 10)]
-      ));
 
-      helper.e("html").style.setProperty("--theme-shade-pos-02", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 2)), 10), parseInt((hsl[2] + (sMod * 2)), 10)]
-      ));
 
-      helper.e("html").style.setProperty("--theme-shade-pos-03", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 3)), 10), parseInt((hsl[2] + (sMod * 3)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-pos-04", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 4)), 10), parseInt((hsl[2] + (sMod * 4)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-pos-05", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 5)), 10), parseInt((hsl[2] + (sMod * 5)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-pos-06", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 6)), 10), parseInt((hsl[2] + (sMod * 6)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-pos-07", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 7)), 10), parseInt((hsl[2] + (sMod * 7)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-pos-08", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 8)), 10), parseInt((hsl[2] + (sMod * 8)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-pos-09", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 9)), 10), parseInt((hsl[2] + (sMod * 9)), 10)]
-      ));
-
-      helper.e("html").style.setProperty("--theme-shade-pos-10", helper.convert.hsl.rgb(
-        [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 10)), 10), parseInt((hsl[2] + (sMod * 10)), 10)]
-      ));
+      // helper.e("html").style.setProperty("--theme-shade-neg-10", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 10)), 10), parseInt((hsl[2] - (sMod * 10)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-neg-09", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 9)), 10), parseInt((hsl[2] - (sMod * 9)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-neg-08", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 8)), 10), parseInt((hsl[2] - (sMod * 8)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-neg-07", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 7)), 10), parseInt((hsl[2] - (sMod * 7)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-neg-06", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 6)), 10), parseInt((hsl[2] - (sMod * 6)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-neg-05", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 5)), 10), parseInt((hsl[2] - (sMod * 5)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-neg-04", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 4)), 10), parseInt((hsl[2] - (sMod * 4)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-neg-03", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 3)), 10), parseInt((hsl[2] - (sMod * 3)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-neg-02", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 2)), 10), parseInt((hsl[2] - (sMod * 2)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-neg-01", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 1)), 10), parseInt((hsl[2] - (sMod * 1)), 10)]
+      // ));
+      //
+      //
+      // helper.e("html").style.setProperty("--theme-shade", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt(hsl[1], 10), parseInt(hsl[2], 10)]
+      // ));
+      //
+      //
+      // helper.e("html").style.setProperty("--theme-shade-pos-01", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 1)), 10), parseInt((hsl[2] + (sMod * 1)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-pos-02", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 2)), 10), parseInt((hsl[2] + (sMod * 2)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-pos-03", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 3)), 10), parseInt((hsl[2] + (sMod * 3)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-pos-04", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 4)), 10), parseInt((hsl[2] + (sMod * 4)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-pos-05", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 5)), 10), parseInt((hsl[2] + (sMod * 5)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-pos-06", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 6)), 10), parseInt((hsl[2] + (sMod * 6)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-pos-07", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 7)), 10), parseInt((hsl[2] + (sMod * 7)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-pos-08", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 8)), 10), parseInt((hsl[2] + (sMod * 8)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-pos-09", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 9)), 10), parseInt((hsl[2] + (sMod * 9)), 10)]
+      // ));
+      //
+      // helper.e("html").style.setProperty("--theme-shade-pos-10", helper.convert.hsl.rgb(
+      //   [parseInt(hsl[0], 10), parseInt((hsl[1] - (lMod * 10)), 10), parseInt((hsl[2] + (sMod * 10)), 10)]
+      // ));
 
 
     },
@@ -223,6 +262,11 @@ var theme = (function() {
       hex: function() {
         helper.e(".control-theme-color-hex").value = helper.rgbToHex(state.get.current().theme.color);
       }
+    },
+    range: function() {
+      helper.e(".control-theme-color-r").value = state.get.current().theme.color.r;
+      helper.e(".control-theme-color-g").value = state.get.current().theme.color.g;
+      helper.e(".control-theme-color-b").value = state.get.current().theme.color.b;
     }
   };
 

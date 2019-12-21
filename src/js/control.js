@@ -2554,6 +2554,7 @@ var control = (function() {
     func: function() {
       theme.render.color.spread();
       theme.render.color.input.hex();
+      theme.render.color.range();
     }
   }, {
     element: helper.e(".control-theme-color-hex"),
@@ -2563,6 +2564,40 @@ var control = (function() {
     func: function() {
       theme.render.color.spread();
       theme.render.color.input.picker();
+      theme.render.color.range();
+    }
+  }, {
+    element: helper.e(".control-theme-color-r"),
+    path: "theme.color.r",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-r-count"),
+    func: function() {
+      theme.render.color.spread();
+      theme.render.color.input.picker();
+      theme.render.color.input.hex();
+      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-theme-color-g"),
+    path: "theme.color.g",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-g-count"),
+    func: function() {
+      theme.render.color.spread();
+      theme.render.color.input.picker();
+      theme.render.color.input.hex();
+      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-theme-color-b"),
+    path: "theme.color.b",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-b-count"),
+    func: function() {
+      theme.render.color.spread();
+      theme.render.color.input.picker();
+      theme.render.color.input.hex();
+      render.range.count(this);
     }
   }, {
     element: helper.e(".control-theme-color-default"),
