@@ -221,9 +221,9 @@ var state = (function() {
         }
       },
       color: {
-        r: 125,
-        g: 130,
-        b: 155
+        r: 127,
+        g: 139,
+        b: 166
       },
       style: "dark",
       radius: 0.25
@@ -327,9 +327,9 @@ var state = (function() {
     },
     theme: {
       color: {
-        r: 125,
-        g: 130,
-        b: 155
+        r: 127,
+        g: 139,
+        b: 166
       },
       radius: 0.25
     }
@@ -340,7 +340,7 @@ var state = (function() {
       return mod.current;
     },
     default: function() {
-      return mod.default;
+      return JSON.parse(JSON.stringify(mod.default));
     }
   };
 
