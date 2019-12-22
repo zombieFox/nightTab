@@ -195,7 +195,8 @@ var state = (function() {
       },
       border: 0,
       order: "headerbody",
-      add: false
+      add: false,
+      edit: true
     },
     layout: {
       alignment: "centercenter",
@@ -246,6 +247,7 @@ var state = (function() {
         accent: 0
       }
     },
+    edit: false,
     pagelock: false,
     shade: false,
     edge: false,

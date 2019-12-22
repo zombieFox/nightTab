@@ -847,6 +847,7 @@ input[type="range"]:disabled::-moz-range-progress {
   display: inline-block;
 }
 
+/* input button */
 .input-button input[type="checkbox"]+label,
 .input-button input[type="radio"]+label,
 .input-button input[type="color"]+label,
@@ -998,6 +999,7 @@ input[type="range"]:disabled::-moz-range-progress {
   background-color: rgb(var(--button-border-disabled));
 }
 
+/* input button link */
 .input-button-link input[type="checkbox"]+label,
 .input-button-link input[type="radio"]+label,
 .input-button-link input[type="color"]+label,
@@ -1032,7 +1034,6 @@ input[type="range"]:disabled::-moz-range-progress {
 .input-button-link input:disabled[type="color"]+label,
 .input-button-link input:disabled[type="file"]+label {
   background-color: transparent;
-  color: transparent;
   pointer-events: none;
 }
 
