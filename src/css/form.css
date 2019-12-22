@@ -1202,31 +1202,12 @@ input[type="range"]:disabled::-moz-range-progress {
   width: initial;
 }
 
+/* form group */
 .form-group {
   margin: 0 0 1em 0;
   display: inline-flex;
   justify-content: flex-start;
   align-items: stretch;
-}
-
-.form-group-block {
-  display: flex;
-  width: 100%;
-}
-
-.form-group-border {
-  border-radius: calc(var(--theme-radius) * 2);
-  border-width: var(--layout-line-width);
-  border-color: rgb(var(--form-group-text-border));
-  border-style: solid;
-}
-
-.form-group-border-theme-color {
-  border-color: rgb(var(--theme-color));
-}
-
-.form-group-padding {
-  padding: 0.25em;
 }
 
 .form-group .form-group-text,
@@ -1332,6 +1313,7 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-group.nested-button * .button,
+.form-group.nested-button *:first-child .button:after,
 .form-group.nested-button * input[type="checkbox"]+label,
 .form-group.nested-button * input[type="radio"]+label,
 .form-group.nested-button * input[type="color"]+label {
@@ -1382,6 +1364,43 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group>input.form-group-radius-right[type="range"] {
   border-top-right-radius: var(--theme-radius);
   border-bottom-right-radius: var(--theme-radius);
+}
+
+.form-group-block {
+  display: flex;
+  width: 100%;
+}
+
+.form-group-border {
+  border-radius: calc(var(--theme-radius) * 2);
+  border-width: var(--layout-line-width);
+  border-color: rgb(var(--form-group-text-border));
+  border-style: solid;
+  overflow: hidden;
+}
+
+.form-group.form-group-border .form-group-text,
+.form-group.form-group-border .button,
+.form-group.form-group-border .button:after,
+.form-group.form-group-border>select,
+.form-group.form-group-border>input[type="email"],
+.form-group.form-group-border>input[type="number"],
+.form-group.form-group-border>input[type="password"],
+.form-group.form-group-border>input[type="search"],
+.form-group.form-group-border>input[type="tel"],
+.form-group.form-group-border>input[type="text"],
+.form-group.form-group-border>input[type="color"],
+.form-group.form-group-border>input[type="range"],
+.form-group.form-group-border.nested-button * .button,
+.form-group.form-group-border.nested-button * .button:after,
+.form-group.form-group-border.nested-button * input[type="checkbox"]+label,
+.form-group.form-group-border.nested-button * input[type="radio"]+label,
+.form-group.form-group-border.nested-button * input[type="color"]+label {
+  border-radius: 0;
+}
+
+.form-group-border-theme-color {
+  border-color: rgb(var(--theme-color));
 }
 
 .form-group-item-small,
