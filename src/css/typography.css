@@ -7,7 +7,7 @@ h6 {
   margin: 0 0 1em 0;
   font-weight: normal;
   line-height: 1.5;
-  color: rgb(var(--theme-gray-18));
+  color: rgb(var(--theme-color-18));
 }
 
 h1 {
@@ -41,7 +41,7 @@ h6 {
 }
 
 p {
-  color: rgb(var(--theme-gray-16));
+  color: rgb(var(--theme-color-16));
   margin: 0;
   line-height: 1.5;
 }
@@ -70,13 +70,13 @@ strong {
 }
 
 a {
-  color: rgb(var(--theme-gray-16));
+  color: rgb(var(--theme-color-16));
   text-decoration: none;
 }
 
 a:link,
 a:visited {
-  color: rgb(var(--theme-gray-18));
+  color: rgb(var(--theme-color-18));
 }
 
 a:focus {
@@ -97,7 +97,7 @@ a:active {
   padding-bottom: var(--layout-line-width);
   border-bottom-width: calc(var(--layout-line-width) / 2);
   border-bottom-style: solid;
-  border-bottom-color: rgb(var(--theme-gray-06));
+  border-bottom-color: rgb(var(--theme-color-06));
   transition: color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast);
 }
 
@@ -145,9 +145,9 @@ table {
 
 table thead tr td,
 table thead tr th {
-  background-color: rgb(var(--theme-gray-03));
+  background-color: rgb(var(--theme-color-03));
   border: 0;
-  border-bottom: 1px solid rgb(var(--theme-gray-04));
+  border-bottom: 1px solid rgb(var(--theme-color-04));
   padding: 0.5em;
   margin: 0;
   text-align: left;
@@ -156,7 +156,7 @@ table thead tr th {
 }
 
 table tr:nth-child(odd) {
-  background-color: rgb(var(--theme-gray-02));
+  background-color: rgb(var(--theme-color-02));
 }
 
 table tbody tr td,

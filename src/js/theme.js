@@ -2,7 +2,7 @@ var theme = (function() {
 
   var mod = {};
 
-  mod.theme = {
+  mod.style = {
     light: function() {
       helper.setObject({
         object: state.get.current(),
@@ -16,13 +16,21 @@ var theme = (function() {
         path: "theme.style",
         newValue: "dark"
       });
+    }
+  };
+
+  mod.color = {
+    hsl: function() {
+      var hsl = helper.convert.rgb.hsl([state.get.current().theme.color.rgb.r, state.get.current().theme.color.rgb.g, state.get.current().theme.color.rgb.b]);
+      state.get.current().theme.color.hsl.h = parseInt(hsl[0], 10);
+      state.get.current().theme.color.hsl.s = parseInt(hsl[1], 10);
+      state.get.current().theme.color.hsl.l = parseInt(hsl[2], 10);
     },
-    toggle: function() {
-      if (state.get.current().theme.style == "dark") {
-        mod.theme.light();
-      } else if (state.get.current().theme.style == "light") {
-        mod.theme.dark();
-      };
+    rgb: function() {
+      var rgb = helper.convert.hsl.rgb([state.get.current().theme.color.hsl.h, state.get.current().theme.color.hsl.s, state.get.current().theme.color.hsl.l]);
+      state.get.current().theme.color.rgb.r = parseInt(rgb[0], 10);
+      state.get.current().theme.color.rgb.g = parseInt(rgb[1], 10);
+      state.get.current().theme.color.rgb.b = parseInt(rgb[2], 10);
     }
   };
 
@@ -103,23 +111,96 @@ var theme = (function() {
         helper.e(".control-theme-accent-current-picker").value = helper.rgbToHex(randomColor);
         helper.e(".control-theme-accent-current-hex").value = helper.rgbToHex(randomColor);
       };
+    },
+    input: {
+      quick: function() {
+        helper.e(".control-theme-accent-current-quick").value = helper.rgbToHex(state.get.current().theme.accent.current);
+      },
+      picker: function() {
+        helper.e(".control-theme-accent-current-picker").value = helper.rgbToHex(state.get.current().theme.accent.current);
+      },
+      hex: function() {
+        helper.e(".control-theme-accent-current-hex").value = helper.rgbToHex(state.get.current().theme.accent.current);
+      }
     }
   };
 
-  render.input = {
-    quick: function() {
-      helper.e(".control-theme-accent-current-quick").value = helper.rgbToHex(state.get.current().theme.accent.current);
+  render.color = {
+    shade: function() {
+
+      var shadeSteps = 10;
+      var sMod = 0;
+      var lMod = 4;
+      var html = helper.e("html");
+
+      var hsl = helper.convert.rgb.hsl([state.get.current().theme.color.rgb.r, state.get.current().theme.color.rgb.g, state.get.current().theme.color.rgb.b]);
+
+      // base color
+      html.style.setProperty("--theme-shade", state.get.current().theme.color.rgb.r + ", " + state.get.current().theme.color.rgb.g + ", " + state.get.current().theme.color.rgb.b);
+
+      for (var i = 1; i <= shadeSteps; i++) {
+        var h = hsl[0];
+        var s = (hsl[1] - (sMod * i));
+        var l = (hsl[2] - (lMod * i));
+        var rgb = helper.convert.hsl.rgb([h, s, l]);
+        var number;
+        if (i < 10) {
+          number = "0" + i;
+        } else {
+          number = i
+        };
+        html.style.setProperty("--theme-shade-neg-" + number, parseInt(rgb[0], 10) + ", " + parseInt(rgb[1], 10) + ", " + parseInt(rgb[2], 10));
+      };
+
+      for (var i = 1; i <= shadeSteps; i++) {
+        var h = hsl[0];
+        var s = (hsl[1] + (sMod * i));
+        var l = (hsl[2] + (lMod * i));
+        var rgb = helper.convert.hsl.rgb([h, s, l]);
+        var number;
+        if (i < 10) {
+          number = "0" + i;
+        } else {
+          number = i
+        };
+        html.style.setProperty("--theme-shade-pos-" + number, parseInt(rgb[0], 10) + ", " + parseInt(rgb[1], 10) + ", " + parseInt(rgb[2], 10));
+      };
+
     },
-    picker: function() {
-      helper.e(".control-theme-accent-current-picker").value = helper.rgbToHex(state.get.current().theme.accent.current);
+    input: {
+      picker: function() {
+        helper.e(".control-theme-color-rgb-picker").value = helper.rgbToHex(state.get.current().theme.color.rgb);
+      },
+      hex: function() {
+        helper.e(".control-theme-color-rgb-hex").value = helper.rgbToHex(state.get.current().theme.color.rgb);
+      }
     },
-    hex: function() {
-      helper.e(".control-theme-accent-current-hex").value = helper.rgbToHex(state.get.current().theme.accent.current);
+    range: {
+      hsl: function() {
+        helper.e(".control-theme-color-hsl-h").value = state.get.current().theme.color.hsl.h;
+        helper.e(".control-theme-color-hsl-s").value = state.get.current().theme.color.hsl.s;
+        helper.e(".control-theme-color-hsl-l").value = state.get.current().theme.color.hsl.l;
+        helper.e(".control-theme-color-hsl-h-count").textContent = state.get.current().theme.color.hsl.h;
+        helper.e(".control-theme-color-hsl-s-count").textContent = state.get.current().theme.color.hsl.s;
+        helper.e(".control-theme-color-hsl-l-count").textContent = state.get.current().theme.color.hsl.l;
+      },
+      rgb: function() {
+        helper.e(".control-theme-color-rgb-r").value = state.get.current().theme.color.rgb.r;
+        helper.e(".control-theme-color-rgb-g").value = state.get.current().theme.color.rgb.g;
+        helper.e(".control-theme-color-rgb-b").value = state.get.current().theme.color.rgb.b;
+        helper.e(".control-theme-color-rgb-r-count").textContent = state.get.current().theme.color.rgb.r;
+        helper.e(".control-theme-color-rgb-g-count").textContent = state.get.current().theme.color.rgb.g;
+        helper.e(".control-theme-color-rgb-b-count").textContent = state.get.current().theme.color.rgb.b;
+      }
     }
   };
 
   var toggle = function() {
-    mod.theme.toggle();
+    if (state.get.current().theme.style == "dark") {
+      mod.style.light();
+    } else if (state.get.current().theme.style == "light") {
+      mod.style.dark();
+    };
     render.theme();
   };
 
@@ -129,6 +210,7 @@ var theme = (function() {
 
   var init = function() {
     render.theme();
+    render.color.shade();
     render.accent.random();
     render.accent.color();
     render.radius();
@@ -137,6 +219,7 @@ var theme = (function() {
   // exposed methods
   return {
     init: init,
+    mod: mod,
     render: render,
     toggle: toggle,
     accent: accent

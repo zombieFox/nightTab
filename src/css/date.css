@@ -71,5 +71,5 @@
 .date-date,
 .date-month,
 .date-year {
-  color: rgb(var(--theme-gray-16));
+  color: rgb(var(--theme-color-16));
 }

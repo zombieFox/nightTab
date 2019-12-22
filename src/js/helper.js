@@ -659,6 +659,169 @@ var helper = (function() {
     };
   };
 
+  var convert = {
+    rgb: {},
+    hsl: {},
+    hex: {}
+  };
+
+  convert.rgb.hsl = function(rgb) {
+    const r = rgb[0] / 255;
+    const g = rgb[1] / 255;
+    const b = rgb[2] / 255;
+    const min = Math.min(r, g, b);
+    const max = Math.max(r, g, b);
+    const delta = max - min;
+    let h;
+    let s;
+
+    if (max === min) {
+      h = 0;
+    } else if (r === max) {
+      h = (g - b) / delta;
+    } else if (g === max) {
+      h = 2 + (b - r) / delta;
+    } else if (b === max) {
+      h = 4 + (r - g) / delta;
+    }
+
+    h = Math.min(h * 60, 360);
+
+    if (h < 0) {
+      h += 360;
+    }
+
+    const l = (min + max) / 2;
+
+    if (max === min) {
+      s = 0;
+    } else if (l <= 0.5) {
+      s = delta / (max + min);
+    } else {
+      s = delta / (2 - max - min);
+    }
+
+    return [h, s * 100, l * 100];
+  };
+
+  convert.rgb.lab = function(rgb) {
+    const xyz = convert.rgb.xyz(rgb);
+    let x = xyz[0];
+    let y = xyz[1];
+    let z = xyz[2];
+
+    x /= 95.047;
+    y /= 100;
+    z /= 108.883;
+
+    x = x > 0.008856 ? (x ** (1 / 3)) : (7.787 * x) + (16 / 116);
+    y = y > 0.008856 ? (y ** (1 / 3)) : (7.787 * y) + (16 / 116);
+    z = z > 0.008856 ? (z ** (1 / 3)) : (7.787 * z) + (16 / 116);
+
+    const l = (116 * y) - 16;
+    const a = 500 * (x - y);
+    const b = 200 * (y - z);
+
+    return [l, a, b];
+  };
+
+  convert.rgb.xyz = function(rgb) {
+    let r = rgb[0] / 255;
+    let g = rgb[1] / 255;
+    let b = rgb[2] / 255;
+
+    // Assume sRGB
+    r = r > 0.04045 ? (((r + 0.055) / 1.055) ** 2.4) : (r / 12.92);
+    g = g > 0.04045 ? (((g + 0.055) / 1.055) ** 2.4) : (g / 12.92);
+    b = b > 0.04045 ? (((b + 0.055) / 1.055) ** 2.4) : (b / 12.92);
+
+    const x = (r * 0.4124) + (g * 0.3576) + (b * 0.1805);
+    const y = (r * 0.2126) + (g * 0.7152) + (b * 0.0722);
+    const z = (r * 0.0193) + (g * 0.1192) + (b * 0.9505);
+
+    return [x * 100, y * 100, z * 100];
+  };
+
+  convert.rgb.hex = function(args) {
+    const integer = ((Math.round(args[0]) & 0xFF) << 16) +
+      ((Math.round(args[1]) & 0xFF) << 8) +
+      (Math.round(args[2]) & 0xFF);
+
+    const string = integer.toString(16).toUpperCase();
+    return '000000'.substring(string.length) + string;
+  };
+
+  convert.hsl.rgb = function(hsl) {
+    const h = hsl[0] / 360;
+    const s = hsl[1] / 100;
+    const l = hsl[2] / 100;
+    let t2;
+    let t3;
+    let val;
+
+    if (s === 0) {
+      val = l * 255;
+      return [val, val, val];
+    }
+
+    if (l < 0.5) {
+      t2 = l * (1 + s);
+    } else {
+      t2 = l + s - l * s;
+    }
+
+    const t1 = 2 * l - t2;
+
+    const rgb = [0, 0, 0];
+    for (let i = 0; i < 3; i++) {
+      t3 = h + 1 / 3 * -(i - 1);
+      if (t3 < 0) {
+        t3++;
+      }
+
+      if (t3 > 1) {
+        t3--;
+      }
+
+      if (6 * t3 < 1) {
+        val = t1 + (t2 - t1) * 6 * t3;
+      } else if (2 * t3 < 1) {
+        val = t2;
+      } else if (3 * t3 < 2) {
+        val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
+      } else {
+        val = t1;
+      }
+
+      rgb[i] = val * 255;
+    }
+
+    return rgb;
+  };
+
+  convert.hex.rgb = function(args) {
+    const match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+    if (!match) {
+      return [0, 0, 0];
+    }
+
+    let colorString = match[0];
+
+    if (match[0].length === 3) {
+      colorString = colorString.split('').map(char => {
+        return char + char;
+      }).join('');
+    }
+
+    const integer = parseInt(colorString, 16);
+    const r = (integer >> 16) & 0xFF;
+    const g = (integer >> 8) & 0xFF;
+    const b = integer & 0xFF;
+
+    return [r, g, b];
+  };
+
+
   // exposed methods
   return {
     e: e,
@@ -686,7 +849,8 @@ var helper = (function() {
     ordinalWords: ordinalWords,
     ordinalNumber: ordinalNumber,
     isJsonString: isJsonString,
-    isHexNumber: isHexNumber
+    isHexNumber: isHexNumber,
+    convert: convert
   };
 
 })();

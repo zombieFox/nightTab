@@ -220,6 +220,18 @@ var state = (function() {
           style: "any"
         }
       },
+      color: {
+        hsl: {
+          h: 222,
+          s: 14,
+          l: 56
+        },
+        rgb: {
+          r: 129,
+          g: 138,
+          b: 160
+        }
+      },
       style: "dark",
       radius: 0.25
     },
@@ -321,6 +333,18 @@ var state = (function() {
       width: 80
     },
     theme: {
+      color: {
+        hsl: {
+          h: 222,
+          s: 14,
+          l: 56
+        },
+        rgb: {
+          r: 129,
+          g: 138,
+          b: 160
+        }
+      },
       radius: 0.25
     }
   };
@@ -330,7 +354,7 @@ var state = (function() {
       return mod.current;
     },
     default: function() {
-      return mod.default;
+      return JSON.parse(JSON.stringify(mod.default));
     }
   };
 

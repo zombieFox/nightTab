@@ -86,8 +86,8 @@ var control = (function() {
     type: "color",
     func: function() {
       theme.accent();
-      theme.render.input.picker();
-      theme.render.input.hex();
+      theme.render.accent.input.picker();
+      theme.render.accent.input.hex();
       link.groupAndItems();
     }
   }, {
@@ -153,7 +153,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("layout.width", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "layout.width"
       }));
       layout.render.width();
@@ -302,7 +302,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("layout.padding", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "layout.padding"
       }));
       layout.render.padding();
@@ -370,7 +370,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("layout.gutter", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "layout.gutter"
       }));
       layout.render.gutter();
@@ -439,7 +439,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("layout.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "layout.size"
       }));
       layout.render.size();
@@ -707,7 +707,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("header.greeting.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "header.greeting.size"
       }));
       header.render.greeting.size();
@@ -802,7 +802,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("header.transitional.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "header.transitional.size"
       }));
       header.render.transitional.size();
@@ -1021,7 +1021,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("header.clock.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "header.clock.size"
       }));
       header.render.clock.size();
@@ -1378,7 +1378,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("header.date.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "header.date.size"
       }));
       header.render.date.size();
@@ -1627,7 +1627,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("header.search.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "header.search.size"
       }));
       header.render.search.size();
@@ -1726,7 +1726,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("header.button.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "header.button.size"
       }));
       header.render.button.size();
@@ -1845,7 +1845,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("group.name.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "group.name.size"
       }));
       link.render.group.size();
@@ -2123,7 +2123,7 @@ var control = (function() {
     }],
     func: function() {
       mod.setValue("link.item.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "link.item.size"
       }));
       link.render.item.size();
@@ -2215,7 +2215,7 @@ var control = (function() {
     type: "button",
     func: function() {
       mod.setValue("link.item.display.letcon.letter.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "link.item.display.letcon.letter.size"
       }));
       link.render.item.display.letter();
@@ -2236,7 +2236,7 @@ var control = (function() {
     type: "button",
     func: function() {
       mod.setValue("link.item.display.letcon.icon.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "link.item.display.letcon.icon.size"
       }));
       link.render.item.display.icon();
@@ -2265,7 +2265,7 @@ var control = (function() {
     type: "button",
     func: function() {
       mod.setValue("link.item.display.name.size", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "link.item.display.name.size"
       }));
       link.render.item.name();
@@ -2285,7 +2285,7 @@ var control = (function() {
     type: "button",
     func: function() {
       mod.setValue("link.item.display.rotate", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "link.item.display.rotate"
       }));
       link.render.item.rotate();
@@ -2306,7 +2306,7 @@ var control = (function() {
     type: "button",
     func: function() {
       mod.setValue("link.item.display.translate.x", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "link.item.display.translate.x"
       }));
       link.render.item.translate.x();
@@ -2327,7 +2327,7 @@ var control = (function() {
     type: "button",
     func: function() {
       mod.setValue("link.item.display.translate.y", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "link.item.display.translate.y"
       }));
       link.render.item.translate.y();
@@ -2347,7 +2347,7 @@ var control = (function() {
     type: "button",
     func: function() {
       mod.setValue("link.item.display.gutter", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "link.item.display.gutter"
       }));
       link.render.item.gutter();
@@ -2496,8 +2496,8 @@ var control = (function() {
     type: "color",
     func: function() {
       theme.accent();
-      theme.render.input.quick();
-      theme.render.input.hex();
+      theme.render.accent.input.quick();
+      theme.render.accent.input.hex();
       link.groupAndItems();
     }
   }, {
@@ -2507,8 +2507,8 @@ var control = (function() {
     valueMod: ["hexTextString"],
     func: function() {
       theme.accent();
-      theme.render.input.picker();
-      theme.render.input.quick();
+      theme.render.accent.input.picker();
+      theme.render.accent.input.quick();
       link.groupAndItems();
     }
   }, {
@@ -2541,10 +2541,111 @@ var control = (function() {
     type: "button",
     func: function() {
       mod.setValue("theme.radius", helper.getObject({
-        object: state.mod.default,
+        object: state.get.default(),
         path: "theme.radius"
       }));
       theme.render.radius();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-picker"),
+    path: "theme.color.rgb",
+    type: "color",
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.shade();
+      theme.render.color.range.hsl();
+      theme.render.color.range.rgb();
+      theme.render.color.input.hex();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-hex"),
+    path: "theme.color.rgb",
+    type: "text",
+    valueMod: ["hexTextString"],
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.shade();
+      theme.render.color.range.hsl();
+      theme.render.color.range.rgb();
+      theme.render.color.input.picker();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.color.rgb", helper.getObject({
+        object: state.get.default(),
+        path: "theme.color.rgb"
+      }));
+      theme.mod.color.hsl();
+      theme.render.color.shade();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-hsl-h"),
+    path: "theme.color.hsl.h",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-hsl-h-count"),
+    func: function() {
+      theme.mod.color.rgb();
+      theme.render.color.shade();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-hsl-s"),
+    path: "theme.color.hsl.s",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-hsl-s-count"),
+    func: function() {
+      theme.mod.color.rgb();
+      theme.render.color.shade();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-hsl-l"),
+    path: "theme.color.hsl.l",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-hsl-l-count"),
+    func: function() {
+      theme.mod.color.rgb();
+      theme.render.color.shade();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-r"),
+    path: "theme.color.rgb.r",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-rgb-r-count"),
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.shade();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-g"),
+    path: "theme.color.rgb.g",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-rgb-g-count"),
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.shade();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-b"),
+    path: "theme.color.rgb.b",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-rgb-b-count"),
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.shade();
+      render.range.count(this);
       render.update();
     }
   }, {

@@ -691,6 +691,21 @@ var update = (function() {
       data.state.link.edit = false;
       data.state.group.edit = false;
       return data;
+    },
+    "4.30.0": function(data) {
+      data.state.theme.color = {
+        hsl: {
+          h: 222,
+          s: 14,
+          l: 56
+        },
+        rgb: {
+          r: 129,
+          g: 138,
+          b: 160
+        }
+      };
+      return data;
     }
   };
 
