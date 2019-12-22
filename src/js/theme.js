@@ -126,7 +126,7 @@ var theme = (function() {
   };
 
   render.color = {
-    spread: function() {
+    shade: function() {
 
       var shadeSteps = 10;
       var sMod = 0;
@@ -210,7 +210,7 @@ var theme = (function() {
 
   var init = function() {
     render.theme();
-    render.color.spread();
+    render.color.shade();
     render.accent.random();
     render.accent.color();
     render.radius();

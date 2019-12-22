@@ -2553,7 +2553,7 @@ var control = (function() {
     type: "color",
     func: function() {
       theme.mod.color.hsl();
-      theme.render.color.spread();
+      theme.render.color.shade();
       theme.render.color.range.hsl();
       theme.render.color.range.rgb();
       theme.render.color.input.hex();
@@ -2565,7 +2565,7 @@ var control = (function() {
     valueMod: ["hexTextString"],
     func: function() {
       theme.mod.color.hsl();
-      theme.render.color.spread();
+      theme.render.color.shade();
       theme.render.color.range.hsl();
       theme.render.color.range.rgb();
       theme.render.color.input.picker();
@@ -2579,7 +2579,7 @@ var control = (function() {
         path: "theme.color.rgb"
       }));
       theme.mod.color.hsl();
-      theme.render.color.spread();
+      theme.render.color.shade();
       render.update();
     }
   }, {
@@ -2589,7 +2589,7 @@ var control = (function() {
     rangeCountElement: helper.e(".control-theme-color-hsl-h-count"),
     func: function() {
       theme.mod.color.rgb();
-      theme.render.color.spread();
+      theme.render.color.shade();
       render.range.count(this);
       render.update();
     }
@@ -2600,7 +2600,7 @@ var control = (function() {
     rangeCountElement: helper.e(".control-theme-color-hsl-s-count"),
     func: function() {
       theme.mod.color.rgb();
-      theme.render.color.spread();
+      theme.render.color.shade();
       render.range.count(this);
       render.update();
     }
@@ -2611,7 +2611,7 @@ var control = (function() {
     rangeCountElement: helper.e(".control-theme-color-hsl-l-count"),
     func: function() {
       theme.mod.color.rgb();
-      theme.render.color.spread();
+      theme.render.color.shade();
       render.range.count(this);
       render.update();
     }
@@ -2622,7 +2622,7 @@ var control = (function() {
     rangeCountElement: helper.e(".control-theme-color-rgb-r-count"),
     func: function() {
       theme.mod.color.hsl();
-      theme.render.color.spread();
+      theme.render.color.shade();
       render.range.count(this);
       render.update();
     }
@@ -2633,7 +2633,7 @@ var control = (function() {
     rangeCountElement: helper.e(".control-theme-color-rgb-g-count"),
     func: function() {
       theme.mod.color.hsl();
-      theme.render.color.spread();
+      theme.render.color.shade();
       render.range.count(this);
       render.update();
     }
@@ -2644,7 +2644,7 @@ var control = (function() {
     rangeCountElement: helper.e(".control-theme-color-rgb-b-count"),
     func: function() {
       theme.mod.color.hsl();
-      theme.render.color.spread();
+      theme.render.color.shade();
       render.range.count(this);
       render.update();
     }
