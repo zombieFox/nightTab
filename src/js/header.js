@@ -134,24 +134,19 @@ var header = (function() {
     style: function() {
       var action = {
         box: function() {
-          helper.removeClass(helper.getClosest(helper.e(".control-link-edit"), ".input-wrap"), "input-button-link");
+          helper.removeClass(helper.getClosest(helper.e(".control-edit"), ".input-wrap"), "input-button-link");
           helper.removeClass(helper.e(".control-add-toggle"), "button-link");
           helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-button-link");
           helper.removeClass(helper.e(".control-menu-open"), "button-link");
         },
         clear: function() {
-          helper.addClass(helper.getClosest(helper.e(".control-link-edit"), ".input-wrap"), "input-button-link");
+          helper.addClass(helper.getClosest(helper.e(".control-edit"), ".input-wrap"), "input-button-link");
           helper.addClass(helper.e(".control-add-toggle"), "button-link");
           helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-button-link");
           helper.addClass(helper.e(".control-menu-open"), "button-link");
         }
       };
       action[state.get.current().header.button.style]();
-    },
-    edit: function() {
-      if (!state.get.current().link.edit) {
-        helper.e(".control-link-edit").checked = false;
-      };
     }
   };
 
