@@ -1489,6 +1489,7 @@ var link = (function() {
         var successAction = function() {
           var copyStagedLink = JSON.parse(JSON.stringify(stagedLink));
           bookmarks.mod.edit.link(copyStagedLink);
+          edit.item.close();
           data.save();
           groupAndItems();
           render.focus.item.current.edit(copyStagedLink);
@@ -1533,6 +1534,7 @@ var link = (function() {
         var successAction = function() {
           var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
           bookmarks.mod.edit.group(copyStagedGroup);
+          edit.group.close();
           data.save();
           groupAndItems();
           render.focus.group.current.edit(copyStagedGroup);
