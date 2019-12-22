@@ -659,7 +659,6 @@ var helper = (function() {
     };
   };
 
-
   var convert = {
     rgb: {},
     hsl: {},

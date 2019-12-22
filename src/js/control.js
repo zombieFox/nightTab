@@ -2548,66 +2548,104 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-color-picker"),
-    path: "theme.color",
+    element: helper.e(".control-theme-color-rgb-picker"),
+    path: "theme.color.rgb",
     type: "color",
     func: function() {
+      theme.mod.color.hsl();
       theme.render.color.spread();
+      theme.render.color.range.hsl();
+      theme.render.color.range.rgb();
       theme.render.color.input.hex();
-      theme.render.color.range();
     }
   }, {
-    element: helper.e(".control-theme-color-hex"),
-    path: "theme.color",
+    element: helper.e(".control-theme-color-rgb-hex"),
+    path: "theme.color.rgb",
     type: "text",
     valueMod: ["hexTextString"],
     func: function() {
+      theme.mod.color.hsl();
       theme.render.color.spread();
+      theme.render.color.range.hsl();
+      theme.render.color.range.rgb();
       theme.render.color.input.picker();
-      theme.render.color.range();
     }
   }, {
-    element: helper.e(".control-theme-color-r"),
-    path: "theme.color.r",
-    type: "range",
-    rangeCountElement: helper.e(".control-theme-color-r-count"),
-    func: function() {
-      theme.render.color.spread();
-      theme.render.color.input.picker();
-      theme.render.color.input.hex();
-      render.range.count(this);
-    }
-  }, {
-    element: helper.e(".control-theme-color-g"),
-    path: "theme.color.g",
-    type: "range",
-    rangeCountElement: helper.e(".control-theme-color-g-count"),
-    func: function() {
-      theme.render.color.spread();
-      theme.render.color.input.picker();
-      theme.render.color.input.hex();
-      render.range.count(this);
-    }
-  }, {
-    element: helper.e(".control-theme-color-b"),
-    path: "theme.color.b",
-    type: "range",
-    rangeCountElement: helper.e(".control-theme-color-b-count"),
-    func: function() {
-      theme.render.color.spread();
-      theme.render.color.input.picker();
-      theme.render.color.input.hex();
-      render.range.count(this);
-    }
-  }, {
-    element: helper.e(".control-theme-color-default"),
+    element: helper.e(".control-theme-color-rgb-default"),
     type: "button",
     func: function() {
-      mod.setValue("theme.color", helper.getObject({
+      mod.setValue("theme.color.rgb", helper.getObject({
         object: state.get.default(),
-        path: "theme.color"
+        path: "theme.color.rgb"
       }));
+      theme.mod.color.hsl();
       theme.render.color.spread();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-hsl-h"),
+    path: "theme.color.hsl.h",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-hsl-h-count"),
+    func: function() {
+      theme.mod.color.rgb();
+      theme.render.color.spread();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-hsl-s"),
+    path: "theme.color.hsl.s",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-hsl-s-count"),
+    func: function() {
+      theme.mod.color.rgb();
+      theme.render.color.spread();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-hsl-l"),
+    path: "theme.color.hsl.l",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-hsl-l-count"),
+    func: function() {
+      theme.mod.color.rgb();
+      theme.render.color.spread();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-r"),
+    path: "theme.color.rgb.r",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-rgb-r-count"),
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.spread();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-g"),
+    path: "theme.color.rgb.g",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-rgb-g-count"),
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.spread();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-b"),
+    path: "theme.color.rgb.b",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-color-rgb-b-count"),
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.spread();
+      render.range.count(this);
       render.update();
     }
   }, {

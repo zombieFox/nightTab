@@ -221,9 +221,16 @@ var state = (function() {
         }
       },
       color: {
-        r: 127,
-        g: 139,
-        b: 166
+        hsl: {
+          h: 222,
+          s: 18,
+          l: 57
+        },
+        rgb: {
+          r: 127,
+          g: 139,
+          b: 166
+        }
       },
       style: "dark",
       radius: 0.25
@@ -327,9 +334,16 @@ var state = (function() {
     },
     theme: {
       color: {
-        r: 127,
-        g: 139,
-        b: 166
+        hsl: {
+          h: 222,
+          s: 18,
+          l: 57
+        },
+        rgb: {
+          r: 127,
+          g: 139,
+          b: 166
+        }
       },
       radius: 0.25
     }

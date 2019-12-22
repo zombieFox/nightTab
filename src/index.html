@@ -1297,37 +1297,60 @@
             </div>
             <div class="menu-item-form">
               <div class="input-wrap">
-                <label for="control-theme-color-picker">Shade colour</label>
+                <label for="control-theme-color-rgb-picker">Shade colour</label>
                 <div class="form-group form-group-block mb-0">
-                  <input id="control-theme-color-picker" class="form-group-item-half control-theme-color-picker mb-0" type="color" value="#000000" tabindex="1">
-                  <input id="control-theme-color-hex" class="form-group-item-half control-theme-color-hex mb-0" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                  <input id="control-theme-color-rgb-picker" class="form-group-item-half control-theme-color-rgb-picker mb-0" type="color" value="#000000" tabindex="1">
+                  <input id="control-theme-color-rgb-hex" class="form-group-item-half control-theme-color-rgb-hex mb-0" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                 </div>
-              </div>
-              <div class="input-wrap">
-                <label for="control-theme-color-r">Red</label>
-                <div class="form-group form-group-block mb-0">
-                  <input id="control-theme-color-r" class="control-theme-color-r mr-3" type="range" min="0" max="255" value="0" tabindex="-1">
-                  <div class="control-theme-color-r-count form-group-text form-group-medium form-group-radius-left"></div>
-                </div>
-              </div>
-              <div class="input-wrap">
-                <label for="control-theme-color-g">Green</label>
-                <div class="form-group form-group-block mb-0">
-                  <input id="control-theme-color-g" class="control-theme-color-g mr-3" type="range" min="0" max="255" value="0" tabindex="-1">
-                  <div class="control-theme-color-g-count form-group-text form-group-medium form-group-radius-left"></div>
-                </div>
-              </div>
-              <div class="input-wrap">
-                <label for="control-theme-color-b">Blue</label>
-                <div class="form-group form-group-block mb-0">
-                  <input id="control-theme-color-b" class="control-theme-color-b mr-3" type="range" min="0" max="255" value="0" tabindex="-1">
-                  <div class="control-theme-color-b-count form-group-text form-group-medium form-group-radius-left"></div>
-                </div>
-              </div>
-              <div class="button-wrap">
-                <button class="control-theme-color-default button mb-0" tabindex="-1">Default shade color</button>
               </div>
               <p class="control-theme-color-helper form-helper small">Light and dark shades from this colour are used across nightTabs.</p>
+              <div class="button-wrap">
+                <button class="control-theme-color-rgb-default button mb-0" tabindex="-1">Default shade color</button>
+              </div>
+              <hr>
+              <div class="input-wrap">
+                <label for="control-theme-color-hsl-h">Hue</label>
+                <div class="form-group form-group-block mb-0">
+                  <input id="control-theme-color-hsl-h" class="control-theme-color-hsl-h mr-3" type="range" min="0" max="359" value="0" tabindex="-1">
+                  <div class="control-theme-color-hsl-h-count form-group-text form-group-medium form-group-radius-left"></div>
+                </div>
+              </div>
+              <div class="input-wrap">
+                <label for="control-theme-color-hsl-s">Saturation</label>
+                <div class="form-group form-group-block mb-0">
+                  <input id="control-theme-color-hsl-s" class="control-theme-color-hsl-s mr-3" type="range" min="0" max="100" value="0" tabindex="-1">
+                  <div class="control-theme-color-hsl-s-count form-group-text form-group-medium form-group-radius-left"></div>
+                </div>
+              </div>
+              <div class="input-wrap">
+                <label for="control-theme-color-hsl-l">Lightness</label>
+                <div class="form-group form-group-block mb-0">
+                  <input id="control-theme-color-hsl-l" class="control-theme-color-hsl-l mr-3" type="range" min="0" max="100" value="0" tabindex="-1">
+                  <div class="control-theme-color-hsl-l-count form-group-text form-group-medium form-group-radius-left"></div>
+                </div>
+              </div>
+              <hr>
+              <div class="input-wrap">
+                <label for="control-theme-color-rgb-r">Red</label>
+                <div class="form-group form-group-block mb-0">
+                  <input id="control-theme-color-rgb-r" class="control-theme-color-rgb-r mr-3" type="range" min="0" max="255" value="0" tabindex="-1">
+                  <div class="control-theme-color-rgb-r-count form-group-text form-group-medium form-group-radius-left"></div>
+                </div>
+              </div>
+              <div class="input-wrap">
+                <label for="control-theme-color-rgb-g">Green</label>
+                <div class="form-group form-group-block mb-0">
+                  <input id="control-theme-color-rgb-g" class="control-theme-color-rgb-g mr-3" type="range" min="0" max="255" value="0" tabindex="-1">
+                  <div class="control-theme-color-rgb-g-count form-group-text form-group-medium form-group-radius-left"></div>
+                </div>
+              </div>
+              <div class="input-wrap">
+                <label for="control-theme-color-rgb-b">Blue</label>
+                <div class="form-group form-group-block mb-0">
+                  <input id="control-theme-color-rgb-b" class="control-theme-color-rgb-b mr-3" type="range" min="0" max="255" value="0" tabindex="-1">
+                  <div class="control-theme-color-rgb-b-count form-group-text form-group-medium form-group-radius-left"></div>
+                </div>
+              </div>
               <hr>
               <div class="color-demo">
                 <div class="theme-color theme-color-neg-10"></div>
