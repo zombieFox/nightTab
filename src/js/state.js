@@ -222,14 +222,14 @@ var state = (function() {
       },
       color: {
         hsl: {
-          h: 221,
+          h: 222,
           s: 14,
           l: 56
         },
         rgb: {
-          r: 128,
+          r: 129,
           g: 138,
-          b: 161
+          b: 160
         }
       },
       style: "dark",
@@ -335,14 +335,14 @@ var state = (function() {
     theme: {
       color: {
         hsl: {
-          h: 221,
+          h: 222,
           s: 14,
           l: 56
         },
         rgb: {
-          r: 128,
+          r: 129,
           g: 138,
-          b: 161
+          b: 160
         }
       },
       radius: 0.25
