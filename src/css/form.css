@@ -1219,7 +1219,14 @@ input[type="range"]:disabled::-moz-range-progress {
   border-style: solid;
   border-radius: var(--theme-radius);
   white-space: nowrap;
+  overflow: hidden;
   transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast);
+}
+
+.form-group-text-borderless {
+  padding: 0;
+  border-width: 0;
+  min-width: inherit;
 }
 
 .form-group-text:hover,
@@ -1289,6 +1296,21 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group-item-half {
   flex-basis: 50%;
+}
+
+.form-group-border {
+  border-radius: calc(var(--theme-radius) * 2);
+  border-width: var(--layout-line-width);
+  border-color: rgb(var(--form-group-text-border));
+  border-style: solid;
+}
+
+.form-group-border-theme-color {
+  border-color: rgb(var(--theme-color));
+}
+
+.form-group-padding {
+  padding: 0.25em;
 }
 
 .form-group .form-group-text,
@@ -1376,6 +1398,21 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group>input[type="color"]:last-child,
 .form-group>input[type="range"]:last-child {
   border-radius: 0 var(--theme-radius) var(--theme-radius) 0;
+}
+
+.form-group .form-group-text:only-child,
+.form-group .button:only-child,
+.form-group .button:only-child:after,
+.form-group>select:only-child,
+.form-group>input[type="email"]:only-child,
+.form-group>input[type="number"]:only-child,
+.form-group>input[type="password"]:only-child,
+.form-group>input[type="search"]:only-child,
+.form-group>input[type="tel"]:only-child,
+.form-group>input[type="text"]:only-child,
+.form-group>input[type="color"]:only-child,
+.form-group>input[type="range"]:only-child {
+  border-radius: var(--theme-radius);
 }
 
 .form-group.nested-button * .button,
