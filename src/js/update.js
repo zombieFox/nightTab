@@ -692,7 +692,7 @@ var update = (function() {
       data.state.group.edit = false;
       return data;
     },
-    "4.30.0": function(data) {
+    "4.3.0": function(data) {
       data.state.theme.color = {
         hsl: {
           h: 222,
