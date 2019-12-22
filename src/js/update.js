@@ -694,9 +694,16 @@ var update = (function() {
     },
     "4.30.0": function(data) {
       data.state.theme.color = {
-        r: 127,
-        g: 139,
-        b: 166
+        hsl: {
+          h: 221,
+          s: 14,
+          l: 56
+        },
+        rgb: {
+          r: 128,
+          g: 138,
+          b: 161
+        }
       };
       return data;
     }
