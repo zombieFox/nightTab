@@ -225,14 +225,16 @@
   height: calc(100% - var(--link-item-url-height));
 }
 
-.is-theme-radius.is-link-item-url-show.is-link-orientation-top .link-item:hover .link-panel-front,
-.is-theme-radius.is-link-item-url-show.is-link-orientation-top .link-item:focus .link-panel-front {
+.is-theme-radius.is-link-item-url-show.is-link-orientation-top .link-item:focus .link-panel-front,
+.is-theme-radius.is-link-item-url-show.is-link-orientation-top .link-item:focus-within .link-panel-front,
+.is-theme-radius.is-link-item-url-show.is-link-orientation-top .link-item:hover .link-panel-front {
   border-top-left-radius: calc(var(--theme-radius) / 4);
   border-top-right-radius: calc(var(--theme-radius) / 4);
 }
 
-.is-theme-radius.is-link-item-url-show.is-link-orientation-bottom .link-item:hover .link-panel-front,
-.is-theme-radius.is-link-item-url-show.is-link-orientation-bottom .link-item:focus .link-panel-front {
+.is-theme-radius.is-link-item-url-show.is-link-orientation-bottom .link-item:focus .link-panel-front,
+.is-theme-radius.is-link-item-url-show.is-link-orientation-bottom .link-item:focus-within .link-panel-front,
+.is-theme-radius.is-link-item-url-show.is-link-orientation-bottom .link-item:hover .link-panel-front {
   border-bottom-left-radius: calc(var(--theme-radius) / 4);
   border-bottom-right-radius: calc(var(--theme-radius) / 4);
 }

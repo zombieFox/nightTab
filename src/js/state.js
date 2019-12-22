@@ -196,7 +196,7 @@ var state = (function() {
       border: 0,
       order: "headerbody",
       add: false,
-      edit: true
+      edit: false
     },
     layout: {
       alignment: "centercenter",
