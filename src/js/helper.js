@@ -659,13 +659,13 @@ var helper = (function() {
     };
   };
 
-  var convert = {
+  var convertColor = {
     rgb: {},
     hsl: {},
     hex: {}
   };
 
-  convert.rgb.hsl = function(rgb) {
+  convertColor.rgb.hsl = function(rgb) {
     const r = rgb[0] / 255;
     const g = rgb[1] / 255;
     const b = rgb[2] / 255;
@@ -704,8 +704,8 @@ var helper = (function() {
     return [h, s * 100, l * 100];
   };
 
-  convert.rgb.lab = function(rgb) {
-    const xyz = convert.rgb.xyz(rgb);
+  convertColor.rgb.lab = function(rgb) {
+    const xyz = convertColor.rgb.xyz(rgb);
     let x = xyz[0];
     let y = xyz[1];
     let z = xyz[2];
@@ -725,7 +725,7 @@ var helper = (function() {
     return [l, a, b];
   };
 
-  convert.rgb.xyz = function(rgb) {
+  convertColor.rgb.xyz = function(rgb) {
     let r = rgb[0] / 255;
     let g = rgb[1] / 255;
     let b = rgb[2] / 255;
@@ -742,7 +742,7 @@ var helper = (function() {
     return [x * 100, y * 100, z * 100];
   };
 
-  convert.rgb.hex = function(args) {
+  convertColor.rgb.hex = function(args) {
     const integer = ((Math.round(args[0]) & 0xFF) << 16) +
       ((Math.round(args[1]) & 0xFF) << 8) +
       (Math.round(args[2]) & 0xFF);
@@ -751,7 +751,7 @@ var helper = (function() {
     return '000000'.substring(string.length) + string;
   };
 
-  convert.hsl.rgb = function(hsl) {
+  convertColor.hsl.rgb = function(hsl) {
     const h = hsl[0] / 360;
     const s = hsl[1] / 100;
     const l = hsl[2] / 100;
@@ -799,7 +799,7 @@ var helper = (function() {
     return rgb;
   };
 
-  convert.hex.rgb = function(args) {
+  convertColor.hex.rgb = function(args) {
     const match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
     if (!match) {
       return [0, 0, 0];
@@ -820,7 +820,6 @@ var helper = (function() {
 
     return [r, g, b];
   };
-
 
   // exposed methods
   return {
@@ -850,7 +849,7 @@ var helper = (function() {
     ordinalNumber: ordinalNumber,
     isJsonString: isJsonString,
     isHexNumber: isHexNumber,
-    convert: convert
+    convertColor: convertColor
   };
 
 })();

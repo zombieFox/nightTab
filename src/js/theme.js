@@ -21,13 +21,13 @@ var theme = (function() {
 
   mod.color = {
     hsl: function() {
-      var hsl = helper.convert.rgb.hsl([state.get.current().theme.color.rgb.r, state.get.current().theme.color.rgb.g, state.get.current().theme.color.rgb.b]);
+      var hsl = helper.convertColor.rgb.hsl([state.get.current().theme.color.rgb.r, state.get.current().theme.color.rgb.g, state.get.current().theme.color.rgb.b]);
       state.get.current().theme.color.hsl.h = parseInt(hsl[0], 10);
       state.get.current().theme.color.hsl.s = parseInt(hsl[1], 10);
       state.get.current().theme.color.hsl.l = parseInt(hsl[2], 10);
     },
     rgb: function() {
-      var rgb = helper.convert.hsl.rgb([state.get.current().theme.color.hsl.h, state.get.current().theme.color.hsl.s, state.get.current().theme.color.hsl.l]);
+      var rgb = helper.convertColor.hsl.rgb([state.get.current().theme.color.hsl.h, state.get.current().theme.color.hsl.s, state.get.current().theme.color.hsl.l]);
       state.get.current().theme.color.rgb.r = parseInt(rgb[0], 10);
       state.get.current().theme.color.rgb.g = parseInt(rgb[1], 10);
       state.get.current().theme.color.rgb.b = parseInt(rgb[2], 10);
@@ -133,7 +133,7 @@ var theme = (function() {
       var lMod = 4;
       var html = helper.e("html");
 
-      var hsl = helper.convert.rgb.hsl([state.get.current().theme.color.rgb.r, state.get.current().theme.color.rgb.g, state.get.current().theme.color.rgb.b]);
+      var hsl = helper.convertColor.rgb.hsl([state.get.current().theme.color.rgb.r, state.get.current().theme.color.rgb.g, state.get.current().theme.color.rgb.b]);
 
       // base color
       html.style.setProperty("--theme-shade", state.get.current().theme.color.rgb.r + ", " + state.get.current().theme.color.rgb.g + ", " + state.get.current().theme.color.rgb.b);
@@ -142,7 +142,7 @@ var theme = (function() {
         var h = hsl[0];
         var s = (hsl[1] - (sMod * i));
         var l = (hsl[2] - (lMod * i));
-        var rgb = helper.convert.hsl.rgb([h, s, l]);
+        var rgb = helper.convertColor.hsl.rgb([h, s, l]);
         var number;
         if (i < 10) {
           number = "0" + i;
@@ -156,7 +156,7 @@ var theme = (function() {
         var h = hsl[0];
         var s = (hsl[1] + (sMod * i));
         var l = (hsl[2] + (lMod * i));
-        var rgb = helper.convert.hsl.rgb([h, s, l]);
+        var rgb = helper.convertColor.hsl.rgb([h, s, l]);
         var number;
         if (i < 10) {
           number = "0" + i;
