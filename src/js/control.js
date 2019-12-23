@@ -1664,6 +1664,13 @@ var control = (function() {
       render.dependents();
     }
   }, {
+    element: helper.e(".control-header-button-coloraccent-dot-show"),
+    path: "header.button.colorAccent.dot.show",
+    type: "checkbox",
+    func: function() {
+      header.render.button.dot();
+    }
+  }, {
     element: helper.e(".control-header-button-size"),
     path: "header.button.size",
     type: "range",
@@ -3482,6 +3489,12 @@ var control = (function() {
           _disable.input(".control-header-radius", true);
         };
       };
+      var _button = function() {
+        _disable.input(".control-header-button-coloraccent-dot-show", true);
+        if (state.get.current().header.button.colorAccent.show) {
+          _disable.input(".control-header-button-coloraccent-dot-show", false);
+        };
+      };
       var _search = function() {
         if (state.get.current().header.search.show) {
           _disable.element(".control-header-search-style-label", false);
@@ -3613,6 +3626,7 @@ var control = (function() {
       _clock();
       _date();
       _shade();
+      _button();
       _search();
       _greeting();
       _transitional();

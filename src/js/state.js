@@ -105,7 +105,10 @@ var state = (function() {
           show: true
         },
         colorAccent: {
-          show: true
+          show: true,
+          dot: {
+            show: true
+          }
         },
         style: "box",
         size: 1
