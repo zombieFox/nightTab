@@ -5,18 +5,15 @@ var search = (function() {
   bind.input = function() {
     var searchInput = helper.e(".search-input");
     searchInput.addEventListener("input", function() {
-      mod.searching.open();
-      render.clear.button();
-      render.searching();
-      link.groupAndItems();
+      check();
     }, false);
   };
 
   bind.clear = function() {
     var searchClear = helper.e(".search-clear");
     searchClear.addEventListener("click", function() {
-      render.clear.input();
       mod.searching.close();
+      render.clear.input();
       render.clear.button();
       render.searching();
       link.groupAndItems();
@@ -119,12 +116,27 @@ var search = (function() {
 
   render.searching = function() {
     var html = helper.e("html");
-    var searchInput = helper.e(".search-input");
-    if (searchInput.value != "") {
+    if (state.get.current().search) {
       helper.addClass(html, "is-header-searching");
     } else {
       helper.removeClass(html, "is-header-searching");
     };
+  };
+
+  render.check = function() {
+    var searchInput = helper.e(".search-input");
+    if (searchInput.value.replace(/\s/g, "") != "") {
+      mod.searching.open();
+    } else {
+      mod.searching.close();
+    };
+  };
+
+  var check = function() {
+    render.check();
+    render.searching();
+    render.clear.button();
+    link.groupAndItems();
   };
 
   var init = function() {
@@ -140,7 +152,8 @@ var search = (function() {
   return {
     init: init,
     get: get,
-    render: render
+    render: render,
+    check: check
   };
 
 })();

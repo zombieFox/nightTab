@@ -2978,10 +2978,10 @@ var control = (function() {
           path: object.path,
           newValue: newValue
         });
-        console.log("state set", object.path, helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        }));
+        // console.log("state set", object.path, helper.getObject({
+        //   object: state.get.current(),
+        //   path: object.path
+        // }));
       };
     };
     var bindControl = function(object) {
