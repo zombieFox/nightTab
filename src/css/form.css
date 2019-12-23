@@ -1107,9 +1107,12 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .input-hide input[type="color"],
 .input-hide input[type="file"] {
+  margin: 0;
   opacity: 0;
   width: 1px;
   height: 1px;
+  min-width: 1px;
+  min-height: 1px;
   position: absolute;
   top: 0;
   left: 0;
