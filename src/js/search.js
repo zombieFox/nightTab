@@ -5,7 +5,7 @@ var search = (function() {
   bind.input = function() {
     var searchInput = helper.e(".search-input");
     searchInput.addEventListener("input", function() {
-      mod.searching.set();
+      mod.searching.open();
       render.clear.button();
       render.searching();
       link.groupAndItems();
@@ -16,7 +16,7 @@ var search = (function() {
     var searchClear = helper.e(".search-clear");
     searchClear.addEventListener("click", function() {
       render.clear.input();
-      mod.searching.set();
+      mod.searching.close();
       render.clear.button();
       render.searching();
       link.groupAndItems();
@@ -26,11 +26,18 @@ var search = (function() {
   var mod = {};
 
   mod.searching = {
-    set: function() {
+    open: function() {
       helper.setObject({
         object: state.get.current(),
         path: "search",
-        newValue: helper.e(".search-input").value != ""
+        newValue: true
+      });
+    },
+    close: function() {
+      helper.setObject({
+        object: state.get.current(),
+        path: "search",
+        newValue: false
       });
     }
   };
@@ -123,7 +130,7 @@ var search = (function() {
   var init = function() {
     bind.input();
     bind.clear();
-    mod.searching.set();
+    mod.searching.close();
     render.engine();
     render.focus();
     render.searching();

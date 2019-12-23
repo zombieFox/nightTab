@@ -1744,10 +1744,10 @@ var link = (function() {
     render.clear.item();
     render.clear.group();
     render.all();
-    bind.sort.group();
-    bind.sort.item();
     render.group.tabindex();
     render.item.tabindex();
+    bind.sort.group();
+    bind.sort.item();
   };
 
   var init = function() {
