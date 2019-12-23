@@ -21,16 +21,28 @@ var theme = (function() {
 
   mod.color = {
     hsl: function() {
-      var hsl = helper.convertColor.rgb.hsl([state.get.current().theme.color.rgb.r, state.get.current().theme.color.rgb.g, state.get.current().theme.color.rgb.b]);
-      state.get.current().theme.color.hsl.h = parseInt(hsl[0], 10);
-      state.get.current().theme.color.hsl.s = parseInt(hsl[1], 10);
-      state.get.current().theme.color.hsl.l = parseInt(hsl[2], 10);
+      var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.color.rgb);
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.color.hsl",
+        newValue: {
+          h: parseInt(hsl.h, 10),
+          s: parseInt(hsl.s, 10),
+          l: parseInt(hsl.l, 10)
+        }
+      });
     },
     rgb: function() {
-      var rgb = helper.convertColor.hsl.rgb([state.get.current().theme.color.hsl.h, state.get.current().theme.color.hsl.s, state.get.current().theme.color.hsl.l]);
-      state.get.current().theme.color.rgb.r = parseInt(rgb[0], 10);
-      state.get.current().theme.color.rgb.g = parseInt(rgb[1], 10);
-      state.get.current().theme.color.rgb.b = parseInt(rgb[2], 10);
+      var rgb = helper.convertColor.hsl.rgb(state.get.current().theme.color.hsl);
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.color.rgb",
+        newValue: {
+          r: parseInt(rgb.r, 10),
+          g: parseInt(rgb.g, 10),
+          b: parseInt(rgb.b, 10)
+        }
+      });
     }
   };
 
@@ -96,104 +108,103 @@ var theme = (function() {
             };
           }
         };
-        var hsl = color[state.get.current().theme.accent.random.style]();
-        var randomColor = helper.hslToRgb({
-          h: hsl.h,
-          s: (hsl.s / 100),
-          l: (hsl.l / 100)
-        });
+        var rgb = helper.convertColor.hsl.rgb(color[state.get.current().theme.accent.random.style]());
+        var hex = helper.convertColor.rgb.hex(rgb);
         helper.setObject({
           object: state.get.current(),
           path: "theme.accent.current",
-          newValue: randomColor
+          newValue: {
+            r: parseInt(rgb.r, 10),
+            g: parseInt(rgb.g, 10),
+            b: parseInt(rgb.b, 10)
+          }
         });
-        helper.e(".control-theme-accent-current-quick").value = helper.rgbToHex(randomColor);
-        helper.e(".control-theme-accent-current-picker").value = helper.rgbToHex(randomColor);
-        helper.e(".control-theme-accent-current-hex").value = helper.rgbToHex(randomColor);
+        helper.e(".control-theme-accent-current-quick").value = hex;
+        helper.e(".control-theme-accent-current-picker").value = hex;
+        helper.e(".control-theme-accent-current-hex").value = hex;
       };
     },
     input: {
       quick: function() {
-        helper.e(".control-theme-accent-current-quick").value = helper.rgbToHex(state.get.current().theme.accent.current);
+        helper.e(".control-theme-accent-current-quick").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.current);
       },
       picker: function() {
-        helper.e(".control-theme-accent-current-picker").value = helper.rgbToHex(state.get.current().theme.accent.current);
+        helper.e(".control-theme-accent-current-picker").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.current);
       },
       hex: function() {
-        helper.e(".control-theme-accent-current-hex").value = helper.rgbToHex(state.get.current().theme.accent.current);
+        helper.e(".control-theme-accent-current-hex").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.current);
       }
     }
   };
 
   render.color = {
     shade: function() {
-
       var shadeSteps = 10;
       var saturationShift = 0;
       var lightShift = 4;
       var html = helper.e("html");
-
-      var hsl = helper.convertColor.rgb.hsl([state.get.current().theme.color.rgb.r, state.get.current().theme.color.rgb.g, state.get.current().theme.color.rgb.b]);
-
-      // base color
+      var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.color.rgb);
       html.style.setProperty("--theme-shade", state.get.current().theme.color.rgb.r + ", " + state.get.current().theme.color.rgb.g + ", " + state.get.current().theme.color.rgb.b);
-
-      for (var i = 1; i <= shadeSteps; i++) {
-        var h = hsl[0];
-        var s = (hsl[1] - (saturationShift * i));
-        var l = (hsl[2] - (lightShift * i));
-        var rgb = helper.convertColor.hsl.rgb([h, s, l]);
-        var number;
-        if (i < 10) {
-          number = "0" + i;
-        } else {
-          number = i
+      var renderShade = function(name, index, rgb) {
+        for (var key in rgb) {
+          if (rgb[key] < 0) {
+            rgb[key] = 0;
+          } else if (rgb[key] > 255) {
+            rgb[key] = 255;
+          };
+          rgb[key] = parseInt(rgb[key], 10);
         };
-        html.style.setProperty("--theme-shade-neg-" + number, parseInt(rgb[0], 10) + ", " + parseInt(rgb[1], 10) + ", " + parseInt(rgb[2], 10));
-      };
-
-      for (var i = 1; i <= shadeSteps; i++) {
-        var h = hsl[0];
-        var s = (hsl[1] + (saturationShift * i));
-        var l = (hsl[2] + (lightShift * i));
-        var rgb = helper.convertColor.hsl.rgb([h, s, l]);
-        var number;
-        if (i < 10) {
-          number = "0" + i;
+        if (index < 10) {
+          index = "0" + index;
         } else {
-          number = i
+          index = index;
         };
-        html.style.setProperty("--theme-shade-pos-" + number, parseInt(rgb[0], 10) + ", " + parseInt(rgb[1], 10) + ", " + parseInt(rgb[2], 10));
+        html.style.setProperty(name + index, rgb.r + ", " + rgb.g + ", " + rgb.b);
       };
-
+      for (var i = 1; i <= shadeSteps; i++) {
+        var rgb = helper.convertColor.hsl.rgb({
+          h: hsl.h,
+          s: hsl.s - (saturationShift * i),
+          l: hsl.l - (lightShift * i)
+        });
+        renderShade("--theme-shade-neg-", i, rgb);
+      };
+      for (var i = 1; i <= shadeSteps; i++) {
+        var rgb = helper.convertColor.hsl.rgb({
+          h: hsl.h,
+          s: hsl.s + (saturationShift * i),
+          l: hsl.l + (lightShift * i)
+        });
+        renderShade("--theme-shade-pos-", i, rgb);
+      };
     },
     input: {
       quick: function() {
-        helper.e(".control-theme-color-rgb-quick").value = helper.rgbToHex(state.get.current().theme.color.rgb);
+        helper.e(".control-theme-color-rgb-quick").value = helper.convertColor.rgb.hex(state.get.current().theme.color.rgb);
       },
       picker: function() {
-        helper.e(".control-theme-color-rgb-picker").value = helper.rgbToHex(state.get.current().theme.color.rgb);
+        helper.e(".control-theme-color-rgb-picker").value = helper.convertColor.rgb.hex(state.get.current().theme.color.rgb);
       },
       hex: function() {
-        helper.e(".control-theme-color-rgb-hex").value = helper.rgbToHex(state.get.current().theme.color.rgb);
-      }
-    },
-    range: {
-      hsl: function() {
-        helper.e(".control-theme-color-hsl-h").value = state.get.current().theme.color.hsl.h;
-        helper.e(".control-theme-color-hsl-s").value = state.get.current().theme.color.hsl.s;
-        helper.e(".control-theme-color-hsl-l").value = state.get.current().theme.color.hsl.l;
-        helper.e(".control-theme-color-hsl-h-count").textContent = state.get.current().theme.color.hsl.h;
-        helper.e(".control-theme-color-hsl-s-count").textContent = state.get.current().theme.color.hsl.s;
-        helper.e(".control-theme-color-hsl-l-count").textContent = state.get.current().theme.color.hsl.l;
+        helper.e(".control-theme-color-rgb-hex").value = helper.convertColor.rgb.hex(state.get.current().theme.color.rgb);
       },
-      rgb: function() {
-        helper.e(".control-theme-color-rgb-r").value = state.get.current().theme.color.rgb.r;
-        helper.e(".control-theme-color-rgb-g").value = state.get.current().theme.color.rgb.g;
-        helper.e(".control-theme-color-rgb-b").value = state.get.current().theme.color.rgb.b;
-        helper.e(".control-theme-color-rgb-r-count").textContent = state.get.current().theme.color.rgb.r;
-        helper.e(".control-theme-color-rgb-g-count").textContent = state.get.current().theme.color.rgb.g;
-        helper.e(".control-theme-color-rgb-b-count").textContent = state.get.current().theme.color.rgb.b;
+      range: {
+        hsl: function() {
+          helper.e(".control-theme-color-hsl-h").value = state.get.current().theme.color.hsl.h;
+          helper.e(".control-theme-color-hsl-s").value = state.get.current().theme.color.hsl.s;
+          helper.e(".control-theme-color-hsl-l").value = state.get.current().theme.color.hsl.l;
+          helper.e(".control-theme-color-hsl-h-count").textContent = state.get.current().theme.color.hsl.h;
+          helper.e(".control-theme-color-hsl-s-count").textContent = state.get.current().theme.color.hsl.s;
+          helper.e(".control-theme-color-hsl-l-count").textContent = state.get.current().theme.color.hsl.l;
+        },
+        rgb: function() {
+          helper.e(".control-theme-color-rgb-r").value = state.get.current().theme.color.rgb.r;
+          helper.e(".control-theme-color-rgb-g").value = state.get.current().theme.color.rgb.g;
+          helper.e(".control-theme-color-rgb-b").value = state.get.current().theme.color.rgb.b;
+          helper.e(".control-theme-color-rgb-r-count").textContent = state.get.current().theme.color.rgb.r;
+          helper.e(".control-theme-color-rgb-g-count").textContent = state.get.current().theme.color.rgb.g;
+          helper.e(".control-theme-color-rgb-b-count").textContent = state.get.current().theme.color.rgb.b;
+        }
       }
     }
   };

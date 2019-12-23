@@ -2594,8 +2594,8 @@ var control = (function() {
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      theme.render.color.range.hsl();
-      theme.render.color.range.rgb();
+      theme.render.color.input.range.hsl();
+      theme.render.color.input.range.rgb();
       theme.render.color.input.hex();
       theme.render.color.input.picker();
     }
@@ -2606,8 +2606,8 @@ var control = (function() {
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      theme.render.color.range.hsl();
-      theme.render.color.range.rgb();
+      theme.render.color.input.range.hsl();
+      theme.render.color.input.range.rgb();
       theme.render.color.input.hex();
       theme.render.color.input.quick();
     }
@@ -2619,8 +2619,8 @@ var control = (function() {
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      theme.render.color.range.hsl();
-      theme.render.color.range.rgb();
+      theme.render.color.input.range.hsl();
+      theme.render.color.input.range.rgb();
       theme.render.color.input.picker();
       theme.render.color.input.quick();
     }
@@ -2951,7 +2951,7 @@ var control = (function() {
         return parseInt(object.element.value, 10);
       },
       color: function(object) {
-        return helper.hexToRgb(object.element.value);
+        return helper.convertColor.hex.rgb(object.element.value);
       }
     };
     var valueMod = {
@@ -2962,7 +2962,7 @@ var control = (function() {
         return value / 100;
       },
       hexTextString: function(value, object) {
-        return helper.hexToRgb(value);
+        return helper.convertColor.hex.rgb(value);
       }
     };
     var changeValue = function(object) {
@@ -2978,10 +2978,10 @@ var control = (function() {
           path: object.path,
           newValue: newValue
         });
-        // console.log("state set", object.path, helper.getObject({
-        //   object: state.get.current(),
-        //   path: object.path
-        // }));
+        console.log("state set", object.path, helper.getObject({
+          object: state.get.current(),
+          path: object.path
+        }));
       };
     };
     var bindControl = function(object) {
@@ -3947,7 +3947,7 @@ var control = (function() {
         return value * 100;
       },
       hexTextString: function(value, element) {
-        return helper.rgbToHex(value);
+        return helper.convertColor.rgb.hex(value);
       }
     };
     var setValue = {
@@ -4006,7 +4006,7 @@ var control = (function() {
         object.element.value = newValue;
       },
       color: function(object) {
-        object.element.value = helper.rgbToHex(helper.getObject({
+        object.element.value = helper.convertColor.rgb.hex(helper.getObject({
           object: state.get.current(),
           path: object.path
         }));

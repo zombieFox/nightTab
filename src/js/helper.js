@@ -195,90 +195,6 @@ var helper = (function() {
     };
   };
 
-  var hslToRgb = function(hslObject) {
-    if (hslObject == undefined) {
-      return null;
-    };
-
-    var chroma = (1 - Math.abs((2 * hslObject.l) - 1)) * hslObject.s;
-    var huePrime = hslObject.h / 60;
-    var secondComponent = chroma * (1 - Math.abs((huePrime % 2) - 1));
-
-    huePrime = Math.floor(huePrime);
-    var red;
-    var green;
-    var blue;
-
-    if (huePrime === 0 || huePrime === 6) {
-      red = chroma;
-      green = secondComponent;
-      blue = 0;
-    } else if (huePrime === 1) {
-      red = secondComponent;
-      green = chroma;
-      blue = 0;
-    } else if (huePrime === 2) {
-      red = 0;
-      green = chroma;
-      blue = secondComponent;
-    } else if (huePrime === 3) {
-      red = 0;
-      green = secondComponent;
-      blue = chroma;
-    } else if (huePrime === 4) {
-      red = secondComponent;
-      green = 0;
-      blue = chroma;
-    } else if (huePrime === 5) {
-      red = chroma;
-      green = 0;
-      blue = secondComponent;
-    };
-
-    var lightnessAdjustment = hslObject.l - (chroma / 2);
-    red += lightnessAdjustment;
-    green += lightnessAdjustment;
-    blue += lightnessAdjustment;
-
-    var result = {
-      r: Math.round(red * 255),
-      g: Math.round(green * 255),
-      b: Math.round(blue * 255)
-    };
-
-    return result;
-  };
-
-  var hexToRgb = function(hex) {
-    if (hex == undefined) {
-      return null;
-    };
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    if (result) {
-      result = {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16)
-      };
-    };
-    return result;
-  };
-
-  var rgbToHex = function(rgbObject) {
-    if (rgbObject == undefined) {
-      return null;
-    };
-    var componentToHex = function(hexPart) {
-      hexPart = hexPart.toString(16);
-      if (hexPart.length == 1) {
-        hexPart = "0" + hexPart
-      };
-      return hexPart;
-    };
-    var result = "#" + componentToHex(rgbObject.r) + componentToHex(rgbObject.g) + componentToHex(rgbObject.b);
-    return result;
-  };
-
   var makeNode = function(override) {
     var options = {
       tag: null,
@@ -666,9 +582,9 @@ var helper = (function() {
   };
 
   convertColor.rgb.hsl = function(rgb) {
-    var r = rgb[0] / 255;
-    var g = rgb[1] / 255;
-    var b = rgb[2] / 255;
+    var r = rgb.r / 255;
+    var g = rgb.g / 255;
+    var b = rgb.b / 255;
     var min = Math.min(r, g, b);
     var max = Math.max(r, g, b);
     var delta = max - min;
@@ -701,36 +617,44 @@ var helper = (function() {
       s = delta / (2 - max - min);
     };
 
-    return [h, s * 100, l * 100];
+    return {
+      h: h,
+      s: s * 100,
+      l: l * 100
+    };
   };
 
   convertColor.rgb.hex = function(args) {
-    var integer = ((Math.round(args[0]) & 0xFF) << 16) +
-      ((Math.round(args[1]) & 0xFF) << 8) +
-      (Math.round(args[2]) & 0xFF);
+    var integer = ((Math.round(args.r) & 0xFF) << 16) +
+      ((Math.round(args.g) & 0xFF) << 8) +
+      (Math.round(args.b) & 0xFF);
 
-    var string = integer.toString(16).toUpperCase();
-    return "000000".substring(string.length) + string;
+    var string = integer.toString(16);
+    return "#" + "000000".substring(string.length) + string;
   };
 
   convertColor.hsl.rgb = function(hsl) {
-    var h = hsl[0] / 360;
-    var s = hsl[1] / 100;
-    var l = hsl[2] / 100;
+    var h = hsl.h / 360;
+    var s = hsl.s / 100;
+    var l = hsl.l / 100;
     var t2;
     var t3;
     var val;
 
     if (s === 0) {
       val = l * 255;
-      return [val, val, val];
-    }
+      return {
+        r: val,
+        g: val,
+        b: val
+      };
+    };
 
     if (l < 0.5) {
       t2 = l * (1 + s);
     } else {
       t2 = l + s - l * s;
-    }
+    };
 
     var t1 = 2 * l - t2;
 
@@ -739,11 +663,11 @@ var helper = (function() {
       t3 = h + 1 / 3 * -(i - 1);
       if (t3 < 0) {
         t3++;
-      }
+      };
 
       if (t3 > 1) {
         t3--;
-      }
+      };
 
       if (6 * t3 < 1) {
         val = t1 + (t2 - t1) * 6 * t3;
@@ -753,19 +677,27 @@ var helper = (function() {
         val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
       } else {
         val = t1;
-      }
+      };
 
       rgb[i] = val * 255;
-    }
+    };
 
-    return rgb;
+    return {
+      r: rgb[0],
+      g: rgb[1],
+      b: rgb[2]
+    };
   };
 
   convertColor.hex.rgb = function(args) {
     var match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
     if (!match) {
-      return [0, 0, 0];
-    }
+      return {
+        r: 0,
+        g: 0,
+        b: 0
+      };
+    };
 
     var colorString = match[0];
 
@@ -773,14 +705,18 @@ var helper = (function() {
       colorString = colorString.split("").map(function(char) {
         return char + char;
       }).join("");
-    }
+    };
 
     var integer = parseInt(colorString, 16);
     var r = (integer >> 16) & 0xFF;
     var g = (integer >> 8) & 0xFF;
     var b = integer & 0xFF;
 
-    return [r, g, b];
+    return {
+      r: r,
+      g: g,
+      b: b
+    };
   };
 
   // exposed methods
@@ -796,9 +732,6 @@ var helper = (function() {
     getDateTime: getDateTime,
     sortObject: sortObject,
     applyOptions: applyOptions,
-    hexToRgb: hexToRgb,
-    rgbToHex: rgbToHex,
-    hslToRgb: hslToRgb,
     makeNode: makeNode,
     node: node,
     setObject: setObject,

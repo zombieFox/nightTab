@@ -113,11 +113,16 @@ var link = (function() {
       bookmarks.get().forEach(function(arrayItem, index) {
         arrayItem.items.forEach(function(arrayItem, index) {
           arrayItem.accent.override = true;
-          arrayItem.accent.color = helper.hslToRgb({
+          var rgb = helper.convertColor.hsl.rgb({
             h: degree,
-            s: 1,
-            l: 0.5
+            s: 100,
+            l: 50
           });
+          arrayItem.accent.color = {
+            r: parseInt(rgb.r, 10),
+            g: parseInt(rgb.g, 10),
+            b: parseInt(rgb.b, 10)
+          };
           degree = degree + units;
         });
       });
@@ -930,8 +935,8 @@ var link = (function() {
           helper.addClass(form.querySelector(".link-form-input-accent-helper"), "disabled");
         };
         if (stagedLink.link.accent.color.r != null && stagedLink.link.accent.color.g != null && stagedLink.link.accent.color.b != null) {
-          accentColorPicker.value = helper.rgbToHex(stagedLink.link.accent.color);
-          accentColorHex.value = helper.rgbToHex(stagedLink.link.accent.color);
+          accentColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.accent.color);
+          accentColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.accent.color);
         };
       };
 
@@ -1006,20 +1011,20 @@ var link = (function() {
       }, false);
       accentCustomRadio.addEventListener("change", function() {
         stagedLink.link.accent.override = true;
-        stagedLink.link.accent.color = helper.hexToRgb(accentColorPicker.value);
+        stagedLink.link.accent.color = helper.convertColor.hex.rgb(accentColorPicker.value);
         accentColorPicker.removeAttribute("disabled");
         accentColorHex.removeAttribute("disabled");
         helper.removeClass(accentColorInputHelper, "disabled");
       }, false);
       accentColorPicker.addEventListener("change", function() {
         if (helper.isHexNumber(this.value)) {
-          stagedLink.link.accent.color = helper.hexToRgb(this.value);
+          stagedLink.link.accent.color = helper.convertColor.hex.rgb(this.value);
           accentColorHex.value = this.value;
         };
       }, false);
       accentColorHex.addEventListener("input", function() {
         if (helper.isHexNumber(this.value)) {
-          stagedLink.link.accent.color = helper.hexToRgb(this.value);
+          stagedLink.link.accent.color = helper.convertColor.hex.rgb(this.value);
           accentColorPicker.value = this.value;
         };
       }, false);
@@ -1668,10 +1673,10 @@ var link = (function() {
 
   render.input = {
     picker: function() {
-      helper.e(".control-link-item-color-by-picker").value = helper.rgbToHex(state.get.current().link.item.color.custom);
+      helper.e(".control-link-item-color-by-picker").value = helper.convertColor.rgb.hex(state.get.current().link.item.color.custom);
     },
     hex: function() {
-      helper.e(".control-link-item-color-by-hex").value = helper.rgbToHex(state.get.current().link.item.color.custom);
+      helper.e(".control-link-item-color-by-hex").value = helper.convertColor.rgb.hex(state.get.current().link.item.color.custom);
     }
   };
 
