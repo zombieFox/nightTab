@@ -2418,6 +2418,39 @@ var control = (function() {
       link.groupAndItems();
     }
   }, {
+    element: helper.e(".control-link-item-color-by-theme"),
+    path: "link.item.color.by",
+    type: "radio",
+    func: function() {
+      render.dependents();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-link-item-color-by-custom"),
+    path: "link.item.color.by",
+    type: "radio",
+    func: function() {
+      render.dependents();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-link-item-color-by-picker"),
+    path: "link.item.color.custom",
+    type: "color",
+    func: function() {
+      link.render.item.color.custom();
+      link.render.input.hex();
+    }
+  }, {
+    element: helper.e(".control-link-item-color-by-hex"),
+    path: "link.item.color.custom",
+    type: "text",
+    valueMod: ["hexTextString"],
+    func: function() {
+      link.render.item.color.custom();
+      link.render.input.picker();
+    }
+  }, {
     element: helper.e(".control-link-item-border"),
     path: "link.item.border",
     type: "range",
@@ -2730,7 +2763,7 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-background-color-custom-current-picker"),
+    element: helper.e(".control-background-color-by-picker"),
     path: "background.color.custom",
     type: "color",
     func: function() {
@@ -2738,7 +2771,7 @@ var control = (function() {
       background.render.input.hex();
     }
   }, {
-    element: helper.e(".control-background-color-custom-current-hex"),
+    element: helper.e(".control-background-color-by-hex"),
     path: "background.color.custom",
     type: "text",
     valueMod: ["hexTextString"],
@@ -3150,6 +3183,8 @@ var control = (function() {
       helper.removeClass(html, "is-link-display-alignment-bottomleft");
       helper.removeClass(html, "is-link-display-alignment-bottomcenter");
       helper.removeClass(html, "is-link-display-alignment-bottomright");
+      helper.removeClass(html, "is-link-item-color-by-theme");
+      helper.removeClass(html, "is-link-item-color-by-custom");
       helper.removeClass(html, "is-link-item-display-direction-horizontal");
       helper.removeClass(html, "is-link-item-display-direction-vertical");
       helper.removeClass(html, "is-link-item-display-order-letconname");
@@ -3168,6 +3203,7 @@ var control = (function() {
       if (state.get.current().link.show) {
         helper.addClass(html, "is-link-show");
         helper.addClass(html, "is-link-area-alignment-" + state.get.current().link.area.alignment);
+        helper.addClass(html, "is-link-item-color-by-" + state.get.current().link.item.color.by);
         helper.addClass(html, "is-link-item-display-direction-" + state.get.current().link.item.display.direction);
         helper.addClass(html, "is-link-item-display-order-" + state.get.current().link.item.display.order);
         helper.addClass(html, "is-link-display-alignment-" + state.get.current().link.item.display.alignment);
@@ -3672,6 +3708,12 @@ var control = (function() {
       _disable.input(".control-link-item-display-alignment-bottomcenter", true);
       _disable.input(".control-link-item-display-alignment-bottomright", true);
       _disable.input(".control-link-newtab", true);
+      _disable.input(".control-link-item-color-by-theme", true);
+      _disable.element(".control-link-item-color-by-theme-helper", true);
+      _disable.input(".control-link-item-color-by-custom", true);
+      _disable.element(".control-link-item-color-by-custom-helper", true);
+      _disable.input(".control-link-item-color-by-picker", true);
+      _disable.input(".control-link-item-color-by-hex", true);
       _disable.element("[for=control-link-item-border]", true);
       _disable.input(".control-link-item-border", true);
       _disable.element(".control-link-item-border-count", true);
@@ -3714,6 +3756,10 @@ var control = (function() {
         _disable.input(".control-link-item-shadow-show", false);
         _disable.input(".control-link-item-hoverscale", false);
         _disable.input(".control-link-newtab", false);
+        _disable.input(".control-link-item-color-by-theme", false);
+        _disable.element(".control-link-item-color-by-theme-helper", false);
+        _disable.input(".control-link-item-color-by-custom", false);
+        _disable.element(".control-link-item-color-by-custom-helper", false);
         _disable.element("[for=control-link-item-border]", false);
         _disable.input(".control-link-item-border", false);
         _disable.element(".control-link-item-border-count", false);
@@ -3782,6 +3828,10 @@ var control = (function() {
           _disable.input(".control-link-item-display-gutter", false);
           _disable.element(".control-link-item-display-gutter-count", false);
           _disable.input(".control-link-item-display-gutter-default", false);
+        };
+        if (state.get.current().link.item.color.by == "custom") {
+          _disable.input(".control-link-item-color-by-picker", false);
+          _disable.input(".control-link-item-color-by-hex", false);
         };
       };
     };
@@ -3859,13 +3909,11 @@ var control = (function() {
         _disable.element(".control-background-image-url-helper", true);
       };
       if (state.get.current().background.color.by == "theme") {
-        _disable.input(".control-background-color-custom-current-picker", true);
-        _disable.input(".control-background-color-custom-current-hex", true);
-        _disable.element(".control-background-color-theme-helper", true);
+        _disable.input(".control-background-color-by-picker", true);
+        _disable.input(".control-background-color-by-hex", true);
       } else if (state.get.current().background.color.by == "custom") {
-        _disable.input(".control-background-color-custom-current-picker", false);
-        _disable.input(".control-background-color-custom-current-hex", false);
-        _disable.element(".control-background-color-theme-helper", false);
+        _disable.input(".control-background-color-by-picker", false);
+        _disable.input(".control-background-color-by-hex", false);
       };
     };
     _header();

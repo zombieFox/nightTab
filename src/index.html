@@ -1192,6 +1192,32 @@
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Background colour</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="input-wrap">
+                <input id="control-link-item-color-by-theme" class="control-link-item-color-by-theme" type="radio" name="control-link-item-color-by" value="theme" tabindex="-1">
+                <label for="control-link-item-color-by-theme"><span class="label-icon"></span> Theme background colour</label>
+              </div>
+              <p class="control-link-item-color-by-theme-helper form-helper small">Use the Background colour defined by the Theme.</p>
+              <div class="input-wrap">
+                <input id="control-link-item-color-by-custom" class="control-link-item-color-by-custom" type="radio" name="control-link-item-color-by" value="custom" tabindex="-1">
+                <label for="control-link-item-color-by-custom"><span class="label-icon"></span> Custom background colour</label>
+              </div>
+              <p class="control-link-item-color-by-custom-helper form-helper small">Use a custom Background colour.</p>
+              <p class="control-link-item-color-by-custom-helper form-helper small">Take care as some colours may make the Letter/Icon and Name unreadable.</p>
+              <div class="form-indent">
+                <div class="input-wrap">
+                  <div class="form-group form-group-block mb-0">
+                    <input id="control-link-item-color-by-picker" class="form-group-item-half control-link-item-color-by-picker mb-0" type="color" value="#000000" tabindex="1">
+                    <input id="control-link-item-color-by-hex" class="form-group-item-half control-link-item-color-by-hex mb-0" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
               <h1 class="menu-item-header-text">Border</h1>
             </div>
             <div class="menu-item-form">
@@ -1486,7 +1512,7 @@
                 <input id="control-background-color-by-theme" class="control-background-color-by-theme" type="radio" name="control-background-color-by" value="theme" tabindex="-1">
                 <label for="control-background-color-by-theme"><span class="label-icon"></span> Theme background colour</label>
               </div>
-              <p class="control-background-color-by-theme-helper form-helper small">Use the Background colour defined by the Dark or Light Theme.</p>
+              <p class="control-background-color-by-theme-helper form-helper small">Use the Background colour defined by the Theme.</p>
               <div class="input-wrap">
                 <input id="control-background-color-by-custom" class="control-background-color-by-custom" type="radio" name="control-background-color-by" value="custom" tabindex="-1">
                 <label for="control-background-color-by-custom"><span class="label-icon"></span> Custom background colour</label>
@@ -1496,8 +1522,8 @@
               <div class="form-indent">
                 <div class="input-wrap">
                   <div class="form-group form-group-block mb-0">
-                    <input id="control-background-color-custom-current-picker" class="form-group-item-half control-background-color-custom-current-picker mb-0" type="color" value="#000000" tabindex="1">
-                    <input id="control-background-color-custom-current-hex" class="form-group-item-half control-background-color-custom-current-hex mb-0" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <input id="control-background-color-by-picker" class="form-group-item-half control-background-color-by-picker mb-0" type="color" value="#000000" tabindex="1">
+                    <input id="control-background-color-by-hex" class="form-group-item-half control-background-color-by-hex mb-0" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                   </div>
                 </div>
               </div>

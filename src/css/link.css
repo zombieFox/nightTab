@@ -115,7 +115,6 @@
 
 /* link panel front */
 .link-panel-front {
-  background-color: rgb(var(--theme-color-02));
   position: absolute;
   left: 0;
   width: 100%;
@@ -126,6 +125,14 @@
   overflow: hidden;
   user-select: none;
   transition: background-color var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
+}
+
+.is-link-item-color-by-theme .link-panel-front {
+  background-color: rgb(var(--link-item-color-theme));
+}
+
+.is-link-item-color-by-custom .link-panel-front {
+  background-color: rgb(var(--link-item-color-custom));
 }
 
 .is-link-style-block .link-panel-front {
@@ -163,9 +170,16 @@
 .link-item:focus-within .link-panel-front,
 .link-item:focus .link-panel-front,
 .link-item:hover .link-panel-front {
-  background-color: rgb(var(--theme-color-03));
   outline: none;
   text-decoration: none;
+}
+
+.is-link-item-color-by-theme .link-panel-front:hover,
+.is-link-item-color-by-theme .link-panel-front:focus,
+.is-link-item-color-by-theme .link-item:focus-within .link-panel-front,
+.is-link-item-color-by-theme .link-item:focus .link-panel-front,
+.is-link-item-color-by-theme .link-item:hover .link-panel-front {
+  background-color: rgb(var(--theme-color-03));
 }
 
 .is-link-item-shadow-show .link-item:focus .link-panel-front,

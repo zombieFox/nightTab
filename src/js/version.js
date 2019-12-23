@@ -1,6 +1,6 @@
 var version = (function() {
 
-  var current = "4.4.1";
+  var current = "4.5.0";
 
   var name = "Enchanting Aardvark";
 

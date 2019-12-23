@@ -523,6 +523,11 @@ var link = (function() {
   };
 
   render.item = {
+    color: {
+      custom: function() {
+        helper.e("html").style.setProperty("--link-item-color-custom", state.get.current().link.item.color.custom.r + ", " + state.get.current().link.item.color.custom.g + ", " + state.get.current().link.item.color.custom.b);
+      }
+    },
     link: function() {
       var linkItemOptions = {
         tag: "div",
@@ -1661,6 +1666,15 @@ var link = (function() {
     }
   };
 
+  render.input = {
+    picker: function() {
+      helper.e(".control-link-item-color-by-picker").value = helper.rgbToHex(state.get.current().link.item.color.custom);
+    },
+    hex: function() {
+      helper.e(".control-link-item-color-by-hex").value = helper.rgbToHex(state.get.current().link.item.color.custom);
+    }
+  };
+
   var add = {
     item: {
       open: function() {
@@ -1756,6 +1770,7 @@ var link = (function() {
     groupAndItems();
     render.group.size();
     render.group.border();
+    render.item.color.custom();
     render.item.size();
     render.item.display.letter();
     render.item.display.icon();

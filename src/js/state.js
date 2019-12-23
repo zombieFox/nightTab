@@ -139,6 +139,14 @@ var state = (function() {
         alignment: "center"
       },
       item: {
+        color: {
+          by: "theme",
+          custom: {
+            r: 0,
+            g: 0,
+            b: 0
+          }
+        },
         display: {
           letcon: {
             show: true,

@@ -711,6 +711,17 @@ var update = (function() {
       data.state.header.button.colorAccent = data.state.header.button.accent;
       delete data.state.header.button.accent;
       return data;
+    },
+    "4.5.0": function(data) {
+      data.state.link.item.color = {
+        by: "theme",
+        custom: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
+      };
+      return data;
     }
   };
 
