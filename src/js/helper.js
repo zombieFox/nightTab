@@ -666,14 +666,14 @@ var helper = (function() {
   };
 
   convertColor.rgb.hsl = function(rgb) {
-    const r = rgb[0] / 255;
-    const g = rgb[1] / 255;
-    const b = rgb[2] / 255;
-    const min = Math.min(r, g, b);
-    const max = Math.max(r, g, b);
-    const delta = max - min;
-    let h;
-    let s;
+    var r = rgb[0] / 255;
+    var g = rgb[1] / 255;
+    var b = rgb[2] / 255;
+    var min = Math.min(r, g, b);
+    var max = Math.max(r, g, b);
+    var delta = max - min;
+    var h;
+    var s;
 
     if (max === min) {
       h = 0;
@@ -683,15 +683,15 @@ var helper = (function() {
       h = 2 + (b - r) / delta;
     } else if (b === max) {
       h = 4 + (r - g) / delta;
-    }
+    };
 
     h = Math.min(h * 60, 360);
 
     if (h < 0) {
       h += 360;
-    }
+    };
 
-    const l = (min + max) / 2;
+    var l = (min + max) / 2;
 
     if (max === min) {
       s = 0;
@@ -699,65 +699,27 @@ var helper = (function() {
       s = delta / (max + min);
     } else {
       s = delta / (2 - max - min);
-    }
+    };
 
     return [h, s * 100, l * 100];
   };
 
-  convertColor.rgb.lab = function(rgb) {
-    const xyz = convertColor.rgb.xyz(rgb);
-    let x = xyz[0];
-    let y = xyz[1];
-    let z = xyz[2];
-
-    x /= 95.047;
-    y /= 100;
-    z /= 108.883;
-
-    x = x > 0.008856 ? (x ** (1 / 3)) : (7.787 * x) + (16 / 116);
-    y = y > 0.008856 ? (y ** (1 / 3)) : (7.787 * y) + (16 / 116);
-    z = z > 0.008856 ? (z ** (1 / 3)) : (7.787 * z) + (16 / 116);
-
-    const l = (116 * y) - 16;
-    const a = 500 * (x - y);
-    const b = 200 * (y - z);
-
-    return [l, a, b];
-  };
-
-  convertColor.rgb.xyz = function(rgb) {
-    let r = rgb[0] / 255;
-    let g = rgb[1] / 255;
-    let b = rgb[2] / 255;
-
-    // Assume sRGB
-    r = r > 0.04045 ? (((r + 0.055) / 1.055) ** 2.4) : (r / 12.92);
-    g = g > 0.04045 ? (((g + 0.055) / 1.055) ** 2.4) : (g / 12.92);
-    b = b > 0.04045 ? (((b + 0.055) / 1.055) ** 2.4) : (b / 12.92);
-
-    const x = (r * 0.4124) + (g * 0.3576) + (b * 0.1805);
-    const y = (r * 0.2126) + (g * 0.7152) + (b * 0.0722);
-    const z = (r * 0.0193) + (g * 0.1192) + (b * 0.9505);
-
-    return [x * 100, y * 100, z * 100];
-  };
-
   convertColor.rgb.hex = function(args) {
-    const integer = ((Math.round(args[0]) & 0xFF) << 16) +
+    var integer = ((Math.round(args[0]) & 0xFF) << 16) +
       ((Math.round(args[1]) & 0xFF) << 8) +
       (Math.round(args[2]) & 0xFF);
 
-    const string = integer.toString(16).toUpperCase();
-    return '000000'.substring(string.length) + string;
+    var string = integer.toString(16).toUpperCase();
+    return "000000".substring(string.length) + string;
   };
 
   convertColor.hsl.rgb = function(hsl) {
-    const h = hsl[0] / 360;
-    const s = hsl[1] / 100;
-    const l = hsl[2] / 100;
-    let t2;
-    let t3;
-    let val;
+    var h = hsl[0] / 360;
+    var s = hsl[1] / 100;
+    var l = hsl[2] / 100;
+    var t2;
+    var t3;
+    var val;
 
     if (s === 0) {
       val = l * 255;
@@ -770,10 +732,10 @@ var helper = (function() {
       t2 = l + s - l * s;
     }
 
-    const t1 = 2 * l - t2;
+    var t1 = 2 * l - t2;
 
-    const rgb = [0, 0, 0];
-    for (let i = 0; i < 3; i++) {
+    var rgb = [0, 0, 0];
+    for (var i = 0; i < 3; i++) {
       t3 = h + 1 / 3 * -(i - 1);
       if (t3 < 0) {
         t3++;
@@ -800,23 +762,23 @@ var helper = (function() {
   };
 
   convertColor.hex.rgb = function(args) {
-    const match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+    var match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
     if (!match) {
       return [0, 0, 0];
     }
 
-    let colorString = match[0];
+    var colorString = match[0];
 
     if (match[0].length === 3) {
-      colorString = colorString.split('').map(char => {
+      colorString = colorString.split("").map(function(char) {
         return char + char;
-      }).join('');
+      }).join("");
     }
 
-    const integer = parseInt(colorString, 16);
-    const r = (integer >> 16) & 0xFF;
-    const g = (integer >> 8) & 0xFF;
-    const b = integer & 0xFF;
+    var integer = parseInt(colorString, 16);
+    var r = (integer >> 16) & 0xFF;
+    var g = (integer >> 8) & 0xFF;
+    var b = integer & 0xFF;
 
     return [r, g, b];
   };
