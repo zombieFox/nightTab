@@ -1454,7 +1454,6 @@ input[type="range"]:disabled::-moz-range-progress {
   border-style: solid;
   border-radius: var(--theme-radius);
   white-space: nowrap;
-  overflow: hidden;
   transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast);
 }
 
