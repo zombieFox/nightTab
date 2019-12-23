@@ -1656,8 +1656,8 @@ var control = (function() {
       render.dependents();
     }
   }, {
-    element: helper.e(".control-header-button-accent-show"),
-    path: "header.button.accent.show",
+    element: helper.e(".control-header-button-coloraccent-show"),
+    path: "header.button.colorAccent.show",
     type: "checkbox",
     func: function() {
       render.class();
@@ -2548,6 +2548,18 @@ var control = (function() {
       render.update();
     }
   }, {
+    element: helper.e(".control-theme-color-rgb-quick"),
+    path: "theme.color.rgb",
+    type: "color",
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.shade();
+      theme.render.color.range.hsl();
+      theme.render.color.range.rgb();
+      theme.render.color.input.hex();
+      theme.render.color.input.picker();
+    }
+  }, {
     element: helper.e(".control-theme-color-rgb-picker"),
     path: "theme.color.rgb",
     type: "color",
@@ -2557,6 +2569,7 @@ var control = (function() {
       theme.render.color.range.hsl();
       theme.render.color.range.rgb();
       theme.render.color.input.hex();
+      theme.render.color.input.quick();
     }
   }, {
     element: helper.e(".control-theme-color-rgb-hex"),
@@ -2569,6 +2582,7 @@ var control = (function() {
       theme.render.color.range.hsl();
       theme.render.color.range.rgb();
       theme.render.color.input.picker();
+      theme.render.color.input.quick();
     }
   }, {
     element: helper.e(".control-theme-color-rgb-default"),
@@ -3034,10 +3048,10 @@ var control = (function() {
         } else {
           helper.removeClass(html, "is-header-button-editadd-show");
         };
-        if (state.get.current().header.button.accent.show) {
-          helper.addClass(html, "is-header-button-accent-show");
+        if (state.get.current().header.button.colorAccent.show) {
+          helper.addClass(html, "is-header-button-coloraccent-show");
         } else {
-          helper.removeClass(html, "is-header-button-accent-show");
+          helper.removeClass(html, "is-header-button-coloraccent-show");
         };
       };
       var _greeting = function() {

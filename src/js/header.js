@@ -136,12 +136,14 @@ var header = (function() {
         box: function() {
           helper.removeClass(helper.getClosest(helper.e(".control-edit"), ".input-wrap"), "input-button-link");
           helper.removeClass(helper.e(".control-add-toggle"), "button-link");
+          helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".input-wrap"), "input-button-link");
           helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-button-link");
           helper.removeClass(helper.e(".control-menu-open"), "button-link");
         },
         clear: function() {
           helper.addClass(helper.getClosest(helper.e(".control-edit"), ".input-wrap"), "input-button-link");
           helper.addClass(helper.e(".control-add-toggle"), "button-link");
+          helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".input-wrap"), "input-button-link");
           helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-button-link");
           helper.addClass(helper.e(".control-menu-open"), "button-link");
         }

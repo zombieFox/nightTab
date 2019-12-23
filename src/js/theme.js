@@ -129,8 +129,8 @@ var theme = (function() {
     shade: function() {
 
       var shadeSteps = 10;
-      var sMod = 0;
-      var lMod = 4;
+      var saturationShift = 0;
+      var lightShift = 4;
       var html = helper.e("html");
 
       var hsl = helper.convertColor.rgb.hsl([state.get.current().theme.color.rgb.r, state.get.current().theme.color.rgb.g, state.get.current().theme.color.rgb.b]);
@@ -140,8 +140,8 @@ var theme = (function() {
 
       for (var i = 1; i <= shadeSteps; i++) {
         var h = hsl[0];
-        var s = (hsl[1] - (sMod * i));
-        var l = (hsl[2] - (lMod * i));
+        var s = (hsl[1] - (saturationShift * i));
+        var l = (hsl[2] - (lightShift * i));
         var rgb = helper.convertColor.hsl.rgb([h, s, l]);
         var number;
         if (i < 10) {
@@ -154,8 +154,8 @@ var theme = (function() {
 
       for (var i = 1; i <= shadeSteps; i++) {
         var h = hsl[0];
-        var s = (hsl[1] + (sMod * i));
-        var l = (hsl[2] + (lMod * i));
+        var s = (hsl[1] + (saturationShift * i));
+        var l = (hsl[2] + (lightShift * i));
         var rgb = helper.convertColor.hsl.rgb([h, s, l]);
         var number;
         if (i < 10) {
@@ -168,6 +168,9 @@ var theme = (function() {
 
     },
     input: {
+      quick: function() {
+        helper.e(".control-theme-color-rgb-quick").value = helper.rgbToHex(state.get.current().theme.color.rgb);
+      },
       picker: function() {
         helper.e(".control-theme-color-rgb-picker").value = helper.rgbToHex(state.get.current().theme.color.rgb);
       },

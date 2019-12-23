@@ -104,7 +104,7 @@ var state = (function() {
         editAdd: {
           show: true
         },
-        accent: {
+        colorAccent: {
           show: true
         },
         style: "box",

@@ -706,6 +706,11 @@ var update = (function() {
         }
       };
       return data;
+    },
+    "4.4.0": function(data) {
+      data.state.header.button.colorAccent = data.state.header.button.accent;
+      delete data.state.header.button.accent;
+      return data;
     }
   };
 
