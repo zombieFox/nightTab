@@ -705,14 +705,6 @@ var update = (function() {
           b: 160
         }
       };
-      return data;
-    },
-    "4.4.0": function(data) {
-      data.state.header.button.colorAccent = data.state.header.button.accent;
-      delete data.state.header.button.accent;
-      return data;
-    },
-    "4.5.0": function(data) {
       data.state.link.item.color = {
         by: "theme",
         custom: {
@@ -721,6 +713,8 @@ var update = (function() {
           b: 0
         }
       };
+      data.state.header.button.colorAccent = data.state.header.button.accent;
+      delete data.state.header.button.accent;
       return data;
     }
   };

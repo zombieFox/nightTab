@@ -2,7 +2,7 @@ var version = (function() {
 
   var current = "4.5.0";
 
-  var name = "Enchanting Aardvark";
+  var name = "Naughty Goose";
 
   var compare = function(a, b) {
     var pa = a.split(".");
