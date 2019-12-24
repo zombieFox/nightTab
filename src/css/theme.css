@@ -3,14 +3,13 @@
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  max-width: 6em;
+  max-width: var(--theme-preset-preview-size);
 }
 
 .theme-preset-button .button-text {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
   margin-left: 0;
-  font-size: 0.75em;
 }
 
 .theme-preset-button:after {
@@ -18,8 +17,8 @@
 }
 
 .theme-preset-preview {
-  width: 6em;
-  height: 6em;
+  width: var(--theme-preset-preview-size);
+  height: var(--theme-preset-preview-size);
   position: relative;
 }
 
