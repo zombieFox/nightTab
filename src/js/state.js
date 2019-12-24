@@ -494,6 +494,27 @@ var state = (function() {
       radius: 0.75,
       style: "dark"
     },
+    sunbloom: {
+      color: {
+        hsl: {
+          h: 54,
+          s: 78,
+          l: 47
+        },
+        rgb: {
+          r: 213,
+          g: 194,
+          b: 26
+        }
+      },
+      accent: {
+        r: 255,
+        g: 220,
+        b: 22
+      },
+      radius: 0.5,
+      style: "light"
+    },
     coralgreen: {
       color: {
         hsl: {

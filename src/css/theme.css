@@ -208,6 +208,26 @@
   background-color: rgb(var(--theme-preset-accent-chocorum))
 }
 
+.theme-preset-background-sunbloom-01 {
+  background-color: rgb(var(--theme-preset-background-sunbloom-01))
+}
+
+.theme-preset-background-sunbloom-02 {
+  background-color: rgb(var(--theme-preset-background-sunbloom-02))
+}
+
+.theme-preset-background-sunbloom-03 {
+  background-color: rgb(var(--theme-preset-background-sunbloom-03))
+}
+
+.theme-preset-background-sunbloom-04 {
+  background-color: rgb(var(--theme-preset-background-sunbloom-04))
+}
+
+.theme-preset-accent-sunbloom {
+  background-color: rgb(var(--theme-preset-accent-sunbloom))
+}
+
 .theme-preset-background-coralgreen-01 {
   background-color: rgb(var(--theme-preset-background-coralgreen-01))
 }

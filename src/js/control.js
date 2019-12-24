@@ -2609,6 +2609,19 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: helper.e(".control-theme-preset-sunbloom"),
+    type: "button",
+    func: function() {
+      theme.preset("sunbloom");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      link.groupAndItems();
+      render.update();
+      render.class();
+    }
+  }, {
     element: helper.e(".control-theme-preset-coralgreen"),
     type: "button",
     func: function() {
