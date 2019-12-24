@@ -2544,10 +2544,10 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-midnightblue"),
+    element: helper.e(".control-theme-preset-midnight"),
     type: "button",
     func: function() {
-      theme.preset("midnightblue");
+      theme.preset("midnight");
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2678,6 +2678,32 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("outrun");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      link.groupAndItems();
+      render.update();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-theme-preset-pumpkin"),
+    type: "button",
+    func: function() {
+      theme.preset("pumpkin");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      link.groupAndItems();
+      render.update();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-theme-preset-whoosh"),
+    type: "button",
+    func: function() {
+      theme.preset("whoosh");
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();

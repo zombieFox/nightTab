@@ -389,7 +389,7 @@ var state = (function() {
       radius: 0.25,
       style: "dark"
     },
-    midnightblue: {
+    midnight: {
       color: {
         hsl: {
           h: 215,
@@ -572,7 +572,7 @@ var state = (function() {
       },
       accent: {
         r: 255,
-        g: 136,
+        g: 221,
         b: 0
       },
       radius: 0.6,
@@ -618,6 +618,48 @@ var state = (function() {
         b: 187
       },
       radius: 0,
+      style: "dark"
+    },
+    pumpkin: {
+      color: {
+        hsl: {
+          h: 198,
+          s: 0,
+          l: 46
+        },
+        rgb: {
+          r: 117,
+          g: 117,
+          b: 117
+        }
+      },
+      accent: {
+        r: 238,
+        g: 119,
+        b: 34
+      },
+      radius: 0.2,
+      style: "dark"
+    },
+    whoosh: {
+      color: {
+        hsl: {
+          h: 307,
+          s: 100,
+          l: 59
+        },
+        rgb: {
+          r: 254,
+          g: 45,
+          b: 230
+        }
+      },
+      accent: {
+        r: 238,
+        g: 238,
+        b: 34
+      },
+      radius: 1.2,
       style: "dark"
     }
   };

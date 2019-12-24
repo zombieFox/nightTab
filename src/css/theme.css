@@ -108,24 +108,24 @@
   background-color: rgb(var(--theme-preset-accent-nighttab))
 }
 
-.theme-preset-background-midnightblue-01 {
-  background-color: rgb(var(--theme-preset-background-midnightblue-01))
+.theme-preset-background-midnight-01 {
+  background-color: rgb(var(--theme-preset-background-midnight-01))
 }
 
-.theme-preset-background-midnightblue-02 {
-  background-color: rgb(var(--theme-preset-background-midnightblue-02))
+.theme-preset-background-midnight-02 {
+  background-color: rgb(var(--theme-preset-background-midnight-02))
 }
 
-.theme-preset-background-midnightblue-03 {
-  background-color: rgb(var(--theme-preset-background-midnightblue-03))
+.theme-preset-background-midnight-03 {
+  background-color: rgb(var(--theme-preset-background-midnight-03))
 }
 
-.theme-preset-background-midnightblue-04 {
-  background-color: rgb(var(--theme-preset-background-midnightblue-04))
+.theme-preset-background-midnight-04 {
+  background-color: rgb(var(--theme-preset-background-midnight-04))
 }
 
-.theme-preset-accent-midnightblue {
-  background-color: rgb(var(--theme-preset-accent-midnightblue))
+.theme-preset-accent-midnight {
+  background-color: rgb(var(--theme-preset-accent-midnight))
 }
 
 .theme-preset-background-bluegum-01 {
@@ -326,4 +326,44 @@
 
 .theme-preset-accent-outrun {
   background-color: rgb(var(--theme-preset-accent-outrun))
+}
+
+.theme-preset-background-pumpkin-01 {
+  background-color: rgb(var(--theme-preset-background-pumpkin-01))
+}
+
+.theme-preset-background-pumpkin-02 {
+  background-color: rgb(var(--theme-preset-background-pumpkin-02))
+}
+
+.theme-preset-background-pumpkin-03 {
+  background-color: rgb(var(--theme-preset-background-pumpkin-03))
+}
+
+.theme-preset-background-pumpkin-04 {
+  background-color: rgb(var(--theme-preset-background-pumpkin-04))
+}
+
+.theme-preset-accent-pumpkin {
+  background-color: rgb(var(--theme-preset-accent-pumpkin))
+}
+
+.theme-preset-background-whoosh-01 {
+  background-color: rgb(var(--theme-preset-background-whoosh-01))
+}
+
+.theme-preset-background-whoosh-02 {
+  background-color: rgb(var(--theme-preset-background-whoosh-02))
+}
+
+.theme-preset-background-whoosh-03 {
+  background-color: rgb(var(--theme-preset-background-whoosh-03))
+}
+
+.theme-preset-background-whoosh-04 {
+  background-color: rgb(var(--theme-preset-background-whoosh-04))
+}
+
+.theme-preset-accent-whoosh {
+  background-color: rgb(var(--theme-preset-accent-whoosh))
 }
