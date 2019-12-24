@@ -19,53 +19,7 @@ var theme = (function() {
     }
   };
 
-  mod.color = {
-    hsl: function() {
-      var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.color.rgb);
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.color.hsl",
-        newValue: {
-          h: parseInt(hsl.h, 10),
-          s: parseInt(hsl.s, 10),
-          l: parseInt(hsl.l, 10)
-        }
-      });
-    },
-    rgb: function() {
-      var rgb = helper.convertColor.hsl.rgb(state.get.current().theme.color.hsl);
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.color.rgb",
-        newValue: {
-          r: parseInt(rgb.r, 10),
-          g: parseInt(rgb.g, 10),
-          b: parseInt(rgb.b, 10)
-        }
-      });
-    }
-  };
-
-  var render = {};
-
-  render.theme = function() {
-    var html = helper.e("html");
-    helper.removeClass(html, "is-theme-style-dark");
-    helper.removeClass(html, "is-theme-style-light");
-    helper.addClass(html, "is-theme-style-" + state.get.current().theme.style);
-  };
-
-  render.radius = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--theme-radius", state.get.current().theme.radius + "rem");
-  };
-
-  render.accent = {
-    color: function() {
-      var html = helper.e("html");
-      var color = state.get.current().theme.accent.current;
-      html.style.setProperty("--theme-accent", color.r + ", " + color.g + ", " + color.b);
-    },
+  mod.accent = {
     random: function() {
       if (state.get.current().theme.accent.random.active) {
         var randomVal = function(min, max) {
@@ -119,10 +73,87 @@ var theme = (function() {
             b: parseInt(rgb.b, 10)
           }
         });
-        helper.e(".control-theme-accent-current-quick").value = hex;
-        helper.e(".control-theme-accent-current-picker").value = hex;
-        helper.e(".control-theme-accent-current-hex").value = hex;
       };
+    }
+  };
+
+  mod.color = {
+    hsl: function() {
+      var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.color.rgb);
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.color.hsl",
+        newValue: {
+          h: parseInt(hsl.h, 10),
+          s: parseInt(hsl.s, 10),
+          l: parseInt(hsl.l, 10)
+        }
+      });
+    },
+    rgb: function() {
+      var rgb = helper.convertColor.hsl.rgb(state.get.current().theme.color.hsl);
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.color.rgb",
+        newValue: {
+          r: parseInt(rgb.r, 10),
+          g: parseInt(rgb.g, 10),
+          b: parseInt(rgb.b, 10)
+        }
+      });
+    }
+  };
+
+  mod.preset = {
+    set: function(name) {
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.accent.current",
+        newValue: state.get.preset()[name].accent
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.color",
+        newValue: state.get.preset()[name].color
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.style",
+        newValue: state.get.preset()[name].style
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.radius",
+        newValue: state.get.preset()[name].radius
+      });
+    }
+  };
+
+  var render = {};
+
+  render.style = {
+    dark: function() {
+      var html = helper.e("html");
+      helper.addClass(html, "is-theme-style-dark");
+      helper.removeClass(html, "is-theme-style-light");
+    },
+    light: function() {
+      var html = helper.e("html");
+      helper.removeClass(html, "is-theme-style-dark");
+      helper.addClass(html, "is-theme-style-light");
+    }
+  };
+
+  render.radius = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--theme-radius", state.get.current().theme.radius + "rem");
+  };
+
+  render.accent = {
+    color: function() {
+      var html = helper.e("html");
+      var color = state.get.current().theme.accent.current;
+      html.style.setProperty("--theme-accent", color.r + ", " + color.g + ", " + color.b);
     },
     input: {
       quick: function() {
@@ -209,23 +240,47 @@ var theme = (function() {
     }
   };
 
-  var toggle = function() {
-    if (state.get.current().theme.style == "dark") {
-      mod.style.light();
-    } else if (state.get.current().theme.style == "light") {
-      mod.style.dark();
-    };
-    render.theme();
+  var accent = {
+    random: function() {
+      mod.accent.random();
+      render.accent.color();
+    }
   };
 
-  var accent = function() {
-    theme.render.accent.color();
+  var style = {
+    dark: function() {
+      mod.style.dark();
+      render.style.dark();
+    },
+    light: function() {
+      mod.style.light();
+      render.style.light();
+    },
+    check: function() {
+      if (state.get.current().theme.style == "dark") {
+        style.dark();
+      } else if (state.get.current().theme.style == "light") {
+        style.light();
+      };
+    },
+    toggle: function() {
+      if (state.get.current().theme.style == "dark") {
+        style.light();
+      } else if (state.get.current().theme.style == "light") {
+        style.dark();
+      };
+    }
+  }
+
+  var preset = function(name) {
+    mod.preset.set(name);
   };
 
   var init = function() {
-    render.theme();
+    style.check();
+    accent.random();
+    mod.accent.random();
     render.color.shade();
-    render.accent.random();
     render.accent.color();
     render.radius();
   };
@@ -235,8 +290,9 @@ var theme = (function() {
     init: init,
     mod: mod,
     render: render,
-    toggle: toggle,
-    accent: accent
+    style: style,
+    accent: accent,
+    preset: preset
   };
 
 })();

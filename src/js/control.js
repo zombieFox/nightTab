@@ -85,7 +85,7 @@ var control = (function() {
     path: "theme.accent.current",
     type: "color",
     func: function() {
-      theme.accent();
+      theme.render.accent.color();
       theme.render.accent.input.picker();
       theme.render.accent.input.hex();
       link.groupAndItems();
@@ -2531,39 +2531,106 @@ var control = (function() {
       link.groupAndItems();
     }
   }, {
-    element: helper.e(".control-theme-accent-current-picker"),
-    path: "theme.accent.current",
-    type: "color",
+    element: helper.e(".control-theme-preset-nighttab"),
+    type: "button",
     func: function() {
-      theme.accent();
-      theme.render.accent.input.quick();
-      theme.render.accent.input.hex();
-      link.groupAndItems();
+      theme.preset("nighttab");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      render.update();
     }
   }, {
-    element: helper.e(".control-theme-accent-current-hex"),
-    path: "theme.accent.current",
-    type: "text",
-    valueMod: ["hexTextString"],
+    element: helper.e(".control-theme-preset-nightingaleblue"),
+    type: "button",
     func: function() {
-      theme.accent();
-      theme.render.accent.input.picker();
-      theme.render.accent.input.quick();
-      link.groupAndItems();
+      theme.preset("nightingaleblue");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-preset-bluegum"),
+    type: "button",
+    func: function() {
+      theme.preset("bluegum");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-preset-sharpmint"),
+    type: "button",
+    func: function() {
+      theme.preset("sharpmint");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-preset-snowblue"),
+    type: "button",
+    func: function() {
+      theme.preset("snowblue");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-preset-coralgreen"),
+    type: "button",
+    func: function() {
+      theme.preset("coralgreen");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-preset-purplegem"),
+    type: "button",
+    func: function() {
+      theme.preset("purplegem");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-preset-hotpepper"),
+    type: "button",
+    func: function() {
+      theme.preset("hotpepper");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      render.update();
     }
   }, {
     element: helper.e(".control-theme-style-dark"),
     path: "theme.style",
     type: "radio",
     func: function() {
-      theme.render.theme();
+      theme.style.dark();
     }
   }, {
     element: helper.e(".control-theme-style-light"),
     path: "theme.style",
     type: "radio",
     func: function() {
-      theme.render.theme();
+      theme.style.light();
     }
   }, {
     element: helper.e(".control-theme-radius"),
@@ -2703,6 +2770,40 @@ var control = (function() {
       render.update();
     }
   }, {
+    element: helper.e(".control-theme-accent-current-picker"),
+    path: "theme.accent.current",
+    type: "color",
+    func: function() {
+      theme.render.accent.color();
+      theme.render.accent.input.quick();
+      theme.render.accent.input.hex();
+      link.groupAndItems();
+    }
+  }, {
+    element: helper.e(".control-theme-accent-current-hex"),
+    path: "theme.accent.current",
+    type: "text",
+    valueMod: ["hexTextString"],
+    func: function() {
+      theme.render.accent.color();
+      theme.render.accent.input.picker();
+      theme.render.accent.input.quick();
+      link.groupAndItems();
+    }
+  }, {
+    element: helper.e(".control-theme-accent-current-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.accent.current", helper.getObject({
+        object: state.get.default(),
+        path: "theme.accent.current"
+      }));
+      theme.render.accent.color();
+      theme.render.accent.input.picker();
+      theme.render.accent.input.quick();
+      link.groupAndItems();
+    }
+  }, {
     element: helper.e(".control-theme-accent-random-active"),
     path: "theme.accent.random.active",
     type: "checkbox",
@@ -2749,8 +2850,10 @@ var control = (function() {
     element: helper.e(".control-theme-accent-randomise"),
     type: "button",
     func: function() {
-      theme.render.accent.random();
-      theme.render.accent.color();
+      theme.accent.random();
+      theme.render.accent.input.quick();
+      theme.render.accent.input.picker();
+      theme.render.accent.input.hex();
       link.groupAndItems();
     }
   }, {

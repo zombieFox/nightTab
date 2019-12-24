@@ -86,7 +86,7 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+d
       if (event.ctrlKey && event.altKey && event.keyCode == 68) {
-        theme.toggle();
+        theme.style.toggle();
         control.render.update();
         data.save();
       };
@@ -127,8 +127,10 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+r
       if (state.get.current().theme.accent.random.active && event.ctrlKey && event.altKey && event.keyCode == 82) {
-        theme.render.accent.random();
-        theme.render.accent.color();
+        theme.accent.random();
+        theme.render.accent.input.quick();
+        theme.render.accent.input.picker();
+        theme.render.accent.input.hex();
         link.groupAndItems();
         data.save();
       };
