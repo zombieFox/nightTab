@@ -415,12 +415,12 @@ var state = (function() {
         hsl: {
           h: 217,
           s: 46,
-          l: 64
+          l: 60
         },
         rgb: {
-          r: 120,
-          g: 153,
-          b: 205
+          r: 106,
+          g: 142,
+          b: 199
         }
       },
       accent: {
@@ -455,14 +455,14 @@ var state = (function() {
     snowblue: {
       color: {
         hsl: {
-          h: 197,
-          s: 25,
-          l: 46
+          h: 217,
+          s: 46,
+          l: 58
         },
         rgb: {
-          r: 87,
-          g: 130,
-          b: 146
+          r: 98,
+          g: 136,
+          b: 197
         }
       },
       accent: {
@@ -520,12 +520,12 @@ var state = (function() {
         hsl: {
           h: 0,
           s: 69,
-          l: 66
+          l: 62
         },
         rgb: {
-          r: 228,
-          g: 108,
-          b: 108
+          r: 224,
+          g: 91,
+          b: 91
         }
       },
       accent: {
