@@ -2542,10 +2542,10 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-preset-nightingaleblue"),
+    element: helper.e(".control-theme-preset-midnightblue"),
     type: "button",
     func: function() {
-      theme.preset("nightingaleblue");
+      theme.preset("midnightblue");
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();

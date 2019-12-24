@@ -389,7 +389,7 @@ var state = (function() {
       radius: 0.25,
       style: "dark"
     },
-    nightingaleblue: {
+    midnightblue: {
       color: {
         hsl: {
           h: 220,
@@ -445,9 +445,9 @@ var state = (function() {
         }
       },
       accent: {
-        r: 255,
-        g: 10,
-        b: 178
+        r: 94,
+        g: 255,
+        b: 226
       },
       radius: 0.8,
       style: "dark"
@@ -456,18 +456,18 @@ var state = (function() {
       color: {
         hsl: {
           h: 197,
-          s: 14,
-          l: 61
+          s: 25,
+          l: 46
         },
         rgb: {
-          r: 141,
-          g: 161,
-          b: 169
+          r: 87,
+          g: 130,
+          b: 146
         }
       },
       accent: {
-        r: 105,
-        g: 183,
+        r: 59,
+        g: 207,
         b: 214
       },
       radius: 0,
@@ -497,23 +497,23 @@ var state = (function() {
     purplegem: {
       color: {
         hsl: {
-          h: 300,
-          s: 30,
-          l: 51
+          h: 301,
+          s: 28,
+          l: 56
         },
         rgb: {
-          r: 170,
-          g: 95,
-          b: 169
+          r: 175,
+          g: 112,
+          b: 173
         }
       },
       accent: {
-        r: 26,
-        g: 167,
-        b: 255
+        r: 110,
+        g: 109,
+        b: 208
       },
       radius: 0.40,
-      style: "dark"
+      style: "light"
     },
     hotpepper: {
       color: {

@@ -240,6 +240,50 @@ var theme = (function() {
     }
   };
 
+  render.preset = function() {
+    var html = helper.e("html");
+    for (var key in state.get.preset()) {
+      var preset = state.get.preset()[key];
+      var shadeSteps = 4;
+      var lightShift = 12;
+      var hsl = helper.convertColor.rgb.hsl(preset.color.rgb);
+      var renderPreview = function(name, index, rgb) {
+        for (var key in rgb) {
+          if (rgb[key] < 0) {
+            rgb[key] = 0;
+          } else if (rgb[key] > 255) {
+            rgb[key] = 255;
+          };
+          rgb[key] = parseInt(rgb[key], 10);
+        };
+        if (index < 10) {
+          index = "0" + index;
+        } else {
+          index = index;
+        };
+        html.style.setProperty(name + index, rgb.r + ", " + rgb.g + ", " + rgb.b);
+      };
+      for (var i = 1; i <= shadeSteps; i++) {
+        var rgb;
+        if (preset.style == "dark") {
+          rgb = helper.convertColor.hsl.rgb({
+            h: hsl.h,
+            s: hsl.s,
+            l: hsl.l - (lightShift * i)
+          });
+        } else if (preset.style == "light") {
+          rgb = helper.convertColor.hsl.rgb({
+            h: hsl.h,
+            s: hsl.s,
+            l: hsl.l + (lightShift * i)
+          });
+        };
+        renderPreview("--theme-preset-background-" + key + "-", i, rgb);
+      };
+      html.style.setProperty("--theme-preset-accent-" + key, preset.accent.r + ", " + preset.accent.g + ", " + preset.accent.b);
+    };
+  };
+
   var accent = {
     random: function() {
       mod.accent.random();
@@ -283,6 +327,7 @@ var theme = (function() {
     render.color.shade();
     render.accent.color();
     render.radius();
+    render.preset();
   };
 
   // exposed methods

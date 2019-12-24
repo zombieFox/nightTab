@@ -1,0 +1,221 @@
+.theme-preset-button {
+  padding: 0;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 6em;
+}
+
+.theme-preset-button .button-text {
+  margin-top: 0.75em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  font-size: 0.75em;
+}
+
+.theme-preset-button:after {
+  content: none;
+}
+
+.theme-preset-preview {
+  width: 6em;
+  height: 6em;
+  position: relative;
+}
+
+.theme-preset-background-01,
+.theme-preset-background-02,
+.theme-preset-background-03,
+.theme-preset-background-04,
+.theme-preset-accent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.theme-preset-background-01 {
+  z-index: 1;
+}
+
+.theme-preset-background-02 {
+  z-index: 2;
+  clip-path: polygon(0 40%, 60% 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.theme-preset-background-03 {
+  z-index: 3;
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+
+.theme-preset-background-04 {
+  z-index: 4;
+  clip-path: polygon(40% 0, 100% 60%, 100% 0);
+}
+
+.theme-preset-accent {
+  z-index: 5;
+  clip-path: polygon(100% 50%, 100% 100%, 50% 100%);
+}
+
+.theme-preset-background-nighttab-01 {
+  background-color: rgb(var(--theme-preset-background-nighttab-01))
+}
+
+.theme-preset-background-nighttab-02 {
+  background-color: rgb(var(--theme-preset-background-nighttab-02))
+}
+
+.theme-preset-background-nighttab-03 {
+  background-color: rgb(var(--theme-preset-background-nighttab-03))
+}
+
+.theme-preset-background-nighttab-04 {
+  background-color: rgb(var(--theme-preset-background-nighttab-04))
+}
+
+.theme-preset-accent-nighttab {
+  background-color: rgb(var(--theme-preset-accent-nighttab))
+}
+
+.theme-preset-background-midnightblue-01 {
+  background-color: rgb(var(--theme-preset-background-midnightblue-01))
+}
+
+.theme-preset-background-midnightblue-02 {
+  background-color: rgb(var(--theme-preset-background-midnightblue-02))
+}
+
+.theme-preset-background-midnightblue-03 {
+  background-color: rgb(var(--theme-preset-background-midnightblue-03))
+}
+
+.theme-preset-background-midnightblue-04 {
+  background-color: rgb(var(--theme-preset-background-midnightblue-04))
+}
+
+.theme-preset-accent-midnightblue {
+  background-color: rgb(var(--theme-preset-accent-midnightblue))
+}
+
+.theme-preset-background-bluegum-01 {
+  background-color: rgb(var(--theme-preset-background-bluegum-01))
+}
+
+.theme-preset-background-bluegum-02 {
+  background-color: rgb(var(--theme-preset-background-bluegum-02))
+}
+
+.theme-preset-background-bluegum-03 {
+  background-color: rgb(var(--theme-preset-background-bluegum-03))
+}
+
+.theme-preset-background-bluegum-04 {
+  background-color: rgb(var(--theme-preset-background-bluegum-04))
+}
+
+.theme-preset-accent-bluegum {
+  background-color: rgb(var(--theme-preset-accent-bluegum))
+}
+
+.theme-preset-background-sharpmint-01 {
+  background-color: rgb(var(--theme-preset-background-sharpmint-01))
+}
+
+.theme-preset-background-sharpmint-02 {
+  background-color: rgb(var(--theme-preset-background-sharpmint-02))
+}
+
+.theme-preset-background-sharpmint-03 {
+  background-color: rgb(var(--theme-preset-background-sharpmint-03))
+}
+
+.theme-preset-background-sharpmint-04 {
+  background-color: rgb(var(--theme-preset-background-sharpmint-04))
+}
+
+.theme-preset-accent-sharpmint {
+  background-color: rgb(var(--theme-preset-accent-sharpmint))
+}
+
+.theme-preset-background-snowblue-01 {
+  background-color: rgb(var(--theme-preset-background-snowblue-01))
+}
+
+.theme-preset-background-snowblue-02 {
+  background-color: rgb(var(--theme-preset-background-snowblue-02))
+}
+
+.theme-preset-background-snowblue-03 {
+  background-color: rgb(var(--theme-preset-background-snowblue-03))
+}
+
+.theme-preset-background-snowblue-04 {
+  background-color: rgb(var(--theme-preset-background-snowblue-04))
+}
+
+.theme-preset-accent-snowblue {
+  background-color: rgb(var(--theme-preset-accent-snowblue))
+}
+
+.theme-preset-background-coralgreen-01 {
+  background-color: rgb(var(--theme-preset-background-coralgreen-01))
+}
+
+.theme-preset-background-coralgreen-02 {
+  background-color: rgb(var(--theme-preset-background-coralgreen-02))
+}
+
+.theme-preset-background-coralgreen-03 {
+  background-color: rgb(var(--theme-preset-background-coralgreen-03))
+}
+
+.theme-preset-background-coralgreen-04 {
+  background-color: rgb(var(--theme-preset-background-coralgreen-04))
+}
+
+.theme-preset-accent-coralgreen {
+  background-color: rgb(var(--theme-preset-accent-coralgreen))
+}
+
+.theme-preset-background-purplegem-01 {
+  background-color: rgb(var(--theme-preset-background-purplegem-01))
+}
+
+.theme-preset-background-purplegem-02 {
+  background-color: rgb(var(--theme-preset-background-purplegem-02))
+}
+
+.theme-preset-background-purplegem-03 {
+  background-color: rgb(var(--theme-preset-background-purplegem-03))
+}
+
+.theme-preset-background-purplegem-04 {
+  background-color: rgb(var(--theme-preset-background-purplegem-04))
+}
+
+.theme-preset-accent-purplegem {
+  background-color: rgb(var(--theme-preset-accent-purplegem))
+}
+
+.theme-preset-background-hotpepper-01 {
+  background-color: rgb(var(--theme-preset-background-hotpepper-01))
+}
+
+.theme-preset-background-hotpepper-02 {
+  background-color: rgb(var(--theme-preset-background-hotpepper-02))
+}
+
+.theme-preset-background-hotpepper-03 {
+  background-color: rgb(var(--theme-preset-background-hotpepper-03))
+}
+
+.theme-preset-background-hotpepper-04 {
+  background-color: rgb(var(--theme-preset-background-hotpepper-04))
+}
+
+.theme-preset-accent-hotpepper {
+  background-color: rgb(var(--theme-preset-accent-hotpepper))
+}
