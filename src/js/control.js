@@ -2661,10 +2661,10 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-coldcube"),
+    element: helper.e(".control-theme-preset-steelgrey"),
     type: "button",
     func: function() {
-      theme.preset("coldcube");
+      theme.preset("steelgrey");
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();

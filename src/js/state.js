@@ -578,25 +578,25 @@ var state = (function() {
       radius: 0.6,
       style: "dark"
     },
-    coldcube: {
+    steelgrey: {
       color: {
         hsl: {
-          h: 203,
-          s: 30,
-          l: 50
+          h: 214,
+          s: 25,
+          l: 44
         },
         rgb: {
-          r: 89,
-          g: 136,
-          b: 165
+          r: 85,
+          g: 110,
+          b: 143
         }
       },
       accent: {
-        r: 74,
-        g: 120,
-        b: 148
+        r: 59,
+        g: 95,
+        b: 118
       },
-      radius: 0.1,
+      radius: 0.3,
       style: "light"
     },
     outrun: {
