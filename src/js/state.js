@@ -473,6 +473,27 @@ var state = (function() {
       radius: 0,
       style: "light"
     },
+    chocorum: {
+      color: {
+        hsl: {
+          h: 25,
+          s: 29,
+          l: 48
+        },
+        rgb: {
+          r: 159,
+          g: 118,
+          b: 87
+        }
+      },
+      accent: {
+        r: 196,
+        g: 0,
+        b: 66
+      },
+      radius: 0.75,
+      style: "dark"
+    },
     coralgreen: {
       color: {
         hsl: {
@@ -535,6 +556,27 @@ var state = (function() {
       },
       radius: 0.6,
       style: "dark"
+    },
+    coldcube: {
+      color: {
+        hsl: {
+          h: 203,
+          s: 30,
+          l: 50
+        },
+        rgb: {
+          r: 89,
+          g: 136,
+          b: 165
+        }
+      },
+      accent: {
+        r: 74,
+        g: 120,
+        b: 148
+      },
+      radius: 0.1,
+      style: "light"
     }
   };
 

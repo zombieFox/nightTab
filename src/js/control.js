@@ -2586,6 +2586,17 @@ var control = (function() {
       render.update();
     }
   }, {
+    element: helper.e(".control-theme-preset-chocorum"),
+    type: "button",
+    func: function() {
+      theme.preset("chocorum");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-theme-preset-coralgreen"),
     type: "button",
     func: function() {
@@ -2612,6 +2623,17 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("hotpepper");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-preset-coldcube"),
+    type: "button",
+    func: function() {
+      theme.preset("coldcube");
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
