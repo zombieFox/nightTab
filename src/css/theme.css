@@ -7,7 +7,7 @@
 }
 
 .theme-preset-button .button-text {
-  margin-top: 0.75em;
+  margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 0;
   font-size: 0.75em;
@@ -34,6 +34,7 @@
   top: 0;
   left: 0;
   display: block;
+  transition: clip-path var(--layout-timing-extra-fast);
 }
 
 .theme-preset-background-01 {
@@ -42,22 +43,50 @@
 
 .theme-preset-background-02 {
   z-index: 2;
-  clip-path: polygon(0 40%, 60% 100%, 100% 100%, 100% 0, 0 0);
+  clip-path: polygon(0 0, 100% 100%, 100% 100%, 100% 0, 0 0);
+  transition-delay: var(--layout-duration-04);
 }
 
 .theme-preset-background-03 {
   z-index: 3;
-  clip-path: polygon(0 0, 100% 100%, 100% 0);
+  clip-path: polygon(0 0, 40% 0, 100% 60%, 100% 0);
+  transition-delay: var(--layout-duration-03);
 }
 
 .theme-preset-background-04 {
   z-index: 4;
-  clip-path: polygon(40% 0, 100% 60%, 100% 0);
+  clip-path: polygon(80% 0, 100% 20%, 100% 0);
+  transition-delay: var(--layout-duration-02);
 }
 
 .theme-preset-accent {
   z-index: 5;
   clip-path: polygon(100% 50%, 100% 100%, 50% 100%);
+  transition-delay: var(--layout-duration-02);
+}
+
+.theme-preset-button:focus .theme-preset-background-02,
+.theme-preset-button:hover .theme-preset-background-02 {
+  clip-path: polygon(0 40%, 60% 100%, 100% 100%, 100% 0, 0 0);
+  transition-delay: var(--layout-duration-01);
+}
+
+.theme-preset-button:focus .theme-preset-background-03,
+.theme-preset-button:hover .theme-preset-background-03 {
+  clip-path: polygon(0 0, 0 0, 100% 100%, 100% 0);
+  transition-delay: var(--layout-duration-02);
+}
+
+.theme-preset-button:focus .theme-preset-background-04,
+.theme-preset-button:hover .theme-preset-background-04 {
+  clip-path: polygon(40% 0, 100% 60%, 100% 0);
+  transition-delay: var(--layout-duration-03);
+}
+
+.theme-preset-button:focus .theme-preset-accent,
+.theme-preset-button:hover .theme-preset-accent {
+  clip-path: polygon(100% 40%, 100% 100%, 40% 100%);
+  transition-delay: var(--layout-duration-02);
 }
 
 .theme-preset-background-nighttab-01 {

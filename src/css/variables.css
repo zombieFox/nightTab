@@ -103,10 +103,15 @@
   --layout-space:                                       0.5em;
   --layout-padding:                                     4;
   --layout-gutter:                                      4;
+  --layout-duration-01:                                 0.1s;
   --layout-duration-02:                                 0.2s;
+  --layout-duration-03:                                 0.3s;
   --layout-duration-04:                                 0.4s;
+  --layout-duration-05:                                 0.5s;
   --layout-duration-06:                                 0.6s;
+  --layout-duration-07:                                 0.7s;
   --layout-duration-08:                                 0.8s;
+  --layout-duration-09:                                 0.9s;
   --layout-duration-10:                                 1s;
   --layout-timing-extra-fast:                           var(--layout-duration-02) ease-in-out;
   --layout-timing-fast:                                 var(--layout-duration-04) ease-in-out;
