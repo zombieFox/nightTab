@@ -287,3 +287,23 @@
 .theme-preset-accent-coldcube {
   background-color: rgb(var(--theme-preset-accent-coldcube))
 }
+
+.theme-preset-background-outrun-01 {
+  background-color: rgb(var(--theme-preset-background-outrun-01))
+}
+
+.theme-preset-background-outrun-02 {
+  background-color: rgb(var(--theme-preset-background-outrun-02))
+}
+
+.theme-preset-background-outrun-03 {
+  background-color: rgb(var(--theme-preset-background-outrun-03))
+}
+
+.theme-preset-background-outrun-04 {
+  background-color: rgb(var(--theme-preset-background-outrun-04))
+}
+
+.theme-preset-accent-outrun {
+  background-color: rgb(var(--theme-preset-accent-outrun))
+}

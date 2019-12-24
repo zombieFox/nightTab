@@ -71,11 +71,16 @@
   --theme-preset-background-hotpepper-03:               25, 25, 25;
   --theme-preset-background-hotpepper-04:               25, 25, 25;
   --theme-preset-accent-hotpepper:                      25, 25, 25;
-  --theme-preset-background-coldcube-01:               25, 25, 25;
-  --theme-preset-background-coldcube-02:               25, 25, 25;
-  --theme-preset-background-coldcube-03:               25, 25, 25;
-  --theme-preset-background-coldcube-04:               25, 25, 25;
-  --theme-preset-accent-coldcube:                      25, 25, 25;
+  --theme-preset-background-coldcube-01:                25, 25, 25;
+  --theme-preset-background-coldcube-02:                25, 25, 25;
+  --theme-preset-background-coldcube-03:                25, 25, 25;
+  --theme-preset-background-coldcube-04:                25, 25, 25;
+  --theme-preset-accent-coldcube:                       25, 25, 25;
+  --theme-preset-background-outrun-01:                  25, 25, 25;
+  --theme-preset-background-outrun-02:                  25, 25, 25;
+  --theme-preset-background-outrun-03:                  25, 25, 25;
+  --theme-preset-background-outrun-04:                  25, 25, 25;
+  --theme-preset-accent-outrun:                         25, 25, 25;
   --theme-preset-preview-size:                          6em;
   /* header */
   --header-area-width:                                  100%;

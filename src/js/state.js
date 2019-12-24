@@ -392,20 +392,20 @@ var state = (function() {
     midnightblue: {
       color: {
         hsl: {
-          h: 220,
-          s: 60,
-          l: 50
+          h: 215,
+          s: 41,
+          l: 48
         },
         rgb: {
-          r: 51,
-          g: 102,
-          b: 204
+          r: 72,
+          g: 114,
+          b: 172
         }
       },
       accent: {
-        r: 255,
-        g: 0,
-        b: 119
+        r: 37,
+        g: 55,
+        b: 134
       },
       radius: 0.5,
       style: "dark"
@@ -577,6 +577,27 @@ var state = (function() {
       },
       radius: 0.1,
       style: "light"
+    },
+    outrun: {
+      color: {
+        hsl: {
+          h: 227,
+          s: 52,
+          l: 55
+        },
+        rgb: {
+          r: 80,
+          g: 106,
+          b: 199
+        }
+      },
+      accent: {
+        r: 255,
+        g: 0,
+        b: 187
+      },
+      radius: 0,
+      style: "dark"
     }
   };
 

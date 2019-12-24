@@ -2539,7 +2539,9 @@ var control = (function() {
       theme.render.color.shade();
       theme.render.accent.color();
       theme.render.radius();
+      link.groupAndItems();
       render.update();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-preset-midnightblue"),
@@ -2550,7 +2552,9 @@ var control = (function() {
       theme.render.color.shade();
       theme.render.accent.color();
       theme.render.radius();
+      link.groupAndItems();
       render.update();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-preset-bluegum"),
@@ -2561,7 +2565,9 @@ var control = (function() {
       theme.render.color.shade();
       theme.render.accent.color();
       theme.render.radius();
+      link.groupAndItems();
       render.update();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-preset-sharpmint"),
@@ -2572,7 +2578,9 @@ var control = (function() {
       theme.render.color.shade();
       theme.render.accent.color();
       theme.render.radius();
+      link.groupAndItems();
       render.update();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-preset-snowblue"),
@@ -2583,7 +2591,9 @@ var control = (function() {
       theme.render.color.shade();
       theme.render.accent.color();
       theme.render.radius();
+      link.groupAndItems();
       render.update();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-preset-chocorum"),
@@ -2594,7 +2604,9 @@ var control = (function() {
       theme.render.color.shade();
       theme.render.accent.color();
       theme.render.radius();
+      link.groupAndItems();
       render.update();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-preset-coralgreen"),
@@ -2605,7 +2617,9 @@ var control = (function() {
       theme.render.color.shade();
       theme.render.accent.color();
       theme.render.radius();
+      link.groupAndItems();
       render.update();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-preset-purplegem"),
@@ -2616,7 +2630,9 @@ var control = (function() {
       theme.render.color.shade();
       theme.render.accent.color();
       theme.render.radius();
+      link.groupAndItems();
       render.update();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-preset-hotpepper"),
@@ -2627,7 +2643,9 @@ var control = (function() {
       theme.render.color.shade();
       theme.render.accent.color();
       theme.render.radius();
+      link.groupAndItems();
       render.update();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-preset-coldcube"),
@@ -2638,7 +2656,22 @@ var control = (function() {
       theme.render.color.shade();
       theme.render.accent.color();
       theme.render.radius();
+      link.groupAndItems();
       render.update();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-theme-preset-outrun"),
+    type: "button",
+    func: function() {
+      theme.preset("outrun");
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      link.groupAndItems();
+      render.update();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-style-dark"),
@@ -2824,6 +2857,7 @@ var control = (function() {
       theme.render.accent.input.picker();
       theme.render.accent.input.quick();
       link.groupAndItems();
+      render.update();
     }
   }, {
     element: helper.e(".control-theme-accent-random-active"),
