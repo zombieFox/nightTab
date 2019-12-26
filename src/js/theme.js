@@ -2,6 +2,7 @@ var theme = (function() {
 
   var mod = {};
 
+
   mod.style = {
     light: function() {
       helper.setObject({
@@ -109,23 +110,319 @@ var theme = (function() {
       helper.setObject({
         object: state.get.current(),
         path: "theme.accent.current",
-        newValue: state.get.preset()[name].accent
+        newValue: mod.preset.all[name].accent
       });
       helper.setObject({
         object: state.get.current(),
         path: "theme.color",
-        newValue: state.get.preset()[name].color
+        newValue: mod.preset.all[name].color
       });
       helper.setObject({
         object: state.get.current(),
         path: "theme.style",
-        newValue: state.get.preset()[name].style
+        newValue: mod.preset.all[name].style
       });
       helper.setObject({
         object: state.get.current(),
         path: "theme.radius",
-        newValue: state.get.preset()[name].radius
+        newValue: mod.preset.all[name].radius
       });
+    },
+    all: {
+      nighttab: {
+        color: {
+          hsl: {
+            h: 222,
+            s: 14,
+            l: 56
+          },
+          rgb: {
+            r: 129,
+            g: 138,
+            b: 160
+          }
+        },
+        accent: {
+          r: 0,
+          g: 80,
+          b: 255
+        },
+        radius: 0.25,
+        style: "dark"
+      },
+      midnight: {
+        color: {
+          hsl: {
+            h: 215,
+            s: 41,
+            l: 48
+          },
+          rgb: {
+            r: 72,
+            g: 114,
+            b: 172
+          }
+        },
+        accent: {
+          r: 37,
+          g: 55,
+          b: 134
+        },
+        radius: 0.5,
+        style: "dark"
+      },
+      bluegum: {
+        color: {
+          hsl: {
+            h: 217,
+            s: 46,
+            l: 60
+          },
+          rgb: {
+            r: 106,
+            g: 142,
+            b: 199
+          }
+        },
+        accent: {
+          r: 255,
+          g: 251,
+          b: 0
+        },
+        radius: 0.2,
+        style: "dark"
+      },
+      sharpmint: {
+        color: {
+          hsl: {
+            h: 157,
+            s: 50,
+            l: 49
+          },
+          rgb: {
+            r: 63,
+            g: 191,
+            b: 143
+          }
+        },
+        accent: {
+          r: 94,
+          g: 255,
+          b: 226
+        },
+        radius: 0.8,
+        style: "dark"
+      },
+      snowblue: {
+        color: {
+          hsl: {
+            h: 217,
+            s: 46,
+            l: 58
+          },
+          rgb: {
+            r: 98,
+            g: 136,
+            b: 197
+          }
+        },
+        accent: {
+          r: 59,
+          g: 207,
+          b: 214
+        },
+        radius: 0,
+        style: "light"
+      },
+      chocorum: {
+        color: {
+          hsl: {
+            h: 25,
+            s: 29,
+            l: 48
+          },
+          rgb: {
+            r: 159,
+            g: 118,
+            b: 87
+          }
+        },
+        accent: {
+          r: 196,
+          g: 0,
+          b: 66
+        },
+        radius: 0.75,
+        style: "dark"
+      },
+      sunbloom: {
+        color: {
+          hsl: {
+            h: 54,
+            s: 78,
+            l: 47
+          },
+          rgb: {
+            r: 213,
+            g: 194,
+            b: 26
+          }
+        },
+        accent: {
+          r: 255,
+          g: 220,
+          b: 22
+        },
+        radius: 0.5,
+        style: "light"
+      },
+      coralgreen: {
+        color: {
+          hsl: {
+            h: 184,
+            s: 38,
+            l: 61
+          },
+          rgb: {
+            r: 119,
+            g: 188,
+            b: 194
+          }
+        },
+        accent: {
+          r: 255,
+          g: 161,
+          b: 161
+        },
+        radius: 2,
+        style: "dark"
+      },
+      purplegem: {
+        color: {
+          hsl: {
+            h: 301,
+            s: 28,
+            l: 56
+          },
+          rgb: {
+            r: 175,
+            g: 112,
+            b: 173
+          }
+        },
+        accent: {
+          r: 110,
+          g: 109,
+          b: 208
+        },
+        radius: 0.40,
+        style: "light"
+      },
+      hotpepper: {
+        color: {
+          hsl: {
+            h: 0,
+            s: 69,
+            l: 62
+          },
+          rgb: {
+            r: 224,
+            g: 91,
+            b: 91
+          }
+        },
+        accent: {
+          r: 255,
+          g: 221,
+          b: 0
+        },
+        radius: 0.6,
+        style: "dark"
+      },
+      steelgrey: {
+        color: {
+          hsl: {
+            h: 214,
+            s: 25,
+            l: 44
+          },
+          rgb: {
+            r: 85,
+            g: 110,
+            b: 143
+          }
+        },
+        accent: {
+          r: 59,
+          g: 95,
+          b: 118
+        },
+        radius: 0.3,
+        style: "light"
+      },
+      outrun: {
+        color: {
+          hsl: {
+            h: 227,
+            s: 52,
+            l: 55
+          },
+          rgb: {
+            r: 80,
+            g: 106,
+            b: 199
+          }
+        },
+        accent: {
+          r: 255,
+          g: 0,
+          b: 187
+        },
+        radius: 0,
+        style: "dark"
+      },
+      pumpkin: {
+        color: {
+          hsl: {
+            h: 198,
+            s: 0,
+            l: 46
+          },
+          rgb: {
+            r: 117,
+            g: 117,
+            b: 117
+          }
+        },
+        accent: {
+          r: 238,
+          g: 119,
+          b: 34
+        },
+        radius: 0.2,
+        style: "dark"
+      },
+      whoosh: {
+        color: {
+          hsl: {
+            h: 307,
+            s: 100,
+            l: 59
+          },
+          rgb: {
+            r: 254,
+            g: 45,
+            b: 230
+          }
+        },
+        accent: {
+          r: 238,
+          g: 238,
+          b: 34
+        },
+        radius: 1.2,
+        style: "dark"
+      }
     }
   };
 
@@ -242,8 +539,8 @@ var theme = (function() {
 
   render.preset = function() {
     var html = helper.e("html");
-    for (var key in state.get.preset()) {
-      var preset = state.get.preset()[key];
+    for (var key in mod.preset.all) {
+      var preset = mod.preset.all[key];
       var shadeSteps = 4;
       var lightShift = 12;
       var hsl = helper.convertColor.rgb.hsl(preset.color.rgb);
