@@ -7,8 +7,8 @@
 }
 
 .theme-preset-button .button-text {
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
   margin-left: 0;
 }
 
@@ -43,19 +43,19 @@
 .theme-preset-background-02 {
   z-index: 2;
   clip-path: polygon(0 40%, 60% 100%, 100% 100%, 100% 0, 0 0);
-  transition-delay: 0;
+  transition-delay: 0s;
 }
 
 .theme-preset-background-03 {
   z-index: 3;
   clip-path: polygon(0 0, 100% 100%, 100% 0);
-  transition-delay: 0;
+  transition-delay: 0s;
 }
 
 .theme-preset-background-04 {
   z-index: 4;
   clip-path: polygon(40% 0, 100% 60%, 100% 0);
-  transition-delay: 0;
+  transition-delay: 0s;
 }
 
 .theme-preset-accent {
