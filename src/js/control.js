@@ -2609,10 +2609,10 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-sunbloom"),
+    element: helper.e(".control-theme-preset-sunburst"),
     type: "button",
     func: function() {
-      theme.preset("sunbloom");
+      theme.preset("sunburst");
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();

@@ -255,7 +255,7 @@ var theme = (function() {
         radius: 0.75,
         style: "dark"
       },
-      sunbloom: {
+      sunburst: {
         color: {
           hsl: {
             h: 54,
