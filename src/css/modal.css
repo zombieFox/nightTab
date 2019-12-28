@@ -50,10 +50,6 @@
   position: relative;
 }
 
-.modal-heading {
-  overflow-x: hidden;
-}
-
 .modal-heading:focus {
   outline: none;
 }

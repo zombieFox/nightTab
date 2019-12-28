@@ -12,13 +12,12 @@ body {
   color: rgb(var(--theme-style-text));
   font-size: 1rem;
   line-height: 1.6;
-  font-family: var(--font-regular);
+  font-family: var(--font-ui);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* transition: background-color var(--layout-timing-extra-fast); */
 }
 
 html.is-background-color-by-theme,

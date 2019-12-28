@@ -123,6 +123,7 @@
   flex-direction: column;
   z-index: 3;
   overflow: hidden;
+  text-decoration: none;
   user-select: none;
   transition: background-color var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
 }
@@ -563,8 +564,7 @@
 }
 
 .link-display-letter {
-  padding-top: 8%;
-  font-family: var(--font-fjalla);
+  font-family: var(--font-display);
   color: rgb(var(--theme-accent));
   line-height: 1;
   white-space: nowrap;
@@ -602,7 +602,7 @@
 .link-display-name {
   margin: 0;
   font-size: var(--link-item-display-name-size);
-  font-family: var(--font-regular);
+  font-family: var(--font-ui);
   color: rgb(var(--theme-color-12));
   display: none;
   transition: color var(--layout-timing-extra-fast);
@@ -873,7 +873,7 @@
 .link-url-text {
   margin: 0;
   font-size: 0.7em;
-  font-family: var(--font-regular);
+  font-family: var(--font-ui);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -1,7 +1,9 @@
 var theme = (function() {
 
-  var mod = {};
+  var _timerFontDisplay = null;
+  var _timerFontUi = null;
 
+  var mod = {};
 
   mod.style = {
     light: function() {
@@ -109,8 +111,18 @@ var theme = (function() {
     set: function(name) {
       helper.setObject({
         object: state.get.current(),
-        path: "theme.accent.current",
-        newValue: mod.preset.all[name].accent
+        path: "theme.style",
+        newValue: mod.preset.all[name].style
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.font.display",
+        newValue: mod.preset.all[name].font.display
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.font.ui",
+        newValue: mod.preset.all[name].font.ui
       });
       helper.setObject({
         object: state.get.current(),
@@ -119,8 +131,8 @@ var theme = (function() {
       });
       helper.setObject({
         object: state.get.current(),
-        path: "theme.style",
-        newValue: mod.preset.all[name].style
+        path: "theme.accent.current",
+        newValue: mod.preset.all[name].accent
       });
       helper.setObject({
         object: state.get.current(),
@@ -130,6 +142,10 @@ var theme = (function() {
     },
     all: {
       nighttab: {
+        font: {
+          display: "",
+          ui: ""
+        },
         color: {
           hsl: {
             h: 222,
@@ -151,16 +167,20 @@ var theme = (function() {
         style: "dark"
       },
       midnight: {
+        font: {
+          display: "Gugi",
+          ui: "Lato"
+        },
         color: {
           hsl: {
-            h: 215,
-            s: 41,
-            l: 48
+            h: 222,
+            s: 42,
+            l: 46
           },
           rgb: {
-            r: 72,
-            g: 114,
-            b: 172
+            r: 68,
+            g: 98,
+            b: 168
           }
         },
         accent: {
@@ -172,6 +192,10 @@ var theme = (function() {
         style: "dark"
       },
       bluegum: {
+        font: {
+          display: "Alatsi",
+          ui: "Source Sans Pro"
+        },
         color: {
           hsl: {
             h: 217,
@@ -193,6 +217,10 @@ var theme = (function() {
         style: "dark"
       },
       sharpmint: {
+        font: {
+          display: "Unica One",
+          ui: "Montserrat"
+        },
         color: {
           hsl: {
             h: 157,
@@ -214,6 +242,10 @@ var theme = (function() {
         style: "dark"
       },
       snowblue: {
+        font: {
+          display: "Righteous",
+          ui: "Raleway"
+        },
         color: {
           hsl: {
             h: 217,
@@ -235,6 +267,10 @@ var theme = (function() {
         style: "light"
       },
       chocorum: {
+        font: {
+          display: "Odibee Sans",
+          ui: "Roboto Condensed"
+        },
         color: {
           hsl: {
             h: 25,
@@ -256,6 +292,10 @@ var theme = (function() {
         style: "dark"
       },
       sunburst: {
+        font: {
+          display: "Fredoka One",
+          ui: "Muli"
+        },
         color: {
           hsl: {
             h: 54,
@@ -277,6 +317,10 @@ var theme = (function() {
         style: "light"
       },
       coralgreen: {
+        font: {
+          display: "Poiret One",
+          ui: "Lato"
+        },
         color: {
           hsl: {
             h: 184,
@@ -298,6 +342,10 @@ var theme = (function() {
         style: "dark"
       },
       purplegem: {
+        font: {
+          display: "Calistoga",
+          ui: "Source Sans Pro"
+        },
         color: {
           hsl: {
             h: 301,
@@ -319,6 +367,10 @@ var theme = (function() {
         style: "light"
       },
       hotpepper: {
+        font: {
+          display: "Big Shoulders Display",
+          ui: "Montserrat"
+        },
         color: {
           hsl: {
             h: 0,
@@ -340,6 +392,10 @@ var theme = (function() {
         style: "dark"
       },
       steelgrey: {
+        font: {
+          display: "Abel",
+          ui: "Raleway"
+        },
         color: {
           hsl: {
             h: 214,
@@ -361,6 +417,10 @@ var theme = (function() {
         style: "light"
       },
       outrun: {
+        font: {
+          display: "Major Mono Display",
+          ui: "Roboto Condensed"
+        },
         color: {
           hsl: {
             h: 227,
@@ -382,6 +442,10 @@ var theme = (function() {
         style: "dark"
       },
       pumpkin: {
+        font: {
+          display: "Girassol",
+          ui: "Muli"
+        },
         color: {
           hsl: {
             h: 198,
@@ -403,6 +467,10 @@ var theme = (function() {
         style: "dark"
       },
       whoosh: {
+        font: {
+          display: "Monoton",
+          ui: "Lato"
+        },
         color: {
           hsl: {
             h: 307,
@@ -537,6 +605,75 @@ var theme = (function() {
     }
   };
 
+  render.font = {
+    delay: {
+      display: function() {
+        clearTimeout(_timerFontDisplay);
+        _timerFontDisplay = setTimeout(render.font.display, 300);
+      },
+      ui: function() {
+        clearTimeout(_timerFontUi);
+        _timerFontUi = setTimeout(render.font.ui, 300);
+      }
+    },
+    display: function() {
+      var name = state.get.current().theme.font.display.trim().replace(/\s+/g, "+");
+      var html = helper.e("html");
+      var link = helper.e(".theme-font-display-link");
+      if (link) {
+        link.remove();
+      };
+      html.style.removeProperty("--font-display");
+      if (name != "") {
+        var head = helper.e("head");
+        var link = helper.makeNode({
+          tag: "link",
+          attr: [{
+            key: "class",
+            value: "theme-font-display-link"
+          }, {
+            key: "href",
+            value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+          }, {
+            key: "rel",
+            value: "stylesheet"
+          }]
+        });
+        head.appendChild(link);
+        html.style.setProperty("--font-display", "\"" + state.get.current().theme.font.display.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Fjalla One Regular\", sans-serif");
+      };
+    },
+    ui: function() {
+      var name = state.get.current().theme.font.ui.trim().replace(/\s+/g, "+");
+      var html = helper.e("html");
+      var link = helper.eA(".theme-font-ui-link");
+      if (link.length > 0) {
+        link.forEach(function(arrayItem, item) {
+          arrayItem.remove();
+        });
+        html.style.removeProperty("--font-ui");
+      };
+      if (name != "") {
+        var head = helper.e("head");
+        var link = helper.makeNode({
+          tag: "link",
+          attr: [{
+            key: "class",
+            value: "theme-font-ui-link"
+          }, {
+            key: "href",
+            value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+          }, {
+            key: "rel",
+            value: "stylesheet"
+          }]
+        });
+        head.appendChild(link);
+        html.style.setProperty("--font-ui", "\"" + state.get.current().theme.font.ui.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Open Sans Regular\", sans-serif");
+      };
+    }
+  };
+
   render.preset = function() {
     var html = helper.e("html");
     for (var key in mod.preset.all) {
@@ -617,10 +754,29 @@ var theme = (function() {
     mod.preset.set(name);
   };
 
+  var font = {
+    delay: {
+      display: function() {
+        render.font.delay.display();
+      },
+      ui: function() {
+        render.font.delay.ui();
+      }
+    },
+    display: function() {
+      render.font.display();
+    },
+    ui: function() {
+      render.font.ui();
+    }
+  };
+
   var init = function() {
     style.check();
     accent.random();
     mod.accent.random();
+    render.font.display();
+    render.font.ui();
     render.color.shade();
     render.accent.color();
     render.radius();
@@ -634,6 +790,7 @@ var theme = (function() {
     render: render,
     style: style,
     accent: accent,
+    font: font,
     preset: preset
   };
 

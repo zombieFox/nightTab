@@ -15,7 +15,7 @@ var edge = (function() {
       }, 100);
     },
     remove: function() {
-      window.clearTimeout(_tick);
+      clearTimeout(_tick);
       _tick = null;
     }
   };

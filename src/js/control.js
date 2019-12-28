@@ -2535,6 +2535,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("nighttab");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2548,6 +2550,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("midnight");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2561,6 +2565,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("bluegum");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2574,6 +2580,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("sharpmint");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2587,6 +2595,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("snowblue");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2600,6 +2610,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("chocorum");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2613,6 +2625,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("sunburst");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2626,6 +2640,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("coralgreen");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2639,6 +2655,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("purplegem");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2652,6 +2670,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("hotpepper");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2665,6 +2685,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("steelgrey");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2678,6 +2700,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("outrun");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2691,6 +2715,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("pumpkin");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2704,6 +2730,8 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("whoosh");
+      theme.render.font.display();
+      theme.render.font.ui();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2950,6 +2978,20 @@ var control = (function() {
       theme.render.accent.input.picker();
       theme.render.accent.input.hex();
       link.groupAndItems();
+    }
+  }, {
+    element: helper.e(".control-theme-font-display"),
+    path: "theme.font.display",
+    type: "text",
+    func: function() {
+      theme.font.delay.display();
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui"),
+    path: "theme.font.ui",
+    type: "text",
+    func: function() {
+      theme.font.delay.ui();
     }
   }, {
     element: helper.e(".control-background-color-by-theme"),

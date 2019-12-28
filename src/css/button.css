@@ -8,7 +8,7 @@ input[type="submit"] {
   margin: 0 0 1em 0;
   color: rgb(var(--button-text));
   font-size: 1em;
-  font-family: var(--font-regular);
+  font-family: var(--font-ui);
   min-height: 2.5em;
   line-height: 1;
   border: 0;
@@ -149,6 +149,10 @@ button [class*=" icon-"],
 .button-block {
   display: flex;
   width: 100%;
+}
+
+.button-slim {
+  padding: 0;
 }
 
 button [class^="button-"],
