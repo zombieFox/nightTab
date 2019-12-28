@@ -498,14 +498,14 @@ var theme = (function() {
         },
         color: {
           hsl: {
-            h: 209,
-            s: 50,
-            l: 45
+            h: 193,
+            s: 47,
+            l: 43
           },
           rgb: {
             r: 58,
-            g: 118,
-            b: 175
+            g: 140,
+            b: 163
           }
         },
         accent: {
