@@ -17,27 +17,29 @@ h1 {
 
 h2 {
   font-size: 1.2em;
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
 }
 
 h3 {
   font-size: 1.1em;
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
 }
 
 h4 {
   font-size: 1em;
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
 }
 
 h5 {
   font-size: 1em;
-  font-family: var(--font-ui-bold);
+  font-family: var(--font-ui);
+  font-weight: bold;
 }
 
 h6 {
   font-size: 0.75em;
-  font-family: var(--font-ui-bold);
+  font-family: var(--font-ui);
+  font-weight: bold;
 }
 
 p {
@@ -66,7 +68,8 @@ b,
 caption,
 strong {
   color: rgb(var(--theme-style-text));
-  font-family: var(--font-ui-bold);
+  font-family: var(--font-ui);
+  font-weight: bold;
 }
 
 a {
@@ -151,7 +154,8 @@ table thead tr th {
   padding: 0.5em;
   margin: 0;
   text-align: left;
-  font-family: var(--font-ui-bold);
+  font-family: var(--font-ui);
+  font-weight: bold;
   box-sizing: border-box;
 }
 

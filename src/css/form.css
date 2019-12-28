@@ -32,7 +32,7 @@ select {
   margin: 0 0 1em 0;
   color: rgb(var(--form-label));
   font-size: 1em;
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
   line-height: 2;
   min-height: 2.5em;
   min-width: 0;
@@ -94,7 +94,7 @@ textarea {
   color: rgb(var(--form-input-text));
   font-size: 1em;
   line-height: 1.6;
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
   height: 10em;
   min-height: 2.5em;
   min-width: 0;
@@ -172,7 +172,7 @@ input[type="text"] {
   margin: 0 0 1em 0;
   color: rgb(var(--form-input-text));
   font-size: 1em;
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
   line-height: 1.6em;
   height: 2.5em;
   min-width: 0;
@@ -329,7 +329,7 @@ input[type="radio"]+label {
   padding: 0;
   margin: 0;
   font-size: 1em;
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -600,7 +600,7 @@ input[type="range"] {
   margin: 0;
   color: rgb(var(--theme-style-text));
   font-size: 1em;
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
   display: block;
   height: 2.5em;
   width: 100%;
@@ -857,7 +857,7 @@ input[type="range"]:disabled::-moz-range-progress {
   margin: 0;
   color: rgb(var(--button-text));
   font-size: 1em;
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
   min-height: 2.5em;
   line-height: 1;
   border: 0;
@@ -1444,7 +1444,7 @@ input[type="range"]:disabled::-moz-range-progress {
   color: rgb(var(--form-input-text));
   min-width: 4em;
   font-size: 1em;
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
   display: flex;
   align-items: center;
   justify-content: center;

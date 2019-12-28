@@ -601,7 +601,7 @@
 .link-display-name {
   margin: 0;
   font-size: var(--link-item-display-name-size);
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
   color: rgb(var(--theme-color-12));
   display: none;
   transition: color var(--layout-timing-extra-fast);
@@ -872,7 +872,7 @@
 .link-url-text {
   margin: 0;
   font-size: 0.7em;
-  font-family: var(--font-ui-regular);
+  font-family: var(--font-ui);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

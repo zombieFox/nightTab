@@ -266,9 +266,7 @@
                                                         inset 0 0 0 calc(var(--layout-line-width) * 8) rgba(var(--theme-accent), 0.1);
   /* font */
   --font-display:                                       "Fjalla One Regular", sans-serif;
-  --font-ui-light:                                      "Open Sans Light", sans-serif;
-  --font-ui-regular:                                    "Open Sans Regular", sans-serif;
-  --font-ui-bold:                                       "Open Sans Bold", sans-serif;
+  --font-ui:                                            "Open Sans Regular", sans-serif;
   /* z index */
   --z-index-background:                                 1000;
   --z-index-link:                                       2000;

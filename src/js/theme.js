@@ -652,9 +652,7 @@ var theme = (function() {
         link.forEach(function(arrayItem, item) {
           arrayItem.remove();
         });
-        html.style.removeProperty("--font-ui-light");
-        html.style.removeProperty("--font-ui-regular");
-        html.style.removeProperty("--font-ui-bold");
+        html.style.removeProperty("--font-ui");
       };
       if (name != "") {
         var head = helper.e("head");
@@ -672,12 +670,7 @@ var theme = (function() {
           }]
         });
         head.appendChild(link);
-        html.style.setProperty("--font-ui-light", "\"" + state.get.current().theme.font.ui.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Open Sans Light\", sans-serif");
-        html.style.setProperty("--font-ui-regular", "\"" + state.get.current().theme.font.ui.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Open Sans Regular\", sans-serif");
-        html.style.setProperty("--font-ui-bold", "\"" + state.get.current().theme.font.ui.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Open Sans Bold\", sans-serif");
-        // html.style.setProperty("--font-ui-light", "\"" + state.get.current().theme.font.ui.trim().replace(/\s\s+/g, " ") + " Light\"" + ", \"Open Sans Light\", sans-serif");
-        // html.style.setProperty("--font-ui-regular", "\"" + state.get.current().theme.font.ui.trim().replace(/\s\s+/g, " ") + " Regular\"" + ", \"Open Sans Regular\", sans-serif");
-        // html.style.setProperty("--font-ui-bold", "\"" + state.get.current().theme.font.ui.trim().replace(/\s\s+/g, " ") + " Bold\"" + ", \"Open Sans Bold\", sans-serif");
+        html.style.setProperty("--font-ui", "\"" + state.get.current().theme.font.ui.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Open Sans Regular\", sans-serif");
       };
     }
   };
