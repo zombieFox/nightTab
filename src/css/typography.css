@@ -72,6 +72,10 @@ strong {
   font-weight: bold;
 }
 
+i {
+  font-style: italic;
+}
+
 a {
   color: rgb(var(--theme-color-16));
   text-decoration: none;

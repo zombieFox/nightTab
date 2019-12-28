@@ -218,7 +218,7 @@ var theme = (function() {
       },
       sharpmint: {
         font: {
-          display: "Patua One",
+          display: "Unica One",
           ui: "Montserrat"
         },
         color: {
@@ -418,7 +418,7 @@ var theme = (function() {
       },
       outrun: {
         font: {
-          display: "Unica One",
+          display: "Major Mono Display",
           ui: "Roboto Condensed"
         },
         color: {
@@ -619,6 +619,11 @@ var theme = (function() {
     display: function() {
       var name = state.get.current().theme.font.display.trim().replace(/\s\s+/g, "+");
       var html = helper.e("html");
+      var link = helper.e(".theme-font-display-link");
+      if (link) {
+        link.remove();
+      };
+      html.style.removeProperty("--font-display");
       if (name != "") {
         var head = helper.e("head");
         var link = helper.makeNode({
@@ -628,7 +633,7 @@ var theme = (function() {
             value: "theme-font-display-link"
           }, {
             key: "href",
-            value: "https://fonts.googleapis.com/css?family=" + name + "&display=swap"
+            value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
           }, {
             key: "rel",
             value: "stylesheet"
@@ -636,12 +641,6 @@ var theme = (function() {
         });
         head.appendChild(link);
         html.style.setProperty("--font-display", "\"" + state.get.current().theme.font.display.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Fjalla One Regular\", sans-serif");
-      } else {
-        var link = helper.e(".theme-font-display-link");
-        if (link) {
-          link.remove();
-        };
-        html.style.removeProperty("--font-display");
       };
     },
     ui: function() {
@@ -663,7 +662,7 @@ var theme = (function() {
             value: "theme-font-ui-link"
           }, {
             key: "href",
-            value: "https://fonts.googleapis.com/css?family=" + name + "&display=swap"
+            value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
           }, {
             key: "rel",
             value: "stylesheet"
