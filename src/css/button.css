@@ -151,10 +151,6 @@ button [class*=" icon-"],
   width: 100%;
 }
 
-.button-slim {
-  padding: 0;
-}
-
 button [class^="button-"],
 button [class*=" button-"],
 .button [class^="button-"],

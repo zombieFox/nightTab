@@ -130,12 +130,11 @@
   .menu {
     width: 70vw;
     height: 100%;
-    overflow-y: inherit;
-    max-height: inherit;
+    max-height: initial;
   }
 
   .menu-area {
-    overflow-y: inherit;
+    overflow-y: initial;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
