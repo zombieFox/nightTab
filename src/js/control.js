@@ -2741,6 +2741,21 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: helper.e(".control-theme-preset-eldergold"),
+    type: "button",
+    func: function() {
+      theme.preset("eldergold");
+      theme.render.font.display();
+      theme.render.font.ui();
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      link.groupAndItems();
+      render.update();
+      render.class();
+    }
+  }, {
     element: helper.e(".control-theme-style-dark"),
     path: "theme.style",
     type: "radio",

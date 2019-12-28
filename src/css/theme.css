@@ -367,3 +367,23 @@
 .theme-preset-accent-whoosh {
   background-color: rgb(var(--theme-preset-accent-whoosh))
 }
+
+.theme-preset-background-eldergold-01 {
+  background-color: rgb(var(--theme-preset-background-eldergold-01))
+}
+
+.theme-preset-background-eldergold-02 {
+  background-color: rgb(var(--theme-preset-background-eldergold-02))
+}
+
+.theme-preset-background-eldergold-03 {
+  background-color: rgb(var(--theme-preset-background-eldergold-03))
+}
+
+.theme-preset-background-eldergold-04 {
+  background-color: rgb(var(--theme-preset-background-eldergold-04))
+}
+
+.theme-preset-accent-eldergold {
+  background-color: rgb(var(--theme-preset-accent-eldergold))
+}

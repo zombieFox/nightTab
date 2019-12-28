@@ -490,6 +490,31 @@ var theme = (function() {
         },
         radius: 1.2,
         style: "dark"
+      },
+      eldergold: {
+        font: {
+          display: "Life Savers",
+          ui: "Quicksand"
+        },
+        color: {
+          hsl: {
+            h: 209,
+            s: 50,
+            l: 45
+          },
+          rgb: {
+            r: 58,
+            g: 118,
+            b: 175
+          }
+        },
+        accent: {
+          r: 255,
+          g: 160,
+          b: 0
+        },
+        radius: 0.5,
+        style: "dark"
       }
     }
   };
