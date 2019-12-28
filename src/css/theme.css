@@ -26,7 +26,8 @@
 .theme-preset-background-02,
 .theme-preset-background-03,
 .theme-preset-background-04,
-.theme-preset-accent {
+.theme-preset-accent,
+.theme-preset-font {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -60,8 +61,21 @@
 
 .theme-preset-accent {
   z-index: 5;
-  clip-path: polygon(100% 50%, 100% 100%, 50% 100%);
+  clip-path: polygon(100% 70%, 100% 100%, 70% 100%);
   transition-delay: var(--layout-duration-02);
+}
+
+.theme-preset-font {
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-preset-font-display {
+  font-size: 2em;
+  margin-bottom: 0.25em;
 }
 
 .theme-preset-button:focus .theme-preset-background-02,
@@ -84,306 +98,456 @@
 
 .theme-preset-button:focus .theme-preset-accent,
 .theme-preset-button:hover .theme-preset-accent {
-  clip-path: polygon(100% 30%, 100% 100%, 30% 100%);
+  clip-path: polygon(100% 50%, 100% 100%, 50% 100%);
   transition-delay: var(--layout-duration-01);
 }
 
 .theme-preset-background-nighttab-01 {
-  background-color: rgb(var(--theme-preset-background-nighttab-01))
+  background-color: rgb(var(--theme-preset-background-nighttab-01));
 }
 
 .theme-preset-background-nighttab-02 {
-  background-color: rgb(var(--theme-preset-background-nighttab-02))
+  background-color: rgb(var(--theme-preset-background-nighttab-02));
 }
 
 .theme-preset-background-nighttab-03 {
-  background-color: rgb(var(--theme-preset-background-nighttab-03))
+  background-color: rgb(var(--theme-preset-background-nighttab-03));
 }
 
 .theme-preset-background-nighttab-04 {
-  background-color: rgb(var(--theme-preset-background-nighttab-04))
+  background-color: rgb(var(--theme-preset-background-nighttab-04));
 }
 
 .theme-preset-accent-nighttab {
-  background-color: rgb(var(--theme-preset-accent-nighttab))
+  background-color: rgb(var(--theme-preset-accent-nighttab));
+}
+
+.theme-preset-font-display-nighttab {
+  font-family: var(--theme-preset-font-display-nighttab);
+  color: rgb(var(--theme-preset-accent-nighttab));
+}
+
+.theme-preset-font-ui-nighttab {
+  font-family: var(--theme-preset-font-ui-nighttab);
+  color: rgb(var(--theme-preset-font-color-nighttab));
 }
 
 .theme-preset-background-midnight-01 {
-  background-color: rgb(var(--theme-preset-background-midnight-01))
+  background-color: rgb(var(--theme-preset-background-midnight-01));
 }
 
 .theme-preset-background-midnight-02 {
-  background-color: rgb(var(--theme-preset-background-midnight-02))
+  background-color: rgb(var(--theme-preset-background-midnight-02));
 }
 
 .theme-preset-background-midnight-03 {
-  background-color: rgb(var(--theme-preset-background-midnight-03))
+  background-color: rgb(var(--theme-preset-background-midnight-03));
 }
 
 .theme-preset-background-midnight-04 {
-  background-color: rgb(var(--theme-preset-background-midnight-04))
+  background-color: rgb(var(--theme-preset-background-midnight-04));
 }
 
 .theme-preset-accent-midnight {
-  background-color: rgb(var(--theme-preset-accent-midnight))
+  background-color: rgb(var(--theme-preset-accent-midnight));
+}
+
+.theme-preset-font-display-midnight {
+  font-family: var(--theme-preset-font-display-midnight);
+  color: rgb(var(--theme-preset-accent-midnight));
+}
+
+.theme-preset-font-ui-midnight {
+  font-family: var(--theme-preset-font-ui-midnight);
+  color: rgb(var(--theme-preset-font-color-midnight));
 }
 
 .theme-preset-background-bluegum-01 {
-  background-color: rgb(var(--theme-preset-background-bluegum-01))
+  background-color: rgb(var(--theme-preset-background-bluegum-01));
 }
 
 .theme-preset-background-bluegum-02 {
-  background-color: rgb(var(--theme-preset-background-bluegum-02))
+  background-color: rgb(var(--theme-preset-background-bluegum-02));
 }
 
 .theme-preset-background-bluegum-03 {
-  background-color: rgb(var(--theme-preset-background-bluegum-03))
+  background-color: rgb(var(--theme-preset-background-bluegum-03));
 }
 
 .theme-preset-background-bluegum-04 {
-  background-color: rgb(var(--theme-preset-background-bluegum-04))
+  background-color: rgb(var(--theme-preset-background-bluegum-04));
 }
 
 .theme-preset-accent-bluegum {
-  background-color: rgb(var(--theme-preset-accent-bluegum))
+  background-color: rgb(var(--theme-preset-accent-bluegum));
+}
+
+.theme-preset-font-display-bluegum {
+  font-family: var(--theme-preset-font-display-bluegum);
+  color: rgb(var(--theme-preset-accent-bluegum));
+}
+
+.theme-preset-font-ui-bluegum {
+  font-family: var(--theme-preset-font-ui-bluegum);
+  color: rgb(var(--theme-preset-font-color-bluegum));
 }
 
 .theme-preset-background-sharpmint-01 {
-  background-color: rgb(var(--theme-preset-background-sharpmint-01))
+  background-color: rgb(var(--theme-preset-background-sharpmint-01));
 }
 
 .theme-preset-background-sharpmint-02 {
-  background-color: rgb(var(--theme-preset-background-sharpmint-02))
+  background-color: rgb(var(--theme-preset-background-sharpmint-02));
 }
 
 .theme-preset-background-sharpmint-03 {
-  background-color: rgb(var(--theme-preset-background-sharpmint-03))
+  background-color: rgb(var(--theme-preset-background-sharpmint-03));
 }
 
 .theme-preset-background-sharpmint-04 {
-  background-color: rgb(var(--theme-preset-background-sharpmint-04))
+  background-color: rgb(var(--theme-preset-background-sharpmint-04));
 }
 
 .theme-preset-accent-sharpmint {
-  background-color: rgb(var(--theme-preset-accent-sharpmint))
+  background-color: rgb(var(--theme-preset-accent-sharpmint));
+}
+
+.theme-preset-font-display-sharpmint {
+  font-family: var(--theme-preset-font-display-sharpmint);
+  color: rgb(var(--theme-preset-accent-sharpmint));
+}
+
+.theme-preset-font-ui-sharpmint {
+  font-family: var(--theme-preset-font-ui-sharpmint);
+  color: rgb(var(--theme-preset-font-color-sharpmint));
 }
 
 .theme-preset-background-snowblue-01 {
-  background-color: rgb(var(--theme-preset-background-snowblue-01))
+  background-color: rgb(var(--theme-preset-background-snowblue-01));
 }
 
 .theme-preset-background-snowblue-02 {
-  background-color: rgb(var(--theme-preset-background-snowblue-02))
+  background-color: rgb(var(--theme-preset-background-snowblue-02));
 }
 
 .theme-preset-background-snowblue-03 {
-  background-color: rgb(var(--theme-preset-background-snowblue-03))
+  background-color: rgb(var(--theme-preset-background-snowblue-03));
 }
 
 .theme-preset-background-snowblue-04 {
-  background-color: rgb(var(--theme-preset-background-snowblue-04))
+  background-color: rgb(var(--theme-preset-background-snowblue-04));
 }
 
 .theme-preset-accent-snowblue {
-  background-color: rgb(var(--theme-preset-accent-snowblue))
+  background-color: rgb(var(--theme-preset-accent-snowblue));
+}
+
+.theme-preset-font-display-snowblue {
+  font-family: var(--theme-preset-font-display-snowblue);
+  color: rgb(var(--theme-preset-accent-snowblue));
+}
+
+.theme-preset-font-ui-snowblue {
+  font-family: var(--theme-preset-font-ui-snowblue);
+  color: rgb(var(--theme-preset-font-color-snowblue));
 }
 
 .theme-preset-background-chocorum-01 {
-  background-color: rgb(var(--theme-preset-background-chocorum-01))
+  background-color: rgb(var(--theme-preset-background-chocorum-01));
 }
 
 .theme-preset-background-chocorum-02 {
-  background-color: rgb(var(--theme-preset-background-chocorum-02))
+  background-color: rgb(var(--theme-preset-background-chocorum-02));
 }
 
 .theme-preset-background-chocorum-03 {
-  background-color: rgb(var(--theme-preset-background-chocorum-03))
+  background-color: rgb(var(--theme-preset-background-chocorum-03));
 }
 
 .theme-preset-background-chocorum-04 {
-  background-color: rgb(var(--theme-preset-background-chocorum-04))
+  background-color: rgb(var(--theme-preset-background-chocorum-04));
 }
 
 .theme-preset-accent-chocorum {
-  background-color: rgb(var(--theme-preset-accent-chocorum))
+  background-color: rgb(var(--theme-preset-accent-chocorum));
+}
+
+.theme-preset-font-display-chocorum {
+  font-family: var(--theme-preset-font-display-chocorum);
+  color: rgb(var(--theme-preset-accent-chocorum));
+}
+
+.theme-preset-font-ui-chocorum {
+  font-family: var(--theme-preset-font-ui-chocorum);
+  color: rgb(var(--theme-preset-font-color-chocorum));
 }
 
 .theme-preset-background-sunburst-01 {
-  background-color: rgb(var(--theme-preset-background-sunburst-01))
+  background-color: rgb(var(--theme-preset-background-sunburst-01));
 }
 
 .theme-preset-background-sunburst-02 {
-  background-color: rgb(var(--theme-preset-background-sunburst-02))
+  background-color: rgb(var(--theme-preset-background-sunburst-02));
 }
 
 .theme-preset-background-sunburst-03 {
-  background-color: rgb(var(--theme-preset-background-sunburst-03))
+  background-color: rgb(var(--theme-preset-background-sunburst-03));
 }
 
 .theme-preset-background-sunburst-04 {
-  background-color: rgb(var(--theme-preset-background-sunburst-04))
+  background-color: rgb(var(--theme-preset-background-sunburst-04));
 }
 
 .theme-preset-accent-sunburst {
-  background-color: rgb(var(--theme-preset-accent-sunburst))
+  background-color: rgb(var(--theme-preset-accent-sunburst));
+}
+
+.theme-preset-font-display-sunburst {
+  font-family: var(--theme-preset-font-display-sunburst);
+  color: rgb(var(--theme-preset-accent-sunburst));
+}
+
+.theme-preset-font-ui-sunburst {
+  font-family: var(--theme-preset-font-ui-sunburst);
+  color: rgb(var(--theme-preset-font-color-sunburst));
 }
 
 .theme-preset-background-coralgreen-01 {
-  background-color: rgb(var(--theme-preset-background-coralgreen-01))
+  background-color: rgb(var(--theme-preset-background-coralgreen-01));
 }
 
 .theme-preset-background-coralgreen-02 {
-  background-color: rgb(var(--theme-preset-background-coralgreen-02))
+  background-color: rgb(var(--theme-preset-background-coralgreen-02));
 }
 
 .theme-preset-background-coralgreen-03 {
-  background-color: rgb(var(--theme-preset-background-coralgreen-03))
+  background-color: rgb(var(--theme-preset-background-coralgreen-03));
 }
 
 .theme-preset-background-coralgreen-04 {
-  background-color: rgb(var(--theme-preset-background-coralgreen-04))
+  background-color: rgb(var(--theme-preset-background-coralgreen-04));
 }
 
 .theme-preset-accent-coralgreen {
-  background-color: rgb(var(--theme-preset-accent-coralgreen))
+  background-color: rgb(var(--theme-preset-accent-coralgreen));
+}
+
+.theme-preset-font-display-coralgreen {
+  font-family: var(--theme-preset-font-display-coralgreen);
+  color: rgb(var(--theme-preset-accent-coralgreen));
+}
+
+.theme-preset-font-ui-coralgreen {
+  font-family: var(--theme-preset-font-ui-coralgreen);
+  color: rgb(var(--theme-preset-font-color-coralgreen));
 }
 
 .theme-preset-background-purplegem-01 {
-  background-color: rgb(var(--theme-preset-background-purplegem-01))
+  background-color: rgb(var(--theme-preset-background-purplegem-01));
 }
 
 .theme-preset-background-purplegem-02 {
-  background-color: rgb(var(--theme-preset-background-purplegem-02))
+  background-color: rgb(var(--theme-preset-background-purplegem-02));
 }
 
 .theme-preset-background-purplegem-03 {
-  background-color: rgb(var(--theme-preset-background-purplegem-03))
+  background-color: rgb(var(--theme-preset-background-purplegem-03));
 }
 
 .theme-preset-background-purplegem-04 {
-  background-color: rgb(var(--theme-preset-background-purplegem-04))
+  background-color: rgb(var(--theme-preset-background-purplegem-04));
 }
 
 .theme-preset-accent-purplegem {
-  background-color: rgb(var(--theme-preset-accent-purplegem))
+  background-color: rgb(var(--theme-preset-accent-purplegem));
+}
+
+.theme-preset-font-display-purplegem {
+  font-family: var(--theme-preset-font-display-purplegem);
+  color: rgb(var(--theme-preset-accent-purplegem));
+}
+
+.theme-preset-font-ui-purplegem {
+  font-family: var(--theme-preset-font-ui-purplegem);
+  color: rgb(var(--theme-preset-font-color-purplegem));
 }
 
 .theme-preset-background-hotpepper-01 {
-  background-color: rgb(var(--theme-preset-background-hotpepper-01))
+  background-color: rgb(var(--theme-preset-background-hotpepper-01));
 }
 
 .theme-preset-background-hotpepper-02 {
-  background-color: rgb(var(--theme-preset-background-hotpepper-02))
+  background-color: rgb(var(--theme-preset-background-hotpepper-02));
 }
 
 .theme-preset-background-hotpepper-03 {
-  background-color: rgb(var(--theme-preset-background-hotpepper-03))
+  background-color: rgb(var(--theme-preset-background-hotpepper-03));
 }
 
 .theme-preset-background-hotpepper-04 {
-  background-color: rgb(var(--theme-preset-background-hotpepper-04))
+  background-color: rgb(var(--theme-preset-background-hotpepper-04));
 }
 
 .theme-preset-accent-hotpepper {
-  background-color: rgb(var(--theme-preset-accent-hotpepper))
+  background-color: rgb(var(--theme-preset-accent-hotpepper));
+}
+
+.theme-preset-font-display-hotpepper {
+  font-family: var(--theme-preset-font-display-hotpepper);
+  color: rgb(var(--theme-preset-accent-hotpepper));
+}
+
+.theme-preset-font-ui-hotpepper {
+  font-family: var(--theme-preset-font-ui-hotpepper);
+  color: rgb(var(--theme-preset-font-color-hotpepper));
 }
 
 .theme-preset-background-steelgrey-01 {
-  background-color: rgb(var(--theme-preset-background-steelgrey-01))
+  background-color: rgb(var(--theme-preset-background-steelgrey-01));
 }
 
 .theme-preset-background-steelgrey-02 {
-  background-color: rgb(var(--theme-preset-background-steelgrey-02))
+  background-color: rgb(var(--theme-preset-background-steelgrey-02));
 }
 
 .theme-preset-background-steelgrey-03 {
-  background-color: rgb(var(--theme-preset-background-steelgrey-03))
+  background-color: rgb(var(--theme-preset-background-steelgrey-03));
 }
 
 .theme-preset-background-steelgrey-04 {
-  background-color: rgb(var(--theme-preset-background-steelgrey-04))
+  background-color: rgb(var(--theme-preset-background-steelgrey-04));
 }
 
 .theme-preset-accent-steelgrey {
-  background-color: rgb(var(--theme-preset-accent-steelgrey))
+  background-color: rgb(var(--theme-preset-accent-steelgrey));
+}
+
+.theme-preset-font-display-steelgrey {
+  font-family: var(--theme-preset-font-display-steelgrey);
+  color: rgb(var(--theme-preset-accent-steelgrey));
+}
+
+.theme-preset-font-ui-steelgrey {
+  font-family: var(--theme-preset-font-ui-steelgrey);
+  color: rgb(var(--theme-preset-font-color-steelgrey));
 }
 
 .theme-preset-background-outrun-01 {
-  background-color: rgb(var(--theme-preset-background-outrun-01))
+  background-color: rgb(var(--theme-preset-background-outrun-01));
 }
 
 .theme-preset-background-outrun-02 {
-  background-color: rgb(var(--theme-preset-background-outrun-02))
+  background-color: rgb(var(--theme-preset-background-outrun-02));
 }
 
 .theme-preset-background-outrun-03 {
-  background-color: rgb(var(--theme-preset-background-outrun-03))
+  background-color: rgb(var(--theme-preset-background-outrun-03));
 }
 
 .theme-preset-background-outrun-04 {
-  background-color: rgb(var(--theme-preset-background-outrun-04))
+  background-color: rgb(var(--theme-preset-background-outrun-04));
 }
 
 .theme-preset-accent-outrun {
-  background-color: rgb(var(--theme-preset-accent-outrun))
+  background-color: rgb(var(--theme-preset-accent-outrun));
+}
+
+.theme-preset-font-display-outrun {
+  font-family: var(--theme-preset-font-display-outrun);
+  color: rgb(var(--theme-preset-accent-outrun));
+}
+
+.theme-preset-font-ui-outrun {
+  font-family: var(--theme-preset-font-ui-outrun);
+  color: rgb(var(--theme-preset-font-color-outrun));
 }
 
 .theme-preset-background-pumpkin-01 {
-  background-color: rgb(var(--theme-preset-background-pumpkin-01))
+  background-color: rgb(var(--theme-preset-background-pumpkin-01));
 }
 
 .theme-preset-background-pumpkin-02 {
-  background-color: rgb(var(--theme-preset-background-pumpkin-02))
+  background-color: rgb(var(--theme-preset-background-pumpkin-02));
 }
 
 .theme-preset-background-pumpkin-03 {
-  background-color: rgb(var(--theme-preset-background-pumpkin-03))
+  background-color: rgb(var(--theme-preset-background-pumpkin-03));
 }
 
 .theme-preset-background-pumpkin-04 {
-  background-color: rgb(var(--theme-preset-background-pumpkin-04))
+  background-color: rgb(var(--theme-preset-background-pumpkin-04));
 }
 
 .theme-preset-accent-pumpkin {
-  background-color: rgb(var(--theme-preset-accent-pumpkin))
+  background-color: rgb(var(--theme-preset-accent-pumpkin));
+}
+
+.theme-preset-font-display-pumpkin {
+  font-family: var(--theme-preset-font-display-pumpkin);
+  color: rgb(var(--theme-preset-accent-pumpkin));
+}
+
+.theme-preset-font-ui-pumpkin {
+  font-family: var(--theme-preset-font-ui-pumpkin);
+  color: rgb(var(--theme-preset-font-color-pumpkin));
 }
 
 .theme-preset-background-whoosh-01 {
-  background-color: rgb(var(--theme-preset-background-whoosh-01))
+  background-color: rgb(var(--theme-preset-background-whoosh-01));
 }
 
 .theme-preset-background-whoosh-02 {
-  background-color: rgb(var(--theme-preset-background-whoosh-02))
+  background-color: rgb(var(--theme-preset-background-whoosh-02));
 }
 
 .theme-preset-background-whoosh-03 {
-  background-color: rgb(var(--theme-preset-background-whoosh-03))
+  background-color: rgb(var(--theme-preset-background-whoosh-03));
 }
 
 .theme-preset-background-whoosh-04 {
-  background-color: rgb(var(--theme-preset-background-whoosh-04))
+  background-color: rgb(var(--theme-preset-background-whoosh-04));
 }
 
 .theme-preset-accent-whoosh {
-  background-color: rgb(var(--theme-preset-accent-whoosh))
+  background-color: rgb(var(--theme-preset-accent-whoosh));
+}
+
+.theme-preset-font-display-whoosh {
+  font-family: var(--theme-preset-font-display-whoosh);
+  color: rgb(var(--theme-preset-accent-whoosh));
+}
+
+.theme-preset-font-ui-whoosh {
+  font-family: var(--theme-preset-font-ui-whoosh);
+  color: rgb(var(--theme-preset-font-color-whoosh));
 }
 
 .theme-preset-background-eldergold-01 {
-  background-color: rgb(var(--theme-preset-background-eldergold-01))
+  background-color: rgb(var(--theme-preset-background-eldergold-01));
 }
 
 .theme-preset-background-eldergold-02 {
-  background-color: rgb(var(--theme-preset-background-eldergold-02))
+  background-color: rgb(var(--theme-preset-background-eldergold-02));
 }
 
 .theme-preset-background-eldergold-03 {
-  background-color: rgb(var(--theme-preset-background-eldergold-03))
+  background-color: rgb(var(--theme-preset-background-eldergold-03));
 }
 
 .theme-preset-background-eldergold-04 {
-  background-color: rgb(var(--theme-preset-background-eldergold-04))
+  background-color: rgb(var(--theme-preset-background-eldergold-04));
 }
 
 .theme-preset-accent-eldergold {
-  background-color: rgb(var(--theme-preset-accent-eldergold))
+  background-color: rgb(var(--theme-preset-accent-eldergold));
+}
+
+.theme-preset-font-display-eldergold {
+  font-family: var(--theme-preset-font-display-eldergold);
+  color: rgb(var(--theme-preset-accent-eldergold));
+}
+
+.theme-preset-font-ui-eldergold {
+  font-family: var(--theme-preset-font-ui-eldergold);
+  color: rgb(var(--theme-preset-font-color-eldergold));
 }

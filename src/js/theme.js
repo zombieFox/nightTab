@@ -740,6 +740,13 @@ var theme = (function() {
         renderPreview("--theme-preset-background-" + key + "-", i, rgb);
       };
       html.style.setProperty("--theme-preset-accent-" + key, preset.accent.r + ", " + preset.accent.g + ", " + preset.accent.b);
+      html.style.setProperty("--theme-preset-font-display-" + key, "\"" + preset.font.display + "\", sans-serif");
+      html.style.setProperty("--theme-preset-font-ui-" + key, "\"" + preset.font.ui + "\", sans-serif");
+      if (preset.style == "dark") {
+        html.style.setProperty("--theme-preset-font-color-" + key, "var(--theme-white)");
+      } else if (preset.style == "light") {
+        html.style.setProperty("--theme-preset-font-color-" + key, "var(--theme-black)");
+      };
     };
   };
 
