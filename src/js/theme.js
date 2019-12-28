@@ -705,7 +705,6 @@ var theme = (function() {
       var preset = mod.preset.all[key];
       var shadeSteps = 4;
       var lightShift = 12;
-      var hsl = helper.convertColor.rgb.hsl(preset.color.rgb);
       var renderPreview = function(name, index, rgb) {
         for (var key in rgb) {
           if (rgb[key] < 0) {
@@ -722,20 +721,23 @@ var theme = (function() {
         };
         html.style.setProperty(name + index, rgb.r + ", " + rgb.g + ", " + rgb.b);
       };
+      var rgb = preset.color.rgb;
+      var hsl = helper.convertColor.rgb.hsl(rgb);
       for (var i = 1; i <= shadeSteps; i++) {
-        var rgb;
-        if (preset.style == "dark") {
-          rgb = helper.convertColor.hsl.rgb({
-            h: hsl.h,
-            s: hsl.s,
-            l: hsl.l - (lightShift * i)
-          });
-        } else if (preset.style == "light") {
-          rgb = helper.convertColor.hsl.rgb({
-            h: hsl.h,
-            s: hsl.s,
-            l: hsl.l + (lightShift * i)
-          });
+        if (i > 1) {
+          if (preset.style == "dark") {
+            rgb = helper.convertColor.hsl.rgb({
+              h: hsl.h,
+              s: hsl.s,
+              l: hsl.l - (lightShift * (i - 1))
+            });
+          } else if (preset.style == "light") {
+            rgb = helper.convertColor.hsl.rgb({
+              h: hsl.h,
+              s: hsl.s,
+              l: hsl.l + (lightShift * (i - 1))
+            });
+          };
         };
         renderPreview("--theme-preset-background-" + key + "-", i, rgb);
       };

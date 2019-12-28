@@ -43,26 +43,25 @@
 
 .theme-preset-background-02 {
   z-index: 2;
-  clip-path: polygon(0 40%, 60% 100%, 100% 100%, 100% 0, 0 0);
+  clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 70%);
   transition-delay: 0s;
 }
 
 .theme-preset-background-03 {
   z-index: 3;
-  clip-path: polygon(0 0, 100% 100%, 100% 0);
+  clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%);
   transition-delay: 0s;
 }
 
 .theme-preset-background-04 {
   z-index: 4;
-  clip-path: polygon(40% 0, 100% 60%, 100% 0);
+  clip-path: polygon(100% 30%, 100% 100%, 30% 100%);
   transition-delay: 0s;
 }
 
 .theme-preset-accent {
+  clip-path: circle(20% at 100% 100%);
   z-index: 5;
-  clip-path: polygon(100% 70%, 100% 100%, 70% 100%);
-  transition-delay: var(--layout-duration-02);
 }
 
 .theme-preset-font {
@@ -71,35 +70,46 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: scale(1);
+  transition: transform var(--layout-timing-extra-fast);
 }
 
 .theme-preset-font-display {
-  font-size: 2em;
+  font-size: 1.6em;
   margin-bottom: 0.25em;
+}
+
+.theme-preset-font-ui {
+  font-size: 0.8em;
 }
 
 .theme-preset-button:focus .theme-preset-background-02,
 .theme-preset-button:hover .theme-preset-background-02 {
-  clip-path: polygon(0 20%, 80% 100%, 100% 100%, 100% 0, 0 0);
-  transition-delay: var(--layout-duration-04);
+  clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 60%);
+  transition-delay: var(--layout-duration-01);
 }
 
 .theme-preset-button:focus .theme-preset-background-03,
 .theme-preset-button:hover .theme-preset-background-03 {
-  clip-path: polygon(20% 0, 100% 80%, 100% 0);
-  transition-delay: var(--layout-duration-03);
+  clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 90%);
+  transition-delay: var(--layout-duration-02);
 }
 
 .theme-preset-button:focus .theme-preset-background-04,
 .theme-preset-button:hover .theme-preset-background-04 {
-  clip-path: polygon(60% 0, 100% 40%, 100% 0);
-  transition-delay: var(--layout-duration-02);
+  clip-path: polygon(100% 20%, 100% 100%, 20% 100%);
+  transition-delay: var(--layout-duration-03);
 }
 
 .theme-preset-button:focus .theme-preset-accent,
 .theme-preset-button:hover .theme-preset-accent {
-  clip-path: polygon(100% 50%, 100% 100%, 50% 100%);
-  transition-delay: var(--layout-duration-01);
+  clip-path: circle(30% at 100% 100%);
+  transition-delay: var(--layout-duration-04);
+}
+
+.theme-preset-button:hover .theme-preset-font,
+.theme-preset-button:focus .theme-preset-font {
+  transform: scale(1.1);
 }
 
 .theme-preset-background-nighttab-01 {
@@ -124,7 +134,7 @@
 
 .theme-preset-font-display-nighttab {
   font-family: var(--theme-preset-font-display-nighttab);
-  color: rgb(var(--theme-preset-accent-nighttab));
+  color: rgb(var(--theme-preset-font-color-nighttab));
 }
 
 .theme-preset-font-ui-nighttab {
@@ -154,7 +164,7 @@
 
 .theme-preset-font-display-midnight {
   font-family: var(--theme-preset-font-display-midnight);
-  color: rgb(var(--theme-preset-accent-midnight));
+  color: rgb(var(--theme-preset-font-color-midnight));
 }
 
 .theme-preset-font-ui-midnight {
@@ -184,7 +194,7 @@
 
 .theme-preset-font-display-bluegum {
   font-family: var(--theme-preset-font-display-bluegum);
-  color: rgb(var(--theme-preset-accent-bluegum));
+  color: rgb(var(--theme-preset-font-color-bluegum));
 }
 
 .theme-preset-font-ui-bluegum {
@@ -214,7 +224,7 @@
 
 .theme-preset-font-display-sharpmint {
   font-family: var(--theme-preset-font-display-sharpmint);
-  color: rgb(var(--theme-preset-accent-sharpmint));
+  color: rgb(var(--theme-preset-font-color-sharpmint));
 }
 
 .theme-preset-font-ui-sharpmint {
@@ -244,7 +254,7 @@
 
 .theme-preset-font-display-snowblue {
   font-family: var(--theme-preset-font-display-snowblue);
-  color: rgb(var(--theme-preset-accent-snowblue));
+  color: rgb(var(--theme-preset-font-color-snowblue));
 }
 
 .theme-preset-font-ui-snowblue {
@@ -274,7 +284,7 @@
 
 .theme-preset-font-display-chocorum {
   font-family: var(--theme-preset-font-display-chocorum);
-  color: rgb(var(--theme-preset-accent-chocorum));
+  color: rgb(var(--theme-preset-font-color-chocorum));
 }
 
 .theme-preset-font-ui-chocorum {
@@ -304,7 +314,7 @@
 
 .theme-preset-font-display-sunburst {
   font-family: var(--theme-preset-font-display-sunburst);
-  color: rgb(var(--theme-preset-accent-sunburst));
+  color: rgb(var(--theme-preset-font-color-sunburst));
 }
 
 .theme-preset-font-ui-sunburst {
@@ -334,7 +344,7 @@
 
 .theme-preset-font-display-coralgreen {
   font-family: var(--theme-preset-font-display-coralgreen);
-  color: rgb(var(--theme-preset-accent-coralgreen));
+  color: rgb(var(--theme-preset-font-color-coralgreen));
 }
 
 .theme-preset-font-ui-coralgreen {
@@ -364,7 +374,7 @@
 
 .theme-preset-font-display-purplegem {
   font-family: var(--theme-preset-font-display-purplegem);
-  color: rgb(var(--theme-preset-accent-purplegem));
+  color: rgb(var(--theme-preset-font-color-purplegem));
 }
 
 .theme-preset-font-ui-purplegem {
@@ -394,7 +404,7 @@
 
 .theme-preset-font-display-hotpepper {
   font-family: var(--theme-preset-font-display-hotpepper);
-  color: rgb(var(--theme-preset-accent-hotpepper));
+  color: rgb(var(--theme-preset-font-color-hotpepper));
 }
 
 .theme-preset-font-ui-hotpepper {
@@ -424,7 +434,7 @@
 
 .theme-preset-font-display-steelgrey {
   font-family: var(--theme-preset-font-display-steelgrey);
-  color: rgb(var(--theme-preset-accent-steelgrey));
+  color: rgb(var(--theme-preset-font-color-steelgrey));
 }
 
 .theme-preset-font-ui-steelgrey {
@@ -454,7 +464,7 @@
 
 .theme-preset-font-display-outrun {
   font-family: var(--theme-preset-font-display-outrun);
-  color: rgb(var(--theme-preset-accent-outrun));
+  color: rgb(var(--theme-preset-font-color-outrun));
 }
 
 .theme-preset-font-ui-outrun {
@@ -484,7 +494,7 @@
 
 .theme-preset-font-display-pumpkin {
   font-family: var(--theme-preset-font-display-pumpkin);
-  color: rgb(var(--theme-preset-accent-pumpkin));
+  color: rgb(var(--theme-preset-font-color-pumpkin));
 }
 
 .theme-preset-font-ui-pumpkin {
@@ -514,7 +524,7 @@
 
 .theme-preset-font-display-whoosh {
   font-family: var(--theme-preset-font-display-whoosh);
-  color: rgb(var(--theme-preset-accent-whoosh));
+  color: rgb(var(--theme-preset-font-color-whoosh));
 }
 
 .theme-preset-font-ui-whoosh {
@@ -544,7 +554,7 @@
 
 .theme-preset-font-display-eldergold {
   font-family: var(--theme-preset-font-display-eldergold);
-  color: rgb(var(--theme-preset-accent-eldergold));
+  color: rgb(var(--theme-preset-font-color-eldergold));
 }
 
 .theme-preset-font-ui-eldergold {
