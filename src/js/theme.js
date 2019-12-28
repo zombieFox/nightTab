@@ -168,19 +168,19 @@ var theme = (function() {
       },
       midnight: {
         font: {
-          display: "Montserrat",
+          display: "Gugi",
           ui: "Lato"
         },
         color: {
           hsl: {
-            h: 215,
-            s: 41,
-            l: 48
+            h: 222,
+            s: 42,
+            l: 46
           },
           rgb: {
-            r: 72,
-            g: 114,
-            b: 172
+            r: 68,
+            g: 98,
+            b: 168
           }
         },
         accent: {
@@ -193,7 +193,7 @@ var theme = (function() {
       },
       bluegum: {
         font: {
-          display: "Comfortaa",
+          display: "Alatsi",
           ui: "Source Sans Pro"
         },
         color: {
@@ -393,7 +393,7 @@ var theme = (function() {
       },
       steelgrey: {
         font: {
-          display: "Audiowide",
+          display: "Abel",
           ui: "Raleway"
         },
         color: {
@@ -617,7 +617,7 @@ var theme = (function() {
       }
     },
     display: function() {
-      var name = state.get.current().theme.font.display.trim().replace(/\s\s+/g, "+");
+      var name = state.get.current().theme.font.display.trim().replace(/\s+/g, "+");
       var html = helper.e("html");
       var link = helper.e(".theme-font-display-link");
       if (link) {
@@ -644,7 +644,7 @@ var theme = (function() {
       };
     },
     ui: function() {
-      var name = state.get.current().theme.font.ui.trim().replace(/\s\s+/g, "+");
+      var name = state.get.current().theme.font.ui.trim().replace(/\s+/g, "+");
       var html = helper.e("html");
       var link = helper.eA(".theme-font-ui-link");
       if (link.length > 0) {

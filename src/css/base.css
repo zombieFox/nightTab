@@ -18,7 +18,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /* transition: background-color var(--layout-timing-extra-fast); */
 }
 
 html.is-background-color-by-theme,

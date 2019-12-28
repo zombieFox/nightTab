@@ -123,6 +123,7 @@
   flex-direction: column;
   z-index: 3;
   overflow: hidden;
+  text-decoration: none;
   user-select: none;
   transition: background-color var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
 }

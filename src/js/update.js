@@ -722,6 +722,13 @@ var update = (function() {
         show: true
       };
       return data;
+    },
+    "4.6.0": function(data) {
+      data.state.theme.font = {
+        display: "",
+        ui: ""
+      };
+      return data;
     }
   };
 

@@ -78,7 +78,8 @@ i {
 
 a {
   color: rgb(var(--theme-color-16));
-  text-decoration: none;
+  text-decoration: underline;
+  transition: text-decoration var(--layout-timing-extra-fast);
 }
 
 a:link,
@@ -87,30 +88,18 @@ a:visited {
 }
 
 a:focus {
-  text-decoration: none;
+  text-decoration-color: rgb(var(--theme-style-text));
   outline: none;
 }
 
 a:hover {
   color: rgb(var(--theme-style-text));
-  text-decoration: underline;
+  text-decoration-color: rgb(var(--theme-accent));
 }
 
 a:active {
   color: rgb(var(--theme-style-text));
-}
-
-.a-underline {
-  padding-bottom: var(--layout-line-width);
-  border-bottom-width: calc(var(--layout-line-width) / 2);
-  border-bottom-style: solid;
-  border-bottom-color: rgb(var(--theme-color-06));
-  transition: color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast);
-}
-
-.a-underline:hover {
-  text-decoration: none;
-  border-bottom-color: rgb(var(--theme-accent));
+  text-decoration-color: rgb(var(--theme-style-text));
 }
 
 ol,
