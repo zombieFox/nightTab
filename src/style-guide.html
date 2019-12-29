@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="css/background.css">
   <link rel="stylesheet" href="css/group.css">
   <link rel="stylesheet" href="css/link.css">
+  <link rel="stylesheet" href="css/theme.css">
   <link rel="stylesheet" href="css/auto-suggest.css">
   <link rel="stylesheet" href="css/fontawesome.css">
   <!-- end-css-block -->
@@ -49,22 +50,28 @@
       <button class="button mb-0 style-guide-control theme-light" tabindex="1">Light</button>
     </div>
     <div class="input-wrap">
-      <label for="style-guide-control-theme-color">Accent Colour</label>
-      <input id="style-guide-control-theme-color" class="style-guide-control theme-color" class="form-group-item-half mb-0" type="color" value="#fa8200" tabindex="1">
+      <label for="style-guide-control-theme-color" class="style-guide-control">Theme Colour</label>
+      <input id="style-guide-control-theme-color" class="style-guide-control theme-color" class="form-group-item-half mb-0" type="color" value="#818aa0" tabindex="1">
+    </div>
+    <div class="input-wrap">
+      <label for="style-guide-control-theme-accent" class="style-guide-control">Accent Colour</label>
+      <input id="style-guide-control-theme-accent" class="style-guide-control theme-accent" class="form-group-item-half mb-0" type="color" value="#fa8200" tabindex="1">
     </div>
     <div class="input-wrap">
       <label for="radius" class="style-guide-control">Radius</label>
       <input id="radius" class="style-guide-control radius" type="range" min="0" max="600" value="0" step="1" tabindex="1">
     </div>
     <hr>
-    <div class="button-wrap form-inline">
-      <button class="button button-small mb-0" tabindex="1">Button Small</button>
-    </div>
-    <div class="button-wrap form-inline">
-      <button class="button mb-0" tabindex="1">Button Medium</button>
-    </div>
-    <div class="button-wrap form-inline">
-      <button class="button button-large mb-0" tabindex="1">Button Large</button>
+    <div class="form-inline">
+      <div class="button-wrap">
+        <button class="button button-small mb-0" tabindex="1">Button Small</button>
+      </div>
+      <div class="button-wrap">
+        <button class="button mb-0" tabindex="1">Button Medium</button>
+      </div>
+      <div class="button-wrap">
+        <button class="button button-large mb-0" tabindex="1">Button Large</button>
+      </div>
     </div>
     <hr>
     <div class="input-wrap input-button">
@@ -103,57 +110,63 @@
         <label for="style-guide-radio-6"><span class="label-icon"></span> Hidden Radio Button 3</label>
       </div>
     </div>
-    <div class="input-wrap input-button input-hide form-inline">
-      <input id="style-guide-input-color-1" type="color" tabindex="1" value="#fa8200">
-      <label for="style-guide-input-color-1">Hidden Input Colour Button</label>
-    </div>
-    <div class="input-wrap input-button input-color-dot form-inline">
-      <input id="style-guide-input-color-2" type="color" tabindex="1" value="#fa8200">
-      <label for="style-guide-input-color-2">Input Colour Button</label>
-    </div>
-    <div class="input-wrap input-button input-color-dot input-color-dot-accent form-inline">
-      <input id="style-guide-input-color-3" type="color" tabindex="1" value="#fa8200">
-      <label for="style-guide-input-color-3">Input Colour Accent Button</label>
-    </div>
-    <div class="button-wrap form-inline">
-      <div class="form-dropdown form-dropdown-inline">
-        <button class="style-guide-form-dropdown form-dropdown-toggle button mb-0" tabindex="1">
-          <span class="button-text">Button Dropdown</span>
-        </button>
-        <ul class="list-unstyled form-dropdown-menu">
-          <li>
-            <button class="button button-block text-left form-dropdown-menu-item" tabindex="1"><span class="button-text">Option 1</span></button>
-          </li>
-          <li>
-            <button class="button button-block text-left form-dropdown-menu-item" tabindex="1"><span class="button-text">Option 2</span></button>
-          </li>
-        </ul>
+    <div class="form-inline">
+      <div class="input-wrap input-button input-hide">
+        <input id="style-guide-input-color-1" type="color" tabindex="1" value="#fa8200">
+        <label for="style-guide-input-color-1">Hidden Input Colour Button</label>
+      </div>
+      <div class="input-wrap input-button input-color-dot">
+        <input id="style-guide-input-color-2" type="color" tabindex="1" value="#fa8200">
+        <label for="style-guide-input-color-2">Input Colour Button</label>
+      </div>
+      <div class="input-wrap input-button input-color-dot input-color-dot-accent">
+        <input id="style-guide-input-color-3" type="color" tabindex="1" value="#fa8200">
+        <label for="style-guide-input-color-3">Input Colour Accent Button</label>
+      </div>
+      <div class="button-wrap">
+        <div class="form-dropdown form-dropdown-inline">
+          <button class="style-guide-form-dropdown form-dropdown-toggle button mb-0" tabindex="1">
+            <span class="button-text">Button Dropdown</span>
+          </button>
+          <ul class="list-unstyled form-dropdown-menu">
+            <li>
+              <button class="button button-block text-left form-dropdown-menu-item" tabindex="1"><span class="button-text">Option 1</span></button>
+            </li>
+            <li>
+              <button class="button button-block text-left form-dropdown-menu-item" tabindex="1"><span class="button-text">Option 2</span></button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <hr>
-    <div class="input-wrap">
-      <input id="style-guide-checkbox-1" type="checkbox" tabindex="1" checked>
-      <label for="style-guide-checkbox-1"><span class="label-icon"></span> Checkbox 1</label>
+    <div class="form-inline">
+      <div class="input-wrap">
+        <input id="style-guide-checkbox-1" type="checkbox" tabindex="1" checked>
+        <label for="style-guide-checkbox-1"><span class="label-icon"></span> Checkbox 1</label>
+      </div>
+      <div class="input-wrap">
+        <input id="style-guide-checkbox-2" type="checkbox" tabindex="1">
+        <label for="style-guide-checkbox-2"><span class="label-icon"></span> Checkbox 2</label>
+      </div>
+      <div class="input-wrap">
+        <input id="style-guide-checkbox-3" type="checkbox" tabindex="1">
+        <label for="style-guide-checkbox-3"><span class="label-icon"></span> Checkbox 3</label>
+      </div>
     </div>
-    <div class="input-wrap">
-      <input id="style-guide-checkbox-2" type="checkbox" tabindex="1">
-      <label for="style-guide-checkbox-2"><span class="label-icon"></span> Checkbox 2</label>
-    </div>
-    <div class="input-wrap">
-      <input id="style-guide-checkbox-3" type="checkbox" tabindex="1">
-      <label for="style-guide-checkbox-3"><span class="label-icon"></span> Checkbox 3</label>
-    </div>
-    <div class="input-wrap">
-      <input id="style-guide-radio-7" type="radio" name="style-guide-radio-3" tabindex="1" checked>
-      <label for="style-guide-radio-7"><span class="label-icon"></span> Radio 1</label>
-    </div>
-    <div class="input-wrap">
-      <input id="style-guide-radio-8" type="radio" name="style-guide-radio-3" tabindex="1">
-      <label for="style-guide-radio-8"><span class="label-icon"></span> Radio 2</label>
-    </div>
-    <div class="input-wrap">
-      <input id="style-guide-radio-9" type="radio" name="style-guide-radio-3" tabindex="1">
-      <label for="style-guide-radio-9"><span class="label-icon"></span> Radio 3</label>
+    <div class="form-inline">
+      <div class="input-wrap">
+        <input id="style-guide-radio-7" type="radio" name="style-guide-radio-3" tabindex="1" checked>
+        <label for="style-guide-radio-7"><span class="label-icon"></span> Radio 1</label>
+      </div>
+      <div class="input-wrap">
+        <input id="style-guide-radio-8" type="radio" name="style-guide-radio-3" tabindex="1">
+        <label for="style-guide-radio-8"><span class="label-icon"></span> Radio 2</label>
+      </div>
+      <div class="input-wrap">
+        <input id="style-guide-radio-9" type="radio" name="style-guide-radio-3" tabindex="1">
+        <label for="style-guide-radio-9"><span class="label-icon"></span> Radio 3</label>
+      </div>
     </div>
     <div class="form-grid-wrap">
       <div class="form-grid form-grid-3x3">
@@ -305,6 +318,51 @@
         helper.addClass(helper.e("html"), "is-theme-style-light");
         helper.removeClass(helper.e("html"), "is-theme-style-dark");
       },
+      render: {
+        color: {
+          shade: function() {
+            var shadeSteps = 10;
+            var saturationShift = 0;
+            var lightShift = 4;
+            var html = helper.e("html");
+            var rgb = helper.convertColor.hex.rgb(helper.e(".theme-color").value);
+            var hsl = helper.convertColor.rgb.hsl(rgb);
+            html.style.setProperty("--theme-shade", rgb.r + ", " + rgb.g + ", " + rgb.b);
+            var renderShade = function(name, index, rgb) {
+              for (var key in rgb) {
+                if (rgb[key] < 0) {
+                  rgb[key] = 0;
+                } else if (rgb[key] > 255) {
+                  rgb[key] = 255;
+                };
+                rgb[key] = parseInt(rgb[key], 10);
+              };
+              if (index < 10) {
+                index = "0" + index;
+              } else {
+                index = index;
+              };
+              html.style.setProperty(name + index, rgb.r + ", " + rgb.g + ", " + rgb.b);
+            };
+            for (var i = 1; i <= shadeSteps; i++) {
+              var rgb = helper.convertColor.hsl.rgb({
+                h: hsl.h,
+                s: hsl.s - (saturationShift * i),
+                l: hsl.l - (lightShift * i)
+              });
+              renderShade("--theme-shade-neg-", i, rgb);
+            };
+            for (var i = 1; i <= shadeSteps; i++) {
+              var rgb = helper.convertColor.hsl.rgb({
+                h: hsl.h,
+                s: hsl.s + (saturationShift * i),
+                l: hsl.l + (lightShift * i)
+              });
+              renderShade("--theme-shade-pos-", i, rgb);
+            };
+          }
+        }
+      }
     };
     helper.e(".disable-on").addEventListener("click", function() {
       disable.on();
@@ -327,10 +385,14 @@
       helper.toggleClass(helper.e(".form-dropdown-menu"), "form-dropdown-menu-right");
       helper.toggleClass(helper.e(".form-dropdown-menu"), "form-dropdown-menu-bottom");
     }, false);
-    helper.e(".theme-color").addEventListener("change", function() {
-      var color = helper.hexToRgb(this.value);
+    helper.e(".theme-accent").addEventListener("change", function() {
+      var color = helper.convertColor.hex.rgb(this.value);
       helper.e("html").style.setProperty("--theme-accent", color.r + ", " + color.g + ", " + color.b);
     }, false);
+    helper.e(".theme-color").addEventListener("change", function() {
+      theme.render.color.shade();
+    }, false);
+    theme.render.color.shade();
   </script>
 
 </body>
