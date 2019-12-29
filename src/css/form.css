@@ -1200,8 +1200,15 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-inline {
-  display: inline-block;
-  margin-right: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-inline>* {
+  margin-right: 1em;
   width: initial;
 }
 

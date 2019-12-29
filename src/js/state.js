@@ -367,6 +367,11 @@ var state = (function() {
           b: 160
         }
       },
+      font: {
+        display: "",
+        ui: ""
+      },
+      style: "dark",
       radius: 0.25
     }
   };

@@ -1276,14 +1276,16 @@
               <h1 class="menu-item-header-text">Sort</h1>
             </div>
             <div class="menu-item-form">
-              <div class="button-wrap form-inline">
-                <button class="control-link-sort-letter button mb-0" tabindex="-1">By Letter</button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-link-sort-icon button mb-0" tabindex="-1">By Icon</button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-link-sort-name button mb-0" tabindex="-1">By Name</button>
+              <div class="form-inline">
+                <div class="button-wrap">
+                  <button class="control-link-sort-letter button mb-0" tabindex="-1">By Letter</button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-link-sort-icon button mb-0" tabindex="-1">By Icon</button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-link-sort-name button mb-0" tabindex="-1">By Name</button>
+                </div>
               </div>
             </div>
           </div>
@@ -1292,11 +1294,11 @@
               <h1 class="menu-item-header-text">Accent override</h1>
             </div>
             <div class="menu-item-form">
-              <div class="button-wrap form-inline">
+              <div class="button-wrap">
                 <button class="control-link-accent-clear button mb-0" tabindex="-1">Remove all override colours</button>
               </div>
               <hr>
-              <div class="button-wrap form-inline">
+              <div class="button-wrap">
                 <button class="control-link-accent-set button mb-0" tabindex="-1">Add override colours</button>
               </div>
               <p class="control-link-accent-set-helper form-helper small">Adds a unique override colour to each Bookmark.</p>
@@ -1310,231 +1312,218 @@
               <h1 class="menu-item-header-text">Presets</h1>
             </div>
             <div class="menu-item-form">
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-nighttab theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-nighttab-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-nighttab-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-nighttab-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-nighttab-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-nighttab"></span>
-                    <span class="theme-preset-font theme-preset-font-nighttab">
-                      <span class="theme-preset-font-display theme-preset-font-display-nighttab">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-nighttab">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">nightTab</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-midnight theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-midnight-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-midnight-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-midnight-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-midnight-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-midnight"></span>
-                    <span class="theme-preset-font theme-preset-font-midnight">
-                      <span class="theme-preset-font-display theme-preset-font-display-midnight">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-midnight">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Midnight</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-bluegum theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-bluegum-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-bluegum-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-bluegum-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-bluegum-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-bluegum"></span>
-                    <span class="theme-preset-font theme-preset-font-bluegum">
-                      <span class="theme-preset-font-display theme-preset-font-display-bluegum">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-bluegum">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Blue Gum</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-sharpmint theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-sharpmint-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-sharpmint-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-sharpmint-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-sharpmint-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-sharpmint"></span>
-                    <span class="theme-preset-font theme-preset-font-sharpmint">
-                      <span class="theme-preset-font-display theme-preset-font-display-sharpmint">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-sharpmint">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Sharp Mint</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-snowblue theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-snowblue-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-snowblue-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-snowblue-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-snowblue-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-snowblue"></span>
-                    <span class="theme-preset-font theme-preset-font-snowblue">
-                      <span class="theme-preset-font-display theme-preset-font-display-snowblue">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-snowblue">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Snow Blue</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-chocorum theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-chocorum-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-chocorum-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-chocorum-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-chocorum-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-chocorum"></span>
-                    <span class="theme-preset-font theme-preset-font-chocorum">
-                      <span class="theme-preset-font-display theme-preset-font-display-chocorum">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-chocorum">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Choco Rum</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-sunburst theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-sunburst-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-sunburst-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-sunburst-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-sunburst-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-sunburst"></span>
-                    <span class="theme-preset-font theme-preset-font-sunburst">
-                      <span class="theme-preset-font-display theme-preset-font-display-sunburst">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-sunburst">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Sun Burst</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-coralgreen theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-coralgreen-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-coralgreen-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-coralgreen-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-coralgreen-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-coralgreen"></span>
-                    <span class="theme-preset-font theme-preset-font-coralgreen">
-                      <span class="theme-preset-font-display theme-preset-font-display-coralgreen">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-coralgreen">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Coral Green</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-purplegem theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-purplegem-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-purplegem-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-purplegem-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-purplegem-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-purplegem"></span>
-                    <span class="theme-preset-font theme-preset-font-purplegem">
-                      <span class="theme-preset-font-display theme-preset-font-display-purplegem">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-purplegem">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Purple Gem</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-hotpepper theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-hotpepper-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-hotpepper-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-hotpepper-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-hotpepper-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-hotpepper"></span>
-                    <span class="theme-preset-font theme-preset-font-hotpepper">
-                      <span class="theme-preset-font-display theme-preset-font-display-hotpepper">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-hotpepper">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Hot Pepper</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-steelgrey theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-steelgrey-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-steelgrey-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-steelgrey-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-steelgrey-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-steelgrey"></span>
-                    <span class="theme-preset-font theme-preset-font-steelgrey">
-                      <span class="theme-preset-font-display theme-preset-font-display-steelgrey">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-steelgrey">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Steel Grey</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-outrun theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-outrun-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-outrun-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-outrun-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-outrun-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-outrun"></span>
-                    <span class="theme-preset-font theme-preset-font-outrun">
-                      <span class="theme-preset-font-display theme-preset-font-display-outrun">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-outrun">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Outrun</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-pumpkin theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-pumpkin-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-pumpkin-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-pumpkin-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-pumpkin-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-pumpkin"></span>
-                    <span class="theme-preset-font theme-preset-font-pumpkin">
-                      <span class="theme-preset-font-display theme-preset-font-display-pumpkin">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-pumpkin">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Pumpkin</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
-                <button class="control-theme-preset-whoosh theme-preset-button button mb-0" tabindex="-1">
-                  <div class="theme-preset-preview">
-                    <span class="theme-preset-background-01 theme-preset-background-whoosh-01"></span>
-                    <span class="theme-preset-background-02 theme-preset-background-whoosh-02"></span>
-                    <span class="theme-preset-background-03 theme-preset-background-whoosh-03"></span>
-                    <span class="theme-preset-background-04 theme-preset-background-whoosh-04"></span>
-                    <span class="theme-preset-accent theme-preset-accent-whoosh"></span>
-                    <span class="theme-preset-font theme-preset-font-whoosh">
-                      <span class="theme-preset-font-display theme-preset-font-display-whoosh">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-whoosh">Xyz - 123</span>
-                    </span>
-                  </div>
-                  <span class="button-text small">Whoosh</span>
-                </button>
-              </div>
-              <div class="button-wrap form-inline">
+              <div class="form-inline">
+                <div class="button-wrap">
+                  <button class="control-theme-preset-nighttab theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-nighttab-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-nighttab-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-nighttab-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-nighttab-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-nighttab"></span>
+                      <span class="theme-preset-font theme-preset-font-nighttab">
+                        <span class="theme-preset-font-display theme-preset-font-display-nighttab">nightTab</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-nighttab">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-midnight theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-midnight-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-midnight-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-midnight-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-midnight-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-midnight"></span>
+                      <span class="theme-preset-font theme-preset-font-midnight">
+                        <span class="theme-preset-font-display theme-preset-font-display-midnight">Midnight</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-midnight">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-bluegum theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-bluegum-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-bluegum-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-bluegum-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-bluegum-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-bluegum"></span>
+                      <span class="theme-preset-font theme-preset-font-bluegum">
+                        <span class="theme-preset-font-display theme-preset-font-display-bluegum">Blue Gum</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-bluegum">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-sharpmint theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-sharpmint-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-sharpmint-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-sharpmint-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-sharpmint-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-sharpmint"></span>
+                      <span class="theme-preset-font theme-preset-font-sharpmint">
+                        <span class="theme-preset-font-display theme-preset-font-display-sharpmint">Sharp Mint</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-sharpmint">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-snowblue theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-snowblue-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-snowblue-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-snowblue-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-snowblue-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-snowblue"></span>
+                      <span class="theme-preset-font theme-preset-font-snowblue">
+                        <span class="theme-preset-font-display theme-preset-font-display-snowblue">Snow Blue</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-snowblue">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-chocorum theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-chocorum-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-chocorum-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-chocorum-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-chocorum-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-chocorum"></span>
+                      <span class="theme-preset-font theme-preset-font-chocorum">
+                        <span class="theme-preset-font-display theme-preset-font-display-chocorum">Choco Rum</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-chocorum">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-sunburst theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-sunburst-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-sunburst-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-sunburst-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-sunburst-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-sunburst"></span>
+                      <span class="theme-preset-font theme-preset-font-sunburst">
+                        <span class="theme-preset-font-display theme-preset-font-display-sunburst">Sun Burst</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-sunburst">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-coralgreen theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-coralgreen-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-coralgreen-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-coralgreen-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-coralgreen-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-coralgreen"></span>
+                      <span class="theme-preset-font theme-preset-font-coralgreen">
+                        <span class="theme-preset-font-display theme-preset-font-display-coralgreen">Coral Green</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-coralgreen">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-purplegem theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-purplegem-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-purplegem-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-purplegem-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-purplegem-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-purplegem"></span>
+                      <span class="theme-preset-font theme-preset-font-purplegem">
+                        <span class="theme-preset-font-display theme-preset-font-display-purplegem">Purple Gem</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-purplegem">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-hotpepper theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-hotpepper-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-hotpepper-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-hotpepper-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-hotpepper-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-hotpepper"></span>
+                      <span class="theme-preset-font theme-preset-font-hotpepper">
+                        <span class="theme-preset-font-display theme-preset-font-display-hotpepper">Hot Pepper</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-hotpepper">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-steelgrey theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-steelgrey-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-steelgrey-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-steelgrey-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-steelgrey-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-steelgrey"></span>
+                      <span class="theme-preset-font theme-preset-font-steelgrey">
+                        <span class="theme-preset-font-display theme-preset-font-display-steelgrey">Steel Grey</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-steelgrey">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-outrun theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-outrun-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-outrun-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-outrun-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-outrun-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-outrun"></span>
+                      <span class="theme-preset-font theme-preset-font-outrun">
+                        <span class="theme-preset-font-display theme-preset-font-display-outrun">Outrun</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-outrun">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-pumpkin theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-pumpkin-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-pumpkin-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-pumpkin-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-pumpkin-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-pumpkin"></span>
+                      <span class="theme-preset-font theme-preset-font-pumpkin">
+                        <span class="theme-preset-font-display theme-preset-font-display-pumpkin">Pumpkin</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-pumpkin">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
+                  <button class="control-theme-preset-whoosh theme-preset-button button mb-0" tabindex="-1">
+                    <div class="theme-preset-preview">
+                      <span class="theme-preset-background-01 theme-preset-background-whoosh-01"></span>
+                      <span class="theme-preset-background-02 theme-preset-background-whoosh-02"></span>
+                      <span class="theme-preset-background-03 theme-preset-background-whoosh-03"></span>
+                      <span class="theme-preset-background-04 theme-preset-background-whoosh-04"></span>
+                      <span class="theme-preset-accent theme-preset-accent-whoosh"></span>
+                      <span class="theme-preset-font theme-preset-font-whoosh">
+                        <span class="theme-preset-font-display theme-preset-font-display-whoosh">Whoosh</span>
+                        <span class="theme-preset-font-ui theme-preset-font-ui-whoosh">ABC 123</span>
+                      </span>
+                    </div>
+                  </button>
+                </div>
+                <div class="button-wrap">
                 <button class="control-theme-preset-eldergold theme-preset-button button mb-0" tabindex="-1">
                   <div class="theme-preset-preview">
                     <span class="theme-preset-background-01 theme-preset-background-eldergold-01"></span>
@@ -1543,12 +1532,12 @@
                     <span class="theme-preset-background-04 theme-preset-background-eldergold-04"></span>
                     <span class="theme-preset-accent theme-preset-accent-eldergold"></span>
                     <span class="theme-preset-font theme-preset-font-eldergold">
-                      <span class="theme-preset-font-display theme-preset-font-display-eldergold">Abc</span>
-                      <span class="theme-preset-font-ui theme-preset-font-ui-eldergold">Xyz - 123</span>
+                      <span class="theme-preset-font-display theme-preset-font-display-eldergold">Elder Gold</span>
+                      <span class="theme-preset-font-ui theme-preset-font-ui-eldergold">ABC 123</span>
                     </span>
                   </div>
-                  <span class="button-text small">Elder Gold</span>
                 </button>
+              </div>
               </div>
             </div>
           </div>
@@ -1830,12 +1819,14 @@
                   <label for="control-background-image-from-file"><span class="label-icon"></span> Use local file</label>
                 </div>
                 <div class="form-indent">
-                  <div class="input-wrap input-button input-hide form-inline">
-                    <input id="control-background-image-file" class="control-background-image-file" type="file">
-                    <label for="control-background-image-file">Select image</label>
-                  </div>
-                  <div class="button-wrap form-inline">
-                    <button class="control-background-image-file-clear button mb-0" href="#">Clear image</button>
+                  <div class="form-inline">
+                    <div class="input-wrap input-button input-hide">
+                      <input id="control-background-image-file" class="control-background-image-file" type="file">
+                      <label for="control-background-image-file">Select image</label>
+                    </div>
+                    <div class="button-wrap">
+                      <button class="control-background-image-file-clear button mb-0" href="#">Clear image</button>
+                    </div>
                   </div>
                   <p class="control-background-image-file-helper form-helper small">Max image size 5MB, (due to browser local storage limits).</p>
                   <p class="control-background-image-file-helper form-helper small">Take care with large files, they may impact performance.</p>

@@ -2534,7 +2534,28 @@ var control = (function() {
     element: helper.e(".control-theme-preset-nighttab"),
     type: "button",
     func: function() {
-      theme.preset("nighttab");
+      mod.setValue("theme.accent.current", helper.getObject({
+        object: state.get.default(),
+        path: "theme.accent.current"
+      }));
+      mod.setValue("theme.color", helper.getObject({
+        object: state.get.default(),
+        path: "theme.color"
+      }));
+      mod.setValue("theme.font", helper.getObject({
+        object: state.get.default(),
+        path: "theme.font"
+      }));
+      mod.setValue("theme.style", helper.getObject({
+        object: state.get.default(),
+        path: "theme.style"
+      }));
+      mod.setValue("theme.radius", helper.getObject({
+        object: state.get.default(),
+        path: "theme.radius"
+      }));
+      render.update();
+      render.class();
       theme.render.font.display();
       theme.render.font.ui();
       theme.style.check();
@@ -2542,8 +2563,6 @@ var control = (function() {
       theme.render.accent.color();
       theme.render.radius();
       link.groupAndItems();
-      render.update();
-      render.class();
     }
   }, {
     element: helper.e(".control-theme-preset-midnight"),
