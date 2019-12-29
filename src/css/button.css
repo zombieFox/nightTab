@@ -210,10 +210,6 @@ button [class*=" button-"]:last-child,
   padding: 0.5em 0;
   position: relative;
   width: 100%;
-  display: block;
-}
-
-.button-wrap-inline {
-  width: initial;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
 }
