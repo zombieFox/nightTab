@@ -191,7 +191,32 @@ var theme = (function() {
         radius: 0.5,
         style: "dark"
       },
-      bluegum: {
+      pym: {
+        font: {
+          display: "Autour One",
+          ui: "Solway"
+        },
+        color: {
+          hsl: {
+            h: 278,
+            s: 73,
+            l: 50
+          },
+          rgb: {
+            r: 153,
+            g: 34,
+            b: 221
+          }
+        },
+        accent: {
+          r: 0,
+          g: 255,
+          b: 170
+        },
+        radius: 0.1,
+        style: "dark"
+      },
+      cruiser: {
         font: {
           display: "Alatsi",
           ui: "Source Sans Pro"
@@ -241,7 +266,7 @@ var theme = (function() {
         radius: 0.8,
         style: "dark"
       },
-      snowblue: {
+      snowglow: {
         font: {
           display: "Righteous",
           ui: "Raleway"
@@ -266,7 +291,7 @@ var theme = (function() {
         radius: 0,
         style: "light"
       },
-      chocorum: {
+      rumble: {
         font: {
           display: "Odibee Sans",
           ui: "Roboto Condensed"
@@ -291,7 +316,7 @@ var theme = (function() {
         radius: 0.75,
         style: "dark"
       },
-      sunburst: {
+      sollight: {
         font: {
           display: "Fredoka One",
           ui: "Muli"
@@ -316,7 +341,7 @@ var theme = (function() {
         radius: 0.5,
         style: "light"
       },
-      coralgreen: {
+      artdeco: {
         font: {
           display: "Poiret One",
           ui: "Lato"
@@ -341,7 +366,7 @@ var theme = (function() {
         radius: 2,
         style: "dark"
       },
-      purplegem: {
+      macaroon: {
         font: {
           display: "Calistoga",
           ui: "Source Sans Pro"
@@ -391,7 +416,7 @@ var theme = (function() {
         radius: 0.6,
         style: "dark"
       },
-      steelgrey: {
+      steel: {
         font: {
           display: "Abel",
           ui: "Raleway"
@@ -466,7 +491,7 @@ var theme = (function() {
         radius: 0.2,
         style: "dark"
       },
-      whoosh: {
+      bubblegum: {
         font: {
           display: "Monoton",
           ui: "Lato"
@@ -491,7 +516,7 @@ var theme = (function() {
         radius: 1.2,
         style: "dark"
       },
-      eldergold: {
+      elderbean: {
         font: {
           display: "Life Savers",
           ui: "Quicksand"

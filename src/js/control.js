@@ -2580,10 +2580,25 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-bluegum"),
+    element: helper.e(".control-theme-preset-pym"),
     type: "button",
     func: function() {
-      theme.preset("bluegum");
+      theme.preset("pym");
+      theme.render.font.display();
+      theme.render.font.ui();
+      theme.style.check();
+      theme.render.color.shade();
+      theme.render.accent.color();
+      theme.render.radius();
+      link.groupAndItems();
+      render.update();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-theme-preset-cruiser"),
+    type: "button",
+    func: function() {
+      theme.preset("cruiser");
       theme.render.font.display();
       theme.render.font.ui();
       theme.style.check();
@@ -2610,10 +2625,10 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-snowblue"),
+    element: helper.e(".control-theme-preset-snowglow"),
     type: "button",
     func: function() {
-      theme.preset("snowblue");
+      theme.preset("snowglow");
       theme.render.font.display();
       theme.render.font.ui();
       theme.style.check();
@@ -2625,10 +2640,10 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-chocorum"),
+    element: helper.e(".control-theme-preset-rumble"),
     type: "button",
     func: function() {
-      theme.preset("chocorum");
+      theme.preset("rumble");
       theme.render.font.display();
       theme.render.font.ui();
       theme.style.check();
@@ -2640,10 +2655,10 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-sunburst"),
+    element: helper.e(".control-theme-preset-sollight"),
     type: "button",
     func: function() {
-      theme.preset("sunburst");
+      theme.preset("sollight");
       theme.render.font.display();
       theme.render.font.ui();
       theme.style.check();
@@ -2655,10 +2670,10 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-coralgreen"),
+    element: helper.e(".control-theme-preset-artdeco"),
     type: "button",
     func: function() {
-      theme.preset("coralgreen");
+      theme.preset("artdeco");
       theme.render.font.display();
       theme.render.font.ui();
       theme.style.check();
@@ -2670,10 +2685,10 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-purplegem"),
+    element: helper.e(".control-theme-preset-macaroon"),
     type: "button",
     func: function() {
-      theme.preset("purplegem");
+      theme.preset("macaroon");
       theme.render.font.display();
       theme.render.font.ui();
       theme.style.check();
@@ -2700,10 +2715,10 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-steelgrey"),
+    element: helper.e(".control-theme-preset-steel"),
     type: "button",
     func: function() {
-      theme.preset("steelgrey");
+      theme.preset("steel");
       theme.render.font.display();
       theme.render.font.ui();
       theme.style.check();
@@ -2745,10 +2760,10 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-whoosh"),
+    element: helper.e(".control-theme-preset-bubblegum"),
     type: "button",
     func: function() {
-      theme.preset("whoosh");
+      theme.preset("bubblegum");
       theme.render.font.display();
       theme.render.font.ui();
       theme.style.check();
@@ -2760,10 +2775,10 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-preset-eldergold"),
+    element: helper.e(".control-theme-preset-elderbean"),
     type: "button",
     func: function() {
-      theme.preset("eldergold");
+      theme.preset("elderbean");
       theme.render.font.display();
       theme.render.font.ui();
       theme.style.check();

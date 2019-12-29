@@ -65,17 +65,19 @@
 }
 
 .theme-preset-font {
-  z-index: 6;
+  padding: 0.25em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transform: scale(1);
+  white-space: initial;
   transition: transform var(--layout-timing-extra-fast);
+  z-index: 6;
 }
 
 .theme-preset-font-display {
-  font-size: 1.25em;
+  font-size: 1em;
   margin-bottom: 0.25em;
 }
 
@@ -172,34 +174,64 @@
   color: rgb(var(--theme-preset-font-color-midnight));
 }
 
-.theme-preset-background-bluegum-01 {
-  background-color: rgb(var(--theme-preset-background-bluegum-01));
+.theme-preset-background-pym-01 {
+  background-color: rgb(var(--theme-preset-background-pym-01));
 }
 
-.theme-preset-background-bluegum-02 {
-  background-color: rgb(var(--theme-preset-background-bluegum-02));
+.theme-preset-background-pym-02 {
+  background-color: rgb(var(--theme-preset-background-pym-02));
 }
 
-.theme-preset-background-bluegum-03 {
-  background-color: rgb(var(--theme-preset-background-bluegum-03));
+.theme-preset-background-pym-03 {
+  background-color: rgb(var(--theme-preset-background-pym-03));
 }
 
-.theme-preset-background-bluegum-04 {
-  background-color: rgb(var(--theme-preset-background-bluegum-04));
+.theme-preset-background-pym-04 {
+  background-color: rgb(var(--theme-preset-background-pym-04));
 }
 
-.theme-preset-accent-bluegum {
-  background-color: rgb(var(--theme-preset-accent-bluegum));
+.theme-preset-accent-pym {
+  background-color: rgb(var(--theme-preset-accent-pym));
 }
 
-.theme-preset-font-display-bluegum {
-  font-family: var(--theme-preset-font-display-bluegum);
-  color: rgb(var(--theme-preset-font-color-bluegum));
+.theme-preset-font-display-pym {
+  font-family: var(--theme-preset-font-display-pym);
+  color: rgb(var(--theme-preset-font-color-pym));
 }
 
-.theme-preset-font-ui-bluegum {
-  font-family: var(--theme-preset-font-ui-bluegum);
-  color: rgb(var(--theme-preset-font-color-bluegum));
+.theme-preset-font-ui-pym {
+  font-family: var(--theme-preset-font-ui-pym);
+  color: rgb(var(--theme-preset-font-color-pym));
+}
+
+.theme-preset-background-cruiser-01 {
+  background-color: rgb(var(--theme-preset-background-cruiser-01));
+}
+
+.theme-preset-background-cruiser-02 {
+  background-color: rgb(var(--theme-preset-background-cruiser-02));
+}
+
+.theme-preset-background-cruiser-03 {
+  background-color: rgb(var(--theme-preset-background-cruiser-03));
+}
+
+.theme-preset-background-cruiser-04 {
+  background-color: rgb(var(--theme-preset-background-cruiser-04));
+}
+
+.theme-preset-accent-cruiser {
+  background-color: rgb(var(--theme-preset-accent-cruiser));
+}
+
+.theme-preset-font-display-cruiser {
+  font-family: var(--theme-preset-font-display-cruiser);
+  color: rgb(var(--theme-preset-font-color-cruiser));
+}
+
+.theme-preset-font-ui-cruiser {
+  font-family: var(--theme-preset-font-ui-cruiser);
+  color: rgb(var(--theme-preset-font-color-cruiser));
 }
 
 .theme-preset-background-sharpmint-01 {
@@ -232,154 +264,154 @@
   color: rgb(var(--theme-preset-font-color-sharpmint));
 }
 
-.theme-preset-background-snowblue-01 {
-  background-color: rgb(var(--theme-preset-background-snowblue-01));
+.theme-preset-background-snowglow-01 {
+  background-color: rgb(var(--theme-preset-background-snowglow-01));
 }
 
-.theme-preset-background-snowblue-02 {
-  background-color: rgb(var(--theme-preset-background-snowblue-02));
+.theme-preset-background-snowglow-02 {
+  background-color: rgb(var(--theme-preset-background-snowglow-02));
 }
 
-.theme-preset-background-snowblue-03 {
-  background-color: rgb(var(--theme-preset-background-snowblue-03));
+.theme-preset-background-snowglow-03 {
+  background-color: rgb(var(--theme-preset-background-snowglow-03));
 }
 
-.theme-preset-background-snowblue-04 {
-  background-color: rgb(var(--theme-preset-background-snowblue-04));
+.theme-preset-background-snowglow-04 {
+  background-color: rgb(var(--theme-preset-background-snowglow-04));
 }
 
-.theme-preset-accent-snowblue {
-  background-color: rgb(var(--theme-preset-accent-snowblue));
+.theme-preset-accent-snowglow {
+  background-color: rgb(var(--theme-preset-accent-snowglow));
 }
 
-.theme-preset-font-display-snowblue {
-  font-family: var(--theme-preset-font-display-snowblue);
-  color: rgb(var(--theme-preset-font-color-snowblue));
+.theme-preset-font-display-snowglow {
+  font-family: var(--theme-preset-font-display-snowglow);
+  color: rgb(var(--theme-preset-font-color-snowglow));
 }
 
-.theme-preset-font-ui-snowblue {
-  font-family: var(--theme-preset-font-ui-snowblue);
-  color: rgb(var(--theme-preset-font-color-snowblue));
+.theme-preset-font-ui-snowglow {
+  font-family: var(--theme-preset-font-ui-snowglow);
+  color: rgb(var(--theme-preset-font-color-snowglow));
 }
 
-.theme-preset-background-chocorum-01 {
-  background-color: rgb(var(--theme-preset-background-chocorum-01));
+.theme-preset-background-rumble-01 {
+  background-color: rgb(var(--theme-preset-background-rumble-01));
 }
 
-.theme-preset-background-chocorum-02 {
-  background-color: rgb(var(--theme-preset-background-chocorum-02));
+.theme-preset-background-rumble-02 {
+  background-color: rgb(var(--theme-preset-background-rumble-02));
 }
 
-.theme-preset-background-chocorum-03 {
-  background-color: rgb(var(--theme-preset-background-chocorum-03));
+.theme-preset-background-rumble-03 {
+  background-color: rgb(var(--theme-preset-background-rumble-03));
 }
 
-.theme-preset-background-chocorum-04 {
-  background-color: rgb(var(--theme-preset-background-chocorum-04));
+.theme-preset-background-rumble-04 {
+  background-color: rgb(var(--theme-preset-background-rumble-04));
 }
 
-.theme-preset-accent-chocorum {
-  background-color: rgb(var(--theme-preset-accent-chocorum));
+.theme-preset-accent-rumble {
+  background-color: rgb(var(--theme-preset-accent-rumble));
 }
 
-.theme-preset-font-display-chocorum {
-  font-family: var(--theme-preset-font-display-chocorum);
-  color: rgb(var(--theme-preset-font-color-chocorum));
+.theme-preset-font-display-rumble {
+  font-family: var(--theme-preset-font-display-rumble);
+  color: rgb(var(--theme-preset-font-color-rumble));
 }
 
-.theme-preset-font-ui-chocorum {
-  font-family: var(--theme-preset-font-ui-chocorum);
-  color: rgb(var(--theme-preset-font-color-chocorum));
+.theme-preset-font-ui-rumble {
+  font-family: var(--theme-preset-font-ui-rumble);
+  color: rgb(var(--theme-preset-font-color-rumble));
 }
 
-.theme-preset-background-sunburst-01 {
-  background-color: rgb(var(--theme-preset-background-sunburst-01));
+.theme-preset-background-sollight-01 {
+  background-color: rgb(var(--theme-preset-background-sollight-01));
 }
 
-.theme-preset-background-sunburst-02 {
-  background-color: rgb(var(--theme-preset-background-sunburst-02));
+.theme-preset-background-sollight-02 {
+  background-color: rgb(var(--theme-preset-background-sollight-02));
 }
 
-.theme-preset-background-sunburst-03 {
-  background-color: rgb(var(--theme-preset-background-sunburst-03));
+.theme-preset-background-sollight-03 {
+  background-color: rgb(var(--theme-preset-background-sollight-03));
 }
 
-.theme-preset-background-sunburst-04 {
-  background-color: rgb(var(--theme-preset-background-sunburst-04));
+.theme-preset-background-sollight-04 {
+  background-color: rgb(var(--theme-preset-background-sollight-04));
 }
 
-.theme-preset-accent-sunburst {
-  background-color: rgb(var(--theme-preset-accent-sunburst));
+.theme-preset-accent-sollight {
+  background-color: rgb(var(--theme-preset-accent-sollight));
 }
 
-.theme-preset-font-display-sunburst {
-  font-family: var(--theme-preset-font-display-sunburst);
-  color: rgb(var(--theme-preset-font-color-sunburst));
+.theme-preset-font-display-sollight {
+  font-family: var(--theme-preset-font-display-sollight);
+  color: rgb(var(--theme-preset-font-color-sollight));
 }
 
-.theme-preset-font-ui-sunburst {
-  font-family: var(--theme-preset-font-ui-sunburst);
-  color: rgb(var(--theme-preset-font-color-sunburst));
+.theme-preset-font-ui-sollight {
+  font-family: var(--theme-preset-font-ui-sollight);
+  color: rgb(var(--theme-preset-font-color-sollight));
 }
 
-.theme-preset-background-coralgreen-01 {
-  background-color: rgb(var(--theme-preset-background-coralgreen-01));
+.theme-preset-background-artdeco-01 {
+  background-color: rgb(var(--theme-preset-background-artdeco-01));
 }
 
-.theme-preset-background-coralgreen-02 {
-  background-color: rgb(var(--theme-preset-background-coralgreen-02));
+.theme-preset-background-artdeco-02 {
+  background-color: rgb(var(--theme-preset-background-artdeco-02));
 }
 
-.theme-preset-background-coralgreen-03 {
-  background-color: rgb(var(--theme-preset-background-coralgreen-03));
+.theme-preset-background-artdeco-03 {
+  background-color: rgb(var(--theme-preset-background-artdeco-03));
 }
 
-.theme-preset-background-coralgreen-04 {
-  background-color: rgb(var(--theme-preset-background-coralgreen-04));
+.theme-preset-background-artdeco-04 {
+  background-color: rgb(var(--theme-preset-background-artdeco-04));
 }
 
-.theme-preset-accent-coralgreen {
-  background-color: rgb(var(--theme-preset-accent-coralgreen));
+.theme-preset-accent-artdeco {
+  background-color: rgb(var(--theme-preset-accent-artdeco));
 }
 
-.theme-preset-font-display-coralgreen {
-  font-family: var(--theme-preset-font-display-coralgreen);
-  color: rgb(var(--theme-preset-font-color-coralgreen));
+.theme-preset-font-display-artdeco {
+  font-family: var(--theme-preset-font-display-artdeco);
+  color: rgb(var(--theme-preset-font-color-artdeco));
 }
 
-.theme-preset-font-ui-coralgreen {
-  font-family: var(--theme-preset-font-ui-coralgreen);
-  color: rgb(var(--theme-preset-font-color-coralgreen));
+.theme-preset-font-ui-artdeco {
+  font-family: var(--theme-preset-font-ui-artdeco);
+  color: rgb(var(--theme-preset-font-color-artdeco));
 }
 
-.theme-preset-background-purplegem-01 {
-  background-color: rgb(var(--theme-preset-background-purplegem-01));
+.theme-preset-background-macaroon-01 {
+  background-color: rgb(var(--theme-preset-background-macaroon-01));
 }
 
-.theme-preset-background-purplegem-02 {
-  background-color: rgb(var(--theme-preset-background-purplegem-02));
+.theme-preset-background-macaroon-02 {
+  background-color: rgb(var(--theme-preset-background-macaroon-02));
 }
 
-.theme-preset-background-purplegem-03 {
-  background-color: rgb(var(--theme-preset-background-purplegem-03));
+.theme-preset-background-macaroon-03 {
+  background-color: rgb(var(--theme-preset-background-macaroon-03));
 }
 
-.theme-preset-background-purplegem-04 {
-  background-color: rgb(var(--theme-preset-background-purplegem-04));
+.theme-preset-background-macaroon-04 {
+  background-color: rgb(var(--theme-preset-background-macaroon-04));
 }
 
-.theme-preset-accent-purplegem {
-  background-color: rgb(var(--theme-preset-accent-purplegem));
+.theme-preset-accent-macaroon {
+  background-color: rgb(var(--theme-preset-accent-macaroon));
 }
 
-.theme-preset-font-display-purplegem {
-  font-family: var(--theme-preset-font-display-purplegem);
-  color: rgb(var(--theme-preset-font-color-purplegem));
+.theme-preset-font-display-macaroon {
+  font-family: var(--theme-preset-font-display-macaroon);
+  color: rgb(var(--theme-preset-font-color-macaroon));
 }
 
-.theme-preset-font-ui-purplegem {
-  font-family: var(--theme-preset-font-ui-purplegem);
-  color: rgb(var(--theme-preset-font-color-purplegem));
+.theme-preset-font-ui-macaroon {
+  font-family: var(--theme-preset-font-ui-macaroon);
+  color: rgb(var(--theme-preset-font-color-macaroon));
 }
 
 .theme-preset-background-hotpepper-01 {
@@ -412,34 +444,34 @@
   color: rgb(var(--theme-preset-font-color-hotpepper));
 }
 
-.theme-preset-background-steelgrey-01 {
-  background-color: rgb(var(--theme-preset-background-steelgrey-01));
+.theme-preset-background-steel-01 {
+  background-color: rgb(var(--theme-preset-background-steel-01));
 }
 
-.theme-preset-background-steelgrey-02 {
-  background-color: rgb(var(--theme-preset-background-steelgrey-02));
+.theme-preset-background-steel-02 {
+  background-color: rgb(var(--theme-preset-background-steel-02));
 }
 
-.theme-preset-background-steelgrey-03 {
-  background-color: rgb(var(--theme-preset-background-steelgrey-03));
+.theme-preset-background-steel-03 {
+  background-color: rgb(var(--theme-preset-background-steel-03));
 }
 
-.theme-preset-background-steelgrey-04 {
-  background-color: rgb(var(--theme-preset-background-steelgrey-04));
+.theme-preset-background-steel-04 {
+  background-color: rgb(var(--theme-preset-background-steel-04));
 }
 
-.theme-preset-accent-steelgrey {
-  background-color: rgb(var(--theme-preset-accent-steelgrey));
+.theme-preset-accent-steel {
+  background-color: rgb(var(--theme-preset-accent-steel));
 }
 
-.theme-preset-font-display-steelgrey {
-  font-family: var(--theme-preset-font-display-steelgrey);
-  color: rgb(var(--theme-preset-font-color-steelgrey));
+.theme-preset-font-display-steel {
+  font-family: var(--theme-preset-font-display-steel);
+  color: rgb(var(--theme-preset-font-color-steel));
 }
 
-.theme-preset-font-ui-steelgrey {
-  font-family: var(--theme-preset-font-ui-steelgrey);
-  color: rgb(var(--theme-preset-font-color-steelgrey));
+.theme-preset-font-ui-steel {
+  font-family: var(--theme-preset-font-ui-steel);
+  color: rgb(var(--theme-preset-font-color-steel));
 }
 
 .theme-preset-background-outrun-01 {
@@ -502,62 +534,62 @@
   color: rgb(var(--theme-preset-font-color-pumpkin));
 }
 
-.theme-preset-background-whoosh-01 {
-  background-color: rgb(var(--theme-preset-background-whoosh-01));
+.theme-preset-background-bubblegum-01 {
+  background-color: rgb(var(--theme-preset-background-bubblegum-01));
 }
 
-.theme-preset-background-whoosh-02 {
-  background-color: rgb(var(--theme-preset-background-whoosh-02));
+.theme-preset-background-bubblegum-02 {
+  background-color: rgb(var(--theme-preset-background-bubblegum-02));
 }
 
-.theme-preset-background-whoosh-03 {
-  background-color: rgb(var(--theme-preset-background-whoosh-03));
+.theme-preset-background-bubblegum-03 {
+  background-color: rgb(var(--theme-preset-background-bubblegum-03));
 }
 
-.theme-preset-background-whoosh-04 {
-  background-color: rgb(var(--theme-preset-background-whoosh-04));
+.theme-preset-background-bubblegum-04 {
+  background-color: rgb(var(--theme-preset-background-bubblegum-04));
 }
 
-.theme-preset-accent-whoosh {
-  background-color: rgb(var(--theme-preset-accent-whoosh));
+.theme-preset-accent-bubblegum {
+  background-color: rgb(var(--theme-preset-accent-bubblegum));
 }
 
-.theme-preset-font-display-whoosh {
-  font-family: var(--theme-preset-font-display-whoosh);
-  color: rgb(var(--theme-preset-font-color-whoosh));
+.theme-preset-font-display-bubblegum {
+  font-family: var(--theme-preset-font-display-bubblegum);
+  color: rgb(var(--theme-preset-font-color-bubblegum));
 }
 
-.theme-preset-font-ui-whoosh {
-  font-family: var(--theme-preset-font-ui-whoosh);
-  color: rgb(var(--theme-preset-font-color-whoosh));
+.theme-preset-font-ui-bubblegum {
+  font-family: var(--theme-preset-font-ui-bubblegum);
+  color: rgb(var(--theme-preset-font-color-bubblegum));
 }
 
-.theme-preset-background-eldergold-01 {
-  background-color: rgb(var(--theme-preset-background-eldergold-01));
+.theme-preset-background-elderbean-01 {
+  background-color: rgb(var(--theme-preset-background-elderbean-01));
 }
 
-.theme-preset-background-eldergold-02 {
-  background-color: rgb(var(--theme-preset-background-eldergold-02));
+.theme-preset-background-elderbean-02 {
+  background-color: rgb(var(--theme-preset-background-elderbean-02));
 }
 
-.theme-preset-background-eldergold-03 {
-  background-color: rgb(var(--theme-preset-background-eldergold-03));
+.theme-preset-background-elderbean-03 {
+  background-color: rgb(var(--theme-preset-background-elderbean-03));
 }
 
-.theme-preset-background-eldergold-04 {
-  background-color: rgb(var(--theme-preset-background-eldergold-04));
+.theme-preset-background-elderbean-04 {
+  background-color: rgb(var(--theme-preset-background-elderbean-04));
 }
 
-.theme-preset-accent-eldergold {
-  background-color: rgb(var(--theme-preset-accent-eldergold));
+.theme-preset-accent-elderbean {
+  background-color: rgb(var(--theme-preset-accent-elderbean));
 }
 
-.theme-preset-font-display-eldergold {
-  font-family: var(--theme-preset-font-display-eldergold);
-  color: rgb(var(--theme-preset-font-color-eldergold));
+.theme-preset-font-display-elderbean {
+  font-family: var(--theme-preset-font-display-elderbean);
+  color: rgb(var(--theme-preset-font-color-elderbean));
 }
 
-.theme-preset-font-ui-eldergold {
-  font-family: var(--theme-preset-font-ui-eldergold);
-  color: rgb(var(--theme-preset-font-color-eldergold));
+.theme-preset-font-ui-elderbean {
+  font-family: var(--theme-preset-font-ui-elderbean);
+  color: rgb(var(--theme-preset-font-color-elderbean));
 }
