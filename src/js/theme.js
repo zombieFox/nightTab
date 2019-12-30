@@ -109,36 +109,35 @@ var theme = (function() {
 
   mod.preset = {
     set: function(name) {
+      var selectedPreset = mod.preset.get(name);
       helper.setObject({
         object: state.get.current(),
         path: "theme.style",
-        newValue: mod.preset.all[name].style
+        newValue: selectedPreset.style
       });
       helper.setObject({
         object: state.get.current(),
-        path: "theme.font.display",
-        newValue: mod.preset.all[name].font.display
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.font.ui",
-        newValue: mod.preset.all[name].font.ui
+        path: "theme.font",
+        newValue: selectedPreset.font
       });
       helper.setObject({
         object: state.get.current(),
         path: "theme.color",
-        newValue: mod.preset.all[name].color
+        newValue: selectedPreset.color
       });
       helper.setObject({
         object: state.get.current(),
         path: "theme.accent.current",
-        newValue: mod.preset.all[name].accent
+        newValue: selectedPreset.accent
       });
       helper.setObject({
         object: state.get.current(),
         path: "theme.radius",
-        newValue: mod.preset.all[name].radius
+        newValue: selectedPreset.radius
       });
+    },
+    get: function(name) {
+      return JSON.parse(JSON.stringify(mod.preset.all[name]));
     },
     all: {
       nighttab: {
