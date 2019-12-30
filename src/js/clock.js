@@ -34,6 +34,9 @@ var clock = (function() {
             if (!state.get.current().header.clock.hour24.show && timeDateNow.hours() > 12) {
               timeStrings.hours = timeStrings.hours - 12;
             };
+            if (!state.get.current().header.clock.hour24.show && timeDateNow.hours() == 0) {
+              timeStrings.hours = 12;
+            };
             timeStrings.hours = helper.toWords(timeStrings.hours);
             if (state.get.current().header.clock.hour24.show && timeDateNow.hours() > 0 && timeDateNow.hours() < 10) {
               timeStrings.hours = "Zero " + timeStrings.hours;
@@ -43,6 +46,9 @@ var clock = (function() {
             timeStrings.hours = timeDateNow.hours();
             if (!state.get.current().header.clock.hour24.show && timeDateNow.hours() > 12) {
               timeStrings.hours = timeStrings.hours - 12;
+            };
+            if (!state.get.current().header.clock.hour24.show && timeDateNow.hours() == 0) {
+              timeStrings.hours = 12;
             };
             if (state.get.current().header.clock.hour24.show && timeDateNow.hours() < 10) {
               timeStrings.hours = "0" + timeStrings.hours;
