@@ -1416,6 +1416,7 @@ var link = (function() {
         shade.open({
           action: function() {
             add.item.close();
+            modal.close();
           }
         });
         pagelock.lock();
@@ -1424,7 +1425,6 @@ var link = (function() {
       close: function() {
         stagedLink.reset();
         autoSuggest.close();
-        modal.close();
         pagelock.unlock();
       },
       selectGroup: function(groupIndex) {
@@ -1468,6 +1468,7 @@ var link = (function() {
         shade.open({
           action: function() {
             add.group.close();
+            modal.close();
           }
         });
         pagelock.lock();
@@ -1476,7 +1477,6 @@ var link = (function() {
       close: function() {
         stagedGroup.reset();
         autoSuggest.close();
-        modal.close();
         pagelock.unlock();
       }
     }
@@ -1522,6 +1522,7 @@ var link = (function() {
         shade.open({
           action: function() {
             edit.item.close();
+            modal.close();
           }
         });
         pagelock.lock();
@@ -1529,7 +1530,6 @@ var link = (function() {
       close: function() {
         stagedLink.reset();
         autoSuggest.close();
-        modal.close();
         pagelock.unlock();
       }
     },
@@ -1567,6 +1567,7 @@ var link = (function() {
         shade.open({
           action: function() {
             edit.group.close();
+            modal.close();
           }
         });
         pagelock.lock();
@@ -1574,7 +1575,6 @@ var link = (function() {
       close: function() {
         stagedGroup.reset();
         autoSuggest.close();
-        modal.close();
         pagelock.unlock();
       }
     }

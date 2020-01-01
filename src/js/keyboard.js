@@ -16,18 +16,22 @@ var keyboard = (function() {
           autoSuggest.close();
         } else if (state.get.current().link.edit) {
           link.edit.item.close();
+          modal.close();
           shade.close();
           data.save();
         } else if (state.get.current().link.add) {
           link.add.item.close();
+          modal.close();
           shade.close();
           data.save();
         } else if (state.get.current().group.edit) {
           link.edit.group.close();
+          modal.close();
           shade.close();
           data.save();
         } else if (state.get.current().group.add) {
           link.add.group.close();
+          modal.close();
           shade.close();
           data.save();
         } else if (state.get.current().modal) {
