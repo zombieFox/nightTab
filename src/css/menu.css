@@ -190,6 +190,8 @@
 
 @media (min-width: 1100px) {
   .menu-nav-area-tab .menu-nav-button {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
     flex-basis: auto;
     max-width: inherit;
   }
