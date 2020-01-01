@@ -1184,12 +1184,14 @@ var link = (function() {
       var linkEmpty = helper.node("div|class:link-empty link-item");
       var paraWrap = helper.node("div|class:p-wrap");
       var para = helper.node("p:No Groups or Bookmarks|class:pb-0");
-      var buttonWrap = helper.node("div|class:button-wrap form-inline mb-0 mr-0");
+      var formInline = helper.node("div|class:form-inline");
+      var buttonWrap = helper.node("div|class:button-wrap mb-0 mr-0");
       var addButton = helper.node("button:Add a Bookmark|class:button mb-0,type:button,tabindex:1");
       buttonWrap.appendChild(addButton);
+      formInline.appendChild(buttonWrap);
       paraWrap.appendChild(para);
       linkEmpty.appendChild(paraWrap);
-      linkEmpty.appendChild(buttonWrap);
+      linkEmpty.appendChild(formInline);
       groupBody.appendChild(linkEmpty);
       group.appendChild(groupBody);
       addButton.addEventListener("click", function(event) {
@@ -1201,12 +1203,14 @@ var link = (function() {
       var linkEmpty = helper.node("div|class:link-empty link-item");
       var paraWrap = helper.node("div|class:p-wrap");
       var para = helper.node("p:Empty Group|class:pb-0");
-      var buttonWrap = helper.node("div|class:button-wrap form-inline mb-0 mr-0");
+      var formInline = helper.node("div|class:form-inline");
+      var buttonWrap = helper.node("div|class:button-wrap mb-0 mr-0");
       var addButton = helper.node("button:Add a Bookmark|class:button mb-0,type:button,tabindex:1");
       buttonWrap.appendChild(addButton);
+      formInline.appendChild(buttonWrap);
       paraWrap.appendChild(para);
       linkEmpty.appendChild(paraWrap);
-      linkEmpty.appendChild(buttonWrap);
+      linkEmpty.appendChild(formInline);
       addButton.addEventListener("click", function(event) {
         link.add.item.open();
         link.add.item.selectGroup(groupIndex);
