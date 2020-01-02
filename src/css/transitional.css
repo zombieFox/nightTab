@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   font-size: 1em;
-  font-family: var(--font-display);
+  font-family: var(--theme-font-display-name);
+  font-weight: var(--theme-font-display-weight);
+  font-style: var(--theme-font-display-style);
   color: rgb(var(--theme-color-14));
   width: 100%;
   min-height: 2.5em;

@@ -244,8 +244,16 @@ var state = (function() {
         }
       },
       font: {
-        display: "",
-        ui: ""
+        display: {
+          name: "",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "",
+          weight: 400,
+          style: "normal"
+        }
       },
       style: "dark",
       radius: 0.25
@@ -368,8 +376,16 @@ var state = (function() {
         }
       },
       font: {
-        display: "",
-        ui: ""
+        display: {
+          name: "",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "",
+          weight: 400,
+          style: "normal"
+        }
       },
       style: "dark",
       radius: 0.25

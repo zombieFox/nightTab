@@ -78,11 +78,15 @@
 }
 
 .theme-preset-font-display {
+  font-weight: 400;
+  font-style: normal;
   font-size: 1em;
   margin-bottom: 0.25em;
 }
 
 .theme-preset-font-ui {
+  font-weight: 400;
+  font-style: normal;
   font-size: 0.8em;
 }
 

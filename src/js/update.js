@@ -729,6 +729,19 @@ var update = (function() {
         ui: ""
       };
       return data;
+    },
+    "4.7.0": function(data) {
+      data.state.theme.font.display = {
+        name: data.state.theme.font.display,
+        weight: 400,
+        style: "normal"
+      };
+      data.state.theme.font.ui = {
+        name: data.state.theme.font.ui,
+        weight: 400,
+        style: "normal"
+      };
+      return data;
     }
   };
 

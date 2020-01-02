@@ -142,8 +142,16 @@ var theme = (function() {
     all: {
       nighttab: {
         font: {
-          display: "Fjalla One Regular",
-          ui: "Open Sans Regular"
+          display: {
+            name: "Fjalla One Regular",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Open Sans",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -167,8 +175,16 @@ var theme = (function() {
       },
       midnight: {
         font: {
-          display: "Gugi",
-          ui: "Lato"
+          display: {
+            name: "Gugi",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Lato",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -192,8 +208,16 @@ var theme = (function() {
       },
       pym: {
         font: {
-          display: "Autour One",
-          ui: "Solway"
+          display: {
+            name: "Autour One",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Solway",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -217,8 +241,16 @@ var theme = (function() {
       },
       cruiser: {
         font: {
-          display: "Alatsi",
-          ui: "Source Sans Pro"
+          display: {
+            name: "Alatsi",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Source Sans Pro",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -242,8 +274,16 @@ var theme = (function() {
       },
       sharpmint: {
         font: {
-          display: "Unica One",
-          ui: "Montserrat"
+          display: {
+            name: "Unica One",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Montserrat",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -267,8 +307,16 @@ var theme = (function() {
       },
       snowglow: {
         font: {
-          display: "Righteous",
-          ui: "Raleway"
+          display: {
+            name: "Righteous",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Raleway",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -292,8 +340,16 @@ var theme = (function() {
       },
       rumble: {
         font: {
-          display: "Odibee Sans",
-          ui: "Roboto Condensed"
+          display: {
+            name: "Odibee Sans",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Roboto Condensed",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -317,8 +373,16 @@ var theme = (function() {
       },
       sollight: {
         font: {
-          display: "Fredoka One",
-          ui: "Muli"
+          display: {
+            name: "Fredoka One",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Muli",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -342,8 +406,16 @@ var theme = (function() {
       },
       artdeco: {
         font: {
-          display: "Poiret One",
-          ui: "Lato"
+          display: {
+            name: "Poiret One",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Lato",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -367,8 +439,16 @@ var theme = (function() {
       },
       macaroon: {
         font: {
-          display: "Calistoga",
-          ui: "Source Sans Pro"
+          display: {
+            name: "Calistoga",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Source Sans Pro",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -392,8 +472,16 @@ var theme = (function() {
       },
       hotpepper: {
         font: {
-          display: "Big Shoulders Display",
-          ui: "Montserrat"
+          display: {
+            name: "Big Shoulders Display",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Montserrat",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -417,8 +505,16 @@ var theme = (function() {
       },
       steel: {
         font: {
-          display: "Abel",
-          ui: "Raleway"
+          display: {
+            name: "Abel",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Raleway",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -442,8 +538,16 @@ var theme = (function() {
       },
       outrun: {
         font: {
-          display: "Major Mono Display",
-          ui: "Roboto Condensed"
+          display: {
+            name: "Major Mono Display",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Roboto Condensed",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -467,8 +571,16 @@ var theme = (function() {
       },
       pumpkin: {
         font: {
-          display: "Girassol",
-          ui: "Muli"
+          display: {
+            name: "Girassol",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Muli",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -492,8 +604,16 @@ var theme = (function() {
       },
       bubblegum: {
         font: {
-          display: "Monoton",
-          ui: "Lato"
+          display: {
+            name: "Monoton",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Lato",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -517,8 +637,16 @@ var theme = (function() {
       },
       elderbean: {
         font: {
-          display: "Life Savers",
-          ui: "Quicksand"
+          display: {
+            name: "Life Savers",
+            weight: 400,
+            style: "normal"
+          },
+          ui: {
+            name: "Quicksand",
+            weight: 400,
+            style: "normal"
+          },
         },
         color: {
           hsl: {
@@ -658,68 +786,90 @@ var theme = (function() {
     delay: {
       display: function() {
         clearTimeout(_timerFontDisplay);
-        _timerFontDisplay = setTimeout(render.font.display, 300);
+        _timerFontDisplay = setTimeout(render.font.display.name, 600);
       },
       ui: function() {
         clearTimeout(_timerFontUi);
-        _timerFontUi = setTimeout(render.font.ui, 300);
+        _timerFontUi = setTimeout(render.font.ui.name, 600);
       }
     },
-    display: function() {
-      var name = state.get.current().theme.font.display.trim().replace(/\s+/g, "+");
-      var html = helper.e("html");
-      var link = helper.e(".theme-font-display-link");
-      if (link) {
-        link.remove();
-      };
-      html.style.removeProperty("--font-display");
-      if (name != "") {
-        var head = helper.e("head");
-        var link = helper.makeNode({
-          tag: "link",
-          attr: [{
-            key: "class",
-            value: "theme-font-display-link"
-          }, {
-            key: "href",
-            value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-          }, {
-            key: "rel",
-            value: "stylesheet"
-          }]
-        });
-        head.appendChild(link);
-        html.style.setProperty("--font-display", "\"" + state.get.current().theme.font.display.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Fjalla One Regular\", sans-serif");
-      };
+    display: {
+      name: function() {
+        var name = state.get.current().theme.font.display.name.trim().replace(/\s+/g, "+");
+        var html = helper.e("html");
+        var link = helper.e(".theme-font-display-name-link");
+        if (link) {
+          link.remove();
+        };
+        html.style.removeProperty("--theme-font-display-name");
+        if (name != "") {
+          var head = helper.e("head");
+          var link = helper.makeNode({
+            tag: "link",
+            attr: [{
+              key: "class",
+              value: "theme-font-display-name-link"
+            }, {
+              key: "href",
+              value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+            }, {
+              key: "rel",
+              value: "stylesheet"
+            }]
+          });
+          head.appendChild(link);
+          html.style.setProperty("--theme-font-display-name", "\"" + state.get.current().theme.font.display.name.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Fjalla One Regular\", sans-serif");
+        };
+      },
+      weight: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--theme-font-display-weight", state.get.current().theme.font.display.weight);
+      },
+      style: function() {
+        var html = helper.e("html");
+        html.style.removeProperty("--theme-font-display-style");
+        html.style.setProperty("--theme-font-display-style", state.get.current().theme.font.display.style);
+      }
     },
-    ui: function() {
-      var name = state.get.current().theme.font.ui.trim().replace(/\s+/g, "+");
-      var html = helper.e("html");
-      var link = helper.eA(".theme-font-ui-link");
-      if (link.length > 0) {
-        link.forEach(function(arrayItem, item) {
-          arrayItem.remove();
-        });
-        html.style.removeProperty("--font-ui");
-      };
-      if (name != "") {
-        var head = helper.e("head");
-        var link = helper.makeNode({
-          tag: "link",
-          attr: [{
-            key: "class",
-            value: "theme-font-ui-link"
-          }, {
-            key: "href",
-            value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-          }, {
-            key: "rel",
-            value: "stylesheet"
-          }]
-        });
-        head.appendChild(link);
-        html.style.setProperty("--font-ui", "\"" + state.get.current().theme.font.ui.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Open Sans Regular\", sans-serif");
-      };
+    ui: {
+      name: function() {
+        var name = state.get.current().theme.font.ui.name.trim().replace(/\s+/g, "+");
+        var html = helper.e("html");
+        var link = helper.eA(".theme-font-ui-name-link");
+        if (link.length > 0) {
+          link.forEach(function(arrayItem, item) {
+            arrayItem.remove();
+          });
+          html.style.removeProperty("--theme-font-ui-name");
+        };
+        if (name != "") {
+          var head = helper.e("head");
+          var link = helper.makeNode({
+            tag: "link",
+            attr: [{
+              key: "class",
+              value: "theme-font-ui-name-link"
+            }, {
+              key: "href",
+              value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+            }, {
+              key: "rel",
+              value: "stylesheet"
+            }]
+          });
+          head.appendChild(link);
+          html.style.setProperty("--theme-font-ui-name", "\"" + state.get.current().theme.font.ui.name.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Open Sans\", sans-serif");
+        };
+      },
+      weight: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--theme-font-ui-weight", state.get.current().theme.font.ui.weight);
+      },
+      style: function() {
+        var html = helper.e("html");
+        html.style.removeProperty("--theme-font-ui-style");
+        html.style.setProperty("--theme-font-ui-style", state.get.current().theme.font.ui.style);
+      }
     }
   };
 
@@ -767,10 +917,10 @@ var theme = (function() {
       };
       html.style.setProperty("--theme-preset-accent-" + key, preset.accent.r + ", " + preset.accent.g + ", " + preset.accent.b);
       if (preset.font.display != "") {
-        html.style.setProperty("--theme-preset-font-display-" + key, "\"" + preset.font.display + "\", sans-serif");
+        html.style.setProperty("--theme-preset-font-display-" + key, "\"" + preset.font.display.name + "\", sans-serif");
       };
       if (preset.font.ui != "") {
-        html.style.setProperty("--theme-preset-font-ui-" + key, "\"" + preset.font.ui + "\", sans-serif");
+        html.style.setProperty("--theme-preset-font-ui-" + key, "\"" + preset.font.ui.name + "\", sans-serif");
       };
       if (preset.style == "dark") {
         html.style.setProperty("--theme-preset-font-color-" + key, "var(--theme-white)");
@@ -816,29 +966,16 @@ var theme = (function() {
     mod.preset.set(name);
   };
 
-  var font = {
-    delay: {
-      display: function() {
-        render.font.delay.display();
-      },
-      ui: function() {
-        render.font.delay.ui();
-      }
-    },
-    display: function() {
-      render.font.display();
-    },
-    ui: function() {
-      render.font.ui();
-    }
-  };
-
   var init = function() {
     style.check();
     accent.random();
     mod.accent.random();
-    render.font.display();
-    render.font.ui();
+    render.font.display.name();
+    render.font.display.weight();
+    render.font.display.style();
+    render.font.ui.name();
+    render.font.ui.weight();
+    render.font.ui.style();
     render.color.shade();
     render.accent.color();
     render.radius();
@@ -852,7 +989,6 @@ var theme = (function() {
     render: render,
     style: style,
     accent: accent,
-    font: font,
     preset: preset
   };
 

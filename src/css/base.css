@@ -12,7 +12,9 @@ body {
   color: rgb(var(--theme-style-text));
   font-size: 1rem;
   line-height: 1.6;
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
   display: flex;
   flex-direction: column;
   justify-content: center;

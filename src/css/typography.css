@@ -12,33 +12,45 @@ h6 {
 
 h1 {
   font-size: 1.5em;
-  font-family: var(--font-display);
+  font-family: var(--theme-font-display-name);
+  font-weight: var(--theme-font-display-weight);
+  font-style: var(--theme-font-display-style);
 }
 
 h2 {
   font-size: 1.2em;
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
 }
 
 h3 {
   font-size: 1.1em;
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
 }
 
 h4 {
   font-size: 1em;
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
 }
 
 h5 {
   font-size: 1em;
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
   font-weight: bold;
 }
 
 h6 {
   font-size: 0.75em;
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
   font-weight: bold;
 }
 
@@ -68,7 +80,9 @@ b,
 caption,
 strong {
   color: rgb(var(--theme-style-text));
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
   font-weight: bold;
 }
 
@@ -147,7 +161,9 @@ table thead tr th {
   padding: 0.5em;
   margin: 0;
   text-align: left;
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
   font-weight: bold;
   box-sizing: border-box;
 }

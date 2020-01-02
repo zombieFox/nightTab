@@ -50,7 +50,9 @@
   border-radius: calc(var(--theme-radius) * 2);
   color: rgb(var(--theme-color-18));
   font-size: 0.8em;
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
   text-align: center;
   position: relative;
   display: block;

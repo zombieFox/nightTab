@@ -3,6 +3,12 @@
   --theme-root-font-size:                               14px;
   --theme-accent:                                       250, 130, 0;
   --theme-radius:                                       0.2rem;
+  --theme-font-display-name:                            "Fjalla One Regular", sans-serif;
+  --theme-font-display-weight:                          400;
+  --theme-font-display-style:                           "normal";
+  --theme-font-ui-name:                                 "Open Sans", sans-serif;
+  --theme-font-ui-weight:                               400;
+  --theme-font-ui-style:                                "normal";
   --theme-black:                                        0, 0, 0;
   --theme-white:                                        255, 255, 255;
   --theme-shade-neg-10:                                 25, 25, 25;
@@ -292,9 +298,6 @@
   --edge-shadow:                                        inset 0 0 0 var(--layout-line-width) rgb(var(--theme-accent)),
                                                         inset 0 0 0 calc(var(--layout-line-width) * 4) rgba(var(--theme-accent), 0.1),
                                                         inset 0 0 0 calc(var(--layout-line-width) * 8) rgba(var(--theme-accent), 0.1);
-  /* font */
-  --font-display:                                       "Fjalla One Regular", sans-serif;
-  --font-ui:                                            "Open Sans Regular", sans-serif;
   /* z index */
   --z-index-background:                                 1000;
   --z-index-link:                                       2000;

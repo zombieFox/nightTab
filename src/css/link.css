@@ -564,7 +564,9 @@
 }
 
 .link-display-letter {
-  font-family: var(--font-display);
+  font-family: var(--theme-font-display-name);
+  font-weight: var(--theme-font-display-weight);
+  font-style: var(--theme-font-display-style);
   color: rgb(var(--theme-accent));
   line-height: 1;
   white-space: nowrap;
@@ -572,6 +574,8 @@
 }
 
 .link-display-icon {
+  font-weight: 400;
+  font-style: normal;
   color: rgb(var(--theme-accent));
   transition: color var(--layout-timing-extra-fast);
 }
@@ -602,7 +606,9 @@
 .link-display-name {
   margin: 0;
   font-size: var(--link-item-display-name-size);
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
   color: rgb(var(--theme-color-12));
   display: none;
   transition: color var(--layout-timing-extra-fast);
@@ -873,7 +879,9 @@
 .link-url-text {
   margin: 0;
   font-size: 0.7em;
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

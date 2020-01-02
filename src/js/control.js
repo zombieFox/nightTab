@@ -2556,8 +2556,12 @@ var control = (function() {
       }));
       render.update();
       render.class();
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2569,8 +2573,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("midnight");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2584,8 +2592,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("pym");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2599,8 +2611,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("cruiser");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2614,8 +2630,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("sharpmint");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2629,8 +2649,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("snowglow");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2644,8 +2668,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("rumble");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2659,8 +2687,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("sollight");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2674,8 +2706,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("artdeco");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2689,8 +2725,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("macaroon");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2704,8 +2744,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("hotpepper");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2719,8 +2763,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("steel");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2734,8 +2782,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("outrun");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2749,8 +2801,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("pumpkin");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2764,8 +2820,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("bubblegum");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2779,8 +2839,12 @@ var control = (function() {
     type: "button",
     func: function() {
       theme.preset("elderbean");
-      theme.render.font.display();
-      theme.render.font.ui();
+      theme.render.font.display.name();
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      theme.render.font.ui.name();
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
       theme.style.check();
       theme.render.color.shade();
       theme.render.accent.color();
@@ -2804,15 +2868,118 @@ var control = (function() {
       theme.style.light();
     }
   }, {
-    element: helper.e(".control-theme-radius"),
-    path: "theme.radius",
-    type: "range",
-    valueMod: ["float"],
-    rangeCountElement: helper.e(".control-theme-radius-count"),
+    element: helper.e(".control-theme-font-display-name"),
+    path: "theme.font.display.name",
+    type: "text",
     func: function() {
-      theme.render.radius();
-      render.class();
+      theme.render.font.delay.display();
+    }
+  }, {
+    element: helper.e(".control-theme-font-display-name-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.font.display.name", helper.getObject({
+        object: state.get.default(),
+        path: "theme.font.display.name"
+      }));
+      theme.render.font.display.name();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-font-display-weight"),
+    path: "theme.font.display.weight",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-font-display-weight-count"),
+    func: function() {
+      theme.render.font.display.weight();
       render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-theme-font-display-weight-style-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.font.display.weight", helper.getObject({
+        object: state.get.default(),
+        path: "theme.font.display.weight"
+      }));
+      mod.setValue("theme.font.display.style", helper.getObject({
+        object: state.get.default(),
+        path: "theme.font.display.style"
+      }));
+      theme.render.font.display.weight();
+      theme.render.font.display.style();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-font-display-style-normal"),
+    path: "theme.font.display.style",
+    type: "radio",
+    func: function() {
+      theme.render.font.display.style();
+    }
+  }, {
+    element: helper.e(".control-theme-font-display-style-italic"),
+    path: "theme.font.display.style",
+    type: "radio",
+    func: function() {
+      theme.render.font.display.style();
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-name"),
+    path: "theme.font.ui.name",
+    type: "text",
+    func: function() {
+      theme.render.font.delay.ui();
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-name-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.font.ui.name", helper.getObject({
+        object: state.get.default(),
+        path: "theme.font.ui.name"
+      }));
+      theme.render.font.ui.name();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-weight"),
+    path: "theme.font.ui.weight",
+    type: "range",
+    rangeCountElement: helper.e(".control-theme-font-ui-weight-count"),
+    func: function() {
+      theme.render.font.ui.weight();
+      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-weight-style-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.font.ui.weight", helper.getObject({
+        object: state.get.default(),
+        path: "theme.font.ui.weight"
+      }));
+      mod.setValue("theme.font.ui.style", helper.getObject({
+        object: state.get.default(),
+        path: "theme.font.ui.style"
+      }));
+      theme.render.font.ui.weight();
+      theme.render.font.ui.style();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-style-normal"),
+    path: "theme.font.ui.style",
+    type: "radio",
+    func: function() {
+      theme.render.font.ui.style();
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-style-italic"),
+    path: "theme.font.ui.style",
+    type: "radio",
+    func: function() {
+      theme.render.font.ui.style();
     }
   }, {
     element: helper.e(".control-theme-radius-default"),
@@ -3019,6 +3186,17 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: helper.e(".control-theme-radius"),
+    path: "theme.radius",
+    type: "range",
+    valueMod: ["float"],
+    rangeCountElement: helper.e(".control-theme-radius-count"),
+    func: function() {
+      theme.render.radius();
+      render.class();
+      render.range.count(this);
+    }
+  }, {
     element: helper.e(".control-theme-accent-randomise"),
     type: "button",
     func: function() {
@@ -3027,20 +3205,6 @@ var control = (function() {
       theme.render.accent.input.picker();
       theme.render.accent.input.hex();
       link.groupAndItems();
-    }
-  }, {
-    element: helper.e(".control-theme-font-display"),
-    path: "theme.font.display",
-    type: "text",
-    func: function() {
-      theme.font.delay.display();
-    }
-  }, {
-    element: helper.e(".control-theme-font-ui"),
-    path: "theme.font.ui",
-    type: "text",
-    func: function() {
-      theme.font.delay.ui();
     }
   }, {
     element: helper.e(".control-background-color-by-theme"),

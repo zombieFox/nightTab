@@ -8,7 +8,9 @@ input[type="submit"] {
   margin: 0 0 1em 0;
   color: rgb(var(--button-text));
   font-size: 1em;
-  font-family: var(--font-ui);
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
   min-height: 2.5em;
   line-height: 1;
   border: 0;
