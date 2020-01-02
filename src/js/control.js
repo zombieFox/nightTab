@@ -2854,6 +2854,19 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: helper.e(".control-theme-custom-add"),
+    type: "button",
+    func: function() {
+      menu.close();
+      theme.custom.add();
+    }
+  }, {
+    element: helper.e(".control-theme-custom-edit"),
+    type: "button",
+    func: function() {
+      theme.custom.edit();
+    }
+  }, {
     element: helper.e(".control-theme-style-dark"),
     path: "theme.style",
     type: "radio",

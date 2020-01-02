@@ -2,6 +2,8 @@ var theme = (function() {
 
   var _timerFontDisplay = null;
   var _timerFontUi = null;
+  var _customThemeName = null;
+  var _customThemeEdit = false;
 
   var mod = {};
 
@@ -671,6 +673,56 @@ var theme = (function() {
     }
   };
 
+  mod.custom = {
+    set: function(data) {
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.style",
+        newValue: data.style
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.font",
+        newValue: data.font
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.color",
+        newValue: data.color
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.accent.current",
+        newValue: data.accent
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.radius",
+        newValue: data.radius
+      });
+    },
+    add: function(name) {
+      var themeName;
+      if (name == null) {
+        themeName = "";
+      } else {
+        themeName = name;
+      };
+      var newTheme = {
+        name: themeName,
+        style: state.get.current().theme.style,
+        font: state.get.current().theme.font,
+        color: state.get.current().theme.color,
+        accent: state.get.current().theme.accent.current,
+        radius: state.get.current().theme.radius
+      };
+      state.get.current().theme.custom.push(newTheme);
+    },
+    remove: function() {
+
+    }
+  };
+
   var render = {};
 
   render.style = {
@@ -916,18 +968,190 @@ var theme = (function() {
         renderPreview("--theme-preset-background-" + key + "-", i, rgb);
       };
       html.style.setProperty("--theme-preset-accent-" + key, preset.accent.r + ", " + preset.accent.g + ", " + preset.accent.b);
-      if (preset.font.display != "") {
-        html.style.setProperty("--theme-preset-font-display-" + key, "\"" + preset.font.display.name + "\", sans-serif");
-      };
-      if (preset.font.ui != "") {
-        html.style.setProperty("--theme-preset-font-ui-" + key, "\"" + preset.font.ui.name + "\", sans-serif");
-      };
-      if (preset.style == "dark") {
-        html.style.setProperty("--theme-preset-font-color-" + key, "var(--theme-white)");
-      } else if (preset.style == "light") {
-        html.style.setProperty("--theme-preset-font-color-" + key, "var(--theme-black)");
-      };
+      // if (preset.font.display != "") {
+      //   html.style.setProperty("--theme-preset-font-display-" + key, "\"" + preset.font.display.name + "\", sans-serif");
+      // };
+      // if (preset.font.ui != "") {
+      //   html.style.setProperty("--theme-preset-font-ui-" + key, "\"" + preset.font.ui.name + "\", sans-serif");
+      // };
+      // if (preset.style == "dark") {
+      //   html.style.setProperty("--theme-preset-font-color-" + key, "var(--theme-white)");
+      // } else if (preset.style == "light") {
+      //   html.style.setProperty("--theme-preset-font-color-" + key, "var(--theme-black)");
+      // };
     };
+  };
+
+  render.custom = {
+    all: function() {
+      var themeCustomSaved = helper.e(".theme-custom-saved");
+      var customThemes = state.get.current().theme.custom;
+      var formInline = helper.node("div|class:form-inline")
+      customThemes.forEach(function(arrayItem, index) {
+        var themeCustom = helper.node("div|class:theme-custom");
+        var buttonWrap = helper.node("div|class:button-wrap")
+        var themeCustomButton = helper.node("button|class:theme-custom-button button mb-0,tabindex:-1");
+        var themeCustomPreview = helper.node("span|class:theme-custom-preview");
+        var themeCustomBackground01 = helper.node("span|class:theme-custom-background-01");
+        var themeCustomBackground02 = helper.node("span|class:theme-custom-background-02");
+        var themeCustomBackground03 = helper.node("span|class:theme-custom-background-03");
+        var themeCustomBackground04 = helper.node("span|class:theme-custom-background-04");
+        var themeCustomAccent = helper.node("span|class:theme-custom-accent");
+        var themeCustomName = helper.node("span:" + arrayItem.name + "|class:theme-custom-name");
+        var themeCustomRemoveButton = helper.node("button|class:theme-custom-remove-button button mb-0,tabindex:-1");
+        var themeCustomRemoveButtonIcon = helper.node("spa|class:button-icon icon-close");
+
+
+        var colors = [];
+        var shadeSteps = 4;
+        var lightShift = 12;
+        var renderPreview = function(name, index, rgb) {
+          for (var key in rgb) {
+            if (rgb[key] < 0) {
+              rgb[key] = 0;
+            } else if (rgb[key] > 255) {
+              rgb[key] = 255;
+            };
+            rgb[key] = parseInt(rgb[key], 10);
+          };
+          if (index < 10) {
+            index = "0" + index;
+          } else {
+            index = index;
+          };
+          colors.push([rgb.r, rgb.g, rgb.b]);
+        };
+        var rgb = arrayItem.color.rgb;
+        var hsl = helper.convertColor.rgb.hsl(rgb);
+        for (var i = 1; i <= shadeSteps; i++) {
+          if (i > 1) {
+            if (arrayItem.style == "dark") {
+              rgb = helper.convertColor.hsl.rgb({
+                h: hsl.h,
+                s: hsl.s,
+                l: hsl.l - (lightShift * (i - 1))
+              });
+            } else if (arrayItem.style == "light") {
+              rgb = helper.convertColor.hsl.rgb({
+                h: hsl.h,
+                s: hsl.s,
+                l: hsl.l + (lightShift * (i - 1))
+              });
+            };
+          };
+          renderPreview("--theme-preset-background-" + "-", i, rgb);
+        };
+
+        themeCustomBackground01.style.setProperty("background-color", "rgb(" + colors[0][0] + ", " + colors[0][1] + ", " + colors[0][2] + ")");
+        themeCustomBackground02.style.setProperty("background-color", "rgb(" + colors[1][0] + ", " + colors[1][1] + ", " + colors[1][2] + ")");
+        themeCustomBackground03.style.setProperty("background-color", "rgb(" + colors[2][0] + ", " + colors[2][1] + ", " + colors[2][2] + ")");
+        themeCustomBackground04.style.setProperty("background-color", "rgb(" + colors[3][0] + ", " + colors[3][1] + ", " + colors[3][2] + ")");
+        themeCustomAccent.style.setProperty("background-color", "rgb(" + arrayItem.accent.r + ", " + arrayItem.accent.g + ", " + arrayItem.accent.b + ")");
+
+        themeCustomPreview.appendChild(themeCustomBackground01);
+        themeCustomPreview.appendChild(themeCustomBackground02);
+        themeCustomPreview.appendChild(themeCustomBackground03);
+        themeCustomPreview.appendChild(themeCustomBackground04);
+        themeCustomPreview.appendChild(themeCustomAccent);
+        themeCustomPreview.appendChild(themeCustomName);
+        themeCustomButton.appendChild(themeCustomPreview);
+        themeCustomRemoveButton.appendChild(themeCustomRemoveButtonIcon);
+        themeCustom.appendChild(themeCustomButton);
+        themeCustom.appendChild(themeCustomRemoveButton);
+        buttonWrap.appendChild(themeCustom);
+        formInline.appendChild(buttonWrap);
+
+
+
+        themeCustomButton.addEventListener("click", function() {
+          mod.custom.set(JSON.parse(JSON.stringify(arrayItem)));
+          render.font.display.name();
+          render.font.display.weight();
+          render.font.display.style();
+          render.font.ui.name();
+          render.font.ui.weight();
+          render.font.ui.style();
+          style.check();
+          render.color.shade();
+          render.accent.color();
+          render.radius();
+          link.groupAndItems();
+          control.render.update();
+          control.render.class();
+          data.save();
+        }, false);
+
+      });
+      themeCustomSaved.appendChild(formInline);
+    },
+    add: function() {
+      var form = function() {
+        var form = helper.node("form|class:group-form");
+        var fieldset = helper.node("fieldset");
+        var inputWrap = helper.node("div|class:input-wrap");
+        var label = helper.node("label:Name|for:theme-name");
+        var input = helper.node("input|id:theme-name,class:theme-name mb-0,type:text,tabindex:1,placeholder:Example theme,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+        inputWrap.appendChild(label);
+        inputWrap.appendChild(input);
+        fieldset.appendChild(inputWrap);
+        form.appendChild(fieldset);
+        input.addEventListener("input", function() {
+          _customThemeName = this.value;
+        }, false);
+        form.addEventListener("keydown", function(event) {
+          if (event.keyCode == 13) {
+            event.preventDefault();
+            return false;
+          };
+        }, false);
+        return form;
+      };
+      var successAction = function() {
+        mod.custom.add(_customThemeName);
+        render.custom.clear();
+        render.custom.all();
+        shade.close();
+        pagelock.unlock();
+        _customThemeName = null;
+      };
+      var cancelAction = function() {
+        shade.close();
+        pagelock.unlock();
+        _customThemeName = null;
+      };
+      modal.open({
+        heading: "Save current Theme",
+        successAction: successAction,
+        cancelAction: cancelAction,
+        actionText: "Save",
+        size: "small",
+        content: form()
+      });
+      shade.open({
+        action: function() {
+          modal.close();
+          pagelock.unlock();
+          _customThemeName = null;
+        }
+      });
+      pagelock.lock();
+    },
+    edit: function() {
+      var html = helper.e("html");
+      if (_customThemeEdit) {
+        _customThemeEdit = false;
+        helper.removeClass(html, "is-theme-custom-edit");
+      } else {
+        _customThemeEdit = true;
+        helper.addClass(html, "is-theme-custom-edit");
+      };
+    },
+    clear: function() {
+      var themeCustom = helper.e(".theme-custom-saved");
+      while (themeCustom.lastChild) {
+        themeCustom.removeChild(themeCustom.lastChild);
+      };
+    }
   };
 
   var accent = {
@@ -966,6 +1190,15 @@ var theme = (function() {
     mod.preset.set(name);
   };
 
+  var custom = {
+    add: function() {
+      render.custom.add();
+    },
+    edit: function() {
+      render.custom.edit();
+    }
+  };
+
   var init = function() {
     style.check();
     accent.random();
@@ -980,6 +1213,7 @@ var theme = (function() {
     render.accent.color();
     render.radius();
     render.preset();
+    render.custom.all();
   };
 
   // exposed methods
@@ -989,7 +1223,8 @@ var theme = (function() {
     render: render,
     style: style,
     accent: accent,
-    preset: preset
+    preset: preset,
+    custom: custom
   };
 
 })();

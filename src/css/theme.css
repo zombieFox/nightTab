@@ -1,33 +1,74 @@
-.theme-preset-button {
+.theme-custom,
+.theme-preset {
   padding: 0;
-  flex-direction: column;
-  justify-content: center;
+  border-radius: var(--theme-radius);
+  width: var(--theme-preset-preview-size);
+  height: var(--theme-preset-preview-size);
+  position: relative;
+  display: block;
   overflow: hidden;
-  max-width: var(--theme-preset-preview-size);
 }
 
-.theme-preset-button .button-text {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
-  margin-left: 0;
+.theme-custom-button,
+.theme-preset-button {
+  border-radius: 0;
+  padding: 0;
+  line-height: 1.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  overflow: hidden;
+  z-index: 2;
+  transition: height var(--layout-timing-extra-fast);
 }
 
+.is-theme-custom-edit .theme-custom-button {
+  height: calc(var(--theme-preset-preview-size) / 2);
+}
+
+.theme-custom-remove-button {
+  border-radius: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: var(--theme-preset-preview-size);
+  height: 0;
+  min-height: inherit;
+  overflow: hidden;
+  z-index: 1;
+  transition: height var(--layout-timing-extra-fast);
+}
+
+.is-theme-custom-edit .theme-custom-remove-button {
+  height: calc(var(--theme-preset-preview-size) / 2);
+}
+
+.theme-custom-button:after,
 .theme-preset-button:after {
   content: none;
 }
 
+.theme-custom-preview,
 .theme-preset-preview {
   width: var(--theme-preset-preview-size);
   height: var(--theme-preset-preview-size);
   position: relative;
 }
 
+.theme-custom-background-01,
+.theme-custom-background-02,
+.theme-custom-background-03,
+.theme-custom-background-04,
+.theme-custom-accent,
 .theme-preset-background-01,
 .theme-preset-background-02,
 .theme-preset-background-03,
 .theme-preset-background-04,
-.theme-preset-accent,
-.theme-preset-font {
+.theme-preset-accent {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -37,86 +78,89 @@
   transition: clip-path var(--layout-timing-extra-fast);
 }
 
+.theme-custom-background-01,
 .theme-preset-background-01 {
   z-index: 1;
 }
 
+.theme-custom-background-02,
 .theme-preset-background-02 {
   z-index: 2;
   clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 70%);
   transition-delay: 0s;
 }
 
+.theme-custom-background-03,
 .theme-preset-background-03 {
   z-index: 3;
   clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%);
   transition-delay: 0s;
 }
 
+.theme-custom-background-04,
 .theme-preset-background-04 {
   z-index: 4;
   clip-path: polygon(100% 30%, 100% 100%, 30% 100%);
   transition-delay: 0s;
 }
 
+.theme-custom-accent,
 .theme-preset-accent {
   clip-path: circle(30% at 100% 100%);
   z-index: 5;
 }
 
-.theme-preset-font {
-  padding: 0.5em;
-  line-height: 1.2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transform: scale(1);
-  white-space: initial;
-  transition: transform var(--layout-timing-extra-fast);
+.theme-custom-name,
+.theme-preset-name {
+  max-width: calc(100% - 2em);
+  max-height: calc(100% - 2em);
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  display: block;
   z-index: 6;
-}
-
-.theme-preset-font-display {
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1em;
-  margin-bottom: 0.25em;
-}
-
-.theme-preset-font-ui {
-  font-weight: 400;
+  text-align: left;
+  color: rgb(var(--theme-style-text));
+  font-weight: 700;
   font-style: normal;
   font-size: 0.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: initial;
+  transform: scale(1);
+  transition: transform var(--layout-timing-extra-fast);
 }
 
+.theme-custom-button:focus .theme-custom-background-02,
+.theme-custom-button:hover .theme-custom-background-02,
 .theme-preset-button:focus .theme-preset-background-02,
 .theme-preset-button:hover .theme-preset-background-02 {
   clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 60%);
   transition-delay: var(--layout-duration-01);
 }
 
+.theme-custom-button:focus .theme-custom-background-03,
+.theme-custom-button:hover .theme-custom-background-03,
 .theme-preset-button:focus .theme-preset-background-03,
 .theme-preset-button:hover .theme-preset-background-03 {
   clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 90%);
   transition-delay: var(--layout-duration-02);
 }
 
+.theme-custom-button:focus .theme-custom-background-04,
+.theme-custom-button:hover .theme-custom-background-04,
 .theme-preset-button:focus .theme-preset-background-04,
 .theme-preset-button:hover .theme-preset-background-04 {
   clip-path: polygon(100% 20%, 100% 100%, 20% 100%);
   transition-delay: var(--layout-duration-03);
 }
 
+.theme-custom-button:focus .theme-custom-accent,
+.theme-custom-button:hover .theme-custom-accent,
 .theme-preset-button:focus .theme-preset-accent,
 .theme-preset-button:hover .theme-preset-accent {
   clip-path: circle(40% at 100% 100%);
   transition-delay: var(--layout-duration-04);
-}
-
-.theme-preset-button:hover .theme-preset-font,
-.theme-preset-button:focus .theme-preset-font {
-  transform: scale(1.1);
 }
 
 .theme-preset-background-nighttab-01 {
@@ -139,16 +183,6 @@
   background-color: rgb(var(--theme-preset-accent-nighttab));
 }
 
-.theme-preset-font-display-nighttab {
-  font-family: var(--theme-preset-font-display-nighttab);
-  color: rgb(var(--theme-preset-font-color-nighttab));
-}
-
-.theme-preset-font-ui-nighttab {
-  font-family: var(--theme-preset-font-ui-nighttab);
-  color: rgb(var(--theme-preset-font-color-nighttab));
-}
-
 .theme-preset-background-midnight-01 {
   background-color: rgb(var(--theme-preset-background-midnight-01));
 }
@@ -167,16 +201,6 @@
 
 .theme-preset-accent-midnight {
   background-color: rgb(var(--theme-preset-accent-midnight));
-}
-
-.theme-preset-font-display-midnight {
-  font-family: var(--theme-preset-font-display-midnight);
-  color: rgb(var(--theme-preset-font-color-midnight));
-}
-
-.theme-preset-font-ui-midnight {
-  font-family: var(--theme-preset-font-ui-midnight);
-  color: rgb(var(--theme-preset-font-color-midnight));
 }
 
 .theme-preset-background-pym-01 {
@@ -199,16 +223,6 @@
   background-color: rgb(var(--theme-preset-accent-pym));
 }
 
-.theme-preset-font-display-pym {
-  font-family: var(--theme-preset-font-display-pym);
-  color: rgb(var(--theme-preset-font-color-pym));
-}
-
-.theme-preset-font-ui-pym {
-  font-family: var(--theme-preset-font-ui-pym);
-  color: rgb(var(--theme-preset-font-color-pym));
-}
-
 .theme-preset-background-cruiser-01 {
   background-color: rgb(var(--theme-preset-background-cruiser-01));
 }
@@ -227,16 +241,6 @@
 
 .theme-preset-accent-cruiser {
   background-color: rgb(var(--theme-preset-accent-cruiser));
-}
-
-.theme-preset-font-display-cruiser {
-  font-family: var(--theme-preset-font-display-cruiser);
-  color: rgb(var(--theme-preset-font-color-cruiser));
-}
-
-.theme-preset-font-ui-cruiser {
-  font-family: var(--theme-preset-font-ui-cruiser);
-  color: rgb(var(--theme-preset-font-color-cruiser));
 }
 
 .theme-preset-background-sharpmint-01 {
@@ -259,16 +263,6 @@
   background-color: rgb(var(--theme-preset-accent-sharpmint));
 }
 
-.theme-preset-font-display-sharpmint {
-  font-family: var(--theme-preset-font-display-sharpmint);
-  color: rgb(var(--theme-preset-font-color-sharpmint));
-}
-
-.theme-preset-font-ui-sharpmint {
-  font-family: var(--theme-preset-font-ui-sharpmint);
-  color: rgb(var(--theme-preset-font-color-sharpmint));
-}
-
 .theme-preset-background-snowglow-01 {
   background-color: rgb(var(--theme-preset-background-snowglow-01));
 }
@@ -287,16 +281,6 @@
 
 .theme-preset-accent-snowglow {
   background-color: rgb(var(--theme-preset-accent-snowglow));
-}
-
-.theme-preset-font-display-snowglow {
-  font-family: var(--theme-preset-font-display-snowglow);
-  color: rgb(var(--theme-preset-font-color-snowglow));
-}
-
-.theme-preset-font-ui-snowglow {
-  font-family: var(--theme-preset-font-ui-snowglow);
-  color: rgb(var(--theme-preset-font-color-snowglow));
 }
 
 .theme-preset-background-rumble-01 {
@@ -319,16 +303,6 @@
   background-color: rgb(var(--theme-preset-accent-rumble));
 }
 
-.theme-preset-font-display-rumble {
-  font-family: var(--theme-preset-font-display-rumble);
-  color: rgb(var(--theme-preset-font-color-rumble));
-}
-
-.theme-preset-font-ui-rumble {
-  font-family: var(--theme-preset-font-ui-rumble);
-  color: rgb(var(--theme-preset-font-color-rumble));
-}
-
 .theme-preset-background-sollight-01 {
   background-color: rgb(var(--theme-preset-background-sollight-01));
 }
@@ -347,16 +321,6 @@
 
 .theme-preset-accent-sollight {
   background-color: rgb(var(--theme-preset-accent-sollight));
-}
-
-.theme-preset-font-display-sollight {
-  font-family: var(--theme-preset-font-display-sollight);
-  color: rgb(var(--theme-preset-font-color-sollight));
-}
-
-.theme-preset-font-ui-sollight {
-  font-family: var(--theme-preset-font-ui-sollight);
-  color: rgb(var(--theme-preset-font-color-sollight));
 }
 
 .theme-preset-background-artdeco-01 {
@@ -379,16 +343,6 @@
   background-color: rgb(var(--theme-preset-accent-artdeco));
 }
 
-.theme-preset-font-display-artdeco {
-  font-family: var(--theme-preset-font-display-artdeco);
-  color: rgb(var(--theme-preset-font-color-artdeco));
-}
-
-.theme-preset-font-ui-artdeco {
-  font-family: var(--theme-preset-font-ui-artdeco);
-  color: rgb(var(--theme-preset-font-color-artdeco));
-}
-
 .theme-preset-background-macaroon-01 {
   background-color: rgb(var(--theme-preset-background-macaroon-01));
 }
@@ -407,16 +361,6 @@
 
 .theme-preset-accent-macaroon {
   background-color: rgb(var(--theme-preset-accent-macaroon));
-}
-
-.theme-preset-font-display-macaroon {
-  font-family: var(--theme-preset-font-display-macaroon);
-  color: rgb(var(--theme-preset-font-color-macaroon));
-}
-
-.theme-preset-font-ui-macaroon {
-  font-family: var(--theme-preset-font-ui-macaroon);
-  color: rgb(var(--theme-preset-font-color-macaroon));
 }
 
 .theme-preset-background-hotpepper-01 {
@@ -439,16 +383,6 @@
   background-color: rgb(var(--theme-preset-accent-hotpepper));
 }
 
-.theme-preset-font-display-hotpepper {
-  font-family: var(--theme-preset-font-display-hotpepper);
-  color: rgb(var(--theme-preset-font-color-hotpepper));
-}
-
-.theme-preset-font-ui-hotpepper {
-  font-family: var(--theme-preset-font-ui-hotpepper);
-  color: rgb(var(--theme-preset-font-color-hotpepper));
-}
-
 .theme-preset-background-steel-01 {
   background-color: rgb(var(--theme-preset-background-steel-01));
 }
@@ -467,16 +401,6 @@
 
 .theme-preset-accent-steel {
   background-color: rgb(var(--theme-preset-accent-steel));
-}
-
-.theme-preset-font-display-steel {
-  font-family: var(--theme-preset-font-display-steel);
-  color: rgb(var(--theme-preset-font-color-steel));
-}
-
-.theme-preset-font-ui-steel {
-  font-family: var(--theme-preset-font-ui-steel);
-  color: rgb(var(--theme-preset-font-color-steel));
 }
 
 .theme-preset-background-outrun-01 {
@@ -499,16 +423,6 @@
   background-color: rgb(var(--theme-preset-accent-outrun));
 }
 
-.theme-preset-font-display-outrun {
-  font-family: var(--theme-preset-font-display-outrun);
-  color: rgb(var(--theme-preset-font-color-outrun));
-}
-
-.theme-preset-font-ui-outrun {
-  font-family: var(--theme-preset-font-ui-outrun);
-  color: rgb(var(--theme-preset-font-color-outrun));
-}
-
 .theme-preset-background-pumpkin-01 {
   background-color: rgb(var(--theme-preset-background-pumpkin-01));
 }
@@ -527,16 +441,6 @@
 
 .theme-preset-accent-pumpkin {
   background-color: rgb(var(--theme-preset-accent-pumpkin));
-}
-
-.theme-preset-font-display-pumpkin {
-  font-family: var(--theme-preset-font-display-pumpkin);
-  color: rgb(var(--theme-preset-font-color-pumpkin));
-}
-
-.theme-preset-font-ui-pumpkin {
-  font-family: var(--theme-preset-font-ui-pumpkin);
-  color: rgb(var(--theme-preset-font-color-pumpkin));
 }
 
 .theme-preset-background-bubblegum-01 {
@@ -559,16 +463,6 @@
   background-color: rgb(var(--theme-preset-accent-bubblegum));
 }
 
-.theme-preset-font-display-bubblegum {
-  font-family: var(--theme-preset-font-display-bubblegum);
-  color: rgb(var(--theme-preset-font-color-bubblegum));
-}
-
-.theme-preset-font-ui-bubblegum {
-  font-family: var(--theme-preset-font-ui-bubblegum);
-  color: rgb(var(--theme-preset-font-color-bubblegum));
-}
-
 .theme-preset-background-elderbean-01 {
   background-color: rgb(var(--theme-preset-background-elderbean-01));
 }
@@ -587,14 +481,4 @@
 
 .theme-preset-accent-elderbean {
   background-color: rgb(var(--theme-preset-accent-elderbean));
-}
-
-.theme-preset-font-display-elderbean {
-  font-family: var(--theme-preset-font-display-elderbean);
-  color: rgb(var(--theme-preset-font-color-elderbean));
-}
-
-.theme-preset-font-ui-elderbean {
-  font-family: var(--theme-preset-font-ui-elderbean);
-  color: rgb(var(--theme-preset-font-color-elderbean));
 }
