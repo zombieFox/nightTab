@@ -463,6 +463,39 @@ var theme = (function() {
       radius: 2,
       style: "dark"
     }, {
+      name: "Grimm",
+      font: {
+        display: {
+          name: "Griffy",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "Roboto Slab",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 283,
+          s: 7,
+          l: 40
+        },
+        rgb: {
+          r: 105,
+          g: 94,
+          b: 109
+        }
+      },
+      accent: {
+        r: 0,
+        g: 255,
+        b: 102
+      },
+      radius: 1,
+      style: "dark"
+    }, {
       name: "Macaroon",
       font: {
         display: {
@@ -692,6 +725,105 @@ var theme = (function() {
         b: 0
       },
       radius: 0.5,
+      style: "dark"
+    }, {
+      name: "Marker",
+      font: {
+        display: {
+          name: "Permanent Marker",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "Roboto Condensed",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 194,
+          s: 7,
+          l: 62
+        },
+        rgb: {
+          r: 151,
+          g: 161,
+          b: 164
+        }
+      },
+      accent: {
+        r: 0,
+        g: 0,
+        b: 0
+      },
+      radius: 0.3,
+      style: "light"
+    }, {
+      name: "Kapow",
+      font: {
+        display: {
+          name: "Bangers",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "Sniglet",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 194,
+          s: 77,
+          l: 51
+        },
+        rgb: {
+          r: 33,
+          g: 181,
+          b: 226
+        }
+      },
+      accent: {
+        r: 21,
+        g: 255,
+        b: 0
+      },
+      radius: 0.4,
+      style: "dark"
+    }, {
+      name: "Savage",
+      font: {
+        display: {
+          name: "Metal Mania",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "Lato",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 35,
+          s: 7,
+          l: 37
+        },
+        rgb: {
+          r: 100,
+          g: 95,
+          b: 87
+        }
+      },
+      accent: {
+        r: 255,
+        g: 0,
+        b: 0
+      },
+      radius: 0,
       style: "dark"
     }]
   };
