@@ -22,7 +22,7 @@
   display: block;
   overflow: hidden;
   z-index: 2;
-  transition: height var(--layout-timing-extra-fast);
+  transition: height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
 }
 
 .theme-preset-button:after,
@@ -58,6 +58,7 @@
 
 .is-theme-custom-edit .theme-custom-button {
   height: calc(var(--theme-preset-preview-size) - var(--theme-custom-edit-height));
+  box-shadow: var(--layout-shadow-medium);
 }
 
 .is-theme-custom-edit .theme-custom-control {
@@ -125,6 +126,10 @@
   transition-delay: var(--layout-duration-01);
 }
 
+.is-theme-custom-edit .theme-custom-accent {
+  clip-path: circle(30% at 100% 60%);
+}
+
 .theme-preset-name,
 .theme-custom-name {
   color: rgb(var(--theme-style-text));
@@ -172,4 +177,9 @@
 .theme-custom-button:focus .theme-custom-accent,
 .theme-custom-button:hover .theme-custom-accent {
   clip-path: circle(40% at 100% 100%);
+}
+
+.is-theme-custom-edit .theme-custom-button:focus .theme-custom-accent,
+.is-theme-custom-edit .theme-custom-button:hover .theme-custom-accent {
+  clip-path: circle(40% at 100% 60%);
 }

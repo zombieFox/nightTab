@@ -1017,93 +1017,96 @@ var theme = (function() {
       var themeCustomSaved = helper.e(".theme-custom");
       var formInline = helper.node("div|class:form-inline");
       var allThemeCuston = JSON.parse(JSON.stringify(state.get.current().theme.custom));
-      allThemeCuston.forEach(function(arrayItem, index) {
-        var themeCustomItem = helper.node("div|class:theme-custom-item");
-        var themeCustomTile = helper.node("div|class:theme-custom-tile");
-        var themeCustomButton = helper.node("button|class:theme-custom-button button mb-0,tabindex:-1");
-        var themeCustomPreview = helper.node("span|class:theme-custom-preview");
-        var themeCustomControl = helper.node("div|class:theme-custom-control");
-        var themeCustomRemove = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button mb-0,tabindex:-2");
-        var themeCustomRemoveIcon = helper.node("spa|class:button-icon icon-close");
-        var shadeSteps = 4;
-        var lightShift = 12;
-        var rgb = arrayItem.color.rgb;
-        var hsl = helper.convertColor.rgb.hsl(rgb);
-        for (var i = 1; i <= shadeSteps; i++) {
-          if (i > 1) {
-            if (arrayItem.style == "dark") {
-              rgb = helper.convertColor.hsl.rgb({
-                h: hsl.h,
-                s: hsl.s,
-                l: hsl.l - (lightShift * (i - 1))
-              });
-            } else if (arrayItem.style == "light") {
-              rgb = helper.convertColor.hsl.rgb({
-                h: hsl.h,
-                s: hsl.s,
-                l: hsl.l + (lightShift * (i - 1))
-              });
+      if (allThemeCuston.length > 0) {
+        allThemeCuston.forEach(function(arrayItem, index) {
+          var themeCustomItem = helper.node("div|class:theme-custom-item");
+          var themeCustomTile = helper.node("div|class:theme-custom-tile");
+          var themeCustomButton = helper.node("button|class:theme-custom-button button mb-0,tabindex:-1");
+          var themeCustomPreview = helper.node("span|class:theme-custom-preview");
+          var themeCustomControl = helper.node("div|class:theme-custom-control");
+          var themeCustomRemove = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button mb-0,tabindex:-2");
+          var themeCustomRemoveIcon = helper.node("spa|class:button-icon icon-close");
+          var shadeSteps = 4;
+          var lightShift = 12;
+          var rgb = arrayItem.color.rgb;
+          var hsl = helper.convertColor.rgb.hsl(rgb);
+          for (var i = 1; i <= shadeSteps; i++) {
+            if (i > 1) {
+              if (arrayItem.style == "dark") {
+                rgb = helper.convertColor.hsl.rgb({
+                  h: hsl.h,
+                  s: hsl.s,
+                  l: hsl.l - (lightShift * (i - 1))
+                });
+              } else if (arrayItem.style == "light") {
+                rgb = helper.convertColor.hsl.rgb({
+                  h: hsl.h,
+                  s: hsl.s,
+                  l: hsl.l + (lightShift * (i - 1))
+                });
+              };
             };
-          };
-          for (var colorKey in rgb) {
-            if (rgb[colorKey] < 0) {
-              rgb[colorKey] = 0;
-            } else if (rgb[colorKey] > 255) {
-              rgb[colorKey] = 255;
+            for (var colorKey in rgb) {
+              if (rgb[colorKey] < 0) {
+                rgb[colorKey] = 0;
+              } else if (rgb[colorKey] > 255) {
+                rgb[colorKey] = 255;
+              };
+              rgb[colorKey] = parseInt(rgb[colorKey], 10);
             };
-            rgb[colorKey] = parseInt(rgb[colorKey], 10);
+            var themeCustomBackground = helper.node("span|class:theme-custom-background-0" + i);
+            themeCustomBackground.style.setProperty("background-color", "rgb(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ")");
+            themeCustomPreview.appendChild(themeCustomBackground);
           };
-          var themeCustomBackground = helper.node("span|class:theme-custom-background-0" + i);
-          themeCustomBackground.style.setProperty("background-color", "rgb(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ")");
-          themeCustomPreview.appendChild(themeCustomBackground);
-        };
-        var themeCustomAccent = helper.node("span|class:theme-custom-accent");
-        themeCustomAccent.style.setProperty("background-color", "rgb(" + arrayItem.accent.r + ", " + arrayItem.accent.g + ", " + arrayItem.accent.b + ")");
-        themeCustomPreview.appendChild(themeCustomAccent);
-        if (arrayItem.name != null && arrayItem.name != "") {
-          var themeCustomName = helper.node("span:" + arrayItem.name + "|class:theme-custom-name");
-          themeCustomPreview.appendChild(themeCustomName);
-        };
+          var themeCustomAccent = helper.node("span|class:theme-custom-accent");
+          themeCustomAccent.style.setProperty("background-color", "rgb(" + arrayItem.accent.r + ", " + arrayItem.accent.g + ", " + arrayItem.accent.b + ")");
+          themeCustomPreview.appendChild(themeCustomAccent);
+          if (arrayItem.name != null && arrayItem.name != "") {
+            var themeCustomName = helper.node("span:" + arrayItem.name + "|class:theme-custom-name");
+            themeCustomPreview.appendChild(themeCustomName);
+          };
 
-        themeCustomButton.appendChild(themeCustomPreview);
-        themeCustomRemove.appendChild(themeCustomRemoveIcon);
-        themeCustomControl.appendChild(themeCustomRemove);
-        themeCustomTile.appendChild(themeCustomButton);
-        themeCustomTile.appendChild(themeCustomControl);
-        themeCustomItem.appendChild(themeCustomTile);
-        formInline.appendChild(themeCustomItem);
+          themeCustomButton.appendChild(themeCustomPreview);
+          themeCustomRemove.appendChild(themeCustomRemoveIcon);
+          themeCustomControl.appendChild(themeCustomRemove);
+          themeCustomTile.appendChild(themeCustomButton);
+          themeCustomTile.appendChild(themeCustomControl);
+          themeCustomItem.appendChild(themeCustomTile);
+          formInline.appendChild(themeCustomItem);
 
-        stagedThemeCustom.position.index = index;
-        stagedThemeCustom.theme = arrayItem;
-        var copyStagedThemeCustom = JSON.parse(JSON.stringify(stagedThemeCustom));
+          stagedThemeCustom.position.index = index;
+          stagedThemeCustom.theme = arrayItem;
+          var copyStagedThemeCustom = JSON.parse(JSON.stringify(stagedThemeCustom));
 
-        themeCustomButton.addEventListener("click", function() {
-          console.log(index);
-          mod.custom.set(mod.custom.get(index));
-          data.save();
-          render.font.display.name();
-          render.font.display.weight();
-          render.font.display.style();
-          render.font.ui.name();
-          render.font.ui.weight();
-          render.font.ui.style();
-          render.color.shade();
-          render.accent.color();
-          render.radius();
-          style.check();
-          link.groupAndItems();
-          control.render.update();
-          control.render.class();
-        }, false);
+          themeCustomButton.addEventListener("click", function() {
+            console.log(index);
+            mod.custom.set(mod.custom.get(index));
+            data.save();
+            render.font.display.name();
+            render.font.display.weight();
+            render.font.display.style();
+            render.font.ui.name();
+            render.font.ui.weight();
+            render.font.ui.style();
+            render.color.shade();
+            render.accent.color();
+            render.radius();
+            style.check();
+            link.groupAndItems();
+            control.render.update();
+            control.render.class();
+          }, false);
 
-        themeCustomRemove.addEventListener("click", function() {
-          menu.close();
-          render.custom.remove(copyStagedThemeCustom);
-        }, false);
+          themeCustomRemove.addEventListener("click", function() {
+            menu.close();
+            render.custom.remove(copyStagedThemeCustom);
+          }, false);
 
-        stagedThemeCustom.reset();
-      });
-      themeCustomSaved.appendChild(formInline);
+          stagedThemeCustom.reset();
+        });
+        themeCustomSaved.appendChild(formInline);
+        themeCustomSaved.appendChild(helper.node("hr"));
+      };
     },
     add: function() {
       var form = function() {
@@ -1308,8 +1311,7 @@ var theme = (function() {
     style: style,
     accent: accent,
     preset: preset,
-    custom: custom,
-    stagedThemeCustom: stagedThemeCustom
+    custom: custom
   };
 
 })();
