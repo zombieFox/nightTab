@@ -50,16 +50,31 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+a
       if (event.ctrlKey && event.altKey && event.keyCode == 65) {
+        if (state.get.current().menu) {
+          menu.close();
+        };
+        if (state.get.current().modal && !state.get.current().link.add) {
+          modal.close();
+        };
+        if (state.get.current().link.edit) {
+          link.edit.item.close();
+          modal.close();
+          shade.close();
+          data.save();
+        };
+        if (state.get.current().group.edit) {
+          link.edit.group.close();
+          modal.close();
+          shade.close();
+          data.save();
+        };
         if (state.get.current().group.add) {
           link.add.group.close();
+          modal.close();
+          shade.close();
+          data.save();
         };
         if (!state.get.current().link.add) {
-          if (state.get.current().menu) {
-            menu.close();
-          };
-          if (state.get.current().modal) {
-            modal.close();
-          };
           link.add.item.open();
         };
       };
@@ -70,16 +85,31 @@ var keyboard = (function() {
     window.addEventListener("keydown", function(event) {
       // ctrl+alt+g
       if (event.ctrlKey && event.altKey && event.keyCode == 71) {
+        if (state.get.current().menu) {
+          menu.close();
+        };
+        if (state.get.current().modal && !state.get.current().group.add) {
+          modal.close();
+        };
+        if (state.get.current().link.edit) {
+          link.edit.item.close();
+          modal.close();
+          shade.close();
+          data.save();
+        };
         if (state.get.current().link.add) {
           link.add.item.close();
+          modal.close();
+          shade.close();
+          data.save();
+        };
+        if (state.get.current().group.edit) {
+          link.edit.group.close();
+          modal.close();
+          shade.close();
+          data.save();
         };
         if (!state.get.current().group.add) {
-          if (state.get.current().menu) {
-            menu.close();
-          };
-          if (state.get.current().modal) {
-            modal.close();
-          };
           link.add.group.open();
         };
       };
@@ -106,22 +136,26 @@ var keyboard = (function() {
           modal.close();
           shade.close();
           data.save();
-        } else if (state.get.current().link.add) {
+        };
+        if (state.get.current().link.add) {
           link.add.item.close();
           modal.close();
           shade.close();
           data.save();
-        } else if (state.get.current().group.edit) {
+        };
+        if (state.get.current().group.edit) {
           link.edit.group.close();
           modal.close();
           shade.close();
           data.save();
-        } else if (state.get.current().group.add) {
+        };
+        if (state.get.current().group.add) {
           link.add.group.close();
           modal.close();
           shade.close();
           data.save();
-        } else if (state.get.current().modal) {
+        };
+        if (state.get.current().modal) {
           modal.close();
           shade.close();
         };
