@@ -47,12 +47,16 @@ var menu = (function() {
       if (state.get.current().menu) {
         menu.tabIndex = 1;
         menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
-          arrayItem.tabIndex = 1;
+          if (arrayItem.tabIndex == -1) {
+            arrayItem.tabIndex = 1;
+          };
         });
       } else {
         menu.tabIndex = -1;
         menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
-          arrayItem.tabIndex = -1;
+          if (arrayItem.tabIndex == 1) {
+            arrayItem.tabIndex = -1;
+          };
         });
       };
     }

@@ -65,7 +65,7 @@
 
 /* fjalla one */
 @font-face {
-  font-family: "Fjalla One Regular";
+  font-family: "Fjalla One";
   src: url("../fonts/fjalla-one/fjalla-one-regular.woff2") format("woff2"), url("../fonts/fjalla-one/fjalla-one-regular.woff") format("woff"), url("../fonts/fjalla-one/fjalla-one-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
