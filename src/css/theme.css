@@ -98,28 +98,27 @@
 .theme-custom-background-02 {
   z-index: 2;
   clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 70%);
-  transition-delay: var(--layout-duration-04);
+  transition-delay: var(--layout-duration-03);
 }
 
 .theme-preset-background-03,
 .theme-custom-background-03 {
   z-index: 3;
   clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%);
-  transition-delay: var(--layout-duration-03);
+  transition-delay: var(--layout-duration-02);
 }
 
 .theme-preset-background-04,
 .theme-custom-background-04 {
   z-index: 4;
   clip-path: polygon(100% 30%, 100% 100%, 30% 100%);
-  transition-delay: var(--layout-duration-02);
+  transition-delay: var(--layout-duration-01);
 }
 
 .theme-preset-accent,
 .theme-custom-accent {
   z-index: 5;
   clip-path: circle(30% at 100% 100%);
-  transition-delay: var(--layout-duration-01);
 }
 
 .is-theme-custom-edit .theme-custom-accent {
@@ -151,21 +150,21 @@
 .theme-preset-button:hover .theme-preset-background-02,
 .theme-custom-button:focus .theme-custom-background-02,
 .theme-custom-button:hover .theme-custom-background-02 {
-  clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%);
+  clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 60%);
 }
 
 .theme-preset-button:focus .theme-preset-background-03,
 .theme-preset-button:hover .theme-preset-background-03,
 .theme-custom-button:focus .theme-custom-background-03,
 .theme-custom-button:hover .theme-custom-background-03 {
-  clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 80%);
+  clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 90%);
 }
 
 .theme-preset-button:focus .theme-preset-background-04,
 .theme-preset-button:hover .theme-preset-background-04,
 .theme-custom-button:focus .theme-custom-background-04,
 .theme-custom-button:hover .theme-custom-background-04 {
-  clip-path: polygon(100% 10%, 100% 100%, 10% 100%);
+  clip-path: polygon(100% 20%, 100% 100%, 20% 100%);
 }
 
 .theme-preset-button:focus .theme-preset-accent,
