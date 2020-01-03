@@ -162,11 +162,11 @@ var theme = (function() {
         newValue: themePreset.radius
       });
     },
-    get: function(name) {
-      return JSON.parse(JSON.stringify(mod.preset.all[name]));
+    get: function(index) {
+      return JSON.parse(JSON.stringify(mod.preset.all[index]));
     },
     all: [{
-      name: "nightTab",
+      name: "nightTab (default)",
       font: {
         display: {
           name: "",
@@ -697,33 +697,35 @@ var theme = (function() {
   };
 
   mod.custom = {
-    set: function(copyStagedThemeCustom) {
-      console.log(copyStagedThemeCustom);
+    set: function(themeCustom) {
       helper.setObject({
         object: state.get.current(),
         path: "theme.style",
-        newValue: copyStagedThemeCustom.theme.style
+        newValue: themeCustom.style
       });
       helper.setObject({
         object: state.get.current(),
         path: "theme.font",
-        newValue: copyStagedThemeCustom.theme.font
+        newValue: themeCustom.font
       });
       helper.setObject({
         object: state.get.current(),
         path: "theme.color",
-        newValue: copyStagedThemeCustom.theme.color
+        newValue: themeCustom.color
       });
       helper.setObject({
         object: state.get.current(),
         path: "theme.accent.current",
-        newValue: copyStagedThemeCustom.theme.accent
+        newValue: themeCustom.accent
       });
       helper.setObject({
         object: state.get.current(),
         path: "theme.radius",
-        newValue: copyStagedThemeCustom.theme.radius
+        newValue: themeCustom.radius
       });
+    },
+    get: function(index) {
+      return JSON.parse(JSON.stringify(state.get.current().theme.custom[index]));
     },
     add: function() {
       state.get.current().theme.custom.push(stagedThemeCustom.theme);
@@ -990,7 +992,7 @@ var theme = (function() {
       formInline.appendChild(themePresetItem);
 
       themePresetButton.addEventListener("click", function() {
-        mod.preset.set(mod.preset.all[index]);
+        mod.preset.set(mod.preset.get(index));
         data.save();
         render.font.display.name();
         render.font.display.weight();
@@ -1006,7 +1008,6 @@ var theme = (function() {
         control.render.update();
         control.render.class();
       }, false);
-
     });
     themePreset.appendChild(formInline);
   };
@@ -1077,7 +1078,8 @@ var theme = (function() {
         var copyStagedThemeCustom = JSON.parse(JSON.stringify(stagedThemeCustom));
 
         themeCustomButton.addEventListener("click", function() {
-          mod.custom.set(copyStagedThemeCustom);
+          console.log(index);
+          mod.custom.set(mod.custom.get(index));
           data.save();
           render.font.display.name();
           render.font.display.weight();
