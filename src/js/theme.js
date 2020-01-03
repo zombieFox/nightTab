@@ -1079,7 +1079,6 @@ var theme = (function() {
           var copyStagedThemeCustom = JSON.parse(JSON.stringify(stagedThemeCustom));
 
           themeCustomButton.addEventListener("click", function() {
-            console.log(index);
             mod.custom.set(mod.custom.get(index));
             data.save();
             render.font.display.name();

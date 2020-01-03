@@ -48,10 +48,6 @@
   flex: 1 1 auto;
 }
 
-.theme-custom-control-item::after {
-  content: none;
-}
-
 .theme-custom-control-item:after {
   border-radius: 0;
 }
