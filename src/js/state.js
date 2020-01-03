@@ -256,7 +256,8 @@ var state = (function() {
         }
       },
       style: "dark",
-      radius: 0.25
+      radius: 0.25,
+      custom: []
     },
     background: {
       color: {

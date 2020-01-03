@@ -742,6 +742,10 @@ var update = (function() {
         style: "normal"
       };
       return data;
+    },
+    "4.8.0": function(data) {
+      data.state.theme.custom = [];
+      return data;
     }
   };
 
