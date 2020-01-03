@@ -859,31 +859,37 @@ var theme = (function() {
     },
     display: {
       name: function() {
-        var name = state.get.current().theme.font.display.name.trim().replace(/\s+/g, "+");
         var html = helper.e("html");
-        var link = helper.e(".theme-font-display-name-link");
-        if (link) {
-          link.remove();
+        var removeLink = function() {
+          var link = helper.e(".theme-font-display-name");
+          if (link) {
+            link.remove();
+          };
+          html.style.removeProperty("--theme-font-display-name");
         };
-        html.style.removeProperty("--theme-font-display-name");
-        if (name != "") {
-          var head = helper.e("head");
-          var link = helper.makeNode({
-            tag: "link",
-            attr: [{
-              key: "class",
-              value: "theme-font-display-name-link"
-            }, {
-              key: "href",
-              value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-            }, {
-              key: "rel",
-              value: "stylesheet"
-            }]
-          });
-          head.appendChild(link);
-          html.style.setProperty("--theme-font-display-name", "\"" + state.get.current().theme.font.display.name.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Fjalla One\", sans-serif");
+        var addLink = function() {
+          var name = state.get.current().theme.font.display.name.trim().replace(/\s+/g, "+");
+          if (name != "") {
+            var head = helper.e("head");
+            var link = helper.makeNode({
+              tag: "link",
+              attr: [{
+                key: "class",
+                value: "theme-font-display-name"
+              }, {
+                key: "href",
+                value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+              }, {
+                key: "rel",
+                value: "stylesheet"
+              }]
+            });
+            head.appendChild(link);
+            html.style.setProperty("--theme-font-display-name", "\"" + state.get.current().theme.font.display.name.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Fjalla One\", sans-serif");
+          };
         };
+        removeLink();
+        addLink();
       },
       weight: function() {
         var html = helper.e("html");
@@ -897,33 +903,39 @@ var theme = (function() {
     },
     ui: {
       name: function() {
-        var name = state.get.current().theme.font.ui.name.trim().replace(/\s+/g, "+");
         var html = helper.e("html");
-        var link = helper.eA(".theme-font-ui-name-link");
-        if (link.length > 0) {
-          link.forEach(function(arrayItem, item) {
-            arrayItem.remove();
-          });
+        var removeLink = function() {
+          var link = helper.e(".theme-font-ui-name");
+          if (link) {
+            link.remove();
+          };
           html.style.removeProperty("--theme-font-ui-name");
         };
-        if (name != "") {
-          var head = helper.e("head");
-          var link = helper.makeNode({
-            tag: "link",
-            attr: [{
-              key: "class",
-              value: "theme-font-ui-name-link"
-            }, {
-              key: "href",
-              value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-            }, {
-              key: "rel",
-              value: "stylesheet"
-            }]
-          });
-          head.appendChild(link);
-          html.style.setProperty("--theme-font-ui-name", "\"" + state.get.current().theme.font.ui.name.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Open Sans\", sans-serif");
+        var addLink = function() {
+          var name = state.get.current().theme.font.ui.name.trim().replace(/\s+/g, "+");
+          if (name != "") {
+            if (name != state.get.current().theme.font.display.name) {
+              var head = helper.e("head");
+              var link = helper.makeNode({
+                tag: "link",
+                attr: [{
+                  key: "class",
+                  value: "theme-font-ui-name"
+                }, {
+                  key: "href",
+                  value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+                }, {
+                  key: "rel",
+                  value: "stylesheet"
+                }]
+              });
+              head.appendChild(link);
+            };
+            html.style.setProperty("--theme-font-ui-name", "\"" + state.get.current().theme.font.ui.name.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Open Sans\", sans-serif");
+          };
         };
+        removeLink();
+        addLink();
       },
       weight: function() {
         var html = helper.e("html");

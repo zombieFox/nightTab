@@ -2563,6 +2563,7 @@ var control = (function() {
     type: "text",
     func: function() {
       theme.render.font.delay.display();
+      theme.render.font.delay.ui();
     }
   }, {
     element: helper.e(".control-theme-font-display-name-default"),
@@ -2619,6 +2620,7 @@ var control = (function() {
     path: "theme.font.ui.name",
     type: "text",
     func: function() {
+      theme.render.font.delay.display();
       theme.render.font.delay.ui();
     }
   }, {
