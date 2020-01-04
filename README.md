@@ -60,10 +60,10 @@ A browser addon/extension ready zip will be created in `/build/extension/`.
 
 ---
 
-[![nightTab Demo](assets/demo/demo-001.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](assets/demo/demo-002.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](assets/demo/demo-003.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](assets/demo/demo-004.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](assets/demo/demo-005.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](assets/demo/demo-006.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](assets/demo/demo-007.gif)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/screenshot/screenshot-001.png)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/screenshot/screenshot-002.png)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/screenshot/screenshot-003.png)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/screenshot/screenshot-004.png)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/screenshot/screenshot-005.png)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/screenshot/screenshot-006.png)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/screenshot/screenshot-007.png)](https://zombiefox.github.io/nightTab/)
