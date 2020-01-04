@@ -225,9 +225,9 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 34,
-        g: 78,
-        b: 204
+        r: 0,
+        g: 17,
+        b: 255
       },
       radius: 0.5,
       style: "dark"
@@ -710,13 +710,13 @@ var theme = (function() {
       color: {
         hsl: {
           h: 193,
-          s: 47,
-          l: 43
+          s: 50,
+          l: 46
         },
         rgb: {
           r: 58,
-          g: 140,
-          b: 163
+          g: 150,
+          b: 175
         }
       },
       accent: {
@@ -742,14 +742,14 @@ var theme = (function() {
       },
       color: {
         hsl: {
-          h: 194,
-          s: 7,
-          l: 62
+          h: 0,
+          s: 0,
+          l: 50
         },
         rgb: {
-          r: 151,
-          g: 161,
-          b: 164
+          r: 127,
+          g: 127,
+          b: 127
         }
       },
       accent: {
