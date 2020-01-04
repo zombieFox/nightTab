@@ -202,7 +202,7 @@ var theme = (function() {
       name: "Midnight",
       font: {
         display: {
-          name: "Gugi",
+          name: "Megrim",
           weight: 400,
           style: "normal"
         },
@@ -214,25 +214,25 @@ var theme = (function() {
       },
       color: {
         hsl: {
-          h: 222,
-          s: 42,
-          l: 46
+          h: 221,
+          s: 40,
+          l: 48
         },
         rgb: {
-          r: 68,
-          g: 98,
-          b: 168
+          r: 73,
+          g: 104,
+          b: 171
         }
       },
       accent: {
-        r: 37,
-        g: 55,
-        b: 134
+        r: 34,
+        g: 78,
+        b: 204
       },
       radius: 0.5,
       style: "dark"
     }, {
-      name: "Pym",
+      name: "Lex",
       font: {
         display: {
           name: "Autour One",
@@ -397,7 +397,7 @@ var theme = (function() {
       radius: 0.75,
       style: "dark"
     }, {
-      name: "Sol Light",
+      name: "Sol",
       font: {
         display: {
           name: "Fredoka One",
@@ -556,7 +556,7 @@ var theme = (function() {
       },
       accent: {
         r: 255,
-        g: 221,
+        g: 150,
         b: 0
       },
       radius: 0.6,
@@ -661,7 +661,7 @@ var theme = (function() {
       radius: 0.2,
       style: "dark"
     }, {
-      name: "Bubble Gum",
+      name: "Funkadelic",
       font: {
         display: {
           name: "Monoton",
