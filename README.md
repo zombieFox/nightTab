@@ -36,6 +36,7 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 - Keyboard shortcuts
   - <kbd>esc</kbd> *to dismiss most things*
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>a</kbd> *to add a new bookmark*
+  - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>g</kbd> *to add a new group*
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>m</kbd> *to open menu*
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>e</kbd> *to toggle edit state*
   - <kbd>ctrl</kbd>+<kbd>alt</kbd>+<kbd>d</kbd> *to toggle dark and light mode*
