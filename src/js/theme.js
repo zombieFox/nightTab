@@ -860,7 +860,7 @@ var theme = (function() {
       return JSON.parse(JSON.stringify(state.get.current().theme.custom[index]));
     },
     add: function() {
-      state.get.current().theme.custom.push(stagedThemeCustom.theme);
+      state.get.current().theme.custom.push(JSON.parse(JSON.stringify(stagedThemeCustom.theme)));
     },
     remove: function(copyStagedThemeCustom) {
       state.get.current().theme.custom.splice(stagedThemeCustom.position.index, 1);
