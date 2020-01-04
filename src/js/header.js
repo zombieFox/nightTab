@@ -185,6 +185,7 @@ var header = (function() {
     render.search.size();
     render.button.size();
     render.button.style();
+    render.button.dot();
   };
 
   // exposed methods
