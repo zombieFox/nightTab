@@ -68,3 +68,4 @@ A browser addon/extension ready zip will be created in `/build/extension/`.
 [![nightTab Demo](assets/screenshot/screenshot-005.png)](https://zombiefox.github.io/nightTab/)
 [![nightTab Demo](assets/screenshot/screenshot-006.png)](https://zombiefox.github.io/nightTab/)
 [![nightTab Demo](assets/screenshot/screenshot-007.png)](https://zombiefox.github.io/nightTab/)
+[![nightTab Demo](assets/screenshot/screenshot-008.png)](https://zombiefox.github.io/nightTab/)
