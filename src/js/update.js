@@ -746,6 +746,13 @@ var update = (function() {
     "4.8.0": function(data) {
       data.state.theme.custom = [];
       return data;
+    },
+    "4.9.0": function(data) {
+      data.state.theme.color.contrast = {
+        light: 4,
+        dark: 4
+      };
+      return data;
     }
   };
 

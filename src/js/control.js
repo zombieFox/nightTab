@@ -2800,6 +2800,50 @@ var control = (function() {
       render.update();
     }
   }, {
+    element: helper.e(".control-theme-color-contrast-light"),
+    path: "theme.color.contrast.light",
+    type: "range",
+    valueMod: ["float"],
+    rangeCountElement: helper.e(".control-theme-color-contrast-light-count"),
+    func: function() {
+      theme.render.color.shade();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-contrast-light-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.color.contrast.light", helper.getObject({
+        object: state.get.default(),
+        path: "theme.color.contrast.light"
+      }));
+      theme.render.color.shade();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-contrast-dark"),
+    path: "theme.color.contrast.dark",
+    type: "range",
+    valueMod: ["float"],
+    rangeCountElement: helper.e(".control-theme-color-contrast-dark-count"),
+    func: function() {
+      theme.render.color.shade();
+      render.range.count(this);
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-contrast-dark-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.color.contrast.dark", helper.getObject({
+        object: state.get.default(),
+        path: "theme.color.contrast.dark"
+      }));
+      theme.render.color.shade();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-theme-accent-current-picker"),
     path: "theme.accent.current",
     type: "color",

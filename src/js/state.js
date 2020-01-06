@@ -241,6 +241,10 @@ var state = (function() {
           r: 129,
           g: 138,
           b: 160
+        },
+        contrast: {
+          light: 4,
+          dark: 4
         }
       },
       font: {
@@ -374,6 +378,10 @@ var state = (function() {
           r: 129,
           g: 138,
           b: 160
+        },
+        contrast: {
+          light: 4,
+          dark: 4
         }
       },
       font: {

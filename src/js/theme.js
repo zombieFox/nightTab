@@ -189,6 +189,10 @@ var theme = (function() {
           r: 129,
           g: 138,
           b: 160
+        },
+        contrast: {
+          light: 4,
+          dark: 4
         }
       },
       accent: {
@@ -222,6 +226,10 @@ var theme = (function() {
           r: 73,
           g: 104,
           b: 171
+        },
+        contrast: {
+          light: 4,
+          dark: 3.5
         }
       },
       accent: {
@@ -255,6 +263,10 @@ var theme = (function() {
           r: 153,
           g: 34,
           b: 221
+        },
+        contrast: {
+          light: 4,
+          dark: 4
         }
       },
       accent: {
@@ -288,6 +300,10 @@ var theme = (function() {
           r: 106,
           g: 142,
           b: 199
+        },
+        contrast: {
+          light: 4,
+          dark: 4
         }
       },
       accent: {
@@ -321,6 +337,10 @@ var theme = (function() {
           r: 63,
           g: 191,
           b: 143
+        },
+        contrast: {
+          light: 4,
+          dark: 4
         }
       },
       accent: {
@@ -354,6 +374,10 @@ var theme = (function() {
           r: 98,
           g: 136,
           b: 197
+        },
+        contrast: {
+          light: 4.4,
+          dark: 1.5
         }
       },
       accent: {
@@ -387,6 +411,10 @@ var theme = (function() {
           r: 159,
           g: 118,
           b: 87
+        },
+        contrast: {
+          light: 5,
+          dark: 3.5
         }
       },
       accent: {
@@ -412,20 +440,24 @@ var theme = (function() {
       },
       color: {
         hsl: {
-          h: 54,
-          s: 78,
-          l: 47
+          h: 56,
+          s: 100,
+          l: 30
         },
         rgb: {
-          r: 213,
-          g: 194,
-          b: 26
+          r: 153,
+          g: 142,
+          b: 0
+        },
+        contrast: {
+          light: 2,
+          dark: 1
         }
       },
       accent: {
         r: 255,
-        g: 220,
-        b: 22
+        g: 185,
+        b: 0
       },
       radius: 0.5,
       style: "light"
@@ -453,6 +485,10 @@ var theme = (function() {
           r: 119,
           g: 188,
           b: 194
+        },
+        contrast: {
+          light: 1,
+          dark: 4
         }
       },
       accent: {
@@ -486,6 +522,10 @@ var theme = (function() {
           r: 105,
           g: 94,
           b: 109
+        },
+        contrast: {
+          light: 7,
+          dark: 2
         }
       },
       accent: {
@@ -519,6 +559,10 @@ var theme = (function() {
           r: 175,
           g: 112,
           b: 173
+        },
+        contrast: {
+          light: 3,
+          dark: 2
         }
       },
       accent: {
@@ -552,6 +596,10 @@ var theme = (function() {
           r: 224,
           g: 91,
           b: 91
+        },
+        contrast: {
+          light: 3.5,
+          dark: 4.5
         }
       },
       accent: {
@@ -578,13 +626,17 @@ var theme = (function() {
       color: {
         hsl: {
           h: 214,
-          s: 25,
+          s: 30,
           l: 44
         },
         rgb: {
-          r: 85,
-          g: 110,
-          b: 143
+          r: 78,
+          g: 107,
+          b: 145
+        },
+        contrast: {
+          light: 3.5,
+          dark: 3
         }
       },
       accent: {
@@ -618,6 +670,10 @@ var theme = (function() {
           r: 80,
           g: 106,
           b: 199
+        },
+        contrast: {
+          light: 4,
+          dark: 4
         }
       },
       accent: {
@@ -651,6 +707,10 @@ var theme = (function() {
           r: 117,
           g: 117,
           b: 117
+        },
+        contrast: {
+          light: 5,
+          dark: 3.5
         }
       },
       accent: {
@@ -684,6 +744,10 @@ var theme = (function() {
           r: 254,
           g: 45,
           b: 230
+        },
+        contrast: {
+          light: 4,
+          dark: 4
         }
       },
       accent: {
@@ -709,14 +773,18 @@ var theme = (function() {
       },
       color: {
         hsl: {
-          h: 193,
-          s: 50,
+          h: 191,
+          s: 86,
           l: 46
         },
         rgb: {
-          r: 58,
-          g: 150,
-          b: 175
+          r: 16,
+          g: 181,
+          b: 218
+        },
+        contrast: {
+          light: 5,
+          dark: 4
         }
       },
       accent: {
@@ -750,6 +818,10 @@ var theme = (function() {
           r: 127,
           g: 127,
           b: 127
+        },
+        contrast: {
+          light: 5.3,
+          dark: 4
         }
       },
       accent: {
@@ -777,12 +849,16 @@ var theme = (function() {
         hsl: {
           h: 194,
           s: 77,
-          l: 51
+          l: 50
         },
         rgb: {
-          r: 33,
-          g: 181,
-          b: 226
+          r: 29,
+          g: 179,
+          b: 225
+        },
+        contrast: {
+          light: 4.5,
+          dark: 2.6
         }
       },
       accent: {
@@ -809,13 +885,17 @@ var theme = (function() {
       color: {
         hsl: {
           h: 211,
-          s: 7,
-          l: 53
+          s: 10,
+          l: 50
         },
         rgb: {
-          r: 126,
-          g: 134,
-          b: 143
+          r: 114,
+          g: 127,
+          b: 140
+        },
+        contrast: {
+          light: 5,
+          dark: 2
         }
       },
       accent: {
@@ -849,6 +929,10 @@ var theme = (function() {
           r: 100,
           g: 95,
           b: 87
+        },
+        contrast: {
+          light: 5.2,
+          dark: 3.2
         }
       },
       accent: {
@@ -876,12 +960,16 @@ var theme = (function() {
         hsl: {
           h: 228,
           s: 71,
-          l: 47
+          l: 50
         },
         rgb: {
-          r: 34,
-          g: 68,
-          b: 204
+          r: 36,
+          g: 73,
+          b: 218
+        },
+        contrast: {
+          light: 4.2,
+          dark: 3.9
         }
       },
       accent: {
@@ -915,6 +1003,10 @@ var theme = (function() {
           r: 98,
           g: 113,
           b: 120
+        },
+        contrast: {
+          light: 4,
+          dark: 4
         }
       },
       accent: {
@@ -940,19 +1032,23 @@ var theme = (function() {
       },
       color: {
         hsl: {
-          h: 31,
-          s: 22,
-          l: 48
+          h: 0,
+          s: 13,
+          l: 37
         },
         rgb: {
-          r: 149,
-          g: 123,
-          b: 95
+          r: 106,
+          g: 82,
+          b: 82
+        },
+        contrast: {
+          light: 6.3,
+          dark: 2
         }
       },
       accent: {
-        r: 241,
-        g: 255,
+        r: 255,
+        g: 204,
         b: 0
       },
       radius: 0.80,
@@ -1040,11 +1136,12 @@ var theme = (function() {
 
   render.color = {
     shade: function() {
-      var shadeSteps = 10;
-      var lightShift = 4;
+      var shadeMax = 10;
+      var shadeMin = 1;
+      var contrastNeg = state.get.current().theme.color.contrast.dark;
+      var contrastPos = state.get.current().theme.color.contrast.light;
       var html = helper.e("html");
       var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.color.rgb);
-      html.style.setProperty("--theme-shade", state.get.current().theme.color.rgb.r + ", " + state.get.current().theme.color.rgb.g + ", " + state.get.current().theme.color.rgb.b);
       var renderShade = function(name, index, rgb) {
         for (var key in rgb) {
           if (rgb[key] < 0) {
@@ -1059,19 +1156,23 @@ var theme = (function() {
         };
         html.style.setProperty(name + index, rgb.r + ", " + rgb.g + ", " + rgb.b);
       };
-      for (var i = 1; i <= shadeSteps; i++) {
+      // set light theme shades
+      for (var i = shadeMax; i >= shadeMin; i--) {
         var rgb = helper.convertColor.hsl.rgb({
           h: hsl.h,
           s: hsl.s,
-          l: hsl.l - (lightShift * i)
+          l: hsl.l - (contrastNeg * i)
         });
         renderShade("--theme-shade-neg-", i, rgb);
       };
-      for (var i = 1; i <= shadeSteps; i++) {
+      // set primary theme shades
+      html.style.setProperty("--theme-shade", state.get.current().theme.color.rgb.r + ", " + state.get.current().theme.color.rgb.g + ", " + state.get.current().theme.color.rgb.b);
+      // set dark theme shades
+      for (var i = shadeMin; i <= shadeMax; i++) {
         var rgb = helper.convertColor.hsl.rgb({
           h: hsl.h,
           s: hsl.s,
-          l: hsl.l + (lightShift * i)
+          l: hsl.l + (contrastPos * i)
         });
         renderShade("--theme-shade-pos-", i, rgb);
       };
@@ -1220,7 +1321,6 @@ var theme = (function() {
       var themePresetButton = helper.node("button|class:theme-preset-button button mb-0,tabindex:-1");
       var themePresetPreview = helper.node("span|class:theme-preset-preview");
       var shadeSteps = 4;
-      var lightShift = 12;
       var rgb = arrayItem.color.rgb;
       var hsl = helper.convertColor.rgb.hsl(rgb);
       for (var i = 1; i <= shadeSteps; i++) {
@@ -1229,13 +1329,13 @@ var theme = (function() {
             rgb = helper.convertColor.hsl.rgb({
               h: hsl.h,
               s: hsl.s,
-              l: hsl.l - (lightShift * (i - 1))
+              l: hsl.l - ((arrayItem.color.contrast.dark) * (i * 2))
             });
           } else if (arrayItem.style == "light") {
             rgb = helper.convertColor.hsl.rgb({
               h: hsl.h,
               s: hsl.s,
-              l: hsl.l + (lightShift * (i - 1))
+              l: hsl.l + ((arrayItem.color.contrast.light) * (i * 2))
             });
           };
         };
@@ -1300,7 +1400,6 @@ var theme = (function() {
           var themeCustomRemove = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button mb-0,tabindex:-2");
           var themeCustomRemoveIcon = helper.node("spa|class:button-icon icon-close");
           var shadeSteps = 4;
-          var lightShift = 12;
           var rgb = arrayItem.color.rgb;
           var hsl = helper.convertColor.rgb.hsl(rgb);
           for (var i = 1; i <= shadeSteps; i++) {
@@ -1309,13 +1408,13 @@ var theme = (function() {
                 rgb = helper.convertColor.hsl.rgb({
                   h: hsl.h,
                   s: hsl.s,
-                  l: hsl.l - (lightShift * (i - 1))
+                  l: hsl.l - ((arrayItem.color.contrast.dark) * (i * 2))
                 });
               } else if (arrayItem.style == "light") {
                 rgb = helper.convertColor.hsl.rgb({
                   h: hsl.h,
                   s: hsl.s,
-                  l: hsl.l + (lightShift * (i - 1))
+                  l: hsl.l + ((arrayItem.color.contrast.light) * (i * 2))
                 });
               };
             };
