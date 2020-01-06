@@ -793,6 +793,39 @@ var theme = (function() {
       radius: 0.4,
       style: "dark"
     }, {
+      name: "Dash",
+      font: {
+        display: {
+          name: "Fredericka the Great",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "Oswald",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 211,
+          s: 7,
+          l: 53
+        },
+        rgb: {
+          r: 126,
+          g: 134,
+          b: 143
+        }
+      },
+      accent: {
+        r: 187,
+        g: 17,
+        b: 68
+      },
+      radius: 0,
+      style: "light"
+    }, {
       name: "Savage",
       font: {
         display: {
@@ -824,6 +857,105 @@ var theme = (function() {
         b: 0
       },
       radius: 0,
+      style: "dark"
+    }, {
+      name: "Trine",
+      font: {
+        display: {
+          name: "Josefin Sans",
+          weight: 300,
+          style: "normal"
+        },
+        ui: {
+          name: "Roboto Slab",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 228,
+          s: 71,
+          l: 47
+        },
+        rgb: {
+          r: 34,
+          g: 68,
+          b: 204
+        }
+      },
+      accent: {
+        r: 0,
+        g: 255,
+        b: 255
+      },
+      radius: 0.5,
+      style: "dark"
+    }, {
+      name: "Obsidian",
+      font: {
+        display: {
+          name: "Zilla Slab",
+          weight: 900,
+          style: "normal"
+        },
+        ui: {
+          name: "Montserrat",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 200,
+          s: 10,
+          l: 43
+        },
+        rgb: {
+          r: 98,
+          g: 113,
+          b: 120
+        }
+      },
+      accent: {
+        r: 0,
+        g: 255,
+        b: 255
+      },
+      radius: 0.25,
+      style: "dark"
+    }, {
+      name: "Earthquake",
+      font: {
+        display: {
+          name: "Tulpen One",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "Barlow Condensed",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 31,
+          s: 22,
+          l: 48
+        },
+        rgb: {
+          r: 149,
+          g: 123,
+          b: 95
+        }
+      },
+      accent: {
+        r: 241,
+        g: 255,
+        b: 0
+      },
+      radius: 0.80,
       style: "dark"
     }]
   };
