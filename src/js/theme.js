@@ -1041,7 +1041,6 @@ var theme = (function() {
   render.color = {
     shade: function() {
       var shadeSteps = 10;
-      var saturationShift = 0;
       var lightShift = 4;
       var html = helper.e("html");
       var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.color.rgb);
@@ -1057,15 +1056,13 @@ var theme = (function() {
         };
         if (index < 10) {
           index = "0" + index;
-        } else {
-          index = index;
         };
         html.style.setProperty(name + index, rgb.r + ", " + rgb.g + ", " + rgb.b);
       };
       for (var i = 1; i <= shadeSteps; i++) {
         var rgb = helper.convertColor.hsl.rgb({
           h: hsl.h,
-          s: hsl.s - (saturationShift * i),
+          s: hsl.s,
           l: hsl.l - (lightShift * i)
         });
         renderShade("--theme-shade-neg-", i, rgb);
@@ -1073,7 +1070,7 @@ var theme = (function() {
       for (var i = 1; i <= shadeSteps; i++) {
         var rgb = helper.convertColor.hsl.rgb({
           h: hsl.h,
-          s: hsl.s + (saturationShift * i),
+          s: hsl.s,
           l: hsl.l + (lightShift * i)
         });
         renderShade("--theme-shade-pos-", i, rgb);
