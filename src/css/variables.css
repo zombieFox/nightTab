@@ -86,12 +86,42 @@
   --layout-timing-medium:                               var(--layout-duration-06) ease-in-out;
   --layout-timing-slow:                                 var(--layout-duration-08) ease-in-out;
   --layout-timing-extra-slow:                           var(--layout-duration-10) ease-in-out;
-  --layout-shadow-small:                                0 0 0.25em rgba(0, 0, 0, 0.2),
-                                                        0 0 0.5em rgba(0, 0, 0, 0.1);
-  --layout-shadow-medium:                               0 0 0.5em rgba(0, 0, 0, 0.2),
-                                                        0 0 1em rgba(0, 0, 0, 0.1);
-  --layout-shadow-large:                                0 0 1em rgba(0, 0, 0, 0.2),
-                                                        0 0 2em rgba(0, 0, 0, 0.1);
+  --layout-shadow-offset-y:                             0.02em;
+  --layout-shadow-blur:                                 0.02em;
+  --layout-shadow-opacity:                              0.02;
+  --layout-shadow-scale-small:                          1;
+  --layout-shadow-scale-medium:                         2;
+  --layout-shadow-scale-large:                          3;
+  --layout-shadow-bottom-small:
+                                                        0 calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-offset-y) * 2)) calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-blur) * 4)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-opacity) * 1))),
+                                                        0 calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-offset-y) * 4)) calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-blur) * 8)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-opacity) * 2))),
+                                                        0 calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-offset-y) * 8)) calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-blur) * 16)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-opacity) * 3))),
+                                                        0 calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-offset-y) * 16)) calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-blur) * 32)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-opacity) * 4)));
+  --layout-shadow-bottom-medium:
+                                                        0 calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-offset-y) * 2)) calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-blur) * 4)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-opacity) * 1))),
+                                                        0 calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-offset-y) * 4)) calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-blur) * 8)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-opacity) * 2))),
+                                                        0 calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-offset-y) * 8)) calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-blur) * 16)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-opacity) * 3))),
+                                                        0 calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-offset-y) * 16)) calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-blur) * 32)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-opacity) * 4)));
+  --layout-shadow-bottom-large:
+                                                        0 calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-offset-y) * 2)) calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-blur) * 4)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-opacity) * 1))),
+                                                        0 calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-offset-y) * 4)) calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-blur) * 8)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-opacity) * 2))),
+                                                        0 calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-offset-y) * 8)) calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-blur) * 16)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-opacity) * 3))),
+                                                        0 calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-offset-y) * 16)) calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-blur) * 32)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-opacity) * 4)));
+  --layout-shadow-top-small:
+                                                        0 calc(var(--layout-shadow-scale-small) * calc(calc(var(--layout-shadow-offset-y) * -1) * 2)) calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-blur) * 4)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-opacity) * 1))),
+                                                        0 calc(var(--layout-shadow-scale-small) * calc(calc(var(--layout-shadow-offset-y) * -1) * 4)) calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-blur) * 8)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-opacity) * 2))),
+                                                        0 calc(var(--layout-shadow-scale-small) * calc(calc(var(--layout-shadow-offset-y) * -1) * 8)) calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-blur) * 16)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-opacity) * 3))),
+                                                        0 calc(var(--layout-shadow-scale-small) * calc(calc(var(--layout-shadow-offset-y) * -1) * 16)) calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-blur) * 32)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-small) * calc(var(--layout-shadow-opacity) * 4)));
+  --layout-shadow-top-medium:
+                                                        0 calc(var(--layout-shadow-scale-medium) * calc(calc(var(--layout-shadow-offset-y) * -1) * 2)) calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-blur) * 4)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-opacity) * 1))),
+                                                        0 calc(var(--layout-shadow-scale-medium) * calc(calc(var(--layout-shadow-offset-y) * -1) * 4)) calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-blur) * 8)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-opacity) * 2))),
+                                                        0 calc(var(--layout-shadow-scale-medium) * calc(calc(var(--layout-shadow-offset-y) * -1) * 8)) calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-blur) * 16)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-opacity) * 3))),
+                                                        0 calc(var(--layout-shadow-scale-medium) * calc(calc(var(--layout-shadow-offset-y) * -1) * 16)) calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-blur) * 32)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-medium) * calc(var(--layout-shadow-opacity) * 4)));
+  --layout-shadow-top-large:
+                                                        0 calc(var(--layout-shadow-scale-large) * calc(calc(var(--layout-shadow-offset-y) * -1) * 2)) calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-blur) * 4)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-opacity) * 1))),
+                                                        0 calc(var(--layout-shadow-scale-large) * calc(calc(var(--layout-shadow-offset-y) * -1) * 4)) calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-blur) * 8)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-opacity) * 2))),
+                                                        0 calc(var(--layout-shadow-scale-large) * calc(calc(var(--layout-shadow-offset-y) * -1) * 8)) calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-blur) * 16)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-opacity) * 3))),
+                                                        0 calc(var(--layout-shadow-scale-large) * calc(calc(var(--layout-shadow-offset-y) * -1) * 16)) calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-blur) * 32)) rgba(0, 0, 0, calc(var(--layout-shadow-scale-large) * calc(var(--layout-shadow-opacity) * 4)));
   --horizontal-rule:                                    calc(var(--layout-line-width) / 2) solid rgb(var(--theme-color-02));
   /* background */
   --background-color-theme:                             var(--theme-color-01);

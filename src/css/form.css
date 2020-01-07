@@ -1529,7 +1529,7 @@ input[type="range"]:disabled::-moz-range-progress {
   position: absolute;
   width: 100%;
   min-width: 12em;
-  box-shadow: var(--layout-shadow-large);
+  box-shadow: var(--layout-shadow-bottom-large);
   z-index: var(--z-index-dropdown);
   overflow: hidden;
   display: none;

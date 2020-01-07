@@ -25,7 +25,7 @@
 .modal-wrapper {
   background-color: rgb(var(--theme-color-01));
   border-radius: var(--theme-radius);
-  box-shadow: var(--layout-shadow-large);
+  box-shadow: var(--layout-shadow-bottom-large);
   position: relative;
   max-height: calc(100vh - 2em);
   overflow-y: auto;

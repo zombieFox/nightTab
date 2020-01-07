@@ -16,7 +16,7 @@
   border-radius: var(--theme-radius);
   overflow-y: auto;
   z-index: var(--z-index-auto-suggest);
-  box-shadow: var(--layout-shadow-large);
+  box-shadow: var(--layout-shadow-bottom-large);
 }
 
 .auto-suggest-list {

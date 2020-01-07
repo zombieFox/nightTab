@@ -54,7 +54,7 @@
 
 .is-theme-custom-edit .theme-custom-button {
   height: calc(var(--theme-preset-preview-size) - var(--theme-custom-edit-height));
-  box-shadow: var(--layout-shadow-medium);
+  box-shadow: var(--layout-shadow-bottom-medium);
 }
 
 .is-theme-custom-edit .theme-custom-control {
