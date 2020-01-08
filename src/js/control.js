@@ -2539,9 +2539,10 @@ var control = (function() {
     }
   }, {
     element: helper.e(".control-theme-custom-edit"),
-    type: "button",
+    path: "theme.custom.edit",
+    type: "checkbox",
     func: function() {
-      theme.custom.edit();
+      render.class();
     }
   }, {
     element: helper.e(".control-theme-style-dark"),
@@ -3450,10 +3451,13 @@ var control = (function() {
       };
     };
     var _theme = function() {
+      helper.removeClass(html, "is-theme-custom-edit");
+      helper.removeClass(html, "is-theme-radius");
+      if (state.get.current().theme.custom.edit) {
+        helper.addClass(html, "is-theme-custom-edit");
+      };
       if (state.get.current().theme.radius > 0) {
         helper.addClass(html, "is-theme-radius");
-      } else {
-        helper.removeClass(html, "is-theme-radius");
       };
     };
     var _layout = function() {
@@ -3842,23 +3846,21 @@ var control = (function() {
       _transitional();
     };
     var _edit = function() {
+      _disable.input(".control-edit", true);
       if (bookmarks.get().length > 0) {
         _disable.input(".control-edit", false);
-      } else {
-        _disable.input(".control-edit", true);
       };
     };
     var _group = function() {
+      _disable.element("[for=control-group-name-size]", true);
+      _disable.input(".control-group-name-size", true);
+      _disable.element(".control-group-name-size-count", true);
+      _disable.input(".control-group-name-size-default", true);
       if (state.get.current().group.name.show) {
         _disable.element("[for=control-group-name-size]", false);
         _disable.input(".control-group-name-size", false);
         _disable.element(".control-group-name-size-count", false);
         _disable.input(".control-group-name-size-default", false);
-      } else {
-        _disable.element("[for=control-group-name-size]", true);
-        _disable.input(".control-group-name-size", true);
-        _disable.element(".control-group-name-size-count", true);
-        _disable.input(".control-group-name-size-default", true);
       };
     };
     var _link = function() {
@@ -4062,6 +4064,16 @@ var control = (function() {
       };
     };
     var _theme = function() {
+      _disable.input(".control-theme-custom-edit", true);
+      _disable.input(".control-theme-accent-random-style-any", true);
+      _disable.input(".control-theme-accent-random-style-light", true);
+      _disable.input(".control-theme-accent-random-style-dark", true);
+      _disable.input(".control-theme-accent-random-style-pastel", true);
+      _disable.input(".control-theme-accent-random-style-saturated", true);
+      _disable.input(".control-theme-accent-randomise", true);
+      if (state.get.current().theme.custom.all.length > 0) {
+        _disable.input(".control-theme-custom-edit", false);
+      };
       if (state.get.current().theme.accent.random.active) {
         _disable.input(".control-theme-accent-random-style-any", false);
         _disable.input(".control-theme-accent-random-style-light", false);
@@ -4069,13 +4081,6 @@ var control = (function() {
         _disable.input(".control-theme-accent-random-style-pastel", false);
         _disable.input(".control-theme-accent-random-style-saturated", false);
         _disable.input(".control-theme-accent-randomise", false);
-      } else {
-        _disable.input(".control-theme-accent-random-style-any", true);
-        _disable.input(".control-theme-accent-random-style-light", true);
-        _disable.input(".control-theme-accent-random-style-dark", true);
-        _disable.input(".control-theme-accent-random-style-pastel", true);
-        _disable.input(".control-theme-accent-random-style-saturated", true);
-        _disable.input(".control-theme-accent-randomise", true);
       };
     };
     var _background = function() {

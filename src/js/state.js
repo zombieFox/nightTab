@@ -262,7 +262,10 @@ var state = (function() {
       style: "dark",
       radius: 0.25,
       shadow: 1,
-      custom: []
+      custom: {
+        all: [],
+        edit: false
+      }
     },
     background: {
       color: {

@@ -1089,13 +1089,20 @@ var theme = (function() {
 
   mod.custom = {
     get: function(index) {
-      return JSON.parse(JSON.stringify(state.get.current().theme.custom[index]));
+      return JSON.parse(JSON.stringify(state.get.current().theme.custom.all[index]));
     },
     add: function() {
-      state.get.current().theme.custom.push(JSON.parse(JSON.stringify(stagedThemeCustom.theme)));
+      state.get.current().theme.custom.all.push(JSON.parse(JSON.stringify(stagedThemeCustom.theme)));
     },
     remove: function(copyStagedThemeCustom) {
-      state.get.current().theme.custom.splice(stagedThemeCustom.position.index, 1);
+      state.get.current().theme.custom.all.splice(stagedThemeCustom.position.index, 1);
+    },
+    close: function() {
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.custom.edit",
+        newValue: false
+      });
     }
   };
 
@@ -1399,7 +1406,7 @@ var theme = (function() {
     all: function() {
       var themeCustomSaved = helper.e(".theme-custom");
       var formInline = helper.node("div|class:form-inline");
-      var allThemeCuston = JSON.parse(JSON.stringify(state.get.current().theme.custom));
+      var allThemeCuston = JSON.parse(JSON.stringify(state.get.current().theme.custom.all));
       if (allThemeCuston.length > 0) {
         allThemeCuston.forEach(function(arrayItem, index) {
           var themeCustomItem = helper.node("div|class:theme-custom-item");
@@ -1527,6 +1534,7 @@ var theme = (function() {
         shade.close();
         pagelock.unlock();
         stagedThemeCustom.reset();
+        control.render.dependents();
       };
       var cancelAction = function() {
         shade.close();
@@ -1561,12 +1569,16 @@ var theme = (function() {
       };
       var successAction = function() {
         mod.custom.remove();
+        custom.check();
         data.save();
         render.custom.clear();
         render.custom.all();
         shade.close();
         pagelock.unlock();
         stagedThemeCustom.reset();
+        control.render.update();
+        control.render.class();
+        control.render.dependents();
       };
       var cancelAction = function() {
         shade.close();
@@ -1589,16 +1601,6 @@ var theme = (function() {
         }
       });
       pagelock.lock();
-    },
-    edit: function() {
-      var html = helper.e("html");
-      if (_customThemeEdit) {
-        _customThemeEdit = false;
-        helper.removeClass(html, "is-theme-custom-edit");
-      } else {
-        _customThemeEdit = true;
-        helper.addClass(html, "is-theme-custom-edit");
-      };
     },
     clear: function() {
       var themeCustom = helper.e(".theme-custom");
@@ -1662,6 +1664,11 @@ var theme = (function() {
     edit: function() {
       render.custom.edit();
       render.custom.tabIndex();
+    },
+    check: function() {
+      if (state.get.current().theme.custom.all <= 0) {
+        mod.custom.close();
+      };
     }
   };
 
