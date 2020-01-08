@@ -1233,6 +1233,8 @@ input[type="range"]:disabled::-moz-range-progress {
   display: inline-flex;
   justify-content: flex-start;
   align-items: stretch;
+  position: relative;
+  z-index: 1;
 }
 
 .form-group .form-group-text,

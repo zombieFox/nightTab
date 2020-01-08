@@ -6,7 +6,7 @@ h5,
 h6 {
   margin: 0 0 1em 0;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.6;
   color: rgb(var(--theme-color-18));
 }
 
@@ -57,7 +57,7 @@ h6 {
 p {
   color: rgb(var(--theme-color-16));
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 p:not(:last-child) {
