@@ -33,6 +33,39 @@ var theme = (function() {
 
   var mod = {};
 
+  mod.apply = function(data) {
+    helper.setObject({
+      object: state.get.current(),
+      path: "theme.font",
+      newValue: data.font
+    });
+    helper.setObject({
+      object: state.get.current(),
+      path: "theme.color",
+      newValue: data.color
+    });
+    helper.setObject({
+      object: state.get.current(),
+      path: "theme.accent.current",
+      newValue: data.accent
+    });
+    helper.setObject({
+      object: state.get.current(),
+      path: "theme.radius",
+      newValue: data.radius
+    });
+    helper.setObject({
+      object: state.get.current(),
+      path: "theme.style",
+      newValue: data.style
+    });
+    helper.setObject({
+      object: state.get.current(),
+      path: "theme.shadow",
+      newValue: data.shadow
+    });
+  };
+
   mod.style = {
     light: function() {
       helper.setObject({
@@ -136,38 +169,6 @@ var theme = (function() {
   };
 
   mod.preset = {
-    set: function(themePreset) {
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.font",
-        newValue: themePreset.font
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.color",
-        newValue: themePreset.color
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.accent.current",
-        newValue: themePreset.accent
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.radius",
-        newValue: themePreset.radius
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.style",
-        newValue: themePreset.style
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.shadow",
-        newValue: themePreset.shadow
-      });
-    },
     get: function(index) {
       return JSON.parse(JSON.stringify(mod.preset.all[index]));
     },
@@ -1087,38 +1088,6 @@ var theme = (function() {
   };
 
   mod.custom = {
-    set: function(themeCustom) {
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.font",
-        newValue: themeCustom.font
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.color",
-        newValue: themeCustom.color
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.accent.current",
-        newValue: themeCustom.accent
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.radius",
-        newValue: themeCustom.radius
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.style",
-        newValue: themeCustom.style
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.shadow",
-        newValue: themeCustom.shadow
-      });
-    },
     get: function(index) {
       return JSON.parse(JSON.stringify(state.get.current().theme.custom[index]));
     },
@@ -1405,7 +1374,7 @@ var theme = (function() {
       formInline.appendChild(themePresetItem);
 
       themePresetButton.addEventListener("click", function() {
-        mod.preset.set(mod.preset.get(index));
+        mod.apply(mod.preset.get(index));
         data.save();
         render.font.display.name();
         render.font.display.weight();
@@ -1492,7 +1461,7 @@ var theme = (function() {
           var copyStagedThemeCustom = JSON.parse(JSON.stringify(stagedThemeCustom));
 
           themeCustomButton.addEventListener("click", function() {
-            mod.custom.set(mod.custom.get(index));
+            mod.apply(mod.custom.get(index));
             data.save();
             render.font.display.name();
             render.font.display.weight();
@@ -1686,10 +1655,6 @@ var theme = (function() {
     }
   }
 
-  var preset = function(name) {
-    mod.preset.set(name);
-  };
-
   var custom = {
     add: function() {
       render.custom.add();
@@ -1725,7 +1690,6 @@ var theme = (function() {
     render: render,
     style: style,
     accent: accent,
-    preset: preset,
     custom: custom
   };
 

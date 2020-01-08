@@ -1,7 +1,7 @@
 .theme-preset-item,
 .theme-custom-item {
-  width: var(--theme-preset-preview-size);
-  height: var(--theme-preset-preview-size);
+  width: var(--theme-preview-size);
+  height: var(--theme-preview-size);
   border-radius: var(--theme-radius);
   padding: 0;
   margin: 0.5em;
@@ -13,8 +13,8 @@
 .theme-custom-button {
   padding: 0;
   border-radius: 0;
-  width: var(--theme-preset-preview-size);
-  height: var(--theme-preset-preview-size);
+  width: var(--theme-preview-size);
+  height: var(--theme-preview-size);
   line-height: 1.6;
   position: absolute;
   top: 0;
@@ -31,7 +31,7 @@
 }
 
 .theme-custom-control {
-  width: var(--theme-preset-preview-size);
+  width: var(--theme-preview-size);
   height: 0;
   position: absolute;
   bottom: 0;
@@ -53,7 +53,7 @@
 }
 
 .is-theme-custom-edit .theme-custom-button {
-  height: calc(var(--theme-preset-preview-size) - var(--theme-custom-edit-height));
+  height: calc(var(--theme-preview-size) - var(--theme-custom-edit-height));
   box-shadow: var(--theme-shadow-bottom-medium);
 }
 
@@ -63,8 +63,8 @@
 
 .theme-preset-preview,
 .theme-custom-preview {
-  width: var(--theme-preset-preview-size);
-  height: var(--theme-preset-preview-size);
+  width: var(--theme-preview-size);
+  height: var(--theme-preview-size);
   position: absolute;
   top: 0;
   left: 0;
@@ -268,10 +268,17 @@
 }
 
 .theme-shadow-box {
+  background-color: rgb(var(--theme-color-02));
   border-radius: var(--theme-radius);
   margin: 0;
+  padding: 0.5em;
   width: 5em;
   height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: normal;
 }
 
 .theme-shadow-box-small {
