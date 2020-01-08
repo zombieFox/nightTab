@@ -2674,17 +2674,6 @@ var control = (function() {
       theme.render.font.ui.style();
     }
   }, {
-    element: helper.e(".control-theme-radius-default"),
-    type: "button",
-    func: function() {
-      mod.setValue("theme.radius", helper.getObject({
-        object: state.get.default(),
-        path: "theme.radius"
-      }));
-      theme.render.radius();
-      render.update();
-    }
-  }, {
     element: helper.e(".control-theme-color-rgb-quick"),
     path: "theme.color.rgb",
     type: "color",
@@ -2922,6 +2911,16 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: helper.e(".control-theme-accent-randomise"),
+    type: "button",
+    func: function() {
+      theme.accent.random();
+      theme.render.accent.input.quick();
+      theme.render.accent.input.picker();
+      theme.render.accent.input.hex();
+      link.groupAndItems();
+    }
+  }, {
     element: helper.e(".control-theme-radius"),
     path: "theme.radius",
     type: "range",
@@ -2933,14 +2932,36 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
-    element: helper.e(".control-theme-accent-randomise"),
+    element: helper.e(".control-theme-radius-default"),
     type: "button",
     func: function() {
-      theme.accent.random();
-      theme.render.accent.input.quick();
-      theme.render.accent.input.picker();
-      theme.render.accent.input.hex();
-      link.groupAndItems();
+      mod.setValue("theme.radius", helper.getObject({
+        object: state.get.default(),
+        path: "theme.radius"
+      }));
+      theme.render.radius();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-shadow"),
+    path: "theme.shadow",
+    type: "range",
+    valueMod: ["float"],
+    rangeCountElement: helper.e(".control-theme-shadow-count"),
+    func: function() {
+      theme.render.shadow();
+      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-theme-shadow-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.shadow", helper.getObject({
+        object: state.get.default(),
+        path: "theme.shadow"
+      }));
+      theme.render.shadow();
+      render.update();
     }
   }, {
     element: helper.e(".control-background-color-by-theme"),
@@ -3898,6 +3919,7 @@ var control = (function() {
       _disable.input(".control-link-item-url-show", true);
       _disable.input(".control-link-item-line-show", true);
       _disable.input(".control-link-item-shadow-show", true);
+      _disable.element(".control-link-item-shadow-show-helper", true);
       _disable.input(".control-link-item-hoverscale", true);
       _disable.element(".control-link-item-display-alignment-grid", true);
       _disable.element(".control-link-item-display-alignment-label", true);
@@ -3957,6 +3979,7 @@ var control = (function() {
         _disable.input(".control-link-item-url-show", false);
         _disable.input(".control-link-item-line-show", false);
         _disable.input(".control-link-item-shadow-show", false);
+        _disable.element(".control-link-item-shadow-show-helper", false);
         _disable.input(".control-link-item-hoverscale", false);
         _disable.input(".control-link-newtab", false);
         _disable.input(".control-link-item-color-by-theme", false);

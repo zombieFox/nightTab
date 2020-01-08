@@ -32,7 +32,7 @@
 }
 
 .is-menu-open .menu-area {
-  box-shadow: var(--layout-shadow-bottom-large);
+  box-shadow: var(--theme-shadow-bottom-large);
 }
 
 .is-edge .menu-area {
@@ -96,8 +96,8 @@
 
 .menu-item-form-sticky {
   background-color: rgb(var(--theme-color-01));
-  margin: -2em -1em 0 -1em;
-  padding: 2em 1em 1em 1em;
+  margin: -1.5em -1em 0 -1em;
+  padding: 1.5em 1em 1em 1em;
   position: sticky;
   top: 0;
   z-index: 2;

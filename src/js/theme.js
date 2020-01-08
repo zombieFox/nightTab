@@ -22,11 +22,12 @@ var theme = (function() {
   stagedThemeCustom.reset = function() {
     stagedThemeCustom.position.index = null;
     stagedThemeCustom.theme.name = null;
-    stagedThemeCustom.theme.style = null;
     stagedThemeCustom.theme.font = null;
     stagedThemeCustom.theme.color = null;
     stagedThemeCustom.theme.accent = null;
     stagedThemeCustom.theme.radius = null;
+    stagedThemeCustom.theme.shadow = null;
+    stagedThemeCustom.theme.style = null;
     stagedThemeCustom.theme.timestamp = null;
   };
 
@@ -138,11 +139,6 @@ var theme = (function() {
     set: function(themePreset) {
       helper.setObject({
         object: state.get.current(),
-        path: "theme.style",
-        newValue: themePreset.style
-      });
-      helper.setObject({
-        object: state.get.current(),
         path: "theme.font",
         newValue: themePreset.font
       });
@@ -160,6 +156,16 @@ var theme = (function() {
         object: state.get.current(),
         path: "theme.radius",
         newValue: themePreset.radius
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.style",
+        newValue: themePreset.style
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.shadow",
+        newValue: themePreset.shadow
       });
     },
     get: function(index) {
@@ -201,6 +207,7 @@ var theme = (function() {
         b: 255
       },
       radius: 0.25,
+      shadow: 1,
       style: "dark"
     }, {
       name: "Midnight",
@@ -238,6 +245,7 @@ var theme = (function() {
         b: 255
       },
       radius: 0.5,
+      shadow: 0.75,
       style: "dark"
     }, {
       name: "Lex",
@@ -275,6 +283,7 @@ var theme = (function() {
         b: 170
       },
       radius: 0.1,
+      shadow: 1,
       style: "dark"
     }, {
       name: "Cruiser",
@@ -312,6 +321,7 @@ var theme = (function() {
         b: 0
       },
       radius: 0.2,
+      shadow: 1.5,
       style: "dark"
     }, {
       name: "Sharp Mint",
@@ -349,6 +359,7 @@ var theme = (function() {
         b: 226
       },
       radius: 0.8,
+      shadow: 1,
       style: "dark"
     }, {
       name: "Snow Glow",
@@ -386,6 +397,7 @@ var theme = (function() {
         b: 214
       },
       radius: 0,
+      shadow: 0.5,
       style: "light"
     }, {
       name: "Rumble",
@@ -423,6 +435,7 @@ var theme = (function() {
         b: 66
       },
       radius: 0.75,
+      shadow: 1.75,
       style: "dark"
     }, {
       name: "Sol",
@@ -460,6 +473,7 @@ var theme = (function() {
         b: 0
       },
       radius: 0.5,
+      shadow: 0.25,
       style: "light"
     }, {
       name: "Art Deco",
@@ -497,6 +511,7 @@ var theme = (function() {
         b: 161
       },
       radius: 2,
+      shadow: 0.5,
       style: "dark"
     }, {
       name: "Grimm",
@@ -534,6 +549,7 @@ var theme = (function() {
         b: 102
       },
       radius: 1,
+      shadow: 1.5,
       style: "dark"
     }, {
       name: "Macaroon",
@@ -571,6 +587,7 @@ var theme = (function() {
         b: 208
       },
       radius: 0.40,
+      shadow: 0.5,
       style: "light"
     }, {
       name: "Hot Pepper",
@@ -608,6 +625,7 @@ var theme = (function() {
         b: 0
       },
       radius: 0.6,
+      shadow: 1,
       style: "dark"
     }, {
       name: "Steel",
@@ -645,6 +663,7 @@ var theme = (function() {
         b: 118
       },
       radius: 0.3,
+      shadow: 0.5,
       style: "light"
     }, {
       name: "Outrun",
@@ -682,6 +701,7 @@ var theme = (function() {
         b: 187
       },
       radius: 0,
+      shadow: 0,
       style: "dark"
     }, {
       name: "Pumpkin",
@@ -719,6 +739,7 @@ var theme = (function() {
         b: 34
       },
       radius: 0.2,
+      shadow: 1,
       style: "dark"
     }, {
       name: "Funkadelic",
@@ -756,6 +777,7 @@ var theme = (function() {
         b: 34
       },
       radius: 1.2,
+      shadow: 0,
       style: "dark"
     }, {
       name: "Elder Bean",
@@ -793,6 +815,7 @@ var theme = (function() {
         b: 0
       },
       radius: 0.5,
+      shadow: 1.75,
       style: "dark"
     }, {
       name: "Marker",
@@ -830,6 +853,7 @@ var theme = (function() {
         b: 0
       },
       radius: 0.3,
+      shadow: 0.25,
       style: "light"
     }, {
       name: "Kapow",
@@ -867,6 +891,7 @@ var theme = (function() {
         b: 0
       },
       radius: 0.4,
+      shadow: 1,
       style: "dark"
     }, {
       name: "Dash",
@@ -904,6 +929,7 @@ var theme = (function() {
         b: 68
       },
       radius: 0,
+      shadow: 0,
       style: "light"
     }, {
       name: "Savage",
@@ -941,6 +967,7 @@ var theme = (function() {
         b: 0
       },
       radius: 0,
+      shadow: 2.5,
       style: "dark"
     }, {
       name: "Trine",
@@ -978,6 +1005,7 @@ var theme = (function() {
         b: 255
       },
       radius: 0.5,
+      shadow: 1.25,
       style: "dark"
     }, {
       name: "Obsidian",
@@ -1015,6 +1043,7 @@ var theme = (function() {
         b: 255
       },
       radius: 0.25,
+      shadow: 2,
       style: "dark"
     }, {
       name: "Earthquake",
@@ -1052,17 +1081,13 @@ var theme = (function() {
         b: 0
       },
       radius: 0.80,
+      shadow: 1,
       style: "dark"
     }]
   };
 
   mod.custom = {
     set: function(themeCustom) {
-      helper.setObject({
-        object: state.get.current(),
-        path: "theme.style",
-        newValue: themeCustom.style
-      });
       helper.setObject({
         object: state.get.current(),
         path: "theme.font",
@@ -1082,6 +1107,16 @@ var theme = (function() {
         object: state.get.current(),
         path: "theme.radius",
         newValue: themeCustom.radius
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.style",
+        newValue: themeCustom.style
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.shadow",
+        newValue: themeCustom.shadow
       });
     },
     get: function(index) {
@@ -1108,11 +1143,6 @@ var theme = (function() {
       helper.removeClass(html, "is-theme-style-dark");
       helper.addClass(html, "is-theme-style-light");
     }
-  };
-
-  render.radius = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--theme-radius", state.get.current().theme.radius + "rem");
   };
 
   render.accent = {
@@ -1311,6 +1341,16 @@ var theme = (function() {
     }
   };
 
+  render.radius = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--theme-radius", state.get.current().theme.radius + "rem");
+  };
+
+  render.shadow = function() {
+    var html = helper.e("html");
+    html.style.setProperty("--theme-shadow", state.get.current().theme.shadow);
+  };
+
   render.preset = function() {
     var themePreset = helper.e(".theme-preset");
     var formInline = helper.node("div|class:form-inline");
@@ -1375,6 +1415,7 @@ var theme = (function() {
         render.font.ui.style();
         render.color.shade();
         render.accent.color();
+        render.shadow();
         render.radius();
         style.check();
         link.groupAndItems();
@@ -1461,6 +1502,7 @@ var theme = (function() {
             render.font.ui.style();
             render.color.shade();
             render.accent.color();
+            render.shadow();
             render.radius();
             style.check();
             link.groupAndItems();
@@ -1502,11 +1544,12 @@ var theme = (function() {
         return form;
       };
       var successAction = function() {
-        stagedThemeCustom.theme.style = state.get.current().theme.style;
         stagedThemeCustom.theme.font = state.get.current().theme.font;
         stagedThemeCustom.theme.color = state.get.current().theme.color;
         stagedThemeCustom.theme.accent = state.get.current().theme.accent.current;
         stagedThemeCustom.theme.radius = state.get.current().theme.radius;
+        stagedThemeCustom.theme.shadow = state.get.current().theme.shadow;
+        stagedThemeCustom.theme.style = state.get.current().theme.style;
         stagedThemeCustom.theme.timestamp = new Date().getTime();
         mod.custom.add();
         data.save();
@@ -1670,6 +1713,7 @@ var theme = (function() {
     render.color.shade();
     render.accent.color();
     render.radius();
+    render.shadow();
     render.preset();
     render.custom.all();
   };

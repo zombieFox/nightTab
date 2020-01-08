@@ -753,6 +753,10 @@ var update = (function() {
         dark: 4
       };
       return data;
+    },
+    "4.10.0": function(data) {
+      data.state.theme.shadow = 1;
+      return data;
     }
   };
 

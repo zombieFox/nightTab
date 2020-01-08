@@ -186,13 +186,13 @@
 .is-link-item-shadow-show.is-link-orientation-bottom .link-item:focus .link-panel-front,
 .is-link-item-shadow-show.is-link-orientation-bottom .link-item:focus-within .link-panel-front,
 .is-link-item-shadow-show.is-link-orientation-bottom .link-item:hover .link-panel-front {
-  box-shadow: var(--layout-shadow-bottom-large);
+  box-shadow: var(--theme-shadow-bottom-large);
 }
 
 .is-link-item-shadow-show.is-link-orientation-top .link-item:focus .link-panel-front,
 .is-link-item-shadow-show.is-link-orientation-top .link-item:focus-within .link-panel-front,
 .is-link-item-shadow-show.is-link-orientation-top .link-item:hover .link-panel-front {
-  box-shadow: var(--layout-shadow-top-large);
+  box-shadow: var(--theme-shadow-top-large);
 }
 
 .is-link-display-alignment-topleft .link-panel-front {
@@ -283,13 +283,13 @@
 .is-link-item-shadow-show.is-link-orientation-bottom.is-edit .link-panel-front,
 .is-link-item-shadow-show.is-link-orientation-bottom.is-edit .link-item:hover .link-panel-front,
 .is-link-item-shadow-show.is-link-orientation-bottom.is-edit .link-item:focus .link-panel-front {
-  box-shadow: var(--layout-shadow-bottom-medium);
+  box-shadow: var(--theme-shadow-bottom-medium);
 }
 
 .is-link-item-shadow-show.is-link-orientation-top.is-edit .link-panel-front,
 .is-link-item-shadow-show.is-link-orientation-top.is-edit .link-item:hover .link-panel-front,
 .is-link-item-shadow-show.is-link-orientation-top.is-edit .link-item:focus .link-panel-front {
-  box-shadow: var(--layout-shadow-top-medium);
+  box-shadow: var(--theme-shadow-top-medium);
 }
 
 /* link display */

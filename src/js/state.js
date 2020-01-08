@@ -261,6 +261,7 @@ var state = (function() {
       },
       style: "dark",
       radius: 0.25,
+      shadow: 1,
       custom: []
     },
     background: {
@@ -397,7 +398,8 @@ var state = (function() {
         }
       },
       style: "dark",
-      radius: 0.25
+      radius: 0.25,
+      shadow: 1
     }
   };
 
