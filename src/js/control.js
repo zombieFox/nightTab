@@ -2587,6 +2587,30 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-theme-font-display-light"),
+    type: "button",
+    func: function() {
+      theme.mod.font.display.light();
+      theme.render.font.display.weight();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-font-display-regular"),
+    type: "button",
+    func: function() {
+      theme.mod.font.display.regular();
+      theme.render.font.display.weight();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-font-display-bold"),
+    type: "button",
+    func: function() {
+      theme.mod.font.display.bold();
+      theme.render.font.display.weight();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-theme-font-display-weight-style-default"),
     type: "button",
     func: function() {
@@ -2643,6 +2667,30 @@ var control = (function() {
     func: function() {
       theme.render.font.ui.weight();
       render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-light"),
+    type: "button",
+    func: function() {
+      theme.mod.font.ui.light();
+      theme.render.font.ui.weight();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-regular"),
+    type: "button",
+    func: function() {
+      theme.mod.font.ui.regular();
+      theme.render.font.ui.weight();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-bold"),
+    type: "button",
+    func: function() {
+      theme.mod.font.ui.bold();
+      theme.render.font.ui.weight();
+      render.update();
     }
   }, {
     element: helper.e(".control-theme-font-ui-weight-style-default"),

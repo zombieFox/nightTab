@@ -1106,6 +1106,55 @@ var theme = (function() {
     }
   };
 
+  mod.font = {
+    display: {
+      light: function() {
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.font.display.weight",
+          newValue: 300
+        });
+      },
+      regular: function() {
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.font.display.weight",
+          newValue: 400
+        });
+      },
+      bold: function() {
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.font.display.weight",
+          newValue: 700
+        });
+      }
+    },
+    ui: {
+      light: function() {
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.font.ui.weight",
+          newValue: 300
+        });
+      },
+      regular: function() {
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.font.ui.weight",
+          newValue: 400
+        });
+      },
+      bold: function() {
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.font.ui.weight",
+          newValue: 700
+        });
+      }
+    }
+  };
+
   var render = {};
 
   render.style = {
