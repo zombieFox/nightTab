@@ -1514,13 +1514,13 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-group-text-transparent,
-.form-group-text:hover,
-.form-group-text:focus,
-.form-group-text:active,
-.form-group-text.disabled,
-.form-group-text.disabled:hover,
-.form-group-text.disabled:focus,
-.form-group-text.disable:active {
+.form-group-text-transparent:hover,
+.form-group-text-transparent:focus,
+.form-group-text-transparent:active,
+.form-group-text-transparent.disabled,
+.form-group-text-transparent.disabled:hover,
+.form-group-text-transparent.disabled:focus,
+.form-group-text-transparent.disable:active {
   background-color: transparent;
 }
 
