@@ -81,9 +81,7 @@ caption,
 strong {
   color: rgb(var(--theme-style-text));
   font-family: var(--theme-font-ui-name);
-  font-weight: var(--theme-font-ui-weight);
-  font-style: var(--theme-font-ui-style);
-  font-weight: bold;
+  font-weight: 700;
 }
 
 i {
