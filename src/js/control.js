@@ -2542,6 +2542,7 @@ var control = (function() {
     path: "theme.custom.edit",
     type: "checkbox",
     func: function() {
+      theme.render.custom.tabIndex();
       render.class();
     }
   }, {

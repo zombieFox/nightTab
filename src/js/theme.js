@@ -2,7 +2,6 @@ var theme = (function() {
 
   var _timerFontDisplay = null;
   var _timerFontUi = null;
-  var _customThemeEdit = false;
 
   var stagedThemeCustom = {
     position: {
@@ -1724,17 +1723,13 @@ var theme = (function() {
       };
     },
     tabIndex: function() {
-      if (_customThemeEdit) {
+      if (state.get.current().theme.custom.edit && state.get.current().menu) {
         helper.eA(".theme-custom-control-item").forEach(function(arrayItem, index) {
-          if (arrayItem.tabIndex == -2) {
-            arrayItem.tabIndex = 1;
-          };
+          arrayItem.tabIndex = 1;
         });
       } else {
         helper.eA(".theme-custom-control-item").forEach(function(arrayItem, index) {
-          if (arrayItem.tabIndex == 1) {
-            arrayItem.tabIndex = -2;
-          };
+          arrayItem.tabIndex = -2;
         });
       };
     }
@@ -1791,6 +1786,7 @@ var theme = (function() {
     style.check();
     accent.random();
     mod.accent.random();
+    mod.custom.close();
     render.font.display.name();
     render.font.display.weight();
     render.font.display.style();
