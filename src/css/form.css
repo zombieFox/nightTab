@@ -1097,9 +1097,9 @@ input[type="range"]:disabled::-moz-range-progress {
   box-shadow: 0 0 0.25em 0 rgba(var(--theme-accent), 0.6), 0 0 0.5em 0 rgba(var(--theme-accent), 0.4);
 }
 
-.input-color-dot-theme input[type="color"],
-.input-color-dot-theme input[type="color"]:hover,
-.input-color-dot-theme input[type="color"]:focus {
+.input-color-dot-shade input[type="color"],
+.input-color-dot-shade input[type="color"]:hover,
+.input-color-dot-shade input[type="color"]:focus {
   box-shadow: 0 0 0.25em 0 rgba(var(--theme-shade), 0.6), 0 0 0.5em 0 rgba(var(--theme-shade), 0.4);
 }
 
