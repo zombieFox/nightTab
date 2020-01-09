@@ -792,7 +792,7 @@ var update = (function() {
 
     // if no update is needed version bump
     if (version.compare(data.version, version.get().number) == -1) {
-      console.log("\t > nothing to update, version bump to", version.get().number);
+      console.log("\t > no state data to update, version bump to", version.get().number);
       data.version = version.get().number;
     };
 
