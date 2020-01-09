@@ -1094,6 +1094,9 @@ var theme = (function() {
     add: function() {
       state.get.current().theme.custom.all.push(JSON.parse(JSON.stringify(stagedThemeCustom.theme)));
     },
+    edit: function() {
+      state.get.current().theme.custom.all.splice(stagedThemeCustom.position.index, 1, JSON.parse(JSON.stringify(stagedThemeCustom.theme)));
+    },
     remove: function(copyStagedThemeCustom) {
       state.get.current().theme.custom.all.splice(stagedThemeCustom.position.index, 1);
     },
@@ -1463,7 +1466,9 @@ var theme = (function() {
           var themeCustomButton = helper.node("button|class:theme-custom-button button mb-0,tabindex:-1");
           var themeCustomPreview = helper.node("span|class:theme-custom-preview");
           var themeCustomControl = helper.node("div|class:theme-custom-control");
-          var themeCustomRemove = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button mb-0,tabindex:-2");
+          var themeCustomEdit = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button button-small mb-0,tabindex:-2");
+          var themeCustomEditIcon = helper.node("spa|class:button-icon icon-edit");
+          var themeCustomRemove = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button button-small mb-0,tabindex:-2");
           var themeCustomRemoveIcon = helper.node("spa|class:button-icon icon-close");
           var shadeSteps = 4;
           var rgb = arrayItem.color.rgb;
@@ -1505,7 +1510,9 @@ var theme = (function() {
           };
 
           themeCustomButton.appendChild(themeCustomPreview);
+          themeCustomEdit.appendChild(themeCustomEditIcon);
           themeCustomRemove.appendChild(themeCustomRemoveIcon);
+          themeCustomControl.appendChild(themeCustomEdit);
           themeCustomControl.appendChild(themeCustomRemove);
           themeCustomTile.appendChild(themeCustomButton);
           themeCustomTile.appendChild(themeCustomControl);
@@ -1535,6 +1542,11 @@ var theme = (function() {
             control.render.class();
           }, false);
 
+          themeCustomEdit.addEventListener("click", function() {
+            menu.close();
+            render.custom.edit(copyStagedThemeCustom);
+          }, false);
+
           themeCustomRemove.addEventListener("click", function() {
             menu.close();
             render.custom.remove(copyStagedThemeCustom);
@@ -1546,28 +1558,39 @@ var theme = (function() {
         themeCustomSaved.appendChild(helper.node("hr"));
       };
     },
-    add: function() {
-      var form = function() {
-        var form = helper.node("form|class:group-form");
-        var fieldset = helper.node("fieldset");
-        var inputWrap = helper.node("div|class:input-wrap");
-        var label = helper.node("label:Name|for:theme-name");
-        var input = helper.node("input|id:theme-name,class:theme-name mb-0,type:text,tabindex:1,placeholder:Example theme,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
-        inputWrap.appendChild(label);
-        inputWrap.appendChild(input);
-        fieldset.appendChild(inputWrap);
-        form.appendChild(fieldset);
-        input.addEventListener("input", function() {
-          stagedThemeCustom.theme.name = this.value;
-        }, false);
-        form.addEventListener("keydown", function(event) {
-          if (event.keyCode == 13) {
-            event.preventDefault();
-            return false;
-          };
-        }, false);
-        return form;
+    form: function(override) {
+      var options = {
+        useStagedTheme: null
       };
+      if (override) {
+        options = helper.applyOptions(options, override);
+      };
+      var form = helper.node("form|class:group-form");
+      var fieldset = helper.node("fieldset");
+      var inputWrap = helper.node("div|class:input-wrap");
+      var label = helper.node("label:Name|for:theme-name");
+      var input = helper.node("input|id:theme-name,class:theme-name mb-0,type:text,tabindex:1,placeholder:Example theme,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      inputWrap.appendChild(label);
+      inputWrap.appendChild(input);
+      fieldset.appendChild(inputWrap);
+      form.appendChild(fieldset);
+
+      if (options.useStagedTheme) {
+        input.value = stagedThemeCustom.theme.name;
+      };
+
+      input.addEventListener("input", function() {
+        stagedThemeCustom.theme.name = this.value;
+      }, false);
+      form.addEventListener("keydown", function(event) {
+        if (event.keyCode == 13) {
+          event.preventDefault();
+          return false;
+        };
+      }, false);
+      return form;
+    },
+    add: function() {
       var successAction = function() {
         stagedThemeCustom.theme.font = state.get.current().theme.font;
         stagedThemeCustom.theme.color = state.get.current().theme.color;
@@ -1592,11 +1615,54 @@ var theme = (function() {
       };
       modal.open({
         heading: "Save current Theme",
+        content: render.custom.form(),
+        successAction: successAction,
+        cancelAction: cancelAction,
+        actionText: "Save",
+        size: "small"
+      });
+      shade.open({
+        action: function() {
+          modal.close();
+          pagelock.unlock();
+          stagedThemeCustom.reset();
+        }
+      });
+      pagelock.lock();
+    },
+    edit: function(copyStagedThemeCustom) {
+      stagedThemeCustom.position.index = JSON.parse(JSON.stringify(copyStagedThemeCustom.position.index));
+      stagedThemeCustom.theme = JSON.parse(JSON.stringify(copyStagedThemeCustom.theme));
+      var form = render.custom.form({
+        useStagedTheme: true
+      });
+      var heading;
+      if (stagedThemeCustom.theme.name != null && stagedThemeCustom.theme.name != "") {
+        heading = "Edit " + stagedThemeCustom.theme.name;
+      } else {
+        heading = "Edit unnamed theme";
+      };
+      var successAction = function() {
+        mod.custom.edit();
+        data.save();
+        render.custom.clear();
+        render.custom.all();
+        shade.close();
+        pagelock.unlock();
+        stagedThemeCustom.reset();
+      };
+      var cancelAction = function() {
+        shade.close();
+        pagelock.unlock();
+        stagedThemeCustom.reset();
+      };
+      modal.open({
+        heading: heading,
         successAction: successAction,
         cancelAction: cancelAction,
         actionText: "Save",
         size: "small",
-        content: form()
+        content: form
       });
       shade.open({
         action: function() {
