@@ -732,7 +732,7 @@ var link = (function() {
       var displayIconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon disabled,tabindex:-1");
       var displayIconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
       var displayIconFormGroupClearIcon = helper.node("span|class:icon-close");
-      var displayIconHelper = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-icon-helper form-helper small muted disabled");
+      var displayIconHelper = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-icon-helper form-helper muted disabled");
 
       // name
       var nameInputWrap = helper.node("div|class:input-wrap");
@@ -748,7 +748,7 @@ var link = (function() {
         text: "Be sure to use the full URL and include \"http://\" or \"https://\".",
         attr: [{
           key: "class",
-          value: "form-helper small muted"
+          value: "form-helper muted"
         }]
       });
 
@@ -769,7 +769,7 @@ var link = (function() {
       var accentColorFormGroup = helper.node("div|class:form-group form-group-block mb-0");
       var accentColorPicker = helper.node("input|id:link-form-input-accent-picker,class:form-group-item-half link-form-input-accent-picker mb-0,type:color,value:#000000,tabindex:1,disabled");
       var accentColorHex = helper.node("input|id:link-form-input-accent-hex,class:form-group-item-half link-form-input-accent-hex mb-0,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
-      var accentColorInputHelper = helper.node("p:Use this colour to override the global accent colour.|class:link-form-input-accent-helper form-helper small muted disabled");
+      var accentColorInputHelper = helper.node("p:Use this colour to override the global accent colour.|class:link-form-input-accent-helper form-helper muted disabled");
 
       groupExistingRadioWrap.appendChild(groupExistingRadio);
       groupExistingLable.appendChild(groupExistingLableIcon);

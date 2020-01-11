@@ -539,7 +539,7 @@ input[type="checkbox"]:checked:disabled:active+label .label-icon:after {
 input[type="color"] {
   background-color: transparent;
   padding: 0;
-  margin: 0 0 1em 0;
+  margin: 0;
   width: 100%;
   min-width: 3em;
   height: 2.5em;
@@ -831,7 +831,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 /* form helper */
 .form-helper {
-  padding: 0.5em 0;
+  font-size: 0.8em;
   color: rgb(var(--form-helper));
   transition: color var(--layout-timing-extra-fast);
 }
@@ -840,28 +840,22 @@ input[type="range"]:disabled::-moz-range-progress {
   color: rgb(var(--form-helper-disabled));
 }
 
-.form-helper:not(:last-child) {
-  margin-bottom: 0;
-}
-
 /* input variants */
 .input-wrap {
-  padding: 0.5em 0;
   position: relative;
   width: 100%;
   display: block;
 }
 
-.input-button-inline {
-  width: initial;
-  display: inline-block;
+/* input button */
+.form-input-button {
+  position: relative;
 }
 
-/* input button */
-.input-button input[type="checkbox"]+label,
-.input-button input[type="radio"]+label,
-.input-button input[type="color"]+label,
-.input-button input[type="file"]+label {
+.form-input-button input[type="checkbox"]+label,
+.form-input-button input[type="radio"]+label,
+.form-input-button input[type="color"]+label,
+.form-input-button input[type="file"]+label {
   background-color: rgb(var(--button-background));
   padding: 0.25em 1em;
   margin: 0;
@@ -888,24 +882,24 @@ input[type="range"]:disabled::-moz-range-progress {
   transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast);
 }
 
-.input-button input[type="checkbox"]:focus+label,
-.input-button input[type="checkbox"]:hover+label,
-.input-button input[type="radio"]:focus+label,
-.input-button input[type="radio"]:hover+label,
-.input-button input[type="color"]:focus+label,
-.input-button input[type="color"]:hover+label,
-.input-button input[type="file"]:focus+label,
-.input-button input[type="file"]:hover+label {
+.form-input-button input[type="checkbox"]:focus+label,
+.form-input-button input[type="checkbox"]:hover+label,
+.form-input-button input[type="radio"]:focus+label,
+.form-input-button input[type="radio"]:hover+label,
+.form-input-button input[type="color"]:focus+label,
+.form-input-button input[type="color"]:hover+label,
+.form-input-button input[type="file"]:focus+label,
+.form-input-button input[type="file"]:hover+label {
   background-color: rgb(var(--button-background-focus-hover));
   color: rgb(var(--button-text-focus-hover));
   outline: none;
   text-decoration: none;
 }
 
-.input-button input[type="checkbox"]:active+label,
-.input-button input[type="radio"]:active+label,
-.input-button input[type="color"]:active+label,
-.input-button input[type="file"]:active+label {
+.form-input-button input[type="checkbox"]:active+label,
+.form-input-button input[type="radio"]:active+label,
+.form-input-button input[type="color"]:active+label,
+.form-input-button input[type="file"]:active+label {
   background-color: rgb(var(--button-background-active));
   color: rgb(var(--button-text-active));
   outline: none;
@@ -913,10 +907,10 @@ input[type="range"]:disabled::-moz-range-progress {
   transition: none;
 }
 
-.input-button input[type="checkbox"]:checked+label,
-.input-button input[type="radio"]:checked+label,
-.input-button input[type="color"]:checked+label,
-.input-button input[type="file"]:checked+label {
+.form-input-button input[type="checkbox"]:checked+label,
+.form-input-button input[type="radio"]:checked+label,
+.form-input-button input[type="color"]:checked+label,
+.form-input-button input[type="file"]:checked+label {
   background-color: rgb(var(--button-background-active));
   color: rgb(var(--button-text-active));
   outline: none;
@@ -924,37 +918,37 @@ input[type="range"]:disabled::-moz-range-progress {
   transition: none;
 }
 
-.input-button input[type="checkbox"]:disabled+label,
-.input-button input[type="checkbox"]:disabled:hover+label,
-.input-button input[type="checkbox"]:disabled:focus+label,
-.input-button input[type="checkbox"]:disabled:active+label,
-.input-button input[type="radio"]:disabled+label,
-.input-button input[type="radio"]:disabled:hover+label,
-.input-button input[type="radio"]:disabled:focus+label,
-.input-button input[type="radio"]:disabled:active+label,
-.input-button input[type="color"]:disabled+label,
-.input-button input[type="color"]:disabled:hover+label,
-.input-button input[type="color"]:disabled:focus+label,
-.input-button input[type="color"]:disabled:active+label,
-.input-button input[type="file"]:disabled+label,
-.input-button input[type="file"]:disabled:hover+label,
-.input-button input[type="file"]:disabled:focus+label,
-.input-button input[type="file"]:disabled:active+label {
+.form-input-button input[type="checkbox"]:disabled+label,
+.form-input-button input[type="checkbox"]:disabled:hover+label,
+.form-input-button input[type="checkbox"]:disabled:focus+label,
+.form-input-button input[type="checkbox"]:disabled:active+label,
+.form-input-button input[type="radio"]:disabled+label,
+.form-input-button input[type="radio"]:disabled:hover+label,
+.form-input-button input[type="radio"]:disabled:focus+label,
+.form-input-button input[type="radio"]:disabled:active+label,
+.form-input-button input[type="color"]:disabled+label,
+.form-input-button input[type="color"]:disabled:hover+label,
+.form-input-button input[type="color"]:disabled:focus+label,
+.form-input-button input[type="color"]:disabled:active+label,
+.form-input-button input[type="file"]:disabled+label,
+.form-input-button input[type="file"]:disabled:hover+label,
+.form-input-button input[type="file"]:disabled:focus+label,
+.form-input-button input[type="file"]:disabled:active+label {
   background-color: rgb(var(--button-background-disabled));
   color: rgb(var(--button-text-disabled));
   cursor: default;
   text-decoration: none;
 }
 
-.input-button input[type="checkbox"]+label .label-icon,
-.input-button input[type="radio"]+label .label-icon {
+.form-input-button input[type="checkbox"]+label .label-icon,
+.form-input-button input[type="radio"]+label .label-icon {
   top: inherit;
 }
 
-.input-button input[type="checkbox"]+label:after,
-.input-button input[type="radio"]+label:after,
-.input-button input[type="color"]+label:after,
-.input-button input[type="file"]+label:after {
+.form-input-button input[type="checkbox"]+label:after,
+.form-input-button input[type="radio"]+label:after,
+.form-input-button input[type="color"]+label:after,
+.form-input-button input[type="file"]+label:after {
   background: rgb(var(--button-border));
   position: absolute;
   content: "";
@@ -965,105 +959,106 @@ input[type="range"]:disabled::-moz-range-progress {
   transition: background-color var(--layout-timing-extra-fast);
 }
 
-.input-button input[type="checkbox"]:focus+label:after,
-.input-button input[type="checkbox"]:hover+label:after,
-.input-button input[type="radio"]:focus+label:after,
-.input-button input[type="radio"]:hover+label:after,
-.input-button input[type="color"]:focus+label:after,
-.input-button input[type="color"]:hover+label:after,
-.input-button input[type="file"]:focus+label:after,
-.input-button input[type="file"]:hover+label:after {
+.form-input-button input[type="checkbox"]:focus+label:after,
+.form-input-button input[type="checkbox"]:hover+label:after,
+.form-input-button input[type="radio"]:focus+label:after,
+.form-input-button input[type="radio"]:hover+label:after,
+.form-input-button input[type="color"]:focus+label:after,
+.form-input-button input[type="color"]:hover+label:after,
+.form-input-button input[type="file"]:focus+label:after,
+.form-input-button input[type="file"]:hover+label:after {
   background-color: rgb(var(--button-border-focus-hover));
 }
 
-.input-button input[type="checkbox"]:active+label:after,
-.input-button input[type="radio"]:active+label:after,
-.input-button input[type="color"]:active+label:after,
-.input-button input[type="file"]:active+label:after {
+.form-input-button input[type="checkbox"]:active+label:after,
+.form-input-button input[type="radio"]:active+label:after,
+.form-input-button input[type="color"]:active+label:after,
+.form-input-button input[type="file"]:active+label:after {
   background-color: rgb(var(--button-border-active));
   transition: none;
 }
 
-.input-button input[type="checkbox"]:checked+label:after,
-.input-button input[type="radio"]:checked+label:after,
-.input-button input[type="color"]:checked+label:after,
-.input-button input[type="file"]:checked+label:after {
+.form-input-button input[type="checkbox"]:checked+label:after,
+.form-input-button input[type="radio"]:checked+label:after,
+.form-input-button input[type="color"]:checked+label:after,
+.form-input-button input[type="file"]:checked+label:after {
   background-color: rgb(var(--button-border-active));
   transition: none;
 }
 
-.input-button input[type="checkbox"]:disabled+label:after,
-.input-button input[type="checkbox"]:disabled:hover+label:after,
-.input-button input[type="checkbox"]:disabled:focus+label:after,
-.input-button input[type="checkbox"]:disabled:active+label:after,
-.input-button input[type="radio"]:disabled+label:after,
-.input-button input[type="radio"]:disabled:hover+label:after,
-.input-button input[type="radio"]:disabled:focus+label:after,
-.input-button input[type="radio"]:disabled:active+label:after,
-.input-button input[type="color"]:disabled+label:after,
-.input-button input[type="color"]:disabled:hover+label:after,
-.input-button input[type="color"]:disabled:focus+label:after,
-.input-button input[type="color"]:disabled:active+label:after,
-.input-button input[type="file"]:disabled+label:after,
-.input-button input[type="file"]:disabled:hover+label:after,
-.input-button input[type="file"]:disabled:focus+label:after,
-.input-button input[type="file"]:disabled:active+label:after {
+.form-input-button input[type="checkbox"]:disabled+label:after,
+.form-input-button input[type="checkbox"]:disabled:hover+label:after,
+.form-input-button input[type="checkbox"]:disabled:focus+label:after,
+.form-input-button input[type="checkbox"]:disabled:active+label:after,
+.form-input-button input[type="radio"]:disabled+label:after,
+.form-input-button input[type="radio"]:disabled:hover+label:after,
+.form-input-button input[type="radio"]:disabled:focus+label:after,
+.form-input-button input[type="radio"]:disabled:active+label:after,
+.form-input-button input[type="color"]:disabled+label:after,
+.form-input-button input[type="color"]:disabled:hover+label:after,
+.form-input-button input[type="color"]:disabled:focus+label:after,
+.form-input-button input[type="color"]:disabled:active+label:after,
+.form-input-button input[type="file"]:disabled+label:after,
+.form-input-button input[type="file"]:disabled:hover+label:after,
+.form-input-button input[type="file"]:disabled:focus+label:after,
+.form-input-button input[type="file"]:disabled:active+label:after {
   background-color: rgb(var(--button-border-disabled));
 }
 
 /* input button link */
-.input-button-link input[type="checkbox"]+label,
-.input-button-link input[type="radio"]+label,
-.input-button-link input[type="color"]+label,
-.input-button-link input[type="file"]+label {
+
+.form-input-button-link input[type="checkbox"]+label,
+.form-input-button-link input[type="radio"]+label,
+.form-input-button-link input[type="color"]+label,
+.form-input-button-link input[type="file"]+label {
   background-color: transparent;
 }
 
-.input-button-link input[type="checkbox"]:hover+label,
-.input-button-link input[type="checkbox"]:focus+label,
-.input-button-link input[type="checkbox"]:checked+label,
-.input-button-link input[type="radio"]:hover+label,
-.input-button-link input[type="radio"]:focus+label,
-.input-button-link input[type="radio"]:checked+label,
-.input-button-link input[type="color"]:hover+label,
-.input-button-link input[type="color"]:focus+label,
-.input-button-link input[type="color"]:checked+label,
-.input-button-link input[type="file"]:hover+label,
-.input-button-link input[type="file"]:focus+label,
-.input-button-link input[type="file"]:checked+label {
+.form-input-button-link input[type="checkbox"]:hover+label,
+.form-input-button-link input[type="checkbox"]:focus+label,
+.form-input-button-link input[type="checkbox"]:checked+label,
+.form-input-button-link input[type="radio"]:hover+label,
+.form-input-button-link input[type="radio"]:focus+label,
+.form-input-button-link input[type="radio"]:checked+label,
+.form-input-button-link input[type="color"]:hover+label,
+.form-input-button-link input[type="color"]:focus+label,
+.form-input-button-link input[type="color"]:checked+label,
+.form-input-button-link input[type="file"]:hover+label,
+.form-input-button-link input[type="file"]:focus+label,
+.form-input-button-link input[type="file"]:checked+label {
   background-color: transparent;
 }
 
-.input-button-link input[type="checkbox"]:active+label,
-.input-button-link input[type="radio"]:active+label,
-.input-button-link input[type="color"]:active+label,
-.input-button-link input[type="file"]:active+label {
+.form-input-button-link input[type="checkbox"]:active+label,
+.form-input-button-link input[type="radio"]:active+label,
+.form-input-button-link input[type="color"]:active+label,
+.form-input-button-link input[type="file"]:active+label {
   background-color: transparent;
 }
 
-.input-button-link input:disabled[type="checkbox"]+label,
-.input-button-link input:disabled[type="radio"]+label,
-.input-button-link input:disabled[type="color"]+label,
-.input-button-link input:disabled[type="file"]+label {
+.form-input-button-link input:disabled[type="checkbox"]+label,
+.form-input-button-link input:disabled[type="radio"]+label,
+.form-input-button-link input:disabled[type="color"]+label,
+.form-input-button-link input:disabled[type="file"]+label {
   background-color: transparent;
   pointer-events: none;
 }
 
-.input-button-link input:disabled[type="checkbox"]:hover+label,
-.input-button-link input:disabled[type="checkbox"]:focus+label,
-.input-button-link input:disabled[type="radio"]:hover+label,
-.input-button-link input:disabled[type="radio"]:focus+label,
-.input-button-link input:disabled[type="color"]:hover+label,
-.input-button-link input:disabled[type="color"]:focus+label,
-.input-button-link input:disabled[type="file"]:hover+label,
-.input-button-link input:disabled[type="file"]:focus+label {
+.form-input-button-link input:disabled[type="checkbox"]:hover+label,
+.form-input-button-link input:disabled[type="checkbox"]:focus+label,
+.form-input-button-link input:disabled[type="radio"]:hover+label,
+.form-input-button-link input:disabled[type="radio"]:focus+label,
+.form-input-button-link input:disabled[type="color"]:hover+label,
+.form-input-button-link input:disabled[type="color"]:focus+label,
+.form-input-button-link input:disabled[type="file"]:hover+label,
+.form-input-button-link input:disabled[type="file"]:focus+label {
   background-color: transparent;
 }
 
-.input-button-link input[type="checkbox"]+label:after,
-.input-button-link input[type="radio"]+label:after,
-.input-button-link input[type="color"]+label:after,
-.input-button-link input[type="file"]+label:after {
+.form-input-button-link input[type="checkbox"]+label:after,
+.form-input-button-link input[type="radio"]+label:after,
+.form-input-button-link input[type="color"]+label:after,
+.form-input-button-link input[type="file"]+label:after {
   content: none;
 }
 
@@ -1132,12 +1127,65 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 /* form variants */
+.form-indent {
+  margin-left: 2.25em;
+}
+
+.form-wrap {
+  outline: 1px solid red;
+  padding: 0.25em;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-wrap:not(:first-child) {
+  margin-top: 1em;
+}
+
+.form-wrap:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.form-input {
+  outline: 1px solid blue;
+  padding: 0.25em;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.form-inline {
+  margin: -0.5em;
+  width: calc(100% + 1em);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-inline>* {
+  margin: 0.5rem;
+  flex-grow: 0;
+  width: initial;
+  display: inline-block;
+}
+
+.form-inline-spacer>*:not(:last-child) {
+  margin-right: 1.5rem !important;
+}
+
 .form-grid-wrap {
-  padding: 0.5em 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
   position: relative;
   width: 100%;
 }
 
+/* form grid */
 .form-grid {
   background-color: rgb(var(--form-grid-background));
   padding: calc(var(--form-thumb-size) / 2);
@@ -1175,7 +1223,8 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-grid .input-wrap {
-  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .form-grid input[type="checkbox"]+label,
@@ -1207,33 +1256,13 @@ input[type="range"]:disabled::-moz-range-progress {
   transform: translate(-50%, -50%);
 }
 
-.form-indent {
-  margin-left: 2.25em;
-}
-
-.form-inline {
-  margin-left: -0.5em;
-  margin-right: -0.5em;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.form-inline>* {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  width: initial;
-}
-
 /* form group */
 .form-group {
-  margin: 0 0 1em 0;
+  position: relative;
   display: inline-flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  position: relative;
   z-index: 1;
 }
 
@@ -1339,27 +1368,27 @@ input[type="range"]:disabled::-moz-range-progress {
   border-radius: var(--theme-radius);
 }
 
-.form-group.nested-button * .button,
-.form-group.nested-button *:first-child .button:after,
-.form-group.nested-button * input[type="checkbox"]+label,
-.form-group.nested-button * input[type="radio"]+label,
-.form-group.nested-button * input[type="color"]+label {
+.form-group.form-group-nested-button * .button,
+.form-group.form-group-nested-button *:first-child .button:after,
+.form-group.form-group-nested-button * input[type="checkbox"]+label,
+.form-group.form-group-nested-button * input[type="radio"]+label,
+.form-group.form-group-nested-button * input[type="color"]+label {
   border-radius: 0;
 }
 
-.form-group.nested-button *:first-child .button,
-.form-group.nested-button *:first-child .button:after,
-.form-group.nested-button *:first-child input[type="checkbox"]+label,
-.form-group.nested-button *:first-child input[type="radio"]+label,
-.form-group.nested-button *:first-child input[type="color"]+label {
+.form-group.form-group-nested-button *:first-child .button,
+.form-group.form-group-nested-button *:first-child .button:after,
+.form-group.form-group-nested-button *:first-child input[type="checkbox"]+label,
+.form-group.form-group-nested-button *:first-child input[type="radio"]+label,
+.form-group.form-group-nested-button *:first-child input[type="color"]+label {
   border-radius: var(--theme-radius) 0 0 var(--theme-radius);
 }
 
-.form-group.nested-button *:last-child .button,
-.form-group.nested-button *:last-child .button:after,
-.form-group.nested-button *:last-child input[type="checkbox"]+label,
-.form-group.nested-button *:last-child input[type="radio"]+label,
-.form-group.nested-button *:last-child input[type="color"]+label {
+.form-group.form-group-nested-button *:last-child .button,
+.form-group.form-group-nested-button *:last-child .button:after,
+.form-group.form-group-nested-button *:last-child input[type="checkbox"]+label,
+.form-group.form-group-nested-button *:last-child input[type="radio"]+label,
+.form-group.form-group-nested-button *:last-child input[type="color"]+label {
   border-radius: 0 var(--theme-radius) var(--theme-radius) 0;
 }
 
@@ -1406,10 +1435,6 @@ input[type="range"]:disabled::-moz-range-progress {
   overflow: hidden;
 }
 
-.form-group-wrap {
-  padding: 0.5em 0;
-}
-
 .form-group.form-group-border .form-group-text,
 .form-group.form-group-border .button,
 .form-group.form-group-border .button:after,
@@ -1422,11 +1447,11 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group.form-group-border>input[type="text"],
 .form-group.form-group-border>input[type="color"],
 .form-group.form-group-border>input[type="range"],
-.form-group.form-group-border.nested-button * .button,
-.form-group.form-group-border.nested-button * .button:after,
-.form-group.form-group-border.nested-button * input[type="checkbox"]+label,
-.form-group.form-group-border.nested-button * input[type="radio"]+label,
-.form-group.form-group-border.nested-button * input[type="color"]+label {
+.form-group.form-group-border.form-group-nested-button * .button,
+.form-group.form-group-border.form-group-nested-button * .button:after,
+.form-group.form-group-border.form-group-nested-button * input[type="checkbox"]+label,
+.form-group.form-group-border.form-group-nested-button * input[type="radio"]+label,
+.form-group.form-group-border.form-group-nested-button * input[type="color"]+label {
   border-radius: 0;
 }
 
@@ -1588,21 +1613,15 @@ input[type="range"]:disabled::-moz-range-progress {
   content: none;
 }
 
-.form-group.nested-button .form-dropdown-menu *:first-child .button,
-.form-group.nested-button .form-dropdown-menu *:last-child .button,
-.form-group.nested-button .form-dropdown-menu *:first-child input[type="checkbox"]+label,
-.form-group.nested-button .form-dropdown-menu *:last-child input[type="checkbox"]+label,
-.form-group.nested-button .form-dropdown-menu *:first-child input[type="radio"]+label,
-.form-group.nested-button .form-dropdown-menu *:last-child input[type="radio"]+label,
-.form-group.nested-button .form-dropdown-menu *:first-child input[type="color"]+label,
-.form-group.nested-button .form-dropdown-menu *:last-child input[type="color"]+label {
+.form-group.form-group-nested-button .form-dropdown-menu *:first-child .button,
+.form-group.form-group-nested-button .form-dropdown-menu *:last-child .button,
+.form-group.form-group-nested-button .form-dropdown-menu *:first-child input[type="checkbox"]+label,
+.form-group.form-group-nested-button .form-dropdown-menu *:last-child input[type="checkbox"]+label,
+.form-group.form-group-nested-button .form-dropdown-menu *:first-child input[type="radio"]+label,
+.form-group.form-group-nested-button .form-dropdown-menu *:last-child input[type="radio"]+label,
+.form-group.form-group-nested-button .form-dropdown-menu *:first-child input[type="color"]+label,
+.form-group.form-group-nested-button .form-dropdown-menu *:last-child input[type="color"]+label {
   border-radius: 0;
-}
-
-.feedback-wrap {
-  padding: 0.5em 0;
-  position: relative;
-  width: 100%;
 }
 
 .form-feedback {
@@ -1614,6 +1633,7 @@ input[type="range"]:disabled::-moz-range-progress {
   border-color: rgb(var(--form-feedback-border));
   border-top-right-radius: var(--theme-radius);
   border-bottom-right-radius: var(--theme-radius);
+  width: 100%;
 }
 
 .form-feedback p {
