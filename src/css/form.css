@@ -173,7 +173,7 @@ input[type="tel"],
 input[type="text"] {
   background-color: rgb(var(--form-input-background));
   padding: 0 1em;
-  margin: 0 0 1em 0;
+  margin: 0;
   color: rgb(var(--form-input-text));
   font-size: 1em;
   font-family: var(--theme-font-ui-name);
@@ -836,6 +836,13 @@ input[type="range"]:disabled::-moz-range-progress {
   transition: color var(--layout-timing-extra-fast);
 }
 
+.form-helper:not(:first-child) {
+  margin-top: 0.5em;
+}
+.form-helper:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
 .form-helper.disabled {
   color: rgb(var(--form-helper-disabled));
 }
@@ -1130,13 +1137,13 @@ input[type="range"]:disabled::-moz-range-progress {
   margin-left: 2.25em;
 }
 
-/* .form-wrap {
+.form-wrap {
+  margin-top: 1em;
+  margin-bottom: 1em;
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-} */
+}
+
 .form-input {
   position: relative;
   width: 100%;
@@ -1218,7 +1225,7 @@ input[type="range"]:disabled::-moz-range-progress {
   border-radius: var(--theme-radius);
 }
 
-.form-grid .input-wrap {
+.form-grid .form-input {
   margin-top: 0;
   margin-bottom: 0;
 }
