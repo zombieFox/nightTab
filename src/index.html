@@ -92,33 +92,31 @@
                   <input id="control-edit" class="control-edit" type="checkbox" tabindex="1">
                   <label for="control-edit" class="mb-0"><span class="label-icon"></span> Edit</label>
                 </div>
-                <div class="form-input">
-                  <div class="form-dropdown">
-                    <button class="control-add-toggle form-dropdown-toggle button" tabindex="1">
-                      <span class="button-text">Add</span>
-                    </button>
-                    <ul class="list-unstyled form-dropdown-menu">
-                      <li>
-                        <button class="button button-block text-left form-dropdown-menu-item control-group-add" tabindex="1"><span class="button-text">New Group</span></button>
-                      </li>
-                      <li>
-                        <button class="button button-block text-left form-dropdown-menu-item control-link-add" tabindex="1"><span class="button-text">New Bookmark</span></button>
-                      </li>
-                    </ul>
-                  </div>
+                <div class="form-dropdown">
+                  <button class="control-add-toggle form-dropdown-toggle button" tabindex="1">
+                    <span class="button-text">Add</span>
+                  </button>
+                  <ul class="list-unstyled form-dropdown-menu">
+                    <li>
+                      <button class="button button-block text-left form-dropdown-menu-item control-group-add" tabindex="1"><span class="button-text">New Group</span></button>
+                    </li>
+                    <li>
+                      <button class="button button-block text-left form-dropdown-menu-item control-link-add" tabindex="1"><span class="button-text">New Bookmark</span></button>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
           <div class="header-item header-button header-accent">
             <div class="header-button-body">
-              <div class="form-group form-group-nested-button mb-0">
+              <div class="form-group form-group-nested-button">
                 <div class="form-input-button input-color-dot input-color-dot-shade">
-                  <input id="control-theme-color-rgb-quick" class="control-theme-color-rgb-quick mb0" type="color" value="#000000" tabindex="1">
+                  <input id="control-theme-color-rgb-quick" class="control-theme-color-rgb-quick" type="color" value="#000000" tabindex="1">
                   <label for="control-theme-color-rgb-quick">Colour</label>
                 </div>
                 <div class="form-input-button input-color-dot input-color-dot-accent">
-                  <input id="control-theme-accent-current-quick" class="control-theme-accent-current-quick mb0" type="color" value="#000000" tabindex="1">
+                  <input id="control-theme-accent-current-quick" class="control-theme-accent-current-quick" type="color" value="#000000" tabindex="1">
                   <label for="control-theme-accent-current-quick">Accent</label>
                 </div>
               </div>
@@ -166,63 +164,57 @@
               <h1 class="menu-item-header-text">Area</h1>
             </div>
             <div class="menu-item-form">
-              <div class="form-wrap">
-                <div class="form-input">
-                  <label for="control-layout-width">Width</label>
-                  <div class="form-group form-group-block mb-0">
-                    <input id="control-layout-width" class="control-layout-width mr-3" type="range" min="10" max="100" value="0" tabindex="-1">
-                    <div class="control-layout-width-count form-group-text form-group-item-medium form-group-radius-left"></div>
-                  </div>
+              <div class="form-input">
+                <label for="control-layout-width">Width</label>
+                <div class="form-group form-group-block">
+                  <input id="control-layout-width" class="control-layout-width mr-3" type="range" min="10" max="100" value="0" tabindex="-1">
+                  <div class="control-layout-width-count form-group-text form-group-item-medium form-group-radius-left"></div>
                 </div>
               </div>
-              <div class="form-wrap">
+              <div class="form-button">
                 <button class="control-layout-width-default button mb-0" tabindex="1">Default Width</button>
               </div>
               <hr>
-              <div class="form-wrap">
-                <label>Area alignment</label>
-                <div class="form-grid form-grid-3x3 control-layout-alignment-grid">
-                  <div class="form-input">
-                    <input id="control-layout-alignment-topleft" class="control-layout-alignment-topleft" type="radio" name="control-layout-alignment" value="topleft" tabindex="-1">
-                    <label for="control-layout-alignment-topleft"><span class="label-icon"></span> <span class="sr-only">Top left</span></label>
-                  </div>
-                  <div class="form-input">
-                    <input id="control-layout-alignment-topcenter" class="control-layout-alignment-topcenter" type="radio" name="control-layout-alignment" value="topcenter" tabindex="-1">
-                    <label for="control-layout-alignment-topcenter"><span class="label-icon"></span> <span class="sr-only">Top center</span></label>
-                  </div>
-                  <div class="form-input">
-                    <input id="control-layout-alignment-topright" class="control-layout-alignment-topright" type="radio" name="control-layout-alignment" value="topright" tabindex="-1">
-                    <label for="control-layout-alignment-topright"><span class="label-icon"></span> <span class="sr-only">Top right</span></label>
-                  </div>
-                  <div class="form-input">
-                    <input id="control-layout-alignment-centerleft" class="control-layout-alignment-centerleft" type="radio" name="control-layout-alignment" value="centerleft" tabindex="-1">
-                    <label for="control-layout-alignment-centerleft"><span class="label-icon"></span> <span class="sr-only">Center left</span></label>
-                  </div>
-                  <div class="form-input">
-                    <input id="control-layout-alignment-centercenter" class="control-layout-alignment-centercenter" type="radio" name="control-layout-alignment" value="centercenter" tabindex="-1">
-                    <label for="control-layout-alignment-centercenter"><span class="label-icon"></span> <span class="sr-only">Center center</span></label>
-                  </div>
-                  <div class="form-input">
-                    <input id="control-layout-alignment-centerright" class="control-layout-alignment-centerright" type="radio" name="control-layout-alignment" value="centerright" tabindex="-1">
-                    <label for="control-layout-alignment-centerright"><span class="label-icon"></span> <span class="sr-only">Center right</span></label>
-                  </div>
-                  <div class="form-input">
-                    <input id="control-layout-alignment-bottomleft" class="control-layout-alignment-bottomleft" type="radio" name="control-layout-alignment" value="bottomleft" tabindex="-1">
-                    <label for="control-layout-alignment-bottomleft"><span class="label-icon"></span> <span class="sr-only">Bottom left</span></label>
-                  </div>
-                  <div class="form-input">
-                    <input id="control-layout-alignment-bottomcenter" class="control-layout-alignment-bottomcenter" type="radio" name="control-layout-alignment" value="bottomcenter" tabindex="-1">
-                    <label for="control-layout-alignment-bottomcenter"><span class="label-icon"></span> <span class="sr-only">Bottom Center</span></label>
-                  </div>
-                  <div class="form-input">
-                    <input id="control-layout-alignment-bottomright" class="control-layout-alignment-bottomright" type="radio" name="control-layout-alignment" value="bottomright" tabindex="-1">
-                    <label for="control-layout-alignment-bottomright"><span class="label-icon"></span> <span class="sr-only">Bottom right</span></label>
-                  </div>
+              <label>Area alignment</label>
+              <div class="form-grid form-grid-3x3 control-layout-alignment-grid">
+                <div class="form-input">
+                  <input id="control-layout-alignment-topleft" class="control-layout-alignment-topleft" type="radio" name="control-layout-alignment" value="topleft" tabindex="-1">
+                  <label for="control-layout-alignment-topleft"><span class="label-icon"></span> <span class="sr-only">Top left</span></label>
+                </div>
+                <div class="form-input">
+                  <input id="control-layout-alignment-topcenter" class="control-layout-alignment-topcenter" type="radio" name="control-layout-alignment" value="topcenter" tabindex="-1">
+                  <label for="control-layout-alignment-topcenter"><span class="label-icon"></span> <span class="sr-only">Top center</span></label>
+                </div>
+                <div class="form-input">
+                  <input id="control-layout-alignment-topright" class="control-layout-alignment-topright" type="radio" name="control-layout-alignment" value="topright" tabindex="-1">
+                  <label for="control-layout-alignment-topright"><span class="label-icon"></span> <span class="sr-only">Top right</span></label>
+                </div>
+                <div class="form-input">
+                  <input id="control-layout-alignment-centerleft" class="control-layout-alignment-centerleft" type="radio" name="control-layout-alignment" value="centerleft" tabindex="-1">
+                  <label for="control-layout-alignment-centerleft"><span class="label-icon"></span> <span class="sr-only">Center left</span></label>
+                </div>
+                <div class="form-input">
+                  <input id="control-layout-alignment-centercenter" class="control-layout-alignment-centercenter" type="radio" name="control-layout-alignment" value="centercenter" tabindex="-1">
+                  <label for="control-layout-alignment-centercenter"><span class="label-icon"></span> <span class="sr-only">Center center</span></label>
+                </div>
+                <div class="form-input">
+                  <input id="control-layout-alignment-centerright" class="control-layout-alignment-centerright" type="radio" name="control-layout-alignment" value="centerright" tabindex="-1">
+                  <label for="control-layout-alignment-centerright"><span class="label-icon"></span> <span class="sr-only">Center right</span></label>
+                </div>
+                <div class="form-input">
+                  <input id="control-layout-alignment-bottomleft" class="control-layout-alignment-bottomleft" type="radio" name="control-layout-alignment" value="bottomleft" tabindex="-1">
+                  <label for="control-layout-alignment-bottomleft"><span class="label-icon"></span> <span class="sr-only">Bottom left</span></label>
+                </div>
+                <div class="form-input">
+                  <input id="control-layout-alignment-bottomcenter" class="control-layout-alignment-bottomcenter" type="radio" name="control-layout-alignment" value="bottomcenter" tabindex="-1">
+                  <label for="control-layout-alignment-bottomcenter"><span class="label-icon"></span> <span class="sr-only">Bottom Center</span></label>
+                </div>
+                <div class="form-input">
+                  <input id="control-layout-alignment-bottomright" class="control-layout-alignment-bottomright" type="radio" name="control-layout-alignment" value="bottomright" tabindex="-1">
+                  <label for="control-layout-alignment-bottomright"><span class="label-icon"></span> <span class="sr-only">Bottom right</span></label>
                 </div>
               </div>
-              <div class="form-wrap">
-                <p class="control-layout-alignment-helper form-helper">Effects may not be visible if the Layout Area is full width or if Bookmarks fill the page.</p>
-              </div>
+              <p class="control-layout-alignment-helper form-helper">Effects may not be visible if the Layout Area is full width or if Bookmarks fill the page.</p>
             </div>
           </div>
           <div class="menu-item">
@@ -277,12 +269,12 @@
             <div class="menu-item-form">
               <div class="form-wrap">
                 <div class="form-input">
-                <label for="control-layout-padding">Padding outside Header and Bookmark Area</label>
-                <div class="form-group form-group-block mb-0">
-                  <input id="control-layout-padding" class="control-layout-padding mr-3" type="range" min="0" max="40" value="0" tabindex="-1">
-                  <div class="control-layout-padding-count form-group-text form-group-item-medium form-group-radius-left"></div>
+                  <label for="control-layout-padding">Padding outside Header and Bookmark Area</label>
+                  <div class="form-group form-group-block mb-0">
+                    <input id="control-layout-padding" class="control-layout-padding mr-3" type="range" min="0" max="40" value="0" tabindex="-1">
+                    <div class="control-layout-padding-count form-group-text form-group-item-medium form-group-radius-left"></div>
+                  </div>
                 </div>
-              </div>
               </div>
               <div class="form-wrap">
                 <button class="control-layout-padding-default button mb-0" tabindex="1">Default Padding size</button>
@@ -296,12 +288,12 @@
             <div class="menu-item-form">
               <div class="form-wrap">
                 <div class="form-input">
-                <label for="control-layout-gutter">Gutter between Header and Bookmark items</label>
-                <div class="form-group form-group-block mb-0">
-                  <input id="control-layout-gutter" class="control-layout-gutter mr-3" type="range" min="0" max="40" value="0" tabindex="-1">
-                  <div class="control-layout-gutter-count form-group-text form-group-item-medium form-group-radius-left"></div>
+                  <label for="control-layout-gutter">Gutter between Header and Bookmark items</label>
+                  <div class="form-group form-group-block mb-0">
+                    <input id="control-layout-gutter" class="control-layout-gutter mr-3" type="range" min="0" max="40" value="0" tabindex="-1">
+                    <div class="control-layout-gutter-count form-group-text form-group-item-medium form-group-radius-left"></div>
+                  </div>
                 </div>
-              </div>
               </div>
               <div class="form-wrap">
                 <button class="control-layout-gutter-default button mb-0" tabindex="1">Default Gutter size</button>
@@ -315,16 +307,16 @@
             <div class="menu-item-form">
               <div class="form-wrap">
                 <div class="form-input">
-                <label for="control-layout-title">Title</label>
-                <input id="control-layout-title" class="control-layout-title mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="New Tab" tabindex="-1">
-              </div>
+                  <label for="control-layout-title">Title</label>
+                  <input id="control-layout-title" class="control-layout-title mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="New Tab" tabindex="-1">
+                </div>
               </div>
               <hr>
               <div class="form-wrap">
                 <div class="form-input">
-                <input id="control-layout-scrollpastend" class="control-layout-scrollpastend" type="checkbox" tabindex="-1">
-                <label for="control-layout-scrollpastend"><span class="label-icon"></span> Scroll past end</label>
-              </div>
+                  <input id="control-layout-scrollpastend" class="control-layout-scrollpastend" type="checkbox" tabindex="-1">
+                  <label for="control-layout-scrollpastend"><span class="label-icon"></span> Scroll past end</label>
+                </div>
               </div>
             </div>
           </div>

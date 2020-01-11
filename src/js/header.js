@@ -136,15 +136,15 @@ var header = (function() {
         box: function() {
           helper.removeClass(helper.getClosest(helper.e(".control-edit"), ".form-input-button"), "form-input-button-link");
           helper.removeClass(helper.e(".control-add-toggle"), "button-link");
-          helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button-link"), "form-input-button-link");
-          helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button-link"), "form-input-button-link");
+          helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "form-input-button-link");
+          helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "form-input-button-link");
           helper.removeClass(helper.e(".control-menu-open"), "button-link");
         },
         clear: function() {
-          helper.addClass(helper.getClosest(helper.e(".control-edit"), "form-input-button-link"), "form-input-button-link");
+          helper.addClass(helper.getClosest(helper.e(".control-edit"), ".form-input-button"), "form-input-button-link");
           helper.addClass(helper.e(".control-add-toggle"), "button-link");
-          helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), "form-input-button-link"), "form-input-button-link");
-          helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), "form-input-button-link"), "form-input-button-link");
+          helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "form-input-button-link");
+          helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "form-input-button-link");
           helper.addClass(helper.e(".control-menu-open"), "button-link");
         }
       };
@@ -152,19 +152,19 @@ var header = (function() {
     },
     dot: function() {
       if (state.get.current().header.button.colorAccent.dot.show) {
-        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input"), "input-color-dot");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input"), "input-color-dot-shade");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input"), "input-hide");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input"), "input-color-dot");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input"), "input-color-dot-accent");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input"), "input-hide");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot-shade");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-hide");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot-accent");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-hide");
       } else {
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input"), "input-color-dot");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input"), "input-color-dot-shade");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input"), "input-hide");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input"), "input-color-dot");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input"), "input-color-dot-accent");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input"), "input-hide");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot-shade");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-hide");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot-accent");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-hide");
       };
     }
   };

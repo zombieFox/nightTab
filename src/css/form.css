@@ -842,9 +842,9 @@ input[type="range"]:disabled::-moz-range-progress {
 
 /* input variants */
 .input-wrap {
-  position: relative;
+  /* position: relative;
   width: 100%;
-  display: block;
+  display: block; */
 }
 
 /* input button */
@@ -1006,7 +1006,6 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 /* input button link */
-
 .form-input-button-link input[type="checkbox"]+label,
 .form-input-button-link input[type="radio"]+label,
 .form-input-button-link input[type="color"]+label,
@@ -1131,30 +1130,27 @@ input[type="range"]:disabled::-moz-range-progress {
   margin-left: 2.25em;
 }
 
-.form-wrap {
-  outline: 1px solid red;
-  padding: 0.25em;
+/* .form-wrap {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-
-.form-wrap:not(:first-child) {
-  margin-top: 1em;
-}
-
-.form-wrap:not(:last-child) {
-  margin-bottom: 1em;
-}
-
+} */
 .form-input {
-  outline: 1px solid blue;
-  padding: 0.25em;
   position: relative;
   width: 100%;
   display: block;
+}
+
+.form-input:not(:first-child),
+.form-button:not(:first-child) {
+  margin-top: 1em;
+}
+
+.form-input:not(:last-child),
+.form-button:not(:last-child) {
+  margin-bottom: 1em;
 }
 
 .form-inline {
