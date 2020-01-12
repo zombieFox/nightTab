@@ -1600,6 +1600,7 @@ var theme = (function() {
         stagedThemeCustom.theme.timestamp = new Date().getTime();
         mod.custom.add();
         data.save();
+        custom.check();
         render.custom.clear();
         render.custom.all();
         shade.close();
@@ -1683,8 +1684,8 @@ var theme = (function() {
       };
       var successAction = function() {
         mod.custom.remove();
-        custom.check();
         data.save();
+        custom.check();
         render.custom.clear();
         render.custom.all();
         shade.close();
@@ -1732,6 +1733,16 @@ var theme = (function() {
           arrayItem.tabIndex = -2;
         });
       };
+    },
+    formWrap: {
+      open: function() {
+        var themeCustom = helper.e(".theme-custom");
+        helper.removeClass(themeCustom, "form-wrap-hide-space");
+      },
+      close: function() {
+        var themeCustom = helper.e(".theme-custom");
+        helper.addClass(themeCustom, "form-wrap-hide-space");
+      }
     }
   };
 
@@ -1776,8 +1787,11 @@ var theme = (function() {
       render.custom.tabIndex();
     },
     check: function() {
-      if (state.get.current().theme.custom.all <= 0) {
+      if (state.get.current().theme.custom.all.length > 0) {
+        render.custom.formWrap.open();
+      } else {
         mod.custom.close();
+        render.custom.formWrap.close();
       };
     }
   };
@@ -1799,6 +1813,7 @@ var theme = (function() {
     render.shadow();
     render.preset();
     render.custom.all();
+    custom.check();
   };
 
   // exposed methods

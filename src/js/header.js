@@ -154,17 +154,17 @@ var header = (function() {
       if (state.get.current().header.button.colorAccent.dot.show) {
         helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot");
         helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot-shade");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-hide");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "form-input-hide");
         helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot");
         helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot-accent");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-hide");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "form-input-hide");
       } else {
         helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot");
         helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot-shade");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-hide");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "form-input-hide");
         helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot");
         helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot-accent");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-hide");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "form-input-hide");
       };
     }
   };

@@ -94,15 +94,6 @@
   z-index: 1;
 }
 
-.menu-item-form-sticky {
-  background-color: rgb(var(--theme-color-01));
-  margin: -1.5em -1em 0 -1em;
-  padding: 1.5em 1em 1em 1em;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
 .menu-nav-button {
   background-color: transparent;
   margin: 0;

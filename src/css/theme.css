@@ -3,8 +3,6 @@
   width: var(--theme-preview-size);
   height: var(--theme-preview-size);
   border-radius: var(--theme-radius);
-  padding: 0;
-  margin: 0.5em;
   position: relative;
   overflow: hidden;
 }
@@ -270,7 +268,6 @@
 .theme-shadow-box {
   background-color: rgb(var(--theme-color-02));
   border-radius: var(--theme-radius);
-  margin: 0;
   padding: 0.5em;
   width: 5em;
   height: 5em;
