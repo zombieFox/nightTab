@@ -7,38 +7,51 @@
 }
 
 .form-wrap:not(:first-child) {
-  margin-top: 0.5em;
+  margin-top: var(--form-wrap-space);
 }
 
 .form-wrap:not(:last-child) {
-  margin-bottom: 0.5em;
+  margin-bottom: var(--form-wrap-space);
 }
 
 .form-wrap-hide-space:not(:first-child),
 .form-wrap-hide-space:not(:last-child) {
-  margin-top: -0.5em;
+  margin-top: calc(var(--form-wrap-space) * -1);
   margin-bottom: 0;
 }
 
 .form-helper:not(:first-child) {
-  margin-top: 0.5em;
+  margin-top: calc(var(--form-wrap-space) / 2);
 }
 
 .form-helper:not(:last-child) {
-  margin-bottom: 0.5em;
+  margin-bottom: calc(var(--form-wrap-space) / 2);
 }
 
 .form-indent {
-  margin-left: 2.25em;
+  margin-left: calc(var(--form-wrap-space) * 3);
 }
 
 .form-inline {
-  margin: -0.25em;
+  margin: calc(calc(var(--form-wrap-space) / 2) * -1);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.form-inline>*,
+.form-inline>.form-wrap:not(:first-child),
+.form-inline>.form-wrap:not(:last-child) {
+  margin: calc(var(--form-wrap-space) / 2);
+  flex-grow: 0;
+  width: initial;
+  display: inline-block;
+}
+
+.form-inline-spacer>*.form-wrap:not(:last-child) {
+  margin-right: calc(var(--form-wrap-space) * 3);
 }
 
 .form-inline-space-between {
@@ -49,27 +62,7 @@
   justify-content: space-around;
 }
 
-.form-inline>* {
-  margin: 0.25rem;
-  flex-grow: 0;
-  width: initial;
-  display: inline-block;
-}
-
-.form-inline>.form-wrap:not(:first-child) {
-  margin-top: 0.5rem;
-}
-
-.form-inline>.form-wrap:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.form-inline-spacer>*:not(:last-child) {
-  margin-right: 2rem !important;
-}
-
 .form-sticky {
-  border: 1px solid blue;
   background-color: rgb(var(--theme-color-01));
   margin: -1.5em -1em 0 -1em;
   padding: 1.5em 1em 1em 1em;
@@ -85,10 +78,11 @@ label {
   margin-bottom: 0;
   font-size: 1em;
   display: block;
+  transition: color var(--layout-timing-extra-fast);
 }
 
 label:not(:only-child):not(:last-child) {
-  padding-bottom: 0.5em;
+  padding-bottom: calc(var(--form-wrap-space) / 2);
 }
 
 label.disabled {
@@ -910,13 +904,13 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 /* form helper */
-.form-helper p {
+.form-helper-item {
   font-size: 0.8em;
   color: rgb(var(--form-helper));
   transition: color var(--layout-timing-extra-fast);
 }
 
-.form-helper.disabled p {
+.form-helper-item.disabled {
   color: rgb(var(--form-helper-disabled));
 }
 

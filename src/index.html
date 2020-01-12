@@ -161,6 +161,29 @@
         <div class="menu-content-area menu-content-area-layout">
           <div class="menu-item">
             <div class="menu-item-header">
+              <h1 class="menu-item-header-text">Global scaling</h1>
+            </div>
+            <div class="menu-item-form">
+              <div class="form-wrap">
+                <label for="control-layout-size">Size</label>
+                <div class="form-group form-group-block">
+                  <input id="control-layout-size" class="control-layout-size mr-3" type="range" min="50" max="200" value="0" step="5" tabindex="-1">
+                  <div class="control-layout-size-count form-group-text form-group-item-medium form-group-radius-left"></div>
+                </div>
+              </div>
+              <div class="form-helper">
+                <p class="control-layout-size-helper form-helper-item">Resize all elements on the page.</p>
+              </div>
+              <div class="form-helper">
+                <p class="control-layout-size-helper form-helper-item">Take care as some elements could scale up to outside the page.</p>
+              </div>
+              <div class="form-wrap">
+                <button class="control-layout-size-default button" tabindex="1">Default Global scaling size</button>
+              </div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
               <h1 class="menu-item-header-text">Area</h1>
             </div>
             <div class="menu-item-form">
@@ -221,7 +244,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-layout-alignment-helper">Effects may not be visible if the Layout Area is full width or if Bookmarks fill the page.</p>
+                <p class="control-layout-alignment-helper form-helper-item">Effects may not be visible if the Layout Area is full width or if Bookmarks fill the page.</p>
               </div>
             </div>
           </div>
@@ -239,30 +262,7 @@
                 <label for="control-layout-order-linkheader"><span class="label-icon"></span> Bookmarks then Header</label>
               </div>
               <div class="form-helper">
-                <p class="control-layout-order-helper">Only available when Bookmarks are shown.</p>
-              </div>
-            </div>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <h1 class="menu-item-header-text">Global scaling</h1>
-            </div>
-            <div class="menu-item-form">
-              <div class="form-wrap">
-                <label for="control-layout-size">Size</label>
-                <div class="form-group form-group-block">
-                  <input id="control-layout-size" class="control-layout-size mr-3" type="range" min="50" max="200" value="0" step="5" tabindex="-1">
-                  <div class="control-layout-size-count form-group-text form-group-item-medium form-group-radius-left"></div>
-                </div>
-              </div>
-              <div class="form-helper">
-                <p class="control-layout-size-helper">Resize all elements on the page.</p>
-              </div>
-              <div class="form-helper">
-                <p class="control-layout-size-helper">Take care as some elements could scale up to outside the page.</p>
-              </div>
-              <div class="form-wrap">
-                <button class="control-layout-size-default button" tabindex="1">Default Global scaling size</button>
+                <p class="control-layout-order-helper form-helper-item">Only available when Bookmarks are shown.</p>
               </div>
             </div>
           </div>
@@ -332,7 +332,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-header-area-width-helper">Max width is defined by Layout Area Width.</p>
+                <p class="control-header-area-width-helper form-helper-item">Max width is defined by Layout Area Width.</p>
               </div>
               <div class="form-wrap">
                 <button class="control-header-area-width-match button" tabindex="-1">Match Bookmarks Area</button>
@@ -360,7 +360,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-header-area-alignment-helper">Effects may not be visible if the Header Area is full width.</p>
+                <p class="control-header-area-alignment-helper form-helper-item">Effects may not be visible if the Header Area is full width.</p>
               </div>
               <hr>
               <div class="form-wrap">
@@ -385,7 +385,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-header-item-alignment-helper">Effects may not be visible if the Search box size is set to Auto and grows to fill available space.</p>
+                <p class="control-header-item-alignment-helper form-helper-item">Effects may not be visible if the Search box size is set to Auto and grows to fill available space.</p>
               </div>
             </div>
           </div>
@@ -442,7 +442,7 @@
                 <label for="control-header-transitional-show"><span class="label-icon"></span> Show</label>
               </div>
               <div class="form-helper">
-                <p class="control-header-transitional-show-helper">Available when Date or Time is shown.</p>
+                <p class="control-header-transitional-show-helper form-helper-item">Available when Date or Time is shown.</p>
               </div>
               <div class="form-wrap">
                 <div class="form-indent">
@@ -580,7 +580,7 @@
                         <label for="control-header-date-day-week-start-sunday"><span class="label-icon"></span> Sunday</label>
                       </div>
                       <div class="form-helper">
-                        <p class="control-header-date-day-week-start-helper">Define what day "1" represents, either Monday or Sunday.</p>
+                        <p class="control-header-date-day-week-start-helper form-helper-item">Define what day "1" represents, either Monday or Sunday.</p>
                       </div>
                     </div>
                   </div>
@@ -625,7 +625,7 @@
                     <label for="control-header-date-date-ordinal"><span class="label-icon"></span> Ordinal numbers</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-header-date-date-ordinal-helper">Display Date as 1st, 2nd, 3rd, 4th etc.</p>
+                    <p class="control-header-date-date-ordinal-helper form-helper-item">Display Date as 1st, 2nd, 3rd, 4th etc.</p>
                   </div>
                 </div>
               </div>
@@ -647,7 +647,7 @@
                         <label for="control-header-date-month-ordinal"><span class="label-icon"></span> Ordinal numbers</label>
                       </div>
                       <div class="form-helper">
-                        <p class="control-header-date-month-ordinal-helper">Display Month as 1st, 2nd, 3rd, 4th etc.</p>
+                        <p class="control-header-date-month-ordinal-helper form-helper-item">Display Month as 1st, 2nd, 3rd, 4th etc.</p>
                       </div>
                     </div>
                   </div>
@@ -738,14 +738,14 @@
                     <label for="control-header-search-style-auto"><span class="label-icon"></span> Auto</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-header-search-style-auto-helper">Search box will grow to best fit available space.</p>
+                    <p class="control-header-search-style-auto-helper form-helper-item">Search box will grow to best fit available space.</p>
                   </div>
                   <div class="form-wrap">
                     <input id="control-header-search-style-custom" class="control-header-search-style-custom" type="radio" name="control-header-search-width" value="custom" tabindex="-1">
                     <label for="control-header-search-style-custom"><span class="label-icon"></span> Custom</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-header-search-style-custom-helper">Define how wide the Search box should be inside the Header Area.</p>
+                    <p class="control-header-search-style-custom-helper form-helper-item">Define how wide the Search box should be inside the Header Area.</p>
                   </div>
                   <div class="form-wrap">
                     <div class="form-indent">
@@ -764,7 +764,7 @@
                     <label for="control-header-search-focus"><span class="label-icon"></span> Focus on load/refresh</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-header-search-focus-helper">May not work in some browsers.</p>
+                    <p class="control-header-search-focus-helper form-helper-item">May not work in some browsers.</p>
                   </div>
                   <hr>
                   <div class="form-wrap">
@@ -805,8 +805,8 @@
                         <input id="control-header-search-engine-custom-url" class="control-header-search-engine-custom-url mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="https://" tabindex="-1">
                       </div>
                       <div class="form-helper">
-                        <p class="control-header-search-engine-custom-helper">Enter a web address with the search parameters, eg: "https://vimeo.com/search?q="</p>
-                        <p class="control-header-search-engine-custom-helper form-helper mb-0">nightTab will add the search term entered into the Search input at the end of the above URL</p>
+                        <p class="control-header-search-engine-custom-helper form-helper-item">Enter a web address with the search parameters, eg: "https://vimeo.com/search?q="</p>
+                        <p class="control-header-search-engine-custom-helper form-helper-item">nightTab will add the search term entered into the Search input at the end of the above URL</p>
                       </div>
                     </div>
                   </div>
@@ -839,7 +839,7 @@
                     </div>
                   </div>
                   <div class="form-helper">
-                    <p class="control-header-search-size-helper">Only the Search box width control will change the Width of the Search box.</p>
+                    <p class="control-header-search-size-helper form-helper-item">Only the Search box width control will change the Width of the Search box.</p>
                   </div>
                   <div class="form-wrap">
                     <button class="control-header-search-size-default button" tabindex="-1">Default Search size</button>
@@ -873,7 +873,7 @@
                 <label for="control-header-button-coloraccent-show"><span class="label-icon"></span> Show Colour/Accent</label>
               </div>
               <div class="form-helper">
-                <p class="control-header-button-coloraccent-show-helper">Colour and Accent can also be found under Theme.</p>
+                <p class="control-header-button-coloraccent-show-helper form-helper-item">Colour and Accent can also be found under Theme.</p>
               </div>
               <div class="form-wrap">
                 <div class="form-indent">
@@ -928,14 +928,14 @@
                 <label for="control-header-position-sticky"><span class="label-icon"></span> Sticky</label>
               </div>
               <div class="form-helper">
-                <p class="control-header-position-sticky-helper">Header sticks to the page when scrolling up or down.</p>
+                <p class="control-header-position-sticky-helper form-helper-item">Header sticks to the page when scrolling up or down.</p>
               </div>
               <div class="form-wrap">
                 <input id="control-header-position-inline" class="control-header-position-inline" type="radio" name="control-header-position" value="inline" tabindex="-1">
                 <label for="control-header-position-inline"><span class="label-icon"></span> Inline</label>
               </div>
               <div class="form-helper">
-                <p class="control-header-position-inline-helper">Header moves inline with the content when scrolling up or down.</p>
+                <p class="control-header-position-inline-helper form-helper-item">Header moves inline with the content when scrolling up or down.</p>
               </div>
             </div>
           </div>
@@ -955,14 +955,14 @@
                     <label for="control-header-shade-style-always"><span class="label-icon"></span> Always visible</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-header-shade-style-always-helper">Useful for when a Background Image is shown.</p>
+                    <p class="control-header-shade-style-always-helper form-helper-item">Useful for when a Background Image is shown.</p>
                   </div>
                   <div class="form-wrap">
                     <input id="control-header-shade-style-scroll" class="control-header-shade-style-scroll" type="radio" name="control-header-shade-style" value="scroll" tabindex="-1">
                     <label for="control-header-shade-style-scroll"><span class="label-icon"></span> Visible on scroll</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-header-shade-style-scroll-helper">The page will not scroll if Bookmarks are not shown.</p>
+                    <p class="control-header-shade-style-scroll-helper form-helper-item">The page will not scroll if Bookmarks are not shown.</p>
                   </div>
                   <hr>
                   <div class="form-wrap">
@@ -978,7 +978,7 @@
                     <label for="control-header-radius"><span class="label-icon"></span> Corner radius</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-header-radius-helper">May not be visible if Theme Radius is set to 0.</p>
+                    <p class="control-header-radius-helper form-helper-item">May not be visible if Theme Radius is set to 0.</p>
                   </div>
                 </div>
               </div>
@@ -1033,7 +1033,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-group-area-alignment-helper">Effects may not be visible if the Group Name is not shown.</p>
+                <p class="control-group-area-alignment-helper form-helper-item">Effects may not be visible if the Group Name is not shown.</p>
               </div>
             </div>
           </div>
@@ -1065,7 +1065,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-link-area-width-helper">Border between groups may not be visible if there is only one group.</p>
+                <p class="control-link-area-width-helper form-helper-item">Border between groups may not be visible if there is only one group.</p>
               </div>
             </div>
           </div>
@@ -1085,7 +1085,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-link-area-width-helper">Max width is defined by Layout Area Width.</p>
+                <p class="control-link-area-width-helper form-helper-item">Max width is defined by Layout Area Width.</p>
               </div>
               <div class="form-wrap">
                 <button class="control-link-area-width-match button" tabindex="-1">Match Header Area</button>
@@ -1111,7 +1111,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-link-area-alignment-helper">Effects may not be visible if the Bookmark Area is full width.</p>
+                <p class="control-link-area-alignment-helper form-helper-item">Effects may not be visible if the Bookmark Area is full width.</p>
               </div>
             </div>
           </div>
@@ -1234,13 +1234,13 @@
                     <label for="control-link-item-display-direction-vertical"><span class="label-icon"></span> Align contents vertically</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-link-item-display-direction-helper">Only available when Letter/Icon and Name are shown.</p>
+                    <p class="control-link-item-display-direction-helper form-helper-item">Only available when Letter/Icon and Name are shown.</p>
                   </div>
                   <div class="form-helper">
-                    <p class="control-link-item-display-direction-helper">Vertical alignment works well with Bookmark Block Style.</p>
+                    <p class="control-link-item-display-direction-helper form-helper-item">Vertical alignment works well with Bookmark Block Style.</p>
                   </div>
                   <div class="form-helper">
-                    <p class="control-link-item-display-direction-helper">Horizontal alignment works well with Bookmark List Style.</p>
+                    <p class="control-link-item-display-direction-helper form-helper-item">Horizontal alignment works well with Bookmark List Style.</p>
                   </div>
                   <hr>
                   <div class="form-wrap">
@@ -1252,7 +1252,7 @@
                     <label for="control-link-item-display-order-nameletcon"><span class="label-icon"></span> Order Name then Letter/Icon</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-link-item-display-order-helper">Only available when Letter/Icon and Name are shown.</p>
+                    <p class="control-link-item-display-order-helper form-helper-item">Only available when Letter/Icon and Name are shown.</p>
                   </div>
                   <hr>
                   <div class="form-wrap">
@@ -1319,7 +1319,7 @@
                     <label for="control-link-item-shadow-show"><span class="label-icon"></span> Show shadow on Bookmark hover</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-link-item-shadow-show-helper">Effects may not be visible if Theme Shadow is set to 0.</p>
+                    <p class="control-link-item-shadow-show-helper form-helper-item">Effects may not be visible if Theme Shadow is set to 0.</p>
                   </div>
                   <hr>
                   <div class="form-wrap">
@@ -1345,17 +1345,17 @@
                 <label for="control-link-item-color-by-theme"><span class="label-icon"></span> Theme background colour</label>
               </div>
               <div class="form-helper">
-                <p class="control-link-item-color-by-theme-helper">Use the Background colour defined by the Theme.</p>
+                <p class="control-link-item-color-by-theme-helper form-helper-item">Use the Background colour defined by the Theme.</p>
               </div>
               <div class="form-wrap">
                 <input id="control-link-item-color-by-custom" class="control-link-item-color-by-custom" type="radio" name="control-link-item-color-by" value="custom" tabindex="-1">
                 <label for="control-link-item-color-by-custom"><span class="label-icon"></span> Custom background colour</label>
               </div>
               <div class="form-helper">
-                <p class="control-link-item-color-by-custom-helper">Use a custom Background colour.</p>
+                <p class="control-link-item-color-by-custom-helper form-helper-item">Use a custom Background colour.</p>
               </div>
               <div class="form-helper">
-                <p class="control-link-item-color-by-custom-helper">Take care as some colours may make the Letter/Icon and Name unreadable.</p>
+                <p class="control-link-item-color-by-custom-helper form-helper-item">Take care as some colours may make the Letter/Icon and Name unreadable.</p>
               </div>
               <div class="form-wrap">
                 <div class="form-indent">
@@ -1393,14 +1393,14 @@
                 <label for="control-link-style-block"><span class="label-icon"></span> Block</label>
               </div>
               <div class="form-helper">
-                <p class="control-link-style-block-helper">Bookmark tiles more square shaped.</p>
+                <p class="control-link-style-block-helper form-helper-item">Bookmark tiles more square shaped.</p>
               </div>
               <div class="form-wrap">
                 <input id="control-link-style-list" class="control-link-style-list" type="radio" name="control-link-style" value="list" tabindex="-1">
                 <label for="control-link-style-list"><span class="label-icon"></span> List</label>
               </div>
               <div class="form-helper">
-                <p class="control-link-style-list-helper">Bookmark tiles more short and wide.</p>
+                <p class="control-link-style-list-helper form-helper-item">Bookmark tiles more short and wide.</p>
               </div>
             </div>
           </div>
@@ -1418,7 +1418,7 @@
                 <label for="control-link-orientation-bottom"><span class="label-icon"></span> Bottom</label>
               </div>
               <div class="form-helper">
-                <p class="control-link-orientation-helper">Display the URL and Controls either at the top or bottom of a Bookmark Tile.</p>
+                <p class="control-link-orientation-helper form-helper-item">Display the URL and Controls either at the top or bottom of a Bookmark Tile.</p>
               </div>
             </div>
           </div>
@@ -1449,7 +1449,7 @@
                 <button class="control-link-accent-set button" tabindex="-1">Add override colours</button>
               </div>
               <div class="form-helper">
-                <p class="control-link-accent-set-helper">Adds a unique override colour to each Bookmark.</p>
+                <p class="control-link-accent-set-helper form-helper-item">Adds a unique override colour to each Bookmark.</p>
               </div>
             </div>
           </div>
@@ -1463,7 +1463,7 @@
             <div class="menu-item-form">
               <div class="form-wrap theme-preset"></div>
               <div class="form-helper">
-                <p class="control-theme-preset-helper">Applying a Preset will replace the current Colour, Accent, Font, Style and Radius.</p>
+                <p class="control-theme-preset-helper form-helper-item">Applying a Preset will replace the current Colour, Accent, Font, Style and Radius.</p>
               </div>
             </div>
           </div>
@@ -1483,7 +1483,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-theme-custom-helper">Saving a Theme will record the current Colour, Accent, Font, Style and Radius.</p>
+                <p class="control-theme-custom-helper form-helper-item">Saving a Theme will record the current Colour, Accent, Font, Style and Radius.</p>
               </div>
             </div>
           </div>
@@ -1501,7 +1501,7 @@
                 <label for="control-theme-style-light"><span class="label-icon"></span> Light</label>
               </div>
               <div class="form-helper">
-                <p class="control-theme-style-helper">Accent Colour and Background Image may need to be changed to best fit the Theme Style.</p>
+                <p class="control-theme-style-helper form-helper-item">Accent Colour and Background Image may need to be changed to best fit the Theme Style.</p>
               </div>
             </div>
           </div>
@@ -1518,13 +1518,13 @@
                 <button class="control-theme-font-display-name-default button" tabindex="-1">Default display font</button>
               </div>
               <div class="form-helper">
-                <p class="control-theme-font-display-helper">Use a <a href="https://fonts.google.com/" target="_blank">Google Font</a> to customise the Clock, Date, Group names and Bookmark Letters.</p>
+                <p class="control-theme-font-display-helper form-helper-item">Use a <a href="https://fonts.google.com/" target="_blank">Google Font</a> to customise the Clock, Date, Group names and Bookmark Letters.</p>
               </div>
               <div class="form-helper">
-                <p class="control-theme-font-display-helper">Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Fredoka One" or "Comfortaa"</p>
+                <p class="control-theme-font-display-helper form-helper-item">Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Fredoka One" or "Comfortaa"</p>
               </div>
               <div class="form-helper">
-                <p class="control-theme-font-display-helper">Clear the field to use the default font "Fjalla".</p>
+                <p class="control-theme-font-display-helper form-helper-item">Clear the field to use the default font "Fjalla".</p>
               </div>
               <div class="form-wrap">
                 <div class="form-indent">
@@ -1543,7 +1543,7 @@
                     </div>
                   </div>
                   <div class="form-helper">
-                    <p class="control-theme-font-display-helper">Not all fonts support all weights. Refer to the Google Font page to see which are available.</p>
+                    <p class="control-theme-font-display-helper form-helper-item">Not all fonts support all weights. Refer to the Google Font page to see which are available.</p>
                   </div>
                   <hr>
                   <div class="form-wrap">
@@ -1568,13 +1568,13 @@
                 <button class="control-theme-font-ui-name-default button" tabindex="-1">Default UI font</button>
               </div>
               <div class="form-helper">
-                <p class="control-theme-font-ui-helper">Use a <a href="https://fonts.google.com/" target="_blank">Google Font</a> to customise the Bookmark name, URL and form elements.</p>
+                <p class="control-theme-font-ui-helper form-helper-item">Use a <a href="https://fonts.google.com/" target="_blank">Google Font</a> to customise the Bookmark name, URL and form elements.</p>
               </div>
               <div class="form-helper">
-                <p class="control-theme-font-ui-helper">Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Roboto" or "Source Sans Pro"</p>
+                <p class="control-theme-font-ui-helper form-helper-item">Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Roboto" or "Source Sans Pro"</p>
               </div>
               <div class="form-helper">
-                <p class="control-theme-font-ui-helper">Clear the field to use the default font "Open Sans".</p>
+                <p class="control-theme-font-ui-helper form-helper-item">Clear the field to use the default font "Open Sans".</p>
               </div>
               <div class="form-wrap">
                 <div class="form-indent">
@@ -1593,7 +1593,7 @@
                     </div>
                   </div>
                   <div class="form-helper">
-                    <p class="control-theme-font-ui-helper">Not all fonts support all weights. Refer to the Google Font page to see which are available.</p>
+                    <p class="control-theme-font-ui-helper form-helper-item">Not all fonts support all weights. Refer to the Google Font page to see which are available.</p>
                   </div>
                   <hr>
                   <div class="form-wrap">
@@ -1689,13 +1689,13 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-theme-color-helper">Backgrounds, Bookmarks and Modals use shades from the left.</p>
+                <p class="control-theme-color-helper form-helper-item">Backgrounds, Bookmarks and Modals use shades from the left.</p>
               </div>
               <div class="form-helper">
-                <p class="control-theme-color-helper">Text and form elements use shades from the right.</p>
+                <p class="control-theme-color-helper form-helper-item">Text and form elements use shades from the right.</p>
               </div>
               <div class="form-helper">
-                <p class="control-theme-color-helper">For a light look switch to the Light Style and then select a Shade colour.</p>
+                <p class="control-theme-color-helper form-helper-item">For a light look switch to the Light Style and then select a Shade colour.</p>
               </div>
               <hr>
               <div class="form-wrap">
@@ -1706,7 +1706,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-theme-color-helper">Light and dark shades from this colour are used across nightTabs.</p>
+                <p class="control-theme-color-helper form-helper-item">Light and dark shades from this colour are used across nightTabs.</p>
               </div>
               <div class="form-wrap">
                 <button class="control-theme-color-rgb-default button" tabindex="-1">Default primary colour</button>
@@ -1794,7 +1794,7 @@
                 <button class="control-theme-accent-current-default button" tabindex="-1">Default accent</button>
               </div>
               <div class="form-helper">
-                <p class="control-theme-style-light-helper">Accent Colour can also be changed from the Header Area.</p>
+                <p class="control-theme-style-light-helper form-helper-item">Accent Colour can also be changed from the Header Area.</p>
               </div>
               <hr>
               <div class="form-wrap">
@@ -1877,7 +1877,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-theme-shadow-helper">Bookmarks and Modals will use the Large shadow.</p>
+                <p class="control-theme-shadow-helper form-helper-item">Bookmarks and Modals will use the Large shadow.</p>
               </div>
             </div>
           </div>
@@ -1894,17 +1894,17 @@
                 <label for="control-background-color-by-theme"><span class="label-icon"></span> Theme background colour</label>
               </div>
               <div class="form-helper">
-                <p class="control-background-color-by-theme-helper">Use the Background colour defined by the Theme.</p>
+                <p class="control-background-color-by-theme-helper form-helper-item">Use the Background colour defined by the Theme.</p>
               </div>
               <div class="form-wrap">
                 <input id="control-background-color-by-custom" class="control-background-color-by-custom" type="radio" name="control-background-color-by" value="custom" tabindex="-1">
                 <label for="control-background-color-by-custom"><span class="label-icon"></span> Custom background colour</label>
               </div>
               <div class="form-helper">
-                <p class="control-background-color-by-custom-helper">Use a custom Background colour.</p>
+                <p class="control-background-color-by-custom-helper form-helper-item">Use a custom Background colour.</p>
               </div>
               <div class="form-helper">
-                <p class="control-background-color-by-custom-helper">Take care as some colours may make the Clock, Date and other text unreadable.</p>
+                <p class="control-background-color-by-custom-helper form-helper-item">Take care as some colours may make the Clock, Date and other text unreadable.</p>
               </div>
               <div class="form-wrap">
                 <div class="form-indent">
@@ -1943,10 +1943,10 @@
                         <button class="control-background-image-file-clear button">Clear image</button>
                       </div>
                       <div class="form-helper">
-                        <p class="control-background-image-file-helper">Max image size 5MB, (due to browser local storage limits).</p>
+                        <p class="control-background-image-file-helper form-helper-item">Max image size 5MB, (due to browser local storage limits).</p>
                       </div>
                       <div class="form-helper">
-                        <p class="control-background-image-file-helper">Take care with large files, they may impact performance.</p>
+                        <p class="control-background-image-file-helper form-helper-item">Take care with large files, they may impact performance.</p>
                       </div>
                       <div class="form-wrap">
                         <div class="control-background-image-file-feedback form-feedback"></div>
@@ -1963,17 +1963,17 @@
                         <textarea id="control-background-image-url" class="control-background-image-url mb-0" spellcheck="false" placeholder="https://..." tabindex="-1"></textarea>
                       </div>
                       <div class="form-helper">
-                        <p class="control-background-image-url-helper">If adding more than one URL separate them by spaces or on new lines. If more than one is entered a random background image will be used on load.</p>
+                        <p class="control-background-image-url-helper form-helper-item">If adding more than one URL separate them by spaces or on new lines. If more than one is entered a random background image will be used on load.</p>
                       </div>
                       <hr>
                       <div class="form-helper">
-                        <p class="control-background-image-url-helper">Unsplash can be used for random images, eg:</p>
+                        <p class="control-background-image-url-helper form-helper-item">Unsplash can be used for random images, eg:</p>
                       </div>
                       <div class="form-helper">
-                        <p class="control-background-image-url-helper"><i>https://source.unsplash.com/random/1920x1080/?night,day,sky</i></p>
+                        <p class="control-background-image-url-helper form-helper-item"><i>https://source.unsplash.com/random/1920x1080/?night,day,sky</i></p>
                       </div>
                       <div class="form-helper">
-                        <p class="control-background-image-url-helper">Change parameters after <i>.../random/</i> for more options. Loading times may vary.</p>
+                        <p class="control-background-image-url-helper form-helper-item">Change parameters after <i>.../random/</i> for more options. Loading times may vary.</p>
                       </div>
                     </div>
                   </div>
@@ -2032,7 +2032,7 @@
                 </div>
               </div>
               <div class="form-helper">
-                <p class="control-data-import-helper">Restore a previously exported nightTab backup.</p>
+                <p class="control-data-import-helper form-helper-item">Restore a previously exported nightTab backup.</p>
               </div>
               <div class="form-wrap">
                 <div class="control-data-import-feedback form-feedback"></div>
@@ -2048,10 +2048,10 @@
                 <button class="control-data-export button" tabindex="-1">Export data</button>
               </div>
               <div class="form-helper">
-                <p class="control-data-export-helper">Download a backup of your nightTab Bookmarks and Settings.</p>
+                <p class="control-data-export-helper form-helper-item">Download a backup of your nightTab Bookmarks and Settings.</p>
               </div>
               <div class="form-helper">
-                <p class="control-data-export-helper">This file can later be imported on this or another deivce.</p>
+                <p class="control-data-export-helper form-helper-item">This file can later be imported on this or another deivce.</p>
               </div>
             </div>
           </div>
@@ -2064,7 +2064,7 @@
                 <button class="control-data-clear button" tabindex="-1">Clear data</button>
               </div>
               <div class="form-helper">
-                <p class="control-data-clear-helper">Wipe all data and restore nightTab to default state.</p>
+                <p class="control-data-clear-helper form-helper-item">Wipe all data and restore nightTab to default state.</p>
               </div>
             </div>
           </div>
