@@ -210,6 +210,82 @@ var theme = (function() {
       shadow: 1,
       style: "dark"
     }, {
+      name: "Black",
+      font: {
+        display: {
+          name: "Sniglet",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "Averia Sans Libre",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 50
+        },
+        rgb: {
+          r: 128,
+          g: 128,
+          b: 128
+        },
+        contrast: {
+          light: 5,
+          dark: 5
+        }
+      },
+      accent: {
+        r: 128,
+        g: 128,
+        b: 128
+      },
+      radius: 0.25,
+      shadow: 0.5,
+      style: "dark"
+    }, {
+      name: "White",
+      font: {
+        display: {
+          name: "Sniglet",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "Averia Sans Libre",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 50
+        },
+        rgb: {
+          r: 128,
+          g: 128,
+          b: 128
+        },
+        contrast: {
+          light: 5,
+          dark: 5
+        }
+      },
+      accent: {
+        r: 128,
+        g: 128,
+        b: 128
+      },
+      radius: 0.25,
+      shadow: 0.5,
+      style: "light"
+    }, {
       name: "Midnight",
       font: {
         display: {
