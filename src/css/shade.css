@@ -1,5 +1,5 @@
 .shade {
-  background-color: rgba(var(--theme-accent), 0.4);
+  background-color: rgba(var(--theme-accent), var(--theme-shade-opacity));
   position: fixed;
   top: -1em;
   left: -1em;

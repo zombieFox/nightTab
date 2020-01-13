@@ -764,6 +764,12 @@ var update = (function() {
         edit: false
       };
       return data;
+    },
+    "4.17.0": function(data) {
+      data.state.theme.shade = {
+        opacity: 0.4
+      };
+      return data;
     }
   };
 

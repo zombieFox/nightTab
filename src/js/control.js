@@ -2985,6 +2985,28 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-theme-shade-opacity"),
+    path: "theme.shade.opacity",
+    type: "range",
+    valueMod: ["reverse", "float"],
+    rangeCountElement: helper.e(".control-theme-shade-opacity-count"),
+    func: function() {
+      theme.render.shade.opacity();
+      render.class();
+      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-theme-shade-opacity-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.shade.opacity", helper.getObject({
+        object: state.get.default(),
+        path: "theme.shade.opacity"
+      }));
+      theme.render.shade.opacity();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-theme-shadow-default"),
     type: "button",
     func: function() {

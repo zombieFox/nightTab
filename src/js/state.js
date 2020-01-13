@@ -262,6 +262,9 @@ var state = (function() {
       style: "dark",
       radius: 0.25,
       shadow: 1,
+      shade: {
+        opacity: 0.4
+      },
       custom: {
         all: [],
         edit: false
@@ -402,7 +405,10 @@ var state = (function() {
       },
       style: "dark",
       radius: 0.25,
-      shadow: 1
+      shadow: 1,
+      shade: {
+        opacity: 0.4
+      }
     }
   };
 

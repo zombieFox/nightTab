@@ -9,11 +9,13 @@ var theme = (function() {
     },
     theme: {
       name: null,
-      style: null,
       font: null,
       color: null,
       accent: null,
       radius: null,
+      shadow: null,
+      style: null,
+      shade: null,
       timestamp: null
     }
   };
@@ -27,6 +29,7 @@ var theme = (function() {
     stagedThemeCustom.theme.radius = null;
     stagedThemeCustom.theme.shadow = null;
     stagedThemeCustom.theme.style = null;
+    stagedThemeCustom.theme.shade = null;
     stagedThemeCustom.theme.timestamp = null;
   };
 
@@ -55,13 +58,18 @@ var theme = (function() {
     });
     helper.setObject({
       object: state.get.current(),
+      path: "theme.shadow",
+      newValue: data.shadow
+    });
+    helper.setObject({
+      object: state.get.current(),
       path: "theme.style",
       newValue: data.style
     });
     helper.setObject({
       object: state.get.current(),
-      path: "theme.shadow",
-      newValue: data.shadow
+      path: "theme.shade",
+      newValue: data.shade
     });
   };
 
@@ -178,7 +186,8 @@ var theme = (function() {
       accent: state.get.default().theme.accent.current,
       radius: state.get.default().theme.radius,
       shadow: state.get.default().theme.shadow,
-      style: state.get.default().theme.style
+      style: state.get.default().theme.style,
+      shade: state.get.default().theme.shade
     }, {
       name: "Black",
       font: state.get.default().theme.font,
@@ -205,7 +214,8 @@ var theme = (function() {
       },
       radius: state.get.default().theme.radius,
       shadow: state.get.default().theme.shadow,
-      style: "dark"
+      style: "dark",
+      shade: state.get.default().theme.shade
     }, {
       name: "White",
       font: state.get.default().theme.font,
@@ -232,7 +242,8 @@ var theme = (function() {
       },
       radius: state.get.default().theme.radius,
       shadow: state.get.default().theme.shadow,
-      style: "light"
+      style: "light",
+      shade: state.get.default().theme.shade
     }, {
       name: "Midnight",
       font: {
@@ -270,7 +281,10 @@ var theme = (function() {
       },
       radius: 0.5,
       shadow: 0.75,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.1
+      }
     }, {
       name: "Lex",
       font: {
@@ -308,7 +322,10 @@ var theme = (function() {
       },
       radius: 0.1,
       shadow: 1,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.9
+      }
     }, {
       name: "Cruiser",
       font: {
@@ -346,7 +363,10 @@ var theme = (function() {
       },
       radius: 0.2,
       shadow: 1.5,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.7
+      }
     }, {
       name: "Sharp Mint",
       font: {
@@ -384,7 +404,10 @@ var theme = (function() {
       },
       radius: 0.8,
       shadow: 1,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.4
+      }
     }, {
       name: "Snow Glow",
       font: {
@@ -422,7 +445,10 @@ var theme = (function() {
       },
       radius: 0,
       shadow: 0.5,
-      style: "light"
+      style: "light",
+      shade: {
+        opacity: 0.6
+      }
     }, {
       name: "Rumble",
       font: {
@@ -460,7 +486,10 @@ var theme = (function() {
       },
       radius: 0.75,
       shadow: 1.75,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.5
+      }
     }, {
       name: "Sol",
       font: {
@@ -498,7 +527,10 @@ var theme = (function() {
       },
       radius: 0.5,
       shadow: 0.25,
-      style: "light"
+      style: "light",
+      shade: {
+        opacity: 0.9
+      }
     }, {
       name: "Art Deco",
       font: {
@@ -536,7 +568,10 @@ var theme = (function() {
       },
       radius: 2,
       shadow: 0.5,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.1
+      }
     }, {
       name: "Grimm",
       font: {
@@ -574,7 +609,10 @@ var theme = (function() {
       },
       radius: 1,
       shadow: 1.5,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.9
+      }
     }, {
       name: "Macaroon",
       font: {
@@ -612,7 +650,10 @@ var theme = (function() {
       },
       radius: 0.40,
       shadow: 0.5,
-      style: "light"
+      style: "light",
+      shade: {
+        opacity: 0.3
+      }
     }, {
       name: "Hot Pepper",
       font: {
@@ -650,7 +691,10 @@ var theme = (function() {
       },
       radius: 0.6,
       shadow: 1,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.1
+      }
     }, {
       name: "Steel",
       font: {
@@ -688,7 +732,10 @@ var theme = (function() {
       },
       radius: 0.3,
       shadow: 0.5,
-      style: "light"
+      style: "light",
+      shade: {
+        opacity: 0.7
+      }
     }, {
       name: "Outrun",
       font: {
@@ -726,7 +773,10 @@ var theme = (function() {
       },
       radius: 0,
       shadow: 0,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.4
+      }
     }, {
       name: "Pumpkin",
       font: {
@@ -764,7 +814,10 @@ var theme = (function() {
       },
       radius: 0.2,
       shadow: 1,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.1
+      }
     }, {
       name: "Funkadelic",
       font: {
@@ -802,7 +855,10 @@ var theme = (function() {
       },
       radius: 1.2,
       shadow: 0,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.8
+      }
     }, {
       name: "Elder Bean",
       font: {
@@ -840,7 +896,10 @@ var theme = (function() {
       },
       radius: 0.5,
       shadow: 1.75,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.1
+      }
     }, {
       name: "Marker",
       font: {
@@ -878,7 +937,10 @@ var theme = (function() {
       },
       radius: 0.3,
       shadow: 0.25,
-      style: "light"
+      style: "light",
+      shade: {
+        opacity: 0.9
+      }
     }, {
       name: "Kapow",
       font: {
@@ -916,7 +978,10 @@ var theme = (function() {
       },
       radius: 0.4,
       shadow: 1,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.7
+      }
     }, {
       name: "Dash",
       font: {
@@ -954,7 +1019,10 @@ var theme = (function() {
       },
       radius: 0,
       shadow: 0,
-      style: "light"
+      style: "light",
+      shade: {
+        opacity: 0.5
+      }
     }, {
       name: "Savage",
       font: {
@@ -992,7 +1060,10 @@ var theme = (function() {
       },
       radius: 0,
       shadow: 2.5,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.8
+      }
     }, {
       name: "Trine",
       font: {
@@ -1030,7 +1101,10 @@ var theme = (function() {
       },
       radius: 0.5,
       shadow: 1.25,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.1
+      }
     }, {
       name: "Obsidian",
       font: {
@@ -1068,7 +1142,10 @@ var theme = (function() {
       },
       radius: 0.25,
       shadow: 2,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.05
+      }
     }, {
       name: "Earthquake",
       font: {
@@ -1106,7 +1183,10 @@ var theme = (function() {
       },
       radius: 0.80,
       shadow: 1,
-      style: "dark"
+      style: "dark",
+      shade: {
+        opacity: 0.8
+      }
     }]
   };
 
@@ -1466,8 +1546,9 @@ var theme = (function() {
         render.font.ui.style();
         render.color.shade();
         render.accent.color();
-        render.shadow();
         render.radius();
+        render.shadow();
+        render.shade.opacity();
         style.check();
         link.groupAndItems();
         control.render.update();
@@ -1557,8 +1638,9 @@ var theme = (function() {
             render.font.ui.style();
             render.color.shade();
             render.accent.color();
-            render.shadow();
             render.radius();
+            render.shadow();
+            render.shade.opacity();
             style.check();
             link.groupAndItems();
             control.render.update();
@@ -1621,6 +1703,7 @@ var theme = (function() {
         stagedThemeCustom.theme.radius = state.get.current().theme.radius;
         stagedThemeCustom.theme.shadow = state.get.current().theme.shadow;
         stagedThemeCustom.theme.style = state.get.current().theme.style;
+        stagedThemeCustom.theme.shade = state.get.current().theme.shade;
         stagedThemeCustom.theme.timestamp = new Date().getTime();
         mod.custom.add();
         data.save();
@@ -1770,6 +1853,13 @@ var theme = (function() {
     }
   };
 
+  render.shade = {
+    opacity: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--theme-shade-opacity", state.get.current().theme.shade.opacity);
+    }
+  };
+
   var accent = {
     random: function() {
       mod.accent.random();
@@ -1835,6 +1925,7 @@ var theme = (function() {
     render.accent.color();
     render.radius();
     render.shadow();
+    render.shade.opacity();
     render.preset();
     render.custom.all();
     custom.check();
