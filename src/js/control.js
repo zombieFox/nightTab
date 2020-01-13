@@ -81,8 +81,8 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-accent-current-quick"),
-    path: "theme.accent.current",
+    element: helper.e(".control-theme-accent-rgb-quick"),
+    path: "theme.accent.rgb",
     type: "color",
     func: function() {
       theme.render.accent.color();
@@ -2865,8 +2865,8 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-accent-current-picker"),
-    path: "theme.accent.current",
+    element: helper.e(".control-theme-accent-rgb-picker"),
+    path: "theme.accent.rgb",
     type: "color",
     func: function() {
       theme.render.accent.color();
@@ -2875,8 +2875,8 @@ var control = (function() {
       link.groupAndItems();
     }
   }, {
-    element: helper.e(".control-theme-accent-current-hex"),
-    path: "theme.accent.current",
+    element: helper.e(".control-theme-accent-rgb-hex"),
+    path: "theme.accent.rgb",
     type: "text",
     valueMod: ["hexTextString"],
     func: function() {
@@ -2886,12 +2886,12 @@ var control = (function() {
       link.groupAndItems();
     }
   }, {
-    element: helper.e(".control-theme-accent-current-default"),
+    element: helper.e(".control-theme-accent-rgb-default"),
     type: "button",
     func: function() {
-      mod.setValue("theme.accent.current", helper.getObject({
+      mod.setValue("theme.accent.rgb", helper.getObject({
         object: state.get.default(),
-        path: "theme.accent.current"
+        path: "theme.accent.rgb"
       }));
       theme.render.accent.color();
       theme.render.accent.input.picker();

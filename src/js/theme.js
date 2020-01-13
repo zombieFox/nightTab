@@ -48,7 +48,7 @@ var theme = (function() {
     });
     helper.setObject({
       object: state.get.current(),
-      path: "theme.accent.current",
+      path: "theme.accent.rgb",
       newValue: data.accent
     });
     helper.setObject({
@@ -137,7 +137,7 @@ var theme = (function() {
         var hex = helper.convertColor.rgb.hex(rgb);
         helper.setObject({
           object: state.get.current(),
-          path: "theme.accent.current",
+          path: "theme.accent.rgb",
           newValue: {
             r: parseInt(rgb.r, 10),
             g: parseInt(rgb.g, 10),
@@ -183,7 +183,7 @@ var theme = (function() {
       name: "nightTab (default)",
       font: state.get.default().theme.font,
       color: state.get.default().theme.color,
-      accent: state.get.default().theme.accent.current,
+      accent: state.get.default().theme.accent.rgb,
       radius: state.get.default().theme.radius,
       shadow: state.get.default().theme.shadow,
       style: state.get.default().theme.style,
@@ -1279,18 +1279,18 @@ var theme = (function() {
   render.accent = {
     color: function() {
       var html = helper.e("html");
-      var color = state.get.current().theme.accent.current;
+      var color = state.get.current().theme.accent.rgb;
       html.style.setProperty("--theme-accent", color.r + ", " + color.g + ", " + color.b);
     },
     input: {
       quick: function() {
-        helper.e(".control-theme-accent-current-quick").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.current);
+        helper.e(".control-theme-accent-rgb-quick").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.rgb);
       },
       picker: function() {
-        helper.e(".control-theme-accent-current-picker").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.current);
+        helper.e(".control-theme-accent-rgb-picker").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.rgb);
       },
       hex: function() {
-        helper.e(".control-theme-accent-current-hex").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.current);
+        helper.e(".control-theme-accent-rgb-hex").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.rgb);
       }
     }
   };
@@ -1699,7 +1699,7 @@ var theme = (function() {
       var successAction = function() {
         stagedThemeCustom.theme.font = state.get.current().theme.font;
         stagedThemeCustom.theme.color = state.get.current().theme.color;
-        stagedThemeCustom.theme.accent = state.get.current().theme.accent.current;
+        stagedThemeCustom.theme.accent = state.get.current().theme.accent.rgb;
         stagedThemeCustom.theme.radius = state.get.current().theme.radius;
         stagedThemeCustom.theme.shadow = state.get.current().theme.shadow;
         stagedThemeCustom.theme.style = state.get.current().theme.style;

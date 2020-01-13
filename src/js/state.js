@@ -221,7 +221,7 @@ var state = (function() {
     },
     theme: {
       accent: {
-        current: {
+        rgb: {
           r: 0,
           g: 80,
           b: 255
@@ -369,7 +369,7 @@ var state = (function() {
     },
     theme: {
       accent: {
-        current: {
+        rgb: {
           r: 0,
           g: 80,
           b: 255

@@ -770,6 +770,11 @@ var update = (function() {
         opacity: 0.4
       };
       return data;
+    },
+    "4.18.0": function(data) {
+      data.state.theme.accent.rgb = data.state.theme.accent.current;
+      delete data.state.theme.accent.current;
+      return data;
     }
   };
 

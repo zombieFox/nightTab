@@ -552,9 +552,9 @@ var link = (function() {
           linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-light";
         };
       } else {
-        if (invert(state.get.current().theme.accent.current, true) == "#000000") {
+        if (invert(state.get.current().theme.accent.rgb, true) == "#000000") {
           linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-dark";
-        } else if (invert(state.get.current().theme.accent.current, true) == "#ffffff") {
+        } else if (invert(state.get.current().theme.accent.rgb, true) == "#ffffff") {
           linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-light";
         };
       };
