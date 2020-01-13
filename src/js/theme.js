@@ -788,7 +788,7 @@ var theme = (function() {
           style: "normal"
         },
         ui: {
-          name: "Quicksand",
+          name: "Oswald",
           weight: 400,
           style: "normal"
         },
