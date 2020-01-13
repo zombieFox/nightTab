@@ -409,7 +409,7 @@ var theme = (function() {
         opacity: 0.4
       }
     }, {
-      name: "Snow Glow",
+      name: "Snow",
       font: {
         display: {
           name: "Righteous",
@@ -439,12 +439,12 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 59,
-        g: 207,
-        b: 214
+        r: 181,
+        g: 226,
+        b: 236
       },
       radius: 0,
-      shadow: 0.5,
+      shadow: 0.25,
       style: "light",
       shade: {
         opacity: 0.6
@@ -775,7 +775,7 @@ var theme = (function() {
       shadow: 0,
       style: "dark",
       shade: {
-        opacity: 0.4
+        opacity: 0.7
       }
     }, {
       name: "Pumpkin",
