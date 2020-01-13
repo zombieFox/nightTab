@@ -796,13 +796,13 @@ var theme = (function() {
       color: {
         hsl: {
           h: 191,
-          s: 86,
-          l: 46
+          s: 73,
+          l: 48
         },
         rgb: {
-          r: 16,
-          g: 181,
-          b: 218
+          r: 33,
+          g: 178,
+          b: 211
         },
         contrast: {
           light: 5,
