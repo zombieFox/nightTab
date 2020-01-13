@@ -173,56 +173,15 @@ var theme = (function() {
     },
     all: [{
       name: "nightTab (default)",
-      font: {
-        display: {
-          name: "",
-          weight: 400,
-          style: "normal"
-        },
-        ui: {
-          name: "",
-          weight: 400,
-          style: "normal"
-        },
-      },
-      color: {
-        hsl: {
-          h: 222,
-          s: 14,
-          l: 56
-        },
-        rgb: {
-          r: 129,
-          g: 138,
-          b: 160
-        },
-        contrast: {
-          light: 4,
-          dark: 4
-        }
-      },
-      accent: {
-        r: 0,
-        g: 80,
-        b: 255
-      },
-      radius: 0.25,
-      shadow: 1,
-      style: "dark"
+      font: state.get.default().theme.font,
+      color: state.get.default().theme.color,
+      accent: state.get.default().theme.accent.current,
+      radius: state.get.default().theme.radius,
+      shadow: state.get.default().theme.shadow,
+      style: state.get.default().theme.style
     }, {
       name: "Black",
-      font: {
-        display: {
-          name: "Sniglet",
-          weight: 400,
-          style: "normal"
-        },
-        ui: {
-          name: "Averia Sans Libre",
-          weight: 400,
-          style: "normal"
-        }
-      },
+      font: state.get.default().theme.font,
       color: {
         hsl: {
           h: 0,
@@ -244,23 +203,12 @@ var theme = (function() {
         g: 128,
         b: 128
       },
-      radius: 0.25,
-      shadow: 0.5,
+      radius: state.get.default().theme.radius,
+      shadow: state.get.default().theme.shadow,
       style: "dark"
     }, {
       name: "White",
-      font: {
-        display: {
-          name: "Sniglet",
-          weight: 400,
-          style: "normal"
-        },
-        ui: {
-          name: "Averia Sans Libre",
-          weight: 400,
-          style: "normal"
-        }
-      },
+      font: state.get.default().theme.font,
       color: {
         hsl: {
           h: 0,
@@ -282,8 +230,8 @@ var theme = (function() {
         g: 128,
         b: 128
       },
-      radius: 0.25,
-      shadow: 0.5,
+      radius: state.get.default().theme.radius,
+      shadow: state.get.default().theme.shadow,
       style: "light"
     }, {
       name: "Midnight",
