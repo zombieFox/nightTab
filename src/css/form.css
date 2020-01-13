@@ -103,7 +103,7 @@ select {
     0.5em 0.375em;
   background-repeat: no-repeat;
   padding: 0 3em 0 1em;
-  margin: 0 0 1em 0;
+  margin: 0;
   color: rgb(var(--form-label));
   font-size: 1em;
   font-family: var(--theme-font-ui-name);
@@ -166,7 +166,7 @@ select:disabled:active {
 textarea {
   background-color: rgb(var(--form-input-background));
   padding: 0.25em 1em;
-  margin: 0 0 1em 0;
+  margin: 0;
   color: rgb(var(--form-input-text));
   font-size: 1em;
   line-height: 1.6;

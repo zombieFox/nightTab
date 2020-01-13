@@ -1385,7 +1385,7 @@ var theme = (function() {
     allThemePreset.forEach(function(arrayItem, index) {
       var themePresetItem = helper.node("div|class:theme-preset-item");
       var themePresetTile = helper.node("div|class:theme-preset-tile");
-      var themePresetButton = helper.node("button|class:theme-preset-button button mb-0,tabindex:-1");
+      var themePresetButton = helper.node("button|class:theme-preset-button button,tabindex:-1");
       var themePresetPreview = helper.node("span|class:theme-preset-preview");
       var shadeSteps = 4;
       var rgb = arrayItem.color.rgb;
@@ -1462,12 +1462,12 @@ var theme = (function() {
         allThemeCuston.forEach(function(arrayItem, index) {
           var themeCustomItem = helper.node("div|class:theme-custom-item");
           var themeCustomTile = helper.node("div|class:theme-custom-tile");
-          var themeCustomButton = helper.node("button|class:theme-custom-button button mb-0,tabindex:-1");
+          var themeCustomButton = helper.node("button|class:theme-custom-button button,tabindex:-1");
           var themeCustomPreview = helper.node("span|class:theme-custom-preview");
           var themeCustomControl = helper.node("div|class:theme-custom-control");
-          var themeCustomEdit = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button button-small mb-0,tabindex:-2");
+          var themeCustomEdit = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button button-small,tabindex:-2");
           var themeCustomEditIcon = helper.node("spa|class:button-icon icon-edit");
-          var themeCustomRemove = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button button-small mb-0,tabindex:-2");
+          var themeCustomRemove = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button button-small,tabindex:-2");
           var themeCustomRemoveIcon = helper.node("spa|class:button-icon icon-close");
           var shadeSteps = 4;
           var rgb = arrayItem.color.rgb;
@@ -1566,7 +1566,7 @@ var theme = (function() {
       };
       var form = helper.node("form|class:group-form");
       var fieldset = helper.node("fieldset");
-      var inputWrap = helper.node("div|class:input-wrap");
+      var inputWrap = helper.node("div|class:form-wrap");
       var label = helper.node("label:Name|for:theme-name");
       var input = helper.node("input|id:theme-name,class:theme-name mb-0,type:text,tabindex:1,placeholder:Example theme,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
       inputWrap.appendChild(label);
