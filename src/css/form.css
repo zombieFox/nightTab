@@ -1194,13 +1194,6 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 /* form grid */
-.form-grid-wrap {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  position: relative;
-  width: 100%;
-}
-
 .form-grid {
   background-color: rgb(var(--form-grid-background));
   padding: calc(var(--form-thumb-size) / 2);
