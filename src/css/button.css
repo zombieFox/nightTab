@@ -5,7 +5,7 @@ input[type="reset"],
 input[type="submit"] {
   background-color: rgb(var(--button-background));
   padding: 0.25em 1em;
-  margin: 0 0 1em 0;
+  margin: 0;
   color: rgb(var(--button-text));
   font-size: 1em;
   font-family: var(--theme-font-ui-name);
@@ -206,12 +206,4 @@ button [class*=" button-"]:last-child,
 .button-link:focus:disabled {
   background-color: transparent;
   color: transparent;
-}
-
-.button-wrap {
-  padding: 0.5em 0;
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
 }

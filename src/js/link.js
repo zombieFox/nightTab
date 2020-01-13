@@ -434,16 +434,16 @@ var link = (function() {
       var fieldset = helper.node("fieldset");
 
       // group position
-      var groupFormPositionInputWrap = helper.node("div|class:input-wrap");
+      var groupFormPositionInputWrap = helper.node("div|class:form-wrap");
       var groupFormPositionLabel = helper.node("label:Position|for:group-form-position");
-      var groupFormPositionSelect = helper.node("select|id:group-form-position,class:group-form-position mb-0,tabindex:1");
-      var groupFormRandomNameButtonWrap = helper.node("div|class:button-wrap");
-      var groupFormRandomNameButton = helper.node("button:Random Group name|class:button mb-0,type:button,tabindex:1");
+      var groupFormPositionSelect = helper.node("select|id:group-form-position,class:group-form-position,tabindex:1");
+      var groupFormRandomNameButtonWrap = helper.node("div|class:form-wrap");
+      var groupFormRandomNameButton = helper.node("button:Random Group name|class:button,type:button,tabindex:1");
 
       // group name
-      var groupFormNameInputWrap = helper.node("div|class:input-wrap");
+      var groupFormNameInputWrap = helper.node("div|class:form-wrap");
       var groupFormInputLabel = helper.node("label:Name|for:group-form-input-name");
-      var groupFormInputName = helper.node("input|type:text,class:group-form-input-name mb-0,id:group-form-input-name,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      var groupFormInputName = helper.node("input|type:text,class:group-form-input-name,id:group-form-input-name,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
 
       groupFormPositionInputWrap.appendChild(groupFormPositionLabel);
       groupFormPositionInputWrap.appendChild(groupFormPositionSelect);
@@ -685,91 +685,100 @@ var link = (function() {
       var fieldset = helper.node("fieldset");
 
       // group existing
-      var groupExistingRadioWrap = helper.node("div|class:input-wrap");
+      var groupExistingRadioWrap = helper.node("div|class:form-wrap");
       var groupExistingRadio = helper.node("input|class:link-form-input-group-existing,id:link-form-input-group-existing,type:radio,name:link-form-input-group,tabindex:1,checked,value:existing");
       var groupExistingLable = helper.node("label|for:link-form-input-group-existing");
       var groupExistingLableText = helper.node("span:Existing Group");
       var groupExistingLableIcon = helper.node("span|class:label-icon");
+      var groupExistingFormIndentWrap = helper.node("div|class:form-wrap");
       var groupExistingFormIndent = helper.node("div|class:form-indent");
-      var groupExistingGroupInputWrap = helper.node("div|class:input-wrap");
-      var groupExistingGroup = helper.node("select|id:link-form-select-group,class:link-form-select-group mb-0,tabindex:1");
-      var groupExistingPositionInputWrap = helper.node("div|class:input-wrap");
+      var groupExistingGroupInputWrap = helper.node("div|class:form-wrap");
+      var groupExistingGroup = helper.node("select|id:link-form-select-group,class:link-form-select-group,tabindex:1");
+      var groupExistingPositionInputWrap = helper.node("div|class:form-wrap");
       var groupExistingPositionLabel = helper.node("label:Position|for:link-form-position");
-      var groupExistingPosition = helper.node("select|id:link-form-position,class:link-form-position mb-0,tabindex:1");
+      var groupExistingPosition = helper.node("select|id:link-form-position,class:link-form-position,tabindex:1");
 
       // group new
-      var groupNewRadioWrap = helper.node("div|class:input-wrap");
+      var groupNewRadioWrap = helper.node("div|class:form-wrap");
       var groupNewRadio = helper.node("input|class:link-form-input-group-new,id:link-form-input-group-new,type:radio,name:link-form-input-group,tabindex:1,value:new");
       var groupNewLable = helper.node("label|for:link-form-input-group-new");
       var groupNewLableLableText = helper.node("span:New Group");
       var groupNewLableLableIcon = helper.node("span|class:label-icon");
+      var groupNewFormIndentWrap = helper.node("div|class:form-wrap");
       var groupNewFormIndent = helper.node("div|class:form-indent");
-      var groupNewInputWrap = helper.node("div|class:input-wrap");
-      var groupNewInput = helper.node("input|type:text,class:link-form-input-new-group mb-0,id:link-form-input-new-group,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
-      var groupNewRandomNameButtonWrap = helper.node("div|class:button-wrap");
-      var groupNewRandomNameButton = helper.node("button:Random Group name|class:button mb-0,type:button,tabindex:1,disabled");
+      var groupNewInputWrap = helper.node("div|class:form-wrap");
+      var groupNewInput = helper.node("input|type:text,class:link-form-input-new-group,id:link-form-input-new-group,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
+      var groupNewRandomNameButtonWrap = helper.node("div|class:form-wrap");
+      var groupNewRandomNameButton = helper.node("button:Random Group name|class:button,type:button,tabindex:1,disabled");
 
       // letter
-      var displayLetterRadioWrap = helper.node("div|class:input-wrap");
+      var displayLetterRadioWrap = helper.node("div|class:form-wrap");
       var displayLetterRadio = helper.node("input|class:link-form-input-display-letter,id:link-form-input-display-letter,type:radio,name:link-form-input-display,tabindex:1,checked,value:letter");
       var displayLetterLable = helper.node("label|for:link-form-input-display-letter");
       var displayLetterLableText = helper.node("span:Letters");
       var displayLetterLableIcon = helper.node("span|class:label-icon");
+      var displayLetterFormIndentWrap = helper.node("div|class:form-wrap");
       var displayLetterFormIndent = helper.node("div|class:form-indent");
-      var displayLetterInputWrap = helper.node("div|class:input-wrap");
-      var displayLetterInput = helper.node("input|type:text,class:link-form-input-letter mb-0,id:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      var displayLetterInputWrap = helper.node("div|class:form-wrap");
+      var displayLetterInput = helper.node("input|type:text,class:link-form-input-letter,id:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
 
       // icon
-      var displayIconRadiotWrap = helper.node("div|class:input-wrap");
+      var displayIconRadiotWrap = helper.node("div|class:form-wrap");
       var displayIconRadio = helper.node("input|class:link-form-input-display-icon,id:link-form-input-display-icon,type:radio,name:link-form-input-display,tabindex:1,value:icon");
       var displayIconLable = helper.node("label|for:link-form-input-display-icon");
       var displayIconLableText = helper.node("span:Icon");
       var displayIconLableIcon = helper.node("span|class:label-icon");
+      var displayIconFormIndentWrap = helper.node("div|class:form-wrap");
       var displayIconFormIndent = helper.node("div|class:form-indent");
-      var displayIconInputWrap = helper.node("div|class:input-wrap");
-      var displayIconFormGroup = helper.node("div|class:form-group form-group-block mb-0 auto-suggest-input");
+      var displayIconInputWrap = helper.node("div|class:form-wrap");
+      var displayIconFormGroup = helper.node("div|class:form-group form-group-block auto-suggest-input");
       var displayIconInput = helper.node("input|type:text,class:form-group-item-grow link-form-input-icon auto-suggest-input,id:link-form-input-icon,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
       var displayIconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon disabled,tabindex:-1");
-      var displayIconFormGroupClear = helper.node("button|class:link-form-icon-clear button mb-0,type:button,tabindex:1,disabled");
+      var displayIconFormGroupClear = helper.node("button|class:link-form-icon-clear button,type:button,tabindex:1,disabled");
       var displayIconFormGroupClearIcon = helper.node("span|class:icon-close");
-      var displayIconHelper = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-icon-helper form-helper small muted disabled");
+      var displayIconHelper = helper.node("div|class:form-helper");
+      var displayIconHelperItem = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-icon-helper form-helper-item disabled");
 
       // name
-      var nameInputWrap = helper.node("div|class:input-wrap");
+      var nameInputWrap = helper.node("div|class:form-wrap");
       var nameLabel = helper.node("label:Name|for:link-form-input-name");
-      var nameInput = helper.node("input|type:text,class:link-form-input-name mb-0,id:link-form-input-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      var nameInput = helper.node("input|type:text,class:link-form-input-name,id:link-form-input-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
 
       // url
-      var urlInputWrap = helper.node("div|class:input-wrap");
+      var urlInputWrap = helper.node("div|class:form-wrap");
       var urlLabel = helper.node("label:URL|for:link-form-input-url");
-      var urlInput = helper.node("input|type:text,class:link-form-input-url mb-0,id:link-form-input-url,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
-      var urlInputHelper = helper.makeNode({
+      var urlInput = helper.node("input|type:text,class:link-form-input-url,id:link-form-input-url,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      var urlInputHelper = helper.node("div|class:form-helper");
+      var urlInputHelperItem = helper.makeNode({
         tag: "p",
         text: "Be sure to use the full URL and include \"http://\" or \"https://\".",
         attr: [{
           key: "class",
-          value: "form-helper small muted"
+          value: "form-helper-item"
         }]
       });
 
       // accent
+      var accentLabelWrap = helper.node("div|class:form-wrap");
       var accentLabel = helper.node("label:Accent colour");
-      var accentGlobalRadioWrap = helper.node("div|class:input-wrap");
+      var accentGlobalRadioWrap = helper.node("div|class:form-wrap");
       var accentGlobalRadio = helper.node("input|class:link-form-input-accent-global,id:link-form-input-accent-global,type:radio,name:link-form-input-accent,tabindex:1,checked,value:global");
       var accentGlobalLabel = helper.node("label|for:link-form-input-accent-global");
       var accentGlobalLabelText = helper.node("span:Global");
       var accentGlobalLabelIcon = helper.node("span|class:label-icon");
-      var accentCustomInputWrap = helper.node("div|class:input-wrap");
+      var accentCustomInputWrap = helper.node("div|class:form-wrap");
       var accentCustomRadio = helper.node("input|class:link-form-input-accent-custom,id:link-form-input-accent-custom,type:radio,name:link-form-input-accent,tabindex:1,value:custom");
       var accentCustomLabel = helper.node("label|for:link-form-input-accent-custom");
       var accentCustomLabelText = helper.node("span:Custom");
       var accentCustomLabelIcon = helper.node("span|class:label-icon");
+      var accentColorFormIndentWrap = helper.node("div|class:form-wrap");
       var accentColorFormIndent = helper.node("div|class:form-indent");
-      var accentColorInputWrap = helper.node("div|class:input-wrap");
-      var accentColorFormGroup = helper.node("div|class:form-group form-group-block mb-0");
-      var accentColorPicker = helper.node("input|id:link-form-input-accent-picker,class:form-group-item-half link-form-input-accent-picker mb-0,type:color,value:#000000,tabindex:1,disabled");
-      var accentColorHex = helper.node("input|id:link-form-input-accent-hex,class:form-group-item-half link-form-input-accent-hex mb-0,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
-      var accentColorInputHelper = helper.node("p:Use this colour to override the global accent colour.|class:link-form-input-accent-helper form-helper small muted disabled");
+      var accentColorInputWrap = helper.node("div|class:form-wrap");
+      var accentColorFormGroup = helper.node("div|class:form-group form-group-block");
+      var accentColorPicker = helper.node("input|id:link-form-input-accent-picker,class:form-group-item-half link-form-input-accent-picker,type:color,value:#000000,tabindex:1,disabled");
+      var accentColorHex = helper.node("input|id:link-form-input-accent-hex,class:form-group-item-half link-form-input-accent-hex,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
+      var accentColorInputHelper = helper.node("div|class:form-helper");
+      var accentColorInputHelperItem = helper.node("p:Use this colour to override the global accent colour.|class:link-form-input-accent-helper form-helper-item");
 
       groupExistingRadioWrap.appendChild(groupExistingRadio);
       groupExistingLable.appendChild(groupExistingLableIcon);
@@ -780,8 +789,9 @@ var link = (function() {
       groupExistingPositionInputWrap.appendChild(groupExistingPosition);
       groupExistingFormIndent.appendChild(groupExistingGroupInputWrap);
       groupExistingFormIndent.appendChild(groupExistingPositionInputWrap);
+      groupExistingFormIndentWrap.appendChild(groupExistingFormIndent);
       fieldset.appendChild(groupExistingRadioWrap);
-      fieldset.appendChild(groupExistingFormIndent);
+      fieldset.appendChild(groupExistingFormIndentWrap);
 
       groupNewRadioWrap.appendChild(groupNewRadio);
       groupNewLable.appendChild(groupNewLableLableIcon);
@@ -791,8 +801,9 @@ var link = (function() {
       groupNewRandomNameButtonWrap.appendChild(groupNewRandomNameButton);
       groupNewFormIndent.appendChild(groupNewInputWrap);
       groupNewFormIndent.appendChild(groupNewRandomNameButtonWrap);
+      groupNewFormIndentWrap.appendChild(groupNewFormIndent);
       fieldset.appendChild(groupNewRadioWrap);
-      fieldset.appendChild(groupNewFormIndent);
+      fieldset.appendChild(groupNewFormIndentWrap);
       fieldset.appendChild(helper.node("hr"));
 
       displayLetterRadioWrap.appendChild(displayLetterRadio);
@@ -802,7 +813,8 @@ var link = (function() {
       fieldset.appendChild(displayLetterRadioWrap);
       displayLetterInputWrap.appendChild(displayLetterInput);
       displayLetterFormIndent.appendChild(displayLetterInputWrap);
-      fieldset.appendChild(displayLetterFormIndent);
+      displayLetterFormIndentWrap.appendChild(displayLetterFormIndent);
+      fieldset.appendChild(displayLetterFormIndentWrap);
       displayIconRadiotWrap.appendChild(displayIconRadio);
       displayIconLable.appendChild(displayIconLableIcon);
       displayIconLable.appendChild(displayIconLableText);
@@ -814,8 +826,10 @@ var link = (function() {
       displayIconFormGroup.appendChild(displayIconFormGroupClear);
       displayIconInputWrap.appendChild(displayIconFormGroup);
       displayIconFormIndent.appendChild(displayIconInputWrap);
+      displayIconHelper.appendChild(displayIconHelperItem);
       displayIconFormIndent.appendChild(displayIconHelper);
-      fieldset.appendChild(displayIconFormIndent);
+      displayIconFormIndentWrap.appendChild(displayIconFormIndent);
+      fieldset.appendChild(displayIconFormIndentWrap);
       fieldset.appendChild(helper.node("hr"));
       nameInputWrap.appendChild(nameLabel);
       nameInputWrap.appendChild(nameInput);
@@ -823,9 +837,11 @@ var link = (function() {
       urlInputWrap.appendChild(urlLabel);
       urlInputWrap.appendChild(urlInput);
       fieldset.appendChild(urlInputWrap);
+      urlInputHelper.appendChild(urlInputHelperItem);
       fieldset.appendChild(urlInputHelper);
       fieldset.appendChild(helper.node("hr"));
-      fieldset.appendChild(accentLabel);
+      accentLabelWrap.appendChild(accentLabel);
+      fieldset.appendChild(accentLabelWrap);
       accentGlobalRadioWrap.appendChild(accentGlobalRadio);
       accentGlobalLabel.appendChild(accentGlobalLabelIcon);
       accentGlobalLabel.appendChild(accentGlobalLabelText);
@@ -840,8 +856,10 @@ var link = (function() {
       accentColorFormGroup.appendChild(accentColorHex);
       accentColorInputWrap.appendChild(accentColorFormGroup);
       accentColorFormIndent.appendChild(accentColorInputWrap);
+      accentColorInputHelper.appendChild(accentColorInputHelperItem);
       accentColorFormIndent.appendChild(accentColorInputHelper);
-      fieldset.appendChild(accentColorFormIndent);
+      accentColorFormIndentWrap.appendChild(accentColorFormIndent);
+      fieldset.appendChild(accentColorFormIndentWrap);
       form.appendChild(fieldset);
 
       var makeGroupOptions = function() {
@@ -1182,16 +1200,10 @@ var link = (function() {
       var group = helper.node("div|class:group");
       var groupBody = helper.node("div|class:group-body");
       var linkEmpty = helper.node("div|class:link-empty link-item");
-      var paraWrap = helper.node("div|class:p-wrap");
-      var para = helper.node("p:No Groups or Bookmarks|class:pb-0");
-      var formInline = helper.node("div|class:form-inline");
-      var buttonWrap = helper.node("div|class:button-wrap mb-0 mr-0");
-      var addButton = helper.node("button:Add a Bookmark|class:button mb-0,type:button,tabindex:1");
-      buttonWrap.appendChild(addButton);
-      formInline.appendChild(buttonWrap);
-      paraWrap.appendChild(para);
-      linkEmpty.appendChild(paraWrap);
-      linkEmpty.appendChild(formInline);
+      var para = helper.node("p:No Groups or Bookmarks|class:small muted");
+      var addButton = helper.node("button:Add a Bookmark|class:button button-small,type:button,tabindex:1");
+      linkEmpty.appendChild(para);
+      linkEmpty.appendChild(addButton);
       groupBody.appendChild(linkEmpty);
       group.appendChild(groupBody);
       addButton.addEventListener("click", function(event) {
@@ -1201,16 +1213,10 @@ var link = (function() {
     },
     item: function(groupIndex) {
       var linkEmpty = helper.node("div|class:link-empty link-item");
-      var paraWrap = helper.node("div|class:p-wrap");
-      var para = helper.node("p:Empty Group|class:pb-0");
-      var formInline = helper.node("div|class:form-inline");
-      var buttonWrap = helper.node("div|class:button-wrap mb-0 mr-0");
-      var addButton = helper.node("button:Add a Bookmark|class:button mb-0,type:button,tabindex:1");
-      buttonWrap.appendChild(addButton);
-      formInline.appendChild(buttonWrap);
-      paraWrap.appendChild(para);
-      linkEmpty.appendChild(paraWrap);
-      linkEmpty.appendChild(formInline);
+      var para = helper.node("p:Empty Group|class:small muted");
+      var addButton = helper.node("button:Add a Bookmark|class:button button-small,type:button,tabindex:1");
+      linkEmpty.appendChild(para);
+      linkEmpty.appendChild(addButton);
       addButton.addEventListener("click", function(event) {
         link.add.item.open();
         link.add.item.selectGroup(groupIndex);
@@ -1221,21 +1227,13 @@ var link = (function() {
       var group = helper.node("div|class:group");
       var groupBody = helper.node("div|class:group-body");
       var linkEmpty = helper.node("div|class:link-empty link-item");
-      var paraWrap1 = helper.node("div|class:p-wrap");
-      var paraWrap2 = helper.node("div|class:p-wrap");
       var para1 = helper.makeNode({
         tag: "p",
-        text: "No bookmarks matching \"" + helper.e(".header-search-input").value + "\" found",
-        attr: [{
-          key: "class",
-          value: "mb-0"
-        }]
+        text: "No bookmarks matching \"" + helper.e(".header-search-input").value + "\" found"
       });
-      var para2 = helper.node("p:\"Enter\" to Search " + state.get.current().header.search.engine[state.get.current().header.search.engine.selected].name + ".|class:small muted mb-0");
-      paraWrap1.appendChild(para1);
-      paraWrap2.appendChild(para2);
-      linkEmpty.appendChild(paraWrap1);
-      linkEmpty.appendChild(paraWrap2);
+      var para2 = helper.node("p:\"Enter\" to Search " + state.get.current().header.search.engine[state.get.current().header.search.engine.selected].name + ".|class:small muted");
+      linkEmpty.appendChild(para1);
+      linkEmpty.appendChild(para2);
       groupBody.appendChild(linkEmpty);
       group.appendChild(groupBody);
       return group;

@@ -64,10 +64,6 @@ p:not(:last-child) {
   margin-bottom: 0.5em;
 }
 
-.p-wrap {
-  padding: 0.5em 0;
-}
-
 hr {
   border: 0;
   border-top: var(--horizontal-rule);

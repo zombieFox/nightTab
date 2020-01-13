@@ -134,17 +134,17 @@ var header = (function() {
     style: function() {
       var action = {
         box: function() {
-          helper.removeClass(helper.getClosest(helper.e(".control-edit"), ".input-wrap"), "input-button-link");
+          helper.removeClass(helper.getClosest(helper.e(".control-edit"), ".form-input-button"), "form-input-button-link");
           helper.removeClass(helper.e(".control-add-toggle"), "button-link");
-          helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".input-wrap"), "input-button-link");
-          helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-button-link");
+          helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "form-input-button-link");
+          helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "form-input-button-link");
           helper.removeClass(helper.e(".control-menu-open"), "button-link");
         },
         clear: function() {
-          helper.addClass(helper.getClosest(helper.e(".control-edit"), ".input-wrap"), "input-button-link");
+          helper.addClass(helper.getClosest(helper.e(".control-edit"), ".form-input-button"), "form-input-button-link");
           helper.addClass(helper.e(".control-add-toggle"), "button-link");
-          helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".input-wrap"), "input-button-link");
-          helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-button-link");
+          helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "form-input-button-link");
+          helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "form-input-button-link");
           helper.addClass(helper.e(".control-menu-open"), "button-link");
         }
       };
@@ -152,19 +152,19 @@ var header = (function() {
     },
     dot: function() {
       if (state.get.current().header.button.colorAccent.dot.show) {
-        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".input-wrap"), "input-color-dot");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".input-wrap"), "input-color-dot-shade");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".input-wrap"), "input-hide");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-color-dot");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-color-dot-accent");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-hide");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot-shade");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "form-input-hide");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot-accent");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "form-input-hide");
       } else {
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".input-wrap"), "input-color-dot");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".input-wrap"), "input-color-dot-shade");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".input-wrap"), "input-hide");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-color-dot");
-        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-color-dot-accent");
-        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".input-wrap"), "input-hide");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "input-color-dot-shade");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-color-rgb-quick"), ".form-input-button"), "form-input-hide");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot");
+        helper.removeClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "input-color-dot-accent");
+        helper.addClass(helper.getClosest(helper.e(".control-theme-accent-current-quick"), ".form-input-button"), "form-input-hide");
       };
     }
   };
