@@ -45,6 +45,12 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 
 ---
 
+### nightTab as homepage
+
+Open a new (nightTab) tab and open `Options` in another tab, make sure these are the only tabs open. In the `Home` section of your Firefox options, select `Custom URLs...` under `Homepage and new windows` then click on `Use Current Pages`. Voila.
+
+---
+
 ### Development
 
 When developing use:
