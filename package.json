@@ -1,6 +1,6 @@
 {
   "name": "nighttab",
-  "version": "4.18.0",
+  "version": "4.19.0",
   "description": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab.",
   "main": "index.js",
   "scripts": {
@@ -50,8 +50,9 @@
     "gulp-watch": "^5.0.1",
     "html5sortable": "^0.9.16",
     "invert-color": "^2.0.0",
+    "moment": "^2.24.0",
     "web-ext": "^3.1.1",
-    "moment": "^2.24.0"
+    "webfontloader": "^1.6.28"
   },
   "dependencies": {}
 }

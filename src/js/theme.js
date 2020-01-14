@@ -1411,49 +1411,67 @@ var theme = (function() {
   };
 
   render.font = {
+    load: {
+      preset: function() {
+        var allPresetFonts = [];
+        mod.preset.all.forEach(function(arrayItem, index) {
+          var displayFont = arrayItem.font.display.name + ":" + arrayItem.font.display.weight;
+          var uiFont = arrayItem.font.ui.name + ":" + arrayItem.font.ui.weight;
+          if (arrayItem.font.display.name != "" && !allPresetFonts.includes(displayFont)) {
+            allPresetFonts.push(displayFont);
+          };
+          if (arrayItem.font.ui.name != "" && !allPresetFonts.includes(uiFont)) {
+            allPresetFonts.push(uiFont);
+          };
+        });
+        WebFont.load({
+          google: {
+            families: allPresetFonts
+          }
+        });
+      },
+      custom: {
+        display: function() {
+          if (state.get.current().theme.font.display.name.trim().replace(/\s\s+/g, " ") != "") {
+            WebFont.load({
+              google: {
+                families: [state.get.current().theme.font.display.name.trim().replace(/\s\s+/g, " ") + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"]
+              }
+            });
+          };
+          render.font.display.name();
+        },
+        ui: function() {
+          if (state.get.current().theme.font.ui.name.trim().replace(/\s\s+/g, " ") != "") {
+            WebFont.load({
+              google: {
+                families: [state.get.current().theme.font.ui.name.trim().replace(/\s\s+/g, " ") + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"]
+              }
+            });
+          };
+          render.font.ui.name();
+        }
+      }
+    },
     delay: {
       display: function() {
         clearTimeout(_timerFontDisplay);
-        _timerFontDisplay = setTimeout(render.font.display.name, 600);
+        _timerFontDisplay = setTimeout(render.font.load.custom.display, 600);
       },
       ui: function() {
         clearTimeout(_timerFontUi);
-        _timerFontUi = setTimeout(render.font.ui.name, 600);
+        _timerFontUi = setTimeout(render.font.load.custom.ui, 600);
       }
     },
     display: {
       name: function() {
         var html = helper.e("html");
-        var removeLink = function() {
-          var link = helper.e(".theme-font-display-name");
-          if (link) {
-            link.remove();
-          };
+        var name = state.get.current().theme.font.display.name.trim().replace(/\s\s+/g, " ");
+        if (name != "") {
+          html.style.setProperty("--theme-font-display-name", "\"" + name + "\"" + ", \"Fjalla One\", sans-serif");
+        } else {
           html.style.removeProperty("--theme-font-display-name");
         };
-        var addLink = function() {
-          var name = state.get.current().theme.font.display.name.trim().replace(/\s+/g, "+");
-          if (name != "") {
-            var head = helper.e("head");
-            var link = helper.makeNode({
-              tag: "link",
-              attr: [{
-                key: "class",
-                value: "theme-font-display-name"
-              }, {
-                key: "href",
-                value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-              }, {
-                key: "rel",
-                value: "stylesheet"
-              }]
-            });
-            head.appendChild(link);
-            html.style.setProperty("--theme-font-display-name", "\"" + state.get.current().theme.font.display.name.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Fjalla One\", sans-serif");
-          };
-        };
-        removeLink();
-        addLink();
       },
       weight: function() {
         var html = helper.e("html");
@@ -1468,38 +1486,12 @@ var theme = (function() {
     ui: {
       name: function() {
         var html = helper.e("html");
-        var removeLink = function() {
-          var link = helper.e(".theme-font-ui-name");
-          if (link) {
-            link.remove();
-          };
+        var name = state.get.current().theme.font.ui.name.trim().replace(/\s\s+/g, " ");
+        if (name != "") {
+          html.style.setProperty("--theme-font-ui-name", "\"" + name + "\"" + ", \"Open Sans\", sans-serif");
+        } else {
           html.style.removeProperty("--theme-font-ui-name");
         };
-        var addLink = function() {
-          var name = state.get.current().theme.font.ui.name.trim().replace(/\s+/g, "+");
-          if (name != "") {
-            if (name != state.get.current().theme.font.display.name) {
-              var head = helper.e("head");
-              var link = helper.makeNode({
-                tag: "link",
-                attr: [{
-                  key: "class",
-                  value: "theme-font-ui-name"
-                }, {
-                  key: "href",
-                  value: "https://fonts.googleapis.com/css?family=" + name + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-                }, {
-                  key: "rel",
-                  value: "stylesheet"
-                }]
-              });
-              head.appendChild(link);
-            };
-            html.style.setProperty("--theme-font-ui-name", "\"" + state.get.current().theme.font.ui.name.trim().replace(/\s\s+/g, " ") + "\"" + ", \"Open Sans\", sans-serif");
-          };
-        };
-        removeLink();
-        addLink();
       },
       weight: function() {
         var html = helper.e("html");
@@ -1956,6 +1948,9 @@ var theme = (function() {
     accent.random();
     mod.accent.random();
     mod.custom.close();
+    render.font.load.preset();
+    render.font.load.custom.display();
+    render.font.load.custom.ui();
     render.font.display.name();
     render.font.display.weight();
     render.font.display.style();
