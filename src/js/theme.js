@@ -1187,6 +1187,47 @@ var theme = (function() {
       shade: {
         opacity: 0.8
       }
+    }, {
+      name: "Koto",
+      font: {
+        display: {
+          name: "Dosis",
+          weight: 200,
+          style: "normal"
+        },
+        ui: {
+          name: "Baskervville",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 231,
+          s: 56,
+          l: 53
+        },
+        rgb: {
+          r: 68,
+          g: 88,
+          b: 202
+        },
+        contrast: {
+          light: 4.5,
+          dark: 4.5
+        }
+      },
+      accent: {
+        r: 255,
+        g: 12,
+        b: 88
+      },
+      radius: 0.25,
+      shadow: 0.5,
+      style: "dark",
+      shade: {
+        opacity: 0.5
+      }
     }]
   };
 
