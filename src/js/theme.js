@@ -598,7 +598,7 @@ var theme = (function() {
           b: 109
         },
         contrast: {
-          light: 7,
+          light: 5,
           dark: 2
         }
       },
@@ -921,22 +921,22 @@ var theme = (function() {
           l: 50
         },
         rgb: {
-          r: 127,
-          g: 127,
-          b: 127
+          r: 128,
+          g: 128,
+          b: 128
         },
         contrast: {
-          light: 5.3,
-          dark: 4
+          light: 4,
+          dark: 1
         }
       },
       accent: {
-        r: 0,
-        g: 0,
-        b: 0
+        r: 34,
+        g: 51,
+        b: 68
       },
       radius: 0.3,
-      shadow: 0.25,
+      shadow: 0.5,
       style: "light",
       shade: {
         opacity: 0.9
