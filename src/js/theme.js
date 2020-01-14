@@ -1110,7 +1110,7 @@ var theme = (function() {
       font: {
         display: {
           name: "Zilla Slab",
-          weight: 900,
+          weight: 700,
           style: "normal"
         },
         ui: {
