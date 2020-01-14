@@ -1228,6 +1228,47 @@ var theme = (function() {
       shade: {
         opacity: 0.5
       }
+    }, {
+      name: "Acrid",
+      font: {
+        display: {
+          name: "Titillium Web",
+          weight: 400,
+          style: "italic"
+        },
+        ui: {
+          name: "Inconsolata",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 301,
+          s: 32,
+          l: 57
+        },
+        rgb: {
+          r: 180,
+          g: 110,
+          b: 179
+        },
+        contrast: {
+          light: 4,
+          dark: 4.6
+        }
+      },
+      accent: {
+        r: 29,
+        g: 213,
+        b: 0
+      },
+      radius: 0.3,
+      shadow: 0.75,
+      style: "dark",
+      shade: {
+        opacity: 0.20
+      }
     }]
   };
 
