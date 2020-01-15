@@ -1196,7 +1196,7 @@ var theme = (function() {
           style: "normal"
         },
         ui: {
-          name: "Baskervville",
+          name: "Montserrat",
           weight: 400,
           style: "normal"
         }
@@ -1214,7 +1214,7 @@ var theme = (function() {
         },
         contrast: {
           light: 4.5,
-          dark: 4.5
+          dark: 4
         }
       },
       accent: {
