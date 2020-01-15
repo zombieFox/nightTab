@@ -55,7 +55,6 @@ var search = (function() {
           var matchUrl = (arrayItem.url != null) && (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(string));
           var matchName = (arrayItem.name != null) && (arrayItem.name.toLowerCase().replace(/\s/g, "").includes(string));
           if (matchUrl || matchName) {
-            currentGroup.items.splice(index, 1);
             matchingItems.push(JSON.parse(JSON.stringify(arrayItem)));
           };
         });
