@@ -72,11 +72,11 @@
 }
 
 .is-link-style-block .link-item.link-empty>*:not(:last-child) {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 
 .is-link-style-list .link-item.link-empty>*:not(:last-child) {
-  margin-right: 0.5em;
+  margin-right: 1em;
   margin-bottom: 0;
 }
 
