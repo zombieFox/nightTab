@@ -53,7 +53,7 @@ Firefox does not allow the "homepage" to be replaces by an addon. However there 
 - In Firefox preferences under `Home`, change `Homepage and new windows` to `Custom URLs...`
 - Then click `Use Current Page`.
 
-nightTab will now appear when the homepage.
+nightTab will now appear as the homepage.
 
 ---
 
