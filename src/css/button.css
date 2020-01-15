@@ -55,6 +55,14 @@ input[type="submit"]:active {
   transition: none;
 }
 
+button.disabled,
+button.disabled:hover,
+button.disabled:focus,
+button.disabled:active,
+.button.disabled,
+.button.disabled:hover,
+.button.disabled:focus,
+.button.disabled:active,
 button:disabled,
 button:disabled:hover,
 button:disabled:focus,
@@ -109,6 +117,14 @@ input[type="submit"]:active:after {
   transition: none;
 }
 
+button.disabled:after,
+.button.disabled:after,
+button.disabled:hover:after,
+.button.disabled:hover:after,
+button.disabled:focus:after,
+.button.disabled:focus:after,
+button.disabled:active:after,
+.button.disabled:active:after,
 button:disabled:after,
 .button:disabled:after,
 button:disabled:hover:after,
@@ -196,12 +212,15 @@ button [class*=" button-"]:last-child,
   color: rgb(var(--button-link-text-active));
 }
 
+.button-link.disabled,
 .button-link:disabled {
   background-color: transparent;
   color: transparent;
   pointer-events: none;
 }
 
+.button-link.disabled:hover,
+.button-link.disabled:focus,
 .button-link:hover:disabled,
 .button-link:focus:disabled {
   background-color: transparent;

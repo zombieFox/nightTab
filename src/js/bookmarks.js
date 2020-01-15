@@ -22,6 +22,7 @@ var bookmarks = (function() {
           b: null
         }
       },
+      searchMatch: false,
       timeStamp: 1546453104010
     }, {
       display: "letter",
@@ -41,6 +42,7 @@ var bookmarks = (function() {
           b: null
         }
       },
+      searchMatch: false,
       timeStamp: 1546453107633
     }, {
       display: "letter",
@@ -60,6 +62,7 @@ var bookmarks = (function() {
           b: null
         }
       },
+      searchMatch: false,
       timeStamp: 1546453110265
     }, {
       display: "icon",
@@ -79,6 +82,7 @@ var bookmarks = (function() {
           b: null
         }
       },
+      searchMatch: false,
       timeStamp: 1546453111491
     }, {
       display: "icon",
@@ -98,6 +102,7 @@ var bookmarks = (function() {
           b: null
         }
       },
+      searchMatch: false,
       timeStamp: 1546453104460
     }, {
       display: "letter",
@@ -117,6 +122,7 @@ var bookmarks = (function() {
           b: null
         }
       },
+      searchMatch: false,
       timeStamp: 1546453111953
     }]
   }, {
@@ -139,6 +145,7 @@ var bookmarks = (function() {
           b: null
         }
       },
+      searchMatch: false,
       timeStamp: 1546453101749
     }, {
       display: "icon",
@@ -158,6 +165,7 @@ var bookmarks = (function() {
           b: null
         }
       },
+      searchMatch: false,
       timeStamp: 1546453108926
     }]
   }];

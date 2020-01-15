@@ -56,7 +56,8 @@ var link = (function() {
           b: null
         }
       }
-    }
+    },
+    searchMatch: null
   };
 
   stagedLink.init = function() {
@@ -67,6 +68,7 @@ var link = (function() {
     stagedLink.position.group.new = false;
     stagedLink.link.display = "letter";
     stagedLink.link.accent.override = false;
+    stagedLink.link.searchMatch = false;
   };
 
   stagedLink.reset = function() {
@@ -88,6 +90,7 @@ var link = (function() {
     stagedLink.link.accent.color.r = null;
     stagedLink.link.accent.color.g = null;
     stagedLink.link.accent.color.b = null;
+    stagedLink.link.searchMatch = null;
   };
 
   var mod = {};
@@ -292,7 +295,9 @@ var link = (function() {
         bookmarks.mod.move.group(stagedGroup);
         data.save();
         groupAndItems();
-        render.focus.group.previous.up(copyStagedGroup);
+        if (!state.get.current().search) {
+          render.focus.group.previous.up(copyStagedGroup);
+        };
       },
       down: function(copyStagedGroup) {
         stagedGroup.group = JSON.parse(JSON.stringify(copyStagedGroup.group));
@@ -301,7 +306,9 @@ var link = (function() {
         bookmarks.mod.move.group(stagedGroup);
         data.save();
         groupAndItems();
-        render.focus.group.next.down(copyStagedGroup);
+        if (!state.get.current().search) {
+          render.focus.group.next.down(copyStagedGroup);
+        };
       }
     },
     item: {
@@ -315,7 +322,9 @@ var link = (function() {
         bookmarks.mod.move.link(JSON.parse(JSON.stringify(stagedLink)));
         data.save();
         groupAndItems();
-        render.focus.item.previous.left(copyStagedLink);
+        if (!state.get.current().search) {
+          render.focus.item.previous.left(copyStagedLink);
+        };
       },
       right: function(copyStagedLink) {
         stagedLink.link = JSON.parse(JSON.stringify(copyStagedLink.link));
@@ -324,7 +333,9 @@ var link = (function() {
         bookmarks.mod.move.link(JSON.parse(JSON.stringify(stagedLink)));
         data.save();
         groupAndItems();
-        render.focus.item.next.right(copyStagedLink);
+        if (!state.get.current().search) {
+          render.focus.item.next.right(copyStagedLink);
+        };
       }
     }
   };
@@ -401,6 +412,12 @@ var link = (function() {
       var itemGroupControlItemRemoveIcon = helper.node("span|class:button-icon icon-close");
       itemGroupControlItemRemove.appendChild(itemGroupControlItemRemoveIcon);
       groupControl.appendChild(itemGroupControlItemRemove);
+
+      if (state.get.current().search) {
+        itemGroupControlItemUp.disabled = true;
+        helper.addClass(itemGroupControlItemHandle, "disabled");
+        itemGroupControlItemDown.disabled = true;
+      };
 
       var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
 
@@ -653,6 +670,12 @@ var link = (function() {
       linkPanelBack.appendChild(linkControl);
       linkItem.appendChild(linkPanelFront);
       linkItem.appendChild(linkPanelBack);
+
+      if (state.get.current().search) {
+        linkLeft.disabled = true;
+        helper.addClass(linkHandle, "disabled");
+        linkRight.disabled = true;
+      };
 
       var copyStagedLink = JSON.parse(JSON.stringify(stagedLink));
 
@@ -1135,15 +1158,9 @@ var link = (function() {
 
   render.all = function() {
     var linkSection = helper.e(".link");
-    var bookmarksToRender = false;
-    if (state.get.current().search) {
-      bookmarksToRender = search.get();
-    } else {
-      bookmarksToRender = bookmarks.get();
-    };
     var make = {
-      bookmarks: function(data) {
-        data.forEach(function(arrayItem, index) {
+      bookmarks: function() {
+        bookmarks.get().forEach(function(arrayItem, index) {
           stagedGroup.position.origin = index;
           stagedGroup.position.destination = index;
           stagedGroup.position.origin = index;
@@ -1158,12 +1175,24 @@ var link = (function() {
               stagedLink.position.destination.item = index;
               stagedLink.position.group.new = null;
               stagedLink.position.group.name = null;
-              group.querySelector(".group-body").appendChild(render.item.link());
+              if (state.get.current().search) {
+                if (stagedLink.link.searchMatch) {
+                  group.querySelector(".group-body").appendChild(render.item.link());
+                };
+              } else {
+                group.querySelector(".group-body").appendChild(render.item.link());
+              };
             });
           } else {
             group.querySelector(".group-body").appendChild(render.empty.item(stagedGroup.position.destination));
           };
-          linkSection.appendChild(group);
+          if (state.get.current().search) {
+            if (search.mod.searching.count.group(index) > 0) {
+              linkSection.appendChild(group);
+            };
+          } else {
+            linkSection.appendChild(group);
+          };
           stagedGroup.reset();
           stagedLink.reset();
         });
@@ -1177,21 +1206,23 @@ var link = (function() {
         }
       }
     };
-    // if searching
-    if (state.get.current().search) {
-      // if bookmarks exist to be searched
-      if (bookmarksToRender.total > 0) {
-        make.bookmarks(bookmarksToRender.matching);
+    // if bookmarks exist
+    if (bookmarks.get().length > 0) {
+      // if searching
+      if (state.get.current().search) {
+        search.mod.searching.get();
+        // if matching results found
+        if (search.mod.searching.count.all() > 0) {
+          make.bookmarks();
+        } else {
+          make.empty.search();
+        };
       } else {
-        make.empty.search();
+        search.mod.searching.clear();
+        make.bookmarks();
       };
     } else {
-      // if bookmarks exist
-      if (bookmarksToRender.length > 0) {
-        make.bookmarks(bookmarksToRender);
-      } else {
-        make.empty.bookmarks();
-      };
+      make.empty.bookmarks();
     };
   };
 
@@ -1504,7 +1535,9 @@ var link = (function() {
           edit.item.close();
           data.save();
           groupAndItems();
-          render.focus.item.current.edit(copyStagedLink);
+          if (!state.get.current().search) {
+            render.focus.item.current.edit(copyStagedLink);
+          };
           autoSuggest.close();
           shade.close();
           pagelock.unlock();
@@ -1549,7 +1582,9 @@ var link = (function() {
           edit.group.close();
           data.save();
           groupAndItems();
-          render.focus.group.current.edit(copyStagedGroup);
+          if (!state.get.current().search) {
+            render.focus.group.current.edit(copyStagedGroup);
+          };
           autoSuggest.close();
           shade.close();
           pagelock.unlock();
@@ -1600,7 +1635,9 @@ var link = (function() {
         groupAndItems();
         control.render.dependents();
         control.render.class();
-        render.focus.item.previous.remove(copyStagedLink);
+        if (!state.get.current().search) {
+          render.focus.item.previous.remove(copyStagedLink);
+        };
         shade.close();
         pagelock.unlock();
       };
@@ -1644,7 +1681,9 @@ var link = (function() {
         groupAndItems();
         control.render.dependents();
         control.render.class();
-        render.focus.group.previous.remove(copyStagedGroup);
+        if (!state.get.current().search) {
+          render.focus.group.previous.remove(copyStagedGroup);
+        };
         shade.close();
         pagelock.unlock();
       };
@@ -1767,8 +1806,10 @@ var link = (function() {
     render.all();
     render.group.tabindex();
     render.item.tabindex();
-    bind.sort.group();
-    bind.sort.item();
+    if (!state.get.current().search) {
+      bind.sort.group();
+      bind.sort.item();
+    };
   };
 
   var init = function() {

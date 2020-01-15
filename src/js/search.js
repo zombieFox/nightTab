@@ -36,40 +36,54 @@ var search = (function() {
         path: "search",
         newValue: false
       });
-    }
-  };
-
-  var get = function() {
-    var searchInput = helper.e(".search-input");
-    var string = searchInput.value.toLowerCase().replace(/\s/g, "");
-    if (state.get.current().search) {
-      var searchedBookmarks = {
-        total: 0,
-        matching: []
+    },
+    get: function() {
+      var searchInput = helper.e(".search-input");
+      var string = searchInput.value.toLowerCase().replace(/\s/g, "");
+      if (state.get.current().search) {
+        bookmarks.get().forEach(function(arrayItem, index) {
+          arrayItem.items.forEach(function(arrayItem, index) {
+            var matchUrl = (arrayItem.url != null) && (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(string));
+            var matchName = (arrayItem.name != null) && (arrayItem.name.toLowerCase().replace(/\s/g, "").includes(string));
+            arrayItem.searchMatch = false;
+            if (matchUrl || matchName) {
+              arrayItem.searchMatch = true;
+            };
+          });
+        });
       };
-      searchedBookmarks.total = bookmarks.get().length;
+    },
+    clear: function() {
       bookmarks.get().forEach(function(arrayItem, index) {
-        var currentGroup = JSON.parse(JSON.stringify(arrayItem));
-        var matchingItems = [];
-        currentGroup.items.forEach(function(arrayItem, index) {
-          var matchUrl = (arrayItem.url != null) && (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(string));
-          var matchName = (arrayItem.name != null) && (arrayItem.name.toLowerCase().replace(/\s/g, "").includes(string));
-          if (matchUrl || matchName) {
-            matchingItems.push(JSON.parse(JSON.stringify(arrayItem)));
-          };
+        arrayItem.items.forEach(function(arrayItem, index) {
+          arrayItem.searchMatch = false;
         });
-        if (matchingItems.length > 0) {
-          currentGroup.items = matchingItems;
-          searchedBookmarks.matching.push(currentGroup);
-        };
-        var count = 0;
-        searchedBookmarks.matching.forEach(function(arrayItem, index) {
-          count = count + arrayItem.items.length
-        });
-        searchedBookmarks.total = count;
       });
-      return searchedBookmarks;
-    };
+    },
+    count: {
+      all: function() {
+        var searchResultCount = 0;
+        bookmarks.get().forEach(function(arrayItem, index) {
+          arrayItem.items.forEach(function(arrayItem, index) {
+            if (arrayItem.searchMatch) {
+              searchResultCount = searchResultCount + 1;
+            };
+          });
+        });
+        return searchResultCount;
+      },
+      group: function(index) {
+        var searchResultCount = 0;
+        if (bookmarks.get()[index]) {
+          bookmarks.get()[index].items.forEach(function(arrayItem, index) {
+            if (arrayItem.searchMatch) {
+              searchResultCount = searchResultCount + 1;
+            };
+          });
+        };
+        return searchResultCount;
+      }
+    }
   };
 
   var render = {};
@@ -142,6 +156,7 @@ var search = (function() {
     bind.input();
     bind.clear();
     mod.searching.close();
+    mod.searching.clear();
     render.engine();
     render.focus();
     render.searching();
@@ -150,7 +165,7 @@ var search = (function() {
   // exposed methods
   return {
     init: init,
-    get: get,
+    mod: mod,
     render: render,
     check: check
   };

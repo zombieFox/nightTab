@@ -365,8 +365,8 @@ var update = (function() {
       return data;
     },
     "2.22.0": function(data) {
-      data.bookmarks.forEach(function(item, index) {
-        item.accent = {
+      data.bookmarks.forEach(function(arrayItem, index) {
+        arrayItem.accent = {
           override: false,
           color: {
             r: null,
@@ -378,9 +378,9 @@ var update = (function() {
       return data;
     },
     "3.0.0": function(data) {
-      data.bookmarks.forEach(function(item, index) {
-        item.display = "letter";
-        item.icon = {
+      data.bookmarks.forEach(function(arrayItem, index) {
+        arrayItem.display = "letter";
+        arrayItem.icon = {
           name: null,
           prefix: null,
           label: null
@@ -774,6 +774,14 @@ var update = (function() {
     "4.18.0": function(data) {
       data.state.theme.accent.rgb = data.state.theme.accent.current;
       delete data.state.theme.accent.current;
+      return data;
+    },
+    "4.19.2": function(data) {
+      data.bookmarks.forEach(function(arrayItem, index) {
+        arrayItem.items.forEach(function(arrayItem, index) {
+          arrayItem.searchMatch = false;
+        });
+      });
       return data;
     }
   };
