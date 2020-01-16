@@ -4,24 +4,24 @@ var header = (function() {
 
   bind.resize = function() {
     window.addEventListener("resize", function() {
-      render.shade();
+      render.color.scrolling();
     }, false);
   };
 
   bind.scroll = function() {
     window.addEventListener("scroll", function() {
-      render.shade();
+      render.color.scrolling();
     }, false);
     helper.eA(".container").forEach(function(arrayItem, index) {
       arrayItem.addEventListener("transitionend", function() {
-        render.shade();
+        render.color.scrolling();
       }, false);
     });
   };
 
   bind.fonts = function() {
     document.fonts.ready.then(function() {
-      render.shade();
+      render.color.scrolling();
     });
   };
 
@@ -34,50 +34,56 @@ var header = (function() {
     }
   };
 
-  render.shade = function() {
-    var html = helper.e("html");
-    var headerRect = helper.e(".header").getBoundingClientRect();
-    var layoutRect = helper.e(".layout").getBoundingClientRect();
-    var fontSize = parseInt(getComputedStyle(html).fontSize, 10);
-    var scrollTop = document.documentElement.scrollTop;
-    // var scrollHeight = document.documentElement.scrollHeight;
-    var innerHeight = window.innerHeight;
-    // if shade show
-    if (state.get.current().header.shade.show) {
-      // shade always
-      if (state.get.current().header.shade.style == "always") {
-        helper.removeClass(html, "is-header-shade-style-scroll");
-        helper.addClass(html, "is-header-shade-style-always");
-        // shade scroll
-      } else if (state.get.current().header.shade.style == "scroll") {
-        helper.removeClass(html, "is-header-shade-style-always");
-        // check header position
-        if (state.get.current().layout.order == "headerlink") {
-          // check scroll position
-          if (scrollTop > fontSize * 2 && headerRect.top == 0) {
-            helper.addClass(html, "is-header-shade-style-scroll");
-          } else {
-            helper.removeClass(html, "is-header-shade-style-scroll");
-          };
-        } else if (state.get.current().layout.order == "linkheader") {
-          // check scroll position
-          if (headerRect.bottom == innerHeight && (scrollTop + innerHeight) < ((scrollTop + layoutRect.bottom) - (fontSize * 2))) {
-            helper.addClass(html, "is-header-shade-style-scroll");
-          } else {
-            helper.removeClass(html, "is-header-shade-style-scroll");
+  render.color = {
+    custom: function() {
+      helper.e("html").style.setProperty("--header-color-custom", state.get.current().header.color.rgb.r + ", " + state.get.current().header.color.rgb.g + ", " + state.get.current().header.color.rgb.b);
+    },
+    scrolling: function() {
+      var html = helper.e("html");
+      var headerRect = helper.e(".header").getBoundingClientRect();
+      var layoutRect = helper.e(".layout").getBoundingClientRect();
+      var fontSize = parseInt(getComputedStyle(html).fontSize, 10);
+      var scrollTop = document.documentElement.scrollTop;
+      // var scrollHeight = document.documentElement.scrollHeight;
+      var innerHeight = window.innerHeight;
+      // if color show
+      if (state.get.current().header.color.show) {
+        // color always
+        if (state.get.current().header.color.style == "scroll") {
+          // check header position
+          if (state.get.current().layout.order == "headerlink") {
+            // check scroll position
+            if (scrollTop > fontSize * 2 && headerRect.top == 0) {
+              helper.addClass(html, "is-header-color-style-scrolling");
+            } else {
+              helper.removeClass(html, "is-header-color-style-scrolling");
+            };
+          } else if (state.get.current().layout.order == "linkheader") {
+            // check scroll position
+            if (headerRect.bottom == innerHeight && (scrollTop + innerHeight) < ((scrollTop + layoutRect.bottom) - (fontSize * 2))) {
+              helper.addClass(html, "is-header-color-style-scrolling");
+            } else {
+              helper.removeClass(html, "is-header-color-style-scrolling");
+            };
           };
         };
       };
-    } else {
-      helper.removeClass(html, "is-header-shade-style-scroll");
-      helper.removeClass(html, "is-header-shade-style-always");
-    };
+    }
+  };
+
+  render.input = {
+    picker: function() {
+      helper.e(".control-header-color-rgb-picker").value = helper.convertColor.rgb.hex(state.get.current().header.color.rgb);
+    },
+    hex: function() {
+      helper.e(".control-header-color-rgb-hex").value = helper.convertColor.rgb.hex(state.get.current().header.color.rgb);
+    }
   };
 
   render.opacity = function() {
     var html = helper.e("html");
-    if (state.get.current().header.shade.show) {
-      html.style.setProperty("--header-shade-opacity", state.get.current().header.shade.opacity);
+    if (state.get.current().header.color.show) {
+      html.style.setProperty("--header-opacity", state.get.current().header.color.opacity);
     };
   };
 
@@ -174,7 +180,8 @@ var header = (function() {
     bind.scroll();
     bind.fonts();
     render.area.width();
-    render.shade();
+    render.color.scrolling();
+    render.color.custom();
     render.opacity();
     render.border();
     render.greeting.size();

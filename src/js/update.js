@@ -790,6 +790,17 @@ var update = (function() {
       data.state.background.color.rgb = data.state.background.color.custom;
       delete data.state.background.color.custom;
       return data;
+    },
+    "4.23.0": function(data) {
+      data.state.header.color = data.state.header.shade;
+      delete data.state.header.shade;
+      data.state.header.color.by = "theme";
+      data.state.header.color.rgb = {
+        r: 0,
+        g: 0,
+        b: 0
+      };
+      return data;
     }
   };
 

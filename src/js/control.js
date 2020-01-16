@@ -298,7 +298,7 @@ var control = (function() {
     func: function() {
       render.class();
       layout.render.order();
-      header.render.shade();
+      header.render.color.scrolling();
     }
   }, {
     element: helper.e(".control-layout-order-linkheader"),
@@ -307,7 +307,7 @@ var control = (function() {
     func: function() {
       render.class();
       layout.render.order();
-      header.render.shade();
+      header.render.color.scrolling();
     }
   }, {
     element: helper.e(".control-layout-padding"),
@@ -458,7 +458,7 @@ var control = (function() {
     type: "checkbox",
     func: function() {
       render.class();
-      header.render.shade();
+      header.render.color.scrolling();
     }
   }, {
     element: helper.e(".control-header-area-width"),
@@ -1762,47 +1762,80 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-header-shade-show"),
-    path: "header.shade.show",
+    element: helper.e(".control-header-color-show"),
+    path: "header.color.show",
     type: "checkbox",
     func: function() {
       render.class();
       render.dependents();
-      header.render.shade();
+      header.render.color.scrolling();
     }
   }, {
-    element: helper.e(".control-header-shade-style-always"),
-    path: "header.shade.style",
+    element: helper.e(".control-header-color-style-always"),
+    path: "header.color.style",
     type: "radio",
     func: function() {
       render.class();
-      header.render.shade();
+      header.render.color.scrolling();
     }
   }, {
-    element: helper.e(".control-header-shade-style-scroll"),
-    path: "header.shade.style",
+    element: helper.e(".control-header-color-style-scroll"),
+    path: "header.color.style",
     type: "radio",
     func: function() {
       render.class();
-      header.render.shade();
+      header.render.color.scrolling();
     }
   }, {
-    element: helper.e(".control-header-shade-opacity"),
-    path: "header.shade.opacity",
+    element: helper.e(".control-header-color-by-theme"),
+    path: "header.color.by",
+    type: "radio",
+    func: function() {
+      render.class();
+      render.dependents();
+    }
+  }, {
+    element: helper.e(".control-header-color-by-custom"),
+    path: "header.color.by",
+    type: "radio",
+    func: function() {
+      render.class();
+      render.dependents();
+    }
+  }, {
+    element: helper.e(".control-header-color-rgb-picker"),
+    path: "header.color.rgb",
+    type: "color",
+    func: function() {
+      header.render.color.custom();
+      header.render.input.hex();
+    }
+  }, {
+    element: helper.e(".control-header-color-rgb-hex"),
+    path: "header.color.rgb",
+    type: "text",
+    valueMod: ["hexTextString"],
+    func: function() {
+      header.render.color.custom();
+      header.render.input.picker();
+    }
+  }, {
+    element: helper.e(".control-header-color-opacity"),
+    path: "header.color.opacity",
     type: "range",
     valueMod: ["float"],
-    rangeCountElement: helper.e(".control-header-shade-opacity-count"),
+    rangeCountElement: helper.e(".control-header-color-opacity-count"),
     func: function() {
       header.render.opacity();
       render.range.count(this);
     }
   }, {
-    element: helper.e(".control-header-shade-opacity-default"),
+    element: helper.e(".control-header-color-opacity-default"),
     type: "button",
     func: function() {
-      mod.setValue("header.shade.opacity", helper.getObject({
+      mod.setValue("header.color.opacity", helper.getObject({
         object: state.get.default(),
-        path: "header.shade.opacity"
+        path: "header.color.opacity"
       }));
       header.render.opacity();
       render.update();
@@ -3151,7 +3184,7 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-background-color-picker"),
+    element: helper.e(".control-background-color-rgb-picker"),
     path: "background.color.rgb",
     type: "color",
     func: function() {
@@ -3159,7 +3192,7 @@ var control = (function() {
       background.render.input.hex();
     }
   }, {
-    element: helper.e(".control-background-color-hex"),
+    element: helper.e(".control-background-color-rgb-hex"),
     path: "background.color.rgb",
     type: "text",
     valueMod: ["hexTextString"],
@@ -3544,15 +3577,22 @@ var control = (function() {
           helper.removeClass(html, "is-header-transitional-show");
         };
       };
-      var _shade = function() {
-        helper.removeClass(html, "is-header-shade-show");
-        if (state.get.current().header.shade.show) {
-          helper.addClass(html, "is-header-shade-show");
+      var _color = function() {
+        helper.removeClass(html, "is-header-color-show");
+        helper.removeClass(html, "is-header-color-style-scroll");
+        helper.removeClass(html, "is-header-color-style-always");
+        helper.removeClass(html, "is-header-color-by-theme");
+        helper.removeClass(html, "is-header-color-by-custom");
+        if (state.get.current().header.color.show) {
+          helper.addClass(html, "is-header-color-show");
+          helper.addClass(html, "is-header-color-style-" + state.get.current().header.color.style);
+          helper.addClass(html, "is-header-color-by-" + state.get.current().header.color.by);
         };
-        if (state.get.current().header.radius) {
+      };
+      var _radius = function() {
+        helper.removeClass(html, "is-header-radius");
+        if (state.get.current().header.radius > 0) {
           helper.addClass(html, "is-header-radius");
-        } else {
-          helper.removeClass(html, "is-header-radius");
         };
       };
       var _border = function() {
@@ -3576,7 +3616,8 @@ var control = (function() {
       _date();
       _search();
       _button();
-      _shade();
+      _color();
+      _radius();
       _border();
       _greeting();
       _position();
@@ -3908,28 +3949,47 @@ var control = (function() {
         };
       };
       var _shade = function() {
-        if (state.get.current().header.shade.show) {
-          _disable.input(".control-header-shade-style-always", false);
-          _disable.element(".control-header-shade-style-always-helper", false);
-          _disable.input(".control-header-shade-style-scroll", false);
-          _disable.element(".control-header-shade-style-scroll-helper", false);
-          _disable.element("[for=control-header-shade-opacity]", false);
-          _disable.input(".control-header-shade-opacity", false);
-          _disable.element(".control-header-shade-opacity-count", false);
-          _disable.input(".control-header-shade-opacity-default", false);
+        if (state.get.current().header.color.show) {
+          _disable.input(".control-header-color-style-always", false);
+          _disable.element(".control-header-color-style-always-helper", false);
+          _disable.input(".control-header-color-style-scroll", false);
+          _disable.element(".control-header-color-style-scroll-helper", false);
+          _disable.input(".control-header-color-by-theme", false);
+          _disable.element(".control-header-color-by-theme-helper", false);
+          _disable.input(".control-header-color-by-custom", false);
+          _disable.element(".control-header-color-by-custom-helper", false);
+          _disable.input(".control-header-color-rgb-picker", false);
+          _disable.input(".control-header-color-rgb-hex", false);
+          _disable.element("[for=control-header-color-opacity]", false);
+          _disable.input(".control-header-color-opacity", false);
+          _disable.element(".control-header-color-opacity-count", false);
+          _disable.input(".control-header-color-opacity-default", false);
           _disable.input(".control-header-radius", false);
           _disable.element(".control-header-radius-helper", false);
         } else {
-          _disable.input(".control-header-shade-style-always", true);
-          _disable.element(".control-header-shade-style-always-helper", true);
-          _disable.input(".control-header-shade-style-scroll", true);
-          _disable.element(".control-header-shade-style-scroll-helper", true);
-          _disable.element("[for=control-header-shade-opacity]", true);
-          _disable.input(".control-header-shade-opacity", true);
-          _disable.element(".control-header-shade-opacity-count", true);
-          _disable.input(".control-header-shade-opacity-default", true);
+          _disable.input(".control-header-color-style-always", true);
+          _disable.element(".control-header-color-style-always-helper", true);
+          _disable.input(".control-header-color-style-scroll", true);
+          _disable.element(".control-header-color-style-scroll-helper", true);
+          _disable.input(".control-header-color-by-theme", true);
+          _disable.element(".control-header-color-by-theme-helper", true);
+          _disable.input(".control-header-color-by-custom", true);
+          _disable.element(".control-header-color-by-custom-helper", true);
+          _disable.input(".control-header-color-rgb-picker", true);
+          _disable.input(".control-header-color-rgb-hex", true);
+          _disable.element("[for=control-header-color-opacity]", true);
+          _disable.input(".control-header-color-opacity", true);
+          _disable.element(".control-header-color-opacity-count", true);
+          _disable.input(".control-header-color-opacity-default", true);
           _disable.input(".control-header-radius", true);
           _disable.element(".control-header-radius-helper", true);
+        };
+        if (state.get.current().header.color.by == "theme") {
+          _disable.input(".control-header-color-rgb-picker", true);
+          _disable.input(".control-header-color-rgb-hex", true);
+        } else if (state.get.current().header.color.by == "custom") {
+          _disable.input(".control-header-color-rgb-picker", false);
+          _disable.input(".control-header-color-rgb-hex", false);
         };
       };
       var _button = function() {
@@ -4387,11 +4447,11 @@ var control = (function() {
         _disable.element(".control-background-image-url-helper", true);
       };
       if (state.get.current().background.color.by == "theme") {
-        _disable.input(".control-background-color-picker", true);
-        _disable.input(".control-background-color-hex", true);
+        _disable.input(".control-background-color-rgb-picker", true);
+        _disable.input(".control-background-color-rgb-hex", true);
       } else if (state.get.current().background.color.by == "custom") {
-        _disable.input(".control-background-color-picker", false);
-        _disable.input(".control-background-color-hex", false);
+        _disable.input(".control-background-color-rgb-picker", false);
+        _disable.input(".control-background-color-rgb-hex", false);
       };
     };
     _header();

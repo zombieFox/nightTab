@@ -30,12 +30,12 @@
 }
 
 .is-layout-order-headerlink.is-header-border-bottom .link,
-.is-layout-order-headerlink.is-header-shade-style-always .link {
+.is-layout-order-headerlink.is-header-color-style-always .link {
   margin-top: 0;
 }
 
 .is-layout-order-linkheader.is-header-border-top .link,
-.is-layout-order-linkheader.is-header-shade-style-always .link {
+.is-layout-order-linkheader.is-header-color-style-always .link {
   margin-bottom: 0;
 }
 

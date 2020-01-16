@@ -74,8 +74,9 @@
   --theme-shade-opacity:                                0.4;
   /* header */
   --header-area-width:                                  100%;
-  --header-shade-color:                                 var(--theme-color-01);
-  --header-shade-opacity:                               0.95;
+  --header-color-theme:                                 var(--theme-color-01);
+  --header-color-custom:                                rgb(0, 0, 0);
+  --header-opacity:                                     0.95;
   --header-search-width:                                0%;
   --header-border-top:                                  0;
   --header-border-bottom:                               0;

@@ -127,10 +127,10 @@ var background = (function() {
       helper.e(".control-background-image-file").value = "";
     },
     picker: function() {
-      helper.e(".control-background-color-picker").value = helper.convertColor.rgb.hex(state.get.current().background.color.rgb);
+      helper.e(".control-background-color-rgb-picker").value = helper.convertColor.rgb.hex(state.get.current().background.color.rgb);
     },
     hex: function() {
-      helper.e(".control-background-color-hex").value = helper.convertColor.rgb.hex(state.get.current().background.color.rgb);
+      helper.e(".control-background-color-rgb-hex").value = helper.convertColor.rgb.hex(state.get.current().background.color.rgb);
     }
   };
 

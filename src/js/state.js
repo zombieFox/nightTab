@@ -113,7 +113,13 @@ var state = (function() {
         style: "box",
         size: 1
       },
-      shade: {
+      color: {
+        by: "theme",
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        },
         show: true,
         style: "scroll",
         opacity: 0.95
@@ -323,7 +329,7 @@ var state = (function() {
       button: {
         size: 1
       },
-      shade: {
+      color: {
         opacity: 0.95
       },
       border: {

@@ -50,7 +50,7 @@
   <main class="layout">
 
     <header class="header">
-      <div class="header-shade"></div>
+      <div class="header-color"></div>
       <div class="header-border"></div>
       <div class="header-area">
         <div class="header-item-grid">
@@ -925,36 +925,61 @@
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
-              <h1 class="menu-item-header-text">Shade</h1>
+              <h1 class="menu-item-header-text">Background colour</h1>
             </div>
             <div class="menu-item-form">
               <div class="form-wrap">
-                <input id="control-header-shade-show" class="control-header-shade-show" type="checkbox" tabindex="-1">
-                <label for="control-header-shade-show"><span class="label-icon"></span> Show</label>
+                <input id="control-header-color-show" class="control-header-color-show" type="checkbox" tabindex="-1">
+                <label for="control-header-color-show"><span class="label-icon"></span> Show</label>
               </div>
               <div class="form-wrap">
                 <div class="form-indent">
                   <div class="form-wrap">
-                    <input id="control-header-shade-style-always" class="control-header-shade-style-always" type="radio" name="control-header-shade-style" value="always" tabindex="-1">
-                    <label for="control-header-shade-style-always"><span class="label-icon"></span> Always visible</label>
+                    <input id="control-header-color-style-always" class="control-header-color-style-always" type="radio" name="control-header-color-style" value="always" tabindex="-1">
+                    <label for="control-header-color-style-always"><span class="label-icon"></span> Always visible</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-header-shade-style-always-helper form-helper-item">Useful for when a Background Image is shown.</p>
+                    <p class="control-header-color-style-always-helper form-helper-item">Useful for when a Background Image is shown.</p>
                   </div>
                   <div class="form-wrap">
-                    <input id="control-header-shade-style-scroll" class="control-header-shade-style-scroll" type="radio" name="control-header-shade-style" value="scroll" tabindex="-1">
-                    <label for="control-header-shade-style-scroll"><span class="label-icon"></span> Visible on scroll</label>
+                    <input id="control-header-color-style-scroll" class="control-header-color-style-scroll" type="radio" name="control-header-color-style" value="scroll" tabindex="-1">
+                    <label for="control-header-color-style-scroll"><span class="label-icon"></span> Visible on scroll</label>
                   </div>
                   <div class="form-helper">
-                    <p class="control-header-shade-style-scroll-helper form-helper-item">The page will not scroll if Bookmarks are not shown.</p>
+                    <p class="control-header-color-style-scroll-helper form-helper-item">The page will not scroll if Bookmarks are not shown.</p>
                   </div>
                   <hr>
                   <div class="form-wrap">
-                    <label for="control-header-shade-opacity">Opacity</label>
+                    <input id="control-header-color-by-theme" class="control-header-color-by-theme" type="radio" name="control-header-color-by" value="theme" tabindex="-1">
+                    <label for="control-header-color-by-theme"><span class="label-icon"></span> Theme colour</label>
+                  </div>
+                  <div class="form-helper">
+                    <p class="control-header-color-by-theme-helper form-helper-item">Use the Background colour defined by the Theme.</p>
+                  </div>
+                  <div class="form-wrap">
+                    <input id="control-header-color-by-custom" class="control-header-color-by-custom" type="radio" name="control-header-color-by" value="custom" tabindex="-1">
+                    <label for="control-header-color-by-custom"><span class="label-icon"></span> Custom colour</label>
+                  </div>
+                  <div class="form-helper">
+                    <p class="control-header-color-by-custom-helper form-helper-item">Use a custom Background colour.</p>
+                  </div>
+                  <div class="form-wrap">
+                    <div class="form-indent">
+                      <div class="form-wrap">
+                        <div class="form-group form-group-block">
+                          <input id="control-header-color-rgb-picker" class="form-group-item-half control-header-color-rgb-picker" type="color" value="#000000" tabindex="1">
+                          <input id="control-header-color-rgb-hex" class="form-group-item-half control-header-color-rgb-hex" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="form-wrap">
+                    <label for="control-header-color-opacity">Opacity</label>
                     <div class="form-group form-group-block">
-                      <input id="control-header-shade-opacity" class="control-header-shade-opacity mr-3" type="range" min="0" max="100" value="0" tabindex="-1">
-                      <div class="control-header-shade-opacity-count form-group-text form-group-item-medium form-group-radius-left"></div>
-                      <button class="control-header-shade-opacity-default button" tabindex="-1" title="Reset to default"><span class="icon-undo"></span></button>
+                      <input id="control-header-color-opacity" class="control-header-color-opacity mr-3" type="range" min="0" max="100" value="0" tabindex="-1">
+                      <div class="control-header-color-opacity-count form-group-text form-group-item-medium form-group-radius-left"></div>
+                      <button class="control-header-color-opacity-default button" tabindex="-1" title="Reset to default"><span class="icon-undo"></span></button>
                     </div>
                   </div>
                   <hr>
@@ -1871,8 +1896,8 @@
                 <div class="form-indent">
                   <div class="form-wrap">
                     <div class="form-group form-group-block">
-                      <input id="control-background-color-picker" class="form-group-item-half control-background-color-picker" type="color" value="#000000" tabindex="1">
-                      <input id="control-background-color-hex" class="form-group-item-half control-background-color-hex" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                      <input id="control-background-color-rgb-picker" class="form-group-item-half control-background-color-rgb-picker" type="color" value="#000000" tabindex="1">
+                      <input id="control-background-color-rgb-hex" class="form-group-item-half control-background-color-rgb-hex" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                     </div>
                   </div>
                 </div>
