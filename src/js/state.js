@@ -317,20 +317,23 @@ var state = (function() {
         size: 1
       },
       search: {
+        width: 30,
         size: 1
       },
       button: {
         size: 1
       },
+      shade: {
+        opacity: 0.95
+      },
+      border: {
+        top: 0,
+        bottom: 0
+      },
       greeting: {
         size: 1
       },
       transitional: {
-        size: 1
-      }
-    },
-    group: {
-      name: {
         size: 1
       }
     },
@@ -358,8 +361,15 @@ var state = (function() {
             y: 0
           }
         },
-        size: 1
+        size: 1,
+        border: 0
       }
+    },
+    group: {
+      name: {
+        size: 1
+      },
+      border: 0
     },
     layout: {
       padding: 4,
@@ -408,6 +418,15 @@ var state = (function() {
       shadow: 1,
       shade: {
         opacity: 0.4
+      }
+    },
+    background: {
+      image: {
+        blur: 0,
+        scale: 1,
+        opacity: 1,
+        grayscale: 0,
+        accent: 0
       }
     }
   };

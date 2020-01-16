@@ -1,6 +1,6 @@
 var version = (function() {
 
-  var current = "4.19.4";
+  var current = "4.20.0";
 
   var name = "Naughty Goose";
 

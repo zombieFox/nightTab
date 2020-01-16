@@ -509,6 +509,26 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-header-area-width-default"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".header-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.setValue("header.area.width", helper.getObject({
+        object: state.get.default(),
+        path: "header.area.width"
+      }));
+      header.render.area.width();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-header-area-width-match"),
     type: "button",
     additionalEvents: [{
@@ -1460,6 +1480,26 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-header-search-width-default"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".header-search-input"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.setValue("header.search.width", helper.getObject({
+        object: state.get.default(),
+        path: "header.search.width"
+      }));
+      header.render.search.width();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-header-search-focus"),
     path: "header.search.focus",
     type: "checkbox"
@@ -1757,6 +1797,17 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-header-shade-opacity-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("header.shade.opacity", helper.getObject({
+        object: state.get.default(),
+        path: "header.shade.opacity"
+      }));
+      header.render.opacity();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-header-radius"),
     path: "header.radius",
     type: "checkbox",
@@ -1886,6 +1937,18 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-group-border-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("group.border", helper.getObject({
+        object: state.get.default(),
+        path: "group.border"
+      }));
+      link.render.group.border();
+      render.class();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-header-border-top"),
     path: "header.border.top",
     type: "range",
@@ -1896,6 +1959,18 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-header-border-top-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("header.border.top", helper.getObject({
+        object: state.get.default(),
+        path: "header.border.top"
+      }));
+      header.render.border();
+      render.class();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-header-border-bottom"),
     path: "header.border.bottom",
     type: "range",
@@ -1904,6 +1979,18 @@ var control = (function() {
       header.render.border();
       render.class();
       render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-header-border-bottom-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("header.border.bottom", helper.getObject({
+        object: state.get.default(),
+        path: "header.border.bottom"
+      }));
+      header.render.border();
+      render.class();
+      render.update();
     }
   }, {
     element: helper.e(".control-header-position-sticky"),
@@ -1966,6 +2053,26 @@ var control = (function() {
     func: function() {
       link.render.area.width();
       render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-link-area-width-default"),
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.setValue("link.area.width", helper.getObject({
+        object: state.get.default(),
+        path: "link.area.width"
+      }));
+      link.render.area.width();
+      render.update();
     }
   }, {
     element: helper.e(".control-link-area-width-match"),
@@ -2448,6 +2555,18 @@ var control = (function() {
       render.class();
       link.render.item.border();
       render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-link-item-border-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("link.item.border", helper.getObject({
+        object: state.get.default(),
+        path: "link.item.border"
+      }));
+      render.class();
+      link.render.item.border();
+      render.update();
     }
   }, {
     element: helper.e(".control-link-style-block"),
@@ -3109,6 +3228,17 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-background-image-opacity-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("background.image.opacity", helper.getObject({
+        object: state.get.default(),
+        path: "background.image.opacity"
+      }));
+      background.render.opacity();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-background-image-grayscale"),
     path: "background.image.grayscale",
     type: "range",
@@ -3119,6 +3249,17 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-background-image-grayscale-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("background.image.grayscale", helper.getObject({
+        object: state.get.default(),
+        path: "background.image.grayscale"
+      }));
+      background.render.grayscale();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-background-image-blur"),
     path: "background.image.blur",
     type: "range",
@@ -3126,6 +3267,17 @@ var control = (function() {
     func: function() {
       background.render.blur();
       render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-background-image-blur-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("background.image.blur", helper.getObject({
+        object: state.get.default(),
+        path: "background.image.blur"
+      }));
+      background.render.blur();
+      render.update();
     }
   }, {
     element: helper.e(".control-background-image-accent"),
@@ -3138,6 +3290,17 @@ var control = (function() {
       render.range.count(this);
     }
   }, {
+    element: helper.e(".control-background-image-accent-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("background.image.accent", helper.getObject({
+        object: state.get.default(),
+        path: "background.image.accent"
+      }));
+      background.render.accent();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-background-image-scale"),
     path: "background.image.scale",
     type: "range",
@@ -3146,6 +3309,17 @@ var control = (function() {
     func: function() {
       background.render.scale();
       render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-background-image-scale-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("background.image.scale", helper.getObject({
+        object: state.get.default(),
+        path: "background.image.scale"
+      }));
+      background.render.scale();
+      render.update();
     }
   }, {
     element: helper.e(".control-data-import"),
@@ -3742,7 +3916,9 @@ var control = (function() {
           _disable.element("[for=control-header-shade-opacity]", false);
           _disable.input(".control-header-shade-opacity", false);
           _disable.element(".control-header-shade-opacity-count", false);
+          _disable.input(".control-header-shade-opacity-default", false);
           _disable.input(".control-header-radius", false);
+          _disable.element(".control-header-radius-helper", false);
         } else {
           _disable.input(".control-header-shade-style-always", true);
           _disable.element(".control-header-shade-style-always-helper", true);
@@ -3751,7 +3927,9 @@ var control = (function() {
           _disable.element("[for=control-header-shade-opacity]", true);
           _disable.input(".control-header-shade-opacity", true);
           _disable.element(".control-header-shade-opacity-count", true);
+          _disable.input(".control-header-shade-opacity-default", true);
           _disable.input(".control-header-radius", true);
+          _disable.element(".control-header-radius-helper", true);
         };
       };
       var _button = function() {
@@ -3770,6 +3948,7 @@ var control = (function() {
           _disable.element("[for=control-header-search-width]", false);
           _disable.input(".control-header-search-width", false);
           _disable.element(".control-header-search-width-count", false);
+          _disable.input(".control-header-search-width-default", false);
           _disable.input(".control-header-search-focus", false);
           _disable.element(".control-header-search-focus-helper", false);
           _disable.element(".control-header-search-engine-label", false);
@@ -3798,6 +3977,7 @@ var control = (function() {
           _disable.element("[for=control-header-search-width]", true);
           _disable.input(".control-header-search-width", true);
           _disable.element(".control-header-search-width-count", true);
+          _disable.input(".control-header-search-width-default", true);
           _disable.input(".control-header-search-focus", true);
           _disable.element(".control-header-search-focus-helper", true);
           _disable.element(".control-header-search-engine-label", true);
@@ -3835,10 +4015,12 @@ var control = (function() {
           _disable.element("[for=control-header-search-width]", false);
           _disable.input(".control-header-search-width", false);
           _disable.element(".control-header-search-width-count", false);
+          _disable.input(".control-header-search-width-default", false);
         } else {
           _disable.element("[for=control-header-search-width]", true);
           _disable.input(".control-header-search-width", true);
           _disable.element(".control-header-search-width-count", true);
+          _disable.input(".control-header-search-width-default", true);
         };
       };
       var _greeting = function() {
@@ -3995,6 +4177,7 @@ var control = (function() {
       _disable.element("[for=control-link-item-border]", true);
       _disable.input(".control-link-item-border", true);
       _disable.element(".control-link-item-border-count", true);
+      _disable.input(".control-link-item-border-default", true);
       _disable.input(".control-link-style-block", true);
       _disable.element(".control-link-style-block-helper", true);
       _disable.input(".control-link-style-list", true);
@@ -4042,6 +4225,7 @@ var control = (function() {
         _disable.element("[for=control-link-item-border]", false);
         _disable.input(".control-link-item-border", false);
         _disable.element(".control-link-item-border-count", false);
+        _disable.input(".control-link-item-border-default", false);
         _disable.input(".control-link-style-block", false);
         _disable.element(".control-link-style-block-helper", false);
         _disable.input(".control-link-style-list", false);
@@ -4141,36 +4325,46 @@ var control = (function() {
         _disable.element("[for=control-background-image-opacity]", false);
         _disable.input(".control-background-image-opacity", false);
         _disable.element(".control-background-image-opacity-count", false);
+        _disable.input(".control-background-image-opacity-default", false);
         _disable.element("[for=control-background-image-blur]", false);
         _disable.input(".control-background-image-blur", false);
         _disable.element(".control-background-image-blur-count", false);
+        _disable.input(".control-background-image-blur-default", false);
         _disable.element("[for=control-background-image-grayscale]", false);
         _disable.input(".control-background-image-grayscale", false);
         _disable.element(".control-background-image-grayscale-count", false);
+        _disable.input(".control-background-image-grayscale-default", false);
         _disable.element("[for=control-background-image-accent]", false);
         _disable.input(".control-background-image-accent", false);
         _disable.element(".control-background-image-accent-count", false);
+        _disable.input(".control-background-image-accent-default", false);
         _disable.element("[for=control-background-image-scale]", false);
         _disable.input(".control-background-image-scale", false);
         _disable.element(".control-background-image-scale-count", false);
+        _disable.input(".control-background-image-scale-default", false);
       } else {
         _disable.input(".control-background-image-from-file", true);
         _disable.input(".control-background-image-from-url", true);
         _disable.element("[for=control-background-image-opacity]", true);
         _disable.input(".control-background-image-opacity", true);
         _disable.element(".control-background-image-opacity-count", true);
+        _disable.input(".control-background-image-opacity-default", true);
         _disable.element("[for=control-background-image-blur]", true);
         _disable.input(".control-background-image-blur", true);
         _disable.element(".control-background-image-blur-count", true);
+        _disable.input(".control-background-image-blur-default", true);
         _disable.element("[for=control-background-image-grayscale]", true);
         _disable.input(".control-background-image-grayscale", true);
         _disable.element(".control-background-image-grayscale-count", true);
+        _disable.input(".control-background-image-grayscale-default", true);
         _disable.element("[for=control-background-image-accent]", true);
         _disable.input(".control-background-image-accent", true);
         _disable.element(".control-background-image-accent-count", true);
+        _disable.input(".control-background-image-accent-default", true);
         _disable.element("[for=control-background-image-scale]", true);
         _disable.input(".control-background-image-scale", true);
         _disable.element(".control-background-image-scale-count", true);
+        _disable.input(".control-background-image-scale-default", true);
       };
       if (state.get.current().background.image.show && state.get.current().background.image.from == "file") {
         _disable.element(".control-background-image-file-feedback", false);
