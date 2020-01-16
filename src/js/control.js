@@ -4103,6 +4103,7 @@ var control = (function() {
       _disable.element("[for=control-link-area-width]", true);
       _disable.input(".control-link-area-width", true);
       _disable.element(".control-link-area-width-count", true);
+      _disable.input(".control-link-area-width-default", true);
       _disable.input(".control-link-area-width-match", true);
       _disable.element(".control-link-area-width-helper", true);
       _disable.element(".control-link-area-alignment-grid", true);
@@ -4198,6 +4199,7 @@ var control = (function() {
         _disable.element("[for=control-link-area-width]", false);
         _disable.input(".control-link-area-width", false);
         _disable.element(".control-link-area-width-count", false);
+        _disable.input(".control-link-area-width-default", false);
         _disable.input(".control-link-area-width-match", false);
         _disable.element(".control-link-area-width-helper", false);
         _disable.element(".control-link-area-alignment-grid", false);
