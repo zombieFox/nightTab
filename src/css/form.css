@@ -1494,6 +1494,10 @@ input[type="range"]:disabled::-moz-range-progress {
   overflow: hidden;
 }
 
+.form-group-border-theme-color {
+  border-color: rgb(var(--theme-color));
+}
+
 .form-group.form-group-border .form-group-text,
 .form-group.form-group-border .button,
 .form-group.form-group-border .button:after,
@@ -1512,41 +1516,6 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group.form-group-border.form-group-nested-button * input[type="radio"]+label,
 .form-group.form-group-border.form-group-nested-button * input[type="color"]+label {
   border-radius: 0;
-}
-
-.form-group-border-theme-color {
-  border-color: rgb(var(--theme-color));
-}
-
-.form-group-item-small,
-.form-group-item-medium,
-.form-group-item-large {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
-.form-group-item-small {
-  width: 3em;
-}
-
-.form-group-item-medium {
-  width: 6em;
-}
-
-.form-group-item-large {
-  width: 9em;
-}
-
-.form-group-item-shrink {
-  flex-grow: 0;
-}
-
-.form-group-item-grow {
-  flex-grow: 1;
-}
-
-.form-group-item-half {
-  flex-basis: 50%;
 }
 
 .form-group-text {
@@ -1606,6 +1575,64 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group-text-transparent.disabled:focus,
 .form-group-text-transparent.disable:active {
   background-color: transparent;
+}
+
+.form-group-item-small,
+.form-group-item-medium,
+.form-group-item-large,
+.form-group>.button.form-group-item-small,
+.form-group>.button.form-group-item-medium,
+.form-group>.button.form-group-item-large,
+.form-group>select.form-group-item-small,
+.form-group>select.form-group-item-medium,
+.form-group>select.form-group-item-large,
+.form-group>input[type].form-group-item-small,
+.form-group>input[type].form-group-item-medium,
+.form-group>input[type].form-group-item-large {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.form-group-item-small,
+.form-group>.button.form-group-item-small,
+.form-group>select.form-group-item-small,
+.form-group>input[type].form-group-item-small {
+  width: 3em;
+}
+
+.form-group-item-medium,
+.form-group>.button.form-group-item-medium,
+.form-group>select.form-group-item-medium,
+.form-group>input[type].form-group-item-medium {
+  width: 6em;
+}
+
+.form-group-item-large,
+.form-group>.button.form-group-item-large,
+.form-group>select.form-group-item-large,
+.form-group>input[type].form-group-item-large {
+  width: 9em;
+}
+
+.form-group-item-shrink,
+.form-group>.button.form-group-item-shrink,
+.form-group>select.form-group-item-shrink,
+.form-group>input[type].form-group-item-shrink {
+  flex-grow: 0;
+}
+
+.form-group-item-grow,
+.form-group>.button.form-group-item-grow,
+.form-group>select.form-group-item-grow,
+.form-group>input[type].form-group-item-grow {
+  flex-grow: 1;
+}
+
+.form-group-item-half,
+.form-group>.button.form-group-item-half,
+.form-group>select.form-group-item-half,
+.form-group>input[type].form-group-item-half {
+  flex-basis: 50%;
 }
 
 .form-group-text-borderless {
