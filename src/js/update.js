@@ -783,6 +783,13 @@ var update = (function() {
         });
       });
       return data;
+    },
+    "4.22.0": function(data) {
+      data.state.link.item.color.rgb = data.state.link.item.color.custom;
+      delete data.state.link.item.color.custom;
+      data.state.background.color.rgb = data.state.background.color.custom;
+      delete data.state.background.color.custom;
+      return data;
     }
   };
 

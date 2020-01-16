@@ -2530,16 +2530,16 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-link-item-color-by-picker"),
-    path: "link.item.color.custom",
+    element: helper.e(".control-link-item-color-rgb-picker"),
+    path: "link.item.color.rgb",
     type: "color",
     func: function() {
       link.render.item.color.custom();
       link.render.input.hex();
     }
   }, {
-    element: helper.e(".control-link-item-color-by-hex"),
-    path: "link.item.color.custom",
+    element: helper.e(".control-link-item-color-rgb-hex"),
+    path: "link.item.color.rgb",
     type: "text",
     valueMod: ["hexTextString"],
     func: function() {
@@ -3151,16 +3151,16 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-background-color-by-picker"),
-    path: "background.color.custom",
+    element: helper.e(".control-background-color-picker"),
+    path: "background.color.rgb",
     type: "color",
     func: function() {
       background.render.color.custom();
       background.render.input.hex();
     }
   }, {
-    element: helper.e(".control-background-color-by-hex"),
-    path: "background.color.custom",
+    element: helper.e(".control-background-color-hex"),
+    path: "background.color.rgb",
     type: "text",
     valueMod: ["hexTextString"],
     func: function() {
@@ -4173,8 +4173,8 @@ var control = (function() {
       _disable.element(".control-link-item-color-by-theme-helper", true);
       _disable.input(".control-link-item-color-by-custom", true);
       _disable.element(".control-link-item-color-by-custom-helper", true);
-      _disable.input(".control-link-item-color-by-picker", true);
-      _disable.input(".control-link-item-color-by-hex", true);
+      _disable.input(".control-link-item-color-rgb-picker", true);
+      _disable.input(".control-link-item-color-rgb-hex", true);
       _disable.element("[for=control-link-item-border]", true);
       _disable.input(".control-link-item-border", true);
       _disable.element(".control-link-item-border-count", true);
@@ -4295,8 +4295,8 @@ var control = (function() {
           _disable.input(".control-link-item-display-gutter-default", false);
         };
         if (state.get.current().link.item.color.by == "custom") {
-          _disable.input(".control-link-item-color-by-picker", false);
-          _disable.input(".control-link-item-color-by-hex", false);
+          _disable.input(".control-link-item-color-rgb-picker", false);
+          _disable.input(".control-link-item-color-rgb-hex", false);
         };
       };
     };
@@ -4387,11 +4387,11 @@ var control = (function() {
         _disable.element(".control-background-image-url-helper", true);
       };
       if (state.get.current().background.color.by == "theme") {
-        _disable.input(".control-background-color-by-picker", true);
-        _disable.input(".control-background-color-by-hex", true);
+        _disable.input(".control-background-color-picker", true);
+        _disable.input(".control-background-color-hex", true);
       } else if (state.get.current().background.color.by == "custom") {
-        _disable.input(".control-background-color-by-picker", false);
-        _disable.input(".control-background-color-by-hex", false);
+        _disable.input(".control-background-color-picker", false);
+        _disable.input(".control-background-color-hex", false);
       };
     };
     _header();

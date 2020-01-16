@@ -71,7 +71,7 @@ var background = (function() {
 
   render.color = {
     custom: function() {
-      helper.e("html").style.setProperty("--background-color-custom", state.get.current().background.color.custom.r + ", " + state.get.current().background.color.custom.g + ", " + state.get.current().background.color.custom.b);
+      helper.e("html").style.setProperty("--background-color-custom", state.get.current().background.color.rgb.r + ", " + state.get.current().background.color.rgb.g + ", " + state.get.current().background.color.rgb.b);
     },
     clearHTML: function() {
       helper.e("html").style.backgroundColor = "";
@@ -127,10 +127,10 @@ var background = (function() {
       helper.e(".control-background-image-file").value = "";
     },
     picker: function() {
-      helper.e(".control-background-color-by-picker").value = helper.convertColor.rgb.hex(state.get.current().background.color.custom);
+      helper.e(".control-background-color-picker").value = helper.convertColor.rgb.hex(state.get.current().background.color.rgb);
     },
     hex: function() {
-      helper.e(".control-background-color-by-hex").value = helper.convertColor.rgb.hex(state.get.current().background.color.custom);
+      helper.e(".control-background-color-hex").value = helper.convertColor.rgb.hex(state.get.current().background.color.rgb);
     }
   };
 

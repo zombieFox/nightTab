@@ -144,7 +144,7 @@ var state = (function() {
       item: {
         color: {
           by: "theme",
-          custom: {
+          rgb: {
             r: 0,
             g: 0,
             b: 0
@@ -273,7 +273,7 @@ var state = (function() {
     background: {
       color: {
         by: "theme",
-        custom: {
+        rgb: {
           r: 0,
           g: 0,
           b: 0

@@ -547,7 +547,7 @@ var link = (function() {
   render.item = {
     color: {
       custom: function() {
-        helper.e("html").style.setProperty("--link-item-color-custom", state.get.current().link.item.color.custom.r + ", " + state.get.current().link.item.color.custom.g + ", " + state.get.current().link.item.color.custom.b);
+        helper.e("html").style.setProperty("--link-item-color-custom", state.get.current().link.item.color.rgb.r + ", " + state.get.current().link.item.color.rgb.g + ", " + state.get.current().link.item.color.rgb.b);
       }
     },
     link: function() {
@@ -1714,10 +1714,10 @@ var link = (function() {
 
   render.input = {
     picker: function() {
-      helper.e(".control-link-item-color-by-picker").value = helper.convertColor.rgb.hex(state.get.current().link.item.color.custom);
+      helper.e(".control-link-item-color-rgb-picker").value = helper.convertColor.rgb.hex(state.get.current().link.item.color.rgb);
     },
     hex: function() {
-      helper.e(".control-link-item-color-by-hex").value = helper.convertColor.rgb.hex(state.get.current().link.item.color.custom);
+      helper.e(".control-link-item-color-rgb-hex").value = helper.convertColor.rgb.hex(state.get.current().link.item.color.rgb);
     }
   };
 
