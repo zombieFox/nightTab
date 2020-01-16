@@ -156,6 +156,15 @@
   pointer-events: all;
 }
 
+.header-date-body,
+.header-clock-body,
+.header-search-body,
+.header-button-body,
+.header-greeting-body,
+.header-transitional-body {
+  position: relative;
+}
+
 .header-date-body {
   font-size: var(--header-date-size);
   flex-grow: 1;
