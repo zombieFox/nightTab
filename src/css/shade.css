@@ -10,11 +10,6 @@
   z-index: var(--z-index-shade);
 }
 
-.is-background-image-show .shade,
-.is-background-color-by-custom .shade {
-  background-color: rgba(var(--theme-black), 0.5);
-}
-
 .is-edge:not(.is-background-image-show) .shade {
   background-color: rgba(var(--theme-accent), 0.05);
 }
