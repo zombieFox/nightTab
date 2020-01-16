@@ -1750,7 +1750,7 @@ var control = (function() {
     element: helper.e(".control-header-shade-opacity"),
     path: "header.shade.opacity",
     type: "range",
-    valueMod: ["reverse", "float"],
+    valueMod: ["float"],
     rangeCountElement: helper.e(".control-header-shade-opacity-count"),
     func: function() {
       header.render.opacity();
@@ -2986,7 +2986,7 @@ var control = (function() {
     element: helper.e(".control-theme-shade-opacity"),
     path: "theme.shade.opacity",
     type: "range",
-    valueMod: ["reverse", "float"],
+    valueMod: ["float"],
     rangeCountElement: helper.e(".control-theme-shade-opacity-count"),
     func: function() {
       theme.render.shade.opacity();
@@ -3102,7 +3102,7 @@ var control = (function() {
     element: helper.e(".control-background-image-opacity"),
     path: "background.image.opacity",
     type: "range",
-    valueMod: ["reverse", "float"],
+    valueMod: ["float"],
     rangeCountElement: helper.e(".control-background-image-opacity-count"),
     func: function() {
       background.render.opacity();
