@@ -95,7 +95,12 @@ var control = (function() {
     path: "layout.size",
     type: "range",
     valueMod: ["float"],
-    rangeCountElement: helper.e(".control-layout-size-count"),
+    mirrorElement: [{
+      element: helper.e(".control-layout-size-count"),
+      path: "layout.size",
+      type: "number",
+      valueMod: ["float"]
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -137,7 +142,23 @@ var control = (function() {
     }],
     func: function() {
       layout.render.size();
-      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-layout-size-count"),
+    path: "layout.size",
+    type: "number",
+    min: 50,
+    max: 200,
+    step: 5,
+    valueMod: ["float"],
+    mirrorElement: [{
+      element: helper.e(".control-layout-size"),
+      path: "layout.size",
+      type: "range",
+      valueMod: ["float"]
+    }],
+    func: function() {
+      layout.render.size();
     }
   }, {
     element: helper.e(".control-layout-size-default"),
@@ -3388,6 +3409,7 @@ var control = (function() {
   var bind = {};
 
   bind.controls = function() {
+    var _timerInputupdate = null;
     var eventType = {
       a: "click",
       button: "click",
@@ -3414,7 +3436,24 @@ var control = (function() {
         return object.element.value;
       },
       number: function(object) {
-        return parseInt(object.element.value, 10);
+        var newValue = object.element.value;
+        if ((object.max != null || object.max != undefined) && (object.min != null || object.min != undefined)) {
+          var _update = function() {
+            render.update(object);
+          };
+          newValue = Math.round(newValue / object.step) * object.step;
+          if (isNaN(newValue) || newValue < object.min) {
+            newValue = object.min;
+            clearTimeout(_timerInputupdate);
+            _timerInputupdate = setTimeout(_update, 1000);
+          };
+          if (newValue > object.max) {
+            newValue = object.max;
+            clearTimeout(_timerInputupdate);
+            _timerInputupdate = setTimeout(_update, 1000);
+          };
+        };
+        return parseInt(newValue, 10);
       },
       range: function(object) {
         return parseInt(object.element.value, 10);
@@ -3483,10 +3522,17 @@ var control = (function() {
         data.save();
       }, false);
       if (object.additionalEvents) {
-        object.additionalEvents.forEach(function(item, index) {
-          object.element.addEventListener(item.event, function(event) {
-            item.func(event);
+        object.additionalEvents.forEach(function(arrayItem, index) {
+          object.element.addEventListener(arrayItem.event, function(event) {
+            arrayItem.func(event);
             data.save();
+          }, false);
+        });
+      };
+      if (object.mirrorElement) {
+        object.mirrorElement.forEach(function(arrayItem, index) {
+          object.element.addEventListener(eventType[object.type], function(event) {
+            render.update(arrayItem);
           }, false);
         });
       };
@@ -4462,7 +4508,7 @@ var control = (function() {
     _background();
   };
 
-  render.update = function() {
+  render.update = function(object) {
     var valueMod = {
       reverse: function(value, element) {
         return parseInt(element.max, 10) - value;
@@ -4512,10 +4558,16 @@ var control = (function() {
         object.element.value = newValue;
       },
       number: function(object) {
-        object.element.value = helper.getObject({
+        var newValue = helper.getObject({
           object: state.get.current(),
           path: object.path
         });
+        if (object.valueMod) {
+          object.valueMod.slice().reverse().forEach(function(arrayItem, index) {
+            newValue = valueMod[arrayItem](newValue, object.element);
+          });
+        };
+        object.element.value = parseInt(newValue, 10);
       },
       range: function(object) {
         var newValue = helper.getObject({
@@ -4537,14 +4589,17 @@ var control = (function() {
       }
     };
     var supportedType = ["checkbox", "radio", "text", "number", "range", "color", "textarea"];
-    _allControl.forEach(function(arrayItem, index) {
-      if (supportedType.includes(arrayItem.element.type)) {
-        setValue[arrayItem.type](arrayItem);
+    if (object) {
+      if (supportedType.includes(object.element.type)) {
+        setValue[object.type](object);
       };
-      if (arrayItem.rangeCountElement) {
-        render.range.count(arrayItem);
-      };
-    });
+    } else {
+      _allControl.forEach(function(arrayItem, index) {
+        if (supportedType.includes(arrayItem.element.type)) {
+          setValue[arrayItem.type](arrayItem);
+        };
+      });
+    }
   };
 
   render.range = {

@@ -20,3 +20,4 @@ modal.init();
 shade.init();
 dropdown.init();
 version.init();
+menu.open();
