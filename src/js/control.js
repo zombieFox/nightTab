@@ -94,12 +94,12 @@ var control = (function() {
     element: helper.e(".control-layout-size"),
     path: "layout.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     mirrorElement: [{
       element: helper.e(".control-layout-size-count"),
       path: "layout.size",
       type: "number",
-      valueMod: ["float"]
+      valueConvert: ["float"]
     }],
     additionalEvents: [{
       event: "input",
@@ -147,15 +147,17 @@ var control = (function() {
     element: helper.e(".control-layout-size-count"),
     path: "layout.size",
     type: "number",
-    min: 50,
-    max: 200,
-    step: 5,
-    valueMod: ["float"],
+    valueConvert: ["float"],
+    valueModify: {
+      min: 50,
+      max: 200,
+      step: 5
+    },
     mirrorElement: [{
       element: helper.e(".control-layout-size"),
       path: "layout.size",
       type: "range",
-      valueMod: ["float"]
+      valueConvert: ["float"]
     }],
     func: function() {
       layout.render.size();
@@ -689,7 +691,7 @@ var control = (function() {
     element: helper.e(".control-header-greeting-size"),
     path: "header.greeting.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-header-greeting-size-count"),
     additionalEvents: [{
       event: "input",
@@ -784,7 +786,7 @@ var control = (function() {
     element: helper.e(".control-header-transitional-size"),
     path: "header.transitional.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-header-transitional-size-count"),
     additionalEvents: [{
       event: "input",
@@ -1003,7 +1005,7 @@ var control = (function() {
     element: helper.e(".control-header-clock-size"),
     path: "header.clock.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-header-clock-size-count"),
     additionalEvents: [{
       event: "input",
@@ -1360,7 +1362,7 @@ var control = (function() {
     element: helper.e(".control-header-date-size"),
     path: "header.date.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-header-date-size-count"),
     additionalEvents: [{
       event: "input",
@@ -1611,7 +1613,7 @@ var control = (function() {
     element: helper.e(".control-header-search-size"),
     path: "header.search.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-header-search-size-count"),
     additionalEvents: [{
       event: "input",
@@ -1717,7 +1719,7 @@ var control = (function() {
     element: helper.e(".control-header-button-size"),
     path: "header.button.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-header-button-size-count"),
     additionalEvents: [{
       event: "input",
@@ -1835,7 +1837,7 @@ var control = (function() {
     element: helper.e(".control-header-color-rgb-hex"),
     path: "header.color.rgb",
     type: "text",
-    valueMod: ["hexTextString"],
+    valueConvert: ["hexTextString"],
     func: function() {
       header.render.color.custom();
       header.render.input.picker();
@@ -1844,7 +1846,7 @@ var control = (function() {
     element: helper.e(".control-header-color-opacity"),
     path: "header.color.opacity",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-header-color-opacity-count"),
     func: function() {
       header.render.opacity();
@@ -1880,7 +1882,7 @@ var control = (function() {
     element: helper.e(".control-group-name-size"),
     path: "group.name.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-group-name-size-count"),
     additionalEvents: [{
       event: "input",
@@ -2205,7 +2207,7 @@ var control = (function() {
     element: helper.e(".control-link-item-size"),
     path: "link.item.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-link-item-size-count"),
     additionalEvents: [{
       event: "input",
@@ -2354,7 +2356,7 @@ var control = (function() {
     element: helper.e(".control-link-item-display-letcon-letter-size"),
     path: "link.item.display.letcon.letter.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-link-item-display-letcon-letter-size-count"),
     func: function() {
       link.render.item.display.letter();
@@ -2375,7 +2377,7 @@ var control = (function() {
     element: helper.e(".control-link-item-display-letcon-icon-size"),
     path: "link.item.display.letcon.icon.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-link-item-display-letcon-icon-size-count"),
     func: function() {
       link.render.item.display.icon();
@@ -2404,7 +2406,7 @@ var control = (function() {
     element: helper.e(".control-link-item-display-name-size"),
     path: "link.item.display.name.size",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-link-item-display-name-size-count"),
     func: function() {
       link.render.item.name();
@@ -2445,7 +2447,7 @@ var control = (function() {
     element: helper.e(".control-link-item-display-translate-x"),
     path: "link.item.display.translate.x",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-link-item-display-translate-x-count"),
     func: function() {
       link.render.item.translate.x();
@@ -2466,7 +2468,7 @@ var control = (function() {
     element: helper.e(".control-link-item-display-translate-y"),
     path: "link.item.display.translate.y",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-link-item-display-translate-y-count"),
     func: function() {
       link.render.item.translate.y();
@@ -2595,7 +2597,7 @@ var control = (function() {
     element: helper.e(".control-link-item-color-rgb-hex"),
     path: "link.item.color.rgb",
     type: "text",
-    valueMod: ["hexTextString"],
+    valueConvert: ["hexTextString"],
     func: function() {
       link.render.item.color.custom();
       link.render.input.picker();
@@ -2904,7 +2906,7 @@ var control = (function() {
     element: helper.e(".control-theme-color-rgb-hex"),
     path: "theme.color.rgb",
     type: "text",
-    valueMod: ["hexTextString"],
+    valueConvert: ["hexTextString"],
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
@@ -2995,7 +2997,7 @@ var control = (function() {
     element: helper.e(".control-theme-color-contrast-light"),
     path: "theme.color.contrast.light",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-theme-color-contrast-light-count"),
     func: function() {
       theme.render.color.shade();
@@ -3017,7 +3019,7 @@ var control = (function() {
     element: helper.e(".control-theme-color-contrast-dark"),
     path: "theme.color.contrast.dark",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-theme-color-contrast-dark-count"),
     func: function() {
       theme.render.color.shade();
@@ -3049,7 +3051,7 @@ var control = (function() {
     element: helper.e(".control-theme-accent-rgb-hex"),
     path: "theme.accent.rgb",
     type: "text",
-    valueMod: ["hexTextString"],
+    valueConvert: ["hexTextString"],
     func: function() {
       theme.render.accent.color();
       theme.render.accent.input.picker();
@@ -3127,7 +3129,7 @@ var control = (function() {
     element: helper.e(".control-theme-radius"),
     path: "theme.radius",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-theme-radius-count"),
     func: function() {
       theme.render.radius();
@@ -3149,7 +3151,7 @@ var control = (function() {
     element: helper.e(".control-theme-shadow"),
     path: "theme.shadow",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-theme-shadow-count"),
     func: function() {
       theme.render.shadow();
@@ -3159,7 +3161,7 @@ var control = (function() {
     element: helper.e(".control-theme-shade-opacity"),
     path: "theme.shade.opacity",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-theme-shade-opacity-count"),
     func: function() {
       theme.render.shade.opacity();
@@ -3216,7 +3218,7 @@ var control = (function() {
     element: helper.e(".control-background-color-rgb-hex"),
     path: "background.color.rgb",
     type: "text",
-    valueMod: ["hexTextString"],
+    valueConvert: ["hexTextString"],
     func: function() {
       background.render.color.custom();
       background.render.input.picker();
@@ -3275,7 +3277,7 @@ var control = (function() {
     element: helper.e(".control-background-image-opacity"),
     path: "background.image.opacity",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-background-image-opacity-count"),
     func: function() {
       background.render.opacity();
@@ -3296,7 +3298,7 @@ var control = (function() {
     element: helper.e(".control-background-image-grayscale"),
     path: "background.image.grayscale",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-background-image-grayscale-count"),
     func: function() {
       background.render.grayscale();
@@ -3337,7 +3339,7 @@ var control = (function() {
     element: helper.e(".control-background-image-accent"),
     path: "background.image.accent",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-background-image-accent-count"),
     func: function() {
       background.render.accent();
@@ -3358,7 +3360,7 @@ var control = (function() {
     element: helper.e(".control-background-image-scale"),
     path: "background.image.scale",
     type: "range",
-    valueMod: ["float"],
+    valueConvert: ["float"],
     rangeCountElement: helper.e(".control-background-image-scale-count"),
     func: function() {
       background.render.scale();
@@ -3437,22 +3439,6 @@ var control = (function() {
       },
       number: function(object) {
         var newValue = object.element.value;
-        if ((object.max != null || object.max != undefined) && (object.min != null || object.min != undefined)) {
-          var _update = function() {
-            render.update(object);
-          };
-          newValue = Math.round(newValue / object.step) * object.step;
-          if (isNaN(newValue) || newValue < object.min) {
-            newValue = object.min;
-            clearTimeout(_timerInputupdate);
-            _timerInputupdate = setTimeout(_update, 1000);
-          };
-          if (newValue > object.max) {
-            newValue = object.max;
-            clearTimeout(_timerInputupdate);
-            _timerInputupdate = setTimeout(_update, 1000);
-          };
-        };
         return parseInt(newValue, 10);
       },
       range: function(object) {
@@ -3462,7 +3448,7 @@ var control = (function() {
         return helper.convertColor.hex.rgb(object.element.value);
       }
     };
-    var valueMod = {
+    var valueConvert = {
       reverse: function(value, object) {
         return parseInt(object.element.max, 10) - value;
       },
@@ -3473,12 +3459,35 @@ var control = (function() {
         return helper.convertColor.hex.rgb(value);
       }
     };
-    var changeValue = function(object) {
+    var valueModify = {
+      min: function(value, object) {
+        if (isNaN(value) || value < object.valueModify.min) {
+          value = object.valueModify.min;
+        };
+        return value;
+      },
+      max: function(value, object) {
+        if (value > object.valueModify.max) {
+          value = object.valueModify.max;
+        };
+        return value;
+      },
+      step: function(value, object) {
+        value = Math.round(value / object.valueModify.step) * object.valueModify.step;
+        return value;
+      }
+    };
+    var setValue = function(object) {
       if (object.path) {
         var newValue = valueType[object.type](object);
-        if (object.valueMod) {
-          object.valueMod.forEach(function(arrayItem, index) {
-            newValue = valueMod[arrayItem](newValue, object);
+        if (object.valueModify) {
+          for (var key in object.valueModify) {
+            newValue = valueModify[key](newValue, object);
+          };
+        };
+        if (object.valueConvert) {
+          object.valueConvert.forEach(function(arrayItem, index) {
+            newValue = valueConvert[arrayItem](newValue, object);
           });
         };
         helper.setObject({
@@ -3505,13 +3514,13 @@ var control = (function() {
           };
         },
         input: function(object, event) {
-          changeValue(object);
+          setValue(object);
           if (object.func) {
             object.func();
           };
         },
         textarea: function(object, event) {
-          changeValue(object);
+          setValue(object);
           if (object.func) {
             object.func();
           };
@@ -3533,6 +3542,17 @@ var control = (function() {
         object.mirrorElement.forEach(function(arrayItem, index) {
           object.element.addEventListener(eventType[object.type], function(event) {
             render.update(arrayItem);
+          }, false);
+        });
+      };
+      if (object.valueModify) {
+        object.mirrorElement.forEach(function(arrayItem, index) {
+          object.element.addEventListener(eventType[object.type], function(event) {
+            var _update = function() {
+              render.update(object);
+            };
+            clearTimeout(_timerInputupdate);
+            _timerInputupdate = setTimeout(_update, 1000);
           }, false);
         });
       };
@@ -4509,7 +4529,7 @@ var control = (function() {
   };
 
   render.update = function(object) {
-    var valueMod = {
+    var valueConvert = {
       reverse: function(value, element) {
         return parseInt(element.max, 10) - value;
       },
@@ -4538,9 +4558,9 @@ var control = (function() {
           object: state.get.current(),
           path: object.path
         });
-        if (object.valueMod) {
-          object.valueMod.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueMod[arrayItem](newValue, object.element);
+        if (object.valueConvert) {
+          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+            newValue = valueConvert[arrayItem](newValue, object.element);
           });
         };
         object.element.value = newValue;
@@ -4550,9 +4570,9 @@ var control = (function() {
           object: state.get.current(),
           path: object.path
         });
-        if (object.valueMod) {
-          object.valueMod.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueMod[arrayItem](newValue, object.element);
+        if (object.valueConvert) {
+          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+            newValue = valueConvert[arrayItem](newValue, object.element);
           });
         };
         object.element.value = newValue;
@@ -4562,9 +4582,9 @@ var control = (function() {
           object: state.get.current(),
           path: object.path
         });
-        if (object.valueMod) {
-          object.valueMod.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueMod[arrayItem](newValue, object.element);
+        if (object.valueConvert) {
+          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+            newValue = valueConvert[arrayItem](newValue, object.element);
           });
         };
         object.element.value = parseInt(newValue, 10);
@@ -4574,9 +4594,9 @@ var control = (function() {
           object: state.get.current(),
           path: object.path
         });
-        if (object.valueMod) {
-          object.valueMod.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueMod[arrayItem](newValue, object.element);
+        if (object.valueConvert) {
+          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+            newValue = valueConvert[arrayItem](newValue, object.element);
           });
         };
         object.element.value = newValue;
