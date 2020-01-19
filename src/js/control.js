@@ -793,7 +793,7 @@ var control = (function() {
     valueModify: {
       min: 10,
       max: 500,
-      step: 5
+      step: 10
     },
     mirrorElement: [{
       element: helper.e(".control-header-greeting-size-number"),
@@ -851,7 +851,7 @@ var control = (function() {
     valueModify: {
       min: 10,
       max: 500,
-      step: 5
+      step: 10
     },
     mirrorElement: [{
       element: helper.e(".control-header-greeting-size-range"),
@@ -909,10 +909,21 @@ var control = (function() {
       transitional.render.all();
     }
   }, {
-    element: helper.e(".control-header-transitional-size"),
+    element: helper.e(".control-header-transitional-size-range"),
     path: "header.transitional.size",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-transitional-size-number"),
+      path: "header.transitional.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -951,6 +962,25 @@ var control = (function() {
       func: function() {
         edge.box.close();
       }
+    }],
+    func: function() {
+      header.render.transitional.size();
+    }
+  }, {
+    element: helper.e(".control-header-transitional-size-number"),
+    path: "header.transitional.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-transitional-size-range"),
+      path: "header.transitional.size",
+      type: "range",
+      valueConvert: ["float"]
     }],
     func: function() {
       header.render.transitional.size();
@@ -1126,10 +1156,21 @@ var control = (function() {
       transitional.render.all();
     }
   }, {
-    element: helper.e(".control-header-clock-size"),
+    element: helper.e(".control-header-clock-size-range"),
     path: "header.clock.size",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-clock-size-number"),
+      path: "header.clock.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1168,6 +1209,25 @@ var control = (function() {
       func: function() {
         edge.box.close();
       }
+    }],
+    func: function() {
+      header.render.clock.size();
+    }
+  }, {
+    element: helper.e(".control-header-clock-size-number"),
+    path: "header.clock.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-clock-size-range"),
+      path: "header.clock.size",
+      type: "range",
+      valueConvert: ["float"]
     }],
     func: function() {
       header.render.clock.size();
@@ -1481,10 +1541,21 @@ var control = (function() {
       transitional.render.all();
     }
   }, {
-    element: helper.e(".control-header-date-size"),
+    element: helper.e(".control-header-date-size-range"),
     path: "header.date.size",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-date-size-number"),
+      path: "header.date.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1523,6 +1594,25 @@ var control = (function() {
       func: function() {
         edge.box.close();
       }
+    }],
+    func: function() {
+      header.render.date.size();
+    }
+  }, {
+    element: helper.e(".control-header-date-size-number"),
+    path: "header.date.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-date-size-range"),
+      path: "header.date.size",
+      type: "range",
+      valueConvert: ["float"]
     }],
     func: function() {
       header.render.date.size();
@@ -1575,9 +1665,18 @@ var control = (function() {
       header.render.search.width();
     }
   }, {
-    element: helper.e(".control-header-search-width"),
+    element: helper.e(".control-header-search-width-range"),
     path: "header.search.width",
     type: "range",
+    valueModify: {
+      min: 10,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-search-width-number"),
+      path: "header.search.width",
+      type: "number",
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1616,6 +1715,22 @@ var control = (function() {
       func: function() {
         edge.box.close();
       }
+    }],
+    func: function() {
+      header.render.search.width();
+    }
+  }, {
+    element: helper.e(".control-header-search-width-number"),
+    path: "header.search.width",
+    type: "number",
+    valueModify: {
+      min: 10,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-search-width-range"),
+      path: "header.search.width",
+      type: "range",
     }],
     func: function() {
       header.render.search.width();
@@ -1728,22 +1843,33 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-header-search-size"),
+    element: helper.e(".control-header-search-size-range"),
     path: "header.search.size",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-search-size-number"),
+      path: "header.search.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-search-input"),
+          element: helper.e(".search"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-search-input"),
+          element: helper.e(".search"),
         });
       }
     }, {
@@ -1761,7 +1887,7 @@ var control = (function() {
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
           edge.box.open({
-            element: helper.e(".header-search-input"),
+            element: helper.e(".search"),
           });
         };
       }
@@ -1770,6 +1896,25 @@ var control = (function() {
       func: function() {
         edge.box.close();
       }
+    }],
+    func: function() {
+      header.render.search.size();
+    }
+  }, {
+    element: helper.e(".control-header-search-size-number"),
+    path: "header.search.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-search-size-range"),
+      path: "header.search.size",
+      type: "range",
+      valueConvert: ["float"]
     }],
     func: function() {
       header.render.search.size();
@@ -1832,10 +1977,21 @@ var control = (function() {
       header.render.button.dot();
     }
   }, {
-    element: helper.e(".control-header-button-size"),
+    element: helper.e(".control-header-button-size-range"),
     path: "header.button.size",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-button-size-number"),
+      path: "header.button.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1874,6 +2030,25 @@ var control = (function() {
       func: function() {
         edge.box.close();
       }
+    }],
+    func: function() {
+      header.render.button.size();
+    }
+  }, {
+    element: helper.e(".control-header-button-size-number"),
+    path: "header.button.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-button-size-range"),
+      path: "header.button.size",
+      type: "range",
+      valueConvert: ["float"]
     }],
     func: function() {
       header.render.button.size();
@@ -1957,10 +2132,38 @@ var control = (function() {
       header.render.input.picker();
     }
   }, {
-    element: helper.e(".control-header-color-opacity"),
+    element: helper.e(".control-header-color-opacity-range"),
     path: "header.color.opacity",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-color-opacity-number"),
+      path: "header.color.opacity",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      header.render.opacity();
+    }
+  }, {
+    element: helper.e(".control-header-color-opacity-number"),
+    path: "header.color.opacity",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-color-opacity-range"),
+      path: "header.color.opacity",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     func: function() {
       header.render.opacity();
     }
@@ -1991,10 +2194,21 @@ var control = (function() {
       render.dependents();
     }
   }, {
-    element: helper.e(".control-group-name-size"),
+    element: helper.e(".control-group-name-size-range"),
     path: "group.name.size",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-group-name-size-number"),
+      path: "group.name.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -2033,6 +2247,25 @@ var control = (function() {
       func: function() {
         edge.box.close();
       }
+    }],
+    func: function() {
+      link.render.group.size();
+    }
+  }, {
+    element: helper.e(".control-group-name-size-number"),
+    path: "group.name.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-group-name-size-range"),
+      path: "group.name.size",
+      type: "range",
+      valueConvert: ["float"]
     }],
     func: function() {
       link.render.group.size();
@@ -2093,9 +2326,35 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-group-border"),
+    element: helper.e(".control-group-border-range"),
     path: "group.border",
     type: "range",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: helper.e(".control-group-border-number"),
+      path: "group.border",
+      type: "number"
+    }],
+    func: function() {
+      link.render.group.border();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-group-border-number"),
+    path: "group.border",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: helper.e(".control-group-border-range"),
+      path: "group.border",
+      type: "range"
+    }],
     func: function() {
       link.render.group.border();
       render.class();
@@ -2113,9 +2372,35 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-header-border-top"),
+    element: helper.e(".control-header-border-top-range"),
     path: "header.border.top",
     type: "range",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-border-top-number"),
+      path: "header.border.top",
+      type: "number"
+    }],
+    func: function() {
+      header.render.border();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-header-border-top-number"),
+    path: "header.border.top",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-border-top-range"),
+      path: "header.border.top",
+      type: "range"
+    }],
     func: function() {
       header.render.border();
       render.class();
@@ -2133,9 +2418,35 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-header-border-bottom"),
+    element: helper.e(".control-header-border-bottom-range"),
     path: "header.border.bottom",
     type: "range",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-border-bottom-number"),
+      path: "header.border.bottom",
+      type: "number"
+    }],
+    func: function() {
+      header.render.border();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-header-border-bottom-number"),
+    path: "header.border.bottom",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-border-bottom-range"),
+      path: "header.border.top",
+      type: "range"
+    }],
     func: function() {
       header.render.border();
       render.class();
@@ -2167,9 +2478,18 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-link-area-width"),
+    element: helper.e(".control-link-area-width-range"),
     path: "link.area.width",
     type: "range",
+    valueModify: {
+      min: 10,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-area-width-number"),
+      path: "link.area.width",
+      type: "number"
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -2208,6 +2528,22 @@ var control = (function() {
       func: function() {
         edge.box.close();
       }
+    }],
+    func: function() {
+      link.render.area.width();
+    }
+  }, {
+    element: helper.e(".control-link-area-width-number"),
+    path: "link.area.width",
+    type: "number",
+    valueModify: {
+      min: 10,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-area-width-range"),
+      path: "link.area.width",
+      type: "range"
     }],
     func: function() {
       link.render.area.width();
@@ -2306,10 +2642,21 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-link-item-size"),
+    element: helper.e(".control-link-item-size-range"),
     path: "link.item.size",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 50,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-size-number"),
+      path: "link.item.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -2348,6 +2695,25 @@ var control = (function() {
       func: function() {
         edge.box.close();
       }
+    }],
+    func: function() {
+      link.render.item.size();
+    }
+  }, {
+    element: helper.e(".control-link-item-size-number"),
+    path: "link.item.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 50,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-size-range"),
+      path: "link.item.size",
+      type: "range",
+      valueConvert: ["float"]
     }],
     func: function() {
       link.render.item.size();
@@ -2518,9 +2884,34 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-link-item-display-rotate"),
+    element: helper.e(".control-link-item-display-rotate-range"),
     path: "link.item.display.rotate",
     type: "range",
+    valueModify: {
+      min: -180,
+      max: 180
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-rotate-number"),
+      path: "link.item.display.rotate",
+      type: "number"
+    }],
+    func: function() {
+      link.render.item.rotate();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-rotate-number"),
+    path: "link.item.display.rotate",
+    type: "number",
+    valueModify: {
+      min: -180,
+      max: 180
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-rotate-range"),
+      path: "link.item.display.rotate",
+      type: "range"
+    }],
     func: function() {
       link.render.item.rotate();
     }
@@ -2536,10 +2927,40 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-link-item-display-translate-x"),
+    element: helper.e(".control-link-item-display-translate-x-range"),
     path: "link.item.display.translate.x",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: -1000,
+      max: 1000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-translate-x-number"),
+      path: "link.item.display.translate.x",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.translate.x();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-translate-x-number"),
+    path: "link.item.display.translate.x",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: -1000,
+      max: 1000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-translate-x-range"),
+      path: "link.item.display.translate.x",
+      type: "range",
+      valueConvert: ["float"]
+    }],
     func: function() {
       link.render.item.translate.x();
     }
@@ -2555,10 +2976,40 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-link-item-display-translate-y"),
+    element: helper.e(".control-link-item-display-translate-y-range"),
     path: "link.item.display.translate.y",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: -1000,
+      max: 1000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-translate-y-number"),
+      path: "link.item.display.translate.y",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.translate.y();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-translate-y-number"),
+    path: "link.item.display.translate.y",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: -1000,
+      max: 1000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-translate-y-range"),
+      path: "link.item.display.translate.y",
+      type: "range",
+      valueConvert: ["float"]
+    }],
     func: function() {
       link.render.item.translate.y();
     }
@@ -2574,9 +3025,34 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-link-item-display-gutter"),
+    element: helper.e(".control-link-item-display-gutter-range"),
     path: "link.item.display.gutter",
     type: "range",
+    valueModify: {
+      min: 0,
+      max: 40
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-gutter-number"),
+      path: "link.item.display.gutter",
+      type: "number"
+    }],
+    func: function() {
+      link.render.item.gutter();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-gutter-number"),
+    path: "link.item.display.gutter",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 40
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-gutter-range"),
+      path: "link.item.display.gutter",
+      type: "range"
+    }],
     func: function() {
       link.render.item.gutter();
     }
@@ -2689,12 +3165,38 @@ var control = (function() {
       link.render.input.picker();
     }
   }, {
-    element: helper.e(".control-link-item-border"),
+    element: helper.e(".control-link-item-border-range"),
     path: "link.item.border",
     type: "range",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-border-number"),
+      path: "link.item.border",
+      type: "number"
+    }],
     func: function() {
-      render.class();
       link.render.item.border();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-link-item-border-number"),
+    path: "link.item.border",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-border-range"),
+      path: "link.item.border",
+      type: "range"
+    }],
+    func: function() {
+      link.render.item.border();
+      render.class();
     }
   }, {
     element: helper.e(".control-link-item-border-default"),
@@ -3949,14 +4451,14 @@ var control = (function() {
           _disable.input(".control-header-clock-seconds-display-word", true);
         };
         if (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
-          _disable.element("[for=control-header-clock-size]", false);
-          _disable.input(".control-header-clock-size", false);
-          _disable.element(".control-header-clock-size-count", false);
+          _disable.element("[for=control-header-clock-size-range]", false);
+          _disable.input(".control-header-clock-size-range", false);
+          _disable.input(".control-header-clock-size-number", false);
           _disable.input(".control-header-clock-size-default", false);
         } else {
-          _disable.element("[for=control-header-clock-size]", true);
-          _disable.input(".control-header-clock-size", true);
-          _disable.element(".control-header-clock-size-count", true);
+          _disable.element("[for=control-header-clock-size-range]", true);
+          _disable.input(".control-header-clock-size-range", true);
+          _disable.input(".control-header-clock-size-number", true);
           _disable.input(".control-header-clock-size-default", true);
         };
       };
@@ -4051,14 +4553,14 @@ var control = (function() {
           _disable.element(".control-header-date-month-ordinal-helper", true);
         };
         if (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show) {
-          _disable.element("[for=control-header-date-size]", false);
-          _disable.input(".control-header-date-size", false);
-          _disable.element(".control-header-date-size-count", false);
+          _disable.element("[for=control-header-date-size-range]", false);
+          _disable.input(".control-header-date-size-range", false);
+          _disable.input(".control-header-date-size-number", false);
           _disable.input(".control-header-date-size-default", false);
         } else {
-          _disable.element("[for=control-header-date-size]", true);
-          _disable.input(".control-header-date-size", true);
-          _disable.element(".control-header-date-size-count", true);
+          _disable.element("[for=control-header-date-size-range]", true);
+          _disable.input(".control-header-date-size-range", true);
+          _disable.input(".control-header-date-size-number", true);
           _disable.input(".control-header-date-size-default", true);
         };
       };
@@ -4074,9 +4576,9 @@ var control = (function() {
           _disable.element(".control-header-color-by-custom-helper", false);
           _disable.input(".control-header-color-rgb-picker", false);
           _disable.input(".control-header-color-rgb-hex", false);
-          _disable.element("[for=control-header-color-opacity]", false);
-          _disable.input(".control-header-color-opacity", false);
-          _disable.element(".control-header-color-opacity-count", false);
+          _disable.element("[for=control-header-color-opacity-range]", false);
+          _disable.input(".control-header-color-opacity-range", false);
+          _disable.input(".control-header-color-opacity-number", false);
           _disable.input(".control-header-color-opacity-default", false);
           _disable.input(".control-header-radius", false);
           _disable.element(".control-header-radius-helper", false);
@@ -4091,17 +4593,17 @@ var control = (function() {
           _disable.element(".control-header-color-by-custom-helper", true);
           _disable.input(".control-header-color-rgb-picker", true);
           _disable.input(".control-header-color-rgb-hex", true);
-          _disable.element("[for=control-header-color-opacity]", true);
-          _disable.input(".control-header-color-opacity", true);
-          _disable.element(".control-header-color-opacity-count", true);
+          _disable.element("[for=control-header-color-opacity-range]", true);
+          _disable.input(".control-header-color-opacity-range", true);
+          _disable.input(".control-header-color-opacity-number", true);
           _disable.input(".control-header-color-opacity-default", true);
           _disable.input(".control-header-radius", true);
           _disable.element(".control-header-radius-helper", true);
         };
-        if (state.get.current().header.color.by == "theme") {
+        if (state.get.current().header.color.show && state.get.current().header.color.by == "theme") {
           _disable.input(".control-header-color-rgb-picker", true);
           _disable.input(".control-header-color-rgb-hex", true);
-        } else if (state.get.current().header.color.by == "custom") {
+        } else if (state.get.current().header.color.show && state.get.current().header.color.by == "custom") {
           _disable.input(".control-header-color-rgb-picker", false);
           _disable.input(".control-header-color-rgb-hex", false);
         };
@@ -4119,9 +4621,8 @@ var control = (function() {
           _disable.element(".control-header-search-style-auto-helper", false);
           _disable.input(".control-header-search-style-custom", false);
           _disable.element(".control-header-search-style-custom-helper", false);
-          _disable.element("[for=control-header-search-width]", false);
-          _disable.input(".control-header-search-width", false);
-          _disable.element(".control-header-search-width-count", false);
+          _disable.input(".control-header-search-width-range", false);
+          _disable.input(".control-header-search-width-number", false);
           _disable.input(".control-header-search-width-default", false);
           _disable.input(".control-header-search-focus", false);
           _disable.element(".control-header-search-focus-helper", false);
@@ -4137,9 +4638,9 @@ var control = (function() {
           _disable.input(".control-header-search-text-alignment-left", false);
           _disable.input(".control-header-search-text-alignment-center", false);
           _disable.input(".control-header-search-text-alignment-right", false);
-          _disable.element("[for=control-header-search-size]", false);
-          _disable.input(".control-header-search-size", false);
-          _disable.element(".control-header-search-size-count", false);
+          _disable.element("[for=control-header-search-size-range]", false);
+          _disable.input(".control-header-search-size-range", false);
+          _disable.input(".control-header-search-size-number", false);
           _disable.input(".control-header-search-size-default", false);
           _disable.element(".control-header-search-size-helper", false);
         } else {
@@ -4148,9 +4649,8 @@ var control = (function() {
           _disable.element(".control-header-search-style-auto-helper", true);
           _disable.input(".control-header-search-style-custom", true);
           _disable.element(".control-header-search-style-custom-helper", true);
-          _disable.element("[for=control-header-search-width]", true);
-          _disable.input(".control-header-search-width", true);
-          _disable.element(".control-header-search-width-count", true);
+          _disable.input(".control-header-search-width-range", true);
+          _disable.input(".control-header-search-width-number", true);
           _disable.input(".control-header-search-width-default", true);
           _disable.input(".control-header-search-focus", true);
           _disable.element(".control-header-search-focus-helper", true);
@@ -4166,9 +4666,9 @@ var control = (function() {
           _disable.input(".control-header-search-text-alignment-left", true);
           _disable.input(".control-header-search-text-alignment-center", true);
           _disable.input(".control-header-search-text-alignment-right", true);
-          _disable.element("[for=control-header-search-size]", true);
-          _disable.input(".control-header-search-size", true);
-          _disable.element(".control-header-search-size-count", true);
+          _disable.element("[for=control-header-search-size-range]", true);
+          _disable.input(".control-header-search-size-range", true);
+          _disable.input(".control-header-search-size-number", true);
           _disable.input(".control-header-search-size-default", true);
           _disable.element(".control-header-search-size-helper", true);
         };
@@ -4186,14 +4686,12 @@ var control = (function() {
           _disable.element(".control-header-search-engine-custom-helper", true);
         };
         if (state.get.current().header.search.show && state.get.current().header.search.style === "custom") {
-          _disable.element("[for=control-header-search-width]", false);
-          _disable.input(".control-header-search-width", false);
-          _disable.element(".control-header-search-width-count", false);
+          _disable.input(".control-header-search-width-range", false);
+          _disable.input(".control-header-search-width-number", false);
           _disable.input(".control-header-search-width-default", false);
         } else {
-          _disable.element("[for=control-header-search-width]", true);
-          _disable.input(".control-header-search-width", true);
-          _disable.element(".control-header-search-width-count", true);
+          _disable.input(".control-header-search-width-range", true);
+          _disable.input(".control-header-search-width-number", true);
           _disable.input(".control-header-search-width-default", true);
         };
       };
@@ -4231,16 +4729,16 @@ var control = (function() {
         if (state.get.current().header.transitional.show && ((state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show || state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show))) {
           _disable.input(".control-header-transitional-type-timeanddate", false);
           _disable.input(".control-header-transitional-type-its", false);
-          _disable.element("[for=control-header-transitional-size]", false);
-          _disable.input(".control-header-transitional-size", false);
-          _disable.element(".control-header-transitional-size-count", false);
+          _disable.element("[for=control-header-transitional-size-range]", false);
+          _disable.input(".control-header-transitional-size-range", false);
+          _disable.input(".control-header-transitional-size-number", false);
           _disable.input(".control-header-transitional-size-default", false);
         } else {
           _disable.input(".control-header-transitional-type-timeanddate", true);
           _disable.input(".control-header-transitional-type-its", true);
-          _disable.element("[for=control-header-transitional-size]", true);
-          _disable.input(".control-header-transitional-size", true);
-          _disable.element(".control-header-transitional-size-count", true);
+          _disable.element("[for=control-header-transitional-size-range]", true);
+          _disable.input(".control-header-transitional-size-range", true);
+          _disable.input(".control-header-transitional-size-number", true);
           _disable.input(".control-header-transitional-size-default", true);
         };
       };
@@ -4259,14 +4757,14 @@ var control = (function() {
       };
     };
     var _group = function() {
-      _disable.element("[for=control-group-name-size]", true);
-      _disable.input(".control-group-name-size", true);
-      _disable.element(".control-group-name-size-count", true);
+      _disable.element("[for=control-group-name-size-range]", true);
+      _disable.input(".control-group-name-size-range", true);
+      _disable.input(".control-group-name-size-number", true);
       _disable.input(".control-group-name-size-default", true);
       if (state.get.current().group.name.show) {
-        _disable.element("[for=control-group-name-size]", false);
-        _disable.input(".control-group-name-size", false);
-        _disable.element(".control-group-name-size-count", false);
+        _disable.element("[for=control-group-name-size-range]", false);
+        _disable.input(".control-group-name-size-range", false);
+        _disable.input(".control-group-name-size-number", false);
         _disable.input(".control-group-name-size-default", false);
       };
     };
@@ -4274,9 +4772,9 @@ var control = (function() {
       _disable.input(".control-layout-order-headerlink", true);
       _disable.input(".control-layout-order-linkheader", true);
       _disable.element(".control-layout-order-helper", true);
-      _disable.element("[for=control-link-area-width]", true);
-      _disable.input(".control-link-area-width", true);
-      _disable.element(".control-link-area-width-count", true);
+      _disable.element("[for=control-link-area-width-range]", true);
+      _disable.input(".control-link-area-width-range", true);
+      _disable.input(".control-link-area-width-number", true);
       _disable.input(".control-link-area-width-default", true);
       _disable.input(".control-link-area-width-match", true);
       _disable.element(".control-link-area-width-helper", true);
@@ -4286,9 +4784,9 @@ var control = (function() {
       _disable.input(".control-link-area-alignment-center", true);
       _disable.input(".control-link-area-alignment-right", true);
       _disable.element(".control-link-area-alignment-helper", true);
-      _disable.element("[for=control-link-item-size]", true);
-      _disable.input(".control-link-item-size", true);
-      _disable.element(".control-link-item-size-count", true);
+      _disable.element("[for=control-link-item-size-range]", true);
+      _disable.input(".control-link-item-size-range", true);
+      _disable.input(".control-link-item-size-number", true);
       _disable.input(".control-link-item-size-default", true);
       _disable.input(".control-link-item-display-letcon-show", true);
       _disable.element("[for=control-link-item-display-letcon-letter-size]", true);
@@ -4304,21 +4802,21 @@ var control = (function() {
       _disable.input(".control-link-item-display-name-size", true);
       _disable.element(".control-link-item-display-name-size-count", true);
       _disable.input(".control-link-item-display-name-size-default", true);
-      _disable.element("[for=control-link-item-display-rotate]", true);
-      _disable.input(".control-link-item-display-rotate", true);
-      _disable.element(".control-link-item-display-rotate-count", true);
+      _disable.element("[for=control-link-item-display-rotate-range]", true);
+      _disable.input(".control-link-item-display-rotate-range", true);
+      _disable.input(".control-link-item-display-rotate-number", true);
       _disable.input(".control-link-item-display-rotate-default", true);
-      _disable.element("[for=control-link-item-display-translate-x]", true);
-      _disable.input(".control-link-item-display-translate-x", true);
-      _disable.element(".control-link-item-display-translate-x-count", true);
+      _disable.element("[for=control-link-item-display-translate-x-range]", true);
+      _disable.input(".control-link-item-display-translate-x-range", true);
+      _disable.input(".control-link-item-display-translate-x-number", true);
       _disable.input(".control-link-item-display-translate-x-default", true);
-      _disable.element("[for=control-link-item-display-translate-y]", true);
-      _disable.input(".control-link-item-display-translate-y", true);
-      _disable.element(".control-link-item-display-translate-y-count", true);
+      _disable.element("[for=control-link-item-display-translate-y-range]", true);
+      _disable.input(".control-link-item-display-translate-y-range", true);
+      _disable.input(".control-link-item-display-translate-y-number", true);
       _disable.input(".control-link-item-display-translate-y-default", true);
-      _disable.element("[for=control-link-item-display-gutter]", true);
-      _disable.input(".control-link-item-display-gutter", true);
-      _disable.element(".control-link-item-display-gutter-count", true);
+      _disable.element("[for=control-link-item-display-gutter-range]", true);
+      _disable.input(".control-link-item-display-gutter-range", true);
+      _disable.input(".control-link-item-display-gutter-number", true);
       _disable.input(".control-link-item-display-gutter-default", true);
       _disable.input(".control-link-item-display-direction-horizontal", true);
       _disable.input(".control-link-item-display-direction-vertical", true);
@@ -4349,9 +4847,9 @@ var control = (function() {
       _disable.element(".control-link-item-color-by-custom-helper", true);
       _disable.input(".control-link-item-color-rgb-picker", true);
       _disable.input(".control-link-item-color-rgb-hex", true);
-      _disable.element("[for=control-link-item-border]", true);
-      _disable.input(".control-link-item-border", true);
-      _disable.element(".control-link-item-border-count", true);
+      _disable.element("[for=control-link-item-border-range]", true);
+      _disable.input(".control-link-item-border-range", true);
+      _disable.input(".control-link-item-border-number", true);
       _disable.input(".control-link-item-border-default", true);
       _disable.input(".control-link-style-block", true);
       _disable.element(".control-link-style-block-helper", true);
@@ -4370,9 +4868,9 @@ var control = (function() {
         _disable.input(".control-layout-order-headerlink", false);
         _disable.input(".control-layout-order-linkheader", false);
         _disable.element(".control-layout-order-helper", false);
-        _disable.element("[for=control-link-area-width]", false);
-        _disable.input(".control-link-area-width", false);
-        _disable.element(".control-link-area-width-count", false);
+        _disable.element("[for=control-link-area-width-range]", false);
+        _disable.input(".control-link-area-width-range", false);
+        _disable.input(".control-link-area-width-number", false);
         _disable.input(".control-link-area-width-default", false);
         _disable.input(".control-link-area-width-match", false);
         _disable.element(".control-link-area-width-helper", false);
@@ -4382,9 +4880,9 @@ var control = (function() {
         _disable.input(".control-link-area-alignment-center", false);
         _disable.input(".control-link-area-alignment-right", false);
         _disable.element(".control-link-area-alignment-helper", false);
-        _disable.element("[for=control-link-item-size]", false);
-        _disable.input(".control-link-item-size", false);
-        _disable.element(".control-link-item-size-count", false);
+        _disable.element("[for=control-link-item-size-range]", false);
+        _disable.input(".control-link-item-size-range", false);
+        _disable.input(".control-link-item-size-number", false);
         _disable.input(".control-link-item-size-default", false);
         _disable.input(".control-link-item-display-letcon-show", false);
         _disable.input(".control-link-item-display-name-show", false);
@@ -4398,9 +4896,9 @@ var control = (function() {
         _disable.element(".control-link-item-color-by-theme-helper", false);
         _disable.input(".control-link-item-color-by-custom", false);
         _disable.element(".control-link-item-color-by-custom-helper", false);
-        _disable.element("[for=control-link-item-border]", false);
-        _disable.input(".control-link-item-border", false);
-        _disable.element(".control-link-item-border-count", false);
+        _disable.element("[for=control-link-item-border-range]", false);
+        _disable.input(".control-link-item-border-range", false);
+        _disable.input(".control-link-item-border-number", false);
         _disable.input(".control-link-item-border-default", false);
         _disable.input(".control-link-style-block", false);
         _disable.element(".control-link-style-block-helper", false);
@@ -4443,17 +4941,17 @@ var control = (function() {
           _disable.input(".control-link-item-display-alignment-bottomleft", false);
           _disable.input(".control-link-item-display-alignment-bottomcenter", false);
           _disable.input(".control-link-item-display-alignment-bottomright", false);
-          _disable.element("[for=control-link-item-display-rotate]", false);
-          _disable.input(".control-link-item-display-rotate", false);
-          _disable.element(".control-link-item-display-rotate-count", false);
+          _disable.element("[for=control-link-item-display-rotate-range]", false);
+          _disable.input(".control-link-item-display-rotate-range", false);
+          _disable.input(".control-link-item-display-rotate-number", false);
           _disable.input(".control-link-item-display-rotate-default", false);
           _disable.element("[for=control-link-item-display-translate-x]", false);
-          _disable.input(".control-link-item-display-translate-x", false);
-          _disable.element(".control-link-item-display-translate-x-count", false);
+          _disable.input(".control-link-item-display-translate-x-range", false);
+          _disable.input(".control-link-item-display-translate-x-number", false);
           _disable.input(".control-link-item-display-translate-x-default", false);
-          _disable.element("[for=control-link-item-display-translate-y]", false);
-          _disable.input(".control-link-item-display-translate-y", false);
-          _disable.element(".control-link-item-display-translate-y-count", false);
+          _disable.element("[for=control-link-item-display-translate-y-range]", false);
+          _disable.input(".control-link-item-display-translate-y-range", false);
+          _disable.input(".control-link-item-display-translate-y-number", false);
           _disable.input(".control-link-item-display-translate-y-default", false);
         };
         if (state.get.current().link.item.display.letcon.show && state.get.current().link.item.display.name.show) {
@@ -4463,9 +4961,9 @@ var control = (function() {
           _disable.input(".control-link-item-display-order-nameletcon", false);
           _disable.element(".control-link-item-display-direction-helper", false);
           _disable.element(".control-link-item-display-order-helper", false);
-          _disable.element("[for=control-link-item-display-gutter]", false);
-          _disable.input(".control-link-item-display-gutter", false);
-          _disable.element(".control-link-item-display-gutter-count", false);
+          _disable.element("[for=control-link-item-display-gutter-range]", false);
+          _disable.input(".control-link-item-display-gutter-range", false);
+          _disable.input(".control-link-item-display-gutter-number", false);
           _disable.input(".control-link-item-display-gutter-default", false);
         };
         if (state.get.current().link.item.color.by == "custom") {
