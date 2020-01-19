@@ -91,12 +91,17 @@ var control = (function() {
       link.groupAndItems();
     }
   }, {
-    element: helper.e(".control-layout-size"),
+    element: helper.e(".control-layout-size-range"),
     path: "layout.size",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 50,
+      max: 200,
+      step: 5
+    },
     mirrorElement: [{
-      element: helper.e(".control-layout-size-count"),
+      element: helper.e(".control-layout-size-number"),
       path: "layout.size",
       type: "number",
       valueConvert: ["float"]
@@ -144,7 +149,7 @@ var control = (function() {
       layout.render.size();
     }
   }, {
-    element: helper.e(".control-layout-size-count"),
+    element: helper.e(".control-layout-size-number"),
     path: "layout.size",
     type: "number",
     valueConvert: ["float"],
@@ -154,7 +159,7 @@ var control = (function() {
       step: 5
     },
     mirrorElement: [{
-      element: helper.e(".control-layout-size"),
+      element: helper.e(".control-layout-size-range"),
       path: "layout.size",
       type: "range",
       valueConvert: ["float"]
@@ -183,10 +188,18 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-layout-width"),
+    element: helper.e(".control-layout-width-range"),
     path: "layout.width",
     type: "range",
-    rangeCountElement: helper.e(".control-layout-width-count"),
+    valueModify: {
+      min: 10,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-layout-width-number"),
+      path: "layout.width",
+      type: "number"
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -229,7 +242,23 @@ var control = (function() {
     func: function() {
       render.class();
       layout.render.width();
-      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-layout-width-number"),
+    path: "layout.width",
+    type: "number",
+    valueModify: {
+      min: 10,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-layout-width-range"),
+      path: "layout.width",
+      type: "number"
+    }],
+    func: function() {
+      render.class();
+      layout.render.width();
     }
   }, {
     element: helper.e(".control-layout-width-default"),
@@ -333,10 +362,18 @@ var control = (function() {
       header.render.color.scrolling();
     }
   }, {
-    element: helper.e(".control-layout-padding"),
+    element: helper.e(".control-layout-padding-range"),
     path: "layout.padding",
     type: "range",
-    rangeCountElement: helper.e(".control-layout-padding-count"),
+    valueModify: {
+      min: 0,
+      max: 40
+    },
+    mirrorElement: [{
+      element: helper.e(".control-layout-padding-number"),
+      path: "layout.padding",
+      type: "number"
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -378,7 +415,22 @@ var control = (function() {
     }],
     func: function() {
       layout.render.padding();
-      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-layout-padding-number"),
+    path: "layout.padding",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 40
+    },
+    mirrorElement: [{
+      element: helper.e(".control-layout-padding-range"),
+      path: "layout.padding",
+      type: "range"
+    }],
+    func: function() {
+      layout.render.padding();
     }
   }, {
     element: helper.e(".control-layout-padding-default"),
@@ -401,10 +453,18 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-layout-gutter"),
+    element: helper.e(".control-layout-gutter-range"),
     path: "layout.gutter",
     type: "range",
-    rangeCountElement: helper.e(".control-layout-gutter-count"),
+    valueModify: {
+      min: 0,
+      max: 40
+    },
+    mirrorElement: [{
+      element: helper.e(".control-layout-gutter-number"),
+      path: "layout.gutter",
+      type: "number"
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -446,7 +506,22 @@ var control = (function() {
     }],
     func: function() {
       layout.render.gutter();
-      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-layout-gutter-number"),
+    path: "layout.gutter",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 40
+    },
+    mirrorElement: [{
+      element: helper.e(".control-layout-gutter-range"),
+      path: "layout.gutter",
+      type: "range"
+    }],
+    func: function() {
+      layout.render.gutter();
     }
   }, {
     element: helper.e(".control-layout-gutter-default"),
@@ -484,10 +559,18 @@ var control = (function() {
       header.render.color.scrolling();
     }
   }, {
-    element: helper.e(".control-header-area-width"),
+    element: helper.e(".control-header-area-width-range"),
     path: "header.area.width",
     type: "range",
-    rangeCountElement: helper.e(".control-header-area-width-count"),
+    valueModify: {
+      min: 10,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-area-width-number"),
+      path: "header.area.width",
+      type: "number"
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -529,7 +612,22 @@ var control = (function() {
     }],
     func: function() {
       header.render.area.width();
-      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-header-area-width-number"),
+    path: "header.area.width",
+    type: "number",
+    valueModify: {
+      min: 10,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-area-width-range"),
+      path: "header.area.width",
+      type: "range"
+    }],
+    func: function() {
+      header.render.area.width();
     }
   }, {
     element: helper.e(".control-header-area-width-default"),
@@ -688,11 +786,21 @@ var control = (function() {
       greeting.render.all();
     }
   }, {
-    element: helper.e(".control-header-greeting-size"),
+    element: helper.e(".control-header-greeting-size-range"),
     path: "header.greeting.size",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-header-greeting-size-count"),
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 5
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-greeting-size-number"),
+      path: "header.greeting.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -734,7 +842,25 @@ var control = (function() {
     }],
     func: function() {
       header.render.greeting.size();
-      render.range.count(this);
+    }
+  }, {
+    element: helper.e(".control-header-greeting-size-number"),
+    path: "header.greeting.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 5
+    },
+    mirrorElement: [{
+      element: helper.e(".control-header-greeting-size-range"),
+      path: "header.greeting.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      header.render.greeting.size();
     }
   }, {
     element: helper.e(".control-header-greeting-size-default"),
@@ -787,7 +913,6 @@ var control = (function() {
     path: "header.transitional.size",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-header-transitional-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -829,7 +954,6 @@ var control = (function() {
     }],
     func: function() {
       header.render.transitional.size();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-transitional-size-default"),
@@ -1006,7 +1130,6 @@ var control = (function() {
     path: "header.clock.size",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-header-clock-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1048,7 +1171,6 @@ var control = (function() {
     }],
     func: function() {
       header.render.clock.size();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-clock-size-default"),
@@ -1363,7 +1485,6 @@ var control = (function() {
     path: "header.date.size",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-header-date-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1405,7 +1526,6 @@ var control = (function() {
     }],
     func: function() {
       header.render.date.size();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-date-size-default"),
@@ -1458,7 +1578,6 @@ var control = (function() {
     element: helper.e(".control-header-search-width"),
     path: "header.search.width",
     type: "range",
-    rangeCountElement: helper.e(".control-header-search-width-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1500,7 +1619,6 @@ var control = (function() {
     }],
     func: function() {
       header.render.search.width();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-search-width-default"),
@@ -1614,7 +1732,6 @@ var control = (function() {
     path: "header.search.size",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-header-search-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1656,7 +1773,6 @@ var control = (function() {
     }],
     func: function() {
       header.render.search.size();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-search-size-default"),
@@ -1720,7 +1836,6 @@ var control = (function() {
     path: "header.button.size",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-header-button-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1762,7 +1877,6 @@ var control = (function() {
     }],
     func: function() {
       header.render.button.size();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-button-size-default"),
@@ -1847,10 +1961,8 @@ var control = (function() {
     path: "header.color.opacity",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-header-color-opacity-count"),
     func: function() {
       header.render.opacity();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-color-opacity-default"),
@@ -1883,7 +1995,6 @@ var control = (function() {
     path: "group.name.size",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-group-name-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -1925,7 +2036,6 @@ var control = (function() {
     }],
     func: function() {
       link.render.group.size();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-group-name-size-default"),
@@ -1986,11 +2096,9 @@ var control = (function() {
     element: helper.e(".control-group-border"),
     path: "group.border",
     type: "range",
-    rangeCountElement: helper.e(".control-group-border-count"),
     func: function() {
       link.render.group.border();
       render.class();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-group-border-default"),
@@ -2008,11 +2116,9 @@ var control = (function() {
     element: helper.e(".control-header-border-top"),
     path: "header.border.top",
     type: "range",
-    rangeCountElement: helper.e(".control-header-border-top-count"),
     func: function() {
       header.render.border();
       render.class();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-border-top-default"),
@@ -2030,11 +2136,9 @@ var control = (function() {
     element: helper.e(".control-header-border-bottom"),
     path: "header.border.bottom",
     type: "range",
-    rangeCountElement: helper.e(".control-header-border-bottom-count"),
     func: function() {
       header.render.border();
       render.class();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-header-border-bottom-default"),
@@ -2066,7 +2170,6 @@ var control = (function() {
     element: helper.e(".control-link-area-width"),
     path: "link.area.width",
     type: "range",
-    rangeCountElement: helper.e(".control-link-area-width-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -2108,7 +2211,6 @@ var control = (function() {
     }],
     func: function() {
       link.render.area.width();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-area-width-default"),
@@ -2208,7 +2310,6 @@ var control = (function() {
     path: "link.item.size",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-link-item-size-count"),
     additionalEvents: [{
       event: "input",
       func: function() {
@@ -2250,7 +2351,6 @@ var control = (function() {
     }],
     func: function() {
       link.render.item.size();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-show"),
@@ -2357,10 +2457,8 @@ var control = (function() {
     path: "link.item.display.letcon.letter.size",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-link-item-display-letcon-letter-size-count"),
     func: function() {
       link.render.item.display.letter();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-letcon-letter-size-default"),
@@ -2378,10 +2476,8 @@ var control = (function() {
     path: "link.item.display.letcon.icon.size",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-link-item-display-letcon-icon-size-count"),
     func: function() {
       link.render.item.display.icon();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-letcon-icon-size-default"),
@@ -2407,10 +2503,8 @@ var control = (function() {
     path: "link.item.display.name.size",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-link-item-display-name-size-count"),
     func: function() {
       link.render.item.name();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-name-size-default"),
@@ -2427,10 +2521,8 @@ var control = (function() {
     element: helper.e(".control-link-item-display-rotate"),
     path: "link.item.display.rotate",
     type: "range",
-    rangeCountElement: helper.e(".control-link-item-display-rotate-count"),
     func: function() {
       link.render.item.rotate();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-rotate-default"),
@@ -2448,10 +2540,8 @@ var control = (function() {
     path: "link.item.display.translate.x",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-link-item-display-translate-x-count"),
     func: function() {
       link.render.item.translate.x();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-translate-x-default"),
@@ -2469,10 +2559,8 @@ var control = (function() {
     path: "link.item.display.translate.y",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-link-item-display-translate-y-count"),
     func: function() {
       link.render.item.translate.y();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-translate-y-default"),
@@ -2489,10 +2577,8 @@ var control = (function() {
     element: helper.e(".control-link-item-display-gutter"),
     path: "link.item.display.gutter",
     type: "range",
-    rangeCountElement: helper.e(".control-link-item-display-gutter-count"),
     func: function() {
       link.render.item.gutter();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-display-gutter-default"),
@@ -2606,11 +2692,9 @@ var control = (function() {
     element: helper.e(".control-link-item-border"),
     path: "link.item.border",
     type: "range",
-    rangeCountElement: helper.e(".control-link-item-border-count"),
     func: function() {
       render.class();
       link.render.item.border();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-link-item-border-default"),
@@ -2738,10 +2822,8 @@ var control = (function() {
     element: helper.e(".control-theme-font-display-weight"),
     path: "theme.font.display.weight",
     type: "range",
-    rangeCountElement: helper.e(".control-theme-font-display-weight-count"),
     func: function() {
       theme.render.font.display.weight();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-theme-font-display-light"),
@@ -2819,10 +2901,8 @@ var control = (function() {
     element: helper.e(".control-theme-font-ui-weight"),
     path: "theme.font.ui.weight",
     type: "range",
-    rangeCountElement: helper.e(".control-theme-font-ui-weight-count"),
     func: function() {
       theme.render.font.ui.weight();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-theme-font-ui-light"),
@@ -2931,66 +3011,54 @@ var control = (function() {
     element: helper.e(".control-theme-color-hsl-h"),
     path: "theme.color.hsl.h",
     type: "range",
-    rangeCountElement: helper.e(".control-theme-color-hsl-h-count"),
     func: function() {
       theme.mod.color.rgb();
       theme.render.color.shade();
-      render.range.count(this);
       render.update();
     }
   }, {
     element: helper.e(".control-theme-color-hsl-s"),
     path: "theme.color.hsl.s",
     type: "range",
-    rangeCountElement: helper.e(".control-theme-color-hsl-s-count"),
     func: function() {
       theme.mod.color.rgb();
       theme.render.color.shade();
-      render.range.count(this);
       render.update();
     }
   }, {
     element: helper.e(".control-theme-color-hsl-l"),
     path: "theme.color.hsl.l",
     type: "range",
-    rangeCountElement: helper.e(".control-theme-color-hsl-l-count"),
     func: function() {
       theme.mod.color.rgb();
       theme.render.color.shade();
-      render.range.count(this);
       render.update();
     }
   }, {
     element: helper.e(".control-theme-color-rgb-r"),
     path: "theme.color.rgb.r",
     type: "range",
-    rangeCountElement: helper.e(".control-theme-color-rgb-r-count"),
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      render.range.count(this);
       render.update();
     }
   }, {
     element: helper.e(".control-theme-color-rgb-g"),
     path: "theme.color.rgb.g",
     type: "range",
-    rangeCountElement: helper.e(".control-theme-color-rgb-g-count"),
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      render.range.count(this);
       render.update();
     }
   }, {
     element: helper.e(".control-theme-color-rgb-b"),
     path: "theme.color.rgb.b",
     type: "range",
-    rangeCountElement: helper.e(".control-theme-color-rgb-b-count"),
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      render.range.count(this);
       render.update();
     }
   }, {
@@ -2998,10 +3066,8 @@ var control = (function() {
     path: "theme.color.contrast.light",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-theme-color-contrast-light-count"),
     func: function() {
       theme.render.color.shade();
-      render.range.count(this);
       render.update();
     }
   }, {
@@ -3020,10 +3086,8 @@ var control = (function() {
     path: "theme.color.contrast.dark",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-theme-color-contrast-dark-count"),
     func: function() {
       theme.render.color.shade();
-      render.range.count(this);
       render.update();
     }
   }, {
@@ -3130,11 +3194,9 @@ var control = (function() {
     path: "theme.radius",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-theme-radius-count"),
     func: function() {
       theme.render.radius();
       render.class();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-theme-radius-default"),
@@ -3152,21 +3214,17 @@ var control = (function() {
     path: "theme.shadow",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-theme-shadow-count"),
     func: function() {
       theme.render.shadow();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-theme-shade-opacity"),
     path: "theme.shade.opacity",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-theme-shade-opacity-count"),
     func: function() {
       theme.render.shade.opacity();
       render.class();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-theme-shade-opacity-default"),
@@ -3278,10 +3336,8 @@ var control = (function() {
     path: "background.image.opacity",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-background-image-opacity-count"),
     func: function() {
       background.render.opacity();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-background-image-opacity-default"),
@@ -3299,10 +3355,8 @@ var control = (function() {
     path: "background.image.grayscale",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-background-image-grayscale-count"),
     func: function() {
       background.render.grayscale();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-background-image-grayscale-default"),
@@ -3319,10 +3373,8 @@ var control = (function() {
     element: helper.e(".control-background-image-blur"),
     path: "background.image.blur",
     type: "range",
-    rangeCountElement: helper.e(".control-background-image-blur-count"),
     func: function() {
       background.render.blur();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-background-image-blur-default"),
@@ -3340,10 +3392,8 @@ var control = (function() {
     path: "background.image.accent",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-background-image-accent-count"),
     func: function() {
       background.render.accent();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-background-image-accent-default"),
@@ -3361,10 +3411,8 @@ var control = (function() {
     path: "background.image.scale",
     type: "range",
     valueConvert: ["float"],
-    rangeCountElement: helper.e(".control-background-image-scale-count"),
     func: function() {
       background.render.scale();
-      render.range.count(this);
     }
   }, {
     element: helper.e(".control-background-image-scale-default"),
@@ -4156,9 +4204,9 @@ var control = (function() {
           _disable.input(".control-header-greeting-type-good", false);
           _disable.input(".control-header-greeting-type-hello", false);
           _disable.input(".control-header-greeting-type-hi", false);
-          _disable.element("[for=control-header-greeting-size]", false);
-          _disable.input(".control-header-greeting-size", false);
-          _disable.element(".control-header-greeting-size-count", false);
+          _disable.element("[for=control-header-greeting-size-range]", false);
+          _disable.input(".control-header-greeting-size-range", false);
+          _disable.input(".control-header-greeting-size-number", false);
           _disable.input(".control-header-greeting-size-default", false);
         } else {
           _disable.element("[for=control-header-greeting-name]", true);
@@ -4166,9 +4214,9 @@ var control = (function() {
           _disable.input(".control-header-greeting-type-good", true);
           _disable.input(".control-header-greeting-type-hello", true);
           _disable.input(".control-header-greeting-type-hi", true);
-          _disable.element("[for=control-header-greeting-size]", true);
-          _disable.input(".control-header-greeting-size", true);
-          _disable.element(".control-header-greeting-size-count", true);
+          _disable.element("[for=control-header-greeting-size-range]", true);
+          _disable.input(".control-header-greeting-size-range", true);
+          _disable.input(".control-header-greeting-size-number", true);
           _disable.input(".control-header-greeting-size-default", true);
         };
       };
@@ -4530,13 +4578,13 @@ var control = (function() {
 
   render.update = function(object) {
     var valueConvert = {
-      reverse: function(value, element) {
-        return parseInt(element.max, 10) - value;
+      reverse: function(value, object) {
+        return object.valueModify.max - value;
       },
-      float: function(value, element) {
+      float: function(value, object) {
         return value * 100;
       },
-      hexTextString: function(value, element) {
+      hexTextString: function(value, object) {
         return helper.convertColor.rgb.hex(value);
       }
     };
@@ -4560,7 +4608,7 @@ var control = (function() {
         });
         if (object.valueConvert) {
           object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object.element);
+            newValue = valueConvert[arrayItem](newValue, object);
           });
         };
         object.element.value = newValue;
@@ -4572,7 +4620,7 @@ var control = (function() {
         });
         if (object.valueConvert) {
           object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object.element);
+            newValue = valueConvert[arrayItem](newValue, object);
           });
         };
         object.element.value = newValue;
@@ -4584,10 +4632,10 @@ var control = (function() {
         });
         if (object.valueConvert) {
           object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object.element);
+            newValue = valueConvert[arrayItem](newValue, object);
           });
         };
-        object.element.value = parseInt(newValue, 10);
+        object.element.value = Math.round(newValue);
       },
       range: function(object) {
         var newValue = helper.getObject({
@@ -4596,7 +4644,7 @@ var control = (function() {
         });
         if (object.valueConvert) {
           object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object.element);
+            newValue = valueConvert[arrayItem](newValue, object);
           });
         };
         object.element.value = newValue;
@@ -4622,14 +4670,21 @@ var control = (function() {
     }
   };
 
-  render.range = {
-    count: function(control) {
-      control.rangeCountElement.textContent = control.element.value;
-    }
+  render.input = function() {
+    _allControl.forEach(function(arrayItem, index) {
+      if (arrayItem.valueModify) {
+        if (arrayItem.valueModify) {
+          for (var key in arrayItem.valueModify) {
+            arrayItem.element[key] = arrayItem.valueModify[key];
+          };
+        };
+      };
+    });
   };
 
   var init = function() {
     bind.controls();
+    render.input();
     render.update();
     render.dependents();
     render.class();
