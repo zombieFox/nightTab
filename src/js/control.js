@@ -2819,10 +2819,40 @@ var control = (function() {
       render.dependents();
     }
   }, {
-    element: helper.e(".control-link-item-display-letcon-letter-size"),
+    element: helper.e(".control-link-item-display-letcon-letter-size-range"),
     path: "link.item.display.letcon.letter.size",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-letcon-letter-size-number"),
+      path: "link.item.display.letcon.letter.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.display.letter();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-letcon-letter-size-number"),
+    path: "link.item.display.letcon.letter.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-letcon-letter-size-range"),
+      path: "link.item.display.letcon.letter.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
     func: function() {
       link.render.item.display.letter();
     }
@@ -2838,10 +2868,40 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-link-item-display-letcon-icon-size"),
+    element: helper.e(".control-link-item-display-letcon-icon-size-range"),
     path: "link.item.display.letcon.icon.size",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-letcon-icon-size-number"),
+      path: "link.item.display.letcon.icon.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.display.icon();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-letcon-icon-size-number"),
+    path: "link.item.display.letcon.icon.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-letcon-icon-size-range"),
+      path: "link.item.display.letcon.icon.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
     func: function() {
       link.render.item.display.icon();
     }
@@ -2865,10 +2925,40 @@ var control = (function() {
       render.dependents();
     }
   }, {
-    element: helper.e(".control-link-item-display-name-size"),
+    element: helper.e(".control-link-item-display-name-size-range"),
     path: "link.item.display.name.size",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-name-size-number"),
+      path: "link.item.display.name.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.name();
+    }
+  }, {
+    element: helper.e(".control-link-item-display-name-size-number"),
+    path: "link.item.display.name.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-link-item-display-name-size-range"),
+      path: "link.item.display.name.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
     func: function() {
       link.render.item.name();
     }
@@ -3321,9 +3411,36 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-font-display-weight"),
+    element: helper.e(".control-theme-font-display-weight-range"),
     path: "theme.font.display.weight",
     type: "range",
+    valueModify: {
+      min: 100,
+      max: 900,
+      step: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-font-display-weight-number"),
+      path: "theme.font.display.weight",
+      type: "number"
+    }],
+    func: function() {
+      theme.render.font.display.weight();
+    }
+  }, {
+    element: helper.e(".control-theme-font-display-weight-number"),
+    path: "theme.font.display.weight",
+    type: "number",
+    valueModify: {
+      min: 100,
+      max: 900,
+      step: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-font-display-weight-range"),
+      path: "theme.font.display.weight",
+      type: "range"
+    }],
     func: function() {
       theme.render.font.display.weight();
     }
@@ -3400,9 +3517,36 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-font-ui-weight"),
+    element: helper.e(".control-theme-font-ui-weight-range"),
     path: "theme.font.ui.weight",
     type: "range",
+    valueModify: {
+      min: 100,
+      max: 900,
+      step: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-font-ui-weight-number"),
+      path: "theme.font.ui.weight",
+      type: "number"
+    }],
+    func: function() {
+      theme.render.font.ui.weight();
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-weight-number"),
+    path: "theme.font.ui.weight",
+    type: "number",
+    valueModify: {
+      min: 100,
+      max: 900,
+      step: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-font-ui-weight-range"),
+      path: "theme.font.ui.weight",
+      type: "range"
+    }],
     func: function() {
       theme.render.font.ui.weight();
     }
@@ -3510,58 +3654,616 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-color-hsl-h"),
+    element: helper.e(".control-theme-color-hsl-h-range"),
     path: "theme.color.hsl.h",
     type: "range",
+    valueModify: {
+      min: 0,
+      max: 359
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-hsl-h-number"),
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-range"),
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-number"),
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-range"),
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-number"),
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-range"),
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-number"),
+      path: "theme.color.rgb.b",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.mod.color.rgb();
       theme.render.color.shade();
-      render.update();
     }
   }, {
-    element: helper.e(".control-theme-color-hsl-s"),
+    element: helper.e(".control-theme-color-hsl-h-number"),
+    path: "theme.color.hsl.h",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 359
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-hsl-h-range"),
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-range"),
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-number"),
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-range"),
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-number"),
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-range"),
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-number"),
+      path: "theme.color.rgb.b",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
+    func: function() {
+      theme.mod.color.rgb();
+      theme.render.color.shade();
+    }
+  }, {
+    element: helper.e(".control-theme-color-hsl-s-range"),
     path: "theme.color.hsl.s",
     type: "range",
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-hsl-s-number"),
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-range"),
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-number"),
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-range"),
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-number"),
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-range"),
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-number"),
+      path: "theme.color.rgb.b",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.mod.color.rgb();
       theme.render.color.shade();
-      render.update();
     }
   }, {
-    element: helper.e(".control-theme-color-hsl-l"),
+    element: helper.e(".control-theme-color-hsl-s-number"),
+    path: "theme.color.hsl.s",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-hsl-s-range"),
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-range"),
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-number"),
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-range"),
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-number"),
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-range"),
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-number"),
+      path: "theme.color.rgb.b",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
+    func: function() {
+      theme.mod.color.rgb();
+      theme.render.color.shade();
+    }
+  }, {
+    element: helper.e(".control-theme-color-hsl-l-range"),
     path: "theme.color.hsl.l",
     type: "range",
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-hsl-l-number"),
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-range"),
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-number"),
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-range"),
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-number"),
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-range"),
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-number"),
+      path: "theme.color.rgb.b",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.mod.color.rgb();
       theme.render.color.shade();
-      render.update();
     }
   }, {
-    element: helper.e(".control-theme-color-rgb-r"),
+    element: helper.e(".control-theme-color-hsl-l-number"),
+    path: "theme.color.hsl.l",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-hsl-l-range"),
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-range"),
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-number"),
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-range"),
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-number"),
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-range"),
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-number"),
+      path: "theme.color.rgb.b",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
+    func: function() {
+      theme.mod.color.rgb();
+      theme.render.color.shade();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-r-range"),
     path: "theme.color.rgb.r",
     type: "range",
+    valueModify: {
+      min: 0,
+      max: 255
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-rgb-r-number"),
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-range"),
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-number"),
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-range"),
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-number"),
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-range"),
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-number"),
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      render.update();
     }
   }, {
-    element: helper.e(".control-theme-color-rgb-g"),
+    element: helper.e(".control-theme-color-rgb-r-number"),
+    path: "theme.color.rgb.r",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 255
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-rgb-r-range"),
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-range"),
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-number"),
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-range"),
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-number"),
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-range"),
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-number"),
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.shade();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-g-range"),
     path: "theme.color.rgb.g",
     type: "range",
+    valueModify: {
+      min: 0,
+      max: 255
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-rgb-g-number"),
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-range"),
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-number"),
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-range"),
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-number"),
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-range"),
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-number"),
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      render.update();
     }
   }, {
-    element: helper.e(".control-theme-color-rgb-b"),
-    path: "theme.color.rgb.b",
-    type: "range",
+    element: helper.e(".control-theme-color-rgb-g-number"),
+    path: "theme.color.rgb.g",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 255
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-rgb-g-range"),
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-range"),
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-number"),
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-range"),
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-number"),
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-range"),
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-number"),
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-b-range"),
+    path: "theme.color.rgb.b",
+    type: "range",
+    valueModify: {
+      min: 0,
+      max: 255
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-rgb-b-number"),
+      path: "theme.color.rgb.b",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-range"),
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-number"),
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-range"),
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-number"),
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-range"),
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-number"),
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.shade();
+    }
+  }, {
+    element: helper.e(".control-theme-color-rgb-b-number"),
+    path: "theme.color.rgb.b",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 255
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-rgb-b-range"),
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-range"),
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-number"),
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-range"),
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-number"),
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-range"),
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-number"),
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "color",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.shade();
     }
   }, {
     element: helper.e(".control-theme-color-contrast-light"),
@@ -4789,18 +5491,18 @@ var control = (function() {
       _disable.input(".control-link-item-size-number", true);
       _disable.input(".control-link-item-size-default", true);
       _disable.input(".control-link-item-display-letcon-show", true);
-      _disable.element("[for=control-link-item-display-letcon-letter-size]", true);
-      _disable.input(".control-link-item-display-letcon-letter-size", true);
-      _disable.element(".control-link-item-display-letcon-letter-size-count", true);
+      _disable.element("[for=control-link-item-display-letcon-letter-size-range]", true);
+      _disable.input(".control-link-item-display-letcon-letter-size-range", true);
+      _disable.input(".control-link-item-display-letcon-letter-size-number", true);
       _disable.input(".control-link-item-display-letcon-letter-size-default", true);
-      _disable.element("[for=control-link-item-display-letcon-icon-size]", true);
-      _disable.input(".control-link-item-display-letcon-icon-size", true);
-      _disable.element(".control-link-item-display-letcon-icon-size-count", true);
+      _disable.element("[for=control-link-item-display-letcon-icon-size-range]", true);
+      _disable.input(".control-link-item-display-letcon-icon-size-range", true);
+      _disable.input(".control-link-item-display-letcon-icon-size-number", true);
       _disable.input(".control-link-item-display-letcon-icon-size-default", true);
       _disable.input(".control-link-item-display-name-show", true);
-      _disable.element("[for=control-link-item-display-name-size]", true);
-      _disable.input(".control-link-item-display-name-size", true);
-      _disable.element(".control-link-item-display-name-size-count", true);
+      _disable.element("[for=control-link-item-display-name-size-range]", true);
+      _disable.input(".control-link-item-display-name-size-range", true);
+      _disable.input(".control-link-item-display-name-size-number", true);
       _disable.input(".control-link-item-display-name-size-default", true);
       _disable.element("[for=control-link-item-display-rotate-range]", true);
       _disable.input(".control-link-item-display-rotate-range", true);
@@ -4914,19 +5616,19 @@ var control = (function() {
         _disable.input(".control-link-accent-set", false);
         _disable.element(".control-link-accent-set-helper", false);
         if (state.get.current().link.item.display.letcon.show) {
-          _disable.element("[for=control-link-item-display-letcon-letter-size]", false);
-          _disable.input(".control-link-item-display-letcon-letter-size", false);
-          _disable.element(".control-link-item-display-letcon-letter-size-count", false);
+          _disable.element("[for=control-link-item-display-letcon-letter-size-range]", false);
+          _disable.input(".control-link-item-display-letcon-letter-size-range", false);
+          _disable.input(".control-link-item-display-letcon-letter-size-number", false);
           _disable.input(".control-link-item-display-letcon-letter-size-default", false);
-          _disable.element("[for=control-link-item-display-letcon-icon-size]", false);
-          _disable.input(".control-link-item-display-letcon-icon-size", false);
-          _disable.element(".control-link-item-display-letcon-icon-size-count", false);
+          _disable.element("[for=control-link-item-display-letcon-icon-size-range]", false);
+          _disable.input(".control-link-item-display-letcon-icon-size-range", false);
+          _disable.input(".control-link-item-display-letcon-icon-size-number", false);
           _disable.input(".control-link-item-display-letcon-icon-size-default", false);
         };
         if (state.get.current().link.item.display.name.show) {
-          _disable.element("[for=control-link-item-display-name-size]", false);
-          _disable.input(".control-link-item-display-name-size", false);
-          _disable.element(".control-link-item-display-name-size-count", false);
+          _disable.element("[for=control-link-item-display-name-size-range]", false);
+          _disable.input(".control-link-item-display-name-size-range", false);
+          _disable.input(".control-link-item-display-name-size-number", false);
           _disable.input(".control-link-item-display-name-size-default", false);
         };
         if (state.get.current().link.item.display.letcon.show || state.get.current().link.item.display.name.show) {
@@ -4945,7 +5647,7 @@ var control = (function() {
           _disable.input(".control-link-item-display-rotate-range", false);
           _disable.input(".control-link-item-display-rotate-number", false);
           _disable.input(".control-link-item-display-rotate-default", false);
-          _disable.element("[for=control-link-item-display-translate-x]", false);
+          _disable.element("[for=control-link-item-display-translate-x-range]", false);
           _disable.input(".control-link-item-display-translate-x-range", false);
           _disable.input(".control-link-item-display-translate-x-number", false);
           _disable.input(".control-link-item-display-translate-x-default", false);
