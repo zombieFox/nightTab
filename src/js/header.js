@@ -71,15 +71,6 @@ var header = (function() {
     }
   };
 
-  render.input = {
-    picker: function() {
-      helper.e(".control-header-color-rgb-picker").value = helper.convertColor.rgb.hex(state.get.current().header.color.rgb);
-    },
-    hex: function() {
-      helper.e(".control-header-color-rgb-hex").value = helper.convertColor.rgb.hex(state.get.current().header.color.rgb);
-    }
-  };
-
   render.opacity = function() {
     var html = helper.e("html");
     if (state.get.current().header.color.show) {

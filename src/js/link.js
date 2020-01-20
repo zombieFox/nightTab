@@ -1712,15 +1712,6 @@ var link = (function() {
     }
   };
 
-  render.input = {
-    picker: function() {
-      helper.e(".control-link-item-color-rgb-picker").value = helper.convertColor.rgb.hex(state.get.current().link.item.color.rgb);
-    },
-    hex: function() {
-      helper.e(".control-link-item-color-rgb-hex").value = helper.convertColor.rgb.hex(state.get.current().link.item.color.rgb);
-    }
-  };
-
   var add = {
     item: {
       open: function() {

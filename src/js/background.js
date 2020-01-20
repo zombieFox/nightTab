@@ -125,12 +125,6 @@ var background = (function() {
   render.input = {
     clear: function() {
       helper.e(".control-background-image-file").value = "";
-    },
-    picker: function() {
-      helper.e(".control-background-color-rgb-picker").value = helper.convertColor.rgb.hex(state.get.current().background.color.rgb);
-    },
-    hex: function() {
-      helper.e(".control-background-color-rgb-hex").value = helper.convertColor.rgb.hex(state.get.current().background.color.rgb);
     }
   };
 
