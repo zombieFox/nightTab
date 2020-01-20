@@ -2453,7 +2453,7 @@ var control = (function() {
     },
     mirrorElement: [{
       element: helper.e(".control-header-border-bottom-range"),
-      path: "header.border.top",
+      path: "header.border.bottom",
       type: "range"
     }],
     func: function() {
@@ -3437,6 +3437,17 @@ var control = (function() {
       theme.render.font.display.weight();
     }
   }, {
+    element: helper.e(".control-theme-font-display-weight-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.font.display.weight", helper.getObject({
+        object: state.get.default(),
+        path: "theme.font.display.weight"
+      }));
+      theme.render.font.display.weight();
+      render.update();
+    }
+  }, {
     element: helper.e(".control-theme-font-display-weight-number"),
     path: "theme.font.display.weight",
     type: "number",
@@ -3478,22 +3489,6 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-font-display-weight-style-default"),
-    type: "button",
-    func: function() {
-      mod.setValue("theme.font.display.weight", helper.getObject({
-        object: state.get.default(),
-        path: "theme.font.display.weight"
-      }));
-      mod.setValue("theme.font.display.style", helper.getObject({
-        object: state.get.default(),
-        path: "theme.font.display.style"
-      }));
-      theme.render.font.display.weight();
-      theme.render.font.display.style();
-      render.update();
-    }
-  }, {
     element: helper.e(".control-theme-font-display-style-normal"),
     path: "theme.font.display.style",
     type: "radio",
@@ -3506,6 +3501,17 @@ var control = (function() {
     type: "radio",
     func: function() {
       theme.render.font.display.style();
+    }
+  }, {
+    element: helper.e(".control-theme-font-display-style-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.font.display.style", helper.getObject({
+        object: state.get.default(),
+        path: "theme.font.display.style"
+      }));
+      theme.render.font.display.style();
+      render.update();
     }
   }, {
     element: helper.e(".control-theme-font-ui-name"),
@@ -3541,6 +3547,17 @@ var control = (function() {
     }],
     func: function() {
       theme.render.font.ui.weight();
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-weight-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.font.ui.weight", helper.getObject({
+        object: state.get.default(),
+        path: "theme.font.ui.weight"
+      }));
+      theme.render.font.ui.weight();
+      render.update();
     }
   }, {
     element: helper.e(".control-theme-font-ui-weight-number"),
@@ -3584,22 +3601,6 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-font-ui-weight-style-default"),
-    type: "button",
-    func: function() {
-      mod.setValue("theme.font.ui.weight", helper.getObject({
-        object: state.get.default(),
-        path: "theme.font.ui.weight"
-      }));
-      mod.setValue("theme.font.ui.style", helper.getObject({
-        object: state.get.default(),
-        path: "theme.font.ui.style"
-      }));
-      theme.render.font.ui.weight();
-      theme.render.font.ui.style();
-      render.update();
-    }
-  }, {
     element: helper.e(".control-theme-font-ui-style-normal"),
     path: "theme.font.ui.style",
     type: "radio",
@@ -3612,6 +3613,17 @@ var control = (function() {
     type: "radio",
     func: function() {
       theme.render.font.ui.style();
+    }
+  }, {
+    element: helper.e(".control-theme-font-ui-style-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.font.ui.style", helper.getObject({
+        object: state.get.default(),
+        path: "theme.font.ui.style"
+      }));
+      theme.render.font.ui.style();
+      render.update();
     }
   }, {
     element: helper.e(".control-theme-color-rgb-quick"),
