@@ -84,10 +84,19 @@ var control = (function() {
     element: helper.e(".control-theme-accent-rgb-quick"),
     path: "theme.accent.rgb",
     type: "color",
+    mirrorElement: [{
+      element: helper.e(".control-theme-accent-rgb-picker"),
+      path: "theme.accent.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-accent-rgb-hex"),
+      path: "theme.accent.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.render.accent.color();
-      theme.render.accent.input.picker();
-      theme.render.accent.input.hex();
       link.groupAndItems();
     }
   }, {
@@ -3608,38 +3617,203 @@ var control = (function() {
     element: helper.e(".control-theme-color-rgb-quick"),
     path: "theme.color.rgb",
     type: "color",
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-hsl-h-range"),
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-number"),
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-range"),
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-number"),
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-range"),
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-number"),
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-range"),
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-number"),
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-range"),
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-number"),
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-range"),
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-number"),
+      path: "theme.color.rgb.b",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      theme.render.color.input.range.hsl();
-      theme.render.color.input.range.rgb();
-      theme.render.color.input.hex();
-      theme.render.color.input.picker();
     }
   }, {
     element: helper.e(".control-theme-color-rgb-picker"),
     path: "theme.color.rgb",
     type: "color",
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-hsl-h-range"),
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-number"),
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-range"),
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-number"),
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-range"),
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-number"),
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-range"),
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-number"),
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-range"),
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-number"),
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-range"),
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-number"),
+      path: "theme.color.rgb.b",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-quick"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-hex"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      theme.render.color.input.range.hsl();
-      theme.render.color.input.range.rgb();
-      theme.render.color.input.hex();
-      theme.render.color.input.quick();
     }
   }, {
     element: helper.e(".control-theme-color-rgb-hex"),
     path: "theme.color.rgb",
     type: "text",
     valueConvert: ["hexTextString"],
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-hsl-h-range"),
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-h-number"),
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-range"),
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-s-number"),
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-range"),
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-hsl-l-number"),
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-range"),
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-r-number"),
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-range"),
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-g-number"),
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-range"),
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: helper.e(".control-theme-color-rgb-b-number"),
+      path: "theme.color.rgb.b",
+      type: "number"
+    }, {
+      element: helper.e(".control-theme-color-rgb-quick"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-color-rgb-picker"),
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.mod.color.hsl();
       theme.render.color.shade();
-      theme.render.color.input.range.hsl();
-      theme.render.color.input.range.rgb();
-      theme.render.color.input.picker();
-      theme.render.color.input.quick();
     }
   }, {
     element: helper.e(".control-theme-color-rgb-default"),
@@ -4266,13 +4440,42 @@ var control = (function() {
       theme.render.color.shade();
     }
   }, {
-    element: helper.e(".control-theme-color-contrast-light"),
+    element: helper.e(".control-theme-color-contrast-light-range"),
     path: "theme.color.contrast.light",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 100,
+      max: 800,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-contrast-light-number"),
+      path: "theme.color.contrast.light",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     func: function() {
       theme.render.color.shade();
-      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-contrast-light-number"),
+    path: "theme.color.contrast.light",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 100,
+      max: 800,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-contrast-light-range"),
+      path: "theme.color.contrast.light",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      theme.render.color.shade();
     }
   }, {
     element: helper.e(".control-theme-color-contrast-light-default"),
@@ -4286,13 +4489,42 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-color-contrast-dark"),
+    element: helper.e(".control-theme-color-contrast-dark-range"),
     path: "theme.color.contrast.dark",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 100,
+      max: 800,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-contrast-dark-number"),
+      path: "theme.color.contrast.dark",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     func: function() {
       theme.render.color.shade();
-      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-color-contrast-dark-number"),
+    path: "theme.color.contrast.dark",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 100,
+      max: 800,
+      step: 10
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-color-contrast-dark-range"),
+      path: "theme.color.contrast.dark",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      theme.render.color.shade();
     }
   }, {
     element: helper.e(".control-theme-color-contrast-dark-default"),
@@ -4309,10 +4541,19 @@ var control = (function() {
     element: helper.e(".control-theme-accent-rgb-picker"),
     path: "theme.accent.rgb",
     type: "color",
+    mirrorElement: [{
+      element: helper.e(".control-theme-accent-rgb-quick"),
+      path: "theme.accent.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-accent-rgb-hex"),
+      path: "theme.accent.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.render.accent.color();
-      theme.render.accent.input.quick();
-      theme.render.accent.input.hex();
       link.groupAndItems();
     }
   }, {
@@ -4320,10 +4561,19 @@ var control = (function() {
     path: "theme.accent.rgb",
     type: "text",
     valueConvert: ["hexTextString"],
+    mirrorElement: [{
+      element: helper.e(".control-theme-accent-rgb-quick"),
+      path: "theme.accent.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-accent-rgb-picker"),
+      path: "theme.accent.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.render.accent.color();
-      theme.render.accent.input.picker();
-      theme.render.accent.input.quick();
       link.groupAndItems();
     }
   }, {
@@ -4335,8 +4585,6 @@ var control = (function() {
         path: "theme.accent.rgb"
       }));
       theme.render.accent.color();
-      theme.render.accent.input.picker();
-      theme.render.accent.input.quick();
       link.groupAndItems();
       render.update();
     }
@@ -4386,18 +4634,62 @@ var control = (function() {
   }, {
     element: helper.e(".control-theme-accent-randomise"),
     type: "button",
+    mirrorElement: [{
+      element: helper.e(".control-theme-accent-rgb-quick"),
+      path: "theme.accent.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-accent-rgb-picker"),
+      path: "theme.accent.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: helper.e(".control-theme-accent-rgb-hex"),
+      path: "theme.accent.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
     func: function() {
       theme.accent.random();
-      theme.render.accent.input.quick();
-      theme.render.accent.input.picker();
-      theme.render.accent.input.hex();
       link.groupAndItems();
     }
   }, {
-    element: helper.e(".control-theme-radius"),
+    element: helper.e(".control-theme-radius-range"),
     path: "theme.radius",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 400,
+      step: 5
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-radius-number"),
+      path: "theme.radius",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      theme.render.radius();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-theme-radius-number"),
+    path: "theme.radius",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 400,
+      step: 5
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-radius-range"),
+      path: "theme.radius",
+      type: "range",
+      valueConvert: ["float"]
+    }],
     func: function() {
       theme.render.radius();
       render.class();
@@ -4414,18 +4706,88 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-shadow"),
+    element: helper.e(".control-theme-shadow-range"),
     path: "theme.shadow",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 300,
+      step: 25
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-shadow-number"),
+      path: "theme.shadow",
+      type: "number",
+      valueConvert: ["float"]
+    }],
     func: function() {
       theme.render.shadow();
     }
   }, {
-    element: helper.e(".control-theme-shade-opacity"),
+    element: helper.e(".control-theme-shadow-number"),
+    path: "theme.shadow",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 300,
+      step: 25
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-shadow-range"),
+      path: "theme.shadow",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      theme.render.shadow();
+    }
+  }, {
+    element: helper.e(".control-theme-shadow-default"),
+    type: "button",
+    func: function() {
+      mod.setValue("theme.shadow", helper.getObject({
+        object: state.get.default(),
+        path: "theme.shadow"
+      }));
+      theme.render.shadow();
+      render.update();
+    }
+  }, {
+    element: helper.e(".control-theme-shade-opacity-range"),
     path: "theme.shade.opacity",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-shade-opacity-number"),
+      path: "theme.shade.opacity",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      theme.render.shade.opacity();
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-theme-shade-opacity-number"),
+    path: "theme.shade.opacity",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-theme-shade-opacity-range"),
+      path: "theme.shade.opacity",
+      type: "range",
+      valueConvert: ["float"]
+    }],
     func: function() {
       theme.render.shade.opacity();
       render.class();
@@ -4439,17 +4801,6 @@ var control = (function() {
         path: "theme.shade.opacity"
       }));
       theme.render.shade.opacity();
-      render.update();
-    }
-  }, {
-    element: helper.e(".control-theme-shadow-default"),
-    type: "button",
-    func: function() {
-      mod.setValue("theme.shadow", helper.getObject({
-        object: state.get.default(),
-        path: "theme.shadow"
-      }));
-      theme.render.shadow();
       render.update();
     }
   }, {
@@ -4536,10 +4887,38 @@ var control = (function() {
       background.render.image();
     }
   }, {
-    element: helper.e(".control-background-image-opacity"),
+    element: helper.e(".control-background-image-opacity-range"),
     path: "background.image.opacity",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-background-image-opacity-number"),
+      path: "background.image.opacity",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      background.render.opacity();
+    }
+  }, {
+    element: helper.e(".control-background-image-opacity-number"),
+    path: "background.image.opacity",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-background-image-opacity-range"),
+      path: "background.image.opacity",
+      type: "range",
+      valueConvert: ["float"]
+    }],
     func: function() {
       background.render.opacity();
     }
@@ -4555,10 +4934,38 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-background-image-grayscale"),
+    element: helper.e(".control-background-image-grayscale-range"),
     path: "background.image.grayscale",
     type: "range",
     valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-background-image-grayscale-number"),
+      path: "background.image.grayscale",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      background.render.grayscale();
+    }
+  }, {
+    element: helper.e(".control-background-image-grayscale-number"),
+    path: "background.image.grayscale",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-background-image-grayscale-range"),
+      path: "background.image.grayscale",
+      type: "range",
+      valueConvert: ["float"]
+    }],
     func: function() {
       background.render.grayscale();
     }
@@ -4574,9 +4981,34 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-background-image-blur"),
+    element: helper.e(".control-background-image-blur-range"),
     path: "background.image.blur",
     type: "range",
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-background-image-blur-number"),
+      path: "background.image.blur",
+      type: "number"
+    }],
+    func: function() {
+      background.render.blur();
+    }
+  }, {
+    element: helper.e(".control-background-image-blur-number"),
+    path: "background.image.blur",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-background-image-blur-range"),
+      path: "background.image.blur",
+      type: "range"
+    }],
     func: function() {
       background.render.blur();
     }
@@ -4592,10 +5024,34 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-background-image-accent"),
+    element: helper.e(".control-background-image-accent-range"),
     path: "background.image.accent",
     type: "range",
-    valueConvert: ["float"],
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-background-image-accent-number"),
+      path: "background.image.accent",
+      type: "number"
+    }],
+    func: function() {
+      background.render.accent();
+    }
+  }, {
+    element: helper.e(".control-background-image-accent-number"),
+    path: "background.image.accent",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 100
+    },
+    mirrorElement: [{
+      element: helper.e(".control-background-image-accent-range"),
+      path: "background.image.accent",
+      type: "range"
+    }],
     func: function() {
       background.render.accent();
     }
@@ -4611,10 +5067,34 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-background-image-scale"),
+    element: helper.e(".control-background-image-scale-range"),
     path: "background.image.scale",
     type: "range",
-    valueConvert: ["float"],
+    valueModify: {
+      min: 100,
+      max: 300
+    },
+    mirrorElement: [{
+      element: helper.e(".control-background-image-scale-number"),
+      path: "background.image.scale",
+      type: "number"
+    }],
+    func: function() {
+      background.render.scale();
+    }
+  }, {
+    element: helper.e(".control-background-image-scale-number"),
+    path: "background.image.scale",
+    type: "number",
+    valueModify: {
+      min: 100,
+      max: 300
+    },
+    mirrorElement: [{
+      element: helper.e(".control-background-image-scale-range"),
+      path: "background.image.scale",
+      type: "range"
+    }],
     func: function() {
       background.render.scale();
     }
@@ -5698,48 +6178,48 @@ var control = (function() {
       if (state.get.current().background.image.show) {
         _disable.input(".control-background-image-from-file", false);
         _disable.input(".control-background-image-from-url", false);
-        _disable.element("[for=control-background-image-opacity]", false);
-        _disable.input(".control-background-image-opacity", false);
-        _disable.element(".control-background-image-opacity-count", false);
+        _disable.element("[for=control-background-image-opacity-range]", false);
+        _disable.input(".control-background-image-opacity-range", false);
+        _disable.input(".control-background-image-opacity-number", false);
         _disable.input(".control-background-image-opacity-default", false);
-        _disable.element("[for=control-background-image-blur]", false);
-        _disable.input(".control-background-image-blur", false);
-        _disable.element(".control-background-image-blur-count", false);
+        _disable.element("[for=control-background-image-blur-range]", false);
+        _disable.input(".control-background-image-blur-range", false);
+        _disable.input(".control-background-image-blur-number", false);
         _disable.input(".control-background-image-blur-default", false);
-        _disable.element("[for=control-background-image-grayscale]", false);
-        _disable.input(".control-background-image-grayscale", false);
-        _disable.element(".control-background-image-grayscale-count", false);
+        _disable.element("[for=control-background-image-grayscale-range]", false);
+        _disable.input(".control-background-image-grayscale-range", false);
+        _disable.input(".control-background-image-grayscale-number", false);
         _disable.input(".control-background-image-grayscale-default", false);
-        _disable.element("[for=control-background-image-accent]", false);
-        _disable.input(".control-background-image-accent", false);
-        _disable.element(".control-background-image-accent-count", false);
+        _disable.element("[for=control-background-image-accent-range]", false);
+        _disable.input(".control-background-image-accent-range", false);
+        _disable.input(".control-background-image-accent-number", false);
         _disable.input(".control-background-image-accent-default", false);
-        _disable.element("[for=control-background-image-scale]", false);
-        _disable.input(".control-background-image-scale", false);
-        _disable.element(".control-background-image-scale-count", false);
+        _disable.element("[for=control-background-image-scale-range]", false);
+        _disable.input(".control-background-image-scale-range", false);
+        _disable.input(".control-background-image-scale-number", false);
         _disable.input(".control-background-image-scale-default", false);
       } else {
         _disable.input(".control-background-image-from-file", true);
         _disable.input(".control-background-image-from-url", true);
-        _disable.element("[for=control-background-image-opacity]", true);
-        _disable.input(".control-background-image-opacity", true);
-        _disable.element(".control-background-image-opacity-count", true);
+        _disable.element("[for=control-background-image-opacity-range]", true);
+        _disable.input(".control-background-image-opacity-range", true);
+        _disable.input(".control-background-image-opacity-number", true);
         _disable.input(".control-background-image-opacity-default", true);
-        _disable.element("[for=control-background-image-blur]", true);
-        _disable.input(".control-background-image-blur", true);
-        _disable.element(".control-background-image-blur-count", true);
+        _disable.element("[for=control-background-image-blur-range]", true);
+        _disable.input(".control-background-image-blur-range", true);
+        _disable.input(".control-background-image-blur-number", true);
         _disable.input(".control-background-image-blur-default", true);
-        _disable.element("[for=control-background-image-grayscale]", true);
-        _disable.input(".control-background-image-grayscale", true);
-        _disable.element(".control-background-image-grayscale-count", true);
+        _disable.element("[for=control-background-image-grayscale-range]", true);
+        _disable.input(".control-background-image-grayscale-range", true);
+        _disable.input(".control-background-image-grayscale-number", true);
         _disable.input(".control-background-image-grayscale-default", true);
-        _disable.element("[for=control-background-image-accent]", true);
-        _disable.input(".control-background-image-accent", true);
-        _disable.element(".control-background-image-accent-count", true);
+        _disable.element("[for=control-background-image-accent-range]", true);
+        _disable.input(".control-background-image-accent-range", true);
+        _disable.input(".control-background-image-accent-number", true);
         _disable.input(".control-background-image-accent-default", true);
-        _disable.element("[for=control-background-image-scale]", true);
-        _disable.input(".control-background-image-scale", true);
-        _disable.element(".control-background-image-scale-count", true);
+        _disable.element("[for=control-background-image-scale-range]", true);
+        _disable.input(".control-background-image-scale-range", true);
+        _disable.input(".control-background-image-scale-number", true);
         _disable.input(".control-background-image-scale-default", true);
       };
       if (state.get.current().background.image.show && state.get.current().background.image.from == "file") {
