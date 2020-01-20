@@ -81,15 +81,15 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-theme-accent-rgb-quick"),
+    element: helper.e(".control-theme-accent-rgb-color"),
     path: "theme.accent.rgb",
     type: "color",
     mirrorElement: [{
-      element: helper.e(".control-theme-accent-rgb-picker"),
+      element: helper.e(".control-theme-accent-rgb-range"),
       path: "theme.accent.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-accent-rgb-hex"),
+      element: helper.e(".control-theme-accent-rgb-text"),
       path: "theme.accent.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -2123,11 +2123,11 @@ var control = (function() {
       render.dependents();
     }
   }, {
-    element: helper.e(".control-header-color-rgb-picker"),
+    element: helper.e(".control-header-color-rgb-range"),
     path: "header.color.rgb",
     type: "color",
     mirrorElement: [{
-      element: helper.e(".control-header-color-rgb-hex"),
+      element: helper.e(".control-header-color-rgb-text"),
       path: "header.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -2136,12 +2136,12 @@ var control = (function() {
       header.render.color.custom();
     }
   }, {
-    element: helper.e(".control-header-color-rgb-hex"),
+    element: helper.e(".control-header-color-rgb-text"),
     path: "header.color.rgb",
     type: "text",
     valueConvert: ["hexTextString"],
     mirrorElement: [{
-      element: helper.e(".control-header-color-rgb-picker"),
+      element: helper.e(".control-header-color-rgb-range"),
       path: "header.color.rgb",
       type: "color"
     }],
@@ -3255,11 +3255,11 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-link-item-color-rgb-picker"),
+    element: helper.e(".control-link-item-color-rgb-range"),
     path: "link.item.color.rgb",
     type: "color",
     mirrorElement: [{
-      element: helper.e(".control-link-item-color-rgb-hex"),
+      element: helper.e(".control-link-item-color-rgb-text"),
       path: "link.item.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -3268,12 +3268,12 @@ var control = (function() {
       link.render.item.color.custom();
     }
   }, {
-    element: helper.e(".control-link-item-color-rgb-hex"),
+    element: helper.e(".control-link-item-color-rgb-text"),
     path: "link.item.color.rgb",
     type: "text",
     valueConvert: ["hexTextString"],
     mirrorElement: [{
-      element: helper.e(".control-link-item-color-rgb-picker"),
+      element: helper.e(".control-link-item-color-rgb-range"),
       path: "link.item.color.rgb",
       type: "color"
     }],
@@ -3643,7 +3643,7 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-color-rgb-quick"),
+    element: helper.e(".control-theme-color-rgb-color"),
     path: "theme.color.rgb",
     type: "color",
     mirrorElement: [{
@@ -3695,11 +3695,11 @@ var control = (function() {
       path: "theme.color.rgb.b",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -3709,7 +3709,7 @@ var control = (function() {
       theme.render.color.shade();
     }
   }, {
-    element: helper.e(".control-theme-color-rgb-picker"),
+    element: helper.e(".control-theme-color-rgb-range"),
     path: "theme.color.rgb",
     type: "color",
     mirrorElement: [{
@@ -3761,12 +3761,12 @@ var control = (function() {
       path: "theme.color.rgb.b",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-quick"),
+      element: helper.e(".control-theme-color-rgb-color"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -3776,7 +3776,7 @@ var control = (function() {
       theme.render.color.shade();
     }
   }, {
-    element: helper.e(".control-theme-color-rgb-hex"),
+    element: helper.e(".control-theme-color-rgb-text"),
     path: "theme.color.rgb",
     type: "text",
     valueConvert: ["hexTextString"],
@@ -3829,12 +3829,12 @@ var control = (function() {
       path: "theme.color.rgb.b",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-quick"),
+      element: helper.e(".control-theme-color-rgb-color"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }],
@@ -3891,11 +3891,11 @@ var control = (function() {
       path: "theme.color.rgb.b",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -3941,11 +3941,11 @@ var control = (function() {
       path: "theme.color.rgb.b",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -3991,11 +3991,11 @@ var control = (function() {
       path: "theme.color.rgb.b",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4041,11 +4041,11 @@ var control = (function() {
       path: "theme.color.rgb.b",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4091,11 +4091,11 @@ var control = (function() {
       path: "theme.color.rgb.b",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4141,11 +4141,11 @@ var control = (function() {
       path: "theme.color.rgb.b",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4191,11 +4191,11 @@ var control = (function() {
       path: "theme.color.hsl.l",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4241,11 +4241,11 @@ var control = (function() {
       path: "theme.color.hsl.l",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4291,11 +4291,11 @@ var control = (function() {
       path: "theme.color.hsl.l",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4341,11 +4341,11 @@ var control = (function() {
       path: "theme.color.hsl.l",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4391,11 +4391,11 @@ var control = (function() {
       path: "theme.color.hsl.l",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4441,11 +4441,11 @@ var control = (function() {
       path: "theme.color.hsl.l",
       type: "number"
     }, {
-      element: helper.e(".control-theme-color-rgb-picker"),
+      element: helper.e(".control-theme-color-rgb-range"),
       path: "theme.color.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-color-rgb-hex"),
+      element: helper.e(".control-theme-color-rgb-text"),
       path: "theme.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4553,15 +4553,15 @@ var control = (function() {
       render.update();
     }
   }, {
-    element: helper.e(".control-theme-accent-rgb-picker"),
+    element: helper.e(".control-theme-accent-rgb-range"),
     path: "theme.accent.rgb",
     type: "color",
     mirrorElement: [{
-      element: helper.e(".control-theme-accent-rgb-quick"),
+      element: helper.e(".control-theme-accent-rgb-color"),
       path: "theme.accent.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-accent-rgb-hex"),
+      element: helper.e(".control-theme-accent-rgb-text"),
       path: "theme.accent.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4571,16 +4571,16 @@ var control = (function() {
       link.groupAndItems();
     }
   }, {
-    element: helper.e(".control-theme-accent-rgb-hex"),
+    element: helper.e(".control-theme-accent-rgb-text"),
     path: "theme.accent.rgb",
     type: "text",
     valueConvert: ["hexTextString"],
     mirrorElement: [{
-      element: helper.e(".control-theme-accent-rgb-quick"),
+      element: helper.e(".control-theme-accent-rgb-color"),
       path: "theme.accent.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-accent-rgb-picker"),
+      element: helper.e(".control-theme-accent-rgb-range"),
       path: "theme.accent.rgb",
       type: "color"
     }],
@@ -4647,15 +4647,15 @@ var control = (function() {
     element: helper.e(".control-theme-accent-randomise"),
     type: "button",
     mirrorElement: [{
-      element: helper.e(".control-theme-accent-rgb-quick"),
+      element: helper.e(".control-theme-accent-rgb-color"),
       path: "theme.accent.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-accent-rgb-picker"),
+      element: helper.e(".control-theme-accent-rgb-range"),
       path: "theme.accent.rgb",
       type: "color"
     }, {
-      element: helper.e(".control-theme-accent-rgb-hex"),
+      element: helper.e(".control-theme-accent-rgb-text"),
       path: "theme.accent.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4830,11 +4830,11 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: helper.e(".control-background-color-rgb-picker"),
+    element: helper.e(".control-background-color-rgb-range"),
     path: "background.color.rgb",
     type: "color",
     mirrorElement: [{
-      element: helper.e(".control-background-color-rgb-hex"),
+      element: helper.e(".control-background-color-rgb-text"),
       path: "background.color.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
@@ -4843,12 +4843,12 @@ var control = (function() {
       background.render.color.custom();
     }
   }, {
-    element: helper.e(".control-background-color-rgb-hex"),
+    element: helper.e(".control-background-color-rgb-text"),
     path: "background.color.rgb",
     type: "text",
     valueConvert: ["hexTextString"],
     mirrorElement: [{
-      element: helper.e(".control-background-color-rgb-picker"),
+      element: helper.e(".control-background-color-rgb-range"),
       path: "background.color.rgb",
       type: "color"
     }],
@@ -5783,8 +5783,8 @@ var control = (function() {
           _disable.element(".control-header-color-by-theme-helper", false);
           _disable.input(".control-header-color-by-custom", false);
           _disable.element(".control-header-color-by-custom-helper", false);
-          _disable.input(".control-header-color-rgb-picker", false);
-          _disable.input(".control-header-color-rgb-hex", false);
+          _disable.input(".control-header-color-rgb-range", false);
+          _disable.input(".control-header-color-rgb-text", false);
           _disable.element("[for=control-header-color-opacity-range]", false);
           _disable.input(".control-header-color-opacity-range", false);
           _disable.input(".control-header-color-opacity-number", false);
@@ -5800,8 +5800,8 @@ var control = (function() {
           _disable.element(".control-header-color-by-theme-helper", true);
           _disable.input(".control-header-color-by-custom", true);
           _disable.element(".control-header-color-by-custom-helper", true);
-          _disable.input(".control-header-color-rgb-picker", true);
-          _disable.input(".control-header-color-rgb-hex", true);
+          _disable.input(".control-header-color-rgb-range", true);
+          _disable.input(".control-header-color-rgb-text", true);
           _disable.element("[for=control-header-color-opacity-range]", true);
           _disable.input(".control-header-color-opacity-range", true);
           _disable.input(".control-header-color-opacity-number", true);
@@ -5810,11 +5810,11 @@ var control = (function() {
           _disable.element(".control-header-radius-helper", true);
         };
         if (state.get.current().header.color.show && state.get.current().header.color.by == "theme") {
-          _disable.input(".control-header-color-rgb-picker", true);
-          _disable.input(".control-header-color-rgb-hex", true);
+          _disable.input(".control-header-color-rgb-range", true);
+          _disable.input(".control-header-color-rgb-text", true);
         } else if (state.get.current().header.color.show && state.get.current().header.color.by == "custom") {
-          _disable.input(".control-header-color-rgb-picker", false);
-          _disable.input(".control-header-color-rgb-hex", false);
+          _disable.input(".control-header-color-rgb-range", false);
+          _disable.input(".control-header-color-rgb-text", false);
         };
       };
       var _button = function() {
@@ -6054,8 +6054,8 @@ var control = (function() {
       _disable.element(".control-link-item-color-by-theme-helper", true);
       _disable.input(".control-link-item-color-by-custom", true);
       _disable.element(".control-link-item-color-by-custom-helper", true);
-      _disable.input(".control-link-item-color-rgb-picker", true);
-      _disable.input(".control-link-item-color-rgb-hex", true);
+      _disable.input(".control-link-item-color-rgb-range", true);
+      _disable.input(".control-link-item-color-rgb-text", true);
       _disable.element("[for=control-link-item-border-range]", true);
       _disable.input(".control-link-item-border-range", true);
       _disable.input(".control-link-item-border-number", true);
@@ -6176,8 +6176,8 @@ var control = (function() {
           _disable.input(".control-link-item-display-gutter-default", false);
         };
         if (state.get.current().link.item.color.by == "custom") {
-          _disable.input(".control-link-item-color-rgb-picker", false);
-          _disable.input(".control-link-item-color-rgb-hex", false);
+          _disable.input(".control-link-item-color-rgb-range", false);
+          _disable.input(".control-link-item-color-rgb-text", false);
         };
       };
     };
@@ -6268,11 +6268,11 @@ var control = (function() {
         _disable.element(".control-background-image-url-helper", true);
       };
       if (state.get.current().background.color.by == "theme") {
-        _disable.input(".control-background-color-rgb-picker", true);
-        _disable.input(".control-background-color-rgb-hex", true);
+        _disable.input(".control-background-color-rgb-range", true);
+        _disable.input(".control-background-color-rgb-text", true);
       } else if (state.get.current().background.color.by == "custom") {
-        _disable.input(".control-background-color-rgb-picker", false);
-        _disable.input(".control-background-color-rgb-hex", false);
+        _disable.input(".control-background-color-rgb-range", false);
+        _disable.input(".control-background-color-rgb-text", false);
       };
     };
     _header();

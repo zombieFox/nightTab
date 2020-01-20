@@ -183,9 +183,7 @@ var keyboard = (function() {
       // ctrl+alt+r
       if (state.get.current().theme.accent.random.active && event.ctrlKey && event.altKey && event.keyCode == 82) {
         theme.accent.random();
-        theme.render.accent.input.quick();
-        theme.render.accent.input.picker();
-        theme.render.accent.input.hex();
+        control.render.update();
         link.groupAndItems();
         data.save();
       };
