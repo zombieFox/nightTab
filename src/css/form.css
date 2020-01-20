@@ -1021,14 +1021,17 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-input-button input[type="radio"]+label:after,
 .form-input-button input[type="color"]+label:after,
 .form-input-button input[type="file"]+label:after {
-  background: rgb(var(--button-border));
-  position: absolute;
   content: "";
+  background: rgb(var(--button-border));
+  border-radius: var(--theme-radius);
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: var(--layout-line-width);
+  height: 100%;
+  clip-path: polygon(0 calc(100% - var(--layout-line-width)), 100% calc(100% - var(--layout-line-width)), 100% 100%, 0% 100%);
   transition: background-color var(--layout-timing-extra-fast);
+  pointer-events: none;
 }
 
 .form-input-button input[type="checkbox"]:focus+label:after,
@@ -1335,6 +1338,10 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group .form-group-text,
 .form-group .button,
 .form-group .button:after,
+.form-group .form-input-button input[type="checkbox"]+label:after,
+.form-group .form-input-button input[type="radio"]+label:after,
+.form-group .form-input-button input[type="color"]+label:after,
+.form-group .form-input-button input[type="file"]+label:after,
 .form-group>select,
 .form-group>input[type="email"],
 .form-group>input[type="number"],
@@ -1389,6 +1396,10 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group .form-group-text:first-child,
 .form-group .button:first-child,
 .form-group .button:first-child:after,
+.form-group .form-input-button:first-child input[type="checkbox"]+label:after,
+.form-group .form-input-button:first-child input[type="radio"]+label:after,
+.form-group .form-input-button:first-child input[type="color"]+label:after,
+.form-group .form-input-button:first-child input[type="file"]+label:after,
 .form-group>select:first-child,
 .form-group>input[type="email"]:first-child,
 .form-group>input[type="number"]:first-child,
@@ -1404,6 +1415,10 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group .form-group-text:last-child,
 .form-group .button:last-child,
 .form-group .button:last-child:after,
+.form-group .form-input-button:last-child input[type="checkbox"]+label:after,
+.form-group .form-input-button:last-child input[type="radio"]+label:after,
+.form-group .form-input-button:last-child input[type="color"]+label:after,
+.form-group .form-input-button:last-child input[type="file"]+label:after,
 .form-group>select:last-child,
 .form-group>input[type="email"]:last-child,
 .form-group>input[type="number"]:last-child,
@@ -1432,7 +1447,7 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-group.form-group-nested-button * .button,
-.form-group.form-group-nested-button *:first-child .button:after,
+.form-group.form-group-nested-button * .button:after,
 .form-group.form-group-nested-button * input[type="checkbox"]+label,
 .form-group.form-group-nested-button * input[type="radio"]+label,
 .form-group.form-group-nested-button * input[type="color"]+label {
