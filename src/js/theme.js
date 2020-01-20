@@ -1363,17 +1363,6 @@ var theme = (function() {
       var html = helper.e("html");
       var color = state.get.current().theme.accent.rgb;
       html.style.setProperty("--theme-accent", color.r + ", " + color.g + ", " + color.b);
-    },
-    input: {
-      quick: function() {
-        helper.e(".control-theme-accent-rgb-quick").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.rgb);
-      },
-      picker: function() {
-        helper.e(".control-theme-accent-rgb-picker").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.rgb);
-      },
-      hex: function() {
-        helper.e(".control-theme-accent-rgb-hex").value = helper.convertColor.rgb.hex(state.get.current().theme.accent.rgb);
-      }
     }
   };
 
@@ -1419,35 +1408,6 @@ var theme = (function() {
         });
         renderShade("--theme-shade-pos-", i, rgb);
       };
-    },
-    input: {
-      quick: function() {
-        helper.e(".control-theme-color-rgb-quick").value = helper.convertColor.rgb.hex(state.get.current().theme.color.rgb);
-      },
-      picker: function() {
-        helper.e(".control-theme-color-rgb-picker").value = helper.convertColor.rgb.hex(state.get.current().theme.color.rgb);
-      },
-      hex: function() {
-        helper.e(".control-theme-color-rgb-hex").value = helper.convertColor.rgb.hex(state.get.current().theme.color.rgb);
-      },
-      range: {
-        hsl: function() {
-          helper.e(".control-theme-color-hsl-h").value = state.get.current().theme.color.hsl.h;
-          helper.e(".control-theme-color-hsl-s").value = state.get.current().theme.color.hsl.s;
-          helper.e(".control-theme-color-hsl-l").value = state.get.current().theme.color.hsl.l;
-          helper.e(".control-theme-color-hsl-h-count").textContent = state.get.current().theme.color.hsl.h;
-          helper.e(".control-theme-color-hsl-s-count").textContent = state.get.current().theme.color.hsl.s;
-          helper.e(".control-theme-color-hsl-l-count").textContent = state.get.current().theme.color.hsl.l;
-        },
-        rgb: function() {
-          helper.e(".control-theme-color-rgb-r").value = state.get.current().theme.color.rgb.r;
-          helper.e(".control-theme-color-rgb-g").value = state.get.current().theme.color.rgb.g;
-          helper.e(".control-theme-color-rgb-b").value = state.get.current().theme.color.rgb.b;
-          helper.e(".control-theme-color-rgb-r-count").textContent = state.get.current().theme.color.rgb.r;
-          helper.e(".control-theme-color-rgb-g-count").textContent = state.get.current().theme.color.rgb.g;
-          helper.e(".control-theme-color-rgb-b-count").textContent = state.get.current().theme.color.rgb.b;
-        }
-      }
     }
   };
 

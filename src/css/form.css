@@ -50,6 +50,10 @@
   display: inline-block;
 }
 
+.form-inline .form-inline {
+  margin: 0;
+}
+
 .form-inline-spacer>*.form-wrap:not(:last-child) {
   margin-right: calc(var(--form-wrap-space) * 3);
 }
@@ -1323,10 +1327,14 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group .form-wrap {
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: var(--form-wrap-space);
+  display: flex;
+  align-items: center;
 }
 
 .form-group .form-group-text,
 .form-group .button,
+.form-group .button:after,
 .form-group>select,
 .form-group>input[type="email"],
 .form-group>input[type="number"],
@@ -1344,10 +1352,6 @@ input[type="range"]:disabled::-moz-range-progress {
   flex-shrink: 1;
   flex-basis: auto;
   z-index: 1;
-}
-
-.form-group .button:after {
-  border-radius: 0;
 }
 
 .form-group .form-group-text {
@@ -1453,6 +1457,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group .form-group-radius-left.form-group-text,
 .form-group .form-group-radius-left.button,
+.form-group .form-group-radius-left.button:after,
 .form-group>select.form-group-radius-left,
 .form-group>input.form-group-radius-left[type="email"],
 .form-group>input.form-group-radius-left[type="number"],
@@ -1468,6 +1473,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group .form-group-radius-right.form-group-text,
 .form-group .form-group-radius-right.button,
+.form-group .form-group-radius-right.button:after,
 .form-group>select.form-group-radius-right,
 .form-group>input.form-group-radius-right[type="email"],
 .form-group>input.form-group-radius-right[type="number"],
