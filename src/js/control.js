@@ -5027,6 +5027,7 @@ var control = (function() {
     element: helper.e(".control-background-image-accent-range"),
     path: "background.image.accent",
     type: "range",
+    valueConvert: ["float"],
     valueModify: {
       min: 0,
       max: 100
@@ -5034,7 +5035,8 @@ var control = (function() {
     mirrorElement: [{
       element: helper.e(".control-background-image-accent-number"),
       path: "background.image.accent",
-      type: "number"
+      type: "number",
+      valueConvert: ["float"]
     }],
     func: function() {
       background.render.accent();
@@ -5043,6 +5045,7 @@ var control = (function() {
     element: helper.e(".control-background-image-accent-number"),
     path: "background.image.accent",
     type: "number",
+    valueConvert: ["float"],
     valueModify: {
       min: 0,
       max: 100
@@ -5050,7 +5053,8 @@ var control = (function() {
     mirrorElement: [{
       element: helper.e(".control-background-image-accent-range"),
       path: "background.image.accent",
-      type: "range"
+      type: "range",
+      valueConvert: ["float"]
     }],
     func: function() {
       background.render.accent();
@@ -5070,14 +5074,16 @@ var control = (function() {
     element: helper.e(".control-background-image-scale-range"),
     path: "background.image.scale",
     type: "range",
+    valueConvert: ["float"],
     valueModify: {
       min: 100,
-      max: 300
+      max: 1000
     },
     mirrorElement: [{
       element: helper.e(".control-background-image-scale-number"),
       path: "background.image.scale",
-      type: "number"
+      type: "number",
+      valueConvert: ["float"]
     }],
     func: function() {
       background.render.scale();
@@ -5086,14 +5092,16 @@ var control = (function() {
     element: helper.e(".control-background-image-scale-number"),
     path: "background.image.scale",
     type: "number",
+    valueConvert: ["float"],
     valueModify: {
       min: 100,
-      max: 300
+      max: 1000
     },
     mirrorElement: [{
       element: helper.e(".control-background-image-scale-range"),
       path: "background.image.scale",
-      type: "range"
+      type: "range",
+      valueConvert: ["float"]
     }],
     func: function() {
       background.render.scale();
