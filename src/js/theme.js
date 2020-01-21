@@ -139,9 +139,9 @@ var theme = (function() {
           object: state.get.current(),
           path: "theme.accent.rgb",
           newValue: {
-            r: parseInt(rgb.r, 10),
-            g: parseInt(rgb.g, 10),
-            b: parseInt(rgb.b, 10)
+            r: Math.round(rgb.r),
+            g: Math.round(rgb.g),
+            b: Math.round(rgb.b)
           }
         });
       };
@@ -155,9 +155,9 @@ var theme = (function() {
         object: state.get.current(),
         path: "theme.color.hsl",
         newValue: {
-          h: parseInt(hsl.h, 10),
-          s: parseInt(hsl.s, 10),
-          l: parseInt(hsl.l, 10)
+          h: Math.round(hsl.h),
+          s: Math.round(hsl.s),
+          l: Math.round(hsl.l)
         }
       });
     },
@@ -167,9 +167,9 @@ var theme = (function() {
         object: state.get.current(),
         path: "theme.color.rgb",
         newValue: {
-          r: parseInt(rgb.r, 10),
-          g: parseInt(rgb.g, 10),
-          b: parseInt(rgb.b, 10)
+          r: Math.round(rgb.r),
+          g: Math.round(rgb.g),
+          b: Math.round(rgb.b)
         }
       });
     }
@@ -1381,7 +1381,7 @@ var theme = (function() {
           } else if (rgb[key] > 255) {
             rgb[key] = 255;
           };
-          rgb[key] = parseInt(rgb[key], 10);
+          rgb[key] = Math.round(rgb[key]);
         };
         if (index < 10) {
           index = "0" + index;
@@ -1550,7 +1550,7 @@ var theme = (function() {
           } else if (rgb[colorKey] > 255) {
             rgb[colorKey] = 255;
           };
-          rgb[colorKey] = parseInt(rgb[colorKey], 10);
+          rgb[colorKey] = Math.round(rgb[colorKey]);
         };
         var themePresetBackground = helper.node("span|class:theme-preset-background-0" + i);
         themePresetBackground.style.setProperty("background-color", "rgb(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ")");
@@ -1633,7 +1633,7 @@ var theme = (function() {
               } else if (rgb[colorKey] > 255) {
                 rgb[colorKey] = 255;
               };
-              rgb[colorKey] = parseInt(rgb[colorKey], 10);
+              rgb[colorKey] = Math.round(rgb[colorKey]);
             };
             var themeCustomBackground = helper.node("span|class:theme-custom-background-0" + i);
             themeCustomBackground.style.setProperty("background-color", "rgb(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ")");
