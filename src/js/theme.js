@@ -1705,22 +1705,40 @@ var theme = (function() {
         options = helper.applyOptions(options, override);
       };
       var form = helper.node("form|class:group-form");
-      var fieldset = helper.node("fieldset");
-      var inputWrap = helper.node("div|class:form-wrap");
-      var label = helper.node("label:Name|for:theme-name");
-      var input = helper.node("input|id:theme-name,class:theme-name mb-0,type:text,tabindex:1,placeholder:Example theme,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
-      inputWrap.appendChild(label);
-      inputWrap.appendChild(input);
-      fieldset.appendChild(inputWrap);
-      form.appendChild(fieldset);
+
+      var nameFieldset = helper.node("fieldset");
+      var nameFormWrap = helper.node("div|class:form-wrap");
+      var nameLabel = helper.node("label:Name|for:theme-name");
+      var nameInput = helper.node("input|id:theme-name,class:theme-name mb-0,type:text,tabindex:1,placeholder:Example theme,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+
+      var randomFormWrap = helper.node("div|class:form-wrap");
+      var randomButton = helper.node("button:Random Theme name|class:button,type:button,tabindex:1");
+
+      randomFormWrap.appendChild(randomButton);
+
+      nameFormWrap.appendChild(nameLabel);
+      nameFormWrap.appendChild(nameInput);
+      nameFieldset.appendChild(nameFormWrap);
+      nameFieldset.appendChild(randomFormWrap);
+
+      form.appendChild(nameFieldset);
 
       if (options.useStagedTheme) {
-        input.value = stagedThemeCustom.theme.name;
+        nameInput.value = stagedThemeCustom.theme.name;
       };
 
-      input.addEventListener("input", function() {
+      nameInput.addEventListener("input", function() {
         stagedThemeCustom.theme.name = this.value;
       }, false);
+
+      randomButton.addEventListener("click", function(event) {
+        var randomName = helper.randomString({
+          mix: true
+        });
+        stagedThemeCustom.theme.name = randomName;
+        nameInput.value = randomName;
+      }, false);
+
       form.addEventListener("keydown", function(event) {
         if (event.keyCode == 13) {
           event.preventDefault();
