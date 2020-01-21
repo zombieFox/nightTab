@@ -66,12 +66,12 @@ var helper = (function() {
       f: ["Falcon", "Ferret", "Finch", "Fish", "Flamingo", "Fly", "Fox", "Frog"],
       g: ["Gaur", "Gazelle", "Gerbil", "Giant Panda", "Giraffe", "Gnat", "Gnu", "Goat", "Goose", "Goldfinch", "Goldfish", "Gorilla", "Goshawk", "Grasshopper", "Grouse", "Guanaco", "Guinea Fowl", "Guinea Pig", "Gull"],
       h: ["Hamster", "Hare", "Hawk", "Hedgehog", "Heron", "Herring", "Hippopotamus", "Hornet", "Horse", "Human", "Hummingbird", "Hyena"],
-      i: ["Ibex", "Ibis"],
+      i: ["Ibex", "Ibis", "Iguana", "Impala", "Isopod"],
       j: ["Jackal", "Jaguar", "Jay", "Jellyfish"],
       k: ["Kangaroo", "Kingfisher", "Koala", "Komodo Dragon", "Kookabura", "Kouprey", "Kudu"],
       l: ["Lapwing", "Lark", "Lemur", "Leopard", "Lima", "Lion", "Llama", "Lobster", "Locust", "Loris", "Louse", "Lyrebird"],
       m: ["Magpie", "Mallard", "Manatee", "Mandrill", "Mantis", "Marten", "Meerkat", "Mink", "Mole", "Mongoose", "Monkey", "Moose", "Mouse", "Mosquito", "Mule"],
-      n: ["Narwhal", "Newt", "Nightingale"],
+      n: ["Narwhal", "Newt", "Nightingale", "Nyala"],
       o: ["Octopus", "Okapi", "Opossum", "Oryx", "Ostrich", "Otter", "Owl", "Ox", "Oyster"],
       p: ["Panther", "Parrot", "Partridge", "Peafowl", "Pelican", "Penguin", "Pheasant", "Pig", "Pigeon", "Polar Bear", "Pony", "Porcupine", "Porpoise"],
       q: ["Quail", "Quelea", "Quetzal"],
@@ -79,11 +79,11 @@ var helper = (function() {
       s: ["Salamander", "Salmon", "Sand Dollar", "Sandpiper", "Sardine", "Scorpion", "Sea Lion", "Sea Urchin", "Seahorse", "Seal", "Shark", "Sheep", "Shrew", "Skunk", "Snail", "Snake", "Sparrow", "Spider", "Spoonbill", "Squid", "Squirrel", "Starling", "Stingray", "Stinkbug", "Stork", "Swallow", "Swan"],
       t: ["Tapir", "Tarsier", "Termite", "Tiger", "Toad", "Trout", "Turkey", "Turtle"],
       u: ["Uakari", "Unau", "Urial", "Urchin", "Umbrellabird", "Unicornfish", "Uromastyx", "Uguisu"],
-      v: ["Vicuña", "Viper", "Vulture"],
+      v: ["Vampire Bat", "Viper", "Vole", "Vulture"],
       w: ["Wallaby", "Walrus", "Wasp", "Weasel", "Whale", "Wolf", "Wolverine", "Wombat", "Woodcock", "Woodpecker", "Worm", "Wren"],
       x: ["Xaviers Greenbul", "Xeme", "Xingu Corydoras", "Xolo"],
       y: ["Yabby", "Yak", "Yellowhammer", "Yellowjacket"],
-      z: ["Zebra", "Zebu"],
+      z: ["Zebra", "Zebu", "Zokor", "Zorilla"],
     };
     var seed;
     var mix = function() {
