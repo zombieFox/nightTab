@@ -214,6 +214,8 @@
   --form-ring-accent:                                   0 0 0 var(--layout-line-width) rgb(var(--theme-accent)),
                                                         0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
   --form-wrap-space:                                    0.75em;
+  /* menu */
+  --menu-space:                                         0.75em;
   /* button */
   --button-background:                                  var(--theme-color-02);
   --button-background-focus-hover:                      var(--theme-color-03);
