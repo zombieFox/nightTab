@@ -49,6 +49,12 @@ var control = (function() {
       menu.nav(this.element, helper.e(".menu-content-area-data"));
     }
   }, {
+    element: helper.e(".control-menu-coffee"),
+    type: "button",
+    func: function() {
+      menu.nav(this.element, helper.e(".menu-content-area-coffee"));
+    }
+  }, {
     element: helper.e(".control-menu-nightTab"),
     type: "button",
     func: function() {
