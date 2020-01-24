@@ -102,7 +102,7 @@
   --link-item-display-translate-x:                      0em;
   --link-item-display-translate-y:                      0em;
   --link-item-display-name-size:                        0.9em;
-  --link-item-border:                                   1;
+  --link-item-border:                                   0;
   /* layout */
   --layout-size:                                        1;
   --layout-width:                                       80%;
