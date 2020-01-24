@@ -27,3 +27,21 @@
 .is-layout-alignment-vertical-bottom body {
   justify-content: flex-end;
 }
+
+html.is-layout-scrollbars-auto,
+.is-layout-scrollbars-auto body,
+.is-layout-scrollbars-auto * {
+  scrollbar-width: auto;
+}
+
+html.is-layout-scrollbars-thin,
+.is-layout-scrollbars-thin body,
+.is-layout-scrollbars-thin * {
+  scrollbar-width: thin;
+}
+
+html.is-layout-scrollbars-none,
+.is-layout-scrollbars-none body,
+.is-layout-scrollbars-none * {
+  scrollbar-width: none;
+}

@@ -573,6 +573,27 @@ var control = (function() {
       header.render.color.scrolling();
     }
   }, {
+    element: helper.e(".control-layout-scrollbars-auto"),
+    path: "layout.scrollbars",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-layout-scrollbars-thin"),
+    path: "layout.scrollbars",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: helper.e(".control-layout-scrollbars-none"),
+    path: "layout.scrollbars",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
     element: helper.e(".control-header-area-width-range"),
     path: "header.area.width",
     type: "range",
@@ -5570,8 +5591,12 @@ var control = (function() {
       helper.removeClass(html, "is-layout-alignment-bottomright");
       helper.removeClass(html, "is-layout-order-headerlink");
       helper.removeClass(html, "is-layout-order-linkheader");
+      helper.removeClass(html, "is-layout-scrollbars-auto");
+      helper.removeClass(html, "is-layout-scrollbars-thin");
+      helper.removeClass(html, "is-layout-scrollbars-none");
       helper.addClass(html, "is-layout-alignment-" + state.get.current().layout.alignment);
       helper.addClass(html, "is-layout-order-" + state.get.current().layout.order);
+      helper.addClass(html, "is-layout-scrollbars-" + state.get.current().layout.scrollbars);
       if (state.get.current().layout.scrollPastEnd) {
         helper.addClass(html, "is-layout-scrollpastend");
       };

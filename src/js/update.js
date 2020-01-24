@@ -801,6 +801,10 @@ var update = (function() {
         b: 0
       };
       return data;
+    },
+    "4.33.0": function(data) {
+      data.state.layout.scrollbars = "auto";
+      return data;
     }
   };
 

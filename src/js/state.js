@@ -223,6 +223,7 @@ var state = (function() {
       size: 1,
       width: 80,
       scrollPastEnd: false,
+      scrollbars: "auto",
       title: "New Tab"
     },
     theme: {
