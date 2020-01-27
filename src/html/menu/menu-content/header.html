@@ -1,0 +1,684 @@
+<div class="menu-content-area menu-content-area-header is-hidden">
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Area</h1>
+    </div>
+    <div class="menu-item-form">
+      <div class="form-wrap">
+        <label for="control-header-area-width-range">Width</label>
+        <div class="form-group form-group-block">
+          <input id="control-header-area-width-range" class="control-header-area-width-range mr-3" type="range" value="0" tabindex="-1">
+          <input class="control-header-area-width-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          <button class="control-header-area-width-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+        </div>
+      </div>
+      <div class="form-wrap">
+        <button class="control-header-area-width-match button" tabindex="-1">Match Bookmarks Area</button>
+      </div>
+      <div class="form-helper">
+        <p class="control-header-area-width-helper form-helper-item">Max width is defined by Layout Area Width.</p>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <div class="form-wrap">
+          <label class="control-header-area-alignment-label">Area horizontal alignment</label>
+        </div>
+        <div class="form-wrap">
+          <div class="form-grid form-grid-3x1 control-header-area-alignment-grid">
+            <div class="form-wrap">
+              <input id="control-header-area-alignment-left" class="control-header-area-alignment-left" type="radio" name="control-header-area-alignment" value="left" tabindex="-1">
+              <label for="control-header-area-alignment-left"><span class="label-icon"></span> <span class="sr-only">Left</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="control-header-area-alignment-center" class="control-header-area-alignment-center" type="radio" name="control-header-area-alignment" value="center" tabindex="-1">
+              <label for="control-header-area-alignment-center"><span class="label-icon"></span> <span class="sr-only">Center</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="control-header-area-alignment-right" class="control-header-area-alignment-right" type="radio" name="control-header-area-alignment" value="right" tabindex="-1">
+              <label for="control-header-area-alignment-right"><span class="label-icon"></span> <span class="sr-only">Right</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-helper">
+        <p class="control-header-area-alignment-helper form-helper-item">Effects may not be visible if the Header Area is full width.</p>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <div class="form-wrap">
+          <label class="control-header-item-alignment-label">Item horizontal alignment</label>
+        </div>
+        <div class="form-wrap">
+          <div class="form-grid form-grid-3x1 control-header-item-alignment-grid">
+            <div class="form-wrap">
+              <input id="control-header-item-alignment-left" class="control-header-item-alignment-left" type="radio" name="control-header-item-alignment" value="left" tabindex="-1">
+              <label for="control-header-item-alignment-left"><span class="label-icon"></span> <span class="sr-only">Left</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="control-header-item-alignment-center" class="control-header-item-alignment-center" type="radio" name="control-header-item-alignment" value="center" tabindex="-1">
+              <label for="control-header-item-alignment-center"><span class="label-icon"></span> <span class="sr-only">Center</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="control-header-item-alignment-right" class="control-header-item-alignment-right" type="radio" name="control-header-item-alignment" value="right" tabindex="-1">
+              <label for="control-header-item-alignment-right"><span class="label-icon"></span> <span class="sr-only">Right</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-helper">
+        <p class="control-header-item-alignment-helper form-helper-item">Effects may not be visible if the Search box size is set to Auto and grows to fill available space.</p>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Greeting</h1>
+    </div>
+    <div class="menu-item-form">
+      <div class="form-wrap">
+        <input id="control-header-greeting-show" class="control-header-greeting-show" type="checkbox" tabindex="-1">
+        <label for="control-header-greeting-show"><span class="label-icon"></span> Show</label>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <input id="control-header-greeting-type-good" class="control-header-greeting-type-good" type="radio" name="control-header-greeting-type" value="good" tabindex="-1">
+            <label for="control-header-greeting-type-good"><span class="label-icon"></span> "Good morning..."</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-greeting-type-hello" class="control-header-greeting-type-hello" type="radio" name="control-header-greeting-type" value="hello" tabindex="-1">
+            <label for="control-header-greeting-type-hello"><span class="label-icon"></span> "Hello..."</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-greeting-type-hi" class="control-header-greeting-type-hi" type="radio" name="control-header-greeting-type" value="hi" tabindex="-1">
+            <label for="control-header-greeting-type-hi"><span class="label-icon"></span> "Hi..."</label>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <label for="control-header-greeting-name">Name</label>
+            <input id="control-header-greeting-name" class="control-header-greeting-name" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Nickname, alias or superhero name" tabindex="-1">
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <label for="control-header-greeting-size-range">Size</label>
+            <div class="form-group form-group-block">
+              <input id="control-header-greeting-size-range" class="control-header-greeting-size-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-header-greeting-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+              <button class="control-header-greeting-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Transitional words</h1>
+    </div>
+    <div class="menu-item-form">
+      <div class="form-wrap">
+        <input id="control-header-transitional-show" class="control-header-transitional-show" type="checkbox" tabindex="-1">
+        <label for="control-header-transitional-show"><span class="label-icon"></span> Show</label>
+      </div>
+      <div class="form-helper">
+        <p class="control-header-transitional-show-helper form-helper-item">Available when Date or Time is shown.</p>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <input id="control-header-transitional-type-timeanddate" class="control-header-transitional-type-timeanddate" type="radio" name="control-header-transitional-type" value="timeanddate" tabindex="-1">
+            <label for="control-header-transitional-type-timeanddate"><span class="label-icon"></span> "The time and date is"</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-transitional-type-its" class="control-header-transitional-type-its" type="radio" name="control-header-transitional-type" value="its" tabindex="-1">
+            <label for="control-header-transitional-type-its"><span class="label-icon"></span> "It's"</label>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <label for="control-header-transitional-size-range">Size</label>
+            <div class="form-group form-group-block">
+              <input id="control-header-transitional-size-range" class="control-header-transitional-size-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-header-transitional-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+              <button class="control-header-transitional-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Clock</h1>
+    </div>
+    <div class="menu-item-form">
+      <div class="form-wrap">
+        <input id="control-header-clock-hours-show" class="control-header-clock-hours-show" type="checkbox" tabindex="-1">
+        <label for="control-header-clock-hours-show"><span class="label-icon"></span> Hours</label>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <input id="control-header-clock-hours-display-number" class="control-header-clock-hours-display-number" type="radio" name="control-header-clock-hours" value="number" tabindex="-1">
+            <label for="control-header-clock-hours-display-number"><span class="label-icon"></span> As number</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-clock-hours-display-word" class="control-header-clock-hours-display-word" type="radio" name="control-header-clock-hours" value="word" tabindex="-1">
+            <label for="control-header-clock-hours-display-word"><span class="label-icon"></span> As word</label>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-clock-minutes-show" class="control-header-clock-minutes-show" type="checkbox" tabindex="-1">
+        <label for="control-header-clock-minutes-show"><span class="label-icon"></span> Minutes</label>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <input id="control-header-clock-minutes-display-number" class="control-header-clock-minutes-display-number" type="radio" name="control-header-clock-minutes" value="number" tabindex="-1">
+            <label for="control-header-clock-minutes-display-number"><span class="label-icon"></span> As number</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-clock-minutes-display-word" class="control-header-clock-minutes-display-word" type="radio" name="control-header-clock-minutes" value="word" tabindex="-1">
+            <label for="control-header-clock-minutes-display-word"><span class="label-icon"></span> As word</label>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-clock-seconds-show" class="control-header-clock-seconds-show" type="checkbox" tabindex="-1">
+        <label for="control-header-clock-seconds-show"><span class="label-icon"></span> Seconds</label>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <input id="control-header-clock-seconds-display-number" class="control-header-clock-seconds-display-number" type="radio" name="control-header-clock-seconds" value="number" tabindex="-1">
+            <label for="control-header-clock-seconds-display-number"><span class="label-icon"></span> As number</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-clock-seconds-display-word" class="control-header-clock-seconds-display-word" type="radio" name="control-header-clock-seconds" value="word" tabindex="-1">
+            <label for="control-header-clock-seconds-display-word"><span class="label-icon"></span> As word</label>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-clock-separator-show" class="control-header-clock-separator-show" type="checkbox" tabindex="-1">
+        <label for="control-header-clock-separator-show"><span class="label-icon"></span> Separators</label>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-clock-hour24-show" class="control-header-clock-hour24-show" type="checkbox" tabindex="-1">
+        <label for="control-header-clock-hour24-show"><span class="label-icon"></span> 24 Hours</label>
+      </div>
+      <div class="form-wrap">
+        <input id="control-header-clock-meridiem-show" class="control-header-clock-meridiem-show" type="checkbox" tabindex="-1">
+        <label for="control-header-clock-meridiem-show"><span class="label-icon"></span> AM/PM</label>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <label for="control-header-clock-size-range">Size</label>
+        <div class="form-group form-group-block">
+          <input id="control-header-clock-size-range" class="control-header-clock-size-range mr-3" type="range" value="0" tabindex="-1">
+          <input class="control-header-clock-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          <button class="control-header-clock-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Date</h1>
+    </div>
+    <div class="menu-item-form">
+      <div class="form-wrap">
+        <input id="control-header-date-day-show" class="control-header-date-day-show" type="checkbox" tabindex="-1">
+        <label for="control-header-date-day-show"><span class="label-icon"></span> Day</label>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <input id="control-header-date-day-display-number" class="control-header-date-day-display-number" type="radio" name="control-header-date-day-display" value="number" tabindex="-1">
+            <label for="control-header-date-day-display-number"><span class="label-icon"></span> As number</label>
+          </div>
+          <div class="form-wrap">
+            <div class="form-indent">
+              <div class="form-wrap">
+                <label class="control-header-date-day-week-start-label">Start of the week</label>
+              </div>
+              <div class="form-wrap">
+                <input id="control-header-date-day-week-start-monday" class="control-header-date-day-week-start-monday" type="radio" name="control-header-date-day-week-start" value="monday" tabindex="-1">
+                <label for="control-header-date-day-week-start-monday"><span class="label-icon"></span> Monday</label>
+              </div>
+              <div class="form-wrap">
+                <input id="control-header-date-day-week-start-sunday" class="control-header-date-day-week-start-sunday" type="radio" name="control-header-date-day-week-start" value="sunday" tabindex="-1">
+                <label for="control-header-date-day-week-start-sunday"><span class="label-icon"></span> Sunday</label>
+              </div>
+              <div class="form-helper">
+                <p class="control-header-date-day-week-start-helper form-helper-item">Define what day "1" represents, either Monday or Sunday.</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-date-day-display-word" class="control-header-date-day-display-word" type="radio" name="control-header-date-day-display" value="word" tabindex="-1">
+            <label for="control-header-date-day-display-word"><span class="label-icon"></span> As word</label>
+          </div>
+          <div class="form-wrap">
+            <div class="form-indent">
+              <div class="form-wrap">
+                <label class="control-header-date-day-length-label">Word length</label>
+              </div>
+              <div class="form-wrap">
+                <input id="control-header-date-day-length-long" class="control-header-date-day-length-long" type="radio" name="control-header-date-day-length" value="long" tabindex="-1">
+                <label for="control-header-date-day-length-long"><span class="label-icon"></span> Long</label>
+              </div>
+              <div class="form-wrap">
+                <input id="control-header-date-day-length-short" class="control-header-date-day-length-short" type="radio" name="control-header-date-day-length" value="short" tabindex="-1">
+                <label for="control-header-date-day-length-short"><span class="label-icon"></span> Short</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-date-date-show" class="control-header-date-date-show" type="checkbox" tabindex="-1">
+        <label for="control-header-date-date-show"><span class="label-icon"></span> Date</label>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <input id="control-header-date-date-display-number" class="control-header-date-date-display-number" type="radio" name="control-header-date-date-display" value="number" tabindex="-1">
+            <label for="control-header-date-date-display-number"><span class="label-icon"></span> As number</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-date-date-display-word" class="control-header-date-date-display-word" type="radio" name="control-header-date-date-display" value="word" tabindex="-1">
+            <label for="control-header-date-date-display-word"><span class="label-icon"></span> As word</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-date-date-ordinal" class="control-header-date-date-ordinal" type="checkbox" tabindex="-1">
+            <label for="control-header-date-date-ordinal"><span class="label-icon"></span> Ordinal numbers</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-date-date-ordinal-helper form-helper-item">Display Date as 1st, 2nd, 3rd, 4th etc.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-date-month-show" class="control-header-date-month-show" type="checkbox" tabindex="-1">
+        <label for="control-header-date-month-show"><span class="label-icon"></span> Month</label>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <input id="control-header-date-month-display-number" class="control-header-date-month-display-number" type="radio" name="control-header-date-month-display" value="number" tabindex="-1">
+            <label for="control-header-date-month-display-number"><span class="label-icon"></span> As number</label>
+          </div>
+          <div class="form-wrap">
+            <div class="form-indent">
+              <div class="form-wrap">
+                <input id="control-header-date-month-ordinal" class="control-header-date-month-ordinal" type="checkbox" tabindex="-1">
+                <label for="control-header-date-month-ordinal"><span class="label-icon"></span> Ordinal numbers</label>
+              </div>
+              <div class="form-helper">
+                <p class="control-header-date-month-ordinal-helper form-helper-item">Display Month as 1st, 2nd, 3rd, 4th etc.</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-date-month-display-word" class="control-header-date-month-display-word" type="radio" name="control-header-date-month-display" value="word" tabindex="-1">
+            <label for="control-header-date-month-display-word"><span class="label-icon"></span> As word</label>
+          </div>
+          <div class="form-wrap">
+            <div class="form-indent">
+              <div class="form-wrap">
+                <label class="control-header-date-month-length-label">Word length</label>
+              </div>
+              <div class="form-wrap">
+                <input id="control-header-date-month-length-long" class="control-header-date-month-length-long" type="radio" name="control-header-date-month-length" value="long" tabindex="-1">
+                <label for="control-header-date-month-length-long"><span class="label-icon"></span> Long</label>
+              </div>
+              <div class="form-wrap">
+                <input id="control-header-date-month-length-short" class="control-header-date-month-length-short" type="radio" name="control-header-date-month-length" value="short" tabindex="-1">
+                <label for="control-header-date-month-length-short"><span class="label-icon"></span> Short</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-date-year-show" class="control-header-date-year-show" type="checkbox" tabindex="-1">
+        <label for="control-header-date-year-show"><span class="label-icon"></span> Year</label>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <input id="control-header-date-year-display-number" class="control-header-date-year-display-number" type="radio" name="control-header-date-year-display" value="number" tabindex="-1">
+            <label for="control-header-date-year-display-number"><span class="label-icon"></span> As number</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-date-year-display-word" class="control-header-date-year-display-word" type="radio" name="control-header-date-year-display" value="word" tabindex="-1">
+            <label for="control-header-date-year-display-word"><span class="label-icon"></span> As word</label>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-date-separator-show" class="control-header-date-separator-show" type="checkbox" tabindex="-1">
+        <label for="control-header-date-separator-show"><span class="label-icon"></span> Separators</label>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <label class="control-header-date-format-label">Format</label>
+      </div>
+      <div class="form-wrap">
+        <input id="control-header-date-format-datemonth" class="control-header-date-format-datemonth" type="radio" name="control-header-date-format" value="datemonth" tabindex="-1">
+        <label for="control-header-date-format-datemonth"><span class="label-icon"></span> Date/Month</label>
+      </div>
+      <div class="form-wrap">
+        <input id="control-header-date-format-monthdate" class="control-header-date-format-monthdate" type="radio" name="control-header-date-format" value="monthdate" tabindex="-1">
+        <label for="control-header-date-format-monthdate"><span class="label-icon"></span> Month/Date</label>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <label for="control-header-date-size-range">Size</label>
+        <div class="form-group form-group-block">
+          <input id="control-header-date-size-range" class="control-header-date-size-range mr-3" type="range" value="0" tabindex="-1">
+          <input class="control-header-date-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          <button class="control-header-date-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Search</h1>
+    </div>
+    <div class="menu-item-form">
+      <div class="form-wrap">
+        <input id="control-header-search-show" class="control-header-search-show" type="checkbox" tabindex="-1">
+        <label for="control-header-search-show"><span class="label-icon"></span> Show</label>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <label class="control-header-search-style-label">Search box width</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-search-style-auto" class="control-header-search-style-auto" type="radio" name="control-header-search-width" value="auto" tabindex="-1">
+            <label for="control-header-search-style-auto"><span class="label-icon"></span> Auto</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-search-style-auto-helper form-helper-item">Search box will grow to best fit available space.</p>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-search-style-custom" class="control-header-search-style-custom" type="radio" name="control-header-search-width" value="custom" tabindex="-1">
+            <label for="control-header-search-style-custom"><span class="label-icon"></span> Custom</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-search-style-custom-helper form-helper-item">Define how wide the Search box should be inside the Header Area.</p>
+          </div>
+          <div class="form-wrap">
+            <div class="form-indent">
+              <div class="form-wrap">
+                <div class="form-group form-group-block">
+                  <input id="control-header-search-width-range" class="control-header-search-width-range mr-3" type="range" value="0" tabindex="-1">
+                  <input class="control-header-search-width-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                  <button class="control-header-search-width-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <input id="control-header-search-focus" class="control-header-search-focus" type="checkbox" tabindex="-1">
+            <label for="control-header-search-focus"><span class="label-icon"></span> Focus on load/refresh</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-search-focus-helper form-helper-item">May not work in some browsers.</p>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <label class="control-header-search-engine-label">Search engine</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-search-engine-google" class="control-header-search-engine-google" type="radio" name="control-header-search-engine" value="google" tabindex="-1">
+            <label for="control-header-search-engine-google"><span class="label-icon"></span> Google</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-search-engine-duckduckgo" class="control-header-search-engine-duckduckgo" type="radio" name="control-header-search-engine" value="duckduckgo" tabindex="-1">
+            <label for="control-header-search-engine-duckduckgo"><span class="label-icon"></span> DuckDuckGo</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-search-engine-youtube" class="control-header-search-engine-youtube" type="radio" name="control-header-search-engine" value="youtube" tabindex="-1">
+            <label for="control-header-search-engine-youtube"><span class="label-icon"></span> YouTube</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-search-engine-giphy" class="control-header-search-engine-giphy" type="radio" name="control-header-search-engine" value="giphy" tabindex="-1">
+            <label for="control-header-search-engine-giphy"><span class="label-icon"></span> Giphy</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-search-engine-bing" class="control-header-search-engine-bing" type="radio" name="control-header-search-engine" value="bing" tabindex="-1">
+            <label for="control-header-search-engine-bing"><span class="label-icon"></span> Bing</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-search-engine-custom" class="control-header-search-engine-custom" type="radio" name="control-header-search-engine" value="custom" tabindex="-1">
+            <label for="control-header-search-engine-custom"><span class="label-icon"></span> Custom</label>
+          </div>
+          <div class="form-wrap">
+            <div class="form-indent">
+              <div class="form-wrap">
+                <label for="control-header-search-engine-custom-name">Name</label>
+                <input id="control-header-search-engine-custom-name" class="control-header-search-engine-custom-name" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search engine name" tabindex="-1">
+              </div>
+              <div class="form-wrap">
+                <label for="control-header-search-engine-custom-url">URL</label>
+                <input id="control-header-search-engine-custom-url" class="control-header-search-engine-custom-url" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="https://" tabindex="-1">
+              </div>
+              <div class="form-helper">
+                <p class="control-header-search-engine-custom-helper form-helper-item">Enter a web address with the search parameters, eg: "https://vimeo.com/search?q="</p>
+                <p class="control-header-search-engine-custom-helper form-helper-item">nightTab will add the search term entered into the Search input at the end of the above URL</p>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <label class="control-header-search-text-alignment-label">Align Text</label>
+          </div>
+          <div class="form-wrap">
+            <div class="form-grid form-grid-3x1 control-header-search-text-alignment-grid">
+              <div class="form-wrap">
+                <input id="control-header-search-text-alignment-left" class="control-header-search-text-alignment-left" type="radio" name="control-header-search-text-alignment" value="left" tabindex="-1">
+                <label for="control-header-search-text-alignment-left"><span class="label-icon"></span> <span class="sr-only">Left</span></label>
+              </div>
+              <div class="form-wrap">
+                <input id="control-header-search-text-alignment-center" class="control-header-search-text-alignment-center" type="radio" name="control-header-search-text-alignment" value="center" tabindex="-1">
+                <label for="control-header-search-text-alignment-center"><span class="label-icon"></span> <span class="sr-only">Center</span></label>
+              </div>
+              <div class="form-wrap">
+                <input id="control-header-search-text-alignment-right" class="control-header-search-text-alignment-right" type="radio" name="control-header-search-text-alignment" value="right" tabindex="-1">
+                <label for="control-header-search-text-alignment-right"><span class="label-icon"></span> <span class="sr-only">Right</span></label>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <label for="control-header-search-size-range">Size</label>
+            <div class="form-group form-group-block">
+              <input id="control-header-search-size-range" class="control-header-search-size-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-header-search-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+              <button class="control-header-search-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+            </div>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-search-size-helper form-helper-item">Only the Search box width control will change the Width of the Search box.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Buttons</h1>
+    </div>
+    <div class="menu-item-form">
+      <label class="control-header-button-style-label">Button style</label>
+      <div class="form-wrap">
+        <input id="control-header-button-style-box" class="control-header-button-style-box" type="radio" name="control-header-button-style" value="box" tabindex="-1">
+        <label for="control-header-button-style-box"><span class="label-icon"></span> Box</label>
+      </div>
+      <div class="form-wrap">
+        <input id="control-header-button-style-clear" class="control-header-button-style-clear" type="radio" name="control-header-button-style" value="clear" tabindex="-1">
+        <label for="control-header-button-style-clear"><span class="label-icon"></span> Clear</label>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-button-editadd-show" class="control-header-button-editadd-show" type="checkbox" tabindex="-1">
+        <label for="control-header-button-editadd-show"><span class="label-icon"></span> Show Edit/Add</label>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-button-coloraccent-show" class="control-header-button-coloraccent-show" type="checkbox" tabindex="-1">
+        <label for="control-header-button-coloraccent-show"><span class="label-icon"></span> Show Colour/Accent</label>
+      </div>
+      <div class="form-helper">
+        <p class="control-header-button-coloraccent-show-helper form-helper-item">Colour and Accent can also be found under Theme.</p>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <input id="control-header-button-coloraccent-dot-show" class="control-header-button-coloraccent-dot-show" type="checkbox" tabindex="-1">
+            <label for="control-header-button-coloraccent-dot-show"><span class="label-icon"></span> Show colour dots</label>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <label for="control-header-button-size-range">Size</label>
+        <div class="form-group form-group-block">
+          <input id="control-header-button-size-range" class="control-header-button-size-range mr-3" type="range" value="0" tabindex="-1">
+          <input class="control-header-button-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          <button class="control-header-button-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Border</h1>
+    </div>
+    <div class="menu-item-form">
+      <div class="form-wrap">
+        <label for="control-header-border-top-range">Top</label>
+        <div class="form-group form-group-block">
+          <input id="control-header-border-top-range" class="control-header-border-top-range mr-3" type="range" value="0" tabindex="-1">
+          <input class="control-header-border-top-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          <button class="control-header-border-top-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+        </div>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <label for="control-header-border-bottom-range">Bottom</label>
+        <div class="form-group form-group-block">
+          <input id="control-header-border-bottom-range" class="control-header-border-bottom-range mr-3" type="range" value="0" tabindex="-1">
+          <input class="control-header-border-bottom-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          <button class="control-header-border-bottom-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Position when scrolling</h1>
+    </div>
+    <div class="menu-item-form">
+      <div class="form-wrap">
+        <input id="control-header-position-sticky" class="control-header-position-sticky" type="radio" name="control-header-position" value="sticky" tabindex="-1">
+        <label for="control-header-position-sticky"><span class="label-icon"></span> Sticky</label>
+      </div>
+      <div class="form-helper">
+        <p class="control-header-position-sticky-helper form-helper-item">Header sticks to the page when scrolling up or down.</p>
+      </div>
+      <div class="form-wrap">
+        <input id="control-header-position-inline" class="control-header-position-inline" type="radio" name="control-header-position" value="inline" tabindex="-1">
+        <label for="control-header-position-inline"><span class="label-icon"></span> Inline</label>
+      </div>
+      <div class="form-helper">
+        <p class="control-header-position-inline-helper form-helper-item">Header moves inline with the content when scrolling up or down.</p>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Background colour</h1>
+    </div>
+    <div class="menu-item-form">
+      <div class="form-wrap">
+        <input id="control-header-color-show" class="control-header-color-show" type="checkbox" tabindex="-1">
+        <label for="control-header-color-show"><span class="label-icon"></span> Show</label>
+      </div>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <div class="form-wrap">
+            <input id="control-header-color-style-always" class="control-header-color-style-always" type="radio" name="control-header-color-style" value="always" tabindex="-1">
+            <label for="control-header-color-style-always"><span class="label-icon"></span> Always visible</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-color-style-always-helper form-helper-item">Useful for when a Background Image is shown.</p>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-color-style-scroll" class="control-header-color-style-scroll" type="radio" name="control-header-color-style" value="scroll" tabindex="-1">
+            <label for="control-header-color-style-scroll"><span class="label-icon"></span> Visible on scroll</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-color-style-scroll-helper form-helper-item">The page will not scroll if Bookmarks are not shown.</p>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <input id="control-header-color-by-theme" class="control-header-color-by-theme" type="radio" name="control-header-color-by" value="theme" tabindex="-1">
+            <label for="control-header-color-by-theme"><span class="label-icon"></span> Theme colour</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-color-by-theme-helper form-helper-item">Use the Background colour defined by the Theme.</p>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-color-by-custom" class="control-header-color-by-custom" type="radio" name="control-header-color-by" value="custom" tabindex="-1">
+            <label for="control-header-color-by-custom"><span class="label-icon"></span> Custom colour</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-color-by-custom-helper form-helper-item">Use a custom Background colour.</p>
+          </div>
+          <div class="form-wrap">
+            <div class="form-indent">
+              <div class="form-wrap">
+                <div class="form-group form-group-block">
+                  <input id="control-header-color-rgb-range" class="form-group-item-half control-header-color-rgb-range" type="color" value="#000000" tabindex="1">
+                  <input id="control-header-color-rgb-text" class="form-group-item-half control-header-color-rgb-text" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <label for="control-header-color-opacity-range">Opacity</label>
+            <div class="form-group form-group-block">
+              <input id="control-header-color-opacity-range" class="control-header-color-opacity-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-header-color-opacity-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+              <button class="control-header-color-opacity-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+            </div>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <input id="control-header-radius" class="control-header-radius" type="checkbox" tabindex="-1">
+            <label for="control-header-radius"><span class="label-icon"></span> Corner radius</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-radius-helper form-helper-item">May not be visible if Theme Radius is set to 0.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

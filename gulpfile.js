@@ -4,6 +4,8 @@ const {
   parallel
 } = require('gulp');
 
+const fileinclude = require('gulp-file-include');
+
 const csso = require('gulp-csso');
 
 const concat = require('gulp-concat');
@@ -108,6 +110,10 @@ const build = {
   },
   html: function() {
     return src(path.src + '/index.html')
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
       .pipe(replace(/\<\!\-\-\ css\-block\ \-\-\>([\s\S]*)\<\!\-\-\ end\-css\-block\ \-\-\>/mg, '<link rel="stylesheet" href="css/' + filename.css + '">'))
       .pipe(replace(/\<\!\-\-\ js\-block\ \-\-\>([\s\S]*)\<\!\-\-\ end\-js\-block\ \-\-\>/mg, '<script src="js/' + filename.js + '"></script>'))
       .pipe(htmlmin({
@@ -156,10 +162,14 @@ const dev = {
     })
   },
   html: function() {
-    watch(path.src + '/index.html', {
+    watch(path.src + '/**/*.html', {
       ignoreInitial: false
     }, function() {
       return src(path.src + '/index.html')
+        .pipe(fileinclude({
+          prefix: '@@',
+          basepath: '@file'
+        }))
         .pipe(dest(path.dev))
     })
   },

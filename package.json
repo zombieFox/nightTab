@@ -1,6 +1,6 @@
 {
   "name": "nightTab",
-  "version": "4.33.0",
+  "version": "4.34.0",
   "description": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab.",
   "main": "index.js",
   "scripts": {
@@ -43,6 +43,7 @@
     "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
+    "gulp-file-include": "^2.1.1",
     "gulp-filter": "^6.0.0",
     "gulp-htmlmin": "^5.0.1",
     "gulp-replace": "^1.0.0",
