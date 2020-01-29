@@ -159,9 +159,6 @@ var header = (function() {
       editAdd: function() {
         var formGroup = helper.node("div|class:form-group form-group-nested-button");
         var formInputButton = helper.node("div|class:form-input-button form-input-hide");
-        if (state.get.current().header.button.style == "clear") {
-          helper.addClass(formInputButton, "form-input-button-link");
-        };
         var controlEditInput = helper.node("input|id:control-edit,class:control-edit,type:checkbox,tabindex:1");
         var controlEditLabel = helper.node("label|for:control-edit");
         var controlEditLabelText = helper.node("span:Edit");
@@ -173,9 +170,6 @@ var header = (function() {
 
         var formDropdown = helper.node("div|class:form-dropdown");
         var controlAddToggle = helper.node("button|class:control-add-toggle form-dropdown-toggle button,tabindex:1");
-        if (state.get.current().header.button.style == "clear") {
-          helper.addClass(controlAddToggle, "button-link");
-        };
         var controlAddToggleText = helper.node("span:Add");
         controlAddToggle.appendChild(controlAddToggleText);
         var formDropdownMenu = helper.node("ul|class:list-unstyled form-dropdown-menu");
@@ -194,8 +188,14 @@ var header = (function() {
         formDropdown.appendChild(controlAddToggle);
         formDropdown.appendChild(formDropdownMenu);
 
+        if (state.get.current().header.button.style == "clear") {
+          helper.addClass(formInputButton, "form-input-button-link");
+          helper.addClass(controlAddToggle, "button-link");
+        };
+
         formGroup.appendChild(formInputButton);
         formGroup.appendChild(formDropdown);
+
         return formGroup;
       },
       quickColors: function() {
@@ -225,6 +225,11 @@ var header = (function() {
         } else {
           helper.addClass(colorInputButton, "form-input-hide");
           helper.addClass(accentInputButton, "form-input-hide");
+        };
+
+        if (state.get.current().header.button.style == "clear") {
+          helper.addClass(colorInputButton, "form-input-button-link");
+          helper.addClass(accentInputButton, "form-input-button-link");
         };
 
         formGroup.appendChild(colorInputButton);

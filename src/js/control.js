@@ -1943,14 +1943,26 @@ var control = (function() {
     path: "header.button.style",
     type: "radio",
     func: function() {
-      // header.render.button.style();
+      header.render.item.clear();
+      header.render.item.all();
+      clock.render.all();
+      date.render.all();
+      transitional.render.all();
+      greeting.render.all();
+      render.update();
     }
   }, {
     element: ".control-header-button-style-clear",
     path: "header.button.style",
     type: "radio",
     func: function() {
-      // header.render.button.style();
+      header.render.item.clear();
+      header.render.item.all();
+      clock.render.all();
+      date.render.all();
+      transitional.render.all();
+      greeting.render.all();
+      render.update();
     }
   }, {
     element: ".control-header-button-editadd-show",
@@ -1973,7 +1985,13 @@ var control = (function() {
     path: "header.button.colorAccent.dot.show",
     type: "checkbox",
     func: function() {
-      // header.render.button.dot();
+      header.render.item.clear();
+      header.render.item.all();
+      clock.render.all();
+      date.render.all();
+      transitional.render.all();
+      greeting.render.all();
+      render.update();
     }
   }, {
     element: ".control-header-button-size-range",
