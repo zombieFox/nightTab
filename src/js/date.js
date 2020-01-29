@@ -12,9 +12,11 @@ var date = (function() {
   var render = {};
 
   render.clear = function() {
-    var date = helper.e(".date");
-    while (date.lastChild) {
-      date.removeChild(date.lastChild);
+    if (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show) {
+      var date = helper.e(".date");
+      while (date.lastChild) {
+        date.removeChild(date.lastChild);
+      };
     };
   };
 

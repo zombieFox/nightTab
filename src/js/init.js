@@ -2,6 +2,7 @@
 console.log("nightTab version", version.get().number, version.get().name);
 data.init();
 state.init();
+header.init();
 bookmarks.init();
 theme.init();
 menu.init();
@@ -15,7 +16,6 @@ clock.init();
 keyboard.init();
 layout.init();
 background.init();
-header.init();
 modal.init();
 shade.init();
 dropdown.init();

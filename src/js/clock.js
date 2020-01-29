@@ -12,9 +12,11 @@ var clock = (function() {
   var render = {};
 
   render.clear = function() {
-    var clock = helper.e(".clock");
-    while (clock.lastChild) {
-      clock.removeChild(clock.lastChild);
+    if (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
+      var clock = helper.e(".clock");
+      while (clock.lastChild) {
+        clock.removeChild(clock.lastChild);
+      };
     };
   };
 
