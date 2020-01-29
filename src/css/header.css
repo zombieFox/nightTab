@@ -205,7 +205,7 @@
 .header-clock,
 .header-search,
 .header-edit-add,
-.header-accent,
+.header-coloraccent,
 .header-greeting,
 .header-transitional,
 .header-menu {
@@ -216,7 +216,7 @@
 .is-header-date-show .header-date,
 .is-header-clock-show .header-clock,
 .is-header-button-editadd-show .header-edit-add,
-.is-header-button-coloraccent-show .header-accent,
+.is-header-button-coloraccent-show .header-coloraccent,
 .is-header-greeting-show .header-greeting,
 .is-header-transitional-show .header-transitional,
 .is-menu .header-menu {
