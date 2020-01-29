@@ -37,8 +37,8 @@ var menu = (function() {
     allMenuContentArea.forEach(function(arrayItem, index) {
       helper.addClass(arrayItem, "is-hidden");
     });
-    helper.addClass(menuNavButton, "active");
-    helper.removeClass(menuContentArea, "is-hidden");
+    helper.addClass(helper.e(menuNavButton), "active");
+    helper.removeClass(helper.e(menuContentArea), "is-hidden");
   };
 
   render.tabindex = {
