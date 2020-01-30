@@ -166,6 +166,7 @@ var search = (function() {
   return {
     init: init,
     mod: mod,
+    bind: bind,
     render: render,
     check: check
   };

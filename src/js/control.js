@@ -5122,7 +5122,7 @@ var control = (function() {
 
   var bind = {};
 
-  bind.controls = function() {
+  bind.controls = function(object) {
     var _timerInputupdate = null;
     var eventType = {
       a: "click",
@@ -5269,9 +5269,13 @@ var control = (function() {
         });
       };
     };
-    _allControl.forEach(function(arrayItem, index) {
-      bindControl(arrayItem);
-    });
+    if (object) {
+      bindControl(object);
+    } else {
+      _allControl.forEach(function(arrayItem, index) {
+        bindControl(arrayItem);
+      });
+    }
   };
 
   var render = {};

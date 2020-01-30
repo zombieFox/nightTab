@@ -1,5 +1,65 @@
 var header = (function() {
 
+  var mod = {};
+
+  mod.item = {
+    all: {
+      greeting: {
+        name: "Greeting",
+        item: function() {
+          return render.item.para("greeting");
+        }
+      },
+      clock: {
+        name: "Clock",
+        item: function() {
+          return render.item.para("clock");
+        }
+      },
+      transitional: {
+        name: "Transitional text",
+        item: function() {
+          return render.item.para("transitional");
+        }
+      },
+      date: {
+        name: "Date",
+        item: function() {
+          return render.item.para("date");
+        }
+      },
+      search: {
+        name: "Search",
+        item: function() {
+          return render.item.search();
+        }
+      },
+      editAdd: {
+        name: "Edit/Add buttons",
+        item: function() {
+          return render.item.button.editAdd();
+        }
+      },
+      colorAccent: {
+        name: "Colour/Accent buttons",
+        item: function() {
+          return render.item.button.quickColors();
+        }
+      },
+      menu: {
+        name: "Menu button",
+        item: function() {
+          return render.item.button.menu();
+        }
+      }
+    },
+    move: function(data) {
+      var item = JSON.parse(JSON.stringify(state.get.current().header.order[data.origin]));
+      state.get.current().header.order.splice(data.origin, 1);
+      state.get.current().header.order.splice(data.destination, 0, item);
+    }
+  };
+
   var bind = {};
 
   bind.resize = function() {
@@ -26,10 +86,6 @@ var header = (function() {
   };
 
   var render = {};
-
-  render.grid = function() {
-    helper.e(".header-area").appendChild(helper.node("div|class:header-item-grid"));
-  };
 
   render.area = {
     width: function() {
@@ -88,32 +144,52 @@ var header = (function() {
     html.style.setProperty("--header-border-bottom", state.get.current().header.border.bottom);
   };
 
+  render.control = {
+    all: function() {
+      var headerOrder = helper.e(".header-order");
+      var ul = helper.node("ul|class:header-order-list");
+      state.get.current().header.order.forEach(function(arrayItem, index) {
+        var itemLi = helper.node("li:" + mod.item.all[arrayItem].name);
+        ul.appendChild(itemLi);
+      });
+      headerOrder.appendChild(ul);
+      sortable('.header-order-list', {
+        placeholder: "<li></li>"
+      });
+      sortable(".header-order-list")[0].addEventListener("sortupdate", function(event) {
+        var positionData = {
+          origin: event.detail.origin.index,
+          destination: event.detail.destination.index
+        };
+        mod.item.move(positionData);
+        data.save();
+        render.item.clear();
+        render.item.all();
+        clock.render.all();
+        date.render.all();
+        greeting.render.all();
+        transitional.render.all();
+        // temp bind
+        // control.bind.controls(control._allControl[0]);
+        search.bind.input();
+        search.bind.clear();
+      }, false);
+    },
+    clear: function() {
+      var headerOrder = helper.e(".header-order");
+      while (headerOrder.lastChild) {
+        headerOrder.removeChild(headerArea.lastChild);
+      };
+    }
+  };
+
   render.item = {
     all: function() {
       var headerArea = helper.e(".header-area");
       var headerItemGrid = helper.node("div|class:header-item-grid");
-      if (state.get.current().header.greeting.show) {
-        headerItemGrid.appendChild(render.item.wrapper("greeting", render.item.para("greeting")));
-      };
-      if (state.get.current().header.transitional.show && (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show || state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) {
-        headerItemGrid.appendChild(render.item.wrapper("transitional", render.item.para("transitional")));
-      };
-      if (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
-        headerItemGrid.appendChild(render.item.wrapper("clock", render.item.para("clock")));
-      };
-      if (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show) {
-        headerItemGrid.appendChild(render.item.wrapper("date", render.item.para("date")));
-      };
-      if (state.get.current().header.search.show) {
-        headerItemGrid.appendChild(render.item.wrapper("search", render.item.search()));
-      };
-      if (state.get.current().header.button.editAdd.show) {
-        headerItemGrid.appendChild(render.item.wrapper("button", render.item.button.editAdd()));
-      };
-      if (state.get.current().header.button.colorAccent.show) {
-        headerItemGrid.appendChild(render.item.wrapper("button", render.item.button.quickColors()));
-      };
-      headerItemGrid.appendChild(render.item.wrapper("button", render.item.button.menu()));
+      state.get.current().header.order.forEach(function(arrayItem, index) {
+        headerItemGrid.appendChild(render.item.wrapper(arrayItem, mod.item.all[arrayItem].item()));
+      });
       headerArea.appendChild(headerItemGrid);
     },
     clear: function() {
@@ -302,10 +378,12 @@ var header = (function() {
     render.search.width();
     render.search.size();
     render.button.size();
+    render.control.all();
   };
 
   // exposed methods
   return {
+    mod: mod,
     render: render,
     init: init
   };

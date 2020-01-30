@@ -139,6 +139,7 @@ var state = (function() {
         type: "timeanddate",
         size: 1
       },
+      order: ["greeting", "clock", "transitional", "date", "search", "editAdd", "colorAccent", "menu"],
       position: "sticky",
       radius: false
     },
