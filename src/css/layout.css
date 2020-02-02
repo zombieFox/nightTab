@@ -44,4 +44,9 @@ html.is-layout-scrollbars-none,
 .is-layout-scrollbars-none body,
 .is-layout-scrollbars-none * {
   scrollbar-width: none;
+  -webkit-scrollbar-width: none;
+}
+
+.is-layout-scrollbars-none *::-webkit-scrollbar {
+  display: none;
 }
