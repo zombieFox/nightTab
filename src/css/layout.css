@@ -46,6 +46,6 @@ html.is-layout-scrollbars-none,
   scrollbar-width: none;
 }
 
-.is-layout-scrollbars-none *::-webkit-scrollbar {
+.is-layout-scrollbars-none ::-webkit-scrollbar {
   display: none;
 }
