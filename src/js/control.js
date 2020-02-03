@@ -1,12 +1,54 @@
 var control = (function() {
 
-  var _allControl = [{
+  var mod = {};
+
+  mod.header = [{
     element: ".control-menu-open",
     type: "button",
     func: function() {
       menu.open();
+    },
+  }, {
+    element: ".control-link-add",
+    type: "button",
+    func: function() {
+      link.add.item.open();
     }
   }, {
+    element: ".control-group-add",
+    type: "button",
+    func: function() {
+      link.add.group.open();
+    }
+  }, {
+    element: ".control-edit",
+    path: "edit",
+    type: "checkbox",
+    func: function() {
+      link.tabindex();
+      render.class();
+    }
+  }, {
+    element: ".control-theme-accent-rgb-color-quick",
+    path: "theme.accent.rgb",
+    type: "color",
+    mirrorElement: [{
+      element: ".control-theme-accent-rgb-color",
+      path: "theme.accent.rgb",
+      type: "color"
+    }, {
+      element: ".control-theme-accent-rgb-text",
+      path: "theme.accent.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
+    func: function() {
+      theme.render.accent.color();
+      link.groupAndItems();
+    }
+  }];
+
+  mod.menu = [{
     element: ".control-menu-layout",
     type: "button",
     func: function() {
@@ -65,44 +107,6 @@ var control = (function() {
     type: "button",
     func: function() {
       menu.close();
-    }
-  }, {
-    element: ".control-link-add",
-    type: "button",
-    func: function() {
-      link.add.item.open();
-    }
-  }, {
-    element: ".control-group-add",
-    type: "button",
-    func: function() {
-      link.add.group.open();
-    }
-  }, {
-    element: ".control-edit",
-    path: "edit",
-    type: "checkbox",
-    func: function() {
-      link.tabindex();
-      render.class();
-    }
-  }, {
-    element: ".control-theme-accent-rgb-color-quick",
-    path: "theme.accent.rgb",
-    type: "color",
-    mirrorElement: [{
-      element: ".control-theme-accent-rgb-color",
-      path: "theme.accent.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-accent-rgb-text",
-      path: "theme.accent.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }],
-    func: function() {
-      theme.render.accent.color();
-      link.groupAndItems();
     }
   }, {
     element: ".control-layout-size-range",
@@ -196,7 +200,8 @@ var control = (function() {
     func: function() {
       mod.default("layout.size");
       layout.render.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-layout-width-range",
@@ -286,7 +291,8 @@ var control = (function() {
     func: function() {
       mod.default("layout.width");
       layout.render.width();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-layout-alignment-topleft",
@@ -455,7 +461,8 @@ var control = (function() {
     func: function() {
       mod.default("layout.padding");
       layout.render.padding();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-layout-gutter-range",
@@ -543,7 +550,8 @@ var control = (function() {
     func: function() {
       mod.default("layout.gutter");
       layout.render.gutter();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-layout-title",
@@ -667,7 +675,8 @@ var control = (function() {
     func: function() {
       mod.default("header.area.width");
       header.render.area.width();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-area-width-match",
@@ -689,7 +698,8 @@ var control = (function() {
     func: function() {
       mod.default("header.area.width");
       header.render.area.width();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-area-alignment-left",
@@ -894,7 +904,8 @@ var control = (function() {
     func: function() {
       mod.default("header.greeting.size");
       header.render.greeting.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-transitional-show",
@@ -1014,7 +1025,8 @@ var control = (function() {
     func: function() {
       mod.default("header.transitional.size");
       header.render.transitional.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-clock-hours-show",
@@ -1258,7 +1270,8 @@ var control = (function() {
     func: function() {
       mod.default("header.clock.size");
       header.render.clock.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-date-day-show",
@@ -1640,7 +1653,8 @@ var control = (function() {
     func: function() {
       mod.default("header.date.size");
       header.render.date.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-search-show",
@@ -1755,7 +1769,8 @@ var control = (function() {
     func: function() {
       mod.default("header.search.width");
       header.render.search.width();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-search-focus",
@@ -1936,7 +1951,8 @@ var control = (function() {
     func: function() {
       mod.default("header.search.size");
       header.render.search.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-button-style-box",
@@ -1949,7 +1965,8 @@ var control = (function() {
       date.render.all();
       transitional.render.all();
       greeting.render.all();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-button-style-clear",
@@ -1962,7 +1979,8 @@ var control = (function() {
       date.render.all();
       transitional.render.all();
       greeting.render.all();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-button-editadd-show",
@@ -1991,7 +2009,8 @@ var control = (function() {
       date.render.all();
       transitional.render.all();
       greeting.render.all();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-button-size-range",
@@ -2085,7 +2104,8 @@ var control = (function() {
     func: function() {
       mod.default("header.button.size");
       header.render.button.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-color-show",
@@ -2196,7 +2216,8 @@ var control = (function() {
     func: function() {
       mod.default("header.color.opacity");
       header.render.opacity();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-radius",
@@ -2305,7 +2326,8 @@ var control = (function() {
     func: function() {
       mod.default("group.name.size");
       link.render.group.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-group-area-alignment-left",
@@ -2383,7 +2405,8 @@ var control = (function() {
       mod.default("group.border");
       link.render.group.border();
       render.class();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-border-top-range",
@@ -2426,7 +2449,8 @@ var control = (function() {
       mod.default("header.border.top");
       header.render.border();
       render.class();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-border-bottom-range",
@@ -2469,7 +2493,8 @@ var control = (function() {
       mod.default("header.border.bottom");
       header.render.border();
       render.class();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-position-sticky",
@@ -2571,7 +2596,8 @@ var control = (function() {
     func: function() {
       mod.default("link.area.width");
       link.render.area.width();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-area-width-match",
@@ -2593,7 +2619,8 @@ var control = (function() {
     func: function() {
       mod.default("link.area.width");
       link.render.area.width();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-area-alignment-left",
@@ -2744,7 +2771,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.size");
       link.render.item.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-alignment-topleft",
@@ -2861,7 +2889,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.letcon.letter.size");
       link.render.item.display.letter();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-letcon-icon-size-range",
@@ -2907,7 +2936,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.letcon.icon.size");
       link.render.item.display.icon();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-name-show",
@@ -2961,7 +2991,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.name.size");
       link.render.item.name();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-rotate-range",
@@ -3001,7 +3032,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.rotate");
       link.render.item.rotate();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-translate-x-range",
@@ -3047,7 +3079,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.translate.x");
       link.render.item.translate.x();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-translate-y-range",
@@ -3093,7 +3126,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.translate.y");
       link.render.item.translate.y();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-gutter-range",
@@ -3133,7 +3167,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.gutter");
       link.render.item.gutter();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-direction-horizontal",
@@ -3282,7 +3317,8 @@ var control = (function() {
       mod.default("link.item.border");
       render.class();
       link.render.item.border();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-style-block",
@@ -3389,7 +3425,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.display.name");
       theme.render.font.display.name();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-display-weight-range",
@@ -3414,7 +3451,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.display.weight");
       theme.render.font.display.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-display-weight-number",
@@ -3439,7 +3477,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.display.light();
       theme.render.font.display.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-display-regular",
@@ -3447,7 +3486,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.display.regular();
       theme.render.font.display.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-display-bold",
@@ -3455,7 +3495,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.display.bold();
       theme.render.font.display.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-display-style-normal",
@@ -3477,7 +3518,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.display.style");
       theme.render.font.display.style();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-name",
@@ -3492,7 +3534,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.ui.name");
       theme.render.font.ui.name();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-weight-range",
@@ -3517,7 +3560,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.ui.weight");
       theme.render.font.ui.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-weight-number",
@@ -3542,7 +3586,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.ui.light();
       theme.render.font.ui.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-regular",
@@ -3550,7 +3595,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.ui.regular();
       theme.render.font.ui.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-bold",
@@ -3558,7 +3604,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.ui.bold();
       theme.render.font.ui.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-style-normal",
@@ -3580,7 +3627,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.ui.style");
       theme.render.font.ui.style();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-color-rgb-color-quick",
@@ -3787,7 +3835,8 @@ var control = (function() {
       mod.default("theme.color.rgb");
       theme.mod.color.hsl();
       theme.render.color.shade();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-color-hsl-h-range",
@@ -4481,7 +4530,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.color.contrast.light");
       theme.render.color.shade();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-color-contrast-dark-range",
@@ -4527,7 +4577,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.color.contrast.dark");
       theme.render.color.shade();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-accent-rgb-color",
@@ -4572,7 +4623,8 @@ var control = (function() {
       mod.default("theme.accent.rgb");
       theme.render.accent.color();
       link.groupAndItems();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-accent-random-active",
@@ -4684,7 +4736,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.radius");
       theme.render.radius();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-shadow-range",
@@ -4730,7 +4783,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.shadow");
       theme.render.shadow();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-shade-opacity-range",
@@ -4776,7 +4830,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.shade.opacity");
       theme.render.shade.opacity();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-background-color-by-theme",
@@ -4912,7 +4967,8 @@ var control = (function() {
     func: function() {
       mod.default("background.image.opacity");
       background.render.opacity();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-background-image-grayscale-range",
@@ -4956,7 +5012,8 @@ var control = (function() {
     func: function() {
       mod.default("background.image.grayscale");
       background.render.grayscale();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-background-image-blur-range",
@@ -4996,7 +5053,8 @@ var control = (function() {
     func: function() {
       mod.default("background.image.blur");
       background.render.blur();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-background-image-accent-range",
@@ -5040,7 +5098,8 @@ var control = (function() {
     func: function() {
       mod.default("background.image.accent");
       background.render.accent();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-background-image-scale-range",
@@ -5084,7 +5143,8 @@ var control = (function() {
     func: function() {
       mod.default("background.image.scale");
       background.render.scale();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-data-import",
@@ -5107,8 +5167,6 @@ var control = (function() {
     }
   }];
 
-  var mod = {};
-
   mod.default = function(path) {
     helper.setObject({
       object: state.get.current(),
@@ -5122,9 +5180,89 @@ var control = (function() {
 
   var bind = {};
 
-  bind.controls = function(object) {
-    var _timerInputupdate = null;
-    var eventType = {
+  bind.control = {
+    timer: {
+      inputUpdate: null
+    },
+    value: {
+      set: function(object) {
+        if (object.path) {
+          var newValue = bind.control.value.get[object.type](object);
+          if (object.valueModify) {
+            for (var key in object.valueModify) {
+              newValue = bind.control.value.modify[key](newValue, object);
+            };
+          };
+          if (object.valueConvert) {
+            object.valueConvert.forEach(function(arrayItem, index) {
+              newValue = bind.control.value.convert[arrayItem](newValue, object);
+            });
+          };
+          helper.setObject({
+            object: state.get.current(),
+            path: object.path,
+            newValue: newValue
+          });
+          console.log("state set", object.path, helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          }));
+        };
+      },
+      get: {
+        checkbox: function(object) {
+          return helper.e(object.element).checked;
+        },
+        radio: function(object) {
+          return helper.e(object.element).value;
+        },
+        text: function(object) {
+          return helper.e(object.element).value;
+        },
+        textarea: function(object) {
+          return helper.e(object.element).value;
+        },
+        number: function(object) {
+          return parseInt(helper.e(object.element).value, 10);
+        },
+        range: function(object) {
+          return parseInt(helper.e(object.element).value, 10);
+        },
+        color: function(object) {
+          return helper.convertColor.hex.rgb(helper.e(object.element).value);
+        }
+      },
+      convert: {
+        reverse: function(value, object) {
+          return parseInt(object.valueModify.max, 10) - value;
+        },
+        float: function(value, object) {
+          return value / 100;
+        },
+        hexTextString: function(value, object) {
+          return helper.convertColor.hex.rgb(value);
+        }
+      },
+      modify: {
+        min: function(value, object) {
+          if (isNaN(value) || value < object.valueModify.min) {
+            value = object.valueModify.min;
+          };
+          return value;
+        },
+        max: function(value, object) {
+          if (value > object.valueModify.max) {
+            value = object.valueModify.max;
+          };
+          return value;
+        },
+        step: function(value, object) {
+          value = Math.round(value / object.valueModify.step) * object.valueModify.step;
+          return value;
+        }
+      }
+    },
+    eventType: {
       a: "click",
       button: "click",
       checkbox: "change",
@@ -5135,113 +5273,20 @@ var control = (function() {
       range: "input",
       color: "change",
       file: "change"
-    };
-    var valueType = {
-      checkbox: function(object) {
-        return helper.e(object.element).checked;
-      },
-      radio: function(object) {
-        return helper.e(object.element).value;
-      },
-      text: function(object) {
-        return helper.e(object.element).value;
-      },
-      textarea: function(object) {
-        return helper.e(object.element).value;
-      },
-      number: function(object) {
-        var newValue = helper.e(object.element).value;
-        return parseInt(newValue, 10);
-      },
-      range: function(object) {
-        return parseInt(helper.e(object.element).value, 10);
-      },
-      color: function(object) {
-        return helper.convertColor.hex.rgb(helper.e(object.element).value);
-      }
-    };
-    var valueConvert = {
-      reverse: function(value, object) {
-        return parseInt(object.valueModify.max, 10) - value;
-      },
-      float: function(value, object) {
-        return value / 100;
-      },
-      hexTextString: function(value, object) {
-        return helper.convertColor.hex.rgb(value);
-      }
-    };
-    var valueModify = {
-      min: function(value, object) {
-        if (isNaN(value) || value < object.valueModify.min) {
-          value = object.valueModify.min;
-        };
-        return value;
-      },
-      max: function(value, object) {
-        if (value > object.valueModify.max) {
-          value = object.valueModify.max;
-        };
-        return value;
-      },
-      step: function(value, object) {
-        value = Math.round(value / object.valueModify.step) * object.valueModify.step;
-        return value;
-      }
-    };
-    var setValue = function(object) {
-      if (object.path) {
-        var newValue = valueType[object.type](object);
-        if (object.valueModify) {
-          for (var key in object.valueModify) {
-            newValue = valueModify[key](newValue, object);
+    },
+    supportedElement: ["checkbox", "radio", "text", "number", "range", "color", "textarea"],
+    action: function(object) {
+      if (object.element) {
+        helper.e(object.element).addEventListener(bind.control.eventType[object.type], function(event) {
+          if (render.update.supportedElement.includes(object.type)) {
+            bind.control.value.set(object);
           };
-        };
-        if (object.valueConvert) {
-          object.valueConvert.forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object);
-          });
-        };
-        helper.setObject({
-          object: state.get.current(),
-          path: object.path,
-          newValue: newValue
-        });
-        console.log("state set", object.path, helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        }));
+          if (object.func) {
+            object.func();
+          };
+          data.save();
+        }, false);
       };
-    };
-    var bindControl = function(object) {
-      var controlType = {
-        a: function(object, event) {
-          if (object.func) {
-            object.func();
-          };
-        },
-        button: function(object, event) {
-          if (object.func) {
-            object.func();
-          };
-        },
-        input: function(object, event) {
-          setValue(object);
-          if (object.func) {
-            object.func();
-          };
-        },
-        textarea: function(object, event) {
-          setValue(object);
-          if (object.func) {
-            object.func();
-          };
-        }
-      };
-      helper.e(object.element).addEventListener(eventType[object.type], function(event) {
-        controlType[helper.e(object.element).tagName.toLowerCase()](object, event);
-        data.save();
-      }, false);
       if (object.additionalEvents) {
         object.additionalEvents.forEach(function(arrayItem, index) {
           helper.e(object.element).addEventListener(arrayItem.event, function(event) {
@@ -5252,29 +5297,40 @@ var control = (function() {
       };
       if (object.mirrorElement) {
         object.mirrorElement.forEach(function(arrayItem, index) {
-          helper.e(object.element).addEventListener(eventType[object.type], function(event) {
-            render.update(arrayItem);
+          helper.e(object.element).addEventListener(bind.control.eventType[object.type], function(event) {
+            render.update.control.menu(arrayItem);
           }, false);
         });
       };
       if (object.valueModify) {
         object.mirrorElement.forEach(function(arrayItem, index) {
-          helper.e(object.element).addEventListener(eventType[object.type], function(event) {
+          helper.e(object.element).addEventListener(bind.control.eventType[object.type], function(event) {
             var _update = function() {
-              render.update(object);
+              render.update.control.menu(object);
             };
-            clearTimeout(_timerInputupdate);
-            _timerInputupdate = setTimeout(_update, 1000);
+            clearTimeout(bind.control.timer.inputUpdate);
+            bind.control.timer.inputUpdate = setTimeout(_update, 1000);
           }, false);
         });
       };
-    };
-    if (object) {
-      bindControl(object);
-    } else {
-      _allControl.forEach(function(arrayItem, index) {
-        bindControl(arrayItem);
-      });
+    },
+    header: function(object) {
+      if (object) {
+        bind.control.action(object);
+      } else {
+        mod.header.forEach(function(arrayItem, index) {
+          bind.control.action(arrayItem);
+        });
+      };
+    },
+    menu: function(object) {
+      if (object) {
+        bind.control.action(object);
+      } else {
+        mod.menu.forEach(function(arrayItem, index) {
+          bind.control.action(arrayItem);
+        });
+      };
     }
   };
 
@@ -6244,114 +6300,147 @@ var control = (function() {
     _background();
   };
 
-  render.update = function(object) {
-    var valueConvert = {
-      reverse: function(value, object) {
-        return object.valueModify.max - value;
+  render.update = {
+    value: {
+      set: {
+        checkbox: function(object) {
+          helper.e(object.element).checked = helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          });
+        },
+        radio: function(object) {
+          helper.e(object.element.substring(0, object.element.lastIndexOf("-") + 1) + helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          })).checked = true;
+        },
+        text: function(object) {
+          var newValue = helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          });
+          if (object.valueConvert) {
+            object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+              newValue = render.update.value.convert[arrayItem](newValue, object);
+            });
+          };
+          helper.e(object.element).value = newValue;
+        },
+        textarea: function(object) {
+          var newValue = helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          });
+          if (object.valueConvert) {
+            object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+              newValue = render.update.value.convert[arrayItem](newValue, object);
+            });
+          };
+          helper.e(object.element).value = newValue;
+        },
+        number: function(object) {
+          var newValue = helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          });
+          if (object.valueConvert) {
+            object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+              newValue = render.update.value.convert[arrayItem](newValue, object);
+            });
+          };
+          helper.e(object.element).value = Math.round(newValue);
+        },
+        range: function(object) {
+          var newValue = helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          });
+          if (object.valueConvert) {
+            object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+              newValue = render.update.value.convert[arrayItem](newValue, object);
+            });
+          };
+          helper.e(object.element).value = newValue;
+        },
+        color: function(object) {
+          helper.e(object.element).value = helper.convertColor.rgb.hex(helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          }));
+        }
       },
-      float: function(value, object) {
-        return value * 100;
-      },
-      hexTextString: function(value, object) {
-        return helper.convertColor.rgb.hex(value);
+      convert: {
+        reverse: function(value, object) {
+          return object.valueModify.max - value;
+        },
+        float: function(value, object) {
+          return value * 100;
+        },
+        hexTextString: function(value, object) {
+          return helper.convertColor.rgb.hex(value);
+        }
       }
-    };
-    var setValue = {
-      checkbox: function(object) {
-        helper.e(object.element).checked = helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        });
-      },
-      radio: function(object) {
-        helper.e(object.element.substring(0, object.element.lastIndexOf("-") + 1) + helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        })).checked = true;
-      },
-      text: function(object) {
-        var newValue = helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        });
-        if (object.valueConvert) {
-          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object);
+    },
+    supportedElement: ["checkbox", "radio", "text", "number", "range", "color", "textarea"],
+    control: {
+      header: function(object) {
+        if (object) {
+          if (render.update.supportedElement.includes(object.type)) {
+            render.update.value.set[object.type](object);
+          };
+        } else {
+          mod.header.forEach(function(arrayItem, index) {
+            if (render.update.supportedElement.includes(arrayItem.type)) {
+              render.update.value.set[arrayItem.type](arrayItem);
+            };
           });
         };
-        helper.e(object.element).value = newValue;
       },
-      textarea: function(object) {
-        var newValue = helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        });
-        if (object.valueConvert) {
-          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object);
+      menu: function(object) {
+        if (object) {
+          if (render.update.supportedElement.includes(object.type)) {
+            render.update.value.set[object.type](object);
+          };
+        } else {
+          mod.menu.forEach(function(arrayItem, index) {
+            if (render.update.supportedElement.includes(arrayItem.type)) {
+              render.update.value.set[arrayItem.type](arrayItem);
+            };
           });
         };
-        helper.e(object.element).value = newValue;
-      },
-      number: function(object) {
-        var newValue = helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        });
-        if (object.valueConvert) {
-          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object);
-          });
-        };
-        helper.e(object.element).value = Math.round(newValue);
-      },
-      range: function(object) {
-        var newValue = helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        });
-        if (object.valueConvert) {
-          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object);
-          });
-        };
-        helper.e(object.element).value = newValue;
-      },
-      color: function(object) {
-        helper.e(object.element).value = helper.convertColor.rgb.hex(helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        }));
       }
-    };
-    var supportedType = ["checkbox", "radio", "text", "number", "range", "color", "textarea"];
-    if (object) {
-      if (supportedType.includes(object.type)) {
-        setValue[object.type](object);
-      };
-    } else {
-      _allControl.forEach(function(arrayItem, index) {
-        if (supportedType.includes(arrayItem.type)) {
-          setValue[arrayItem.type](arrayItem);
+    }
+  };
+
+  render.input = {
+    header: function() {
+      mod.menu.forEach(function(arrayItem, index) {
+        if (arrayItem.valueModify) {
+          for (var key in arrayItem.valueModify) {
+            helper.e(arrayItem.element)[key] = arrayItem.valueModify[key];
+          };
+        };
+      });
+    },
+    menu: function() {
+      mod.header.forEach(function(arrayItem, index) {
+        if (arrayItem.valueModify) {
+          for (var key in arrayItem.valueModify) {
+            helper.e(arrayItem.element)[key] = arrayItem.valueModify[key];
+          };
         };
       });
     }
   };
 
-  render.input = function() {
-    _allControl.forEach(function(arrayItem, index) {
-      if (arrayItem.valueModify) {
-        for (var key in arrayItem.valueModify) {
-          helper.e(arrayItem.element)[key] = arrayItem.valueModify[key];
-        };
-      };
-    });
-  };
-
   var init = function() {
-    bind.controls();
-    render.input();
-    render.update();
+    bind.control.header();
+    bind.control.menu();
+    render.input.header();
+    render.input.menu();
+    render.update.control.header();
+    render.update.control.menu();
     render.dependents();
     render.class();
   };

@@ -170,7 +170,8 @@ var header = (function() {
         greeting.render.all();
         transitional.render.all();
         // temp bind
-        // control.bind.controls(control._allControl[0]);
+        // control.bind.controls();
+        control.render.update.control.header();
         search.bind.input();
         search.bind.clear();
       }, false);
