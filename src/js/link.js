@@ -1742,12 +1742,14 @@ var link = (function() {
     mode: {
       open: function() {
         mod.edit.mode.open();
-        control.render.update();
+        control.render.update.control.header();
+        control.render.update.control.menu();
         control.render.class();
       },
       close: function() {
         mod.edit.mode.close();
-        control.render.update();
+        control.render.update.control.header();
+        control.render.update.control.menu();
         control.render.class();
       },
       check: function() {

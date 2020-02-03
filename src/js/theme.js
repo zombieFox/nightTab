@@ -1585,7 +1585,8 @@ var theme = (function() {
         render.shade.opacity();
         style.check();
         link.groupAndItems();
-        control.render.update();
+        control.render.update.control.header();
+        control.render.update.control.menu();
         control.render.class();
       }, false);
     });
@@ -1677,7 +1678,8 @@ var theme = (function() {
             render.shade.opacity();
             style.check();
             link.groupAndItems();
-            control.render.update();
+            control.render.update.control.header();
+            control.render.update.control.menu();
             control.render.class();
           }, false);
 
@@ -1850,7 +1852,8 @@ var theme = (function() {
         shade.close();
         pagelock.unlock();
         stagedThemeCustom.reset();
-        control.render.update();
+        control.render.update.control.header();
+        control.render.update.control.menu();
         control.render.class();
         control.render.dependents();
       };
