@@ -3,56 +3,6 @@ var header = (function() {
   var mod = {};
 
   mod.item = {
-    all: {
-      greeting: {
-        name: "Greeting",
-        item: function() {
-          return render.item.para("greeting");
-        }
-      },
-      clock: {
-        name: "Clock",
-        item: function() {
-          return render.item.para("clock");
-        }
-      },
-      transitional: {
-        name: "Transitional text",
-        item: function() {
-          return render.item.para("transitional");
-        }
-      },
-      date: {
-        name: "Date",
-        item: function() {
-          return render.item.para("date");
-        }
-      },
-      search: {
-        name: "Search",
-        item: function() {
-          return render.item.search();
-        }
-      },
-      editAdd: {
-        name: "Edit/Add buttons",
-        item: function() {
-          return render.item.button.editAdd();
-        }
-      },
-      colorAccent: {
-        name: "Colour/Accent buttons",
-        item: function() {
-          return render.item.button.quickColors();
-        }
-      },
-      menu: {
-        name: "Menu button",
-        item: function() {
-          return render.item.button.menu();
-        }
-      }
-    },
     move: function(data) {
       var item = JSON.parse(JSON.stringify(state.get.current().header.order[data.origin]));
       state.get.current().header.order.splice(data.origin, 1);
@@ -146,10 +96,20 @@ var header = (function() {
 
   render.control = {
     all: function() {
+      var names = {
+        greeting: "Greeting",
+        clock: "Clock",
+        transitional: "Transitional text",
+        date: "Date",
+        search: "Search bar",
+        editAdd: "Edit/Add buttons",
+        colorAccent: "Colour/Accent buttons",
+        menu: "Menu button"
+      };
       var headerOrder = helper.e(".header-order");
       var ul = helper.node("ul|class:header-order-list");
       state.get.current().header.order.forEach(function(arrayItem, index) {
-        var itemLi = helper.node("li:" + mod.item.all[arrayItem].name);
+        var itemLi = helper.node("li:" + names[arrayItem]);
         ul.appendChild(itemLi);
       });
       headerOrder.appendChild(ul);
@@ -169,8 +129,7 @@ var header = (function() {
         date.render.all();
         greeting.render.all();
         transitional.render.all();
-        // temp bind
-        // control.bind.controls();
+        control.bind.control.header();
         control.render.update.control.header();
         search.bind.input();
         search.bind.clear();
@@ -189,7 +148,7 @@ var header = (function() {
       var headerArea = helper.e(".header-area");
       var headerItemGrid = helper.node("div|class:header-item-grid");
       state.get.current().header.order.forEach(function(arrayItem, index) {
-        headerItemGrid.appendChild(render.item.wrapper(arrayItem, mod.item.all[arrayItem].item()));
+        headerItemGrid.appendChild(render.item.wrapper(arrayItem, render.item[arrayItem](arrayItem)));
       });
       headerArea.appendChild(headerItemGrid);
     },
@@ -206,8 +165,17 @@ var header = (function() {
       headerItem.appendChild(headerItemBody);
       return headerItem;
     },
-    para: function(itemName) {
-      return helper.node("p|class:" + itemName + "");
+    greeting: function(name) {
+      return helper.node("p|class:" + name + "");
+    },
+    clock: function(name) {
+      return helper.node("p|class:" + name + "");
+    },
+    transitional: function(name) {
+      return helper.node("p|class:" + name + "");
+    },
+    date: function(name) {
+      return helper.node("p|class:" + name + "");
     },
     search: function() {
       var headerSearchBody = helper.node("div|class:header-search-body");
@@ -223,96 +191,94 @@ var header = (function() {
       headerSearchBody.appendChild(clearButton);
       return headerSearchBody;
     },
-    button: {
-      menu: function() {
-        var button = helper.node("button|class:control-menu-open button,tabindex:1");
-        var buttonIcon = helper.node("span|class:icon-settings");
-        if (state.get.current().header.button.style == "clear") {
-          helper.addClass(button, "button-link");
-        };
-        button.appendChild(buttonIcon);
-        return button;
-      },
-      editAdd: function() {
-        var formGroup = helper.node("div|class:form-group form-group-nested-button");
-        var formInputButton = helper.node("div|class:form-input-button form-input-hide");
-        var controlEditInput = helper.node("input|id:control-edit,class:control-edit,type:checkbox,tabindex:1");
-        var controlEditLabel = helper.node("label|for:control-edit");
-        var controlEditLabelText = helper.node("span:Edit");
-        var controlEditLabelIcon = helper.node("span|class:label-icon");
-        controlEditLabel.appendChild(controlEditLabelText);
-        controlEditLabel.appendChild(controlEditLabelIcon);
-        formInputButton.appendChild(controlEditInput);
-        formInputButton.appendChild(controlEditLabel);
+    editAdd: function() {
+      var formGroup = helper.node("div|class:form-group form-group-nested-button");
+      var formInputButton = helper.node("div|class:form-input-button form-input-hide");
+      var controlEditInput = helper.node("input|id:control-edit,class:control-edit,type:checkbox,tabindex:1");
+      var controlEditLabel = helper.node("label|for:control-edit");
+      var controlEditLabelText = helper.node("span:Edit");
+      var controlEditLabelIcon = helper.node("span|class:label-icon");
+      controlEditLabel.appendChild(controlEditLabelText);
+      controlEditLabel.appendChild(controlEditLabelIcon);
+      formInputButton.appendChild(controlEditInput);
+      formInputButton.appendChild(controlEditLabel);
 
-        var formDropdown = helper.node("div|class:form-dropdown");
-        var controlAddToggle = helper.node("button|class:control-add-toggle form-dropdown-toggle button,tabindex:1");
-        var controlAddToggleText = helper.node("span:Add");
-        controlAddToggle.appendChild(controlAddToggleText);
-        var formDropdownMenu = helper.node("ul|class:list-unstyled form-dropdown-menu");
-        var controlGroupAddLi = helper.node("li");
-        var controlGroupAdd = helper.node("button|class:button button-block text-left form-dropdown-menu-item control-group-add,tabindex:1");
-        var controlGroupAddText = helper.node("span:New Group|class:button-text");
-        controlGroupAdd.appendChild(controlGroupAddText);
-        controlGroupAddLi.appendChild(controlGroupAdd);
-        var controlLinkAddLi = helper.node("li");
-        var controlLinkAdd = helper.node("button|class:button button-block text-left form-dropdown-menu-item control-link-add,tabindex:1");
-        var controlLinkAddText = helper.node("span:New Bookmark|class:button-text");
-        controlLinkAdd.appendChild(controlLinkAddText);
-        controlLinkAddLi.appendChild(controlLinkAdd);
-        formDropdownMenu.appendChild(controlGroupAddLi);
-        formDropdownMenu.appendChild(controlLinkAddLi);
-        formDropdown.appendChild(controlAddToggle);
-        formDropdown.appendChild(formDropdownMenu);
+      var formDropdown = helper.node("div|class:form-dropdown");
+      var controlAddToggle = helper.node("button|class:control-add-toggle form-dropdown-toggle button,tabindex:1");
+      var controlAddToggleText = helper.node("span:Add");
+      controlAddToggle.appendChild(controlAddToggleText);
+      var formDropdownMenu = helper.node("ul|class:list-unstyled form-dropdown-menu");
+      var controlGroupAddLi = helper.node("li");
+      var controlGroupAdd = helper.node("button|class:button button-block text-left form-dropdown-menu-item control-group-add,tabindex:1");
+      var controlGroupAddText = helper.node("span:New Group|class:button-text");
+      controlGroupAdd.appendChild(controlGroupAddText);
+      controlGroupAddLi.appendChild(controlGroupAdd);
+      var controlLinkAddLi = helper.node("li");
+      var controlLinkAdd = helper.node("button|class:button button-block text-left form-dropdown-menu-item control-link-add,tabindex:1");
+      var controlLinkAddText = helper.node("span:New Bookmark|class:button-text");
+      controlLinkAdd.appendChild(controlLinkAddText);
+      controlLinkAddLi.appendChild(controlLinkAdd);
+      formDropdownMenu.appendChild(controlGroupAddLi);
+      formDropdownMenu.appendChild(controlLinkAddLi);
+      formDropdown.appendChild(controlAddToggle);
+      formDropdown.appendChild(formDropdownMenu);
 
-        if (state.get.current().header.button.style == "clear") {
-          helper.addClass(formInputButton, "form-input-button-link");
-          helper.addClass(controlAddToggle, "button-link");
-        };
+      if (state.get.current().header.button.style == "clear") {
+        helper.addClass(formInputButton, "form-input-button-link");
+        helper.addClass(controlAddToggle, "button-link");
+      };
 
-        formGroup.appendChild(formInputButton);
-        formGroup.appendChild(formDropdown);
+      formGroup.appendChild(formInputButton);
+      formGroup.appendChild(formDropdown);
 
-        return formGroup;
-      },
-      quickColors: function() {
-        var formGroup = helper.node("div|class:form-group form-group-nested-button");
+      return formGroup;
+    },
+    colorAccent: function() {
+      var formGroup = helper.node("div|class:form-group form-group-nested-button");
 
-        var colorInputButton = helper.node("div|class:form-input-button");
-        var colorInput = helper.node("input|id:control-theme-color-rgb-color-quick,class:control-theme-color-rgb-color-quick,type:color,value:#000000,tabindex:1");
-        var colorInputLabel = helper.node("label|for:control-theme-color-rgb-color-quick");
-        var colorInputLabelText = helper.node("span:Colour");
-        colorInputLabel.appendChild(colorInputLabelText);
-        colorInputButton.appendChild(colorInput);
-        colorInputButton.appendChild(colorInputLabel);
+      var colorInputButton = helper.node("div|class:form-input-button");
+      var colorInput = helper.node("input|id:control-theme-color-rgb-color-quick,class:control-theme-color-rgb-color-quick,type:color,value:#000000,tabindex:1");
+      var colorInputLabel = helper.node("label|for:control-theme-color-rgb-color-quick");
+      var colorInputLabelText = helper.node("span:Colour");
+      colorInputLabel.appendChild(colorInputLabelText);
+      colorInputButton.appendChild(colorInput);
+      colorInputButton.appendChild(colorInputLabel);
 
-        var accentInputButton = helper.node("div|class:form-input-button");
-        var accentInput = helper.node("input|id:control-theme-accent-rgb-color-quick,class:control-theme-accent-rgb-color-quick,type:color,value:#000000,tabindex:1");
-        var accentInputLabel = helper.node("label|for:control-theme-accent-rgb-color-quick");
-        var accentInputLabelText = helper.node("span:Accent");
-        accentInputLabel.appendChild(accentInputLabelText);
-        accentInputButton.appendChild(accentInput);
-        accentInputButton.appendChild(accentInputLabel);
+      var accentInputButton = helper.node("div|class:form-input-button");
+      var accentInput = helper.node("input|id:control-theme-accent-rgb-color-quick,class:control-theme-accent-rgb-color-quick,type:color,value:#000000,tabindex:1");
+      var accentInputLabel = helper.node("label|for:control-theme-accent-rgb-color-quick");
+      var accentInputLabelText = helper.node("span:Accent");
+      accentInputLabel.appendChild(accentInputLabelText);
+      accentInputButton.appendChild(accentInput);
+      accentInputButton.appendChild(accentInputLabel);
 
-        if (state.get.current().header.button.colorAccent.dot.show) {
-          helper.addClass(colorInputButton, "input-color-dot");
-          helper.addClass(colorInputButton, "input-color-dot-shade");
-          helper.addClass(accentInputButton, "input-color-dot");
-          helper.addClass(accentInputButton, "input-color-dot-accent");
-        } else {
-          helper.addClass(colorInputButton, "form-input-hide");
-          helper.addClass(accentInputButton, "form-input-hide");
-        };
+      if (state.get.current().header.button.colorAccent.dot.show) {
+        helper.addClass(colorInputButton, "input-color-dot");
+        helper.addClass(colorInputButton, "input-color-dot-shade");
+        helper.addClass(accentInputButton, "input-color-dot");
+        helper.addClass(accentInputButton, "input-color-dot-accent");
+      } else {
+        helper.addClass(colorInputButton, "form-input-hide");
+        helper.addClass(accentInputButton, "form-input-hide");
+      };
 
-        if (state.get.current().header.button.style == "clear") {
-          helper.addClass(colorInputButton, "form-input-button-link");
-          helper.addClass(accentInputButton, "form-input-button-link");
-        };
+      if (state.get.current().header.button.style == "clear") {
+        helper.addClass(colorInputButton, "form-input-button-link");
+        helper.addClass(accentInputButton, "form-input-button-link");
+      };
 
-        formGroup.appendChild(colorInputButton);
-        formGroup.appendChild(accentInputButton);
-        return formGroup;
-      }
+      formGroup.appendChild(colorInputButton);
+      formGroup.appendChild(accentInputButton);
+      return formGroup;
+    },
+    menu: function() {
+      var button = helper.node("button|class:control-menu-open button,tabindex:1");
+      var buttonIcon = helper.node("span|class:icon-settings");
+      if (state.get.current().header.button.style == "clear") {
+        helper.addClass(button, "button-link");
+      };
+      button.appendChild(buttonIcon);
+      return button;
     }
   };
 

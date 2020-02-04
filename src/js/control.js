@@ -29,6 +29,72 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: ".control-theme-color-rgb-color-quick",
+    path: "theme.color.rgb",
+    type: "color",
+    mirrorElement: [{
+      element: ".control-theme-color-rgb-color",
+      path: "theme.color.rgb",
+      type: "color"
+    }, {
+      element: ".control-theme-color-rgb-text",
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: ".control-theme-color-hsl-h-range",
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: ".control-theme-color-hsl-h-number",
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: ".control-theme-color-hsl-s-range",
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: ".control-theme-color-hsl-s-number",
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: ".control-theme-color-hsl-l-range",
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: ".control-theme-color-hsl-l-number",
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: ".control-theme-color-rgb-r-range",
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: ".control-theme-color-rgb-r-number",
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: ".control-theme-color-rgb-g-range",
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: ".control-theme-color-rgb-g-number",
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: ".control-theme-color-rgb-b-range",
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: ".control-theme-color-rgb-b-number",
+      path: "theme.color.rgb.b",
+      type: "number"
+    }],
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.shade();
+    }
+  }, {
     element: ".control-theme-accent-rgb-color-quick",
     path: "theme.accent.rgb",
     type: "color",
@@ -3631,72 +3697,6 @@ var control = (function() {
       render.update.control.menu();
     }
   }, {
-    element: ".control-theme-color-rgb-color-quick",
-    path: "theme.color.rgb",
-    type: "color",
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-hsl-h-range",
-      path: "theme.color.hsl.h",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-number",
-      path: "theme.color.hsl.h",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-s-range",
-      path: "theme.color.hsl.s",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-s-number",
-      path: "theme.color.hsl.s",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-l-range",
-      path: "theme.color.hsl.l",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-l-number",
-      path: "theme.color.hsl.l",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-r-range",
-      path: "theme.color.rgb.r",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-number",
-      path: "theme.color.rgb.r",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-g-range",
-      path: "theme.color.rgb.g",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-g-number",
-      path: "theme.color.rgb.g",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-b-range",
-      path: "theme.color.rgb.b",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-b-number",
-      path: "theme.color.rgb.b",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.hsl();
-      theme.render.color.shade();
-    }
-  }, {
     element: ".control-theme-color-rgb-color",
     path: "theme.color.rgb",
     type: "color",
@@ -5181,6 +5181,7 @@ var control = (function() {
   var bind = {};
 
   bind.control = {
+    supportedElement: ["checkbox", "radio", "text", "number", "range", "color", "textarea"],
     timer: {
       inputUpdate: null
     },
@@ -5274,11 +5275,10 @@ var control = (function() {
       color: "change",
       file: "change"
     },
-    supportedElement: ["checkbox", "radio", "text", "number", "range", "color", "textarea"],
     action: function(object) {
       if (object.element) {
         helper.e(object.element).addEventListener(bind.control.eventType[object.type], function(event) {
-          if (render.update.supportedElement.includes(object.type)) {
+          if (bind.control.supportedElement.includes(object.type)) {
             bind.control.value.set(object);
           };
           if (object.func) {
@@ -6382,16 +6382,15 @@ var control = (function() {
         }
       }
     },
-    supportedElement: ["checkbox", "radio", "text", "number", "range", "color", "textarea"],
     control: {
       header: function(object) {
         if (object) {
-          if (render.update.supportedElement.includes(object.type)) {
+          if (bind.control.supportedElement.includes(object.type)) {
             render.update.value.set[object.type](object);
           };
         } else {
           mod.header.forEach(function(arrayItem, index) {
-            if (render.update.supportedElement.includes(arrayItem.type)) {
+            if (bind.control.supportedElement.includes(arrayItem.type)) {
               render.update.value.set[arrayItem.type](arrayItem);
             };
           });
@@ -6399,12 +6398,12 @@ var control = (function() {
       },
       menu: function(object) {
         if (object) {
-          if (render.update.supportedElement.includes(object.type)) {
+          if (bind.control.supportedElement.includes(object.type)) {
             render.update.value.set[object.type](object);
           };
         } else {
           mod.menu.forEach(function(arrayItem, index) {
-            if (render.update.supportedElement.includes(arrayItem.type)) {
+            if (bind.control.supportedElement.includes(arrayItem.type)) {
               render.update.value.set[arrayItem.type](arrayItem);
             };
           });
