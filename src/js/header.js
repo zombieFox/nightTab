@@ -161,7 +161,7 @@ var header = (function() {
           origin: event.detail.origin.index,
           destination: event.detail.destination.index
         };
-        mod.item.move(positionData);
+        mod.item.move.update(positionData);
         data.save();
         render.item.clear();
         render.item.all();
@@ -192,7 +192,7 @@ var header = (function() {
         if ((arrayItem == "clock" && (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) ||
           (arrayItem == "date" && (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show)) ||
           state.get.current().header[arrayItem].show) {
-          headerItemGrid.appendChild(render.item.wrapper(arrayItem, render.item[arrayItem](arrayItem)));
+          headerItemGrid.appendChild(render.item.wrapper(arrayItem, render.item[arrayItem](arrayItem), index));
         };
       });
 
@@ -207,19 +207,23 @@ var header = (function() {
           origin: event.detail.origin.index,
           destination: event.detail.destination.index
         };
-        console.log(positionData);
-        // mod.item.move(positionData);
-        // data.save();
-        // render.item.clear();
-        // render.item.all();
-        // clock.render.all();
-        // date.render.all();
-        // greeting.render.all();
-        // transitional.render.all();
-        // control.bind.control.header();
-        // control.render.update.control.header();
-        // search.bind.input();
-        // search.bind.clear();
+        mod.item.move(positionData);
+        data.save();
+        render.item.clear();
+        render.item.all();
+        greeting.render.clear();
+        greeting.render.all();
+        clock.render.clear();
+        clock.render.all();
+        transitional.render.clear();
+        transitional.render.all();
+        date.render.clear();
+        date.render.all();
+        control.render.dependents();
+        control.render.update.control.header();
+        control.bind.control.header();
+        search.bind.input();
+        search.bind.clear();
       }, false);
 
       headerArea.appendChild(headerItemGrid);
@@ -230,30 +234,85 @@ var header = (function() {
         headerArea.removeChild(headerArea.lastChild);
       };
     },
-    wrapper: function(name, item) {
+    wrapper: function(name, item, index) {
       var headerItem = helper.node("div|class:header-item header-item-" + name + "");
       var headerItemControl = helper.node("div|class:header-item-control header-item-control-" + name + " form-group");
       var headerItemBody = helper.node("div|class:header-item-body header-item-body-" + name);
 
-      var buttonUp = helper.node("button|class:button button-small form-group-item-shrink header-item-control-item header-item-control-item-up,tabindex:-1,title:Move this header item left");
-      var buttonUpIcon = helper.node("span|class:button-icon icon-arrow-left");
-      buttonUp.appendChild(buttonUpIcon);
+      var buttonLeft = helper.node("button|class:button button-small form-group-item-shrink header-item-control-item header-item-control-item-left,tabindex:-1,title:Move this header item left");
+      var buttonLeftIcon = helper.node("span|class:button-icon icon-arrow-left");
+      buttonLeft.appendChild(buttonLeftIcon);
 
       var linkHandle = helper.node("div|class:button button-small form-group-item-shrink header-item-control-item header-item-control-item-handle,tabindex:-1,title:Drag header item to reorder");
       var linkHandleIcon = helper.node("span|class:button-icon icon-reorder");
       linkHandle.appendChild(linkHandleIcon);
 
-      var buttonDown = helper.node("button|class:button button-small form-group-item-shrink header-item-control-item header-item-control-item-up,tabindex:-1,title:Move this header item right");
-      var buttonDownIcon = helper.node("span|class:button-icon icon-arrow-right");
-      buttonDown.appendChild(buttonDownIcon);
+      var buttonRight = helper.node("button|class:button button-small form-group-item-shrink header-item-control-item header-item-control-item-right,tabindex:-1,title:Move this header item right");
+      var buttonRightIcon = helper.node("span|class:button-icon icon-arrow-right");
+      buttonRight.appendChild(buttonRightIcon);
 
-      headerItemControl.appendChild(buttonUp);
+      headerItemControl.appendChild(buttonLeft);
       headerItemControl.appendChild(linkHandle);
-      headerItemControl.appendChild(buttonDown);
+      headerItemControl.appendChild(buttonRight);
 
       headerItemBody.appendChild(item);
       headerItem.appendChild(headerItemControl);
       headerItem.appendChild(headerItemBody);
+
+      buttonLeft.addEventListener("click", function(event) {
+        var positionData = {
+          origin: index,
+          destination: index - 1
+        };
+        if (positionData.destination < 0) {
+          positionData.destination = 0
+        };
+        mod.item.move(positionData);
+        data.save();
+        render.item.clear();
+        render.item.all();
+        greeting.render.clear();
+        greeting.render.all();
+        clock.render.clear();
+        clock.render.all();
+        transitional.render.clear();
+        transitional.render.all();
+        date.render.clear();
+        date.render.all();
+        control.render.dependents();
+        control.render.update.control.header();
+        control.bind.control.header();
+        search.bind.input();
+        search.bind.clear();
+        render.item.focus.left(positionData);
+      }, false);
+
+      buttonRight.addEventListener("click", function(event) {
+        var positionData = {
+          origin: index,
+          destination: index + 1
+        };
+        console.log(positionData);
+        mod.item.move(positionData);
+        data.save();
+        render.item.clear();
+        render.item.all();
+        greeting.render.clear();
+        greeting.render.all();
+        clock.render.clear();
+        clock.render.all();
+        transitional.render.clear();
+        transitional.render.all();
+        date.render.clear();
+        date.render.all();
+        control.render.dependents();
+        control.render.update.control.header();
+        control.bind.control.header();
+        search.bind.input();
+        search.bind.clear();
+        render.item.focus.right(positionData);
+      }, false);
+
       return headerItem;
     },
     greeting: function(name) {
@@ -370,6 +429,26 @@ var header = (function() {
       };
       button.appendChild(buttonIcon);
       return button;
+    },
+    focus: {
+      left: function(positionData) {
+        var allHeaderItemControl = helper.eA(".header-item-control");
+        var target = positionData.destination;
+        if (target < 0) {
+          target = 0;
+        };
+        var button = allHeaderItemControl[target].querySelector(".header-item-control-item-left");
+        button.focus();
+      },
+      right: function(positionData) {
+        var allHeaderItemControl = helper.eA(".header-item-control");
+        var target = positionData.destination;
+        if (target >= allHeaderItemControl.length) {
+          target = allHeaderItemControl.length - 1;
+        };
+        var button = allHeaderItemControl[target].querySelector(".header-item-control-item-right");
+        button.focus();
+      }
     }
   };
 
