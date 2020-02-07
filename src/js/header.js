@@ -449,6 +449,18 @@ var header = (function() {
         var button = allHeaderItemControl[target].querySelector(".header-item-control-item-right");
         button.focus();
       }
+    },
+    tabindex: function() {
+      var allHeaderItemControl = helper.eA(".header-item-control");
+      if (state.get.current().edit) {
+        allHeaderItemControl.forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = 1;
+        });
+      } else {
+        allHeaderItemControl.forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = -1;
+        });
+      };
     }
   };
 
