@@ -100,16 +100,16 @@ var state = (function() {
         },
         size: 1
       },
-      button: {
-        editAdd: {
+      editAdd: {
+        show: true
+      },
+      colorAccent: {
+        show: true,
+        dot: {
           show: true
-        },
-        colorAccent: {
-          show: true,
-          dot: {
-            show: true
-          }
-        },
+        }
+      },
+      button: {
         style: "box",
         size: 1
       },
@@ -141,6 +141,9 @@ var state = (function() {
       },
       order: ["greeting", "clock", "transitional", "date", "search", "editAdd", "colorAccent", "menu"],
       position: "sticky",
+      menu: {
+        show: true,
+      },
       radius: false
     },
     link: {

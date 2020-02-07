@@ -107,16 +107,56 @@ var header = (function() {
         menu: "Menu button"
       };
       var headerOrder = helper.e(".header-order");
-      var ul = helper.node("ul|class:header-order-list");
       state.get.current().header.order.forEach(function(arrayItem, index) {
-        var itemLi = helper.node("li:" + names[arrayItem]);
-        ul.appendChild(itemLi);
+        var formWrap = helper.node("div|class:form-wrap");
+        var forminline = helper.node("div|class:form-inline");
+        var formGroup = helper.node("div|class:form-group");
+
+        var buttonUp = helper.node("button|class:button form-group-item-shrink header-order-control-item header-order-control-item-up,tabindex:-1,title:Move this header item up");
+        var buttonUpIcon = helper.node("span|class:button-icon icon-arrow-up");
+        buttonUp.appendChild(buttonUpIcon);
+
+        var linkHandle = helper.node("div|class:button form-group-item-shrink header-order-control-item header-order-control-item-handle,tabindex:-1,title:Drag header item to reorder");
+        var linkHandleIcon = helper.node("span|class:button-icon icon-reorder");
+        linkHandle.appendChild(linkHandleIcon);
+
+        var buttonDown = helper.node("button|class:button form-group-item-shrink header-order-control-item header-order-control-item-up,tabindex:-1,title:Move this header item down");
+        var buttonDownIcon = helper.node("span|class:button-icon icon-arrow-down");
+        buttonDown.appendChild(buttonDownIcon);
+
+        var name = helper.node("div:" + names[arrayItem]);
+
+        formGroup.appendChild(buttonUp);
+        formGroup.appendChild(linkHandle);
+        formGroup.appendChild(buttonDown);
+
+        forminline.appendChild(formGroup);
+        forminline.appendChild(name);
+        formWrap.appendChild(forminline);
+
+        headerOrder.appendChild(formWrap);
       });
-      headerOrder.appendChild(ul);
-      sortable('.header-order-list', {
-        placeholder: "<li></li>"
+
+      // var placeholderFormWrap_xxx = helper.node("div|class:form-wrap");
+      // var placeholderFormInline_xxx = helper.node("div|class:form-inline");
+      // var placeholder_xxx = helper.node("div|class:header-order-sort-placeholder")
+      // placeholderFormInline_xxx.appendChild(placeholder_xxx);
+      // placeholderFormWrap_xxx.appendChild(placeholderFormInline_xxx);
+      //
+      // headerOrder.appendChild(placeholderFormWrap_xxx);
+
+      var placeholderFormWrap = helper.node("div|class:form-wrap");
+      var placeholderFormInline = helper.node("div|class:form-inline");
+      var placeholder = helper.node("div|class:header-item-sort-placeholder")
+      placeholderFormInline.appendChild(placeholder);
+      placeholderFormWrap.appendChild(placeholderFormInline);
+
+      sortable('.header-order', {
+        orientation: "vertical",
+        handle: ".header-order-control-item-handle",
+        placeholder: placeholderFormWrap
       });
-      sortable(".header-order-list")[0].addEventListener("sortupdate", function(event) {
+      sortable(".header-order")[0].addEventListener("sortupdate", function(event) {
         var positionData = {
           origin: event.detail.origin.index,
           destination: event.detail.destination.index
@@ -147,9 +187,41 @@ var header = (function() {
     all: function() {
       var headerArea = helper.e(".header-area");
       var headerItemGrid = helper.node("div|class:header-item-grid");
+
       state.get.current().header.order.forEach(function(arrayItem, index) {
-        headerItemGrid.appendChild(render.item.wrapper(arrayItem, render.item[arrayItem](arrayItem)));
+        if ((arrayItem == "clock" && (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) ||
+          (arrayItem == "date" && (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show)) ||
+          state.get.current().header[arrayItem].show) {
+          headerItemGrid.appendChild(render.item.wrapper(arrayItem, render.item[arrayItem](arrayItem)));
+        };
       });
+
+      sortable(headerItemGrid, {
+        handle: ".header-item-control-item-handle",
+        orientation: "horizontal",
+        forcePlaceholderSize: true,
+        placeholder: helper.node("div|class:header-item header-item-sort-placeholder", helper.node("div|class:header-item-sort-placeholder-edge"))
+      });
+      sortable(headerItemGrid)[0].addEventListener("sortupdate", function(event) {
+        var positionData = {
+          origin: event.detail.origin.index,
+          destination: event.detail.destination.index
+        };
+        console.log(positionData);
+        // mod.item.move(positionData);
+        // data.save();
+        // render.item.clear();
+        // render.item.all();
+        // clock.render.all();
+        // date.render.all();
+        // greeting.render.all();
+        // transitional.render.all();
+        // control.bind.control.header();
+        // control.render.update.control.header();
+        // search.bind.input();
+        // search.bind.clear();
+      }, false);
+
       headerArea.appendChild(headerItemGrid);
     },
     clear: function() {
@@ -159,9 +231,28 @@ var header = (function() {
       };
     },
     wrapper: function(name, item) {
-      var headerItem = helper.node("div|class:header-item header-" + name + "");
-      var headerItemBody = helper.node("div|class:header-" + name + "-body");
+      var headerItem = helper.node("div|class:header-item header-item-" + name + "");
+      var headerItemControl = helper.node("div|class:header-item-control header-item-control-" + name + " form-group");
+      var headerItemBody = helper.node("div|class:header-item-body header-item-body-" + name);
+
+      var buttonUp = helper.node("button|class:button button-small form-group-item-shrink header-item-control-item header-item-control-item-up,tabindex:-1,title:Move this header item left");
+      var buttonUpIcon = helper.node("span|class:button-icon icon-arrow-left");
+      buttonUp.appendChild(buttonUpIcon);
+
+      var linkHandle = helper.node("div|class:button button-small form-group-item-shrink header-item-control-item header-item-control-item-handle,tabindex:-1,title:Drag header item to reorder");
+      var linkHandleIcon = helper.node("span|class:button-icon icon-reorder");
+      linkHandle.appendChild(linkHandleIcon);
+
+      var buttonDown = helper.node("button|class:button button-small form-group-item-shrink header-item-control-item header-item-control-item-up,tabindex:-1,title:Move this header item right");
+      var buttonDownIcon = helper.node("span|class:button-icon icon-arrow-right");
+      buttonDown.appendChild(buttonDownIcon);
+
+      headerItemControl.appendChild(buttonUp);
+      headerItemControl.appendChild(linkHandle);
+      headerItemControl.appendChild(buttonDown);
+
       headerItemBody.appendChild(item);
+      headerItem.appendChild(headerItemControl);
       headerItem.appendChild(headerItemBody);
       return headerItem;
     },
@@ -252,7 +343,7 @@ var header = (function() {
       accentInputButton.appendChild(accentInput);
       accentInputButton.appendChild(accentInputLabel);
 
-      if (state.get.current().header.button.colorAccent.dot.show) {
+      if (state.get.current().header.colorAccent.dot.show) {
         helper.addClass(colorInputButton, "input-color-dot");
         helper.addClass(colorInputButton, "input-color-dot-shade");
         helper.addClass(accentInputButton, "input-color-dot");
@@ -324,7 +415,7 @@ var header = (function() {
   render.button = {
     size: function() {
       var html = helper.e("html");
-      html.style.setProperty("--header-button-size", state.get.current().header.button.size + "em");
+      html.style.setProperty("--header-button-size", state.get.current().header.size + "em");
     }
   };
 
@@ -345,7 +436,7 @@ var header = (function() {
     render.search.width();
     render.search.size();
     render.button.size();
-    render.control.all();
+    // render.control.all();
   };
 
   // exposed methods

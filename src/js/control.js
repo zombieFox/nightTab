@@ -841,10 +841,21 @@ var control = (function() {
     path: "header.greeting.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-greeting-type-good",
@@ -978,10 +989,21 @@ var control = (function() {
     path: "header.transitional.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-transitional-type-timeanddate",
@@ -1099,14 +1121,21 @@ var control = (function() {
     path: "header.clock.hours.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
-      clock.render.clear();
-      clock.render.all();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-clock-hours-display-number",
@@ -1115,10 +1144,6 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
     }
   }, {
     element: ".control-header-clock-hours-display-word",
@@ -1127,24 +1152,27 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
     }
   }, {
     element: ".control-header-clock-minutes-show",
     path: "header.clock.minutes.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
-      clock.render.clear();
-      clock.render.all();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-clock-minutes-display-number",
@@ -1153,10 +1181,6 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
     }
   }, {
     element: ".control-header-clock-minutes-display-word",
@@ -1165,24 +1189,27 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
     }
   }, {
     element: ".control-header-clock-seconds-show",
     path: "header.clock.seconds.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
-      clock.render.clear();
-      clock.render.all();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-clock-seconds-display-number",
@@ -1191,10 +1218,6 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
     }
   }, {
     element: ".control-header-clock-seconds-display-word",
@@ -1203,10 +1226,6 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
     }
   }, {
     element: ".control-header-clock-separator-show",
@@ -1215,34 +1234,24 @@ var control = (function() {
     func: function() {
       clock.render.clear();
       clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
     }
   }, {
     element: ".control-header-clock-hour24-show",
     path: "header.clock.hour24.show",
     type: "checkbox",
     func: function() {
-      render.dependents();
       clock.render.clear();
       clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
+      render.dependents();
     }
   }, {
     element: ".control-header-clock-meridiem-show",
     path: "header.clock.meridiem.show",
     type: "checkbox",
     func: function() {
-      render.dependents();
       clock.render.clear();
       clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
+      render.dependents();
     }
   }, {
     element: ".control-header-clock-size-range",
@@ -1344,14 +1353,21 @@ var control = (function() {
     path: "header.date.day.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
-      date.render.clear();
-      date.render.all();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-date-day-display-number",
@@ -1432,14 +1448,21 @@ var control = (function() {
     path: "header.date.date.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
-      date.render.clear();
-      date.render.all();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-date-date-display-number",
@@ -1482,14 +1505,21 @@ var control = (function() {
     path: "header.date.month.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
-      date.render.clear();
-      date.render.all();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-date-month-display-number",
@@ -1558,14 +1588,21 @@ var control = (function() {
     path: "header.date.year.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
-      date.render.clear();
-      date.render.all();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-date-year-display-number",
@@ -1727,9 +1764,23 @@ var control = (function() {
     path: "header.search.show",
     type: "checkbox",
     func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      header.render.search.width();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
       render.class();
       render.dependents();
-      header.render.search.width();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-search-style-auto",
@@ -2027,12 +2078,19 @@ var control = (function() {
     func: function() {
       header.render.item.clear();
       header.render.item.all();
-      clock.render.all();
-      date.render.all();
-      transitional.render.all();
+      greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
       render.update.control.header();
-      render.update.control.menu();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-button-style-clear",
@@ -2041,42 +2099,82 @@ var control = (function() {
     func: function() {
       header.render.item.clear();
       header.render.item.all();
-      clock.render.all();
-      date.render.all();
-      transitional.render.all();
+      greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
       render.update.control.header();
-      render.update.control.menu();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
-    element: ".control-header-button-editadd-show",
-    path: "header.button.editAdd.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-header-button-coloraccent-show",
-    path: "header.button.colorAccent.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-header-button-coloraccent-dot-show",
-    path: "header.button.colorAccent.dot.show",
+    element: ".control-header-editadd-show",
+    path: "header.editAdd.show",
     type: "checkbox",
     func: function() {
       header.render.item.clear();
       header.render.item.all();
-      clock.render.all();
-      date.render.all();
-      transitional.render.all();
+      greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
       render.update.control.header();
-      render.update.control.menu();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
+    }
+  }, {
+    element: ".control-header-coloraccent-show",
+    path: "header.colorAccent.show",
+    type: "checkbox",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
+    }
+  }, {
+    element: ".control-header-coloraccent-dot-show",
+    path: "header.colorAccent.dot.show",
+    type: "checkbox",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.bind.input();
+      search.bind.clear();
     }
   }, {
     element: ".control-header-button-size-range",
@@ -5316,19 +5414,27 @@ var control = (function() {
     },
     header: function(object) {
       if (object) {
-        bind.control.action(object);
+        if (helper.e(object.element)) {
+          bind.control.action(object);
+        };
       } else {
         mod.header.forEach(function(arrayItem, index) {
-          bind.control.action(arrayItem);
+          if (helper.e(arrayItem.element)) {
+            bind.control.action(arrayItem);
+          };
         });
       };
     },
     menu: function(object) {
       if (object) {
-        bind.control.action(object);
+        if (helper.e(object.element)) {
+          bind.control.action(object);
+        };
       } else {
         mod.menu.forEach(function(arrayItem, index) {
-          bind.control.action(arrayItem);
+          if (helper.e(arrayItem.element)) {
+            bind.control.action(arrayItem);
+          };
         });
       };
     }
@@ -5360,60 +5466,18 @@ var control = (function() {
         helper.removeClass(html, "is-header-item-alignment-right");
         helper.addClass(html, "is-header-item-alignment-" + state.get.current().header.item.alignment);
       };
-      var _clock = function() {
-        if (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
-          helper.addClass(html, "is-header-clock-show");
-        } else {
-          helper.removeClass(html, "is-header-clock-show");
-        };
-      };
-      var _date = function() {
-        if (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show) {
-          helper.addClass(html, "is-header-date-show");
-        } else {
-          helper.removeClass(html, "is-header-date-show");
-        };
-      };
       var _search = function() {
-        helper.removeClass(html, "is-header-search-show");
         helper.removeClass(html, "is-header-search-style-custom");
         helper.removeClass(html, "is-header-search-style-auto");
         helper.removeClass(html, "is-header-search-text-alignment-left");
         helper.removeClass(html, "is-header-search-text-alignment-center");
         helper.removeClass(html, "is-header-search-text-alignment-right");
         if (state.get.current().header.search.show) {
-          helper.addClass(html, "is-header-search-show");
           helper.addClass(html, "is-header-search-style-" + state.get.current().header.search.style);
           helper.addClass(html, "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment);
         };
         helper.e(".control-header-search-engine-custom-name").value = state.get.current().header.search.engine.custom.name;
         helper.e(".control-header-search-engine-custom-url").value = state.get.current().header.search.engine.custom.url;
-      };
-      var _button = function() {
-        if (state.get.current().header.button.editAdd.show) {
-          helper.addClass(html, "is-header-button-editadd-show");
-        } else {
-          helper.removeClass(html, "is-header-button-editadd-show");
-        };
-        if (state.get.current().header.button.colorAccent.show) {
-          helper.addClass(html, "is-header-button-coloraccent-show");
-        } else {
-          helper.removeClass(html, "is-header-button-coloraccent-show");
-        };
-      };
-      var _greeting = function() {
-        if (state.get.current().header.greeting.show) {
-          helper.addClass(html, "is-header-greeting-show");
-        } else {
-          helper.removeClass(html, "is-header-greeting-show");
-        };
-      };
-      var _transitional = function() {
-        if (state.get.current().header.transitional.show && (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show || state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) {
-          helper.addClass(html, "is-header-transitional-show");
-        } else {
-          helper.removeClass(html, "is-header-transitional-show");
-        };
       };
       var _color = function() {
         helper.removeClass(html, "is-header-color-show");
@@ -5450,16 +5514,11 @@ var control = (function() {
       };
       _area();
       _item();
-      _clock();
-      _date();
       _search();
-      _button();
       _color();
       _radius();
       _border();
-      _greeting();
       _position();
-      _transitional();
     };
     var _group = function() {
       var _area = function() {
@@ -5610,22 +5669,27 @@ var control = (function() {
   render.dependents = function() {
     var _disable = {
       input: function(input, disabled) {
-        if (disabled) {
-          helper.e(input).disabled = true;
-        } else {
-          helper.e(input).disabled = false;
+        var element = helper.e(input);
+        if (element) {
+          if (disabled) {
+            element.disabled = true;
+          } else {
+            element.disabled = false;
+          };
         };
       },
       element: function(className, disabled) {
-        var allHelper = helper.eA(className);
-        if (disabled) {
-          allHelper.forEach(function(arrayItem, index) {
-            helper.addClass(arrayItem, "disabled");
-          });
-        } else {
-          allHelper.forEach(function(arrayItem, index) {
-            helper.removeClass(arrayItem, "disabled");
-          });
+        var allElement = helper.eA(className);
+        if (allElement.length > 0) {
+          if (disabled) {
+            allElement.forEach(function(arrayItem, index) {
+              helper.addClass(arrayItem, "disabled");
+            });
+          } else {
+            allElement.forEach(function(arrayItem, index) {
+              helper.removeClass(arrayItem, "disabled");
+            });
+          };
         };
       }
     };
@@ -5835,9 +5899,9 @@ var control = (function() {
         };
       };
       var _button = function() {
-        _disable.input(".control-header-button-coloraccent-dot-show", true);
-        if (state.get.current().header.button.colorAccent.show) {
-          _disable.input(".control-header-button-coloraccent-dot-show", false);
+        _disable.input(".control-header-coloraccent-dot-show", true);
+        if (state.get.current().header.colorAccent.show) {
+          _disable.input(".control-header-coloraccent-dot-show", false);
         };
       };
       var _search = function() {
@@ -6385,12 +6449,12 @@ var control = (function() {
     control: {
       header: function(object) {
         if (object) {
-          if (bind.control.supportedElement.includes(object.type)) {
+          if (bind.control.supportedElement.includes(object.type) && helper.e(object.element)) {
             render.update.value.set[object.type](object);
           };
         } else {
           mod.header.forEach(function(arrayItem, index) {
-            if (bind.control.supportedElement.includes(arrayItem.type)) {
+            if (bind.control.supportedElement.includes(arrayItem.type) && helper.e(arrayItem.element)) {
               render.update.value.set[arrayItem.type](arrayItem);
             };
           });
