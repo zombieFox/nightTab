@@ -110,7 +110,7 @@ var header = (function() {
       state.get.current().header.order.forEach(function(arrayItem, index) {
         var formWrap = helper.node("div|class:form-wrap");
         var forminline = helper.node("div|class:form-inline");
-        var formGroup = helper.node("div|class:form-group");
+        var formGroup = helper.node("div|class:form-group header-order-control");
 
         var buttonUp = helper.node("button|class:button form-group-item-shrink header-order-control-item header-order-control-item-up,tabindex:-1,title:Move this header item up");
         var buttonUpIcon = helper.node("span|class:button-icon icon-arrow-up");
@@ -120,7 +120,7 @@ var header = (function() {
         var linkHandleIcon = helper.node("span|class:button-icon icon-reorder");
         linkHandle.appendChild(linkHandleIcon);
 
-        var buttonDown = helper.node("button|class:button form-group-item-shrink header-order-control-item header-order-control-item-up,tabindex:-1,title:Move this header item down");
+        var buttonDown = helper.node("button|class:button form-group-item-shrink header-order-control-item header-order-control-item-down,tabindex:-1,title:Move this header item down");
         var buttonDownIcon = helper.node("span|class:button-icon icon-arrow-down");
         buttonDown.appendChild(buttonDownIcon);
 
@@ -135,19 +135,76 @@ var header = (function() {
         formWrap.appendChild(forminline);
 
         headerOrder.appendChild(formWrap);
-      });
 
-      // var placeholderFormWrap_xxx = helper.node("div|class:form-wrap");
-      // var placeholderFormInline_xxx = helper.node("div|class:form-inline");
-      // var placeholder_xxx = helper.node("div|class:header-order-sort-placeholder")
-      // placeholderFormInline_xxx.appendChild(placeholder_xxx);
-      // placeholderFormWrap_xxx.appendChild(placeholderFormInline_xxx);
-      //
-      // headerOrder.appendChild(placeholderFormWrap_xxx);
+        if (state.get.current().menu) {
+          headerOrder.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
+            arrayItem.tabIndex = 1;
+          });
+        };
+
+        buttonUp.addEventListener("click", function(event) {
+          var positionData = {
+            origin: index,
+            destination: index - 1
+          };
+          if (positionData.destination < 0) {
+            positionData.destination = 0
+          };
+          mod.item.move(positionData);
+          data.save();
+          render.control.clear();
+          render.control.all();
+          render.item.clear();
+          render.item.all();
+          greeting.render.clear();
+          greeting.render.all();
+          clock.render.clear();
+          clock.render.all();
+          transitional.render.clear();
+          transitional.render.all();
+          date.render.clear();
+          date.render.all();
+          control.render.dependents();
+          control.render.update.control.header();
+          control.bind.control.header();
+          dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
+          search.bind.input();
+          search.bind.clear();
+          render.item.focus.up(positionData);
+        }, false);
+
+        buttonDown.addEventListener("click", function(event) {
+          var positionData = {
+            origin: index,
+            destination: index + 1
+          };
+          mod.item.move(positionData);
+          data.save();
+          render.control.clear();
+          render.control.all();
+          render.item.clear();
+          render.item.all();
+          greeting.render.clear();
+          greeting.render.all();
+          clock.render.clear();
+          clock.render.all();
+          transitional.render.clear();
+          transitional.render.all();
+          date.render.clear();
+          date.render.all();
+          control.render.dependents();
+          control.render.update.control.header();
+          control.bind.control.header();
+          dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
+          search.bind.input();
+          search.bind.clear();
+          render.item.focus.down(positionData);
+        }, false);
+      });
 
       var placeholderFormWrap = helper.node("div|class:form-wrap");
       var placeholderFormInline = helper.node("div|class:form-inline");
-      var placeholder = helper.node("div|class:header-item-sort-placeholder")
+      var placeholder = helper.node("div|class:header-item-sort-placeholder-edge")
       placeholderFormInline.appendChild(placeholder);
       placeholderFormWrap.appendChild(placeholderFormInline);
 
@@ -161,16 +218,22 @@ var header = (function() {
           origin: event.detail.origin.index,
           destination: event.detail.destination.index
         };
-        mod.item.move.update(positionData);
+        mod.item.move(positionData);
         data.save();
         render.item.clear();
         render.item.all();
-        clock.render.all();
-        date.render.all();
+        greeting.render.clear();
         greeting.render.all();
+        clock.render.clear();
+        clock.render.all();
+        transitional.render.clear();
         transitional.render.all();
-        control.bind.control.header();
+        date.render.clear();
+        date.render.all();
+        control.render.dependents();
         control.render.update.control.header();
+        control.bind.control.header();
+        dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
         search.bind.input();
         search.bind.clear();
       }, false);
@@ -178,7 +241,7 @@ var header = (function() {
     clear: function() {
       var headerOrder = helper.e(".header-order");
       while (headerOrder.lastChild) {
-        headerOrder.removeChild(headerArea.lastChild);
+        headerOrder.removeChild(headerOrder.lastChild);
       };
     }
   };
@@ -222,6 +285,7 @@ var header = (function() {
         control.render.dependents();
         control.render.update.control.header();
         control.bind.control.header();
+        dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
         search.bind.input();
         search.bind.clear();
       }, false);
@@ -282,6 +346,7 @@ var header = (function() {
         control.render.dependents();
         control.render.update.control.header();
         control.bind.control.header();
+        dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
         search.bind.input();
         search.bind.clear();
         render.item.focus.left(positionData);
@@ -308,6 +373,7 @@ var header = (function() {
         control.render.dependents();
         control.render.update.control.header();
         control.bind.control.header();
+        dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
         search.bind.input();
         search.bind.clear();
         render.item.focus.right(positionData);
@@ -431,6 +497,24 @@ var header = (function() {
       return button;
     },
     focus: {
+      up: function(positionData) {
+        var allHeaderOrderControl = helper.eA(".header-order-control");
+        var target = positionData.destination;
+        if (target < 0) {
+          target = 0;
+        };
+        var button = allHeaderOrderControl[target].querySelector(".header-order-control-item-up");
+        button.focus();
+      },
+      down: function(positionData) {
+        var allHeaderOrderControl = helper.eA(".header-order-control");
+        var target = positionData.destination;
+        if (target >= allHeaderOrderControl.length) {
+          target = allHeaderOrderControl.length - 1;
+        };
+        var button = allHeaderOrderControl[target].querySelector(".header-order-control-item-down");
+        button.focus();
+      },
       left: function(positionData) {
         var allHeaderItemControl = helper.eA(".header-item-control");
         var target = positionData.destination;
@@ -527,7 +611,7 @@ var header = (function() {
     render.search.width();
     render.search.size();
     render.button.size();
-    // render.control.all();
+    render.control.all();
   };
 
   // exposed methods

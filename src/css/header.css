@@ -235,7 +235,7 @@
   background-color: rgba(var(--theme-accent), 0.2);
   border-radius: var(--theme-radius);
   width: 100%;
-  height: 100%;
+  height: 2.5em;
   position: relative;
   box-shadow: var(--edge-shadow);
   pointer-events: none;
@@ -256,7 +256,7 @@
 
 .is-edit .header-item-control {
   height: 2.5em;
-  width: 9.5em;
+  width: 9.6em;
   transition:
     width var(--layout-timing-extra-fast),
     height var(--layout-timing-extra-fast) var(--layout-duration-04),

@@ -38,27 +38,24 @@ var dropdown = (function() {
 
   var bind = {};
 
-  var documentEvent = {};
-
-  documentEvent.add = function() {
-    document.addEventListener("click", documentEvent.clickOut, false);
+  bind.documentEvent = {
+    add: function() {
+      document.addEventListener("click", bind.documentEvent.clickOut, false);
+    },
+    remove: function() {
+      document.removeEventListener("click", bind.documentEvent.clickOut, false);
+    },
+    clickOut: function() {
+      var path = event.composedPath();
+      if (!path.includes(_currentFormDropdown)) {
+        close();
+      };
+    }
   };
 
-  documentEvent.remove = function() {
-    document.removeEventListener("click", documentEvent.clickOut, false);
-  };
 
-  documentEvent.clickOut = function() {
-    var path = event.composedPath();
-    if (!path.includes(_currentFormDropdown)) {
-      close();
-    };
-  };
-
-  bind.formDropdown = function() {
-    var allFormDropdown = helper.eA(".form-dropdown");
-    allFormDropdown.forEach(function(arrayItem, index) {
-      var formDropdown = arrayItem;
+  bind.formDropdown = function(formDropdown) {
+    var bindDropdown = function(formDropdown) {
       var formDropdownToggle = formDropdown.querySelector(".form-dropdown-toggle");
       var allFormDropdownMenuItem = formDropdown.querySelectorAll(".form-dropdown-menu-item");
       formDropdownToggle.addEventListener("click", function() {
@@ -72,7 +69,15 @@ var dropdown = (function() {
           render.close();
         }, false);
       });
-    });
+    };
+    if (formDropdown) {
+      bindDropdown(formDropdown);
+    } else {
+      var allFormDropdown = helper.eA(".form-dropdown");
+      allFormDropdown.forEach(function(arrayItem, index) {
+        bindDropdown(arrayItem);
+      });
+    };
   };
 
   var render = {};
@@ -110,14 +115,14 @@ var dropdown = (function() {
   render.close = function() {
     helper.removeClass(_currentFormDropdown, "form-dropdown-open");
     render.offset();
-    documentEvent.remove();
+    bind.documentEvent.remove();
     _currentFormDropdown = null;
   };
 
   render.open = function() {
     helper.addClass(_currentFormDropdown, "form-dropdown-open");
     render.offset();
-    documentEvent.add();
+    bind.documentEvent.add();
   };
 
   var close = function() {

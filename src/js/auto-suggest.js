@@ -143,23 +143,22 @@ var autoSuggest = (function() {
     };
   };
 
-  var documentEvent = {};
-
-  documentEvent.add = function() {
-    document.addEventListener("click", documentEvent.clickOut, false);
-    document.addEventListener("keydown", bind.navigateResults, false);
+  bind.documentEvent = {
+    add: function() {
+      document.addEventListener("click", bind.documentEvent.clickOut, false);
+      document.addEventListener("keydown", bind.navigateResults, false);
+    },
+    remove: function() {
+      document.removeEventListener("click", bind.documentEvent.clickOut, false);
+      document.removeEventListener("keydown", bind.navigateResults, false);
+    },
+    clickOut: function(event) {
+      if (!(event.target.classList.contains("auto-suggest-list")) && !(event.target.classList.contains("auto-suggest-input"))) {
+        render.close();
+      };
+    }
   };
 
-  documentEvent.remove = function() {
-    document.removeEventListener("click", documentEvent.clickOut, false);
-    document.removeEventListener("keydown", bind.navigateResults, false);
-  };
-
-  documentEvent.clickOut = function(event) {
-    if (!(event.target.classList.contains("auto-suggest-list")) && !(event.target.classList.contains("auto-suggest-input"))) {
-      render.close();
-    };
-  };
 
   var render = {};
 
@@ -216,7 +215,7 @@ var autoSuggest = (function() {
         autoSuggest.appendChild(autoSuggestList);
         body.appendChild(autoSuggest);
         autoSuggest.setAttribute("style", "width: " + box.width + "px; top: " + box.top + "px; left: " + box.left + "px;");
-        documentEvent.add();
+        bind.documentEvent.add();
       };
       _populateList(autoSuggestList);
     };
@@ -233,7 +232,7 @@ var autoSuggest = (function() {
     var autoSuggest = helper.e(".auto-suggest");
     if (autoSuggest) {
       autoSuggest.remove();
-      documentEvent.remove();
+      bind.documentEvent.remove();
       _currentInputOptions = {};
       _autoSuggestActive = false;
     };
