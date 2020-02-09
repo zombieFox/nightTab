@@ -35,6 +35,54 @@ var header = (function() {
     });
   };
 
+  bind.sort = {
+    update: {
+      func: function(event) {
+        var positionData = {
+          origin: event.detail.origin.index,
+          destination: event.detail.destination.index
+        };
+        mod.item.move(positionData);
+        render.control.clear();
+        render.control.all();
+        bind.sort.item();
+        render.item.clear();
+        render.item.all();
+        greeting.render.clear();
+        greeting.render.all();
+        clock.render.clear();
+        clock.render.all();
+        transitional.render.clear();
+        transitional.render.all();
+        date.render.clear();
+        date.render.all();
+        control.render.dependents();
+        control.render.update.control.header();
+        control.bind.control.header();
+        dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
+        search.bind.input();
+        search.bind.clear();
+      },
+      remove: function() {
+        sortable(".header-order")[0].removeEventListener("sortupdate", bind.sort.update.func, false);
+      }
+    },
+    item: function() {
+      var placeholderFormWrap = helper.node("div|class:form-wrap");
+      var placeholderFormInline = helper.node("div|class:form-inline");
+      var placeholder = helper.node("div|class:header-item-sort-placeholder-edge")
+      placeholderFormInline.appendChild(placeholder);
+      placeholderFormWrap.appendChild(placeholderFormInline);
+      sortable('.header-order', {
+        orientation: "vertical",
+        handle: ".header-order-control-item-handle",
+        placeholder: placeholderFormWrap
+      });
+      bind.sort.update.remove();
+      sortable(".header-order")[0].addEventListener("sortupdate", bind.sort.update.func, false, event);
+    }
+  };
+
   var render = {};
 
   render.area = {
@@ -104,7 +152,7 @@ var header = (function() {
         search: "Search bar",
         editAdd: "Edit/Add buttons",
         colorAccent: "Colour/Accent buttons",
-        menu: "Menu button"
+        menu: "Settings menu button"
       };
       var headerOrder = helper.e(".header-order");
       state.get.current().header.order.forEach(function(arrayItem, index) {
@@ -154,6 +202,7 @@ var header = (function() {
           data.save();
           render.control.clear();
           render.control.all();
+          bind.sort.item();
           render.item.clear();
           render.item.all();
           greeting.render.clear();
@@ -170,7 +219,7 @@ var header = (function() {
           dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
           search.bind.input();
           search.bind.clear();
-          render.item.focus.up(positionData);
+          render.control.focus.up(positionData);
         }, false);
 
         buttonDown.addEventListener("click", function(event) {
@@ -182,6 +231,7 @@ var header = (function() {
           data.save();
           render.control.clear();
           render.control.all();
+          bind.sort.item();
           render.item.clear();
           render.item.all();
           greeting.render.clear();
@@ -198,50 +248,64 @@ var header = (function() {
           dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
           search.bind.input();
           search.bind.clear();
-          render.item.focus.down(positionData);
+          render.control.focus.down(positionData);
         }, false);
       });
-
-      var placeholderFormWrap = helper.node("div|class:form-wrap");
-      var placeholderFormInline = helper.node("div|class:form-inline");
-      var placeholder = helper.node("div|class:header-item-sort-placeholder-edge")
-      placeholderFormInline.appendChild(placeholder);
-      placeholderFormWrap.appendChild(placeholderFormInline);
-
-      sortable('.header-order', {
-        orientation: "vertical",
-        handle: ".header-order-control-item-handle",
-        placeholder: placeholderFormWrap
-      });
-      sortable(".header-order")[0].addEventListener("sortupdate", function(event) {
-        var positionData = {
-          origin: event.detail.origin.index,
-          destination: event.detail.destination.index
-        };
-        mod.item.move(positionData);
-        data.save();
-        render.item.clear();
-        render.item.all();
-        greeting.render.clear();
-        greeting.render.all();
-        clock.render.clear();
-        clock.render.all();
-        transitional.render.clear();
-        transitional.render.all();
-        date.render.clear();
-        date.render.all();
-        control.render.dependents();
-        control.render.update.control.header();
-        control.bind.control.header();
-        dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
-        search.bind.input();
-        search.bind.clear();
-      }, false);
     },
     clear: function() {
       var headerOrder = helper.e(".header-order");
       while (headerOrder.lastChild) {
         headerOrder.removeChild(headerOrder.lastChild);
+      };
+    },
+    focus: {
+      up: function(positionData) {
+        var allHeaderOrderControl = helper.eA(".header-order-control");
+        var target = positionData.destination;
+        if (target < 0) {
+          target = 0;
+        };
+        var button = allHeaderOrderControl[target].querySelector(".header-order-control-item-up");
+        button.focus();
+      },
+      down: function(positionData) {
+        var allHeaderOrderControl = helper.eA(".header-order-control");
+        var target = positionData.destination;
+        if (target >= allHeaderOrderControl.length) {
+          target = allHeaderOrderControl.length - 1;
+        };
+        var button = allHeaderOrderControl[target].querySelector(".header-order-control-item-down");
+        button.focus();
+      },
+      left: function(positionData) {
+        var allHeaderItemControl = helper.eA(".header-item-control");
+        var target = positionData.destination;
+        if (target < 0) {
+          target = 0;
+        };
+        var button = allHeaderItemControl[target].querySelector(".header-item-control-item-left");
+        button.focus();
+      },
+      right: function(positionData) {
+        var allHeaderItemControl = helper.eA(".header-item-control");
+        var target = positionData.destination;
+        if (target >= allHeaderItemControl.length) {
+          target = allHeaderItemControl.length - 1;
+        };
+        var button = allHeaderItemControl[target].querySelector(".header-item-control-item-right");
+        button.focus();
+      }
+    },
+    tabindex: function() {
+      var allHeaderItemControl = helper.eA(".header-item-control");
+      if (state.get.current().edit) {
+        allHeaderItemControl.forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = 1;
+        });
+      } else {
+        allHeaderItemControl.forEach(function(arrayItem, index) {
+          arrayItem.tabIndex = -1;
+        });
       };
     }
   };
@@ -250,7 +314,6 @@ var header = (function() {
     all: function() {
       var headerArea = helper.e(".header-area");
       var headerItemGrid = helper.node("div|class:header-item-grid");
-
       state.get.current().header.order.forEach(function(arrayItem, index) {
         if ((arrayItem == "clock" && (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) ||
           (arrayItem == "date" && (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show)) ||
@@ -258,38 +321,6 @@ var header = (function() {
           headerItemGrid.appendChild(render.item.wrapper(arrayItem, render.item[arrayItem](arrayItem), index));
         };
       });
-
-      sortable(headerItemGrid, {
-        handle: ".header-item-control-item-handle",
-        orientation: "horizontal",
-        forcePlaceholderSize: true,
-        placeholder: helper.node("div|class:header-item header-item-sort-placeholder", helper.node("div|class:header-item-sort-placeholder-edge"))
-      });
-      sortable(headerItemGrid)[0].addEventListener("sortupdate", function(event) {
-        var positionData = {
-          origin: event.detail.origin.index,
-          destination: event.detail.destination.index
-        };
-        mod.item.move(positionData);
-        data.save();
-        render.item.clear();
-        render.item.all();
-        greeting.render.clear();
-        greeting.render.all();
-        clock.render.clear();
-        clock.render.all();
-        transitional.render.clear();
-        transitional.render.all();
-        date.render.clear();
-        date.render.all();
-        control.render.dependents();
-        control.render.update.control.header();
-        control.bind.control.header();
-        dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
-        search.bind.input();
-        search.bind.clear();
-      }, false);
-
       headerArea.appendChild(headerItemGrid);
     },
     clear: function() {
@@ -298,87 +329,11 @@ var header = (function() {
         headerArea.removeChild(headerArea.lastChild);
       };
     },
-    wrapper: function(name, item, index) {
+    wrapper: function(name, item) {
       var headerItem = helper.node("div|class:header-item header-item-" + name + "");
-      var headerItemControl = helper.node("div|class:header-item-control header-item-control-" + name + " form-group");
       var headerItemBody = helper.node("div|class:header-item-body header-item-body-" + name);
-
-      var buttonLeft = helper.node("button|class:button button-small form-group-item-shrink header-item-control-item header-item-control-item-left,tabindex:-1,title:Move this header item left");
-      var buttonLeftIcon = helper.node("span|class:button-icon icon-arrow-left");
-      buttonLeft.appendChild(buttonLeftIcon);
-
-      var linkHandle = helper.node("div|class:button button-small form-group-item-shrink header-item-control-item header-item-control-item-handle,tabindex:-1,title:Drag header item to reorder");
-      var linkHandleIcon = helper.node("span|class:button-icon icon-reorder");
-      linkHandle.appendChild(linkHandleIcon);
-
-      var buttonRight = helper.node("button|class:button button-small form-group-item-shrink header-item-control-item header-item-control-item-right,tabindex:-1,title:Move this header item right");
-      var buttonRightIcon = helper.node("span|class:button-icon icon-arrow-right");
-      buttonRight.appendChild(buttonRightIcon);
-
-      headerItemControl.appendChild(buttonLeft);
-      headerItemControl.appendChild(linkHandle);
-      headerItemControl.appendChild(buttonRight);
-
       headerItemBody.appendChild(item);
-      headerItem.appendChild(headerItemControl);
       headerItem.appendChild(headerItemBody);
-
-      buttonLeft.addEventListener("click", function(event) {
-        var positionData = {
-          origin: index,
-          destination: index - 1
-        };
-        if (positionData.destination < 0) {
-          positionData.destination = 0
-        };
-        mod.item.move(positionData);
-        data.save();
-        render.item.clear();
-        render.item.all();
-        greeting.render.clear();
-        greeting.render.all();
-        clock.render.clear();
-        clock.render.all();
-        transitional.render.clear();
-        transitional.render.all();
-        date.render.clear();
-        date.render.all();
-        control.render.dependents();
-        control.render.update.control.header();
-        control.bind.control.header();
-        dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
-        search.bind.input();
-        search.bind.clear();
-        render.item.focus.left(positionData);
-      }, false);
-
-      buttonRight.addEventListener("click", function(event) {
-        var positionData = {
-          origin: index,
-          destination: index + 1
-        };
-        console.log(positionData);
-        mod.item.move(positionData);
-        data.save();
-        render.item.clear();
-        render.item.all();
-        greeting.render.clear();
-        greeting.render.all();
-        clock.render.clear();
-        clock.render.all();
-        transitional.render.clear();
-        transitional.render.all();
-        date.render.clear();
-        date.render.all();
-        control.render.dependents();
-        control.render.update.control.header();
-        control.bind.control.header();
-        dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
-        search.bind.input();
-        search.bind.clear();
-        render.item.focus.right(positionData);
-      }, false);
-
       return headerItem;
     },
     greeting: function(name) {
@@ -495,56 +450,6 @@ var header = (function() {
       };
       button.appendChild(buttonIcon);
       return button;
-    },
-    focus: {
-      up: function(positionData) {
-        var allHeaderOrderControl = helper.eA(".header-order-control");
-        var target = positionData.destination;
-        if (target < 0) {
-          target = 0;
-        };
-        var button = allHeaderOrderControl[target].querySelector(".header-order-control-item-up");
-        button.focus();
-      },
-      down: function(positionData) {
-        var allHeaderOrderControl = helper.eA(".header-order-control");
-        var target = positionData.destination;
-        if (target >= allHeaderOrderControl.length) {
-          target = allHeaderOrderControl.length - 1;
-        };
-        var button = allHeaderOrderControl[target].querySelector(".header-order-control-item-down");
-        button.focus();
-      },
-      left: function(positionData) {
-        var allHeaderItemControl = helper.eA(".header-item-control");
-        var target = positionData.destination;
-        if (target < 0) {
-          target = 0;
-        };
-        var button = allHeaderItemControl[target].querySelector(".header-item-control-item-left");
-        button.focus();
-      },
-      right: function(positionData) {
-        var allHeaderItemControl = helper.eA(".header-item-control");
-        var target = positionData.destination;
-        if (target >= allHeaderItemControl.length) {
-          target = allHeaderItemControl.length - 1;
-        };
-        var button = allHeaderItemControl[target].querySelector(".header-item-control-item-right");
-        button.focus();
-      }
-    },
-    tabindex: function() {
-      var allHeaderItemControl = helper.eA(".header-item-control");
-      if (state.get.current().edit) {
-        allHeaderItemControl.forEach(function(arrayItem, index) {
-          arrayItem.tabIndex = 1;
-        });
-      } else {
-        allHeaderItemControl.forEach(function(arrayItem, index) {
-          arrayItem.tabIndex = -1;
-        });
-      };
     }
   };
 
@@ -612,6 +517,7 @@ var header = (function() {
     render.search.size();
     render.button.size();
     render.control.all();
+    bind.sort.item();
   };
 
   // exposed methods
