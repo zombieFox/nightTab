@@ -60,6 +60,7 @@ var header = (function() {
         control.render.update.control.header();
         control.bind.control.header();
         dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
+        search.render.engine();
         search.bind.input();
         search.bind.clear();
       },
@@ -217,6 +218,7 @@ var header = (function() {
           control.render.update.control.header();
           control.bind.control.header();
           dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
+          search.render.engine();
           search.bind.input();
           search.bind.clear();
           render.control.focus.up(positionData);
@@ -246,6 +248,7 @@ var header = (function() {
           control.render.update.control.header();
           control.bind.control.header();
           dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
+          search.render.engine();
           search.bind.input();
           search.bind.clear();
           render.control.focus.down(positionData);
@@ -276,24 +279,6 @@ var header = (function() {
         };
         var button = allHeaderOrderControl[target].querySelector(".header-order-control-item-down");
         button.focus();
-      },
-      left: function(positionData) {
-        var allHeaderItemControl = helper.eA(".header-item-control");
-        var target = positionData.destination;
-        if (target < 0) {
-          target = 0;
-        };
-        var button = allHeaderItemControl[target].querySelector(".header-item-control-item-left");
-        button.focus();
-      },
-      right: function(positionData) {
-        var allHeaderItemControl = helper.eA(".header-item-control");
-        var target = positionData.destination;
-        if (target >= allHeaderItemControl.length) {
-          target = allHeaderItemControl.length - 1;
-        };
-        var button = allHeaderItemControl[target].querySelector(".header-item-control-item-right");
-        button.focus();
       }
     },
     tabindex: function() {
@@ -318,7 +303,8 @@ var header = (function() {
         if ((arrayItem == "clock" && (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) ||
           (arrayItem == "date" && (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show)) ||
           state.get.current().header[arrayItem].show) {
-          headerItemGrid.appendChild(render.item.wrapper(arrayItem, render.item[arrayItem](arrayItem), index));
+          var name = arrayItem.toLowerCase();
+          headerItemGrid.appendChild(render.item.wrapper(name, render.item[arrayItem](name), index));
         };
       });
       headerArea.appendChild(headerItemGrid);
@@ -349,7 +335,7 @@ var header = (function() {
       return helper.node("p|class:" + name + "");
     },
     search: function() {
-      var headerSearchBody = helper.node("div|class:header-search-body");
+      var headerSearchBody = helper.node("div|class:search-wrapper");
       var form = helper.node("form|class:search,action,method:get");
       var searchInput = helper.node("input|class:header-search-input search-input,type:text,placeholder:Find or Search,name:q,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,tabindex:1");
       var hiddenInput = helper.node("input|type:submit,value:Search,class:is-hidden");
@@ -495,7 +481,7 @@ var header = (function() {
   render.button = {
     size: function() {
       var html = helper.e("html");
-      html.style.setProperty("--header-button-size", state.get.current().header.size + "em");
+      html.style.setProperty("--header-button-size", state.get.current().header.button.size + "em");
     }
   };
 

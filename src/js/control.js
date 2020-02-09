@@ -854,6 +854,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -1002,6 +1003,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -1134,6 +1136,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -1171,6 +1174,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -1208,6 +1212,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -1366,6 +1371,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -1461,6 +1467,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -1518,6 +1525,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -1601,6 +1609,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -1779,6 +1788,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -2089,6 +2099,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -2110,6 +2121,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -2131,6 +2143,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -2152,6 +2165,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -2173,6 +2187,7 @@ var control = (function() {
       render.dependents();
       render.update.control.header();
       bind.control.header();
+      search.render.engine();
       search.bind.input();
       search.bind.clear();
     }
@@ -2196,14 +2211,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.box.open({
-          element: ".control-menu-open",
+          element: helper.e(".control-menu-open"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.box.open({
-          element: ".control-menu-open",
+          element: helper.e(".control-menu-open"),
         });
       }
     }, {
@@ -2260,7 +2275,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.box.open({
-          element: ".control-menu-open",
+          element: helper.e(".control-menu-open"),
           delay: 500
         });
       }

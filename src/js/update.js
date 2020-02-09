@@ -805,6 +805,17 @@ var update = (function() {
     "4.33.0": function(data) {
       data.state.layout.scrollbars = "auto";
       return data;
+    },
+    "4.37.0": function(data) {
+      data.state.header.order = ["greeting", "clock", "transitional", "date", "search", "editAdd", "colorAccent", "menu"];
+      data.state.header.menu = {
+        show: true
+      };
+      data.state.header.editAdd = data.state.header.button.editAdd;
+      data.state.header.colorAccent = data.state.header.button.colorAccent;
+      delete data.state.header.button.editAdd;
+      delete data.state.header.button.colorAccent;
+      return data;
     }
   };
 

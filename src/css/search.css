@@ -1,3 +1,8 @@
+.search-wrapper {
+  flex-grow: 1;
+  position: relative;
+}
+
 .search {
   width: 100%;
 }
