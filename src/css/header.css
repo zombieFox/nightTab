@@ -153,16 +153,14 @@
 }
 
 .header-item {
-  background-color: transparent;
   margin: calc(var(--layout-space) * var(--layout-gutter)) 0 0 calc(var(--layout-space) * var(--layout-gutter));
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: center;
   position: relative;
   pointer-events: all;
-  transition: flex-basis var(--layout-timing-extra-fast);
 }
 
 .header-item-body-date,
