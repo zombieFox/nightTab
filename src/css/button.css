@@ -145,7 +145,7 @@ button [class*=" icon-"],
 .button [class^="icon-"],
 .button [class*=" icon-"] {
   line-height: 1;
-  transform: scale(1.5);
+  font-size: 1.5em;
 }
 
 .button.active {

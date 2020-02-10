@@ -390,6 +390,44 @@ input[type="text"]:disabled:focus::placeholder {
   color: rgb(var(--form-placeholder-disabled));
 }
 
+.input-clear[type="email"],
+.input-clear[type="number"],
+.input-clear[type="password"],
+.input-clear[type="search"],
+.input-clear[type="tel"],
+.input-clear[type="text"] {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.input-clear[type="email"]:hover,
+.input-clear[type="number"]:hover,
+.input-clear[type="password"]:hover,
+.input-clear[type="search"]:hover,
+.input-clear[type="tel"]:hover,
+.input-clear[type="text"]:hover {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.input-clear[type="email"]:focus,
+.input-clear[type="email"]:active,
+.input-clear[type="number"]:focus,
+.input-clear[type="number"]:active,
+.input-clear[type="password"]:focus,
+.input-clear[type="password"]:active,
+.input-clear[type="search"]:focus,
+.input-clear[type="search"]:active,
+.input-clear[type="tel"]:focus,
+.input-clear[type="tel"]:active,
+.input-clear[type="text"]:focus,
+.input-clear[type="text"]:active {
+  background-color: rgb(var(--form-input-background-focus-active));
+  border-color: rgb(var(--form-input-border-focus-active));
+  box-shadow: var(--form-ring-accent);
+}
+
 /* checkbox and radio */
 input[type="checkbox"],
 input[type="radio"] {

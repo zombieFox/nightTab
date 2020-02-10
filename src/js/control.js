@@ -857,6 +857,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-greeting-type-good",
@@ -1006,6 +1007,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-transitional-type-timeanddate",
@@ -1139,6 +1141,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-clock-hours-display-number",
@@ -1177,6 +1180,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-clock-minutes-display-number",
@@ -1215,6 +1219,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-clock-seconds-display-number",
@@ -1374,6 +1379,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-date-day-display-number",
@@ -1470,6 +1476,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-date-date-display-number",
@@ -1528,6 +1535,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-date-month-display-number",
@@ -1612,6 +1620,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-date-year-display-number",
@@ -1791,6 +1800,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-search-style-auto",
@@ -2102,6 +2112,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-button-style-clear",
@@ -2124,6 +2135,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-editadd-show",
@@ -2146,6 +2158,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-coloraccent-show",
@@ -2168,6 +2181,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-coloraccent-dot-show",
@@ -2190,6 +2204,7 @@ var control = (function() {
       search.render.engine();
       search.bind.input();
       search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-button-size-range",

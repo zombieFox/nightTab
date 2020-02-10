@@ -161,22 +161,6 @@
   pointer-events: all;
 }
 
-.header-item-date,
-.header-item-clock,
-.header-item-greeting,
-.header-item-transitional {
-  align-self: baseline;
-}
-
-.header-item-search,
-.header-item-editadd,
-.header-item-coloraccent,
-.header-item-menu {
-  align-self: center;
-  align-self: baseline;
-  top: -0.25em;
-}
-
 .header-item-body {
   display: flex;
   align-items: center;

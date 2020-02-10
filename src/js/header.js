@@ -59,10 +59,10 @@ var header = (function() {
         control.render.dependents();
         control.render.update.control.header();
         control.bind.control.header();
-        dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
         search.render.engine();
         search.bind.input();
         search.bind.clear();
+        dropdown.bind.editAdd();
       },
       remove: function() {
         sortable(".header-order")[0].removeEventListener("sortupdate", bind.sort.update.func, false);
@@ -217,11 +217,11 @@ var header = (function() {
           control.render.dependents();
           control.render.update.control.header();
           control.bind.control.header();
-          dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
           search.render.engine();
           search.bind.input();
           search.bind.clear();
           render.control.focus.up(positionData);
+          dropdown.bind.editAdd();
         }, false);
 
         buttonDown.addEventListener("click", function(event) {
@@ -247,11 +247,11 @@ var header = (function() {
           control.render.dependents();
           control.render.update.control.header();
           control.bind.control.header();
-          dropdown.bind.formDropdown(helper.e(".header-item-body-editAdd").querySelector(".form-dropdown"));
           search.render.engine();
           search.bind.input();
           search.bind.clear();
           render.control.focus.down(positionData);
+          dropdown.bind.editAdd();
         }, false);
       });
     },

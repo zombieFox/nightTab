@@ -80,6 +80,12 @@ var dropdown = (function() {
     };
   };
 
+  bind.editAdd = function() {
+    if (state.get.current().header.editAdd.show) {
+      bind.formDropdown(helper.e(".header-item-body-editadd").querySelector(".form-dropdown"));
+    };
+  };
+
   var render = {};
 
   render.offset = function() {
