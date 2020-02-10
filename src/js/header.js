@@ -430,10 +430,12 @@ var header = (function() {
     },
     menu: function() {
       var button = helper.node("button|class:control-menu-open button,tabindex:1");
+      var baselineAlignmentCharacter = helper.node("span:-|class:header-item-menu-baseline-alignment-character,aria-hidden:true");
       var buttonIcon = helper.node("span|class:icon-settings");
       if (state.get.current().header.button.style == "clear") {
         helper.addClass(button, "button-link");
       };
+      button.appendChild(baselineAlignmentCharacter);
       button.appendChild(buttonIcon);
       return button;
     }
