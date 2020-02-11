@@ -1966,7 +1966,6 @@ var theme = (function() {
   };
 
   var init = function() {
-    style.check();
     accent.random();
     mod.accent.random();
     mod.custom.close();

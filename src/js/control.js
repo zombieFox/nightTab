@@ -5757,230 +5757,405 @@ var control = (function() {
 
   render.class = function() {
     var html = helper.e("html");
-    var _edit = function() {
-      helper.removeClass(html, "is-edit");
-      if (state.get.current().edit) {
-        helper.addClass(html, "is-edit");
-      };
+    var all = {
+      edit: [{
+        remove: [
+          "is-edit"
+        ],
+        condition: function() {
+          return state.get.current().edit;
+        },
+        name: "is-edit"
+      }],
+      layout: [{
+        remove: [
+          "is-layout-scrollpastend"
+        ],
+        condition: function() {
+          return state.get.current().layout.scrollPastEnd;
+        },
+        name: "is-layout-scrollpastend"
+      }, {
+        remove: [
+          "is-layout-alignment-topleft",
+          "is-layout-alignment-topcenter",
+          "is-layout-alignment-topright",
+          "is-layout-alignment-centerleft",
+          "is-layout-alignment-centercenter",
+          "is-layout-alignment-centerright",
+          "is-layout-alignment-bottomleft",
+          "is-layout-alignment-bottomcenter",
+          "is-layout-alignment-bottomright"
+        ],
+        name: "is-layout-alignment-" + state.get.current().layout.alignment
+      }, {
+        remove: [
+          "is-layout-order-headerlink",
+          "is-layout-order-linkheader"
+        ],
+        name: "is-layout-order-" + state.get.current().layout.order
+      }, {
+        remove: [
+          "is-layout-scrollbars-auto",
+          "is-layout-scrollbars-thin",
+          "is-layout-scrollbars-none"
+        ],
+        name: "is-layout-scrollbars-" + state.get.current().layout.scrollbars
+      }],
+      header: {
+        area: [{
+          remove: [
+            "is-header-area-alignment-left",
+            "is-header-area-alignment-center",
+            "is-header-area-alignment-right"
+          ],
+          name: "is-header-area-alignment-" + state.get.current().header.area.alignment
+        }],
+        item: [{
+          remove: [
+            "is-header-item-alignment-left",
+            "is-header-item-alignment-center",
+            "is-header-item-alignment-right"
+          ],
+          name: "is-header-item-alignment-" + state.get.current().header.item.alignment
+        }],
+        search: [{
+          remove: [
+            "is-header-search-text-alignment-left",
+            "is-header-search-text-alignment-center",
+            "is-header-search-text-alignment-right"
+          ],
+          condition: function() {
+            return state.get.current().header.search.show;
+          },
+          name: "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment
+        }, {
+          remove: [
+            "is-header-search-style-custom",
+            "is-header-search-style-auto"
+          ],
+          condition: function() {
+            return state.get.current().header.search.show;
+          },
+          name: "is-header-search-style-" + state.get.current().header.search.style
+        }, {
+          condition: function() {
+            return state.get.current().header.search.show;
+          },
+          name: "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment
+        }],
+        color: [{
+          remove: [
+            "is-header-color-show"
+          ],
+          condition: function() {
+            return state.get.current().header.color.show;
+          },
+          name: "is-header-color-show"
+        }, {
+          remove: [
+            "is-header-color-style-scroll",
+            "is-header-color-style-always"
+          ],
+          condition: function() {
+            return state.get.current().header.color.show;
+          },
+          name: "is-header-color-style-" + state.get.current().header.color.style
+        }, {
+          remove: [
+            "is-header-color-by-theme",
+            "is-header-color-by-custom"
+          ],
+          condition: function() {
+            return state.get.current().header.color.show;
+          },
+          name: "is-header-color-by-" + state.get.current().header.color.by
+        }],
+        radius: [{
+          remove: [
+            "is-header-radius"
+          ],
+          condition: function() {
+            return (state.get.current().header.radius > 0);
+          },
+          name: "is-header-radius"
+        }],
+        border: [{
+          remove: [
+            "is-header-border-top"
+          ],
+          condition: function() {
+            return (state.get.current().header.border.top > 0);
+          },
+          name: "is-header-border-top"
+        }, {
+          remove: [
+            "is-header-border-bottom"
+          ],
+          condition: function() {
+            return (state.get.current().header.border.bottom > 0);
+          },
+          name: "is-header-border-bottom"
+        }],
+        position: [{
+          remove: [
+            "is-header-position-sticky",
+            "is-header-position-inline"
+          ],
+          name: "is-header-position-" + state.get.current().header.position
+        }]
+      },
+      group: {
+        area: [{
+          remove: [
+            "is-group-area-alignment-left",
+            "is-group-area-alignment-center",
+            "is-group-area-alignment-right"
+          ],
+          name: "is-group-area-alignment-" + state.get.current().group.area.alignment
+        }],
+        name: [{
+          remove: [
+            "is-group-name-show"
+          ],
+          condition: function() {
+            return state.get.current().group.name.show;
+          },
+          name: "is-group-name-show"
+        }],
+        order: [{
+          remove: [
+            "is-group-order-headerbody",
+            "is-group-order-bodyheader"
+          ],
+          name: "is-group-order-" + state.get.current().group.order
+        }],
+        border: [{
+          remove: [
+            "is-group-border"
+          ],
+          condition: function() {
+            return (state.get.current().group.border > 0);
+          },
+          name: "is-group-border"
+        }]
+      },
+      link: [{
+        remove: [
+          "is-link-show"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-show"
+      }, {
+        remove: [
+          "is-link-area-alignment-left",
+          "is-link-area-alignment-center",
+          "is-link-area-alignment-right"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-area-alignment-" + state.get.current().link.area.alignment
+      }, {
+        remove: [
+          "is-link-display-alignment-topleft",
+          "is-link-display-alignment-topcenter",
+          "is-link-display-alignment-topright",
+          "is-link-display-alignment-centerleft",
+          "is-link-display-alignment-centercenter",
+          "is-link-display-alignment-centerright",
+          "is-link-display-alignment-bottomleft",
+          "is-link-display-alignment-bottomcenter",
+          "is-link-display-alignment-bottomright"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-display-alignment-" + state.get.current().link.item.display.alignment
+      }, {
+        remove: [
+          "is-link-item-color-by-theme",
+          "is-link-item-color-by-custom"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-item-color-by-" + state.get.current().link.item.color.by
+      }, {
+        remove: [
+          "is-link-item-display-direction-horizontal",
+          "is-link-item-display-direction-vertical"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-item-display-direction-" + state.get.current().link.item.display.direction
+      }, {
+        remove: [
+          "is-link-item-display-order-letconname",
+          "is-link-item-display-order-nameletcon"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-item-display-order-" + state.get.current().link.item.display.order
+      }, {
+        remove: [
+          "is-link-item-display-name-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.display.name.show);
+        },
+        name: "is-link-item-display-name-show"
+      }, {
+        remove: [
+          "is-link-item-display-letcon-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.display.letcon.show);
+        },
+        name: "is-link-item-display-letcon-show"
+      }, {
+        remove: [
+          "is-link-style-list",
+          "is-link-style-block"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.show);
+        },
+        name: "is-link-style-" + state.get.current().link.style
+      }, {
+        remove: [
+          "is-link-orientation-top",
+          "is-link-orientation-bottom"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.show);
+        },
+        name: "is-link-orientation-" + state.get.current().link.orientation
+      }, {
+        remove: [
+          "is-link-item-url-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.url.show);
+        },
+        name: "is-link-item-url-show"
+      }, {
+        remove: [
+          "is-link-item-line-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.line.show);
+        },
+        name: "is-link-item-line-show"
+      }, {
+        remove: [
+          "is-link-item-shadow-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.shadow.show);
+        },
+        name: "is-link-item-shadow-show"
+      }, {
+        remove: [
+          "is-link-item-hoverscale-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.hoverScale.show);
+        },
+        name: "is-link-item-hoverscale-show"
+      }, {
+        remove: [
+          "is-link-item-border"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && (state.get.current().link.item.border > 0));
+        },
+        name: "is-link-item-border"
+      }],
+      theme: [{
+        remove: [
+          "is-theme-style-dark",
+          "is-theme-style-light",
+        ],
+        name: "is-theme-style-" + state.get.current().theme.style
+      }, {
+        remove: [
+          "is-theme-custom-edit"
+        ],
+        condition: function() {
+          return state.get.current().theme.custom.edit;
+        },
+        name: "is-theme-custom-edit"
+      }, {
+        remove: [
+          "is-theme-radius"
+        ],
+        condition: function() {
+          return (state.get.current().theme.radius > 0);
+        },
+        name: "is-theme-radius"
+      }],
+      background: [{
+        remove: [
+          "is-background-image-show"
+        ],
+        condition: function() {
+          return state.get.current().background.image.show;
+        },
+        name: "is-background-image-show"
+      }, {
+        remove: [
+          "is-background-color-by-theme",
+          "is-background-color-by-custom"
+        ],
+        name: "is-background-color-by-" + state.get.current().background.color.by
+      }]
     };
     var _menu = function() {
-      helper.addClass(html, "is-menu");
+      // helper.addClass(html, "is-menu");
     };
-    var _header = function() {
-      var _area = function() {
-        helper.removeClass(html, "is-header-area-alignment-left");
-        helper.removeClass(html, "is-header-area-alignment-center");
-        helper.removeClass(html, "is-header-area-alignment-right");
-        helper.addClass(html, "is-header-area-alignment-" + state.get.current().header.area.alignment);
-      };
-      var _item = function() {
-        helper.removeClass(html, "is-header-item-alignment-left");
-        helper.removeClass(html, "is-header-item-alignment-center");
-        helper.removeClass(html, "is-header-item-alignment-right");
-        helper.addClass(html, "is-header-item-alignment-" + state.get.current().header.item.alignment);
-      };
-      var _search = function() {
-        helper.removeClass(html, "is-header-search-style-custom");
-        helper.removeClass(html, "is-header-search-style-auto");
-        helper.removeClass(html, "is-header-search-text-alignment-left");
-        helper.removeClass(html, "is-header-search-text-alignment-center");
-        helper.removeClass(html, "is-header-search-text-alignment-right");
-        if (state.get.current().header.search.show) {
-          helper.addClass(html, "is-header-search-style-" + state.get.current().header.search.style);
-          helper.addClass(html, "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment);
+
+    var classCheck = function(array, debug) {
+      array.forEach(function(arrayItem, index) {
+        if ("remove" in arrayItem) {
+          arrayItem.remove.forEach(function(arrayItem, index) {
+            helper.removeClass(html, arrayItem);
+          });
         };
-        helper.e(".control-header-search-engine-custom-name").value = state.get.current().header.search.engine.custom.name;
-        helper.e(".control-header-search-engine-custom-url").value = state.get.current().header.search.engine.custom.url;
-      };
-      var _color = function() {
-        helper.removeClass(html, "is-header-color-show");
-        helper.removeClass(html, "is-header-color-style-scroll");
-        helper.removeClass(html, "is-header-color-style-always");
-        helper.removeClass(html, "is-header-color-by-theme");
-        helper.removeClass(html, "is-header-color-by-custom");
-        if (state.get.current().header.color.show) {
-          helper.addClass(html, "is-header-color-show");
-          helper.addClass(html, "is-header-color-style-" + state.get.current().header.color.style);
-          helper.addClass(html, "is-header-color-by-" + state.get.current().header.color.by);
-        };
-      };
-      var _radius = function() {
-        helper.removeClass(html, "is-header-radius");
-        if (state.get.current().header.radius > 0) {
-          helper.addClass(html, "is-header-radius");
-        };
-      };
-      var _border = function() {
-        helper.removeClass(html, "is-header-border-top");
-        helper.removeClass(html, "is-header-border-bottom");
-        if (state.get.current().header.border.top > 0) {
-          helper.addClass(html, "is-header-border-top");
-        };
-        if (state.get.current().header.border.bottom > 0) {
-          helper.addClass(html, "is-header-border-bottom");
-        };
-      };
-      var _position = function() {
-        helper.removeClass(html, "is-header-position-sticky");
-        helper.removeClass(html, "is-header-position-inline");
-        helper.addClass(html, "is-header-position-" + state.get.current().header.position);
-      };
-      _area();
-      _item();
-      _search();
-      _color();
-      _radius();
-      _border();
-      _position();
-    };
-    var _group = function() {
-      var _area = function() {
-        helper.removeClass(html, "is-group-area-alignment-left");
-        helper.removeClass(html, "is-group-area-alignment-center");
-        helper.removeClass(html, "is-group-area-alignment-right");
-        helper.addClass(html, "is-group-area-alignment-" + state.get.current().group.area.alignment);
-      };
-      var _name = function() {
-        if (state.get.current().group.name.show) {
-          helper.addClass(html, "is-group-name-show");
+        if ("condition" in arrayItem) {
+          if (arrayItem.condition()) {
+            helper.addClass(html, arrayItem.name);
+          };
         } else {
-          helper.removeClass(html, "is-group-name-show");
+          helper.addClass(html, arrayItem.name);
         };
-      };
-      var _order = function() {
-        helper.removeClass(html, "is-group-order-headerbody");
-        helper.removeClass(html, "is-group-order-bodyheader");
-        helper.addClass(html, "is-group-order-" + state.get.current().group.order);
-      };
-      var _border = function() {
-        helper.removeClass(html, "is-group-border");
-        if (state.get.current().group.border > 0) {
-          helper.addClass(html, "is-group-border");
-        };
-      };
-      _area();
-      _name();
-      _order();
-      _border();
+      });
     };
-    var _link = function() {
-      helper.removeClass(html, "is-link-show");
-      helper.removeClass(html, "is-link-area-alignment-left");
-      helper.removeClass(html, "is-link-area-alignment-center");
-      helper.removeClass(html, "is-link-area-alignment-right");
-      helper.removeClass(html, "is-link-display-alignment-topleft");
-      helper.removeClass(html, "is-link-display-alignment-topcenter");
-      helper.removeClass(html, "is-link-display-alignment-topright");
-      helper.removeClass(html, "is-link-display-alignment-centerleft");
-      helper.removeClass(html, "is-link-display-alignment-centercenter");
-      helper.removeClass(html, "is-link-display-alignment-centerright");
-      helper.removeClass(html, "is-link-display-alignment-bottomleft");
-      helper.removeClass(html, "is-link-display-alignment-bottomcenter");
-      helper.removeClass(html, "is-link-display-alignment-bottomright");
-      helper.removeClass(html, "is-link-item-color-by-theme");
-      helper.removeClass(html, "is-link-item-color-by-custom");
-      helper.removeClass(html, "is-link-item-display-direction-horizontal");
-      helper.removeClass(html, "is-link-item-display-direction-vertical");
-      helper.removeClass(html, "is-link-item-display-order-letconname");
-      helper.removeClass(html, "is-link-item-display-order-nameletcon");
-      helper.removeClass(html, "is-link-item-display-name-show");
-      helper.removeClass(html, "is-link-item-display-letcon-show");
-      helper.removeClass(html, "is-link-item-url-show");
-      helper.removeClass(html, "is-link-item-line-show");
-      helper.removeClass(html, "is-link-item-shadow-show");
-      helper.removeClass(html, "is-link-item-hoverscale-show");
-      helper.removeClass(html, "is-link-item-border");
-      helper.removeClass(html, "is-link-style-list");
-      helper.removeClass(html, "is-link-style-block");
-      helper.removeClass(html, "is-link-orientation-top");
-      helper.removeClass(html, "is-link-orientation-bottom");
-      if (state.get.current().link.show) {
-        helper.addClass(html, "is-link-show");
-        helper.addClass(html, "is-link-area-alignment-" + state.get.current().link.area.alignment);
-        helper.addClass(html, "is-link-item-color-by-" + state.get.current().link.item.color.by);
-        helper.addClass(html, "is-link-item-display-direction-" + state.get.current().link.item.display.direction);
-        helper.addClass(html, "is-link-item-display-order-" + state.get.current().link.item.display.order);
-        helper.addClass(html, "is-link-display-alignment-" + state.get.current().link.item.display.alignment);
-        helper.addClass(html, "is-link-style-" + state.get.current().link.style);
-        helper.addClass(html, "is-link-orientation-" + state.get.current().link.orientation);
-        if (state.get.current().link.item.display.letcon.show) {
-          helper.addClass(html, "is-link-item-display-letcon-show");
-        };
-        if (state.get.current().link.item.display.name.show) {
-          helper.addClass(html, "is-link-item-display-name-show");
-        };
-        if (state.get.current().link.item.url.show) {
-          helper.addClass(html, "is-link-item-url-show");
-        };
-        if (state.get.current().link.item.line.show) {
-          helper.addClass(html, "is-link-item-line-show");
-        };
-        if (state.get.current().link.item.shadow.show) {
-          helper.addClass(html, "is-link-item-shadow-show");
-        };
-        if (state.get.current().link.item.hoverScale.show) {
-          helper.addClass(html, "is-link-item-hoverscale-show");
-        };
-        if (state.get.current().link.item.border > 0) {
-          helper.addClass(html, "is-link-item-border");
-        };
-      };
-    };
-    var _theme = function() {
-      helper.removeClass(html, "is-theme-custom-edit");
-      helper.removeClass(html, "is-theme-radius");
-      if (state.get.current().theme.custom.edit) {
-        helper.addClass(html, "is-theme-custom-edit");
-      };
-      if (state.get.current().theme.radius > 0) {
-        helper.addClass(html, "is-theme-radius");
-      };
-    };
-    var _layout = function() {
-      helper.removeClass(html, "is-layout-scrollpastend");
-      helper.removeClass(html, "is-layout-alignment-topleft");
-      helper.removeClass(html, "is-layout-alignment-topcenter");
-      helper.removeClass(html, "is-layout-alignment-topright");
-      helper.removeClass(html, "is-layout-alignment-centerleft");
-      helper.removeClass(html, "is-layout-alignment-centercenter");
-      helper.removeClass(html, "is-layout-alignment-centerright");
-      helper.removeClass(html, "is-layout-alignment-bottomleft");
-      helper.removeClass(html, "is-layout-alignment-bottomcenter");
-      helper.removeClass(html, "is-layout-alignment-bottomright");
-      helper.removeClass(html, "is-layout-order-headerlink");
-      helper.removeClass(html, "is-layout-order-linkheader");
-      helper.removeClass(html, "is-layout-scrollbars-auto");
-      helper.removeClass(html, "is-layout-scrollbars-thin");
-      helper.removeClass(html, "is-layout-scrollbars-none");
-      helper.addClass(html, "is-layout-alignment-" + state.get.current().layout.alignment);
-      helper.addClass(html, "is-layout-order-" + state.get.current().layout.order);
-      helper.addClass(html, "is-layout-scrollbars-" + state.get.current().layout.scrollbars);
-      if (state.get.current().layout.scrollPastEnd) {
-        helper.addClass(html, "is-layout-scrollpastend");
-      };
-    };
-    var _background = function() {
-      helper.removeClass(html, "is-background-color-by-theme");
-      helper.removeClass(html, "is-background-color-by-custom");
-      helper.addClass(html, "is-background-color-by-" + state.get.current().background.color.by);
-      if (state.get.current().background.image.show) {
-        helper.addClass(html, "is-background-image-show");
-      } else {
-        helper.removeClass(html, "is-background-image-show");
-      };
-    };
-    _edit();
-    _menu();
-    _header();
-    _group();
-    _link();
-    _theme();
-    _layout();
-    _background();
+
+    classCheck(all.edit, true);
+    classCheck(all.layout);
+    classCheck(all.header.area);
+    classCheck(all.header.item);
+    classCheck(all.header.search);
+    classCheck(all.header.color);
+    classCheck(all.header.radius);
+    classCheck(all.header.border);
+    classCheck(all.header.position);
+    classCheck(all.group.area);
+    classCheck(all.group.name);
+    classCheck(all.group.order);
+    classCheck(all.group.border);
+    classCheck(all.link);
+    classCheck(all.theme);
+    classCheck(all.background);
   };
 
   render.dependents = function() {
-    var _disable = {
+    var disable = {
       input: function(input, state) {
         if (input) {
           if (state) {
@@ -6011,7 +6186,6 @@ var control = (function() {
           ]
         }
       }],
-      layout: {},
       header: {
         greeting: [{
           condition: function() {
@@ -6675,9 +6849,9 @@ var control = (function() {
           var element = helper.eA(arrayItem);
           element.forEach(function(arrayItem, index) {
             if (arrayItem.tagName.toLowerCase() == "input") {
-              _disable.input(arrayItem, condition);
+              disable.input(arrayItem, condition);
             } else {
-              _disable.element(arrayItem, condition);
+              disable.element(arrayItem, condition);
             };
           });
 
