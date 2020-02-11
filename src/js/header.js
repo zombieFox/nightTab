@@ -380,7 +380,7 @@ var header = (function() {
       formDropdown.appendChild(controlAddToggle);
       formDropdown.appendChild(formDropdownMenu);
 
-      if (state.get.current().header.button.style == "clear") {
+      if (state.get.current().header.editAdd.style == "clear") {
         helper.addClass(formInputButton, "form-input-button-link");
         helper.addClass(controlAddToggle, "button-link");
       };
@@ -419,7 +419,7 @@ var header = (function() {
         helper.addClass(accentInputButton, "form-input-hide");
       };
 
-      if (state.get.current().header.button.style == "clear") {
+      if (state.get.current().header.colorAccent.style == "clear") {
         helper.addClass(colorInputButton, "form-input-button-link");
         helper.addClass(accentInputButton, "form-input-button-link");
       };
@@ -432,7 +432,7 @@ var header = (function() {
       var button = helper.node("button|class:control-menu-open button,tabindex:1");
       var baselineAlignmentCharacter = helper.node("span:-|class:header-item-menu-baseline-alignment-character,aria-hidden:true");
       var buttonIcon = helper.node("span|class:icon-settings");
-      if (state.get.current().header.button.style == "clear") {
+      if (state.get.current().header.menu.style == "clear") {
         helper.addClass(button, "button-link");
       };
       button.appendChild(baselineAlignmentCharacter);
@@ -480,10 +480,24 @@ var header = (function() {
     }
   };
 
-  render.button = {
+  render.editadd = {
     size: function() {
       var html = helper.e("html");
-      html.style.setProperty("--header-button-size", state.get.current().header.button.size + "em");
+      html.style.setProperty("--header-editadd-size", state.get.current().header.editAdd.size + "em");
+    }
+  };
+
+  render.coloraccent = {
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-coloraccent-size", state.get.current().header.colorAccent.size + "em");
+    }
+  };
+
+  render.menu = {
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-menu-size", state.get.current().header.menu.size + "em");
     }
   };
 
@@ -503,7 +517,7 @@ var header = (function() {
     render.date.size();
     render.search.width();
     render.search.size();
-    render.button.size();
+    render.menu.size();
     render.control.all();
     bind.sort.item();
   };

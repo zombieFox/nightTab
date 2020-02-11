@@ -83,7 +83,9 @@
   --header-date-size:                                   1em;
   --header-clock-size:                                  1em;
   --header-search-size:                                 1em;
-  --header-button-size:                                 1em;
+  --header-editadd-size:                                1em;
+  --header-coloraccent-size:                            1em;
+  --header-menu-size:                                   1em;
   --header-greeting-size:                               1em;
   --header-transitional-size:                           1em;
   /* group */

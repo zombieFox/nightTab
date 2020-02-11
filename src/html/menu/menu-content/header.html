@@ -117,6 +117,14 @@
               <button class="control-header-greeting-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
             </div>
           </div>
+          <hr>
+          <div class="form-wrap">
+            <input id="control-header-greeting-newline" class="control-header-greeting-newline" type="checkbox" tabindex="-1">
+            <label for="control-header-greeting-newline"><span class="label-icon"></span> New line</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-greeting-newline-helper form-helper-item">Force on to a new line and seperate from other Header items.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -151,6 +159,14 @@
               <input class="control-header-transitional-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
               <button class="control-header-transitional-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
             </div>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <input id="control-header-transitional-newline" class="control-header-transitional-newline" type="checkbox" tabindex="-1">
+            <label for="control-header-transitional-newline"><span class="label-icon"></span> New line</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-transitional-newline-helper form-helper-item">Force on to a new line and seperate from other Header items.</p>
           </div>
         </div>
       </div>
@@ -233,6 +249,14 @@
           <input class="control-header-clock-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
           <button class="control-header-clock-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
         </div>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-clock-newline" class="control-header-clock-newline" type="checkbox" tabindex="-1">
+        <label for="control-header-clock-newline"><span class="label-icon"></span> New line</label>
+      </div>
+      <div class="form-helper">
+        <p class="control-header-clock-newline-helper form-helper-item">Force on to a new line and seperate from other Header items.</p>
       </div>
     </div>
   </div>
@@ -400,6 +424,14 @@
           <button class="control-header-date-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
         </div>
       </div>
+      <hr>
+      <div class="form-wrap">
+        <input id="control-header-date-newline" class="control-header-date-newline" type="checkbox" tabindex="-1">
+        <label for="control-header-date-newline"><span class="label-icon"></span> New line</label>
+      </div>
+      <div class="form-helper">
+        <p class="control-header-date-newline-helper form-helper-item">Force on to a new line and seperate from other Header items.</p>
+      </div>
     </div>
   </div>
   <div class="menu-item">
@@ -489,7 +521,7 @@
               </div>
               <div class="form-helper">
                 <p class="control-header-search-engine-custom-helper form-helper-item">Enter a web address with the search parameters, eg: "https://vimeo.com/search?q="</p>
-                <p class="control-header-search-engine-custom-helper form-helper-item">nightTab will add the search term entered into the Search input at the end of the above URL</p>
+                <p class="control-header-search-engine-custom-helper form-helper-item">nightTab will add the search term entered into the Search input at the end of the above URL.</p>
               </div>
             </div>
           </div>
@@ -525,30 +557,64 @@
           <div class="form-helper">
             <p class="control-header-search-size-helper form-helper-item">Only the Search box width control will change the Width of the Search box.</p>
           </div>
+          <hr>
+          <div class="form-wrap">
+            <input id="control-header-search-newline" class="control-header-search-newline" type="checkbox" tabindex="-1">
+            <label for="control-header-search-newline"><span class="label-icon"></span> New line</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-search-newline-helper form-helper-item">Force on to a new line and seperate from other Header items.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="menu-item">
     <div class="menu-item-header">
-      <h1 class="menu-item-header-text">Buttons</h1>
+      <h1 class="menu-item-header-text">Edit/Add</h1>
     </div>
     <div class="menu-item-form">
-      <label class="control-header-button-style-label">Button style</label>
-      <div class="form-wrap">
-        <input id="control-header-button-style-box" class="control-header-button-style-box" type="radio" name="control-header-button-style" value="box" tabindex="-1">
-        <label for="control-header-button-style-box"><span class="label-icon"></span> Box</label>
-      </div>
-      <div class="form-wrap">
-        <input id="control-header-button-style-clear" class="control-header-button-style-clear" type="radio" name="control-header-button-style" value="clear" tabindex="-1">
-        <label for="control-header-button-style-clear"><span class="label-icon"></span> Clear</label>
-      </div>
-      <hr>
       <div class="form-wrap">
         <input id="control-header-editadd-show" class="control-header-editadd-show" type="checkbox" tabindex="-1">
         <label for="control-header-editadd-show"><span class="label-icon"></span> Show Edit/Add</label>
       </div>
-      <hr>
+      <div class="form-wrap">
+        <div class="form-indent">
+          <label class="control-header-editadd-style-label">Style</label>
+          <div class="form-wrap">
+            <input id="control-header-editadd-style-box" class="control-header-editadd-style-box" type="radio" name="control-header-editadd-style" value="box" tabindex="-1">
+            <label for="control-header-editadd-style-box"><span class="label-icon"></span> Box</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-editadd-style-clear" class="control-header-editadd-style-clear" type="radio" name="control-header-editadd-style" value="clear" tabindex="-1">
+            <label for="control-header-editadd-style-clear"><span class="label-icon"></span> Clear</label>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <label for="control-header-editadd-size-range">Size</label>
+            <div class="form-group form-group-block">
+              <input id="control-header-editadd-size-range" class="control-header-editadd-size-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-header-editadd-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+              <button class="control-header-editadd-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+            </div>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <input id="control-header-editadd-newline" class="control-header-editadd-newline" type="checkbox" tabindex="-1">
+            <label for="control-header-editadd-newline"><span class="label-icon"></span> New line</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-editadd-newline-helper form-helper-item">Force on to a new line and seperate from other Header items.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Colour/Accent</h1>
+    </div>
+    <div class="menu-item-form">
       <div class="form-wrap">
         <input id="control-header-coloraccent-show" class="control-header-coloraccent-show" type="checkbox" tabindex="-1">
         <label for="control-header-coloraccent-show"><span class="label-icon"></span> Show Colour/Accent</label>
@@ -562,16 +628,67 @@
             <input id="control-header-coloraccent-dot-show" class="control-header-coloraccent-dot-show" type="checkbox" tabindex="-1">
             <label for="control-header-coloraccent-dot-show"><span class="label-icon"></span> Show colour dots</label>
           </div>
+          <hr>
+          <label class="control-header-coloraccent-style-label">Style</label>
+          <div class="form-wrap">
+            <input id="control-header-coloraccent-style-box" class="control-header-coloraccent-style-box" type="radio" name="control-header-coloraccent-style" value="box" tabindex="-1">
+            <label for="control-header-coloraccent-style-box"><span class="label-icon"></span> Box</label>
+          </div>
+          <div class="form-wrap">
+            <input id="control-header-coloraccent-style-clear" class="control-header-coloraccent-style-clear" type="radio" name="control-header-coloraccent-style" value="clear" tabindex="-1">
+            <label for="control-header-coloraccent-style-clear"><span class="label-icon"></span> Clear</label>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <label for="control-header-coloraccent-size-range">Size</label>
+            <div class="form-group form-group-block">
+              <input id="control-header-coloraccent-size-range" class="control-header-coloraccent-size-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-header-coloraccent-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+              <button class="control-header-coloraccent-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+            </div>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <input id="control-header-coloraccent-newline" class="control-header-coloraccent-newline" type="checkbox" tabindex="-1">
+            <label for="control-header-coloraccent-newline"><span class="label-icon"></span> New line</label>
+          </div>
+          <div class="form-helper">
+            <p class="control-header-coloraccent-newline-helper form-helper-item">Force on to a new line and seperate from other Header items.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-item">
+    <div class="menu-item-header">
+      <h1 class="menu-item-header-text">Menu</h1>
+    </div>
+    <div class="menu-item-form">
+      <label class="control-header-menu-style-label">Style</label>
+      <div class="form-wrap">
+        <input id="control-header-menu-style-box" class="control-header-menu-style-box" type="radio" name="control-header-menu-style" value="box" tabindex="-1">
+        <label for="control-header-menu-style-box"><span class="label-icon"></span> Box</label>
+      </div>
+      <div class="form-wrap">
+        <input id="control-header-menu-style-clear" class="control-header-menu-style-clear" type="radio" name="control-header-menu-style" value="clear" tabindex="-1">
+        <label for="control-header-menu-style-clear"><span class="label-icon"></span> Clear</label>
+      </div>
+      <hr>
+      <div class="form-wrap">
+        <label for="control-header-menu-size-range">Size</label>
+        <div class="form-group form-group-block">
+          <input id="control-header-menu-size-range" class="control-header-menu-size-range mr-3" type="range" value="0" tabindex="-1">
+          <input class="control-header-menu-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          <button class="control-header-menu-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
         </div>
       </div>
       <hr>
       <div class="form-wrap">
-        <label for="control-header-button-size-range">Size</label>
-        <div class="form-group form-group-block">
-          <input id="control-header-button-size-range" class="control-header-button-size-range mr-3" type="range" value="0" tabindex="-1">
-          <input class="control-header-button-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
-          <button class="control-header-button-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
-        </div>
+        <input id="control-header-menu-newline" class="control-header-menu-newline" type="checkbox" tabindex="-1">
+        <label for="control-header-menu-newline"><span class="label-icon"></span> New line</label>
+      </div>
+      <div class="form-helper">
+        <p class="control-header-menu-newline-helper form-helper-item">Force on to a new line and seperate from other Header items.</p>
       </div>
     </div>
   </div>
