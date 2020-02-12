@@ -137,7 +137,7 @@ var state = (function() {
         style: "box",
         newLine: false
       },
-      order: ["greeting", "clock", "transitional", "date", "search", "editAdd", "colorAccent", "menu"],
+      order: ["greeting", "transitional", "clock", "date", "search", "editAdd", "colorAccent", "menu"],
       border: {
         top: 0,
         bottom: 0

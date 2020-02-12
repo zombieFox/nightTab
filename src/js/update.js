@@ -807,9 +807,10 @@ var update = (function() {
       return data;
     },
     "4.37.0": function(data) {
-      data.state.header.order = ["greeting", "clock", "transitional", "date", "search", "editAdd", "colorAccent", "menu"];
+      data.state.header.order = ["greeting", "transitional", "clock", "date", "search", "editAdd", "colorAccent", "menu"];
       data.state.header.menu = {
         show: true,
+        size: data.state.header.button.size,
         style: data.state.header.button.style
       };
       data.state.header.editAdd = {
