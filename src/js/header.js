@@ -149,12 +149,12 @@ var header = (function() {
       var names = {
         greeting: "Greeting",
         clock: "Clock",
-        transitional: "Transitional text",
+        transitional: "Transitional",
         date: "Date",
         search: "Search bar",
-        editAdd: "Edit/Add buttons",
-        colorAccent: "Colour/Accent buttons",
-        menu: "Settings menu button"
+        editAdd: "Edit/Add",
+        colorAccent: "Colour/Accent",
+        menu: "Settings menu"
       };
       var headerOrder = helper.e(".header-order");
       state.get.current().header.order.forEach(function(arrayItem, index) {
