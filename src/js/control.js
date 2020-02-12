@@ -987,138 +987,11 @@ var control = (function() {
       render.update.control.menu();
     }
   }, {
-    element: ".control-header-transitional-show",
-    path: "header.transitional.show",
+    element: ".control-header-greeting-newline",
+    path: "header.greeting.newLine",
     type: "checkbox",
     func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-transitional-type-timeanddate",
-    path: "header.transitional.type",
-    type: "radio",
-    func: function() {
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-transitional-type-its",
-    path: "header.transitional.type",
-    type: "radio",
-    func: function() {
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-transitional-size-range",
-    path: "header.transitional.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-transitional-size-number",
-      path: "header.transitional.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".transitional"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".transitional"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".transitional"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.transitional.size();
-    }
-  }, {
-    element: ".control-header-transitional-size-number",
-    path: "header.transitional.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-transitional-size-range",
-      path: "header.transitional.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.transitional.size();
-    }
-  }, {
-    element: ".control-header-transitional-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".transitional"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.transitional.size");
-      header.render.transitional.size();
-      render.update.control.header();
-      render.update.control.menu();
+      render.class();
     }
   }, {
     element: ".control-header-clock-hours-show",
@@ -1357,6 +1230,154 @@ var control = (function() {
       header.render.clock.size();
       render.update.control.header();
       render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-clock-newline",
+    path: "header.clock.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-header-transitional-show",
+    path: "header.transitional.show",
+    type: "checkbox",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-transitional-type-timeanddate",
+    path: "header.transitional.type",
+    type: "radio",
+    func: function() {
+      transitional.render.clear();
+      transitional.render.all();
+    }
+  }, {
+    element: ".control-header-transitional-type-its",
+    path: "header.transitional.type",
+    type: "radio",
+    func: function() {
+      transitional.render.clear();
+      transitional.render.all();
+    }
+  }, {
+    element: ".control-header-transitional-size-range",
+    path: "header.transitional.size",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-header-transitional-size-number",
+      path: "header.transitional.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".transitional"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".transitional"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.box.open({
+            element: helper.e(".transitional"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
+    func: function() {
+      header.render.transitional.size();
+    }
+  }, {
+    element: ".control-header-transitional-size-number",
+    path: "header.transitional.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-header-transitional-size-range",
+      path: "header.transitional.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      header.render.transitional.size();
+    }
+  }, {
+    element: ".control-header-transitional-size-default",
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".transitional"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.default("header.transitional.size");
+      header.render.transitional.size();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-transitional-newline",
+    path: "header.transitional.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
     }
   }, {
     element: ".control-header-date-day-show",
@@ -1778,6 +1799,13 @@ var control = (function() {
       render.update.control.menu();
     }
   }, {
+    element: ".control-header-date-newline",
+    path: "header.date.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
+    }
+  }, {
     element: ".control-header-search-show",
     path: "header.search.show",
     type: "checkbox",
@@ -1837,14 +1865,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-search-input"),
+          element: helper.e(".search-wrapper"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-search-input"),
+          element: helper.e(".search-wrapper"),
         });
       }
     }, {
@@ -1862,7 +1890,7 @@ var control = (function() {
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
           edge.box.open({
-            element: helper.e(".header-search-input"),
+            element: helper.e(".search-wrapper"),
           });
         };
       }
@@ -1898,7 +1926,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-search-input"),
+          element: helper.e(".search-wrapper"),
           delay: 500
         });
       }
@@ -2080,7 +2108,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-search-input"),
+          element: helper.e(".search-wrapper"),
           delay: 500
         });
       }
@@ -2090,6 +2118,13 @@ var control = (function() {
       header.render.search.size();
       render.update.control.header();
       render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-search-newline",
+    path: "header.search.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
     }
   }, {
     element: ".control-header-editadd-show",
@@ -2181,14 +2216,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-item-editadd"),
+          element: helper.e(".header-editadd"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-item-editadd"),
+          element: helper.e(".header-editadd"),
         });
       }
     }, {
@@ -2245,7 +2280,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-item-editadd"),
+          element: helper.e(".header-editadd"),
           delay: 500
         });
       }
@@ -2255,6 +2290,13 @@ var control = (function() {
       header.render.editadd.size();
       render.update.control.header();
       render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-editadd-newline",
+    path: "header.editAdd.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
     }
   }, {
     element: ".control-header-coloraccent-show",
@@ -2368,14 +2410,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-item-coloraccent"),
+          element: helper.e(".header-coloraccent"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-item-coloraccent"),
+          element: helper.e(".header-coloraccent"),
         });
       }
     }, {
@@ -2432,7 +2474,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-item-coloraccent"),
+          element: helper.e(".header-coloraccent"),
           delay: 500
         });
       }
@@ -2442,6 +2484,13 @@ var control = (function() {
       header.render.coloraccent.size();
       render.update.control.header();
       render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-coloraccent-newline",
+    path: "header.colorAccent.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
     }
   }, {
     element: ".control-header-menu-style-box",
@@ -2509,14 +2558,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-item-menu"),
+          element: helper.e(".control-menu-open"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-item-menu"),
+          element: helper.e(".control-menu-open"),
         });
       }
     }, {
@@ -2573,7 +2622,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-item-menu"),
+          element: helper.e(".control-menu-open"),
           delay: 500
         });
       }
@@ -2583,6 +2632,13 @@ var control = (function() {
       header.render.menu.size();
       render.update.control.header();
       render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-menu-newline",
+    path: "header.menu.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
     }
   }, {
     element: ".control-header-color-show",
@@ -5819,6 +5875,42 @@ var control = (function() {
           ],
           name: "is-header-item-alignment-" + state.get.current().header.item.alignment
         }],
+        greeting: [{
+          remove: [
+            "is-header-item-newline-greeting"
+          ],
+          condition: function() {
+            return state.get.current().header.greeting.newLine;
+          },
+          name: "is-header-item-newline-greeting"
+        }],
+        clock: [{
+          remove: [
+            "is-header-item-newline-clock"
+          ],
+          condition: function() {
+            return state.get.current().header.clock.newLine;
+          },
+          name: "is-header-item-newline-clock"
+        }],
+        transitional: [{
+          remove: [
+            "is-header-item-newline-transitional"
+          ],
+          condition: function() {
+            return state.get.current().header.transitional.newLine;
+          },
+          name: "is-header-item-newline-transitional"
+        }],
+        date: [{
+          remove: [
+            "is-header-item-newline-date"
+          ],
+          condition: function() {
+            return state.get.current().header.date.newLine;
+          },
+          name: "is-header-item-newline-date"
+        }],
         search: [{
           remove: [
             "is-header-search-text-alignment-left",
@@ -5843,6 +5935,41 @@ var control = (function() {
             return state.get.current().header.search.show;
           },
           name: "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment
+        }, {
+          remove: [
+            "is-header-item-newline-search"
+          ],
+          condition: function() {
+            return state.get.current().header.search.newLine;
+          },
+          name: "is-header-item-newline-search"
+        }],
+        editadd: [{
+          remove: [
+            "is-header-item-newline-editadd"
+          ],
+          condition: function() {
+            return state.get.current().header.editAdd.newLine;
+          },
+          name: "is-header-item-newline-editadd"
+        }],
+        coloraccent: [{
+          remove: [
+            "is-header-item-newline-coloraccent"
+          ],
+          condition: function() {
+            return state.get.current().header.colorAccent.newLine;
+          },
+          name: "is-header-item-newline-coloraccent"
+        }],
+        menu: [{
+          remove: [
+            "is-header-item-newline-menu"
+          ],
+          condition: function() {
+            return state.get.current().header.menu.newLine;
+          },
+          name: "is-header-item-newline-menu"
         }],
         color: [{
           remove: [
@@ -6115,9 +6242,6 @@ var control = (function() {
         name: "is-background-color-by-" + state.get.current().background.color.by
       }]
     };
-    var _menu = function() {
-      // helper.addClass(html, "is-menu");
-    };
 
     var classCheck = function(array, debug) {
       array.forEach(function(arrayItem, index) {
@@ -6140,7 +6264,14 @@ var control = (function() {
     classCheck(all.layout);
     classCheck(all.header.area);
     classCheck(all.header.item);
+    classCheck(all.header.greeting);
+    classCheck(all.header.clock);
+    classCheck(all.header.transitional);
+    classCheck(all.header.date);
     classCheck(all.header.search);
+    classCheck(all.header.editadd);
+    classCheck(all.header.coloraccent);
+    classCheck(all.header.menu);
     classCheck(all.header.color);
     classCheck(all.header.radius);
     classCheck(all.header.border);

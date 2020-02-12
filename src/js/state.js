@@ -28,7 +28,7 @@ var state = (function() {
           display: "number"
         },
         seconds: {
-          show: true,
+          show: false,
           display: "number"
         },
         separator: {

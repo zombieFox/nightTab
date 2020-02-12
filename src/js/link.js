@@ -1260,7 +1260,7 @@ var link = (function() {
       var linkEmpty = helper.node("div|class:link-empty link-item");
       var para1 = helper.makeNode({
         tag: "p",
-        text: "No bookmarks matching \"" + helper.e(".header-search-input").value + "\" found"
+        text: "No bookmarks matching \"" + helper.e(".search-input").value + "\" found"
       });
       var para2 = helper.node("p:\"Enter\" to Search " + state.get.current().header.search.engine[state.get.current().header.search.engine.selected].name + ".|class:small muted");
       linkEmpty.appendChild(para1);

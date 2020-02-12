@@ -43,6 +43,7 @@ var header = (function() {
           destination: event.detail.destination.index
         };
         mod.item.move(positionData);
+        data.save();
         render.control.clear();
         render.control.all();
         bind.sort.item();
@@ -337,7 +338,7 @@ var header = (function() {
     search: function() {
       var headerSearchBody = helper.node("div|class:search-wrapper");
       var form = helper.node("form|class:search,action,method:get");
-      var searchInput = helper.node("input|class:header-search-input search-input,type:text,placeholder:Find or Search,name:q,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,tabindex:1");
+      var searchInput = helper.node("input|class:search-input,type:text,placeholder:Find or Search,name:q,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,tabindex:1");
       var hiddenInput = helper.node("input|type:submit,value:Search,class:is-hidden");
       var clearButton = helper.node("button|class:header-search-clear search-clear button button-link,tabindex:1,disabled");
       var clearButtonIcon = helper.node("span|class:icon-close");
@@ -349,7 +350,7 @@ var header = (function() {
       return headerSearchBody;
     },
     editAdd: function() {
-      var formGroup = helper.node("div|class:form-group form-group-nested-button");
+      var formGroup = helper.node("div|class:header-editadd form-group form-group-nested-button");
       var formInputButton = helper.node("div|class:form-input-button form-input-hide");
       var controlEditInput = helper.node("input|id:control-edit,class:control-edit,type:checkbox,tabindex:1");
       var controlEditLabel = helper.node("label|for:control-edit");
@@ -391,7 +392,7 @@ var header = (function() {
       return formGroup;
     },
     colorAccent: function() {
-      var formGroup = helper.node("div|class:form-group form-group-nested-button");
+      var formGroup = helper.node("div|class:header-coloraccent form-group form-group-nested-button");
 
       var colorInputButton = helper.node("div|class:form-input-button");
       var colorInput = helper.node("input|id:control-theme-color-rgb-color-quick,class:control-theme-color-rgb-color-quick,type:color,value:#000000,tabindex:1");
