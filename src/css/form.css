@@ -72,7 +72,7 @@
   padding: 1.5em 1em 1em 1em;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 4;
 }
 
 /* label */
@@ -1362,7 +1362,6 @@ input[type="range"]:disabled::-moz-range-progress {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  z-index: 1;
 }
 
 .form-group .form-wrap {
