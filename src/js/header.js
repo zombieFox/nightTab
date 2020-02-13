@@ -340,13 +340,18 @@ var header = (function() {
       var form = helper.node("form|class:search,action,method:get");
       var searchInput = helper.node("input|class:search-input,type:text,placeholder:Find or Search,name:q,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,tabindex:1");
       var hiddenInput = helper.node("input|type:submit,value:Search,class:is-hidden");
-      var clearButton = helper.node("button|class:header-search-clear search-clear button button-link,tabindex:1,disabled");
+      var clearButton = helper.node("button|class:search-clear search-clear button button-link,tabindex:1,disabled");
       var clearButtonIcon = helper.node("span|class:icon-close");
       clearButton.appendChild(clearButtonIcon);
       form.appendChild(searchInput);
       form.appendChild(hiddenInput);
       headerSearchBody.appendChild(form);
       headerSearchBody.appendChild(clearButton);
+
+      if (state.get.current().header.search.style == "clear") {
+        helper.addClass(searchInput, "input-clear");
+      };
+
       return headerSearchBody;
     },
     editAdd: function() {
@@ -450,9 +455,11 @@ var header = (function() {
   };
 
   render.search = {
-    width: function() {
-      var html = helper.e("html");
-      html.style.setProperty("--header-search-width", state.get.current().header.search.width + "%");
+    width: {
+      size: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--header-search-width-size", state.get.current().header.search.width.size + "%");
+      }
     },
     size: function() {
       var html = helper.e("html");
@@ -516,7 +523,7 @@ var header = (function() {
     render.transitional.size();
     render.clock.size();
     render.date.size();
-    render.search.width();
+    render.search.width.size();
     render.search.size();
     render.menu.size();
     render.control.all();

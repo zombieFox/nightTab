@@ -80,8 +80,11 @@ var state = (function() {
       },
       search: {
         show: true,
-        style: "auto",
-        width: 30,
+        style: "box",
+        width: {
+          by: "auto",
+          size: 30
+        },
         focus: false,
         engine: {
           selected: "google",
@@ -339,7 +342,9 @@ var state = (function() {
         size: 1
       },
       search: {
-        width: 30,
+        width: {
+          size: 30
+        },
         size: 1
       },
       editAdd: {

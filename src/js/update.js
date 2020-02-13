@@ -836,6 +836,11 @@ var update = (function() {
       data.state.header.editAdd.newLine = false;
       data.state.header.colorAccent.newLine = false;
       data.state.header.menu.newLine = false;
+      data.state.header.search.width = {
+        by: data.state.header.search.style,
+        size: data.state.header.search.width
+      };
+      data.state.header.search.style = "box";
       delete data.state.header.button;
       return data;
     }

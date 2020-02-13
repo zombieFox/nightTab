@@ -1812,7 +1812,7 @@ var control = (function() {
     func: function() {
       header.render.item.clear();
       header.render.item.all();
-      header.render.search.width();
+      header.render.search.width.size();
       greeting.render.clear();
       greeting.render.all();
       clock.render.clear();
@@ -1831,34 +1831,34 @@ var control = (function() {
       dropdown.bind.editAdd();
     }
   }, {
-    element: ".control-header-search-style-auto",
-    path: "header.search.style",
+    element: ".control-header-search-width-by-auto",
+    path: "header.search.width.by",
     type: "radio",
     func: function() {
       render.class();
       render.dependents();
-      header.render.search.width();
+      header.render.search.width.size();
     }
   }, {
-    element: ".control-header-search-style-custom",
-    path: "header.search.style",
+    element: ".control-header-search-width-by-custom",
+    path: "header.search.width.by",
     type: "radio",
     func: function() {
       render.class();
       render.dependents();
-      header.render.search.width();
+      header.render.search.width.size();
     }
   }, {
-    element: ".control-header-search-width-range",
-    path: "header.search.width",
+    element: ".control-header-search-width-size-range",
+    path: "header.search.width.size",
     type: "range",
     valueModify: {
       min: 10,
       max: 100
     },
     mirrorElement: [{
-      element: ".control-header-search-width-number",
-      path: "header.search.width",
+      element: ".control-header-search-width-size-number",
+      path: "header.search.width.size",
       type: "number",
     }],
     additionalEvents: [{
@@ -1901,26 +1901,26 @@ var control = (function() {
       }
     }],
     func: function() {
-      header.render.search.width();
+      header.render.search.width.size();
     }
   }, {
-    element: ".control-header-search-width-number",
-    path: "header.search.width",
+    element: ".control-header-search-width-size-number",
+    path: "header.search.width.size",
     type: "number",
     valueModify: {
       min: 10,
       max: 100
     },
     mirrorElement: [{
-      element: ".control-header-search-width-range",
-      path: "header.search.width",
+      element: ".control-header-search-width-size-range",
+      path: "header.search.width.size",
       type: "range",
     }],
     func: function() {
-      header.render.search.width();
+      header.render.search.width.size();
     }
   }, {
-    element: ".control-header-search-width-default",
+    element: ".control-header-search-width-size-default",
     type: "button",
     additionalEvents: [{
       event: "click",
@@ -1932,10 +1932,56 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.default("header.search.width");
-      header.render.search.width();
+      mod.default("header.search.width.size");
+      header.render.search.width.size();
       render.update.control.header();
       render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-search-style-box",
+    path: "header.search.style",
+    type: "radio",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-search-style-clear",
+    path: "header.search.style",
+    type: "radio",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-search-focus",
@@ -5923,13 +5969,13 @@ var control = (function() {
           name: "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment
         }, {
           remove: [
-            "is-header-search-style-custom",
-            "is-header-search-style-auto"
+            "is-header-search-width-by-custom",
+            "is-header-search-width-by-auto"
           ],
           condition: function() {
             return state.get.current().header.search.show;
           },
-          name: "is-header-search-style-" + state.get.current().header.search.style
+          name: "is-header-search-width-by-" + state.get.current().header.search.width.by
         }, {
           condition: function() {
             return state.get.current().header.search.show;
@@ -6578,14 +6624,14 @@ var control = (function() {
           },
           dependents: function() {
             return [
-              ".control-header-search-style-label",
-              ".control-header-search-style-auto",
-              ".control-header-search-style-auto-helper",
-              ".control-header-search-style-custom",
-              ".control-header-search-style-custom-helper",
-              ".control-header-search-width-range",
-              ".control-header-search-width-number",
-              ".control-header-search-width-default",
+              ".control-header-search-width-by-label",
+              ".control-header-search-width-by-auto",
+              ".control-header-search-width-by-auto-helper",
+              ".control-header-search-width-by-custom",
+              ".control-header-search-width-by-custom-helper",
+              ".control-header-search-width-size-range",
+              ".control-header-search-width-size-number",
+              ".control-header-search-width-size-default",
               ".control-header-search-focus",
               ".control-header-search-focus-helper",
               ".control-header-search-engine-label",
@@ -6624,13 +6670,13 @@ var control = (function() {
           }
         }, {
           condition: function() {
-            return (state.get.current().header.search.show && state.get.current().header.search.style === "custom");
+            return (state.get.current().header.search.show && state.get.current().header.search.width.by === "custom");
           },
           dependents: function() {
             return [
-              ".control-header-search-width-range",
-              ".control-header-search-width-number",
-              ".control-header-search-width-default"
+              ".control-header-search-width-size-range",
+              ".control-header-search-width-size-number",
+              ".control-header-search-width-size-default"
             ];
           }
         }],

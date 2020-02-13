@@ -3,8 +3,15 @@
   position: relative;
 }
 
-.search {
+.search-input {
   width: 100%;
+}
+
+.search-clear {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
 }
 
 .is-header-search-text-alignment-left .search-input {
