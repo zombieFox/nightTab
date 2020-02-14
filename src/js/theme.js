@@ -1941,6 +1941,16 @@ var theme = (function() {
     }
   };
 
+  render.themeMetaTag = function() {
+    var head = helper.e("head");
+    var metaThemeColor = helper.e(".meta-theme-color");
+    if (metaThemeColor) {
+      metaThemeColor.remove();
+    };
+    var meta = helper.node("meta|class:meta-theme-color,name:theme-color,content:"+helper.convertColor.rgb.hex(state.get.current().theme.color.generated.negative[10]));
+    head.appendChild(meta);
+  };
+
   var accent = {
     random: function() {
       mod.accent.random();
@@ -2012,6 +2022,7 @@ var theme = (function() {
     render.shade.opacity();
     render.preset();
     render.custom.all();
+    render.themeMetaTag();
     custom.check();
   };
 

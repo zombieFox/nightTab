@@ -94,6 +94,7 @@ var control = (function() {
       theme.mod.color.hsl();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-accent-rgb-color-quick",
@@ -4276,6 +4277,7 @@ var control = (function() {
       theme.mod.color.hsl();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-text",
@@ -4343,6 +4345,7 @@ var control = (function() {
       theme.mod.color.hsl();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-default",
@@ -4352,6 +4355,7 @@ var control = (function() {
       theme.mod.color.hsl();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
       render.update.control.header();
       render.update.control.menu();
     }
@@ -4409,6 +4413,7 @@ var control = (function() {
       theme.mod.color.rgb();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-hsl-h-number",
@@ -4464,6 +4469,7 @@ var control = (function() {
       theme.mod.color.rgb();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-hsl-s-range",
@@ -4519,6 +4525,7 @@ var control = (function() {
       theme.mod.color.rgb();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-hsl-s-number",
@@ -4574,6 +4581,7 @@ var control = (function() {
       theme.mod.color.rgb();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-hsl-l-range",
@@ -4629,6 +4637,7 @@ var control = (function() {
       theme.mod.color.rgb();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-hsl-l-number",
@@ -4684,6 +4693,7 @@ var control = (function() {
       theme.mod.color.rgb();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-r-range",
@@ -4739,6 +4749,7 @@ var control = (function() {
       theme.mod.color.hsl();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-r-number",
@@ -4794,6 +4805,7 @@ var control = (function() {
       theme.mod.color.hsl();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-g-range",
@@ -4849,6 +4861,7 @@ var control = (function() {
       theme.mod.color.hsl();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-g-number",
@@ -4904,6 +4917,7 @@ var control = (function() {
       theme.mod.color.hsl();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-b-range",
@@ -4959,6 +4973,7 @@ var control = (function() {
       theme.mod.color.hsl();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-b-number",
@@ -5014,6 +5029,7 @@ var control = (function() {
       theme.mod.color.hsl();
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-contrast-light-range",
@@ -5034,6 +5050,7 @@ var control = (function() {
     func: function() {
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-contrast-light-number",
@@ -5054,6 +5071,7 @@ var control = (function() {
     func: function() {
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-contrast-light-default",
@@ -5062,6 +5080,7 @@ var control = (function() {
       mod.default("theme.color.contrast.light");
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
       render.update.control.header();
       render.update.control.menu();
     }
@@ -5084,6 +5103,7 @@ var control = (function() {
     func: function() {
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-contrast-dark-number",
@@ -5104,6 +5124,7 @@ var control = (function() {
     func: function() {
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-contrast-dark-default",
@@ -5112,6 +5133,7 @@ var control = (function() {
       mod.default("theme.color.contrast.dark");
       theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
       render.update.control.header();
       render.update.control.menu();
     }
