@@ -361,7 +361,7 @@
                 s: hsl.s - (saturationShift * i),
                 l: hsl.l - (lightShift * i)
               });
-              renderShade("--theme-shade-neg-", i, rgb);
+              renderShade("--theme-shade-negative-", i, rgb);
             };
             for (var i = 1; i <= shadeSteps; i++) {
               var rgb = helper.convertColor.hsl.rgb({
@@ -369,7 +369,7 @@
                 s: hsl.s + (saturationShift * i),
                 l: hsl.l + (lightShift * i)
               });
-              renderShade("--theme-shade-pos-", i, rgb);
+              renderShade("--theme-shade-positive-", i, rgb);
             };
           }
         }

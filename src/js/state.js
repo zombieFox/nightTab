@@ -270,7 +270,8 @@ var state = (function() {
         contrast: {
           light: 4,
           dark: 4
-        }
+        },
+        generated: {}
       },
       font: {
         display: {

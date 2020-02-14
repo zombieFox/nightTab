@@ -172,6 +172,50 @@ var theme = (function() {
           b: Math.round(rgb.b)
         }
       });
+    },
+    generated: function() {
+      var shadeMax = 10;
+      var shadeMin = 1;
+      var contrastNeg = state.get.current().theme.color.contrast.dark;
+      var contrastPos = state.get.current().theme.color.contrast.light;
+      var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.color.rgb);
+      var validateRGBNumber = function(rgb) {
+        for (var key in rgb) {
+          if (rgb[key] < 0) {
+            rgb[key] = 0;
+          } else if (rgb[key] > 255) {
+            rgb[key] = 255;
+          };
+          rgb[key] = Math.round(rgb[key]);
+        };
+        return rgb;
+      };
+      // set light theme shades
+      for (var i = shadeMax; i >= shadeMin; i--) {
+        var rgb = helper.convertColor.hsl.rgb({
+          h: hsl.h,
+          s: hsl.s,
+          l: hsl.l - (contrastNeg * i)
+        });
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.color.generated.negative." + i,
+          newValue: validateRGBNumber(rgb)
+        });
+      };
+      // set dark theme shades
+      for (var i = shadeMin; i <= shadeMax; i++) {
+        var rgb = helper.convertColor.hsl.rgb({
+          h: hsl.h,
+          s: hsl.s,
+          l: hsl.l + (contrastPos * i)
+        });
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.color.generated.positive." + i,
+          newValue: validateRGBNumber(rgb)
+        });
+      };
     }
   };
 
@@ -1368,45 +1412,25 @@ var theme = (function() {
 
   render.color = {
     shade: function() {
-      var shadeMax = 10;
-      var shadeMin = 1;
-      var contrastNeg = state.get.current().theme.color.contrast.dark;
-      var contrastPos = state.get.current().theme.color.contrast.light;
+      // positive
       var html = helper.e("html");
-      var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.color.rgb);
-      var renderShade = function(name, index, rgb) {
-        for (var key in rgb) {
-          if (rgb[key] < 0) {
-            rgb[key] = 0;
-          } else if (rgb[key] > 255) {
-            rgb[key] = 255;
-          };
-          rgb[key] = Math.round(rgb[key]);
+      for (var key in state.get.current().theme.color.generated.positive) {
+        var rgb = state.get.current().theme.color.generated.positive[key];
+        if (key < 10) {
+          key = "0" + key;
         };
-        if (index < 10) {
-          index = "0" + index;
+        html.style.setProperty("--theme-shade-positive-" + key, rgb.r + ", " + rgb.g + ", " + rgb.b);
+      };
+      // neutral
+      var rgb = state.get.current().theme.color.rgb;
+      html.style.setProperty("--theme-shade", rgb.r + ", " + rgb.g + ", " + rgb.b);
+      // negative
+      for (var key in state.get.current().theme.color.generated.negative) {
+        var rgb = state.get.current().theme.color.generated.negative[key];
+        if (key < 10) {
+          key = "0" + key;
         };
-        html.style.setProperty(name + index, rgb.r + ", " + rgb.g + ", " + rgb.b);
-      };
-      // set light theme shades
-      for (var i = shadeMax; i >= shadeMin; i--) {
-        var rgb = helper.convertColor.hsl.rgb({
-          h: hsl.h,
-          s: hsl.s,
-          l: hsl.l - (contrastNeg * i)
-        });
-        renderShade("--theme-shade-neg-", i, rgb);
-      };
-      // set primary theme shades
-      html.style.setProperty("--theme-shade", state.get.current().theme.color.rgb.r + ", " + state.get.current().theme.color.rgb.g + ", " + state.get.current().theme.color.rgb.b);
-      // set dark theme shades
-      for (var i = shadeMin; i <= shadeMax; i++) {
-        var rgb = helper.convertColor.hsl.rgb({
-          h: hsl.h,
-          s: hsl.s,
-          l: hsl.l + (contrastPos * i)
-        });
-        renderShade("--theme-shade-pos-", i, rgb);
+        html.style.setProperty("--theme-shade-negative-" + key, rgb.r + ", " + rgb.g + ", " + rgb.b);
       };
     }
   };
@@ -1572,6 +1596,7 @@ var theme = (function() {
       themePresetButton.addEventListener("click", function() {
         mod.apply(mod.preset.get(index));
         data.save();
+        mod.color.generated();
         render.font.display.name();
         render.font.display.weight();
         render.font.display.style();
@@ -1665,6 +1690,7 @@ var theme = (function() {
           themeCustomButton.addEventListener("click", function() {
             mod.apply(mod.custom.get(index));
             data.save();
+            mod.color.generated();
             render.font.display.name();
             render.font.display.weight();
             render.font.display.style();
@@ -1967,6 +1993,7 @@ var theme = (function() {
 
   var init = function() {
     accent.random();
+    mod.color.generated();
     mod.accent.random();
     mod.custom.close();
     render.font.load.preset();

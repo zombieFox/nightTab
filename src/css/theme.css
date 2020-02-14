@@ -181,43 +181,43 @@
   height: 100%;
 }
 
-.theme-color-neg-10 {
+.theme-color-negative-10 {
   background-color: rgb(var(--theme-color-01));
 }
 
-.theme-color-neg-09 {
+.theme-color-negative-09 {
   background-color: rgb(var(--theme-color-02));
 }
 
-.theme-color-neg-08 {
+.theme-color-negative-08 {
   background-color: rgb(var(--theme-color-03));
 }
 
-.theme-color-neg-07 {
+.theme-color-negative-07 {
   background-color: rgb(var(--theme-color-04));
 }
 
-.theme-color-neg-06 {
+.theme-color-negative-06 {
   background-color: rgb(var(--theme-color-05));
 }
 
-.theme-color-neg-05 {
+.theme-color-negative-05 {
   background-color: rgb(var(--theme-color-06));
 }
 
-.theme-color-neg-04 {
+.theme-color-negative-04 {
   background-color: rgb(var(--theme-color-07));
 }
 
-.theme-color-neg-03 {
+.theme-color-negative-03 {
   background-color: rgb(var(--theme-color-08));
 }
 
-.theme-color-neg-02 {
+.theme-color-negative-02 {
   background-color: rgb(var(--theme-color-09));
 }
 
-.theme-color-neg-01 {
+.theme-color-negative-01 {
   background-color: rgb(var(--theme-color-10));
 }
 
@@ -225,43 +225,43 @@
   background-color: rgb(var(--theme-color));
 }
 
-.theme-color-pos-01 {
+.theme-color-positive-01 {
   background-color: rgb(var(--theme-color-11));
 }
 
-.theme-color-pos-02 {
+.theme-color-positive-02 {
   background-color: rgb(var(--theme-color-12));
 }
 
-.theme-color-pos-03 {
+.theme-color-positive-03 {
   background-color: rgb(var(--theme-color-13));
 }
 
-.theme-color-pos-04 {
+.theme-color-positive-04 {
   background-color: rgb(var(--theme-color-14));
 }
 
-.theme-color-pos-05 {
+.theme-color-positive-05 {
   background-color: rgb(var(--theme-color-15));
 }
 
-.theme-color-pos-06 {
+.theme-color-positive-06 {
   background-color: rgb(var(--theme-color-16));
 }
 
-.theme-color-pos-07 {
+.theme-color-positive-07 {
   background-color: rgb(var(--theme-color-17));
 }
 
-.theme-color-pos-08 {
+.theme-color-positive-08 {
   background-color: rgb(var(--theme-color-18));
 }
 
-.theme-color-pos-09 {
+.theme-color-positive-09 {
   background-color: rgb(var(--theme-color-19));
 }
 
-.theme-color-pos-10 {
+.theme-color-positive-10 {
   background-color: rgb(var(--theme-color-20));
 }
 

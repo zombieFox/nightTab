@@ -92,6 +92,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4273,6 +4274,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4339,6 +4341,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4347,6 +4350,7 @@ var control = (function() {
     func: function() {
       mod.default("theme.color.rgb");
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
       render.update.control.header();
       render.update.control.menu();
@@ -4403,6 +4407,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4457,6 +4462,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4511,6 +4517,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4565,6 +4572,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4619,6 +4627,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4673,6 +4682,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4727,6 +4737,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4781,6 +4792,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4835,6 +4847,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4889,6 +4902,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4943,6 +4957,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -4997,6 +5012,7 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -5016,6 +5032,7 @@ var control = (function() {
       valueConvert: ["float"]
     }],
     func: function() {
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -5035,6 +5052,7 @@ var control = (function() {
       valueConvert: ["float"]
     }],
     func: function() {
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -5042,6 +5060,7 @@ var control = (function() {
     type: "button",
     func: function() {
       mod.default("theme.color.contrast.light");
+      theme.mod.color.generated();
       theme.render.color.shade();
       render.update.control.header();
       render.update.control.menu();
@@ -5063,6 +5082,7 @@ var control = (function() {
       valueConvert: ["float"]
     }],
     func: function() {
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -5082,6 +5102,7 @@ var control = (function() {
       valueConvert: ["float"]
     }],
     func: function() {
+      theme.mod.color.generated();
       theme.render.color.shade();
     }
   }, {
@@ -5089,6 +5110,7 @@ var control = (function() {
     type: "button",
     func: function() {
       mod.default("theme.color.contrast.dark");
+      theme.mod.color.generated();
       theme.render.color.shade();
       render.update.control.header();
       render.update.control.menu();

@@ -843,6 +843,10 @@ var update = (function() {
       data.state.header.search.style = "box";
       delete data.state.header.button;
       return data;
+    },
+    "4.38.0": function(data) {
+      data.state.theme.color.generated = {};
+      return data;
     }
   };
 
