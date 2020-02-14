@@ -6332,13 +6332,17 @@ var control = (function() {
   };
 
   render.dependents = function() {
+    var type = {
+      control: ["input", "button", "textarea"],
+      element: ["label", "p", "div"]
+    };
     var disable = {
-      input: function(input, state) {
-        if (input) {
+      control: function(control, state) {
+        if (control) {
           if (state) {
-            input.disabled = false;
+            control.disabled = false;
           } else {
-            input.disabled = true;
+            control.disabled = true;
           };
         };
       },
@@ -7028,9 +7032,10 @@ var control = (function() {
         arrayItem.dependents().forEach(function(arrayItem, index) {
           var element = helper.eA(arrayItem);
           element.forEach(function(arrayItem, index) {
-            if (arrayItem.tagName.toLowerCase() == "input") {
-              disable.input(arrayItem, condition);
-            } else {
+            var elementType = arrayItem.tagName.toLowerCase();
+            if (type.control.includes(elementType)) {
+              disable.control(arrayItem, condition);
+            } else if (type.element.includes(elementType)) {
               disable.element(arrayItem, condition);
             };
           });
