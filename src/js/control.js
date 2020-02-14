@@ -1,12 +1,120 @@
 var control = (function() {
 
-  var _allControl = [{
+  var mod = {};
+
+  mod.header = [{
     element: ".control-menu-open",
     type: "button",
     func: function() {
       menu.open();
+    },
+  }, {
+    element: ".control-link-add",
+    type: "button",
+    func: function() {
+      link.add.item.open();
     }
   }, {
+    element: ".control-group-add",
+    type: "button",
+    func: function() {
+      link.add.group.open();
+    }
+  }, {
+    element: ".control-edit",
+    path: "edit",
+    type: "checkbox",
+    func: function() {
+      link.tabindex();
+      render.class();
+    }
+  }, {
+    element: ".control-theme-color-rgb-color-quick",
+    path: "theme.color.rgb",
+    type: "color",
+    mirrorElement: [{
+      element: ".control-theme-color-rgb-color",
+      path: "theme.color.rgb",
+      type: "color"
+    }, {
+      element: ".control-theme-color-rgb-text",
+      path: "theme.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }, {
+      element: ".control-theme-color-hsl-h-range",
+      path: "theme.color.hsl.h",
+      type: "range"
+    }, {
+      element: ".control-theme-color-hsl-h-number",
+      path: "theme.color.hsl.h",
+      type: "number"
+    }, {
+      element: ".control-theme-color-hsl-s-range",
+      path: "theme.color.hsl.s",
+      type: "range"
+    }, {
+      element: ".control-theme-color-hsl-s-number",
+      path: "theme.color.hsl.s",
+      type: "number"
+    }, {
+      element: ".control-theme-color-hsl-l-range",
+      path: "theme.color.hsl.l",
+      type: "range"
+    }, {
+      element: ".control-theme-color-hsl-l-number",
+      path: "theme.color.hsl.l",
+      type: "number"
+    }, {
+      element: ".control-theme-color-rgb-r-range",
+      path: "theme.color.rgb.r",
+      type: "range"
+    }, {
+      element: ".control-theme-color-rgb-r-number",
+      path: "theme.color.rgb.r",
+      type: "number"
+    }, {
+      element: ".control-theme-color-rgb-g-range",
+      path: "theme.color.rgb.g",
+      type: "range"
+    }, {
+      element: ".control-theme-color-rgb-g-number",
+      path: "theme.color.rgb.g",
+      type: "number"
+    }, {
+      element: ".control-theme-color-rgb-b-range",
+      path: "theme.color.rgb.b",
+      type: "range"
+    }, {
+      element: ".control-theme-color-rgb-b-number",
+      path: "theme.color.rgb.b",
+      type: "number"
+    }],
+    func: function() {
+      theme.mod.color.hsl();
+      theme.render.color.shade();
+    }
+  }, {
+    element: ".control-theme-accent-rgb-color-quick",
+    path: "theme.accent.rgb",
+    type: "color",
+    mirrorElement: [{
+      element: ".control-theme-accent-rgb-color",
+      path: "theme.accent.rgb",
+      type: "color"
+    }, {
+      element: ".control-theme-accent-rgb-text",
+      path: "theme.accent.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
+    func: function() {
+      theme.render.accent.color();
+      link.groupAndItems();
+    }
+  }];
+
+  mod.menu = [{
     element: ".control-menu-layout",
     type: "button",
     func: function() {
@@ -65,44 +173,6 @@ var control = (function() {
     type: "button",
     func: function() {
       menu.close();
-    }
-  }, {
-    element: ".control-link-add",
-    type: "button",
-    func: function() {
-      link.add.item.open();
-    }
-  }, {
-    element: ".control-group-add",
-    type: "button",
-    func: function() {
-      link.add.group.open();
-    }
-  }, {
-    element: ".control-edit",
-    path: "edit",
-    type: "checkbox",
-    func: function() {
-      link.tabindex();
-      render.class();
-    }
-  }, {
-    element: ".control-theme-accent-rgb-color-quick",
-    path: "theme.accent.rgb",
-    type: "color",
-    mirrorElement: [{
-      element: ".control-theme-accent-rgb-color",
-      path: "theme.accent.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-accent-rgb-text",
-      path: "theme.accent.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }],
-    func: function() {
-      theme.render.accent.color();
-      link.groupAndItems();
     }
   }, {
     element: ".control-layout-size-range",
@@ -196,7 +266,8 @@ var control = (function() {
     func: function() {
       mod.default("layout.size");
       layout.render.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-layout-width-range",
@@ -286,7 +357,8 @@ var control = (function() {
     func: function() {
       mod.default("layout.width");
       layout.render.width();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-layout-alignment-topleft",
@@ -455,7 +527,8 @@ var control = (function() {
     func: function() {
       mod.default("layout.padding");
       layout.render.padding();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-layout-gutter-range",
@@ -543,7 +616,8 @@ var control = (function() {
     func: function() {
       mod.default("layout.gutter");
       layout.render.gutter();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-layout-title",
@@ -667,7 +741,8 @@ var control = (function() {
     func: function() {
       mod.default("header.area.width");
       header.render.area.width();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-area-width-match",
@@ -689,7 +764,8 @@ var control = (function() {
     func: function() {
       mod.default("header.area.width");
       header.render.area.width();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-area-alignment-left",
@@ -765,10 +841,23 @@ var control = (function() {
     path: "header.greeting.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-greeting-type-good",
@@ -894,17 +983,283 @@ var control = (function() {
     func: function() {
       mod.default("header.greeting.size");
       header.render.greeting.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-greeting-newline",
+    path: "header.greeting.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-header-clock-hours-show",
+    path: "header.clock.hours.show",
+    type: "checkbox",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-clock-hours-display-number",
+    path: "header.clock.hours.display",
+    type: "radio",
+    func: function() {
+      clock.render.clear();
+      clock.render.all();
+    }
+  }, {
+    element: ".control-header-clock-hours-display-word",
+    path: "header.clock.hours.display",
+    type: "radio",
+    func: function() {
+      clock.render.clear();
+      clock.render.all();
+    }
+  }, {
+    element: ".control-header-clock-minutes-show",
+    path: "header.clock.minutes.show",
+    type: "checkbox",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-clock-minutes-display-number",
+    path: "header.clock.minutes.display",
+    type: "radio",
+    func: function() {
+      clock.render.clear();
+      clock.render.all();
+    }
+  }, {
+    element: ".control-header-clock-minutes-display-word",
+    path: "header.clock.minutes.display",
+    type: "radio",
+    func: function() {
+      clock.render.clear();
+      clock.render.all();
+    }
+  }, {
+    element: ".control-header-clock-seconds-show",
+    path: "header.clock.seconds.show",
+    type: "checkbox",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-clock-seconds-display-number",
+    path: "header.clock.seconds.display",
+    type: "radio",
+    func: function() {
+      clock.render.clear();
+      clock.render.all();
+    }
+  }, {
+    element: ".control-header-clock-seconds-display-word",
+    path: "header.clock.seconds.display",
+    type: "radio",
+    func: function() {
+      clock.render.clear();
+      clock.render.all();
+    }
+  }, {
+    element: ".control-header-clock-separator-show",
+    path: "header.clock.separator.show",
+    type: "checkbox",
+    func: function() {
+      clock.render.clear();
+      clock.render.all();
+    }
+  }, {
+    element: ".control-header-clock-hour24-show",
+    path: "header.clock.hour24.show",
+    type: "checkbox",
+    func: function() {
+      clock.render.clear();
+      clock.render.all();
+      render.dependents();
+    }
+  }, {
+    element: ".control-header-clock-meridiem-show",
+    path: "header.clock.meridiem.show",
+    type: "checkbox",
+    func: function() {
+      clock.render.clear();
+      clock.render.all();
+      render.dependents();
+    }
+  }, {
+    element: ".control-header-clock-size-range",
+    path: "header.clock.size",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-header-clock-size-number",
+      path: "header.clock.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".clock"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".clock"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.box.open({
+            element: helper.e(".clock"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
+    func: function() {
+      header.render.clock.size();
+    }
+  }, {
+    element: ".control-header-clock-size-number",
+    path: "header.clock.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-header-clock-size-range",
+      path: "header.clock.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      header.render.clock.size();
+    }
+  }, {
+    element: ".control-header-clock-size-default",
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".clock"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.default("header.clock.size");
+      header.render.clock.size();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-clock-newline",
+    path: "header.clock.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
     }
   }, {
     element: ".control-header-transitional-show",
     path: "header.transitional.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-transitional-type-timeanddate",
@@ -1014,265 +1369,38 @@ var control = (function() {
     func: function() {
       mod.default("header.transitional.size");
       header.render.transitional.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
-    element: ".control-header-clock-hours-show",
-    path: "header.clock.hours.show",
+    element: ".control-header-transitional-newline",
+    path: "header.transitional.newLine",
     type: "checkbox",
     func: function() {
       render.class();
-      render.dependents();
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-clock-hours-display-number",
-    path: "header.clock.hours.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-clock-hours-display-word",
-    path: "header.clock.hours.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-clock-minutes-show",
-    path: "header.clock.minutes.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-clock-minutes-display-number",
-    path: "header.clock.minutes.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-clock-minutes-display-word",
-    path: "header.clock.minutes.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-clock-seconds-show",
-    path: "header.clock.seconds.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-clock-seconds-display-number",
-    path: "header.clock.seconds.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-clock-seconds-display-word",
-    path: "header.clock.seconds.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-clock-separator-show",
-    path: "header.clock.separator.show",
-    type: "checkbox",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-    }
-  }, {
-    element: ".control-header-clock-hour24-show",
-    path: "header.clock.hour24.show",
-    type: "checkbox",
-    func: function() {
-      render.dependents();
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-clock-meridiem-show",
-    path: "header.clock.meridiem.show",
-    type: "checkbox",
-    func: function() {
-      render.dependents();
-      clock.render.clear();
-      clock.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-clock-size-range",
-    path: "header.clock.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-clock-size-number",
-      path: "header.clock.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".clock"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".clock"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".clock"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.clock.size();
-    }
-  }, {
-    element: ".control-header-clock-size-number",
-    path: "header.clock.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-clock-size-range",
-      path: "header.clock.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.clock.size();
-    }
-  }, {
-    element: ".control-header-clock-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".clock"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.clock.size");
-      header.render.clock.size();
-      render.update();
     }
   }, {
     element: ".control-header-date-day-show",
     path: "header.date.day.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
-      date.render.clear();
-      date.render.all();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-date-day-display-number",
@@ -1353,14 +1481,23 @@ var control = (function() {
     path: "header.date.date.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
-      date.render.clear();
-      date.render.all();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-date-date-display-number",
@@ -1403,14 +1540,23 @@ var control = (function() {
     path: "header.date.month.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
-      date.render.clear();
-      date.render.all();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-date-month-display-number",
@@ -1479,14 +1625,23 @@ var control = (function() {
     path: "header.date.year.show",
     type: "checkbox",
     func: function() {
-      render.class();
-      render.dependents();
-      date.render.clear();
-      date.render.all();
+      header.render.item.clear();
+      header.render.item.all();
       greeting.render.clear();
       greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
       transitional.render.clear();
       transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-date-year-display-number",
@@ -1640,60 +1795,84 @@ var control = (function() {
     func: function() {
       mod.default("header.date.size");
       header.render.date.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-date-newline",
+    path: "header.date.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
     }
   }, {
     element: ".control-header-search-show",
     path: "header.search.show",
     type: "checkbox",
     func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      header.render.search.width.size();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
       render.class();
       render.dependents();
-      header.render.search.width();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
-    element: ".control-header-search-style-auto",
-    path: "header.search.style",
+    element: ".control-header-search-width-by-auto",
+    path: "header.search.width.by",
     type: "radio",
     func: function() {
       render.class();
       render.dependents();
-      header.render.search.width();
+      header.render.search.width.size();
     }
   }, {
-    element: ".control-header-search-style-custom",
-    path: "header.search.style",
+    element: ".control-header-search-width-by-custom",
+    path: "header.search.width.by",
     type: "radio",
     func: function() {
       render.class();
       render.dependents();
-      header.render.search.width();
+      header.render.search.width.size();
     }
   }, {
-    element: ".control-header-search-width-range",
-    path: "header.search.width",
+    element: ".control-header-search-width-size-range",
+    path: "header.search.width.size",
     type: "range",
     valueModify: {
       min: 10,
       max: 100
     },
     mirrorElement: [{
-      element: ".control-header-search-width-number",
-      path: "header.search.width",
+      element: ".control-header-search-width-size-number",
+      path: "header.search.width.size",
       type: "number",
     }],
     additionalEvents: [{
       event: "input",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-search-input"),
+          element: helper.e(".search-wrapper"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-search-input"),
+          element: helper.e(".search-wrapper"),
         });
       }
     }, {
@@ -1711,7 +1890,7 @@ var control = (function() {
       func: function() {
         if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
           edge.box.open({
-            element: helper.e(".header-search-input"),
+            element: helper.e(".search-wrapper"),
           });
         };
       }
@@ -1722,40 +1901,87 @@ var control = (function() {
       }
     }],
     func: function() {
-      header.render.search.width();
+      header.render.search.width.size();
     }
   }, {
-    element: ".control-header-search-width-number",
-    path: "header.search.width",
+    element: ".control-header-search-width-size-number",
+    path: "header.search.width.size",
     type: "number",
     valueModify: {
       min: 10,
       max: 100
     },
     mirrorElement: [{
-      element: ".control-header-search-width-range",
-      path: "header.search.width",
+      element: ".control-header-search-width-size-range",
+      path: "header.search.width.size",
       type: "range",
     }],
     func: function() {
-      header.render.search.width();
+      header.render.search.width.size();
     }
   }, {
-    element: ".control-header-search-width-default",
+    element: ".control-header-search-width-size-default",
     type: "button",
     additionalEvents: [{
       event: "click",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-search-input"),
+          element: helper.e(".search-wrapper"),
           delay: 500
         });
       }
     }],
     func: function() {
-      mod.default("header.search.width");
-      header.render.search.width();
-      render.update();
+      mod.default("header.search.width.size");
+      header.render.search.width.size();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-search-style-box",
+    path: "header.search.style",
+    type: "radio",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-search-style-clear",
+    path: "header.search.style",
+    type: "radio",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
     element: ".control-header-search-focus",
@@ -1928,7 +2154,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.box.open({
-          element: helper.e(".header-search-input"),
+          element: helper.e(".search-wrapper"),
           delay: 500
         });
       }
@@ -1936,48 +2162,89 @@ var control = (function() {
     func: function() {
       mod.default("header.search.size");
       header.render.search.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
-    element: ".control-header-button-style-box",
-    path: "header.button.style",
-    type: "radio",
-    func: function() {
-      header.render.button.style();
-    }
-  }, {
-    element: ".control-header-button-style-clear",
-    path: "header.button.style",
-    type: "radio",
-    func: function() {
-      header.render.button.style();
-    }
-  }, {
-    element: ".control-header-button-editadd-show",
-    path: "header.button.editAdd.show",
+    element: ".control-header-search-newline",
+    path: "header.search.newLine",
     type: "checkbox",
     func: function() {
       render.class();
+    }
+  }, {
+    element: ".control-header-editadd-show",
+    path: "header.editAdd.show",
+    type: "checkbox",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
       render.dependents();
     }
   }, {
-    element: ".control-header-button-coloraccent-show",
-    path: "header.button.colorAccent.show",
-    type: "checkbox",
+    element: ".control-header-editadd-style-box",
+    path: "header.editAdd.style",
+    type: "radio",
     func: function() {
-      render.class();
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
       render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
-    element: ".control-header-button-coloraccent-dot-show",
-    path: "header.button.colorAccent.dot.show",
-    type: "checkbox",
+    element: ".control-header-editadd-style-clear",
+    path: "header.editAdd.style",
+    type: "radio",
     func: function() {
-      header.render.button.dot();
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
     }
   }, {
-    element: ".control-header-button-size-range",
-    path: "header.button.size",
+    element: ".control-header-editadd-size-range",
+    path: "header.editAdd.size",
     type: "range",
     valueConvert: ["float"],
     valueModify: {
@@ -1986,8 +2253,8 @@ var control = (function() {
       step: 10
     },
     mirrorElement: [{
-      element: ".control-header-button-size-number",
-      path: "header.button.size",
+      element: ".control-header-editadd-size-number",
+      path: "header.editAdd.size",
       type: "number",
       valueConvert: ["float"]
     }],
@@ -1995,14 +2262,356 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.box.open({
-          element: ".control-menu-open",
+          element: helper.e(".header-editadd"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.box.open({
-          element: ".control-menu-open",
+          element: helper.e(".header-editadd"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.box.open({
+            element: ".header-item-editadd",
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
+    func: function() {
+      header.render.editadd.size();
+    }
+  }, {
+    element: ".control-header-editadd-size-number",
+    path: "header.editAdd.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-header-editadd-size-range",
+      path: "header.editAdd.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      header.render.editadd.size();
+    }
+  }, {
+    element: ".control-header-editadd-size-default",
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".header-editadd"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.default("header.editAdd.size");
+      header.render.editadd.size();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-editadd-newline",
+    path: "header.editAdd.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-header-coloraccent-show",
+    path: "header.colorAccent.show",
+    type: "checkbox",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-coloraccent-dot-show",
+    path: "header.colorAccent.dot.show",
+    type: "checkbox",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-coloraccent-style-box",
+    path: "header.colorAccent.style",
+    type: "radio",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-coloraccent-style-clear",
+    path: "header.colorAccent.style",
+    type: "radio",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-coloraccent-size-range",
+    path: "header.colorAccent.size",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-header-coloraccent-size-number",
+      path: "header.colorAccent.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".header-coloraccent"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".header-coloraccent"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.box.open({
+            element: ".header-item-coloraccent",
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
+    func: function() {
+      header.render.coloraccent.size();
+    }
+  }, {
+    element: ".control-header-coloraccent-size-number",
+    path: "header.colorAccent.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-header-coloraccent-size-range",
+      path: "header.colorAccent.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      header.render.coloraccent.size();
+    }
+  }, {
+    element: ".control-header-coloraccent-size-default",
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".header-coloraccent"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.default("header.colorAccent.size");
+      header.render.coloraccent.size();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-coloraccent-newline",
+    path: "header.colorAccent.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-header-menu-style-box",
+    path: "header.menu.style",
+    type: "radio",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-menu-style-clear",
+    path: "header.menu.style",
+    type: "radio",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
+    element: ".control-header-menu-size-range",
+    path: "header.menu.size",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-header-menu-size-number",
+      path: "header.menu.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".control-menu-open"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".control-menu-open"),
         });
       }
     }, {
@@ -2031,11 +2640,11 @@ var control = (function() {
       }
     }],
     func: function() {
-      header.render.button.size();
+      header.render.menu.size();
     }
   }, {
-    element: ".control-header-button-size-number",
-    path: "header.button.size",
+    element: ".control-header-menu-size-number",
+    path: "header.menu.size",
     type: "number",
     valueConvert: ["float"],
     valueModify: {
@@ -2044,30 +2653,38 @@ var control = (function() {
       step: 10
     },
     mirrorElement: [{
-      element: ".control-header-button-size-range",
-      path: "header.button.size",
+      element: ".control-header-menu-size-range",
+      path: "header.menu.size",
       type: "range",
       valueConvert: ["float"]
     }],
     func: function() {
-      header.render.button.size();
+      header.render.menu.size();
     }
   }, {
-    element: ".control-header-button-size-default",
+    element: ".control-header-menu-size-default",
     type: "button",
     additionalEvents: [{
       event: "click",
       func: function() {
         edge.box.open({
-          element: ".control-menu-open",
+          element: helper.e(".control-menu-open"),
           delay: 500
         });
       }
     }],
     func: function() {
-      mod.default("header.button.size");
-      header.render.button.size();
-      render.update();
+      mod.default("header.menu.size");
+      header.render.menu.size();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-menu-newline",
+    path: "header.menu.newLine",
+    type: "checkbox",
+    func: function() {
+      render.class();
     }
   }, {
     element: ".control-header-color-show",
@@ -2178,7 +2795,8 @@ var control = (function() {
     func: function() {
       mod.default("header.color.opacity");
       header.render.opacity();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-radius",
@@ -2287,7 +2905,8 @@ var control = (function() {
     func: function() {
       mod.default("group.name.size");
       link.render.group.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-group-area-alignment-left",
@@ -2365,7 +2984,8 @@ var control = (function() {
       mod.default("group.border");
       link.render.group.border();
       render.class();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-border-top-range",
@@ -2408,7 +3028,8 @@ var control = (function() {
       mod.default("header.border.top");
       header.render.border();
       render.class();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-border-bottom-range",
@@ -2451,7 +3072,8 @@ var control = (function() {
       mod.default("header.border.bottom");
       header.render.border();
       render.class();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-header-position-sticky",
@@ -2553,7 +3175,8 @@ var control = (function() {
     func: function() {
       mod.default("link.area.width");
       link.render.area.width();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-area-width-match",
@@ -2575,7 +3198,8 @@ var control = (function() {
     func: function() {
       mod.default("link.area.width");
       link.render.area.width();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-area-alignment-left",
@@ -2726,7 +3350,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.size");
       link.render.item.size();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-alignment-topleft",
@@ -2843,7 +3468,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.letcon.letter.size");
       link.render.item.display.letter();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-letcon-icon-size-range",
@@ -2889,7 +3515,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.letcon.icon.size");
       link.render.item.display.icon();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-name-show",
@@ -2943,7 +3570,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.name.size");
       link.render.item.name();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-rotate-range",
@@ -2983,7 +3611,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.rotate");
       link.render.item.rotate();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-translate-x-range",
@@ -3029,7 +3658,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.translate.x");
       link.render.item.translate.x();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-translate-y-range",
@@ -3075,7 +3705,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.translate.y");
       link.render.item.translate.y();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-gutter-range",
@@ -3115,7 +3746,8 @@ var control = (function() {
     func: function() {
       mod.default("link.item.display.gutter");
       link.render.item.gutter();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-item-display-direction-horizontal",
@@ -3264,7 +3896,8 @@ var control = (function() {
       mod.default("link.item.border");
       render.class();
       link.render.item.border();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-link-style-block",
@@ -3371,7 +4004,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.display.name");
       theme.render.font.display.name();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-display-weight-range",
@@ -3396,7 +4030,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.display.weight");
       theme.render.font.display.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-display-weight-number",
@@ -3421,7 +4056,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.display.light();
       theme.render.font.display.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-display-regular",
@@ -3429,7 +4065,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.display.regular();
       theme.render.font.display.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-display-bold",
@@ -3437,7 +4074,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.display.bold();
       theme.render.font.display.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-display-style-normal",
@@ -3459,7 +4097,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.display.style");
       theme.render.font.display.style();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-name",
@@ -3474,7 +4113,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.ui.name");
       theme.render.font.ui.name();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-weight-range",
@@ -3499,7 +4139,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.ui.weight");
       theme.render.font.ui.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-weight-number",
@@ -3524,7 +4165,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.ui.light();
       theme.render.font.ui.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-regular",
@@ -3532,7 +4174,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.ui.regular();
       theme.render.font.ui.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-bold",
@@ -3540,7 +4183,8 @@ var control = (function() {
     func: function() {
       theme.mod.font.ui.bold();
       theme.render.font.ui.weight();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-font-ui-style-normal",
@@ -3562,73 +4206,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.font.ui.style");
       theme.render.font.ui.style();
-      render.update();
-    }
-  }, {
-    element: ".control-theme-color-rgb-color-quick",
-    path: "theme.color.rgb",
-    type: "color",
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-hsl-h-range",
-      path: "theme.color.hsl.h",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-number",
-      path: "theme.color.hsl.h",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-s-range",
-      path: "theme.color.hsl.s",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-s-number",
-      path: "theme.color.hsl.s",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-l-range",
-      path: "theme.color.hsl.l",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-l-number",
-      path: "theme.color.hsl.l",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-r-range",
-      path: "theme.color.rgb.r",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-number",
-      path: "theme.color.rgb.r",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-g-range",
-      path: "theme.color.rgb.g",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-g-number",
-      path: "theme.color.rgb.g",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-b-range",
-      path: "theme.color.rgb.b",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-b-number",
-      path: "theme.color.rgb.b",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.hsl();
-      theme.render.color.shade();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-color-rgb-color",
@@ -3769,7 +4348,8 @@ var control = (function() {
       mod.default("theme.color.rgb");
       theme.mod.color.hsl();
       theme.render.color.shade();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-color-hsl-h-range",
@@ -4463,7 +5043,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.color.contrast.light");
       theme.render.color.shade();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-color-contrast-dark-range",
@@ -4509,7 +5090,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.color.contrast.dark");
       theme.render.color.shade();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-accent-rgb-color",
@@ -4554,7 +5136,8 @@ var control = (function() {
       mod.default("theme.accent.rgb");
       theme.render.accent.color();
       link.groupAndItems();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-accent-random-active",
@@ -4666,7 +5249,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.radius");
       theme.render.radius();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-shadow-range",
@@ -4712,7 +5296,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.shadow");
       theme.render.shadow();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-shade-opacity-range",
@@ -4758,7 +5343,8 @@ var control = (function() {
     func: function() {
       mod.default("theme.shade.opacity");
       theme.render.shade.opacity();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-background-color-by-theme",
@@ -4894,7 +5480,8 @@ var control = (function() {
     func: function() {
       mod.default("background.image.opacity");
       background.render.opacity();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-background-image-grayscale-range",
@@ -4938,7 +5525,8 @@ var control = (function() {
     func: function() {
       mod.default("background.image.grayscale");
       background.render.grayscale();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-background-image-blur-range",
@@ -4978,7 +5566,8 @@ var control = (function() {
     func: function() {
       mod.default("background.image.blur");
       background.render.blur();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-background-image-accent-range",
@@ -5022,7 +5611,8 @@ var control = (function() {
     func: function() {
       mod.default("background.image.accent");
       background.render.accent();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-background-image-scale-range",
@@ -5066,7 +5656,8 @@ var control = (function() {
     func: function() {
       mod.default("background.image.scale");
       background.render.scale();
-      render.update();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-data-import",
@@ -5089,8 +5680,6 @@ var control = (function() {
     }
   }];
 
-  var mod = {};
-
   mod.default = function(path) {
     helper.setObject({
       object: state.get.current(),
@@ -5104,9 +5693,90 @@ var control = (function() {
 
   var bind = {};
 
-  bind.controls = function() {
-    var _timerInputupdate = null;
-    var eventType = {
+  bind.control = {
+    supportedElement: ["checkbox", "radio", "text", "number", "range", "color", "textarea"],
+    timer: {
+      inputUpdate: null
+    },
+    value: {
+      set: function(object) {
+        if (object.path) {
+          var newValue = bind.control.value.get[object.type](object);
+          if (object.valueModify) {
+            for (var key in object.valueModify) {
+              newValue = bind.control.value.modify[key](newValue, object);
+            };
+          };
+          if (object.valueConvert) {
+            object.valueConvert.forEach(function(arrayItem, index) {
+              newValue = bind.control.value.convert[arrayItem](newValue, object);
+            });
+          };
+          helper.setObject({
+            object: state.get.current(),
+            path: object.path,
+            newValue: newValue
+          });
+          console.log("state set", object.path, helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          }));
+        };
+      },
+      get: {
+        checkbox: function(object) {
+          return helper.e(object.element).checked;
+        },
+        radio: function(object) {
+          return helper.e(object.element).value;
+        },
+        text: function(object) {
+          return helper.e(object.element).value;
+        },
+        textarea: function(object) {
+          return helper.e(object.element).value;
+        },
+        number: function(object) {
+          return parseInt(helper.e(object.element).value, 10);
+        },
+        range: function(object) {
+          return parseInt(helper.e(object.element).value, 10);
+        },
+        color: function(object) {
+          return helper.convertColor.hex.rgb(helper.e(object.element).value);
+        }
+      },
+      convert: {
+        reverse: function(value, object) {
+          return parseInt(object.valueModify.max, 10) - value;
+        },
+        float: function(value, object) {
+          return value / 100;
+        },
+        hexTextString: function(value, object) {
+          return helper.convertColor.hex.rgb(value);
+        }
+      },
+      modify: {
+        min: function(value, object) {
+          if (isNaN(value) || value < object.valueModify.min) {
+            value = object.valueModify.min;
+          };
+          return value;
+        },
+        max: function(value, object) {
+          if (value > object.valueModify.max) {
+            value = object.valueModify.max;
+          };
+          return value;
+        },
+        step: function(value, object) {
+          value = Math.round(value / object.valueModify.step) * object.valueModify.step;
+          return value;
+        }
+      }
+    },
+    eventType: {
       a: "click",
       button: "click",
       checkbox: "change",
@@ -5117,113 +5787,19 @@ var control = (function() {
       range: "input",
       color: "change",
       file: "change"
-    };
-    var valueType = {
-      checkbox: function(object) {
-        return helper.e(object.element).checked;
-      },
-      radio: function(object) {
-        return helper.e(object.element).value;
-      },
-      text: function(object) {
-        return helper.e(object.element).value;
-      },
-      textarea: function(object) {
-        return helper.e(object.element).value;
-      },
-      number: function(object) {
-        var newValue = helper.e(object.element).value;
-        return parseInt(newValue, 10);
-      },
-      range: function(object) {
-        return parseInt(helper.e(object.element).value, 10);
-      },
-      color: function(object) {
-        return helper.convertColor.hex.rgb(helper.e(object.element).value);
-      }
-    };
-    var valueConvert = {
-      reverse: function(value, object) {
-        return parseInt(object.valueModify.max, 10) - value;
-      },
-      float: function(value, object) {
-        return value / 100;
-      },
-      hexTextString: function(value, object) {
-        return helper.convertColor.hex.rgb(value);
-      }
-    };
-    var valueModify = {
-      min: function(value, object) {
-        if (isNaN(value) || value < object.valueModify.min) {
-          value = object.valueModify.min;
-        };
-        return value;
-      },
-      max: function(value, object) {
-        if (value > object.valueModify.max) {
-          value = object.valueModify.max;
-        };
-        return value;
-      },
-      step: function(value, object) {
-        value = Math.round(value / object.valueModify.step) * object.valueModify.step;
-        return value;
-      }
-    };
-    var setValue = function(object) {
-      if (object.path) {
-        var newValue = valueType[object.type](object);
-        if (object.valueModify) {
-          for (var key in object.valueModify) {
-            newValue = valueModify[key](newValue, object);
+    },
+    action: function(object) {
+      if (object.element) {
+        helper.e(object.element).addEventListener(bind.control.eventType[object.type], function(event) {
+          if (bind.control.supportedElement.includes(object.type)) {
+            bind.control.value.set(object);
           };
-        };
-        if (object.valueConvert) {
-          object.valueConvert.forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object);
-          });
-        };
-        helper.setObject({
-          object: state.get.current(),
-          path: object.path,
-          newValue: newValue
-        });
-        // console.log("state set", object.path, helper.getObject({
-        //   object: state.get.current(),
-        //   path: object.path
-        // }));
+          if (object.func) {
+            object.func();
+          };
+          data.save();
+        }, false);
       };
-    };
-    var bindControl = function(object) {
-      var controlType = {
-        a: function(object, event) {
-          if (object.func) {
-            object.func();
-          };
-        },
-        button: function(object, event) {
-          if (object.func) {
-            object.func();
-          };
-        },
-        input: function(object, event) {
-          setValue(object);
-          if (object.func) {
-            object.func();
-          };
-        },
-        textarea: function(object, event) {
-          setValue(object);
-          if (object.func) {
-            object.func();
-          };
-        }
-      };
-      helper.e(object.element).addEventListener(eventType[object.type], function(event) {
-        controlType[helper.e(object.element).tagName.toLowerCase()](object, event);
-        data.save();
-      }, false);
       if (object.additionalEvents) {
         object.additionalEvents.forEach(function(arrayItem, index) {
           helper.e(object.element).addEventListener(arrayItem.event, function(event) {
@@ -5234,1102 +5810,1388 @@ var control = (function() {
       };
       if (object.mirrorElement) {
         object.mirrorElement.forEach(function(arrayItem, index) {
-          helper.e(object.element).addEventListener(eventType[object.type], function(event) {
-            render.update(arrayItem);
+          helper.e(object.element).addEventListener(bind.control.eventType[object.type], function(event) {
+            render.update.control.menu(arrayItem);
           }, false);
         });
       };
       if (object.valueModify) {
         object.mirrorElement.forEach(function(arrayItem, index) {
-          helper.e(object.element).addEventListener(eventType[object.type], function(event) {
+          helper.e(object.element).addEventListener(bind.control.eventType[object.type], function(event) {
             var _update = function() {
-              render.update(object);
+              render.update.control.menu(object);
             };
-            clearTimeout(_timerInputupdate);
-            _timerInputupdate = setTimeout(_update, 1000);
+            clearTimeout(bind.control.timer.inputUpdate);
+            bind.control.timer.inputUpdate = setTimeout(_update, 1000);
           }, false);
         });
       };
-    };
-    _allControl.forEach(function(arrayItem, index) {
-      bindControl(arrayItem);
-    });
+    },
+    header: function(object) {
+      if (object) {
+        if (helper.e(object.element)) {
+          bind.control.action(object);
+        };
+      } else {
+        mod.header.forEach(function(arrayItem, index) {
+          if (helper.e(arrayItem.element)) {
+            bind.control.action(arrayItem);
+          };
+        });
+      };
+    },
+    menu: function(object) {
+      if (object) {
+        if (helper.e(object.element)) {
+          bind.control.action(object);
+        };
+      } else {
+        mod.menu.forEach(function(arrayItem, index) {
+          if (helper.e(arrayItem.element)) {
+            bind.control.action(arrayItem);
+          };
+        });
+      };
+    }
   };
 
   var render = {};
 
   render.class = function() {
     var html = helper.e("html");
-    var _edit = function() {
-      helper.removeClass(html, "is-edit");
-      if (state.get.current().edit) {
-        helper.addClass(html, "is-edit");
-      };
+    var all = {
+      edit: [{
+        remove: [
+          "is-edit"
+        ],
+        condition: function() {
+          return state.get.current().edit;
+        },
+        name: "is-edit"
+      }],
+      layout: [{
+        remove: [
+          "is-layout-scrollpastend"
+        ],
+        condition: function() {
+          return state.get.current().layout.scrollPastEnd;
+        },
+        name: "is-layout-scrollpastend"
+      }, {
+        remove: [
+          "is-layout-alignment-topleft",
+          "is-layout-alignment-topcenter",
+          "is-layout-alignment-topright",
+          "is-layout-alignment-centerleft",
+          "is-layout-alignment-centercenter",
+          "is-layout-alignment-centerright",
+          "is-layout-alignment-bottomleft",
+          "is-layout-alignment-bottomcenter",
+          "is-layout-alignment-bottomright"
+        ],
+        name: "is-layout-alignment-" + state.get.current().layout.alignment
+      }, {
+        remove: [
+          "is-layout-order-headerlink",
+          "is-layout-order-linkheader"
+        ],
+        name: "is-layout-order-" + state.get.current().layout.order
+      }, {
+        remove: [
+          "is-layout-scrollbars-auto",
+          "is-layout-scrollbars-thin",
+          "is-layout-scrollbars-none"
+        ],
+        name: "is-layout-scrollbars-" + state.get.current().layout.scrollbars
+      }],
+      header: {
+        area: [{
+          remove: [
+            "is-header-area-alignment-left",
+            "is-header-area-alignment-center",
+            "is-header-area-alignment-right"
+          ],
+          name: "is-header-area-alignment-" + state.get.current().header.area.alignment
+        }],
+        item: [{
+          remove: [
+            "is-header-item-alignment-left",
+            "is-header-item-alignment-center",
+            "is-header-item-alignment-right"
+          ],
+          name: "is-header-item-alignment-" + state.get.current().header.item.alignment
+        }],
+        greeting: [{
+          remove: [
+            "is-header-item-newline-greeting"
+          ],
+          condition: function() {
+            return state.get.current().header.greeting.newLine;
+          },
+          name: "is-header-item-newline-greeting"
+        }],
+        clock: [{
+          remove: [
+            "is-header-item-newline-clock"
+          ],
+          condition: function() {
+            return state.get.current().header.clock.newLine;
+          },
+          name: "is-header-item-newline-clock"
+        }],
+        transitional: [{
+          remove: [
+            "is-header-item-newline-transitional"
+          ],
+          condition: function() {
+            return state.get.current().header.transitional.newLine;
+          },
+          name: "is-header-item-newline-transitional"
+        }],
+        date: [{
+          remove: [
+            "is-header-item-newline-date"
+          ],
+          condition: function() {
+            return state.get.current().header.date.newLine;
+          },
+          name: "is-header-item-newline-date"
+        }],
+        search: [{
+          remove: [
+            "is-header-search-text-alignment-left",
+            "is-header-search-text-alignment-center",
+            "is-header-search-text-alignment-right"
+          ],
+          condition: function() {
+            return state.get.current().header.search.show;
+          },
+          name: "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment
+        }, {
+          remove: [
+            "is-header-search-width-by-custom",
+            "is-header-search-width-by-auto"
+          ],
+          condition: function() {
+            return state.get.current().header.search.show;
+          },
+          name: "is-header-search-width-by-" + state.get.current().header.search.width.by
+        }, {
+          condition: function() {
+            return state.get.current().header.search.show;
+          },
+          name: "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment
+        }, {
+          remove: [
+            "is-header-item-newline-search"
+          ],
+          condition: function() {
+            return state.get.current().header.search.newLine;
+          },
+          name: "is-header-item-newline-search"
+        }],
+        editadd: [{
+          remove: [
+            "is-header-item-newline-editadd"
+          ],
+          condition: function() {
+            return state.get.current().header.editAdd.newLine;
+          },
+          name: "is-header-item-newline-editadd"
+        }],
+        coloraccent: [{
+          remove: [
+            "is-header-item-newline-coloraccent"
+          ],
+          condition: function() {
+            return state.get.current().header.colorAccent.newLine;
+          },
+          name: "is-header-item-newline-coloraccent"
+        }],
+        menu: [{
+          remove: [
+            "is-header-item-newline-menu"
+          ],
+          condition: function() {
+            return state.get.current().header.menu.newLine;
+          },
+          name: "is-header-item-newline-menu"
+        }],
+        color: [{
+          remove: [
+            "is-header-color-show"
+          ],
+          condition: function() {
+            return state.get.current().header.color.show;
+          },
+          name: "is-header-color-show"
+        }, {
+          remove: [
+            "is-header-color-style-scroll",
+            "is-header-color-style-always"
+          ],
+          condition: function() {
+            return state.get.current().header.color.show;
+          },
+          name: "is-header-color-style-" + state.get.current().header.color.style
+        }, {
+          remove: [
+            "is-header-color-by-theme",
+            "is-header-color-by-custom"
+          ],
+          condition: function() {
+            return state.get.current().header.color.show;
+          },
+          name: "is-header-color-by-" + state.get.current().header.color.by
+        }],
+        radius: [{
+          remove: [
+            "is-header-radius"
+          ],
+          condition: function() {
+            return (state.get.current().header.radius > 0);
+          },
+          name: "is-header-radius"
+        }],
+        border: [{
+          remove: [
+            "is-header-border-top"
+          ],
+          condition: function() {
+            return (state.get.current().header.border.top > 0);
+          },
+          name: "is-header-border-top"
+        }, {
+          remove: [
+            "is-header-border-bottom"
+          ],
+          condition: function() {
+            return (state.get.current().header.border.bottom > 0);
+          },
+          name: "is-header-border-bottom"
+        }],
+        position: [{
+          remove: [
+            "is-header-position-sticky",
+            "is-header-position-inline"
+          ],
+          name: "is-header-position-" + state.get.current().header.position
+        }]
+      },
+      group: {
+        area: [{
+          remove: [
+            "is-group-area-alignment-left",
+            "is-group-area-alignment-center",
+            "is-group-area-alignment-right"
+          ],
+          name: "is-group-area-alignment-" + state.get.current().group.area.alignment
+        }],
+        name: [{
+          remove: [
+            "is-group-name-show"
+          ],
+          condition: function() {
+            return state.get.current().group.name.show;
+          },
+          name: "is-group-name-show"
+        }],
+        order: [{
+          remove: [
+            "is-group-order-headerbody",
+            "is-group-order-bodyheader"
+          ],
+          name: "is-group-order-" + state.get.current().group.order
+        }],
+        border: [{
+          remove: [
+            "is-group-border"
+          ],
+          condition: function() {
+            return (state.get.current().group.border > 0);
+          },
+          name: "is-group-border"
+        }]
+      },
+      link: [{
+        remove: [
+          "is-link-show"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-show"
+      }, {
+        remove: [
+          "is-link-area-alignment-left",
+          "is-link-area-alignment-center",
+          "is-link-area-alignment-right"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-area-alignment-" + state.get.current().link.area.alignment
+      }, {
+        remove: [
+          "is-link-display-alignment-topleft",
+          "is-link-display-alignment-topcenter",
+          "is-link-display-alignment-topright",
+          "is-link-display-alignment-centerleft",
+          "is-link-display-alignment-centercenter",
+          "is-link-display-alignment-centerright",
+          "is-link-display-alignment-bottomleft",
+          "is-link-display-alignment-bottomcenter",
+          "is-link-display-alignment-bottomright"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-display-alignment-" + state.get.current().link.item.display.alignment
+      }, {
+        remove: [
+          "is-link-item-color-by-theme",
+          "is-link-item-color-by-custom"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-item-color-by-" + state.get.current().link.item.color.by
+      }, {
+        remove: [
+          "is-link-item-display-direction-horizontal",
+          "is-link-item-display-direction-vertical"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-item-display-direction-" + state.get.current().link.item.display.direction
+      }, {
+        remove: [
+          "is-link-item-display-order-letconname",
+          "is-link-item-display-order-nameletcon"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-item-display-order-" + state.get.current().link.item.display.order
+      }, {
+        remove: [
+          "is-link-item-display-name-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.display.name.show);
+        },
+        name: "is-link-item-display-name-show"
+      }, {
+        remove: [
+          "is-link-item-display-letcon-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.display.letcon.show);
+        },
+        name: "is-link-item-display-letcon-show"
+      }, {
+        remove: [
+          "is-link-style-list",
+          "is-link-style-block"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.show);
+        },
+        name: "is-link-style-" + state.get.current().link.style
+      }, {
+        remove: [
+          "is-link-orientation-top",
+          "is-link-orientation-bottom"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.show);
+        },
+        name: "is-link-orientation-" + state.get.current().link.orientation
+      }, {
+        remove: [
+          "is-link-item-url-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.url.show);
+        },
+        name: "is-link-item-url-show"
+      }, {
+        remove: [
+          "is-link-item-line-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.line.show);
+        },
+        name: "is-link-item-line-show"
+      }, {
+        remove: [
+          "is-link-item-shadow-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.shadow.show);
+        },
+        name: "is-link-item-shadow-show"
+      }, {
+        remove: [
+          "is-link-item-hoverscale-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.hoverScale.show);
+        },
+        name: "is-link-item-hoverscale-show"
+      }, {
+        remove: [
+          "is-link-item-border"
+        ],
+        condition: function() {
+          return (state.get.current().link.show && (state.get.current().link.item.border > 0));
+        },
+        name: "is-link-item-border"
+      }],
+      theme: [{
+        remove: [
+          "is-theme-style-dark",
+          "is-theme-style-light",
+        ],
+        name: "is-theme-style-" + state.get.current().theme.style
+      }, {
+        remove: [
+          "is-theme-custom-edit"
+        ],
+        condition: function() {
+          return state.get.current().theme.custom.edit;
+        },
+        name: "is-theme-custom-edit"
+      }, {
+        remove: [
+          "is-theme-radius"
+        ],
+        condition: function() {
+          return (state.get.current().theme.radius > 0);
+        },
+        name: "is-theme-radius"
+      }],
+      background: [{
+        remove: [
+          "is-background-image-show"
+        ],
+        condition: function() {
+          return state.get.current().background.image.show;
+        },
+        name: "is-background-image-show"
+      }, {
+        remove: [
+          "is-background-color-by-theme",
+          "is-background-color-by-custom"
+        ],
+        name: "is-background-color-by-" + state.get.current().background.color.by
+      }]
     };
-    var _menu = function() {
-      helper.addClass(html, "is-menu");
-    };
-    var _header = function() {
-      var _area = function() {
-        helper.removeClass(html, "is-header-area-alignment-left");
-        helper.removeClass(html, "is-header-area-alignment-center");
-        helper.removeClass(html, "is-header-area-alignment-right");
-        helper.addClass(html, "is-header-area-alignment-" + state.get.current().header.area.alignment);
-      };
-      var _item = function() {
-        helper.removeClass(html, "is-header-item-alignment-left");
-        helper.removeClass(html, "is-header-item-alignment-center");
-        helper.removeClass(html, "is-header-item-alignment-right");
-        helper.addClass(html, "is-header-item-alignment-" + state.get.current().header.item.alignment);
-      };
-      var _clock = function() {
-        if (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
-          helper.addClass(html, "is-header-clock-show");
+
+    var classCheck = function(array, debug) {
+      array.forEach(function(arrayItem, index) {
+        if ("remove" in arrayItem) {
+          arrayItem.remove.forEach(function(arrayItem, index) {
+            helper.removeClass(html, arrayItem);
+          });
+        };
+        if ("condition" in arrayItem) {
+          if (arrayItem.condition()) {
+            helper.addClass(html, arrayItem.name);
+          };
         } else {
-          helper.removeClass(html, "is-header-clock-show");
+          helper.addClass(html, arrayItem.name);
         };
-      };
-      var _date = function() {
-        if (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show) {
-          helper.addClass(html, "is-header-date-show");
-        } else {
-          helper.removeClass(html, "is-header-date-show");
-        };
-      };
-      var _search = function() {
-        helper.removeClass(html, "is-header-search-show");
-        helper.removeClass(html, "is-header-search-style-custom");
-        helper.removeClass(html, "is-header-search-style-auto");
-        helper.removeClass(html, "is-header-search-text-alignment-left");
-        helper.removeClass(html, "is-header-search-text-alignment-center");
-        helper.removeClass(html, "is-header-search-text-alignment-right");
-        if (state.get.current().header.search.show) {
-          helper.addClass(html, "is-header-search-show");
-          helper.addClass(html, "is-header-search-style-" + state.get.current().header.search.style);
-          helper.addClass(html, "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment);
-        };
-        helper.e(".control-header-search-engine-custom-name").value = state.get.current().header.search.engine.custom.name;
-        helper.e(".control-header-search-engine-custom-url").value = state.get.current().header.search.engine.custom.url;
-      };
-      var _button = function() {
-        if (state.get.current().header.button.editAdd.show) {
-          helper.addClass(html, "is-header-button-editadd-show");
-        } else {
-          helper.removeClass(html, "is-header-button-editadd-show");
-        };
-        if (state.get.current().header.button.colorAccent.show) {
-          helper.addClass(html, "is-header-button-coloraccent-show");
-        } else {
-          helper.removeClass(html, "is-header-button-coloraccent-show");
-        };
-      };
-      var _greeting = function() {
-        if (state.get.current().header.greeting.show) {
-          helper.addClass(html, "is-header-greeting-show");
-        } else {
-          helper.removeClass(html, "is-header-greeting-show");
-        };
-      };
-      var _transitional = function() {
-        if (state.get.current().header.transitional.show && (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show || state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) {
-          helper.addClass(html, "is-header-transitional-show");
-        } else {
-          helper.removeClass(html, "is-header-transitional-show");
-        };
-      };
-      var _color = function() {
-        helper.removeClass(html, "is-header-color-show");
-        helper.removeClass(html, "is-header-color-style-scroll");
-        helper.removeClass(html, "is-header-color-style-always");
-        helper.removeClass(html, "is-header-color-by-theme");
-        helper.removeClass(html, "is-header-color-by-custom");
-        if (state.get.current().header.color.show) {
-          helper.addClass(html, "is-header-color-show");
-          helper.addClass(html, "is-header-color-style-" + state.get.current().header.color.style);
-          helper.addClass(html, "is-header-color-by-" + state.get.current().header.color.by);
-        };
-      };
-      var _radius = function() {
-        helper.removeClass(html, "is-header-radius");
-        if (state.get.current().header.radius > 0) {
-          helper.addClass(html, "is-header-radius");
-        };
-      };
-      var _border = function() {
-        helper.removeClass(html, "is-header-border-top");
-        helper.removeClass(html, "is-header-border-bottom");
-        if (state.get.current().header.border.top > 0) {
-          helper.addClass(html, "is-header-border-top");
-        };
-        if (state.get.current().header.border.bottom > 0) {
-          helper.addClass(html, "is-header-border-bottom");
-        };
-      };
-      var _position = function() {
-        helper.removeClass(html, "is-header-position-sticky");
-        helper.removeClass(html, "is-header-position-inline");
-        helper.addClass(html, "is-header-position-" + state.get.current().header.position);
-      };
-      _area();
-      _item();
-      _clock();
-      _date();
-      _search();
-      _button();
-      _color();
-      _radius();
-      _border();
-      _greeting();
-      _position();
-      _transitional();
+      });
     };
-    var _group = function() {
-      var _area = function() {
-        helper.removeClass(html, "is-group-area-alignment-left");
-        helper.removeClass(html, "is-group-area-alignment-center");
-        helper.removeClass(html, "is-group-area-alignment-right");
-        helper.addClass(html, "is-group-area-alignment-" + state.get.current().group.area.alignment);
-      };
-      var _name = function() {
-        if (state.get.current().group.name.show) {
-          helper.addClass(html, "is-group-name-show");
-        } else {
-          helper.removeClass(html, "is-group-name-show");
-        };
-      };
-      var _order = function() {
-        helper.removeClass(html, "is-group-order-headerbody");
-        helper.removeClass(html, "is-group-order-bodyheader");
-        helper.addClass(html, "is-group-order-" + state.get.current().group.order);
-      };
-      var _border = function() {
-        helper.removeClass(html, "is-group-border");
-        if (state.get.current().group.border > 0) {
-          helper.addClass(html, "is-group-border");
-        };
-      };
-      _area();
-      _name();
-      _order();
-      _border();
-    };
-    var _link = function() {
-      helper.removeClass(html, "is-link-show");
-      helper.removeClass(html, "is-link-area-alignment-left");
-      helper.removeClass(html, "is-link-area-alignment-center");
-      helper.removeClass(html, "is-link-area-alignment-right");
-      helper.removeClass(html, "is-link-display-alignment-topleft");
-      helper.removeClass(html, "is-link-display-alignment-topcenter");
-      helper.removeClass(html, "is-link-display-alignment-topright");
-      helper.removeClass(html, "is-link-display-alignment-centerleft");
-      helper.removeClass(html, "is-link-display-alignment-centercenter");
-      helper.removeClass(html, "is-link-display-alignment-centerright");
-      helper.removeClass(html, "is-link-display-alignment-bottomleft");
-      helper.removeClass(html, "is-link-display-alignment-bottomcenter");
-      helper.removeClass(html, "is-link-display-alignment-bottomright");
-      helper.removeClass(html, "is-link-item-color-by-theme");
-      helper.removeClass(html, "is-link-item-color-by-custom");
-      helper.removeClass(html, "is-link-item-display-direction-horizontal");
-      helper.removeClass(html, "is-link-item-display-direction-vertical");
-      helper.removeClass(html, "is-link-item-display-order-letconname");
-      helper.removeClass(html, "is-link-item-display-order-nameletcon");
-      helper.removeClass(html, "is-link-item-display-name-show");
-      helper.removeClass(html, "is-link-item-display-letcon-show");
-      helper.removeClass(html, "is-link-item-url-show");
-      helper.removeClass(html, "is-link-item-line-show");
-      helper.removeClass(html, "is-link-item-shadow-show");
-      helper.removeClass(html, "is-link-item-hoverscale-show");
-      helper.removeClass(html, "is-link-item-border");
-      helper.removeClass(html, "is-link-style-list");
-      helper.removeClass(html, "is-link-style-block");
-      helper.removeClass(html, "is-link-orientation-top");
-      helper.removeClass(html, "is-link-orientation-bottom");
-      if (state.get.current().link.show) {
-        helper.addClass(html, "is-link-show");
-        helper.addClass(html, "is-link-area-alignment-" + state.get.current().link.area.alignment);
-        helper.addClass(html, "is-link-item-color-by-" + state.get.current().link.item.color.by);
-        helper.addClass(html, "is-link-item-display-direction-" + state.get.current().link.item.display.direction);
-        helper.addClass(html, "is-link-item-display-order-" + state.get.current().link.item.display.order);
-        helper.addClass(html, "is-link-display-alignment-" + state.get.current().link.item.display.alignment);
-        helper.addClass(html, "is-link-style-" + state.get.current().link.style);
-        helper.addClass(html, "is-link-orientation-" + state.get.current().link.orientation);
-        if (state.get.current().link.item.display.letcon.show) {
-          helper.addClass(html, "is-link-item-display-letcon-show");
-        };
-        if (state.get.current().link.item.display.name.show) {
-          helper.addClass(html, "is-link-item-display-name-show");
-        };
-        if (state.get.current().link.item.url.show) {
-          helper.addClass(html, "is-link-item-url-show");
-        };
-        if (state.get.current().link.item.line.show) {
-          helper.addClass(html, "is-link-item-line-show");
-        };
-        if (state.get.current().link.item.shadow.show) {
-          helper.addClass(html, "is-link-item-shadow-show");
-        };
-        if (state.get.current().link.item.hoverScale.show) {
-          helper.addClass(html, "is-link-item-hoverscale-show");
-        };
-        if (state.get.current().link.item.border > 0) {
-          helper.addClass(html, "is-link-item-border");
-        };
-      };
-    };
-    var _theme = function() {
-      helper.removeClass(html, "is-theme-custom-edit");
-      helper.removeClass(html, "is-theme-radius");
-      if (state.get.current().theme.custom.edit) {
-        helper.addClass(html, "is-theme-custom-edit");
-      };
-      if (state.get.current().theme.radius > 0) {
-        helper.addClass(html, "is-theme-radius");
-      };
-    };
-    var _layout = function() {
-      helper.removeClass(html, "is-layout-scrollpastend");
-      helper.removeClass(html, "is-layout-alignment-topleft");
-      helper.removeClass(html, "is-layout-alignment-topcenter");
-      helper.removeClass(html, "is-layout-alignment-topright");
-      helper.removeClass(html, "is-layout-alignment-centerleft");
-      helper.removeClass(html, "is-layout-alignment-centercenter");
-      helper.removeClass(html, "is-layout-alignment-centerright");
-      helper.removeClass(html, "is-layout-alignment-bottomleft");
-      helper.removeClass(html, "is-layout-alignment-bottomcenter");
-      helper.removeClass(html, "is-layout-alignment-bottomright");
-      helper.removeClass(html, "is-layout-order-headerlink");
-      helper.removeClass(html, "is-layout-order-linkheader");
-      helper.removeClass(html, "is-layout-scrollbars-auto");
-      helper.removeClass(html, "is-layout-scrollbars-thin");
-      helper.removeClass(html, "is-layout-scrollbars-none");
-      helper.addClass(html, "is-layout-alignment-" + state.get.current().layout.alignment);
-      helper.addClass(html, "is-layout-order-" + state.get.current().layout.order);
-      helper.addClass(html, "is-layout-scrollbars-" + state.get.current().layout.scrollbars);
-      if (state.get.current().layout.scrollPastEnd) {
-        helper.addClass(html, "is-layout-scrollpastend");
-      };
-    };
-    var _background = function() {
-      helper.removeClass(html, "is-background-color-by-theme");
-      helper.removeClass(html, "is-background-color-by-custom");
-      helper.addClass(html, "is-background-color-by-" + state.get.current().background.color.by);
-      if (state.get.current().background.image.show) {
-        helper.addClass(html, "is-background-image-show");
-      } else {
-        helper.removeClass(html, "is-background-image-show");
-      };
-    };
-    _edit();
-    _menu();
-    _header();
-    _group();
-    _link();
-    _theme();
-    _layout();
-    _background();
+
+    classCheck(all.edit, true);
+    classCheck(all.layout);
+    classCheck(all.header.area);
+    classCheck(all.header.item);
+    classCheck(all.header.greeting);
+    classCheck(all.header.clock);
+    classCheck(all.header.transitional);
+    classCheck(all.header.date);
+    classCheck(all.header.search);
+    classCheck(all.header.editadd);
+    classCheck(all.header.coloraccent);
+    classCheck(all.header.menu);
+    classCheck(all.header.color);
+    classCheck(all.header.radius);
+    classCheck(all.header.border);
+    classCheck(all.header.position);
+    classCheck(all.group.area);
+    classCheck(all.group.name);
+    classCheck(all.group.order);
+    classCheck(all.group.border);
+    classCheck(all.link);
+    classCheck(all.theme);
+    classCheck(all.background);
   };
 
   render.dependents = function() {
-    var _disable = {
-      input: function(input, disabled) {
-        if (disabled) {
-          helper.e(input).disabled = true;
-        } else {
-          helper.e(input).disabled = false;
+    var disable = {
+      input: function(input, state) {
+        if (input) {
+          if (state) {
+            input.disabled = false;
+          } else {
+            input.disabled = true;
+          };
         };
       },
-      element: function(className, disabled) {
-        var allHelper = helper.eA(className);
-        if (disabled) {
-          allHelper.forEach(function(arrayItem, index) {
-            helper.addClass(arrayItem, "disabled");
-          });
-        } else {
-          allHelper.forEach(function(arrayItem, index) {
-            helper.removeClass(arrayItem, "disabled");
-          });
+      element: function(element, state) {
+        if (element) {
+          if (state) {
+            helper.removeClass(element, "disabled");
+          } else {
+            helper.addClass(element, "disabled");
+          };
         };
       }
     };
-    var _header = function() {
-      var _clock = function() {
-        var activeCount = 0;
-        var toCheck = [state.get.current().header.clock.seconds.show, state.get.current().header.clock.minutes.show, state.get.current().header.clock.hours.show];
-        toCheck.forEach(function(arrayItem, index) {
-          if (arrayItem == true) {
-            activeCount++;
-          };
+    var all = {
+      edit: [{
+        condition: function() {
+          return (bookmarks.get().length > 0);
+        },
+        dependents: function() {
+          return [
+            "control-edit"
+          ]
+        }
+      }],
+      header: {
+        greeting: [{
+          condition: function() {
+            return state.get.current().header.greeting.show;
+          },
+          dependents: function() {
+            return [
+              "[for=control-header-greeting-name]",
+              ".control-header-greeting-name",
+              ".control-header-greeting-type-good",
+              ".control-header-greeting-type-hello",
+              ".control-header-greeting-type-hi",
+              "[for=control-header-greeting-size-range]",
+              ".control-header-greeting-size-range",
+              ".control-header-greeting-size-number",
+              ".control-header-greeting-size-default",
+              ".control-header-greeting-newline",
+              ".control-header-greeting-newline-helper"
+            ]
+          }
+        }],
+        clock: [{
+          condition: function() {
+            var activeCount = 0;
+            var toCheck = [state.get.current().header.clock.seconds.show, state.get.current().header.clock.minutes.show, state.get.current().header.clock.hours.show];
+            toCheck.forEach(function(arrayItem, index) {
+              if (arrayItem == true) {
+                activeCount++;
+              };
+            });
+            return (activeCount >= 2 && (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show));
+          },
+          dependents: function() {
+            return [
+              ".control-header-clock-separator-show"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show);
+          },
+          dependents: function() {
+            return [
+              ".control-header-clock-hour24-show",
+              ".control-header-clock-meridiem-show"
+            ];
+          }
+        }, {
+          condition: function() {
+            return ((state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) && !state.get.current().header.clock.hour24.show);
+          },
+          dependents: function() {
+            return [
+              ".control-header-clock-meridiem-show"
+            ];
+          }
+        }, {
+          condition: function() {
+            return state.get.current().header.clock.hours.show;
+          },
+          dependents: function() {
+            return [
+              ".control-header-clock-hours-display-number",
+              ".control-header-clock-hours-display-word"
+            ];
+          }
+        }, {
+          condition: function() {
+            return state.get.current().header.clock.minutes.show;
+          },
+          dependents: function() {
+            return [
+              ".control-header-clock-minutes-display-number",
+              ".control-header-clock-minutes-display-word"
+            ];
+          }
+        }, {
+          condition: function() {
+            return state.get.current().header.clock.seconds.show;
+          },
+          dependents: function() {
+            return [
+              ".control-header-clock-seconds-display-number",
+              ".control-header-clock-seconds-display-word"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show);
+          },
+          dependents: function() {
+            return [
+              "[for=control-header-clock-size-range]",
+              ".control-header-clock-size-range",
+              ".control-header-clock-size-number",
+              ".control-header-clock-size-default",
+              ".control-header-clock-newline",
+              ".control-header-clock-newline-helper"
+            ];
+          }
+        }],
+        transitional: [{
+          condition: function() {
+            return (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show || state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show);
+          },
+          dependents: function() {
+            return [
+              ".control-header-transitional-show",
+              ".control-header-transitional-show-helper"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.transitional.show && ((state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show || state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)));
+          },
+          dependents: function() {
+            return [
+              ".control-header-transitional-type-timeanddate",
+              ".control-header-transitional-type-its",
+              "[for=control-header-transitional-size-range]",
+              ".control-header-transitional-size-range",
+              ".control-header-transitional-size-number",
+              ".control-header-transitional-size-default",
+              '.control-header-transitional-newline',
+              '.control-header-transitional-newline-helper'
+            ];
+          }
+        }],
+        date: [{
+          condition: function() {
+            var activeCount = 0;
+            var toCheck = [state.get.current().header.date.day.show, state.get.current().header.date.date.show, state.get.current().header.date.month.show, state.get.current().header.date.year.show];
+            toCheck.forEach(function(arrayItem, index) {
+              if (arrayItem == true) {
+                activeCount++;
+              };
+            });
+            return (activeCount >= 2 && (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show));
+          },
+          dependents: function() {
+            return [
+              ".control-header-date-separator-show"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.date.date.show && state.get.current().header.date.month.show);
+          },
+          dependents: function() {
+            return [
+              ".control-header-date-format-label",
+              ".control-header-date-format-datemonth",
+              ".control-header-date-format-monthdate"
+            ];
+          }
+        }, {
+          condition: function() {
+            return state.get.current().header.date.day.show;
+          },
+          dependents: function() {
+            return [
+              ".control-header-date-day-display-number",
+              ".control-header-date-day-display-word"
+            ];
+          }
+        }, {
+          condition: function() {
+            return state.get.current().header.date.date.show;
+          },
+          dependents: function() {
+            return [
+              ".control-header-date-date-display-number",
+              ".control-header-date-date-display-word",
+              ".control-header-date-date-ordinal",
+              ".control-header-date-date-ordinal-helper"
+            ];
+          }
+        }, {
+          condition: function() {
+            return state.get.current().header.date.month.show;
+          },
+          dependents: function() {
+            return [
+              ".control-header-date-month-display-number",
+              ".control-header-date-month-display-word"
+            ];
+          }
+        }, {
+          condition: function() {
+            return state.get.current().header.date.year.show;
+          },
+          dependents: function() {
+            return [".control-header-date-year-display-number",
+              ".control-header-date-year-display-word"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.date.day.show && state.get.current().header.date.day.display == "number");
+          },
+          dependents: function() {
+            return [
+              ".control-header-date-day-week-start-label",
+              ".control-header-date-day-week-start-monday",
+              ".control-header-date-day-week-start-sunday",
+              ".control-header-date-day-week-start-helper"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.date.day.show && state.get.current().header.date.day.display == "word");
+          },
+          dependents: function() {
+            return [
+              ".control-header-date-day-length-label",
+              ".control-header-date-day-length-long",
+              ".control-header-date-day-length-short"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.date.month.show && state.get.current().header.date.month.display == "word");
+          },
+          dependents: function() {
+            return [
+              ".control-header-date-month-length-label",
+              ".control-header-date-month-length-long",
+              ".control-header-date-month-length-short"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.date.month.show && state.get.current().header.date.month.display == "number");
+          },
+          dependents: function() {
+            return [
+              ".control-header-date-month-ordinal",
+              ".control-header-date-month-ordinal-helper"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show);
+          },
+          dependents: function() {
+            return [
+              "[for=control-header-date-size-range]",
+              ".control-header-date-size-range",
+              ".control-header-date-size-number",
+              ".control-header-date-size-default",
+              ".control-header-date-newline",
+              ".control-header-date-newline-helper"
+            ];
+          }
+        }],
+        search: [{
+          condition: function() {
+            return state.get.current().header.search.show;
+          },
+          dependents: function() {
+            return [
+              ".control-header-search-width-by-label",
+              ".control-header-search-width-by-auto",
+              ".control-header-search-width-by-auto-helper",
+              ".control-header-search-width-by-custom",
+              ".control-header-search-width-by-custom-helper",
+              ".control-header-search-width-size-range",
+              ".control-header-search-width-size-number",
+              ".control-header-search-width-size-default",
+              ".control-header-search-focus",
+              ".control-header-search-focus-helper",
+              ".control-header-search-engine-label",
+              ".control-header-search-engine-google",
+              ".control-header-search-engine-duckduckgo",
+              ".control-header-search-engine-youtube",
+              ".control-header-search-engine-giphy",
+              ".control-header-search-engine-bing",
+              ".control-header-search-engine-custom",
+              ".control-header-search-text-alignment-grid",
+              ".control-header-search-text-alignment-label",
+              ".control-header-search-text-alignment-left",
+              ".control-header-search-text-alignment-center",
+              ".control-header-search-text-alignment-right",
+              "[for=control-header-search-size-range]",
+              ".control-header-search-size-range",
+              ".control-header-search-size-number",
+              ".control-header-search-size-default",
+              ".control-header-search-size-helper",
+              ".control-header-search-newline",
+              ".control-header-search-newline-helper"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.search.show && state.get.current().header.search.engine.selected === "custom");
+          },
+          dependents: function() {
+            return [
+              "[for=control-header-search-engine-custom-name]",
+              ".control-header-search-engine-custom-name",
+              "[for=control-header-search-engine-custom-url]",
+              ".control-header-search-engine-custom-url",
+              ".control-header-search-engine-custom-helper"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.search.show && state.get.current().header.search.width.by === "custom");
+          },
+          dependents: function() {
+            return [
+              ".control-header-search-width-size-range",
+              ".control-header-search-width-size-number",
+              ".control-header-search-width-size-default"
+            ];
+          }
+        }],
+        editAdd: [{
+          condition: function() {
+            return state.get.current().header.editAdd.show;
+          },
+          dependents: function() {
+            return [
+              ".control-header-editadd-show-helper",
+              ".control-header-editadd-style-label",
+              ".control-header-editadd-style-box",
+              ".control-header-editadd-style-clear",
+              "[for=control-header-editadd-size-range]",
+              ".control-header-editadd-size-range",
+              ".control-header-editadd-size-number",
+              ".control-header-editadd-size-default",
+              ".control-header-editadd-newline",
+              ".control-header-editadd-newline-helper"
+            ];
+          }
+        }],
+        colorAccent: [{
+          condition: function() {
+            return state.get.current().header.colorAccent.show;
+          },
+          dependents: function() {
+            return [
+              ".control-header-coloraccent-show-helper",
+              ".control-header-coloraccent-dot-show",
+              ".control-header-coloraccent-style-label",
+              ".control-header-coloraccent-style-box",
+              ".control-header-coloraccent-style-clear",
+              "[for=control-header-coloraccent-size-range]",
+              ".control-header-coloraccent-size-range",
+              ".control-header-coloraccent-size-number",
+              ".control-header-coloraccent-size-default",
+              ".control-header-coloraccent-newline",
+              ".control-header-coloraccent-newline-helper"
+            ];
+          }
+        }],
+        menu: [{
+          condition: function() {
+            return state.get.current().header.menu.show;
+          },
+          dependents: function() {
+            return [
+              "[for=control-header-menu-style-label]",
+              ".control-header-menu-style-box",
+              ".control-header-menu-style-clear",
+              "[for=control-header-menu-size-range]",
+              ".control-header-menu-size-range",
+              ".control-header-menu-size-number",
+              ".control-header-menu-size-default",
+              ".control-header-menu-newline",
+              ".control-header-menu-newline-helper"
+            ];
+          }
+        }],
+        color: [{
+          condition: function() {
+            return state.get.current().header.color.show;
+          },
+          dependents: function() {
+            return [
+              ".control-header-color-style-always",
+              ".control-header-color-style-always-helper",
+              ".control-header-color-style-scroll",
+              ".control-header-color-style-scroll-helper",
+              ".control-header-color-by-theme",
+              ".control-header-color-by-theme-helper",
+              ".control-header-color-by-custom",
+              ".control-header-color-by-custom-helper",
+              ".control-header-color-rgb-range",
+              ".control-header-color-rgb-text",
+              "[for=control-header-color-opacity-range]",
+              ".control-header-color-opacity-range",
+              ".control-header-color-opacity-number",
+              ".control-header-color-opacity-default",
+              ".control-header-radius",
+              ".control-header-radius-helper"
+            ];
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.color.show && state.get.current().header.color.by == "custom");
+          },
+          dependents: function() {
+            return [
+              ".control-header-color-rgb-range",
+              ".control-header-color-rgb-text"
+            ];
+          }
+        }]
+      },
+      group: [{
+        condition: function() {
+          return state.get.current().group.name.show;
+        },
+        dependents: function() {
+          return [
+            "[for=control-group-name-size-range]",
+            ".control-group-name-size-range",
+            ".control-group-name-size-number",
+            ".control-group-name-size-default"
+          ];
+        }
+      }],
+      link: [{
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        dependents: function() {
+          return [
+            ".control-layout-order-headerlink",
+            ".control-layout-order-linkheader",
+            ".control-layout-order-helper",
+            "[for=control-link-area-width-range]",
+            ".control-link-area-width-range",
+            ".control-link-area-width-number",
+            ".control-link-area-width-default",
+            ".control-link-area-width-match",
+            ".control-link-area-width-helper",
+            ".control-link-area-alignment-grid",
+            ".control-link-area-alignment-label",
+            ".control-link-area-alignment-left",
+            ".control-link-area-alignment-center",
+            ".control-link-area-alignment-right",
+            ".control-link-area-alignment-helper",
+            "[for=control-link-item-size-range]",
+            ".control-link-item-size-range",
+            ".control-link-item-size-number",
+            ".control-link-item-size-default",
+            ".control-link-item-display-letcon-show",
+            ".control-link-item-display-name-show",
+            ".control-link-item-url-show",
+            ".control-link-item-line-show",
+            ".control-link-item-shadow-show",
+            ".control-link-item-shadow-show-helper",
+            ".control-link-item-hoverscale",
+            ".control-link-newtab",
+            ".control-link-item-color-by-theme",
+            ".control-link-item-color-by-theme-helper",
+            ".control-link-item-color-by-custom",
+            ".control-link-item-color-by-custom-helper",
+            "[for=control-link-item-border-range]",
+            ".control-link-item-border-range",
+            ".control-link-item-border-number",
+            ".control-link-item-border-default",
+            ".control-link-style-block",
+            ".control-link-style-block-helper",
+            ".control-link-style-list",
+            ".control-link-style-list-helper",
+            ".control-link-orientation-top",
+            ".control-link-orientation-bottom",
+            ".control-link-orientation-helper",
+            ".control-link-sort-name",
+            ".control-link-sort-letter",
+            ".control-link-sort-icon",
+            ".control-link-accent-clear",
+            ".control-link-accent-set",
+            ".control-link-accent-set-helper"
+          ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.display.letcon.show);
+        },
+        dependents: function() {
+          return [
+            "[for=control-link-item-display-letcon-letter-size-range]",
+            ".control-link-item-display-letcon-letter-size-range",
+            ".control-link-item-display-letcon-letter-size-number",
+            ".control-link-item-display-letcon-letter-size-default",
+            "[for=control-link-item-display-letcon-icon-size-range]",
+            ".control-link-item-display-letcon-icon-size-range",
+            ".control-link-item-display-letcon-icon-size-number",
+            ".control-link-item-display-letcon-icon-size-default"
+          ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.display.name.show);
+        },
+        dependents: function() {
+          return [
+            "[for=control-link-item-display-name-size-range]",
+            ".control-link-item-display-name-size-range",
+            ".control-link-item-display-name-size-number",
+            ".control-link-item-display-name-size-default"
+          ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().link.show && (state.get.current().link.item.display.letcon.show || state.get.current().link.item.display.name.show));
+        },
+        dependents: function() {
+          return [
+            ".control-link-item-display-alignment-grid",
+            ".control-link-item-display-alignment-label",
+            ".control-link-item-display-alignment-topleft",
+            ".control-link-item-display-alignment-topcenter",
+            ".control-link-item-display-alignment-topright",
+            ".control-link-item-display-alignment-centerleft",
+            ".control-link-item-display-alignment-centercenter",
+            ".control-link-item-display-alignment-centerright",
+            ".control-link-item-display-alignment-bottomleft",
+            ".control-link-item-display-alignment-bottomcenter",
+            ".control-link-item-display-alignment-bottomright",
+            "[for=control-link-item-display-rotate-range]",
+            ".control-link-item-display-rotate-range",
+            ".control-link-item-display-rotate-number",
+            ".control-link-item-display-rotate-default",
+            "[for=control-link-item-display-translate-x-range]",
+            ".control-link-item-display-translate-x-range",
+            ".control-link-item-display-translate-x-number",
+            ".control-link-item-display-translate-x-default",
+            "[for=control-link-item-display-translate-y-range]",
+            ".control-link-item-display-translate-y-range",
+            ".control-link-item-display-translate-y-number",
+            ".control-link-item-display-translate-y-default"
+          ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().link.show && state.get.current().link.item.display.letcon.show && state.get.current().link.item.display.name.show);
+        },
+        dependents: function() {
+          return [
+            ".control-link-item-display-direction-horizontal",
+            ".control-link-item-display-direction-vertical",
+            ".control-link-item-display-order-letconname",
+            ".control-link-item-display-order-nameletcon",
+            ".control-link-item-display-direction-helper",
+            ".control-link-item-display-order-helper",
+            "[for=control-link-item-display-gutter-range]",
+            ".control-link-item-display-gutter-range",
+            ".control-link-item-display-gutter-number",
+            ".control-link-item-display-gutter-default"
+          ];
+        }
+      }, {
+        condition: function() {
+          return state.get.current().link.item.color.by == "custom";
+        },
+        dependents: function() {
+          return [
+            ".control-link-item-color-rgb-range",
+            ".control-link-item-color-rgb-text"
+          ];
+        }
+      }],
+      theme: [{
+        condition: function() {
+          return (state.get.current().theme.custom.all.length > 0);
+        },
+        dependents: function() {
+          return [
+            ".control-theme-custom-edit"
+          ];
+        }
+      }, {
+        condition: function() {
+          return state.get.current().theme.accent.random.active;
+        },
+        dependents: function() {
+          return [
+            ".control-theme-accent-random-style-any",
+            ".control-theme-accent-random-style-light",
+            ".control-theme-accent-random-style-dark",
+            ".control-theme-accent-random-style-pastel",
+            ".control-theme-accent-random-style-saturated",
+            ".control-theme-accent-randomise"
+          ];
+        }
+      }],
+      background: [{
+        condition: function() {
+          return state.get.current().background.image.show;
+        },
+        dependents: function() {
+          return [
+            ".control-background-image-from-file",
+            ".control-background-image-from-url",
+            "[for=control-background-image-opacity-range]",
+            ".control-background-image-opacity-range",
+            ".control-background-image-opacity-number",
+            ".control-background-image-opacity-default",
+            "[for=control-background-image-blur-range]",
+            ".control-background-image-blur-range",
+            ".control-background-image-blur-number",
+            ".control-background-image-blur-default",
+            "[for=control-background-image-grayscale-range]",
+            ".control-background-image-grayscale-range",
+            ".control-background-image-grayscale-number",
+            ".control-background-image-grayscale-default",
+            "[for=control-background-image-accent-range]",
+            ".control-background-image-accent-range",
+            ".control-background-image-accent-number",
+            ".control-background-image-accent-default",
+            "[for=control-background-image-scale-range]",
+            ".control-background-image-scale-range",
+            ".control-background-image-scale-number",
+            ".control-background-image-scale-default"
+          ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().background.image.show && state.get.current().background.image.from == "file");
+        },
+        dependents: function() {
+          return [
+            ".control-background-image-file-feedback",
+            ".control-background-image-file",
+            ".control-background-image-file-clear",
+            ".control-background-image-file-helper"
+          ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().background.image.show && state.get.current().background.image.from == "url");
+        },
+        dependents: function() {
+          return [
+            ".control-background-image-url",
+            ".control-background-image-url-helper"
+          ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().background.color.by == "custom");
+        },
+        dependents: function() {
+          return [
+            ".control-background-color-rgb-range",
+            ".control-background-color-rgb-text"
+          ];
+        }
+      }]
+    };
+
+    var disableCheck = function(array) {
+      array.forEach(function(arrayItem, index) {
+        var condition = arrayItem.condition();
+        arrayItem.dependents().forEach(function(arrayItem, index) {
+          var element = helper.eA(arrayItem);
+          element.forEach(function(arrayItem, index) {
+            if (arrayItem.tagName.toLowerCase() == "input") {
+              disable.input(arrayItem, condition);
+            } else {
+              disable.element(arrayItem, condition);
+            };
+          });
+
         });
-        if (activeCount >= 2 && (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) {
-          _disable.input(".control-header-clock-separator-show", false);
-        } else {
-          _disable.input(".control-header-clock-separator-show", true);
-        };
-        if (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
-          _disable.input(".control-header-clock-hour24-show", false);
-          _disable.input(".control-header-clock-meridiem-show", false);
-        } else {
-          _disable.input(".control-header-clock-hour24-show", true);
-          _disable.input(".control-header-clock-meridiem-show", true);
-        };
-        if ((state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) && !state.get.current().header.clock.hour24.show) {
-          _disable.input(".control-header-clock-meridiem-show", false);
-        } else {
-          _disable.input(".control-header-clock-meridiem-show", true);
-        };
-        if (state.get.current().header.clock.hours.show) {
-          _disable.input(".control-header-clock-hours-display-number", false);
-          _disable.input(".control-header-clock-hours-display-word", false);
-        } else {
-          _disable.input(".control-header-clock-hours-display-number", true);
-          _disable.input(".control-header-clock-hours-display-word", true);
-        };
-        if (state.get.current().header.clock.minutes.show) {
-          _disable.input(".control-header-clock-minutes-display-number", false);
-          _disable.input(".control-header-clock-minutes-display-word", false);
-        } else {
-          _disable.input(".control-header-clock-minutes-display-number", true);
-          _disable.input(".control-header-clock-minutes-display-word", true);
-        };
-        if (state.get.current().header.clock.seconds.show) {
-          _disable.input(".control-header-clock-seconds-display-number", false);
-          _disable.input(".control-header-clock-seconds-display-word", false);
-        } else {
-          _disable.input(".control-header-clock-seconds-display-number", true);
-          _disable.input(".control-header-clock-seconds-display-word", true);
-        };
-        if (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
-          _disable.element("[for=control-header-clock-size-range]", false);
-          _disable.input(".control-header-clock-size-range", false);
-          _disable.input(".control-header-clock-size-number", false);
-          _disable.input(".control-header-clock-size-default", false);
-        } else {
-          _disable.element("[for=control-header-clock-size-range]", true);
-          _disable.input(".control-header-clock-size-range", true);
-          _disable.input(".control-header-clock-size-number", true);
-          _disable.input(".control-header-clock-size-default", true);
-        };
-      };
-      var _date = function() {
-        var activeCount = 0;
-        var toCheck = [state.get.current().header.date.day.show, state.get.current().header.date.date.show, state.get.current().header.date.month.show, state.get.current().header.date.year.show];
-        toCheck.forEach(function(arrayItem, index) {
-          if (arrayItem == true) {
-            activeCount++;
-          };
-        });
-        if (activeCount >= 2 && (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show)) {
-          _disable.input(".control-header-date-separator-show", false);
-        } else {
-          _disable.input(".control-header-date-separator-show", true);
-        };
-        if (state.get.current().header.date.date.show && state.get.current().header.date.month.show) {
-          _disable.element(".control-header-date-format-label", false);
-          _disable.input(".control-header-date-format-datemonth", false);
-          _disable.input(".control-header-date-format-monthdate", false);
-        } else {
-          _disable.element(".control-header-date-format-label", true);
-          _disable.input(".control-header-date-format-datemonth", true);
-          _disable.input(".control-header-date-format-monthdate", true);
-        };
-        if (state.get.current().header.date.day.show) {
-          _disable.input(".control-header-date-day-display-number", false);
-          _disable.input(".control-header-date-day-display-word", false);
-        } else {
-          _disable.input(".control-header-date-day-display-number", true);
-          _disable.input(".control-header-date-day-display-word", true);
-        };
-        if (state.get.current().header.date.date.show) {
-          _disable.input(".control-header-date-date-display-number", false);
-          _disable.input(".control-header-date-date-display-word", false);
-          _disable.input(".control-header-date-date-ordinal", false);
-          _disable.element(".control-header-date-date-ordinal-helper", false);
-        } else {
-          _disable.input(".control-header-date-date-display-number", true);
-          _disable.input(".control-header-date-date-display-word", true);
-          _disable.input(".control-header-date-date-ordinal", true);
-          _disable.element(".control-header-date-date-ordinal-helper", true);
-        };
-        if (state.get.current().header.date.month.show) {
-          _disable.input(".control-header-date-month-display-number", false);
-          _disable.input(".control-header-date-month-display-word", false);
-        } else {
-          _disable.input(".control-header-date-month-display-number", true);
-          _disable.input(".control-header-date-month-display-word", true);
-        };
-        if (state.get.current().header.date.year.show) {
-          _disable.input(".control-header-date-year-display-number", false);
-          _disable.input(".control-header-date-year-display-word", false);
-        } else {
-          _disable.input(".control-header-date-year-display-number", true);
-          _disable.input(".control-header-date-year-display-word", true);
-        };
-        if (state.get.current().header.date.day.show && state.get.current().header.date.day.display == "number") {
-          _disable.element(".control-header-date-day-week-start-label", false);
-          _disable.input(".control-header-date-day-week-start-monday", false);
-          _disable.input(".control-header-date-day-week-start-sunday", false);
-          _disable.element(".control-header-date-day-week-start-helper", false);
-        } else {
-          _disable.element(".control-header-date-day-week-start-label", true);
-          _disable.input(".control-header-date-day-week-start-monday", true);
-          _disable.input(".control-header-date-day-week-start-sunday", true);
-          _disable.element(".control-header-date-day-week-start-helper", true);
-        };
-        if (state.get.current().header.date.day.show && state.get.current().header.date.day.display == "word") {
-          _disable.element(".control-header-date-day-length-label", false);
-          _disable.input(".control-header-date-day-length-long", false);
-          _disable.input(".control-header-date-day-length-short", false);
-        } else {
-          _disable.element(".control-header-date-day-length-label", true);
-          _disable.input(".control-header-date-day-length-long", true);
-          _disable.input(".control-header-date-day-length-short", true);
-        };
-        if (state.get.current().header.date.month.show && state.get.current().header.date.month.display == "word") {
-          _disable.element(".control-header-date-month-length-label", false);
-          _disable.input(".control-header-date-month-length-long", false);
-          _disable.input(".control-header-date-month-length-short", false);
-        } else {
-          _disable.element(".control-header-date-month-length-label", true);
-          _disable.input(".control-header-date-month-length-long", true);
-          _disable.input(".control-header-date-month-length-short", true);
-        };
-        if (state.get.current().header.date.month.show && state.get.current().header.date.month.display == "number") {
-          _disable.input(".control-header-date-month-ordinal", false);
-          _disable.element(".control-header-date-month-ordinal-helper", false);
-        } else {
-          _disable.input(".control-header-date-month-ordinal", true);
-          _disable.element(".control-header-date-month-ordinal-helper", true);
-        };
-        if (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show) {
-          _disable.element("[for=control-header-date-size-range]", false);
-          _disable.input(".control-header-date-size-range", false);
-          _disable.input(".control-header-date-size-number", false);
-          _disable.input(".control-header-date-size-default", false);
-        } else {
-          _disable.element("[for=control-header-date-size-range]", true);
-          _disable.input(".control-header-date-size-range", true);
-          _disable.input(".control-header-date-size-number", true);
-          _disable.input(".control-header-date-size-default", true);
-        };
-      };
-      var _shade = function() {
-        if (state.get.current().header.color.show) {
-          _disable.input(".control-header-color-style-always", false);
-          _disable.element(".control-header-color-style-always-helper", false);
-          _disable.input(".control-header-color-style-scroll", false);
-          _disable.element(".control-header-color-style-scroll-helper", false);
-          _disable.input(".control-header-color-by-theme", false);
-          _disable.element(".control-header-color-by-theme-helper", false);
-          _disable.input(".control-header-color-by-custom", false);
-          _disable.element(".control-header-color-by-custom-helper", false);
-          _disable.input(".control-header-color-rgb-range", false);
-          _disable.input(".control-header-color-rgb-text", false);
-          _disable.element("[for=control-header-color-opacity-range]", false);
-          _disable.input(".control-header-color-opacity-range", false);
-          _disable.input(".control-header-color-opacity-number", false);
-          _disable.input(".control-header-color-opacity-default", false);
-          _disable.input(".control-header-radius", false);
-          _disable.element(".control-header-radius-helper", false);
-        } else {
-          _disable.input(".control-header-color-style-always", true);
-          _disable.element(".control-header-color-style-always-helper", true);
-          _disable.input(".control-header-color-style-scroll", true);
-          _disable.element(".control-header-color-style-scroll-helper", true);
-          _disable.input(".control-header-color-by-theme", true);
-          _disable.element(".control-header-color-by-theme-helper", true);
-          _disable.input(".control-header-color-by-custom", true);
-          _disable.element(".control-header-color-by-custom-helper", true);
-          _disable.input(".control-header-color-rgb-range", true);
-          _disable.input(".control-header-color-rgb-text", true);
-          _disable.element("[for=control-header-color-opacity-range]", true);
-          _disable.input(".control-header-color-opacity-range", true);
-          _disable.input(".control-header-color-opacity-number", true);
-          _disable.input(".control-header-color-opacity-default", true);
-          _disable.input(".control-header-radius", true);
-          _disable.element(".control-header-radius-helper", true);
-        };
-        if (state.get.current().header.color.show && state.get.current().header.color.by == "theme") {
-          _disable.input(".control-header-color-rgb-range", true);
-          _disable.input(".control-header-color-rgb-text", true);
-        } else if (state.get.current().header.color.show && state.get.current().header.color.by == "custom") {
-          _disable.input(".control-header-color-rgb-range", false);
-          _disable.input(".control-header-color-rgb-text", false);
-        };
-      };
-      var _button = function() {
-        _disable.input(".control-header-button-coloraccent-dot-show", true);
-        if (state.get.current().header.button.colorAccent.show) {
-          _disable.input(".control-header-button-coloraccent-dot-show", false);
-        };
-      };
-      var _search = function() {
-        if (state.get.current().header.search.show) {
-          _disable.element(".control-header-search-style-label", false);
-          _disable.input(".control-header-search-style-auto", false);
-          _disable.element(".control-header-search-style-auto-helper", false);
-          _disable.input(".control-header-search-style-custom", false);
-          _disable.element(".control-header-search-style-custom-helper", false);
-          _disable.input(".control-header-search-width-range", false);
-          _disable.input(".control-header-search-width-number", false);
-          _disable.input(".control-header-search-width-default", false);
-          _disable.input(".control-header-search-focus", false);
-          _disable.element(".control-header-search-focus-helper", false);
-          _disable.element(".control-header-search-engine-label", false);
-          _disable.input(".control-header-search-engine-google", false);
-          _disable.input(".control-header-search-engine-duckduckgo", false);
-          _disable.input(".control-header-search-engine-youtube", false);
-          _disable.input(".control-header-search-engine-giphy", false);
-          _disable.input(".control-header-search-engine-bing", false);
-          _disable.input(".control-header-search-engine-custom", false);
-          _disable.element(".control-header-search-text-alignment-grid", false);
-          _disable.element(".control-header-search-text-alignment-label", false);
-          _disable.input(".control-header-search-text-alignment-left", false);
-          _disable.input(".control-header-search-text-alignment-center", false);
-          _disable.input(".control-header-search-text-alignment-right", false);
-          _disable.element("[for=control-header-search-size-range]", false);
-          _disable.input(".control-header-search-size-range", false);
-          _disable.input(".control-header-search-size-number", false);
-          _disable.input(".control-header-search-size-default", false);
-          _disable.element(".control-header-search-size-helper", false);
-        } else {
-          _disable.element(".control-header-search-style-label", true);
-          _disable.input(".control-header-search-style-auto", true);
-          _disable.element(".control-header-search-style-auto-helper", true);
-          _disable.input(".control-header-search-style-custom", true);
-          _disable.element(".control-header-search-style-custom-helper", true);
-          _disable.input(".control-header-search-width-range", true);
-          _disable.input(".control-header-search-width-number", true);
-          _disable.input(".control-header-search-width-default", true);
-          _disable.input(".control-header-search-focus", true);
-          _disable.element(".control-header-search-focus-helper", true);
-          _disable.element(".control-header-search-engine-label", true);
-          _disable.input(".control-header-search-engine-google", true);
-          _disable.input(".control-header-search-engine-duckduckgo", true);
-          _disable.input(".control-header-search-engine-youtube", true);
-          _disable.input(".control-header-search-engine-giphy", true);
-          _disable.input(".control-header-search-engine-bing", true);
-          _disable.input(".control-header-search-engine-custom", true);
-          _disable.element(".control-header-search-text-alignment-grid", true);
-          _disable.element(".control-header-search-text-alignment-label", true);
-          _disable.input(".control-header-search-text-alignment-left", true);
-          _disable.input(".control-header-search-text-alignment-center", true);
-          _disable.input(".control-header-search-text-alignment-right", true);
-          _disable.element("[for=control-header-search-size-range]", true);
-          _disable.input(".control-header-search-size-range", true);
-          _disable.input(".control-header-search-size-number", true);
-          _disable.input(".control-header-search-size-default", true);
-          _disable.element(".control-header-search-size-helper", true);
-        };
-        if (state.get.current().header.search.show && state.get.current().header.search.engine.selected === "custom") {
-          _disable.element("[for=control-header-search-engine-custom-name]", false);
-          _disable.input(".control-header-search-engine-custom-name", false);
-          _disable.element("[for=control-header-search-engine-custom-url]", false);
-          _disable.input(".control-header-search-engine-custom-url", false);
-          _disable.element(".control-header-search-engine-custom-helper", false);
-        } else {
-          _disable.element("[for=control-header-search-engine-custom-name]", true);
-          _disable.input(".control-header-search-engine-custom-name", true);
-          _disable.element("[for=control-header-search-engine-custom-url]", true);
-          _disable.input(".control-header-search-engine-custom-url", true);
-          _disable.element(".control-header-search-engine-custom-helper", true);
-        };
-        if (state.get.current().header.search.show && state.get.current().header.search.style === "custom") {
-          _disable.input(".control-header-search-width-range", false);
-          _disable.input(".control-header-search-width-number", false);
-          _disable.input(".control-header-search-width-default", false);
-        } else {
-          _disable.input(".control-header-search-width-range", true);
-          _disable.input(".control-header-search-width-number", true);
-          _disable.input(".control-header-search-width-default", true);
-        };
-      };
-      var _greeting = function() {
-        if (state.get.current().header.greeting.show) {
-          _disable.element("[for=control-header-greeting-name]", false);
-          _disable.input(".control-header-greeting-name", false);
-          _disable.input(".control-header-greeting-type-good", false);
-          _disable.input(".control-header-greeting-type-hello", false);
-          _disable.input(".control-header-greeting-type-hi", false);
-          _disable.element("[for=control-header-greeting-size-range]", false);
-          _disable.input(".control-header-greeting-size-range", false);
-          _disable.input(".control-header-greeting-size-number", false);
-          _disable.input(".control-header-greeting-size-default", false);
-        } else {
-          _disable.element("[for=control-header-greeting-name]", true);
-          _disable.input(".control-header-greeting-name", true);
-          _disable.input(".control-header-greeting-type-good", true);
-          _disable.input(".control-header-greeting-type-hello", true);
-          _disable.input(".control-header-greeting-type-hi", true);
-          _disable.element("[for=control-header-greeting-size-range]", true);
-          _disable.input(".control-header-greeting-size-range", true);
-          _disable.input(".control-header-greeting-size-number", true);
-          _disable.input(".control-header-greeting-size-default", true);
-        };
-      };
-      var _transitional = function() {
-        if (state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show || state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show) {
-          _disable.input(".control-header-transitional-show", false);
-          _disable.element(".control-header-transitional-show-helper", false);
-        } else {
-          _disable.input(".control-header-transitional-show", true);
-          _disable.element(".control-header-transitional-show-helper", true);
-        };
-        if (state.get.current().header.transitional.show && ((state.get.current().header.date.date.show || state.get.current().header.date.day.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show || state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show))) {
-          _disable.input(".control-header-transitional-type-timeanddate", false);
-          _disable.input(".control-header-transitional-type-its", false);
-          _disable.element("[for=control-header-transitional-size-range]", false);
-          _disable.input(".control-header-transitional-size-range", false);
-          _disable.input(".control-header-transitional-size-number", false);
-          _disable.input(".control-header-transitional-size-default", false);
-        } else {
-          _disable.input(".control-header-transitional-type-timeanddate", true);
-          _disable.input(".control-header-transitional-type-its", true);
-          _disable.element("[for=control-header-transitional-size-range]", true);
-          _disable.input(".control-header-transitional-size-range", true);
-          _disable.input(".control-header-transitional-size-number", true);
-          _disable.input(".control-header-transitional-size-default", true);
-        };
-      };
-      _clock();
-      _date();
-      _shade();
-      _button();
-      _search();
-      _greeting();
-      _transitional();
+      });
     };
-    var _edit = function() {
-      _disable.input(".control-edit", true);
-      if (bookmarks.get().length > 0) {
-        _disable.input(".control-edit", false);
-      };
-    };
-    var _group = function() {
-      _disable.element("[for=control-group-name-size-range]", true);
-      _disable.input(".control-group-name-size-range", true);
-      _disable.input(".control-group-name-size-number", true);
-      _disable.input(".control-group-name-size-default", true);
-      if (state.get.current().group.name.show) {
-        _disable.element("[for=control-group-name-size-range]", false);
-        _disable.input(".control-group-name-size-range", false);
-        _disable.input(".control-group-name-size-number", false);
-        _disable.input(".control-group-name-size-default", false);
-      };
-    };
-    var _link = function() {
-      _disable.input(".control-layout-order-headerlink", true);
-      _disable.input(".control-layout-order-linkheader", true);
-      _disable.element(".control-layout-order-helper", true);
-      _disable.element("[for=control-link-area-width-range]", true);
-      _disable.input(".control-link-area-width-range", true);
-      _disable.input(".control-link-area-width-number", true);
-      _disable.input(".control-link-area-width-default", true);
-      _disable.input(".control-link-area-width-match", true);
-      _disable.element(".control-link-area-width-helper", true);
-      _disable.element(".control-link-area-alignment-grid", true);
-      _disable.element(".control-link-area-alignment-label", true);
-      _disable.input(".control-link-area-alignment-left", true);
-      _disable.input(".control-link-area-alignment-center", true);
-      _disable.input(".control-link-area-alignment-right", true);
-      _disable.element(".control-link-area-alignment-helper", true);
-      _disable.element("[for=control-link-item-size-range]", true);
-      _disable.input(".control-link-item-size-range", true);
-      _disable.input(".control-link-item-size-number", true);
-      _disable.input(".control-link-item-size-default", true);
-      _disable.input(".control-link-item-display-letcon-show", true);
-      _disable.element("[for=control-link-item-display-letcon-letter-size-range]", true);
-      _disable.input(".control-link-item-display-letcon-letter-size-range", true);
-      _disable.input(".control-link-item-display-letcon-letter-size-number", true);
-      _disable.input(".control-link-item-display-letcon-letter-size-default", true);
-      _disable.element("[for=control-link-item-display-letcon-icon-size-range]", true);
-      _disable.input(".control-link-item-display-letcon-icon-size-range", true);
-      _disable.input(".control-link-item-display-letcon-icon-size-number", true);
-      _disable.input(".control-link-item-display-letcon-icon-size-default", true);
-      _disable.input(".control-link-item-display-name-show", true);
-      _disable.element("[for=control-link-item-display-name-size-range]", true);
-      _disable.input(".control-link-item-display-name-size-range", true);
-      _disable.input(".control-link-item-display-name-size-number", true);
-      _disable.input(".control-link-item-display-name-size-default", true);
-      _disable.element("[for=control-link-item-display-rotate-range]", true);
-      _disable.input(".control-link-item-display-rotate-range", true);
-      _disable.input(".control-link-item-display-rotate-number", true);
-      _disable.input(".control-link-item-display-rotate-default", true);
-      _disable.element("[for=control-link-item-display-translate-x-range]", true);
-      _disable.input(".control-link-item-display-translate-x-range", true);
-      _disable.input(".control-link-item-display-translate-x-number", true);
-      _disable.input(".control-link-item-display-translate-x-default", true);
-      _disable.element("[for=control-link-item-display-translate-y-range]", true);
-      _disable.input(".control-link-item-display-translate-y-range", true);
-      _disable.input(".control-link-item-display-translate-y-number", true);
-      _disable.input(".control-link-item-display-translate-y-default", true);
-      _disable.element("[for=control-link-item-display-gutter-range]", true);
-      _disable.input(".control-link-item-display-gutter-range", true);
-      _disable.input(".control-link-item-display-gutter-number", true);
-      _disable.input(".control-link-item-display-gutter-default", true);
-      _disable.input(".control-link-item-display-direction-horizontal", true);
-      _disable.input(".control-link-item-display-direction-vertical", true);
-      _disable.input(".control-link-item-display-order-letconname", true);
-      _disable.input(".control-link-item-display-order-nameletcon", true);
-      _disable.element(".control-link-item-display-direction-helper", true);
-      _disable.element(".control-link-item-display-order-helper", true);
-      _disable.input(".control-link-item-url-show", true);
-      _disable.input(".control-link-item-line-show", true);
-      _disable.input(".control-link-item-shadow-show", true);
-      _disable.element(".control-link-item-shadow-show-helper", true);
-      _disable.input(".control-link-item-hoverscale", true);
-      _disable.element(".control-link-item-display-alignment-grid", true);
-      _disable.element(".control-link-item-display-alignment-label", true);
-      _disable.input(".control-link-item-display-alignment-topleft", true);
-      _disable.input(".control-link-item-display-alignment-topcenter", true);
-      _disable.input(".control-link-item-display-alignment-topright", true);
-      _disable.input(".control-link-item-display-alignment-centerleft", true);
-      _disable.input(".control-link-item-display-alignment-centercenter", true);
-      _disable.input(".control-link-item-display-alignment-centerright", true);
-      _disable.input(".control-link-item-display-alignment-bottomleft", true);
-      _disable.input(".control-link-item-display-alignment-bottomcenter", true);
-      _disable.input(".control-link-item-display-alignment-bottomright", true);
-      _disable.input(".control-link-newtab", true);
-      _disable.input(".control-link-item-color-by-theme", true);
-      _disable.element(".control-link-item-color-by-theme-helper", true);
-      _disable.input(".control-link-item-color-by-custom", true);
-      _disable.element(".control-link-item-color-by-custom-helper", true);
-      _disable.input(".control-link-item-color-rgb-range", true);
-      _disable.input(".control-link-item-color-rgb-text", true);
-      _disable.element("[for=control-link-item-border-range]", true);
-      _disable.input(".control-link-item-border-range", true);
-      _disable.input(".control-link-item-border-number", true);
-      _disable.input(".control-link-item-border-default", true);
-      _disable.input(".control-link-style-block", true);
-      _disable.element(".control-link-style-block-helper", true);
-      _disable.input(".control-link-style-list", true);
-      _disable.element(".control-link-style-list-helper", true);
-      _disable.input(".control-link-orientation-top", true);
-      _disable.input(".control-link-orientation-bottom", true);
-      _disable.element(".control-link-orientation-helper", true);
-      _disable.input(".control-link-sort-name", true);
-      _disable.input(".control-link-sort-letter", true);
-      _disable.input(".control-link-sort-icon", true);
-      _disable.input(".control-link-accent-clear", true);
-      _disable.input(".control-link-accent-set", true);
-      _disable.element(".control-link-accent-set-helper", true);
-      if (state.get.current().link.show) {
-        _disable.input(".control-layout-order-headerlink", false);
-        _disable.input(".control-layout-order-linkheader", false);
-        _disable.element(".control-layout-order-helper", false);
-        _disable.element("[for=control-link-area-width-range]", false);
-        _disable.input(".control-link-area-width-range", false);
-        _disable.input(".control-link-area-width-number", false);
-        _disable.input(".control-link-area-width-default", false);
-        _disable.input(".control-link-area-width-match", false);
-        _disable.element(".control-link-area-width-helper", false);
-        _disable.element(".control-link-area-alignment-grid", false);
-        _disable.element(".control-link-area-alignment-label", false);
-        _disable.input(".control-link-area-alignment-left", false);
-        _disable.input(".control-link-area-alignment-center", false);
-        _disable.input(".control-link-area-alignment-right", false);
-        _disable.element(".control-link-area-alignment-helper", false);
-        _disable.element("[for=control-link-item-size-range]", false);
-        _disable.input(".control-link-item-size-range", false);
-        _disable.input(".control-link-item-size-number", false);
-        _disable.input(".control-link-item-size-default", false);
-        _disable.input(".control-link-item-display-letcon-show", false);
-        _disable.input(".control-link-item-display-name-show", false);
-        _disable.input(".control-link-item-url-show", false);
-        _disable.input(".control-link-item-line-show", false);
-        _disable.input(".control-link-item-shadow-show", false);
-        _disable.element(".control-link-item-shadow-show-helper", false);
-        _disable.input(".control-link-item-hoverscale", false);
-        _disable.input(".control-link-newtab", false);
-        _disable.input(".control-link-item-color-by-theme", false);
-        _disable.element(".control-link-item-color-by-theme-helper", false);
-        _disable.input(".control-link-item-color-by-custom", false);
-        _disable.element(".control-link-item-color-by-custom-helper", false);
-        _disable.element("[for=control-link-item-border-range]", false);
-        _disable.input(".control-link-item-border-range", false);
-        _disable.input(".control-link-item-border-number", false);
-        _disable.input(".control-link-item-border-default", false);
-        _disable.input(".control-link-style-block", false);
-        _disable.element(".control-link-style-block-helper", false);
-        _disable.input(".control-link-style-list", false);
-        _disable.element(".control-link-style-list-helper", false);
-        _disable.input(".control-link-orientation-top", false);
-        _disable.input(".control-link-orientation-bottom", false);
-        _disable.element(".control-link-orientation-helper", false);
-        _disable.input(".control-link-sort-name", false);
-        _disable.input(".control-link-sort-letter", false);
-        _disable.input(".control-link-sort-icon", false);
-        _disable.input(".control-link-accent-clear", false);
-        _disable.input(".control-link-accent-set", false);
-        _disable.element(".control-link-accent-set-helper", false);
-        if (state.get.current().link.item.display.letcon.show) {
-          _disable.element("[for=control-link-item-display-letcon-letter-size-range]", false);
-          _disable.input(".control-link-item-display-letcon-letter-size-range", false);
-          _disable.input(".control-link-item-display-letcon-letter-size-number", false);
-          _disable.input(".control-link-item-display-letcon-letter-size-default", false);
-          _disable.element("[for=control-link-item-display-letcon-icon-size-range]", false);
-          _disable.input(".control-link-item-display-letcon-icon-size-range", false);
-          _disable.input(".control-link-item-display-letcon-icon-size-number", false);
-          _disable.input(".control-link-item-display-letcon-icon-size-default", false);
-        };
-        if (state.get.current().link.item.display.name.show) {
-          _disable.element("[for=control-link-item-display-name-size-range]", false);
-          _disable.input(".control-link-item-display-name-size-range", false);
-          _disable.input(".control-link-item-display-name-size-number", false);
-          _disable.input(".control-link-item-display-name-size-default", false);
-        };
-        if (state.get.current().link.item.display.letcon.show || state.get.current().link.item.display.name.show) {
-          _disable.element(".control-link-item-display-alignment-grid", false);
-          _disable.element(".control-link-item-display-alignment-label", false);
-          _disable.input(".control-link-item-display-alignment-topleft", false);
-          _disable.input(".control-link-item-display-alignment-topcenter", false);
-          _disable.input(".control-link-item-display-alignment-topright", false);
-          _disable.input(".control-link-item-display-alignment-centerleft", false);
-          _disable.input(".control-link-item-display-alignment-centercenter", false);
-          _disable.input(".control-link-item-display-alignment-centerright", false);
-          _disable.input(".control-link-item-display-alignment-bottomleft", false);
-          _disable.input(".control-link-item-display-alignment-bottomcenter", false);
-          _disable.input(".control-link-item-display-alignment-bottomright", false);
-          _disable.element("[for=control-link-item-display-rotate-range]", false);
-          _disable.input(".control-link-item-display-rotate-range", false);
-          _disable.input(".control-link-item-display-rotate-number", false);
-          _disable.input(".control-link-item-display-rotate-default", false);
-          _disable.element("[for=control-link-item-display-translate-x-range]", false);
-          _disable.input(".control-link-item-display-translate-x-range", false);
-          _disable.input(".control-link-item-display-translate-x-number", false);
-          _disable.input(".control-link-item-display-translate-x-default", false);
-          _disable.element("[for=control-link-item-display-translate-y-range]", false);
-          _disable.input(".control-link-item-display-translate-y-range", false);
-          _disable.input(".control-link-item-display-translate-y-number", false);
-          _disable.input(".control-link-item-display-translate-y-default", false);
-        };
-        if (state.get.current().link.item.display.letcon.show && state.get.current().link.item.display.name.show) {
-          _disable.input(".control-link-item-display-direction-horizontal", false);
-          _disable.input(".control-link-item-display-direction-vertical", false);
-          _disable.input(".control-link-item-display-order-letconname", false);
-          _disable.input(".control-link-item-display-order-nameletcon", false);
-          _disable.element(".control-link-item-display-direction-helper", false);
-          _disable.element(".control-link-item-display-order-helper", false);
-          _disable.element("[for=control-link-item-display-gutter-range]", false);
-          _disable.input(".control-link-item-display-gutter-range", false);
-          _disable.input(".control-link-item-display-gutter-number", false);
-          _disable.input(".control-link-item-display-gutter-default", false);
-        };
-        if (state.get.current().link.item.color.by == "custom") {
-          _disable.input(".control-link-item-color-rgb-range", false);
-          _disable.input(".control-link-item-color-rgb-text", false);
-        };
-      };
-    };
-    var _theme = function() {
-      _disable.input(".control-theme-custom-edit", true);
-      _disable.input(".control-theme-accent-random-style-any", true);
-      _disable.input(".control-theme-accent-random-style-light", true);
-      _disable.input(".control-theme-accent-random-style-dark", true);
-      _disable.input(".control-theme-accent-random-style-pastel", true);
-      _disable.input(".control-theme-accent-random-style-saturated", true);
-      _disable.input(".control-theme-accent-randomise", true);
-      if (state.get.current().theme.custom.all.length > 0) {
-        _disable.input(".control-theme-custom-edit", false);
-      };
-      if (state.get.current().theme.accent.random.active) {
-        _disable.input(".control-theme-accent-random-style-any", false);
-        _disable.input(".control-theme-accent-random-style-light", false);
-        _disable.input(".control-theme-accent-random-style-dark", false);
-        _disable.input(".control-theme-accent-random-style-pastel", false);
-        _disable.input(".control-theme-accent-random-style-saturated", false);
-        _disable.input(".control-theme-accent-randomise", false);
-      };
-    };
-    var _background = function() {
-      if (state.get.current().background.image.show) {
-        _disable.input(".control-background-image-from-file", false);
-        _disable.input(".control-background-image-from-url", false);
-        _disable.element("[for=control-background-image-opacity-range]", false);
-        _disable.input(".control-background-image-opacity-range", false);
-        _disable.input(".control-background-image-opacity-number", false);
-        _disable.input(".control-background-image-opacity-default", false);
-        _disable.element("[for=control-background-image-blur-range]", false);
-        _disable.input(".control-background-image-blur-range", false);
-        _disable.input(".control-background-image-blur-number", false);
-        _disable.input(".control-background-image-blur-default", false);
-        _disable.element("[for=control-background-image-grayscale-range]", false);
-        _disable.input(".control-background-image-grayscale-range", false);
-        _disable.input(".control-background-image-grayscale-number", false);
-        _disable.input(".control-background-image-grayscale-default", false);
-        _disable.element("[for=control-background-image-accent-range]", false);
-        _disable.input(".control-background-image-accent-range", false);
-        _disable.input(".control-background-image-accent-number", false);
-        _disable.input(".control-background-image-accent-default", false);
-        _disable.element("[for=control-background-image-scale-range]", false);
-        _disable.input(".control-background-image-scale-range", false);
-        _disable.input(".control-background-image-scale-number", false);
-        _disable.input(".control-background-image-scale-default", false);
-      } else {
-        _disable.input(".control-background-image-from-file", true);
-        _disable.input(".control-background-image-from-url", true);
-        _disable.element("[for=control-background-image-opacity-range]", true);
-        _disable.input(".control-background-image-opacity-range", true);
-        _disable.input(".control-background-image-opacity-number", true);
-        _disable.input(".control-background-image-opacity-default", true);
-        _disable.element("[for=control-background-image-blur-range]", true);
-        _disable.input(".control-background-image-blur-range", true);
-        _disable.input(".control-background-image-blur-number", true);
-        _disable.input(".control-background-image-blur-default", true);
-        _disable.element("[for=control-background-image-grayscale-range]", true);
-        _disable.input(".control-background-image-grayscale-range", true);
-        _disable.input(".control-background-image-grayscale-number", true);
-        _disable.input(".control-background-image-grayscale-default", true);
-        _disable.element("[for=control-background-image-accent-range]", true);
-        _disable.input(".control-background-image-accent-range", true);
-        _disable.input(".control-background-image-accent-number", true);
-        _disable.input(".control-background-image-accent-default", true);
-        _disable.element("[for=control-background-image-scale-range]", true);
-        _disable.input(".control-background-image-scale-range", true);
-        _disable.input(".control-background-image-scale-number", true);
-        _disable.input(".control-background-image-scale-default", true);
-      };
-      if (state.get.current().background.image.show && state.get.current().background.image.from == "file") {
-        _disable.element(".control-background-image-file-feedback", false);
-        _disable.input(".control-background-image-file", false);
-        _disable.input(".control-background-image-file-clear", false);
-        _disable.element(".control-background-image-file-helper", false);
-      } else {
-        _disable.element(".control-background-image-file-feedback", true);
-        _disable.input(".control-background-image-file", true);
-        _disable.input(".control-background-image-file-clear", true);
-        _disable.element(".control-background-image-file-helper", true);
-      };
-      if (state.get.current().background.image.show && state.get.current().background.image.from == "url") {
-        _disable.input(".control-background-image-url", false);
-        _disable.element(".control-background-image-url-helper", false);
-      } else {
-        _disable.input(".control-background-image-url", true);
-        _disable.element(".control-background-image-url-helper", true);
-      };
-      if (state.get.current().background.color.by == "theme") {
-        _disable.input(".control-background-color-rgb-range", true);
-        _disable.input(".control-background-color-rgb-text", true);
-      } else if (state.get.current().background.color.by == "custom") {
-        _disable.input(".control-background-color-rgb-range", false);
-        _disable.input(".control-background-color-rgb-text", false);
-      };
-    };
-    _header();
-    _edit();
-    _group();
-    _link();
-    _theme();
-    _background();
+
+    disableCheck(all.edit);
+    disableCheck(all.header.greeting);
+    disableCheck(all.header.clock);
+    disableCheck(all.header.transitional);
+    disableCheck(all.header.date);
+    disableCheck(all.header.search);
+    disableCheck(all.header.editAdd);
+    disableCheck(all.header.colorAccent);
+    disableCheck(all.header.menu);
+    disableCheck(all.header.color);
+    disableCheck(all.group);
+    disableCheck(all.link);
+    disableCheck(all.theme);
+    disableCheck(all.background);
   };
 
-  render.update = function(object) {
-    var valueConvert = {
-      reverse: function(value, object) {
-        return object.valueModify.max - value;
+  render.update = {
+    value: {
+      set: {
+        checkbox: function(object) {
+          helper.e(object.element).checked = helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          });
+        },
+        radio: function(object) {
+          helper.e(object.element.substring(0, object.element.lastIndexOf("-") + 1) + helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          })).checked = true;
+        },
+        text: function(object) {
+          var newValue = helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          });
+          if (object.valueConvert) {
+            object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+              newValue = render.update.value.convert[arrayItem](newValue, object);
+            });
+          };
+          helper.e(object.element).value = newValue;
+        },
+        textarea: function(object) {
+          var newValue = helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          });
+          if (object.valueConvert) {
+            object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+              newValue = render.update.value.convert[arrayItem](newValue, object);
+            });
+          };
+          helper.e(object.element).value = newValue;
+        },
+        number: function(object) {
+          var newValue = helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          });
+          if (object.valueConvert) {
+            object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+              newValue = render.update.value.convert[arrayItem](newValue, object);
+            });
+          };
+          helper.e(object.element).value = Math.round(newValue);
+        },
+        range: function(object) {
+          var newValue = helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          });
+          if (object.valueConvert) {
+            object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
+              newValue = render.update.value.convert[arrayItem](newValue, object);
+            });
+          };
+          helper.e(object.element).value = newValue;
+        },
+        color: function(object) {
+          helper.e(object.element).value = helper.convertColor.rgb.hex(helper.getObject({
+            object: state.get.current(),
+            path: object.path
+          }));
+        }
       },
-      float: function(value, object) {
-        return value * 100;
-      },
-      hexTextString: function(value, object) {
-        return helper.convertColor.rgb.hex(value);
+      convert: {
+        reverse: function(value, object) {
+          return object.valueModify.max - value;
+        },
+        float: function(value, object) {
+          return value * 100;
+        },
+        hexTextString: function(value, object) {
+          return helper.convertColor.rgb.hex(value);
+        }
       }
-    };
-    var setValue = {
-      checkbox: function(object) {
-        helper.e(object.element).checked = helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        });
-      },
-      radio: function(object) {
-        helper.e(object.element.substring(0, object.element.lastIndexOf("-") + 1) + helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        })).checked = true;
-      },
-      text: function(object) {
-        var newValue = helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        });
-        if (object.valueConvert) {
-          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object);
+    },
+    control: {
+      header: function(object) {
+        if (object) {
+          if (bind.control.supportedElement.includes(object.type) && helper.e(object.element)) {
+            render.update.value.set[object.type](object);
+          };
+        } else {
+          mod.header.forEach(function(arrayItem, index) {
+            if (bind.control.supportedElement.includes(arrayItem.type) && helper.e(arrayItem.element)) {
+              render.update.value.set[arrayItem.type](arrayItem);
+            };
           });
         };
-        helper.e(object.element).value = newValue;
       },
-      textarea: function(object) {
-        var newValue = helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        });
-        if (object.valueConvert) {
-          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object);
+      menu: function(object) {
+        if (object) {
+          if (bind.control.supportedElement.includes(object.type)) {
+            render.update.value.set[object.type](object);
+          };
+        } else {
+          mod.menu.forEach(function(arrayItem, index) {
+            if (bind.control.supportedElement.includes(arrayItem.type)) {
+              render.update.value.set[arrayItem.type](arrayItem);
+            };
           });
         };
-        helper.e(object.element).value = newValue;
-      },
-      number: function(object) {
-        var newValue = helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        });
-        if (object.valueConvert) {
-          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object);
-          });
-        };
-        helper.e(object.element).value = Math.round(newValue);
-      },
-      range: function(object) {
-        var newValue = helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        });
-        if (object.valueConvert) {
-          object.valueConvert.slice().reverse().forEach(function(arrayItem, index) {
-            newValue = valueConvert[arrayItem](newValue, object);
-          });
-        };
-        helper.e(object.element).value = newValue;
-      },
-      color: function(object) {
-        helper.e(object.element).value = helper.convertColor.rgb.hex(helper.getObject({
-          object: state.get.current(),
-          path: object.path
-        }));
       }
-    };
-    var supportedType = ["checkbox", "radio", "text", "number", "range", "color", "textarea"];
-    if (object) {
-      if (supportedType.includes(object.type)) {
-        setValue[object.type](object);
-      };
-    } else {
-      _allControl.forEach(function(arrayItem, index) {
-        if (supportedType.includes(arrayItem.type)) {
-          setValue[arrayItem.type](arrayItem);
+    }
+  };
+
+  render.input = {
+    header: function() {
+      mod.menu.forEach(function(arrayItem, index) {
+        if (arrayItem.valueModify) {
+          for (var key in arrayItem.valueModify) {
+            helper.e(arrayItem.element)[key] = arrayItem.valueModify[key];
+          };
+        };
+      });
+    },
+    menu: function() {
+      mod.header.forEach(function(arrayItem, index) {
+        if (arrayItem.valueModify) {
+          for (var key in arrayItem.valueModify) {
+            helper.e(arrayItem.element)[key] = arrayItem.valueModify[key];
+          };
         };
       });
     }
   };
 
-  render.input = function() {
-    _allControl.forEach(function(arrayItem, index) {
-      if (arrayItem.valueModify) {
-        for (var key in arrayItem.valueModify) {
-          helper.e(arrayItem.element)[key] = arrayItem.valueModify[key];
-        };
-      };
-    });
-  };
-
   var init = function() {
-    bind.controls();
-    render.input();
-    render.update();
+    bind.control.header();
+    bind.control.menu();
+    render.input.header();
+    render.input.menu();
+    render.update.control.header();
+    render.update.control.menu();
     render.dependents();
     render.class();
   };

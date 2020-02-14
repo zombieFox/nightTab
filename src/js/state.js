@@ -11,6 +11,13 @@ var state = (function() {
       item: {
         alignment: "left"
       },
+      greeting: {
+        show: false,
+        type: "good",
+        name: "",
+        size: 1,
+        newLine: false
+      },
       clock: {
         hours: {
           show: true,
@@ -21,7 +28,7 @@ var state = (function() {
           display: "number"
         },
         seconds: {
-          show: true,
+          show: false,
           display: "number"
         },
         separator: {
@@ -33,7 +40,14 @@ var state = (function() {
         hour24: {
           show: true
         },
-        size: 1
+        size: 1,
+        newLine: false
+      },
+      transitional: {
+        show: false,
+        type: "timeanddate",
+        size: 1,
+        newLine: false
       },
       date: {
         day: {
@@ -61,12 +75,16 @@ var state = (function() {
           show: true
         },
         format: "datemonth",
-        size: 1
+        size: 1,
+        newLine: false
       },
       search: {
         show: true,
-        style: "auto",
-        width: 30,
+        style: "box",
+        width: {
+          by: "auto",
+          size: 30
+        },
         focus: false,
         engine: {
           selected: "google",
@@ -98,20 +116,34 @@ var state = (function() {
         text: {
           alignment: "center"
         },
-        size: 1
+        size: 1,
+        newLine: false
       },
-      button: {
-        editAdd: {
+      editAdd: {
+        show: true,
+        size: 1,
+        style: "box",
+        newLine: false
+      },
+      colorAccent: {
+        dot: {
           show: true
         },
-        colorAccent: {
-          show: true,
-          dot: {
-            show: true
-          }
-        },
+        show: true,
+        size: 1,
         style: "box",
-        size: 1
+        newLine: false
+      },
+      menu: {
+        show: true,
+        size: 1,
+        style: "box",
+        newLine: false
+      },
+      order: ["greeting", "transitional", "clock", "date", "search", "editAdd", "colorAccent", "menu"],
+      border: {
+        top: 0,
+        bottom: 0
       },
       color: {
         by: "theme",
@@ -120,24 +152,10 @@ var state = (function() {
           g: 0,
           b: 0
         },
-        show: true,
         style: "scroll",
-        opacity: 0.95
-      },
-      border: {
-        top: 0,
-        bottom: 0
-      },
-      greeting: {
-        show: false,
-        type: "good",
-        name: "",
-        size: 1
-      },
-      transitional: {
-        show: false,
-        type: "timeanddate",
-        size: 1
+        opacity: 0.95,
+        show: true,
+        newLine: false
       },
       position: "sticky",
       radius: false
@@ -324,10 +342,18 @@ var state = (function() {
         size: 1
       },
       search: {
-        width: 30,
+        width: {
+          size: 30
+        },
         size: 1
       },
-      button: {
+      editAdd: {
+        size: 1,
+      },
+      colorAccent: {
+        size: 1,
+      },
+      menu: {
         size: 1
       },
       color: {

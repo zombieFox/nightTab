@@ -12,9 +12,11 @@ var greeting = (function() {
   var render = {};
 
   render.clear = function() {
-    var greeting = helper.e(".greeting");
-    while (greeting.lastChild) {
-      greeting.removeChild(greeting.lastChild);
+    if (state.get.current().header.greeting.show) {
+      var greeting = helper.e(".greeting");
+      while (greeting.lastChild) {
+        greeting.removeChild(greeting.lastChild);
+      };
     };
   };
 

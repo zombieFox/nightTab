@@ -1,3 +1,31 @@
-.search {
+.search-wrapper {
+  flex-grow: 1;
+  position: relative;
+}
+
+.search-input {
   width: 100%;
+}
+
+.search-clear {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+.is-header-search-text-alignment-left .search-input {
+  text-align: left;
+}
+
+.is-header-search-text-alignment-center .search-input {
+  text-align: center;
+}
+
+.is-header-search-text-alignment-right .search-input {
+  text-align: right;
+}
+
+.is-header-searching .search-input[type="text"] {
+  padding-right: 3.5em;
 }

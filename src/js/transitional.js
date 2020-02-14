@@ -12,9 +12,11 @@ var transitional = (function() {
   var render = {};
 
   render.clear = function() {
-    var transitional = helper.e(".transitional");
-    while (transitional.lastChild) {
-      transitional.removeChild(transitional.lastChild);
+    if (state.get.current().header.transitional.show) {
+      var transitional = helper.e(".transitional");
+      while (transitional.lastChild) {
+        transitional.removeChild(transitional.lastChild);
+      };
     };
   };
 

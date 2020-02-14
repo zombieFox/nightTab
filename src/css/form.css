@@ -72,7 +72,7 @@
   padding: 1.5em 1em 1em 1em;
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 4;
 }
 
 /* label */
@@ -388,6 +388,44 @@ input[type="text"]:disabled::placeholder,
 input[type="text"]:disabled:hover::placeholder,
 input[type="text"]:disabled:focus::placeholder {
   color: rgb(var(--form-placeholder-disabled));
+}
+
+.input-clear[type="email"],
+.input-clear[type="number"],
+.input-clear[type="password"],
+.input-clear[type="search"],
+.input-clear[type="tel"],
+.input-clear[type="text"] {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.input-clear[type="email"]:hover,
+.input-clear[type="number"]:hover,
+.input-clear[type="password"]:hover,
+.input-clear[type="search"]:hover,
+.input-clear[type="tel"]:hover,
+.input-clear[type="text"]:hover {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.input-clear[type="email"]:focus,
+.input-clear[type="email"]:active,
+.input-clear[type="number"]:focus,
+.input-clear[type="number"]:active,
+.input-clear[type="password"]:focus,
+.input-clear[type="password"]:active,
+.input-clear[type="search"]:focus,
+.input-clear[type="search"]:active,
+.input-clear[type="tel"]:focus,
+.input-clear[type="tel"]:active,
+.input-clear[type="text"]:focus,
+.input-clear[type="text"]:active {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: var(--form-ring-accent);
 }
 
 /* checkbox and radio */
@@ -1324,7 +1362,6 @@ input[type="range"]:disabled::-moz-range-progress {
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
-  z-index: 1;
 }
 
 .form-group .form-wrap {
@@ -1508,7 +1545,7 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-group-border {
-  border-radius: calc(var(--theme-radius) * 2);
+  border-radius: var(--theme-radius);
   border-width: var(--layout-line-width);
   border-color: rgb(var(--form-group-text-border));
   border-style: solid;
@@ -1587,17 +1624,6 @@ input[type="range"]:disabled::-moz-range-progress {
   cursor: default;
 }
 
-.form-group-text-transparent,
-.form-group-text-transparent:hover,
-.form-group-text-transparent:focus,
-.form-group-text-transparent:active,
-.form-group-text-transparent.disabled,
-.form-group-text-transparent.disabled:hover,
-.form-group-text-transparent.disabled:focus,
-.form-group-text-transparent.disable:active {
-  background-color: transparent;
-}
-
 .form-group-item-small,
 .form-group-item-medium,
 .form-group-item-large,
@@ -1660,6 +1686,17 @@ input[type="range"]:disabled::-moz-range-progress {
   padding: 0;
   border-width: 0;
   min-width: inherit;
+}
+
+.form-group-text-transparent,
+.form-group-text-transparent:hover,
+.form-group-text-transparent:focus,
+.form-group-text-transparent:active,
+.form-group-text-transparent.disabled,
+.form-group-text-transparent.disabled:hover,
+.form-group-text-transparent.disabled:focus,
+.form-group-text-transparent.disable:active {
+  background-color: transparent;
 }
 
 /* form dropdown */

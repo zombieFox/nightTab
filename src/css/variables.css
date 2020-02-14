@@ -77,13 +77,15 @@
   --header-color-theme:                                 var(--theme-color-01);
   --header-color-custom:                                rgb(0, 0, 0);
   --header-opacity:                                     0.95;
-  --header-search-width:                                0%;
+  --header-search-width-size:                           30%;
   --header-border-top:                                  0;
   --header-border-bottom:                               0;
   --header-date-size:                                   1em;
   --header-clock-size:                                  1em;
   --header-search-size:                                 1em;
-  --header-button-size:                                 1em;
+  --header-editadd-size:                                1em;
+  --header-coloraccent-size:                            1em;
+  --header-menu-size:                                   1em;
   --header-greeting-size:                               1em;
   --header-transitional-size:                           1em;
   /* group */

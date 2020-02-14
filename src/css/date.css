@@ -6,9 +6,8 @@
   font-weight: var(--theme-font-display-weight);
   font-style: var(--theme-font-display-style);
   color: rgb(var(--theme-style-text));
-  width: 100%;
   min-height: 2.5em;
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -16,14 +15,17 @@
 
 .is-header-item-alignment-left .date {
   justify-content: flex-start;
+  text-align: left;
 }
 
 .is-header-item-alignment-center .date {
   justify-content: center;
+  text-align: center;
 }
 
 .is-header-item-alignment-right .date {
   justify-content: flex-end;
+  text-align: right;
 }
 
 .date-separator,

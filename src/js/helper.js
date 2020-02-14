@@ -220,7 +220,7 @@ var helper = (function() {
     return element;
   };
 
-  var node = function(string) {
+  var node = function(string, node) {
     // set element
     var tag;
     if (string.indexOf("|") > 0) {
@@ -265,6 +265,9 @@ var helper = (function() {
           element.setAttribute(arrayItem.key, "");
         }
       });
+    };
+    if (node) {
+      element.appendChild(node);
     };
     return element;
   };

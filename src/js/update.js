@@ -805,6 +805,44 @@ var update = (function() {
     "4.33.0": function(data) {
       data.state.layout.scrollbars = "auto";
       return data;
+    },
+    "4.37.0": function(data) {
+      data.state.header.order = ["greeting", "transitional", "clock", "date", "search", "editAdd", "colorAccent", "menu"];
+      data.state.header.menu = {
+        show: true,
+        size: data.state.header.button.size,
+        style: data.state.header.button.style
+      };
+      data.state.header.editAdd = {
+        show: data.state.header.button.editAdd.show,
+        size: data.state.header.button.size,
+        style: data.state.header.button.style,
+        newLine: false
+      };
+      data.state.header.colorAccent = {
+        dot: {
+          show: data.state.header.button.colorAccent.dot.show
+        },
+        show: data.state.header.button.colorAccent.show,
+        size: data.state.header.button.size,
+        style: data.state.header.button.style,
+        newLine: false
+      };
+      data.state.header.greeting.newLine = false;
+      data.state.header.clock.newLine = false;
+      data.state.header.transitional.newLine = false;
+      data.state.header.date.newLine = false;
+      data.state.header.search.newLine = false;
+      data.state.header.editAdd.newLine = false;
+      data.state.header.colorAccent.newLine = false;
+      data.state.header.menu.newLine = false;
+      data.state.header.search.width = {
+        by: data.state.header.search.style,
+        size: data.state.header.search.width
+      };
+      data.state.header.search.style = "box";
+      delete data.state.header.button;
+      return data;
     }
   };
 

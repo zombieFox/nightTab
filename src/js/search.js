@@ -3,21 +3,25 @@ var search = (function() {
   var bind = {};
 
   bind.input = function() {
-    var searchInput = helper.e(".search-input");
-    searchInput.addEventListener("input", function() {
-      check();
-    }, false);
+    if (state.get.current().header.search.show) {
+      var searchInput = helper.e(".search-input");
+      searchInput.addEventListener("input", function() {
+        check();
+      }, false);
+    };
   };
 
   bind.clear = function() {
-    var searchClear = helper.e(".search-clear");
-    searchClear.addEventListener("click", function() {
-      mod.searching.close();
-      render.clear.input();
-      render.clear.button();
-      render.searching();
-      link.groupAndItems();
-    }, false);
+    if (state.get.current().header.search.show) {
+      var searchClear = helper.e(".search-clear");
+      searchClear.addEventListener("click", function() {
+        mod.searching.close();
+        render.clear.input();
+        render.clear.button();
+        render.searching();
+        link.groupAndItems();
+      }, false);
+    };
   };
 
   var mod = {};
@@ -89,17 +93,19 @@ var search = (function() {
   var render = {};
 
   render.engine = function() {
-    var search = helper.e(".search");
-    var searchInput = helper.e(".search-input");
-    var placeholder = "";
-    if (state.get.current().link.show) {
-      placeholder = "Find bookmarks or search";
-    } else {
-      placeholder = "Search";
+    if (state.get.current().header.search.show) {
+      var search = helper.e(".search");
+      var searchInput = helper.e(".search-input");
+      var placeholder = "";
+      if (state.get.current().link.show) {
+        placeholder = "Find bookmarks or search";
+      } else {
+        placeholder = "Search";
+      };
+      placeholder = placeholder + " " + state.get.current().header.search.engine[state.get.current().header.search.engine.selected].name;
+      searchInput.setAttribute("placeholder", placeholder);
+      search.setAttribute("action", state.get.current().header.search.engine[state.get.current().header.search.engine.selected].url);
     };
-    placeholder = placeholder + " " + state.get.current().header.search.engine[state.get.current().header.search.engine.selected].name;
-    searchInput.setAttribute("placeholder", placeholder);
-    search.setAttribute("action", state.get.current().header.search.engine[state.get.current().header.search.engine.selected].url);
   };
 
   render.clear = {};
@@ -166,6 +172,7 @@ var search = (function() {
   return {
     init: init,
     mod: mod,
+    bind: bind,
     render: render,
     check: check
   };
