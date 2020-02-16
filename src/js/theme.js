@@ -1412,25 +1412,27 @@ var theme = (function() {
 
   render.color = {
     shade: function() {
-      // positive
       var html = helper.e("html");
-      for (var key in state.get.current().theme.color.generated.positive) {
-        var rgb = state.get.current().theme.color.generated.positive[key];
-        if (key < 10) {
-          key = "0" + key;
+      // negative
+      for (var i = 10; i >= 1; i--) {
+        var rgb = state.get.current().theme.color.generated.negative[i];
+        var number = i;
+        if (i < 10) {
+          number = "0" + number;
         };
-        html.style.setProperty("--theme-shade-positive-" + key, rgb.r + ", " + rgb.g + ", " + rgb.b);
+        html.style.setProperty("--theme-shade-negative-" + number, rgb.r + ", " + rgb.g + ", " + rgb.b);
       };
       // neutral
       var rgb = state.get.current().theme.color.rgb;
       html.style.setProperty("--theme-shade", rgb.r + ", " + rgb.g + ", " + rgb.b);
-      // negative
-      for (var key in state.get.current().theme.color.generated.negative) {
-        var rgb = state.get.current().theme.color.generated.negative[key];
-        if (key < 10) {
-          key = "0" + key;
+      // positive
+      for (var i = 1; i <= 10; i++) {
+        var rgb = state.get.current().theme.color.generated.positive[i];
+        var number = i;
+        if (i < 10) {
+          number = "0" + number;
         };
-        html.style.setProperty("--theme-shade-negative-" + key, rgb.r + ", " + rgb.g + ", " + rgb.b);
+        html.style.setProperty("--theme-shade-positive-" + number, rgb.r + ", " + rgb.g + ", " + rgb.b);
       };
     }
   };
@@ -1608,6 +1610,7 @@ var theme = (function() {
         render.radius();
         render.shadow();
         render.shade.opacity();
+        render.themeMetaTag();
         style.check();
         link.groupAndItems();
         control.render.update.control.header();
@@ -1702,6 +1705,7 @@ var theme = (function() {
             render.radius();
             render.shadow();
             render.shade.opacity();
+            render.themeMetaTag();
             style.check();
             link.groupAndItems();
             control.render.update.control.header();
@@ -1947,7 +1951,7 @@ var theme = (function() {
     if (metaThemeColor) {
       metaThemeColor.remove();
     };
-    var meta = helper.node("meta|class:meta-theme-color,name:theme-color,content:"+helper.convertColor.rgb.hex(state.get.current().theme.color.generated.negative[10]));
+    var meta = helper.node("meta|class:meta-theme-color,name:theme-color,content:" + helper.convertColor.rgb.hex(state.get.current().theme.color.generated.negative[10]));
     head.appendChild(meta);
   };
 
