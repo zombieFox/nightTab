@@ -1,16 +1,86 @@
 <div class="menu-nav">
-  <div class="menu-nav-area-tab list-unstyled">
-    <button class="menu-nav-button control-menu-layout button active" tabindex="-1">Layout</button>
-    <button class="menu-nav-button control-menu-header button" tabindex="-1">Header</button>
-    <button class="menu-nav-button control-menu-groups button" tabindex="-1">Groups</button>
-    <button class="menu-nav-button control-menu-bookmarks button" tabindex="-1">Bookmarks</button>
-    <button class="menu-nav-button control-menu-theme button" tabindex="-1">Theme</button>
-    <button class="menu-nav-button control-menu-background button" tabindex="-1">Background</button>
-    <button class="menu-nav-button control-menu-data button" tabindex="-1">Data</button>
-    <button class="menu-nav-button control-menu-coffee button" tabindex="-1">Coffee</button>
-    <button class="menu-nav-button control-menu-nightTab button" tabindex="-1">nightTab</button>
+  <div class="menu-nav-item">
+    <button class="control-menu-layout menu-nav-tab button active" tabindex="-1">Layout</button>
+    <div class="menu-nav-body menu-nav-body-layout">
+      <a href="#menu-content-layout-scaling" class="menu-nav-sub button button-small">Global scaling</a>
+      <a href="#menu-content-layout-area" class="menu-nav-sub button button-small">Area</a>
+      <a href="#menu-content-layout-order" class="menu-nav-sub button button-small">Area order</a>
+      <a href="#menu-content-layout-padding" class="menu-nav-sub button button-small">Padding</a>
+      <a href="#menu-content-layout-gutter" class="menu-nav-sub button button-small">Gutter</a>
+      <a href="#menu-content-layout-page" class="menu-nav-sub button button-small">Page</a>
+    </div>
   </div>
-  <div class="menu-nav-area-close">
-    <button class="menu-nav-button control-menu-close button" tabindex="-1"><span class="icon-close"></span></button>
+  <div class="menu-nav-item">
+    <button class="control-menu-header menu-nav-tab button" tabindex="-1">Header</button>
+    <div class="menu-nav-body menu-nav-body-header is-hidden">
+      <a href="#menu-content-header-area" class="menu-nav-sub button button-small">Area</a>
+      <a href="#menu-content-header-greeting" class="menu-nav-sub button button-small">Greeting</a>
+      <a href="#menu-content-header-transitional" class="menu-nav-sub button button-small">Transitional words</a>
+      <a href="#menu-content-header-clock" class="menu-nav-sub button button-small">Clock</a>
+      <a href="#menu-content-header-date" class="menu-nav-sub button button-small">Date</a>
+      <a href="#menu-content-header-search" class="menu-nav-sub button button-small">Search</a>
+      <a href="#menu-content-header-editadd" class="menu-nav-sub button button-small">Edit/Add</a>
+      <a href="#menu-content-header-coloraccent" class="menu-nav-sub button button-small">Colour/Accent</a>
+      <a href="#menu-content-header-settings" class="menu-nav-sub button button-small">Settings menu</a>
+      <a href="#menu-content-header-border" class="menu-nav-sub button button-small">Border</a>
+      <a href="#menu-content-header-position" class="menu-nav-sub button button-small">Position when scrolling</a>
+      <a href="#menu-content-header-color" class="menu-nav-sub button button-small">Background colour</a>
+    </div>
+  </div>
+  <div class="menu-nav-item">
+    <button class="control-menu-groups menu-nav-tab button" tabindex="-1">Groups</button>
+    <div class="menu-nav-body menu-nav-body-groups is-hidden">
+      <a href="#menu-content-groups-names" class="menu-nav-sub button button-small">Names</a>
+      <a href="#menu-content-groups-order" class="menu-nav-sub button button-small">Order</a>
+      <a href="#menu-content-groups-border" class="menu-nav-sub button button-small">Border</a>
+    </div>
+  </div>
+  <div class="menu-nav-item">
+    <button class="control-menu-bookmarks menu-nav-tab button" tabindex="-1">Bookmarks</button>
+    <div class="menu-nav-body menu-nav-body-bookmarks is-hidden">
+      <a href="#menu-content-bookmarks-area" class="menu-nav-sub button button-small">Area</a>
+      <a href="#menu-content-bookmarks-bookmarks" class="menu-nav-sub button button-small">Bookmarks</a>
+      <a href="#menu-content-bookmarks-color" class="menu-nav-sub button button-small">Background colour</a>
+      <a href="#menu-content-bookmarks-border" class="menu-nav-sub button button-small">Border</a>
+      <a href="#menu-content-bookmarks-style" class="menu-nav-sub button button-small">Style</a>
+      <a href="#menu-content-bookmarks-orientation" class="menu-nav-sub button button-small">Orientation</a>
+      <a href="#menu-content-bookmarks-sort" class="menu-nav-sub button button-small">Sort</a>
+      <a href="#menu-content-bookmarks-accent" class="menu-nav-sub button button-small">Accent override</a>
+    </div>
+  </div>
+  <div class="menu-nav-item">
+    <button class="control-menu-theme menu-nav-tab button" tabindex="-1">Theme</button>
+    <div class="menu-nav-body menu-nav-body-theme is-hidden">
+      <a href="#menu-content-theme-preset" class="menu-nav-sub button button-small">Preset</a>
+      <a href="#menu-content-theme-saved" class="menu-nav-sub button button-small">Saved</a>
+      <a href="#menu-content-theme-style" class="menu-nav-sub button button-small">Style</a>
+      <a href="#menu-content-theme-fonts" class="menu-nav-sub button button-small">Fonts</a>
+      <a href="#menu-content-theme-colour" class="menu-nav-sub button button-small">Colour</a>
+      <a href="#menu-content-theme-accent" class="menu-nav-sub button button-small">Accent</a>
+      <a href="#menu-content-theme-radius" class="menu-nav-sub button button-small">Radius</a>
+      <a href="#menu-content-theme-shadow" class="menu-nav-sub button button-small">Shadow</a>
+      <a href="#menu-content-theme-shade" class="menu-nav-sub button button-small">Shade</a>
+    </div>
+  </div>
+  <div class="menu-nav-item">
+    <button class="control-menu-background menu-nav-tab button" tabindex="-1">Background</button>
+    <div class="menu-nav-body menu-nav-body-background is-hidden">
+      <a href="#menu-content-background-color" class="menu-nav-sub button button-small">Colour</a>
+      <a href="#menu-content-background-image" class="menu-nav-sub button button-small">Image</a>
+    </div>
+  </div>
+  <div class="menu-nav-item">
+    <button class="control-menu-data menu-nav-tab button" tabindex="-1">Data</button>
+    <div class="menu-nav-body menu-nav-body-data is-hidden">
+      <a href="#menu-content-data-restore" class="menu-nav-sub button button-small">Restore</a>
+      <a href="#menu-content-data-backup" class="menu-nav-sub button button-small">Backup</a>
+      <a href="#menu-content-data-clear" class="menu-nav-sub button button-small">Clear</a>
+    </div>
+  </div>
+  <div class="menu-nav-item">
+    <button class="control-menu-coffee menu-nav-tab button" tabindex="-1">Coffee</button>
+  </div>
+  <div class="menu-nav-item">
+    <button class="control-menu-nighttab menu-nav-tab button" tabindex="-1">nightTab</button>
   </div>
 </div>

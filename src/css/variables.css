@@ -127,7 +127,7 @@
   --layout-timing-medium:                               var(--layout-duration-06) ease-in-out;
   --layout-timing-slow:                                 var(--layout-duration-08) ease-in-out;
   --layout-timing-extra-slow:                           var(--layout-duration-10) ease-in-out;
-  --horizontal-rule:                                    calc(var(--layout-line-width) / 2) solid rgb(var(--theme-color-02));
+  --horizontal-rule:                                    var(--layout-line-width) solid rgb(var(--theme-color-02));
   /* background */
   --background-color-theme:                             var(--theme-color-01);
   --background-color-custom:                            rgb(0, 0, 0);
@@ -215,7 +215,7 @@
                                                         0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-color-10), 0.25);
   --form-ring-accent:                                   0 0 0 var(--layout-line-width) rgb(var(--theme-accent)),
                                                         0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
-  --form-wrap-space:                                    0.75em;
+  --form-wrap-space:                                    1em;
   /* menu */
   --menu-space:                                         0.75em;
   /* button */

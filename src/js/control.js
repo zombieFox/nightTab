@@ -120,55 +120,55 @@ var control = (function() {
     element: ".control-menu-layout",
     type: "button",
     func: function() {
-      menu.nav(this.element, ".menu-content-area-layout");
+      menu.nav("layout");
     }
   }, {
     element: ".control-menu-header",
     type: "button",
     func: function() {
-      menu.nav(this.element, ".menu-content-area-header");
+      menu.nav("header");
     }
   }, {
     element: ".control-menu-groups",
     type: "button",
     func: function() {
-      menu.nav(this.element, ".menu-content-area-groups");
+      menu.nav("groups");
     }
   }, {
     element: ".control-menu-bookmarks",
     type: "button",
     func: function() {
-      menu.nav(this.element, ".menu-content-area-bookmarks");
+      menu.nav("bookmarks");
     }
   }, {
     element: ".control-menu-theme",
     type: "button",
     func: function() {
-      menu.nav(this.element, ".menu-content-area-theme");
+      menu.nav("theme");
     }
   }, {
     element: ".control-menu-background",
     type: "button",
     func: function() {
-      menu.nav(this.element, ".menu-content-area-background");
+      menu.nav("background");
     }
   }, {
     element: ".control-menu-data",
     type: "button",
     func: function() {
-      menu.nav(this.element, ".menu-content-area-data");
+      menu.nav("data");
     }
   }, {
     element: ".control-menu-coffee",
     type: "button",
     func: function() {
-      menu.nav(this.element, ".menu-content-area-coffee");
+      menu.nav("coffee");
     }
   }, {
-    element: ".control-menu-nightTab",
+    element: ".control-menu-nighttab",
     type: "button",
     func: function() {
-      menu.nav(this.element, ".menu-content-area-nightTab");
+      menu.nav("nighttab");
     }
   }, {
     element: ".control-menu-close",

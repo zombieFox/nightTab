@@ -20,25 +20,49 @@ var menu = (function() {
 
   var render = {};
 
-  render.scrollToTop = function() {
-    if (window.innerWidth < 550) {
+  render.scrollToTop = function(name) {
+    if (window.innerWidth < 700) {
       helper.e(".menu-area").scrollTop = 0;
     } else {
-      helper.e(".menu-content").scrollTop = 0;
+      if (name) {
+        helper.e(".menu-content-" + name).scrollTop = 0;
+      } else {
+        var allMenuContentArea = helper.eA(".menu-content");
+        allMenuContentArea.forEach(function(arrayItem, index) {
+          arrayItem.scrollTop = 0;
+        });
+      };
     };
   };
 
-  render.nav = function(menuNavButton, menuContentArea) {
-    var allMenuNavButton = helper.eA(".menu-nav-button");
-    var allMenuContentArea = helper.eA(".menu-content-area");
-    allMenuNavButton.forEach(function(arrayItem, index) {
+  render.nav = function(name) {
+    var allMenuNavTab = helper.eA(".menu-nav-tab");
+    var allMenuNavBody = helper.eA(".menu-nav-body");
+    var allMenuContentArea = helper.eA(".menu-content");
+
+    allMenuNavTab.forEach(function(arrayItem, index) {
       helper.removeClass(arrayItem, "active");
+    });
+    allMenuNavBody.forEach(function(arrayItem, index) {
+      helper.addClass(arrayItem, "is-hidden");
     });
     allMenuContentArea.forEach(function(arrayItem, index) {
       helper.addClass(arrayItem, "is-hidden");
     });
-    helper.addClass(helper.e(menuNavButton), "active");
-    helper.removeClass(helper.e(menuContentArea), "is-hidden");
+
+    var control = helper.e(".control-menu-" + name);
+    var body = helper.e(".menu-nav-body-" + name);
+    var content = helper.e(".menu-content-" + name);
+
+    if (control) {
+      helper.addClass(control, "active");
+    };
+    if (body) {
+      helper.removeClass(body, "is-hidden");
+    };
+    if (content) {
+      helper.removeClass(content, "is-hidden");
+    };
   };
 
   render.tabindex = {
@@ -78,9 +102,9 @@ var menu = (function() {
     helper.e(".menu").removeAttribute("style");
   };
 
-  var nav = function(button, area) {
-    render.nav(button, area);
-    render.scrollToTop();
+  var nav = function(name) {
+    render.nav(name);
+    render.scrollToTop(name);
   };
 
   var toggle = function() {
