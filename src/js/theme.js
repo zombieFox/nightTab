@@ -172,6 +172,50 @@ var theme = (function() {
           b: Math.round(rgb.b)
         }
       });
+    },
+    generated: function() {
+      var shadeMax = 10;
+      var shadeMin = 1;
+      var contrastNeg = state.get.current().theme.color.contrast.dark;
+      var contrastPos = state.get.current().theme.color.contrast.light;
+      var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.color.rgb);
+      var validateRGBNumber = function(rgb) {
+        for (var key in rgb) {
+          if (rgb[key] < 0) {
+            rgb[key] = 0;
+          } else if (rgb[key] > 255) {
+            rgb[key] = 255;
+          };
+          rgb[key] = Math.round(rgb[key]);
+        };
+        return rgb;
+      };
+      // set light theme shades
+      for (var i = shadeMax; i >= shadeMin; i--) {
+        var rgb = helper.convertColor.hsl.rgb({
+          h: hsl.h,
+          s: hsl.s,
+          l: hsl.l - (contrastNeg * i)
+        });
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.color.generated.negative." + i,
+          newValue: validateRGBNumber(rgb)
+        });
+      };
+      // set dark theme shades
+      for (var i = shadeMin; i <= shadeMax; i++) {
+        var rgb = helper.convertColor.hsl.rgb({
+          h: hsl.h,
+          s: hsl.s,
+          l: hsl.l + (contrastPos * i)
+        });
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.color.generated.positive." + i,
+          newValue: validateRGBNumber(rgb)
+        });
+      };
     }
   };
 
@@ -1368,45 +1412,27 @@ var theme = (function() {
 
   render.color = {
     shade: function() {
-      var shadeMax = 10;
-      var shadeMin = 1;
-      var contrastNeg = state.get.current().theme.color.contrast.dark;
-      var contrastPos = state.get.current().theme.color.contrast.light;
       var html = helper.e("html");
-      var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.color.rgb);
-      var renderShade = function(name, index, rgb) {
-        for (var key in rgb) {
-          if (rgb[key] < 0) {
-            rgb[key] = 0;
-          } else if (rgb[key] > 255) {
-            rgb[key] = 255;
-          };
-          rgb[key] = Math.round(rgb[key]);
+      // negative
+      for (var i = 10; i >= 1; i--) {
+        var rgb = state.get.current().theme.color.generated.negative[i];
+        var number = i;
+        if (i < 10) {
+          number = "0" + number;
         };
-        if (index < 10) {
-          index = "0" + index;
+        html.style.setProperty("--theme-shade-negative-" + number, rgb.r + ", " + rgb.g + ", " + rgb.b);
+      };
+      // neutral
+      var rgb = state.get.current().theme.color.rgb;
+      html.style.setProperty("--theme-shade", rgb.r + ", " + rgb.g + ", " + rgb.b);
+      // positive
+      for (var i = 1; i <= 10; i++) {
+        var rgb = state.get.current().theme.color.generated.positive[i];
+        var number = i;
+        if (i < 10) {
+          number = "0" + number;
         };
-        html.style.setProperty(name + index, rgb.r + ", " + rgb.g + ", " + rgb.b);
-      };
-      // set light theme shades
-      for (var i = shadeMax; i >= shadeMin; i--) {
-        var rgb = helper.convertColor.hsl.rgb({
-          h: hsl.h,
-          s: hsl.s,
-          l: hsl.l - (contrastNeg * i)
-        });
-        renderShade("--theme-shade-neg-", i, rgb);
-      };
-      // set primary theme shades
-      html.style.setProperty("--theme-shade", state.get.current().theme.color.rgb.r + ", " + state.get.current().theme.color.rgb.g + ", " + state.get.current().theme.color.rgb.b);
-      // set dark theme shades
-      for (var i = shadeMin; i <= shadeMax; i++) {
-        var rgb = helper.convertColor.hsl.rgb({
-          h: hsl.h,
-          s: hsl.s,
-          l: hsl.l + (contrastPos * i)
-        });
-        renderShade("--theme-shade-pos-", i, rgb);
+        html.style.setProperty("--theme-shade-positive-" + number, rgb.r + ", " + rgb.g + ", " + rgb.b);
       };
     }
   };
@@ -1572,6 +1598,7 @@ var theme = (function() {
       themePresetButton.addEventListener("click", function() {
         mod.apply(mod.preset.get(index));
         data.save();
+        mod.color.generated();
         render.font.display.name();
         render.font.display.weight();
         render.font.display.style();
@@ -1583,6 +1610,7 @@ var theme = (function() {
         render.radius();
         render.shadow();
         render.shade.opacity();
+        render.themeMetaTag();
         style.check();
         link.groupAndItems();
         control.render.update.control.header();
@@ -1665,6 +1693,7 @@ var theme = (function() {
           themeCustomButton.addEventListener("click", function() {
             mod.apply(mod.custom.get(index));
             data.save();
+            mod.color.generated();
             render.font.display.name();
             render.font.display.weight();
             render.font.display.style();
@@ -1676,6 +1705,7 @@ var theme = (function() {
             render.radius();
             render.shadow();
             render.shade.opacity();
+            render.themeMetaTag();
             style.check();
             link.groupAndItems();
             control.render.update.control.header();
@@ -1915,6 +1945,16 @@ var theme = (function() {
     }
   };
 
+  render.themeMetaTag = function() {
+    var head = helper.e("head");
+    var metaThemeColor = helper.e(".meta-theme-color");
+    if (metaThemeColor) {
+      metaThemeColor.remove();
+    };
+    var meta = helper.node("meta|class:meta-theme-color,name:theme-color,content:" + helper.convertColor.rgb.hex(state.get.current().theme.color.generated.negative[10]));
+    head.appendChild(meta);
+  };
+
   var accent = {
     random: function() {
       mod.accent.random();
@@ -1967,6 +2007,7 @@ var theme = (function() {
 
   var init = function() {
     accent.random();
+    mod.color.generated();
     mod.accent.random();
     mod.custom.close();
     render.font.load.preset();
@@ -1985,6 +2026,7 @@ var theme = (function() {
     render.shade.opacity();
     render.preset();
     render.custom.all();
+    render.themeMetaTag();
     custom.check();
   };
 

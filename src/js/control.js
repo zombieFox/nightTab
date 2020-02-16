@@ -92,7 +92,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-accent-rgb-color-quick",
@@ -4273,7 +4275,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-text",
@@ -4339,7 +4343,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-default",
@@ -4347,7 +4353,9 @@ var control = (function() {
     func: function() {
       mod.default("theme.color.rgb");
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
       render.update.control.header();
       render.update.control.menu();
     }
@@ -4403,7 +4411,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-hsl-h-number",
@@ -4457,7 +4467,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-hsl-s-range",
@@ -4511,7 +4523,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-hsl-s-number",
@@ -4565,7 +4579,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-hsl-l-range",
@@ -4619,7 +4635,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-hsl-l-number",
@@ -4673,7 +4691,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.rgb();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-r-range",
@@ -4727,7 +4747,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-r-number",
@@ -4781,7 +4803,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-g-range",
@@ -4835,7 +4859,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-g-number",
@@ -4889,7 +4915,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-b-range",
@@ -4943,7 +4971,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-rgb-b-number",
@@ -4997,7 +5027,9 @@ var control = (function() {
     }],
     func: function() {
       theme.mod.color.hsl();
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-contrast-light-range",
@@ -5016,7 +5048,9 @@ var control = (function() {
       valueConvert: ["float"]
     }],
     func: function() {
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-contrast-light-number",
@@ -5035,14 +5069,18 @@ var control = (function() {
       valueConvert: ["float"]
     }],
     func: function() {
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-contrast-light-default",
     type: "button",
     func: function() {
       mod.default("theme.color.contrast.light");
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
       render.update.control.header();
       render.update.control.menu();
     }
@@ -5063,7 +5101,9 @@ var control = (function() {
       valueConvert: ["float"]
     }],
     func: function() {
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-contrast-dark-number",
@@ -5082,14 +5122,18 @@ var control = (function() {
       valueConvert: ["float"]
     }],
     func: function() {
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
     }
   }, {
     element: ".control-theme-color-contrast-dark-default",
     type: "button",
     func: function() {
       mod.default("theme.color.contrast.dark");
+      theme.mod.color.generated();
       theme.render.color.shade();
+      theme.render.themeMetaTag();
       render.update.control.header();
       render.update.control.menu();
     }
