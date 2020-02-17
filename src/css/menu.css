@@ -146,6 +146,7 @@
   }
 
   .menu-nav {
+    background-color: rgba(var(--theme-color-02), 0.25);
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
