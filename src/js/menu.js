@@ -37,32 +37,46 @@ var menu = (function() {
 
   render.nav = function(name) {
     var allMenuNavTab = helper.eA(".menu-nav-tab");
-    var allMenuNavBody = helper.eA(".menu-nav-body");
     var allMenuContentArea = helper.eA(".menu-content");
 
     allMenuNavTab.forEach(function(arrayItem, index) {
       helper.removeClass(arrayItem, "active");
-    });
-    allMenuNavBody.forEach(function(arrayItem, index) {
-      helper.addClass(arrayItem, "is-hidden");
     });
     allMenuContentArea.forEach(function(arrayItem, index) {
       helper.addClass(arrayItem, "is-hidden");
     });
 
     var control = helper.e(".control-menu-" + name);
-    var body = helper.e(".menu-nav-body-" + name);
     var content = helper.e(".menu-content-" + name);
 
     if (control) {
       helper.addClass(control, "active");
     };
-    if (body) {
-      helper.removeClass(body, "is-hidden");
-    };
     if (content) {
       helper.removeClass(content, "is-hidden");
     };
+  };
+
+  render.subnav = {
+    calculate: function() {
+      var allMenuNavBody = helper.eA(".menu-nav-body");
+      allMenuNavBody.forEach(function(arrayItem, index) {
+        arrayItem.setAttribute("style", "--menu-nav-body-height:" + arrayItem.getBoundingClientRect().height + "px;");
+        if (index > 0) {
+          helper.removeClass(arrayItem, "active");
+        };
+      });
+    },
+    toggle: function(name) {
+      var allMenuNavBody = helper.eA(".menu-nav-body");
+      allMenuNavBody.forEach(function(arrayItem, index) {
+        helper.removeClass(arrayItem, "active");
+      });
+      var body = helper.e(".menu-nav-body-" + name);
+      if (body) {
+        helper.addClass(body, "active");
+      };
+    }
   };
 
   render.tabindex = {
@@ -104,6 +118,7 @@ var menu = (function() {
 
   var nav = function(name) {
     render.nav(name);
+    render.subnav.toggle(name);
     render.scrollToTop(name);
   };
 
@@ -144,6 +159,7 @@ var menu = (function() {
     mod.close();
     render.close();
     render.removeStyle();
+    render.subnav.calculate();
   };
 
   return {

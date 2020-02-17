@@ -165,7 +165,6 @@
   .menu-nav .menu-nav-tab {
     padding-left: calc(var(--menu-space) * 2);
     padding-right: calc(var(--menu-space) * 2);
-    height: 3.5em;
     justify-content: flex-start;
   }
 
@@ -174,6 +173,13 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    overflow: hidden;
+    height: 0;
+    transition: height var(--layout-timing-fast);
+  }
+
+  .menu-nav-body.active {
+    height: var(--menu-nav-body-height);
   }
 
   .is-edge .menu-nav-body {
@@ -214,6 +220,7 @@
     padding-left: calc(var(--menu-space) * 5);
     border-radius: 0;
     height: 3em;
+    min-height: 3em;
     width: 100%;
     line-height: 1;
     justify-content: flex-start;
@@ -246,6 +253,5 @@
   .menu {
     width: 60vw;
     max-width: 60em;
-    max-height: 60em;
   }
 }
