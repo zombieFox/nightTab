@@ -165,6 +165,7 @@
   .menu-nav .menu-nav-tab {
     padding-left: calc(var(--menu-space) * 2);
     padding-right: calc(var(--menu-space) * 2);
+    height: 3.5em;
     justify-content: flex-start;
   }
 
@@ -173,6 +174,10 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+  }
+
+  .is-edge .menu-nav-body {
+    background-color: rgba(var(--theme-color-02), 0.5);
   }
 
   .menu-close {
