@@ -37,6 +37,10 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
+  transition: padding var(--layout-timing-extra-fast) var(--layout-duration-04);
+}
+
+.is-edit .group-header {
   transition: padding var(--layout-timing-extra-fast);
 }
 
