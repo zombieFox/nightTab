@@ -380,10 +380,12 @@ var link = (function() {
       });
       var groupControl = helper.node("div|class:group-control form-group");
 
-      groupName.appendChild(groupNameText);
       groupHeader.appendChild(groupControl);
-      groupHeader.appendChild(groupName);
       group.appendChild(groupHeader);
+      if (state.get.current().group.name.show) {
+        groupName.appendChild(groupNameText);
+        groupHeader.appendChild(groupName);
+      };
 
       var groupBody = helper.node("div|class:group-body");
       group.appendChild(groupBody);

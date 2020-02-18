@@ -2826,6 +2826,7 @@ var control = (function() {
     path: "group.name.show",
     type: "checkbox",
     func: function() {
+      link.groupAndItems();
       render.class();
       render.dependents();
     }

@@ -82,9 +82,8 @@
 
 .group-name-text {
   margin-bottom: 0;
-  padding-right: 1em;
-  overflow: hidden;
   text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
 }
 
