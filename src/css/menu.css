@@ -218,11 +218,12 @@
     flex-wrap: nowrap;
     overflow: hidden;
     height: 0;
-    transition: height var(--layout-timing-fast);
+    transition: height var(--layout-timing-extra-fast);
   }
 
   .menu-nav-body.active {
     height: var(--menu-nav-body-height);
+    transition: height var(--layout-timing-fast) var(--layout-duration-02);
   }
 
   .is-edge .menu-nav-body {
@@ -261,19 +262,13 @@
 
 @media (min-width: 900px) {
   .menu {
-    width: 80vw;
-    max-width: 60em;
+    width: 90vw;
   }
 }
 
 @media (min-width: 1100px) {
   .menu {
-    width: 70vw;
-  }
-}
-
-@media (min-width: 1600px) {
-  .menu {
-    width: 60vw;
+    width: 80vw;
+    max-width: 60em;
   }
 }
