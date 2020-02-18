@@ -847,6 +847,20 @@ var update = (function() {
     "4.38.0": function(data) {
       data.state.theme.color.generated = {};
       return data;
+    },
+    "4.40.0": function(data) {
+      data.state.header.area.justify = data.state.header.area.alignment;
+      delete data.state.header.area.alignment;
+      data.state.header.item.justify = data.state.header.item.alignment;
+      delete data.state.header.item.alignment;
+      data.state.header.search.text.justify = data.state.header.search.text.alignment;
+      delete data.state.header.search.text.alignment;
+      data.state.link.area.justify = data.state.link.area.alignment;
+      delete data.state.link.area.alignment;
+      data.state.group.area.justify = data.state.group.area.alignment;
+      delete data.state.group.area.alignment;
+      data.state.group.area.align = "center";
+      return data;
     }
   };
 

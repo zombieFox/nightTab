@@ -40,16 +40,16 @@
   transition: padding var(--layout-timing-extra-fast);
 }
 
-.is-group-area-alignment-left .group-header {
+.is-group-area-justify-left .group-header {
   flex-direction: row;
 }
 
-.is-group-area-alignment-center .group-header {
+.is-group-area-justify-center .group-header {
   flex-direction: row;
   justify-content: center;
 }
 
-.is-group-area-alignment-right .group-header {
+.is-group-area-justify-right .group-header {
   flex-direction: row-reverse;
   justify-content: flex-start;
 }
@@ -72,7 +72,6 @@
   max-width: 100%;
   overflow: hidden;
   font-size: var(--group-name-size);
-  transition: height var(--layout-timing-extra-fast);
   transition: height var(--layout-timing-extra-fast);
 }
 
@@ -111,12 +110,12 @@
     margin var(--layout-timing-extra-fast) var(--layout-duration-04);
 }
 
-.is-edit.is-group-name-show.is-group-area-alignment-left .group-control,
-.is-edit.is-group-name-show.is-group-area-alignment-center .group-control {
+.is-edit.is-group-name-show.is-group-area-justify-left .group-control,
+.is-edit.is-group-name-show.is-group-area-justify-center .group-control {
   margin-right: 1em;
 }
 
-.is-edit.is-group-name-show.is-group-area-alignment-right .group-control {
+.is-edit.is-group-name-show.is-group-area-justify-right .group-control {
   margin-left: 1em;
 }
 

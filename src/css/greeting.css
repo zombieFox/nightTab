@@ -6,24 +6,24 @@
   font-weight: var(--theme-font-display-weight);
   font-style: var(--theme-font-display-style);
   color: rgb(var(--theme-style-text));
-  min-height: 2.5em;
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
+  line-height: 1.2;
 }
 
-.is-header-item-alignment-left .greeting {
+.is-header-item-justify-left .greeting {
   justify-content: flex-start;
   text-align: left;
 }
 
-.is-header-item-alignment-center .greeting {
+.is-header-item-justify-center .greeting {
   justify-content: center;
   text-align: center;
 }
 
-.is-header-item-alignment-right .greeting {
+.is-header-item-justify-right .greeting {
   justify-content: flex-end;
   text-align: right;
 }

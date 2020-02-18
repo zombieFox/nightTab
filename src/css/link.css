@@ -9,15 +9,15 @@
   display: flex;
 }
 
-.is-link-area-alignment-left .link {
+.is-link-area-justify-left .link {
   align-items: flex-start;
 }
 
-.is-link-area-alignment-center .link {
+.is-link-area-justify-center .link {
   align-items: center;
 }
 
-.is-link-area-alignment-right .link {
+.is-link-area-justify-right .link {
   align-items: flex-end;
 }
 

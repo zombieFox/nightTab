@@ -6,10 +6,11 @@ var state = (function() {
     header: {
       area: {
         width: 100,
-        alignment: "center"
+        justify: "center",
+        align: "center"
       },
       item: {
-        alignment: "left"
+        justify: "left"
       },
       greeting: {
         show: false,
@@ -114,7 +115,7 @@ var state = (function() {
           }
         },
         text: {
-          alignment: "center"
+          justify: "center"
         },
         size: 1,
         newLine: false
@@ -163,7 +164,7 @@ var state = (function() {
     link: {
       area: {
         width: 100,
-        alignment: "center"
+        justify: "center"
       },
       item: {
         color: {
@@ -222,7 +223,7 @@ var state = (function() {
     },
     group: {
       area: {
-        alignment: "left"
+        justify: "left"
       },
       name: {
         show: true,

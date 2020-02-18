@@ -770,8 +770,8 @@ var control = (function() {
       render.update.control.menu();
     }
   }, {
-    element: ".control-header-area-alignment-left",
-    path: "header.area.alignment",
+    element: ".control-header-area-justify-left",
+    path: "header.area.justify",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -786,8 +786,8 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: ".control-header-area-alignment-center",
-    path: "header.area.alignment",
+    element: ".control-header-area-justify-center",
+    path: "header.area.justify",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -802,8 +802,8 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: ".control-header-area-alignment-right",
-    path: "header.area.alignment",
+    element: ".control-header-area-justify-right",
+    path: "header.area.justify",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -818,22 +818,36 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: ".control-header-item-alignment-left",
-    path: "header.item.alignment",
+    element: ".control-header-area-align-center",
+    path: "header.area.align",
     type: "radio",
     func: function() {
       render.class();
     }
   }, {
-    element: ".control-header-item-alignment-center",
-    path: "header.item.alignment",
+    element: ".control-header-area-align-baseline",
+    path: "header.area.align",
     type: "radio",
     func: function() {
       render.class();
     }
   }, {
-    element: ".control-header-item-alignment-right",
-    path: "header.item.alignment",
+    element: ".control-header-item-justify-left",
+    path: "header.item.justify",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-header-item-justify-center",
+    path: "header.item.justify",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-header-item-justify-right",
+    path: "header.item.justify",
     type: "radio",
     func: function() {
       render.class();
@@ -2052,22 +2066,22 @@ var control = (function() {
       search.render.engine();
     }
   }, {
-    element: ".control-header-search-text-alignment-left",
-    path: "header.search.text.alignment",
+    element: ".control-header-search-text-justify-left",
+    path: "header.search.text.justify",
     type: "radio",
     func: function() {
       render.class();
     }
   }, {
-    element: ".control-header-search-text-alignment-center",
-    path: "header.search.text.alignment",
+    element: ".control-header-search-text-justify-center",
+    path: "header.search.text.justify",
     type: "radio",
     func: function() {
       render.class();
     }
   }, {
-    element: ".control-header-search-text-alignment-right",
-    path: "header.search.text.alignment",
+    element: ".control-header-search-text-justify-right",
+    path: "header.search.text.justify",
     type: "radio",
     func: function() {
       render.class();
@@ -2911,22 +2925,22 @@ var control = (function() {
       render.update.control.menu();
     }
   }, {
-    element: ".control-group-area-alignment-left",
-    path: "group.area.alignment",
+    element: ".control-group-area-justify-left",
+    path: "group.area.justify",
     type: "radio",
     func: function() {
       render.class();
     }
   }, {
-    element: ".control-group-area-alignment-center",
-    path: "group.area.alignment",
+    element: ".control-group-area-justify-center",
+    path: "group.area.justify",
     type: "radio",
     func: function() {
       render.class();
     }
   }, {
-    element: ".control-group-area-alignment-right",
-    path: "group.area.alignment",
+    element: ".control-group-area-justify-right",
+    path: "group.area.justify",
     type: "radio",
     func: function() {
       render.class();
@@ -3204,8 +3218,8 @@ var control = (function() {
       render.update.control.menu();
     }
   }, {
-    element: ".control-link-area-alignment-left",
-    path: "link.area.alignment",
+    element: ".control-link-area-justify-left",
+    path: "link.area.justify",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -3220,8 +3234,8 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: ".control-link-area-alignment-center",
-    path: "link.area.alignment",
+    element: ".control-link-area-justify-center",
+    path: "link.area.justify",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -3236,8 +3250,8 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: ".control-link-area-alignment-right",
-    path: "link.area.alignment",
+    element: ".control-link-area-justify-right",
+    path: "link.area.justify",
     type: "radio",
     additionalEvents: [{
       event: "change",
@@ -5951,19 +5965,25 @@ var control = (function() {
       header: {
         area: [{
           remove: [
-            "is-header-area-alignment-left",
-            "is-header-area-alignment-center",
-            "is-header-area-alignment-right"
+            "is-header-area-justify-left",
+            "is-header-area-justify-center",
+            "is-header-area-justify-right"
           ],
-          name: "is-header-area-alignment-" + state.get.current().header.area.alignment
+          name: "is-header-area-justify-" + state.get.current().header.area.justify
+        }, {
+          remove: [
+            "is-header-area-align-center",
+            "is-header-area-align-baseline"
+          ],
+          name: "is-header-area-align-" + state.get.current().header.area.align
         }],
         item: [{
           remove: [
-            "is-header-item-alignment-left",
-            "is-header-item-alignment-center",
-            "is-header-item-alignment-right"
+            "is-header-item-justify-left",
+            "is-header-item-justify-center",
+            "is-header-item-justify-right"
           ],
-          name: "is-header-item-alignment-" + state.get.current().header.item.alignment
+          name: "is-header-item-justify-" + state.get.current().header.item.justify
         }],
         greeting: [{
           remove: [
@@ -6003,14 +6023,14 @@ var control = (function() {
         }],
         search: [{
           remove: [
-            "is-header-search-text-alignment-left",
-            "is-header-search-text-alignment-center",
-            "is-header-search-text-alignment-right"
+            "is-header-search-text-justify-left",
+            "is-header-search-text-justify-center",
+            "is-header-search-text-justify-right"
           ],
           condition: function() {
             return state.get.current().header.search.show;
           },
-          name: "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment
+          name: "is-header-search-text-justify-" + state.get.current().header.search.text.justify
         }, {
           remove: [
             "is-header-search-width-by-custom",
@@ -6024,7 +6044,7 @@ var control = (function() {
           condition: function() {
             return state.get.current().header.search.show;
           },
-          name: "is-header-search-text-alignment-" + state.get.current().header.search.text.alignment
+          name: "is-header-search-text-justify-" + state.get.current().header.search.text.justify
         }, {
           remove: [
             "is-header-item-newline-search"
@@ -6125,11 +6145,11 @@ var control = (function() {
       group: {
         area: [{
           remove: [
-            "is-group-area-alignment-left",
-            "is-group-area-alignment-center",
-            "is-group-area-alignment-right"
+            "is-group-area-justify-left",
+            "is-group-area-justify-center",
+            "is-group-area-justify-right"
           ],
-          name: "is-group-area-alignment-" + state.get.current().group.area.alignment
+          name: "is-group-area-justify-" + state.get.current().group.area.justify
         }],
         name: [{
           remove: [
@@ -6167,14 +6187,14 @@ var control = (function() {
         name: "is-link-show"
       }, {
         remove: [
-          "is-link-area-alignment-left",
-          "is-link-area-alignment-center",
-          "is-link-area-alignment-right"
+          "is-link-area-justify-left",
+          "is-link-area-justify-center",
+          "is-link-area-justify-right"
         ],
         condition: function() {
           return state.get.current().link.show;
         },
-        name: "is-link-area-alignment-" + state.get.current().link.area.alignment
+        name: "is-link-area-justify-" + state.get.current().link.area.justify
       }, {
         remove: [
           "is-link-display-alignment-topleft",
@@ -6692,11 +6712,11 @@ var control = (function() {
               ".control-header-search-engine-giphy",
               ".control-header-search-engine-bing",
               ".control-header-search-engine-custom",
-              ".control-header-search-text-alignment-grid",
-              ".control-header-search-text-alignment-label",
-              ".control-header-search-text-alignment-left",
-              ".control-header-search-text-alignment-center",
-              ".control-header-search-text-alignment-right",
+              ".control-header-search-text-justify-grid",
+              ".control-header-search-text-justify-label",
+              ".control-header-search-text-justify-left",
+              ".control-header-search-text-justify-center",
+              ".control-header-search-text-justify-right",
               "[for=control-header-search-size-range]",
               ".control-header-search-size-range",
               ".control-header-search-size-number",
@@ -6852,12 +6872,12 @@ var control = (function() {
             ".control-link-area-width-default",
             ".control-link-area-width-match",
             ".control-link-area-width-helper",
-            ".control-link-area-alignment-grid",
-            ".control-link-area-alignment-label",
-            ".control-link-area-alignment-left",
-            ".control-link-area-alignment-center",
-            ".control-link-area-alignment-right",
-            ".control-link-area-alignment-helper",
+            ".control-link-area-justify-grid",
+            ".control-link-area-justify-label",
+            ".control-link-area-justify-left",
+            ".control-link-area-justify-center",
+            ".control-link-area-justify-right",
+            ".control-link-area-justify-helper",
             "[for=control-link-item-size-range]",
             ".control-link-item-size-range",
             ".control-link-item-size-number",
