@@ -859,7 +859,7 @@ var update = (function() {
       delete data.state.link.area.alignment;
       data.state.group.area.justify = data.state.group.area.alignment;
       delete data.state.group.area.alignment;
-      data.state.group.area.align = "center";
+      data.state.header.area.align = "center";
       return data;
     }
   };
