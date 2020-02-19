@@ -44,6 +44,9 @@
         <label for="control-theme-style-light"><span class="label-icon"></span> Light</label>
       </div>
       <div class="form-helper">
+        <p class="control-theme-style-helper form-helper-item">Flip the colour shades defined by the primary Colour.</p>
+      </div>
+      <div class="form-helper">
         <p class="control-theme-style-helper form-helper-item">Accent Colour and Background Image may need to be changed to best fit the Theme Style.</p>
       </div>
     </div>
@@ -71,6 +74,7 @@
       </div>
       <div class="form-wrap">
         <div class="form-indent">
+          <hr>
           <div class="form-wrap">
             <label for="control-theme-font-display-weight-range">Font weight</label>
             <div class="form-group form-group-block">
@@ -131,6 +135,7 @@
       </div>
       <div class="form-wrap">
         <div class="form-indent">
+          <hr>
           <div class="form-wrap">
             <label for="control-theme-font-ui-weight">Font weight</label>
             <div class="form-group form-group-block">
@@ -270,65 +275,69 @@
       <div class="form-helper">
         <p class="control-theme-color-helper form-helper-item">Light and dark shades from this colour are used across nightTabs.</p>
       </div>
-      <hr>
       <div class="form-wrap">
-        <label for="control-theme-color-hsl-h-range">Hue</label>
-        <div class="form-group form-group-block">
-          <input id="control-theme-color-hsl-h-range" class="control-theme-color-hsl-h-range mr-3" type="range" value="0" tabindex="-1">
-          <input class="control-theme-color-hsl-h-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
-        </div>
-      </div>
-      <div class="form-wrap">
-        <label for="control-theme-color-hsl-s-range">Saturation</label>
-        <div class="form-group form-group-block">
-          <input id="control-theme-color-hsl-s-range" class="control-theme-color-hsl-s-range mr-3" type="range" value="0" tabindex="-1">
-          <input class="control-theme-color-hsl-s-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
-        </div>
-      </div>
-      <div class="form-wrap">
-        <label for="control-theme-color-hsl-l-range">Lightness</label>
-        <div class="form-group form-group-block">
-          <input id="control-theme-color-hsl-l-range" class="control-theme-color-hsl-l-range mr-3" type="range" value="0" tabindex="-1">
-          <input class="control-theme-color-hsl-l-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
-        </div>
-      </div>
-      <hr>
-      <div class="form-wrap">
-        <label for="control-theme-color-rgb-r-range">Red</label>
-        <div class="form-group form-group-block">
-          <input id="control-theme-color-rgb-r-range" class="control-theme-color-rgb-r-range mr-3" type="range" value="0" tabindex="-1">
-          <input class="control-theme-color-rgb-r-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
-        </div>
-      </div>
-      <div class="form-wrap">
-        <label for="control-theme-color-rgb-g-range">Green</label>
-        <div class="form-group form-group-block">
-          <input id="control-theme-color-rgb-g-range" class="control-theme-color-rgb-g-range mr-3" type="range" value="0" tabindex="-1">
-          <input class="control-theme-color-rgb-g-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
-        </div>
-      </div>
-      <div class="form-wrap">
-        <label for="control-theme-color-rgb-b-range">Blue</label>
-        <div class="form-group form-group-block">
-          <input id="control-theme-color-rgb-b-range" class="control-theme-color-rgb-b-range mr-3" type="range" value="0" tabindex="-1">
-          <input class="control-theme-color-rgb-b-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
-        </div>
-      </div>
-      <hr>
-      <div class="form-wrap">
-        <label for="control-theme-color-contrast-light-range">Light shade contrast</label>
-        <div class="form-group form-group-block">
-          <input id="control-theme-color-contrast-light-range" class="control-theme-color-contrast-light-range mr-3" type="range" value="0" tabindex="-1">
-          <input class="control-theme-color-contrast-light-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
-          <button class="control-theme-color-contrast-light-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
-        </div>
-      </div>
-      <div class="form-wrap">
-        <label for="control-theme-color-contrast-dark-range">Dark shade contrast</label>
-        <div class="form-group form-group-block">
-          <input id="control-theme-color-contrast-dark-range" class="control-theme-color-contrast-dark-range mr-3" type="range" value="0" tabindex="-1">
-          <input class="control-theme-color-contrast-dark-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
-          <button class="control-theme-color-contrast-dark-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+        <div class="form-indent">
+          <hr>
+          <div class="form-wrap">
+            <label for="control-theme-color-hsl-h-range">Hue</label>
+            <div class="form-group form-group-block">
+              <input id="control-theme-color-hsl-h-range" class="control-theme-color-hsl-h-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-theme-color-hsl-h-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            </div>
+          </div>
+          <div class="form-wrap">
+            <label for="control-theme-color-hsl-s-range">Saturation</label>
+            <div class="form-group form-group-block">
+              <input id="control-theme-color-hsl-s-range" class="control-theme-color-hsl-s-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-theme-color-hsl-s-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            </div>
+          </div>
+          <div class="form-wrap">
+            <label for="control-theme-color-hsl-l-range">Lightness</label>
+            <div class="form-group form-group-block">
+              <input id="control-theme-color-hsl-l-range" class="control-theme-color-hsl-l-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-theme-color-hsl-l-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            </div>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <label for="control-theme-color-rgb-r-range">Red</label>
+            <div class="form-group form-group-block">
+              <input id="control-theme-color-rgb-r-range" class="control-theme-color-rgb-r-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-theme-color-rgb-r-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            </div>
+          </div>
+          <div class="form-wrap">
+            <label for="control-theme-color-rgb-g-range">Green</label>
+            <div class="form-group form-group-block">
+              <input id="control-theme-color-rgb-g-range" class="control-theme-color-rgb-g-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-theme-color-rgb-g-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            </div>
+          </div>
+          <div class="form-wrap">
+            <label for="control-theme-color-rgb-b-range">Blue</label>
+            <div class="form-group form-group-block">
+              <input id="control-theme-color-rgb-b-range" class="control-theme-color-rgb-b-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-theme-color-rgb-b-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            </div>
+          </div>
+          <hr>
+          <div class="form-wrap">
+            <label for="control-theme-color-contrast-light-range">Light shade contrast</label>
+            <div class="form-group form-group-block">
+              <input id="control-theme-color-contrast-light-range" class="control-theme-color-contrast-light-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-theme-color-contrast-light-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+              <button class="control-theme-color-contrast-light-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+            </div>
+          </div>
+          <div class="form-wrap">
+            <label for="control-theme-color-contrast-dark-range">Dark shade contrast</label>
+            <div class="form-group form-group-block">
+              <input id="control-theme-color-contrast-dark-range" class="control-theme-color-contrast-dark-range mr-3" type="range" value="0" tabindex="-1">
+              <input class="control-theme-color-contrast-dark-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+              <button class="control-theme-color-contrast-dark-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

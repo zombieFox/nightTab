@@ -68,7 +68,7 @@ hr {
   border: 0;
   border-top: var(--horizontal-rule-small);
   border-radius: var(--theme-radius);
-  margin: var(--form-wrap-space) 0;
+  margin: calc(var(--form-wrap-space) * 1.5) 0;
   clear: both;
 }
 

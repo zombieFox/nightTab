@@ -6441,6 +6441,7 @@ var control = (function() {
             return [
               "[for=control-header-greeting-name]",
               ".control-header-greeting-name",
+              ".control-header-greeting-type-label",
               ".control-header-greeting-type-good",
               ".control-header-greeting-type-hello",
               ".control-header-greeting-type-hi",
@@ -6549,6 +6550,7 @@ var control = (function() {
           },
           dependents: function() {
             return [
+              ".control-header-transitional-type-label",
               ".control-header-transitional-type-timeanddate",
               ".control-header-transitional-type-its",
               "[for=control-header-transitional-size-range]",

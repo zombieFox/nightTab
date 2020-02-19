@@ -115,7 +115,7 @@
 }
 
 .menu-content-item {
-  padding: calc(var(--menu-space) * 3);
+  padding: calc(var(--menu-space) * 2) calc(var(--menu-space) * 3);
   position: relative;
   z-index: 1;
 }
@@ -125,7 +125,7 @@
 }
 
 .menu-item-header {
-  margin-bottom: calc(var(--menu-space) * 2);
+  margin-bottom: calc(var(--menu-space) * 1);
 }
 
 .menu-item-header-text {
@@ -196,11 +196,11 @@
   }
 
   .menu-content-item {
-    padding: calc(var(--menu-space) * 4);
+    padding: calc(var(--menu-space) * 3) calc(var(--menu-space) * 4);
   }
 
   .menu-item-header {
-    margin-bottom: calc(var(--menu-space) * 3);
+    margin-bottom: calc(var(--menu-space) * 2);
   }
 
   .menu-nav-item {
@@ -272,11 +272,7 @@
   }
 
   .menu-content-item {
-    padding: calc(var(--menu-space) * 5);
-  }
-
-  .menu-item-header {
-    margin-bottom: calc(var(--menu-space) * 4);
+    padding: calc(var(--menu-space) * 4) calc(var(--menu-space) * 5);
   }
 
   .menu-close-tab {
