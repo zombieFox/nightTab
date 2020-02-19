@@ -2006,7 +2006,6 @@ var theme = (function() {
   };
 
   var init = function() {
-    accent.random();
     mod.color.generated();
     mod.accent.random();
     mod.custom.close();

@@ -400,7 +400,7 @@ var header = (function() {
       var formGroup = helper.node("div|class:header-coloraccent form-group form-group-nested-button");
 
       var colorInputButton = helper.node("div|class:form-input-button");
-      var colorInput = helper.node("input|id:control-theme-color-rgb-color-quick,class:control-theme-color-rgb-color-quick,type:color,value:#000000,tabindex:1");
+      var colorInput = helper.node("input|id:control-theme-color-rgb-color-quick,class:control-theme-color-rgb-color-quick,type:color,value:#000000,tabindex:1,autocomplete:off");
       var colorInputLabel = helper.node("label|for:control-theme-color-rgb-color-quick");
       var colorInputLabelText = helper.node("span:Colour");
       colorInputLabel.appendChild(colorInputLabelText);
@@ -408,7 +408,7 @@ var header = (function() {
       colorInputButton.appendChild(colorInputLabel);
 
       var accentInputButton = helper.node("div|class:form-input-button");
-      var accentInput = helper.node("input|id:control-theme-accent-rgb-color-quick,class:control-theme-accent-rgb-color-quick,type:color,value:#000000,tabindex:1");
+      var accentInput = helper.node("input|id:control-theme-accent-rgb-color-quick,class:control-theme-accent-rgb-color-quick,type:color,value:#000000,tabindex:1,autocomplete:off");
       var accentInputLabel = helper.node("label|for:control-theme-accent-rgb-color-quick");
       var accentInputLabelText = helper.node("span:Accent");
       accentInputLabel.appendChild(accentInputLabelText);
