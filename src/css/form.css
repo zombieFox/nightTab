@@ -29,7 +29,7 @@
 }
 
 .form-indent {
-  margin-left: calc(var(--form-wrap-space) * 3);
+  margin-left: calc(var(--form-wrap-space) * 2.25);
 }
 
 .form-inline {

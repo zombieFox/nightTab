@@ -127,7 +127,8 @@
   --layout-timing-medium:                               var(--layout-duration-06) ease-in-out;
   --layout-timing-slow:                                 var(--layout-duration-08) ease-in-out;
   --layout-timing-extra-slow:                           var(--layout-duration-10) ease-in-out;
-  --horizontal-rule:                                    var(--layout-line-width) solid rgb(var(--theme-color-02));
+  --horizontal-rule-small:                              1px solid rgb(var(--theme-color-02));
+  --horizontal-rule-large:                              2px solid rgb(var(--theme-color-02));
   /* background */
   --background-color-theme:                             var(--theme-color-01);
   --background-color-custom:                            rgb(0, 0, 0);

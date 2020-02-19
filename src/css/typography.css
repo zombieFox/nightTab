@@ -66,9 +66,9 @@ p:not(:last-child) {
 
 hr {
   border: 0;
-  border-top: var(--horizontal-rule);
+  border-top: var(--horizontal-rule-small);
   border-radius: var(--theme-radius);
-  margin: 1em 0;
+  margin: var(--form-wrap-space) 0;
   clear: both;
 }
 
