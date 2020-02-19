@@ -191,12 +191,12 @@
     z-index: 3;
   }
 
-  .menu-content-overscroll {
-    padding-bottom: calc(var(--menu-space) * 30);
-  }
-
   .menu-content-item {
     padding: calc(var(--menu-space) * 3) calc(var(--menu-space) * 4);
+  }
+
+  .menu-content-overscroll .menu-content-item:last-child {
+    padding-bottom: calc(var(--menu-space) * 30);
   }
 
   .menu-item-header {
