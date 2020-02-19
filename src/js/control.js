@@ -2,6 +2,17 @@ var control = (function() {
 
   var mod = {};
 
+  mod.debug = {
+    active: false,
+    toggle: function() {
+      if (mod.debug.active) {
+        mod.debug.active = false;
+      } else {
+        mod.debug.active = true;
+      };
+    }
+  };
+
   mod.header = [{
     element: ".control-menu-open",
     type: "button",
@@ -5776,10 +5787,12 @@ var control = (function() {
             path: object.path,
             newValue: newValue
           });
-          console.log("state set", object.path, helper.getObject({
-            object: state.get.current(),
-            path: object.path
-          }));
+          if (mod.debug.active) {
+            console.log("state set", object.path, helper.getObject({
+              object: state.get.current(),
+              path: object.path
+            }));
+          };
         };
       },
       get: {
@@ -7260,6 +7273,10 @@ var control = (function() {
     }
   };
 
+  var debug = function() {
+    mod.debug.toggle();
+  };
+
   var init = function() {
     bind.control.header();
     bind.control.menu();
@@ -7276,7 +7293,8 @@ var control = (function() {
     init: init,
     mod: mod,
     bind: bind,
-    render: render
+    render: render,
+    debug: debug
   };
 
 })();
