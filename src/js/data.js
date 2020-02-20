@@ -12,14 +12,6 @@ var data = (function() {
   };
 
   mod.export = function() {
-    var encode = function(string) {
-      var out = [];
-      for (var i = 0; i < string.length; i++) {
-        out[i] = string.charCodeAt(i);
-      };
-      return new Uint8Array(out);
-    };
-    var tempAchor = helper.node("a");
     var timeStamp = helper.getDateTime();
     var _timeStampPrefix = function(value) {
       if (value < 10) {
@@ -34,15 +26,10 @@ var data = (function() {
     timeStamp.month = _timeStampPrefix(timeStamp.month + 1);
     timeStamp.year = _timeStampPrefix(timeStamp.year);
     timeStamp = timeStamp.hours + " " + timeStamp.minutes + " " + timeStamp.seconds + " - " + timeStamp.date + "." + timeStamp.month + "." + timeStamp.year;
-    var fileName = "nightTab backup - " + timeStamp + ".json";
-    var str = JSON.stringify(load());
-    var data = encode(str);
-    var blob = new Blob([data], {
-      type: "application/json"
-    });
-    var url = URL.createObjectURL(blob);
+    var fileName = _saveName + " backup - " + timeStamp + ".json";
+    var data = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(load()));
     var link = document.createElement("a");
-    link.setAttribute("href", url);
+    link.setAttribute("href", data);
     link.setAttribute("download", fileName);
     link.addEventListener("click", function(event) {
       this.remove();
