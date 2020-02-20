@@ -861,6 +861,10 @@ var update = (function() {
       delete data.state.group.area.alignment;
       data.state.header.area.align = "center";
       return data;
+    },
+    "4.41.0": function(data) {
+      data.state.header.search.newTab = false;
+      return data;
     }
   };
 

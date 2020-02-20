@@ -2193,6 +2193,31 @@ var control = (function() {
       render.update.control.menu();
     }
   }, {
+    element: ".control-header-search-newtab",
+    path: "header.search.newTab",
+    type: "checkbox",
+    func: function() {
+      header.render.item.clear();
+      header.render.item.all();
+      header.render.search.width.size();
+      greeting.render.clear();
+      greeting.render.all();
+      clock.render.clear();
+      clock.render.all();
+      transitional.render.clear();
+      transitional.render.all();
+      date.render.clear();
+      date.render.all();
+      render.class();
+      render.dependents();
+      render.update.control.header();
+      bind.control.header();
+      search.render.engine();
+      search.bind.input();
+      search.bind.clear();
+      dropdown.bind.editAdd();
+    }
+  }, {
     element: ".control-header-search-newline",
     path: "header.search.newLine",
     type: "checkbox",
@@ -6738,6 +6763,7 @@ var control = (function() {
               ".control-header-search-size-number",
               ".control-header-search-size-default",
               ".control-header-search-size-helper",
+              ".control-header-search-newtab",
               ".control-header-search-newline",
               ".control-header-search-newline-helper"
             ];

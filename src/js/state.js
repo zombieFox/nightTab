@@ -118,7 +118,8 @@ var state = (function() {
           justify: "center"
         },
         size: 1,
-        newLine: false
+        newLine: false,
+        newTab: false
       },
       editAdd: {
         show: true,

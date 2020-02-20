@@ -352,6 +352,10 @@ var header = (function() {
         helper.addClass(searchInput, "input-clear");
       };
 
+      if (state.get.current().header.search.newTab) {
+        form.setAttribute("target", "_blank");
+      };
+
       return headerSearchBody;
     },
     editAdd: function() {
