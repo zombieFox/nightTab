@@ -380,62 +380,78 @@ var link = (function() {
       });
       var groupControl = helper.node("div|class:group-control form-group");
 
+      var groupControlItemUp = helper.node("button|class:button button-small group-control-item group-control-item-up,tabindex:-1,title:Move this group up");
+      var groupControlItemUpIcon = helper.node("span|class:button-icon icon-arrow-up");
+      groupControlItemUp.appendChild(groupControlItemUpIcon);
+      groupControl.appendChild(groupControlItemUp);
+
+      var groupControlItemHandle = helper.node("div|class:button button-small group-control-item group-control-item-handle,tabindex:-1,title:Drag group to reorder");
+      var groupControlItemHandleIcon = helper.node("span|class:button-icon icon-reorder");
+      groupControlItemHandle.appendChild(groupControlItemHandleIcon);
+      groupControl.appendChild(groupControlItemHandle);
+
+      var groupControlItemDown = helper.node("button|class:button button-small group-control-item group-control-item-down,tabindex:-1,title:Move this group down");
+      var groupControlItemDownIcon = helper.node("span|class:button-icon icon-arrow-down");
+      groupControlItemDown.appendChild(groupControlItemDownIcon);
+      groupControl.appendChild(groupControlItemDown);
+
+      var groupControlItemEdit = helper.node("button|class:button button-small group-control-item group-control-item-edit,tabindex:-1,title:Edit this group");
+      var groupControlItemEditIcon = helper.node("span|class:button-icon icon-edit");
+      groupControlItemEdit.appendChild(groupControlItemEditIcon);
+      groupControl.appendChild(groupControlItemEdit);
+
+      var groupControlItemRemove = helper.node("button|class:button button-small group-control-item group-control-item-remove,tabindex:-1,title:Remove this group");
+      var groupControlItemRemoveIcon = helper.node("span|class:button-icon icon-close");
+      groupControlItemRemove.appendChild(groupControlItemRemoveIcon);
+      groupControl.appendChild(groupControlItemRemove);
+
+      if (state.get.current().search) {
+        groupControlItemUp.disabled = true;
+        helper.addClass(groupControlItemHandle, "disabled");
+        groupControlItemDown.disabled = true;
+      };
+
+      var groupOpenall = helper.node("button|class:button button-small group-openall,tabindex:-1,title:Open all Bookmark in this group");
+      var groupOpenallIcon = helper.node("span|class:button-icon icon-launch");
+      groupOpenall.appendChild(groupOpenallIcon);
+
       groupHeader.appendChild(groupControl);
-      group.appendChild(groupHeader);
       if (state.get.current().group.name.show) {
         groupName.appendChild(groupNameText);
         groupHeader.appendChild(groupName);
       };
+      if (stagedGroup.group.items) {
+        groupHeader.appendChild(groupOpenall);
+      };
+      group.appendChild(groupHeader);
 
       var groupBody = helper.node("div|class:group-body");
       group.appendChild(groupBody);
 
-      var itemGroupControlItemUp = helper.node("button|class:button button-small group-control-item group-control-item-up,tabindex:-1,title:Move this group up");
-      var itemGroupControlItemUpIcon = helper.node("span|class:button-icon icon-arrow-up");
-      itemGroupControlItemUp.appendChild(itemGroupControlItemUpIcon);
-      groupControl.appendChild(itemGroupControlItemUp);
-
-      var itemGroupControlItemHandle = helper.node("div|class:button button-small group-control-item group-control-item-handle,tabindex:-1,title:Drag group to reorder");
-      var itemGroupControlItemHandleIcon = helper.node("span|class:button-icon icon-reorder");
-      itemGroupControlItemHandle.appendChild(itemGroupControlItemHandleIcon);
-      groupControl.appendChild(itemGroupControlItemHandle);
-
-      var itemGroupControlItemDown = helper.node("button|class:button button-small group-control-item group-control-item-down,tabindex:-1,title:Move this group down");
-      var itemGroupControlItemDownIcon = helper.node("span|class:button-icon icon-arrow-down");
-      itemGroupControlItemDown.appendChild(itemGroupControlItemDownIcon);
-      groupControl.appendChild(itemGroupControlItemDown);
-
-      var itemGroupControlItemEdit = helper.node("button|class:button button-small group-control-item group-control-item-edit,tabindex:-1,title:Edit this group");
-      var itemGroupControlItemEditIcon = helper.node("span|class:button-icon icon-edit");
-      itemGroupControlItemEdit.appendChild(itemGroupControlItemEditIcon);
-      groupControl.appendChild(itemGroupControlItemEdit);
-
-      var itemGroupControlItemRemove = helper.node("button|class:button button-small group-control-item group-control-item-remove,tabindex:-1,title:Remove this group");
-      var itemGroupControlItemRemoveIcon = helper.node("span|class:button-icon icon-close");
-      itemGroupControlItemRemove.appendChild(itemGroupControlItemRemoveIcon);
-      groupControl.appendChild(itemGroupControlItemRemove);
-
-      if (state.get.current().search) {
-        itemGroupControlItemUp.disabled = true;
-        helper.addClass(itemGroupControlItemHandle, "disabled");
-        itemGroupControlItemDown.disabled = true;
-      };
-
       var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
 
-      itemGroupControlItemUp.addEventListener("click", function(event) {
+      groupOpenall.addEventListener("click", function() {
+        console.log(copyStagedGroup.group.items);
+        copyStagedGroup.group.items.forEach(function(arrayItem, index) {
+          chrome.tabs.create({
+            url: arrayItem.url
+          });
+        })
+      });
+
+      groupControlItemUp.addEventListener("click", function(event) {
         render.move.group.up(copyStagedGroup);
       }, false);
 
-      itemGroupControlItemDown.addEventListener("click", function() {
+      groupControlItemDown.addEventListener("click", function() {
         render.move.group.down(copyStagedGroup);
       }, false);
 
-      itemGroupControlItemEdit.addEventListener("click", function() {
+      groupControlItemEdit.addEventListener("click", function() {
         edit.group.open(copyStagedGroup);
       }, false);
 
-      itemGroupControlItemRemove.addEventListener("click", function() {
+      groupControlItemRemove.addEventListener("click", function() {
         render.remove.group(copyStagedGroup);
       }, false);
 
