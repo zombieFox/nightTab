@@ -865,6 +865,13 @@ var update = (function() {
     "4.41.0": function(data) {
       data.state.header.search.newTab = false;
       return data;
+    },
+    "4.42.0": function(data) {
+      data.state.group.openAll = {
+        show: true,
+        size: 1
+      };
+      return data;
     }
   };
 

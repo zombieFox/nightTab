@@ -230,6 +230,10 @@ var state = (function() {
         show: true,
         size: 1
       },
+      openAll: {
+        show: true,
+        size: 1
+      },
       border: 0,
       order: "headerbody",
       add: false,

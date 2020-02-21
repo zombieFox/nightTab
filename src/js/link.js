@@ -366,9 +366,17 @@ var link = (function() {
 
   render.group = {
     area: function() {
+      var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
+
       var group = helper.node("div|class:group");
 
       var groupHeader = helper.node("div|class:group-header");
+      var groupHeaderItemControl = helper.node("div|class:group-header-item group-header-item-control");
+      var groupHeaderItemName = helper.node("div|class:group-header-item group-header-item-name");
+      var groupHeaderItemUtility = helper.node("div|class:group-header-item group-header-item-utility");
+
+      var groupBody = helper.node("div|class:group-body");
+
       var groupName = helper.node("div|class:group-name");
       var groupNameText = helper.makeNode({
         tag: "h1",
@@ -378,6 +386,9 @@ var link = (function() {
           value: "group-name-text"
         }]
       });
+      groupName.appendChild(groupNameText);
+      groupHeaderItemName.appendChild(groupName);
+
       var groupControl = helper.node("div|class:group-control form-group");
 
       var groupControlItemUp = helper.node("button|class:button button-small group-control-item group-control-item-up,tabindex:-1,title:Move this group up");
@@ -411,33 +422,7 @@ var link = (function() {
         groupControlItemDown.disabled = true;
       };
 
-      var groupOpenall = helper.node("button|class:button button-small group-openall,tabindex:-1,title:Open all Bookmark in this group");
-      var groupOpenallIcon = helper.node("span|class:button-icon icon-launch");
-      groupOpenall.appendChild(groupOpenallIcon);
-
-      groupHeader.appendChild(groupControl);
-      if (state.get.current().group.name.show) {
-        groupName.appendChild(groupNameText);
-        groupHeader.appendChild(groupName);
-      };
-      if (stagedGroup.group.items) {
-        groupHeader.appendChild(groupOpenall);
-      };
-      group.appendChild(groupHeader);
-
-      var groupBody = helper.node("div|class:group-body");
-      group.appendChild(groupBody);
-
-      var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
-
-      groupOpenall.addEventListener("click", function() {
-        console.log(copyStagedGroup.group.items);
-        copyStagedGroup.group.items.forEach(function(arrayItem, index) {
-          chrome.tabs.create({
-            url: arrayItem.url
-          });
-        })
-      });
+      groupHeaderItemControl.appendChild(groupControl);
 
       groupControlItemUp.addEventListener("click", function(event) {
         render.move.group.up(copyStagedGroup);
@@ -454,6 +439,35 @@ var link = (function() {
       groupControlItemRemove.addEventListener("click", function() {
         render.remove.group(copyStagedGroup);
       }, false);
+
+      var groupUtility = helper.node("div|class:group-utility form-group");
+      var groupOpenall = helper.node("button|class:button button-small group-utility-item group-openall,tabindex:-1,title:Open all Bookmark in this group");
+      var groupOpenallText = helper.node("span:Open all|class:button-text");
+      // var groupOpenallIcon = helper.node("span|class:button-icon icon-launch");
+      groupOpenall.appendChild(groupOpenallText);
+      // groupOpenall.appendChild(groupOpenallIcon);
+      groupUtility.appendChild(groupOpenall);
+
+      groupOpenall.addEventListener("click", function() {
+        console.log(copyStagedGroup.group.items);
+        copyStagedGroup.group.items.forEach(function(arrayItem, index) {
+          chrome.tabs.create({
+            url: arrayItem.url
+          });
+        })
+      });
+
+      groupHeaderItemUtility.appendChild(groupUtility);
+
+      groupHeader.appendChild(groupHeaderItemControl);
+      if (state.get.current().group.name.show) {
+        groupHeader.appendChild(groupHeaderItemName);
+      };
+      if (state.get.current().group.openAll.show && stagedGroup.group.items.length > 0) {
+        groupHeader.appendChild(groupHeaderItemUtility);
+      };
+      group.appendChild(groupHeader);
+      group.appendChild(groupBody);
 
       return group;
     },

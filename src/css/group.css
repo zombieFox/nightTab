@@ -40,6 +40,18 @@
   transition: padding var(--layout-timing-extra-fast) var(--layout-duration-04);
 }
 
+.group-header-item {
+  display: flex;
+
+}
+
+.is-group-area-justify-center .group-header-item:not(:only-child):not(:last-child),
+.is-group-area-justify-right .group-header-item:not(:only-child):not(:first-child),
+.is-group-area-justify-left .group-header-item:not(:only-child):not(:last-child) {
+  margin-right: 1em;
+}
+
+
 .is-edit .group-header {
   transition: padding var(--layout-timing-extra-fast);
 }
@@ -69,19 +81,16 @@
 }
 
 .group-name {
-  margin-right: 0;
   display: flex;
   align-items: center;
-  height: 0;
   max-width: 100%;
   overflow: hidden;
   font-size: var(--group-name-size);
-  transition: height var(--layout-timing-extra-fast);
 }
 
 .is-group-name-show .group-name {
   display: flex;
-  height: 2.5em;
+  /* height: 2.5em; */
 }
 
 .group-name-text {
@@ -91,7 +100,7 @@
   white-space: nowrap;
 }
 
-.group-control {
+/* .group-control {
   margin-right: 0;
   margin-bottom: 0;
   overflow: hidden;
@@ -111,22 +120,46 @@
     width var(--layout-timing-extra-fast) var(--layout-duration-04),
     height var(--layout-timing-extra-fast),
     margin var(--layout-timing-extra-fast) var(--layout-duration-04);
-}
+} */
 
-.is-edit.is-group-name-show.is-group-area-justify-left .group-control,
+/* .is-edit.is-group-name-show.is-group-area-justify-left .group-control,
 .is-edit.is-group-name-show.is-group-area-justify-center .group-control {
   margin-right: 1em;
 }
 
 .is-edit.is-group-name-show.is-group-area-justify-right .group-control {
   margin-left: 1em;
-}
-
+} */
 .group-control-item {
   padding-left: 1.25em;
   padding-right: 1.25em;
   flex-shrink: 0;
 }
+
+.group-utility {}
+
+.group-utility-item {}
+
+/* .is-group-area-justify-center .group-name:not(:only-child):not(:last-child),
+.is-group-area-justify-center .group-utility:not(:only-child):not(:last-child),
+.is-group-area-justify-left .group-name:not(:only-child):not(:last-child),
+.is-group-area-justify-left .group-utility:not(:only-child):not(:last-child) {
+  margin-right: 1em;
+}
+
+.is-group-area-justify-right .group-name:not(:only-child):not(:first-child),
+.is-group-area-justify-right .group-utility:not(:only-child):not(:first-child) {
+  margin-left: 1em;
+}
+
+.is-edit.is-group-area-justify-center .group-control:not(:only-child):not(:last-child),
+.is-edit.is-group-area-justify-left .group-control:not(:only-child):not(:last-child) {
+  margin-right: 1em;
+}
+
+.is-edit.is-group-area-justify-right .group-control:not(:only-child):not(:last-child) {
+  margin-left: 1em;
+} */
 
 .group-body {
   background-color: transparent;
