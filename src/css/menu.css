@@ -196,7 +196,7 @@
   }
 
   .menu-content-overscroll .menu-content-item:last-child {
-    padding-bottom: calc(var(--menu-space) * 30);
+    padding-bottom: calc(var(--menu-space) * 50);
   }
 
   .menu-item-header {

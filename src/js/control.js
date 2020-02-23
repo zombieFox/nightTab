@@ -2879,6 +2879,20 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: ".control-group-order-headerbody",
+    path: "group.order",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-group-order-bodyheader",
+    path: "group.order",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
     element: ".control-group-name-show",
     path: "group.name.show",
     type: "checkbox",
@@ -3099,20 +3113,6 @@ var control = (function() {
     type: "radio",
     func: function() {
       link.groupAndItems();
-    }
-  }, {
-    element: ".control-group-order-headerbody",
-    path: "group.order",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-group-order-bodyheader",
-    path: "group.order",
-    type: "radio",
-    func: function() {
-      render.class();
     }
   }, {
     element: ".control-group-border-range",
@@ -3525,67 +3525,40 @@ var control = (function() {
       render.update.control.menu();
     }
   }, {
-    element: ".control-link-item-display-alignment-topleft",
-    path: "link.item.display.alignment",
-    type: "radio",
+    element: ".control-link-item-url-show",
+    path: "link.item.url.show",
+    type: "checkbox",
+    func: function() {
+      render.class();
+      render.dependents();
+    }
+  }, {
+    element: ".control-link-item-line-show",
+    path: "link.item.line.show",
+    type: "checkbox",
     func: function() {
       render.class();
     }
   }, {
-    element: ".control-link-item-display-alignment-topcenter",
-    path: "link.item.display.alignment",
-    type: "radio",
+    element: ".control-link-item-shadow-show",
+    path: "link.item.shadow.show",
+    type: "checkbox",
     func: function() {
       render.class();
     }
   }, {
-    element: ".control-link-item-display-alignment-topright",
-    path: "link.item.display.alignment",
-    type: "radio",
+    element: ".control-link-item-hoverscale",
+    path: "link.item.hoverScale.show",
+    type: "checkbox",
     func: function() {
       render.class();
     }
   }, {
-    element: ".control-link-item-display-alignment-centerleft",
-    path: "link.item.display.alignment",
-    type: "radio",
+    element: ".control-link-newtab",
+    path: "link.newTab",
+    type: "checkbox",
     func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-centercenter",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-centerright",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-bottomleft",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-bottomcenter",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-bottomright",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
+      link.groupAndItems();
     }
   }, {
     element: ".control-link-item-display-letcon-show",
@@ -3743,6 +3716,69 @@ var control = (function() {
       link.render.item.name();
       render.update.control.header();
       render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-topleft",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-topcenter",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-topright",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-centerleft",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-centercenter",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-centerright",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-bottomleft",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-bottomcenter",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-bottomright",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
     }
   }, {
     element: ".control-link-item-display-rotate-range",
@@ -3949,40 +3985,18 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: ".control-link-item-url-show",
-    path: "link.item.url.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-link-item-line-show",
-    path: "link.item.line.show",
-    type: "checkbox",
+    element: ".control-link-style-block",
+    path: "link.style",
+    type: "radio",
     func: function() {
       render.class();
     }
   }, {
-    element: ".control-link-item-shadow-show",
-    path: "link.item.shadow.show",
-    type: "checkbox",
+    element: ".control-link-style-list",
+    path: "link.style",
+    type: "radio",
     func: function() {
       render.class();
-    }
-  }, {
-    element: ".control-link-item-hoverscale",
-    path: "link.item.hoverScale.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-newtab",
-    path: "link.newTab",
-    type: "checkbox",
-    func: function() {
-      link.groupAndItems();
     }
   }, {
     element: ".control-link-item-color-by-theme",
@@ -4069,20 +4083,6 @@ var control = (function() {
       link.render.item.border();
       render.update.control.header();
       render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-style-block",
-    path: "link.style",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-style-list",
-    path: "link.style",
-    type: "radio",
-    func: function() {
-      render.class();
     }
   }, {
     element: ".control-link-orientation-top",
