@@ -869,7 +869,8 @@ var update = (function() {
     "4.42.0": function(data) {
       data.state.group.openAll = {
         show: true,
-        size: 1
+        size: 1,
+        style: "box"
       };
       return data;
     }

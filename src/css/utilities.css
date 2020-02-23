@@ -64,3 +64,14 @@
   flex-wrap: nowrap;
   align-items: center;
 }
+
+.baseline-alignment-icon-character {
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

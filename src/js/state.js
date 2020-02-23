@@ -232,7 +232,8 @@ var state = (function() {
       },
       openAll: {
         show: true,
-        size: 1
+        size: 1,
+        style: "box"
       },
       border: 0,
       order: "headerbody",
@@ -407,6 +408,9 @@ var state = (function() {
     },
     group: {
       name: {
+        size: 1
+      },
+      openAll: {
         size: 1
       },
       border: 0
