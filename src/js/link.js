@@ -575,7 +575,7 @@ var link = (function() {
         html.style.setProperty("--group-name-size", state.get.current().group.name.size + "em");
       }
     },
-    openAll: {
+    openall: {
       size: function() {
         var html = helper.e("html");
         html.style.setProperty("--group-openall-size", state.get.current().group.openAll.size + "em");
@@ -1865,7 +1865,7 @@ var link = (function() {
     mod.add.group.close();
     groupAndItems();
     render.group.name.size();
-    render.group.openAll.size();
+    render.group.openall.size();
     render.group.border();
     render.item.color.custom();
     render.item.size();

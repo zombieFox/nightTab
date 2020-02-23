@@ -3047,7 +3047,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      link.render.group.openAll.size();
+      link.render.group.openall.size();
     }
   }, {
     element: ".control-group-openall-size-number",
@@ -3066,7 +3066,7 @@ var control = (function() {
       valueConvert: ["float"]
     }],
     func: function() {
-      link.render.group.openAll.size();
+      link.render.group.openall.size();
     }
   }, {
     element: ".control-group-openall-size-default",
@@ -3082,7 +3082,7 @@ var control = (function() {
     }],
     func: function() {
       mod.default("group.openAll.size");
-      link.render.group.openAll.size();
+      link.render.group.openall.size();
       render.update.control.header();
       render.update.control.menu();
     }
