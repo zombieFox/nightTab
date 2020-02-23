@@ -873,6 +873,13 @@ var update = (function() {
         style: "box"
       };
       return data;
+    },
+    "4.44.0": function(data) {
+      if (!"newTab" in state.get.current().link.item && "newTab" in state.get.current().link) {
+        state.get.current().link.item.newTab = state.get.current().link.newTab;
+        delete state.get.current().link.newTab;
+      };
+      return data;
     }
   };
 

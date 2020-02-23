@@ -3555,7 +3555,7 @@ var control = (function() {
     }
   }, {
     element: ".control-link-newtab",
-    path: "link.newTab",
+    path: "link.item.newTab",
     type: "checkbox",
     func: function() {
       link.groupAndItems();

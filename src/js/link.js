@@ -464,12 +464,7 @@ var link = (function() {
       };
 
       groupOpenallItem.addEventListener("click", function() {
-        console.log(copyStagedGroup.group.items);
-        copyStagedGroup.group.items.forEach(function(arrayItem, index) {
-          chrome.tabs.create({
-            url: arrayItem.url
-          });
-        })
+        render.group.openall.all(copyStagedGroup);
       });
 
       groupHeaderItemOpenall.appendChild(groupOpenall);
@@ -576,6 +571,23 @@ var link = (function() {
       }
     },
     openall: {
+      all: function(copyStagedGroup) {
+        if (state.get.current().link.item.newTab) {
+          copyStagedGroup.group.items.forEach(function(arrayItem, index) {
+            chrome.tabs.create({
+              url: arrayItem.url
+            });
+          });
+        } else {
+          var first = copyStagedGroup.group.items.shift();
+          copyStagedGroup.group.items.forEach(function(arrayItem, index) {
+            chrome.tabs.create({
+              url: arrayItem.url
+            });
+          });
+          window.location.href = first.url;
+        };
+      },
       size: function() {
         var html = helper.e("html");
         html.style.setProperty("--group-openall-size", state.get.current().group.openAll.size + "em");
@@ -644,7 +656,7 @@ var link = (function() {
           value: 1
         }]
       };
-      if (state.get.current().link.newTab) {
+      if (state.get.current().link.item.newTab) {
         linkPanelFrontOptions.attr.push({
           key: "target",
           value: "_blank"
