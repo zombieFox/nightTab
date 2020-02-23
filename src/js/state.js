@@ -230,6 +230,11 @@ var state = (function() {
         show: true,
         size: 1
       },
+      openAll: {
+        show: true,
+        size: 1,
+        style: "box"
+      },
       border: 0,
       order: "headerbody",
       add: false,
@@ -403,6 +408,9 @@ var state = (function() {
     },
     group: {
       name: {
+        size: 1
+      },
+      openAll: {
         size: 1
       },
       border: 0

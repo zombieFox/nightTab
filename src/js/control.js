@@ -2858,6 +2858,27 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: ".control-group-area-justify-left",
+    path: "group.area.justify",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-group-area-justify-center",
+    path: "group.area.justify",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-group-area-justify-right",
+    path: "group.area.justify",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
     element: ".control-group-name-show",
     path: "group.name.show",
     type: "checkbox",
@@ -2922,7 +2943,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      link.render.group.size();
+      link.render.group.name.size();
     }
   }, {
     element: ".control-group-name-size-number",
@@ -2941,7 +2962,7 @@ var control = (function() {
       valueConvert: ["float"]
     }],
     func: function() {
-      link.render.group.size();
+      link.render.group.name.size();
     }
   }, {
     element: ".control-group-name-size-default",
@@ -2957,30 +2978,127 @@ var control = (function() {
     }],
     func: function() {
       mod.default("group.name.size");
-      link.render.group.size();
+      link.render.group.name.size();
       render.update.control.header();
       render.update.control.menu();
     }
   }, {
-    element: ".control-group-area-justify-left",
-    path: "group.area.justify",
-    type: "radio",
+    element: ".control-group-openall-show",
+    path: "group.openAll.show",
+    type: "checkbox",
     func: function() {
+      link.groupAndItems();
       render.class();
+      render.dependents();
     }
   }, {
-    element: ".control-group-area-justify-center",
-    path: "group.area.justify",
-    type: "radio",
+    element: ".control-group-openall-size-range",
+    path: "group.openAll.size",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-group-openall-size-number",
+      path: "group.openAll.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-openall"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-openall"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.box.open({
+            element: ".header-item-coloraccent",
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
     func: function() {
-      render.class();
+      link.render.group.openall.size();
     }
   }, {
-    element: ".control-group-area-justify-right",
-    path: "group.area.justify",
+    element: ".control-group-openall-size-number",
+    path: "group.openAll.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-group-openall-size-range",
+      path: "group.openAll.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.group.openall.size();
+    }
+  }, {
+    element: ".control-group-openall-size-default",
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-openall"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.default("group.openAll.size");
+      link.render.group.openall.size();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-group-openall-style-box",
+    path: "group.openAll.style",
     type: "radio",
     func: function() {
-      render.class();
+      link.groupAndItems();
+    }
+  }, {
+    element: ".control-group-openall-style-clear",
+    path: "group.openAll.style",
+    type: "radio",
+    func: function() {
+      link.groupAndItems();
     }
   }, {
     element: ".control-group-order-headerbody",
@@ -6199,6 +6317,15 @@ var control = (function() {
           },
           name: "is-group-name-show"
         }],
+        openall: [{
+          remove: [
+            "is-group-openall-show"
+          ],
+          condition: function() {
+            return state.get.current().group.openAll.show;
+          },
+          name: "is-group-openall-show"
+        }],
         order: [{
           remove: [
             "is-group-order-headerbody",
@@ -6427,6 +6554,7 @@ var control = (function() {
     classCheck(all.header.position);
     classCheck(all.group.area);
     classCheck(all.group.name);
+    classCheck(all.group.openall);
     classCheck(all.group.order);
     classCheck(all.group.border);
     classCheck(all.link);
@@ -6896,6 +7024,21 @@ var control = (function() {
             ".control-group-name-size-range",
             ".control-group-name-size-number",
             ".control-group-name-size-default"
+          ];
+        }
+      }, {
+        condition: function() {
+          return state.get.current().group.openAll.show;
+        },
+        dependents: function() {
+          return [
+            "[for=control-group-openall-size-range]",
+            ".control-group-openall-size-range",
+            ".control-group-openall-size-number",
+            ".control-group-openall-size-default",
+            ".control-group-openall-style-label",
+            ".control-group-openall-style-box",
+            ".control-group-openall-style-clear"
           ];
         }
       }],

@@ -366,9 +366,17 @@ var link = (function() {
 
   render.group = {
     area: function() {
+      var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
+
       var group = helper.node("div|class:group");
 
       var groupHeader = helper.node("div|class:group-header");
+      var groupHeaderItemControl = helper.node("div|class:group-header-item group-header-item-control");
+      var groupHeaderItemName = helper.node("div|class:group-header-item group-header-item-name");
+      var groupHeaderItemOpenall = helper.node("div|class:group-header-item group-header-item-openall");
+
+      var groupBody = helper.node("div|class:group-body");
+
       var groupName = helper.node("div|class:group-name");
       var groupNameText = helper.makeNode({
         tag: "h1",
@@ -378,66 +386,103 @@ var link = (function() {
           value: "group-name-text"
         }]
       });
+      groupName.appendChild(groupNameText);
+      groupHeaderItemName.appendChild(groupName);
+
       var groupControl = helper.node("div|class:group-control form-group");
 
-      groupHeader.appendChild(groupControl);
-      group.appendChild(groupHeader);
-      if (state.get.current().group.name.show) {
-        groupName.appendChild(groupNameText);
-        groupHeader.appendChild(groupName);
-      };
+      var groupControlItemUp = helper.node("button|class:button group-control-item group-control-item-up,tabindex:-1,title:Move this group up");
+      var groupControlItemUpIcon = helper.node("span|class:icon-arrow-up");
+      var groupControlItemUpBaselineAlignmentCharacter = helper.node("span:-|class:baseline-alignment-icon-character,aria-hidden:true");
+      groupControlItemUp.appendChild(groupControlItemUpBaselineAlignmentCharacter);
+      groupControlItemUp.appendChild(groupControlItemUpIcon);
+      groupControl.appendChild(groupControlItemUp);
 
-      var groupBody = helper.node("div|class:group-body");
-      group.appendChild(groupBody);
+      var groupControlItemHandle = helper.node("div|class:button group-control-item group-control-item-handle,tabindex:-1,title:Drag group to reorder");
+      var groupControlItemHandleIcon = helper.node("span|class:icon-reorder");
+      var groupControlItemHandleBaselineAlignmentCharacter = helper.node("span:-|class:baseline-alignment-icon-character,aria-hidden:true");
+      groupControlItemHandle.appendChild(groupControlItemHandleBaselineAlignmentCharacter);
+      groupControlItemHandle.appendChild(groupControlItemHandleIcon);
+      groupControl.appendChild(groupControlItemHandle);
 
-      var itemGroupControlItemUp = helper.node("button|class:button button-small group-control-item group-control-item-up,tabindex:-1,title:Move this group up");
-      var itemGroupControlItemUpIcon = helper.node("span|class:button-icon icon-arrow-up");
-      itemGroupControlItemUp.appendChild(itemGroupControlItemUpIcon);
-      groupControl.appendChild(itemGroupControlItemUp);
+      var groupControlItemDown = helper.node("button|class:button group-control-item group-control-item-down,tabindex:-1,title:Move this group down");
+      var groupControlItemDownIcon = helper.node("span|class:icon-arrow-down");
+      var groupControlItemDownBaselineAlignmentCharacter = helper.node("span:-|class:baseline-alignment-icon-character,aria-hidden:true");
+      groupControlItemDown.appendChild(groupControlItemDownBaselineAlignmentCharacter);
+      groupControlItemDown.appendChild(groupControlItemDownIcon);
+      groupControl.appendChild(groupControlItemDown);
 
-      var itemGroupControlItemHandle = helper.node("div|class:button button-small group-control-item group-control-item-handle,tabindex:-1,title:Drag group to reorder");
-      var itemGroupControlItemHandleIcon = helper.node("span|class:button-icon icon-reorder");
-      itemGroupControlItemHandle.appendChild(itemGroupControlItemHandleIcon);
-      groupControl.appendChild(itemGroupControlItemHandle);
+      var groupControlItemEdit = helper.node("button|class:button group-control-item group-control-item-edit,tabindex:-1,title:Edit this group");
+      var groupControlItemEditIcon = helper.node("span|class:icon-edit");
+      var groupControlItemEditBaselineAlignmentCharacter = helper.node("span:-|class:baseline-alignment-icon-character,aria-hidden:true");
+      groupControlItemEdit.appendChild(groupControlItemEditBaselineAlignmentCharacter);
+      groupControlItemEdit.appendChild(groupControlItemEditIcon);
+      groupControl.appendChild(groupControlItemEdit);
 
-      var itemGroupControlItemDown = helper.node("button|class:button button-small group-control-item group-control-item-down,tabindex:-1,title:Move this group down");
-      var itemGroupControlItemDownIcon = helper.node("span|class:button-icon icon-arrow-down");
-      itemGroupControlItemDown.appendChild(itemGroupControlItemDownIcon);
-      groupControl.appendChild(itemGroupControlItemDown);
-
-      var itemGroupControlItemEdit = helper.node("button|class:button button-small group-control-item group-control-item-edit,tabindex:-1,title:Edit this group");
-      var itemGroupControlItemEditIcon = helper.node("span|class:button-icon icon-edit");
-      itemGroupControlItemEdit.appendChild(itemGroupControlItemEditIcon);
-      groupControl.appendChild(itemGroupControlItemEdit);
-
-      var itemGroupControlItemRemove = helper.node("button|class:button button-small group-control-item group-control-item-remove,tabindex:-1,title:Remove this group");
-      var itemGroupControlItemRemoveIcon = helper.node("span|class:button-icon icon-close");
-      itemGroupControlItemRemove.appendChild(itemGroupControlItemRemoveIcon);
-      groupControl.appendChild(itemGroupControlItemRemove);
+      var groupControlItemRemove = helper.node("button|class:button group-control-item group-control-item-remove,tabindex:-1,title:Remove this group");
+      var groupControlItemRemoveIcon = helper.node("span|class:icon-close");
+      var groupControlItemRemoveBaselineAlignmentCharacter = helper.node("span:-|class:baseline-alignment-icon-character,aria-hidden:true");
+      groupControlItemRemove.appendChild(groupControlItemRemoveBaselineAlignmentCharacter);
+      groupControlItemRemove.appendChild(groupControlItemRemoveIcon);
+      groupControl.appendChild(groupControlItemRemove);
 
       if (state.get.current().search) {
-        itemGroupControlItemUp.disabled = true;
-        helper.addClass(itemGroupControlItemHandle, "disabled");
-        itemGroupControlItemDown.disabled = true;
+        groupControlItemUp.disabled = true;
+        helper.addClass(groupControlItemHandle, "disabled");
+        groupControlItemDown.disabled = true;
       };
 
-      var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
+      groupHeaderItemControl.appendChild(groupControl);
 
-      itemGroupControlItemUp.addEventListener("click", function(event) {
+      groupControlItemUp.addEventListener("click", function(event) {
         render.move.group.up(copyStagedGroup);
       }, false);
 
-      itemGroupControlItemDown.addEventListener("click", function() {
+      groupControlItemDown.addEventListener("click", function() {
         render.move.group.down(copyStagedGroup);
       }, false);
 
-      itemGroupControlItemEdit.addEventListener("click", function() {
+      groupControlItemEdit.addEventListener("click", function() {
         edit.group.open(copyStagedGroup);
       }, false);
 
-      itemGroupControlItemRemove.addEventListener("click", function() {
+      groupControlItemRemove.addEventListener("click", function() {
         render.remove.group(copyStagedGroup);
       }, false);
+
+
+      var groupOpenall = helper.node("div|class:group-openall form-group");
+
+      var groupOpenallItem = helper.node("button|class:button group-openall-item,tabindex:-1,title:Open all Bookmarks in this group");
+      var groupOpenallItemText = helper.node("span:Open all|class:button-text");
+      groupOpenallItem.appendChild(groupOpenallItemText);
+      groupOpenall.appendChild(groupOpenallItem);
+
+
+      if (state.get.current().group.openAll.style == "clear") {
+        helper.addClass(groupOpenallItem, "button-link");
+      };
+
+      groupOpenallItem.addEventListener("click", function() {
+        console.log(copyStagedGroup.group.items);
+        copyStagedGroup.group.items.forEach(function(arrayItem, index) {
+          chrome.tabs.create({
+            url: arrayItem.url
+          });
+        })
+      });
+
+      groupHeaderItemOpenall.appendChild(groupOpenall);
+
+      groupHeader.appendChild(groupHeaderItemControl);
+      if (state.get.current().group.name.show) {
+        groupHeader.appendChild(groupHeaderItemName);
+      };
+      if (state.get.current().group.openAll.show && stagedGroup.group.items.length > 0) {
+        groupHeader.appendChild(groupHeaderItemOpenall);
+      };
+      group.appendChild(groupHeader);
+      group.appendChild(groupBody);
 
       return group;
     },
@@ -524,9 +569,17 @@ var link = (function() {
 
       return form;
     },
-    size: function() {
-      var html = helper.e("html");
-      html.style.setProperty("--group-name-size", state.get.current().group.name.size + "em");
+    name: {
+      size: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--group-name-size", state.get.current().group.name.size + "em");
+      }
+    },
+    openall: {
+      size: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--group-openall-size", state.get.current().group.openAll.size + "em");
+      }
     },
     border: function() {
       var html = helper.e("html");
@@ -1811,7 +1864,8 @@ var link = (function() {
     mod.add.item.close();
     mod.add.group.close();
     groupAndItems();
-    render.group.size();
+    render.group.name.size();
+    render.group.openall.size();
     render.group.border();
     render.item.color.custom();
     render.item.size();
