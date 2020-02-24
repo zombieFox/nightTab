@@ -453,7 +453,7 @@ var link = (function() {
 
       var groupOpenall = helper.node("div|class:group-openall form-group");
 
-      var groupOpenallItem = helper.node("button|class:button group-openall-item,tabindex:-1,title:Open all Bookmarks in this group");
+      var groupOpenallItem = helper.node("button|class:button group-openall-item,tabindex:-1,title:Open all Bookmarks in this Group");
       var groupOpenallItemText = helper.node("span:Open all|class:button-text");
       groupOpenallItem.appendChild(groupOpenallItemText);
       groupOpenall.appendChild(groupOpenallItem);
