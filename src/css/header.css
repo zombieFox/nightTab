@@ -74,7 +74,7 @@
 }
 
 .header-area {
-  padding: calc(var(--layout-space) * var(--layout-padding));
+  /* padding: calc(var(--layout-space) * var(--layout-padding)); */
   position: relative;
   width: var(--header-area-width);
   pointer-events: none;

@@ -442,8 +442,8 @@ var control = (function() {
     type: "radio",
     func: function() {
       render.class();
-      layout.render.order();
-      header.render.color.scrolling();
+      // layout.render.order();
+      // header.render.color.scrolling();
     }
   }, {
     element: ".control-layout-order-linkheader",
@@ -451,8 +451,8 @@ var control = (function() {
     type: "radio",
     func: function() {
       render.class();
-      layout.render.order();
-      header.render.color.scrolling();
+      // layout.render.order();
+      // header.render.color.scrolling();
     }
   }, {
     element: ".control-layout-padding-range",

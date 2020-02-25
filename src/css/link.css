@@ -22,11 +22,11 @@
 }
 
 .is-layout-order-headerlink .link {
-  margin-top: calc(-1 * calc(var(--layout-space) * var(--layout-padding)));
+  /* margin-top: calc(-1 * calc(var(--layout-space) * var(--layout-padding))); */
 }
 
 .is-layout-order-linkheader .link {
-  margin-bottom: calc(-1 * calc(var(--layout-space) * var(--layout-padding)));
+  /* margin-bottom: calc(-1 * calc(var(--layout-space) * var(--layout-padding))); */
 }
 
 .is-layout-order-headerlink.is-header-border-bottom .link,
