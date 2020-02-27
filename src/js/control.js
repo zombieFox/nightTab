@@ -455,6 +455,20 @@ var control = (function() {
       // header.render.color.scrolling();
     }
   }, {
+    element: ".control-layout-direction-vertical",
+    path: "layout.direction",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-layout-direction-horizontal",
+    path: "layout.direction",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
     element: ".control-layout-padding-range",
     path: "layout.padding",
     type: "range",
@@ -3277,14 +3291,14 @@ var control = (function() {
       event: "input",
       func: function() {
         edge.box.open({
-          element: helper.e(".group"),
+          element: helper.e(".link-area"),
         });
       }
     }, {
       event: "mousedown",
       func: function() {
         edge.box.open({
-          element: helper.e(".group"),
+          element: helper.e(".link-area"),
         });
       }
     }, {
@@ -6105,6 +6119,12 @@ var control = (function() {
           "is-layout-alignment-bottomright"
         ],
         name: "is-layout-alignment-" + state.get.current().layout.alignment
+      }, {
+        remove: [
+          "is-layout-direction-vertical",
+          "is-layout-direction-horizontal"
+        ],
+        name: "is-layout-direction-" + state.get.current().layout.direction
       }, {
         remove: [
           "is-layout-order-headerlink",

@@ -3,9 +3,11 @@
   padding-bottom: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
   padding-left: calc(var(--layout-space) * var(--layout-padding));
   padding-right: calc(var(--layout-space) * var(--layout-padding)); */
-  width: var(--link-area-width);
+  /* width: var(--link-area-width); */
   display: flex;
+  width: 100%;
 }
+
 
 .is-group-order-headerbody .group {
   flex-direction: column;

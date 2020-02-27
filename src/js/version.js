@@ -1,8 +1,8 @@
 var version = (function() {
 
-  var current = "4.44.0";
+  var current = "5.0.0";
 
-  var name = "Naughty Goose";
+  var name = "Zonked Tarsier";
 
   var compare = function(a, b) {
     var pa = a.split(".");

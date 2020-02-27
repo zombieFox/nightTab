@@ -243,6 +243,7 @@ var state = (function() {
     layout: {
       alignment: "centercenter",
       order: "headerlink",
+      direction: "vertical",
       padding: 4,
       gutter: 2,
       size: 1,

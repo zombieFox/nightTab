@@ -5,6 +5,62 @@
   z-index: var(--z-index-link);
 }
 
+.is-layout-direction-horizontal .link {
+  width: var(--link-area-width);
+  /* overflow-x: hidden; */
+  align-items: center;
+}
+
+.is-layout-direction-horizontal .link-area {
+  width: 100%;
+}
+
+.is-layout-direction-vertical .link {
+  width: 100%;
+}
+
+.is-layout-direction-vertical .link-area {
+  width: var(--link-area-width);
+}
+
+.link-area {
+  padding: calc(var(--layout-space) * var(--layout-padding));
+}
+
+.is-layout-direction-vertical.is-layout-order-headerlink .link-area {
+  margin-top: calc(-1 * calc(var(--layout-space) * var(--layout-padding)));
+}
+
+.is-layout-direction-vertical.is-layout-order-linkheader .link-area {
+  margin-bottom: calc(-1 * calc(var(--layout-space) * var(--layout-padding)));
+}
+
+.is-layout-direction-horizontal.is-layout-order-headerlink .link-area {
+  padding-left: 0;
+}
+
+.is-layout-direction-horizontal.is-layout-order-linkheader .link-area {
+  padding-right: 0;
+}
+
+.is-layout-direction-vertical.is-layout-order-headerlink.is-header-border-bottom .link-area,
+.is-layout-direction-vertical.is-layout-order-headerlink.is-header-color-style-always .link-area {
+  margin-top: 0;
+}
+
+.is-layout-direction-vertical.is-layout-order-linkheader.is-header-border-top .link-area,
+.is-layout-direction-vertical.is-layout-order-linkheader.is-header-color-style-always .link-area {
+  margin-bottom: 0;
+}
+
+.is-layout-direction-horizontal.is-layout-order-headerlink.is-header-color-style-always .link-area {
+  padding-left: calc(var(--layout-space) * var(--layout-padding));
+}
+
+.is-layout-direction-horizontal.is-layout-order-linkheader.is-header-color-style-always .link-area {
+  padding-right: calc(var(--layout-space) * var(--layout-padding));
+}
+
 .is-link-show .link {
   display: flex;
 }
@@ -19,24 +75,6 @@
 
 .is-link-area-justify-right .link {
   align-items: flex-end;
-}
-
-.is-layout-order-headerlink .link {
-  /* margin-top: calc(-1 * calc(var(--layout-space) * var(--layout-padding))); */
-}
-
-.is-layout-order-linkheader .link {
-  /* margin-bottom: calc(-1 * calc(var(--layout-space) * var(--layout-padding))); */
-}
-
-.is-layout-order-headerlink.is-header-border-bottom .link,
-.is-layout-order-headerlink.is-header-color-style-always .link {
-  margin-top: 0;
-}
-
-.is-layout-order-linkheader.is-header-border-top .link,
-.is-layout-order-linkheader.is-header-color-style-always .link {
-  margin-bottom: 0;
 }
 
 .link-sort-placeholder {

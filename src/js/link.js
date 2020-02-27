@@ -1225,6 +1225,8 @@ var link = (function() {
 
   render.all = function() {
     var linkSection = helper.e(".link");
+    var linkArea = helper.node("div|class:link-area");
+    linkSection.appendChild(linkArea);
     var make = {
       bookmarks: function() {
         bookmarks.get().forEach(function(arrayItem, index) {
@@ -1255,10 +1257,10 @@ var link = (function() {
           };
           if (state.get.current().search) {
             if (search.mod.searching.count.group(index) > 0) {
-              linkSection.appendChild(group);
+              linkArea.appendChild(group);
             };
           } else {
-            linkSection.appendChild(group);
+            linkArea.appendChild(group);
           };
           stagedGroup.reset();
           stagedLink.reset();
@@ -1266,10 +1268,10 @@ var link = (function() {
       },
       empty: {
         search: function() {
-          linkSection.appendChild(render.empty.search());
+          linkArea.appendChild(render.empty.search());
         },
         bookmarks: function() {
-          linkSection.appendChild(render.empty.group());
+          linkArea.appendChild(render.empty.group());
         }
       }
     };
