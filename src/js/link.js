@@ -1707,6 +1707,7 @@ var link = (function() {
         };
         shade.close();
         pagelock.unlock();
+        stagedLink.reset();
       };
       var cancelAction = function() {
         stagedLink.reset();
@@ -1753,6 +1754,7 @@ var link = (function() {
         };
         shade.close();
         pagelock.unlock();
+        stagedGroup.reset();
       };
       var cancelAction = function() {
         stagedGroup.reset();
