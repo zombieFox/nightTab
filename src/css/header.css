@@ -102,28 +102,10 @@
 }
 
 .is-header-border-top .header-area {
-  border-top: calc(var(--layout-line-width) * var(--header-border-top)) solid transparent;
-}
-
-.is-header-border-bottom .header-area {
-  border-bottom: calc(var(--layout-line-width) * var(--header-border-bottom)) solid transparent;
-}
-
-.header-border {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-.is-header-border-top .header-border {
   border-top: calc(var(--layout-line-width) * var(--header-border-top)) solid rgb(var(--theme-accent));
 }
 
-.is-header-border-bottom .header-border {
+.is-header-border-bottom .header-area {
   border-bottom: calc(var(--layout-line-width) * var(--header-border-bottom)) solid rgb(var(--theme-accent));
 }
 

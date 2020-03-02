@@ -1,13 +1,8 @@
 .group {
-  /* padding-top: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
-  padding-bottom: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
-  padding-left: calc(var(--layout-space) * var(--layout-padding));
-  padding-right: calc(var(--layout-space) * var(--layout-padding)); */
-  /* width: var(--link-area-width); */
-  display: flex;
+  padding: calc(var(--layout-space) * var(--layout-padding));
   width: 100%;
+  display: flex;
 }
-
 
 .is-group-order-headerbody .group {
   flex-direction: column;
@@ -25,13 +20,32 @@
   padding-top: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
 }
 
-.is-group-border .group:not(:last-child):not(:only-child) {
-  /* border-bottom: calc(var(--layout-line-width) * var(--group-border)) solid rgb(var(--theme-accent)); */
+.is-layout-direction-horizontal.is-layout-order-headerlink .group {
+  padding-left: 0;
 }
 
-.is-group-border .group {
-  /* padding-top: calc(var(--layout-space) * var(--layout-padding)); */
-  /* padding-bottom: calc(var(--layout-space) * var(--layout-padding)); */
+.is-layout-direction-horizontal.is-layout-order-linkheader .group {
+  padding-right: 0;
+}
+
+.is-group-border .group:not(:last-child):not(:only-child) {
+  border-bottom: calc(var(--layout-line-width) * var(--group-border)) solid rgb(var(--theme-accent));
+}
+
+.is-group-border .group:not(:only-child):first-child {
+  padding-bottom: calc(var(--layout-space) * var(--layout-padding));
+}
+
+.is-group-border .group:not(:only-child):last-child {
+  padding-top: calc(var(--layout-space) * var(--layout-padding));
+}
+
+.is-layout-direction-horizontal.is-layout-order-headerlink.is-header-border-top .group,
+.is-layout-direction-horizontal.is-layout-order-linkheader.is-header-border-top .group,
+.is-layout-direction-horizontal.is-layout-order-headerlink.is-header-border-bottom .group,
+.is-layout-direction-horizontal.is-layout-order-linkheader.is-header-border-bottom .group {
+  padding-left: calc(var(--layout-space) * var(--layout-padding));
+  padding-right: calc(var(--layout-space) * var(--layout-padding));
 }
 
 .group-header {

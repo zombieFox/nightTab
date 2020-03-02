@@ -6,7 +6,6 @@
   flex-wrap: nowrap;
 }
 
-
 .is-layout-direction-vertical.is-layout-order-headerlink .layout {
   flex-direction: column;
 }
@@ -27,47 +26,15 @@
   justify-content: center;
 }
 
-.is-layout-order-headerlink .layout-header {
-  /* grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2; */
-}
-
-.is-layout-order-headerlink .layout-link {
-  /* grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2; */
-}
-
-.is-layout-order-linkheader .layout-header {
-  /* grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2; */
-}
-
-.is-layout-order-linkheader .layout-link {
-  /* grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2; */
-}
-
 .layout-header {
   padding-top: calc(var(--layout-space) * var(--layout-padding));
   padding-bottom: calc(var(--layout-space) * var(--layout-padding));
-  /* max-height: 100%; */
-  /* overflow-y: auto; */
   width: inherit;
 }
 
 .layout-link {
   padding-top: calc(var(--layout-space) * var(--layout-padding));
   padding-bottom: calc(var(--layout-space) * var(--layout-padding));
-  /* max-height: 100%; */
-  /* overflow-y: auto; */
   width: inherit;
 }
 

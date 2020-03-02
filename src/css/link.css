@@ -16,7 +16,7 @@
 }
 
 .link-area {
-  padding: calc(var(--layout-space) * var(--layout-padding));
+  /* padding: calc(var(--layout-space) * var(--layout-padding)); */
   width: var(--link-area-width);
 }
 
@@ -28,13 +28,6 @@
   margin-bottom: calc(-1 * calc(var(--layout-space) * var(--layout-padding)));
 }
 
-.is-layout-direction-horizontal.is-layout-order-headerlink .link-area {
-  padding-left: 0;
-}
-
-.is-layout-direction-horizontal.is-layout-order-linkheader .link-area {
-  padding-right: 0;
-}
 
 .is-layout-direction-vertical.is-layout-order-headerlink.is-header-border-bottom .link-area,
 .is-layout-direction-vertical.is-layout-order-headerlink.is-header-color-style-always .link-area {
@@ -44,14 +37,6 @@
 .is-layout-direction-vertical.is-layout-order-linkheader.is-header-border-top .link-area,
 .is-layout-direction-vertical.is-layout-order-linkheader.is-header-color-style-always .link-area {
   margin-bottom: 0;
-}
-
-.is-layout-direction-horizontal.is-layout-order-headerlink.is-header-color-style-always .link-area {
-  padding-left: calc(var(--layout-space) * var(--layout-padding));
-}
-
-.is-layout-direction-horizontal.is-layout-order-linkheader.is-header-color-style-always .link-area {
-  padding-right: calc(var(--layout-space) * var(--layout-padding));
 }
 
 .is-link-show .link {
