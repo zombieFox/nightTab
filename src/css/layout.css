@@ -26,38 +26,6 @@
   justify-content: center;
 }
 
-.layout-header {
-  padding-top: calc(var(--layout-space) * var(--layout-padding));
-  padding-bottom: calc(var(--layout-space) * var(--layout-padding));
-  width: inherit;
-}
-
-.layout-link {
-  padding-top: calc(var(--layout-space) * var(--layout-padding));
-  padding-bottom: calc(var(--layout-space) * var(--layout-padding));
-  width: inherit;
-}
-
-.is-layout-order-headerlink .layout-header {
-  padding-left: calc(var(--layout-space) * var(--layout-padding));
-  padding-right: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
-}
-
-.is-layout-order-headerlink .layout-link {
-  padding-right: calc(var(--layout-space) * var(--layout-padding));
-  padding-left: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
-}
-
-.is-layout-order-linkheader .layout-header {
-  padding-right: calc(var(--layout-space) * var(--layout-padding));
-  padding-left: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
-}
-
-.is-layout-order-linkheader .layout-link {
-  padding-left: calc(var(--layout-space) * var(--layout-padding));
-  padding-right: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
-}
-
 .is-layout-alignment-horizontal-left body {
   align-items: flex-start;
 }
