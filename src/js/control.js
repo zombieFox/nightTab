@@ -3352,7 +3352,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.box.open({
-          element: helper.e(".group"),
+          element: helper.e(".link-area"),
           delay: 500
         });
       }
@@ -3370,7 +3370,7 @@ var control = (function() {
       event: "click",
       func: function() {
         edge.box.open({
-          element: helper.e(".group"),
+          element: helper.e(".link-area"),
           delay: 500
         });
       }
@@ -3394,7 +3394,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.box.open({
-          element: helper.e(".group"),
+          element: helper.e(".link-area"),
           delay: 500
         });
       }
@@ -3410,7 +3410,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.box.open({
-          element: helper.e(".group"),
+          element: helper.e(".link-area"),
           delay: 500
         });
       }
@@ -3426,7 +3426,7 @@ var control = (function() {
       event: "change",
       func: function() {
         edge.box.open({
-          element: helper.e(".group"),
+          element: helper.e(".link-area"),
           delay: 500
         });
       }

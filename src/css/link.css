@@ -6,7 +6,6 @@
 }
 
 .is-layout-direction-horizontal .link {
-  width: calc(var(--link-area-width) / 2);
   width: 50%;
   align-items: center;
 }
@@ -16,18 +15,26 @@
 }
 
 .link-area {
-  /* padding: calc(var(--layout-space) * var(--layout-padding)); */
   width: var(--link-area-width);
 }
 
-.is-layout-direction-vertical.is-layout-order-headerlink .link-area {
+.is-layout-direction-vertical.is-layout-order-headerlink .link {
   margin-top: calc(-1 * calc(var(--layout-space) * var(--layout-padding)));
 }
 
-.is-layout-direction-vertical.is-layout-order-linkheader .link-area {
+.is-layout-direction-vertical.is-layout-order-linkheader .link {
   margin-bottom: calc(-1 * calc(var(--layout-space) * var(--layout-padding)));
 }
 
+.is-layout-direction-horizontal.is-layout-order-headerlink .link {
+  width: calc(50% + calc(var(--layout-space) * var(--layout-padding)));
+  margin-left: calc(-1 * calc(var(--layout-space) * var(--layout-padding)));
+}
+
+.is-layout-direction-horizontal.is-layout-order-linkheader .link {
+  width: calc(50% + calc(var(--layout-space) * var(--layout-padding)));
+  margin-right: calc(-1 * calc(var(--layout-space) * var(--layout-padding)));
+}
 
 .is-layout-direction-vertical.is-layout-order-headerlink.is-header-border-bottom .link-area,
 .is-layout-direction-vertical.is-layout-order-headerlink.is-header-color-style-always .link-area {
@@ -37,6 +44,20 @@
 .is-layout-direction-vertical.is-layout-order-linkheader.is-header-border-top .link-area,
 .is-layout-direction-vertical.is-layout-order-linkheader.is-header-color-style-always .link-area {
   margin-bottom: 0;
+}
+
+.is-layout-direction-horizontal.is-layout-order-headerlink.is-header-border-top .link,
+.is-layout-direction-horizontal.is-layout-order-headerlink.is-header-border-bottom .link,
+.is-layout-direction-horizontal.is-layout-order-headerlink.is-header-color-style-always .link {
+  width: 50%;
+  margin-left: 0;
+}
+
+.is-layout-direction-horizontal.is-layout-order-linkheader.is-header-border-top .link,
+.is-layout-direction-horizontal.is-layout-order-linkheader.is-header-border-bottom .link,
+.is-layout-direction-horizontal.is-layout-order-linkheader.is-header-color-style-always .link {
+  width: 50%;
+  margin-right: 0;
 }
 
 .is-link-show .link {
