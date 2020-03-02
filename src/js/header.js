@@ -529,6 +529,8 @@ var header = (function() {
     render.date.size();
     render.search.width.size();
     render.search.size();
+    render.editadd.size();
+    render.coloraccent.size();
     render.menu.size();
     render.control.all();
     bind.sort.item();
