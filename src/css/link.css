@@ -7,23 +7,17 @@
 
 .is-layout-direction-horizontal .link {
   width: calc(var(--link-area-width) / 2);
+  width: 50%;
   align-items: center;
-}
-
-.is-layout-direction-horizontal .link-area {
-  width: 100%;
 }
 
 .is-layout-direction-vertical .link {
   width: 100%;
 }
 
-.is-layout-direction-vertical .link-area {
-  width: var(--link-area-width);
-}
-
 .link-area {
   padding: calc(var(--layout-space) * var(--layout-padding));
+  width: var(--link-area-width);
 }
 
 .is-layout-direction-vertical.is-layout-order-headerlink .link-area {
