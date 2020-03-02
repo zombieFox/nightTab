@@ -6,8 +6,7 @@
 }
 
 .is-layout-direction-horizontal .link {
-  width: var(--link-area-width);
-  /* overflow-x: hidden; */
+  width: calc(var(--link-area-width) / 2);
   align-items: center;
 }
 

@@ -7,13 +7,20 @@
 }
 
 .is-layout-direction-horizontal .header {
-  width: var(--header-area-width);
   max-height: 100vh;
   position: sticky;
   top: 0;
   left: initial;
   align-self: stretch;
   align-items: center;
+}
+
+.is-layout-direction-horizontal .header {
+  width: var(--header-area-width);
+}
+
+.is-link-show.is-layout-direction-horizontal .header {
+  width: calc(var(--header-area-width) / 2);
 }
 
 .is-layout-direction-horizontal .header-area {
