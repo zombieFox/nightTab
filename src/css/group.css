@@ -1,7 +1,15 @@
 .group {
-  padding: calc(var(--layout-space) * var(--layout-padding));
+  padding: calc(calc(var(--layout-space) / 2) * var(--layout-padding)) calc(var(--layout-space) * var(--layout-padding));
   width: 100%;
   display: flex;
+}
+
+.group:first-child {
+  padding-top: calc(var(--layout-space) * var(--layout-padding));
+}
+
+.group:last-child {
+  padding-bottom: calc(var(--layout-space) * var(--layout-padding));
 }
 
 .is-group-order-headerbody .group {
@@ -10,14 +18,6 @@
 
 .is-group-order-bodyheader .group {
   flex-direction: column-reverse;
-}
-
-.group:not(:only-child):first-child {
-  padding-bottom: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
-}
-
-.group:not(:only-child):last-child {
-  padding-top: calc(calc(var(--layout-space) / 2) * var(--layout-padding));
 }
 
 .is-group-border .group:not(:last-child):not(:only-child) {
