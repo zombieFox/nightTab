@@ -42,6 +42,7 @@
   margin-bottom: 0;
 }
 
+.is-layout-direction-horizontal.is-layout-order-headerlink.is-group-border .link,
 .is-layout-direction-horizontal.is-layout-order-headerlink.is-header-border-top .link,
 .is-layout-direction-horizontal.is-layout-order-headerlink.is-header-border-bottom .link,
 .is-layout-direction-horizontal.is-layout-order-headerlink.is-header-color-style-always .link {
@@ -49,6 +50,7 @@
   margin-left: 0;
 }
 
+.is-layout-direction-horizontal.is-layout-order-linkheader.is-group-border .link,
 .is-layout-direction-horizontal.is-layout-order-linkheader.is-header-border-top .link,
 .is-layout-direction-horizontal.is-layout-order-linkheader.is-header-border-bottom .link,
 .is-layout-direction-horizontal.is-layout-order-linkheader.is-header-color-style-always .link {
