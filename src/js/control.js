@@ -442,8 +442,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render.class();
-      // layout.render.order();
-      // header.render.color.scrolling();
+      header.render.color.scrolling();
     }
   }, {
     element: ".control-layout-order-linkheader",
@@ -451,8 +450,7 @@ var control = (function() {
     type: "radio",
     func: function() {
       render.class();
-      // layout.render.order();
-      // header.render.color.scrolling();
+      header.render.color.scrolling();
     }
   }, {
     element: ".control-layout-direction-vertical",
@@ -461,6 +459,7 @@ var control = (function() {
     func: function() {
       render.class();
       render.dependents();
+      header.render.color.scrolling();
     }
   }, {
     element: ".control-layout-direction-horizontal",
@@ -469,6 +468,7 @@ var control = (function() {
     func: function() {
       render.class();
       render.dependents();
+      header.render.color.scrolling();
     }
   }, {
     element: ".control-layout-padding-range",

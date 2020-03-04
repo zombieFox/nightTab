@@ -108,24 +108,29 @@ var header = (function() {
       var innerHeight = window.innerHeight;
       // if color show
       if (state.get.current().header.color.show) {
-        // color always
-        if (state.get.current().header.color.style == "scroll") {
-          // check header position
-          if (state.get.current().layout.order == "headerlink") {
-            // check scroll position
-            if (scrollTop > fontSize * 2 && headerRect.top == 0) {
-              helper.addClass(html, "is-header-color-style-scrolling");
-            } else {
-              helper.removeClass(html, "is-header-color-style-scrolling");
-            };
-          } else if (state.get.current().layout.order == "linkheader") {
-            // check scroll position
-            if (headerRect.bottom == innerHeight && (scrollTop + innerHeight) < ((scrollTop + layoutRect.bottom) - (fontSize * 2))) {
-              helper.addClass(html, "is-header-color-style-scrolling");
-            } else {
-              helper.removeClass(html, "is-header-color-style-scrolling");
+        // if layout is vertical
+        if (state.get.current().layout.direction == "vertical") {
+          // color on scroll or always
+          if (state.get.current().header.color.style == "scroll") {
+            // check header position
+            if (state.get.current().layout.order == "headerlink") {
+              // check scroll position
+              if (scrollTop > fontSize * 2 && headerRect.top == 0) {
+                helper.addClass(html, "is-header-color-style-scrolling");
+              } else {
+                helper.removeClass(html, "is-header-color-style-scrolling");
+              };
+            } else if (state.get.current().layout.order == "linkheader") {
+              // check scroll position
+              if (headerRect.bottom == innerHeight && (scrollTop + innerHeight) < ((scrollTop + layoutRect.bottom) - (fontSize * 2))) {
+                helper.addClass(html, "is-header-color-style-scrolling");
+              } else {
+                helper.removeClass(html, "is-header-color-style-scrolling");
+              };
             };
           };
+        } else {
+          helper.removeClass(html, "is-header-color-style-scrolling");
         };
       };
     }

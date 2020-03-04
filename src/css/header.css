@@ -64,6 +64,7 @@
 .header-area {
   background-color: transparent;
   width: var(--header-area-width);
+  transition: background-color var(--layout-timing-medium), opacity var(--layout-timing-medium), border-radius var(--layout-timing-extra-fast);
 }
 
 .is-header-radius .header-area {
