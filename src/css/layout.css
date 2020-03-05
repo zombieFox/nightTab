@@ -2,8 +2,11 @@
   position: relative;
   width: var(--layout-width);
   font-size: calc(1em * var(--layout-size));
-  display: flex;
   flex-wrap: nowrap;
+}
+
+.is-layout-direction-vertical .layout {
+  display: flex;
 }
 
 .is-layout-direction-vertical.is-layout-order-headerlink .layout {
@@ -14,16 +17,18 @@
   flex-direction: column-reverse;
 }
 
-.is-layout-direction-horizontal.is-layout-order-headerlink .layout {
-  flex-direction: row;
+.is-layout-direction-horizontal .layout {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
+.is-layout-direction-horizontal.is-layout-order-headerlink .layout {
+  flex-direction: row;
+}
+
 .is-layout-direction-horizontal.is-layout-order-linkheader .layout {
   flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
 }
 
 .is-layout-alignment-horizontal-left body {

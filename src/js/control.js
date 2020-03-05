@@ -791,7 +791,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.default("header.area.width");
+      mod.match("header.area.width", "link.area.width");
       header.render.area.width();
       render.update.control.header();
       render.update.control.menu();
@@ -2874,307 +2874,6 @@ var control = (function() {
       render.class();
     }
   }, {
-    element: ".control-group-area-justify-left",
-    path: "group.area.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-group-area-justify-center",
-    path: "group.area.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-group-area-justify-right",
-    path: "group.area.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-group-order-headerbody",
-    path: "group.order",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-group-order-bodyheader",
-    path: "group.order",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-group-name-show",
-    path: "group.name.show",
-    type: "checkbox",
-    func: function() {
-      link.groupAndItems();
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-group-name-size-range",
-    path: "group.name.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-group-name-size-number",
-      path: "group.name.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-name-text"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-name-text"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".group-name-text"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      link.render.group.name.size();
-    }
-  }, {
-    element: ".control-group-name-size-number",
-    path: "group.name.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-group-name-size-range",
-      path: "group.name.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.group.name.size();
-    }
-  }, {
-    element: ".control-group-name-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-name-text"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("group.name.size");
-      link.render.group.name.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-group-openall-show",
-    path: "group.openAll.show",
-    type: "checkbox",
-    func: function() {
-      link.groupAndItems();
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-group-openall-size-range",
-    path: "group.openAll.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-group-openall-size-number",
-      path: "group.openAll.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-openall"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-openall"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: ".header-item-coloraccent",
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      link.render.group.openall.size();
-    }
-  }, {
-    element: ".control-group-openall-size-number",
-    path: "group.openAll.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-group-openall-size-range",
-      path: "group.openAll.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.group.openall.size();
-    }
-  }, {
-    element: ".control-group-openall-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-openall"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("group.openAll.size");
-      link.render.group.openall.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-group-openall-style-box",
-    path: "group.openAll.style",
-    type: "radio",
-    func: function() {
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-group-openall-style-clear",
-    path: "group.openAll.style",
-    type: "radio",
-    func: function() {
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-group-border-range",
-    path: "group.border",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-group-border-number",
-      path: "group.border",
-      type: "number"
-    }],
-    func: function() {
-      link.render.group.border();
-      render.class();
-    }
-  }, {
-    element: ".control-group-border-number",
-    path: "group.border",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-group-border-range",
-      path: "group.border",
-      type: "range"
-    }],
-    func: function() {
-      link.render.group.border();
-      render.class();
-    }
-  }, {
-    element: ".control-group-border-default",
-    type: "button",
-    func: function() {
-      mod.default("group.border");
-      link.render.group.border();
-      render.class();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
     element: ".control-header-border-top-range",
     path: "header.border.top",
     type: "range",
@@ -3383,7 +3082,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.default("link.area.width");
+      mod.match("link.area.width", "header.area.width");
       link.render.area.width();
       render.update.control.header();
       render.update.control.menu();
@@ -4148,6 +3847,307 @@ var control = (function() {
     func: function() {
       link.mod.accent.rainbow();
       link.groupAndItems();
+    }
+  }, {
+    element: ".control-group-area-justify-left",
+    path: "group.area.justify",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-group-area-justify-center",
+    path: "group.area.justify",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-group-area-justify-right",
+    path: "group.area.justify",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-group-order-headerbody",
+    path: "group.order",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-group-order-bodyheader",
+    path: "group.order",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-group-name-show",
+    path: "group.name.show",
+    type: "checkbox",
+    func: function() {
+      link.groupAndItems();
+      render.class();
+      render.dependents();
+    }
+  }, {
+    element: ".control-group-name-size-range",
+    path: "group.name.size",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-group-name-size-number",
+      path: "group.name.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-name-text"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-name-text"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.box.open({
+            element: helper.e(".group-name-text"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
+    func: function() {
+      link.render.group.name.size();
+    }
+  }, {
+    element: ".control-group-name-size-number",
+    path: "group.name.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-group-name-size-range",
+      path: "group.name.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.group.name.size();
+    }
+  }, {
+    element: ".control-group-name-size-default",
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-name-text"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.default("group.name.size");
+      link.render.group.name.size();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-group-openall-show",
+    path: "group.openAll.show",
+    type: "checkbox",
+    func: function() {
+      link.groupAndItems();
+      render.class();
+      render.dependents();
+    }
+  }, {
+    element: ".control-group-openall-size-range",
+    path: "group.openAll.size",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-group-openall-size-number",
+      path: "group.openAll.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-openall"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-openall"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.box.open({
+            element: ".header-item-coloraccent",
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
+    func: function() {
+      link.render.group.openall.size();
+    }
+  }, {
+    element: ".control-group-openall-size-number",
+    path: "group.openAll.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-group-openall-size-range",
+      path: "group.openAll.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.group.openall.size();
+    }
+  }, {
+    element: ".control-group-openall-size-default",
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".group-openall"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.default("group.openAll.size");
+      link.render.group.openall.size();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-group-openall-style-box",
+    path: "group.openAll.style",
+    type: "radio",
+    func: function() {
+      link.groupAndItems();
+    }
+  }, {
+    element: ".control-group-openall-style-clear",
+    path: "group.openAll.style",
+    type: "radio",
+    func: function() {
+      link.groupAndItems();
+    }
+  }, {
+    element: ".control-group-border-range",
+    path: "group.border",
+    type: "range",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: ".control-group-border-number",
+      path: "group.border",
+      type: "number"
+    }],
+    func: function() {
+      link.render.group.border();
+      render.class();
+    }
+  }, {
+    element: ".control-group-border-number",
+    path: "group.border",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: ".control-group-border-range",
+      path: "group.border",
+      type: "range"
+    }],
+    func: function() {
+      link.render.group.border();
+      render.class();
+    }
+  }, {
+    element: ".control-group-border-default",
+    type: "button",
+    func: function() {
+      mod.default("group.border");
+      link.render.group.border();
+      render.class();
+      render.update.control.header();
+      render.update.control.menu();
     }
   }, {
     element: ".control-theme-custom-add",
@@ -5920,6 +5920,17 @@ var control = (function() {
     });
   };
 
+  mod.match = function(origin, target) {
+    helper.setObject({
+      object: state.get.current(),
+      path: origin,
+      newValue: helper.getObject({
+        object: state.get.current(),
+        path: target
+      })
+    });
+  };
+
   var bind = {};
 
   bind.control = {
@@ -6621,6 +6632,21 @@ var control = (function() {
         }
       }],
       header: {
+        alignment: [{
+          condition: function() {
+            return (state.get.current().layout.direction == "vertical")
+          },
+          dependents: function() {
+            return [
+              ".control-header-area-justify-grid",
+              ".control-header-area-justify-label",
+              ".control-header-area-justify-left",
+              ".control-header-area-justify-center",
+              ".control-header-area-justify-right",
+              ".control-header-area-justify-helper",
+            ]
+          }
+        }],
         greeting: [{
           condition: function() {
             return state.get.current().header.greeting.show;
@@ -7091,12 +7117,7 @@ var control = (function() {
             ".control-link-area-width-default",
             ".control-link-area-width-match",
             ".control-link-area-width-helper",
-            ".control-link-area-justify-grid",
-            ".control-link-area-justify-label",
-            ".control-link-area-justify-left",
-            ".control-link-area-justify-center",
-            ".control-link-area-justify-right",
-            ".control-link-area-justify-helper",
+            ".control-link-area-helper",
             "[for=control-link-item-size-range]",
             ".control-link-item-size-range",
             ".control-link-item-size-number",
@@ -7109,6 +7130,8 @@ var control = (function() {
             ".control-link-item-shadow-show-helper",
             ".control-link-item-hoverscale",
             ".control-link-newtab",
+            ".control-link-item-display-direction-helper",
+            ".control-link-item-display-order-helper",
             ".control-link-item-color-by-theme",
             ".control-link-item-color-by-theme-helper",
             ".control-link-item-color-by-custom",
@@ -7131,6 +7154,20 @@ var control = (function() {
             ".control-link-accent-set",
             ".control-link-accent-set-helper"
           ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().layout.direction == "vertical") && state.get.current().link.show
+        },
+        dependents: function() {
+          return [
+            ".control-link-area-justify-grid",
+            ".control-link-area-justify-label",
+            ".control-link-area-justify-left",
+            ".control-link-area-justify-center",
+            ".control-link-area-justify-right",
+            ".control-link-area-justify-helper",
+          ]
         }
       }, {
         condition: function() {
@@ -7328,6 +7365,7 @@ var control = (function() {
     };
 
     disableCheck(all.edit);
+    disableCheck(all.header.alignment);
     disableCheck(all.header.greeting);
     disableCheck(all.header.clock);
     disableCheck(all.header.transitional);

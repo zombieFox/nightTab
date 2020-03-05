@@ -20,7 +20,7 @@
 }
 
 .is-link-show.is-layout-direction-horizontal .header {
-  width: 50%;
+  width: calc(calc(var(--header-area-width) / 2) - calc(calc(var(--link-area-width) / 2) - 50%));
 }
 
 .is-layout-direction-vertical .header {
@@ -63,8 +63,15 @@
 
 .header-area {
   background-color: transparent;
-  width: var(--header-area-width);
   transition: background-color var(--layout-timing-medium), opacity var(--layout-timing-medium), border-radius var(--layout-timing-extra-fast);
+}
+
+.is-layout-direction-vertical .header-area {
+  width: var(--header-area-width);
+}
+
+.is-layout-direction-horizontal .header-area {
+  width: 100%;
 }
 
 .is-header-radius .header-area {
