@@ -883,6 +883,7 @@ var update = (function() {
     },
     "5.0.0": function(data) {
       data.state.layout.direction = "vertical";
+      data.state.link.area.direction = "ltr";
       return data;
     }
   };

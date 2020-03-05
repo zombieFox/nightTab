@@ -3136,6 +3136,20 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: ".control-link-area-direction-ltr",
+    path: "link.area.direction",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-area-direction-rtl",
+    path: "link.area.direction",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
     element: ".control-link-item-size-range",
     path: "link.item.size",
     type: "range",
@@ -6396,6 +6410,15 @@ var control = (function() {
         name: "is-link-area-justify-" + state.get.current().link.area.justify
       }, {
         remove: [
+          "is-link-area-direction-ltr",
+          "is-link-area-direction-rtl"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-area-direction-" + state.get.current().link.area.direction
+      }, {
+        remove: [
           "is-link-display-alignment-topleft",
           "is-link-display-alignment-topcenter",
           "is-link-display-alignment-topright",
@@ -7118,6 +7141,10 @@ var control = (function() {
             ".control-link-area-width-match",
             ".control-link-area-width-helper",
             ".control-link-area-helper",
+            ".control-link-area-direction-label",
+            ".control-link-area-direction-ltr",
+            ".control-link-area-direction-rtl",
+            ".control-link-area-direction-helper",
             "[for=control-link-item-size-range]",
             ".control-link-item-size-range",
             ".control-link-item-size-number",

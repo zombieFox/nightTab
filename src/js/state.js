@@ -165,6 +165,7 @@ var state = (function() {
     link: {
       area: {
         width: 100,
+        direction: "ltr",
         justify: "center"
       },
       item: {

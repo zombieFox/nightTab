@@ -143,6 +143,11 @@
   z-index: 1;
 }
 
+.is-link-area-direction-ltr .link-item,
+.is-link-area-direction-rtl .link-item {
+  direction: ltr;
+}
+
 .link-item:focus-within,
 .link-item:focus,
 .link-item:hover {
