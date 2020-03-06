@@ -242,7 +242,7 @@ var link = (function() {
       },
       remove: {
         group: function() {
-          helper.eA(".link").forEach(function(arrayItem, index) {
+          helper.eA(".link-area").forEach(function(arrayItem, index) {
             sortable(arrayItem)[0].removeEventListener("sortupdate", bind.sort.update.func.group, false);
           });
         },
@@ -254,7 +254,7 @@ var link = (function() {
       }
     },
     group: function() {
-      sortable(".link", {
+      sortable(".link-area", {
         items: ".group",
         handle: ".group-control-item-handle",
         orientation: "vertical",
@@ -262,7 +262,7 @@ var link = (function() {
         forcePlaceholderSize: true
       });
       bind.sort.update.remove.group();
-      helper.eA(".link").forEach(function(arrayItem, index) {
+      helper.eA(".link-area").forEach(function(arrayItem, index) {
         sortable(arrayItem)[0].addEventListener("sortupdate", bind.sort.update.func.group, false, event);
       });
     },
