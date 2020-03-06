@@ -95,6 +95,7 @@
 
 .link-item.link-empty {
   background-color: rgba(var(--theme-color-04), 0.2);
+  padding: 0.5em 1em;
   border-radius: var(--theme-radius);
   height: inherit;
   text-align: center;
