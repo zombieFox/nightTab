@@ -303,7 +303,8 @@ var header = (function() {
 
   render.item = {
     all: function() {
-      var headerArea = helper.e(".header-area");
+      var headerSection = helper.e(".header");
+      var headerArea = helper.node("div|class:header-area");
       var headerItemGrid = helper.node("div|class:header-item-grid");
       state.get.current().header.order.forEach(function(arrayItem, index) {
         if ((arrayItem == "clock" && (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) ||
@@ -314,11 +315,12 @@ var header = (function() {
         };
       });
       headerArea.appendChild(headerItemGrid);
+      headerSection.appendChild(headerArea);
     },
     clear: function() {
-      var headerArea = helper.e(".header-area");
-      while (headerArea.lastChild) {
-        headerArea.removeChild(headerArea.lastChild);
+      var headerSection = helper.e(".header");
+      while (headerSection.lastChild) {
+        headerSection.removeChild(headerSection.lastChild);
       };
     },
     wrapper: function(name, item) {
