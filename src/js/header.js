@@ -108,24 +108,29 @@ var header = (function() {
       var innerHeight = window.innerHeight;
       // if color show
       if (state.get.current().header.color.show) {
-        // color always
-        if (state.get.current().header.color.style == "scroll") {
-          // check header position
-          if (state.get.current().layout.order == "headerlink") {
-            // check scroll position
-            if (scrollTop > fontSize * 2 && headerRect.top == 0) {
-              helper.addClass(html, "is-header-color-style-scrolling");
-            } else {
-              helper.removeClass(html, "is-header-color-style-scrolling");
-            };
-          } else if (state.get.current().layout.order == "linkheader") {
-            // check scroll position
-            if (headerRect.bottom == innerHeight && (scrollTop + innerHeight) < ((scrollTop + layoutRect.bottom) - (fontSize * 2))) {
-              helper.addClass(html, "is-header-color-style-scrolling");
-            } else {
-              helper.removeClass(html, "is-header-color-style-scrolling");
+        // if layout is vertical
+        if (state.get.current().layout.direction == "vertical") {
+          // color on scroll or always
+          if (state.get.current().header.color.style == "scroll") {
+            // check header position
+            if (state.get.current().layout.order == "headerlink") {
+              // check scroll position
+              if (scrollTop > fontSize * 2 && headerRect.top == 0) {
+                helper.addClass(html, "is-header-color-style-scrolling");
+              } else {
+                helper.removeClass(html, "is-header-color-style-scrolling");
+              };
+            } else if (state.get.current().layout.order == "linkheader") {
+              // check scroll position
+              if (headerRect.bottom == innerHeight && (scrollTop + innerHeight) < ((scrollTop + layoutRect.bottom) - (fontSize * 2))) {
+                helper.addClass(html, "is-header-color-style-scrolling");
+              } else {
+                helper.removeClass(html, "is-header-color-style-scrolling");
+              };
             };
           };
+        } else {
+          helper.removeClass(html, "is-header-color-style-scrolling");
         };
       };
     }
@@ -298,7 +303,8 @@ var header = (function() {
 
   render.item = {
     all: function() {
-      var headerArea = helper.e(".header-area");
+      var headerSection = helper.e(".header");
+      var headerArea = helper.node("div|class:header-area");
       var headerItemGrid = helper.node("div|class:header-item-grid");
       state.get.current().header.order.forEach(function(arrayItem, index) {
         if ((arrayItem == "clock" && (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show)) ||
@@ -309,11 +315,12 @@ var header = (function() {
         };
       });
       headerArea.appendChild(headerItemGrid);
+      headerSection.appendChild(headerArea);
     },
     clear: function() {
-      var headerArea = helper.e(".header-area");
-      while (headerArea.lastChild) {
-        headerArea.removeChild(headerArea.lastChild);
+      var headerSection = helper.e(".header");
+      while (headerSection.lastChild) {
+        headerSection.removeChild(headerSection.lastChild);
       };
     },
     wrapper: function(name, item) {

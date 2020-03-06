@@ -875,10 +875,15 @@ var update = (function() {
       return data;
     },
     "4.44.0": function(data) {
-      if (!"newTab" in state.get.current().link.item && "newTab" in state.get.current().link) {
-        state.get.current().link.item.newTab = state.get.current().link.newTab;
-        delete state.get.current().link.newTab;
+      if (!"newTab" in data.state.link.item && "newTab" in data.state.link) {
+        data.state.link.item.newTab = data.state.link.newTab;
+        delete data.state.link.newTab;
       };
+      return data;
+    },
+    "5.0.0": function(data) {
+      data.state.layout.direction = "vertical";
+      data.state.link.area.direction = "ltr";
       return data;
     }
   };

@@ -242,7 +242,7 @@ var link = (function() {
       },
       remove: {
         group: function() {
-          helper.eA(".link").forEach(function(arrayItem, index) {
+          helper.eA(".link-area").forEach(function(arrayItem, index) {
             sortable(arrayItem)[0].removeEventListener("sortupdate", bind.sort.update.func.group, false);
           });
         },
@@ -254,7 +254,7 @@ var link = (function() {
       }
     },
     group: function() {
-      sortable(".link", {
+      sortable(".link-area", {
         items: ".group",
         handle: ".group-control-item-handle",
         orientation: "vertical",
@@ -262,7 +262,7 @@ var link = (function() {
         forcePlaceholderSize: true
       });
       bind.sort.update.remove.group();
-      helper.eA(".link").forEach(function(arrayItem, index) {
+      helper.eA(".link-area").forEach(function(arrayItem, index) {
         sortable(arrayItem)[0].addEventListener("sortupdate", bind.sort.update.func.group, false, event);
       });
     },
@@ -453,7 +453,7 @@ var link = (function() {
 
       var groupOpenall = helper.node("div|class:group-openall form-group");
 
-      var groupOpenallItem = helper.node("button|class:button group-openall-item,tabindex:-1,title:Open all Bookmarks in this Group");
+      var groupOpenallItem = helper.node("button|class:button group-openall-item,tabindex:1,title:Open all Bookmarks in this Group");
       var groupOpenallItemText = helper.node("span:Open all|class:button-text");
       groupOpenallItem.appendChild(groupOpenallItemText);
       groupOpenall.appendChild(groupOpenallItem);
@@ -1225,6 +1225,8 @@ var link = (function() {
 
   render.all = function() {
     var linkSection = helper.e(".link");
+    var linkArea = helper.node("div|class:link-area");
+    linkSection.appendChild(linkArea);
     var make = {
       bookmarks: function() {
         bookmarks.get().forEach(function(arrayItem, index) {
@@ -1255,10 +1257,10 @@ var link = (function() {
           };
           if (state.get.current().search) {
             if (search.mod.searching.count.group(index) > 0) {
-              linkSection.appendChild(group);
+              linkArea.appendChild(group);
             };
           } else {
-            linkSection.appendChild(group);
+            linkArea.appendChild(group);
           };
           stagedGroup.reset();
           stagedLink.reset();
@@ -1266,10 +1268,10 @@ var link = (function() {
       },
       empty: {
         search: function() {
-          linkSection.appendChild(render.empty.search());
+          linkArea.appendChild(render.empty.search());
         },
         bookmarks: function() {
-          linkSection.appendChild(render.empty.group());
+          linkArea.appendChild(render.empty.group());
         }
       }
     };
@@ -1832,6 +1834,7 @@ var link = (function() {
         } else {
           edit.mode.open();
         };
+        render.group.tabindex();
         render.item.tabindex();
       }
     },

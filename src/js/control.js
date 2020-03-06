@@ -442,7 +442,6 @@ var control = (function() {
     type: "radio",
     func: function() {
       render.class();
-      layout.render.order();
       header.render.color.scrolling();
     }
   }, {
@@ -451,7 +450,24 @@ var control = (function() {
     type: "radio",
     func: function() {
       render.class();
-      layout.render.order();
+      header.render.color.scrolling();
+    }
+  }, {
+    element: ".control-layout-direction-vertical",
+    path: "layout.direction",
+    type: "radio",
+    func: function() {
+      render.class();
+      render.dependents();
+      header.render.color.scrolling();
+    }
+  }, {
+    element: ".control-layout-direction-horizontal",
+    path: "layout.direction",
+    type: "radio",
+    func: function() {
+      render.class();
+      render.dependents();
       header.render.color.scrolling();
     }
   }, {
@@ -775,7 +791,7 @@ var control = (function() {
       }
     }],
     func: function() {
-      mod.default("header.area.width");
+      mod.match("header.area.width", "link.area.width");
       header.render.area.width();
       render.update.control.header();
       render.update.control.menu();
@@ -2858,6 +2874,995 @@ var control = (function() {
       render.class();
     }
   }, {
+    element: ".control-header-border-top-range",
+    path: "header.border.top",
+    type: "range",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: ".control-header-border-top-number",
+      path: "header.border.top",
+      type: "number"
+    }],
+    func: function() {
+      header.render.border();
+      render.class();
+    }
+  }, {
+    element: ".control-header-border-top-number",
+    path: "header.border.top",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: ".control-header-border-top-range",
+      path: "header.border.top",
+      type: "range"
+    }],
+    func: function() {
+      header.render.border();
+      render.class();
+    }
+  }, {
+    element: ".control-header-border-top-default",
+    type: "button",
+    func: function() {
+      mod.default("header.border.top");
+      header.render.border();
+      render.class();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-border-bottom-range",
+    path: "header.border.bottom",
+    type: "range",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: ".control-header-border-bottom-number",
+      path: "header.border.bottom",
+      type: "number"
+    }],
+    func: function() {
+      header.render.border();
+      render.class();
+    }
+  }, {
+    element: ".control-header-border-bottom-number",
+    path: "header.border.bottom",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: ".control-header-border-bottom-range",
+      path: "header.border.bottom",
+      type: "range"
+    }],
+    func: function() {
+      header.render.border();
+      render.class();
+    }
+  }, {
+    element: ".control-header-border-bottom-default",
+    type: "button",
+    func: function() {
+      mod.default("header.border.bottom");
+      header.render.border();
+      render.class();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-header-position-sticky",
+    path: "header.position",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-header-position-inline",
+    path: "header.position",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-area-width-range",
+    path: "link.area.width",
+    type: "range",
+    valueModify: {
+      min: 10,
+      max: 100
+    },
+    mirrorElement: [{
+      element: ".control-link-area-width-number",
+      path: "link.area.width",
+      type: "number"
+    }],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".link-area"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".link-area"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.box.open({
+            element: helper.e(".group"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
+    func: function() {
+      link.render.area.width();
+    }
+  }, {
+    element: ".control-link-area-width-number",
+    path: "link.area.width",
+    type: "number",
+    valueModify: {
+      min: 10,
+      max: 100
+    },
+    mirrorElement: [{
+      element: ".control-link-area-width-range",
+      path: "link.area.width",
+      type: "range"
+    }],
+    func: function() {
+      link.render.area.width();
+    }
+  }, {
+    element: ".control-link-area-width-default",
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.default("link.area.width");
+      link.render.area.width();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-area-width-match",
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
+    func: function() {
+      mod.match("link.area.width", "header.area.width");
+      link.render.area.width();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-area-justify-left",
+    path: "link.area.justify",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-area-justify-center",
+    path: "link.area.justify",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-area-justify-right",
+    path: "link.area.justify",
+    type: "radio",
+    additionalEvents: [{
+      event: "change",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".link-area"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-area-direction-ltr",
+    path: "link.area.direction",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-area-direction-rtl",
+    path: "link.area.direction",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-size-range",
+    path: "link.item.size",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 50,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-size-number",
+      path: "link.item.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    additionalEvents: [{
+      event: "input",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".link-item"),
+        });
+      }
+    }, {
+      event: "mousedown",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".link-item"),
+        });
+      }
+    }, {
+      event: "mouseup",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "touchend",
+      func: function() {
+        edge.box.close();
+      }
+    }, {
+      event: "keydown",
+      func: function() {
+        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+          edge.box.open({
+            element: helper.e(".link-item"),
+          });
+        };
+      }
+    }, {
+      event: "keyup",
+      func: function() {
+        edge.box.close();
+      }
+    }],
+    func: function() {
+      link.render.item.size();
+    }
+  }, {
+    element: ".control-link-item-size-number",
+    path: "link.item.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 50,
+      max: 500,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-size-range",
+      path: "link.item.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.size();
+    }
+  }, {
+    element: ".control-link-show",
+    path: "link.show",
+    type: "checkbox",
+    func: function() {
+      render.class();
+      render.dependents();
+      search.render.engine();
+    }
+  }, {
+    element: ".control-link-item-size-default",
+    type: "button",
+    additionalEvents: [{
+      event: "click",
+      func: function() {
+        edge.box.open({
+          element: helper.e(".link-item"),
+          delay: 500
+        });
+      }
+    }],
+    func: function() {
+      mod.default("link.item.size");
+      link.render.item.size();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-item-url-show",
+    path: "link.item.url.show",
+    type: "checkbox",
+    func: function() {
+      render.class();
+      render.dependents();
+    }
+  }, {
+    element: ".control-link-item-line-show",
+    path: "link.item.line.show",
+    type: "checkbox",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-shadow-show",
+    path: "link.item.shadow.show",
+    type: "checkbox",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-hoverscale",
+    path: "link.item.hoverScale.show",
+    type: "checkbox",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-newtab",
+    path: "link.item.newTab",
+    type: "checkbox",
+    func: function() {
+      link.groupAndItems();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-topcenter",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-topright",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-centerleft",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-centercenter",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-centerright",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-bottomleft",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-bottomcenter",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-bottomright",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-rotate-range",
+    path: "link.item.display.rotate",
+    type: "range",
+    valueModify: {
+      min: -180,
+      max: 180
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-rotate-number",
+      path: "link.item.display.rotate",
+      type: "number"
+    }],
+    func: function() {
+      link.render.item.rotate();
+    }
+  }, {
+    element: ".control-link-item-display-rotate-number",
+    path: "link.item.display.rotate",
+    type: "number",
+    valueModify: {
+      min: -180,
+      max: 180
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-rotate-range",
+      path: "link.item.display.rotate",
+      type: "range"
+    }],
+    func: function() {
+      link.render.item.rotate();
+    }
+  }, {
+    element: ".control-link-item-display-rotate-default",
+    type: "button",
+    func: function() {
+      mod.default("link.item.display.rotate");
+      link.render.item.rotate();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-item-display-translate-x-range",
+    path: "link.item.display.translate.x",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: -1000,
+      max: 1000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-translate-x-number",
+      path: "link.item.display.translate.x",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.translate.x();
+    }
+  }, {
+    element: ".control-link-item-display-translate-x-number",
+    path: "link.item.display.translate.x",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: -1000,
+      max: 1000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-translate-x-range",
+      path: "link.item.display.translate.x",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.translate.x();
+    }
+  }, {
+    element: ".control-link-item-display-translate-x-default",
+    type: "button",
+    func: function() {
+      mod.default("link.item.display.translate.x");
+      link.render.item.translate.x();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-item-display-translate-y-range",
+    path: "link.item.display.translate.y",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: -1000,
+      max: 1000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-translate-y-number",
+      path: "link.item.display.translate.y",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.translate.y();
+    }
+  }, {
+    element: ".control-link-item-display-translate-y-number",
+    path: "link.item.display.translate.y",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: -1000,
+      max: 1000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-translate-y-range",
+      path: "link.item.display.translate.y",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.translate.y();
+    }
+  }, {
+    element: ".control-link-item-display-translate-y-default",
+    type: "button",
+    func: function() {
+      mod.default("link.item.display.translate.y");
+      link.render.item.translate.y();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-item-display-gutter-range",
+    path: "link.item.display.gutter",
+    type: "range",
+    valueModify: {
+      min: 0,
+      max: 40
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-gutter-number",
+      path: "link.item.display.gutter",
+      type: "number"
+    }],
+    func: function() {
+      link.render.item.gutter();
+    }
+  }, {
+    element: ".control-link-item-display-gutter-number",
+    path: "link.item.display.gutter",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 40
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-gutter-range",
+      path: "link.item.display.gutter",
+      type: "range"
+    }],
+    func: function() {
+      link.render.item.gutter();
+    }
+  }, {
+    element: ".control-link-item-display-gutter-default",
+    type: "button",
+    func: function() {
+      mod.default("link.item.display.gutter");
+      link.render.item.gutter();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-item-display-direction-horizontal",
+    path: "link.item.display.direction",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-direction-vertical",
+    path: "link.item.display.direction",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-order-letconname",
+    path: "link.item.display.order",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-order-nameletcon",
+    path: "link.item.display.order",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-display-letcon-show",
+    path: "link.item.display.letcon.show",
+    type: "checkbox",
+    func: function() {
+      render.class();
+      render.dependents();
+    }
+  }, {
+    element: ".control-link-item-display-letcon-letter-size-range",
+    path: "link.item.display.letcon.letter.size",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-letcon-letter-size-number",
+      path: "link.item.display.letcon.letter.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.display.letter();
+    }
+  }, {
+    element: ".control-link-item-display-letcon-letter-size-number",
+    path: "link.item.display.letcon.letter.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-letcon-letter-size-range",
+      path: "link.item.display.letcon.letter.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.display.letter();
+    }
+  }, {
+    element: ".control-link-item-display-letcon-letter-size-default",
+    type: "button",
+    func: function() {
+      mod.default("link.item.display.letcon.letter.size");
+      link.render.item.display.letter();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-item-display-letcon-icon-size-range",
+    path: "link.item.display.letcon.icon.size",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-letcon-icon-size-number",
+      path: "link.item.display.letcon.icon.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.display.icon();
+    }
+  }, {
+    element: ".control-link-item-display-letcon-icon-size-number",
+    path: "link.item.display.letcon.icon.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-letcon-icon-size-range",
+      path: "link.item.display.letcon.icon.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.display.icon();
+    }
+  }, {
+    element: ".control-link-item-display-letcon-icon-size-default",
+    type: "button",
+    func: function() {
+      mod.default("link.item.display.letcon.icon.size");
+      link.render.item.display.icon();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-item-display-name-show",
+    path: "link.item.display.name.show",
+    type: "checkbox",
+    func: function() {
+      render.class();
+      render.dependents();
+    }
+  }, {
+    element: ".control-link-item-display-name-size-range",
+    path: "link.item.display.name.size",
+    type: "range",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-name-size-number",
+      path: "link.item.display.name.size",
+      type: "number",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.name();
+    }
+  }, {
+    element: ".control-link-item-display-name-size-number",
+    path: "link.item.display.name.size",
+    type: "number",
+    valueConvert: ["float"],
+    valueModify: {
+      min: 10,
+      max: 3000,
+      step: 10
+    },
+    mirrorElement: [{
+      element: ".control-link-item-display-name-size-range",
+      path: "link.item.display.name.size",
+      type: "range",
+      valueConvert: ["float"]
+    }],
+    func: function() {
+      link.render.item.name();
+    }
+  }, {
+    element: ".control-link-item-display-name-size-default",
+    type: "button",
+    func: function() {
+      mod.default("link.item.display.name.size");
+      link.render.item.name();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-item-display-alignment-topleft",
+    path: "link.item.display.alignment",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-style-block",
+    path: "link.style",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-style-list",
+    path: "link.style",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-color-by-theme",
+    path: "link.item.color.by",
+    type: "radio",
+    func: function() {
+      render.dependents();
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-color-by-custom",
+    path: "link.item.color.by",
+    type: "radio",
+    func: function() {
+      render.dependents();
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-color-rgb-range",
+    path: "link.item.color.rgb",
+    type: "color",
+    mirrorElement: [{
+      element: ".control-link-item-color-rgb-text",
+      path: "link.item.color.rgb",
+      type: "text",
+      valueConvert: ["hexTextString"]
+    }],
+    func: function() {
+      link.render.item.color.custom();
+    }
+  }, {
+    element: ".control-link-item-color-rgb-text",
+    path: "link.item.color.rgb",
+    type: "text",
+    valueConvert: ["hexTextString"],
+    mirrorElement: [{
+      element: ".control-link-item-color-rgb-range",
+      path: "link.item.color.rgb",
+      type: "color"
+    }],
+    func: function() {
+      link.render.item.color.custom();
+    }
+  }, {
+    element: ".control-link-item-border-range",
+    path: "link.item.border",
+    type: "range",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: ".control-link-item-border-number",
+      path: "link.item.border",
+      type: "number"
+    }],
+    func: function() {
+      link.render.item.border();
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-border-number",
+    path: "link.item.border",
+    type: "number",
+    valueModify: {
+      min: 0,
+      max: 60
+    },
+    mirrorElement: [{
+      element: ".control-link-item-border-range",
+      path: "link.item.border",
+      type: "range"
+    }],
+    func: function() {
+      link.render.item.border();
+      render.class();
+    }
+  }, {
+    element: ".control-link-item-border-default",
+    type: "button",
+    func: function() {
+      mod.default("link.item.border");
+      render.class();
+      link.render.item.border();
+      render.update.control.header();
+      render.update.control.menu();
+    }
+  }, {
+    element: ".control-link-orientation-top",
+    path: "link.orientation",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-orientation-bottom",
+    path: "link.orientation",
+    type: "radio",
+    func: function() {
+      render.class();
+    }
+  }, {
+    element: ".control-link-sort-letter",
+    type: "button",
+    func: function() {
+      bookmarks.sort("letter");
+      link.groupAndItems();
+    }
+  }, {
+    element: ".control-link-sort-icon",
+    type: "button",
+    func: function() {
+      bookmarks.sort("icon");
+      link.groupAndItems();
+    }
+  }, {
+    element: ".control-link-sort-name",
+    type: "button",
+    func: function() {
+      bookmarks.sort("name");
+      link.groupAndItems();
+    }
+  }, {
+    element: ".control-link-accent-clear",
+    type: "button",
+    func: function() {
+      link.mod.accent.clear();
+      link.groupAndItems();
+    }
+  }, {
+    element: ".control-link-accent-set",
+    type: "button",
+    func: function() {
+      link.mod.accent.rainbow();
+      link.groupAndItems();
+    }
+  }, {
     element: ".control-group-area-justify-left",
     path: "group.area.justify",
     type: "radio",
@@ -3157,981 +4162,6 @@ var control = (function() {
       render.class();
       render.update.control.header();
       render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-border-top-range",
-    path: "header.border.top",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-header-border-top-number",
-      path: "header.border.top",
-      type: "number"
-    }],
-    func: function() {
-      header.render.border();
-      render.class();
-    }
-  }, {
-    element: ".control-header-border-top-number",
-    path: "header.border.top",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-header-border-top-range",
-      path: "header.border.top",
-      type: "range"
-    }],
-    func: function() {
-      header.render.border();
-      render.class();
-    }
-  }, {
-    element: ".control-header-border-top-default",
-    type: "button",
-    func: function() {
-      mod.default("header.border.top");
-      header.render.border();
-      render.class();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-border-bottom-range",
-    path: "header.border.bottom",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-header-border-bottom-number",
-      path: "header.border.bottom",
-      type: "number"
-    }],
-    func: function() {
-      header.render.border();
-      render.class();
-    }
-  }, {
-    element: ".control-header-border-bottom-number",
-    path: "header.border.bottom",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-header-border-bottom-range",
-      path: "header.border.bottom",
-      type: "range"
-    }],
-    func: function() {
-      header.render.border();
-      render.class();
-    }
-  }, {
-    element: ".control-header-border-bottom-default",
-    type: "button",
-    func: function() {
-      mod.default("header.border.bottom");
-      header.render.border();
-      render.class();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-position-sticky",
-    path: "header.position",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-position-inline",
-    path: "header.position",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-area-width-range",
-    path: "link.area.width",
-    type: "range",
-    valueModify: {
-      min: 10,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-link-area-width-number",
-      path: "link.area.width",
-      type: "number"
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".group"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      link.render.area.width();
-    }
-  }, {
-    element: ".control-link-area-width-number",
-    path: "link.area.width",
-    type: "number",
-    valueModify: {
-      min: 10,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-link-area-width-range",
-      path: "link.area.width",
-      type: "range"
-    }],
-    func: function() {
-      link.render.area.width();
-    }
-  }, {
-    element: ".control-link-area-width-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("link.area.width");
-      link.render.area.width();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-area-width-match",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group"),
-          delay: 500
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      mod.default("link.area.width");
-      link.render.area.width();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-area-justify-left",
-    path: "link.area.justify",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-area-justify-center",
-    path: "link.area.justify",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-area-justify-right",
-    path: "link.area.justify",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-size-range",
-    path: "link.item.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 50,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-size-number",
-      path: "link.item.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-item"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-item"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".link-item"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      link.render.item.size();
-    }
-  }, {
-    element: ".control-link-item-size-number",
-    path: "link.item.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 50,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-size-range",
-      path: "link.item.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.size();
-    }
-  }, {
-    element: ".control-link-show",
-    path: "link.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-      search.render.engine();
-    }
-  }, {
-    element: ".control-link-item-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-item"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("link.item.size");
-      link.render.item.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-url-show",
-    path: "link.item.url.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-link-item-line-show",
-    path: "link.item.line.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-shadow-show",
-    path: "link.item.shadow.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-hoverscale",
-    path: "link.item.hoverScale.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-newtab",
-    path: "link.item.newTab",
-    type: "checkbox",
-    func: function() {
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-show",
-    path: "link.item.display.letcon.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-letter-size-range",
-    path: "link.item.display.letcon.letter.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-letcon-letter-size-number",
-      path: "link.item.display.letcon.letter.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.display.letter();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-letter-size-number",
-    path: "link.item.display.letcon.letter.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-letcon-letter-size-range",
-      path: "link.item.display.letcon.letter.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.display.letter();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-letter-size-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.letcon.letter.size");
-      link.render.item.display.letter();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-icon-size-range",
-    path: "link.item.display.letcon.icon.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-letcon-icon-size-number",
-      path: "link.item.display.letcon.icon.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.display.icon();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-icon-size-number",
-    path: "link.item.display.letcon.icon.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-letcon-icon-size-range",
-      path: "link.item.display.letcon.icon.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.display.icon();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-icon-size-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.letcon.icon.size");
-      link.render.item.display.icon();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-name-show",
-    path: "link.item.display.name.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-link-item-display-name-size-range",
-    path: "link.item.display.name.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-name-size-number",
-      path: "link.item.display.name.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.name();
-    }
-  }, {
-    element: ".control-link-item-display-name-size-number",
-    path: "link.item.display.name.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-name-size-range",
-      path: "link.item.display.name.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.name();
-    }
-  }, {
-    element: ".control-link-item-display-name-size-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.name.size");
-      link.render.item.name();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-topleft",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-topcenter",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-topright",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-centerleft",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-centercenter",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-centerright",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-bottomleft",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-bottomcenter",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-bottomright",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-rotate-range",
-    path: "link.item.display.rotate",
-    type: "range",
-    valueModify: {
-      min: -180,
-      max: 180
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-rotate-number",
-      path: "link.item.display.rotate",
-      type: "number"
-    }],
-    func: function() {
-      link.render.item.rotate();
-    }
-  }, {
-    element: ".control-link-item-display-rotate-number",
-    path: "link.item.display.rotate",
-    type: "number",
-    valueModify: {
-      min: -180,
-      max: 180
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-rotate-range",
-      path: "link.item.display.rotate",
-      type: "range"
-    }],
-    func: function() {
-      link.render.item.rotate();
-    }
-  }, {
-    element: ".control-link-item-display-rotate-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.rotate");
-      link.render.item.rotate();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-translate-x-range",
-    path: "link.item.display.translate.x",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: -1000,
-      max: 1000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-translate-x-number",
-      path: "link.item.display.translate.x",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.translate.x();
-    }
-  }, {
-    element: ".control-link-item-display-translate-x-number",
-    path: "link.item.display.translate.x",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: -1000,
-      max: 1000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-translate-x-range",
-      path: "link.item.display.translate.x",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.translate.x();
-    }
-  }, {
-    element: ".control-link-item-display-translate-x-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.translate.x");
-      link.render.item.translate.x();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-translate-y-range",
-    path: "link.item.display.translate.y",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: -1000,
-      max: 1000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-translate-y-number",
-      path: "link.item.display.translate.y",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.translate.y();
-    }
-  }, {
-    element: ".control-link-item-display-translate-y-number",
-    path: "link.item.display.translate.y",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: -1000,
-      max: 1000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-translate-y-range",
-      path: "link.item.display.translate.y",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.translate.y();
-    }
-  }, {
-    element: ".control-link-item-display-translate-y-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.translate.y");
-      link.render.item.translate.y();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-gutter-range",
-    path: "link.item.display.gutter",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 40
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-gutter-number",
-      path: "link.item.display.gutter",
-      type: "number"
-    }],
-    func: function() {
-      link.render.item.gutter();
-    }
-  }, {
-    element: ".control-link-item-display-gutter-number",
-    path: "link.item.display.gutter",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 40
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-gutter-range",
-      path: "link.item.display.gutter",
-      type: "range"
-    }],
-    func: function() {
-      link.render.item.gutter();
-    }
-  }, {
-    element: ".control-link-item-display-gutter-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.gutter");
-      link.render.item.gutter();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-direction-horizontal",
-    path: "link.item.display.direction",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-direction-vertical",
-    path: "link.item.display.direction",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-order-letconname",
-    path: "link.item.display.order",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-order-nameletcon",
-    path: "link.item.display.order",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-style-block",
-    path: "link.style",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-style-list",
-    path: "link.style",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-color-by-theme",
-    path: "link.item.color.by",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-color-by-custom",
-    path: "link.item.color.by",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-color-rgb-range",
-    path: "link.item.color.rgb",
-    type: "color",
-    mirrorElement: [{
-      element: ".control-link-item-color-rgb-text",
-      path: "link.item.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }],
-    func: function() {
-      link.render.item.color.custom();
-    }
-  }, {
-    element: ".control-link-item-color-rgb-text",
-    path: "link.item.color.rgb",
-    type: "text",
-    valueConvert: ["hexTextString"],
-    mirrorElement: [{
-      element: ".control-link-item-color-rgb-range",
-      path: "link.item.color.rgb",
-      type: "color"
-    }],
-    func: function() {
-      link.render.item.color.custom();
-    }
-  }, {
-    element: ".control-link-item-border-range",
-    path: "link.item.border",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-link-item-border-number",
-      path: "link.item.border",
-      type: "number"
-    }],
-    func: function() {
-      link.render.item.border();
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-border-number",
-    path: "link.item.border",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-link-item-border-range",
-      path: "link.item.border",
-      type: "range"
-    }],
-    func: function() {
-      link.render.item.border();
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-border-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.border");
-      render.class();
-      link.render.item.border();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-orientation-top",
-    path: "link.orientation",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-orientation-bottom",
-    path: "link.orientation",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-sort-letter",
-    type: "button",
-    func: function() {
-      bookmarks.sort("letter");
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-link-sort-icon",
-    type: "button",
-    func: function() {
-      bookmarks.sort("icon");
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-link-sort-name",
-    type: "button",
-    func: function() {
-      bookmarks.sort("name");
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-link-accent-clear",
-    type: "button",
-    func: function() {
-      link.mod.accent.clear();
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-link-accent-set",
-    type: "button",
-    func: function() {
-      link.mod.accent.rainbow();
-      link.groupAndItems();
     }
   }, {
     element: ".control-theme-custom-add",
@@ -5904,6 +5934,17 @@ var control = (function() {
     });
   };
 
+  mod.match = function(origin, target) {
+    helper.setObject({
+      object: state.get.current(),
+      path: origin,
+      newValue: helper.getObject({
+        object: state.get.current(),
+        path: target
+      })
+    });
+  };
+
   var bind = {};
 
   bind.control = {
@@ -6105,6 +6146,12 @@ var control = (function() {
           "is-layout-alignment-bottomright"
         ],
         name: "is-layout-alignment-" + state.get.current().layout.alignment
+      }, {
+        remove: [
+          "is-layout-direction-vertical",
+          "is-layout-direction-horizontal"
+        ],
+        name: "is-layout-direction-" + state.get.current().layout.direction
       }, {
         remove: [
           "is-layout-order-headerlink",
@@ -6363,6 +6410,15 @@ var control = (function() {
         name: "is-link-area-justify-" + state.get.current().link.area.justify
       }, {
         remove: [
+          "is-link-area-direction-ltr",
+          "is-link-area-direction-rtl"
+        ],
+        condition: function() {
+          return state.get.current().link.show;
+        },
+        name: "is-link-area-direction-" + state.get.current().link.area.direction
+      }, {
+        remove: [
           "is-link-display-alignment-topleft",
           "is-link-display-alignment-topcenter",
           "is-link-display-alignment-topright",
@@ -6599,6 +6655,21 @@ var control = (function() {
         }
       }],
       header: {
+        alignment: [{
+          condition: function() {
+            return (state.get.current().layout.direction == "vertical")
+          },
+          dependents: function() {
+            return [
+              ".control-header-area-justify-grid",
+              ".control-header-area-justify-label",
+              ".control-header-area-justify-left",
+              ".control-header-area-justify-center",
+              ".control-header-area-justify-right",
+              ".control-header-area-justify-helper",
+            ]
+          }
+        }],
         greeting: [{
           condition: function() {
             return state.get.current().header.greeting.show;
@@ -7012,6 +7083,19 @@ var control = (function() {
               ".control-header-color-rgb-text"
             ];
           }
+        }],
+        position: [{
+          condition: function() {
+            return (state.get.current().layout.direction == "vertical");
+          },
+          dependents: function() {
+            return [
+              ".control-header-position-sticky",
+              ".control-header-position-sticky-helper",
+              ".control-header-position-inline",
+              ".control-header-position-inline-helper"
+            ];
+          }
         }]
       },
       group: [{
@@ -7050,19 +7134,17 @@ var control = (function() {
           return [
             ".control-layout-order-headerlink",
             ".control-layout-order-linkheader",
-            ".control-layout-order-helper",
             "[for=control-link-area-width-range]",
             ".control-link-area-width-range",
             ".control-link-area-width-number",
             ".control-link-area-width-default",
             ".control-link-area-width-match",
             ".control-link-area-width-helper",
-            ".control-link-area-justify-grid",
-            ".control-link-area-justify-label",
-            ".control-link-area-justify-left",
-            ".control-link-area-justify-center",
-            ".control-link-area-justify-right",
-            ".control-link-area-justify-helper",
+            ".control-link-area-helper",
+            ".control-link-area-direction-label",
+            ".control-link-area-direction-ltr",
+            ".control-link-area-direction-rtl",
+            ".control-link-area-direction-helper",
             "[for=control-link-item-size-range]",
             ".control-link-item-size-range",
             ".control-link-item-size-number",
@@ -7075,6 +7157,8 @@ var control = (function() {
             ".control-link-item-shadow-show-helper",
             ".control-link-item-hoverscale",
             ".control-link-newtab",
+            ".control-link-item-display-direction-helper",
+            ".control-link-item-display-order-helper",
             ".control-link-item-color-by-theme",
             ".control-link-item-color-by-theme-helper",
             ".control-link-item-color-by-custom",
@@ -7097,6 +7181,20 @@ var control = (function() {
             ".control-link-accent-set",
             ".control-link-accent-set-helper"
           ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().layout.direction == "vertical") && state.get.current().link.show
+        },
+        dependents: function() {
+          return [
+            ".control-link-area-justify-grid",
+            ".control-link-area-justify-label",
+            ".control-link-area-justify-left",
+            ".control-link-area-justify-center",
+            ".control-link-area-justify-right",
+            ".control-link-area-justify-helper",
+          ]
         }
       }, {
         condition: function() {
@@ -7167,8 +7265,8 @@ var control = (function() {
             ".control-link-item-display-direction-vertical",
             ".control-link-item-display-order-letconname",
             ".control-link-item-display-order-nameletcon",
-            ".control-link-item-display-direction-helper",
-            ".control-link-item-display-order-helper",
+            ".control-link-item-display-direction-vertical-helper",
+            ".control-link-item-display-direction-horizontal-helper",
             "[for=control-link-item-display-gutter-range]",
             ".control-link-item-display-gutter-range",
             ".control-link-item-display-gutter-number",
@@ -7294,6 +7392,7 @@ var control = (function() {
     };
 
     disableCheck(all.edit);
+    disableCheck(all.header.alignment);
     disableCheck(all.header.greeting);
     disableCheck(all.header.clock);
     disableCheck(all.header.transitional);
@@ -7302,6 +7401,7 @@ var control = (function() {
     disableCheck(all.header.editAdd);
     disableCheck(all.header.colorAccent);
     disableCheck(all.header.menu);
+    disableCheck(all.header.position);
     disableCheck(all.header.color);
     disableCheck(all.group);
     disableCheck(all.link);

@@ -22,18 +22,6 @@ var layout = (function() {
     html.style.setProperty("--layout-size", state.get.current().layout.size);
   };
 
-  render.order = function() {
-    var html = helper.e("html");
-    var layout = helper.e(".layout");
-    var header = helper.e(".header");
-    var link = helper.e(".link");
-    if (state.get.current().layout.order == "headerlink") {
-      layout.insertBefore(header, link);
-    } else if (state.get.current().layout.order == "linkheader") {
-      layout.insertBefore(link, header);
-    };
-  };
-
   render.title = function() {
     var title = helper.e("title");
     title.textContent = state.get.current().layout.title;
@@ -44,7 +32,6 @@ var layout = (function() {
     render.padding();
     render.gutter();
     render.size();
-    render.order();
     render.title();
   };
 
