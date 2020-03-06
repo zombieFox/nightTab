@@ -7,18 +7,21 @@ var link = (function() {
     },
     group: {
       name: null,
+      openAll: null,
       items: null
     }
   };
 
   stagedGroup.init = function() {
     stagedGroup.group.items = [];
+    stagedGroup.group.openAll = true;
   };
 
   stagedGroup.reset = function() {
     stagedGroup.position.origin = null;
     stagedGroup.position.destination = null;
     stagedGroup.group.name = null;
+    stagedGroup.group.openAll = null;
     stagedGroup.group.items = null;
   };
 
@@ -473,7 +476,7 @@ var link = (function() {
       if (state.get.current().group.name.show) {
         groupHeader.appendChild(groupHeaderItemName);
       };
-      if (state.get.current().group.openAll.show && stagedGroup.group.items.length > 0) {
+      if (state.get.current().group.openAll.show && stagedGroup.group.openAll && stagedGroup.group.items.length > 0) {
         groupHeader.appendChild(groupHeaderItemOpenall);
       };
       group.appendChild(groupHeader);
@@ -501,17 +504,40 @@ var link = (function() {
 
       // group name
       var groupFormNameInputWrap = helper.node("div|class:form-wrap");
-      var groupFormInputLabel = helper.node("label:Name|for:group-form-input-name");
+      var groupFormInputNameLabel = helper.node("label:Name|for:group-form-input-name");
       var groupFormInputName = helper.node("input|type:text,class:group-form-input-name,id:group-form-input-name,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+
+      // open all
+      var groupFormOpenAllInputWrap = helper.node("div|class:form-wrap");
+      var groupFormInputOpenallLabel = helper.node("label|for:group-form-input-openall");
+      var groupFormInputOpenallLabelText = helper.node("span:Show Open all in this Group");
+      var groupFormInputOpenallLabelIcon = helper.node("span|class:label-icon");
+      var groupFormOpenAllInput = helper.node("input|type:checkbox,class:group-form-input-openall,id:group-form-input-openall,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,checked");
+      var groupFormOpenAllInputHelper1 = helper.node("div|class:form-helper");
+      var groupFormOpenAllInputHelper1Item = helper.node("p:Override the global Group setting to show or hide the Open all button.|class:link-form-input-icon-helper form-helper-item");
+      var groupFormOpenAllInputHelper2 = helper.node("div|class:form-helper");
+      var groupFormOpenAllInputHelper2Item = helper.node("p:The Open all button will show when there is at least one Bookmark in this Group.|class:link-form-input-icon-helper form-helper-item");
 
       groupFormPositionInputWrap.appendChild(groupFormPositionLabel);
       groupFormPositionInputWrap.appendChild(groupFormPositionSelect);
       groupFormRandomNameButtonWrap.appendChild(groupFormRandomNameButton);
-      groupFormNameInputWrap.appendChild(groupFormInputLabel);
+      groupFormNameInputWrap.appendChild(groupFormInputNameLabel);
       groupFormNameInputWrap.appendChild(groupFormInputName);
+      groupFormInputOpenallLabel.appendChild(groupFormInputOpenallLabelIcon);
+      groupFormInputOpenallLabel.appendChild(groupFormInputOpenallLabelText);
+      groupFormOpenAllInputHelper1.appendChild(groupFormOpenAllInputHelper1Item);
+      groupFormOpenAllInputHelper2.appendChild(groupFormOpenAllInputHelper2Item);
+      groupFormOpenAllInputWrap.appendChild(groupFormOpenAllInput);
+      groupFormOpenAllInputWrap.appendChild(groupFormInputOpenallLabel);
+      groupFormOpenAllInputWrap.appendChild(groupFormOpenAllInputHelper1);
+      groupFormOpenAllInputWrap.appendChild(groupFormOpenAllInputHelper2);
+
       fieldset.appendChild(groupFormNameInputWrap);
       fieldset.appendChild(groupFormRandomNameButtonWrap);
+      fieldset.appendChild(helper.node("hr"));
       fieldset.appendChild(groupFormPositionInputWrap);
+      fieldset.appendChild(helper.node("hr"));
+      fieldset.appendChild(groupFormOpenAllInputWrap);
       form.appendChild(fieldset);
 
       var makeGroupOptions = function() {
@@ -527,6 +553,7 @@ var link = (function() {
       var populateForm = function() {
         groupFormPositionSelect.selectedIndex = stagedGroup.position.origin;
         groupFormInputName.value = stagedGroup.group.name;
+        groupFormOpenAllInput.checked = stagedGroup.group.openAll;
       };
 
       var setLastPosition = function() {
@@ -560,6 +587,9 @@ var link = (function() {
         });
         stagedGroup.group.name = randomName;
         groupFormInputName.value = randomName;
+      }, false);
+      groupFormOpenAllInput.addEventListener("change", function(event) {
+        stagedGroup.group.openAll = this.checked;
       }, false);
 
       return form;

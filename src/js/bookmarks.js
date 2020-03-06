@@ -4,6 +4,7 @@ var bookmarks = (function() {
 
   mod.all = [{
     name: "Cool stuff",
+    openAll: true,
     items: [{
       display: "icon",
       letter: "AS",
@@ -127,6 +128,7 @@ var bookmarks = (function() {
     }]
   }, {
     name: "Dev sites",
+    openAll: true,
     items: [{
       display: "icon",
       letter: "DEV",
