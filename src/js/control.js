@@ -127,5801 +127,5881 @@ var control = (function() {
     }
   }];
 
-  mod.menu = [{
-    element: ".control-menu-layout",
-    type: "button",
-    func: function() {
-      menu.nav("layout");
-    }
-  }, {
-    element: ".control-menu-header",
-    type: "button",
-    func: function() {
-      menu.nav("header");
-    }
-  }, {
-    element: ".control-menu-groups",
-    type: "button",
-    func: function() {
-      menu.nav("groups");
-    }
-  }, {
-    element: ".control-menu-bookmarks",
-    type: "button",
-    func: function() {
-      menu.nav("bookmarks");
-    }
-  }, {
-    element: ".control-menu-theme",
-    type: "button",
-    func: function() {
-      menu.nav("theme");
-    }
-  }, {
-    element: ".control-menu-background",
-    type: "button",
-    func: function() {
-      menu.nav("background");
-    }
-  }, {
-    element: ".control-menu-data",
-    type: "button",
-    func: function() {
-      menu.nav("data");
-    }
-  }, {
-    element: ".control-menu-coffee",
-    type: "button",
-    func: function() {
-      menu.nav("coffee");
-    }
-  }, {
-    element: ".control-menu-nighttab",
-    type: "button",
-    func: function() {
-      menu.nav("nighttab");
-    }
-  }, {
-    element: ".control-menu-close",
-    type: "button",
-    func: function() {
-      menu.close();
-    }
-  }, {
-    element: ".control-layout-size-range",
-    path: "layout.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 50,
-      max: 200,
-      step: 5
+  mod.menu = {
+    controls: {
+      nav: {
+        buttons: [{
+          element: ".control-menu-layout",
+          type: "button",
+          func: function() {
+            menu.nav("layout");
+          }
+        }, {
+          element: ".control-menu-header",
+          type: "button",
+          func: function() {
+            menu.nav("header");
+          }
+        }, {
+          element: ".control-menu-groups",
+          type: "button",
+          func: function() {
+            menu.nav("groups");
+          }
+        }, {
+          element: ".control-menu-bookmarks",
+          type: "button",
+          func: function() {
+            menu.nav("bookmarks");
+          }
+        }, {
+          element: ".control-menu-theme",
+          type: "button",
+          func: function() {
+            menu.nav("theme");
+          }
+        }, {
+          element: ".control-menu-background",
+          type: "button",
+          func: function() {
+            menu.nav("background");
+          }
+        }, {
+          element: ".control-menu-data",
+          type: "button",
+          func: function() {
+            menu.nav("data");
+          }
+        }, {
+          element: ".control-menu-coffee",
+          type: "button",
+          func: function() {
+            menu.nav("coffee");
+          }
+        }, {
+          element: ".control-menu-nighttab",
+          type: "button",
+          func: function() {
+            menu.nav("nighttab");
+          }
+        }, {
+          element: ".control-menu-close",
+          type: "button",
+          func: function() {
+            menu.close();
+          }
+        }]
+      },
+      layout: {
+        scaling: [{
+          element: ".control-layout-size-range",
+          path: "layout.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 50,
+            max: 200,
+            step: 5
+          },
+          mirrorElement: [{
+            element: ".control-layout-size-number",
+            path: "layout.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".layout"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            layout.render.size();
+          }
+        }, {
+          element: ".control-layout-size-number",
+          path: "layout.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 50,
+            max: 200,
+            step: 5
+          },
+          mirrorElement: [{
+            element: ".control-layout-size-range",
+            path: "layout.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            layout.render.size();
+          }
+        }, {
+          element: ".control-layout-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("layout.size");
+            layout.render.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        area: [{
+          element: ".control-layout-width-range",
+          path: "layout.width",
+          type: "range",
+          valueModify: {
+            min: 10,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-layout-width-number",
+            path: "layout.width",
+            type: "number"
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".layout"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            render.class();
+            layout.render.width();
+          }
+        }, {
+          element: ".control-layout-width-number",
+          path: "layout.width",
+          type: "number",
+          valueModify: {
+            min: 10,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-layout-width-range",
+            path: "layout.width",
+            type: "number"
+          }],
+          func: function() {
+            render.class();
+            layout.render.width();
+          }
+        }, {
+          element: ".control-layout-width-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("layout.width");
+            layout.render.width();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        alignment: [{
+          element: ".control-layout-alignment-topleft",
+          path: "layout.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-layout-alignment-topcenter",
+          path: "layout.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-layout-alignment-topright",
+          path: "layout.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-layout-alignment-centerleft",
+          path: "layout.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-layout-alignment-centercenter",
+          path: "layout.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-layout-alignment-centerright",
+          path: "layout.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-layout-alignment-bottomleft",
+          path: "layout.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-layout-alignment-bottomcenter",
+          path: "layout.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-layout-alignment-bottomright",
+          path: "layout.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-layout-order-headerlink",
+          path: "layout.order",
+          type: "radio",
+          func: function() {
+            render.class();
+            header.render.color.scrolling();
+          }
+        }, {
+          element: ".control-layout-order-linkheader",
+          path: "layout.order",
+          type: "radio",
+          func: function() {
+            render.class();
+            header.render.color.scrolling();
+          }
+        }, {
+          element: ".control-layout-direction-vertical",
+          path: "layout.direction",
+          type: "radio",
+          func: function() {
+            render.class();
+            render.dependents();
+            header.render.color.scrolling();
+          }
+        }, {
+          element: ".control-layout-direction-horizontal",
+          path: "layout.direction",
+          type: "radio",
+          func: function() {
+            render.class();
+            render.dependents();
+            header.render.color.scrolling();
+          }
+        }],
+        padding: [{
+          element: ".control-layout-padding-range",
+          path: "layout.padding",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 40
+          },
+          mirrorElement: [{
+            element: ".control-layout-padding-number",
+            path: "layout.padding",
+            type: "number"
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".layout"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            layout.render.padding();
+          }
+        }, {
+          element: ".control-layout-padding-number",
+          path: "layout.padding",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 40
+          },
+          mirrorElement: [{
+            element: ".control-layout-padding-range",
+            path: "layout.padding",
+            type: "range"
+          }],
+          func: function() {
+            layout.render.padding();
+          }
+        }, {
+          element: ".control-layout-padding-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("layout.padding");
+            layout.render.padding();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        gutter: [{
+          element: ".control-layout-gutter-range",
+          path: "layout.gutter",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 40
+          },
+          mirrorElement: [{
+            element: ".control-layout-gutter-number",
+            path: "layout.gutter",
+            type: "number"
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".layout"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            layout.render.gutter();
+          }
+        }, {
+          element: ".control-layout-gutter-number",
+          path: "layout.gutter",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 40
+          },
+          mirrorElement: [{
+            element: ".control-layout-gutter-range",
+            path: "layout.gutter",
+            type: "range"
+          }],
+          func: function() {
+            layout.render.gutter();
+          }
+        }, {
+          element: ".control-layout-gutter-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".layout"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("layout.gutter");
+            layout.render.gutter();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        page: [{
+          element: ".control-layout-title",
+          path: "layout.title",
+          type: "text",
+          func: function() {
+            layout.render.title();
+          }
+        }, {
+          element: ".control-layout-scrollpastend",
+          path: "layout.scrollPastEnd",
+          type: "checkbox",
+          func: function() {
+            render.class();
+            header.render.color.scrolling();
+          }
+        }, {
+          element: ".control-layout-scrollbars-auto",
+          path: "layout.scrollbars",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-layout-scrollbars-thin",
+          path: "layout.scrollbars",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-layout-scrollbars-none",
+          path: "layout.scrollbars",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }]
+      },
+      header: {
+        area: [{
+          element: ".control-header-area-width-range",
+          path: "header.area.width",
+          type: "range",
+          valueModify: {
+            min: 10,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-area-width-number",
+            path: "header.area.width",
+            type: "number"
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-area")
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-area")
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".header-area"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            header.render.area.width();
+          }
+        }, {
+          element: ".control-header-area-width-number",
+          path: "header.area.width",
+          type: "number",
+          valueModify: {
+            min: 10,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-area-width-range",
+            path: "header.area.width",
+            type: "range"
+          }],
+          func: function() {
+            header.render.area.width();
+          }
+        }, {
+          element: ".control-header-area-width-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-area"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("header.area.width");
+            header.render.area.width();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-area-width-match",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-area"),
+                delay: 500
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            mod.match("header.area.width", "link.area.width");
+            header.render.area.width();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        alignment: [{
+          element: ".control-header-area-justify-left",
+          path: "header.area.justify",
+          type: "radio",
+          additionalEvents: [{
+            event: "change",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-area"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-header-area-justify-center",
+          path: "header.area.justify",
+          type: "radio",
+          additionalEvents: [{
+            event: "change",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-area"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-header-area-justify-right",
+          path: "header.area.justify",
+          type: "radio",
+          additionalEvents: [{
+            event: "change",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-area"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-header-area-align-center",
+          path: "header.area.align",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-header-area-align-baseline",
+          path: "header.area.align",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-header-item-justify-left",
+          path: "header.item.justify",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-header-item-justify-center",
+          path: "header.item.justify",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-header-item-justify-right",
+          path: "header.item.justify",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }],
+        greeting: [{
+          element: ".control-header-greeting-show",
+          path: "header.greeting.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-greeting-type-good",
+          path: "header.greeting.type",
+          type: "radio",
+          func: function() {
+            greeting.render.clear();
+            greeting.render.all();
+          }
+        }, {
+          element: ".control-header-greeting-type-hello",
+          path: "header.greeting.type",
+          type: "radio",
+          func: function() {
+            greeting.render.clear();
+            greeting.render.all();
+          }
+        }, {
+          element: ".control-header-greeting-type-hi",
+          path: "header.greeting.type",
+          type: "radio",
+          func: function() {
+            greeting.render.clear();
+            greeting.render.all();
+          }
+        }, {
+          element: ".control-header-greeting-name",
+          path: "header.greeting.name",
+          type: "text",
+          func: function() {
+            greeting.render.clear();
+            greeting.render.all();
+          }
+        }, {
+          element: ".control-header-greeting-size-range",
+          path: "header.greeting.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-greeting-size-number",
+            path: "header.greeting.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".greeting"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".greeting"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".greeting"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            header.render.greeting.size();
+          }
+        }, {
+          element: ".control-header-greeting-size-number",
+          path: "header.greeting.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-greeting-size-range",
+            path: "header.greeting.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.greeting.size();
+          }
+        }, {
+          element: ".control-header-greeting-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".greeting"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("header.greeting.size");
+            header.render.greeting.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-greeting-newline",
+          path: "header.greeting.newLine",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }],
+        transitional: [{
+          element: ".control-header-transitional-show",
+          path: "header.transitional.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-transitional-type-timeanddate",
+          path: "header.transitional.type",
+          type: "radio",
+          func: function() {
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-transitional-type-its",
+          path: "header.transitional.type",
+          type: "radio",
+          func: function() {
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-transitional-size-range",
+          path: "header.transitional.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-transitional-size-number",
+            path: "header.transitional.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".transitional"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".transitional"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".transitional"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            header.render.transitional.size();
+          }
+        }, {
+          element: ".control-header-transitional-size-number",
+          path: "header.transitional.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-transitional-size-range",
+            path: "header.transitional.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.transitional.size();
+          }
+        }, {
+          element: ".control-header-transitional-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".transitional"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("header.transitional.size");
+            header.render.transitional.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-transitional-newline",
+          path: "header.transitional.newLine",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }],
+        clock: [{
+          element: ".control-header-clock-hours-show",
+          path: "header.clock.hours.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-clock-hours-display-number",
+          path: "header.clock.hours.display",
+          type: "radio",
+          func: function() {
+            clock.render.clear();
+            clock.render.all();
+          }
+        }, {
+          element: ".control-header-clock-hours-display-word",
+          path: "header.clock.hours.display",
+          type: "radio",
+          func: function() {
+            clock.render.clear();
+            clock.render.all();
+          }
+        }, {
+          element: ".control-header-clock-minutes-show",
+          path: "header.clock.minutes.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-clock-minutes-display-number",
+          path: "header.clock.minutes.display",
+          type: "radio",
+          func: function() {
+            clock.render.clear();
+            clock.render.all();
+          }
+        }, {
+          element: ".control-header-clock-minutes-display-word",
+          path: "header.clock.minutes.display",
+          type: "radio",
+          func: function() {
+            clock.render.clear();
+            clock.render.all();
+          }
+        }, {
+          element: ".control-header-clock-seconds-show",
+          path: "header.clock.seconds.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-clock-seconds-display-number",
+          path: "header.clock.seconds.display",
+          type: "radio",
+          func: function() {
+            clock.render.clear();
+            clock.render.all();
+          }
+        }, {
+          element: ".control-header-clock-seconds-display-word",
+          path: "header.clock.seconds.display",
+          type: "radio",
+          func: function() {
+            clock.render.clear();
+            clock.render.all();
+          }
+        }, {
+          element: ".control-header-clock-separator-show",
+          path: "header.clock.separator.show",
+          type: "checkbox",
+          func: function() {
+            clock.render.clear();
+            clock.render.all();
+          }
+        }, {
+          element: ".control-header-clock-hour24-show",
+          path: "header.clock.hour24.show",
+          type: "checkbox",
+          func: function() {
+            clock.render.clear();
+            clock.render.all();
+            render.dependents();
+          }
+        }, {
+          element: ".control-header-clock-meridiem-show",
+          path: "header.clock.meridiem.show",
+          type: "checkbox",
+          func: function() {
+            clock.render.clear();
+            clock.render.all();
+            render.dependents();
+          }
+        }, {
+          element: ".control-header-clock-size-range",
+          path: "header.clock.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-clock-size-number",
+            path: "header.clock.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".clock"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".clock"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".clock"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            header.render.clock.size();
+          }
+        }, {
+          element: ".control-header-clock-size-number",
+          path: "header.clock.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-clock-size-range",
+            path: "header.clock.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.clock.size();
+          }
+        }, {
+          element: ".control-header-clock-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".clock"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("header.clock.size");
+            header.render.clock.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-clock-newline",
+          path: "header.clock.newLine",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }],
+        date: [{
+          element: ".control-header-date-day-show",
+          path: "header.date.day.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-date-day-display-number",
+          path: "header.date.day.display",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-day-week-start-monday",
+          path: "header.date.day.weekStart",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-day-week-start-sunday",
+          path: "header.date.day.weekStart",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-day-display-word",
+          path: "header.date.day.display",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-day-length-long",
+          path: "header.date.day.length",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-day-length-short",
+          path: "header.date.day.length",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-date-show",
+          path: "header.date.date.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-date-date-display-number",
+          path: "header.date.date.display",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-date-display-word",
+          path: "header.date.date.display",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-date-ordinal",
+          path: "header.date.date.ordinal",
+          type: "checkbox",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-month-show",
+          path: "header.date.month.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-date-month-display-number",
+          path: "header.date.month.display",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-month-ordinal",
+          path: "header.date.month.ordinal",
+          type: "checkbox",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-month-display-word",
+          path: "header.date.month.display",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-month-length-long",
+          path: "header.date.month.length",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-month-length-short",
+          path: "header.date.month.length",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-year-show",
+          path: "header.date.year.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-date-year-display-number",
+          path: "header.date.year.display",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-year-display-word",
+          path: "header.date.year.display",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-separator-show",
+          path: "header.date.separator.show",
+          type: "checkbox",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-format-datemonth",
+          path: "header.date.format",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-format-monthdate",
+          path: "header.date.format",
+          type: "radio",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-size-range",
+          path: "header.date.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-date-size-number",
+            path: "header.date.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".date"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".date"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".date"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            header.render.date.size();
+          }
+        }, {
+          element: ".control-header-date-size-number",
+          path: "header.date.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-date-size-range",
+            path: "header.date.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.date.size();
+          }
+        }, {
+          element: ".control-header-date-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".date"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("header.date.size");
+            header.render.date.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-date-newline",
+          path: "header.date.newLine",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }],
+        search: [{
+          element: ".control-header-search-show",
+          path: "header.search.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            header.render.search.width.size();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.class();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-search-width-by-auto",
+          path: "header.search.width.by",
+          type: "radio",
+          func: function() {
+            render.class();
+            render.dependents();
+            header.render.search.width.size();
+          }
+        }, {
+          element: ".control-header-search-width-by-custom",
+          path: "header.search.width.by",
+          type: "radio",
+          func: function() {
+            render.class();
+            render.dependents();
+            header.render.search.width.size();
+          }
+        }, {
+          element: ".control-header-search-width-size-range",
+          path: "header.search.width.size",
+          type: "range",
+          valueModify: {
+            min: 10,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-search-width-size-number",
+            path: "header.search.width.size",
+            type: "number",
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".search-wrapper"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".search-wrapper"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".search-wrapper"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            header.render.search.width.size();
+          }
+        }, {
+          element: ".control-header-search-width-size-number",
+          path: "header.search.width.size",
+          type: "number",
+          valueModify: {
+            min: 10,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-search-width-size-range",
+            path: "header.search.width.size",
+            type: "range",
+          }],
+          func: function() {
+            header.render.search.width.size();
+          }
+        }, {
+          element: ".control-header-search-width-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".search-wrapper"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("header.search.width.size");
+            header.render.search.width.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-search-style-box",
+          path: "header.search.style",
+          type: "radio",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-search-style-clear",
+          path: "header.search.style",
+          type: "radio",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-search-focus",
+          path: "header.search.focus",
+          type: "checkbox"
+        }, {
+          element: ".control-header-search-engine-google",
+          path: "header.search.engine.selected",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            search.render.engine();
+          }
+        }, {
+          element: ".control-header-search-engine-duckduckgo",
+          path: "header.search.engine.selected",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            search.render.engine();
+          }
+        }, {
+          element: ".control-header-search-engine-youtube",
+          path: "header.search.engine.selected",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            search.render.engine();
+          }
+        }, {
+          element: ".control-header-search-engine-giphy",
+          path: "header.search.engine.selected",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            search.render.engine();
+          }
+        }, {
+          element: ".control-header-search-engine-bing",
+          path: "header.search.engine.selected",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            search.render.engine();
+          }
+        }, {
+          element: ".control-header-search-engine-custom",
+          path: "header.search.engine.selected",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            search.render.engine();
+          }
+        }, {
+          element: ".control-header-search-engine-custom-name",
+          path: "header.search.engine.custom.name",
+          type: "text",
+          func: function() {
+            search.render.engine();
+          }
+        }, {
+          element: ".control-header-search-engine-custom-url",
+          path: "header.search.engine.custom.url",
+          type: "text",
+          func: function() {
+            search.render.engine();
+          }
+        }, {
+          element: ".control-header-search-text-justify-left",
+          path: "header.search.text.justify",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-header-search-text-justify-center",
+          path: "header.search.text.justify",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-header-search-text-justify-right",
+          path: "header.search.text.justify",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-header-search-size-range",
+          path: "header.search.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-search-size-number",
+            path: "header.search.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".search"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".search"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".search"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            header.render.search.size();
+          }
+        }, {
+          element: ".control-header-search-size-number",
+          path: "header.search.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-search-size-range",
+            path: "header.search.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.search.size();
+          }
+        }, {
+          element: ".control-header-search-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".search-wrapper"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("header.search.size");
+            header.render.search.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-search-newtab",
+          path: "header.search.newTab",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            header.render.search.width.size();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.class();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-search-newline",
+          path: "header.search.newLine",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }],
+        editadd: [{
+          element: ".control-header-editadd-show",
+          path: "header.editAdd.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+            render.dependents();
+          }
+        }, {
+          element: ".control-header-editadd-style-box",
+          path: "header.editAdd.style",
+          type: "radio",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-editadd-style-clear",
+          path: "header.editAdd.style",
+          type: "radio",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-editadd-size-range",
+          path: "header.editAdd.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-editadd-size-number",
+            path: "header.editAdd.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-editadd"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-editadd"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: ".header-item-editadd",
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            header.render.editadd.size();
+          }
+        }, {
+          element: ".control-header-editadd-size-number",
+          path: "header.editAdd.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-editadd-size-range",
+            path: "header.editAdd.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.editadd.size();
+          }
+        }, {
+          element: ".control-header-editadd-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-editadd"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("header.editAdd.size");
+            header.render.editadd.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-editadd-newline",
+          path: "header.editAdd.newLine",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }],
+        coloraccent: [{
+          element: ".control-header-coloraccent-show",
+          path: "header.colorAccent.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-coloraccent-dot-show",
+          path: "header.colorAccent.dot.show",
+          type: "checkbox",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-coloraccent-style-box",
+          path: "header.colorAccent.style",
+          type: "radio",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-coloraccent-style-clear",
+          path: "header.colorAccent.style",
+          type: "radio",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-coloraccent-size-range",
+          path: "header.colorAccent.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-coloraccent-size-number",
+            path: "header.colorAccent.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-coloraccent"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-coloraccent"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: ".header-item-coloraccent",
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            header.render.coloraccent.size();
+          }
+        }, {
+          element: ".control-header-coloraccent-size-number",
+          path: "header.colorAccent.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-coloraccent-size-range",
+            path: "header.colorAccent.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.coloraccent.size();
+          }
+        }, {
+          element: ".control-header-coloraccent-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".header-coloraccent"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("header.colorAccent.size");
+            header.render.coloraccent.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-coloraccent-newline",
+          path: "header.colorAccent.newLine",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }],
+        settings: [{
+          element: ".control-header-menu-style-box",
+          path: "header.menu.style",
+          type: "radio",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-menu-style-clear",
+          path: "header.menu.style",
+          type: "radio",
+          func: function() {
+            header.render.item.clear();
+            header.render.item.all();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
+            search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
+          }
+        }, {
+          element: ".control-header-menu-size-range",
+          path: "header.menu.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-menu-size-number",
+            path: "header.menu.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".control-menu-open"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".control-menu-open"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: ".control-menu-open",
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            header.render.menu.size();
+          }
+        }, {
+          element: ".control-header-menu-size-number",
+          path: "header.menu.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-header-menu-size-range",
+            path: "header.menu.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.menu.size();
+          }
+        }, {
+          element: ".control-header-menu-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".control-menu-open"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("header.menu.size");
+            header.render.menu.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-menu-newline",
+          path: "header.menu.newLine",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }],
+        border: [{
+          element: ".control-header-border-top-range",
+          path: "header.border.top",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 60
+          },
+          mirrorElement: [{
+            element: ".control-header-border-top-number",
+            path: "header.border.top",
+            type: "number"
+          }],
+          func: function() {
+            header.render.border();
+            render.class();
+          }
+        }, {
+          element: ".control-header-border-top-number",
+          path: "header.border.top",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 60
+          },
+          mirrorElement: [{
+            element: ".control-header-border-top-range",
+            path: "header.border.top",
+            type: "range"
+          }],
+          func: function() {
+            header.render.border();
+            render.class();
+          }
+        }, {
+          element: ".control-header-border-top-default",
+          type: "button",
+          func: function() {
+            mod.default("header.border.top");
+            header.render.border();
+            render.class();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-border-bottom-range",
+          path: "header.border.bottom",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 60
+          },
+          mirrorElement: [{
+            element: ".control-header-border-bottom-number",
+            path: "header.border.bottom",
+            type: "number"
+          }],
+          func: function() {
+            header.render.border();
+            render.class();
+          }
+        }, {
+          element: ".control-header-border-bottom-number",
+          path: "header.border.bottom",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 60
+          },
+          mirrorElement: [{
+            element: ".control-header-border-bottom-range",
+            path: "header.border.bottom",
+            type: "range"
+          }],
+          func: function() {
+            header.render.border();
+            render.class();
+          }
+        }, {
+          element: ".control-header-border-bottom-default",
+          type: "button",
+          func: function() {
+            mod.default("header.border.bottom");
+            header.render.border();
+            render.class();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        position: [{
+          element: ".control-header-position-sticky",
+          path: "header.position",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-header-position-inline",
+          path: "header.position",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }],
+        color: [{
+          element: ".control-header-color-show",
+          path: "header.color.show",
+          type: "checkbox",
+          func: function() {
+            render.class();
+            render.dependents();
+            header.render.color.scrolling();
+          }
+        }, {
+          element: ".control-header-color-style-always",
+          path: "header.color.style",
+          type: "radio",
+          func: function() {
+            render.class();
+            header.render.color.scrolling();
+          }
+        }, {
+          element: ".control-header-color-style-scroll",
+          path: "header.color.style",
+          type: "radio",
+          func: function() {
+            render.class();
+            header.render.color.scrolling();
+          }
+        }, {
+          element: ".control-header-color-by-theme",
+          path: "header.color.by",
+          type: "radio",
+          func: function() {
+            render.class();
+            render.dependents();
+          }
+        }, {
+          element: ".control-header-color-by-custom",
+          path: "header.color.by",
+          type: "radio",
+          func: function() {
+            render.class();
+            render.dependents();
+          }
+        }, {
+          element: ".control-header-color-rgb-range",
+          path: "header.color.rgb",
+          type: "color",
+          mirrorElement: [{
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }],
+          func: function() {
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-rgb-text",
+          path: "header.color.rgb",
+          type: "text",
+          valueConvert: ["hexTextString"],
+          mirrorElement: [{
+            element: ".control-header-color-rgb-range",
+            path: "header.color.rgb",
+            type: "color"
+          }],
+          func: function() {
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-opacity-range",
+          path: "header.color.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-color-opacity-number",
+            path: "header.color.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.opacity();
+          }
+        }, {
+          element: ".control-header-color-opacity-number",
+          path: "header.color.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-color-opacity-range",
+            path: "header.color.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.opacity();
+          }
+        }, {
+          element: ".control-header-color-opacity-default",
+          type: "button",
+          func: function() {
+            mod.default("header.color.opacity");
+            header.render.opacity();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-radius",
+          path: "header.radius",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }]
+      },
+      bookmarks: {
+        area: [{
+          element: ".control-link-area-width-range",
+          path: "link.area.width",
+          type: "range",
+          valueModify: {
+            min: 10,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-area-width-number",
+            path: "link.area.width",
+            type: "number"
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".link-area"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".link-area"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".group"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            link.render.area.width();
+          }
+        }, {
+          element: ".control-link-area-width-number",
+          path: "link.area.width",
+          type: "number",
+          valueModify: {
+            min: 10,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-area-width-range",
+            path: "link.area.width",
+            type: "range"
+          }],
+          func: function() {
+            link.render.area.width();
+          }
+        }, {
+          element: ".control-link-area-width-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".link-area"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("link.area.width");
+            link.render.area.width();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-area-width-match",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".link-area"),
+                delay: 500
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            mod.match("link.area.width", "header.area.width");
+            link.render.area.width();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        alignment: [{
+          element: ".control-link-area-justify-left",
+          path: "link.area.justify",
+          type: "radio",
+          additionalEvents: [{
+            event: "change",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".link-area"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-area-justify-center",
+          path: "link.area.justify",
+          type: "radio",
+          additionalEvents: [{
+            event: "change",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".link-area"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-area-justify-right",
+          path: "link.area.justify",
+          type: "radio",
+          additionalEvents: [{
+            event: "change",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".link-area"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-area-direction-ltr",
+          path: "link.area.direction",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-area-direction-rtl",
+          path: "link.area.direction",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }],
+        bookmarks: [{
+          element: ".control-link-item-size-range",
+          path: "link.item.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 50,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-size-number",
+            path: "link.item.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".link-item"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".link-item"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".link-item"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            link.render.item.size();
+          }
+        }, {
+          element: ".control-link-item-size-number",
+          path: "link.item.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 50,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-size-range",
+            path: "link.item.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.size();
+          }
+        }, {
+          element: ".control-link-show",
+          path: "link.show",
+          type: "checkbox",
+          func: function() {
+            render.class();
+            render.dependents();
+            search.render.engine();
+          }
+        }, {
+          element: ".control-link-item-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".link-item"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("link.item.size");
+            link.render.item.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-url-show",
+          path: "link.item.url.show",
+          type: "checkbox",
+          func: function() {
+            render.class();
+            render.dependents();
+          }
+        }, {
+          element: ".control-link-item-line-show",
+          path: "link.item.line.show",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-shadow-show",
+          path: "link.item.shadow.show",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-hoverscale",
+          path: "link.item.hoverScale.show",
+          type: "checkbox",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-newtab",
+          path: "link.item.newTab",
+          type: "checkbox",
+          func: function() {
+            link.groupAndItems();
+          }
+        }],
+        content: [{
+          element: ".control-link-item-display-alignment-topcenter",
+          path: "link.item.display.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-alignment-topright",
+          path: "link.item.display.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-alignment-centerleft",
+          path: "link.item.display.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-alignment-centercenter",
+          path: "link.item.display.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-alignment-centerright",
+          path: "link.item.display.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-alignment-bottomleft",
+          path: "link.item.display.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-alignment-bottomcenter",
+          path: "link.item.display.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-alignment-bottomright",
+          path: "link.item.display.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-alignment-topleft",
+          path: "link.item.display.alignment",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-rotate-range",
+          path: "link.item.display.rotate",
+          type: "range",
+          valueModify: {
+            min: -180,
+            max: 180
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-rotate-number",
+            path: "link.item.display.rotate",
+            type: "number"
+          }],
+          func: function() {
+            link.render.item.rotate();
+          }
+        }, {
+          element: ".control-link-item-display-rotate-number",
+          path: "link.item.display.rotate",
+          type: "number",
+          valueModify: {
+            min: -180,
+            max: 180
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-rotate-range",
+            path: "link.item.display.rotate",
+            type: "range"
+          }],
+          func: function() {
+            link.render.item.rotate();
+          }
+        }, {
+          element: ".control-link-item-display-rotate-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.display.rotate");
+            link.render.item.rotate();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-translate-x-range",
+          path: "link.item.display.translate.x",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: -1000,
+            max: 1000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-translate-x-number",
+            path: "link.item.display.translate.x",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.translate.x();
+          }
+        }, {
+          element: ".control-link-item-display-translate-x-number",
+          path: "link.item.display.translate.x",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: -1000,
+            max: 1000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-translate-x-range",
+            path: "link.item.display.translate.x",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.translate.x();
+          }
+        }, {
+          element: ".control-link-item-display-translate-x-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.display.translate.x");
+            link.render.item.translate.x();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-translate-y-range",
+          path: "link.item.display.translate.y",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: -1000,
+            max: 1000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-translate-y-number",
+            path: "link.item.display.translate.y",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.translate.y();
+          }
+        }, {
+          element: ".control-link-item-display-translate-y-number",
+          path: "link.item.display.translate.y",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: -1000,
+            max: 1000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-translate-y-range",
+            path: "link.item.display.translate.y",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.translate.y();
+          }
+        }, {
+          element: ".control-link-item-display-translate-y-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.display.translate.y");
+            link.render.item.translate.y();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-gutter-range",
+          path: "link.item.display.gutter",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 40
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-gutter-number",
+            path: "link.item.display.gutter",
+            type: "number"
+          }],
+          func: function() {
+            link.render.item.gutter();
+          }
+        }, {
+          element: ".control-link-item-display-gutter-number",
+          path: "link.item.display.gutter",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 40
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-gutter-range",
+            path: "link.item.display.gutter",
+            type: "range"
+          }],
+          func: function() {
+            link.render.item.gutter();
+          }
+        }, {
+          element: ".control-link-item-display-gutter-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.display.gutter");
+            link.render.item.gutter();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-direction-horizontal",
+          path: "link.item.display.direction",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-direction-vertical",
+          path: "link.item.display.direction",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-order-letconname",
+          path: "link.item.display.order",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-order-nameletcon",
+          path: "link.item.display.order",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }],
+        letcon: [{
+          element: ".control-link-item-display-letcon-show",
+          path: "link.item.display.letcon.show",
+          type: "checkbox",
+          func: function() {
+            render.class();
+            render.dependents();
+          }
+        }, {
+          element: ".control-link-item-display-letcon-letter-size-range",
+          path: "link.item.display.letcon.letter.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 3000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-letcon-letter-size-number",
+            path: "link.item.display.letcon.letter.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.display.letter();
+          }
+        }, {
+          element: ".control-link-item-display-letcon-letter-size-number",
+          path: "link.item.display.letcon.letter.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 3000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-letcon-letter-size-range",
+            path: "link.item.display.letcon.letter.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.display.letter();
+          }
+        }, {
+          element: ".control-link-item-display-letcon-letter-size-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.display.letcon.letter.size");
+            link.render.item.display.letter();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-letcon-icon-size-range",
+          path: "link.item.display.letcon.icon.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 3000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-letcon-icon-size-number",
+            path: "link.item.display.letcon.icon.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.display.icon();
+          }
+        }, {
+          element: ".control-link-item-display-letcon-icon-size-number",
+          path: "link.item.display.letcon.icon.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 3000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-letcon-icon-size-range",
+            path: "link.item.display.letcon.icon.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.display.icon();
+          }
+        }, {
+          element: ".control-link-item-display-letcon-icon-size-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.display.letcon.icon.size");
+            link.render.item.display.icon();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        name: [{
+          element: ".control-link-item-display-name-show",
+          path: "link.item.display.name.show",
+          type: "checkbox",
+          func: function() {
+            render.class();
+            render.dependents();
+          }
+        }, {
+          element: ".control-link-item-display-name-size-range",
+          path: "link.item.display.name.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 3000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-name-size-number",
+            path: "link.item.display.name.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.name();
+          }
+        }, {
+          element: ".control-link-item-display-name-size-number",
+          path: "link.item.display.name.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 3000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-name-size-range",
+            path: "link.item.display.name.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.name();
+          }
+        }, {
+          element: ".control-link-item-display-name-size-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.display.name.size");
+            link.render.item.name();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        style: [{
+          element: ".control-link-style-block",
+          path: "link.style",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-style-list",
+          path: "link.style",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }],
+        color: [{
+          element: ".control-link-item-color-by-theme",
+          path: "link.item.color.by",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-color-by-custom",
+          path: "link.item.color.by",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-color-rgb-range",
+          path: "link.item.color.rgb",
+          type: "color",
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }],
+          func: function() {
+            link.render.item.color.custom();
+          }
+        }, {
+          element: ".control-link-item-color-rgb-text",
+          path: "link.item.color.rgb",
+          type: "text",
+          valueConvert: ["hexTextString"],
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-range",
+            path: "link.item.color.rgb",
+            type: "color"
+          }],
+          func: function() {
+            link.render.item.color.custom();
+          }
+        }],
+        border: [{
+          element: ".control-link-item-border-range",
+          path: "link.item.border",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 60
+          },
+          mirrorElement: [{
+            element: ".control-link-item-border-number",
+            path: "link.item.border",
+            type: "number"
+          }],
+          func: function() {
+            link.render.item.border();
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-border-number",
+          path: "link.item.border",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 60
+          },
+          mirrorElement: [{
+            element: ".control-link-item-border-range",
+            path: "link.item.border",
+            type: "range"
+          }],
+          func: function() {
+            link.render.item.border();
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-border-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.border");
+            render.class();
+            link.render.item.border();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        orientation: [{
+          element: ".control-link-orientation-top",
+          path: "link.orientation",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-link-orientation-bottom",
+          path: "link.orientation",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }],
+        sort: [{
+          element: ".control-link-sort-letter",
+          type: "button",
+          func: function() {
+            bookmarks.sort("letter");
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-sort-icon",
+          type: "button",
+          func: function() {
+            bookmarks.sort("icon");
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-sort-name",
+          type: "button",
+          func: function() {
+            bookmarks.sort("name");
+            link.groupAndItems();
+          }
+        }],
+        accent: [{
+          element: ".control-link-accent-clear",
+          type: "button",
+          func: function() {
+            link.mod.accent.clear();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-accent-set",
+          type: "button",
+          func: function() {
+            link.mod.accent.rainbow();
+            link.groupAndItems();
+          }
+        }]
+      },
+      groups: {
+        area: [{
+          element: ".control-group-area-justify-left",
+          path: "group.area.justify",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-group-area-justify-center",
+          path: "group.area.justify",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-group-area-justify-right",
+          path: "group.area.justify",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }],
+        order: [{
+          element: ".control-group-order-headerbody",
+          path: "group.order",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-group-order-bodyheader",
+          path: "group.order",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }],
+        names: [{
+          element: ".control-group-name-show",
+          path: "group.name.show",
+          type: "checkbox",
+          func: function() {
+            link.groupAndItems();
+            render.class();
+            render.dependents();
+          }
+        }, {
+          element: ".control-group-name-size-range",
+          path: "group.name.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-group-name-size-number",
+            path: "group.name.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".group-name-text"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".group-name-text"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: helper.e(".group-name-text"),
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            link.render.group.name.size();
+          }
+        }, {
+          element: ".control-group-name-size-number",
+          path: "group.name.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-group-name-size-range",
+            path: "group.name.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.group.name.size();
+          }
+        }, {
+          element: ".control-group-name-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".group-name-text"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("group.name.size");
+            link.render.group.name.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        openall: [{
+          element: ".control-group-openall-show",
+          path: "group.openAll.show",
+          type: "checkbox",
+          func: function() {
+            link.groupAndItems();
+            render.class();
+            render.dependents();
+          }
+        }, {
+          element: ".control-group-openall-size-range",
+          path: "group.openAll.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-group-openall-size-number",
+            path: "group.openAll.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          additionalEvents: [{
+            event: "input",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".group-openall"),
+              });
+            }
+          }, {
+            event: "mousedown",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".group-openall"),
+              });
+            }
+          }, {
+            event: "mouseup",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "touchend",
+            func: function() {
+              edge.box.close();
+            }
+          }, {
+            event: "keydown",
+            func: function() {
+              if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+                edge.box.open({
+                  element: ".header-item-coloraccent",
+                });
+              };
+            }
+          }, {
+            event: "keyup",
+            func: function() {
+              edge.box.close();
+            }
+          }],
+          func: function() {
+            link.render.group.openall.size();
+          }
+        }, {
+          element: ".control-group-openall-size-number",
+          path: "group.openAll.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 500,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-group-openall-size-range",
+            path: "group.openAll.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.group.openall.size();
+          }
+        }, {
+          element: ".control-group-openall-size-default",
+          type: "button",
+          additionalEvents: [{
+            event: "click",
+            func: function() {
+              edge.box.open({
+                element: helper.e(".group-openall"),
+                delay: 500
+              });
+            }
+          }],
+          func: function() {
+            mod.default("group.openAll.size");
+            link.render.group.openall.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-group-openall-style-box",
+          path: "group.openAll.style",
+          type: "radio",
+          func: function() {
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-group-openall-style-clear",
+          path: "group.openAll.style",
+          type: "radio",
+          func: function() {
+            link.groupAndItems();
+          }
+        }],
+        border: [{
+          element: ".control-group-border-range",
+          path: "group.border",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 60
+          },
+          mirrorElement: [{
+            element: ".control-group-border-number",
+            path: "group.border",
+            type: "number"
+          }],
+          func: function() {
+            link.render.group.border();
+            render.class();
+          }
+        }, {
+          element: ".control-group-border-number",
+          path: "group.border",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 60
+          },
+          mirrorElement: [{
+            element: ".control-group-border-range",
+            path: "group.border",
+            type: "range"
+          }],
+          func: function() {
+            link.render.group.border();
+            render.class();
+          }
+        }, {
+          element: ".control-group-border-default",
+          type: "button",
+          func: function() {
+            mod.default("group.border");
+            link.render.group.border();
+            render.class();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }]
+      },
+      theme: {
+        saved: [{
+          element: ".control-theme-custom-add",
+          type: "button",
+          func: function() {
+            menu.close();
+            theme.custom.add();
+          }
+        }, {
+          element: ".control-theme-custom-edit",
+          path: "theme.custom.edit",
+          type: "checkbox",
+          func: function() {
+            theme.render.custom.tabIndex();
+            render.class();
+          }
+        }],
+        style: [{
+          element: ".control-theme-style-dark",
+          path: "theme.style",
+          type: "radio",
+          func: function() {
+            theme.style.dark();
+          }
+        }, {
+          element: ".control-theme-style-light",
+          path: "theme.style",
+          type: "radio",
+          func: function() {
+            theme.style.light();
+          }
+        }],
+        fonts: [{
+          element: ".control-theme-font-display-name",
+          path: "theme.font.display.name",
+          type: "text",
+          func: function() {
+            theme.render.font.delay.display();
+          }
+        }, {
+          element: ".control-theme-font-display-name-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.font.display.name");
+            theme.render.font.display.name();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-font-display-weight-range",
+          path: "theme.font.display.weight",
+          type: "range",
+          valueModify: {
+            min: 100,
+            max: 900,
+            step: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-font-display-weight-number",
+            path: "theme.font.display.weight",
+            type: "number"
+          }],
+          func: function() {
+            theme.render.font.display.weight();
+          }
+        }, {
+          element: ".control-theme-font-display-weight-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.font.display.weight");
+            theme.render.font.display.weight();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-font-display-weight-number",
+          path: "theme.font.display.weight",
+          type: "number",
+          valueModify: {
+            min: 100,
+            max: 900,
+            step: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-font-display-weight-range",
+            path: "theme.font.display.weight",
+            type: "range"
+          }],
+          func: function() {
+            theme.render.font.display.weight();
+          }
+        }, {
+          element: ".control-theme-font-display-light",
+          type: "button",
+          func: function() {
+            theme.mod.font.display.light();
+            theme.render.font.display.weight();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-font-display-regular",
+          type: "button",
+          func: function() {
+            theme.mod.font.display.regular();
+            theme.render.font.display.weight();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-font-display-bold",
+          type: "button",
+          func: function() {
+            theme.mod.font.display.bold();
+            theme.render.font.display.weight();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-font-display-style-normal",
+          path: "theme.font.display.style",
+          type: "radio",
+          func: function() {
+            theme.render.font.display.style();
+          }
+        }, {
+          element: ".control-theme-font-display-style-italic",
+          path: "theme.font.display.style",
+          type: "radio",
+          func: function() {
+            theme.render.font.display.style();
+          }
+        }, {
+          element: ".control-theme-font-display-style-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.font.display.style");
+            theme.render.font.display.style();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-font-ui-name",
+          path: "theme.font.ui.name",
+          type: "text",
+          func: function() {
+            theme.render.font.delay.ui();
+          }
+        }, {
+          element: ".control-theme-font-ui-name-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.font.ui.name");
+            theme.render.font.ui.name();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-font-ui-weight-range",
+          path: "theme.font.ui.weight",
+          type: "range",
+          valueModify: {
+            min: 100,
+            max: 900,
+            step: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-font-ui-weight-number",
+            path: "theme.font.ui.weight",
+            type: "number"
+          }],
+          func: function() {
+            theme.render.font.ui.weight();
+          }
+        }, {
+          element: ".control-theme-font-ui-weight-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.font.ui.weight");
+            theme.render.font.ui.weight();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-font-ui-weight-number",
+          path: "theme.font.ui.weight",
+          type: "number",
+          valueModify: {
+            min: 100,
+            max: 900,
+            step: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-font-ui-weight-range",
+            path: "theme.font.ui.weight",
+            type: "range"
+          }],
+          func: function() {
+            theme.render.font.ui.weight();
+          }
+        }, {
+          element: ".control-theme-font-ui-light",
+          type: "button",
+          func: function() {
+            theme.mod.font.ui.light();
+            theme.render.font.ui.weight();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-font-ui-regular",
+          type: "button",
+          func: function() {
+            theme.mod.font.ui.regular();
+            theme.render.font.ui.weight();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-font-ui-bold",
+          type: "button",
+          func: function() {
+            theme.mod.font.ui.bold();
+            theme.render.font.ui.weight();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-font-ui-style-normal",
+          path: "theme.font.ui.style",
+          type: "radio",
+          func: function() {
+            theme.render.font.ui.style();
+          }
+        }, {
+          element: ".control-theme-font-ui-style-italic",
+          path: "theme.font.ui.style",
+          type: "radio",
+          func: function() {
+            theme.render.font.ui.style();
+          }
+        }, {
+          element: ".control-theme-font-ui-style-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.font.ui.style");
+            theme.render.font.ui.style();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        color: [{
+          element: ".control-theme-color-rgb-color",
+          path: "theme.color.rgb",
+          type: "color",
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-hsl-h-range",
+            path: "theme.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-h-number",
+            path: "theme.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-s-range",
+            path: "theme.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-s-number",
+            path: "theme.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-l-range",
+            path: "theme.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-l-number",
+            path: "theme.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-r-range",
+            path: "theme.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-r-number",
+            path: "theme.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-g-range",
+            path: "theme.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-g-number",
+            path: "theme.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-b-range",
+            path: "theme.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-b-number",
+            path: "theme.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.hsl();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-rgb-text",
+          path: "theme.color.rgb",
+          type: "text",
+          valueConvert: ["hexTextString"],
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-hsl-h-range",
+            path: "theme.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-h-number",
+            path: "theme.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-s-range",
+            path: "theme.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-s-number",
+            path: "theme.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-l-range",
+            path: "theme.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-l-number",
+            path: "theme.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-r-range",
+            path: "theme.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-r-number",
+            path: "theme.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-g-range",
+            path: "theme.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-g-number",
+            path: "theme.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-b-range",
+            path: "theme.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-b-number",
+            path: "theme.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.hsl();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-rgb-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.color.rgb");
+            theme.mod.color.hsl();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-color-hsl-h-range",
+          path: "theme.color.hsl.h",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-hsl-h-number",
+            path: "theme.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-r-range",
+            path: "theme.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-r-number",
+            path: "theme.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-g-range",
+            path: "theme.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-g-number",
+            path: "theme.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-b-range",
+            path: "theme.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-b-number",
+            path: "theme.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.rgb();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-hsl-h-number",
+          path: "theme.color.hsl.h",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-hsl-h-range",
+            path: "theme.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-r-range",
+            path: "theme.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-r-number",
+            path: "theme.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-g-range",
+            path: "theme.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-g-number",
+            path: "theme.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-b-range",
+            path: "theme.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-b-number",
+            path: "theme.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.rgb();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-hsl-s-range",
+          path: "theme.color.hsl.s",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-hsl-s-number",
+            path: "theme.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-r-range",
+            path: "theme.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-r-number",
+            path: "theme.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-g-range",
+            path: "theme.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-g-number",
+            path: "theme.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-b-range",
+            path: "theme.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-b-number",
+            path: "theme.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.rgb();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-hsl-s-number",
+          path: "theme.color.hsl.s",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-hsl-s-range",
+            path: "theme.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-r-range",
+            path: "theme.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-r-number",
+            path: "theme.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-g-range",
+            path: "theme.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-g-number",
+            path: "theme.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-b-range",
+            path: "theme.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-b-number",
+            path: "theme.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.rgb();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-hsl-l-range",
+          path: "theme.color.hsl.l",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-hsl-l-number",
+            path: "theme.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-r-range",
+            path: "theme.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-r-number",
+            path: "theme.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-g-range",
+            path: "theme.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-g-number",
+            path: "theme.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-b-range",
+            path: "theme.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-b-number",
+            path: "theme.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.rgb();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-hsl-l-number",
+          path: "theme.color.hsl.l",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-hsl-l-range",
+            path: "theme.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-r-range",
+            path: "theme.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-r-number",
+            path: "theme.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-g-range",
+            path: "theme.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-g-number",
+            path: "theme.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-color-rgb-b-range",
+            path: "theme.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-color-rgb-b-number",
+            path: "theme.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.rgb();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-rgb-r-range",
+          path: "theme.color.rgb.r",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-rgb-r-number",
+            path: "theme.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-h-range",
+            path: "theme.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-h-number",
+            path: "theme.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-s-range",
+            path: "theme.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-s-number",
+            path: "theme.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-l-range",
+            path: "theme.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-l-number",
+            path: "theme.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.hsl();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-rgb-r-number",
+          path: "theme.color.rgb.r",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-rgb-r-range",
+            path: "theme.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-h-range",
+            path: "theme.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-h-number",
+            path: "theme.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-s-range",
+            path: "theme.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-s-number",
+            path: "theme.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-l-range",
+            path: "theme.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-l-number",
+            path: "theme.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.hsl();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-rgb-g-range",
+          path: "theme.color.rgb.g",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-rgb-g-number",
+            path: "theme.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-h-range",
+            path: "theme.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-h-number",
+            path: "theme.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-s-range",
+            path: "theme.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-s-number",
+            path: "theme.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-l-range",
+            path: "theme.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-l-number",
+            path: "theme.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.hsl();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-rgb-g-number",
+          path: "theme.color.rgb.g",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-rgb-g-range",
+            path: "theme.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-h-range",
+            path: "theme.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-h-number",
+            path: "theme.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-s-range",
+            path: "theme.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-s-number",
+            path: "theme.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-l-range",
+            path: "theme.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-l-number",
+            path: "theme.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.hsl();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-rgb-b-range",
+          path: "theme.color.rgb.b",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-rgb-b-number",
+            path: "theme.color.rgb.b",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-h-range",
+            path: "theme.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-h-number",
+            path: "theme.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-s-range",
+            path: "theme.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-s-number",
+            path: "theme.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-l-range",
+            path: "theme.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-l-number",
+            path: "theme.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.hsl();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-rgb-b-number",
+          path: "theme.color.rgb.b",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-rgb-color-quick",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-color",
+            path: "theme.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-color-rgb-text",
+            path: "theme.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-color-rgb-b-range",
+            path: "theme.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-h-range",
+            path: "theme.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-h-number",
+            path: "theme.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-s-range",
+            path: "theme.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-s-number",
+            path: "theme.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-color-hsl-l-range",
+            path: "theme.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-color-hsl-l-number",
+            path: "theme.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.color.hsl();
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-contrast-light-range",
+          path: "theme.color.contrast.light",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 100,
+            max: 800,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-contrast-light-number",
+            path: "theme.color.contrast.light",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-contrast-light-number",
+          path: "theme.color.contrast.light",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 100,
+            max: 800,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-contrast-light-range",
+            path: "theme.color.contrast.light",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-contrast-light-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.color.contrast.light");
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-color-contrast-dark-range",
+          path: "theme.color.contrast.dark",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 100,
+            max: 800,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-contrast-dark-number",
+            path: "theme.color.contrast.dark",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-contrast-dark-number",
+          path: "theme.color.contrast.dark",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 100,
+            max: 800,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-theme-color-contrast-dark-range",
+            path: "theme.color.contrast.dark",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+          }
+        }, {
+          element: ".control-theme-color-contrast-dark-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.color.contrast.dark");
+            theme.mod.color.generated();
+            theme.render.color.shade();
+            theme.render.themeMetaTag();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        accent: [{
+          element: ".control-theme-accent-rgb-color",
+          path: "theme.accent.rgb",
+          type: "color",
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }],
+          func: function() {
+            theme.render.accent.color();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-theme-accent-rgb-text",
+          path: "theme.accent.rgb",
+          type: "text",
+          valueConvert: ["hexTextString"],
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }],
+          func: function() {
+            theme.render.accent.color();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-theme-accent-rgb-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.accent.rgb");
+            theme.render.accent.color();
+            link.groupAndItems();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-accent-random-active",
+          path: "theme.accent.random.active",
+          type: "checkbox",
+          func: function() {
+            render.dependents();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-random-style-any",
+          path: "theme.accent.random.style",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-theme-accent-random-style-light",
+          path: "theme.accent.random.style",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-theme-accent-random-style-dark",
+          path: "theme.accent.random.style",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-theme-accent-random-style-pastel",
+          path: "theme.accent.random.style",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-theme-accent-random-style-saturated",
+          path: "theme.accent.random.style",
+          type: "radio",
+          func: function() {
+            render.class();
+          }
+        }, {
+          element: ".control-theme-accent-randomise",
+          type: "button",
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }],
+          func: function() {
+            theme.accent.random();
+            link.groupAndItems();
+          }
+        }],
+        radius: [{
+          element: ".control-theme-radius-range",
+          path: "theme.radius",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 400,
+            step: 5
+          },
+          mirrorElement: [{
+            element: ".control-theme-radius-number",
+            path: "theme.radius",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            theme.render.radius();
+            render.class();
+          }
+        }, {
+          element: ".control-theme-radius-number",
+          path: "theme.radius",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 400,
+            step: 5
+          },
+          mirrorElement: [{
+            element: ".control-theme-radius-range",
+            path: "theme.radius",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            theme.render.radius();
+            render.class();
+          }
+        }, {
+          element: ".control-theme-radius-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.radius");
+            theme.render.radius();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        shadow: [{
+          element: ".control-theme-shadow-range",
+          path: "theme.shadow",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 300,
+            step: 25
+          },
+          mirrorElement: [{
+            element: ".control-theme-shadow-number",
+            path: "theme.shadow",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            theme.render.shadow();
+          }
+        }, {
+          element: ".control-theme-shadow-number",
+          path: "theme.shadow",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 300,
+            step: 25
+          },
+          mirrorElement: [{
+            element: ".control-theme-shadow-range",
+            path: "theme.shadow",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            theme.render.shadow();
+          }
+        }, {
+          element: ".control-theme-shadow-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.shadow");
+            theme.render.shadow();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }],
+        shade: [{
+          element: ".control-theme-shade-opacity-range",
+          path: "theme.shade.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-shade-opacity-number",
+            path: "theme.shade.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            theme.render.shade.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-theme-shade-opacity-number",
+          path: "theme.shade.opacity",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-shade-opacity-range",
+            path: "theme.shade.opacity",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            theme.render.shade.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-theme-shade-opacity-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.shade.opacity");
+            theme.render.shade.opacity();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }]
+      },
+      background: {
+        color: [{
+          element: ".control-background-color-by-theme",
+          path: "background.color.by",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            render.class();
+          }
+        }, {
+          element: ".control-background-color-by-custom",
+          path: "background.color.by",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            render.class();
+          }
+        }, {
+          element: ".control-background-color-rgb-range",
+          path: "background.color.rgb",
+          type: "color",
+          mirrorElement: [{
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }],
+          func: function() {
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-rgb-text",
+          path: "background.color.rgb",
+          type: "text",
+          valueConvert: ["hexTextString"],
+          mirrorElement: [{
+            element: ".control-background-color-rgb-range",
+            path: "background.color.rgb",
+            type: "color"
+          }],
+          func: function() {
+            background.render.color.custom();
+          }
+        }],
+        image: [{
+          element: ".control-background-image-show",
+          path: "background.image.show",
+          type: "checkbox",
+          func: function() {
+            render.class();
+            render.dependents();
+            background.render.image();
+          }
+        }, {
+          element: ".control-background-image-from-file",
+          path: "background.image.from",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            background.render.image();
+          }
+        }, {
+          element: ".control-background-image-file",
+          type: "file",
+          func: function() {
+            background.mod.import();
+          }
+        }, {
+          element: ".control-background-image-file-clear",
+          type: "button",
+          func: function() {
+            background.mod.clear.file();
+            background.render.input.clear();
+            background.render.image();
+            background.render.feedback.clear({
+              animate: true
+            });
+            background.render.feedback.empty();
+          }
+        }, {
+          element: ".control-background-image-from-url",
+          path: "background.image.from",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            background.render.image();
+          }
+        }, {
+          element: ".control-background-image-url",
+          path: "background.image.url",
+          type: "textarea",
+          func: function() {
+            background.render.image();
+          }
+        }, {
+          element: ".control-background-image-opacity-range",
+          path: "background.image.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-opacity-number",
+            path: "background.image.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            background.render.opacity();
+          }
+        }, {
+          element: ".control-background-image-opacity-number",
+          path: "background.image.opacity",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-opacity-range",
+            path: "background.image.opacity",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            background.render.opacity();
+          }
+        }, {
+          element: ".control-background-image-opacity-default",
+          type: "button",
+          func: function() {
+            mod.default("background.image.opacity");
+            background.render.opacity();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-background-image-grayscale-range",
+          path: "background.image.grayscale",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-grayscale-number",
+            path: "background.image.grayscale",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            background.render.grayscale();
+          }
+        }, {
+          element: ".control-background-image-grayscale-number",
+          path: "background.image.grayscale",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-grayscale-range",
+            path: "background.image.grayscale",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            background.render.grayscale();
+          }
+        }, {
+          element: ".control-background-image-grayscale-default",
+          type: "button",
+          func: function() {
+            mod.default("background.image.grayscale");
+            background.render.grayscale();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-background-image-blur-range",
+          path: "background.image.blur",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-blur-number",
+            path: "background.image.blur",
+            type: "number"
+          }],
+          func: function() {
+            background.render.blur();
+          }
+        }, {
+          element: ".control-background-image-blur-number",
+          path: "background.image.blur",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-blur-range",
+            path: "background.image.blur",
+            type: "range"
+          }],
+          func: function() {
+            background.render.blur();
+          }
+        }, {
+          element: ".control-background-image-blur-default",
+          type: "button",
+          func: function() {
+            mod.default("background.image.blur");
+            background.render.blur();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-background-image-accent-range",
+          path: "background.image.accent",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-accent-number",
+            path: "background.image.accent",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            background.render.accent();
+          }
+        }, {
+          element: ".control-background-image-accent-number",
+          path: "background.image.accent",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-accent-range",
+            path: "background.image.accent",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            background.render.accent();
+          }
+        }, {
+          element: ".control-background-image-accent-default",
+          type: "button",
+          func: function() {
+            mod.default("background.image.accent");
+            background.render.accent();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-background-image-scale-range",
+          path: "background.image.scale",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 100,
+            max: 1000
+          },
+          mirrorElement: [{
+            element: ".control-background-image-scale-number",
+            path: "background.image.scale",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            background.render.scale();
+          }
+        }, {
+          element: ".control-background-image-scale-number",
+          path: "background.image.scale",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 100,
+            max: 1000
+          },
+          mirrorElement: [{
+            element: ".control-background-image-scale-range",
+            path: "background.image.scale",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            background.render.scale();
+          }
+        }, {
+          element: ".control-background-image-scale-default",
+          type: "button",
+          func: function() {
+            mod.default("background.image.scale");
+            background.render.scale();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }]
+      },
+      data: {
+        restore: [{
+          element: ".control-data-import",
+          type: "file",
+          func: function() {
+            data.mod.import();
+          }
+        }],
+        backup: [{
+          element: ".control-data-export",
+          type: "a",
+          func: function() {
+            data.mod.export();
+          }
+        }],
+        clear: [{
+          element: ".control-data-clear",
+          type: "a",
+          func: function() {
+            menu.close();
+            data.render.clear();
+          }
+        }]
+      }
     },
-    mirrorElement: [{
-      element: ".control-layout-size-number",
-      path: "layout.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".layout"),
+    all: function() {
+      var allMenuControls = [];
+      for (key1 in mod.menu.controls) {
+        for (key2 in mod.menu.controls[key1]) {
+          mod.menu.controls[key1][key2].forEach(function(arrayItem, index) {
+            allMenuControls.push(arrayItem);
           });
         };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      layout.render.size();
+      };
+      return allMenuControls;
     }
-  }, {
-    element: ".control-layout-size-number",
-    path: "layout.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 50,
-      max: 200,
-      step: 5
-    },
-    mirrorElement: [{
-      element: ".control-layout-size-range",
-      path: "layout.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      layout.render.size();
-    }
-  }, {
-    element: ".control-layout-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("layout.size");
-      layout.render.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-layout-width-range",
-    path: "layout.width",
-    type: "range",
-    valueModify: {
-      min: 10,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-layout-width-number",
-      path: "layout.width",
-      type: "number"
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".layout"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      render.class();
-      layout.render.width();
-    }
-  }, {
-    element: ".control-layout-width-number",
-    path: "layout.width",
-    type: "number",
-    valueModify: {
-      min: 10,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-layout-width-range",
-      path: "layout.width",
-      type: "number"
-    }],
-    func: function() {
-      render.class();
-      layout.render.width();
-    }
-  }, {
-    element: ".control-layout-width-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("layout.width");
-      layout.render.width();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-layout-alignment-topleft",
-    path: "layout.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-layout-alignment-topcenter",
-    path: "layout.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-layout-alignment-topright",
-    path: "layout.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-layout-alignment-centerleft",
-    path: "layout.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-layout-alignment-centercenter",
-    path: "layout.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-layout-alignment-centerright",
-    path: "layout.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-layout-alignment-bottomleft",
-    path: "layout.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-layout-alignment-bottomcenter",
-    path: "layout.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-layout-alignment-bottomright",
-    path: "layout.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-layout-order-headerlink",
-    path: "layout.order",
-    type: "radio",
-    func: function() {
-      render.class();
-      header.render.color.scrolling();
-    }
-  }, {
-    element: ".control-layout-order-linkheader",
-    path: "layout.order",
-    type: "radio",
-    func: function() {
-      render.class();
-      header.render.color.scrolling();
-    }
-  }, {
-    element: ".control-layout-direction-vertical",
-    path: "layout.direction",
-    type: "radio",
-    func: function() {
-      render.class();
-      render.dependents();
-      header.render.color.scrolling();
-    }
-  }, {
-    element: ".control-layout-direction-horizontal",
-    path: "layout.direction",
-    type: "radio",
-    func: function() {
-      render.class();
-      render.dependents();
-      header.render.color.scrolling();
-    }
-  }, {
-    element: ".control-layout-padding-range",
-    path: "layout.padding",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 40
-    },
-    mirrorElement: [{
-      element: ".control-layout-padding-number",
-      path: "layout.padding",
-      type: "number"
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".layout"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      layout.render.padding();
-    }
-  }, {
-    element: ".control-layout-padding-number",
-    path: "layout.padding",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 40
-    },
-    mirrorElement: [{
-      element: ".control-layout-padding-range",
-      path: "layout.padding",
-      type: "range"
-    }],
-    func: function() {
-      layout.render.padding();
-    }
-  }, {
-    element: ".control-layout-padding-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("layout.padding");
-      layout.render.padding();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-layout-gutter-range",
-    path: "layout.gutter",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 40
-    },
-    mirrorElement: [{
-      element: ".control-layout-gutter-number",
-      path: "layout.gutter",
-      type: "number"
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".layout"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      layout.render.gutter();
-    }
-  }, {
-    element: ".control-layout-gutter-number",
-    path: "layout.gutter",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 40
-    },
-    mirrorElement: [{
-      element: ".control-layout-gutter-range",
-      path: "layout.gutter",
-      type: "range"
-    }],
-    func: function() {
-      layout.render.gutter();
-    }
-  }, {
-    element: ".control-layout-gutter-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".layout"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("layout.gutter");
-      layout.render.gutter();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-layout-title",
-    path: "layout.title",
-    type: "text",
-    func: function() {
-      layout.render.title();
-    }
-  }, {
-    element: ".control-layout-scrollpastend",
-    path: "layout.scrollPastEnd",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      header.render.color.scrolling();
-    }
-  }, {
-    element: ".control-layout-scrollbars-auto",
-    path: "layout.scrollbars",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-layout-scrollbars-thin",
-    path: "layout.scrollbars",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-layout-scrollbars-none",
-    path: "layout.scrollbars",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-area-width-range",
-    path: "header.area.width",
-    type: "range",
-    valueModify: {
-      min: 10,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-header-area-width-number",
-      path: "header.area.width",
-      type: "number"
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-area")
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".header-area"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.area.width();
-    }
-  }, {
-    element: ".control-header-area-width-number",
-    path: "header.area.width",
-    type: "number",
-    valueModify: {
-      min: 10,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-header-area-width-range",
-      path: "header.area.width",
-      type: "range"
-    }],
-    func: function() {
-      header.render.area.width();
-    }
-  }, {
-    element: ".control-header-area-width-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.area.width");
-      header.render.area.width();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-area-width-match",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      mod.match("header.area.width", "link.area.width");
-      header.render.area.width();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-area-justify-left",
-    path: "header.area.justify",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-area-justify-center",
-    path: "header.area.justify",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-area-justify-right",
-    path: "header.area.justify",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-area-align-center",
-    path: "header.area.align",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-area-align-baseline",
-    path: "header.area.align",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-item-justify-left",
-    path: "header.item.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-item-justify-center",
-    path: "header.item.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-item-justify-right",
-    path: "header.item.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-greeting-show",
-    path: "header.greeting.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-greeting-type-good",
-    path: "header.greeting.type",
-    type: "radio",
-    func: function() {
-      greeting.render.clear();
-      greeting.render.all();
-    }
-  }, {
-    element: ".control-header-greeting-type-hello",
-    path: "header.greeting.type",
-    type: "radio",
-    func: function() {
-      greeting.render.clear();
-      greeting.render.all();
-    }
-  }, {
-    element: ".control-header-greeting-type-hi",
-    path: "header.greeting.type",
-    type: "radio",
-    func: function() {
-      greeting.render.clear();
-      greeting.render.all();
-    }
-  }, {
-    element: ".control-header-greeting-name",
-    path: "header.greeting.name",
-    type: "text",
-    func: function() {
-      greeting.render.clear();
-      greeting.render.all();
-    }
-  }, {
-    element: ".control-header-greeting-size-range",
-    path: "header.greeting.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-greeting-size-number",
-      path: "header.greeting.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".greeting"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".greeting"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".greeting"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.greeting.size();
-    }
-  }, {
-    element: ".control-header-greeting-size-number",
-    path: "header.greeting.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-greeting-size-range",
-      path: "header.greeting.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.greeting.size();
-    }
-  }, {
-    element: ".control-header-greeting-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".greeting"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.greeting.size");
-      header.render.greeting.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-greeting-newline",
-    path: "header.greeting.newLine",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-clock-hours-show",
-    path: "header.clock.hours.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-clock-hours-display-number",
-    path: "header.clock.hours.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-    }
-  }, {
-    element: ".control-header-clock-hours-display-word",
-    path: "header.clock.hours.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-    }
-  }, {
-    element: ".control-header-clock-minutes-show",
-    path: "header.clock.minutes.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-clock-minutes-display-number",
-    path: "header.clock.minutes.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-    }
-  }, {
-    element: ".control-header-clock-minutes-display-word",
-    path: "header.clock.minutes.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-    }
-  }, {
-    element: ".control-header-clock-seconds-show",
-    path: "header.clock.seconds.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-clock-seconds-display-number",
-    path: "header.clock.seconds.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-    }
-  }, {
-    element: ".control-header-clock-seconds-display-word",
-    path: "header.clock.seconds.display",
-    type: "radio",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-    }
-  }, {
-    element: ".control-header-clock-separator-show",
-    path: "header.clock.separator.show",
-    type: "checkbox",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-    }
-  }, {
-    element: ".control-header-clock-hour24-show",
-    path: "header.clock.hour24.show",
-    type: "checkbox",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-      render.dependents();
-    }
-  }, {
-    element: ".control-header-clock-meridiem-show",
-    path: "header.clock.meridiem.show",
-    type: "checkbox",
-    func: function() {
-      clock.render.clear();
-      clock.render.all();
-      render.dependents();
-    }
-  }, {
-    element: ".control-header-clock-size-range",
-    path: "header.clock.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-clock-size-number",
-      path: "header.clock.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".clock"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".clock"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".clock"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.clock.size();
-    }
-  }, {
-    element: ".control-header-clock-size-number",
-    path: "header.clock.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-clock-size-range",
-      path: "header.clock.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.clock.size();
-    }
-  }, {
-    element: ".control-header-clock-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".clock"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.clock.size");
-      header.render.clock.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-clock-newline",
-    path: "header.clock.newLine",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-transitional-show",
-    path: "header.transitional.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-transitional-type-timeanddate",
-    path: "header.transitional.type",
-    type: "radio",
-    func: function() {
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-transitional-type-its",
-    path: "header.transitional.type",
-    type: "radio",
-    func: function() {
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-transitional-size-range",
-    path: "header.transitional.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-transitional-size-number",
-      path: "header.transitional.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".transitional"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".transitional"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".transitional"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.transitional.size();
-    }
-  }, {
-    element: ".control-header-transitional-size-number",
-    path: "header.transitional.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-transitional-size-range",
-      path: "header.transitional.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.transitional.size();
-    }
-  }, {
-    element: ".control-header-transitional-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".transitional"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.transitional.size");
-      header.render.transitional.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-transitional-newline",
-    path: "header.transitional.newLine",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-date-day-show",
-    path: "header.date.day.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-date-day-display-number",
-    path: "header.date.day.display",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-day-week-start-monday",
-    path: "header.date.day.weekStart",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-day-week-start-sunday",
-    path: "header.date.day.weekStart",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-day-display-word",
-    path: "header.date.day.display",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-day-length-long",
-    path: "header.date.day.length",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-day-length-short",
-    path: "header.date.day.length",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-date-show",
-    path: "header.date.date.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-date-date-display-number",
-    path: "header.date.date.display",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-date-display-word",
-    path: "header.date.date.display",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-date-ordinal",
-    path: "header.date.date.ordinal",
-    type: "checkbox",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-month-show",
-    path: "header.date.month.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-date-month-display-number",
-    path: "header.date.month.display",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-month-ordinal",
-    path: "header.date.month.ordinal",
-    type: "checkbox",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-month-display-word",
-    path: "header.date.month.display",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-month-length-long",
-    path: "header.date.month.length",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-month-length-short",
-    path: "header.date.month.length",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-year-show",
-    path: "header.date.year.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-date-year-display-number",
-    path: "header.date.year.display",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-year-display-word",
-    path: "header.date.year.display",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-separator-show",
-    path: "header.date.separator.show",
-    type: "checkbox",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-format-datemonth",
-    path: "header.date.format",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-format-monthdate",
-    path: "header.date.format",
-    type: "radio",
-    func: function() {
-      date.render.clear();
-      date.render.all();
-      greeting.render.clear();
-      greeting.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-    }
-  }, {
-    element: ".control-header-date-size-range",
-    path: "header.date.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-date-size-number",
-      path: "header.date.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".date"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".date"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".date"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.date.size();
-    }
-  }, {
-    element: ".control-header-date-size-number",
-    path: "header.date.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-date-size-range",
-      path: "header.date.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.date.size();
-    }
-  }, {
-    element: ".control-header-date-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".date"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.date.size");
-      header.render.date.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-date-newline",
-    path: "header.date.newLine",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-search-show",
-    path: "header.search.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      header.render.search.width.size();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.class();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-search-width-by-auto",
-    path: "header.search.width.by",
-    type: "radio",
-    func: function() {
-      render.class();
-      render.dependents();
-      header.render.search.width.size();
-    }
-  }, {
-    element: ".control-header-search-width-by-custom",
-    path: "header.search.width.by",
-    type: "radio",
-    func: function() {
-      render.class();
-      render.dependents();
-      header.render.search.width.size();
-    }
-  }, {
-    element: ".control-header-search-width-size-range",
-    path: "header.search.width.size",
-    type: "range",
-    valueModify: {
-      min: 10,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-header-search-width-size-number",
-      path: "header.search.width.size",
-      type: "number",
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".search-wrapper"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".search-wrapper"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".search-wrapper"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.search.width.size();
-    }
-  }, {
-    element: ".control-header-search-width-size-number",
-    path: "header.search.width.size",
-    type: "number",
-    valueModify: {
-      min: 10,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-header-search-width-size-range",
-      path: "header.search.width.size",
-      type: "range",
-    }],
-    func: function() {
-      header.render.search.width.size();
-    }
-  }, {
-    element: ".control-header-search-width-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".search-wrapper"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.search.width.size");
-      header.render.search.width.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-search-style-box",
-    path: "header.search.style",
-    type: "radio",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-search-style-clear",
-    path: "header.search.style",
-    type: "radio",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-search-focus",
-    path: "header.search.focus",
-    type: "checkbox"
-  }, {
-    element: ".control-header-search-engine-google",
-    path: "header.search.engine.selected",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      search.render.engine();
-    }
-  }, {
-    element: ".control-header-search-engine-duckduckgo",
-    path: "header.search.engine.selected",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      search.render.engine();
-    }
-  }, {
-    element: ".control-header-search-engine-youtube",
-    path: "header.search.engine.selected",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      search.render.engine();
-    }
-  }, {
-    element: ".control-header-search-engine-giphy",
-    path: "header.search.engine.selected",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      search.render.engine();
-    }
-  }, {
-    element: ".control-header-search-engine-bing",
-    path: "header.search.engine.selected",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      search.render.engine();
-    }
-  }, {
-    element: ".control-header-search-engine-custom",
-    path: "header.search.engine.selected",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      search.render.engine();
-    }
-  }, {
-    element: ".control-header-search-engine-custom-name",
-    path: "header.search.engine.custom.name",
-    type: "text",
-    func: function() {
-      search.render.engine();
-    }
-  }, {
-    element: ".control-header-search-engine-custom-url",
-    path: "header.search.engine.custom.url",
-    type: "text",
-    func: function() {
-      search.render.engine();
-    }
-  }, {
-    element: ".control-header-search-text-justify-left",
-    path: "header.search.text.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-search-text-justify-center",
-    path: "header.search.text.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-search-text-justify-right",
-    path: "header.search.text.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-search-size-range",
-    path: "header.search.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-search-size-number",
-      path: "header.search.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".search"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".search"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".search"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.search.size();
-    }
-  }, {
-    element: ".control-header-search-size-number",
-    path: "header.search.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-search-size-range",
-      path: "header.search.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.search.size();
-    }
-  }, {
-    element: ".control-header-search-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".search-wrapper"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.search.size");
-      header.render.search.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-search-newtab",
-    path: "header.search.newTab",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      header.render.search.width.size();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.class();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-search-newline",
-    path: "header.search.newLine",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-editadd-show",
-    path: "header.editAdd.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-      render.dependents();
-    }
-  }, {
-    element: ".control-header-editadd-style-box",
-    path: "header.editAdd.style",
-    type: "radio",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-editadd-style-clear",
-    path: "header.editAdd.style",
-    type: "radio",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-editadd-size-range",
-    path: "header.editAdd.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-editadd-size-number",
-      path: "header.editAdd.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-editadd"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-editadd"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: ".header-item-editadd",
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.editadd.size();
-    }
-  }, {
-    element: ".control-header-editadd-size-number",
-    path: "header.editAdd.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-editadd-size-range",
-      path: "header.editAdd.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.editadd.size();
-    }
-  }, {
-    element: ".control-header-editadd-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-editadd"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.editAdd.size");
-      header.render.editadd.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-editadd-newline",
-    path: "header.editAdd.newLine",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-coloraccent-show",
-    path: "header.colorAccent.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-coloraccent-dot-show",
-    path: "header.colorAccent.dot.show",
-    type: "checkbox",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-coloraccent-style-box",
-    path: "header.colorAccent.style",
-    type: "radio",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-coloraccent-style-clear",
-    path: "header.colorAccent.style",
-    type: "radio",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-coloraccent-size-range",
-    path: "header.colorAccent.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-coloraccent-size-number",
-      path: "header.colorAccent.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-coloraccent"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-coloraccent"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: ".header-item-coloraccent",
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.coloraccent.size();
-    }
-  }, {
-    element: ".control-header-coloraccent-size-number",
-    path: "header.colorAccent.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-coloraccent-size-range",
-      path: "header.colorAccent.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.coloraccent.size();
-    }
-  }, {
-    element: ".control-header-coloraccent-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".header-coloraccent"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.colorAccent.size");
-      header.render.coloraccent.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-coloraccent-newline",
-    path: "header.colorAccent.newLine",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-menu-style-box",
-    path: "header.menu.style",
-    type: "radio",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-menu-style-clear",
-    path: "header.menu.style",
-    type: "radio",
-    func: function() {
-      header.render.item.clear();
-      header.render.item.all();
-      greeting.render.clear();
-      greeting.render.all();
-      clock.render.clear();
-      clock.render.all();
-      transitional.render.clear();
-      transitional.render.all();
-      date.render.clear();
-      date.render.all();
-      render.dependents();
-      render.update.control.header();
-      bind.control.header();
-      search.render.engine();
-      search.bind.input();
-      search.bind.clear();
-      dropdown.bind.editAdd();
-    }
-  }, {
-    element: ".control-header-menu-size-range",
-    path: "header.menu.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-menu-size-number",
-      path: "header.menu.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".control-menu-open"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".control-menu-open"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: ".control-menu-open",
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      header.render.menu.size();
-    }
-  }, {
-    element: ".control-header-menu-size-number",
-    path: "header.menu.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-header-menu-size-range",
-      path: "header.menu.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.menu.size();
-    }
-  }, {
-    element: ".control-header-menu-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".control-menu-open"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("header.menu.size");
-      header.render.menu.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-menu-newline",
-    path: "header.menu.newLine",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-color-show",
-    path: "header.color.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-      header.render.color.scrolling();
-    }
-  }, {
-    element: ".control-header-color-style-always",
-    path: "header.color.style",
-    type: "radio",
-    func: function() {
-      render.class();
-      header.render.color.scrolling();
-    }
-  }, {
-    element: ".control-header-color-style-scroll",
-    path: "header.color.style",
-    type: "radio",
-    func: function() {
-      render.class();
-      header.render.color.scrolling();
-    }
-  }, {
-    element: ".control-header-color-by-theme",
-    path: "header.color.by",
-    type: "radio",
-    func: function() {
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-header-color-by-custom",
-    path: "header.color.by",
-    type: "radio",
-    func: function() {
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-header-color-rgb-range",
-    path: "header.color.rgb",
-    type: "color",
-    mirrorElement: [{
-      element: ".control-header-color-rgb-text",
-      path: "header.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }],
-    func: function() {
-      header.render.color.custom();
-    }
-  }, {
-    element: ".control-header-color-rgb-text",
-    path: "header.color.rgb",
-    type: "text",
-    valueConvert: ["hexTextString"],
-    mirrorElement: [{
-      element: ".control-header-color-rgb-range",
-      path: "header.color.rgb",
-      type: "color"
-    }],
-    func: function() {
-      header.render.color.custom();
-    }
-  }, {
-    element: ".control-header-color-opacity-range",
-    path: "header.color.opacity",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-header-color-opacity-number",
-      path: "header.color.opacity",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.opacity();
-    }
-  }, {
-    element: ".control-header-color-opacity-number",
-    path: "header.color.opacity",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-header-color-opacity-range",
-      path: "header.color.opacity",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      header.render.opacity();
-    }
-  }, {
-    element: ".control-header-color-opacity-default",
-    type: "button",
-    func: function() {
-      mod.default("header.color.opacity");
-      header.render.opacity();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-radius",
-    path: "header.radius",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-border-top-range",
-    path: "header.border.top",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-header-border-top-number",
-      path: "header.border.top",
-      type: "number"
-    }],
-    func: function() {
-      header.render.border();
-      render.class();
-    }
-  }, {
-    element: ".control-header-border-top-number",
-    path: "header.border.top",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-header-border-top-range",
-      path: "header.border.top",
-      type: "range"
-    }],
-    func: function() {
-      header.render.border();
-      render.class();
-    }
-  }, {
-    element: ".control-header-border-top-default",
-    type: "button",
-    func: function() {
-      mod.default("header.border.top");
-      header.render.border();
-      render.class();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-border-bottom-range",
-    path: "header.border.bottom",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-header-border-bottom-number",
-      path: "header.border.bottom",
-      type: "number"
-    }],
-    func: function() {
-      header.render.border();
-      render.class();
-    }
-  }, {
-    element: ".control-header-border-bottom-number",
-    path: "header.border.bottom",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-header-border-bottom-range",
-      path: "header.border.bottom",
-      type: "range"
-    }],
-    func: function() {
-      header.render.border();
-      render.class();
-    }
-  }, {
-    element: ".control-header-border-bottom-default",
-    type: "button",
-    func: function() {
-      mod.default("header.border.bottom");
-      header.render.border();
-      render.class();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-header-position-sticky",
-    path: "header.position",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-header-position-inline",
-    path: "header.position",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-area-width-range",
-    path: "link.area.width",
-    type: "range",
-    valueModify: {
-      min: 10,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-link-area-width-number",
-      path: "link.area.width",
-      type: "number"
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-area"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-area"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".group"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      link.render.area.width();
-    }
-  }, {
-    element: ".control-link-area-width-number",
-    path: "link.area.width",
-    type: "number",
-    valueModify: {
-      min: 10,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-link-area-width-range",
-      path: "link.area.width",
-      type: "range"
-    }],
-    func: function() {
-      link.render.area.width();
-    }
-  }, {
-    element: ".control-link-area-width-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("link.area.width");
-      link.render.area.width();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-area-width-match",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-area"),
-          delay: 500
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      mod.match("link.area.width", "header.area.width");
-      link.render.area.width();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-area-justify-left",
-    path: "link.area.justify",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-area-justify-center",
-    path: "link.area.justify",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-area-justify-right",
-    path: "link.area.justify",
-    type: "radio",
-    additionalEvents: [{
-      event: "change",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-area"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-area-direction-ltr",
-    path: "link.area.direction",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-area-direction-rtl",
-    path: "link.area.direction",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-size-range",
-    path: "link.item.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 50,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-size-number",
-      path: "link.item.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-item"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-item"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".link-item"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      link.render.item.size();
-    }
-  }, {
-    element: ".control-link-item-size-number",
-    path: "link.item.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 50,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-size-range",
-      path: "link.item.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.size();
-    }
-  }, {
-    element: ".control-link-show",
-    path: "link.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-      search.render.engine();
-    }
-  }, {
-    element: ".control-link-item-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".link-item"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("link.item.size");
-      link.render.item.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-url-show",
-    path: "link.item.url.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-link-item-line-show",
-    path: "link.item.line.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-shadow-show",
-    path: "link.item.shadow.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-hoverscale",
-    path: "link.item.hoverScale.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-newtab",
-    path: "link.item.newTab",
-    type: "checkbox",
-    func: function() {
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-topcenter",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-topright",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-centerleft",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-centercenter",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-centerright",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-bottomleft",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-bottomcenter",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-bottomright",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-rotate-range",
-    path: "link.item.display.rotate",
-    type: "range",
-    valueModify: {
-      min: -180,
-      max: 180
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-rotate-number",
-      path: "link.item.display.rotate",
-      type: "number"
-    }],
-    func: function() {
-      link.render.item.rotate();
-    }
-  }, {
-    element: ".control-link-item-display-rotate-number",
-    path: "link.item.display.rotate",
-    type: "number",
-    valueModify: {
-      min: -180,
-      max: 180
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-rotate-range",
-      path: "link.item.display.rotate",
-      type: "range"
-    }],
-    func: function() {
-      link.render.item.rotate();
-    }
-  }, {
-    element: ".control-link-item-display-rotate-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.rotate");
-      link.render.item.rotate();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-translate-x-range",
-    path: "link.item.display.translate.x",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: -1000,
-      max: 1000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-translate-x-number",
-      path: "link.item.display.translate.x",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.translate.x();
-    }
-  }, {
-    element: ".control-link-item-display-translate-x-number",
-    path: "link.item.display.translate.x",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: -1000,
-      max: 1000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-translate-x-range",
-      path: "link.item.display.translate.x",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.translate.x();
-    }
-  }, {
-    element: ".control-link-item-display-translate-x-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.translate.x");
-      link.render.item.translate.x();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-translate-y-range",
-    path: "link.item.display.translate.y",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: -1000,
-      max: 1000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-translate-y-number",
-      path: "link.item.display.translate.y",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.translate.y();
-    }
-  }, {
-    element: ".control-link-item-display-translate-y-number",
-    path: "link.item.display.translate.y",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: -1000,
-      max: 1000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-translate-y-range",
-      path: "link.item.display.translate.y",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.translate.y();
-    }
-  }, {
-    element: ".control-link-item-display-translate-y-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.translate.y");
-      link.render.item.translate.y();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-gutter-range",
-    path: "link.item.display.gutter",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 40
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-gutter-number",
-      path: "link.item.display.gutter",
-      type: "number"
-    }],
-    func: function() {
-      link.render.item.gutter();
-    }
-  }, {
-    element: ".control-link-item-display-gutter-number",
-    path: "link.item.display.gutter",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 40
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-gutter-range",
-      path: "link.item.display.gutter",
-      type: "range"
-    }],
-    func: function() {
-      link.render.item.gutter();
-    }
-  }, {
-    element: ".control-link-item-display-gutter-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.gutter");
-      link.render.item.gutter();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-direction-horizontal",
-    path: "link.item.display.direction",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-direction-vertical",
-    path: "link.item.display.direction",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-order-letconname",
-    path: "link.item.display.order",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-order-nameletcon",
-    path: "link.item.display.order",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-show",
-    path: "link.item.display.letcon.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-letter-size-range",
-    path: "link.item.display.letcon.letter.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-letcon-letter-size-number",
-      path: "link.item.display.letcon.letter.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.display.letter();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-letter-size-number",
-    path: "link.item.display.letcon.letter.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-letcon-letter-size-range",
-      path: "link.item.display.letcon.letter.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.display.letter();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-letter-size-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.letcon.letter.size");
-      link.render.item.display.letter();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-icon-size-range",
-    path: "link.item.display.letcon.icon.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-letcon-icon-size-number",
-      path: "link.item.display.letcon.icon.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.display.icon();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-icon-size-number",
-    path: "link.item.display.letcon.icon.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-letcon-icon-size-range",
-      path: "link.item.display.letcon.icon.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.display.icon();
-    }
-  }, {
-    element: ".control-link-item-display-letcon-icon-size-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.letcon.icon.size");
-      link.render.item.display.icon();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-name-show",
-    path: "link.item.display.name.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-link-item-display-name-size-range",
-    path: "link.item.display.name.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-name-size-number",
-      path: "link.item.display.name.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.name();
-    }
-  }, {
-    element: ".control-link-item-display-name-size-number",
-    path: "link.item.display.name.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 3000,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-link-item-display-name-size-range",
-      path: "link.item.display.name.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.item.name();
-    }
-  }, {
-    element: ".control-link-item-display-name-size-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.display.name.size");
-      link.render.item.name();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-item-display-alignment-topleft",
-    path: "link.item.display.alignment",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-style-block",
-    path: "link.style",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-style-list",
-    path: "link.style",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-color-by-theme",
-    path: "link.item.color.by",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-color-by-custom",
-    path: "link.item.color.by",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-color-rgb-range",
-    path: "link.item.color.rgb",
-    type: "color",
-    mirrorElement: [{
-      element: ".control-link-item-color-rgb-text",
-      path: "link.item.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }],
-    func: function() {
-      link.render.item.color.custom();
-    }
-  }, {
-    element: ".control-link-item-color-rgb-text",
-    path: "link.item.color.rgb",
-    type: "text",
-    valueConvert: ["hexTextString"],
-    mirrorElement: [{
-      element: ".control-link-item-color-rgb-range",
-      path: "link.item.color.rgb",
-      type: "color"
-    }],
-    func: function() {
-      link.render.item.color.custom();
-    }
-  }, {
-    element: ".control-link-item-border-range",
-    path: "link.item.border",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-link-item-border-number",
-      path: "link.item.border",
-      type: "number"
-    }],
-    func: function() {
-      link.render.item.border();
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-border-number",
-    path: "link.item.border",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-link-item-border-range",
-      path: "link.item.border",
-      type: "range"
-    }],
-    func: function() {
-      link.render.item.border();
-      render.class();
-    }
-  }, {
-    element: ".control-link-item-border-default",
-    type: "button",
-    func: function() {
-      mod.default("link.item.border");
-      render.class();
-      link.render.item.border();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-link-orientation-top",
-    path: "link.orientation",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-orientation-bottom",
-    path: "link.orientation",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-link-sort-letter",
-    type: "button",
-    func: function() {
-      bookmarks.sort("letter");
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-link-sort-icon",
-    type: "button",
-    func: function() {
-      bookmarks.sort("icon");
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-link-sort-name",
-    type: "button",
-    func: function() {
-      bookmarks.sort("name");
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-link-accent-clear",
-    type: "button",
-    func: function() {
-      link.mod.accent.clear();
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-link-accent-set",
-    type: "button",
-    func: function() {
-      link.mod.accent.rainbow();
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-group-area-justify-left",
-    path: "group.area.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-group-area-justify-center",
-    path: "group.area.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-group-area-justify-right",
-    path: "group.area.justify",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-group-order-headerbody",
-    path: "group.order",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-group-order-bodyheader",
-    path: "group.order",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-group-name-show",
-    path: "group.name.show",
-    type: "checkbox",
-    func: function() {
-      link.groupAndItems();
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-group-name-size-range",
-    path: "group.name.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-group-name-size-number",
-      path: "group.name.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-name-text"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-name-text"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: helper.e(".group-name-text"),
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      link.render.group.name.size();
-    }
-  }, {
-    element: ".control-group-name-size-number",
-    path: "group.name.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-group-name-size-range",
-      path: "group.name.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.group.name.size();
-    }
-  }, {
-    element: ".control-group-name-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-name-text"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("group.name.size");
-      link.render.group.name.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-group-openall-show",
-    path: "group.openAll.show",
-    type: "checkbox",
-    func: function() {
-      link.groupAndItems();
-      render.class();
-      render.dependents();
-    }
-  }, {
-    element: ".control-group-openall-size-range",
-    path: "group.openAll.size",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-group-openall-size-number",
-      path: "group.openAll.size",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    additionalEvents: [{
-      event: "input",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-openall"),
-        });
-      }
-    }, {
-      event: "mousedown",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-openall"),
-        });
-      }
-    }, {
-      event: "mouseup",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "touchend",
-      func: function() {
-        edge.box.close();
-      }
-    }, {
-      event: "keydown",
-      func: function() {
-        if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-          edge.box.open({
-            element: ".header-item-coloraccent",
-          });
-        };
-      }
-    }, {
-      event: "keyup",
-      func: function() {
-        edge.box.close();
-      }
-    }],
-    func: function() {
-      link.render.group.openall.size();
-    }
-  }, {
-    element: ".control-group-openall-size-number",
-    path: "group.openAll.size",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 10,
-      max: 500,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-group-openall-size-range",
-      path: "group.openAll.size",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      link.render.group.openall.size();
-    }
-  }, {
-    element: ".control-group-openall-size-default",
-    type: "button",
-    additionalEvents: [{
-      event: "click",
-      func: function() {
-        edge.box.open({
-          element: helper.e(".group-openall"),
-          delay: 500
-        });
-      }
-    }],
-    func: function() {
-      mod.default("group.openAll.size");
-      link.render.group.openall.size();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-group-openall-style-box",
-    path: "group.openAll.style",
-    type: "radio",
-    func: function() {
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-group-openall-style-clear",
-    path: "group.openAll.style",
-    type: "radio",
-    func: function() {
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-group-border-range",
-    path: "group.border",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-group-border-number",
-      path: "group.border",
-      type: "number"
-    }],
-    func: function() {
-      link.render.group.border();
-      render.class();
-    }
-  }, {
-    element: ".control-group-border-number",
-    path: "group.border",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 60
-    },
-    mirrorElement: [{
-      element: ".control-group-border-range",
-      path: "group.border",
-      type: "range"
-    }],
-    func: function() {
-      link.render.group.border();
-      render.class();
-    }
-  }, {
-    element: ".control-group-border-default",
-    type: "button",
-    func: function() {
-      mod.default("group.border");
-      link.render.group.border();
-      render.class();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-custom-add",
-    type: "button",
-    func: function() {
-      menu.close();
-      theme.custom.add();
-    }
-  }, {
-    element: ".control-theme-custom-edit",
-    path: "theme.custom.edit",
-    type: "checkbox",
-    func: function() {
-      theme.render.custom.tabIndex();
-      render.class();
-    }
-  }, {
-    element: ".control-theme-style-dark",
-    path: "theme.style",
-    type: "radio",
-    func: function() {
-      theme.style.dark();
-    }
-  }, {
-    element: ".control-theme-style-light",
-    path: "theme.style",
-    type: "radio",
-    func: function() {
-      theme.style.light();
-    }
-  }, {
-    element: ".control-theme-font-display-name",
-    path: "theme.font.display.name",
-    type: "text",
-    func: function() {
-      theme.render.font.delay.display();
-    }
-  }, {
-    element: ".control-theme-font-display-name-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.font.display.name");
-      theme.render.font.display.name();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-font-display-weight-range",
-    path: "theme.font.display.weight",
-    type: "range",
-    valueModify: {
-      min: 100,
-      max: 900,
-      step: 100
-    },
-    mirrorElement: [{
-      element: ".control-theme-font-display-weight-number",
-      path: "theme.font.display.weight",
-      type: "number"
-    }],
-    func: function() {
-      theme.render.font.display.weight();
-    }
-  }, {
-    element: ".control-theme-font-display-weight-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.font.display.weight");
-      theme.render.font.display.weight();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-font-display-weight-number",
-    path: "theme.font.display.weight",
-    type: "number",
-    valueModify: {
-      min: 100,
-      max: 900,
-      step: 100
-    },
-    mirrorElement: [{
-      element: ".control-theme-font-display-weight-range",
-      path: "theme.font.display.weight",
-      type: "range"
-    }],
-    func: function() {
-      theme.render.font.display.weight();
-    }
-  }, {
-    element: ".control-theme-font-display-light",
-    type: "button",
-    func: function() {
-      theme.mod.font.display.light();
-      theme.render.font.display.weight();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-font-display-regular",
-    type: "button",
-    func: function() {
-      theme.mod.font.display.regular();
-      theme.render.font.display.weight();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-font-display-bold",
-    type: "button",
-    func: function() {
-      theme.mod.font.display.bold();
-      theme.render.font.display.weight();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-font-display-style-normal",
-    path: "theme.font.display.style",
-    type: "radio",
-    func: function() {
-      theme.render.font.display.style();
-    }
-  }, {
-    element: ".control-theme-font-display-style-italic",
-    path: "theme.font.display.style",
-    type: "radio",
-    func: function() {
-      theme.render.font.display.style();
-    }
-  }, {
-    element: ".control-theme-font-display-style-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.font.display.style");
-      theme.render.font.display.style();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-font-ui-name",
-    path: "theme.font.ui.name",
-    type: "text",
-    func: function() {
-      theme.render.font.delay.ui();
-    }
-  }, {
-    element: ".control-theme-font-ui-name-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.font.ui.name");
-      theme.render.font.ui.name();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-font-ui-weight-range",
-    path: "theme.font.ui.weight",
-    type: "range",
-    valueModify: {
-      min: 100,
-      max: 900,
-      step: 100
-    },
-    mirrorElement: [{
-      element: ".control-theme-font-ui-weight-number",
-      path: "theme.font.ui.weight",
-      type: "number"
-    }],
-    func: function() {
-      theme.render.font.ui.weight();
-    }
-  }, {
-    element: ".control-theme-font-ui-weight-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.font.ui.weight");
-      theme.render.font.ui.weight();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-font-ui-weight-number",
-    path: "theme.font.ui.weight",
-    type: "number",
-    valueModify: {
-      min: 100,
-      max: 900,
-      step: 100
-    },
-    mirrorElement: [{
-      element: ".control-theme-font-ui-weight-range",
-      path: "theme.font.ui.weight",
-      type: "range"
-    }],
-    func: function() {
-      theme.render.font.ui.weight();
-    }
-  }, {
-    element: ".control-theme-font-ui-light",
-    type: "button",
-    func: function() {
-      theme.mod.font.ui.light();
-      theme.render.font.ui.weight();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-font-ui-regular",
-    type: "button",
-    func: function() {
-      theme.mod.font.ui.regular();
-      theme.render.font.ui.weight();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-font-ui-bold",
-    type: "button",
-    func: function() {
-      theme.mod.font.ui.bold();
-      theme.render.font.ui.weight();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-font-ui-style-normal",
-    path: "theme.font.ui.style",
-    type: "radio",
-    func: function() {
-      theme.render.font.ui.style();
-    }
-  }, {
-    element: ".control-theme-font-ui-style-italic",
-    path: "theme.font.ui.style",
-    type: "radio",
-    func: function() {
-      theme.render.font.ui.style();
-    }
-  }, {
-    element: ".control-theme-font-ui-style-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.font.ui.style");
-      theme.render.font.ui.style();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-color-rgb-color",
-    path: "theme.color.rgb",
-    type: "color",
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-hsl-h-range",
-      path: "theme.color.hsl.h",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-number",
-      path: "theme.color.hsl.h",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-s-range",
-      path: "theme.color.hsl.s",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-s-number",
-      path: "theme.color.hsl.s",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-l-range",
-      path: "theme.color.hsl.l",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-l-number",
-      path: "theme.color.hsl.l",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-r-range",
-      path: "theme.color.rgb.r",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-number",
-      path: "theme.color.rgb.r",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-g-range",
-      path: "theme.color.rgb.g",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-g-number",
-      path: "theme.color.rgb.g",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-b-range",
-      path: "theme.color.rgb.b",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-b-number",
-      path: "theme.color.rgb.b",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.hsl();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-rgb-text",
-    path: "theme.color.rgb",
-    type: "text",
-    valueConvert: ["hexTextString"],
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-hsl-h-range",
-      path: "theme.color.hsl.h",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-number",
-      path: "theme.color.hsl.h",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-s-range",
-      path: "theme.color.hsl.s",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-s-number",
-      path: "theme.color.hsl.s",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-l-range",
-      path: "theme.color.hsl.l",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-l-number",
-      path: "theme.color.hsl.l",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-r-range",
-      path: "theme.color.rgb.r",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-number",
-      path: "theme.color.rgb.r",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-g-range",
-      path: "theme.color.rgb.g",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-g-number",
-      path: "theme.color.rgb.g",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-b-range",
-      path: "theme.color.rgb.b",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-b-number",
-      path: "theme.color.rgb.b",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.hsl();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-rgb-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.color.rgb");
-      theme.mod.color.hsl();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-color-hsl-h-range",
-    path: "theme.color.hsl.h",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 359
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-hsl-h-number",
-      path: "theme.color.hsl.h",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-r-range",
-      path: "theme.color.rgb.r",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-number",
-      path: "theme.color.rgb.r",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-g-range",
-      path: "theme.color.rgb.g",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-g-number",
-      path: "theme.color.rgb.g",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-b-range",
-      path: "theme.color.rgb.b",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-b-number",
-      path: "theme.color.rgb.b",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.rgb();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-hsl-h-number",
-    path: "theme.color.hsl.h",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 359
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-hsl-h-range",
-      path: "theme.color.hsl.h",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-range",
-      path: "theme.color.rgb.r",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-number",
-      path: "theme.color.rgb.r",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-g-range",
-      path: "theme.color.rgb.g",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-g-number",
-      path: "theme.color.rgb.g",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-b-range",
-      path: "theme.color.rgb.b",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-b-number",
-      path: "theme.color.rgb.b",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.rgb();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-hsl-s-range",
-    path: "theme.color.hsl.s",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-hsl-s-number",
-      path: "theme.color.hsl.s",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-r-range",
-      path: "theme.color.rgb.r",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-number",
-      path: "theme.color.rgb.r",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-g-range",
-      path: "theme.color.rgb.g",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-g-number",
-      path: "theme.color.rgb.g",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-b-range",
-      path: "theme.color.rgb.b",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-b-number",
-      path: "theme.color.rgb.b",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.rgb();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-hsl-s-number",
-    path: "theme.color.hsl.s",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-hsl-s-range",
-      path: "theme.color.hsl.s",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-range",
-      path: "theme.color.rgb.r",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-number",
-      path: "theme.color.rgb.r",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-g-range",
-      path: "theme.color.rgb.g",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-g-number",
-      path: "theme.color.rgb.g",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-b-range",
-      path: "theme.color.rgb.b",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-b-number",
-      path: "theme.color.rgb.b",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.rgb();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-hsl-l-range",
-    path: "theme.color.hsl.l",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-hsl-l-number",
-      path: "theme.color.hsl.l",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-r-range",
-      path: "theme.color.rgb.r",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-number",
-      path: "theme.color.rgb.r",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-g-range",
-      path: "theme.color.rgb.g",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-g-number",
-      path: "theme.color.rgb.g",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-b-range",
-      path: "theme.color.rgb.b",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-b-number",
-      path: "theme.color.rgb.b",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.rgb();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-hsl-l-number",
-    path: "theme.color.hsl.l",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-hsl-l-range",
-      path: "theme.color.hsl.l",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-range",
-      path: "theme.color.rgb.r",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-r-number",
-      path: "theme.color.rgb.r",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-g-range",
-      path: "theme.color.rgb.g",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-g-number",
-      path: "theme.color.rgb.g",
-      type: "number"
-    }, {
-      element: ".control-theme-color-rgb-b-range",
-      path: "theme.color.rgb.b",
-      type: "range"
-    }, {
-      element: ".control-theme-color-rgb-b-number",
-      path: "theme.color.rgb.b",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.rgb();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-rgb-r-range",
-    path: "theme.color.rgb.r",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 255
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-rgb-r-number",
-      path: "theme.color.rgb.r",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-h-range",
-      path: "theme.color.hsl.h",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-number",
-      path: "theme.color.hsl.h",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-s-range",
-      path: "theme.color.hsl.s",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-s-number",
-      path: "theme.color.hsl.s",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-l-range",
-      path: "theme.color.hsl.l",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-l-number",
-      path: "theme.color.hsl.l",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.hsl();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-rgb-r-number",
-    path: "theme.color.rgb.r",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 255
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-rgb-r-range",
-      path: "theme.color.rgb.r",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-range",
-      path: "theme.color.hsl.h",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-number",
-      path: "theme.color.hsl.h",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-s-range",
-      path: "theme.color.hsl.s",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-s-number",
-      path: "theme.color.hsl.s",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-l-range",
-      path: "theme.color.hsl.l",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-l-number",
-      path: "theme.color.hsl.l",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.hsl();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-rgb-g-range",
-    path: "theme.color.rgb.g",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 255
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-rgb-g-number",
-      path: "theme.color.rgb.g",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-h-range",
-      path: "theme.color.hsl.h",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-number",
-      path: "theme.color.hsl.h",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-s-range",
-      path: "theme.color.hsl.s",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-s-number",
-      path: "theme.color.hsl.s",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-l-range",
-      path: "theme.color.hsl.l",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-l-number",
-      path: "theme.color.hsl.l",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.hsl();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-rgb-g-number",
-    path: "theme.color.rgb.g",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 255
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-rgb-g-range",
-      path: "theme.color.rgb.g",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-range",
-      path: "theme.color.hsl.h",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-number",
-      path: "theme.color.hsl.h",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-s-range",
-      path: "theme.color.hsl.s",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-s-number",
-      path: "theme.color.hsl.s",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-l-range",
-      path: "theme.color.hsl.l",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-l-number",
-      path: "theme.color.hsl.l",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.hsl();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-rgb-b-range",
-    path: "theme.color.rgb.b",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 255
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-rgb-b-number",
-      path: "theme.color.rgb.b",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-h-range",
-      path: "theme.color.hsl.h",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-number",
-      path: "theme.color.hsl.h",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-s-range",
-      path: "theme.color.hsl.s",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-s-number",
-      path: "theme.color.hsl.s",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-l-range",
-      path: "theme.color.hsl.l",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-l-number",
-      path: "theme.color.hsl.l",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.hsl();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-rgb-b-number",
-    path: "theme.color.rgb.b",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 255
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-rgb-color-quick",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-color",
-      path: "theme.color.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-color-rgb-text",
-      path: "theme.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }, {
-      element: ".control-theme-color-rgb-b-range",
-      path: "theme.color.rgb.b",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-range",
-      path: "theme.color.hsl.h",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-h-number",
-      path: "theme.color.hsl.h",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-s-range",
-      path: "theme.color.hsl.s",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-s-number",
-      path: "theme.color.hsl.s",
-      type: "number"
-    }, {
-      element: ".control-theme-color-hsl-l-range",
-      path: "theme.color.hsl.l",
-      type: "range"
-    }, {
-      element: ".control-theme-color-hsl-l-number",
-      path: "theme.color.hsl.l",
-      type: "number"
-    }],
-    func: function() {
-      theme.mod.color.hsl();
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-contrast-light-range",
-    path: "theme.color.contrast.light",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 100,
-      max: 800,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-contrast-light-number",
-      path: "theme.color.contrast.light",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-contrast-light-number",
-    path: "theme.color.contrast.light",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 100,
-      max: 800,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-contrast-light-range",
-      path: "theme.color.contrast.light",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-contrast-light-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.color.contrast.light");
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-color-contrast-dark-range",
-    path: "theme.color.contrast.dark",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 100,
-      max: 800,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-contrast-dark-number",
-      path: "theme.color.contrast.dark",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-contrast-dark-number",
-    path: "theme.color.contrast.dark",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 100,
-      max: 800,
-      step: 10
-    },
-    mirrorElement: [{
-      element: ".control-theme-color-contrast-dark-range",
-      path: "theme.color.contrast.dark",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-    }
-  }, {
-    element: ".control-theme-color-contrast-dark-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.color.contrast.dark");
-      theme.mod.color.generated();
-      theme.render.color.shade();
-      theme.render.themeMetaTag();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-accent-rgb-color",
-    path: "theme.accent.rgb",
-    type: "color",
-    mirrorElement: [{
-      element: ".control-theme-accent-rgb-color-quick",
-      path: "theme.accent.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-accent-rgb-text",
-      path: "theme.accent.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }],
-    func: function() {
-      theme.render.accent.color();
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-theme-accent-rgb-text",
-    path: "theme.accent.rgb",
-    type: "text",
-    valueConvert: ["hexTextString"],
-    mirrorElement: [{
-      element: ".control-theme-accent-rgb-color-quick",
-      path: "theme.accent.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-accent-rgb-color",
-      path: "theme.accent.rgb",
-      type: "color"
-    }],
-    func: function() {
-      theme.render.accent.color();
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-theme-accent-rgb-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.accent.rgb");
-      theme.render.accent.color();
-      link.groupAndItems();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-accent-random-active",
-    path: "theme.accent.random.active",
-    type: "checkbox",
-    func: function() {
-      render.dependents();
-      theme.render.accent.color();
-    }
-  }, {
-    element: ".control-theme-accent-random-style-any",
-    path: "theme.accent.random.style",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-theme-accent-random-style-light",
-    path: "theme.accent.random.style",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-theme-accent-random-style-dark",
-    path: "theme.accent.random.style",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-theme-accent-random-style-pastel",
-    path: "theme.accent.random.style",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-theme-accent-random-style-saturated",
-    path: "theme.accent.random.style",
-    type: "radio",
-    func: function() {
-      render.class();
-    }
-  }, {
-    element: ".control-theme-accent-randomise",
-    type: "button",
-    mirrorElement: [{
-      element: ".control-theme-accent-rgb-color-quick",
-      path: "theme.accent.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-accent-rgb-color",
-      path: "theme.accent.rgb",
-      type: "color"
-    }, {
-      element: ".control-theme-accent-rgb-text",
-      path: "theme.accent.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }],
-    func: function() {
-      theme.accent.random();
-      link.groupAndItems();
-    }
-  }, {
-    element: ".control-theme-radius-range",
-    path: "theme.radius",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 400,
-      step: 5
-    },
-    mirrorElement: [{
-      element: ".control-theme-radius-number",
-      path: "theme.radius",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      theme.render.radius();
-      render.class();
-    }
-  }, {
-    element: ".control-theme-radius-number",
-    path: "theme.radius",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 400,
-      step: 5
-    },
-    mirrorElement: [{
-      element: ".control-theme-radius-range",
-      path: "theme.radius",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      theme.render.radius();
-      render.class();
-    }
-  }, {
-    element: ".control-theme-radius-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.radius");
-      theme.render.radius();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-shadow-range",
-    path: "theme.shadow",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 300,
-      step: 25
-    },
-    mirrorElement: [{
-      element: ".control-theme-shadow-number",
-      path: "theme.shadow",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      theme.render.shadow();
-    }
-  }, {
-    element: ".control-theme-shadow-number",
-    path: "theme.shadow",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 300,
-      step: 25
-    },
-    mirrorElement: [{
-      element: ".control-theme-shadow-range",
-      path: "theme.shadow",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      theme.render.shadow();
-    }
-  }, {
-    element: ".control-theme-shadow-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.shadow");
-      theme.render.shadow();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-theme-shade-opacity-range",
-    path: "theme.shade.opacity",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-theme-shade-opacity-number",
-      path: "theme.shade.opacity",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      theme.render.shade.opacity();
-      render.class();
-    }
-  }, {
-    element: ".control-theme-shade-opacity-number",
-    path: "theme.shade.opacity",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-theme-shade-opacity-range",
-      path: "theme.shade.opacity",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      theme.render.shade.opacity();
-      render.class();
-    }
-  }, {
-    element: ".control-theme-shade-opacity-default",
-    type: "button",
-    func: function() {
-      mod.default("theme.shade.opacity");
-      theme.render.shade.opacity();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-background-color-by-theme",
-    path: "background.color.by",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      render.class();
-    }
-  }, {
-    element: ".control-background-color-by-custom",
-    path: "background.color.by",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      render.class();
-    }
-  }, {
-    element: ".control-background-color-rgb-range",
-    path: "background.color.rgb",
-    type: "color",
-    mirrorElement: [{
-      element: ".control-background-color-rgb-text",
-      path: "background.color.rgb",
-      type: "text",
-      valueConvert: ["hexTextString"]
-    }],
-    func: function() {
-      background.render.color.custom();
-    }
-  }, {
-    element: ".control-background-color-rgb-text",
-    path: "background.color.rgb",
-    type: "text",
-    valueConvert: ["hexTextString"],
-    mirrorElement: [{
-      element: ".control-background-color-rgb-range",
-      path: "background.color.rgb",
-      type: "color"
-    }],
-    func: function() {
-      background.render.color.custom();
-    }
-  }, {
-    element: ".control-background-image-show",
-    path: "background.image.show",
-    type: "checkbox",
-    func: function() {
-      render.class();
-      render.dependents();
-      background.render.image();
-    }
-  }, {
-    element: ".control-background-image-from-file",
-    path: "background.image.from",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      background.render.image();
-    }
-  }, {
-    element: ".control-background-image-file",
-    type: "file",
-    func: function() {
-      background.mod.import();
-    }
-  }, {
-    element: ".control-background-image-file-clear",
-    type: "button",
-    func: function() {
-      background.mod.clear.file();
-      background.render.input.clear();
-      background.render.image();
-      background.render.feedback.clear({
-        animate: true
-      });
-      background.render.feedback.empty();
-    }
-  }, {
-    element: ".control-background-image-from-url",
-    path: "background.image.from",
-    type: "radio",
-    func: function() {
-      render.dependents();
-      background.render.image();
-    }
-  }, {
-    element: ".control-background-image-url",
-    path: "background.image.url",
-    type: "textarea",
-    func: function() {
-      background.render.image();
-    }
-  }, {
-    element: ".control-background-image-opacity-range",
-    path: "background.image.opacity",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-background-image-opacity-number",
-      path: "background.image.opacity",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      background.render.opacity();
-    }
-  }, {
-    element: ".control-background-image-opacity-number",
-    path: "background.image.opacity",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-background-image-opacity-range",
-      path: "background.image.opacity",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      background.render.opacity();
-    }
-  }, {
-    element: ".control-background-image-opacity-default",
-    type: "button",
-    func: function() {
-      mod.default("background.image.opacity");
-      background.render.opacity();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-background-image-grayscale-range",
-    path: "background.image.grayscale",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-background-image-grayscale-number",
-      path: "background.image.grayscale",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      background.render.grayscale();
-    }
-  }, {
-    element: ".control-background-image-grayscale-number",
-    path: "background.image.grayscale",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-background-image-grayscale-range",
-      path: "background.image.grayscale",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      background.render.grayscale();
-    }
-  }, {
-    element: ".control-background-image-grayscale-default",
-    type: "button",
-    func: function() {
-      mod.default("background.image.grayscale");
-      background.render.grayscale();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-background-image-blur-range",
-    path: "background.image.blur",
-    type: "range",
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-background-image-blur-number",
-      path: "background.image.blur",
-      type: "number"
-    }],
-    func: function() {
-      background.render.blur();
-    }
-  }, {
-    element: ".control-background-image-blur-number",
-    path: "background.image.blur",
-    type: "number",
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-background-image-blur-range",
-      path: "background.image.blur",
-      type: "range"
-    }],
-    func: function() {
-      background.render.blur();
-    }
-  }, {
-    element: ".control-background-image-blur-default",
-    type: "button",
-    func: function() {
-      mod.default("background.image.blur");
-      background.render.blur();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-background-image-accent-range",
-    path: "background.image.accent",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-background-image-accent-number",
-      path: "background.image.accent",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      background.render.accent();
-    }
-  }, {
-    element: ".control-background-image-accent-number",
-    path: "background.image.accent",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 0,
-      max: 100
-    },
-    mirrorElement: [{
-      element: ".control-background-image-accent-range",
-      path: "background.image.accent",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      background.render.accent();
-    }
-  }, {
-    element: ".control-background-image-accent-default",
-    type: "button",
-    func: function() {
-      mod.default("background.image.accent");
-      background.render.accent();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-background-image-scale-range",
-    path: "background.image.scale",
-    type: "range",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 100,
-      max: 1000
-    },
-    mirrorElement: [{
-      element: ".control-background-image-scale-number",
-      path: "background.image.scale",
-      type: "number",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      background.render.scale();
-    }
-  }, {
-    element: ".control-background-image-scale-number",
-    path: "background.image.scale",
-    type: "number",
-    valueConvert: ["float"],
-    valueModify: {
-      min: 100,
-      max: 1000
-    },
-    mirrorElement: [{
-      element: ".control-background-image-scale-range",
-      path: "background.image.scale",
-      type: "range",
-      valueConvert: ["float"]
-    }],
-    func: function() {
-      background.render.scale();
-    }
-  }, {
-    element: ".control-background-image-scale-default",
-    type: "button",
-    func: function() {
-      mod.default("background.image.scale");
-      background.render.scale();
-      render.update.control.header();
-      render.update.control.menu();
-    }
-  }, {
-    element: ".control-data-import",
-    type: "file",
-    func: function() {
-      data.mod.import();
-    }
-  }, {
-    element: ".control-data-export",
-    type: "a",
-    func: function() {
-      data.mod.export();
-    }
-  }, {
-    element: ".control-data-clear",
-    type: "a",
-    func: function() {
-      menu.close();
-      data.render.clear();
-    }
-  }];
+  };
 
   mod.default = function(path) {
     helper.setObject({
@@ -6102,7 +6182,7 @@ var control = (function() {
           bind.control.action(object);
         };
       } else {
-        mod.menu.forEach(function(arrayItem, index) {
+        mod.menu.all().forEach(function(arrayItem, index) {
           if (helper.e(arrayItem.element)) {
             bind.control.action(arrayItem);
           };
@@ -7511,7 +7591,7 @@ var control = (function() {
             render.update.value.set[object.type](object);
           };
         } else {
-          mod.menu.forEach(function(arrayItem, index) {
+          mod.menu.all().forEach(function(arrayItem, index) {
             if (bind.control.supportedElement.includes(arrayItem.type)) {
               render.update.value.set[arrayItem.type](arrayItem);
             };
@@ -7523,7 +7603,7 @@ var control = (function() {
 
   render.input = {
     header: function() {
-      mod.menu.forEach(function(arrayItem, index) {
+      mod.header.forEach(function(arrayItem, index) {
         if (arrayItem.valueModify) {
           for (var key in arrayItem.valueModify) {
             helper.e(arrayItem.element)[key] = arrayItem.valueModify[key];
@@ -7532,7 +7612,7 @@ var control = (function() {
       });
     },
     menu: function() {
-      mod.header.forEach(function(arrayItem, index) {
+      mod.menu.all().forEach(function(arrayItem, index) {
         if (arrayItem.valueModify) {
           for (var key in arrayItem.valueModify) {
             helper.e(arrayItem.element)[key] = arrayItem.valueModify[key];
