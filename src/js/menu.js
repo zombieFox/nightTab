@@ -18,90 +18,24 @@ var menu = (function() {
     });
   };
 
-  var render = {};
-
-  render.scrollToTop = function(name) {
-    if (window.innerWidth < 700) {
-      helper.e(".menu-area").scrollTop = 0;
-    } else {
-      if (name) {
-        helper.e(".menu-content-" + name).scrollTop = 0;
-      } else {
-        var allMenuContentArea = helper.eA(".menu-content");
-        allMenuContentArea.forEach(function(arrayItem, index) {
-          arrayItem.scrollTop = 0;
-        });
-      };
-    };
-  };
-
-  render.nav = function(name) {
-    var allMenuNavTab = helper.eA(".menu-nav-tab");
-    var allMenuContentArea = helper.eA(".menu-content");
-
-    allMenuNavTab.forEach(function(arrayItem, index) {
-      helper.removeClass(arrayItem, "active");
-    });
-    allMenuContentArea.forEach(function(arrayItem, index) {
-      helper.addClass(arrayItem, "is-hidden");
-    });
-
-    var control = helper.e(".control-menu-" + name);
-    var content = helper.e(".menu-content-" + name);
-
-    if (control) {
-      helper.addClass(control, "active");
-    };
-    if (content) {
-      helper.removeClass(content, "is-hidden");
-    };
-  };
-
-  render.subnav = {
-    calculate: function() {
-      var allMenuNavBody = helper.eA(".menu-nav-body");
-      allMenuNavBody.forEach(function(arrayItem, index) {
-        arrayItem.setAttribute("style", "--menu-nav-body-height:" + arrayItem.getBoundingClientRect().height + "px;");
-        if (index > 0) {
-          helper.removeClass(arrayItem, "active");
-        };
-      });
+  mod.nav = {
+    state: {
+      layout: true,
+      header: false,
+      bookmarks: false,
+      groups: false,
+      theme: false,
+      background: false,
+      data: false,
+      coffee: false,
+      nighttab: false
     },
     toggle: function(name) {
-      var allMenuNavBody = helper.eA(".menu-nav-body");
-      allMenuNavBody.forEach(function(arrayItem, index) {
-        helper.removeClass(arrayItem, "active");
-      });
-      var body = helper.e(".menu-nav-body-" + name);
-      if (body) {
-        helper.addClass(body, "active");
+      for (var key in mod.nav.state) {
+        mod.nav.state[key] = false;
       };
+      mod.nav.state[name] = true;
     }
-  };
-
-  render.tabindex = {
-    toggle: function() {
-      var menu = helper.e(".menu");
-      if (state.get.current().menu) {
-        menu.tabIndex = 1;
-        menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
-          if (arrayItem.tabIndex == -1) {
-            arrayItem.tabIndex = 1;
-          };
-        });
-      } else {
-        menu.tabIndex = -1;
-        menu.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
-          if (arrayItem.tabIndex == 1) {
-            arrayItem.tabIndex = -1;
-          };
-        });
-      };
-    }
-  };
-
-  render.focus = function() {
-    helper.e(".menu").focus();
   };
 
   render.open = function() {
@@ -112,14 +46,109 @@ var menu = (function() {
     helper.removeClass(helper.e("html"), "is-menu-open");
   };
 
+  render.nav = {
+    tab: function() {
+      for (var key in mod.nav.state) {
+        var controlMenu = helper.e(".control-menu-" + key);
+        if (mod.nav.state[key]) {
+          helper.addClass(controlMenu, "active");
+        } else {
+          helper.removeClass(controlMenu, "active");
+        };
+      };
+    },
+    content: function() {
+      for (var key in mod.nav.state) {
+        if (mod.nav.state[key]) {
+          helper.removeClass(helper.e(".menu-content-" + key), "is-hidden");
+        } else {
+          helper.addClass(helper.e(".menu-content-" + key), "is-hidden");
+        };
+      };
+    },
+    tabindex: function() {
+      for (var key in mod.nav.state) {
+        var menuContent = helper.e(".menu-content-" + key);
+        if (mod.nav.state[key]) {
+          menuContent.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
+            arrayItem.tabIndex = 1;
+          });
+        } else {
+          menuContent.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
+            arrayItem.tabIndex = -1;
+          });
+        };
+      };
+    },
+    scrollToTop: function() {
+      if (window.innerWidth < 700) {
+        helper.e(".menu-area").scrollTop = 0;
+      } else {
+        for (var key in mod.nav.state) {
+          if (mod.nav.state[key]) {
+            helper.e(".menu-content-" + key).scrollTop = 0;
+          };
+        };
+      };
+    }
+  };
+
+  render.focus = function() {
+    helper.e(".menu").focus();
+  };
+
   render.removeStyle = function() {
     helper.e(".menu").removeAttribute("style");
   };
 
+  render.subnav = {
+    height: function() {
+      var allMenuNavBody = helper.eA(".menu-nav-body");
+      allMenuNavBody.forEach(function(arrayItem, index) {
+        arrayItem.setAttribute("style", "--menu-nav-body-height:" + arrayItem.getBoundingClientRect().height + "px;");
+        if (index > 0) {
+          helper.removeClass(arrayItem, "active");
+        };
+      });
+    },
+    body: function() {
+      for (var key in mod.nav.state) {
+        var menuNavBody = helper.e(".menu-nav-body-" + key);
+        if (menuNavBody) {
+          if (mod.nav.state[key]) {
+            helper.addClass(menuNavBody, "active");
+          } else {
+            helper.removeClass(menuNavBody, "active");
+          };
+        };
+      };
+    },
+    tabindex: function(name) {
+      for (var key in mod.nav.state) {
+        var menuNavBody = helper.e(".menu-nav-body-" + key);
+        if (menuNavBody) {
+          if (mod.nav.state[key]) {
+            menuNavBody.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
+              arrayItem.tabIndex = 1;
+            });
+          } else {
+            menuNavBody.querySelectorAll("[tabindex]").forEach(function(arrayItem, index) {
+              arrayItem.tabIndex = -1;
+            });
+          };
+        };
+      };
+    }
+  };
+
   var nav = function(name) {
-    render.nav(name);
-    render.subnav.toggle(name);
-    render.scrollToTop(name);
+    mod.nav.toggle(name);
+    render.nav.tab();
+    render.nav.content();
+    render.nav.tabindex();
+    render.nav.scrollToTop(name);
+    render.subnav.body();
+    render.subnav.tabindex();
   };
 
   var toggle = function() {
@@ -134,7 +163,6 @@ var menu = (function() {
     mod.open();
     render.open();
     render.focus();
-    render.scrollToTop();
     render.tabindex.toggle();
     shade.open({
       action: function() {
@@ -159,7 +187,7 @@ var menu = (function() {
     mod.close();
     render.close();
     render.removeStyle();
-    render.subnav.calculate();
+    render.subnav.height();
   };
 
   return {
