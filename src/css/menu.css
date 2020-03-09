@@ -115,7 +115,7 @@
 }
 
 .menu-content-item {
-  padding: calc(var(--menu-space) * 1) calc(var(--menu-space) * 2);
+  padding: calc(var(--menu-space) * 3);
   position: relative;
   z-index: 1;
 }
