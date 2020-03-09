@@ -113,7 +113,7 @@ var modal = (function() {
       if (options.content) {
         if (typeof options.content == "string") {
           var container = helper.node("div|class:container");
-          var para = helper.node("p:options.content");
+          var para = helper.node("p:" + options.content);
           container.appendChild(para);
           modalBody.appendChild(container);
         } else {
