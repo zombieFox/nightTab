@@ -82,9 +82,8 @@ var modal = (function() {
     var _makeModal = function() {
       mod.open();
       var body = helper.e("body");
-      var modalWrapper = document.createElement("div");
-      modalWrapper.setAttribute("class", "modal-wrapper");
-      var modal = document.createElement("div");
+      var modal = helper.node("div");
+      var modalWrapper = helper.node("div|class:modal-wrapper");
       if (options.size == "large") {
         modal.setAttribute("class", "modal modal-large");
       } else if (options.size == "small") {
@@ -96,39 +95,25 @@ var modal = (function() {
         if (modal.classList.contains("is-opaque")) {
           helper.removeClass(modal, "is-opaque");
           helper.addClass(modal, "is-transparent");
-          helper.addClass(modalWrapper, "is-droping-down");
         } else {
           modal.remove();
         };
         mod.close();
       };
-      var modalBody = document.createElement("div");
-      modalBody.setAttribute("class", "modal-body");
-      var modalControls = document.createElement("div");
-      modalControls.setAttribute("class", "modal-controls");
-      var actionButton = document.createElement("button");
-      actionButton.setAttribute("tabindex", "1");
-      actionButton.setAttribute("class", "modal-button button button-primary button-block");
-      actionButton.textContent = options.actionText;
-      var cancelButton = document.createElement("button");
-      cancelButton.setAttribute("tabindex", "1");
-      cancelButton.setAttribute("class", "modal-button button button-primary button-block");
-      cancelButton.textContent = options.cancelText;
+      var modalBody = helper.node("div|class:modal-body");
+      var modalControls = helper.node("div|class:modal-controls");
+      var actionButton = helper.node("button:" + options.actionText + "|class:modal-button button button-primary button-block,tabindex:1");
+      var cancelButton = helper.node("button:" + options.cancelText + "|class:modal-button button button-primary button-block,tabindex:1");
       modalControls.appendChild(cancelButton);
       modalControls.appendChild(actionButton);
       if (options.heading != null) {
-        var modalHeading = document.createElement("h1");
-        modalHeading.setAttribute("tabindex", "1");
-        modalHeading.setAttribute("class", "modal-heading");
-        modalHeading.textContent = options.heading;
+        var modalHeading = helper.node("h1:" + options.heading + "|class:modal-heading,tabindex:1");
         modalBody.appendChild(modalHeading);
       };
       if (options.content) {
         if (typeof options.content == "string") {
-          var container = document.createElement("div");
-          container.setAttribute("class", "container");
-          var para = document.createElement("p");
-          para.textContent = options.content;
+          var container = helper.node("div|class:container");
+          var para = helper.node("p:options.content");
           container.appendChild(para);
           modalBody.appendChild(container);
         } else {
