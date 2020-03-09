@@ -1,31 +1,5 @@
 var menu = (function() {
 
-  var bind = {};
-
-  bind.focus = {
-    loop: function(event) {
-      var firstElement = helper.e(".control-menu-layout");
-      var lastElement = helper.e(".menu-close-tab");
-      if (event.keyCode == 9 && event.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();
-          event.preventDefault();
-        }
-      } else if (event.keyCode == 9) {
-        if (document.activeElement === lastElement) {
-          firstElement.focus();
-          event.preventDefault();
-        }
-      };
-    },
-    add: function() {
-      window.addEventListener("keydown", bind.focus.loop, false);
-    },
-    remove: function() {
-      window.removeEventListener("keydown", bind.focus.loop, false);
-    }
-  };
-
   var mod = {};
 
   mod.open = function() {
@@ -61,6 +35,32 @@ var menu = (function() {
         mod.nav.state[key] = false;
       };
       mod.nav.state[name] = true;
+    }
+  };
+
+  var bind = {};
+
+  bind.focus = {
+    loop: function(event) {
+      var firstElement = helper.e(".control-menu-layout");
+      var lastElement = helper.e(".menu-close-tab");
+      if (event.keyCode == 9 && event.shiftKey) {
+        if (document.activeElement === firstElement) {
+          lastElement.focus();
+          event.preventDefault();
+        }
+      } else if (event.keyCode == 9) {
+        if (document.activeElement === lastElement) {
+          firstElement.focus();
+          event.preventDefault();
+        }
+      };
+    },
+    add: function() {
+      window.addEventListener("keydown", bind.focus.loop, false);
+    },
+    remove: function() {
+      window.removeEventListener("keydown", bind.focus.loop, false);
     }
   };
 
@@ -257,6 +257,7 @@ var menu = (function() {
   return {
     init: init,
     mod: mod,
+    bind: bind,
     render: render,
     open: open,
     close: close,

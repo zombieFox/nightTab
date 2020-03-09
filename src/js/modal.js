@@ -20,6 +20,33 @@ var modal = (function() {
     });
   };
 
+  var bind = {};
+
+  bind.focus = {
+    loop: function(event) {
+      var allElements = helper.e(".modal").querySelectorAll("[tabindex]");
+      var firstElement = allElements[0];
+      var lastElement = allElements[allElements.length - 1];
+      if (event.keyCode == 9 && event.shiftKey) {
+        if (document.activeElement === firstElement) {
+          lastElement.focus();
+          event.preventDefault();
+        }
+      } else if (event.keyCode == 9) {
+        if (document.activeElement === lastElement) {
+          firstElement.focus();
+          event.preventDefault();
+        }
+      };
+    },
+    add: function() {
+      window.addEventListener("keydown", bind.focus.loop, false);
+    },
+    remove: function() {
+      window.removeEventListener("keydown", bind.focus.loop, false);
+    }
+  };
+
   var render = {};
 
   render.toggle = function(override) {
@@ -144,11 +171,13 @@ var modal = (function() {
   var open = function(override) {
     mod.open();
     render.open(override);
+    bind.focus.add();
   };
 
   var close = function() {
     mod.close();
     render.close();
+    bind.focus.remove();
   };
 
   var init = function() {
@@ -160,6 +189,7 @@ var modal = (function() {
   return {
     init: init,
     mod: mod,
+    bind: bind,
     render: render,
     open: open,
     close: close
