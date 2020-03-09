@@ -105,7 +105,7 @@ var menu = (function() {
         menuCloseTab.tabIndex = -1;
       };
     },
-    scrollToTop: function() {
+    scroll: function() {
       if (window.innerWidth < 700) {
         helper.e(".menu-area").scrollTop = 0;
       } else {
@@ -188,13 +188,13 @@ var menu = (function() {
 
   var nav = function(name) {
     mod.nav.toggle(name);
-    render.nav.scrollToTop(name);
     render.nav.active();
     render.nav.tabindex();
     render.tab.active();
     render.tab.tabindex();
     render.subnav.active();
     render.subnav.tabindex();
+    render.nav.scroll(name);
   };
 
   var open = function() {
