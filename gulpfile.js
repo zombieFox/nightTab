@@ -75,6 +75,7 @@ const cssFiles = [
 const jsFiles = [
   path.src + '/js/helper.js',
   path.src + '/js/data.js',
+  path.src + '/js/ready.js',
   path.src + '/js/fontawesome.js',
   path.src + '/js/update.js',
   path.src + '/js/state.js',
