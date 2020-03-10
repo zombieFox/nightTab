@@ -1,6 +1,6 @@
 var data = (function() {
 
-  var _saveName = "nitghTab";
+  var _saveName = "nightTab";
 
   var mod = {};
 
@@ -63,6 +63,14 @@ var data = (function() {
 
   mod.remove = function(key) {
     localStorage.removeItem(key);
+  };
+
+  mod.nameFix = function() {
+    var data = localStorage.getItem("nitghTab");
+    if (data) {
+      localStorage.setItem(_saveName, data);
+      localStorage.removeItem("nitghTab");
+    };
   };
 
   var bind = {};
@@ -236,6 +244,7 @@ var data = (function() {
   };
 
   var init = function() {
+    mod.nameFix();
     mod.restore(data.load());
     render.feedback.empty();
   };
