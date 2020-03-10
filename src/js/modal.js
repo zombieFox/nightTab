@@ -99,6 +99,7 @@ var modal = (function() {
           modal.remove();
         };
         mod.close();
+        bind.focus.remove();
       };
       var modalBody = helper.node("div|class:modal-body");
       var modalControls = helper.node("div|class:modal-controls");
