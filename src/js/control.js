@@ -3944,12 +3944,17 @@ var control = (function() {
         }],
         names: [{
           element: ".control-group-name-show",
-          path: "group.name.show",
-          type: "checkbox",
+          type: "button",
           func: function() {
+            link.mod.name.show();
             link.groupAndItems();
-            render.class();
-            render.dependents();
+          }
+        }, {
+          element: ".control-group-name-hide",
+          type: "button",
+          func: function() {
+            link.mod.name.hide();
+            link.groupAndItems();
           }
         }, {
           element: ".control-group-name-size-range",
@@ -4049,12 +4054,17 @@ var control = (function() {
         }],
         openall: [{
           element: ".control-group-openall-show",
-          path: "group.openAll.show",
-          type: "checkbox",
+          type: "button",
           func: function() {
+            link.mod.openall.show();
             link.groupAndItems();
-            render.class();
-            render.dependents();
+          }
+        }, {
+          element: ".control-group-openall-hide",
+          type: "button",
+          func: function() {
+            link.mod.openall.hide();
+            link.groupAndItems();
           }
         }, {
           element: ".control-group-openall-size-range",
@@ -6435,24 +6445,6 @@ var control = (function() {
           ],
           name: "is-group-area-justify-" + state.get.current().group.area.justify
         }],
-        name: [{
-          remove: [
-            "is-group-name-show"
-          ],
-          condition: function() {
-            return state.get.current().group.name.show;
-          },
-          name: "is-group-name-show"
-        }],
-        openall: [{
-          remove: [
-            "is-group-openall-show"
-          ],
-          condition: function() {
-            return state.get.current().group.openAll.show;
-          },
-          name: "is-group-openall-show"
-        }],
         order: [{
           remove: [
             "is-group-order-headerbody",
@@ -6689,8 +6681,6 @@ var control = (function() {
     classCheck(all.header.border);
     classCheck(all.header.position);
     classCheck(all.group.area);
-    classCheck(all.group.name);
-    classCheck(all.group.openall);
     classCheck(all.group.order);
     classCheck(all.group.border);
     classCheck(all.link);
@@ -7178,34 +7168,6 @@ var control = (function() {
           }
         }]
       },
-      group: [{
-        condition: function() {
-          return state.get.current().group.name.show;
-        },
-        dependents: function() {
-          return [
-            "[for=control-group-name-size-range]",
-            ".control-group-name-size-range",
-            ".control-group-name-size-number",
-            ".control-group-name-size-default"
-          ];
-        }
-      }, {
-        condition: function() {
-          return state.get.current().group.openAll.show;
-        },
-        dependents: function() {
-          return [
-            "[for=control-group-openall-size-range]",
-            ".control-group-openall-size-range",
-            ".control-group-openall-size-number",
-            ".control-group-openall-size-default",
-            ".control-group-openall-style-label",
-            ".control-group-openall-style-box",
-            ".control-group-openall-style-clear"
-          ];
-        }
-      }],
       link: [{
         condition: function() {
           return state.get.current().link.show;
@@ -7483,7 +7445,6 @@ var control = (function() {
     disableCheck(all.header.menu);
     disableCheck(all.header.position);
     disableCheck(all.header.color);
-    disableCheck(all.group);
     disableCheck(all.link);
     disableCheck(all.theme);
     disableCheck(all.background);

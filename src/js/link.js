@@ -6,22 +6,29 @@ var link = (function() {
       destination: null
     },
     group: {
-      name: null,
-      openAll: null,
+      name: {
+        text: null,
+        show: null
+      },
+      openAll: {
+        show: null
+      },
       items: null
     }
   };
 
   stagedGroup.init = function() {
     stagedGroup.group.items = [];
-    stagedGroup.group.openAll = true;
+    stagedGroup.group.name.show = true;
+    stagedGroup.group.openAll.show = true;
   };
 
   stagedGroup.reset = function() {
     stagedGroup.position.origin = null;
     stagedGroup.position.destination = null;
-    stagedGroup.group.name = null;
-    stagedGroup.group.openAll = null;
+    stagedGroup.group.name.text = null;
+    stagedGroup.group.name.show = null;
+    stagedGroup.group.openAll.show = null;
     stagedGroup.group.items = null;
   };
 
@@ -131,6 +138,32 @@ var link = (function() {
           };
           degree = degree + units;
         });
+      });
+    }
+  };
+
+  mod.name = {
+    show: function() {
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.name.show = true;
+      });
+    },
+    hide: function() {
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.name.show = false;
+      });
+    }
+  };
+
+  mod.openall = {
+    show: function() {
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.openAll.show = true;
+      });
+    },
+    hide: function() {
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.openAll.show = false;
       });
     }
   };
@@ -383,7 +416,7 @@ var link = (function() {
       var groupName = helper.node("div|class:group-name");
       var groupNameText = helper.makeNode({
         tag: "h1",
-        text: stagedGroup.group.name,
+        text: stagedGroup.group.name.text,
         attr: [{
           key: "class",
           value: "group-name-text"
@@ -391,6 +424,18 @@ var link = (function() {
       });
       groupName.appendChild(groupNameText);
       groupHeaderItemName.appendChild(groupName);
+
+      var groupOpenall = helper.node("div|class:group-openall form-group");
+      var groupOpenallItem = helper.node("button|class:button group-openall-item,tabindex:1,title:Open all Bookmarks in this Group");
+      var groupOpenallItemText = helper.node("span:Open all|class:button-text");
+      groupOpenallItem.appendChild(groupOpenallItemText);
+      groupOpenall.appendChild(groupOpenallItem);
+
+      if (state.get.current().group.openAll.style == "clear") {
+        helper.addClass(groupOpenallItem, "button-link");
+      };
+
+      groupHeaderItemOpenall.appendChild(groupOpenall);
 
       var groupControl = helper.node("div|class:group-control form-group");
 
@@ -453,30 +498,17 @@ var link = (function() {
         render.remove.group(copyStagedGroup);
       }, false);
 
-
-      var groupOpenall = helper.node("div|class:group-openall form-group");
-
-      var groupOpenallItem = helper.node("button|class:button group-openall-item,tabindex:1,title:Open all Bookmarks in this Group");
-      var groupOpenallItemText = helper.node("span:Open all|class:button-text");
-      groupOpenallItem.appendChild(groupOpenallItemText);
-      groupOpenall.appendChild(groupOpenallItem);
-
-
-      if (state.get.current().group.openAll.style == "clear") {
-        helper.addClass(groupOpenallItem, "button-link");
-      };
-
       groupOpenallItem.addEventListener("click", function() {
         render.group.openall.all(copyStagedGroup);
       });
 
-      groupHeaderItemOpenall.appendChild(groupOpenall);
-
       groupHeader.appendChild(groupHeaderItemControl);
-      if (state.get.current().group.name.show) {
+      if (stagedGroup.group.name.show && stagedGroup.group.name.text.replace(/\s/g, "") != "") {
+        helper.addClass(groupHeader, "group-header-name");
         groupHeader.appendChild(groupHeaderItemName);
       };
-      if (state.get.current().group.openAll.show && stagedGroup.group.openAll && stagedGroup.group.items.length > 0) {
+      if (stagedGroup.group.openAll.show && stagedGroup.group.items.length > 0) {
+        helper.addClass(groupHeader, "group-header-openall");
         groupHeader.appendChild(groupHeaderItemOpenall);
       };
       group.appendChild(groupHeader);
@@ -495,6 +527,17 @@ var link = (function() {
       var form = helper.node("form|class:group-form");
       var fieldset = helper.node("fieldset");
 
+      // group name
+      var groupFormInputNameShowWrap = helper.node("div|class:form-wrap");
+      var groupFormInputNameShowLabel = helper.node("label|for:group-form-input-name-show");
+      var groupFormInputNameShowText = helper.node("span:Show Group name");
+      var groupFormInputNameShowIcon = helper.node("span|class:label-icon");
+      var groupFormInputNameShowInput = helper.node("input|type:checkbox,class:group-form-input-name-show,id:group-form-input-name-show,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,checked");
+      var groupFormInputNameIndentWrap = helper.node("div|class:form-wrap");
+      var groupFormInputNameIndent = helper.node("div|class:form-indent");
+      var groupFormInputNameWrap = helper.node("div|class:form-wrap");
+      var groupFormInputName = helper.node("input|type:text,class:group-form-input-name,id:group-form-input-name,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+
       // group position
       var groupFormPositionInputWrap = helper.node("div|class:form-wrap");
       var groupFormPositionLabel = helper.node("label:Position|for:group-form-position");
@@ -502,42 +545,40 @@ var link = (function() {
       var groupFormRandomNameButtonWrap = helper.node("div|class:form-wrap");
       var groupFormRandomNameButton = helper.node("button:Random Group name|class:button,type:button,tabindex:1");
 
-      // group name
-      var groupFormNameInputWrap = helper.node("div|class:form-wrap");
-      var groupFormInputNameLabel = helper.node("label:Name|for:group-form-input-name");
-      var groupFormInputName = helper.node("input|type:text,class:group-form-input-name,id:group-form-input-name,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
-
       // open all
       var groupFormOpenAllInputWrap = helper.node("div|class:form-wrap");
       var groupFormInputOpenallLabel = helper.node("label|for:group-form-input-openall");
-      var groupFormInputOpenallLabelText = helper.node("span:Show Open all in this Group");
+      var groupFormInputOpenallLabelText = helper.node("span:Show Open all");
       var groupFormInputOpenallLabelIcon = helper.node("span|class:label-icon");
       var groupFormOpenAllInput = helper.node("input|type:checkbox,class:group-form-input-openall,id:group-form-input-openall,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,checked");
-      var groupFormOpenAllInputHelper1 = helper.node("div|class:form-helper");
-      var groupFormOpenAllInputHelper1Item = helper.node("p:Override the global Group setting to show or hide the Open all button.|class:link-form-input-icon-helper form-helper-item");
-      var groupFormOpenAllInputHelper2 = helper.node("div|class:form-helper");
-      var groupFormOpenAllInputHelper2Item = helper.node("p:The Open all button will show when there is at least one Bookmark in this Group.|class:link-form-input-icon-helper form-helper-item");
+      var groupFormOpenAllInputHelper = helper.node("div|class:form-helper");
+      var groupFormOpenAllInputHelperItem = helper.node("p:Open all button will appear if there is at least one Bookmark in this Group.|class:link-form-input-icon-helper form-helper-item");
+
+      groupFormInputNameShowLabel.appendChild(groupFormInputNameShowIcon);
+      groupFormInputNameShowLabel.appendChild(groupFormInputNameShowText);
+      groupFormInputNameShowWrap.appendChild(groupFormInputNameShowInput);
+      groupFormInputNameShowWrap.appendChild(groupFormInputNameShowLabel);
+      groupFormInputNameWrap.appendChild(groupFormInputName);
+      groupFormRandomNameButtonWrap.appendChild(groupFormRandomNameButton);
+      groupFormInputNameIndent.appendChild(groupFormInputNameWrap);
+      groupFormInputNameIndent.appendChild(groupFormRandomNameButtonWrap);
+      groupFormInputNameIndentWrap.appendChild(groupFormInputNameIndent);
 
       groupFormPositionInputWrap.appendChild(groupFormPositionLabel);
       groupFormPositionInputWrap.appendChild(groupFormPositionSelect);
-      groupFormRandomNameButtonWrap.appendChild(groupFormRandomNameButton);
-      groupFormNameInputWrap.appendChild(groupFormInputNameLabel);
-      groupFormNameInputWrap.appendChild(groupFormInputName);
       groupFormInputOpenallLabel.appendChild(groupFormInputOpenallLabelIcon);
       groupFormInputOpenallLabel.appendChild(groupFormInputOpenallLabelText);
-      groupFormOpenAllInputHelper1.appendChild(groupFormOpenAllInputHelper1Item);
-      groupFormOpenAllInputHelper2.appendChild(groupFormOpenAllInputHelper2Item);
       groupFormOpenAllInputWrap.appendChild(groupFormOpenAllInput);
       groupFormOpenAllInputWrap.appendChild(groupFormInputOpenallLabel);
-      groupFormOpenAllInputWrap.appendChild(groupFormOpenAllInputHelper1);
-      groupFormOpenAllInputWrap.appendChild(groupFormOpenAllInputHelper2);
+      groupFormOpenAllInputHelper.appendChild(groupFormOpenAllInputHelperItem);
 
-      fieldset.appendChild(groupFormNameInputWrap);
-      fieldset.appendChild(groupFormRandomNameButtonWrap);
+      fieldset.appendChild(groupFormInputNameShowWrap);
+      fieldset.appendChild(groupFormInputNameIndentWrap);
       fieldset.appendChild(helper.node("hr"));
       fieldset.appendChild(groupFormPositionInputWrap);
       fieldset.appendChild(helper.node("hr"));
       fieldset.appendChild(groupFormOpenAllInputWrap);
+      fieldset.appendChild(groupFormOpenAllInputHelper);
       form.appendChild(fieldset);
 
       var makeGroupOptions = function() {
@@ -551,9 +592,10 @@ var link = (function() {
       };
 
       var populateForm = function() {
+        groupFormInputNameShowInput.checked = stagedGroup.group.name.show;
         groupFormPositionSelect.selectedIndex = stagedGroup.position.origin;
-        groupFormInputName.value = stagedGroup.group.name;
-        groupFormOpenAllInput.checked = stagedGroup.group.openAll;
+        groupFormInputName.value = stagedGroup.group.name.text;
+        groupFormOpenAllInput.checked = stagedGroup.group.openAll.show;
       };
 
       var setLastPosition = function() {
@@ -575,21 +617,31 @@ var link = (function() {
           return false;
         };
       }, false);
+      groupFormInputNameShowInput.addEventListener("change", function(event) {
+        stagedGroup.group.name.show = this.checked;
+        if (stagedGroup.group.name.show) {
+          groupFormInputName.removeAttribute("disabled");
+          groupFormRandomNameButton.removeAttribute("disabled");
+        } else {
+          groupFormInputName.setAttribute("disabled", "");
+          groupFormRandomNameButton.setAttribute("disabled", "");
+        };
+      }, false);
       groupFormPositionSelect.addEventListener("change", function(event) {
         stagedGroup.position.destination = this.selectedIndex;
       }, false);
       groupFormInputName.addEventListener("input", function(event) {
-        stagedGroup.group.name = this.value;
+        stagedGroup.group.name.text = this.value;
       }, false);
       groupFormRandomNameButton.addEventListener("click", function(event) {
         var randomName = helper.randomString({
           mix: true
         });
-        stagedGroup.group.name = randomName;
+        stagedGroup.group.name.text = randomName;
         groupFormInputName.value = randomName;
       }, false);
       groupFormOpenAllInput.addEventListener("change", function(event) {
-        stagedGroup.group.openAll = this.checked;
+        stagedGroup.group.openAll.show = this.checked;
       }, false);
 
       return form;
@@ -987,10 +1039,10 @@ var link = (function() {
           bookmarks.get().forEach(function(arrayItem, index) {
             var option = helper.makeNode({
               tag: "option",
-              text: arrayItem.name,
+              text: arrayItem.name.text,
               attr: [{
                 key: "value",
-                value: arrayItem.name
+                value: arrayItem.name.text
               }]
             });
             groupExistingGroup.appendChild(option);
@@ -1674,7 +1726,7 @@ var link = (function() {
         var form = render.group.form({
           useStagedGroup: true
         });
-        var heading = "Edit " + stagedGroup.group.name;
+        var heading = "Edit " + stagedGroup.group.name.text;
         var successAction = function() {
           var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
           bookmarks.mod.edit.group(copyStagedGroup);
@@ -1768,8 +1820,8 @@ var link = (function() {
       stagedGroup.group = JSON.parse(JSON.stringify(copyStagedGroup.group));
       stagedGroup.position = JSON.parse(JSON.stringify(copyStagedGroup.position));
       var heading;
-      if (stagedGroup.group.name != null && stagedGroup.group.name != "") {
-        heading = "Remove " + stagedGroup.group.name;
+      if (stagedGroup.group.name.text != null && stagedGroup.group.name.text != "") {
+        heading = "Remove " + stagedGroup.group.name.text;
       } else {
         heading = "Remove unnamed group";
       };

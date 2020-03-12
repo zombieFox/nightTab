@@ -4,19 +4,21 @@
   </div>
   <div class="menu-item-form">
     <div class="form-wrap">
-      <input id="control-group-name-show" class="control-group-name-show" type="checkbox" tabindex="-1">
-      <label for="control-group-name-show"><span class="label-icon"></span> Show</label>
+      <div class="form-inline">
+        <button class="control-group-name-show button" tabindex="-1">Show all</button>
+        <button class="control-group-name-hide button" tabindex="-1">Hide all</button>
+      </div>
     </div>
+    <div class="form-helper">
+      <p class="control-group-name-helper form-helper-item">Individual Group Names can be shown or hidden from their respective edit controls.</p>
+    </div>
+    <hr>
     <div class="form-wrap">
-      <div class="form-indent">
-        <div class="form-wrap">
-          <label for="control-group-name-size-range">Size</label>
-          <div class="form-group form-group-block">
-            <input id="control-group-name-size-range" class="control-group-name-size-range mr-3" type="range" value="0" tabindex="-1">
-            <input class="control-group-name-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
-            <button class="control-group-name-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
-          </div>
-        </div>
+      <label for="control-group-name-size-range">Size</label>
+      <div class="form-group form-group-block">
+        <input id="control-group-name-size-range" class="control-group-name-size-range mr-3" type="range" value="0" tabindex="-1">
+        <input class="control-group-name-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+        <button class="control-group-name-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
       </div>
     </div>
   </div>

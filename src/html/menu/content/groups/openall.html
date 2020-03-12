@@ -4,25 +4,21 @@
   </div>
   <div class="menu-item-form">
     <div class="form-wrap">
-      <input id="control-group-openall-show" class="control-group-openall-show" type="checkbox" tabindex="-1">
-      <label for="control-group-openall-show"><span class="label-icon"></span> Show</label>
+      <div class="form-inline">
+        <button class="control-group-openall-show button" tabindex="-1">Show all</button>
+        <button class="control-group-openall-hide button" tabindex="-1">Hide all</button>
+      </div>
     </div>
     <div class="form-helper">
-      <p class="control-group-openall-show-helper form-helper-item">The Open all button will show when there is at least one Bookmark in a Group.</p>
+      <p class="control-group-openall-helper form-helper-item">Individual Group Open all buttons can be shown or hidden from their respective edit controls.</p>
     </div>
-    <div class="form-helper">
-      <p class="control-group-openall-show-helper form-helper-item">This can be overridden for individual Groups using their edit conttrols.</p>
-    </div>
+    <hr>
     <div class="form-wrap">
-      <div class="form-indent">
-        <div class="form-wrap">
-          <label for="control-group-openall-size-range">Size</label>
-          <div class="form-group form-group-block">
-            <input id="control-group-openall-size-range" class="control-group-openall-size-range mr-3" type="range" value="0" tabindex="-1">
-            <input class="control-group-openall-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
-            <button class="control-group-openall-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
-          </div>
-        </div>
+      <label for="control-group-openall-size-range">Size</label>
+      <div class="form-group form-group-block">
+        <input id="control-group-openall-size-range" class="control-group-openall-size-range mr-3" type="range" value="0" tabindex="-1">
+        <input class="control-group-openall-size-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+        <button class="control-group-openall-size-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
       </div>
     </div>
     <hr>

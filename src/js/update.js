@@ -885,8 +885,16 @@ var update = (function() {
       data.state.layout.direction = "vertical";
       data.state.link.area.direction = "ltr";
       data.bookmarks.forEach(function(arrayItem, index) {
-        arrayItem.openAll = true;
+        arrayItem.name = {
+          show: data.state.group.name.show,
+          text: arrayItem.name
+        };
+        arrayItem.openAll = {
+          show: data.state.group.openAll.show
+        };
       });
+      delete data.state.group.name.show;
+      delete data.state.group.openAll.show;
       return data;
     }
   };

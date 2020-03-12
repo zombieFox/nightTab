@@ -283,6 +283,9 @@
   <script src="js/helper.js"></script>
 
   <script type="text/javascript">
+    window.addEventListener("load", function() {
+      helper.addClass(helper.e("html"), "is-ready");
+    }, false);
     var formElements = ["button", "input", "textarea", "select"];
     var textElements = ["label", ".form-group-text", ".form-grid", ".form-feedback"];
     var disable = {

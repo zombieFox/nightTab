@@ -3,8 +3,13 @@ var bookmarks = (function() {
   var mod = {};
 
   mod.all = [{
-    name: "Cool stuff",
-    openAll: true,
+    name: {
+      text: "Cool stuff",
+      show: true
+    },
+    openAll: {
+      show: true
+    },
     items: [{
       display: "icon",
       letter: "AS",
@@ -127,8 +132,13 @@ var bookmarks = (function() {
       timeStamp: 1546453111953
     }]
   }, {
-    name: "Dev sites",
-    openAll: true,
+    name: {
+      text: "Dev sites",
+      show: true
+    },
+    openAll: {
+      show: true
+    },
     items: [{
       display: "icon",
       letter: "DEV",

@@ -113,14 +113,14 @@
   justify-content: flex-start;
 }
 
-.is-group-order-headerbody.is-group-openall-show .group-header,
-.is-group-order-headerbody.is-group-name-show .group-header,
+.is-group-order-headerbody .group-header-name.group-header,
+.is-group-order-headerbody .group-header-openall.group-header,
 .is-group-order-headerbody.is-edit .group-header {
   padding-bottom: calc(var(--layout-space) * var(--layout-gutter));
 }
 
-.is-group-order-bodyheader.is-group-openall-show .group-header,
-.is-group-order-bodyheader.is-group-name-show .group-header,
+.is-group-order-bodyheader .group-header-name.group-header,
+.is-group-order-bodyheader .group-header-openall.group-header,
 .is-group-order-bodyheader.is-edit .group-header {
   padding-top: calc(var(--layout-space) * var(--layout-gutter));
 }
