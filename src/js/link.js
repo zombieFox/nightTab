@@ -537,13 +537,13 @@ var link = (function() {
       var groupFormInputNameIndent = helper.node("div|class:form-indent");
       var groupFormInputNameWrap = helper.node("div|class:form-wrap");
       var groupFormInputName = helper.node("input|type:text,class:group-form-input-name,id:group-form-input-name,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      var groupFormRandomNameButtonWrap = helper.node("div|class:form-wrap");
+      var groupFormRandomNameButton = helper.node("button:Random Group name|class:button,type:button,tabindex:1");
 
       // group position
       var groupFormPositionInputWrap = helper.node("div|class:form-wrap");
       var groupFormPositionLabel = helper.node("label:Position|for:group-form-position");
       var groupFormPositionSelect = helper.node("select|id:group-form-position,class:group-form-position,tabindex:1");
-      var groupFormRandomNameButtonWrap = helper.node("div|class:form-wrap");
-      var groupFormRandomNameButton = helper.node("button:Random Group name|class:button,type:button,tabindex:1");
 
       // open all
       var groupFormOpenAllInputWrap = helper.node("div|class:form-wrap");
@@ -596,6 +596,10 @@ var link = (function() {
         groupFormPositionSelect.selectedIndex = stagedGroup.position.origin;
         groupFormInputName.value = stagedGroup.group.name.text;
         groupFormOpenAllInput.checked = stagedGroup.group.openAll.show;
+        if (!stagedGroup.group.name.show) {
+          groupFormInputName.setAttribute("disabled", "");
+          groupFormRandomNameButton.setAttribute("disabled", "");
+        };
       };
 
       var setLastPosition = function() {
