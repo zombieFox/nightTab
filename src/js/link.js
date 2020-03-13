@@ -714,18 +714,12 @@ var link = (function() {
       if (stagedLink.link.accent.override) {
         linkItemOptions.attr.push({
           key: "style",
-          value: "--theme-accent: " + stagedLink.link.accent.color.r + ", " + stagedLink.link.accent.color.g + ", " + stagedLink.link.accent.color.b
+          value: "--theme-accent: " + stagedLink.link.accent.color.r + ", " + stagedLink.link.accent.color.g + ", " + stagedLink.link.accent.color.b + ";"
         });
         if (invert(stagedLink.link.accent.color, true) == "#000000") {
-          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-dark";
+          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + " --theme-accent-text: var(--theme-black);"
         } else if (invert(stagedLink.link.accent.color, true) == "#ffffff") {
-          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-light";
-        };
-      } else {
-        if (invert(state.get.current().theme.accent.rgb, true) == "#000000") {
-          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-dark";
-        } else if (invert(state.get.current().theme.accent.rgb, true) == "#ffffff") {
-          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-text-light";
+          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + " --theme-accent-text: var(--theme-white);"
         };
       };
       var linkItem = helper.makeNode(linkItemOptions);

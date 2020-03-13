@@ -186,7 +186,6 @@ var keyboard = (function() {
         theme.accent.random();
         control.render.update.control.header();
         control.render.update.control.menu();
-        link.groupAndItems();
         data.save();
       };
     }, false);

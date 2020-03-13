@@ -2,6 +2,7 @@
   /* theme */
   --theme-root-font-size:                               14px;
   --theme-accent:                                       250, 130, 0;
+  --theme-accent-text:                                  var(--theme-black);
   --theme-radius:                                       0.2rem;
   --theme-font-display-name:                            "Fjalla One", sans-serif;
   --theme-font-display-weight:                          400;

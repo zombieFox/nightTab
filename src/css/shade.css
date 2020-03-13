@@ -10,6 +10,10 @@
   z-index: var(--z-index-shade);
 }
 
+.is-theme-accent-cycle .shade {
+  transition: opacity var(--layout-timing-extra-fast);
+}
+
 .is-edge:not(.is-background-image-show) .shade {
   background-color: rgba(var(--theme-accent), 0.05);
 }

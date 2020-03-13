@@ -123,7 +123,6 @@ var control = (function() {
     }],
     func: function() {
       theme.render.accent.color();
-      link.groupAndItems();
     }
   }];
 
@@ -5416,7 +5415,6 @@ var control = (function() {
           }],
           func: function() {
             theme.render.accent.color();
-            link.groupAndItems();
           }
         }, {
           element: ".control-theme-accent-rgb-text",
@@ -5434,7 +5432,6 @@ var control = (function() {
           }],
           func: function() {
             theme.render.accent.color();
-            link.groupAndItems();
           }
         }, {
           element: ".control-theme-accent-rgb-default",
@@ -5442,7 +5439,6 @@ var control = (function() {
           func: function() {
             mod.default("theme.accent.rgb");
             theme.render.accent.color();
-            link.groupAndItems();
             render.update.control.header();
             render.update.control.menu();
           }
@@ -5508,7 +5504,105 @@ var control = (function() {
           }],
           func: function() {
             theme.accent.random();
-            link.groupAndItems();
+          }
+        }, {
+          element: ".control-theme-accent-cycle-active",
+          path: "theme.accent.cycle.active",
+          type: "checkbox",
+          func: function() {
+            render.class();
+            render.dependents();
+            theme.bind.accent.cycle.toggle();
+          }
+        }, {
+          element: ".control-theme-accent-cycle-speed-range",
+          path: "theme.accent.cycle.speed",
+          type: "range",
+          valueModify: {
+            min: 100,
+            max: 1000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-cycle-speed-number",
+            path: "theme.accent.cycle.speed",
+            type: "number"
+          }],
+          func: function() {
+            theme.bind.accent.cycle.remove();
+            theme.bind.accent.cycle.add();
+          }
+        }, {
+          element: ".control-theme-accent-cycle-speed-number",
+          path: "theme.accent.cycle.speed",
+          type: "number",
+          valueModify: {
+            min: 100,
+            max: 1000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-cycle-speed-range",
+            path: "theme.accent.cycle.speed",
+            type: "number"
+          }],
+          func: function() {
+            theme.bind.accent.cycle.remove();
+            theme.bind.accent.cycle.add();
+          }
+        }, {
+          element: ".control-theme-accent-cycle-speed-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.accent.cycle.speed");
+            theme.bind.accent.cycle.remove();
+            theme.bind.accent.cycle.add();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-accent-cycle-step-range",
+          path: "theme.accent.cycle.step",
+          type: "range",
+          valueModify: {
+            min: 1,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-cycle-step-number",
+            path: "theme.accent.cycle.step",
+            type: "number"
+          }],
+          func: function() {
+            theme.bind.accent.cycle.remove();
+            theme.bind.accent.cycle.add();
+          }
+        }, {
+          element: ".control-theme-accent-cycle-step-number",
+          path: "theme.accent.cycle.step",
+          type: "number",
+          valueModify: {
+            min: 1,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-cycle-step-range",
+            path: "theme.accent.cycle.step",
+            type: "number"
+          }],
+          func: function() {
+            theme.bind.accent.cycle.remove();
+            theme.bind.accent.cycle.add();
+          }
+        }, {
+          element: ".control-theme-accent-cycle-step-default",
+          type: "button",
+          func: function() {
+            mod.default("theme.accent.cycle.step");
+            render.update.control.header();
+            render.update.control.menu();
+            render.update.control.header();
+            render.update.control.menu();
           }
         }],
         radius: [{
@@ -6623,6 +6717,14 @@ var control = (function() {
         name: "is-theme-custom-edit"
       }, {
         remove: [
+          "is-theme-accent-cycle"
+        ],
+        condition: function() {
+          return state.get.current().theme.accent.cycle.active;
+        },
+        name: "is-theme-accent-cycle"
+      }, {
+        remove: [
           "is-theme-radius"
         ],
         condition: function() {
@@ -7337,7 +7439,35 @@ var control = (function() {
         }
       }, {
         condition: function() {
-          return state.get.current().theme.accent.random.active;
+          return state.get.current().theme.accent.cycle.active;
+        },
+        dependents: function() {
+          return [
+            "[for=control-theme-accent-cycle-speed-range]",
+            ".control-theme-accent-cycle-speed-range",
+            ".control-theme-accent-cycle-speed-range",
+            ".control-theme-accent-cycle-speed-number",
+            ".control-theme-accent-cycle-speed-default",
+            "[for=control-theme-accent-cycle-step-range]",
+            ".control-theme-accent-cycle-step-range",
+            ".control-theme-accent-cycle-step-range",
+            ".control-theme-accent-cycle-step-number",
+            ".control-theme-accent-cycle-step-default",
+            ".control-theme-accent-cycle-helper"
+          ];
+        }
+      }, {
+        condition: function() {
+          return (!state.get.current().theme.accent.cycle.active);
+        },
+        dependents: function() {
+          return [
+            ".control-theme-accent-random-active"
+          ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().theme.accent.random.active && !state.get.current().theme.accent.cycle.active);
         },
         dependents: function() {
           return [

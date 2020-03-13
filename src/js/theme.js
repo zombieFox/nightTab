@@ -2,6 +2,7 @@ var theme = (function() {
 
   var _timerFontDisplay = null;
   var _timerFontUi = null;
+  var _timerAccentCycle = null;
 
   var stagedThemeCustom = {
     position: {
@@ -31,6 +32,32 @@ var theme = (function() {
     stagedThemeCustom.theme.style = null;
     stagedThemeCustom.theme.shade = null;
     stagedThemeCustom.theme.timestamp = null;
+  };
+
+  var bind = {};
+
+  bind.accent = {
+    cycle: {
+      toggle: function() {
+        if (state.get.current().theme.accent.cycle.active) {
+          bind.accent.cycle.add();
+        } else {
+          bind.accent.cycle.remove();
+        };
+      },
+      add: function() {
+        _timerAccentCycle = setInterval(function() {
+          theme.accent.cycle();
+          control.render.update.control.header(control.mod.header[5]);
+          control.render.update.control.menu(control.mod.menu.controls.theme.accent[0]);
+          control.render.update.control.menu(control.mod.menu.controls.theme.accent[1]);
+        }, state.get.current().theme.accent.cycle.speed);
+      },
+      remove: function() {
+        clearInterval(_timerAccentCycle);
+        _timerAccentCycle = null;
+      }
+    }
   };
 
   var mod = {};
@@ -93,48 +120,47 @@ var theme = (function() {
   mod.accent = {
     random: function() {
       if (state.get.current().theme.accent.random.active) {
-        var randomVal = function(min, max) {
+        var randomValue = function(min, max) {
           return Math.floor(Math.random() * (max - min) + 1) + min;
         };
         var color = {
           any: function() {
             return {
-              h: randomVal(0, 360),
-              s: randomVal(0, 100),
-              l: randomVal(0, 100)
+              h: randomValue(0, 360),
+              s: randomValue(0, 100),
+              l: randomValue(0, 100)
             };
           },
           light: function() {
             return {
-              h: randomVal(0, 360),
-              s: randomVal(50, 90),
-              l: randomVal(50, 90)
+              h: randomValue(0, 360),
+              s: randomValue(50, 90),
+              l: randomValue(50, 90)
             };
           },
           dark: function() {
             return {
-              h: randomVal(0, 360),
-              s: randomVal(10, 50),
-              l: randomVal(10, 50)
+              h: randomValue(0, 360),
+              s: randomValue(10, 50),
+              l: randomValue(10, 50)
             };
           },
           pastel: function() {
             return {
-              h: randomVal(0, 360),
+              h: randomValue(0, 360),
               s: 50,
               l: 80
             };
           },
           saturated: function() {
             return {
-              h: randomVal(0, 360),
+              h: randomValue(0, 360),
               s: 100,
               l: 50
             };
           }
         };
         var rgb = helper.convertColor.hsl.rgb(color[state.get.current().theme.accent.random.style]());
-        var hex = helper.convertColor.rgb.hex(rgb);
         helper.setObject({
           object: state.get.current(),
           path: "theme.accent.rgb",
@@ -145,6 +171,27 @@ var theme = (function() {
           }
         });
       };
+    },
+    cycle: function() {
+      var incrementVal = function(start, end, currentValue) {
+        var newValue = currentValue + state.get.current().theme.accent.cycle.step;
+        if (newValue > end) {
+          newValue = start;
+        };
+        return newValue;
+      };
+      var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.accent.rgb);
+      hsl.h = incrementVal(0, 359, hsl.h);
+      var rgb = helper.convertColor.hsl.rgb(hsl);
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.accent.rgb",
+        newValue: {
+          r: Math.round(rgb.r),
+          g: Math.round(rgb.g),
+          b: Math.round(rgb.b)
+        }
+      });
     }
   };
 
@@ -1407,6 +1454,12 @@ var theme = (function() {
       var html = helper.e("html");
       var color = state.get.current().theme.accent.rgb;
       html.style.setProperty("--theme-accent", color.r + ", " + color.g + ", " + color.b);
+      html.style.removeProperty("--theme-accent-text");
+      if (invert(state.get.current().theme.accent.rgb, true) == "#000000") {
+        html.style.setProperty("--theme-accent-text", "var(--theme-black)");
+      } else if (invert(state.get.current().theme.accent.rgb, true) == "#ffffff") {
+        html.style.setProperty("--theme-accent-text", "var(--theme-white)");
+      };
     }
   };
 
@@ -1612,7 +1665,6 @@ var theme = (function() {
         render.shade.opacity();
         render.themeMetaTag();
         style.check();
-        link.groupAndItems();
         control.render.update.control.header();
         control.render.update.control.menu();
         control.render.class();
@@ -1707,7 +1759,6 @@ var theme = (function() {
             render.shade.opacity();
             render.themeMetaTag();
             style.check();
-            link.groupAndItems();
             control.render.update.control.header();
             control.render.update.control.menu();
             control.render.class();
@@ -1959,6 +2010,10 @@ var theme = (function() {
     random: function() {
       mod.accent.random();
       render.accent.color();
+    },
+    cycle: function() {
+      mod.accent.cycle();
+      render.accent.color();
     }
   };
 
@@ -2009,6 +2064,7 @@ var theme = (function() {
     mod.color.generated();
     mod.accent.random();
     mod.custom.close();
+    bind.accent.cycle.toggle();
     render.font.load.preset();
     render.font.load.custom.display();
     render.font.load.custom.ui();
@@ -2033,6 +2089,7 @@ var theme = (function() {
   return {
     init: init,
     mod: mod,
+    bind: bind,
     render: render,
     style: style,
     accent: accent,

@@ -639,11 +639,19 @@
   transition: color var(--layout-timing-extra-fast);
 }
 
+.is-theme-accent-cycle .link-display-letter {
+  transition: none;
+}
+
 .link-display-icon {
   font-weight: 400;
   font-style: normal;
   color: rgb(var(--theme-accent));
   transition: color var(--layout-timing-extra-fast);
+}
+
+.is-theme-accent-cycle .link-display-icon {
+  transition: none;
 }
 
 .is-link-style-block .link-display-letter,
@@ -833,22 +841,32 @@
   flex-basis: 30%;
 }
 
-.link-text-dark .link-control-item {
-  color: rgb(var(--theme-black));
+.link-control-item {
+  color: rgb(var(--theme-accent-text));
 }
 
-.link-text-light .link-control-item {
-  color: rgb(var(--theme-white));
+.link-control-item:focus,
+.link-control-item:hover {
+  color: rgb(var(--theme-accent-text));
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.link-text-dark .link-control-item.disabled,
-.link-text-dark .link-control-item:disabled {
-  color: rgba(var(--theme-black), 0.25);
+.link-control-item.disabled:focus,
+.link-control-item.disabled:hover,
+.link-control-item:disabled:focus,
+.link-control-item:disabled:hover {
+  color: rgba(var(--theme-accent-text), 0.25);
+  background-color: transparent;
 }
 
-.link-text-light .link-control-item.disabled,
-.link-text-light .link-control-item:disabled {
-  color: rgba(var(--theme-white), 0.25);
+.link-control-item:active {
+  color: rgb(var(--theme-accent-text));
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.link-control-item.disabled,
+.link-control-item:disabled {
+  color: rgb(var(--theme-accent-text), 0.25);
 }
 
 .is-link-orientation-top.is-link-style-list .link-control-item:nth-child(1) {
@@ -881,44 +899,6 @@
 
 .is-link-orientation-bottom.is-link-style-block .link-control-item:nth-child(5) {
   border-bottom-right-radius: var(--theme-radius);
-}
-
-.link-text-dark .link-control-item:focus,
-.link-text-dark .link-control-item:hover {
-  color: rgb(var(--theme-black));
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.link-text-light .link-control-item:focus,
-.link-text-light .link-control-item:hover {
-  color: rgb(var(--theme-white));
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.link-text-dark .link-control-item.disabled:focus,
-.link-text-dark .link-control-item.disabled:hover,
-.link-text-dark .link-control-item:disabled:focus,
-.link-text-dark .link-control-item:disabled:hover {
-  color: rgba(var(--theme-black), 0.25);
-  background-color: transparent;
-}
-
-.link-text-light .link-control-item.disabled:focus,
-.link-text-light .link-control-item.disabled:hover,
-.link-text-light .link-control-item:disabled:focus,
-.link-text-light .link-control-item:disabled:hover {
-  color: rgba(var(--theme-white), 0.25);
-  background-color: transparent;
-}
-
-.link-text-dark .link-control-item:active {
-  color: rgb(var(--theme-black));
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.link-text-light .link-control-item:active {
-  color: rgb(var(--theme-white));
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .is-link-orientation-top.is-link-style-list .link-control,
@@ -983,12 +963,8 @@
   text-overflow: ellipsis;
 }
 
-.link-text-dark .link-url-text {
-  color: rgb(var(--theme-black));
-}
-
-.link-text-light .link-url-text {
-  color: rgb(var(--theme-white));
+.link-url-text {
+  color: rgb(var(--theme-accent-text));
 }
 
 .is-edit.is-link-item-url-show .link-item:focus .link-panel-front,

@@ -895,6 +895,11 @@ var update = (function() {
       });
       delete data.state.group.name.show;
       delete data.state.group.openAll.show;
+      data.state.theme.accent.cycle = {
+        active: false,
+        speed: 200,
+        step: 10
+      };
       return data;
     }
   };

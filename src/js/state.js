@@ -263,6 +263,11 @@ var state = (function() {
         random: {
           active: false,
           style: "any"
+        },
+        cycle: {
+          active: false,
+          speed: 150,
+          step: 10
         }
       },
       color: {
@@ -429,6 +434,10 @@ var state = (function() {
           r: 0,
           g: 80,
           b: 255
+        },
+        cycle: {
+          speed: 150,
+          step: 10
         }
       },
       color: {

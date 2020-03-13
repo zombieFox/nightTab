@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="form-helper">
-      <p class="control-theme-style-light-helper form-helper-item">Accent Colour can also be changed from the Header Area.</p>
+      <p class="control-theme-accent-rgb-helper form-helper-item">Accent Colour can also be changed from the Header Area.</p>
     </div>
     <hr>
     <div class="form-wrap">
@@ -43,6 +43,37 @@
         </div>
         <div class="form-wrap">
           <button class="control-theme-accent-randomise button" tabindex="-1">Randomise now</button>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="form-wrap">
+      <input id="control-theme-accent-cycle-active" class="control-theme-accent-cycle-active" type="checkbox" tabindex="-1">
+      <label for="control-theme-accent-cycle-active"><span class="label-icon"></span> Auto change Accent hue</label>
+    </div>
+    <div class="form-wrap">
+      <div class="form-indent">
+        <div class="form-wrap">
+          <label for="control-theme-accent-cycle-speed-range">Change delay</label>
+          <div class="form-group form-group-block">
+            <input id="control-theme-accent-cycle-speed-range" class="control-theme-accent-cycle-speed-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-theme-accent-cycle-speed-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            <button class="control-theme-accent-cycle-speed-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+          </div>
+        </div>
+        <div class="form-wrap">
+          <label for="control-theme-accent-cycle-step-range">Change steps</label>
+          <div class="form-group form-group-block">
+            <input id="control-theme-accent-cycle-step-range" class="control-theme-accent-cycle-step-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-theme-accent-cycle-step-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            <button class="control-theme-accent-cycle-step-default button" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+          </div>
+        </div>
+        <div class="form-helper">
+          <p class="control-theme-accent-cycle-helper form-helper-item">A small delay and small step in Accent hue change may cause performance issues.</p>
+        </div>
+        <div class="form-helper">
+          <p class="control-theme-accent-cycle-helper form-helper-item">Auto change Accent hue will not work when the Accent colour is a grey or black.</p>
         </div>
       </div>
     </div>
