@@ -44,7 +44,13 @@ var link = (function() {
       },
       group: {
         new: null,
-        name: null
+        name: {
+          text: null,
+          show: null
+        },
+        openAll: {
+          show: null
+        }
       }
     },
     link: {
@@ -76,6 +82,8 @@ var link = (function() {
     stagedLink.position.destination.group = 0;
     stagedLink.position.destination.item = 0;
     stagedLink.position.group.new = false;
+    stagedLink.position.group.name.show = false;
+    stagedLink.position.group.openAll.show = false;
     stagedLink.link.display = "letter";
     stagedLink.link.accent.override = false;
     stagedLink.link.searchMatch = false;
@@ -87,7 +95,7 @@ var link = (function() {
     stagedLink.position.destination.group = null;
     stagedLink.position.destination.item = null;
     stagedLink.position.group.new = null;
-    stagedLink.position.group.name = null;
+    stagedLink.position.group.name.text = null;
     stagedLink.link.display = null;
     stagedLink.link.letter = null;
     stagedLink.link.icon.name = null;
@@ -1143,6 +1151,8 @@ var link = (function() {
       groupExistingRadio.addEventListener("change", function(event) {
         stagedLink.position.destination.group = groupExistingGroup.selectedIndex;
         stagedLink.position.group.new = false;
+        stagedLink.position.group.name.show = false;
+        stagedLink.position.group.openAll.show = false;
         groupExistingGroup.removeAttribute("disabled");
         groupExistingPosition.removeAttribute("disabled");
         helper.removeClass(groupExistingPositionLabel, "disabled");
@@ -1160,6 +1170,8 @@ var link = (function() {
       groupNewRadio.addEventListener("change", function(event) {
         stagedLink.position.destination.group = bookmarks.get().length;
         stagedLink.position.group.new = true;
+        stagedLink.position.group.name.show = true;
+        stagedLink.position.group.openAll.show = true;
         groupExistingGroup.setAttribute("disabled", "");
         groupExistingPosition.setAttribute("disabled", "");
         helper.addClass(groupExistingPositionLabel, "disabled");
@@ -1167,13 +1179,13 @@ var link = (function() {
         groupNewRandomNameButton.removeAttribute("disabled");
       }, false);
       groupNewInput.addEventListener("input", function(event) {
-        stagedLink.position.group.name = this.value;
+        stagedLink.position.group.name.text = this.value;
       }, false);
       groupNewRandomNameButton.addEventListener("click", function(event) {
         var randomName = helper.randomString({
           mix: true
         });
-        stagedLink.position.group.name = randomName;
+        stagedLink.position.group.name.text = randomName;
         groupNewInput.value = randomName;
       }, false);
       displayLetterRadio.addEventListener("change", function(event) {
@@ -1323,7 +1335,7 @@ var link = (function() {
               stagedLink.position.origin.item = index;
               stagedLink.position.destination.item = index;
               stagedLink.position.group.new = null;
-              stagedLink.position.group.name = null;
+              stagedLink.position.group.name.text = null;
               if (state.get.current().search) {
                 if (stagedLink.link.searchMatch) {
                   group.querySelector(".group-body").appendChild(render.item.link());

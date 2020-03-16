@@ -211,6 +211,7 @@ var bookmarks = (function() {
 
   mod.add = {
     link: function(data) {
+      console.log(data);
       if (data.position.group.new) {
         mod.add.group({
           position: {
@@ -218,7 +219,13 @@ var bookmarks = (function() {
             destination: data.position.destination.group
           },
           group: {
-            name: data.position.group.name,
+            name: {
+              text: data.position.group.name.text,
+              show: data.position.group.name.show
+            },
+            openAll: {
+              show: data.position.group.openAll.show
+            },
             items: []
           }
         });
@@ -232,17 +239,23 @@ var bookmarks = (function() {
       };
       if (data) {
         if (data.group.name == null) {
-          data.group.name = makeName();
-        } else if (typeof data.group.name == "string") {
-          data.group.name = data.group.name.trim();
-          if (data.group.name == "") {
-            data.group.name = makeName();
+          data.group.name.text = makeName();
+        } else if (typeof data.group.name.text == "string") {
+          data.group.name.text = data.group.name.text.trim();
+          if (data.group.name.text == "") {
+            data.group.name.text = makeName();
           };
         };
         mod.all.splice(data.position.destination, 0, data.group);
       } else {
         mod.all.push({
-          name: makeName(),
+          name: {
+            text: makeName(),
+            show: true
+          },
+          openAll: {
+            show: true
+          },
           items: []
         });
       };
