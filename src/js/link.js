@@ -548,11 +548,6 @@ var link = (function() {
       var groupFormRandomNameButtonWrap = helper.node("div|class:form-wrap");
       var groupFormRandomNameButton = helper.node("button:Random Group name|class:button,type:button,tabindex:1");
 
-      // group position
-      var groupFormPositionInputWrap = helper.node("div|class:form-wrap");
-      var groupFormPositionLabel = helper.node("label:Position|for:group-form-position");
-      var groupFormPositionSelect = helper.node("select|id:group-form-position,class:group-form-position,tabindex:1");
-
       // open all
       var groupFormOpenAllInputWrap = helper.node("div|class:form-wrap");
       var groupFormInputOpenallLabel = helper.node("label|for:group-form-input-openall");
@@ -561,6 +556,11 @@ var link = (function() {
       var groupFormOpenAllInput = helper.node("input|type:checkbox,class:group-form-input-openall,id:group-form-input-openall,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,checked");
       var groupFormOpenAllInputHelper = helper.node("div|class:form-helper");
       var groupFormOpenAllInputHelperItem = helper.node("p:Open all button will appear if there is at least one Bookmark in this Group.|class:link-form-input-icon-helper form-helper-item");
+
+      // group position
+      var groupFormPositionInputWrap = helper.node("div|class:form-wrap");
+      var groupFormPositionLabel = helper.node("label:Position|for:group-form-position");
+      var groupFormPositionSelect = helper.node("select|id:group-form-position,class:group-form-position,tabindex:1");
 
       groupFormInputNameShowLabel.appendChild(groupFormInputNameShowIcon);
       groupFormInputNameShowLabel.appendChild(groupFormInputNameShowText);
@@ -583,10 +583,10 @@ var link = (function() {
       fieldset.appendChild(groupFormInputNameShowWrap);
       fieldset.appendChild(groupFormInputNameIndentWrap);
       fieldset.appendChild(helper.node("hr"));
-      fieldset.appendChild(groupFormPositionInputWrap);
-      fieldset.appendChild(helper.node("hr"));
       fieldset.appendChild(groupFormOpenAllInputWrap);
       fieldset.appendChild(groupFormOpenAllInputHelper);
+      fieldset.appendChild(helper.node("hr"));
+      fieldset.appendChild(groupFormPositionInputWrap);
       form.appendChild(fieldset);
 
       var makeGroupOptions = function() {
