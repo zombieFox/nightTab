@@ -211,7 +211,6 @@ var bookmarks = (function() {
 
   mod.add = {
     link: function(data) {
-      console.log(data);
       if (data.position.group.new) {
         mod.add.group({
           position: {
