@@ -270,7 +270,13 @@ var bookmarks = (function() {
             destination: data.position.destination.group
           },
           group: {
-            name: data.position.group.name,
+            name: {
+              text: data.position.group.name.text,
+              show: data.position.group.name.show
+            },
+            openAll: {
+              show: data.position.group.openAll.show
+            },
             items: []
           }
         });
