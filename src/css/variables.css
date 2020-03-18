@@ -1,8 +1,23 @@
 :root {
   /* theme */
   --theme-root-font-size:                               14px;
-  --theme-accent:                                       250, 130, 0;
-  --theme-accent-text:                                  var(--theme-black);
+  --theme-accent-r:                                     250;
+  --theme-accent-g:                                     130;
+  --theme-accent-b:                                     0;
+  --theme-accent-h:                                     221;
+  --theme-accent-s:                                     100;
+  --theme-accent-l:                                     50;
+  --theme-accent:                                       var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);
+  --theme-accent-accessible-threshold:                  0.5;
+  --theme-accent-accessible-r:                          calc(var(--theme-accent-r) * 0.50);
+  --theme-accent-accessible-g:                          calc(var(--theme-accent-g) * 0.60);
+  --theme-accent-accessible-b:                          calc(var(--theme-accent-b) * 0.20);
+  --theme-accent-accessible-sum:                        calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));
+  --theme-accent-accessible-perceived-lightness:        calc(var(--theme-accent-accessible-sum) / 255);
+  --theme-accent-accessible-color:                      0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);
+  --theme-accent-rainbow-speed:                         4s;
+  --theme-accent-rainbow-timing-slow:                   calc(var(--theme-accent-rainbow-speed) / 5) linear;
+  --theme-accent-rainbow-timing-fast:                   calc(var(--theme-accent-rainbow-speed) / 10) linear;
   --theme-radius:                                       0.2rem;
   --theme-font-display-name:                            "Fjalla One", sans-serif;
   --theme-font-display-weight:                          400;

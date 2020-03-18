@@ -7,6 +7,13 @@ html {
   font-size: var(--theme-root-font-size);
 }
 
+html.is-theme-accent-cycle {
+  animation-name: rainbow;
+  animation-duration: var(--theme-accent-rainbow-speed);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 body {
   background-color: var(--theme-black);
   color: rgb(var(--theme-style-text));

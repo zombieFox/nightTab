@@ -722,13 +722,18 @@ var link = (function() {
       if (stagedLink.link.accent.override) {
         linkItemOptions.attr.push({
           key: "style",
-          value: "--theme-accent: " + stagedLink.link.accent.color.r + ", " + stagedLink.link.accent.color.g + ", " + stagedLink.link.accent.color.b + ";"
+          value: "--theme-accent-r: " + stagedLink.link.accent.color.r + ";" +
+            "--theme-accent-g: " + stagedLink.link.accent.color.g + ";" +
+            "--theme-accent-b: " + stagedLink.link.accent.color.b + ";" +
+            "--theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);" +
+            "--theme-accent-accessible-threshold: 0.5;" +
+            "--theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);" +
+            "--theme-accent-accessible-g: calc(var(--theme-accent-g) * 0.60);" +
+            "--theme-accent-accessible-b: calc(var(--theme-accent-b) * 0.20);" +
+            "--theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));" +
+            "--theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);" +
+            "--theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);"
         });
-        if (invert(stagedLink.link.accent.color, true) == "#000000") {
-          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + " --theme-accent-text: var(--theme-black);"
-        } else if (invert(stagedLink.link.accent.color, true) == "#ffffff") {
-          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + " --theme-accent-text: var(--theme-white);"
-        };
       };
       var linkItem = helper.makeNode(linkItemOptions);
       var linkPanelFrontOptions = {
