@@ -237,7 +237,7 @@ var bookmarks = (function() {
         return "Group " + count;
       };
       if (data) {
-        if (data.group.name == null) {
+        if (data.group.name.text == null) {
           data.group.name.text = makeName();
         } else if (typeof data.group.name.text == "string") {
           data.group.name.text = data.group.name.text.trim();
