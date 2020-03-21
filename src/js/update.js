@@ -900,6 +900,8 @@ var update = (function() {
         speed: 200,
         step: 10
       };
+      data.state.header.clock.separator.text = ":";
+      data.state.header.date.separator.text = "/";
       return data;
     }
   };

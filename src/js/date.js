@@ -128,7 +128,11 @@ var date = (function() {
         date.appendChild(elementYear);
       };
       if (state.get.current().header.date.separator.show) {
-        var separatorCharacter = "/";
+        if (state.get.current().header.date.separator.text.trim().replace(/\s\s+/g, " ") != "") {
+          var separatorCharacter = state.get.current().header.date.separator.text.trim().replace(/\s\s+/g, " ");
+        } else {
+          var separatorCharacter = state.get.default().header.date.separator.text;
+        };
         var parts = date.querySelectorAll("span");
         if (parts.length > 1) {
           parts.forEach(function(arrayItem, index) {

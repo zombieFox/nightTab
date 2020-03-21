@@ -1318,6 +1318,15 @@ var control = (function() {
           func: function() {
             clock.render.clear();
             clock.render.all();
+            render.dependents();
+          }
+        }, {
+          element: ".control-header-clock-separator-text",
+          path: "header.clock.separator.text",
+          type: "text",
+          func: function() {
+            clock.render.clear();
+            clock.render.all();
           }
         }, {
           element: ".control-header-clock-hour24-show",
@@ -1732,6 +1741,19 @@ var control = (function() {
           element: ".control-header-date-separator-show",
           path: "header.date.separator.show",
           type: "checkbox",
+          func: function() {
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            render.dependents();
+          }
+        }, {
+          element: ".control-header-date-separator-text",
+          path: "header.date.separator.text",
+          type: "text",
           func: function() {
             date.render.clear();
             date.render.all();
@@ -6876,7 +6898,24 @@ var control = (function() {
           },
           dependents: function() {
             return [
-              ".control-header-clock-separator-show"
+              ".control-header-clock-separator-show",
+              ".control-header-clock-separator-text"
+            ];
+          }
+        }, {
+          condition: function() {
+            var activeCount = 0;
+            var toCheck = [state.get.current().header.clock.seconds.show, state.get.current().header.clock.minutes.show, state.get.current().header.clock.hours.show];
+            toCheck.forEach(function(arrayItem, index) {
+              if (arrayItem == true) {
+                activeCount++;
+              };
+            });
+            return (state.get.current().header.clock.separator.show && activeCount >= 2 && (state.get.current().header.clock.seconds.show || state.get.current().header.clock.minutes.show || state.get.current().header.clock.hours.show));
+          },
+          dependents: function() {
+            return [
+              ".control-header-clock-separator-text"
             ];
           }
         }, {
@@ -6984,7 +7023,24 @@ var control = (function() {
           },
           dependents: function() {
             return [
-              ".control-header-date-separator-show"
+              ".control-header-date-separator-show",
+              ".control-header-date-separator-text"
+            ];
+          }
+        }, {
+          condition: function() {
+            var activeCount = 0;
+            var toCheck = [state.get.current().header.date.day.show, state.get.current().header.date.date.show, state.get.current().header.date.month.show, state.get.current().header.date.year.show];
+            toCheck.forEach(function(arrayItem, index) {
+              if (arrayItem == true) {
+                activeCount++;
+              };
+            });
+            return (state.get.current().header.date.separator.show && activeCount >= 2 && (state.get.current().header.date.day.show || state.get.current().header.date.date.show || state.get.current().header.date.month.show || state.get.current().header.date.year.show));
+          },
+          dependents: function() {
+            return [
+              ".control-header-date-separator-text"
             ];
           }
         }, {
