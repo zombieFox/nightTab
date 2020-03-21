@@ -1329,6 +1329,15 @@ var control = (function() {
             clock.render.all();
           }
         }, {
+          element: ".control-header-clock-separator-text-default",
+          type: "button",
+          func: function() {
+            mod.default("header.clock.separator.text");
+            clock.render.clear();
+            clock.render.all();
+            render.update.control.menu();
+          }
+        }, {
           element: ".control-header-clock-hour24-show",
           path: "header.clock.hour24.show",
           type: "checkbox",
@@ -1761,6 +1770,19 @@ var control = (function() {
             greeting.render.all();
             transitional.render.clear();
             transitional.render.all();
+          }
+        }, {
+          element: ".control-header-date-separator-text-default",
+          type: "button",
+          func: function() {
+            mod.default("header.date.separator.text");
+            date.render.clear();
+            date.render.all();
+            greeting.render.clear();
+            greeting.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            render.update.control.menu();
           }
         }, {
           element: ".control-header-date-format-datemonth",
@@ -6899,7 +6921,8 @@ var control = (function() {
           dependents: function() {
             return [
               ".control-header-clock-separator-show",
-              ".control-header-clock-separator-text"
+              ".control-header-clock-separator-text",
+              ".control-header-clock-separator-text-default"
             ];
           }
         }, {
@@ -6915,7 +6938,8 @@ var control = (function() {
           },
           dependents: function() {
             return [
-              ".control-header-clock-separator-text"
+              ".control-header-clock-separator-text",
+              ".control-header-clock-separator-text-default"
             ];
           }
         }, {
@@ -7024,7 +7048,8 @@ var control = (function() {
           dependents: function() {
             return [
               ".control-header-date-separator-show",
-              ".control-header-date-separator-text"
+              ".control-header-date-separator-text",
+              ".control-header-date-separator-text-default"
             ];
           }
         }, {
@@ -7040,7 +7065,8 @@ var control = (function() {
           },
           dependents: function() {
             return [
-              ".control-header-date-separator-text"
+              ".control-header-date-separator-text",
+              ".control-header-date-separator-text-default"
             ];
           }
         }, {
