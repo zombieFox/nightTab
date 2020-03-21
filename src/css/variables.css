@@ -4,9 +4,6 @@
   --theme-accent-r:                                     250;
   --theme-accent-g:                                     130;
   --theme-accent-b:                                     0;
-  --theme-accent-h:                                     221;
-  --theme-accent-s:                                     100;
-  --theme-accent-l:                                     50;
   --theme-accent:                                       var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);
   --theme-accent-accessible-threshold:                  0.5;
   --theme-accent-accessible-r:                          calc(var(--theme-accent-r) * 0.50);
