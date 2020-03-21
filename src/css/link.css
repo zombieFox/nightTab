@@ -639,10 +639,6 @@
   transition: color var(--layout-timing-extra-fast);
 }
 
-.is-theme-accent-cycle .link-display-letter {
-  transition: none;
-}
-
 .link-display-icon {
   font-weight: 400;
   font-style: normal;
@@ -650,6 +646,7 @@
   transition: color var(--layout-timing-extra-fast);
 }
 
+.is-theme-accent-cycle .link-display-letter,
 .is-theme-accent-cycle .link-display-icon {
   transition: none;
 }
@@ -842,31 +839,31 @@
 }
 
 .link-control-item {
-  color: rgb(var(--theme-accent-text));
+  color: hsl(var(--theme-accent-accessible-color));
 }
 
 .link-control-item:focus,
 .link-control-item:hover {
-  color: rgb(var(--theme-accent-text));
-  background-color: rgba(0, 0, 0, 0.2);
+  color: hsl(var(--theme-accent-accessible-color));
+  background-color: hsla(var(--theme-accent-accessible-color), 0.2);
 }
 
 .link-control-item.disabled:focus,
 .link-control-item.disabled:hover,
 .link-control-item:disabled:focus,
 .link-control-item:disabled:hover {
-  color: rgba(var(--theme-accent-text), 0.25);
+  color: hsla(var(--theme-accent-accessible-color), 0.25);
   background-color: transparent;
 }
 
 .link-control-item:active {
-  color: rgb(var(--theme-accent-text));
-  background-color: rgba(0, 0, 0, 0.1);
+  color: hsl(var(--theme-accent-accessible-color));
+  background-color: hsla(var(--theme-accent-accessible-color), 0.1);
 }
 
 .link-control-item.disabled,
 .link-control-item:disabled {
-  color: rgb(var(--theme-accent-text), 0.25);
+  color: hsla(var(--theme-accent-accessible-color), 0.25);
 }
 
 .is-link-orientation-top.is-link-style-list .link-control-item:nth-child(1) {
@@ -961,10 +958,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.link-url-text {
-  color: rgb(var(--theme-accent-text));
+  color: hsl(var(--theme-accent-accessible-color));
 }
 
 .is-edit.is-link-item-url-show .link-item:focus .link-panel-front,

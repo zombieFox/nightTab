@@ -266,7 +266,7 @@ var state = (function() {
         },
         cycle: {
           active: false,
-          speed: 150,
+          speed: 300,
           step: 10
         }
       },
@@ -436,7 +436,7 @@ var state = (function() {
           b: 255
         },
         cycle: {
-          speed: 150,
+          speed: 300,
           step: 10
         }
       },

@@ -47,7 +47,7 @@ var theme = (function() {
       },
       add: function() {
         _timerAccentCycle = setInterval(function() {
-          theme.accent.cycle();
+          accent.cycle();
           control.render.update.control.header(control.mod.header[5]);
           control.render.update.control.menu(control.mod.menu.controls.theme.accent[0]);
           control.render.update.control.menu(control.mod.menu.controls.theme.accent[1]);
@@ -1452,14 +1452,10 @@ var theme = (function() {
   render.accent = {
     color: function() {
       var html = helper.e("html");
-      var color = state.get.current().theme.accent.rgb;
-      html.style.setProperty("--theme-accent", color.r + ", " + color.g + ", " + color.b);
-      html.style.removeProperty("--theme-accent-text");
-      if (invert(state.get.current().theme.accent.rgb, true) == "#000000") {
-        html.style.setProperty("--theme-accent-text", "var(--theme-black)");
-      } else if (invert(state.get.current().theme.accent.rgb, true) == "#ffffff") {
-        html.style.setProperty("--theme-accent-text", "var(--theme-white)");
-      };
+      var rgb = state.get.current().theme.accent.rgb;
+      html.style.setProperty("--theme-accent-r", rgb.r);
+      html.style.setProperty("--theme-accent-g", rgb.g);
+      html.style.setProperty("--theme-accent-b", rgb.b);
     }
   };
 

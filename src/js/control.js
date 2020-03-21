@@ -5599,8 +5599,8 @@ var control = (function() {
           type: "button",
           func: function() {
             mod.default("theme.accent.cycle.step");
-            render.update.control.header();
-            render.update.control.menu();
+            theme.bind.accent.cycle.remove();
+            theme.bind.accent.cycle.add();
             render.update.control.header();
             render.update.control.menu();
           }
