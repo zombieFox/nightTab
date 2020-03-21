@@ -15,9 +15,6 @@
   --theme-accent-accessible-sum:                        calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));
   --theme-accent-accessible-perceived-lightness:        calc(var(--theme-accent-accessible-sum) / 255);
   --theme-accent-accessible-color:                      0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);
-  --theme-accent-rainbow-speed:                         4s;
-  --theme-accent-rainbow-timing-slow:                   calc(var(--theme-accent-rainbow-speed) / 5) linear;
-  --theme-accent-rainbow-timing-fast:                   calc(var(--theme-accent-rainbow-speed) / 10) linear;
   --theme-radius:                                       0.2rem;
   --theme-font-display-name:                            "Fjalla One", sans-serif;
   --theme-font-display-weight:                          400;

@@ -1453,13 +1453,9 @@ var theme = (function() {
     color: function() {
       var html = helper.e("html");
       var rgb = state.get.current().theme.accent.rgb;
-      var hsl = helper.convertColor.rgb.hsl(rgb);
       html.style.setProperty("--theme-accent-r", rgb.r);
       html.style.setProperty("--theme-accent-g", rgb.g);
       html.style.setProperty("--theme-accent-b", rgb.b);
-      html.style.setProperty("--theme-accent-h", Math.round(hsl.h));
-      html.style.setProperty("--theme-accent-s", Math.round(hsl.s));
-      html.style.setProperty("--theme-accent-l", Math.round(hsl.l));
     }
   };
 
@@ -2064,7 +2060,7 @@ var theme = (function() {
     mod.color.generated();
     mod.accent.random();
     mod.custom.close();
-    // bind.accent.cycle.toggle();
+    bind.accent.cycle.toggle();
     render.font.load.preset();
     render.font.load.custom.display();
     render.font.load.custom.ui();

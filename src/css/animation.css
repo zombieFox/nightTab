@@ -1,8 +1,5 @@
-@keyframes rainbow {
-  0% {
-    --theme-accent-r: 255;
-    --theme-accent-g: 0;
-    --theme-accent-b: 0;
+@keyframes rainbow-variables {
+  0%, 100% {
     --theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);
     --theme-accent-accessible-threshold: 0.5;
     --theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);
@@ -13,88 +10,76 @@
     --theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);
   }
 
+  0% {
+    --theme-accent-r: 255;
+    --theme-accent-g: 0;
+    --theme-accent-b: 0;
+  }
+
   16.666666666666668% {
-    --theme-accent-r: 254.99999999999994;
+    --theme-accent-r: 255;
     --theme-accent-g: 255;
     --theme-accent-b: 0;
-    --theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);
-    --theme-accent-accessible-threshold: 0.5;
-    --theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);
-    --theme-accent-accessible-g: calc(var(--theme-accent-g) * 0.60);
-    --theme-accent-accessible-b: calc(var(--theme-accent-b) * 0.20);
-    --theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));
-    --theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);
-    --theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);
   }
 
   33.333333333333336% {
     --theme-accent-r: 0;
     --theme-accent-g: 255;
     --theme-accent-b: 0;
-    --theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);
-    --theme-accent-accessible-threshold: 0.5;
-    --theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);
-    --theme-accent-accessible-g: calc(var(--theme-accent-g) * 0.60);
-    --theme-accent-accessible-b: calc(var(--theme-accent-b) * 0.20);
-    --theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));
-    --theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);
-    --theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);
   }
 
   50% {
     --theme-accent-r: 0;
-    --theme-accent-g: 254.99999999999994;
+    --theme-accent-g: 255;
     --theme-accent-b: 255;
-    --theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);
-    --theme-accent-accessible-threshold: 0.5;
-    --theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);
-    --theme-accent-accessible-g: calc(var(--theme-accent-g) * 0.60);
-    --theme-accent-accessible-b: calc(var(--theme-accent-b) * 0.20);
-    --theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));
-    --theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);
-    --theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);
   }
 
   66.66666666666667% {
     --theme-accent-r: 0;
     --theme-accent-g: 0;
     --theme-accent-b: 255;
-    --theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);
-    --theme-accent-accessible-threshold: 0.5;
-    --theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);
-    --theme-accent-accessible-g: calc(var(--theme-accent-g) * 0.60);
-    --theme-accent-accessible-b: calc(var(--theme-accent-b) * 0.20);
-    --theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));
-    --theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);
-    --theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);
   }
 
   83.33333333333334% {
     --theme-accent-r: 255;
     --theme-accent-g: 0;
-    --theme-accent-b: 254.99999999999994;
-    --theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);
-    --theme-accent-accessible-threshold: 0.5;
-    --theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);
-    --theme-accent-accessible-g: calc(var(--theme-accent-g) * 0.60);
-    --theme-accent-accessible-b: calc(var(--theme-accent-b) * 0.20);
-    --theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));
-    --theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);
-    --theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);
+    --theme-accent-b: 255;
   }
 
   100% {
     --theme-accent-r: 255;
     --theme-accent-g: 0;
     --theme-accent-b: 0;
-    --theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);
-    --theme-accent-accessible-threshold: 0.5;
-    --theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);
-    --theme-accent-accessible-g: calc(var(--theme-accent-g) * 0.60);
-    --theme-accent-accessible-b: calc(var(--theme-accent-b) * 0.20);
-    --theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));
-    --theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);
-    --theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: hsl(0, calc(var(--theme-accent-s) * 1%), calc(var(--theme-accent-l) * 1%));
+  }
+
+  16.666666666666668% {
+    background-color: hsl(60, calc(var(--theme-accent-s) * 1%), calc(var(--theme-accent-l) * 1%));
+  }
+
+  33.333333333333336% {
+    background-color: hsl(120, calc(var(--theme-accent-s) * 1%), calc(var(--theme-accent-l) * 1%));
+  }
+
+  50% {
+    background-color: hsl(180, calc(var(--theme-accent-s) * 1%), calc(var(--theme-accent-l) * 1%));
+  }
+
+  66.66666666666667% {
+    background-color: hsl(240, calc(var(--theme-accent-s) * 1%), calc(var(--theme-accent-l) * 1%));
+  }
+
+  83.33333333333334% {
+    background-color: hsl(300, calc(var(--theme-accent-s) * 1%), calc(var(--theme-accent-l) * 1%));
+  }
+
+  100% {
+    background-color: hsl(360, calc(var(--theme-accent-s) * 1%), calc(var(--theme-accent-l) * 1%));
   }
 }
 

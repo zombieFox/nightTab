@@ -646,6 +646,11 @@
   transition: color var(--layout-timing-extra-fast);
 }
 
+.is-theme-accent-cycle .link-display-letter,
+.is-theme-accent-cycle .link-display-icon {
+  transition: none;
+}
+
 .is-link-style-block .link-display-letter,
 .is-link-style-list .link-display-letter {
   font-size: var(--link-item-display-letter-size);
