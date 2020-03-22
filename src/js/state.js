@@ -303,7 +303,7 @@ var state = (function() {
       },
       style: "dark",
       radius: 0.25,
-      shadow: 1,
+      shadow: 0.75,
       shade: {
         opacity: 0.4
       },
@@ -478,7 +478,7 @@ var state = (function() {
       },
       style: "dark",
       radius: 0.25,
-      shadow: 1,
+      shadow: 0.75,
       shade: {
         opacity: 0.4
       }
