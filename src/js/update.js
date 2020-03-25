@@ -903,6 +903,10 @@ var update = (function() {
       data.state.header.clock.separator.text = ":";
       data.state.header.date.separator.text = "/";
       return data;
+    },
+    "5.1.0": function(data) {
+      data.state.link.item.opacity = 1;
+      return data;
     }
   };
 

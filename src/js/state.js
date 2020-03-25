@@ -217,7 +217,8 @@ var state = (function() {
         },
         newTab: false,
         size: 1,
-        border: 0
+        border: 0,
+        opacity: 1
       },
       show: true,
       add: false,
@@ -418,7 +419,8 @@ var state = (function() {
           }
         },
         size: 1,
-        border: 0
+        border: 0,
+        opacity: 1
       }
     },
     group: {

@@ -116,6 +116,8 @@
   --link-item-display-translate-y:                      0em;
   --link-item-display-name-size:                        0.9em;
   --link-item-border:                                   0;
+  --link-item-opacity:                                  1;
+  --link-item-padding:                                  1em;
   /* layout */
   --layout-size:                                        1;
   --layout-width:                                       80%;
@@ -337,6 +339,10 @@
   --link-item-height:                                   4em;
   --link-item-url-height:                               30%;
   --link-item-edit-height:                              50%;
+}
+
+.is-link-item-opacity {
+  --link-item-padding:                                  0em;
 }
 
 @media (min-width: 700px) {

@@ -183,11 +183,11 @@
 }
 
 .is-link-item-color-by-theme .link-panel-front {
-  background-color: rgb(var(--link-item-color-theme));
+  background-color: rgba(var(--link-item-color-theme), var(--link-item-opacity));
 }
 
 .is-link-item-color-by-custom .link-panel-front {
-  background-color: rgb(var(--link-item-color-custom));
+  background-color: rgba(var(--link-item-color-custom), var(--link-item-opacity));
 }
 
 .is-link-style-block .link-panel-front {
@@ -234,7 +234,7 @@
 .is-link-item-color-by-theme .link-item:focus-within .link-panel-front,
 .is-link-item-color-by-theme .link-item:focus .link-panel-front,
 .is-link-item-color-by-theme .link-item:hover .link-panel-front {
-  background-color: rgb(var(--theme-color-03));
+  background-color: rgba(var(--theme-color-03), var(--link-item-opacity));
 }
 
 .is-link-item-shadow-show.is-link-orientation-bottom .link-item:focus .link-panel-front,
@@ -735,7 +735,11 @@
   justify-content: flex-end;
   z-index: 2;
   transition: height var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast), clip-path var(--layout-timing-extra-fast);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.is-edit .link-panel-back {
+  height: 100%;
+  top: 0;
 }
 
 .is-link-orientation-top .link-panel-back {
@@ -758,42 +762,65 @@
   top: var(--layout-line-width);
 }
 
+.is-edit.is-link-item-line-show .link-panel-back {
+  height: 100%;
+}
+
+.is-edit.is-link-item-line-show.is-link-orientation-top .link-panel-back,
+.is-edit.is-link-item-line-show.is-link-orientation-bottom .link-panel-back {
+  top: 0;
+}
+
+.is-link-orientation-top .link-panel-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--link-item-padding)), 0 calc(0% + var(--link-item-padding)));
+}
+
+.is-link-orientation-bottom .link-panel-back {
+  clip-path: polygon(0 calc(100% - var(--link-item-padding)), 100% calc(100% - var(--link-item-padding)), 100% 100%, 0 100%);
+}
+
+.is-link-orientation-top.is-link-item-line-show .link-panel-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--layout-line-width) + var(--link-item-padding)), 0 calc(var(--layout-line-width) + var(--link-item-padding)));
+}
+
+.is-link-orientation-bottom.is-link-item-line-show .link-panel-back {
+  clip-path: polygon(0 calc(100% - var(--layout-line-width) - var(--link-item-padding)), 100% calc(100% - var(--layout-line-width) - var(--link-item-padding)), 100% 100%, 0 100%);
+}
+
+.is-link-orientation-top .link-item:focus .link-panel-back,
+.is-link-orientation-top .link-item:focus-within .link-panel-back,
+.is-link-orientation-top .link-item:hover .link-panel-back,
+.is-link-orientation-bottom .link-item:focus .link-panel-back,
+.is-link-orientation-bottom .link-item:focus-within .link-panel-back,
+.is-link-orientation-bottom .link-item:hover .link-panel-back {
+  top: 0;
+  height: 100%;
+}
+
 .is-link-item-url-show.is-link-orientation-top .link-item:focus .link-panel-back,
 .is-link-item-url-show.is-link-orientation-top .link-item:focus-within .link-panel-back,
 .is-link-item-url-show.is-link-orientation-top .link-item:hover .link-panel-back {
-  height: 100%;
-  top: 0;
-  clip-path: polygon(0 0, 100% 0, 100% calc(var(--link-item-url-height) + 10%), 0 calc(var(--link-item-url-height) + 10%));
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--link-item-url-height) + var(--link-item-padding)), 0 calc(var(--link-item-url-height) + var(--link-item-padding)));
 }
 
 .is-link-item-url-show.is-link-orientation-bottom .link-item:focus .link-panel-back,
 .is-link-item-url-show.is-link-orientation-bottom .link-item:focus-within .link-panel-back,
 .is-link-item-url-show.is-link-orientation-bottom .link-item:hover .link-panel-back {
-  height: 100%;
-  top: 0;
-  clip-path: polygon(0 calc(100% - calc(var(--link-item-url-height) + 10%)), 100% calc(100% - calc(var(--link-item-url-height) + 10%)), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - calc(var(--link-item-url-height) + var(--link-item-padding))), 100% calc(100% - calc(var(--link-item-url-height) + var(--link-item-padding))), 100% 100%, 0 100%);
 }
 
-.is-edit.is-link-orientation-top .link-panel-back,
-.is-edit.is-link-orientation-top .link-panel-back,
 .is-edit.is-link-orientation-top .link-panel-back,
 .is-edit.is-link-orientation-top .link-item:focus .link-panel-back,
 .is-edit.is-link-orientation-top .link-item:focus-within .link-panel-back,
 .is-edit.is-link-orientation-top .link-item:hover .link-panel-back {
-  height: 100%;
-  top: 0;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - calc(var(--link-item-edit-height) - 10%)), 0 calc(100% - calc(var(--link-item-edit-height) - 10%)))
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--link-item-edit-height) + var(--link-item-padding)), 0 calc(var(--link-item-edit-height) + var(--link-item-padding)));
 }
 
-.is-edit.is-link-orientation-bottom .link-panel-back,
-.is-edit.is-link-orientation-bottom .link-panel-back,
 .is-edit.is-link-orientation-bottom .link-panel-back,
 .is-edit.is-link-orientation-bottom .link-item:focus .link-panel-back,
 .is-edit.is-link-orientation-bottom .link-item:focus-within .link-panel-back,
 .is-edit.is-link-orientation-bottom .link-item:hover .link-panel-back {
-  height: 100%;
-  top: 0;
-  clip-path: polygon(0 calc(100% - calc(var(--link-item-edit-height) + 10%)), 100% calc(100% - calc(var(--link-item-edit-height) + 10%)), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - var(--link-item-edit-height) - var(--link-item-padding)), 100% calc(100% - var(--link-item-edit-height) - var(--link-item-padding)), 100% 100%, 0 100%);
 }
 
 .link-control {

@@ -3848,6 +3848,54 @@ var control = (function() {
           func: function() {
             link.render.item.color.custom();
           }
+        }, {
+          element: ".control-link-item-opacity-range",
+          path: "link.item.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-opacity-number",
+            path: "link.item.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-opacity-number",
+          path: "link.item.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-opacity-range",
+            path: "link.item.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-opacity-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.opacity");
+            link.render.item.opacity();
+            render.update.control.header();
+            render.update.control.menu();
+            render.class();
+          }
         }],
         border: [{
           element: ".control-link-item-border-range",
@@ -6652,6 +6700,14 @@ var control = (function() {
           return state.get.current().link.show;
         },
         name: "is-link-item-color-by-" + state.get.current().link.item.color.by
+      }, {
+        remove: [
+          "is-link-item-opacity"
+        ],
+        condition: function() {
+          return (state.get.current().link.item.opacity < 1);
+        },
+        name: "is-link-item-opacity"
       }, {
         remove: [
           "is-link-item-display-direction-horizontal",

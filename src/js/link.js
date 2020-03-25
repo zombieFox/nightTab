@@ -706,11 +706,6 @@ var link = (function() {
   };
 
   render.item = {
-    color: {
-      custom: function() {
-        helper.e("html").style.setProperty("--link-item-color-custom", state.get.current().link.item.color.rgb.r + ", " + state.get.current().link.item.color.rgb.g + ", " + state.get.current().link.item.color.rgb.b);
-      }
-    },
     link: function() {
       var linkItemOptions = {
         tag: "div",
@@ -1296,6 +1291,11 @@ var link = (function() {
         });
       };
     },
+    color: {
+      custom: function() {
+        helper.e("html").style.setProperty("--link-item-color-custom", state.get.current().link.item.color.rgb.r + ", " + state.get.current().link.item.color.rgb.g + ", " + state.get.current().link.item.color.rgb.b);
+      }
+    },
     border: function() {
       var html = helper.e("html");
       html.style.setProperty("--link-item-border", state.get.current().link.item.border);
@@ -1317,6 +1317,10 @@ var link = (function() {
     gutter: function() {
       var html = helper.e("html");
       html.style.setProperty("--link-item-display-gutter", state.get.current().link.item.display.gutter);
+    },
+    opacity: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--link-item-opacity", state.get.current().link.item.opacity);
     }
   };
 
@@ -1991,6 +1995,7 @@ var link = (function() {
     render.item.translate.x();
     render.item.translate.y();
     render.item.gutter();
+    render.item.opacity();
     render.area.width();
   };
 
