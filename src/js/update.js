@@ -897,7 +897,7 @@ var update = (function() {
       delete data.state.group.openAll.show;
       data.state.theme.accent.cycle = {
         active: false,
-        speed: 200,
+        speed: 300,
         step: 10
       };
       data.state.header.clock.separator.text = ":";
