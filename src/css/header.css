@@ -317,7 +317,7 @@
   background-color: rgb(var(--button-border-active));
 }
 
-.is-header-add-opacity .header-add:active:after {
+.is-header-editadd-opacity .header-add:active:after {
   background-color: transparent;
 }
 
