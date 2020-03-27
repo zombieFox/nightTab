@@ -7,6 +7,19 @@
   width: 100%;
 }
 
+.search-input[type="text"] {
+  background-color: rgba(var(--form-input-background), var(--header-search-opacity));
+}
+
+.search-input[type="text"]:hover {
+  background-color: rgba(var(--form-input-background-hover), var(--header-search-opacity));
+}
+
+.search-input[type="text"]:focus,
+.search-input[type="text"]:active {
+  background-color: rgba(var(--form-input-background-focus-active), var(--header-search-opacity));
+}
+
 .search-clear {
   position: absolute;
   top: 50%;

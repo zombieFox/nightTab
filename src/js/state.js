@@ -120,13 +120,14 @@ var state = (function() {
           justify: "center"
         },
         size: 1,
+        opacity: 1,
         newLine: false,
         newTab: false
       },
       editAdd: {
         show: true,
         size: 1,
-        style: "box",
+        opacity: 1,
         newLine: false
       },
       colorAccent: {
@@ -135,13 +136,13 @@ var state = (function() {
         },
         show: true,
         size: 1,
-        style: "box",
+        opacity: 1,
         newLine: false
       },
       menu: {
         show: true,
         size: 1,
-        style: "box",
+        opacity: 1,
         newLine: false
       },
       order: ["greeting", "transitional", "clock", "date", "search", "editAdd", "colorAccent", "menu"],
@@ -237,7 +238,7 @@ var state = (function() {
       openAll: {
         show: true,
         size: 1,
-        style: "box"
+        opacity: 1
       },
       border: 0,
       order: "headerbody",
@@ -369,16 +370,20 @@ var state = (function() {
         width: {
           size: 30
         },
-        size: 1
+        size: 1,
+        opacity: 1
       },
       editAdd: {
         size: 1,
+        opacity: 1
       },
       colorAccent: {
         size: 1,
+        opacity: 1
       },
       menu: {
-        size: 1
+        size: 1,
+        opacity: 1
       },
       color: {
         opacity: 0.95
@@ -428,7 +433,8 @@ var state = (function() {
         size: 1
       },
       openAll: {
-        size: 1
+        size: 1,
+        opacity: 1
       },
       border: 0
     },

@@ -685,6 +685,10 @@ var link = (function() {
       size: function() {
         var html = helper.e("html");
         html.style.setProperty("--group-openall-size", state.get.current().group.openAll.size + "em");
+      },
+      opacity: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--group-openall-opacity", state.get.current().group.openAll.opacity);
       }
     },
     border: function() {
@@ -1984,6 +1988,7 @@ var link = (function() {
     groupAndItems();
     render.group.name.size();
     render.group.openall.size();
+    render.group.openall.opacity();
     render.group.border();
     render.item.color.custom();
     render.item.size();

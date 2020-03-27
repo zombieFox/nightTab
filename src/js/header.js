@@ -368,7 +368,7 @@ var header = (function() {
     editAdd: function() {
       var formGroup = helper.node("div|class:header-editadd form-group form-group-nested-button");
       var formInputButton = helper.node("div|class:form-input-button form-input-hide");
-      var controlEditInput = helper.node("input|id:control-edit,class:control-edit,type:checkbox,tabindex:1");
+      var controlEditInput = helper.node("input|id:control-edit,class:header-edit control-edit,type:checkbox,tabindex:1");
       var controlEditLabel = helper.node("label|for:control-edit");
       var controlEditLabelText = helper.node("span:Edit");
       var controlEditLabelIcon = helper.node("span|class:label-icon");
@@ -378,7 +378,7 @@ var header = (function() {
       formInputButton.appendChild(controlEditLabel);
 
       var formDropdown = helper.node("div|class:form-dropdown");
-      var controlAddToggle = helper.node("button|class:control-add-toggle form-dropdown-toggle button,tabindex:1");
+      var controlAddToggle = helper.node("button|class:header-add control-add-toggle form-dropdown-toggle button,tabindex:1");
       var controlAddToggleText = helper.node("span:Add");
       controlAddToggle.appendChild(controlAddToggleText);
       var formDropdownMenu = helper.node("ul|class:list-unstyled form-dropdown-menu");
@@ -411,7 +411,7 @@ var header = (function() {
       var formGroup = helper.node("div|class:header-coloraccent form-group form-group-nested-button");
 
       var colorInputButton = helper.node("div|class:form-input-button");
-      var colorInput = helper.node("input|id:control-theme-color-rgb-color-quick,class:control-theme-color-rgb-color-quick,type:color,value:#000000,tabindex:1,autocomplete:off");
+      var colorInput = helper.node("input|id:control-theme-color-rgb-color-quick,class:control-theme-color-rgb-color-quick header-color,type:color,value:#000000,tabindex:1,autocomplete:off");
       var colorInputLabel = helper.node("label|for:control-theme-color-rgb-color-quick");
       var colorInputLabelText = helper.node("span:Colour");
       colorInputLabel.appendChild(colorInputLabelText);
@@ -419,7 +419,7 @@ var header = (function() {
       colorInputButton.appendChild(colorInputLabel);
 
       var accentInputButton = helper.node("div|class:form-input-button");
-      var accentInput = helper.node("input|id:control-theme-accent-rgb-color-quick,class:control-theme-accent-rgb-color-quick,type:color,value:#000000,tabindex:1,autocomplete:off");
+      var accentInput = helper.node("input|id:control-theme-accent-rgb-color-quick,class:control-theme-accent-rgb-color-quick header-accent,type:color,value:#000000,tabindex:1,autocomplete:off");
       var accentInputLabel = helper.node("label|for:control-theme-accent-rgb-color-quick");
       var accentInputLabelText = helper.node("span:Accent");
       accentInputLabel.appendChild(accentInputLabelText);
@@ -446,7 +446,7 @@ var header = (function() {
       return formGroup;
     },
     menu: function() {
-      var button = helper.node("button|class:control-menu-open button,tabindex:1");
+      var button = helper.node("button|class:control-menu-open header-menu button,tabindex:1");
       var baselineAlignmentCharacter = helper.node("span:-|class:baseline-alignment-icon-character,aria-hidden:true");
       var buttonIcon = helper.node("span|class:icon-settings");
       if (state.get.current().header.menu.style == "clear") {
@@ -462,19 +462,6 @@ var header = (function() {
     size: function() {
       var html = helper.e("html");
       html.style.setProperty("--header-greeting-size", state.get.current().header.greeting.size + "em");
-    }
-  };
-
-  render.search = {
-    width: {
-      size: function() {
-        var html = helper.e("html");
-        html.style.setProperty("--header-search-width-size", state.get.current().header.search.width.size + "%");
-      }
-    },
-    size: function() {
-      var html = helper.e("html");
-      html.style.setProperty("--header-search-size", state.get.current().header.search.size + "em");
     }
   };
 
@@ -499,10 +486,31 @@ var header = (function() {
     }
   };
 
+  render.search = {
+    width: {
+      size: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--header-search-width-size", state.get.current().header.search.width.size + "%");
+      }
+    },
+    size: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-search-size", state.get.current().header.search.size + "em");
+    },
+    opacity: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-search-opacity", state.get.current().header.search.opacity);
+    }
+  };
+
   render.editadd = {
     size: function() {
       var html = helper.e("html");
       html.style.setProperty("--header-editadd-size", state.get.current().header.editAdd.size + "em");
+    },
+    opacity: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-editadd-opacity", state.get.current().header.editAdd.opacity);
     }
   };
 
@@ -510,6 +518,10 @@ var header = (function() {
     size: function() {
       var html = helper.e("html");
       html.style.setProperty("--header-coloraccent-size", state.get.current().header.colorAccent.size + "em");
+    },
+    opacity: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-coloraccent-opacity", state.get.current().header.colorAccent.opacity);
     }
   };
 
@@ -517,6 +529,10 @@ var header = (function() {
     size: function() {
       var html = helper.e("html");
       html.style.setProperty("--header-menu-size", state.get.current().header.menu.size + "em");
+    },
+    opacity: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--header-menu-opacity", state.get.current().header.menu.opacity);
     }
   };
 
@@ -536,9 +552,13 @@ var header = (function() {
     render.date.size();
     render.search.width.size();
     render.search.size();
+    render.search.opacity();
     render.editadd.size();
+    render.editadd.opacity();
     render.coloraccent.size();
+    render.coloraccent.opacity();
     render.menu.size();
+    render.menu.opacity();
     render.control.all();
     bind.sort.item();
   };

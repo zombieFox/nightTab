@@ -117,9 +117,7 @@ select {
   min-height: 2.5em;
   min-width: 0;
   width: 100%;
-  border-color: rgb(var(--form-input-border));
-  border-width: var(--theme-line-width);
-  border-style: solid;
+  border-width: 0;
   border-radius: var(--theme-radius);
   cursor: pointer;
   transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
@@ -133,7 +131,6 @@ select:hover {
     linear-gradient(45deg, transparent 60%, rgb(var(--form-label-hover)) 60%),
     linear-gradient(135deg, rgb(var(--form-label-hover)) 40%, transparent 40%);
   background-color: rgb(var(--form-input-background-hover));
-  border-color: rgb(var(--form-input-border-hover));
   color: rgb(var(--form-label-hover));
   outline: none;
   box-shadow: var(--form-ring-hover);
@@ -145,7 +142,6 @@ select:active {
     linear-gradient(45deg, transparent 60%, rgb(var(--form-label-focus-active)) 60%),
     linear-gradient(135deg, rgb(var(--form-label-focus-active)) 40%, transparent 40%);
   background-color: rgb(var(--form-input-background-border-focus-active));
-  border-color: rgb(var(--form-input-border-focus-active));
   color: rgb(var(--form-label-focus-active));
   outline: none;
   z-index: 2;
@@ -160,7 +156,6 @@ select:disabled:active {
   background-image:
     linear-gradient(45deg, transparent 50%, rgb(var(--form-input-text-disabled)) 50%),
     linear-gradient(135deg, rgb(var(--form-input-text-disabled)) 50%, transparent 50%);
-  border-color: rgb(var(--form-input-border-disabled));
   color: rgb(var(--form-input-text-disabled));
   cursor: default;
   box-shadow: none;
@@ -169,7 +164,7 @@ select:disabled:active {
 /* textarea */
 textarea {
   background-color: rgb(var(--form-input-background));
-  padding: 0.25em 1em;
+  padding: 0.5em 1em;
   margin: 0;
   color: rgb(var(--form-input-text));
   font-size: 1em;
@@ -181,9 +176,7 @@ textarea {
   min-height: 2.5em;
   min-width: 0;
   width: 100%;
-  border-color: rgb(var(--form-input-border));
-  border-width: var(--theme-line-width);
-  border-style: solid;
+  border-width: 0;
   border-radius: var(--theme-radius);
   cursor: text;
   resize: vertical;
@@ -194,7 +187,6 @@ textarea {
 
 textarea:hover {
   background-color: rgb(var(--form-input-background-hover));
-  border-color: rgb(var(--form-input-border-hover));
   color: rgb(var(--form-input-text-hover));
   outline: none;
   box-shadow: var(--form-ring-hover);
@@ -203,7 +195,6 @@ textarea:hover {
 textarea:focus,
 textarea:active {
   background-color: rgb(var(--form-input-background-focus-active));
-  border-color: rgb(var(--form-input-border-focus-active));
   color: rgb(var(--form-input-text-focus-active));
   outline: none;
   box-shadow: var(--form-ring-accent);
@@ -211,7 +202,6 @@ textarea:active {
 
 textarea:disabled {
   background-color: rgb(var(--form-input-background-disabled));
-  border-color: rgb(var(--form-input-border-disabled));
   color: rgb(var(--form-input-text-disabled));
   cursor: default;
   box-shadow: none;
@@ -261,9 +251,7 @@ input[type="text"] {
   height: 2.5em;
   min-width: 0;
   width: 100%;
-  border-color: rgb(var(--form-input-border));
-  border-width: var(--theme-line-width);
-  border-style: solid;
+  border-width: 0;
   border-radius: var(--theme-radius);
   cursor: text;
   transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
@@ -287,7 +275,6 @@ input[type="search"]:hover,
 input[type="tel"]:hover,
 input[type="text"]:hover {
   background-color: rgb(var(--form-input-background-hover));
-  border-color: rgb(var(--form-input-border-hover));
   color: rgb(var(--form-input-text-hover));
   outline: none;
   box-shadow: var(--form-ring-hover);
@@ -306,7 +293,6 @@ input[type="tel"]:active,
 input[type="text"]:focus,
 input[type="text"]:active {
   background-color: rgb(var(--form-input-background-focus-active));
-  border-color: rgb(var(--form-input-border-focus-active));
   color: rgb(var(--form-input-text-focus-active));
   outline: none;
   z-index: 2;
@@ -320,7 +306,6 @@ input[type="search"]:disabled,
 input[type="tel"]:disabled,
 input[type="text"]:disabled {
   background-color: rgb(var(--form-input-background-disabled));
-  border-color: rgb(var(--form-input-border-disabled));
   color: rgb(var(--form-input-text-disabled));
   cursor: default;
   box-shadow: none;
@@ -397,7 +382,6 @@ input[type="text"]:disabled:focus::placeholder {
 .input-clear[type="tel"],
 .input-clear[type="text"] {
   background-color: transparent;
-  border-color: transparent;
 }
 
 .input-clear[type="email"]:hover,
@@ -407,7 +391,6 @@ input[type="text"]:disabled:focus::placeholder {
 .input-clear[type="tel"]:hover,
 .input-clear[type="text"]:hover {
   background-color: transparent;
-  border-color: transparent;
   box-shadow: none;
 }
 
@@ -424,7 +407,6 @@ input[type="text"]:disabled:focus::placeholder {
 .input-clear[type="text"]:focus,
 .input-clear[type="text"]:active {
   background-color: transparent;
-  border-color: transparent;
   box-shadow: var(--form-ring-accent);
 }
 

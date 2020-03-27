@@ -2044,50 +2044,51 @@ var control = (function() {
             render.update.control.menu();
           }
         }, {
-          element: ".control-header-search-style-box",
-          path: "header.search.style",
-          type: "radio",
+          element: ".control-header-search-opacity-range",
+          path: "header.search.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-search-opacity-number",
+            path: "header.search.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
           func: function() {
-            header.render.item.clear();
-            header.render.item.all();
-            greeting.render.clear();
-            greeting.render.all();
-            clock.render.clear();
-            clock.render.all();
-            transitional.render.clear();
-            transitional.render.all();
-            date.render.clear();
-            date.render.all();
-            render.dependents();
-            render.update.control.header();
-            bind.control.header();
-            search.render.engine();
-            search.bind.input();
-            search.bind.clear();
-            dropdown.bind.editAdd();
+            header.render.search.opacity();
+            render.class();
           }
         }, {
-          element: ".control-header-search-style-clear",
-          path: "header.search.style",
-          type: "radio",
+          element: ".control-header-search-opacity-number",
+          path: "header.search.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-search-opacity-range",
+            path: "header.search.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
           func: function() {
-            header.render.item.clear();
-            header.render.item.all();
-            greeting.render.clear();
-            greeting.render.all();
-            clock.render.clear();
-            clock.render.all();
-            transitional.render.clear();
-            transitional.render.all();
-            date.render.clear();
-            date.render.all();
-            render.dependents();
-            render.update.control.header();
-            bind.control.header();
-            search.render.engine();
-            search.bind.input();
-            search.bind.clear();
-            dropdown.bind.editAdd();
+            header.render.search.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-header-search-opacity-default",
+          type: "button",
+          func: function() {
+            mod.default("header.search.opacity");
+            header.render.search.opacity();
+            render.update.control.menu();
+            render.class();
           }
         }, {
           element: ".control-header-search-focus",
@@ -2329,52 +2330,6 @@ var control = (function() {
             render.dependents();
           }
         }, {
-          element: ".control-header-editadd-style-box",
-          path: "header.editAdd.style",
-          type: "radio",
-          func: function() {
-            header.render.item.clear();
-            header.render.item.all();
-            greeting.render.clear();
-            greeting.render.all();
-            clock.render.clear();
-            clock.render.all();
-            transitional.render.clear();
-            transitional.render.all();
-            date.render.clear();
-            date.render.all();
-            render.dependents();
-            render.update.control.header();
-            bind.control.header();
-            search.render.engine();
-            search.bind.input();
-            search.bind.clear();
-            dropdown.bind.editAdd();
-          }
-        }, {
-          element: ".control-header-editadd-style-clear",
-          path: "header.editAdd.style",
-          type: "radio",
-          func: function() {
-            header.render.item.clear();
-            header.render.item.all();
-            greeting.render.clear();
-            greeting.render.all();
-            clock.render.clear();
-            clock.render.all();
-            transitional.render.clear();
-            transitional.render.all();
-            date.render.clear();
-            date.render.all();
-            render.dependents();
-            render.update.control.header();
-            bind.control.header();
-            search.render.engine();
-            search.bind.input();
-            search.bind.clear();
-            dropdown.bind.editAdd();
-          }
-        }, {
           element: ".control-header-editadd-size-range",
           path: "header.editAdd.size",
           type: "range",
@@ -2470,6 +2425,53 @@ var control = (function() {
             render.update.control.menu();
           }
         }, {
+          element: ".control-header-editadd-opacity-range",
+          path: "header.editAdd.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-editadd-opacity-number",
+            path: "header.editAdd.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.editadd.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-header-editadd-opacity-number",
+          path: "header.editAdd.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-editadd-opacity-range",
+            path: "header.editAdd.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.editadd.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-header-editadd-opacity-default",
+          type: "button",
+          func: function() {
+            mod.default("header.editAdd.opacity");
+            header.render.editadd.opacity();
+            render.update.control.menu();
+            render.class();
+          }
+        }, {
           element: ".control-header-editadd-newline",
           path: "header.editAdd.newLine",
           type: "checkbox",
@@ -2504,52 +2506,6 @@ var control = (function() {
           element: ".control-header-coloraccent-dot-show",
           path: "header.colorAccent.dot.show",
           type: "checkbox",
-          func: function() {
-            header.render.item.clear();
-            header.render.item.all();
-            greeting.render.clear();
-            greeting.render.all();
-            clock.render.clear();
-            clock.render.all();
-            transitional.render.clear();
-            transitional.render.all();
-            date.render.clear();
-            date.render.all();
-            render.dependents();
-            render.update.control.header();
-            bind.control.header();
-            search.render.engine();
-            search.bind.input();
-            search.bind.clear();
-            dropdown.bind.editAdd();
-          }
-        }, {
-          element: ".control-header-coloraccent-style-box",
-          path: "header.colorAccent.style",
-          type: "radio",
-          func: function() {
-            header.render.item.clear();
-            header.render.item.all();
-            greeting.render.clear();
-            greeting.render.all();
-            clock.render.clear();
-            clock.render.all();
-            transitional.render.clear();
-            transitional.render.all();
-            date.render.clear();
-            date.render.all();
-            render.dependents();
-            render.update.control.header();
-            bind.control.header();
-            search.render.engine();
-            search.bind.input();
-            search.bind.clear();
-            dropdown.bind.editAdd();
-          }
-        }, {
-          element: ".control-header-coloraccent-style-clear",
-          path: "header.colorAccent.style",
-          type: "radio",
           func: function() {
             header.render.item.clear();
             header.render.item.all();
@@ -2665,6 +2621,53 @@ var control = (function() {
             render.update.control.menu();
           }
         }, {
+          element: ".control-header-coloraccent-opacity-range",
+          path: "header.colorAccent.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-coloraccent-opacity-number",
+            path: "header.colorAccent.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.coloraccent.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-header-coloraccent-opacity-number",
+          path: "header.colorAccent.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-coloraccent-opacity-range",
+            path: "header.colorAccent.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.coloraccent.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-header-coloraccent-opacity-default",
+          type: "button",
+          func: function() {
+            mod.default("header.colorAccent.opacity");
+            header.render.coloraccent.opacity();
+            render.update.control.menu();
+            render.class();
+          }
+        }, {
           element: ".control-header-coloraccent-newline",
           path: "header.colorAccent.newLine",
           type: "checkbox",
@@ -2672,53 +2675,7 @@ var control = (function() {
             render.class();
           }
         }],
-        settings: [{
-          element: ".control-header-menu-style-box",
-          path: "header.menu.style",
-          type: "radio",
-          func: function() {
-            header.render.item.clear();
-            header.render.item.all();
-            greeting.render.clear();
-            greeting.render.all();
-            clock.render.clear();
-            clock.render.all();
-            transitional.render.clear();
-            transitional.render.all();
-            date.render.clear();
-            date.render.all();
-            render.dependents();
-            render.update.control.header();
-            bind.control.header();
-            search.render.engine();
-            search.bind.input();
-            search.bind.clear();
-            dropdown.bind.editAdd();
-          }
-        }, {
-          element: ".control-header-menu-style-clear",
-          path: "header.menu.style",
-          type: "radio",
-          func: function() {
-            header.render.item.clear();
-            header.render.item.all();
-            greeting.render.clear();
-            greeting.render.all();
-            clock.render.clear();
-            clock.render.all();
-            transitional.render.clear();
-            transitional.render.all();
-            date.render.clear();
-            date.render.all();
-            render.dependents();
-            render.update.control.header();
-            bind.control.header();
-            search.render.engine();
-            search.bind.input();
-            search.bind.clear();
-            dropdown.bind.editAdd();
-          }
-        }, {
+        menu: [{
           element: ".control-header-menu-size-range",
           path: "header.menu.size",
           type: "range",
@@ -2812,6 +2769,53 @@ var control = (function() {
             header.render.menu.size();
             render.update.control.header();
             render.update.control.menu();
+          }
+        }, {
+          element: ".control-header-menu-opacity-range",
+          path: "header.menu.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-menu-opacity-number",
+            path: "header.menu.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.menu.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-header-menu-opacity-number",
+          path: "header.menu.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-menu-opacity-range",
+            path: "header.menu.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            header.render.menu.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-header-menu-opacity-default",
+          type: "button",
+          func: function() {
+            mod.default("header.menu.opacity");
+            header.render.menu.opacity();
+            render.update.control.menu();
+            render.class();
           }
         }, {
           element: ".control-header-menu-newline",
@@ -4253,18 +4257,51 @@ var control = (function() {
             render.update.control.menu();
           }
         }, {
-          element: ".control-group-openall-style-box",
-          path: "group.openAll.style",
-          type: "radio",
+          element: ".control-group-openall-opacity-range",
+          path: "group.openAll.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-group-openall-opacity-number",
+            path: "group.openAll.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
           func: function() {
-            link.groupAndItems();
+            link.render.group.openall.opacity();
+            render.class();
           }
         }, {
-          element: ".control-group-openall-style-clear",
-          path: "group.openAll.style",
-          type: "radio",
+          element: ".control-group-openall-opacity-number",
+          path: "group.openAll.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-group-openall-opacity-range",
+            path: "group.openAll.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
           func: function() {
-            link.groupAndItems();
+            link.render.group.openall.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-group-openall-opacity-default",
+          type: "button",
+          func: function() {
+            mod.default("group.openAll.opacity");
+            link.render.group.openall.opacity();
+            render.update.control.menu();
+            render.class();
           }
         }],
         border: [{
@@ -6542,6 +6579,14 @@ var control = (function() {
             return state.get.current().header.editAdd.newLine;
           },
           name: "is-header-item-newline-editadd"
+        }, {
+          remove: [
+            "is-header-editadd-opacity"
+          ],
+          condition: function() {
+            return (state.get.current().header.editAdd.opacity == 0);
+          },
+          name: "is-header-editadd-opacity"
         }],
         coloraccent: [{
           remove: [
@@ -6551,6 +6596,14 @@ var control = (function() {
             return state.get.current().header.colorAccent.newLine;
           },
           name: "is-header-item-newline-coloraccent"
+        }, {
+          remove: [
+            "is-header-coloraccent-opacity"
+          ],
+          condition: function() {
+            return (state.get.current().header.colorAccent.opacity == 0);
+          },
+          name: "is-header-coloraccent-opacity"
         }],
         menu: [{
           remove: [
@@ -6560,6 +6613,14 @@ var control = (function() {
             return state.get.current().header.menu.newLine;
           },
           name: "is-header-item-newline-menu"
+        }, {
+          remove: [
+            "is-header-menu-opacity"
+          ],
+          condition: function() {
+            return (state.get.current().header.menu.opacity == 0);
+          },
+          name: "is-header-menu-opacity"
         }],
         color: [{
           remove: [
@@ -6637,6 +6698,15 @@ var control = (function() {
             "is-group-order-bodyheader"
           ],
           name: "is-group-order-" + state.get.current().group.order
+        }],
+        openall: [{
+          remove: [
+            "is-group-openall-opacity"
+          ],
+          condition: function() {
+            return (state.get.current().group.openAll.opacity == 0);
+          },
+          name: "is-group-openall-opacity"
         }],
         border: [{
           remove: [
@@ -6884,6 +6954,7 @@ var control = (function() {
     classCheck(all.header.position);
     classCheck(all.group.area);
     classCheck(all.group.order);
+    classCheck(all.group.openall);
     classCheck(all.group.border);
     classCheck(all.link);
     classCheck(all.theme);
@@ -7250,9 +7321,10 @@ var control = (function() {
               ".control-header-search-width-size-range",
               ".control-header-search-width-size-number",
               ".control-header-search-width-size-default",
-              ".control-header-search-style-label",
-              ".control-header-search-style-box",
-              ".control-header-search-style-clear",
+              "[for=control-header-search-opacity-range]",
+              ".control-header-search-opacity-range",
+              ".control-header-search-opacity-number",
+              ".control-header-search-opacity-default",
               ".control-header-search-focus",
               ".control-header-search-focus-helper",
               ".control-header-search-engine-label",
@@ -7309,9 +7381,10 @@ var control = (function() {
           dependents: function() {
             return [
               ".control-header-editadd-show-helper",
-              ".control-header-editadd-style-label",
-              ".control-header-editadd-style-box",
-              ".control-header-editadd-style-clear",
+              "[for=control-header-editadd-opacity-range]",
+              ".control-header-editadd-opacity-range",
+              ".control-header-editadd-opacity-number",
+              ".control-header-editadd-opacity-default",
               "[for=control-header-editadd-size-range]",
               ".control-header-editadd-size-range",
               ".control-header-editadd-size-number",
@@ -7329,9 +7402,10 @@ var control = (function() {
             return [
               ".control-header-coloraccent-show-helper",
               ".control-header-coloraccent-dot-show",
-              ".control-header-coloraccent-style-label",
-              ".control-header-coloraccent-style-box",
-              ".control-header-coloraccent-style-clear",
+              "[for=control-header-coloraccent-opacity-range]",
+              ".control-header-coloraccent-opacity-range",
+              ".control-header-coloraccent-opacity-number",
+              ".control-header-coloraccent-opacity-default",
               "[for=control-header-coloraccent-size-range]",
               ".control-header-coloraccent-size-range",
               ".control-header-coloraccent-size-number",
@@ -7347,9 +7421,10 @@ var control = (function() {
           },
           dependents: function() {
             return [
-              "[for=control-header-menu-style-label]",
-              ".control-header-menu-style-box",
-              ".control-header-menu-style-clear",
+              "[for=control-header-menu-opacity-range]",
+              ".control-header-menu-opacity-range",
+              ".control-header-menu-opacity-number",
+              ".control-header-menu-opacity-default",
               "[for=control-header-menu-size-range]",
               ".control-header-menu-size-range",
               ".control-header-menu-size-number",

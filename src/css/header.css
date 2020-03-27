@@ -247,6 +247,149 @@
   flex-grow: 1;
 }
 
+.form-input-button .header-edit[type="checkbox"]+label {
+  background-color: rgba(var(--button-background), var(--header-editadd-opacity));
+}
+
+.form-input-button .header-edit[type="checkbox"]:focus+label,
+.form-input-button .header-edit[type="checkbox"]:hover+label {
+  background-color: rgba(var(--button-background-focus-hover), var(--header-editadd-opacity));
+}
+
+.form-input-button .header-edit[type="checkbox"]:active+label {
+  background-color: rgba(var(--button-background-active), var(--header-editadd-opacity));
+}
+
+.form-input-button .header-edit[type="checkbox"]:checked+label {
+  background-color: rgba(var(--button-background-active), var(--header-editadd-opacity));
+}
+
+.is-header-editadd-opacity .form-input-button .header-edit[type="checkbox"]:active+label,
+.is-header-editadd-opacity .form-input-button .header-edit[type="checkbox"]:checked+label {
+  background-color: transparent;
+}
+
+.form-input-button .header-edit[type="checkbox"]+label:after {
+  background-color: rgba(var(--button-border), var(--header-editadd-opacity));
+}
+
+.form-input-button .header-edit[type="checkbox"]:focus+label:after,
+.form-input-button .header-edit[type="checkbox"]:hover+label:after {
+  background-color: rgba(var(--button-border-focus-hover), var(--header-editadd-opacity));
+}
+
+.form-input-button .header-edit[type="checkbox"]:active+label:after {
+  background-color: rgb(var(--button-border-active));
+}
+
+.form-input-button .header-edit[type="checkbox"]:checked+label:after {
+  background-color: rgb(var(--button-border-active));
+}
+
+.is-header-editadd-opacity .form-input-button .header-edit[type="checkbox"]:active+label:after,
+.is-header-editadd-opacity .form-input-button .header-edit[type="checkbox"]:checked+label:after {
+  background-color: transparent;
+}
+
+.header-add {
+  background-color: rgba(var(--button-background), var(--header-editadd-opacity));
+}
+
+.header-add:focus,
+.header-add:hover {
+  background-color: rgba(var(--button-background-focus-hover), var(--header-editadd-opacity));
+}
+
+.header-add:active {
+  background-color: rgba(var(--button-background-active), var(--header-editadd-opacity));
+}
+
+.header-add:after {
+  background-color: rgba(var(--button-border), var(--header-editadd-opacity));
+}
+
+.header-add:focus:after,
+.header-add:hover:after {
+  background-color: rgba(var(--button-border-focus-hover), var(--header-editadd-opacity));
+}
+
+.header-add:active:after {
+  background-color: rgb(var(--button-border-active));
+}
+
+.is-header-add-opacity .header-add:active:after {
+  background-color: transparent;
+}
+
+.form-input-button .header-color[type="color"]+label,
+.form-input-button .header-accent[type="color"]+label {
+  background-color: rgba(var(--button-background), var(--header-coloraccent-opacity));
+}
+
+.form-input-button .header-color[type="color"]:focus+label,
+.form-input-button .header-color[type="color"]:hover+label,
+.form-input-button .header-accent[type="color"]:focus+label,
+.form-input-button .header-accent[type="color"]:hover+label {
+  background-color: rgba(var(--button-background-focus-hover), var(--header-coloraccent-opacity));
+}
+
+.form-input-button .header-color[type="color"]:active+label,
+.form-input-button .header-accent[type="color"]:active+label {
+  background-color: rgba(var(--button-background-active), var(--header-coloraccent-opacity));
+}
+
+.form-input-button .header-color[type="color"]+label:after,
+.form-input-button .header-accent[type="color"]+label:after {
+  background-color: rgba(var(--button-border), var(--header-coloraccent-opacity));
+}
+
+.form-input-button .header-color[type="color"]:focus+label:after,
+.form-input-button .header-color[type="color"]:hover+label:after,
+.form-input-button .header-accent[type="color"]:focus+label:after,
+.form-input-button .header-accent[type="color"]:hover+label:after {
+  background-color: rgba(var(--button-border-focus-hover), var(--header-coloraccent-opacity));
+}
+
+.form-input-button .header-color[type="color"]:active+label:after,
+.form-input-button .header-accent[type="color"]:active+label:after {
+  background-color: rgb(var(--button-border-active));
+}
+
+.is-header-coloraccent-opacity .form-input-button .header-color[type="color"]:active+label:after,
+.is-header-coloraccent-opacity .form-input-button .header-accent[type="color"]:active+label:after {
+  background-color: transparent;
+}
+
+.header-menu {
+  background-color: rgba(var(--button-background), var(--header-menu-opacity));
+}
+
+.header-menu:focus,
+.header-menu:hover {
+  background-color: rgba(var(--button-background-focus-hover), var(--header-menu-opacity));
+}
+
+.header-menu:active {
+  background-color: rgba(var(--button-background-active), var(--header-menu-opacity));
+}
+
+.header-menu:after {
+  background-color: rgba(var(--button-border), var(--header-menu-opacity));
+}
+
+.header-menu:focus:after,
+.header-menu:hover:after {
+  background-color: rgba(var(--button-border-focus-hover), var(--header-menu-opacity));
+}
+
+.header-menu:active:after {
+  background-color: rgb(var(--button-border-active));
+}
+
+.is-header-menu-opacity .header-menu:active:after {
+  background-color: transparent;
+}
+
 .is-header-item-newline-search.is-header-search-width-by-custom .header-item-body-search {
   flex-grow: 0;
   width: var(--header-search-width-size);

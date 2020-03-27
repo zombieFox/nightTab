@@ -87,20 +87,25 @@
   --header-color-theme:                                 var(--theme-color-01);
   --header-color-custom:                                rgb(0, 0, 0);
   --header-opacity:                                     0.95;
-  --header-search-width-size:                           30%;
   --header-border-top:                                  0;
   --header-border-bottom:                               0;
   --header-date-size:                                   1em;
   --header-clock-size:                                  1em;
   --header-search-size:                                 1em;
+  --header-search-width-size:                           30%;
+  --header-search-opacity:                              1;
   --header-editadd-size:                                1em;
+  --header-editadd-opacity:                             1;
   --header-coloraccent-size:                            1em;
+  --header-coloraccent-opacity:                         1;
   --header-menu-size:                                   1em;
+  --header-menu-opacity:                                1;
   --header-greeting-size:                               1em;
   --header-transitional-size:                           1em;
   /* group */
   --group-name-size:                                    1em;
   --group-openall-size:                                 1em;
+  --group-openall-opacity:                              1;
   --group-border:                                       0;
   /* link */
   --link-area-width:                                    100%;
@@ -164,10 +169,6 @@
   --form-input-background-hover:                        var(--theme-color-02);
   --form-input-background-focus-active:                 var(--theme-color-01);
   --form-input-background-disabled:                     var(--theme-color-01);
-  --form-input-border:                                  var(--theme-color-02);
-  --form-input-border-hover:                            var(--theme-color-02);
-  --form-input-border-focus-active:                     var(--theme-color-01);
-  --form-input-border-disabled:                         var(--theme-color-01);
   --form-group-text-background:                         var(--theme-color-02);
   --form-group-text-background-focus-hover:             var(--theme-color-02);
   --form-group-text-background-active:                  var(--theme-color-02);

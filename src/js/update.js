@@ -907,6 +907,39 @@ var update = (function() {
     "5.1.0": function(data) {
       data.state.link.item.opacity = 1;
       return data;
+    },
+    "5.2.0": function(data) {
+      if (data.state.header.search.style == "box") {
+        data.state.header.search.opacity = 1;
+      } else if (data.state.header.search.style == "clear") {
+        data.state.header.search.opacity = 0;
+      };
+      if (data.state.header.editAdd.style == "box") {
+        data.state.header.editAdd.opacity = 1;
+      } else if (data.state.header.editAdd.style == "clear") {
+        data.state.header.editAdd.opacity = 0;
+      };
+      if (data.state.header.colorAccent.style == "box") {
+        data.state.header.colorAccent.opacity = 1;
+      } else if (data.state.header.colorAccent.style == "clear") {
+        data.state.header.colorAccent.opacity = 0;
+      };
+      if (data.state.header.menu.style == "box") {
+        data.state.header.menu.opacity = 1;
+      } else if (data.state.header.menu.style == "clear") {
+        data.state.header.menu.opacity = 0;
+      };
+      if (data.state.group.openAll.style == "box") {
+        data.state.group.openAll.opacity = 1;
+      } else if (data.state.group.openAll.style == "clear") {
+        data.state.group.openAll.opacity = 0;
+      };
+      delete data.state.header.search.style;
+      delete data.state.header.editAdd.style;
+      delete data.state.header.colorAccent.style;
+      delete data.state.header.menu.style;
+      delete data.state.group.openAll.style;
+      return data;
     }
   };
 

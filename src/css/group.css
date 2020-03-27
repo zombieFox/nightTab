@@ -152,6 +152,36 @@
   font-size: var(--group-openall-size);
 }
 
+.group-openall-item {
+  background-color: rgba(var(--button-background), var(--group-openall-opacity));
+}
+
+.group-openall-item:focus,
+.group-openall-item:hover {
+  background-color: rgba(var(--button-background-focus-hover), var(--group-openall-opacity));
+}
+
+.group-openall-item:active {
+  background-color: rgba(var(--button-background-active), var(--group-openall-opacity));
+}
+
+.group-openall-item:after {
+  background-color: rgba(var(--button-border), var(--group-openall-opacity));
+}
+
+.group-openall-item:focus:after,
+.group-openall-item:hover:after {
+  background-color: rgba(var(--button-border-focus-hover), var(--group-openall-opacity));
+}
+
+.group-openall-item:active:after {
+  background-color: rgb(var(--button-border-active));
+}
+
+.is-group-openall-opacity .group-openall-item:active:after {
+  background-color: transparent;
+}
+
 .group-body {
   background-color: transparent;
   font-size: var(--link-item-size);
