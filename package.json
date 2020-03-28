@@ -38,6 +38,7 @@
   },
   "homepage": "https://github.com/zombieFox/nightTab#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
     "gh-pages": "^2.1.1",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
@@ -48,6 +49,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-replace": "^1.0.0",
     "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0",
     "gulp-watch": "^5.0.1",
     "html5sortable": "^0.9.16",
     "moment": "^2.24.0",

@@ -12,6 +12,8 @@ const concat = require('gulp-concat');
 
 const uglify = require('gulp-uglify');
 
+const uglifycss = require('gulp-uglifycss');
+
 const replace = require('gulp-replace');
 
 const htmlmin = require('gulp-htmlmin');
@@ -133,6 +135,9 @@ const build = {
     return src(cssFiles)
       .pipe(concat(filename.css))
       .pipe(csso())
+      .pipe(uglifycss({
+        "uglyComments": true
+      }))
       .pipe(dest(path.build + '/css'))
   },
   js: function() {

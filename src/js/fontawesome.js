@@ -117,7 +117,7 @@ var fontawesome = (function() {
     label: "Amazon Pay"
   }, {
     name: "ambulance",
-    search: ["emergency", "emt", "er", "help", "hospital", "support", "vehicle"],
+    search: ["covid-19", "emergency", "emt", "er", "help", "hospital", "support", "vehicle"],
     styles: ["solid"],
     label: "ambulance"
   }, {
@@ -357,7 +357,7 @@ var fontawesome = (function() {
     label: "Atlassian"
   }, {
     name: "atom",
-    search: ["atheism", "chemistry", "ion", "nuclear", "science"],
+    search: ["atheism", "chemistry", "electron", "ion", "isotope", "neutron", "nuclear", "proton", "science"],
     styles: ["solid"],
     label: "Atom"
   }, {
@@ -421,10 +421,25 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Bacon"
   }, {
+    name: "bahai",
+    search: ["bahai", "bahá'í", "star"],
+    styles: ["solid"],
+    label: "Bahá'í"
+  }, {
     name: "balance-scale",
     search: ["balanced", "justice", "legal", "measure", "weight"],
     styles: ["solid"],
     label: "Balance Scale"
+  }, {
+    name: "balance-scale-left",
+    search: ["justice", "legal", "measure", "unbalanced", "weight"],
+    styles: ["solid"],
+    label: "Balance Scale (Left-Weighted)"
+  }, {
+    name: "balance-scale-right",
+    search: ["justice", "legal", "measure", "unbalanced", "weight"],
+    styles: ["solid"],
+    label: "Balance Scale (Right-Weighted)"
   }, {
     name: "ban",
     search: ["abort", "ban", "block", "cancel", "delete", "hide", "prohibit", "remove", "stop", "trash"],
@@ -497,7 +512,7 @@ var fontawesome = (function() {
     label: "Battle.net"
   }, {
     name: "bed",
-    search: ["lodging", "rest", "sleep", "travel"],
+    search: ["lodging", "mattress", "rest", "sleep", "travel"],
     styles: ["solid"],
     label: "Bed"
   }, {
@@ -541,6 +556,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Bicycle"
   }, {
+    name: "biking",
+    search: ["bicycle", "bike", "cycle", "cycling", "ride", "wheel"],
+    styles: ["solid"],
+    label: "Biking"
+  }, {
     name: "bimobject",
     search: [],
     styles: ["brands"],
@@ -552,7 +572,7 @@ var fontawesome = (function() {
     label: "Binoculars"
   }, {
     name: "biohazard",
-    search: ["danger", "dangerous", "hazmat", "medical", "radioactive", "toxic", "waste", "zombie"],
+    search: ["covid-19", "danger", "dangerous", "hazmat", "medical", "radioactive", "toxic", "waste", "zombie"],
     styles: ["solid"],
     label: "Biohazard"
   }, {
@@ -686,6 +706,21 @@ var fontawesome = (function() {
     styles: ["brands"],
     label: "Bootstrap"
   }, {
+    name: "border-all",
+    search: ["cell", "grid", "outline", "stroke", "table"],
+    styles: ["solid"],
+    label: "Border All"
+  }, {
+    name: "border-none",
+    search: ["cell", "grid", "outline", "stroke", "table"],
+    styles: ["solid"],
+    label: "Border None"
+  }, {
+    name: "border-style",
+    search: [],
+    styles: ["solid"],
+    label: "Border Style"
+  }, {
     name: "bowling-ball",
     search: ["alley", "candlepin", "gutter", "lane", "strike", "tenpin"],
     styles: ["solid"],
@@ -700,6 +735,11 @@ var fontawesome = (function() {
     search: ["archive", "container", "package", "storage", "unpack"],
     styles: ["solid"],
     label: "Box Open"
+  }, {
+    name: "box-tissue",
+    search: ["cough", "covid-19", "kleenex", "mucus", "nose", "sneeze", "snot"],
+    styles: ["solid"],
+    label: "Tissue Box"
   }, {
     name: "boxes",
     search: ["archives", "inventory", "storage", "warehouse"],
@@ -800,6 +840,11 @@ var fontawesome = (function() {
     search: ["alarm", "briefcase", "business socks", "clock", "flight of the conchords", "reminder", "wednesday"],
     styles: ["solid"],
     label: "Business Time"
+  }, {
+    name: "buy-n-large",
+    search: [],
+    styles: ["brands"],
+    label: "Buy n Large"
   }, {
     name: "buysellads",
     search: [],
@@ -910,6 +955,11 @@ var fontawesome = (function() {
     search: ["auto", "automobile", "sedan", "transportation", "travel", "vehicle"],
     styles: ["solid"],
     label: "Car Side"
+  }, {
+    name: "caravan",
+    search: ["camper", "motor home", "rv", "trailer", "travel"],
+    styles: ["solid"],
+    label: "Caravan"
   }, {
     name: "caret-down",
     search: ["arrow", "dropdown", "expand", "menu", "more", "triangle"],
@@ -1094,7 +1144,7 @@ var fontawesome = (function() {
     name: "check-double",
     search: ["accept", "agree", "checkmark", "confirm", "correct", "done", "notice", "notification", "notify", "ok", "select", "success", "tick", "todo"],
     styles: ["solid"],
-    label: "Check Double"
+    label: "Double Check"
   }, {
     name: "check-square",
     search: ["accept", "agree", "checkmark", "confirm", "correct", "done", "ok", "select", "success", "tick", "todo", "yes"],
@@ -1107,7 +1157,7 @@ var fontawesome = (function() {
     label: "Cheese"
   }, {
     name: "chess",
-    search: ["board", "checkmate", "game", "strategy", "tournament"],
+    search: ["board", "castle", "checkmate", "game", "king", "rook", "strategy", "tournament"],
     styles: ["solid"],
     label: "Chess"
   }, {
@@ -1222,7 +1272,7 @@ var fontawesome = (function() {
     label: "City"
   }, {
     name: "clinic-medical",
-    search: ["doctor", "general practitioner", "hospital", "infirmary", "medicine", "office", "outpatient"],
+    search: ["covid-19", "doctor", "general practitioner", "hospital", "infirmary", "medicine", "office", "outpatient"],
     styles: ["solid"],
     label: "Medical Clinic"
   }, {
@@ -1426,6 +1476,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Compress"
   }, {
+    name: "compress-alt",
+    search: ["collapse", "fullscreen", "minimize", "move", "resize", "shrink", "smaller"],
+    styles: ["solid"],
+    label: "Alternate Compress"
+  }, {
     name: "compress-arrows-alt",
     search: ["collapse", "fullscreen", "minimize", "move", "resize", "shrink", "smaller"],
     styles: ["solid"],
@@ -1470,6 +1525,11 @@ var fontawesome = (function() {
     search: ["brand", "mark", "register", "trademark"],
     styles: ["solid", "regular"],
     label: "Copyright"
+  }, {
+    name: "cotton-bureau",
+    search: ["clothing", "t-shirts", "tshirts"],
+    styles: ["brands"],
+    label: "Cotton Bureau"
   }, {
     name: "couch",
     search: ["chair", "cushion", "furniture", "relax", "sofa"],
@@ -1636,6 +1696,11 @@ var fontawesome = (function() {
     styles: ["brands"],
     label: "D&D Beyond"
   }, {
+    name: "dailymotion",
+    search: [],
+    styles: ["brands"],
+    label: "dailymotion"
+  }, {
     name: "dashcube",
     search: [],
     styles: ["brands"],
@@ -1780,6 +1845,11 @@ var fontawesome = (function() {
     search: [],
     styles: ["brands"],
     label: "Discourse"
+  }, {
+    name: "disease",
+    search: ["bacteria", "cancer", "covid-19", "illness", "infection", "sickness", "virus"],
+    styles: ["solid"],
+    label: "Disease"
   }, {
     name: "divide",
     search: ["arithmetic", "calculus", "division", "math"],
@@ -2086,6 +2156,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Expand"
   }, {
+    name: "expand-alt",
+    search: ["arrow", "bigger", "enlarge", "resize"],
+    styles: ["solid"],
+    label: "Alternate Expand"
+  }, {
     name: "expand-arrows-alt",
     search: ["arrows-alt", "bigger", "enlarge", "move", "resize"],
     styles: ["solid"],
@@ -2141,6 +2216,11 @@ var fontawesome = (function() {
     styles: ["brands"],
     label: "Facebook Square"
   }, {
+    name: "fan",
+    search: ["ac", "air conditioning", "blade", "blower", "cool", "hot"],
+    styles: ["solid"],
+    label: "Fan"
+  }, {
     name: "fantasy-flight-games",
     search: ["Dungeons & Dragons", "d&d", "dnd", "fantasy", "game", "gaming", "tabletop"],
     styles: ["brands"],
@@ -2155,6 +2235,11 @@ var fontawesome = (function() {
     search: ["end", "last", "next"],
     styles: ["solid"],
     label: "fast-forward"
+  }, {
+    name: "faucet",
+    search: ["covid-19", "drip", "house", "hygiene", "kitchen", "sink", "water"],
+    styles: ["solid"],
+    label: "Faucet"
   }, {
     name: "fax",
     search: ["business", "communicate", "copy", "facsimile", "send"],
@@ -2356,6 +2441,11 @@ var fontawesome = (function() {
     styles: ["brands"],
     label: "Firefox"
   }, {
+    name: "firefox-browser",
+    search: ["browser"],
+    styles: ["brands"],
+    label: "Firefox Browser"
+  }, {
     name: "first-aid",
     search: ["emergency", "emt", "health", "medical", "rescue"],
     styles: ["solid"],
@@ -2466,12 +2556,6 @@ var fontawesome = (function() {
     styles: ["brands"],
     label: "Font Awesome Flag"
   }, {
-    name: "font-awesome-logo-full",
-    search: [],
-    styles: ["regular", "solid", "brands"],
-    label: "Font Awesome Full Logo",
-    private: true
-  }, {
     name: "fonticons",
     search: [],
     styles: ["brands"],
@@ -2515,7 +2599,7 @@ var fontawesome = (function() {
     name: "free-code-camp",
     search: [],
     styles: ["brands"],
-    label: "Free Code Camp"
+    label: "freeCodeCamp"
   }, {
     name: "freebsd",
     search: [],
@@ -2563,7 +2647,7 @@ var fontawesome = (function() {
     label: "Galactic Senate"
   }, {
     name: "gamepad",
-    search: ["controller", "d-pad", "joystick", "video"],
+    search: ["arcade", "controller", "d-pad", "joystick", "video", "video game"],
     styles: ["solid"],
     label: "Gamepad"
   }, {
@@ -2621,6 +2705,11 @@ var fontawesome = (function() {
     search: [],
     styles: ["brands"],
     label: "Git"
+  }, {
+    name: "git-alt",
+    search: [],
+    styles: ["brands"],
+    label: "Git Alt"
   }, {
     name: "git-square",
     search: [],
@@ -2957,10 +3046,20 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Hand Holding Heart"
   }, {
+    name: "hand-holding-medical",
+    search: ["care", "covid-19", "donate", "help"],
+    styles: ["solid"],
+    label: "Hand Holding Medical Cross"
+  }, {
     name: "hand-holding-usd",
     search: ["$", "carry", "dollar sign", "donation", "giving", "lift", "money", "price"],
     styles: ["solid"],
     label: "Hand Holding US Dollar"
+  }, {
+    name: "hand-holding-water",
+    search: ["carry", "covid-19", "drought", "grow", "lift"],
+    styles: ["solid"],
+    label: "Hand Holding Water"
   }, {
     name: "hand-lizard",
     search: ["game", "roshambo"],
@@ -3017,6 +3116,11 @@ var fontawesome = (function() {
     styles: ["solid", "regular"],
     label: "Scissors (Hand)"
   }, {
+    name: "hand-sparkles",
+    search: ["clean", "covid-19", "hygiene", "magic", "soap", "wash"],
+    styles: ["solid"],
+    label: "Hand Sparkles"
+  }, {
     name: "hand-spock",
     search: ["live long", "prosper", "salute", "star trek", "vulcan"],
     styles: ["solid", "regular"],
@@ -3032,10 +3136,25 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Helping Hands"
   }, {
+    name: "hands-wash",
+    search: ["covid-19", "hygiene", "soap", "wash"],
+    styles: ["solid"],
+    label: "Hands Wash"
+  }, {
     name: "handshake",
     search: ["agreement", "greeting", "meeting", "partnership"],
     styles: ["solid", "regular"],
     label: "Handshake"
+  }, {
+    name: "handshake-alt-slash",
+    search: ["broken", "covid-19", "social distance"],
+    styles: ["solid"],
+    label: "Handshake Alternate Slash"
+  }, {
+    name: "handshake-slash",
+    search: ["broken", "covid-19", "social distance"],
+    styles: ["solid"],
+    label: "Handshake Slash"
   }, {
     name: "hanukiah",
     search: ["candle", "hanukkah", "jewish", "judaism", "light"],
@@ -3052,20 +3171,45 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Hashtag"
   }, {
+    name: "hat-cowboy",
+    search: ["buckaroo", "horse", "jackeroo", "john b.", "old west", "pardner", "ranch", "rancher", "rodeo", "western", "wrangler"],
+    styles: ["solid"],
+    label: "Cowboy Hat"
+  }, {
+    name: "hat-cowboy-side",
+    search: ["buckaroo", "horse", "jackeroo", "john b.", "old west", "pardner", "ranch", "rancher", "rodeo", "western", "wrangler"],
+    styles: ["solid"],
+    label: "Cowboy Hat Side"
+  }, {
     name: "hat-wizard",
     search: ["Dungeons & Dragons", "accessory", "buckle", "clothing", "d&d", "dnd", "fantasy", "halloween", "head", "holiday", "mage", "magic", "pointy", "witch"],
     styles: ["solid"],
     label: "Wizard's Hat"
   }, {
-    name: "haykal",
-    search: ["bahai", "bahá'í", "star"],
-    styles: ["solid"],
-    label: "Haykal"
-  }, {
     name: "hdd",
     search: ["cpu", "hard drive", "harddrive", "machine", "save", "storage"],
     styles: ["solid", "regular"],
     label: "HDD"
+  }, {
+    name: "head-side-cough",
+    search: ["cough", "covid-19", "germs", "lungs", "respiratory", "sick"],
+    styles: ["solid"],
+    label: "Head Side Cough"
+  }, {
+    name: "head-side-cough-slash",
+    search: ["cough", "covid-19", "germs", "lungs", "respiratory", "sick"],
+    styles: ["solid"],
+    label: "Head Side-cough-slash"
+  }, {
+    name: "head-side-mask",
+    search: ["breath", "covid-19", "filter", "respirator", "virus"],
+    styles: ["solid"],
+    label: "Head Side Mask"
+  }, {
+    name: "head-side-virus",
+    search: ["cold", "covid-19", "flu", "sick"],
+    styles: ["solid"],
+    label: "Head Side Virus"
   }, {
     name: "heading",
     search: ["format", "header", "text", "title"],
@@ -3173,19 +3317,24 @@ var fontawesome = (function() {
     label: "Horse Head"
   }, {
     name: "hospital",
-    search: ["building", "emergency room", "medical center"],
+    search: ["building", "covid-19", "emergency room", "medical center"],
     styles: ["solid", "regular"],
     label: "hospital"
   }, {
     name: "hospital-alt",
-    search: ["building", "emergency room", "medical center"],
+    search: ["building", "covid-19", "emergency room", "medical center"],
     styles: ["solid"],
     label: "Alternate Hospital"
   }, {
     name: "hospital-symbol",
-    search: ["clinic", "emergency", "map"],
+    search: ["clinic", "covid-19", "emergency", "map"],
     styles: ["solid"],
     label: "Hospital Symbol"
+  }, {
+    name: "hospital-user",
+    search: ["covid-19", "doctor", "network", "patient", "primary care"],
+    styles: ["solid"],
+    label: "Hospital with User"
   }, {
     name: "hot-tub",
     search: ["bath", "jacuzzi", "massage", "sauna", "spa"],
@@ -3232,6 +3381,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Damaged House"
   }, {
+    name: "house-user",
+    search: ["covid-19", "home", "isolation", "quarantine"],
+    styles: ["solid"],
+    label: "House User"
+  }, {
     name: "houzz",
     search: [],
     styles: ["brands"],
@@ -3267,6 +3421,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Icicles"
   }, {
+    name: "icons",
+    search: ["bolt", "emoji", "heart", "image", "music", "photo", "symbols"],
+    styles: ["solid"],
+    label: "Icons"
+  }, {
     name: "id-badge",
     search: ["address", "contact", "identification", "license", "profile"],
     styles: ["solid", "regular"],
@@ -3281,6 +3440,11 @@ var fontawesome = (function() {
     search: ["contact", "demographics", "document", "identification", "issued", "profile"],
     styles: ["solid"],
     label: "Alternate Identification Card"
+  }, {
+    name: "ideal",
+    search: [],
+    styles: ["brands"],
+    label: "iDeal"
   }, {
     name: "igloo",
     search: ["dome", "dwelling", "eskimo", "home", "house", "ice", "snow"],
@@ -3336,6 +3500,11 @@ var fontawesome = (function() {
     search: [],
     styles: ["brands"],
     label: "Instagram"
+  }, {
+    name: "instagram-square",
+    search: [],
+    styles: ["brands"],
+    label: "Instagram Square"
   }, {
     name: "intercom",
     search: ["app", "customer", "messenger"],
@@ -3526,6 +3695,11 @@ var fontawesome = (function() {
     search: ["computer", "cpu", "dell", "demo", "develop", "device", "mac", "macbook", "machine", "pc"],
     styles: ["solid"],
     label: "Laptop Code"
+  }, {
+    name: "laptop-house",
+    search: ["computer", "covid-19", "device", "office", "remote", "work from home"],
+    styles: ["solid"],
+    label: "Laptop House"
   }, {
     name: "laptop-medical",
     search: ["computer", "device", "ehr", "electronic health records", "history"],
@@ -3722,6 +3896,16 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Luggage Cart"
   }, {
+    name: "lungs",
+    search: ["air", "breath", "covid-19", "organ", "respiratory"],
+    styles: ["solid"],
+    label: "Lungs"
+  }, {
+    name: "lungs-virus",
+    search: ["breath", "covid-19", "respiratory", "sick"],
+    styles: ["solid"],
+    label: "Lungs Virus"
+  }, {
     name: "lyft",
     search: [],
     styles: ["brands"],
@@ -3847,6 +4031,11 @@ var fontawesome = (function() {
     styles: ["brands"],
     label: "MaxCDN"
   }, {
+    name: "mdb",
+    search: [],
+    styles: ["brands"],
+    label: "Material Design for Bootstrap"
+  }, {
     name: "medal",
     search: ["award", "ribbon", "star", "trophy"],
     styles: ["solid"],
@@ -3927,6 +4116,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Meteor"
   }, {
+    name: "microblog",
+    search: [],
+    styles: ["brands"],
+    label: "Micro.blog"
+  }, {
     name: "microchip",
     search: ["cpu", "hardware", "processor", "technology"],
     styles: ["solid"],
@@ -3953,7 +4147,7 @@ var fontawesome = (function() {
     label: "Microphone Slash"
   }, {
     name: "microscope",
-    search: ["electron", "lens", "optics", "science", "shrink"],
+    search: ["covid-19", "electron", "lens", "optics", "science", "shrink"],
     styles: ["solid"],
     label: "Microscope"
   }, {
@@ -3991,6 +4185,11 @@ var fontawesome = (function() {
     search: [],
     styles: ["brands"],
     label: "Mixcloud"
+  }, {
+    name: "mixer",
+    search: [],
+    styles: ["brands"],
+    label: "Mixer"
   }, {
     name: "mizuni",
     search: [],
@@ -4077,6 +4276,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Mountain"
   }, {
+    name: "mouse",
+    search: ["click", "computer", "cursor", "input", "peripheral"],
+    styles: ["solid"],
+    label: "Mouse"
+  }, {
     name: "mouse-pointer",
     search: ["arrow", "cursor", "select"],
     styles: ["solid"],
@@ -4121,11 +4325,6 @@ var fontawesome = (function() {
     search: [],
     styles: ["brands"],
     label: "Nimblr"
-  }, {
-    name: "nintendo-switch",
-    search: [],
-    styles: ["brands"],
-    label: "Nintendo Switch"
   }, {
     name: "node",
     search: [],
@@ -4216,6 +4415,11 @@ var fontawesome = (function() {
     search: [],
     styles: ["brands"],
     label: "Optin Monster"
+  }, {
+    name: "orcid",
+    search: [],
+    styles: ["brands"],
+    label: "ORCID"
   }, {
     name: "osi",
     search: [],
@@ -4382,6 +4586,11 @@ var fontawesome = (function() {
     styles: ["brands"],
     label: "Penny Arcade"
   }, {
+    name: "people-arrows",
+    search: ["covid-19", "personal space", "social distance", "space", "spread", "users"],
+    styles: ["solid"],
+    label: "People Arrows"
+  }, {
     name: "people-carry",
     search: ["box", "carry", "fragile", "help", "movers", "package"],
     styles: ["solid"],
@@ -4432,6 +4641,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Phone"
   }, {
+    name: "phone-alt",
+    search: ["call", "earphone", "number", "support", "telephone", "voice"],
+    styles: ["solid"],
+    label: "Alternate Phone"
+  }, {
     name: "phone-slash",
     search: ["call", "cancel", "earphone", "mute", "number", "support", "telephone", "voice"],
     styles: ["solid"],
@@ -4442,10 +4656,20 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Phone Square"
   }, {
+    name: "phone-square-alt",
+    search: ["call", "earphone", "number", "support", "telephone", "voice"],
+    styles: ["solid"],
+    label: "Alternate Phone Square"
+  }, {
     name: "phone-volume",
     search: ["call", "earphone", "number", "sound", "support", "telephone", "voice", "volume-control-phone"],
     styles: ["solid"],
     label: "Phone Volume"
+  }, {
+    name: "photo-video",
+    search: ["av", "film", "image", "library", "media"],
+    styles: ["solid"],
+    label: "Photo Video"
   }, {
     name: "php",
     search: [],
@@ -4460,17 +4684,22 @@ var fontawesome = (function() {
     name: "pied-piper-alt",
     search: [],
     styles: ["brands"],
-    label: "Alternate Pied Piper Logo"
+    label: "Alternate Pied Piper Logo (Old)"
   }, {
     name: "pied-piper-hat",
     search: ["clothing"],
     styles: ["brands"],
-    label: "Pied Piper-hat"
+    label: "Pied Piper Hat (Old)"
   }, {
     name: "pied-piper-pp",
     search: [],
     styles: ["brands"],
     label: "Pied Piper PP Logo (Old)"
+  }, {
+    name: "pied-piper-square",
+    search: [],
+    styles: ["brands"],
+    label: "Pied Piper Square Logo (Old)"
   }, {
     name: "piggy-bank",
     search: ["bank", "save", "savings"],
@@ -4521,6 +4750,11 @@ var fontawesome = (function() {
     search: ["airplane", "departing", "destination", "fly", "location", "mode", "take off", "taking off", "travel", "trip"],
     styles: ["solid"],
     label: "Plane Departure"
+  }, {
+    name: "plane-slash",
+    search: ["airplane mode", "canceled", "covid-19", "delayed", "grounded", "travel"],
+    styles: ["solid"],
+    label: "Plane Slash"
   }, {
     name: "play",
     search: ["audio", "music", "playing", "sound", "start", "video"],
@@ -4647,6 +4881,16 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Project Diagram"
   }, {
+    name: "pump-medical",
+    search: ["anti-bacterial", "clean", "covid-19", "disinfect", "hygiene", "medical grade", "sanitizer", "soap"],
+    styles: ["solid"],
+    label: "Pump Medical"
+  }, {
+    name: "pump-soap",
+    search: ["anti-bacterial", "clean", "covid-19", "disinfect", "hygiene", "sanitizer", "soap"],
+    styles: ["solid"],
+    label: "Pump Soap"
+  }, {
     name: "pushed",
     search: [],
     styles: ["brands"],
@@ -4772,6 +5016,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Receipt"
   }, {
+    name: "record-vinyl",
+    search: ["LP", "album", "analog", "music", "phonograph", "sound"],
+    styles: ["solid"],
+    label: "Record Vinyl"
+  }, {
     name: "recycle",
     search: ["Waste", "compost", "garbage", "reuse", "trash"],
     styles: ["solid"],
@@ -4816,6 +5065,11 @@ var fontawesome = (function() {
     search: ["copyright", "mark", "trademark"],
     styles: ["solid", "regular"],
     label: "Registered Trademark"
+  }, {
+    name: "remove-format",
+    search: ["cancel", "font", "format", "remove", "style", "text"],
+    styles: ["solid"],
+    label: "Remove Format"
   }, {
     name: "renren",
     search: [],
@@ -4983,7 +5237,7 @@ var fontawesome = (function() {
     label: "Satellite"
   }, {
     name: "satellite-dish",
-    search: ["SETI", "communications", "hardware", "receiver", "saucer", "signal"],
+    search: ["SETI", "communications", "hardware", "receiver", "saucer", "signal", "space"],
     styles: ["solid"],
     label: "Satellite Dish"
   }, {
@@ -5112,6 +5366,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Alternate Shield"
   }, {
+    name: "shield-virus",
+    search: ["antibodies", "barrier", "covid-19", "health", "protect"],
+    styles: ["solid"],
+    label: "Shield Virus"
+  }, {
     name: "ship",
     search: ["boat", "sea", "water"],
     styles: ["solid"],
@@ -5131,6 +5390,11 @@ var fontawesome = (function() {
     search: ["feet", "footprints", "steps", "walk"],
     styles: ["solid"],
     label: "Shoe Prints"
+  }, {
+    name: "shopify",
+    search: [],
+    styles: ["brands"],
+    label: "Shopify"
   }, {
     name: "shopping-bag",
     search: ["buy", "checkout", "grocery", "payment", "purchase"],
@@ -5357,6 +5621,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Snowplow"
   }, {
+    name: "soap",
+    search: ["bubbles", "clean", "covid-19", "hygiene", "wash"],
+    styles: ["solid"],
+    label: "Soap"
+  }, {
     name: "socks",
     search: ["business socks", "business time", "clothing", "feet", "flight of the conchords", "wednesday"],
     styles: ["solid"],
@@ -5373,24 +5642,44 @@ var fontawesome = (function() {
     label: "Sort"
   }, {
     name: "sort-alpha-down",
-    search: ["filter", "order", "sort-alpha-asc"],
+    search: ["alphabetical", "arrange", "filter", "order", "sort-alpha-asc"],
     styles: ["solid"],
-    label: "Sort Alpha Down"
+    label: "Sort Alphabetical Down"
+  }, {
+    name: "sort-alpha-down-alt",
+    search: ["alphabetical", "arrange", "filter", "order", "sort-alpha-asc"],
+    styles: ["solid"],
+    label: "Alternate Sort Alphabetical Down"
   }, {
     name: "sort-alpha-up",
-    search: ["filter", "order", "sort-alpha-desc"],
+    search: ["alphabetical", "arrange", "filter", "order", "sort-alpha-desc"],
     styles: ["solid"],
-    label: "Sort Alpha Up"
+    label: "Sort Alphabetical Up"
+  }, {
+    name: "sort-alpha-up-alt",
+    search: ["alphabetical", "arrange", "filter", "order", "sort-alpha-desc"],
+    styles: ["solid"],
+    label: "Alternate Sort Alphabetical Up"
   }, {
     name: "sort-amount-down",
-    search: ["filter", "order", "sort-amount-asc"],
+    search: ["arrange", "filter", "number", "order", "sort-amount-asc"],
     styles: ["solid"],
     label: "Sort Amount Down"
   }, {
+    name: "sort-amount-down-alt",
+    search: ["arrange", "filter", "order", "sort-amount-asc"],
+    styles: ["solid"],
+    label: "Alternate Sort Amount Down"
+  }, {
     name: "sort-amount-up",
-    search: ["filter", "order", "sort-amount-desc"],
+    search: ["arrange", "filter", "order", "sort-amount-desc"],
     styles: ["solid"],
     label: "Sort Amount Up"
+  }, {
+    name: "sort-amount-up-alt",
+    search: ["arrange", "filter", "order", "sort-amount-desc"],
+    styles: ["solid"],
+    label: "Alternate Sort Amount Up"
   }, {
     name: "sort-down",
     search: ["arrow", "descending", "filter", "order", "sort-desc"],
@@ -5398,14 +5687,24 @@ var fontawesome = (function() {
     label: "Sort Down (Descending)"
   }, {
     name: "sort-numeric-down",
-    search: ["filter", "numbers", "order", "sort-numeric-asc"],
+    search: ["arrange", "filter", "numbers", "order", "sort-numeric-asc"],
     styles: ["solid"],
     label: "Sort Numeric Down"
   }, {
+    name: "sort-numeric-down-alt",
+    search: ["arrange", "filter", "numbers", "order", "sort-numeric-asc"],
+    styles: ["solid"],
+    label: "Alternate Sort Numeric Down"
+  }, {
     name: "sort-numeric-up",
-    search: ["filter", "numbers", "order", "sort-numeric-desc"],
+    search: ["arrange", "filter", "numbers", "order", "sort-numeric-desc"],
     styles: ["solid"],
     label: "Sort Numeric Up"
+  }, {
+    name: "sort-numeric-up-alt",
+    search: ["arrange", "filter", "numbers", "order", "sort-numeric-desc"],
+    styles: ["solid"],
+    label: "Alternate Sort Numeric Up"
   }, {
     name: "sort-up",
     search: ["arrow", "ascending", "filter", "order", "sort-asc"],
@@ -5428,7 +5727,7 @@ var fontawesome = (function() {
     label: "Spa"
   }, {
     name: "space-shuttle",
-    search: ["astronaut", "machine", "nasa", "rocket", "transportation"],
+    search: ["astronaut", "machine", "nasa", "rocket", "space", "transportation"],
     styles: ["solid"],
     label: "Space Shuttle"
   }, {
@@ -5441,6 +5740,11 @@ var fontawesome = (function() {
     search: [],
     styles: ["brands"],
     label: "Speaker Deck"
+  }, {
+    name: "spell-check",
+    search: ["dictionary", "edit", "editor", "grammar", "text"],
+    styles: ["solid"],
+    label: "Spell Check"
   }, {
     name: "spider",
     search: ["arachnid", "bug", "charlotte", "crawl", "eight", "halloween"],
@@ -5496,6 +5800,11 @@ var fontawesome = (function() {
     search: [],
     styles: ["brands"],
     label: "Stack Overflow"
+  }, {
+    name: "stackpath",
+    search: [],
+    styles: ["brands"],
+    label: "Stackpath"
   }, {
     name: "stamp",
     search: ["art", "certificate", "imprint", "rubber", "seal"],
@@ -5563,7 +5872,7 @@ var fontawesome = (function() {
     label: "step-forward"
   }, {
     name: "stethoscope",
-    search: ["diagnosis", "doctor", "general practitioner", "hospital", "infirmary", "medicine", "office", "outpatient"],
+    search: ["covid-19", "diagnosis", "doctor", "general practitioner", "hospital", "infirmary", "medicine", "office", "outpatient"],
     styles: ["solid"],
     label: "Stethoscope"
   }, {
@@ -5592,6 +5901,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Stopwatch"
   }, {
+    name: "stopwatch-20",
+    search: ["ABCs", "countdown", "covid-19", "happy birthday", "i will survive", "reminder", "seconds", "time", "timer"],
+    styles: ["solid"],
+    label: "Stopwatch 20"
+  }, {
     name: "store",
     search: ["building", "buy", "purchase", "shopping"],
     styles: ["solid"],
@@ -5601,6 +5915,16 @@ var fontawesome = (function() {
     search: ["building", "buy", "purchase", "shopping"],
     styles: ["solid"],
     label: "Alternate Store"
+  }, {
+    name: "store-alt-slash",
+    search: ["building", "buy", "closed", "covid-19", "purchase", "shopping"],
+    styles: ["solid"],
+    label: "Alternate Store Slash"
+  }, {
+    name: "store-slash",
+    search: ["building", "buy", "closed", "covid-19", "purchase", "shopping"],
+    styles: ["solid"],
+    label: "Store Slash"
   }, {
     name: "strava",
     search: [],
@@ -5707,6 +6031,11 @@ var fontawesome = (function() {
     styles: ["solid"],
     label: "Swatchbook"
   }, {
+    name: "swift",
+    search: [],
+    styles: ["brands"],
+    label: "Swift"
+  }, {
     name: "swimmer",
     search: ["athlete", "head", "man", "olympics", "person", "pool", "water"],
     styles: ["solid"],
@@ -5738,7 +6067,7 @@ var fontawesome = (function() {
     label: "Alternate Sync"
   }, {
     name: "syringe",
-    search: ["doctor", "immunizations", "medical", "needle"],
+    search: ["covid-19", "doctor", "immunizations", "medical", "needle"],
     styles: ["solid"],
     label: "Syringe"
   }, {
@@ -5823,12 +6152,12 @@ var fontawesome = (function() {
     label: "Telegram Plane"
   }, {
     name: "temperature-high",
-    search: ["cook", "mercury", "summer", "thermometer", "warm"],
+    search: ["cook", "covid-19", "mercury", "summer", "thermometer", "warm"],
     styles: ["solid"],
     label: "High Temperature"
   }, {
     name: "temperature-low",
-    search: ["cold", "cool", "mercury", "thermometer", "winter"],
+    search: ["cold", "cool", "covid-19", "mercury", "thermometer", "winter"],
     styles: ["solid"],
     label: "Low Temperature"
   }, {
@@ -5855,7 +6184,7 @@ var fontawesome = (function() {
     name: "text-width",
     search: ["edit", "font", "format", "text", "type"],
     styles: ["solid"],
-    label: "text-width"
+    label: "Text Width"
   }, {
     name: "th",
     search: ["blocks", "boxes", "grid", "squares"],
@@ -5893,7 +6222,7 @@ var fontawesome = (function() {
     label: "ThemeIsle"
   }, {
     name: "thermometer",
-    search: ["mercury", "status", "temperature"],
+    search: ["covid-19", "mercury", "status", "temperature"],
     styles: ["solid"],
     label: "Thermometer"
   }, {
@@ -5988,9 +6317,14 @@ var fontawesome = (function() {
     label: "Toilet"
   }, {
     name: "toilet-paper",
-    search: ["bathroom", "halloween", "holiday", "lavatory", "prank", "restroom", "roll"],
+    search: ["bathroom", "covid-19", "halloween", "holiday", "lavatory", "prank", "restroom", "roll"],
     styles: ["solid"],
     label: "Toilet Paper"
+  }, {
+    name: "toilet-paper-slash",
+    search: ["bathroom", "covid-19", "halloween", "holiday", "lavatory", "leaves", "prank", "restroom", "roll", "trouble", "ut oh"],
+    styles: ["solid"],
+    label: "Toilet Paper Slash"
   }, {
     name: "toolbox",
     search: ["admin", "container", "fix", "repair", "settings", "tools"],
@@ -6008,7 +6342,7 @@ var fontawesome = (function() {
     label: "Tooth"
   }, {
     name: "torah",
-    search: ["book", "jewish", "judaism", "religion"],
+    search: ["book", "jewish", "judaism", "religion", "scroll"],
     styles: ["solid"],
     label: "Torah"
   }, {
@@ -6036,6 +6370,11 @@ var fontawesome = (function() {
     search: ["direction", "road", "signal", "travel"],
     styles: ["solid"],
     label: "Traffic Light"
+  }, {
+    name: "trailer",
+    search: ["carry", "haul", "moving", "travel"],
+    styles: ["solid"],
+    label: "Trailer"
   }, {
     name: "train",
     search: ["bullet", "commute", "locomotive", "railway", "subway"],
@@ -6182,6 +6521,11 @@ var fontawesome = (function() {
     styles: ["brands"],
     label: "UIkit"
   }, {
+    name: "umbraco",
+    search: [],
+    styles: ["brands"],
+    label: "Umbraco"
+  }, {
     name: "umbrella",
     search: ["protection", "rain", "storm", "wet"],
     styles: ["solid"],
@@ -6211,6 +6555,11 @@ var fontawesome = (function() {
     search: [],
     styles: ["brands"],
     label: "Uniregistry"
+  }, {
+    name: "unity",
+    search: [],
+    styles: ["brands"],
+    label: "Unity 3D"
   }, {
     name: "universal-access",
     search: ["accessibility", "hearing", "person", "seeing", "visual impairment"],
@@ -6323,7 +6672,7 @@ var fontawesome = (function() {
     label: "User Lock"
   }, {
     name: "user-md",
-    search: ["job", "medical", "nurse", "occupation", "physician", "profile", "surgeon"],
+    search: ["covid-19", "job", "medical", "nurse", "occupation", "physician", "profile", "surgeon"],
     styles: ["solid"],
     label: "Doctor"
   }, {
@@ -6338,7 +6687,7 @@ var fontawesome = (function() {
     label: "User Ninja"
   }, {
     name: "user-nurse",
-    search: ["doctor", "midwife", "practitioner", "surgeon"],
+    search: ["covid-19", "doctor", "midwife", "practitioner", "surgeon"],
     styles: ["solid"],
     label: "Nurse"
   }, {
@@ -6497,6 +6846,21 @@ var fontawesome = (function() {
     styles: ["brands"],
     label: "Vine"
   }, {
+    name: "virus",
+    search: ["bug", "covid-19", "flu", "health", "sick", "viral"],
+    styles: ["solid"],
+    label: "Virus"
+  }, {
+    name: "virus-slash",
+    search: ["bug", "covid-19", "cure", "eliminate", "flu", "health", "sick", "viral"],
+    styles: ["solid"],
+    label: "Virus Slash"
+  }, {
+    name: "viruses",
+    search: ["bugs", "covid-19", "flu", "health", "multiply", "sick", "spread", "viral"],
+    styles: ["solid"],
+    label: "Viruses"
+  }, {
     name: "vk",
     search: [],
     styles: ["brands"],
@@ -6506,6 +6870,11 @@ var fontawesome = (function() {
     search: [],
     styles: ["brands"],
     label: "VNV"
+  }, {
+    name: "voicemail",
+    search: ["answer", "inbox", "message", "phone"],
+    styles: ["solid"],
+    label: "Voicemail"
   }, {
     name: "volleyball-ball",
     search: ["beach", "olympics", "sport"],
