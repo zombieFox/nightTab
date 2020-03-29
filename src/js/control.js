@@ -120,8 +120,57 @@ var control = (function() {
       path: "theme.accent.rgb",
       type: "text",
       valueConvert: ["hexTextString"]
+    }, {
+      element: ".control-theme-accent-hsl-h-range",
+      path: "theme.accent.hsl.h",
+      type: "range"
+    }, {
+      element: ".control-theme-accent-hsl-h-number",
+      path: "theme.accent.hsl.h",
+      type: "number"
+    }, {
+      element: ".control-theme-accent-hsl-s-range",
+      path: "theme.accent.hsl.s",
+      type: "range"
+    }, {
+      element: ".control-theme-accent-hsl-s-number",
+      path: "theme.accent.hsl.s",
+      type: "number"
+    }, {
+      element: ".control-theme-accent-hsl-l-range",
+      path: "theme.accent.hsl.l",
+      type: "range"
+    }, {
+      element: ".control-theme-accent-hsl-l-number",
+      path: "theme.accent.hsl.l",
+      type: "number"
+    }, {
+      element: ".control-theme-accent-rgb-r-range",
+      path: "theme.accent.rgb.r",
+      type: "range"
+    }, {
+      element: ".control-theme-accent-rgb-r-number",
+      path: "theme.accent.rgb.r",
+      type: "number"
+    }, {
+      element: ".control-theme-accent-rgb-g-range",
+      path: "theme.accent.rgb.g",
+      type: "range"
+    }, {
+      element: ".control-theme-accent-rgb-g-number",
+      path: "theme.accent.rgb.g",
+      type: "number"
+    }, {
+      element: ".control-theme-accent-rgb-b-range",
+      path: "theme.accent.rgb.b",
+      type: "range"
+    }, {
+      element: ".control-theme-accent-rgb-b-number",
+      path: "theme.accent.rgb.b",
+      type: "number"
     }],
     func: function() {
+      theme.mod.accent.hsl();
       theme.render.accent.color();
     }
   }];
@@ -5541,8 +5590,57 @@ var control = (function() {
             path: "theme.accent.rgb",
             type: "text",
             valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-hsl-h-range",
+            path: "theme.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-h-number",
+            path: "theme.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-s-range",
+            path: "theme.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-s-number",
+            path: "theme.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-l-range",
+            path: "theme.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-l-number",
+            path: "theme.accent.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-r-range",
+            path: "theme.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-r-number",
+            path: "theme.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-g-range",
+            path: "theme.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-g-number",
+            path: "theme.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-b-range",
+            path: "theme.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-b-number",
+            path: "theme.accent.rgb.b",
+            type: "number"
           }],
           func: function() {
+            theme.mod.accent.hsl();
             theme.render.accent.color();
           }
         }, {
@@ -5558,8 +5656,57 @@ var control = (function() {
             element: ".control-theme-accent-rgb-color",
             path: "theme.accent.rgb",
             type: "color"
+          }, {
+            element: ".control-theme-accent-hsl-h-range",
+            path: "theme.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-h-number",
+            path: "theme.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-s-range",
+            path: "theme.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-s-number",
+            path: "theme.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-l-range",
+            path: "theme.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-l-number",
+            path: "theme.accent.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-r-range",
+            path: "theme.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-r-number",
+            path: "theme.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-g-range",
+            path: "theme.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-g-number",
+            path: "theme.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-b-range",
+            path: "theme.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-b-number",
+            path: "theme.accent.rgb.b",
+            type: "number"
           }],
           func: function() {
+            theme.mod.accent.hsl();
             theme.render.accent.color();
           }
         }, {
@@ -5567,9 +5714,658 @@ var control = (function() {
           type: "button",
           func: function() {
             mod.default("theme.accent.rgb");
+            theme.mod.accent.hsl();
             theme.render.accent.color();
             render.update.control.header();
             render.update.control.menu();
+          }
+        }, {
+          element: ".control-theme-accent-hsl-h-range",
+          path: "theme.accent.hsl.h",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-hsl-h-number",
+            path: "theme.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-r-range",
+            path: "theme.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-r-number",
+            path: "theme.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-g-range",
+            path: "theme.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-g-number",
+            path: "theme.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-b-range",
+            path: "theme.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-b-number",
+            path: "theme.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.rgb();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-hsl-h-number",
+          path: "theme.accent.hsl.h",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-hsl-h-range",
+            path: "theme.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-r-range",
+            path: "theme.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-r-number",
+            path: "theme.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-g-range",
+            path: "theme.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-g-number",
+            path: "theme.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-b-range",
+            path: "theme.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-b-number",
+            path: "theme.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.rgb();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-hsl-s-range",
+          path: "theme.accent.hsl.s",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-hsl-s-number",
+            path: "theme.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-r-range",
+            path: "theme.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-r-number",
+            path: "theme.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-g-range",
+            path: "theme.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-g-number",
+            path: "theme.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-b-range",
+            path: "theme.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-b-number",
+            path: "theme.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.rgb();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-hsl-s-number",
+          path: "theme.accent.hsl.s",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-hsl-s-range",
+            path: "theme.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-r-range",
+            path: "theme.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-r-number",
+            path: "theme.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-g-range",
+            path: "theme.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-g-number",
+            path: "theme.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-b-range",
+            path: "theme.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-b-number",
+            path: "theme.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.rgb();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-hsl-l-range",
+          path: "theme.accent.hsl.l",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-hsl-l-number",
+            path: "theme.accent.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-r-range",
+            path: "theme.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-r-number",
+            path: "theme.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-g-range",
+            path: "theme.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-g-number",
+            path: "theme.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-b-range",
+            path: "theme.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-b-number",
+            path: "theme.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.rgb();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-hsl-l-number",
+          path: "theme.accent.hsl.l",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-hsl-l-range",
+            path: "theme.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-r-range",
+            path: "theme.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-r-number",
+            path: "theme.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-g-range",
+            path: "theme.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-g-number",
+            path: "theme.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-rgb-b-range",
+            path: "theme.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-rgb-b-number",
+            path: "theme.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.rgb();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-rgb-r-range",
+          path: "theme.accent.rgb.r",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-rgb-r-number",
+            path: "theme.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-h-range",
+            path: "theme.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-h-number",
+            path: "theme.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-s-range",
+            path: "theme.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-s-number",
+            path: "theme.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-l-range",
+            path: "theme.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-l-number",
+            path: "theme.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.hsl();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-rgb-r-number",
+          path: "theme.accent.rgb.r",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-rgb-r-range",
+            path: "theme.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-h-range",
+            path: "theme.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-h-number",
+            path: "theme.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-s-range",
+            path: "theme.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-s-number",
+            path: "theme.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-l-range",
+            path: "theme.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-l-number",
+            path: "theme.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.hsl();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-rgb-g-range",
+          path: "theme.accent.rgb.g",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-rgb-g-number",
+            path: "theme.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-h-range",
+            path: "theme.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-h-number",
+            path: "theme.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-s-range",
+            path: "theme.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-s-number",
+            path: "theme.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-l-range",
+            path: "theme.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-l-number",
+            path: "theme.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.hsl();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-rgb-g-number",
+          path: "theme.accent.rgb.g",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-rgb-g-range",
+            path: "theme.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-h-range",
+            path: "theme.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-h-number",
+            path: "theme.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-s-range",
+            path: "theme.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-s-number",
+            path: "theme.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-l-range",
+            path: "theme.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-l-number",
+            path: "theme.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.hsl();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-rgb-b-range",
+          path: "theme.accent.rgb.b",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-rgb-b-number",
+            path: "theme.accent.rgb.b",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-h-range",
+            path: "theme.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-h-number",
+            path: "theme.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-s-range",
+            path: "theme.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-s-number",
+            path: "theme.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-l-range",
+            path: "theme.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-l-number",
+            path: "theme.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.hsl();
+            theme.render.accent.color();
+          }
+        }, {
+          element: ".control-theme-accent-rgb-b-number",
+          path: "theme.accent.rgb.b",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-theme-accent-rgb-color-quick",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-color",
+            path: "theme.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-theme-accent-rgb-text",
+            path: "theme.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-theme-accent-rgb-b-range",
+            path: "theme.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-h-range",
+            path: "theme.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-h-number",
+            path: "theme.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-s-range",
+            path: "theme.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-s-number",
+            path: "theme.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-theme-accent-hsl-l-range",
+            path: "theme.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-theme-accent-hsl-l-number",
+            path: "theme.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            theme.mod.accent.hsl();
+            theme.render.accent.color();
           }
         }, {
           element: ".control-theme-accent-random-active",
@@ -5617,22 +6413,10 @@ var control = (function() {
         }, {
           element: ".control-theme-accent-randomise",
           type: "button",
-          mirrorElement: [{
-            element: ".control-theme-accent-rgb-color-quick",
-            path: "theme.accent.rgb",
-            type: "color"
-          }, {
-            element: ".control-theme-accent-rgb-color",
-            path: "theme.accent.rgb",
-            type: "color"
-          }, {
-            element: ".control-theme-accent-rgb-text",
-            path: "theme.accent.rgb",
-            type: "text",
-            valueConvert: ["hexTextString"]
-          }],
           func: function() {
             theme.accent.random();
+            render.update.control.header();
+            render.update.control.menu();
           }
         }, {
           element: ".control-theme-accent-cycle-active",
@@ -7895,12 +8679,12 @@ var control = (function() {
       },
       menu: function(object) {
         if (object) {
-          if (bind.control.supportedElement.includes(object.type)) {
+          if (bind.control.supportedElement.includes(object.type) && helper.e(object.element)) {
             render.update.value.set[object.type](object);
           };
         } else {
           mod.menu.all().forEach(function(arrayItem, index) {
-            if (bind.control.supportedElement.includes(arrayItem.type)) {
+            if (bind.control.supportedElement.includes(arrayItem.type) && helper.e(arrayItem.element)) {
               render.update.value.set[arrayItem.type](arrayItem);
             };
           });

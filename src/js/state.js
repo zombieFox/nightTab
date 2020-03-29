@@ -259,6 +259,11 @@ var state = (function() {
     },
     theme: {
       accent: {
+        hsl: {
+          h: 221,
+          s: 100,
+          l: 50
+        },
         rgb: {
           r: 0,
           g: 80,
@@ -446,6 +451,11 @@ var state = (function() {
     },
     theme: {
       accent: {
+        hsl: {
+          h: 221,
+          s: 100,
+          l: 50
+        },
         rgb: {
           r: 0,
           g: 80,

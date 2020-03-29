@@ -12,7 +12,10 @@ var theme = (function() {
       name: null,
       font: null,
       color: null,
-      accent: null,
+      accent: {
+        hsl: null,
+        rgb: null
+      },
       radius: null,
       shadow: null,
       style: null,
@@ -26,7 +29,8 @@ var theme = (function() {
     stagedThemeCustom.theme.name = null;
     stagedThemeCustom.theme.font = null;
     stagedThemeCustom.theme.color = null;
-    stagedThemeCustom.theme.accent = null;
+    stagedThemeCustom.theme.accent.hsl = null;
+    stagedThemeCustom.theme.accent.rgb = null;
     stagedThemeCustom.theme.radius = null;
     stagedThemeCustom.theme.shadow = null;
     stagedThemeCustom.theme.style = null;
@@ -49,8 +53,22 @@ var theme = (function() {
         _timerAccentCycle = setInterval(function() {
           accent.cycle();
           control.render.update.control.header(control.mod.header[5]);
-          control.render.update.control.menu(control.mod.menu.controls.theme.accent[0]);
-          control.render.update.control.menu(control.mod.menu.controls.theme.accent[1]);
+          if (state.get.current().menu) {
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[0]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[1]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[3]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[4]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[5]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[6]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[7]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[8]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[9]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[10]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[11]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[12]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[13]);
+            control.render.update.control.menu(control.mod.menu.controls.theme.accent[14]);
+          };
         }, state.get.current().theme.accent.cycle.speed);
       },
       remove: function() {
@@ -75,8 +93,13 @@ var theme = (function() {
     });
     helper.setObject({
       object: state.get.current(),
+      path: "theme.accent.hsl",
+      newValue: data.accent.hsl
+    });
+    helper.setObject({
+      object: state.get.current(),
       path: "theme.accent.rgb",
-      newValue: data.accent
+      newValue: data.accent.rgb
     });
     helper.setObject({
       object: state.get.current(),
@@ -118,6 +141,30 @@ var theme = (function() {
   };
 
   mod.accent = {
+    hsl: function() {
+      var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.accent.rgb);
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.accent.hsl",
+        newValue: {
+          h: Math.round(hsl.h),
+          s: Math.round(hsl.s),
+          l: Math.round(hsl.l)
+        }
+      });
+    },
+    rgb: function() {
+      var rgb = helper.convertColor.hsl.rgb(state.get.current().theme.accent.hsl);
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.accent.rgb",
+        newValue: {
+          r: Math.round(rgb.r),
+          g: Math.round(rgb.g),
+          b: Math.round(rgb.b)
+        }
+      });
+    },
     random: function() {
       if (state.get.current().theme.accent.random.active) {
         var randomValue = function(min, max) {
@@ -160,7 +207,8 @@ var theme = (function() {
             };
           }
         };
-        var rgb = helper.convertColor.hsl.rgb(color[state.get.current().theme.accent.random.style]());
+        var hsl = color[state.get.current().theme.accent.random.style]();
+        var rgb = helper.convertColor.hsl.rgb(hsl);
         helper.setObject({
           object: state.get.current(),
           path: "theme.accent.rgb",
@@ -168,6 +216,15 @@ var theme = (function() {
             r: Math.round(rgb.r),
             g: Math.round(rgb.g),
             b: Math.round(rgb.b)
+          }
+        });
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.accent.hsl",
+          newValue: {
+            h: Math.round(hsl.h),
+            s: Math.round(hsl.s),
+            l: Math.round(hsl.l)
           }
         });
       };
@@ -190,6 +247,15 @@ var theme = (function() {
           r: Math.round(rgb.r),
           g: Math.round(rgb.g),
           b: Math.round(rgb.b)
+        }
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.accent.hsl",
+        newValue: {
+          h: Math.round(hsl.h),
+          s: Math.round(hsl.s),
+          l: Math.round(hsl.l)
         }
       });
     }
@@ -274,7 +340,10 @@ var theme = (function() {
       name: "nightTab (default)",
       font: state.get.default().theme.font,
       color: state.get.default().theme.color,
-      accent: state.get.default().theme.accent.rgb,
+      accent: {
+        hsl: state.get.default().theme.accent.hsl,
+        rgb: state.get.default().theme.accent.rgb
+      },
       radius: state.get.default().theme.radius,
       shadow: state.get.default().theme.shadow,
       style: state.get.default().theme.style,
@@ -299,9 +368,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 128,
-        g: 128,
-        b: 128
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 50
+        },
+        rgb: {
+          r: 128,
+          g: 128,
+          b: 128
+        }
       },
       radius: state.get.default().theme.radius,
       shadow: state.get.default().theme.shadow,
@@ -327,9 +403,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 128,
-        g: 128,
-        b: 128
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 50
+        },
+        rgb: {
+          r: 128,
+          g: 128,
+          b: 128
+        }
       },
       radius: state.get.default().theme.radius,
       shadow: state.get.default().theme.shadow,
@@ -347,7 +430,7 @@ var theme = (function() {
           name: "Lato",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -366,9 +449,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 0,
-        g: 17,
-        b: 255
+        rgb: {
+          r: 0,
+          g: 17,
+          b: 255
+        },
+        hsl: {
+          h: 236,
+          s: 100,
+          l: 50
+        }
       },
       radius: 0.5,
       shadow: 0.75,
@@ -388,7 +478,7 @@ var theme = (function() {
           name: "Solway",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -407,9 +497,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 0,
-        g: 255,
-        b: 170
+        rgb: {
+          r: 0,
+          g: 255,
+          b: 170
+        },
+        hsl: {
+          h: 160,
+          s: 100,
+          l: 50
+        }
       },
       radius: 0.1,
       shadow: 1,
@@ -429,7 +526,7 @@ var theme = (function() {
           name: "Source Sans Pro",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -448,9 +545,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 255,
-        g: 251,
-        b: 0
+        rgb: {
+          r: 255,
+          g: 251,
+          b: 0
+        },
+        hsl: {
+          h: 59,
+          s: 100,
+          l: 50
+        }
       },
       radius: 0.2,
       shadow: 1.5,
@@ -470,7 +574,7 @@ var theme = (function() {
           name: "Montserrat",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -489,9 +593,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 94,
-        g: 255,
-        b: 226
+        rgb: {
+          r: 94,
+          g: 255,
+          b: 226
+        },
+        hsl: {
+          h: 169,
+          s: 100,
+          l: 68
+        }
       },
       radius: 0.8,
       shadow: 1,
@@ -511,7 +622,7 @@ var theme = (function() {
           name: "Raleway",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -530,9 +641,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 181,
-        g: 226,
-        b: 236
+        rgb: {
+          r: 181,
+          g: 226,
+          b: 236
+        },
+        hsl: {
+          h: 191,
+          s: 59,
+          l: 82
+        }
       },
       radius: 0,
       shadow: 0.25,
@@ -552,7 +670,7 @@ var theme = (function() {
           name: "Roboto Condensed",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -571,9 +689,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 196,
-        g: 0,
-        b: 66
+        rgb: {
+          r: 196,
+          g: 0,
+          b: 66
+        },
+        hsl: {
+          h: 340,
+          s: 100,
+          l: 38
+        }
       },
       radius: 0.75,
       shadow: 1.75,
@@ -593,7 +718,7 @@ var theme = (function() {
           name: "Muli",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -612,9 +737,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 255,
-        g: 185,
-        b: 0
+        rgb: {
+          r: 255,
+          g: 185,
+          b: 0
+        },
+        hsl: {
+          h: 44,
+          s: 100,
+          l: 50
+        }
       },
       radius: 0.5,
       shadow: 0.25,
@@ -634,7 +766,7 @@ var theme = (function() {
           name: "Lato",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -653,9 +785,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 255,
-        g: 161,
-        b: 161
+        rgb: {
+          r: 255,
+          g: 161,
+          b: 161
+        },
+        hsl: {
+          h: 0,
+          s: 100,
+          l: 82
+        }
       },
       radius: 2,
       shadow: 0.5,
@@ -694,9 +833,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 0,
-        g: 255,
-        b: 102
+        rgb: {
+          r: 0,
+          g: 255,
+          b: 102
+        },
+        hsl: {
+          h: 144,
+          s: 100,
+          l: 50
+        }
       },
       radius: 1,
       shadow: 1.5,
@@ -716,7 +862,7 @@ var theme = (function() {
           name: "Source Sans Pro",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -735,11 +881,18 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 110,
-        g: 109,
-        b: 208
+        rgb: {
+          r: 110,
+          g: 109,
+          b: 208
+        },
+        hsl: {
+          h: 241,
+          s: 51,
+          l: 62
+        }
       },
-      radius: 0.40,
+      radius: 0.4,
       shadow: 0.5,
       style: "light",
       shade: {
@@ -757,7 +910,7 @@ var theme = (function() {
           name: "Montserrat",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -776,9 +929,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 255,
-        g: 150,
-        b: 0
+        rgb: {
+          r: 255,
+          g: 150,
+          b: 0
+        },
+        hsl: {
+          h: 35,
+          s: 100,
+          l: 50
+        }
       },
       radius: 0.6,
       shadow: 1,
@@ -798,7 +958,7 @@ var theme = (function() {
           name: "Raleway",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -817,9 +977,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 59,
-        g: 95,
-        b: 118
+        rgb: {
+          r: 59,
+          g: 95,
+          b: 118
+        },
+        hsl: {
+          h: 203,
+          s: 33,
+          l: 35
+        }
       },
       radius: 0.3,
       shadow: 0.5,
@@ -839,7 +1006,7 @@ var theme = (function() {
           name: "Roboto Condensed",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -858,9 +1025,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 255,
-        g: 0,
-        b: 187
+        rgb: {
+          r: 255,
+          g: 0,
+          b: 187
+        },
+        hsl: {
+          h: 316,
+          s: 100,
+          l: 50
+        }
       },
       radius: 0,
       shadow: 0,
@@ -880,7 +1054,7 @@ var theme = (function() {
           name: "Muli",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -899,9 +1073,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 238,
-        g: 119,
-        b: 34
+        rgb: {
+          r: 238,
+          g: 119,
+          b: 34
+        },
+        hsl: {
+          h: 25,
+          s: 86,
+          l: 53
+        }
       },
       radius: 0.2,
       shadow: 1,
@@ -921,7 +1102,7 @@ var theme = (function() {
           name: "Lato",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -940,9 +1121,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 238,
-        g: 238,
-        b: 34
+        rgb: {
+          r: 238,
+          g: 238,
+          b: 34
+        },
+        hsl: {
+          h: 60,
+          s: 86,
+          l: 53
+        }
       },
       radius: 1.2,
       shadow: 0,
@@ -962,7 +1150,7 @@ var theme = (function() {
           name: "Oswald",
           weight: 400,
           style: "normal"
-        },
+        }
       },
       color: {
         hsl: {
@@ -981,9 +1169,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 255,
-        g: 160,
-        b: 0
+        rgb: {
+          r: 255,
+          g: 160,
+          b: 0
+        },
+        hsl: {
+          h: 38,
+          s: 100,
+          l: 50
+        }
       },
       radius: 0.5,
       shadow: 1.75,
@@ -1022,9 +1217,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 34,
-        g: 51,
-        b: 68
+        rgb: {
+          r: 34,
+          g: 51,
+          b: 68
+        },
+        hsl: {
+          h: 210,
+          s: 33,
+          l: 20
+        }
       },
       radius: 0.3,
       shadow: 0.5,
@@ -1063,9 +1265,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 21,
-        g: 255,
-        b: 0
+        rgb: {
+          r: 21,
+          g: 255,
+          b: 0
+        },
+        hsl: {
+          h: 115,
+          s: 100,
+          l: 50
+        }
       },
       radius: 0.4,
       shadow: 1,
@@ -1104,9 +1313,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 187,
-        g: 17,
-        b: 68
+        rgb: {
+          r: 187,
+          g: 17,
+          b: 68
+        },
+        hsl: {
+          h: 342,
+          s: 83,
+          l: 40
+        }
       },
       radius: 0,
       shadow: 0,
@@ -1145,9 +1361,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 255,
-        g: 0,
-        b: 0
+        rgb: {
+          r: 255,
+          g: 0,
+          b: 0
+        },
+        hsl: {
+          h: 0,
+          s: 100,
+          l: 50
+        }
       },
       radius: 0,
       shadow: 2.5,
@@ -1186,9 +1409,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 0,
-        g: 255,
-        b: 255
+        rgb: {
+          r: 0,
+          g: 255,
+          b: 255
+        },
+        hsl: {
+          h: 180,
+          s: 100,
+          l: 50
+        }
       },
       radius: 0.5,
       shadow: 1.25,
@@ -1227,9 +1457,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 0,
-        g: 255,
-        b: 255
+        rgb: {
+          r: 0,
+          g: 255,
+          b: 255
+        },
+        hsl: {
+          h: 180,
+          s: 100,
+          l: 50
+        }
       },
       radius: 0.25,
       shadow: 2,
@@ -1268,11 +1505,18 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 255,
-        g: 204,
-        b: 0
+        rgb: {
+          r: 255,
+          g: 204,
+          b: 0
+        },
+        hsl: {
+          h: 48,
+          s: 100,
+          l: 50
+        }
       },
-      radius: 0.80,
+      radius: 0.8,
       shadow: 1,
       style: "dark",
       shade: {
@@ -1309,9 +1553,16 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 255,
-        g: 12,
-        b: 88
+        rgb: {
+          r: 255,
+          g: 12,
+          b: 88
+        },
+        hsl: {
+          h: 341,
+          s: 100,
+          l: 52
+        }
       },
       radius: 0.25,
       shadow: 0.5,
@@ -1350,15 +1601,22 @@ var theme = (function() {
         }
       },
       accent: {
-        r: 29,
-        g: 213,
-        b: 0
+        rgb: {
+          r: 29,
+          g: 213,
+          b: 0
+        },
+        hsl: {
+          h: 112,
+          s: 100,
+          l: 42
+        }
       },
       radius: 0.3,
       shadow: 0.75,
       style: "dark",
       shade: {
-        opacity: 0.20
+        opacity: 0.2
       }
     }]
   };
@@ -1602,7 +1860,7 @@ var theme = (function() {
       var themePresetPreview = helper.node("span|class:theme-preset-preview");
       var shadeSteps = 4;
       var rgb = arrayItem.color.rgb;
-      var hsl = helper.convertColor.rgb.hsl(rgb);
+      var hsl = arrayItem.color.hsl;
       for (var i = 1; i <= shadeSteps; i++) {
         if (i > 1) {
           if (arrayItem.style == "dark") {
@@ -1632,7 +1890,7 @@ var theme = (function() {
         themePresetPreview.appendChild(themePresetBackground);
       };
       var themePresetAccent = helper.node("span|class:theme-preset-accent");
-      themePresetAccent.style.setProperty("background-color", "rgb(" + arrayItem.accent.r + ", " + arrayItem.accent.g + ", " + arrayItem.accent.b + ")");
+      themePresetAccent.style.setProperty("background-color", "rgb(" + arrayItem.accent.rgb.r + ", " + arrayItem.accent.rgb.g + ", " + arrayItem.accent.rgb.b + ")");
       themePresetPreview.appendChild(themePresetAccent);
       if (arrayItem.name != null && arrayItem.name != "") {
         var themePresetName = helper.node("span:" + arrayItem.name + "|class:theme-preset-name");
@@ -1687,7 +1945,7 @@ var theme = (function() {
           var themeCustomRemoveIcon = helper.node("spa|class:button-icon icon-close");
           var shadeSteps = 4;
           var rgb = arrayItem.color.rgb;
-          var hsl = helper.convertColor.rgb.hsl(rgb);
+          var hsl = arrayItem.color.hsl;
           for (var i = 1; i <= shadeSteps; i++) {
             if (i > 1) {
               if (arrayItem.style == "dark") {
@@ -1717,7 +1975,7 @@ var theme = (function() {
             themeCustomPreview.appendChild(themeCustomBackground);
           };
           var themeCustomAccent = helper.node("span|class:theme-custom-accent");
-          themeCustomAccent.style.setProperty("background-color", "rgb(" + arrayItem.accent.r + ", " + arrayItem.accent.g + ", " + arrayItem.accent.b + ")");
+          themeCustomAccent.style.setProperty("background-color", "rgb(" + arrayItem.accent.rgb.r + ", " + arrayItem.accent.rgb.g + ", " + arrayItem.accent.rgb.b + ")");
           themeCustomPreview.appendChild(themeCustomAccent);
           if (arrayItem.name != null && arrayItem.name != "") {
             var themeCustomName = helper.node("span:" + arrayItem.name + "|class:theme-custom-name");
@@ -1830,7 +2088,8 @@ var theme = (function() {
       var successAction = function() {
         stagedThemeCustom.theme.font = state.get.current().theme.font;
         stagedThemeCustom.theme.color = state.get.current().theme.color;
-        stagedThemeCustom.theme.accent = state.get.current().theme.accent.rgb;
+        stagedThemeCustom.theme.accent.hsl = state.get.current().theme.accent.hsl;
+        stagedThemeCustom.theme.accent.rgb = state.get.current().theme.accent.rgb;
         stagedThemeCustom.theme.radius = state.get.current().theme.radius;
         stagedThemeCustom.theme.shadow = state.get.current().theme.shadow;
         stagedThemeCustom.theme.style = state.get.current().theme.style;

@@ -940,6 +940,23 @@ var update = (function() {
       delete data.state.header.menu.style;
       delete data.state.group.openAll.style;
       return data;
+    },
+    "5.3.0": function(data) {
+      data.state.theme.custom.all.forEach(function(arrayItem, index) {
+        arrayItem.accent.rgb = {
+          r: arrayItem.accent.r,
+          g: arrayItem.accent.g,
+          b: arrayItem.accent.b
+        };
+        arrayItem.accent.hsl = helper.convertColor.rgb.hsl(arrayItem.accent.rgb);
+        arrayItem.accent.hsl.h = Math.round(arrayItem.accent.hsl.h);
+        arrayItem.accent.hsl.s = Math.round(arrayItem.accent.hsl.s);
+        arrayItem.accent.hsl.l = Math.round(arrayItem.accent.hsl.l);
+        delete arrayItem.accent.r;
+        delete arrayItem.accent.g;
+        delete arrayItem.accent.b;
+      });
+      return data;
     }
   };
 
