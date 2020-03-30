@@ -33,10 +33,24 @@
 .background-accent {
   background-color: rgba(var(--theme-accent), var(--background-accent));
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -1em;
+  left: -1em;
+  width: calc(100% + 2em);
+  height: calc(100% + 2em);
   pointer-events: none;
   display: block;
+}
+
+.background-vignette {
+  position: absolute;
+  top: -1em;
+  left: -1em;
+  width: calc(100% + 2em);
+  height: calc(100% + 2em);
+  pointer-events: none;
+  background-image: radial-gradient(
+    circle,
+    transparent var(--background-vignette-end),
+    rgba(0, 0, 0, var(--background-vignette-opacity)) var(--background-vignette-start)
+  );
 }

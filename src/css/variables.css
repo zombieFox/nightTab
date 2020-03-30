@@ -155,6 +155,9 @@
   --background-scale:                                   1;
   --background-accent:                                  0;
   --background-blur:                                    0;
+  --background-vignette-opacity:                        0%;
+  --background-vignette-start:                          90%;
+  --background-vignette-end:                            70%;
   /* form */
   --form-label:                                         var(--theme-color-16);
   --form-label-hover:                                   var(--theme-color-20);

@@ -122,6 +122,21 @@ var background = (function() {
     html.style.setProperty("--background-accent", state.get.current().background.image.accent);
   };
 
+  render.vignette = {
+    opacity: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--background-vignette-opacity", state.get.current().background.image.vignette.opacity + "%");
+    },
+    start: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--background-vignette-start", state.get.current().background.image.vignette.start + "%");
+    },
+    end: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--background-vignette-end", state.get.current().background.image.vignette.end + "%");
+    }
+  };
+
   render.input = {
     clear: function() {
       helper.e(".control-background-image-file").value = "";
@@ -231,6 +246,9 @@ var background = (function() {
     render.opacity();
     render.scale();
     render.accent();
+    render.vignette.opacity();
+    render.vignette.start();
+    render.vignette.end();
     render.feedback.init();
   };
 

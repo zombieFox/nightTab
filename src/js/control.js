@@ -6801,7 +6801,6 @@ var control = (function() {
           func: function() {
             mod.default("background.image.opacity");
             background.render.opacity();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6846,7 +6845,6 @@ var control = (function() {
           func: function() {
             mod.default("background.image.grayscale");
             background.render.grayscale();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6887,7 +6885,6 @@ var control = (function() {
           func: function() {
             mod.default("background.image.blur");
             background.render.blur();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6932,7 +6929,6 @@ var control = (function() {
           func: function() {
             mod.default("background.image.accent");
             background.render.accent();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6977,7 +6973,166 @@ var control = (function() {
           func: function() {
             mod.default("background.image.scale");
             background.render.scale();
-            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-background-image-vignette-opacity-range",
+          path: "background.image.vignette.opacity",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-vignette-opacity-number",
+            path: "background.image.vignette.opacity",
+            type: "number"
+          }],
+          func: function() {
+            background.render.vignette.opacity();
+            background.render.vignette.start();
+            background.render.vignette.end();
+          }
+        }, {
+          element: ".control-background-image-vignette-opacity-number",
+          path: "background.image.vignette.opacity",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-vignette-opacity-range",
+            path: "background.image.vignette.opacity",
+            type: "range"
+          }],
+          func: function() {
+            background.render.vignette.opacity();
+            background.render.vignette.start();
+            background.render.vignette.end();
+          }
+        }, {
+          element: ".control-background-image-vignette-opacity-default",
+          type: "button",
+          func: function() {
+            mod.default("background.image.vignette.opacity");
+            background.render.vignette.opacity();
+            background.render.vignette.start();
+            background.render.vignette.end();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-background-image-vignette-start-range",
+          path: "background.image.vignette.start",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-vignette-start-number",
+            path: "background.image.vignette.start",
+            type: "number"
+          }],
+          limitElement: [{
+            element: ".control-background-image-vignette-end-range",
+            path: "background.image.vignette.end",
+            type: "range",
+            limit: "max"
+          }, {
+            element: ".control-background-image-vignette-end-number",
+            path: "background.image.vignette.end",
+            type: "number",
+            limit: "max"
+          }],
+          func: function() {
+            background.render.vignette.opacity();
+            background.render.vignette.start();
+            background.render.vignette.end();
+          }
+        }, {
+          element: ".control-background-image-vignette-start-number",
+          path: "background.image.vignette.start",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-vignette-start-range",
+            path: "background.image.vignette.start",
+            type: "range"
+          }],
+          func: function() {
+            background.render.vignette.opacity();
+            background.render.vignette.start();
+            background.render.vignette.end();
+          }
+        }, {
+          element: ".control-background-image-vignette-start-default",
+          type: "button",
+          func: function() {
+            mod.default("background.image.vignette.start");
+            background.render.vignette.opacity();
+            background.render.vignette.start();
+            background.render.vignette.end();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-background-image-vignette-end-range",
+          path: "background.image.vignette.end",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-vignette-end-number",
+            path: "background.image.vignette.end",
+            type: "number"
+          }],
+          limitElement: [{
+            element: ".control-background-image-vignette-start-range",
+            path: "background.image.vignette.start",
+            type: "range",
+            limit: "min"
+          }, {
+            element: ".control-background-image-vignette-start-number",
+            path: "background.image.vignette.start",
+            type: "number",
+            limit: "min"
+          }],
+          func: function() {
+            background.render.vignette.opacity();
+            background.render.vignette.start();
+            background.render.vignette.end();
+          }
+        }, {
+          element: ".control-background-image-vignette-end-number",
+          path: "background.image.vignette.end",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-image-vignette-end-range",
+            path: "background.image.vignette.end",
+            type: "range"
+          }],
+          func: function() {
+            background.render.vignette.opacity();
+            background.render.vignette.start();
+            background.render.vignette.end();
+          }
+        }, {
+          element: ".control-background-image-vignette-end-default",
+          type: "button",
+          func: function() {
+            mod.default("background.image.vignette.end");
+            background.render.vignette.opacity();
+            background.render.vignette.start();
+            background.render.vignette.end();
             render.update.control.menu();
           }
         }]
@@ -7141,6 +7296,32 @@ var control = (function() {
       color: "change",
       file: "change"
     },
+    limit: function(sourceObject, targetObject) {
+      var sourceValue = helper.getObject({
+        object: state.get.current(),
+        path: sourceObject.path
+      });
+      var targetValue = helper.getObject({
+        object: state.get.current(),
+        path: targetObject.path
+      });
+      var _set = function() {
+        helper.setObject({
+          object: state.get.current(),
+          path: targetObject.path,
+          newValue: helper.getObject({
+            object: state.get.current(),
+            path: sourceObject.path
+          })
+        });
+      };
+      if (targetObject.limit == "max" && targetValue >= sourceValue) {
+        _set();
+      } else if (targetObject.limit == "min" && targetValue <= sourceValue) {
+        _set();
+      };
+      render.update.control.menu(targetObject);
+    },
     action: function(object) {
       if (object.element) {
         helper.e(object.element).addEventListener(bind.control.eventType[object.type], function(event) {
@@ -7165,6 +7346,13 @@ var control = (function() {
         object.mirrorElement.forEach(function(arrayItem, index) {
           helper.e(object.element).addEventListener(bind.control.eventType[object.type], function(event) {
             render.update.control.menu(arrayItem);
+          }, false);
+        });
+      };
+      if (object.limitElement) {
+        object.limitElement.forEach(function(arrayItem, index) {
+          helper.e(object.element).addEventListener(bind.control.eventType[object.type], function(event) {
+            bind.control.limit(object, arrayItem);
           }, false);
         });
       };

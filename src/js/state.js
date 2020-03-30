@@ -340,7 +340,12 @@ var state = (function() {
         scale: 1,
         opacity: 1,
         grayscale: 0,
-        accent: 0
+        accent: 0,
+        vignette: {
+          opacity: 0,
+          start: 90,
+          end: 70
+        }
       }
     },
     edit: false,
@@ -507,7 +512,12 @@ var state = (function() {
         scale: 1,
         opacity: 1,
         grayscale: 0,
-        accent: 0
+        accent: 0,
+        vignette: {
+          opacity: 0,
+          start: 90,
+          end: 70
+        }
       }
     }
   };

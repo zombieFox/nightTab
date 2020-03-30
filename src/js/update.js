@@ -958,6 +958,14 @@ var update = (function() {
         delete arrayItem.accent.b;
       });
       return data;
+    },
+    "5.4.0": function(data) {
+      data.state.background.image.vignette = {
+        opacity: 0,
+        start: 90,
+        end: 70
+      };
+      return data;
     }
   };
 
