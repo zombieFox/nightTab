@@ -942,6 +942,7 @@ var update = (function() {
       return data;
     },
     "5.3.0": function(data) {
+      data.state.theme.accent.hsl = helper.convertColor.rgb.hsl(data.state.theme.accent.rgb);
       data.state.theme.custom.all.forEach(function(arrayItem, index) {
         arrayItem.accent.rgb = {
           r: arrayItem.accent.r,
