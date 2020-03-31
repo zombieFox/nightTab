@@ -5,7 +5,7 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 
 | [See the demo in action](https://zombiefox.github.io/nightTab/) | [Install nightTab Extension](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [Install nightTab Add On](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [Buy me a coffee](https://www.buymeacoffee.com/zombieFox/) |
 |:-------------:|:-------------:|:-------------:|:-------------:|
-| [![nightTab](./src/icons/icon-48.png)](https://zombiefox.github.io/nightTab/) | [![Chrome](assets/browser-logos/chrome-48x48.png)](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [![Firefox](assets/browser-logos/firefox-48x48.png)](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [![coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)](https://www.buymeacoffee.com/zombieFox/) |
+| [![nightTab](./src/icons/icon-48.png)](https://zombiefox.github.io/nightTab/) | [![Chrome](assets/logos/chrome-48x48.png)](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [![Firefox](assets/logos/firefox-48x48.png)](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [![coffee](assets/logos/bymeacoffee-48x48.png)](https://www.buymeacoffee.com/zombieFox/) |
 
 ---
 
