@@ -7,6 +7,8 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 |:-------------:|:-------------:|:-------------:|:-------------:|
 | [![nightTab](./src/icons/icon-48.png)](https://zombiefox.github.io/nightTab/) | [![Chrome](assets/browser-logos/chrome-48x48.png)](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [![Firefox](assets/browser-logos/firefox-48x48.png)](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [![coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)](https://www.buymeacoffee.com/zombieFox/) |
 
+---
+
 ### Features
 - Header
   - Greeting
