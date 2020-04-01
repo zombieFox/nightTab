@@ -159,10 +159,10 @@ var state = (function() {
         },
         style: "scroll",
         opacity: 0.95,
-        show: true,
+        show: false,
         newLine: false
       },
-      position: "sticky",
+      position: "inline",
       radius: false
     },
     link: {
