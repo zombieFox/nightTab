@@ -2114,7 +2114,7 @@ var control = (function() {
         }, {
           element: ".control-header-search-opacity-number",
           path: "header.search.opacity",
-          type: "range",
+          type: "number",
           valueConvert: ["float"],
           valueModify: {
             min: 0,
@@ -2495,7 +2495,7 @@ var control = (function() {
         }, {
           element: ".control-header-editadd-opacity-number",
           path: "header.editAdd.opacity",
-          type: "range",
+          type: "number",
           valueConvert: ["float"],
           valueModify: {
             min: 0,
@@ -2691,7 +2691,7 @@ var control = (function() {
         }, {
           element: ".control-header-coloraccent-opacity-number",
           path: "header.colorAccent.opacity",
-          type: "range",
+          type: "number",
           valueConvert: ["float"],
           valueModify: {
             min: 0,
@@ -2841,7 +2841,7 @@ var control = (function() {
         }, {
           element: ".control-header-menu-opacity-number",
           path: "header.menu.opacity",
-          type: "range",
+          type: "number",
           valueConvert: ["float"],
           valueModify: {
             min: 0,
@@ -3066,7 +3066,7 @@ var control = (function() {
         }, {
           element: ".control-header-color-opacity-number",
           path: "header.color.opacity",
-          type: "range",
+          type: "number",
           valueConvert: ["float"],
           valueModify: {
             min: 0,
@@ -3923,7 +3923,7 @@ var control = (function() {
         }, {
           element: ".control-link-item-opacity-number",
           path: "link.item.opacity",
-          type: "range",
+          type: "number",
           valueConvert: ["float"],
           valueModify: {
             min: 0,
@@ -4327,7 +4327,7 @@ var control = (function() {
         }, {
           element: ".control-group-openall-opacity-number",
           path: "group.openAll.opacity",
-          type: "range",
+          type: "number",
           valueConvert: ["float"],
           valueModify: {
             min: 0,
