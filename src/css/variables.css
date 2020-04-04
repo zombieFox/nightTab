@@ -346,7 +346,7 @@
 }
 
 .is-link-item-opacity {
-  --link-item-padding:                                  0em;
+  --link-item-padding:                                  calc(0 * 1em);
 }
 
 @media (min-width: 700px) {
