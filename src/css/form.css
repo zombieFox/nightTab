@@ -1042,7 +1042,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-input-button input[type="color"]+label:after,
 .form-input-button input[type="file"]+label:after {
   content: "";
-  background: rgb(var(--button-border));
+  background: transparent;
   border-radius: var(--theme-radius);
   position: absolute;
   bottom: 0;

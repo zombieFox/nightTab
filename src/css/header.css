@@ -270,7 +270,7 @@
 }
 
 .form-input-button .header-edit[type="checkbox"]+label:after {
-  background-color: rgba(var(--button-border), var(--header-editadd-opacity));
+  background-color: rgba(var(--button-border), 0);
 }
 
 .form-input-button .header-edit[type="checkbox"]:focus+label:after,
@@ -305,7 +305,7 @@
 }
 
 .header-add:after {
-  background-color: rgba(var(--button-border), var(--header-editadd-opacity));
+  background-color: rgba(var(--button-border), 0);
 }
 
 .header-add:focus:after,
@@ -340,7 +340,7 @@
 
 .form-input-button .header-color[type="color"]+label:after,
 .form-input-button .header-accent[type="color"]+label:after {
-  background-color: rgba(var(--button-border), var(--header-coloraccent-opacity));
+  background-color: rgba(var(--button-border), 0);
 }
 
 .form-input-button .header-color[type="color"]:focus+label:after,
@@ -374,7 +374,7 @@
 }
 
 .header-menu:after {
-  background-color: rgba(var(--button-border), var(--header-menu-opacity));
+  background-color: rgba(var(--button-border), 0);
 }
 
 .header-menu:focus:after,

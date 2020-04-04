@@ -166,7 +166,7 @@
 }
 
 .group-openall-item:after {
-  background-color: rgba(var(--button-border), var(--group-openall-opacity));
+  background-color: rgba(var(--button-border), 0);
 }
 
 .group-openall-item:focus:after,

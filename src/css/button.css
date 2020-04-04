@@ -83,7 +83,7 @@ input[type="button"]:after,
 input[type="reset"]:after,
 input[type="submit"]:after {
   content: "";
-  background: rgb(var(--button-border));
+  background: transparent;
   border-radius: var(--theme-radius);
   position: absolute;
   bottom: 0;
