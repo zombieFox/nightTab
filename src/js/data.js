@@ -235,7 +235,11 @@ var data = (function() {
   };
 
   var load = function() {
-    return JSON.parse(mod.get(_saveName));
+    if (mod.get(_saveName) != null && mod.get(_saveName) != undefined) {
+      return JSON.parse(mod.get(_saveName));
+    } else {
+      return false;
+    };
   };
 
   var wipe = function() {
