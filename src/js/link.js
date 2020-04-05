@@ -1194,9 +1194,21 @@ var link = (function() {
       }, false);
       displayLetterRadio.addEventListener("change", function(event) {
         stagedLink.link.display = this.value;
+        displayLetterInput.removeAttribute("disabled");
+        displayIconInput.setAttribute("disabled", "");
+        helper.addClass(displayIconFormGroupText, "disabled");
+        helper.addClass(displayIconHelperItem, "disabled");
+        displayIconFormGroupClear.setAttribute("disabled", "");
+        displayIconFormGroupText.tabIndex = -1;
       }, false);
       displayIconRadio.addEventListener("change", function(event) {
         stagedLink.link.display = this.value;
+        displayLetterInput.setAttribute("disabled", "");
+        displayIconInput.removeAttribute("disabled");
+        helper.removeClass(displayIconFormGroupText, "disabled");
+        helper.removeClass(displayIconHelperItem, "disabled");
+        displayIconFormGroupClear.removeAttribute("disabled");
+        displayIconFormGroupText.tabIndex = 1;
       }, false);
       displayLetterInput.addEventListener("input", function(event) {
         stagedLink.link.letter = this.value;
@@ -1241,22 +1253,6 @@ var link = (function() {
           existingIcon.remove();
         };
         displayIconInput.value = "";
-      }, false);
-      displayLetterRadio.addEventListener("change", function(event) {
-        displayLetterInput.removeAttribute("disabled");
-        displayIconInput.setAttribute("disabled", "");
-        helper.addClass(displayIconFormGroupText, "disabled");
-        helper.addClass(displayIconHelper, "disabled");
-        displayIconFormGroupClear.setAttribute("disabled", "");
-        displayIconFormGroupText.tabIndex = -1;
-      }, false);
-      displayIconRadio.addEventListener("change", function(event) {
-        displayLetterInput.setAttribute("disabled", "");
-        displayIconInput.removeAttribute("disabled");
-        helper.removeClass(displayIconFormGroupText, "disabled");
-        helper.removeClass(displayIconHelper, "disabled");
-        displayIconFormGroupClear.removeAttribute("disabled");
-        displayIconFormGroupText.tabIndex = 1;
       }, false);
       autoSuggest.bind.input({
         input: displayIconInput,
