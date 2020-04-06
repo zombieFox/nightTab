@@ -22,13 +22,13 @@ var helper = (function() {
 
   var randomString = function(override) {
     var options = {
-      mix: null,
-      letter: null
+      letter: null,
+      adjectivesCount: null
     };
     if (override) {
       options = applyOptions(options, override);
     };
-    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var adjectives = {
       a: ["Aback", "Abaft", "Abandoned", "Abashed", "Aberrant", "Abhorrent", "Abiding", "Abject", "Ablaze", "Able", "Abnormal", "Aboriginal", "Abortive", "Abounding", "Abrasive", "Abrupt", "Absent", "Absorbed", "Absorbing", "Abstracted", "Absurd", "Abundant", "Abusive", "Acceptable", "Accessible", "Accidental", "Accurate", "Acid", "Acidic", "Acoustic", "Acrid", "Adamant", "Adaptable", "Addicted", "Adhesive", "Adjoining", "Adorable", "Adventurous", "Afraid", "Aggressive", "Agonizing", "Agreeable", "Ahead", "Ajar", "Alert", "Alike", "Alive", "Alleged", "Alluring", "Aloof", "Amazing", "Ambiguous", "Ambitious", "Amuck", "Amused", "Amusing", "Ancient", "Angry", "Animated", "Annoyed", "Annoying", "Anxious", "Apathetic", "Aquatic", "Aromatic", "Arrogant", "Ashamed", "Aspiring", "Assorted", "Astonishing", "Attractive", "Auspicious", "Automatic", "Available", "Average", "Aware", "Awesome", "Axiomatic"],
       b: ["Bad", "Barbarous", "Bashful", "Bawdy", "Beautiful", "Befitting", "Belligerent", "Beneficial", "Bent", "Berserk", "Bewildered", "Big", "Billowy", "Bitter", "Bizarre", "Black", "Bloody", "Blue", "Blushing", "Boiling", "Boorish", "Bored", "Boring", "Bouncy", "Boundless", "Brainy", "Brash", "Brave", "Brawny", "Breakable", "Breezy", "Brief", "Bright", "Broad", "Broken", "Brown", "Bumpy", "Burly", "Bustling", "Busy"],
@@ -83,26 +83,71 @@ var helper = (function() {
       w: ["Wallaby", "Walrus", "Wasp", "Weasel", "Whale", "Wolf", "Wolverine", "Wombat", "Woodcock", "Woodpecker", "Worm", "Wren"],
       x: ["Xaviers Greenbul", "Xeme", "Xingu Corydoras", "Xolo"],
       y: ["Yabby", "Yak", "Yellowhammer", "Yellowjacket"],
-      z: ["Zebra", "Zebu", "Zokor", "Zorilla"],
+      z: ["Zebra", "Zebu", "Zokor", "Zorilla"]
     };
-    var seed;
-    var mix = function() {
-      var adjectivesSeed = alphabet[Math.floor(Math.random() * alphabet.length)];
-      var animalsSeed = alphabet[Math.floor(Math.random() * alphabet.length)];
-      return adjectives[adjectivesSeed][Math.floor(Math.random() * adjectives[adjectivesSeed].length)] + " " + animals[animalsSeed][Math.floor(Math.random() * animals[animalsSeed].length)];
+
+    var action = {
+      alliteration: {
+        short: function() {
+          var randomAdjective = adjectives[options.letter.toLowerCase()][Math.floor(Math.random() * adjectives[options.letter.toLowerCase()].length)];
+          var randomAnimal = animals[options.letter.toLowerCase()][Math.floor(Math.random() * animals[options.letter.toLowerCase()].length)];
+          return randomAdjective + " " + randomAnimal;
+        },
+        long: function() {
+          var randomAdjective = "";
+          for (var i = 1; i <= options.adjectivesCount; i++) {
+            if (adjectives[options.letter.toLowerCase()].length > 0) {
+              if (randomAdjective.length > 0) {
+                randomAdjective = randomAdjective + " ";
+              };
+              randomAdjective = randomAdjective + adjectives[options.letter.toLowerCase()].splice(Math.floor(Math.random() * adjectives[options.letter.toLowerCase()].length), 1);
+            };
+          };
+          var randomAnimal = animals[options.letter.toLowerCase()][Math.floor(Math.random() * animals[options.letter.toLowerCase()].length)];
+          return randomAdjective + " " + randomAnimal;
+        }
+      },
+      mix: {
+        short: function() {
+          var adjectivesSeed = alphabet[Math.floor(Math.random() * (alphabet.length - 1))];
+          var animalsSeed = alphabet[Math.floor(Math.random() * (alphabet.length - 1))];
+          var randomAdjective = adjectives[adjectivesSeed][Math.floor(Math.random() * adjectives[adjectivesSeed].length)];
+          var randomAnimal = animals[animalsSeed][Math.floor(Math.random() * animals[animalsSeed].length)];
+          return randomAdjective + " " + randomAnimal;
+        },
+        long: function() {
+          var randomAdjective = "";
+          for (var i = 1; i <= options.adjectivesCount; i++) {
+            var adjectiveLetter = alphabet[Math.floor(Math.random() * (alphabet.length - 1))];
+            if (adjectiveLetter in adjectives && adjectives[adjectiveLetter].length > 0) {
+              if (randomAdjective.length > 0) {
+                randomAdjective = randomAdjective + " ";
+              };
+              randomAdjective = randomAdjective + adjectives[adjectiveLetter].splice(Math.floor(Math.random() * adjectives[adjectiveLetter].length), 1);
+              if (adjectives[adjectiveLetter].length == 0) {
+                delete adjectives[adjectiveLetter];
+              };
+            };
+          };
+          var randomAnimalArray = animals[alphabet[Math.floor(Math.random() * (alphabet.length - 1))]]
+          var randomAnimal = randomAnimalArray[Math.floor(Math.random() * (randomAnimalArray.length - 1))];
+          return randomAdjective + " " + randomAnimal;
+        }
+      }
     };
-    var alliteration = function() {
-      if (options.letter != null) {
-        return adjectives[options.letter.toLowerCase()][Math.floor(Math.random() * adjectives[options.letter.toLowerCase()].length)] + " " + animals[options.letter.toLowerCase()][Math.floor(Math.random() * animals[options.letter.toLowerCase()].length)];
+
+    if (options.letter != null && alphabet.includes(options.letter.toLowerCase())) {
+      if (options.adjectivesCount != null && options.adjectivesCount > 0) {
+        return action.alliteration.long();
       } else {
-        var seed = alphabet[Math.floor(Math.random() * alphabet.length)];
-        return adjectives[seed][Math.floor(Math.random() * adjectives[seed].length)] + " " + animals[seed][Math.floor(Math.random() * animals[seed].length)];
+        return action.alliteration.short();
       };
-    };
-    if (options.mix) {
-      return mix();
     } else {
-      return alliteration();
+      if (options.adjectivesCount != null && options.adjectivesCount > 0) {
+        return action.mix.long();
+      } else {
+        return action.mix.short();
+      };
     };
   };
 

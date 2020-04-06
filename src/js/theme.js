@@ -2079,7 +2079,7 @@ var theme = (function() {
 
       randomButton.addEventListener("click", function(event) {
         var randomName = helper.randomString({
-          mix: true
+          adjectivesCount: 2
         });
         stagedThemeCustom.theme.name = randomName;
         nameInput.value = randomName;

@@ -647,7 +647,7 @@ var link = (function() {
       }, false);
       groupFormRandomNameButton.addEventListener("click", function(event) {
         var randomName = helper.randomString({
-          mix: true
+          adjectivesCount: 2
         });
         stagedGroup.group.name.text = randomName;
         groupFormInputName.value = randomName;
@@ -1187,7 +1187,7 @@ var link = (function() {
       }, false);
       groupNewRandomNameButton.addEventListener("click", function(event) {
         var randomName = helper.randomString({
-          mix: true
+          adjectivesCount: 2
         });
         stagedLink.position.group.name.text = randomName;
         groupNewInput.value = randomName;
