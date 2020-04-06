@@ -1644,6 +1644,7 @@ var theme = (function() {
   };
 
   mod.font = {
+    loaded: [],
     display: {
       light: function() {
         helper.setObject({
@@ -1752,9 +1753,11 @@ var theme = (function() {
           var displayFont = arrayItem.font.display.name + ":" + arrayItem.font.display.weight;
           var uiFont = arrayItem.font.ui.name + ":" + arrayItem.font.ui.weight;
           if (arrayItem.font.display.name != "" && !allPresetFonts.includes(displayFont)) {
+            mod.font.loaded.push(arrayItem.font.display.name);
             allPresetFonts.push(displayFont);
           };
           if (arrayItem.font.ui.name != "" && !allPresetFonts.includes(uiFont)) {
+            mod.font.loaded.push(arrayItem.font.ui.name);
             allPresetFonts.push(uiFont);
           };
         });
@@ -1766,7 +1769,9 @@ var theme = (function() {
       },
       custom: {
         display: function() {
-          if (state.get.current().theme.font.display.name.trim().replace(/\s\s+/g, " ") != "") {
+          var displayFont = state.get.current().theme.font.display.name.trim().replace(/\s\s+/g, " ");
+          if (!mod.font.loaded.includes(displayFont) && displayFont != "") {
+            mod.font.loaded.push(displayFont);
             WebFont.load({
               google: {
                 families: [state.get.current().theme.font.display.name.trim().replace(/\s\s+/g, " ") + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"]
@@ -1776,7 +1781,9 @@ var theme = (function() {
           render.font.display.name();
         },
         ui: function() {
-          if (state.get.current().theme.font.ui.name.trim().replace(/\s\s+/g, " ") != "") {
+          var uiFont = state.get.current().theme.font.ui.name.trim().replace(/\s\s+/g, " ");
+          if (!mod.font.loaded.includes(uiFont) && uiFont != "") {
+            mod.font.loaded.push(uiFont);
             WebFont.load({
               google: {
                 families: [state.get.current().theme.font.ui.name.trim().replace(/\s\s+/g, " ") + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"]
@@ -2012,6 +2019,8 @@ var theme = (function() {
             render.shadow();
             render.shade.opacity();
             render.themeMetaTag();
+            render.font.load.custom.display();
+            render.font.load.custom.ui();
             style.check();
             control.render.update.control.header();
             control.render.update.control.menu();
