@@ -4416,21 +4416,6 @@ var control = (function() {
             render.class();
           }
         }],
-        style: [{
-          element: ".control-theme-style-dark",
-          path: "theme.style",
-          type: "radio",
-          func: function() {
-            theme.style.dark();
-          }
-        }, {
-          element: ".control-theme-style-light",
-          path: "theme.style",
-          type: "radio",
-          func: function() {
-            theme.style.light();
-          }
-        }],
         fonts: [{
           element: ".control-theme-font-display-name",
           path: "theme.font.display.name",
@@ -4648,6 +4633,21 @@ var control = (function() {
             theme.render.font.ui.style();
             render.update.control.header();
             render.update.control.menu();
+          }
+        }],
+        style: [{
+          element: ".control-theme-style-dark",
+          path: "theme.style",
+          type: "radio",
+          func: function() {
+            theme.style.dark();
+          }
+        }, {
+          element: ".control-theme-style-light",
+          path: "theme.style",
+          type: "radio",
+          func: function() {
+            theme.style.light();
           }
         }],
         color: [{
