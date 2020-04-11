@@ -7357,7 +7357,7 @@ var control = (function() {
         });
       };
       if (object.valueModify) {
-        object.mirrorElement.forEach(function(arrayItem, index) {
+        for (var key in object.valueModify) {
           helper.e(object.element).addEventListener(bind.control.eventType[object.type], function(event) {
             var _update = function() {
               render.update.control.menu(object);
@@ -7365,7 +7365,7 @@ var control = (function() {
             clearTimeout(bind.control.timer.inputUpdate);
             bind.control.timer.inputUpdate = setTimeout(_update, 1000);
           }, false);
-        });
+        };
       };
     },
     header: function(object) {
