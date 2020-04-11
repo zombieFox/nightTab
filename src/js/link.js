@@ -1392,7 +1392,12 @@ var link = (function() {
         make.bookmarks();
       };
     } else {
-      make.empty.bookmarks();
+      // if searching
+      if (state.get.current().search) {
+        make.empty.search();
+      } else {
+        make.empty.bookmarks();
+      };
     };
   };
 
