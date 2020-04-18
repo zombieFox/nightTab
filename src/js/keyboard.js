@@ -41,6 +41,9 @@ var keyboard = (function() {
           link.edit.mode.close();
           data.save();
         };
+        if (state.get.current().pagelock) {
+          pagelock.unlock();
+        };
         data.save();
       };
     }, false);
