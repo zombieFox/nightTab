@@ -20,13 +20,13 @@ var control = (function() {
       menu.open();
     },
   }, {
-    element: ".control-link-add",
+    element: ".control-add-link",
     type: "button",
     func: function() {
       link.add.item.open();
     }
   }, {
-    element: ".control-group-add",
+    element: ".control-add-group",
     type: "button",
     func: function() {
       link.add.group.open();

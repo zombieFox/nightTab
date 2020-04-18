@@ -383,12 +383,12 @@ var header = (function() {
       controlAddToggle.appendChild(controlAddToggleText);
       var formDropdownMenu = helper.node("ul|class:list-unstyled form-dropdown-menu");
       var controlGroupAddLi = helper.node("li");
-      var controlGroupAdd = helper.node("button|class:button button-block text-left form-dropdown-menu-item control-group-add,tabindex:1");
+      var controlGroupAdd = helper.node("button|class:button button-block text-left form-dropdown-menu-item control-add-group,tabindex:1");
       var controlGroupAddText = helper.node("span:New Group|class:button-text");
       controlGroupAdd.appendChild(controlGroupAddText);
       controlGroupAddLi.appendChild(controlGroupAdd);
       var controlLinkAddLi = helper.node("li");
-      var controlLinkAdd = helper.node("button|class:button button-block text-left form-dropdown-menu-item control-link-add,tabindex:1");
+      var controlLinkAdd = helper.node("button|class:button button-block text-left form-dropdown-menu-item control-add-link,tabindex:1");
       var controlLinkAddText = helper.node("span:New Bookmark|class:button-text");
       controlLinkAdd.appendChild(controlLinkAddText);
       controlLinkAddLi.appendChild(controlLinkAdd);

@@ -232,31 +232,14 @@ var bookmarks = (function() {
       mod.all[data.position.destination.group].items.splice(data.position.destination.item, 0, data.link);
     },
     group: function(data) {
-      var makeName = function() {
-        var count = get().length + 1;
-        return "Group " + count;
-      };
       if (data) {
         if (data.group.name.text == null) {
-          data.group.name.text = makeName();
-        } else if (typeof data.group.name.text == "string") {
+          data.group.name.text = "";
+        };
+        if (typeof data.group.name.text == "string") {
           data.group.name.text = data.group.name.text.trim();
-          if (data.group.name.text == "") {
-            data.group.name.text = makeName();
-          };
         };
         mod.all.splice(data.position.destination, 0, data.group);
-      } else {
-        mod.all.push({
-          name: {
-            text: makeName(),
-            show: true
-          },
-          openAll: {
-            show: true
-          },
-          items: []
-        });
       };
     }
   };
