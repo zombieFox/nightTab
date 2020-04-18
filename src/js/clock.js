@@ -111,10 +111,11 @@ var clock = (function() {
         clock.appendChild(elementMeridiem);
       };
       if (state.get.current().header.clock.separator.show) {
+        var separatorCharacter;
         if (state.get.current().header.clock.separator.text.trim().replace(/\s\s+/g, " ") != "") {
-          var separatorCharacter = state.get.current().header.clock.separator.text.trim().replace(/\s\s+/g, " ");
+          separatorCharacter = state.get.current().header.clock.separator.text.trim().replace(/\s\s+/g, " ");
         } else {
-          var separatorCharacter = state.get.default().header.clock.separator.text;
+          separatorCharacter = ":";
         };
         var parts = clock.querySelectorAll("span");
         if (parts.length > 1) {

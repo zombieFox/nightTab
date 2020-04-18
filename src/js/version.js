@@ -1,6 +1,6 @@
 var version = (function() {
 
-  var current = "5.10.0";
+  var current = "5.11.0";
 
   var name = "Zonked Tarsier";
 

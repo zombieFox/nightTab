@@ -34,7 +34,7 @@ var state = (function() {
         },
         separator: {
           show: true,
-          text: ":"
+          text: ""
         },
         meridiem: {
           show: true
@@ -75,7 +75,7 @@ var state = (function() {
         },
         separator: {
           show: true,
-          text: "/"
+          text: ""
         },
         format: "datemonth",
         size: 1,
@@ -366,13 +366,13 @@ var state = (function() {
       },
       clock: {
         separator: {
-          text: ":"
+          text: ""
         },
         size: 1
       },
       date: {
         separator: {
-          text: "/"
+          text: ""
         },
         size: 1
       },
