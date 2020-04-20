@@ -137,6 +137,13 @@ var theme = (function() {
         path: "theme.style",
         newValue: "dark"
       });
+    },
+    system: function() {
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.style",
+        newValue: "system"
+      });
     }
   };
 
@@ -1700,11 +1707,19 @@ var theme = (function() {
       var html = helper.e("html");
       helper.addClass(html, "is-theme-style-dark");
       helper.removeClass(html, "is-theme-style-light");
+      helper.removeClass(html, "is-theme-style-system");
     },
     light: function() {
       var html = helper.e("html");
       helper.removeClass(html, "is-theme-style-dark");
       helper.addClass(html, "is-theme-style-light");
+      helper.removeClass(html, "is-theme-style-system");
+    },
+    system: function() {
+      var html = helper.e("html");
+      helper.removeClass(html, "is-theme-style-dark");
+      helper.removeClass(html, "is-theme-style-light");
+      helper.addClass(html, "is-theme-style-system");
     }
   };
 
@@ -2290,11 +2305,17 @@ var theme = (function() {
       mod.style.light();
       render.style.light();
     },
+    system: function() {
+      mod.style.system();
+      render.style.system();
+    },
     check: function() {
       if (state.get.current().theme.style == "dark") {
         style.dark();
       } else if (state.get.current().theme.style == "light") {
         style.light();
+      } else if (state.get.current().theme.style == "system") {
+        style.system();
       };
     },
     toggle: function() {

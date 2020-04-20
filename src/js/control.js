@@ -4649,6 +4649,13 @@ var control = (function() {
           func: function() {
             theme.style.light();
           }
+        }, {
+          element: ".control-theme-style-system",
+          path: "theme.style",
+          type: "radio",
+          func: function() {
+            theme.style.system();
+          }
         }],
         color: [{
           element: ".control-theme-color-rgb-color",
