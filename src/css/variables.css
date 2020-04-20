@@ -122,7 +122,8 @@
   --link-item-display-name-size:                        0.9em;
   --link-item-border:                                   0;
   --link-item-opacity:                                  1;
-  --link-item-padding:                                  1em;
+  --link-item-padding:                                  1;
+  --link-item-clip-padding:                             1em;
   /* layout */
   --layout-size:                                        1;
   --layout-width:                                       80%;
@@ -346,7 +347,7 @@
 }
 
 .is-link-item-opacity {
-  --link-item-padding:                                  calc(0 * 1em);
+  --link-item-clip-padding:                             calc(0 * 1em);
 }
 
 @media (min-width: 700px) {

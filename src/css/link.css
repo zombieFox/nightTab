@@ -191,11 +191,11 @@
 }
 
 .is-link-style-block .link-panel-front {
-  padding: 1em;
+  padding: calc(1em * var(--link-item-padding));
 }
 
 .is-link-style-list .link-panel-front {
-  padding: 0.5em 1.5em;
+  padding: calc(0.5em * var(--link-item-padding)) calc(1.5em * var(--link-item-padding));
 }
 
 .is-theme-radius .link-panel-front {
@@ -770,19 +770,19 @@
 }
 
 .is-link-orientation-top .link-panel-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--link-item-padding)), 0 calc(0% + var(--link-item-padding)));
+  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--link-item-clip-padding)), 0 calc(0% + var(--link-item-clip-padding)));
 }
 
 .is-link-orientation-bottom .link-panel-back {
-  clip-path: polygon(0 calc(100% - var(--link-item-padding)), 100% calc(100% - var(--link-item-padding)), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - var(--link-item-clip-padding)), 100% calc(100% - var(--link-item-clip-padding)), 100% 100%, 0 100%);
 }
 
 .is-link-orientation-top.is-link-item-line-show .link-panel-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(var(--layout-line-width) + var(--link-item-padding)), 0 calc(var(--layout-line-width) + var(--link-item-padding)));
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--layout-line-width) + var(--link-item-clip-padding)), 0 calc(var(--layout-line-width) + var(--link-item-clip-padding)));
 }
 
 .is-link-orientation-bottom.is-link-item-line-show .link-panel-back {
-  clip-path: polygon(0 calc(100% - var(--layout-line-width) - var(--link-item-padding)), 100% calc(100% - var(--layout-line-width) - var(--link-item-padding)), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - var(--layout-line-width) - var(--link-item-clip-padding)), 100% calc(100% - var(--layout-line-width) - var(--link-item-clip-padding)), 100% 100%, 0 100%);
 }
 
 .is-link-orientation-top .link-item:focus .link-panel-back,
@@ -798,27 +798,27 @@
 .is-link-item-url-show.is-link-orientation-top .link-item:focus .link-panel-back,
 .is-link-item-url-show.is-link-orientation-top .link-item:focus-within .link-panel-back,
 .is-link-item-url-show.is-link-orientation-top .link-item:hover .link-panel-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(var(--link-item-url-height) + var(--link-item-padding)), 0 calc(var(--link-item-url-height) + var(--link-item-padding)));
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--link-item-url-height) + var(--link-item-clip-padding)), 0 calc(var(--link-item-url-height) + var(--link-item-clip-padding)));
 }
 
 .is-link-item-url-show.is-link-orientation-bottom .link-item:focus .link-panel-back,
 .is-link-item-url-show.is-link-orientation-bottom .link-item:focus-within .link-panel-back,
 .is-link-item-url-show.is-link-orientation-bottom .link-item:hover .link-panel-back {
-  clip-path: polygon(0 calc(100% - calc(var(--link-item-url-height) + var(--link-item-padding))), 100% calc(100% - calc(var(--link-item-url-height) + var(--link-item-padding))), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - calc(var(--link-item-url-height) + var(--link-item-clip-padding))), 100% calc(100% - calc(var(--link-item-url-height) + var(--link-item-clip-padding))), 100% 100%, 0 100%);
 }
 
 .is-edit.is-link-orientation-top .link-panel-back,
 .is-edit.is-link-orientation-top .link-item:focus .link-panel-back,
 .is-edit.is-link-orientation-top .link-item:focus-within .link-panel-back,
 .is-edit.is-link-orientation-top .link-item:hover .link-panel-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(var(--link-item-edit-height) + var(--link-item-padding)), 0 calc(var(--link-item-edit-height) + var(--link-item-padding)));
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--link-item-edit-height) + var(--link-item-clip-padding)), 0 calc(var(--link-item-edit-height) + var(--link-item-clip-padding)));
 }
 
 .is-edit.is-link-orientation-bottom .link-panel-back,
 .is-edit.is-link-orientation-bottom .link-item:focus .link-panel-back,
 .is-edit.is-link-orientation-bottom .link-item:focus-within .link-panel-back,
 .is-edit.is-link-orientation-bottom .link-item:hover .link-panel-back {
-  clip-path: polygon(0 calc(100% - var(--link-item-edit-height) - var(--link-item-padding)), 100% calc(100% - var(--link-item-edit-height) - var(--link-item-padding)), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - var(--link-item-edit-height) - var(--link-item-clip-padding)), 100% calc(100% - var(--link-item-edit-height) - var(--link-item-clip-padding)), 100% 100%, 0 100%);
 }
 
 .link-control {
