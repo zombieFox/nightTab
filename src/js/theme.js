@@ -269,149 +269,254 @@ var theme = (function() {
     preset: {
       all: [
         [{
-          h: 0,
-          s: 0,
-          l: 90
+          name: "Extra light grey",
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 90
+          }
         }, {
-          h: 0,
-          s: 80,
-          l: 90
+          name: "Extra light red",
+          hsl: {
+            h: 0,
+            s: 80,
+            l: 90
+          }
         }, {
-          h: 60,
-          s: 80,
-          l: 90
+          name: "Extra light yellow",
+          hsl: {
+            h: 60,
+            s: 80,
+            l: 90
+          }
         }, {
-          h: 120,
-          s: 80,
-          l: 90
+          name: "Extra light green",
+          hsl: {
+            h: 120,
+            s: 80,
+            l: 90
+          }
         }, {
-          h: 180,
-          s: 80,
-          l: 90
+          name: "Extra light cyan",
+          hsl: {
+            h: 180,
+            s: 80,
+            l: 90
+          }
         }, {
-          h: 240,
-          s: 80,
-          l: 90
+          name: "Extra light blue",
+          hsl: {
+            h: 240,
+            s: 80,
+            l: 90
+          }
         }, {
-          h: 300,
-          s: 80,
-          l: 90
+          name: "Extra light magenta",
+          hsl: {
+            h: 300,
+            s: 80,
+            l: 90
+          }
         }],
         [{
-          h: 0,
-          s: 0,
-          l: 70
+          name: "Light grey",
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 70
+          }
         }, {
-          h: 0,
-          s: 80,
-          l: 70
+          name: "Light red",
+          hsl: {
+            h: 0,
+            s: 80,
+            l: 70
+          }
         }, {
-          h: 60,
-          s: 80,
-          l: 70
+          name: "Light yellow",
+          hsl: {
+            h: 60,
+            s: 80,
+            l: 70
+          }
         }, {
-          h: 120,
-          s: 80,
-          l: 70
+          name: "Light green",
+          hsl: {
+            h: 120,
+            s: 80,
+            l: 70
+          }
         }, {
-          h: 180,
-          s: 80,
-          l: 70
+          name: "Light cyan",
+          hsl: {
+            h: 180,
+            s: 80,
+            l: 70
+          }
         }, {
-          h: 240,
-          s: 80,
-          l: 70
+          name: "Light blue",
+          hsl: {
+            h: 240,
+            s: 80,
+            l: 70
+          }
         }, {
-          h: 300,
-          s: 80,
-          l: 70
+          name: "Light magenta",
+          hsl: {
+            h: 300,
+            s: 80,
+            l: 70
+          }
         }],
         [{
-          h: 0,
-          s: 0,
-          l: 50
+          name: "Grey",
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 50
+          }
         }, {
-          h: 0,
-          s: 80,
-          l: 50
+          name: "Red",
+          hsl: {
+            h: 0,
+            s: 80,
+            l: 50
+          }
         }, {
-          h: 60,
-          s: 80,
-          l: 50
+          name: "Yellow",
+          hsl: {
+            h: 60,
+            s: 80,
+            l: 50
+          }
         }, {
-          h: 120,
-          s: 80,
-          l: 50
+          name: "Green",
+          hsl: {
+            h: 120,
+            s: 80,
+            l: 50
+          }
         }, {
-          h: 180,
-          s: 80,
-          l: 50
+          name: "Cyan",
+          hsl: {
+            h: 180,
+            s: 80,
+            l: 50
+          }
         }, {
-          h: 240,
-          s: 80,
-          l: 50
+          name: "Blue",
+          hsl: {
+            h: 240,
+            s: 80,
+            l: 50
+          }
         }, {
-          h: 300,
-          s: 80,
-          l: 50
+          name: "Magenta",
+          hsl: {
+            h: 300,
+            s: 80,
+            l: 50
+          }
         }],
         [{
-          h: 0,
-          s: 0,
-          l: 30
+          name: "Dark grey",
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 30
+          }
         }, {
-          h: 0,
-          s: 60,
-          l: 30
+          name: "Dark red",
+          hsl: {
+            h: 0,
+            s: 60,
+            l: 30
+          }
         }, {
-          h: 60,
-          s: 60,
-          l: 30
+          name: "Dark yellow",
+          hsl: {
+            h: 60,
+            s: 60,
+            l: 30
+          }
         }, {
-          h: 120,
-          s: 60,
-          l: 30
+          name: "Dark green",
+          hsl: {
+            h: 120,
+            s: 60,
+            l: 30
+          }
         }, {
-          h: 180,
-          s: 60,
-          l: 30
+          name: "Dark cyan",
+          hsl: {
+            h: 180,
+            s: 60,
+            l: 30
+          }
         }, {
-          h: 240,
-          s: 60,
-          l: 30
+          name: "Dark blue",
+          hsl: {
+            h: 240,
+            s: 60,
+            l: 30
+          }
         }, {
-          h: 300,
-          s: 60,
-          l: 30
+          name: "Dark magenta",
+          hsl: {
+            h: 300,
+            s: 60,
+            l: 30
+          }
         }],
         [{
-          h: 0,
-          s: 0,
-          l: 10
+          name: "Extra dark grey",
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 10
+          }
         }, {
-          h: 0,
-          s: 20,
-          l: 10
+          name: "Extra dark red",
+          hsl: {
+            h: 0,
+            s: 20,
+            l: 10
+          }
         }, {
-          h: 60,
-          s: 20,
-          l: 10
+          name: "Extra dark yellow",
+          hsl: {
+            h: 60,
+            s: 20,
+            l: 10
+          }
         }, {
-          h: 120,
-          s: 20,
-          l: 10
+          name: "Extra dark green",
+          hsl: {
+            h: 120,
+            s: 20,
+            l: 10
+          }
         }, {
-          h: 180,
-          s: 20,
-          l: 10
+          name: "Extra dark cyan",
+          hsl: {
+            h: 180,
+            s: 20,
+            l: 10
+          }
         }, {
-          h: 240,
-          s: 20,
-          l: 10
+          name: "Extra dark blue",
+          hsl: {
+            h: 240,
+            s: 20,
+            l: 10
+          }
         }, {
-          h: 300,
-          s: 20,
-          l: 10
+          name: "Extra dark magenta",
+          hsl: {
+            h: 300,
+            s: 20,
+            l: 10
+          }
         }]
       ],
       set: function(hsl) {
@@ -1909,11 +2014,13 @@ var theme = (function() {
       mod.accent.preset.all.forEach(function(arrayItem, index) {
         arrayItem.forEach(function(arrayItem, index) {
           var themeAccentPresetItem = helper.node("button|class:theme-accent-preset-item button button-block button-ring,tabindex:-1");
-          themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-h", arrayItem.h);
-          themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-s", arrayItem.s);
-          themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-l", arrayItem.l);
+          var themeAccentPresetItemName = helper.node("span:" + arrayItem.name + "|class:sr-only");
+          themeAccentPresetItem.appendChild(themeAccentPresetItemName);
+          themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-h", arrayItem.hsl.h);
+          themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-s", arrayItem.hsl.s);
+          themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-l", arrayItem.hsl.l);
           themeAccentPresetItem.addEventListener("click", function() {
-            mod.accent.preset.set(arrayItem);
+            mod.accent.preset.set(arrayItem.hsl);
             data.save();
             render.accent.color();
             control.render.update.control.header();
