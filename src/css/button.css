@@ -191,6 +191,19 @@ button [class*=" button-"]:last-child,
   margin-right: 0;
 }
 
+.button-ring {
+  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+}
+
+.button-ring:hover {
+  box-shadow: var(--form-ring-hover);
+}
+
+.button-ring:focus,
+.button-ring:active {
+  box-shadow: var(--form-ring-accent);
+}
+
 .button-link {
   background-color: transparent;
   border: 0;

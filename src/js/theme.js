@@ -265,6 +265,176 @@ var theme = (function() {
           l: Math.round(hsl.l)
         }
       });
+    },
+    preset: {
+      all: [
+        [{
+          h: 0,
+          s: 0,
+          l: 90
+        }, {
+          h: 0,
+          s: 80,
+          l: 90
+        }, {
+          h: 60,
+          s: 80,
+          l: 90
+        }, {
+          h: 120,
+          s: 80,
+          l: 90
+        }, {
+          h: 180,
+          s: 80,
+          l: 90
+        }, {
+          h: 240,
+          s: 80,
+          l: 90
+        }, {
+          h: 300,
+          s: 80,
+          l: 90
+        }],
+        [{
+          h: 0,
+          s: 0,
+          l: 70
+        }, {
+          h: 0,
+          s: 80,
+          l: 70
+        }, {
+          h: 60,
+          s: 80,
+          l: 70
+        }, {
+          h: 120,
+          s: 80,
+          l: 70
+        }, {
+          h: 180,
+          s: 80,
+          l: 70
+        }, {
+          h: 240,
+          s: 80,
+          l: 70
+        }, {
+          h: 300,
+          s: 80,
+          l: 70
+        }],
+        [{
+          h: 0,
+          s: 0,
+          l: 50
+        }, {
+          h: 0,
+          s: 80,
+          l: 50
+        }, {
+          h: 60,
+          s: 80,
+          l: 50
+        }, {
+          h: 120,
+          s: 80,
+          l: 50
+        }, {
+          h: 180,
+          s: 80,
+          l: 50
+        }, {
+          h: 240,
+          s: 80,
+          l: 50
+        }, {
+          h: 300,
+          s: 80,
+          l: 50
+        }],
+        [{
+          h: 0,
+          s: 0,
+          l: 30
+        }, {
+          h: 0,
+          s: 60,
+          l: 30
+        }, {
+          h: 60,
+          s: 60,
+          l: 30
+        }, {
+          h: 120,
+          s: 60,
+          l: 30
+        }, {
+          h: 180,
+          s: 60,
+          l: 30
+        }, {
+          h: 240,
+          s: 60,
+          l: 30
+        }, {
+          h: 300,
+          s: 60,
+          l: 30
+        }],
+        [{
+          h: 0,
+          s: 0,
+          l: 10
+        }, {
+          h: 0,
+          s: 20,
+          l: 10
+        }, {
+          h: 60,
+          s: 20,
+          l: 10
+        }, {
+          h: 120,
+          s: 20,
+          l: 10
+        }, {
+          h: 180,
+          s: 20,
+          l: 10
+        }, {
+          h: 240,
+          s: 20,
+          l: 10
+        }, {
+          h: 300,
+          s: 20,
+          l: 10
+        }]
+      ],
+      set: function(hsl) {
+        var rgb = helper.convertColor.hsl.rgb(hsl);
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.accent.hsl",
+          newValue: {
+            h: hsl.h,
+            s: hsl.s,
+            l: hsl.l
+          }
+        });
+        helper.setObject({
+          object: state.get.current(),
+          path: "theme.accent.rgb",
+          newValue: {
+            r: Math.round(rgb.r),
+            g: Math.round(rgb.g),
+            b: Math.round(rgb.b)
+          }
+        });
+      }
     }
   };
 
@@ -1730,6 +1900,31 @@ var theme = (function() {
       html.style.setProperty("--theme-accent-r", rgb.r);
       html.style.setProperty("--theme-accent-g", rgb.g);
       html.style.setProperty("--theme-accent-b", rgb.b);
+    },
+    preset: function() {
+      var themeAccentPreset = helper.e(".theme-accent-preset");
+      var formWrap = helper.node("div|class:form-wrap");
+      var themeAccentPresetGrid = helper.node("div|class:theme-accent-preset-grid");
+
+      mod.accent.preset.all.forEach(function(arrayItem, index) {
+        arrayItem.forEach(function(arrayItem, index) {
+          var themeAccentPresetItem = helper.node("button|class:theme-accent-preset-item button button-block button-ring,tabindex:-1");
+          themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-h", arrayItem.h);
+          themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-s", arrayItem.s);
+          themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-l", arrayItem.l);
+          themeAccentPresetItem.addEventListener("click", function() {
+            mod.accent.preset.set(arrayItem);
+            data.save();
+            render.accent.color();
+            control.render.update.control.header();
+            control.render.update.control.menu();
+          });
+          themeAccentPresetGrid.appendChild(themeAccentPresetItem);
+        });
+      });
+
+      formWrap.appendChild(themeAccentPresetGrid);
+      themeAccentPreset.appendChild(formWrap);
     }
   };
 
@@ -1878,7 +2073,7 @@ var theme = (function() {
     allThemePreset.forEach(function(arrayItem, index) {
       var themePresetItem = helper.node("div|class:theme-preset-item");
       var themePresetTile = helper.node("div|class:theme-preset-tile");
-      var themePresetButton = helper.node("button|class:theme-preset-button button,tabindex:-1");
+      var themePresetButton = helper.node("button|class:theme-preset-button button button-block button-ring,tabindex:-1");
       var themePresetPreview = helper.node("span|class:theme-preset-preview");
       var shadeSteps = 4;
       var rgb = arrayItem.color.rgb;
@@ -1958,7 +2153,7 @@ var theme = (function() {
         allThemeCuston.forEach(function(arrayItem, index) {
           var themeCustomItem = helper.node("div|class:theme-custom-item");
           var themeCustomTile = helper.node("div|class:theme-custom-tile");
-          var themeCustomButton = helper.node("button|class:theme-custom-button button,tabindex:-1");
+          var themeCustomButton = helper.node("button|class:theme-custom-button button button-block button-ring,tabindex:-1");
           var themeCustomPreview = helper.node("span|class:theme-custom-preview");
           var themeCustomControl = helper.node("div|class:theme-custom-control");
           var themeCustomEdit = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button button-small,tabindex:-2");
@@ -1970,18 +2165,30 @@ var theme = (function() {
           var hsl = arrayItem.color.hsl;
           for (var i = 1; i <= shadeSteps; i++) {
             if (i > 1) {
-              if (arrayItem.style == "dark") {
+              var shiftDark = function() {
                 rgb = helper.convertColor.hsl.rgb({
                   h: hsl.h,
                   s: hsl.s,
                   l: hsl.l - ((arrayItem.color.contrast.dark) * (i * 2))
                 });
-              } else if (arrayItem.style == "light") {
+              };
+              var shiftLight = function() {
                 rgb = helper.convertColor.hsl.rgb({
                   h: hsl.h,
                   s: hsl.s,
                   l: hsl.l + ((arrayItem.color.contrast.light) * (i * 2))
                 });
+              };
+              if (arrayItem.style == "dark") {
+                shiftDark();
+              } else if (arrayItem.style == "light") {
+                shiftLight();
+              } else if (arrayItem.style == "system") {
+                if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+                  shiftDark();
+                } else if (window.matchMedia("(prefers-color-scheme:light)").matches) {
+                  shiftLight();
+                };
               };
             };
             for (var colorKey in rgb) {
@@ -2361,6 +2568,7 @@ var theme = (function() {
     render.font.ui.style();
     render.color.shade();
     render.accent.color();
+    render.accent.preset();
     render.radius();
     render.shadow();
     render.shade.opacity();
