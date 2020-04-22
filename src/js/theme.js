@@ -2275,9 +2275,9 @@ var theme = (function() {
           var themeCustomButton = helper.node("button|class:theme-custom-button button button-block button-ring,tabindex:-1");
           var themeCustomPreview = helper.node("span|class:theme-custom-preview");
           var themeCustomControl = helper.node("div|class:theme-custom-control");
-          var themeCustomEdit = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button button-small,tabindex:-2");
+          var themeCustomEdit = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button button-small,tabindex:-1");
           var themeCustomEditIcon = helper.node("spa|class:button-icon icon-edit");
-          var themeCustomRemove = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button button-small,tabindex:-2");
+          var themeCustomRemove = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button button-small,tabindex:-1");
           var themeCustomRemoveIcon = helper.node("spa|class:button-icon icon-close");
           var shadeSteps = 4;
           var rgb = arrayItem.color.rgb;
@@ -2578,7 +2578,7 @@ var theme = (function() {
         });
       } else {
         helper.eA(".theme-custom-control-item").forEach(function(arrayItem, index) {
-          arrayItem.tabIndex = -2;
+          arrayItem.tabIndex = -1;
         });
       };
     },

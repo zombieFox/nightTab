@@ -18,6 +18,7 @@ var control = (function() {
     type: "button",
     func: function() {
       menu.open();
+      theme.render.custom.tabIndex();
     },
   }, {
     element: ".control-add-link",
@@ -183,60 +184,70 @@ var control = (function() {
           type: "button",
           func: function() {
             menu.nav("layout");
+            theme.render.custom.tabIndex();
           }
         }, {
           element: ".control-menu-header",
           type: "button",
           func: function() {
             menu.nav("header");
+            theme.render.custom.tabIndex();
           }
         }, {
           element: ".control-menu-groups",
           type: "button",
           func: function() {
             menu.nav("groups");
+            theme.render.custom.tabIndex();
           }
         }, {
           element: ".control-menu-bookmarks",
           type: "button",
           func: function() {
             menu.nav("bookmarks");
+            theme.render.custom.tabIndex();
           }
         }, {
           element: ".control-menu-theme",
           type: "button",
           func: function() {
             menu.nav("theme");
+            theme.render.custom.tabIndex();
           }
         }, {
           element: ".control-menu-background",
           type: "button",
           func: function() {
             menu.nav("background");
+            theme.render.custom.tabIndex();
           }
         }, {
           element: ".control-menu-data",
           type: "button",
           func: function() {
             menu.nav("data");
+            theme.render.custom.tabIndex();
           }
         }, {
           element: ".control-menu-coffee",
           type: "button",
           func: function() {
             menu.nav("coffee");
+            theme.render.custom.tabIndex();
           }
         }, {
           element: ".control-menu-nighttab",
           type: "button",
           func: function() {
             menu.nav("nighttab");
+            theme.render.custom.tabIndex();
           }
         }, {
           element: ".control-menu-close",
           type: "button",
           func: function() {
             menu.close();
+            theme.render.custom.tabIndex();
           }
         }]
       },
