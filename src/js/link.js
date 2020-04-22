@@ -892,7 +892,7 @@ var link = (function() {
       var groupNewInputWrap = helper.node("div|class:form-wrap");
       var groupNewInput = helper.node("input|type:text,class:link-form-input-new-group,id:link-form-input-new-group,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
       var groupNewRandomNameButtonWrap = helper.node("div|class:form-wrap");
-      var groupNewRandomNameButton = helper.node("button:Random Group name|class:button,type:button,tabindex:1,disabled");
+      var groupNewRandomNameButton = helper.node("button:Random Group name|class:button button-line,type:button,tabindex:1,disabled");
 
       // letter
       var displayLetterRadioWrap = helper.node("div|class:form-wrap");
