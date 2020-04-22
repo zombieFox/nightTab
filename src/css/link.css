@@ -846,10 +846,6 @@
   flex-grow: 1;
 }
 
-.link-control-item:after {
-  content: none;
-}
-
 .link-control-item.disabled,
 .link-control-item:disabled {
   background-color: transparent;

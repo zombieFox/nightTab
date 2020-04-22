@@ -153,7 +153,7 @@ var autoSuggest = (function() {
       document.removeEventListener("keydown", bind.navigateResults, false);
     },
     clickOut: function(event) {
-      if (!(event.target.classList.contains("auto-suggest-list")) && !(event.target.classList.contains("auto-suggest-input"))) {
+      if (!(event.target.classList.contains("auto-suggest")) &&!(event.target.classList.contains("auto-suggest-list")) && !(event.target.classList.contains("auto-suggest-input"))) {
         render.close();
       };
     }
@@ -176,7 +176,7 @@ var autoSuggest = (function() {
         fontawesomeIcon: function() {
           suggestItems.forEach(function(arrayItem) {
             var li = helper.node("li|class:auto-suggest-list-item");
-            var button = helper.node("button|tabindex:1,class:auto-suggest-item");
+            var button = helper.node("button|tabindex:1,class:button button-link button-ring auto-suggest-item");
             var icon = helper.node("span|class:auto-suggest-icon fa-" + arrayItem.name);
             if (arrayItem.styles.includes("solid")) {
               helper.addClass(icon, "fas");

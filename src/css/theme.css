@@ -20,10 +20,6 @@
   transition: height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
 }
 
-.theme-preset-button:after,
-.theme-custom-button::after {
-  content: none;
-}
 
 .theme-custom-control {
   border-radius: 0 0 var(--theme-radius) var(--theme-radius);
@@ -43,10 +39,6 @@
   padding: 0;
   border-radius: 0;
   flex: 1 1 auto;
-}
-
-.theme-custom-control-item:after {
-  border-radius: 0;
 }
 
 .is-theme-custom-edit .theme-custom-button {
@@ -305,9 +297,6 @@
   background-color: hsl(var(--theme-accent-preset-item-color-h), calc(var(--theme-accent-preset-item-color-s) * 1%), calc(var(--theme-accent-preset-item-color-l) * 1%));
 }
 
-.theme-accent-preset-item:after {
-  content: none;
-}
 
 @media (min-width: 700px) {
   .theme-accent-preset-item {

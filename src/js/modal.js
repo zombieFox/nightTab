@@ -102,9 +102,9 @@ var modal = (function() {
         bind.focus.remove();
       };
       var modalBody = helper.node("div|class:modal-body");
-      var modalControls = helper.node("div|class:modal-controls");
-      var actionButton = helper.node("button:" + options.actionText + "|class:modal-button button button-primary button-block,tabindex:1");
-      var cancelButton = helper.node("button:" + options.cancelText + "|class:modal-button button button-primary button-block,tabindex:1");
+      var modalControls = helper.node("div|class:modal-controls form-group");
+      var actionButton = helper.node("button:" + options.actionText + "|class:button button-line button-block modal-button,tabindex:1");
+      var cancelButton = helper.node("button:" + options.cancelText + "|class:button button-line button-block modal-button,tabindex:1");
       modalControls.appendChild(cancelButton);
       modalControls.appendChild(actionButton);
       if (options.heading != null) {

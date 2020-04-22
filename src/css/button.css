@@ -77,11 +77,7 @@ button:disabled:active,
   text-decoration: none;
 }
 
-button:after,
-.button:after,
-input[type="button"]:after,
-input[type="reset"]:after,
-input[type="submit"]:after {
+.button-line:after {
   content: "";
   background: transparent;
   border-radius: var(--theme-radius);
@@ -95,44 +91,24 @@ input[type="submit"]:after {
   pointer-events: none;
 }
 
-button:focus:after,
-button:hover:after,
-.button:focus:after,
-.button:hover:after,
-input[type="button"]:focus:after,
-input[type="button"]:hover:after,
-input[type="reset"]:focus:after,
-input[type="reset"]:hover:after,
-input[type="submit"]:focus:after,
-input[type="submit"]:hover:after {
+.button-line:focus:after,
+.button-line:hover:after {
   background-color: rgb(var(--button-border-focus-hover));
 }
 
-button:active:after,
-.button:active:after,
-input[type="button"]:active:after,
-input[type="reset"]:active:after,
-input[type="submit"]:active:after {
+.button-line:active:after {
   background-color: rgb(var(--button-border-active));
   transition: none;
 }
 
-button.disabled:after,
-.button.disabled:after,
-button.disabled:hover:after,
-.button.disabled:hover:after,
-button.disabled:focus:after,
-.button.disabled:focus:after,
-button.disabled:active:after,
-.button.disabled:active:after,
-button:disabled:after,
-.button:disabled:after,
-button:disabled:hover:after,
-.button:disabled:hover:after,
-button:disabled:focus:after,
-.button:disabled:focus:after,
-button:disabled:active:after,
-.button:disabled:active:after {
+.button-line.disabled:after,
+.button-line.disabled:hover:after,
+.button-line.disabled:focus:after,
+.button-line.disabled:active:after,
+.button-line:disabled:after,
+.button-line:disabled:hover:after,
+.button-line:disabled:focus:after,
+.button-line:disabled:active:after {
   background-color: rgb(var(--button-border-disabled));
 }
 
@@ -152,7 +128,7 @@ button [class*=" icon-"],
   color: rgb(var(--button-text-focus-active));
 }
 
-.button.active:after {
+.button-line.active:after {
   background-color: rgb(var(--theme-accent));
 }
 
@@ -208,10 +184,6 @@ button [class*=" button-"]:last-child,
   background-color: transparent;
   border: 0;
   color: rgb(var(--button-link-text));
-}
-
-.button-link:after {
-  content: none;
 }
 
 .button-link:hover,

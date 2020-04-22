@@ -2280,7 +2280,7 @@ var theme = (function() {
       var nameInput = helper.node("input|id:theme-name,class:theme-name mb-0,type:text,tabindex:1,placeholder:Example theme,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
 
       var randomFormWrap = helper.node("div|class:form-wrap");
-      var randomButton = helper.node("button:Random Theme name|class:button,type:button,tabindex:1");
+      var randomButton = helper.node("button:Random Theme name|class:button button-line,type:button,tabindex:1");
 
       randomFormWrap.appendChild(randomButton);
 

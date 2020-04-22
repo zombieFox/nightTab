@@ -1037,10 +1037,10 @@ input[type="range"]:disabled::-moz-range-progress {
   top: inherit;
 }
 
-.form-input-button input[type="checkbox"]+label:after,
-.form-input-button input[type="radio"]+label:after,
-.form-input-button input[type="color"]+label:after,
-.form-input-button input[type="file"]+label:after {
+.form-input-button-line input[type="checkbox"]+label:after,
+.form-input-button-line input[type="radio"]+label:after,
+.form-input-button-line input[type="color"]+label:after,
+.form-input-button-line input[type="file"]+label:after {
   content: "";
   background: transparent;
   border-radius: var(--theme-radius);
@@ -1054,49 +1054,49 @@ input[type="range"]:disabled::-moz-range-progress {
   pointer-events: none;
 }
 
-.form-input-button input[type="checkbox"]:focus+label:after,
-.form-input-button input[type="checkbox"]:hover+label:after,
-.form-input-button input[type="radio"]:focus+label:after,
-.form-input-button input[type="radio"]:hover+label:after,
-.form-input-button input[type="color"]:focus+label:after,
-.form-input-button input[type="color"]:hover+label:after,
-.form-input-button input[type="file"]:focus+label:after,
-.form-input-button input[type="file"]:hover+label:after {
+.form-input-button-line input[type="checkbox"]:focus+label:after,
+.form-input-button-line input[type="checkbox"]:hover+label:after,
+.form-input-button-line input[type="radio"]:focus+label:after,
+.form-input-button-line input[type="radio"]:hover+label:after,
+.form-input-button-line input[type="color"]:focus+label:after,
+.form-input-button-line input[type="color"]:hover+label:after,
+.form-input-button-line input[type="file"]:focus+label:after,
+.form-input-button-line input[type="file"]:hover+label:after {
   background-color: rgb(var(--button-border-focus-hover));
 }
 
-.form-input-button input[type="checkbox"]:active+label:after,
-.form-input-button input[type="radio"]:active+label:after,
-.form-input-button input[type="color"]:active+label:after,
-.form-input-button input[type="file"]:active+label:after {
+.form-input-button-line input[type="checkbox"]:active+label:after,
+.form-input-button-line input[type="radio"]:active+label:after,
+.form-input-button-line input[type="color"]:active+label:after,
+.form-input-button-line input[type="file"]:active+label:after {
   background-color: rgb(var(--button-border-active));
   transition: none;
 }
 
-.form-input-button input[type="checkbox"]:checked+label:after,
-.form-input-button input[type="radio"]:checked+label:after,
-.form-input-button input[type="color"]:checked+label:after,
-.form-input-button input[type="file"]:checked+label:after {
+.form-input-button-line input[type="checkbox"]:checked+label:after,
+.form-input-button-line input[type="radio"]:checked+label:after,
+.form-input-button-line input[type="color"]:checked+label:after,
+.form-input-button-line input[type="file"]:checked+label:after {
   background-color: rgb(var(--button-border-active));
   transition: none;
 }
 
-.form-input-button input[type="checkbox"]:disabled+label:after,
-.form-input-button input[type="checkbox"]:disabled:hover+label:after,
-.form-input-button input[type="checkbox"]:disabled:focus+label:after,
-.form-input-button input[type="checkbox"]:disabled:active+label:after,
-.form-input-button input[type="radio"]:disabled+label:after,
-.form-input-button input[type="radio"]:disabled:hover+label:after,
-.form-input-button input[type="radio"]:disabled:focus+label:after,
-.form-input-button input[type="radio"]:disabled:active+label:after,
-.form-input-button input[type="color"]:disabled+label:after,
-.form-input-button input[type="color"]:disabled:hover+label:after,
-.form-input-button input[type="color"]:disabled:focus+label:after,
-.form-input-button input[type="color"]:disabled:active+label:after,
-.form-input-button input[type="file"]:disabled+label:after,
-.form-input-button input[type="file"]:disabled:hover+label:after,
-.form-input-button input[type="file"]:disabled:focus+label:after,
-.form-input-button input[type="file"]:disabled:active+label:after {
+.form-input-button-line input[type="checkbox"]:disabled+label:after,
+.form-input-button-line input[type="checkbox"]:disabled:hover+label:after,
+.form-input-button-line input[type="checkbox"]:disabled:focus+label:after,
+.form-input-button-line input[type="checkbox"]:disabled:active+label:after,
+.form-input-button-line input[type="radio"]:disabled+label:after,
+.form-input-button-line input[type="radio"]:disabled:hover+label:after,
+.form-input-button-line input[type="radio"]:disabled:focus+label:after,
+.form-input-button-line input[type="radio"]:disabled:active+label:after,
+.form-input-button-line input[type="color"]:disabled+label:after,
+.form-input-button-line input[type="color"]:disabled:hover+label:after,
+.form-input-button-line input[type="color"]:disabled:focus+label:after,
+.form-input-button-line input[type="color"]:disabled:active+label:after,
+.form-input-button-line input[type="file"]:disabled+label:after,
+.form-input-button-line input[type="file"]:disabled:hover+label:after,
+.form-input-button-line input[type="file"]:disabled:focus+label:after,
+.form-input-button-line input[type="file"]:disabled:active+label:after {
   background-color: rgb(var(--button-border-disabled));
 }
 
@@ -1147,13 +1147,6 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-input-button-link input:disabled[type="file"]:hover+label,
 .form-input-button-link input:disabled[type="file"]:focus+label {
   background-color: transparent;
-}
-
-.form-input-button-link input[type="checkbox"]+label:after,
-.form-input-button-link input[type="radio"]+label:after,
-.form-input-button-link input[type="color"]+label:after,
-.form-input-button-link input[type="file"]+label:after {
-  content: none;
 }
 
 .input-color-dot input[type="color"] {
@@ -1356,11 +1349,11 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group .form-group-text,
 .form-group .button,
-.form-group .button:after,
-.form-group .form-input-button input[type="checkbox"]+label:after,
-.form-group .form-input-button input[type="radio"]+label:after,
-.form-group .form-input-button input[type="color"]+label:after,
-.form-group .form-input-button input[type="file"]+label:after,
+.form-group .button-line:after,
+.form-group .form-input-button-line input[type="checkbox"]+label:after,
+.form-group .form-input-button-line input[type="radio"]+label:after,
+.form-group .form-input-button-line input[type="color"]+label:after,
+.form-group .form-input-button-line input[type="file"]+label:after,
 .form-group>select,
 .form-group>input[type="email"],
 .form-group>input[type="number"],
@@ -1414,11 +1407,11 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group .form-group-text:first-child,
 .form-group .button:first-child,
-.form-group .button:first-child:after,
-.form-group .form-input-button:first-child input[type="checkbox"]+label:after,
-.form-group .form-input-button:first-child input[type="radio"]+label:after,
-.form-group .form-input-button:first-child input[type="color"]+label:after,
-.form-group .form-input-button:first-child input[type="file"]+label:after,
+.form-group .button-line:first-child:after,
+.form-group .form-input-button-line:first-child input[type="checkbox"]+label:after,
+.form-group .form-input-button-line:first-child input[type="radio"]+label:after,
+.form-group .form-input-button-line:first-child input[type="color"]+label:after,
+.form-group .form-input-button-line:first-child input[type="file"]+label:after,
 .form-group>select:first-child,
 .form-group>input[type="email"]:first-child,
 .form-group>input[type="number"]:first-child,
@@ -1433,11 +1426,11 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group .form-group-text:last-child,
 .form-group .button:last-child,
-.form-group .button:last-child:after,
-.form-group .form-input-button:last-child input[type="checkbox"]+label:after,
-.form-group .form-input-button:last-child input[type="radio"]+label:after,
-.form-group .form-input-button:last-child input[type="color"]+label:after,
-.form-group .form-input-button:last-child input[type="file"]+label:after,
+.form-group .button-line:last-child:after,
+.form-group .form-input-button-line:last-child input[type="checkbox"]+label:after,
+.form-group .form-input-button-line:last-child input[type="radio"]+label:after,
+.form-group .form-input-button-line:last-child input[type="color"]+label:after,
+.form-group .form-input-button-line:last-child input[type="file"]+label:after,
 .form-group>select:last-child,
 .form-group>input[type="email"]:last-child,
 .form-group>input[type="number"]:last-child,
@@ -1452,7 +1445,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group .form-group-text:only-child,
 .form-group .button:only-child,
-.form-group .button:only-child:after,
+.form-group .button-line:only-child:after,
 .form-group>select:only-child,
 .form-group>input[type="email"]:only-child,
 .form-group>input[type="number"]:only-child,
@@ -1466,7 +1459,7 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-group.form-group-nested-button * .button,
-.form-group.form-group-nested-button * .button:after,
+.form-group.form-group-nested-button * .button-line:after,
 .form-group.form-group-nested-button * input[type="checkbox"]+label,
 .form-group.form-group-nested-button * input[type="radio"]+label,
 .form-group.form-group-nested-button * input[type="color"]+label {
@@ -1474,7 +1467,7 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-group.form-group-nested-button *:first-child .button,
-.form-group.form-group-nested-button *:first-child .button:after,
+.form-group.form-group-nested-button *:first-child .button-line:after,
 .form-group.form-group-nested-button *:first-child input[type="checkbox"]+label,
 .form-group.form-group-nested-button *:first-child input[type="radio"]+label,
 .form-group.form-group-nested-button *:first-child input[type="color"]+label {
@@ -1482,7 +1475,7 @@ input[type="range"]:disabled::-moz-range-progress {
 }
 
 .form-group.form-group-nested-button *:last-child .button,
-.form-group.form-group-nested-button *:last-child .button:after,
+.form-group.form-group-nested-button *:last-child .button-line:after,
 .form-group.form-group-nested-button *:last-child input[type="checkbox"]+label,
 .form-group.form-group-nested-button *:last-child input[type="radio"]+label,
 .form-group.form-group-nested-button *:last-child input[type="color"]+label {
@@ -1491,7 +1484,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group .form-group-radius-left.form-group-text,
 .form-group .form-group-radius-left.button,
-.form-group .form-group-radius-left.button:after,
+.form-group .form-group-radius-left.button-line:after,
 .form-group>select.form-group-radius-left,
 .form-group>input.form-group-radius-left[type="email"],
 .form-group>input.form-group-radius-left[type="number"],
@@ -1507,7 +1500,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group .form-group-radius-right.form-group-text,
 .form-group .form-group-radius-right.button,
-.form-group .form-group-radius-right.button:after,
+.form-group .form-group-radius-right.butbutton-lineton:after,
 .form-group>select.form-group-radius-right,
 .form-group>input.form-group-radius-right[type="email"],
 .form-group>input.form-group-radius-right[type="number"],
@@ -1540,7 +1533,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group.form-group-border .form-group-text,
 .form-group.form-group-border .button,
-.form-group.form-group-border .button:after,
+.form-group.form-group-border .button-line:after,
 .form-group.form-group-border>select,
 .form-group.form-group-border>input[type="email"],
 .form-group.form-group-border>input[type="number"],
@@ -1551,7 +1544,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-group.form-group-border>input[type="color"],
 .form-group.form-group-border>input[type="range"],
 .form-group.form-group-border.form-group-nested-button * .button,
-.form-group.form-group-border.form-group-nested-button * .button:after,
+.form-group.form-group-border.form-group-nested-button * .button-line:after,
 .form-group.form-group-border.form-group-nested-button * input[type="checkbox"]+label,
 .form-group.form-group-border.form-group-nested-button * input[type="radio"]+label,
 .form-group.form-group-border.form-group-nested-button * input[type="color"]+label {
@@ -1732,11 +1725,6 @@ input[type="range"]:disabled::-moz-range-progress {
   justify-content: flex-start;
   position: relative;
   box-shadow: none;
-}
-
-.form-dropdown-menu button:after,
-.form-dropdown-menu .button:after {
-  content: none;
 }
 
 .form-group.form-group-nested-button .form-dropdown-menu *:first-child .button,
