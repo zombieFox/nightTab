@@ -2080,18 +2080,30 @@ var theme = (function() {
       var hsl = arrayItem.color.hsl;
       for (var i = 1; i <= shadeSteps; i++) {
         if (i > 1) {
-          if (arrayItem.style == "dark") {
+          var shiftDark = function() {
             rgb = helper.convertColor.hsl.rgb({
               h: hsl.h,
               s: hsl.s,
               l: hsl.l - ((arrayItem.color.contrast.dark) * (i * 2))
             });
-          } else if (arrayItem.style == "light") {
+          };
+          var shiftLight = function() {
             rgb = helper.convertColor.hsl.rgb({
               h: hsl.h,
               s: hsl.s,
               l: hsl.l + ((arrayItem.color.contrast.light) * (i * 2))
             });
+          };
+          if (arrayItem.style == "dark") {
+            shiftDark();
+          } else if (arrayItem.style == "light") {
+            shiftLight();
+          } else if (arrayItem.style == "system") {
+            if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+              shiftDark();
+            } else if (window.matchMedia("(prefers-color-scheme:light)").matches) {
+              shiftLight();
+            };
           };
         };
         for (var colorKey in rgb) {
@@ -2103,11 +2115,11 @@ var theme = (function() {
           rgb[colorKey] = Math.round(rgb[colorKey]);
         };
         var themePresetBackground = helper.node("span|class:theme-preset-background-0" + i);
-        themePresetBackground.style.setProperty("background-color", "rgb(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ")");
+        themePresetPreview.style.setProperty("--theme-preset-background-0" + i, rgb.r + ", " + rgb.g + ", " + rgb.b);
         themePresetPreview.appendChild(themePresetBackground);
       };
       var themePresetAccent = helper.node("span|class:theme-preset-accent");
-      themePresetAccent.style.setProperty("background-color", "rgb(" + arrayItem.accent.rgb.r + ", " + arrayItem.accent.rgb.g + ", " + arrayItem.accent.rgb.b + ")");
+      themePresetPreview.style.setProperty("--theme-preset-accent", arrayItem.accent.rgb.r + ", " + arrayItem.accent.rgb.g + ", " + arrayItem.accent.rgb.b);
       themePresetPreview.appendChild(themePresetAccent);
       if (arrayItem.name != null && arrayItem.name != "") {
         var themePresetName = helper.node("span:" + arrayItem.name + "|class:theme-preset-name");
@@ -2200,11 +2212,11 @@ var theme = (function() {
               rgb[colorKey] = Math.round(rgb[colorKey]);
             };
             var themeCustomBackground = helper.node("span|class:theme-custom-background-0" + i);
-            themeCustomBackground.style.setProperty("background-color", "rgb(" + rgb.r + ", " + rgb.g + ", " + rgb.b + ")");
+            themeCustomPreview.style.setProperty("--theme-custom-background-0" + i, rgb.r + ", " + rgb.g + ", " + rgb.b);
             themeCustomPreview.appendChild(themeCustomBackground);
           };
           var themeCustomAccent = helper.node("span|class:theme-custom-accent");
-          themeCustomAccent.style.setProperty("background-color", "rgb(" + arrayItem.accent.rgb.r + ", " + arrayItem.accent.rgb.g + ", " + arrayItem.accent.rgb.b + ")");
+          themeCustomPreview.style.setProperty("--theme-custom-accent", arrayItem.accent.rgb.r + ", " + arrayItem.accent.rgb.g + ", " + arrayItem.accent.rgb.b);
           themeCustomPreview.appendChild(themeCustomAccent);
           if (arrayItem.name != null && arrayItem.name != "") {
             var themeCustomName = helper.node("span:" + arrayItem.name + "|class:theme-custom-name");

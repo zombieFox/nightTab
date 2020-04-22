@@ -20,7 +20,6 @@
   transition: height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
 }
 
-
 .theme-custom-control {
   border-radius: 0 0 var(--theme-radius) var(--theme-radius);
   width: 100%;
@@ -100,11 +99,27 @@
   z-index: 1;
 }
 
+.theme-preset-background-01 {
+  background-color: rgb(var(--theme-preset-background-01));
+}
+
+.theme-custom-background-01 {
+  background-color: rgb(var(--theme-custom-background-01));
+}
+
 .theme-preset-background-02,
 .theme-custom-background-02 {
   z-index: 2;
   clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 70%);
   transition-delay: var(--layout-duration-03);
+}
+
+.theme-preset-background-02 {
+  background-color: rgb(var(--theme-preset-background-02));
+}
+
+.theme-custom-background-02 {
+  background-color: rgb(var(--theme-custom-background-02));
 }
 
 .theme-preset-background-03,
@@ -114,6 +129,14 @@
   transition-delay: var(--layout-duration-02);
 }
 
+.theme-preset-background-03 {
+  background-color: rgb(var(--theme-preset-background-03));
+}
+
+.theme-custom-background-03 {
+  background-color: rgb(var(--theme-custom-background-03));
+}
+
 .theme-preset-background-04,
 .theme-custom-background-04 {
   z-index: 4;
@@ -121,10 +144,26 @@
   transition-delay: var(--layout-duration-01);
 }
 
+.theme-preset-background-04 {
+  background-color: rgb(var(--theme-preset-background-04));
+}
+
+.theme-custom-background-04 {
+  background-color: rgb(var(--theme-custom-background-04));
+}
+
 .theme-preset-accent,
 .theme-custom-accent {
   z-index: 5;
   clip-path: circle(30% at 100% 100%);
+}
+
+.theme-preset-accent {
+  background-color: rgb(var(--theme-preset-accent));
+}
+
+.theme-custom-accent {
+  background-color: rgb(var(--theme-custom-accent));
 }
 
 .is-theme-custom-edit .theme-custom-accent {
@@ -288,7 +327,6 @@
   height: 1.5em;
   min-width: 1.5em;
   min-height: 1.5em;
-  min-height: initial;
 }
 
 .theme-accent-preset-item:focus,
@@ -296,7 +334,6 @@
 .theme-accent-preset-item:active {
   background-color: hsl(var(--theme-accent-preset-item-color-h), calc(var(--theme-accent-preset-item-color-s) * 1%), calc(var(--theme-accent-preset-item-color-l) * 1%));
 }
-
 
 @media (min-width: 700px) {
   .theme-accent-preset-item {
