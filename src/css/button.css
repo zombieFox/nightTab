@@ -55,6 +55,11 @@ input[type="submit"]:active {
   transition: none;
 }
 
+button.active,
+.button.active {
+  color: rgb(var(--button-text-focus-active));
+}
+
 button.disabled,
 button.disabled:hover,
 button.disabled:focus,
@@ -96,7 +101,8 @@ button:disabled:active,
   background-color: rgb(var(--button-border-focus-hover));
 }
 
-.button-line:active:after {
+.button-line:active:after,
+.button-line.active:after {
   background-color: rgb(var(--button-border-active));
   transition: none;
 }
@@ -112,6 +118,31 @@ button:disabled:active,
   background-color: rgb(var(--button-border-disabled));
 }
 
+.button-ring {
+  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+}
+
+.button-ring:focus,
+.button-ring:hover {
+  box-shadow: var(--form-ring-hover);
+}
+
+.button-ring:active,
+.button-ring.active {
+  box-shadow: var(--form-ring-accent);
+}
+
+.button-ring.disabled,
+.button-ring:disabled,
+.button-ring.disabled:focus,
+.button-ring:disabled:focus,
+.button-ring.disabled:hover,
+.button-ring:disabled:hover,
+.button-ring.disabled:active,
+.button-ring:disabled:active {
+  box-shadow: none;
+}
+
 .button-text {
   pointer-events: none;
 }
@@ -122,14 +153,6 @@ button [class*=" icon-"],
 .button [class*=" icon-"] {
   line-height: 1;
   font-size: 1.5em;
-}
-
-.button.active {
-  color: rgb(var(--button-text-focus-active));
-}
-
-.button-line.active:after {
-  background-color: rgb(var(--theme-accent));
 }
 
 .button-small {
@@ -165,19 +188,6 @@ button [class*=" button-"]:last-child,
 .button [class^="button-"]:last-child,
 .button [class*=" button-"]:last-child {
   margin-right: 0;
-}
-
-.button-ring {
-  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
-}
-
-.button-ring:focus,
-.button-ring:hover {
-  box-shadow: var(--form-ring-hover);
-}
-
-.button-ring:active {
-  box-shadow: var(--form-ring-accent);
 }
 
 .button-link {
