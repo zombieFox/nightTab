@@ -70,6 +70,7 @@ hr {
   border-radius: var(--theme-radius);
   margin: calc(var(--form-wrap-space) * 1.5) 0;
   clear: both;
+  transition: border-color var(--layout-timing-extra-fast);
 }
 
 b,

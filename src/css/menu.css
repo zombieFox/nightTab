@@ -33,7 +33,7 @@
   align-items: stretch;
   overflow-y: auto;
   pointer-events: all;
-  transition: box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
 }
 
 .is-menu-open .menu-area {
@@ -117,6 +117,7 @@
 
 .menu-content-item:not(:last-child) {
   border-bottom: var(--horizontal-rule-large);
+  transition: border-color var(--layout-timing-extra-fast);
 }
 
 .menu-item-header {
@@ -164,6 +165,7 @@
     flex-wrap: nowrap;
     overflow-y: auto;
     z-index: 1;
+    transition: background-color var(--layout-timing-extra-fast);
   }
 
   .menu-content {
@@ -217,7 +219,7 @@
     flex-wrap: nowrap;
     overflow: hidden;
     height: 0;
-    transition: height var(--layout-timing-extra-fast);
+    transition: background-color var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast);
   }
 
   .menu-subnav.active {

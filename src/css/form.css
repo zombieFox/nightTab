@@ -73,6 +73,7 @@
   position: sticky;
   top: 0;
   z-index: 4;
+  transition: background-color var(--layout-timing-extra-fast);
 }
 
 /* label */
