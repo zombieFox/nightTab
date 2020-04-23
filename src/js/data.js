@@ -25,7 +25,7 @@ var data = (function() {
     timeStamp.date = _timeStampPrefix(timeStamp.date);
     timeStamp.month = _timeStampPrefix(timeStamp.month + 1);
     timeStamp.year = _timeStampPrefix(timeStamp.year);
-    timeStamp = timeStamp.hours + " " + timeStamp.minutes + " " + timeStamp.seconds + " - " + timeStamp.date + "." + timeStamp.month + "." + timeStamp.year;
+    timeStamp = timeStamp.year + "." + timeStamp.month + "." + timeStamp.date + " - " + timeStamp.hours + " " + timeStamp.minutes + " " + timeStamp.seconds;
     var fileName = _saveName + " backup - " + timeStamp + ".json";
     var data = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(load()));
     var link = document.createElement("a");
