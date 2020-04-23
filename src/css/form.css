@@ -1208,7 +1208,7 @@ input[type="range"]:disabled::-moz-range-progress {
   width: calc(var(--form-thumb-size) * 0.8);
   height: calc(var(--form-thumb-size) * 0.8);
   min-width: inherit;
-  z-index: 1;
+  z-index: 4;
   border-radius: 50%;
   transform: translateY(-50%);
   transition: none;
