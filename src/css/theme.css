@@ -1,8 +1,13 @@
 .theme-preset-item,
 .theme-custom-item {
+  position: relative;
+}
+
+.theme-preset-tile,
+.theme-custom-tile {
+  position: relative;
   width: var(--theme-preview-size);
   height: var(--theme-preview-size);
-  position: relative;
 }
 
 .theme-preset-button,
@@ -20,26 +25,6 @@
   transition: height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
 }
 
-.theme-custom-control {
-  border-radius: 0 0 var(--theme-radius) var(--theme-radius);
-  width: 100%;
-  height: 0;
-  position: absolute;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  z-index: 1;
-  transition: height var(--layout-timing-extra-fast);
-}
-
-.theme-custom-control-item {
-  padding: 0;
-  border-radius: 0;
-  flex: 1 1 auto;
-}
-
 .is-theme-custom-edit .theme-custom-button {
   border-radius: var(--theme-radius) var(--theme-radius) 0 0;
   height: calc(100% - var(--theme-custom-edit-height));
@@ -55,8 +40,48 @@
   box-shadow: var(--form-ring-accent);
 }
 
-.is-theme-custom-edit .theme-custom-control {
+.theme-custom-control {
+  border-radius: var(--theme-radius);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  z-index: 1;
+  transition: height var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
+}
+
+.theme-custom-control .theme-custom-control-item {
+  padding: 0;
+  border-radius: 0;
+  flex: 1 1 auto;
+  position: relative;
+  bottom: 0;
+  min-height: initial;
+  height: 0;
+  transition: height var(--layout-timing-extra-fast);
+}
+
+.is-theme-custom-edit .theme-custom-control-item {
   height: var(--theme-custom-edit-height);
+}
+
+.theme-custom-control-item .button-icon {
+  font-size: 1em;
+  position: relative;
+  transition: bottom var(--layout-timing-extra-fast), left var(--layout-timing-extra-fast), right var(--layout-timing-extra-fast);
+}
+
+.theme-custom-control-item:first-child .button-icon {
+  bottom: calc(var(--theme-radius) / 16);
+  left: calc(var(--theme-radius) / 8);
+}
+
+.theme-custom-control-item:last-child .button-icon {
+  bottom: calc(var(--theme-radius) / 16);
+  right: calc(var(--theme-radius) / 8);
 }
 
 .theme-preset-preview,
@@ -85,8 +110,8 @@
 .theme-custom-background-03,
 .theme-custom-background-04,
 .theme-custom-accent {
-  width: 100%;
-  height: 100%;
+  width: var(--theme-preview-size);
+  height: var(--theme-preview-size);
   position: absolute;
   top: 0;
   left: 0;
@@ -155,7 +180,7 @@
 .theme-preset-accent,
 .theme-custom-accent {
   z-index: 5;
-  clip-path: circle(30% at 100% 100%);
+  clip-path: circle(30% at calc(100% - calc(var(--theme-radius) / 12)) calc(100% - calc(var(--theme-radius) / 12)));
 }
 
 .theme-preset-accent {
@@ -167,27 +192,27 @@
 }
 
 .is-theme-custom-edit .theme-custom-accent {
-  clip-path: circle(30% at 100% 60%);
+  clip-path: circle(30% at calc(100% - calc(var(--theme-radius) / 12)) calc(60% - calc(var(--theme-radius) / 12)));
 }
 
 .theme-preset-name,
 .theme-custom-name {
   color: rgb(var(--theme-style-text));
   font-style: normal;
-  font-size: 0.8em;
+  font-size: 0.75em;
   text-align: left;
   display: block;
-  max-width: calc(100% - 2em);
-  max-height: calc(100% - 2em);
+  max-width: calc(100% - 1.5em - calc(var(--theme-radius) / 3));
+  max-height: calc(100% - 1.5em - calc(var(--theme-radius) / 3));
   position: absolute;
-  top: 1em;
-  left: 1em;
+  top: calc(0.75em + calc(var(--theme-radius) / 6));
+  left: calc(0.75em + calc(var(--theme-radius) / 6));
   z-index: 6;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: initial;
   transform: scale(1);
-  transition: transform var(--layout-timing-extra-fast);
+  transition: color var(--layout-timing-extra-fast), transform var(--layout-timing-extra-fast), max-width var(--layout-timing-extra-fast), max-height var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast), left var(--layout-timing-extra-fast);
 }
 
 .theme-preset-button:focus .theme-preset-background-02,
@@ -215,12 +240,12 @@
 .theme-preset-button:hover .theme-preset-accent,
 .theme-custom-button:focus .theme-custom-accent,
 .theme-custom-button:hover .theme-custom-accent {
-  clip-path: circle(40% at 100% 100%);
+  clip-path: circle(40% at calc(100% - calc(var(--theme-radius) / 12)) calc(100% - calc(var(--theme-radius) / 12)));
 }
 
 .is-theme-custom-edit .theme-custom-button:focus .theme-custom-accent,
 .is-theme-custom-edit .theme-custom-button:hover .theme-custom-accent {
-  clip-path: circle(40% at 100% 60%);
+  clip-path: circle(40% at calc(100% - calc(var(--theme-radius) / 12)) calc(60% - calc(var(--theme-radius) / 12)));
 }
 
 .theme-color-box {
