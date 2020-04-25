@@ -1816,12 +1816,13 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-dropdown-menu button,
 .form-dropdown-menu .button {
-  border: 0;
   border-radius: 0;
-  margin-bottom: 0;
   justify-content: flex-start;
   position: relative;
-  box-shadow: none;
+}
+
+.form-dropdown-menu .button-line:after {
+  border-radius: 0;
 }
 
 .form-group.form-group-nested-button .form-dropdown-menu *:first-child .button,
