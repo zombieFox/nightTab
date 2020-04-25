@@ -194,7 +194,7 @@ var menu = (function() {
     render.tab.tabindex();
     render.subnav.active();
     render.subnav.tabindex();
-    render.nav.scroll(name);
+    render.nav.scroll();
   };
 
   var open = function() {
@@ -207,7 +207,6 @@ var menu = (function() {
     render.tab.tabindex();
     render.subnav.active();
     render.subnav.tabindex();
-    render.nav.scroll(name);
     bind.focus.add();
     shade.open({
       action: function() {
