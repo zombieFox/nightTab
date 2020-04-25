@@ -8689,32 +8689,12 @@ var control = (function() {
       }],
       background: [{
         condition: function() {
-          return state.get.current().background.image.show;
+          return (state.get.current().background.color.by == "custom");
         },
         dependents: function() {
           return [
-            ".control-background-image-from-file",
-            ".control-background-image-from-url",
-            "[for=control-background-image-opacity-range]",
-            ".control-background-image-opacity-range",
-            ".control-background-image-opacity-number",
-            ".control-background-image-opacity-default",
-            "[for=control-background-image-blur-range]",
-            ".control-background-image-blur-range",
-            ".control-background-image-blur-number",
-            ".control-background-image-blur-default",
-            "[for=control-background-image-grayscale-range]",
-            ".control-background-image-grayscale-range",
-            ".control-background-image-grayscale-number",
-            ".control-background-image-grayscale-default",
-            "[for=control-background-image-accent-range]",
-            ".control-background-image-accent-range",
-            ".control-background-image-accent-number",
-            ".control-background-image-accent-default",
-            "[for=control-background-image-scale-range]",
-            ".control-background-image-scale-range",
-            ".control-background-image-scale-number",
-            ".control-background-image-scale-default"
+            ".control-background-color-rgb-range",
+            ".control-background-color-rgb-text"
           ];
         }
       }, {
@@ -8741,12 +8721,44 @@ var control = (function() {
         }
       }, {
         condition: function() {
-          return (state.get.current().background.color.by == "custom");
+          return state.get.current().background.image.show;
         },
         dependents: function() {
           return [
-            ".control-background-color-rgb-range",
-            ".control-background-color-rgb-text"
+            ".control-background-image-from-file",
+            ".control-background-image-from-url",
+            "[for=control-background-image-opacity-range]",
+            ".control-background-image-opacity-range",
+            ".control-background-image-opacity-number",
+            ".control-background-image-opacity-default",
+            "[for=control-background-image-blur-range]",
+            ".control-background-image-blur-range",
+            ".control-background-image-blur-number",
+            ".control-background-image-blur-default",
+            "[for=control-background-image-grayscale-range]",
+            ".control-background-image-grayscale-range",
+            ".control-background-image-grayscale-number",
+            ".control-background-image-grayscale-default",
+            "[for=control-background-image-accent-range]",
+            ".control-background-image-accent-range",
+            ".control-background-image-accent-number",
+            ".control-background-image-accent-default",
+            "[for=control-background-image-scale-range]",
+            ".control-background-image-scale-range",
+            ".control-background-image-scale-number",
+            ".control-background-image-scale-default",
+            "[for=control-background-image-vignette-opacity-range]",
+            ".control-background-image-vignette-opacity-range",
+            ".control-background-image-vignette-opacity-number",
+            ".control-background-image-vignette-opacity-default",
+            "[for=control-background-image-vignette-start-range]",
+            ".control-background-image-vignette-start-range",
+            ".control-background-image-vignette-start-number",
+            ".control-background-image-vignette-start-default",
+            "[for=control-background-image-vignette-end-range]",
+            ".control-background-image-vignette-end-range",
+            ".control-background-image-vignette-end-number",
+            ".control-background-image-vignette-end-default"
           ];
         }
       }]
