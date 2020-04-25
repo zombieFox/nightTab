@@ -726,6 +726,14 @@ var control = (function() {
             layout.render.title();
           }
         }, {
+          element: ".control-layout-title-default",
+          type: "button",
+          func: function() {
+            mod.default("layout.title");
+            layout.render.title();
+            render.update.control.menu();
+          }
+        }, {
           element: ".control-layout-scrollpastend",
           path: "layout.scrollPastEnd",
           type: "checkbox",

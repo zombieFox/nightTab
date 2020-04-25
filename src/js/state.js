@@ -255,7 +255,7 @@ var state = (function() {
       width: 80,
       scrollPastEnd: false,
       scrollbars: "auto",
-      title: "New Tab"
+      title: ""
     },
     theme: {
       accent: {
@@ -452,7 +452,8 @@ var state = (function() {
       padding: 4,
       gutter: 2,
       size: 1,
-      width: 80
+      width: 80,
+      title: ""
     },
     theme: {
       accent: {
