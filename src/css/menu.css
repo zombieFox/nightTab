@@ -169,7 +169,7 @@
   }
 
   .is-edge .menu-nav {
-    background-color: rgba(var(--theme-color-02), var(--menu-edge-opacity));
+    background-color: transparent;
   }
 
   .menu-content {
@@ -231,7 +231,7 @@
   }
 
   .is-edge .menu-subnav {
-    background-color: rgba(var(--theme-color-02), var(--menu-edge-opacity));
+    background-color: transparent;
   }
 
   .menu-nav-sub {
