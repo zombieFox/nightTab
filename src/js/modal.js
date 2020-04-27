@@ -64,6 +64,7 @@ var modal = (function() {
         allModal[i].close();
       };
     };
+    _previousModal = null;
   };
 
   render.open = function(override) {
@@ -80,7 +81,6 @@ var modal = (function() {
       options = helper.applyOptions(options, override);
     };
     var _makeModal = function() {
-      mod.open();
       var body = helper.e("body");
       var modal = helper.node("div");
       var modalWrapper = helper.node("div|class:modal-wrapper");
@@ -88,7 +88,7 @@ var modal = (function() {
         modal.setAttribute("class", "modal modal-large");
       } else if (options.size == "small") {
         modal.setAttribute("class", "modal modal-small");
-      } else if (options.size) {
+      } else {
         modal.setAttribute("class", "modal");
       };
       modal.close = function() {
@@ -98,7 +98,6 @@ var modal = (function() {
         } else {
           modal.remove();
         };
-        mod.close();
         bind.focus.remove();
       };
       var modalBody = helper.node("div|class:modal-body");
@@ -139,7 +138,7 @@ var modal = (function() {
         if (options.cancelAction) {
           options.cancelAction();
         };
-        this.close();
+        close();
       }.bind(modal), false);
       _previousModal = modal;
       body.appendChild(modal);
