@@ -237,6 +237,7 @@
   --form-wrap-space:                                    1em;
   /* menu */
   --menu-space:                                         0.75em;
+  --menu-edge-opacity:                                  0.5;
   /* button */
   --button-background:                                  var(--theme-color-02);
   --button-background-focus-hover:                      var(--theme-color-03);

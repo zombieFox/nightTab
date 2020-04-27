@@ -41,7 +41,7 @@
 }
 
 .is-edge .menu-area {
-  background-color: rgba(var(--theme-color-01), 0.8);
+  background-color: rgba(var(--theme-color-01), var(--menu-edge-opacity));
 }
 
 .menu-nav {
@@ -168,6 +168,10 @@
     transition: background-color var(--layout-timing-extra-fast);
   }
 
+  .is-edge .menu-nav {
+    background-color: rgba(var(--theme-color-02), var(--menu-edge-opacity));
+  }
+
   .menu-content {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -227,7 +231,7 @@
   }
 
   .is-edge .menu-subnav {
-    background-color: rgba(var(--theme-color-02), 0.5);
+    background-color: rgba(var(--theme-color-02), var(--menu-edge-opacity));
   }
 
   .menu-nav-sub {
