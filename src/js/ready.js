@@ -1,17 +1,16 @@
 var ready = (function() {
 
+  var _timer = null;
+
   var bind = {};
 
   bind.loaded = {
     func: function() {
       render.loaded();
-      bind.loaded.remove();
+      clearTimeout(_timer);
     },
-    add: function() {
-      window.addEventListener("load", bind.loaded.func, false);
-    },
-    remove: function() {
-      window.removeEventListener("load", bind.loaded.func);
+    timer: function() {
+      _timer = setTimeout(bind.loaded.func, 300);
     }
   };
 
@@ -23,7 +22,7 @@ var ready = (function() {
   };
 
   var init = function() {
-    bind.loaded.add();
+    bind.loaded.timer();
   };
 
   // exposed methods
