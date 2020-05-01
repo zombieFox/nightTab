@@ -267,749 +267,431 @@ var theme = (function() {
       });
     },
     preset: {
-      colorscale: [
-        [{
-          name: "Super extra light grey",
-          type: "grey",
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 90
-          }
-        }, {
-          name: "Extra light grey",
-          type: "grey",
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 77
-          }
-        }, {
-          name: "Light grey",
-          type: "grey",
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 63
-          }
-        }, {
-          name: "Grey",
-          type: "grey",
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 50
-          }
-        }, {
-          name: "Dark grey",
-          type: "grey",
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 37
-          }
-        }, {
-          name: "Extra dark grey",
-          type: "grey",
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 23
-          }
-        }, {
-          name: "Super Extra dark grey",
-          type: "grey",
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light red",
-          type: "primary",
-          hsl: {
-            h: 0,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light red",
-          type: "primary",
-          hsl: {
-            h: 0,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light red",
-          type: "primary",
-          hsl: {
-            h: 0,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Red",
-          type: "primary",
-          hsl: {
-            h: 0,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark red",
-          type: "primary",
-          hsl: {
-            h: 0,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark red",
-          type: "primary",
-          hsl: {
-            h: 0,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark red",
-          type: "primary",
-          hsl: {
-            h: 0,
-            s: 40,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light orange",
-          type: "secondary",
-          hsl: {
-            h: 30,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light orange",
-          type: "secondary",
-          hsl: {
-            h: 30,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light orange",
-          type: "secondary",
-          hsl: {
-            h: 30,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Orange",
-          type: "secondary",
-          hsl: {
-            h: 30,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark orange",
-          type: "secondary",
-          hsl: {
-            h: 30,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark orange",
-          type: "secondary",
-          hsl: {
-            h: 30,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark orange",
-          type: "secondary",
-          hsl: {
-            h: 30,
-            s: 40,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light yellow",
-          type: "primary",
-          hsl: {
-            h: 60,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light yellow",
-          type: "primary",
-          hsl: {
-            h: 60,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light yellow",
-          type: "primary",
-          hsl: {
-            h: 60,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Yellow",
-          type: "primary",
-          hsl: {
-            h: 60,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark yellow",
-          type: "primary",
-          hsl: {
-            h: 60,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark yellow",
-          type: "primary",
-          hsl: {
-            h: 60,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark yellow",
-          type: "primary",
-          hsl: {
-            h: 60,
-            s: 40,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light lime",
-          type: "secondary",
-          hsl: {
-            h: 90,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light lime",
-          type: "secondary",
-          hsl: {
-            h: 90,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light lime",
-          type: "secondary",
-          hsl: {
-            h: 90,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Lime",
-          type: "secondary",
-          hsl: {
-            h: 90,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark lime",
-          type: "secondary",
-          hsl: {
-            h: 90,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark lime",
-          type: "secondary",
-          hsl: {
-            h: 90,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark lime",
-          type: "secondary",
-          hsl: {
-            h: 90,
-            s: 40,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light green",
-          type: "primary",
-          hsl: {
-            h: 120,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light green",
-          type: "primary",
-          hsl: {
-            h: 120,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light green",
-          type: "primary",
-          hsl: {
-            h: 120,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Green",
-          type: "primary",
-          hsl: {
-            h: 120,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark green",
-          type: "primary",
-          hsl: {
-            h: 120,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark green",
-          type: "primary",
-          hsl: {
-            h: 120,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark green",
-          type: "primary",
-          hsl: {
-            h: 120,
-            s: 40,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light aqua",
-          type: "secondary",
-          hsl: {
-            h: 150,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light aqua",
-          type: "secondary",
-          hsl: {
-            h: 150,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light aqua",
-          type: "secondary",
-          hsl: {
-            h: 150,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Aqua",
-          type: "secondary",
-          hsl: {
-            h: 150,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark aqua",
-          type: "secondary",
-          hsl: {
-            h: 150,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark aqua",
-          type: "secondary",
-          hsl: {
-            h: 150,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark aqua",
-          type: "secondary",
-          hsl: {
-            h: 150,
-            s: 40,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light cyan",
-          type: "primary",
-          hsl: {
-            h: 180,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light cyan",
-          type: "primary",
-          hsl: {
-            h: 180,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light cyan",
-          type: "primary",
-          hsl: {
-            h: 180,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Cyan",
-          type: "primary",
-          hsl: {
-            h: 180,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark cyan",
-          type: "primary",
-          hsl: {
-            h: 180,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark cyan",
-          type: "primary",
-          hsl: {
-            h: 180,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark cyan",
-          type: "primary",
-          hsl: {
-            h: 180,
-            s: 40,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light teal",
-          type: "secondary",
-          hsl: {
-            h: 210,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light teal",
-          type: "secondary",
-          hsl: {
-            h: 210,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light teal",
-          type: "secondary",
-          hsl: {
-            h: 210,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Teal",
-          type: "secondary",
-          hsl: {
-            h: 210,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark teal",
-          type: "secondary",
-          hsl: {
-            h: 210,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark teal",
-          type: "secondary",
-          hsl: {
-            h: 210,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark teal",
-          type: "secondary",
-          hsl: {
-            h: 210,
-            s: 40,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light blue",
-          type: "primary",
-          hsl: {
-            h: 240,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light blue",
-          type: "primary",
-          hsl: {
-            h: 240,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light blue",
-          type: "primary",
-          hsl: {
-            h: 240,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Blue",
-          type: "primary",
-          hsl: {
-            h: 240,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark blue",
-          type: "primary",
-          hsl: {
-            h: 240,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark blue",
-          type: "primary",
-          hsl: {
-            h: 240,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark blue",
-          type: "primary",
-          hsl: {
-            h: 240,
-            s: 40,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light pruple",
-          type: "secondary",
-          hsl: {
-            h: 270,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light pruple",
-          type: "secondary",
-          hsl: {
-            h: 270,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light pruple",
-          type: "secondary",
-          hsl: {
-            h: 270,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Pruple",
-          type: "secondary",
-          hsl: {
-            h: 270,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark pruple",
-          type: "secondary",
-          hsl: {
-            h: 270,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark pruple",
-          type: "secondary",
-          hsl: {
-            h: 270,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark pruple",
-          type: "secondary",
-          hsl: {
-            h: 270,
-            s: 40,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light magenta",
-          type: "primary",
-          hsl: {
-            h: 300,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light magenta",
-          type: "primary",
-          hsl: {
-            h: 300,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light magenta",
-          type: "primary",
-          hsl: {
-            h: 300,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Magenta",
-          type: "primary",
-          hsl: {
-            h: 300,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark magenta",
-          type: "primary",
-          hsl: {
-            h: 300,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark magenta",
-          type: "primary",
-          hsl: {
-            h: 300,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark magenta",
-          type: "primary",
-          hsl: {
-            h: 300,
-            s: 40,
-            l: 10
-          }
-        }],
-        [{
-          name: "Super extra light fuchsia",
-          type: "secondary",
-          hsl: {
-            h: 330,
-            s: 40,
-            l: 90
-          }
-        }, {
-          name: "Extra light fuchsia",
-          type: "secondary",
-          hsl: {
-            h: 330,
-            s: 60,
-            l: 77
-          }
-        }, {
-          name: "Light fuchsia",
-          type: "secondary",
-          hsl: {
-            h: 330,
-            s: 80,
-            l: 63
-          }
-        }, {
-          name: "Fuchsia",
-          type: "secondary",
-          hsl: {
-            h: 330,
-            s: 100,
-            l: 50
-          }
-        }, {
-          name: "Dark fuchsia",
-          type: "secondary",
-          hsl: {
-            h: 330,
-            s: 80,
-            l: 37
-          }
-        }, {
-          name: "Extra dark fuchsia",
-          type: "secondary",
-          hsl: {
-            h: 330,
-            s: 60,
-            l: 23
-          }
-        }, {
-          name: "Super extra dark fuchsia",
-          type: "secondary",
-          hsl: {
-            h: 330,
-            s: 40,
-            l: 10
-          }
+      nameModifier: {
+        "90": "Super extra light",
+        "77": "Extra light",
+        "63": "Light",
+        "37": "Dark",
+        "23": "Extra dark",
+        "10": "Super extra dark"
+      },
+      all: [{
+        name: "Grey",
+        type: "grey",
+        colors: [{
+          h: 0,
+          s: 0,
+          l: 90
+        }, {
+          h: 0,
+          s: 0,
+          l: 77
+        }, {
+          h: 0,
+          s: 0,
+          l: 63
+        }, {
+          h: 0,
+          s: 0,
+          l: 50
+        }, {
+          h: 0,
+          s: 0,
+          l: 37
+        }, {
+          h: 0,
+          s: 0,
+          l: 23
+        }, {
+          h: 0,
+          s: 0,
+          l: 10
         }]
-      ],
+      }, {
+        name: "Red",
+        type: "primary",
+        colors: [{
+          h: 0,
+          s: 40,
+          l: 90
+        }, {
+          h: 0,
+          s: 60,
+          l: 77
+        }, {
+          h: 0,
+          s: 80,
+          l: 63
+        }, {
+          h: 0,
+          s: 100,
+          l: 50
+        }, {
+          h: 0,
+          s: 80,
+          l: 37
+        }, {
+          h: 0,
+          s: 60,
+          l: 23
+        }, {
+          h: 0,
+          s: 40,
+          l: 10
+        }]
+      }, {
+        name: "Orange",
+        type: "secondary",
+        colors: [{
+          h: 30,
+          s: 40,
+          l: 90
+        }, {
+          h: 30,
+          s: 60,
+          l: 77
+        }, {
+          h: 30,
+          s: 80,
+          l: 63
+        }, {
+          h: 30,
+          s: 100,
+          l: 50
+        }, {
+          h: 30,
+          s: 80,
+          l: 37
+        }, {
+          h: 30,
+          s: 60,
+          l: 23
+        }, {
+          h: 30,
+          s: 40,
+          l: 10
+        }]
+      }, {
+        name: "Yellow",
+        type: "primary",
+        colors: [{
+          h: 60,
+          s: 40,
+          l: 90
+        }, {
+          h: 60,
+          s: 60,
+          l: 77
+        }, {
+          h: 60,
+          s: 80,
+          l: 63
+        }, {
+          h: 60,
+          s: 100,
+          l: 50
+        }, {
+          h: 60,
+          s: 80,
+          l: 37
+        }, {
+          h: 60,
+          s: 60,
+          l: 23
+        }, {
+          h: 60,
+          s: 40,
+          l: 10
+        }]
+      }, {
+        name: "Lime",
+        type: "secondary",
+        colors: [{
+          h: 90,
+          s: 40,
+          l: 90
+        }, {
+          h: 90,
+          s: 60,
+          l: 77
+        }, {
+          h: 90,
+          s: 80,
+          l: 63
+        }, {
+          h: 90,
+          s: 100,
+          l: 50
+        }, {
+          h: 90,
+          s: 80,
+          l: 37
+        }, {
+          h: 90,
+          s: 60,
+          l: 23
+        }, {
+          h: 90,
+          s: 40,
+          l: 10
+        }]
+      }, {
+        name: "Green",
+        type: "primary",
+        colors: [{
+          h: 120,
+          s: 40,
+          l: 90
+        }, {
+          h: 120,
+          s: 60,
+          l: 77
+        }, {
+          h: 120,
+          s: 80,
+          l: 63
+        }, {
+          h: 120,
+          s: 100,
+          l: 50
+        }, {
+          h: 120,
+          s: 80,
+          l: 37
+        }, {
+          h: 120,
+          s: 60,
+          l: 23
+        }, {
+          h: 120,
+          s: 40,
+          l: 10
+        }]
+      }, {
+        name: "Aqua",
+        type: "secondary",
+        colors: [{
+          h: 150,
+          s: 40,
+          l: 90
+        }, {
+          h: 150,
+          s: 60,
+          l: 77
+        }, {
+          h: 150,
+          s: 80,
+          l: 63
+        }, {
+          h: 150,
+          s: 100,
+          l: 50
+        }, {
+          h: 150,
+          s: 80,
+          l: 37
+        }, {
+          h: 150,
+          s: 60,
+          l: 23
+        }, {
+          h: 150,
+          s: 40,
+          l: 10
+        }]
+      }, {
+        name: "Cyan",
+        type: "primary",
+        colors: [{
+          h: 180,
+          s: 40,
+          l: 90
+        }, {
+          h: 180,
+          s: 60,
+          l: 77
+        }, {
+          h: 180,
+          s: 80,
+          l: 63
+        }, {
+          h: 180,
+          s: 100,
+          l: 50
+        }, {
+          h: 180,
+          s: 80,
+          l: 37
+        }, {
+          h: 180,
+          s: 60,
+          l: 23
+        }, {
+          h: 180,
+          s: 40,
+          l: 10
+        }]
+      }, {
+        name: "Teal",
+        type: "secondary",
+        colors: [{
+          h: 210,
+          s: 40,
+          l: 90
+        }, {
+          h: 210,
+          s: 60,
+          l: 77
+        }, {
+          h: 210,
+          s: 80,
+          l: 63
+        }, {
+          h: 210,
+          s: 100,
+          l: 50
+        }, {
+          h: 210,
+          s: 80,
+          l: 37
+        }, {
+          h: 210,
+          s: 60,
+          l: 23
+        }, {
+          h: 210,
+          s: 40,
+          l: 10
+        }]
+      }, {
+        name: "Blue",
+        type: "primary",
+        colors: [{
+          h: 240,
+          s: 40,
+          l: 90
+        }, {
+          h: 240,
+          s: 60,
+          l: 77
+        }, {
+          h: 240,
+          s: 80,
+          l: 63
+        }, {
+          h: 240,
+          s: 100,
+          l: 50
+        }, {
+          h: 240,
+          s: 80,
+          l: 37
+        }, {
+          h: 240,
+          s: 60,
+          l: 23
+        }, {
+          h: 240,
+          s: 40,
+          l: 10
+        }]
+      }, {
+        name: "Purple",
+        type: "secondary",
+        colors: [{
+          h: 270,
+          s: 40,
+          l: 90
+        }, {
+          h: 270,
+          s: 60,
+          l: 77
+        }, {
+          h: 270,
+          s: 80,
+          l: 63
+        }, {
+          h: 270,
+          s: 100,
+          l: 50
+        }, {
+          h: 270,
+          s: 80,
+          l: 37
+        }, {
+          h: 270,
+          s: 60,
+          l: 23
+        }, {
+          h: 270,
+          s: 40,
+          l: 10
+        }]
+      }, {
+        name: "Magenta",
+        type: "primary",
+        colors: [{
+          h: 300,
+          s: 40,
+          l: 90
+        }, {
+          h: 300,
+          s: 60,
+          l: 77
+        }, {
+          h: 300,
+          s: 80,
+          l: 63
+        }, {
+          h: 300,
+          s: 100,
+          l: 50
+        }, {
+          h: 300,
+          s: 80,
+          l: 37
+        }, {
+          h: 300,
+          s: 60,
+          l: 23
+        }, {
+          h: 300,
+          s: 40,
+          l: 10
+        }]
+      }, {
+        name: "Fuchsia",
+        type: "secondary",
+        colors: [{
+          h: 330,
+          s: 40,
+          l: 90
+        }, {
+          h: 330,
+          s: 60,
+          l: 77
+        }, {
+          h: 330,
+          s: 80,
+          l: 63
+        }, {
+          h: 330,
+          s: 100,
+          l: 50
+        }, {
+          h: 330,
+          s: 80,
+          l: 37
+        }, {
+          h: 330,
+          s: 60,
+          l: 23
+        }, {
+          h: 330,
+          s: 40,
+          l: 10
+        }]
+      }],
       set: function(hsl) {
         var rgb = helper.convertColor.hsl.rgb(hsl);
         helper.setObject({
@@ -2500,15 +2182,15 @@ var theme = (function() {
     preset: function() {
       var themeAccentPreset = helper.e(".theme-accent-preset");
 
-      var _makeAccentButton = function(preset) {
-        var themeAccentPresetItem = helper.node("button|class:theme-accent-preset-item theme-accent-preset-type-" + preset.type + " button button-block button-ring,title:" + preset.name + ",tabindex:-1");
-        var themeAccentPresetItemName = helper.node("span:" + preset.name + "|class:sr-only");
+      var _makeAccentButton = function(name, type, hsl) {
+        var themeAccentPresetItem = helper.node("button|class:theme-accent-preset-item theme-accent-preset-type-" + type + " button button-block button-ring,title:" + name + ",tabindex:-1");
+        var themeAccentPresetItemName = helper.node("span:" + name + "|class:sr-only");
         themeAccentPresetItem.appendChild(themeAccentPresetItemName);
-        themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-h", preset.hsl.h);
-        themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-s", preset.hsl.s);
-        themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-l", preset.hsl.l);
+        themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-h", hsl.h);
+        themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-s", hsl.s);
+        themeAccentPresetItem.style.setProperty("--theme-accent-preset-item-color-l", hsl.l);
         themeAccentPresetItem.addEventListener("click", function() {
-          mod.accent.preset.set(preset.hsl);
+          mod.accent.preset.set(hsl);
           data.save();
           render.accent.color();
           control.render.update.control.header();
@@ -2517,9 +2199,17 @@ var theme = (function() {
         return themeAccentPresetItem;
       };
 
-      mod.accent.preset.colorscale.forEach(function(arrayItem, index) {
-        arrayItem.forEach(function(arrayItem, index) {
-          themeAccentPreset.appendChild(_makeAccentButton(arrayItem));
+      mod.accent.preset.all.forEach(function(arrayItem, index) {
+        var name = arrayItem.name;
+        var type = arrayItem.type;
+        arrayItem.colors.forEach(function(arrayItem, index) {
+          var fullName;
+          if (mod.accent.preset.nameModifier[arrayItem.l] != undefined) {
+            fullName = mod.accent.preset.nameModifier[arrayItem.l] + " " + name.toLowerCase();
+          } else {
+            fullName = name;
+          };
+          themeAccentPreset.appendChild(_makeAccentButton(fullName, type, arrayItem));
         });
       });
 
