@@ -961,7 +961,7 @@ var link = (function() {
       var accentColorPicker = helper.node("input|id:link-form-input-accent-picker,class:form-group-item-half link-form-input-accent-picker,type:color,value:#000000,tabindex:1,disabled");
       var accentColorHex = helper.node("input|id:link-form-input-accent-hex,class:form-group-item-half link-form-input-accent-hex,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
       var accentColorInputHelper = helper.node("div|class:form-helper");
-      var accentColorInputHelperItem = helper.node("p:Use this colour to override the global accent colour.|class:link-form-input-accent-helper form-helper-item");
+      var accentColorInputHelperItem = helper.node("p:Use this colour to override the global accent colour.|class:link-form-input-accent-helper form-helper-item disabled");
 
       groupExistingRadioWrap.appendChild(groupExistingRadio);
       groupExistingLable.appendChild(groupExistingLableIcon);
@@ -1133,13 +1133,13 @@ var link = (function() {
           accentCustomRadio.checked = true;
           accentColorPicker.removeAttribute("disabled");
           accentColorHex.removeAttribute("disabled");
-          helper.removeClass(form.querySelector(".link-form-input-accent-helper"), "disabled");
+          helper.removeClass(accentColorInputHelperItem, "disabled");
         } else {
           accentGlobalRadio.checked = true;
           accentCustomRadio.checked = false;
           accentColorPicker.setAttribute("disabled", "");
           accentColorHex.setAttribute("disabled", "");
-          helper.addClass(form.querySelector(".link-form-input-accent-helper"), "disabled");
+          helper.addClass(accentColorInputHelperItem, "disabled");
         };
         if (stagedLink.link.accent.color.r != null && stagedLink.link.accent.color.g != null && stagedLink.link.accent.color.b != null) {
           accentColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.accent.color);
@@ -1230,14 +1230,14 @@ var link = (function() {
         stagedLink.link.accent.override = false;
         accentColorPicker.setAttribute("disabled", "");
         accentColorHex.setAttribute("disabled", "");
-        helper.addClass(accentColorInputHelper, "disabled");
+        helper.addClass(accentColorInputHelperItem, "disabled");
       }, false);
       accentCustomRadio.addEventListener("change", function() {
         stagedLink.link.accent.override = true;
         stagedLink.link.accent.color = helper.convertColor.hex.rgb(accentColorPicker.value);
         accentColorPicker.removeAttribute("disabled");
         accentColorHex.removeAttribute("disabled");
-        helper.removeClass(accentColorInputHelper, "disabled");
+        helper.removeClass(accentColorInputHelperItem, "disabled");
       }, false);
       accentColorPicker.addEventListener("change", function() {
         if (helper.isHexNumber(this.value)) {
