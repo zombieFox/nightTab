@@ -1,9 +1,9 @@
 :root {
   /* theme */
   --theme-root-font-size:                               14px;
-  --theme-accent-r:                                     250;
-  --theme-accent-g:                                     130;
-  --theme-accent-b:                                     0;
+  --theme-accent-r:                                     25;
+  --theme-accent-g:                                     25;
+  --theme-accent-b:                                     25;
   --theme-accent:                                       var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);
   --theme-accent-accessible-threshold:                  0.5;
   --theme-accent-accessible-r:                          calc(var(--theme-accent-r) * 0.50);
