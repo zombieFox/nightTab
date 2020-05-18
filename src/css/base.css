@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background-color: var(--theme-black);
+  background-color: rgb(var(--theme-black));
   color: rgb(var(--theme-style-text));
   font-size: 1rem;
   line-height: 1.6;
