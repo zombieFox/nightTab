@@ -23,9 +23,16 @@ var bookmarks = (function() {
       accent: {
         override: false,
         color: {
-          r: null,
-          g: null,
-          b: null
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
+          rgb: {
+            r: 0,
+            g: 0,
+            b: 0
+          }
         }
       },
       searchMatch: false,
@@ -43,9 +50,16 @@ var bookmarks = (function() {
       accent: {
         override: false,
         color: {
-          r: null,
-          g: null,
-          b: null
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
+          rgb: {
+            r: 0,
+            g: 0,
+            b: 0
+          }
         }
       },
       searchMatch: false,
@@ -63,9 +77,16 @@ var bookmarks = (function() {
       accent: {
         override: false,
         color: {
-          r: null,
-          g: null,
-          b: null
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
+          rgb: {
+            r: 0,
+            g: 0,
+            b: 0
+          }
         }
       },
       searchMatch: false,
@@ -83,9 +104,16 @@ var bookmarks = (function() {
       accent: {
         override: false,
         color: {
-          r: null,
-          g: null,
-          b: null
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
+          rgb: {
+            r: 0,
+            g: 0,
+            b: 0
+          }
         }
       },
       searchMatch: false,
@@ -103,9 +131,16 @@ var bookmarks = (function() {
       accent: {
         override: false,
         color: {
-          r: null,
-          g: null,
-          b: null
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
+          rgb: {
+            r: 0,
+            g: 0,
+            b: 0
+          }
         }
       },
       searchMatch: false,
@@ -123,9 +158,16 @@ var bookmarks = (function() {
       accent: {
         override: false,
         color: {
-          r: null,
-          g: null,
-          b: null
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
+          rgb: {
+            r: 0,
+            g: 0,
+            b: 0
+          }
         }
       },
       searchMatch: false,
@@ -152,9 +194,16 @@ var bookmarks = (function() {
       accent: {
         override: false,
         color: {
-          r: null,
-          g: null,
-          b: null
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
+          rgb: {
+            r: 0,
+            g: 0,
+            b: 0
+          }
         }
       },
       searchMatch: false,
@@ -172,9 +221,16 @@ var bookmarks = (function() {
       accent: {
         override: false,
         color: {
-          r: null,
-          g: null,
-          b: null
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
+          rgb: {
+            r: 0,
+            g: 0,
+            b: 0
+          }
         }
       },
       searchMatch: false,

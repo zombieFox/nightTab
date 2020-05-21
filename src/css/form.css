@@ -1696,6 +1696,14 @@ input[type="range"]:disabled::-moz-range-progress {
   cursor: default;
 }
 
+.form-group-text-left {
+  justify-content: flex-start;
+}
+
+.form-group-text-right {
+  justify-content: flex-end;
+}
+
 .form-group-item-small,
 .form-group-item-medium,
 .form-group-item-large,

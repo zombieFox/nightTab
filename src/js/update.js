@@ -966,6 +966,35 @@ var update = (function() {
         end: 70
       };
       return data;
+    },
+    "5.32.0": function(data) {
+      data.bookmarks.forEach(function(arrayItem, index) {
+        arrayItem.items.forEach(function(arrayItem, index) {
+          arrayItem.accent.color.rgb = {
+            r: arrayItem.accent.color.r,
+            g: arrayItem.accent.color.g,
+            b: arrayItem.accent.color.b
+          };
+          if (arrayItem.accent.color.rgb.r == null) {
+            arrayItem.accent.color.rgb.r = 0;
+          };
+          if (arrayItem.accent.color.rgb.g == null) {
+            arrayItem.accent.color.rgb.g = 0;
+          };
+          if (arrayItem.accent.color.rgb.b == null) {
+            arrayItem.accent.color.rgb.b = 0;
+          };
+          arrayItem.accent.color.hsl = {
+            h: 0,
+            s: 0,
+            l: 0
+          };
+          delete arrayItem.accent.color.r;
+          delete arrayItem.accent.color.g;
+          delete arrayItem.accent.color.b;
+        });
+      });
+      return data;
     }
   };
 

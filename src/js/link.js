@@ -67,9 +67,16 @@ var link = (function() {
       accent: {
         override: null,
         color: {
-          r: null,
-          g: null,
-          b: null
+          hsl: {
+            h: null,
+            s: null,
+            l: null
+          },
+          rgb: {
+            r: null,
+            g: null,
+            b: null
+          }
         }
       }
     },
@@ -86,6 +93,12 @@ var link = (function() {
     stagedLink.position.group.openAll.show = false;
     stagedLink.link.display = "letter";
     stagedLink.link.accent.override = false;
+    stagedLink.link.accent.color.hsl.h = 0;
+    stagedLink.link.accent.color.hsl.s = 0;
+    stagedLink.link.accent.color.hsl.l = 0;
+    stagedLink.link.accent.color.rgb.r = 0;
+    stagedLink.link.accent.color.rgb.g = 0;
+    stagedLink.link.accent.color.rgb.b = 0;
     stagedLink.link.searchMatch = false;
   };
 
@@ -105,9 +118,12 @@ var link = (function() {
     stagedLink.link.url = null;
     stagedLink.link.timeStamp = null;
     stagedLink.link.accent.override = null;
-    stagedLink.link.accent.color.r = null;
-    stagedLink.link.accent.color.g = null;
-    stagedLink.link.accent.color.b = null;
+    stagedLink.link.accent.color.hsl.h = null;
+    stagedLink.link.accent.color.hsl.s = null;
+    stagedLink.link.accent.color.hsl.l = null;
+    stagedLink.link.accent.color.rgb.r = null;
+    stagedLink.link.accent.color.rgb.g = null;
+    stagedLink.link.accent.color.rgb.b = null;
     stagedLink.link.searchMatch = null;
   };
 
@@ -120,9 +136,16 @@ var link = (function() {
           arrayItem.accent = {
             override: false,
             color: {
-              r: null,
-              g: null,
-              b: null
+              hsl: {
+                h: 0,
+                s: 0,
+                l: 0
+              },
+              rgb: {
+                r: 0,
+                g: 0,
+                b: 0
+              }
             }
           };
         });
@@ -139,10 +162,15 @@ var link = (function() {
             s: 100,
             l: 50
           });
-          arrayItem.accent.color = {
-            r: parseInt(rgb.r, 10),
-            g: parseInt(rgb.g, 10),
-            b: parseInt(rgb.b, 10)
+          arrayItem.accent.color.hsl = {
+            h: degree,
+            s: 100,
+            l: 50
+          };
+          arrayItem.accent.color.rgb = {
+            r: Math.round(rgb.r),
+            g: Math.round(rgb.g),
+            b: Math.round(rgb.b)
           };
           degree = degree + units;
         });
@@ -722,9 +750,9 @@ var link = (function() {
       if (stagedLink.link.accent.override) {
         linkItemOptions.attr.push({
           key: "style",
-          value: "--theme-accent-r: " + stagedLink.link.accent.color.r + ";" +
-            "--theme-accent-g: " + stagedLink.link.accent.color.g + ";" +
-            "--theme-accent-b: " + stagedLink.link.accent.color.b + ";" +
+          value: "--theme-accent-r: " + stagedLink.link.accent.color.rgb.r + ";" +
+            "--theme-accent-g: " + stagedLink.link.accent.color.rgb.g + ";" +
+            "--theme-accent-b: " + stagedLink.link.accent.color.rgb.b + ";" +
             "--theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);" +
             "--theme-accent-accessible-threshold: 0.5;" +
             "--theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);" +
@@ -962,6 +990,36 @@ var link = (function() {
       var accentColorHex = helper.node("input|id:link-form-input-accent-hex,class:form-group-item-half link-form-input-accent-hex,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
       var accentColorInputHelper = helper.node("div|class:form-helper");
       var accentColorInputHelperItem = helper.node("p:Use this colour to override the global accent colour.|class:link-form-input-accent-helper form-helper-item disabled");
+      var linkFormAccentHslHWrap = helper.node("div|class:form-wrap");
+      var linkFormAccentHslHLabel = helper.node("label:Hue|for:link-form-input-accent-hsl-h-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var linkFormAccentHslHGroup = helper.node("div|class:form-group form-group-block");
+      var linkFormAccentHslHRange = helper.node("input|class:link-form-input-accent-hsl-h-range mr-3,id:link-form-input-accent-hsl-h-range,type:range,name:link-form-input-accent-hsl-h-range,value:0,min:0,max:359,tabindex:1,disabled");
+      var linkFormAccentHslHNumber = helper.node("input|class:link-form-input-accent-hsl-h-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:359,tabindex:1,disabled");
+      var linkFormAccentHslSWrap = helper.node("div|class:form-wrap");
+      var linkFormAccentHslSLabel = helper.node("label:Saturation|for:link-form-input-accent-hsl-s-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var linkFormAccentHslSGroup = helper.node("div|class:form-group form-group-block");
+      var linkFormAccentHslSRange = helper.node("input|class:link-form-input-accent-hsl-s-range mr-3,id:link-form-input-accent-hsl-s-range,type:range,name:link-form-input-accent-hsl-s-range,value:0,min:0,max:100,tabindex:1,disabled");
+      var linkFormAccentHslSNumber = helper.node("input|class:link-form-input-accent-hsl-s-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1,disabled");
+      var linkFormAccentHslLWrap = helper.node("div|class:form-wrap");
+      var linkFormAccentHslLLabel = helper.node("label:Lightness|for:link-form-input-accent-hsl-l-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var linkFormAccentHslLGroup = helper.node("div|class:form-group form-group-block");
+      var linkFormAccentHslLRange = helper.node("input|class:link-form-input-accent-hsl-l-range mr-3,id:link-form-input-accent-hsl-l-range,type:range,name:link-form-input-accent-hsl-l-range,value:0,min:0,max:100,tabindex:1,disabled");
+      var linkFormAccentHslLNumber = helper.node("input|class:link-form-input-accent-hsl-l-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1,disabled");
+      var linkFormAccentRgbRWrap = helper.node("div|class:form-wrap");
+      var linkFormAccentRgbRLabel = helper.node("label:Red|for:link-form-input-accent-rgb-r-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var linkFormAccentRgbRGroup = helper.node("div|class:form-group form-group-block");
+      var linkFormAccentRgbRRange = helper.node("input|class:link-form-input-accent-rgb-r-range mr-3,id:link-form-input-accent-rgb-r-range,type:range,name:link-form-input-accent-rgb-r-range,value:0,min:0,max:255,tabindex:1,disabled");
+      var linkFormAccentRgbRNumber = helper.node("input|class:link-form-input-accent-rgb-r-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
+      var linkFormAccentRgbGWrap = helper.node("div|class:form-wrap");
+      var linkFormAccentRgbGLabel = helper.node("label:Green|for:link-form-input-accent-rgb-g-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var linkFormAccentRgbGGroup = helper.node("div|class:form-group form-group-block");
+      var linkFormAccentRgbGRange = helper.node("input|class:link-form-input-accent-rgb-g-range mr-3,id:link-form-input-accent-rgb-g-range,type:range,name:link-form-input-accent-rgb-g-range,value:0,min:0,max:255,tabindex:1,disabled");
+      var linkFormAccentRgbGNumber = helper.node("input|class:link-form-input-accent-rgb-g-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
+      var linkFormAccentRgbBWrap = helper.node("div|class:form-wrap");
+      var linkFormAccentRgbBLabel = helper.node("label:Blue|for:link-form-input-accent-rgb-b-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var linkFormAccentRgbBGroup = helper.node("div|class:form-group form-group-block");
+      var linkFormAccentRgbBRange = helper.node("input|class:link-form-input-accent-rgb-b-range mr-3,id:link-form-input-accent-rgb-b-range,type:range,name:link-form-input-accent-rgb-b-range,value:0,min:0,max:255,tabindex:1,disabled");
+      var linkFormAccentRgbBNumber = helper.node("input|class:link-form-input-accent-rgb-b-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
 
       groupExistingRadioWrap.appendChild(groupExistingRadio);
       groupExistingLable.appendChild(groupExistingLableIcon);
@@ -987,6 +1045,7 @@ var link = (function() {
       groupNewFormIndentWrap.appendChild(groupNewFormIndent);
       fieldset.appendChild(groupNewRadioWrap);
       fieldset.appendChild(groupNewFormIndentWrap);
+
       fieldset.appendChild(helper.node("hr"));
 
       displayLetterRadioWrap.appendChild(displayLetterRadio);
@@ -1013,7 +1072,9 @@ var link = (function() {
       displayIconFormIndent.appendChild(displayIconHelper);
       displayIconFormIndentWrap.appendChild(displayIconFormIndent);
       fieldset.appendChild(displayIconFormIndentWrap);
+
       fieldset.appendChild(helper.node("hr"));
+
       nameInputWrap.appendChild(nameLabel);
       nameInputWrap.appendChild(nameInput);
       fieldset.appendChild(nameInputWrap);
@@ -1022,7 +1083,9 @@ var link = (function() {
       fieldset.appendChild(urlInputWrap);
       urlInputHelper.appendChild(urlInputHelperItem);
       fieldset.appendChild(urlInputHelper);
+
       fieldset.appendChild(helper.node("hr"));
+
       accentLabelWrap.appendChild(accentLabel);
       fieldset.appendChild(accentLabelWrap);
       accentGlobalRadioWrap.appendChild(accentGlobalRadio);
@@ -1041,8 +1104,50 @@ var link = (function() {
       accentColorFormIndent.appendChild(accentColorInputWrap);
       accentColorInputHelper.appendChild(accentColorInputHelperItem);
       accentColorFormIndent.appendChild(accentColorInputHelper);
+
+      accentColorFormIndent.appendChild(helper.node("hr"));
+
+      linkFormAccentHslHGroup.appendChild(linkFormAccentHslHLabel);
+      linkFormAccentHslHGroup.appendChild(linkFormAccentHslHRange);
+      linkFormAccentHslHGroup.appendChild(linkFormAccentHslHNumber);
+      linkFormAccentHslHWrap.appendChild(linkFormAccentHslHGroup);
+      accentColorFormIndent.appendChild(linkFormAccentHslHWrap);
+
+      linkFormAccentHslSGroup.appendChild(linkFormAccentHslSLabel);
+      linkFormAccentHslSGroup.appendChild(linkFormAccentHslSRange);
+      linkFormAccentHslSGroup.appendChild(linkFormAccentHslSNumber);
+      linkFormAccentHslSWrap.appendChild(linkFormAccentHslSGroup);
+      accentColorFormIndent.appendChild(linkFormAccentHslSWrap);
+
+      linkFormAccentHslLGroup.appendChild(linkFormAccentHslLLabel);
+      linkFormAccentHslLGroup.appendChild(linkFormAccentHslLRange);
+      linkFormAccentHslLGroup.appendChild(linkFormAccentHslLNumber);
+      linkFormAccentHslLWrap.appendChild(linkFormAccentHslLGroup);
+      accentColorFormIndent.appendChild(linkFormAccentHslLWrap);
+
+      accentColorFormIndent.appendChild(helper.node("hr"));
+
+      linkFormAccentRgbRGroup.appendChild(linkFormAccentRgbRLabel);
+      linkFormAccentRgbRGroup.appendChild(linkFormAccentRgbRRange);
+      linkFormAccentRgbRGroup.appendChild(linkFormAccentRgbRNumber);
+      linkFormAccentRgbRWrap.appendChild(linkFormAccentRgbRGroup);
+      accentColorFormIndent.appendChild(linkFormAccentRgbRWrap);
+
+      linkFormAccentRgbGGroup.appendChild(linkFormAccentRgbGLabel);
+      linkFormAccentRgbGGroup.appendChild(linkFormAccentRgbGRange);
+      linkFormAccentRgbGGroup.appendChild(linkFormAccentRgbGNumber);
+      linkFormAccentRgbGWrap.appendChild(linkFormAccentRgbGGroup);
+      accentColorFormIndent.appendChild(linkFormAccentRgbGWrap);
+
+      linkFormAccentRgbBGroup.appendChild(linkFormAccentRgbBLabel);
+      linkFormAccentRgbBGroup.appendChild(linkFormAccentRgbBRange);
+      linkFormAccentRgbBGroup.appendChild(linkFormAccentRgbBNumber);
+      linkFormAccentRgbBWrap.appendChild(linkFormAccentRgbBGroup);
+      accentColorFormIndent.appendChild(linkFormAccentRgbBWrap);
+
       accentColorFormIndentWrap.appendChild(accentColorFormIndent);
       fieldset.appendChild(accentColorFormIndentWrap);
+
       form.appendChild(fieldset);
 
       var makeGroupOptions = function() {
@@ -1134,17 +1239,153 @@ var link = (function() {
           accentColorPicker.removeAttribute("disabled");
           accentColorHex.removeAttribute("disabled");
           helper.removeClass(accentColorInputHelperItem, "disabled");
+          helper.removeClass(linkFormAccentHslHLabel, "disabled");
+          linkFormAccentHslHRange.removeAttribute("disabled");
+          linkFormAccentHslHNumber.removeAttribute("disabled");
+          helper.removeClass(linkFormAccentHslSLabel, "disabled");
+          linkFormAccentHslSRange.removeAttribute("disabled");
+          linkFormAccentHslSNumber.removeAttribute("disabled");
+          helper.removeClass(linkFormAccentHslLLabel, "disabled");
+          linkFormAccentHslLRange.removeAttribute("disabled");
+          linkFormAccentHslLNumber.removeAttribute("disabled");
+          helper.removeClass(linkFormAccentRgbRLabel, "disabled");
+          linkFormAccentRgbRRange.removeAttribute("disabled");
+          linkFormAccentRgbRNumber.removeAttribute("disabled");
+          helper.removeClass(linkFormAccentRgbGLabel, "disabled");
+          linkFormAccentRgbGRange.removeAttribute("disabled");
+          linkFormAccentRgbGNumber.removeAttribute("disabled");
+          helper.removeClass(linkFormAccentRgbBLabel, "disabled");
+          linkFormAccentRgbBRange.removeAttribute("disabled");
+          linkFormAccentRgbBNumber.removeAttribute("disabled");
         } else {
           accentGlobalRadio.checked = true;
           accentCustomRadio.checked = false;
           accentColorPicker.setAttribute("disabled", "");
           accentColorHex.setAttribute("disabled", "");
           helper.addClass(accentColorInputHelperItem, "disabled");
+          helper.addClass(linkFormAccentHslHLabel, "disabled", "");
+          linkFormAccentHslHRange.setAttribute("disabled", "");
+          linkFormAccentHslHNumber.setAttribute("disabled", "");
+          helper.addClass(linkFormAccentHslSLabel, "disabled", "");
+          linkFormAccentHslSRange.setAttribute("disabled", "");
+          linkFormAccentHslSNumber.setAttribute("disabled", "");
+          helper.addClass(linkFormAccentHslLLabel, "disabled", "");
+          linkFormAccentHslLRange.setAttribute("disabled", "");
+          linkFormAccentHslLNumber.setAttribute("disabled", "");
+          helper.addClass(linkFormAccentRgbRLabel, "disabled", "");
+          linkFormAccentRgbRRange.setAttribute("disabled", "");
+          linkFormAccentRgbRNumber.setAttribute("disabled", "");
+          helper.addClass(linkFormAccentRgbGLabel, "disabled", "");
+          linkFormAccentRgbGRange.setAttribute("disabled", "");
+          linkFormAccentRgbGNumber.setAttribute("disabled", "");
+          helper.addClass(linkFormAccentRgbBLabel, "disabled", "");
+          linkFormAccentRgbBRange.setAttribute("disabled", "");
+          linkFormAccentRgbBNumber.setAttribute("disabled", "");
         };
-        if (stagedLink.link.accent.color.r != null && stagedLink.link.accent.color.g != null && stagedLink.link.accent.color.b != null) {
-          accentColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.accent.color);
-          accentColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.accent.color);
+        if (stagedLink.link.accent.color.rgb.r != null && stagedLink.link.accent.color.rgb.g != null && stagedLink.link.accent.color.rgb.b != null) {
+          accentColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.accent.color.rgb);
+          accentColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.accent.color.rgb);
+          linkFormAccentHslHRange.value = stagedLink.link.accent.color.hsl.h;
+          linkFormAccentHslHNumber.value = stagedLink.link.accent.color.hsl.h;
+          linkFormAccentHslSRange.value = stagedLink.link.accent.color.hsl.s;
+          linkFormAccentHslSNumber.value = stagedLink.link.accent.color.hsl.s;
+          linkFormAccentHslLRange.value = stagedLink.link.accent.color.hsl.l;
+          linkFormAccentHslLNumber.value = stagedLink.link.accent.color.hsl.l;
+          linkFormAccentRgbRRange.value = stagedLink.link.accent.color.rgb.r;
+          linkFormAccentRgbRNumber.value = stagedLink.link.accent.color.rgb.r;
+          linkFormAccentRgbGRange.value = stagedLink.link.accent.color.rgb.g;
+          linkFormAccentRgbGNumber.value = stagedLink.link.accent.color.rgb.g;
+          linkFormAccentRgbBRange.value = stagedLink.link.accent.color.rgb.b;
+          linkFormAccentRgbBNumber.value = stagedLink.link.accent.color.rgb.b;
         };
+      };
+
+      var updateAccent = {
+        delay: null,
+        inputs: function(input) {
+          var rgb = stagedLink.link.accent.color.rgb;
+          var hsl = stagedLink.link.accent.color.hsl;
+          var hex = helper.convertColor.rgb.hex(rgb);
+          if (input != accentColorPicker) {
+            accentColorPicker.value = hex;
+          };
+          if (input != accentColorHex) {
+            accentColorHex.value = hex;
+          };
+          if (input != linkFormAccentHslHRange) {
+            linkFormAccentHslHRange.value = stagedLink.link.accent.color.hsl.h;
+          };
+          if (input != linkFormAccentHslHNumber) {
+            linkFormAccentHslHNumber.value = stagedLink.link.accent.color.hsl.h;
+          };
+          if (input != linkFormAccentHslSRange) {
+            linkFormAccentHslSRange.value = stagedLink.link.accent.color.hsl.s;
+          };
+          if (input != linkFormAccentHslSNumber) {
+            linkFormAccentHslSNumber.value = stagedLink.link.accent.color.hsl.s;
+          };
+          if (input != linkFormAccentHslLRange) {
+            linkFormAccentHslLRange.value = stagedLink.link.accent.color.hsl.l;
+          };
+          if (input != linkFormAccentHslLNumber) {
+            linkFormAccentHslLNumber.value = stagedLink.link.accent.color.hsl.l;
+          };
+          if (input != linkFormAccentRgbRRange) {
+            linkFormAccentRgbRRange.value = stagedLink.link.accent.color.rgb.r;
+          };
+          if (input != linkFormAccentRgbRNumber) {
+            linkFormAccentRgbRNumber.value = stagedLink.link.accent.color.rgb.r;
+          };
+          if (input != linkFormAccentRgbGRange) {
+            linkFormAccentRgbGRange.value = stagedLink.link.accent.color.rgb.g;
+          };
+          if (input != linkFormAccentRgbGNumber) {
+            linkFormAccentRgbGNumber.value = stagedLink.link.accent.color.rgb.g;
+          };
+          if (input != linkFormAccentRgbBRange) {
+            linkFormAccentRgbBRange.value = stagedLink.link.accent.color.rgb.b;
+          };
+          if (input != linkFormAccentRgbBNumber) {
+            linkFormAccentRgbBNumber.value = stagedLink.link.accent.color.rgb.b;
+          };
+        },
+        by: {
+          hsl: function() {
+            stagedLink.link.accent.color.rgb = helper.convertColor.hsl.rgb(stagedLink.link.accent.color.hsl);
+            stagedLink.link.accent.color.rgb.r = Math.round(stagedLink.link.accent.color.rgb.r);
+            stagedLink.link.accent.color.rgb.g = Math.round(stagedLink.link.accent.color.rgb.g);
+            stagedLink.link.accent.color.rgb.b = Math.round(stagedLink.link.accent.color.rgb.b);
+          },
+          rgb: function() {
+            stagedLink.link.accent.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.accent.color.rgb);
+            stagedLink.link.accent.color.hsl.h = Math.round(stagedLink.link.accent.color.hsl.h);
+            stagedLink.link.accent.color.hsl.s = Math.round(stagedLink.link.accent.color.hsl.s);
+            stagedLink.link.accent.color.hsl.l = Math.round(stagedLink.link.accent.color.hsl.l);
+          },
+          hex: function(value) {
+            stagedLink.link.accent.color.rgb = helper.convertColor.hex.rgb(value);
+            stagedLink.link.accent.color.rgb.r = Math.round(stagedLink.link.accent.color.rgb.r);
+            stagedLink.link.accent.color.rgb.g = Math.round(stagedLink.link.accent.color.rgb.g);
+            stagedLink.link.accent.color.rgb.b = Math.round(stagedLink.link.accent.color.rgb.b);
+            stagedLink.link.accent.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.accent.color.rgb);
+            stagedLink.link.accent.color.hsl.h = Math.round(stagedLink.link.accent.color.hsl.h);
+            stagedLink.link.accent.color.hsl.s = Math.round(stagedLink.link.accent.color.hsl.s);
+            stagedLink.link.accent.color.hsl.l = Math.round(stagedLink.link.accent.color.hsl.l);
+          }
+        },
+        number: function(input) {
+          var value = parseInt(input.value, 10);
+          var min = parseInt(input.min, 10);
+          var max = parseInt(input.max, 10);
+          if (value < min) {
+            value = min;
+          };
+          if (value > max) {
+            value = max;
+          };
+          return value;
+        },
+        delay: null
       };
 
       makeGroupOptions();
@@ -1231,26 +1472,145 @@ var link = (function() {
         accentColorPicker.setAttribute("disabled", "");
         accentColorHex.setAttribute("disabled", "");
         helper.addClass(accentColorInputHelperItem, "disabled");
+        helper.addClass(linkFormAccentHslHLabel, "disabled", "");
+        linkFormAccentHslHRange.setAttribute("disabled", "");
+        linkFormAccentHslHNumber.setAttribute("disabled", "");
+        helper.addClass(linkFormAccentHslSLabel, "disabled", "");
+        linkFormAccentHslSRange.setAttribute("disabled", "");
+        linkFormAccentHslSNumber.setAttribute("disabled", "");
+        helper.addClass(linkFormAccentHslLLabel, "disabled", "");
+        linkFormAccentHslLRange.setAttribute("disabled", "");
+        linkFormAccentHslLNumber.setAttribute("disabled", "");
+        helper.addClass(linkFormAccentRgbRLabel, "disabled", "");
+        linkFormAccentRgbRRange.setAttribute("disabled", "");
+        linkFormAccentRgbRNumber.setAttribute("disabled", "");
+        helper.addClass(linkFormAccentRgbGLabel, "disabled", "");
+        linkFormAccentRgbGRange.setAttribute("disabled", "");
+        linkFormAccentRgbGNumber.setAttribute("disabled", "");
+        helper.addClass(linkFormAccentRgbBLabel, "disabled", "");
+        linkFormAccentRgbBRange.setAttribute("disabled", "");
+        linkFormAccentRgbBNumber.setAttribute("disabled", "");
       }, false);
       accentCustomRadio.addEventListener("change", function() {
         stagedLink.link.accent.override = true;
-        stagedLink.link.accent.color = helper.convertColor.hex.rgb(accentColorPicker.value);
         accentColorPicker.removeAttribute("disabled");
         accentColorHex.removeAttribute("disabled");
         helper.removeClass(accentColorInputHelperItem, "disabled");
+        helper.removeClass(linkFormAccentHslHLabel, "disabled");
+        linkFormAccentHslHRange.removeAttribute("disabled");
+        linkFormAccentHslHNumber.removeAttribute("disabled");
+        helper.removeClass(linkFormAccentHslSLabel, "disabled");
+        linkFormAccentHslSRange.removeAttribute("disabled");
+        linkFormAccentHslSNumber.removeAttribute("disabled");
+        helper.removeClass(linkFormAccentHslLLabel, "disabled");
+        linkFormAccentHslLRange.removeAttribute("disabled");
+        linkFormAccentHslLNumber.removeAttribute("disabled");
+        helper.removeClass(linkFormAccentRgbRLabel, "disabled");
+        linkFormAccentRgbRRange.removeAttribute("disabled");
+        linkFormAccentRgbRNumber.removeAttribute("disabled");
+        helper.removeClass(linkFormAccentRgbGLabel, "disabled");
+        linkFormAccentRgbGRange.removeAttribute("disabled");
+        linkFormAccentRgbGNumber.removeAttribute("disabled");
+        helper.removeClass(linkFormAccentRgbBLabel, "disabled");
+        linkFormAccentRgbBRange.removeAttribute("disabled");
+        linkFormAccentRgbBNumber.removeAttribute("disabled");
       }, false);
       accentColorPicker.addEventListener("change", function() {
         if (helper.isHexNumber(this.value)) {
-          stagedLink.link.accent.color = helper.convertColor.hex.rgb(this.value);
-          accentColorHex.value = this.value;
+          updateAccent.by.hex(this.value);
+          updateAccent.inputs(this);
         };
       }, false);
       accentColorHex.addEventListener("input", function() {
         if (helper.isHexNumber(this.value)) {
-          stagedLink.link.accent.color = helper.convertColor.hex.rgb(this.value);
-          accentColorPicker.value = this.value;
+          updateAccent.by.hex(this.value);
+          updateAccent.inputs(this);
         };
       }, false);
+      linkFormAccentHslHRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.hsl.h = parseInt(this.value, 10);
+        updateAccent.by.hsl();
+        updateAccent.inputs(this);
+      });
+      linkFormAccentHslHNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.hsl.h = updateAccent.number(input);
+          updateAccent.by.hsl();
+          updateAccent.inputs(input);
+        };
+        clearTimeout(updateAccent.delay);
+        updateAccent.delay = setTimeout(set, 1000, this);
+      });
+      linkFormAccentHslSRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.hsl.s = parseInt(this.value, 10);
+        updateAccent.by.hsl();
+        updateAccent.inputs(this);
+      });
+      linkFormAccentHslSNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.hsl.s = updateAccent.number(input);
+          updateAccent.by.hsl();
+          updateAccent.inputs(input);
+        };
+        clearTimeout(updateAccent.delay);
+        updateAccent.delay = setTimeout(set, 1000, this);
+      });
+      linkFormAccentHslLRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.hsl.l = parseInt(this.value, 10);
+        updateAccent.by.hsl();
+        updateAccent.inputs(this);
+      });
+      linkFormAccentHslLNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.hsl.l = updateAccent.number(input);
+          updateAccent.by.hsl();
+          updateAccent.inputs(input);
+        };
+        clearTimeout(updateAccent.delay);
+        updateAccent.delay = setTimeout(set, 1000, this);
+      });
+      linkFormAccentRgbRRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.rgb.r = parseInt(this.value, 10);
+        updateAccent.by.rgb();
+        updateAccent.inputs(this);
+      });
+      linkFormAccentRgbRNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.rgb.r = updateAccent.number(input);
+          updateAccent.by.rgb();
+          updateAccent.inputs(input);
+        };
+        clearTimeout(updateAccent.delay);
+        updateAccent.delay = setTimeout(set, 1000, this);
+      });
+      linkFormAccentRgbGRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.rgb.g = parseInt(this.value, 10);
+        updateAccent.by.rgb();
+        updateAccent.inputs(this);
+      });
+      linkFormAccentRgbGNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.rgb.g = updateAccent.number(input);
+          updateAccent.by.rgb();
+          updateAccent.inputs(input);
+        };
+        clearTimeout(updateAccent.delay);
+        updateAccent.delay = setTimeout(set, 1000, this);
+      });
+      linkFormAccentRgbBRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.rgb.b = parseInt(this.value, 10);
+        updateAccent.by.rgb();
+        updateAccent.inputs(this);
+      });
+      linkFormAccentRgbBNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.rgb.b = updateAccent.number(input);
+          updateAccent.by.rgb();
+          updateAccent.inputs(input);
+        };
+        clearTimeout(updateAccent.delay);
+        updateAccent.delay = setTimeout(set, 1000, this);
+      });
       displayIconFormGroupClear.addEventListener("click", function(event) {
         stagedLink.link.icon.name = null;
         stagedLink.link.icon.prefix = null;
