@@ -3729,7 +3729,7 @@ var control = (function() {
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.letter();
+            link.render.item.display.letter.size();
           }
         }, {
           element: ".control-link-item-display-letcon-letter-size-number",
@@ -3748,14 +3748,14 @@ var control = (function() {
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.letter();
+            link.render.item.display.letter.size();
           }
         }, {
           element: ".control-link-item-display-letcon-letter-size-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.letcon.letter.size");
-            link.render.item.display.letter();
+            link.render.item.display.letter.size();
             render.update.control.header();
             render.update.control.menu();
           }
@@ -3776,7 +3776,7 @@ var control = (function() {
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.icon();
+            link.render.item.display.icon.size();
           }
         }, {
           element: ".control-link-item-display-letcon-icon-size-number",
@@ -3795,14 +3795,61 @@ var control = (function() {
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.icon();
+            link.render.item.display.icon.size();
           }
         }, {
           element: ".control-link-item-display-letcon-icon-size-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.letcon.icon.size");
-            link.render.item.display.icon();
+            link.render.item.display.icon.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-letcon-image-size-range",
+          path: "link.item.display.letcon.image.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 3000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-letcon-image-size-number",
+            path: "link.item.display.letcon.image.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.display.image.size();
+          }
+        }, {
+          element: ".control-link-item-display-letcon-image-size-number",
+          path: "link.item.display.letcon.image.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 3000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-letcon-image-size-range",
+            path: "link.item.display.letcon.image.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.display.image.size();
+          }
+        }, {
+          element: ".control-link-item-display-letcon-image-size-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.display.letcon.image.size");
+            link.render.item.display.image.size();
             render.update.control.header();
             render.update.control.menu();
           }

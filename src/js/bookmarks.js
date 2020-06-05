@@ -13,6 +13,7 @@ var bookmarks = (function() {
     items: [{
       display: "icon",
       letter: "AS",
+      image: null,
       icon: {
         name: "dice-d20",
         prefix: "fas",
@@ -40,6 +41,7 @@ var bookmarks = (function() {
     }, {
       display: "letter",
       letter: "AZ",
+      image: null,
       icon: {
         name: "amazon",
         prefix: "fab",
@@ -67,6 +69,7 @@ var bookmarks = (function() {
     }, {
       display: "letter",
       letter: "GM",
+      image: null,
       icon: {
         name: "envelope",
         prefix: "fas",
@@ -94,6 +97,7 @@ var bookmarks = (function() {
     }, {
       display: "icon",
       letter: "R",
+      image: null,
       icon: {
         name: "reddit-alien",
         prefix: "fab",
@@ -121,6 +125,7 @@ var bookmarks = (function() {
     }, {
       display: "icon",
       letter: "N",
+      image: null,
       icon: {
         name: "film",
         prefix: "fas",
@@ -148,6 +153,7 @@ var bookmarks = (function() {
     }, {
       display: "letter",
       letter: "DR",
+      image: null,
       icon: {
         name: null,
         prefix: null,
@@ -184,6 +190,7 @@ var bookmarks = (function() {
     items: [{
       display: "icon",
       letter: "DEV",
+      image: null,
       icon: {
         name: "code",
         prefix: "fas",
@@ -211,6 +218,7 @@ var bookmarks = (function() {
     }, {
       display: "icon",
       letter: "GIT",
+      image: null,
       icon: {
         name: "github",
         prefix: "fab",

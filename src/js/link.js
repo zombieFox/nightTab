@@ -54,12 +54,15 @@ var link = (function() {
       }
     },
     link: {
-      display: null,
-      letter: null,
-      icon: {
-        name: null,
-        prefix: null,
-        label: null
+      display: {
+        type: null,
+        letter: null,
+        image: null,
+        icon: {
+          name: null,
+          prefix: null,
+          label: null
+        }
       },
       name: null,
       url: null,
@@ -78,7 +81,8 @@ var link = (function() {
             b: null
           }
         }
-      }
+      },
+      background: null
     },
     searchMatch: null
   };
@@ -92,6 +96,7 @@ var link = (function() {
     stagedLink.position.group.name.show = false;
     stagedLink.position.group.openAll.show = false;
     stagedLink.link.display = "letter";
+    stagedLink.link.name = "";
     stagedLink.link.accent.override = false;
     stagedLink.link.accent.color.hsl.h = 0;
     stagedLink.link.accent.color.hsl.s = 0;
@@ -114,6 +119,7 @@ var link = (function() {
     stagedLink.link.icon.name = null;
     stagedLink.link.icon.prefix = null;
     stagedLink.link.icon.label = null;
+    stagedLink.link.image = null;
     stagedLink.link.name = null;
     stagedLink.link.url = null;
     stagedLink.link.timeStamp = null;
@@ -791,6 +797,7 @@ var link = (function() {
 
       var linkDisplayLetter = null;
       var linkDisplayIcon = null;
+      var linkDisplayImage = null;
 
       if (stagedLink.link.display == "letter") {
         var letterText = stagedLink.link.letter;
@@ -800,8 +807,19 @@ var link = (function() {
         linkDisplayLetter = helper.node("p:" + letterText + "|class:link-display-letter");
       } else if (stagedLink.link.display == "icon" && stagedLink.link.icon.prefix != null && stagedLink.link.icon.name != null) {
         linkDisplayIcon = helper.node("div|class:link-display-icon " + stagedLink.link.icon.prefix + " fa-" + stagedLink.link.icon.name);
+      } else if (stagedLink.link.display == "image" && stagedLink.link.image.trim() != null && stagedLink.link.image.trim() != "") {
+        linkDisplayImage = helper.makeNode({
+          tag: "div",
+          attr: [{
+            key: "class",
+            value: "link-display-image"
+          }, {
+            key: "style",
+            value: "background-image: url(" + stagedLink.link.image.trim() + ")"
+          }]
+        });
       };
-      var nameText = stagedLink.link.name;
+      var nameText = stagedLink.link.name.trim();
       if (nameText == null) {
         nameText = "";
       };
@@ -835,13 +853,21 @@ var link = (function() {
       var linkRemove = helper.node("button|class:button button-small link-control-item link-control-item-remove,tabindex:-1,title:Remove this bookmark");
       var linkRemoveIcon = helper.node("span|class:button-icon icon-close");
 
-      if (stagedLink.link.display == "letter") {
+      if (stagedLink.link.display == "letter" && linkDisplayLetter != null) {
         linkDisplayLetcon.appendChild(linkDisplayLetter);
-      } else if (stagedLink.link.display == "icon" && stagedLink.link.icon.prefix != null && stagedLink.link.icon.name != null) {
+      } else if (stagedLink.link.display == "icon" && linkDisplayIcon != null) {
         linkDisplayLetcon.appendChild(linkDisplayIcon);
+      } else if (stagedLink.link.display == "image" && linkDisplayImage != null) {
+        linkDisplayLetcon.appendChild(linkDisplayImage);
       };
-      linkDisplay.appendChild(linkDisplayLetcon);
-      linkDisplay.appendChild(linkDisplayName);
+
+      if (linkDisplayLetter != null || linkDisplayIcon != null || linkDisplayImage != null) {
+        linkDisplay.appendChild(linkDisplayLetcon);
+      };
+
+      if (stagedLink.link.name != null && stagedLink.link.name != "") {
+        linkDisplay.appendChild(linkDisplayName);
+      };
       linkPanelFront.appendChild(linkDisplay);
       linkLeft.appendChild(linkLeftIcon);
       linkControl.appendChild(linkLeft);
@@ -949,6 +975,26 @@ var link = (function() {
       var displayIconFormGroupClearIcon = helper.node("span|class:icon-close");
       var displayIconHelper = helper.node("div|class:form-helper");
       var displayIconHelperItem = helper.node("p:Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.|class:link-form-input-icon-helper form-helper-item disabled");
+
+      // image
+      var displayImageRadiotWrap = helper.node("div|class:form-wrap");
+      var displayImageRadio = helper.node("input|class:link-form-input-display-image,id:link-form-input-display-image,type:radio,name:link-form-input-display,tabindex:1,value:image");
+      var displayImageLable = helper.node("label|for:link-form-input-display-image");
+      var displayImageLableText = helper.node("span:Image");
+      var displayImageLableIcon = helper.node("span|class:label-icon");
+      var displayImageFormIndentWrap = helper.node("div|class:form-wrap");
+      var displayImageFormIndent = helper.node("div|class:form-indent");
+      var displayImageInputWrap = helper.node("div|class:form-wrap");
+      var displayImageInput = helper.node("input|type:text,class:link-form-input-image,id:link-form-input-image,placeholder:https://...,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,disabled");
+      var displayImageHelper = helper.node("div|class:form-helper");
+      var displayImageHelperItem = helper.makeNode({
+        tag: "p",
+        text: "Be sure to use the full URL and include \"http://\" or \"https://\".",
+        attr: [{
+          key: "class",
+          value: "form-helper-item disabled"
+        }]
+      });
 
       // name
       var nameInputWrap = helper.node("div|class:form-wrap");
@@ -1072,6 +1118,18 @@ var link = (function() {
       displayIconFormIndent.appendChild(displayIconHelper);
       displayIconFormIndentWrap.appendChild(displayIconFormIndent);
       fieldset.appendChild(displayIconFormIndentWrap);
+      displayImageRadiotWrap.appendChild(displayImageRadio);
+      displayImageLable.appendChild(displayImageLableIcon);
+      displayImageLable.appendChild(displayImageLableText);
+      displayImageRadiotWrap.appendChild(displayImageLable);
+      displayImageFormIndentWrap.appendChild(displayImageFormIndent);
+      displayImageInputWrap.appendChild(displayImageInput);
+      displayImageFormIndent.appendChild(displayImageInputWrap);
+      displayImageFormIndentWrap.appendChild(displayImageFormIndent);
+      fieldset.appendChild(displayImageRadiotWrap);
+      fieldset.appendChild(displayImageFormIndentWrap);
+      displayImageHelper.appendChild(displayImageHelperItem);
+      displayImageFormIndent.appendChild(displayImageHelper);
 
       fieldset.appendChild(helper.node("hr"));
 
@@ -1209,6 +1267,9 @@ var link = (function() {
         groupExistingGroup.selectedIndex = stagedLink.position.origin.group;
         groupExistingPosition.selectedIndex = stagedLink.position.origin.item;
         if (stagedLink.link.display == "letter") {
+          displayLetterRadio.checked = true;
+          displayIconRadio.checked = false;
+          displayImageRadio.checked = false;
           displayLetterInput.removeAttribute("disabled");
           displayIconInput.setAttribute("disabled", "");
           helper.addClass(displayIconFormGroupText, "disabled");
@@ -1216,21 +1277,41 @@ var link = (function() {
           helper.addClass(displayIconHelper, "disabled");
           displayIconFormGroupClear.setAttribute("disabled", "");
           displayIconFormGroupText.tabIndex = -1;
+          displayImageInput.setAttribute("disabled", "");
+          helper.addClass(displayImageHelperItem, "disabled");
         } else if (stagedLink.link.display == "icon") {
+          displayLetterRadio.checked = false;
+          displayIconRadio.checked = true;
+          displayImageRadio.checked = false;
           displayLetterInput.setAttribute("disabled", "");
           displayIconInput.removeAttribute("disabled");
           helper.removeClass(displayIconFormGroupText, "disabled");
           displayIconInput.removeAttribute("disabled");
           helper.removeClass(displayIconHelper, "disabled");
           displayIconFormGroupClear.removeAttribute("disabled");
-          displayIconRadio.checked = true;
           displayIconFormGroupText.tabIndex = 1;
+          displayImageInput.setAttribute("disabled", "");
+          helper.addClass(displayImageHelperItem, "disabled");
+        } else if (stagedLink.link.display == "image") {
+          displayLetterRadio.checked = false;
+          displayIconRadio.checked = false;
+          displayImageRadio.checked = true;
+          displayLetterInput.setAttribute("disabled", "");
+          displayIconInput.setAttribute("disabled", "");
+          displayImageInput.setAttribute("disabled", "");
+          helper.addClass(displayIconFormGroupText, "disabled");
+          helper.addClass(displayIconHelperItem, "disabled");
+          displayIconFormGroupClear.setAttribute("disabled", "");
+          displayIconFormGroupText.tabIndex = -1;
+          displayImageInput.removeAttribute("disabled");
+          helper.removeClass(displayImageHelperItem, "disabled");
         };
         if (stagedLink.link.icon.name != null && stagedLink.link.icon.prefix != null && stagedLink.link.icon.label != null) {
           displayIconFormGroupText.appendChild(helper.node("span|class:link-form-icon " + stagedLink.link.icon.prefix + " fa-" + stagedLink.link.icon.name));
         };
         displayLetterInput.value = stagedLink.link.letter;
         displayIconInput.value = stagedLink.link.icon.label;
+        displayImageInput.value = stagedLink.link.image;
         nameInput.value = stagedLink.link.name;
         urlInput.value = stagedLink.link.url;
         if (stagedLink.link.accent.override) {
@@ -1444,25 +1525,46 @@ var link = (function() {
         stagedLink.link.display = this.value;
         displayLetterInput.removeAttribute("disabled");
         displayIconInput.setAttribute("disabled", "");
+        displayImageInput.setAttribute("disabled", "");
         helper.addClass(displayIconFormGroupText, "disabled");
         helper.addClass(displayIconHelperItem, "disabled");
         displayIconFormGroupClear.setAttribute("disabled", "");
         displayIconFormGroupText.tabIndex = -1;
+        displayImageInput.setAttribute("disabled", "");
+        helper.addClass(displayImageHelperItem, "disabled");
       }, false);
       displayIconRadio.addEventListener("change", function(event) {
         stagedLink.link.display = this.value;
         displayLetterInput.setAttribute("disabled", "");
         displayIconInput.removeAttribute("disabled");
+        displayImageInput.setAttribute("disabled", "");
         helper.removeClass(displayIconFormGroupText, "disabled");
         helper.removeClass(displayIconHelperItem, "disabled");
         displayIconFormGroupClear.removeAttribute("disabled");
         displayIconFormGroupText.tabIndex = 1;
+        displayImageInput.setAttribute("disabled", "");
+        helper.addClass(displayImageHelperItem, "disabled");
+      }, false);
+      displayImageRadio.addEventListener("change", function(event) {
+        stagedLink.link.display = this.value;
+        displayLetterInput.setAttribute("disabled", "");
+        displayIconInput.setAttribute("disabled", "");
+        displayImageInput.setAttribute("disabled", "");
+        helper.addClass(displayIconFormGroupText, "disabled");
+        helper.addClass(displayIconHelperItem, "disabled");
+        displayIconFormGroupClear.setAttribute("disabled", "");
+        displayIconFormGroupText.tabIndex = -1;
+        displayImageInput.removeAttribute("disabled");
+        helper.removeClass(displayImageHelperItem, "disabled");
       }, false);
       displayLetterInput.addEventListener("input", function(event) {
         stagedLink.link.letter = this.value;
       }, false);
       nameInput.addEventListener("input", function(event) {
         stagedLink.link.name = this.value;
+      }, false);
+      displayImageInput.addEventListener("input", function(event) {
+        stagedLink.link.image = this.value;
       }, false);
       urlInput.addEventListener("input", function(event) {
         stagedLink.link.url = this.value;
@@ -1629,13 +1731,23 @@ var link = (function() {
       return form;
     },
     display: {
-      letter: function() {
-        var html = helper.e("html");
-        html.style.setProperty("--link-item-display-letter-size", state.get.current().link.item.display.letcon.letter.size + "em");
+      letter: {
+        size: function() {
+          var html = helper.e("html");
+          html.style.setProperty("--link-item-display-letter-size", state.get.current().link.item.display.letcon.letter.size + "em");
+        }
       },
-      icon: function() {
-        var html = helper.e("html");
-        html.style.setProperty("--link-item-display-icon-size", state.get.current().link.item.display.letcon.icon.size + "em");
+      icon: {
+        size: function() {
+          var html = helper.e("html");
+          html.style.setProperty("--link-item-display-icon-size", state.get.current().link.item.display.letcon.icon.size + "em");
+        }
+      },
+      image: {
+        size: function() {
+          var html = helper.e("html");
+          html.style.setProperty("--link-item-display-image-size", state.get.current().link.item.display.letcon.image.size + "em");
+        }
       }
     },
     name: function() {
@@ -2366,8 +2478,9 @@ var link = (function() {
     render.group.border();
     render.item.color.custom();
     render.item.size();
-    render.item.display.letter();
-    render.item.display.icon();
+    render.item.display.letter.size();
+    render.item.display.icon.size();
+    render.item.display.image.size();
     render.item.name();
     render.item.border();
     render.item.rotate();

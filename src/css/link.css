@@ -377,19 +377,19 @@
   flex-direction: column-reverse;
 }
 
-.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname .link-display-letcon {
+.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname .link-display-letcon:not(:only-child) {
   margin-right: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
-.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon .link-display-letcon {
+.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon .link-display-letcon:not(:only-child) {
   margin-left: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
-.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-vertical.is-link-item-display-order-letconname .link-display-letcon {
+.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-vertical.is-link-item-display-order-letconname .link-display-letcon:not(:only-child) {
   margin-bottom: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
-.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon .link-display-letcon {
+.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon .link-display-letcon:not(:only-child) {
   margin-top: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
@@ -644,6 +644,13 @@
   transition: color var(--layout-timing-extra-fast);
 }
 
+.link-display-image {
+  background-size: cover;
+  background-position: center;
+  width: 2em;
+  height: 2em;
+}
+
 .is-theme-accent-cycle .link-display-letter,
 .is-theme-accent-cycle .link-display-icon {
   transition: none;
@@ -657,6 +664,11 @@
 .is-link-style-block .link-display-icon,
 .is-link-style-list .link-display-icon {
   font-size: var(--link-item-display-icon-size);
+}
+
+.is-link-style-block .link-display-image,
+.is-link-style-list .link-display-image {
+  font-size: var(--link-item-display-image-size);
 }
 
 .link-item:hover .link-display-letter,

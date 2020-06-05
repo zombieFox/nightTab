@@ -188,6 +188,9 @@ var state = (function() {
             },
             icon: {
               size: 3
+            },
+            image: {
+              size: 3
             }
           },
           name: {
@@ -420,6 +423,9 @@ var state = (function() {
               size: 3
             },
             icon: {
+              size: 3
+            },
+            image: {
               size: 3
             }
           },

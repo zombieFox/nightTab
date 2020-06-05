@@ -995,6 +995,14 @@ var update = (function() {
         });
       });
       return data;
+    },
+    "5.33.0": function(data) {
+      data.bookmarks.forEach(function(arrayItem, index) {
+        arrayItem.items.forEach(function(arrayItem, index) {
+          arrayItem.image = null;
+        });
+      });
+      return data;
     }
   };
 
