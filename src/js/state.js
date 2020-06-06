@@ -152,6 +152,11 @@ var state = (function() {
       },
       color: {
         by: "theme",
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
         rgb: {
           r: 0,
           g: 0,
@@ -173,7 +178,23 @@ var state = (function() {
       },
       item: {
         color: {
-          by: "theme",
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
+          rgb: {
+            r: 0,
+            g: 0,
+            b: 0
+          }
+        },
+        accent: {
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
           rgb: {
             r: 0,
             g: 0,
@@ -325,6 +346,11 @@ var state = (function() {
     background: {
       color: {
         by: "theme",
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
         rgb: {
           r: 0,
           g: 0,

@@ -109,8 +109,8 @@
   --group-border:                                       0;
   /* link */
   --link-area-width:                                    100%;
-  --link-item-color-theme:                              var(--theme-color-02);
-  --link-item-color-custom:                             rgb(0, 0, 0);
+  --link-item-color:                                    var(--theme-color-02);
+  --link-item-color-focus-hover:                        var(--theme-color-03);
   --link-item-size:                                     1em;
   --link-item-display-space:                            0.25em;
   --link-item-display-gutter:                           2;

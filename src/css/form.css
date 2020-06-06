@@ -647,7 +647,8 @@ input[type="color"] {
   border-radius: var(--theme-radius);
   overflow: hidden;
   cursor: pointer;
-  transition: box-shadow var(--layout-timing-extra-fast);
+  opacity: 1;
+  transition: box-shadow var(--layout-timing-extra-fast), opacity var(--layout-timing-extra-fast);
 }
 
 input[type="color"]:hover {

@@ -42,6 +42,33 @@ var background = (function() {
     }
   };
 
+  mod.color = {
+    hsl: function() {
+      var hsl = helper.convertColor.rgb.hsl(state.get.current().background.color.rgb);
+      helper.setObject({
+        object: state.get.current(),
+        path: "background.color.hsl",
+        newValue: {
+          h: Math.round(hsl.h),
+          s: Math.round(hsl.s),
+          l: Math.round(hsl.l)
+        }
+      });
+    },
+    rgb: function() {
+      var rgb = helper.convertColor.hsl.rgb(state.get.current().background.color.hsl);
+      helper.setObject({
+        object: state.get.current(),
+        path: "background.color.rgb",
+        newValue: {
+          r: Math.round(rgb.r),
+          g: Math.round(rgb.g),
+          b: Math.round(rgb.b)
+        }
+      });
+    }
+  };
+
   var bind = {};
 
   bind.feedback = {

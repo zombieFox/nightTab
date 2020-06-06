@@ -10,6 +10,33 @@ var header = (function() {
     }
   };
 
+  mod.color = {
+    hsl: function() {
+      var hsl = helper.convertColor.rgb.hsl(state.get.current().header.color.rgb);
+      helper.setObject({
+        object: state.get.current(),
+        path: "header.color.hsl",
+        newValue: {
+          h: Math.round(hsl.h),
+          s: Math.round(hsl.s),
+          l: Math.round(hsl.l)
+        }
+      });
+    },
+    rgb: function() {
+      var rgb = helper.convertColor.hsl.rgb(state.get.current().header.color.hsl);
+      helper.setObject({
+        object: state.get.current(),
+        path: "header.color.rgb",
+        newValue: {
+          r: Math.round(rgb.r),
+          g: Math.round(rgb.g),
+          b: Math.round(rgb.b)
+        }
+      });
+    }
+  };
+
   var bind = {};
 
   bind.resize = function() {

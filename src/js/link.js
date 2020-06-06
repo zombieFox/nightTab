@@ -68,7 +68,7 @@ var link = (function() {
       url: null,
       timeStamp: null,
       accent: {
-        override: null,
+        by: null,
         color: {
           hsl: {
             h: null,
@@ -82,7 +82,25 @@ var link = (function() {
           }
         }
       },
-      background: null
+      color: {
+        by: null,
+        color: {
+          hsl: {
+            h: null,
+            s: null,
+            l: null
+          },
+          rgb: {
+            r: null,
+            g: null,
+            b: null
+          }
+        }
+      }
+    },
+    collapse: {
+      color: null,
+      accent: null
     },
     searchMatch: null
   };
@@ -97,13 +115,22 @@ var link = (function() {
     stagedLink.position.group.openAll.show = false;
     stagedLink.link.display = "letter";
     stagedLink.link.name = "";
-    stagedLink.link.accent.override = false;
+    stagedLink.link.accent.by = "theme";
     stagedLink.link.accent.color.hsl.h = 0;
     stagedLink.link.accent.color.hsl.s = 0;
     stagedLink.link.accent.color.hsl.l = 0;
     stagedLink.link.accent.color.rgb.r = 0;
     stagedLink.link.accent.color.rgb.g = 0;
     stagedLink.link.accent.color.rgb.b = 0;
+    stagedLink.link.color.by = "theme";
+    stagedLink.link.color.color.hsl.h = 0;
+    stagedLink.link.color.color.hsl.s = 0;
+    stagedLink.link.color.color.hsl.l = 0;
+    stagedLink.link.color.color.rgb.r = 0;
+    stagedLink.link.color.color.rgb.g = 0;
+    stagedLink.link.color.color.rgb.b = 0;
+    stagedLink.collapse.color = false;
+    stagedLink.collapse.accent = false;
     stagedLink.link.searchMatch = false;
   };
 
@@ -123,24 +150,57 @@ var link = (function() {
     stagedLink.link.name = null;
     stagedLink.link.url = null;
     stagedLink.link.timeStamp = null;
-    stagedLink.link.accent.override = null;
+    stagedLink.link.accent.by = null;
     stagedLink.link.accent.color.hsl.h = null;
     stagedLink.link.accent.color.hsl.s = null;
     stagedLink.link.accent.color.hsl.l = null;
     stagedLink.link.accent.color.rgb.r = null;
     stagedLink.link.accent.color.rgb.g = null;
     stagedLink.link.accent.color.rgb.b = null;
+    stagedLink.link.color.by = null;
+    stagedLink.link.color.color.hsl.h = null;
+    stagedLink.link.color.color.hsl.s = null;
+    stagedLink.link.color.color.hsl.l = null;
+    stagedLink.link.color.color.rgb.r = null;
+    stagedLink.link.color.color.rgb.g = null;
+    stagedLink.link.color.color.rgb.b = null;
+    stagedLink.collapse.color = null;
+    stagedLink.collapse.accent = null;
     stagedLink.link.searchMatch = null;
   };
 
   var mod = {};
 
   mod.accent = {
+    hsl: function() {
+      var hsl = helper.convertColor.rgb.hsl(state.get.current().link.item.accent.rgb);
+      helper.setObject({
+        object: state.get.current(),
+        path: "link.item.accent.hsl",
+        newValue: {
+          h: Math.round(hsl.h),
+          s: Math.round(hsl.s),
+          l: Math.round(hsl.l)
+        }
+      });
+    },
+    rgb: function() {
+      var rgb = helper.convertColor.hsl.rgb(state.get.current().link.item.accent.hsl);
+      helper.setObject({
+        object: state.get.current(),
+        path: "link.item.accent.rgb",
+        newValue: {
+          r: Math.round(rgb.r),
+          g: Math.round(rgb.g),
+          b: Math.round(rgb.b)
+        }
+      });
+    },
     clear: function() {
       bookmarks.get().forEach(function(arrayItem, index) {
         arrayItem.items.forEach(function(arrayItem, index) {
           arrayItem.accent = {
-            override: false,
+            by: "theme",
             color: {
               hsl: {
                 h: 0,
@@ -157,12 +217,21 @@ var link = (function() {
         });
       });
     },
+    set: function() {
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.items.forEach(function(arrayItem, index) {
+          arrayItem.accent.by = "custom";
+          arrayItem.accent.color.hsl = state.get.current().link.item.accent.hsl;
+          arrayItem.accent.color.rgb = state.get.current().link.item.accent.rgb;
+        });
+      });
+    },
     rainbow: function() {
       var units = 360 / bookmarks.count();
       var degree = 0;
       bookmarks.get().forEach(function(arrayItem, index) {
         arrayItem.items.forEach(function(arrayItem, index) {
-          arrayItem.accent.override = true;
+          arrayItem.accent.by = "custom";
           var rgb = helper.convertColor.hsl.rgb({
             h: degree,
             s: 100,
@@ -174,6 +243,88 @@ var link = (function() {
             l: 50
           };
           arrayItem.accent.color.rgb = {
+            r: Math.round(rgb.r),
+            g: Math.round(rgb.g),
+            b: Math.round(rgb.b)
+          };
+          degree = degree + units;
+        });
+      });
+    }
+  };
+
+  mod.color = {
+    hsl: function() {
+      var hsl = helper.convertColor.rgb.hsl(state.get.current().link.item.color.rgb);
+      helper.setObject({
+        object: state.get.current(),
+        path: "link.item.color.hsl",
+        newValue: {
+          h: Math.round(hsl.h),
+          s: Math.round(hsl.s),
+          l: Math.round(hsl.l)
+        }
+      });
+    },
+    rgb: function() {
+      var rgb = helper.convertColor.hsl.rgb(state.get.current().link.item.color.hsl);
+      helper.setObject({
+        object: state.get.current(),
+        path: "link.item.color.rgb",
+        newValue: {
+          r: Math.round(rgb.r),
+          g: Math.round(rgb.g),
+          b: Math.round(rgb.b)
+        }
+      });
+    },
+    clear: function() {
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.items.forEach(function(arrayItem, index) {
+          arrayItem.color = {
+            by: "theme",
+            color: {
+              hsl: {
+                h: 0,
+                s: 0,
+                l: 0
+              },
+              rgb: {
+                r: 0,
+                g: 0,
+                b: 0
+              }
+            }
+          };
+        });
+      });
+    },
+    set: function() {
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.items.forEach(function(arrayItem, index) {
+          arrayItem.color.by = "custom";
+          arrayItem.color.color.hsl = state.get.current().link.item.color.hsl;
+          arrayItem.color.color.rgb = state.get.current().link.item.color.rgb;
+        });
+      });
+    },
+    rainbow: function() {
+      var units = 360 / bookmarks.count();
+      var degree = 0;
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.items.forEach(function(arrayItem, index) {
+          arrayItem.color.by = "custom";
+          var rgb = helper.convertColor.hsl.rgb({
+            h: degree,
+            s: 100,
+            l: 50
+          });
+          arrayItem.color.color.hsl = {
+            h: degree,
+            s: 100,
+            l: 50
+          };
+          arrayItem.color.color.rgb = {
             r: Math.round(rgb.r),
             g: Math.round(rgb.g),
             b: Math.round(rgb.b)
@@ -753,10 +904,14 @@ var link = (function() {
           value: "link-item"
         }]
       };
-      if (stagedLink.link.accent.override) {
+      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom") {
         linkItemOptions.attr.push({
           key: "style",
-          value: "--theme-accent-r: " + stagedLink.link.accent.color.rgb.r + ";" +
+          value: ""
+        });
+        if (stagedLink.link.accent.by == "custom") {
+          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value +
+            "--theme-accent-r: " + stagedLink.link.accent.color.rgb.r + ";" +
             "--theme-accent-g: " + stagedLink.link.accent.color.rgb.g + ";" +
             "--theme-accent-b: " + stagedLink.link.accent.color.rgb.b + ";" +
             "--theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);" +
@@ -767,7 +922,12 @@ var link = (function() {
             "--theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));" +
             "--theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);" +
             "--theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);"
-        });
+        };
+        if (stagedLink.link.color.by == "custom") {
+          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value +
+            "--link-item-color: " + stagedLink.link.color.color.rgb.r + ", " + stagedLink.link.color.color.rgb.g + ", " + stagedLink.link.color.color.rgb.b + ";" +
+            "--link-item-color-focus-hover: " + stagedLink.link.color.color.rgb.r + ", " + stagedLink.link.color.color.rgb.g + ", " + stagedLink.link.color.color.rgb.b + ";";
+        };
       };
       var linkItem = helper.makeNode(linkItemOptions);
       var linkPanelFrontOptions = {
@@ -1015,18 +1175,73 @@ var link = (function() {
         }]
       });
 
+      // color
+      var colorLabelWrap = helper.node("div|class:form-wrap");
+      var colorLabel = helper.node("label:Color override");
+      var colorThemeRadioWrap = helper.node("div|class:form-wrap");
+      var colorThemeRadio = helper.node("input|class:link-form-input-color-theme,id:link-form-input-color-theme,type:radio,name:link-form-input-color,tabindex:1,checked,value:theme");
+      var colorThemeLabel = helper.node("label|for:link-form-input-color-theme");
+      var colorThemeLabelText = helper.node("span:Theme colour");
+      var colorThemeLabelIcon = helper.node("span|class:label-icon");
+      var colorCustomInputWrap = helper.node("div|class:form-wrap");
+      var colorCustomRadio = helper.node("input|class:link-form-input-color-custom,id:link-form-input-color-custom,type:radio,name:link-form-input-color,tabindex:1,value:custom");
+      var colorCustomLabel = helper.node("label|for:link-form-input-color-custom");
+      var colorCustomLabelText = helper.node("span:Custom colour");
+      var colorCustomLabelIcon = helper.node("span|class:label-icon");
+      var colorColorFormIndentWrap = helper.node("div|class:form-wrap");
+      var colorColorFormIndent = helper.node("div|class:form-indent");
+      var colorColorInputWrap = helper.node("div|class:form-wrap");
+      var colorColorFormGroup = helper.node("div|class:form-group form-group-block");
+      var colorColorPicker = helper.node("input|id:link-form-input-color-picker,class:form-group-item-half link-form-input-color-picker,type:color,value:#000000,tabindex:1,disabled");
+      var colorColorHex = helper.node("input|id:link-form-input-color-hex,class:form-group-item-half link-form-input-color-hex,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
+      var colorColorCollapseButton = helper.node("button|class:link-form-collapse-button button button-line,type:button,tabindex:1,disabled");
+      var colorColorCollapseButtonIcon = helper.node("span|class:link-form-collapse-button-icon icon-arrow-down");
+      var colorColorInputHelper = helper.node("div|class:form-helper");
+      var colorColorInputHelperItem = helper.node("p:Use the background colour defined by the Theme.|class:link-form-input-color-helper form-helper-item disabled");
+      var colorColorCollapse = helper.node("div|class:link-form-collapse");
+      var colorHslHWrap = helper.node("div|class:form-wrap");
+      var colorHslHLabel = helper.node("label:Hue|for:link-form-input-color-hsl-h-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var colorHslHGroup = helper.node("div|class:form-group form-group-block");
+      var colorHslHRange = helper.node("input|class:link-form-input-color-hsl-h-range mr-3,id:link-form-input-color-hsl-h-range,type:range,name:link-form-input-color-hsl-h-range,value:0,min:0,max:359,tabindex:1,disabled");
+      var colorHslHNumber = helper.node("input|class:link-form-input-color-hsl-h-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:359,tabindex:1,disabled");
+      var colorHslSWrap = helper.node("div|class:form-wrap");
+      var colorHslSLabel = helper.node("label:Saturation|for:link-form-input-color-hsl-s-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var colorHslSGroup = helper.node("div|class:form-group form-group-block");
+      var colorHslSRange = helper.node("input|class:link-form-input-color-hsl-s-range mr-3,id:link-form-input-color-hsl-s-range,type:range,name:link-form-input-color-hsl-s-range,value:0,min:0,max:100,tabindex:1,disabled");
+      var colorHslSNumber = helper.node("input|class:link-form-input-color-hsl-s-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1,disabled");
+      var colorHslLWrap = helper.node("div|class:form-wrap");
+      var colorHslLLabel = helper.node("label:Lightness|for:link-form-input-color-hsl-l-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var colorHslLGroup = helper.node("div|class:form-group form-group-block");
+      var colorHslLRange = helper.node("input|class:link-form-input-color-hsl-l-range mr-3,id:link-form-input-color-hsl-l-range,type:range,name:link-form-input-color-hsl-l-range,value:0,min:0,max:100,tabindex:1,disabled");
+      var colorHslLNumber = helper.node("input|class:link-form-input-color-hsl-l-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1,disabled");
+      var colorRgbRWrap = helper.node("div|class:form-wrap");
+      var colorRgbRLabel = helper.node("label:Red|for:link-form-input-color-rgb-r-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var colorRgbRGroup = helper.node("div|class:form-group form-group-block");
+      var colorRgbRRange = helper.node("input|class:link-form-input-color-rgb-r-range mr-3,id:link-form-input-color-rgb-r-range,type:range,name:link-form-input-color-rgb-r-range,value:0,min:0,max:255,tabindex:1,disabled");
+      var colorRgbRNumber = helper.node("input|class:link-form-input-color-rgb-r-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
+      var colorRgbGWrap = helper.node("div|class:form-wrap");
+      var colorRgbGLabel = helper.node("label:Green|for:link-form-input-color-rgb-g-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var colorRgbGGroup = helper.node("div|class:form-group form-group-block");
+      var colorRgbGRange = helper.node("input|class:link-form-input-color-rgb-g-range mr-3,id:link-form-input-color-rgb-g-range,type:range,name:link-form-input-color-rgb-g-range,value:0,min:0,max:255,tabindex:1,disabled");
+      var colorRgbGNumber = helper.node("input|class:link-form-input-color-rgb-g-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
+      var colorRgbBWrap = helper.node("div|class:form-wrap");
+      var colorRgbBLabel = helper.node("label:Blue|for:link-form-input-color-rgb-b-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var colorRgbBGroup = helper.node("div|class:form-group form-group-block");
+      var colorRgbBRange = helper.node("input|class:link-form-input-color-rgb-b-range mr-3,id:link-form-input-color-rgb-b-range,type:range,name:link-form-input-color-rgb-b-range,value:0,min:0,max:255,tabindex:1,disabled");
+      var colorRgbBNumber = helper.node("input|class:link-form-input-color-rgb-b-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
+
       // accent
       var accentLabelWrap = helper.node("div|class:form-wrap");
-      var accentLabel = helper.node("label:Accent colour");
-      var accentGlobalRadioWrap = helper.node("div|class:form-wrap");
-      var accentGlobalRadio = helper.node("input|class:link-form-input-accent-global,id:link-form-input-accent-global,type:radio,name:link-form-input-accent,tabindex:1,checked,value:global");
-      var accentGlobalLabel = helper.node("label|for:link-form-input-accent-global");
-      var accentGlobalLabelText = helper.node("span:Global");
-      var accentGlobalLabelIcon = helper.node("span|class:label-icon");
+      var accentLabel = helper.node("label:Accent override");
+      var accentThemeRadioWrap = helper.node("div|class:form-wrap");
+      var accentThemeRadio = helper.node("input|class:link-form-input-accent-theme,id:link-form-input-accent-theme,type:radio,name:link-form-input-accent,tabindex:1,checked,value:theme");
+      var accentThemeLabel = helper.node("label|for:link-form-input-accent-theme");
+      var accentThemeLabelText = helper.node("span:Theme colour");
+      var accentThemeLabelIcon = helper.node("span|class:label-icon");
       var accentCustomInputWrap = helper.node("div|class:form-wrap");
       var accentCustomRadio = helper.node("input|class:link-form-input-accent-custom,id:link-form-input-accent-custom,type:radio,name:link-form-input-accent,tabindex:1,value:custom");
       var accentCustomLabel = helper.node("label|for:link-form-input-accent-custom");
-      var accentCustomLabelText = helper.node("span:Custom");
+      var accentCustomLabelText = helper.node("span:Custom colour");
       var accentCustomLabelIcon = helper.node("span|class:label-icon");
       var accentColorFormIndentWrap = helper.node("div|class:form-wrap");
       var accentColorFormIndent = helper.node("div|class:form-indent");
@@ -1034,38 +1249,41 @@ var link = (function() {
       var accentColorFormGroup = helper.node("div|class:form-group form-group-block");
       var accentColorPicker = helper.node("input|id:link-form-input-accent-picker,class:form-group-item-half link-form-input-accent-picker,type:color,value:#000000,tabindex:1,disabled");
       var accentColorHex = helper.node("input|id:link-form-input-accent-hex,class:form-group-item-half link-form-input-accent-hex,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
+      var accentColorCollapseButton = helper.node("button|class:link-form-collapse-button button button-line,type:button,tabindex:1,disabled");
+      var accentColorCollapseButtonIcon = helper.node("span|class:link-form-collapse-button-icon icon-arrow-down");
       var accentColorInputHelper = helper.node("div|class:form-helper");
-      var accentColorInputHelperItem = helper.node("p:Use this colour to override the global accent colour.|class:link-form-input-accent-helper form-helper-item disabled");
-      var linkFormAccentHslHWrap = helper.node("div|class:form-wrap");
-      var linkFormAccentHslHLabel = helper.node("label:Hue|for:link-form-input-accent-hsl-h-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
-      var linkFormAccentHslHGroup = helper.node("div|class:form-group form-group-block");
-      var linkFormAccentHslHRange = helper.node("input|class:link-form-input-accent-hsl-h-range mr-3,id:link-form-input-accent-hsl-h-range,type:range,name:link-form-input-accent-hsl-h-range,value:0,min:0,max:359,tabindex:1,disabled");
-      var linkFormAccentHslHNumber = helper.node("input|class:link-form-input-accent-hsl-h-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:359,tabindex:1,disabled");
-      var linkFormAccentHslSWrap = helper.node("div|class:form-wrap");
-      var linkFormAccentHslSLabel = helper.node("label:Saturation|for:link-form-input-accent-hsl-s-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
-      var linkFormAccentHslSGroup = helper.node("div|class:form-group form-group-block");
-      var linkFormAccentHslSRange = helper.node("input|class:link-form-input-accent-hsl-s-range mr-3,id:link-form-input-accent-hsl-s-range,type:range,name:link-form-input-accent-hsl-s-range,value:0,min:0,max:100,tabindex:1,disabled");
-      var linkFormAccentHslSNumber = helper.node("input|class:link-form-input-accent-hsl-s-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1,disabled");
-      var linkFormAccentHslLWrap = helper.node("div|class:form-wrap");
-      var linkFormAccentHslLLabel = helper.node("label:Lightness|for:link-form-input-accent-hsl-l-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
-      var linkFormAccentHslLGroup = helper.node("div|class:form-group form-group-block");
-      var linkFormAccentHslLRange = helper.node("input|class:link-form-input-accent-hsl-l-range mr-3,id:link-form-input-accent-hsl-l-range,type:range,name:link-form-input-accent-hsl-l-range,value:0,min:0,max:100,tabindex:1,disabled");
-      var linkFormAccentHslLNumber = helper.node("input|class:link-form-input-accent-hsl-l-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1,disabled");
-      var linkFormAccentRgbRWrap = helper.node("div|class:form-wrap");
-      var linkFormAccentRgbRLabel = helper.node("label:Red|for:link-form-input-accent-rgb-r-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
-      var linkFormAccentRgbRGroup = helper.node("div|class:form-group form-group-block");
-      var linkFormAccentRgbRRange = helper.node("input|class:link-form-input-accent-rgb-r-range mr-3,id:link-form-input-accent-rgb-r-range,type:range,name:link-form-input-accent-rgb-r-range,value:0,min:0,max:255,tabindex:1,disabled");
-      var linkFormAccentRgbRNumber = helper.node("input|class:link-form-input-accent-rgb-r-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
-      var linkFormAccentRgbGWrap = helper.node("div|class:form-wrap");
-      var linkFormAccentRgbGLabel = helper.node("label:Green|for:link-form-input-accent-rgb-g-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
-      var linkFormAccentRgbGGroup = helper.node("div|class:form-group form-group-block");
-      var linkFormAccentRgbGRange = helper.node("input|class:link-form-input-accent-rgb-g-range mr-3,id:link-form-input-accent-rgb-g-range,type:range,name:link-form-input-accent-rgb-g-range,value:0,min:0,max:255,tabindex:1,disabled");
-      var linkFormAccentRgbGNumber = helper.node("input|class:link-form-input-accent-rgb-g-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
-      var linkFormAccentRgbBWrap = helper.node("div|class:form-wrap");
-      var linkFormAccentRgbBLabel = helper.node("label:Blue|for:link-form-input-accent-rgb-b-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
-      var linkFormAccentRgbBGroup = helper.node("div|class:form-group form-group-block");
-      var linkFormAccentRgbBRange = helper.node("input|class:link-form-input-accent-rgb-b-range mr-3,id:link-form-input-accent-rgb-b-range,type:range,name:link-form-input-accent-rgb-b-range,value:0,min:0,max:255,tabindex:1,disabled");
-      var linkFormAccentRgbBNumber = helper.node("input|class:link-form-input-accent-rgb-b-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
+      var accentColorInputHelperItem = helper.node("p:Use the Accent colour defined by the Theme.|class:link-form-input-accent-helper form-helper-item disabled");
+      var accentColorCollapse = helper.node("div|class:link-form-collapse");
+      var accentHslHWrap = helper.node("div|class:form-wrap");
+      var accentHslHLabel = helper.node("label:Hue|for:link-form-input-accent-hsl-h-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var accentHslHGroup = helper.node("div|class:form-group form-group-block");
+      var accentHslHRange = helper.node("input|class:link-form-input-accent-hsl-h-range mr-3,id:link-form-input-accent-hsl-h-range,type:range,name:link-form-input-accent-hsl-h-range,value:0,min:0,max:359,tabindex:1,disabled");
+      var accentHslHNumber = helper.node("input|class:link-form-input-accent-hsl-h-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:359,tabindex:1,disabled");
+      var accentHslSWrap = helper.node("div|class:form-wrap");
+      var accentHslSLabel = helper.node("label:Saturation|for:link-form-input-accent-hsl-s-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var accentHslSGroup = helper.node("div|class:form-group form-group-block");
+      var accentHslSRange = helper.node("input|class:link-form-input-accent-hsl-s-range mr-3,id:link-form-input-accent-hsl-s-range,type:range,name:link-form-input-accent-hsl-s-range,value:0,min:0,max:100,tabindex:1,disabled");
+      var accentHslSNumber = helper.node("input|class:link-form-input-accent-hsl-s-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1,disabled");
+      var accentHslLWrap = helper.node("div|class:form-wrap");
+      var accentHslLLabel = helper.node("label:Lightness|for:link-form-input-accent-hsl-l-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var accentHslLGroup = helper.node("div|class:form-group form-group-block");
+      var accentHslLRange = helper.node("input|class:link-form-input-accent-hsl-l-range mr-3,id:link-form-input-accent-hsl-l-range,type:range,name:link-form-input-accent-hsl-l-range,value:0,min:0,max:100,tabindex:1,disabled");
+      var accentHslLNumber = helper.node("input|class:link-form-input-accent-hsl-l-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1,disabled");
+      var accentRgbRWrap = helper.node("div|class:form-wrap");
+      var accentRgbRLabel = helper.node("label:Red|for:link-form-input-accent-rgb-r-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var accentRgbRGroup = helper.node("div|class:form-group form-group-block");
+      var accentRgbRRange = helper.node("input|class:link-form-input-accent-rgb-r-range mr-3,id:link-form-input-accent-rgb-r-range,type:range,name:link-form-input-accent-rgb-r-range,value:0,min:0,max:255,tabindex:1,disabled");
+      var accentRgbRNumber = helper.node("input|class:link-form-input-accent-rgb-r-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
+      var accentRgbGWrap = helper.node("div|class:form-wrap");
+      var accentRgbGLabel = helper.node("label:Green|for:link-form-input-accent-rgb-g-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var accentRgbGGroup = helper.node("div|class:form-group form-group-block");
+      var accentRgbGRange = helper.node("input|class:link-form-input-accent-rgb-g-range mr-3,id:link-form-input-accent-rgb-g-range,type:range,name:link-form-input-accent-rgb-g-range,value:0,min:0,max:255,tabindex:1,disabled");
+      var accentRgbGNumber = helper.node("input|class:link-form-input-accent-rgb-g-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
+      var accentRgbBWrap = helper.node("div|class:form-wrap");
+      var accentRgbBLabel = helper.node("label:Blue|for:link-form-input-accent-rgb-b-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
+      var accentRgbBGroup = helper.node("div|class:form-group form-group-block");
+      var accentRgbBRange = helper.node("input|class:link-form-input-accent-rgb-b-range mr-3,id:link-form-input-accent-rgb-b-range,type:range,name:link-form-input-accent-rgb-b-range,value:0,min:0,max:255,tabindex:1,disabled");
+      var accentRgbBNumber = helper.node("input|class:link-form-input-accent-rgb-b-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
 
       groupExistingRadioWrap.appendChild(groupExistingRadio);
       groupExistingLable.appendChild(groupExistingLableIcon);
@@ -1144,64 +1362,136 @@ var link = (function() {
 
       fieldset.appendChild(helper.node("hr"));
 
+      colorLabelWrap.appendChild(colorLabel);
+      fieldset.appendChild(colorLabelWrap);
+      colorThemeRadioWrap.appendChild(colorThemeRadio);
+      colorThemeLabel.appendChild(colorThemeLabelIcon);
+      colorThemeLabel.appendChild(colorThemeLabelText);
+      colorThemeRadioWrap.appendChild(colorThemeLabel);
+      fieldset.appendChild(colorThemeRadioWrap);
+      colorCustomInputWrap.appendChild(colorCustomRadio);
+      colorCustomLabel.appendChild(colorCustomLabelIcon);
+      colorCustomLabel.appendChild(colorCustomLabelText);
+      colorCustomInputWrap.appendChild(colorCustomLabel);
+      fieldset.appendChild(colorCustomInputWrap);
+      colorColorCollapseButton.appendChild(colorColorCollapseButtonIcon);
+      colorColorFormGroup.appendChild(colorColorPicker);
+      colorColorFormGroup.appendChild(colorColorHex);
+      colorColorFormGroup.appendChild(colorColorCollapseButton);
+      colorColorInputWrap.appendChild(colorColorFormGroup);
+      colorColorFormIndent.appendChild(colorColorInputWrap);
+      colorColorInputHelper.appendChild(colorColorInputHelperItem);
+      colorColorFormIndent.appendChild(colorColorInputHelper);
+
+      colorColorCollapse.appendChild(helper.node("hr"));
+
+      colorHslHGroup.appendChild(colorHslHLabel);
+      colorHslHGroup.appendChild(colorHslHRange);
+      colorHslHGroup.appendChild(colorHslHNumber);
+      colorHslHWrap.appendChild(colorHslHGroup);
+      colorColorCollapse.appendChild(colorHslHWrap);
+
+      colorHslSGroup.appendChild(colorHslSLabel);
+      colorHslSGroup.appendChild(colorHslSRange);
+      colorHslSGroup.appendChild(colorHslSNumber);
+      colorHslSWrap.appendChild(colorHslSGroup);
+      colorColorCollapse.appendChild(colorHslSWrap);
+
+      colorHslLGroup.appendChild(colorHslLLabel);
+      colorHslLGroup.appendChild(colorHslLRange);
+      colorHslLGroup.appendChild(colorHslLNumber);
+      colorHslLWrap.appendChild(colorHslLGroup);
+      colorColorCollapse.appendChild(colorHslLWrap);
+
+      colorColorCollapse.appendChild(helper.node("hr"));
+
+      colorRgbRGroup.appendChild(colorRgbRLabel);
+      colorRgbRGroup.appendChild(colorRgbRRange);
+      colorRgbRGroup.appendChild(colorRgbRNumber);
+      colorRgbRWrap.appendChild(colorRgbRGroup);
+      colorColorCollapse.appendChild(colorRgbRWrap);
+
+      colorRgbGGroup.appendChild(colorRgbGLabel);
+      colorRgbGGroup.appendChild(colorRgbGRange);
+      colorRgbGGroup.appendChild(colorRgbGNumber);
+      colorRgbGWrap.appendChild(colorRgbGGroup);
+      colorColorCollapse.appendChild(colorRgbGWrap);
+
+      colorRgbBGroup.appendChild(colorRgbBLabel);
+      colorRgbBGroup.appendChild(colorRgbBRange);
+      colorRgbBGroup.appendChild(colorRgbBNumber);
+      colorRgbBWrap.appendChild(colorRgbBGroup);
+      colorColorCollapse.appendChild(colorRgbBWrap);
+
+      colorColorFormIndent.appendChild(colorColorCollapse);
+
+      colorColorFormIndentWrap.appendChild(colorColorFormIndent);
+      fieldset.appendChild(colorColorFormIndentWrap);
+
+      fieldset.appendChild(helper.node("hr"));
+
       accentLabelWrap.appendChild(accentLabel);
       fieldset.appendChild(accentLabelWrap);
-      accentGlobalRadioWrap.appendChild(accentGlobalRadio);
-      accentGlobalLabel.appendChild(accentGlobalLabelIcon);
-      accentGlobalLabel.appendChild(accentGlobalLabelText);
-      accentGlobalRadioWrap.appendChild(accentGlobalLabel);
-      fieldset.appendChild(accentGlobalRadioWrap);
+      accentThemeRadioWrap.appendChild(accentThemeRadio);
+      accentThemeLabel.appendChild(accentThemeLabelIcon);
+      accentThemeLabel.appendChild(accentThemeLabelText);
+      accentThemeRadioWrap.appendChild(accentThemeLabel);
+      fieldset.appendChild(accentThemeRadioWrap);
       accentCustomInputWrap.appendChild(accentCustomRadio);
       accentCustomLabel.appendChild(accentCustomLabelIcon);
       accentCustomLabel.appendChild(accentCustomLabelText);
       accentCustomInputWrap.appendChild(accentCustomLabel);
       fieldset.appendChild(accentCustomInputWrap);
+      accentColorCollapseButton.appendChild(accentColorCollapseButtonIcon)
       accentColorFormGroup.appendChild(accentColorPicker);
       accentColorFormGroup.appendChild(accentColorHex);
+      accentColorFormGroup.appendChild(accentColorCollapseButton);
       accentColorInputWrap.appendChild(accentColorFormGroup);
       accentColorFormIndent.appendChild(accentColorInputWrap);
       accentColorInputHelper.appendChild(accentColorInputHelperItem);
       accentColorFormIndent.appendChild(accentColorInputHelper);
 
-      accentColorFormIndent.appendChild(helper.node("hr"));
+      accentColorCollapse.appendChild(helper.node("hr"));
 
-      linkFormAccentHslHGroup.appendChild(linkFormAccentHslHLabel);
-      linkFormAccentHslHGroup.appendChild(linkFormAccentHslHRange);
-      linkFormAccentHslHGroup.appendChild(linkFormAccentHslHNumber);
-      linkFormAccentHslHWrap.appendChild(linkFormAccentHslHGroup);
-      accentColorFormIndent.appendChild(linkFormAccentHslHWrap);
+      accentHslHGroup.appendChild(accentHslHLabel);
+      accentHslHGroup.appendChild(accentHslHRange);
+      accentHslHGroup.appendChild(accentHslHNumber);
+      accentHslHWrap.appendChild(accentHslHGroup);
+      accentColorCollapse.appendChild(accentHslHWrap);
 
-      linkFormAccentHslSGroup.appendChild(linkFormAccentHslSLabel);
-      linkFormAccentHslSGroup.appendChild(linkFormAccentHslSRange);
-      linkFormAccentHslSGroup.appendChild(linkFormAccentHslSNumber);
-      linkFormAccentHslSWrap.appendChild(linkFormAccentHslSGroup);
-      accentColorFormIndent.appendChild(linkFormAccentHslSWrap);
+      accentHslSGroup.appendChild(accentHslSLabel);
+      accentHslSGroup.appendChild(accentHslSRange);
+      accentHslSGroup.appendChild(accentHslSNumber);
+      accentHslSWrap.appendChild(accentHslSGroup);
+      accentColorCollapse.appendChild(accentHslSWrap);
 
-      linkFormAccentHslLGroup.appendChild(linkFormAccentHslLLabel);
-      linkFormAccentHslLGroup.appendChild(linkFormAccentHslLRange);
-      linkFormAccentHslLGroup.appendChild(linkFormAccentHslLNumber);
-      linkFormAccentHslLWrap.appendChild(linkFormAccentHslLGroup);
-      accentColorFormIndent.appendChild(linkFormAccentHslLWrap);
+      accentHslLGroup.appendChild(accentHslLLabel);
+      accentHslLGroup.appendChild(accentHslLRange);
+      accentHslLGroup.appendChild(accentHslLNumber);
+      accentHslLWrap.appendChild(accentHslLGroup);
+      accentColorCollapse.appendChild(accentHslLWrap);
 
-      accentColorFormIndent.appendChild(helper.node("hr"));
+      accentColorCollapse.appendChild(helper.node("hr"));
 
-      linkFormAccentRgbRGroup.appendChild(linkFormAccentRgbRLabel);
-      linkFormAccentRgbRGroup.appendChild(linkFormAccentRgbRRange);
-      linkFormAccentRgbRGroup.appendChild(linkFormAccentRgbRNumber);
-      linkFormAccentRgbRWrap.appendChild(linkFormAccentRgbRGroup);
-      accentColorFormIndent.appendChild(linkFormAccentRgbRWrap);
+      accentRgbRGroup.appendChild(accentRgbRLabel);
+      accentRgbRGroup.appendChild(accentRgbRRange);
+      accentRgbRGroup.appendChild(accentRgbRNumber);
+      accentRgbRWrap.appendChild(accentRgbRGroup);
+      accentColorCollapse.appendChild(accentRgbRWrap);
 
-      linkFormAccentRgbGGroup.appendChild(linkFormAccentRgbGLabel);
-      linkFormAccentRgbGGroup.appendChild(linkFormAccentRgbGRange);
-      linkFormAccentRgbGGroup.appendChild(linkFormAccentRgbGNumber);
-      linkFormAccentRgbGWrap.appendChild(linkFormAccentRgbGGroup);
-      accentColorFormIndent.appendChild(linkFormAccentRgbGWrap);
+      accentRgbGGroup.appendChild(accentRgbGLabel);
+      accentRgbGGroup.appendChild(accentRgbGRange);
+      accentRgbGGroup.appendChild(accentRgbGNumber);
+      accentRgbGWrap.appendChild(accentRgbGGroup);
+      accentColorCollapse.appendChild(accentRgbGWrap);
 
-      linkFormAccentRgbBGroup.appendChild(linkFormAccentRgbBLabel);
-      linkFormAccentRgbBGroup.appendChild(linkFormAccentRgbBRange);
-      linkFormAccentRgbBGroup.appendChild(linkFormAccentRgbBNumber);
-      linkFormAccentRgbBWrap.appendChild(linkFormAccentRgbBGroup);
-      accentColorFormIndent.appendChild(linkFormAccentRgbBWrap);
+      accentRgbBGroup.appendChild(accentRgbBLabel);
+      accentRgbBGroup.appendChild(accentRgbBRange);
+      accentRgbBGroup.appendChild(accentRgbBNumber);
+      accentRgbBWrap.appendChild(accentRgbBGroup);
+      accentColorCollapse.appendChild(accentRgbBWrap);
+
+      accentColorFormIndent.appendChild(accentColorCollapse);
 
       accentColorFormIndentWrap.appendChild(accentColorFormIndent);
       fieldset.appendChild(accentColorFormIndentWrap);
@@ -1314,147 +1604,145 @@ var link = (function() {
         displayImageInput.value = stagedLink.link.image;
         nameInput.value = stagedLink.link.name;
         urlInput.value = stagedLink.link.url;
-        if (stagedLink.link.accent.override) {
-          accentGlobalRadio.checked = false;
+        if (stagedLink.link.color.by == "custom") {
+          colorThemeRadio.checked = false;
+          colorCustomRadio.checked = true;
+          colorColorPicker.removeAttribute("disabled");
+          colorColorHex.removeAttribute("disabled");
+          colorColorCollapseButton.removeAttribute("disabled");
+          helper.removeClass(colorColorInputHelperItem, "disabled");
+          helper.removeClass(colorHslHLabel, "disabled");
+          colorHslHRange.removeAttribute("disabled");
+          colorHslHNumber.removeAttribute("disabled");
+          helper.removeClass(colorHslSLabel, "disabled");
+          colorHslSRange.removeAttribute("disabled");
+          colorHslSNumber.removeAttribute("disabled");
+          helper.removeClass(colorHslLLabel, "disabled");
+          colorHslLRange.removeAttribute("disabled");
+          colorHslLNumber.removeAttribute("disabled");
+          helper.removeClass(colorRgbRLabel, "disabled");
+          colorRgbRRange.removeAttribute("disabled");
+          colorRgbRNumber.removeAttribute("disabled");
+          helper.removeClass(colorRgbGLabel, "disabled");
+          colorRgbGRange.removeAttribute("disabled");
+          colorRgbGNumber.removeAttribute("disabled");
+          helper.removeClass(colorRgbBLabel, "disabled");
+          colorRgbBRange.removeAttribute("disabled");
+          colorRgbBNumber.removeAttribute("disabled");
+        } else {
+          colorThemeRadio.checked = true;
+          colorCustomRadio.checked = false;
+          colorColorPicker.setAttribute("disabled", "");
+          colorColorHex.setAttribute("disabled", "");
+          colorColorCollapseButton.setAttribute("disabled", "");
+          helper.addClass(colorColorInputHelperItem, "disabled");
+          helper.addClass(colorHslHLabel, "disabled", "");
+          colorHslHRange.setAttribute("disabled", "");
+          colorHslHNumber.setAttribute("disabled", "");
+          helper.addClass(colorHslSLabel, "disabled", "");
+          colorHslSRange.setAttribute("disabled", "");
+          colorHslSNumber.setAttribute("disabled", "");
+          helper.addClass(colorHslLLabel, "disabled", "");
+          colorHslLRange.setAttribute("disabled", "");
+          colorHslLNumber.setAttribute("disabled", "");
+          helper.addClass(colorRgbRLabel, "disabled", "");
+          colorRgbRRange.setAttribute("disabled", "");
+          colorRgbRNumber.setAttribute("disabled", "");
+          helper.addClass(colorRgbGLabel, "disabled", "");
+          colorRgbGRange.setAttribute("disabled", "");
+          colorRgbGNumber.setAttribute("disabled", "");
+          helper.addClass(colorRgbBLabel, "disabled", "");
+          colorRgbBRange.setAttribute("disabled", "");
+          colorRgbBNumber.setAttribute("disabled", "");
+        };
+        if (stagedLink.link.color.color.rgb.r != null && stagedLink.link.color.color.rgb.g != null && stagedLink.link.color.color.rgb.b != null) {
+          colorColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.color.color.rgb);
+          colorColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.color.color.rgb);
+          colorHslHRange.value = stagedLink.link.color.color.hsl.h;
+          colorHslHNumber.value = stagedLink.link.color.color.hsl.h;
+          colorHslSRange.value = stagedLink.link.color.color.hsl.s;
+          colorHslSNumber.value = stagedLink.link.color.color.hsl.s;
+          colorHslLRange.value = stagedLink.link.color.color.hsl.l;
+          colorHslLNumber.value = stagedLink.link.color.color.hsl.l;
+          colorRgbRRange.value = stagedLink.link.color.color.rgb.r;
+          colorRgbRNumber.value = stagedLink.link.color.color.rgb.r;
+          colorRgbGRange.value = stagedLink.link.color.color.rgb.g;
+          colorRgbGNumber.value = stagedLink.link.color.color.rgb.g;
+          colorRgbBRange.value = stagedLink.link.color.color.rgb.b;
+          colorRgbBNumber.value = stagedLink.link.color.color.rgb.b;
+        };
+        if (stagedLink.link.accent.by == "custom") {
+          accentThemeRadio.checked = false;
           accentCustomRadio.checked = true;
           accentColorPicker.removeAttribute("disabled");
           accentColorHex.removeAttribute("disabled");
+          accentColorCollapseButton.removeAttribute("disabled");
           helper.removeClass(accentColorInputHelperItem, "disabled");
-          helper.removeClass(linkFormAccentHslHLabel, "disabled");
-          linkFormAccentHslHRange.removeAttribute("disabled");
-          linkFormAccentHslHNumber.removeAttribute("disabled");
-          helper.removeClass(linkFormAccentHslSLabel, "disabled");
-          linkFormAccentHslSRange.removeAttribute("disabled");
-          linkFormAccentHslSNumber.removeAttribute("disabled");
-          helper.removeClass(linkFormAccentHslLLabel, "disabled");
-          linkFormAccentHslLRange.removeAttribute("disabled");
-          linkFormAccentHslLNumber.removeAttribute("disabled");
-          helper.removeClass(linkFormAccentRgbRLabel, "disabled");
-          linkFormAccentRgbRRange.removeAttribute("disabled");
-          linkFormAccentRgbRNumber.removeAttribute("disabled");
-          helper.removeClass(linkFormAccentRgbGLabel, "disabled");
-          linkFormAccentRgbGRange.removeAttribute("disabled");
-          linkFormAccentRgbGNumber.removeAttribute("disabled");
-          helper.removeClass(linkFormAccentRgbBLabel, "disabled");
-          linkFormAccentRgbBRange.removeAttribute("disabled");
-          linkFormAccentRgbBNumber.removeAttribute("disabled");
+          helper.removeClass(accentHslHLabel, "disabled");
+          accentHslHRange.removeAttribute("disabled");
+          accentHslHNumber.removeAttribute("disabled");
+          helper.removeClass(accentHslSLabel, "disabled");
+          accentHslSRange.removeAttribute("disabled");
+          accentHslSNumber.removeAttribute("disabled");
+          helper.removeClass(accentHslLLabel, "disabled");
+          accentHslLRange.removeAttribute("disabled");
+          accentHslLNumber.removeAttribute("disabled");
+          helper.removeClass(accentRgbRLabel, "disabled");
+          accentRgbRRange.removeAttribute("disabled");
+          accentRgbRNumber.removeAttribute("disabled");
+          helper.removeClass(accentRgbGLabel, "disabled");
+          accentRgbGRange.removeAttribute("disabled");
+          accentRgbGNumber.removeAttribute("disabled");
+          helper.removeClass(accentRgbBLabel, "disabled");
+          accentRgbBRange.removeAttribute("disabled");
+          accentRgbBNumber.removeAttribute("disabled");
         } else {
-          accentGlobalRadio.checked = true;
+          accentThemeRadio.checked = true;
           accentCustomRadio.checked = false;
           accentColorPicker.setAttribute("disabled", "");
           accentColorHex.setAttribute("disabled", "");
+          accentColorCollapseButton.setAttribute("disabled", "");
           helper.addClass(accentColorInputHelperItem, "disabled");
-          helper.addClass(linkFormAccentHslHLabel, "disabled", "");
-          linkFormAccentHslHRange.setAttribute("disabled", "");
-          linkFormAccentHslHNumber.setAttribute("disabled", "");
-          helper.addClass(linkFormAccentHslSLabel, "disabled", "");
-          linkFormAccentHslSRange.setAttribute("disabled", "");
-          linkFormAccentHslSNumber.setAttribute("disabled", "");
-          helper.addClass(linkFormAccentHslLLabel, "disabled", "");
-          linkFormAccentHslLRange.setAttribute("disabled", "");
-          linkFormAccentHslLNumber.setAttribute("disabled", "");
-          helper.addClass(linkFormAccentRgbRLabel, "disabled", "");
-          linkFormAccentRgbRRange.setAttribute("disabled", "");
-          linkFormAccentRgbRNumber.setAttribute("disabled", "");
-          helper.addClass(linkFormAccentRgbGLabel, "disabled", "");
-          linkFormAccentRgbGRange.setAttribute("disabled", "");
-          linkFormAccentRgbGNumber.setAttribute("disabled", "");
-          helper.addClass(linkFormAccentRgbBLabel, "disabled", "");
-          linkFormAccentRgbBRange.setAttribute("disabled", "");
-          linkFormAccentRgbBNumber.setAttribute("disabled", "");
+          helper.addClass(accentHslHLabel, "disabled", "");
+          accentHslHRange.setAttribute("disabled", "");
+          accentHslHNumber.setAttribute("disabled", "");
+          helper.addClass(accentHslSLabel, "disabled", "");
+          accentHslSRange.setAttribute("disabled", "");
+          accentHslSNumber.setAttribute("disabled", "");
+          helper.addClass(accentHslLLabel, "disabled", "");
+          accentHslLRange.setAttribute("disabled", "");
+          accentHslLNumber.setAttribute("disabled", "");
+          helper.addClass(accentRgbRLabel, "disabled", "");
+          accentRgbRRange.setAttribute("disabled", "");
+          accentRgbRNumber.setAttribute("disabled", "");
+          helper.addClass(accentRgbGLabel, "disabled", "");
+          accentRgbGRange.setAttribute("disabled", "");
+          accentRgbGNumber.setAttribute("disabled", "");
+          helper.addClass(accentRgbBLabel, "disabled", "");
+          accentRgbBRange.setAttribute("disabled", "");
+          accentRgbBNumber.setAttribute("disabled", "");
         };
         if (stagedLink.link.accent.color.rgb.r != null && stagedLink.link.accent.color.rgb.g != null && stagedLink.link.accent.color.rgb.b != null) {
           accentColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.accent.color.rgb);
           accentColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.accent.color.rgb);
-          linkFormAccentHslHRange.value = stagedLink.link.accent.color.hsl.h;
-          linkFormAccentHslHNumber.value = stagedLink.link.accent.color.hsl.h;
-          linkFormAccentHslSRange.value = stagedLink.link.accent.color.hsl.s;
-          linkFormAccentHslSNumber.value = stagedLink.link.accent.color.hsl.s;
-          linkFormAccentHslLRange.value = stagedLink.link.accent.color.hsl.l;
-          linkFormAccentHslLNumber.value = stagedLink.link.accent.color.hsl.l;
-          linkFormAccentRgbRRange.value = stagedLink.link.accent.color.rgb.r;
-          linkFormAccentRgbRNumber.value = stagedLink.link.accent.color.rgb.r;
-          linkFormAccentRgbGRange.value = stagedLink.link.accent.color.rgb.g;
-          linkFormAccentRgbGNumber.value = stagedLink.link.accent.color.rgb.g;
-          linkFormAccentRgbBRange.value = stagedLink.link.accent.color.rgb.b;
-          linkFormAccentRgbBNumber.value = stagedLink.link.accent.color.rgb.b;
+          accentHslHRange.value = stagedLink.link.accent.color.hsl.h;
+          accentHslHNumber.value = stagedLink.link.accent.color.hsl.h;
+          accentHslSRange.value = stagedLink.link.accent.color.hsl.s;
+          accentHslSNumber.value = stagedLink.link.accent.color.hsl.s;
+          accentHslLRange.value = stagedLink.link.accent.color.hsl.l;
+          accentHslLNumber.value = stagedLink.link.accent.color.hsl.l;
+          accentRgbRRange.value = stagedLink.link.accent.color.rgb.r;
+          accentRgbRNumber.value = stagedLink.link.accent.color.rgb.r;
+          accentRgbGRange.value = stagedLink.link.accent.color.rgb.g;
+          accentRgbGNumber.value = stagedLink.link.accent.color.rgb.g;
+          accentRgbBRange.value = stagedLink.link.accent.color.rgb.b;
+          accentRgbBNumber.value = stagedLink.link.accent.color.rgb.b;
         };
       };
 
-      var updateAccent = {
+      var mirror = {
         delay: null,
-        inputs: function(input) {
-          var rgb = stagedLink.link.accent.color.rgb;
-          var hsl = stagedLink.link.accent.color.hsl;
-          var hex = helper.convertColor.rgb.hex(rgb);
-          if (input != accentColorPicker) {
-            accentColorPicker.value = hex;
-          };
-          if (input != accentColorHex) {
-            accentColorHex.value = hex;
-          };
-          if (input != linkFormAccentHslHRange) {
-            linkFormAccentHslHRange.value = stagedLink.link.accent.color.hsl.h;
-          };
-          if (input != linkFormAccentHslHNumber) {
-            linkFormAccentHslHNumber.value = stagedLink.link.accent.color.hsl.h;
-          };
-          if (input != linkFormAccentHslSRange) {
-            linkFormAccentHslSRange.value = stagedLink.link.accent.color.hsl.s;
-          };
-          if (input != linkFormAccentHslSNumber) {
-            linkFormAccentHslSNumber.value = stagedLink.link.accent.color.hsl.s;
-          };
-          if (input != linkFormAccentHslLRange) {
-            linkFormAccentHslLRange.value = stagedLink.link.accent.color.hsl.l;
-          };
-          if (input != linkFormAccentHslLNumber) {
-            linkFormAccentHslLNumber.value = stagedLink.link.accent.color.hsl.l;
-          };
-          if (input != linkFormAccentRgbRRange) {
-            linkFormAccentRgbRRange.value = stagedLink.link.accent.color.rgb.r;
-          };
-          if (input != linkFormAccentRgbRNumber) {
-            linkFormAccentRgbRNumber.value = stagedLink.link.accent.color.rgb.r;
-          };
-          if (input != linkFormAccentRgbGRange) {
-            linkFormAccentRgbGRange.value = stagedLink.link.accent.color.rgb.g;
-          };
-          if (input != linkFormAccentRgbGNumber) {
-            linkFormAccentRgbGNumber.value = stagedLink.link.accent.color.rgb.g;
-          };
-          if (input != linkFormAccentRgbBRange) {
-            linkFormAccentRgbBRange.value = stagedLink.link.accent.color.rgb.b;
-          };
-          if (input != linkFormAccentRgbBNumber) {
-            linkFormAccentRgbBNumber.value = stagedLink.link.accent.color.rgb.b;
-          };
-        },
-        by: {
-          hsl: function() {
-            stagedLink.link.accent.color.rgb = helper.convertColor.hsl.rgb(stagedLink.link.accent.color.hsl);
-            stagedLink.link.accent.color.rgb.r = Math.round(stagedLink.link.accent.color.rgb.r);
-            stagedLink.link.accent.color.rgb.g = Math.round(stagedLink.link.accent.color.rgb.g);
-            stagedLink.link.accent.color.rgb.b = Math.round(stagedLink.link.accent.color.rgb.b);
-          },
-          rgb: function() {
-            stagedLink.link.accent.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.accent.color.rgb);
-            stagedLink.link.accent.color.hsl.h = Math.round(stagedLink.link.accent.color.hsl.h);
-            stagedLink.link.accent.color.hsl.s = Math.round(stagedLink.link.accent.color.hsl.s);
-            stagedLink.link.accent.color.hsl.l = Math.round(stagedLink.link.accent.color.hsl.l);
-          },
-          hex: function(value) {
-            stagedLink.link.accent.color.rgb = helper.convertColor.hex.rgb(value);
-            stagedLink.link.accent.color.rgb.r = Math.round(stagedLink.link.accent.color.rgb.r);
-            stagedLink.link.accent.color.rgb.g = Math.round(stagedLink.link.accent.color.rgb.g);
-            stagedLink.link.accent.color.rgb.b = Math.round(stagedLink.link.accent.color.rgb.b);
-            stagedLink.link.accent.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.accent.color.rgb);
-            stagedLink.link.accent.color.hsl.h = Math.round(stagedLink.link.accent.color.hsl.h);
-            stagedLink.link.accent.color.hsl.s = Math.round(stagedLink.link.accent.color.hsl.s);
-            stagedLink.link.accent.color.hsl.l = Math.round(stagedLink.link.accent.color.hsl.l);
-          }
-        },
-        number: function(input) {
+        minMax: function(input) {
           var value = parseInt(input.value, 10);
           var min = parseInt(input.min, 10);
           var max = parseInt(input.max, 10);
@@ -1464,13 +1752,207 @@ var link = (function() {
           if (value > max) {
             value = max;
           };
+          if (isNaN(value)) {
+            value = 0;
+          };
           return value;
         },
-        delay: null
+        data: {
+          accent: {
+            by: {
+              hsl: function() {
+                stagedLink.link.accent.color.rgb = helper.convertColor.hsl.rgb(stagedLink.link.accent.color.hsl);
+                stagedLink.link.accent.color.rgb.r = Math.round(stagedLink.link.accent.color.rgb.r);
+                stagedLink.link.accent.color.rgb.g = Math.round(stagedLink.link.accent.color.rgb.g);
+                stagedLink.link.accent.color.rgb.b = Math.round(stagedLink.link.accent.color.rgb.b);
+              },
+              rgb: function() {
+                stagedLink.link.accent.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.accent.color.rgb);
+                stagedLink.link.accent.color.hsl.h = Math.round(stagedLink.link.accent.color.hsl.h);
+                stagedLink.link.accent.color.hsl.s = Math.round(stagedLink.link.accent.color.hsl.s);
+                stagedLink.link.accent.color.hsl.l = Math.round(stagedLink.link.accent.color.hsl.l);
+              },
+              hex: function(value) {
+                stagedLink.link.accent.color.rgb = helper.convertColor.hex.rgb(value);
+                stagedLink.link.accent.color.rgb.r = Math.round(stagedLink.link.accent.color.rgb.r);
+                stagedLink.link.accent.color.rgb.g = Math.round(stagedLink.link.accent.color.rgb.g);
+                stagedLink.link.accent.color.rgb.b = Math.round(stagedLink.link.accent.color.rgb.b);
+                stagedLink.link.accent.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.accent.color.rgb);
+                stagedLink.link.accent.color.hsl.h = Math.round(stagedLink.link.accent.color.hsl.h);
+                stagedLink.link.accent.color.hsl.s = Math.round(stagedLink.link.accent.color.hsl.s);
+                stagedLink.link.accent.color.hsl.l = Math.round(stagedLink.link.accent.color.hsl.l);
+              }
+            }
+          },
+          color: {
+            by: {
+              hsl: function() {
+                stagedLink.link.color.color.rgb = helper.convertColor.hsl.rgb(stagedLink.link.color.color.hsl);
+                stagedLink.link.color.color.rgb.r = Math.round(stagedLink.link.color.color.rgb.r);
+                stagedLink.link.color.color.rgb.g = Math.round(stagedLink.link.color.color.rgb.g);
+                stagedLink.link.color.color.rgb.b = Math.round(stagedLink.link.color.color.rgb.b);
+              },
+              rgb: function() {
+                stagedLink.link.color.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.color.color.rgb);
+                stagedLink.link.color.color.hsl.h = Math.round(stagedLink.link.color.color.hsl.h);
+                stagedLink.link.color.color.hsl.s = Math.round(stagedLink.link.color.color.hsl.s);
+                stagedLink.link.color.color.hsl.l = Math.round(stagedLink.link.color.color.hsl.l);
+              },
+              hex: function(value) {
+                stagedLink.link.color.color.rgb = helper.convertColor.hex.rgb(value);
+                stagedLink.link.color.color.rgb.r = Math.round(stagedLink.link.color.color.rgb.r);
+                stagedLink.link.color.color.rgb.g = Math.round(stagedLink.link.color.color.rgb.g);
+                stagedLink.link.color.color.rgb.b = Math.round(stagedLink.link.color.color.rgb.b);
+                stagedLink.link.color.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.color.color.rgb);
+                stagedLink.link.color.color.hsl.h = Math.round(stagedLink.link.color.color.hsl.h);
+                stagedLink.link.color.color.hsl.s = Math.round(stagedLink.link.color.color.hsl.s);
+                stagedLink.link.color.color.hsl.l = Math.round(stagedLink.link.color.color.hsl.l);
+              }
+            }
+          }
+        },
+        inputs: {
+          accent: function() {
+            return [{
+              element: accentColorPicker,
+              value: stagedLink.link.accent.color.rgb
+            }, {
+              element: accentColorHex,
+              value: stagedLink.link.accent.color.rgb
+            }, {
+              element: accentHslHRange,
+              value: stagedLink.link.accent.color.hsl.h
+            }, {
+              element: accentHslHNumber,
+              value: stagedLink.link.accent.color.hsl.h
+            }, {
+              element: accentHslSRange,
+              value: stagedLink.link.accent.color.hsl.s
+            }, {
+              element: accentHslSNumber,
+              value: stagedLink.link.accent.color.hsl.s
+            }, {
+              element: accentHslLRange,
+              value: stagedLink.link.accent.color.hsl.l
+            }, {
+              element: accentHslLNumber,
+              value: stagedLink.link.accent.color.hsl.l
+            }, {
+              element: accentRgbRRange,
+              value: stagedLink.link.accent.color.rgb.r
+            }, {
+              element: accentRgbRNumber,
+              value: stagedLink.link.accent.color.rgb.r
+            }, {
+              element: accentRgbGRange,
+              value: stagedLink.link.accent.color.rgb.g
+            }, {
+              element: accentRgbGNumber,
+              value: stagedLink.link.accent.color.rgb.g
+            }, {
+              element: accentRgbBRange,
+              value: stagedLink.link.accent.color.rgb.b
+            }, {
+              element: accentRgbBNumber,
+              value: stagedLink.link.accent.color.rgb.b
+            }]
+          },
+          color: function() {
+            return [{
+              element: colorColorPicker,
+              value: stagedLink.link.color.color.rgb
+            }, {
+              element: colorColorHex,
+              value: stagedLink.link.color.color.rgb
+            }, {
+              element: colorHslHRange,
+              value: stagedLink.link.color.color.hsl.h
+            }, {
+              element: colorHslHNumber,
+              value: stagedLink.link.color.color.hsl.h
+            }, {
+              element: colorHslSRange,
+              value: stagedLink.link.color.color.hsl.s
+            }, {
+              element: colorHslSNumber,
+              value: stagedLink.link.color.color.hsl.s
+            }, {
+              element: colorHslLRange,
+              value: stagedLink.link.color.color.hsl.l
+            }, {
+              element: colorHslLNumber,
+              value: stagedLink.link.color.color.hsl.l
+            }, {
+              element: colorRgbRRange,
+              value: stagedLink.link.color.color.rgb.r
+            }, {
+              element: colorRgbRNumber,
+              value: stagedLink.link.color.color.rgb.r
+            }, {
+              element: colorRgbGRange,
+              value: stagedLink.link.color.color.rgb.g
+            }, {
+              element: colorRgbGNumber,
+              value: stagedLink.link.color.color.rgb.g
+            }, {
+              element: colorRgbBRange,
+              value: stagedLink.link.color.color.rgb.b
+            }, {
+              element: colorRgbBNumber,
+              value: stagedLink.link.color.color.rgb.b
+            }]
+          }
+        },
+        value: function(origin, targets) {
+          targets.forEach(function(arrayItem, index) {
+            if (arrayItem != origin) {
+              switch (arrayItem.element.type) {
+                case "color":
+                  arrayItem.element.value = helper.convertColor.rgb.hex(arrayItem.value);
+                  break;
+
+                case "text":
+                  arrayItem.element.value = helper.convertColor.rgb.hex(arrayItem.value);
+                  break;
+
+                case "number":
+                  arrayItem.element.value = arrayItem.value;
+                  break;
+
+                case "range":
+                  arrayItem.element.value = arrayItem.value;
+                  break;
+              };
+            };
+          });
+        }
+      };
+
+      var collapse = {
+        color: function() {
+          if (stagedLink.collapse.color) {
+            helper.addClass(colorColorCollapse, "active");
+            helper.addClass(colorColorCollapseButtonIcon, "active");
+          } else {
+            helper.removeClass(colorColorCollapse, "active");
+            helper.removeClass(colorColorCollapseButtonIcon, "active");
+          };
+        },
+        accent: function() {
+          if (stagedLink.collapse.accent) {
+            helper.addClass(accentColorCollapse, "active");
+            helper.addClass(accentColorCollapseButtonIcon, "active");
+          } else {
+            helper.removeClass(accentColorCollapse, "active");
+            helper.removeClass(accentColorCollapseButtonIcon, "active");
+          };
+        }
       };
 
       makeGroupOptions();
+
       makePostionOptions();
+
       if (options.useStagedLink) {
         populateForm();
       };
@@ -1569,150 +2051,6 @@ var link = (function() {
       urlInput.addEventListener("input", function(event) {
         stagedLink.link.url = this.value;
       }, false);
-      accentGlobalRadio.addEventListener("change", function() {
-        stagedLink.link.accent.override = false;
-        accentColorPicker.setAttribute("disabled", "");
-        accentColorHex.setAttribute("disabled", "");
-        helper.addClass(accentColorInputHelperItem, "disabled");
-        helper.addClass(linkFormAccentHslHLabel, "disabled", "");
-        linkFormAccentHslHRange.setAttribute("disabled", "");
-        linkFormAccentHslHNumber.setAttribute("disabled", "");
-        helper.addClass(linkFormAccentHslSLabel, "disabled", "");
-        linkFormAccentHslSRange.setAttribute("disabled", "");
-        linkFormAccentHslSNumber.setAttribute("disabled", "");
-        helper.addClass(linkFormAccentHslLLabel, "disabled", "");
-        linkFormAccentHslLRange.setAttribute("disabled", "");
-        linkFormAccentHslLNumber.setAttribute("disabled", "");
-        helper.addClass(linkFormAccentRgbRLabel, "disabled", "");
-        linkFormAccentRgbRRange.setAttribute("disabled", "");
-        linkFormAccentRgbRNumber.setAttribute("disabled", "");
-        helper.addClass(linkFormAccentRgbGLabel, "disabled", "");
-        linkFormAccentRgbGRange.setAttribute("disabled", "");
-        linkFormAccentRgbGNumber.setAttribute("disabled", "");
-        helper.addClass(linkFormAccentRgbBLabel, "disabled", "");
-        linkFormAccentRgbBRange.setAttribute("disabled", "");
-        linkFormAccentRgbBNumber.setAttribute("disabled", "");
-      }, false);
-      accentCustomRadio.addEventListener("change", function() {
-        stagedLink.link.accent.override = true;
-        accentColorPicker.removeAttribute("disabled");
-        accentColorHex.removeAttribute("disabled");
-        helper.removeClass(accentColorInputHelperItem, "disabled");
-        helper.removeClass(linkFormAccentHslHLabel, "disabled");
-        linkFormAccentHslHRange.removeAttribute("disabled");
-        linkFormAccentHslHNumber.removeAttribute("disabled");
-        helper.removeClass(linkFormAccentHslSLabel, "disabled");
-        linkFormAccentHslSRange.removeAttribute("disabled");
-        linkFormAccentHslSNumber.removeAttribute("disabled");
-        helper.removeClass(linkFormAccentHslLLabel, "disabled");
-        linkFormAccentHslLRange.removeAttribute("disabled");
-        linkFormAccentHslLNumber.removeAttribute("disabled");
-        helper.removeClass(linkFormAccentRgbRLabel, "disabled");
-        linkFormAccentRgbRRange.removeAttribute("disabled");
-        linkFormAccentRgbRNumber.removeAttribute("disabled");
-        helper.removeClass(linkFormAccentRgbGLabel, "disabled");
-        linkFormAccentRgbGRange.removeAttribute("disabled");
-        linkFormAccentRgbGNumber.removeAttribute("disabled");
-        helper.removeClass(linkFormAccentRgbBLabel, "disabled");
-        linkFormAccentRgbBRange.removeAttribute("disabled");
-        linkFormAccentRgbBNumber.removeAttribute("disabled");
-      }, false);
-      accentColorPicker.addEventListener("change", function() {
-        if (helper.isHexNumber(this.value)) {
-          updateAccent.by.hex(this.value);
-          updateAccent.inputs(this);
-        };
-      }, false);
-      accentColorHex.addEventListener("input", function() {
-        if (helper.isHexNumber(this.value)) {
-          updateAccent.by.hex(this.value);
-          updateAccent.inputs(this);
-        };
-      }, false);
-      linkFormAccentHslHRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.hsl.h = parseInt(this.value, 10);
-        updateAccent.by.hsl();
-        updateAccent.inputs(this);
-      });
-      linkFormAccentHslHNumber.addEventListener("input", function() {
-        var set = function(input) {
-          stagedLink.link.accent.color.hsl.h = updateAccent.number(input);
-          updateAccent.by.hsl();
-          updateAccent.inputs(input);
-        };
-        clearTimeout(updateAccent.delay);
-        updateAccent.delay = setTimeout(set, 1000, this);
-      });
-      linkFormAccentHslSRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.hsl.s = parseInt(this.value, 10);
-        updateAccent.by.hsl();
-        updateAccent.inputs(this);
-      });
-      linkFormAccentHslSNumber.addEventListener("input", function() {
-        var set = function(input) {
-          stagedLink.link.accent.color.hsl.s = updateAccent.number(input);
-          updateAccent.by.hsl();
-          updateAccent.inputs(input);
-        };
-        clearTimeout(updateAccent.delay);
-        updateAccent.delay = setTimeout(set, 1000, this);
-      });
-      linkFormAccentHslLRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.hsl.l = parseInt(this.value, 10);
-        updateAccent.by.hsl();
-        updateAccent.inputs(this);
-      });
-      linkFormAccentHslLNumber.addEventListener("input", function() {
-        var set = function(input) {
-          stagedLink.link.accent.color.hsl.l = updateAccent.number(input);
-          updateAccent.by.hsl();
-          updateAccent.inputs(input);
-        };
-        clearTimeout(updateAccent.delay);
-        updateAccent.delay = setTimeout(set, 1000, this);
-      });
-      linkFormAccentRgbRRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.rgb.r = parseInt(this.value, 10);
-        updateAccent.by.rgb();
-        updateAccent.inputs(this);
-      });
-      linkFormAccentRgbRNumber.addEventListener("input", function() {
-        var set = function(input) {
-          stagedLink.link.accent.color.rgb.r = updateAccent.number(input);
-          updateAccent.by.rgb();
-          updateAccent.inputs(input);
-        };
-        clearTimeout(updateAccent.delay);
-        updateAccent.delay = setTimeout(set, 1000, this);
-      });
-      linkFormAccentRgbGRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.rgb.g = parseInt(this.value, 10);
-        updateAccent.by.rgb();
-        updateAccent.inputs(this);
-      });
-      linkFormAccentRgbGNumber.addEventListener("input", function() {
-        var set = function(input) {
-          stagedLink.link.accent.color.rgb.g = updateAccent.number(input);
-          updateAccent.by.rgb();
-          updateAccent.inputs(input);
-        };
-        clearTimeout(updateAccent.delay);
-        updateAccent.delay = setTimeout(set, 1000, this);
-      });
-      linkFormAccentRgbBRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.rgb.b = parseInt(this.value, 10);
-        updateAccent.by.rgb();
-        updateAccent.inputs(this);
-      });
-      linkFormAccentRgbBNumber.addEventListener("input", function() {
-        var set = function(input) {
-          stagedLink.link.accent.color.rgb.b = updateAccent.number(input);
-          updateAccent.by.rgb();
-          updateAccent.inputs(input);
-        };
-        clearTimeout(updateAccent.delay);
-        updateAccent.delay = setTimeout(set, 1000, this);
-      });
       displayIconFormGroupClear.addEventListener("click", function(event) {
         stagedLink.link.icon.name = null;
         stagedLink.link.icon.prefix = null;
@@ -1723,12 +2061,329 @@ var link = (function() {
         };
         displayIconInput.value = "";
       }, false);
+
+      colorThemeRadio.addEventListener("change", function() {
+        stagedLink.link.color.by = this.value;
+        colorColorPicker.setAttribute("disabled", "");
+        colorColorHex.setAttribute("disabled", "");
+        colorColorCollapseButton.setAttribute("disabled", "");
+        helper.addClass(colorColorInputHelperItem, "disabled");
+        helper.addClass(colorHslHLabel, "disabled", "");
+        colorHslHRange.setAttribute("disabled", "");
+        colorHslHNumber.setAttribute("disabled", "");
+        helper.addClass(colorHslSLabel, "disabled", "");
+        colorHslSRange.setAttribute("disabled", "");
+        colorHslSNumber.setAttribute("disabled", "");
+        helper.addClass(colorHslLLabel, "disabled", "");
+        colorHslLRange.setAttribute("disabled", "");
+        colorHslLNumber.setAttribute("disabled", "");
+        helper.addClass(colorRgbRLabel, "disabled", "");
+        colorRgbRRange.setAttribute("disabled", "");
+        colorRgbRNumber.setAttribute("disabled", "");
+        helper.addClass(colorRgbGLabel, "disabled", "");
+        colorRgbGRange.setAttribute("disabled", "");
+        colorRgbGNumber.setAttribute("disabled", "");
+        helper.addClass(colorRgbBLabel, "disabled", "");
+        colorRgbBRange.setAttribute("disabled", "");
+        colorRgbBNumber.setAttribute("disabled", "");
+      }, false);
+      colorCustomRadio.addEventListener("change", function() {
+        stagedLink.link.color.by = this.value;
+        colorColorPicker.removeAttribute("disabled");
+        colorColorHex.removeAttribute("disabled");
+        colorColorCollapseButton.removeAttribute("disabled");
+        helper.removeClass(colorColorInputHelperItem, "disabled");
+        helper.removeClass(colorHslHLabel, "disabled");
+        colorHslHRange.removeAttribute("disabled");
+        colorHslHNumber.removeAttribute("disabled");
+        helper.removeClass(colorHslSLabel, "disabled");
+        colorHslSRange.removeAttribute("disabled");
+        colorHslSNumber.removeAttribute("disabled");
+        helper.removeClass(colorHslLLabel, "disabled");
+        colorHslLRange.removeAttribute("disabled");
+        colorHslLNumber.removeAttribute("disabled");
+        helper.removeClass(colorRgbRLabel, "disabled");
+        colorRgbRRange.removeAttribute("disabled");
+        colorRgbRNumber.removeAttribute("disabled");
+        helper.removeClass(colorRgbGLabel, "disabled");
+        colorRgbGRange.removeAttribute("disabled");
+        colorRgbGNumber.removeAttribute("disabled");
+        helper.removeClass(colorRgbBLabel, "disabled");
+        colorRgbBRange.removeAttribute("disabled");
+        colorRgbBNumber.removeAttribute("disabled");
+      }, false);
+
+      colorColorPicker.addEventListener("change", function() {
+        mirror.data.color.by.hex(this.value);
+        mirror.value(this, mirror.inputs.color());
+      }, false);
+      colorColorHex.addEventListener("input", function() {
+        if (helper.isHexNumber(this.value)) {
+          mirror.data.color.by.hex(this.value);
+          mirror.value(this, mirror.inputs.color());
+        };
+      }, false);
+      colorColorCollapseButton.addEventListener("click", function() {
+        if (stagedLink.collapse.color) {
+          stagedLink.collapse.color = false;
+        } else {
+          stagedLink.collapse.color = true;
+        };
+        collapse.color();
+      });
+      colorHslHRange.addEventListener("input", function() {
+        stagedLink.link.color.color.hsl.h = parseInt(this.value, 10);
+        mirror.data.color.by.hsl();
+        mirror.value(this, mirror.inputs.color());
+      });
+      colorHslHNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.color.color.hsl.h = mirror.minMax(input);
+          mirror.data.color.by.hsl();
+          mirror.value(input, mirror.inputs.color());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
+      colorHslSRange.addEventListener("input", function() {
+        stagedLink.link.color.color.hsl.s = parseInt(this.value, 10);
+        mirror.data.color.by.hsl();
+        mirror.value(this, mirror.inputs.color());
+      });
+      colorHslSNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.color.color.hsl.s = mirror.minMax(input);
+          mirror.data.color.by.hsl();
+          mirror.value(input, mirror.inputs.color());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
+      colorHslLRange.addEventListener("input", function() {
+        stagedLink.link.color.color.hsl.l = parseInt(this.value, 10);
+        mirror.data.color.by.hsl();
+        mirror.value(this, mirror.inputs.color());
+      });
+      colorHslLNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.color.color.hsl.l = mirror.minMax(input);
+          mirror.data.color.by.hsl();
+          mirror.value(input, mirror.inputs.color());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
+      colorRgbRRange.addEventListener("input", function() {
+        stagedLink.link.color.color.rgb.r = parseInt(this.value, 10);
+        mirror.data.color.by.rgb();
+        mirror.value(this, mirror.inputs.color());
+      });
+      colorRgbRNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.color.color.rgb.r = mirror.minMax(input);
+          mirror.data.color.by.rgb();
+          mirror.value(input, mirror.inputs.color());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
+      colorRgbGRange.addEventListener("input", function() {
+        stagedLink.link.color.color.rgb.g = parseInt(this.value, 10);
+        mirror.data.color.by.rgb();
+        mirror.value(this, mirror.inputs.color());
+      });
+      colorRgbGNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.color.color.rgb.g = mirror.minMax(input);
+          mirror.data.color.by.rgb();
+          mirror.value(input, mirror.inputs.color());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
+      colorRgbBRange.addEventListener("input", function() {
+        stagedLink.link.color.color.rgb.b = parseInt(this.value, 10);
+        mirror.data.color.by.rgb();
+        mirror.value(this, mirror.inputs.color());
+      });
+      colorRgbBNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.color.color.rgb.b = mirror.minMax(input);
+          mirror.data.color.by.rgb();
+          mirror.value(input, mirror.inputs.color());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
+
+      accentThemeRadio.addEventListener("change", function() {
+        stagedLink.link.accent.by = this.value;
+        accentColorPicker.setAttribute("disabled", "");
+        accentColorHex.setAttribute("disabled", "");
+        accentColorCollapseButton.setAttribute("disabled", "");
+        helper.addClass(accentColorInputHelperItem, "disabled");
+        helper.addClass(accentHslHLabel, "disabled", "");
+        accentHslHRange.setAttribute("disabled", "");
+        accentHslHNumber.setAttribute("disabled", "");
+        helper.addClass(accentHslSLabel, "disabled", "");
+        accentHslSRange.setAttribute("disabled", "");
+        accentHslSNumber.setAttribute("disabled", "");
+        helper.addClass(accentHslLLabel, "disabled", "");
+        accentHslLRange.setAttribute("disabled", "");
+        accentHslLNumber.setAttribute("disabled", "");
+        helper.addClass(accentRgbRLabel, "disabled", "");
+        accentRgbRRange.setAttribute("disabled", "");
+        accentRgbRNumber.setAttribute("disabled", "");
+        helper.addClass(accentRgbGLabel, "disabled", "");
+        accentRgbGRange.setAttribute("disabled", "");
+        accentRgbGNumber.setAttribute("disabled", "");
+        helper.addClass(accentRgbBLabel, "disabled", "");
+        accentRgbBRange.setAttribute("disabled", "");
+        accentRgbBNumber.setAttribute("disabled", "");
+      }, false);
+      accentCustomRadio.addEventListener("change", function() {
+        stagedLink.link.accent.by = this.value;
+        accentColorPicker.removeAttribute("disabled");
+        accentColorHex.removeAttribute("disabled");
+        accentColorCollapseButton.removeAttribute("disabled");
+        helper.removeClass(accentColorInputHelperItem, "disabled");
+        helper.removeClass(accentHslHLabel, "disabled");
+        accentHslHRange.removeAttribute("disabled");
+        accentHslHNumber.removeAttribute("disabled");
+        helper.removeClass(accentHslSLabel, "disabled");
+        accentHslSRange.removeAttribute("disabled");
+        accentHslSNumber.removeAttribute("disabled");
+        helper.removeClass(accentHslLLabel, "disabled");
+        accentHslLRange.removeAttribute("disabled");
+        accentHslLNumber.removeAttribute("disabled");
+        helper.removeClass(accentRgbRLabel, "disabled");
+        accentRgbRRange.removeAttribute("disabled");
+        accentRgbRNumber.removeAttribute("disabled");
+        helper.removeClass(accentRgbGLabel, "disabled");
+        accentRgbGRange.removeAttribute("disabled");
+        accentRgbGNumber.removeAttribute("disabled");
+        helper.removeClass(accentRgbBLabel, "disabled");
+        accentRgbBRange.removeAttribute("disabled");
+        accentRgbBNumber.removeAttribute("disabled");
+      }, false);
+
+      accentColorPicker.addEventListener("change", function() {
+        mirror.data.accent.by.hex(this.value);
+        mirror.value(this, mirror.inputs.accent());
+      }, false);
+      accentColorHex.addEventListener("input", function() {
+        if (helper.isHexNumber(this.value)) {
+          mirror.data.accent.by.hex(this.value);
+          mirror.value(this, mirror.inputs.accent());
+        };
+      }, false);
+
+      accentColorCollapseButton.addEventListener("click", function() {
+        if (stagedLink.collapse.accent) {
+          stagedLink.collapse.accent = false;
+        } else {
+          stagedLink.collapse.accent = true;
+        };
+        collapse.accent();
+      });
+      accentHslHRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.hsl.h = parseInt(this.value, 10);
+        mirror.data.accent.by.hsl();
+        mirror.value(this, mirror.inputs.accent());
+      });
+      accentHslHNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.hsl.h = mirror.minMax(input);
+          mirror.data.accent.by.hsl();
+          mirror.value(input, mirror.inputs.accent());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
+      accentHslSRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.hsl.s = parseInt(this.value, 10);
+        mirror.data.accent.by.hsl();
+        mirror.value(this, mirror.inputs.accent());
+      });
+      accentHslSNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.hsl.s = mirror.minMax(input);
+          mirror.data.accent.by.hsl();
+          mirror.value(input, mirror.inputs.accent());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
+      accentHslLRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.hsl.l = parseInt(this.value, 10);
+        mirror.data.accent.by.hsl();
+        mirror.value(this, mirror.inputs.accent());
+      });
+      accentHslLNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.hsl.l = mirror.minMax(input);
+          mirror.data.accent.by.hsl();
+          mirror.value(input, mirror.inputs.accent());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
+      accentRgbRRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.rgb.r = parseInt(this.value, 10);
+        mirror.data.accent.by.rgb();
+        mirror.value(this, mirror.inputs.accent());
+      });
+      accentRgbRNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.rgb.r = mirror.minMax(input);
+          mirror.data.accent.by.rgb();
+          mirror.value(input, mirror.inputs.accent());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
+      accentRgbGRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.rgb.g = parseInt(this.value, 10);
+        mirror.data.accent.by.rgb();
+        mirror.value(this, mirror.inputs.accent());
+      });
+      accentRgbGNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.rgb.g = mirror.minMax(input);
+          mirror.data.accent.by.rgb();
+          mirror.value(input, mirror.inputs.accent());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
+      accentRgbBRange.addEventListener("input", function() {
+        stagedLink.link.accent.color.rgb.b = parseInt(this.value, 10);
+        mirror.data.accent.by.rgb();
+        mirror.value(this, mirror.inputs.accent());
+      });
+      accentRgbBNumber.addEventListener("input", function() {
+        var set = function(input) {
+          stagedLink.link.accent.color.rgb.b = mirror.minMax(input);
+          mirror.data.accent.by.rgb();
+          mirror.value(input, mirror.inputs.accent());
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 1000, this);
+      });
       autoSuggest.bind.input({
         input: displayIconInput,
         type: "fontawesomeIcon",
         postFocus: displayIconFormGroupText
       });
+
       return form;
+    },
+    formCollapse: function() {
+      helper.eA(".link-form-collapse").forEach(function(arrayItem, index) {
+        helper.addClass(arrayItem, "active");
+        arrayItem.setAttribute("style", "--link-form-collapse-height:" + arrayItem.getBoundingClientRect().height + "px;");
+        helper.removeClass(arrayItem, "active");
+      });
     },
     display: {
       letter: {
@@ -1769,11 +2424,6 @@ var link = (function() {
           arrayItem.tabIndex = -1;
         });
       };
-    },
-    color: {
-      custom: function() {
-        helper.e("html").style.setProperty("--link-item-color-custom", state.get.current().link.item.color.rgb.r + ", " + state.get.current().link.item.color.rgb.g + ", " + state.get.current().link.item.color.rgb.b);
-      }
     },
     border: function() {
       var html = helper.e("html");
@@ -2107,6 +2757,7 @@ var link = (function() {
           }
         });
         pagelock.lock();
+        render.item.formCollapse();
         stagedLink.position.destination.item = helper.e(".link-form-position").selectedIndex;
       },
       close: function() {
@@ -2216,6 +2867,7 @@ var link = (function() {
           }
         });
         pagelock.lock();
+        render.item.formCollapse();
       },
       close: function() {
         stagedLink.reset();
@@ -2476,7 +3128,6 @@ var link = (function() {
     render.group.openall.size();
     render.group.openall.opacity();
     render.group.border();
-    render.item.color.custom();
     render.item.size();
     render.item.display.letter.size();
     render.item.display.icon.size();
