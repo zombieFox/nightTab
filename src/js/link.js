@@ -209,17 +209,15 @@ var link = (function() {
         arrayItem.items.forEach(function(arrayItem, index) {
           arrayItem.accent = {
             by: "theme",
-            color: {
-              hsl: {
-                h: 0,
-                s: 0,
-                l: 0
-              },
-              rgb: {
-                r: 0,
-                g: 0,
-                b: 0
-              }
+            hsl: {
+              h: 0,
+              s: 0,
+              l: 0
+            },
+            rgb: {
+              r: 0,
+              g: 0,
+              b: 0
             }
           };
         });
@@ -291,17 +289,15 @@ var link = (function() {
         arrayItem.items.forEach(function(arrayItem, index) {
           arrayItem.color = {
             by: "theme",
-            color: {
-              hsl: {
-                h: 0,
-                s: 0,
-                l: 0
-              },
-              rgb: {
-                r: 0,
-                g: 0,
-                b: 0
-              }
+            hsl: {
+              h: 0,
+              s: 0,
+              l: 0
+            },
+            rgb: {
+              r: 0,
+              g: 0,
+              b: 0
             }
           };
         });
@@ -311,8 +307,8 @@ var link = (function() {
       bookmarks.get().forEach(function(arrayItem, index) {
         arrayItem.items.forEach(function(arrayItem, index) {
           arrayItem.color.by = "custom";
-          arrayItem.color.color.hsl = state.get.current().link.item.color.hsl;
-          arrayItem.color.color.rgb = state.get.current().link.item.color.rgb;
+          arrayItem.color.hsl = state.get.current().link.item.color.hsl;
+          arrayItem.color.rgb = state.get.current().link.item.color.rgb;
         });
       });
     },
@@ -327,12 +323,12 @@ var link = (function() {
             s: 100,
             l: 50
           });
-          arrayItem.color.color.hsl = {
+          arrayItem.color.hsl = {
             h: degree,
             s: 100,
             l: 50
           };
-          arrayItem.color.color.rgb = {
+          arrayItem.color.rgb = {
             r: Math.round(rgb.r),
             g: Math.round(rgb.g),
             b: Math.round(rgb.b)
