@@ -93,13 +93,9 @@ var link = (function() {
           b: null
         }
       },
-      image: null
-    },
-    collapse: {
-      color: null,
-      accent: null
-    },
-    searchMatch: null
+      image: null,
+      searchMatch: null
+    }
   };
 
   stagedLink.init = function() {
@@ -978,7 +974,7 @@ var link = (function() {
         linkDisplayLetter = helper.node("p:" + letterText + "|class:link-display-letter");
       } else if (stagedLink.link.visual.display == "icon" && stagedLink.link.visual.icon.prefix != null && stagedLink.link.visual.icon.name != null) {
         linkDisplayIcon = helper.node("div|class:link-display-icon " + stagedLink.link.visual.icon.prefix + " fa-" + stagedLink.link.visual.icon.name);
-      } else if (stagedLink.link.visual.display == "image" && stagedLink.link.visual.image.trim() != null && stagedLink.link.visual.image.trim() != "") {
+      } else if (stagedLink.link.visual.display == "image" && stagedLink.link.visual.image != null && typeof stagedLink.link.visual.image == "string") {
         linkDisplayImage = helper.makeNode({
           tag: "div",
           attr: [{
