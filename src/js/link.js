@@ -904,7 +904,7 @@ var link = (function() {
           value: "link-item"
         }]
       };
-      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom") {
+      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || (stagedLink.link.image != null && stagedLink.link.image != "")) {
         linkItemOptions.attr.push({
           key: "style",
           value: ""
@@ -928,6 +928,9 @@ var link = (function() {
             "--link-item-color: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";" +
             "--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";";
         };
+        if (stagedLink.link.image != null && stagedLink.link.image != "") {
+          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-image-url: url(" + stagedLink.link.image.trim() + ");"
+        };
       };
       var linkItem = helper.makeNode(linkItemOptions);
       var linkPanelFrontOptions = {
@@ -949,13 +952,9 @@ var link = (function() {
           value: "_blank"
         });
       };
-      if (stagedLink.link.image.trim() != "") {
-        linkPanelFrontOptions.attr[0].value = linkPanelFrontOptions.attr[0].value + " link-panel-front-image"
-        linkPanelFrontOptions.attr.push({
-          key: "style",
-          value: "--link-image-url: url(" + stagedLink.link.image.trim() + ")"
-        });
-      };
+
+      var linkImage = helper.node("div|class:link-image");
+
       var linkPanelFront = helper.makeNode(linkPanelFrontOptions);
       var linkPanelBack = helper.node("div|class:link-panel-back");
 
@@ -1034,6 +1033,10 @@ var link = (function() {
 
       if (stagedLink.link.name != null && stagedLink.link.name != "") {
         linkDisplay.appendChild(linkDisplayName);
+      };
+
+      if (stagedLink.link.image != null && stagedLink.link.image != "") {
+        linkPanelFront.appendChild(linkImage);
       };
       linkPanelFront.appendChild(linkDisplay);
       linkLeft.appendChild(linkLeftIcon);

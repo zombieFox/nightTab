@@ -182,11 +182,19 @@
   transition: background-color var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
 }
 
-.link-panel-front-image {
+.link-image {
   background-image: var(--link-image-url);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: var(--link-item-opacity);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .link-panel-front {
@@ -349,6 +357,7 @@
   top: var(--link-item-display-translate-y);
   left: var(--link-item-display-translate-x);
   font-size: 1em;
+  z-index: 2;
   transform: rotate(var(--link-item-display-rotate));
   transition: font-size var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast), left var(--layout-timing-extra-fast);
 }
