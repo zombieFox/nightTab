@@ -634,7 +634,7 @@
 }
 
 .link-display-image {
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   width: 2em;
   height: 2em;

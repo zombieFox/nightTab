@@ -69,32 +69,28 @@ var link = (function() {
       timeStamp: null,
       accent: {
         by: null,
-        color: {
-          hsl: {
-            h: null,
-            s: null,
-            l: null
-          },
-          rgb: {
-            r: null,
-            g: null,
-            b: null
-          }
+        hsl: {
+          h: null,
+          s: null,
+          l: null
+        },
+        rgb: {
+          r: null,
+          g: null,
+          b: null
         }
       },
       color: {
         by: null,
-        color: {
-          hsl: {
-            h: null,
-            s: null,
-            l: null
-          },
-          rgb: {
-            r: null,
-            g: null,
-            b: null
-          }
+        hsl: {
+          h: null,
+          s: null,
+          l: null
+        },
+        rgb: {
+          r: null,
+          g: null,
+          b: null
         }
       }
     },
@@ -116,21 +112,19 @@ var link = (function() {
     stagedLink.link.display = "letter";
     stagedLink.link.name = "";
     stagedLink.link.accent.by = "theme";
-    stagedLink.link.accent.color.hsl.h = 0;
-    stagedLink.link.accent.color.hsl.s = 0;
-    stagedLink.link.accent.color.hsl.l = 0;
-    stagedLink.link.accent.color.rgb.r = 0;
-    stagedLink.link.accent.color.rgb.g = 0;
-    stagedLink.link.accent.color.rgb.b = 0;
+    stagedLink.link.accent.hsl.h = 0;
+    stagedLink.link.accent.hsl.s = 0;
+    stagedLink.link.accent.hsl.l = 0;
+    stagedLink.link.accent.rgb.r = 0;
+    stagedLink.link.accent.rgb.g = 0;
+    stagedLink.link.accent.rgb.b = 0;
     stagedLink.link.color.by = "theme";
-    stagedLink.link.color.color.hsl.h = 0;
-    stagedLink.link.color.color.hsl.s = 0;
-    stagedLink.link.color.color.hsl.l = 0;
-    stagedLink.link.color.color.rgb.r = 0;
-    stagedLink.link.color.color.rgb.g = 0;
-    stagedLink.link.color.color.rgb.b = 0;
-    stagedLink.collapse.color = false;
-    stagedLink.collapse.accent = false;
+    stagedLink.link.color.hsl.h = 0;
+    stagedLink.link.color.hsl.s = 0;
+    stagedLink.link.color.hsl.l = 0;
+    stagedLink.link.color.rgb.r = 0;
+    stagedLink.link.color.rgb.g = 0;
+    stagedLink.link.color.rgb.b = 0;
     stagedLink.link.searchMatch = false;
   };
 
@@ -151,25 +145,36 @@ var link = (function() {
     stagedLink.link.url = null;
     stagedLink.link.timeStamp = null;
     stagedLink.link.accent.by = null;
-    stagedLink.link.accent.color.hsl.h = null;
-    stagedLink.link.accent.color.hsl.s = null;
-    stagedLink.link.accent.color.hsl.l = null;
-    stagedLink.link.accent.color.rgb.r = null;
-    stagedLink.link.accent.color.rgb.g = null;
-    stagedLink.link.accent.color.rgb.b = null;
+    stagedLink.link.accent.hsl.h = null;
+    stagedLink.link.accent.hsl.s = null;
+    stagedLink.link.accent.hsl.l = null;
+    stagedLink.link.accent.rgb.r = null;
+    stagedLink.link.accent.rgb.g = null;
+    stagedLink.link.accent.rgb.b = null;
     stagedLink.link.color.by = null;
-    stagedLink.link.color.color.hsl.h = null;
-    stagedLink.link.color.color.hsl.s = null;
-    stagedLink.link.color.color.hsl.l = null;
-    stagedLink.link.color.color.rgb.r = null;
-    stagedLink.link.color.color.rgb.g = null;
-    stagedLink.link.color.color.rgb.b = null;
-    stagedLink.collapse.color = null;
-    stagedLink.collapse.accent = null;
+    stagedLink.link.color.hsl.h = null;
+    stagedLink.link.color.hsl.s = null;
+    stagedLink.link.color.hsl.l = null;
+    stagedLink.link.color.rgb.r = null;
+    stagedLink.link.color.rgb.g = null;
+    stagedLink.link.color.rgb.b = null;
     stagedLink.link.searchMatch = null;
   };
 
   var mod = {};
+
+  mod.collapse = {
+    form: {
+      item: {
+        color: false,
+        accent: false
+      }
+    },
+    reset: function() {
+      mod.collapse.form.item.color = false;
+      mod.collapse.form.item.accent = false;
+    }
+  }
 
   mod.accent = {
     hsl: function() {
@@ -221,8 +226,8 @@ var link = (function() {
       bookmarks.get().forEach(function(arrayItem, index) {
         arrayItem.items.forEach(function(arrayItem, index) {
           arrayItem.accent.by = "custom";
-          arrayItem.accent.color.hsl = state.get.current().link.item.accent.hsl;
-          arrayItem.accent.color.rgb = state.get.current().link.item.accent.rgb;
+          arrayItem.accent.hsl = state.get.current().link.item.accent.hsl;
+          arrayItem.accent.rgb = state.get.current().link.item.accent.rgb;
         });
       });
     },
@@ -237,12 +242,12 @@ var link = (function() {
             s: 100,
             l: 50
           });
-          arrayItem.accent.color.hsl = {
+          arrayItem.accent.hsl = {
             h: degree,
             s: 100,
             l: 50
           };
-          arrayItem.accent.color.rgb = {
+          arrayItem.accent.rgb = {
             r: Math.round(rgb.r),
             g: Math.round(rgb.g),
             b: Math.round(rgb.b)
@@ -911,9 +916,9 @@ var link = (function() {
         });
         if (stagedLink.link.accent.by == "custom") {
           linkItemOptions.attr[1].value = linkItemOptions.attr[1].value +
-            "--theme-accent-r: " + stagedLink.link.accent.color.rgb.r + ";" +
-            "--theme-accent-g: " + stagedLink.link.accent.color.rgb.g + ";" +
-            "--theme-accent-b: " + stagedLink.link.accent.color.rgb.b + ";" +
+            "--theme-accent-r: " + stagedLink.link.accent.rgb.r + ";" +
+            "--theme-accent-g: " + stagedLink.link.accent.rgb.g + ";" +
+            "--theme-accent-b: " + stagedLink.link.accent.rgb.b + ";" +
             "--theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);" +
             "--theme-accent-accessible-threshold: 0.5;" +
             "--theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);" +
@@ -925,8 +930,8 @@ var link = (function() {
         };
         if (stagedLink.link.color.by == "custom") {
           linkItemOptions.attr[1].value = linkItemOptions.attr[1].value +
-            "--link-item-color: " + stagedLink.link.color.color.rgb.r + ", " + stagedLink.link.color.color.rgb.g + ", " + stagedLink.link.color.color.rgb.b + ";" +
-            "--link-item-color-focus-hover: " + stagedLink.link.color.color.rgb.r + ", " + stagedLink.link.color.color.rgb.g + ", " + stagedLink.link.color.color.rgb.b + ";";
+            "--link-item-color: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";" +
+            "--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";";
         };
       };
       var linkItem = helper.makeNode(linkItemOptions);
@@ -1655,21 +1660,21 @@ var link = (function() {
           colorRgbBRange.setAttribute("disabled", "");
           colorRgbBNumber.setAttribute("disabled", "");
         };
-        if (stagedLink.link.color.color.rgb.r != null && stagedLink.link.color.color.rgb.g != null && stagedLink.link.color.color.rgb.b != null) {
-          colorColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.color.color.rgb);
-          colorColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.color.color.rgb);
-          colorHslHRange.value = stagedLink.link.color.color.hsl.h;
-          colorHslHNumber.value = stagedLink.link.color.color.hsl.h;
-          colorHslSRange.value = stagedLink.link.color.color.hsl.s;
-          colorHslSNumber.value = stagedLink.link.color.color.hsl.s;
-          colorHslLRange.value = stagedLink.link.color.color.hsl.l;
-          colorHslLNumber.value = stagedLink.link.color.color.hsl.l;
-          colorRgbRRange.value = stagedLink.link.color.color.rgb.r;
-          colorRgbRNumber.value = stagedLink.link.color.color.rgb.r;
-          colorRgbGRange.value = stagedLink.link.color.color.rgb.g;
-          colorRgbGNumber.value = stagedLink.link.color.color.rgb.g;
-          colorRgbBRange.value = stagedLink.link.color.color.rgb.b;
-          colorRgbBNumber.value = stagedLink.link.color.color.rgb.b;
+        if (stagedLink.link.color.rgb.r != null && stagedLink.link.color.rgb.g != null && stagedLink.link.color.rgb.b != null) {
+          colorColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.color.rgb);
+          colorColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.color.rgb);
+          colorHslHRange.value = stagedLink.link.color.hsl.h;
+          colorHslHNumber.value = stagedLink.link.color.hsl.h;
+          colorHslSRange.value = stagedLink.link.color.hsl.s;
+          colorHslSNumber.value = stagedLink.link.color.hsl.s;
+          colorHslLRange.value = stagedLink.link.color.hsl.l;
+          colorHslLNumber.value = stagedLink.link.color.hsl.l;
+          colorRgbRRange.value = stagedLink.link.color.rgb.r;
+          colorRgbRNumber.value = stagedLink.link.color.rgb.r;
+          colorRgbGRange.value = stagedLink.link.color.rgb.g;
+          colorRgbGNumber.value = stagedLink.link.color.rgb.g;
+          colorRgbBRange.value = stagedLink.link.color.rgb.b;
+          colorRgbBNumber.value = stagedLink.link.color.rgb.b;
         };
         if (stagedLink.link.accent.by == "custom") {
           accentThemeRadio.checked = false;
@@ -1722,21 +1727,21 @@ var link = (function() {
           accentRgbBRange.setAttribute("disabled", "");
           accentRgbBNumber.setAttribute("disabled", "");
         };
-        if (stagedLink.link.accent.color.rgb.r != null && stagedLink.link.accent.color.rgb.g != null && stagedLink.link.accent.color.rgb.b != null) {
-          accentColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.accent.color.rgb);
-          accentColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.accent.color.rgb);
-          accentHslHRange.value = stagedLink.link.accent.color.hsl.h;
-          accentHslHNumber.value = stagedLink.link.accent.color.hsl.h;
-          accentHslSRange.value = stagedLink.link.accent.color.hsl.s;
-          accentHslSNumber.value = stagedLink.link.accent.color.hsl.s;
-          accentHslLRange.value = stagedLink.link.accent.color.hsl.l;
-          accentHslLNumber.value = stagedLink.link.accent.color.hsl.l;
-          accentRgbRRange.value = stagedLink.link.accent.color.rgb.r;
-          accentRgbRNumber.value = stagedLink.link.accent.color.rgb.r;
-          accentRgbGRange.value = stagedLink.link.accent.color.rgb.g;
-          accentRgbGNumber.value = stagedLink.link.accent.color.rgb.g;
-          accentRgbBRange.value = stagedLink.link.accent.color.rgb.b;
-          accentRgbBNumber.value = stagedLink.link.accent.color.rgb.b;
+        if (stagedLink.link.accent.rgb.r != null && stagedLink.link.accent.rgb.g != null && stagedLink.link.accent.rgb.b != null) {
+          accentColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.accent.rgb);
+          accentColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.accent.rgb);
+          accentHslHRange.value = stagedLink.link.accent.hsl.h;
+          accentHslHNumber.value = stagedLink.link.accent.hsl.h;
+          accentHslSRange.value = stagedLink.link.accent.hsl.s;
+          accentHslSNumber.value = stagedLink.link.accent.hsl.s;
+          accentHslLRange.value = stagedLink.link.accent.hsl.l;
+          accentHslLNumber.value = stagedLink.link.accent.hsl.l;
+          accentRgbRRange.value = stagedLink.link.accent.rgb.r;
+          accentRgbRNumber.value = stagedLink.link.accent.rgb.r;
+          accentRgbGRange.value = stagedLink.link.accent.rgb.g;
+          accentRgbGNumber.value = stagedLink.link.accent.rgb.g;
+          accentRgbBRange.value = stagedLink.link.accent.rgb.b;
+          accentRgbBNumber.value = stagedLink.link.accent.rgb.b;
         };
       };
 
@@ -1761,52 +1766,52 @@ var link = (function() {
           accent: {
             by: {
               hsl: function() {
-                stagedLink.link.accent.color.rgb = helper.convertColor.hsl.rgb(stagedLink.link.accent.color.hsl);
-                stagedLink.link.accent.color.rgb.r = Math.round(stagedLink.link.accent.color.rgb.r);
-                stagedLink.link.accent.color.rgb.g = Math.round(stagedLink.link.accent.color.rgb.g);
-                stagedLink.link.accent.color.rgb.b = Math.round(stagedLink.link.accent.color.rgb.b);
+                stagedLink.link.accent.rgb = helper.convertColor.hsl.rgb(stagedLink.link.accent.hsl);
+                stagedLink.link.accent.rgb.r = Math.round(stagedLink.link.accent.rgb.r);
+                stagedLink.link.accent.rgb.g = Math.round(stagedLink.link.accent.rgb.g);
+                stagedLink.link.accent.rgb.b = Math.round(stagedLink.link.accent.rgb.b);
               },
               rgb: function() {
-                stagedLink.link.accent.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.accent.color.rgb);
-                stagedLink.link.accent.color.hsl.h = Math.round(stagedLink.link.accent.color.hsl.h);
-                stagedLink.link.accent.color.hsl.s = Math.round(stagedLink.link.accent.color.hsl.s);
-                stagedLink.link.accent.color.hsl.l = Math.round(stagedLink.link.accent.color.hsl.l);
+                stagedLink.link.accent.hsl = helper.convertColor.rgb.hsl(stagedLink.link.accent.rgb);
+                stagedLink.link.accent.hsl.h = Math.round(stagedLink.link.accent.hsl.h);
+                stagedLink.link.accent.hsl.s = Math.round(stagedLink.link.accent.hsl.s);
+                stagedLink.link.accent.hsl.l = Math.round(stagedLink.link.accent.hsl.l);
               },
               hex: function(value) {
-                stagedLink.link.accent.color.rgb = helper.convertColor.hex.rgb(value);
-                stagedLink.link.accent.color.rgb.r = Math.round(stagedLink.link.accent.color.rgb.r);
-                stagedLink.link.accent.color.rgb.g = Math.round(stagedLink.link.accent.color.rgb.g);
-                stagedLink.link.accent.color.rgb.b = Math.round(stagedLink.link.accent.color.rgb.b);
-                stagedLink.link.accent.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.accent.color.rgb);
-                stagedLink.link.accent.color.hsl.h = Math.round(stagedLink.link.accent.color.hsl.h);
-                stagedLink.link.accent.color.hsl.s = Math.round(stagedLink.link.accent.color.hsl.s);
-                stagedLink.link.accent.color.hsl.l = Math.round(stagedLink.link.accent.color.hsl.l);
+                stagedLink.link.accent.rgb = helper.convertColor.hex.rgb(value);
+                stagedLink.link.accent.rgb.r = Math.round(stagedLink.link.accent.rgb.r);
+                stagedLink.link.accent.rgb.g = Math.round(stagedLink.link.accent.rgb.g);
+                stagedLink.link.accent.rgb.b = Math.round(stagedLink.link.accent.rgb.b);
+                stagedLink.link.accent.hsl = helper.convertColor.rgb.hsl(stagedLink.link.accent.rgb);
+                stagedLink.link.accent.hsl.h = Math.round(stagedLink.link.accent.hsl.h);
+                stagedLink.link.accent.hsl.s = Math.round(stagedLink.link.accent.hsl.s);
+                stagedLink.link.accent.hsl.l = Math.round(stagedLink.link.accent.hsl.l);
               }
             }
           },
           color: {
             by: {
               hsl: function() {
-                stagedLink.link.color.color.rgb = helper.convertColor.hsl.rgb(stagedLink.link.color.color.hsl);
-                stagedLink.link.color.color.rgb.r = Math.round(stagedLink.link.color.color.rgb.r);
-                stagedLink.link.color.color.rgb.g = Math.round(stagedLink.link.color.color.rgb.g);
-                stagedLink.link.color.color.rgb.b = Math.round(stagedLink.link.color.color.rgb.b);
+                stagedLink.link.color.rgb = helper.convertColor.hsl.rgb(stagedLink.link.color.hsl);
+                stagedLink.link.color.rgb.r = Math.round(stagedLink.link.color.rgb.r);
+                stagedLink.link.color.rgb.g = Math.round(stagedLink.link.color.rgb.g);
+                stagedLink.link.color.rgb.b = Math.round(stagedLink.link.color.rgb.b);
               },
               rgb: function() {
-                stagedLink.link.color.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.color.color.rgb);
-                stagedLink.link.color.color.hsl.h = Math.round(stagedLink.link.color.color.hsl.h);
-                stagedLink.link.color.color.hsl.s = Math.round(stagedLink.link.color.color.hsl.s);
-                stagedLink.link.color.color.hsl.l = Math.round(stagedLink.link.color.color.hsl.l);
+                stagedLink.link.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.color.rgb);
+                stagedLink.link.color.hsl.h = Math.round(stagedLink.link.color.hsl.h);
+                stagedLink.link.color.hsl.s = Math.round(stagedLink.link.color.hsl.s);
+                stagedLink.link.color.hsl.l = Math.round(stagedLink.link.color.hsl.l);
               },
               hex: function(value) {
-                stagedLink.link.color.color.rgb = helper.convertColor.hex.rgb(value);
-                stagedLink.link.color.color.rgb.r = Math.round(stagedLink.link.color.color.rgb.r);
-                stagedLink.link.color.color.rgb.g = Math.round(stagedLink.link.color.color.rgb.g);
-                stagedLink.link.color.color.rgb.b = Math.round(stagedLink.link.color.color.rgb.b);
-                stagedLink.link.color.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.color.color.rgb);
-                stagedLink.link.color.color.hsl.h = Math.round(stagedLink.link.color.color.hsl.h);
-                stagedLink.link.color.color.hsl.s = Math.round(stagedLink.link.color.color.hsl.s);
-                stagedLink.link.color.color.hsl.l = Math.round(stagedLink.link.color.color.hsl.l);
+                stagedLink.link.color.rgb = helper.convertColor.hex.rgb(value);
+                stagedLink.link.color.rgb.r = Math.round(stagedLink.link.color.rgb.r);
+                stagedLink.link.color.rgb.g = Math.round(stagedLink.link.color.rgb.g);
+                stagedLink.link.color.rgb.b = Math.round(stagedLink.link.color.rgb.b);
+                stagedLink.link.color.hsl = helper.convertColor.rgb.hsl(stagedLink.link.color.rgb);
+                stagedLink.link.color.hsl.h = Math.round(stagedLink.link.color.hsl.h);
+                stagedLink.link.color.hsl.s = Math.round(stagedLink.link.color.hsl.s);
+                stagedLink.link.color.hsl.l = Math.round(stagedLink.link.color.hsl.l);
               }
             }
           }
@@ -1815,91 +1820,91 @@ var link = (function() {
           accent: function() {
             return [{
               element: accentColorPicker,
-              value: stagedLink.link.accent.color.rgb
+              value: stagedLink.link.accent.rgb
             }, {
               element: accentColorHex,
-              value: stagedLink.link.accent.color.rgb
+              value: stagedLink.link.accent.rgb
             }, {
               element: accentHslHRange,
-              value: stagedLink.link.accent.color.hsl.h
+              value: stagedLink.link.accent.hsl.h
             }, {
               element: accentHslHNumber,
-              value: stagedLink.link.accent.color.hsl.h
+              value: stagedLink.link.accent.hsl.h
             }, {
               element: accentHslSRange,
-              value: stagedLink.link.accent.color.hsl.s
+              value: stagedLink.link.accent.hsl.s
             }, {
               element: accentHslSNumber,
-              value: stagedLink.link.accent.color.hsl.s
+              value: stagedLink.link.accent.hsl.s
             }, {
               element: accentHslLRange,
-              value: stagedLink.link.accent.color.hsl.l
+              value: stagedLink.link.accent.hsl.l
             }, {
               element: accentHslLNumber,
-              value: stagedLink.link.accent.color.hsl.l
+              value: stagedLink.link.accent.hsl.l
             }, {
               element: accentRgbRRange,
-              value: stagedLink.link.accent.color.rgb.r
+              value: stagedLink.link.accent.rgb.r
             }, {
               element: accentRgbRNumber,
-              value: stagedLink.link.accent.color.rgb.r
+              value: stagedLink.link.accent.rgb.r
             }, {
               element: accentRgbGRange,
-              value: stagedLink.link.accent.color.rgb.g
+              value: stagedLink.link.accent.rgb.g
             }, {
               element: accentRgbGNumber,
-              value: stagedLink.link.accent.color.rgb.g
+              value: stagedLink.link.accent.rgb.g
             }, {
               element: accentRgbBRange,
-              value: stagedLink.link.accent.color.rgb.b
+              value: stagedLink.link.accent.rgb.b
             }, {
               element: accentRgbBNumber,
-              value: stagedLink.link.accent.color.rgb.b
+              value: stagedLink.link.accent.rgb.b
             }]
           },
           color: function() {
             return [{
               element: colorColorPicker,
-              value: stagedLink.link.color.color.rgb
+              value: stagedLink.link.color.rgb
             }, {
               element: colorColorHex,
-              value: stagedLink.link.color.color.rgb
+              value: stagedLink.link.color.rgb
             }, {
               element: colorHslHRange,
-              value: stagedLink.link.color.color.hsl.h
+              value: stagedLink.link.color.hsl.h
             }, {
               element: colorHslHNumber,
-              value: stagedLink.link.color.color.hsl.h
+              value: stagedLink.link.color.hsl.h
             }, {
               element: colorHslSRange,
-              value: stagedLink.link.color.color.hsl.s
+              value: stagedLink.link.color.hsl.s
             }, {
               element: colorHslSNumber,
-              value: stagedLink.link.color.color.hsl.s
+              value: stagedLink.link.color.hsl.s
             }, {
               element: colorHslLRange,
-              value: stagedLink.link.color.color.hsl.l
+              value: stagedLink.link.color.hsl.l
             }, {
               element: colorHslLNumber,
-              value: stagedLink.link.color.color.hsl.l
+              value: stagedLink.link.color.hsl.l
             }, {
               element: colorRgbRRange,
-              value: stagedLink.link.color.color.rgb.r
+              value: stagedLink.link.color.rgb.r
             }, {
               element: colorRgbRNumber,
-              value: stagedLink.link.color.color.rgb.r
+              value: stagedLink.link.color.rgb.r
             }, {
               element: colorRgbGRange,
-              value: stagedLink.link.color.color.rgb.g
+              value: stagedLink.link.color.rgb.g
             }, {
               element: colorRgbGNumber,
-              value: stagedLink.link.color.color.rgb.g
+              value: stagedLink.link.color.rgb.g
             }, {
               element: colorRgbBRange,
-              value: stagedLink.link.color.color.rgb.b
+              value: stagedLink.link.color.rgb.b
             }, {
               element: colorRgbBNumber,
-              value: stagedLink.link.color.color.rgb.b
+              value: stagedLink.link.color.rgb.b
             }]
           }
         },
@@ -1930,7 +1935,7 @@ var link = (function() {
 
       var collapse = {
         color: function() {
-          if (stagedLink.collapse.color) {
+          if (mod.collapse.form.item.color) {
             helper.addClass(colorColorCollapse, "active");
             helper.addClass(colorColorCollapseButtonIcon, "active");
           } else {
@@ -1939,7 +1944,7 @@ var link = (function() {
           };
         },
         accent: function() {
-          if (stagedLink.collapse.accent) {
+          if (mod.collapse.form.item.accent) {
             helper.addClass(accentColorCollapse, "active");
             helper.addClass(accentColorCollapseButtonIcon, "active");
           } else {
@@ -2124,21 +2129,21 @@ var link = (function() {
         };
       }, false);
       colorColorCollapseButton.addEventListener("click", function() {
-        if (stagedLink.collapse.color) {
-          stagedLink.collapse.color = false;
+        if (mod.collapse.form.item.color) {
+          mod.collapse.form.item.color = false;
         } else {
-          stagedLink.collapse.color = true;
+          mod.collapse.form.item.color = true;
         };
         collapse.color();
       });
       colorHslHRange.addEventListener("input", function() {
-        stagedLink.link.color.color.hsl.h = parseInt(this.value, 10);
+        stagedLink.link.color.hsl.h = parseInt(this.value, 10);
         mirror.data.color.by.hsl();
         mirror.value(this, mirror.inputs.color());
       });
       colorHslHNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.color.hsl.h = mirror.minMax(input);
+          stagedLink.link.color.hsl.h = mirror.minMax(input);
           mirror.data.color.by.hsl();
           mirror.value(input, mirror.inputs.color());
         };
@@ -2146,13 +2151,13 @@ var link = (function() {
         mirror.delay = setTimeout(set, 1000, this);
       });
       colorHslSRange.addEventListener("input", function() {
-        stagedLink.link.color.color.hsl.s = parseInt(this.value, 10);
+        stagedLink.link.color.hsl.s = parseInt(this.value, 10);
         mirror.data.color.by.hsl();
         mirror.value(this, mirror.inputs.color());
       });
       colorHslSNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.color.hsl.s = mirror.minMax(input);
+          stagedLink.link.color.hsl.s = mirror.minMax(input);
           mirror.data.color.by.hsl();
           mirror.value(input, mirror.inputs.color());
         };
@@ -2160,13 +2165,13 @@ var link = (function() {
         mirror.delay = setTimeout(set, 1000, this);
       });
       colorHslLRange.addEventListener("input", function() {
-        stagedLink.link.color.color.hsl.l = parseInt(this.value, 10);
+        stagedLink.link.color.hsl.l = parseInt(this.value, 10);
         mirror.data.color.by.hsl();
         mirror.value(this, mirror.inputs.color());
       });
       colorHslLNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.color.hsl.l = mirror.minMax(input);
+          stagedLink.link.color.hsl.l = mirror.minMax(input);
           mirror.data.color.by.hsl();
           mirror.value(input, mirror.inputs.color());
         };
@@ -2174,13 +2179,13 @@ var link = (function() {
         mirror.delay = setTimeout(set, 1000, this);
       });
       colorRgbRRange.addEventListener("input", function() {
-        stagedLink.link.color.color.rgb.r = parseInt(this.value, 10);
+        stagedLink.link.color.rgb.r = parseInt(this.value, 10);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
       });
       colorRgbRNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.color.rgb.r = mirror.minMax(input);
+          stagedLink.link.color.rgb.r = mirror.minMax(input);
           mirror.data.color.by.rgb();
           mirror.value(input, mirror.inputs.color());
         };
@@ -2188,13 +2193,13 @@ var link = (function() {
         mirror.delay = setTimeout(set, 1000, this);
       });
       colorRgbGRange.addEventListener("input", function() {
-        stagedLink.link.color.color.rgb.g = parseInt(this.value, 10);
+        stagedLink.link.color.rgb.g = parseInt(this.value, 10);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
       });
       colorRgbGNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.color.rgb.g = mirror.minMax(input);
+          stagedLink.link.color.rgb.g = mirror.minMax(input);
           mirror.data.color.by.rgb();
           mirror.value(input, mirror.inputs.color());
         };
@@ -2202,13 +2207,13 @@ var link = (function() {
         mirror.delay = setTimeout(set, 1000, this);
       });
       colorRgbBRange.addEventListener("input", function() {
-        stagedLink.link.color.color.rgb.b = parseInt(this.value, 10);
+        stagedLink.link.color.rgb.b = parseInt(this.value, 10);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
       });
       colorRgbBNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.color.rgb.b = mirror.minMax(input);
+          stagedLink.link.color.rgb.b = mirror.minMax(input);
           mirror.data.color.by.rgb();
           mirror.value(input, mirror.inputs.color());
         };
@@ -2277,23 +2282,22 @@ var link = (function() {
           mirror.value(this, mirror.inputs.accent());
         };
       }, false);
-
       accentColorCollapseButton.addEventListener("click", function() {
-        if (stagedLink.collapse.accent) {
-          stagedLink.collapse.accent = false;
+        if (mod.collapse.form.item.accent) {
+          mod.collapse.form.item.accent = false;
         } else {
-          stagedLink.collapse.accent = true;
+          mod.collapse.form.item.accent = true;
         };
         collapse.accent();
       });
       accentHslHRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.hsl.h = parseInt(this.value, 10);
+        stagedLink.link.accent.hsl.h = parseInt(this.value, 10);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
       });
       accentHslHNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.color.hsl.h = mirror.minMax(input);
+          stagedLink.link.accent.hsl.h = mirror.minMax(input);
           mirror.data.accent.by.hsl();
           mirror.value(input, mirror.inputs.accent());
         };
@@ -2301,13 +2305,13 @@ var link = (function() {
         mirror.delay = setTimeout(set, 1000, this);
       });
       accentHslSRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.hsl.s = parseInt(this.value, 10);
+        stagedLink.link.accent.hsl.s = parseInt(this.value, 10);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
       });
       accentHslSNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.color.hsl.s = mirror.minMax(input);
+          stagedLink.link.accent.hsl.s = mirror.minMax(input);
           mirror.data.accent.by.hsl();
           mirror.value(input, mirror.inputs.accent());
         };
@@ -2315,13 +2319,13 @@ var link = (function() {
         mirror.delay = setTimeout(set, 1000, this);
       });
       accentHslLRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.hsl.l = parseInt(this.value, 10);
+        stagedLink.link.accent.hsl.l = parseInt(this.value, 10);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
       });
       accentHslLNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.color.hsl.l = mirror.minMax(input);
+          stagedLink.link.accent.hsl.l = mirror.minMax(input);
           mirror.data.accent.by.hsl();
           mirror.value(input, mirror.inputs.accent());
         };
@@ -2329,13 +2333,13 @@ var link = (function() {
         mirror.delay = setTimeout(set, 1000, this);
       });
       accentRgbRRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.rgb.r = parseInt(this.value, 10);
+        stagedLink.link.accent.rgb.r = parseInt(this.value, 10);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
       });
       accentRgbRNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.color.rgb.r = mirror.minMax(input);
+          stagedLink.link.accent.rgb.r = mirror.minMax(input);
           mirror.data.accent.by.rgb();
           mirror.value(input, mirror.inputs.accent());
         };
@@ -2343,13 +2347,13 @@ var link = (function() {
         mirror.delay = setTimeout(set, 1000, this);
       });
       accentRgbGRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.rgb.g = parseInt(this.value, 10);
+        stagedLink.link.accent.rgb.g = parseInt(this.value, 10);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
       });
       accentRgbGNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.color.rgb.g = mirror.minMax(input);
+          stagedLink.link.accent.rgb.g = mirror.minMax(input);
           mirror.data.accent.by.rgb();
           mirror.value(input, mirror.inputs.accent());
         };
@@ -2357,13 +2361,13 @@ var link = (function() {
         mirror.delay = setTimeout(set, 1000, this);
       });
       accentRgbBRange.addEventListener("input", function() {
-        stagedLink.link.accent.color.rgb.b = parseInt(this.value, 10);
+        stagedLink.link.accent.rgb.b = parseInt(this.value, 10);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
       });
       accentRgbBNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.color.rgb.b = mirror.minMax(input);
+          stagedLink.link.accent.rgb.b = mirror.minMax(input);
           mirror.data.accent.by.rgb();
           mirror.value(input, mirror.inputs.accent());
         };
@@ -2764,6 +2768,7 @@ var link = (function() {
         stagedLink.reset();
         autoSuggest.close();
         pagelock.unlock();
+        mod.collapse.reset();
       },
       selectGroup: function(groupIndex) {
         stagedGroup.init();
@@ -2873,6 +2878,7 @@ var link = (function() {
         stagedLink.reset();
         autoSuggest.close();
         pagelock.unlock();
+        mod.collapse.reset();
       }
     },
     group: {

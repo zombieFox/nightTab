@@ -23,34 +23,29 @@ var bookmarks = (function() {
       url: "https://zombiefox.github.io/awesomeSheet/",
       accent: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
         }
       },
       color: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
         },
-        image: null
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
       },
       searchMatch: false,
       timeStamp: 1546453104010
@@ -67,34 +62,29 @@ var bookmarks = (function() {
       url: "https://www.amazon.co.uk/",
       accent: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
         }
       },
       color: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
         },
-        image: null
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
       },
       searchMatch: false,
       timeStamp: 1546453107633
@@ -111,34 +101,29 @@ var bookmarks = (function() {
       url: "https://mail.google.com/",
       accent: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
         }
       },
       color: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
         },
-        image: null
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
       },
       searchMatch: false,
       timeStamp: 1546453110265
@@ -155,34 +140,29 @@ var bookmarks = (function() {
       url: "https://www.reddit.com/",
       accent: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
         }
       },
       color: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
         },
-        image: null
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
       },
       searchMatch: false,
       timeStamp: 1546453111491
@@ -199,34 +179,29 @@ var bookmarks = (function() {
       url: "https://www.netflix.com/",
       accent: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
         }
       },
       color: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
         },
-        image: null
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
       },
       searchMatch: false,
       timeStamp: 1546453104460
@@ -243,34 +218,29 @@ var bookmarks = (function() {
       url: "https://drive.google.com/drive/",
       accent: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
         }
       },
       color: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
         },
-        image: null
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
       },
       searchMatch: false,
       timeStamp: 1546453111953
@@ -296,34 +266,29 @@ var bookmarks = (function() {
       url: "http://devdocs.io/",
       accent: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
         }
       },
       color: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
         },
-        image: null
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
       },
       searchMatch: false,
       timeStamp: 1546453101749
@@ -340,34 +305,29 @@ var bookmarks = (function() {
       url: "https://github.com/",
       accent: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
         }
       },
       color: {
         by: "theme",
-        color: {
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
         },
-        image: null
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
       },
       searchMatch: false,
       timeStamp: 1546453108926
