@@ -1038,17 +1038,30 @@ var update = (function() {
         s: 0,
         l: 0
       };
-      data.state.link.item.color.hsl = {
-        h: 0,
-        s: 0,
-        l: 0
+      data.state.link.item.color = {
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
       };
-      data.state.link.item.color.rgb = {
-        r: 0,
-        g: 0,
-        b: 0
+      data.state.link.item.accent = {
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
       };
-      delete data.state.link.item.color.by;
       data.state.link.item.display.visual = data.state.link.item.display.letcon;
       delete data.state.link.item.display.letcon;
       data.state.link.item.display.visual.image = {
