@@ -54,8 +54,8 @@ var link = (function() {
       }
     },
     link: {
-      display: {
-        type: null,
+      visual: {
+        display: null,
         letter: null,
         image: null,
         icon: {
@@ -92,7 +92,8 @@ var link = (function() {
           g: null,
           b: null
         }
-      }
+      },
+      image: null
     },
     collapse: {
       color: null,
@@ -109,7 +110,7 @@ var link = (function() {
     stagedLink.position.group.new = false;
     stagedLink.position.group.name.show = false;
     stagedLink.position.group.openAll.show = false;
-    stagedLink.link.display = "letter";
+    stagedLink.link.visual.display = "letter";
     stagedLink.link.name = "";
     stagedLink.link.accent.by = "theme";
     stagedLink.link.accent.hsl.h = 0;
@@ -125,6 +126,7 @@ var link = (function() {
     stagedLink.link.color.rgb.r = 0;
     stagedLink.link.color.rgb.g = 0;
     stagedLink.link.color.rgb.b = 0;
+    stagedLink.link.image = "";
     stagedLink.link.searchMatch = false;
   };
 
@@ -135,12 +137,12 @@ var link = (function() {
     stagedLink.position.destination.item = null;
     stagedLink.position.group.new = null;
     stagedLink.position.group.name.text = null;
-    stagedLink.link.display = null;
-    stagedLink.link.letter = null;
-    stagedLink.link.icon.name = null;
-    stagedLink.link.icon.prefix = null;
-    stagedLink.link.icon.label = null;
-    stagedLink.link.image = null;
+    stagedLink.link.visual.display = null;
+    stagedLink.link.visual.letter = null;
+    stagedLink.link.visual.image = null;
+    stagedLink.link.visual.icon.name = null;
+    stagedLink.link.visual.icon.prefix = null;
+    stagedLink.link.visual.icon.label = null;
     stagedLink.link.name = null;
     stagedLink.link.url = null;
     stagedLink.link.timeStamp = null;
@@ -158,6 +160,7 @@ var link = (function() {
     stagedLink.link.color.rgb.r = null;
     stagedLink.link.color.rgb.g = null;
     stagedLink.link.color.rgb.b = null;
+    stagedLink.link.image = null;
     stagedLink.link.searchMatch = null;
   };
 
@@ -954,25 +957,32 @@ var link = (function() {
           value: "_blank"
         });
       };
+      if (stagedLink.link.image.trim() != "") {
+        linkPanelFrontOptions.attr[0].value = linkPanelFrontOptions.attr[0].value + " link-panel-front-image"
+        linkPanelFrontOptions.attr.push({
+          key: "style",
+          value: "--link-image-url: url(" + stagedLink.link.image.trim() + ")"
+        });
+      };
       var linkPanelFront = helper.makeNode(linkPanelFrontOptions);
       var linkPanelBack = helper.node("div|class:link-panel-back");
 
       var linkDisplay = helper.node("div|class:link-display");
-      var linkDisplayLetcon = helper.node("div|class:link-display-letcon");
+      var linkDisplayVisual = helper.node("div|class:link-display-visual");
 
       var linkDisplayLetter = null;
       var linkDisplayIcon = null;
       var linkDisplayImage = null;
 
-      if (stagedLink.link.display == "letter") {
-        var letterText = stagedLink.link.letter;
+      if (stagedLink.link.visual.display == "letter") {
+        var letterText = stagedLink.link.visual.letter;
         if (letterText == null) {
           letterText = "";
         };
         linkDisplayLetter = helper.node("p:" + letterText + "|class:link-display-letter");
-      } else if (stagedLink.link.display == "icon" && stagedLink.link.icon.prefix != null && stagedLink.link.icon.name != null) {
-        linkDisplayIcon = helper.node("div|class:link-display-icon " + stagedLink.link.icon.prefix + " fa-" + stagedLink.link.icon.name);
-      } else if (stagedLink.link.display == "image" && stagedLink.link.image.trim() != null && stagedLink.link.image.trim() != "") {
+      } else if (stagedLink.link.visual.display == "icon" && stagedLink.link.visual.icon.prefix != null && stagedLink.link.visual.icon.name != null) {
+        linkDisplayIcon = helper.node("div|class:link-display-icon " + stagedLink.link.visual.icon.prefix + " fa-" + stagedLink.link.visual.icon.name);
+      } else if (stagedLink.link.visual.display == "image" && stagedLink.link.visual.image.trim() != null && stagedLink.link.visual.image.trim() != "") {
         linkDisplayImage = helper.makeNode({
           tag: "div",
           attr: [{
@@ -980,7 +990,7 @@ var link = (function() {
             value: "link-display-image"
           }, {
             key: "style",
-            value: "background-image: url(" + stagedLink.link.image.trim() + ")"
+            value: "--link-display-image-url: url(" + stagedLink.link.visual.image.trim() + ")"
           }]
         });
       };
@@ -1018,16 +1028,16 @@ var link = (function() {
       var linkRemove = helper.node("button|class:button button-small link-control-item link-control-item-remove,tabindex:-1,title:Remove this bookmark");
       var linkRemoveIcon = helper.node("span|class:button-icon icon-close");
 
-      if (stagedLink.link.display == "letter" && linkDisplayLetter != null) {
-        linkDisplayLetcon.appendChild(linkDisplayLetter);
-      } else if (stagedLink.link.display == "icon" && linkDisplayIcon != null) {
-        linkDisplayLetcon.appendChild(linkDisplayIcon);
-      } else if (stagedLink.link.display == "image" && linkDisplayImage != null) {
-        linkDisplayLetcon.appendChild(linkDisplayImage);
+      if (stagedLink.link.visual.display == "letter" && linkDisplayLetter != null) {
+        linkDisplayVisual.appendChild(linkDisplayLetter);
+      } else if (stagedLink.link.visual.display == "icon" && linkDisplayIcon != null) {
+        linkDisplayVisual.appendChild(linkDisplayIcon);
+      } else if (stagedLink.link.visual.display == "image" && linkDisplayImage != null) {
+        linkDisplayVisual.appendChild(linkDisplayImage);
       };
 
       if (linkDisplayLetter != null || linkDisplayIcon != null || linkDisplayImage != null) {
-        linkDisplay.appendChild(linkDisplayLetcon);
+        linkDisplay.appendChild(linkDisplayVisual);
       };
 
       if (stagedLink.link.name != null && stagedLink.link.name != "") {
@@ -1290,6 +1300,20 @@ var link = (function() {
       var accentRgbBRange = helper.node("input|class:link-form-input-accent-rgb-b-range mr-3,id:link-form-input-accent-rgb-b-range,type:range,name:link-form-input-accent-rgb-b-range,value:0,min:0,max:255,tabindex:1,disabled");
       var accentRgbBNumber = helper.node("input|class:link-form-input-accent-rgb-b-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1,disabled");
 
+      // background image
+      var imageInputWrap = helper.node("div|class:form-wrap");
+      var imageLabel = helper.node("label:Background image|for:link-form-image");
+      var imageInput = helper.node("input|type:text,class:link-form-image,id:link-form-image,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      var imageInputHelper = helper.node("div|class:form-helper");
+      var imageInputHelperItem = helper.makeNode({
+        tag: "p",
+        text: "Be sure to use the full URL and include \"http://\" or \"https://\".",
+        attr: [{
+          key: "class",
+          value: "form-helper-item"
+        }]
+      });
+
       groupExistingRadioWrap.appendChild(groupExistingRadio);
       groupExistingLable.appendChild(groupExistingLableIcon);
       groupExistingLable.appendChild(groupExistingLableText);
@@ -1501,6 +1525,14 @@ var link = (function() {
       accentColorFormIndentWrap.appendChild(accentColorFormIndent);
       fieldset.appendChild(accentColorFormIndentWrap);
 
+      fieldset.appendChild(helper.node("hr"));
+
+      imageInputWrap.appendChild(imageLabel);
+      imageInputWrap.appendChild(imageInput);
+      fieldset.appendChild(imageInputWrap);
+      imageInputHelper.appendChild(imageInputHelperItem);
+      fieldset.appendChild(imageInputHelper);
+
       form.appendChild(fieldset);
 
       var makeGroupOptions = function() {
@@ -1561,7 +1593,7 @@ var link = (function() {
       var populateForm = function() {
         groupExistingGroup.selectedIndex = stagedLink.position.origin.group;
         groupExistingPosition.selectedIndex = stagedLink.position.origin.item;
-        if (stagedLink.link.display == "letter") {
+        if (stagedLink.link.visual.display == "letter") {
           displayLetterRadio.checked = true;
           displayIconRadio.checked = false;
           displayImageRadio.checked = false;
@@ -1574,7 +1606,7 @@ var link = (function() {
           displayIconFormGroupText.tabIndex = -1;
           displayImageInput.setAttribute("disabled", "");
           helper.addClass(displayImageHelperItem, "disabled");
-        } else if (stagedLink.link.display == "icon") {
+        } else if (stagedLink.link.visual.display == "icon") {
           displayLetterRadio.checked = false;
           displayIconRadio.checked = true;
           displayImageRadio.checked = false;
@@ -1587,7 +1619,7 @@ var link = (function() {
           displayIconFormGroupText.tabIndex = 1;
           displayImageInput.setAttribute("disabled", "");
           helper.addClass(displayImageHelperItem, "disabled");
-        } else if (stagedLink.link.display == "image") {
+        } else if (stagedLink.link.visual.display == "image") {
           displayLetterRadio.checked = false;
           displayIconRadio.checked = false;
           displayImageRadio.checked = true;
@@ -1601,12 +1633,12 @@ var link = (function() {
           displayImageInput.removeAttribute("disabled");
           helper.removeClass(displayImageHelperItem, "disabled");
         };
-        if (stagedLink.link.icon.name != null && stagedLink.link.icon.prefix != null && stagedLink.link.icon.label != null) {
-          displayIconFormGroupText.appendChild(helper.node("span|class:link-form-icon " + stagedLink.link.icon.prefix + " fa-" + stagedLink.link.icon.name));
+        if (stagedLink.link.visual.icon.name != null && stagedLink.link.visual.icon.prefix != null && stagedLink.link.visual.icon.label != null) {
+          displayIconFormGroupText.appendChild(helper.node("span|class:link-form-icon " + stagedLink.link.visual.icon.prefix + " fa-" + stagedLink.link.visual.icon.name));
         };
-        displayLetterInput.value = stagedLink.link.letter;
-        displayIconInput.value = stagedLink.link.icon.label;
-        displayImageInput.value = stagedLink.link.image;
+        displayLetterInput.value = stagedLink.link.visual.letter;
+        displayIconInput.value = stagedLink.link.visual.icon.label;
+        displayImageInput.value = stagedLink.link.visual.image;
         nameInput.value = stagedLink.link.name;
         urlInput.value = stagedLink.link.url;
         if (stagedLink.link.color.by == "custom") {
@@ -1743,6 +1775,7 @@ var link = (function() {
           accentRgbBRange.value = stagedLink.link.accent.rgb.b;
           accentRgbBNumber.value = stagedLink.link.accent.rgb.b;
         };
+        imageInput.value = stagedLink.link.image;
       };
 
       var mirror = {
@@ -1937,19 +1970,19 @@ var link = (function() {
         color: function() {
           if (mod.collapse.form.item.color) {
             helper.addClass(colorColorCollapse, "active");
-            helper.addClass(colorColorCollapseButtonIcon, "active");
+            helper.addClass(colorColorCollapseButton, "active");
           } else {
             helper.removeClass(colorColorCollapse, "active");
-            helper.removeClass(colorColorCollapseButtonIcon, "active");
+            helper.removeClass(colorColorCollapseButton, "active");
           };
         },
         accent: function() {
           if (mod.collapse.form.item.accent) {
             helper.addClass(accentColorCollapse, "active");
-            helper.addClass(accentColorCollapseButtonIcon, "active");
+            helper.addClass(accentColorCollapseButton, "active");
           } else {
             helper.removeClass(accentColorCollapse, "active");
-            helper.removeClass(accentColorCollapseButtonIcon, "active");
+            helper.removeClass(accentColorCollapseButton, "active");
           };
         }
       };
@@ -2009,7 +2042,7 @@ var link = (function() {
         groupNewInput.value = randomName;
       }, false);
       displayLetterRadio.addEventListener("change", function(event) {
-        stagedLink.link.display = this.value;
+        stagedLink.link.visual.display = this.value;
         displayLetterInput.removeAttribute("disabled");
         displayIconInput.setAttribute("disabled", "");
         displayImageInput.setAttribute("disabled", "");
@@ -2021,7 +2054,7 @@ var link = (function() {
         helper.addClass(displayImageHelperItem, "disabled");
       }, false);
       displayIconRadio.addEventListener("change", function(event) {
-        stagedLink.link.display = this.value;
+        stagedLink.link.visual.display = this.value;
         displayLetterInput.setAttribute("disabled", "");
         displayIconInput.removeAttribute("disabled");
         displayImageInput.setAttribute("disabled", "");
@@ -2033,7 +2066,7 @@ var link = (function() {
         helper.addClass(displayImageHelperItem, "disabled");
       }, false);
       displayImageRadio.addEventListener("change", function(event) {
-        stagedLink.link.display = this.value;
+        stagedLink.link.visual.display = this.value;
         displayLetterInput.setAttribute("disabled", "");
         displayIconInput.setAttribute("disabled", "");
         displayImageInput.setAttribute("disabled", "");
@@ -2045,21 +2078,21 @@ var link = (function() {
         helper.removeClass(displayImageHelperItem, "disabled");
       }, false);
       displayLetterInput.addEventListener("input", function(event) {
-        stagedLink.link.letter = this.value;
+        stagedLink.link.visual.letter = this.value;
       }, false);
       nameInput.addEventListener("input", function(event) {
         stagedLink.link.name = this.value;
       }, false);
       displayImageInput.addEventListener("input", function(event) {
-        stagedLink.link.image = this.value;
+        stagedLink.link.visual.image = this.value;
       }, false);
       urlInput.addEventListener("input", function(event) {
         stagedLink.link.url = this.value;
       }, false);
       displayIconFormGroupClear.addEventListener("click", function(event) {
-        stagedLink.link.icon.name = null;
-        stagedLink.link.icon.prefix = null;
-        stagedLink.link.icon.label = null;
+        stagedLink.link.visual.icon.name = null;
+        stagedLink.link.visual.icon.prefix = null;
+        stagedLink.link.visual.icon.label = null;
         var existingIcon = helper.e(".link-form-icon");
         if (existingIcon) {
           existingIcon.remove();
@@ -2374,6 +2407,9 @@ var link = (function() {
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
+      imageInput.addEventListener("input", function(event) {
+        stagedLink.link.image = this.value;
+      }, false);
       autoSuggest.bind.input({
         input: displayIconInput,
         type: "fontawesomeIcon",
@@ -2393,19 +2429,19 @@ var link = (function() {
       letter: {
         size: function() {
           var html = helper.e("html");
-          html.style.setProperty("--link-item-display-letter-size", state.get.current().link.item.display.letcon.letter.size + "em");
+          html.style.setProperty("--link-item-display-letter-size", state.get.current().link.item.display.visual.letter.size + "em");
         }
       },
       icon: {
         size: function() {
           var html = helper.e("html");
-          html.style.setProperty("--link-item-display-icon-size", state.get.current().link.item.display.letcon.icon.size + "em");
+          html.style.setProperty("--link-item-display-icon-size", state.get.current().link.item.display.visual.icon.size + "em");
         }
       },
       image: {
         size: function() {
           var html = helper.e("html");
-          html.style.setProperty("--link-item-display-image-size", state.get.current().link.item.display.letcon.image.size + "em");
+          html.style.setProperty("--link-item-display-image-size", state.get.current().link.item.display.visual.image.size + "em");
         }
       }
     },
@@ -2711,19 +2747,19 @@ var link = (function() {
   };
 
   render.autoSuggestIconAction = function(autoSuggestData) {
-    stagedLink.link.icon.label = autoSuggestData.label;
-    stagedLink.link.icon.name = autoSuggestData.name;
+    stagedLink.link.visual.icon.label = autoSuggestData.label;
+    stagedLink.link.visual.icon.name = autoSuggestData.name;
     if (autoSuggestData.styles.includes("solid")) {
-      stagedLink.link.icon.prefix = "fas";
+      stagedLink.link.visual.icon.prefix = "fas";
     } else if (autoSuggestData.styles.includes("brands")) {
-      stagedLink.link.icon.prefix = "fab";
+      stagedLink.link.visual.icon.prefix = "fab";
     };
     var existingIcon = helper.e(".link-form-icon");
     if (existingIcon) {
       existingIcon.remove();
     };
     helper.e(".link-form-input-icon").value = autoSuggestData.label;
-    helper.e(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + stagedLink.link.icon.prefix + " fa-" + stagedLink.link.icon.name));
+    helper.e(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + stagedLink.link.visual.icon.prefix + " fa-" + stagedLink.link.visual.icon.name));
     helper.e(".link-form-text-icon").focus();
   };
 

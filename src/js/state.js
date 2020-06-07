@@ -202,7 +202,7 @@ var state = (function() {
           }
         },
         display: {
-          letcon: {
+          visual: {
             show: true,
             letter: {
               size: 3
@@ -220,7 +220,7 @@ var state = (function() {
           },
           gutter: 2,
           direction: "vertical",
-          order: "letconname",
+          order: "visualname",
           alignment: "centercenter",
           rotate: 0,
           translate: {
@@ -444,7 +444,7 @@ var state = (function() {
       },
       item: {
         display: {
-          letcon: {
+          visual: {
             letter: {
               size: 3
             },

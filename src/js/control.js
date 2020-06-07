@@ -4388,31 +4388,31 @@ var control = (function() {
             render.class();
           }
         }, {
-          element: ".control-link-item-display-order-letconname",
+          element: ".control-link-item-display-order-visualname",
           path: "link.item.display.order",
           type: "radio",
           func: function() {
             render.class();
           }
         }, {
-          element: ".control-link-item-display-order-nameletcon",
+          element: ".control-link-item-display-order-namevisual",
           path: "link.item.display.order",
           type: "radio",
           func: function() {
             render.class();
           }
         }],
-        letcon: [{
-          element: ".control-link-item-display-letcon-show",
-          path: "link.item.display.letcon.show",
+        visual: [{
+          element: ".control-link-item-display-visual-show",
+          path: "link.item.display.visual.show",
           type: "checkbox",
           func: function() {
             render.class();
             render.dependents();
           }
         }, {
-          element: ".control-link-item-display-letcon-letter-size-range",
-          path: "link.item.display.letcon.letter.size",
+          element: ".control-link-item-display-visual-letter-size-range",
+          path: "link.item.display.visual.letter.size",
           type: "range",
           valueConvert: ["float"],
           valueModify: {
@@ -4421,8 +4421,8 @@ var control = (function() {
             step: 10
           },
           mirrorElement: [{
-            element: ".control-link-item-display-letcon-letter-size-number",
-            path: "link.item.display.letcon.letter.size",
+            element: ".control-link-item-display-visual-letter-size-number",
+            path: "link.item.display.visual.letter.size",
             type: "number",
             valueConvert: ["float"]
           }],
@@ -4430,8 +4430,8 @@ var control = (function() {
             link.render.item.display.letter.size();
           }
         }, {
-          element: ".control-link-item-display-letcon-letter-size-number",
-          path: "link.item.display.letcon.letter.size",
+          element: ".control-link-item-display-visual-letter-size-number",
+          path: "link.item.display.visual.letter.size",
           type: "number",
           valueConvert: ["float"],
           valueModify: {
@@ -4440,8 +4440,8 @@ var control = (function() {
             step: 10
           },
           mirrorElement: [{
-            element: ".control-link-item-display-letcon-letter-size-range",
-            path: "link.item.display.letcon.letter.size",
+            element: ".control-link-item-display-visual-letter-size-range",
+            path: "link.item.display.visual.letter.size",
             type: "range",
             valueConvert: ["float"]
           }],
@@ -4449,17 +4449,17 @@ var control = (function() {
             link.render.item.display.letter.size();
           }
         }, {
-          element: ".control-link-item-display-letcon-letter-size-default",
+          element: ".control-link-item-display-visual-letter-size-default",
           type: "button",
           func: function() {
-            mod.default("link.item.display.letcon.letter.size");
+            mod.default("link.item.display.visual.letter.size");
             link.render.item.display.letter.size();
             render.update.control.header();
             render.update.control.menu();
           }
         }, {
-          element: ".control-link-item-display-letcon-icon-size-range",
-          path: "link.item.display.letcon.icon.size",
+          element: ".control-link-item-display-visual-icon-size-range",
+          path: "link.item.display.visual.icon.size",
           type: "range",
           valueConvert: ["float"],
           valueModify: {
@@ -4468,8 +4468,8 @@ var control = (function() {
             step: 10
           },
           mirrorElement: [{
-            element: ".control-link-item-display-letcon-icon-size-number",
-            path: "link.item.display.letcon.icon.size",
+            element: ".control-link-item-display-visual-icon-size-number",
+            path: "link.item.display.visual.icon.size",
             type: "number",
             valueConvert: ["float"]
           }],
@@ -4477,8 +4477,8 @@ var control = (function() {
             link.render.item.display.icon.size();
           }
         }, {
-          element: ".control-link-item-display-letcon-icon-size-number",
-          path: "link.item.display.letcon.icon.size",
+          element: ".control-link-item-display-visual-icon-size-number",
+          path: "link.item.display.visual.icon.size",
           type: "number",
           valueConvert: ["float"],
           valueModify: {
@@ -4487,8 +4487,8 @@ var control = (function() {
             step: 10
           },
           mirrorElement: [{
-            element: ".control-link-item-display-letcon-icon-size-range",
-            path: "link.item.display.letcon.icon.size",
+            element: ".control-link-item-display-visual-icon-size-range",
+            path: "link.item.display.visual.icon.size",
             type: "range",
             valueConvert: ["float"]
           }],
@@ -4496,17 +4496,17 @@ var control = (function() {
             link.render.item.display.icon.size();
           }
         }, {
-          element: ".control-link-item-display-letcon-icon-size-default",
+          element: ".control-link-item-display-visual-icon-size-default",
           type: "button",
           func: function() {
-            mod.default("link.item.display.letcon.icon.size");
+            mod.default("link.item.display.visual.icon.size");
             link.render.item.display.icon.size();
             render.update.control.header();
             render.update.control.menu();
           }
         }, {
-          element: ".control-link-item-display-letcon-image-size-range",
-          path: "link.item.display.letcon.image.size",
+          element: ".control-link-item-display-visual-image-size-range",
+          path: "link.item.display.visual.image.size",
           type: "range",
           valueConvert: ["float"],
           valueModify: {
@@ -4515,8 +4515,8 @@ var control = (function() {
             step: 10
           },
           mirrorElement: [{
-            element: ".control-link-item-display-letcon-image-size-number",
-            path: "link.item.display.letcon.image.size",
+            element: ".control-link-item-display-visual-image-size-number",
+            path: "link.item.display.visual.image.size",
             type: "number",
             valueConvert: ["float"]
           }],
@@ -4524,8 +4524,8 @@ var control = (function() {
             link.render.item.display.image.size();
           }
         }, {
-          element: ".control-link-item-display-letcon-image-size-number",
-          path: "link.item.display.letcon.image.size",
+          element: ".control-link-item-display-visual-image-size-number",
+          path: "link.item.display.visual.image.size",
           type: "number",
           valueConvert: ["float"],
           valueModify: {
@@ -4534,8 +4534,8 @@ var control = (function() {
             step: 10
           },
           mirrorElement: [{
-            element: ".control-link-item-display-letcon-image-size-range",
-            path: "link.item.display.letcon.image.size",
+            element: ".control-link-item-display-visual-image-size-range",
+            path: "link.item.display.visual.image.size",
             type: "range",
             valueConvert: ["float"]
           }],
@@ -4543,10 +4543,10 @@ var control = (function() {
             link.render.item.display.image.size();
           }
         }, {
-          element: ".control-link-item-display-letcon-image-size-default",
+          element: ".control-link-item-display-visual-image-size-default",
           type: "button",
           func: function() {
-            mod.default("link.item.display.letcon.image.size");
+            mod.default("link.item.display.visual.image.size");
             link.render.item.display.image.size();
             render.update.control.header();
             render.update.control.menu();
@@ -10636,8 +10636,8 @@ var control = (function() {
         name: "is-link-item-display-direction-" + state.get.current().link.item.display.direction
       }, {
         remove: [
-          "is-link-item-display-order-letconname",
-          "is-link-item-display-order-nameletcon"
+          "is-link-item-display-order-visualname",
+          "is-link-item-display-order-namevisual"
         ],
         condition: function() {
           return state.get.current().link.show;
@@ -10653,12 +10653,12 @@ var control = (function() {
         name: "is-link-item-display-name-show"
       }, {
         remove: [
-          "is-link-item-display-letcon-show"
+          "is-link-item-display-visual-show"
         ],
         condition: function() {
-          return (state.get.current().link.show && state.get.current().link.item.display.letcon.show);
+          return (state.get.current().link.show && state.get.current().link.item.display.visual.show);
         },
-        name: "is-link-item-display-letcon-show"
+        name: "is-link-item-display-visual-show"
       }, {
         remove: [
           "is-link-style-list",
@@ -11369,7 +11369,7 @@ var control = (function() {
             ".control-link-item-size-range",
             ".control-link-item-size-number",
             ".control-link-item-size-default",
-            ".control-link-item-display-letcon-show",
+            ".control-link-item-display-visual-show",
             ".control-link-item-display-name-show",
             ".control-link-item-url-show",
             ".control-link-item-line-show",
@@ -11470,22 +11470,22 @@ var control = (function() {
         }
       }, {
         condition: function() {
-          return (state.get.current().link.show && state.get.current().link.item.display.letcon.show);
+          return (state.get.current().link.show && state.get.current().link.item.display.visual.show);
         },
         dependents: function() {
           return [
-            "[for=control-link-item-display-letcon-letter-size-range]",
-            ".control-link-item-display-letcon-letter-size-range",
-            ".control-link-item-display-letcon-letter-size-number",
-            ".control-link-item-display-letcon-letter-size-default",
-            "[for=control-link-item-display-letcon-icon-size-range]",
-            ".control-link-item-display-letcon-icon-size-range",
-            ".control-link-item-display-letcon-icon-size-number",
-            ".control-link-item-display-letcon-icon-size-default",
-            "[for=control-link-item-display-letcon-image-size-range]",
-            ".control-link-item-display-letcon-image-size-range",
-            ".control-link-item-display-letcon-image-size-number",
-            ".control-link-item-display-letcon-image-size-default"
+            "[for=control-link-item-display-visual-letter-size-range]",
+            ".control-link-item-display-visual-letter-size-range",
+            ".control-link-item-display-visual-letter-size-number",
+            ".control-link-item-display-visual-letter-size-default",
+            "[for=control-link-item-display-visual-icon-size-range]",
+            ".control-link-item-display-visual-icon-size-range",
+            ".control-link-item-display-visual-icon-size-number",
+            ".control-link-item-display-visual-icon-size-default",
+            "[for=control-link-item-display-visual-image-size-range]",
+            ".control-link-item-display-visual-image-size-range",
+            ".control-link-item-display-visual-image-size-number",
+            ".control-link-item-display-visual-image-size-default"
           ];
         }
       }, {
@@ -11502,7 +11502,7 @@ var control = (function() {
         }
       }, {
         condition: function() {
-          return (state.get.current().link.show && (state.get.current().link.item.display.letcon.show || state.get.current().link.item.display.name.show));
+          return (state.get.current().link.show && (state.get.current().link.item.display.visual.show || state.get.current().link.item.display.name.show));
         },
         dependents: function() {
           return [
@@ -11533,14 +11533,14 @@ var control = (function() {
         }
       }, {
         condition: function() {
-          return (state.get.current().link.show && state.get.current().link.item.display.letcon.show && state.get.current().link.item.display.name.show);
+          return (state.get.current().link.show && state.get.current().link.item.display.visual.show && state.get.current().link.item.display.name.show);
         },
         dependents: function() {
           return [
             ".control-link-item-display-direction-horizontal",
             ".control-link-item-display-direction-vertical",
-            ".control-link-item-display-order-letconname",
-            ".control-link-item-display-order-nameletcon",
+            ".control-link-item-display-order-visualname",
+            ".control-link-item-display-order-namevisual",
             ".control-link-item-display-direction-vertical-helper",
             ".control-link-item-display-direction-horizontal-helper",
             "[for=control-link-item-display-gutter-range]",

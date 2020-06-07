@@ -11,13 +11,15 @@ var bookmarks = (function() {
       show: true
     },
     items: [{
-      display: "icon",
-      letter: "AS",
-      image: null,
-      icon: {
-        name: "dice-d20",
-        prefix: "fas",
-        label: "Dice D20"
+      visual:{
+        display: "icon",
+        letter: "AS",
+        image: null,
+        icon: {
+          name: "dice-d20",
+          prefix: "fas",
+          label: "Dice D20"
+        }
       },
       name: "awesomeSheet",
       url: "https://zombiefox.github.io/awesomeSheet/",
@@ -47,16 +49,19 @@ var bookmarks = (function() {
           b: 0
         }
       },
+      image: "",
       searchMatch: false,
       timeStamp: 1546453104010
     }, {
-      display: "letter",
-      letter: "AZ",
-      image: null,
-      icon: {
-        name: "amazon",
-        prefix: "fab",
-        label: "Amazon"
+      visual:{
+        display: "letter",
+        letter: "AZ",
+        image: null,
+        icon: {
+          name: "amazon",
+          prefix: "fab",
+          label: "Amazon"
+        }
       },
       name: "Amazon",
       url: "https://www.amazon.co.uk/",
@@ -86,16 +91,19 @@ var bookmarks = (function() {
           b: 0
         }
       },
+      image: "",
       searchMatch: false,
       timeStamp: 1546453107633
     }, {
-      display: "letter",
-      letter: "GM",
-      image: null,
-      icon: {
-        name: "envelope",
-        prefix: "fas",
-        label: "Envelope"
+      visual:{
+        display: "letter",
+        letter: "GM",
+        image: null,
+        icon: {
+          name: "envelope",
+          prefix: "fas",
+          label: "Envelope"
+        }
       },
       name: "Gmail",
       url: "https://mail.google.com/",
@@ -125,16 +133,19 @@ var bookmarks = (function() {
           b: 0
         }
       },
+      image: "",
       searchMatch: false,
       timeStamp: 1546453110265
     }, {
-      display: "icon",
-      letter: "R",
-      image: null,
-      icon: {
-        name: "reddit-alien",
-        prefix: "fab",
-        label: "reddit Alien"
+      visual:{
+        display: "icon",
+        letter: "R",
+        image: null,
+        icon: {
+          name: "reddit-alien",
+          prefix: "fab",
+          label: "reddit Alien"
+        }
       },
       name: "Reddit",
       url: "https://www.reddit.com/",
@@ -164,16 +175,19 @@ var bookmarks = (function() {
           b: 0
         }
       },
+      image: "",
       searchMatch: false,
       timeStamp: 1546453111491
     }, {
-      display: "icon",
-      letter: "N",
-      image: null,
-      icon: {
-        name: "film",
-        prefix: "fas",
-        label: "Film"
+      visual:{
+        display: "icon",
+        letter: "N",
+        image: null,
+        icon: {
+          name: "film",
+          prefix: "fas",
+          label: "Film"
+        }
       },
       name: "Netflix",
       url: "https://www.netflix.com/",
@@ -203,16 +217,19 @@ var bookmarks = (function() {
           b: 0
         }
       },
+      image: "",
       searchMatch: false,
       timeStamp: 1546453104460
     }, {
-      display: "letter",
-      letter: "DR",
-      image: null,
-      icon: {
-        name: null,
-        prefix: null,
-        label: null
+      visual:{
+        display: "letter",
+        letter: "DR",
+        image: null,
+        icon: {
+          name: null,
+          prefix: null,
+          label: null
+        }
       },
       name: "Drive",
       url: "https://drive.google.com/drive/",
@@ -242,6 +259,7 @@ var bookmarks = (function() {
           b: 0
         }
       },
+      image: "",
       searchMatch: false,
       timeStamp: 1546453111953
     }]
@@ -254,13 +272,15 @@ var bookmarks = (function() {
       show: true
     },
     items: [{
-      display: "icon",
-      letter: "DEV",
-      image: null,
-      icon: {
-        name: "code",
-        prefix: "fas",
-        label: "Code"
+      visual:{
+        display: "icon",
+        letter: "DEV",
+        image: null,
+        icon: {
+          name: "code",
+          prefix: "fas",
+          label: "Code"
+        }
       },
       name: "Devdocs",
       url: "http://devdocs.io/",
@@ -290,16 +310,19 @@ var bookmarks = (function() {
           b: 0
         }
       },
+      image: "",
       searchMatch: false,
       timeStamp: 1546453101749
     }, {
-      display: "icon",
-      letter: "GIT",
-      image: null,
-      icon: {
-        name: "github",
-        prefix: "fab",
-        label: "GitHub"
+      visual:{
+        display: "icon",
+        letter: "GIT",
+        image: null,
+        icon: {
+          name: "github",
+          prefix: "fab",
+          label: "GitHub"
+        }
       },
       name: "Github",
       url: "https://github.com/",
@@ -329,6 +352,7 @@ var bookmarks = (function() {
           b: 0
         }
       },
+      image: "",
       searchMatch: false,
       timeStamp: 1546453108926
     }]

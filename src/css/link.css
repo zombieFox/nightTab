@@ -182,6 +182,13 @@
   transition: background-color var(--layout-timing-extra-fast), height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
 }
 
+.link-panel-front-image {
+  background-image: var(--link-image-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .link-panel-front {
   background-color: rgba(var(--link-item-color), var(--link-item-opacity));
 }
@@ -350,35 +357,35 @@
   font-size: 0.6em;
 }
 
-.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname .link-display {
+.is-link-item-display-direction-horizontal.is-link-item-display-order-visualname .link-display {
   flex-direction: row;
 }
 
-.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon .link-display {
+.is-link-item-display-direction-horizontal.is-link-item-display-order-namevisual .link-display {
   flex-direction: row-reverse;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-letconname .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-visualname .link-display {
   flex-direction: column;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-namevisual .link-display {
   flex-direction: column-reverse;
 }
 
-.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname .link-display-letcon:not(:only-child) {
+.is-link-item-display-name-show.is-link-item-display-visual-show.is-link-item-display-direction-horizontal.is-link-item-display-order-visualname .link-display-visual:not(:only-child) {
   margin-right: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
-.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon .link-display-letcon:not(:only-child) {
+.is-link-item-display-name-show.is-link-item-display-visual-show.is-link-item-display-direction-horizontal.is-link-item-display-order-namevisual .link-display-visual:not(:only-child) {
   margin-left: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
-.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-vertical.is-link-item-display-order-letconname .link-display-letcon:not(:only-child) {
+.is-link-item-display-name-show.is-link-item-display-visual-show.is-link-item-display-direction-vertical.is-link-item-display-order-visualname .link-display-visual:not(:only-child) {
   margin-bottom: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
-.is-link-item-display-name-show.is-link-item-display-letcon-show.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon .link-display-letcon:not(:only-child) {
+.is-link-item-display-name-show.is-link-item-display-visual-show.is-link-item-display-direction-vertical.is-link-item-display-order-namevisual .link-display-visual:not(:only-child) {
   margin-top: calc(var(--link-item-display-space) * var(--link-item-display-gutter));
 }
 
@@ -418,186 +425,186 @@
   transform-origin: bottom right;
 }
 
-/* vertical letcon name */
-.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-topleft .link-display {
+/* vertical visual name */
+.is-link-item-display-direction-vertical.is-link-item-display-order-visualname.is-link-display-alignment-topleft .link-display {
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-topcenter .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-visualname.is-link-display-alignment-topcenter .link-display {
   justify-content: flex-start;
   align-items: center;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-topright .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-visualname.is-link-display-alignment-topright .link-display {
   justify-content: flex-start;
   align-items: flex-end;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-centerleft .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-visualname.is-link-display-alignment-centerleft .link-display {
   justify-content: center;
   align-items: flex-start;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-centercenter .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-visualname.is-link-display-alignment-centercenter .link-display {
   justify-content: center;
   align-items: center;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-centerright .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-visualname.is-link-display-alignment-centerright .link-display {
   justify-content: center;
   align-items: flex-end;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-bottomleft .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-visualname.is-link-display-alignment-bottomleft .link-display {
   justify-content: flex-end;
   align-items: flex-start;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-bottomcenter .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-visualname.is-link-display-alignment-bottomcenter .link-display {
   justify-content: flex-end;
   align-items: center;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-letconname.is-link-display-alignment-bottomright .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-visualname.is-link-display-alignment-bottomright .link-display {
   justify-content: flex-end;
   align-items: flex-end;
 }
 
-/* vertical name letcon */
-.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-topleft .link-display {
+/* vertical name visual */
+.is-link-item-display-direction-vertical.is-link-item-display-order-namevisual.is-link-display-alignment-topleft .link-display {
   justify-content: flex-end;
   align-items: flex-start;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-topcenter .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-namevisual.is-link-display-alignment-topcenter .link-display {
   justify-content: flex-end;
   align-items: center;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-topright .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-namevisual.is-link-display-alignment-topright .link-display {
   justify-content: flex-end;
   align-items: flex-end;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-centerleft .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-namevisual.is-link-display-alignment-centerleft .link-display {
   justify-content: center;
   align-items: flex-start;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-centercenter .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-namevisual.is-link-display-alignment-centercenter .link-display {
   justify-content: center;
   align-items: center;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-centerright .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-namevisual.is-link-display-alignment-centerright .link-display {
   justify-content: center;
   align-items: flex-end;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomleft .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-namevisual.is-link-display-alignment-bottomleft .link-display {
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomcenter .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-namevisual.is-link-display-alignment-bottomcenter .link-display {
   justify-content: flex-start;
   align-items: center;
 }
 
-.is-link-item-display-direction-vertical.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomright .link-display {
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-
-/* horizontal letcon name */
-.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-topleft .link-display {
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-topcenter .link-display {
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-topright .link-display {
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-centerleft .link-display {
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-centercenter .link-display {
-  justify-content: center;
-  align-items: center;
-}
-
-.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-centerright .link-display {
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-bottomleft .link-display {
+.is-link-item-display-direction-vertical.is-link-item-display-order-namevisual.is-link-display-alignment-bottomright .link-display {
   justify-content: flex-start;
   align-items: flex-end;
 }
 
-.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-bottomcenter .link-display {
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.is-link-item-display-direction-horizontal.is-link-item-display-order-letconname.is-link-display-alignment-bottomright .link-display {
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-/* horizontal name letcon */
-.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-topleft .link-display {
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-topcenter .link-display {
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-topright .link-display {
+/* horizontal visual name */
+.is-link-item-display-direction-horizontal.is-link-item-display-order-visualname.is-link-display-alignment-topleft .link-display {
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-centerleft .link-display {
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-centercenter .link-display {
+.is-link-item-display-direction-horizontal.is-link-item-display-order-visualname.is-link-display-alignment-topcenter .link-display {
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-centerright .link-display {
+.is-link-item-display-direction-horizontal.is-link-item-display-order-visualname.is-link-display-alignment-topright .link-display {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-visualname.is-link-display-alignment-centerleft .link-display {
   justify-content: flex-start;
   align-items: center;
 }
 
-.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomleft .link-display {
+.is-link-item-display-direction-horizontal.is-link-item-display-order-visualname.is-link-display-alignment-centercenter .link-display {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-visualname.is-link-display-alignment-centerright .link-display {
   justify-content: flex-end;
+  align-items: center;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-visualname.is-link-display-alignment-bottomleft .link-display {
+  justify-content: flex-start;
   align-items: flex-end;
 }
 
-.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomcenter .link-display {
+.is-link-item-display-direction-horizontal.is-link-item-display-order-visualname.is-link-display-alignment-bottomcenter .link-display {
   justify-content: center;
   align-items: flex-end;
 }
 
-.is-link-item-display-direction-horizontal.is-link-item-display-order-nameletcon.is-link-display-alignment-bottomright .link-display {
+.is-link-item-display-direction-horizontal.is-link-item-display-order-visualname.is-link-display-alignment-bottomright .link-display {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/* horizontal name visual */
+.is-link-item-display-direction-horizontal.is-link-item-display-order-namevisual.is-link-display-alignment-topleft .link-display {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-namevisual.is-link-display-alignment-topcenter .link-display {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-namevisual.is-link-display-alignment-topright .link-display {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-namevisual.is-link-display-alignment-centerleft .link-display {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-namevisual.is-link-display-alignment-centercenter .link-display {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-namevisual.is-link-display-alignment-centerright .link-display {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-namevisual.is-link-display-alignment-bottomleft .link-display {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-namevisual.is-link-display-alignment-bottomcenter .link-display {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.is-link-item-display-direction-horizontal.is-link-item-display-order-namevisual.is-link-display-alignment-bottomright .link-display {
   justify-content: flex-start;
   align-items: flex-end;
 }
@@ -608,11 +615,11 @@
   text-align: center;
 }
 
-.link-display-letcon {
+.link-display-visual {
   display: none;
 }
 
-.is-link-item-display-letcon-show .link-display-letcon {
+.is-link-item-display-visual-show .link-display-visual {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -634,10 +641,12 @@
 }
 
 .link-display-image {
+  background-image: var(--link-display-image-url);
   background-size: contain;
   background-position: center;
-  width: 2em;
-  height: 2em;
+  background-repeat: no-repeat;
+  width: 1em;
+  height: 1em;
 }
 
 .is-theme-accent-cycle .link-display-letter,
@@ -1049,6 +1058,6 @@
   transition: transform var(--layout-timing-extra-fast);
 }
 
-.link-form-collapse-button-icon.active {
+.link-form-collapse-button.active .link-form-collapse-button-icon {
   transform: rotate(-180deg);
 }
