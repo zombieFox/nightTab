@@ -1942,7 +1942,7 @@ var link = (function() {
         },
         value: function(origin, targets) {
           targets.forEach(function(arrayItem, index) {
-            if (arrayItem != origin) {
+            if (arrayItem.element != origin) {
               switch (arrayItem.element.type) {
                 case "color":
                   arrayItem.element.value = helper.convertColor.rgb.hex(arrayItem.value);
@@ -2173,10 +2173,11 @@ var link = (function() {
       });
       colorHslHNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.hsl.h = mirror.minMax(input);
-          mirror.data.color.by.hsl();
-          mirror.value(input, mirror.inputs.color());
+          input.value = stagedLink.link.color.hsl.h;
         };
+        stagedLink.link.color.hsl.h = mirror.minMax(this);
+        mirror.data.color.by.hsl();
+        mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
@@ -2187,10 +2188,11 @@ var link = (function() {
       });
       colorHslSNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.hsl.s = mirror.minMax(input);
-          mirror.data.color.by.hsl();
-          mirror.value(input, mirror.inputs.color());
+          input.value = stagedLink.link.color.hsl.s
         };
+        stagedLink.link.color.hsl.s = mirror.minMax(this);
+        mirror.data.color.by.hsl();
+        mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
@@ -2201,10 +2203,11 @@ var link = (function() {
       });
       colorHslLNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.hsl.l = mirror.minMax(input);
-          mirror.data.color.by.hsl();
-          mirror.value(input, mirror.inputs.color());
+          input.value = stagedLink.link.color.hsl.l
         };
+        stagedLink.link.color.hsl.l = mirror.minMax(this);
+        mirror.data.color.by.hsl();
+        mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
@@ -2215,10 +2218,11 @@ var link = (function() {
       });
       colorRgbRNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.rgb.r = mirror.minMax(input);
-          mirror.data.color.by.rgb();
-          mirror.value(input, mirror.inputs.color());
+          input.value = stagedLink.link.color.rgb.r
         };
+        stagedLink.link.color.rgb.r = mirror.minMax(this);
+        mirror.data.color.by.rgb();
+        mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
@@ -2229,10 +2233,11 @@ var link = (function() {
       });
       colorRgbGNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.rgb.g = mirror.minMax(input);
-          mirror.data.color.by.rgb();
-          mirror.value(input, mirror.inputs.color());
+          input.value = stagedLink.link.color.rgb.g
         };
+        stagedLink.link.color.rgb.g = mirror.minMax(this);
+        mirror.data.color.by.rgb();
+        mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
@@ -2243,10 +2248,11 @@ var link = (function() {
       });
       colorRgbBNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.color.rgb.b = mirror.minMax(input);
-          mirror.data.color.by.rgb();
-          mirror.value(input, mirror.inputs.color());
+          input.value = stagedLink.link.color.rgb.b
         };
+        stagedLink.link.color.rgb.b = mirror.minMax(this);
+        mirror.data.color.by.rgb();
+        mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
@@ -2325,10 +2331,11 @@ var link = (function() {
       });
       accentHslHNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.hsl.h = mirror.minMax(input);
-          mirror.data.accent.by.hsl();
-          mirror.value(input, mirror.inputs.accent());
+          input.value = stagedLink.link.accent.hsl.h
         };
+        stagedLink.link.accent.hsl.h = mirror.minMax(this);
+        mirror.data.accent.by.hsl();
+        mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
@@ -2339,10 +2346,11 @@ var link = (function() {
       });
       accentHslSNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.hsl.s = mirror.minMax(input);
-          mirror.data.accent.by.hsl();
-          mirror.value(input, mirror.inputs.accent());
+          input.value = stagedLink.link.accent.hsl.s
         };
+        stagedLink.link.accent.hsl.s = mirror.minMax(this);
+        mirror.data.accent.by.hsl();
+        mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
@@ -2353,10 +2361,11 @@ var link = (function() {
       });
       accentHslLNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.hsl.l = mirror.minMax(input);
-          mirror.data.accent.by.hsl();
-          mirror.value(input, mirror.inputs.accent());
+          input.value = stagedLink.link.accent.hsl.l
         };
+        stagedLink.link.accent.hsl.l = mirror.minMax(this);
+        mirror.data.accent.by.hsl();
+        mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
@@ -2367,10 +2376,11 @@ var link = (function() {
       });
       accentRgbRNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.rgb.r = mirror.minMax(input);
-          mirror.data.accent.by.rgb();
-          mirror.value(input, mirror.inputs.accent());
+          input.value = stagedLink.link.accent.rgb.r
         };
+        stagedLink.link.accent.rgb.r = mirror.minMax(this);
+        mirror.data.accent.by.rgb();
+        mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
@@ -2381,10 +2391,11 @@ var link = (function() {
       });
       accentRgbGNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.rgb.g = mirror.minMax(input);
-          mirror.data.accent.by.rgb();
-          mirror.value(input, mirror.inputs.accent());
+          input.value = stagedLink.link.accent.rgb.g
         };
+        stagedLink.link.accent.rgb.g = mirror.minMax(this);
+        mirror.data.accent.by.rgb();
+        mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
@@ -2395,10 +2406,11 @@ var link = (function() {
       });
       accentRgbBNumber.addEventListener("input", function() {
         var set = function(input) {
-          stagedLink.link.accent.rgb.b = mirror.minMax(input);
-          mirror.data.accent.by.rgb();
-          mirror.value(input, mirror.inputs.accent());
+          input.value = stagedLink.link.accent.rgb.b
         };
+        stagedLink.link.accent.rgb.b = mirror.minMax(this);
+        mirror.data.accent.by.rgb();
+        mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
       });
