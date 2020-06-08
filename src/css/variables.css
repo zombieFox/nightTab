@@ -236,6 +236,12 @@
   --form-ring-accent:                                   0 0 0 var(--layout-line-width) rgb(var(--theme-accent)),
                                                         0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
   --form-wrap-space:                                    1em;
+  /* utilities */
+  --utilities-muted:                                    var(--theme-color-12);
+  --utilities-muted-hover:                              var(--theme-color-13);
+  --utilities-muted-focus-active:                       var(--theme-color-14);
+  --utilities-muted-checked:                            var(--theme-color-14);
+  --utilities-muted-disabled:                           var(--theme-color-04);
   /* menu */
   --menu-space:                                         0.75em;
   --menu-edge-opacity:                                  0.75;

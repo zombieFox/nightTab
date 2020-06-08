@@ -1191,23 +1191,25 @@ var link = (function() {
       var colorThemeRadioWrap = helper.node("div|class:form-wrap");
       var colorThemeRadio = helper.node("input|class:link-form-input-color-theme,id:link-form-input-color-theme,type:radio,name:link-form-input-color,tabindex:1,checked,value:theme");
       var colorThemeLabel = helper.node("label|for:link-form-input-color-theme");
-      var colorThemeLabelText = helper.node("span:Theme colour");
       var colorThemeLabelIcon = helper.node("span|class:label-icon");
+      var colorThemeLabelBlock = helper.node("span|class:label-block");
+      var colorThemeLabelBlockItem1 = helper.node("span:Theme colour|class:label-block-item");
+      var colorThemeLabelBlockItem2 = helper.node("span:Use the Colour defined by the Theme.|class:label-block-item small muted");
       var colorCustomInputWrap = helper.node("div|class:form-wrap");
       var colorCustomRadio = helper.node("input|class:link-form-input-color-custom,id:link-form-input-color-custom,type:radio,name:link-form-input-color,tabindex:1,value:custom");
       var colorCustomLabel = helper.node("label|for:link-form-input-color-custom");
-      var colorCustomLabelText = helper.node("span:Custom colour");
       var colorCustomLabelIcon = helper.node("span|class:label-icon");
+      var colorCustomBlock = helper.node("span|class:label-block");
+      var colorCustomBlockItem1 = helper.node("span:Custom colour|class:label-block-item");
+      var colorCustomBlockItem2 = helper.node("span:Override the Theme colour.|class:label-block-item small muted");
       var colorColorFormIndentWrap = helper.node("div|class:form-wrap");
       var colorColorFormIndent = helper.node("div|class:form-indent");
-      var colorColorInputWrap = helper.node("div|class:form-wrap");
+      var colorColorInputWrap = helper.node("div|class:form-wrap mb-0");
       var colorColorFormGroup = helper.node("div|class:form-group form-group-block");
       var colorColorPicker = helper.node("input|id:link-form-input-color-picker,class:form-group-item-half link-form-input-color-picker,type:color,value:#000000,tabindex:1,disabled");
       var colorColorHex = helper.node("input|id:link-form-input-color-hex,class:form-group-item-half link-form-input-color-hex,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
       var colorColorCollapseButton = helper.node("button|class:link-form-collapse-button button button-line,type:button,tabindex:1,disabled");
       var colorColorCollapseButtonIcon = helper.node("span|class:link-form-collapse-button-icon icon-arrow-down");
-      var colorColorInputHelper = helper.node("div|class:form-helper");
-      var colorColorInputHelperItem = helper.node("p:Use the background colour defined by the Theme.|class:link-form-input-color-helper form-helper-item disabled");
       var colorColorCollapse = helper.node("div|class:link-form-collapse");
       var colorHslHWrap = helper.node("div|class:form-wrap");
       var colorHslHLabel = helper.node("label:Hue|for:link-form-input-color-hsl-h-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
@@ -1246,23 +1248,25 @@ var link = (function() {
       var accentThemeRadioWrap = helper.node("div|class:form-wrap");
       var accentThemeRadio = helper.node("input|class:link-form-input-accent-theme,id:link-form-input-accent-theme,type:radio,name:link-form-input-accent,tabindex:1,checked,value:theme");
       var accentThemeLabel = helper.node("label|for:link-form-input-accent-theme");
-      var accentThemeLabelText = helper.node("span:Theme colour");
       var accentThemeLabelIcon = helper.node("span|class:label-icon");
+      var accentThemeLabelBlock = helper.node("span|class:label-block");
+      var accentThemeLabelBlockItem1 = helper.node("span:Theme accent|class:label-block-item");
+      var accentThemeLabelBlockItem2 = helper.node("span:Use the Accent defined by the Theme.|class:label-block-item small muted");
       var accentCustomInputWrap = helper.node("div|class:form-wrap");
       var accentCustomRadio = helper.node("input|class:link-form-input-accent-custom,id:link-form-input-accent-custom,type:radio,name:link-form-input-accent,tabindex:1,value:custom");
       var accentCustomLabel = helper.node("label|for:link-form-input-accent-custom");
-      var accentCustomLabelText = helper.node("span:Custom colour");
       var accentCustomLabelIcon = helper.node("span|class:label-icon");
+      var accentCustomLabelBlock = helper.node("span|class:label-block");
+      var accentCustomLabelBlockItem1 = helper.node("span:Custom accent|class:label-block-item");
+      var accentCustomLabelBlockItem2 = helper.node("span:Override the Theme Accent.|class:label-block-item small muted");
       var accentColorFormIndentWrap = helper.node("div|class:form-wrap");
       var accentColorFormIndent = helper.node("div|class:form-indent");
-      var accentColorInputWrap = helper.node("div|class:form-wrap");
+      var accentColorInputWrap = helper.node("div|class:form-wrap mb-0");
       var accentColorFormGroup = helper.node("div|class:form-group form-group-block");
       var accentColorPicker = helper.node("input|id:link-form-input-accent-picker,class:form-group-item-half link-form-input-accent-picker,type:color,value:#000000,tabindex:1,disabled");
       var accentColorHex = helper.node("input|id:link-form-input-accent-hex,class:form-group-item-half link-form-input-accent-hex,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7,disabled");
       var accentColorCollapseButton = helper.node("button|class:link-form-collapse-button button button-line,type:button,tabindex:1,disabled");
       var accentColorCollapseButtonIcon = helper.node("span|class:link-form-collapse-button-icon icon-arrow-down");
-      var accentColorInputHelper = helper.node("div|class:form-helper");
-      var accentColorInputHelperItem = helper.node("p:Use the Accent colour defined by the Theme.|class:link-form-input-accent-helper form-helper-item disabled");
       var accentColorCollapse = helper.node("div|class:link-form-collapse");
       var accentHslHWrap = helper.node("div|class:form-wrap");
       var accentHslHLabel = helper.node("label:Hue|for:link-form-input-accent-hsl-h-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0 disabled");
@@ -1390,12 +1394,16 @@ var link = (function() {
       fieldset.appendChild(colorLabelWrap);
       colorThemeRadioWrap.appendChild(colorThemeRadio);
       colorThemeLabel.appendChild(colorThemeLabelIcon);
-      colorThemeLabel.appendChild(colorThemeLabelText);
+      colorThemeLabelBlock.appendChild(colorThemeLabelBlockItem1);
+      colorThemeLabelBlock.appendChild(colorThemeLabelBlockItem2);
+      colorThemeLabel.appendChild(colorThemeLabelBlock);
       colorThemeRadioWrap.appendChild(colorThemeLabel);
       fieldset.appendChild(colorThemeRadioWrap);
       colorCustomInputWrap.appendChild(colorCustomRadio);
       colorCustomLabel.appendChild(colorCustomLabelIcon);
-      colorCustomLabel.appendChild(colorCustomLabelText);
+      colorCustomBlock.appendChild(colorCustomBlockItem1);
+      colorCustomBlock.appendChild(colorCustomBlockItem2);
+      colorCustomLabel.appendChild(colorCustomBlock);
       colorCustomInputWrap.appendChild(colorCustomLabel);
       fieldset.appendChild(colorCustomInputWrap);
       colorColorCollapseButton.appendChild(colorColorCollapseButtonIcon);
@@ -1404,8 +1412,6 @@ var link = (function() {
       colorColorFormGroup.appendChild(colorColorCollapseButton);
       colorColorInputWrap.appendChild(colorColorFormGroup);
       colorColorFormIndent.appendChild(colorColorInputWrap);
-      colorColorInputHelper.appendChild(colorColorInputHelperItem);
-      colorColorFormIndent.appendChild(colorColorInputHelper);
 
       colorColorCollapse.appendChild(helper.node("hr"));
 
@@ -1458,12 +1464,16 @@ var link = (function() {
       fieldset.appendChild(accentLabelWrap);
       accentThemeRadioWrap.appendChild(accentThemeRadio);
       accentThemeLabel.appendChild(accentThemeLabelIcon);
-      accentThemeLabel.appendChild(accentThemeLabelText);
+      accentThemeLabelBlock.appendChild(accentThemeLabelBlockItem1);
+      accentThemeLabelBlock.appendChild(accentThemeLabelBlockItem2);
+      accentThemeLabel.appendChild(accentThemeLabelBlock);
       accentThemeRadioWrap.appendChild(accentThemeLabel);
       fieldset.appendChild(accentThemeRadioWrap);
       accentCustomInputWrap.appendChild(accentCustomRadio);
       accentCustomLabel.appendChild(accentCustomLabelIcon);
-      accentCustomLabel.appendChild(accentCustomLabelText);
+      accentCustomLabelBlock.appendChild(accentCustomLabelBlockItem1);
+      accentCustomLabelBlock.appendChild(accentCustomLabelBlockItem2);
+      accentCustomLabel.appendChild(accentCustomLabelBlock);
       accentCustomInputWrap.appendChild(accentCustomLabel);
       fieldset.appendChild(accentCustomInputWrap);
       accentColorCollapseButton.appendChild(accentColorCollapseButtonIcon)
@@ -1472,8 +1482,6 @@ var link = (function() {
       accentColorFormGroup.appendChild(accentColorCollapseButton);
       accentColorInputWrap.appendChild(accentColorFormGroup);
       accentColorFormIndent.appendChild(accentColorInputWrap);
-      accentColorInputHelper.appendChild(accentColorInputHelperItem);
-      accentColorFormIndent.appendChild(accentColorInputHelper);
 
       accentColorCollapse.appendChild(helper.node("hr"));
 
@@ -1642,7 +1650,6 @@ var link = (function() {
           colorColorPicker.removeAttribute("disabled");
           colorColorHex.removeAttribute("disabled");
           colorColorCollapseButton.removeAttribute("disabled");
-          helper.removeClass(colorColorInputHelperItem, "disabled");
           helper.removeClass(colorHslHLabel, "disabled");
           colorHslHRange.removeAttribute("disabled");
           colorHslHNumber.removeAttribute("disabled");
@@ -1667,7 +1674,6 @@ var link = (function() {
           colorColorPicker.setAttribute("disabled", "");
           colorColorHex.setAttribute("disabled", "");
           colorColorCollapseButton.setAttribute("disabled", "");
-          helper.addClass(colorColorInputHelperItem, "disabled");
           helper.addClass(colorHslHLabel, "disabled", "");
           colorHslHRange.setAttribute("disabled", "");
           colorHslHNumber.setAttribute("disabled", "");
@@ -1709,7 +1715,6 @@ var link = (function() {
           accentColorPicker.removeAttribute("disabled");
           accentColorHex.removeAttribute("disabled");
           accentColorCollapseButton.removeAttribute("disabled");
-          helper.removeClass(accentColorInputHelperItem, "disabled");
           helper.removeClass(accentHslHLabel, "disabled");
           accentHslHRange.removeAttribute("disabled");
           accentHslHNumber.removeAttribute("disabled");
@@ -1734,7 +1739,6 @@ var link = (function() {
           accentColorPicker.setAttribute("disabled", "");
           accentColorHex.setAttribute("disabled", "");
           accentColorCollapseButton.setAttribute("disabled", "");
-          helper.addClass(accentColorInputHelperItem, "disabled");
           helper.addClass(accentHslHLabel, "disabled", "");
           accentHslHRange.setAttribute("disabled", "");
           accentHslHNumber.setAttribute("disabled", "");
@@ -2100,7 +2104,6 @@ var link = (function() {
         colorColorPicker.setAttribute("disabled", "");
         colorColorHex.setAttribute("disabled", "");
         colorColorCollapseButton.setAttribute("disabled", "");
-        helper.addClass(colorColorInputHelperItem, "disabled");
         helper.addClass(colorHslHLabel, "disabled", "");
         colorHslHRange.setAttribute("disabled", "");
         colorHslHNumber.setAttribute("disabled", "");
@@ -2125,7 +2128,6 @@ var link = (function() {
         colorColorPicker.removeAttribute("disabled");
         colorColorHex.removeAttribute("disabled");
         colorColorCollapseButton.removeAttribute("disabled");
-        helper.removeClass(colorColorInputHelperItem, "disabled");
         helper.removeClass(colorHslHLabel, "disabled");
         colorHslHRange.removeAttribute("disabled");
         colorHslHNumber.removeAttribute("disabled");
@@ -2254,7 +2256,6 @@ var link = (function() {
         accentColorPicker.setAttribute("disabled", "");
         accentColorHex.setAttribute("disabled", "");
         accentColorCollapseButton.setAttribute("disabled", "");
-        helper.addClass(accentColorInputHelperItem, "disabled");
         helper.addClass(accentHslHLabel, "disabled", "");
         accentHslHRange.setAttribute("disabled", "");
         accentHslHNumber.setAttribute("disabled", "");
@@ -2279,7 +2280,6 @@ var link = (function() {
         accentColorPicker.removeAttribute("disabled");
         accentColorHex.removeAttribute("disabled");
         accentColorCollapseButton.removeAttribute("disabled");
-        helper.removeClass(accentColorInputHelperItem, "disabled");
         helper.removeClass(accentHslHLabel, "disabled");
         accentHslHRange.removeAttribute("disabled");
         accentHslHNumber.removeAttribute("disabled");

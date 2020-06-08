@@ -10876,8 +10876,7 @@ var control = (function() {
               ".control-header-greeting-size-range",
               ".control-header-greeting-size-number",
               ".control-header-greeting-size-default",
-              ".control-header-greeting-newline",
-              ".control-header-greeting-newline-helper"
+              ".control-header-greeting-newline"
             ]
           }
         }],
@@ -10975,8 +10974,7 @@ var control = (function() {
               ".control-header-clock-size-range",
               ".control-header-clock-size-number",
               ".control-header-clock-size-default",
-              ".control-header-clock-newline",
-              ".control-header-clock-newline-helper"
+              ".control-header-clock-newline"
             ];
           }
         }],
@@ -11003,8 +11001,7 @@ var control = (function() {
               ".control-header-transitional-size-range",
               ".control-header-transitional-size-number",
               ".control-header-transitional-size-default",
-              '.control-header-transitional-newline',
-              '.control-header-transitional-newline-helper'
+              '.control-header-transitional-newline'
             ];
           }
         }],
@@ -11072,8 +11069,7 @@ var control = (function() {
             return [
               ".control-header-date-date-display-number",
               ".control-header-date-date-display-word",
-              ".control-header-date-date-ordinal",
-              ".control-header-date-date-ordinal-helper"
+              ".control-header-date-date-ordinal"
             ];
           }
         }, {
@@ -11135,8 +11131,7 @@ var control = (function() {
           },
           dependents: function() {
             return [
-              ".control-header-date-month-ordinal",
-              ".control-header-date-month-ordinal-helper"
+              ".control-header-date-month-ordinal"
             ];
           }
         }, {
@@ -11149,8 +11144,7 @@ var control = (function() {
               ".control-header-date-size-range",
               ".control-header-date-size-number",
               ".control-header-date-size-default",
-              ".control-header-date-newline",
-              ".control-header-date-newline-helper"
+              ".control-header-date-newline"
             ];
           }
         }],
@@ -11162,9 +11156,7 @@ var control = (function() {
             return [
               ".control-header-search-width-by-label",
               ".control-header-search-width-by-auto",
-              ".control-header-search-width-by-auto-helper",
               ".control-header-search-width-by-custom",
-              ".control-header-search-width-by-custom-helper",
               ".control-header-search-width-size-range",
               ".control-header-search-width-size-number",
               ".control-header-search-width-size-default",
@@ -11192,8 +11184,7 @@ var control = (function() {
               ".control-header-search-size-default",
               ".control-header-search-size-helper",
               ".control-header-search-newtab",
-              ".control-header-search-newline",
-              ".control-header-search-newline-helper"
+              ".control-header-search-newline"
             ];
           }
         }, {
@@ -11236,8 +11227,7 @@ var control = (function() {
               ".control-header-editadd-size-range",
               ".control-header-editadd-size-number",
               ".control-header-editadd-size-default",
-              ".control-header-editadd-newline",
-              ".control-header-editadd-newline-helper"
+              ".control-header-editadd-newline"
             ];
           }
         }],
@@ -11257,8 +11247,7 @@ var control = (function() {
               ".control-header-coloraccent-size-range",
               ".control-header-coloraccent-size-number",
               ".control-header-coloraccent-size-default",
-              ".control-header-coloraccent-newline",
-              ".control-header-coloraccent-newline-helper"
+              ".control-header-coloraccent-newline"
             ];
           }
         }],
@@ -11276,8 +11265,7 @@ var control = (function() {
               ".control-header-menu-size-range",
               ".control-header-menu-size-number",
               ".control-header-menu-size-default",
-              ".control-header-menu-newline",
-              ".control-header-menu-newline-helper"
+              ".control-header-menu-newline"
             ];
           }
         }],
@@ -11288,9 +11276,8 @@ var control = (function() {
           dependents: function() {
             return [
               ".control-header-color-style-always",
-              ".control-header-color-style-always-helper",
               ".control-header-color-style-scroll",
-              ".control-header-color-style-scroll-helper",
+              ".control-header-color-style-helper",
               ".control-header-color-by-theme",
               ".control-header-color-by-theme-helper",
               ".control-header-color-by-custom",
@@ -11339,9 +11326,7 @@ var control = (function() {
           dependents: function() {
             return [
               ".control-header-position-sticky",
-              ".control-header-position-sticky-helper",
-              ".control-header-position-inline",
-              ".control-header-position-inline-helper"
+              ".control-header-position-inline"
             ];
           }
         }]
@@ -11391,9 +11376,7 @@ var control = (function() {
             ".control-link-item-border-number",
             ".control-link-item-border-default",
             ".control-link-style-block",
-            ".control-link-style-block-helper",
             ".control-link-style-list",
-            ".control-link-style-list-helper",
             ".control-link-item-color-rgb-color",
             ".control-link-item-color-rgb-text",
             ".control-link-item-color-helper",
@@ -11542,8 +11525,6 @@ var control = (function() {
             ".control-link-item-display-direction-vertical",
             ".control-link-item-display-order-visualname",
             ".control-link-item-display-order-namevisual",
-            ".control-link-item-display-direction-vertical-helper",
-            ".control-link-item-display-direction-horizontal-helper",
             "[for=control-link-item-display-gutter-range]",
             ".control-link-item-display-gutter-range",
             ".control-link-item-display-gutter-number",

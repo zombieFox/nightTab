@@ -20,7 +20,7 @@
 }
 
 .muted {
-  color: rgb(var(--theme-color-12));
+  color: rgb(var(--utilities-muted));
 }
 
 .scroll-disabled {
