@@ -995,6 +995,89 @@ var update = (function() {
         });
       });
       return data;
+    },
+    "5.33.0": function(data) {
+      data.bookmarks.forEach(function(arrayItem, index) {
+        arrayItem.items.forEach(function(arrayItem, index) {
+          arrayItem.visual = {
+            display: arrayItem.display,
+            letter: arrayItem.letter,
+            image: null,
+            icon: arrayItem.icon
+          };
+          delete arrayItem.display;
+          delete arrayItem.letter;
+          delete arrayItem.icon;
+          if (arrayItem.accent.override) {
+            arrayItem.accent.by = "custom";
+          } else {
+            arrayItem.accent.by = "theme";
+          };
+          delete arrayItem.accent.override;
+          arrayItem.accent.hsl = arrayItem.accent.color.hsl;
+          arrayItem.accent.rgb = arrayItem.accent.color.rgb;
+          delete arrayItem.accent.color;
+          arrayItem.color = {
+            by: "theme",
+            hsl: {
+              h: 0,
+              s: 0,
+              l: 0
+            },
+            rgb: {
+              r: 0,
+              g: 0,
+              b: 0
+            }
+          };
+          arrayItem.image = "";
+        });
+      });
+      data.state.header.color.hsl = {
+        h: 0,
+        s: 0,
+        l: 0
+      };
+      data.state.link.item.color = {
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
+      };
+      data.state.link.item.accent = {
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
+        rgb: {
+          r: 0,
+          g: 0,
+          b: 0
+        }
+      };
+      data.state.link.item.display.visual = data.state.link.item.display.letcon;
+      delete data.state.link.item.display.letcon;
+      data.state.link.item.display.visual.image = {
+        size: 3
+      };
+      if (data.state.link.item.display.order == "letconname") {
+        data.state.link.item.display.order = "visualname";
+      } else if (data.state.link.item.display.order == "nameletcon") {
+        data.state.link.item.display.order = "namevisual";
+      };
+      data.state.background.color.hsl = {
+        h: 0,
+        s: 0,
+        l: 0
+      };
+      return data;
     }
   };
 

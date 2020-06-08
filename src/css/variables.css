@@ -109,13 +109,14 @@
   --group-border:                                       0;
   /* link */
   --link-area-width:                                    100%;
-  --link-item-color-theme:                              var(--theme-color-02);
-  --link-item-color-custom:                             rgb(0, 0, 0);
+  --link-item-color:                                    var(--theme-color-02);
+  --link-item-color-focus-hover:                        var(--theme-color-03);
   --link-item-size:                                     1em;
   --link-item-display-space:                            0.25em;
   --link-item-display-gutter:                           2;
-  --link-item-display-letter-size:                      2em;
-  --link-item-display-icon-size:                        2.5em;
+  --link-item-display-letter-size:                      3em;
+  --link-item-display-icon-size:                        3em;
+  --link-item-display-image-size:                       3em;
   --link-item-display-rotate:                           0deg;
   --link-item-display-translate-x:                      0em;
   --link-item-display-translate-y:                      0em;
@@ -235,6 +236,12 @@
   --form-ring-accent:                                   0 0 0 var(--layout-line-width) rgb(var(--theme-accent)),
                                                         0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
   --form-wrap-space:                                    1em;
+  /* utilities */
+  --utilities-muted:                                    var(--theme-color-12);
+  --utilities-muted-hover:                              var(--theme-color-13);
+  --utilities-muted-focus-active:                       var(--theme-color-14);
+  --utilities-muted-checked:                            var(--theme-color-14);
+  --utilities-muted-disabled:                           var(--theme-color-04);
   /* menu */
   --menu-space:                                         0.75em;
   --menu-edge-opacity:                                  0.75;

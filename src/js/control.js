@@ -3039,7 +3039,7 @@ var control = (function() {
             render.dependents();
           }
         }, {
-          element: ".control-header-color-rgb-range",
+          element: ".control-header-color-rgb-color",
           path: "header.color.rgb",
           type: "color",
           mirrorElement: [{
@@ -3047,8 +3047,57 @@ var control = (function() {
             path: "header.color.rgb",
             type: "text",
             valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-hsl-h-range",
+            path: "header.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-h-number",
+            path: "header.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-s-range",
+            path: "header.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-s-number",
+            path: "header.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-l-range",
+            path: "header.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-l-number",
+            path: "header.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-r-range",
+            path: "header.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-r-number",
+            path: "header.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-g-range",
+            path: "header.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-g-number",
+            path: "header.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-b-range",
+            path: "header.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-b-number",
+            path: "header.color.rgb.b",
+            type: "number"
           }],
           func: function() {
+            header.mod.color.hsl();
             header.render.color.custom();
           }
         }, {
@@ -3057,11 +3106,660 @@ var control = (function() {
           type: "text",
           valueConvert: ["hexTextString"],
           mirrorElement: [{
-            element: ".control-header-color-rgb-range",
+            element: ".control-header-color-rgb-color",
             path: "header.color.rgb",
             type: "color"
+          }, {
+            element: ".control-header-color-hsl-h-range",
+            path: "header.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-h-number",
+            path: "header.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-s-range",
+            path: "header.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-s-number",
+            path: "header.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-l-range",
+            path: "header.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-l-number",
+            path: "header.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-r-range",
+            path: "header.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-r-number",
+            path: "header.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-g-range",
+            path: "header.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-g-number",
+            path: "header.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-b-range",
+            path: "header.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-b-number",
+            path: "header.color.rgb.b",
+            type: "number"
           }],
           func: function() {
+            header.mod.color.hsl();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-hsl-h-range",
+          path: "header.color.hsl.h",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-hsl-h-number",
+            path: "header.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-r-range",
+            path: "header.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-r-number",
+            path: "header.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-g-range",
+            path: "header.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-g-number",
+            path: "header.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-b-range",
+            path: "header.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-b-number",
+            path: "header.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.rgb();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-hsl-h-number",
+          path: "header.color.hsl.h",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-hsl-h-range",
+            path: "header.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-r-range",
+            path: "header.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-r-number",
+            path: "header.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-g-range",
+            path: "header.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-g-number",
+            path: "header.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-b-range",
+            path: "header.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-b-number",
+            path: "header.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.rgb();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-hsl-s-range",
+          path: "header.color.hsl.s",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-hsl-s-number",
+            path: "header.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-r-range",
+            path: "header.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-r-number",
+            path: "header.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-g-range",
+            path: "header.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-g-number",
+            path: "header.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-b-range",
+            path: "header.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-b-number",
+            path: "header.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.rgb();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-hsl-s-number",
+          path: "header.color.hsl.s",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-hsl-s-range",
+            path: "header.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-r-range",
+            path: "header.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-r-number",
+            path: "header.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-g-range",
+            path: "header.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-g-number",
+            path: "header.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-b-range",
+            path: "header.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-b-number",
+            path: "header.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.rgb();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-hsl-l-range",
+          path: "header.color.hsl.l",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-hsl-l-number",
+            path: "header.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-r-range",
+            path: "header.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-r-number",
+            path: "header.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-g-range",
+            path: "header.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-g-number",
+            path: "header.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-b-range",
+            path: "header.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-b-number",
+            path: "header.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.rgb();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-hsl-l-number",
+          path: "header.color.hsl.l",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-hsl-l-range",
+            path: "header.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-r-range",
+            path: "header.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-r-number",
+            path: "header.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-g-range",
+            path: "header.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-g-number",
+            path: "header.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-header-color-rgb-b-range",
+            path: "header.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-header-color-rgb-b-number",
+            path: "header.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.rgb();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-rgb-r-range",
+          path: "header.color.rgb.r",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-rgb-r-number",
+            path: "header.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-h-range",
+            path: "header.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-h-number",
+            path: "header.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-s-range",
+            path: "header.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-s-number",
+            path: "header.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-l-range",
+            path: "header.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-l-number",
+            path: "header.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.hsl();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-rgb-r-number",
+          path: "header.color.rgb.r",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-rgb-r-range",
+            path: "header.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-h-range",
+            path: "header.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-h-number",
+            path: "header.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-s-range",
+            path: "header.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-s-number",
+            path: "header.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-l-range",
+            path: "header.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-l-number",
+            path: "header.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.hsl();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-rgb-g-range",
+          path: "header.color.rgb.g",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-rgb-g-number",
+            path: "header.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-h-range",
+            path: "header.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-h-number",
+            path: "header.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-s-range",
+            path: "header.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-s-number",
+            path: "header.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-l-range",
+            path: "header.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-l-number",
+            path: "header.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.hsl();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-rgb-g-number",
+          path: "header.color.rgb.g",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-rgb-g-range",
+            path: "header.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-h-range",
+            path: "header.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-h-number",
+            path: "header.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-s-range",
+            path: "header.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-s-number",
+            path: "header.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-l-range",
+            path: "header.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-l-number",
+            path: "header.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.hsl();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-rgb-b-range",
+          path: "header.color.rgb.b",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-rgb-b-number",
+            path: "header.color.rgb.b",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-h-range",
+            path: "header.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-h-number",
+            path: "header.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-s-range",
+            path: "header.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-s-number",
+            path: "header.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-l-range",
+            path: "header.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-l-number",
+            path: "header.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.hsl();
+            header.render.color.custom();
+          }
+        }, {
+          element: ".control-header-color-rgb-b-number",
+          path: "header.color.rgb.b",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-header-color-rgb-color",
+            path: "header.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-header-color-rgb-text",
+            path: "header.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-header-color-rgb-b-range",
+            path: "header.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-h-range",
+            path: "header.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-h-number",
+            path: "header.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-s-range",
+            path: "header.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-s-number",
+            path: "header.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-header-color-hsl-l-range",
+            path: "header.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-header-color-hsl-l-number",
+            path: "header.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            header.mod.color.hsl();
             header.render.color.custom();
           }
         }, {
@@ -3690,31 +4388,31 @@ var control = (function() {
             render.class();
           }
         }, {
-          element: ".control-link-item-display-order-letconname",
+          element: ".control-link-item-display-order-visualname",
           path: "link.item.display.order",
           type: "radio",
           func: function() {
             render.class();
           }
         }, {
-          element: ".control-link-item-display-order-nameletcon",
+          element: ".control-link-item-display-order-namevisual",
           path: "link.item.display.order",
           type: "radio",
           func: function() {
             render.class();
           }
         }],
-        letcon: [{
-          element: ".control-link-item-display-letcon-show",
-          path: "link.item.display.letcon.show",
+        visual: [{
+          element: ".control-link-item-display-visual-show",
+          path: "link.item.display.visual.show",
           type: "checkbox",
           func: function() {
             render.class();
             render.dependents();
           }
         }, {
-          element: ".control-link-item-display-letcon-letter-size-range",
-          path: "link.item.display.letcon.letter.size",
+          element: ".control-link-item-display-visual-letter-size-range",
+          path: "link.item.display.visual.letter.size",
           type: "range",
           valueConvert: ["float"],
           valueModify: {
@@ -3723,17 +4421,17 @@ var control = (function() {
             step: 10
           },
           mirrorElement: [{
-            element: ".control-link-item-display-letcon-letter-size-number",
-            path: "link.item.display.letcon.letter.size",
+            element: ".control-link-item-display-visual-letter-size-number",
+            path: "link.item.display.visual.letter.size",
             type: "number",
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.letter();
+            link.render.item.display.letter.size();
           }
         }, {
-          element: ".control-link-item-display-letcon-letter-size-number",
-          path: "link.item.display.letcon.letter.size",
+          element: ".control-link-item-display-visual-letter-size-number",
+          path: "link.item.display.visual.letter.size",
           type: "number",
           valueConvert: ["float"],
           valueModify: {
@@ -3742,26 +4440,26 @@ var control = (function() {
             step: 10
           },
           mirrorElement: [{
-            element: ".control-link-item-display-letcon-letter-size-range",
-            path: "link.item.display.letcon.letter.size",
+            element: ".control-link-item-display-visual-letter-size-range",
+            path: "link.item.display.visual.letter.size",
             type: "range",
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.letter();
+            link.render.item.display.letter.size();
           }
         }, {
-          element: ".control-link-item-display-letcon-letter-size-default",
+          element: ".control-link-item-display-visual-letter-size-default",
           type: "button",
           func: function() {
-            mod.default("link.item.display.letcon.letter.size");
-            link.render.item.display.letter();
+            mod.default("link.item.display.visual.letter.size");
+            link.render.item.display.letter.size();
             render.update.control.header();
             render.update.control.menu();
           }
         }, {
-          element: ".control-link-item-display-letcon-icon-size-range",
-          path: "link.item.display.letcon.icon.size",
+          element: ".control-link-item-display-visual-icon-size-range",
+          path: "link.item.display.visual.icon.size",
           type: "range",
           valueConvert: ["float"],
           valueModify: {
@@ -3770,17 +4468,17 @@ var control = (function() {
             step: 10
           },
           mirrorElement: [{
-            element: ".control-link-item-display-letcon-icon-size-number",
-            path: "link.item.display.letcon.icon.size",
+            element: ".control-link-item-display-visual-icon-size-number",
+            path: "link.item.display.visual.icon.size",
             type: "number",
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.icon();
+            link.render.item.display.icon.size();
           }
         }, {
-          element: ".control-link-item-display-letcon-icon-size-number",
-          path: "link.item.display.letcon.icon.size",
+          element: ".control-link-item-display-visual-icon-size-number",
+          path: "link.item.display.visual.icon.size",
           type: "number",
           valueConvert: ["float"],
           valueModify: {
@@ -3789,20 +4487,67 @@ var control = (function() {
             step: 10
           },
           mirrorElement: [{
-            element: ".control-link-item-display-letcon-icon-size-range",
-            path: "link.item.display.letcon.icon.size",
+            element: ".control-link-item-display-visual-icon-size-range",
+            path: "link.item.display.visual.icon.size",
             type: "range",
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.icon();
+            link.render.item.display.icon.size();
           }
         }, {
-          element: ".control-link-item-display-letcon-icon-size-default",
+          element: ".control-link-item-display-visual-icon-size-default",
           type: "button",
           func: function() {
-            mod.default("link.item.display.letcon.icon.size");
-            link.render.item.display.icon();
+            mod.default("link.item.display.visual.icon.size");
+            link.render.item.display.icon.size();
+            render.update.control.header();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-visual-image-size-range",
+          path: "link.item.display.visual.image.size",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 3000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-visual-image-size-number",
+            path: "link.item.display.visual.image.size",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.display.image.size();
+          }
+        }, {
+          element: ".control-link-item-display-visual-image-size-number",
+          path: "link.item.display.visual.image.size",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 10,
+            max: 3000,
+            step: 10
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-visual-image-size-range",
+            path: "link.item.display.visual.image.size",
+            type: "range",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.display.image.size();
+          }
+        }, {
+          element: ".control-link-item-display-visual-image-size-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.display.visual.image.size");
+            link.render.item.display.image.size();
             render.update.control.header();
             render.update.control.menu();
           }
@@ -3879,23 +4624,7 @@ var control = (function() {
           }
         }],
         color: [{
-          element: ".control-link-item-color-by-theme",
-          path: "link.item.color.by",
-          type: "radio",
-          func: function() {
-            render.dependents();
-            render.class();
-          }
-        }, {
-          element: ".control-link-item-color-by-custom",
-          path: "link.item.color.by",
-          type: "radio",
-          func: function() {
-            render.dependents();
-            render.class();
-          }
-        }, {
-          element: ".control-link-item-color-rgb-range",
+          element: ".control-link-item-color-rgb-color",
           path: "link.item.color.rgb",
           type: "color",
           mirrorElement: [{
@@ -3903,9 +4632,57 @@ var control = (function() {
             path: "link.item.color.rgb",
             type: "text",
             valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-hsl-h-range",
+            path: "link.item.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-h-number",
+            path: "link.item.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-s-range",
+            path: "link.item.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-s-number",
+            path: "link.item.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-l-range",
+            path: "link.item.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-l-number",
+            path: "link.item.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-r-range",
+            path: "link.item.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-r-number",
+            path: "link.item.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-g-range",
+            path: "link.item.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-g-number",
+            path: "link.item.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-b-range",
+            path: "link.item.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-b-number",
+            path: "link.item.color.rgb.b",
+            type: "number"
           }],
           func: function() {
-            link.render.item.color.custom();
+            link.mod.color.hsl();
           }
         }, {
           element: ".control-link-item-color-rgb-text",
@@ -3913,12 +4690,669 @@ var control = (function() {
           type: "text",
           valueConvert: ["hexTextString"],
           mirrorElement: [{
-            element: ".control-link-item-color-rgb-range",
+            element: ".control-link-item-color-rgb-color",
             path: "link.item.color.rgb",
             type: "color"
+          }, {
+            element: ".control-link-item-color-hsl-h-range",
+            path: "link.item.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-h-number",
+            path: "link.item.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-s-range",
+            path: "link.item.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-s-number",
+            path: "link.item.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-l-range",
+            path: "link.item.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-l-number",
+            path: "link.item.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-r-range",
+            path: "link.item.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-r-number",
+            path: "link.item.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-g-range",
+            path: "link.item.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-g-number",
+            path: "link.item.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-b-range",
+            path: "link.item.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-b-number",
+            path: "link.item.color.rgb.b",
+            type: "number"
           }],
           func: function() {
-            link.render.item.color.custom();
+            link.mod.color.hsl();
+          }
+        }, {
+          element: ".control-link-item-color-hsl-h-range",
+          path: "link.item.color.hsl.h",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-hsl-h-number",
+            path: "link.item.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-r-range",
+            path: "link.item.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-r-number",
+            path: "link.item.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-g-range",
+            path: "link.item.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-g-number",
+            path: "link.item.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-b-range",
+            path: "link.item.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-b-number",
+            path: "link.item.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.rgb();
+          }
+        }, {
+          element: ".control-link-item-color-hsl-h-number",
+          path: "link.item.color.hsl.h",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-hsl-h-range",
+            path: "link.item.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-r-range",
+            path: "link.item.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-r-number",
+            path: "link.item.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-g-range",
+            path: "link.item.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-g-number",
+            path: "link.item.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-b-range",
+            path: "link.item.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-b-number",
+            path: "link.item.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.rgb();
+          }
+        }, {
+          element: ".control-link-item-color-hsl-s-range",
+          path: "link.item.color.hsl.s",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-hsl-s-number",
+            path: "link.item.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-r-range",
+            path: "link.item.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-r-number",
+            path: "link.item.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-g-range",
+            path: "link.item.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-g-number",
+            path: "link.item.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-b-range",
+            path: "link.item.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-b-number",
+            path: "link.item.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.rgb();
+          }
+        }, {
+          element: ".control-link-item-color-hsl-s-number",
+          path: "link.item.color.hsl.s",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-hsl-s-range",
+            path: "link.item.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-r-range",
+            path: "link.item.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-r-number",
+            path: "link.item.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-g-range",
+            path: "link.item.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-g-number",
+            path: "link.item.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-b-range",
+            path: "link.item.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-b-number",
+            path: "link.item.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.rgb();
+          }
+        }, {
+          element: ".control-link-item-color-hsl-l-range",
+          path: "link.item.color.hsl.l",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-hsl-l-number",
+            path: "link.item.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-r-range",
+            path: "link.item.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-r-number",
+            path: "link.item.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-g-range",
+            path: "link.item.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-g-number",
+            path: "link.item.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-b-range",
+            path: "link.item.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-b-number",
+            path: "link.item.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.rgb();
+          }
+        }, {
+          element: ".control-link-item-color-hsl-l-number",
+          path: "link.item.color.hsl.l",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-hsl-l-range",
+            path: "link.item.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-r-range",
+            path: "link.item.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-r-number",
+            path: "link.item.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-g-range",
+            path: "link.item.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-g-number",
+            path: "link.item.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-rgb-b-range",
+            path: "link.item.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-rgb-b-number",
+            path: "link.item.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.rgb();
+          }
+        }, {
+          element: ".control-link-item-color-rgb-r-range",
+          path: "link.item.color.rgb.r",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-rgb-r-number",
+            path: "link.item.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-h-range",
+            path: "link.item.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-h-number",
+            path: "link.item.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-s-range",
+            path: "link.item.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-s-number",
+            path: "link.item.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-l-range",
+            path: "link.item.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-l-number",
+            path: "link.item.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.hsl();
+          }
+        }, {
+          element: ".control-link-item-color-rgb-r-number",
+          path: "link.item.color.rgb.r",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-rgb-r-range",
+            path: "link.item.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-h-range",
+            path: "link.item.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-h-number",
+            path: "link.item.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-s-range",
+            path: "link.item.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-s-number",
+            path: "link.item.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-l-range",
+            path: "link.item.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-l-number",
+            path: "link.item.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.hsl();
+          }
+        }, {
+          element: ".control-link-item-color-rgb-g-range",
+          path: "link.item.color.rgb.g",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-rgb-g-number",
+            path: "link.item.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-h-range",
+            path: "link.item.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-h-number",
+            path: "link.item.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-s-range",
+            path: "link.item.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-s-number",
+            path: "link.item.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-l-range",
+            path: "link.item.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-l-number",
+            path: "link.item.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.hsl();
+          }
+        }, {
+          element: ".control-link-item-color-rgb-g-number",
+          path: "link.item.color.rgb.g",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-rgb-g-range",
+            path: "link.item.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-h-range",
+            path: "link.item.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-h-number",
+            path: "link.item.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-s-range",
+            path: "link.item.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-s-number",
+            path: "link.item.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-l-range",
+            path: "link.item.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-l-number",
+            path: "link.item.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.hsl();
+          }
+        }, {
+          element: ".control-link-item-color-rgb-b-range",
+          path: "link.item.color.rgb.b",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-rgb-b-number",
+            path: "link.item.color.rgb.b",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-h-range",
+            path: "link.item.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-h-number",
+            path: "link.item.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-s-range",
+            path: "link.item.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-s-number",
+            path: "link.item.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-l-range",
+            path: "link.item.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-l-number",
+            path: "link.item.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.hsl();
+          }
+        }, {
+          element: ".control-link-item-color-rgb-b-number",
+          path: "link.item.color.rgb.b",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-color-rgb-color",
+            path: "link.item.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-color-rgb-text",
+            path: "link.item.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-color-rgb-b-range",
+            path: "link.item.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-h-range",
+            path: "link.item.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-h-number",
+            path: "link.item.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-s-range",
+            path: "link.item.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-s-number",
+            path: "link.item.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-color-hsl-l-range",
+            path: "link.item.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-color-hsl-l-number",
+            path: "link.item.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.color.hsl();
+          }
+        }, {
+          element: ".control-link-item-color-apply",
+          type: "button",
+          func: function() {
+            link.mod.color.set();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-item-color-rainbow",
+          type: "button",
+          func: function() {
+            link.mod.color.rainbow();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-item-color-clear",
+          type: "button",
+          func: function() {
+            link.mod.color.clear();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-opacity-range",
@@ -3967,6 +5401,738 @@ var control = (function() {
             render.update.control.header();
             render.update.control.menu();
             render.class();
+          }
+        }],
+        accent: [{
+          element: ".control-link-item-accent-rgb-color",
+          path: "link.item.accent.rgb",
+          type: "color",
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-hsl-h-range",
+            path: "link.item.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-h-number",
+            path: "link.item.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-s-range",
+            path: "link.item.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-s-number",
+            path: "link.item.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-l-range",
+            path: "link.item.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-l-number",
+            path: "link.item.accent.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-r-range",
+            path: "link.item.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-r-number",
+            path: "link.item.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-g-range",
+            path: "link.item.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-g-number",
+            path: "link.item.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-b-range",
+            path: "link.item.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-b-number",
+            path: "link.item.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.hsl();
+          }
+        }, {
+          element: ".control-link-item-accent-rgb-text",
+          path: "link.item.accent.rgb",
+          type: "text",
+          valueConvert: ["hexTextString"],
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-hsl-h-range",
+            path: "link.item.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-h-number",
+            path: "link.item.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-s-range",
+            path: "link.item.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-s-number",
+            path: "link.item.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-l-range",
+            path: "link.item.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-l-number",
+            path: "link.item.accent.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-r-range",
+            path: "link.item.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-r-number",
+            path: "link.item.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-g-range",
+            path: "link.item.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-g-number",
+            path: "link.item.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-b-range",
+            path: "link.item.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-b-number",
+            path: "link.item.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.hsl();
+          }
+        }, {
+          element: ".control-link-item-accent-hsl-h-range",
+          path: "link.item.accent.hsl.h",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-hsl-h-number",
+            path: "link.item.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-r-range",
+            path: "link.item.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-r-number",
+            path: "link.item.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-g-range",
+            path: "link.item.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-g-number",
+            path: "link.item.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-b-range",
+            path: "link.item.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-b-number",
+            path: "link.item.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.rgb();
+          }
+        }, {
+          element: ".control-link-item-accent-hsl-h-number",
+          path: "link.item.accent.hsl.h",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-hsl-h-range",
+            path: "link.item.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-r-range",
+            path: "link.item.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-r-number",
+            path: "link.item.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-g-range",
+            path: "link.item.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-g-number",
+            path: "link.item.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-b-range",
+            path: "link.item.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-b-number",
+            path: "link.item.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.rgb();
+          }
+        }, {
+          element: ".control-link-item-accent-hsl-s-range",
+          path: "link.item.accent.hsl.s",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-hsl-s-number",
+            path: "link.item.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-r-range",
+            path: "link.item.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-r-number",
+            path: "link.item.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-g-range",
+            path: "link.item.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-g-number",
+            path: "link.item.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-b-range",
+            path: "link.item.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-b-number",
+            path: "link.item.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.rgb();
+          }
+        }, {
+          element: ".control-link-item-accent-hsl-s-number",
+          path: "link.item.accent.hsl.s",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-hsl-s-range",
+            path: "link.item.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-r-range",
+            path: "link.item.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-r-number",
+            path: "link.item.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-g-range",
+            path: "link.item.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-g-number",
+            path: "link.item.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-b-range",
+            path: "link.item.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-b-number",
+            path: "link.item.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.rgb();
+          }
+        }, {
+          element: ".control-link-item-accent-hsl-l-range",
+          path: "link.item.accent.hsl.l",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-hsl-l-number",
+            path: "link.item.accent.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-r-range",
+            path: "link.item.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-r-number",
+            path: "link.item.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-g-range",
+            path: "link.item.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-g-number",
+            path: "link.item.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-b-range",
+            path: "link.item.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-b-number",
+            path: "link.item.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.rgb();
+          }
+        }, {
+          element: ".control-link-item-accent-hsl-l-number",
+          path: "link.item.accent.hsl.l",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-hsl-l-range",
+            path: "link.item.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-r-range",
+            path: "link.item.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-r-number",
+            path: "link.item.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-g-range",
+            path: "link.item.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-g-number",
+            path: "link.item.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-rgb-b-range",
+            path: "link.item.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-rgb-b-number",
+            path: "link.item.accent.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.rgb();
+          }
+        }, {
+          element: ".control-link-item-accent-rgb-r-range",
+          path: "link.item.accent.rgb.r",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-rgb-r-number",
+            path: "link.item.accent.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-h-range",
+            path: "link.item.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-h-number",
+            path: "link.item.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-s-range",
+            path: "link.item.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-s-number",
+            path: "link.item.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-l-range",
+            path: "link.item.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-l-number",
+            path: "link.item.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.hsl();
+          }
+        }, {
+          element: ".control-link-item-accent-rgb-r-number",
+          path: "link.item.accent.rgb.r",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-rgb-r-range",
+            path: "link.item.accent.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-h-range",
+            path: "link.item.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-h-number",
+            path: "link.item.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-s-range",
+            path: "link.item.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-s-number",
+            path: "link.item.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-l-range",
+            path: "link.item.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-l-number",
+            path: "link.item.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.hsl();
+          }
+        }, {
+          element: ".control-link-item-accent-rgb-g-range",
+          path: "link.item.accent.rgb.g",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-rgb-g-number",
+            path: "link.item.accent.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-h-range",
+            path: "link.item.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-h-number",
+            path: "link.item.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-s-range",
+            path: "link.item.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-s-number",
+            path: "link.item.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-l-range",
+            path: "link.item.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-l-number",
+            path: "link.item.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.hsl();
+          }
+        }, {
+          element: ".control-link-item-accent-rgb-g-number",
+          path: "link.item.accent.rgb.g",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-rgb-g-range",
+            path: "link.item.accent.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-h-range",
+            path: "link.item.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-h-number",
+            path: "link.item.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-s-range",
+            path: "link.item.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-s-number",
+            path: "link.item.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-l-range",
+            path: "link.item.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-l-number",
+            path: "link.item.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.hsl();
+          }
+        }, {
+          element: ".control-link-item-accent-rgb-b-range",
+          path: "link.item.accent.rgb.b",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-rgb-b-number",
+            path: "link.item.accent.rgb.b",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-h-range",
+            path: "link.item.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-h-number",
+            path: "link.item.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-s-range",
+            path: "link.item.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-s-number",
+            path: "link.item.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-l-range",
+            path: "link.item.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-l-number",
+            path: "link.item.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.hsl();
+          }
+        }, {
+          element: ".control-link-item-accent-rgb-b-number",
+          path: "link.item.accent.rgb.b",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-link-item-accent-rgb-color",
+            path: "link.item.accent.rgb",
+            type: "color"
+          }, {
+            element: ".control-link-item-accent-rgb-text",
+            path: "link.item.accent.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-link-item-accent-rgb-b-range",
+            path: "link.item.accent.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-h-range",
+            path: "link.item.accent.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-h-number",
+            path: "link.item.accent.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-s-range",
+            path: "link.item.accent.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-s-number",
+            path: "link.item.accent.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-link-item-accent-hsl-l-range",
+            path: "link.item.accent.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-link-item-accent-hsl-l-number",
+            path: "link.item.accent.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            link.mod.accent.hsl();
+          }
+        }, {
+          element: ".control-link-item-accent-apply",
+          type: "button",
+          func: function() {
+            link.mod.accent.set();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-item-accent-rainbow",
+          type: "button",
+          func: function() {
+            link.mod.accent.rainbow();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-item-accent-clear",
+          type: "button",
+          func: function() {
+            link.mod.accent.clear();
+            link.groupAndItems();
           }
         }],
         border: [{
@@ -4048,21 +6214,6 @@ var control = (function() {
           type: "button",
           func: function() {
             bookmarks.sort("name");
-            link.groupAndItems();
-          }
-        }],
-        accent: [{
-          element: ".control-link-accent-clear",
-          type: "button",
-          func: function() {
-            link.mod.accent.clear();
-            link.groupAndItems();
-          }
-        }, {
-          element: ".control-link-accent-set",
-          type: "button",
-          func: function() {
-            link.mod.accent.rainbow();
             link.groupAndItems();
           }
         }]
@@ -6709,7 +8860,7 @@ var control = (function() {
             render.class();
           }
         }, {
-          element: ".control-background-color-rgb-range",
+          element: ".control-background-color-rgb-color",
           path: "background.color.rgb",
           type: "color",
           mirrorElement: [{
@@ -6717,8 +8868,57 @@ var control = (function() {
             path: "background.color.rgb",
             type: "text",
             valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-hsl-h-range",
+            path: "background.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-h-number",
+            path: "background.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-s-range",
+            path: "background.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-s-number",
+            path: "background.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-l-range",
+            path: "background.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-l-number",
+            path: "background.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-r-range",
+            path: "background.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-r-number",
+            path: "background.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-g-range",
+            path: "background.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-g-number",
+            path: "background.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-b-range",
+            path: "background.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-b-number",
+            path: "background.color.rgb.b",
+            type: "number"
           }],
           func: function() {
+            background.mod.color.hsl();
             background.render.color.custom();
           }
         }, {
@@ -6727,11 +8927,660 @@ var control = (function() {
           type: "text",
           valueConvert: ["hexTextString"],
           mirrorElement: [{
-            element: ".control-background-color-rgb-range",
+            element: ".control-background-color-rgb-color",
             path: "background.color.rgb",
             type: "color"
+          }, {
+            element: ".control-background-color-hsl-h-range",
+            path: "background.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-h-number",
+            path: "background.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-s-range",
+            path: "background.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-s-number",
+            path: "background.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-l-range",
+            path: "background.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-l-number",
+            path: "background.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-r-range",
+            path: "background.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-r-number",
+            path: "background.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-g-range",
+            path: "background.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-g-number",
+            path: "background.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-b-range",
+            path: "background.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-b-number",
+            path: "background.color.rgb.b",
+            type: "number"
           }],
           func: function() {
+            background.mod.color.hsl();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-hsl-h-range",
+          path: "background.color.hsl.h",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-hsl-h-number",
+            path: "background.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-r-range",
+            path: "background.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-r-number",
+            path: "background.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-g-range",
+            path: "background.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-g-number",
+            path: "background.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-b-range",
+            path: "background.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-b-number",
+            path: "background.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.rgb();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-hsl-h-number",
+          path: "background.color.hsl.h",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 359
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-hsl-h-range",
+            path: "background.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-r-range",
+            path: "background.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-r-number",
+            path: "background.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-g-range",
+            path: "background.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-g-number",
+            path: "background.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-b-range",
+            path: "background.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-b-number",
+            path: "background.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.rgb();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-hsl-s-range",
+          path: "background.color.hsl.s",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-hsl-s-number",
+            path: "background.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-r-range",
+            path: "background.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-r-number",
+            path: "background.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-g-range",
+            path: "background.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-g-number",
+            path: "background.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-b-range",
+            path: "background.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-b-number",
+            path: "background.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.rgb();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-hsl-s-number",
+          path: "background.color.hsl.s",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-hsl-s-range",
+            path: "background.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-r-range",
+            path: "background.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-r-number",
+            path: "background.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-g-range",
+            path: "background.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-g-number",
+            path: "background.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-b-range",
+            path: "background.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-b-number",
+            path: "background.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.rgb();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-hsl-l-range",
+          path: "background.color.hsl.l",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-hsl-l-number",
+            path: "background.color.hsl.l",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-r-range",
+            path: "background.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-r-number",
+            path: "background.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-g-range",
+            path: "background.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-g-number",
+            path: "background.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-b-range",
+            path: "background.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-b-number",
+            path: "background.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.rgb();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-hsl-l-number",
+          path: "background.color.hsl.l",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-hsl-l-range",
+            path: "background.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-r-range",
+            path: "background.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-r-number",
+            path: "background.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-g-range",
+            path: "background.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-g-number",
+            path: "background.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-background-color-rgb-b-range",
+            path: "background.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-background-color-rgb-b-number",
+            path: "background.color.rgb.b",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.rgb();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-rgb-r-range",
+          path: "background.color.rgb.r",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-rgb-r-number",
+            path: "background.color.rgb.r",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-h-range",
+            path: "background.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-h-number",
+            path: "background.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-s-range",
+            path: "background.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-s-number",
+            path: "background.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-l-range",
+            path: "background.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-l-number",
+            path: "background.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.hsl();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-rgb-r-number",
+          path: "background.color.rgb.r",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-rgb-r-range",
+            path: "background.color.rgb.r",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-h-range",
+            path: "background.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-h-number",
+            path: "background.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-s-range",
+            path: "background.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-s-number",
+            path: "background.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-l-range",
+            path: "background.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-l-number",
+            path: "background.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.hsl();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-rgb-g-range",
+          path: "background.color.rgb.g",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-rgb-g-number",
+            path: "background.color.rgb.g",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-h-range",
+            path: "background.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-h-number",
+            path: "background.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-s-range",
+            path: "background.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-s-number",
+            path: "background.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-l-range",
+            path: "background.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-l-number",
+            path: "background.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.hsl();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-rgb-g-number",
+          path: "background.color.rgb.g",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-rgb-g-range",
+            path: "background.color.rgb.g",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-h-range",
+            path: "background.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-h-number",
+            path: "background.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-s-range",
+            path: "background.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-s-number",
+            path: "background.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-l-range",
+            path: "background.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-l-number",
+            path: "background.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.hsl();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-rgb-b-range",
+          path: "background.color.rgb.b",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-rgb-b-number",
+            path: "background.color.rgb.b",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-h-range",
+            path: "background.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-h-number",
+            path: "background.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-s-range",
+            path: "background.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-s-number",
+            path: "background.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-l-range",
+            path: "background.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-l-number",
+            path: "background.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.hsl();
+            background.render.color.custom();
+          }
+        }, {
+          element: ".control-background-color-rgb-b-number",
+          path: "background.color.rgb.b",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 255
+          },
+          mirrorElement: [{
+            element: ".control-background-color-rgb-color",
+            path: "background.color.rgb",
+            type: "color"
+          }, {
+            element: ".control-background-color-rgb-text",
+            path: "background.color.rgb",
+            type: "text",
+            valueConvert: ["hexTextString"]
+          }, {
+            element: ".control-background-color-rgb-b-range",
+            path: "background.color.rgb.b",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-h-range",
+            path: "background.color.hsl.h",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-h-number",
+            path: "background.color.hsl.h",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-s-range",
+            path: "background.color.hsl.s",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-s-number",
+            path: "background.color.hsl.s",
+            type: "number"
+          }, {
+            element: ".control-background-color-hsl-l-range",
+            path: "background.color.hsl.l",
+            type: "range"
+          }, {
+            element: ".control-background-color-hsl-l-number",
+            path: "background.color.hsl.l",
+            type: "number"
+          }],
+          func: function() {
+            background.mod.color.hsl();
             background.render.color.custom();
           }
         }],
@@ -7787,8 +10636,8 @@ var control = (function() {
         name: "is-link-item-display-direction-" + state.get.current().link.item.display.direction
       }, {
         remove: [
-          "is-link-item-display-order-letconname",
-          "is-link-item-display-order-nameletcon"
+          "is-link-item-display-order-visualname",
+          "is-link-item-display-order-namevisual"
         ],
         condition: function() {
           return state.get.current().link.show;
@@ -7804,12 +10653,12 @@ var control = (function() {
         name: "is-link-item-display-name-show"
       }, {
         remove: [
-          "is-link-item-display-letcon-show"
+          "is-link-item-display-visual-show"
         ],
         condition: function() {
-          return (state.get.current().link.show && state.get.current().link.item.display.letcon.show);
+          return (state.get.current().link.show && state.get.current().link.item.display.visual.show);
         },
-        name: "is-link-item-display-letcon-show"
+        name: "is-link-item-display-visual-show"
       }, {
         remove: [
           "is-link-style-list",
@@ -8027,8 +10876,7 @@ var control = (function() {
               ".control-header-greeting-size-range",
               ".control-header-greeting-size-number",
               ".control-header-greeting-size-default",
-              ".control-header-greeting-newline",
-              ".control-header-greeting-newline-helper"
+              ".control-header-greeting-newline"
             ]
           }
         }],
@@ -8126,8 +10974,7 @@ var control = (function() {
               ".control-header-clock-size-range",
               ".control-header-clock-size-number",
               ".control-header-clock-size-default",
-              ".control-header-clock-newline",
-              ".control-header-clock-newline-helper"
+              ".control-header-clock-newline"
             ];
           }
         }],
@@ -8154,8 +11001,7 @@ var control = (function() {
               ".control-header-transitional-size-range",
               ".control-header-transitional-size-number",
               ".control-header-transitional-size-default",
-              '.control-header-transitional-newline',
-              '.control-header-transitional-newline-helper'
+              '.control-header-transitional-newline'
             ];
           }
         }],
@@ -8223,8 +11069,7 @@ var control = (function() {
             return [
               ".control-header-date-date-display-number",
               ".control-header-date-date-display-word",
-              ".control-header-date-date-ordinal",
-              ".control-header-date-date-ordinal-helper"
+              ".control-header-date-date-ordinal"
             ];
           }
         }, {
@@ -8286,8 +11131,7 @@ var control = (function() {
           },
           dependents: function() {
             return [
-              ".control-header-date-month-ordinal",
-              ".control-header-date-month-ordinal-helper"
+              ".control-header-date-month-ordinal"
             ];
           }
         }, {
@@ -8300,8 +11144,7 @@ var control = (function() {
               ".control-header-date-size-range",
               ".control-header-date-size-number",
               ".control-header-date-size-default",
-              ".control-header-date-newline",
-              ".control-header-date-newline-helper"
+              ".control-header-date-newline"
             ];
           }
         }],
@@ -8313,9 +11156,7 @@ var control = (function() {
             return [
               ".control-header-search-width-by-label",
               ".control-header-search-width-by-auto",
-              ".control-header-search-width-by-auto-helper",
               ".control-header-search-width-by-custom",
-              ".control-header-search-width-by-custom-helper",
               ".control-header-search-width-size-range",
               ".control-header-search-width-size-number",
               ".control-header-search-width-size-default",
@@ -8343,8 +11184,7 @@ var control = (function() {
               ".control-header-search-size-default",
               ".control-header-search-size-helper",
               ".control-header-search-newtab",
-              ".control-header-search-newline",
-              ".control-header-search-newline-helper"
+              ".control-header-search-newline"
             ];
           }
         }, {
@@ -8387,8 +11227,7 @@ var control = (function() {
               ".control-header-editadd-size-range",
               ".control-header-editadd-size-number",
               ".control-header-editadd-size-default",
-              ".control-header-editadd-newline",
-              ".control-header-editadd-newline-helper"
+              ".control-header-editadd-newline"
             ];
           }
         }],
@@ -8408,8 +11247,7 @@ var control = (function() {
               ".control-header-coloraccent-size-range",
               ".control-header-coloraccent-size-number",
               ".control-header-coloraccent-size-default",
-              ".control-header-coloraccent-newline",
-              ".control-header-coloraccent-newline-helper"
+              ".control-header-coloraccent-newline"
             ];
           }
         }],
@@ -8427,8 +11265,7 @@ var control = (function() {
               ".control-header-menu-size-range",
               ".control-header-menu-size-number",
               ".control-header-menu-size-default",
-              ".control-header-menu-newline",
-              ".control-header-menu-newline-helper"
+              ".control-header-menu-newline"
             ];
           }
         }],
@@ -8439,15 +11276,12 @@ var control = (function() {
           dependents: function() {
             return [
               ".control-header-color-style-always",
-              ".control-header-color-style-always-helper",
               ".control-header-color-style-scroll",
-              ".control-header-color-style-scroll-helper",
+              ".control-header-color-style-helper",
               ".control-header-color-by-theme",
               ".control-header-color-by-theme-helper",
               ".control-header-color-by-custom",
               ".control-header-color-by-custom-helper",
-              ".control-header-color-rgb-range",
-              ".control-header-color-rgb-text",
               "[for=control-header-color-opacity-range]",
               ".control-header-color-opacity-range",
               ".control-header-color-opacity-number",
@@ -8462,8 +11296,26 @@ var control = (function() {
           },
           dependents: function() {
             return [
-              ".control-header-color-rgb-range",
-              ".control-header-color-rgb-text"
+              ".control-header-color-rgb-color",
+              ".control-header-color-rgb-text",
+              "[for=control-header-color-hsl-h-range]",
+              ".control-header-color-hsl-h-range",
+              ".control-header-color-hsl-h-number",
+              "[for=control-header-color-hsl-s-range]",
+              ".control-header-color-hsl-s-range",
+              ".control-header-color-hsl-s-number",
+              "[for=control-header-color-hsl-l-range]",
+              ".control-header-color-hsl-l-range",
+              ".control-header-color-hsl-l-number",
+              "[for=control-header-color-rgb-r-range]",
+              ".control-header-color-rgb-r-range",
+              ".control-header-color-rgb-r-number",
+              "[for=control-header-color-rgb-g-range]",
+              ".control-header-color-rgb-g-range",
+              ".control-header-color-rgb-g-number",
+              "[for=control-header-color-rgb-b-range]",
+              ".control-header-color-rgb-b-range",
+              ".control-header-color-rgb-b-number"
             ];
           }
         }],
@@ -8474,9 +11326,7 @@ var control = (function() {
           dependents: function() {
             return [
               ".control-header-position-sticky",
-              ".control-header-position-sticky-helper",
-              ".control-header-position-inline",
-              ".control-header-position-inline-helper"
+              ".control-header-position-inline"
             ];
           }
         }]
@@ -8504,7 +11354,7 @@ var control = (function() {
             ".control-link-item-size-range",
             ".control-link-item-size-number",
             ".control-link-item-size-default",
-            ".control-link-item-display-letcon-show",
+            ".control-link-item-display-visual-show",
             ".control-link-item-display-name-show",
             ".control-link-item-url-show",
             ".control-link-item-line-show",
@@ -8518,27 +11368,74 @@ var control = (function() {
             ".control-link-item-color-by-theme-helper",
             ".control-link-item-color-by-custom",
             ".control-link-item-color-by-custom-helper",
-            "[for=control-link-item-opacity-range]",
-            ".control-link-item-opacity-range",
-            ".control-link-item-opacity-number",
-            ".control-link-item-opacity-default",
+            ".control-link-item-accent-set",
+            ".control-link-item-accent-clear",
+            ".control-link-item-accent-set-helper",
             "[for=control-link-item-border-range]",
             ".control-link-item-border-range",
             ".control-link-item-border-number",
             ".control-link-item-border-default",
             ".control-link-style-block",
-            ".control-link-style-block-helper",
             ".control-link-style-list",
-            ".control-link-style-list-helper",
+            ".control-link-item-color-rgb-color",
+            ".control-link-item-color-rgb-text",
+            ".control-link-item-color-helper",
+            "[for=control-link-item-color-hsl-h-range]",
+            ".control-link-item-color-hsl-h-range",
+            ".control-link-item-color-hsl-h-number",
+            "[for=control-link-item-color-hsl-s-range]",
+            ".control-link-item-color-hsl-s-range",
+            ".control-link-item-color-hsl-s-number",
+            "[for=control-link-item-color-hsl-l-range]",
+            ".control-link-item-color-hsl-l-range",
+            ".control-link-item-color-hsl-l-number",
+            "[for=control-link-item-color-rgb-r-range]",
+            ".control-link-item-color-rgb-r-range",
+            ".control-link-item-color-rgb-r-number",
+            "[for=control-link-item-color-rgb-g-range]",
+            ".control-link-item-color-rgb-g-range",
+            ".control-link-item-color-rgb-g-number",
+            "[for=control-link-item-color-rgb-b-range]",
+            ".control-link-item-color-rgb-b-range",
+            ".control-link-item-color-rgb-b-number",
+            ".control-link-item-color-apply",
+            ".control-link-item-color-clear",
+            ".control-link-item-color-rainbow",
+            "[for=control-link-item-opacity-range]",
+            ".control-link-item-opacity-range",
+            ".control-link-item-opacity-number",
+            ".control-link-item-opacity-default",
+            ".control-link-item-opacity-helper",
+            ".control-link-item-accent-rgb-color",
+            ".control-link-item-accent-rgb-text",
+            ".control-link-item-accent-helper",
+            "[for=control-link-item-accent-hsl-h-range]",
+            ".control-link-item-accent-hsl-h-range",
+            ".control-link-item-accent-hsl-h-number",
+            "[for=control-link-item-accent-hsl-s-range]",
+            ".control-link-item-accent-hsl-s-range",
+            ".control-link-item-accent-hsl-s-number",
+            "[for=control-link-item-accent-hsl-l-range]",
+            ".control-link-item-accent-hsl-l-range",
+            ".control-link-item-accent-hsl-l-number",
+            "[for=control-link-item-accent-rgb-r-range]",
+            ".control-link-item-accent-rgb-r-range",
+            ".control-link-item-accent-rgb-r-number",
+            "[for=control-link-item-accent-rgb-g-range]",
+            ".control-link-item-accent-rgb-g-range",
+            ".control-link-item-accent-rgb-g-number",
+            "[for=control-link-item-accent-rgb-b-range]",
+            ".control-link-item-accent-rgb-b-range",
+            ".control-link-item-accent-rgb-b-number",
+            ".control-link-item-accent-apply",
+            ".control-link-item-accent-clear",
+            ".control-link-item-accent-rainbow",
             ".control-link-orientation-top",
             ".control-link-orientation-bottom",
             ".control-link-orientation-helper",
             ".control-link-sort-name",
             ".control-link-sort-letter",
-            ".control-link-sort-icon",
-            ".control-link-accent-clear",
-            ".control-link-accent-set",
-            ".control-link-accent-set-helper"
+            ".control-link-sort-icon"
           ];
         }
       }, {
@@ -8557,18 +11454,22 @@ var control = (function() {
         }
       }, {
         condition: function() {
-          return (state.get.current().link.show && state.get.current().link.item.display.letcon.show);
+          return (state.get.current().link.show && state.get.current().link.item.display.visual.show);
         },
         dependents: function() {
           return [
-            "[for=control-link-item-display-letcon-letter-size-range]",
-            ".control-link-item-display-letcon-letter-size-range",
-            ".control-link-item-display-letcon-letter-size-number",
-            ".control-link-item-display-letcon-letter-size-default",
-            "[for=control-link-item-display-letcon-icon-size-range]",
-            ".control-link-item-display-letcon-icon-size-range",
-            ".control-link-item-display-letcon-icon-size-number",
-            ".control-link-item-display-letcon-icon-size-default"
+            "[for=control-link-item-display-visual-letter-size-range]",
+            ".control-link-item-display-visual-letter-size-range",
+            ".control-link-item-display-visual-letter-size-number",
+            ".control-link-item-display-visual-letter-size-default",
+            "[for=control-link-item-display-visual-icon-size-range]",
+            ".control-link-item-display-visual-icon-size-range",
+            ".control-link-item-display-visual-icon-size-number",
+            ".control-link-item-display-visual-icon-size-default",
+            "[for=control-link-item-display-visual-image-size-range]",
+            ".control-link-item-display-visual-image-size-range",
+            ".control-link-item-display-visual-image-size-number",
+            ".control-link-item-display-visual-image-size-default"
           ];
         }
       }, {
@@ -8585,7 +11486,7 @@ var control = (function() {
         }
       }, {
         condition: function() {
-          return (state.get.current().link.show && (state.get.current().link.item.display.letcon.show || state.get.current().link.item.display.name.show));
+          return (state.get.current().link.show && (state.get.current().link.item.display.visual.show || state.get.current().link.item.display.name.show));
         },
         dependents: function() {
           return [
@@ -8616,30 +11517,18 @@ var control = (function() {
         }
       }, {
         condition: function() {
-          return (state.get.current().link.show && state.get.current().link.item.display.letcon.show && state.get.current().link.item.display.name.show);
+          return (state.get.current().link.show && state.get.current().link.item.display.visual.show && state.get.current().link.item.display.name.show);
         },
         dependents: function() {
           return [
             ".control-link-item-display-direction-horizontal",
             ".control-link-item-display-direction-vertical",
-            ".control-link-item-display-order-letconname",
-            ".control-link-item-display-order-nameletcon",
-            ".control-link-item-display-direction-vertical-helper",
-            ".control-link-item-display-direction-horizontal-helper",
+            ".control-link-item-display-order-visualname",
+            ".control-link-item-display-order-namevisual",
             "[for=control-link-item-display-gutter-range]",
             ".control-link-item-display-gutter-range",
             ".control-link-item-display-gutter-number",
             ".control-link-item-display-gutter-default"
-          ];
-        }
-      }, {
-        condition: function() {
-          return state.get.current().link.item.color.by == "custom";
-        },
-        dependents: function() {
-          return [
-            ".control-link-item-color-rgb-range",
-            ".control-link-item-color-rgb-text"
           ];
         }
       }],
@@ -8701,8 +11590,26 @@ var control = (function() {
         },
         dependents: function() {
           return [
-            ".control-background-color-rgb-range",
-            ".control-background-color-rgb-text"
+            ".control-background-color-rgb-color",
+            ".control-background-color-rgb-text",
+            "[for=control-background-color-hsl-h-range]",
+            ".control-background-color-hsl-h-range",
+            ".control-background-color-hsl-h-number",
+            "[for=control-background-color-hsl-s-range]",
+            ".control-background-color-hsl-s-range",
+            ".control-background-color-hsl-s-number",
+            "[for=control-background-color-hsl-l-range]",
+            ".control-background-color-hsl-l-range",
+            ".control-background-color-hsl-l-number",
+            "[for=control-background-color-rgb-r-range]",
+            ".control-background-color-rgb-r-range",
+            ".control-background-color-rgb-r-number",
+            "[for=control-background-color-rgb-g-range]",
+            ".control-background-color-rgb-g-range",
+            ".control-background-color-rgb-g-number",
+            "[for=control-background-color-rgb-b-range]",
+            ".control-background-color-rgb-b-range",
+            ".control-background-color-rgb-b-number"
           ];
         }
       }, {

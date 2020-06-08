@@ -172,7 +172,7 @@ var menu = (function() {
       var allMenuNavBody = helper.eA(".menu-subnav");
       allMenuNavBody.forEach(function(arrayItem, index) {
         helper.addClass(arrayItem, "active");
-        arrayItem.setAttribute("style", "--menu-subnav-height:" + arrayItem.getBoundingClientRect().height + "px;");
+        arrayItem.setAttribute("style", "--menu-subnav-height: " + arrayItem.getBoundingClientRect().height + "px;");
         helper.removeClass(arrayItem, "active");
       });
     }
@@ -251,6 +251,7 @@ var menu = (function() {
     mod.close();
     render.removeStyle();
     render.subnav.height();
+    render.nav.active();
   };
 
   return {

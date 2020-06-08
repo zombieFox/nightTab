@@ -152,6 +152,11 @@ var state = (function() {
       },
       color: {
         by: "theme",
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
         rgb: {
           r: 0,
           g: 0,
@@ -173,7 +178,23 @@ var state = (function() {
       },
       item: {
         color: {
-          by: "theme",
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
+          rgb: {
+            r: 0,
+            g: 0,
+            b: 0
+          }
+        },
+        accent: {
+          hsl: {
+            h: 0,
+            s: 0,
+            l: 0
+          },
           rgb: {
             r: 0,
             g: 0,
@@ -181,12 +202,15 @@ var state = (function() {
           }
         },
         display: {
-          letcon: {
+          visual: {
             show: true,
             letter: {
               size: 3
             },
             icon: {
+              size: 3
+            },
+            image: {
               size: 3
             }
           },
@@ -196,7 +220,7 @@ var state = (function() {
           },
           gutter: 2,
           direction: "vertical",
-          order: "letconname",
+          order: "visualname",
           alignment: "centercenter",
           rotate: 0,
           translate: {
@@ -322,6 +346,11 @@ var state = (function() {
     background: {
       color: {
         by: "theme",
+        hsl: {
+          h: 0,
+          s: 0,
+          l: 0
+        },
         rgb: {
           r: 0,
           g: 0,
@@ -415,11 +444,14 @@ var state = (function() {
       },
       item: {
         display: {
-          letcon: {
+          visual: {
             letter: {
               size: 3
             },
             icon: {
+              size: 3
+            },
+            image: {
               size: 3
             }
           },

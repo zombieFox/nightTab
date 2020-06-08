@@ -4,7 +4,7 @@
   </div>
   <div class="menu-item-form">
     <div class="form-wrap">
-      <label class="control-link-item-display-alignment-label">Letter/Icon and Name position</label>
+      <label class="control-link-item-display-alignment-label">Letter/Icon/Image and Name position</label>
     </div>
     <div class="form-wrap">
       <div class="form-grid form-grid-3x3 control-link-item-display-alignment-grid">
@@ -85,32 +85,50 @@
     <hr>
     <div class="form-wrap">
       <input id="control-link-item-display-direction-horizontal" class="control-link-item-display-direction-horizontal" type="radio" name="control-link-item-display-direction" value="horizontal" tabindex="-1">
-      <label for="control-link-item-display-direction-horizontal"><span class="label-icon"></span> Align horizontally</label>
+      <label for="control-link-item-display-direction-horizontal">
+        <span class="label-icon"></span>
+        <span class="label-block">
+          <span class="label-block-item">Align horizontally</span>
+          <span class="label-block-item small muted">Works well with Bookmark Block Style.</span>
+        </span>
+      </label>
     </div>
     <div class="form-wrap">
       <input id="control-link-item-display-direction-vertical" class="control-link-item-display-direction-vertical" type="radio" name="control-link-item-display-direction" value="vertical" tabindex="-1">
-      <label for="control-link-item-display-direction-vertical"><span class="label-icon"></span> Align vertically</label>
+      <label for="control-link-item-display-direction-vertical">
+        <span class="label-icon"></span>
+        <span class="label-block">
+          <span class="label-block-item">Align vertically</span>
+          <span class="label-block-item small muted">Works well with Bookmark List Style.</span>
+        </span>
+      </label>
     </div>
     <div class="form-helper">
-      <p class="control-link-item-display-direction-vertical-helper form-helper-item">Vertical alignment works well with Bookmark Block Style.</p>
-    </div>
-    <div class="form-helper">
-      <p class="control-link-item-display-direction-horizontal-helper form-helper-item">Horizontal alignment works well with Bookmark List Style.</p>
-    </div>
-    <div class="form-helper">
-      <p class="control-link-item-display-direction-helper form-helper-item">Only available when Letter/Icon and Name are shown.</p>
+      <p class="control-link-item-display-direction-helper form-helper-item">Only available when Letter/Icon/Image and Name are shown.</p>
     </div>
     <hr>
     <div class="form-wrap">
-      <input id="control-link-item-display-order-letconname" class="control-link-item-display-order-letconname" type="radio" name="control-link-item-display-order" value="letconname" tabindex="-1">
-      <label for="control-link-item-display-order-letconname"><span class="label-icon"></span> Order Letter/Icon then Name</label>
+      <input id="control-link-item-display-order-visualname" class="control-link-item-display-order-visualname" type="radio" name="control-link-item-display-order" value="visualname" tabindex="-1">
+      <label for="control-link-item-display-order-visualname">
+        <span class="label-icon"></span>
+        <span class="label-block">
+          <span class="label-block-item">Letter/Icon/Image then Name</span>
+          <span class="label-block-item small muted">Stack the Letter/Icon/Image before the Name.</span>
+        </span>
+      </label>
     </div>
     <div class="form-wrap">
-      <input id="control-link-item-display-order-nameletcon" class="control-link-item-display-order-nameletcon" type="radio" name="control-link-item-display-order" value="nameletcon" tabindex="-1">
-      <label for="control-link-item-display-order-nameletcon"><span class="label-icon"></span> Order Name then Letter/Icon</label>
+      <input id="control-link-item-display-order-namevisual" class="control-link-item-display-order-namevisual" type="radio" name="control-link-item-display-order" value="namevisual" tabindex="-1">
+      <label for="control-link-item-display-order-namevisual">
+        <span class="label-icon"></span>
+        <span class="label-block">
+          <span class="label-block-item">Name then Letter/Icon/Image</span>
+          <span class="label-block-item small muted">Stack the Name before the Letter/Icon/Image.</span>
+        </span>
+      </label>
     </div>
     <div class="form-helper">
-      <p class="control-link-item-display-order-helper form-helper-item">Only available when Letter/Icon and Name are shown.</p>
+      <p class="control-link-item-display-order-helper form-helper-item">Only available when Letter/Icon/Image and Name are shown.</p>
     </div>
   </div>
 </div>

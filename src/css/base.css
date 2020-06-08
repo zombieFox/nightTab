@@ -4,11 +4,12 @@
 }
 
 html {
+  background-color: rgb(var(--background-color-theme));
   font-size: var(--theme-root-font-size);
 }
 
 body {
-  background-color: rgb(var(--theme-black));
+  background-color: rgb(var(--background-color-theme));
   color: rgb(var(--theme-style-text));
   font-size: 1rem;
   line-height: 1.6;

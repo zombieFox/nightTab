@@ -4,14 +4,75 @@
   </div>
   <div class="menu-item-form">
     <div class="form-wrap">
-      <button class="control-link-accent-clear button button-line" tabindex="-1">Remove all override colours</button>
+      <div class="form-group form-group-block">
+        <input id="control-link-item-accent-rgb-color" class="form-group-item-half control-link-item-accent-rgb-color" type="color" value="#000000" tabindex="1">
+        <input id="control-link-item-accent-rgb-text" class="form-group-item-half control-link-item-accent-rgb-text" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="form-helper">
+      <p class="control-link-item-color-helper form-helper-item">Apply an Accent override to all Bookmarks.</p>
+      <p class="control-link-item-color-helper form-helper-item">Accent overrides can also be changed by editing individual Bookmarks.</p>
+    </div>
+    <div class="form-wrap">
+      <div class="form-indent">
+        <hr>
+        <div class="form-wrap">
+          <div class="form-group form-group-block">
+            <label for="control-link-item-accent-hsl-h-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Hue</label>
+            <input id="control-link-item-accent-hsl-h-range" class="control-link-item-accent-hsl-h-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-link-item-accent-hsl-h-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          </div>
+        </div>
+        <div class="form-wrap">
+          <div class="form-group form-group-block">
+            <label for="control-link-item-accent-hsl-s-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Saturation</label>
+            <input id="control-link-item-accent-hsl-s-range" class="control-link-item-accent-hsl-s-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-link-item-accent-hsl-s-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          </div>
+        </div>
+        <div class="form-wrap">
+          <div class="form-group form-group-block">
+            <label for="control-link-item-accent-hsl-l-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Lightness</label>
+            <input id="control-link-item-accent-hsl-l-range" class="control-link-item-accent-hsl-l-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-link-item-accent-hsl-l-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          </div>
+        </div>
+        <hr>
+        <div class="form-wrap">
+          <div class="form-group form-group-block">
+            <label for="control-link-item-accent-rgb-r-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Red</label>
+            <input id="control-link-item-accent-rgb-r-range" class="control-link-item-accent-rgb-r-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-link-item-accent-rgb-r-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          </div>
+        </div>
+        <div class="form-wrap">
+          <div class="form-group form-group-block">
+            <label for="control-link-item-accent-rgb-g-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Green</label>
+            <input id="control-link-item-accent-rgb-g-range" class="control-link-item-accent-rgb-g-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-link-item-accent-rgb-g-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          </div>
+        </div>
+        <div class="form-wrap">
+          <div class="form-group form-group-block">
+            <label for="control-link-item-accent-rgb-b-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Blue</label>
+            <input id="control-link-item-accent-rgb-b-range" class="control-link-item-accent-rgb-b-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-link-item-accent-rgb-b-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+          </div>
+        </div>
+      </div>
     </div>
     <hr>
     <div class="form-wrap">
-      <button class="control-link-accent-set button button-line" tabindex="-1">Add override colours</button>
+      <div class="form-inline">
+        <button class="control-link-item-accent-apply button button-line" tabindex="-1">Apply to all</button>
+        <button class="control-link-item-accent-clear button button-line" tabindex="-1">Clear all</button>
+      </div>
     </div>
-    <div class="form-helper">
-      <p class="control-link-accent-set-helper form-helper-item">Adds a unique override colour to each Bookmark.</p>
+    <hr>
+    <div class="form-wrap">
+      <div class="form-inline">
+        <button class="control-link-item-accent-rainbow button button-line" tabindex="-1">Apply unique accent to each</button>
+      </div>
     </div>
   </div>
 </div>
