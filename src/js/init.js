@@ -1,6 +1,5 @@
 // log version
 console.log("nightTab version", version.get().number, version.get().name);
-ready.init();
 data.init();
 state.init();
 header.init();
@@ -21,3 +20,4 @@ modal.init();
 shade.init();
 dropdown.init();
 version.init();
+ready.init();
