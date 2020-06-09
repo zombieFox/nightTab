@@ -1602,9 +1602,9 @@ var link = (function() {
           displayImageRadio.checked = false;
           displayLetterInput.removeAttribute("disabled");
           displayIconInput.setAttribute("disabled", "");
+          displayImageInput.setAttribute("disabled", "");
           helper.addClass(displayIconFormGroupText, "disabled");
-          displayIconInput.setAttribute("disabled", "");
-          helper.addClass(displayIconHelper, "disabled");
+          helper.addClass(displayIconHelperItem, "disabled");
           displayIconFormGroupClear.setAttribute("disabled", "");
           displayIconFormGroupText.tabIndex = -1;
           displayImageInput.setAttribute("disabled", "");
@@ -1615,9 +1615,9 @@ var link = (function() {
           displayImageRadio.checked = false;
           displayLetterInput.setAttribute("disabled", "");
           displayIconInput.removeAttribute("disabled");
+          displayImageInput.setAttribute("disabled", "");
           helper.removeClass(displayIconFormGroupText, "disabled");
-          displayIconInput.removeAttribute("disabled");
-          helper.removeClass(displayIconHelper, "disabled");
+          helper.removeClass(displayIconHelperItem, "disabled");
           displayIconFormGroupClear.removeAttribute("disabled");
           displayIconFormGroupText.tabIndex = 1;
           displayImageInput.setAttribute("disabled", "");
