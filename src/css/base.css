@@ -21,7 +21,7 @@ body {
   align-items: center;
   min-height: 100vh;
   opacity: 0;
-  transition: background-color var(--layout-timing-medium), opacity var(--layout-duration-02) ease;
+  transition: background-color var(--layout-timing-extra-fast), opacity var(--layout-duration-02) ease;
 }
 
 .is-ready body {
