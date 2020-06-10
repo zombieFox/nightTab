@@ -2433,22 +2433,30 @@ var link = (function() {
       });
     },
     display: {
-      letter: {
-        size: function() {
-          var html = helper.e("html");
-          html.style.setProperty("--link-item-display-letter-size", state.get.current().link.item.display.visual.letter.size + "em");
-        }
-      },
-      icon: {
-        size: function() {
-          var html = helper.e("html");
-          html.style.setProperty("--link-item-display-icon-size", state.get.current().link.item.display.visual.icon.size + "em");
-        }
-      },
-      image: {
-        size: function() {
-          var html = helper.e("html");
-          html.style.setProperty("--link-item-display-image-size", state.get.current().link.item.display.visual.image.size + "em");
+      visual: {
+        letter: {
+          size: function() {
+            var html = helper.e("html");
+            html.style.setProperty("--link-item-display-letter-size", state.get.current().link.item.display.visual.letter.size + "em");
+          }
+        },
+        icon: {
+          size: function() {
+            var html = helper.e("html");
+            html.style.setProperty("--link-item-display-icon-size", state.get.current().link.item.display.visual.icon.size + "em");
+          }
+        },
+        image: {
+          size: function() {
+            var html = helper.e("html");
+            html.style.setProperty("--link-item-display-image-size", state.get.current().link.item.display.visual.image.size + "em");
+          }
+        },
+        shadow: {
+          size: function() {
+            var html = helper.e("html");
+            html.style.setProperty("--link-item-display-visual-shadow-size", state.get.current().link.item.display.visual.shadow.size);
+          }
         }
       }
     },
@@ -3178,9 +3186,10 @@ var link = (function() {
     render.group.openall.opacity();
     render.group.border();
     render.item.size();
-    render.item.display.letter.size();
-    render.item.display.icon.size();
-    render.item.display.image.size();
+    render.item.display.visual.letter.size();
+    render.item.display.visual.icon.size();
+    render.item.display.visual.image.size();
+    render.item.display.visual.shadow.size();
     render.item.name();
     render.item.border();
     render.item.rotate();

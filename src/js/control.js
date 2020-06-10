@@ -344,7 +344,6 @@ var control = (function() {
           func: function() {
             mod.default("layout.size");
             layout.render.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -436,7 +435,6 @@ var control = (function() {
           func: function() {
             mod.default("layout.width");
             layout.render.width();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -624,7 +622,6 @@ var control = (function() {
           func: function() {
             mod.default("layout.padding");
             layout.render.padding();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -714,7 +711,6 @@ var control = (function() {
           func: function() {
             mod.default("layout.gutter");
             layout.render.gutter();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -851,7 +847,6 @@ var control = (function() {
           func: function() {
             mod.default("header.area.width");
             header.render.area.width();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -874,7 +869,6 @@ var control = (function() {
           func: function() {
             mod.match("header.area.width", "link.area.width");
             header.render.area.width();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -1109,7 +1103,6 @@ var control = (function() {
           func: function() {
             mod.default("header.greeting.size");
             header.render.greeting.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -1251,7 +1244,6 @@ var control = (function() {
           func: function() {
             mod.default("header.transitional.size");
             header.render.transitional.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -1515,7 +1507,6 @@ var control = (function() {
           func: function() {
             mod.default("header.clock.size");
             header.render.clock.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -1968,7 +1959,6 @@ var control = (function() {
           func: function() {
             mod.default("header.date.size");
             header.render.date.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -2108,7 +2098,6 @@ var control = (function() {
           func: function() {
             mod.default("header.search.width.size");
             header.render.search.width.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -2345,7 +2334,6 @@ var control = (function() {
           func: function() {
             mod.default("header.search.size");
             header.render.search.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -2497,7 +2485,6 @@ var control = (function() {
           func: function() {
             mod.default("header.editAdd.size");
             header.render.editadd.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -2693,7 +2680,6 @@ var control = (function() {
           func: function() {
             mod.default("header.colorAccent.size");
             header.render.coloraccent.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -2843,7 +2829,6 @@ var control = (function() {
           func: function() {
             mod.default("header.menu.size");
             header.render.menu.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -2942,7 +2927,6 @@ var control = (function() {
             mod.default("header.border.top");
             header.render.border();
             render.class();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -2986,7 +2970,6 @@ var control = (function() {
             mod.default("header.border.bottom");
             header.render.border();
             render.class();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -3812,7 +3795,6 @@ var control = (function() {
           func: function() {
             mod.default("header.color.opacity");
             header.render.opacity();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -3911,7 +3893,6 @@ var control = (function() {
           func: function() {
             mod.default("link.area.width");
             link.render.area.width();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -3934,7 +3915,6 @@ var control = (function() {
           func: function() {
             mod.match("link.area.width", "header.area.width");
             link.render.area.width();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -4102,7 +4082,6 @@ var control = (function() {
           func: function() {
             mod.default("link.item.size");
             link.render.item.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -4243,7 +4222,6 @@ var control = (function() {
           func: function() {
             mod.default("link.item.display.rotate");
             link.render.item.rotate();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -4290,7 +4268,6 @@ var control = (function() {
           func: function() {
             mod.default("link.item.display.translate.x");
             link.render.item.translate.x();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -4337,7 +4314,6 @@ var control = (function() {
           func: function() {
             mod.default("link.item.display.translate.y");
             link.render.item.translate.y();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -4378,7 +4354,6 @@ var control = (function() {
           func: function() {
             mod.default("link.item.display.gutter");
             link.render.item.gutter();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -4435,7 +4410,7 @@ var control = (function() {
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.letter.size();
+            link.render.item.display.visual.letter.size();
           }
         }, {
           element: ".control-link-item-display-visual-letter-size-number",
@@ -4454,15 +4429,14 @@ var control = (function() {
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.letter.size();
+            link.render.item.display.visual.letter.size();
           }
         }, {
           element: ".control-link-item-display-visual-letter-size-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.visual.letter.size");
-            link.render.item.display.letter.size();
-            render.update.control.header();
+            link.render.item.display.visual.letter.size();
             render.update.control.menu();
           }
         }, {
@@ -4482,7 +4456,7 @@ var control = (function() {
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.icon.size();
+            link.render.item.display.visual.icon.size();
           }
         }, {
           element: ".control-link-item-display-visual-icon-size-number",
@@ -4501,15 +4475,14 @@ var control = (function() {
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.icon.size();
+            link.render.item.display.visual.icon.size();
           }
         }, {
           element: ".control-link-item-display-visual-icon-size-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.visual.icon.size");
-            link.render.item.display.icon.size();
-            render.update.control.header();
+            link.render.item.display.visual.icon.size();
             render.update.control.menu();
           }
         }, {
@@ -4529,7 +4502,7 @@ var control = (function() {
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.image.size();
+            link.render.item.display.visual.image.size();
           }
         }, {
           element: ".control-link-item-display-visual-image-size-number",
@@ -4548,15 +4521,57 @@ var control = (function() {
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.display.image.size();
+            link.render.item.display.visual.image.size();
           }
         }, {
           element: ".control-link-item-display-visual-image-size-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.visual.image.size");
-            link.render.item.display.image.size();
-            render.update.control.header();
+            link.render.item.display.visual.image.size();
+            render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-visual-shadow-size-range",
+          path: "link.item.display.visual.shadow.size",
+          type: "range",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-visual-shadow-size-number",
+            path: "link.item.display.visual.shadow.size",
+            type: "number"
+          }],
+          func: function() {
+            link.render.item.display.visual.shadow.size();
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-visual-shadow-size-number",
+          path: "link.item.display.visual.shadow.size",
+          type: "number",
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-display-visual-shadow-size-range",
+            path: "link.item.display.visual.shadow.size",
+            type: "range"
+          }],
+          func: function() {
+            link.render.item.display.visual.shadow.size();
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-display-visual-shadow-size-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.display.visual.shadow.size");
+            link.render.item.display.visual.shadow.size();
+            render.class();
             render.update.control.menu();
           }
         }],
@@ -4612,7 +4627,6 @@ var control = (function() {
           func: function() {
             mod.default("link.item.display.name.size");
             link.render.item.name();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -5406,7 +5420,6 @@ var control = (function() {
           func: function() {
             mod.default("link.item.opacity");
             link.render.item.opacity();
-            render.update.control.header();
             render.update.control.menu();
             render.class();
           }
@@ -6184,7 +6197,6 @@ var control = (function() {
             mod.default("link.item.border");
             render.class();
             link.render.item.border();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -6370,7 +6382,6 @@ var control = (function() {
           func: function() {
             mod.default("group.name.size");
             link.render.group.name.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -6480,7 +6491,6 @@ var control = (function() {
           func: function() {
             mod.default("group.openAll.size");
             link.render.group.openall.size();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6572,7 +6582,6 @@ var control = (function() {
             mod.default("group.border");
             link.render.group.border();
             render.class();
-            render.update.control.header();
             render.update.control.menu();
           }
         }]
@@ -6607,7 +6616,6 @@ var control = (function() {
           func: function() {
             mod.default("theme.font.display.name");
             theme.render.font.display.name();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6633,7 +6641,6 @@ var control = (function() {
           func: function() {
             mod.default("theme.font.display.weight");
             theme.render.font.display.weight();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6659,7 +6666,6 @@ var control = (function() {
           func: function() {
             theme.mod.font.display.light();
             theme.render.font.display.weight();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6668,7 +6674,6 @@ var control = (function() {
           func: function() {
             theme.mod.font.display.regular();
             theme.render.font.display.weight();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6677,7 +6682,6 @@ var control = (function() {
           func: function() {
             theme.mod.font.display.bold();
             theme.render.font.display.weight();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6700,7 +6704,6 @@ var control = (function() {
           func: function() {
             mod.default("theme.font.display.style");
             theme.render.font.display.style();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6716,7 +6719,6 @@ var control = (function() {
           func: function() {
             mod.default("theme.font.ui.name");
             theme.render.font.ui.name();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6742,7 +6744,6 @@ var control = (function() {
           func: function() {
             mod.default("theme.font.ui.weight");
             theme.render.font.ui.weight();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6768,7 +6769,6 @@ var control = (function() {
           func: function() {
             theme.mod.font.ui.light();
             theme.render.font.ui.weight();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6777,7 +6777,6 @@ var control = (function() {
           func: function() {
             theme.mod.font.ui.regular();
             theme.render.font.ui.weight();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6786,7 +6785,6 @@ var control = (function() {
           func: function() {
             theme.mod.font.ui.bold();
             theme.render.font.ui.weight();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -6809,7 +6807,6 @@ var control = (function() {
           func: function() {
             mod.default("theme.font.ui.style");
             theme.render.font.ui.style();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -7705,7 +7702,6 @@ var control = (function() {
             theme.mod.color.generated();
             theme.render.color.shade();
             theme.render.themeMetaTag();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -7758,7 +7754,6 @@ var control = (function() {
             theme.mod.color.generated();
             theme.render.color.shade();
             theme.render.themeMetaTag();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -8655,7 +8650,6 @@ var control = (function() {
             mod.default("theme.accent.cycle.speed");
             theme.bind.accent.cycle.remove();
             theme.bind.accent.cycle.add();
-            render.update.control.header();
             render.update.control.menu();
           }
         }, {
@@ -8699,7 +8693,6 @@ var control = (function() {
             mod.default("theme.accent.cycle.step");
             theme.bind.accent.cycle.remove();
             theme.bind.accent.cycle.add();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -8749,7 +8742,6 @@ var control = (function() {
           func: function() {
             mod.default("theme.radius");
             theme.render.radius();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -8797,7 +8789,6 @@ var control = (function() {
           func: function() {
             mod.default("theme.shadow");
             theme.render.shadow();
-            render.update.control.header();
             render.update.control.menu();
           }
         }],
@@ -8845,7 +8836,6 @@ var control = (function() {
           func: function() {
             mod.default("theme.shade.opacity");
             theme.render.shade.opacity();
-            render.update.control.header();
             render.update.control.menu();
           }
         }]
@@ -10669,6 +10659,14 @@ var control = (function() {
         name: "is-link-item-display-visual-show"
       }, {
         remove: [
+          "is-link-item-display-visual-shadow-show"
+        ],
+        condition: function() {
+          return (state.get.current().link.item.display.visual.shadow.size > 0);
+        },
+        name: "is-link-item-display-visual-shadow-show"
+      }, {
+        remove: [
           "is-link-style-list",
           "is-link-style-block"
         ],
@@ -11479,7 +11477,12 @@ var control = (function() {
             "[for=control-link-item-display-visual-image-size-range]",
             ".control-link-item-display-visual-image-size-range",
             ".control-link-item-display-visual-image-size-number",
-            ".control-link-item-display-visual-image-size-default"
+            ".control-link-item-display-visual-image-size-default",
+            "[for=control-link-item-display-visual-shadow-size-range]",
+            ".control-link-item-display-visual-shadow-size-range",
+            ".control-link-item-display-visual-shadow-size-number",
+            ".control-link-item-display-visual-shadow-size-default",
+            ".control-link-item-display-visual-shadow-size-helper"
           ];
         }
       }, {

@@ -1080,8 +1080,13 @@ var update = (function() {
       return data;
     },
     "5.34.0": function(data) {
-      console.log(data);
       data.state.header.search.engine.custom.queryName = "";
+      return data;
+    },
+    "5.35.0": function(data) {
+      data.state.link.item.display.visual.shadow = {
+        size: 0
+      };
       return data;
     }
   };

@@ -125,6 +125,15 @@
   --link-item-opacity:                                  1;
   --link-item-padding:                                  1;
   --link-item-clip-padding:                             1em;
+  --link-item-display-visual-shadow-size:               1;
+  --link-item-display-visual-shadow-offset:             0.02em;
+  --link-item-display-visual-shadow-blur:               0.02em;
+  --link-item-display-visual-shadow-opacity:            0.1;
+  --link-item-display-visual-shadow:
+                                                        0 calc(var(--link-item-display-visual-shadow-size) * var(--link-item-display-visual-shadow-offset) * 1) calc(var(--link-item-display-visual-shadow-size) * var(--link-item-display-visual-shadow-blur) * 1) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-opacity) * 3)),
+                                                        0 calc(var(--link-item-display-visual-shadow-size) * var(--link-item-display-visual-shadow-offset) * 2) calc(var(--link-item-display-visual-shadow-size) * var(--link-item-display-visual-shadow-blur) * 2) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-opacity) * 2)),
+                                                        0 calc(var(--link-item-display-visual-shadow-size) * var(--link-item-display-visual-shadow-offset) * 3) calc(var(--link-item-display-visual-shadow-size) * var(--link-item-display-visual-shadow-blur) * 3) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-opacity) * 1));
+
   /* layout */
   --layout-size:                                        1;
   --layout-width:                                       80%;

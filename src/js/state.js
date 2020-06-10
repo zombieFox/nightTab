@@ -213,6 +213,9 @@ var state = (function() {
             },
             image: {
               size: 3
+            },
+            shadow: {
+              size: 0
             }
           },
           name: {
@@ -454,6 +457,9 @@ var state = (function() {
             },
             image: {
               size: 3
+            },
+            shadow: {
+              size: 0
             }
           },
           name: {

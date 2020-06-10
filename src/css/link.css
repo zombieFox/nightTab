@@ -634,6 +634,10 @@
   align-items: center;
 }
 
+.is-link-item-display-visual-shadow-show .link-display-visual {
+  text-shadow: var(--link-item-display-visual-shadow);
+}
+
 .link-display-letter {
   font-family: var(--theme-font-display-name);
   font-weight: var(--theme-font-display-weight);
