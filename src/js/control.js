@@ -2225,6 +2225,14 @@ var control = (function() {
             search.render.engine();
           }
         }, {
+          element: ".control-header-search-engine-custom-queryname",
+          path: "header.search.engine.custom.queryName",
+          type: "text",
+          func: function() {
+            console.log("hit");
+            search.render.engine();
+          }
+        }, {
           element: ".control-header-search-text-justify-left",
           path: "header.search.text.justify",
           type: "radio",
@@ -11197,6 +11205,8 @@ var control = (function() {
               ".control-header-search-engine-custom-name",
               "[for=control-header-search-engine-custom-url]",
               ".control-header-search-engine-custom-url",
+              "[for=control-header-search-engine-custom-queryname]",
+              ".control-header-search-engine-custom-queryname",
               ".control-header-search-engine-custom-helper"
             ];
           }

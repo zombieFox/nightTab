@@ -1078,6 +1078,11 @@ var update = (function() {
         l: 0
       };
       return data;
+    },
+    "5.34.0": function(data) {
+      console.log(data);
+      data.state.header.search.engine.custom.queryName = "";
+      return data;
     }
   };
 

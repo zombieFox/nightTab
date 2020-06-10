@@ -113,7 +113,8 @@ var state = (function() {
           },
           custom: {
             url: "",
-            name: ""
+            name: "",
+            queryName: ""
           }
         },
         text: {
