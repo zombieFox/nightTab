@@ -2073,6 +2073,54 @@ var theme = (function() {
       shade: {
         opacity: 0.2
       }
+    }, {
+      name: "Nord",
+      font: {
+        display: {
+          name: "Rubik",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "Inter",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 220,
+          s: 16,
+          l: 41
+        },
+        rgb: {
+          r: 88,
+          g: 99,
+          b: 121
+        },
+        contrast: {
+          light: 5.3,
+          dark: 2.5
+        }
+      },
+      accent: {
+        hsl: {
+          h: 213,
+          s: 32,
+          l: 52
+        },
+        rgb: {
+          r: 94,
+          g: 129,
+          b: 172
+        }
+      },
+      radius: 0.75,
+      shadow: 1,
+      style: "dark",
+      shade: {
+        opacity: 0.05
+      }
     }]
   };
 
