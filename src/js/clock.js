@@ -112,9 +112,10 @@ var clock = (function() {
       };
       if (state.get.current().header.clock.separator.show) {
         var separatorCharacter;
-        if (state.get.current().header.clock.separator.text.trim().replace(/\s\s+/g, " ") != "") {
+        if (typeof state.get.current().header.clock.separator.text == "string" && state.get.current().header.clock.separator.text != "") {
           separatorCharacter = state.get.current().header.clock.separator.text.trim().replace(/\s\s+/g, " ");
-        } else {
+        };
+        if (separatorCharacter == "" || separatorCharacter == " " || separatorCharacter == undefined) {
           separatorCharacter = ":";
         };
         var parts = clock.querySelectorAll("span");

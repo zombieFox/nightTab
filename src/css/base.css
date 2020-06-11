@@ -1,6 +1,6 @@
 ::selection {
   background-color: rgb(var(--theme-accent));
-  color: rgb(var(--theme-white));
+  color: hsl(var(--theme-accent-accessible-color));
 }
 
 html {

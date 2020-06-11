@@ -129,10 +129,11 @@ var date = (function() {
       };
       if (state.get.current().header.date.separator.show) {
         var separatorCharacter;
-        if (state.get.current().header.date.separator.text.trim().replace(/\s\s+/g, " ") != "") {
-         separatorCharacter = state.get.current().header.date.separator.text.trim().replace(/\s\s+/g, " ");
-        } else {
-         separatorCharacter = "/";
+        if (typeof state.get.current().header.date.separator.text == "string" && state.get.current().header.date.separator.text != "") {
+          separatorCharacter = state.get.current().header.date.separator.text.trim().replace(/\s\s+/g, " ");
+        };
+        if (separatorCharacter == "" || separatorCharacter == " " || separatorCharacter == undefined) {
+          separatorCharacter = "/";
         };
         var parts = date.querySelectorAll("span");
         if (parts.length > 1) {

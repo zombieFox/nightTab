@@ -18,9 +18,12 @@ var link = (function() {
   };
 
   stagedGroup.init = function() {
-    stagedGroup.group.items = [];
+    stagedGroup.position.origin = 0;
+    stagedGroup.position.destination = 0;
+    stagedGroup.group.name.text = "";
     stagedGroup.group.name.show = true;
     stagedGroup.group.openAll.show = true;
+    stagedGroup.group.items = [];
   };
 
   stagedGroup.reset = function() {
@@ -66,7 +69,6 @@ var link = (function() {
       },
       name: null,
       url: null,
-      timeStamp: null,
       accent: {
         by: null,
         hsl: {
@@ -94,6 +96,7 @@ var link = (function() {
         }
       },
       image: null,
+      timeStamp: null,
       searchMatch: null
     }
   };
@@ -104,10 +107,17 @@ var link = (function() {
     stagedLink.position.destination.group = 0;
     stagedLink.position.destination.item = 0;
     stagedLink.position.group.new = false;
-    stagedLink.position.group.name.show = false;
-    stagedLink.position.group.openAll.show = false;
+    stagedLink.position.group.name.show = true;
+    stagedLink.position.group.name.text = "";
+    stagedLink.position.group.openAll.show = true;
     stagedLink.link.visual.display = "letter";
+    stagedLink.link.visual.letter = "";
+    stagedLink.link.visual.image = "";
+    stagedLink.link.visual.icon.name = "";
+    stagedLink.link.visual.icon.prefix = "";
+    stagedLink.link.visual.icon.label = "";
     stagedLink.link.name = "";
+    stagedLink.link.url = "";
     stagedLink.link.accent.by = "theme";
     stagedLink.link.accent.hsl.h = 0;
     stagedLink.link.accent.hsl.s = 0;
@@ -132,7 +142,9 @@ var link = (function() {
     stagedLink.position.destination.group = null;
     stagedLink.position.destination.item = null;
     stagedLink.position.group.new = null;
+    stagedLink.position.group.name.show = null;
     stagedLink.position.group.name.text = null;
+    stagedLink.position.group.openAll.show = null;
     stagedLink.link.visual.display = null;
     stagedLink.link.visual.letter = null;
     stagedLink.link.visual.image = null;
@@ -141,7 +153,6 @@ var link = (function() {
     stagedLink.link.visual.icon.label = null;
     stagedLink.link.name = null;
     stagedLink.link.url = null;
-    stagedLink.link.timeStamp = null;
     stagedLink.link.accent.by = null;
     stagedLink.link.accent.hsl.h = null;
     stagedLink.link.accent.hsl.s = null;
@@ -157,6 +168,7 @@ var link = (function() {
     stagedLink.link.color.rgb.g = null;
     stagedLink.link.color.rgb.b = null;
     stagedLink.link.image = null;
+    stagedLink.link.timeStamp = null;
     stagedLink.link.searchMatch = null;
   };
 
@@ -904,7 +916,7 @@ var link = (function() {
           value: "link-item"
         }]
       };
-      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || (stagedLink.link.image != null && stagedLink.link.image != "")) {
+      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || (stagedLink.link.image != null && typeof stagedLink.link.image == "string" && stagedLink.link.image != "")) {
         linkItemOptions.attr.push({
           key: "style",
           value: ""
@@ -985,9 +997,9 @@ var link = (function() {
           }]
         });
       };
-      var nameText = stagedLink.link.name.trim();
-      if (nameText == null) {
-        nameText = "";
+      var nameText = "";
+      if (typeof stagedLink.link.name == "string" && stagedLink.link.name != "") {
+        nameText = stagedLink.link.name.trim().replace(/\s\s+/g, " ");
       };
       var linkDisplayName = helper.node("p:" + nameText + "|class:link-display-name");
 

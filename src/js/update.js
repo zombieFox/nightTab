@@ -967,7 +967,7 @@ var update = (function() {
       };
       return data;
     },
-    "5.32.0": function(data) {
+    "5.37.1": function(data) {
       data.bookmarks.forEach(function(arrayItem, index) {
         arrayItem.items.forEach(function(arrayItem, index) {
           arrayItem.accent.color.rgb = {
@@ -994,9 +994,6 @@ var update = (function() {
           delete arrayItem.accent.color.b;
         });
       });
-      return data;
-    },
-    "5.33.0": function(data) {
       data.bookmarks.forEach(function(arrayItem, index) {
         arrayItem.items.forEach(function(arrayItem, index) {
           arrayItem.visual = {
@@ -1077,13 +1074,7 @@ var update = (function() {
         s: 0,
         l: 0
       };
-      return data;
-    },
-    "5.34.0": function(data) {
       data.state.header.search.engine.custom.queryName = "";
-      return data;
-    },
-    "5.35.0": function(data) {
       data.state.link.item.display.visual.shadow = {
         size: 0
       };

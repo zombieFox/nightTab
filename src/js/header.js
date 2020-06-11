@@ -373,7 +373,7 @@ var header = (function() {
       var headerSearchBody = helper.node("div|class:search-wrapper");
       var form = helper.node("form|class:search,action,method:get");
       var searchInput;
-      if (state.get.current().header.search.engine.custom.queryName != "") {
+      if (typeof state.get.current().header.search.engine.custom.queryName == "string" && state.get.current().header.search.engine.custom.queryName != "") {
         searchInput = helper.node("input|class:search-input,type:search,placeholder:Find or Search,name:" + state.get.current().header.search.engine.custom.queryName.trim() + ",autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,tabindex:1");
       } else {
         searchInput = helper.node("input|class:search-input,type:search,placeholder:Find or Search,name:q,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,tabindex:1");
