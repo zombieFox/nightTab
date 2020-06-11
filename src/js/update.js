@@ -970,6 +970,18 @@ var update = (function() {
     "5.37.1": function(data) {
       data.bookmarks.forEach(function(arrayItem, index) {
         arrayItem.items.forEach(function(arrayItem, index) {
+          if (arrayItem.name == null) {
+            arrayItem.name = "";
+          };
+          for (var key in arrayItem.accent.color) {
+            if (arrayItem.accent.color[key] == null) {
+              arrayItem.accent.color[key] = 0;
+            };
+          };
+        });
+      });
+      data.bookmarks.forEach(function(arrayItem, index) {
+        arrayItem.items.forEach(function(arrayItem, index) {
           arrayItem.accent.color.rgb = {
             r: arrayItem.accent.color.r,
             g: arrayItem.accent.color.g,
