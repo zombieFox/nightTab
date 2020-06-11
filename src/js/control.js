@@ -229,6 +229,13 @@ var control = (function() {
             theme.render.custom.tabIndex();
           }
         }, {
+          element: ".control-menu-firefox",
+          type: "button",
+          func: function() {
+            menu.nav("firefox");
+            theme.render.custom.tabIndex();
+          }
+        }, {
           element: ".control-menu-coffee",
           type: "button",
           func: function() {

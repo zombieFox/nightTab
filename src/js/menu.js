@@ -28,6 +28,7 @@ var menu = (function() {
       background: false,
       data: false,
       coffee: false,
+      firefox: false,
       nighttab: false
     },
     toggle: function(name) {
@@ -186,6 +187,15 @@ var menu = (function() {
     helper.e(".menu").removeAttribute("style");
   };
 
+  render.firefoxSpecific = function() {
+    var firefoxBrowser = typeof InstallTrigger !== "undefined";
+    if (firefoxBrowser) {
+      helper.removeClass(helper.e(".menu-nav-item-firefox"), "is-hidden");
+    } else {
+      helper.addClass(helper.e(".menu-nav-item-firefox"), "is-hidden");
+    };
+  };
+
   var nav = function(name) {
     mod.nav.toggle(name);
     render.nav.active();
@@ -252,6 +262,7 @@ var menu = (function() {
     render.removeStyle();
     render.subnav.height();
     render.nav.active();
+    render.firefoxSpecific();
   };
 
   return {

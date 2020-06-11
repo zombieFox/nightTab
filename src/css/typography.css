@@ -175,3 +175,9 @@ table tbody tr th {
   text-align: left;
   box-sizing: border-box;
 }
+
+code {
+  background-color: rgb(var(--theme-color-04));
+  padding: 0.2em 0.5em;
+  border-radius: var(--theme-radius);
+}
