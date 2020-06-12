@@ -11,7 +11,7 @@ var bookmarks = (function() {
       show: true
     },
     items: [{
-      visual:{
+      visual: {
         display: "icon",
         letter: "AS",
         image: null,
@@ -53,7 +53,7 @@ var bookmarks = (function() {
       searchMatch: false,
       timeStamp: 1546453104010
     }, {
-      visual:{
+      visual: {
         display: "letter",
         letter: "AZ",
         image: null,
@@ -95,7 +95,7 @@ var bookmarks = (function() {
       searchMatch: false,
       timeStamp: 1546453107633
     }, {
-      visual:{
+      visual: {
         display: "letter",
         letter: "GM",
         image: null,
@@ -137,7 +137,7 @@ var bookmarks = (function() {
       searchMatch: false,
       timeStamp: 1546453110265
     }, {
-      visual:{
+      visual: {
         display: "icon",
         letter: "R",
         image: null,
@@ -179,7 +179,7 @@ var bookmarks = (function() {
       searchMatch: false,
       timeStamp: 1546453111491
     }, {
-      visual:{
+      visual: {
         display: "icon",
         letter: "N",
         image: null,
@@ -221,7 +221,7 @@ var bookmarks = (function() {
       searchMatch: false,
       timeStamp: 1546453104460
     }, {
-      visual:{
+      visual: {
         display: "letter",
         letter: "DR",
         image: null,
@@ -272,7 +272,7 @@ var bookmarks = (function() {
       show: true
     },
     items: [{
-      visual:{
+      visual: {
         display: "icon",
         letter: "DEV",
         image: null,
@@ -314,7 +314,7 @@ var bookmarks = (function() {
       searchMatch: false,
       timeStamp: 1546453101749
     }, {
-      visual:{
+      visual: {
         display: "icon",
         letter: "GIT",
         image: null,
@@ -387,34 +387,30 @@ var bookmarks = (function() {
 
   mod.add = {
     link: function(data) {
-      if (data.position.group.new) {
-        mod.add.group({
-          position: {
-            origin: null,
-            destination: data.position.destination.group
-          },
-          group: {
-            name: {
-              text: data.position.group.name.text,
-              show: data.position.group.name.show
+      if (data) {
+        if (data.position.group.new) {
+          mod.add.group({
+            position: {
+              origin: null,
+              destination: data.position.destination.group
             },
-            openAll: {
-              show: data.position.group.openAll.show
-            },
-            items: []
-          }
-        });
+            group: {
+              name: {
+                text: data.position.group.name.text,
+                show: data.position.group.name.show
+              },
+              openAll: {
+                show: data.position.group.openAll.show
+              },
+              items: []
+            }
+          });
+        };
+        mod.all[data.position.destination.group].items.splice(data.position.destination.item, 0, data.link);
       };
-      mod.all[data.position.destination.group].items.splice(data.position.destination.item, 0, data.link);
     },
     group: function(data) {
       if (data) {
-        if (data.group.name.text == null) {
-          data.group.name.text = "";
-        };
-        if (typeof data.group.name.text == "string") {
-          data.group.name.text = data.group.name.text.trim();
-        };
         mod.all.splice(data.position.destination, 0, data.group);
       };
     }

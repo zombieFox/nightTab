@@ -767,6 +767,25 @@ var helper = (function() {
     };
   };
 
+  var checkValueString = function(value) {
+    var result = false;
+    if (typeof value == "string") {
+      value = value.trim().replace(/\s/g, "");
+      if (value != "") {
+        result = true;
+      };
+    };
+    return result;
+  };
+
+  var trimString = function(value) {
+    if (typeof value == "string") {
+      return value.trim().replace(/\s\s+/g, " ");
+    } else {
+      return value;
+    };
+  };
+
   // exposed methods
   return {
     e: e,
@@ -792,7 +811,9 @@ var helper = (function() {
     ordinalNumber: ordinalNumber,
     isJsonString: isJsonString,
     isHexNumber: isHexNumber,
-    convertColor: convertColor
+    convertColor: convertColor,
+    checkValueString: checkValueString,
+    trimString: trimString
   };
 
 })();

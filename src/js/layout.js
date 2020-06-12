@@ -24,8 +24,8 @@ var layout = (function() {
 
   render.title = function() {
     var title = helper.e("title");
-    if (typeof state.get.current().layout.title == "string" && state.get.current().layout.title != "") {
-      title.textContent = state.get.current().layout.title.trim().replace(/\s\s+/g, " ");
+    if (helper.checkValueString(state.get.current().layout.title)) {
+      title.textContent = helper.trimString(state.get.current().layout.title);
     } else {
       title.textContent = "New tab";
     };

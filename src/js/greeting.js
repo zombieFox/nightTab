@@ -37,8 +37,8 @@ var greeting = (function() {
         }
       };
       var string = message[state.get.current().header.greeting.type]();
-      if (state.get.current().header.greeting.name != "" && state.get.current().header.greeting.name != undefined) {
-        string = string + ", " + state.get.current().header.greeting.name;
+      if (helper.checkValueString(state.get.current().header.greeting.name)) {
+        string = string + ", " + helper.trimString(state.get.current().header.greeting.name)
       };
       var greetingItem = helper.node("span|class:greeting-item");
       var greetingItemText = helper.node("span:" + string + "|class:greeting-item-text");

@@ -2225,8 +2225,25 @@ var control = (function() {
           path: "header.search.engine.custom.queryName",
           type: "text",
           func: function() {
-            console.log("hit");
+            header.render.item.clear();
+            header.render.item.all();
+            header.render.search.width.size();
+            greeting.render.clear();
+            greeting.render.all();
+            clock.render.clear();
+            clock.render.all();
+            transitional.render.clear();
+            transitional.render.all();
+            date.render.clear();
+            date.render.all();
+            render.class();
+            render.dependents();
+            render.update.control.header();
+            bind.control.header();
             search.render.engine();
+            search.bind.input();
+            search.bind.clear();
+            dropdown.bind.editAdd();
           }
         }, {
           element: ".control-header-search-text-justify-left",

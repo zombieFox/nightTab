@@ -709,7 +709,7 @@ var link = (function() {
       });
 
       groupHeader.appendChild(groupHeaderItemControl);
-      if (stagedGroup.group.name.show && stagedGroup.group.name.text.replace(/\s/g, "") != "") {
+      if (stagedGroup.group.name.show && helper.checkValueString(stagedGroup.group.name.text)) {
         helper.addClass(groupHeader, "group-header-name");
         groupHeader.appendChild(groupHeaderItemName);
       };
@@ -916,7 +916,7 @@ var link = (function() {
           value: "link-item"
         }]
       };
-      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || (stagedLink.link.image != null && typeof stagedLink.link.image == "string" && stagedLink.link.image != "")) {
+      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkValueString(stagedLink.link.image)) {
         linkItemOptions.attr.push({
           key: "style",
           value: ""
@@ -940,8 +940,8 @@ var link = (function() {
             "--link-item-color: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";" +
             "--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";";
         };
-        if (stagedLink.link.image != null && stagedLink.link.image != "") {
-          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-image-url: url(" + stagedLink.link.image.trim() + ");"
+        if (helper.checkValueString(stagedLink.link.image)) {
+          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-image-url: url(" + helper.trimString(stagedLink.link.image) + ");"
         };
       };
       var linkItem = helper.makeNode(linkItemOptions);
@@ -993,15 +993,17 @@ var link = (function() {
             value: "link-display-image"
           }, {
             key: "style",
-            value: "--link-display-image-url: url(" + stagedLink.link.visual.image.trim() + ")"
+            value: "--link-display-image-url: url(" + helper.trimString(stagedLink.link.visual.image) + ")"
           }]
         });
       };
-      var nameText = "";
-      if (typeof stagedLink.link.name == "string" && stagedLink.link.name != "") {
-        nameText = stagedLink.link.name.trim().replace(/\s\s+/g, " ");
+
+      var linkDisplayName;
+      if (helper.checkValueString(stagedLink.link.name)) {
+        linkDisplayName = helper.node("p:" + helper.trimString(stagedLink.link.name) + "|class:link-display-name");
+      } else {
+        linkDisplayName = helper.node("p|class:link-display-name");
       };
-      var linkDisplayName = helper.node("p:" + nameText + "|class:link-display-name");
 
       var linkUrl = helper.node("div|class:link-url");
       var url = "";
@@ -1043,11 +1045,11 @@ var link = (function() {
         linkDisplay.appendChild(linkDisplayVisual);
       };
 
-      if (stagedLink.link.name != null && stagedLink.link.name != "") {
+      if (helper.checkValueString(stagedLink.link.name)) {
         linkDisplay.appendChild(linkDisplayName);
       };
 
-      if (stagedLink.link.image != null && stagedLink.link.image != "") {
+      if (helper.checkValueString(stagedLink.link.image)) {
         linkPanelFront.appendChild(linkImage);
       };
       linkPanelFront.appendChild(linkDisplay);
@@ -2898,7 +2900,7 @@ var link = (function() {
           useStagedLink: true
         });
         var heading;
-        if (stagedLink.link.name != null && stagedLink.link.name != "") {
+        if (helper.checkValueString(stagedLink.link.name)) {
           heading = "Edit " + stagedLink.link.name;
         } else {
           heading = "Edit unnamed bookmark";
@@ -3003,7 +3005,7 @@ var link = (function() {
       stagedLink.link = JSON.parse(JSON.stringify(copyStagedLink.link));
       stagedLink.position = JSON.parse(JSON.stringify(copyStagedLink.position));
       var heading;
-      if (stagedLink.link.name != null && stagedLink.link.name != "") {
+      if (helper.checkValueString(stagedLink.link.name)) {
         heading = "Remove " + stagedLink.link.name;
       } else {
         heading = "Remove unnamed bookmark";
