@@ -11612,6 +11612,7 @@ var control = (function() {
           return [
             ".control-background-color-rgb-color",
             ".control-background-color-rgb-text",
+            ".control-background-color-by-custom-helper",
             "[for=control-background-color-hsl-h-range]",
             ".control-background-color-hsl-h-range",
             ".control-background-color-hsl-h-number",
