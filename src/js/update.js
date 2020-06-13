@@ -1011,8 +1011,17 @@ var update = (function() {
           arrayItem.visual = {
             display: arrayItem.display,
             letter: arrayItem.letter,
-            image: null,
+            image: "",
             icon: arrayItem.icon
+          };
+          if (arrayItem.visual.icon.label == null) {
+            arrayItem.visual.icon.label = "";
+          };
+          if (arrayItem.visual.icon.name == null) {
+            arrayItem.visual.icon.name = "";
+          };
+          if (arrayItem.visual.icon.prefix == null) {
+            arrayItem.visual.icon.prefix = "";
           };
           delete arrayItem.display;
           delete arrayItem.letter;
