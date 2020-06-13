@@ -43,13 +43,13 @@ var search = (function() {
     },
     get: function() {
       var searchInput = helper.e(".search-input");
-      var string = searchInput.value.toLowerCase().replace(/\s/g, "");
+      var string = helper.trimString(searchInput.value).toLowerCase();
       if (state.get.current().search) {
         bookmarks.get().forEach(function(arrayItem, index) {
           arrayItem.items.forEach(function(arrayItem, index) {
-            var matchUrl = (arrayItem.url != null) && (arrayItem.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "").toLowerCase().includes(string));
-            var matchName = (arrayItem.name != null) && (arrayItem.name.toLowerCase().replace(/\s/g, "").includes(string));
             arrayItem.searchMatch = false;
+            var matchUrl = helper.checkIfValidString(arrayItem.url) && (arrayItem.url.toLowerCase().includes(string));
+            var matchName = helper.checkIfValidString(arrayItem.name) && (helper.trimString(arrayItem.name).toLowerCase().includes(string));
             if (matchUrl || matchName) {
               arrayItem.searchMatch = true;
             };

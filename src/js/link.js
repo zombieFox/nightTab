@@ -977,25 +977,12 @@ var link = (function() {
       var linkDisplayIcon = null;
       var linkDisplayImage = null;
 
-      if (stagedLink.link.visual.display == "letter") {
-        var letterText = stagedLink.link.visual.letter;
-        if (letterText == null) {
-          letterText = "";
-        };
-        linkDisplayLetter = helper.node("p:" + letterText + "|class:link-display-letter");
-      } else if (stagedLink.link.visual.display == "icon" && stagedLink.link.visual.icon.prefix != null && stagedLink.link.visual.icon.name != null) {
+      if (stagedLink.link.visual.display == "letter" && helper.checkIfValidString(stagedLink.link.visual.letter)) {
+        linkDisplayLetter = helper.node("p:" + helper.trimString(stagedLink.link.visual.letter) + "|class:link-display-letter");
+      } else if (stagedLink.link.visual.display == "icon" && helper.checkIfValidString(stagedLink.link.visual.icon.prefix) && helper.checkIfValidString(stagedLink.link.visual.icon.name)) {
         linkDisplayIcon = helper.node("div|class:link-display-icon " + stagedLink.link.visual.icon.prefix + " fa-" + stagedLink.link.visual.icon.name);
-      } else if (stagedLink.link.visual.display == "image" && stagedLink.link.visual.image != null && typeof stagedLink.link.visual.image == "string") {
-        linkDisplayImage = helper.makeNode({
-          tag: "div",
-          attr: [{
-            key: "class",
-            value: "link-display-image"
-          }, {
-            key: "style",
-            value: "--link-display-image-url: url(" + helper.trimString(stagedLink.link.visual.image) + ")"
-          }]
-        });
+      } else if (stagedLink.link.visual.display == "image" && helper.checkIfValidString(stagedLink.link.visual.image)) {
+        linkDisplayImage = helper.node("div|class:link-display-image,style:--link-display-image-url: url(" + helper.trimString(stagedLink.link.visual.image) + ")");
       };
 
       var linkDisplayName;
@@ -1006,9 +993,11 @@ var link = (function() {
       };
 
       var linkUrl = helper.node("div|class:link-url");
-      var url = "";
-      if (stagedLink.link.url != null) {
-        url = stagedLink.link.url.replace(/^https?\:\/\//i, "").replace(/\/$/, "");
+      var url;
+      if (helper.checkIfValidString(stagedLink.link.url)) {
+        url = helper.trimString(stagedLink.link.url.replace(/^https?\:\/\//i, "").replace(/\/+$/, ""));
+      } else {
+        url = "";
       };
       var linkUrlText = helper.makeNode({
         tag: "p",
@@ -1650,7 +1639,8 @@ var link = (function() {
           displayImageInput.removeAttribute("disabled");
           helper.removeClass(displayImageHelperItem, "disabled");
         };
-        if (stagedLink.link.visual.icon.name != null && stagedLink.link.visual.icon.prefix != null && stagedLink.link.visual.icon.label != null) {
+
+        if (helper.checkIfValidString(stagedLink.link.visual.icon.prefix) && helper.checkIfValidString(stagedLink.link.visual.icon.name) && helper.checkIfValidString(stagedLink.link.visual.icon.label)) {
           displayIconFormGroupText.appendChild(helper.node("span|class:link-form-icon " + stagedLink.link.visual.icon.prefix + " fa-" + stagedLink.link.visual.icon.name));
         };
         displayLetterInput.value = stagedLink.link.visual.letter;
@@ -1707,22 +1697,20 @@ var link = (function() {
           colorRgbBRange.setAttribute("disabled", "");
           colorRgbBNumber.setAttribute("disabled", "");
         };
-        if (stagedLink.link.color.rgb.r != null && stagedLink.link.color.rgb.g != null && stagedLink.link.color.rgb.b != null) {
-          colorColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.color.rgb);
-          colorColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.color.rgb);
-          colorHslHRange.value = stagedLink.link.color.hsl.h;
-          colorHslHNumber.value = stagedLink.link.color.hsl.h;
-          colorHslSRange.value = stagedLink.link.color.hsl.s;
-          colorHslSNumber.value = stagedLink.link.color.hsl.s;
-          colorHslLRange.value = stagedLink.link.color.hsl.l;
-          colorHslLNumber.value = stagedLink.link.color.hsl.l;
-          colorRgbRRange.value = stagedLink.link.color.rgb.r;
-          colorRgbRNumber.value = stagedLink.link.color.rgb.r;
-          colorRgbGRange.value = stagedLink.link.color.rgb.g;
-          colorRgbGNumber.value = stagedLink.link.color.rgb.g;
-          colorRgbBRange.value = stagedLink.link.color.rgb.b;
-          colorRgbBNumber.value = stagedLink.link.color.rgb.b;
-        };
+        colorColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.color.rgb);
+        colorColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.color.rgb);
+        colorHslHRange.value = stagedLink.link.color.hsl.h;
+        colorHslHNumber.value = stagedLink.link.color.hsl.h;
+        colorHslSRange.value = stagedLink.link.color.hsl.s;
+        colorHslSNumber.value = stagedLink.link.color.hsl.s;
+        colorHslLRange.value = stagedLink.link.color.hsl.l;
+        colorHslLNumber.value = stagedLink.link.color.hsl.l;
+        colorRgbRRange.value = stagedLink.link.color.rgb.r;
+        colorRgbRNumber.value = stagedLink.link.color.rgb.r;
+        colorRgbGRange.value = stagedLink.link.color.rgb.g;
+        colorRgbGNumber.value = stagedLink.link.color.rgb.g;
+        colorRgbBRange.value = stagedLink.link.color.rgb.b;
+        colorRgbBNumber.value = stagedLink.link.color.rgb.b;
         if (stagedLink.link.accent.by == "custom") {
           accentThemeRadio.checked = false;
           accentCustomRadio.checked = true;
@@ -1772,22 +1760,20 @@ var link = (function() {
           accentRgbBRange.setAttribute("disabled", "");
           accentRgbBNumber.setAttribute("disabled", "");
         };
-        if (stagedLink.link.accent.rgb.r != null && stagedLink.link.accent.rgb.g != null && stagedLink.link.accent.rgb.b != null) {
-          accentColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.accent.rgb);
-          accentColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.accent.rgb);
-          accentHslHRange.value = stagedLink.link.accent.hsl.h;
-          accentHslHNumber.value = stagedLink.link.accent.hsl.h;
-          accentHslSRange.value = stagedLink.link.accent.hsl.s;
-          accentHslSNumber.value = stagedLink.link.accent.hsl.s;
-          accentHslLRange.value = stagedLink.link.accent.hsl.l;
-          accentHslLNumber.value = stagedLink.link.accent.hsl.l;
-          accentRgbRRange.value = stagedLink.link.accent.rgb.r;
-          accentRgbRNumber.value = stagedLink.link.accent.rgb.r;
-          accentRgbGRange.value = stagedLink.link.accent.rgb.g;
-          accentRgbGNumber.value = stagedLink.link.accent.rgb.g;
-          accentRgbBRange.value = stagedLink.link.accent.rgb.b;
-          accentRgbBNumber.value = stagedLink.link.accent.rgb.b;
-        };
+        accentColorPicker.value = helper.convertColor.rgb.hex(stagedLink.link.accent.rgb);
+        accentColorHex.value = helper.convertColor.rgb.hex(stagedLink.link.accent.rgb);
+        accentHslHRange.value = stagedLink.link.accent.hsl.h;
+        accentHslHNumber.value = stagedLink.link.accent.hsl.h;
+        accentHslSRange.value = stagedLink.link.accent.hsl.s;
+        accentHslSNumber.value = stagedLink.link.accent.hsl.s;
+        accentHslLRange.value = stagedLink.link.accent.hsl.l;
+        accentHslLNumber.value = stagedLink.link.accent.hsl.l;
+        accentRgbRRange.value = stagedLink.link.accent.rgb.r;
+        accentRgbRNumber.value = stagedLink.link.accent.rgb.r;
+        accentRgbGRange.value = stagedLink.link.accent.rgb.g;
+        accentRgbGNumber.value = stagedLink.link.accent.rgb.g;
+        accentRgbBRange.value = stagedLink.link.accent.rgb.b;
+        accentRgbBNumber.value = stagedLink.link.accent.rgb.b;
         imageInput.value = stagedLink.link.image;
       };
 
