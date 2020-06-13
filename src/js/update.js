@@ -970,71 +970,35 @@ var update = (function() {
     "5.37.1": function(data) {
       data.bookmarks.forEach(function(arrayItem, index) {
         arrayItem.items.forEach(function(arrayItem, index) {
+
           if (arrayItem.name == null) {
             arrayItem.name = "";
           };
+          if (arrayItem.url == null) {
+            arrayItem.url = "";
+          };
           for (var key in arrayItem.accent.color) {
-            if (arrayItem.accent.color[key] == null) {
+            if (typeof arrayItem.accent.color[key] != "number") {
               arrayItem.accent.color[key] = 0;
             };
           };
-        });
-      });
-      data.bookmarks.forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
-          arrayItem.accent.color.rgb = {
+          arrayItem.accent.rgb = {
             r: arrayItem.accent.color.r,
             g: arrayItem.accent.color.g,
             b: arrayItem.accent.color.b
           };
-          if (arrayItem.accent.color.rgb.r == null) {
-            arrayItem.accent.color.rgb.r = 0;
-          };
-          if (arrayItem.accent.color.rgb.g == null) {
-            arrayItem.accent.color.rgb.g = 0;
-          };
-          if (arrayItem.accent.color.rgb.b == null) {
-            arrayItem.accent.color.rgb.b = 0;
-          };
-          arrayItem.accent.color.hsl = {
+          delete arrayItem.accent.color;
+          arrayItem.accent.hsl = {
             h: 0,
             s: 0,
             l: 0
           };
-          delete arrayItem.accent.color.r;
-          delete arrayItem.accent.color.g;
-          delete arrayItem.accent.color.b;
-        });
-      });
-      data.bookmarks.forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
-          arrayItem.visual = {
-            display: arrayItem.display,
-            letter: arrayItem.letter,
-            image: "",
-            icon: arrayItem.icon
-          };
-          if (arrayItem.visual.icon.label == null) {
-            arrayItem.visual.icon.label = "";
-          };
-          if (arrayItem.visual.icon.name == null) {
-            arrayItem.visual.icon.name = "";
-          };
-          if (arrayItem.visual.icon.prefix == null) {
-            arrayItem.visual.icon.prefix = "";
-          };
-          delete arrayItem.display;
-          delete arrayItem.letter;
-          delete arrayItem.icon;
           if (arrayItem.accent.override) {
             arrayItem.accent.by = "custom";
           } else {
             arrayItem.accent.by = "theme";
           };
           delete arrayItem.accent.override;
-          arrayItem.accent.hsl = arrayItem.accent.color.hsl;
-          arrayItem.accent.rgb = arrayItem.accent.color.rgb;
-          delete arrayItem.accent.color;
           arrayItem.color = {
             by: "theme",
             hsl: {
@@ -1049,6 +1013,25 @@ var update = (function() {
             }
           };
           arrayItem.image = "";
+          arrayItem.visual = {
+            display: arrayItem.display,
+            letter: arrayItem.letter,
+            image: "",
+            icon: arrayItem.icon
+          };
+          delete arrayItem.display;
+          delete arrayItem.letter;
+          delete arrayItem.icon;
+          if (arrayItem.visual.icon.label == null) {
+            arrayItem.visual.icon.label = "";
+          };
+          if (arrayItem.visual.icon.name == null) {
+            arrayItem.visual.icon.name = "";
+          };
+          if (arrayItem.visual.icon.prefix == null) {
+            arrayItem.visual.icon.prefix = "";
+          };
+
         });
       });
       data.state.header.color.hsl = {
