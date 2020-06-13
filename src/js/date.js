@@ -132,7 +132,7 @@ var date = (function() {
         if (helper.checkIfValidString(state.get.current().header.date.separator.text)) {
           separatorCharacter = helper.trimString(state.get.current().header.date.separator.text);
         } else {
-          separatorCharacter = ":";
+          separatorCharacter = "/";
         };
         var parts = date.querySelectorAll("span");
         if (parts.length > 1) {
