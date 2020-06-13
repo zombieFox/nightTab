@@ -27,7 +27,7 @@ var layout = (function() {
     if (helper.checkIfValidString(state.get.current().layout.title)) {
       title.textContent = helper.trimString(state.get.current().layout.title);
     } else {
-      title.textContent = "New tab";
+      title.textContent = "New Tab";
     };
   };
 

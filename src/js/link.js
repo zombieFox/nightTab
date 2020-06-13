@@ -978,16 +978,39 @@ var link = (function() {
       var linkDisplayImage = null;
 
       if (stagedLink.link.visual.display == "letter" && helper.checkIfValidString(stagedLink.link.visual.letter)) {
-        linkDisplayLetter = helper.node("p:" + helper.trimString(stagedLink.link.visual.letter) + "|class:link-display-letter");
+        linkDisplayLetter = helper.makeNode({
+          tag: "p",
+          text: helper.trimString(stagedLink.link.visual.letter),
+          attr: [{
+            key: "class",
+            value: "link-display-letter"
+          }]
+        });
       } else if (stagedLink.link.visual.display == "icon" && helper.checkIfValidString(stagedLink.link.visual.icon.prefix) && helper.checkIfValidString(stagedLink.link.visual.icon.name)) {
         linkDisplayIcon = helper.node("div|class:link-display-icon " + stagedLink.link.visual.icon.prefix + " fa-" + stagedLink.link.visual.icon.name);
       } else if (stagedLink.link.visual.display == "image" && helper.checkIfValidString(stagedLink.link.visual.image)) {
-        linkDisplayImage = helper.node("div|class:link-display-image,style:--link-display-image-url: url(" + helper.trimString(stagedLink.link.visual.image) + ")");
+        linkDisplayImage = helper.makeNode({
+          tag: "div",
+          attr: [{
+            key: "class",
+            value: "link-display-image"
+          }, {
+            key: "style",
+            value: "--link-display-image-url: url(" + helper.trimString(stagedLink.link.visual.image) + ")"
+          }]
+        });
       };
 
       var linkDisplayName;
       if (helper.checkIfValidString(stagedLink.link.name)) {
-        linkDisplayName = helper.node("p:" + helper.trimString(stagedLink.link.name) + "|class:link-display-name");
+        linkDisplayName = helper.makeNode({
+          tag: "p",
+          text: helper.trimString(stagedLink.link.name),
+          attr: [{
+            key: "class",
+            value: "link-display-name"
+          }]
+        });
       } else {
         linkDisplayName = helper.node("p|class:link-display-name");
       };
@@ -2089,9 +2112,9 @@ var link = (function() {
         stagedLink.link.url = this.value;
       }, false);
       displayIconFormGroupClear.addEventListener("click", function(event) {
-        stagedLink.link.visual.icon.name = null;
-        stagedLink.link.visual.icon.prefix = null;
-        stagedLink.link.visual.icon.label = null;
+        stagedLink.link.visual.icon.name = "";
+        stagedLink.link.visual.icon.prefix = "";
+        stagedLink.link.visual.icon.label = "";
         var existingIcon = helper.e(".link-form-icon");
         if (existingIcon) {
           existingIcon.remove();
@@ -2527,8 +2550,6 @@ var link = (function() {
               stagedLink.link = JSON.parse(JSON.stringify(arrayItem));
               stagedLink.position.origin.item = index;
               stagedLink.position.destination.item = index;
-              stagedLink.position.group.new = null;
-              stagedLink.position.group.name.text = null;
               if (state.get.current().search) {
                 if (stagedLink.link.searchMatch) {
                   group.querySelector(".group-body").appendChild(render.item.link());

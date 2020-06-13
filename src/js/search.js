@@ -44,12 +44,13 @@ var search = (function() {
     get: function() {
       var searchInput = helper.e(".search-input");
       var string = helper.trimString(searchInput.value).toLowerCase();
+      console.log(string);
       if (state.get.current().search) {
         bookmarks.get().forEach(function(arrayItem, index) {
           arrayItem.items.forEach(function(arrayItem, index) {
             arrayItem.searchMatch = false;
-            var matchUrl = helper.checkIfValidString(arrayItem.url) && (arrayItem.url.toLowerCase().includes(string));
-            var matchName = helper.checkIfValidString(arrayItem.name) && (helper.trimString(arrayItem.name).toLowerCase().includes(string));
+            var matchUrl = helper.checkIfValidString(arrayItem.url) && arrayItem.url.toLowerCase().includes(string);
+            var matchName = helper.checkIfValidString(arrayItem.name) && helper.trimString(arrayItem.name).toLowerCase().includes(string);
             if (matchUrl || matchName) {
               arrayItem.searchMatch = true;
             };

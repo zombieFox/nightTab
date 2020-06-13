@@ -107,13 +107,26 @@ var modal = (function() {
       modalControls.appendChild(cancelButton);
       modalControls.appendChild(actionButton);
       if (options.heading != null) {
-        var modalHeading = helper.node("h1:" + options.heading + "|class:modal-heading,tabindex:1");
+        var modalHeading = helper.makeNode({
+          tag: "h1",
+          text: options.heading,
+          attr: [{
+            key: "class",
+            value: "modal-heading"
+          }, {
+            key: "tabindex",
+            value: 1
+          }]
+        });
         modalBody.appendChild(modalHeading);
       };
       if (options.content) {
         if (typeof options.content == "string") {
           var container = helper.node("div|class:container");
-          var para = helper.node("p:" + options.content);
+          var para = helper.makeNode({
+            tag: "p",
+            text: options.content
+          });
           container.appendChild(para);
           modalBody.appendChild(container);
         } else {
