@@ -144,7 +144,7 @@ var search = (function() {
 
   render.check = function() {
     var searchInput = helper.e(".search-input");
-    if (helper.checkValueString(searchInput.value)) {
+    if (helper.checkIfValidString(searchInput.value)) {
       mod.searching.open();
     } else {
       mod.searching.close();

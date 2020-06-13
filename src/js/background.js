@@ -172,7 +172,7 @@ var background = (function() {
 
   render.feedback = {
     init: function() {
-      if (helper.checkValueString(state.get.current().background.image.file.name)) {
+      if (helper.checkIfValidString(state.get.current().background.image.file.name)) {
         render.feedback.current();
       } else {
         render.feedback.empty();

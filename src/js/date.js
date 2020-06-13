@@ -129,7 +129,7 @@ var date = (function() {
       };
       if (state.get.current().header.date.separator.show) {
         var separatorCharacter;
-        if (helper.checkValueString(state.get.current().header.date.separator.text)) {
+        if (helper.checkIfValidString(state.get.current().header.date.separator.text)) {
           separatorCharacter = helper.trimString(state.get.current().header.date.separator.text);
         } else {
           separatorCharacter = ":";

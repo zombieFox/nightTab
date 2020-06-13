@@ -2298,11 +2298,11 @@ var theme = (function() {
         mod.preset.all.forEach(function(arrayItem, index) {
           var displayFont = arrayItem.font.display.name + ":" + arrayItem.font.display.weight;
           var uiFont = arrayItem.font.ui.name + ":" + arrayItem.font.ui.weight;
-          if (helper.checkValueString(arrayItem.font.display.name) && !allPresetFonts.includes(displayFont)) {
+          if (helper.checkIfValidString(arrayItem.font.display.name) && !allPresetFonts.includes(displayFont)) {
             mod.font.loaded.push(arrayItem.font.display.name);
             allPresetFonts.push(displayFont);
           };
-          if (helper.checkValueString(arrayItem.font.ui.name) && !allPresetFonts.includes(uiFont)) {
+          if (helper.checkIfValidString(arrayItem.font.ui.name) && !allPresetFonts.includes(uiFont)) {
             mod.font.loaded.push(arrayItem.font.ui.name);
             allPresetFonts.push(uiFont);
           };
@@ -2316,7 +2316,7 @@ var theme = (function() {
       custom: {
         display: function() {
           var displayFont = helper.trimString(state.get.current().theme.font.display.name);
-          if (!mod.font.loaded.includes(displayFont) && helper.checkValueString(displayFont)) {
+          if (!mod.font.loaded.includes(displayFont) && helper.checkIfValidString(displayFont)) {
             mod.font.loaded.push(displayFont);
             WebFont.load({
               google: {
@@ -2328,7 +2328,7 @@ var theme = (function() {
         },
         ui: function() {
           var uiFont = helper.trimString(state.get.current().theme.font.ui.name);
-          if (!mod.font.loaded.includes(uiFont) && helper.checkValueString(uiFont)) {
+          if (!mod.font.loaded.includes(uiFont) && helper.checkIfValidString(uiFont)) {
             mod.font.loaded.push(uiFont);
             WebFont.load({
               google: {
@@ -2353,7 +2353,7 @@ var theme = (function() {
     display: {
       name: function() {
         var html = helper.e("html");
-        if (helper.checkValueString(state.get.current().theme.font.display.name)) {
+        if (helper.checkIfValidString(state.get.current().theme.font.display.name)) {
           html.style.setProperty("--theme-font-display-name", "\"" + helper.trimString(state.get.current().theme.font.display.name) + "\", \"Fjalla One\", sans-serif");
         } else {
           html.style.removeProperty("--theme-font-display-name");
@@ -2372,7 +2372,7 @@ var theme = (function() {
     ui: {
       name: function() {
         var html = helper.e("html");
-        if (helper.checkValueString(state.get.current().theme.font.ui.name)) {
+        if (helper.checkIfValidString(state.get.current().theme.font.ui.name)) {
           html.style.setProperty("--theme-font-ui-name", "\"" + helper.trimString(state.get.current().theme.font.ui.name) + "\", \"Open Sans\", sans-serif");
         } else {
           html.style.removeProperty("--theme-font-ui-name");
@@ -2456,7 +2456,7 @@ var theme = (function() {
       themePresetPreview.style.setProperty("--theme-preset-accent", arrayItem.accent.rgb.r + ", " + arrayItem.accent.rgb.g + ", " + arrayItem.accent.rgb.b);
       themePresetPreview.appendChild(themePresetAccent);
 
-      if (helper.checkValueString(arrayItem.name)) {
+      if (helper.checkIfValidString(arrayItem.name)) {
         var themePresetName = helper.node("span:" + arrayItem.name + "|class:theme-preset-name");
         themePresetPreview.appendChild(themePresetName);
       };
@@ -2553,7 +2553,7 @@ var theme = (function() {
           var themeCustomAccent = helper.node("span|class:theme-custom-accent");
           themeCustomPreview.style.setProperty("--theme-custom-accent", arrayItem.accent.rgb.r + ", " + arrayItem.accent.rgb.g + ", " + arrayItem.accent.rgb.b);
           themeCustomPreview.appendChild(themeCustomAccent);
-          if (helper.checkValueString(arrayItem.name)) {
+          if (helper.checkIfValidString(arrayItem.name)) {
             themeCustomPreview.appendChild(helper.node("span:" + helper.trimString(arrayItem.name) + "|class:theme-custom-name"));
           };
           themeCustomButton.appendChild(themeCustomPreview);
@@ -2710,7 +2710,7 @@ var theme = (function() {
         useStagedTheme: true
       });
       var heading;
-      if (helper.checkValueString(stagedThemeCustom.theme.name)) {
+      if (helper.checkIfValidString(stagedThemeCustom.theme.name)) {
         heading = "Edit " + stagedThemeCustom.theme.name;
       } else {
         heading = "Edit unnamed theme";
@@ -2750,7 +2750,7 @@ var theme = (function() {
       stagedThemeCustom.position.index = JSON.parse(JSON.stringify(copyStagedThemeCustom.position.index));
       stagedThemeCustom.theme = JSON.parse(JSON.stringify(copyStagedThemeCustom.theme));
       var heading;
-      if (helper.checkValueString(stagedThemeCustom.theme.name)) {
+      if (helper.checkIfValidString(stagedThemeCustom.theme.name)) {
         heading = "Remove " + stagedThemeCustom.theme.name;
       } else {
         heading = "Remove unnamed theme";

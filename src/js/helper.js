@@ -767,7 +767,7 @@ var helper = (function() {
     };
   };
 
-  var checkValueString = function(value) {
+  var checkIfValidString = function(value) {
     var result = false;
     if (typeof value == "string") {
       value = value.trim().replace(/\s/g, "");
@@ -812,7 +812,7 @@ var helper = (function() {
     isJsonString: isJsonString,
     isHexNumber: isHexNumber,
     convertColor: convertColor,
-    checkValueString: checkValueString,
+    checkIfValidString: checkIfValidString,
     trimString: trimString
   };
 

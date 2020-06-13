@@ -709,7 +709,7 @@ var link = (function() {
       });
 
       groupHeader.appendChild(groupHeaderItemControl);
-      if (stagedGroup.group.name.show && helper.checkValueString(stagedGroup.group.name.text)) {
+      if (stagedGroup.group.name.show && helper.checkIfValidString(stagedGroup.group.name.text)) {
         helper.addClass(groupHeader, "group-header-name");
         groupHeader.appendChild(groupHeaderItemName);
       };
@@ -916,7 +916,7 @@ var link = (function() {
           value: "link-item"
         }]
       };
-      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkValueString(stagedLink.link.image)) {
+      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkIfValidString(stagedLink.link.image)) {
         linkItemOptions.attr.push({
           key: "style",
           value: ""
@@ -940,7 +940,7 @@ var link = (function() {
             "--link-item-color: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";" +
             "--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";";
         };
-        if (helper.checkValueString(stagedLink.link.image)) {
+        if (helper.checkIfValidString(stagedLink.link.image)) {
           linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-image-url: url(" + helper.trimString(stagedLink.link.image) + ");"
         };
       };
@@ -999,7 +999,7 @@ var link = (function() {
       };
 
       var linkDisplayName;
-      if (helper.checkValueString(stagedLink.link.name)) {
+      if (helper.checkIfValidString(stagedLink.link.name)) {
         linkDisplayName = helper.node("p:" + helper.trimString(stagedLink.link.name) + "|class:link-display-name");
       } else {
         linkDisplayName = helper.node("p|class:link-display-name");
@@ -1045,11 +1045,11 @@ var link = (function() {
         linkDisplay.appendChild(linkDisplayVisual);
       };
 
-      if (helper.checkValueString(stagedLink.link.name)) {
+      if (helper.checkIfValidString(stagedLink.link.name)) {
         linkDisplay.appendChild(linkDisplayName);
       };
 
-      if (helper.checkValueString(stagedLink.link.image)) {
+      if (helper.checkIfValidString(stagedLink.link.image)) {
         linkPanelFront.appendChild(linkImage);
       };
       linkPanelFront.appendChild(linkDisplay);
@@ -1556,10 +1556,10 @@ var link = (function() {
         if (bookmarks.get().length > 0) {
           bookmarks.get().forEach(function(arrayItem, index) {
             var name;
-            if (arrayItem.name.text == null || arrayItem.name.text == "") {
-              name = "Unnamed group " + (index + 1);
-            } else {
+            if (helper.checkIfValidString(arrayItem.name.text)) {
               name = arrayItem.name.text;
+            } else {
+              name = "Unnamed group " + (index + 1);
             };
             var option = helper.makeNode({
               tag: "option",
@@ -2900,7 +2900,7 @@ var link = (function() {
           useStagedLink: true
         });
         var heading;
-        if (helper.checkValueString(stagedLink.link.name)) {
+        if (helper.checkIfValidString(stagedLink.link.name)) {
           heading = "Edit " + stagedLink.link.name;
         } else {
           heading = "Edit unnamed bookmark";
@@ -2954,10 +2954,10 @@ var link = (function() {
           useStagedGroup: true
         });
         var heading;
-        if (stagedGroup.group.name.text == null || stagedGroup.group.name.text == "") {
-          heading = "Edit unnamed group " + (stagedGroup.position.origin + 1);
-        } else {
+        if (helper.checkIfValidString(stagedGroup.group.name.text)) {
           heading = "Edit " + stagedGroup.group.name.text;
+        } else {
+          heading = "Edit unnamed group " + (stagedGroup.position.origin + 1);
         };
         var successAction = function() {
           var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));
@@ -3005,7 +3005,7 @@ var link = (function() {
       stagedLink.link = JSON.parse(JSON.stringify(copyStagedLink.link));
       stagedLink.position = JSON.parse(JSON.stringify(copyStagedLink.position));
       var heading;
-      if (helper.checkValueString(stagedLink.link.name)) {
+      if (helper.checkIfValidString(stagedLink.link.name)) {
         heading = "Remove " + stagedLink.link.name;
       } else {
         heading = "Remove unnamed bookmark";
@@ -3052,10 +3052,10 @@ var link = (function() {
       stagedGroup.group = JSON.parse(JSON.stringify(copyStagedGroup.group));
       stagedGroup.position = JSON.parse(JSON.stringify(copyStagedGroup.position));
       var heading;
-      if (stagedGroup.group.name.text == null || stagedGroup.group.name.text == "") {
-        heading = "Remove unnamed group " + (stagedGroup.position.origin + 1);
-      } else {
+      if (helper.checkIfValidString(stagedGroup.group.name.text)) {
         heading = "Remove " + stagedGroup.group.name.text;
+      } else {
+        heading = "Remove unnamed group " + (stagedGroup.position.origin + 1);
       };
       var successAction = function() {
         var copyStagedGroup = JSON.parse(JSON.stringify(stagedGroup));

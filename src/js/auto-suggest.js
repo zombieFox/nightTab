@@ -153,7 +153,7 @@ var autoSuggest = (function() {
       document.removeEventListener("keydown", bind.navigateResults, false);
     },
     clickOut: function(event) {
-      if (!(event.target.classList.contains("auto-suggest")) &&!(event.target.classList.contains("auto-suggest-list")) && !(event.target.classList.contains("auto-suggest-input"))) {
+      if (!(event.target.classList.contains("auto-suggest")) && !(event.target.classList.contains("auto-suggest-list")) && !(event.target.classList.contains("auto-suggest-input"))) {
         render.close();
       };
     }
@@ -239,29 +239,29 @@ var autoSuggest = (function() {
   };
 
   render.suggestItems = function() {
-    var searchTerm = _currentInputOptions.input.value.replace(/^\s+/, "").replace(/\s+$/, "").toLowerCase();
+    var searchTerm = helper.trimString(_currentInputOptions.input.value);
     var action = {
       fontawesomeIcon: function() {
-        if (searchTerm == "" || searchTerm == undefined) {
-          return fontawesome.icons;
-        } else {
+        if (helper.checkIfValidString(searchTerm)) {
           return fontawesome.icons.filter(function(item) {
             var match = false;
-            if (item.name.toLowerCase().includes(searchTerm) || item.label.toLowerCase().includes(searchTerm)) {
+            if (item.name.toLowerCase().includes(searchTerm.toLowerCase()) || item.label.toLowerCase().includes(searchTerm.toLowerCase())) {
               match = true;
             };
             item.search.forEach(function(item, index) {
-              if (item.toLowerCase().includes(searchTerm)) {
+              if (item.toLowerCase().includes(searchTerm.toLowerCase())) {
                 match = true;
               };
             });
             item.styles.forEach(function(item, index) {
-              if (item.toLowerCase().includes(searchTerm)) {
+              if (item.toLowerCase().includes(searchTerm.toLowerCase())) {
                 match = true;
               };
             });
             return match;
           });
+        } else {
+          return fontawesome.icons;
         };
       }
     };

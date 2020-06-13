@@ -112,7 +112,7 @@ var clock = (function() {
       };
       if (state.get.current().header.clock.separator.show) {
         var separatorCharacter;
-        if (helper.checkValueString(state.get.current().header.clock.separator.text)) {
+        if (helper.checkIfValidString(state.get.current().header.clock.separator.text)) {
           separatorCharacter = helper.trimString(state.get.current().header.clock.separator.text);
         } else {
           separatorCharacter = ":";
