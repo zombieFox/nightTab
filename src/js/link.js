@@ -1064,7 +1064,9 @@ var link = (function() {
       if (helper.checkIfValidString(stagedLink.link.image)) {
         linkPanelFront.appendChild(linkImage);
       };
-      linkPanelFront.appendChild(linkDisplay);
+      if ((linkDisplayLetter != null || linkDisplayIcon != null || linkDisplayImage != null) || (helper.checkIfValidString(stagedLink.link.name))) {
+        linkPanelFront.appendChild(linkDisplay);
+      };
       linkLeft.appendChild(linkLeftIcon);
       linkControl.appendChild(linkLeft);
       linkHandle.appendChild(linkHandleIcon);
