@@ -19,5 +19,6 @@ background.init();
 modal.init();
 shade.init();
 dropdown.init();
+edge.init();
 version.init();
 ready.init();

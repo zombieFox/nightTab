@@ -133,12 +133,17 @@ var edge = (function() {
     }
   };
 
+  var init = function() {
+    box.close();
+  };
+
   // exposed methods
   return {
     mod: mod,
     bind: bind,
     render: render,
-    box: box
+    box: box,
+    init: init
   };
 
 })();
