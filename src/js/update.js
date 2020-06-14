@@ -1022,6 +1022,9 @@ var update = (function() {
           delete arrayItem.display;
           delete arrayItem.letter;
           delete arrayItem.icon;
+          if (arrayItem.visual.letter == null) {
+            arrayItem.visual.letter = "";
+          };
           if (arrayItem.visual.icon.label == null) {
             arrayItem.visual.icon.label = "";
           };
