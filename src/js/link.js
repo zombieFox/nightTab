@@ -1225,7 +1225,7 @@ var link = (function() {
 
       // color
       var colorLabelWrap = helper.node("div|class:form-wrap");
-      var colorLabel = helper.node("label:Color override");
+      var colorLabel = helper.node("label:Colour override");
       var colorThemeRadioWrap = helper.node("div|class:form-wrap");
       var colorThemeRadio = helper.node("input|class:link-form-input-color-theme,id:link-form-input-color-theme,type:radio,name:link-form-input-color,tabindex:1,checked,value:theme");
       var colorThemeLabel = helper.node("label|for:link-form-input-color-theme");
