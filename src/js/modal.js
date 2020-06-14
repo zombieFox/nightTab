@@ -111,7 +111,7 @@ var modal = (function() {
       modalControls.appendChild(actionButton);
       if (options.heading != null) {
         if (options.heading.length > _maxHeadingLength) {
-          options.heading = options.heading.substring(0, _maxHeadingLength) + "...";
+          options.heading = options.heading.substring(0, _maxHeadingLength).replace(/\s+$/, "") + "...";
         };
         var modalHeading = helper.makeNode({
           tag: "h1",
