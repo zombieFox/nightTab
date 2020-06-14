@@ -951,12 +951,20 @@ var link = (function() {
           key: "class",
           value: "link-panel-front"
         }, {
-          key: "href",
-          value: stagedLink.link.url
-        }, {
           key: "tabindex",
           value: 1
         }]
+      };
+      if (helper.checkIfValidString(stagedLink.link.url)) {
+        linkPanelFrontOptions.attr.push({
+          key: "href",
+          value: helper.removeSpaces(stagedLink.link.url)
+        });
+      } else {
+        linkPanelFrontOptions.attr.push({
+          key: "href",
+          value: "#"
+        });
       };
       if (state.get.current().link.item.newTab) {
         linkPanelFrontOptions.attr.push({
@@ -1016,21 +1024,21 @@ var link = (function() {
       };
 
       var linkUrl = helper.node("div|class:link-url");
-      var url;
+      var urlDisplayString;
       if (helper.checkIfValidString(stagedLink.link.url)) {
-        url = helper.trimString(stagedLink.link.url.replace(/^https?\:\/\//i, "").replace(/\/+$/, ""));
+        urlDisplayString = helper.removeSpaces(stagedLink.link.url.replace(/^https?\:\/\//i, "").replace(/\/+$/, ""));
       } else {
-        url = "";
+        urlDisplayString = "";
       };
       var linkUrlText = helper.makeNode({
         tag: "p",
-        text: url,
+        text: urlDisplayString,
         attr: [{
           key: "class",
           value: "link-url-text"
         }, {
           key: "title",
-          value: url
+          value: urlDisplayString
         }]
       });
       var linkControl = helper.node("div|class:link-control");
@@ -1077,7 +1085,9 @@ var link = (function() {
       linkControl.appendChild(linkEdit);
       linkRemove.appendChild(linkRemoveIcon);
       linkControl.appendChild(linkRemove);
-      linkUrl.appendChild(linkUrlText);
+      if (helper.checkIfValidString(stagedLink.link.url)) {
+        linkUrl.appendChild(linkUrlText);
+      };
       linkPanelBack.appendChild(linkUrl);
       linkPanelBack.appendChild(linkControl);
       linkItem.appendChild(linkPanelFront);

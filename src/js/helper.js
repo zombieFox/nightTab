@@ -786,6 +786,14 @@ var helper = (function() {
     };
   };
 
+  var removeSpaces = function(value) {
+    if (typeof value == "string") {
+      return value.trim().replace(/\s/g, "");
+    } else {
+      return value;
+    };
+  };
+
   // exposed methods
   return {
     e: e,
@@ -813,7 +821,8 @@ var helper = (function() {
     isHexNumber: isHexNumber,
     convertColor: convertColor,
     checkIfValidString: checkIfValidString,
-    trimString: trimString
+    trimString: trimString,
+    removeSpaces: removeSpaces
   };
 
 })();
