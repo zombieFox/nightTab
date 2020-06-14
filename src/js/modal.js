@@ -101,6 +101,7 @@ var modal = (function() {
         bind.focus.remove();
       };
       var modalBody = helper.node("div|class:modal-body");
+      var modalBodySpacer = helper.node("div|class:modal-body-spacer");
       var modalControls = helper.node("div|class:modal-controls form-group");
       var actionButton = helper.node("button:" + options.actionText + "|class:button button-line button-block modal-button,tabindex:1");
       var cancelButton = helper.node("button:" + options.cancelText + "|class:button button-line button-block modal-button,tabindex:1");
@@ -118,7 +119,7 @@ var modal = (function() {
             value: 1
           }]
         });
-        modalBody.appendChild(modalHeading);
+        modalBodySpacer.appendChild(modalHeading);
       };
       if (options.content) {
         if (typeof options.content == "string") {
@@ -128,11 +129,12 @@ var modal = (function() {
             text: options.content
           });
           container.appendChild(para);
-          modalBody.appendChild(container);
+          modalBodySpacer.appendChild(container);
         } else {
-          modalBody.appendChild(options.content);
+          modalBodySpacer.appendChild(options.content);
         };
       };
+      modalBody.appendChild(modalBodySpacer);
       modalWrapper.appendChild(modalBody);
       modalWrapper.appendChild(modalControls);
       modal.appendChild(modalWrapper);

@@ -43,11 +43,14 @@
 
 .modal-body {
   border-radius: var(--theme-radius) var(--theme-radius) 0 0;
-  padding: 2em;
   overflow-y: auto;
   box-sizing: border-box;
   z-index: 1;
   position: relative;
+}
+
+.modal-body-spacer {
+  margin: 2em;
 }
 
 .modal-heading:focus {
