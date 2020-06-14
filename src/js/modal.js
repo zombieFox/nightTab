@@ -2,6 +2,8 @@ var modal = (function() {
 
   var _previousModal = null;
 
+  var _maxHeadingLength = 50;
+
   var mod = {};
 
   mod.open = function() {
@@ -108,6 +110,9 @@ var modal = (function() {
       modalControls.appendChild(cancelButton);
       modalControls.appendChild(actionButton);
       if (options.heading != null) {
+        if (options.heading.length > _maxHeadingLength) {
+          options.heading = options.heading.substring(0, _maxHeadingLength) + "...";
+        };
         var modalHeading = helper.makeNode({
           tag: "h1",
           text: options.heading,
