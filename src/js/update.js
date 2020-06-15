@@ -1086,6 +1086,14 @@ var update = (function() {
         size: 0
       };
       return data;
+    },
+    "5.42.1": function(data) {
+      if (data.state.link.item.display.order == "letconname") {
+        data.state.link.item.display.order = "visualname";
+      } else if (data.state.link.item.display.order == "nameletcon") {
+        data.state.link.item.display.order = "namevisual";
+      };
+      return data;
     }
   };
 
