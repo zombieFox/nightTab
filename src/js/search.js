@@ -44,7 +44,6 @@ var search = (function() {
     get: function() {
       var searchInput = helper.e(".search-input");
       var string = helper.trimString(searchInput.value).toLowerCase();
-      console.log(string);
       if (state.get.current().search) {
         bookmarks.get().forEach(function(arrayItem, index) {
           arrayItem.items.forEach(function(arrayItem, index) {
