@@ -252,7 +252,7 @@ var link = (function() {
             l: 50
           });
           arrayItem.accent.hsl = {
-            h: degree,
+            h: Math.round(degree),
             s: 100,
             l: 50
           };
@@ -332,7 +332,7 @@ var link = (function() {
             l: 50
           });
           arrayItem.color.hsl = {
-            h: degree,
+            h: Math.round(degree),
             s: 100,
             l: 50
           };
