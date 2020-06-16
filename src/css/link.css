@@ -197,7 +197,6 @@
   height: 100%;
   z-index: 1;
   pointer-events: none;
-  transition: opacity var(--layout-timing-extra-fast);
 }
 
 .is-link-style-block .link-panel-front {
