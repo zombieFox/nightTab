@@ -941,7 +941,8 @@ var link = (function() {
             "--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";";
         };
         if (helper.checkIfValidString(stagedLink.link.image)) {
-          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-image-url: url(" + helper.trimString(stagedLink.link.image) + ");"
+          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-image";
+          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-image-url: url(" + helper.trimString(stagedLink.link.image) + ");"
         };
       };
       var linkItem = helper.makeNode(linkItemOptions);
