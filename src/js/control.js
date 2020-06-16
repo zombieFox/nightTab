@@ -5401,8 +5401,8 @@ var control = (function() {
             link.groupAndItems();
           }
         }, {
-          element: ".control-link-item-opacity-range",
-          path: "link.item.opacity",
+          element: ".control-link-item-color-opacity-range",
+          path: "link.item.color.opacity",
           type: "range",
           valueConvert: ["float"],
           valueModify: {
@@ -5410,18 +5410,18 @@ var control = (function() {
             max: 100
           },
           mirrorElement: [{
-            element: ".control-link-item-opacity-number",
-            path: "link.item.opacity",
+            element: ".control-link-item-color-opacity-number",
+            path: "link.item.color.opacity",
             type: "number",
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.opacity();
+            link.render.item.color.opacity();
             render.class();
           }
         }, {
-          element: ".control-link-item-opacity-number",
-          path: "link.item.opacity",
+          element: ".control-link-item-color-opacity-number",
+          path: "link.item.color.opacity",
           type: "number",
           valueConvert: ["float"],
           valueModify: {
@@ -5429,21 +5429,21 @@ var control = (function() {
             max: 100
           },
           mirrorElement: [{
-            element: ".control-link-item-opacity-range",
-            path: "link.item.opacity",
+            element: ".control-link-item-color-opacity-range",
+            path: "link.item.color.opacity",
             type: "number",
             valueConvert: ["float"]
           }],
           func: function() {
-            link.render.item.opacity();
+            link.render.item.color.opacity();
             render.class();
           }
         }, {
-          element: ".control-link-item-opacity-default",
+          element: ".control-link-item-color-opacity-default",
           type: "button",
           func: function() {
-            mod.default("link.item.opacity");
-            link.render.item.opacity();
+            mod.default("link.item.color.opacity");
+            link.render.item.color.opacity();
             render.update.control.menu();
             render.class();
           }
@@ -6178,6 +6178,61 @@ var control = (function() {
           func: function() {
             link.mod.accent.clear();
             link.groupAndItems();
+          }
+        }],
+        image: [{
+          element: ".control-link-item-image-clear",
+          type: "button",
+          func: function() {
+            link.mod.image.clear();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-item-image-opacity-range",
+          path: "link.item.image.opacity",
+          type: "range",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-image-opacity-number",
+            path: "link.item.image.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.image.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-image-opacity-number",
+          path: "link.item.image.opacity",
+          type: "number",
+          valueConvert: ["float"],
+          valueModify: {
+            min: 0,
+            max: 100
+          },
+          mirrorElement: [{
+            element: ".control-link-item-image-opacity-range",
+            path: "link.item.image.opacity",
+            type: "number",
+            valueConvert: ["float"]
+          }],
+          func: function() {
+            link.render.item.image.opacity();
+            render.class();
+          }
+        }, {
+          element: ".control-link-item-image-opacity-default",
+          type: "button",
+          func: function() {
+            mod.default("link.item.image.opacity");
+            link.render.item.image.opacity();
+            render.update.control.menu();
+            render.class();
           }
         }],
         border: [{
@@ -10641,12 +10696,20 @@ var control = (function() {
         name: "is-link-item-color-by-" + state.get.current().link.item.color.by
       }, {
         remove: [
-          "is-link-item-opacity"
+          "is-link-item-color-opacity"
         ],
         condition: function() {
-          return (state.get.current().link.item.opacity < 1);
+          return (state.get.current().link.item.color.opacity < 1);
         },
-        name: "is-link-item-opacity"
+        name: "is-link-item-color-opacity"
+      }, {
+        remove: [
+          "is-link-item-image-opacity"
+        ],
+        condition: function() {
+          return (state.get.current().link.item.image.opacity < 1);
+        },
+        name: "is-link-item-image-opacity"
       }, {
         remove: [
           "is-link-item-display-direction-horizontal",
@@ -11433,11 +11496,11 @@ var control = (function() {
             ".control-link-item-color-apply",
             ".control-link-item-color-clear",
             ".control-link-item-color-rainbow",
-            "[for=control-link-item-opacity-range]",
-            ".control-link-item-opacity-range",
-            ".control-link-item-opacity-number",
-            ".control-link-item-opacity-default",
-            ".control-link-item-opacity-helper",
+            "[for=control-link-item-color-opacity-range]",
+            ".control-link-item-color-opacity-range",
+            ".control-link-item-color-opacity-number",
+            ".control-link-item-color-opacity-default",
+            ".control-link-item-color-opacity-helper",
             ".control-link-item-accent-rgb-color",
             ".control-link-item-accent-rgb-text",
             ".control-link-item-accent-helper",
@@ -11462,6 +11525,11 @@ var control = (function() {
             ".control-link-item-accent-apply",
             ".control-link-item-accent-clear",
             ".control-link-item-accent-rainbow",
+            "[for=control-link-item-image-opacity-range]",
+            ".control-link-item-image-opacity-range",
+            ".control-link-item-image-opacity-number",
+            ".control-link-item-image-opacity-default",
+            ".control-link-item-image-opacity-helper",
             ".control-link-orientation-top",
             ".control-link-orientation-bottom",
             ".control-link-orientation-helper",

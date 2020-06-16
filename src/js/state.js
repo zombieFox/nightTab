@@ -188,7 +188,8 @@ var state = (function() {
             r: 0,
             g: 0,
             b: 0
-          }
+          },
+          opacity: 1
         },
         accent: {
           hsl: {
@@ -201,6 +202,9 @@ var state = (function() {
             g: 0,
             b: 0
           }
+        },
+        image: {
+          opacity: 1
         },
         display: {
           visual: {
@@ -246,8 +250,7 @@ var state = (function() {
         },
         newTab: false,
         size: 1,
-        border: 0,
-        opacity: 1
+        border: 0
       },
       show: true,
       add: false,
@@ -447,6 +450,12 @@ var state = (function() {
         width: 100
       },
       item: {
+        color: {
+          opacity: 1
+        },
+        image: {
+          opacity: 1
+        },
         display: {
           visual: {
             letter: {
@@ -473,8 +482,7 @@ var state = (function() {
           }
         },
         size: 1,
-        border: 0,
-        opacity: 1
+        border: 0
       }
     },
     group: {

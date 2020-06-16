@@ -1094,6 +1094,14 @@ var update = (function() {
         data.state.link.item.display.order = "namevisual";
       };
       return data;
+    },
+    "5.44.0": function(data) {
+      data.state.link.item.color.opacity = data.state.link.item.opacity;
+      delete data.state.link.item.opacity;
+      data.state.link.item.image = {
+        opacity: 1
+      };
+      return data;
     }
   };
 

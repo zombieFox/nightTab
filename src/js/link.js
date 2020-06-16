@@ -347,6 +347,16 @@ var link = (function() {
     }
   };
 
+  mod.image = {
+    clear: function() {
+      bookmarks.get().forEach(function(arrayItem, index) {
+        arrayItem.items.forEach(function(arrayItem, index) {
+          arrayItem.image = "";
+        });
+      });
+    }
+  };
+
   mod.name = {
     show: function() {
       bookmarks.get().forEach(function(arrayItem, index) {
@@ -941,7 +951,6 @@ var link = (function() {
             "--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";";
         };
         if (helper.checkIfValidString(stagedLink.link.image)) {
-          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-image";
           linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-image-url: url(" + helper.trimString(stagedLink.link.image) + ");"
         };
       };
@@ -2538,9 +2547,17 @@ var link = (function() {
       var html = helper.e("html");
       html.style.setProperty("--link-item-display-gutter", state.get.current().link.item.display.gutter);
     },
-    opacity: function() {
-      var html = helper.e("html");
-      html.style.setProperty("--link-item-opacity", state.get.current().link.item.opacity);
+    color: {
+      opacity: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--link-item-color-opacity", state.get.current().link.item.color.opacity);
+      }
+    },
+    image: {
+      opacity: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--link-item-image-opacity", state.get.current().link.item.image.opacity);
+      }
     }
   };
 
@@ -3230,7 +3247,8 @@ var link = (function() {
     render.item.translate.x();
     render.item.translate.y();
     render.item.gutter();
-    render.item.opacity();
+    render.item.color.opacity();
+    render.item.image.opacity();
     render.area.width();
   };
 

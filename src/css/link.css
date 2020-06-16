@@ -169,6 +169,7 @@
 
 /* link panel front */
 .link-panel-front {
+  background-color: rgba(var(--link-item-color), var(--link-item-color-opacity));
   position: absolute;
   left: 0;
   width: 100%;
@@ -188,7 +189,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: var(--link-item-opacity);
+  opacity: var(--link-item-image-opacity);
   position: absolute;
   top: 0;
   left: 0;
@@ -229,25 +230,14 @@
   height: calc(100% - var(--layout-line-width));
 }
 
-.link-item:not(.link-item-image) .link-panel-front {
-  background-color: rgba(var(--link-item-color), var(--link-item-opacity));
-}
-
 .link-panel-front:hover,
 .link-panel-front:focus,
 .link-item:focus-within .link-panel-front,
 .link-item:focus .link-panel-front,
 .link-item:hover .link-panel-front {
+  background-color: rgba(var(--link-item-color-focus-hover), var(--link-item-color-opacity));
   outline: none;
   text-decoration: none;
-}
-
-.link-item:not(.link-item-image) .link-panel-front:hover,
-.link-item:not(.link-item-image) .link-panel-front:focus,
-.link-item:not(.link-item-image):focus-within .link-panel-front,
-.link-item:not(.link-item-image):focus .link-panel-front,
-.link-item:not(.link-item-image):hover .link-panel-front {
-  background-color: rgba(var(--link-item-color-focus-hover), var(--link-item-opacity));
 }
 
 .is-link-item-shadow-show.is-link-orientation-bottom .link-item:focus .link-panel-front,
