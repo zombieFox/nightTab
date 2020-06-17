@@ -2,6 +2,8 @@ var data = (function() {
 
   var _saveName = "nightTab";
 
+  var _backupName = "nightTab-backup";
+
   var mod = {};
 
   mod.import = function() {
@@ -42,6 +44,7 @@ var data = (function() {
     if (data) {
       if (!("version" in data) || data.version != version.get().number) {
         console.log("data version " + data.version + " found less than current");
+        mod.backup(data);
         data = update.run(data);
         mod.set(_saveName, JSON.stringify(data));
       } else {
@@ -50,6 +53,20 @@ var data = (function() {
       };
     } else {
       console.log("no data found to load");
+    };
+  };
+
+  mod.backup = function(data) {
+    if (data) {
+      var dataBackup = JSON.parse(JSON.stringify(data));
+      if (dataBackup.state.background.image.file) {
+        if (helper.checkIfValidString(dataBackup.state.background.image.file.data)) {
+          dataBackup.state.background.image.file.name = "";
+          dataBackup.state.background.image.file.data = "";
+        };
+      };
+      console.log("data version " + dataBackup.version + " backed up");
+      mod.set(_backupName, JSON.stringify(dataBackup));
     };
   };
 
