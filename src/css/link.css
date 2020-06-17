@@ -93,6 +93,14 @@
   pointer-events: none;
 }
 
+.link-sort-placeholder-tall {
+  grid-row: span 2;
+}
+
+.link-sort-placeholder-wide {
+  grid-column: span 2;
+}
+
 .link-item.link-empty {
   background-color: rgba(var(--theme-color-04), 0.2);
   padding: 0.5em 1em;
@@ -137,6 +145,7 @@
 .link-item {
   font-size: 1em;
   position: relative;
+  min-height: 100%;
   height: var(--link-item-height);
   display: block;
   transform: scale(1);

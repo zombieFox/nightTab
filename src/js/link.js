@@ -518,16 +518,26 @@ var link = (function() {
       });
     },
     item: function() {
+      var placeholder = helper.node("div|class:link-sort-placeholder");
       sortable(".group-body", {
         items: ".link-item",
         handle: ".link-control-item-handle",
         acceptFrom: ".group-body",
-        placeholder: helper.node("div|class:link-sort-placeholder"),
-        forcePlaceholderSize: true
+        placeholder: placeholder
       });
       bind.sort.update.remove.item();
       helper.eA(".group-body").forEach(function(arrayItem, index) {
         sortable(arrayItem)[0].addEventListener("sortupdate", bind.sort.update.func.item, false, event);
+      });
+      helper.eA(".group-body").forEach(function(arrayItem, index) {
+        sortable(arrayItem)[0].addEventListener("sortstart", function() {
+          if (event.detail.item.style.gridRow != "") {
+            helper.addClass(placeholder, "link-sort-placeholder-tall");
+          };
+          if (event.detail.item.style.gridColumn != "") {
+            helper.addClass(placeholder, "link-sort-placeholder-wide");
+          };
+        }, false, event);
       });
     }
   };
@@ -926,11 +936,17 @@ var link = (function() {
           value: "link-item"
         }]
       };
-      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkIfValidString(stagedLink.link.image)) {
+      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkIfValidString(stagedLink.link.image) || stagedLink.link.wide || stagedLink.link.tall) {
         linkItemOptions.attr.push({
           key: "style",
           value: ""
         });
+        if (stagedLink.link.wide) {
+          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "grid-column: span 2;"
+        };
+        if (stagedLink.link.tall) {
+          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "grid-row: span 2;"
+        };
         if (stagedLink.link.accent.by == "custom") {
           linkItemOptions.attr[1].value = linkItemOptions.attr[1].value +
             "--theme-accent-r: " + stagedLink.link.accent.rgb.r + ";" +
