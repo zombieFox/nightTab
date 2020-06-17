@@ -982,20 +982,12 @@ var update = (function() {
               arrayItem.accent.color[key] = 0;
             };
           };
-          if (arrayItem.accent.color) {
-            arrayItem.accent.rgb = {
-              r: arrayItem.accent.color.r,
-              g: arrayItem.accent.color.g,
-              b: arrayItem.accent.color.b
-            };
-            delete arrayItem.accent.color;
-          } else if (!arrayItem.accent.rgb) {
-            arrayItem.accent.rgb = {
-              r: 0,
-              g: 0,
-              b: 0
-            };
+          arrayItem.accent.rgb = {
+            r: arrayItem.accent.color.r,
+            g: arrayItem.accent.color.g,
+            b: arrayItem.accent.color.b
           };
+          delete arrayItem.accent.color;
           arrayItem.accent.hsl = {
             h: 0,
             s: 0,
@@ -1021,35 +1013,26 @@ var update = (function() {
             }
           };
           arrayItem.image = "";
-          if (!arrayItem.visual) {
-            arrayItem.visual = {
-              display: arrayItem.display,
-              letter: arrayItem.letter,
-              image: "",
-              icon: arrayItem.icon
-            };
-            delete arrayItem.display;
-            delete arrayItem.letter;
-            delete arrayItem.icon;
-            if (arrayItem.visual.letter == null) {
-              arrayItem.visual.letter = "";
-            };
+          arrayItem.visual = {
+            display: arrayItem.display,
+            letter: arrayItem.letter,
+            image: "",
+            icon: arrayItem.icon
           };
-          if (arrayItem.visual) {
-            if (arrayItem.visual.icon) {
-              if (arrayItem.visual.icon.label == null) {
-                arrayItem.visual.icon.label = "";
-              };
-              if (arrayItem.visual.icon.name == null) {
-                arrayItem.visual.icon.name = "";
-              };
-              if (arrayItem.visual.icon.prefix == null) {
-                arrayItem.visual.icon.prefix = "";
-              };
-            };
+          delete arrayItem.display;
+          delete arrayItem.letter;
+          delete arrayItem.icon;
+          if (arrayItem.visual.letter == null) {
+            arrayItem.visual.letter = "";
           };
-          if (arrayItem.visual.image == null) {
-            arrayItem.visual.image = "";
+          if (arrayItem.visual.icon.label == null) {
+            arrayItem.visual.icon.label = "";
+          };
+          if (arrayItem.visual.icon.name == null) {
+            arrayItem.visual.icon.name = "";
+          };
+          if (arrayItem.visual.icon.prefix == null) {
+            arrayItem.visual.icon.prefix = "";
           };
 
         });
@@ -1083,18 +1066,10 @@ var update = (function() {
           b: 0
         }
       };
-      if (!data.state.link.item.display.visual) {
-        data.state.link.item.display.visual = data.state.link.item.display.letcon;
-      };
-      if (data.state.link.item.display.letcon) {
-        delete data.state.link.item.display.letcon;
-      };
-      if (data.state.link.item.display.visual) {
-        if (!data.state.link.item.display.visual.image) {
-          data.state.link.item.display.visual.image = {
-            size: 3
-          };
-        };
+      data.state.link.item.display.visual = data.state.link.item.display.letcon;
+      delete data.state.link.item.display.letcon;
+      data.state.link.item.display.visual.image = {
+        size: 3
       };
       if (data.state.link.item.display.order == "letconname") {
         data.state.link.item.display.order = "visualname";
