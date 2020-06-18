@@ -93,12 +93,21 @@
   pointer-events: none;
 }
 
-.link-sort-placeholder-tall {
-  grid-row: span 2;
-}
+@media (min-width: 900px) {
 
-.link-sort-placeholder-wide {
-  grid-column: span 2;
+  .is-link-breakpoint-md .link-sort-placeholder-wide,
+  .is-link-breakpoint-lg .link-sort-placeholder-wide,
+  .is-link-breakpoint-xl .link-sort-placeholder-wide,
+  .is-link-breakpoint-xxl .link-sort-placeholder-wide {
+    grid-column: span 2;
+  }
+
+  .is-link-breakpoint-md .link-sort-placeholder-tall,
+  .is-link-breakpoint-lg .link-sort-placeholder-tall,
+  .is-link-breakpoint-xl .link-sort-placeholder-tall,
+  .is-link-breakpoint-xxl .link-sort-placeholder-tall {
+    grid-row: span 2;
+  }
 }
 
 .link-item.link-empty {
