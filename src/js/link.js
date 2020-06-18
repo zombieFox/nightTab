@@ -96,6 +96,8 @@ var link = (function() {
         }
       },
       image: null,
+      wide: null,
+      tall: null,
       timeStamp: null,
       searchMatch: null
     }
@@ -133,6 +135,8 @@ var link = (function() {
     stagedLink.link.color.rgb.g = 0;
     stagedLink.link.color.rgb.b = 0;
     stagedLink.link.image = "";
+    stagedLink.link.wide = false;
+    stagedLink.link.tall = false;
     stagedLink.link.searchMatch = false;
   };
 
@@ -168,8 +172,10 @@ var link = (function() {
     stagedLink.link.color.rgb.g = null;
     stagedLink.link.color.rgb.b = null;
     stagedLink.link.image = null;
-    stagedLink.link.timeStamp = null;
+    stagedLink.link.wide = null;
+    stagedLink.link.tall = null;
     stagedLink.link.searchMatch = null;
+    stagedLink.link.timeStamp = null;
   };
 
   var mod = {};
@@ -531,10 +537,10 @@ var link = (function() {
       });
       helper.eA(".group-body").forEach(function(arrayItem, index) {
         sortable(arrayItem)[0].addEventListener("sortstart", function() {
-          if (event.detail.item.style.gridRow != "") {
+          if (event.detail.item.classList.contains("link-item-tall")) {
             helper.addClass(placeholder, "link-sort-placeholder-tall");
           };
-          if (event.detail.item.style.gridColumn != "") {
+          if (event.detail.item.classList.contains("link-item-wide")) {
             helper.addClass(placeholder, "link-sort-placeholder-wide");
           };
         }, false, event);
@@ -758,7 +764,7 @@ var link = (function() {
       var groupFormInputNameShowLabel = helper.node("label|for:group-form-input-name-show");
       var groupFormInputNameShowText = helper.node("span:Show Group name");
       var groupFormInputNameShowIcon = helper.node("span|class:label-icon");
-      var groupFormInputNameShowInput = helper.node("input|type:checkbox,class:group-form-input-name-show,id:group-form-input-name-show,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,checked");
+      var groupFormInputNameShowInput = helper.node("input|type:checkbox,class:group-form-input-name-show,id:group-form-input-name-show,tabindex:1,checked");
       var groupFormInputNameIndentWrap = helper.node("div|class:form-wrap");
       var groupFormInputNameIndent = helper.node("div|class:form-indent");
       var groupFormInputNameWrap = helper.node("div|class:form-wrap");
@@ -771,7 +777,7 @@ var link = (function() {
       var groupFormInputOpenallLabel = helper.node("label|for:group-form-input-openall");
       var groupFormInputOpenallLabelText = helper.node("span:Show Open all");
       var groupFormInputOpenallLabelIcon = helper.node("span|class:label-icon");
-      var groupFormOpenAllInput = helper.node("input|type:checkbox,class:group-form-input-openall,id:group-form-input-openall,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,checked");
+      var groupFormOpenAllInput = helper.node("input|type:checkbox,class:group-form-input-openall,id:group-form-input-openall,tabindex:1,checked");
       var groupFormOpenAllInputHelper = helper.node("div|class:form-helper");
       var groupFormOpenAllInputHelperItem = helper.node("p:Open all button will appear if there is at least one Bookmark in this Group.|class:link-form-input-icon-helper form-helper-item");
 
@@ -937,16 +943,18 @@ var link = (function() {
         }]
       };
       if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkIfValidString(stagedLink.link.image) || stagedLink.link.wide || stagedLink.link.tall) {
+        if (stagedLink.link.wide) {
+          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-wide";
+        };
+        if (stagedLink.link.tall) {
+          linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-tall";
+        };
+      };
+      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkIfValidString(stagedLink.link.image)) {
         linkItemOptions.attr.push({
           key: "style",
           value: ""
         });
-        if (stagedLink.link.wide) {
-          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "grid-column: span 2;"
-        };
-        if (stagedLink.link.tall) {
-          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "grid-row: span 2;"
-        };
         if (stagedLink.link.accent.by == "custom") {
           linkItemOptions.attr[1].value = linkItemOptions.attr[1].value +
             "--theme-accent-r: " + stagedLink.link.accent.rgb.r + ";" +
@@ -1377,6 +1385,24 @@ var link = (function() {
         }]
       });
 
+      // wide
+      var wideInputWrap = helper.node("div|class:form-wrap");
+      var wideLabel = helper.node("label|for:link-form-wide");
+      var wideLabelBlock = helper.node("span|class:label-block");
+      var wideLabelBlockItem1 = helper.node("span:Wide tile|class:label-block-item");
+      var wideLabelBlockItem2 = helper.node("span:Bookmark tile to take up two column spaces.|class:label-block-item small muted");
+      var wideLabelIcon = helper.node("span|class:label-icon");
+      var wideInput = helper.node("input|type:checkbox,class:link-form-wide,id:link-form-wide,tabindex:1");
+
+      // tall
+      var tallInputWrap = helper.node("div|class:form-wrap");
+      var tallLabel = helper.node("label|for:link-form-tall");
+      var tallLabelBlock = helper.node("span|class:label-block");
+      var tallLabelBlockItem1 = helper.node("span:Tall tile|class:label-block-item");
+      var tallLabelBlockItem2 = helper.node("span:Bookmark tile to take up two row spaces.|class:label-block-item small muted");
+      var tallLabelIcon = helper.node("span|class:label-icon");
+      var tallInput = helper.node("input|type:checkbox,class:link-form-tall,id:link-form-tall,tabindex:1");
+
       groupExistingRadioWrap.appendChild(groupExistingRadio);
       groupExistingLable.appendChild(groupExistingLableIcon);
       groupExistingLable.appendChild(groupExistingLableText);
@@ -1599,6 +1625,24 @@ var link = (function() {
       fieldset.appendChild(imageInputWrap);
       imageInputHelper.appendChild(imageInputHelperItem);
       fieldset.appendChild(imageInputHelper);
+
+      fieldset.appendChild(helper.node("hr"));
+
+      wideInputWrap.appendChild(wideInput);
+      wideLabel.appendChild(wideLabelIcon);
+      wideLabelBlock.appendChild(wideLabelBlockItem1);
+      wideLabelBlock.appendChild(wideLabelBlockItem2);
+      wideLabel.appendChild(wideLabelBlock);
+      wideInputWrap.appendChild(wideLabel);
+      fieldset.appendChild(wideInputWrap);
+
+      tallInputWrap.appendChild(tallInput);
+      tallLabel.appendChild(tallLabelIcon);
+      tallLabelBlock.appendChild(tallLabelBlockItem1);
+      tallLabelBlock.appendChild(tallLabelBlockItem2);
+      tallLabel.appendChild(tallLabelBlock);
+      tallInputWrap.appendChild(tallLabel);
+      fieldset.appendChild(tallInputWrap);
 
       form.appendChild(fieldset);
 
@@ -1836,6 +1880,12 @@ var link = (function() {
         accentRgbBRange.value = stagedLink.link.accent.rgb.b;
         accentRgbBNumber.value = stagedLink.link.accent.rgb.b;
         imageInput.value = stagedLink.link.image;
+        if (stagedLink.link.wide) {
+          wideInput.checked = true;
+        };
+        if (stagedLink.link.tall) {
+          tallInput.checked = true;
+        };
       };
 
       var mirror = {
@@ -2477,6 +2527,12 @@ var link = (function() {
       });
       imageInput.addEventListener("input", function(event) {
         stagedLink.link.image = this.value;
+      }, false);
+      wideInput.addEventListener("change", function(event) {
+        stagedLink.link.wide = this.checked;
+      }, false);
+      tallInput.addEventListener("change", function(event) {
+        stagedLink.link.tall = this.checked;
       }, false);
       autoSuggest.bind.input({
         input: displayIconInput,

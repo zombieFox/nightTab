@@ -176,6 +176,16 @@
   transition: none;
 }
 
+@media (min-width: 900px) {
+  .link-item-wide {
+    grid-column: span 2;
+  }
+
+  .link-item-tall {
+    grid-row: span 2;
+  }
+}
+
 /* link panel front */
 .link-panel-front {
   background-color: rgba(var(--link-item-color), var(--link-item-color-opacity));
