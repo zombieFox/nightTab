@@ -537,11 +537,13 @@ var link = (function() {
       });
       helper.eA(".group-body").forEach(function(arrayItem, index) {
         sortable(arrayItem)[0].addEventListener("sortstart", function() {
-          if (event.detail.item.classList.contains("link-item-tall")) {
-            helper.addClass(placeholder, "link-sort-placeholder-tall");
-          };
-          if (event.detail.item.classList.contains("link-item-wide")) {
-            helper.addClass(placeholder, "link-sort-placeholder-wide");
+          if (state.get.current().link.breakpoint == "md" || state.get.current().link.breakpoint == "lg" || state.get.current().link.breakpoint == "xl" || state.get.current().link.breakpoint == "xxl") {
+            if (event.detail.item.classList.contains("link-item-tall")) {
+              helper.addClass(placeholder, "link-sort-placeholder-tall");
+            };
+            if (event.detail.item.classList.contains("link-item-wide")) {
+              helper.addClass(placeholder, "link-sort-placeholder-wide");
+            };
           };
         }, false, event);
       });
