@@ -548,6 +548,45 @@ var link = (function() {
     }
   };
 
+  bind.resize = new ResizeObserver(function(elements) {
+    var linkArea = helper.e(".link-area");
+    var groupBody = helper.e(".group-body");
+    var linkItem = helper.e(".link-item");
+    var size = {
+      sm: 550,
+      md: 700,
+      lg: 900,
+      xl: 1100,
+      xxl: 1600
+    };
+    if (linkArea) {
+      if (groupBody && linkItem) {
+        elements.forEach(function(entry) {
+          var breakpoint;
+          if (entry.contentRect.width <= size.sm) {
+            breakpoint = "xs";
+          } else if (entry.contentRect.width > size.sm && entry.contentRect.width <= size.md) {
+            breakpoint = "sm";
+          } else if (entry.contentRect.width > size.md && entry.contentRect.width <= size.lg) {
+            breakpoint = "md";
+          } else if (entry.contentRect.width > size.lg && entry.contentRect.width <= size.xl) {
+            breakpoint = "lg";
+          } else if (entry.contentRect.width > size.xl && entry.contentRect.width <= size.xxl) {
+            breakpoint = "xl";
+          } else if (entry.contentRect.width > size.xxl) {
+            breakpoint = "xxl";
+          };
+          helper.setObject({
+            object: state.get.current(),
+            path: "link.breakpoint",
+            newValue: breakpoint
+          });
+          render.breakpoint.update();
+        });
+      };
+    };
+  });
+
   var render = {};
 
   render.move = {
@@ -3206,6 +3245,45 @@ var link = (function() {
     }
   };
 
+  render.breakpoint = {
+    add: function() {
+      var html = helper.e("html");
+      switch (state.get.current().link.breakpoint) {
+        case "xs":
+          helper.addClass(html, "is-link-breakpoint-xs");
+          break
+        case "sm":
+          helper.addClass(html, "is-link-breakpoint-sm");
+          break
+        case "md":
+          helper.addClass(html, "is-link-breakpoint-md");
+          break
+        case "lg":
+          helper.addClass(html, "is-link-breakpoint-lg");
+          break
+        case "xl":
+          helper.addClass(html, "is-link-breakpoint-xl");
+          break
+        case "xxl":
+          helper.addClass(html, "is-link-breakpoint-xxl");
+          break
+      };
+    },
+    remove: function() {
+      var html = helper.e("html");
+      helper.removeClass(html, "is-link-breakpoint-xs");
+      helper.removeClass(html, "is-link-breakpoint-sm");
+      helper.removeClass(html, "is-link-breakpoint-md");
+      helper.removeClass(html, "is-link-breakpoint-lg");
+      helper.removeClass(html, "is-link-breakpoint-xl");
+      helper.removeClass(html, "is-link-breakpoint-xxl");
+    },
+    update: function() {
+      render.breakpoint.remove();
+      render.breakpoint.add();
+    }
+  };
+
   var add = {
     item: {
       open: function() {
@@ -3289,11 +3367,15 @@ var link = (function() {
   };
 
   var groupAndItems = function() {
+    if (helper.e(".link-area")) {
+      bind.resize.unobserve(helper.e(".link-area"));
+    };
     render.clear.item();
     render.clear.group();
     render.all();
     render.group.tabindex();
     render.item.tabindex();
+    bind.resize.observe(helper.e(".link-area"));
     if (!state.get.current().search) {
       bind.sort.group();
       bind.sort.item();

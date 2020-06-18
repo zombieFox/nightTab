@@ -145,8 +145,8 @@
 .link-item {
   font-size: 1em;
   position: relative;
-  min-height: 100%;
-  height: var(--link-item-height);
+  width: 100%;
+  height: 100%;
   display: block;
   transform: scale(1);
   transition: transform var(--layout-timing-extra-fast);
@@ -177,11 +177,18 @@
 }
 
 @media (min-width: 900px) {
-  .link-item-wide {
+
+  .is-link-breakpoint-md .link-item-wide,
+  .is-link-breakpoint-lg .link-item-wide,
+  .is-link-breakpoint-xl .link-item-wide,
+  .is-link-breakpoint-xxl .link-item-wide {
     grid-column: span 2;
   }
 
-  .link-item-tall {
+  .is-link-breakpoint-md .link-item-tall,
+  .is-link-breakpoint-lg .link-item-tall,
+  .is-link-breakpoint-xl .link-item-tall,
+  .is-link-breakpoint-xxl .link-item-tall {
     grid-row: span 2;
   }
 }

@@ -1110,6 +1110,7 @@ var update = (function() {
           arrayItem.tall = false;
         });
       });
+      data.state.link.breakpoint = "xs";
       return data;
     }
   };
