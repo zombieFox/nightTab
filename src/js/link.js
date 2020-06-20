@@ -491,7 +491,7 @@ var link = (function() {
           stagedLink.position.origin.group = Array.from(helper.getClosest(event.detail.origin.container, ".group").parentNode.children).indexOf(helper.getClosest(event.detail.origin.container, ".group"));
           stagedLink.position.origin.item = event.detail.origin.index;
           stagedLink.position.destination.group = Array.from(helper.getClosest(event.detail.destination.container, ".group").parentNode.children).indexOf(helper.getClosest(event.detail.destination.container, ".group"));
-          stagedLink.position.destination.item = event.detail.destination.index
+          stagedLink.position.destination.item = event.detail.destination.index;
           bookmarks.mod.move.link(stagedLink);
           data.save();
           groupAndItems();
@@ -537,14 +537,10 @@ var link = (function() {
       });
       helper.eA(".group-body").forEach(function(arrayItem, index) {
         sortable(arrayItem)[0].addEventListener("sortstart", function() {
-          if (state.get.current().link.breakpoint == "md" || state.get.current().link.breakpoint == "lg" || state.get.current().link.breakpoint == "xl" || state.get.current().link.breakpoint == "xxl") {
-            if (event.detail.item.classList.contains("link-item-tall")) {
-              helper.addClass(placeholder, "link-sort-placeholder-tall");
-            };
-            if (event.detail.item.classList.contains("link-item-wide")) {
-              helper.addClass(placeholder, "link-sort-placeholder-wide");
-            };
-          };
+          var groupIndex = Array.from(helper.getClosest(event.detail.origin.container, ".group").parentNode.children).indexOf(helper.getClosest(event.detail.origin.container, ".group"));
+          var itemIndex = event.detail.origin.index;
+          var link = bookmarks.get()[groupIndex].items[itemIndex];
+          placeholder.setAttribute("style", "grid-column: span " + link.column + ";  grid-row: span " + link.row + ";");
         }, false, event);
       });
     }
