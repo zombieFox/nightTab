@@ -2147,7 +2147,6 @@ var theme = (function() {
   };
 
   mod.font = {
-    loaded: [],
     display: {
       light: function() {
         helper.setObject({
@@ -2293,61 +2292,43 @@ var theme = (function() {
 
   render.font = {
     load: {
-      preset: function() {
-        var allPresetFonts = [];
-        mod.preset.all.forEach(function(arrayItem, index) {
-          var displayFont = arrayItem.font.display.name + ":" + arrayItem.font.display.weight;
-          var uiFont = arrayItem.font.ui.name + ":" + arrayItem.font.ui.weight;
-          if (helper.checkIfValidString(arrayItem.font.display.name) && !allPresetFonts.includes(displayFont)) {
-            mod.font.loaded.push(arrayItem.font.display.name);
-            allPresetFonts.push(displayFont);
-          };
-          if (helper.checkIfValidString(arrayItem.font.ui.name) && !allPresetFonts.includes(uiFont)) {
-            mod.font.loaded.push(arrayItem.font.ui.name);
-            allPresetFonts.push(uiFont);
-          };
-        });
-        WebFont.load({
-          google: {
-            families: allPresetFonts
-          }
-        });
+      display: function() {
+        var displayFont = helper.trimString(state.get.current().theme.font.display.name);
+        if (helper.checkIfValidString(displayFont)) {
+          WebFont.load({
+            // fontloading: function(familyName, fvd) {
+            //   console.log("fontloading:", familyName);
+            // },
+            google: {
+              families: [helper.trimString(state.get.current().theme.font.display.name) + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"],
+            }
+          });
+        };
+        render.font.display.name();
       },
-      custom: {
-        display: function() {
-          var displayFont = helper.trimString(state.get.current().theme.font.display.name);
-          if (!mod.font.loaded.includes(displayFont) && helper.checkIfValidString(displayFont)) {
-            mod.font.loaded.push(displayFont);
-            WebFont.load({
-              google: {
-                families: [helper.trimString(state.get.current().theme.font.display.name) + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"]
-              }
-            });
-          };
-          render.font.display.name();
-        },
-        ui: function() {
-          var uiFont = helper.trimString(state.get.current().theme.font.ui.name);
-          if (!mod.font.loaded.includes(uiFont) && helper.checkIfValidString(uiFont)) {
-            mod.font.loaded.push(uiFont);
-            WebFont.load({
-              google: {
-                families: [helper.trimString(state.get.current().theme.font.ui.name) + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"]
-              }
-            });
-          };
-          render.font.ui.name();
-        }
+      ui: function() {
+        var uiFont = helper.trimString(state.get.current().theme.font.ui.name);
+        if (helper.checkIfValidString(uiFont)) {
+          WebFont.load({
+            // fontloading: function(familyName, fvd) {
+            //   console.log("fontloading:", familyName);
+            // },
+            google: {
+              families: [helper.trimString(state.get.current().theme.font.ui.name) + ":100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"],
+            }
+          });
+        };
+        render.font.ui.name();
       }
     },
     delay: {
       display: function() {
         clearTimeout(_timerFontDisplay);
-        _timerFontDisplay = setTimeout(render.font.load.custom.display, 600);
+        _timerFontDisplay = setTimeout(render.font.load.display, 600);
       },
       ui: function() {
         clearTimeout(_timerFontUi);
-        _timerFontUi = setTimeout(render.font.load.custom.ui, 600);
+        _timerFontUi = setTimeout(render.font.load.ui, 600);
       }
     },
     display: {
@@ -2486,6 +2467,8 @@ var theme = (function() {
         control.render.update.control.header();
         control.render.update.control.menu();
         control.render.class();
+        render.font.load.display();
+        render.font.load.ui();
       }, false);
     });
     themePreset.appendChild(formInline);
@@ -2586,8 +2569,8 @@ var theme = (function() {
             render.shadow();
             render.shade.opacity();
             render.themeMetaTag();
-            render.font.load.custom.display();
-            render.font.load.custom.ui();
+            render.font.load.display();
+            render.font.load.ui();
             style.check();
             control.render.update.control.header();
             control.render.update.control.menu();
@@ -2902,9 +2885,8 @@ var theme = (function() {
     mod.accent.random();
     mod.custom.close();
     bind.accent.cycle.toggle();
-    render.font.load.preset();
-    render.font.load.custom.display();
-    render.font.load.custom.ui();
+    render.font.load.display();
+    render.font.load.ui();
     render.font.display.name();
     render.font.display.weight();
     render.font.display.style();
