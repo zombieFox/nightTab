@@ -406,16 +406,16 @@
   /* link */
   --link-item-width:                                    11em;
   --link-item-height:                                   10em;
-  --link-item-url-height:                               20%;
-  --link-item-edit-height:                              50%;
+  --link-item-url-height:                               2.25em;
+  --link-item-edit-height:                              5em;
 }
 
 .is-link-style-list {
   /* link */
   --link-item-width:                                    20em;
   --link-item-height:                                   4em;
-  --link-item-url-height:                               30%;
-  --link-item-edit-height:                              50%;
+  --link-item-url-height:                               1.5em;
+  --link-item-edit-height:                              2em;
 }
 
 .is-link-item-color-opacity {

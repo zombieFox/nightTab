@@ -1102,6 +1102,16 @@ var update = (function() {
         opacity: 1
       };
       return data;
+    },
+    "5.46.0": function(data) {
+      data.bookmarks.forEach(function(arrayItem, index) {
+        arrayItem.items.forEach(function(arrayItem, index) {
+          arrayItem.wide = false;
+          arrayItem.tall = false;
+        });
+      });
+      data.state.link.breakpoint = "xs";
+      return data;
     }
   };
 

@@ -96,6 +96,8 @@ var link = (function() {
         }
       },
       image: null,
+      wide: null,
+      tall: null,
       timeStamp: null,
       searchMatch: null
     }
@@ -133,6 +135,8 @@ var link = (function() {
     stagedLink.link.color.rgb.g = 0;
     stagedLink.link.color.rgb.b = 0;
     stagedLink.link.image = "";
+    stagedLink.link.wide = false;
+    stagedLink.link.tall = false;
     stagedLink.link.searchMatch = false;
   };
 
@@ -168,8 +172,10 @@ var link = (function() {
     stagedLink.link.color.rgb.g = null;
     stagedLink.link.color.rgb.b = null;
     stagedLink.link.image = null;
-    stagedLink.link.timeStamp = null;
+    stagedLink.link.wide = null;
+    stagedLink.link.tall = null;
     stagedLink.link.searchMatch = null;
+    stagedLink.link.timeStamp = null;
   };
 
   var mod = {};
@@ -485,7 +491,7 @@ var link = (function() {
           stagedLink.position.origin.group = Array.from(helper.getClosest(event.detail.origin.container, ".group").parentNode.children).indexOf(helper.getClosest(event.detail.origin.container, ".group"));
           stagedLink.position.origin.item = event.detail.origin.index;
           stagedLink.position.destination.group = Array.from(helper.getClosest(event.detail.destination.container, ".group").parentNode.children).indexOf(helper.getClosest(event.detail.destination.container, ".group"));
-          stagedLink.position.destination.item = event.detail.destination.index
+          stagedLink.position.destination.item = event.detail.destination.index;
           bookmarks.mod.move.link(stagedLink);
           data.save();
           groupAndItems();
@@ -518,19 +524,71 @@ var link = (function() {
       });
     },
     item: function() {
+      var placeholder = helper.node("div|class:link-sort-placeholder");
       sortable(".group-body", {
         items: ".link-item",
         handle: ".link-control-item-handle",
         acceptFrom: ".group-body",
-        placeholder: helper.node("div|class:link-sort-placeholder"),
-        forcePlaceholderSize: true
+        placeholder: placeholder
       });
       bind.sort.update.remove.item();
       helper.eA(".group-body").forEach(function(arrayItem, index) {
         sortable(arrayItem)[0].addEventListener("sortupdate", bind.sort.update.func.item, false, event);
       });
+      helper.eA(".group-body").forEach(function(arrayItem, index) {
+        sortable(arrayItem)[0].addEventListener("sortstart", function() {
+          var groupIndex = Array.from(helper.getClosest(event.detail.origin.container, ".group").parentNode.children).indexOf(helper.getClosest(event.detail.origin.container, ".group"));
+          var itemIndex = event.detail.origin.index;
+          var link = bookmarks.get()[groupIndex].items[itemIndex];
+          if (link.wide) {
+            helper.addClass(placeholder, "link-sort-placeholder-wide");
+          };
+          if (link.tall) {
+            helper.addClass(placeholder, "link-sort-placeholder-tall");
+          };
+        }, false, event);
+      });
     }
   };
+
+  bind.resize = new ResizeObserver(function(elements) {
+    var linkArea = helper.e(".link-area");
+    var groupBody = helper.e(".group-body");
+    var linkItem = helper.e(".link-item");
+    var size = {
+      sm: 550,
+      md: 700,
+      lg: 900,
+      xl: 1100,
+      xxl: 1600
+    };
+    if (linkArea) {
+      if (groupBody && linkItem) {
+        elements.forEach(function(entry) {
+          var breakpoint;
+          if (entry.contentRect.width <= size.sm) {
+            breakpoint = "xs";
+          } else if (entry.contentRect.width > size.sm && entry.contentRect.width <= size.md) {
+            breakpoint = "sm";
+          } else if (entry.contentRect.width > size.md && entry.contentRect.width <= size.lg) {
+            breakpoint = "md";
+          } else if (entry.contentRect.width > size.lg && entry.contentRect.width <= size.xl) {
+            breakpoint = "lg";
+          } else if (entry.contentRect.width > size.xl && entry.contentRect.width <= size.xxl) {
+            breakpoint = "xl";
+          } else if (entry.contentRect.width > size.xxl) {
+            breakpoint = "xxl";
+          };
+          helper.setObject({
+            object: state.get.current(),
+            path: "link.breakpoint",
+            newValue: breakpoint
+          });
+          render.breakpoint.update();
+        });
+      };
+    };
+  });
 
   var render = {};
 
@@ -748,7 +806,7 @@ var link = (function() {
       var groupFormInputNameShowLabel = helper.node("label|for:group-form-input-name-show");
       var groupFormInputNameShowText = helper.node("span:Show Group name");
       var groupFormInputNameShowIcon = helper.node("span|class:label-icon");
-      var groupFormInputNameShowInput = helper.node("input|type:checkbox,class:group-form-input-name-show,id:group-form-input-name-show,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,checked");
+      var groupFormInputNameShowInput = helper.node("input|type:checkbox,class:group-form-input-name-show,id:group-form-input-name-show,tabindex:1,checked");
       var groupFormInputNameIndentWrap = helper.node("div|class:form-wrap");
       var groupFormInputNameIndent = helper.node("div|class:form-indent");
       var groupFormInputNameWrap = helper.node("div|class:form-wrap");
@@ -761,7 +819,7 @@ var link = (function() {
       var groupFormInputOpenallLabel = helper.node("label|for:group-form-input-openall");
       var groupFormInputOpenallLabelText = helper.node("span:Show Open all");
       var groupFormInputOpenallLabelIcon = helper.node("span|class:label-icon");
-      var groupFormOpenAllInput = helper.node("input|type:checkbox,class:group-form-input-openall,id:group-form-input-openall,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false,checked");
+      var groupFormOpenAllInput = helper.node("input|type:checkbox,class:group-form-input-openall,id:group-form-input-openall,tabindex:1,checked");
       var groupFormOpenAllInputHelper = helper.node("div|class:form-helper");
       var groupFormOpenAllInputHelperItem = helper.node("p:Open all button will appear if there is at least one Bookmark in this Group.|class:link-form-input-icon-helper form-helper-item");
 
@@ -925,6 +983,12 @@ var link = (function() {
           key: "class",
           value: "link-item"
         }]
+      };
+      if (stagedLink.link.wide) {
+        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-wide";
+      };
+      if (stagedLink.link.tall) {
+        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-tall";
       };
       if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkIfValidString(stagedLink.link.image)) {
         linkItemOptions.attr.push({
@@ -1361,6 +1425,24 @@ var link = (function() {
         }]
       });
 
+      // wide
+      var wideInputWrap = helper.node("div|class:form-wrap");
+      var wideLabel = helper.node("label|for:link-form-wide");
+      var wideLabelBlock = helper.node("span|class:label-block");
+      var wideLabelBlockItem1 = helper.node("span:Wide tile|class:label-block-item");
+      var wideLabelBlockItem2 = helper.node("span:Bookmark tile to span across two columns.|class:label-block-item small muted");
+      var wideLabelIcon = helper.node("span|class:label-icon");
+      var wideInput = helper.node("input|type:checkbox,class:link-form-wide,id:link-form-wide,tabindex:1");
+
+      // tall
+      var tallInputWrap = helper.node("div|class:form-wrap");
+      var tallLabel = helper.node("label|for:link-form-tall");
+      var tallLabelBlock = helper.node("span|class:label-block");
+      var tallLabelBlockItem1 = helper.node("span:Tall tile|class:label-block-item");
+      var tallLabelBlockItem2 = helper.node("span:Bookmark tile to span across two rows.|class:label-block-item small muted");
+      var tallLabelIcon = helper.node("span|class:label-icon");
+      var tallInput = helper.node("input|type:checkbox,class:link-form-tall,id:link-form-tall,tabindex:1");
+
       groupExistingRadioWrap.appendChild(groupExistingRadio);
       groupExistingLable.appendChild(groupExistingLableIcon);
       groupExistingLable.appendChild(groupExistingLableText);
@@ -1583,6 +1665,24 @@ var link = (function() {
       fieldset.appendChild(imageInputWrap);
       imageInputHelper.appendChild(imageInputHelperItem);
       fieldset.appendChild(imageInputHelper);
+
+      fieldset.appendChild(helper.node("hr"));
+
+      wideInputWrap.appendChild(wideInput);
+      wideLabel.appendChild(wideLabelIcon);
+      wideLabelBlock.appendChild(wideLabelBlockItem1);
+      wideLabelBlock.appendChild(wideLabelBlockItem2);
+      wideLabel.appendChild(wideLabelBlock);
+      wideInputWrap.appendChild(wideLabel);
+      fieldset.appendChild(wideInputWrap);
+
+      tallInputWrap.appendChild(tallInput);
+      tallLabel.appendChild(tallLabelIcon);
+      tallLabelBlock.appendChild(tallLabelBlockItem1);
+      tallLabelBlock.appendChild(tallLabelBlockItem2);
+      tallLabel.appendChild(tallLabelBlock);
+      tallInputWrap.appendChild(tallLabel);
+      fieldset.appendChild(tallInputWrap);
 
       form.appendChild(fieldset);
 
@@ -1820,6 +1920,12 @@ var link = (function() {
         accentRgbBRange.value = stagedLink.link.accent.rgb.b;
         accentRgbBNumber.value = stagedLink.link.accent.rgb.b;
         imageInput.value = stagedLink.link.image;
+        if (stagedLink.link.wide) {
+          wideInput.checked = true;
+        };
+        if (stagedLink.link.tall) {
+          tallInput.checked = true;
+        };
       };
 
       var mirror = {
@@ -2461,6 +2567,12 @@ var link = (function() {
       });
       imageInput.addEventListener("input", function(event) {
         stagedLink.link.image = this.value;
+      }, false);
+      wideInput.addEventListener("change", function(event) {
+        stagedLink.link.wide = this.checked;
+      }, false);
+      tallInput.addEventListener("change", function(event) {
+        stagedLink.link.tall = this.checked;
       }, false);
       autoSuggest.bind.input({
         input: displayIconInput,
@@ -3134,6 +3246,45 @@ var link = (function() {
     }
   };
 
+  render.breakpoint = {
+    add: function() {
+      var html = helper.e("html");
+      switch (state.get.current().link.breakpoint) {
+        case "xs":
+          helper.addClass(html, "is-link-breakpoint-xs");
+          break
+        case "sm":
+          helper.addClass(html, "is-link-breakpoint-sm");
+          break
+        case "md":
+          helper.addClass(html, "is-link-breakpoint-md");
+          break
+        case "lg":
+          helper.addClass(html, "is-link-breakpoint-lg");
+          break
+        case "xl":
+          helper.addClass(html, "is-link-breakpoint-xl");
+          break
+        case "xxl":
+          helper.addClass(html, "is-link-breakpoint-xxl");
+          break
+      };
+    },
+    remove: function() {
+      var html = helper.e("html");
+      helper.removeClass(html, "is-link-breakpoint-xs");
+      helper.removeClass(html, "is-link-breakpoint-sm");
+      helper.removeClass(html, "is-link-breakpoint-md");
+      helper.removeClass(html, "is-link-breakpoint-lg");
+      helper.removeClass(html, "is-link-breakpoint-xl");
+      helper.removeClass(html, "is-link-breakpoint-xxl");
+    },
+    update: function() {
+      render.breakpoint.remove();
+      render.breakpoint.add();
+    }
+  };
+
   var add = {
     item: {
       open: function() {
@@ -3217,11 +3368,15 @@ var link = (function() {
   };
 
   var groupAndItems = function() {
+    if (helper.e(".link-area")) {
+      bind.resize.unobserve(helper.e(".link-area"));
+    };
     render.clear.item();
     render.clear.group();
     render.all();
     render.group.tabindex();
     render.item.tabindex();
+    bind.resize.observe(helper.e(".link-area"));
     if (!state.get.current().search) {
       bind.sort.group();
       bind.sort.item();

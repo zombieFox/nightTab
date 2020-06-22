@@ -256,7 +256,8 @@ var state = (function() {
       add: false,
       edit: false,
       style: "block",
-      orientation: "bottom"
+      orientation: "bottom",
+      breakpoint: "xs"
     },
     group: {
       area: {
