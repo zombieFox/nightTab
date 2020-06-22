@@ -1430,7 +1430,7 @@ var link = (function() {
       var wideLabel = helper.node("label|for:link-form-wide");
       var wideLabelBlock = helper.node("span|class:label-block");
       var wideLabelBlockItem1 = helper.node("span:Wide tile|class:label-block-item");
-      var wideLabelBlockItem2 = helper.node("span:Bookmark tile to take up two column spaces.|class:label-block-item small muted");
+      var wideLabelBlockItem2 = helper.node("span:Bookmark tile to span across two columns.|class:label-block-item small muted");
       var wideLabelIcon = helper.node("span|class:label-icon");
       var wideInput = helper.node("input|type:checkbox,class:link-form-wide,id:link-form-wide,tabindex:1");
 
@@ -1439,7 +1439,7 @@ var link = (function() {
       var tallLabel = helper.node("label|for:link-form-tall");
       var tallLabelBlock = helper.node("span|class:label-block");
       var tallLabelBlockItem1 = helper.node("span:Tall tile|class:label-block-item");
-      var tallLabelBlockItem2 = helper.node("span:Bookmark tile to take up two row spaces.|class:label-block-item small muted");
+      var tallLabelBlockItem2 = helper.node("span:Bookmark tile to span across two rows.|class:label-block-item small muted");
       var tallLabelIcon = helper.node("span|class:label-icon");
       var tallInput = helper.node("input|type:checkbox,class:link-form-tall,id:link-form-tall,tabindex:1");
 
