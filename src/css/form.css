@@ -73,7 +73,7 @@
   position: sticky;
   top: 0;
   z-index: 4;
-  transition: background-color var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast);
 }
 
 /* label */
@@ -83,7 +83,7 @@ label {
   margin-bottom: 0;
   font-size: 1em;
   display: block;
-  transition: color var(--layout-timing-extra-fast);
+  transition: color var(--layout-transition-extra-fast);
 }
 
 label:not(:only-child):not(:last-child) {
@@ -121,7 +121,7 @@ select {
   border-width: 0;
   border-radius: var(--theme-radius);
   cursor: pointer;
-  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -182,7 +182,7 @@ textarea {
   cursor: text;
   resize: vertical;
   display: block;
-  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
   -moz-appearance: textfield;
 }
 
@@ -216,7 +216,7 @@ textarea:disabled:focus {
 
 textarea::placeholder {
   color: rgb(var(--form-placeholder));
-  transition: color var(--layout-timing-extra-fast);
+  transition: color var(--layout-transition-extra-fast);
 }
 
 textarea:hover::placeholder {
@@ -255,7 +255,7 @@ input[type="text"] {
   border-width: 0;
   border-radius: var(--theme-radius);
   cursor: text;
-  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
   -moz-appearance: textfield;
 }
 
@@ -341,7 +341,7 @@ input[type="search"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="text"]::placeholder {
   color: rgb(var(--form-placeholder));
-  transition: color var(--layout-timing-extra-fast);
+  transition: color var(--layout-transition-extra-fast);
 }
 
 input[type="email"]:hover::placeholder,
@@ -433,7 +433,7 @@ input[type="radio"] {
   pointer-events: none;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  transition: color var(--layout-timing-extra-fast);
+  transition: color var(--layout-transition-extra-fast);
 }
 
 input[type="checkbox"]+label,
@@ -450,7 +450,7 @@ input[type="radio"]+label {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  transition: transform var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast);
+  transition: transform var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
 }
 
 input[type="checkbox"]:hover+label,
@@ -493,7 +493,7 @@ input[type="radio"]+label .label-icon {
   flex-shrink: 0;
   z-index: 1;
   box-shadow: none;
-  transition: background-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
 }
 
 input[type="checkbox"]+label .label-icon {
@@ -560,7 +560,7 @@ input[type="radio"]+label .label-icon:before {
   transform: scale(0.7);
   transform-origin: center;
   z-index: 2;
-  transition: background-color var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast), transform var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), border-radius var(--layout-transition-extra-fast), transform var(--layout-transition-extra-fast);
 }
 
 input[type="checkbox"]+label .label-icon:before {
@@ -622,7 +622,7 @@ input[type="checkbox"]+label .label-icon:after {
   transform: scale(0);
   transform-origin: center;
   z-index: 2;
-  transition: transform var(--layout-timing-extra-fast);
+  transition: transform var(--layout-transition-extra-fast);
   clip-path: polygon(7% 56%, 37% 86%, 95% 27%, 84% 16%, 37% 64%, 18% 45%);
 }
 
@@ -651,7 +651,7 @@ input[type="checkbox"]:checked:disabled:active+label .label-icon:after {
 input[type="checkbox"]+label .label-block-item,
 input[type="radio"]+label .label-block-item {
   color: rgb(var(--form-label));
-  transition: color var(--layout-timing-extra-fast);
+  transition: color var(--layout-transition-extra-fast);
 }
 
 input[type="checkbox"]:hover+label .label-block-item,
@@ -684,7 +684,7 @@ input[type="radio"]:disabled:focus+label .label-block-item {
 input[type="checkbox"]+label .label-block-item.muted,
 input[type="radio"]+label .label-block-item.muted {
   color: rgb(var(--utilities-muted));
-  transition: color var(--layout-timing-extra-fast);
+  transition: color var(--layout-transition-extra-fast);
 }
 
 input[type="checkbox"]:hover+label .label-block-item.muted,
@@ -745,7 +745,7 @@ input[type="color"] {
   overflow: hidden;
   cursor: pointer;
   opacity: 1;
-  transition: box-shadow var(--layout-timing-extra-fast), opacity var(--layout-timing-extra-fast);
+  transition: box-shadow var(--layout-transition-extra-fast), opacity var(--layout-transition-extra-fast);
 }
 
 input[type="color"]:hover {
@@ -838,7 +838,7 @@ input[type="range"]:before {
   border: 0;
   border-radius: var(--theme-radius);
   transform: translate(0, -50%);
-  transition: background-color var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast);
 }
 
 input[type="range"]:focus:before,
@@ -874,7 +874,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: var(--form-thumb-size);
   cursor: pointer;
   box-sizing: border-box;
-  transition: background-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
   -webkit-appearance: none;
 }
 
@@ -930,7 +930,7 @@ input[type="range"]::-moz-range-track {
   width: 100%;
   border: 0;
   border-radius: var(--theme-radius);
-  transition: all var(--layout-timing-extra-fast);
+  transition: all var(--layout-transition-extra-fast);
   -webkit-appearance: none;
 }
 
@@ -963,7 +963,7 @@ input[type="range"]::-moz-range-thumb {
   width: var(--form-thumb-size);
   cursor: pointer;
   box-sizing: border-box;
-  transition: background-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
   -moz-appearance: none;
 }
 
@@ -1015,7 +1015,7 @@ input[type="range"]::-moz-range-progress {
   background-color: rgb(var(--form-range-progress-background));
   height: calc(var(--layout-line-width) * 2);
   border-radius: var(--theme-radius);
-  transition: background-color var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast);
 }
 
 input[type="range"]:active::-moz-range-progress {
@@ -1030,7 +1030,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-helper-item {
   font-size: 0.8em;
   color: rgb(var(--form-helper));
-  transition: color var(--layout-timing-extra-fast);
+  transition: color var(--layout-transition-extra-fast);
 }
 
 .form-helper-item.disabled {
@@ -1070,7 +1070,7 @@ input[type="range"]:disabled::-moz-range-progress {
   align-items: center;
   overflow: hidden;
   box-shadow: none;
-  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
 }
 
 .form-input-button input[type="checkbox"]:focus+label,
@@ -1140,7 +1140,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-input-button-ring input[type="radio"]+label,
 .form-input-button-ring input[type="color"]+label,
 .form-input-button-ring input[type="file"]+label {
-  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
 }
 
 .form-input-button-ring input[type="checkbox"]:focus+label,
@@ -1200,7 +1200,7 @@ input[type="range"]:disabled::-moz-range-progress {
   width: 100%;
   height: 100%;
   clip-path: polygon(0 calc(100% - var(--layout-line-width)), 100% calc(100% - var(--layout-line-width)), 100% 100%, 0% 100%);
-  transition: background-color var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast);
   pointer-events: none;
 }
 
@@ -1369,7 +1369,7 @@ input[type="range"]:disabled::-moz-range-progress {
   padding: calc(var(--form-thumb-size) / 2);
   display: inline-grid;
   overflow: hidden;
-  transition: background-color var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast);
 }
 
 .form-grid:hover {
@@ -1765,7 +1765,7 @@ input[type="range"]:disabled::-moz-range-progress {
   border-style: solid;
   border-radius: var(--theme-radius);
   white-space: nowrap;
-  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
 }
 
 .form-group-text:hover,

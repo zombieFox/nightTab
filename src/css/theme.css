@@ -22,7 +22,7 @@
   left: 0;
   display: block;
   z-index: 2;
-  transition: height var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
+  transition: height var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast), border-radius var(--layout-transition-extra-fast);
 }
 
 .is-theme-custom-edit .theme-custom-button {
@@ -40,38 +40,42 @@
   box-shadow: var(--form-ring-accent);
 }
 
-.theme-custom-control {
+.theme-custom-control-wrap {
+  background-color: rgb(var(--button-background));
   border-radius: var(--theme-radius);
   width: 100%;
   height: 100%;
   position: absolute;
   bottom: 0;
   overflow: hidden;
+  z-index: 1;
+  transition: background-color var(--layout-transition-extra-fast), border-radius var(--layout-transition-extra-fast);
+}
+
+.theme-custom-control {
+  width: 100%;
+  position: absolute;
+  bottom: calc(-1 * var(--theme-custom-edit-height));
   display: flex;
   align-items: flex-end;
-  z-index: 1;
-  transition: height var(--layout-timing-extra-fast), border-radius var(--layout-timing-extra-fast);
+  transition: bottom var(--layout-transition-extra-fast);
+}
+
+.is-theme-custom-edit .theme-custom-control {
+  bottom: 0;
+  transition: bottom var(--layout-duration-05) var(--layout-timing-bounce);
 }
 
 .theme-custom-control .theme-custom-control-item {
-  padding: 0;
   border-radius: 0;
-  flex: 1 1 auto;
-  position: relative;
-  bottom: 0;
-  min-height: initial;
-  height: 0;
-  transition: height var(--layout-timing-extra-fast);
-}
-
-.is-theme-custom-edit .theme-custom-control-item {
-  height: var(--theme-custom-edit-height);
+  padding: 0;
+  flex-grow: 1;
 }
 
 .theme-custom-control-item .button-icon {
   font-size: 1em;
   position: relative;
-  transition: bottom var(--layout-timing-extra-fast), left var(--layout-timing-extra-fast), right var(--layout-timing-extra-fast);
+  transition: bottom var(--layout-transition-extra-fast), left var(--layout-transition-extra-fast), right var(--layout-transition-extra-fast);
 }
 
 .theme-custom-control-item:first-child .button-icon {
@@ -93,7 +97,7 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  transition: border-radius var(--layout-timing-extra-fast);
+  transition: border-radius var(--layout-transition-extra-fast);
 }
 
 .is-theme-custom-edit .theme-custom-preview {
@@ -116,7 +120,7 @@
   top: 0;
   left: 0;
   display: block;
-  transition: clip-path var(--layout-timing-extra-fast);
+  transition: clip-path var(--layout-transition-extra-fast);
 }
 
 .theme-preset-background-01,
@@ -212,7 +216,7 @@
   text-overflow: ellipsis;
   white-space: initial;
   transform: scale(1);
-  transition: color var(--layout-timing-extra-fast), transform var(--layout-timing-extra-fast), max-width var(--layout-timing-extra-fast), max-height var(--layout-timing-extra-fast), top var(--layout-timing-extra-fast), left var(--layout-timing-extra-fast);
+  transition: color var(--layout-transition-extra-fast), transform var(--layout-transition-extra-fast), max-width var(--layout-transition-extra-fast), max-height var(--layout-transition-extra-fast), top var(--layout-transition-extra-fast), left var(--layout-transition-extra-fast);
 }
 
 .theme-preset-button:focus .theme-preset-background-02,

@@ -36,7 +36,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: background-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
 }
 
 .auto-suggest-icon {

@@ -1,6 +1,6 @@
 var version = (function() {
 
-  var current = "5.47.0";
+  var current = "5.48.0";
 
   var name = "Macabre Caterpillar";
 

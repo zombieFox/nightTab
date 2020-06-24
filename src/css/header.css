@@ -63,7 +63,7 @@
 
 .header-area {
   background-color: transparent;
-  transition: background-color var(--layout-timing-medium), opacity var(--layout-timing-medium), border-radius var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-medium), opacity var(--layout-transition-medium), border-radius var(--layout-transition-extra-fast);
 }
 
 .is-layout-direction-vertical .header-area {

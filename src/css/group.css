@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  transition: padding var(--layout-timing-extra-fast) var(--layout-duration-04);
+  transition: padding var(--layout-transition-extra-fast) var(--layout-duration-04);
 }
 
 .group-header-item {
@@ -63,18 +63,18 @@
   overflow: hidden;
   flex-shrink: 0;
   transition:
-    width var(--layout-timing-extra-fast),
-    height var(--layout-timing-extra-fast) var(--layout-duration-04),
-    margin var(--layout-timing-extra-fast);
+    width var(--layout-transition-extra-fast),
+    height var(--layout-transition-extra-fast) var(--layout-duration-04),
+    margin var(--layout-transition-extra-fast);
 }
 
 .is-edit .group-header-item-control {
   height: 2.5em;
   width: 15em;
   transition:
-    width var(--layout-timing-extra-fast) var(--layout-duration-04),
-    height var(--layout-timing-extra-fast),
-    margin var(--layout-timing-extra-fast) var(--layout-duration-04);
+    width var(--layout-transition-extra-fast) var(--layout-duration-04),
+    height var(--layout-transition-extra-fast),
+    margin var(--layout-transition-extra-fast) var(--layout-duration-04);
 }
 
 .is-group-area-justify-center .group-header-item-control:not(:only-child):not(:last-child),
@@ -96,7 +96,7 @@
 }
 
 .is-edit .group-header {
-  transition: padding var(--layout-timing-extra-fast);
+  transition: padding var(--layout-transition-extra-fast);
 }
 
 .is-group-area-justify-left .group-header {

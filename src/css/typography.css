@@ -70,7 +70,7 @@ hr {
   border-radius: var(--theme-radius);
   margin: calc(var(--form-wrap-space) * 1.5) 0;
   clear: both;
-  transition: border-color var(--layout-timing-extra-fast);
+  transition: border-color var(--layout-transition-extra-fast);
 }
 
 b,
@@ -88,7 +88,7 @@ i {
 a {
   color: rgb(var(--theme-color-16));
   text-decoration: underline;
-  transition: text-decoration var(--layout-timing-extra-fast);
+  transition: text-decoration var(--layout-transition-extra-fast);
 }
 
 a:link,

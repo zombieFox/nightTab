@@ -24,7 +24,7 @@ input[type="submit"] {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
 }
 
 button:focus,
@@ -92,7 +92,7 @@ button:disabled:active,
   width: 100%;
   height: 100%;
   clip-path: polygon(0 calc(100% - var(--layout-line-width)), 100% calc(100% - var(--layout-line-width)), 100% 100%, 0% 100%);
-  transition: background-color var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast);
   pointer-events: none;
 }
 
@@ -119,7 +119,7 @@ button:disabled:active,
 }
 
 .button-ring {
-  transition: background-color var(--layout-timing-extra-fast), border-color var(--layout-timing-extra-fast), color var(--layout-timing-extra-fast), box-shadow var(--layout-timing-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
 }
 
 .button-ring:focus,

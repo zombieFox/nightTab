@@ -10,5 +10,5 @@
   box-shadow: var(--edge-shadow);
   z-index: var(--z-index-edge);
   pointer-events: none;
-  transition: opacity var(--layout-timing-extra-fast);
+  transition: opacity var(--layout-transition-extra-fast);
 }

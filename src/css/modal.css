@@ -9,7 +9,7 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   perspective: 1000px;
-  transition: opacity var(--layout-timing-extra-fast);
+  transition: opacity var(--layout-transition-extra-fast);
   z-index: var(--z-index-modal);
 }
 
@@ -34,7 +34,7 @@
   grid-template-rows: 1fr auto;
   justify-items: stretch;
   align-items: stretch;
-  transition: opacity var(--layout-timing-extra-fast);
+  transition: opacity var(--layout-transition-extra-fast);
 }
 
 .modal-wrapper .container {

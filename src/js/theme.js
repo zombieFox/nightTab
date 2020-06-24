@@ -2485,6 +2485,7 @@ var theme = (function() {
           var themeCustomTile = helper.node("div|class:theme-custom-tile");
           var themeCustomButton = helper.node("button|class:theme-custom-button button button-block button-ring,tabindex:-1");
           var themeCustomPreview = helper.node("span|class:theme-custom-preview");
+          var themeCustomControlWrap = helper.node("div|class:theme-custom-control-wrap");
           var themeCustomControl = helper.node("div|class:theme-custom-control");
           var themeCustomEdit = helper.node("button|class:theme-custom-control-item theme-custom-control-item-remove button,tabindex:-1");
           var themeCustomEditIcon = helper.node("span|class:button-icon icon-edit");
@@ -2544,8 +2545,9 @@ var theme = (function() {
           themeCustomRemove.appendChild(themeCustomRemoveIcon);
           themeCustomControl.appendChild(themeCustomEdit);
           themeCustomControl.appendChild(themeCustomRemove);
+          themeCustomControlWrap.appendChild(themeCustomControl);
           themeCustomTile.appendChild(themeCustomButton);
-          themeCustomTile.appendChild(themeCustomControl);
+          themeCustomTile.appendChild(themeCustomControlWrap);
           themeCustomItem.appendChild(themeCustomTile);
           formInline.appendChild(themeCustomItem);
 
