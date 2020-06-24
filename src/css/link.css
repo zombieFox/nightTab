@@ -884,16 +884,28 @@
   height: var(--link-item-edit-height);
   width: 100%;
   position: absolute;
-  bottom: calc(-1 * var(--link-item-edit-height));
   display: flex;
   overflow: hidden;
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
-  transition: bottom var(--layout-transition-extra-fast);
+  transition: top var(--layout-transition-extra-fast), bottom var(--layout-transition-extra-fast);
 }
 
-.is-edit .link-control {
+.is-link-orientation-top .link-control {
+  top: calc(-1 * var(--link-item-edit-height));
+}
+
+.is-link-orientation-bottom .link-control {
+  bottom: calc(-1 * var(--link-item-edit-height));
+}
+
+.is-edit.is-link-orientation-top .link-control {
+  top: 0;
+  transition: top var(--layout-duration-05) var(--layout-timing-bounce);
+}
+
+.is-edit.is-link-orientation-bottom .link-control {
   bottom: 0;
   transition: bottom var(--layout-duration-05) var(--layout-timing-bounce);
 }
@@ -1027,11 +1039,18 @@
   height: var(--link-item-url-height);
   width: 100%;
   position: absolute;
-  bottom: calc(-1 * var(--link-item-url-height));
   overflow: hidden;
   display: none;
   align-items: center;
-  transition: bottom var(--layout-transition-extra-fast);
+  transition: top var(--layout-transition-extra-fast), bottom var(--layout-transition-extra-fast);
+}
+
+.is-link-orientation-top .link-url {
+  top: calc(-1 * var(--link-item-url-height));
+}
+
+.is-link-orientation-bottom .link-url {
+  bottom: calc(-1 * var(--link-item-url-height));
 }
 
 .is-link-item-url-show .link-url {
@@ -1056,9 +1075,15 @@
   justify-content: flex-end;
 }
 
-.is-link-item-url-show:not(.is-edit) .link-item:focus-within .link-url,
-.is-link-item-url-show:not(.is-edit) .link-item:focus .link-url,
-.is-link-item-url-show:not(.is-edit) .link-item:hover .link-url {
+.is-link-orientation-top.is-link-item-url-show:not(.is-edit) .link-item:focus-within .link-url,
+.is-link-orientation-top.is-link-item-url-show:not(.is-edit) .link-item:focus .link-url,
+.is-link-orientation-top.is-link-item-url-show:not(.is-edit) .link-item:hover .link-url {
+  top: 0;
+}
+
+.is-link-orientation-bottom.is-link-item-url-show:not(.is-edit) .link-item:focus-within .link-url,
+.is-link-orientation-bottom.is-link-item-url-show:not(.is-edit) .link-item:focus .link-url,
+.is-link-orientation-bottom.is-link-item-url-show:not(.is-edit) .link-item:hover .link-url {
   bottom: 0;
 }
 
