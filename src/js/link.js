@@ -1219,10 +1219,10 @@ var link = (function() {
         options = helper.applyOptions(options, override);
       };
       var formWrap = helper.node("form|class:link-form-wrap");
-
-      var formPreview = helper.node("div|class:link-form-preview");
-
       var form = helper.node("form|class:link-form");
+      var formAside = helper.node("div|class:link-form-aside");
+
+      var previewArea = helper.node("div|class:link-form-preview-area");
 
       var fieldsetGroup = helper.node("fieldset");
       var fieldsetDisplayVisual = helper.node("fieldset");
@@ -1709,8 +1709,10 @@ var link = (function() {
       form.appendChild(fieldsetBackground);
       form.appendChild(fieldsetWideTall);
 
+      formAside.appendChild(previewArea);
+
       formWrap.appendChild(form);
-      formWrap.appendChild(formPreview);
+      formWrap.appendChild(formAside);
 
       var makeGroupOptions = function() {
         if (bookmarks.get().length > 0) {
@@ -2654,11 +2656,13 @@ var link = (function() {
         var preview = render.item.link({
           preview: true
         });
-        helper.e(".link-form-preview").appendChild(preview);
+        var previewHeading = helper.node("p:Preview|class:link-form-preview-headline small muted");
+        helper.e(".link-form-preview-area").appendChild(previewHeading);
+        helper.e(".link-form-preview-area").appendChild(preview);
       },
       clear: function() {
-        while (helper.e(".link-form-preview").lastChild) {
-          helper.e(".link-form-preview").removeChild(helper.e(".link-form-preview").lastChild);
+        while (helper.e(".link-form-preview-area").lastChild) {
+          helper.e(".link-form-preview-area").removeChild(helper.e(".link-form-preview-area").lastChild);
         };
       },
       delay: function() {
