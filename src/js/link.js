@@ -1,5 +1,7 @@
 var link = (function() {
 
+  var _timerLinkItemPreview = null;
+
   var stagedGroup = {
     position: {
       origin: null,
@@ -799,7 +801,9 @@ var link = (function() {
         options = helper.applyOptions(options, override);
       };
       var form = helper.node("form|class:group-form");
-      var fieldset = helper.node("fieldset");
+      var fieldsetName = helper.node("fieldset");
+      var fieldsetOpenAll = helper.node("fieldset");
+      var fieldsetPosition = helper.node("fieldset");
 
       // group name
       var groupFormInputNameShowWrap = helper.node("div|class:form-wrap");
@@ -846,14 +850,17 @@ var link = (function() {
       groupFormOpenAllInputWrap.appendChild(groupFormInputOpenallLabel);
       groupFormOpenAllInputHelper.appendChild(groupFormOpenAllInputHelperItem);
 
-      fieldset.appendChild(groupFormInputNameShowWrap);
-      fieldset.appendChild(groupFormInputNameIndentWrap);
-      fieldset.appendChild(helper.node("hr"));
-      fieldset.appendChild(groupFormOpenAllInputWrap);
-      fieldset.appendChild(groupFormOpenAllInputHelper);
-      fieldset.appendChild(helper.node("hr"));
-      fieldset.appendChild(groupFormPositionInputWrap);
-      form.appendChild(fieldset);
+      fieldsetName.appendChild(groupFormInputNameShowWrap);
+      fieldsetName.appendChild(groupFormInputNameIndentWrap);
+
+      fieldsetOpenAll.appendChild(groupFormOpenAllInputWrap);
+      fieldsetOpenAll.appendChild(groupFormOpenAllInputHelper);
+
+      fieldsetPosition.appendChild(groupFormPositionInputWrap);
+
+      form.appendChild(fieldsetName);
+      form.appendChild(fieldsetOpenAll);
+      form.appendChild(fieldsetPosition);
 
       var makeGroupOptions = function() {
         var optionCount = bookmarks.get().length;
@@ -976,13 +983,22 @@ var link = (function() {
   };
 
   render.item = {
-    link: function() {
+    link: function(override) {
+      var options = {
+        preview: null
+      };
+      if (override) {
+        options = helper.applyOptions(options, override);
+      };
       var linkItemOptions = {
         tag: "div",
         attr: [{
           key: "class",
           value: "link-item"
         }]
+      };
+      if (options.preview) {
+        linkItemOptions.attr[0].value = "link-item-preview";
       };
       if (stagedLink.link.wide) {
         linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-wide";
@@ -1029,7 +1045,7 @@ var link = (function() {
           value: 1
         }]
       };
-      if (helper.checkIfValidString(stagedLink.link.url)) {
+      if (helper.checkIfValidString(stagedLink.link.url) && !options.preview) {
         linkPanelFrontOptions.attr.push({
           key: "href",
           value: helper.removeSpaces(stagedLink.link.url)
@@ -1040,7 +1056,7 @@ var link = (function() {
           value: "#"
         });
       };
-      if (state.get.current().link.item.newTab) {
+      if (state.get.current().link.item.newTab && !options.preview) {
         linkPanelFrontOptions.attr.push({
           key: "target",
           value: "_blank"
@@ -1163,7 +1179,9 @@ var link = (function() {
         linkUrl.appendChild(linkUrlText);
       };
       linkPanelBack.appendChild(linkUrl);
-      linkPanelBack.appendChild(linkControl);
+      if (!options.preview) {
+        linkPanelBack.appendChild(linkControl);
+      };
       linkItem.appendChild(linkPanelFront);
       linkItem.appendChild(linkPanelBack);
 
@@ -1200,8 +1218,19 @@ var link = (function() {
       if (override) {
         options = helper.applyOptions(options, override);
       };
+      var formWrap = helper.node("form|class:link-form-wrap");
+
+      var formPreview = helper.node("div|class:link-form-preview");
+
       var form = helper.node("form|class:link-form");
-      var fieldset = helper.node("fieldset");
+
+      var fieldsetGroup = helper.node("fieldset");
+      var fieldsetDisplayVisual = helper.node("fieldset");
+      var fieldsetNameURL = helper.node("fieldset");
+      var fieldsetColorOverride = helper.node("fieldset");
+      var fieldsetAccentOverride = helper.node("fieldset");
+      var fieldsetBackground = helper.node("fieldset");
+      var fieldsetWideTall = helper.node("fieldset");
 
       // group existing
       var groupExistingRadioWrap = helper.node("div|class:form-wrap");
@@ -1453,8 +1482,8 @@ var link = (function() {
       groupExistingFormIndent.appendChild(groupExistingGroupInputWrap);
       groupExistingFormIndent.appendChild(groupExistingPositionInputWrap);
       groupExistingFormIndentWrap.appendChild(groupExistingFormIndent);
-      fieldset.appendChild(groupExistingRadioWrap);
-      fieldset.appendChild(groupExistingFormIndentWrap);
+      fieldsetGroup.appendChild(groupExistingRadioWrap);
+      fieldsetGroup.appendChild(groupExistingFormIndentWrap);
 
       groupNewRadioWrap.appendChild(groupNewRadio);
       groupNewLable.appendChild(groupNewLableLableIcon);
@@ -1465,25 +1494,23 @@ var link = (function() {
       groupNewFormIndent.appendChild(groupNewInputWrap);
       groupNewFormIndent.appendChild(groupNewRandomNameButtonWrap);
       groupNewFormIndentWrap.appendChild(groupNewFormIndent);
-      fieldset.appendChild(groupNewRadioWrap);
-      fieldset.appendChild(groupNewFormIndentWrap);
-
-      fieldset.appendChild(helper.node("hr"));
+      fieldsetGroup.appendChild(groupNewRadioWrap);
+      fieldsetGroup.appendChild(groupNewFormIndentWrap);
 
       displayLetterRadioWrap.appendChild(displayLetterRadio);
       displayLetterLable.appendChild(displayLetterLableIcon);
       displayLetterLable.appendChild(displayLetterLableText);
       displayLetterRadioWrap.appendChild(displayLetterLable);
-      fieldset.appendChild(displayLetterRadioWrap);
+      fieldsetDisplayVisual.appendChild(displayLetterRadioWrap);
       displayLetterInputWrap.appendChild(displayLetterInput);
       displayLetterFormIndent.appendChild(displayLetterInputWrap);
       displayLetterFormIndentWrap.appendChild(displayLetterFormIndent);
-      fieldset.appendChild(displayLetterFormIndentWrap);
+      fieldsetDisplayVisual.appendChild(displayLetterFormIndentWrap);
       displayIconRadiotWrap.appendChild(displayIconRadio);
       displayIconLable.appendChild(displayIconLableIcon);
       displayIconLable.appendChild(displayIconLableText);
       displayIconRadiotWrap.appendChild(displayIconLable);
-      fieldset.appendChild(displayIconRadiotWrap);
+      fieldsetDisplayVisual.appendChild(displayIconRadiotWrap);
       displayIconFormGroupClear.appendChild(displayIconFormGroupClearIcon);
       displayIconFormGroup.appendChild(displayIconInput);
       displayIconFormGroup.appendChild(displayIconFormGroupText);
@@ -1493,7 +1520,7 @@ var link = (function() {
       displayIconHelper.appendChild(displayIconHelperItem);
       displayIconFormIndent.appendChild(displayIconHelper);
       displayIconFormIndentWrap.appendChild(displayIconFormIndent);
-      fieldset.appendChild(displayIconFormIndentWrap);
+      fieldsetDisplayVisual.appendChild(displayIconFormIndentWrap);
       displayImageRadiotWrap.appendChild(displayImageRadio);
       displayImageLable.appendChild(displayImageLableIcon);
       displayImageLable.appendChild(displayImageLableText);
@@ -1502,40 +1529,36 @@ var link = (function() {
       displayImageInputWrap.appendChild(displayImageInput);
       displayImageFormIndent.appendChild(displayImageInputWrap);
       displayImageFormIndentWrap.appendChild(displayImageFormIndent);
-      fieldset.appendChild(displayImageRadiotWrap);
-      fieldset.appendChild(displayImageFormIndentWrap);
+      fieldsetDisplayVisual.appendChild(displayImageRadiotWrap);
+      fieldsetDisplayVisual.appendChild(displayImageFormIndentWrap);
       displayImageHelper.appendChild(displayImageHelperItem);
       displayImageFormIndent.appendChild(displayImageHelper);
 
-      fieldset.appendChild(helper.node("hr"));
-
       nameInputWrap.appendChild(nameLabel);
       nameInputWrap.appendChild(nameInput);
-      fieldset.appendChild(nameInputWrap);
+      fieldsetNameURL.appendChild(nameInputWrap);
       urlInputWrap.appendChild(urlLabel);
       urlInputWrap.appendChild(urlInput);
-      fieldset.appendChild(urlInputWrap);
+      fieldsetNameURL.appendChild(urlInputWrap);
       urlInputHelper.appendChild(urlInputHelperItem);
-      fieldset.appendChild(urlInputHelper);
-
-      fieldset.appendChild(helper.node("hr"));
+      fieldsetNameURL.appendChild(urlInputHelper);
 
       colorLabelWrap.appendChild(colorLabel);
-      fieldset.appendChild(colorLabelWrap);
+      fieldsetColorOverride.appendChild(colorLabelWrap);
       colorThemeRadioWrap.appendChild(colorThemeRadio);
       colorThemeLabel.appendChild(colorThemeLabelIcon);
       colorThemeLabelBlock.appendChild(colorThemeLabelBlockItem1);
       colorThemeLabelBlock.appendChild(colorThemeLabelBlockItem2);
       colorThemeLabel.appendChild(colorThemeLabelBlock);
       colorThemeRadioWrap.appendChild(colorThemeLabel);
-      fieldset.appendChild(colorThemeRadioWrap);
+      fieldsetColorOverride.appendChild(colorThemeRadioWrap);
       colorCustomInputWrap.appendChild(colorCustomRadio);
       colorCustomLabel.appendChild(colorCustomLabelIcon);
       colorCustomBlock.appendChild(colorCustomBlockItem1);
       colorCustomBlock.appendChild(colorCustomBlockItem2);
       colorCustomLabel.appendChild(colorCustomBlock);
       colorCustomInputWrap.appendChild(colorCustomLabel);
-      fieldset.appendChild(colorCustomInputWrap);
+      fieldsetColorOverride.appendChild(colorCustomInputWrap);
       colorColorCollapseButton.appendChild(colorColorCollapseButtonIcon);
       colorColorFormGroup.appendChild(colorColorPicker);
       colorColorFormGroup.appendChild(colorColorHex);
@@ -1586,26 +1609,24 @@ var link = (function() {
       colorColorFormIndent.appendChild(colorColorCollapse);
 
       colorColorFormIndentWrap.appendChild(colorColorFormIndent);
-      fieldset.appendChild(colorColorFormIndentWrap);
-
-      fieldset.appendChild(helper.node("hr"));
+      fieldsetColorOverride.appendChild(colorColorFormIndentWrap);
 
       accentLabelWrap.appendChild(accentLabel);
-      fieldset.appendChild(accentLabelWrap);
+      fieldsetAccentOverride.appendChild(accentLabelWrap);
       accentThemeRadioWrap.appendChild(accentThemeRadio);
       accentThemeLabel.appendChild(accentThemeLabelIcon);
       accentThemeLabelBlock.appendChild(accentThemeLabelBlockItem1);
       accentThemeLabelBlock.appendChild(accentThemeLabelBlockItem2);
       accentThemeLabel.appendChild(accentThemeLabelBlock);
       accentThemeRadioWrap.appendChild(accentThemeLabel);
-      fieldset.appendChild(accentThemeRadioWrap);
+      fieldsetAccentOverride.appendChild(accentThemeRadioWrap);
       accentCustomInputWrap.appendChild(accentCustomRadio);
       accentCustomLabel.appendChild(accentCustomLabelIcon);
       accentCustomLabelBlock.appendChild(accentCustomLabelBlockItem1);
       accentCustomLabelBlock.appendChild(accentCustomLabelBlockItem2);
       accentCustomLabel.appendChild(accentCustomLabelBlock);
       accentCustomInputWrap.appendChild(accentCustomLabel);
-      fieldset.appendChild(accentCustomInputWrap);
+      fieldsetAccentOverride.appendChild(accentCustomInputWrap);
       accentColorCollapseButton.appendChild(accentColorCollapseButtonIcon)
       accentColorFormGroup.appendChild(accentColorPicker);
       accentColorFormGroup.appendChild(accentColorHex);
@@ -1656,17 +1677,13 @@ var link = (function() {
       accentColorFormIndent.appendChild(accentColorCollapse);
 
       accentColorFormIndentWrap.appendChild(accentColorFormIndent);
-      fieldset.appendChild(accentColorFormIndentWrap);
-
-      fieldset.appendChild(helper.node("hr"));
+      fieldsetAccentOverride.appendChild(accentColorFormIndentWrap);
 
       imageInputWrap.appendChild(imageLabel);
       imageInputWrap.appendChild(imageInput);
-      fieldset.appendChild(imageInputWrap);
+      fieldsetBackground.appendChild(imageInputWrap);
       imageInputHelper.appendChild(imageInputHelperItem);
-      fieldset.appendChild(imageInputHelper);
-
-      fieldset.appendChild(helper.node("hr"));
+      fieldsetBackground.appendChild(imageInputHelper);
 
       wideInputWrap.appendChild(wideInput);
       wideLabel.appendChild(wideLabelIcon);
@@ -1674,7 +1691,7 @@ var link = (function() {
       wideLabelBlock.appendChild(wideLabelBlockItem2);
       wideLabel.appendChild(wideLabelBlock);
       wideInputWrap.appendChild(wideLabel);
-      fieldset.appendChild(wideInputWrap);
+      fieldsetWideTall.appendChild(wideInputWrap);
 
       tallInputWrap.appendChild(tallInput);
       tallLabel.appendChild(tallLabelIcon);
@@ -1682,9 +1699,18 @@ var link = (function() {
       tallLabelBlock.appendChild(tallLabelBlockItem2);
       tallLabel.appendChild(tallLabelBlock);
       tallInputWrap.appendChild(tallLabel);
-      fieldset.appendChild(tallInputWrap);
+      fieldsetWideTall.appendChild(tallInputWrap);
 
-      form.appendChild(fieldset);
+      form.appendChild(fieldsetGroup);
+      form.appendChild(fieldsetDisplayVisual);
+      form.appendChild(fieldsetNameURL);
+      form.appendChild(fieldsetColorOverride);
+      form.appendChild(fieldsetAccentOverride);
+      form.appendChild(fieldsetBackground);
+      form.appendChild(fieldsetWideTall);
+
+      formWrap.appendChild(form);
+      formWrap.appendChild(formPreview);
 
       var makeGroupOptions = function() {
         if (bookmarks.get().length > 0) {
@@ -2202,6 +2228,7 @@ var link = (function() {
         displayIconFormGroupText.tabIndex = -1;
         displayImageInput.setAttribute("disabled", "");
         helper.addClass(displayImageHelperItem, "disabled");
+        render.item.preview.delay();
       }, false);
       displayIconRadio.addEventListener("change", function(event) {
         stagedLink.link.visual.display = this.value;
@@ -2214,6 +2241,7 @@ var link = (function() {
         displayIconFormGroupText.tabIndex = 1;
         displayImageInput.setAttribute("disabled", "");
         helper.addClass(displayImageHelperItem, "disabled");
+        render.item.preview.delay();
       }, false);
       displayImageRadio.addEventListener("change", function(event) {
         stagedLink.link.visual.display = this.value;
@@ -2226,18 +2254,23 @@ var link = (function() {
         displayIconFormGroupText.tabIndex = -1;
         displayImageInput.removeAttribute("disabled");
         helper.removeClass(displayImageHelperItem, "disabled");
+        render.item.preview.delay();
       }, false);
       displayLetterInput.addEventListener("input", function(event) {
         stagedLink.link.visual.letter = this.value;
+        render.item.preview.delay();
       }, false);
       nameInput.addEventListener("input", function(event) {
         stagedLink.link.name = this.value;
+        render.item.preview.delay();
       }, false);
       displayImageInput.addEventListener("input", function(event) {
         stagedLink.link.visual.image = this.value;
+        render.item.preview.delay();
       }, false);
       urlInput.addEventListener("input", function(event) {
         stagedLink.link.url = this.value;
+        render.item.preview.delay();
       }, false);
       displayIconFormGroupClear.addEventListener("click", function(event) {
         stagedLink.link.visual.icon.name = "";
@@ -2248,6 +2281,7 @@ var link = (function() {
           existingIcon.remove();
         };
         displayIconInput.value = "";
+        render.item.preview.delay();
       }, false);
 
       colorThemeRadio.addEventListener("change", function() {
@@ -2273,6 +2307,7 @@ var link = (function() {
         helper.addClass(colorRgbBLabel, "disabled", "");
         colorRgbBRange.setAttribute("disabled", "");
         colorRgbBNumber.setAttribute("disabled", "");
+        render.item.preview.delay();
       }, false);
       colorCustomRadio.addEventListener("change", function() {
         stagedLink.link.color.by = this.value;
@@ -2297,16 +2332,19 @@ var link = (function() {
         helper.removeClass(colorRgbBLabel, "disabled");
         colorRgbBRange.removeAttribute("disabled");
         colorRgbBNumber.removeAttribute("disabled");
+        render.item.preview.delay();
       }, false);
 
       colorColorPicker.addEventListener("change", function() {
         mirror.data.color.by.hex(this.value);
         mirror.value(this, mirror.inputs.color());
+        render.item.preview.delay();
       }, false);
       colorColorHex.addEventListener("input", function() {
         if (helper.isHexNumber(this.value)) {
           mirror.data.color.by.hex(this.value);
           mirror.value(this, mirror.inputs.color());
+          render.item.preview.delay();
         };
       }, false);
       colorColorCollapseButton.addEventListener("click", function() {
@@ -2321,6 +2359,7 @@ var link = (function() {
         stagedLink.link.color.hsl.h = parseInt(this.value, 10);
         mirror.data.color.by.hsl();
         mirror.value(this, mirror.inputs.color());
+        render.item.preview.delay();
       });
       colorHslHNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -2331,81 +2370,92 @@ var link = (function() {
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
       colorHslSRange.addEventListener("input", function() {
         stagedLink.link.color.hsl.s = parseInt(this.value, 10);
         mirror.data.color.by.hsl();
         mirror.value(this, mirror.inputs.color());
+        render.item.preview.delay();
       });
       colorHslSNumber.addEventListener("input", function() {
         var set = function(input) {
-          input.value = stagedLink.link.color.hsl.s
+          input.value = stagedLink.link.color.hsl.s;
         };
         stagedLink.link.color.hsl.s = mirror.minMax(this);
         mirror.data.color.by.hsl();
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
       colorHslLRange.addEventListener("input", function() {
         stagedLink.link.color.hsl.l = parseInt(this.value, 10);
         mirror.data.color.by.hsl();
         mirror.value(this, mirror.inputs.color());
+        render.item.preview.delay();
       });
       colorHslLNumber.addEventListener("input", function() {
         var set = function(input) {
-          input.value = stagedLink.link.color.hsl.l
+          input.value = stagedLink.link.color.hsl.l;
         };
         stagedLink.link.color.hsl.l = mirror.minMax(this);
         mirror.data.color.by.hsl();
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
       colorRgbRRange.addEventListener("input", function() {
         stagedLink.link.color.rgb.r = parseInt(this.value, 10);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
+        render.item.preview.delay();
       });
       colorRgbRNumber.addEventListener("input", function() {
         var set = function(input) {
-          input.value = stagedLink.link.color.rgb.r
+          input.value = stagedLink.link.color.rgb.r;
         };
         stagedLink.link.color.rgb.r = mirror.minMax(this);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
       colorRgbGRange.addEventListener("input", function() {
         stagedLink.link.color.rgb.g = parseInt(this.value, 10);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
+        render.item.preview.delay();
       });
       colorRgbGNumber.addEventListener("input", function() {
         var set = function(input) {
-          input.value = stagedLink.link.color.rgb.g
+          input.value = stagedLink.link.color.rgb.g;
         };
         stagedLink.link.color.rgb.g = mirror.minMax(this);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
       colorRgbBRange.addEventListener("input", function() {
         stagedLink.link.color.rgb.b = parseInt(this.value, 10);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
+        render.item.preview.delay();
       });
       colorRgbBNumber.addEventListener("input", function() {
         var set = function(input) {
-          input.value = stagedLink.link.color.rgb.b
+          input.value = stagedLink.link.color.rgb.b;
         };
         stagedLink.link.color.rgb.b = mirror.minMax(this);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
 
       accentThemeRadio.addEventListener("change", function() {
@@ -2431,6 +2481,7 @@ var link = (function() {
         helper.addClass(accentRgbBLabel, "disabled", "");
         accentRgbBRange.setAttribute("disabled", "");
         accentRgbBNumber.setAttribute("disabled", "");
+        render.item.preview.delay();
       }, false);
       accentCustomRadio.addEventListener("change", function() {
         stagedLink.link.accent.by = this.value;
@@ -2455,16 +2506,19 @@ var link = (function() {
         helper.removeClass(accentRgbBLabel, "disabled");
         accentRgbBRange.removeAttribute("disabled");
         accentRgbBNumber.removeAttribute("disabled");
+        render.item.preview.delay();
       }, false);
 
       accentColorPicker.addEventListener("change", function() {
         mirror.data.accent.by.hex(this.value);
         mirror.value(this, mirror.inputs.accent());
+        render.item.preview.delay();
       }, false);
       accentColorHex.addEventListener("input", function() {
         if (helper.isHexNumber(this.value)) {
           mirror.data.accent.by.hex(this.value);
           mirror.value(this, mirror.inputs.accent());
+          render.item.preview.delay();
         };
       }, false);
       accentColorCollapseButton.addEventListener("click", function() {
@@ -2479,94 +2533,107 @@ var link = (function() {
         stagedLink.link.accent.hsl.h = parseInt(this.value, 10);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
+        render.item.preview.delay();
       });
       accentHslHNumber.addEventListener("input", function() {
         var set = function(input) {
-          input.value = stagedLink.link.accent.hsl.h
+          input.value = stagedLink.link.accent.hsl.h;
         };
         stagedLink.link.accent.hsl.h = mirror.minMax(this);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
       accentHslSRange.addEventListener("input", function() {
         stagedLink.link.accent.hsl.s = parseInt(this.value, 10);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
+        render.item.preview.delay();
       });
       accentHslSNumber.addEventListener("input", function() {
         var set = function(input) {
-          input.value = stagedLink.link.accent.hsl.s
+          input.value = stagedLink.link.accent.hsl.s;
         };
         stagedLink.link.accent.hsl.s = mirror.minMax(this);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
       accentHslLRange.addEventListener("input", function() {
         stagedLink.link.accent.hsl.l = parseInt(this.value, 10);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
+        render.item.preview.delay();
       });
       accentHslLNumber.addEventListener("input", function() {
         var set = function(input) {
-          input.value = stagedLink.link.accent.hsl.l
+          input.value = stagedLink.link.accent.hsl.l;
         };
         stagedLink.link.accent.hsl.l = mirror.minMax(this);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
       accentRgbRRange.addEventListener("input", function() {
         stagedLink.link.accent.rgb.r = parseInt(this.value, 10);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
+        render.item.preview.delay();
       });
       accentRgbRNumber.addEventListener("input", function() {
         var set = function(input) {
-          input.value = stagedLink.link.accent.rgb.r
+          input.value = stagedLink.link.accent.rgb.r;
         };
         stagedLink.link.accent.rgb.r = mirror.minMax(this);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
       accentRgbGRange.addEventListener("input", function() {
         stagedLink.link.accent.rgb.g = parseInt(this.value, 10);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
+        render.item.preview.delay();
       });
       accentRgbGNumber.addEventListener("input", function() {
         var set = function(input) {
-          input.value = stagedLink.link.accent.rgb.g
+          input.value = stagedLink.link.accent.rgb.g;
         };
         stagedLink.link.accent.rgb.g = mirror.minMax(this);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
       accentRgbBRange.addEventListener("input", function() {
         stagedLink.link.accent.rgb.b = parseInt(this.value, 10);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
+        render.item.preview.delay();
       });
       accentRgbBNumber.addEventListener("input", function() {
         var set = function(input) {
-          input.value = stagedLink.link.accent.rgb.b
+          input.value = stagedLink.link.accent.rgb.b;
         };
         stagedLink.link.accent.rgb.b = mirror.minMax(this);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 1000, this);
+        render.item.preview.delay();
       });
       imageInput.addEventListener("input", function(event) {
         stagedLink.link.image = this.value;
+        render.item.preview.delay();
       }, false);
       wideInput.addEventListener("change", function(event) {
         stagedLink.link.wide = this.checked;
@@ -2580,7 +2647,27 @@ var link = (function() {
         postFocus: displayIconFormGroupText
       });
 
-      return form;
+      return formWrap;
+    },
+    preview: {
+      update: function() {
+        var preview = render.item.link({
+          preview: true
+        });
+        helper.e(".link-form-preview").appendChild(preview);
+      },
+      clear: function() {
+        while (helper.e(".link-form-preview").lastChild) {
+          helper.e(".link-form-preview").removeChild(helper.e(".link-form-preview").lastChild);
+        };
+      },
+      delay: function() {
+        clearTimeout(_timerLinkItemPreview);
+        _timerLinkItemPreview = setTimeout(function functionName() {
+          render.item.preview.clear();
+          render.item.preview.update();
+        }, 300);
+      }
     },
     formCollapse: function() {
       helper.eA(".link-form-collapse").forEach(function(arrayItem, index) {
@@ -2939,6 +3026,7 @@ var link = (function() {
     helper.e(".link-form-input-icon").value = autoSuggestData.label;
     helper.e(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + stagedLink.link.visual.icon.prefix + " fa-" + stagedLink.link.visual.icon.name));
     helper.e(".link-form-text-icon").focus();
+    render.item.preview.delay();
   };
 
   render.add = {
@@ -2965,9 +3053,9 @@ var link = (function() {
           successAction: successAction,
           cancelAction: cancelAction,
           actionText: "Add",
-          size: "small",
           content: render.item.form()
         });
+        render.item.preview.update();
         shade.open({
           action: function() {
             add.item.close();
@@ -3076,9 +3164,9 @@ var link = (function() {
           successAction: successAction,
           cancelAction: cancelAction,
           actionText: "Save",
-          size: "small",
           content: form
         });
+        render.item.preview.update();
         shade.open({
           action: function() {
             edit.item.close();
