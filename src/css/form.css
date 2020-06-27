@@ -1,3 +1,22 @@
+/* fieldset */
+fieldset:not(:only-child):not(:last-child),
+.fieldset:not(:only-child):not(:last-child) {
+  border-bottom: var(--horizontal-rule-small);
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+fieldset:not(:first-child),
+.fieldset:not(:first-child) {
+  padding-top: calc(var(--form-wrap-space) * 2);
+}
+
+fieldset:not(:last-child),
+.fieldset:not(:last-child) {
+  padding-bottom: calc(var(--form-wrap-space) * 2);
+}
+
 /* form variants */
 .form-wrap,
 .form-helper {

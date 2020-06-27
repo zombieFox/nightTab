@@ -1168,3 +1168,191 @@
 .link-form-collapse-button.active .link-form-collapse-button-icon {
   transform: rotate(-180deg);
 }
+
+/* link form */
+.link-form-wrap {
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .link-form-wrap {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: calc(var(--form-wrap-space) * 2);
+    align-items: stretch;
+  }
+}
+
+/* link preview */
+.link-form-aside {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .link-form-aside {
+    display: block;
+  }
+}
+
+.link-form-preview-area {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.link-item-preview {
+  width: 100%;
+  height: 10em;
+  position: relative;
+}
+
+.is-link-item-shadow-show.is-link-orientation-bottom .link-item-preview .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-bottom .link-item-preview:hover .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-bottom .link-item-preview:focus .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-top .link-item-preview .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-top .link-item-preview:hover .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-top .link-item-preview:focus .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-bottom.is-edit .link-item-preview .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-bottom.is-edit .link-item-preview:hover .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-bottom.is-edit .link-item-preview:focus .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-top.is-edit .link-item-preview .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-top.is-edit .link-item-preview:hover .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-top.is-edit .link-item-preview:focus .link-panel-front {
+  box-shadow: none;
+}
+
+.is-link-item-shadow-show.is-link-orientation-bottom.is-edit .link-item-preview:focus .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-bottom.is-edit .link-item-preview:focus-within .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-bottom.is-edit .link-item-preview:hover .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-bottom .link-item-preview:focus .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-bottom .link-item-preview:focus-within .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-bottom .link-item-preview:hover .link-panel-front {
+  box-shadow: var(--theme-shadow-bottom-large);
+}
+
+.is-link-item-shadow-show.is-link-orientation-top.is-edit .link-item-preview:focus .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-top.is-edit .link-item-preview:focus-within .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-top.is-edit .link-item-preview:hover .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-top .link-item-preview:focus .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-top .link-item-preview:focus-within .link-panel-front,
+.is-link-item-shadow-show.is-link-orientation-top .link-item-preview:hover .link-panel-front {
+  box-shadow: var(--theme-shadow-top-large);
+}
+
+.is-edit .link-item-preview .link-panel-front,
+.is-edit .link-item-preview:hover .link-panel-front,
+.is-edit .link-item-preview:focus .link-panel-front {
+  height: 100%;
+}
+
+.is-theme-radius .link-item-preview .link-panel-front,
+.is-edit.is-theme-radius .link-item-preview .link-panel-front {
+  border-radius: var(--theme-radius);
+}
+
+.is-edit .link-item-preview .link-display {
+  font-size: 1em;
+}
+
+.link-item-preview:hover .link-display-letter,
+.link-item-preview:focus .link-display-letter,
+.link-item-preview:hover .link-display-icon,
+.link-item-preview:focus .link-display-icon {
+  color: rgb(var(--theme-style-text));
+}
+
+.link-item-preview .link-panel-front:focus .link-display-letter,
+.link-item-preview .link-panel-front:focus .link-display-icon {
+  color: rgb(var(--theme-style-text));
+}
+
+.link-item-preview:hover .link-display-name,
+.link-item-preview:focus .link-display-name {
+  color: rgb(var(--theme-style-text));
+}
+
+.link-item-preview .link-panel-front:focus .link-display-name {
+  color: rgb(var(--theme-style-text));
+}
+
+.is-theme-radius.is-link-item-url-show.is-link-orientation-top .link-item-preview:focus .link-panel-front,
+.is-theme-radius.is-link-item-url-show.is-link-orientation-top .link-item-preview:focus-within .link-panel-front,
+.is-theme-radius.is-link-item-url-show.is-link-orientation-top .link-item-preview:hover .link-panel-front {
+  border-top-left-radius: calc(var(--theme-radius) / 4);
+  border-top-right-radius: calc(var(--theme-radius) / 4);
+}
+
+.is-theme-radius.is-link-item-url-show.is-link-orientation-bottom .link-item-preview:focus .link-panel-front,
+.is-theme-radius.is-link-item-url-show.is-link-orientation-bottom .link-item-preview:focus-within .link-panel-front,
+.is-theme-radius.is-link-item-url-show.is-link-orientation-bottom .link-item-preview:hover .link-panel-front {
+  border-bottom-left-radius: calc(var(--theme-radius) / 4);
+  border-bottom-right-radius: calc(var(--theme-radius) / 4);
+}
+
+.is-link-item-line-show .link-item-preview .link-panel-front {
+  height: calc(100% - var(--layout-line-width));
+}
+
+.is-link-item-url-show .link-item-preview:focus .link-panel-front,
+.is-link-item-url-show .link-item-preview:focus-within .link-panel-front,
+.is-link-item-url-show .link-item-preview:hover .link-panel-front {
+  height: calc(100% - var(--link-item-url-height));
+}
+
+.is-edit .link-item-preview .link-panel-back {
+  height: 100%;
+  top: 0;
+}
+
+.is-link-orientation-top .link-item-preview .link-panel-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--link-item-clip-padding)), 0 calc(0% + var(--link-item-clip-padding)));
+}
+
+.is-link-orientation-bottom .link-item-preview .link-panel-back {
+  clip-path: polygon(0 calc(100% - var(--link-item-clip-padding)), 100% calc(100% - var(--link-item-clip-padding)), 100% 100%, 0 100%);
+}
+
+.is-link-orientation-top.is-link-item-line-show .link-item-preview .link-panel-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--layout-line-width) + var(--link-item-clip-padding)), 0 calc(var(--layout-line-width) + var(--link-item-clip-padding)));
+}
+
+.is-link-orientation-bottom.is-link-item-line-show .link-item-preview .link-panel-back {
+  clip-path: polygon(0 calc(100% - var(--layout-line-width) - var(--link-item-clip-padding)), 100% calc(100% - var(--layout-line-width) - var(--link-item-clip-padding)), 100% 100%, 0 100%);
+}
+
+.is-link-orientation-top .link-item-preview:focus .link-panel-back,
+.is-link-orientation-top .link-item-preview:focus-within .link-panel-back,
+.is-link-orientation-top .link-item-preview:hover .link-panel-back,
+.is-link-orientation-bottom .link-item-preview:focus .link-panel-back,
+.is-link-orientation-bottom .link-item-preview:focus-within .link-panel-back,
+.is-link-orientation-bottom .link-item-preview:hover .link-panel-back {
+  top: 0;
+  height: 100%;
+}
+
+.is-link-item-url-show.is-link-orientation-top .link-item-preview:focus .link-panel-back,
+.is-link-item-url-show.is-link-orientation-top .link-item-preview:focus-within .link-panel-back,
+.is-link-item-url-show.is-link-orientation-top .link-item-preview:hover .link-panel-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--link-item-url-height) + var(--link-item-clip-padding)), 0 calc(var(--link-item-url-height) + var(--link-item-clip-padding)));
+}
+
+.is-link-item-url-show.is-link-orientation-bottom .link-item-preview:focus .link-panel-back,
+.is-link-item-url-show.is-link-orientation-bottom .link-item-preview:focus-within .link-panel-back,
+.is-link-item-url-show.is-link-orientation-bottom .link-item-preview:hover .link-panel-back {
+  clip-path: polygon(0 calc(100% - calc(var(--link-item-url-height) + var(--link-item-clip-padding))), 100% calc(100% - calc(var(--link-item-url-height) + var(--link-item-clip-padding))), 100% 100%, 0 100%);
+}
+
+.is-link-orientation-top.is-link-item-url-show .link-item-preview:focus-within .link-url,
+.is-link-orientation-top.is-link-item-url-show .link-item-preview:focus .link-url,
+.is-link-orientation-top.is-link-item-url-show .link-item-preview:hover .link-url {
+  top: 0;
+}
+
+.is-link-orientation-bottom.is-link-item-url-show .link-item-preview:focus-within .link-url,
+.is-link-orientation-bottom.is-link-item-url-show .link-item-preview:focus .link-url,
+.is-link-orientation-bottom.is-link-item-url-show .link-item-preview:hover .link-url {
+  bottom: 0;
+}
