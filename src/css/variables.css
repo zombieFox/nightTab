@@ -115,14 +115,14 @@
   --link-item-color-focus-hover:                        var(--theme-color-03);
   --link-item-size:                                     1em;
   --link-item-display-space:                            0.25em;
-  --link-item-display-gutter:                           2;
-  --link-item-display-letter-size:                      3em;
-  --link-item-display-icon-size:                        3em;
-  --link-item-display-image-size:                       3em;
-  --link-item-display-rotate:                           0deg;
-  --link-item-display-translate-x:                      0em;
-  --link-item-display-translate-y:                      0em;
-  --link-item-display-name-size:                        0.9em;
+  /* --link-item-display-gutter:                           2; */
+  /* --link-item-display-rotate:                           0deg; */
+  /* --link-item-display-translate-x:                      0em; */
+  /* --link-item-display-translate-y:                      0em; */
+  /* --link-item-display-visual-letter-size:               3em; */
+  /* --link-item-display-visual-icon-size:                 3em; */
+  /* --link-item-display-visual-image-size:                3em; */
+  /* --link-item-display-name-size:                        0.9em; */
   --link-item-border:                                   0;
   --link-item-padding:                                  1;
   --link-item-clip-padding:                             1em;
@@ -421,7 +421,7 @@
 }
 
 .is-link-item-color-opacity {
-  --link-item-clip-padding:                             calc(0 * 1em);
+  /* --link-item-clip-padding:                             calc(0 * 1em); */
 }
 
 @media (min-width: 700px) {

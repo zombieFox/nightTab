@@ -208,7 +208,6 @@ var state = (function() {
         },
         display: {
           visual: {
-            show: true,
             letter: {
               size: 3
             },

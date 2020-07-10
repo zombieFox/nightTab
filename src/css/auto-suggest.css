@@ -17,11 +17,12 @@
   overflow-y: auto;
   z-index: var(--z-index-auto-suggest);
   box-shadow: var(--theme-shadow-bottom-large);
+  animation: appear var(--layout-transition-extra-fast) 1;
 }
 
 .auto-suggest-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(6em, 1fr));
   grid-gap: calc(var(--form-wrap-space) / 2);
 }
 

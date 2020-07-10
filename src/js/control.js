@@ -4146,67 +4146,47 @@ var control = (function() {
           }
         }],
         content: [{
+          element: ".control-link-item-display-alignment-topleft",
+          path: "link.item.display.alignment",
+          type: "radio"
+        }, {
           element: ".control-link-item-display-alignment-topcenter",
           path: "link.item.display.alignment",
-          type: "radio",
-          func: function() {
-            render.class();
-          }
+          type: "radio"
         }, {
           element: ".control-link-item-display-alignment-topright",
           path: "link.item.display.alignment",
-          type: "radio",
-          func: function() {
-            render.class();
-          }
+          type: "radio"
         }, {
           element: ".control-link-item-display-alignment-centerleft",
           path: "link.item.display.alignment",
-          type: "radio",
-          func: function() {
-            render.class();
-          }
+          type: "radio"
         }, {
           element: ".control-link-item-display-alignment-centercenter",
           path: "link.item.display.alignment",
-          type: "radio",
-          func: function() {
-            render.class();
-          }
+          type: "radio"
         }, {
           element: ".control-link-item-display-alignment-centerright",
           path: "link.item.display.alignment",
-          type: "radio",
-          func: function() {
-            render.class();
-          }
+          type: "radio"
         }, {
           element: ".control-link-item-display-alignment-bottomleft",
           path: "link.item.display.alignment",
-          type: "radio",
-          func: function() {
-            render.class();
-          }
+          type: "radio"
         }, {
           element: ".control-link-item-display-alignment-bottomcenter",
           path: "link.item.display.alignment",
-          type: "radio",
-          func: function() {
-            render.class();
-          }
+          type: "radio"
         }, {
           element: ".control-link-item-display-alignment-bottomright",
           path: "link.item.display.alignment",
-          type: "radio",
-          func: function() {
-            render.class();
-          }
+          type: "radio"
         }, {
-          element: ".control-link-item-display-alignment-topleft",
-          path: "link.item.display.alignment",
-          type: "radio",
+          element: ".control-link-item-display-alignment-apply",
+          type: "button",
           func: function() {
-            render.class();
+            link.mod.item.display.alignment();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-display-rotate-range",
@@ -4220,10 +4200,7 @@ var control = (function() {
             element: ".control-link-item-display-rotate-number",
             path: "link.item.display.rotate",
             type: "number"
-          }],
-          func: function() {
-            link.render.item.rotate();
-          }
+          }]
         }, {
           element: ".control-link-item-display-rotate-number",
           path: "link.item.display.rotate",
@@ -4236,17 +4213,20 @@ var control = (function() {
             element: ".control-link-item-display-rotate-range",
             path: "link.item.display.rotate",
             type: "range"
-          }],
-          func: function() {
-            link.render.item.rotate();
-          }
+          }]
         }, {
           element: ".control-link-item-display-rotate-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.rotate");
-            link.render.item.rotate();
             render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-rotate-apply",
+          type: "button",
+          func: function() {
+            link.mod.item.display.rotate();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-display-translate-x-range",
@@ -4263,10 +4243,7 @@ var control = (function() {
             path: "link.item.display.translate.x",
             type: "number",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.translate.x();
-          }
+          }]
         }, {
           element: ".control-link-item-display-translate-x-number",
           path: "link.item.display.translate.x",
@@ -4282,17 +4259,20 @@ var control = (function() {
             path: "link.item.display.translate.x",
             type: "range",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.translate.x();
-          }
+          }]
         }, {
           element: ".control-link-item-display-translate-x-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.translate.x");
-            link.render.item.translate.x();
             render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-translate-x-apply",
+          type: "button",
+          func: function() {
+            link.mod.item.display.translate.x();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-display-translate-y-range",
@@ -4309,10 +4289,7 @@ var control = (function() {
             path: "link.item.display.translate.y",
             type: "number",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.translate.y();
-          }
+          }]
         }, {
           element: ".control-link-item-display-translate-y-number",
           path: "link.item.display.translate.y",
@@ -4328,17 +4305,20 @@ var control = (function() {
             path: "link.item.display.translate.y",
             type: "range",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.translate.y();
-          }
+          }]
         }, {
           element: ".control-link-item-display-translate-y-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.translate.y");
-            link.render.item.translate.y();
             render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-translate-y-apply",
+          type: "button",
+          func: function() {
+            link.mod.item.display.translate.y();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-display-gutter-range",
@@ -4352,10 +4332,7 @@ var control = (function() {
             element: ".control-link-item-display-gutter-number",
             path: "link.item.display.gutter",
             type: "number"
-          }],
-          func: function() {
-            link.render.item.gutter();
-          }
+          }]
         }, {
           element: ".control-link-item-display-gutter-number",
           path: "link.item.display.gutter",
@@ -4368,54 +4345,65 @@ var control = (function() {
             element: ".control-link-item-display-gutter-range",
             path: "link.item.display.gutter",
             type: "range"
-          }],
-          func: function() {
-            link.render.item.gutter();
-          }
+          }]
         }, {
           element: ".control-link-item-display-gutter-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.gutter");
-            link.render.item.gutter();
             render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-gutter-apply",
+          type: "button",
+          func: function() {
+            link.mod.item.display.gutter();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-display-direction-horizontal",
           path: "link.item.display.direction",
-          type: "radio",
-          func: function() {
-            render.class();
-          }
+          type: "radio"
         }, {
           element: ".control-link-item-display-direction-vertical",
           path: "link.item.display.direction",
-          type: "radio",
+          type: "radio"
+        }, {
+          element: ".control-link-item-display-direction-apply",
+          type: "button",
           func: function() {
-            render.class();
+            link.mod.item.display.direction();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-display-order-visualname",
           path: "link.item.display.order",
-          type: "radio",
-          func: function() {
-            render.class();
-          }
+          type: "radio"
         }, {
           element: ".control-link-item-display-order-namevisual",
           path: "link.item.display.order",
-          type: "radio",
+          type: "radio"
+        }, {
+          element: ".control-link-item-display-order-apply",
+          type: "button",
           func: function() {
-            render.class();
+            link.mod.item.display.order();
+            link.groupAndItems();
           }
         }],
         visual: [{
           element: ".control-link-item-display-visual-show",
-          path: "link.item.display.visual.show",
-          type: "checkbox",
+          type: "button",
           func: function() {
-            render.class();
-            render.dependents();
+            link.mod.item.display.visual.show();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-item-display-visual-hide",
+          type: "button",
+          func: function() {
+            link.mod.item.display.visual.hide();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-display-visual-letter-size-range",
@@ -4432,10 +4420,7 @@ var control = (function() {
             path: "link.item.display.visual.letter.size",
             type: "number",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.display.visual.letter.size();
-          }
+          }]
         }, {
           element: ".control-link-item-display-visual-letter-size-number",
           path: "link.item.display.visual.letter.size",
@@ -4451,17 +4436,20 @@ var control = (function() {
             path: "link.item.display.visual.letter.size",
             type: "range",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.display.visual.letter.size();
-          }
+          }]
         }, {
           element: ".control-link-item-display-visual-letter-size-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.visual.letter.size");
-            link.render.item.display.visual.letter.size();
             render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-visual-letter-size-apply",
+          type: "button",
+          func: function() {
+            link.mod.item.display.visual.letter.size();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-display-visual-icon-size-range",
@@ -4479,9 +4467,6 @@ var control = (function() {
             type: "number",
             valueConvert: ["float"]
           }],
-          func: function() {
-            link.render.item.display.visual.icon.size();
-          }
         }, {
           element: ".control-link-item-display-visual-icon-size-number",
           path: "link.item.display.visual.icon.size",
@@ -4498,16 +4483,19 @@ var control = (function() {
             type: "range",
             valueConvert: ["float"]
           }],
-          func: function() {
-            link.render.item.display.visual.icon.size();
-          }
         }, {
           element: ".control-link-item-display-visual-icon-size-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.visual.icon.size");
-            link.render.item.display.visual.icon.size();
             render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-visual-icon-size-apply",
+          type: "button",
+          func: function() {
+            link.mod.item.display.visual.icon.size();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-display-visual-image-size-range",
@@ -4525,9 +4513,6 @@ var control = (function() {
             type: "number",
             valueConvert: ["float"]
           }],
-          func: function() {
-            link.render.item.display.visual.image.size();
-          }
         }, {
           element: ".control-link-item-display-visual-image-size-number",
           path: "link.item.display.visual.image.size",
@@ -4544,16 +4529,19 @@ var control = (function() {
             type: "range",
             valueConvert: ["float"]
           }],
-          func: function() {
-            link.render.item.display.visual.image.size();
-          }
         }, {
           element: ".control-link-item-display-visual-image-size-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.visual.image.size");
-            link.render.item.display.visual.image.size();
             render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-visual-image-size-apply",
+          type: "button",
+          func: function() {
+            link.mod.item.display.visual.image.size();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-display-visual-shadow-size-range",
@@ -4568,10 +4556,6 @@ var control = (function() {
             path: "link.item.display.visual.shadow.size",
             type: "number"
           }],
-          func: function() {
-            link.render.item.display.visual.shadow.size();
-            render.class();
-          }
         }, {
           element: ".control-link-item-display-visual-shadow-size-number",
           path: "link.item.display.visual.shadow.size",
@@ -4585,27 +4569,34 @@ var control = (function() {
             path: "link.item.display.visual.shadow.size",
             type: "range"
           }],
-          func: function() {
-            link.render.item.display.visual.shadow.size();
-            render.class();
-          }
         }, {
           element: ".control-link-item-display-visual-shadow-size-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.visual.shadow.size");
-            link.render.item.display.visual.shadow.size();
-            render.class();
             render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-visual-shadow-size-apply",
+          type: "button",
+          func: function() {
+            link.mod.item.display.visual.shadow.size();
+            link.groupAndItems();
           }
         }],
         name: [{
           element: ".control-link-item-display-name-show",
-          path: "link.item.display.name.show",
-          type: "checkbox",
+          type: "button",
           func: function() {
-            render.class();
-            render.dependents();
+            link.mod.item.display.name.show();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-item-display-name-hide",
+          type: "button",
+          func: function() {
+            link.mod.item.display.name.hide();
+            link.groupAndItems();
           }
         }, {
           element: ".control-link-item-display-name-size-range",
@@ -4622,10 +4613,7 @@ var control = (function() {
             path: "link.item.display.name.size",
             type: "number",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.name();
-          }
+          }]
         }, {
           element: ".control-link-item-display-name-size-number",
           path: "link.item.display.name.size",
@@ -4641,17 +4629,20 @@ var control = (function() {
             path: "link.item.display.name.size",
             type: "range",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.name();
-          }
+          }]
         }, {
           element: ".control-link-item-display-name-size-default",
           type: "button",
           func: function() {
             mod.default("link.item.display.name.size");
-            link.render.item.name();
             render.update.control.menu();
+          }
+        }, {
+          element: ".control-link-item-display-name-size-apply",
+          type: "button",
+          func: function() {
+            link.mod.item.display.name.size();
+            link.groupAndItems();
           }
         }],
         style: [{
@@ -6181,13 +6172,6 @@ var control = (function() {
           }
         }],
         image: [{
-          element: ".control-link-item-image-clear",
-          type: "button",
-          func: function() {
-            link.mod.image.clear();
-            link.groupAndItems();
-          }
-        }, {
           element: ".control-link-item-image-opacity-range",
           path: "link.item.image.opacity",
           type: "range",
@@ -6201,11 +6185,7 @@ var control = (function() {
             path: "link.item.image.opacity",
             type: "number",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.image.opacity();
-            render.class();
-          }
+          }]
         }, {
           element: ".control-link-item-image-opacity-number",
           path: "link.item.image.opacity",
@@ -6220,19 +6200,20 @@ var control = (function() {
             path: "link.item.image.opacity",
             type: "number",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.image.opacity();
-            render.class();
-          }
+          }]
         }, {
           element: ".control-link-item-image-opacity-default",
           type: "button",
           func: function() {
             mod.default("link.item.image.opacity");
-            link.render.item.image.opacity();
             render.update.control.menu();
-            render.class();
+          }
+        }, {
+          element: ".control-link-item-image-apply",
+          type: "button",
+          func: function() {
+            link.mod.item.image.opacity();
+            link.groupAndItems();
           }
         }],
         border: [{
@@ -6359,14 +6340,14 @@ var control = (function() {
           element: ".control-group-name-show",
           type: "button",
           func: function() {
-            link.mod.name.show();
+            link.mod.group.name.show();
             link.groupAndItems();
           }
         }, {
           element: ".control-group-name-hide",
           type: "button",
           func: function() {
-            link.mod.name.hide();
+            link.mod.group.name.hide();
             link.groupAndItems();
           }
         }, {
@@ -6468,14 +6449,14 @@ var control = (function() {
           element: ".control-group-openall-show",
           type: "button",
           func: function() {
-            link.mod.openall.show();
+            link.mod.group.openall.show();
             link.groupAndItems();
           }
         }, {
           element: ".control-group-openall-hide",
           type: "button",
           func: function() {
-            link.mod.openall.hide();
+            link.mod.group.openall.hide();
             link.groupAndItems();
           }
         }, {
@@ -10671,22 +10652,6 @@ var control = (function() {
         name: "is-link-area-direction-" + state.get.current().link.area.direction
       }, {
         remove: [
-          "is-link-display-alignment-topleft",
-          "is-link-display-alignment-topcenter",
-          "is-link-display-alignment-topright",
-          "is-link-display-alignment-centerleft",
-          "is-link-display-alignment-centercenter",
-          "is-link-display-alignment-centerright",
-          "is-link-display-alignment-bottomleft",
-          "is-link-display-alignment-bottomcenter",
-          "is-link-display-alignment-bottomright"
-        ],
-        condition: function() {
-          return state.get.current().link.show;
-        },
-        name: "is-link-display-alignment-" + state.get.current().link.item.display.alignment
-      }, {
-        remove: [
           "is-link-item-color-by-theme",
           "is-link-item-color-by-custom"
         ],
@@ -10694,14 +10659,6 @@ var control = (function() {
           return state.get.current().link.show;
         },
         name: "is-link-item-color-by-" + state.get.current().link.item.color.by
-      }, {
-        remove: [
-          "is-link-item-color-opacity"
-        ],
-        condition: function() {
-          return (state.get.current().link.item.color.opacity < 1);
-        },
-        name: "is-link-item-color-opacity"
       }, {
         remove: [
           "is-link-item-image-opacity"
@@ -10719,39 +10676,6 @@ var control = (function() {
           return state.get.current().link.show;
         },
         name: "is-link-item-display-direction-" + state.get.current().link.item.display.direction
-      }, {
-        remove: [
-          "is-link-item-display-order-visualname",
-          "is-link-item-display-order-namevisual"
-        ],
-        condition: function() {
-          return state.get.current().link.show;
-        },
-        name: "is-link-item-display-order-" + state.get.current().link.item.display.order
-      }, {
-        remove: [
-          "is-link-item-display-name-show"
-        ],
-        condition: function() {
-          return (state.get.current().link.show && state.get.current().link.item.display.name.show);
-        },
-        name: "is-link-item-display-name-show"
-      }, {
-        remove: [
-          "is-link-item-display-visual-show"
-        ],
-        condition: function() {
-          return (state.get.current().link.show && state.get.current().link.item.display.visual.show);
-        },
-        name: "is-link-item-display-visual-show"
-      }, {
-        remove: [
-          "is-link-item-display-visual-shadow-show"
-        ],
-        condition: function() {
-          return (state.get.current().link.item.display.visual.shadow.size > 0);
-        },
-        name: "is-link-item-display-visual-shadow-show"
       }, {
         remove: [
           "is-link-style-list",
@@ -11449,14 +11373,75 @@ var control = (function() {
             ".control-link-item-size-range",
             ".control-link-item-size-number",
             ".control-link-item-size-default",
-            ".control-link-item-display-visual-show",
-            ".control-link-item-display-name-show",
             ".control-link-item-url-show",
             ".control-link-item-line-show",
             ".control-link-item-shadow-show",
             ".control-link-item-shadow-show-helper",
             ".control-link-item-hoverscale",
             ".control-link-newtab",
+            ".control-link-item-display-visual-show",
+            ".control-link-item-display-visual-hide",
+            "[for=control-link-item-display-visual-letter-size-range]",
+            ".control-link-item-display-visual-letter-size-range",
+            ".control-link-item-display-visual-letter-size-number",
+            ".control-link-item-display-visual-letter-size-default",
+            ".control-link-item-display-visual-letter-size-apply",
+            "[for=control-link-item-display-visual-icon-size-range]",
+            ".control-link-item-display-visual-icon-size-range",
+            ".control-link-item-display-visual-icon-size-number",
+            ".control-link-item-display-visual-icon-size-default",
+            ".control-link-item-display-visual-icon-size-apply",
+            "[for=control-link-item-display-visual-image-size-range]",
+            ".control-link-item-display-visual-image-size-range",
+            ".control-link-item-display-visual-image-size-number",
+            ".control-link-item-display-visual-image-size-default",
+            ".control-link-item-display-visual-image-size-apply",
+            "[for=control-link-item-display-visual-shadow-size-range]",
+            ".control-link-item-display-visual-shadow-size-range",
+            ".control-link-item-display-visual-shadow-size-number",
+            ".control-link-item-display-visual-shadow-size-default",
+            ".control-link-item-display-visual-shadow-size-apply",
+            ".control-link-item-display-visual-shadow-size-helper",
+            ".control-link-item-display-alignment-grid",
+            ".control-link-item-display-alignment-label",
+            ".control-link-item-display-alignment-topleft",
+            ".control-link-item-display-alignment-topcenter",
+            ".control-link-item-display-alignment-topright",
+            ".control-link-item-display-alignment-centerleft",
+            ".control-link-item-display-alignment-centercenter",
+            ".control-link-item-display-alignment-centerright",
+            ".control-link-item-display-alignment-bottomleft",
+            ".control-link-item-display-alignment-bottomcenter",
+            ".control-link-item-display-alignment-bottomright",
+            ".control-link-item-display-alignment-helper",
+            ".control-link-item-display-alignment-apply",
+            "[for=control-link-item-display-rotate-range]",
+            ".control-link-item-display-rotate-range",
+            ".control-link-item-display-rotate-number",
+            ".control-link-item-display-rotate-default",
+            ".control-link-item-display-rotate-apply",
+            "[for=control-link-item-display-translate-x-range]",
+            ".control-link-item-display-translate-x-range",
+            ".control-link-item-display-translate-x-number",
+            ".control-link-item-display-translate-x-default",
+            "[for=control-link-item-display-translate-y-range]",
+            ".control-link-item-display-translate-y-range",
+            ".control-link-item-display-translate-y-number",
+            ".control-link-item-display-translate-y-default",
+            ".control-link-item-display-name-show",
+            ".control-link-item-display-name-hide",
+            "[for=control-link-item-display-name-size-range]",
+            ".control-link-item-display-name-size-range",
+            ".control-link-item-display-name-size-number",
+            ".control-link-item-display-name-size-default",
+            ".control-link-item-display-direction-horizontal",
+            ".control-link-item-display-direction-vertical",
+            ".control-link-item-display-order-visualname",
+            ".control-link-item-display-order-namevisual",
+            "[for=control-link-item-display-gutter-range]",
+            ".control-link-item-display-gutter-range",
+            ".control-link-item-display-gutter-number",
+            ".control-link-item-display-gutter-default",
             ".control-link-item-display-direction-helper",
             ".control-link-item-display-order-helper",
             ".control-link-item-color-by-theme",
@@ -11529,7 +11514,7 @@ var control = (function() {
             ".control-link-item-image-opacity-range",
             ".control-link-item-image-opacity-number",
             ".control-link-item-image-opacity-default",
-            ".control-link-item-image-opacity-helper",
+            ".control-link-item-image-opacity-apply",
             ".control-link-orientation-top",
             ".control-link-orientation-bottom",
             ".control-link-orientation-helper",
@@ -11551,90 +11536,6 @@ var control = (function() {
             ".control-link-area-justify-right",
             ".control-link-area-justify-helper",
           ]
-        }
-      }, {
-        condition: function() {
-          return (state.get.current().link.show && state.get.current().link.item.display.visual.show);
-        },
-        dependents: function() {
-          return [
-            "[for=control-link-item-display-visual-letter-size-range]",
-            ".control-link-item-display-visual-letter-size-range",
-            ".control-link-item-display-visual-letter-size-number",
-            ".control-link-item-display-visual-letter-size-default",
-            "[for=control-link-item-display-visual-icon-size-range]",
-            ".control-link-item-display-visual-icon-size-range",
-            ".control-link-item-display-visual-icon-size-number",
-            ".control-link-item-display-visual-icon-size-default",
-            "[for=control-link-item-display-visual-image-size-range]",
-            ".control-link-item-display-visual-image-size-range",
-            ".control-link-item-display-visual-image-size-number",
-            ".control-link-item-display-visual-image-size-default",
-            "[for=control-link-item-display-visual-shadow-size-range]",
-            ".control-link-item-display-visual-shadow-size-range",
-            ".control-link-item-display-visual-shadow-size-number",
-            ".control-link-item-display-visual-shadow-size-default",
-            ".control-link-item-display-visual-shadow-size-helper"
-          ];
-        }
-      }, {
-        condition: function() {
-          return (state.get.current().link.show && state.get.current().link.item.display.name.show);
-        },
-        dependents: function() {
-          return [
-            "[for=control-link-item-display-name-size-range]",
-            ".control-link-item-display-name-size-range",
-            ".control-link-item-display-name-size-number",
-            ".control-link-item-display-name-size-default"
-          ];
-        }
-      }, {
-        condition: function() {
-          return (state.get.current().link.show && (state.get.current().link.item.display.visual.show || state.get.current().link.item.display.name.show));
-        },
-        dependents: function() {
-          return [
-            ".control-link-item-display-alignment-grid",
-            ".control-link-item-display-alignment-label",
-            ".control-link-item-display-alignment-topleft",
-            ".control-link-item-display-alignment-topcenter",
-            ".control-link-item-display-alignment-topright",
-            ".control-link-item-display-alignment-centerleft",
-            ".control-link-item-display-alignment-centercenter",
-            ".control-link-item-display-alignment-centerright",
-            ".control-link-item-display-alignment-bottomleft",
-            ".control-link-item-display-alignment-bottomcenter",
-            ".control-link-item-display-alignment-bottomright",
-            "[for=control-link-item-display-rotate-range]",
-            ".control-link-item-display-rotate-range",
-            ".control-link-item-display-rotate-number",
-            ".control-link-item-display-rotate-default",
-            "[for=control-link-item-display-translate-x-range]",
-            ".control-link-item-display-translate-x-range",
-            ".control-link-item-display-translate-x-number",
-            ".control-link-item-display-translate-x-default",
-            "[for=control-link-item-display-translate-y-range]",
-            ".control-link-item-display-translate-y-range",
-            ".control-link-item-display-translate-y-number",
-            ".control-link-item-display-translate-y-default"
-          ];
-        }
-      }, {
-        condition: function() {
-          return (state.get.current().link.show && state.get.current().link.item.display.visual.show && state.get.current().link.item.display.name.show);
-        },
-        dependents: function() {
-          return [
-            ".control-link-item-display-direction-horizontal",
-            ".control-link-item-display-direction-vertical",
-            ".control-link-item-display-order-visualname",
-            ".control-link-item-display-order-namevisual",
-            "[for=control-link-item-display-gutter-range]",
-            ".control-link-item-display-gutter-range",
-            ".control-link-item-display-gutter-number",
-            ".control-link-item-display-gutter-default"
-          ];
         }
       }],
       theme: [{
