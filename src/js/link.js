@@ -121,7 +121,8 @@ var link = (function() {
           r: null,
           g: null,
           b: null
-        }
+        },
+        opacity: null
       },
       image: {
         url: null,
