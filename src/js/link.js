@@ -2830,11 +2830,19 @@ var link = (function() {
           helper.addClass(displayShadowSizeInputHelper, "disabled");
         };
 
-        if (mod.collapse.form.item.advanced && stagedLink.link.display.visual.show && stagedLink.link.display.name.show) {
+        if (mod.collapse.form.item.advanced && stagedLink.link.display.name.show) {
           helper.removeClass(nameSizeLabel, "disabled");
           nameSizeInputRange.removeAttribute("disabled");
           nameSizeInputNumber.removeAttribute("disabled");
           nameSizeInputDefault.removeAttribute("disabled");
+        } else {
+          helper.addClass(nameSizeLabel, "disabled");
+          nameSizeInputRange.setAttribute("disabled", "");
+          nameSizeInputNumber.setAttribute("disabled", "");
+          nameSizeInputDefault.setAttribute("disabled", "");
+        };
+
+        if (mod.collapse.form.item.advanced && stagedLink.link.display.visual.show && stagedLink.link.display.name.show) {
           helper.removeClass(displayGutterLabel, "disabled");
           displayGutterRange.removeAttribute("disabled");
           displayGutterNumber.removeAttribute("disabled");
@@ -2848,10 +2856,6 @@ var link = (function() {
           displayDirectionNamevisualRadio.removeAttribute("disabled");
           helper.removeClass(displayDirectionNamevisualLabel, "disabled");
         } else {
-          helper.addClass(nameSizeLabel, "disabled");
-          nameSizeInputRange.setAttribute("disabled", "");
-          nameSizeInputNumber.setAttribute("disabled", "");
-          nameSizeInputDefault.setAttribute("disabled", "");
           helper.addClass(displayGutterLabel, "disabled");
           displayGutterRange.setAttribute("disabled", "");
           displayGutterNumber.setAttribute("disabled", "");
