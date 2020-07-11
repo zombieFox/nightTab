@@ -1191,7 +1191,6 @@
   transform: rotate(-180deg);
 }
 
-/* link form preview */
 .link-form-aside {
   display: none;
 }
@@ -1202,6 +1201,7 @@
   }
 }
 
+/* link form preview */
 .link-form-preview-area {
   position: sticky;
   top: 50%;
@@ -1211,6 +1211,15 @@
 .link-item-preview {
   position: relative;
   height: var(--link-item-height);
+}
+
+.link-item-preview.link-item-wide,
+.link-item-preview.link-item-tall {
+  font-size: 0.5em;
+}
+
+.link-item-preview.link-item-tall {
+  height: calc(var(--link-item-height) * 2);
 }
 
 .is-link-item-shadow-show.is-link-orientation-bottom .link-item-preview .link-panel-front,

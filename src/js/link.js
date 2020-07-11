@@ -3266,6 +3266,48 @@ var link = (function() {
         nameSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.name.size);
         render.item.preview.delay();
       });
+      imageInput.addEventListener("input", function(event) {
+        stagedLink.link.image.url = this.value;
+        render.item.preview.delay();
+      }, false);
+      imageOpacityInputRange.addEventListener("input", function(event) {
+        stagedLink.link.image.opacity = mod.value.convert.to.float(parseInt(this.value, 10));
+        imageOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
+        render.item.preview.delay();
+      });
+      imageOpacityInputNumber.addEventListener("input", function(event) {
+        var inputValue = parseInt(this.value, 10);
+        for (var key in mod.value.modify) {
+          if (this[key] != "") {
+            inputValue = mod.value.modify[key](inputValue, this);
+          };
+        };
+        stagedLink.link.image.opacity = mod.value.convert.to.float(inputValue);
+        imageOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
+        var set = function(input) {
+          input.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 500, this);
+        render.item.preview.delay();
+      });
+      imageOpacityInputDefault.addEventListener("click", function(event) {
+        stagedLink.link.image.opacity = helper.getObject({
+          object: state.get.default(),
+          path: "link.item.image.opacity"
+        });
+        imageOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
+        imageOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
+        render.item.preview.delay();
+      });
+      wideInput.addEventListener("change", function(event) {
+        stagedLink.link.wide = this.checked;
+        render.item.preview.delay();
+      }, false);
+      tallInput.addEventListener("change", function(event) {
+        stagedLink.link.tall = this.checked;
+        render.item.preview.delay();
+      }, false);
       displayAlignmentTopLeftRadio.addEventListener("input", function(event) {
         link.stagedLink.link.display.alignment = this.value;
         render.item.preview.delay();
@@ -3735,46 +3777,6 @@ var link = (function() {
         mirror.delay = setTimeout(set, 500, this);
         render.item.preview.delay();
       });
-      imageInput.addEventListener("input", function(event) {
-        stagedLink.link.image.url = this.value;
-        render.item.preview.delay();
-      }, false);
-      imageOpacityInputRange.addEventListener("input", function(event) {
-        stagedLink.link.image.opacity = mod.value.convert.to.float(parseInt(this.value, 10));
-        imageOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        render.item.preview.delay();
-      });
-      imageOpacityInputNumber.addEventListener("input", function(event) {
-        var inputValue = parseInt(this.value, 10);
-        for (var key in mod.value.modify) {
-          if (this[key] != "") {
-            inputValue = mod.value.modify[key](inputValue, this);
-          };
-        };
-        stagedLink.link.image.opacity = mod.value.convert.to.float(inputValue);
-        imageOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        var set = function(input) {
-          input.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        };
-        clearTimeout(mirror.delay);
-        mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
-      });
-      imageOpacityInputDefault.addEventListener("click", function(event) {
-        stagedLink.link.image.opacity = helper.getObject({
-          object: state.get.default(),
-          path: "link.item.image.opacity"
-        });
-        imageOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        imageOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        render.item.preview.delay();
-      });
-      wideInput.addEventListener("change", function(event) {
-        stagedLink.link.wide = this.checked;
-      }, false);
-      tallInput.addEventListener("change", function(event) {
-        stagedLink.link.tall = this.checked;
-      }, false);
       advancedCollapseButton.addEventListener("click", function() {
         if (mod.collapse.form.item.advanced) {
           mod.collapse.form.item.advanced = false;
