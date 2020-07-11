@@ -1216,9 +1216,22 @@
 .link-item-preview.link-item-wide,
 .link-item-preview.link-item-tall {
   font-size: 0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.link-item-preview.link-item-wide {
+  width: 100%;
+  height: var(--link-item-height);
 }
 
 .link-item-preview.link-item-tall {
+  width: 50%;
+  height: calc(var(--link-item-height) * 2);
+}
+
+.link-item-preview.link-item-wide.link-item-preview.link-item-tall {
+  width: 100%;
   height: calc(var(--link-item-height) * 2);
 }
 
