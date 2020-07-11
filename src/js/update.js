@@ -1322,6 +1322,8 @@ var update = (function() {
           group.items[index] = bookmarkData;
         });
       });
+      data.state.link.item.color.by = "theme";
+      data.state.link.item.accent.by = "theme";
       delete data.state.link.item.display.visual.show;
       return data;
     }

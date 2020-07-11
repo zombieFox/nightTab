@@ -715,13 +715,13 @@ var bookmarks = (function() {
   mod.sort = function(by) {
     var action = {
       name: function(array) {
-        return helper.sortObject(array, "name");
+        return helper.sortObject(array, "display.name.text");
       },
       letter: function(array) {
-        return helper.sortObject(array, "letter");
+        return helper.sortObject(array, "display.visual.letter.text");
       },
       icon: function(array) {
-        return helper.sortObject(array, "icon.name");
+        return helper.sortObject(array, "display.visual.icon.name");
       }
     };
     mod.all.forEach(function(arrayItem, index) {

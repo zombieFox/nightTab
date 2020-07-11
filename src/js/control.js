@@ -4605,7 +4605,7 @@ var control = (function() {
           valueConvert: ["float"],
           valueModify: {
             min: 10,
-            max: 3000,
+            max: 1500,
             step: 10
           },
           mirrorElement: [{
@@ -4621,7 +4621,7 @@ var control = (function() {
           valueConvert: ["float"],
           valueModify: {
             min: 10,
-            max: 3000,
+            max: 1500,
             step: 10
           },
           mirrorElement: [{
@@ -4661,6 +4661,20 @@ var control = (function() {
           }
         }],
         color: [{
+          element: ".control-link-item-color-by-theme",
+          path: "link.item.color.by",
+          type: "radio",
+          func: function() {
+            render.dependents();
+          }
+        }, {
+          element: ".control-link-item-color-by-custom",
+          path: "link.item.color.by",
+          type: "radio",
+          func: function() {
+            render.dependents();
+          }
+        }, {
           element: ".control-link-item-color-rgb-color",
           path: "link.item.color.rgb",
           type: "color",
@@ -4719,7 +4733,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.hsl();
+            link.mod.item.color.hsl();
           }
         }, {
           element: ".control-link-item-color-rgb-text",
@@ -4780,7 +4794,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.hsl();
+            link.mod.item.color.hsl();
           }
         }, {
           element: ".control-link-item-color-hsl-h-range",
@@ -4829,7 +4843,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.rgb();
+            link.mod.item.color.rgb();
           }
         }, {
           element: ".control-link-item-color-hsl-h-number",
@@ -4878,7 +4892,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.rgb();
+            link.mod.item.color.rgb();
           }
         }, {
           element: ".control-link-item-color-hsl-s-range",
@@ -4927,7 +4941,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.rgb();
+            link.mod.item.color.rgb();
           }
         }, {
           element: ".control-link-item-color-hsl-s-number",
@@ -4976,7 +4990,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.rgb();
+            link.mod.item.color.rgb();
           }
         }, {
           element: ".control-link-item-color-hsl-l-range",
@@ -5025,7 +5039,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.rgb();
+            link.mod.item.color.rgb();
           }
         }, {
           element: ".control-link-item-color-hsl-l-number",
@@ -5074,7 +5088,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.rgb();
+            link.mod.item.color.rgb();
           }
         }, {
           element: ".control-link-item-color-rgb-r-range",
@@ -5123,7 +5137,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.hsl();
+            link.mod.item.color.hsl();
           }
         }, {
           element: ".control-link-item-color-rgb-r-number",
@@ -5172,7 +5186,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.hsl();
+            link.mod.item.color.hsl();
           }
         }, {
           element: ".control-link-item-color-rgb-g-range",
@@ -5221,7 +5235,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.hsl();
+            link.mod.item.color.hsl();
           }
         }, {
           element: ".control-link-item-color-rgb-g-number",
@@ -5270,7 +5284,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.hsl();
+            link.mod.item.color.hsl();
           }
         }, {
           element: ".control-link-item-color-rgb-b-range",
@@ -5319,7 +5333,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.hsl();
+            link.mod.item.color.hsl();
           }
         }, {
           element: ".control-link-item-color-rgb-b-number",
@@ -5368,27 +5382,20 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.color.hsl();
+            link.mod.item.color.hsl();
           }
         }, {
           element: ".control-link-item-color-apply",
           type: "button",
           func: function() {
-            link.mod.color.set();
+            link.mod.item.color.set();
             link.groupAndItems();
           }
         }, {
           element: ".control-link-item-color-rainbow",
           type: "button",
           func: function() {
-            link.mod.color.rainbow();
-            link.groupAndItems();
-          }
-        }, {
-          element: ".control-link-item-color-clear",
-          type: "button",
-          func: function() {
-            link.mod.color.clear();
+            link.mod.item.color.rainbow();
             link.groupAndItems();
           }
         }, {
@@ -5405,11 +5412,7 @@ var control = (function() {
             path: "link.item.color.opacity",
             type: "number",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.color.opacity();
-            render.class();
-          }
+          }]
         }, {
           element: ".control-link-item-color-opacity-number",
           path: "link.item.color.opacity",
@@ -5424,22 +5427,37 @@ var control = (function() {
             path: "link.item.color.opacity",
             type: "number",
             valueConvert: ["float"]
-          }],
-          func: function() {
-            link.render.item.color.opacity();
-            render.class();
-          }
+          }]
         }, {
           element: ".control-link-item-color-opacity-default",
           type: "button",
           func: function() {
             mod.default("link.item.color.opacity");
-            link.render.item.color.opacity();
             render.update.control.menu();
-            render.class();
+          }
+        }, {
+          element: ".control-link-item-color-opacity-apply",
+          type: "button",
+          func: function() {
+            link.mod.item.color.opacity();
+            link.groupAndItems();
           }
         }],
         accent: [{
+          element: ".control-link-item-accent-by-theme",
+          path: "link.item.accent.by",
+          type: "radio",
+          func: function() {
+            render.dependents();
+          }
+        }, {
+          element: ".control-link-item-accent-by-custom",
+          path: "link.item.accent.by",
+          type: "radio",
+          func: function() {
+            render.dependents();
+          }
+        }, {
           element: ".control-link-item-accent-rgb-color",
           path: "link.item.accent.rgb",
           type: "color",
@@ -5498,7 +5516,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.hsl();
+            link.mod.item.accent.hsl();
           }
         }, {
           element: ".control-link-item-accent-rgb-text",
@@ -5559,7 +5577,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.hsl();
+            link.mod.item.accent.hsl();
           }
         }, {
           element: ".control-link-item-accent-hsl-h-range",
@@ -5608,7 +5626,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.rgb();
+            link.mod.item.accent.rgb();
           }
         }, {
           element: ".control-link-item-accent-hsl-h-number",
@@ -5657,7 +5675,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.rgb();
+            link.mod.item.accent.rgb();
           }
         }, {
           element: ".control-link-item-accent-hsl-s-range",
@@ -5706,7 +5724,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.rgb();
+            link.mod.item.accent.rgb();
           }
         }, {
           element: ".control-link-item-accent-hsl-s-number",
@@ -5755,7 +5773,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.rgb();
+            link.mod.item.accent.rgb();
           }
         }, {
           element: ".control-link-item-accent-hsl-l-range",
@@ -5804,7 +5822,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.rgb();
+            link.mod.item.accent.rgb();
           }
         }, {
           element: ".control-link-item-accent-hsl-l-number",
@@ -5853,7 +5871,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.rgb();
+            link.mod.item.accent.rgb();
           }
         }, {
           element: ".control-link-item-accent-rgb-r-range",
@@ -5902,7 +5920,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.hsl();
+            link.mod.item.accent.hsl();
           }
         }, {
           element: ".control-link-item-accent-rgb-r-number",
@@ -5951,7 +5969,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.hsl();
+            link.mod.item.accent.hsl();
           }
         }, {
           element: ".control-link-item-accent-rgb-g-range",
@@ -6000,7 +6018,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.hsl();
+            link.mod.item.accent.hsl();
           }
         }, {
           element: ".control-link-item-accent-rgb-g-number",
@@ -6049,7 +6067,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.hsl();
+            link.mod.item.accent.hsl();
           }
         }, {
           element: ".control-link-item-accent-rgb-b-range",
@@ -6098,7 +6116,7 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.hsl();
+            link.mod.item.accent.hsl();
           }
         }, {
           element: ".control-link-item-accent-rgb-b-number",
@@ -6147,27 +6165,20 @@ var control = (function() {
             type: "number"
           }],
           func: function() {
-            link.mod.accent.hsl();
+            link.mod.item.accent.hsl();
           }
         }, {
           element: ".control-link-item-accent-apply",
           type: "button",
           func: function() {
-            link.mod.accent.set();
+            link.mod.item.accent.set();
             link.groupAndItems();
           }
         }, {
           element: ".control-link-item-accent-rainbow",
           type: "button",
           func: function() {
-            link.mod.accent.rainbow();
-            link.groupAndItems();
-          }
-        }, {
-          element: ".control-link-item-accent-clear",
-          type: "button",
-          func: function() {
-            link.mod.accent.clear();
+            link.mod.item.accent.rainbow();
             link.groupAndItems();
           }
         }],
@@ -11445,21 +11456,45 @@ var control = (function() {
             ".control-link-item-display-direction-helper",
             ".control-link-item-display-order-helper",
             ".control-link-item-color-by-theme",
-            ".control-link-item-color-by-theme-helper",
             ".control-link-item-color-by-custom",
-            ".control-link-item-color-by-custom-helper",
-            ".control-link-item-accent-set",
-            ".control-link-item-accent-clear",
-            ".control-link-item-accent-set-helper",
+            ".control-link-item-color-apply",
+            ".control-link-item-color-rainbow",
+            "[for=control-link-item-color-opacity-range]",
+            ".control-link-item-color-opacity-range",
+            ".control-link-item-color-opacity-number",
+            ".control-link-item-color-opacity-default",
+            ".control-link-item-color-opacity-apply",
+            ".control-link-item-accent-by-theme",
+            ".control-link-item-accent-by-custom",
+            ".control-link-item-accent-apply",
+            ".control-link-item-accent-rainbow",
             "[for=control-link-item-border-range]",
             ".control-link-item-border-range",
             ".control-link-item-border-number",
             ".control-link-item-border-default",
             ".control-link-style-block",
             ".control-link-style-list",
+            "[for=control-link-item-image-opacity-range]",
+            ".control-link-item-image-opacity-range",
+            ".control-link-item-image-opacity-number",
+            ".control-link-item-image-opacity-default",
+            ".control-link-item-image-opacity-apply",
+            ".control-link-orientation-top",
+            ".control-link-orientation-bottom",
+            ".control-link-orientation-helper",
+            ".control-link-sort-name",
+            ".control-link-sort-letter",
+            ".control-link-sort-icon"
+          ];
+        }
+      }, {
+        condition: function() {
+          return state.get.current().link.show && (state.get.current().link.item.color.by == "custom")
+        },
+        dependents: function() {
+          return [
             ".control-link-item-color-rgb-color",
             ".control-link-item-color-rgb-text",
-            ".control-link-item-color-helper",
             "[for=control-link-item-color-hsl-h-range]",
             ".control-link-item-color-hsl-h-range",
             ".control-link-item-color-hsl-h-number",
@@ -11477,18 +11512,17 @@ var control = (function() {
             ".control-link-item-color-rgb-g-number",
             "[for=control-link-item-color-rgb-b-range]",
             ".control-link-item-color-rgb-b-range",
-            ".control-link-item-color-rgb-b-number",
-            ".control-link-item-color-apply",
-            ".control-link-item-color-clear",
-            ".control-link-item-color-rainbow",
-            "[for=control-link-item-color-opacity-range]",
-            ".control-link-item-color-opacity-range",
-            ".control-link-item-color-opacity-number",
-            ".control-link-item-color-opacity-default",
-            ".control-link-item-color-opacity-helper",
+            ".control-link-item-color-rgb-b-number"
+          ]
+        }
+      }, {
+        condition: function() {
+          return state.get.current().link.show && (state.get.current().link.item.accent.by == "custom")
+        },
+        dependents: function() {
+          return [
             ".control-link-item-accent-rgb-color",
             ".control-link-item-accent-rgb-text",
-            ".control-link-item-accent-helper",
             "[for=control-link-item-accent-hsl-h-range]",
             ".control-link-item-accent-hsl-h-range",
             ".control-link-item-accent-hsl-h-number",
@@ -11506,22 +11540,8 @@ var control = (function() {
             ".control-link-item-accent-rgb-g-number",
             "[for=control-link-item-accent-rgb-b-range]",
             ".control-link-item-accent-rgb-b-range",
-            ".control-link-item-accent-rgb-b-number",
-            ".control-link-item-accent-apply",
-            ".control-link-item-accent-clear",
-            ".control-link-item-accent-rainbow",
-            "[for=control-link-item-image-opacity-range]",
-            ".control-link-item-image-opacity-range",
-            ".control-link-item-image-opacity-number",
-            ".control-link-item-image-opacity-default",
-            ".control-link-item-image-opacity-apply",
-            ".control-link-orientation-top",
-            ".control-link-orientation-bottom",
-            ".control-link-orientation-helper",
-            ".control-link-sort-name",
-            ".control-link-sort-letter",
-            ".control-link-sort-icon"
-          ];
+            ".control-link-item-accent-rgb-b-number"
+          ]
         }
       }, {
         condition: function() {

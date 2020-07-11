@@ -381,6 +381,159 @@ var link = (function() {
           });
         });
       }
+    },
+    accent: {
+      hsl: function() {
+        var hsl = helper.convertColor.rgb.hsl(state.get.current().link.item.accent.rgb);
+        helper.setObject({
+          object: state.get.current(),
+          path: "link.item.accent.hsl",
+          newValue: {
+            h: Math.round(hsl.h),
+            s: Math.round(hsl.s),
+            l: Math.round(hsl.l)
+          }
+        });
+      },
+      rgb: function() {
+        var rgb = helper.convertColor.hsl.rgb(state.get.current().link.item.accent.hsl);
+        helper.setObject({
+          object: state.get.current(),
+          path: "link.item.accent.rgb",
+          newValue: {
+            r: Math.round(rgb.r),
+            g: Math.round(rgb.g),
+            b: Math.round(rgb.b)
+          }
+        });
+      },
+      clear: function() {
+        bookmarks.get().forEach(function(arrayItem, index) {
+          arrayItem.items.forEach(function(arrayItem, index) {
+            arrayItem.accent.by = "theme";
+            arrayItem.accent.hsl.h = 0;
+            arrayItem.accent.hsl.s = 0;
+            arrayItem.accent.hsl.l = 0;
+            arrayItem.accent.rgb.r = 0;
+            arrayItem.accent.rgb.g = 0;
+            arrayItem.accent.rgb.b = 0;
+          });
+        });
+      },
+      set: function() {
+        bookmarks.get().forEach(function(arrayItem, index) {
+          arrayItem.items.forEach(function(arrayItem, index) {
+            arrayItem.accent.by = state.get.current().link.item.accent.by;
+            arrayItem.accent.hsl = state.get.current().link.item.accent.hsl;
+            arrayItem.accent.rgb = state.get.current().link.item.accent.rgb;
+          });
+        });
+      },
+      rainbow: function() {
+        var units = 360 / bookmarks.count();
+        var degree = 0;
+        bookmarks.get().forEach(function(arrayItem, index) {
+          arrayItem.items.forEach(function(arrayItem, index) {
+            arrayItem.accent.by = "custom";
+            var rgb = helper.convertColor.hsl.rgb({
+              h: degree,
+              s: 100,
+              l: 50
+            });
+            arrayItem.accent.hsl = {
+              h: Math.round(degree),
+              s: 100,
+              l: 50
+            };
+            arrayItem.accent.rgb = {
+              r: Math.round(rgb.r),
+              g: Math.round(rgb.g),
+              b: Math.round(rgb.b)
+            };
+            degree = degree + units;
+          });
+        });
+      }
+    },
+    color: {
+      hsl: function() {
+        var hsl = helper.convertColor.rgb.hsl(state.get.current().link.item.color.rgb);
+        helper.setObject({
+          object: state.get.current(),
+          path: "link.item.color.hsl",
+          newValue: {
+            h: Math.round(hsl.h),
+            s: Math.round(hsl.s),
+            l: Math.round(hsl.l)
+          }
+        });
+      },
+      rgb: function() {
+        var rgb = helper.convertColor.hsl.rgb(state.get.current().link.item.color.hsl);
+        helper.setObject({
+          object: state.get.current(),
+          path: "link.item.color.rgb",
+          newValue: {
+            r: Math.round(rgb.r),
+            g: Math.round(rgb.g),
+            b: Math.round(rgb.b)
+          }
+        });
+      },
+      clear: function() {
+        bookmarks.get().forEach(function(arrayItem, index) {
+          arrayItem.items.forEach(function(arrayItem, index) {
+            arrayItem.color.by = "theme";
+            arrayItem.color.hsl.h = 0;
+            arrayItem.color.hsl.s = 0;
+            arrayItem.color.hsl.l = 0;
+            arrayItem.color.rgb.r = 0;
+            arrayItem.color.rgb.g = 0;
+            arrayItem.color.rgb.b = 0;
+          });
+        });
+      },
+      set: function() {
+        bookmarks.get().forEach(function(arrayItem, index) {
+          arrayItem.items.forEach(function(arrayItem, index) {
+            arrayItem.color.by = state.get.current().link.item.color.by;
+            arrayItem.color.hsl = state.get.current().link.item.color.hsl;
+            arrayItem.color.rgb = state.get.current().link.item.color.rgb;
+          });
+        });
+      },
+      rainbow: function() {
+        var units = 360 / bookmarks.count();
+        var degree = 0;
+        bookmarks.get().forEach(function(arrayItem, index) {
+          arrayItem.items.forEach(function(arrayItem, index) {
+            arrayItem.color.by = "custom";
+            var rgb = helper.convertColor.hsl.rgb({
+              h: degree,
+              s: 100,
+              l: 50
+            });
+            arrayItem.color.hsl = {
+              h: Math.round(degree),
+              s: 100,
+              l: 50
+            };
+            arrayItem.color.rgb = {
+              r: Math.round(rgb.r),
+              g: Math.round(rgb.g),
+              b: Math.round(rgb.b)
+            };
+            degree = degree + units;
+          });
+        });
+      },
+      opacity: function() {
+        bookmarks.get().forEach(function(arrayItem, index) {
+          arrayItem.items.forEach(function(arrayItem, index) {
+            arrayItem.color.opacity = state.get.current().link.item.color.opacity;
+          });
+        });
+      }
     }
   };
 
@@ -392,176 +545,6 @@ var link = (function() {
     },
     reset: function() {
       mod.collapse.form.item.advanced = false;
-    }
-  };
-
-  mod.accent = {
-    hsl: function() {
-      var hsl = helper.convertColor.rgb.hsl(state.get.current().link.item.accent.rgb);
-      helper.setObject({
-        object: state.get.current(),
-        path: "link.item.accent.hsl",
-        newValue: {
-          h: Math.round(hsl.h),
-          s: Math.round(hsl.s),
-          l: Math.round(hsl.l)
-        }
-      });
-    },
-    rgb: function() {
-      var rgb = helper.convertColor.hsl.rgb(state.get.current().link.item.accent.hsl);
-      helper.setObject({
-        object: state.get.current(),
-        path: "link.item.accent.rgb",
-        newValue: {
-          r: Math.round(rgb.r),
-          g: Math.round(rgb.g),
-          b: Math.round(rgb.b)
-        }
-      });
-    },
-    clear: function() {
-      bookmarks.get().forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
-          arrayItem.accent = {
-            by: "theme",
-            hsl: {
-              h: 0,
-              s: 0,
-              l: 0
-            },
-            rgb: {
-              r: 0,
-              g: 0,
-              b: 0
-            }
-          };
-        });
-      });
-    },
-    set: function() {
-      bookmarks.get().forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
-          arrayItem.accent.by = "custom";
-          arrayItem.accent.hsl = state.get.current().link.item.accent.hsl;
-          arrayItem.accent.rgb = state.get.current().link.item.accent.rgb;
-        });
-      });
-    },
-    rainbow: function() {
-      var units = 360 / bookmarks.count();
-      var degree = 0;
-      bookmarks.get().forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
-          arrayItem.accent.by = "custom";
-          var rgb = helper.convertColor.hsl.rgb({
-            h: degree,
-            s: 100,
-            l: 50
-          });
-          arrayItem.accent.hsl = {
-            h: Math.round(degree),
-            s: 100,
-            l: 50
-          };
-          arrayItem.accent.rgb = {
-            r: Math.round(rgb.r),
-            g: Math.round(rgb.g),
-            b: Math.round(rgb.b)
-          };
-          degree = degree + units;
-        });
-      });
-    }
-  };
-
-  mod.color = {
-    hsl: function() {
-      var hsl = helper.convertColor.rgb.hsl(state.get.current().link.item.color.rgb);
-      helper.setObject({
-        object: state.get.current(),
-        path: "link.item.color.hsl",
-        newValue: {
-          h: Math.round(hsl.h),
-          s: Math.round(hsl.s),
-          l: Math.round(hsl.l)
-        }
-      });
-    },
-    rgb: function() {
-      var rgb = helper.convertColor.hsl.rgb(state.get.current().link.item.color.hsl);
-      helper.setObject({
-        object: state.get.current(),
-        path: "link.item.color.rgb",
-        newValue: {
-          r: Math.round(rgb.r),
-          g: Math.round(rgb.g),
-          b: Math.round(rgb.b)
-        }
-      });
-    },
-    clear: function() {
-      bookmarks.get().forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
-          arrayItem.color = {
-            by: "theme",
-            hsl: {
-              h: 0,
-              s: 0,
-              l: 0
-            },
-            rgb: {
-              r: 0,
-              g: 0,
-              b: 0
-            }
-          };
-        });
-      });
-    },
-    set: function() {
-      bookmarks.get().forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
-          arrayItem.color.by = "custom";
-          arrayItem.color.hsl = state.get.current().link.item.color.hsl;
-          arrayItem.color.rgb = state.get.current().link.item.color.rgb;
-        });
-      });
-    },
-    rainbow: function() {
-      var units = 360 / bookmarks.count();
-      var degree = 0;
-      bookmarks.get().forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
-          arrayItem.color.by = "custom";
-          var rgb = helper.convertColor.hsl.rgb({
-            h: degree,
-            s: 100,
-            l: 50
-          });
-          arrayItem.color.hsl = {
-            h: Math.round(degree),
-            s: 100,
-            l: 50
-          };
-          arrayItem.color.rgb = {
-            r: Math.round(rgb.r),
-            g: Math.round(rgb.g),
-            b: Math.round(rgb.b)
-          };
-          degree = degree + units;
-        });
-      });
-    }
-  };
-
-  mod.image = {
-    clear: function() {
-      bookmarks.get().forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
-          arrayItem.image = "";
-        });
-      });
     }
   };
 
@@ -591,7 +574,6 @@ var link = (function() {
       }
     }
   };
-
 
   mod.edit = {
     mode: {
@@ -3840,10 +3822,6 @@ var link = (function() {
         helper.removeClass(arrayItem, "active");
       });
     },
-    name: function() {
-      // var html = helper.e("html");
-      // html.style.setProperty("--link-item-display-name-size", state.get.current().link.item.display.name.size + "em");
-    },
     size: function() {
       var html = helper.e("html");
       html.style.setProperty("--link-item-size", state.get.current().link.item.size + "em");
@@ -3863,36 +3841,6 @@ var link = (function() {
     border: function() {
       var html = helper.e("html");
       html.style.setProperty("--link-item-border", state.get.current().link.item.border);
-    },
-    rotate: function() {
-      // var html = helper.e("html");
-      // html.style.setProperty("--link-item-display-rotate", state.get.current().link.item.display.rotate + "deg");
-    },
-    translate: {
-      x: function() {
-        // var html = helper.e("html");
-        // html.style.setProperty("--link-item-display-translate-x", state.get.current().link.item.display.translate.x + "em");
-      },
-      y: function() {
-        // var html = helper.e("html");
-        // html.style.setProperty("--link-item-display-translate-y", state.get.current().link.item.display.translate.y + "em");
-      }
-    },
-    gutter: function() {
-      // var html = helper.e("html");
-      // html.style.setProperty("--link-item-display-gutter", state.get.current().link.item.display.gutter);
-    },
-    color: {
-      opacity: function() {
-        // var html = helper.e("html");
-        // html.style.setProperty("--link-item-color-opacity", state.get.current().link.item.color.opacity);
-      }
-    },
-    image: {
-      opacity: function() {
-        // var html = helper.e("html");
-        // html.style.setProperty("--link-item-image-opacity", state.get.current().link.item.image.opacity);
-      }
     }
   };
 
@@ -4621,14 +4569,7 @@ var link = (function() {
     render.group.openall.opacity();
     render.group.border();
     render.item.size();
-    // render.item.name();
     render.item.border();
-    // render.item.rotate();
-    // render.item.translate.x();
-    // render.item.translate.y();
-    // render.item.gutter();
-    // render.item.color.opacity();
-    // render.item.image.opacity();
     render.area.width();
   };
 

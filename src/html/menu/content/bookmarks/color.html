@@ -4,18 +4,33 @@
   </div>
   <div class="menu-item-form">
     <div class="form-wrap">
-      <div class="form-group form-group-block">
-        <input id="control-link-item-color-rgb-color" class="form-group-item-half control-link-item-color-rgb-color" type="color" value="#000000" tabindex="1">
-        <input id="control-link-item-color-rgb-text" class="form-group-item-half control-link-item-color-rgb-text" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-      </div>
+      <input id="control-link-item-color-by-theme" class="control-link-item-color-by-theme" type="radio" name="control-link-item-color-by" value="theme" tabindex="-1">
+      <label for="control-link-item-color-by-theme">
+        <span class="label-icon"></span>
+        <span class="label-block">
+          <span class="label-block-item">Theme colour</span>
+          <span class="label-block-item small muted">Use the Background colour defined by the Theme.</span>
+        </span>
+      </label>
     </div>
     <div class="form-wrap">
-      <p class="control-link-item-color-helper form-helper-item">Apply a colour override to all Bookmarks.</p>
-      <p class="control-link-item-color-helper form-helper-item">Take care as some colours may make the Letter/Icon and Name unreadable.</p>
-      <p class="control-link-item-color-helper form-helper-item">Colour overrides can also be changed by editing individual Bookmarks.</p>
+      <input id="control-link-item-color-by-custom" class="control-link-item-color-by-custom" type="radio" name="control-link-item-color-by" value="custom" tabindex="-1">
+      <label for="control-link-item-color-by-custom">
+        <span class="label-icon"></span>
+        <span class="label-block">
+          <span class="label-block-item">Custom colour</span>
+          <span class="label-block-item small muted">Override the Theme colour.</span>
+        </span>
+      </label>
     </div>
     <div class="form-wrap">
       <div class="form-indent">
+        <div class="form-wrap">
+          <div class="form-group form-group-block">
+            <input id="control-link-item-color-rgb-color" class="form-group-item-half control-link-item-color-rgb-color" type="color" value="#000000" tabindex="1">
+            <input id="control-link-item-color-rgb-text" class="form-group-item-half control-link-item-color-rgb-text" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          </div>
+        </div>
         <hr>
         <div class="form-wrap">
           <div class="form-group form-group-block">
@@ -66,12 +81,6 @@
     <div class="form-wrap">
       <div class="form-inline">
         <button class="control-link-item-color-apply button button-line" tabindex="-1">Apply to all</button>
-        <button class="control-link-item-color-clear button button-line" tabindex="-1">Clear all</button>
-      </div>
-    </div>
-    <hr>
-    <div class="form-wrap">
-      <div class="form-inline">
         <button class="control-link-item-color-rainbow button button-line" tabindex="-1">Apply unique colour to each</button>
       </div>
     </div>
@@ -85,7 +94,7 @@
       </div>
     </div>
     <div class="form-wrap">
-      <p class="control-link-item-color-opacity-helper form-helper-item">Change the Colour opacity of all Bookmark tiles.</p>
+      <button class="control-link-item-color-opacity-apply button button-line" tabindex="-1">Apply to all</button>
     </div>
   </div>
 </div>
