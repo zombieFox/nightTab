@@ -784,6 +784,7 @@
   position: absolute;
   top: var(--layout-line-width);
   left: var(--layout-line-width);
+  overflow: hidden;
   display: flex;
   align-items: stretch;
   justify-content: flex-end;

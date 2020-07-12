@@ -3798,7 +3798,20 @@ var link = (function() {
     },
     preview: {
       update: function() {
-        helper.e(".link-form-preview-area").appendChild(helper.node("p:Preview|class:link-form-preview-headline small muted"));
+        var previewHeadline;
+        if (stagedLink.link.tall || stagedLink.link.wide) {
+          previewHeadline = helper.makeNode({
+            tag: "p",
+            text: "Preview (scale 1:2)",
+            attr: [{
+              key: "class",
+              value: "link-form-preview-headline small muted"
+            }]
+          });
+        } else {
+          previewHeadline = helper.node("p:Preview|class:link-form-preview-headline small muted");
+        };
+        helper.e(".link-form-preview-area").appendChild(previewHeadline);
         helper.e(".link-form-preview-area").appendChild(render.item.link({
           preview: true
         }));
