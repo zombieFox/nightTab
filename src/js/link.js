@@ -1291,86 +1291,91 @@ var link = (function() {
         options = helper.applyOptions(options, override);
       };
 
+      var liniItemClass = ["link-item"];
+      var liniItemStyle = [];
+
+      if (options.preview) {
+        liniItemClass.push("link-item-preview");
+      };
+      if (stagedLink.link.display.visual.show) {
+        liniItemClass.push();
+        liniItemClass.push("link-item-visual");
+      };
+      if (stagedLink.link.display.name.show) {
+        liniItemClass.push("link-item-name");
+      };
+      if (stagedLink.link.display.visual.show || stagedLink.link.display.name.show) {
+        liniItemClass.push("link-item-alignment-" + stagedLink.link.display.alignment);
+        liniItemClass.push("link-item-order-" + stagedLink.link.display.order);
+        liniItemClass.push("link-item-direction-" + stagedLink.link.display.direction);
+      };
+      if (stagedLink.link.wide) {
+        liniItemClass.push("link-item-wide");
+      };
+      if (stagedLink.link.tall) {
+        liniItemClass.push("link-item-tall");
+      };
+      if (stagedLink.link.color.opacity < 1) {
+        liniItemStyle.push("--link-item-clip-padding: 0em;");
+      };
+      if (stagedLink.link.display.visual.shadow.size > 0) {
+        liniItemClass.push("link-item-display-visual-shadow");
+        liniItemStyle.push("--link-item-display-visual-shadow-size: " + stagedLink.link.display.visual.shadow.size + ";");
+        liniItemStyle.push("--link-item-display-visual-shadow-offset: 0.02em;");
+        liniItemStyle.push("--link-item-display-visual-shadow-blur: 0.02em;");
+        liniItemStyle.push("--link-item-display-visual-shadow-opacity: 0.01;");
+        liniItemStyle.push("--link-item-display-visual-shadow: 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 1)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 2)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 1))), 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 2)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 4)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 2))), 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 4)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 6)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 3)));");
+      };
+
+      liniItemStyle.push("--link-item-color-opacity: " + stagedLink.link.color.opacity + ";");
+      liniItemStyle.push("--link-item-image-opacity: " + stagedLink.link.image.opacity + ";");
+      liniItemStyle.push("--link-item-display-rotate: " + stagedLink.link.display.rotate + "deg;");
+      liniItemStyle.push("--link-item-display-gutter: " + stagedLink.link.display.gutter + ";");
+      liniItemStyle.push("--link-item-display-translate-x: " + stagedLink.link.display.translate.x + "em;");
+      liniItemStyle.push("--link-item-display-translate-y: " + stagedLink.link.display.translate.y + "em;");
+
+      if (stagedLink.link.display.visual.type == "letter") {
+        liniItemStyle.push("--link-item-display-visual-letter-size: " + stagedLink.link.display.visual.letter.size + "em;");
+      } else if (stagedLink.link.display.visual.type == "icon") {
+        liniItemStyle.push("--link-item-display-visual-icon-size: " + stagedLink.link.display.visual.icon.size + "em;");
+      } else if (stagedLink.link.display.visual.type == "image") {
+        liniItemStyle.push("--link-item-display-visual-image-size: " + stagedLink.link.display.visual.image.size + "em;");
+      };
+      if (stagedLink.link.display.name.show) {
+        liniItemStyle.push("--link-item-display-name-size: " + stagedLink.link.display.name.size + "em;");
+      };
+      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkIfValidString(stagedLink.link.image.url)) {
+        if (stagedLink.link.accent.by == "custom") {
+          liniItemStyle.push("--theme-accent-r: " + stagedLink.link.accent.rgb.r + ";");
+          liniItemStyle.push("--theme-accent-g: " + stagedLink.link.accent.rgb.g + ";");
+          liniItemStyle.push("--theme-accent-b: " + stagedLink.link.accent.rgb.b + ";");
+          liniItemStyle.push("--theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);");
+          liniItemStyle.push("--theme-accent-accessible-threshold: 0.5;");
+          liniItemStyle.push("--theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);");
+          liniItemStyle.push("--theme-accent-accessible-g: calc(var(--theme-accent-g) * 0.60);");
+          liniItemStyle.push("--theme-accent-accessible-b: calc(var(--theme-accent-b) * 0.20);");
+          liniItemStyle.push("--theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));");
+          liniItemStyle.push("--theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);");
+          liniItemStyle.push("--theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);");
+        };
+        if (stagedLink.link.color.by == "custom") {
+          liniItemStyle.push("--link-item-color: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";");
+          liniItemStyle.push("--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";");
+        };
+        if (helper.checkIfValidString(stagedLink.link.image.url)) {
+          liniItemStyle.push("--link-item-image-url: url(" + helper.trimString(stagedLink.link.image.url) + ");");
+        };
+      };
+
       var linkItemOptions = {
         tag: "div",
         attr: [{
           key: "class",
-          value: "link-item"
+          value: liniItemClass.join(" ")
         }, {
           key: "style",
-          value: ""
+          value: liniItemStyle.join(" ")
         }]
-      };
-      if (options.preview) {
-        linkItemOptions.attr[0].value = "link-item-preview";
-      };
-      if (stagedLink.link.display.visual.show) {
-        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-visual"
-      };
-      if (stagedLink.link.display.name.show) {
-        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-name"
-      };
-      if (stagedLink.link.display.visual.show || stagedLink.link.display.name.show) {
-        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-alignment-" + stagedLink.link.display.alignment + " link-item-order-" + stagedLink.link.display.order + " link-item-direction-" + stagedLink.link.display.direction;
-      };
-      if (stagedLink.link.wide) {
-        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-wide";
-      };
-      if (stagedLink.link.tall) {
-        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-tall";
-      };
-      if (stagedLink.link.color.opacity < 1) {
-        linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-clip-padding: 0em;";
-      };
-      if (stagedLink.link.display.visual.shadow.size > 0) {
-        linkItemOptions.attr[0].value = linkItemOptions.attr[0].value + " link-item-display-visual-shadow";
-        linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-visual-shadow-size: " + stagedLink.link.display.visual.shadow.size + ";";
-        linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-visual-shadow-offset: 0.02em;";
-        linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-visual-shadow-blur: 0.02em;";
-        linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-visual-shadow-opacity: 0.01;";
-        linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-visual-shadow: 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 1)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 2)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 1))), 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 2)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 4)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 2))), 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 4)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 6)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 3)));";
-      };
-
-      linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-color-opacity: " + stagedLink.link.color.opacity + ";";
-      linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-image-opacity: " + stagedLink.link.image.opacity + ";";
-      linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-rotate: " + stagedLink.link.display.rotate + "deg;";
-      linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-gutter: " + stagedLink.link.display.gutter + ";";
-      linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-translate-x: " + stagedLink.link.display.translate.x + "em;";
-      linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-translate-y: " + stagedLink.link.display.translate.y + "em;";
-
-      if (stagedLink.link.display.visual.type == "letter") {
-        linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-visual-letter-size: " + stagedLink.link.display.visual.letter.size + "em;";
-      } else if (stagedLink.link.display.visual.type == "icon") {
-        linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-visual-icon-size: " + stagedLink.link.display.visual.icon.size + "em;";
-      } else if (stagedLink.link.display.visual.type == "image") {
-        linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-visual-image-size: " + stagedLink.link.display.visual.image.size + "em;";
-      };
-      if (stagedLink.link.display.name.show) {
-        linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-display-name-size: " + stagedLink.link.display.name.size + "em;";
-      };
-      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkIfValidString(stagedLink.link.image.url)) {
-        if (stagedLink.link.accent.by == "custom") {
-          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value +
-            "--theme-accent-r: " + stagedLink.link.accent.rgb.r + ";" +
-            "--theme-accent-g: " + stagedLink.link.accent.rgb.g + ";" +
-            "--theme-accent-b: " + stagedLink.link.accent.rgb.b + ";" +
-            "--theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);" +
-            "--theme-accent-accessible-threshold: 0.5;" +
-            "--theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);" +
-            "--theme-accent-accessible-g: calc(var(--theme-accent-g) * 0.60);" +
-            "--theme-accent-accessible-b: calc(var(--theme-accent-b) * 0.20);" +
-            "--theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));" +
-            "--theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);" +
-            "--theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);"
-        };
-        if (stagedLink.link.color.by == "custom") {
-          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value +
-            "--link-item-color: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";" +
-            "--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";";
-        };
-        if (helper.checkIfValidString(stagedLink.link.image.url)) {
-          linkItemOptions.attr[1].value = linkItemOptions.attr[1].value + "--link-item-image-url: url(" + helper.trimString(stagedLink.link.image.url) + ");"
-        };
       };
 
       var linkItem = helper.makeNode(linkItemOptions);
@@ -1555,7 +1560,7 @@ var link = (function() {
       var formArea = helper.node("form|class:link-form-area");
       var form = helper.node("form|class:link-form");
       var formAside = helper.node("div|class:link-form-aside");
-      var previewArea = helper.node("div|class:link-form-preview-area");
+      var formPreviewArea = helper.node("div|class:link-form-preview-area");
 
       // group
       var groupExistingRadio = helper.node("input|class:link-form-input-group-existing,id:link-form-input-group-existing,type:radio,name:link-form-input-group,tabindex:1,value:existing");
@@ -2245,7 +2250,7 @@ var link = (function() {
       );
 
       // form
-      formAside.appendChild(previewArea);
+      formAside.appendChild(formPreviewArea);
       formArea.appendChild(form);
       formArea.appendChild(formAside);
 
@@ -3798,7 +3803,17 @@ var link = (function() {
     },
     preview: {
       update: function() {
+        var previewArea = helper.e(".link-form-preview-area");
+
+        var previewGrid;
+        if (stagedLink.link.tall || stagedLink.link.wide) {
+          previewGrid = helper.node("div|class:link-item-preview-grid link-item-preview-grid-small");
+        } else {
+          previewGrid = helper.node("div|class:link-item-preview-grid link-item-preview-grid-large");
+        };
+
         var previewHeadline;
+
         if (stagedLink.link.tall || stagedLink.link.wide) {
           previewHeadline = helper.makeNode({
             tag: "p",
@@ -3811,10 +3826,14 @@ var link = (function() {
         } else {
           previewHeadline = helper.node("p:Preview|class:link-form-preview-headline small muted");
         };
-        helper.e(".link-form-preview-area").appendChild(previewHeadline);
-        helper.e(".link-form-preview-area").appendChild(render.item.link({
+
+        var previewLinkItem = render.item.link({
           preview: true
-        }));
+        });
+
+        previewGrid.appendChild(previewLinkItem);
+        previewArea.appendChild(previewHeadline);
+        previewArea.appendChild(previewGrid);
       },
       clear: function() {
         while (helper.e(".link-form-preview-area").lastChild) {
