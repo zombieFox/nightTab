@@ -63,7 +63,7 @@
 
 .is-theme-custom-edit .theme-custom-control {
   bottom: 0;
-  transition: bottom var(--layout-duration-05) var(--layout-timing-bounce);
+  transition: bottom var(--layout-duration-04) var(--layout-timing-bounce) var(--layout-duration-01);
 }
 
 .theme-custom-control .theme-custom-control-item {

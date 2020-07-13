@@ -153,7 +153,7 @@
   --layout-duration-09:                                 0.9s;
   --layout-duration-10:                                 1s;
   --layout-timing-ease:                                 ease-in-out;
-  --layout-timing-bounce:                               cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  --layout-timing-bounce:                               cubic-bezier(0.8, 0.8, 0.4, 1.4);
   --layout-transition-extra-fast:                       var(--layout-duration-02) var(--layout-timing-ease);
   --layout-transition-fast:                             var(--layout-duration-04) var(--layout-timing-ease);
   --layout-transition-medium:                           var(--layout-duration-06) var(--layout-timing-ease);
