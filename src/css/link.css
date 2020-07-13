@@ -734,7 +734,7 @@
   font-family: var(--theme-font-ui-name);
   font-weight: var(--theme-font-ui-weight);
   font-style: var(--theme-font-ui-style);
-  color: rgb(var(--theme-color-12));
+  color: rgb(var(--link-item-name-color));
   display: none;
   transition: color var(--layout-transition-extra-fast);
 }
@@ -772,7 +772,7 @@
 }
 
 .link-panel-front:focus .link-display-name {
-  color: rgb(var(--theme-style-text));
+  color: rgb(var(--link-item-mame-color-focus-hover));
 }
 
 /* link panel back */

@@ -1298,7 +1298,6 @@ var link = (function() {
         liniItemClass.push("link-item-preview");
       };
       if (stagedLink.link.display.visual.show) {
-        liniItemClass.push();
         liniItemClass.push("link-item-visual");
       };
       if (stagedLink.link.display.name.show) {
@@ -1359,8 +1358,22 @@ var link = (function() {
           liniItemStyle.push("--theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);");
         };
         if (stagedLink.link.color.by == "custom") {
+          var hsl = helper.convertColor.rgb.hsl(stagedLink.link.color.rgb);
+          if (hsl.l < 50) {
+            hsl.l = hsl.l + 40;
+          } else {
+            hsl.l = hsl.l - 40;
+          };
+          var rgb = helper.convertColor.hsl.rgb(hsl);
+          rgb = {
+            r: Math.round(rgb.r),
+            g: Math.round(rgb.g),
+            b: Math.round(rgb.b)
+          };
           liniItemStyle.push("--link-item-color: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";");
           liniItemStyle.push("--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";");
+          liniItemStyle.push("--link-item-name-color: " + rgb.r + ", " + rgb.g + ", " + rgb.b + ";");
+          liniItemStyle.push("--link-item-name-color-focus-hover: " + rgb.r + ", " + rgb.g + ", " + rgb.b + ";");
         };
         if (helper.checkIfValidString(stagedLink.link.image.url)) {
           liniItemStyle.push("--link-item-image-url: url(" + helper.trimString(stagedLink.link.image.url) + ");");

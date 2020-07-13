@@ -111,8 +111,10 @@
   --link-area-width:                                    100%;
   --link-item-color:                                    var(--theme-color-02);
   --link-item-color-opacity:                            1;
-  --link-item-image-opacity:                            1;
   --link-item-color-focus-hover:                        var(--theme-color-03);
+  --link-item-mame-color:                               var(--theme-color-18);
+  --link-item-mame-color-focus-hover:                   var(--theme-style-text);
+  --link-item-image-opacity:                            1;
   --link-item-size:                                     1em;
   --link-item-display-space:                            0.25em;
   --link-item-border:                                   0;
