@@ -1937,6 +1937,46 @@ var link = (function() {
             render.form.wrap([
               tallInput,
               tallLabel
+            ]),
+            helper.node("hr"),
+            render.form.wrap([
+              displayLetterSizeLabel,
+              render.form.group([
+                displayLetterSizeInputRange,
+                displayLetterSizeInputNumber,
+                displayLetterSizeInputDefault
+              ])
+            ]),
+            render.form.wrap([
+              displayIconSizeLabel,
+              render.form.group([
+                displayIconSizeInputRange,
+                displayIconSizeInputNumber,
+                displayIconSizeInputDefault
+              ])
+            ]),
+            render.form.wrap([
+              displayImageSizeLabel,
+              render.form.group([
+                displayImageSizeInputRange,
+                displayImageSizeInputNumber,
+                displayImageSizeInputDefault
+              ])
+            ]),
+            render.form.wrap([
+              render.form.indent([
+                render.form.wrap([
+                  displayShadowSizeLabel,
+                  render.form.group([
+                    displayShadowSizeInputRange,
+                    displayShadowSizeInputNumber,
+                    displayShadowSizeInputDefault
+                  ]),
+                  render.form.wrap([
+                    displayShadowSizeInputHelper
+                  ])
+                ])
+              ])
             ])
           ])
         ]),
@@ -1992,44 +2032,6 @@ var link = (function() {
               ]),
               render.form.wrap([
                 displayAlignmentHelper
-              ]),
-              helper.node("hr"),
-              displayLetterSizeLabel,
-              render.form.group([
-                displayLetterSizeInputRange,
-                displayLetterSizeInputNumber,
-                displayLetterSizeInputDefault
-              ]),
-              render.form.wrap([
-                displayIconSizeLabel,
-                render.form.group([
-                  displayIconSizeInputRange,
-                  displayIconSizeInputNumber,
-                  displayIconSizeInputDefault
-                ])
-              ]),
-              render.form.wrap([
-                displayImageSizeLabel,
-                render.form.group([
-                  displayImageSizeInputRange,
-                  displayImageSizeInputNumber,
-                  displayImageSizeInputDefault
-                ])
-              ]),
-              render.form.wrap([
-                render.form.indent([
-                  render.form.wrap([
-                    displayShadowSizeLabel,
-                    render.form.group([
-                      displayShadowSizeInputRange,
-                      displayShadowSizeInputNumber,
-                      displayShadowSizeInputDefault
-                    ]),
-                    render.form.wrap([
-                      displayShadowSizeInputHelper
-                    ])
-                  ])
-                ])
               ]),
               helper.node("hr"),
               render.form.wrap([
