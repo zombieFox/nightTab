@@ -97,7 +97,7 @@ label {
 }
 
 label:not(:only-child):not(:last-child) {
-  padding-bottom: calc(var(--form-wrap-space) / 2);
+  padding-bottom: var(--form-wrap-space);
 }
 
 label.disabled {

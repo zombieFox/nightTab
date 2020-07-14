@@ -1989,7 +1989,9 @@ var link = (function() {
         render.form.wrap([
           render.form.indent([
             render.form.wrap([
-              displayAlignmentLabel,
+              displayAlignmentLabel
+            ]),
+            render.form.wrap([
               render.form.formGrid3x3([
                 render.form.wrap([
                   displayAlignmentTopLeftRadio,
