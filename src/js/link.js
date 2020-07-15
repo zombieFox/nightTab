@@ -3820,9 +3820,25 @@ var link = (function() {
 
         var previewGrid;
         if (stagedLink.link.tall || stagedLink.link.wide) {
-          previewGrid = helper.node("div|class:link-item-preview-grid link-item-preview-grid-small");
+          previewGrid = helper.node("div|class:link-item-preview-grid link-item-preview-grid-small is-link-show");
         } else {
-          previewGrid = helper.node("div|class:link-item-preview-grid link-item-preview-grid-large");
+          previewGrid = helper.node("div|class:link-item-preview-grid link-item-preview-grid-large is-link-show");
+        };
+
+        helper.addClass(previewGrid, "is-link-area-justify-" + state.get.current().link.area.justify);
+        helper.addClass(previewGrid, "is-link-style-" + state.get.current().link.style);
+        helper.addClass(previewGrid, "is-link-orientation-" + state.get.current().link.orientation);
+        if (state.get.current().link.item.url.show) {
+          helper.addClass(previewGrid, "is-link-item-url-show");
+        };
+        if (state.get.current().link.item.line.show) {
+          helper.addClass(previewGrid, "is-link-item-line-show");
+        };
+        if (state.get.current().link.item.shadow.show) {
+          helper.addClass(previewGrid, "is-link-item-shadow-show");
+        };
+        if (state.get.current().link.item.hoverScale.show) {
+          helper.addClass(previewGrid, "is-link-item-hoverscale-show");
         };
 
         var previewHeadline;

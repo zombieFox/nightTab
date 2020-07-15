@@ -351,7 +351,7 @@
   border-bottom-right-radius: calc(var(--theme-radius) / 4);
 }
 
-.is-edit .link-panel-front,
+.is-edit .link-item .link-panel-front,
 .is-edit .link-item:hover .link-panel-front,
 .is-edit .link-item:focus .link-panel-front {
   height: calc(100% - var(--link-item-edit-height));
@@ -1271,12 +1271,6 @@
   box-shadow: var(--theme-shadow-top-large);
 }
 
-.is-edit .link-item-preview .link-panel-front,
-.is-edit .link-item-preview:hover .link-panel-front,
-.is-edit .link-item-preview:focus .link-panel-front {
-  height: 100%;
-}
-
 .is-theme-radius .link-item-preview .link-panel-front,
 .is-edit.is-theme-radius .link-item-preview .link-panel-front {
   border-radius: var(--theme-radius);
@@ -1335,11 +1329,32 @@
   border-bottom-right-radius: calc(var(--theme-radius) / 4);
 }
 
-.is-edit.is-link-item-line-show .link-item-preview .link-panel-front,
-.is-link-item-line-show .link-item-preview .link-panel-front {
+.link-item-preview .link-panel-front,
+.link-item-preview:hover .link-panel-front,
+.link-item-preview:focus .link-panel-front,
+.is-edit .link-item-preview .link-panel-front,
+.is-edit .link-item-preview:hover .link-panel-front,
+.is-edit .link-item-preview:focus .link-panel-front {
+  height: 100%;
+}
+
+.is-link-item-line-show .link-item-preview .link-panel-front,
+.is-edit.is-link-item-line-show .link-item-preview .link-panel-front {
   height: calc(100% - var(--layout-line-width));
 }
 
+.is-link-item-line-show .link-item-preview:focus .link-panel-front,
+.is-link-item-line-show .link-item-preview:focus-within .link-panel-front,
+.is-link-item-line-show .link-item-preview:hover .link-panel-front,
+.is-edit.is-link-item-line-show .link-item-preview:focus .link-panel-front,
+.is-edit.is-link-item-line-show .link-item-preview:focus-within .link-panel-front,
+.is-edit.is-link-item-line-show .link-item-preview:hover .link-panel-front {
+  height: calc(100% - var(--layout-line-width));
+}
+
+.is-link-item-url-show .link-item-preview:focus .link-panel-front,
+.is-link-item-url-show .link-item-preview:focus-within .link-panel-front,
+.is-link-item-url-show .link-item-preview:hover .link-panel-front,
 .is-edit.is-link-item-url-show .link-item-preview:focus .link-panel-front,
 .is-edit.is-link-item-url-show .link-item-preview:focus-within .link-panel-front,
 .is-edit.is-link-item-url-show .link-item-preview:hover .link-panel-front {
