@@ -1979,6 +1979,15 @@ var link = (function() {
                   displayShadowSizeInputHelper
                 ])
               ])
+            ]),
+            helper.node("hr"),
+            render.form.wrap([
+              nameSizeLabel,
+              render.form.group([
+                nameSizeInputRange,
+                nameSizeInputNumber,
+                nameSizeInputDefault
+              ])
             ])
           ])
         ]),
@@ -2033,15 +2042,6 @@ var link = (function() {
             ]),
             render.form.wrap([
               displayAlignmentHelper
-            ]),
-            helper.node("hr"),
-            render.form.wrap([
-              nameSizeLabel,
-              render.form.group([
-                nameSizeInputRange,
-                nameSizeInputNumber,
-                nameSizeInputDefault
-              ])
             ]),
             helper.node("hr"),
             render.form.wrap([
