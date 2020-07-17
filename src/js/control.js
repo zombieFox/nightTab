@@ -10663,32 +10663,6 @@ var control = (function() {
         name: "is-link-area-direction-" + state.get.current().link.area.direction
       }, {
         remove: [
-          "is-link-item-color-by-theme",
-          "is-link-item-color-by-custom"
-        ],
-        condition: function() {
-          return state.get.current().link.show;
-        },
-        name: "is-link-item-color-by-" + state.get.current().link.item.color.by
-      }, {
-        remove: [
-          "is-link-item-image-opacity"
-        ],
-        condition: function() {
-          return (state.get.current().link.item.image.opacity < 1);
-        },
-        name: "is-link-item-image-opacity"
-      }, {
-        remove: [
-          "is-link-item-display-direction-horizontal",
-          "is-link-item-display-direction-vertical"
-        ],
-        condition: function() {
-          return state.get.current().link.show;
-        },
-        name: "is-link-item-display-direction-" + state.get.current().link.item.display.direction
-      }, {
-        remove: [
           "is-link-style-list",
           "is-link-style-block"
         ],
