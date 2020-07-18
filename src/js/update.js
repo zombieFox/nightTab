@@ -1112,6 +1112,220 @@ var update = (function() {
       });
       data.state.link.breakpoint = "xs";
       return data;
+    },
+    "5.50.0": function(data) {
+      data.bookmarks.forEach(function(group, index) {
+        group.items.forEach(function(item, index) {
+          var bookmarkData = {
+            display: {
+              direction: data.state.link.item.display.direction,
+              order: data.state.link.item.display.order,
+              alignment: data.state.link.item.display.alignment,
+              gutter: data.state.link.item.display.gutter,
+              rotate: data.state.link.item.display.rotate,
+              translate: {
+                x: data.state.link.item.display.translate.x,
+                y: data.state.link.item.display.translate.y
+              },
+              visual: {
+                show: data.state.link.item.display.visual.show,
+                type: item.visual.display,
+                letter: {
+                  size: data.state.link.item.display.visual.letter.size,
+                  text: item.visual.letter
+                },
+                image: {
+                  size: data.state.link.item.display.visual.image.size,
+                  url: item.visual.image
+                },
+                icon: {
+                  size: data.state.link.item.display.visual.icon.size,
+                  name: item.visual.icon.name,
+                  prefix: item.visual.icon.prefix,
+                  label: item.visual.icon.label
+                },
+                shadow: {
+                  size: data.state.link.item.display.visual.shadow.size
+                }
+              },
+              name: {
+                show: data.state.link.item.display.name.show,
+                text: item.name,
+                size: data.state.link.item.display.name.size
+              }
+            },
+            url: item.url,
+            accent: {
+              by: item.accent.by,
+              hsl: {
+                h: item.accent.hsl.h,
+                s: item.accent.hsl.s,
+                l: item.accent.hsl.l
+              },
+              rgb: {
+                r: item.accent.rgb.r,
+                g: item.accent.rgb.g,
+                b: item.accent.rgb.b
+              }
+            },
+            color: {
+              by: item.color.by,
+              hsl: {
+                h: item.color.hsl.h,
+                s: item.color.hsl.s,
+                l: item.color.hsl.l
+              },
+              rgb: {
+                r: item.color.rgb.r,
+                g: item.color.rgb.g,
+                b: item.color.rgb.b
+              },
+              opacity: data.state.link.item.color.opacity
+            },
+            image: {
+              url: item.image,
+              opacity: data.state.link.item.image.opacity
+            },
+            wide: item.wide,
+            tall: item.tall,
+            searchMatch: false,
+            timeStamp: item.timeStamp
+          };
+
+          if ((bookmarkData.display.direction != "vertical" && bookmarkData.display.direction != "horizontal") || bookmarkData.display.direction == undefined) {
+            bookmarkData.display.direction = "vertical";
+          };
+          if ((bookmarkData.display.order != "visualname" && bookmarkData.display.order != "namevisual") || bookmarkData.display.order == undefined) {
+            bookmarkData.display.order = "visualname";
+          };
+          if ((bookmarkData.display.alignment != "topleft" && bookmarkData.display.alignment != "topcenter" && bookmarkData.display.alignment != "topright" && bookmarkData.display.alignment != "centerleft" && bookmarkData.display.alignment != "centercenter" && bookmarkData.display.alignment != "centerright" && bookmarkData.display.alignment != "bottomleft" && bookmarkData.display.alignment != "bottomcenter" && bookmarkData.display.alignment != "bottomright") || bookmarkData.display.alignment == undefined) {
+            bookmarkData.display.alignment = "centercenter";
+          };
+          if (typeof bookmarkData.display.gutter != "number" || bookmarkData.display.gutter == undefined) {
+            bookmarkData.display.gutter = 2;
+          };
+          if (typeof bookmarkData.display.rotate != "number" || bookmarkData.display.rotate == undefined) {
+            bookmarkData.display.rotate = 0;
+          };
+          if (typeof bookmarkData.display.translate.x != "number" || bookmarkData.display.translate.x == undefined) {
+            bookmarkData.display.translate.x = 0;
+          };
+          if (typeof bookmarkData.display.translate.y != "number" || bookmarkData.display.translate.y == undefined) {
+            bookmarkData.display.translate.y = 0;
+          };
+          if (bookmarkData.display.visual.show == undefined) {
+            bookmarkData.display.visual.show = true;
+          };
+          if ((bookmarkData.display.visual.type != "letter" && bookmarkData.display.visual.type != "icon" && bookmarkData.display.visual.type != "image") || bookmarkData.display.visual.type == undefined) {
+            bookmarkData.display.visual.type = "letter";
+          };
+          if (typeof bookmarkData.display.visual.letter.size != "number" || bookmarkData.display.visual.letter.size == undefined) {
+            bookmarkData.display.visual.letter.size = 3;
+          };
+          if (bookmarkData.display.visual.letter.text == undefined) {
+            bookmarkData.display.visual.letter.text = "";
+          };
+          if (typeof bookmarkData.display.visual.image.size != "number" || bookmarkData.display.visual.image.size == undefined) {
+            bookmarkData.display.visual.image.size = 3;
+          };
+          if (bookmarkData.display.visual.image.url == undefined) {
+            bookmarkData.display.visual.image.url = "";
+          };
+          if (typeof bookmarkData.display.visual.icon.size != "number" || bookmarkData.display.visual.icon.size == undefined) {
+            bookmarkData.display.visual.icon.size = 3;
+          };
+          if (bookmarkData.display.visual.icon.name == undefined) {
+            bookmarkData.display.visual.icon.name = "";
+          };
+          if (bookmarkData.display.visual.icon.prefix == undefined) {
+            bookmarkData.display.visual.icon.prefix = "";
+          };
+          if (bookmarkData.display.visual.icon.label == undefined) {
+            bookmarkData.display.visual.icon.label = "";
+          };
+          if (typeof bookmarkData.display.visual.shadow.size != "number" || bookmarkData.display.visual.shadow.size == undefined) {
+            bookmarkData.display.visual.shadow.size = 0;
+          };
+          if (bookmarkData.display.name.show == undefined) {
+            bookmarkData.display.name.show = true;
+          };
+          if (bookmarkData.display.name.text == undefined) {
+            bookmarkData.display.name.text = "";
+          };
+          if (typeof bookmarkData.display.name.size != "number" || bookmarkData.display.name.size == undefined) {
+            bookmarkData.display.name.size = 0.9;
+          };
+          if (bookmarkData.url == undefined) {
+            bookmarkData.url = "";
+          };
+          if ((bookmarkData.accent.by != "theme" && bookmarkData.accent.by != "custom") || bookmarkData.accent.by == undefined) {
+            bookmarkData.accent.by = "theme";
+          };
+          if (typeof bookmarkData.accent.hsl.h != "number" || bookmarkData.accent.hsl.h == undefined) {
+            bookmarkData.accent.hsl.h = 0;
+          };
+          if (typeof bookmarkData.accent.hsl.s != "number" || bookmarkData.accent.hsl.s == undefined) {
+            bookmarkData.accent.hsl.s = 0;
+          };
+          if (typeof bookmarkData.accent.hsl.l != "number" || bookmarkData.accent.hsl.l == undefined) {
+            bookmarkData.accent.hsl.l = 0;
+          };
+          if (typeof bookmarkData.accent.rgb.r != "number" || bookmarkData.accent.rgb.r == undefined) {
+            bookmarkData.accent.rgb.r = 0;
+          };
+          if (typeof bookmarkData.accent.rgb.g != "number" || bookmarkData.accent.rgb.g == undefined) {
+            bookmarkData.accent.rgb.g = 0;
+          };
+          if (typeof bookmarkData.accent.rgb.b != "number" || bookmarkData.accent.rgb.b == undefined) {
+            bookmarkData.accent.rgb.b = 0;
+          };
+          if ((bookmarkData.color.by != "theme" && bookmarkData.color.by != "custom") || bookmarkData.color.by == undefined) {
+            bookmarkData.color.by = "theme";
+          };
+          if (typeof bookmarkData.color.hsl.h != "number" || bookmarkData.color.hsl.h == undefined) {
+            bookmarkData.color.hsl.h = 0;
+          };
+          if (typeof bookmarkData.color.hsl.s != "number" || bookmarkData.color.hsl.s == undefined) {
+            bookmarkData.color.hsl.s = 0;
+          };
+          if (typeof bookmarkData.color.hsl.l != "number" || bookmarkData.color.hsl.l == undefined) {
+            bookmarkData.color.hsl.l = 0;
+          };
+          if (typeof bookmarkData.color.rgb.r != "number" || bookmarkData.color.rgb.r == undefined) {
+            bookmarkData.color.rgb.r = 0;
+          };
+          if (typeof bookmarkData.color.rgb.g != "number" || bookmarkData.color.rgb.g == undefined) {
+            bookmarkData.color.rgb.g = 0;
+          };
+          if (typeof bookmarkData.color.rgb.b != "number" || bookmarkData.color.rgb.b == undefined) {
+            bookmarkData.color.rgb.b = 0;
+          };
+          if (typeof bookmarkData.color.opacity != "number" || bookmarkData.color.opacity == undefined) {
+            bookmarkData.color.opacity = 1;
+          };
+          if (bookmarkData.image.url == undefined) {
+            bookmarkData.image.url = "";
+          };
+          if (typeof bookmarkData.image.opacity != "number" || bookmarkData.image.opacity == undefined) {
+            bookmarkData.image.opacity = 1;
+          };
+          if (bookmarkData.wide == undefined) {
+            bookmarkData.wide = false;
+          };
+          if (bookmarkData.tall == undefined) {
+            bookmarkData.tall = false;
+          };
+          if (bookmarkData.searchMatch == undefined) {
+            bookmarkData.searchMatch = false;
+          };
+
+          group.items[index] = bookmarkData;
+        });
+      });
+      data.state.link.item.color.by = "theme";
+      data.state.link.item.accent.by = "theme";
+      delete data.state.link.item.display.visual.show;
+      return data;
     }
   };
 

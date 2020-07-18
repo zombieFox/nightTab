@@ -179,6 +179,7 @@ var state = (function() {
       },
       item: {
         color: {
+          by: "theme",
           hsl: {
             h: 0,
             s: 0,
@@ -192,6 +193,7 @@ var state = (function() {
           opacity: 1
         },
         accent: {
+          by: "theme",
           hsl: {
             h: 0,
             s: 0,
@@ -208,7 +210,6 @@ var state = (function() {
         },
         display: {
           visual: {
-            show: true,
             letter: {
               size: 3
             },

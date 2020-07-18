@@ -29,10 +29,8 @@
             </span>
           </label>
         </div>
-        <div class="form-helper">
+        <div class="form-wrap">
           <p class="control-header-color-style-helper form-helper-item">The page may not scroll if Bookmarks are not shown.</p>
-        </div>
-        <div class="form-helper">
           <p class="control-header-color-style-helper form-helper-item">May not be visible if Layout Alignment is Horizontal as the Bookmarks won't pass under the header.</p>
         </div>
         <hr>
@@ -46,7 +44,7 @@
             </span>
           </label>
         </div>
-        <div class="form-helper">
+        <div class="form-wrap">
           <p class="control-header-color-by-theme-helper form-helper-item"></p>
         </div>
         <div class="form-wrap">
@@ -59,7 +57,7 @@
             </span>
           </label>
         </div>
-        <div class="form-helper">
+        <div class="form-wrap">
           <p class="control-header-color-by-custom-helper form-helper-item"></p>
         </div>
         <div class="form-wrap">
@@ -70,49 +68,51 @@
                 <input id="control-header-color-rgb-text" class="form-group-item-half control-header-color-rgb-text" type="text" placeholder="Hex code" value="#000000" tabindex="1" maxlength="7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
               </div>
             </div>
-            <div class="form-indent">
-              <hr>
-              <div class="form-wrap">
-                <div class="form-group form-group-block">
-                  <label for="control-header-color-hsl-h-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Hue</label>
-                  <input id="control-header-color-hsl-h-range" class="control-header-color-hsl-h-range mr-3" type="range" value="0" tabindex="-1">
-                  <input class="control-header-color-hsl-h-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            <div class="form-wrap">
+              <div class="form-indent">
+                <hr>
+                <div class="form-wrap">
+                  <div class="form-group form-group-block">
+                    <label for="control-header-color-hsl-h-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Hue</label>
+                    <input id="control-header-color-hsl-h-range" class="control-header-color-hsl-h-range mr-3" type="range" value="0" tabindex="-1">
+                    <input class="control-header-color-hsl-h-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                  </div>
                 </div>
-              </div>
-              <div class="form-wrap">
-                <div class="form-group form-group-block">
-                  <label for="control-header-color-hsl-s-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Saturation</label>
-                  <input id="control-header-color-hsl-s-range" class="control-header-color-hsl-s-range mr-3" type="range" value="0" tabindex="-1">
-                  <input class="control-header-color-hsl-s-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                <div class="form-wrap">
+                  <div class="form-group form-group-block">
+                    <label for="control-header-color-hsl-s-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Saturation</label>
+                    <input id="control-header-color-hsl-s-range" class="control-header-color-hsl-s-range mr-3" type="range" value="0" tabindex="-1">
+                    <input class="control-header-color-hsl-s-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                  </div>
                 </div>
-              </div>
-              <div class="form-wrap">
-                <div class="form-group form-group-block">
-                  <label for="control-header-color-hsl-l-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Lightness</label>
-                  <input id="control-header-color-hsl-l-range" class="control-header-color-hsl-l-range mr-3" type="range" value="0" tabindex="-1">
-                  <input class="control-header-color-hsl-l-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                <div class="form-wrap">
+                  <div class="form-group form-group-block">
+                    <label for="control-header-color-hsl-l-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Lightness</label>
+                    <input id="control-header-color-hsl-l-range" class="control-header-color-hsl-l-range mr-3" type="range" value="0" tabindex="-1">
+                    <input class="control-header-color-hsl-l-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                  </div>
                 </div>
-              </div>
-              <hr>
-              <div class="form-wrap">
-                <div class="form-group form-group-block">
-                  <label for="control-header-color-rgb-r-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Red</label>
-                  <input id="control-header-color-rgb-r-range" class="control-header-color-rgb-r-range mr-3" type="range" value="0" tabindex="-1">
-                  <input class="control-header-color-rgb-r-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                <hr>
+                <div class="form-wrap">
+                  <div class="form-group form-group-block">
+                    <label for="control-header-color-rgb-r-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Red</label>
+                    <input id="control-header-color-rgb-r-range" class="control-header-color-rgb-r-range mr-3" type="range" value="0" tabindex="-1">
+                    <input class="control-header-color-rgb-r-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                  </div>
                 </div>
-              </div>
-              <div class="form-wrap">
-                <div class="form-group form-group-block">
-                  <label for="control-header-color-rgb-g-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Green</label>
-                  <input id="control-header-color-rgb-g-range" class="control-header-color-rgb-g-range mr-3" type="range" value="0" tabindex="-1">
-                  <input class="control-header-color-rgb-g-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                <div class="form-wrap">
+                  <div class="form-group form-group-block">
+                    <label for="control-header-color-rgb-g-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Green</label>
+                    <input id="control-header-color-rgb-g-range" class="control-header-color-rgb-g-range mr-3" type="range" value="0" tabindex="-1">
+                    <input class="control-header-color-rgb-g-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                  </div>
                 </div>
-              </div>
-              <div class="form-wrap">
-                <div class="form-group form-group-block">
-                  <label for="control-header-color-rgb-b-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Blue</label>
-                  <input id="control-header-color-rgb-b-range" class="control-header-color-rgb-b-range mr-3" type="range" value="0" tabindex="-1">
-                  <input class="control-header-color-rgb-b-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                <div class="form-wrap">
+                  <div class="form-group form-group-block">
+                    <label for="control-header-color-rgb-b-range" class="form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0">Blue</label>
+                    <input id="control-header-color-rgb-b-range" class="control-header-color-rgb-b-range mr-3" type="range" value="0" tabindex="-1">
+                    <input class="control-header-color-rgb-b-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                  </div>
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@
           <input id="control-header-radius" class="control-header-radius" type="checkbox" tabindex="-1">
           <label for="control-header-radius"><span class="label-icon"></span> Corner radius</label>
         </div>
-        <div class="form-helper">
+        <div class="form-wrap">
           <p class="control-header-radius-helper form-helper-item">May not be visible if Theme Radius is set to 0.</p>
         </div>
       </div>

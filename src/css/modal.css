@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   font-size: 1em;
-  width: 45em;
+  width: 50em;
   max-width: calc(100% - 2em);
   min-width: 10em;
   transform: translate(-50%, -50%);
@@ -14,7 +14,7 @@
 }
 
 .modal-large {
-  width: 65em;
+  width: 70em;
   max-width: calc(100% - 2em);
 }
 

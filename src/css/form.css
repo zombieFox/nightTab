@@ -18,8 +18,7 @@ fieldset:not(:last-child),
 }
 
 /* form variants */
-.form-wrap,
-.form-helper {
+.form-wrap {
   position: relative;
   width: 100%;
   display: block;
@@ -37,14 +36,6 @@ fieldset:not(:last-child),
 .form-wrap-hide-space:not(:last-child) {
   margin-top: calc(var(--form-wrap-space) * -1);
   margin-bottom: 0;
-}
-
-.form-helper:not(:first-child) {
-  margin-top: calc(var(--form-wrap-space) / 2);
-}
-
-.form-helper:not(:last-child) {
-  margin-bottom: calc(var(--form-wrap-space) / 2);
 }
 
 .form-indent {
@@ -106,7 +97,7 @@ label {
 }
 
 label:not(:only-child):not(:last-child) {
-  padding-bottom: calc(var(--form-wrap-space) / 2);
+  padding-bottom: var(--form-wrap-space);
 }
 
 label.disabled {

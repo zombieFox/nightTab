@@ -312,7 +312,19 @@ var helper = (function() {
       });
     };
     if (node) {
-      element.appendChild(node);
+      if (typeof node != "string") {
+        if (node.length > 0) {
+          node.forEach(function(arrayItem, index) {
+            if (arrayItem instanceof HTMLElement) {
+              element.appendChild(arrayItem);
+            };
+          });
+        } else {
+          if (node instanceof HTMLElement) {
+            element.appendChild(node);
+          };
+        };
+      };
     };
     return element;
   };

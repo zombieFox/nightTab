@@ -741,12 +741,12 @@ var theme = (function() {
         }
       });
     },
-    generated: function() {
+    shades: function(rgb) {
       var shadeMax = 10;
       var shadeMin = 1;
       var contrastNeg = state.get.current().theme.color.contrast.dark;
       var contrastPos = state.get.current().theme.color.contrast.light;
-      var hsl = helper.convertColor.rgb.hsl(state.get.current().theme.color.rgb);
+      var hsl = helper.convertColor.rgb.hsl(rgb);
       var validateRGBNumber = function(rgb) {
         for (var key in rgb) {
           if (rgb[key] < 0) {
@@ -758,19 +758,21 @@ var theme = (function() {
         };
         return rgb;
       };
-      // set light theme shades
+
+      var shadeColors = {
+        negative: {},
+        positive: {}
+      };
+
       for (var i = shadeMax; i >= shadeMin; i--) {
         var rgb = helper.convertColor.hsl.rgb({
           h: hsl.h,
           s: hsl.s,
           l: hsl.l - (contrastNeg * i)
         });
-        helper.setObject({
-          object: state.get.current(),
-          path: "theme.color.generated.negative." + i,
-          newValue: validateRGBNumber(rgb)
-        });
+        shadeColors.negative[i] = validateRGBNumber(rgb);
       };
+
       // set dark theme shades
       for (var i = shadeMin; i <= shadeMax; i++) {
         var rgb = helper.convertColor.hsl.rgb({
@@ -778,12 +780,23 @@ var theme = (function() {
           s: hsl.s,
           l: hsl.l + (contrastPos * i)
         });
-        helper.setObject({
-          object: state.get.current(),
-          path: "theme.color.generated.positive." + i,
-          newValue: validateRGBNumber(rgb)
-        });
+        shadeColors.positive[i] = validateRGBNumber(rgb);
       };
+
+      return shadeColors;
+    },
+    generated: function() {
+      var shades = mod.color.shades(state.get.current().theme.color.rgb);
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.color.generated.negative",
+        newValue: shades.negative
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "theme.color.generated.positive",
+        newValue: shades.positive
+      });
     }
   };
 
