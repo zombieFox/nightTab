@@ -1607,6 +1607,54 @@ var theme = (function() {
         opacity: 0.8
       }
     }, {
+      name: "Azure",
+      font: {
+        display: {
+          name: "Unica One",
+          weight: 400,
+          style: "normal"
+        },
+        ui: {
+          name: "Inria Sans",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 215,
+          s: 18,
+          l: 32
+        },
+        rgb: {
+          r: 67,
+          g: 79,
+          b: 96
+        },
+        contrast: {
+          light: 2,
+          dark: 2
+        }
+      },
+      accent: {
+        rgb: {
+          r: 0,
+          g: 255,
+          b: 255
+        },
+        hsl: {
+          h: 180,
+          s: 100,
+          l: 50
+        }
+      },
+      radius: 0.25,
+      shadow: 0.5,
+      style: "dark",
+      shade: {
+        opacity: 0.02
+      }
+    }, {
       name: "Elder Bean",
       font: {
         display: {
