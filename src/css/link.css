@@ -1123,7 +1123,7 @@
 @media (min-width: 900px) {
   .link-form-area {
     display: grid;
-    grid-template-columns: 6fr 3fr;
+    grid-template-columns: 2fr 1fr;
     grid-gap: calc(var(--form-wrap-space) * 2);
     align-items: stretch;
   }
