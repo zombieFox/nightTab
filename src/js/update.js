@@ -1180,7 +1180,7 @@ var update = (function() {
                 g: item.color.rgb.g,
                 b: item.color.rgb.b
               },
-              opacity: data.state.link.item.opacity
+              opacity: data.state.link.item.color.opacity
             },
             image: {
               url: item.image,
