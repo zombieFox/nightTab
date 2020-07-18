@@ -72,9 +72,9 @@
   height: 2.5em;
   width: 15em;
   transition:
-    width var(--layout-transition-extra-fast) var(--layout-duration-04),
+    width var(--layout-duration-04) var(--layout-timing-bounce) var(--layout-duration-04),
     height var(--layout-transition-extra-fast),
-    margin var(--layout-transition-extra-fast) var(--layout-duration-04);
+    margin var(--layout-duration-04) var(--layout-timing-bounce) var(--layout-duration-04);
 }
 
 .is-group-area-justify-center .group-header-item-control:not(:only-child):not(:last-child),

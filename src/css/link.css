@@ -903,12 +903,12 @@
 
 .is-edit.is-link-orientation-top .link-control {
   top: 0;
-  transition: top var(--layout-duration-05) var(--layout-timing-bounce);
+  transition: top var(--layout-duration-04) var(--layout-timing-bounce);
 }
 
 .is-edit.is-link-orientation-bottom .link-control {
   bottom: 0;
-  transition: bottom var(--layout-duration-05) var(--layout-timing-bounce);
+  transition: bottom var(--layout-duration-04) var(--layout-timing-bounce) var(--layout-duration-01);
 }
 
 .link-control-item {
@@ -1043,7 +1043,7 @@
   overflow: hidden;
   display: none;
   align-items: center;
-  transition: top var(--layout-transition-extra-fast), bottom var(--layout-transition-extra-fast);
+  transition: top var(--layout-transition-extra-fast), bottom var(--layout-duration-04) var(--layout-timing-bounce);
 }
 
 .is-link-orientation-top .link-url {
