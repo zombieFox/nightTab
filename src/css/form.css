@@ -1116,7 +1116,6 @@ input[type="range"]:disabled::-moz-range-progress {
   color: rgb(var(--button-text-active));
   outline: none;
   text-decoration: none;
-  transition: none;
 }
 
 .form-input-button input[type="checkbox"]:disabled+label,
