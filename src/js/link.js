@@ -2304,13 +2304,15 @@ var link = (function() {
       };
 
       var makePostionOptions = function() {
-        if (stagedLink.position.destination.item > 0) {
+        if (bookmarks.get().length > 0) {
 
           while (groupExistingPosition.lastChild) {
             groupExistingPosition.removeChild(groupExistingPosition.lastChild);
           };
+
           var optionCount = 0;
-          if (stagedLink.position.destination.item > 0) {
+
+          if (stagedLink.position.destination.item >= 0) {
             if (options.useStagedLink && stagedLink.position.origin.group == stagedLink.position.destination.group) {
               optionCount = optionCount + bookmarks.get()[stagedLink.position.origin.group].items.length;
             } else {
@@ -2319,10 +2321,11 @@ var link = (function() {
           } else {
             optionCount = 1;
           };
+
           for (var i = 1; i <= optionCount; i++) {
             groupExistingPosition.appendChild(helper.node("option:" + helper.ordinalNumber(i)));
             if (optionCount == i) {
-              groupExistingPosition.selectedIndex = i - 1;
+              groupExistingPosition.selectedIndex = (i - 1);
             }
           };
 
