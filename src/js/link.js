@@ -1629,7 +1629,7 @@ var link = (function() {
 
       // display
       var displayShowCheckbox = helper.node("input|class:link-form-input-display-visual-show,id:link-form-input-display-visual-show,type:checkbox,tabindex:1");
-      var displayShowLabel = render.form.label("link-form-input-display-visual-show", "Visual element", "Display Letters, Icon or an Image on this Bookmark.", true);
+      var displayShowLabel = render.form.label("link-form-input-display-visual-show", "Show Visual Element", "Display Letters, Icon or an Image on this Bookmark tile.", true);
 
       var displayLetterRadio = helper.node("input|class:link-form-input-display-visual-letter,id:link-form-input-display-visual-letter,type:radio,name:link-form-input-display-visual,tabindex:1,value:letter");
       var displayLetterLabel = render.form.label("link-form-input-display-visual-letter", "Letters", false, true);
@@ -1649,7 +1649,7 @@ var link = (function() {
 
       // name
       var nameShowCheckbox = helper.node("input|class:link-form-input-display-name-show,id:link-form-input-display-name-show,type:checkbox,tabindex:1");
-      var nameShowLabel = render.form.label("link-form-input-display-name-show", "Name", "Display the name of the Bookmark with the visual element.", true);
+      var nameShowLabel = render.form.label("link-form-input-display-name-show", "Show Name", "Display a Name on this Bookmark tile.", true);
       var nameInput = helper.node("input|type:text,class:link-form-input-display-name,id:link-form-input-display-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
 
       form.appendChild(
@@ -1758,7 +1758,7 @@ var link = (function() {
       // background
       var imageLabel = render.form.label("link-form-image", "Background image");
       var imageInput = helper.node("input|type:text,class:link-form-image,id:link-form-image,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
-      var imageInputHelper = render.form.helper("link-form-image-helper", "Display an image as the background.");
+      var imageInputHelper = render.form.helper("link-form-image-helper", "Display an image as the background of this Bookmark tile.");
       var imageOpacityLabel = render.form.label("link-form-image-opacity-range", "Opacity");
       var imageOpacityInputRange = helper.node("input|class:link-form-image-opacity-range mr-3,id:link-form-image-opacity-range,type:range,name:link-form-image-opacity-range,min:0,max:100,tabindex:1");
       var imageOpacityInputNumber = helper.node("input|class:link-form-image-opacity-number form-group-item-medium form-group-radius-left,type:number,min:0,max:100,tabindex:1");
@@ -1771,9 +1771,8 @@ var link = (function() {
       var tallLabel = render.form.label("link-form-tall", "Tall tile", "Bookmark tile to span across two rows.", true);
       var wideTallLabelHelper = render.form.helper("link-form-wide-tall-helper", "Bookmark tile will span across two columns or rows if the Bookmark Area is large enough.");
 
-
       // content
-      var displayAlignmentLabel = render.form.label(false, "Visual element and Name alignment");
+      var displayAlignmentLabel = render.form.label(false, "Visual Element and Name alignment");
       var displayAlignmentTopLeftRadio = helper.node("input|class:link-form-input-display-alignment-topleft,id:link-form-input-display-alignment-topleft,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:topleft");
       var displayAlignmentTopLeftLabel = render.form.label("link-form-input-display-alignment-topleft", false, false, true, false);
       var displayAlignmentTopCenterRadio = helper.node("input|class:link-form-input-display-alignment-topcenter,id:link-form-input-display-alignment-topcenter,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:topcenter");
@@ -1792,7 +1791,7 @@ var link = (function() {
       var displayAlignmentBottomCenterLabel = render.form.label("link-form-input-display-alignment-bottomcenter", false, false, true, false);
       var displayAlignmentBottomRightRadio = helper.node("input|class:link-form-input-display-alignment-bottomright,id:link-form-input-display-alignment-bottomright,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:bottomright");
       var displayAlignmentBottomRightLabel = render.form.label("link-form-input-display-alignment-bottomright", false, false, true, false);
-      var displayAlignmentHelper = render.form.helper("link-form-input-display-alignment-helper", "Position the Visual element (letter, icon or image) and Name inside the Bookmark tile.");
+      var displayAlignmentHelper = render.form.helper("link-form-input-display-alignment-helper", "Position the Visual Element (letter, icon or image) and Name inside the Bookmark tile.");
 
       var displayLetterSizeLabel = render.form.label("link-form-input-display-visual-letter-size-range", "Letter size");
       var displayLetterSizeInputRange = helper.node("input|class:link-form-input-display-visual-letter-size-range mr-3,id:link-form-input-display-visual-letter-size-range,type:range,name:link-form-input-display-visual-letter-size-range,min:10,max:3000,step:10,tabindex:1");
@@ -1833,20 +1832,22 @@ var link = (function() {
       var displayTranslateYNumber = helper.node("input|class:link-form-input-display-translate-y-number form-group-item-medium form-group-radius-left,type:number,min:-1000,max:1000,step:10,tabindex:1");
       var displayTranslateYDefault = render.form.button(false, "link-form-input-display-translate-y-default", "icon-replay");
 
-      var displayAlignmentHorizontalRadio = helper.node("input|class:link-form-input-alignment-horizontal,id:link-form-input-alignment-horizontal,type:radio,name:link-form-input-alignment,tabindex:1,value:horizontal");
-      var displayAlignmentHorizontalLabel = render.form.label("link-form-input-alignment-horizontal", "Align horizontally", "Works well with Bookmark List Style.", true);
-      var displayAlignmentVerticalRadio = helper.node("input|class:link-form-input-alignment-vertical,id:link-form-input-alignment-vertical,type:radio,name:link-form-input-alignment,tabindex:1,value:vertical");
-      var displayAlignmentVerticalLabel = render.form.label("link-form-input-alignment-vertical", "Align vertically", "Works well with Bookmark Block Style.", true);
-
       var displayGutterLabel = render.form.label("link-form-input-display-gutter-range", "Gutter");
       var displayGutterRange = helper.node("input|class:link-form-input-display-gutter-range mr-3,id:link-form-input-display-gutter-range,type:range,name:link-form-input-display-gutter-range,min:0,max:40,tabindex:1");
       var displayGutterNumber = helper.node("input|class:link-form-input-display-gutter-number form-group-item-medium form-group-radius-left,type:number,min:0,max:40,tabindex:1");
       var displayGutterDefault = render.form.button(false, "link-form-input-display-gutter-default", "icon-replay");
 
+      var displayAlignmentHorizontalRadio = helper.node("input|class:link-form-input-alignment-horizontal,id:link-form-input-alignment-horizontal,type:radio,name:link-form-input-alignment,tabindex:1,value:horizontal");
+      var displayAlignmentHorizontalLabel = render.form.label("link-form-input-alignment-horizontal", "Align horizontally", "Works well with Bookmark List Style.", true);
+      var displayAlignmentVerticalRadio = helper.node("input|class:link-form-input-alignment-vertical,id:link-form-input-alignment-vertical,type:radio,name:link-form-input-alignment,tabindex:1,value:vertical");
+      var displayAlignmentVerticalLabel = render.form.label("link-form-input-alignment-vertical", "Align vertically", "Works well with Bookmark Block Style.", true);
+      var displayAlignmentHelper = render.form.helper("link-form-wide-tall-helper", "Only available when Visual Element and Name are shown.");
+
       var displayDirectionVisualnameRadio = helper.node("input|class:link-form-input-direction-visualname,id:link-form-input-direction-visualname,type:radio,name:link-form-input-direction,tabindex:1,value:visualname");
-      var displayDirectionVisualnameLabel = render.form.label("link-form-input-direction-visualname", "Visual element then Name", "Stack the Visual element (letter, icon or image) before the Name.", true);
+      var displayDirectionVisualnameLabel = render.form.label("link-form-input-direction-visualname", "Visual Element then Name", "Stack the Visual Element (letter, icon or image) before the Name.", true);
       var displayDirectionNamevisualRadio = helper.node("input|class:link-form-input-direction-namevisual,id:link-form-input-direction-namevisual,type:radio,name:link-form-input-direction,tabindex:1,value:namevisual");
-      var displayDirectionNamevisualLabel = render.form.label("link-form-input-direction-namevisual", "Name then Visual element", "Stack the Name before the Visual element (letter, icon or image).", true);
+      var displayDirectionNamevisualLabel = render.form.label("link-form-input-direction-namevisual", "Name then Visual Element", "Stack the Name before the Visual Element (letter, icon or image).", true);
+      var displayDirectionHelper = render.form.helper("link-form-wide-tall-helper", "Only available when Visual Element and Name are shown.");
 
       // color
       var colorThemeRadio = helper.node("input|class:link-form-input-color-theme,id:link-form-input-color-theme,type:radio,name:link-form-input-color,tabindex:1,value:theme");
@@ -2091,6 +2092,9 @@ var link = (function() {
               displayAlignmentHorizontalRadio,
               displayAlignmentHorizontalLabel
             ]),
+            render.form.wrap([
+              displayAlignmentHelper
+            ]),
             helper.node("hr"),
             render.form.wrap([
               displayDirectionVisualnameRadio,
@@ -2099,6 +2103,9 @@ var link = (function() {
             render.form.wrap([
               displayDirectionNamevisualRadio,
               displayDirectionNamevisualLabel
+            ]),
+            render.form.wrap([
+              displayDirectionHelper
             ])
           ])
         ]),
@@ -2915,6 +2922,8 @@ var link = (function() {
           displayTranslateYRange.removeAttribute("disabled");
           displayTranslateYNumber.removeAttribute("disabled");
           displayTranslateYDefault.removeAttribute("disabled");
+          helper.removeClass(displayAlignmentHelper, "disabled");
+          helper.removeClass(displayDirectionHelper, "disabled");
           colorThemeRadio.removeAttribute("disabled");
           helper.removeClass(colorThemeLabel, "disabled");
           colorCustomRadio.removeAttribute("disabled");
@@ -2963,6 +2972,8 @@ var link = (function() {
           displayTranslateYRange.setAttribute("disabled", "");
           displayTranslateYNumber.setAttribute("disabled", "");
           displayTranslateYDefault.setAttribute("disabled", "");
+          helper.addClass(displayAlignmentHelper, "disabled");
+          helper.addClass(displayDirectionHelper, "disabled");
           colorThemeRadio.setAttribute("disabled", "");
           helper.addClass(colorThemeLabel, "disabled");
           colorCustomRadio.setAttribute("disabled", "");
