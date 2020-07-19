@@ -187,10 +187,16 @@
 
 @media (min-width: 900px) {
 
-  .is-link-breakpoint-md .link-item-wide,
-  .is-link-breakpoint-lg .link-item-wide,
-  .is-link-breakpoint-xl .link-item-wide,
-  .is-link-breakpoint-xxl .link-item-wide {
+  .is-link-breakpoint-lg.is-link-style-list .link-item-wide,
+  .is-link-breakpoint-xl.is-link-style-list .link-item-wide,
+  .is-link-breakpoint-xxl.is-link-style-list .link-item-wide {
+    grid-column: span 2;
+  }
+
+  .is-link-breakpoint-md.is-link-style-block .link-item-wide,
+  .is-link-breakpoint-lg.is-link-style-block .link-item-wide,
+  .is-link-breakpoint-xl.is-link-style-block .link-item-wide,
+  .is-link-breakpoint-xxl.is-link-style-block .link-item-wide {
     grid-column: span 2;
   }
 
@@ -1008,31 +1014,55 @@
 
 @media (min-width: 900px) {
 
-  .is-link-orientation-top.is-link-style-block .link-item-wide,
-  .is-link-orientation-bottom.is-link-style-block .link-item-wide {
-    --link-item-edit-height: 2.5em;
+  .is-link-breakpoint-md.is-link-orientation-top.is-link-style-block .link-item-wide,
+  .is-link-breakpoint-lg.is-link-orientation-top.is-link-style-block .link-item-wide,
+  .is-link-breakpoint-xl.is-link-orientation-top.is-link-style-block .link-item-wide,
+  .is-link-breakpoint-xxl.is-link-orientation-top.is-link-style-block .link-item-wide,
+  .is-link-breakpoint-md.is-link-orientation-bottom.is-link-style-block .link-item-wide,
+  .is-link-breakpoint-lg.is-link-orientation-bottom.is-link-style-block .link-item-wide,
+  .is-link-breakpoint-xl.is-link-orientation-bottom.is-link-style-block .link-item-wide,
+  .is-link-breakpoint-xxl.is-link-orientation-bottom.is-link-style-block .link-item-wide {
+    --link-item-edit-height: var(--link-item-edit-height-short);
   }
 
-  .is-link-orientation-top.is-link-style-block .link-item-wide .link-control,
-  .is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control {
+  .is-link-breakpoint-md.is-link-orientation-top.is-link-style-block .link-item-wide .link-control,
+  .is-link-breakpoint-lg.is-link-orientation-top.is-link-style-block .link-item-wide .link-control,
+  .is-link-breakpoint-xl.is-link-orientation-top.is-link-style-block .link-item-wide .link-control,
+  .is-link-breakpoint-xxl.is-link-orientation-top.is-link-style-block .link-item-wide .link-control,
+  .is-link-breakpoint-md.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control,
+  .is-link-breakpoint-lg.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control,
+  .is-link-breakpoint-xl.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control,
+  .is-link-breakpoint-xxl.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control {
     flex-wrap: nowrap;
   }
 
-  .is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control-item:nth-child(1) {
-    border-bottom-left-radius: var(--theme-radius);
-  }
-
-  .is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control-item:nth-child(4) {
-    border-bottom-left-radius: 0;
-  }
-
-  .is-link-orientation-top.is-link-style-block .link-item-wide .link-control-item:nth-child(1) {
+  .is-link-breakpoint-md.is-link-orientation-top.is-link-style-block .link-item-wide .link-control-item:nth-child(1),
+  .is-link-breakpoint-lg.is-link-orientation-top.is-link-style-block .link-item-wide .link-control-item:nth-child(1),
+  .is-link-breakpoint-xl.is-link-orientation-top.is-link-style-block .link-item-wide .link-control-item:nth-child(1),
+  .is-link-breakpoint-xxl.is-link-orientation-top.is-link-style-block .link-item-wide .link-control-item:nth-child(1) {
     border-top-left-radius: var(--theme-radius);
     border-bottom-left-radius: 0;
   }
 
-  .is-link-orientation-top.is-link-style-block .link-item-wide .link-control-item:nth-child(4) {
+  .is-link-breakpoint-md.is-link-orientation-top.is-link-style-block .link-item-wide .link-control-item:nth-child(4),
+  .is-link-breakpoint-lg.is-link-orientation-top.is-link-style-block .link-item-wide .link-control-item:nth-child(4),
+  .is-link-breakpoint-xl.is-link-orientation-top.is-link-style-block .link-item-wide .link-control-item:nth-child(4),
+  .is-link-breakpoint-xxl.is-link-orientation-top.is-link-style-block .link-item-wide .link-control-item:nth-child(4) {
     border-top-left-radius: 0;
+  }
+
+  .is-link-breakpoint-md.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control-item:nth-child(1),
+  .is-link-breakpoint-lg.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control-item:nth-child(1),
+  .is-link-breakpoint-xl.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control-item:nth-child(1),
+  .is-link-breakpoint-xxl.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control-item:nth-child(1) {
+    border-bottom-left-radius: var(--theme-radius);
+  }
+
+  .is-link-breakpoint-md.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control-item:nth-child(4),
+  .is-link-breakpoint-lg.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control-item:nth-child(4),
+  .is-link-breakpoint-xl.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control-item:nth-child(4),
+  .is-link-breakpoint-xxl.is-link-orientation-bottom.is-link-style-block .link-item-wide .link-control-item:nth-child(4) {
+    border-bottom-left-radius: 0;
   }
 }
 
@@ -1232,10 +1262,12 @@
 
 .link-item-preview-grid-small .link-item-preview.link-item-wide {
   left: 0;
+  grid-column: span 2;
 }
 
 .link-item-preview-grid-small .link-item-preview.link-item-tall {
   top: 0;
+  grid-row: span 2;
 }
 
 .is-link-item-shadow-show.is-link-orientation-bottom .link-item-preview .link-panel-front,

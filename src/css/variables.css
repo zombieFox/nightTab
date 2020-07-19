@@ -109,6 +109,8 @@
   --group-border:                                       0;
   /* link */
   --link-area-width:                                    100%;
+  --link-item-edit-height-short:                        2em;
+  --link-item-edit-height-tall:                         5em;
   --link-item-color:                                    var(--theme-color-02);
   --link-item-color-opacity:                            1;
   --link-item-color-focus-hover:                        var(--theme-color-03);
@@ -403,7 +405,7 @@
   --link-item-width:                                    11em;
   --link-item-height:                                   10em;
   --link-item-url-height:                               2.25em;
-  --link-item-edit-height:                              5em;
+  --link-item-edit-height:                              var(--link-item-edit-height-tall);
 }
 
 .is-link-style-list {
@@ -411,7 +413,7 @@
   --link-item-width:                                    20em;
   --link-item-height:                                   4em;
   --link-item-url-height:                               1.5em;
-  --link-item-edit-height:                              2em;
+  --link-item-edit-height:                              var(--link-item-edit-height-short);
 }
 
 @media (min-width: 700px) {
