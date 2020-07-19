@@ -1769,6 +1769,8 @@ var link = (function() {
       var wideLabel = render.form.label("link-form-wide", "Wide tile", "Bookmark tile to span across two columns.", true);
       var tallInput = helper.node("input|type:checkbox,class:link-form-tall,id:link-form-tall,tabindex:1");
       var tallLabel = render.form.label("link-form-tall", "Tall tile", "Bookmark tile to span across two rows.", true);
+      var wideTallLabelHelper = render.form.helper("link-form-wide-tall-helper", "Bookmark tile will span across two columns or rows if the Bookmark Area is large enough.");
+
 
       // content
       var displayAlignmentLabel = render.form.label(false, "Visual element and Name alignment");
@@ -1939,6 +1941,9 @@ var link = (function() {
             render.form.wrap([
               tallInput,
               tallLabel
+            ]),
+            render.form.wrap([
+              wideTallLabelHelper
             ]),
             helper.node("hr"),
             render.form.wrap([
@@ -2883,6 +2888,7 @@ var link = (function() {
           helper.removeClass(wideLabel, "disabled");
           tallInput.removeAttribute("disabled");
           helper.removeClass(tallLabel, "disabled");
+          helper.removeClass(wideTallLabelHelper, "disabled");
           helper.removeClass(displayAlignmentLabel, "disabled");
           displayAlignmentTopLeftRadio.removeAttribute("disabled");
           displayAlignmentTopCenterRadio.removeAttribute("disabled");
@@ -2930,6 +2936,7 @@ var link = (function() {
           helper.addClass(wideLabel, "disabled");
           tallInput.setAttribute("disabled", "");
           helper.addClass(tallLabel, "disabled");
+          helper.addClass(wideTallLabelHelper, "disabled");
           helper.addClass(displayAlignmentLabel, "disabled");
           displayAlignmentTopLeftRadio.setAttribute("disabled", "");
           displayAlignmentTopCenterRadio.setAttribute("disabled", "");
@@ -3805,9 +3812,11 @@ var link = (function() {
         disableForm();
       });
 
+      var autoSuggestAnchor = displayIconFormGroupText.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
+
       autoSuggest.bind.input({
         input: displayIconInput,
-        widthAnchor: "parent",
+        anchorElement: autoSuggestAnchor,
         type: "fontawesomeIcon",
         postFocus: displayIconFormGroupText
       });

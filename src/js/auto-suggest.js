@@ -27,7 +27,7 @@ var autoSuggest = (function() {
   bind.input = function(override) {
     var options = {
       input: null,
-      widthAnchor: null,
+      anchorElement: null,
       type: null,
       postFocus: null
     };
@@ -210,8 +210,9 @@ var autoSuggest = (function() {
           top: autoSuggestInput.getBoundingClientRect().bottom + window.scrollY,
           width: autoSuggestInput.getBoundingClientRect().width
         };
-        if (options.widthAnchor == "parent") {
-            box.width = autoSuggestInput.parentElement.getBoundingClientRect().width;
+        if (options.anchorElement) {
+          box.width = options.anchorElement.getBoundingClientRect().width;
+          box.left = options.anchorElement.getBoundingClientRect().left;
         };
         var autoSuggest = helper.node("div|class:auto-suggest list-unstyled is-jello");
         var autoSuggestList = helper.node("ul|class:auto-suggest-list list-unstyled");
