@@ -1127,6 +1127,54 @@ var theme = (function() {
         opacity: 0.6
       }
     }, {
+      name: "Vanadium",
+      font: {
+        display: {
+          name: "Grenze Gotisch",
+          weight: 100,
+          style: "normal"
+        },
+        ui: {
+          name: "Roboto",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 218,
+          s: 33,
+          l: 43
+        },
+        rgb: {
+          r: 73,
+          g: 100,
+          b: 146
+        },
+        contrast: {
+          light: 5,
+          dark: 3.5
+        }
+      },
+      accent: {
+        hsl: {
+          h: 30,
+          s: 100,
+          l: 50
+        },
+        rgb: {
+          r: 255,
+          g: 128,
+          b: 0
+        }
+      },
+      radius: 0.25,
+      shadow: 0.25,
+      style: "dark",
+      shade: {
+        opacity: 0.2
+      }
+    }, {
       name: "Rumble",
       font: {
         display: {
