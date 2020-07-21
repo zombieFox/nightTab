@@ -2230,6 +2230,54 @@ var theme = (function() {
       shade: {
         opacity: 0.05
       }
+    },  {
+      name: "Hypnos",
+      font: {
+        display: {
+          name: "Shadows Into Light",
+          weight: 100,
+          style: "normal"
+        },
+        ui: {
+          name: "Fira Code",
+          weight: 400,
+          style: "normal"
+        }
+      },
+      color: {
+        hsl: {
+          h: 243,
+          s: 26,
+          l: 36
+        },
+        rgb: {
+          r: 70,
+          g: 68,
+          b: 116
+        },
+        contrast: {
+          light: 5.4,
+          dark: 2.6
+        }
+      },
+      accent: {
+        hsl: {
+          h: 30,
+          s: 100,
+          l: 80
+        },
+        rgb: {
+          r: 255,
+          g: 204,
+          b: 153
+        }
+      },
+      radius: 0.6,
+      shadow: 0.25,
+      style: "dark",
+      shade: {
+        opacity: 0.2
+      }
     }]
   };
 
