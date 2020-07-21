@@ -109,8 +109,6 @@
   --group-border:                                       0;
   /* link */
   --link-area-width:                                    100%;
-  --link-item-edit-height-short:                        2em;
-  --link-item-edit-height-tall:                         5em;
   --link-item-color:                                    var(--theme-color-02);
   --link-item-color-opacity:                            1;
   --link-item-color-focus-hover:                        var(--theme-color-03);
@@ -402,6 +400,8 @@
 
 .is-link-style-block {
   /* link */
+  --link-item-edit-height-tall:                         5em;
+  --link-item-edit-height-short:                        calc(var(--link-item-edit-height-tall) / 2);
   --link-item-width:                                    11em;
   --link-item-height:                                   10em;
   --link-item-url-height:                               2.25em;
@@ -410,6 +410,8 @@
 
 .is-link-style-list {
   /* link */
+  --link-item-edit-height-tall:                         5em;
+  --link-item-edit-height-short:                        2em;
   --link-item-width:                                    20em;
   --link-item-height:                                   4em;
   --link-item-url-height:                               1.5em;
