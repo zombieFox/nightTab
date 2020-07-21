@@ -1816,7 +1816,7 @@ var link = (function() {
 
       var nameSizeLabel = render.form.label("link-form-input-display-name-size-range", "Name size");
       var nameSizeInputRange = helper.node("input|class:link-form-input-display-name-size-range mr-3,id:link-form-input-display-name-size-range,type:range,name:link-form-input-display-name-size-range,min:10,max:1500,step:10,tabindex:1");
-      var nameSizeInputNumber = helper.node("input|class:link-form-input-display-name-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:3000,step:10,tabindex:1");
+      var nameSizeInputNumber = helper.node("input|class:link-form-input-display-name-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:1500,step:10,tabindex:1");
       var nameSizeInputDefault = render.form.button(false, "link-form-input-display-name-size-default", "icon-replay");
 
       var displayRotateLabel = render.form.label("link-form-input-display-rotate-range", "Rotation");
