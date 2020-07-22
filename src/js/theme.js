@@ -1031,7 +1031,7 @@ var theme = (function() {
         opacity: 0.7
       }
     }, {
-      name: "Sharp Mint",
+      name: "Mint",
       font: {
         display: {
           name: "Unica One",
@@ -1271,7 +1271,7 @@ var theme = (function() {
         opacity: 0.9
       }
     }, {
-      name: "Art Deco",
+      name: "Deco",
       font: {
         display: {
           name: "Poiret One",
@@ -1415,7 +1415,7 @@ var theme = (function() {
         opacity: 0.3
       }
     }, {
-      name: "Hot Pepper",
+      name: "Pepper",
       font: {
         display: {
           name: "Big Shoulders Display",
@@ -1703,7 +1703,7 @@ var theme = (function() {
         opacity: 0.02
       }
     }, {
-      name: "Elder Bean",
+      name: "Bean",
       font: {
         display: {
           name: "Life Savers",
