@@ -1363,17 +1363,25 @@ var link = (function() {
 
           var shades = theme.mod.color.shades({
             rgb: stagedLink.link.color.rgb,
-            contrastNegative: 8,
-            contrastPositive: 8
+            contrastNegative: 7,
+            contrastPositive: 7
           });
 
           var rgb;
 
           if (hsl.l <= 50) {
-            rgb = shades.positive["9"];
-            linkItemStyle.push("--theme-style-text: var(--theme-white);");
+            if (hsl.l > 30 && hsl.l <= 50 && hsl.h > 40 && hsl.h < 200) {
+              rgb = shades.negative["9"];
+            } else {
+              rgb = shades.positive["9"];
+            };
           } else {
             rgb = shades.negative["9"];
+          };
+
+          if (hsl.l <= 50) {
+            linkItemStyle.push("--theme-style-text: var(--theme-white);");
+          } else {
             linkItemStyle.push("--theme-style-text: var(--theme-black);");
           };
 
