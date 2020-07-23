@@ -1363,10 +1363,13 @@ var link = (function() {
           var shades = theme.mod.color.shades(stagedLink.link.color.rgb);
           var rgb;
           if (hsl.l < 50) {
-            rgb = shades.positive["9"];
+            rgb = shades.positive["10"];
+          } else {
+            rgb = shades.negative["10"];
+          };
+          if (hsl.l < 50) {
             linkItemStyle.push("--theme-style-text: var(--theme-white);");
           } else {
-            rgb = shades.negative["9"];
             linkItemStyle.push("--theme-style-text: var(--theme-black);");
           };
           linkItemStyle.push("--link-item-visual-element-color-focus-hover: var(--theme-style-text);");

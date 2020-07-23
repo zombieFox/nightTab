@@ -2230,7 +2230,7 @@ var theme = (function() {
       shade: {
         opacity: 0.05
       }
-    },  {
+    }, {
       name: "Hypnos",
       font: {
         display: {
