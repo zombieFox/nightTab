@@ -1291,92 +1291,91 @@ var link = (function() {
         options = helper.applyOptions(options, override);
       };
 
-      var liniItemClass = ["link-item"];
-      var liniItemStyle = [];
+      var linkItemClass = ["link-item"];
+      var linkItemStyle = [];
 
       if (options.preview) {
-        liniItemClass.push("link-item-preview");
+        linkItemClass.push("link-item-preview");
       };
       if (stagedLink.link.display.visual.show) {
-        liniItemClass.push("link-item-visual");
+        linkItemClass.push("link-item-visual");
       };
       if (stagedLink.link.display.name.show) {
-        liniItemClass.push("link-item-name");
+        linkItemClass.push("link-item-name");
       };
       if (stagedLink.link.display.visual.show || stagedLink.link.display.name.show) {
-        liniItemClass.push("link-item-alignment-" + stagedLink.link.display.alignment);
-        liniItemClass.push("link-item-order-" + stagedLink.link.display.order);
-        liniItemClass.push("link-item-direction-" + stagedLink.link.display.direction);
+        linkItemClass.push("link-item-alignment-" + stagedLink.link.display.alignment);
+        linkItemClass.push("link-item-order-" + stagedLink.link.display.order);
+        linkItemClass.push("link-item-direction-" + stagedLink.link.display.direction);
       };
       if (stagedLink.link.wide) {
-        liniItemClass.push("link-item-wide");
+        linkItemClass.push("link-item-wide");
       };
       if (stagedLink.link.tall) {
-        liniItemClass.push("link-item-tall");
+        linkItemClass.push("link-item-tall");
       };
       if (stagedLink.link.color.opacity < 1) {
-        liniItemStyle.push("--link-item-clip-padding: 0em;");
+        linkItemStyle.push("--link-item-clip-padding: 0em;");
       };
       if (stagedLink.link.display.visual.shadow.size > 0) {
-        liniItemClass.push("link-item-display-visual-shadow");
-        liniItemStyle.push("--link-item-display-visual-shadow-size: " + stagedLink.link.display.visual.shadow.size + ";");
-        liniItemStyle.push("--link-item-display-visual-shadow-offset: 0.02em;");
-        liniItemStyle.push("--link-item-display-visual-shadow-blur: 0.02em;");
-        liniItemStyle.push("--link-item-display-visual-shadow-opacity: 0.01;");
-        liniItemStyle.push("--link-item-display-visual-shadow: 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 1)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 2)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 1))), 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 2)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 4)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 2))), 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 4)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 6)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 3)));");
+        linkItemClass.push("link-item-display-visual-shadow");
+        linkItemStyle.push("--link-item-display-visual-shadow-size: " + stagedLink.link.display.visual.shadow.size + ";");
+        linkItemStyle.push("--link-item-display-visual-shadow-offset: 0.02em;");
+        linkItemStyle.push("--link-item-display-visual-shadow-blur: 0.02em;");
+        linkItemStyle.push("--link-item-display-visual-shadow-opacity: 0.01;");
+        linkItemStyle.push("--link-item-display-visual-shadow: 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 1)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 2)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 1))), 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 2)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 4)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 2))), 0 calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-offset) * 4)) calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-blur) * 6)) rgba(0, 0, 0, calc(var(--link-item-display-visual-shadow-size) * calc(var(--link-item-display-visual-shadow-opacity) * 3)));");
       };
 
-      liniItemStyle.push("--link-item-color-opacity: " + stagedLink.link.color.opacity + ";");
-      liniItemStyle.push("--link-item-image-opacity: " + stagedLink.link.image.opacity + ";");
-      liniItemStyle.push("--link-item-display-rotate: " + stagedLink.link.display.rotate + "deg;");
-      liniItemStyle.push("--link-item-display-gutter: " + stagedLink.link.display.gutter + ";");
-      liniItemStyle.push("--link-item-display-translate-x: " + stagedLink.link.display.translate.x + "em;");
-      liniItemStyle.push("--link-item-display-translate-y: " + stagedLink.link.display.translate.y + "em;");
+      linkItemStyle.push("--link-item-color-opacity: " + stagedLink.link.color.opacity + ";");
+      linkItemStyle.push("--link-item-image-opacity: " + stagedLink.link.image.opacity + ";");
+      linkItemStyle.push("--link-item-display-rotate: " + stagedLink.link.display.rotate + "deg;");
+      linkItemStyle.push("--link-item-display-gutter: " + stagedLink.link.display.gutter + ";");
+      linkItemStyle.push("--link-item-display-translate-x: " + stagedLink.link.display.translate.x + "em;");
+      linkItemStyle.push("--link-item-display-translate-y: " + stagedLink.link.display.translate.y + "em;");
 
       if (stagedLink.link.display.visual.type == "letter") {
-        liniItemStyle.push("--link-item-display-visual-letter-size: " + stagedLink.link.display.visual.letter.size + "em;");
+        linkItemStyle.push("--link-item-display-visual-letter-size: " + stagedLink.link.display.visual.letter.size + "em;");
       } else if (stagedLink.link.display.visual.type == "icon") {
-        liniItemStyle.push("--link-item-display-visual-icon-size: " + stagedLink.link.display.visual.icon.size + "em;");
+        linkItemStyle.push("--link-item-display-visual-icon-size: " + stagedLink.link.display.visual.icon.size + "em;");
       } else if (stagedLink.link.display.visual.type == "image") {
-        liniItemStyle.push("--link-item-display-visual-image-size: " + stagedLink.link.display.visual.image.size + "em;");
+        linkItemStyle.push("--link-item-display-visual-image-size: " + stagedLink.link.display.visual.image.size + "em;");
       };
       if (stagedLink.link.display.name.show) {
-        liniItemStyle.push("--link-item-display-name-size: " + stagedLink.link.display.name.size + "em;");
+        linkItemStyle.push("--link-item-display-name-size: " + stagedLink.link.display.name.size + "em;");
       };
       if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkIfValidString(stagedLink.link.image.url)) {
         if (stagedLink.link.accent.by == "custom") {
-          liniItemStyle.push("--theme-accent-r: " + stagedLink.link.accent.rgb.r + ";");
-          liniItemStyle.push("--theme-accent-g: " + stagedLink.link.accent.rgb.g + ";");
-          liniItemStyle.push("--theme-accent-b: " + stagedLink.link.accent.rgb.b + ";");
-          liniItemStyle.push("--theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);");
-          liniItemStyle.push("--theme-accent-accessible-threshold: 0.5;");
-          liniItemStyle.push("--theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);");
-          liniItemStyle.push("--theme-accent-accessible-g: calc(var(--theme-accent-g) * 0.60);");
-          liniItemStyle.push("--theme-accent-accessible-b: calc(var(--theme-accent-b) * 0.20);");
-          liniItemStyle.push("--theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));");
-          liniItemStyle.push("--theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);");
-          liniItemStyle.push("--theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);");
+          linkItemStyle.push("--theme-accent-r: " + stagedLink.link.accent.rgb.r + ";");
+          linkItemStyle.push("--theme-accent-g: " + stagedLink.link.accent.rgb.g + ";");
+          linkItemStyle.push("--theme-accent-b: " + stagedLink.link.accent.rgb.b + ";");
+          linkItemStyle.push("--theme-accent: var(--theme-accent-r), var(--theme-accent-g), var(--theme-accent-b);");
+          linkItemStyle.push("--theme-accent-accessible-threshold: 0.5;");
+          linkItemStyle.push("--theme-accent-accessible-r: calc(var(--theme-accent-r) * 0.50);");
+          linkItemStyle.push("--theme-accent-accessible-g: calc(var(--theme-accent-g) * 0.60);");
+          linkItemStyle.push("--theme-accent-accessible-b: calc(var(--theme-accent-b) * 0.20);");
+          linkItemStyle.push("--theme-accent-accessible-sum: calc(var(--theme-accent-accessible-r) + var(--theme-accent-accessible-g) + var(--theme-accent-accessible-b));");
+          linkItemStyle.push("--theme-accent-accessible-perceived-lightness: calc(var(--theme-accent-accessible-sum) / 255);");
+          linkItemStyle.push("--theme-accent-accessible-color: 0, 0%, calc((var(--theme-accent-accessible-perceived-lightness) - var(--theme-accent-accessible-threshold)) * -10000000%);");
+          linkItemStyle.push("--link-item-visual-element-color: var(--theme-accent);");
         };
         if (stagedLink.link.color.by == "custom") {
           var hsl = helper.convertColor.rgb.hsl(stagedLink.link.color.rgb);
+          var shades = theme.mod.color.shades(stagedLink.link.color.rgb);
+          var rgb;
           if (hsl.l < 50) {
-            hsl.l = hsl.l + 40;
+            rgb = shades.positive["9"];
+            linkItemStyle.push("--theme-style-text: var(--theme-white);");
           } else {
-            hsl.l = hsl.l - 40;
+            rgb = shades.negative["9"];
+            linkItemStyle.push("--theme-style-text: var(--theme-black);");
           };
-          var rgb = helper.convertColor.hsl.rgb(hsl);
-          rgb = {
-            r: Math.round(rgb.r),
-            g: Math.round(rgb.g),
-            b: Math.round(rgb.b)
-          };
-          liniItemStyle.push("--link-item-color: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";");
-          liniItemStyle.push("--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";");
-          liniItemStyle.push("--link-item-name-color: " + rgb.r + ", " + rgb.g + ", " + rgb.b + ";");
-          liniItemStyle.push("--link-item-name-color-focus-hover: " + rgb.r + ", " + rgb.g + ", " + rgb.b + ";");
+          linkItemStyle.push("--link-item-visual-element-color-focus-hover: var(--theme-style-text);");
+          linkItemStyle.push("--link-item-color: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";");
+          linkItemStyle.push("--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";");
+          linkItemStyle.push("--link-item-name-color: " + rgb.r + ", " + rgb.g + ", " + rgb.b + ";");
         };
         if (helper.checkIfValidString(stagedLink.link.image.url)) {
-          liniItemStyle.push("--link-item-image-url: url(" + helper.trimString(stagedLink.link.image.url) + ");");
+          linkItemStyle.push("--link-item-image-url: url(" + helper.trimString(stagedLink.link.image.url) + ");");
         };
       };
 
@@ -1384,10 +1383,10 @@ var link = (function() {
         tag: "div",
         attr: [{
           key: "class",
-          value: liniItemClass.join(" ")
+          value: linkItemClass.join(" ")
         }, {
           key: "style",
-          value: liniItemStyle.join(" ")
+          value: linkItemStyle.join(" ")
         }]
       };
 

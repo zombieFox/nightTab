@@ -34,7 +34,7 @@
   grid-template-rows: 1fr auto;
   justify-items: stretch;
   align-items: stretch;
-  transition: opacity var(--layout-transition-extra-fast);
+  transition: background-color var(--layout-transition-extra-fast), opacity var(--layout-transition-extra-fast);
 }
 
 .modal-wrapper .container {
@@ -63,6 +63,7 @@
   position: relative;
   z-index: 2;
   display: flex;
+  transition: background-color var(--layout-transition-extra-fast);
 }
 
 .modal-button {

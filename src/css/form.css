@@ -5,6 +5,7 @@ fieldset:not(:only-child):not(:last-child),
   position: relative;
   width: 100%;
   display: block;
+  transition: border-color var(--layout-transition-extra-fast);
 }
 
 fieldset:not(:first-child),

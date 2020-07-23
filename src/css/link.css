@@ -681,14 +681,14 @@
   font-family: var(--theme-font-display-name);
   font-weight: var(--theme-font-display-weight);
   font-style: var(--theme-font-display-style);
-  color: rgb(var(--theme-accent));
+  color: rgb(var(--link-item-visual-element-color));
   line-height: 1;
   white-space: nowrap;
   transition: color var(--layout-transition-extra-fast);
 }
 
 .link-display-icon {
-  color: rgb(var(--theme-accent));
+  color: rgb(var(--link-item-visual-element-color));
   transition: color var(--layout-transition-extra-fast);
 }
 
@@ -725,12 +725,12 @@
 .link-item:focus .link-display-letter,
 .link-item:hover .link-display-icon,
 .link-item:focus .link-display-icon {
-  color: rgb(var(--theme-style-text));
+  color: rgb(var(--link-item-visual-element-color-focus-hover));
 }
 
 .link-panel-front:focus .link-display-letter,
 .link-panel-front:focus .link-display-icon {
-  color: rgb(var(--theme-style-text));
+  color: rgb(var(--link-item-visual-element-color-focus-hover));
 }
 
 /* link name */
@@ -778,7 +778,7 @@
 }
 
 .link-panel-front:focus .link-display-name {
-  color: rgb(var(--link-item-mame-color-focus-hover));
+  color: rgb(var(--link-item-name-color-focus-hover));
 }
 
 /* link panel back */
