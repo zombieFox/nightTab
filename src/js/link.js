@@ -3140,31 +3140,31 @@ var link = (function() {
       displayShowCheckbox.addEventListener("change", function(event) {
         stagedLink.link.display.visual.show = this.checked;
         disableForm();
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayLetterRadio.addEventListener("change", function(event) {
         stagedLink.link.display.visual.type = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
         disableForm();
       }, false);
       displayIconRadio.addEventListener("change", function(event) {
         stagedLink.link.display.visual.type = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
         disableForm();
       }, false);
       displayImageRadio.addEventListener("change", function(event) {
         stagedLink.link.display.visual.type = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
         disableForm();
       }, false);
       displayLetterInput.addEventListener("input", function(event) {
         stagedLink.link.display.visual.letter.text = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayLetterSizeInputRange.addEventListener("input", function(event) {
         stagedLink.link.display.visual.letter.size = mod.value.convert.to.float(parseInt(this.value, 10));
         displayLetterSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.letter.size);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayLetterSizeInputNumber.addEventListener("input", function(event) {
         var inputValue = parseInt(this.value, 10);
@@ -3180,7 +3180,7 @@ var link = (function() {
         };
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayLetterSizeInputDefault.addEventListener("click", function(event) {
         stagedLink.link.display.visual.letter.size = helper.getObject({
@@ -3189,12 +3189,12 @@ var link = (function() {
         });
         displayLetterSizeInputRange.value = mod.value.convert.from.float(stagedLink.link.display.visual.letter.size);
         displayLetterSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.letter.size);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayIconSizeInputRange.addEventListener("input", function(event) {
         stagedLink.link.display.visual.icon.size = mod.value.convert.to.float(parseInt(this.value, 10));
         displayIconSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.icon.size);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayIconSizeInputNumber.addEventListener("input", function(event) {
         var inputValue = parseInt(this.value, 10);
@@ -3210,7 +3210,7 @@ var link = (function() {
         };
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayIconSizeInputDefault.addEventListener("click", function(event) {
         stagedLink.link.display.visual.icon.size = helper.getObject({
@@ -3219,12 +3219,12 @@ var link = (function() {
         });
         displayIconSizeInputRange.value = mod.value.convert.from.float(stagedLink.link.display.visual.icon.size);
         displayIconSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.icon.size);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayImageSizeInputRange.addEventListener("input", function(event) {
         stagedLink.link.display.visual.image.size = mod.value.convert.to.float(parseInt(this.value, 10));
         displayImageSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.image.size);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayImageSizeInputNumber.addEventListener("input", function(event) {
         var inputValue = parseInt(this.value, 10);
@@ -3240,7 +3240,7 @@ var link = (function() {
         };
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayImageSizeInputDefault.addEventListener("click", function(event) {
         stagedLink.link.display.visual.image.size = helper.getObject({
@@ -3249,12 +3249,12 @@ var link = (function() {
         });
         displayImageSizeInputRange.value = mod.value.convert.from.float(stagedLink.link.display.visual.image.size);
         displayImageSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.image.size);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayShadowSizeInputRange.addEventListener("input", function(event) {
         stagedLink.link.display.visual.shadow.size = parseInt(this.value, 10);
         displayShadowSizeInputNumber.value = stagedLink.link.display.visual.shadow.size;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayShadowSizeInputNumber.addEventListener("input", function(event) {
         var inputValue = parseInt(this.value, 10);
@@ -3270,7 +3270,7 @@ var link = (function() {
         };
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayShadowSizeInputDefault.addEventListener("click", function(event) {
         stagedLink.link.display.visual.shadow.size = helper.getObject({
@@ -3279,21 +3279,21 @@ var link = (function() {
         });
         displayShadowSizeInputRange.value = stagedLink.link.display.visual.shadow.size;
         displayShadowSizeInputNumber.value = stagedLink.link.display.visual.shadow.size;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       nameShowCheckbox.addEventListener("change", function(event) {
         stagedLink.link.display.name.show = this.checked;
         disableForm();
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       nameInput.addEventListener("input", function(event) {
         stagedLink.link.display.name.text = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       nameSizeInputRange.addEventListener("input", function(event) {
         stagedLink.link.display.name.size = mod.value.convert.to.float(parseInt(this.value, 10));
         nameSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.name.size);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       nameSizeInputNumber.addEventListener("input", function(event) {
         var inputValue = parseInt(this.value, 10);
@@ -3309,7 +3309,7 @@ var link = (function() {
         };
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       nameSizeInputDefault.addEventListener("click", function(event) {
         stagedLink.link.display.name.size = helper.getObject({
@@ -3318,16 +3318,16 @@ var link = (function() {
         });
         nameSizeInputRange.value = mod.value.convert.from.float(stagedLink.link.display.name.size);
         nameSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.name.size);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       imageInput.addEventListener("input", function(event) {
         stagedLink.link.image.url = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       imageOpacityInputRange.addEventListener("input", function(event) {
         stagedLink.link.image.opacity = mod.value.convert.to.float(parseInt(this.value, 10));
         imageOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       imageOpacityInputNumber.addEventListener("input", function(event) {
         var inputValue = parseInt(this.value, 10);
@@ -3343,7 +3343,7 @@ var link = (function() {
         };
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       imageOpacityInputDefault.addEventListener("click", function(event) {
         stagedLink.link.image.opacity = helper.getObject({
@@ -3352,56 +3352,56 @@ var link = (function() {
         });
         imageOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
         imageOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       wideInput.addEventListener("change", function(event) {
         stagedLink.link.wide = this.checked;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       tallInput.addEventListener("change", function(event) {
         stagedLink.link.tall = this.checked;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayAlignmentTopLeftRadio.addEventListener("input", function(event) {
         link.stagedLink.link.display.alignment = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayAlignmentTopCenterRadio.addEventListener("input", function(event) {
         link.stagedLink.link.display.alignment = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayAlignmentTopRightRadio.addEventListener("input", function(event) {
         link.stagedLink.link.display.alignment = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayAlignmentCenterLeftRadio.addEventListener("input", function(event) {
         link.stagedLink.link.display.alignment = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayAlignmentCenterCenterRadio.addEventListener("input", function(event) {
         link.stagedLink.link.display.alignment = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayAlignmentCenterRightRadio.addEventListener("input", function(event) {
         link.stagedLink.link.display.alignment = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayAlignmentBottomLeftRadio.addEventListener("input", function(event) {
         link.stagedLink.link.display.alignment = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayAlignmentBottomCenterRadio.addEventListener("input", function(event) {
         link.stagedLink.link.display.alignment = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayAlignmentBottomRightRadio.addEventListener("input", function(event) {
         link.stagedLink.link.display.alignment = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayRotateRange.addEventListener("input", function(event) {
         stagedLink.link.display.rotate = parseInt(this.value, 10);
         displayRotateNumber.value = stagedLink.link.display.rotate;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayRotateNumber.addEventListener("input", function(event) {
         var inputValue = parseInt(this.value, 10);
@@ -3417,7 +3417,7 @@ var link = (function() {
         };
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayRotateDefault.addEventListener("click", function(event) {
         stagedLink.link.display.rotate = helper.getObject({
@@ -3426,12 +3426,12 @@ var link = (function() {
         });
         displayRotateRange.value = stagedLink.link.display.rotate;
         displayRotateNumber.value = stagedLink.link.display.rotate;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayTranslateXRange.addEventListener("input", function(event) {
         stagedLink.link.display.translate.x = mod.value.convert.to.float(parseInt(this.value, 10));
         displayTranslateXNumber.value = mod.value.convert.from.float(stagedLink.link.display.translate.x);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayTranslateXNumber.addEventListener("input", function(event) {
         var inputValue = parseInt(this.value, 10);
@@ -3447,7 +3447,7 @@ var link = (function() {
         };
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayTranslateXDefault.addEventListener("click", function(event) {
         stagedLink.link.display.translate.x = helper.getObject({
@@ -3456,12 +3456,12 @@ var link = (function() {
         });
         displayTranslateXRange.value = mod.value.convert.from.float(stagedLink.link.display.translate.x);
         displayTranslateXNumber.value = mod.value.convert.from.float(stagedLink.link.display.translate.x);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayTranslateYRange.addEventListener("input", function(event) {
         stagedLink.link.display.translate.y = mod.value.convert.to.float(parseInt(this.value, 10));
         displayTranslateYNumber.value = mod.value.convert.from.float(stagedLink.link.display.translate.y);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayTranslateYNumber.addEventListener("input", function(event) {
         var inputValue = parseInt(this.value, 10);
@@ -3477,7 +3477,7 @@ var link = (function() {
         };
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayTranslateYDefault.addEventListener("click", function(event) {
         stagedLink.link.display.translate.y = helper.getObject({
@@ -3486,12 +3486,12 @@ var link = (function() {
         });
         displayTranslateYRange.value = mod.value.convert.from.float(stagedLink.link.display.translate.y);
         displayTranslateYNumber.value = mod.value.convert.from.float(stagedLink.link.display.translate.y);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayGutterRange.addEventListener("input", function(event) {
         stagedLink.link.display.gutter = parseInt(this.value, 10);
         displayGutterNumber.value = stagedLink.link.display.gutter;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayGutterNumber.addEventListener("input", function(event) {
         var inputValue = parseInt(this.value, 10);
@@ -3507,7 +3507,7 @@ var link = (function() {
         };
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayGutterDefault.addEventListener("click", function(event) {
         stagedLink.link.display.gutter = helper.getObject({
@@ -3516,31 +3516,31 @@ var link = (function() {
         });
         displayGutterRange.value = stagedLink.link.display.gutter;
         displayGutterNumber.value = stagedLink.link.display.gutter;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       displayAlignmentVerticalRadio.addEventListener("input", function(event) {
         stagedLink.link.display.direction = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayAlignmentHorizontalRadio.addEventListener("input", function(event) {
         stagedLink.link.display.direction = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayDirectionVisualnameRadio.addEventListener("input", function(event) {
         stagedLink.link.display.order = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayDirectionNamevisualRadio.addEventListener("input", function(event) {
         stagedLink.link.display.order = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayImageInput.addEventListener("input", function(event) {
         stagedLink.link.display.visual.image.url = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       urlInput.addEventListener("input", function(event) {
         stagedLink.link.url = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayIconFormGroupClear.addEventListener("click", function(event) {
         stagedLink.link.display.visual.icon.name = "";
@@ -3551,35 +3551,35 @@ var link = (function() {
           existingIcon.remove();
         };
         displayIconInput.value = "";
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       colorThemeRadio.addEventListener("change", function() {
         stagedLink.link.color.by = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
         disableForm();
       }, false);
       colorCustomRadio.addEventListener("change", function() {
         stagedLink.link.color.by = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
         disableForm();
       }, false);
       colorColorPicker.addEventListener("change", function() {
         mirror.data.color.by.hex(this.value);
         mirror.value(this, mirror.inputs.color());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       colorColorHex.addEventListener("input", function() {
         if (helper.isHexNumber(this.value)) {
           mirror.data.color.by.hex(this.value);
           mirror.value(this, mirror.inputs.color());
-          render.item.preview.delay();
+          render.item.preview.delay(formPreviewArea);
         };
       }, false);
       colorHslHRange.addEventListener("input", function() {
         stagedLink.link.color.hsl.h = parseInt(this.value, 10);
         mirror.data.color.by.hsl();
         mirror.value(this, mirror.inputs.color());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorHslHNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3590,13 +3590,13 @@ var link = (function() {
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorHslSRange.addEventListener("input", function() {
         stagedLink.link.color.hsl.s = parseInt(this.value, 10);
         mirror.data.color.by.hsl();
         mirror.value(this, mirror.inputs.color());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorHslSNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3607,13 +3607,13 @@ var link = (function() {
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorHslLRange.addEventListener("input", function() {
         stagedLink.link.color.hsl.l = parseInt(this.value, 10);
         mirror.data.color.by.hsl();
         mirror.value(this, mirror.inputs.color());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorHslLNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3624,13 +3624,13 @@ var link = (function() {
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorRgbRRange.addEventListener("input", function() {
         stagedLink.link.color.rgb.r = parseInt(this.value, 10);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorRgbRNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3641,13 +3641,13 @@ var link = (function() {
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorRgbGRange.addEventListener("input", function() {
         stagedLink.link.color.rgb.g = parseInt(this.value, 10);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorRgbGNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3658,13 +3658,13 @@ var link = (function() {
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorRgbBRange.addEventListener("input", function() {
         stagedLink.link.color.rgb.b = parseInt(this.value, 10);
         mirror.data.color.by.rgb();
         mirror.value(this, mirror.inputs.color());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorRgbBNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3675,12 +3675,12 @@ var link = (function() {
         mirror.value(this, mirror.inputs.color());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorOpacityInputRange.addEventListener("input", function(event) {
         stagedLink.link.color.opacity = mod.value.convert.to.float(parseInt(this.value, 10));
         colorOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.color.opacity);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorOpacityInputNumber.addEventListener("input", function(event) {
         var inputValue = parseInt(this.value, 10);
@@ -3696,7 +3696,7 @@ var link = (function() {
         };
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       colorOpacityInputDefault.addEventListener("click", function(event) {
         stagedLink.link.color.opacity = helper.getObject({
@@ -3705,35 +3705,35 @@ var link = (function() {
         });
         colorOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.color.opacity);
         colorOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.color.opacity);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentThemeRadio.addEventListener("change", function() {
         stagedLink.link.accent.by = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
         disableForm();
       }, false);
       accentCustomRadio.addEventListener("change", function() {
         stagedLink.link.accent.by = this.value;
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
         disableForm();
       }, false);
       accentColorPicker.addEventListener("change", function() {
         mirror.data.accent.by.hex(this.value);
         mirror.value(this, mirror.inputs.accent());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       }, false);
       accentColorHex.addEventListener("input", function() {
         if (helper.isHexNumber(this.value)) {
           mirror.data.accent.by.hex(this.value);
           mirror.value(this, mirror.inputs.accent());
-          render.item.preview.delay();
+          render.item.preview.delay(formPreviewArea);
         };
       }, false);
       accentHslHRange.addEventListener("input", function() {
         stagedLink.link.accent.hsl.h = parseInt(this.value, 10);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentHslHNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3744,13 +3744,13 @@ var link = (function() {
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentHslSRange.addEventListener("input", function() {
         stagedLink.link.accent.hsl.s = parseInt(this.value, 10);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentHslSNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3761,13 +3761,13 @@ var link = (function() {
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentHslLRange.addEventListener("input", function() {
         stagedLink.link.accent.hsl.l = parseInt(this.value, 10);
         mirror.data.accent.by.hsl();
         mirror.value(this, mirror.inputs.accent());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentHslLNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3778,13 +3778,13 @@ var link = (function() {
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentRgbRRange.addEventListener("input", function() {
         stagedLink.link.accent.rgb.r = parseInt(this.value, 10);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentRgbRNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3795,13 +3795,13 @@ var link = (function() {
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentRgbGRange.addEventListener("input", function() {
         stagedLink.link.accent.rgb.g = parseInt(this.value, 10);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentRgbGNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3812,13 +3812,13 @@ var link = (function() {
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentRgbBRange.addEventListener("input", function() {
         stagedLink.link.accent.rgb.b = parseInt(this.value, 10);
         mirror.data.accent.by.rgb();
         mirror.value(this, mirror.inputs.accent());
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       accentRgbBNumber.addEventListener("input", function() {
         var set = function(input) {
@@ -3829,7 +3829,7 @@ var link = (function() {
         mirror.value(this, mirror.inputs.accent());
         clearTimeout(mirror.delay);
         mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay();
+        render.item.preview.delay(formPreviewArea);
       });
       advancedCollapseButton.addEventListener("click", function() {
         if (mod.collapse.form.item.advanced) {
@@ -3850,12 +3850,13 @@ var link = (function() {
         postFocus: displayIconFormGroupText
       });
 
+      render.item.preview.clear(formPreviewArea);
+      render.item.preview.update(formPreviewArea);
+
       return formArea;
     },
     preview: {
-      update: function() {
-        var previewArea = helper.e(".link-form-preview-area");
-
+      update: function(formPreviewArea) {
         var previewGrid;
         if (stagedLink.link.tall || stagedLink.link.wide) {
           previewGrid = helper.node("div|class:link-item-preview-grid link-item-preview-grid-small is-link-show");
@@ -3899,19 +3900,19 @@ var link = (function() {
         });
 
         previewGrid.appendChild(previewLinkItem);
-        previewArea.appendChild(previewHeadline);
-        previewArea.appendChild(previewGrid);
+        formPreviewArea.appendChild(previewHeadline);
+        formPreviewArea.appendChild(previewGrid);
       },
-      clear: function() {
-        while (helper.e(".link-form-preview-area").lastChild) {
-          helper.e(".link-form-preview-area").removeChild(helper.e(".link-form-preview-area").lastChild);
+      clear: function(formPreviewArea) {
+        while (formPreviewArea.lastChild) {
+          formPreviewArea.removeChild(formPreviewArea.lastChild);
         };
       },
-      delay: function() {
+      delay: function(formPreviewArea) {
         clearTimeout(_timerLinkItemPreview);
         _timerLinkItemPreview = setTimeout(function functionName() {
-          render.item.preview.clear();
-          render.item.preview.update();
+          render.item.preview.clear(formPreviewArea);
+          render.item.preview.update(formPreviewArea);
         }, 300);
       }
     },
@@ -4212,7 +4213,7 @@ var link = (function() {
     helper.e(".link-form-input-icon").value = autoSuggestData.label;
     helper.e(".link-form-text-icon").appendChild(helper.node("span|class:link-form-icon " + stagedLink.link.display.visual.icon.prefix + " fa-" + stagedLink.link.display.visual.icon.name));
     helper.e(".link-form-text-icon").focus();
-    render.item.preview.delay();
+    render.item.preview.delay(helper.e(".link-form-preview-area"));
   };
 
   render.add = {
@@ -4244,7 +4245,6 @@ var link = (function() {
           actionText: "Add",
           content: render.item.form()
         });
-        render.item.preview.update();
         shade.open({
           action: function() {
             add.item.close();
@@ -4356,7 +4356,6 @@ var link = (function() {
           actionText: "Save",
           content: form
         });
-        render.item.preview.update();
         shade.open({
           action: function() {
             edit.item.close();
