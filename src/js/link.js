@@ -1360,18 +1360,23 @@ var link = (function() {
         };
         if (stagedLink.link.color.by == "custom") {
           var hsl = helper.convertColor.rgb.hsl(stagedLink.link.color.rgb);
-          var shades = theme.mod.color.shades(stagedLink.link.color.rgb);
+
+          var shades = theme.mod.color.shades({
+            rgb: stagedLink.link.color.rgb,
+            contrastNegative: 8,
+            contrastPositive: 8
+          });
+
           var rgb;
-          if (hsl.l < 50) {
-            rgb = shades.positive["10"];
-          } else {
-            rgb = shades.negative["10"];
-          };
-          if (hsl.l < 50) {
+
+          if (hsl.l <= 50) {
+            rgb = shades.positive["9"];
             linkItemStyle.push("--theme-style-text: var(--theme-white);");
           } else {
+            rgb = shades.negative["9"];
             linkItemStyle.push("--theme-style-text: var(--theme-black);");
           };
+
           linkItemStyle.push("--link-item-visual-element-color-focus-hover: var(--theme-style-text);");
           linkItemStyle.push("--link-item-color: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";");
           linkItemStyle.push("--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";");

@@ -741,12 +741,28 @@ var theme = (function() {
         }
       });
     },
-    shades: function(rgb) {
+    shades: function(override) {
+      var options = {
+        rgb: null,
+        contrastNegative: null,
+        contrastPositive: null
+      };
+      if (override) {
+        options = helper.applyOptions(options, override);
+      };
+
       var shadeMax = 10;
       var shadeMin = 1;
-      var contrastNeg = state.get.current().theme.color.contrast.dark;
-      var contrastPos = state.get.current().theme.color.contrast.light;
-      var hsl = helper.convertColor.rgb.hsl(rgb);
+
+      if (options.contrastNegative == null || !options.contrastNegative) {
+        options.contrastNegative = state.get.default().theme.color.contrast.dark;
+      };
+      if (options.contrastPositive == null || !options.contrastPositive) {
+        options.contrastPositive = state.get.default().theme.color.contrast.light;
+      };
+
+      var hsl = helper.convertColor.rgb.hsl(options.rgb);
+
       var validateRGBNumber = function(rgb) {
         for (var key in rgb) {
           if (rgb[key] < 0) {
@@ -764,11 +780,12 @@ var theme = (function() {
         positive: {}
       };
 
+      // set light theme shades
       for (var i = shadeMax; i >= shadeMin; i--) {
         var rgb = helper.convertColor.hsl.rgb({
           h: hsl.h,
           s: hsl.s,
-          l: hsl.l - (contrastNeg * i)
+          l: hsl.l - (options.contrastNegative * i)
         });
         shadeColors.negative[i] = validateRGBNumber(rgb);
       };
@@ -778,7 +795,7 @@ var theme = (function() {
         var rgb = helper.convertColor.hsl.rgb({
           h: hsl.h,
           s: hsl.s,
-          l: hsl.l + (contrastPos * i)
+          l: hsl.l + (options.contrastPositive * i)
         });
         shadeColors.positive[i] = validateRGBNumber(rgb);
       };
@@ -786,7 +803,11 @@ var theme = (function() {
       return shadeColors;
     },
     generated: function() {
-      var shades = mod.color.shades(state.get.current().theme.color.rgb);
+      var shades = mod.color.shades({
+        rgb: state.get.current().theme.color.rgb,
+        contrastNegative: state.get.current().theme.color.contrast.dark,
+        contrastPositive: state.get.current().theme.color.contrast.light
+      });
       helper.setObject({
         object: state.get.current(),
         path: "theme.color.generated.negative",
