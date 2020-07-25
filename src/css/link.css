@@ -870,14 +870,14 @@
   clip-path: polygon(0 calc(100% - calc(var(--link-item-url-height) + var(--link-item-clip-padding))), 100% calc(100% - calc(var(--link-item-url-height) + var(--link-item-clip-padding))), 100% 100%, 0 100%);
 }
 
-.is-edit.is-link-orientation-top .link-panel-back,
+.is-edit.is-link-orientation-top .link-item .link-panel-back,
 .is-edit.is-link-orientation-top .link-item:focus .link-panel-back,
 .is-edit.is-link-orientation-top .link-item:focus-within .link-panel-back,
 .is-edit.is-link-orientation-top .link-item:hover .link-panel-back {
   clip-path: polygon(0 0, 100% 0, 100% calc(var(--link-item-edit-height) + var(--link-item-clip-padding)), 0 calc(var(--link-item-edit-height) + var(--link-item-clip-padding)));
 }
 
-.is-edit.is-link-orientation-bottom .link-panel-back,
+.is-edit.is-link-orientation-bottom .link-item .link-panel-back,
 .is-edit.is-link-orientation-bottom .link-item:focus .link-panel-back,
 .is-edit.is-link-orientation-bottom .link-item:focus-within .link-panel-back,
 .is-edit.is-link-orientation-bottom .link-item:hover .link-panel-back {
@@ -1446,4 +1446,44 @@
 .is-link-orientation-bottom.is-link-item-url-show .link-item-preview:focus .link-url,
 .is-link-orientation-bottom.is-link-item-url-show .link-item-preview:hover .link-url {
   bottom: 0;
+}
+
+.is-edit.is-link-orientation-top .link-item-preview .link-panel-back,
+.is-edit.is-link-orientation-top .link-item-preview:focus .link-panel-back,
+.is-edit.is-link-orientation-top .link-item-preview:focus-within .link-panel-back,
+.is-edit.is-link-orientation-top .link-item-preview:hover .link-panel-back {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.is-edit.is-link-orientation-bottom .link-item-preview .link-panel-back,
+.is-edit.is-link-orientation-bottom .link-item-preview:focus .link-panel-back,
+.is-edit.is-link-orientation-bottom .link-item-preview:focus-within .link-panel-back,
+.is-edit.is-link-orientation-bottom .link-item-preview:hover .link-panel-back {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+.is-edit.is-link-item-line-show.is-link-orientation-top .link-item-preview .link-panel-back,
+.is-edit.is-link-item-line-show.is-link-orientation-top .link-item-preview:focus .link-panel-back,
+.is-edit.is-link-item-line-show.is-link-orientation-top .link-item-preview:focus-within .link-panel-back,
+.is-edit.is-link-item-line-show.is-link-orientation-top .link-item-preview:hover .link-panel-back {
+  clip-path: polygon(0 0, 100% 0, 100% var(--layout-line-width), 0 var(--layout-line-width));
+}
+
+.is-edit.is-link-item-line-show.is-link-orientation-bottom .link-item-preview .link-panel-back,
+.is-edit.is-link-item-line-show.is-link-orientation-bottom .link-item-preview:focus .link-panel-back,
+.is-edit.is-link-item-line-show.is-link-orientation-bottom .link-item-preview:focus-within .link-panel-back,
+.is-edit.is-link-item-line-show.is-link-orientation-bottom .link-item-preview:hover .link-panel-back {
+  clip-path: polygon(0 calc(100% - var(--layout-line-width) - var(--link-item-clip-padding)), 100% calc(100% - var(--layout-line-width) - var(--link-item-clip-padding)), 100% 100%, 0 100%);
+}
+
+.is-edit.is-link-item-url-show.is-link-orientation-top .link-item-preview:focus .link-panel-back,
+.is-edit.is-link-item-url-show.is-link-orientation-top .link-item-preview:focus-within .link-panel-back,
+.is-edit.is-link-item-url-show.is-link-orientation-top .link-item-preview:hover .link-panel-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--link-item-url-height) + var(--link-item-clip-padding)), 0 calc(var(--link-item-url-height) + var(--link-item-clip-padding)));
+}
+
+.is-edit.is-link-item-url-show.is-link-orientation-bottom .link-item-preview:focus .link-panel-back,
+.is-edit.is-link-item-url-show.is-link-orientation-bottom .link-item-preview:focus-within .link-panel-back,
+.is-edit.is-link-item-url-show.is-link-orientation-bottom .link-item-preview:hover .link-panel-back {
+  clip-path: polygon(0 calc(100% - var(--link-item-url-height) - var(--link-item-clip-padding)), 100% calc(100% - var(--link-item-url-height) - var(--link-item-clip-padding)), 100% 100%, 0 100%);
 }
