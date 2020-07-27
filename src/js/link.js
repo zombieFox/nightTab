@@ -905,7 +905,7 @@ var link = (function() {
           };
         });
       } else if (typeof className == "string") {
-        helper.addClass(element, className);
+        render.form.className(element, className.split(" "));
       };
       return element;
     },
@@ -927,26 +927,37 @@ var link = (function() {
     collapse: function(node) {
       return helper.node("div|class:link-form-collapse", node);
     },
-    label: function(name, labelText, labelDescription, icon, className) {
+    label: function(override) {
+      var options = {
+        name: null,
+        labelText: null,
+        labelDescription: null,
+        icon: null,
+        className: null
+      };
+      if (override) {
+        options = helper.applyOptions(options, override);
+      };
+
       var label;
-      if (name) {
-        label = helper.node("label|for:" + name);
+      if (options.name) {
+        label = helper.node("label|for:" + options.name);
       } else {
         label = helper.node("label");
       };
-      if (labelText && labelDescription) {
+      if (options.labelText && options.labelDescription) {
         label.appendChild(helper.node("span|class:label-block", [
-          helper.node("span:" + labelText + "|class:label-block-item"),
-          helper.node("span:" + labelDescription + "|class:label-block-item small muted")
+          helper.node("span:" + options.labelText + "|class:label-block-item"),
+          helper.node("span:" + options.labelDescription + "|class:label-block-item small muted")
         ]));
-      } else if (labelText) {
-        label.appendChild(helper.node("span:" + labelText));
+      } else if (options.labelText) {
+        label.appendChild(helper.node("span:" + options.labelText));
       };
-      if (icon) {
+      if (options.icon) {
         label.prepend(helper.node("span|class:label-icon"));
       };
-      if (className) {
-        label = render.form.className(label, className);
+      if (options.className) {
+        label = render.form.className(label, options.className);
       };
       return label;
     },
@@ -1110,9 +1121,18 @@ var link = (function() {
       var form = helper.node("form|class:group-form");
 
       // name
-      var groupFormInputNameShowLabel = render.form.label("group-form-input-name-show", "Show Group name", false, true);
+      var groupFormInputNameShowLabel = render.form.label({
+        name: "group-form-input-name-show",
+        labelText: "Show Group name",
+        icon: true
+      });
       var groupFormInputNameShowInput = helper.node("input|type:checkbox,class:group-form-input-name-show,id:group-form-input-name-show,tabindex:1,checked");
-      var groupFormInputName = helper.node("input|type:text,class:group-form-input-name,id:group-form-input-name,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      var groupFormInputNameLabel = render.form.label({
+        name: "group-form-input-name",
+        labelText: "Name",
+        className: "sr-only"
+      });
+      var groupFormInputNameInput = helper.node("input|type:text,class:group-form-input-name,id:group-form-input-name,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
       var groupFormRandomNameButton = helper.node("button:Random Group name|class:button button-line,type:button,tabindex:1");
 
       form.appendChild(
@@ -1123,7 +1143,8 @@ var link = (function() {
           ]),
           render.form.indent([
             render.form.wrap([
-              groupFormInputName
+              groupFormInputNameLabel,
+              groupFormInputNameInput
             ]),
             render.form.wrap([
               groupFormRandomNameButton
@@ -1133,7 +1154,11 @@ var link = (function() {
       );
 
       // open all
-      var groupFormInputOpenallLabel = render.form.label("group-form-input-openall", "Show Open all", false, true);
+      var groupFormInputOpenallLabel = render.form.label({
+        name: "group-form-input-openall",
+        labelText: "Show Open all",
+        icon: true
+      });
       var groupFormOpenAllInput = helper.node("input|type:checkbox,class:group-form-input-openall,id:group-form-input-openall,tabindex:1,checked");
       var groupFormOpenAllInputHelperItem = render.form.helper("group-form-input-openall", "Open all button will appear if there is at least one Bookmark in this Group.");
 
@@ -1151,7 +1176,11 @@ var link = (function() {
       );
 
       // position
-      var groupFormPositionLabel = render.form.label("group-form-input-openall", "Position", false, true);
+      var groupFormPositionLabel = render.form.label({
+        name: "group-form-input-openall",
+        labelText: "Position",
+        icon: true
+      });
       var groupFormPositionSelect = helper.node("select|id:group-form-position,class:group-form-position,tabindex:1");
 
       form.appendChild(
@@ -1176,10 +1205,10 @@ var link = (function() {
       var populateForm = function() {
         groupFormInputNameShowInput.checked = stagedGroup.group.name.show;
         groupFormPositionSelect.selectedIndex = stagedGroup.position.origin;
-        groupFormInputName.value = stagedGroup.group.name.text;
+        groupFormInputNameInput.value = stagedGroup.group.name.text;
         groupFormOpenAllInput.checked = stagedGroup.group.openAll.show;
         if (!stagedGroup.group.name.show) {
-          groupFormInputName.setAttribute("disabled", "");
+          groupFormInputNameInput.setAttribute("disabled", "");
           groupFormRandomNameButton.setAttribute("disabled", "");
         };
       };
@@ -1205,17 +1234,17 @@ var link = (function() {
       groupFormInputNameShowInput.addEventListener("change", function(event) {
         stagedGroup.group.name.show = this.checked;
         if (stagedGroup.group.name.show) {
-          groupFormInputName.removeAttribute("disabled");
+          groupFormInputNameInput.removeAttribute("disabled");
           groupFormRandomNameButton.removeAttribute("disabled");
         } else {
-          groupFormInputName.setAttribute("disabled", "");
+          groupFormInputNameInput.setAttribute("disabled", "");
           groupFormRandomNameButton.setAttribute("disabled", "");
         };
       }, false);
       groupFormPositionSelect.addEventListener("change", function(event) {
         stagedGroup.position.destination = this.selectedIndex;
       }, false);
-      groupFormInputName.addEventListener("input", function(event) {
+      groupFormInputNameInput.addEventListener("input", function(event) {
         stagedGroup.group.name.text = this.value;
       }, false);
       groupFormRandomNameButton.addEventListener("click", function(event) {
@@ -1223,7 +1252,7 @@ var link = (function() {
           adjectivesCount: helper.randomNumber(1, 3)
         });
         stagedGroup.group.name.text = randomName;
-        groupFormInputName.value = randomName;
+        groupFormInputNameInput.value = randomName;
       }, false);
       groupFormOpenAllInput.addEventListener("change", function(event) {
         stagedGroup.group.openAll.show = this.checked;
@@ -1589,14 +1618,37 @@ var link = (function() {
       var formPreviewArea = helper.node("div|class:link-form-preview-area");
 
       // group
+
+      // console.log(name, labelText, labelDescription, icon, className);
       var groupExistingRadio = helper.node("input|class:link-form-input-group-existing,id:link-form-input-group-existing,type:radio,name:link-form-input-group,tabindex:1,value:existing");
-      var groupExistingLabel = render.form.label("link-form-input-group-existing", "Existing group", false, true);
-      var groupExistingGroup = helper.node("select|id:link-form-select-group,class:link-form-select-group,tabindex:1");
-      var groupExistingPositionLabel = render.form.label("link-form-position", "Position");
+      var groupExistingLabel = render.form.label({
+        name: "link-form-input-group-existing",
+        labelText: "Existing group",
+        icon: true
+      });
+      var groupExistingGroupLabel = render.form.label({
+        name: "link-form-select-group",
+        labelText: "Name",
+        className: "sr-only"
+      });
+      var groupExistingGroupSelect = helper.node("select|id:link-form-select-group,class:link-form-select-group,tabindex:1");
+      var groupExistingPositionLabel = render.form.label({
+        name: "link-form-position",
+        labelText: "Position"
+      });
       var groupExistingPosition = helper.node("select|id:link-form-position,class:link-form-position,tabindex:1");
       var groupNewRadio = helper.node("input|class:link-form-input-group-new,id:link-form-input-group-new,type:radio,name:link-form-input-group,tabindex:1,value:new");
-      var groupNewLabel = render.form.label("link-form-input-group-new", "New group", false, true);
-      var groupNewInput = helper.node("input|type:text,class:link-form-input-new-group,id:link-form-input-new-group,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      var groupNewLabel = render.form.label({
+        name: "link-form-input-group-new",
+        labelText: "New group",
+        icon: true
+      });
+      var groupNewNameLabel = render.form.label({
+        name: "link-form-select-group",
+        labelText: "Name",
+        className: "sr-only"
+      });
+      var groupNewNameInput = helper.node("input|type:text,class:link-form-input-new-group,id:link-form-input-new-group,placeholder:Example group,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
       var groupNewRandomNameButton = render.form.button("Random Group name");
 
       form.appendChild(
@@ -1613,7 +1665,8 @@ var link = (function() {
               render.form.wrap([
                 render.form.indent([
                   render.form.wrap([
-                    groupExistingGroup
+                    groupExistingGroupLabel,
+                    groupExistingGroupSelect
                   ]),
                   render.form.wrap([
                     groupExistingPositionLabel,
@@ -1628,7 +1681,8 @@ var link = (function() {
               render.form.wrap([
                 render.form.indent([
                   render.form.wrap([
-                    groupNewInput,
+                    groupNewNameLabel,
+                    groupNewNameInput
                   ]),
                   render.form.wrap([
                     groupNewRandomNameButton
@@ -1642,27 +1696,49 @@ var link = (function() {
 
       // display
       var displayShowCheckbox = helper.node("input|class:link-form-input-display-visual-show,id:link-form-input-display-visual-show,type:checkbox,tabindex:1");
-      var displayShowLabel = render.form.label("link-form-input-display-visual-show", "Show Visual Element", "Display Letters, Icon or an Image on this Bookmark tile.", true);
+      var displayShowLabel = render.form.label({
+        name: "link-form-input-display-visual-show",
+        labelText: "Show Visual Element",
+        labelDescription: "Display Letters, Icon or an Image on this Bookmark tile.",
+        icon: true
+      });
 
       var displayLetterRadio = helper.node("input|class:link-form-input-display-visual-letter,id:link-form-input-display-visual-letter,type:radio,name:link-form-input-display-visual,tabindex:1,value:letter");
-      var displayLetterLabel = render.form.label("link-form-input-display-visual-letter", "Letters", false, true);
+      var displayLetterLabel = render.form.label({
+        name: "link-form-input-display-visual-letter",
+        labelText: "Letters",
+        icon: true
+      });
       var displayLetterInput = helper.node("input|type:text,class:link-form-input-letter,placeholder:E,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
 
       var displayIconRadio = helper.node("input|class:link-form-input-display-visual-icon,id:link-form-input-display-visual-icon,type:radio,name:link-form-input-display-visual,tabindex:1,value:icon");
-      var displayIconLabel = render.form.label("link-form-input-display-visual-icon", "Icon", false, true);
+      var displayIconLabel = render.form.label({
+        name: "link-form-input-display-visual-icon",
+        labelText: "Icon",
+        icon: true
+      });
       var displayIconInput = helper.node("input|type:text,class:link-form-input-display-visual-icon form-group-item-grow link-form-input-icon auto-suggest-input,placeholder:Search for Brands or Icons,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
       var displayIconFormGroupText = helper.node("div|class:form-group-text link-form-text-icon,tabindex:-1");
       var displayIconFormGroupClear = render.form.button(false, false, "icon-close");
       var displayIconHelper = render.form.helper("link-form-input-display-visual-icon-helper", "Refer to the \"Free\" and \"Brand\" icons from FontAwesome for full set of icons supported.");
 
-      var displayImageLabel = render.form.label("link-form-input-display-visual-image", "Image", false, true);
+      var displayImageLabel = render.form.label({
+        name: "link-form-input-display-visual-image",
+        labelText: "Image",
+        icon: true
+      });
       var displayImageRadio = helper.node("input|class:link-form-input-display-visual-image,id:link-form-input-display-visual-image,type:radio,name:link-form-input-display-visual,tabindex:1,value:image");
       var displayImageInput = helper.node("input|type:text,class:link-form-input-image,placeholder:https://...,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
       var displayImageHelper = render.form.helper("link-form-input-display-visual-image-helper", "Display an image in place of a letter or icon.");
 
       // name
       var nameShowCheckbox = helper.node("input|class:link-form-input-display-name-show,id:link-form-input-display-name-show,type:checkbox,tabindex:1");
-      var nameShowLabel = render.form.label("link-form-input-display-name-show", "Show Name", "Display a Name on this Bookmark tile.", true);
+      var nameShowLabel = render.form.label({
+        name: "link-form-input-display-name-show",
+        labelText: "Show Name",
+        labelDescription: "Display a Name on this Bookmark tile.",
+        icon: true
+      });
       var nameInput = helper.node("input|type:text,class:link-form-input-display-name,id:link-form-input-display-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
 
       form.appendChild(
@@ -1741,7 +1817,11 @@ var link = (function() {
       );
 
       // url
-      var urlLabel = render.form.label("link-form-input-url", "URL", false, true);
+      var urlLabel = render.form.label({
+        name: "link-form-input-url",
+        labelText: "URL",
+        icon: true
+      });
       var urlInput = helper.node("input|type:text,class:link-form-input-url,id:link-form-input-url,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
       var urlInputHelper = render.form.helper("link-form-input-url-helper", "Be sure to use the full URL and include \"http://\" or \"https\://\"...");
 
@@ -1769,155 +1849,318 @@ var link = (function() {
       var advancedCollapseButtonHelper = render.form.helper("link-form-image-helper", "Customise this Bookmarks appearance, Background, Colour and Accent.");
 
       // background
-      var imageLabel = render.form.label("link-form-image", "Background image");
+      var imageLabel = render.form.label({
+        name: "link-form-image",
+        labelText: "Background image"
+      });
       var imageInput = helper.node("input|type:text,class:link-form-image,id:link-form-image,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
       var imageInputHelper = render.form.helper("link-form-image-helper", "Display an image as the background of this Bookmark tile.");
-      var imageOpacityLabel = render.form.label("link-form-image-opacity-range", "Opacity");
+      var imageOpacityLabel = render.form.label({
+        name: "link-form-image-opacity-range",
+        labelText: "Opacity"
+      });
       var imageOpacityInputRange = helper.node("input|class:link-form-image-opacity-range mr-3,id:link-form-image-opacity-range,type:range,name:link-form-image-opacity-range,min:0,max:100,tabindex:1");
       var imageOpacityInputNumber = helper.node("input|class:link-form-image-opacity-number form-group-item-medium form-group-radius-left,type:number,min:0,max:100,tabindex:1");
       var imageOpacityInputDefault = render.form.button(false, "link-form-image-opacity-default", "icon-replay");
 
       // tall wide
       var wideInput = helper.node("input|type:checkbox,class:link-form-wide,id:link-form-wide,tabindex:1");
-      var wideLabel = render.form.label("link-form-wide", "Wide tile", "Bookmark tile to span across two columns.", true);
+      var wideLabel = render.form.label({
+        name: "link-form-wide",
+        labelText: "Wide tile",
+        labelDescription: "Bookmark tile to span across two columns.",
+        icon: true
+      });
       var tallInput = helper.node("input|type:checkbox,class:link-form-tall,id:link-form-tall,tabindex:1");
-      var tallLabel = render.form.label("link-form-tall", "Tall tile", "Bookmark tile to span across two rows.", true);
+      var tallLabel = render.form.label({
+        name: "link-form-tall",
+        labelText: "Tall tile",
+        labelDescription: "Bookmark tile to span across two rows.",
+        icon: true,
+      });
       var wideTallLabelHelper = render.form.helper("link-form-wide-tall-helper", "Bookmark tile will span across two columns or rows if the Bookmark Area is large enough.");
 
       // content
-      var displayAlignmentLabel = render.form.label(false, "Visual Element and Name alignment");
-      var displayAlignmentTopLeftRadio = helper.node("input|class:link-form-input-display-alignment-topleft,id:link-form-input-display-alignment-topleft,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:topleft");
-      var displayAlignmentTopLeftLabel = render.form.label("link-form-input-display-alignment-topleft", false, false, true, false);
-      var displayAlignmentTopCenterRadio = helper.node("input|class:link-form-input-display-alignment-topcenter,id:link-form-input-display-alignment-topcenter,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:topcenter");
-      var displayAlignmentTopCenterLabel = render.form.label("link-form-input-display-alignment-topcenter", false, false, true, false);
-      var displayAlignmentTopRightRadio = helper.node("input|class:link-form-input-display-alignment-topright,id:link-form-input-display-alignment-topright,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:topright");
-      var displayAlignmentTopRightLabel = render.form.label("link-form-input-display-alignment-topright", false, false, true, false);
-      var displayAlignmentCenterLeftRadio = helper.node("input|class:link-form-input-display-alignment-centerleft,id:link-form-input-display-alignment-centerleft,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:centerleft");
-      var displayAlignmentCenterLeftLabel = render.form.label("link-form-input-display-alignment-centerleft", false, false, true, false);
-      var displayAlignmentCenterCenterRadio = helper.node("input|class:link-form-input-display-alignment-centercenter,id:link-form-input-display-alignment-centercenter,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:centercenter");
-      var displayAlignmentCenterCenterLabel = render.form.label("link-form-input-display-alignment-centercenter", false, false, true, false);
-      var displayAlignmentCenterRightRadio = helper.node("input|class:link-form-input-display-alignment-centerright,id:link-form-input-display-alignment-centerright,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:centerright");
-      var displayAlignmentCenterRightLabel = render.form.label("link-form-input-display-alignment-centerright", false, false, true, false);
-      var displayAlignmentBottomLeftRadio = helper.node("input|class:link-form-input-display-alignment-bottomleft,id:link-form-input-display-alignment-bottomleft,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:bottomleft");
-      var displayAlignmentBottomLeftLabel = render.form.label("link-form-input-display-alignment-bottomleft", false, false, true, false);
-      var displayAlignmentBottomCenterRadio = helper.node("input|class:link-form-input-display-alignment-bottomcenter,id:link-form-input-display-alignment-bottomcenter,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:bottomcenter");
-      var displayAlignmentBottomCenterLabel = render.form.label("link-form-input-display-alignment-bottomcenter", false, false, true, false);
-      var displayAlignmentBottomRightRadio = helper.node("input|class:link-form-input-display-alignment-bottomright,id:link-form-input-display-alignment-bottomright,type:radio,name:class:link-form-input-display-alignment,tabindex:1,value:bottomright");
-      var displayAlignmentBottomRightLabel = render.form.label("link-form-input-display-alignment-bottomright", false, false, true, false);
+      var displayAlignmentLabel = render.form.label({
+        labelText: "Visual Element and Name alignment"
+      });
+      var displayAlignmentTopLeftRadio = helper.node("input|class:link-form-input-display-alignment-topleft,id:link-form-input-display-alignment-topleft,type:radio,name:link-form-input-display-alignment,tabindex:1,value:topleft");
+      var displayAlignmentTopLeftLabel = render.form.label({
+        name: "link-form-input-display-alignment-topleft",
+        icon: true
+      });
+      var displayAlignmentTopCenterRadio = helper.node("input|class:link-form-input-display-alignment-topcenter,id:link-form-input-display-alignment-topcenter,type:radio,name:link-form-input-display-alignment,tabindex:1,value:topcenter");
+      var displayAlignmentTopCenterLabel = render.form.label({
+        name: "link-form-input-display-alignment-topcenter",
+        icon: true
+      });
+      var displayAlignmentTopRightRadio = helper.node("input|class:link-form-input-display-alignment-topright,id:link-form-input-display-alignment-topright,type:radio,name:link-form-input-display-alignment,tabindex:1,value:topright");
+      var displayAlignmentTopRightLabel = render.form.label({
+        name: "link-form-input-display-alignment-topright",
+        icon: true
+      });
+      var displayAlignmentCenterLeftRadio = helper.node("input|class:link-form-input-display-alignment-centerleft,id:link-form-input-display-alignment-centerleft,type:radio,name:link-form-input-display-alignment,tabindex:1,value:centerleft");
+      var displayAlignmentCenterLeftLabel = render.form.label({
+        name: "link-form-input-display-alignment-centerleft",
+        icon: true
+      });
+      var displayAlignmentCenterCenterRadio = helper.node("input|class:link-form-input-display-alignment-centercenter,id:link-form-input-display-alignment-centercenter,type:radio,name:link-form-input-display-alignment,tabindex:1,value:centercenter");
+      var displayAlignmentCenterCenterLabel = render.form.label({
+        name: "link-form-input-display-alignment-centercenter",
+        icon: true
+      });
+      var displayAlignmentCenterRightRadio = helper.node("input|class:link-form-input-display-alignment-centerright,id:link-form-input-display-alignment-centerright,type:radio,name:link-form-input-display-alignment,tabindex:1,value:centerright");
+      var displayAlignmentCenterRightLabel = render.form.label({
+        name: "link-form-input-display-alignment-centerright",
+        icon: true
+      });
+      var displayAlignmentBottomLeftRadio = helper.node("input|class:link-form-input-display-alignment-bottomleft,id:link-form-input-display-alignment-bottomleft,type:radio,name:link-form-input-display-alignment,tabindex:1,value:bottomleft");
+      var displayAlignmentBottomLeftLabel = render.form.label({
+        name: "link-form-input-display-alignment-bottomleft",
+        icon: true
+      });
+      var displayAlignmentBottomCenterRadio = helper.node("input|class:link-form-input-display-alignment-bottomcenter,id:link-form-input-display-alignment-bottomcenter,type:radio,name:link-form-input-display-alignment,tabindex:1,value:bottomcenter");
+      var displayAlignmentBottomCenterLabel = render.form.label({
+        name: "link-form-input-display-alignment-bottomcenter",
+        icon: true
+      });
+      var displayAlignmentBottomRightRadio = helper.node("input|class:link-form-input-display-alignment-bottomright,id:link-form-input-display-alignment-bottomright,type:radio,name:link-form-input-display-alignment,tabindex:1,value:bottomright");
+      var displayAlignmentBottomRightLabel = render.form.label({
+        name: "link-form-input-display-alignment-bottomright",
+        icon: true
+      });
       var displayAlignmentHelper = render.form.helper("link-form-input-display-alignment-helper", "Position the Visual Element (letter, icon or image) and Name inside the Bookmark tile.");
 
-      var displayLetterSizeLabel = render.form.label("link-form-input-display-visual-letter-size-range", "Letter size");
+      var displayLetterSizeLabel = render.form.label({
+        name: "link-form-input-display-visual-letter-size-range",
+        labelText: "Letter size"
+      });
       var displayLetterSizeInputRange = helper.node("input|class:link-form-input-display-visual-letter-size-range mr-3,id:link-form-input-display-visual-letter-size-range,type:range,name:link-form-input-display-visual-letter-size-range,min:10,max:3000,step:10,tabindex:1");
       var displayLetterSizeInputNumber = helper.node("input|class:link-form-input-display-visual-letter-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:3000,step:10,tabindex:1");
       var displayLetterSizeInputDefault = render.form.button(false, "link-form-input-display-visual-letter-size-default", "icon-replay");
 
-      var displayIconSizeLabel = render.form.label("link-form-input-display-visual-icon-size-range", "Icon size");
+      var displayIconSizeLabel = render.form.label({
+        name: "link-form-input-display-visual-icon-size-range",
+        labelText: "Icon size"
+      });
       var displayIconSizeInputRange = helper.node("input|class:link-form-input-display-visual-icon-size-range mr-3,id:link-form-input-display-visual-icon-size-range,type:range,name:link-form-input-display-visual-icon-size-range,min:10,max:3000,step:10,tabindex:1");
       var displayIconSizeInputNumber = helper.node("input|class:link-form-input-display-visual-icon-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:3000,step:10,tabindex:1");
       var displayIconSizeInputDefault = render.form.button(false, "link-form-input-display-visual-icon-size-default", "icon-replay");
 
-      var displayImageSizeLabel = render.form.label("link-form-input-display-visual-image-size-range", "Image size");
+      var displayImageSizeLabel = render.form.label({
+        name: "link-form-input-display-visual-image-size-range",
+        labelText: "Image size"
+      });
       var displayImageSizeInputRange = helper.node("input|class:link-form-input-display-visual-image-size-range mr-3,id:link-form-input-display-visual-image-size-range,type:range,name:link-form-input-display-visual-image-size-range,min:10,max:3000,step:10,tabindex:1");
       var displayImageSizeInputNumber = helper.node("input|class:link-form-input-display-visual-image-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:3000,step:10,tabindex:1");
       var displayImageSizeInputDefault = render.form.button(false, "link-form-input-display-visual-image-size-default", "icon-replay");
 
-      var displayShadowSizeLabel = render.form.label("link-form-input-display-visual-shadow-size-range", "Shadow size");
+      var displayShadowSizeLabel = render.form.label({
+        name: "link-form-input-display-visual-shadow-size-range",
+        labelText: "Shadow size"
+      });
       var displayShadowSizeInputRange = helper.node("input|class:link-form-input-display-visual-shadow-size-range mr-3,id:link-form-input-display-visual-shadow-size-range,type:range,name:link-form-input-display-visual-shadow-size-range,min:0,max:100,tabindex:1");
       var displayShadowSizeInputNumber = helper.node("input|class:link-form-input-display-visual-shadow-size-number form-group-item-medium form-group-radius-left,type:number,min:0,max:100,tabindex:1");
       var displayShadowSizeInputDefault = render.form.button(false, "link-form-input-display-visual-shadow-size-default", "icon-replay");
       var displayShadowSizeInputHelper = render.form.helper("link-form-input-display-visual-shadow-size-helper", "Only applies to Letters or Icons.");
 
-      var nameSizeLabel = render.form.label("link-form-input-display-name-size-range", "Name size");
+      var nameSizeLabel = render.form.label({
+        name: "link-form-input-display-name-size-range",
+        labelText: "Name size"
+      });
       var nameSizeInputRange = helper.node("input|class:link-form-input-display-name-size-range mr-3,id:link-form-input-display-name-size-range,type:range,name:link-form-input-display-name-size-range,min:10,max:1500,step:10,tabindex:1");
       var nameSizeInputNumber = helper.node("input|class:link-form-input-display-name-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:1500,step:10,tabindex:1");
       var nameSizeInputDefault = render.form.button(false, "link-form-input-display-name-size-default", "icon-replay");
 
-      var displayRotateLabel = render.form.label("link-form-input-display-rotate-range", "Rotation");
+      var displayRotateLabel = render.form.label({
+        name: "link-form-input-display-rotate-range",
+        labelText: "Rotation"
+      });
       var displayRotateRange = helper.node("input|class:link-form-input-display-rotate-range mr-3,id:link-form-input-display-rotate-range,type:range,name:link-form-input-display-rotate-range,min:-180,max:180,tabindex:1");
       var displayRotateNumber = helper.node("input|class:link-form-input-display-rotate-number form-group-item-medium form-group-radius-left,type:number,min:-180,max:180,tabindex:1");
       var displayRotateDefault = render.form.button(false, "link-form-input-display-rotate-default", "icon-replay");
-      var displayTranslateXLabel = render.form.label("link-form-input-display-translate-x-range", "Horizontally offset");
+      var displayTranslateXLabel = render.form.label({
+        name: "link-form-input-display-translate-x-range",
+        labelText: "Horizontally offset"
+      });
       var displayTranslateXRange = helper.node("input|class:link-form-input-display-translate-x-range mr-3,id:link-form-input-display-translate-x-range,type:range,name:link-form-input-display-translate-x-range,min:-1000,max:1000,step:10,tabindex:1");
       var displayTranslateXNumber = helper.node("input|class:link-form-input-display-translate-x-number form-group-item-medium form-group-radius-left,type:number,min:-1000,max:1000,step:10,tabindex:1");
       var displayTranslateXDefault = render.form.button(false, "link-form-input-display-translate-x-default", "icon-replay");
-      var displayTranslateYLabel = render.form.label("link-form-input-display-translate-y-range", "Vertically offset");
+      var displayTranslateYLabel = render.form.label({
+        name: "link-form-input-display-translate-y-range",
+        labelText: "Vertically offset"
+      });
       var displayTranslateYRange = helper.node("input|class:link-form-input-display-translate-y-range mr-3,id:link-form-input-display-translate-y-range,type:range,name:link-form-input-display-translate-y-range,min:-1000,max:1000,step:10,tabindex:1");
       var displayTranslateYNumber = helper.node("input|class:link-form-input-display-translate-y-number form-group-item-medium form-group-radius-left,type:number,min:-1000,max:1000,step:10,tabindex:1");
       var displayTranslateYDefault = render.form.button(false, "link-form-input-display-translate-y-default", "icon-replay");
 
-      var displayGutterLabel = render.form.label("link-form-input-display-gutter-range", "Gutter");
+      var displayGutterLabel = render.form.label({
+        name: "link-form-input-display-gutter-range",
+        labelText: "Gutter"
+      });
       var displayGutterRange = helper.node("input|class:link-form-input-display-gutter-range mr-3,id:link-form-input-display-gutter-range,type:range,name:link-form-input-display-gutter-range,min:0,max:40,tabindex:1");
       var displayGutterNumber = helper.node("input|class:link-form-input-display-gutter-number form-group-item-medium form-group-radius-left,type:number,min:0,max:40,tabindex:1");
       var displayGutterDefault = render.form.button(false, "link-form-input-display-gutter-default", "icon-replay");
 
       var displayAlignmentHorizontalRadio = helper.node("input|class:link-form-input-alignment-horizontal,id:link-form-input-alignment-horizontal,type:radio,name:link-form-input-alignment,tabindex:1,value:horizontal");
-      var displayAlignmentHorizontalLabel = render.form.label("link-form-input-alignment-horizontal", "Align horizontally", "Works well with Bookmark List Style.", true);
+      var displayAlignmentHorizontalLabel = render.form.label({
+        name: "link-form-input-alignment-horizontal",
+        labelText: "Align horizontally",
+        labelDescription: "Works well with Bookmark List Style.",
+        icon: true
+      });
       var displayAlignmentVerticalRadio = helper.node("input|class:link-form-input-alignment-vertical,id:link-form-input-alignment-vertical,type:radio,name:link-form-input-alignment,tabindex:1,value:vertical");
-      var displayAlignmentVerticalLabel = render.form.label("link-form-input-alignment-vertical", "Align vertically", "Works well with Bookmark Block Style.", true);
+      var displayAlignmentVerticalLabel = render.form.label({
+        name: "link-form-input-alignment-vertical",
+        labelText: "Align vertically",
+        labelDescription: "Works well with Bookmark Block Style.",
+        icon: true
+      });
       var displayAlignmentHelper = render.form.helper("link-form-wide-tall-helper", "Only available when Visual Element and Name are shown.");
 
       var displayDirectionVisualnameRadio = helper.node("input|class:link-form-input-direction-visualname,id:link-form-input-direction-visualname,type:radio,name:link-form-input-direction,tabindex:1,value:visualname");
-      var displayDirectionVisualnameLabel = render.form.label("link-form-input-direction-visualname", "Visual Element then Name", "Stack the Visual Element (letter, icon or image) before the Name.", true);
+      var displayDirectionVisualnameLabel = render.form.label({
+        name: "link-form-input-direction-visualname",
+        labelText: "Visual Element then Name",
+        labelDescription: "Stack the Visual Element (letter, icon or image) before the Name.",
+        icon: true
+      });
       var displayDirectionNamevisualRadio = helper.node("input|class:link-form-input-direction-namevisual,id:link-form-input-direction-namevisual,type:radio,name:link-form-input-direction,tabindex:1,value:namevisual");
-      var displayDirectionNamevisualLabel = render.form.label("link-form-input-direction-namevisual", "Name then Visual Element", "Stack the Name before the Visual Element (letter, icon or image).", true);
+      var displayDirectionNamevisualLabel = render.form.label({
+        name: "link-form-input-direction-namevisual",
+        labelText: "Name then Visual Element",
+        labelDescription: "Stack the Name before the Visual Element (letter, icon or image).",
+        icon: true
+      });
       var displayDirectionHelper = render.form.helper("link-form-wide-tall-helper", "Only available when Visual Element and Name are shown.");
 
       // color
       var colorThemeRadio = helper.node("input|class:link-form-input-color-theme,id:link-form-input-color-theme,type:radio,name:link-form-input-color,tabindex:1,value:theme");
-      var colorThemeLabel = render.form.label("link-form-input-color-theme", "Theme colour", "Use the Colour defined by the Theme.", true);
+      var colorThemeLabel = render.form.label({
+        name: "link-form-input-color-theme",
+        labelText: "Theme colour",
+        labelDescription: "Use the Colour defined by the Theme.",
+        icon: true
+      });
       var colorCustomRadio = helper.node("input|class:link-form-input-color-custom,id:link-form-input-color-custom,type:radio,name:link-form-input-color,tabindex:1,value:custom");
-      var colorCustomLabel = render.form.label("link-form-input-color-custom", "Custom colour", "Override the Theme colour.", true);
+      var colorCustomLabel = render.form.label({
+        name: "link-form-input-color-custom",
+        labelText: "Custom colour",
+        labelDescription: "Override the Theme colour.",
+        icon: true
+      });
       var colorColorPicker = helper.node("input|id:link-form-input-color-picker,class:form-group-item-half link-form-input-color-picker,type:color,value:#000000,tabindex:1");
       var colorColorHex = helper.node("input|id:link-form-input-color-hex,class:form-group-item-half link-form-input-color-hex,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7");
 
-      var colorHslHLabel = helper.node("label:Hue|for:link-form-input-color-hsl-h-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var colorHslHLabel = render.form.label({
+        name: "link-form-input-color-hsl-h-range",
+        labelText: "Hue",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var colorHslHRange = helper.node("input|class:link-form-input-color-hsl-h-range mr-3,id:link-form-input-color-hsl-h-range,type:range,name:link-form-input-color-hsl-h-range,value:0,min:0,max:359,tabindex:1");
       var colorHslHNumber = helper.node("input|class:link-form-input-color-hsl-h-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:359,tabindex:1");
-      var colorHslSLabel = helper.node("label:Saturation|for:link-form-input-color-hsl-s-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var colorHslSLabel = render.form.label({
+        name: "link-form-input-color-hsl-s-range",
+        labelText: "Saturation",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var colorHslSRange = helper.node("input|class:link-form-input-color-hsl-s-range mr-3,id:link-form-input-color-hsl-s-range,type:range,name:link-form-input-color-hsl-s-range,value:0,min:0,max:100,tabindex:1");
       var colorHslSNumber = helper.node("input|class:link-form-input-color-hsl-s-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1");
-      var colorHslLLabel = helper.node("label:Lightness|for:link-form-input-color-hsl-l-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var colorHslLLabel = render.form.label({
+        name: "link-form-input-color-hsl-l-range",
+        labelText: "Lightness",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var colorHslLRange = helper.node("input|class:link-form-input-color-hsl-l-range mr-3,id:link-form-input-color-hsl-l-range,type:range,name:link-form-input-color-hsl-l-range,value:0,min:0,max:100,tabindex:1");
       var colorHslLNumber = helper.node("input|class:link-form-input-color-hsl-l-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1");
-      var colorRgbRLabel = helper.node("label:Red|for:link-form-input-color-rgb-r-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var colorRgbRLabel = render.form.label({
+        name: "link-form-input-color-rgb-r-range",
+        labelText: "Red",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var colorRgbRRange = helper.node("input|class:link-form-input-color-rgb-r-range mr-3,id:link-form-input-color-rgb-r-range,type:range,name:link-form-input-color-rgb-r-range,value:0,min:0,max:255,tabindex:1");
       var colorRgbRNumber = helper.node("input|class:link-form-input-color-rgb-r-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1");
-      var colorRgbGLabel = helper.node("label:Green|for:link-form-input-color-rgb-g-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var colorRgbGLabel = render.form.label({
+        name: "link-form-input-color-rgb-g-range",
+        labelText: "Green",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var colorRgbGRange = helper.node("input|class:link-form-input-color-rgb-g-range mr-3,id:link-form-input-color-rgb-g-range,type:range,name:link-form-input-color-rgb-g-range,value:0,min:0,max:255,tabindex:1");
       var colorRgbGNumber = helper.node("input|class:link-form-input-color-rgb-g-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1");
-      var colorRgbBLabel = helper.node("label:Blue|for:link-form-input-color-rgb-b-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var colorRgbBLabel = render.form.label({
+        name: "link-form-input-color-rgb-b-range",
+        labelText: "Blue",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var colorRgbBRange = helper.node("input|class:link-form-input-color-rgb-b-range mr-3,id:link-form-input-color-rgb-b-range,type:range,name:link-form-input-color-rgb-b-range,value:0,min:0,max:255,tabindex:1");
       var colorRgbBNumber = helper.node("input|class:link-form-input-color-rgb-b-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1");
 
-      var colorOpacityLabel = render.form.label("link-form-input-color-opacity-range", "Opacity");
+      var colorOpacityLabel = render.form.label({
+        name: "link-form-input-color-opacity-range",
+        labelText: "Opacity"
+      });
       var colorOpacityInputRange = helper.node("input|class:link-form-input-color-opacity-range mr-3,id:link-form-input-color-opacity-range,type:range,name:link-form-input-color-opacity-range,min:0,max:100,tabindex:1");
       var colorOpacityInputNumber = helper.node("input|class:link-form-input-color-opacity-number form-group-item-medium form-group-radius-left,type:number,min:0,max:100,tabindex:1");
       var colorOpacityInputDefault = render.form.button(false, "link-form-input-color-opacity-default", "icon-replay");
 
       // accent
       var accentThemeRadio = helper.node("input|class:link-form-input-accent-theme,id:link-form-input-accent-theme,type:radio,name:link-form-input-accent,tabindex:1,value:theme");
-      var accentThemeLabel = render.form.label("link-form-input-accent-theme", "Theme accent", "Use the Accent defined by the Theme.", true);
+      var accentThemeLabel = render.form.label({
+        name: "link-form-input-accent-theme",
+        labelText: "Theme accent",
+        labelDescription: "Use the Accent defined by the Theme.",
+        icon: true
+      });
       var accentCustomRadio = helper.node("input|class:link-form-input-accent-custom,id:link-form-input-accent-custom,type:radio,name:link-form-input-accent,tabindex:1,value:custom");
-      var accentCustomLabel = render.form.label("link-form-input-accent-custom", "Custom accent", "Override the Theme accent.", true);
+      var accentCustomLabel = render.form.label({
+        name: "link-form-input-accent-custom",
+        labelText: "Custom accent",
+        labelDescription: "Override the Theme accent.",
+        icon: true
+      });
       var accentColorPicker = helper.node("input|id:link-form-input-accent-picker,class:form-group-item-half link-form-input-accent-picker,type:color,value:#000000,tabindex:1");
       var accentColorHex = helper.node("input|id:link-form-input-accent-hex,class:form-group-item-half link-form-input-accent-hex,type:text,placeholder:Hex code,value:#000000,tabindex:1,maxlength:7");
 
-      var accentHslHLabel = helper.node("label:Hue|for:link-form-input-accent-hsl-h-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var accentHslHLabel = render.form.label({
+        name: "link-form-input-accent-hsl-h-range",
+        labelText: "Hue",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var accentHslHRange = helper.node("input|class:link-form-input-accent-hsl-h-range mr-3,id:link-form-input-accent-hsl-h-range,type:range,name:link-form-input-accent-hsl-h-range,value:0,min:0,max:359,tabindex:1");
       var accentHslHNumber = helper.node("input|class:link-form-input-accent-hsl-h-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:359,tabindex:1");
-      var accentHslSLabel = helper.node("label:Saturation|for:link-form-input-accent-hsl-s-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var accentHslSLabel = render.form.label({
+        name: "link-form-input-accent-hsl-s-range",
+        labelText: "Saturation",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var accentHslSRange = helper.node("input|class:link-form-input-accent-hsl-s-range mr-3,id:link-form-input-accent-hsl-s-range,type:range,name:link-form-input-accent-hsl-s-range,value:0,min:0,max:100,tabindex:1");
       var accentHslSNumber = helper.node("input|class:link-form-input-accent-hsl-s-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1");
-      var accentHslLLabel = helper.node("label:Lightness|for:link-form-input-accent-hsl-l-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var accentHslLLabel = render.form.label({
+        name: "link-form-input-accent-hsl-l-range",
+        labelText: "Lightness",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var accentHslLRange = helper.node("input|class:link-form-input-accent-hsl-l-range mr-3,id:link-form-input-accent-hsl-l-range,type:range,name:link-form-input-accent-hsl-l-range,value:0,min:0,max:100,tabindex:1");
       var accentHslLNumber = helper.node("input|class:link-form-input-accent-hsl-l-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:100,tabindex:1");
-      var accentRgbRLabel = helper.node("label:Red|for:link-form-input-accent-rgb-r-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var accentRgbRLabel = render.form.label({
+        name: "link-form-input-accent-rgb-r-range",
+        labelText: "Red",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var accentRgbRRange = helper.node("input|class:link-form-input-accent-rgb-r-range mr-3,id:link-form-input-accent-rgb-r-range,type:range,name:link-form-input-accent-rgb-r-range,value:0,min:0,max:255,tabindex:1");
       var accentRgbRNumber = helper.node("input|class:link-form-input-accent-rgb-r-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1");
-      var accentRgbGLabel = helper.node("label:Green|for:link-form-input-accent-rgb-g-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var accentRgbGLabel = render.form.label({
+        name: "link-form-input-accent-rgb-g-range",
+        labelText: "Green",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var accentRgbGRange = helper.node("input|class:link-form-input-accent-rgb-g-range mr-3,id:link-form-input-accent-rgb-g-range,type:range,name:link-form-input-accent-rgb-g-range,value:0,min:0,max:255,tabindex:1");
       var accentRgbGNumber = helper.node("input|class:link-form-input-accent-rgb-g-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1");
-      var accentRgbBLabel = helper.node("label:Blue|for:link-form-input-accent-rgb-b-range,class:form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0");
+      var accentRgbBLabel = render.form.label({
+        name: "link-form-input-accent-rgb-b-range",
+        labelText: "Blue",
+        className: "form-group-text form-group-text-left form-group-text-transparent form-group-text-borderless form-group-item-medium mr-3 pb-0"
+      });
       var accentRgbBRange = helper.node("input|class:link-form-input-accent-rgb-b-range mr-3,id:link-form-input-accent-rgb-b-range,type:range,name:link-form-input-accent-rgb-b-range,value:0,min:0,max:255,tabindex:1");
       var accentRgbBNumber = helper.node("input|class:link-form-input-accent-rgb-b-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1");
 
@@ -2309,15 +2552,15 @@ var link = (function() {
                 value: name
               }]
             });
-            groupExistingGroup.appendChild(option);
+            groupExistingGroupSelect.appendChild(option);
           });
         } else {
           groupNewRadio.checked = true;
           groupExistingRadio.setAttribute("disabled", "");
-          groupExistingGroup.setAttribute("disabled", "");
+          groupExistingGroupSelect.setAttribute("disabled", "");
           helper.addClass(groupExistingPositionLabel, "disabled");
           groupExistingPosition.setAttribute("disabled", "");
-          groupNewInput.removeAttribute("disabled");
+          groupNewNameInput.removeAttribute("disabled");
           groupNewRandomNameButton.removeAttribute("disabled");
           stagedLink.position.group.new = true;
         };
@@ -2354,7 +2597,7 @@ var link = (function() {
 
       var populateForm = function() {
         groupExistingRadio.checked = true;
-        groupExistingGroup.selectedIndex = stagedLink.position.origin.group;
+        groupExistingGroupSelect.selectedIndex = stagedLink.position.origin.group;
         if (options.useStagedLink) {
           groupExistingPosition.selectedIndex = stagedLink.position.origin.item;
         };
@@ -2710,16 +2953,20 @@ var link = (function() {
 
       var disableForm = function() {
         if (stagedLink.position.group.new) {
-          groupExistingGroup.setAttribute("disabled", "");
+          helper.addClass(groupExistingGroupLabel, "disabled");
+          groupExistingGroupSelect.setAttribute("disabled", "");
           groupExistingPosition.setAttribute("disabled", "");
           helper.addClass(groupExistingPositionLabel, "disabled");
-          groupNewInput.removeAttribute("disabled");
+          helper.removeClass(groupNewNameLabel, "disabled");
+          groupNewNameInput.removeAttribute("disabled");
           groupNewRandomNameButton.removeAttribute("disabled");
         } else {
-          groupExistingGroup.removeAttribute("disabled");
+          helper.removeClass(groupExistingGroupLabel, "disabled");
+          groupExistingGroupSelect.removeAttribute("disabled");
           groupExistingPosition.removeAttribute("disabled");
           helper.removeClass(groupExistingPositionLabel, "disabled");
-          groupNewInput.setAttribute("disabled", "");
+          helper.addClass(groupNewNameLabel, "disabled");
+          groupNewNameInput.setAttribute("disabled", "");
           groupNewRandomNameButton.setAttribute("disabled", "");
         };
 
@@ -3104,13 +3351,13 @@ var link = (function() {
         };
       }, false);
       groupExistingRadio.addEventListener("change", function(event) {
-        stagedLink.position.destination.group = groupExistingGroup.selectedIndex;
+        stagedLink.position.destination.group = groupExistingGroupSelect.selectedIndex;
         stagedLink.position.group.new = false;
         stagedLink.position.group.name.show = false;
         stagedLink.position.group.openAll.show = false;
         disableForm();
       }, false);
-      groupExistingGroup.addEventListener("change", function(event) {
+      groupExistingGroupSelect.addEventListener("change", function(event) {
         stagedLink.position.destination.group = this.selectedIndex;
         makePostionOptions();
         stagedLink.position.destination.item = groupExistingPosition.selectedIndex;
@@ -3125,7 +3372,7 @@ var link = (function() {
         stagedLink.position.group.openAll.show = true;
         disableForm();
       }, false);
-      groupNewInput.addEventListener("input", function(event) {
+      groupNewNameInput.addEventListener("input", function(event) {
         stagedLink.position.group.name.text = this.value;
       }, false);
       groupNewRandomNameButton.addEventListener("click", function(event) {
@@ -3133,7 +3380,7 @@ var link = (function() {
           adjectivesCount: helper.randomNumber(1, 3)
         });
         stagedLink.position.group.name.text = randomName;
-        groupNewInput.value = randomName;
+        groupNewNameInput.value = randomName;
       }, false);
       displayShowCheckbox.addEventListener("change", function(event) {
         stagedLink.link.display.visual.show = this.checked;
