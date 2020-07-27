@@ -1303,11 +1303,9 @@ var link = (function() {
       if (stagedLink.link.display.name.show) {
         linkItemClass.push("link-item-name");
       };
-      if (stagedLink.link.display.visual.show || stagedLink.link.display.name.show) {
-        linkItemClass.push("link-item-alignment-" + stagedLink.link.display.alignment);
-        linkItemClass.push("link-item-order-" + stagedLink.link.display.order);
-        linkItemClass.push("link-item-direction-" + stagedLink.link.display.direction);
-      };
+      linkItemClass.push("link-item-alignment-" + stagedLink.link.display.alignment);
+      linkItemClass.push("link-item-order-" + stagedLink.link.display.order);
+      linkItemClass.push("link-item-direction-" + stagedLink.link.display.direction);
       if (stagedLink.link.wide) {
         linkItemClass.push("link-item-wide");
       };
