@@ -479,6 +479,7 @@ var header = (function() {
     },
     menu: function() {
       var button = helper.node("button|class:control-menu-open header-menu button button-line,tabindex:1");
+      var buttonText = helper.node("span:Open settings menu|class:button-text sr-only");
       var baselineAlignmentCharacter = helper.node("span:-|class:baseline-alignment-icon-character,aria-hidden:true");
       var buttonIcon = helper.node("span|class:icon-settings");
       if (state.get.current().header.menu.style == "clear") {
@@ -486,6 +487,7 @@ var header = (function() {
       };
       button.appendChild(baselineAlignmentCharacter);
       button.appendChild(buttonIcon);
+      button.appendChild(buttonText);
       return button;
     }
   };
