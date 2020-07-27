@@ -1177,7 +1177,7 @@ var link = (function() {
 
       // position
       var groupFormPositionLabel = render.form.label({
-        name: "group-form-input-openall",
+        name: "group-form-position",
         labelText: "Position",
         icon: true
       });
