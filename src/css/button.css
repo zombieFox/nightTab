@@ -4,7 +4,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   background-color: rgb(var(--button-background));
-  padding: 0.25em 1em;
+  padding: 0.25em 1.25em;
   margin: 0;
   color: rgb(var(--button-text));
   font-size: 1em;

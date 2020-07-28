@@ -118,7 +118,7 @@ select {
     0.5em 0.375em,
     0.5em 0.375em;
   background-repeat: no-repeat;
-  padding: 0 3em 0 1em;
+  padding: 0 3em 0 1.25em;
   margin: 0;
   color: rgb(var(--form-label));
   font-size: 1em;
@@ -176,7 +176,7 @@ select:disabled:active {
 /* textarea */
 textarea {
   background-color: rgb(var(--form-input-background));
-  padding: 0.5em 1em;
+  padding: 0.5em 1.25em;
   margin: 0;
   color: rgb(var(--form-input-text));
   font-size: 1em;
@@ -252,7 +252,7 @@ input[type="search"],
 input[type="tel"],
 input[type="text"] {
   background-color: rgb(var(--form-input-background));
-  padding: 0 1em;
+  padding: 0 1.25em;
   margin: 0;
   color: rgb(var(--form-input-text));
   font-size: 1em;
@@ -1059,7 +1059,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-input-button input[type="color"]+label,
 .form-input-button input[type="file"]+label {
   background-color: rgb(var(--button-background));
-  padding: 0.25em 1em;
+  padding: 0.25em 1.25em;
   margin: 0;
   color: rgb(var(--button-text));
   font-size: 1em;
@@ -1758,7 +1758,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 .form-group-text {
   background-color: rgb(var(--form-group-text-background));
-  padding: 0 1em;
+  padding: 0 1.25em;
   margin: 0;
   color: rgb(var(--form-input-text));
   min-width: 4em;
@@ -1899,7 +1899,7 @@ input[type="range"]:disabled::-moz-range-progress {
 .form-dropdown-menu {
   background-color: rgb(var(--form-dropdown-background));
   border-radius: var(--theme-radius);
-  padding: 0.5em 0;
+  padding: 0.75em 0;
   position: absolute;
   width: 100%;
   min-width: 12em;
@@ -1954,7 +1954,7 @@ input[type="range"]:disabled::-moz-range-progress {
 
 /* form feedback */
 .form-feedback {
-  padding: 0.5em 1.5em 0.5em 1em;
+  padding: 0.75em 1.25em;
   background-color: rgb(var(--form-feedback-background));
   border-width: 0;
   border-left-width: calc(var(--layout-line-width) * 2);

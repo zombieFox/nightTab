@@ -38,6 +38,23 @@
   <link rel="stylesheet" href="css/fontawesome.css">
   <!-- end-css-block -->
   <style>
+    :root {
+      --layout-width: 90%;
+      --layout-spacer: 10em;
+    }
+
+    .style-guide {
+      margin: var(--layout-spacer) 0;
+      display: grid;
+      grid-gap: calc(var(--layout-spacer) / 2);
+      grid-template-columns: 1fr 3fr;
+    }
+
+    .style-guide-controls {
+      position: sticky;
+      top: calc(var(--layout-spacer) / 2);
+    }
+
     .style-guide-icon {
       padding: 1em;
       font-size: 1.5em;
@@ -48,338 +65,372 @@
 
 <body>
 
-  <main class="layout my-5">
-    <div class="form-wrap">
-      <div class="form-group">
-        <button class="button style-guide-control disable-on" tabindex="1">Disable</button>
-        <button class="button style-guide-control disable-off" tabindex="1">Enable</button>
-        <button class="button style-guide-control theme-dark" tabindex="1">Dark</button>
-        <button class="button style-guide-control theme-light" tabindex="1">Light</button>
-      </div>
-    </div>
-    <div class="form-wrap">
-      <label for="style-guide-control-theme-color" class="style-guide-control">Theme Colour</label>
-      <input id="style-guide-control-theme-color" class="style-guide-control theme-color" type="color" value="#818aa0" tabindex="1">
-    </div>
-    <div class="form-wrap">
-      <label for="style-guide-control-theme-accent" class="style-guide-control">Accent Colour</label>
-      <input id="style-guide-control-theme-accent" class="style-guide-control theme-accent" type="color" value="#fa8200" tabindex="1">
-    </div>
-    <div class="form-wrap">
-      <label for="radius" class="style-guide-control">Radius</label>
-      <input id="radius" class="style-guide-control radius" type="range" min="0" max="600" value="0" step="1" tabindex="1">
-    </div>
-    <hr>
-    <span class="style-guide-icon icon-add"></span>
-    <span class="style-guide-icon icon-arrow-back"></span>
-    <span class="style-guide-icon icon-arrow-downward"></span>
-    <span class="style-guide-icon icon-arrow-forward"></span>
-    <span class="style-guide-icon icon-arrow-upward"></span>
-    <span class="style-guide-icon icon-check"></span>
-    <span class="style-guide-icon icon-check-box-checked"></span>
-    <span class="style-guide-icon icon-check-box-unchecked"></span>
-    <span class="style-guide-icon icon-check-box-indeterminate"></span>
-    <span class="style-guide-icon icon-close"></span>
-    <span class="style-guide-icon icon-edit"></span>
-    <span class="style-guide-icon icon-done"></span>
-    <span class="style-guide-icon icon-arrow-down"></span>
-    <span class="style-guide-icon icon-arrow-left"></span>
-    <span class="style-guide-icon icon-arrow-right"></span>
-    <span class="style-guide-icon icon-arrow-up"></span>
-    <span class="style-guide-icon icon-more-horiz"></span>
-    <span class="style-guide-icon icon-more-vert"></span>
-    <span class="style-guide-icon icon-radio-unchecked"></span>
-    <span class="style-guide-icon icon-radio-checked"></span>
-    <span class="style-guide-icon icon-remove"></span>
-    <span class="style-guide-icon icon-settings"></span>
-    <span class="style-guide-icon icon-unfold-less"></span>
-    <span class="style-guide-icon icon-unfold-more"></span>
-    <span class="style-guide-icon icon-refresh"></span>
-    <span class="style-guide-icon icon-reorder"></span>
-    <span class="style-guide-icon icon-undo"></span>
-    <span class="style-guide-icon icon-redo"></span>
-    <span class="style-guide-icon icon-replay"></span>
-    <hr>
-    <div class="form-wrap">
-      <div class="form-inline">
-        <button class="button" tabindex="1">Button</button>
-        <button class="button button-line" tabindex="1">Button line</button>
-        <button class="button button-ring" tabindex="1">Button ring</button>
-      </div>
-    </div>
-    <div class="form-wrap">
-      <div class="form-inline">
-        <button class="button button-small" tabindex="1">Button small</button>
-        <button class="button" tabindex="1">Button medium</button>
-        <button class="button button-large" tabindex="1">Button large</button>
-      </div>
-    </div>
-    <hr>
-    <div class="form-wrap">
-      <div class="form-inline">
-        <div class="form-input-button">
-          <input id="style-guide-checkbox-button-1" type="checkbox" tabindex="1">
-          <label for="style-guide-checkbox-button-1" class="mb-0"><span class="label-icon"></span>Checkbox button</label>
-        </div>
-        <div class="form-input-button form-input-button-line">
-          <input id="style-guide-checkbox-button-2" type="checkbox" tabindex="1">
-          <label for="style-guide-checkbox-button-2" class="mb-0"><span class="label-icon"></span>Checkbox button line</label>
-        </div>
-        <div class="form-input-button form-input-button-ring">
-          <input id="style-guide-checkbox-button-3" type="checkbox" tabindex="1">
-          <label for="style-guide-checkbox-button-3" class="mb-0"><span class="label-icon"></span>Checkbox button ring</label>
-        </div>
-      </div>
-    </div>
-    <div class="form-wrap">
-      <div class="form-inline">
-        <div class="form-input-button form-input-hide">
-          <input id="style-guide-checkbox-button-4" type="checkbox" tabindex="1">
-          <label for="style-guide-checkbox-button-4" class="mb-0"><span class="label-icon"></span>Checkbox button input hidden</label>
-        </div>
-        <div class="form-input-button form-input-hide form-input-button-line">
-          <input id="style-guide-checkbox-button-5" type="checkbox" tabindex="1">
-          <label for="style-guide-checkbox-button-5" class="mb-0"><span class="label-icon"></span>Checkbox button input hidden line</label>
-        </div>
-        <div class="form-input-button form-input-hide form-input-button-ring">
-          <input id="style-guide-checkbox-button-6" type="checkbox" tabindex="1">
-          <label for="style-guide-checkbox-button-6" class="mb-0"><span class="label-icon"></span>Checkbox button input hidden ring</label>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class="form-wrap">
-      <div class="form-group form-group-nested-button">
-        <div class="form-input-button">
-          <input id="style-guide-radio-button-1" type="radio" name="style-guide-radio-button-1" tabindex="1">
-          <label for="style-guide-radio-button-1"><span class="label-icon"></span> Radio button</label>
-        </div>
-        <div class="form-input-button">
-          <input id="style-guide-radio-button-2" type="radio" name="style-guide-radio-button-1" tabindex="1">
-          <label for="style-guide-radio-button-2"><span class="label-icon"></span> Radio button</label>
-        </div>
-        <div class="form-input-button">
-          <input id="style-guide-radio-button-3" type="radio" name="style-guide-radio-button-1" tabindex="1">
-          <label for="style-guide-radio-button-3"><span class="label-icon"></span> Radio button</label>
-        </div>
-      </div>
-    </div>
-    <div class="form-wrap">
-      <div class="form-group form-group-nested-button">
-        <div class="form-input-button form-input-hide">
-          <input id="style-guide-radio-button-4" type="radio" name="style-guide-radio-button-2" tabindex="1">
-          <label for="style-guide-radio-button-4"><span class="label-icon"></span> Radio button input hidden</label>
-        </div>
-        <div class="form-input-button form-input-hide">
-          <input id="style-guide-radio-button-5" type="radio" name="style-guide-radio-button-2" tabindex="1">
-          <label for="style-guide-radio-button-5"><span class="label-icon"></span> Radio button input hidden</label>
-        </div>
-        <div class="form-input-button form-input-hide">
-          <input id="style-guide-radio-button-6" type="radio" name="style-guide-radio-button-2" tabindex="1">
-          <label for="style-guide-radio-button-6"><span class="label-icon"></span> Radio button input hidden</label>
-        </div>
-      </div>
-    </div>
-    <div class="form-wrap">
-      <div class="form-group form-group-nested-button">
-        <div class="form-input-button form-input-hide form-input-button-line">
-          <input id="style-guide-radio-button-7" type="radio" name="style-guide-radio-button-3" tabindex="1">
-          <label for="style-guide-radio-button-7"><span class="label-icon"></span> Radio button input hidden line</label>
-        </div>
-        <div class="form-input-button form-input-hide form-input-button-line">
-          <input id="style-guide-radio-button-8" type="radio" name="style-guide-radio-button-3" tabindex="1">
-          <label for="style-guide-radio-button-8"><span class="label-icon"></span> Radio button input hidden line</label>
-        </div>
-        <div class="form-input-button form-input-hide form-input-button-line">
-          <input id="style-guide-radio-button-9" type="radio" name="style-guide-radio-button-3" tabindex="1">
-          <label for="style-guide-radio-button-9"><span class="label-icon"></span> Radio button input hidden line</label>
-        </div>
-      </div>
-    </div>
-    <div class="form-wrap">
-      <div class="form-group form-group-nested-button">
-        <div class="form-input-button form-input-hide form-input-button-ring">
-          <input id="style-guide-radio-button-10" type="radio" name="style-guide-radio-button-4" tabindex="1">
-          <label for="style-guide-radio-button-10"><span class="label-icon"></span> Radio button input hidden ring</label>
-        </div>
-        <div class="form-input-button form-input-hide form-input-button-ring">
-          <input id="style-guide-radio-button-11" type="radio" name="style-guide-radio-button-4" tabindex="1">
-          <label for="style-guide-radio-button-11"><span class="label-icon"></span> Radio button input hidden ring</label>
-        </div>
-        <div class="form-input-button form-input-hide form-input-button-ring">
-          <input id="style-guide-radio-button-12" type="radio" name="style-guide-radio-button-4" tabindex="1">
-          <label for="style-guide-radio-button-12"><span class="label-icon"></span> Radio button input hidden ring</label>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class="form-wrap">
-      <div class="form-inline">
-        <div class="form-input-button input-color-dot form-input-button-line">
-          <input id="style-guide-input-color-1" type="color" tabindex="1" value="#fa8200">
-          <label for="style-guide-input-color-1">Input color button line</label>
-        </div>
-        <div class="form-input-button form-input-hide form-input-button-line">
-          <input id="style-guide-input-color-2" type="color" tabindex="1" value="#fa8200">
-          <label for="style-guide-input-color-2">Input color button input hidden line</label>
-        </div>
-        <div class="form-input-button input-color-dot input-color-dot-accent form-input-button-line">
-          <input id="style-guide-input-color-3" type="color" tabindex="1" value="#fa8200">
-          <label for="style-guide-input-color-3">Input color accent button line</label>
-        </div>
-        <div class="form-input-button input-color-dot input-color-dot-shade form-input-button-line">
-          <input id="style-guide-input-color-4" type="color" tabindex="1" value="#818aa0">
-          <label for="style-guide-input-color-4">Input color shade button line</label>
-        </div>
-        <div class="form-dropdown form-dropdown-inline">
-          <button class="style-guide-form-dropdown form-dropdown-toggle button button-line mb-0" tabindex="1">
-            <span class="button-text">Button dropdown</span>
-          </button>
-          <ul class="list-unstyled form-dropdown-menu">
-            <li>
-              <button class="button button-block text-left form-dropdown-menu-item" tabindex="1"><span class="button-text">Option 1</span></button>
-            </li>
-            <li>
-              <button class="button button-block text-left form-dropdown-menu-item" tabindex="1"><span class="button-text">Option 2</span></button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class="form-wrap">
-      <div class="form-inline form-inline-spacer">
+  <main class="layout style-guide">
+
+    <div class="style-guide-left">
+
+      <fieldset class="style-guide-controls">
         <div class="form-wrap">
-          <input id="style-guide-checkbox-1" type="checkbox" tabindex="1" checked>
-          <label for="style-guide-checkbox-1"><span class="label-icon"></span> Checkbox 1</label>
+          <div class="form-group">
+            <button class="button style-guide-control disable-on" tabindex="1">Disable</button>
+            <button class="button style-guide-control disable-off" tabindex="1">Enable</button>
+            <button class="button style-guide-control theme-dark" tabindex="1">Dark</button>
+            <button class="button style-guide-control theme-light" tabindex="1">Light</button>
+          </div>
         </div>
         <div class="form-wrap">
-          <input id="style-guide-checkbox-2" type="checkbox" tabindex="1">
-          <label for="style-guide-checkbox-2"><span class="label-icon"></span> Checkbox 2</label>
+          <label for="style-guide-control-theme-color" class="style-guide-control">Theme Colour</label>
+          <input id="style-guide-control-theme-color" class="style-guide-control theme-color" type="color" value="#818aa0" tabindex="1">
         </div>
         <div class="form-wrap">
-          <input id="style-guide-checkbox-3" type="checkbox" tabindex="1">
-          <label for="style-guide-checkbox-3"><span class="label-icon"></span> Checkbox 3</label>
+          <label for="style-guide-control-theme-accent" class="style-guide-control">Accent Colour</label>
+          <input id="style-guide-control-theme-accent" class="style-guide-control theme-accent" type="color" value="#fa8200" tabindex="1">
         </div>
-      </div>
+        <div class="form-wrap">
+          <label for="radius" class="style-guide-control">Radius</label>
+          <input id="radius" class="style-guide-control radius" type="range" min="0" max="600" value="0" step="1" tabindex="1">
+        </div>
+      </fieldset>
+
     </div>
-    <div class="form-wrap">
-      <div class="form-inline form-inline-spacer">
+
+    <div class="style-guide-right">
+
+      <fieldset>
+        <span class="style-guide-icon icon-add"></span>
+        <span class="style-guide-icon icon-arrow-back"></span>
+        <span class="style-guide-icon icon-arrow-downward"></span>
+        <span class="style-guide-icon icon-arrow-forward"></span>
+        <span class="style-guide-icon icon-arrow-upward"></span>
+        <span class="style-guide-icon icon-check"></span>
+        <span class="style-guide-icon icon-check-box-checked"></span>
+        <span class="style-guide-icon icon-check-box-unchecked"></span>
+        <span class="style-guide-icon icon-check-box-indeterminate"></span>
+        <span class="style-guide-icon icon-close"></span>
+        <span class="style-guide-icon icon-edit"></span>
+        <span class="style-guide-icon icon-done"></span>
+        <span class="style-guide-icon icon-arrow-down"></span>
+        <span class="style-guide-icon icon-arrow-left"></span>
+        <span class="style-guide-icon icon-arrow-right"></span>
+        <span class="style-guide-icon icon-arrow-up"></span>
+        <span class="style-guide-icon icon-more-horiz"></span>
+        <span class="style-guide-icon icon-more-vert"></span>
+        <span class="style-guide-icon icon-radio-unchecked"></span>
+        <span class="style-guide-icon icon-radio-checked"></span>
+        <span class="style-guide-icon icon-remove"></span>
+        <span class="style-guide-icon icon-settings"></span>
+        <span class="style-guide-icon icon-unfold-less"></span>
+        <span class="style-guide-icon icon-unfold-more"></span>
+        <span class="style-guide-icon icon-refresh"></span>
+        <span class="style-guide-icon icon-reorder"></span>
+        <span class="style-guide-icon icon-undo"></span>
+        <span class="style-guide-icon icon-redo"></span>
+        <span class="style-guide-icon icon-replay"></span>
+      </fieldset>
+
+      <fieldset>
         <div class="form-wrap">
-          <input id="style-guide-radio-7" type="radio" name="style-guide-radio-3" tabindex="1" checked>
-          <label for="style-guide-radio-7"><span class="label-icon"></span> Radio 1</label>
+          <div class="form-inline">
+            <button class="button" tabindex="1">Button</button>
+            <button class="button button-line" tabindex="1">Button line</button>
+            <button class="button button-ring" tabindex="1">Button ring</button>
+          </div>
         </div>
         <div class="form-wrap">
-          <input id="style-guide-radio-8" type="radio" name="style-guide-radio-3" tabindex="1">
-          <label for="style-guide-radio-8"><span class="label-icon"></span> Radio 2</label>
+          <div class="form-inline">
+            <button class="button button-small" tabindex="1">Button small</button>
+            <button class="button" tabindex="1">Button medium</button>
+            <button class="button button-large" tabindex="1">Button large</button>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-wrap">
+          <div class="form-inline">
+            <div class="form-input-button">
+              <input id="style-guide-checkbox-button-1" type="checkbox" tabindex="1">
+              <label for="style-guide-checkbox-button-1" class="mb-0"><span class="label-icon"></span>Checkbox button</label>
+            </div>
+            <div class="form-input-button form-input-button-line">
+              <input id="style-guide-checkbox-button-2" type="checkbox" tabindex="1">
+              <label for="style-guide-checkbox-button-2" class="mb-0"><span class="label-icon"></span>Checkbox button line</label>
+            </div>
+            <div class="form-input-button form-input-button-ring">
+              <input id="style-guide-checkbox-button-3" type="checkbox" tabindex="1">
+              <label for="style-guide-checkbox-button-3" class="mb-0"><span class="label-icon"></span>Checkbox button ring</label>
+            </div>
+          </div>
         </div>
         <div class="form-wrap">
-          <input id="style-guide-radio-9" type="radio" name="style-guide-radio-3" tabindex="1">
-          <label for="style-guide-radio-9"><span class="label-icon"></span> Radio 3</label>
+          <div class="form-inline">
+            <div class="form-input-button form-input-hide">
+              <input id="style-guide-checkbox-button-4" type="checkbox" tabindex="1">
+              <label for="style-guide-checkbox-button-4" class="mb-0"><span class="label-icon"></span>Checkbox button input hidden</label>
+            </div>
+            <div class="form-input-button form-input-hide form-input-button-line">
+              <input id="style-guide-checkbox-button-5" type="checkbox" tabindex="1">
+              <label for="style-guide-checkbox-button-5" class="mb-0"><span class="label-icon"></span>Checkbox button input hidden line</label>
+            </div>
+            <div class="form-input-button form-input-hide form-input-button-ring">
+              <input id="style-guide-checkbox-button-6" type="checkbox" tabindex="1">
+              <label for="style-guide-checkbox-button-6" class="mb-0"><span class="label-icon"></span>Checkbox button input hidden ring</label>
+            </div>
+          </div>
         </div>
-      </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-wrap">
+          <div class="form-group form-group-nested-button">
+            <div class="form-input-button">
+              <input id="style-guide-radio-button-1" type="radio" name="style-guide-radio-button-1" tabindex="1">
+              <label for="style-guide-radio-button-1"><span class="label-icon"></span> Radio button</label>
+            </div>
+            <div class="form-input-button">
+              <input id="style-guide-radio-button-2" type="radio" name="style-guide-radio-button-1" tabindex="1">
+              <label for="style-guide-radio-button-2"><span class="label-icon"></span> Radio button</label>
+            </div>
+            <div class="form-input-button">
+              <input id="style-guide-radio-button-3" type="radio" name="style-guide-radio-button-1" tabindex="1">
+              <label for="style-guide-radio-button-3"><span class="label-icon"></span> Radio button</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrap">
+          <div class="form-group form-group-nested-button">
+            <div class="form-input-button form-input-hide">
+              <input id="style-guide-radio-button-4" type="radio" name="style-guide-radio-button-2" tabindex="1">
+              <label for="style-guide-radio-button-4"><span class="label-icon"></span> Radio button input hidden</label>
+            </div>
+            <div class="form-input-button form-input-hide">
+              <input id="style-guide-radio-button-5" type="radio" name="style-guide-radio-button-2" tabindex="1">
+              <label for="style-guide-radio-button-5"><span class="label-icon"></span> Radio button input hidden</label>
+            </div>
+            <div class="form-input-button form-input-hide">
+              <input id="style-guide-radio-button-6" type="radio" name="style-guide-radio-button-2" tabindex="1">
+              <label for="style-guide-radio-button-6"><span class="label-icon"></span> Radio button input hidden</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrap">
+          <div class="form-group form-group-nested-button">
+            <div class="form-input-button form-input-hide form-input-button-line">
+              <input id="style-guide-radio-button-7" type="radio" name="style-guide-radio-button-3" tabindex="1">
+              <label for="style-guide-radio-button-7"><span class="label-icon"></span> Radio button input hidden line</label>
+            </div>
+            <div class="form-input-button form-input-hide form-input-button-line">
+              <input id="style-guide-radio-button-8" type="radio" name="style-guide-radio-button-3" tabindex="1">
+              <label for="style-guide-radio-button-8"><span class="label-icon"></span> Radio button input hidden line</label>
+            </div>
+            <div class="form-input-button form-input-hide form-input-button-line">
+              <input id="style-guide-radio-button-9" type="radio" name="style-guide-radio-button-3" tabindex="1">
+              <label for="style-guide-radio-button-9"><span class="label-icon"></span> Radio button input hidden line</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrap">
+          <div class="form-group form-group-nested-button">
+            <div class="form-input-button form-input-hide form-input-button-ring">
+              <input id="style-guide-radio-button-10" type="radio" name="style-guide-radio-button-4" tabindex="1">
+              <label for="style-guide-radio-button-10"><span class="label-icon"></span> Radio button input hidden ring</label>
+            </div>
+            <div class="form-input-button form-input-hide form-input-button-ring">
+              <input id="style-guide-radio-button-11" type="radio" name="style-guide-radio-button-4" tabindex="1">
+              <label for="style-guide-radio-button-11"><span class="label-icon"></span> Radio button input hidden ring</label>
+            </div>
+            <div class="form-input-button form-input-hide form-input-button-ring">
+              <input id="style-guide-radio-button-12" type="radio" name="style-guide-radio-button-4" tabindex="1">
+              <label for="style-guide-radio-button-12"><span class="label-icon"></span> Radio button input hidden ring</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-wrap">
+          <div class="form-inline">
+            <div class="form-input-button input-color-dot form-input-button-line">
+              <input id="style-guide-input-color-1" type="color" tabindex="1" value="#fa8200">
+              <label for="style-guide-input-color-1">Input color button line</label>
+            </div>
+            <div class="form-input-button form-input-hide form-input-button-line">
+              <input id="style-guide-input-color-2" type="color" tabindex="1" value="#fa8200">
+              <label for="style-guide-input-color-2">Input color button input hidden line</label>
+            </div>
+            <div class="form-input-button input-color-dot input-color-dot-accent form-input-button-line">
+              <input id="style-guide-input-color-3" type="color" tabindex="1" value="#fa8200">
+              <label for="style-guide-input-color-3">Input color accent button line</label>
+            </div>
+            <div class="form-input-button input-color-dot input-color-dot-shade form-input-button-line">
+              <input id="style-guide-input-color-4" type="color" tabindex="1" value="#818aa0">
+              <label for="style-guide-input-color-4">Input color shade button line</label>
+            </div>
+            <div class="form-dropdown form-dropdown-inline">
+              <button class="style-guide-form-dropdown form-dropdown-toggle button button-line mb-0" tabindex="1">
+                <span class="button-text">Button dropdown</span>
+              </button>
+              <ul class="list-unstyled form-dropdown-menu">
+                <li>
+                  <button class="button button-block text-left form-dropdown-menu-item" tabindex="1"><span class="button-text">Option 1</span></button>
+                </li>
+                <li>
+                  <button class="button button-block text-left form-dropdown-menu-item" tabindex="1"><span class="button-text">Option 2</span></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-wrap">
+          <div class="form-inline form-inline-spacer">
+            <div class="form-wrap">
+              <input id="style-guide-checkbox-1" type="checkbox" tabindex="1" checked>
+              <label for="style-guide-checkbox-1"><span class="label-icon"></span> Checkbox 1</label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-checkbox-2" type="checkbox" tabindex="1">
+              <label for="style-guide-checkbox-2"><span class="label-icon"></span> Checkbox 2</label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-checkbox-3" type="checkbox" tabindex="1">
+              <label for="style-guide-checkbox-3"><span class="label-icon"></span> Checkbox 3</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrap">
+          <div class="form-inline form-inline-spacer">
+            <div class="form-wrap">
+              <input id="style-guide-radio-7" type="radio" name="style-guide-radio-3" tabindex="1" checked>
+              <label for="style-guide-radio-7"><span class="label-icon"></span> Radio 1</label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-radio-8" type="radio" name="style-guide-radio-3" tabindex="1">
+              <label for="style-guide-radio-8"><span class="label-icon"></span> Radio 2</label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-radio-9" type="radio" name="style-guide-radio-3" tabindex="1">
+              <label for="style-guide-radio-9"><span class="label-icon"></span> Radio 3</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrap">
+          <div class="form-grid form-grid-3x3">
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-topleft" class="style-guide-form-grid-topleft" type="radio" name="style-guide-form-grid-3x3" value="topleft" tabindex="1" checked>
+              <label for="style-guide-form-grid-topleft"><span class="label-icon"></span> <span class="sr-only">Top left</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-topcenter" class="style-guide-form-grid-topcenter" type="radio" name="style-guide-form-grid-3x3" value="topcenter" tabindex="1">
+              <label for="style-guide-form-grid-topcenter"><span class="label-icon"></span> <span class="sr-only">Top center</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-topright" class="style-guide-form-grid-topright" type="radio" name="style-guide-form-grid-3x3" value="topright" tabindex="1">
+              <label for="style-guide-form-grid-topright"><span class="label-icon"></span> <span class="sr-only">Top right</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-centerleft" class="style-guide-form-grid-centerleft" type="radio" name="style-guide-form-grid-3x3" value="centerleft" tabindex="1">
+              <label for="style-guide-form-grid-centerleft"><span class="label-icon"></span> <span class="sr-only">Center left</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-centercenter" class="style-guide-form-grid-centercenter" type="radio" name="style-guide-form-grid-3x3" value="centercenter" tabindex="1">
+              <label for="style-guide-form-grid-centercenter"><span class="label-icon"></span> <span class="sr-only">Center center</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-centerright" class="style-guide-form-grid-centerright" type="radio" name="style-guide-form-grid-3x3" value="centerright" tabindex="1">
+              <label for="style-guide-form-grid-centerright"><span class="label-icon"></span> <span class="sr-only">Center right</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-bottomleft" class="style-guide-form-grid-bottomleft" type="radio" name="style-guide-form-grid-3x3" value="bottomleft" tabindex="1">
+              <label for="style-guide-form-grid-bottomleft"><span class="label-icon"></span> <span class="sr-only">Bottom left</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-bottomcenter" class="style-guide-form-grid-bottomcenter" type="radio" name="style-guide-form-grid-3x3" value="bottomcenter" tabindex="1">
+              <label for="style-guide-form-grid-bottomcenter"><span class="label-icon"></span> <span class="sr-only">Bottom Center</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-bottomright" class="style-guide-form-grid-bottomright" type="radio" name="style-guide-form-grid-3x3" value="bottomright" tabindex="1">
+              <label for="style-guide-form-grid-bottomright"><span class="label-icon"></span> <span class="sr-only">Bottom right</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrap">
+          <div class="form-grid form-grid-3x1">
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-left" class="style-guide-form-grid-left" type="radio" name="style-guide-form-grid-3x1" value="centerleft" tabindex="1" checked>
+              <label for="style-guide-form-grid-left"><span class="label-icon"></span> <span class="sr-only">Center left</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-center" class="style-guide-form-grid-center" type="radio" name="style-guide-form-grid-3x1" value="centercenter" tabindex="1">
+              <label for="style-guide-form-grid-center"><span class="label-icon"></span> <span class="sr-only">Center center</span></label>
+            </div>
+            <div class="form-wrap">
+              <input id="style-guide-form-grid-right" class="style-guide-form-grid-right" type="radio" name="style-guide-form-grid-3x1" value="centerright" tabindex="1">
+              <label for="style-guide-form-grid-right"><span class="label-icon"></span> <span class="sr-only">Center right</span></label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-wrap">
+          <label for="style-guide-input-text">Input Text</label>
+          <input id="style-guide-input-text" class="mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Placeholder" tabindex="1">
+        </div>
+        <div class="form-wrap">
+          <label for="style-guide-textarea">Textarea</label>
+          <textarea id="style-guide-textarea" class="textarea mb-0" spellcheck="false" placeholder="Placeholder" tabindex="1"></textarea>
+        </div>
+        <div class="form-wrap">
+          <label for="style-guide-input-range">Input Range</label>
+          <input id="style-guide-input-range" class="mb-0" type="range" min="1" max="100" value="1" tabindex="1">
+        </div>
+        <div class="form-wrap">
+          <label for="style-guide-input-colour">Input Colour</label>
+          <input id="style-guide-input-colour" class="mb-0" type="color" value="#000000" tabindex="1">
+        </div>
+        <div class="form-wrap">
+          <label for="style-guide-select-1">Select</label>
+          <select id="style-guide-select-1" class="mb-0" tabindex="1">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-wrap">
+          <label for="style-guide-form-group-1">Form Group</label>
+          <div class="form-group form-group-block mb-0">
+            <input id="style-guide-form-group-1" class="form-group-item-half mb-0" type="text" placeholder="Placeholder" tabindex="1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <input id="form-group-3" class="form-group-item-half mb-0" type="color" value="#000000" tabindex="1">
+            <button class="button button-line mb-0" tabindex="1"><span class="button-text">Button</span></button>
+            <select id="select-2" class="mb-0" tabindex="1">
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+            <div class="form-group-text" tabindex="1">Form Group Text</div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-wrap">
+          <div class="form-feedback">
+            <p class="muted">Form feedback.</p>
+            <p class="muted small">With some small text.</p>
+          </div>
+        </div>
+      </fieldset>
+
     </div>
-    <div class="form-wrap">
-      <div class="form-grid form-grid-3x3">
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-topleft" class="style-guide-form-grid-topleft" type="radio" name="style-guide-form-grid-3x3" value="topleft" tabindex="1" checked>
-          <label for="style-guide-form-grid-topleft"><span class="label-icon"></span> <span class="sr-only">Top left</span></label>
-        </div>
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-topcenter" class="style-guide-form-grid-topcenter" type="radio" name="style-guide-form-grid-3x3" value="topcenter" tabindex="1">
-          <label for="style-guide-form-grid-topcenter"><span class="label-icon"></span> <span class="sr-only">Top center</span></label>
-        </div>
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-topright" class="style-guide-form-grid-topright" type="radio" name="style-guide-form-grid-3x3" value="topright" tabindex="1">
-          <label for="style-guide-form-grid-topright"><span class="label-icon"></span> <span class="sr-only">Top right</span></label>
-        </div>
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-centerleft" class="style-guide-form-grid-centerleft" type="radio" name="style-guide-form-grid-3x3" value="centerleft" tabindex="1">
-          <label for="style-guide-form-grid-centerleft"><span class="label-icon"></span> <span class="sr-only">Center left</span></label>
-        </div>
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-centercenter" class="style-guide-form-grid-centercenter" type="radio" name="style-guide-form-grid-3x3" value="centercenter" tabindex="1">
-          <label for="style-guide-form-grid-centercenter"><span class="label-icon"></span> <span class="sr-only">Center center</span></label>
-        </div>
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-centerright" class="style-guide-form-grid-centerright" type="radio" name="style-guide-form-grid-3x3" value="centerright" tabindex="1">
-          <label for="style-guide-form-grid-centerright"><span class="label-icon"></span> <span class="sr-only">Center right</span></label>
-        </div>
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-bottomleft" class="style-guide-form-grid-bottomleft" type="radio" name="style-guide-form-grid-3x3" value="bottomleft" tabindex="1">
-          <label for="style-guide-form-grid-bottomleft"><span class="label-icon"></span> <span class="sr-only">Bottom left</span></label>
-        </div>
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-bottomcenter" class="style-guide-form-grid-bottomcenter" type="radio" name="style-guide-form-grid-3x3" value="bottomcenter" tabindex="1">
-          <label for="style-guide-form-grid-bottomcenter"><span class="label-icon"></span> <span class="sr-only">Bottom Center</span></label>
-        </div>
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-bottomright" class="style-guide-form-grid-bottomright" type="radio" name="style-guide-form-grid-3x3" value="bottomright" tabindex="1">
-          <label for="style-guide-form-grid-bottomright"><span class="label-icon"></span> <span class="sr-only">Bottom right</span></label>
-        </div>
-      </div>
-    </div>
-    <div class="form-wrap">
-      <div class="form-grid form-grid-3x1">
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-left" class="style-guide-form-grid-left" type="radio" name="style-guide-form-grid-3x1" value="centerleft" tabindex="1" checked>
-          <label for="style-guide-form-grid-left"><span class="label-icon"></span> <span class="sr-only">Center left</span></label>
-        </div>
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-center" class="style-guide-form-grid-center" type="radio" name="style-guide-form-grid-3x1" value="centercenter" tabindex="1">
-          <label for="style-guide-form-grid-center"><span class="label-icon"></span> <span class="sr-only">Center center</span></label>
-        </div>
-        <div class="form-wrap">
-          <input id="style-guide-form-grid-right" class="style-guide-form-grid-right" type="radio" name="style-guide-form-grid-3x1" value="centerright" tabindex="1">
-          <label for="style-guide-form-grid-right"><span class="label-icon"></span> <span class="sr-only">Center right</span></label>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class="form-wrap">
-      <label for="style-guide-input-text">Input Text</label>
-      <input id="style-guide-input-text" class="mb-0" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Placeholder" tabindex="1">
-    </div>
-    <div class="form-wrap">
-      <label for="style-guide-textarea">Textarea</label>
-      <textarea id="style-guide-textarea" class="textarea mb-0" spellcheck="false" placeholder="Placeholder" tabindex="1"></textarea>
-    </div>
-    <div class="form-wrap">
-      <label for="style-guide-input-range">Input Range</label>
-      <input id="style-guide-input-range" class="mb-0" type="range" min="1" max="100" value="1" tabindex="1">
-    </div>
-    <div class="form-wrap">
-      <label for="style-guide-input-colour">Input Colour</label>
-      <input id="style-guide-input-colour" class="mb-0" type="color" value="#000000" tabindex="1">
-    </div>
-    <div class="form-wrap">
-      <label for="style-guide-select-1">Select</label>
-      <select id="style-guide-select-1" class="mb-0" tabindex="1">
-        <option>Option 1</option>
-        <option>Option 2</option>
-        <option>Option 3</option>
-      </select>
-    </div>
-    <div class="form-wrap">
-      <label for="style-guide-form-group-1">Form Group</label>
-      <div class="form-group form-group-block mb-0">
-        <input id="style-guide-form-group-1" class="form-group-item-half mb-0" type="text" placeholder="Placeholder" tabindex="1" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-        <input id="form-group-3" class="form-group-item-half mb-0" type="color" value="#000000" tabindex="1">
-        <button class="button button-line mb-0" tabindex="1"><span class="button-text">Button</span></button>
-        <select id="select-2" class="mb-0" tabindex="1">
-          <option>Option 1</option>
-          <option>Option 2</option>
-          <option>Option 3</option>
-        </select>
-        <div class="form-group-text" tabindex="1">Form Group Text</div>
-      </div>
-    </div>
-    <div class="form-wrap">
-      <div class="form-feedback">
-        <p class="muted">Form feedback.</p>
-        <p class="muted small">With some small text.</p>
-      </div>
-    </div>
+
+
+
   </main>
 
   <script src="js/helper.js"></script>
@@ -476,6 +527,10 @@
               renderShade("--theme-shade-positive-", i, rgb);
             };
           }
+        },
+        accent: function() {
+          var color = helper.convertColor.hex.rgb(helper.e(".theme-accent").value);
+          helper.e("html").style.setProperty("--theme-accent", color.r + ", " + color.g + ", " + color.b);
         }
       }
     };
@@ -501,13 +556,13 @@
       helper.toggleClass(helper.e(".form-dropdown-menu"), "form-dropdown-menu-bottom");
     }, false);
     helper.e(".theme-accent").addEventListener("change", function() {
-      var color = helper.convertColor.hex.rgb(this.value);
-      helper.e("html").style.setProperty("--theme-accent", color.r + ", " + color.g + ", " + color.b);
+      theme.render.accent();
     }, false);
     helper.e(".theme-color").addEventListener("change", function() {
       theme.render.color.shade();
     }, false);
     theme.render.color.shade();
+    theme.render.accent();
   </script>
 
 </body>
