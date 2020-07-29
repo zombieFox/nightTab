@@ -1326,6 +1326,30 @@ var update = (function() {
       data.state.link.item.accent.by = "theme";
       delete data.state.link.item.display.visual.show;
       return data;
+    },
+    "5.74.0": function(data) {
+      data.bookmarks.forEach(function(group, index) {
+        group.items.forEach(function(item, index) {
+          item.background = {
+            show: false,
+            type: "image",
+            opacity: item.image.opacity,
+            image: {
+              url: item.image.url
+            },
+            video: {
+              url: ""
+            }
+          };
+          if (item.image.url != "") {
+            item.background.show = true;
+          };
+          delete item.image;
+        });
+      });
+      data.state.link.item.background = data.state.link.item.image;
+      delete data.state.link.item.image;
+      return data;
     }
   };
 

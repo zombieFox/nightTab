@@ -205,7 +205,7 @@ var state = (function() {
             b: 0
           }
         },
-        image: {
+        background: {
           opacity: 1
         },
         display: {
@@ -455,7 +455,7 @@ var state = (function() {
         color: {
           opacity: 1
         },
-        image: {
+        background: {
           opacity: 1
         },
         display: {

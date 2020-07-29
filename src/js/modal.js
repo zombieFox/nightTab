@@ -77,21 +77,24 @@ var modal = (function() {
       cancelAction: null,
       actionText: "OK",
       cancelText: "Cancel",
-      size: "medium"
+      size: "medium",
+      width: null
     };
     if (override) {
       options = helper.applyOptions(options, override);
     };
     var _makeModal = function() {
       var body = helper.e("body");
-      var modal = helper.node("div");
+      var modal = helper.node("div|class:modal");
       var modalWrapper = helper.node("div|class:modal-wrapper");
-      if (options.size == "large") {
-        modal.setAttribute("class", "modal modal-large");
+      if (options.width && typeof options.width == "number") {
+        modal.setAttribute("style", "--modal-size: " + options.width + "em;");
       } else if (options.size == "small") {
-        modal.setAttribute("class", "modal modal-small");
-      } else {
-        modal.setAttribute("class", "modal");
+        modal.setAttribute("style", "--modal-size: var(--modal-small);");
+      } else if (options.size == "medium") {
+        modal.setAttribute("style", "--modal-size: var(--modal-medium);");
+      } else if (options.size == "large") {
+        modal.setAttribute("style", "--modal-size: var(--modal-large);");
       };
       modal.close = function() {
         if (modal.classList.contains("is-opaque")) {

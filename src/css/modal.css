@@ -3,7 +3,7 @@
   top: 50%;
   left: 50%;
   font-size: 1em;
-  width: 50em;
+  width: var(--modal-size);
   max-width: calc(100% - 2em);
   min-width: 10em;
   transform: translate(-50%, -50%);
@@ -11,15 +11,6 @@
   perspective: 1000px;
   transition: opacity var(--layout-transition-extra-fast);
   z-index: var(--z-index-modal);
-}
-
-.modal-large {
-  width: 70em;
-  max-width: calc(100% - 2em);
-}
-
-.modal-small {
-  width: 30em;
 }
 
 .modal-wrapper {
@@ -50,7 +41,7 @@
 }
 
 .modal-body-spacer {
-  margin: 2em;
+  margin: calc(var(--form-wrap-space) * 2) calc(var(--form-wrap-space) * 2.5);
 }
 
 .modal-heading:focus {

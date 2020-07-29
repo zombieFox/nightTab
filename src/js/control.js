@@ -6182,9 +6182,23 @@ var control = (function() {
             link.groupAndItems();
           }
         }],
-        image: [{
-          element: ".control-link-item-image-opacity-range",
-          path: "link.item.image.opacity",
+        background: [{
+          element: ".control-link-item-background-show",
+          type: "button",
+          func: function() {
+            link.mod.item.background.show();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-item-background-hide",
+          type: "button",
+          func: function() {
+            link.mod.item.background.hide();
+            link.groupAndItems();
+          }
+        }, {
+          element: ".control-link-item-background-opacity-range",
+          path: "link.item.background.opacity",
           type: "range",
           valueConvert: ["float"],
           valueModify: {
@@ -6192,14 +6206,14 @@ var control = (function() {
             max: 100
           },
           mirrorElement: [{
-            element: ".control-link-item-image-opacity-number",
-            path: "link.item.image.opacity",
+            element: ".control-link-item-background-opacity-number",
+            path: "link.item.background.opacity",
             type: "number",
             valueConvert: ["float"]
           }]
         }, {
-          element: ".control-link-item-image-opacity-number",
-          path: "link.item.image.opacity",
+          element: ".control-link-item-background-opacity-number",
+          path: "link.item.background.opacity",
           type: "number",
           valueConvert: ["float"],
           valueModify: {
@@ -6207,23 +6221,23 @@ var control = (function() {
             max: 100
           },
           mirrorElement: [{
-            element: ".control-link-item-image-opacity-range",
-            path: "link.item.image.opacity",
+            element: ".control-link-item-background-opacity-range",
+            path: "link.item.background.opacity",
             type: "number",
             valueConvert: ["float"]
           }]
         }, {
-          element: ".control-link-item-image-opacity-default",
+          element: ".control-link-item-background-opacity-default",
           type: "button",
           func: function() {
-            mod.default("link.item.image.opacity");
+            mod.default("link.item.background.opacity");
             render.update.control.menu();
           }
         }, {
-          element: ".control-link-item-image-opacity-apply",
+          element: ".control-link-item-background-opacity-apply",
           type: "button",
           func: function() {
-            link.mod.item.image.opacity();
+            link.mod.item.background.opacity();
             link.groupAndItems();
           }
         }],
@@ -11448,6 +11462,14 @@ var control = (function() {
             ".control-link-item-accent-by-custom",
             ".control-link-item-accent-apply",
             ".control-link-item-accent-rainbow",
+            ".control-link-item-background-show",
+            ".control-link-item-background-hide",
+            ".control-link-item-background-helper",
+            "[for=control-link-item-background-opacity-range]",
+            ".control-link-item-background-opacity-range",
+            ".control-link-item-background-opacity-number",
+            ".control-link-item-background-opacity-default",
+            ".control-link-item-background-opacity-apply",
             "[for=control-link-item-border-range]",
             ".control-link-item-border-range",
             ".control-link-item-border-number",

@@ -124,9 +124,16 @@ var link = (function() {
         },
         opacity: null
       },
-      image: {
-        url: null,
-        opacity: null
+      background: {
+        show: null,
+        type: null,
+        opacity: null,
+        image: {
+          url: null
+        },
+        video: {
+          url: null
+        }
       },
       wide: null,
       tall: null,
@@ -181,8 +188,11 @@ var link = (function() {
     stagedLink.link.color.rgb.g = 0;
     stagedLink.link.color.rgb.b = 0;
     stagedLink.link.color.opacity = state.get.current().link.item.color.opacity;
-    stagedLink.link.image.url = "";
-    stagedLink.link.image.opacity = state.get.current().link.item.image.opacity;
+    stagedLink.link.background.show = false;
+    stagedLink.link.background.type = "image";
+    stagedLink.link.background.opacity = state.get.current().link.item.background.opacity;
+    stagedLink.link.background.image.url = "";
+    stagedLink.link.background.video.url = "";
     stagedLink.link.wide = false;
     stagedLink.link.tall = false;
     stagedLink.link.searchMatch = false;
@@ -234,8 +244,11 @@ var link = (function() {
     stagedLink.link.color.rgb.g = null;
     stagedLink.link.color.rgb.b = null;
     stagedLink.link.color.opacity = null;
-    stagedLink.link.image.url = null;
-    stagedLink.link.image.opacity = null;
+    stagedLink.link.background.show = null;
+    stagedLink.link.background.type = null;
+    stagedLink.link.background.opacity = null;
+    stagedLink.link.background.image.url = null;
+    stagedLink.link.background.video.url = null;
     stagedLink.link.wide = null;
     stagedLink.link.tall = null;
     stagedLink.link.searchMatch = null;
@@ -373,11 +386,25 @@ var link = (function() {
         }
       }
     },
-    image: {
+    background: {
+      show: function() {
+        bookmarks.get().forEach(function(arrayItem, index) {
+          arrayItem.items.forEach(function(arrayItem, index) {
+            arrayItem.background.show = true;
+          });
+        });
+      },
+      hide: function() {
+        bookmarks.get().forEach(function(arrayItem, index) {
+          arrayItem.items.forEach(function(arrayItem, index) {
+            arrayItem.background.show = false;
+          });
+        });
+      },
       opacity: function() {
         bookmarks.get().forEach(function(arrayItem, index) {
           arrayItem.items.forEach(function(arrayItem, index) {
-            arrayItem.image.opacity = state.get.current().link.item.image.opacity;
+            arrayItem.background.opacity = state.get.current().link.item.background.opacity;
           });
         });
       }
@@ -1138,16 +1165,23 @@ var link = (function() {
       form.appendChild(
         render.form.fieldset([
           render.form.wrap([
-            groupFormInputNameShowInput,
-            groupFormInputNameShowLabel
+            helper.node("h2:Name|class:mb-0")
           ]),
-          render.form.indent([
-            render.form.wrap([
-              groupFormInputNameLabel,
-              groupFormInputNameInput
-            ]),
-            render.form.wrap([
-              groupFormRandomNameButton
+          render.form.wrap([
+            render.form.indent([
+              render.form.wrap([
+                groupFormInputNameShowInput,
+                groupFormInputNameShowLabel
+              ]),
+              render.form.indent([
+                render.form.wrap([
+                  groupFormInputNameLabel,
+                  groupFormInputNameInput
+                ]),
+                render.form.wrap([
+                  groupFormRandomNameButton
+                ])
+              ])
             ])
           ])
         ])
@@ -1162,15 +1196,21 @@ var link = (function() {
       var groupFormOpenAllInput = helper.node("input|type:checkbox,class:group-form-input-openall,id:group-form-input-openall,tabindex:1,checked");
       var groupFormOpenAllInputHelperItem = render.form.helper("group-form-input-openall", "Open all button will appear if there is at least one Bookmark in this Group.");
 
-
       form.appendChild(
         render.form.fieldset([
           render.form.wrap([
-            groupFormOpenAllInput,
-            groupFormInputOpenallLabel
+            helper.node("h2:Open all|class:mb-0")
           ]),
           render.form.wrap([
-            groupFormOpenAllInputHelperItem
+            render.form.indent([
+              render.form.wrap([
+                groupFormOpenAllInput,
+                groupFormInputOpenallLabel
+              ]),
+              render.form.wrap([
+                groupFormOpenAllInputHelperItem
+              ])
+            ])
           ])
         ])
       );
@@ -1186,8 +1226,15 @@ var link = (function() {
       form.appendChild(
         render.form.fieldset([
           render.form.wrap([
-            groupFormPositionLabel,
-            groupFormPositionSelect
+            helper.node("h2:Ordering|class:mb-0")
+          ]),
+          render.form.wrap([
+            render.form.indent([
+              render.form.wrap([
+                groupFormPositionLabel,
+                groupFormPositionSelect
+              ])
+            ])
           ])
         ])
       );
@@ -1354,7 +1401,7 @@ var link = (function() {
       };
 
       linkItemStyle.push("--link-item-color-opacity: " + stagedLink.link.color.opacity + ";");
-      linkItemStyle.push("--link-item-image-opacity: " + stagedLink.link.image.opacity + ";");
+      linkItemStyle.push("--link-item-background-opacity: " + stagedLink.link.background.opacity + ";");
       linkItemStyle.push("--link-item-display-rotate: " + stagedLink.link.display.rotate + "deg;");
       linkItemStyle.push("--link-item-display-gutter: " + stagedLink.link.display.gutter + ";");
       linkItemStyle.push("--link-item-display-translate-x: " + stagedLink.link.display.translate.x + "em;");
@@ -1370,7 +1417,7 @@ var link = (function() {
       if (stagedLink.link.display.name.show) {
         linkItemStyle.push("--link-item-display-name-size: " + stagedLink.link.display.name.size + "em;");
       };
-      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkIfValidString(stagedLink.link.image.url)) {
+      if (stagedLink.link.accent.by == "custom" || stagedLink.link.color.by == "custom" || helper.checkIfValidString(stagedLink.link.background.image.url)) {
         if (stagedLink.link.accent.by == "custom") {
           linkItemStyle.push("--theme-accent-r: " + stagedLink.link.accent.rgb.r + ";");
           linkItemStyle.push("--theme-accent-g: " + stagedLink.link.accent.rgb.g + ";");
@@ -1417,8 +1464,12 @@ var link = (function() {
           linkItemStyle.push("--link-item-color-focus-hover: " + stagedLink.link.color.rgb.r + ", " + stagedLink.link.color.rgb.g + ", " + stagedLink.link.color.rgb.b + ";");
           linkItemStyle.push("--link-item-name-color: " + rgb.r + ", " + rgb.g + ", " + rgb.b + ";");
         };
-        if (helper.checkIfValidString(stagedLink.link.image.url)) {
-          linkItemStyle.push("--link-item-image-url: url(" + helper.trimString(stagedLink.link.image.url) + ");");
+      };
+      if (stagedLink.link.background.show) {
+        if (stagedLink.link.background.type == "image") {
+          if (helper.checkIfValidString(stagedLink.link.background.image.url)) {
+            linkItemStyle.push("--link-item-background-image-url: url(" + helper.trimString(stagedLink.link.background.image.url) + ");");
+          };
         };
       };
 
@@ -1469,7 +1520,9 @@ var link = (function() {
 
       var linkDisplay = helper.node("div|class:link-display");
 
-      var linkImage = helper.node("div|class:link-image");
+      var linkBackgroundImage = helper.node("div|class:link-background-image");
+
+      var linkBackgroundVideo = helper.node("div|class:link-background-video");
 
       if (stagedLink.link.display.visual.show) {
         var linkDisplayVisual = helper.node("div|class:link-display-visual");
@@ -1524,8 +1577,34 @@ var link = (function() {
         linkPanelFront.appendChild(linkDisplay);
       };
 
-      if (helper.checkIfValidString(stagedLink.link.image.url)) {
-        linkPanelFront.appendChild(linkImage);
+      if (stagedLink.link.background.show) {
+        if (stagedLink.link.background.type == "image") {
+          if (helper.checkIfValidString(stagedLink.link.background.image.url)) {
+            linkPanelFront.appendChild(linkBackgroundImage);
+          };
+        } else if (stagedLink.link.background.type == "video") {
+          if (helper.checkIfValidString(stagedLink.link.background.video.url)) {
+            if (stagedLink.link.background.video.url.includes("mp4") || stagedLink.link.background.video.url.endsWith("mp4")) {
+              var video = helper.node("video|autoplay,loop,muted,type:video/mp4")
+              var source = helper.node("source|src:" + stagedLink.link.background.video.url);
+              video.muted = true;
+              video.loop = true;
+              video.autoplay = true;
+              video.appendChild(source);
+              linkBackgroundVideo.appendChild(video);
+              linkPanelFront.appendChild(linkBackgroundVideo);
+            } else if (stagedLink.link.background.video.url.includes("webm") || stagedLink.link.background.video.url.endsWith("webm")) {
+              var video = helper.node("video|autoplay,loop,muted,type:video/webm")
+              var source = helper.node("source|src:" + stagedLink.link.background.video.url);
+              video.muted = true;
+              video.loop = true;
+              video.autoplay = true;
+              video.appendChild(source);
+              linkBackgroundVideo.appendChild(video);
+              linkPanelFront.appendChild(linkBackgroundVideo);
+            };
+          };
+        };
       };
 
       var linkUrl = helper.node("div|class:link-url");
@@ -1618,12 +1697,10 @@ var link = (function() {
       var formPreviewArea = helper.node("div|class:link-form-preview-area");
 
       // group
-
-      // console.log(name, labelText, labelDescription, icon, className);
       var groupExistingRadio = helper.node("input|class:link-form-input-group-existing,id:link-form-input-group-existing,type:radio,name:link-form-input-group,tabindex:1,value:existing");
       var groupExistingLabel = render.form.label({
         name: "link-form-input-group-existing",
-        labelText: "Existing group",
+        labelText: "Existing Group",
         icon: true
       });
       var groupExistingGroupLabel = render.form.label({
@@ -1640,7 +1717,7 @@ var link = (function() {
       var groupNewRadio = helper.node("input|class:link-form-input-group-new,id:link-form-input-group-new,type:radio,name:link-form-input-group,tabindex:1,value:new");
       var groupNewLabel = render.form.label({
         name: "link-form-input-group-new",
-        labelText: "New group",
+        labelText: "New Group",
         icon: true
       });
       var groupNewNameLabel = render.form.label({
@@ -1731,20 +1808,10 @@ var link = (function() {
       var displayImageInput = helper.node("input|type:text,class:link-form-input-image,placeholder:https://...,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
       var displayImageHelper = render.form.helper("link-form-input-display-visual-image-helper", "Display an image in place of a letter or icon.");
 
-      // name
-      var nameShowCheckbox = helper.node("input|class:link-form-input-display-name-show,id:link-form-input-display-name-show,type:checkbox,tabindex:1");
-      var nameShowLabel = render.form.label({
-        name: "link-form-input-display-name-show",
-        labelText: "Show Name",
-        labelDescription: "Display a Name on this Bookmark tile.",
-        icon: true
-      });
-      var nameInput = helper.node("input|type:text,class:link-form-input-display-name,id:link-form-input-display-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
-
       form.appendChild(
         render.form.fieldset([
           render.form.wrap([
-            helper.node("h2:Bookmark tile|class:mb-0")
+            helper.node("h2:Visual Element|class:mb-0")
           ]),
           render.form.wrap([
             render.form.indent([
@@ -1798,8 +1865,29 @@ var link = (function() {
                     ])
                   ])
                 ])
-              ]),
-              helper.node("hr"),
+              ])
+            ])
+          ])
+        ])
+      );
+
+      // name
+      var nameShowCheckbox = helper.node("input|class:link-form-input-display-name-show,id:link-form-input-display-name-show,type:checkbox,tabindex:1");
+      var nameShowLabel = render.form.label({
+        name: "link-form-input-display-name-show",
+        labelText: "Show Name",
+        labelDescription: "Display a Name on this Bookmark tile.",
+        icon: true
+      });
+      var nameInput = helper.node("input|type:text,class:link-form-input-display-name,id:link-form-input-display-name,placeholder:Example,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+
+      form.appendChild(
+        render.form.fieldset([
+          render.form.wrap([
+            helper.node("h2:Name|class:mb-0")
+          ]),
+          render.form.wrap([
+            render.form.indent([
               render.form.wrap([
                 nameShowCheckbox,
                 nameShowLabel
@@ -1848,37 +1936,48 @@ var link = (function() {
       var advancedCollapseButton = render.form.button("Advanced controls", "link-form-collapse-button", "icon-arrow-down", true);
       var advancedCollapseButtonHelper = render.form.helper("link-form-image-helper", "Customise this Bookmarks appearance, Background, Colour and Accent.");
 
-      // background
-      var imageLabel = render.form.label({
-        name: "link-form-image",
-        labelText: "Background image"
+      // visual element
+      var displayLetterSizeLabel = render.form.label({
+        name: "link-form-input-display-visual-letter-size-range",
+        labelText: "Letter size"
       });
-      var imageInput = helper.node("input|type:text,class:link-form-image,id:link-form-image,placeholder:https://www.example.com/,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
-      var imageInputHelper = render.form.helper("link-form-image-helper", "Display an image as the background of this Bookmark tile.");
-      var imageOpacityLabel = render.form.label({
-        name: "link-form-image-opacity-range",
-        labelText: "Opacity"
-      });
-      var imageOpacityInputRange = helper.node("input|class:link-form-image-opacity-range mr-3,id:link-form-image-opacity-range,type:range,name:link-form-image-opacity-range,min:0,max:100,tabindex:1");
-      var imageOpacityInputNumber = helper.node("input|class:link-form-image-opacity-number form-group-item-medium form-group-radius-left,type:number,min:0,max:100,tabindex:1");
-      var imageOpacityInputDefault = render.form.button(false, "link-form-image-opacity-default", "icon-replay");
+      var displayLetterSizeInputRange = helper.node("input|class:link-form-input-display-visual-letter-size-range mr-3,id:link-form-input-display-visual-letter-size-range,type:range,name:link-form-input-display-visual-letter-size-range,min:10,max:3000,step:10,tabindex:1");
+      var displayLetterSizeInputNumber = helper.node("input|class:link-form-input-display-visual-letter-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:3000,step:10,tabindex:1");
+      var displayLetterSizeInputDefault = render.form.button(false, "link-form-input-display-visual-letter-size-default", "icon-replay");
 
-      // tall wide
-      var wideInput = helper.node("input|type:checkbox,class:link-form-wide,id:link-form-wide,tabindex:1");
-      var wideLabel = render.form.label({
-        name: "link-form-wide",
-        labelText: "Wide tile",
-        labelDescription: "Bookmark tile to span across two columns.",
-        icon: true
+      var displayIconSizeLabel = render.form.label({
+        name: "link-form-input-display-visual-icon-size-range",
+        labelText: "Icon size"
       });
-      var tallInput = helper.node("input|type:checkbox,class:link-form-tall,id:link-form-tall,tabindex:1");
-      var tallLabel = render.form.label({
-        name: "link-form-tall",
-        labelText: "Tall tile",
-        labelDescription: "Bookmark tile to span across two rows.",
-        icon: true,
+      var displayIconSizeInputRange = helper.node("input|class:link-form-input-display-visual-icon-size-range mr-3,id:link-form-input-display-visual-icon-size-range,type:range,name:link-form-input-display-visual-icon-size-range,min:10,max:3000,step:10,tabindex:1");
+      var displayIconSizeInputNumber = helper.node("input|class:link-form-input-display-visual-icon-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:3000,step:10,tabindex:1");
+      var displayIconSizeInputDefault = render.form.button(false, "link-form-input-display-visual-icon-size-default", "icon-replay");
+
+      var displayImageSizeLabel = render.form.label({
+        name: "link-form-input-display-visual-image-size-range",
+        labelText: "Image size"
       });
-      var wideTallLabelHelper = render.form.helper("link-form-wide-tall-helper", "Bookmark tile will span across two columns or rows if the Bookmark Area is large enough.");
+      var displayImageSizeInputRange = helper.node("input|class:link-form-input-display-visual-image-size-range mr-3,id:link-form-input-display-visual-image-size-range,type:range,name:link-form-input-display-visual-image-size-range,min:10,max:3000,step:10,tabindex:1");
+      var displayImageSizeInputNumber = helper.node("input|class:link-form-input-display-visual-image-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:3000,step:10,tabindex:1");
+      var displayImageSizeInputDefault = render.form.button(false, "link-form-input-display-visual-image-size-default", "icon-replay");
+
+      var displayShadowSizeLabel = render.form.label({
+        name: "link-form-input-display-visual-shadow-size-range",
+        labelText: "Shadow size"
+      });
+      var displayShadowSizeInputRange = helper.node("input|class:link-form-input-display-visual-shadow-size-range mr-3,id:link-form-input-display-visual-shadow-size-range,type:range,name:link-form-input-display-visual-shadow-size-range,min:0,max:100,tabindex:1");
+      var displayShadowSizeInputNumber = helper.node("input|class:link-form-input-display-visual-shadow-size-number form-group-item-medium form-group-radius-left,type:number,min:0,max:100,tabindex:1");
+      var displayShadowSizeInputDefault = render.form.button(false, "link-form-input-display-visual-shadow-size-default", "icon-replay");
+      var displayShadowSizeInputHelper = render.form.helper("link-form-input-display-visual-shadow-size-helper", "Only applies to Letters or Icons.");
+
+      // name
+      var nameSizeLabel = render.form.label({
+        name: "link-form-input-display-name-size-range",
+        labelText: "Name size"
+      });
+      var nameSizeInputRange = helper.node("input|class:link-form-input-display-name-size-range mr-3,id:link-form-input-display-name-size-range,type:range,name:link-form-input-display-name-size-range,min:10,max:1500,step:10,tabindex:1");
+      var nameSizeInputNumber = helper.node("input|class:link-form-input-display-name-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:1500,step:10,tabindex:1");
+      var nameSizeInputDefault = render.form.button(false, "link-form-input-display-name-size-default", "icon-replay");
 
       // content
       var displayAlignmentLabel = render.form.label({
@@ -1930,47 +2029,6 @@ var link = (function() {
         icon: true
       });
       var displayAlignmentHelper = render.form.helper("link-form-input-display-alignment-helper", "Position the Visual Element (letter, icon or image) and Name inside the Bookmark tile.");
-
-      var displayLetterSizeLabel = render.form.label({
-        name: "link-form-input-display-visual-letter-size-range",
-        labelText: "Letter size"
-      });
-      var displayLetterSizeInputRange = helper.node("input|class:link-form-input-display-visual-letter-size-range mr-3,id:link-form-input-display-visual-letter-size-range,type:range,name:link-form-input-display-visual-letter-size-range,min:10,max:3000,step:10,tabindex:1");
-      var displayLetterSizeInputNumber = helper.node("input|class:link-form-input-display-visual-letter-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:3000,step:10,tabindex:1");
-      var displayLetterSizeInputDefault = render.form.button(false, "link-form-input-display-visual-letter-size-default", "icon-replay");
-
-      var displayIconSizeLabel = render.form.label({
-        name: "link-form-input-display-visual-icon-size-range",
-        labelText: "Icon size"
-      });
-      var displayIconSizeInputRange = helper.node("input|class:link-form-input-display-visual-icon-size-range mr-3,id:link-form-input-display-visual-icon-size-range,type:range,name:link-form-input-display-visual-icon-size-range,min:10,max:3000,step:10,tabindex:1");
-      var displayIconSizeInputNumber = helper.node("input|class:link-form-input-display-visual-icon-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:3000,step:10,tabindex:1");
-      var displayIconSizeInputDefault = render.form.button(false, "link-form-input-display-visual-icon-size-default", "icon-replay");
-
-      var displayImageSizeLabel = render.form.label({
-        name: "link-form-input-display-visual-image-size-range",
-        labelText: "Image size"
-      });
-      var displayImageSizeInputRange = helper.node("input|class:link-form-input-display-visual-image-size-range mr-3,id:link-form-input-display-visual-image-size-range,type:range,name:link-form-input-display-visual-image-size-range,min:10,max:3000,step:10,tabindex:1");
-      var displayImageSizeInputNumber = helper.node("input|class:link-form-input-display-visual-image-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:3000,step:10,tabindex:1");
-      var displayImageSizeInputDefault = render.form.button(false, "link-form-input-display-visual-image-size-default", "icon-replay");
-
-      var displayShadowSizeLabel = render.form.label({
-        name: "link-form-input-display-visual-shadow-size-range",
-        labelText: "Shadow size"
-      });
-      var displayShadowSizeInputRange = helper.node("input|class:link-form-input-display-visual-shadow-size-range mr-3,id:link-form-input-display-visual-shadow-size-range,type:range,name:link-form-input-display-visual-shadow-size-range,min:0,max:100,tabindex:1");
-      var displayShadowSizeInputNumber = helper.node("input|class:link-form-input-display-visual-shadow-size-number form-group-item-medium form-group-radius-left,type:number,min:0,max:100,tabindex:1");
-      var displayShadowSizeInputDefault = render.form.button(false, "link-form-input-display-visual-shadow-size-default", "icon-replay");
-      var displayShadowSizeInputHelper = render.form.helper("link-form-input-display-visual-shadow-size-helper", "Only applies to Letters or Icons.");
-
-      var nameSizeLabel = render.form.label({
-        name: "link-form-input-display-name-size-range",
-        labelText: "Name size"
-      });
-      var nameSizeInputRange = helper.node("input|class:link-form-input-display-name-size-range mr-3,id:link-form-input-display-name-size-range,type:range,name:link-form-input-display-name-size-range,min:10,max:1500,step:10,tabindex:1");
-      var nameSizeInputNumber = helper.node("input|class:link-form-input-display-name-size-number form-group-item-medium form-group-radius-left,type:number,min:10,max:1500,step:10,tabindex:1");
-      var nameSizeInputDefault = render.form.button(false, "link-form-input-display-name-size-default", "icon-replay");
 
       var displayRotateLabel = render.form.label({
         name: "link-form-input-display-rotate-range",
@@ -2164,352 +2222,467 @@ var link = (function() {
       var accentRgbBRange = helper.node("input|class:link-form-input-accent-rgb-b-range mr-3,id:link-form-input-accent-rgb-b-range,type:range,name:link-form-input-accent-rgb-b-range,value:0,min:0,max:255,tabindex:1");
       var accentRgbBNumber = helper.node("input|class:link-form-input-accent-rgb-b-number form-group-item-medium form-group-radius-left,type:number,value:0,min:0,max:255,tabindex:1");
 
+      // background
+      var backgroundShowInput = helper.node("input|class:link-form-input-background-show,id:link-form-input-background-show,type:checkbox,tabindex:1");
+      var backgroundShowLabel = render.form.label({
+        name: "link-form-input-background-show",
+        labelText: "Show background",
+        labelDescription: "Display an image or video as the background of this Bookmark tile.",
+        icon: true
+      });
+      var backgroundImageRadio = helper.node("input|class:link-form-input-background-image,id:link-form-input-background-image,type:radio,name:link-form-input-background,tabindex:1,value:image");
+      var backgroundImageLabel = render.form.label({
+        name: "link-form-input-background-image",
+        labelText: "Image",
+        icon: true
+      });
+      var backgroundImageUrlLabel = render.form.label({
+        name: "link-form-background-image",
+        labelText: "Background image",
+        className: "sr-only"
+      });
+      var backgroundImageUrlInput = helper.node("input|type:text,class:link-form-background-image,id:link-form-background-image,placeholder:https://www.example.com/image.jpg,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      var backgroundVideoRadio = helper.node("input|class:link-form-input-background-video,id:link-form-input-background-video,type:radio,name:link-form-input-background,tabindex:1,value:video");
+      var backgroundVideoLabel = render.form.label({
+        name: "link-form-input-background-video",
+        labelText: "Video",
+        icon: true
+      });
+      var backgroundVideoUrlLabel = render.form.label({
+        name: "link-form-background-video",
+        labelText: "Background video",
+        className: "sr-only"
+      });
+      var backgroundVideoUrlInput = helper.node("input|type:text,class:link-form-background-video,id:link-form-background-video,placeholder:https://www.example.com/video.mp4,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      var backgroundVideoUrlInputHelper = render.form.helper("link-form-background-video-helper", "Supports MP4 and WebM format.");
+      var backgroundOpacityLabel = render.form.label({
+        name: "link-form-image-opacity-range",
+        labelText: "Opacity"
+      });
+      var backgroundOpacityInputRange = helper.node("input|class:link-form-image-opacity-range mr-3,id:link-form-image-opacity-range,type:range,name:link-form-image-opacity-range,min:0,max:100,tabindex:1");
+      var backgroundOpacityInputNumber = helper.node("input|class:link-form-image-opacity-number form-group-item-medium form-group-radius-left,type:number,min:0,max:100,tabindex:1");
+      var backgroundOpacityInputDefault = render.form.button(false, "link-form-image-opacity-default", "icon-replay");
+
+      // tall wide
+      var wideInput = helper.node("input|type:checkbox,class:link-form-wide,id:link-form-wide,tabindex:1");
+      var wideLabel = render.form.label({
+        name: "link-form-wide",
+        labelText: "Wide tile",
+        labelDescription: "Bookmark tile to span across two columns.",
+        icon: true
+      });
+      var tallInput = helper.node("input|type:checkbox,class:link-form-tall,id:link-form-tall,tabindex:1");
+      var tallLabel = render.form.label({
+        name: "link-form-tall",
+        labelText: "Tall tile",
+        labelDescription: "Bookmark tile to span across two rows.",
+        icon: true,
+      });
+      var wideTallLabelHelper = render.form.helper("link-form-wide-tall-helper", "Bookmark tile will span across two columns or rows if the Bookmark Area is large enough.");
+
       var advancedCollapse = render.form.collapse([
-        render.form.wrap([
-          helper.node("h2:Bookmark tile|class:mb-0 mt-3")
-        ]),
-        render.form.wrap([
-          render.form.indent([
-            render.form.wrap([
-              imageLabel,
-              imageInput
-            ]),
-            render.form.wrap([
-              imageInputHelper
-            ]),
-            helper.node("hr"),
-            render.form.wrap([
-              render.form.indent([
-                render.form.wrap([
-                  imageOpacityLabel,
-                  render.form.group([
-                    imageOpacityInputRange,
-                    imageOpacityInputNumber,
-                    imageOpacityInputDefault
+        render.form.fieldset([
+          render.form.wrap([
+            helper.node("h2:Visual Element|class:mb-0 mt-3")
+          ]),
+          render.form.wrap([
+            render.form.indent([
+              render.form.wrap([
+                displayLetterSizeLabel,
+                render.form.group([
+                  displayLetterSizeInputRange,
+                  displayLetterSizeInputNumber,
+                  displayLetterSizeInputDefault
+                ])
+              ]),
+              render.form.wrap([
+                displayIconSizeLabel,
+                render.form.group([
+                  displayIconSizeInputRange,
+                  displayIconSizeInputNumber,
+                  displayIconSizeInputDefault
+                ])
+              ]),
+              render.form.wrap([
+                displayImageSizeLabel,
+                render.form.group([
+                  displayImageSizeInputRange,
+                  displayImageSizeInputNumber,
+                  displayImageSizeInputDefault
+                ])
+              ]),
+              render.form.wrap([
+                render.form.indent([
+                  render.form.wrap([
+                    displayShadowSizeLabel,
+                    render.form.group([
+                      displayShadowSizeInputRange,
+                      displayShadowSizeInputNumber,
+                      displayShadowSizeInputDefault
+                    ])
+                  ]),
+                  render.form.wrap([
+                    displayShadowSizeInputHelper
                   ])
                 ])
-              ])
-            ]),
-            helper.node("hr"),
-            render.form.wrap([
-              wideInput,
-              wideLabel
-            ]),
-            render.form.wrap([
-              tallInput,
-              tallLabel
-            ]),
-            render.form.wrap([
-              wideTallLabelHelper
-            ]),
-            helper.node("hr"),
-            render.form.wrap([
-              displayLetterSizeLabel,
-              render.form.group([
-                displayLetterSizeInputRange,
-                displayLetterSizeInputNumber,
-                displayLetterSizeInputDefault
-              ])
-            ]),
-            render.form.wrap([
-              displayIconSizeLabel,
-              render.form.group([
-                displayIconSizeInputRange,
-                displayIconSizeInputNumber,
-                displayIconSizeInputDefault
-              ])
-            ]),
-            render.form.wrap([
-              displayImageSizeLabel,
-              render.form.group([
-                displayImageSizeInputRange,
-                displayImageSizeInputNumber,
-                displayImageSizeInputDefault
-              ])
-            ]),
-            render.form.wrap([
-              render.form.indent([
-                render.form.wrap([
-                  displayShadowSizeLabel,
-                  render.form.group([
-                    displayShadowSizeInputRange,
-                    displayShadowSizeInputNumber,
-                    displayShadowSizeInputDefault
-                  ])
-                ]),
-                render.form.wrap([
-                  displayShadowSizeInputHelper
-                ])
-              ])
-            ]),
-            helper.node("hr"),
-            render.form.wrap([
-              nameSizeLabel,
-              render.form.group([
-                nameSizeInputRange,
-                nameSizeInputNumber,
-                nameSizeInputDefault
               ])
             ])
           ])
         ]),
-        helper.node("hr"),
-        render.form.wrap([
-          helper.node("h2:Content|class:mb-0")
-        ]),
-        render.form.wrap([
-          render.form.indent([
-            render.form.wrap([
-              displayAlignmentLabel
-            ]),
-            render.form.wrap([
-              render.form.formGrid3x3([
-                render.form.wrap([
-                  displayAlignmentTopLeftRadio,
-                  displayAlignmentTopLeftLabel
-                ]),
-                render.form.wrap([
-                  displayAlignmentTopCenterRadio,
-                  displayAlignmentTopCenterLabel
-                ]),
-                render.form.wrap([
-                  displayAlignmentTopRightRadio,
-                  displayAlignmentTopRightLabel
-                ]),
-                render.form.wrap([
-                  displayAlignmentCenterLeftRadio,
-                  displayAlignmentCenterLeftLabel
-                ]),
-                render.form.wrap([
-                  displayAlignmentCenterCenterRadio,
-                  displayAlignmentCenterCenterLabel
-                ]),
-                render.form.wrap([
-                  displayAlignmentCenterRightRadio,
-                  displayAlignmentCenterRightLabel
-                ]),
-                render.form.wrap([
-                  displayAlignmentBottomLeftRadio,
-                  displayAlignmentBottomLeftLabel
-                ]),
-                render.form.wrap([
-                  displayAlignmentBottomCenterRadio,
-                  displayAlignmentBottomCenterLabel
-                ]),
-                render.form.wrap([
-                  displayAlignmentBottomRightRadio,
-                  displayAlignmentBottomRightLabel
+        render.form.fieldset([
+          render.form.wrap([
+            helper.node("h2:Name|class:mb-0")
+          ]),
+          render.form.wrap([
+            render.form.indent([
+              render.form.wrap([
+                nameSizeLabel,
+                render.form.group([
+                  nameSizeInputRange,
+                  nameSizeInputNumber,
+                  nameSizeInputDefault
                 ])
-              ])
-            ]),
-            render.form.wrap([
-              displayAlignmentHelper
-            ]),
-            helper.node("hr"),
-            render.form.wrap([
-              displayRotateLabel,
-              render.form.group([
-                displayRotateRange,
-                displayRotateNumber,
-                displayRotateDefault
-              ])
-            ]),
-            render.form.wrap([
-              displayTranslateXLabel,
-              render.form.group([
-                displayTranslateXRange,
-                displayTranslateXNumber,
-                displayTranslateXDefault
-              ])
-            ]),
-            render.form.wrap([
-              displayTranslateYLabel,
-              render.form.group([
-                displayTranslateYRange,
-                displayTranslateYNumber,
-                displayTranslateYDefault
-              ])
-            ]),
-            helper.node("hr"),
-            render.form.wrap([
-              displayGutterLabel,
-              render.form.group([
-                displayGutterRange,
-                displayGutterNumber,
-                displayGutterDefault
-              ])
-            ]),
-            helper.node("hr"),
-            render.form.wrap([
-              displayAlignmentVerticalRadio,
-              displayAlignmentVerticalLabel
-            ]),
-            render.form.wrap([
-              displayAlignmentHorizontalRadio,
-              displayAlignmentHorizontalLabel
-            ]),
-            render.form.wrap([
-              displayAlignmentHelper
-            ]),
-            helper.node("hr"),
-            render.form.wrap([
-              displayDirectionVisualnameRadio,
-              displayDirectionVisualnameLabel
-            ]),
-            render.form.wrap([
-              displayDirectionNamevisualRadio,
-              displayDirectionNamevisualLabel
-            ]),
-            render.form.wrap([
-              displayDirectionHelper
-            ])
-          ])
-        ]),
-        helper.node("hr"),
-        render.form.wrap([
-          helper.node("h2:Colour|class:mb-0")
-        ]),
-        render.form.wrap([
-          render.form.indent([
-            render.form.wrap([
-              colorThemeRadio,
-              colorThemeLabel
-            ]),
-            render.form.wrap([
-              colorCustomRadio,
-              colorCustomLabel
-            ]),
-            render.form.wrap([
-              render.form.indent([
-                render.form.wrap([
-                  render.form.group([
-                    colorColorPicker,
-                    colorColorHex
-                  ])
-                ]),
-                helper.node("hr"),
-                render.form.wrap([
-                  render.form.group([
-                    colorHslHLabel,
-                    colorHslHRange,
-                    colorHslHNumber
-                  ])
-                ]),
-                render.form.wrap([
-                  render.form.group([
-                    colorHslSLabel,
-                    colorHslSRange,
-                    colorHslSNumber
-                  ])
-                ]),
-                render.form.wrap([
-                  render.form.group([
-                    colorHslLLabel,
-                    colorHslLRange,
-                    colorHslLNumber
-                  ])
-                ]),
-                helper.node("hr"),
-                render.form.wrap([
-                  render.form.group([
-                    colorRgbRLabel,
-                    colorRgbRRange,
-                    colorRgbRNumber
-                  ])
-                ]),
-                render.form.wrap([
-                  render.form.group([
-                    colorRgbGLabel,
-                    colorRgbGRange,
-                    colorRgbGNumber
-                  ])
-                ]),
-                render.form.wrap([
-                  render.form.group([
-                    colorRgbBLabel,
-                    colorRgbBRange,
-                    colorRgbBNumber
-                  ])
-                ])
-              ])
-            ]),
-            helper.node("hr"),
-            render.form.wrap([
-              colorOpacityLabel,
-              render.form.group([
-                colorOpacityInputRange,
-                colorOpacityInputNumber,
-                colorOpacityInputDefault
               ])
             ])
           ])
         ]),
-        helper.node("hr"),
-        render.form.wrap([
-          helper.node("h2:Accent|class:mb-0")
-        ]),
-        render.form.wrap([
-          render.form.indent([
-            render.form.wrap([
-              accentThemeRadio,
-              accentThemeLabel
-            ]),
-            render.form.wrap([
-              accentCustomRadio,
-              accentCustomLabel
-            ]),
-            render.form.wrap([
-              render.form.indent([
-                render.form.wrap([
-                  render.form.group([
-                    accentColorPicker,
-                    accentColorHex
-                  ])
-                ]),
-                helper.node("hr"),
-                render.form.wrap([
-                  render.form.group([
-                    accentHslHLabel,
-                    accentHslHRange,
-                    accentHslHNumber
-                  ])
-                ]),
-                render.form.wrap([
-                  render.form.group([
-                    accentHslSLabel,
-                    accentHslSRange,
-                    accentHslSNumber
-                  ])
-                ]),
-                render.form.wrap([
-                  render.form.group([
-                    accentHslLLabel,
-                    accentHslLRange,
-                    accentHslLNumber
-                  ])
-                ]),
-                helper.node("hr"),
-                render.form.wrap([
-                  render.form.group([
-                    accentRgbRLabel,
-                    accentRgbRRange,
-                    accentRgbRNumber
-                  ])
-                ]),
-                render.form.wrap([
-                  render.form.group([
-                    accentRgbGLabel,
-                    accentRgbGRange,
-                    accentRgbGNumber
-                  ])
-                ]),
-                render.form.wrap([
-                  render.form.group([
-                    accentRgbBLabel,
-                    accentRgbBRange,
-                    accentRgbBNumber
+        render.form.fieldset([
+          render.form.wrap([
+            helper.node("h2:Content|class:mb-0")
+          ]),
+          render.form.wrap([
+            render.form.indent([
+              render.form.wrap([
+                displayAlignmentLabel
+              ]),
+              render.form.wrap([
+                render.form.formGrid3x3([
+                  render.form.wrap([
+                    displayAlignmentTopLeftRadio,
+                    displayAlignmentTopLeftLabel
+                  ]),
+                  render.form.wrap([
+                    displayAlignmentTopCenterRadio,
+                    displayAlignmentTopCenterLabel
+                  ]),
+                  render.form.wrap([
+                    displayAlignmentTopRightRadio,
+                    displayAlignmentTopRightLabel
+                  ]),
+                  render.form.wrap([
+                    displayAlignmentCenterLeftRadio,
+                    displayAlignmentCenterLeftLabel
+                  ]),
+                  render.form.wrap([
+                    displayAlignmentCenterCenterRadio,
+                    displayAlignmentCenterCenterLabel
+                  ]),
+                  render.form.wrap([
+                    displayAlignmentCenterRightRadio,
+                    displayAlignmentCenterRightLabel
+                  ]),
+                  render.form.wrap([
+                    displayAlignmentBottomLeftRadio,
+                    displayAlignmentBottomLeftLabel
+                  ]),
+                  render.form.wrap([
+                    displayAlignmentBottomCenterRadio,
+                    displayAlignmentBottomCenterLabel
+                  ]),
+                  render.form.wrap([
+                    displayAlignmentBottomRightRadio,
+                    displayAlignmentBottomRightLabel
                   ])
                 ])
+              ]),
+              render.form.wrap([
+                displayAlignmentHelper
+              ]),
+              helper.node("hr"),
+              render.form.wrap([
+                displayRotateLabel,
+                render.form.group([
+                  displayRotateRange,
+                  displayRotateNumber,
+                  displayRotateDefault
+                ])
+              ]),
+              render.form.wrap([
+                displayTranslateXLabel,
+                render.form.group([
+                  displayTranslateXRange,
+                  displayTranslateXNumber,
+                  displayTranslateXDefault
+                ])
+              ]),
+              render.form.wrap([
+                displayTranslateYLabel,
+                render.form.group([
+                  displayTranslateYRange,
+                  displayTranslateYNumber,
+                  displayTranslateYDefault
+                ])
+              ]),
+              helper.node("hr"),
+              render.form.wrap([
+                displayGutterLabel,
+                render.form.group([
+                  displayGutterRange,
+                  displayGutterNumber,
+                  displayGutterDefault
+                ])
+              ]),
+              helper.node("hr"),
+              render.form.wrap([
+                displayAlignmentVerticalRadio,
+                displayAlignmentVerticalLabel
+              ]),
+              render.form.wrap([
+                displayAlignmentHorizontalRadio,
+                displayAlignmentHorizontalLabel
+              ]),
+              render.form.wrap([
+                displayAlignmentHelper
+              ]),
+              helper.node("hr"),
+              render.form.wrap([
+                displayDirectionVisualnameRadio,
+                displayDirectionVisualnameLabel
+              ]),
+              render.form.wrap([
+                displayDirectionNamevisualRadio,
+                displayDirectionNamevisualLabel
+              ]),
+              render.form.wrap([
+                displayDirectionHelper
+              ])
+            ])
+          ])
+        ]),
+        render.form.fieldset([
+          render.form.wrap([
+            helper.node("h2:Colour|class:mb-0")
+          ]),
+          render.form.wrap([
+            render.form.indent([
+              render.form.wrap([
+                colorThemeRadio,
+                colorThemeLabel
+              ]),
+              render.form.wrap([
+                colorCustomRadio,
+                colorCustomLabel
+              ]),
+              render.form.wrap([
+                render.form.indent([
+                  render.form.wrap([
+                    render.form.group([
+                      colorColorPicker,
+                      colorColorHex
+                    ])
+                  ]),
+                  helper.node("hr"),
+                  render.form.wrap([
+                    render.form.group([
+                      colorHslHLabel,
+                      colorHslHRange,
+                      colorHslHNumber
+                    ])
+                  ]),
+                  render.form.wrap([
+                    render.form.group([
+                      colorHslSLabel,
+                      colorHslSRange,
+                      colorHslSNumber
+                    ])
+                  ]),
+                  render.form.wrap([
+                    render.form.group([
+                      colorHslLLabel,
+                      colorHslLRange,
+                      colorHslLNumber
+                    ])
+                  ]),
+                  helper.node("hr"),
+                  render.form.wrap([
+                    render.form.group([
+                      colorRgbRLabel,
+                      colorRgbRRange,
+                      colorRgbRNumber
+                    ])
+                  ]),
+                  render.form.wrap([
+                    render.form.group([
+                      colorRgbGLabel,
+                      colorRgbGRange,
+                      colorRgbGNumber
+                    ])
+                  ]),
+                  render.form.wrap([
+                    render.form.group([
+                      colorRgbBLabel,
+                      colorRgbBRange,
+                      colorRgbBNumber
+                    ])
+                  ])
+                ])
+              ]),
+              helper.node("hr"),
+              render.form.wrap([
+                colorOpacityLabel,
+                render.form.group([
+                  colorOpacityInputRange,
+                  colorOpacityInputNumber,
+                  colorOpacityInputDefault
+                ])
+              ])
+            ])
+          ])
+        ]),
+        render.form.fieldset([
+          render.form.wrap([
+            helper.node("h2:Accent|class:mb-0")
+          ]),
+          render.form.wrap([
+            render.form.indent([
+              render.form.wrap([
+                accentThemeRadio,
+                accentThemeLabel
+              ]),
+              render.form.wrap([
+                accentCustomRadio,
+                accentCustomLabel
+              ]),
+              render.form.wrap([
+                render.form.indent([
+                  render.form.wrap([
+                    render.form.group([
+                      accentColorPicker,
+                      accentColorHex
+                    ])
+                  ]),
+                  helper.node("hr"),
+                  render.form.wrap([
+                    render.form.group([
+                      accentHslHLabel,
+                      accentHslHRange,
+                      accentHslHNumber
+                    ])
+                  ]),
+                  render.form.wrap([
+                    render.form.group([
+                      accentHslSLabel,
+                      accentHslSRange,
+                      accentHslSNumber
+                    ])
+                  ]),
+                  render.form.wrap([
+                    render.form.group([
+                      accentHslLLabel,
+                      accentHslLRange,
+                      accentHslLNumber
+                    ])
+                  ]),
+                  helper.node("hr"),
+                  render.form.wrap([
+                    render.form.group([
+                      accentRgbRLabel,
+                      accentRgbRRange,
+                      accentRgbRNumber
+                    ])
+                  ]),
+                  render.form.wrap([
+                    render.form.group([
+                      accentRgbGLabel,
+                      accentRgbGRange,
+                      accentRgbGNumber
+                    ])
+                  ]),
+                  render.form.wrap([
+                    render.form.group([
+                      accentRgbBLabel,
+                      accentRgbBRange,
+                      accentRgbBNumber
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        render.form.fieldset([
+          render.form.wrap([
+            helper.node("h2:Background|class:mb-0")
+          ]),
+          render.form.wrap([
+            render.form.indent([
+              render.form.wrap([
+                backgroundShowInput,
+                backgroundShowLabel
+              ]),
+              render.form.wrap([
+                render.form.indent([
+                  render.form.wrap([
+                    backgroundImageRadio,
+                    backgroundImageLabel
+                  ]),
+                  render.form.wrap([
+                    render.form.indent([
+                      render.form.wrap([
+                        backgroundImageUrlLabel,
+                        backgroundImageUrlInput
+                      ])
+                    ])
+                  ]),
+                  render.form.wrap([
+                    backgroundVideoRadio,
+                    backgroundVideoLabel
+                  ]),
+                  render.form.wrap([
+                    render.form.indent([
+                      render.form.wrap([
+                        backgroundVideoUrlLabel,
+                        backgroundVideoUrlInput
+                      ]),
+                      render.form.wrap([
+                        backgroundVideoUrlInputHelper
+                      ])
+                    ])
+                  ]),
+                  render.form.wrap([
+                    render.form.indent([
+                      helper.node("hr"),
+                      render.form.wrap([
+                        backgroundOpacityLabel,
+                        render.form.group([
+                          backgroundOpacityInputRange,
+                          backgroundOpacityInputNumber,
+                          backgroundOpacityInputDefault
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        render.form.fieldset([
+          render.form.wrap([
+            helper.node("h2:Tile|class:mb-0")
+          ]),
+          render.form.wrap([
+            render.form.indent([
+              render.form.wrap([
+                wideInput,
+                wideLabel
+              ]),
+              render.form.wrap([
+                tallInput,
+                tallLabel
+              ]),
+              render.form.wrap([
+                wideTallLabelHelper
               ])
             ])
           ])
@@ -2524,9 +2697,7 @@ var link = (function() {
           render.form.wrap([
             advancedCollapseButtonHelper
           ]),
-          render.form.wrap([
-            advancedCollapse
-          ])
+          advancedCollapse
         ])
       );
 
@@ -2620,15 +2791,6 @@ var link = (function() {
           displayImageRadio.checked = true;
         };
 
-        displayLetterSizeInputRange.value = mod.value.convert.from.float(stagedLink.link.display.visual.letter.size);
-        displayLetterSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.letter.size);
-        displayIconSizeInputRange.value = mod.value.convert.from.float(stagedLink.link.display.visual.icon.size);
-        displayIconSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.icon.size);
-        displayImageSizeInputRange.value = mod.value.convert.from.float(stagedLink.link.display.visual.image.size);
-        displayImageSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.image.size);
-        displayShadowSizeInputRange.value = stagedLink.link.display.visual.shadow.size;
-        displayShadowSizeInputNumber.value = stagedLink.link.display.visual.shadow.size;
-
         displayLetterInput.value = stagedLink.link.display.visual.letter.text;
         displayIconInput.value = stagedLink.link.display.visual.icon.label;
         displayImageInput.value = stagedLink.link.display.visual.image.url;
@@ -2639,19 +2801,18 @@ var link = (function() {
 
         nameShowCheckbox.checked = stagedLink.link.display.name.show;
         nameInput.value = stagedLink.link.display.name.text;
+
+        displayLetterSizeInputRange.value = mod.value.convert.from.float(stagedLink.link.display.visual.letter.size);
+        displayLetterSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.letter.size);
+        displayIconSizeInputRange.value = mod.value.convert.from.float(stagedLink.link.display.visual.icon.size);
+        displayIconSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.icon.size);
+        displayImageSizeInputRange.value = mod.value.convert.from.float(stagedLink.link.display.visual.image.size);
+        displayImageSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.image.size);
+        displayShadowSizeInputRange.value = stagedLink.link.display.visual.shadow.size;
+        displayShadowSizeInputNumber.value = stagedLink.link.display.visual.shadow.size;
+
         nameSizeInputRange.value = mod.value.convert.from.float(stagedLink.link.display.name.size);
         nameSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.name.size);
-
-        imageInput.value = stagedLink.link.image.url;
-        imageOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        imageOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-
-        if (stagedLink.link.wide) {
-          wideInput.checked = true;
-        };
-        if (stagedLink.link.tall) {
-          tallInput.checked = true;
-        };
 
         if (link.stagedLink.link.display.alignment == "topleft") {
           displayAlignmentTopLeftRadio.checked = true;
@@ -2749,6 +2910,26 @@ var link = (function() {
         accentRgbGNumber.value = stagedLink.link.accent.rgb.g;
         accentRgbBRange.value = stagedLink.link.accent.rgb.b;
         accentRgbBNumber.value = stagedLink.link.accent.rgb.b;
+
+        backgroundShowInput.checked = stagedLink.link.background.show;
+        if (stagedLink.link.background.type == "image") {
+          backgroundImageRadio.checked = true;
+          backgroundVideoRadio.checked = false;
+        } else if (stagedLink.link.background.type == "video") {
+          backgroundImageRadio.checked = false;
+          backgroundVideoRadio.checked = true;
+        };
+        backgroundImageUrlInput.value = stagedLink.link.background.image.url;
+        backgroundVideoUrlInput.value = stagedLink.link.background.video.url;
+        backgroundOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.background.opacity);
+        backgroundOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.background.opacity);
+
+        if (stagedLink.link.wide) {
+          wideInput.checked = true;
+        };
+        if (stagedLink.link.tall) {
+          tallInput.checked = true;
+        };
       };
 
       var mirror = {
@@ -3147,17 +3328,6 @@ var link = (function() {
         };
 
         if (mod.collapse.form.item.advanced) {
-          helper.removeClass(imageLabel, "disabled");
-          imageInput.removeAttribute("disabled");
-          helper.removeClass(imageInputHelper, "disabled");
-          helper.removeClass(imageOpacityLabel, "disabled");
-          imageOpacityInputRange.removeAttribute("disabled");
-          imageOpacityInputNumber.removeAttribute("disabled");
-          imageOpacityInputDefault.removeAttribute("disabled");
-          wideInput.removeAttribute("disabled");
-          helper.removeClass(wideLabel, "disabled");
-          tallInput.removeAttribute("disabled");
-          helper.removeClass(tallLabel, "disabled");
           helper.removeClass(wideTallLabelHelper, "disabled");
           helper.removeClass(displayAlignmentLabel, "disabled");
           displayAlignmentTopLeftRadio.removeAttribute("disabled");
@@ -3196,18 +3366,12 @@ var link = (function() {
           helper.removeClass(accentThemeLabel, "disabled");
           accentCustomRadio.removeAttribute("disabled");
           helper.removeClass(accentCustomLabel, "disabled");
+          backgroundShowInput.removeAttribute("disabled");
+          wideInput.removeAttribute("disabled");
+          helper.removeClass(wideLabel, "disabled");
+          tallInput.removeAttribute("disabled");
+          helper.removeClass(tallLabel, "disabled");
         } else {
-          helper.addClass(imageLabel, "disabled");
-          imageInput.setAttribute("disabled", "");
-          helper.addClass(imageInputHelper, "disabled");
-          helper.addClass(imageOpacityLabel, "disabled");
-          imageOpacityInputRange.setAttribute("disabled", "");
-          imageOpacityInputNumber.setAttribute("disabled", "");
-          imageOpacityInputDefault.setAttribute("disabled", "");
-          wideInput.setAttribute("disabled", "");
-          helper.addClass(wideLabel, "disabled");
-          tallInput.setAttribute("disabled", "");
-          helper.addClass(tallLabel, "disabled");
           helper.addClass(wideTallLabelHelper, "disabled");
           helper.addClass(displayAlignmentLabel, "disabled");
           displayAlignmentTopLeftRadio.setAttribute("disabled", "");
@@ -3246,6 +3410,51 @@ var link = (function() {
           helper.addClass(accentThemeLabel, "disabled");
           accentCustomRadio.setAttribute("disabled", "");
           helper.addClass(accentCustomLabel, "disabled");
+          backgroundShowInput.setAttribute("disabled", "");
+          wideInput.setAttribute("disabled", "");
+          helper.addClass(wideLabel, "disabled");
+          tallInput.setAttribute("disabled", "");
+          helper.addClass(tallLabel, "disabled");
+        };
+
+        if (mod.collapse.form.item.advanced && stagedLink.link.background.show) {
+          backgroundImageRadio.removeAttribute("disabled");
+          helper.removeClass(backgroundImageLabel, "disabled");
+          backgroundVideoRadio.removeAttribute("disabled");
+          helper.removeClass(backgroundVideoLabel, "disabled");
+          helper.removeClass(backgroundOpacityLabel, "disabled");
+          backgroundOpacityInputRange.removeAttribute("disabled");
+          backgroundOpacityInputNumber.removeAttribute("disabled");
+          backgroundOpacityInputDefault.removeAttribute("disabled");
+        } else {
+          backgroundImageRadio.setAttribute("disabled", "");
+          helper.addClass(backgroundImageLabel, "disabled");
+          backgroundVideoRadio.setAttribute("disabled", "");
+          helper.addClass(backgroundVideoLabel, "disabled");
+          helper.addClass(backgroundOpacityLabel, "disabled");
+          backgroundOpacityInputRange.setAttribute("disabled", "");
+          backgroundOpacityInputNumber.setAttribute("disabled", "");
+          backgroundOpacityInputDefault.setAttribute("disabled", "");
+        };
+
+        if (mod.collapse.form.item.advanced && stagedLink.link.background.show && stagedLink.link.background.type == "image") {
+          helper.removeClass(backgroundImageUrlLabel, "disabled");
+          backgroundImageUrlInput.removeAttribute("disabled");
+          helper.addClass(backgroundVideoUrlLabel, "disabled");
+          backgroundVideoUrlInput.setAttribute("disabled", "");
+          helper.addClass(backgroundVideoUrlInputHelper, "disabled");
+        } else if (mod.collapse.form.item.advanced && stagedLink.link.background.show && stagedLink.link.background.type == "video") {
+          helper.addClass(backgroundImageUrlLabel, "disabled");
+          backgroundImageUrlInput.setAttribute("disabled", "");
+          backgroundVideoUrlInput.removeAttribute("disabled");
+          helper.removeClass(backgroundVideoUrlLabel, "disabled");
+          helper.removeClass(backgroundVideoUrlInputHelper, "disabled");
+        } else {
+          helper.addClass(backgroundImageUrlLabel, "disabled");
+          backgroundImageUrlInput.setAttribute("disabled", "");
+          backgroundVideoUrlInput.setAttribute("disabled", "");
+          helper.addClass(backgroundVideoUrlLabel, "disabled");
+          helper.addClass(backgroundVideoUrlInputHelper, "disabled");
         };
 
         if (mod.collapse.form.item.advanced && stagedLink.link.color.by == "custom") {
@@ -3382,6 +3591,7 @@ var link = (function() {
         stagedLink.position.group.name.text = randomName;
         groupNewNameInput.value = randomName;
       }, false);
+
       displayShowCheckbox.addEventListener("change", function(event) {
         stagedLink.link.display.visual.show = this.checked;
         disableForm();
@@ -3392,20 +3602,58 @@ var link = (function() {
         render.item.preview.delay(formPreviewArea);
         disableForm();
       }, false);
+      displayLetterInput.addEventListener("input", function(event) {
+        stagedLink.link.display.visual.letter.text = this.value;
+        render.item.preview.delay(formPreviewArea);
+      }, false);
       displayIconRadio.addEventListener("change", function(event) {
         stagedLink.link.display.visual.type = this.value;
         render.item.preview.delay(formPreviewArea);
         disableForm();
+      }, false);
+      displayIconFormGroupClear.addEventListener("click", function(event) {
+        stagedLink.link.display.visual.icon.name = "";
+        stagedLink.link.display.visual.icon.prefix = "";
+        stagedLink.link.display.visual.icon.label = "";
+        var existingIcon = helper.e(".link-form-icon");
+        if (existingIcon) {
+          existingIcon.remove();
+        };
+        displayIconInput.value = "";
+        render.item.preview.delay(formPreviewArea);
       }, false);
       displayImageRadio.addEventListener("change", function(event) {
         stagedLink.link.display.visual.type = this.value;
         render.item.preview.delay(formPreviewArea);
         disableForm();
       }, false);
-      displayLetterInput.addEventListener("input", function(event) {
-        stagedLink.link.display.visual.letter.text = this.value;
+      displayImageInput.addEventListener("input", function(event) {
+        stagedLink.link.display.visual.image.url = this.value;
         render.item.preview.delay(formPreviewArea);
       }, false);
+      nameShowCheckbox.addEventListener("change", function(event) {
+        stagedLink.link.display.name.show = this.checked;
+        disableForm();
+        render.item.preview.delay(formPreviewArea);
+      }, false);
+      nameInput.addEventListener("input", function(event) {
+        stagedLink.link.display.name.text = this.value;
+        render.item.preview.delay(formPreviewArea);
+      }, false);
+      urlInput.addEventListener("input", function(event) {
+        stagedLink.link.url = this.value;
+        render.item.preview.delay(formPreviewArea);
+      }, false);
+
+      advancedCollapseButton.addEventListener("click", function() {
+        if (mod.collapse.form.item.advanced) {
+          mod.collapse.form.item.advanced = false;
+        } else {
+          mod.collapse.form.item.advanced = true;
+        };
+        collapse.advanced();
+        disableForm();
+      });
       displayLetterSizeInputRange.addEventListener("input", function(event) {
         stagedLink.link.display.visual.letter.size = mod.value.convert.to.float(parseInt(this.value, 10));
         displayLetterSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.visual.letter.size);
@@ -3526,15 +3774,6 @@ var link = (function() {
         displayShadowSizeInputNumber.value = stagedLink.link.display.visual.shadow.size;
         render.item.preview.delay(formPreviewArea);
       });
-      nameShowCheckbox.addEventListener("change", function(event) {
-        stagedLink.link.display.name.show = this.checked;
-        disableForm();
-        render.item.preview.delay(formPreviewArea);
-      }, false);
-      nameInput.addEventListener("input", function(event) {
-        stagedLink.link.display.name.text = this.value;
-        render.item.preview.delay(formPreviewArea);
-      }, false);
       nameSizeInputRange.addEventListener("input", function(event) {
         stagedLink.link.display.name.size = mod.value.convert.to.float(parseInt(this.value, 10));
         nameSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.name.size);
@@ -3565,48 +3804,6 @@ var link = (function() {
         nameSizeInputNumber.value = mod.value.convert.from.float(stagedLink.link.display.name.size);
         render.item.preview.delay(formPreviewArea);
       });
-      imageInput.addEventListener("input", function(event) {
-        stagedLink.link.image.url = this.value;
-        render.item.preview.delay(formPreviewArea);
-      }, false);
-      imageOpacityInputRange.addEventListener("input", function(event) {
-        stagedLink.link.image.opacity = mod.value.convert.to.float(parseInt(this.value, 10));
-        imageOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        render.item.preview.delay(formPreviewArea);
-      });
-      imageOpacityInputNumber.addEventListener("input", function(event) {
-        var inputValue = parseInt(this.value, 10);
-        for (var key in mod.value.modify) {
-          if (this[key] != "") {
-            inputValue = mod.value.modify[key](inputValue, this);
-          };
-        };
-        stagedLink.link.image.opacity = mod.value.convert.to.float(inputValue);
-        imageOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        var set = function(input) {
-          input.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        };
-        clearTimeout(mirror.delay);
-        mirror.delay = setTimeout(set, 500, this);
-        render.item.preview.delay(formPreviewArea);
-      });
-      imageOpacityInputDefault.addEventListener("click", function(event) {
-        stagedLink.link.image.opacity = helper.getObject({
-          object: state.get.default(),
-          path: "link.item.image.opacity"
-        });
-        imageOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        imageOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.image.opacity);
-        render.item.preview.delay(formPreviewArea);
-      });
-      wideInput.addEventListener("change", function(event) {
-        stagedLink.link.wide = this.checked;
-        render.item.preview.delay(formPreviewArea);
-      }, false);
-      tallInput.addEventListener("change", function(event) {
-        stagedLink.link.tall = this.checked;
-        render.item.preview.delay(formPreviewArea);
-      }, false);
       displayAlignmentTopLeftRadio.addEventListener("input", function(event) {
         link.stagedLink.link.display.alignment = this.value;
         render.item.preview.delay(formPreviewArea);
@@ -3779,25 +3976,6 @@ var link = (function() {
         stagedLink.link.display.order = this.value;
         render.item.preview.delay(formPreviewArea);
       }, false);
-      displayImageInput.addEventListener("input", function(event) {
-        stagedLink.link.display.visual.image.url = this.value;
-        render.item.preview.delay(formPreviewArea);
-      }, false);
-      urlInput.addEventListener("input", function(event) {
-        stagedLink.link.url = this.value;
-        render.item.preview.delay(formPreviewArea);
-      }, false);
-      displayIconFormGroupClear.addEventListener("click", function(event) {
-        stagedLink.link.display.visual.icon.name = "";
-        stagedLink.link.display.visual.icon.prefix = "";
-        stagedLink.link.display.visual.icon.label = "";
-        var existingIcon = helper.e(".link-form-icon");
-        if (existingIcon) {
-          existingIcon.remove();
-        };
-        displayIconInput.value = "";
-        render.item.preview.delay(formPreviewArea);
-      }, false);
       colorThemeRadio.addEventListener("change", function() {
         stagedLink.link.color.by = this.value;
         render.item.preview.delay(formPreviewArea);
@@ -3946,7 +4124,7 @@ var link = (function() {
       colorOpacityInputDefault.addEventListener("click", function(event) {
         stagedLink.link.color.opacity = helper.getObject({
           object: state.get.default(),
-          path: "link.item.image.opacity"
+          path: "link.item.background.opacity"
         });
         colorOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.color.opacity);
         colorOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.color.opacity);
@@ -4076,15 +4254,67 @@ var link = (function() {
         mirror.delay = setTimeout(set, 500, this);
         render.item.preview.delay(formPreviewArea);
       });
-      advancedCollapseButton.addEventListener("click", function() {
-        if (mod.collapse.form.item.advanced) {
-          mod.collapse.form.item.advanced = false;
-        } else {
-          mod.collapse.form.item.advanced = true;
-        };
-        collapse.advanced();
+      backgroundShowInput.addEventListener("change", function() {
+        stagedLink.link.background.show = this.checked;
+        render.item.preview.delay(formPreviewArea);
         disableForm();
       });
+      backgroundImageRadio.addEventListener("change", function(event) {
+        stagedLink.link.background.type = this.value;
+        render.item.preview.delay(formPreviewArea);
+        disableForm();
+      }, false);
+      backgroundVideoRadio.addEventListener("change", function(event) {
+        stagedLink.link.background.type = this.value;
+        render.item.preview.delay(formPreviewArea);
+        disableForm();
+      }, false);
+      backgroundImageUrlInput.addEventListener("input", function(event) {
+        stagedLink.link.background.image.url = this.value;
+        render.item.preview.delay(formPreviewArea);
+      }, false);
+      backgroundVideoUrlInput.addEventListener("input", function(event) {
+        stagedLink.link.background.video.url = this.value;
+        render.item.preview.delay(formPreviewArea);
+      }, false);
+      backgroundOpacityInputRange.addEventListener("input", function(event) {
+        stagedLink.link.background.opacity = mod.value.convert.to.float(parseInt(this.value, 10));
+        backgroundOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.background.opacity);
+        render.item.preview.delay(formPreviewArea);
+      });
+      backgroundOpacityInputNumber.addEventListener("input", function(event) {
+        var inputValue = parseInt(this.value, 10);
+        for (var key in mod.value.modify) {
+          if (this[key] != "") {
+            inputValue = mod.value.modify[key](inputValue, this);
+          };
+        };
+        stagedLink.link.background.opacity = mod.value.convert.to.float(inputValue);
+        backgroundOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.background.opacity);
+        var set = function(input) {
+          input.value = mod.value.convert.from.float(stagedLink.link.background.opacity);
+        };
+        clearTimeout(mirror.delay);
+        mirror.delay = setTimeout(set, 500, this);
+        render.item.preview.delay(formPreviewArea);
+      });
+      backgroundOpacityInputDefault.addEventListener("click", function(event) {
+        stagedLink.link.background.opacity = helper.getObject({
+          object: state.get.default(),
+          path: "link.item.background.opacity"
+        });
+        backgroundOpacityInputRange.value = mod.value.convert.from.float(stagedLink.link.background.opacity);
+        backgroundOpacityInputNumber.value = mod.value.convert.from.float(stagedLink.link.background.opacity);
+        render.item.preview.delay(formPreviewArea);
+      });
+      wideInput.addEventListener("change", function(event) {
+        stagedLink.link.wide = this.checked;
+        render.item.preview.delay(formPreviewArea);
+      }, false);
+      tallInput.addEventListener("change", function(event) {
+        stagedLink.link.tall = this.checked;
+        render.item.preview.delay(formPreviewArea);
+      }, false);
 
       var autoSuggestAnchor = displayIconFormGroupText.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
 
@@ -4468,6 +4698,7 @@ var link = (function() {
         if (bookmarks.get().length > 0) {
           stagedLink.position.destination.item = bookmarks.get()[0].items.length;
         };
+        var form = render.item.form();
         var successAction = function() {
           stagedLink.link.timeStamp = new Date().getTime();
           bookmarks.mod.add.link(JSON.parse(JSON.stringify(stagedLink)));
@@ -4488,7 +4719,8 @@ var link = (function() {
           successAction: successAction,
           cancelAction: cancelAction,
           actionText: "Add",
-          content: render.item.form()
+          content: form,
+          width: 55
         });
         shade.open({
           action: function() {
@@ -4599,7 +4831,8 @@ var link = (function() {
           successAction: successAction,
           cancelAction: cancelAction,
           actionText: "Save",
-          content: form
+          content: form,
+          width: 55
         });
         shade.open({
           action: function() {

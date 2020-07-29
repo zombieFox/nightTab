@@ -76,9 +76,16 @@ var bookmarks = (function() {
         },
         opacity: 1
       },
-      image: {
-        url: "",
-        opacity: 1
+      background: {
+        show: false,
+        type: "image",
+        opacity: 1,
+        image: {
+          url: ""
+        },
+        video: {
+          url: ""
+        }
       },
       wide: false,
       tall: false,
@@ -150,9 +157,16 @@ var bookmarks = (function() {
         },
         opacity: 1
       },
-      image: {
-        url: "",
-        opacity: 1
+      background: {
+        show: false,
+        type: "image",
+        opacity: 1,
+        image: {
+          url: ""
+        },
+        video: {
+          url: ""
+        }
       },
       wide: false,
       tall: false,
@@ -224,9 +238,16 @@ var bookmarks = (function() {
         },
         opacity: 1
       },
-      image: {
-        url: "",
-        opacity: 1
+      background: {
+        show: false,
+        type: "image",
+        opacity: 1,
+        image: {
+          url: ""
+        },
+        video: {
+          url: ""
+        }
       },
       wide: false,
       tall: false,
@@ -298,9 +319,16 @@ var bookmarks = (function() {
         },
         opacity: 1
       },
-      image: {
-        url: "",
-        opacity: 1
+      background: {
+        show: false,
+        type: "image",
+        opacity: 1,
+        image: {
+          url: ""
+        },
+        video: {
+          url: ""
+        }
       },
       wide: false,
       tall: false,
@@ -372,9 +400,16 @@ var bookmarks = (function() {
         },
         opacity: 1
       },
-      image: {
-        url: "",
-        opacity: 1
+      background: {
+        show: false,
+        type: "image",
+        opacity: 1,
+        image: {
+          url: ""
+        },
+        video: {
+          url: ""
+        }
       },
       wide: false,
       tall: false,
@@ -446,9 +481,16 @@ var bookmarks = (function() {
         },
         opacity: 1
       },
-      image: {
-        url: "",
-        opacity: 1
+      background: {
+        show: false,
+        type: "image",
+        opacity: 1,
+        image: {
+          url: ""
+        },
+        video: {
+          url: ""
+        }
       },
       wide: false,
       tall: false,
@@ -529,9 +571,16 @@ var bookmarks = (function() {
         },
         opacity: 1
       },
-      image: {
-        url: "",
-        opacity: 1
+      background: {
+        show: false,
+        type: "image",
+        opacity: 1,
+        image: {
+          url: ""
+        },
+        video: {
+          url: ""
+        }
       },
       wide: false,
       tall: false,
@@ -603,9 +652,16 @@ var bookmarks = (function() {
         },
         opacity: 1
       },
-      image: {
-        url: "",
-        opacity: 1
+      background: {
+        show: false,
+        type: "image",
+        opacity: 1,
+        image: {
+          url: ""
+        },
+        video: {
+          url: ""
+        }
       },
       wide: false,
       tall: false,

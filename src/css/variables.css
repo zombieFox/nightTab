@@ -116,7 +116,7 @@
   --link-item-visual-element-color-focus-hover:         var(--theme-style-text);
   --link-item-name-color:                               var(--theme-color-14);
   --link-item-name-color-focus-hover:                   var(--theme-style-text);
-  --link-item-image-opacity:                            1;
+  --link-item-background-opacity:                       1;
   --link-item-size:                                     1em;
   --link-item-display-space:                            0.25em;
   --link-item-border:                                   0;
@@ -274,6 +274,11 @@
   --edge-shadow:                                        inset 0 0 0 var(--layout-line-width) rgb(var(--theme-accent)),
                                                         inset 0 0 0 calc(var(--layout-line-width) * 4) rgba(var(--theme-accent), 0.1),
                                                         inset 0 0 0 calc(var(--layout-line-width) * 8) rgba(var(--theme-accent), 0.1);
+  /* modal */
+  --modal-small:                                        30em;
+  --modal-medium:                                       50em;
+  --modal-large:                                        70em;
+  --modal-size:                                         var(--modal-medium);
   /* z index */
   --z-index-background:                                 1000;
   --z-index-link:                                       2000;
