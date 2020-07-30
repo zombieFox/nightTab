@@ -126,7 +126,7 @@ var search = (function() {
   };
 
   render.focus = function() {
-    if (state.get.current().header.search.focus) {
+    if (state.get.current().header.search.show && state.get.current().header.search.focus) {
       window.addEventListener("load", function(event) {
         helper.e(".search-input").focus();
       });
