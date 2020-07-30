@@ -266,7 +266,7 @@ var data = (function() {
 
   var init = function() {
     mod.nameFix();
-    mod.restore(data.load());
+    mod.restore(load());
     render.feedback.empty();
   };
 
