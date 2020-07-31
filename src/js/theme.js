@@ -124,12 +124,16 @@ var theme = (function() {
   };
 
   mod.style = {
+    save: function() {
+      data.mod.set("nightTabStyle", state.get.current().theme.style);
+    },
     light: function() {
       helper.setObject({
         object: state.get.current(),
         path: "theme.style",
         newValue: "light"
       });
+      mod.style.save();
     },
     dark: function() {
       helper.setObject({
@@ -137,6 +141,7 @@ var theme = (function() {
         path: "theme.style",
         newValue: "dark"
       });
+      mod.style.save();
     },
     system: function() {
       helper.setObject({
