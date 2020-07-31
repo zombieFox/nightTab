@@ -154,10 +154,6 @@ const build = {
       .pipe(dest(path.build + '/js', {
         sourcemaps: '.'
       }))
-  },
-  initialBackground: function() {
-    return src(path.src + '/js/initial-background.js')
-      .pipe(dest(path.build + '/js'))
   }
 }
 
@@ -213,16 +209,8 @@ const dev = {
       return src(jsFiles)
         .pipe(dest(path.dev + '/js'))
     })
-  },
-  initialBackground: function() {
-    watch(path.src + '/js/initial-background.js', {
-      ignoreInitial: false
-    }, function() {
-      return src(path.src + '/js/initial-background.js')
-        .pipe(dest(path.dev + '/js'))
-    })
   }
 }
 
-exports.dev = parallel(dev.manifest, dev.html, dev.fonts, dev.icons, dev.css, dev.js, dev.initialBackground)
-exports.build = parallel(build.manifest, build.html, build.fonts, build.icons, build.css, build.js, build.initialBackground)
+exports.dev = parallel(dev.manifest, dev.html, dev.fonts, dev.icons, dev.css, dev.js)
+exports.build = parallel(build.manifest, build.html, build.fonts, build.icons, build.css, build.js)
