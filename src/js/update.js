@@ -1350,6 +1350,39 @@ var update = (function() {
       data.state.link.item.background = data.state.link.item.image;
       delete data.state.link.item.image;
       return data;
+    },
+    "5.78.0": function(data) {
+      var backgroundData = {
+        show: data.state.background.image.show,
+        type: "video",
+        image: {
+          type: data.state.background.image.from,
+          file: {
+            name: data.state.background.image.file.name,
+            data: data.state.background.image.file.data
+          },
+          url: data.state.background.image.url,
+        },
+        video: {
+          url: ""
+        },
+        blur: data.state.background.image.blur,
+        scale: data.state.background.image.scale,
+        opacity: data.state.background.image.opacity,
+        grayscale: data.state.background.image.grayscale,
+        accent: data.state.background.image.accent,
+        vignette: {
+          opacity: data.state.background.image.vignette.opacity,
+          start: data.state.background.image.vignette.start,
+          end: data.state.background.image.vignette.end
+        }
+      };
+      if (data.state.background.image.show) {
+        backgroundData.type = "image";
+      };
+      data.state.background.visual = backgroundData;
+      delete data.state.background.image;
+      return data;
     }
   };
 

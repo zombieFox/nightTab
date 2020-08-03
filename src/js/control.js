@@ -8925,6 +8925,30 @@ var control = (function() {
           }
         }]
       },
+      data: {
+        restore: [{
+          element: ".control-data-import",
+          type: "file",
+          func: function() {
+            data.mod.import();
+          }
+        }],
+        backup: [{
+          element: ".control-data-export",
+          type: "a",
+          func: function() {
+            data.mod.export();
+          }
+        }],
+        clear: [{
+          element: ".control-data-clear",
+          type: "a",
+          func: function() {
+            menu.close();
+            data.render.clear();
+          }
+        }]
+      },
       background: {
         color: [{
           element: ".control-background-color-by-theme",
@@ -9667,59 +9691,87 @@ var control = (function() {
             background.render.color.custom();
           }
         }],
-        image: [{
-          element: ".control-background-image-show",
-          path: "background.image.show",
+        visual: [{
+          element: ".control-background-visual-show",
+          path: "background.visual.show",
           type: "checkbox",
           func: function() {
             render.class();
             render.dependents();
-            background.render.image();
+            background.render.visual.video.set();
+            background.render.visual.image.set();
           }
         }, {
-          element: ".control-background-image-from-file",
-          path: "background.image.from",
+          element: ".control-background-visual-type-video",
+          path: "background.visual.type",
           type: "radio",
           func: function() {
             render.dependents();
-            background.render.image();
+            background.render.visual.video.set();
+            background.render.visual.image.clear();
           }
         }, {
-          element: ".control-background-image-file",
+          element: ".control-background-visual-type-image",
+          path: "background.visual.type",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            background.render.visual.video.clear();
+            background.render.visual.image.set();
+          }
+        }, {
+          element: ".control-background-visual-image-type-file",
+          path: "background.visual.image.type",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            background.render.visual.image.set();
+          }
+        }, {
+          element: ".control-background-visual-image-type-url",
+          path: "background.visual.image.type",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            background.render.visual.image.set();
+          }
+        }, {
+          element: ".control-background-visual-image-file",
           type: "file",
           func: function() {
             background.mod.import();
+            background.render.visual.image.set();
           }
         }, {
-          element: ".control-background-image-file-clear",
+          element: ".control-background-visual-image-clear",
           type: "button",
           func: function() {
-            background.mod.clear.file();
-            background.render.input.clear();
-            background.render.image();
+            background.mod.visual.image.clear();
+            background.render.visual.image.clear();
             background.render.feedback.clear({
               animate: true
             });
             background.render.feedback.empty();
           }
         }, {
-          element: ".control-background-image-from-url",
-          path: "background.image.from",
-          type: "radio",
-          func: function() {
-            render.dependents();
-            background.render.image();
-          }
-        }, {
-          element: ".control-background-image-url",
-          path: "background.image.url",
+          element: ".control-background-visual-image-url",
+          path: "background.visual.image.url",
           type: "textarea",
           func: function() {
-            background.render.image();
+            background.render.visual.image.clear();
+            background.render.visual.image.set();
           }
         }, {
-          element: ".control-background-image-opacity-range",
-          path: "background.image.opacity",
+          element: ".control-background-visual-video-url",
+          path: "background.visual.video.url",
+          type: "textarea",
+          func: function() {
+            background.render.visual.video.clear();
+            background.render.visual.video.set();
+          }
+        }, {
+          element: ".control-background-visual-opacity-range",
+          path: "background.visual.opacity",
           type: "range",
           valueConvert: ["float"],
           valueModify: {
@@ -9727,17 +9779,17 @@ var control = (function() {
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-opacity-number",
-            path: "background.image.opacity",
+            element: ".control-background-visual-opacity-number",
+            path: "background.visual.opacity",
             type: "number",
             valueConvert: ["float"]
           }],
           func: function() {
-            background.render.opacity();
+            background.render.visual.opacity();
           }
         }, {
-          element: ".control-background-image-opacity-number",
-          path: "background.image.opacity",
+          element: ".control-background-visual-opacity-number",
+          path: "background.visual.opacity",
           type: "number",
           valueConvert: ["float"],
           valueModify: {
@@ -9745,25 +9797,25 @@ var control = (function() {
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-opacity-range",
-            path: "background.image.opacity",
+            element: ".control-background-visual-opacity-range",
+            path: "background.visual.opacity",
             type: "range",
             valueConvert: ["float"]
           }],
           func: function() {
-            background.render.opacity();
+            background.render.visual.opacity();
           }
         }, {
-          element: ".control-background-image-opacity-default",
+          element: ".control-background-visual-opacity-default",
           type: "button",
           func: function() {
-            mod.default("background.image.opacity");
-            background.render.opacity();
+            mod.default("background.visual.opacity");
+            background.render.visual.opacity();
             render.update.control.menu();
           }
         }, {
-          element: ".control-background-image-grayscale-range",
-          path: "background.image.grayscale",
+          element: ".control-background-visual-grayscale-range",
+          path: "background.visual.grayscale",
           type: "range",
           valueConvert: ["float"],
           valueModify: {
@@ -9771,17 +9823,17 @@ var control = (function() {
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-grayscale-number",
-            path: "background.image.grayscale",
+            element: ".control-background-visual-grayscale-number",
+            path: "background.visual.grayscale",
             type: "number",
             valueConvert: ["float"]
           }],
           func: function() {
-            background.render.grayscale();
+            background.render.visual.grayscale();
           }
         }, {
-          element: ".control-background-image-grayscale-number",
-          path: "background.image.grayscale",
+          element: ".control-background-visual-grayscale-number",
+          path: "background.visual.grayscale",
           type: "number",
           valueConvert: ["float"],
           valueModify: {
@@ -9789,65 +9841,65 @@ var control = (function() {
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-grayscale-range",
-            path: "background.image.grayscale",
+            element: ".control-background-visual-grayscale-range",
+            path: "background.visual.grayscale",
             type: "range",
             valueConvert: ["float"]
           }],
           func: function() {
-            background.render.grayscale();
+            background.render.visual.grayscale();
           }
         }, {
-          element: ".control-background-image-grayscale-default",
+          element: ".control-background-visual-grayscale-default",
           type: "button",
           func: function() {
-            mod.default("background.image.grayscale");
-            background.render.grayscale();
+            mod.default("background.visual.grayscale");
+            background.render.visual.grayscale();
             render.update.control.menu();
           }
         }, {
-          element: ".control-background-image-blur-range",
-          path: "background.image.blur",
+          element: ".control-background-visual-blur-range",
+          path: "background.visual.blur",
           type: "range",
           valueModify: {
             min: 0,
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-blur-number",
-            path: "background.image.blur",
+            element: ".control-background-visual-blur-number",
+            path: "background.visual.blur",
             type: "number"
           }],
           func: function() {
-            background.render.blur();
+            background.render.visual.blur();
           }
         }, {
-          element: ".control-background-image-blur-number",
-          path: "background.image.blur",
+          element: ".control-background-visual-blur-number",
+          path: "background.visual.blur",
           type: "number",
           valueModify: {
             min: 0,
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-blur-range",
-            path: "background.image.blur",
+            element: ".control-background-visual-blur-range",
+            path: "background.visual.blur",
             type: "range"
           }],
           func: function() {
-            background.render.blur();
+            background.render.visual.blur();
           }
         }, {
-          element: ".control-background-image-blur-default",
+          element: ".control-background-visual-blur-default",
           type: "button",
           func: function() {
-            mod.default("background.image.blur");
-            background.render.blur();
+            mod.default("background.visual.blur");
+            background.render.visual.blur();
             render.update.control.menu();
           }
         }, {
-          element: ".control-background-image-accent-range",
-          path: "background.image.accent",
+          element: ".control-background-visual-accent-range",
+          path: "background.visual.accent",
           type: "range",
           valueConvert: ["float"],
           valueModify: {
@@ -9855,17 +9907,17 @@ var control = (function() {
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-accent-number",
-            path: "background.image.accent",
+            element: ".control-background-visual-accent-number",
+            path: "background.visual.accent",
             type: "number",
             valueConvert: ["float"]
           }],
           func: function() {
-            background.render.accent();
+            background.render.visual.accent();
           }
         }, {
-          element: ".control-background-image-accent-number",
-          path: "background.image.accent",
+          element: ".control-background-visual-accent-number",
+          path: "background.visual.accent",
           type: "number",
           valueConvert: ["float"],
           valueModify: {
@@ -9873,25 +9925,25 @@ var control = (function() {
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-accent-range",
-            path: "background.image.accent",
+            element: ".control-background-visual-accent-range",
+            path: "background.visual.accent",
             type: "range",
             valueConvert: ["float"]
           }],
           func: function() {
-            background.render.accent();
+            background.render.visual.accent();
           }
         }, {
-          element: ".control-background-image-accent-default",
+          element: ".control-background-visual-accent-default",
           type: "button",
           func: function() {
-            mod.default("background.image.accent");
-            background.render.accent();
+            mod.default("background.visual.accent");
+            background.render.visual.accent();
             render.update.control.menu();
           }
         }, {
-          element: ".control-background-image-scale-range",
-          path: "background.image.scale",
+          element: ".control-background-visual-scale-range",
+          path: "background.visual.scale",
           type: "range",
           valueConvert: ["float"],
           valueModify: {
@@ -9899,17 +9951,17 @@ var control = (function() {
             max: 1000
           },
           mirrorElement: [{
-            element: ".control-background-image-scale-number",
-            path: "background.image.scale",
+            element: ".control-background-visual-scale-number",
+            path: "background.visual.scale",
             type: "number",
             valueConvert: ["float"]
           }],
           func: function() {
-            background.render.scale();
+            background.render.visual.scale();
           }
         }, {
-          element: ".control-background-image-scale-number",
-          path: "background.image.scale",
+          element: ".control-background-visual-scale-number",
+          path: "background.visual.scale",
           type: "number",
           valueConvert: ["float"],
           valueModify: {
@@ -9917,205 +9969,181 @@ var control = (function() {
             max: 1000
           },
           mirrorElement: [{
-            element: ".control-background-image-scale-range",
-            path: "background.image.scale",
+            element: ".control-background-visual-scale-range",
+            path: "background.visual.scale",
             type: "range",
             valueConvert: ["float"]
           }],
           func: function() {
-            background.render.scale();
+            background.render.visual.scale();
           }
         }, {
-          element: ".control-background-image-scale-default",
+          element: ".control-background-visual-scale-default",
           type: "button",
           func: function() {
-            mod.default("background.image.scale");
-            background.render.scale();
+            mod.default("background.visual.scale");
+            background.render.visual.scale();
             render.update.control.menu();
           }
         }, {
-          element: ".control-background-image-vignette-opacity-range",
-          path: "background.image.vignette.opacity",
+          element: ".control-background-vignette-opacity-range",
+          path: "background.visual.vignette.opacity",
           type: "range",
           valueModify: {
             min: 0,
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-vignette-opacity-number",
-            path: "background.image.vignette.opacity",
+            element: ".control-background-vignette-opacity-number",
+            path: "background.visual.vignette.opacity",
             type: "number"
           }],
           func: function() {
-            background.render.vignette.opacity();
-            background.render.vignette.start();
-            background.render.vignette.end();
+            background.render.visual.vignette.opacity();
+            background.render.visual.vignette.start();
+            background.render.visual.vignette.end();
           }
         }, {
-          element: ".control-background-image-vignette-opacity-number",
-          path: "background.image.vignette.opacity",
+          element: ".control-background-vignette-opacity-number",
+          path: "background.visual.vignette.opacity",
           type: "number",
           valueModify: {
             min: 0,
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-vignette-opacity-range",
-            path: "background.image.vignette.opacity",
+            element: ".control-background-vignette-opacity-range",
+            path: "background.visual.vignette.opacity",
             type: "range"
           }],
           func: function() {
-            background.render.vignette.opacity();
-            background.render.vignette.start();
-            background.render.vignette.end();
+            background.render.visual.vignette.opacity();
+            background.render.visual.vignette.start();
+            background.render.visual.vignette.end();
           }
         }, {
-          element: ".control-background-image-vignette-opacity-default",
+          element: ".control-background-vignette-opacity-default",
           type: "button",
           func: function() {
-            mod.default("background.image.vignette.opacity");
-            background.render.vignette.opacity();
-            background.render.vignette.start();
-            background.render.vignette.end();
+            mod.default("background.visual.vignette.opacity");
+            background.render.visual.vignette.opacity();
+            background.render.visual.vignette.start();
+            background.render.visual.vignette.end();
             render.update.control.menu();
           }
         }, {
-          element: ".control-background-image-vignette-start-range",
-          path: "background.image.vignette.start",
+          element: ".control-background-vignette-start-range",
+          path: "background.visual.vignette.start",
           type: "range",
           valueModify: {
             min: 0,
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-vignette-start-number",
-            path: "background.image.vignette.start",
+            element: ".control-background-vignette-start-number",
+            path: "background.visual.vignette.start",
             type: "number"
           }],
           limitElement: [{
-            element: ".control-background-image-vignette-end-range",
-            path: "background.image.vignette.end",
+            element: ".control-background-vignette-end-range",
+            path: "background.visual.vignette.end",
             type: "range",
             limit: "max"
           }, {
-            element: ".control-background-image-vignette-end-number",
-            path: "background.image.vignette.end",
+            element: ".control-background-vignette-end-number",
+            path: "background.visual.vignette.end",
             type: "number",
             limit: "max"
           }],
           func: function() {
-            background.render.vignette.opacity();
-            background.render.vignette.start();
-            background.render.vignette.end();
+            background.render.visual.vignette.opacity();
+            background.render.visual.vignette.start();
+            background.render.visual.vignette.end();
           }
         }, {
-          element: ".control-background-image-vignette-start-number",
-          path: "background.image.vignette.start",
+          element: ".control-background-vignette-start-number",
+          path: "background.visual.vignette.start",
           type: "number",
           valueModify: {
             min: 0,
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-vignette-start-range",
-            path: "background.image.vignette.start",
+            element: ".control-background-vignette-start-range",
+            path: "background.visual.vignette.start",
             type: "range"
           }],
           func: function() {
-            background.render.vignette.opacity();
-            background.render.vignette.start();
-            background.render.vignette.end();
+            background.render.visual.vignette.opacity();
+            background.render.visual.vignette.start();
+            background.render.visual.vignette.end();
           }
         }, {
-          element: ".control-background-image-vignette-start-default",
+          element: ".control-background-vignette-start-default",
           type: "button",
           func: function() {
-            mod.default("background.image.vignette.start");
-            background.render.vignette.opacity();
-            background.render.vignette.start();
-            background.render.vignette.end();
+            mod.default("background.visual.vignette.start");
+            background.render.visual.vignette.opacity();
+            background.render.visual.vignette.start();
+            background.render.visual.vignette.end();
             render.update.control.menu();
           }
         }, {
-          element: ".control-background-image-vignette-end-range",
-          path: "background.image.vignette.end",
+          element: ".control-background-vignette-end-range",
+          path: "background.visual.vignette.end",
           type: "range",
           valueModify: {
             min: 0,
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-vignette-end-number",
-            path: "background.image.vignette.end",
+            element: ".control-background-vignette-end-number",
+            path: "background.visual.vignette.end",
             type: "number"
           }],
           limitElement: [{
-            element: ".control-background-image-vignette-start-range",
-            path: "background.image.vignette.start",
+            element: ".control-background-vignette-start-range",
+            path: "background.visual.vignette.start",
             type: "range",
             limit: "min"
           }, {
-            element: ".control-background-image-vignette-start-number",
-            path: "background.image.vignette.start",
+            element: ".control-background-vignette-start-number",
+            path: "background.visual.vignette.start",
             type: "number",
             limit: "min"
           }],
           func: function() {
-            background.render.vignette.opacity();
-            background.render.vignette.start();
-            background.render.vignette.end();
+            background.render.visual.vignette.opacity();
+            background.render.visual.vignette.start();
+            background.render.visual.vignette.end();
           }
         }, {
-          element: ".control-background-image-vignette-end-number",
-          path: "background.image.vignette.end",
+          element: ".control-background-vignette-end-number",
+          path: "background.visual.vignette.end",
           type: "number",
           valueModify: {
             min: 0,
             max: 100
           },
           mirrorElement: [{
-            element: ".control-background-image-vignette-end-range",
-            path: "background.image.vignette.end",
+            element: ".control-background-vignette-end-range",
+            path: "background.visual.vignette.end",
             type: "range"
           }],
           func: function() {
-            background.render.vignette.opacity();
-            background.render.vignette.start();
-            background.render.vignette.end();
+            background.render.visual.vignette.opacity();
+            background.render.visual.vignette.start();
+            background.render.visual.vignette.end();
           }
         }, {
-          element: ".control-background-image-vignette-end-default",
+          element: ".control-background-vignette-end-default",
           type: "button",
           func: function() {
-            mod.default("background.image.vignette.end");
-            background.render.vignette.opacity();
-            background.render.vignette.start();
-            background.render.vignette.end();
+            mod.default("background.visual.vignette.end");
+            background.render.visual.vignette.opacity();
+            background.render.visual.vignette.start();
+            background.render.visual.vignette.end();
             render.update.control.menu();
-          }
-        }]
-      },
-      data: {
-        restore: [{
-          element: ".control-data-import",
-          type: "file",
-          func: function() {
-            data.mod.import();
-          }
-        }],
-        backup: [{
-          element: ".control-data-export",
-          type: "a",
-          func: function() {
-            data.mod.export();
-          }
-        }],
-        clear: [{
-          element: ".control-data-clear",
-          type: "a",
-          func: function() {
-            menu.close();
-            data.render.clear();
           }
         }]
       }
@@ -10767,12 +10795,12 @@ var control = (function() {
       }],
       background: [{
         remove: [
-          "is-background-image-show"
+          "is-background-visual-show"
         ],
         condition: function() {
-          return state.get.current().background.image.show;
+          return state.get.current().background.visual.show;
         },
-        name: "is-background-image-show"
+        name: "is-background-visual-show"
       }, {
         remove: [
           "is-background-color-by-theme",
@@ -11643,66 +11671,87 @@ var control = (function() {
         }
       }, {
         condition: function() {
-          return (state.get.current().background.image.show && state.get.current().background.image.from == "file");
+          return (state.get.current().background.visual.show);
         },
         dependents: function() {
           return [
-            ".control-background-image-file-feedback",
-            ".control-background-image-file",
-            ".control-background-image-file-clear",
-            ".control-background-image-file-helper"
+            ".control-background-visual-type-video",
+            ".control-background-visual-type-image",
+            "[for=control-background-visual-opacity-range]",
+            ".control-background-visual-opacity-range",
+            ".control-background-visual-opacity-number",
+            ".control-background-visual-opacity-default",
+            "[for=control-background-visual-blur-range]",
+            ".control-background-visual-blur-range",
+            ".control-background-visual-blur-number",
+            ".control-background-visual-blur-default",
+            "[for=control-background-visual-grayscale-range]",
+            ".control-background-visual-grayscale-range",
+            ".control-background-visual-grayscale-number",
+            ".control-background-visual-grayscale-default",
+            "[for=control-background-visual-accent-range]",
+            ".control-background-visual-accent-range",
+            ".control-background-visual-accent-number",
+            ".control-background-visual-accent-default",
+            "[for=control-background-visual-scale-range]",
+            ".control-background-visual-scale-range",
+            ".control-background-visual-scale-number",
+            ".control-background-visual-scale-default",
+            "[for=control-background-vignette-opacity-range]",
+            ".control-background-vignette-opacity-range",
+            ".control-background-vignette-opacity-number",
+            ".control-background-vignette-opacity-default",
+            "[for=control-background-vignette-start-range]",
+            ".control-background-vignette-start-range",
+            ".control-background-vignette-start-number",
+            ".control-background-vignette-start-default",
+            "[for=control-background-vignette-end-range]",
+            ".control-background-vignette-end-range",
+            ".control-background-vignette-end-number",
+            ".control-background-vignette-end-default"
           ];
         }
       }, {
         condition: function() {
-          return (state.get.current().background.image.show && state.get.current().background.image.from == "url");
+          return (state.get.current().background.visual.show && state.get.current().background.visual.type == "video");
         },
         dependents: function() {
           return [
-            ".control-background-image-url",
-            ".control-background-image-url-helper"
+            "[for=control-background-visual-video-url]",
+            ".control-background-visual-video-url",
+            ".control-background-visual-video-url-helper"
           ];
         }
       }, {
         condition: function() {
-          return state.get.current().background.image.show;
+          return (state.get.current().background.visual.show && state.get.current().background.visual.type == "image");
         },
         dependents: function() {
           return [
-            ".control-background-image-from-file",
-            ".control-background-image-from-url",
-            "[for=control-background-image-opacity-range]",
-            ".control-background-image-opacity-range",
-            ".control-background-image-opacity-number",
-            ".control-background-image-opacity-default",
-            "[for=control-background-image-blur-range]",
-            ".control-background-image-blur-range",
-            ".control-background-image-blur-number",
-            ".control-background-image-blur-default",
-            "[for=control-background-image-grayscale-range]",
-            ".control-background-image-grayscale-range",
-            ".control-background-image-grayscale-number",
-            ".control-background-image-grayscale-default",
-            "[for=control-background-image-accent-range]",
-            ".control-background-image-accent-range",
-            ".control-background-image-accent-number",
-            ".control-background-image-accent-default",
-            "[for=control-background-image-scale-range]",
-            ".control-background-image-scale-range",
-            ".control-background-image-scale-number",
-            ".control-background-image-scale-default",
-            "[for=control-background-image-vignette-opacity-range]",
-            ".control-background-image-vignette-opacity-range",
-            ".control-background-image-vignette-opacity-number",
-            ".control-background-image-vignette-opacity-default",
-            "[for=control-background-image-vignette-start-range]",
-            ".control-background-image-vignette-start-range",
-            ".control-background-image-vignette-start-number",
-            ".control-background-image-vignette-start-default",
-            "[for=control-background-image-vignette-end-range]",
-            ".control-background-image-vignette-end-range",
-            ".control-background-image-vignette-end-number",
-            ".control-background-image-vignette-end-default"
+            ".control-background-visual-image-type-file",
+            ".control-background-visual-image-type-url"
+          ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().background.visual.show && state.get.current().background.visual.type == "image" && state.get.current().background.visual.image.type == "file");
+        },
+        dependents: function() {
+          return [
+            ".control-background-visual-image-file",
+            ".control-background-visual-image-clear",
+            ".control-background-visual-image-file-helper",
+            ".control-background-visual-image-file-feedback"
+          ];
+        }
+      }, {
+        condition: function() {
+          return (state.get.current().background.visual.show && state.get.current().background.visual.type == "image" && state.get.current().background.visual.image.type == "url");
+        },
+        dependents: function() {
+          return [
+            ".control-background-visual-image-url",
+            ".control-background-visual-image-url-helper"
           ];
         }
       }]

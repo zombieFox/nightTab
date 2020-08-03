@@ -14,6 +14,6 @@
   transition: opacity var(--layout-transition-extra-fast);
 }
 
-.is-edge:not(.is-background-image-show) .shade {
+.is-edge:not(.is-background-visual-show) .shade {
   background-color: rgba(var(--theme-accent), 0.05);
 }

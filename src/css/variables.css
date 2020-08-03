@@ -160,14 +160,14 @@
   /* background */
   --background-color-theme:                             var(--theme-color-01);
   --background-color-custom:                            rgb(0, 0, 0);
-  --background-image:                                   none;
-  --background-opacity:                                 1;
-  --background-scale:                                   1;
-  --background-accent:                                  0;
-  --background-blur:                                    0;
-  --background-vignette-opacity:                        0%;
-  --background-vignette-start:                          90%;
-  --background-vignette-end:                            70%;
+  --background-visual-image:                            none;
+  --background-visual-opacity:                          1;
+  --background-visual-scale:                            1;
+  --background-visual-accent:                           0;
+  --background-visual-blur:                             0;
+  --background-visual-vignette-opacity:                 0%;
+  --background-visual-vignette-start:                   90%;
+  --background-visual-vignette-end:                     70%;
   /* form */
   --form-label:                                         var(--theme-color-16);
   --form-label-hover:                                   var(--theme-color-20);

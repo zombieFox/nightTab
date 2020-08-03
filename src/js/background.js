@@ -2,46 +2,6 @@ var background = (function() {
 
   var mod = {};
 
-  mod.import = function() {
-    // get files from input
-    var fileList = helper.e(".control-background-image-file").files;
-    // if file was added
-    if (fileList.length > 0) {
-      // validate the file
-      _validateImageFile(fileList);
-    };
-  };
-
-  mod.clear = {
-    file: function() {
-      helper.setObject({
-        object: state.get.current(),
-        path: "background.image.file.name",
-        newValue: ""
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "background.image.file.data",
-        newValue: ""
-      });
-    }
-  };
-
-  mod.image = {
-    file: function(name, data) {
-      helper.setObject({
-        object: state.get.current(),
-        path: "background.image.file.name",
-        newValue: name
-      });
-      helper.setObject({
-        object: state.get.current(),
-        path: "background.image.file.data",
-        newValue: data
-      });
-    }
-  };
-
   mod.color = {
     hsl: function() {
       var hsl = helper.convertColor.rgb.hsl(state.get.current().background.color.rgb);
@@ -69,12 +29,51 @@ var background = (function() {
     }
   };
 
+  mod.import = function() {
+    // get files from input
+    var fileList = helper.e(".control-background-visual-image-file").files;
+    // if file was added
+    if (fileList.length > 0) {
+      // validate the file
+      _validateImageFile(fileList);
+    };
+  };
+
+  mod.visual = {};
+
+  mod.visual.image = {
+    file: function(name, data) {
+      helper.setObject({
+        object: state.get.current(),
+        path: "background.visual.image.file.name",
+        newValue: name
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "background.visual.image.file.data",
+        newValue: data
+      });
+    },
+    clear: function() {
+      helper.setObject({
+        object: state.get.current(),
+        path: "background.visual.image.file.name",
+        newValue: ""
+      });
+      helper.setObject({
+        object: state.get.current(),
+        path: "background.visual.image.file.data",
+        newValue: ""
+      });
+    }
+  };
+
   var bind = {};
 
   bind.feedback = {
     animation: {
       set: function(animationClass, action) {
-        var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
+        var controlBackgroundImageFileFeedback = helper.e(".control-background-visual-image-file-feedback");
         helper.addClass(controlBackgroundImageFileFeedback, animationClass);
         var animationEndAction = function() {
           if (action) {
@@ -85,7 +84,7 @@ var background = (function() {
         controlBackgroundImageFileFeedback.addEventListener("animationend", animationEndAction, false);
       },
       reset: function() {
-        var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
+        var controlBackgroundImageFileFeedback = helper.e(".control-background-visual-image-file-feedback");
         helper.removeClass(controlBackgroundImageFileFeedback, "is-shake");
         helper.removeClass(controlBackgroundImageFileFeedback, "is-pop");
         helper.removeClass(controlBackgroundImageFileFeedback, "is-jello");
@@ -99,99 +98,132 @@ var background = (function() {
   render.color = {
     custom: function() {
       helper.e("html").style.setProperty("--background-color-custom", state.get.current().background.color.rgb.r + ", " + state.get.current().background.color.rgb.g + ", " + state.get.current().background.color.rgb.b);
-    },
-    clearHTML: function() {
-      helper.e("html").style.backgroundColor = "";
     }
   };
 
-  render.image = function() {
-    var html = helper.e("html");
-    if (state.get.current().background.image.show) {
-      if (state.get.current().background.image.from == "file") {
-        html.style.setProperty("--background-image", "url(" + state.get.current().background.image.file.data + ")");
-      } else if (state.get.current().background.image.from == "url") {
-        if (/\s+/g.test(state.get.current().background.image.url)) {
-          var allUrls = state.get.current().background.image.url.split(/\s+/);
-          var randomUrl = allUrls[Math.floor(Math.random() * allUrls.length)];
-          html.style.setProperty("--background-image", "url(" + randomUrl + ")");
-        } else {
-          html.style.setProperty("--background-image", "url(" + state.get.current().background.image.url + ")");
-        };
-      };
-    } else {
-      html.style.setProperty("--background-image", "url()");
-    };
-  };
-
-  render.blur = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--background-blur", state.get.current().background.image.blur + "px");
-  };
-
-  render.grayscale = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--background-grayscale", state.get.current().background.image.grayscale);
-  };
-
-  render.opacity = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--background-opacity", state.get.current().background.image.opacity);
-  };
-
-  render.scale = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--background-scale", state.get.current().background.image.scale);
-  };
-
-  render.accent = function() {
-    var html = helper.e("html");
-    html.style.setProperty("--background-accent", state.get.current().background.image.accent);
-  };
-
-  render.vignette = {
+  render.visual = {
+    blur: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--background-visual-blur", state.get.current().background.visual.blur + "px");
+    },
+    grayscale: function() {
+      var html = helper.e("html");
+      html.style.setProperty("--background-visual-grayscale", state.get.current().background.visual.grayscale);
+    },
     opacity: function() {
       var html = helper.e("html");
-      html.style.setProperty("--background-vignette-opacity", state.get.current().background.image.vignette.opacity + "%");
+      html.style.setProperty("--background-visual-opacity", state.get.current().background.visual.opacity);
     },
-    start: function() {
+    scale: function() {
       var html = helper.e("html");
-      html.style.setProperty("--background-vignette-start", state.get.current().background.image.vignette.start + "%");
+      html.style.setProperty("--background-visual-scale", state.get.current().background.visual.scale);
     },
-    end: function() {
+    accent: function() {
       var html = helper.e("html");
-      html.style.setProperty("--background-vignette-end", state.get.current().background.image.vignette.end + "%");
+      html.style.setProperty("--background-visual-accent", state.get.current().background.visual.accent);
+    },
+    vignette: {
+      opacity: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--background-visual-vignette-opacity", state.get.current().background.visual.vignette.opacity + "%");
+      },
+      start: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--background-visual-vignette-start", state.get.current().background.visual.vignette.start + "%");
+      },
+      end: function() {
+        var html = helper.e("html");
+        html.style.setProperty("--background-visual-vignette-end", state.get.current().background.visual.vignette.end + "%");
+      }
     }
   };
 
-  render.input = {
+  render.visual.image = {
+    set: function() {
+      var html = helper.e("html");
+      if (state.get.current().background.visual.show && state.get.current().background.visual.type == "image") {
+        if (state.get.current().background.visual.image.type == "file") {
+          html.style.setProperty("--background-visual-image", "url(" + state.get.current().background.visual.image.file.data + ")");
+        } else if (state.get.current().background.visual.image.type == "url") {
+          if (helper.checkIfValidString(state.get.current().background.visual.image.url)) {
+            var allUrls = state.get.current().background.visual.image.url.split(/\s+/);
+            allUrls = allUrls.filter(function(arrayItem) {
+              return arrayItem.length > 0 && arrayItem != "";
+            });
+            var randomUrl = allUrls[Math.floor(Math.random() * allUrls.length)];
+            html.style.setProperty("--background-visual-image", "url(" + randomUrl + ")");
+          } else {
+            html.style.setProperty("--background-visual-image", "url(" + state.get.current().background.visual.image.url + ")");
+          };
+        };
+      } else {
+        render.visual.image.clear();
+      };
+    },
     clear: function() {
-      helper.e(".control-background-image-file").value = "";
+      var html = helper.e("html");
+      html.style.setProperty("--background-visual-image", "none");
+      helper.e(".control-background-visual-image-file").value = "";
+    }
+  };
+
+  render.visual.video = {
+    set: function() {
+      if (state.get.current().background.visual.show && state.get.current().background.visual.type == "video") {
+        if (helper.checkIfValidString(state.get.current().background.visual.video.url)) {
+          var backgroundVisualVideo = helper.e(".background-visual-video");
+          if (state.get.current().background.visual.video.url.includes("mp4") || state.get.current().background.visual.video.url.endsWith("mp4")) {
+            var video = helper.node("video|autoplay,loop,muted,type:video/mp4")
+            var source = helper.node("source|src:" + state.get.current().background.visual.video.url);
+            video.muted = true;
+            video.loop = true;
+            video.autoplay = true;
+            video.appendChild(source);
+            backgroundVisualVideo.appendChild(video);
+          } else if (state.get.current().background.visual.video.url.includes("webm") || state.get.current().background.visual.video.url.endsWith("webm")) {
+            var video = helper.node("video|autoplay,loop,muted,type:video/webm")
+            var source = helper.node("source|src:" + state.get.current().background.visual.video.url);
+            video.muted = true;
+            video.loop = true;
+            video.autoplay = true;
+            video.appendChild(source);
+            backgroundVisualVideo.appendChild(video);
+          };
+        } else {
+          render.visual.video.clear();
+        };
+      };
+    },
+    clear: function() {
+      var backgroundVisualVideo = helper.e(".background-visual-video");
+      while (backgroundVisualVideo.lastChild) {
+        backgroundVisualVideo.removeChild(backgroundVisualVideo.lastChild);
+      };
     }
   };
 
   render.feedback = {
     init: function() {
-      if (helper.checkIfValidString(state.get.current().background.image.file.name)) {
+      if (helper.checkIfValidString(state.get.current().background.visual.image.file.name)) {
         render.feedback.current();
       } else {
         render.feedback.empty();
       };
     },
     empty: function() {
-      var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
+      var controlBackgroundImageFileFeedback = helper.e(".control-background-visual-image-file-feedback");
       var para1 = helper.node("p:No image selected.|class:muted small");
       controlBackgroundImageFileFeedback.appendChild(para1);
     },
     current: function() {
-      var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
+      var controlBackgroundImageFileFeedback = helper.e(".control-background-visual-image-file-feedback");
       var para1 = helper.node("p:Image loaded.|class:muted small");
-      var para2 = helper.node("p:" + state.get.current().background.image.file.name);
+      var para2 = helper.node("p:" + state.get.current().background.visual.image.file.name);
       controlBackgroundImageFileFeedback.appendChild(para1);
       controlBackgroundImageFileFeedback.appendChild(para2);
     },
     success: function(name, action) {
-      var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
+      var controlBackgroundImageFileFeedback = helper.e(".control-background-visual-image-file-feedback");
       var para1 = helper.node("p:Success! Setting Background image.|class:muted small");
       var para2 = helper.node("p:" + name);
       controlBackgroundImageFileFeedback.appendChild(para1);
@@ -207,7 +239,7 @@ var background = (function() {
       if (override) {
         options = helper.applyOptions(options, override);
       };
-      var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
+      var controlBackgroundImageFileFeedback = helper.e(".control-background-visual-image-file-feedback");
       while (controlBackgroundImageFileFeedback.lastChild) {
         controlBackgroundImageFileFeedback.removeChild(controlBackgroundImageFileFeedback.lastChild);
       };
@@ -217,7 +249,7 @@ var background = (function() {
     },
     fail: {
       filetype: function(name) {
-        var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
+        var controlBackgroundImageFileFeedback = helper.e(".control-background-visual-image-file-feedback");
         var para1 = helper.node("p:Not the right kind of file. Make sure the selected file is an image.|class:small muted");
         var para2 = helper.node("p:" + name);
         controlBackgroundImageFileFeedback.appendChild(para1);
@@ -225,7 +257,7 @@ var background = (function() {
         bind.feedback.animation.set("is-shake");
       },
       size: function(name) {
-        var controlBackgroundImageFileFeedback = helper.e(".control-background-image-file-feedback");
+        var controlBackgroundImageFileFeedback = helper.e(".control-background-visual-image-file-feedback");
         var para1 = helper.node("p:File size is too big. Max file size of 5MB.|class:small muted");
         var para2 = helper.node("p:" + name);
         controlBackgroundImageFileFeedback.appendChild(para1);
@@ -242,22 +274,22 @@ var background = (function() {
     reader.onload = function(event) {
       if (fileList.item(0).size <= 5000000) {
         if (fileList.item(0).type.split("/")[0] == "image") {
-          mod.image.file(fileList[0].name, event.target.result);
+          mod.visual.image.file(fileList[0].name, event.target.result);
           data.save();
           render.feedback.clear();
-          render.feedback.success(fileList[0].name, render.image);
-          render.input.clear();
+          render.feedback.success(fileList[0].name, render.visual.image.set);
+          render.visual.image.clear();
         } else {
           // not an image file
           render.feedback.clear();
           render.feedback.fail.filetype(fileList[0].name);
-          render.input.clear();
+          render.visual.image.clear();
         };
       } else {
         // file size too big
         render.feedback.clear();
         render.feedback.fail.size(fileList[0].name);
-        render.input.clear();
+        render.visual.image.clear();
       };
     };
     // invoke the reader
@@ -265,17 +297,17 @@ var background = (function() {
   };
 
   var init = function() {
-    render.color.clearHTML();
     render.color.custom();
-    render.image();
-    render.blur();
-    render.grayscale();
-    render.opacity();
-    render.scale();
-    render.accent();
-    render.vignette.opacity();
-    render.vignette.start();
-    render.vignette.end();
+    render.visual.image.set();
+    render.visual.video.set();
+    render.visual.blur();
+    render.visual.grayscale();
+    render.visual.opacity();
+    render.visual.scale();
+    render.visual.accent();
+    render.visual.vignette.opacity();
+    render.visual.vignette.start();
+    render.visual.vignette.end();
     render.feedback.init();
   };
 

@@ -1805,7 +1805,7 @@ var link = (function() {
         icon: true
       });
       var displayImageRadio = helper.node("input|class:link-form-input-display-visual-image,id:link-form-input-display-visual-image,type:radio,name:link-form-input-display-visual,tabindex:1,value:image");
-      var displayImageInput = helper.node("input|type:text,class:link-form-input-image,placeholder:https://...,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
+      var displayImageInput = helper.node("input|type:text,class:link-form-input-image,placeholder:https://www.example.com/image.jpg,tabindex:1,autocomplete:off,autocorrect:off,autocapitalize:off,spellcheck:false");
       var displayImageHelper = render.form.helper("link-form-input-display-visual-image-helper", "Display an image in place of a letter or icon.");
 
       form.appendChild(

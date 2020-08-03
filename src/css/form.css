@@ -1963,6 +1963,7 @@ input[type="range"]:disabled::-moz-range-progress {
   border-top-right-radius: var(--theme-radius);
   border-bottom-right-radius: var(--theme-radius);
   width: 100%;
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast);
 }
 
 .form-feedback p {

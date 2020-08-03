@@ -366,14 +366,20 @@ var state = (function() {
           b: 0
         }
       },
-      image: {
+      visual: {
         show: false,
-        from: "file",
-        file: {
-          name: "",
-          data: ""
+        type: "video",
+        image: {
+          type: "file",
+          file: {
+            name: "",
+            data: ""
+          },
+          url: "",
         },
-        url: "",
+        video: {
+          url: ""
+        },
         blur: 0,
         scale: 1,
         opacity: 1,
@@ -557,7 +563,7 @@ var state = (function() {
       }
     },
     background: {
-      image: {
+      visual: {
         blur: 0,
         scale: 1,
         opacity: 1,

@@ -59,10 +59,20 @@ var data = (function() {
   mod.backup = function(data) {
     if (data) {
       var dataBackup = JSON.parse(JSON.stringify(data));
-      if (dataBackup.state.background.image.file) {
-        if (helper.checkIfValidString(dataBackup.state.background.image.file.data)) {
-          dataBackup.state.background.image.file.name = "";
-          dataBackup.state.background.image.file.data = "";
+      if (dataBackup.state.background.image) {
+        if (dataBackup.state.background.image.file) {
+          if (helper.checkIfValidString(dataBackup.state.background.image.file.data)) {
+            dataBackup.state.background.image.file.name = "";
+            dataBackup.state.background.image.file.data = "";
+          };
+        };
+      };
+      if (dataBackup.state.background.visual) {
+        if (dataBackup.state.background.visual.image.file) {
+          if (helper.checkIfValidString(dataBackup.state.background.visual.image.file.data)) {
+            dataBackup.state.background.visual.image.file.name = "";
+            dataBackup.state.background.visual.image.file.data = "";
+          };
         };
       };
       console.log("data version " + dataBackup.version + " backed up");

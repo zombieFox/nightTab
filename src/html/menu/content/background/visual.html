@@ -1,0 +1,159 @@
+<div id="menu-content-background-visual" class="menu-content-item">
+  <div class="menu-item-header">
+    <h1 class="menu-item-header-text">Visual</h1>
+  </div>
+  <div class="menu-item-form">
+    <div class="form-wrap">
+      <input id="control-background-visual-show" class="control-background-visual-show" type="checkbox" tabindex="-1">
+      <label for="control-background-visual-show"><span class="label-icon"></span> Show</label>
+    </div>
+    <div class="form-wrap">
+      <div class="form-indent">
+        <div class="form-wrap">
+          <input id="control-background-visual-type-video" class="control-background-visual-type-video" type="radio" name="control-background-visual-type" value="video" tabindex="-1">
+          <label for="control-background-visual-type-video"><span class="label-icon"></span> Video</label>
+        </div>
+        <div class="form-wrap">
+          <div class="form-indent">
+            <div class="form-wrap">
+              <label for="control-background-visual-video-url">URL</label>
+              <input id="control-background-visual-video-url" class="control-background-visual-video-url" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="https://www.example.com/video.mp4" tabindex="-1">
+            </div>
+            <div class="form-wrap">
+              <p class="control-background-visual-video-url-helper form-helper-item">Supports MP4 and WebM format.</p>
+            </div>
+          </div>
+        </div>
+        <div class="form-wrap">
+          <input id="control-background-visual-type-image" class="control-background-visual-type-image" type="radio" name="control-background-visual-type" value="image" tabindex="-1">
+          <label for="control-background-visual-type-image"><span class="label-icon"></span> Image</label>
+        </div>
+        <div class="form-wrap">
+          <div class="form-indent">
+            <div class="form-wrap">
+              <input id="control-background-visual-image-type-file" class="control-background-visual-image-type-file" type="radio" name="control-background-visual-image-type" value="file" tabindex="-1">
+              <label for="control-background-visual-image-type-file"><span class="label-icon"></span> Local file</label>
+            </div>
+            <div class="form-wrap">
+              <div class="form-indent">
+                <div class="form-inline">
+                  <div class="form-input-button form-input-button-line form-input-hide">
+                    <input id="control-background-visual-image-file" class="control-background-visual-image-file" type="file">
+                    <label for="control-background-visual-image-file">Select image</label>
+                  </div>
+                  <button class="control-background-visual-image-clear button button-line">Clear image</button>
+                </div>
+                <div class="form-wrap">
+                  <p class="control-background-visual-image-file-helper form-helper-item">Max image size 5MB, (due to browser local storage limits).</p>
+                </div>
+                <div class="form-wrap">
+                  <p class="control-background-visual-image-file-helper form-helper-item">Take care with large files, they may impact performance.</p>
+                </div>
+                <div class="form-wrap">
+                  <div class="control-background-visual-image-file-feedback form-feedback"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-wrap">
+              <input id="control-background-visual-image-type-url" class="control-background-visual-image-type-url" type="radio" name="control-background-visual-image-type" value="url" tabindex="-1">
+              <label for="control-background-visual-image-type-url"><span class="label-icon"></span> URL</label>
+            </div>
+            <div class="form-wrap">
+              <div class="form-indent">
+                <div class="form-wrap">
+                  <textarea id="control-background-visual-image-url" class="control-background-visual-image-url" spellcheck="false" placeholder="https://www.example.com/image.jpg" tabindex="-1"></textarea>
+                </div>
+                <div class="form-wrap">
+                  <p class="control-background-visual-image-url-helper form-helper-item">Add more than one URL separated by spaces or on new lines for a random background image on load.</p>
+                </div>
+                <div class="form-wrap">
+                  <p class="control-background-visual-image-url-helper form-helper-item">Unsplash can be used for random images, eg:</p>
+                  <p class="control-background-visual-image-url-helper form-helper-item"><i>https://source.unsplash.com/random/1920x1080/?night,day,sky</i></p>
+                  <p class="control-background-visual-image-url-helper form-helper-item">Change parameters after <i>.../random/</i> for more options. Loading times may vary.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-wrap">
+      <div class="form-indent">
+        <hr>
+        <div class="form-wrap">
+          <label for="control-background-visual-opacity-range">Opacity</label>
+          <div class="form-group form-group-block">
+            <input id="control-background-visual-opacity-range" class="control-background-visual-opacity-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-background-visual-opacity-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            <button class="control-background-visual-opacity-default button button-line" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+          </div>
+        </div>
+        <hr>
+        <div class="form-wrap">
+          <label for="control-background-visual-grayscale-range">Greyscale</label>
+          <div class="form-group form-group-block">
+            <input id="control-background-visual-grayscale-range" class="control-background-visual-grayscale-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-background-visual-grayscale-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            <button class="control-background-visual-grayscale-default button button-line" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+          </div>
+        </div>
+        <hr>
+        <div class="form-wrap">
+          <label for="control-background-visual-blur-range">Blur</label>
+          <div class="form-group form-group-block">
+            <input id="control-background-visual-blur-range" class="control-background-visual-blur-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-background-visual-blur-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            <button class="control-background-visual-blur-default button button-line" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+          </div>
+        </div>
+        <hr>
+        <div class="form-wrap">
+          <label for="control-background-visual-accent-range">Accent overlay</label>
+          <div class="form-group form-group-block">
+            <input id="control-background-visual-accent-range" class="control-background-visual-accent-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-background-visual-accent-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            <button class="control-background-visual-accent-default button button-line" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+          </div>
+        </div>
+        <hr>
+        <div class="form-wrap">
+          <label for="control-background-visual-scale-range">Size</label>
+          <div class="form-group form-group-block">
+            <input id="control-background-visual-scale-range" class="control-background-visual-scale-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-background-visual-scale-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            <button class="control-background-visual-scale-default button button-line" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+          </div>
+        </div>
+        <hr>
+        <div class="form-wrap">
+          <label for="control-background-vignette-opacity-range">Vignette</label>
+          <div class="form-group form-group-block">
+            <input id="control-background-vignette-opacity-range" class="control-background-vignette-opacity-range mr-3" type="range" value="0" tabindex="-1">
+            <input class="control-background-vignette-opacity-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+            <button class="control-background-vignette-opacity-default button button-line" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+          </div>
+        </div>
+        <div class="form-wrap">
+          <div class="form-indent">
+            <div class="form-wrap">
+              <label for="control-background-vignette-start-range">Start</label>
+              <div class="form-group form-group-block">
+                <input id="control-background-vignette-start-range" class="control-background-vignette-start-range mr-3" type="range" value="0" tabindex="-1">
+                <input class="control-background-vignette-start-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                <button class="control-background-vignette-start-default button button-line" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+              </div>
+            </div>
+            <div class="form-wrap">
+              <label for="control-background-vignette-end-range">End</label>
+              <div class="form-group form-group-block">
+                <input id="control-background-vignette-end-range" class="control-background-vignette-end-range mr-3" type="range" value="0" tabindex="-1">
+                <input class="control-background-vignette-end-number form-group-item-medium form-group-radius-left" type="number" value="0" tabindex="-1">
+                <button class="control-background-vignette-end-default button button-line" tabindex="-1" title="Reset to default"><span class="icon-replay"></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
