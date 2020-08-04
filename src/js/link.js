@@ -189,7 +189,7 @@ var link = (function() {
     stagedLink.link.color.rgb.b = 0;
     stagedLink.link.color.opacity = state.get.current().link.item.color.opacity;
     stagedLink.link.background.show = false;
-    stagedLink.link.background.type = "image";
+    stagedLink.link.background.type = "video";
     stagedLink.link.background.opacity = state.get.current().link.item.background.opacity;
     stagedLink.link.background.image.url = "";
     stagedLink.link.background.video.url = "";
@@ -2623,18 +2623,6 @@ var link = (function() {
               render.form.wrap([
                 render.form.indent([
                   render.form.wrap([
-                    backgroundImageRadio,
-                    backgroundImageLabel
-                  ]),
-                  render.form.wrap([
-                    render.form.indent([
-                      render.form.wrap([
-                        backgroundImageUrlLabel,
-                        backgroundImageUrlInput
-                      ])
-                    ])
-                  ]),
-                  render.form.wrap([
                     backgroundVideoRadio,
                     backgroundVideoLabel
                   ]),
@@ -2646,6 +2634,18 @@ var link = (function() {
                       ]),
                       render.form.wrap([
                         backgroundVideoUrlInputHelper
+                      ])
+                    ])
+                  ]),
+                  render.form.wrap([
+                    backgroundImageRadio,
+                    backgroundImageLabel
+                  ]),
+                  render.form.wrap([
+                    render.form.indent([
+                      render.form.wrap([
+                        backgroundImageUrlLabel,
+                        backgroundImageUrlInput
                       ])
                     ])
                   ]),
