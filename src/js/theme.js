@@ -124,8 +124,24 @@ var theme = (function() {
   };
 
   mod.style = {
-    save: function() {
-      data.mod.set("nightTabStyle", state.get.current().theme.style);
+    initial: function() {
+      switch (state.get.current().theme.style) {
+        case "dark":
+          data.mod.set("nightTabStyle", state.get.current().theme.style);
+          break;
+
+        case "light":
+          data.mod.set("nightTabStyle", state.get.current().theme.style);
+          break;
+
+        case "system":
+          if (window.matchMedia("(prefers-color-scheme:dark)").matches) {
+            data.mod.set("nightTabStyle", "dark");
+          } else if (window.matchMedia("(prefers-color-scheme:light)").matches) {
+            data.mod.set("nightTabStyle", "light");
+          };
+          break;
+      };
     },
     light: function() {
       helper.setObject({
@@ -133,7 +149,6 @@ var theme = (function() {
         path: "theme.style",
         newValue: "light"
       });
-      mod.style.save();
     },
     dark: function() {
       helper.setObject({
@@ -141,7 +156,6 @@ var theme = (function() {
         path: "theme.style",
         newValue: "dark"
       });
-      mod.style.save();
     },
     system: function() {
       helper.setObject({
@@ -3019,14 +3033,17 @@ var theme = (function() {
   var style = {
     dark: function() {
       mod.style.dark();
+      mod.style.initial();
       render.style.dark();
     },
     light: function() {
       mod.style.light();
+      mod.style.initial();
       render.style.light();
     },
     system: function() {
       mod.style.system();
+      mod.style.initial();
       render.style.system();
     },
     check: function() {
@@ -3066,6 +3083,7 @@ var theme = (function() {
   };
 
   var init = function() {
+    mod.style.initial();
     mod.color.generated();
     mod.accent.random();
     mod.custom.close();
