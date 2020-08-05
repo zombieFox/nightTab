@@ -78,6 +78,14 @@ var theme = (function() {
     }
   };
 
+  bind.style = {
+    initial: function() {
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function(event) {
+        mod.style.initial();
+      });
+    }
+  };
+
   var mod = {};
 
   mod.apply = function(data) {
@@ -3088,6 +3096,7 @@ var theme = (function() {
     mod.accent.random();
     mod.custom.close();
     bind.accent.cycle.toggle();
+    bind.style.initial();
     render.font.load.display();
     render.font.load.ui();
     render.font.display.name();
