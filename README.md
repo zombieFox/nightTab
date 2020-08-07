@@ -42,15 +42,10 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 
 ---
 
-### Setting nightTab as your Firefox homepage
-Firefox does not allow addons to replace the "homepage". However there is a workaround:
+### nightTab Wiki:
 
-- Open a new Firefox window
-- Open Firefox `Preferences` and open a new tab (nightTab)
-- In Firefox preferences under `Home`, change `Homepage and new windows` to `Custom URLs...`
-- Then click `Use Current Page`.
-
-nightTab will now appear as the homepage.
+- [Recovering user settings and bookmarks](https://github.com/zombieFox/nightTab/wiki/Recovering-user-settings-and-bookmarks)
+- [Setting nightTab as your Firefox homepage](https://github.com/zombieFox/nightTab/wiki/Setting-nightTab-as-your-Firefox-homepage)
 
 ---
 
