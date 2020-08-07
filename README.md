@@ -42,7 +42,7 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 
 ---
 
-### nightTab Wiki:
+### Wiki
 
 - [Recovering user settings and bookmarks](https://github.com/zombieFox/nightTab/wiki/Recovering-user-settings-and-bookmarks)
 - [Setting nightTab as your Firefox homepage](https://github.com/zombieFox/nightTab/wiki/Setting-nightTab-as-your-Firefox-homepage)
