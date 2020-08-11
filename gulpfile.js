@@ -121,6 +121,9 @@ const build = {
       .pipe(htmlmin({
         collapseWhitespace: true
       }))
+      .pipe(uglifycss({
+        "uglyComments": true
+      }))
       .pipe(dest(path.build))
   },
   fonts: function() {
@@ -157,6 +160,7 @@ const build = {
   },
   initialBackground: function() {
     return src(path.src + '/js/initial-background.js')
+      .pipe(uglify())
       .pipe(dest(path.build + '/js'))
   }
 }
