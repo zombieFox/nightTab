@@ -47,6 +47,7 @@
     "gulp-file-include": "^2.1.1",
     "gulp-filter": "^6.0.0",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-minify-inline": "^1.1.0",
     "gulp-replace": "^1.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-uglifycss": "^1.1.0",

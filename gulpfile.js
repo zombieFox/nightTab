@@ -18,6 +18,8 @@ const replace = require('gulp-replace');
 
 const htmlmin = require('gulp-htmlmin');
 
+const minifyinline = require('gulp-minify-inline');
+
 const watch = require('gulp-watch');
 
 const filter = require('gulp-filter');
@@ -121,9 +123,7 @@ const build = {
       .pipe(htmlmin({
         collapseWhitespace: true
       }))
-      .pipe(uglifycss({
-        "uglyComments": true
-      }))
+      .pipe(minifyinline())
       .pipe(dest(path.build))
   },
   fonts: function() {
