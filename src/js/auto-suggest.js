@@ -52,6 +52,7 @@ var autoSuggest = (function() {
     var elementToFocus = null;
     var focusIndex = null;
     var allSuggestItems = helper.eA(".auto-suggest-item");
+    var columnCount = getComputedStyle(helper.e(".auto-suggest-list")).getPropertyValue("grid-template-columns").split(" ").length;
     var _findInput = function() {
       if (event.target.classList.contains("auto-suggest-input")) {
         _currentInputOptions.input = event.target;
@@ -71,8 +72,8 @@ var autoSuggest = (function() {
         if (focusIndex == null) {
           elementToFocus = allSuggestItems[allSuggestItems.length - 1];
         } else {
-          if (focusIndex > 2 && focusIndex <= allSuggestItems.length - 1) {
-            elementToFocus = allSuggestItems[focusIndex - 3];
+          if (focusIndex >= columnCount && focusIndex <= allSuggestItems.length - 1) {
+            elementToFocus = allSuggestItems[focusIndex - columnCount];
           } else {
             elementToFocus = _currentInputOptions.input;
           };
@@ -84,8 +85,8 @@ var autoSuggest = (function() {
         if (focusIndex == null) {
           elementToFocus = allSuggestItems[0];
         } else {
-          if (focusIndex < allSuggestItems.length - 3) {
-            elementToFocus = allSuggestItems[focusIndex + 3];
+          if (focusIndex < allSuggestItems.length - columnCount) {
+            elementToFocus = allSuggestItems[focusIndex + columnCount];
           } else {
             elementToFocus = _currentInputOptions.input;
           };
