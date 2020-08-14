@@ -1,6 +1,6 @@
 var version = (function() {
 
-  var current = "6.1.1";
+  var current = "6.2.0";
 
   var name = "Jaded Raven";
 
