@@ -1368,7 +1368,7 @@ input[type="range"]:disabled::-moz-range-progress {
   min-width: 1px;
   min-height: 1px;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   -webkit-appearance: none;
 }
