@@ -1410,6 +1410,11 @@ input[type="range"]:disabled::-moz-range-progress {
   border-radius: var(--theme-radius);
 }
 
+.form-grid-1x3 {
+  grid-template-rows: repeat(3, 1fr);
+  border-radius: var(--theme-radius);
+}
+
 .form-grid .form-wrap {
   margin-top: 0;
   margin-bottom: 0;
