@@ -220,6 +220,24 @@ var data = (function() {
     }
   };
 
+  render.url = function() {
+    var url = helper.e(".control-data-sync-url");
+    if (helper.checkIfValidString(state.get.current().data.sync.url)) {
+      url.textContent = helper.trimString(state.get.current().data.sync.url);
+    } else {
+      url.textContent = "";
+    };
+  };
+
+  render.password = function() {
+    var password = helper.e(".control-data-sync-password");
+    if (helper.checkIfValidString(state.get.current().data.sync.password)) {
+      password.textContent = helper.trimString(state.get.current().data.sync.password);
+    } else {
+      password.textContent = "";
+    };
+  };
+
   var _validateJsonFile = function(fileList) {
     // make new file reader
     var reader = new FileReader();
@@ -278,6 +296,8 @@ var data = (function() {
     mod.nameFix();
     mod.restore(load());
     render.feedback.empty();
+    render.url();
+    render.password();
   };
 
   return {

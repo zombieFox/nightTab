@@ -3,6 +3,12 @@ var state = (function() {
   var mod = {};
 
   mod.current = {
+    data: {
+      sync: {
+        url: "",
+        password: ""
+      }
+    },
     header: {
       area: {
         width: 100,
@@ -404,6 +410,12 @@ var state = (function() {
   };
 
   mod.default = {
+    data: {
+      sync: {
+        url: "",
+        password: ""
+      }
+    },
     header: {
       area: {
         width: 100
