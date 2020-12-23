@@ -2,3 +2,4 @@
 dev
 build
 node_modules
+sync/data.json

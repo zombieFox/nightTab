@@ -13,7 +13,7 @@ var data = (function() {
     };
   };
 
-  mod.export = function() {
+  mod.export = async function() {
     var timeStamp = helper.getDateTime();
     var _timeStampPrefix = function(value) {
       if (value < 10) {
@@ -29,7 +29,8 @@ var data = (function() {
     timeStamp.year = _timeStampPrefix(timeStamp.year);
     timeStamp = timeStamp.year + "." + timeStamp.month + "." + timeStamp.date + " - " + timeStamp.hours + " " + timeStamp.minutes + " " + timeStamp.seconds;
     var fileName = _saveName + " backup - " + timeStamp + ".json";
-    var data = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(load()));
+    var loaded = await load()
+    var data = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(loaded));
     var link = document.createElement("a");
     link.setAttribute("href", data);
     link.setAttribute("download", fileName);
@@ -270,20 +271,115 @@ var data = (function() {
     reader.readAsText(fileList.item(0));
   };
 
-  var save = function() {
-    mod.set(_saveName, JSON.stringify({
+  var save = async function() {
+    var data = {
       nighttab: true,
       version: version.get().number,
       state: state.get.current(),
       bookmarks: bookmarks.get()
-    }));
+    }
+
+    if(data.state.data && data.state.data.sync.url){
+
+      var url = data.state.data.sync.url
+      var password = data.state.data.sync.password
+
+      if(data.state.data.sync.init){
+
+        // Save
+        try{
+          await fetch(`${url}/sync`, {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+              'x-api-key': password
+            },
+            body: JSON.stringify(data)
+          })
+        }catch(err){
+          // console.error({err})
+        }
+      }else{
+
+        // Attempt Import
+        try{
+          var response = await fetch(`${url}/sync`, { headers: { 'x-api-key': password }})
+
+          // Get data
+          if(response.status === 200){
+            response = await response.json()
+            mod.set(_saveName, JSON.stringify(response));
+            render.reload();
+          }
+
+          // Save if not exist
+          if(response.status === 404){
+            try{
+              await fetch(`${url}/sync`, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'x-api-key': password
+                },
+                body: JSON.stringify(data)
+              })
+            }catch(err){
+              // console.error({err})
+            }
+          }
+        }catch(err){
+          // console.error({err})
+        }
+      }
+    }
+
+    mod.set(_saveName, JSON.stringify(data));
   };
 
-  var load = function() {
+  var load = async function() {
     if (mod.get(_saveName) != null && mod.get(_saveName) != undefined) {
-      return JSON.parse(mod.get(_saveName));
+      var data = JSON.parse(mod.get(_saveName));
+
+      if(data.state.data && data.state.data.sync.url){
+        var url = data.state.data.sync.url
+        var password = data.state.data.sync.password
+
+        try{
+          var response = await fetch(`${url}/sync`, { headers: { 'x-api-key': password }})
+
+          // Get data
+          if(response.status === 200){
+            response = await response.json()
+            mod.set(_saveName, JSON.stringify(response));
+            return response
+          }
+
+          // Save if not exist
+          if(response.status === 404){
+            try{
+              await fetch(`${url}/sync`, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'x-api-key': password
+                },
+                body: JSON.stringify(data)
+              })
+              return data
+            }catch(err){
+              // console.error({err})
+            }
+          }
+          
+        }catch(err){
+          // console.error({err})
+        }finally{
+          return data
+        }
+      }
+
     } else {
-      return false;
+    return false;
     };
   };
 
@@ -292,21 +388,22 @@ var data = (function() {
     render.reload();
   };
 
-  var init = function() {
+  var init = async function() {
     mod.nameFix();
-    mod.restore(load());
+    var loaded = await load()
+    mod.restore(loaded);
     render.feedback.empty();
     render.url();
     render.password();
   };
 
   return {
-    init: init,
-    mod: mod,
-    render: render,
-    save: save,
-    load: load,
-    wipe: wipe
+    init,
+    mod,
+    render,
+    save,
+    load,
+    wipe
   };
 
 })();

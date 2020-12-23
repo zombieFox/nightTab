@@ -6,7 +6,8 @@ var state = (function() {
     data: {
       sync: {
         url: "",
-        password: ""
+        password: "",
+        init: false
       }
     },
     header: {
@@ -413,7 +414,8 @@ var state = (function() {
     data: {
       sync: {
         url: "",
-        password: ""
+        password: "",
+        init: false
       }
     },
     header: {
@@ -600,14 +602,15 @@ var state = (function() {
   };
 
   mod.restore = function(data) {
-    if ("state" in data) {
+    if (data && "state" in data) {
       mod.current = data.state;
     };
   };
 
-  var init = function() {
+  var init = async function() {
     if (data.load()) {
-      mod.restore(data.load());
+      var loaded = await data.load()
+      mod.restore(loaded);
     };
   };
 
@@ -621,9 +624,9 @@ var state = (function() {
   };
 
   return {
-    init: init,
-    mod: mod,
-    get: get
+    init,
+    mod,
+    get
   };
 
 })();
