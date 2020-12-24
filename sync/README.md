@@ -23,11 +23,10 @@ Syncing will take place automatically in the background
 From a blank/default nightTab installation, simply enter the sync information as above and the page will automatically refresh with your restored data.
 
 ### Todo
-- Add Docker support ([see here](https://github.com/zombieFox/nightTab/pull/217))
 - Sometimes on restoring data it will need a manual refresh to display correctly
 - Proper testing, consider this alpha code (it works for me)
 
 ### Ideas to consider
 - Toggle show/hide password field
 - Feedback of sync status
-- Debounce state updates
+- Debounce state updates/HTTP requests
