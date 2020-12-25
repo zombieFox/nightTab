@@ -65,6 +65,12 @@ A browser addon/extension ready zip will be created in `/build/extension/`.
 
 ---
 
+### Sync data for backup and multiple device use
+
+There's an [experimental sync server](https://github.com/deanbarrow/nightTab-sync-server) which you can self host and will allow you to backup and restore across multiple devices.
+
+---
+
 [![nightTab Demo](assets/screenshot/screenshot-001.png)](https://zombiefox.github.io/nightTab/)
 [![nightTab Demo](assets/screenshot/screenshot-002.png)](https://zombiefox.github.io/nightTab/)
 [![nightTab Demo](assets/screenshot/screenshot-003.png)](https://zombiefox.github.io/nightTab/)

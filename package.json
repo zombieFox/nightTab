@@ -14,8 +14,7 @@
     "clean": "npm run clean-dev; npm run clean-build",
     "clean-dev": "rm -rf dev",
     "clean-build": "rm -rf build",
-    "deploy-gh-pages": "npm run clean-build; gulp build; gh-pages -d build/web",
-    "sync": "node sync/app.js"
+    "deploy-gh-pages": "npm run clean-build; gulp build; gh-pages -d build/web"
   },
   "repository": {
     "type": "git",
@@ -50,7 +49,6 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-minify-inline": "^1.1.0",
     "gulp-replace": "^1.0.0",
-    "gulp-uglify": "^3.0.2",
     "gulp-uglifycss": "^1.1.0",
     "gulp-watch": "^5.0.1",
     "html5sortable": "^0.9.18",
@@ -58,5 +56,7 @@
     "web-ext": "^5.0.0",
     "webfontloader": "^1.6.28"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-minify": "^3.1.0"
+  }
 }

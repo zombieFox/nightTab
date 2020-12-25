@@ -10,7 +10,7 @@ const csso = require('gulp-csso');
 
 const concat = require('gulp-concat');
 
-const uglify = require('gulp-uglify');
+const minify = require('gulp-minify');
 
 const uglifycss = require('gulp-uglifycss');
 
@@ -151,7 +151,7 @@ const build = {
         sourcemaps: true
       })
       .pipe(noVendors)
-      .pipe(uglify())
+      .pipe(minify())
       .pipe(noVendors.restore)
       .pipe(concat(filename.js))
       .pipe(dest(path.build + '/js', {
@@ -160,7 +160,7 @@ const build = {
   },
   initialBackground: function() {
     return src(path.src + '/js/initial-background.js')
-      .pipe(uglify())
+      .pipe(minify())
       .pipe(dest(path.build + '/js'))
   }
 }

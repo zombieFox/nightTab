@@ -11,8 +11,7 @@ RUN apt-get install -y nginx
 RUN sed -i s@/var/www/html@/nighttab/build/web/@ /etc/nginx/sites-enabled/default
 
 # clone master repo
-# TODO: update for merge
-RUN git clone https://github.com/deanbarrow/nightTab /nighttab
+RUN git clone https://github.com/zombieFox/nightTab /nighttab
 
 #change workdir
 WORKDIR /nighttab
@@ -29,7 +28,4 @@ VOLUME /nighttab
 #expose port 80
 EXPOSE 80
 
-ADD start.sh /nighttab/
-RUN chmod +x /nighttab/start.sh
-
-CMD ["/nighttab/start.sh"]
+CMD ["nginx", "-g", "daemon off;"]

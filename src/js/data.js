@@ -47,11 +47,10 @@ var data = (function() {
         console.log("data version " + data.version + " found less than current");
         mod.backup(data);
         data = update.run(data);
-        mod.set(_saveName, JSON.stringify(data));
       } else {
         console.log("data version " + version.get().number + " no need to run update");
-        mod.set(_saveName, JSON.stringify(data));
       };
+      mod.set(_saveName, JSON.stringify(data));
     } else {
       console.log("no data found to load");
     };
@@ -348,7 +347,7 @@ var data = (function() {
           var response = await fetch(`${url}/sync`, { headers: { 'x-api-key': password }})
 
           // Get data
-          if(response.status === 200){
+          if(response.status === 200 || response.status === 304){
             response = await response.json()
             mod.set(_saveName, JSON.stringify(response));
             return response
@@ -373,10 +372,9 @@ var data = (function() {
           
         }catch(err){
           // console.error({err})
-        }finally{
-          return data
         }
       }
+      return data
 
     } else {
     return false;
