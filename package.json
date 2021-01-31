@@ -54,7 +54,7 @@
     "gulp-watch": "^5.0.1",
     "html5sortable": "^0.9.18",
     "moment": "^2.27.0",
-    "web-ext": "^5.0.0",
+    "web-ext": "^5.5.0",
     "webfontloader": "^1.6.28"
   },
   "dependencies": {}
