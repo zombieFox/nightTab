@@ -279,6 +279,8 @@
   --modal-medium:                                       50em;
   --modal-large:                                        70em;
   --modal-size:                                         var(--modal-medium);
+  /* coffee */
+  --coffee-size:                                        80;
   /* z index */
   --z-index-background:                                 1000;
   --z-index-link:                                       2000;

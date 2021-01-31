@@ -72,6 +72,7 @@ const cssFiles = [
   path.src + '/css/link.css',
   path.src + '/css/theme.css',
   path.src + '/css/auto-suggest.css',
+  path.src + '/css/coffee.css',
   path.src + '/css/fontawesome.css'
 ]
 
