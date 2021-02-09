@@ -23,23 +23,39 @@ var greeting = (function() {
   render.all = function() {
     if (state.get.current().header.greeting.show) {
       var greeting = helper.e(".greeting");
-      var message = {
-        good: function() {
-          var time = helper.getDateTime();
-          var message = ["Good night", "Good morning", "Good afternoon", "Good evening"];
-          return message[Math.floor(time.hours / 6)];
-        },
-        hello: function() {
-          return "Hello";
-        },
-        hi: function() {
-          return "Hi";
-        }
+      var message = function() {
+        switch (state.get.current().header.greeting.type) {
+          case "good":
+            var time = helper.getDateTime();
+            var message = ["Good night", "Good morning", "Good afternoon", "Good evening"];
+            return message[Math.floor(time.hours / 6)];
+            break;
+
+          case "hello":
+            return "Hello";
+
+          case "hi":
+            return "Hi";
+
+          case "custom":
+            return helper.trimString(state.get.current().header.greeting.custom);
+        };
       };
-      var string = message[state.get.current().header.greeting.type]();
+
+      var string = message();
+
       if (helper.checkIfValidString(state.get.current().header.greeting.name)) {
-        string = string + ", " + helper.trimString(state.get.current().header.greeting.name)
+        if (state.get.current().header.greeting.type === "custom") {
+          if (helper.checkIfValidString(state.get.current().header.greeting.custom)) {
+            string = string + ", " + helper.trimString(state.get.current().header.greeting.name)
+          } else {
+            string = string + helper.trimString(state.get.current().header.greeting.name)
+          };
+        } else {
+          string = string + ", " + helper.trimString(state.get.current().header.greeting.name)
+        };
       };
+
       var greetingItem = helper.node("span|class:greeting-item");
       var greetingItemText = helper.node("span:" + string + "|class:greeting-item-text");
       greetingItem.appendChild(greetingItemText);

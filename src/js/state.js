@@ -15,6 +15,7 @@ var state = (function() {
       greeting: {
         show: false,
         type: "good",
+        custom: "",
         name: "",
         size: 1,
         newLine: false

@@ -991,6 +991,7 @@ var control = (function() {
           path: "header.greeting.type",
           type: "radio",
           func: function() {
+            render.dependents();
             greeting.render.clear();
             greeting.render.all();
           }
@@ -999,6 +1000,7 @@ var control = (function() {
           path: "header.greeting.type",
           type: "radio",
           func: function() {
+            render.dependents();
             greeting.render.clear();
             greeting.render.all();
           }
@@ -1006,6 +1008,24 @@ var control = (function() {
           element: ".control-header-greeting-type-hi",
           path: "header.greeting.type",
           type: "radio",
+          func: function() {
+            render.dependents();
+            greeting.render.clear();
+            greeting.render.all();
+          }
+        }, {
+          element: ".control-header-greeting-type-custom",
+          path: "header.greeting.type",
+          type: "radio",
+          func: function() {
+            render.dependents();
+            greeting.render.clear();
+            greeting.render.all();
+          }
+        }, {
+          element: ".control-header-greeting-custom",
+          path: "header.greeting.custom",
+          type: "text",
           func: function() {
             greeting.render.clear();
             greeting.render.all();
@@ -10916,11 +10936,21 @@ var control = (function() {
               ".control-header-greeting-type-good",
               ".control-header-greeting-type-hello",
               ".control-header-greeting-type-hi",
+              ".control-header-greeting-type-custom",
               "[for=control-header-greeting-size-range]",
               ".control-header-greeting-size-range",
               ".control-header-greeting-size-number",
               ".control-header-greeting-size-default",
               ".control-header-greeting-newline"
+            ]
+          }
+        }, {
+          condition: function() {
+            return (state.get.current().header.greeting.show && state.get.current().header.greeting.type === "custom");
+          },
+          dependents: function() {
+            return [
+              ".control-header-greeting-custom"
             ]
           }
         }],

@@ -1383,6 +1383,10 @@ var update = (function() {
       data.state.background.visual = backgroundData;
       delete data.state.background.image;
       return data;
+    },
+    "6.5.0": function(data) {
+      data.state.header.greeting.custom = "";
+      return data;
     }
   };
 
