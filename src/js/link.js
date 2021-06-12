@@ -778,9 +778,11 @@ var link = (function() {
         placeholder: placeholder
       });
       bind.sort.update.remove.item();
+
       helper.eA(".group-body").forEach(function(arrayItem, index) {
         sortable(arrayItem)[0].addEventListener("sortupdate", bind.sort.update.func.item, false, event);
       });
+
       helper.eA(".group-body").forEach(function(arrayItem, index) {
         sortable(arrayItem)[0].addEventListener("sortstart", function() {
           var groupIndex = Array.from(helper.getClosest(event.detail.origin.container, ".group").parentNode.children).indexOf(helper.getClosest(event.detail.origin.container, ".group"));
@@ -798,6 +800,7 @@ var link = (function() {
           };
         }, false, event);
       });
+
     }
   };
 

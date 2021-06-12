@@ -4,80 +4,26 @@ var state = (function() {
 
   mod.current = {
     header: {
-      area: {
-        width: 100,
-        justify: "center",
-        align: "center"
-      },
-      item: {
-        justify: "left"
-      },
-      greeting: {
-        show: false,
-        type: "good",
-        custom: "",
-        name: "",
-        size: 1,
-        newLine: false
-      },
+      area: { width: 100, justify: "center", align: "center" },
+      item: { justify: "left" },
+      greeting: { show: false, type: "good", custom: "", name: "", size: 1, newLine: false },
       clock: {
-        hours: {
-          show: true,
-          display: "number"
-        },
-        minutes: {
-          show: true,
-          display: "number"
-        },
-        seconds: {
-          show: false,
-          display: "number"
-        },
-        separator: {
-          show: true,
-          text: ""
-        },
-        meridiem: {
-          show: true
-        },
-        hour24: {
-          show: true
-        },
+        hours: { show: true, display: "number" },
+        minutes: { show: true, display: "number" },
+        seconds: { show: false, display: "number" },
+        separator: { show: true, text: "" },
+        meridiem: { show: true },
+        hour24: { show: true },
         size: 1,
         newLine: false
       },
-      transitional: {
-        show: false,
-        type: "timeanddate",
-        size: 1,
-        newLine: false
-      },
+      transitional: { show: false, type: "timeanddate", size: 1, newLine: false },
       date: {
-        day: {
-          show: true,
-          display: "word",
-          weekStart: "monday",
-          length: "long"
-        },
-        date: {
-          show: true,
-          display: "number",
-          ordinal: true
-        },
-        month: {
-          show: true,
-          display: "word",
-          length: "long",
-          ordinal: true
-        },
-        year: {
-          show: false,
-          display: "number"
-        },
-        separator: {
-          show: true,
-          text: ""
-        },
+        day: { show: true, display: "word", weekStart: "monday", length: "long" },
+        date: { show: true, display: "number", ordinal: true },
+        month: { show: true, display: "word", length: "long", ordinal: true },
+        year: { show: false, display: "number" },
+        separator: { show: true, text: "" },
         format: "datemonth",
         size: 1,
         newLine: false
@@ -85,171 +31,44 @@ var state = (function() {
       search: {
         show: true,
         style: "box",
-        width: {
-          by: "auto",
-          size: 30
-        },
+        width: { by: "auto", size: 30 },
         focus: false,
-        engine: {
-          selected: "google",
-          google: {
-            url: "https://www.google.com/search",
-            name: "Google"
-          },
-          duckduckgo: {
-            url: "https://duckduckgo.com/",
-            name: "DuckDuckGo"
-          },
-          youtube: {
-            url: "https://www.youtube.com/results?search_query=",
-            name: "YouTube"
-          },
-          giphy: {
-            url: "https://giphy.com/search/",
-            name: "Giphy"
-          },
-          bing: {
-            url: "https://www.bing.com/search?q=",
-            name: "Bing"
-          },
-          custom: {
-            url: "",
-            name: "",
-            queryName: ""
-          }
-        },
-        text: {
-          justify: "center"
-        },
+        engine: { selected: "google", google: { url: "https://www.google.com/search", name: "Google" }, duckduckgo: { url: "https://duckduckgo.com/", name: "DuckDuckGo" }, youtube: { url: "https://www.youtube.com/results?search_query=", name: "YouTube" }, giphy: { url: "https://giphy.com/search/", name: "Giphy" }, bing: { url: "https://www.bing.com/search?q=", name: "Bing" }, custom: { url: "", name: "", queryName: "" } },
+        text: { justify: "center" },
         size: 1,
         opacity: 1,
         newLine: false,
         newTab: false
       },
-      editAdd: {
-        show: true,
-        size: 1,
-        opacity: 1,
-        newLine: false
-      },
-      colorAccent: {
-        dot: {
-          show: true
-        },
-        show: true,
-        size: 1,
-        opacity: 1,
-        newLine: false
-      },
-      menu: {
-        show: true,
-        size: 1,
-        opacity: 1,
-        newLine: false
-      },
+      editAdd: { show: true, size: 1, opacity: 1, newLine: false },
+      colorAccent: { dot: { show: true }, show: true, size: 1, opacity: 1, newLine: false },
+      menu: { show: true, size: 1, opacity: 1, newLine: false },
       order: ["greeting", "transitional", "clock", "date", "search", "editAdd", "colorAccent", "menu"],
-      border: {
-        top: 0,
-        bottom: 0
-      },
-      color: {
-        by: "theme",
-        hsl: {
-          h: 0,
-          s: 0,
-          l: 0
-        },
-        rgb: {
-          r: 0,
-          g: 0,
-          b: 0
-        },
-        style: "scroll",
-        opacity: 0.95,
-        show: false,
-        newLine: false
-      },
+      border: { top: 0, bottom: 0 },
+      color: { by: "theme", hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 }, style: "scroll", opacity: 0.95, show: false, newLine: false },
       position: "inline",
       radius: false
     },
     link: {
-      area: {
-        width: 100,
-        direction: "ltr",
-        justify: "center"
-      },
+      area: { width: 100, direction: "ltr", justify: "center" },
       item: {
-        color: {
-          by: "theme",
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          },
-          opacity: 1
-        },
-        accent: {
-          by: "theme",
-          hsl: {
-            h: 0,
-            s: 0,
-            l: 0
-          },
-          rgb: {
-            r: 0,
-            g: 0,
-            b: 0
-          }
-        },
-        background: {
-          opacity: 1
-        },
+        color: { by: "theme", hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 }, opacity: 1 },
+        accent: { by: "theme", hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } },
+        background: { opacity: 1 },
         display: {
-          visual: {
-            letter: {
-              size: 3
-            },
-            icon: {
-              size: 3
-            },
-            image: {
-              size: 3
-            },
-            shadow: {
-              size: 0
-            }
-          },
-          name: {
-            show: true,
-            size: 0.9
-          },
+          visual: { letter: { size: 3 }, icon: { size: 3 }, image: { size: 3 }, shadow: { size: 0 } },
+          name: { show: true, size: 0.9 },
           gutter: 2,
           direction: "vertical",
           order: "visualname",
           alignment: "centercenter",
           rotate: 0,
-          translate: {
-            x: 0,
-            y: 0
-          }
+          translate: { x: 0, y: 0 }
         },
-        url: {
-          show: true
-        },
-        line: {
-          show: true
-        },
-        shadow: {
-          show: true
-        },
-        hoverScale: {
-          show: true
-        },
+        url: { show: true },
+        line: { show: true },
+        shadow: { show: true },
+        hoverScale: { show: true },
         newTab: false,
         size: 1,
         border: 0
@@ -262,18 +81,9 @@ var state = (function() {
       breakpoint: "xs"
     },
     group: {
-      area: {
-        justify: "left"
-      },
-      name: {
-        show: true,
-        size: 1
-      },
-      openAll: {
-        show: true,
-        size: 1,
-        opacity: 1
-      },
+      area: { justify: "left" },
+      name: { show: true, size: 1 },
+      openAll: { show: true, size: 1, opacity: 1 },
       border: 0,
       order: "headerbody",
       add: false,
@@ -293,104 +103,40 @@ var state = (function() {
     },
     theme: {
       accent: {
-        hsl: {
-          h: 221,
-          s: 100,
-          l: 50
-        },
-        rgb: {
-          r: 0,
-          g: 80,
-          b: 255
-        },
-        random: {
-          active: false,
-          style: "any"
-        },
-        cycle: {
-          active: false,
-          speed: 300,
-          step: 10
-        }
+        hsl: { h: 221, s: 100, l: 50 },
+        rgb: { r: 0, g: 80, b: 255 },
+        random: { active: false, style: "any" },
+        cycle: { active: false, speed: 300, step: 10 }
       },
       color: {
-        hsl: {
-          h: 222,
-          s: 14,
-          l: 56
-        },
-        rgb: {
-          r: 129,
-          g: 138,
-          b: 160
-        },
-        contrast: {
-          light: 4,
-          dark: 4
-        },
+        hsl: { h: 222, s: 14, l: 56 },
+        rgb: { r: 129, g: 138, b: 160 },
+        contrast: { light: 4, dark: 4 },
         generated: {}
       },
       font: {
-        display: {
-          name: "",
-          weight: 400,
-          style: "normal"
-        },
-        ui: {
-          name: "",
-          weight: 400,
-          style: "normal"
-        }
+        display: { name: "", weight: 400, style: "normal" },
+        ui: { name: "", weight: 400, style: "normal" }
       },
       style: "dark",
       radius: 0.25,
       shadow: 0.75,
-      shade: {
-        opacity: 0.4
-      },
-      custom: {
-        all: [],
-        edit: false
-      }
+      shade: { opacity: 0.4 },
+      custom: { all: [], edit: false }
     },
     background: {
-      color: {
-        by: "theme",
-        hsl: {
-          h: 0,
-          s: 0,
-          l: 0
-        },
-        rgb: {
-          r: 0,
-          g: 0,
-          b: 0
-        }
-      },
+      color: { by: "theme", hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } },
       visual: {
         show: false,
         type: "video",
-        image: {
-          type: "file",
-          file: {
-            name: "",
-            data: ""
-          },
-          url: "",
-        },
-        video: {
-          url: ""
-        },
+        image: { type: "file", file: { name: "", data: "" }, url: "" },
+        video: { url: "" },
         blur: 0,
         scale: 1,
         opacity: 1,
         grayscale: 0,
         accent: 0,
-        vignette: {
-          opacity: 0,
-          start: 90,
-          end: 70
-        }
+        vignette: { opacity: 0, start: 90, end: 70 }
       }
     },
     edit: false,
