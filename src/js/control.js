@@ -8967,6 +8967,21 @@ var control = (function() {
             menu.close();
             data.render.clear();
           }
+        }],
+        sync: [{
+          element: ".control-data-sync-url",
+          path: "data.sync.url",
+          type: "text",
+          func: function() {
+            data.render.url();
+          }
+        },{
+            element: ".control-data-sync-password",
+            path: "data.sync.password",
+            type: "text",
+            func: function() {
+              data.render.password();
+            }
         }]
       },
       background: {

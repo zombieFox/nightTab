@@ -692,7 +692,7 @@ var bookmarks = (function() {
   };
 
   mod.restore = function(data) {
-    if ("bookmarks" in data) {
+    if (data && "bookmarks" in data) {
       mod.all = data.bookmarks;
     };
   };
@@ -827,9 +827,10 @@ var bookmarks = (function() {
     }
   };
 
-  var init = function() {
+  var init = async function() {
     if (data.load()) {
-      mod.restore(data.load());
+      var loaded = await data.load();
+      mod.restore(loaded);
     };
   };
 

@@ -3,6 +3,13 @@ var state = (function() {
   var mod = {};
 
   mod.current = {
+    data: {
+      sync: {
+        url: "",
+        password: "",
+        init: false
+      }
+    },
     header: {
       area: { width: 100, justify: "center", align: "center" },
       item: { justify: "left" },
@@ -151,6 +158,13 @@ var state = (function() {
   };
 
   mod.default = {
+    data: {
+      sync: {
+        url: "",
+        password: "",
+        init: false
+      }
+    },
     header: {
       area: {
         width: 100
@@ -335,14 +349,15 @@ var state = (function() {
   };
 
   mod.restore = function(data) {
-    if ("state" in data) {
+    if (data && "state" in data) {
       mod.current = data.state;
     };
   };
 
-  var init = function() {
+  var init = async function() {
     if (data.load()) {
-      mod.restore(data.load());
+      var loaded = await data.load()
+      mod.restore(loaded);
     };
   };
 
@@ -356,9 +371,9 @@ var state = (function() {
   };
 
   return {
-    init: init,
-    mod: mod,
-    get: get
+    init,
+    mod,
+    get
   };
 
 })();
