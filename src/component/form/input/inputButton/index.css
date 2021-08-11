@@ -1,0 +1,314 @@
+.form-input-button {
+  position: relative;
+  display: flex;
+}
+
+.form-input-button input[type="checkbox"]+label,
+.form-input-button input[type="radio"]+label,
+.form-input-button input[type="color"]+label,
+.form-input-button input[type="file"]+label {
+  background-color: hsl(var(--button-background));
+  padding: 0.25em 1.25em;
+  margin: 0;
+  color: hsl(var(--button-text));
+  font-size: 1em;
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
+  min-height: 2.5em;
+  line-height: 1;
+  border: 0;
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: none;
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
+}
+
+.form-input-button input[type="checkbox"]:focus+label,
+.form-input-button input[type="checkbox"]:hover+label,
+.form-input-button input[type="radio"]:focus+label,
+.form-input-button input[type="radio"]:hover+label,
+.form-input-button input[type="color"]:focus+label,
+.form-input-button input[type="color"]:hover+label,
+.form-input-button input[type="file"]:focus+label,
+.form-input-button input[type="file"]:hover+label {
+  background-color: hsl(var(--button-background-focus-hover));
+  color: hsl(var(--button-text-focus-hover));
+  outline: none;
+  text-decoration: none;
+}
+
+.form-input-button input[type="checkbox"]:active+label,
+.form-input-button input[type="radio"]:active+label,
+.form-input-button input[type="color"]:active+label,
+.form-input-button input[type="file"]:active+label {
+  background-color: hsl(var(--button-background-active));
+  color: hsl(var(--button-text-active));
+  outline: none;
+  text-decoration: none;
+  transition: none;
+}
+
+.form-input-button input[type="checkbox"]:checked+label,
+.form-input-button input[type="radio"]:checked+label,
+.form-input-button input[type="color"]:checked+label,
+.form-input-button input[type="file"]:checked+label {
+  background-color: hsl(var(--button-background-active));
+  color: hsl(var(--button-text-active));
+  outline: none;
+  text-decoration: none;
+}
+
+.form-input-button input[type="checkbox"]:disabled+label,
+.form-input-button input[type="checkbox"]:disabled:hover+label,
+.form-input-button input[type="checkbox"]:disabled:focus+label,
+.form-input-button input[type="checkbox"]:disabled:active+label,
+.form-input-button input[type="radio"]:disabled+label,
+.form-input-button input[type="radio"]:disabled:hover+label,
+.form-input-button input[type="radio"]:disabled:focus+label,
+.form-input-button input[type="radio"]:disabled:active+label,
+.form-input-button input[type="color"]:disabled+label,
+.form-input-button input[type="color"]:disabled:hover+label,
+.form-input-button input[type="color"]:disabled:focus+label,
+.form-input-button input[type="color"]:disabled:active+label,
+.form-input-button input[type="file"]:disabled+label,
+.form-input-button input[type="file"]:disabled:hover+label,
+.form-input-button input[type="file"]:disabled:focus+label,
+.form-input-button input[type="file"]:disabled:active+label {
+  background-color: hsl(var(--button-background-disabled));
+  color: hsl(var(--button-text-disabled));
+  cursor: default;
+  text-decoration: none;
+}
+
+.form-input-button input[type="checkbox"]+label .label-icon,
+.form-input-button input[type="radio"]+label .label-icon {
+  top: inherit;
+}
+
+.form-input-button-ring input[type="checkbox"]+label,
+.form-input-button-ring input[type="radio"]+label,
+.form-input-button-ring input[type="color"]+label,
+.form-input-button-ring input[type="file"]+label {
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
+}
+
+.form-input-button-ring input[type="checkbox"]:focus+label,
+.form-input-button-ring input[type="checkbox"]:hover+label,
+.form-input-button-ring input[type="radio"]:focus+label,
+.form-input-button-ring input[type="radio"]:hover+label,
+.form-input-button-ring input[type="color"]:focus+label,
+.form-input-button-ring input[type="color"]:hover+label,
+.form-input-button-ring input[type="file"]:focus+label,
+.form-input-button-ring input[type="file"]:hover+label {
+  box-shadow: var(--form-ring-hover);
+}
+
+.form-input-button-ring input[type="checkbox"]:active+label,
+.form-input-button-ring input[type="radio"]:active+label,
+.form-input-button-ring input[type="color"]:active+label,
+.form-input-button-ring input[type="file"]:active+label {
+  box-shadow: var(--form-ring-accent);
+}
+
+.form-input-button-ring input[type="checkbox"]:checked+label,
+.form-input-button-ring input[type="radio"]:checked+label,
+.form-input-button-ring input[type="color"]:checked+label,
+.form-input-button-ring input[type="file"]:checked+label {
+  box-shadow: var(--form-ring-accent);
+}
+
+.form-input-button-ring input[type="checkbox"]:disabled+label,
+.form-input-button-ring input[type="checkbox"]:disabled:hover+label,
+.form-input-button-ring input[type="checkbox"]:disabled:focus+label,
+.form-input-button-ring input[type="checkbox"]:disabled:active+label,
+.form-input-button-ring input[type="radio"]:disabled+label,
+.form-input-button-ring input[type="radio"]:disabled:hover+label,
+.form-input-button-ring input[type="radio"]:disabled:focus+label,
+.form-input-button-ring input[type="radio"]:disabled:active+label,
+.form-input-button-ring input[type="color"]:disabled+label,
+.form-input-button-ring input[type="color"]:disabled:hover+label,
+.form-input-button-ring input[type="color"]:disabled:focus+label,
+.form-input-button-ring input[type="color"]:disabled:active+label,
+.form-input-button-ring input[type="file"]:disabled+label,
+.form-input-button-ring input[type="file"]:disabled:hover+label,
+.form-input-button-ring input[type="file"]:disabled:focus+label,
+.form-input-button-ring input[type="file"]:disabled:active+label {
+  box-shadow: none;
+}
+
+.form-input-button-line input[type="checkbox"]+label:after,
+.form-input-button-line input[type="radio"]+label:after,
+.form-input-button-line input[type="color"]+label:after,
+.form-input-button-line input[type="file"]+label:after {
+  content: "";
+  background: transparent;
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 calc(100% - var(--layout-line-width)), 100% calc(100% - var(--layout-line-width)), 100% 100%, 0% 100%);
+  transition: background-color var(--layout-transition-extra-fast);
+  pointer-events: none;
+}
+
+.form-input-button-line input[type="checkbox"]:focus+label:after,
+.form-input-button-line input[type="checkbox"]:hover+label:after,
+.form-input-button-line input[type="radio"]:focus+label:after,
+.form-input-button-line input[type="radio"]:hover+label:after,
+.form-input-button-line input[type="color"]:focus+label:after,
+.form-input-button-line input[type="color"]:hover+label:after,
+.form-input-button-line input[type="file"]:focus+label:after,
+.form-input-button-line input[type="file"]:hover+label:after {
+  background-color: hsl(var(--button-border-focus-hover));
+}
+
+.form-input-button-line input[type="checkbox"]:active+label:after,
+.form-input-button-line input[type="radio"]:active+label:after,
+.form-input-button-line input[type="color"]:active+label:after,
+.form-input-button-line input[type="file"]:active+label:after {
+  background-color: rgb(var(--button-border-active));
+  transition: none;
+}
+
+.form-input-button-line input[type="checkbox"]:checked+label:after,
+.form-input-button-line input[type="radio"]:checked+label:after,
+.form-input-button-line input[type="color"]:checked+label:after,
+.form-input-button-line input[type="file"]:checked+label:after {
+  background-color: rgb(var(--button-border-active));
+  transition: none;
+}
+
+.form-input-button-line input[type="checkbox"]:disabled+label:after,
+.form-input-button-line input[type="checkbox"]:disabled:hover+label:after,
+.form-input-button-line input[type="checkbox"]:disabled:focus+label:after,
+.form-input-button-line input[type="checkbox"]:disabled:active+label:after,
+.form-input-button-line input[type="radio"]:disabled+label:after,
+.form-input-button-line input[type="radio"]:disabled:hover+label:after,
+.form-input-button-line input[type="radio"]:disabled:focus+label:after,
+.form-input-button-line input[type="radio"]:disabled:active+label:after,
+.form-input-button-line input[type="color"]:disabled+label:after,
+.form-input-button-line input[type="color"]:disabled:hover+label:after,
+.form-input-button-line input[type="color"]:disabled:focus+label:after,
+.form-input-button-line input[type="color"]:disabled:active+label:after,
+.form-input-button-line input[type="file"]:disabled+label:after,
+.form-input-button-line input[type="file"]:disabled:hover+label:after,
+.form-input-button-line input[type="file"]:disabled:focus+label:after,
+.form-input-button-line input[type="file"]:disabled:active+label:after {
+  background-color: hsl(var(--button-border-disabled));
+}
+
+.form-input-button-link input[type="checkbox"]+label,
+.form-input-button-link input[type="radio"]+label,
+.form-input-button-link input[type="color"]+label,
+.form-input-button-link input[type="file"]+label {
+  background-color: transparent;
+}
+
+.form-input-button-link input[type="checkbox"]:hover+label,
+.form-input-button-link input[type="checkbox"]:focus+label,
+.form-input-button-link input[type="checkbox"]:checked+label,
+.form-input-button-link input[type="radio"]:hover+label,
+.form-input-button-link input[type="radio"]:focus+label,
+.form-input-button-link input[type="radio"]:checked+label,
+.form-input-button-link input[type="color"]:hover+label,
+.form-input-button-link input[type="color"]:focus+label,
+.form-input-button-link input[type="color"]:checked+label,
+.form-input-button-link input[type="file"]:hover+label,
+.form-input-button-link input[type="file"]:focus+label,
+.form-input-button-link input[type="file"]:checked+label {
+  background-color: transparent;
+}
+
+.form-input-button-link input[type="checkbox"]:active+label,
+.form-input-button-link input[type="radio"]:active+label,
+.form-input-button-link input[type="color"]:active+label,
+.form-input-button-link input[type="file"]:active+label {
+  background-color: transparent;
+}
+
+.form-input-button-link input:disabled[type="checkbox"]+label,
+.form-input-button-link input:disabled[type="radio"]+label,
+.form-input-button-link input:disabled[type="color"]+label,
+.form-input-button-link input:disabled[type="file"]+label {
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.form-input-button-link input:disabled[type="checkbox"]:hover+label,
+.form-input-button-link input:disabled[type="checkbox"]:focus+label,
+.form-input-button-link input:disabled[type="radio"]:hover+label,
+.form-input-button-link input:disabled[type="radio"]:focus+label,
+.form-input-button-link input:disabled[type="color"]:hover+label,
+.form-input-button-link input:disabled[type="color"]:focus+label,
+.form-input-button-link input:disabled[type="file"]:hover+label,
+.form-input-button-link input:disabled[type="file"]:focus+label {
+  background-color: transparent;
+}
+
+.form-input-button-sr-only input[type="checkbox"]+label,
+.form-input-button-sr-only input[type="radio"]+label,
+.form-input-button-sr-only input[type="color"]+label,
+.form-input-button-sr-only input[type="file"]+label {
+  display: block;
+}
+
+.form-input-button-sr-only input[type="checkbox"]+label .label-block,
+.form-input-button-sr-only input[type="radio"]+label .label-block,
+.form-input-button-sr-only input[type="color"]+label .label-block,
+.form-input-button-sr-only input[type="file"]+label .label-block {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.form-input-button-sr-only.input-color-dot input[type="color"]+label {
+  padding: 0.25em 1.75em;
+  min-width: 4em;
+}
+
+.form-input-button-sr-only.input-color-dot input[type="color"] {
+  top: 50%;
+  left: 50%;
+  right: initial;
+  transform: translate(-50%, -50%);
+}
+
+.form-input-hide input[type="checkbox"]+label .label-icon,
+.form-input-hide input[type="checkbox"]:checked+label .label-icon,
+.form-input-hide input[type="radio"]+label .label-icon,
+.form-input-hide input[type="radio"]:checked+label .label-icon,
+.form-input-hide input[type="file"]+label .label-icon,
+.form-input-hide input[type="file"]:checked+label .label-icon {
+  display: none;
+}
+
+.form-input-hide input[type="color"],
+.form-input-hide input[type="file"] {
+  margin: 0;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  min-width: 1px;
+  min-height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-appearance: none;
+}

@@ -1,0 +1,26 @@
+.group-empty {
+  background-color: hsla(var(--theme-primary-040), 0.2);
+  padding: 0.5em 1em;
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  height: inherit;
+  text-align: center;
+  display: flex;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.is-bookmark-style-block .group-empty {
+  flex-direction: column;
+}
+
+.is-bookmark-style-list .group-empty {
+  flex-direction: row;
+}
+
+.group-empty-headline:not(:last-child) {
+  margin-bottom: 0;
+}

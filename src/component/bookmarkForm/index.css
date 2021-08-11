@@ -1,0 +1,66 @@
+:root {
+  --bookmark-form-space: calc((var(--form-space) / 4) * 1em);
+}
+
+.bookmark-form {
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .bookmark-form {
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    gap: var(--bookmark-form-space);
+    align-items: stretch;
+    min-height: 60vh;
+  }
+}
+
+.bookmark-form-main {
+  padding-bottom: var(--bookmark-form-space);
+}
+
+.bookmark-form-aside {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .bookmark-form-aside {
+    display: block;
+  }
+}
+
+.bookmark-form-text-icon {
+  position: relative;
+}
+
+.bookmark-form-text-icon:empty:before {
+  content: "";
+  background-color: hsl(var(--theme-primary-040));
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+}
+
+.bookmark-form-text-icon .bookmark-form-icon {
+  transform: scale(1) rotate(0deg);
+  transition: transform var(--layout-transition-extra-fast);
+}
+
+.bookmark-form-text-icon:not(.disabled):hover .bookmark-form-icon {
+  transform: scale(2) rotate(360deg);
+  z-index: 1;
+}
+
+.bookmark-form-text-icon:not(.disabled):active .bookmark-form-icon {
+  transform: scale(4) rotate(360deg);
+}
+
+.bookmark-form-icon {
+  font-size: 1.5em;
+}

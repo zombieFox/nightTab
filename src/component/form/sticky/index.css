@@ -1,0 +1,9 @@
+.form-sticky {
+  background-color: hsl(var(--theme-primary-010));
+  margin: -1em;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  transition: background-color var(--layout-transition-extra-fast);
+}

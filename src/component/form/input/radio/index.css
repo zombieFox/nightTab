@@ -1,0 +1,202 @@
+input[type="radio"] {
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: block;
+  font-size: 1em;
+  line-height: 1;
+  cursor: pointer;
+  pointer-events: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transition: color var(--layout-transition-extra-fast);
+}
+
+input[type="radio"]+label {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
+  color: hsl(var(--form-label));
+  cursor: pointer;
+  display: flex;
+  gap: var(--form-thumb);
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: transform var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
+}
+
+input[type="radio"]:hover+label,
+input[type="radio"]:focus+label {
+  color: hsl(var(--form-label-hover));
+}
+
+input[type="radio"]:active+label {
+  color: hsl(var(--form-label-focus-active));
+}
+
+input[type="radio"]:checked+label {
+  color: hsl(var(--form-label-checked));
+}
+
+input[type="radio"]:disabled+label,
+input[type="radio"]:disabled:hover+label,
+input[type="radio"]:disabled:focus+label {
+  color: hsl(var(--form-label-disabled));
+  cursor: default;
+}
+
+input[type="radio"]+label .label-icon {
+  background-color: hsl(var(--form-icon));
+  width: var(--form-thumb);
+  height: var(--form-thumb);
+  position: relative;
+  top: calc((-1 * (var(--form-thumb) * 0.5)) + (1em * 0.8));
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  z-index: 1;
+  box-shadow: none;
+  transition: background-color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
+}
+
+input[type="radio"]+label .label-icon {
+  border-radius: 50%;
+}
+
+input[type="radio"]:hover+label .label-icon,
+input[type="radio"]:focus+label .label-icon {
+  background-color: hsl(var(--form-icon-hover));
+  box-shadow: var(--form-ring-hover);
+}
+
+input[type="radio"]:active+label .label-icon {
+  background-color: hsl(var(--form-icon-active));
+  box-shadow: var(--form-ring-accent);
+  transition: none;
+}
+
+input[type="radio"]:checked+label .label-icon {
+  background-color: hsl(var(--form-icon-checked));
+}
+
+input[type="radio"]:checked:focus+label .label-icon,
+input[type="radio"]:checked:active+label .label-icon {
+  box-shadow: var(--form-ring-accent);
+}
+
+input[type="radio"]:disabled+label .label-icon,
+input[type="radio"]:disabled:hover+label .label-icon,
+input[type="radio"]:disabled:focus+label .label-icon,
+input[type="radio"]:checked:disabled+label .label-icon,
+input[type="radio"]:checked:disabled:hover+label .label-icon,
+input[type="radio"]:checked:disabled:focus+label .label-icon {
+  background-color: hsl(var(--form-icon-disabled));
+  box-shadow: none;
+}
+
+input[type="radio"]+label .label-icon:before {
+  content: "";
+  background-color: hsl(var(--form-icon-symbol));
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0.7);
+  transform-origin: center;
+  z-index: 2;
+  transition: background-color var(--layout-transition-extra-fast), border-radius var(--layout-transition-extra-fast), transform var(--layout-transition-extra-fast);
+}
+
+input[type="radio"]+label .label-icon:before {
+  border-radius: 50%;
+}
+
+input[type="radio"]:active+label .label-icon:before {
+  background-color: hsl(var(--form-icon-symbol-active));
+  transition: none;
+}
+
+input[type="radio"]:checked+label .label-icon:before {
+  background-color: hsl(var(--form-icon-symbol-active));
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked+label .label-icon:before {
+  transform: scale(0.2);
+}
+
+input[type="radio"]:disabled+label .label-icon:before,
+input[type="radio"]:disabled:hover+label .label-icon:before,
+input[type="radio"]:disabled:focus+label .label-icon:before,
+input[type="radio"]:disabled:active+label .label-icon:before,
+input[type="radio"]:checked:disabled+label .label-icon:before,
+input[type="radio"]:checked:disabled:hover+label .label-icon:before,
+input[type="radio"]:checked:disabled:focus+label .label-icon:before,
+input[type="radio"]:checked:disabled:active+label .label-icon:before {
+  background-color: hsl(var(--form-icon-symbol-disabled));
+}
+
+input[type="radio"]+label .label-block-item {
+  color: hsl(var(--form-label));
+  transition: color var(--layout-transition-extra-fast);
+}
+
+input[type="radio"]:hover+label .label-block-item,
+input[type="radio"]:focus+label .label-block-item {
+  color: hsl(var(--form-label-hover));
+}
+
+input[type="radio"]:active+label .label-block-item {
+  color: hsl(var(--form-label-focus-active));
+}
+
+input[type="radio"]:checked+label .label-block-item {
+  color: hsl(var(--form-label-checked));
+}
+
+input[type="radio"]:disabled+label .label-block-item,
+input[type="radio"]:disabled:hover+label .label-block-item,
+input[type="radio"]:disabled:focus+label .label-block-item {
+  color: hsl(var(--form-label-disabled));
+  cursor: default;
+}
+
+input[type="radio"]+label .label-block-item.muted {
+  color: hsl(var(--utility-muted));
+  transition: color var(--layout-transition-extra-fast);
+}
+
+input[type="radio"]:hover+label .label-block-item.muted,
+input[type="radio"]:focus+label .label-block-item.muted {
+  color: hsl(var(--utility-muted-hover));
+}
+
+input[type="radio"]:active+label .label-block-item.muted {
+  color: hsl(var(--utility-muted-focus-active));
+}
+
+input[type="radio"]:checked+label .label-block-item.muted {
+  color: hsl(var(--utility-muted-checked));
+}
+
+input[type="radio"]:disabled+label .label-block-item.muted,
+input[type="radio"]:disabled:hover+label .label-block-item.muted,
+input[type="radio"]:disabled:focus+label .label-block-item.muted {
+  color: hsl(var(--utility-muted-disabled));
+  cursor: default;
+}
+
+input[type="radio"]:disabled+label .label-block-item,
+input[type="radio"]:disabled:hover+label .label-block-item,
+input[type="radio"]:disabled:focus+label .label-block-item {
+  color: hsl(var(--form-label-disabled));
+  cursor: default;
+}

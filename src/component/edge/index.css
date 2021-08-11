@@ -1,0 +1,46 @@
+:root {
+  --edge: inset 0 0 0 var(--layout-line-width) rgb(var(--theme-accent)),
+    inset 0 0 0 calc(var(--layout-line-width) * 4) rgba(var(--theme-accent), 0.1),
+    inset 0 0 0 calc(var(--layout-line-width) * 8) rgba(var(--theme-accent), 0.1);
+  --edge-on-accent: inset 0 0 0 var(--layout-line-width) hsl(var(--theme-accent-rgb-text)),
+    inset 0 0 0 calc(var(--layout-line-width) * 4) hsla(var(--theme-accent-rgb-text), 0.1),
+    inset 0 0 0 calc(var(--layout-line-width) * 8) hsla(var(--theme-accent-rgb-text), 0.1);
+}
+
+.edge,
+.edge-secondary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  z-index: var(--z-index-edge);
+  pointer-events: none;
+  transition: opacity var(--layout-transition-fast);
+}
+
+.edge {
+  background-color: rgba(var(--theme-accent), 0.2);
+  box-shadow: var(--edge);
+}
+
+.edge-secondary {
+  border: var(--layout-line-width) solid rgba(var(--theme-accent), 0.5);
+}
+
+.edge.is-edge-opening,
+.edge-secondary.is-edge-opening {
+  transition:
+    opacity var(--layout-transition-fast),
+    top var(--layout-transition-fast),
+    left var(--layout-transition-fast),
+    width var(--layout-transition-fast),
+    height var(--layout-transition-fast);
+}
+
+.is-theme-background-type-accent .edge,
+.is-theme-background-type-accent .edge-secondary {
+  box-shadow: var(--edge-on-accent);
+}

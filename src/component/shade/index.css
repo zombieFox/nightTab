@@ -1,0 +1,22 @@
+.shade {
+  background-color: rgba(var(--theme-accent), calc(var(--theme-shade-opacity) / 100));
+  position: fixed;
+  top: -1em;
+  left: -1em;
+  width: calc(100vw + 2em);
+  height: calc(100vh + 2em);
+  opacity: 0;
+  z-index: var(--z-index-shade);
+  pointer-events: all;
+  backdrop-filter: blur(calc(var(--theme-shade-blur) * 1px));
+  transition: background-color var(--layout-transition-extra-fast), opacity var(--layout-transition-extra-fast), backdrop-filter var(--layout-transition-extra-fast);
+}
+
+.shade.is-transparent {
+  pointer-events: none;
+}
+
+.is-edge .shade {
+  background-color: rgba(var(--theme-accent), calc(var(--theme-shade-opacity) / 500));
+  backdrop-filter: blur(0);
+}

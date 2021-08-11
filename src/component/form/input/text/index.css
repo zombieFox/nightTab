@@ -1,0 +1,183 @@
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"] {
+  background-color: hsl(var(--form-input-background));
+  padding: 0 1.25em;
+  margin: 0;
+  color: hsl(var(--form-input-text));
+  font-size: 1em;
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
+  line-height: 1.6;
+  height: 2.5em;
+  min-width: 0;
+  width: 100%;
+  border-width: 0;
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  cursor: text;
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
+  -moz-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="email"]:hover,
+input[type="number"]:hover,
+input[type="password"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="text"]:hover {
+  background-color: hsl(var(--form-input-background-hover));
+  color: hsl(var(--form-input-text-hover));
+  outline: none;
+  box-shadow: var(--form-ring-hover);
+}
+
+input[type="email"]:focus,
+input[type="email"]:active,
+input[type="number"]:focus,
+input[type="number"]:active,
+input[type="password"]:focus,
+input[type="password"]:active,
+input[type="search"]:focus,
+input[type="search"]:active,
+input[type="tel"]:focus,
+input[type="tel"]:active,
+input[type="text"]:focus,
+input[type="text"]:active {
+  background-color: hsl(var(--form-input-background-focus-active));
+  color: hsl(var(--form-input-text-focus-active));
+  outline: none;
+  z-index: 2;
+  box-shadow: var(--form-ring-accent);
+}
+
+input[type="email"]:disabled,
+input[type="number"]:disabled,
+input[type="password"]:disabled,
+input[type="search"]:disabled,
+input[type="tel"]:disabled,
+input[type="text"]:disabled {
+  background-color: hsl(var(--form-input-background-disabled));
+  color: hsl(var(--form-input-text-disabled));
+  cursor: default;
+  box-shadow: none;
+}
+
+input[type="email"]:disabled:hover,
+input[type="email"]:disabled:focus,
+input[type="number"]:disabled:hover,
+input[type="number"]:disabled:focus,
+input[type="password"]:disabled:hover,
+input[type="password"]:disabled:focus,
+input[type="search"]:disabled:hover,
+input[type="search"]:disabled:focus,
+input[type="tel"]:disabled:hover,
+input[type="tel"]:disabled:focus,
+input[type="text"]:disabled:hover,
+input[type="text"]:disabled:focus {
+  color: hsl(var(--form-input-text-disabled));
+}
+
+input[type="email"]::placeholder,
+input[type="number"]::placeholder,
+input[type="password"]::placeholder,
+input[type="search"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="text"]::placeholder {
+  color: hsl(var(--form-placeholder));
+  transition: color var(--layout-transition-extra-fast);
+}
+
+input[type="email"]:hover::placeholder,
+input[type="number"]:hover::placeholder,
+input[type="password"]:hover::placeholder,
+input[type="search"]:hover::placeholder,
+input[type="tel"]:hover::placeholder,
+input[type="text"]:hover::placeholder {
+  color: hsl(var(--form-placeholder-focus-hover));
+}
+
+input[type="email"]:focus::placeholder,
+input[type="number"]:focus::placeholder,
+input[type="password"]:focus::placeholder,
+input[type="search"]:focus::placeholder,
+input[type="tel"]:focus::placeholder,
+input[type="text"]:focus::placeholder {
+  color: hsl(var(--form-placeholder-focus-hover));
+}
+
+input[type="email"]:disabled::placeholder,
+input[type="email"]:disabled:hover::placeholder,
+input[type="email"]:disabled:focus::placeholder,
+input[type="number"]:disabled::placeholder,
+input[type="number"]:disabled:hover::placeholder,
+input[type="number"]:disabled:focus::placeholder,
+input[type="password"]:disabled::placeholder,
+input[type="password"]:disabled:hover::placeholder,
+input[type="password"]:disabled:focus::placeholder,
+input[type="search"]:disabled::placeholder,
+input[type="search"]:disabled:hover::placeholder,
+input[type="search"]:disabled:focus::placeholder,
+input[type="tel"]:disabled::placeholder,
+input[type="tel"]:disabled:hover::placeholder,
+input[type="tel"]:disabled:focus::placeholder,
+input[type="text"]:disabled::placeholder,
+input[type="text"]:disabled:hover::placeholder,
+input[type="text"]:disabled:focus::placeholder {
+  color: hsl(var(--form-placeholder-disabled));
+}
+
+.input-clear[type="email"],
+.input-clear[type="number"],
+.input-clear[type="password"],
+.input-clear[type="search"],
+.input-clear[type="tel"],
+.input-clear[type="text"] {
+  background-color: transparent;
+}
+
+.input-clear[type="email"]:hover,
+.input-clear[type="number"]:hover,
+.input-clear[type="password"]:hover,
+.input-clear[type="search"]:hover,
+.input-clear[type="tel"]:hover,
+.input-clear[type="text"]:hover {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.input-clear[type="email"]:focus,
+.input-clear[type="email"]:active,
+.input-clear[type="number"]:focus,
+.input-clear[type="number"]:active,
+.input-clear[type="password"]:focus,
+.input-clear[type="password"]:active,
+.input-clear[type="search"]:focus,
+.input-clear[type="search"]:active,
+.input-clear[type="tel"]:focus,
+.input-clear[type="tel"]:active,
+.input-clear[type="text"]:focus,
+.input-clear[type="text"]:active {
+  background-color: transparent;
+  box-shadow: var(--form-ring-accent);
+}

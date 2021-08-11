@@ -1,0 +1,76 @@
+:root {
+  --form-inline-gap: 4;
+  --form-inline-gap-small: calc(var(--form-inline-gap) * 1);
+  --form-inline-gap-medium: calc(var(--form-inline-gap) * 2);
+  --form-inline-gap-large: calc(var(--form-inline-gap) * 4);
+}
+
+.form-inline {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-inline-horizontal {
+  flex-direction: row;
+}
+
+.form-inline-vertical {
+  flex-direction: column;
+}
+
+.form-inline-gap-small {
+  row-gap: calc((var(--form-inline-gap-small) / 12) * 1em);
+  column-gap: calc((var(--form-inline-gap-small) / 4) * 1em);
+}
+
+.form-inline-gap-medium {
+  row-gap: calc((var(--form-inline-gap-medium) / 12) * 1em);
+  column-gap: calc((var(--form-inline-gap-medium) / 4) * 1em);
+}
+
+.form-inline-gap-large {
+  row-gap: calc((var(--form-inline-gap-large) / 12) * 1em);
+  column-gap: calc((var(--form-inline-gap-large) / 4) * 1em);
+}
+
+.form-inline-gap-equal.form-inline-gap-small {
+  gap: calc((var(--form-inline-gap-small) / 4) * 1em);
+}
+
+.form-inline-gap-equal.form-inline-gap-medium {
+  gap: calc((var(--form-inline-gap-medium) / 4) * 1em);
+}
+
+.form-inline-gap-equal.form-inline-gap-large {
+  gap: calc((var(--form-inline-gap-large) / 4) * 1em);
+}
+
+.form-inline-wrap {
+  flex-wrap: wrap;
+}
+
+.form-inline-block {
+  display: flex;
+}
+
+.form-inline .form-wrap:not(:first-child),
+.form-inline .form-wrap:not(:last-child) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form-inline .form-wrap {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+
+.form-inline .form-wrap label {
+  white-space: nowrap;
+}
+
+.form-inline label:not(:only-child):not(:last-child) {
+  padding-bottom: 0;
+}

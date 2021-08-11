@@ -1,0 +1,62 @@
+:root {
+  --theme-accent-preset-preview-space: 5;
+}
+
+.theme-accent-preset {
+  display: grid;
+  grid-gap: calc((var(--theme-accent-preset-preview-space) / 8) * 1em);
+  grid-template-columns: repeat(7, auto);
+  grid-auto-flow: row;
+  justify-items: center;
+  width: fit-content;
+}
+
+@media (min-width: 550px) {
+  .theme-accent-preset {
+    grid-template-rows: repeat(7, auto);
+    grid-auto-flow: column;
+  }
+}
+
+.theme-accent-preset-button {
+  padding: 0;
+  width: calc((var(--theme-accent-preset-preview-space) / 4) * 1em);
+  height: calc((var(--theme-accent-preset-preview-space) / 4) * 1em);
+  min-width: initial;
+  min-height: initial;
+  overflow: hidden;
+}
+
+.theme-accent-preset-preview {
+  background-color: hsl(var(--theme-accent-preset-color-hsl-h), calc(var(--theme-accent-preset-color-hsl-s) * 1%), calc(var(--theme-accent-preset-color-hsl-l) * 1%));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* @media (min-width: 550px) {
+  :root {
+    --theme-accent-preset-preview-space: 5;
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --theme-accent-preset-preview-space: 5;
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    --theme-accent-preset-preview-space: 5;
+  }
+}
+
+@media (min-width: 1100px) {
+  :root {
+    --theme-accent-preset-preview-space: 5;
+  }
+} */

@@ -1,0 +1,40 @@
+:root {
+  --version-icon-size: 22;
+  --version-icon: calc((var(--version-icon-size) / 4) * 1em);
+}
+
+.version {
+  font-size: 1rem;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-gap: var(--wrap-space);
+  align-items: center;
+  justify-items: start;
+}
+
+.version-app-name {
+  margin-bottom: 0;
+}
+
+.version-number:not(:last-child),
+.version-name:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.version-number {
+  background-color: rgb(var(--theme-accent));
+  color: hsl(var(--theme-accent-rgb-text));
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  padding: 0 0.5em;
+}
+
+.version-icon {
+  width: var(--version-icon);
+}
+
+.version-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25em;
+}

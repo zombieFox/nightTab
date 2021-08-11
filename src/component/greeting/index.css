@@ -1,0 +1,43 @@
+.greeting {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: var(--theme-font-display-name);
+  font-weight: var(--theme-font-display-weight);
+  font-style: var(--theme-font-display-style);
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  line-height: 1.2;
+}
+
+.greeting-item {
+  font-size: 1.5em;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-theme-background-type-accent .greeting-text {
+  color: hsl(var(--theme-accent-rgb-text));
+}
+
+.is-theme-background-type-color .greeting-text {
+  color: hsl(var(--theme-background-color-rgb-text));
+}
+
+.is-header-item-justify-left .greeting {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.is-header-item-justify-center .greeting {
+  justify-content: center;
+  text-align: center;
+}
+
+.is-header-item-justify-right .greeting {
+  justify-content: flex-end;
+  text-align: right;
+}

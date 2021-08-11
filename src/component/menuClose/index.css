@@ -1,0 +1,38 @@
+:root {
+  --menu-close-size: 12;
+  --menu-close-space: calc((var(--menu-close-size) / 4) * 1em);
+}
+
+@media (min-width: 700px) {
+  :root {
+    --menu-close-size: 14;
+  }
+}
+
+.menu-close {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-self: start;
+  z-index: 3;
+}
+
+.menu-close-button {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  line-height: 1;
+  position: relative;
+  top: calc((var(--theme-radius) * 0.25) * 0.01em);
+  right: calc((var(--theme-radius) * 0.25) * 0.01em);
+  height: var(--menu-close-space);
+  width: var(--menu-close-space);
+}
+
+@media (min-width: 700px) {
+  .menu-close-button {
+    border-radius: calc(var(--theme-radius) * 0.01em);
+  }
+}

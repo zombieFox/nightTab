@@ -2,14 +2,15 @@
   "name": "nightTab",
   "short_name": "nightTab",
   "description": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab.",
-  "version": "6.6.0",
+  "version": "7.0.0",
   "manifest_version": 2,
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
   "icons": {
-    "16": "icons/icon-16.png",
-    "48": "icons/icon-48.png",
-    "128": "icons/icon-128.png"
+    "16": "icon/icon-16.png",
+    "48": "icon/icon-48.png",
+    "128": "icon/icon-128.png",
+    "512": "icon/icon-512.png"
   }
 }

@@ -1,0 +1,18 @@
+:root {
+  --wrap-size: 6;
+  --wrap-space: calc((var(--wrap-size) / 4) * 1em);
+}
+
+.form-wrap {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.form-wrap:not(:first-child) {
+  margin-top: var(--wrap-space);
+}
+
+.form-wrap:not(:last-child) {
+  margin-bottom: var(--wrap-space);
+}

@@ -1,5 +1,0 @@
-.coffee-icon {
-  margin-right: 0.5em;
-  fill: rgb(var(--theme-color-18));
-  transition: fill var(--layout-transition-extra-fast);
-}

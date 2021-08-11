@@ -1,0 +1,250 @@
+:root {
+  --button-background: var(--theme-primary-020);
+  --button-background-focus-hover: var(--theme-primary-030);
+  --button-background-active: var(--theme-primary-040);
+  --button-background-disabled: var(--theme-primary-010);
+}
+
+:root {
+  --button-border: var(--theme-primary-030);
+  --button-border-focus-hover: var(--theme-primary-050);
+  --button-border-active: var(--theme-accent);
+  --button-border-disabled: var(--theme-primary-010);
+}
+
+:root {
+  --button-text: var(--theme-primary-text-020);
+  --button-text-focus-hover: var(--theme-primary-text-030);
+  --button-text-active: var(--theme-primary-text-030);
+  --button-text-disabled: var(--theme-primary-030);
+}
+
+:root {
+  --button-link-text: var(--theme-primary-text-010);
+  --button-link-text-focus-hover: var(--theme-primary-text-010);
+  --button-link-text-active: var(--theme-primary-text-010);
+  --button-link-text-disabled: var(--theme-primary-030);
+}
+
+button,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: hsl(var(--button-background));
+  padding: 0.25em 1.25em;
+  margin: 0;
+  color: hsl(var(--button-text));
+  font-size: 1em;
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
+  min-height: 2.5em;
+  line-height: 1;
+  border: 0;
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 0.5em;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
+}
+
+button:focus,
+button:hover,
+.button:focus,
+.button:hover,
+input[type="button"]:focus,
+input[type="button"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+  background-color: hsl(var(--button-background-focus-hover));
+  color: hsl(var(--button-text-focus-hover));
+  outline: none;
+  text-decoration: none;
+}
+
+button:active,
+.button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: hsl(var(--button-background-active));
+  color: hsl(var(--button-text-active));
+  outline: none;
+  text-decoration: none;
+  transition: none;
+}
+
+button.active,
+.button.active {
+  background-color: hsl(var(--button-background-active));
+  color: hsl(var(--button-text-active));
+}
+
+button.disabled,
+button.disabled:hover,
+button.disabled:focus,
+button.disabled:active,
+.button.disabled,
+.button.disabled:hover,
+.button.disabled:focus,
+.button.disabled:active,
+button:disabled,
+button:disabled:hover,
+button:disabled:focus,
+button:disabled:active,
+.button:disabled,
+.button:disabled:hover,
+.button:disabled:focus,
+.button:disabled:active {
+  background-color: hsl(var(--button-background-disabled));
+  color: hsl(var(--button-text-disabled));
+  cursor: default;
+  text-decoration: none;
+}
+
+.button-line:after {
+  content: "";
+  background: transparent;
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 calc(100% - var(--layout-line-width)), 100% calc(100% - var(--layout-line-width)), 100% 100%, 0% 100%);
+  transition: background-color var(--layout-transition-extra-fast);
+  pointer-events: none;
+}
+
+.button-line:focus:after,
+.button-line:hover:after {
+  background-color: hsl(var(--button-border-focus-hover));
+}
+
+.button-line:active:after,
+.button-line.active:after {
+  background-color: rgb(var(--button-border-active));
+  transition: none;
+}
+
+.button-line.disabled:after,
+.button-line.disabled:hover:after,
+.button-line.disabled:focus:after,
+.button-line.disabled:active:after,
+.button-line:disabled:after,
+.button-line:disabled:hover:after,
+.button-line:disabled:focus:after,
+.button-line:disabled:active:after {
+  background-color: hsl(var(--button-border-disabled));
+}
+
+.button-ring {
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
+}
+
+.button-ring:focus,
+.button-ring:hover {
+  box-shadow: var(--form-ring-hover);
+}
+
+.button-ring:active,
+.button-ring.active {
+  box-shadow: var(--form-ring-accent);
+}
+
+.button-ring.disabled,
+.button-ring:disabled,
+.button-ring.disabled:focus,
+.button-ring:disabled:focus,
+.button-ring.disabled:hover,
+.button-ring:disabled:hover,
+.button-ring.disabled:active,
+.button-ring:disabled:active {
+  box-shadow: none;
+}
+
+.button-text {
+  pointer-events: none;
+}
+
+button .icon,
+.button .icon {
+  line-height: 1;
+  font-size: 1.5em;
+}
+
+.button-small {
+  font-size: 0.8em;
+}
+
+.button-large {
+  font-size: 1.2em;
+}
+
+.button-block {
+  display: flex;
+  width: 100%;
+}
+
+button [class^="button-"],
+button [class*=" button-"],
+.button [class^="button-"],
+.button [class*=" button-"] {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+button [class^="button-"]:first-child,
+button [class*=" button-"]:first-child,
+.button [class^="button-"]:first-child,
+.button [class*=" button-"]:first-child {
+  margin-left: 0;
+}
+
+button [class^="button-"]:last-child,
+button [class*=" button-"]:last-child,
+.button [class^="button-"]:last-child,
+.button [class*=" button-"]:last-child {
+  margin-right: 0;
+}
+
+.button-link {
+  background-color: transparent;
+  border: 0;
+  color: hsl(var(--button-link-text));
+}
+
+.button-link:hover,
+.button-link:focus {
+  background-color: transparent;
+  color: hsl(var(--button-link-text-focus-hover));
+}
+
+.button-link.active,
+.button-link:active {
+  background-color: transparent;
+  color: hsl(var(--button-link-text-active));
+}
+
+.button-link.disabled,
+.button-link:disabled {
+  background-color: transparent;
+  pointer-events: none;
+}
+
+.button-link.disabled:hover,
+.button-link.disabled:focus,
+.button-link:hover:disabled,
+.button-link:focus:disabled {
+  background-color: transparent;
+}
