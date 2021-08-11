@@ -1,0 +1,23 @@
+.search-empty {
+  background-color: hsla(var(--theme-primary-040), 0.2);
+  padding: 2em 3em;
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  height: inherit;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.search-empty-string {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-empty-string:not(:last-child) {
+  margin-bottom: 0;
+}

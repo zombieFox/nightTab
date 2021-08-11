@@ -1,0 +1,72 @@
+.clock {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: var(--theme-font-display-name);
+  font-weight: var(--theme-font-display-weight);
+  font-style: var(--theme-font-display-style);
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.25em;
+  line-height: 1.2;
+}
+
+.clock-hour,
+.clock-separator,
+.clock-minute,
+.clock-second,
+.clock-meridiem {
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.clock-separator {
+  justify-content: center;
+  color: rgb(var(--theme-accent));
+}
+
+.is-theme-background-type-accent .clock-separator {
+  justify-content: center;
+  color: hsl(var(--theme-accent-rgb-text));
+}
+
+.clock-hour,
+.clock-minute,
+.clock-second,
+.clock-meridiem {
+  justify-content: center;
+}
+
+.is-theme-background-type-accent .clock-hour,
+.is-theme-background-type-accent .clock-minute,
+.is-theme-background-type-accent .clock-second,
+.is-theme-background-type-accent .clock-meridiem {
+  color: hsl(var(--theme-accent-rgb-text));
+}
+
+.is-theme-background-type-color .clock-hour,
+.is-theme-background-type-color .clock-minute,
+.is-theme-background-type-color .clock-second,
+.is-theme-background-type-color .clock-meridiem {
+  color: hsl(var(--theme-background-color-rgb-text));
+}
+
+.is-header-item-justify-left .clock {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.is-header-item-justify-center .clock {
+  justify-content: center;
+  text-align: center;
+}
+
+.is-header-item-justify-right .clock {
+  justify-content: flex-end;
+  text-align: right;
+}

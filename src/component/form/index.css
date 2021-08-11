@@ -1,0 +1,18 @@
+:root {
+  --form-space: 8;
+}
+
+:root {
+  --form-placeholder: var(--theme-primary-040);
+  --form-placeholder-focus-hover: var(--theme-primary-040);
+  --form-placeholder-disabled: var(--theme-primary-020);
+}
+
+:root {
+  --form-ring-hover: 0 0 0 var(--layout-line-width) hsl(var(--theme-primary-080));
+  --form-ring-focus:
+    0 0 0 var(--layout-line-width) hsl(var(--theme-primary-090)),
+    0 0 0 calc(var(--layout-line-width) * 2) hsla(var(--theme-primary-090), 0.25);
+  --form-ring-accent: 0 0 0 var(--layout-line-width) rgb(var(--theme-accent)),
+    0 0 0 calc(var(--layout-line-width) * 2) rgba(var(--theme-accent), 0.25);
+}

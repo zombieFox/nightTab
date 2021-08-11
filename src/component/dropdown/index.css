@@ -1,0 +1,30 @@
+:root {
+  --dropdown-background: var(--theme-primary-020);
+}
+
+.dropdown-menu {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: calc(var(--dropdown-menu-top) * 1px);
+  left: calc(var(--dropdown-menu-left) * 1px);
+  z-index: var(--z-index-dropdown);
+}
+
+.dropdown-content {
+  background-color: hsl(var(--dropdown-background));
+  padding: 0.5em;
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  min-width: 15em;
+  box-shadow: var(--theme-shadow-bottom-large);
+  overflow: hidden;
+}
+
+.dropdown-menu-button {
+  padding: 0.25em 1em;
+  justify-content: flex-start;
+}

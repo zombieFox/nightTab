@@ -1,0 +1,30 @@
+:root {
+  --form-thumb-size: 5;
+  --form-thumb: calc((var(--form-thumb-size) / 4) * 1em);
+}
+
+:root {
+  --form-input-background: var(--theme-primary-020);
+  --form-input-background-hover: var(--theme-primary-020);
+  --form-input-background-focus-active: var(--theme-primary-010);
+  --form-input-background-disabled: var(--theme-primary-010);
+  --form-input-text: var(--theme-primary-text-020);
+  --form-input-text-hover: var(--theme-primary-text-020);
+  --form-input-text-focus-active: var(--theme-primary-text-010);
+  --form-input-text-disabled: var(--theme-primary-030);
+}
+
+:root {
+  --form-icon: var(--theme-primary-060);
+  --form-icon-hover: var(--theme-primary-040);
+  --form-icon-focus: var(--theme-primary-040);
+  --form-icon-active: var(--theme-primary-text-010);
+  --form-icon-checked: var(--theme-primary-text-010);
+  --form-icon-disabled: var(--theme-primary-020);
+}
+
+:root {
+  --form-icon-symbol: var(--theme-primary-010);
+  --form-icon-symbol-active: var(--theme-primary-010);
+  --form-icon-symbol-disabled: var(--theme-primary-010);
+}

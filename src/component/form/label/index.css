@@ -1,0 +1,38 @@
+:root {
+  --form-label: var(--theme-primary-text-010);
+  --form-label-hover: var(--theme-primary-text-010);
+  --form-label-focus-active: var(--theme-primary-text-010);
+  --form-label-checked: var(--theme-primary-text-010);
+  --form-label-disabled: var(--theme-primary-030);
+}
+
+label {
+  padding: 0;
+  color: hsl(var(--form-label));
+  margin-bottom: 0;
+  font-size: 1em;
+  display: block;
+  transition: color var(--layout-transition-extra-fast);
+}
+
+label:not(.label-no-padding):not(:only-child):not(:last-child) {
+  padding-bottom: 1em;
+}
+
+label.disabled {
+  color: hsl(var(--form-label-disabled));
+}
+
+.label-block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.25em;
+}
+
+input:disabled+label .label-block-item,
+input:disabled:hover+label .label-block-item,
+input:disabled:focus+label .label-block-item {
+  color: hsl(var(--form-label-disabled));
+  cursor: default;
+}

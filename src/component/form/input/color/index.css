@@ -1,0 +1,99 @@
+input[type="color"] {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-width: 4em;
+  height: 2.5em;
+  display: block;
+  border: 0;
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 1;
+  transition: box-shadow var(--layout-transition-extra-fast), opacity var(--layout-transition-extra-fast);
+}
+
+input[type="color"]:hover {
+  outline: none;
+  box-shadow: var(--form-ring-hover);
+}
+
+input[type="color"]:focus {
+  outline: none;
+  box-shadow: var(--form-ring-focus);
+}
+
+input[type="color"]:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+input[type="color"]:disabled:hover,
+input[type="color"]:disabled:focus {
+  box-shadow: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+
+input[type="color"]::-moz-color-swatch-wrapper {
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+
+input[type="color"]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+
+.input-color-dot input[type="color"] {
+  margin: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  width: var(--form-thumb);
+  height: var(--form-thumb);
+  min-width: inherit;
+  z-index: 4;
+  transform: translateY(-50%);
+  transition: none;
+}
+
+.input-color-dot input[type="color"]:hover {
+  outline: none;
+  box-shadow: none;
+}
+
+.input-color-dot input[type="color"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.input-color-dot input[type="color"]+label {
+  padding-right: calc(var(--form-thumb) + 2em);
+  position: relative;
+}
+
+.input-color-dot.form-input-button-link input[type="color"] {
+  box-shadow: 0 0 0 calc(var(--layout-line-width) * 0.75) hsl(var(--button-link-text));
+  transition: box-shadow var(--layout-transition-extra-fast);
+}

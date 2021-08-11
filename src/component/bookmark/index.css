@@ -1,0 +1,1015 @@
+:root {
+  --bookmark-color: var(--theme-primary-020);
+  --bookmark-color-focus-hover: var(--theme-primary-030);
+  --bookmark-display-visual-color: var(--theme-accent);
+  --bookmark-display-visual-color-focus-hover: var(--theme-accent-rgb-text);
+  --bookmark-display-name-color: var(--theme-primary-text-020);
+  --bookmark-display-name-color-focus-hover: var(--theme-primary-text-030);
+}
+
+.is-bookmark-style-block {
+  --bookmark-edit-height-tall: 5em;
+  --bookmark-edit-height-short: calc(var(--bookmark-edit-height-tall) / 2);
+  --bookmark-edit-height: var(--bookmark-edit-height-tall);
+  --bookmark-url-height: 2.25em;
+}
+
+.is-bookmark-style-list {
+  --bookmark-edit-height-tall: 5em;
+  --bookmark-edit-height-short: 2em;
+  --bookmark-edit-height: var(--bookmark-edit-height-short);
+  --bookmark-url-height: 1.5em;
+}
+
+.is-bookmark-style-block {
+  --bookmark-url-height: 2.25em;
+}
+
+.is-bookmark-style-list {
+  --bookmark-url-height: 1.5em;
+}
+
+:root {
+  --bookmark-padding: 10;
+  --bookmark-clip-padding: 1;
+}
+
+.bookmark-area {
+  flex-grow: 1;
+  padding: calc(var(--layout-space) * var(--layout-padding));
+  width: 100%;
+}
+
+.is-theme-bookmark-color-by-custom .bookmark-area {
+  background-color: hsla(var(--theme-bookmark-color-hsl-h), calc(var(--theme-bookmark-color-hsl-s) * 1%), calc(var(--theme-bookmark-color-hsl-l) * 1%), calc(var(--theme-bookmark-color-opacity) / 100));
+}
+
+.bookmark-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--layout-space) * var(--layout-padding));
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.bookmark {
+  font-size: 1em;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.bookmark:focus,
+.bookmark:hover,
+.bookmark:focus-within {
+  z-index: 2;
+}
+
+.is-bookmark-hoverscale-show:not(.is-bookmark-edit) .bookmark {
+  transform: scale(1);
+  transition: transform var(--layout-transition-extra-fast);
+}
+
+.is-bookmark-hoverscale-show:not(.is-bookmark-edit) .bookmark:focus-within,
+.is-bookmark-hoverscale-show:not(.is-bookmark-edit) .bookmark:focus,
+.is-bookmark-hoverscale-show:not(.is-bookmark-edit) .bookmark:hover {
+  transform: scale(1.05);
+}
+
+.is-bookmark-hoverscale-show:not(.is-bookmark-edit) .bookmark:active {
+  transform: scale(1.04);
+  transition: none;
+}
+
+@media (min-width: 900px) {
+
+  .is-layout-breakpoint-md.is-bookmark-style-list .bookmark-wide,
+  .is-layout-breakpoint-lg.is-bookmark-style-list .bookmark-wide,
+  .is-layout-breakpoint-xl.is-bookmark-style-list .bookmark-wide,
+  .is-layout-breakpoint-xxl.is-bookmark-style-list .bookmark-wide {
+    grid-column: span 2;
+  }
+
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide {
+    grid-column: span 2;
+  }
+
+  .is-layout-breakpoint-md .bookmark-tall,
+  .is-layout-breakpoint-lg .bookmark-tall,
+  .is-layout-breakpoint-xl .bookmark-tall,
+  .is-layout-breakpoint-xxl .bookmark-tall {
+    grid-row: span 2;
+  }
+}
+
+@media (min-width: 900px) {
+
+  .is-layout-breakpoint-md.is-bookmark-orientation-top .bookmark-wide,
+  .is-layout-breakpoint-lg.is-bookmark-orientation-top .bookmark-wide,
+  .is-layout-breakpoint-xl.is-bookmark-orientation-top .bookmark-wide,
+  .is-layout-breakpoint-xxl.is-bookmark-orientation-top .bookmark-wide,
+  .is-layout-breakpoint-md.is-bookmark-orientation-bottom .bookmark-wide,
+  .is-layout-breakpoint-lg.is-bookmark-orientation-bottom .bookmark-wide,
+  .is-layout-breakpoint-xl.is-bookmark-orientation-bottom .bookmark-wide,
+  .is-layout-breakpoint-xxl.is-bookmark-orientation-bottom .bookmark-wide {
+    --bookmark-edit-height: var(--bookmark-edit-height-short);
+  }
+}
+
+.bookmark-front {
+  background-color: hsla(var(--bookmark-color), calc(var(--theme-bookmark-item-opacity) / 100));
+  border: calc(var(--bookmark-border) * var(--layout-line-width)) solid rgb(var(--theme-accent));
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  user-select: none;
+  transition: background-color var(--layout-transition-extra-fast), border-radius var(--layout-transition-extra-fast), height var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast);
+}
+
+.bookmark:focus-within .bookmark-front,
+.bookmark:focus .bookmark-front,
+.bookmark:hover .bookmark-front,
+.bookmark-front:focus,
+.bookmark-front:hover {
+  background-color: hsla(var(--bookmark-color-focus-hover), calc(var(--theme-bookmark-item-opacity) / 100));
+}
+
+.is-bookmark-edit .bookmark-front {
+  height: calc(100% - var(--bookmark-edit-height));
+  transition-delay: calc(var(--bookmark-transition-delay) * 0.03s);
+}
+
+.is-bookmark-line-show:not(.is-bookmark-edit) .bookmark-front {
+  height: calc(100% - var(--layout-line-width));
+}
+
+.is-bookmark-orientation-top .bookmark-front {
+  top: inherit;
+  bottom: 0;
+}
+
+.is-bookmark-orientation-bottom .bookmark-front {
+  top: 0;
+  bottom: inherit;
+}
+
+.is-bookmark-url-show.is-bookmark-orientation-top .bookmark:focus .bookmark-front,
+.is-bookmark-url-show.is-bookmark-orientation-top .bookmark:focus-within .bookmark-front,
+.is-bookmark-url-show.is-bookmark-orientation-top .bookmark:hover .bookmark-front {
+  border-top-left-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+  border-top-right-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+}
+
+.is-bookmark-url-show.is-bookmark-orientation-bottom .bookmark:focus .bookmark-front,
+.is-bookmark-url-show.is-bookmark-orientation-bottom .bookmark:focus-within .bookmark-front,
+.is-bookmark-url-show.is-bookmark-orientation-bottom .bookmark:hover .bookmark-front {
+  border-bottom-left-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+  border-bottom-right-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+}
+
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark .bookmark-front,
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark:hover .bookmark-front,
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark:focus .bookmark-front {
+  border-top-left-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+  border-top-right-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+}
+
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark .bookmark-front,
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark:hover .bookmark-front,
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark:focus .bookmark-front {
+  border-bottom-left-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+  border-bottom-right-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+}
+
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom .bookmark:focus .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom .bookmark:focus-within .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom .bookmark:hover .bookmark-front {
+  box-shadow: var(--theme-shadow-bottom-large);
+}
+
+.is-bookmark-shadow-show.is-bookmark-orientation-top .bookmark:focus .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top .bookmark:focus-within .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top .bookmark:hover .bookmark-front {
+  box-shadow: var(--theme-shadow-top-large);
+}
+
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom.is-bookmark-edit .bookmark .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom.is-bookmark-edit .bookmark:hover .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom.is-bookmark-edit .bookmark:focus .bookmark-front {
+  box-shadow: var(--theme-shadow-bottom-medium);
+}
+
+.is-bookmark-shadow-show.is-bookmark-orientation-top.is-bookmark-edit .bookmark .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top.is-bookmark-edit .bookmark:hover .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top.is-bookmark-edit .bookmark:focus .bookmark-front {
+  box-shadow: var(--theme-shadow-top-medium);
+}
+
+.bookmark-link {
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  pointer-events: all;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.is-bookmark-style-block .bookmark-link {
+  padding: calc(var(--bookmark-padding) * 0.1em);
+}
+
+.is-bookmark-style-list .bookmark-link {
+  padding: calc((var(--bookmark-padding) * 0.5) * 0.1em) calc((var(--bookmark-padding) * 1.25) * 0.1em);
+}
+
+.bookmark-link:focus,
+.bookmark-link:hover,
+.bookmark-link:active {
+  text-decoration: none;
+}
+
+.bookmark-display-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: var(--bookmark-display-justify);
+  align-items: var(--bookmark-display-align);
+  pointer-events: all;
+  z-index: 2;
+}
+
+.bookmark-display {
+  display: flex;
+  gap: calc(var(--bookmark-display-gutter) * 0.025em);
+  font-size: 1em;
+  transition: font-size var(--layout-transition-extra-fast);
+  transform: translateX(calc(var(--bookmark-display-translate-x) * 0.1em)) translateY(calc(var(--bookmark-display-translate-y) * 0.1em)) rotate(calc(var(--bookmark-display-rotate) * 1deg));
+}
+
+.is-bookmark-edit .bookmark-display {
+  font-size: 0.5em;
+  transition-delay: calc(var(--bookmark-transition-delay) * 0.03s);
+}
+
+.is-bookmark-alignment-top-left .bookmark-display-wrap {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.is-bookmark-alignment-top-center .bookmark-display-wrap {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.is-bookmark-alignment-top-right .bookmark-display-wrap {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.is-bookmark-alignment-center-left .bookmark-display-wrap {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.is-bookmark-alignment-center-center .bookmark-display-wrap {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-bookmark-alignment-center-right .bookmark-display-wrap {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.is-bookmark-alignment-bottom-left .bookmark-display-wrap {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.is-bookmark-alignment-bottom-center .bookmark-display-wrap {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.is-bookmark-alignment-bottom-right .bookmark-display-wrap {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-visual-name .bookmark-display {
+  flex-direction: row;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-name-visual .bookmark-display {
+  flex-direction: row-reverse;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-visual-name .bookmark-display {
+  flex-direction: column;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-name-visual .bookmark-display {
+  flex-direction: column-reverse;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-visual-name.is-bookmark-alignment-top-left .bookmark-display {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-visual-name.is-bookmark-alignment-top-center .bookmark-display {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-visual-name.is-bookmark-alignment-top-right .bookmark-display {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-visual-name.is-bookmark-alignment-center-left .bookmark-display {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-visual-name.is-bookmark-alignment-center-center .bookmark-display {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-visual-name.is-bookmark-alignment-center-right .bookmark-display {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-visual-name.is-bookmark-alignment-bottom-left .bookmark-display {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-visual-name.is-bookmark-alignment-bottom-center .bookmark-display {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-visual-name.is-bookmark-alignment-bottom-right .bookmark-display {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-name-visual.is-bookmark-alignment-top-left .bookmark-display {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-name-visual.is-bookmark-alignment-top-center .bookmark-display {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-name-visual.is-bookmark-alignment-top-right .bookmark-display {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-name-visual.is-bookmark-alignment-center-left .bookmark-display {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-name-visual.is-bookmark-alignment-center-center .bookmark-display {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-name-visual.is-bookmark-alignment-center-right .bookmark-display {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-name-visual.is-bookmark-alignment-bottom-left .bookmark-display {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-name-visual.is-bookmark-alignment-bottom-center .bookmark-display {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.is-bookmark-direction-vertical.is-bookmark-order-name-visual.is-bookmark-alignment-bottom-right .bookmark-display {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-visual-name.is-bookmark-alignment-top-left .bookmark-display {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-visual-name.is-bookmark-alignment-top-center .bookmark-display {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-visual-name.is-bookmark-alignment-top-right .bookmark-display {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-visual-name.is-bookmark-alignment-center-left .bookmark-display {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-visual-name.is-bookmark-alignment-center-center .bookmark-display {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-visual-name.is-bookmark-alignment-center-right .bookmark-display {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-visual-name.is-bookmark-alignment-bottom-left .bookmark-display {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-visual-name.is-bookmark-alignment-bottom-center .bookmark-display {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-visual-name.is-bookmark-alignment-bottom-right .bookmark-display {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-name-visual.is-bookmark-alignment-top-left .bookmark-display {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-name-visual.is-bookmark-alignment-top-center .bookmark-display {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-name-visual.is-bookmark-alignment-top-right .bookmark-display {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-name-visual.is-bookmark-alignment-center-left .bookmark-display {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-name-visual.is-bookmark-alignment-center-center .bookmark-display {
+  justify-content: center;
+  align-items: center;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-name-visual.is-bookmark-alignment-center-right .bookmark-display {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-name-visual.is-bookmark-alignment-bottom-left .bookmark-display {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-name-visual.is-bookmark-alignment-bottom-center .bookmark-display {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.is-bookmark-direction-horizontal.is-bookmark-order-name-visual.is-bookmark-alignment-bottom-right .bookmark-display {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.bookmark-display-visual {
+  color: rgb(var(--bookmark-display-visual-color));
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  transition: color var(--layout-transition-extra-fast);
+  text-shadow: var(--bookmark-display-visual-shadow);
+}
+
+.bookmark:focus .bookmark-display-visual,
+.bookmark:hover .bookmark-display-visual,
+.bookmark:focus-within .bookmark-display-visual {
+  color: rgb(var(--bookmark-display-visual-color-focus-hover));
+}
+
+.bookmark-display-visual-letter {
+  font-family: var(--theme-font-display-name);
+  font-weight: var(--theme-font-display-weight);
+  font-style: var(--theme-font-display-style);
+  font-size: calc(var(--bookmark-display-visual-size) * 0.1em);
+}
+
+.bookmark-display-visual-icon {
+  font-size: calc(var(--bookmark-display-visual-size) * 0.1em);
+}
+
+.bookmark-display-visual-image {
+  background-image: var(--bookmark-display-visual-image-url);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1em;
+  height: 1em;
+  font-size: calc(var(--bookmark-display-visual-size) * 0.1em);
+}
+
+.bookmark-display-name {
+  color: hsl(var(--bookmark-display-name-color));
+  font-size: calc(var(--bookmark-display-name-size) * 0.1em);
+  display: flex;
+  justify-content: center;
+  transition: color var(--layout-transition-extra-fast);
+}
+
+.is-bookmark-opacity-low .bookmark-display-name {
+  --bookmark-display-name-color: var(--theme-primary-text-010);
+  --bookmark-display-name-color-focus-hover: var(--theme-primary-text-010);
+}
+
+.is-theme-background-type-accent .is-bookmark-opacity-low .bookmark-display-name {
+  --bookmark-display-name-color: var(--theme-accent-rgb-text);
+  --bookmark-display-name-color-focus-hover: var(--theme-accent-rgb-text);
+}
+
+.is-theme-background-type-color .is-bookmark-opacity-low .bookmark-display-name {
+  --bookmark-display-name-color: var(--theme-background-color-rgb-text);
+  --bookmark-display-name-color-focus-hover: var(--theme-background-color-rgb-text);
+}
+
+.bookmark:focus .bookmark-display-name,
+.bookmark:hover .bookmark-display-name,
+.bookmark:focus-within .bookmark-display-name {
+  color: hsl(var(--bookmark-display-name-color-focus-hover));
+}
+
+.is-bookmark-alignment-top-left .bookmark-display-name-text,
+.is-bookmark-alignment-center-left .bookmark-display-name-text,
+.is-bookmark-alignment-bottom-left .bookmark-display-name-text {
+  text-align: left;
+}
+
+.is-bookmark-alignment-top-center .bookmark-display-name-text,
+.is-bookmark-alignment-center-center .bookmark-display-name-text,
+.is-bookmark-alignment-bottom-center .bookmark-display-name-text {
+  text-align: center;
+}
+
+.is-bookmark-alignment-top-right .bookmark-display-name-text,
+.is-bookmark-alignment-center-right .bookmark-display-name-text,
+.is-bookmark-alignment-bottom-right .bookmark-display-name-text {
+  text-align: right;
+}
+
+.bookmark-back {
+  background-color: rgb(var(--theme-accent));
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  width: calc(100% - calc(var(--layout-line-width) * 2));
+  height: calc(100% - calc(var(--layout-line-width) * 2));
+  position: absolute;
+  top: var(--layout-line-width);
+  left: var(--layout-line-width);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  transition: height var(--layout-transition-extra-fast), border-radius var(--layout-transition-extra-fast), top var(--layout-transition-extra-fast), clip-path var(--layout-transition-extra-fast);
+}
+
+.is-bookmark-edit .bookmark-back {
+  height: 100%;
+  top: 0;
+  transition-delay: calc(var(--bookmark-transition-delay) * 0.03s);
+}
+
+.is-bookmark-line-show .bookmark-back {
+  height: calc(100% - var(--layout-line-width));
+}
+
+.is-bookmark-line-show.is-bookmark-orientation-top .bookmark-back {
+  top: 0;
+}
+
+.is-bookmark-line-show.is-bookmark-orientation-bottom .bookmark-back {
+  top: var(--layout-line-width);
+}
+
+.is-bookmark-edit.is-bookmark-line-show .bookmark-back {
+  height: 100%;
+}
+
+.is-bookmark-edit.is-bookmark-line-show.is-bookmark-orientation-top .bookmark-back,
+.is-bookmark-edit.is-bookmark-line-show.is-bookmark-orientation-bottom .bookmark-back {
+  top: 0;
+}
+
+.is-bookmark-orientation-top .bookmark-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(0% + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + calc(var(--bookmark-clip-padding) * 1em)));
+}
+
+.is-bookmark-orientation-bottom .bookmark-back {
+  clip-path: polygon(0 calc(100% - calc(var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+}
+
+.is-bookmark-orientation-top.is-bookmark-line-show .bookmark-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)));
+}
+
+.is-bookmark-orientation-bottom.is-bookmark-line-show .bookmark-back {
+  clip-path: polygon(0 calc(100% - var(--layout-line-width) - calc(var(--bookmark-clip-padding) * 1em)), 100% calc(100% - var(--layout-line-width) - calc(var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+}
+
+.is-bookmark-orientation-top .bookmark:focus .bookmark-back,
+.is-bookmark-orientation-top .bookmark:focus-within .bookmark-back,
+.is-bookmark-orientation-top .bookmark:hover .bookmark-back,
+.is-bookmark-orientation-bottom .bookmark:focus .bookmark-back,
+.is-bookmark-orientation-bottom .bookmark:focus-within .bookmark-back,
+.is-bookmark-orientation-bottom .bookmark:hover .bookmark-back {
+  top: 0;
+  height: 100%;
+}
+
+.is-bookmark-url-show.is-bookmark-orientation-top .bookmark:focus .bookmark-back,
+.is-bookmark-url-show.is-bookmark-orientation-top .bookmark:focus-within .bookmark-back,
+.is-bookmark-url-show.is-bookmark-orientation-top .bookmark:hover .bookmark-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)));
+}
+
+.is-bookmark-url-show.is-bookmark-orientation-bottom .bookmark:focus .bookmark-back,
+.is-bookmark-url-show.is-bookmark-orientation-bottom .bookmark:focus-within .bookmark-back,
+.is-bookmark-url-show.is-bookmark-orientation-bottom .bookmark:hover .bookmark-back {
+  clip-path: polygon(0 calc(100% - calc(var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em))), 100% calc(100% - calc(var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em))), 100% 100%, 0 100%);
+}
+
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark:focus .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark:focus-within .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark:hover .bookmark-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--bookmark-edit-height) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(var(--bookmark-edit-height) + calc(var(--bookmark-clip-padding) * 1em)));
+}
+
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark:focus .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark:focus-within .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark:hover .bookmark-back {
+  clip-path: polygon(0 calc(100% - var(--bookmark-edit-height) - calc(var(--bookmark-clip-padding) * 1em)), 100% calc(100% - var(--bookmark-edit-height) - calc(var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+}
+
+.bookmark-background-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: calc(var(--bookmark-background-opacity) / 100);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bookmark-background-image {
+  background-image: var(--bookmark-background-image-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bookmark-background-video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bookmark-background-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.bookmark-control {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--bookmark-edit-height);
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  overflow: hidden;
+  pointer-events: none;
+  transition: top var(--layout-transition-extra-fast), bottom var(--layout-transition-extra-fast);
+}
+
+.is-bookmark-style-block .bookmark-control {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.is-bookmark-style-list .bookmark-control {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+}
+
+@media (min-width: 900px) {
+
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+  }
+}
+
+.is-bookmark-orientation-top .bookmark-control {
+  top: calc(-1 * var(--bookmark-edit-height));
+}
+
+.is-bookmark-orientation-bottom .bookmark-control {
+  bottom: calc(-1 * var(--bookmark-edit-height));
+}
+
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark-control {
+  top: 0;
+  transition: top var(--layout-duration-04) var(--layout-timing-bounce);
+  transition-delay: calc(var(--bookmark-transition-delay) * 0.03s);
+}
+
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark-control {
+  bottom: 0;
+  transition: bottom var(--layout-duration-04) var(--layout-timing-bounce) var(--layout-duration-01);
+  transition-delay: calc(var(--bookmark-transition-delay) * 0.03s);
+}
+
+.bookmark-control-button {
+  padding: 0;
+  border-radius: 0;
+  min-height: initial;
+  position: relative;
+  color: hsl(var(--theme-accent-rgb-text));
+  transition: background-color var(--layout-transition-fast), border-color var(--layout-transition-fast), color var(--layout-transition-fast), top var(--layout-transition-fast), right var(--layout-transition-fast), bottom var(--layout-transition-fast), left var(--layout-transition-fast);
+}
+
+.bookmark-control-button:hover,
+.bookmark-control-button:focus {
+  background-color: hsla(var(--theme-accent-rgb-text), 0.1);
+}
+
+.bookmark-control-button:disabled {
+  opacity: 0.25;
+}
+
+.is-bookmark-style-block .bookmark-control-left {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.is-bookmark-style-block .bookmark-control-sort {
+  grid-column: 3 / span 2;
+  grid-row: 1;
+}
+
+.is-bookmark-style-block .bookmark-control-right {
+  grid-column: 5 / span 2;
+  grid-row: 1;
+}
+
+.is-bookmark-style-block .bookmark-control-edit {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+}
+
+.is-bookmark-style-block .bookmark-control-remove {
+  grid-column: 4 / span 3;
+  grid-row: 2;
+}
+
+.is-bookmark-style-list .bookmark-control-left {
+  grid-column: 1;
+}
+
+.is-bookmark-style-list .bookmark-control-sort {
+  grid-column: 2;
+}
+
+.is-bookmark-style-list .bookmark-control-right {
+  grid-column: 3;
+}
+
+.is-bookmark-style-list .bookmark-control-edit {
+  grid-column: 4;
+}
+
+.is-bookmark-style-list .bookmark-control-remove {
+  grid-column: 5;
+}
+
+@media (min-width: 900px) {
+
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-remove {
+    grid-row: 1;
+  }
+
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-left {
+    grid-column: 1;
+  }
+
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-sort {
+    grid-column: 2;
+  }
+
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-right {
+    grid-column: 3;
+  }
+
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-edit {
+    grid-column: 4;
+  }
+
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-remove {
+    grid-column: 5;
+  }
+}
+
+.is-bookmark-edit .bookmark-control .bookmark-control-button {
+  pointer-events: all;
+}
+
+.bookmark-url {
+  height: var(--bookmark-url-height);
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  display: none;
+  justify-content: var(--bookmark-display-justify);
+  align-items: center;
+  transition: top var(--layout-duration-04) var(--layout-timing-bounce), bottom var(--layout-duration-04) var(--layout-timing-bounce);
+}
+
+.is-bookmark-url-show .bookmark-url {
+  display: flex;
+}
+
+.is-bookmark-alignment-top-left .bookmark-url,
+.is-bookmark-alignment-center-left .bookmark-url,
+.is-bookmark-alignment-bottom-left .bookmark-url {
+  justify-content: flex-start;
+}
+
+.is-bookmark-alignment-top-center .bookmark-url,
+.is-bookmark-alignment-center-center .bookmark-url,
+.is-bookmark-alignment-bottom-center .bookmark-url {
+  justify-content: center;
+}
+
+.is-bookmark-alignment-top-right .bookmark-url,
+.is-bookmark-alignment-center-right .bookmark-url,
+.is-bookmark-alignment-bottom-right .bookmark-url {
+  justify-content: flex-end;
+}
+
+.is-bookmark-url-show:not(.is-bookmark-edit) .bookmark:focus .bookmark-front,
+.is-bookmark-url-show:not(.is-bookmark-edit) .bookmark:focus-within .bookmark-front,
+.is-bookmark-url-show:not(.is-bookmark-edit) .bookmark:hover .bookmark-front {
+  height: calc(100% - var(--bookmark-url-height));
+}
+
+.is-bookmark-orientation-top .bookmark-url {
+  top: calc(-1 * var(--bookmark-url-height));
+}
+
+.is-bookmark-orientation-bottom .bookmark-url {
+  bottom: calc(-1 * var(--bookmark-url-height));
+}
+
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show .bookmark:focus-within .bookmark-url,
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show .bookmark:focus .bookmark-url,
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show .bookmark:hover .bookmark-url,
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark:focus-within .bookmark-url,
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark:focus .bookmark-url,
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark:hover .bookmark-url {
+  transition-delay: calc(var(--bookmark-transition-delay) * 0.03s);
+}
+
+.is-bookmark-orientation-top.is-bookmark-url-show:not(.is-bookmark-edit) .bookmark:focus-within .bookmark-url,
+.is-bookmark-orientation-top.is-bookmark-url-show:not(.is-bookmark-edit) .bookmark:focus .bookmark-url,
+.is-bookmark-orientation-top.is-bookmark-url-show:not(.is-bookmark-edit) .bookmark:hover .bookmark-url {
+  top: 0;
+}
+
+.is-bookmark-orientation-bottom.is-bookmark-url-show:not(.is-bookmark-edit) .bookmark:focus-within .bookmark-url,
+.is-bookmark-orientation-bottom.is-bookmark-url-show:not(.is-bookmark-edit) .bookmark:focus .bookmark-url,
+.is-bookmark-orientation-bottom.is-bookmark-url-show:not(.is-bookmark-edit) .bookmark:hover .bookmark-url {
+  bottom: 0;
+}
+
+.bookmark-url-text {
+  margin: 0 1em;
+  font-size: 0.75em;
+  font-family: var(--theme-font-ui-name);
+  font-weight: var(--theme-font-ui-weight);
+  font-style: var(--theme-font-ui-style);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: hsl(var(--theme-accent-rgb-text));
+}
+
+.bookmark-sort-placeholder {
+  box-shadow: var(--edge);
+  border-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.bookmark-sort-placeholder.bookmark .bookmark-front,
+.bookmark-sort-placeholder.bookmark .bookmark-back {
+  visibility: hidden;
+}
+
+.is-theme-background-type-accent .bookmark-sort-placeholder {
+  box-shadow: var(--edge-on-accent);
+}

@@ -1,0 +1,146 @@
+:root {
+  --theme-preset-size: 14;
+}
+
+@media (min-width: 1100px) {
+  :root {
+    --theme-preset-size: 18;
+  }
+}
+
+:root {
+  --theme-preset-columns: 3;
+  --theme-preset-preview-shift: 8;
+  --theme-preset-preview-gap: 8;
+  --theme-preset-preview-circle: 28;
+}
+
+.theme-preset {
+  display: grid;
+  grid-template-columns: repeat(var(--theme-preset-columns), 1fr);
+  grid-auto-rows: calc((var(--theme-preset-size) / 4) * 1em);
+  grid-gap: calc((var(--form-space) / 8) * 1em);
+}
+
+.theme-preset-tile {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+
+.theme-preset-tile-front,
+.theme-preset-tile-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color var(--layout-transition-extra-fast), height var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast), border-radius var(--layout-transition-extra-fast);
+}
+
+.theme-preset-tile-front {
+  z-index: 2;
+}
+
+.theme-preset-tile-back {
+  background-color: hsl(var(--button-background));
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.theme-preset-button {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: initial;
+  line-height: 1.6;
+  display: block;
+  overflow: hidden;
+  transition: background-color var(--layout-transition-extra-fast), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast), height var(--layout-transition-extra-fast), box-shadow var(--layout-transition-extra-fast), border-radius var(--layout-transition-extra-fast);
+}
+
+.theme-preset-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.theme-preset-background-01,
+.theme-preset-background-02,
+.theme-preset-background-03,
+.theme-preset-background-04,
+.theme-preset-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: clip-path var(--layout-transition-extra-fast);
+}
+
+.theme-preset-background-01 {
+  background-color: rgb(var(--theme-preset-background-01));
+  z-index: 1;
+}
+
+.theme-preset-background-02 {
+  --theme-preset-preview-shift-02: calc((var(--theme-preset-preview-shift) / 4) + 2);
+  background-color: rgb(var(--theme-preset-background-02));
+  z-index: 2;
+  clip-path: polygon(100% calc(100% - (var(--theme-preset-preview-shift-02) * ((var(--theme-preset-preview-gap) / 4) * 1em))), 100% 100%, calc(100% - (var(--theme-preset-preview-shift-02) * ((var(--theme-preset-preview-gap) / 4) * 1em))) 100%);
+  transition-delay: var(--layout-duration-03);
+}
+
+.theme-preset-background-03 {
+  --theme-preset-preview-shift-03: calc((var(--theme-preset-preview-shift) / 4) + 1);
+  background-color: rgb(var(--theme-preset-background-03));
+  z-index: 3;
+  clip-path: polygon(100% calc(100% - (var(--theme-preset-preview-shift-03) * ((var(--theme-preset-preview-gap) / 4) * 1em))), 100% 100%, calc(100% - (var(--theme-preset-preview-shift-03) * ((var(--theme-preset-preview-gap) / 4) * 1em))) 100%);
+  transition-delay: var(--layout-duration-02);
+}
+
+.theme-preset-background-04 {
+  --theme-preset-preview-shift-04: calc(var(--theme-preset-preview-shift) / 4);
+  background-color: rgb(var(--theme-preset-background-04));
+  z-index: 4;
+  clip-path: polygon(100% calc(100% - (var(--theme-preset-preview-shift-04) * ((var(--theme-preset-preview-gap) / 4) * 1em))), 100% 100%, calc(100% - (var(--theme-preset-preview-shift-04) * ((var(--theme-preset-preview-gap) / 4) * 1em))) 100%);
+  transition-delay: var(--layout-duration-01);
+}
+
+.theme-preset-accent {
+  z-index: 5;
+  background-color: rgb(var(--theme-preset-accent));
+  clip-path: circle(calc(var(--theme-preset-preview-circle) * 1%) at 100% 100%);
+}
+
+.theme-preset-button:focus,
+.theme-preset-button:hover {
+  --theme-preset-preview-shift: 10;
+  --theme-preset-preview-circle: 34;
+}
+
+.theme-preset-name {
+  padding: calc(0.75em + ((var(--theme-radius) / 8) * 0.01em));
+  color: hsl(var(--theme-preset-text));
+  font-style: normal;
+  font-size: 0.75em;
+  text-align: left;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: initial;
+  transform: scale(1);
+  transition: color var(--layout-transition-extra-fast), transform var(--layout-transition-extra-fast), max-width var(--layout-transition-extra-fast), max-height var(--layout-transition-extra-fast), top var(--layout-transition-extra-fast), left var(--layout-transition-extra-fast);
+}

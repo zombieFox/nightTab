@@ -1,0 +1,26 @@
+:root {
+  --tab-space: calc((var(--form-space) / 4) * 1em);
+}
+
+.tab {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "nav"
+    "content";
+  gap: var(--tab-space);
+  width: 100%;
+}
+
+.tab-nav {
+  grid-area: nav;
+  display: flex;
+}
+
+.tab-nav>* {
+  flex: 1 1 50%;
+}
+
+.tab-content {
+  grid-area: content;
+}

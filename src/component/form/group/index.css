@@ -1,0 +1,507 @@
+:root {
+  --form-group-border: var(--theme-primary-050);
+}
+
+.form-group {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.form-group-horizontal {
+  flex-direction: row;
+}
+
+.form-group-vertical {
+  flex-direction: column;
+}
+
+.form-group-horizontal.form-group-reverse {
+  flex-direction: row-reverse;
+}
+
+.form-group-vertical.form-group-reverse {
+  flex-direction: column-reverse;
+}
+
+.form-group .form-wrap {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: calc(var(--form-space) * 0.1em);
+  display: flex;
+  align-items: center;
+}
+
+.form-group-block {
+  display: flex;
+  width: 100%;
+}
+
+.form-group-justify-left {
+  justify-content: flex-start;
+}
+
+.form-group-justify-right {
+  justify-content: flex-end;
+}
+
+.form-group-justify-space-between {
+  justify-content: space-between;
+}
+
+.form-group .form-group-text,
+.form-group .button,
+.form-group .form-input-button input[type="checkbox"]+label,
+.form-group .form-input-button input[type="radio"]+label,
+.form-group .form-input-button input[type="color"]+label,
+.form-group .form-input-button input[type="file"]+label,
+.form-group>select,
+.form-group>input[type="email"],
+.form-group>input[type="number"],
+.form-group>input[type="password"],
+.form-group>input[type="search"],
+.form-group>input[type="tel"],
+.form-group>input[type="text"],
+.form-group>input[type="color"],
+.form-group>input[type="range"] {
+  margin: 0;
+  border-radius: 0;
+  height: inherit;
+  min-height: 2.5em;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  z-index: 1;
+}
+
+.form-group .form-group-text {
+  flex-shrink: 0;
+}
+
+.form-group .form-group-text:focus,
+.form-group .button:focus,
+.form-group .form-input-button input[type="checkbox"]:focus+label,
+.form-group .form-input-button input[type="radio"]:focus+label,
+.form-group .form-input-button input[type="color"]:focus+label,
+.form-group .form-input-button input[type="file"]:focus+label,
+.form-group>select:focus,
+.form-group>input[type="email"]:focus,
+.form-group>input[type="number"]:focus,
+.form-group>input[type="password"]:focus,
+.form-group>input[type="search"]:focus,
+.form-group>input[type="tel"]:focus,
+.form-group>input[type="text"]:focus,
+.form-group>input[type="color"]:focus,
+.form-group>input[type="range"]:focus {
+  z-index: 2;
+}
+
+.form-group .form-group-text:hover,
+.form-group .form-group-text:active,
+.form-group .button:hover,
+.form-group .button:active,
+.form-group .form-input-button input[type="checkbox"]:hover+label,
+.form-group .form-input-button input[type="checkbox"]:active+label,
+.form-group .form-input-button input[type="radio"]:hover+label,
+.form-group .form-input-button input[type="radio"]:active+label,
+.form-group .form-input-button input[type="color"]:hover+label,
+.form-group .form-input-button input[type="color"]:active+label,
+.form-group .form-input-button input[type="file"]:hover+label,
+.form-group .form-input-button input[type="file"]:active+label,
+.form-group>select:hover,
+.form-group>select:active,
+.form-group>input[type="email"]:hover,
+.form-group>input[type="email"]:active,
+.form-group>input[type="number"]:hover,
+.form-group>input[type="number"]:active,
+.form-group>input[type="password"]:hover,
+.form-group>input[type="password"]:active,
+.form-group>input[type="search"]:hover,
+.form-group>input[type="search"]:active,
+.form-group>input[type="tel"]:hover,
+.form-group>input[type="tel"]:active,
+.form-group>input[type="text"]:hover,
+.form-group>input[type="text"]:active,
+.form-group>input[type="color"]:hover,
+.form-group>input[type="color"]:active,
+.form-group>input[type="range"]:hover,
+.form-group>input[type="range"]:active {
+  z-index: 3;
+}
+
+.form-group .form-input-button input[type="checkbox"]:checked+label,
+.form-group .form-input-button input[type="radio"]:checked+label,
+.form-group .form-input-button input[type="color"]:checked+label,
+.form-group .form-input-button input[type="file"]:checked+label {
+  z-index: 3;
+}
+
+.form-group .button-line:after,
+.form-group .form-input-button-line input[type="checkbox"]+label:after,
+.form-group .form-input-button-line input[type="radio"]+label:after,
+.form-group .form-input-button-line input[type="color"]+label:after,
+.form-group .form-input-button-line input[type="file"]+label:after {
+  border-radius: 0;
+}
+
+.form-group.form-group-horizontal .form-group-text:first-child,
+.form-group.form-group-horizontal .button:first-child,
+.form-group.form-group-horizontal .button-line:first-child:after,
+.form-group.form-group-horizontal .form-input-button:first-child input[type="checkbox"]+label,
+.form-group.form-group-horizontal .form-input-button:first-child input[type="radio"]+label,
+.form-group.form-group-horizontal .form-input-button:first-child input[type="color"]+label,
+.form-group.form-group-horizontal .form-input-button:first-child input[type="file"]+label,
+.form-group.form-group-horizontal .form-input-button-line:first-child input[type="checkbox"]+label:after,
+.form-group.form-group-horizontal .form-input-button-line:first-child input[type="radio"]+label:after,
+.form-group.form-group-horizontal .form-input-button-line:first-child input[type="color"]+label:after,
+.form-group.form-group-horizontal .form-input-button-line:first-child input[type="file"]+label:after,
+.form-group.form-group-horizontal>select:first-child,
+.form-group.form-group-horizontal>input[type="email"]:first-child,
+.form-group.form-group-horizontal>input[type="number"]:first-child,
+.form-group.form-group-horizontal>input[type="password"]:first-child,
+.form-group.form-group-horizontal>input[type="search"]:first-child,
+.form-group.form-group-horizontal>input[type="tel"]:first-child,
+.form-group.form-group-horizontal>input[type="text"]:first-child,
+.form-group.form-group-horizontal>input[type="color"]:first-child,
+.form-group.form-group-horizontal>input[type="range"]:first-child {
+  border-radius: calc(var(--theme-radius) * 0.01em) 0 0 calc(var(--theme-radius) * 0.01em);
+}
+
+.form-group.form-group-horizontal .form-group-text:last-child,
+.form-group.form-group-horizontal .button:last-child,
+.form-group.form-group-horizontal .button-line:last-child:after,
+.form-group.form-group-horizontal .form-input-button:last-child input[type="checkbox"]+label,
+.form-group.form-group-horizontal .form-input-button:last-child input[type="radio"]+label,
+.form-group.form-group-horizontal .form-input-button:last-child input[type="color"]+label,
+.form-group.form-group-horizontal .form-input-button:last-child input[type="file"]+label,
+.form-group.form-group-horizontal .form-input-button-line:last-child input[type="checkbox"]+label:after,
+.form-group.form-group-horizontal .form-input-button-line:last-child input[type="radio"]+label:after,
+.form-group.form-group-horizontal .form-input-button-line:last-child input[type="color"]+label:after,
+.form-group.form-group-horizontal .form-input-button-line:last-child input[type="file"]+label:after,
+.form-group.form-group-horizontal>select:last-child,
+.form-group.form-group-horizontal>input[type="email"]:last-child,
+.form-group.form-group-horizontal>input[type="number"]:last-child,
+.form-group.form-group-horizontal>input[type="password"]:last-child,
+.form-group.form-group-horizontal>input[type="search"]:last-child,
+.form-group.form-group-horizontal>input[type="tel"]:last-child,
+.form-group.form-group-horizontal>input[type="text"]:last-child,
+.form-group.form-group-horizontal>input[type="color"]:last-child,
+.form-group.form-group-horizontal>input[type="range"]:last-child {
+  border-radius: 0 calc(var(--theme-radius) * 0.01em) calc(var(--theme-radius) * 0.01em) 0;
+}
+
+.form-group.form-group-vertical .form-group-text:first-child,
+.form-group.form-group-vertical .button:first-child,
+.form-group.form-group-vertical .button-line:first-child:after,
+.form-group.form-group-vertical .form-input-button:first-child input[type="checkbox"]+label,
+.form-group.form-group-vertical .form-input-button:first-child input[type="radio"]+label,
+.form-group.form-group-vertical .form-input-button:first-child input[type="color"]+label,
+.form-group.form-group-vertical .form-input-button:first-child input[type="file"]+label,
+.form-group.form-group-vertical .form-input-button-line:first-child input[type="checkbox"]+label:after,
+.form-group.form-group-vertical .form-input-button-line:first-child input[type="radio"]+label:after,
+.form-group.form-group-vertical .form-input-button-line:first-child input[type="color"]+label:after,
+.form-group.form-group-vertical .form-input-button-line:first-child input[type="file"]+label:after,
+.form-group.form-group-vertical>select:first-child,
+.form-group.form-group-vertical>input[type="email"]:first-child,
+.form-group.form-group-vertical>input[type="number"]:first-child,
+.form-group.form-group-vertical>input[type="password"]:first-child,
+.form-group.form-group-vertical>input[type="search"]:first-child,
+.form-group.form-group-vertical>input[type="tel"]:first-child,
+.form-group.form-group-vertical>input[type="text"]:first-child,
+.form-group.form-group-vertical>input[type="color"]:first-child,
+.form-group.form-group-vertical>input[type="range"]:first-child {
+  border-radius: calc(var(--theme-radius) * 0.01em) calc(var(--theme-radius) * 0.01em) 0 0;
+}
+
+.form-group.form-group-vertical .form-group-text:last-child,
+.form-group.form-group-vertical .button:last-child,
+.form-group.form-group-vertical .button-line:last-child:after,
+.form-group.form-group-vertical .form-input-button:last-child input[type="checkbox"]+label,
+.form-group.form-group-vertical .form-input-button:last-child input[type="radio"]+label,
+.form-group.form-group-vertical .form-input-button:last-child input[type="color"]+label,
+.form-group.form-group-vertical .form-input-button:last-child input[type="file"]+label,
+.form-group.form-group-vertical .form-input-button-line:last-child input[type="checkbox"]+label:after,
+.form-group.form-group-vertical .form-input-button-line:last-child input[type="radio"]+label:after,
+.form-group.form-group-vertical .form-input-button-line:last-child input[type="color"]+label:after,
+.form-group.form-group-vertical .form-input-button-line:last-child input[type="file"]+label:after,
+.form-group.form-group-vertical>select:last-child,
+.form-group.form-group-vertical>input[type="email"]:last-child,
+.form-group.form-group-vertical>input[type="number"]:last-child,
+.form-group.form-group-vertical>input[type="password"]:last-child,
+.form-group.form-group-vertical>input[type="search"]:last-child,
+.form-group.form-group-vertical>input[type="tel"]:last-child,
+.form-group.form-group-vertical>input[type="text"]:last-child,
+.form-group.form-group-vertical>input[type="color"]:last-child,
+.form-group.form-group-vertical>input[type="range"]:last-child {
+  border-radius: 0 0 calc(var(--theme-radius) * 0.01em) calc(var(--theme-radius) * 0.01em);
+}
+
+.form-group.form-group-horizontal .form-group-text:only-child,
+.form-group.form-group-horizontal .button:only-child,
+.form-group.form-group-horizontal .button-line:only-child:after,
+.form-group.form-group-horizontal>select:only-child,
+.form-group.form-group-horizontal>input[type="email"]:only-child,
+.form-group.form-group-horizontal>input[type="number"]:only-child,
+.form-group.form-group-horizontal>input[type="password"]:only-child,
+.form-group.form-group-horizontal>input[type="search"]:only-child,
+.form-group.form-group-horizontal>input[type="tel"]:only-child,
+.form-group.form-group-horizontal>input[type="text"]:only-child,
+.form-group.form-group-horizontal>input[type="color"]:only-child,
+.form-group.form-group-horizontal>input[type="range"]:only-child,
+.form-group.form-group-vertical .form-group-text:only-child,
+.form-group.form-group-vertical .button:only-child,
+.form-group.form-group-vertical .button-line:only-child:after,
+.form-group.form-group-vertical>select:only-child,
+.form-group.form-group-vertical>input[type="email"]:only-child,
+.form-group.form-group-vertical>input[type="number"]:only-child,
+.form-group.form-group-vertical>input[type="password"]:only-child,
+.form-group.form-group-vertical>input[type="search"]:only-child,
+.form-group.form-group-vertical>input[type="tel"]:only-child,
+.form-group.form-group-vertical>input[type="text"]:only-child,
+.form-group.form-group-vertical>input[type="color"]:only-child,
+.form-group.form-group-vertical>input[type="range"]:only-child {
+  border-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.form-group.form-group-nested-button * .button,
+.form-group.form-group-nested-button * .button-line:after,
+.form-group.form-group-nested-button * input[type="checkbox"]+label,
+.form-group.form-group-nested-button * input[type="radio"]+label,
+.form-group.form-group-nested-button * input[type="color"]+label {
+  border-radius: 0;
+}
+
+.form-group.form-group-nested-button *:first-child .button,
+.form-group.form-group-nested-button *:first-child .button-line:after,
+.form-group.form-group-nested-button *:first-child input[type="checkbox"]+label,
+.form-group.form-group-nested-button *:first-child input[type="radio"]+label,
+.form-group.form-group-nested-button *:first-child input[type="color"]+label {
+  border-radius: calc(var(--theme-radius) * 0.01em) 0 0 calc(var(--theme-radius) * 0.01em);
+}
+
+.form-group.form-group-nested-button *:last-child .button,
+.form-group.form-group-nested-button *:last-child .button-line:after,
+.form-group.form-group-nested-button *:last-child input[type="checkbox"]+label,
+.form-group.form-group-nested-button *:last-child input[type="radio"]+label,
+.form-group.form-group-nested-button *:last-child input[type="color"]+label {
+  border-radius: 0 calc(var(--theme-radius) * 0.01em) calc(var(--theme-radius) * 0.01em) 0;
+}
+
+.form-group .form-group-radius-left.form-group-text,
+.form-group .form-group-radius-left.button,
+.form-group .form-group-radius-left.button-line:after,
+.form-group>select.form-group-radius-left,
+.form-group>input.form-group-radius-left[type="email"],
+.form-group>input.form-group-radius-left[type="number"],
+.form-group>input.form-group-radius-left[type="password"],
+.form-group>input.form-group-radius-left[type="search"],
+.form-group>input.form-group-radius-left[type="tel"],
+.form-group>input.form-group-radius-left[type="text"],
+.form-group>input.form-group-radius-left[type="color"],
+.form-group>input.form-group-radius-left[type="range"] {
+  border-top-left-radius: calc(var(--theme-radius) * 0.01em);
+  border-bottom-left-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.form-group .form-group-radius-right.form-group-text,
+.form-group .form-group-radius-right.button,
+.form-group .form-group-radius-right.butbutton-lineton:after,
+.form-group>select.form-group-radius-right,
+.form-group>input.form-group-radius-right[type="email"],
+.form-group>input.form-group-radius-right[type="number"],
+.form-group>input.form-group-radius-right[type="password"],
+.form-group>input.form-group-radius-right[type="search"],
+.form-group>input.form-group-radius-right[type="tel"],
+.form-group>input.form-group-radius-right[type="text"],
+.form-group>input.form-group-radius-right[type="color"],
+.form-group>input.form-group-radius-right[type="range"] {
+  border-top-right-radius: calc(var(--theme-radius) * 0.01em);
+  border-bottom-right-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.form-group.form-group-reverse .form-group-text:first-child,
+.form-group.form-group-reverse .button:first-child,
+.form-group.form-group-reverse .button-line:first-child:after,
+.form-group.form-group-reverse .form-input-button:first-child input[type="checkbox"]+label,
+.form-group.form-group-reverse .form-input-button:first-child input[type="radio"]+label,
+.form-group.form-group-reverse .form-input-button:first-child input[type="color"]+label,
+.form-group.form-group-reverse .form-input-button:first-child input[type="file"]+label,
+.form-group.form-group-reverse .form-input-button-line:first-child input[type="checkbox"]+label:after,
+.form-group.form-group-reverse .form-input-button-line:first-child input[type="radio"]+label:after,
+.form-group.form-group-reverse .form-input-button-line:first-child input[type="color"]+label:after,
+.form-group.form-group-reverse .form-input-button-line:first-child input[type="file"]+label:after,
+.form-group.form-group-reverse>select:first-child,
+.form-group.form-group-reverse>input[type="email"]:first-child,
+.form-group.form-group-reverse>input[type="number"]:first-child,
+.form-group.form-group-reverse>input[type="password"]:first-child,
+.form-group.form-group-reverse>input[type="search"]:first-child,
+.form-group.form-group-reverse>input[type="tel"]:first-child,
+.form-group.form-group-reverse>input[type="text"]:first-child,
+.form-group.form-group-reverse>input[type="color"]:first-child,
+.form-group.form-group-reverse>input[type="range"]:first-child {
+  border-radius: 0 calc(var(--theme-radius) * 0.01em) calc(var(--theme-radius) * 0.01em) 0;
+}
+
+.form-group.form-group-reverse .form-group-text:last-child,
+.form-group.form-group-reverse .button:last-child,
+.form-group.form-group-reverse .button-line:last-child:after,
+.form-group.form-group-reverse .form-input-button:last-child input[type="checkbox"]+label,
+.form-group.form-group-reverse .form-input-button:last-child input[type="radio"]+label,
+.form-group.form-group-reverse .form-input-button:last-child input[type="color"]+label,
+.form-group.form-group-reverse .form-input-button:last-child input[type="file"]+label,
+.form-group.form-group-reverse .form-input-button-line:last-child input[type="checkbox"]+label:after,
+.form-group.form-group-reverse .form-input-button-line:last-child input[type="radio"]+label:after,
+.form-group.form-group-reverse .form-input-button-line:last-child input[type="color"]+label:after,
+.form-group.form-group-reverse .form-input-button-line:last-child input[type="file"]+label:after,
+.form-group.form-group-reverse>select:last-child,
+.form-group.form-group-reverse>input[type="email"]:last-child,
+.form-group.form-group-reverse>input[type="number"]:last-child,
+.form-group.form-group-reverse>input[type="password"]:last-child,
+.form-group.form-group-reverse>input[type="search"]:last-child,
+.form-group.form-group-reverse>input[type="tel"]:last-child,
+.form-group.form-group-reverse>input[type="text"]:last-child,
+.form-group.form-group-reverse>input[type="color"]:last-child,
+.form-group.form-group-reverse>input[type="range"]:last-child {
+  border-radius: calc(var(--theme-radius) * 0.01em) 0 0 calc(var(--theme-radius) * 0.01em);
+}
+
+.form-group.form-group-reverse .form-group-text:only-child,
+.form-group.form-group-reverse .button:only-child,
+.form-group.form-group-reverse .button-line:only-child:after,
+.form-group.form-group-reverse>select:only-child,
+.form-group.form-group-reverse>input[type="email"]:only-child,
+.form-group.form-group-reverse>input[type="number"]:only-child,
+.form-group.form-group-reverse>input[type="password"]:only-child,
+.form-group.form-group-reverse>input[type="search"]:only-child,
+.form-group.form-group-reverse>input[type="tel"]:only-child,
+.form-group.form-group-reverse>input[type="text"]:only-child,
+.form-group.form-group-reverse>input[type="color"]:only-child,
+.form-group.form-group-reverse>input[type="range"]:only-child {
+  border-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.form-group.form-group-reverse.form-group-nested-button * .button,
+.form-group.form-group-reverse.form-group-nested-button * .button-line:after,
+.form-group.form-group-reverse.form-group-nested-button * input[type="checkbox"]+label,
+.form-group.form-group-reverse.form-group-nested-button * input[type="radio"]+label,
+.form-group.form-group-reverse.form-group-nested-button * input[type="color"]+label {
+  border-radius: 0;
+}
+
+.form-group.form-group-reverse.form-group-nested-button *:first-child .button,
+.form-group.form-group-reverse.form-group-nested-button *:first-child .button-line:after,
+.form-group.form-group-reverse.form-group-nested-button *:first-child input[type="checkbox"]+label,
+.form-group.form-group-reverse.form-group-nested-button *:first-child input[type="radio"]+label,
+.form-group.form-group-reverse.form-group-nested-button *:first-child input[type="color"]+label {
+  border-radius: 0 calc(var(--theme-radius) * 0.01em) calc(var(--theme-radius) * 0.01em) 0;
+}
+
+.form-group.form-group-reverse.form-group-nested-button *:last-child .button,
+.form-group.form-group-reverse.form-group-nested-button *:last-child .button-line:after,
+.form-group.form-group-reverse.form-group-nested-button *:last-child input[type="checkbox"]+label,
+.form-group.form-group-reverse.form-group-nested-button *:last-child input[type="radio"]+label,
+.form-group.form-group-reverse.form-group-nested-button *:last-child input[type="color"]+label {
+  border-radius: calc(var(--theme-radius) * 0.01em) 0 0 calc(var(--theme-radius) * 0.01em);
+}
+
+.form-group-border {
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  border-width: var(--layout-line-width);
+  border-color: hsl(var(--form-group-border));
+  border-style: solid;
+  overflow: hidden;
+}
+
+.form-group-border-theme-color {
+  border-color: hsl(var(--theme-primary-050));
+}
+
+.form-group.form-group-border .form-group-text,
+.form-group.form-group-border .button,
+.form-group.form-group-border .button-line:after,
+.form-group.form-group-border>select,
+.form-group.form-group-border>input[type="email"],
+.form-group.form-group-border>input[type="number"],
+.form-group.form-group-border>input[type="password"],
+.form-group.form-group-border>input[type="search"],
+.form-group.form-group-border>input[type="tel"],
+.form-group.form-group-border>input[type="text"],
+.form-group.form-group-border>input[type="color"],
+.form-group.form-group-border>input[type="range"],
+.form-group.form-group-border.form-group-nested-button * .button,
+.form-group.form-group-border.form-group-nested-button * .button-line:after,
+.form-group.form-group-border.form-group-nested-button * input[type="checkbox"]+label,
+.form-group.form-group-border.form-group-nested-button * input[type="radio"]+label,
+.form-group.form-group-border.form-group-nested-button * input[type="file"]+label,
+.form-group.form-group-border.form-group-nested-button * input[type="color"]+label {
+  border-radius: 0;
+}
+
+.form-group-item-small,
+.form-group-item-medium,
+.form-group-item-large,
+.form-group>.button.form-group-item-small,
+.form-group>.button.form-group-item-medium,
+.form-group>.button.form-group-item-large,
+.form-group>select.form-group-item-small,
+.form-group>select.form-group-item-medium,
+.form-group>select.form-group-item-large,
+.form-group>input[type].form-group-item-small,
+.form-group>input[type].form-group-item-medium,
+.form-group>input[type].form-group-item-large {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.form-group-item-small,
+.form-group>.button.form-group-item-small,
+.form-group>select.form-group-item-small,
+.form-group>input[type].form-group-item-small {
+  width: 4em;
+  flex-shrink: 0;
+}
+
+.form-group-item-medium,
+.form-group>.button.form-group-item-medium,
+.form-group>select.form-group-item-medium,
+.form-group>input[type].form-group-item-medium {
+  width: 6em;
+  flex-shrink: 0;
+}
+
+.form-group-item-large,
+.form-group>.button.form-group-item-large,
+.form-group>select.form-group-item-large,
+.form-group>input[type].form-group-item-large {
+  width: 8em;
+  flex-shrink: 0;
+}
+
+.form-group-item-shrink,
+.form-group>.button.form-group-item-shrink,
+.form-group>select.form-group-item-shrink,
+.form-group>input[type].form-group-item-shrink {
+  flex-grow: 0;
+}
+
+.form-group-item-grow,
+.form-group>.button.form-group-item-grow,
+.form-group>select.form-group-item-grow,
+.form-group>input[type].form-group-item-grow {
+  flex-grow: 1;
+}
+
+.form-group-item-half,
+.form-group>.button.form-group-item-half,
+.form-group>select.form-group-item-half,
+.form-group>input[type].form-group-item-half {
+  flex-basis: 50%;
+}
+
+.form-group-item-equal,
+.form-group>.button.form-group-item-equal,
+.form-group>select.form-group-item-equal,
+.form-group>input[type].form-group-item-equal {
+  flex-basis: 0;
+}

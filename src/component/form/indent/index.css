@@ -1,0 +1,8 @@
+:root {
+  --indent-size: 5;
+  --indent-space: calc((var(--indent-size) / 2) * 1em);
+}
+
+.form-indent {
+  margin-left: var(--indent-space);
+}

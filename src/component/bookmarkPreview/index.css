@@ -1,0 +1,194 @@
+.bookmark-preview-area {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  justify-items: center;
+  gap: 1em;
+  grid-template-rows: auto auto;
+}
+
+.bookmark-preview-grid {
+  display: grid;
+  grid-auto-rows: var(--group-cell-height);
+  grid-template-columns: repeat(auto-fill, minmax(var(--group-cell-width), 1fr));
+  grid-auto-flow: dense;
+}
+
+.bookmark-preview-grid-wide {
+  grid-template-columns: repeat(2, var(--group-cell-width));
+}
+
+.bookmark-preview-grid-tall {
+  grid-template-rows: repeat(2, var(--group-cell-height));
+}
+
+.bookmark-preview-grid-tall,
+.bookmark-preview-grid-wide {
+  font-size: 0.5em;
+}
+
+.bookmark.bookmark-preview.bookmark-wide {
+  grid-column: span 2;
+}
+
+.bookmark.bookmark-preview.bookmark-tall {
+  grid-row: span 2;
+}
+
+.is-bookmark-edit .bookmark.bookmark-preview .bookmark-front {
+  height: 100%;
+}
+
+.is-bookmark-line-show .bookmark.bookmark-preview .bookmark-front {
+  height: calc(100% - var(--layout-line-width));
+}
+
+.is-bookmark-url-show .bookmark.bookmark-preview:focus .bookmark-front,
+.is-bookmark-url-show .bookmark.bookmark-preview:focus-within .bookmark-front,
+.is-bookmark-url-show .bookmark.bookmark-preview:hover .bookmark-front {
+  height: calc(100% - var(--bookmark-url-height));
+}
+
+.bookmark.bookmark-preview .bookmark-control {
+  display: none;
+}
+
+.is-bookmark-edit .bookmark.bookmark-preview .bookmark-display {
+  font-size: 1em;
+}
+
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom.is-bookmark-edit .bookmark.bookmark-preview .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom.is-bookmark-edit .bookmark.bookmark-preview:hover .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom.is-bookmark-edit .bookmark.bookmark-preview:focus .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top.is-bookmark-edit .bookmark.bookmark-preview .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top.is-bookmark-edit .bookmark.bookmark-preview:hover .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top.is-bookmark-edit .bookmark.bookmark-preview:focus .bookmark-front {
+  box-shadow: none;
+}
+
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom .bookmark.bookmark-preview:focus .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom .bookmark.bookmark-preview:focus-within .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom .bookmark.bookmark-preview:hover .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom.is-bookmark-edit .bookmark.bookmark-preview:focus .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom.is-bookmark-edit .bookmark.bookmark-preview:focus-within .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-bottom.is-bookmark-edit .bookmark.bookmark-preview:hover .bookmark-front {
+  box-shadow: var(--theme-shadow-bottom-large);
+}
+
+.is-bookmark-shadow-show.is-bookmark-orientation-top .bookmark.bookmark-preview:focus .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top .bookmark.bookmark-preview:focus-within .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top .bookmark.bookmark-preview:hover .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top.is-bookmark-edit .bookmark.bookmark-preview:focus .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top.is-bookmark-edit .bookmark.bookmark-preview:focus-within .bookmark-front,
+.is-bookmark-shadow-show.is-bookmark-orientation-top.is-bookmark-edit .bookmark.bookmark-preview:hover .bookmark-front {
+  box-shadow: var(--theme-shadow-top-large);
+}
+
+.is-bookmark-orientation-top.is-bookmark-url-show .bookmark.bookmark-preview:focus-within .bookmark-url,
+.is-bookmark-orientation-top.is-bookmark-url-show .bookmark.bookmark-preview:focus .bookmark-url,
+.is-bookmark-orientation-top.is-bookmark-url-show .bookmark.bookmark-preview:hover .bookmark-url {
+  top: 0;
+}
+
+.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark.bookmark-preview:focus-within .bookmark-url,
+.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark.bookmark-preview:focus .bookmark-url,
+.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark.bookmark-preview:hover .bookmark-url {
+  bottom: 0;
+}
+
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark.bookmark-preview .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark.bookmark-preview:focus .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark.bookmark-preview:focus-within .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark.bookmark-preview:hover .bookmark-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(0% + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + calc(var(--bookmark-clip-padding) * 1em)));
+}
+
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark.bookmark-preview .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark.bookmark-preview:focus .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark.bookmark-preview:focus-within .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark.bookmark-preview:hover .bookmark-back {
+  clip-path: polygon(0 calc(100% - calc(var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+}
+
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-line-show .bookmark.bookmark-preview .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-line-show .bookmark.bookmark-preview:focus .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-line-show .bookmark.bookmark-preview:focus-within .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-line-show .bookmark.bookmark-preview:hover .bookmark-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)));
+}
+
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-line-show .bookmark.bookmark-preview .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-line-show .bookmark.bookmark-preview:focus .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-line-show .bookmark.bookmark-preview:focus-within .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-line-show .bookmark.bookmark-preview:hover .bookmark-back {
+  clip-path: polygon(0 calc(100% - calc(var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+}
+
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show .bookmark.bookmark-preview .bookmark-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(0% + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + calc(var(--bookmark-clip-padding) * 1em)));
+}
+
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show .bookmark.bookmark-preview:focus .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show .bookmark.bookmark-preview:focus-within .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show .bookmark.bookmark-preview:hover .bookmark-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)));
+}
+
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark.bookmark-preview .bookmark-back {
+  clip-path: polygon(0 calc(100% - calc(var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+}
+
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark.bookmark-preview:focus .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark.bookmark-preview:focus-within .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark.bookmark-preview:hover .bookmark-back {
+  clip-path: polygon(0 calc(100% - calc(var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+}
+
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview .bookmark-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)));
+}
+
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:focus .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:focus-within .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:hover .bookmark-back {
+  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)));
+}
+
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview .bookmark-back {
+  clip-path: polygon(0 calc(100% - calc(var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+}
+
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:focus .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:focus-within .bookmark-back,
+.is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:hover .bookmark-back {
+  clip-path: polygon(0 calc(100% - calc(var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+}
+
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark.bookmark-preview .bookmark-front,
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark.bookmark-preview:hover .bookmark-front,
+.is-bookmark-edit.is-bookmark-orientation-top .bookmark.bookmark-preview:focus .bookmark-front {
+  border-top-left-radius: calc(var(--theme-radius) * 0.01em);
+  border-top-right-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark.bookmark-preview .bookmark-front,
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark.bookmark-preview:hover .bookmark-front,
+.is-bookmark-edit.is-bookmark-orientation-bottom .bookmark.bookmark-preview:focus .bookmark-front {
+  border-bottom-left-radius: calc(var(--theme-radius) * 0.01em);
+  border-bottom-right-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.is-bookmark-url-show.is-bookmark-orientation-top .bookmark.bookmark-preview:focus .bookmark-front,
+.is-bookmark-url-show.is-bookmark-orientation-top .bookmark.bookmark-preview:focus-within .bookmark-front,
+.is-bookmark-url-show.is-bookmark-orientation-top .bookmark.bookmark-preview:hover .bookmark-front {
+  border-top-left-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+  border-top-right-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+}
+
+.is-bookmark-url-show.is-bookmark-orientation-bottom .bookmark.bookmark-preview:focus .bookmark-front,
+.is-bookmark-url-show.is-bookmark-orientation-bottom .bookmark.bookmark-preview:focus-within .bookmark-front,
+.is-bookmark-url-show.is-bookmark-orientation-bottom .bookmark.bookmark-preview:hover .bookmark-front {
+  border-bottom-left-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+  border-bottom-right-radius: calc((var(--theme-radius) * 0.25) * 0.01em);
+}
