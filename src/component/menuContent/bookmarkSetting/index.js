@@ -350,6 +350,8 @@ bookmarkSetting.sort = (parent) => {
         children: [
           form.inline({
             gap: 'small',
+            wrap: true,
+            equalGap: true,
             children: [
               bookmarkSetting.control.sort.letter.wrap(),
               bookmarkSetting.control.sort.icon.wrap(),

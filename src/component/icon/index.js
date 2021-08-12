@@ -111,15 +111,15 @@ icon.all = {
   },
   addBookmark: {
     name: 'add-bookmark',
-    path: 'M17,11v6.97l-5-2.14l-5,2.14V5h6V3H7C5.9,3,5,3.9,5,5v16l7-3l7,3V11H17z M21,7h-2v2h-2V7h-2V5h2V3h2v2h2V7z'
+    path: 'M17 11v6.97l-5-2.14l-5 2.14V5h6V3H7C5.9 3 5 3.9 5 5v16l7-3l7 3V11H17z M21 7h-2v2h-2V7h-2V5h2V3h2v2h2V7z'
   },
-  folder: {
-    name: 'folder',
-    path: 'M9.17 6l2 2H20v10H4V6h5.17M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z'
+  group: {
+    name: 'group',
+    path: 'M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19Z'
   },
-  addFolder: {
-    name: 'add-folder',
-    path: 'M20 6h-8l-2-2H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm0 12H4V6h5.17l2 2H20v10zm-8-4h2v2h2v-2h2v-2h-2v-2h-2v2h-2z'
+  addGroup: {
+    name: 'add-group',
+    path: 'M19 19H5V5H14V3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V10H19V19Z M19 5V3H17V5H15V7H17V9H19V7H21V5H19Z'
   }
 };
 

@@ -1,17 +1,25 @@
 .bookmark-empty {
   background-color: hsla(var(--theme-primary-040), 0.2);
-  padding: 2em 3em;
   border-radius: calc(var(--theme-radius) * 0.01em);
+  padding: 2em 1em;
   height: inherit;
   text-align: center;
   display: flex;
   flex-direction: column;
+  gap: 1em;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1em;
 }
 
-.bookmark-empty-string:not(:last-child) {
+.bookmark-empty-headline:not(:last-child) {
   margin-bottom: 0;
+}
+
+.bookmark-empty-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
 }

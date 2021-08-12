@@ -1,12 +1,12 @@
 .group-empty {
   background-color: hsla(var(--theme-primary-040), 0.2);
-  padding: 0.5em 1em;
   border-radius: calc(var(--theme-radius) * 0.01em);
+  padding: 0.5em 1em;
   height: inherit;
   text-align: center;
-  display: flex;
   grid-column-start: 1;
   grid-column-end: -1;
+  display: flex;
   gap: 1em;
   justify-content: center;
   align-items: center;
@@ -23,4 +23,12 @@
 
 .group-empty-headline:not(:last-child) {
   margin-bottom: 0;
+}
+
+.group-empty-control {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
 }

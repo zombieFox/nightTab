@@ -309,6 +309,8 @@ themeSetting.saved = (parent) => {
           children: [
             form.inline({
               gap: 'small',
+              wrap: true,
+              equalGap: true,
               children: [
                 themeSetting.control.saved.saveButton.wrap(),
                 themeSetting.control.saved.edit.wrap()
@@ -328,6 +330,8 @@ themeSetting.saved = (parent) => {
           children: [
             form.inline({
               gap: 'small',
+              wrap: true,
+              equalGap: true,
               children: [
                 themeSetting.control.saved.saveButton.wrap()
               ]

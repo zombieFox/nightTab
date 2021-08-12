@@ -14,16 +14,16 @@ export const GroupEmpty = function({
   this.element = {
     empty: node('div|class:group-empty'),
     control: node('div|class:group-empty-control'),
-    headline: node('p:Empty Group|class:group-empty-headline small muted')
+    headline: node('p:No Bookmarks in this Group|class:group-empty-headline small muted')
   };
 
   this.control = {};
 
   this.control.button = {
-    remove: new Button({
-      text: 'Add a Bookmark',
-      size: 'small',
+    bookmark: new Button({
+      text: 'Add a new Bookmark',
       iconName: 'addBookmark',
+      size: 'small',
       func: () => {
         bookmark.add.render({
           groupIndex: groupIndex
@@ -34,9 +34,9 @@ export const GroupEmpty = function({
 
   this.assemble = () => {
 
-    this.element.control.appendChild(this.control.button.remove.button);
-
     this.element.empty.appendChild(this.element.headline);
+
+    this.element.control.appendChild(this.control.button.bookmark.button);
 
     this.element.empty.appendChild(this.element.control);
 

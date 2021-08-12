@@ -60,7 +60,7 @@ export const ToolbarControl = function() {
       srOnly: true,
       iconName: 'add',
       menuItem: [
-        { text: 'New Group', iconName: 'addFolder', action: () => { group.add.render(); } },
+        { text: 'New Group', iconName: 'addGroup', action: () => { group.add.render(); } },
         { text: 'New Bookmark', iconName: 'addBookmark', action: () => { bookmark.add.render(); } }
       ]
     }),

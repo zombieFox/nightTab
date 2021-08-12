@@ -8,8 +8,19 @@
 .form-inline {
   position: relative;
   display: inline-flex;
-  justify-content: flex-start;
   align-items: center;
+}
+
+.form-inline-justify-left {
+  justify-content: flex-start;
+}
+
+.form-inline-justify-center {
+  justify-content: center;
+}
+
+.form-inline-justify-right {
+  justify-content: flex-end;
 }
 
 .form-inline-horizontal {

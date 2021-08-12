@@ -256,6 +256,9 @@ groupSetting.name = (parent) => {
     node('div', [
       groupSetting.control.name.size.wrap(),
       form.inline({
+        gap: 'small',
+        wrap: true,
+        equalGap: true,
         children: [
           groupSetting.control.name.hide.wrap(),
           groupSetting.control.name.show.wrap()
@@ -399,6 +402,9 @@ groupSetting.open = (parent) => {
     node('div', [
       groupSetting.control.open.size.wrap(),
       form.inline({
+        gap: 'small',
+        wrap: true,
+        equalGap: true,
         children: [
           groupSetting.control.open.hide.wrap(),
           groupSetting.control.open.show.wrap()
