@@ -58,7 +58,7 @@ export const ImportForm = function({
         path: 'bookmark',
         id: 'bookmark',
         labelText: 'Bookmarks',
-        description: `This includes ${this.count.bookmark()} ${this.count.bookmark() > 1 ? `Bookmarks` : `Bookmark`} in ${dataToImport.bookmark.length} ${dataToImport.bookmark.length > 1 ? `Groups` : `Group`}.`
+        description: [`This includes ${this.count.bookmark()} ${this.count.bookmark() > 1 ? `Bookmarks` : `Bookmark`} in ${dataToImport.bookmark.length} ${dataToImport.bookmark.length > 1 ? `Groups` : `Group`}.`, 'Bookmarks will keep any custom Colours, Accents and Borders when imported.']
       }),
       theme: new Control_checkbox({
         object: state,
