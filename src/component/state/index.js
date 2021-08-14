@@ -138,7 +138,7 @@ state.minMax = {
     padding: { min: 0, max: 300 },
     gutter: { min: 0, max: 300 }
   },
-  toolbar: { size: { min: 50, max: 300 } },
+  toolbar: { size: { min: 50, max: 500 } },
   theme: {
     color: {
       range: { primary: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 } } },
