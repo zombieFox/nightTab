@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode=development",
-    "build": "webpack --mode=production"
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -13,10 +13,10 @@
   "devDependencies": {
     "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^5.2.5",
-    "css-minimizer-webpack-plugin": "^3.0.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
-    "mini-css-extract-plugin": "^1.6.0",
+    "mini-css-extract-plugin": "^2.2.0",
     "moment": "^2.29.1",
     "sortablejs": "^1.13.0",
     "style-loader": "^2.0.0",
@@ -24,6 +24,7 @@
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0",
     "zip-webpack-plugin": "^4.0.1"
   }
 }
