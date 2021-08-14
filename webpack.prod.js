@@ -4,6 +4,7 @@ const path = require('path');
 const ZipPlugin = require('zip-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const version = require('./src/manifest.json').version;
 const name = require('./src/manifest.json').name;
@@ -15,6 +16,10 @@ module.exports = merge(common, {
     minimizer: [
       new CssMinimizerPlugin({
         minify: CssMinimizerPlugin.cleanCssMinify
+      }),
+      new TerserPlugin({
+        parallel: true,
+        extractComments: false
       })
     ]
   },
