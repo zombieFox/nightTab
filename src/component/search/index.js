@@ -270,8 +270,6 @@ export const Search = function() {
 
   };
 
-  this.state();
-
   this.assemble();
 
   this.placeholder();

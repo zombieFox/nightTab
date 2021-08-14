@@ -259,13 +259,29 @@ state.get = {
 };
 
 state.set = {
-  restore: (dataToRestore) => {
-    state.current = dataToRestore.state;
-    console.log('state restored');
+  restore: {
+    setup: (dataToRestore) => {
+
+      state.current.layout = dataToRestore.state.layout;
+      state.current.header = dataToRestore.state.header;
+      state.current.bookmark = dataToRestore.state.bookmark;
+      state.current.group = dataToRestore.state.group;
+      state.current.toolbar = dataToRestore.state.toolbar;
+      console.log('setup restored');
+
+    },
+    theme: (dataToRestore) => {
+
+      state.current.theme = dataToRestore.state.theme;
+      console.log('theme restored');
+
+    }
   },
   default: () => {
+
     state.current = state.get.default();
     console.log('state set to default');
+
   }
 };
 

@@ -1,10 +1,12 @@
 import { state } from '../state';
 import { bookmark } from '../bookmark';
+import { menu } from '../menu';
 import { version } from '../version';
 import { update } from '../update';
 import { appName } from '../appName';
 
 import { Modal } from '../modal';
+import { ImportForm } from '../importForm';
 
 import { dateTime } from '../../utility/dateTime';
 import { node } from '../../utility/node';
@@ -21,15 +23,20 @@ data.get = (key) => {
   return localStorage.getItem(key);
 };
 
-data.import = (input, feedback) => {
-  const fileList = input.files;
+data.import = {
+  state: { setup: true, bookmark: true, theme: true },
+  file: (input, feedback) => {
 
-  if (fileList.length > 0) {
-    data.validateJsonFile(fileList, input, feedback);
-  };
+    const fileList = input.files;
+
+    if (fileList.length > 0) {
+      data.validateFile(fileList, input, feedback);
+    };
+
+  }
 };
 
-data.validateJsonFile = (fileList, input, feedback) => {
+data.validateFile = (fileList, input, feedback) => {
 
   // make new file reader
   var reader = new FileReader();
@@ -43,13 +50,48 @@ data.validateJsonFile = (fileList, input, feedback) => {
       // is this JSON from this app
       if (JSON.parse(event.target.result)[appName] || JSON.parse(event.target.result)[appName.toLowerCase()]) {
 
+        const validFileSuccessAction = () => {
+
+          menu.close();
+
+          let dataToImport = JSON.parse(event.target.result);
+
+          if (dataToImport.version != version.number) {
+            dataToImport = data.update(dataToImport);
+          };
+
+          console.log(dataToImport);
+
+          const importForm = new ImportForm({
+            dataToImport: dataToImport,
+            state: data.import.state
+          });
+
+          const importModal = new Modal({
+            heading: 'Data to import',
+            content: importForm.form(),
+            successText: 'Import',
+            width: 'small',
+            successAction: () => {
+
+              data.backup(event.target.result);
+
+              data.restore(dataToImport);
+
+              data.save();
+
+              data.reload.render();
+
+            }
+          });
+
+          importModal.open();
+
+        };
+
         data.feedback.clear.render(feedback);
 
-        data.feedback.success.render(feedback, fileList[0].name, () => {
-          data.restore(JSON.parse(event.target.result));
-          data.save();
-          data.reload.render();
-        });
+        data.feedback.success.render(feedback, fileList[0].name, validFileSuccessAction);
 
         input.value = '';
 
@@ -116,31 +158,59 @@ data.remove = (key) => {
 };
 
 data.backup = (dataToBackup) => {
+
   if (dataToBackup) {
-    console.log('data version ' + dataToBackup.version + ' backed up');
+
     data.set(appName + 'Backup', JSON.stringify(dataToBackup));
+
+    console.log('data version ' + dataToBackup.version + ' backed up');
+
   };
+
+};
+
+data.update = (dataToUpdate) => {
+
+  if (dataToUpdate.version != version.number) {
+
+    dataToUpdate = update.run(dataToUpdate);
+
+  } else {
+
+    console.log('data version:', version.number, 'no need to run update');
+
+  };
+
+  return dataToUpdate;
+
 };
 
 data.restore = (dataToRestore) => {
+
   if (dataToRestore) {
-    if (dataToRestore.version != version.number) {
-      // backup save data before running update
-      data.backup(dataToRestore);
-      // run update on save data
-      dataToRestore = update.run(dataToRestore);
-      // save data
-      data.set(appName, JSON.stringify(dataToRestore));
-    } else {
-      console.log('data version:', version.number, 'no need to run update');
+
+    console.log('data found to load');
+
+    if (data.import.state.setup) {
+      state.set.restore.setup(dataToRestore);
     };
-    // restore state and bookmarks from save data
-    state.set.restore(dataToRestore);
-    bookmark.restore(dataToRestore);
+
+    if (data.import.state.theme) {
+      state.set.restore.theme(dataToRestore);
+    };
+
+    if (data.import.state.bookmark) {
+      bookmark.restore(dataToRestore);
+    };
+
   } else {
+
     console.log('no data found to load');
+
     state.set.default();
+
   };
+
 };
 
 data.save = () => {
@@ -215,11 +285,15 @@ data.feedback.clear = {
 
 data.feedback.success = {
   render: (feedback, filename, action) => {
+
     feedback.appendChild(node('p:Success! Restoring ' + appName + ' Bookmarks and Settings.|class:muted small'));
+
     feedback.appendChild(node('p:' + filename));
+
     if (action) {
       data.feedback.animation.set.render(feedback, 'is-pop', action);
     };
+
   }
 };
 

@@ -60,7 +60,7 @@ dataSetting.import = (parent) => {
     labelText: 'Import data',
     inputButtonStyle: ['line'],
     action: () => {
-      data.import(dataSetting.control.import.importElement.input, importFeedback)
+      data.import.file(dataSetting.control.import.importElement.input, importFeedback)
     }
   });
 

@@ -1,8 +1,8 @@
 :root {
-  --utility-muted: var(--theme-primary-140);
-  --utility-muted-hover: var(--theme-primary-140);
-  --utility-muted-focus-active: var(--theme-primary-140);
-  --utility-muted-checked: var(--theme-primary-140);
+  --utility-muted: var(--theme-primary-110);
+  --utility-muted-hover: var(--theme-primary-110);
+  --utility-muted-focus-active: var(--theme-primary-110);
+  --utility-muted-checked: var(--theme-primary-110);
   --utility-muted-disabled: var(--theme-primary-030);
 }
 
