@@ -25,6 +25,13 @@ data.get = (key) => {
 
 data.import = {
   state: { setup: true, bookmark: true, theme: true },
+  reset: () => {
+
+    for (let key in data.import.state) {
+      data.import.state[key] = true;
+    };
+
+  },
   file: (input, feedback) => {
 
     const fileList = input.files;
@@ -57,10 +64,10 @@ data.validateFile = (fileList, input, feedback) => {
           let dataToImport = JSON.parse(event.target.result);
 
           if (dataToImport.version != version.number) {
-            dataToImport = data.update(dataToImport);
-          };
 
-          console.log(dataToImport);
+            dataToImport = data.update(JSON.parse(event.target.result));
+
+          };
 
           const importForm = new ImportForm({
             dataToImport: dataToImport,
@@ -74,15 +81,31 @@ data.validateFile = (fileList, input, feedback) => {
             width: 'small',
             successAction: () => {
 
-              data.backup(event.target.result);
+              if (data.import.state.setup || data.import.state.theme || data.import.state.bookmark) {
 
-              data.restore(dataToImport);
+                let dataToRestore = JSON.parse(event.target.result);
 
-              data.save();
+                if (dataToRestore.version != version.number) {
 
-              data.reload.render();
+                  data.backup(dataToRestore);
 
-            }
+                  dataToRestore = data.update(dataToRestore);
+
+                };
+
+                data.restore(dataToRestore);
+
+                data.save();
+
+                data.reload.render();
+
+              };
+
+              data.import.reset();
+
+            },
+            cancelAction: () => { data.import.reset(); },
+            closeAction: () => { data.import.reset(); }
           });
 
           importModal.open();
@@ -223,11 +246,27 @@ data.save = () => {
 };
 
 data.load = () => {
+
   if (data.get(appName) != null && data.get(appName) != undefined) {
-    return JSON.parse(data.get(appName));
+
+    let dataToLoad = JSON.parse(data.get(appName));
+
+    if (dataToLoad.version != version.number) {
+
+      data.backup(dataToLoad);
+
+      dataToLoad = data.update(dataToLoad);
+
+    };
+
+    return dataToLoad;
+
   } else {
+
     return false;
+
   };
+
 };
 
 data.wipe = () => {
