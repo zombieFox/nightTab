@@ -1106,7 +1106,6 @@ export const BookmarkForm = function({
     };
 
     if (bookmarkData.link.display.visual.show || bookmarkData.link.display.name.show) {
-      console.log(this.control.bookmark.display.translate.label);
       this.control.bookmark.display.translate.label.classList.remove('disabled');
       this.control.bookmark.display.translate.x.enable();
       this.control.bookmark.display.translate.y.enable();

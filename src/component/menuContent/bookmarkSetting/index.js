@@ -179,8 +179,25 @@ bookmarkSetting.general = (parent) => {
     path: 'bookmark.newTab',
     labelText: 'Open Bookmarks in a new tab',
     action: () => {
+
       groupAndBookmark.render();
+
+      if (bookmarkSetting.edge.general.size) {
+
+        if (state.get.current().bookmark.show && bookmark.tile.current.length > 0) {
+
+          bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
+
+        };
+
+      } else {
+
+        bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
+
+      };
+
       data.save();
+
     }
   });
 
