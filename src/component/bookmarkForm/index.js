@@ -211,43 +211,6 @@ export const BookmarkForm = function({
           this.preview.update.style(bookmarkData);
         }
       }),
-      name: {
-        show: new Control_checkbox({
-          object: bookmarkData.link,
-          path: 'display.name.show',
-          id: 'display-name-show',
-          labelText: 'Show Name',
-          action: () => {
-            this.disable();
-            this.preview.update.assemble(bookmarkData);
-          }
-        }),
-        text: new Control_text({
-          object: bookmarkData.link,
-          path: 'display.name.text',
-          id: 'display-name-text',
-          value: bookmarkData.link.display.name.text,
-          placeholder: 'Example',
-          labelText: 'Bookmark name',
-          srOnly: true,
-          action: () => {
-            this.preview.update.assemble(bookmarkData);
-          }
-        }),
-        size: new Control_sliderSlim({
-          object: bookmarkData.link,
-          path: 'display.name.size',
-          id: 'display-name-size',
-          labelText: 'Name size',
-          value: bookmarkData.link.display.name.size,
-          defaultValue: bookmarkDefault.display.name.size,
-          min: bookmarkMinMax.display.name.size.min,
-          max: bookmarkMinMax.display.name.size.max,
-          action: () => {
-            this.preview.update.style(bookmarkData);
-          }
-        })
-      },
       visual: {
         show: new Control_checkbox({
           object: bookmarkData.link,
@@ -257,6 +220,7 @@ export const BookmarkForm = function({
           description: 'Display Letters, Icon or an Image on this Bookmark hexagon.',
           action: () => {
             this.disable();
+            this.collapse.display.visual.update();
             this.preview.update.assemble(bookmarkData);
           }
         }),
@@ -361,6 +325,44 @@ export const BookmarkForm = function({
             }
           })
         }
+      },
+      name: {
+        show: new Control_checkbox({
+          object: bookmarkData.link,
+          path: 'display.name.show',
+          id: 'display-name-show',
+          labelText: 'Show Name',
+          action: () => {
+            this.disable();
+            this.collapse.display.name.update();
+            this.preview.update.assemble(bookmarkData);
+          }
+        }),
+        text: new Control_text({
+          object: bookmarkData.link,
+          path: 'display.name.text',
+          id: 'display-name-text',
+          value: bookmarkData.link.display.name.text,
+          placeholder: 'Example',
+          labelText: 'Bookmark name',
+          srOnly: true,
+          action: () => {
+            this.preview.update.assemble(bookmarkData);
+          }
+        }),
+        size: new Control_sliderSlim({
+          object: bookmarkData.link,
+          path: 'display.name.size',
+          id: 'display-name-size',
+          labelText: 'Name size',
+          value: bookmarkData.link.display.name.size,
+          defaultValue: bookmarkDefault.display.name.size,
+          min: bookmarkMinMax.display.name.size.min,
+          max: bookmarkMinMax.display.name.size.max,
+          action: () => {
+            this.preview.update.style(bookmarkData);
+          }
+        })
       }
     },
     accent: {
@@ -662,6 +664,77 @@ export const BookmarkForm = function({
 
   this.area = {};
 
+  this.area.display = {};
+
+  this.area.display.visual = () => {
+    return node('div', [
+      form.wrap({
+        children: [
+          form.indent({
+            children: [
+              this.control.bookmark.display.visual.type.radioSet[0].wrap(),
+              form.wrap({
+                children: [
+                  form.indent({
+                    children: [
+                      this.control.bookmark.display.visual.letter.text.wrap()
+                    ]
+                  })
+                ]
+              }),
+              this.control.bookmark.display.visual.type.radioSet[1].wrap(),
+              form.wrap({
+                children: [
+                  form.indent({
+                    children: [
+                      form.wrap({
+                        children: [
+                          this.control.bookmark.display.visual.icon.text.label,
+                          form.group({
+                            block: true,
+                            children: [
+                              this.control.bookmark.display.visual.icon.text.text,
+                              this.control.bookmark.display.visual.icon.preview.groupText,
+                              this.control.bookmark.display.visual.icon.remove.button
+                            ]
+                          })
+                        ]
+                      })
+                    ]
+                  })
+                ]
+              }),
+              this.control.bookmark.display.visual.type.radioSet[2].wrap(),
+              form.wrap({
+                children: [
+                  form.indent({
+                    children: [
+                      this.control.bookmark.display.visual.image.url.wrap()
+                    ]
+                  })
+                ]
+              })
+            ]
+          })
+        ]
+      })
+    ]);
+  };
+
+  this.area.display.name = () => {
+    return node('div', [
+      form.wrap({
+        children: [
+          form.indent({
+            children: [
+              this.control.bookmark.display.name.text.wrap()
+            ]
+          })
+        ]
+      })
+    ]);
+  };
+
   this.area.accent = () => {
     return node('div', [
       this.control.bookmark.accent.color.wrap()
@@ -688,67 +761,10 @@ export const BookmarkForm = function({
             form.indent({
               children: [
                 this.control.bookmark.display.visual.show.wrap(),
-                form.wrap({
-                  children: [
-                    form.indent({
-                      children: [
-                        this.control.bookmark.display.visual.type.radioSet[0].wrap(),
-                        form.wrap({
-                          children: [
-                            form.indent({
-                              children: [
-                                this.control.bookmark.display.visual.letter.text.wrap()
-                              ]
-                            })
-                          ]
-                        }),
-                        this.control.bookmark.display.visual.type.radioSet[1].wrap(),
-                        form.wrap({
-                          children: [
-                            form.indent({
-                              children: [
-                                form.wrap({
-                                  children: [
-                                    this.control.bookmark.display.visual.icon.text.label,
-                                    form.group({
-                                      block: true,
-                                      children: [
-                                        this.control.bookmark.display.visual.icon.text.text,
-                                        this.control.bookmark.display.visual.icon.preview.groupText,
-                                        this.control.bookmark.display.visual.icon.remove.button
-                                      ]
-                                    })
-                                  ]
-                                })
-                              ]
-                            })
-                          ]
-                        }),
-                        this.control.bookmark.display.visual.type.radioSet[2].wrap(),
-                        form.wrap({
-                          children: [
-                            form.indent({
-                              children: [
-                                this.control.bookmark.display.visual.image.url.wrap()
-                              ]
-                            })
-                          ]
-                        })
-                      ]
-                    })
-                  ]
-                }),
+                this.collapse.display.visual.collapse(),
                 node('hr'),
                 this.control.bookmark.display.name.show.wrap(),
-                form.wrap({
-                  children: [
-                    form.indent({
-                      children: [
-                        this.control.bookmark.display.name.text.wrap()
-                      ]
-                    })
-                  ]
-                }),
+                this.collapse.display.name.collapse(),
                 node('hr'),
                 this.control.propagate.visual.wrap()
               ]
@@ -968,6 +984,22 @@ export const BookmarkForm = function({
   };
 
   this.collapse = {
+    display: {
+      visual: new Collapse({
+        type: 'checkbox',
+        checkbox: this.control.bookmark.display.visual.show,
+        target: [{
+          content: this.area.display.visual()
+        }]
+      }),
+      name: new Collapse({
+        type: 'checkbox',
+        checkbox: this.control.bookmark.display.name.show,
+        target: [{
+          content: this.area.display.name()
+        }]
+      })
+    },
     color: new Collapse({
       type: 'radio',
       radioGroup: this.control.bookmark.color.by,
@@ -1074,13 +1106,18 @@ export const BookmarkForm = function({
     };
 
     if (bookmarkData.link.display.visual.show || bookmarkData.link.display.name.show) {
+      console.log(this.control.bookmark.display.translate.label);
+      this.control.bookmark.display.translate.label.classList.remove('disabled');
       this.control.bookmark.display.translate.x.enable();
       this.control.bookmark.display.translate.y.enable();
       this.control.bookmark.display.rotate.enable();
+      this.control.bookmark.display.alignment.enable();
     } else {
+      this.control.bookmark.display.translate.label.classList.add('disabled');
       this.control.bookmark.display.translate.x.disable();
       this.control.bookmark.display.translate.y.disable();
       this.control.bookmark.display.rotate.disable();
+      this.control.bookmark.display.alignment.disable();
     };
 
     if (bookmarkData.link.display.visual.show && bookmarkData.link.display.name.show) {
