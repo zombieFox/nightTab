@@ -29,7 +29,11 @@ export const ImportForm = function({
 
   this.element = {
     form: node('form|class:import-form'),
-    description: node('p:Import all or part of the backup:|class:mb-5')
+    description: complexNode({
+      tag: 'p',
+      text: 'You can restore all or parts of the backup file. The following data will be restored:',
+      attr: [{ key: 'class', value: 'mb-5' }]
+    })
   };
 
   this.count = {
@@ -46,19 +50,12 @@ export const ImportForm = function({
 
   this.control = {
     import: {
-      setup: new Control_checkbox({
-        object: state,
-        path: 'setup',
-        id: 'setup',
-        labelText: 'Settings',
-        description: 'This includes Layout size and position, Header setup and other user settings.'
-      }),
       bookmark: new Control_checkbox({
         object: state,
         path: 'bookmark',
         id: 'bookmark',
         labelText: 'Bookmarks',
-        description: [`This includes ${this.count.bookmark()} ${this.count.bookmark() > 1 ? `Bookmarks` : `Bookmark`} in ${dataToImport.bookmark.length} ${dataToImport.bookmark.length > 1 ? `Groups` : `Group`}.`, 'Bookmarks will keep any custom Colours, Accents and Borders when imported.']
+        description: [`This includes <strong>${this.count.bookmark()} ${this.count.bookmark() > 1 ? `Bookmarks` : `Bookmark`}</strong> in <strong>${dataToImport.bookmark.length} ${dataToImport.bookmark.length > 1 ? `Groups` : `Group`}.<strong>`, 'Bookmarks will keep any custom Colours, Accents and Borders when imported.']
       }),
       theme: new Control_checkbox({
         object: state,
@@ -66,6 +63,13 @@ export const ImportForm = function({
         id: 'theme',
         labelText: 'Theme',
         description: 'This includes the Colour, Accent, Fonts, Background and any saved Custom Themes.'
+      }),
+      setup: new Control_checkbox({
+        object: state,
+        path: 'setup',
+        id: 'setup',
+        labelText: 'Settings',
+        description: 'This includes Layout size and position, Header area size, Bookmark area size and other user settings.'
       })
     }
   };
@@ -76,9 +80,9 @@ export const ImportForm = function({
 
     this.element.form.append(node('div', [
       this.element.description,
-      this.control.import.setup.wrap(),
       this.control.import.bookmark.wrap(),
-      this.control.import.theme.wrap()
+      this.control.import.theme.wrap(),
+      this.control.import.setup.wrap()
     ]));
 
   };

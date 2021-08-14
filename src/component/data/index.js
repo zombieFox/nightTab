@@ -75,7 +75,7 @@ data.validateFile = (fileList, input, feedback) => {
           });
 
           const importModal = new Modal({
-            heading: 'Data to import',
+            heading: 'Restoring from a ' + appName + ' backup',
             content: importForm.form(),
             successText: 'Import',
             width: 'small',
