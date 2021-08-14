@@ -25,5 +25,3 @@ component.keyboard.init();
 component.menu.init();
 
 // component.menu.open();
-
-// document.addEventListener('focusin', () => { console.log('focused: ', document.activeElement); });
