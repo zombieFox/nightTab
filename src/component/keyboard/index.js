@@ -8,6 +8,8 @@ import { group } from '../group';
 import { theme } from '../theme';
 import { themeSetting } from '../menuContent/themeSetting';
 
+import { applyCSSVar } from '../../utility/applyCSSVar';
+
 import { KeyboardShortcut } from '../keyboardShortcut';
 
 const keyboard = {};
@@ -81,6 +83,23 @@ keyboard.ctrAltM = new KeyboardShortcut({
   }
 });
 
+keyboard.ctrAltR = new KeyboardShortcut({
+  keycode: 82,
+  ctrl: true,
+  alt: true,
+  action: () => {
+    theme.accent.random.render();
+    applyCSSVar([
+      'theme.accent.rgb.r',
+      'theme.accent.rgb.g',
+      'theme.accent.rgb.b',
+      'theme.accent.hsl.h',
+      'theme.accent.hsl.s',
+      'theme.accent.hsl.l'
+    ]);
+  }
+});
+
 keyboard.init = () => {
   keyboard.esc.add();
   keyboard.ctrAltA.add();
@@ -88,6 +107,7 @@ keyboard.init = () => {
   keyboard.ctrAltD.add();
   keyboard.ctrAltG.add();
   keyboard.ctrAltM.add();
+  keyboard.ctrAltR.add();
 };
 
 export { keyboard };
