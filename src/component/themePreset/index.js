@@ -39,6 +39,7 @@ import { steel } from './steel';
 import { stria } from './stria';
 import { terra } from './terra';
 import { trine } from './trine';
+import { umbra } from './umbra';
 import { vanadium } from './vanadium';
 import { viper } from './viper';
 import { white } from './white';
@@ -87,6 +88,7 @@ themePreset.get = () => {
     stria,
     terra,
     trine,
+    umbra,
     vanadium,
     viper
   ];
