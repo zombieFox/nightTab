@@ -804,9 +804,16 @@
 .bookmark-control-button:hover,
 .bookmark-control-button:focus {
   background-color: hsla(var(--theme-accent-rgb-text), 0.1);
+  color: hsl(var(--theme-accent-rgb-text));
+}
+
+.bookmark-control-button:active,
+.bookmark-control-button.active {
+  color: hsl(var(--theme-accent-rgb-text));
 }
 
 .bookmark-control-button:disabled {
+  color: hsl(var(--theme-accent-rgb-text));
   opacity: 0.25;
 }
 
