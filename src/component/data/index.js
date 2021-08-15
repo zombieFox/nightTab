@@ -324,13 +324,13 @@ data.clear = {
     render: () => {
 
       const clearModal = new Modal({
-        heading: 'Clear some ' + appName + ' data?',
+        heading: 'Clear ' + appName + ' data except bookmarks?',
         content: node('div', [
           node('p:Are you sure you want to clear all ' + appName + ' Settings? ' + appName + ' will be restore to the default state but your Bookmarks and Groups will remain.'),
           node('p:This can not be undone.')
         ]),
         successText: 'Clear all except bookmarks',
-        width: 'small',
+        width: 35,
         successAction: () => {
           data.wipe.partial();
         }

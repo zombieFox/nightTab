@@ -31,7 +31,7 @@ export const ImportForm = function({
     form: node('form|class:import-form'),
     description: complexNode({
       tag: 'p',
-      text: 'You can restore all or parts of the backup file. The following data will be restored:',
+      text: 'You can restore all or parts of a backup file. The following data will be restored:',
       attr: [{ key: 'class', value: 'mb-5' }]
     })
   };
