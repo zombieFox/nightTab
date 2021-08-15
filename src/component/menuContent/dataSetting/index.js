@@ -107,23 +107,44 @@ dataSetting.backup = (parent) => {
 
 dataSetting.clear = (parent) => {
 
-  dataSetting.control.clear.button = new Button({
+  dataSetting.control.clear.all = new Button({
     text: 'Clear all data',
     style: ['line'],
     func: () => {
       menu.close();
-      data.clear.render();
+      data.clear.all.render();
     }
   });
 
-  dataSetting.control.clear.buttonHelper = new Control_helperText({
-    text: ['Wipe all data and restore ' + appName + ' to the default state.']
+  dataSetting.control.clear.partial = new Button({
+    text: 'Clear all except bookmarks',
+    style: ['line'],
+    func: () => {
+      menu.close();
+      data.clear.partial.render();
+    }
+  });
+
+  dataSetting.control.clear.helper = new Control_helperText({
+    text: ['Wipe all data and restore ' + appName + ' to the default state.', 'Alternatively it is possible to wipe all settings but keep the current Bookmarks and Groups.']
   });
 
   parent.appendChild(
     node('div', [
-      dataSetting.control.clear.button.wrap(),
-      dataSetting.control.clear.buttonHelper.wrap()
+      form.wrap({
+        children: [
+          form.inline({
+            gap: 'small',
+            equalGap: true,
+            wrap: true,
+            children: [
+              dataSetting.control.clear.all.wrap(),
+              dataSetting.control.clear.partial.wrap()
+            ]
+          })
+        ]
+      }),
+      dataSetting.control.clear.helper.wrap()
     ])
   );
 

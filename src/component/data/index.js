@@ -269,9 +269,28 @@ data.load = () => {
 
 };
 
-data.wipe = () => {
-  data.remove(appName);
-  data.reload.render();
+data.wipe = {
+  all: () => {
+
+    data.remove(appName);
+
+    data.reload.render();
+
+  },
+  partial: () => {
+
+    bookmark.reset();
+
+    data.set(appName, JSON.stringify({
+      [appName]: true,
+      version: version.number,
+      state: state.get.default(),
+      bookmark: bookmark.all
+    }));
+
+    data.reload.render();
+
+  }
 };
 
 data.reload = {
@@ -281,30 +300,45 @@ data.reload = {
 };
 
 data.clear = {
-  render: () => {
+  all: {
+    render: () => {
 
-    const clearContent = node('div');
+      const clearModal = new Modal({
+        heading: 'Clear all ' + appName + ' data?',
+        content: node('div', [
+          node('p:Are you sure you want to clear all ' + appName + ' Bookmarks and Settings? ' + appName + ' will be restore to the default state.'),
+          node('p:This can not be undone.')
+        ]),
+        successText: 'Clear all data',
+        width: 'small',
+        successAction: () => {
+          data.wipe.all();
+        }
+      });
 
-    const para1 = node('p:Are you sure you want to clear all ' + appName + ' Bookmarks and Settings? ' + appName + ' will be restore to the default state.');
+      clearModal.open();
 
-    const para2 = node('p:This can not be undone.');
+    }
+  },
+  partial: {
+    render: () => {
 
-    clearContent.appendChild(para1);
+      const clearModal = new Modal({
+        heading: 'Clear some ' + appName + ' data?',
+        content: node('div', [
+          node('p:Are you sure you want to clear all ' + appName + ' Settings? ' + appName + ' will be restore to the default state but your Bookmarks and Groups will remain.'),
+          node('p:This can not be undone.')
+        ]),
+        successText: 'Clear all except bookmarks',
+        width: 'small',
+        successAction: () => {
+          data.wipe.partial();
+        }
+      });
 
-    clearContent.appendChild(para2);
+      clearModal.open();
 
-    const clearModal = new Modal({
-      heading: 'Clear all ' + appName + ' data?',
-      content: clearContent,
-      successText: 'Clear all data',
-      width: 'small',
-      successAction: () => {
-        data.wipe();
-      }
-    });
-
-    clearModal.open();
-
+    }
   }
 };
 
