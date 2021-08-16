@@ -101,68 +101,68 @@
 .is-bookmark-edit.is-bookmark-orientation-top .bookmark.bookmark-preview:focus .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-top .bookmark.bookmark-preview:focus-within .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-top .bookmark.bookmark-preview:hover .bookmark-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(0% + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + calc(var(--bookmark-clip-padding) * 1em)));
+  clip-path: polygon(0 0, 100% 0, 100% calc((var(--bookmark-clip-padding) * 1em)), 0 calc((var(--bookmark-clip-padding) * 1em)));
 }
 
 .is-bookmark-edit.is-bookmark-orientation-bottom .bookmark.bookmark-preview .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-bottom .bookmark.bookmark-preview:focus .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-bottom .bookmark.bookmark-preview:focus-within .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-bottom .bookmark.bookmark-preview:hover .bookmark-back {
-  clip-path: polygon(0 calc(100% - calc(var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - (var(--bookmark-clip-padding) * 1em)), 100% calc(100% - (var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
 }
 
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-line-show .bookmark.bookmark-preview .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-line-show .bookmark.bookmark-preview:focus .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-line-show .bookmark.bookmark-preview:focus-within .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-line-show .bookmark.bookmark-preview:hover .bookmark-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)));
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)));
 }
 
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-line-show .bookmark.bookmark-preview .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-line-show .bookmark.bookmark-preview:focus .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-line-show .bookmark.bookmark-preview:focus-within .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-line-show .bookmark.bookmark-preview:hover .bookmark-back {
-  clip-path: polygon(0 calc(100% - calc(var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - (var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - (var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
 }
 
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show .bookmark.bookmark-preview .bookmark-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(0% + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + calc(var(--bookmark-clip-padding) * 1em)));
+  clip-path: polygon(0 0, 100% 0, 100% calc((var(--bookmark-clip-padding) * 1em)), 0 calc((var(--bookmark-clip-padding) * 1em)));
 }
 
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show .bookmark.bookmark-preview:focus .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show .bookmark.bookmark-preview:focus-within .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show .bookmark.bookmark-preview:hover .bookmark-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)));
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)));
 }
 
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark.bookmark-preview .bookmark-back {
-  clip-path: polygon(0 calc(100% - calc(var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - (var(--bookmark-clip-padding) * 1em)), 100% calc(100% - (var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
 }
 
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark.bookmark-preview:focus .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark.bookmark-preview:focus-within .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show .bookmark.bookmark-preview:hover .bookmark-back {
-  clip-path: polygon(0 calc(100% - calc(var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - (var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - (var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
 }
 
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview .bookmark-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)));
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)));
 }
 
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:focus .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:focus-within .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-top.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:hover .bookmark-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(0% + var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)));
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(var(--bookmark-url-height) + calc(var(--bookmark-clip-padding) * 1em)));
 }
 
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview .bookmark-back {
-  clip-path: polygon(0 calc(100% - calc(var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - (var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - (var(--layout-line-width) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
 }
 
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:focus .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:focus-within .bookmark-back,
 .is-bookmark-edit.is-bookmark-orientation-bottom.is-bookmark-url-show.is-bookmark-line-show .bookmark.bookmark-preview:hover .bookmark-back {
-  clip-path: polygon(0 calc(100% - calc(var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - calc(var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(100% - (var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% calc(100% - (var(--bookmark-url-height) + var(--bookmark-clip-padding) * 1em)), 100% 100%, 0 100%);
 }
 
 .is-bookmark-edit.is-bookmark-orientation-top .bookmark.bookmark-preview .bookmark-front,
