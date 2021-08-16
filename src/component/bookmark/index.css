@@ -634,7 +634,7 @@
 }
 
 .is-bookmark-orientation-top .bookmark-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(0% + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(0% + calc(var(--bookmark-clip-padding) * 1em)));
+  clip-path: polygon(0 0, 100% 0, 100% calc((var(--bookmark-clip-padding) * 1em)), 0 calc((var(--bookmark-clip-padding) * 1em)));
 }
 
 .is-bookmark-orientation-bottom .bookmark-back {
@@ -642,7 +642,7 @@
 }
 
 .is-bookmark-orientation-top.is-bookmark-line-show .bookmark-back {
-  clip-path: polygon(0 0, 100% 0, 100% calc(var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)), 0 calc(var(--layout-line-width) + calc(var(--bookmark-clip-padding) * 1em)));
+  clip-path: polygon(0 0, 100% 0, 100% calc(var(--layout-line-width) + (var(--bookmark-clip-padding) * 1em)), 0 calc(var(--layout-line-width) + (var(--bookmark-clip-padding) * 1em)));
 }
 
 .is-bookmark-orientation-bottom.is-bookmark-line-show .bookmark-back {
