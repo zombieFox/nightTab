@@ -65,6 +65,20 @@ layoutSetting.disable = () => {
 
   };
 
+  if (state.get.current().header.order.length > 0) {
+
+    layoutSetting.control.area.header.width.enable();
+    layoutSetting.control.area.header.justify.enable();
+    layoutSetting.control.area.header.justifyHelper1.enable();
+
+  } else {
+
+    layoutSetting.control.area.header.width.disable();
+    layoutSetting.control.area.header.justify.disable();
+    layoutSetting.control.area.header.justifyHelper1.disable();
+
+  };
+
   if (state.get.current().bookmark.show) {
 
     switch (state.get.current().layout.direction) {
@@ -84,21 +98,6 @@ layoutSetting.disable = () => {
         break;
 
     };
-
-  };
-
-
-  if (state.get.current().header.order.length > 0) {
-
-    layoutSetting.control.area.header.width.enable();
-    layoutSetting.control.area.header.justify.enable();
-    layoutSetting.control.area.header.justifyHelper1.enable();
-
-  } else {
-
-    layoutSetting.control.area.header.width.disable();
-    layoutSetting.control.area.header.justify.disable();
-    layoutSetting.control.area.header.justifyHelper1.disable();
 
   };
 
