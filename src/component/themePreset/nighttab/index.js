@@ -1,7 +1,8 @@
 import { state } from '../../state';
+import { appName } from '../../appName';
 
 export const nighttab = {
-  name: 'nightTab (default)',
+  name: appName + ' (default)',
   color: state.get.default().theme.color,
   accent: { hsl: state.get.default().theme.accent.hsl, rgb: state.get.default().theme.accent.rgb },
   font: state.get.default().theme.font,

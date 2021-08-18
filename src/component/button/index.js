@@ -147,7 +147,7 @@ export const Button = function({
       children: [
         this.button
       ]
-    })
+    });
   };
 
 };

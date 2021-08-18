@@ -17,6 +17,7 @@ import * as form from '../../form';
 import { Button } from '../../button';
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
+import { Alert } from '../../alert';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -53,11 +54,11 @@ firefoxSetting.firefox = (parent) => {
         children: [
           node('ol', [
             node('li:Open a new Firefox window'),
-            node('li:Open Firefox <code>Preferences</code> and open a new tab (nightTab)'),
+            node('li:Open Firefox <code>Preferences</code> and open a new tab (' + appName + ')'),
             node('li:In Firefox preferences under <code>Home</code>, change <code>Homepage and new windows</code> to <code>Custom URLs...</code>'),
             node('li:Then click <code>Use Current Page</code>'),
           ]),
-          node('p:nightTab will now appear as the homepage.'),
+          node('p:' + appName + ' will now appear as the homepage.'),
         ]
       })
     ])

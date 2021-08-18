@@ -23,6 +23,7 @@ import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
 import { PresetThemeTile } from '../../presetThemeTile';
 import { AccentPresetButton } from '../../accentPresetButton';
+import { Alert } from '../../alert';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -605,6 +606,8 @@ themeSetting.accent = (parent) => {
 
   themeSetting.control.accent.cycle = {};
 
+  themeSetting.control.accent.cycle.alert = new Alert({ iconName: 'info', message: ['Take care as a fast changing Accent hue may cause performance issues.'] });
+
   themeSetting.control.accent.cycle.active = new Control_checkbox({
     object: state.get.current(),
     path: 'theme.accent.cycle.active',
@@ -649,13 +652,11 @@ themeSetting.accent = (parent) => {
   });
 
   themeSetting.control.accent.cycle.stepHelper = new Control_helperText({
-    text: [
-      'Take care as a small delay in Accent hue change may cause performance issues.',
-      'Auto change Accent hue will not work when the Accent colour is a grey or black.'
-    ]
+    text: ['Auto change Accent hue will not work when the Accent colour is a grey or black.']
   });
 
   themeSetting.control.accent.cycle.area = node('div', [
+    themeSetting.control.accent.cycle.alert.wrap(),
     themeSetting.control.accent.cycle.speed.wrap(),
     themeSetting.control.accent.cycle.step.wrap(),
     themeSetting.control.accent.cycle.stepHelper.wrap()
@@ -1308,6 +1309,7 @@ themeSetting.background = (parent) => {
       })
     },
     image: {
+      alert: new Alert({ iconName: 'info', message: ['Uploading Background images is no longer supported.', '<a href="#" target="_blank">Why has this changed?</a>'] }),
       url: new Control_textarea({
         object: state.get.current(),
         path: 'theme.background.image.url',
@@ -1470,6 +1472,7 @@ themeSetting.background = (parent) => {
       }
     },
     video: {
+      alert: new Alert({ iconName: 'info', message: ['YouTube page URLs <strong>can not</strong> be used.', '<a href="#" target="_blank">How to link to a video file.</a>'] }),
       url: new Control_textarea({
         object: state.get.current(),
         path: 'theme.background.video.url',
@@ -1485,7 +1488,7 @@ themeSetting.background = (parent) => {
       }),
       urlHelper: new Control_helperText({
         text: [
-          'Background video only supports a direct URL to a video file. Supports MP4 and WebM format.', 'YouTube page URLs can not be used.',
+          'Background video only supports a direct URL to a video file. Supports MP4 and WebM format.',
           'Add more than one URL separated by spaces or on new lines for a random background video on load.'
         ]
       }),
@@ -1643,6 +1646,7 @@ themeSetting.background = (parent) => {
   ]);
 
   const themeBackgroundImageArea = node('div', [
+    themeSetting.control.background.image.alert.wrap(),
     themeSetting.control.background.image.url.wrap(),
     themeSetting.control.background.image.urlHelper.wrap(),
     themeSetting.control.background.image.blur.wrap(),
@@ -1664,6 +1668,7 @@ themeSetting.background = (parent) => {
   ]);
 
   const themeBackgroundVideoArea = node('div', [
+    themeSetting.control.background.video.alert.wrap(),
     themeSetting.control.background.video.url.wrap(),
     themeSetting.control.background.video.urlHelper.wrap(),
     themeSetting.control.background.video.blur.wrap(),

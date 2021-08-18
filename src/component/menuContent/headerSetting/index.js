@@ -11,12 +11,14 @@ import { link } from '../../link';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 import { searchEnginePreset } from '../../searchEnginePreset';
+import { appName } from '../../appName';
 
 import * as form from '../../form';
 
 import { Button } from '../../button';
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
+import { Alert } from '../../alert';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -1655,7 +1657,7 @@ headerSetting.search = (parent) => {
         }
       }),
       urlHelper: new Control_helperText({
-        text: ['Enter a web address with the search parameters, eg: "https://vimeo.com/search?q="', 'nightTab will add the search term entered into the Search box at the end of the above URL.']
+        text: ['Enter a web address with the search parameters, eg: "https://vimeo.com/search?q="', appName + ' will add the search term entered into the Search box at the end of the above URL.']
       }),
       queryName: new Control_text({
         object: state.get.current(),

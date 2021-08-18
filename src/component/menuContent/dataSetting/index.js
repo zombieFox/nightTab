@@ -17,6 +17,7 @@ import * as form from '../../form';
 import { Button } from '../../button';
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
+import { Alert } from '../../alert';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -125,12 +126,15 @@ dataSetting.clear = (parent) => {
     }
   });
 
+  dataSetting.control.clear.alert = new Alert({ iconName: 'info', message: ['You will lose Bookmarks by clearing all data.', 'Have you <a href="#menu-content-item-backup">backed up your data?</a>'] });
+
   dataSetting.control.clear.helper = new Control_helperText({
     text: ['Wipe all data and restore ' + appName + ' to the default state.', 'Alternatively it is possible to wipe all settings but keep the current Bookmarks and Groups.']
   });
 
   parent.appendChild(
     node('div', [
+      dataSetting.control.clear.alert.wrap(),
       form.wrap({
         children: [
           form.inline({

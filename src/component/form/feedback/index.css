@@ -1,4 +1,8 @@
 :root {
+  --form-feedback-space: 6;
+}
+
+:root {
   --form-feedback-background: var(--theme-primary-020);
   --form-feedback-background-disabled: var(--theme-primary-010);
   --form-feedback-text: var(--theme-primary-text-020);
@@ -9,8 +13,8 @@
 }
 
 .form-feedback {
-  padding: 0.75em 1.25em;
   background-color: hsl(var(--form-feedback-background));
+  padding: calc((var(--form-feedback-space) / 4) * 0.5em) calc((var(--form-feedback-space) / 4) * 1em);
   border: 0;
   border-left-width: calc(var(--layout-line-width) * 2);
   border-left-style: solid;

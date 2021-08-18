@@ -147,7 +147,7 @@ state.minMax = {
     accent: {
       hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
       rgb: { r: { min: 0, max: 255 }, g: { min: 0, max: 255 }, b: { min: 0, max: 255 } },
-      cycle: { speed: { min: 100, max: 10000 }, step: { min: 1, max: 100 } }
+      cycle: { speed: { min: 100, max: 1000 }, step: { min: 1, max: 100 } }
     },
     font: {
       display: { weight: { min: 100, max: 900 } },
