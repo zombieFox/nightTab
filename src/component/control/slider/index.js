@@ -61,11 +61,11 @@ export const Control_slider = function({
 
       };
 
-      if (action) { action(); };
-
       if (sliderAction) { sliderAction(); };
 
-      this.number.value = get({ object: object, path: path });
+      if (action) { action(); };
+
+      this.updateNumber();
 
     },
     focusFunc: focusAction,
@@ -95,11 +95,13 @@ export const Control_slider = function({
 
       };
 
-      if (action) { action(); };
-
       if (numberAction) { numberAction(); };
 
-      this.update({ delay: true });
+      if (action) { this.action({ delay: true }) };
+
+      this.updateRange();
+
+      this.updateNumber({ delay: true });
 
     }
   });
@@ -117,32 +119,82 @@ export const Control_slider = function({
         value: JSON.parse(JSON.stringify(defaultValue))
       });
 
-      this.update();
-
       if (action) { action(); };
 
       if (resetAction) { resetAction(); };
 
+      this.update();
+
     }
   });
+
+  this.delayedAction = null;
+
+  this.action = ({
+    delay = false
+  } = {}) => {
+
+    const delayedAction = () => {
+      action();
+    };
+
+    if (delay) {
+      clearTimeout(this.delayedAction);
+      this.delayedAction = setTimeout(delayedAction, 2000);
+    } else {
+      this.delayedAction = null;
+      delayedAction();
+    };
+
+  };
+
+  this.delayedUpdateRange = null;
+
+  this.delayedUpdateNumber = null;
+
+  this.updateRange = ({
+    delay = false
+  } = {}) => {
+
+    const updateControl = () => {
+      this.range.value = get({ object: object, path: path });
+    };
+
+    if (delay) {
+      clearTimeout(this.delayedUpdateRange);
+      this.delayedUpdateRange = setTimeout(updateControl, 2000);
+    } else {
+      this.delayedUpdateRange = null;
+      updateControl();
+    };
+
+  };
+
+  this.updateNumber = ({
+    delay = false
+  } = {}) => {
+
+    const updateControl = () => {
+      this.number.value = get({ object: object, path: path });
+    };
+
+    if (delay) {
+      clearTimeout(this.delayedUpdateNumber);
+      this.delayedUpdateNumber = setTimeout(updateControl, 2000);
+    } else {
+      this.delayedUpdateNumber = null;
+      updateControl();
+    };
+
+  };
 
   this.update = ({
     delay = false
   } = {}) => {
 
-    let delayedUpdate = null;
+    this.updateRange({ delay: delay });
 
-    const updateControl = () => {
-      this.range.value = get({ object: object, path: path });
-      this.number.value = get({ object: object, path: path });
-    };
-
-    if (delay) {
-      clearTimeout(delayedUpdate);
-      delayedUpdate = setTimeout(updateControl, 2000);
-    } else {
-      updateControl();
-    };
+    this.updateNumber({ delay: delay });
 
   };
 

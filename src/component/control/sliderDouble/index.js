@@ -85,7 +85,7 @@ export const Control_sliderDouble = function({
           set({ object: state.get.current(), path: right.path, value: get({ object: state.get.current(), path: left.path }) + 10 })
         };
 
-        this.range.left.update();
+        this.range.left.updateRange();
 
         this.range.right.update();
 
@@ -125,7 +125,7 @@ export const Control_sliderDouble = function({
 
         this.range.left.update();
 
-        this.range.right.update();
+        this.range.right.updateRange();
 
         if (right.action) {
           right.action();
