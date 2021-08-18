@@ -234,6 +234,8 @@ update.mod['7.0.0'] = function(data) {
   data.state.theme.background.video = data.state.theme.background.visual.video;
 
   delete data.state.theme.background.visual;
+  delete data.state.theme.background.image.type;
+  delete data.state.theme.background.video.type;
 
   data.state.theme.radius = data.state.theme.radius * 100;
   data.state.theme.shadow = data.state.theme.shadow * 100;

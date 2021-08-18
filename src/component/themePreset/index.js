@@ -23,6 +23,7 @@ import { marker } from './marker';
 import { midnight } from './midnight';
 import { mint } from './mint';
 import { nighttab } from './nighttab';
+import { neon } from './neon';
 import { nord } from './nord';
 import { obsidian } from './obsidian';
 import { origin } from './origin';
@@ -72,6 +73,7 @@ themePreset.get = () => {
     marker,
     midnight,
     mint,
+    neon,
     nord,
     obsidian,
     origin,
