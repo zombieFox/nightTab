@@ -583,6 +583,7 @@ headerSetting.greeting = (parent) => {
     headerSetting.control.greeting.name.wrap(),
     node('hr'),
     headerSetting.control.greeting.size.wrap(),
+    node('hr'),
     headerSetting.control.greeting.newLine.wrap()
   ]);
 
@@ -696,6 +697,7 @@ headerSetting.transitional = (parent) => {
     headerSetting.control.transitional.type.wrap(),
     node('hr'),
     headerSetting.control.transitional.size.wrap(),
+    node('hr'),
     headerSetting.control.transitional.newLine.wrap()
   ]);
 
@@ -1001,6 +1003,7 @@ headerSetting.clock = (parent) => {
     headerSetting.control.clock.meridiem.show.wrap(),
     node('hr'),
     headerSetting.control.clock.size.wrap(),
+    node('hr'),
     headerSetting.control.clock.newLine.wrap()
   ]);
 
@@ -1468,6 +1471,7 @@ headerSetting.date = (parent) => {
     headerSetting.control.date.format.wrap(),
     node('hr'),
     headerSetting.control.date.size.wrap(),
+    node('hr'),
     headerSetting.control.date.newLine.wrap()
   ]);
 
@@ -1734,6 +1738,7 @@ headerSetting.search = (parent) => {
       action: () => {
         applyCSSClass('header.search.width.by');
         headerSetting.disable();
+        headerSetting.control.search.width.collapse.update();
         data.save();
       }
     }),
@@ -1741,7 +1746,7 @@ headerSetting.search = (parent) => {
       object: state.get.current(),
       path: 'header.search.width.size',
       id: 'header-search-size',
-      labelText: 'Size',
+      labelText: 'Width',
       value: state.get.current().header.search.width.size,
       defaultValue: state.get.default().header.search.width.size,
       min: state.get.minMax().header.search.width.size.min,
@@ -1762,17 +1767,34 @@ headerSetting.search = (parent) => {
     })
   };
 
+  headerSetting.control.search.width.area = node('div', [
+    headerSetting.control.search.width.size.wrap()
+  ]);
+
+  headerSetting.control.search.width.collapse = new Collapse({
+    type: 'radio',
+    radioGroup: headerSetting.control.search.width.by,
+    target: [{
+      id: headerSetting.control.search.width.by.radioSet[headerSetting.control.search.width.by.radioSet.length - 1].radio.value,
+      content: headerSetting.control.search.width.area
+    }]
+  });
+
   headerSetting.control.search.area = node('div', [
     headerSetting.control.search.width.by.wrap(),
     form.wrap({
       children: [
         form.indent({
           children: [
-            headerSetting.control.search.width.size.wrap()
+            headerSetting.control.search.width.collapse.collapse()
           ]
         })
       ]
     }),
+    node('hr'),
+    headerSetting.control.search.size.wrap(),
+    node('hr'),
+    headerSetting.control.search.newLine.wrap(),
     node('hr'),
     headerSetting.control.search.engine.selected.wrap(),
     form.wrap({
@@ -1787,10 +1809,7 @@ headerSetting.search = (parent) => {
     node('hr'),
     headerSetting.control.search.text.justify.wrap(),
     node('hr'),
-    headerSetting.control.search.newTab.wrap(),
-    node('hr'),
-    headerSetting.control.search.size.wrap(),
-    headerSetting.control.search.newLine.wrap()
+    headerSetting.control.search.newTab.wrap()
   ]);
 
   headerSetting.control.search.collapse = new Collapse({
