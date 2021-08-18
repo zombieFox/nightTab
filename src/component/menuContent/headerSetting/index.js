@@ -514,7 +514,8 @@ headerSetting.greeting = (parent) => {
       { id: 'header-greeting-type-good', labelText: '"Good morning..."', value: 'good' },
       { id: 'header-greeting-type-hello', labelText: '"Hello..."', value: 'hello' },
       { id: 'header-greeting-type-hi', labelText: '"Hi..."', value: 'hi' },
-      { id: 'header-greeting-type-custom', labelText: 'Custom', value: 'custom' }
+      { id: 'header-greeting-type-none', labelText: 'None', description: 'Useful for just displaying your name.', value: 'none' },
+      { id: 'header-greeting-type-custom', labelText: 'Custom', description: ['Use your own greeting.', 'Defaults to "Good morning..." if left blank.'], value: 'custom' }
     ],
     groupName: 'header-greeting-type',
     path: 'header.greeting.type',

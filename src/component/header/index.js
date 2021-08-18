@@ -129,7 +129,7 @@ header.item.mod = {
           } else {
 
             if (state.get.current().header.order.includes(item)) {
-              state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1)
+              state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
             };
 
           };
@@ -166,7 +166,7 @@ header.item.mod = {
           } else {
 
             if (state.get.current().header.order.includes(item)) {
-              state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1)
+              state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
             };
 
           };
@@ -186,7 +186,7 @@ header.item.mod = {
           } else {
 
             if (state.get.current().header.order.includes(item)) {
-              state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1)
+              state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
             };
 
           };
@@ -222,7 +222,7 @@ header.item.mod = {
           } else {
 
             if (state.get.current().header.order.includes(item)) {
-              state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1)
+              state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
             };
 
           };

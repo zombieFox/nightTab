@@ -36,6 +36,12 @@ export const Greeting = function({} = {}) {
 
     switch (state.get.current().header.greeting.type) {
 
+      case 'none':
+
+        value = '';
+
+        break;
+
       case 'good':
 
         value = this.message[Math.floor(this.now.hours() / 6)];
@@ -57,9 +63,13 @@ export const Greeting = function({} = {}) {
       case 'custom':
 
         if (isValidString(state.get.current().header.greeting.custom)) {
+
           value = trimString(state.get.current().header.greeting.custom);
+
         } else {
+
           value = this.message[Math.floor(this.now.hours() / 6)];
+
         };
 
         break;
@@ -68,14 +78,14 @@ export const Greeting = function({} = {}) {
 
     if (isValidString(state.get.current().header.greeting.name)) {
 
-      if (state.get.current().header.greeting.type === 'custom') {
-        if (isValidString(state.get.current().header.greeting.custom)) {
-          value = value + ', ' + trimString(state.get.current().header.greeting.name)
-        } else {
-          value = value + ', ' + trimString(state.get.current().header.greeting.name)
-        };
+      if (state.get.current().header.greeting.type === 'none') {
+
+        value = value + trimString(state.get.current().header.greeting.name);
+
       } else {
-        value = value + ', ' + trimString(state.get.current().header.greeting.name)
+
+        value = value + ', ' + trimString(state.get.current().header.greeting.name);
+
       };
 
     };
