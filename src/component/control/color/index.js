@@ -101,12 +101,12 @@ export const Control_color = function({
     }
   });
 
+  this.delayedUpdate = null;
+
   this.update = ({
     delay = false,
     all = false
   } = {}) => {
-
-    let delayedUpdate = null;
 
     const updateControl = () => {
 
@@ -125,8 +125,8 @@ export const Control_color = function({
     };
 
     if (delay) {
-      clearTimeout(delayedUpdate);
-      delayedUpdate = setTimeout(updateControl, 2000);
+      clearTimeout(this.delayedUpdate);
+      this.delayedUpdate = setTimeout(updateControl, 2000);
     } else {
       updateControl();
     };

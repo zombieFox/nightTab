@@ -194,11 +194,11 @@ export const Control_sliderDouble = function({
 
   };
 
+  this.delayedUpdate = null;
+
   this.update = ({
     delay = false
   } = {}) => {
-
-    let delayedUpdate = null;
 
     const updateControl = () => {
       this.range.left.update();
@@ -206,8 +206,8 @@ export const Control_sliderDouble = function({
     };
 
     if (delay) {
-      clearTimeout(delayedUpdate);
-      delayedUpdate = setTimeout(updateControl, 2000);
+      clearTimeout(this.delayedUpdate);
+      this.delayedUpdate = setTimeout(updateControl, 2000);
     } else {
       updateControl();
     };
