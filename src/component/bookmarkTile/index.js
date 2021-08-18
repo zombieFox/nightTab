@@ -314,18 +314,25 @@ const BookmarkTile = function({
     this.element.bookmark.style.setProperty('--bookmark-border', bookmarkData.link.border);
 
     if (bookmarkData.link.accent.by == 'custom') {
+
       this.element.bookmark.style.setProperty('--theme-accent-rgb-r', bookmarkData.link.accent.rgb.r);
+
       this.element.bookmark.style.setProperty('--theme-accent-rgb-g', bookmarkData.link.accent.rgb.g);
+
       this.element.bookmark.style.setProperty('--theme-accent-rgb-b', bookmarkData.link.accent.rgb.b);
+
       this.element.bookmark.style.setProperty('--theme-accent', 'var(--theme-accent-rgb-r), var(--theme-accent-rgb-g), var(--theme-accent-rgb-b)');
 
       this.element.bookmark.style.setProperty('--theme-accent-rgb-text', '0, 0%, calc(((((var(--theme-accent-rgb-r) * var(--theme-t-r)) + (var(--theme-accent-rgb-g) * var(--theme-t-g)) + (var(--theme-accent-rgb-b) * var(--theme-t-b))) / 255) - var(--theme-t)) * -10000000%)');
 
       this.element.bookmark.style.setProperty('--bookmark-display-visual-color', 'var(--theme-accent)');
-      this.element.bookmark.style.setProperty('--bookmark-display-visual-color-focus-hover', 'var(--theme-accent)');
+
+      this.element.bookmark.style.setProperty('--bookmark-display-visual-color-focus-hover', 'var(--theme-accent-rgb-text)');
+
     };
 
     if (bookmarkData.link.display.visual.shadow.size > 0) {
+
       this.element.bookmark.style.setProperty('--bookmark-display-visual-shadow-size', bookmarkData.link.display.visual.shadow.size);
 
       this.element.bookmark.style.setProperty('--bookmark-display-visual-shadow-offset', '0.1');
@@ -349,35 +356,53 @@ const BookmarkTile = function({
         'calc(var(--bookmark-display-visual-shadow-size) * calc(calc(var(--bookmark-display-visual-shadow-blur) * 32))  * 0.01em)' +
         'rgba(0, 0, 0, calc(var(--bookmark-display-visual-shadow-size) * calc(calc(var(--bookmark-display-visual-shadow-opacity) / 25) * 3)))'
       );
+
     } else {
+
       this.element.bookmark.style.removeProperty('--bookmark-display-visual-shadow-size');
+
       this.element.bookmark.style.removeProperty('--bookmark-display-visual-shadow-offset');
+
       this.element.bookmark.style.removeProperty('--bookmark-display-visual-shadow-blur');
+
       this.element.bookmark.style.removeProperty('--bookmark-display-visual-shadow-opacity');
+
       this.element.bookmark.style.removeProperty('--bookmark-display-visual-shadow');
+
     };
 
     if (bookmarkData.link.color.by == 'custom') {
+
       this.element.bookmark.style.setProperty('--theme-color-r', bookmarkData.link.color.rgb.r);
+
       this.element.bookmark.style.setProperty('--theme-color-g', bookmarkData.link.color.rgb.g);
+
       this.element.bookmark.style.setProperty('--theme-color-b', bookmarkData.link.color.rgb.b);
 
       this.element.bookmark.style.setProperty('--theme-color-h', bookmarkData.link.color.hsl.h);
+
       this.element.bookmark.style.setProperty('--theme-color-s', bookmarkData.link.color.hsl.s);
+
       this.element.bookmark.style.setProperty('--theme-color-l', bookmarkData.link.color.hsl.l);
 
       this.element.bookmark.style.setProperty('--theme-color', bookmarkData.link.color.hsl.h + ', ' + bookmarkData.link.color.hsl.s + '%, ' + bookmarkData.link.color.hsl.l + '%');
+
       this.element.bookmark.style.setProperty('--theme-color-text', '0, 0%, calc(((((var(--theme-color-r) * var(--theme-t-r)) + (var(--theme-color-g) * var(--theme-t-g)) + (var(--theme-color-b) * var(--theme-t-b))) / 255) - var(--theme-t)) * -10000000%)');
 
       this.element.bookmark.style.setProperty('--bookmark-color', 'var(--theme-color)');
+
       this.element.bookmark.style.setProperty('--bookmark-color-focus-hover', 'var(--theme-color)');
 
       this.element.bookmark.style.setProperty('--bookmark-display-name-color', 'var(--theme-color-text)');
+
       this.element.bookmark.style.setProperty('--bookmark-display-name-color-focus-hover', 'var(--theme-color-text)');
 
       this.element.bookmark.style.setProperty('--button-link-text', 'var(--theme-color-text)');
+
       this.element.bookmark.style.setProperty('--button-link-text-focus-hover', 'var(--theme-color-text)');
+
       this.element.bookmark.style.setProperty('--button-link-text-active', 'var(--theme-color-text)');
+
     };
 
     if (bookmarkData.link.background.show) {
