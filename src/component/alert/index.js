@@ -31,7 +31,7 @@ export const Alert = function({
     if (message.length > 0) {
       message.forEach((item, i) => {
 
-        this.element.message.appendChild(node('p:' + item));
+        this.element.message.appendChild(node('p:' + item + '|class:small'));
 
       });
     };
