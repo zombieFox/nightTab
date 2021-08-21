@@ -3,6 +3,7 @@ import { icon } from '../icon';
 import * as form from '../form';
 
 import { node } from '../../utility/node';
+import { complexNode } from '../../utility/complexNode';
 
 import './index.css';
 
@@ -31,7 +32,7 @@ export const Alert = function({
     if (message.length > 0) {
       message.forEach((item, i) => {
 
-        this.element.message.appendChild(node('p:' + item + '|class:small'));
+        this.element.message.appendChild(complexNode({ tag: 'p', text: item, attr: [{ key: 'class', value: 'small' }] }));
 
       });
     };

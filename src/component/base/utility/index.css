@@ -19,6 +19,23 @@
   margin-bottom: 0;
 }
 
+.list-feature {
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.list-feature li {
+  padding: 0.25em 0.5em;
+  list-style-type: none;
+}
+
+.list-feature li:not(:last-child) {
+  margin-bottom: 0;
+}
+
 .list-inline li {
   display: inline-block;
 }

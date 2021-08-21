@@ -16,6 +16,8 @@ import { accentPreset } from '../../accentPreset';
 import { customTheme } from '../../customTheme';
 import { groupAndBookmark } from '../../groupAndBookmark';
 
+import { supportSetting } from '../../menuContent/supportSetting';
+
 import * as form from '../../form';
 
 import { Button } from '../../button';
@@ -1309,7 +1311,7 @@ themeSetting.background = (parent) => {
       })
     },
     image: {
-      alert: new Alert({ iconName: 'info', message: ['Uploading Background images is no longer supported.', '<a href="#" target="_blank">Why has this changed?</a>'] }),
+      alert: new Alert({ iconName: 'info', message: ['Uploading Background images is no longer supported.', `<a href="${supportSetting.link.url + supportSetting.link.page.backgroundImage}" target="_blank">Why has this changed?</a>`] }),
       url: new Control_textarea({
         object: state.get.current(),
         path: 'theme.background.image.url',

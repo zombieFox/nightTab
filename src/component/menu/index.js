@@ -25,6 +25,7 @@ menu.navData = [
   { name: 'Group', active: false, overscroll: true, sub: ['Alignment', 'Name', 'Open All'] },
   { name: 'Toolbar', active: false, overscroll: true, sub: ['Size', 'Location', 'Position', 'Controls'] },
   { name: 'Data', active: false, overscroll: true, sub: ['Restore', 'Backup', 'Clear'] },
+  { name: 'Support', active: false, overscroll: false },
   { name: 'Coffee', active: false, overscroll: false },
   { name: appName, active: false, overscroll: false }
 ];
@@ -33,16 +34,6 @@ menu.mod = {};
 
 menu.element = {
   frame: null
-};
-
-menu.firefoxSpecific = () => {
-
-  const firefoxBrowser = typeof InstallTrigger !== "undefined";
-
-  if (firefoxBrowser) {
-    menu.navData.splice((menu.navData.length - 2), 0, { name: 'Firefox', active: false, overscroll: false })
-  };
-
 };
 
 menu.open = () => {
@@ -71,10 +62,6 @@ menu.toggle = () => {
     menu.open();
   };
 
-};
-
-menu.init = () => {
-  menu.firefoxSpecific();
 };
 
 export { menu };

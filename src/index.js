@@ -22,6 +22,4 @@ component.pageLock.init();
 
 component.keyboard.init();
 
-component.menu.init();
-
 // component.menu.open();

@@ -40,26 +40,51 @@ import { applyCSSVar } from '../../../utility/applyCSSVar';
 import { applyCSSClass } from '../../../utility/applyCSSClass';
 import { applyCSSState } from '../../../utility/applyCSSState';
 
-const appSetting = {};
+const supportSetting = {};
 
-appSetting[appName.toLowerCase()] = (parent) => {
+supportSetting.link = {
+  url: 'https://github.com/zombieFox/' + appName + '/wiki/',
+  page: {
+    browser: 'Browser-support',
+    cookies: 'Cookies-and-cache',
+    data: 'Data-backup-and-restore',
+    backgroundImage: 'Local-background-image',
+    privacy: 'Respecting-your-privacy',
+    recovering: 'Recovering-settings-and-bookmarks',
+    firefox: 'Setting-nightTab-as-your-Firefox-homepage'
+  }
+};
+
+supportSetting.support = (parent) => {
+
+  const makeLinks = () => {
+
+    const wrap = form.wrap();
+
+    const list = node('ul|class:list-feature');
+
+    for (var key in supportSetting.link.page) {
+
+      list.appendChild(node('li', [
+        link.render({ text: supportSetting.link.page[key].replace(/-/g, ' '), href: supportSetting.link.url + supportSetting.link.page[key], openNew: true })
+      ]));
+
+    };
+
+    wrap.appendChild(list);
+
+    return wrap;
+
+  };
 
   parent.appendChild(
     node('div', [
-      node('div|class:version', [
-        logo.render(),
-        node('div|class:version-details', [
-          node('h1:' + appName + '|class:version-app-name'),
-          node('p:Version ' + version.number + '|class:version-number'),
-          node('p:' + version.name + '|class:version-name small')
-        ])
-      ]),
+      makeLinks(),
       node('hr'),
-      complexNode({ tag: 'p', text: 'Project repository on ', node: [link.render({ text: 'GitHub.', href: 'https://github.com/zombieFox/' + appName, openNew: true })] }),
-      complexNode({ tag: 'p', text: appName + ' uses the <a tabindex="1" href="https://github.com/zombieFox/' + appName + '/blob/master/license" target="_blank">GNU General Public License v3.0</a>.' })
+      complexNode({ tag: 'p', text: 'For more support or feedback, submit an <a tabindex="1" href="https://github.com/zombieFox/' + appName + '/issues" target="_blank">Issue</a> or check the <a tabindex="1" href="https://github.com/zombieFox/' + appName + '/wiki" target="_blank">Wiki</a>.' })
     ])
   );
 
 };
 
-export { appSetting }
+export { supportSetting }

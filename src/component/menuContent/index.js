@@ -10,6 +10,7 @@ import { toolbarSetting } from './toolbarSetting';
 import { themeSetting } from './themeSetting';
 import { dataSetting } from './dataSetting';
 import { firefoxSetting } from './firefoxSetting';
+import { supportSetting } from './supportSetting';
 import { coffeeSetting } from './coffeeSetting';
 import { appSetting } from './appSetting';
 
@@ -145,6 +146,16 @@ export const MenuContent = function({
           formElement = this.element.form({ indent: true });
 
           firefoxSetting[this.makeId(activeNavData.name)](formElement);
+
+          break;
+
+        case 'support':
+
+          menuContentItem.appendChild(this.element.header(activeNavData.name));
+
+          formElement = this.element.form({ indent: true });
+
+          supportSetting[this.makeId(activeNavData.name)](formElement);
 
           break;
 
