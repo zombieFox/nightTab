@@ -3,6 +3,7 @@ import { data } from '../data';
 import { appName } from '../appName';
 import { toolbar } from '../toolbar';
 import { bookmark } from '../bookmark';
+import { bookmarkDefault } from '../bookmarkDefault';
 import { groupAndBookmark } from '../groupAndBookmark';
 import { themeSetting } from '../menuContent/themeSetting';
 
@@ -194,6 +195,21 @@ theme.accent.rainbow = {
         item.accent.rgb = convertColor.hsl.rgb(item.accent.hsl);
 
         degree = degree + units;
+
+      });
+
+    });
+
+    groupAndBookmark.render();
+
+  },
+  clear: () => {
+
+    bookmark.all.forEach((item, i) => {
+
+      item.items.forEach((item, i) => {
+
+        item.accent = JSON.parse(JSON.stringify(bookmarkDefault.accent));
 
       });
 

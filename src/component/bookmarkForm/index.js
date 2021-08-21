@@ -386,7 +386,7 @@ export const BookmarkForm = function({
         id: 'accent',
         labelText: 'Accent',
         srOnly: true,
-        defaultValue: JSON.parse(JSON.stringify(bookmarkDefault.accent.rgb)),
+        defaultValue: bookmarkDefault.accent.rgb,
         minMaxObject: bookmarkMinMax,
         action: () => {
           this.preview.update.style(bookmarkData);
@@ -414,7 +414,7 @@ export const BookmarkForm = function({
         id: 'color',
         labelText: 'Colour',
         srOnly: true,
-        defaultValue: JSON.parse(JSON.stringify(bookmarkDefault.color.rgb)),
+        defaultValue: bookmarkDefault.color.rgb,
         minMaxObject: bookmarkMinMax,
         action: () => {
           this.preview.update.style(bookmarkData);

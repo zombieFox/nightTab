@@ -1940,18 +1940,27 @@ themeSetting.bookmark = (parent) => {
     text: ['Bookmark border can also be changed when editing individual Bookmarks.', 'The colour of the Border is defined by the Accent which can also be changed when editing individual Bookmarks.']
   });
 
-  themeSetting.control.bookmark.item.rainbow = new Button({
-    text: 'Apply unique accent to each',
-    style: ['line'],
-    func: () => {
-      theme.accent.rainbow.render();
-      data.save();
-    }
-  });
-
-  themeSetting.control.bookmark.item.rainbowHelper = new Control_helperText({
-    text: ['Bookmark custom Accent can also be changed when editing individual Bookmarks.']
-  });
+  themeSetting.control.bookmark.item.rainbow = {
+    add: new Button({
+      text: 'Add unique accent to each',
+      style: ['line'],
+      func: () => {
+        theme.accent.rainbow.render();
+        data.save();
+      }
+    }),
+    remove: new Button({
+      text: 'Remove all unique accent',
+      style: ['line'],
+      func: () => {
+        theme.accent.rainbow.clear();
+        data.save();
+      }
+    }),
+    helper: new Control_helperText({
+      text: ['Bookmark custom Accent can also be changed when editing individual Bookmarks.']
+    })
+  };
 
   parent.appendChild(
     node('div', [
@@ -1969,8 +1978,20 @@ themeSetting.bookmark = (parent) => {
       themeSetting.control.bookmark.item.border.wrap(),
       themeSetting.control.bookmark.item.borderHelper.wrap(),
       node('hr'),
-      themeSetting.control.bookmark.item.rainbow.wrap(),
-      themeSetting.control.bookmark.item.rainbowHelper.wrap()
+      form.wrap({
+        children: [
+          form.inline({
+            gap: 'small',
+            wrap: true,
+            equalGap: true,
+            children: [
+              themeSetting.control.bookmark.item.rainbow.add.wrap(),
+              themeSetting.control.bookmark.item.rainbow.remove.wrap(),
+            ]
+          })
+        ]
+      }),
+      themeSetting.control.bookmark.item.rainbow.helper.wrap()
     ])
   );
 
