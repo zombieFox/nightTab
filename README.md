@@ -39,6 +39,14 @@ A browser addon/extension ready zip will be created in `/dist/extension/`.
 
 [![nightTab Demo](asset/screenshot/screenshot-001.png)](https://zombiefox.github.io/nightTab/)
 [![nightTab Demo](asset/screenshot/screenshot-002.png)](https://zombiefox.github.io/nightTab/)
+
+---
+
+### Example nightTab setups:
+
+- [Where to find these setups](https://github.com/zombieFox/nightTab/tree/main/asset/screenshot)
+- [How to import these setups](https://github.com/zombieFox/nightTab/wiki/Data-backup-and-restore#restore-data)
+
 [![nightTab Demo](asset/screenshot/screenshot-003.png)](https://zombiefox.github.io/nightTab/)
 [![nightTab Demo](asset/screenshot/screenshot-004.png)](https://zombiefox.github.io/nightTab/)
 [![nightTab Demo](asset/screenshot/screenshot-005.png)](https://zombiefox.github.io/nightTab/)
