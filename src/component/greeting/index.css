@@ -24,7 +24,7 @@
 }
 
 .is-theme-background-type-color .greeting-text {
-  color: hsl(var(--theme-background-color-rgb-text));
+  color: hsl(var(--theme-background-color-text));
 }
 
 .is-header-item-justify-left .greeting {

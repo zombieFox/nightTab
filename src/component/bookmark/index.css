@@ -569,8 +569,8 @@
 }
 
 .is-theme-background-type-color .is-bookmark-opacity-low .bookmark-display-name {
-  --bookmark-display-name-color: var(--theme-background-color-rgb-text);
-  --bookmark-display-name-color-focus-hover: var(--theme-background-color-rgb-text);
+  --bookmark-display-name-color: var(--theme-background-color-text);
+  --bookmark-display-name-color-focus-hover: var(--theme-background-color-text);
 }
 
 .is-bookmark-alignment-top-left .bookmark-display-name-text,

@@ -53,7 +53,7 @@
 .is-theme-background-type-color .clock-minute,
 .is-theme-background-type-color .clock-second,
 .is-theme-background-type-color .clock-meridiem {
-  color: hsl(var(--theme-background-color-rgb-text));
+  color: hsl(var(--theme-background-color-text));
 }
 
 .is-header-item-justify-left .clock {

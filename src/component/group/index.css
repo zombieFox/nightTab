@@ -80,7 +80,7 @@
 }
 
 .is-theme-background-type-color .group-name-text {
-  color: hsl(var(--theme-background-color-rgb-text));
+  color: hsl(var(--theme-background-color-text));
 }
 
 .group-body {
@@ -175,8 +175,8 @@
 }
 
 .is-group-open-all-opacity-low.is-theme-background-type-color .group-control-open-all {
-  --button-text: var(--theme-background-color-rgb-text);
-  --button-text-focus-hover: var(--theme-background-color-rgb-text);
-  --button-text-active: var(--theme-background-color-rgb-text);
-  --button-text-disabled: var(--theme-background-color-rgb-text);
+  --button-text: var(--theme-background-color-text);
+  --button-text-focus-hover: var(--theme-background-color-text);
+  --button-text-active: var(--theme-background-color-text);
+  --button-text-disabled: var(--theme-background-color-text);
 }

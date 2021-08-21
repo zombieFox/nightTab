@@ -71,10 +71,10 @@
 }
 
 .is-toolbar-opacity-low.is-theme-background-type-color .toolbar {
-  --button-text: var(--theme-background-color-rgb-text);
-  --button-text-focus-hover: var(--theme-background-color-rgb-text);
-  --button-text-active: var(--theme-background-color-rgb-text);
-  --button-text-disabled: var(--theme-background-color-rgb-text);
+  --button-text: var(--theme-background-color-text);
+  --button-text-focus-hover: var(--theme-background-color-text);
+  --button-text-active: var(--theme-background-color-text);
+  --button-text-disabled: var(--theme-background-color-text);
 }
 
 

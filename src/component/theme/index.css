@@ -35,7 +35,7 @@
 
 :root {
   --theme-background-color: var(--theme-background-color-rgb-r), var(--theme-background-color-rgb-g), var(--theme-background-color-rgb-b);
-  --theme-background-color-rgb-text: 0, 0%, calc(((((var(--theme-background-color-rgb-r) * var(--theme-t-r)) + (var(--theme-background-color-rgb-g) * var(--theme-t-g)) + (var(--theme-background-color-rgb-b) * var(--theme-t-b))) / 255) - var(--theme-t)) * -10000000%);
+  --theme-background-color-text: 0, 0%, calc(((((var(--theme-background-color-rgb-r) * var(--theme-t-r)) + (var(--theme-background-color-rgb-g) * var(--theme-t-g)) + (var(--theme-background-color-rgb-b) * var(--theme-t-b))) / 255) - var(--theme-t)) * -10000000%);
 }
 
 .is-theme-style-light {

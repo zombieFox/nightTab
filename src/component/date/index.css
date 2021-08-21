@@ -53,7 +53,7 @@
 .is-theme-background-type-color .date-date,
 .is-theme-background-type-color .date-month,
 .is-theme-background-type-color .date-year {
-  color: hsl(var(--theme-background-color-rgb-text));
+  color: hsl(var(--theme-background-color-text));
 }
 
 .is-header-item-justify-left .date {

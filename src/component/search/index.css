@@ -64,7 +64,7 @@ input[type="search"]:disabled {
 }
 
 .is-header-search-opacity-low.is-theme-background-type-color .search {
-  --form-placeholder: var(--theme-background-color-rgb-text);
-  --form-placeholder-focus-hover: var(--theme-background-color-rgb-text);
-  --form-placeholder-disabled: var(--theme-background-color-rgb-text);
+  --form-placeholder: var(--theme-background-color-text);
+  --form-placeholder-focus-hover: var(--theme-background-color-text);
+  --form-placeholder-disabled: var(--theme-background-color-text);
 }
