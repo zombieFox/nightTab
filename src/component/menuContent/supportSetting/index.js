@@ -48,9 +48,10 @@ supportSetting.link = {
     browser: 'Browser-support',
     cookies: 'Cookies-and-cache',
     data: 'Data-backup-and-restore',
-    backgroundImage: 'Local-background-image',
     privacy: 'Respecting-your-privacy',
     recovering: 'Recovering-settings-and-bookmarks',
+    backgroundImageVideo: 'Setting-a-background-video-or-image',
+    localBackgroundImage: 'Local-background-image',
     firefox: 'Setting-nightTab-as-your-Firefox-homepage'
   }
 };
