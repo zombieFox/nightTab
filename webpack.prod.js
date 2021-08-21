@@ -18,8 +18,12 @@ module.exports = merge(common, {
         minify: CssMinimizerPlugin.cleanCssMinify
       }),
       new TerserPlugin({
-        parallel: true,
-        extractComments: false
+        terserOptions: {
+          format: {
+            comments: false,
+          },
+        },
+        extractComments: false,
       })
     ]
   },
@@ -30,7 +34,9 @@ module.exports = merge(common, {
     }],
   },
   plugins: [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css'
+    }),
     new ZipPlugin({
       path: path.resolve(__dirname, 'dist/extension'),
       filename: name + '_' + version + '.zip'
