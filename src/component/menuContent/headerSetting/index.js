@@ -1098,6 +1098,11 @@ headerSetting.date = (parent) => {
       header.item.render();
       layout.area.assemble();
       headerSetting.disable();
+      headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+      headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+      headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+      headerSetting.edge.date.size.update.primary(header.element.date.date());
+      headerSetting.edge.search.size.update.primary(header.element.search.search());
       data.save();
     }
   });
@@ -1116,6 +1121,11 @@ headerSetting.date = (parent) => {
       header.item.clear();
       header.item.render();
       layout.area.assemble();
+      headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+      headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+      headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+      headerSetting.edge.date.size.update.primary(header.element.date.date());
+      headerSetting.edge.search.size.update.primary(header.element.search.search());
       data.save();
     }
   });
@@ -1134,6 +1144,11 @@ headerSetting.date = (parent) => {
       header.item.clear();
       header.item.render();
       layout.area.assemble();
+      headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+      headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+      headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+      headerSetting.edge.date.size.update.primary(header.element.date.date());
+      headerSetting.edge.search.size.update.primary(header.element.search.search());
       data.save();
     }
   });
@@ -1190,6 +1205,11 @@ headerSetting.date = (parent) => {
       header.item.clear();
       header.item.render();
       layout.area.assemble();
+      headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+      headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+      headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+      headerSetting.edge.date.size.update.primary(header.element.date.date());
+      headerSetting.edge.search.size.update.primary(header.element.search.search());
       data.save();
     }
   });
@@ -1256,6 +1276,11 @@ headerSetting.date = (parent) => {
       header.item.render();
       layout.area.assemble();
       headerSetting.disable();
+      headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+      headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+      headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+      headerSetting.edge.date.size.update.primary(header.element.date.date());
+      headerSetting.edge.search.size.update.primary(header.element.search.search());
       data.save();
     }
   });
@@ -1274,6 +1299,11 @@ headerSetting.date = (parent) => {
       header.item.clear();
       header.item.render();
       layout.area.assemble();
+      headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+      headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+      headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+      headerSetting.edge.date.size.update.primary(header.element.date.date());
+      headerSetting.edge.search.size.update.primary(header.element.search.search());
       data.save();
     }
   });
@@ -1341,6 +1371,11 @@ headerSetting.date = (parent) => {
       header.item.clear();
       header.item.render();
       layout.area.assemble();
+      headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+      headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+      headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+      headerSetting.edge.date.size.update.primary(header.element.date.date());
+      headerSetting.edge.search.size.update.primary(header.element.search.search());
       data.save();
     }
   });
@@ -1368,6 +1403,11 @@ headerSetting.date = (parent) => {
       header.element.date.update();
       headerSetting.control.date.separator.collapse.update();
       headerSetting.disable();
+      headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+      headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+      headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+      headerSetting.edge.date.size.update.primary(header.element.date.date());
+      headerSetting.edge.search.size.update.primary(header.element.search.search());
       data.save();
     }
   });
