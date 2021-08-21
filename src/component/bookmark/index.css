@@ -2,7 +2,7 @@
   --bookmark-color: var(--theme-primary-020);
   --bookmark-color-focus-hover: var(--theme-primary-030);
   --bookmark-display-visual-color: var(--theme-accent);
-  --bookmark-display-visual-color-focus-hover: var(--theme-accent-rgb-text);
+  --bookmark-display-visual-color-focus-hover: var(--theme-accent-text);
   --bookmark-display-name-color: var(--theme-primary-text-020);
   --bookmark-display-name-color-focus-hover: var(--theme-primary-text-030);
 }
@@ -564,8 +564,8 @@
 }
 
 .is-theme-background-type-accent .is-bookmark-opacity-low .bookmark-display-name {
-  --bookmark-display-name-color: var(--theme-accent-rgb-text);
-  --bookmark-display-name-color-focus-hover: var(--theme-accent-rgb-text);
+  --bookmark-display-name-color: var(--theme-accent-text);
+  --bookmark-display-name-color-focus-hover: var(--theme-accent-text);
 }
 
 .is-theme-background-type-color .is-bookmark-opacity-low .bookmark-display-name {
@@ -797,23 +797,23 @@
   border-radius: 0;
   min-height: initial;
   position: relative;
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
   transition: background-color var(--layout-transition-fast), border-color var(--layout-transition-fast), color var(--layout-transition-fast), top var(--layout-transition-fast), right var(--layout-transition-fast), bottom var(--layout-transition-fast), left var(--layout-transition-fast);
 }
 
 .bookmark-control-button:hover,
 .bookmark-control-button:focus {
-  background-color: hsla(var(--theme-accent-rgb-text), 0.1);
-  color: hsl(var(--theme-accent-rgb-text));
+  background-color: hsla(var(--theme-accent-text), 0.1);
+  color: hsl(var(--theme-accent-text));
 }
 
 .bookmark-control-button:active,
 .bookmark-control-button.active {
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
 }
 
 .bookmark-control-button:disabled {
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
   opacity: 0.25;
 }
 
@@ -1004,7 +1004,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
 }
 
 .bookmark-sort-placeholder {
