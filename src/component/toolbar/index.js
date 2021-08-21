@@ -14,6 +14,8 @@ toolbar.bar = {};
 
 toolbar.bar.render = () => {
 
+  toolbar.current = new ToolbarControl();
+
   const body = document.querySelector('body');
 
   switch (state.get.current().toolbar.location) {
@@ -29,8 +31,8 @@ toolbar.bar.render = () => {
 };
 
 toolbar.init = () => {
-  toolbar.current = new ToolbarControl();
   toolbar.bar.render();
+  toolbar.current.update.edit();
 };
 
 export { toolbar }
