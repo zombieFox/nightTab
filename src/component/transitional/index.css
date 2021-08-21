@@ -21,11 +21,11 @@
 }
 
 .is-theme-background-type-accent .transitional-text {
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
 }
 
 .is-theme-background-type-accent .transitional-text {
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
 }
 
 .is-theme-background-type-color .transitional-text {

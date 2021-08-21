@@ -23,7 +23,7 @@
 
 .version-number {
   background-color: rgb(var(--theme-accent));
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
   border-radius: calc(var(--theme-radius) * 0.01em);
   padding: 0 0.5em;
 }

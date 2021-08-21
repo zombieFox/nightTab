@@ -104,7 +104,7 @@
 
 .theme-custom-control-button:hover,
 .theme-custom-control-button:focus {
-  background-color: hsla(var(--theme-accent-rgb-text), 0.1);
+  background-color: hsla(var(--theme-accent-text), 0.1);
 }
 
 .theme-custom-control-edit .icon,

@@ -552,6 +552,12 @@
   transition: color var(--layout-transition-extra-fast);
 }
 
+.bookmark:focus .bookmark-display-name,
+.bookmark:hover .bookmark-display-name,
+.bookmark:focus-within .bookmark-display-name {
+  color: hsl(var(--bookmark-display-name-color-focus-hover));
+}
+
 .is-bookmark-opacity-low .bookmark-display-name {
   --bookmark-display-name-color: var(--theme-primary-text-010);
   --bookmark-display-name-color-focus-hover: var(--theme-primary-text-010);
@@ -565,12 +571,6 @@
 .is-theme-background-type-color .is-bookmark-opacity-low .bookmark-display-name {
   --bookmark-display-name-color: var(--theme-background-color-rgb-text);
   --bookmark-display-name-color-focus-hover: var(--theme-background-color-rgb-text);
-}
-
-.bookmark:focus .bookmark-display-name,
-.bookmark:hover .bookmark-display-name,
-.bookmark:focus-within .bookmark-display-name {
-  color: hsl(var(--bookmark-display-name-color-focus-hover));
 }
 
 .is-bookmark-alignment-top-left .bookmark-display-name-text,

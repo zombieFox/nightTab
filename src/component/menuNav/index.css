@@ -85,7 +85,7 @@
 .menu-nav-tab.active:hover,
 .menu-nav-tab.active:active {
   background-color: rgb(var(--theme-accent));
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
 }
 
 .menu-nav-tab:after {

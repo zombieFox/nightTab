@@ -32,7 +32,7 @@
 
 .is-theme-background-type-accent .clock-separator {
   justify-content: center;
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
 }
 
 .clock-hour,
@@ -46,7 +46,7 @@
 .is-theme-background-type-accent .clock-minute,
 .is-theme-background-type-accent .clock-second,
 .is-theme-background-type-accent .clock-meridiem {
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
 }
 
 .is-theme-background-type-color .clock-hour,

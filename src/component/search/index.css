@@ -58,9 +58,9 @@ input[type="search"]:disabled {
 }
 
 .is-header-search-opacity-low.is-theme-background-type-accent .search {
-  --form-placeholder: var(--theme-accent-rgb-text);
-  --form-placeholder-focus-hover: var(--theme-accent-rgb-text);
-  --form-placeholder-disabled: var(--theme-accent-rgb-text);
+  --form-placeholder: var(--theme-accent-text);
+  --form-placeholder-focus-hover: var(--theme-accent-text);
+  --form-placeholder-disabled: var(--theme-accent-text);
 }
 
 .is-header-search-opacity-low.is-theme-background-type-color .search {

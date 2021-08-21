@@ -32,7 +32,7 @@
 
 .is-theme-background-type-accent .date-separator {
   justify-content: center;
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
 }
 
 .date-date,
@@ -46,7 +46,7 @@
 .is-theme-background-type-accent .date-date,
 .is-theme-background-type-accent .date-month,
 .is-theme-background-type-accent .date-year {
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
 }
 
 .is-theme-background-type-color .date-day,

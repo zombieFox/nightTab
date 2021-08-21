@@ -2,9 +2,9 @@
   --edge: inset 0 0 0 var(--layout-line-width) rgb(var(--theme-accent)),
     inset 0 0 0 calc(var(--layout-line-width) * 4) rgba(var(--theme-accent), 0.1),
     inset 0 0 0 calc(var(--layout-line-width) * 8) rgba(var(--theme-accent), 0.1);
-  --edge-on-accent: inset 0 0 0 var(--layout-line-width) hsl(var(--theme-accent-rgb-text)),
-    inset 0 0 0 calc(var(--layout-line-width) * 4) hsla(var(--theme-accent-rgb-text), 0.1),
-    inset 0 0 0 calc(var(--layout-line-width) * 8) hsla(var(--theme-accent-rgb-text), 0.1);
+  --edge-on-accent: inset 0 0 0 var(--layout-line-width) hsl(var(--theme-accent-text)),
+    inset 0 0 0 calc(var(--layout-line-width) * 4) hsla(var(--theme-accent-text), 0.1),
+    inset 0 0 0 calc(var(--layout-line-width) * 8) hsla(var(--theme-accent-text), 0.1);
 }
 
 .edge,

@@ -84,7 +84,7 @@
 }
 
 .is-theme-background-type-accent .layout-divider {
-  background-color: hsl(var(--theme-accent-rgb-text));
+  background-color: hsl(var(--theme-accent-text));
 }
 
 .is-layout-direction-horizontal .layout-divider {

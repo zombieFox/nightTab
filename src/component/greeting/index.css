@@ -20,7 +20,7 @@
 }
 
 .is-theme-background-type-accent .greeting-text {
-  color: hsl(var(--theme-accent-rgb-text));
+  color: hsl(var(--theme-accent-text));
 }
 
 .is-theme-background-type-color .greeting-text {

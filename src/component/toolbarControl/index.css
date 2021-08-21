@@ -64,10 +64,10 @@
 }
 
 .is-toolbar-opacity-low.is-theme-background-type-accent .toolbar {
-  --button-text: var(--theme-accent-rgb-text);
-  --button-text-focus-hover: var(--theme-accent-rgb-text);
-  --button-text-active: var(--theme-accent-rgb-text);
-  --button-text-disabled: var(--theme-accent-rgb-text);
+  --button-text: var(--theme-accent-text);
+  --button-text-focus-hover: var(--theme-accent-text);
+  --button-text-active: var(--theme-accent-text);
+  --button-text-disabled: var(--theme-accent-text);
 }
 
 .is-toolbar-opacity-low.is-theme-background-type-color .toolbar {
