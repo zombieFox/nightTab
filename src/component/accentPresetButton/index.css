@@ -8,7 +8,7 @@
   grid-template-columns: repeat(7, auto);
   grid-auto-flow: row;
   justify-items: center;
-  width: fit-content;
+  width: min-content;
 }
 
 @media (min-width: 550px) {
