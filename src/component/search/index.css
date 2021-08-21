@@ -43,8 +43,15 @@ input[type="search"]:disabled {
 }
 
 .is-search .search-clear {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
   opacity: 1;
   pointer-events: all;
+}
+
+.is-search .search-clear:after {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .is-search .search-input {

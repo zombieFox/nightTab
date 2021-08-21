@@ -42,7 +42,7 @@ export const Search = function() {
       text: 'Clear search',
       srOnly: true,
       iconName: 'cross',
-      style: ['link'],
+      style: ['link', 'line'],
       title: 'Clear search',
       classList: ['search-clear'],
       func: () => {
