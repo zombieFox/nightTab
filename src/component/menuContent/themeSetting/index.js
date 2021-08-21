@@ -1018,13 +1018,17 @@ themeSetting.shade = (parent) => {
         applyCSSVar('theme.shade.blur');
         data.save();
       }
+    }),
+    blurHelper: new Control_helperText({
+      text: ['Not supported by all browsers.']
     })
   };
 
   parent.appendChild(
     node('div', [
       themeSetting.control.shade.opacity.wrap(),
-      themeSetting.control.shade.blur.wrap()
+      themeSetting.control.shade.blur.wrap(),
+      themeSetting.control.shade.blurHelper.wrap()
     ])
   );
 
