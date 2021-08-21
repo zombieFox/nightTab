@@ -144,10 +144,8 @@ groupSetting.name = (parent) => {
     max: state.get.minMax().group.name.size.max,
     action: () => {
       applyCSSVar('group.name.size');
-      data.save();
-    },
-    sliderAction: () => {
       if (state.get.current().bookmark.show && group.area.current.length > 0 && bookmark.all[0].name.show && groupSetting.edge.name.size) { groupSetting.edge.name.size.track(); };
+      data.save();
     },
     mouseDownAction: () => {
       if (state.get.current().bookmark.show && group.area.current.length > 0 && bookmark.all[0].name.show && groupSetting.edge.name.size) { groupSetting.edge.name.size.show(); };
@@ -290,10 +288,8 @@ groupSetting.open = (parent) => {
     max: state.get.minMax().group.openAll.size.max,
     action: () => {
       applyCSSVar('group.openAll.size');
-      data.save();
-    },
-    sliderAction: () => {
       if (state.get.current().bookmark.show && group.area.current.length > 0 && bookmark.all[0].openAll.show && groupSetting.edge.open.size) { groupSetting.edge.open.size.track(); };
+      data.save();
     },
     mouseDownAction: () => {
       if (state.get.current().bookmark.show && group.area.current.length > 0 && bookmark.all[0].openAll.show && groupSetting.edge.open.size) { groupSetting.edge.open.size.show(); };

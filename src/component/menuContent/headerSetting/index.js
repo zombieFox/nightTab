@@ -482,10 +482,8 @@ headerSetting.greeting = (parent) => {
     max: state.get.minMax().header.greeting.size.max,
     action: () => {
       applyCSSVar('header.greeting.size');
-      data.save();
-    },
-    sliderAction: () => {
       headerSetting.edge.greeting.size.track();
+      data.save();
     },
     mouseDownAction: () => {
       headerSetting.edge.greeting.size.show();
@@ -653,10 +651,8 @@ headerSetting.transitional = (parent) => {
     max: state.get.minMax().header.transitional.size.max,
     action: () => {
       applyCSSVar('header.transitional.size');
-      data.save();
-    },
-    sliderAction: () => {
       headerSetting.edge.transitional.size.track();
+      data.save();
     },
     mouseDownAction: () => {
       headerSetting.edge.transitional.size.show();
@@ -920,10 +916,8 @@ headerSetting.clock = (parent) => {
     max: state.get.minMax().header.clock.size.max,
     action: () => {
       applyCSSVar('header.clock.size');
-      data.save();
-    },
-    sliderAction: () => {
       headerSetting.edge.clock.size.track();
+      data.save();
     },
     mouseDownAction: () => {
       headerSetting.edge.clock.size.show();
@@ -1431,10 +1425,8 @@ headerSetting.date = (parent) => {
     max: state.get.minMax().header.date.size.max,
     action: () => {
       applyCSSVar('header.date.size');
-      data.save();
-    },
-    sliderAction: () => {
       headerSetting.edge.date.size.track();
+      data.save();
     },
     mouseDownAction: () => {
       headerSetting.edge.date.size.show();
@@ -1544,10 +1536,8 @@ headerSetting.search = (parent) => {
     max: state.get.minMax().header.search.size.max,
     action: () => {
       applyCSSVar('header.search.size');
-      data.save();
-    },
-    sliderAction: () => {
       headerSetting.edge.search.size.track();
+      data.save();
     },
     mouseDownAction: () => {
       headerSetting.edge.search.size.show();
@@ -1754,10 +1744,8 @@ headerSetting.search = (parent) => {
       max: state.get.minMax().header.search.width.size.max,
       action: () => {
         applyCSSVar('header.search.width.size');
-        data.save();
-      },
-      sliderAction: () => {
         headerSetting.edge.search.size.track();
+        data.save();
       },
       mouseDownAction: () => {
         headerSetting.edge.search.size.show();

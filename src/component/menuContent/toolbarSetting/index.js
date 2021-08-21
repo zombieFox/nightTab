@@ -98,10 +98,8 @@ toolbarSetting.size = (parent) => {
     max: state.get.minMax().toolbar.size.max,
     action: () => {
       applyCSSVar('toolbar.size');
-      data.save();
-    },
-    sliderAction: () => {
       toolbarSetting.edge.size.track();
+      data.save();
     },
     mouseDownAction: () => {
       toolbarSetting.edge.size.show();

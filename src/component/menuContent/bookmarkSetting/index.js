@@ -213,10 +213,8 @@ bookmarkSetting.general = (parent) => {
     max: state.get.minMax().bookmark.size.max,
     action: () => {
       applyCSSVar('bookmark.size');
-      data.save();
-    },
-    sliderAction: () => {
       if (state.get.current().bookmark.show && bookmark.tile.current.length > 0 && bookmarkSetting.edge.general.size) { bookmarkSetting.edge.general.size.track(); };
+      data.save();
     },
     mouseDownAction: () => {
       if (state.get.current().bookmark.show && bookmark.tile.current.length > 0 && bookmarkSetting.edge.general.size) { bookmarkSetting.edge.general.size.show(); };

@@ -127,10 +127,8 @@ layoutSetting.scaling = (parent) => {
     max: state.get.minMax().layout.size.max,
     action: () => {
       applyCSSVar('layout.size');
-      data.save();
-    },
-    sliderAction: () => {
       layoutSetting.edge.scaling.size.track();
+      data.save();
     },
     mouseDownAction: () => {
       layoutSetting.edge.scaling.size.show();
@@ -167,10 +165,8 @@ layoutSetting.area = (parent) => {
     max: state.get.minMax().layout.width.max,
     action: () => {
       applyCSSVar('layout.width');
-      data.save();
-    },
-    sliderAction: () => {
       layoutSetting.edge.area.width.track();
+      data.save();
     },
     mouseDownAction: () => {
       layoutSetting.edge.area.width.show();
@@ -192,10 +188,8 @@ layoutSetting.area = (parent) => {
       max: state.get.minMax().layout.area.header.width.max,
       action: () => {
         applyCSSVar('layout.area.header.width');
-        data.save();
-      },
-      sliderAction: () => {
         layoutSetting.edge.area.header.track();
+        data.save();
       },
       mouseDownAction: () => {
         layoutSetting.edge.area.header.show();
@@ -240,10 +234,8 @@ layoutSetting.area = (parent) => {
       max: state.get.minMax().layout.area.bookmark.width.max,
       action: () => {
         applyCSSVar('layout.area.bookmark.width');
-        data.save();
-      },
-      sliderAction: () => {
         layoutSetting.edge.area.bookmark.track();
+        data.save();
       },
       mouseDownAction: () => {
         layoutSetting.edge.area.bookmark.show();
@@ -317,10 +309,8 @@ layoutSetting.padding = (parent) => {
     max: state.get.minMax().layout.padding.max,
     action: () => {
       applyCSSVar('layout.padding');
-      data.save();
-    },
-    sliderAction: () => {
       layoutSetting.edge.padding.track();
+      data.save();
     },
     mouseDownAction: () => {
       layoutSetting.edge.padding.show();
@@ -353,10 +343,8 @@ layoutSetting.gutter = (parent) => {
     max: state.get.minMax().layout.gutter.max,
     action: () => {
       applyCSSVar('layout.gutter');
-      data.save();
-    },
-    sliderAction: () => {
       layoutSetting.edge.gutter.track();
+      data.save();
     },
     mouseDownAction: () => {
       layoutSetting.edge.gutter.show();

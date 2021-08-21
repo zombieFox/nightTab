@@ -160,7 +160,6 @@ export const Edge = function({
 
     const body = document.querySelector('body');
 
-
     if (secondary.length > 0) {
 
       secondary.forEach((item, i) => {
