@@ -29,6 +29,7 @@ import { obsidian } from './obsidian';
 import { origin } from './origin';
 import { outrun } from './outrun';
 import { pepper } from './pepper';
+import { point } from './point';
 import { pumpkin } from './pumpkin';
 import { replica } from './replica';
 import { rumble } from './rumble';
@@ -79,6 +80,7 @@ themePreset.get = () => {
     origin,
     outrun,
     pepper,
+    point,
     pumpkin,
     replica,
     rumble,
