@@ -8,9 +8,15 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 
 ---
 
-### Wiki & help
+### Support
 
-- [Recovering user settings and bookmarks](https://github.com/zombieFox/nightTab/wiki/Recovering-user-settings-and-bookmarks)
+- [Browser support](https://github.com/zombieFox/nightTab/wiki/Browser-support)
+- [Cookies and cache](https://github.com/zombieFox/nightTab/wiki/Cookies-and-cache)
+- [Data backup and restore](https://github.com/zombieFox/nightTab/wiki/Data-backup-and-restore)
+- [Respecting your privacy](https://github.com/zombieFox/nightTab/wiki/Respecting-your-privacy)
+- [Recovering settings and bookmarks](https://github.com/zombieFox/nightTab/wiki/Recovering-settings-and-bookmarks)
+- [Setting a background video or image](https://github.com/zombieFox/nightTab/wiki/Setting-a-background-video-or-image)
+- [Local background image](https://github.com/zombieFox/nightTab/wiki/Local-background-image)
 - [Setting nightTab as your Firefox homepage](https://github.com/zombieFox/nightTab/wiki/Setting-nightTab-as-your-Firefox-homepage)
 
 ---
