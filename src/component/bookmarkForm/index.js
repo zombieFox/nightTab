@@ -612,7 +612,7 @@ export const BookmarkForm = function({
       object: bookmarkData.propagate,
       path: 'display',
       id: 'apply-to-all-display',
-      labelText: 'Apply Show Visual Element and Show Name to other Bookmarks',
+      labelText: 'Apply Visual and Name to other Bookmarks',
       description: [
         'When saved, apply the above visibility to all other Bookmarks.',
         'Only the Show Visual Element and Show Name settings will be applied to all.'
@@ -622,7 +622,7 @@ export const BookmarkForm = function({
       object: bookmarkData.propagate,
       path: 'layout',
       id: 'apply-to-all-layout',
-      labelText: 'Apply this Layout to other Bookmarks',
+      labelText: 'Apply Layout to other Bookmarks',
       description: [
         'When saved, apply the above Layout to all other Bookmarks.',
         'Only the Visual and Name settings will be applied to all.'
@@ -632,7 +632,7 @@ export const BookmarkForm = function({
       object: bookmarkData.propagate,
       path: 'theme',
       id: 'apply-to-all-theme',
-      labelText: 'Apply this Theme to other Bookmarks',
+      labelText: 'Apply Theme to other Bookmarks',
       description: [
         'When saved, apply the above Theme to all other Bookmarks.',
         'Only the Colour, Accent, Opacity, Border and Visual shadow settings will be applied to all.'
