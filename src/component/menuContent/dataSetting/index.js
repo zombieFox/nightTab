@@ -43,39 +43,39 @@ import { applyCSSState } from '../../../utility/applyCSSState';
 const dataSetting = {};
 
 dataSetting.control = {
-  import: {},
+  restore: {},
   backup: {},
   clear: {}
 };
 
-dataSetting.import = (parent) => {
+dataSetting.restore = (parent) => {
 
-  const importFeedback = form.feedback();
+  const restoreFeedback = form.feedback();
 
-  data.feedback.empty.render(importFeedback);
+  data.feedback.empty.render(restoreFeedback);
 
-  dataSetting.control.import.importElement = new Control_inputButton({
-    id: 'import-data',
+  dataSetting.control.restore.restoreElement = new Control_inputButton({
+    id: 'restore-data',
     type: 'file',
     inputHide: true,
     labelText: 'Import data',
     inputButtonStyle: ['line'],
     action: () => {
-      data.import.file(dataSetting.control.import.importElement.input, importFeedback)
+      data.import.file(dataSetting.control.restore.restoreElement.input, restoreFeedback)
     }
   });
 
-  dataSetting.control.import.importHelper = new Control_helperText({
+  dataSetting.control.restore.restoreHelper = new Control_helperText({
     text: ['Restore a previously exported ' + appName + ' backup.']
   });
 
   parent.appendChild(
     node('div', [
-      dataSetting.control.import.importElement.wrap(),
-      dataSetting.control.import.importHelper.wrap(),
+      dataSetting.control.restore.restoreElement.wrap(),
+      dataSetting.control.restore.restoreHelper.wrap(),
       form.wrap({
         children: [
-          importFeedback
+          restoreFeedback
         ]
       })
     ])

@@ -24,7 +24,7 @@ menu.navData = [
   { name: 'Bookmark', active: false, overscroll: true, sub: ['General', 'Style', 'Orientation', 'Sort'] },
   { name: 'Group', active: false, overscroll: true, sub: ['Alignment', 'Name', 'Open All'] },
   { name: 'Toolbar', active: false, overscroll: true, sub: ['Size', 'Location', 'Position', 'Controls'] },
-  { name: 'Data', active: false, overscroll: true, sub: ['Import', 'Backup', 'Clear'] },
+  { name: 'Data', active: false, overscroll: true, sub: ['Restore', 'Backup', 'Clear'] },
   { name: 'Coffee', active: false, overscroll: false },
   { name: appName, active: false, overscroll: false }
 ];
