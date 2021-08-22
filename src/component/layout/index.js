@@ -56,13 +56,9 @@ layout.area = {
 
       });
 
-      set({
-        object: state.get.current(),
-        path: 'layout.breakpoint',
-        value: breakpoint
-      });
+      state.get.current().layout.breakpoint = breakpoint;
 
-      layout.breakpoint.bind();
+      layout.breakpoint.render();
 
     });
 
@@ -143,7 +139,7 @@ layout.bookmark = {
 };
 
 layout.breakpoint = {
-  bind: () => {
+  render: () => {
 
     const html = document.querySelector('html');
 
@@ -221,7 +217,6 @@ layout.init = () => {
     'layout.overscroll'
   ]);
   layout.area.render();
-  layout.breakpoint.bind();
   layout.title.render();
 };
 

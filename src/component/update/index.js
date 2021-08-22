@@ -538,6 +538,8 @@ update.mod['7.0.0'] = function(data) {
 
   });
 
+  data.state.layout.breakpoint = data.state.bookmark.breakpoint;
+
   delete data.state.bookmark.area;
 
   delete data.state.bookmark.item;
