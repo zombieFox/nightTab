@@ -678,7 +678,7 @@ headerSetting.transitional = (parent) => {
     object: state.get.current(),
     label: 'Wording',
     radioGroup: [
-      { id: 'header-transitional-type-timeanddate', labelText: '"The time and date is"', value: 'timeanddate' },
+      { id: 'header-transitional-type-time-and-date', labelText: '"The time and date is"', value: 'time-and-date' },
       { id: 'header-transitional-type-its', labelText: '"It\'s"', value: 'its' }
     ],
     groupName: 'header-transitional-type',

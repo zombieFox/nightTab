@@ -29,7 +29,7 @@ export const Transitional = function({} = {}) {
     let value;
 
     switch (state.get.current().header.transitional.type) {
-      case 'timeanddate':
+      case 'time-and-date':
 
         if ((state.get.current().header.date.day.show ||
             state.get.current().header.date.date.show ||

@@ -25,7 +25,12 @@ update.mod['7.0.0'] = function(data) {
   delete data.state.header.search.engine.giphy;
   delete data.state.header.search.engine.bing;
 
+  delete data.state.header.border;
+
+  delete data.state.header.search.focus;
+
   delete data.state.header.radius;
+
   delete data.state.header.position;
 
   switch (data.state.header.date.format) {
@@ -36,6 +41,14 @@ update.mod['7.0.0'] = function(data) {
 
     case 'monthdate':
       data.state.header.date.format = 'month-date';
+      break;
+
+  };
+
+  switch (data.state.header.transitional.type) {
+
+    case 'timeanddate':
+      data.state.header.transitional.type = 'time-and-date';
       break;
 
   };

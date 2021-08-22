@@ -23,7 +23,7 @@ state.default = {
   header: {
     item: { justify: 'left' },
     greeting: { show: false, type: 'good', custom: '', name: '', size: 100, newLine: false },
-    transitional: { show: false, type: 'timeanddate', size: 100, newLine: false },
+    transitional: { show: false, type: 'time-and-date', size: 100, newLine: false },
     clock: {
       hour: { show: true, display: 'number' },
       minute: { show: true, display: 'number' },
@@ -47,7 +47,6 @@ state.default = {
     search: {
       show: true,
       width: { by: 'auto', size: 30 },
-      focus: false,
       engine: { selected: 'google', custom: { name: '', url: '', queryName: '' } },
       text: { justify: 'center' },
       size: 100,
