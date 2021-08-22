@@ -1,8 +1,8 @@
 export const point = {
   name: 'Point',
-  color: { range: { primary: { h: 201, s: 50 } }, contrast: { start: 17, end: 83 } },
+  color: { range: { primary: { h: 146, s: 20, l: 24 } }, contrast: { start: 20, end: 60 } },
   accent: { hsl: { h: 30, s: 80, l: 63 }, rgb: { r: 236, g: 161, b: 85 } },
-  font: { display: { name: 'Work Sans', weight: 500, style: 'normal' }, ui: { name: '', weight: 400, style: 'normal' } },
+  font: { display: { name: 'Klee One', weight: 600, style: 'normal' }, ui: { name: 'Klee One', weight: 400, style: 'normal' } },
   background: {
     type: 'image',
     color: { hsl: { h: 221, s: 47, l: 17 }, rgb: { r: 23, g: 36, b: 64 } },
