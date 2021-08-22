@@ -355,7 +355,7 @@ bookmark.add = {
       heading: 'Add a new Bookmark',
       content: bookmarkForm.form(),
       successText: 'Add',
-      width: 60,
+      width: (state.get.current().bookmark.style === 'block') ? 60 : 70,
       maxHeight: true,
       openAction: () => {
 
