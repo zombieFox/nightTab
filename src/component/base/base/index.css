@@ -1,13 +1,13 @@
 :root {
-  --base-size: 16;
+  --base-size: 12;
   --font-size: calc(var(--base-size) * 1px);
 }
 
-/* @media (min-width: 900px) {
+@media (min-width: 900px) {
   :root {
     --base-size: 16;
   }
-} */
+}
 
 ::selection {
   background-color: rgb(var(--theme-accent));
