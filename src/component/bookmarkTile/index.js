@@ -515,7 +515,7 @@ const BookmarkTile = function({
 
     if (isValidString(bookmarkData.link.url)) {
 
-      this.element.url.text.textContent = trimString(bookmarkData.link.url).replace(/^https?\:\/\//i, '').replace(/\/+$/, '');
+      this.element.url.text.textContent = trimString(bookmarkData.link.url).replace(/^https?\:\/\//i, '').replace('www.', '').replace(/\/+$/, '');
 
       this.element.url.text.title = trimString(bookmarkData.link.url);
 
