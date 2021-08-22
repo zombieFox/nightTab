@@ -817,27 +817,52 @@
   opacity: 0.25;
 }
 
-.is-bookmark-style-block .bookmark-control-left {
+.is-bookmark-orientation-top.is-bookmark-style-block .bookmark-control-left {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.is-bookmark-orientation-top.is-bookmark-style-block .bookmark-control-sort {
+  grid-column: 3 / span 2;
+  grid-row: 2;
+}
+
+.is-bookmark-orientation-top.is-bookmark-style-block .bookmark-control-right {
+  grid-column: 5 / span 2;
+  grid-row: 2;
+}
+
+.is-bookmark-orientation-top.is-bookmark-style-block .bookmark-control-edit {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+.is-bookmark-orientation-top.is-bookmark-style-block .bookmark-control-remove {
+  grid-column: 4 / span 3;
+  grid-row: 1;
+}
+
+.is-bookmark-orientation-bottom.is-bookmark-style-block .bookmark-control-left {
   grid-column: 1 / span 2;
   grid-row: 1;
 }
 
-.is-bookmark-style-block .bookmark-control-sort {
+.is-bookmark-orientation-bottom.is-bookmark-style-block .bookmark-control-sort {
   grid-column: 3 / span 2;
   grid-row: 1;
 }
 
-.is-bookmark-style-block .bookmark-control-right {
+.is-bookmark-orientation-bottom.is-bookmark-style-block .bookmark-control-right {
   grid-column: 5 / span 2;
   grid-row: 1;
 }
 
-.is-bookmark-style-block .bookmark-control-edit {
+.is-bookmark-orientation-bottom.is-bookmark-style-block .bookmark-control-edit {
   grid-column: 1 / span 3;
   grid-row: 2;
 }
 
-.is-bookmark-style-block .bookmark-control-remove {
+.is-bookmark-orientation-bottom.is-bookmark-style-block .bookmark-control-remove {
   grid-column: 4 / span 3;
   grid-row: 2;
 }
