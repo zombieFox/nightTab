@@ -772,6 +772,17 @@
   }
 }
 
+@media (min-width: 900px) {
+
+  .is-layout-breakpoint-md.is-bookmark-style-list .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-lg.is-bookmark-style-list .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xl.is-bookmark-style-list .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xxl.is-bookmark-style-list .bookmark-wide .bookmark-control {
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+}
+
 .is-bookmark-orientation-top .bookmark-control {
   top: calc(-1 * var(--bookmark-edit-height));
 }

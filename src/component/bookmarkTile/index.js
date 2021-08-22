@@ -137,7 +137,7 @@ const BookmarkTile = function({
           heading: isValidString(newBookmarkData.link.display.name.text) ? 'Edit ' + newBookmarkData.link.display.name.text : 'Edit unnamed bookmark',
           content: bookmarkForm.form(),
           successText: 'Save',
-          width: 60,
+          width: (state.get.current().bookmark.style === 'block') ? 60 : 70,
           maxHeight: true,
           successAction: () => {
 
