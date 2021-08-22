@@ -279,6 +279,8 @@ themeSetting.preset = (parent) => {
 
 themeSetting.saved = (parent) => {
 
+  customTheme.edit.close();
+
   themeSetting.control.saved = {
     savedElement: node('div|class:theme-custom'),
     customHelper: new Control_helperText({
