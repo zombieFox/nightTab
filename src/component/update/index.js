@@ -406,7 +406,12 @@ update.mod['7.0.0'] = function(data) {
 
   data.state.theme.custom.all.push(JSON.parse(JSON.stringify({
     name: 'My custom theme',
-    color: data.state.theme.color,
+    color: {
+      range: {
+        primary: { h: data.state.theme.color.range.primary.h, s: data.state.theme.color.range.primary.s }
+      },
+      contrast: data.state.theme.color.contrast
+    },
     accent: { hsl: data.state.theme.accent.hsl, rgb: data.state.theme.accent.rgb },
     font: data.state.theme.font,
     background: data.state.theme.background,
