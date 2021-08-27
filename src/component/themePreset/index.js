@@ -2,6 +2,7 @@ import { state } from '../state';
 
 import { acrid } from './acrid';
 import { aerial } from './aerial';
+import { app } from './app';
 import { azure } from './azure';
 import { bean } from './bean';
 import { black } from './black';
@@ -22,7 +23,6 @@ import { macaroon } from './macaroon';
 import { marker } from './marker';
 import { midnight } from './midnight';
 import { mint } from './mint';
-import { nighttab } from './nighttab';
 import { neon } from './neon';
 import { nord } from './nord';
 import { obsidian } from './obsidian';
@@ -50,7 +50,7 @@ const themePreset = {};
 
 themePreset.get = () => {
   return [
-    nighttab,
+    app,
     black,
     white,
     acrid,
