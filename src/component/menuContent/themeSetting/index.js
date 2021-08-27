@@ -1327,7 +1327,7 @@ themeSetting.background = (parent) => {
         iconName: 'info',
         children: [
           node('p:Uploading Background images is no longer supported.|class:small'),
-          node('p:<a href="${supportSetting.link.url + supportSetting.link.page.localBackgroundImage}" target="_blank">Why has this changed?</a>|class:small')
+          complexNode({ tag: 'p', text: `<a href="${supportSetting.link.url + supportSetting.link.page.localBackgroundImage}" target="_blank">Why has this changed?</a>`, attr: [{ key: 'class', value: 'small' }] })
         ]
       }),
       url: new Control_textarea({
@@ -1496,7 +1496,7 @@ themeSetting.background = (parent) => {
         iconName: 'info',
         children: [
           node('p:YouTube page URLs <strong>can not</strong> be used.|class:small'),
-          node('p:<a href="#" target="_blank">How to link to a video file.</a>|class:small')
+          complexNode({ tag: 'p', text: `<a href="${supportSetting.link.url + supportSetting.link.page.backgroundImageVideo}" target="_blank">How to link to a video file.</a>`, attr: [{ key: 'class', value: 'small' }] })
         ]
       }),
       url: new Control_textarea({
