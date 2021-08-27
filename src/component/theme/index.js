@@ -504,6 +504,13 @@ theme.init = () => {
     'theme.shadow',
     'theme.shade.opacity',
     'theme.shade.blur',
+    'theme.layout.color.rgb.r',
+    'theme.layout.color.rgb.g',
+    'theme.layout.color.rgb.b',
+    'theme.layout.color.hsl.h',
+    'theme.layout.color.hsl.s',
+    'theme.layout.color.hsl.l',
+    'theme.layout.color.opacity',
     'theme.layout.divider.size',
     'theme.header.color.rgb.r',
     'theme.header.color.rgb.g',
@@ -527,6 +534,7 @@ theme.init = () => {
   applyCSSClass([
     'theme.style',
     'theme.background.type',
+    'theme.layout.color.by',
     'theme.header.color.by',
     'theme.bookmark.color.by'
   ]);

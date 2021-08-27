@@ -1754,6 +1754,76 @@ themeSetting.background = (parent) => {
 
 themeSetting.layout = (parent) => {
 
+  themeSetting.control.layout.color = {};
+
+  themeSetting.control.layout.color.by = new Control_radio({
+    object: state.get.current(),
+    radioGroup: [
+      { id: 'theme-layout-by-theme', labelText: 'Transparent', description: 'No background colour behind the Layout.', value: 'theme' },
+      { id: 'theme-layout-by-custom', labelText: 'Custom colour', description: 'Use a custom colour behind the Layout.', value: 'custom' }
+    ],
+    label: 'Layout background colour',
+    groupName: 'theme-layout-by',
+    path: 'theme.layout.color.by',
+    action: () => {
+      applyCSSClass('theme.layout.color.by');
+      themeSetting.disable();
+      themeSetting.control.layout.color.collapse.update();
+      data.save();
+    }
+  });
+
+  themeSetting.control.layout.color.color = new Control_colorMixer({
+    object: state.get.current(),
+    path: 'theme.layout.color',
+    id: 'theme-layout-color',
+    labelText: 'Layout background colour',
+    defaultValue: state.get.default().theme.layout.color.rgb,
+    minMaxObject: state.get.minMax(),
+    action: () => {
+      applyCSSVar([
+        'theme.layout.color.rgb.r',
+        'theme.layout.color.rgb.g',
+        'theme.layout.color.rgb.b',
+        'theme.layout.color.hsl.h',
+        'theme.layout.color.hsl.s',
+        'theme.layout.color.hsl.l'
+      ]);
+      data.save();
+    }
+  });
+
+  themeSetting.control.layout.color.opacity = new Control_slider({
+    object: state.get.current(),
+    path: 'theme.layout.color.opacity',
+    id: 'theme-layout-color-opacity',
+    labelText: 'Background opacity',
+    value: state.get.current().theme.layout.color.opacity,
+    defaultValue: state.get.default().theme.layout.color.opacity,
+    min: state.get.minMax().theme.layout.color.opacity.min,
+    max: state.get.minMax().theme.layout.color.opacity.max,
+    action: () => {
+      applyCSSVar([
+        'theme.layout.color.opacity'
+      ]);
+      data.save();
+    }
+  });
+
+  themeSetting.control.layout.color.area = node('div', [
+    themeSetting.control.layout.color.color.wrap(),
+    themeSetting.control.layout.color.opacity.wrap()
+  ]);
+
+  themeSetting.control.layout.color.collapse = new Collapse({
+    type: 'radio',
+    radioGroup: themeSetting.control.layout.color.by,
+    target: [{
+      id: themeSetting.control.layout.color.by.radioSet[1].radio.value,
+      content: themeSetting.control.layout.color.area
+    }]
+  });
+
   themeSetting.control.layout.divider = {
     size: new Control_slider({
       object: state.get.current(),
@@ -1779,6 +1849,17 @@ themeSetting.layout = (parent) => {
 
   parent.appendChild(
     node('div', [
+      themeSetting.control.layout.color.by.wrap(),
+      form.wrap({
+        children: [
+          form.indent({
+            children: [
+              themeSetting.control.layout.color.collapse.collapse()
+            ]
+          })
+        ]
+      }),
+      node('hr'),
       themeSetting.control.layout.divider.size.wrap()
     ])
   );

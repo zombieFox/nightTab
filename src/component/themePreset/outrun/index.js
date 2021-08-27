@@ -19,7 +19,7 @@ export const outrun = {
   style: 'dark',
   shade: { opacity: 70, blur: 0 },
   opacity: { general: 100 },
-  layout: { divider: { size: 1 } },
+  layout: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, divider: { size: 1 } },
   header: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 100 } },
   bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 0, opacity: 100 } },
   group: { openAll: { opacity: 100 } },

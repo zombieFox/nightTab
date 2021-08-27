@@ -97,7 +97,7 @@ state.default = {
       video: { url: '', blur: 0, grayscale: 0, scale: 100, accent: 0, opacity: 100, vignette: { opacity: 0, start: 90, end: 70 } }
     },
     opacity: { general: 100 },
-    layout: { divider: { size: 0 } },
+    layout: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, divider: { size: 0 } },
     header: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 100 } },
     bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 0, opacity: 100 } },
     group: { openAll: { opacity: 100 } },
@@ -159,7 +159,14 @@ state.minMax = {
       search: { min: 0, max: 100 },
       openAll: { min: 0, max: 100 }
     },
-    layout: { divider: { size: { min: 0, max: 10 } } },
+    layout: {
+      color: {
+        hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
+        rgb: { r: { min: 0, max: 255 }, g: { min: 0, max: 255 }, b: { min: 0, max: 255 } },
+        opacity: { min: 0, max: 100 }
+      },
+      divider: { size: { min: 0, max: 10 } }
+    },
     header: {
       color: {
         hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
@@ -243,6 +250,7 @@ state.option = {
   theme: {
     accent: { random: { style: ['any', 'light', 'dark', 'pastel', 'saturated'] } },
     style: ['dark', 'light', 'system'],
+    layout: { color: { by: ['theme', 'custom'] } },
     header: { color: { by: ['theme', 'custom'] } },
     bookmark: { color: { by: ['theme', 'custom'] } },
     background: { type: ['theme', 'accent', 'color', 'gradient', 'image', 'video'] }

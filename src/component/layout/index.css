@@ -40,6 +40,10 @@
   position: relative;
 }
 
+.is-theme-layout-color-by-custom .layout {
+  background-color: hsla(var(--theme-layout-color-hsl-h), calc(var(--theme-layout-color-hsl-s) * 1%), calc(var(--theme-layout-color-hsl-l) * 1%), calc(var(--theme-layout-color-opacity) / 100));
+}
+
 .is-layout-order-header-bookmark.is-layout-direction-horizontal .layout {
   flex-direction: row;
   align-items: center;
