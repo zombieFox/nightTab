@@ -478,8 +478,23 @@ bookmark.count = () => {
 };
 
 bookmark.restore = (dataToRestore) => {
+
   bookmark.all = dataToRestore.bookmark;
-  console.log('bookmark restored');
+
+  console.log('bookmarks restored');
+
+};
+
+bookmark.append = (dataToAppend) => {
+
+  dataToAppend.bookmark.forEach((item, i) => {
+
+    bookmark.all.push(item);
+
+  });
+
+  console.log('bookmarks appended');
+
 };
 
 bookmark.reset = () => {

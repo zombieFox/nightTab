@@ -24,12 +24,20 @@ data.get = (key) => {
 };
 
 data.import = {
-  state: { setup: true, bookmark: true, theme: true },
+  state: {
+    setup: { include: true },
+    bookmark: { include: true, type: 'restore' },
+    theme: { include: true }
+  },
   reset: () => {
 
-    for (let key in data.import.state) {
-      data.import.state[key] = true;
-    };
+    data.import.state.setup.include = true;
+
+    data.import.state.bookmark.include = true;
+
+    data.import.state.bookmark.type = 'restore';
+
+    data.import.state.theme.include = true;
 
   },
   file: ({
@@ -104,7 +112,7 @@ data.validateFile = ({
             width: 'small',
             successAction: () => {
 
-              if (data.import.state.setup || data.import.state.theme || data.import.state.bookmark) {
+              if (data.import.state.setup.include || data.import.state.theme.include || data.import.state.bookmark.include) {
 
                 let dataToRestore = JSON.parse(event.target.result);
 
@@ -255,16 +263,28 @@ data.restore = (dataToRestore) => {
 
     console.log('data found to load');
 
-    if (data.import.state.setup) {
+    if (data.import.state.setup.include) {
       state.set.restore.setup(dataToRestore);
     };
 
-    if (data.import.state.theme) {
+    if (data.import.state.theme.include) {
       state.set.restore.theme(dataToRestore);
     };
 
-    if (data.import.state.bookmark) {
-      bookmark.restore(dataToRestore);
+    if (data.import.state.bookmark.include) {
+
+      switch (data.import.state.bookmark.type) {
+
+        case 'restore':
+          bookmark.restore(dataToRestore);
+          break;
+
+        case 'append':
+          bookmark.append(dataToRestore);
+          break;
+
+      };
+
     };
 
   } else {
