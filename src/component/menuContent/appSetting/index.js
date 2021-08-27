@@ -46,7 +46,7 @@ appSetting[appName.toLowerCase()] = (parent) => {
 
   const githubLink = new Link({ text: 'GitHub.', href: 'https://github.com/zombieFox/' + appName, openNew: true });
 
-  const licenseLink = new Link({ text: 'GNU General Public License v3.0', href: '://github.com/zombieFox/' + appName + '/blob/master/license', openNew: true });
+  const licenseLink = new Link({ text: 'GNU General Public License v3.0', href: 'https://github.com/zombieFox/' + appName + '/blob/master/license', openNew: true });
 
   parent.appendChild(
     node('div', [
