@@ -13,6 +13,43 @@
 
 .is-theme-header-color-by-custom .header-area {
   background-color: hsla(var(--theme-header-color-hsl-h), calc(var(--theme-header-color-hsl-s) * 1%), calc(var(--theme-header-color-hsl-l) * 1%), calc(var(--theme-header-color-opacity) / 100));
+  border-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.is-layout-order-header-bookmark.is-layout-direction-vertical.is-theme-layout-divider-size.is-theme-header-color-by-custom .header-area,
+.is-layout-order-header-bookmark.is-layout-direction-vertical.is-theme-layout-color-by-custom .header-area,
+.is-layout-order-header-bookmark.is-layout-direction-vertical.is-theme-header-color-by-custom.is-theme-bookmark-color-by-custom .header-area {
+  border-top-left-radius: calc(var(--theme-radius) * 0.01em);
+  border-top-right-radius: calc(var(--theme-radius) * 0.01em);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.is-layout-order-bookmark-header.is-layout-direction-vertical.is-theme-layout-divider-size.is-theme-header-color-by-custom .header-area,
+.is-layout-order-bookmark-header.is-layout-direction-vertical.is-theme-layout-color-by-custom .header-area,
+.is-layout-order-bookmark-header.is-layout-direction-vertical.is-theme-header-color-by-custom.is-theme-bookmark-color-by-custom .header-area {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: calc(var(--theme-radius) * 0.01em);
+  border-bottom-right-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.is-layout-order-header-bookmark.is-layout-direction-horizontal.is-theme-layout-divider-size.is-theme-header-color-by-custom .header-area,
+.is-layout-order-header-bookmark.is-layout-direction-horizontal.is-theme-layout-color-by-custom .header-area,
+.is-layout-order-header-bookmark.is-layout-direction-horizontal.is-theme-header-color-by-custom.is-theme-bookmark-color-by-custom .header-area {
+  border-top-left-radius: calc(var(--theme-radius) * 0.01em);
+  border-top-right-radius: 0;
+  border-bottom-left-radius: calc(var(--theme-radius) * 0.01em);
+  border-bottom-right-radius: 0;
+}
+
+.is-layout-order-bookmark-header.is-layout-direction-horizontal.is-theme-layout-divider-size.is-theme-header-color-by-custom .header-area,
+.is-layout-order-bookmark-header.is-layout-direction-horizontal.is-theme-layout-color-by-custom .header-area,
+.is-layout-order-bookmark-header.is-layout-direction-horizontal.is-theme-header-color-by-custom.is-theme-bookmark-color-by-custom .header-area {
+  border-top-left-radius: 0;
+  border-top-right-radius: calc(var(--theme-radius) * 0.01em);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: calc(var(--theme-radius) * 0.01em);
 }
 
 .header {

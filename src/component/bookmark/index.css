@@ -42,6 +42,43 @@
 
 .is-theme-bookmark-color-by-custom .bookmark-area {
   background-color: hsla(var(--theme-bookmark-color-hsl-h), calc(var(--theme-bookmark-color-hsl-s) * 1%), calc(var(--theme-bookmark-color-hsl-l) * 1%), calc(var(--theme-bookmark-color-opacity) / 100));
+  border-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.is-layout-order-header-bookmark.is-layout-direction-vertical.is-theme-layout-divider-size.is-theme-bookmark-color-by-custom .bookmark-area,
+.is-layout-order-header-bookmark.is-layout-direction-vertical.is-theme-layout-color-by-custom .bookmark-area,
+.is-layout-order-header-bookmark.is-layout-direction-vertical.is-theme-bookmark-color-by-custom.is-theme-header-color-by-custom .bookmark-area {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: calc(var(--theme-radius) * 0.01em);
+  border-bottom-right-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.is-layout-order-bookmark-header.is-layout-direction-vertical.is-theme-layout-divider-size.is-theme-bookmark-color-by-custom .bookmark-area,
+.is-layout-order-bookmark-header.is-layout-direction-vertical.is-theme-layout-color-by-custom .bookmark-area,
+.is-layout-order-bookmark-header.is-layout-direction-vertical.is-theme-bookmark-color-by-custom.is-theme-header-color-by-custom .bookmark-area {
+  border-top-left-radius: calc(var(--theme-radius) * 0.01em);
+  border-top-right-radius: calc(var(--theme-radius) * 0.01em);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.is-layout-order-header-bookmark.is-layout-direction-horizontal.is-theme-layout-divider-size.is-theme-bookmark-color-by-custom .bookmark-area,
+.is-layout-order-header-bookmark.is-layout-direction-horizontal.is-theme-layout-color-by-custom .bookmark-area,
+.is-layout-order-header-bookmark.is-layout-direction-horizontal.is-theme-bookmark-color-by-custom.is-theme-header-color-by-custom .bookmark-area {
+  border-top-left-radius: 0;
+  border-top-right-radius: calc(var(--theme-radius) * 0.01em);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: calc(var(--theme-radius) * 0.01em);
+}
+
+.is-layout-order-bookmark-header.is-layout-direction-horizontal.is-theme-layout-divider-size.is-theme-bookmark-color-by-custom .bookmark-area,
+.is-layout-order-bookmark-header.is-layout-direction-horizontal.is-theme-layout-color-by-custom .bookmark-area,
+.is-layout-order-bookmark-header.is-layout-direction-horizontal.is-theme-bookmark-color-by-custom.is-theme-header-color-by-custom .bookmark-area {
+  border-top-left-radius: calc(var(--theme-radius) * 0.01em);
+  border-top-right-radius: 0;
+  border-bottom-left-radius: calc(var(--theme-radius) * 0.01em);
+  border-bottom-right-radius: 0;
 }
 
 .bookmark-group {

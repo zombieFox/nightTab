@@ -42,14 +42,20 @@
 
 .is-theme-layout-color-by-custom .layout {
   background-color: hsla(var(--theme-layout-color-hsl-h), calc(var(--theme-layout-color-hsl-s) * 1%), calc(var(--theme-layout-color-hsl-l) * 1%), calc(var(--theme-layout-color-opacity) / 100));
+  border-radius: calc(var(--theme-radius) * 0.01em);
 }
 
-.is-layout-order-header-bookmark.is-layout-direction-horizontal .layout {
+.is-theme-layout-color-by-custom.is-theme-header-color-by-custom .layout,
+.is-theme-layout-color-by-custom.is-theme-bookmark-color-by-custom .layout {
+  overflow: hidden;
+}
+
+.is-layout-direction-horizontal.is-layout-order-header-bookmark .layout {
   flex-direction: row;
   align-items: center;
 }
 
-.is-layout-order-bookmark-header.is-layout-direction-horizontal .layout {
+.is-layout-direction-horizontal.is-layout-order-bookmark-header .layout {
   flex-direction: row-reverse;
   align-items: center;
 }
@@ -80,11 +86,14 @@
 
 .layout-divider {
   background-color: rgb(var(--theme-accent));
-  border-radius: calc(var(--theme-radius) * 0.01em);
   flex-shrink: 0;
   flex-grow: 0;
   align-self: stretch;
   justify-self: stretch;
+}
+
+.is-theme-layout-divider-size:not(.is-theme-layout-color-by-custom):not(.is-theme-header-color-by-custom):not(.is-theme-bookmark-color-by-custom) .layout-divider {
+  border-radius: calc(var(--theme-radius) * 0.01em);
 }
 
 .is-theme-background-type-accent .layout-divider {
