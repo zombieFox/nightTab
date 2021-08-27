@@ -511,6 +511,7 @@ theme.init = () => {
     'theme.layout.color.hsl.s',
     'theme.layout.color.hsl.l',
     'theme.layout.color.opacity',
+    'theme.layout.color.blur',
     'theme.layout.divider.size',
     'theme.header.color.rgb.r',
     'theme.header.color.rgb.g',

@@ -128,6 +128,8 @@ export const CustomThemeTile = function({
 
         themeSetting.control.layout.color.color.update();
 
+        themeSetting.control.layout.color.blur.update();
+
         themeSetting.control.layout.color.opacity.update();
 
         themeSetting.control.layout.color.collapse.update();
@@ -258,6 +260,7 @@ export const CustomThemeTile = function({
           'theme.layout.color.hsl.s',
           'theme.layout.color.hsl.l',
           'theme.layout.color.opacity',
+          'theme.layout.color.blur',
           'theme.layout.divider.size',
           'theme.header.color.rgb.r',
           'theme.header.color.rgb.g',

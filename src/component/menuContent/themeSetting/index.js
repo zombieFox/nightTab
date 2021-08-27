@@ -242,6 +242,50 @@ themeSetting.disable = () => {
 
   };
 
+  switch (state.get.current().theme.layout.color.by) {
+
+    case 'theme':
+      themeSetting.control.layout.color.color.disable();
+      themeSetting.control.layout.color.opacity.disable();
+      themeSetting.control.layout.color.blur.disable();
+      break;
+
+    case 'custom':
+      themeSetting.control.layout.color.color.enable();
+      themeSetting.control.layout.color.opacity.enable();
+      themeSetting.control.layout.color.blur.enable();
+      break;
+
+  };
+
+  switch (state.get.current().theme.header.color.by) {
+
+    case 'theme':
+      themeSetting.control.header.color.color.disable();
+      themeSetting.control.header.color.opacity.disable();
+      break;
+
+    case 'custom':
+      themeSetting.control.header.color.color.enable();
+      themeSetting.control.header.color.opacity.enable();
+      break;
+
+  };
+
+  switch (state.get.current().theme.bookmark.color.by) {
+
+    case 'theme':
+      themeSetting.control.bookmark.color.color.disable();
+      themeSetting.control.bookmark.color.opacity.disable();
+      break;
+
+    case 'custom':
+      themeSetting.control.bookmark.color.color.enable();
+      themeSetting.control.bookmark.color.opacity.enable();
+      break;
+
+  };
+
 };
 
 themeSetting.preset = (parent) => {
@@ -1810,9 +1854,27 @@ themeSetting.layout = (parent) => {
     }
   });
 
+  themeSetting.control.layout.color.blur = new Control_slider({
+    object: state.get.current(),
+    path: 'theme.layout.color.blur',
+    id: 'theme.layout-blur',
+    labelText: 'Background blur',
+    value: state.get.current().theme.layout.color.blur,
+    defaultValue: state.get.default().theme.layout.color.blur,
+    min: state.get.minMax().theme.layout.color.blur.min,
+    max: state.get.minMax().theme.layout.color.blur.max,
+    action: () => {
+      applyCSSVar([
+        'theme.layout.color.blur'
+      ]);
+      data.save();
+    }
+  });
+
   themeSetting.control.layout.color.area = node('div', [
     themeSetting.control.layout.color.color.wrap(),
-    themeSetting.control.layout.color.opacity.wrap()
+    themeSetting.control.layout.color.opacity.wrap(),
+    themeSetting.control.layout.color.blur.wrap()
   ]);
 
   themeSetting.control.layout.color.collapse = new Collapse({

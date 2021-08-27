@@ -97,8 +97,8 @@ state.default = {
       video: { url: '', blur: 0, grayscale: 0, scale: 100, accent: 0, opacity: 100, vignette: { opacity: 0, start: 90, end: 70 } }
     },
     opacity: { general: 100 },
-    layout: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, divider: { size: 0 } },
-    header: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 100 } },
+    layout: { color: { by: 'theme', hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 }, blur: 0, opacity: 10 }, divider: { size: 0 } },
+    header: { color: { by: 'theme', hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 }, opacity: 10 }, search: { opacity: 100 } },
     bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 0, opacity: 100 } },
     group: { openAll: { opacity: 100 } },
     toolbar: { opacity: 100 },
@@ -163,6 +163,7 @@ state.minMax = {
       color: {
         hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
         rgb: { r: { min: 0, max: 255 }, g: { min: 0, max: 255 }, b: { min: 0, max: 255 } },
+        blur: { min: 0, max: 200 },
         opacity: { min: 0, max: 100 }
       },
       divider: { size: { min: 0, max: 10 } }

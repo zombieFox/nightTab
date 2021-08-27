@@ -43,6 +43,7 @@
 .is-theme-layout-color-by-custom .layout {
   background-color: hsla(var(--theme-layout-color-hsl-h), calc(var(--theme-layout-color-hsl-s) * 1%), calc(var(--theme-layout-color-hsl-l) * 1%), calc(var(--theme-layout-color-opacity) / 100));
   border-radius: calc(var(--theme-radius) * 0.01em);
+  backdrop-filter: blur(calc(var(--theme-layout-color-blur) * 0.01em));
 }
 
 .is-theme-layout-color-by-custom.is-theme-header-color-by-custom .layout,

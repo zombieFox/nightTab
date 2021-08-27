@@ -169,7 +169,7 @@ update.mod['7.0.0'] = function(data) {
 
   data.state.theme.toolbar = { opacity: 100 };
 
-  data.state.theme.layout = { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, divider: { size: 0 } };
+  data.state.theme.layout = { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 }, blur: 0 }, divider: { size: 0 } };
 
   data.state.theme.header = { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 100 } };
 
@@ -390,7 +390,7 @@ update.mod['7.0.0'] = function(data) {
       video: { url: '', blur: 0, grayscale: 0, scale: 100, accent: 0, opacity: 100 }
     };
 
-    item.layout = { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, divider: { size: 0 } };
+    item.layout = { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 }, blur: 0 }, divider: { size: 0 } };
 
     item.opacity = { general: 100 };
 
