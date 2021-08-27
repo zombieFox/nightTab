@@ -774,6 +774,14 @@
 
 @media (min-width: 900px) {
 
+  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
   .is-layout-breakpoint-md.is-bookmark-style-list .bookmark-wide .bookmark-control,
   .is-layout-breakpoint-lg.is-bookmark-style-list .bookmark-wide .bookmark-control,
   .is-layout-breakpoint-xl.is-bookmark-style-list .bookmark-wide .bookmark-control,
