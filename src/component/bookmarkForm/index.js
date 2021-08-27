@@ -633,7 +633,7 @@ export const BookmarkForm = function({
     labelText: 'Apply Layout to other Bookmarks',
     description: [
       'When saved, apply the above Layout to all other Bookmarks.',
-      'Only the Visual and Name size, Alignment, Order and Position will be will be applied to all.'
+      'Only the Visual and Name size, Alignment, Order, Position and Gutter will be will be applied to all.'
     ]
   });
 
