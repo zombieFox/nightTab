@@ -531,7 +531,8 @@ theme.init = () => {
     'theme.bookmark.color.by'
   ]);
   applyCSSState([
-    'theme.layout.divider.size'
+    'theme.layout.divider.size',
+    'theme.accent.cycle.active'
   ]);
 };
 

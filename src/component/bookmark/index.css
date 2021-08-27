@@ -609,7 +609,12 @@
 .is-bookmark-edit .bookmark-back {
   height: 100%;
   top: 0;
-  transition-delay: calc(var(--bookmark-transition-delay) * 0.03s);
+  transition-delay: calc(var(--bookmark-transition-delay) * 1s);
+}
+
+.is-theme-accent-cycle-active .bookmark-back {
+  transition: background-color var(--layout-transition-extra-fast), height var(--layout-transition-extra-fast), border-radius var(--layout-transition-extra-fast), top var(--layout-transition-extra-fast), clip-path var(--layout-transition-extra-fast);
+  transition-delay: none;
 }
 
 .is-bookmark-line-show .bookmark-back {
@@ -749,6 +754,7 @@
   overflow: hidden;
   pointer-events: none;
   transition: top var(--layout-transition-extra-fast), bottom var(--layout-transition-extra-fast);
+  transition-delay: calc(var(--bookmark-transition-delay) * 0.03s);
 }
 
 .is-bookmark-style-block .bookmark-control {
@@ -801,7 +807,7 @@
 
 .is-bookmark-edit.is-bookmark-orientation-top .bookmark-control {
   top: 0;
-  transition: top var(--layout-duration-04) var(--layout-timing-bounce);
+  transition: top var(--layout-duration-04) var(--layout-timing-bounce) var(--layout-duration-01);
   transition-delay: calc(var(--bookmark-transition-delay) * 0.03s);
 }
 

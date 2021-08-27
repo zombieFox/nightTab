@@ -626,6 +626,7 @@ themeSetting.accent = (parent) => {
       themeSetting.control.accent.cycle.collapse.update();
       theme.accent.cycle.bind();
       themeSetting.disable();
+      applyCSSState('theme.accent.cycle.active');
       data.save();
     }
   });
