@@ -7,7 +7,6 @@ import { version } from '../../version';
 import { menu } from '../../menu';
 import { icon } from '../../icon';
 import { logo } from '../../logo';
-import { link } from '../../link';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 import { appName } from '../../appName';
@@ -18,6 +17,7 @@ import { Button } from '../../button';
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
 import { Alert } from '../../alert';
+import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -51,17 +51,16 @@ coffeeSetting.coffee = (parent) => {
         text: appName + ' is free, appreciation is welcome in the form of coffee!'
       }),
       form.wrap({
-        children: [
-          link.render({
-            text: 'Buy me a coffee',
-            href: 'https://www.buymeacoffee.com/zombieFox',
-            iconName: 'coffee',
-            iconPosition: 'left',
-            linkButton: true,
-            style: ['line'],
-            classList: ['button-line', 'button-large', 'px-4', 'py-3']
-          })
-        ]
+        children: [(new Link({
+          text: 'Buy me a coffee',
+          href: 'https://www.buymeacoffee.com/zombieFox',
+          iconName: 'coffee',
+          iconPosition: 'left',
+          linkButton: true,
+          openNew: true,
+          style: ['line'],
+          classList: ['button-line', 'button-extra-large']
+        })).link()]
       })
     ])
   );

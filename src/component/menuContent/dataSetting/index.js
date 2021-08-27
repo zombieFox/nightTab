@@ -7,7 +7,6 @@ import { version } from '../../version';
 import { menu } from '../../menu';
 import { icon } from '../../icon';
 import { logo } from '../../logo';
-import { link } from '../../link';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 import { appName } from '../../appName';
@@ -19,6 +18,7 @@ import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
 import { Alert } from '../../alert';
 import { DropFile } from '../../dropFile';
+import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -148,7 +148,7 @@ dataSetting.clear = (parent) => {
     iconName: 'warning',
     children: [
       node('p:You will lose Bookmarks by clearing all data.|class:small'),
-      node('p:Have you <a href="#menu-content-item-backup">backed up your data?</a>|class:small')
+      node(`p:Have you ${(new Link({ text:'backed up your data?', href: '#menu-content-item-backup'})).link().outerHTML}|class:small`)
     ]
   });
 

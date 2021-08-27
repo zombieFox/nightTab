@@ -7,7 +7,6 @@ import { version } from '../../version';
 import { menu } from '../../menu';
 import { icon } from '../../icon';
 import { logo } from '../../logo';
-import { link } from '../../link';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 import { appName } from '../../appName';
@@ -18,6 +17,7 @@ import { Button } from '../../button';
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
 import { Alert } from '../../alert';
+import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -44,6 +44,10 @@ const appSetting = {};
 
 appSetting[appName.toLowerCase()] = (parent) => {
 
+  const githubLink = new Link({ text: 'GitHub.', href: 'https://github.com/zombieFox/' + appName, openNew: true });
+
+  const licenseLink = new Link({ text: 'GNU General Public License v3.0', href: '://github.com/zombieFox/' + appName + '/blob/master/license', openNew: true });
+
   parent.appendChild(
     node('div', [
       node('div|class:version', [
@@ -55,8 +59,8 @@ appSetting[appName.toLowerCase()] = (parent) => {
         ])
       ]),
       node('hr'),
-      complexNode({ tag: 'p', text: 'Project repository on ', node: [link.render({ text: 'GitHub.', href: 'https://github.com/zombieFox/' + appName, openNew: true })] }),
-      complexNode({ tag: 'p', text: appName + ' uses the <a tabindex="1" href="https://github.com/zombieFox/' + appName + '/blob/master/license" target="_blank">GNU General Public License v3.0</a>.' })
+      complexNode({ tag: 'p', text: `This project can be found on ${githubLink.link().outerHTML}` }),
+      complexNode({ tag: 'p', text: `${appName} uses the ${licenseLink.link().outerHTML}` })
     ])
   );
 

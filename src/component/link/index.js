@@ -2,10 +2,9 @@ import { icon } from '../icon';
 import { form } from '../form';
 
 import { node } from '../../utility/node';
+import { complexNode } from '../../utility/complexNode';
 
-const link = {};
-
-link.render = ({
+export const Link = function({
   text = 'Link',
   href = '#',
   iconName = false,
@@ -16,86 +15,102 @@ link.render = ({
   title = false,
   openNew = false,
   classList = [],
-  func = false
-} = {}) => {
+  action = false
+} = {}) {
 
-  const linkElement = node('a|tabindex:1');
+  this.element = {
+    link: complexNode({
+      tag: 'a',
+      attr: [{ key: 'href', value: href }]
+    })
+  };
 
-  if (linkButton) {
-    linkElement.classList.add('button');
+  this.assemble = () => {
 
-    if (style.length > 0) {
-      style.forEach((item, i) => {
-        switch (item) {
-          case 'link':
-            linkElement.classList.add('button-link');
-            break;
+    if (linkButton) {
 
-          case 'line':
-            linkElement.classList.add('button-line');
-            break;
+      this.element.link.classList.add('button');
 
-          case 'ring':
-            linkElement.classList.add('button-ring');
-            break;
-        };
-      });
+      if (style.length > 0) {
+        style.forEach((item, i) => {
+
+          switch (item) {
+
+            case 'link':
+              this.element.link.classList.add('button-link');
+              break;
+
+            case 'line':
+              this.element.link.classList.add('button-line');
+              break;
+
+            case 'ring':
+              this.element.link.classList.add('button-ring');
+              break;
+
+          };
+        });
+
+      };
+
     };
-  };
 
-  if (image) {
-    const linkImage = node('img|src:' + image + ',class:mr-2');
-
-    linkElement.appendChild(linkImage);
-  };
-
-  if (text) {
     const linkText = node('span:' + text);
 
     if (linkButton) {
       linkText.classList.add('button-text');
     };
-    linkElement.appendChild(linkText);
-  };
 
-  if (iconName) {
-    switch (iconPosition) {
-      case 'left':
-        linkElement.prepend(icon.render(iconName));
-        break;
+    this.element.link.appendChild(linkText);
 
-      case 'right':
-        linkElement.append(icon.render(iconName));
-        break;
+    if (iconName) {
+
+      switch (iconPosition) {
+
+        case 'left':
+          this.element.link.prepend(icon.render(iconName));
+          break;
+
+        case 'right':
+          this.element.link.append(icon.render(iconName));
+          break;
+
+      };
+
     };
+
+    if (openNew) {
+      this.element.link.setAttribute('target', '_blank');
+    };
+
+    if (title) {
+      this.element.link.setAttribute('title', title);
+    };
+
+    if (classList.length > 0) {
+      classList.forEach((item, i) => {
+        this.element.link.classList.add(item);
+      });
+    };
+
   };
 
-  if (href) {
-    linkElement.setAttribute('href', href);
+  this.bind = () => {
+
+    if (action) {
+      this.element.link.addEventListener('click', (event) => {
+        action();
+      });
+    };
+
   };
 
-  if (openNew) {
-    linkElement.setAttribute('target', '_blank');
+  this.link = () => {
+    return this.element.link;
   };
 
-  if (title) {
-    linkElement.setAttribute('title', title);
-  };
+  this.assemble();
 
-  if (classList.length > 0) {
-    classList.forEach((item, i) => {
-      linkElement.classList.add(item);
-    });
-  };
-
-  if (func) {
-    linkElement.addEventListener('click', (event) => {
-      func();
-    });
-  };
-
-  return linkElement;
+  this.bind();
 
 };
-
-export { link };

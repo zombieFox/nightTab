@@ -8,7 +8,6 @@ import { version } from '../../version';
 import { menu } from '../../menu';
 import { icon } from '../../icon';
 import { logo } from '../../logo';
-import { link } from '../../link';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 import { themePreset } from '../../themePreset';
@@ -26,6 +25,7 @@ import { Edge } from '../../edge';
 import { PresetThemeTile } from '../../presetThemeTile';
 import { AccentPresetButton } from '../../accentPresetButton';
 import { Alert } from '../../alert';
+import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -734,7 +734,7 @@ themeSetting.font = (parent) => {
     }),
     nameHelper: new Control_helperText({
       text: [
-        'Use a <a href="https://fonts.google.com/" target="_blank">Google Font</a> to customise the Clock, Date, Group names and Bookmark Letters.',
+        `Use a ${(new Link({ text:'Google Font', href: `https://fonts.google.com/`, openNew: true })).link().outerHTML} to customise the Clock, Date, Group names and Bookmark Letters.`,
         'Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Fredoka One" or "Kanit"',
         'Clear the field to use the default font "Fjalla One".'
       ]
@@ -821,7 +821,7 @@ themeSetting.font = (parent) => {
     }),
     nameHelper: new Control_helperText({
       text: [
-        'Use a <a href="https://fonts.google.com/" target="_blank">Google Font</a> to customise the Bookmark name, URL and form elements.',
+        `Use a ${(new Link({ text:'Google Font', href: `https://fonts.google.com/`, openNew: true })).link().outerHTML} to customise the Bookmark name, URL and form elements.`,
         'Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Roboto", "Source Sans Pro" or "Noto Sans"',
         'Clear the field to use the default font "Open Sans".'
       ]
@@ -1329,7 +1329,7 @@ themeSetting.background = (parent) => {
         iconName: 'info',
         children: [
           node('p:Uploading Background images is no longer supported.|class:small'),
-          complexNode({ tag: 'p', text: `<a href="${supportSetting.link.url + supportSetting.link.page.localBackgroundImage}" target="_blank">Why has this changed?</a>`, attr: [{ key: 'class', value: 'small' }] })
+          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: 'Why has this changed?', href: supportSetting.link.url + supportSetting.link.page.localBackgroundImage, openNew: true })).link()] })
         ]
       }),
       url: new Control_textarea({
@@ -1498,7 +1498,7 @@ themeSetting.background = (parent) => {
         iconName: 'info',
         children: [
           node('p:YouTube page URLs <strong>can not</strong> be used.|class:small'),
-          complexNode({ tag: 'p', text: `<a href="${supportSetting.link.url + supportSetting.link.page.backgroundImageVideo}" target="_blank">How to link to a video file.</a>`, attr: [{ key: 'class', value: 'small' }] })
+          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: 'How to link to a video file.', href: supportSetting.link.url + supportSetting.link.page.backgroundImageVideo, openNew: true })).link()] })
         ]
       }),
       url: new Control_textarea({

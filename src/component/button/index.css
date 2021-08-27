@@ -191,6 +191,10 @@ button .icon,
   font-size: 1.2em;
 }
 
+.button-extra-large {
+  font-size: 1.5em;
+}
+
 .button-block {
   display: flex;
   width: 100%;

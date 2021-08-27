@@ -7,7 +7,6 @@ import { version } from '../../version';
 import { menu } from '../../menu';
 import { icon } from '../../icon';
 import { logo } from '../../logo';
-import { link } from '../../link';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 import { searchEnginePreset } from '../../searchEnginePreset';
@@ -19,6 +18,7 @@ import { Button } from '../../button';
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
 import { Alert } from '../../alert';
+import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -434,7 +434,7 @@ headerSetting.area = (parent) => {
   });
 
   headerSetting.area.alignmentHelper = new Control_helperText({
-    text: ['Effects may not be visible if the <a href="#menu-content-item-search">Search box size</a> size is set to Auto and grows to fill available space.']
+    text: [`Effects may not be visible if the ${(new Link({ text:'Search box size', href: '#menu-content-item-search'})).link().outerHTML} size is set to Auto and grows to fill available space.`]
   });
 
   parent.appendChild(

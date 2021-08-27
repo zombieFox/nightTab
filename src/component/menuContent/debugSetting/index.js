@@ -8,7 +8,6 @@ import { version } from '../../version';
 import { menu } from '../../menu';
 import { icon } from '../../icon';
 import { logo } from '../../logo';
-import { link } from '../../link';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 import { groupAndBookmark } from '../../groupAndBookmark';
@@ -19,6 +18,7 @@ import { Button } from '../../button';
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
 import { Alert } from '../../alert';
+import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';

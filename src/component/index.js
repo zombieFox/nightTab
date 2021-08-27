@@ -10,6 +10,7 @@ import { Shade } from './shade';
 import { Suggest } from './suggest';
 import { Tab } from './tab';
 import { ToolbarControl } from './toolbarControl';
+import { Link } from './link';
 
 import { Control_checkbox } from './control/checkbox';
 import { Control_color } from './control/color';
@@ -33,7 +34,6 @@ import { fontawesome } from './fontawesome';
 import { icon } from './icon';
 import { keyboard } from './keyboard';
 import { layout } from './layout';
-import { link } from './link';
 import { logo } from './logo';
 import { menu } from './menu';
 import { pageLock } from './pageLock';
@@ -57,7 +57,6 @@ export const component = {
   icon,
   keyboard,
   layout,
-  link,
   logo,
   menu,
   pageLock,

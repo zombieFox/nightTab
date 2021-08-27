@@ -7,7 +7,6 @@ import { version } from '../../version';
 import { menu } from '../../menu';
 import { icon } from '../../icon';
 import { logo } from '../../logo';
-import { link } from '../../link';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 import { appName } from '../../appName';
@@ -18,6 +17,7 @@ import { Button } from '../../button';
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
 import { Alert } from '../../alert';
+import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -66,9 +66,13 @@ supportSetting.support = (parent) => {
 
     for (var key in supportSetting.link.page) {
 
-      list.appendChild(node('li', [
-        link.render({ text: supportSetting.link.page[key].replace(/-/g, ' '), href: supportSetting.link.url + supportSetting.link.page[key], openNew: true })
-      ]));
+      const supportLink = new Link({
+        text: supportSetting.link.page[key].replace(/-/g, ' '),
+        href: supportSetting.link.url + supportSetting.link.page[key],
+        openNew: true
+      });
+
+      list.appendChild(node('li', [supportLink.link()]));
 
     };
 
@@ -82,7 +86,10 @@ supportSetting.support = (parent) => {
     node('div', [
       makeLinks(),
       node('hr'),
-      complexNode({ tag: 'p', text: 'For more support or feedback, submit an <a tabindex="1" href="https://github.com/zombieFox/' + appName + '/issues" target="_blank">Issue</a> or check the <a tabindex="1" href="https://github.com/zombieFox/' + appName + '/wiki" target="_blank">Wiki</a>.' })
+      complexNode({
+        tag: 'p',
+        text: `For more support or feedback, submit an ${(new Link({ text:'Issue', href: `https://github.com/zombieFox/${appName}/issues`, openNew: true })).link().outerHTML}. or check the ${(new Link({ text:'Wiki', href: `https://github.com/zombieFox/${appName}/wiki`, openNew: true })).link().outerHTML}.`
+      })
     ])
   );
 
