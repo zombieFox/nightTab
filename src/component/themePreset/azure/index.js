@@ -1,6 +1,6 @@
 export const azure = {
   name: 'Azure',
-  color: { range: { primary: { h: 215, s: 18 } }, contrast: { start: 13, end: 40 } },
+  color: { range: { primary: { h: 215, s: 35 } }, contrast: { start: 13, end: 40 } },
   accent: { hsl: { h: 180, s: 100, l: 50 }, rgb: { r: 0, g: 255, b: 255 } },
   font: { display: { name: 'Unica One', weight: 400, style: 'normal' }, ui: { name: 'Inria Sans', weight: 400, style: 'normal' } },
   background: {
@@ -21,7 +21,7 @@ export const azure = {
   opacity: { general: 0 },
   layout: { divider: { size: 0 } },
   header: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 0 } },
-  bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 0, opacity: 0 } },
+  bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 0, opacity: 30 } },
   group: { openAll: { opacity: 0 } },
   toolbar: { opacity: 0 }
 };
