@@ -35,11 +35,17 @@ menu.element = {
   frame: null
 };
 
-menu.open = () => {
+menu.open = (name) => {
 
   menu.element.frame = new MenuFrame({
     navData: menu.navData
   });
+
+  if (name) {
+
+    menu.element.frame.menuNav.state.toggle(name);
+
+  };
 
   menu.element.frame.open();
 

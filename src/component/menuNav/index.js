@@ -34,7 +34,7 @@ export const MenuNav = function({
 
         item.active = false;
 
-        if (item.name === name) {
+        if (item.name === name || item.name.toLowerCase() === name) {
           item.active = true;
         };
 
@@ -67,11 +67,13 @@ export const MenuNav = function({
   };
 
   this.update = () => {
+
     navData.forEach((item, i) => {
 
       if (this.state.current[this.makeId(item.name)]) {
 
         this.element.item[i].menuNavItem.classList.add('active');
+
         this.element.item[i].topLevel.classList.add('active');
 
         if (item.sub) {
@@ -85,7 +87,9 @@ export const MenuNav = function({
         };
 
       } else {
+
         this.element.item[i].menuNavItem.classList.remove('active');
+
         this.element.item[i].topLevel.classList.remove('active');
 
         if (item.sub) {
@@ -101,6 +105,7 @@ export const MenuNav = function({
       };
 
     });
+
   };
 
   this.nav = () => {
