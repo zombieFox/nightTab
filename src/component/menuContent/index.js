@@ -9,7 +9,6 @@ import { headerSetting } from './headerSetting';
 import { toolbarSetting } from './toolbarSetting';
 import { themeSetting } from './themeSetting';
 import { dataSetting } from './dataSetting';
-import { firefoxSetting } from './firefoxSetting';
 import { supportSetting } from './supportSetting';
 import { coffeeSetting } from './coffeeSetting';
 import { appSetting } from './appSetting';
@@ -138,16 +137,6 @@ export const MenuContent = function({
       let formElement;
 
       switch (this.makeId(activeNavData.name)) {
-
-        case 'firefox':
-
-          menuContentItem.appendChild(this.element.header(activeNavData.name));
-
-          formElement = this.element.form({ indent: true });
-
-          firefoxSetting[this.makeId(activeNavData.name)](formElement);
-
-          break;
 
         case 'support':
 
