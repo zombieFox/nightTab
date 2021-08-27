@@ -2051,7 +2051,7 @@ themeSetting.bookmark = (parent) => {
 
   themeSetting.control.bookmark.item.rainbow = {
     add: new Button({
-      text: 'Add unique accent to each',
+      text: 'Add unique accent to each Bookmark',
       style: ['line'],
       func: () => {
         theme.accent.rainbow.render();
@@ -2059,7 +2059,7 @@ themeSetting.bookmark = (parent) => {
       }
     }),
     remove: new Button({
-      text: 'Remove all unique accent',
+      text: 'Remove all accent overrides',
       style: ['line'],
       func: () => {
         theme.accent.rainbow.clear();
