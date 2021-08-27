@@ -126,7 +126,13 @@ dataSetting.clear = (parent) => {
     }
   });
 
-  dataSetting.control.clear.alert = new Alert({ iconName: 'warning', message: ['You will lose Bookmarks by clearing all data.', 'Have you <a href="#menu-content-item-backup">backed up your data?</a>'] });
+  dataSetting.control.clear.alert = new Alert({
+    iconName: 'warning',
+    children: [
+      node('p:You will lose Bookmarks by clearing all data.|class:small'),
+      node('p:Have you <a href="#menu-content-item-backup">backed up your data?</a>|class:small')
+    ]
+  });
 
   dataSetting.control.clear.helper = new Control_helperText({
     text: ['Clear all data to reset ' + appName + ' to the default state.', 'Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups.']

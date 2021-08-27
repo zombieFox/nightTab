@@ -8,15 +8,16 @@ import { complexNode } from '../../utility/complexNode';
 import './index.css';
 
 export const Alert = function({
-  message = [],
+  children = [],
   iconName = false
 } = {}) {
 
   this.element = {
     alert: node('div|class:alert'),
-    icon: node('div|class:alert-icon'),
+    header: node('div|class:alert-header'),
     body: node('div|class:alert-body'),
-    message: node('div|class:alert-message')
+    icon: node('div|class:alert-icon'),
+    message: node('div|class:alert-message', children)
   };
 
   this.assemble = () => {
@@ -25,16 +26,10 @@ export const Alert = function({
 
       this.element.icon.appendChild(icon.render(iconName));
 
-      this.element.body.appendChild(this.element.icon);
+      this.element.header.appendChild(this.element.icon);
 
-    };
+      this.element.alert.appendChild(this.element.header);
 
-    if (message.length > 0) {
-      message.forEach((item, i) => {
-
-        this.element.message.appendChild(complexNode({ tag: 'p', text: item, attr: [{ key: 'class', value: 'small' }] }));
-
-      });
     };
 
     this.element.body.appendChild(this.element.message);

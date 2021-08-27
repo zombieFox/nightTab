@@ -9,6 +9,7 @@ import { Suggest } from '../suggest';
 import { Collapse } from '../collapse';
 import { Tab } from '../tab';
 import { BookmarkPreview } from '../bookmarkPreview';
+import { Alert } from '../alert';
 
 import { Control_helperText } from '../control/helperText';
 import { Control_inputButton } from '../control/inputButton';
@@ -607,38 +608,55 @@ export const BookmarkForm = function({
     }
   };
 
-  this.control.propagate = {
-    visual: new Control_checkbox({
-      object: bookmarkData.propagate,
-      path: 'display',
-      id: 'apply-to-all-display',
-      labelText: 'Apply Visual and Name to other Bookmarks',
-      description: [
-        'When saved, apply the above visibility to all other Bookmarks.',
-        'Only the Show Visual Element and Show Name settings will be applied to all.'
-      ]
-    }),
-    layout: new Control_checkbox({
-      object: bookmarkData.propagate,
-      path: 'layout',
-      id: 'apply-to-all-layout',
-      labelText: 'Apply Layout to other Bookmarks',
-      description: [
-        'When saved, apply the above Layout to all other Bookmarks.',
-        'Only the Visual and Name settings will be applied to all.'
-      ]
-    }),
-    theme: new Control_checkbox({
-      object: bookmarkData.propagate,
-      path: 'theme',
-      id: 'apply-to-all-theme',
-      labelText: 'Apply Theme to other Bookmarks',
-      description: [
-        'When saved, apply the above Theme to all other Bookmarks.',
-        'Only the Colour, Accent, Opacity, Border and Visual shadow settings will be applied to all.'
-      ]
-    })
-  };
+  this.control.propagate = {};
+
+  this.control.propagate.visual = new Control_checkbox({
+    object: bookmarkData.propagate,
+    path: 'display',
+    id: 'apply-to-all-display',
+    labelText: 'Apply "Show Visual Element" and "Show Name" to other Bookmarks',
+    description: [
+      'The Letter, Icon, Image and Name text will not be shared.',
+      'Useful for hiding the Visual Elements or Names on all Bookmarks.'
+    ]
+  });
+
+  this.control.propagate.visualAlert = new Alert({
+    iconName: 'propagate',
+    children: [this.control.propagate.visual.wrap()]
+  });
+
+  this.control.propagate.layout = new Control_checkbox({
+    object: bookmarkData.propagate,
+    path: 'layout',
+    id: 'apply-to-all-layout',
+    labelText: 'Apply Layout to other Bookmarks',
+    description: [
+      'When saved, apply the above Layout to all other Bookmarks.',
+      'Only the Visual and Name size, Alignment, Order and Position will be will be applied to all.'
+    ]
+  });
+
+  this.control.propagate.layoutAlert = new Alert({
+    iconName: 'propagate',
+    children: [this.control.propagate.layout.wrap()]
+  });
+
+  this.control.propagate.theme = new Control_checkbox({
+    object: bookmarkData.propagate,
+    path: 'theme',
+    id: 'apply-to-all-theme',
+    labelText: 'Apply Theme to other Bookmarks',
+    description: [
+      'When saved, apply the above Theme to all other Bookmarks.',
+      'Only the Colour, Accent, Opacity, Border and Visual shadow will be applied to all.'
+    ]
+  });
+
+  this.control.propagate.themeAlert = new Alert({
+    iconName: 'propagate',
+    children: [this.control.propagate.theme.wrap()]
+  });
 
   this.helper = {
     bookmark: {
@@ -766,7 +784,7 @@ export const BookmarkForm = function({
                 this.control.bookmark.display.name.show.wrap(),
                 this.collapse.display.name.collapse(),
                 node('hr'),
-                this.control.propagate.visual.wrap()
+                this.control.propagate.visualAlert.wrap()
               ]
             })
           ]
@@ -876,7 +894,7 @@ export const BookmarkForm = function({
                 this.control.bookmark.shape.wide.wrap(),
                 this.control.bookmark.shape.tall.wrap(),
                 node('hr'),
-                this.control.propagate.layout.wrap()
+                this.control.propagate.layoutAlert.wrap()
               ]
             })
           ]
@@ -938,7 +956,7 @@ export const BookmarkForm = function({
                 this.control.bookmark.display.visual.shadow.size.wrap(),
                 this.helper.bookmark.display.visual.shadow.size.wrap(),
                 node('hr'),
-                this.control.propagate.theme.wrap()
+                this.control.propagate.themeAlert.wrap()
               ]
             })
           ]

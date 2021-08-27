@@ -610,7 +610,12 @@ themeSetting.accent = (parent) => {
 
   themeSetting.control.accent.cycle = {};
 
-  themeSetting.control.accent.cycle.alert = new Alert({ iconName: 'info', message: ['Take care as a fast changing Accent hue may cause performance issues.'] });
+  themeSetting.control.accent.cycle.alert = new Alert({
+    iconName: 'info',
+    children: [
+      node('p:Take care as a fast changing Accent hue may cause performance issues.|class:small')
+    ]
+  });
 
   themeSetting.control.accent.cycle.active = new Control_checkbox({
     object: state.get.current(),
@@ -1317,7 +1322,13 @@ themeSetting.background = (parent) => {
       })
     },
     image: {
-      alert: new Alert({ iconName: 'info', message: ['Uploading Background images is no longer supported.', `<a href="${supportSetting.link.url + supportSetting.link.page.localBackgroundImage}" target="_blank">Why has this changed?</a>`] }),
+      alert: new Alert({
+        iconName: 'info',
+        children: [
+          node('p:Uploading Background images is no longer supported.|class:small'),
+          node('p:<a href="${supportSetting.link.url + supportSetting.link.page.localBackgroundImage}" target="_blank">Why has this changed?</a>|class:small')
+        ]
+      }),
       url: new Control_textarea({
         object: state.get.current(),
         path: 'theme.background.image.url',
@@ -1480,7 +1491,13 @@ themeSetting.background = (parent) => {
       }
     },
     video: {
-      alert: new Alert({ iconName: 'info', message: ['YouTube page URLs <strong>can not</strong> be used.', '<a href="#" target="_blank">How to link to a video file.</a>'] }),
+      alert: new Alert({
+        iconName: 'info',
+        children: [
+          node('p:YouTube page URLs <strong>can not</strong> be used.|class:small'),
+          node('p:<a href="#" target="_blank">How to link to a video file.</a>|class:small')
+        ]
+      }),
       url: new Control_textarea({
         object: state.get.current(),
         path: 'theme.background.video.url',
