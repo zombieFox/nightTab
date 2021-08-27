@@ -11,7 +11,7 @@ export const neon = {
       start: { hsl: { h: 206, s: 16, l: 40 }, rgb: { r: 86, g: 104, b: 118 } },
       end: { hsl: { h: 219, s: 28, l: 12 }, rgb: { r: 22, g: 28, b: 39 } }
     },
-    image: { url: 'https://github.com/zombieFox/nightTabAssets/blob/main/images/1629141035201.jpeg?raw=true', blur: 0, opacity: 20, scale: 100, grayscale: 0, accent: 0, vignette: { opacity: 0, start: 90, end: 70 } },
+    image: { url: 'https://github.com/zombieFox/nightTabAssets/blob/main/images/1629141035201.jpeg?raw=true', blur: 4, opacity: 20, scale: 100, grayscale: 0, accent: 0, vignette: { opacity: 0, start: 90, end: 70 } },
     video: { url: '', blur: 4, opacity: 20, scale: 100, grayscale: 0, accent: 0, vignette: { opacity: 0, start: 90, end: 70 } }
   },
   radius: 25,
@@ -20,7 +20,7 @@ export const neon = {
   shade: { opacity: 8, blur: 0 },
   opacity: { general: 0 },
   layout: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, divider: { size: 0 } },
-  header: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 0 } },
+  header: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 45 } },
   bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 0, opacity: 45 } },
   group: { openAll: { opacity: 0 } },
   toolbar: { opacity: 0 }
