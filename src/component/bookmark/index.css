@@ -609,7 +609,7 @@
 .is-bookmark-edit .bookmark-back {
   height: 100%;
   top: 0;
-  transition-delay: calc(var(--bookmark-transition-delay) * 1s);
+  transition-delay: calc(var(--bookmark-transition-delay) * 0.03s);
 }
 
 .is-theme-accent-cycle-active .bookmark-back {
