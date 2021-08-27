@@ -16,7 +16,7 @@
 
 .alert-header {
   background-color: hsl(var(--alert-header-background));
-  padding: calc((var(--alert-space) / 4) * 1em) calc((var(--alert-space) / 4) * 1.5em) calc((var(--alert-space) / 4) * 1em) calc(((var(--alert-space) / 4) * 1.5em) + (var(--theme-radius) / 100) * 0.1em);
+  padding: calc((var(--alert-space) / 4) * 1em) calc((var(--alert-space) / 4) * 1em) calc((var(--alert-space) / 4) * 1em) calc(((var(--alert-space) / 4) * 1em) + (var(--theme-radius) / 100) * 0.1em);
   border-top-left-radius: calc(var(--theme-radius) * 0.01em);
   border-bottom-left-radius: calc(var(--theme-radius) * 0.01em);
   display: flex;
@@ -29,7 +29,7 @@
   background-color: hsl(var(--alert-body-background));
   border-top-right-radius: calc(var(--theme-radius) * 0.01em);
   border-bottom-right-radius: calc(var(--theme-radius) * 0.01em);
-  padding: calc((var(--alert-space) / 4) * 1em) calc(((var(--alert-space) / 4) * 1.5em) + (var(--theme-radius) / 100) * 0.1em) calc((var(--alert-space) / 4) * 1em) calc((var(--alert-space) / 4) * 1.5em);
+  padding: calc((var(--alert-space) / 4) * 1em) calc(((var(--alert-space) / 4) * 1em) + (var(--theme-radius) / 100) * 0.1em) calc((var(--alert-space) / 4) * 1em) calc((var(--alert-space) / 4) * 1em);
   flex-grow: 1;
   display: flex;
   flex-direction: row;
@@ -39,7 +39,7 @@
 
 .alert-body:only-child {
   border-radius: calc(var(--theme-radius) * 0.01em);
-  padding: calc((var(--alert-space) / 4) * 1em) calc(((var(--alert-space) / 4) * 1.5em) + (var(--theme-radius) / 100) * 0.1em);
+  padding: calc((var(--alert-space) / 4) * 1em) calc(((var(--alert-space) / 4) * 1em) + (var(--theme-radius) / 100) * 0.1em);
 }
 
 .alert-icon {
