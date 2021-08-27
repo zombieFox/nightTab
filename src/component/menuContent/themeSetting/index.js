@@ -248,12 +248,14 @@ themeSetting.disable = () => {
       themeSetting.control.layout.color.color.disable();
       themeSetting.control.layout.color.opacity.disable();
       themeSetting.control.layout.color.blur.disable();
+      themeSetting.control.layout.color.blurHelper.disable();
       break;
 
     case 'custom':
       themeSetting.control.layout.color.color.enable();
       themeSetting.control.layout.color.opacity.enable();
       themeSetting.control.layout.color.blur.enable();
+      themeSetting.control.layout.color.blurHelper.enable();
       break;
 
   };
@@ -1871,10 +1873,15 @@ themeSetting.layout = (parent) => {
     }
   });
 
+  themeSetting.control.layout.color.blurHelper = new Control_helperText({
+    text: ['Not supported by all browsers.']
+  });
+
   themeSetting.control.layout.color.area = node('div', [
     themeSetting.control.layout.color.color.wrap(),
     themeSetting.control.layout.color.opacity.wrap(),
-    themeSetting.control.layout.color.blur.wrap()
+    themeSetting.control.layout.color.blur.wrap(),
+    themeSetting.control.layout.color.blurHelper.wrap()
   ]);
 
   themeSetting.control.layout.color.collapse = new Collapse({
