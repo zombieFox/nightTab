@@ -1,5 +1,4 @@
 import { data } from '../data';
-import { formSetting } from './formSetting';
 import { debugSetting } from './debugSetting';
 import { appName } from '../appName';
 import { layoutSetting } from './layoutSetting';
@@ -58,14 +57,6 @@ export const MenuContent = function({
 
         switch (this.makeId(activeNavData.name)) {
 
-          case 'form':
-            formSetting[this.makeId(item)](formElement);
-            break;
-
-          case 'debug':
-            debugSetting[this.makeId(item)](formElement);
-            break;
-
           case 'layout':
             layoutSetting[this.makeId(item)](formElement);
             break;
@@ -92,6 +83,10 @@ export const MenuContent = function({
 
           case 'data':
             dataSetting[this.makeId(item)](formElement);
+            break;
+
+          case 'debug':
+            debugSetting[this.makeId(item)](formElement);
             break;
 
         };

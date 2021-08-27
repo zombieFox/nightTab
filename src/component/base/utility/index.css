@@ -44,6 +44,10 @@
   font-size: 0.8em;
 }
 
+.large {
+  font-size: 1.2em;
+}
+
 .muted {
   color: hsl(var(--utility-muted));
 }
@@ -59,20 +63,23 @@
   border: 0;
 }
 
-.color-demo {
+.d-flex {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
 }
 
-.baseline-alignment-icon-character {
-  width: 0;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  padding: 0;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+.d-horizontal {
+  flex-direction: row;
+}
+
+.d-vertical {
+  flex-direction: column;
+}
+
+.d-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.d-gap {
+  gap: 1em;
 }

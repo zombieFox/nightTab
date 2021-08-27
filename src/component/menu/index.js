@@ -16,8 +16,7 @@ import { clearChildNode } from '../../utility/clearChildNode';
 const menu = {};
 
 menu.navData = [
-  // { name: 'Form', active: true, overscroll: true, sub: ['Input', 'Button'] },
-  // { name: 'Debug', active: true, overscroll: true, sub: ['Bookmark'] },
+  // { name: 'Debug', active: true, overscroll: true, sub: ['Input', 'Button', 'Bookmark', 'Icon'] },
   { name: 'Theme', active: true, overscroll: true, sub: ['Preset', 'Saved', 'Style', 'Colour', 'Accent', 'Font', 'Radius', 'Shadow', 'Shade', 'Opacity', 'Background', 'Layout', 'Header', 'Bookmark'] },
   { name: 'Layout', active: false, overscroll: true, sub: ['Scaling', 'Area', 'Padding', 'Gutter', 'Alignment', 'Page'] },
   { name: 'Header', active: false, overscroll: true, sub: ['Area', 'Greeting', 'Transitional words', 'Clock', 'Date', 'Search'] },

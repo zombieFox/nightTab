@@ -296,7 +296,9 @@ themeSetting.saved = (parent) => {
     }),
     edit: new Button({
       text: 'Edit',
+      iconName: 'edit',
       style: ['line'],
+      srOnly: true,
       func: () => {
         customTheme.edit.toggle();
         data.save();
