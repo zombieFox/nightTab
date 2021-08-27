@@ -1,7 +1,7 @@
 export const comet = {
   name: 'Comet',
-  color: { range: { primary: { h: 207, s: 87 } }, contrast: { start: 14, end: 83 } },
-  accent: { hsl: { h: 300, s: 80, l: 63 }, rgb: { r: 236, g: 85, b: 236 } },
+  color: { range: { primary: { h: 207, s: 87 } }, contrast: { start: 30, end: 90 } },
+  accent: { hsl: { h: 0, s: 0, l: 100 }, rgb: { r: 255, g: 255, b: 255 } },
   font: { display: { name: 'Bungee Hairline', weight: 700, style: 'normal' }, ui: { name: 'Quicksand', weight: 400, style: 'normal' } },
   background: {
     type: 'image',
@@ -11,17 +11,17 @@ export const comet = {
       start: { hsl: { h: 209, s: 100, l: 9 }, rgb: { r: 0, g: 24, b: 46 } },
       end: { hsl: { h: 207, s: 86, l: 27 }, rgb: { r: 10, g: 75, b: 128 } }
     },
-    image: { url: 'https://github.com/zombieFox/nightTabAssets/blob/main/images/1626783072074.jpeg?raw=true', blur: 0, grayscale: 0, scale: 100, accent: 0, opacity: 50, vignette: { opacity: 0, start: 90, end: 70 } },
+    image: { url: 'https://github.com/zombieFox/nightTabAssets/blob/main/images/1629912579015.jpeg?raw=true\n\nhttps://github.com/zombieFox/nightTabAssets/blob/main/images/1629911101180.jpeg?raw=true\n\nhttps://github.com/zombieFox/nightTabAssets/blob/main/images/1629911104436.jpeg?raw=true', blur: 0, grayscale: 0, scale: 100, accent: 0, opacity: 80, vignette: { opacity: 0, start: 90, end: 70 } },
     video: { url: '', blur: 0, grayscale: 0, scale: 100, accent: 0, opacity: 100, vignette: { opacity: 0, start: 90, end: 70 } }
   },
-  radius: 0,
-  shadow: 125,
+  radius: 35,
+  shadow: 80,
   style: 'dark',
   shade: { opacity: 15, blur: 0 },
   opacity: { general: 0 },
   layout: { divider: { size: 0 } },
-  header: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 0 } },
-  bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 0, opacity: 0 } },
+  header: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 20 } },
+  bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 0, opacity: 20 } },
   group: { openAll: { opacity: 0 } },
   toolbar: { opacity: 0 }
 };
