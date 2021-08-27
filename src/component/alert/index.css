@@ -3,7 +3,6 @@
 }
 
 :root {
-  --alert-text: var(--theme-primary-text-020);
   --alert-header-background: var(--theme-primary-030);
   --alert-body-background: var(--theme-primary-020);
 }

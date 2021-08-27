@@ -18,6 +18,7 @@ import { Button } from '../../button';
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
 import { Alert } from '../../alert';
+import { DropFile } from '../../dropFile';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -50,10 +51,6 @@ dataSetting.control = {
 
 dataSetting.restore = (parent) => {
 
-  const restoreFeedback = form.feedback();
-
-  data.feedback.empty.render(restoreFeedback);
-
   dataSetting.control.restore.restoreElement = new Control_inputButton({
     id: 'restore-data',
     type: 'file',
@@ -61,7 +58,11 @@ dataSetting.restore = (parent) => {
     labelText: 'Import data',
     inputButtonStyle: ['line'],
     action: () => {
-      data.import.file(dataSetting.control.restore.restoreElement.input, restoreFeedback)
+      data.import.file({
+        fileList: dataSetting.control.restore.restoreElement.input.files,
+        feedback: dataSetting.control.restore.feedback,
+        input: dataSetting.control.restore.restoreElement
+      });
     }
   });
 
@@ -69,15 +70,32 @@ dataSetting.restore = (parent) => {
     text: ['Restore a previously exported ' + appName + ' backup.']
   });
 
+  dataSetting.control.restore.feedback = form.feedback();
+
+  data.feedback.empty.render(dataSetting.control.restore.feedback);
+
+  dataSetting.control.restore.drop = new DropFile({
+    heading: 'Or drop a ' + appName + ' backup file here.',
+    dropAaction: () => {
+      data.import.drop({
+        fileList: dataSetting.control.restore.drop.files,
+        feedback: dataSetting.control.restore.feedback,
+      });
+    },
+    children: [
+      dataSetting.control.restore.restoreElement.button
+    ]
+  });
+
   parent.appendChild(
     node('div', [
-      dataSetting.control.restore.restoreElement.wrap(),
-      dataSetting.control.restore.restoreHelper.wrap(),
+      dataSetting.control.restore.drop.wrap(),
       form.wrap({
         children: [
-          restoreFeedback
+          dataSetting.control.restore.feedback
         ]
-      })
+      }),
+      dataSetting.control.restore.restoreHelper.wrap()
     ])
   );
 

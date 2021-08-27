@@ -1,0 +1,33 @@
+:root {
+  --drop-file-space: 24;
+}
+
+:root {
+  --drop-file-background: var(--theme-primary-030);
+  --drop-file-border: var(--theme-primary-030);
+  --drop-file-border-focus-hover: var(--theme-accent);
+}
+
+.drop-file {
+  border-width: calc(var(--layout-line-width) * 2);
+  border-style: solid;
+  border-color: hsl(var(--drop-file-border));
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  padding: calc(((var(--alert-space) * 2) / 4) * 1em) calc((var(--alert-space) / 4) * 1em);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  transform: scale(1);
+  transition: background-color var(--layout-transition-extra-fast), border var(--layout-transition-extra-fast), transform var(--layout-transition-extra-fast);
+}
+
+.drop-file-heading {}
+
+.drop-file-over {
+  background: hsl(var(--drop-file-background));
+  border-color: rgb(var(--drop-file-border-focus-hover));
+  transform: scale(1.05);
+}

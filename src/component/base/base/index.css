@@ -120,3 +120,8 @@ html.is-theme-background-type-color,
   justify-content: flex-end;
   align-items: flex-end;
 }
+
+.drop {
+  padding: 3em;
+  border: 1px solid hsl(var(--theme-primary-060));
+}

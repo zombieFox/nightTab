@@ -32,18 +32,41 @@ data.import = {
     };
 
   },
-  file: (input, feedback) => {
-
-    const fileList = input.files;
+  file: ({
+    fileList = false,
+    feedback = false,
+    input = false
+  } = {}) => {
 
     if (fileList.length > 0) {
-      data.validateFile(fileList, input, feedback);
+      data.validateFile({
+        fileList: fileList,
+        feedback: feedback,
+        input: input
+      });
+    };
+
+  },
+  drop: ({
+    fileList = false,
+    feedback = false
+  }) => {
+
+    if (fileList.length > 0) {
+      data.validateFile({
+        fileList: fileList,
+        feedback: feedback
+      });
     };
 
   }
 };
 
-data.validateFile = (fileList, input, feedback) => {
+data.validateFile = ({
+  fileList = false,
+  feedback = false,
+  input = false
+} = {}) => {
 
   // make new file reader
   var reader = new FileReader();
@@ -116,21 +139,39 @@ data.validateFile = (fileList, input, feedback) => {
 
         data.feedback.success.render(feedback, fileList[0].name, validFileSuccessAction);
 
-        input.value = '';
+        if (input) {
+
+          input.value = '';
+
+        };
 
       } else {
 
         data.feedback.clear.render(feedback);
+
         data.feedback.fail.notAppJson.render(feedback, fileList[0].name);
-        input.value = '';
+
+        if (input) {
+
+          input.value = '';
+
+        };
 
       };
+
     } else {
 
       // not a JSON file
+
       data.feedback.clear.render(feedback);
+
       data.feedback.fail.notJson.render(feedback, fileList[0].name);
-      input.value = '';
+
+      if (input) {
+
+        input.value = '';
+
+      };
 
     };
 
