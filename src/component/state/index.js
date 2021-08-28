@@ -71,8 +71,8 @@ state.default = {
   },
   group: {
     area: { justify: 'left' },
-    name: { size: 100 },
     order: 'header-body',
+    name: { size: 100 },
     openAll: { size: 100 },
     edit: false,
     add: false

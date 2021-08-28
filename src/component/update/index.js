@@ -444,6 +444,10 @@ update.mod['7.0.0'] = function(data) {
 
   delete data.state.group.border;
 
+  delete data.state.group.name.show;
+
+  delete data.state.group.openAll.show;
+
   data.state.bookmark = data.state.link;
   data.state.bookmark.url = data.state.link.item.url;
   data.state.bookmark.line = data.state.link.item.line;
