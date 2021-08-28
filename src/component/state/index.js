@@ -110,8 +110,7 @@ state.default = {
   },
   search: false,
   modal: false,
-  menu: false,
-  autoSuggest: false
+  menu: false
 };
 
 state.minMax = {
