@@ -32,6 +32,7 @@ export const Control_colorMixer = function({
     iconName: 'arrowKeyboardDown',
     style: ['line'],
     classList: ['collapse-toggle', 'form-group-item-small'],
+    title: 'More controls',
     func: () => {
       this.moreControlsCollapse.toggle();
       this.moreControlsUpdate();

@@ -75,6 +75,7 @@ export const Control_textReset = function({
     iconName: 'replay',
     style: ['line'],
     classList: ['form-group-item-small'],
+    title: 'Reset to default',
     func: () => {
       set({
         object: object,
