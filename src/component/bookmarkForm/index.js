@@ -389,6 +389,7 @@ export const BookmarkForm = function({
         srOnly: true,
         defaultValue: bookmarkDefault.accent.rgb,
         minMaxObject: bookmarkMinMax,
+        randomColor: true,
         action: () => {
           this.preview.update.style(bookmarkData);
         }
@@ -417,6 +418,7 @@ export const BookmarkForm = function({
         srOnly: true,
         defaultValue: bookmarkDefault.color.rgb,
         minMaxObject: bookmarkMinMax,
+        randomColor: true,
         action: () => {
           this.preview.update.style(bookmarkData);
         }

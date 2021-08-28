@@ -12,6 +12,7 @@ import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
 import { convertColor } from '../../../utility/convertColor';
 import { isValidString } from '../../../utility/isValidString';
+import { randomNumber } from '../../../utility/randomNumber';
 
 export const Control_color = function({
   object = {},
@@ -22,6 +23,7 @@ export const Control_color = function({
   value = '#000000',
   defaultValue = false,
   action = false,
+  randomColor = false,
   extraButtons = []
 } = {}) {
 
@@ -90,9 +92,36 @@ export const Control_color = function({
     iconName: 'replay',
     style: ['line'],
     classList: ['form-group-item-small'],
+    title: 'Reset to default',
     func: () => {
 
       set({ object: object, path: path + '.rgb', value: JSON.parse(JSON.stringify(defaultValue)) });
+
+      this.update({ all: true });
+
+      if (action) { action(); };
+
+    }
+  });
+
+  this.random = new Button({
+    text: false,
+    iconName: 'random',
+    style: ['line'],
+    classList: ['form-group-item-small'],
+    title: 'Random colour',
+    func: () => {
+
+      set({ object: object, path: path + '.hsl', value: { h: randomNumber(0, 360), s: randomNumber(0, 100), l: randomNumber(0, 100) } });
+
+      set({
+        object: object,
+        path: path + '.rgb',
+        value: convertColor.hsl.rgb(get({
+          object: object,
+          path: path + '.hsl'
+        }))
+      });
 
       this.update({ all: true });
 
@@ -142,6 +171,10 @@ export const Control_color = function({
         this.text
       ]
     });
+
+    if (randomColor) {
+      formGroup.appendChild(this.random.button);
+    };
 
     if (defaultValue || (typeof defaultValue === 'number' && defaultValue === 0)) {
       formGroup.appendChild(this.reset.button);

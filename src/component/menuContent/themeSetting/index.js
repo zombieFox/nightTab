@@ -578,6 +578,7 @@ themeSetting.accent = (parent) => {
     labelText: 'Accent colour',
     defaultValue: state.get.default().theme.accent.rgb,
     minMaxObject: state.get.minMax(),
+    randomColor: true,
     action: () => {
       applyCSSVar([
         'theme.accent.rgb.r',
@@ -1300,6 +1301,7 @@ themeSetting.background = (parent) => {
       labelText: 'Background colour',
       defaultValue: state.get.default().theme.background.color.rgb,
       minMaxObject: state.get.minMax(),
+      randomColor: true,
       action: () => {
         applyCSSVar([
           'theme.background.color.rgb.r',
@@ -1336,6 +1338,7 @@ themeSetting.background = (parent) => {
         labelText: 'Background gradient start',
         defaultValue: state.get.default().theme.background.gradient.start.rgb,
         minMaxObject: state.get.minMax(),
+        randomColor: true,
         action: () => {
           applyCSSVar([
             'theme.background.gradient.start.rgb.r',
@@ -1356,6 +1359,7 @@ themeSetting.background = (parent) => {
         labelText: 'Background gradient end',
         defaultValue: state.get.default().theme.background.gradient.end.rgb,
         minMaxObject: state.get.minMax(),
+        randomColor: true,
         action: () => {
           applyCSSVar([
             'theme.background.gradient.end.rgb.r',

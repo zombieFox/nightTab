@@ -24,6 +24,7 @@ export const Control_colorMixer = function({
   id = 'name',
   labelText = 'name',
   srOnly = false,
+  randomColor = false,
   action = false
 } = {}) {
 
@@ -48,6 +49,7 @@ export const Control_colorMixer = function({
     value: get({ object: object, path: path + '.rgb' }),
     defaultValue: defaultValue,
     extraButtons: [this.moreControlsToggle],
+    randomColor: randomColor,
     action: () => {
       set({
         object: object,
