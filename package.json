@@ -1,15 +1,30 @@
 {
   "name": "nightTab",
   "version": "7.0.0",
-  "description": "",
+  "description": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab -- a custom start page.",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "startpage",
+    "start-page",
+    "newtabpage",
+    "new-tab-page",
+    "tab",
+    "chrome-extension",
+    "extension",
+    "bookmarks",
+    "links",
+    "nightTab"
+  ],
+  "author": "zombieFox",
   "license": "GPL-3",
+  "bugs": {
+    "url": "https://github.com/zombieFox/nightTab/issues"
+  },
+  "homepage": "https://github.com/zombieFox/nightTab#readme",
   "devDependencies": {
     "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^5.2.5",
