@@ -19,6 +19,8 @@ keyboard.esc = new KeyboardShortcut({
   action: () => {
     if (state.get.current().bookmark.edit && !state.get.current().modal && !state.get.current().menu) {
       bookmark.edit.close();
+      group.edit.close();
+      header.edit.close();
       toolbar.current.update.edit();
     };
     data.save();
