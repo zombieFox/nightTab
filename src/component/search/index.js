@@ -9,7 +9,6 @@ import * as form from '../form';
 
 import { Button } from '../button';
 import { Control_text } from '../control/text';
-import { KeyboardShortcut } from '../keyboardShortcut';
 
 import { node } from '../../utility/node';
 import { trimString } from '../../utility/trimString';
@@ -102,8 +101,6 @@ export const Search = function() {
     this.element.input.text.placeholder = placeholder;
 
   };
-
-  this.delete = new KeyboardShortcut({ keycode: 8, action: () => { this.close(); } });
 
   this.engine = {};
 
