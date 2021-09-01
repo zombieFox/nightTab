@@ -39,7 +39,7 @@ const BookmarkTile = function({
         },
         name: {
           name: node('div|class:bookmark-display-name'),
-          text: node('div:' + bookmarkData.link.display.name.text + '|class:bookmark-display-name-text')
+          text: complexNode({ tag: 'div', text: bookmarkData.link.display.name.text, attr: [{ key: 'class', value: 'bookmark-display-name-text' }] })
         }
       },
       background: {
