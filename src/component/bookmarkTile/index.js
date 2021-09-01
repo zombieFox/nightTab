@@ -170,6 +170,8 @@ const BookmarkTile = function({
 
         editModal.open();
 
+        bookmarkForm.tab.update();
+
       }
     }),
     remove: new Button({

@@ -1,5 +1,7 @@
 :root {
   --tab-space: calc((var(--form-space) / 4) * 1em);
+  --tab-indicator-left: 0;
+  --tab-indicator-width: 0;
 }
 
 .tab {
@@ -9,16 +11,49 @@
     "nav"
     "content";
   gap: var(--tab-space);
+  position: relative;
   width: 100%;
 }
 
 .tab-nav {
+  background-color: hsl(var(--theme-primary-020));
+  border-radius: calc(var(--theme-radius) * 0.01em);
   grid-area: nav;
   display: flex;
+  position: relative;
+  transition: background-color var(--layout-transition-extra-fast);
 }
 
 .tab-nav>* {
   flex: 1 1 50%;
+}
+
+.tab-nav-indicator {
+  background-color: rgb(var(--theme-accent));
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  position: absolute;
+  top: 0;
+  left: calc(var(--tab-indicator-left) * 1px);
+  width: calc(var(--tab-indicator-width) * 1px);
+  height: 100%;
+  z-index: 1;
+  animation: circle-out var(--layout-transition-extra-fast) 1;
+}
+
+.tab-nav-indicator-active .tab-nav-indicator {
+  animation: none;
+  transition: left var(--layout-transition-extra-fast), width var(--layout-transition-extra-fast);
+}
+
+.tab-nav-button {
+  background-color: transparent;
+  z-index: 2;
+}
+
+.tab-nav-button.active {
+  background-color: transparent;
+  color: hsl(var(--theme-accent-text));
+  transition: background-color var(--layout-duration-01), border-color var(--layout-transition-extra-fast), color var(--layout-transition-extra-fast);
 }
 
 .tab-content {

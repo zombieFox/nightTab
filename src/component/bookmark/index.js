@@ -416,6 +416,8 @@ bookmark.add = {
 
     addModal.open();
 
+    bookmarkForm.tab.update();
+
   }
 };
 

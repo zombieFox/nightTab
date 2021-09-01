@@ -105,3 +105,23 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+@keyframes circle-in {
+  0% {
+    clip-path: circle(100% at 50% 50%);
+  }
+
+  100% {
+    clip-path: circle(0% at 50% 50%);
+  }
+}
+
+@keyframes circle-out {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+  }
+
+  100% {
+    clip-path: circle(100% at 50% 50%);
+  }
+}

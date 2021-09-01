@@ -1235,19 +1235,29 @@ export const BookmarkForm = function({
   };
 
   this.update = () => {
+
     this.control.bookmark.display.visual.show.update();
+
     this.control.bookmark.display.visual.type.update();
+
     this.control.bookmark.display.visual.letter.text.update();
+
     this.control.bookmark.display.visual.icon.text.update();
+
     if (isValidString(bookmarkData.link.display.visual.icon.prefix) && isValidString(bookmarkData.link.display.visual.icon.name)) {
       this.control.bookmark.display.visual.icon.preview.update(node('span|class:bookmark-form-icon ' + bookmarkData.link.display.visual.icon.prefix + ' fa-' + bookmarkData.link.display.visual.icon.name));
     } else {
       this.control.bookmark.display.visual.icon.preview.update();
     };
+
     this.control.bookmark.display.visual.image.url.update();
+
     this.control.bookmark.display.name.show.update();
+
     this.control.bookmark.display.name.text.update();
+
     this.control.bookmark.url.update();
+
   };
 
   this.assemble = () => {
