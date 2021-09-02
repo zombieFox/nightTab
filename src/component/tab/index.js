@@ -14,7 +14,7 @@ export const Tab = function({
   this.element = {
     tab: node('div|class:tab'),
     nav: node('div|class:tab-nav'),
-    group: node('div|class:tab-nav-group form-group form-group-horizontal form-group-block'),
+    group: node('div|class:tab-nav-group'),
     indicator: node('div|class:tab-nav-indicator'),
     content: node('div|class:tab-content')
   };
@@ -74,8 +74,10 @@ export const Tab = function({
 
           const itemBox = item.toggle.button.getBoundingClientRect();
 
-          this.element.tab.style.setProperty('--tab-indicator-left', itemBox.left - navBox.left);
-          this.element.tab.style.setProperty('--tab-indicator-width', itemBox.width);
+          this.element.tab.style.setProperty('--tab-indicator-top', Math.round(itemBox.top - navBox.top));
+          this.element.tab.style.setProperty('--tab-indicator-left', Math.round(itemBox.left - navBox.left));
+          this.element.tab.style.setProperty('--tab-indicator-width', Math.round(itemBox.width));
+          this.element.tab.style.setProperty('--tab-indicator-height', Math.round(itemBox.height));
 
 
         };
