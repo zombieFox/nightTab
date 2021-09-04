@@ -7,7 +7,21 @@ assignees: ''
 
 ---
 
-**Describe the bug**
+# Have you checked the [nightTab Wiki for support?](https://github.com/zombieFox/nightTab/wiki)
+
+**Please check before posting a question or issue.**
+
+Some frequently asked questions include:
+- [Browser support](https://github.com/zombieFox/nightTab/wiki/Browser-support)
+- [Protected URLs](https://github.com/zombieFox/nightTab/wiki/Protected-URLs)
+- [Resetting when opening the browser](https://github.com/zombieFox/nightTab/wiki/Resetting-when-opening-the-browser)
+- [Setting nightTab as your Firefox homepage](https://github.com/zombieFox/nightTab/wiki/Setting-nightTab-as-your-Firefox-homepage)
+
+---
+
+# Still need to report an issue or ask a question:
+
+**Describe the issue or bug**
 A clear and concise description of what the bug is.
 
 **To Reproduce**
@@ -27,12 +41,7 @@ If applicable, add screenshots to help explain your problem.
  - OS: [e.g. iOS]
  - Browser [e.g. chrome, safari]
  - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+ - nightTab version [e.g. 6.0.0]
 
 **Additional context**
 Add any other context about the problem here.
