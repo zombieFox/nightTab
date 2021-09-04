@@ -82,9 +82,7 @@ bookmarkSetting.disable = () => {
 };
 
 bookmarkSetting.edge = {
-  general: {},
-  style: {},
-  orientation: {}
+  general: {}
 };
 
 bookmarkSetting.general = (parent) => {
@@ -286,6 +284,20 @@ bookmarkSetting.style = (parent) => {
 
       groupAndBookmark.render();
 
+      if (bookmarkSetting.edge.general.size) {
+
+        if (state.get.current().bookmark.show && bookmark.tile.current.length > 0) {
+
+          bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
+
+        };
+
+      } else {
+
+        bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
+
+      };
+
       data.save();
 
     }
@@ -310,8 +322,25 @@ bookmarkSetting.orientation = (parent) => {
     groupName: 'bookmark-orientation',
     path: 'bookmark.orientation',
     action: () => {
+
       applyCSSClass('bookmark.orientation');
+
+      if (bookmarkSetting.edge.general.size) {
+
+        if (state.get.current().bookmark.show && bookmark.tile.current.length > 0) {
+
+          bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
+
+        };
+
+      } else {
+
+        bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
+
+      };
+
       data.save();
+
     }
   });
 
@@ -334,9 +363,27 @@ bookmarkSetting.sort = (parent) => {
     text: 'By letter',
     style: ['line'],
     func: () => {
+
       bookmark.item.mod.sort.letter();
+
       groupAndBookmark.render();
+
+      if (bookmarkSetting.edge.general.size) {
+
+        if (state.get.current().bookmark.show && bookmark.tile.current.length > 0) {
+
+          bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
+
+        };
+
+      } else {
+
+        bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
+
+      };
+
       data.save();
+
     }
   });
 
@@ -344,9 +391,27 @@ bookmarkSetting.sort = (parent) => {
     text: 'By icon',
     style: ['line'],
     func: () => {
+
       bookmark.item.mod.sort.icon();
+
       groupAndBookmark.render();
+
+      if (bookmarkSetting.edge.general.size) {
+
+        if (state.get.current().bookmark.show && bookmark.tile.current.length > 0) {
+
+          bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
+
+        };
+
+      } else {
+
+        bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
+
+      };
+
       data.save();
+
     }
   });
 
@@ -354,9 +419,27 @@ bookmarkSetting.sort = (parent) => {
     text: 'By name',
     style: ['line'],
     func: () => {
+
       bookmark.item.mod.sort.name();
+
       groupAndBookmark.render();
+
+      if (bookmarkSetting.edge.general.size) {
+
+        if (state.get.current().bookmark.show && bookmark.tile.current.length > 0) {
+
+          bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
+
+        };
+
+      } else {
+
+        bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
+
+      };
+
       data.save();
+
     }
   });
 
