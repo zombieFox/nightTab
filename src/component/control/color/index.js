@@ -201,6 +201,7 @@ export const Control_color = function({
     this.label.classList.add('disabled');
     this.color.disabled = true;
     this.text.disabled = true;
+    this.random.disable();
     this.reset.disable();
 
     if (extraButtons.length > 0) {
@@ -214,6 +215,7 @@ export const Control_color = function({
     this.label.classList.remove('disabled');
     this.color.disabled = false;
     this.text.disabled = false;
+    this.random.enable();
     this.reset.enable();
 
     if (extraButtons.length > 0) {
