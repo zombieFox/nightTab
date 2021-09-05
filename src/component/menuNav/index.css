@@ -30,7 +30,7 @@
 
 .menu-nav-item {
   flex-grow: 1;
-  flex-basis: 33.33333333%;
+  flex-basis: 20%;
 }
 
 @media (min-width: 700px) {
