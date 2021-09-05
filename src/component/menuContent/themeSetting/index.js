@@ -71,10 +71,10 @@ themeSetting.control = {
 themeSetting.disable = () => {
 
   if (state.get.current().theme.accent.random.active) {
-    themeSetting.control.accent.style.enable();
+    themeSetting.control.accent.random.style.enable();
     themeSetting.control.accent.randomiseNow.enable();
   } else {
-    themeSetting.control.accent.style.disable();
+    themeSetting.control.accent.random.style.disable();
     themeSetting.control.accent.randomiseNow.disable();
   };
 
@@ -341,7 +341,7 @@ themeSetting.saved = (parent) => {
       }
     }),
     edit: new Button({
-      text: 'Edit',
+      text: 'Edit saved themes',
       iconName: 'edit',
       style: ['line'],
       srOnly: true,
@@ -594,7 +594,21 @@ themeSetting.accent = (parent) => {
     }
   });
 
-  themeSetting.control.accent.style = new Control_radio({
+  themeSetting.control.accent.random = {};
+
+  themeSetting.control.accent.random.active = new Control_checkbox({
+    object: state.get.current(),
+    path: 'theme.accent.random.active',
+    id: 'theme-accent-random-active',
+    labelText: 'Random Accent colour on load/refresh',
+    action: () => {
+      themeSetting.disable();
+      themeSetting.control.accent.random.collapse.update();
+      data.save();
+    }
+  });
+
+  themeSetting.control.accent.random.style = new Control_radio({
     object: state.get.current(),
     radioGroup: [
       { id: 'theme-accent-random-style-any', labelText: 'Any', value: 'any' },
@@ -606,20 +620,6 @@ themeSetting.accent = (parent) => {
     groupName: 'theme-accent-random-style',
     path: 'theme.accent.random.style',
     action: () => {
-      data.save();
-    }
-  });
-
-  themeSetting.control.accent.random = {};
-
-  themeSetting.control.accent.random.active = new Control_checkbox({
-    object: state.get.current(),
-    path: 'theme.accent.random.active',
-    id: 'theme-accent-random-active',
-    labelText: 'Random Accent colour on load/refresh',
-    action: () => {
-      themeSetting.disable();
-      themeSetting.control.accent.random.collapse.update();
       data.save();
     }
   });
@@ -645,7 +645,7 @@ themeSetting.accent = (parent) => {
   });
 
   themeSetting.control.accent.random.area = node('div', [
-    themeSetting.control.accent.style.inline(),
+    themeSetting.control.accent.random.style.inline(),
     themeSetting.control.accent.randomiseNow.wrap()
   ]);
 
