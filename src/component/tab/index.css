@@ -36,6 +36,12 @@
   gap: calc((var(--tab-size) / 4) * 0.125em);
 }
 
+@media (min-width: 800px) {
+  .tab-nav-group {
+    flex-wrap: nowrap;
+  }
+}
+
 .tab-nav-button {
   background-color: transparent;
   flex-grow: 1;
