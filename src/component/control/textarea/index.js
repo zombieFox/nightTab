@@ -55,11 +55,11 @@ export const Control_textarea = function({
   };
 
   if (min) {
-    this.textarea.min = min;
+    this.textarea.minLength = min;
   };
 
   if (max) {
-    this.textarea.max = max;
+    this.textarea.maxLength = max;
   };
 
   if (placeholder) {
