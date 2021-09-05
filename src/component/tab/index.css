@@ -32,16 +32,21 @@
   flex-grow: 1;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: calc((var(--tab-size) / 4) * 0.125em);
 }
 
 .tab-nav-button {
+  background-color: transparent;
   flex-grow: 1;
+  flex-basis: 25%;
+  z-index: 2;
 }
 
-.tab-nav-button {
-  background-color: transparent;
-  z-index: 2;
+@media (min-width: 600px) {
+  .tab-nav-button {
+    flex-basis: auto;
+  }
 }
 
 .tab-nav-button.active {
@@ -65,7 +70,7 @@
 
 .tab-nav-indicator-active .tab-nav-indicator {
   animation: none;
-  transition: left var(--layout-transition-extra-fast), width var(--layout-transition-extra-fast);
+  transition: top var(--layout-transition-extra-fast), left var(--layout-transition-extra-fast), width var(--layout-transition-extra-fast), height var(--layout-transition-extra-fast);
 }
 
 .tab-content {
