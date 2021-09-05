@@ -4,10 +4,10 @@ export const bookmarkMinMax = {
     translate: { x: { min: -300, max: 300 }, y: { min: -300, max: 300 } },
     gutter: { min: 0, max: 500 },
     visual: {
-      size: { min: 5, max: 200 },
+      size: { min: 5, max: 400 },
       shadow: { size: { min: 0, max: 100 } }
     },
-    name: { size: { min: 5, max: 200 } }
+    name: { size: { min: 5, max: 400 } }
   },
   accent: {
     hsl: { h: { min: 0, max: 359 }, s: { min: 0, max: 100 }, l: { min: 0, max: 100 } },
