@@ -103,7 +103,7 @@ dataSetting.restore = (parent) => {
 
 dataSetting.backup = (parent) => {
 
-  dataSetting.control.backup.button = new Button({
+  dataSetting.control.backup.export = new Button({
     text: 'Export data',
     style: ['line'],
     func: () => {
@@ -111,14 +111,22 @@ dataSetting.backup = (parent) => {
     }
   });
 
-  dataSetting.control.backup.buttonHelper = new Control_helperText({
+  // dataSetting.control.backup.copy = new Button({
+  //   text: 'Copy data to clipboard',
+  //   style: ['line'],
+  //   func: () => {
+  //     navigator.clipboard.writeText(JSON.stringify(data.load()));
+  //   }
+  // });
+
+  dataSetting.control.backup.exportHelper = new Control_helperText({
     text: ['Download a backup of your ' + appName + ' Bookmarks and Settings.', 'This file can later be imported on this or another deivce.']
   });
 
   parent.appendChild(
     node('div', [
-      dataSetting.control.backup.button.wrap(),
-      dataSetting.control.backup.buttonHelper.wrap()
+      dataSetting.control.backup.copy.wrap(),
+      dataSetting.control.backup.exportHelper.wrap()
     ])
   );
 
