@@ -125,7 +125,7 @@ dataSetting.backup = (parent) => {
 
   parent.appendChild(
     node('div', [
-      dataSetting.control.backup.copy.wrap(),
+      dataSetting.control.backup.export.wrap(),
       dataSetting.control.backup.exportHelper.wrap()
     ])
   );
