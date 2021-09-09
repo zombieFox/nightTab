@@ -125,14 +125,8 @@ export const Control_radio = function({
 
     const wrap = form.wrap();
 
-    if (label) {
-      wrap.appendChild(
-        form.wrap({
-          children: [
-            this.label
-          ]
-        })
-      );
+    if (this.label) {
+      wrap.appendChild(form.wrap({ children: [this.label] }));
     };
 
     this.radioSet.forEach((item, i) => {
@@ -167,15 +161,13 @@ export const Control_radio = function({
 
   this.inline = () => {
 
-    const formWrap = form.wrap();
-
-    const formInline = form.inline({
+    const inline = form.inline({
       gap: 'large',
       wrap: true
     });
 
     this.radioSet.forEach((item, i) => {
-      formInline.appendChild(
+      inline.appendChild(
         form.wrap({
           children: [
             item.radio,
@@ -185,9 +177,15 @@ export const Control_radio = function({
       );
     });
 
-    formWrap.appendChild(formInline);
+    const wrap = form.wrap();
 
-    return formWrap;
+    if (this.label) {
+      wrap.appendChild(form.wrap({ children: [this.label] }));
+    };
+
+    wrap.appendChild(form.wrap({ children: [inline] }));
+
+    return wrap;
 
   };
 

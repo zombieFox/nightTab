@@ -447,6 +447,7 @@ layoutSetting.page = (parent) => {
 
   layoutSetting.control.page.scrollbar = new Control_radio({
     object: state.get.current(),
+    label: 'Scrollbar',
     radioGroup: [
       { id: 'layout-scrollbar-auto', labelText: 'Auto', value: 'auto' },
       { id: 'layout-scrollbar-thin', labelText: 'Thin', value: 'thin' },
