@@ -573,6 +573,38 @@ update.mod['7.0.0'] = function(data) {
   return data;
 };
 
+update.mod['7.1.0'] = function(data) {
+
+  data.state.group.toolbar = data.state.group.openAll;
+
+  delete data.state.group.openAll;
+
+  data.state.theme.group.toolbar = data.state.theme.group.openAll;
+
+  delete data.state.theme.group.openAll;
+
+  data.state.theme.custom.all.forEach((item, i) => {
+
+    item.group.toolbar = { opacity: item.group.openAll.opacity };
+
+    delete item.group.openAll;
+
+  });
+
+  data.bookmark.forEach((item, i) => {
+
+    item.toolbar = {
+      openAll: { show: item.openAll.show },
+      collapse: { show: true }
+    };
+
+    delete item.openAll;
+
+  });
+
+  return data;
+};
+
 update.run = (data) => {
 
   // loop over all updates in mod.all object

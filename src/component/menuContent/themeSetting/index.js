@@ -1110,7 +1110,7 @@ themeSetting.opacity = (parent) => {
 
       state.get.current().theme.header.search.opacity = state.get.current().theme.opacity.general;
 
-      state.get.current().theme.group.openAll.opacity = state.get.current().theme.opacity.general;
+      state.get.current().theme.group.toolbar.opacity = state.get.current().theme.opacity.general;
 
       themeSetting.control.opacity.toolbar.update();
 
@@ -1118,14 +1118,14 @@ themeSetting.opacity = (parent) => {
 
       themeSetting.control.opacity.search.update();
 
-      themeSetting.control.opacity.openAll.update();
+      themeSetting.control.opacity.group.toolbar.update();
 
       applyCSSVar([
         'theme.opacity.general',
         'theme.toolbar.opacity',
         'theme.bookmark.item.opacity',
         'theme.header.search.opacity',
-        'theme.group.openAll.opacity'
+        'theme.group.toolbar.opacity'
       ]);
 
       bookmark.item.mod.applyVar('color.opacity', state.get.current().theme.bookmark.item.opacity);
@@ -1213,29 +1213,31 @@ themeSetting.opacity = (parent) => {
     }
   });
 
-  themeSetting.control.opacity.openAll = new Control_sliderSlim({
-    object: state.get.current(),
-    path: 'theme.group.openAll.opacity',
-    id: 'theme-group-open-all-opacity',
-    labelText: 'Open all',
-    value: state.get.current().theme.group.openAll.opacity,
-    defaultValue: state.get.default().theme.group.openAll.opacity,
-    min: state.get.minMax().theme.group.openAll.opacity.min,
-    max: state.get.minMax().theme.group.openAll.opacity.max,
-    action: () => {
+  themeSetting.control.opacity.group = {
+    toolbar: new Control_sliderSlim({
+      object: state.get.current(),
+      path: 'theme.group.toolbar.opacity',
+      id: 'theme-group-toolbar-opacity',
+      labelText: 'Group toolbar',
+      value: state.get.current().theme.group.toolbar.opacity,
+      defaultValue: state.get.default().theme.group.toolbar.opacity,
+      min: state.get.minMax().theme.group.toolbar.opacity.min,
+      max: state.get.minMax().theme.group.toolbar.opacity.max,
+      action: () => {
 
-      applyCSSVar('theme.group.openAll.opacity');
+        applyCSSVar('theme.group.toolbar.opacity');
 
-      if (group.area.current.length > 0) {
+        if (group.area.current.length > 0) {
 
-        group.area.current[0].update.style();
+          group.area.current[0].update.style();
 
-      };
+        };
 
-      data.save();
+        data.save();
 
-    }
-  });
+      }
+    })
+  };
 
   parent.appendChild(
     node('div', [
@@ -1248,7 +1250,7 @@ themeSetting.opacity = (parent) => {
               themeSetting.control.opacity.toolbar.wrap(),
               themeSetting.control.opacity.bookmark.wrap(),
               themeSetting.control.opacity.search.wrap(),
-              themeSetting.control.opacity.openAll.wrap()
+              themeSetting.control.opacity.group.toolbar.wrap()
             ]
           })
         ]

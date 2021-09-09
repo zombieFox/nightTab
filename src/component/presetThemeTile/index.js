@@ -205,7 +205,7 @@ export const PresetThemeTile = function({
 
         themeSetting.control.opacity.search.update();
 
-        themeSetting.control.opacity.openAll.update();
+        themeSetting.control.opacity.group.toolbar.update();
 
         themeSetting.disable();
 
@@ -286,7 +286,7 @@ export const PresetThemeTile = function({
           'theme.bookmark.color.opacity',
           'theme.bookmark.item.opacity',
           'theme.toolbar.opacity',
-          'theme.group.openAll.opacity'
+          'theme.group.toolbar.opacity'
         ]);
 
         applyCSSClass([

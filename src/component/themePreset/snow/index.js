@@ -22,6 +22,6 @@ export const snow = {
   layout: { color: { by: 'theme', blur: 0, opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, divider: { size: 0 } },
   header: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 80 } },
   bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 2, opacity: 80 } },
-  group: { openAll: { opacity: 80 } },
+  group: { toolbar: { opacity: 80 } },
   toolbar: { opacity: 80 }
 };

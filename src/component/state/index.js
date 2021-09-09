@@ -73,7 +73,7 @@ state.default = {
     area: { justify: 'left' },
     order: 'header-body',
     name: { size: 100 },
-    openAll: { size: 100 },
+    toolbar: { size: 100 },
     edit: false,
     add: false
   },
@@ -100,7 +100,7 @@ state.default = {
     layout: { color: { by: 'theme', hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 }, blur: 0, opacity: 10 }, divider: { size: 0 } },
     header: { color: { by: 'theme', hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 }, opacity: 10 }, search: { opacity: 100 } },
     bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 0, opacity: 100 } },
-    group: { openAll: { opacity: 100 } },
+    group: { toolbar: { opacity: 100 } },
     toolbar: { opacity: 100 },
     style: 'dark',
     radius: 25,
@@ -124,7 +124,7 @@ state.minMax = {
   bookmark: { size: { min: 50, max: 500 } },
   group: {
     name: { size: { min: 50, max: 500 } },
-    openAll: { size: { min: 50, max: 500 } }
+    toolbar: { size: { min: 50, max: 500 } }
   },
   layout: {
     area: {
@@ -156,7 +156,7 @@ state.minMax = {
       toolbar: { min: 0, max: 100 },
       bookmark: { min: 0, max: 100 },
       search: { min: 0, max: 100 },
-      openAll: { min: 0, max: 100 }
+      toolbar: { min: 0, max: 100 }
     },
     layout: {
       color: {
@@ -183,7 +183,7 @@ state.minMax = {
       },
       item: { border: { min: 0, max: 20 }, opacity: { min: 0, max: 100 } }
     },
-    group: { openAll: { opacity: { min: 0, max: 100 } } },
+    group: { toolbar: { opacity: { min: 0, max: 100 } } },
     toolbar: { opacity: { min: 0, max: 100 } },
     background: {
       color: {

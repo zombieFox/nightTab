@@ -22,6 +22,6 @@ export const hive = {
   layout: { color: { by: 'custom', blur: 30, opacity: 20, hsl: { h: 35, s: 100, l: 61 }, rgb: { r: 255, g: 172, b: 56 } }, divider: { size: 0 } },
   header: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 0 } },
   bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 1, opacity: 0 } },
-  group: { openAll: { opacity: 0 } },
+  group: { toolbar: { opacity: 0 } },
   toolbar: { opacity: 0 }
 };

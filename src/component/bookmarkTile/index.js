@@ -483,11 +483,13 @@ const BookmarkTile = function({
           this.element.content.background.wrap.appendChild(this.element.content.background.video);
 
           if (isValidString(bookmarkData.link.background.video.url)) {
-            const backgroundVideoElement = new Video({
+
+            this.video = new Video({
               url: bookmarkData.link.background.video.url
             });
 
-            this.element.content.background.video.appendChild(backgroundVideoElement.video);
+            this.element.content.background.video.appendChild(this.video.video);
+
           };
 
           break;
@@ -546,6 +548,8 @@ const BookmarkTile = function({
     this.style(newBookmarkData);
 
   };
+
+  this.video = false;
 
   this.assemble();
 

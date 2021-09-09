@@ -104,15 +104,24 @@ export const GroupForm = function({
         }
       })
     },
+    collapse: {
+      show: new Control_checkbox({
+        object: groupData.group,
+        path: 'toolbar.collapse.show',
+        id: 'toolbar-collapse-show',
+        labelText: 'Show Collapse',
+        description: 'The Collapse button will show or hide the Bookmaks in this Group.'
+      })
+    },
     openAll: {
       show: new Control_checkbox({
         object: groupData.group,
-        path: 'openAll.show',
-        id: 'openAll-show',
+        path: 'toolbar.openAll.show',
+        id: 'toolbar-openAll-show',
         labelText: 'Show Open all',
         description: 'Open all button will appear if there is at least one Bookmark in this Group.'
       })
-    },
+    }
   };
 
   this.control.destination = new Control_select({
@@ -184,14 +193,15 @@ export const GroupForm = function({
         children: [
           form.wrap({
             children: [
-              node('h2:Open all|class:mb-2'),
-              node('p:Display a button to open all Bookmarks in this Group.|class:mb-5')
+              node('h2:Toolbar|class:mb-2'),
+              node('p:Display controls to open all or show/hide the Bookmarks in this Group.|class:mb-5')
             ]
           }),
           form.wrap({
             children: [
               form.indent({
                 children: [
+                  this.control.group.collapse.show.wrap(),
                   this.control.group.openAll.show.wrap()
                 ]
               })

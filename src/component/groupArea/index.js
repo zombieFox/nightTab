@@ -32,6 +32,10 @@ export const GroupArea = function({
       control: node('div|class:group-control'),
       group: node('div|class:group-control-group form-group form-group-horizontal')
     },
+    toolbar: {
+      toolbar: node('div|class:group-toolbar'),
+      group: node('div|class:group-toolbar-group form-group form-group-horizontal')
+    },
     body: node('div|class:group-body')
   };
 
@@ -166,10 +170,12 @@ export const GroupArea = function({
 
   this.openAll = {
     button: new Button({
-      text: 'Open all',
+      text: 'Open all Bookmarks in ' + (isValidString(groupData.group.name.text) ? groupData.group.name.text : 'this Group'),
       style: ['line'],
-      title: 'Open all Bookmarks in this Group',
-      classList: ['group-control-button', 'group-control-open-all'],
+      title: 'Open all Bookmarks in ' + (isValidString(groupData.group.name.text) ? groupData.group.name.text : 'this Group'),
+      srOnly: true,
+      iconName: 'openAll',
+      classList: ['group-toolbar-button', 'group-toolbar-open-all'],
       func: () => {
         this.openAll.open();
       }
@@ -197,14 +203,57 @@ export const GroupArea = function({
     }
   };
 
+  this.collapse = {
+    button: new Button({
+      text: 'Collapse ' + (isValidString(groupData.group.name.text) ? groupData.group.name.text : 'this Group'),
+      style: ['line'],
+      title: 'Collapse ' + (isValidString(groupData.group.name.text) ? groupData.group.name.text : 'this Group'),
+      srOnly: true,
+      iconName: 'arrowKeyboardUp',
+      classList: ['group-toolbar-button', 'group-toolbar-collapse'],
+      func: () => {
+        this.collapse.toggle();
+        this.collapse.video();
+        this.update.style();
+        data.save();
+      }
+    }),
+    toggle: () => {
+
+      if (groupData.group.collapse) {
+        groupData.group.collapse = false;
+      } else {
+        groupData.group.collapse = true;
+      };
+
+    },
+    video: () => {
+
+      if (bookmark.tile.current.length > 0) {
+        bookmark.tile.current.forEach((item, i) => {
+
+          if (item.video) {
+            if (groupData.group.collapse) {
+              item.video.pause();
+            } else {
+              item.video.play();
+            };
+          };
+
+        });
+      };
+
+    }
+  };
+
   this.style = () => {
 
     if (groupData.group.name.show && isValidString(groupData.group.name.text)) {
       this.element.group.classList.add('is-group-header');
     };
 
-    if (groupData.group.openAll.show && groupData.group.items.length > 0) {
-      this.element.group.classList.add('is-group-open-all');
+    if (groupData.group.toolbar.collapse.show || (groupData.group.toolbar.openAll.show && groupData.group.items.length > 0)) {
+      this.element.group.classList.add('is-group-toolbar');
     };
 
   };
@@ -267,8 +316,20 @@ export const GroupArea = function({
       this.element.header.appendChild(this.element.name.name);
     };
 
-    if (groupData.group.openAll.show && groupData.group.items.length > 0) {
-      this.element.header.appendChild(this.openAll.button.button);
+    if (groupData.group.toolbar.collapse.show) {
+      this.element.toolbar.group.appendChild(this.collapse.button.button);
+    };
+
+    if (groupData.group.toolbar.openAll.show && groupData.group.items.length > 0) {
+      this.element.toolbar.group.appendChild(this.openAll.button.button);
+    };
+
+    if (groupData.group.toolbar.collapse.show || (groupData.group.toolbar.openAll.show && groupData.group.items.length > 0)) {
+
+      this.element.toolbar.toolbar.appendChild(this.element.toolbar.group);
+
+      this.element.header.appendChild(this.element.toolbar.toolbar);
+
     };
 
     this.element.group.appendChild(this.element.header);
@@ -303,13 +364,31 @@ export const GroupArea = function({
 
     const html = document.querySelector('html');
 
-    if (state.get.current().theme.group.openAll.opacity < 40) {
+    if (state.get.current().theme.group.toolbar.opacity < 40) {
 
-      html.classList.add('is-group-open-all-opacity-low');
+      html.classList.add('is-group-toolbar-opacity-low');
+
+      this.openAll.button.style.update(['link']);
+
+      this.collapse.button.style.update(['link']);
 
     } else {
 
-      html.classList.remove('is-group-open-all-opacity-low');
+      html.classList.remove('is-group-toolbar-opacity-low');
+
+      this.openAll.button.style.update(['line']);
+
+      this.collapse.button.style.update(['line']);
+
+    };
+
+    if (groupData.group.collapse) {
+
+      this.element.group.classList.add('is-group-collapse');
+
+    } else {
+
+      this.element.group.classList.remove('is-group-collapse');
 
     };
 

@@ -299,7 +299,7 @@ group.sort = {
 group.init = () => {
   applyCSSVar([
     'group.name.size',
-    'group.openAll.size'
+    'group.toolbar.size'
   ]);
   applyCSSClass([
     'group.area.justify',

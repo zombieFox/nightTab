@@ -22,6 +22,6 @@ export const aerial = {
   layout: { color: { by: 'custom', blur: 50, opacity: 40, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, divider: { size: 1 } },
   header: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, search: { opacity: 0 } },
   bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 0, opacity: 0 } },
-  group: { openAll: { opacity: 0 } },
+  group: { toolbar: { opacity: 0 } },
   toolbar: { opacity: 0 }
 };

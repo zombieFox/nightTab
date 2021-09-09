@@ -84,10 +84,23 @@
 .bookmark-group {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: calc(var(--layout-space) * var(--layout-padding));
   align-items: stretch;
   justify-content: stretch;
+}
+
+.is-group-area-justify-left .bookmark-group {
+  justify-content: flex-start;
+}
+
+.is-group-area-justify-center .bookmark-group {
+  justify-content: center;
+}
+
+.is-group-area-justify-right .bookmark-group {
+  justify-content: flex-end;
 }
 
 .bookmark {

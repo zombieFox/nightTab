@@ -10,6 +10,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1em;
+  width: 100%;
 }
 
 .search-empty-string {

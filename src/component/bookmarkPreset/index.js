@@ -3,7 +3,8 @@
  bookmarkPreset.get = () => {
    return [{
      name: { text: 'Cool stuff', show: true },
-     openAll: { show: true },
+     collapse: false,
+     toolbar: { openAll: { show: true }, collapse: { show: true } },
      items: [{
        url: 'https://zombiefox.github.io/awesomeSheet/',
        display: {
@@ -115,7 +116,8 @@
      }]
    }, {
      name: { text: 'Dev sites', show: true },
-     openAll: { show: true },
+     collapse: false,
+     toolbar: { openAll: { show: true }, collapse: { show: true } },
      items: [{
        url: 'https://devdocs.io/',
        display: {
