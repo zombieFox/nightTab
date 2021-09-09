@@ -329,8 +329,6 @@ const BookmarkTile = function({
 
       this.element.bookmark.style.setProperty('--bookmark-display-visual-color', 'var(--theme-accent)');
 
-      this.element.bookmark.style.setProperty('--bookmark-display-visual-color-focus-hover', 'var(--theme-accent-text)');
-
     };
 
     if (bookmarkData.link.display.visual.shadow.size > 0) {
@@ -394,6 +392,8 @@ const BookmarkTile = function({
       this.element.bookmark.style.setProperty('--bookmark-color', 'var(--theme-color)');
 
       this.element.bookmark.style.setProperty('--bookmark-color-focus-hover', 'var(--theme-color)');
+
+      this.element.bookmark.style.setProperty('--bookmark-display-visual-color-focus-hover', 'var(--theme-color-text)');
 
       this.element.bookmark.style.setProperty('--bookmark-display-name-color', 'var(--theme-color-text)');
 

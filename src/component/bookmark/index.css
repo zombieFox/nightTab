@@ -2,7 +2,7 @@
   --bookmark-color: var(--theme-primary-020);
   --bookmark-color-focus-hover: var(--theme-primary-030);
   --bookmark-display-visual-color: var(--theme-accent);
-  --bookmark-display-visual-color-focus-hover: var(--theme-accent-text);
+  --bookmark-display-visual-color-focus-hover: var(--theme-primary-text-030);
   --bookmark-display-name-color: var(--theme-primary-text-020);
   --bookmark-display-name-color-focus-hover: var(--theme-primary-text-030);
 }
@@ -557,7 +557,7 @@
 .bookmark:focus .bookmark-display-visual,
 .bookmark:hover .bookmark-display-visual,
 .bookmark:focus-within .bookmark-display-visual {
-  color: rgb(var(--bookmark-display-visual-color-focus-hover));
+  color: hsl(var(--bookmark-display-visual-color-focus-hover));
 }
 
 .bookmark-display-visual-letter {
