@@ -131,21 +131,21 @@ bookmark.item = {
       letter: () => {
 
         bookmark.all.forEach((item, i) => {
-          item.items = sortArrayOfObject(item.items, 'display.name.text');
+          item.items = sortArrayOfObject(item.items, 'display.visual.letter.text');
         });
 
       },
       icon: () => {
 
         bookmark.all.forEach((item, i) => {
-          item.items = sortArrayOfObject(item.items, 'display.visual.letter.text');
+          item.items = sortArrayOfObject(item.items, 'display.visual.icon.name');
         });
 
       },
       name: () => {
 
         bookmark.all.forEach((item, i) => {
-          item.items = sortArrayOfObject(item.items, 'display.visual.icon.name');
+          item.items = sortArrayOfObject(item.items, 'display.name.text');
         });
 
       }
