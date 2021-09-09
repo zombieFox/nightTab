@@ -11,6 +11,7 @@ import { logo } from '../../logo';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 import { groupAndBookmark } from '../../groupAndBookmark';
+import { fontawesome } from '../../fontawesome';
 
 import * as form from '../../form';
 
@@ -19,6 +20,8 @@ import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
 import { Alert } from '../../alert';
 import { Link } from '../../link';
+import { StagedGroup } from '../../stagedGroup';
+import { StagedBookmark } from '../../stagedBookmark';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
@@ -40,6 +43,8 @@ import { complexNode } from '../../../utility/complexNode';
 import { applyCSSVar } from '../../../utility/applyCSSVar';
 import { applyCSSClass } from '../../../utility/applyCSSClass';
 import { applyCSSState } from '../../../utility/applyCSSState';
+import { randomNumber } from '../../../utility/randomNumber';
+import { randomString } from '../../../utility/randomString';
 
 const debugSetting = {};
 
@@ -343,6 +348,80 @@ debugSetting.bookmark = (parent) => {
     }
   });
 
+  debugSetting.control.bookmark.add = {
+    group: new Button({
+      text: 'Add a group',
+      style: ['line'],
+      func: () => {
+
+        const newGroupData = new StagedGroup();
+
+        newGroupData.group.name.text = randomString({ adjectivesCount: randomNumber(1, 3) });
+
+        newGroupData.newGroup();
+
+        group.item.mod.add(newGroupData);
+
+        group.add.mod.close();
+
+        groupAndBookmark.render();
+
+        layout.area.assemble();
+
+        data.save();
+
+      }
+    }),
+    bookmark: new Button({
+      text: 'Add 10 random bookmarks',
+      style: ['line'],
+      func: () => {
+
+        for (var i = 0; i < 10; i++) {
+
+          const newBookmarkData = new StagedBookmark();
+
+          newBookmarkData.type.new = true;
+
+          newBookmarkData.position.destination.item = (bookmark.all.length > 0) ? bookmark.all[0].items.length : 0;
+
+          newBookmarkData.position.destination.group = randomNumber(0, (bookmark.all.length - 1));
+
+          newBookmarkData.link.timestamp = new Date().getTime();
+
+          const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+          newBookmarkData.link.display.visual.letter.text = alphabet[randomNumber(0, (alphabet.length - 1))] + alphabet[randomNumber(0, (alphabet.length - 1))];
+
+          newBookmarkData.link.display.visual.type = 'icon';
+
+          const randomIcon = fontawesome[randomNumber(0, fontawesome.length - 1)];
+
+          newBookmarkData.link.display.visual.icon.label = randomIcon.label;
+          newBookmarkData.link.display.visual.icon.name = randomIcon.name;
+
+          if (randomIcon.styles.includes('solid')) {
+            newBookmarkData.link.display.visual.icon.prefix = 'fas';
+          } else if (randomIcon.styles.includes('brands')) {
+            newBookmarkData.link.display.visual.icon.prefix = 'fab';
+          };
+
+          newBookmarkData.link.display.name.text = randomString({ adjectivesCount: 1 });
+
+          newBookmarkData.link.url = randomString({ adjectivesCount: 1 });
+
+          bookmark.item.mod.add(newBookmarkData);
+
+        };
+
+        groupAndBookmark.render();
+
+        data.save();
+
+      }
+    })
+  };
+
   parent.appendChild(
     node('div', [
       form.wrap({
@@ -356,7 +435,9 @@ debugSetting.bookmark = (parent) => {
               debugSetting.control.bookmark.icon.wrap(),
               debugSetting.control.bookmark.image.wrap(),
               debugSetting.control.bookmark.nameShow.wrap(),
-              debugSetting.control.bookmark.nameHide.wrap()
+              debugSetting.control.bookmark.nameHide.wrap(),
+              debugSetting.control.bookmark.add.group.wrap(),
+              debugSetting.control.bookmark.add.bookmark.wrap()
             ]
           })
         ]
