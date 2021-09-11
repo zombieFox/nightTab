@@ -37,7 +37,7 @@ state.default = {
     date: {
       day: { show: false, display: 'word', weekStart: 'monday', length: 'long' },
       date: { show: true, display: 'number', ordinal: true },
-      month: { show: true, display: 'word', length: 'long', ordinal: true },
+      month: { show: true, display: 'word', length: 'short', ordinal: true },
       year: { show: false, display: 'number' },
       separator: { show: true, text: '' },
       format: 'date-month',
