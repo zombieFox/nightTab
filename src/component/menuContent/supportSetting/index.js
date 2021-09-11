@@ -45,13 +45,16 @@ const supportSetting = {};
 supportSetting.link = {
   url: 'https://github.com/zombieFox/' + appName + '/wiki/',
   page: {
+    applyToAll: 'Applying-bookmark-settings-to-all',
     browser: 'Browser-support',
     cookies: 'Cookies-and-cache',
     data: 'Data-backup-and-restore',
-    privacy: 'Respecting-your-privacy',
-    recovering: 'Recovering-settings-and-bookmarks',
-    backgroundImageVideo: 'Setting-a-background-video-or-image',
     localBackgroundImage: 'Local-background-image',
+    protectedUrl: 'Protected-URLs',
+    recovering: 'Recovering-settings-and-bookmarks',
+    resetting: 'Resetting-when-opening-the-browser',
+    privacy: 'Respecting-your-privacy',
+    backgroundImageVideo: 'Setting-a-background-video-or-image',
     firefox: 'Setting-nightTab-as-your-Firefox-homepage'
   }
 };
