@@ -91,7 +91,7 @@ supportSetting.support = (parent) => {
       node('hr'),
       complexNode({
         tag: 'p',
-        text: `For more support or feedback, submit an ${(new Link({ text:'Issue', href: `https://github.com/zombieFox/${appName}/issues`, openNew: true })).link().outerHTML}. or check the ${(new Link({ text:'Wiki', href: `https://github.com/zombieFox/${appName}/wiki`, openNew: true })).link().outerHTML}.`
+        text: `For more support or feedback, submit an ${(new Link({ text:'Issue', href: `https://github.com/zombieFox/${appName}/issues`, openNew: true })).link().outerHTML} or check the ${(new Link({ text:'Wiki', href: `https://github.com/zombieFox/${appName}/wiki`, openNew: true })).link().outerHTML}.`
       })
     ])
   );
