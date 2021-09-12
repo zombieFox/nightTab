@@ -246,6 +246,8 @@ export const Control_sliderDouble = function({
       updateControl();
     };
 
+    this.rightClip();
+
   };
 
 };
