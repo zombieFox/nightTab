@@ -465,11 +465,11 @@ themeSetting.colour = (parent) => {
           path: 'theme.color.range.primary.h',
           id: 'theme-color-range-primary-h',
           labelText: 'Primary colour',
-          hue: true,
           value: state.get.current().theme.color.range.primary.h,
           defaultValue: state.get.default().theme.color.range.primary.h,
           min: state.get.minMax().theme.color.range.primary.h.min,
           max: state.get.minMax().theme.color.range.primary.h.max,
+          style: 'hue',
           action: () => {
             theme.color.render();
             data.save();
@@ -484,6 +484,7 @@ themeSetting.colour = (parent) => {
           defaultValue: state.get.default().theme.color.range.primary.s,
           min: state.get.minMax().theme.color.range.primary.s.min,
           max: state.get.minMax().theme.color.range.primary.s.max,
+          style: 'saturation',
           action: () => {
             theme.color.render();
             data.save();
@@ -494,6 +495,7 @@ themeSetting.colour = (parent) => {
     contrast: new Control_sliderDouble({
       object: state.get.current(),
       labelText: 'Contrast range',
+      style: 'contrast',
       left: {
         path: 'theme.color.contrast.start',
         id: 'theme-color-contrast-start',

@@ -18,6 +18,7 @@ import { minMax } from '../../../utility/minMax';
 export const Control_sliderDouble = function({
   object = {},
   labelText = 'Name',
+  style = false,
   left = {
     path: false,
     id: 'name',
@@ -93,6 +94,7 @@ export const Control_sliderDouble = function({
       min: left.min,
       max: left.max,
       step: left.step,
+      style: style,
       action: () => {
 
         if (get({ object: state.get.current(), path: left.path }) > get({ object: state.get.minMax(), path: left.path }).max - 10) {
@@ -133,6 +135,7 @@ export const Control_sliderDouble = function({
       min: right.min,
       max: right.max,
       step: right.step,
+      style: style,
       action: () => {
 
         if (get({ object: state.get.current(), path: right.path }) < get({ object: state.get.minMax(), path: right.path }).min + 10) {

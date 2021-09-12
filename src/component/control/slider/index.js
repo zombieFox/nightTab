@@ -19,13 +19,13 @@ export const Control_slider = function({
   path = false,
   id = 'name',
   labelText = 'Name',
-  hue = false,
   value = 0,
   defaultValue = false,
   min = 0,
   max = 100,
   step = 1,
   action = false,
+  style = false,
   focusAction = false,
   blurAction = false,
   sliderAction = false,
@@ -42,8 +42,24 @@ export const Control_slider = function({
 
   const classList = [];
 
-  if (hue) {
-    classList.push('input-range-hue-spectrum');
+  if (style) {
+
+    switch (style) {
+
+      case 'hue':
+        classList.push('input-range-hue-spectrum');
+        break;
+
+      case 'saturation':
+        classList.push('input-range-saturation-spectrum');
+        break;
+
+      case 'contrast':
+        classList.push('input-range-contrast-spectrum');
+        break;
+
+    };
+
   };
 
   this.range = form.input.range({

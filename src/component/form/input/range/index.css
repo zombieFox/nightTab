@@ -17,6 +17,57 @@
   --form-range-hue: linear-gradient(to right, hsl(0, 100%, 50%), hsl(30, 100%, 50%), hsl(60, 100%, 50%), hsl(90, 100%, 50%), hsl(120, 100%, 50%), hsl(150, 100%, 50%), hsl(180, 100%, 50%), hsl(210, 100%, 50%), hsl(240, 100%, 50%), hsl(270, 100%, 50%), hsl(300, 100%, 50%), hsl(330, 100%, 50%), hsl(360, 100%, 50%));
 }
 
+:root {
+  --form-range-saturation: linear-gradient(to right, hsl(var(--theme-primary-1-h), 0%, 50%), hsl(var(--theme-primary-1-h), 50%, 50%), hsl(var(--theme-primary-1-h), 100%, 50%));
+}
+
+:root {
+  --form-range-contrast-low-to-high:
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 0%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 10%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 20%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 30%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 40%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 50%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 60%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 70%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 80%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 90%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 100%);
+  --form-range-contrast-high-to-low:
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 100%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 90%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 80%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 70%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 60%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 50%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 40%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 30%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 20%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 10%),
+    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 0%);
+}
+
+.is-theme-style-light {
+  --form-range-contrast: linear-gradient(to right, var(--form-range-contrast-high-to-low));
+}
+
+.is-theme-style-dark {
+  --form-range-contrast: linear-gradient(to right, var(--form-range-contrast-low-to-high));
+}
+
+@media (prefers-color-scheme: light) {
+  .is-theme-style-system {
+    --form-range-contrast: linear-gradient(to right, var(--form-range-contrast-high-to-low));
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .is-theme-style-system {
+    --form-range-contrast: linear-gradient(to right, var(--form-range-contrast-low-to-high));
+  }
+}
+
 input[type="range"] {
   background-color: transparent;
   padding: 0;
@@ -107,6 +158,14 @@ input[type="range"].input-range-hue-spectrum::-webkit-slider-runnable-track {
   background-image: var(--form-range-hue);
 }
 
+input[type="range"].input-range-saturation-spectrum::-webkit-slider-runnable-track {
+  background-image: var(--form-range-saturation);
+}
+
+input[type="range"].input-range-contrast-spectrum::-webkit-slider-runnable-track {
+  background-image: var(--form-range-contrast);
+}
+
 input[type="range"]:disabled.input-range-hue-spectrum::-webkit-slider-runnable-track {
   background-image: none;
   background-color: hsl(var(--form-range-track-background-disabled));
@@ -168,6 +227,14 @@ input[type="range"]:disabled:focus::-moz-range-thumb {
 
 input[type="range"].input-range-hue-spectrum::-moz-range-track {
   background-image: var(--form-range-hue);
+}
+
+input[type="range"].input-range-saturation-spectrum::-moz-range-track {
+  background-image: var(--form-range-saturation);
+}
+
+input[type="range"].input-range-contrast-spectrum::-moz-range-track {
+  background-image: var(--form-range-contrast);
 }
 
 input[type="range"]:disabled.input-range-hue-spectrum::-moz-range-track {
