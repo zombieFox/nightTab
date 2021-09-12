@@ -521,6 +521,12 @@ themeSetting.colour = (parent) => {
         }
       }
     }),
+    contrastHelper: new Control_helperText({
+      text: [
+        'Move the Contrast range controls close together for a muted look.',
+        'Move the Contrast range controls far apart from each other for a sharp vivid look.'
+      ]
+    }),
     shade: {
       helper: new Control_helperText({
         text: [
@@ -532,6 +538,7 @@ themeSetting.colour = (parent) => {
     }
   };
 
+
   parent.appendChild(
     node('div', [
       shade(),
@@ -539,7 +546,8 @@ themeSetting.colour = (parent) => {
       node('hr'),
       themeSetting.control.color.range.primary.h.wrap(),
       themeSetting.control.color.range.primary.s.wrap(),
-      themeSetting.control.color.contrast.wrap()
+      themeSetting.control.color.contrast.wrap(),
+      themeSetting.control.color.contrastHelper.wrap()
     ])
   );
 
