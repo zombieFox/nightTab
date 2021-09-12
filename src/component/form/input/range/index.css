@@ -22,50 +22,7 @@
 }
 
 :root {
-  --form-range-contrast-low-to-high:
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 0%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 10%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 20%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 30%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 40%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 50%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 60%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 70%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 80%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 90%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 100%);
-  --form-range-contrast-high-to-low:
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 100%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 90%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 80%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 70%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 60%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 50%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 40%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 30%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 20%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 10%),
-    hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 0%);
-}
-
-.is-theme-style-light {
-  --form-range-contrast: linear-gradient(to right, var(--form-range-contrast-high-to-low));
-}
-
-.is-theme-style-dark {
-  --form-range-contrast: linear-gradient(to right, var(--form-range-contrast-low-to-high));
-}
-
-@media (prefers-color-scheme: light) {
-  .is-theme-style-system {
-    --form-range-contrast: linear-gradient(to right, var(--form-range-contrast-high-to-low));
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .is-theme-style-system {
-    --form-range-contrast: linear-gradient(to right, var(--form-range-contrast-low-to-high));
-  }
+  --form-range-contrast: linear-gradient(to right, hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 0%), hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 10%), hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 20%), hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 30%), hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 40%), hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 50%), hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 60%), hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 70%), hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 80%), hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 90%), hsl(var(--theme-primary-1-h), calc(var(--theme-primary-1-s) * 1%), 100%));
 }
 
 input[type="range"] {
