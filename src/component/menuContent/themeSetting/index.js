@@ -1380,7 +1380,7 @@ themeSetting.background = (parent) => {
       alert: new Alert({
         iconName: 'info',
         children: [
-          node('p:Uploading Background images is no longer supported.|class:small'),
+          node('p:Local images can no longer be used. Images must be hosted somewhere online.|class:small'),
           complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: 'Why has this changed?', href: supportSetting.link.url + supportSetting.link.page.localBackgroundImage, openNew: true })).link()] })
         ]
       }),
