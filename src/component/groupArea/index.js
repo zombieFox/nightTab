@@ -182,21 +182,25 @@ export const GroupArea = function({
     }),
     open: () => {
 
-      if (state.get.current().bookmark.newTab) {
+      if ('tabs' in chrome) {
 
-        groupData.group.items.forEach((item, i) => {
-          chrome.tabs.create({ url: item.url });
-        });
+        if (state.get.current().bookmark.newTab) {
 
-      } else {
+          groupData.group.items.forEach((item, i) => {
+            chrome.tabs.create({ url: item.url });
+          });
 
-        const first = groupData.group.items.shift();
+        } else {
 
-        groupData.group.items.forEach((item, i) => {
-          chrome.tabs.create({ url: item.url });
-        });
+          const first = groupData.group.items.shift();
 
-        window.location.href = first.url;
+          groupData.group.items.forEach((item, i) => {
+            chrome.tabs.create({ url: item.url });
+          });
+
+          window.location.href = first.url;
+
+        };
 
       };
 
