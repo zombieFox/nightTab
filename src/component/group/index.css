@@ -27,10 +27,6 @@
   flex-direction: column-reverse;
 }
 
-.is-edge .group {
-  transition: gap var(--layout-transition-extra-fast);
-}
-
 .group.is-group-header,
 .group.is-group-toolbar {
   gap: calc(var(--layout-space) * var(--layout-gutter));
@@ -39,6 +35,10 @@
 .is-group-edit .group {
   gap: calc(var(--layout-space) * var(--layout-gutter));
   transition: gap var(--layout-transition-extra-fast);
+}
+
+.is-edge .group {
+  transition: none;
 }
 
 .group-header {
@@ -108,18 +108,14 @@
   transition: height var(--layout-transition-extra-fast) var(--layout-duration-04), margin var(--layout-transition-extra-fast);
 }
 
-.is-edge .group-control {
-  transition: height var(--layout-transition-extra-fast), margin var(--layout-transition-extra-fast);
-}
-
 .is-group-edit .group-control {
   margin: 0;
   height: 2.5em;
   transition: height var(--layout-transition-extra-fast), margin var(--layout-transition-extra-fast) var(--layout-duration-04);
 }
 
-.is-edge.is-group-edit .group-control {
-  transition: height var(--layout-transition-extra-fast), margin var(--layout-transition-extra-fast);
+.is-edge .group-control {
+  transition: none;
 }
 
 .group-control-group {
@@ -133,8 +129,8 @@
   transition: width var(--layout-transition-extra-fast) var(--layout-duration-04);
 }
 
-.is-edge.is-group-edit .group-control-group {
-  transition: width var(--layout-transition-extra-fast);
+.is-edge .group-control-group {
+  transition: none;
 }
 
 .group-toolbar-button {
