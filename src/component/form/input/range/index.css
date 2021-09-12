@@ -189,15 +189,7 @@ input[type="range"]:disabled.input-range-hue-spectrum::-moz-range-track {
   top: 0;
   left: 0;
   width: 100%;
-  pointer-events: none;
-}
-
-.slider-double input[type="range"]:last-child::-webkit-slider-thumb {
-  pointer-events: all;
-}
-
-.slider-double input[type="range"]:last-child::-moz-range-thumb {
-  pointer-events: all;
+  clip-path: polygon(calc(var(--slider-double-right-clip) * 1%) 0%, calc(100% + 2em) 0%, calc(100% + 2em) 100%, calc(var(--slider-double-right-clip) * 1%) 100%);
 }
 
 .slider-double input[type="range"]:last-child::-webkit-slider-runnable-track,

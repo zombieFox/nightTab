@@ -58,10 +58,28 @@ export const Control_sliderDouble = function({
   }
 } = {}) {
 
+  this.element = {
+    sliderDouble: node('div|class:slider-double')
+  };
+
   this.label = form.label({
     forInput: left.id,
     text: labelText
   });
+
+  this.rightClip = () => {
+
+    let rightClipPostion = ((this.range.right.value() - this.range.left.value()) / 2) + this.range.left.value();
+
+    if (this.range.right.value() < (right.max / 2)) {
+      rightClipPostion = rightClipPostion + 1;
+    } else {
+      rightClipPostion = rightClipPostion - 1;
+    };
+
+    this.element.sliderDouble.style.setProperty('--slider-double-right-clip', rightClipPostion);
+
+  };
 
   this.range = {
     left: new Control_slider({
@@ -88,6 +106,8 @@ export const Control_sliderDouble = function({
         this.range.left.updateRange();
 
         this.range.right.update();
+
+        this.rightClip();
 
         if (left.action) {
           left.action();
@@ -126,6 +146,8 @@ export const Control_sliderDouble = function({
         this.range.left.update();
 
         this.range.right.updateRange();
+
+        this.rightClip();
 
         if (right.action) {
           right.action();
@@ -169,10 +191,7 @@ export const Control_sliderDouble = function({
         form.wrap({
           children: [
             this.label,
-            node('div|class:slider-double', [
-              this.range.left.range,
-              this.range.right.range
-            ])
+            this.element.sliderDouble,
           ]
         }),
         form.wrap({
@@ -189,6 +208,18 @@ export const Control_sliderDouble = function({
         })
       ]
     });
+
+    this.assemble = () => {
+
+      this.element.sliderDouble.appendChild(this.range.left.range);
+
+      this.element.sliderDouble.appendChild(this.range.right.range);
+
+      this.rightClip();
+
+    };
+
+    this.assemble();
 
     return wrap;
 
