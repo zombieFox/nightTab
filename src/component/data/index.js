@@ -47,7 +47,7 @@ data.import = {
   } = {}) => {
 
     if (fileList.length > 0) {
-      data.validateFile({
+      data.validate.file({
         fileList: fileList,
         feedback: feedback,
         input: input
@@ -61,103 +61,162 @@ data.import = {
   }) => {
 
     if (fileList.length > 0) {
-      data.validateFile({
+      data.validate.file({
         fileList: fileList,
         feedback: feedback
       });
     };
 
-  }
-};
+  },
+  paste: ({
+    clipboardData = false,
+    feedback = false
+  }) => {
 
-data.validateFile = ({
-  fileList = false,
-  feedback = false,
-  input = false
-} = {}) => {
+    data.validate.paste({
+      clipboardData: clipboardData,
+      feedback: feedback
+    });
 
-  // make new file reader
-  var reader = new FileReader();
+  },
+  render: (dataToImport) => {
 
-  // define the on load event for the reader
-  reader.onload = (event) => {
+    let dataToCheck = JSON.parse(dataToImport);
 
-    // is this a JSON file
-    if (isJson(event.target.result)) {
+    if (dataToCheck.version != version.number) {
 
-      // is this JSON from this app
-      if (JSON.parse(event.target.result)[appName] || JSON.parse(event.target.result)[appName.toLowerCase()]) {
+      dataToCheck = data.update(dataToCheck);
 
-        const validFileSuccessAction = () => {
+    };
 
-          menu.close();
+    const importForm = new ImportForm({
+      dataToImport: dataToCheck,
+      state: data.import.state
+    });
 
-          let dataToImport = JSON.parse(event.target.result);
+    const importModal = new Modal({
+      heading: 'Restoring from a ' + appName + ' backup',
+      content: importForm.form(),
+      successText: 'Import',
+      width: 'small',
+      successAction: () => {
 
-          if (dataToImport.version != version.number) {
+        if (data.import.state.setup.include || data.import.state.theme.include || data.import.state.bookmark.include) {
 
-            dataToImport = data.update(JSON.parse(event.target.result));
+          let dataToRestore = JSON.parse(dataToImport);
+
+          if (dataToRestore.version != version.number) {
+
+            data.backup(dataToRestore);
+
+            dataToRestore = data.update(dataToRestore);
 
           };
 
-          const importForm = new ImportForm({
-            dataToImport: dataToImport,
-            state: data.import.state
-          });
+          data.restore(dataToRestore);
 
-          const importModal = new Modal({
-            heading: 'Restoring from a ' + appName + ' backup',
-            content: importForm.form(),
-            successText: 'Import',
-            width: 'small',
-            successAction: () => {
+          data.save();
 
-              if (data.import.state.setup.include || data.import.state.theme.include || data.import.state.bookmark.include) {
-
-                let dataToRestore = JSON.parse(event.target.result);
-
-                if (dataToRestore.version != version.number) {
-
-                  data.backup(dataToRestore);
-
-                  dataToRestore = data.update(dataToRestore);
-
-                };
-
-                data.restore(dataToRestore);
-
-                data.save();
-
-                data.reload.render();
-
-              };
-
-              data.import.reset();
-
-            },
-            cancelAction: () => { data.import.reset(); },
-            closeAction: () => { data.import.reset(); }
-          });
-
-          importModal.open();
+          data.reload.render();
 
         };
 
+        data.import.reset();
+
+      },
+      cancelAction: () => { data.import.reset(); },
+      closeAction: () => { data.import.reset(); }
+    });
+
+    importModal.open();
+
+  }
+};
+
+data.validate = {
+  paste: ({
+    feedback = false
+  } = {}) => {
+
+    navigator.clipboard.readText().then(clipboardData => {
+
+      // is the data a JSON object
+      if (isJson(clipboardData)) {
+
         data.feedback.clear.render(feedback);
 
-        data.feedback.success.render(feedback, fileList[0].name, validFileSuccessAction);
+        data.feedback.success.render(feedback, 'Clipboard data', () => {
 
-        if (input) {
+          menu.close();
 
-          input.value = '';
+          data.import.render(clipboardData);
+
+        });
+
+      } else {
+
+        // not a JSON object
+
+        data.feedback.clear.render(feedback);
+
+        data.feedback.fail.notClipboardJson.render(feedback, 'Clipboard data');
+
+      };
+
+    }).catch(error => {
+
+      data.feedback.fail.notClipboardJson.render(feedback, 'Clipboard data');
+
+    });
+
+  },
+  file: ({
+    fileList = false,
+    feedback = false,
+    input = false
+  } = {}) => {
+
+    // make new file reader
+    var reader = new FileReader();
+
+    // define the on load event for the reader
+    reader.onload = (event) => {
+
+      // is this a JSON file
+      if (isJson(event.target.result)) {
+
+        // is this JSON from this app
+        if (JSON.parse(event.target.result)[appName] || JSON.parse(event.target.result)[appName.toLowerCase()]) {
+
+          data.feedback.clear.render(feedback);
+
+          data.feedback.success.render(feedback, fileList[0].name, () => {
+
+            menu.close();
+
+            data.import.render(event.target.result);
+
+          });
+
+          if (input) { input.value = ''; };
+
+        } else {
+
+          data.feedback.clear.render(feedback);
+
+          data.feedback.fail.notAppJson.render(feedback, fileList[0].name);
+
+          if (input) { input.value = ''; };
 
         };
 
       } else {
 
+        // not a JSON file
+
         data.feedback.clear.render(feedback);
 
-        data.feedback.fail.notAppJson.render(feedback, fileList[0].name);
+        data.feedback.fail.notJson.render(feedback, fileList[0].name);
 
         if (input) {
 
@@ -167,27 +226,12 @@ data.validateFile = ({
 
       };
 
-    } else {
-
-      // not a JSON file
-
-      data.feedback.clear.render(feedback);
-
-      data.feedback.fail.notJson.render(feedback, fileList[0].name);
-
-      if (input) {
-
-        input.value = '';
-
-      };
-
     };
 
-  };
+    // invoke the reader
+    reader.readAsText(fileList.item(0));
 
-  // invoke the reader
-  reader.readAsText(fileList.item(0));
-
+  }
 };
 
 data.export = () => {
@@ -407,7 +451,7 @@ data.feedback = {};
 
 data.feedback.empty = {
   render: (feedback) => {
-    feedback.appendChild(node('p:No JSON file selected.|class:muted small'));
+    feedback.appendChild(node('p:Nothing selected to import.|class:muted small'));
   }
 };
 
@@ -443,6 +487,13 @@ data.feedback.fail = {
     render: (feedback, filename) => {
       feedback.appendChild(node('p:Not the right kind of JSON file. Make sure the selected file came from ' + appName + '.|class:small muted'));
       feedback.appendChild(node('p:' + filename));
+      data.feedback.animation.set.render(feedback, 'is-shake');
+    }
+  },
+  notClipboardJson: {
+    render: (feedback, name) => {
+      feedback.appendChild(node('p:Not the right kind of data. Make sure the clipboard holds data from ' + appName + ' or a ' + appName + ' backup JSON file.|class:small muted'));
+      feedback.appendChild(node('p:' + name));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
   }
