@@ -55,13 +55,23 @@ dataSetting.restore = (parent) => {
     id: 'restore-data',
     type: 'file',
     inputHide: true,
-    labelText: 'Import data',
+    labelText: 'Import from file',
     inputButtonStyle: ['line'],
     action: () => {
       data.import.file({
         fileList: dataSetting.control.restore.restoreElement.input.files,
         feedback: dataSetting.control.restore.feedback,
         input: dataSetting.control.restore.restoreElement
+      });
+    }
+  });
+
+  dataSetting.control.restore.paste = new Button({
+    text: 'Import from clipboard',
+    style: ['line'],
+    func: () => {
+      data.import.paste({
+        feedback: dataSetting.control.restore.feedback,
       });
     }
   });
@@ -83,7 +93,8 @@ dataSetting.restore = (parent) => {
       });
     },
     children: [
-      dataSetting.control.restore.restoreElement.button
+      dataSetting.control.restore.restoreElement.button,
+      dataSetting.control.restore.paste.button
     ]
   });
 
@@ -111,13 +122,13 @@ dataSetting.backup = (parent) => {
     }
   });
 
-  // dataSetting.control.backup.copy = new Button({
-  //   text: 'Copy data to clipboard',
-  //   style: ['line'],
-  //   func: () => {
-  //     navigator.clipboard.writeText(JSON.stringify(data.load()));
-  //   }
-  // });
+  dataSetting.control.backup.copy = new Button({
+    text: 'Copy to clipboard',
+    style: ['line'],
+    func: () => {
+      navigator.clipboard.writeText(JSON.stringify(data.load()));
+    }
+  });
 
   dataSetting.control.backup.exportHelper = new Control_helperText({
     text: ['Download a backup of your ' + appName + ' Bookmarks and Settings.', 'This file can later be imported on this or another deivce.']
@@ -125,7 +136,19 @@ dataSetting.backup = (parent) => {
 
   parent.appendChild(
     node('div', [
-      dataSetting.control.backup.export.wrap(),
+      form.wrap({
+        children: [
+          form.inline({
+            gap: 'small',
+            equalGap: true,
+            wrap: true,
+            children: [
+              dataSetting.control.backup.export.wrap(),
+              dataSetting.control.backup.copy.wrap()
+            ]
+          })
+        ]
+      }),
       dataSetting.control.backup.exportHelper.wrap()
     ])
   );
