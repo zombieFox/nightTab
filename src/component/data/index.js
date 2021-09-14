@@ -10,6 +10,7 @@ import { ImportForm } from '../importForm';
 
 import { dateTime } from '../../utility/dateTime';
 import { node } from '../../utility/node';
+import { complexNode } from '../../utility/complexNode';
 import { isJson } from '../../utility/isJson';
 import { clearChildNode } from '../../utility/clearChildNode';
 
@@ -164,6 +165,8 @@ data.validate = {
       };
 
     }).catch(error => {
+
+      data.feedback.clear.render(feedback);
 
       data.feedback.fail.notClipboardJson.render(feedback, 'Clipboard data');
 
@@ -479,14 +482,14 @@ data.feedback.fail = {
   notJson: {
     render: (feedback, filename) => {
       feedback.appendChild(node('p:Not a JSON file. Make sure the selected file came from ' + appName + '.|class:small muted'));
-      feedback.appendChild(node('p:' + filename));
+      feedback.appendChild(complexNode({ tag: 'p', text: filename }));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
   },
   notAppJson: {
     render: (feedback, filename) => {
       feedback.appendChild(node('p:Not the right kind of JSON file. Make sure the selected file came from ' + appName + '.|class:small muted'));
-      feedback.appendChild(node('p:' + filename));
+      feedback.appendChild(complexNode({ tag: 'p', text: filename }));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
   },
