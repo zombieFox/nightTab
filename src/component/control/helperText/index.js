@@ -14,7 +14,8 @@ import { convertColor } from '../../../utility/convertColor';
 import { isValidString } from '../../../utility/isValidString';
 
 export const Control_helperText = function({
-  text = []
+  text = [],
+  complexText= false
 } = {}) {
 
   this.para = [];
@@ -22,7 +23,8 @@ export const Control_helperText = function({
   text.forEach((item, i) => {
     this.para.push(form.helper({
       tag: 'p',
-      text: item
+      text: item,
+      complexText: complexText
     }));
   });
 

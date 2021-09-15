@@ -434,6 +434,7 @@ headerSetting.area = (parent) => {
   });
 
   headerSetting.area.alignmentHelper = new Control_helperText({
+    complexText: true,
     text: [`Effects may not be visible if the ${(new Link({ text:'Search box size', href: '#menu-content-item-search'})).link().outerHTML} size is set to Auto and grows to fill available space.`]
   });
 

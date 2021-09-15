@@ -218,6 +218,7 @@ layoutSetting.area = (parent) => {
       text: ['Effects may not be visible if the Header Area is full width.']
     }),
     justifyHelper2: new Control_helperText({
+      complexText: true,
       text: [`Only available when ${(new Link({ text:'Layout Direction', href: '#menu-content-item-alignment'})).link().outerHTML} is Vertical and Header items are shown.`]
     })
   };
@@ -264,6 +265,7 @@ layoutSetting.area = (parent) => {
       text: ['Effects may not be visible if the Bookmark Area is full width.']
     }),
     justifyHelper2: new Control_helperText({
+      complexText: true,
       text: [`Only available when ${(new Link({ text:'Layout Direction', href: '#menu-content-item-alignment'})).link().outerHTML} is Vertical and Header items are shown.`]
     })
   };

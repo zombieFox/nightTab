@@ -5,17 +5,27 @@ import './index.css';
 
 export const helper = function({
   text = 'text',
+  complexText = false,
   classList = []
 } = {}) {
 
-  const helper = complexNode({
-    tag: 'p',
-    text: text,
-    attr: [{
-      key: 'class',
-      value: 'form-helper-item'
-    }]
-  });
+  const helper = node('p|class:form-helper-item');
+
+  if (text) {
+
+    if (complexText) {
+
+      helper.innerHTML = text;
+
+    } else {
+
+      let textNode = document.createTextNode(text);
+
+      helper.appendChild(textNode);
+
+    };
+
+  };
 
   if (classList.length > 0) {
 

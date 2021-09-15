@@ -790,6 +790,7 @@ themeSetting.font = (parent) => {
       }
     }),
     nameHelper: new Control_helperText({
+      complexText: true,
       text: [
         `Use a ${(new Link({ text:'Google Font', href: `https://fonts.google.com/`, openNew: true })).link().outerHTML} to customise the Clock, Date, Group names and Bookmark Letters.`,
         'Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Fredoka One" or "Kanit"',
@@ -877,6 +878,7 @@ themeSetting.font = (parent) => {
       }
     }),
     nameHelper: new Control_helperText({
+      complexText: true,
       text: [
         `Use a ${(new Link({ text:'Google Font', href: `https://fonts.google.com/`, openNew: true })).link().outerHTML} to customise the Bookmark name, URL and form elements.`,
         'Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Roboto", "Source Sans Pro" or "Noto Sans"',

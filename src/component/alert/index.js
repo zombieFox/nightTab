@@ -3,7 +3,6 @@ import { icon } from '../icon';
 import * as form from '../form';
 
 import { node } from '../../utility/node';
-import { complexNode } from '../../utility/complexNode';
 
 import './index.css';
 

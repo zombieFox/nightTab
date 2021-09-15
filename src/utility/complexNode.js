@@ -1,6 +1,7 @@
 export const complexNode = ({
   tag = 'div',
   text = false,
+  complexText = false,
   attr = [],
   node = []
 } = {}) => {
@@ -8,7 +9,19 @@ export const complexNode = ({
   const element = document.createElement(tag);
 
   if (text) {
-    element.innerHTML = text;
+
+    if (complexText) {
+
+      element.innerHTML = text;
+
+    } else {
+
+      let textNode = document.createTextNode(text);
+
+      element.appendChild(textNode);
+
+    };
+
   };
 
   if (attr.length > 0) {

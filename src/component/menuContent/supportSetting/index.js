@@ -85,14 +85,15 @@ supportSetting.support = (parent) => {
 
   };
 
+  const para = node('p');
+
+  para.innerHTML = `For more support or feedback, submit an ${(new Link({ text:'Issue', href: `https://github.com/zombieFox/${appName}/issues`, openNew: true })).link().outerHTML} or check the ${(new Link({ text:'Wiki', href: `https://github.com/zombieFox/${appName}/wiki`, openNew: true })).link().outerHTML}.`;
+
   parent.appendChild(
     node('div', [
       makeLinks(),
       node('hr'),
-      complexNode({
-        tag: 'p',
-        text: `For more support or feedback, submit an ${(new Link({ text:'Issue', href: `https://github.com/zombieFox/${appName}/issues`, openNew: true })).link().outerHTML} or check the ${(new Link({ text:'Wiki', href: `https://github.com/zombieFox/${appName}/wiki`, openNew: true })).link().outerHTML}.`
-      })
+      para
     ])
   );
 

@@ -50,6 +50,18 @@ appSetting[appName.toLowerCase()] = (parent) => {
 
   const licenseLink = new Link({ text: 'GNU General Public License v3.0', href: 'https://github.com/zombieFox/' + appName + '/blob/master/license', openNew: true });
 
+  const para1 = node('p');
+
+  para1.innerHTML = `This project can be found on ${githubLink.link().outerHTML}`;
+
+  const para2 = node('p');
+
+  para2.innerHTML = `Share your setup with the ${redditLink.link().outerHTML}`;
+
+  const para3 = node('p');
+
+  para3.innerHTML = `${appName} uses the ${licenseLink.link().outerHTML}`;
+
   parent.appendChild(
     node('div', [
       node('div|class:version', [
@@ -61,9 +73,9 @@ appSetting[appName.toLowerCase()] = (parent) => {
         ])
       ]),
       node('hr'),
-      complexNode({ tag: 'p', text: `This project can be found on ${githubLink.link().outerHTML}` }),
-      complexNode({ tag: 'p', text: `Share your setup with the ${redditLink.link().outerHTML}` }),
-      complexNode({ tag: 'p', text: `${appName} uses the ${licenseLink.link().outerHTML}` }),
+      para1,
+      para2,
+      para3
     ])
   );
 

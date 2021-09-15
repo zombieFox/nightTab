@@ -801,7 +801,7 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('h2:Address|class:mb-2'),
-            complexNode({ tag: 'p', text: 'Be sure to use the full URL and include <strong>"https://..."</strong>', attr: [{ key: 'class', value: 'mb-5' }] })
+            complexNode({ tag: 'p', text: 'Be sure to use the full URL and include <strong>"https://..."</strong>', complexText: true, attr: [{ key: 'class', value: 'mb-5' }] })
           ]
         }),
         form.wrap({
