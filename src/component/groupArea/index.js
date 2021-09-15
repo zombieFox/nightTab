@@ -170,9 +170,9 @@ export const GroupArea = function({
 
   this.openAll = {
     button: new Button({
-      text: 'Open all Bookmarks in ' + (isValidString(groupData.group.name.text) ? groupData.group.name.text : 'this Group'),
+      text: 'Open all Bookmarks in this Group',
       style: ['line'],
-      title: 'Open all Bookmarks in ' + (isValidString(groupData.group.name.text) ? groupData.group.name.text : 'this Group'),
+      title: 'Open all Bookmarks in this Group',
       srOnly: true,
       iconName: 'openAll',
       classList: ['group-toolbar-button', 'group-toolbar-open-all'],
@@ -209,9 +209,9 @@ export const GroupArea = function({
 
   this.collapse = {
     button: new Button({
-      text: 'Collapse ' + (isValidString(groupData.group.name.text) ? groupData.group.name.text : 'this Group'),
+      text: 'Collapse this Group',
       style: ['line'],
-      title: 'Collapse ' + (isValidString(groupData.group.name.text) ? groupData.group.name.text : 'this Group'),
+      title: 'Collapse this Group',
       srOnly: true,
       iconName: 'arrowKeyboardUp',
       classList: ['group-toolbar-button', 'group-toolbar-collapse'],
