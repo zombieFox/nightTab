@@ -239,6 +239,8 @@ export const GroupForm = function({
 
     this.element.form.appendChild(this.element.main);
 
+    this.bind();
+
   };
 
   this.bind = () => {

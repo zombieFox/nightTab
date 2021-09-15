@@ -1270,6 +1270,8 @@ export const BookmarkForm = function({
 
     this.element.form.appendChild(this.element.aside);
 
+    this.bind();
+
   };
 
   this.bind = () => {
