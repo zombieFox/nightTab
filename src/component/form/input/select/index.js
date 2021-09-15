@@ -1,4 +1,5 @@
 import { node } from '../../../../utility/node';
+import { complexNode } from '../../../../utility/complexNode';
 import { trimString } from '../../../../utility/trimString';
 
 import './index.css';
@@ -38,12 +39,14 @@ export const select = function({
     option.forEach((item, i) => {
 
       select.appendChild(
-        node(
-          'option:' +
-          item +
-          '|value:' +
-          trimString(item).replace(/\s+/g, '-').toLowerCase()
-        )
+        complexNode({
+          tag: 'option',
+          text: item,
+          attr: [{
+            key: 'value',
+            value: trimString(item).replace(/\s+/g, '-').toLowerCase()
+          }]
+        })
       );
 
     });
