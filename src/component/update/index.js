@@ -575,6 +575,8 @@ update.mod['7.0.0'] = function(data) {
 
 update.mod['7.1.0'] = function(data) {
 
+  data.state.layout.favicon = '';
+
   data.state.group.toolbar = data.state.group.openAll;
 
   delete data.state.group.openAll;

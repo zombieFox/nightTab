@@ -196,6 +196,24 @@ layout.title = {
   }
 };
 
+layout.favicon = {
+  render: () => {
+
+    const favicon = document.querySelector('.favicon');
+
+    if (isValidString(state.get.current().layout.favicon)) {
+
+      favicon.href = trimString(state.get.current().layout.favicon);
+
+    } else {
+
+      favicon.href = trimString('icon/favicon.svg');
+
+    };
+
+  }
+};
+
 layout.init = () => {
   applyCSSVar([
     'layout.size',
@@ -218,6 +236,7 @@ layout.init = () => {
   ]);
   layout.area.render();
   layout.title.render();
+  layout.favicon.render();
 };
 
 export { layout };

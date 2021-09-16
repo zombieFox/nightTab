@@ -18,6 +18,7 @@ state.default = {
     breakpoint: 'xs',
     scrollbar: 'auto',
     title: '',
+    favicon: '',
     overscroll: false
   },
   header: {

@@ -447,6 +447,24 @@ layoutSetting.page = (parent) => {
     }
   });
 
+  layoutSetting.control.page.favicon = new Control_textReset({
+    object: state.get.current(),
+    path: 'layout.favicon',
+    id: 'layout-favicon',
+    value: state.get.current().layout.favicon,
+    defaultValue: state.get.default().layout.favicon,
+    placeholder: 'https://www.example.com/favicon.svg',
+    labelText: 'Favicon URL',
+    action: () => {
+      layout.favicon.render();
+      data.save();
+    }
+  });
+
+  layoutSetting.control.page.faviconHelper = new Control_helperText({
+    text: ['Not supported by all browsers.']
+  });
+
   layoutSetting.control.page.scrollbar = new Control_radio({
     object: state.get.current(),
     label: 'Scrollbar',
@@ -481,6 +499,8 @@ layoutSetting.page = (parent) => {
   parent.appendChild(
     node('div', [
       layoutSetting.control.page.title.wrap(),
+      layoutSetting.control.page.favicon.wrap(),
+      layoutSetting.control.page.faviconHelper.wrap(),
       node('hr'),
       layoutSetting.control.page.scrollbar.inline(),
       layoutSetting.control.page.scrollbarHelper.wrap(),
