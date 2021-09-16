@@ -207,7 +207,7 @@ layout.favicon = {
 
     } else {
 
-      favicon.href = trimString('icon/favicon.svg');
+      favicon.href = 'icon/favicon.svg';
 
     };
 
