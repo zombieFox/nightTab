@@ -177,6 +177,10 @@
   --button-text-focus-hover: var(--theme-primary-text-010);
   --button-text-active: var(--theme-primary-text-010);
   --button-text-disabled: var(--theme-primary-010);
+  --button-link-text: var(--theme-primary-text-010);
+  --button-link-text-focus-hover: var(--theme-primary-text-010);
+  --button-link-text-active: var(--theme-primary-text-010);
+  --button-link-text-disabled: var(--theme-primary-010);
 }
 
 .is-group-toolbar-opacity-low.is-theme-background-type-accent .group-toolbar-button {
@@ -184,6 +188,10 @@
   --button-text-focus-hover: var(--theme-accent-text);
   --button-text-active: var(--theme-accent-text);
   --button-text-disabled: var(--theme-accent-text);
+  --button-link-text: var(--theme-accent-text);
+  --button-link-text-focus-hover: var(--theme-accent-text);
+  --button-link-text-active: var(--theme-accent-text);
+  --button-link-text-disabled: var(--theme-accent-text);
 }
 
 .is-group-toolbar-opacity-low.is-theme-background-type-color .group-toolbar-button {
@@ -191,4 +199,8 @@
   --button-text-focus-hover: var(--theme-background-color-text);
   --button-text-active: var(--theme-background-color-text);
   --button-text-disabled: var(--theme-background-color-text);
+  --button-link-text: var(--theme-background-color-text);
+  --button-link-text-focus-hover: var(--theme-background-color-text);
+  --button-link-text-active: var(--theme-background-color-text);
+  --button-link-text-disabled: var(--theme-background-color-text);
 }
