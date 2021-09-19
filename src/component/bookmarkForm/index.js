@@ -866,7 +866,7 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('h2:Layout|class:mb-2'),
-            node('p:Change the Visual element and Name position.|class:mb-5')
+            node('p:Change the Visual Element and Name position, scale and orientation.|class:mb-5')
           ]
         }),
         form.wrap({
