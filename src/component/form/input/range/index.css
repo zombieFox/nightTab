@@ -59,7 +59,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   background-color: hsl(var(--form-range-track-background));
   padding: 0;
   margin: 0;
-  height: calc(var(--layout-line-width) * 4);
+  height: calc(var(--layout-line-width) * 3);
   border: 0;
   border-radius: calc(var(--theme-radius) * 0.01em);
   transition: background-color var(--layout-transition-extra-fast);
