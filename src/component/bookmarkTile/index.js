@@ -309,7 +309,7 @@ const BookmarkTile = function({
 
     this.element.bookmark.style.setProperty('--bookmark-display-visual-size', bookmarkData.link.display.visual.size);
 
-    this.element.bookmark.style.setProperty('--bookmark-display-visual-image-url', 'url(' + trimString(bookmarkData.link.display.visual.image.url) + ')');
+    this.element.bookmark.style.setProperty('--bookmark-display-visual-image-url', 'url("' + trimString(bookmarkData.link.display.visual.image.url) + '")');
 
     this.element.bookmark.style.setProperty('--bookmark-display-name-size', bookmarkData.link.display.name.size);
 
@@ -413,7 +413,7 @@ const BookmarkTile = function({
       switch (bookmarkData.link.background.type) {
         case 'image':
           if (isValidString(bookmarkData.link.background.image.url)) {
-            this.element.bookmark.style.setProperty('--bookmark-background-image-url', 'url(' + trimString(bookmarkData.link.background.image.url) + ')');
+            this.element.bookmark.style.setProperty('--bookmark-background-image-url', 'url("' + trimString(bookmarkData.link.background.image.url) + '")');
           };
           break;
       };

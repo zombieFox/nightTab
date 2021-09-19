@@ -398,7 +398,7 @@ theme.background.image = {
 
       const allUrls = trimString(state.get.current().theme.background.image.url).split(/\s+/).filter((item) => { return item != ''; });
 
-      html.style.setProperty('--theme-background-image', 'url(' + allUrls[Math.floor(Math.random() * allUrls.length)] + ')');
+      html.style.setProperty('--theme-background-image', 'url("' + allUrls[Math.floor(Math.random() * allUrls.length)] + '")');
 
     } else {
 
