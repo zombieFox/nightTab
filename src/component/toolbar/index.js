@@ -2,10 +2,6 @@ import { state } from '../state';
 
 import { ToolbarControl } from '../toolbarControl';
 
-import { applyCSSVar } from '../../utility/applyCSSVar';
-import { applyCSSClass } from '../../utility/applyCSSClass';
-import { applyCSSState } from '../../utility/applyCSSState';
-
 const toolbar = {};
 
 toolbar.current = null;
