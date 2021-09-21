@@ -175,9 +175,7 @@ export const PresetThemeTile = function({
 
         themeSetting.control.background.image.vignette.opacity.update();
 
-        themeSetting.control.background.image.vignette.start.update();
-
-        themeSetting.control.background.image.vignette.end.update();
+        themeSetting.control.background.image.vignette.range.update();
 
         themeSetting.control.background.video.url.update();
 
@@ -193,9 +191,7 @@ export const PresetThemeTile = function({
 
         themeSetting.control.background.video.vignette.opacity.update();
 
-        themeSetting.control.background.video.vignette.start.update();
-
-        themeSetting.control.background.video.vignette.end.update();
+        themeSetting.control.background.video.vignette.range.update();
 
         themeSetting.control.opacity.general.update();
 

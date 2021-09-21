@@ -118,8 +118,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.image.accent.disable();
       themeSetting.control.background.image.opacity.disable();
       themeSetting.control.background.image.vignette.opacity.disable();
-      themeSetting.control.background.image.vignette.start.disable();
-      themeSetting.control.background.image.vignette.end.disable();
+      themeSetting.control.background.image.vignette.range.disable();
       themeSetting.control.background.video.url.disable();
       themeSetting.control.background.video.urlHelper.disable();
       themeSetting.control.background.video.blur.disable();
@@ -128,8 +127,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.video.accent.disable();
       themeSetting.control.background.video.opacity.disable();
       themeSetting.control.background.video.vignette.opacity.disable();
-      themeSetting.control.background.video.vignette.start.disable();
-      themeSetting.control.background.video.vignette.end.disable();
+      themeSetting.control.background.video.vignette.range.disable();
       break;
 
     case 'color':
@@ -145,8 +143,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.image.accent.disable();
       themeSetting.control.background.image.opacity.disable();
       themeSetting.control.background.image.vignette.opacity.disable();
-      themeSetting.control.background.image.vignette.start.disable();
-      themeSetting.control.background.image.vignette.end.disable();
+      themeSetting.control.background.image.vignette.range.disable();
       themeSetting.control.background.video.url.disable();
       themeSetting.control.background.video.urlHelper.disable();
       themeSetting.control.background.video.blur.disable();
@@ -155,8 +152,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.video.accent.disable();
       themeSetting.control.background.video.opacity.disable();
       themeSetting.control.background.video.vignette.opacity.disable();
-      themeSetting.control.background.video.vignette.start.disable();
-      themeSetting.control.background.video.vignette.end.disable();
+      themeSetting.control.background.video.vignette.range.disable();
       break;
 
     case 'gradient':
@@ -172,8 +168,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.image.accent.disable();
       themeSetting.control.background.image.opacity.disable();
       themeSetting.control.background.image.vignette.opacity.disable();
-      themeSetting.control.background.image.vignette.start.disable();
-      themeSetting.control.background.image.vignette.end.disable();
+      themeSetting.control.background.image.vignette.range.disable();
       themeSetting.control.background.video.url.disable();
       themeSetting.control.background.video.urlHelper.disable();
       themeSetting.control.background.video.blur.disable();
@@ -182,8 +177,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.video.accent.disable();
       themeSetting.control.background.video.opacity.disable();
       themeSetting.control.background.video.vignette.opacity.disable();
-      themeSetting.control.background.video.vignette.start.disable();
-      themeSetting.control.background.video.vignette.end.disable();
+      themeSetting.control.background.video.vignette.range.disable();
       break;
 
     case 'image':
@@ -199,8 +193,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.image.accent.enable();
       themeSetting.control.background.image.opacity.enable();
       themeSetting.control.background.image.vignette.opacity.enable();
-      themeSetting.control.background.image.vignette.start.enable();
-      themeSetting.control.background.image.vignette.end.enable();
+      themeSetting.control.background.image.vignette.range.enable();
       themeSetting.control.background.video.url.disable();
       themeSetting.control.background.video.urlHelper.disable();
       themeSetting.control.background.video.blur.disable();
@@ -209,8 +202,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.video.accent.disable();
       themeSetting.control.background.video.opacity.disable();
       themeSetting.control.background.video.vignette.opacity.disable();
-      themeSetting.control.background.video.vignette.start.disable();
-      themeSetting.control.background.video.vignette.end.disable();
+      themeSetting.control.background.video.vignette.range.disable();
       break;
 
     case 'video':
@@ -226,8 +218,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.image.accent.disable();
       themeSetting.control.background.image.opacity.disable();
       themeSetting.control.background.image.vignette.opacity.disable();
-      themeSetting.control.background.image.vignette.start.disable();
-      themeSetting.control.background.image.vignette.end.disable();
+      themeSetting.control.background.image.vignette.range.disable();
       themeSetting.control.background.video.url.enable();
       themeSetting.control.background.video.urlHelper.enable();
       themeSetting.control.background.video.blur.enable();
@@ -236,8 +227,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.video.accent.enable();
       themeSetting.control.background.video.opacity.enable();
       themeSetting.control.background.video.vignette.opacity.enable();
-      themeSetting.control.background.video.vignette.start.enable();
-      themeSetting.control.background.video.vignette.end.enable();
+      themeSetting.control.background.video.vignette.range.enable();
       break;
 
   };
@@ -539,7 +529,6 @@ themeSetting.colour = (parent) => {
       })
     }
   };
-
 
   parent.appendChild(
     node('div', [
@@ -1501,58 +1490,36 @@ themeSetting.background = (parent) => {
             data.save();
           }
         }),
-        start: new Control_sliderSlim({
+        range: new Control_sliderDouble({
           object: state.get.current(),
-          path: 'theme.background.image.vignette.start',
-          id: 'theme-background-image-vignette-start',
-          labelText: 'Start',
-          value: state.get.current().theme.background.image.vignette.start,
-          defaultValue: state.get.default().theme.background.image.vignette.start,
-          min: state.get.minMax().theme.background.image.vignette.start.min,
-          max: state.get.minMax().theme.background.image.vignette.start.max,
-          action: () => {
-
-            applyCSSVar('theme.background.image.vignette.start');
-
-            if (state.get.current().theme.background.image.vignette.end > state.get.current().theme.background.image.vignette.start) {
-
-              state.get.current().theme.background.image.vignette.end = state.get.current().theme.background.image.vignette.start;
-
-              applyCSSVar('theme.background.image.vignette.end');
-
-              themeSetting.control.background.image.vignette.end.update();
-
-            };
-
-            data.save();
-
-          }
-        }),
-        end: new Control_sliderSlim({
-          object: state.get.current(),
-          path: 'theme.background.image.vignette.end',
-          id: 'theme-background-image-vignette-end',
-          labelText: 'End',
-          value: state.get.current().theme.background.image.vignette.end,
-          defaultValue: state.get.default().theme.background.image.vignette.end,
-          min: state.get.minMax().theme.background.image.vignette.end.min,
-          max: state.get.minMax().theme.background.image.vignette.end.max,
-          action: () => {
-
-            applyCSSVar('theme.background.image.vignette.end');
-
-            if (state.get.current().theme.background.image.vignette.start < state.get.current().theme.background.image.vignette.end) {
-
-              state.get.current().theme.background.image.vignette.start = state.get.current().theme.background.image.vignette.end;
-
+          labelText: 'Shade start and end',
+          left: {
+            path: 'theme.background.image.vignette.end',
+            id: 'theme-background-image-vignette-end',
+            labelText: 'Shade end',
+            value: state.get.current().theme.background.image.vignette.end,
+            defaultValue: state.get.default().theme.background.image.vignette.end,
+            min: state.get.minMax().theme.background.image.vignette.end.min,
+            max: state.get.minMax().theme.background.image.vignette.end.max,
+            action: () => {
               applyCSSVar('theme.background.image.vignette.start');
-
-              themeSetting.control.background.image.vignette.start.update();
-
-            };
-
-            data.save();
-
+              applyCSSVar('theme.background.image.vignette.end');
+              data.save();
+            }
+          },
+          right: {
+            path: 'theme.background.image.vignette.start',
+            id: 'theme-background-image-vignette-start',
+            labelText: 'Shade start',
+            value: state.get.current().theme.background.image.vignette.start,
+            defaultValue: state.get.default().theme.background.image.vignette.start,
+            min: state.get.minMax().theme.background.image.vignette.start.min,
+            max: state.get.minMax().theme.background.image.vignette.start.max,
+            action: () => {
+              applyCSSVar('theme.background.image.vignette.start');
+              applyCSSVar('theme.background.image.vignette.end');
+              data.save();
+            }
           }
         })
       }
@@ -1669,58 +1636,36 @@ themeSetting.background = (parent) => {
             data.save();
           }
         }),
-        start: new Control_sliderSlim({
+        range: new Control_sliderDouble({
           object: state.get.current(),
-          path: 'theme.background.video.vignette.start',
-          id: 'theme-background-video-vignette-start',
-          labelText: 'Start',
-          value: state.get.current().theme.background.video.vignette.start,
-          defaultValue: state.get.default().theme.background.video.vignette.start,
-          min: state.get.minMax().theme.background.video.vignette.start.min,
-          max: state.get.minMax().theme.background.video.vignette.start.max,
-          action: () => {
-
-            applyCSSVar('theme.background.video.vignette.start');
-
-            if (state.get.current().theme.background.video.vignette.end > state.get.current().theme.background.video.vignette.start) {
-
-              state.get.current().theme.background.video.vignette.end = state.get.current().theme.background.video.vignette.start;
-
-              applyCSSVar('theme.background.video.vignette.end');
-
-              themeSetting.control.background.video.vignette.end.update();
-
-            };
-
-            data.save();
-
-          }
-        }),
-        end: new Control_sliderSlim({
-          object: state.get.current(),
-          path: 'theme.background.video.vignette.end',
-          id: 'theme-background-video-vignette-end',
-          labelText: 'End',
-          value: state.get.current().theme.background.video.vignette.end,
-          defaultValue: state.get.default().theme.background.video.vignette.end,
-          min: state.get.minMax().theme.background.video.vignette.end.min,
-          max: state.get.minMax().theme.background.video.vignette.end.max,
-          action: () => {
-
-            applyCSSVar('theme.background.video.vignette.end');
-
-            if (state.get.current().theme.background.video.vignette.start < state.get.current().theme.background.video.vignette.end) {
-
-              state.get.current().theme.background.video.vignette.start = state.get.current().theme.background.video.vignette.end;
-
+          labelText: 'Shade start and end',
+          left: {
+            path: 'theme.background.video.vignette.end',
+            id: 'theme-background-video-vignette-end',
+            labelText: 'Shade end',
+            value: state.get.current().theme.background.video.vignette.end,
+            defaultValue: state.get.default().theme.background.video.vignette.end,
+            min: state.get.minMax().theme.background.video.vignette.end.min,
+            max: state.get.minMax().theme.background.video.vignette.end.max,
+            action: () => {
               applyCSSVar('theme.background.video.vignette.start');
-
-              themeSetting.control.background.video.vignette.start.update();
-
-            };
-
-            data.save();
-
+              applyCSSVar('theme.background.video.vignette.end');
+              data.save();
+            }
+          },
+          right: {
+            path: 'theme.background.video.vignette.start',
+            id: 'theme-background-video-vignette-start',
+            labelText: 'Shade start',
+            value: state.get.current().theme.background.video.vignette.start,
+            defaultValue: state.get.default().theme.background.video.vignette.start,
+            min: state.get.minMax().theme.background.video.vignette.start.min,
+            max: state.get.minMax().theme.background.video.vignette.start.max,
+            action: () => {
+              applyCSSVar('theme.background.video.vignette.start');
+              applyCSSVar('theme.background.video.vignette.end');
+              data.save();
+            }
           }
         })
       }
@@ -1751,8 +1696,7 @@ themeSetting.background = (parent) => {
       children: [
         form.indent({
           children: [
-            themeSetting.control.background.image.vignette.start.wrap(),
-            themeSetting.control.background.image.vignette.end.wrap()
+            themeSetting.control.background.image.vignette.range.wrap()
           ]
         })
       ]
@@ -1773,8 +1717,7 @@ themeSetting.background = (parent) => {
       children: [
         form.indent({
           children: [
-            themeSetting.control.background.video.vignette.start.wrap(),
-            themeSetting.control.background.video.vignette.end.wrap()
+            themeSetting.control.background.video.vignette.range.wrap()
           ]
         })
       ]

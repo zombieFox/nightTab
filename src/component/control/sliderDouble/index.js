@@ -250,4 +250,14 @@ export const Control_sliderDouble = function({
 
   };
 
+  this.disable = () => {
+    this.range.left.disable();
+    this.range.right.disable();
+  };
+
+  this.enable = () => {
+    this.range.left.enable();
+    this.range.right.enable();
+  };
+
 };

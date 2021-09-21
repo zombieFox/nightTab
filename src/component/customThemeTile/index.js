@@ -178,6 +178,10 @@ export const CustomThemeTile = function({
 
         themeSetting.control.background.image.opacity.update();
 
+        themeSetting.control.background.image.vignette.opacity.update();
+
+        themeSetting.control.background.image.vignette.range.update();
+
         themeSetting.control.background.video.url.update();
 
         themeSetting.control.background.video.blur.update();
@@ -189,6 +193,10 @@ export const CustomThemeTile = function({
         themeSetting.control.background.video.accent.update();
 
         themeSetting.control.background.video.opacity.update();
+
+        themeSetting.control.background.video.vignette.opacity.update();
+
+        themeSetting.control.background.video.vignette.range.update();
 
         themeSetting.control.opacity.general.update();
 
