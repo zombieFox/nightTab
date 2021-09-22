@@ -235,6 +235,8 @@ debugSetting.button = (parent) => {
 
   debugSetting.control.button.line = new Button({ text: 'Line button', size: 'medium', style: ['line'] });
 
+  debugSetting.control.button.ring = new Button({ text: 'Ring button', size: 'medium', style: ['ring'] });
+
   debugSetting.control.button.link = new Button({ text: 'Link button', size: 'medium', style: ['link'] });
 
   parent.appendChild(
@@ -244,6 +246,7 @@ debugSetting.button = (parent) => {
       debugSetting.control.button.large.wrap(),
       debugSetting.control.button.ring.wrap(),
       debugSetting.control.button.line.wrap(),
+      debugSetting.control.button.ring.wrap(),
       debugSetting.control.button.link.wrap(),
     ])
   );
