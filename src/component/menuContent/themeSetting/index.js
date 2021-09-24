@@ -1137,12 +1137,6 @@ themeSetting.opacity = (parent) => {
 
       header.element.search.update.style();
 
-      if (group.area.current.length > 0) {
-
-        group.area.current[0].update.style();
-
-      };
-
       data.save();
 
     }
@@ -1230,7 +1224,9 @@ themeSetting.opacity = (parent) => {
 
         if (group.area.current.length > 0) {
 
-          group.area.current[0].update.style();
+          group.area.current.forEach((item, i) => {
+            item.update.style();
+          });
 
         };
 

@@ -188,6 +188,7 @@ group.edit = {
     applyCSSState('group.edit');
 
     if (group.area.current.length > 0) {
+
       group.area.current.forEach((item, i) => {
 
         if (state.get.current().group.edit) {
@@ -197,6 +198,7 @@ group.edit = {
         };
 
       });
+
     };
 
   }

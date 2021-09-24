@@ -316,12 +316,6 @@ export const CustomThemeTile = function({
 
         header.element.search.update.style();
 
-        if (group.area.current.length > 0) {
-
-          group.area.current[0].update.style();
-
-        };
-
         data.save();
 
       }
