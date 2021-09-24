@@ -1,6 +1,6 @@
 export const version = {};
 
-version.number = '7.1.0';
+version.number = '7.1.1';
 
 version.name = 'Delightful Komodo Dragon';
 
