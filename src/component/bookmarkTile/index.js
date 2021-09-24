@@ -21,6 +21,8 @@ const BookmarkTile = function({
   preview = false
 } = {}) {
 
+  this.data = bookmarkData;
+
   this.element = {
     bookmark: node('div|class:bookmark'),
     front: node('div|class:bookmark-front'),

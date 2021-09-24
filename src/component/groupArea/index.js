@@ -21,6 +21,8 @@ export const GroupArea = function({
   groupData = {}
 } = {}) {
 
+  this.data = groupData;
+
   this.element = {
     group: node('div|class:group'),
     header: node('div|class:group-header'),
@@ -233,9 +235,9 @@ export const GroupArea = function({
     },
     video: () => {
 
-      if (bookmark.tile.current.length > 0) {
-        bookmark.tile.current.forEach((item, i) => {
+      bookmark.tile.current.forEach((item, i) => {
 
+        if (item.data.position.origin.group === groupData.position.origin) {
           if (item.video) {
             if (groupData.group.collapse) {
               item.video.pause();
@@ -243,9 +245,9 @@ export const GroupArea = function({
               item.video.play();
             };
           };
+        };
 
-        });
-      };
+      });
 
     }
   };
