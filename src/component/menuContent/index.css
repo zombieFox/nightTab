@@ -14,6 +14,7 @@
     grid-row-start: 1;
     grid-row-end: 1;
     overflow-y: auto;
+    scroll-behavior: smooth;
   }
 }
 
@@ -27,7 +28,6 @@
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
-    scroll-behavior: smooth;
     overflow-y: auto;
     z-index: 2;
   }
