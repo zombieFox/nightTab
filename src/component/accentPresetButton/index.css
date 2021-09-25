@@ -36,27 +36,3 @@
   height: 100%;
   display: block;
 }
-
-/* @media (min-width: 550px) {
-  :root {
-    --theme-accent-preset-preview-space: 5;
-  }
-}
-
-@media (min-width: 700px) {
-  :root {
-    --theme-accent-preset-preview-space: 5;
-  }
-}
-
-@media (min-width: 900px) {
-  :root {
-    --theme-accent-preset-preview-space: 5;
-  }
-}
-
-@media (min-width: 1100px) {
-  :root {
-    --theme-accent-preset-preview-space: 5;
-  }
-} */

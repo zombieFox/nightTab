@@ -92,6 +92,9 @@ keyboard.ctrAltR = new KeyboardShortcut({
   action: () => {
     theme.accent.random.render();
     toolbar.current.update.accent();
+    if (themeSetting.control.accent.color) {
+      themeSetting.control.accent.color.update();
+    };
     applyCSSVar([
       'theme.accent.rgb.r',
       'theme.accent.rgb.g',
