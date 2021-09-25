@@ -144,15 +144,26 @@ data.validate = {
       // is the data a JSON object
       if (isJson(clipboardData)) {
 
-        data.feedback.clear.render(feedback);
+        // is this JSON from this app
+        if (JSON.parse(clipboardData)[appName] || JSON.parse(clipboardData)[appName.toLowerCase()]) {
 
-        data.feedback.success.render(feedback, 'Clipboard data', () => {
+          data.feedback.clear.render(feedback);
 
-          menu.close();
+          data.feedback.success.render(feedback, 'Clipboard data', () => {
 
-          data.import.render(clipboardData);
+            menu.close();
 
-        });
+            data.import.render(clipboardData);
+
+          });
+
+        } else {
+
+          data.feedback.clear.render(feedback);
+
+          data.feedback.fail.notClipboardJson.render(feedback, 'Clipboard data');
+
+        };
 
       } else {
 
