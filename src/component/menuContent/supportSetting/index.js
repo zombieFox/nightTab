@@ -55,7 +55,7 @@ supportSetting.link = {
     resetting: 'Resetting-when-opening-the-browser',
     privacy: 'Respecting-your-privacy',
     backgroundImageVideo: 'Setting-a-background-video-or-image',
-    firefox: 'Setting-nightTab-as-your-Firefox-homepage'
+    firefox: 'Setting-' + appName + '-as-your-Firefox-homepage'
   }
 };
 
