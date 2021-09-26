@@ -25,7 +25,7 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 When developing use:
 - `npm start`
 
-A development server will run on `http://localhost:5000/`
+A development server will automatically open the project in your browser. Normally here: `http://localhost:8080`.
 
 
 To build the project use:

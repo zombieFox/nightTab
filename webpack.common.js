@@ -17,18 +17,16 @@ module.exports = {
       use: ['style-loader', 'css-loader']
     }, {
       test: /\.(ttf|woff|woff2)$/,
-      use: {
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'font/'
-        }
+      type: 'asset/resource',
+      generator: {
+        filename: 'font/[name][ext]',
       }
     }, {
       test: /\.(jpe?g|png|gif|svg)$/i,
-      use: [{
-        loader: 'file-loader',
-      }]
+      type: 'asset/resource',
+      generator: {
+        filename: 'image/[name][ext]',
+      }
     }]
   },
   plugins: [
