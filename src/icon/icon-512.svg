@@ -1,27 +1,27 @@
-<svg width="512" height="512" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <style>
     .cross {
-      fill: #ffffff;
+      fill: #939BAE;
     }
     .circle {
-      fill: #000000;
+      fill: #252931;
     }
 
     @media (prefers-color-scheme: light) {
       .cross {
-        fill: #ffffff;
+        fill: #939BAE;
       }
       .circle {
-        fill: #000000;
+        fill: #252931;
       }
     }
 
     @media (prefers-color-scheme: dark) {
       .cross {
-        fill: #000000;
+        fill: #252931;
       }
       .circle {
-        fill: #ffffff;
+        fill: #939BAE;
       }
     }
   </style>

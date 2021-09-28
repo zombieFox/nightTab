@@ -1,10 +1,10 @@
-[![nightTab Demo](asset/banner/banner-1400-560.png)](https://zombiefox.github.io/nightTab/)
+# [![nightTab](asset/banner/banner-1400-560.png)](https://zombiefox.github.io/nightTab/)
 
 A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab -- a custom start page.
 
 | [See the demo in action](https://zombiefox.github.io/nightTab/) | [Install nightTab Extension](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [Install nightTab Add On](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [Buy me a coffee](https://www.buymeacoffee.com/zombieFox/) | [Join the community](https://www.reddit.com/r/nighttab/) |
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-| [<img src="./src/icon/icon-512.svg" width="48px" height="48px">](https://zombiefox.github.io/nightTab/) | [![Chrome](asset/logo/chrome-48.png)](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [![Firefox](asset/logo/firefox-48.png)](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [![coffee](asset/logo/bymeacoffee-48.png)](https://www.buymeacoffee.com/zombieFox/) | [![Reddit](asset/logo/reddit-48.png)](https://www.reddit.com/r/nighttab/) |
+| [<img src="./src/icon/icon-48.png" width="48px" height="48px">](https://zombiefox.github.io/nightTab/) | [![Chrome](asset/logo/chrome-48.png)](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [![Firefox](asset/logo/firefox-48.png)](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [![coffee](asset/logo/bymeacoffee-48.png)](https://www.buymeacoffee.com/zombieFox/) | [![Reddit](asset/logo/reddit-48.png)](https://www.reddit.com/r/nighttab/) |
 
 # Support
 
