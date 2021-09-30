@@ -523,11 +523,11 @@ bookmark.reset = () => {
 
       newBookmarkData.link.display.visual.image.url = item.display.visual.image.url;
 
-      newBookmarkData.position.origin.group = groupIndex
+      newBookmarkData.position.origin.group = groupIndex;
 
       newBookmarkData.position.origin.item = i;
 
-      newBookmarkData.position.destination.group = groupIndex
+      newBookmarkData.position.destination.group = groupIndex;
 
       newBookmarkData.position.destination.item = i;
 

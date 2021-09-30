@@ -283,7 +283,7 @@ themeSetting.disable = () => {
 themeSetting.preset = (parent) => {
 
   themeSetting.control.preset.presetHelper = new Control_helperText({
-    text: ['Applying a Preset will replace the current Colour, Accent, Font, Style, Radius, Shadow, Shade and Background.']
+    text: ['Applying a Preset will replace the current Colour, Accent, Font, Style, Opacity, Radius, Shadow, Shade and Background.']
   });
 
   const preset = () => {
@@ -320,7 +320,7 @@ themeSetting.saved = (parent) => {
   themeSetting.control.saved = {
     savedElement: node('div|class:theme-custom'),
     customHelper: new Control_helperText({
-      text: ['Saving a Theme will record the current Colour, Accent, Font, Style, Radius, Shadow, Shade and Background.']
+      text: ['Saving a Theme will record the current Colour, Accent, Font, Style, Opacity, Radius, Shadow, Shade and Background.']
     }),
     saveButton: new Button({
       text: 'Save current theme',
