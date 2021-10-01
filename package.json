@@ -1,7 +1,7 @@
 {
   "name": "nightTab",
   "version": "7.1.1",
-  "description": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab.",
+  "description": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks with nightTab.",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
