@@ -44,7 +44,7 @@ import { applyCSSState } from '../../../utility/applyCSSState';
 const headerSetting = {};
 
 headerSetting.control = {
-  area: {},
+  alignment: {},
   greeting: {},
   transitional: {},
   clock: {},
@@ -394,7 +394,7 @@ headerSetting.disable = () => {
 };
 
 headerSetting.edge = {
-  area: {},
+  alignment: {},
   greeting: {},
   transitional: {},
   clock: {},
@@ -414,9 +414,9 @@ headerSetting.update = () => {
 
 };
 
-headerSetting.area = (parent) => {
+headerSetting.alignment = (parent) => {
 
-  headerSetting.area.alignment = new Control_radioGrid({
+  headerSetting.alignment.alignment = new Control_radioGrid({
     object: state.get.current(),
     radioGroup: [
       { id: 'header-item-justify-left', labelText: 'Left', value: 'left', position: 1 },
@@ -433,15 +433,15 @@ headerSetting.area = (parent) => {
     }
   });
 
-  headerSetting.area.alignmentHelper = new Control_helperText({
+  headerSetting.alignment.alignmentHelper = new Control_helperText({
     complexText: true,
     text: [`Effects may not be visible if the ${(new Link({ text:'Search box size', href: '#menu-content-item-search'})).link().outerHTML} size is set to Auto and grows to fill available space.`]
   });
 
   parent.appendChild(
     node('div', [
-      headerSetting.area.alignment.wrap(),
-      headerSetting.area.alignmentHelper.wrap()
+      headerSetting.alignment.alignment.wrap(),
+      headerSetting.alignment.alignmentHelper.wrap()
     ])
   );
 
