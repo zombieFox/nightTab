@@ -3,7 +3,7 @@ import { bookmark } from '../bookmark'
 import { menu } from '../menu'
 import { version } from '../version'
 import { update } from '../update'
-import { appName } from '../appName'
+import { APP_NAME } from '../../constants'
 
 import { Modal } from '../modal'
 import { ImportForm } from '../importForm'
@@ -85,7 +85,7 @@ data.import = {
     })
 
     const importModal = new Modal({
-      heading: 'Restoring from a ' + appName + ' backup',
+      heading: 'Restoring from a ' + APP_NAME + ' backup',
       content: importForm.form(),
       successText: 'Import',
       width: 'small',
@@ -124,7 +124,7 @@ data.validate = {
       // is the data a JSON object
       if (isJson(clipboardData)) {
         // is this JSON from this app
-        if (JSON.parse(clipboardData)[appName] || JSON.parse(clipboardData)[appName.toLowerCase()]) {
+        if (JSON.parse(clipboardData)[APP_NAME] || JSON.parse(clipboardData)[APP_NAME.toLowerCase()]) {
           data.feedback.clear.render(feedback)
 
           data.feedback.success.render(feedback, 'Clipboard data', () => {
@@ -163,7 +163,7 @@ data.validate = {
       // is this a JSON file
       if (isJson(event.target.result)) {
         // is this JSON from this app
-        if (JSON.parse(event.target.result)[appName] || JSON.parse(event.target.result)[appName.toLowerCase()]) {
+        if (JSON.parse(event.target.result)[APP_NAME] || JSON.parse(event.target.result)[APP_NAME.toLowerCase()]) {
           data.feedback.clear.render(feedback)
 
           data.feedback.success.render(feedback, fileList[0].name, () => {
@@ -216,7 +216,7 @@ data.export = () => {
   timestamp.year = leadingZero(timestamp.year)
   timestamp = timestamp.year + '.' + timestamp.month + '.' + timestamp.date + ' - ' + timestamp.hours + ' ' + timestamp.minutes + ' ' + timestamp.seconds
 
-  const fileName = appName + ' backup - ' + timestamp + '.json'
+  const fileName = APP_NAME + ' backup - ' + timestamp + '.json'
 
   const dataToExport = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data.load()))
 
@@ -239,7 +239,7 @@ data.remove = (key) => {
 
 data.backup = (dataToBackup) => {
   if (dataToBackup) {
-    data.set(appName + 'Backup', JSON.stringify(dataToBackup))
+    data.set(APP_NAME + 'Backup', JSON.stringify(dataToBackup))
 
     console.log('data version ' + dataToBackup.version + ' backed up')
   };
@@ -286,8 +286,8 @@ data.restore = (dataToRestore) => {
 }
 
 data.save = () => {
-  data.set(appName, JSON.stringify({
-    [appName]: true,
+  data.set(APP_NAME, JSON.stringify({
+    [APP_NAME]: true,
     version: version.number,
     state: state.get.current(),
     bookmark: bookmark.all
@@ -295,8 +295,8 @@ data.save = () => {
 }
 
 data.load = () => {
-  if (data.get(appName) !== null && data.get(appName) !== undefined) {
-    let dataToLoad = JSON.parse(data.get(appName))
+  if (data.get(APP_NAME) !== null && data.get(APP_NAME) !== undefined) {
+    let dataToLoad = JSON.parse(data.get(APP_NAME))
 
     if (dataToLoad.version !== version.number) {
       data.backup(dataToLoad)
@@ -312,15 +312,15 @@ data.load = () => {
 
 data.wipe = {
   all: () => {
-    data.remove(appName)
+    data.remove(APP_NAME)
 
     data.reload.render()
   },
   partial: () => {
     bookmark.reset()
 
-    data.set(appName, JSON.stringify({
-      [appName]: true,
+    data.set(APP_NAME, JSON.stringify({
+      [APP_NAME]: true,
       version: version.number,
       state: state.get.default(),
       bookmark: bookmark.all
@@ -340,9 +340,9 @@ data.clear = {
   all: {
     render: () => {
       const clearModal = new Modal({
-        heading: 'Clear all ' + appName + ' data?',
+        heading: 'Clear all ' + APP_NAME + ' data?',
         content: node('div', [
-          node('p:Are you sure you want to clear all ' + appName + ' Bookmarks and Settings? ' + appName + ' will be restore to the default state.'),
+          node('p:Are you sure you want to clear all ' + APP_NAME + ' Bookmarks and Settings? ' + APP_NAME + ' will be restore to the default state.'),
           node('p:This can not be undone.')
         ]),
         successText: 'Clear all data',
@@ -358,9 +358,9 @@ data.clear = {
   partial: {
     render: () => {
       const clearModal = new Modal({
-        heading: 'Clear ' + appName + ' data except bookmarks?',
+        heading: 'Clear ' + APP_NAME + ' data except bookmarks?',
         content: node('div', [
-          node('p:Are you sure you want to clear all ' + appName + ' Settings? ' + appName + ' will be restore to the default state but your Bookmarks and Groups will remain.'),
+          node('p:Are you sure you want to clear all ' + APP_NAME + ' Settings? ' + APP_NAME + ' will be restore to the default state but your Bookmarks and Groups will remain.'),
           node('p:This can not be undone.')
         ]),
         successText: 'Clear all except bookmarks',
@@ -391,7 +391,7 @@ data.feedback.clear = {
 
 data.feedback.success = {
   render: (feedback, filename, action) => {
-    feedback.appendChild(node('p:Success! Restoring ' + appName + ' Bookmarks and Settings.|class:muted small'))
+    feedback.appendChild(node('p:Success! Restoring ' + APP_NAME + ' Bookmarks and Settings.|class:muted small'))
 
     feedback.appendChild(node('p:' + filename))
 
@@ -404,21 +404,21 @@ data.feedback.success = {
 data.feedback.fail = {
   notJson: {
     render: (feedback, filename) => {
-      feedback.appendChild(node('p:Not a JSON file. Make sure the selected file came from ' + appName + '.|class:small muted'))
+      feedback.appendChild(node('p:Not a JSON file. Make sure the selected file came from ' + APP_NAME + '.|class:small muted'))
       feedback.appendChild(complexNode({ tag: 'p', text: filename }))
       data.feedback.animation.set.render(feedback, 'is-shake')
     }
   },
   notAppJson: {
     render: (feedback, filename) => {
-      feedback.appendChild(node('p:Not the right kind of JSON file. Make sure the selected file came from ' + appName + '.|class:small muted'))
+      feedback.appendChild(node('p:Not the right kind of JSON file. Make sure the selected file came from ' + APP_NAME + '.|class:small muted'))
       feedback.appendChild(complexNode({ tag: 'p', text: filename }))
       data.feedback.animation.set.render(feedback, 'is-shake')
     }
   },
   notClipboardJson: {
     render: (feedback, name) => {
-      feedback.appendChild(node('p:Not the right kind of data. Make sure the clipboard holds data from ' + appName + ' or a ' + appName + ' backup JSON file.|class:small muted'))
+      feedback.appendChild(node('p:Not the right kind of data. Make sure the clipboard holds data from ' + APP_NAME + ' or a ' + APP_NAME + ' backup JSON file.|class:small muted'))
       feedback.appendChild(node('p:' + name))
       data.feedback.animation.set.render(feedback, 'is-shake')
     }
