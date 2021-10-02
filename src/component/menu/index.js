@@ -3,7 +3,7 @@ import { data } from '../data';
 import { form } from '../form';
 import { bookmark } from '../bookmark';
 import { theme } from '../theme';
-import { appName } from '../appName';
+import { APP_NAME } from '../../constants';
 
 import { Button } from '../button';
 import { MenuFrame } from '../menuFrame';
@@ -26,7 +26,7 @@ menu.navData = [
   { name: 'Data', active: false, overscroll: true, sub: ['Restore', 'Backup', 'Clear'] },
   { name: 'Support', active: false, overscroll: false },
   { name: 'Coffee', active: false, overscroll: false },
-  { name: appName, active: false, overscroll: false }
+  { name: APP_NAME, active: false, overscroll: false }
 ];
 
 menu.mod = {};

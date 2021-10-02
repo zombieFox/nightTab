@@ -10,7 +10,7 @@ import { logo } from '../../logo';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 import { searchEnginePreset } from '../../searchEnginePreset';
-import { appName } from '../../appName';
+import { APP_NAME } from '../../../constants';
 
 import * as form from '../../form';
 
@@ -1693,7 +1693,7 @@ headerSetting.search = (parent) => {
         }
       }),
       urlHelper: new Control_helperText({
-        text: ['Enter a web address with the search parameters, eg: "https://vimeo.com/search?q="', appName + ' will add the search term entered into the Search box at the end of the above URL.']
+        text: ['Enter a web address with the search parameters, eg: "https://vimeo.com/search?q="', APP_NAME + ' will add the search term entered into the Search box at the end of the above URL.']
       }),
       queryName: new Control_text({
         object: state.get.current(),

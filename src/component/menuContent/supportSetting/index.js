@@ -9,7 +9,7 @@ import { icon } from '../../icon';
 import { logo } from '../../logo';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
-import { appName } from '../../appName';
+import { APP_NAME } from '../../../constants';
 
 import * as form from '../../form';
 
@@ -43,7 +43,7 @@ import { applyCSSState } from '../../../utility/applyCSSState';
 const supportSetting = {};
 
 supportSetting.link = {
-  url: 'https://github.com/zombieFox/' + appName + '/wiki/',
+  url: 'https://github.com/zombieFox/' + APP_NAME + '/wiki/',
   page: {
     applyToAll: 'Applying-bookmark-settings-to-all',
     browser: 'Browser-support',
@@ -55,7 +55,7 @@ supportSetting.link = {
     resetting: 'Resetting-when-opening-the-browser',
     privacy: 'Respecting-your-privacy',
     backgroundImageVideo: 'Setting-a-background-video-or-image',
-    firefox: 'Setting-' + appName + '-as-your-Firefox-homepage'
+    firefox: 'Setting-' + APP_NAME + '-as-your-Firefox-homepage'
   }
 };
 
@@ -87,7 +87,7 @@ supportSetting.support = (parent) => {
 
   const para = node('p');
 
-  para.innerHTML = `For more support or feedback, submit an ${(new Link({ text:'Issue', href: `https://github.com/zombieFox/${appName}/issues`, openNew: true })).link().outerHTML} or check the ${(new Link({ text:'Wiki', href: `https://github.com/zombieFox/${appName}/wiki`, openNew: true })).link().outerHTML}.`;
+  para.innerHTML = `For more support or feedback, submit an ${(new Link({ text:'Issue', href: `https://github.com/zombieFox/${APP_NAME}/issues`, openNew: true })).link().outerHTML} or check the ${(new Link({ text:'Wiki', href: `https://github.com/zombieFox/${APP_NAME}/wiki`, openNew: true })).link().outerHTML}.`;
 
   parent.appendChild(
     node('div', [

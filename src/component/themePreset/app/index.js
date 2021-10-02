@@ -1,8 +1,8 @@
 import { state } from '../../state';
-import { appName } from '../../appName';
+import { APP_NAME } from '../../../constants';
 
 export const app = {
-  name: appName + ' (default)',
+  name: APP_NAME + ' (default)',
   color: state.get.default().theme.color,
   accent: { hsl: state.get.default().theme.accent.hsl, rgb: state.get.default().theme.accent.rgb },
   font: state.get.default().theme.font,

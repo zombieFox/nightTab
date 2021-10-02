@@ -1,6 +1,6 @@
 import { data } from '../data';
 import { debugSetting } from './debugSetting';
-import { appName } from '../appName';
+import { APP_NAME } from '../../constants';
 import { layoutSetting } from './layoutSetting';
 import { groupSetting } from './groupSetting';
 import { bookmarkSetting } from './bookmarkSetting';
@@ -153,7 +153,7 @@ export const MenuContent = function({
 
           break;
 
-        case this.makeId(appName):
+        case this.makeId(APP_NAME):
 
           formElement = this.element.form();
 

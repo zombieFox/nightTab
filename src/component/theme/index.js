@@ -1,6 +1,6 @@
 import { state } from '../state';
 import { data } from '../data';
-import { appName } from '../appName';
+import { APP_NAME } from '../../constants';
 import { toolbar } from '../toolbar';
 import { bookmark } from '../bookmark';
 import { bookmarkDefault } from '../bookmarkDefault';
@@ -285,15 +285,15 @@ theme.style = {
       case 'dark':
       case 'light':
 
-        localStorage.setItem(appName + 'Style', state.get.current().theme.style);
+        localStorage.setItem(APP_NAME + 'Style', state.get.current().theme.style);
         break;
 
       case 'system':
 
         if (window.matchMedia('(prefers-color-scheme:dark)').matches) {
-          localStorage.setItem(appName + 'Style', 'dark');
+          localStorage.setItem(APP_NAME + 'Style', 'dark');
         } else if (window.matchMedia('(prefers-color-scheme:light)').matches) {
-          localStorage.setItem(appName + 'Style', 'light');
+          localStorage.setItem(APP_NAME + 'Style', 'light');
         };
         break;
 

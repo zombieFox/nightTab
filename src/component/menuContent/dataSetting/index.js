@@ -9,7 +9,7 @@ import { icon } from '../../icon';
 import { logo } from '../../logo';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
-import { appName } from '../../appName';
+import { APP_NAME } from '../../../constants';
 
 import * as form from '../../form';
 
@@ -77,7 +77,7 @@ dataSetting.restore = (parent) => {
   });
 
   dataSetting.control.restore.restoreHelper = new Control_helperText({
-    text: ['Restore a previously exported ' + appName + ' backup.']
+    text: ['Restore a previously exported ' + APP_NAME + ' backup.']
   });
 
   dataSetting.control.restore.feedback = form.feedback();
@@ -85,7 +85,7 @@ dataSetting.restore = (parent) => {
   data.feedback.empty.render(dataSetting.control.restore.feedback);
 
   dataSetting.control.restore.drop = new DropFile({
-    heading: 'Or drop a ' + appName + ' backup file here.',
+    heading: 'Or drop a ' + APP_NAME + ' backup file here.',
     dropAaction: () => {
       data.import.drop({
         fileList: dataSetting.control.restore.drop.files,
@@ -131,7 +131,7 @@ dataSetting.backup = (parent) => {
   });
 
   dataSetting.control.backup.exportHelper = new Control_helperText({
-    text: ['Download a backup of your ' + appName + ' Bookmarks and Settings.', 'This file can later be imported on this or another deivce.']
+    text: ['Download a backup of your ' + APP_NAME + ' Bookmarks and Settings.', 'This file can later be imported on this or another deivce.']
   });
 
   parent.appendChild(
@@ -184,7 +184,7 @@ dataSetting.clear = (parent) => {
   });
 
   dataSetting.control.clear.helper = new Control_helperText({
-    text: ['Clear all data to reset ' + appName + ' to the default state.', 'Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups.']
+    text: ['Clear all data to reset ' + APP_NAME + ' to the default state.', 'Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups.']
   });
 
   parent.appendChild(

@@ -9,7 +9,7 @@ import { icon } from '../../icon';
 import { logo } from '../../logo';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
-import { appName } from '../../appName';
+import { APP_NAME } from '../../../constants';
 
 import * as form from '../../form';
 
@@ -48,7 +48,7 @@ coffeeSetting.coffee = (parent) => {
     node('div', [
       complexNode({
         tag: 'p',
-        text: appName + ' is free, appreciation is welcome in the form of coffee!'
+        text: APP_NAME + ' is free, appreciation is welcome in the form of coffee!'
       }),
       form.wrap({
         children: [(new Link({
