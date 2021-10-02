@@ -11,7 +11,7 @@ export const groupText = ({
 
   if (text) {
     textElement.textContent = text;
-  };
+  }
 
   if (classList.length > 0) {
 
@@ -19,7 +19,7 @@ export const groupText = ({
       textElement.classList.add(item);
     });
 
-  };
+  }
 
   return textElement;
 

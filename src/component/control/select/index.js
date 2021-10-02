@@ -1,22 +1,14 @@
-import { state } from '../../state';
-import { data } from '../../data';
-import { bookmark } from '../../bookmark';
 
 import * as form from '../../form';
 
-import { Button } from '../../button';
-import { Collapse } from '../../collapse';
 
-import { node } from '../../../utility/node';
 import { complexNode } from '../../../utility/complexNode';
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
-import { convertColor } from '../../../utility/convertColor';
-import { isValidString } from '../../../utility/isValidString';
 import { trimString } from '../../../utility/trimString';
 import { clearChildNode } from '../../../utility/clearChildNode';
 
-export const Control_select = function({
+export const Control_select = function ({
   option = [],
   selected = 0,
   object = {},
@@ -36,7 +28,7 @@ export const Control_select = function({
 
       set({ object: object, path: path, value: this.select.selectedIndex });
 
-      if (action) { action(); };
+      if (action) { action(); }
 
     }
   });
@@ -48,8 +40,8 @@ export const Control_select = function({
   });
 
   if (srOnly) {
-    this.label.classList.add('sr-only')
-  };
+    this.label.classList.add('sr-only');
+  }
 
   this.update = () => {
     this.select.selectedIndex = get({
@@ -81,9 +73,9 @@ export const Control_select = function({
 
       if (selectedIndex || selectedIndex === 0) {
         this.select.selectedIndex = selectedIndex;
-      };
+      }
 
-    };
+    }
 
   };
 
@@ -97,7 +89,7 @@ export const Control_select = function({
         this.label,
         this.select
       ]
-    })
+    });
   };
 
   this.disable = () => {

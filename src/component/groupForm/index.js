@@ -1,40 +1,21 @@
-import { state } from '../state';
-import { data } from '../data';
-import { theme } from '../theme';
 import { bookmark } from '../bookmark';
-import { groupDefault } from '../groupDefault';
 
 import * as form from '../form';
 
 import { Button } from '../button';
-import { Suggest } from '../suggest';
-import { Collapse } from '../collapse';
-import { Tab } from '../tab';
 
-import { Control_helperText } from '../control/helperText';
-import { Control_inputButton } from '../control/inputButton';
-import { Control_groupText } from '../control/groupText';
-import { Control_radio } from '../control/radio';
-import { Control_radioGrid } from '../control/radioGrid';
 import { Control_checkbox } from '../control/checkbox';
-import { Control_slider } from '../control/slider';
-import { Control_sliderSlim } from '../control/sliderSlim';
-import { Control_colorMixer } from '../control/colorMixer';
-import { Control_color } from '../control/color';
 import { Control_text } from '../control/text';
 import { Control_select } from '../control/select';
 
 import { node } from '../../utility/node';
-import { complexNode } from '../../utility/complexNode';
-import { isValidString } from '../../utility/isValidString';
-import { trimString } from '../../utility/trimString';
 import { ordinalNumber } from '../../utility/ordinalNumber';
 import { randomString } from '../../utility/randomString';
 import { randomNumber } from '../../utility/randomNumber';
 
 import './index.css';
 
-export const GroupForm = function({
+export const GroupForm = function ({
   groupData = false
 } = {}) {
 
@@ -55,19 +36,19 @@ export const GroupForm = function({
 
       if (groupData.type.new) {
         count++;
-      };
+      }
 
       for (var i = 1; i <= count; i++) {
 
         option.push(ordinalNumber(i));
 
-      };
+      }
 
     } else {
 
       option.push(ordinalNumber(1));
 
-    };
+    }
 
     return option;
 
@@ -141,7 +122,7 @@ export const GroupForm = function({
     } else {
       this.control.group.name.text.disable();
       this.control.group.name.random.disable();
-    };
+    }
 
   };
 
@@ -247,7 +228,7 @@ export const GroupForm = function({
 
     this.element.form.addEventListener('keydown', (event) => {
 
-      if (event.keyCode == 13) { event.preventDefault(); return false; };
+      if (event.keyCode == 13) { event.preventDefault(); return false; }
 
     });
 

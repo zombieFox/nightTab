@@ -83,11 +83,11 @@ export const randomString = ({
           if (adjectives[letter.toLowerCase()].length > 0) {
             if (randomAdjective.length > 0) {
               randomAdjective = randomAdjective + ' ';
-            };
+            }
             randomAdjective = randomAdjective + adjectives[letter.toLowerCase()].splice(Math.floor(Math.random() * adjectives[letter.toLowerCase()].length), 1);
-          };
+          }
 
-        };
+        }
 
         const randomAnimal = animals[letter.toLowerCase()][Math.floor(Math.random() * animals[letter.toLowerCase()].length)];
 
@@ -120,18 +120,18 @@ export const randomString = ({
 
             if (randomAdjective.length > 0) {
               randomAdjective = randomAdjective + ' ';
-            };
+            }
 
             randomAdjective = randomAdjective + adjectives[adjectiveLetter].splice(Math.floor(Math.random() * adjectives[adjectiveLetter].length), 1);
 
             if (adjectives[adjectiveLetter].length == 0) {
               delete adjectives[adjectiveLetter];
-            };
+            }
 
-          };
-        };
+          }
+        }
 
-        var randomAnimalArray = animals[alphabet[Math.floor(Math.random() * (alphabet.length - 1))]]
+        var randomAnimalArray = animals[alphabet[Math.floor(Math.random() * (alphabet.length - 1))]];
 
         var randomAnimal = randomAnimalArray[Math.floor(Math.random() * (randomAnimalArray.length - 1))];
 
@@ -147,7 +147,7 @@ export const randomString = ({
       return action.alliteration.long();
     } else {
       return action.alliteration.short();
-    };
+    }
 
   } else {
 
@@ -155,8 +155,8 @@ export const randomString = ({
       return action.mix.long();
     } else {
       return action.mix.short();
-    };
+    }
 
-  };
+  }
 
 };

@@ -79,19 +79,19 @@ header.item.mod = {
 
                 position = state.get.current().header.order.indexOf('greeting') + 1;
 
-              };
+              }
 
               state.get.current().header.order.splice(position, 0, item);
 
-            };
+            }
 
           } else {
 
             if (state.get.current().header.order.includes(item)) {
               state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-            };
+            }
 
-          };
+          }
 
           break;
 
@@ -120,19 +120,19 @@ header.item.mod = {
 
                 position = state.get.current().header.order.indexOf('greeting') + 1;
 
-              };
+              }
 
               state.get.current().header.order.splice(position, 0, item);
 
-            };
+            }
 
           } else {
 
             if (state.get.current().header.order.includes(item)) {
               state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-            };
+            }
 
-          };
+          }
 
           break;
 
@@ -157,19 +157,19 @@ header.item.mod = {
 
                 position = state.get.current().header.order.indexOf('date');
 
-              };
+              }
 
               state.get.current().header.order.splice(position, 0, item);
 
-            };
+            }
 
           } else {
 
             if (state.get.current().header.order.includes(item)) {
               state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-            };
+            }
 
-          };
+          }
 
           break;
 
@@ -181,15 +181,15 @@ header.item.mod = {
 
               state.get.current().header.order.unshift(item);
 
-            };
+            }
 
           } else {
 
             if (state.get.current().header.order.includes(item)) {
               state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-            };
+            }
 
-          };
+          }
 
           break;
 
@@ -213,19 +213,19 @@ header.item.mod = {
 
                   position = state.get.current().header.order.length;
 
-              };
+              }
 
               state.get.current().header.order.splice(position, 0, item);
 
-            };
+            }
 
           } else {
 
             if (state.get.current().header.order.includes(item)) {
               state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-            };
+            }
 
-          };
+          }
 
           break;
 
@@ -237,7 +237,7 @@ header.item.mod = {
 
               if (state.get.current().header.order.includes(item)) {
                 state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-              };
+              }
 
               break;
 
@@ -245,15 +245,15 @@ header.item.mod = {
 
               if (!state.get.current().header.order.includes(item)) {
                 state.get.current().header.order.push(item);
-              };
+              }
 
               break;
 
-          };
+          }
 
           break;
 
-      };
+      }
 
     });
 
@@ -295,7 +295,7 @@ header.item.render = () => {
 
           header.element.header.appendChild(headerItem.item());
 
-        };
+        }
 
         break;
 
@@ -312,7 +312,7 @@ header.item.render = () => {
 
           header.element.header.appendChild(headerItem.item());
 
-        };
+        }
 
         break;
 
@@ -329,7 +329,7 @@ header.item.render = () => {
 
           header.element.header.appendChild(headerItem.item());
 
-        };
+        }
 
         break;
 
@@ -357,7 +357,7 @@ header.item.render = () => {
 
           header.element.header.appendChild(headerItem.item());
 
-        };
+        }
 
         break;
 
@@ -374,7 +374,7 @@ header.item.render = () => {
 
           header.element.header.appendChild(headerItem.item());
 
-        };
+        }
 
         break;
 
@@ -395,11 +395,11 @@ header.item.render = () => {
 
             break;
 
-        };
+        }
 
         break;
 
-    };
+    }
 
   });
 
@@ -429,7 +429,7 @@ header.item.render = () => {
     html.classList.add('is-header-show');
   } else {
     html.classList.remove('is-header-show');
-  };
+  }
 
 };
 
@@ -468,7 +468,7 @@ header.edit = {
       header.edit.close();
     } else {
       header.edit.open();
-    };
+    }
 
   },
   render: () => {
@@ -482,10 +482,10 @@ header.edit = {
           item.control.enable();
         } else {
           item.control.disable();
-        };
+        }
 
       });
-    };
+    }
 
   }
 };

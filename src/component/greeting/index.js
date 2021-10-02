@@ -3,13 +3,12 @@ import { state } from '../state';
 import { node } from '../../utility/node';
 import { trimString } from '../../utility/trimString';
 import { isValidString } from '../../utility/isValidString';
-import { complexNode } from '../../utility/complexNode';
 
 import moment from 'moment';
 
 import './index.css';
 
-export const Greeting = function({} = {}) {
+export const Greeting = function ({ } = {}) {
 
   this.now;
 
@@ -22,7 +21,7 @@ export const Greeting = function({} = {}) {
 
     if (state.get.current().header.greeting.show) {
       this.element.greeting.appendChild(this.element.text);
-    };
+    }
 
   };
 
@@ -70,11 +69,11 @@ export const Greeting = function({} = {}) {
 
           value = this.message[Math.floor(this.now.hours() / 6)];
 
-        };
+        }
 
         break;
 
-    };
+    }
 
     if (isValidString(state.get.current().header.greeting.name)) {
 
@@ -86,9 +85,9 @@ export const Greeting = function({} = {}) {
 
         value = value + ', ' + trimString(state.get.current().header.greeting.name);
 
-      };
+      }
 
-    };
+    }
 
     this.element.text.innerHTML = value;
 

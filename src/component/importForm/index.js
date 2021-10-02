@@ -1,28 +1,14 @@
-import { state } from '../state';
-import { data } from '../data';
-import { bookmark } from '../bookmark';
 
 import * as form from '../form';
 
-import { Button } from '../button';
 
-import { Control_helperText } from '../control/helperText';
-import { Control_inputButton } from '../control/inputButton';
-import { Control_groupText } from '../control/groupText';
 import { Control_radio } from '../control/radio';
-import { Control_radioGrid } from '../control/radioGrid';
 import { Control_checkbox } from '../control/checkbox';
-import { Control_slider } from '../control/slider';
-import { Control_sliderSlim } from '../control/sliderSlim';
-import { Control_colorMixer } from '../control/colorMixer';
-import { Control_color } from '../control/color';
-import { Control_text } from '../control/text';
-import { Control_select } from '../control/select';
 
 import { node } from '../../utility/node';
 import { complexNode } from '../../utility/complexNode';
 
-export const ImportForm = function({
+export const ImportForm = function ({
   dataToImport = false,
   state = false
 } = {}) {
@@ -41,7 +27,7 @@ export const ImportForm = function({
 
       let count = 0;
 
-      dataToImport.bookmark.forEach((item, i) => { count = count + item.items.length });
+      dataToImport.bookmark.forEach((item, i) => { count = count + item.items.length; });
 
       return count;
 
@@ -56,7 +42,7 @@ export const ImportForm = function({
           path: 'bookmark.include',
           id: 'bookmark-include',
           labelText: 'Bookmarks',
-          description: [`This includes <strong>${this.count.bookmark()} ${this.count.bookmark() > 1 ? `Bookmarks` : `Bookmark`}</strong> in <strong>${dataToImport.bookmark.length} ${dataToImport.bookmark.length > 1 ? `Groups` : `Group`}.<strong>`, 'Bookmarks will keep any custom Colours, Accents and Borders when imported.'],
+          description: [`This includes <strong>${this.count.bookmark()} ${this.count.bookmark() > 1 ? 'Bookmarks' : 'Bookmark'}</strong> in <strong>${dataToImport.bookmark.length} ${dataToImport.bookmark.length > 1 ? 'Groups' : 'Group'}.<strong>`, 'Bookmarks will keep any custom Colours, Accents and Borders when imported.'],
           action: () => {
             this.disable();
           }
@@ -98,7 +84,7 @@ export const ImportForm = function({
       this.control.import.bookmark.type.enable();
     } else {
       this.control.import.bookmark.type.disable();
-    };
+    }
 
   };
 

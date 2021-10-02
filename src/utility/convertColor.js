@@ -22,13 +22,13 @@ convertColor.rgb.hsl = (rgb) => {
     h = 2 + (b - r) / delta;
   } else if (b === max) {
     h = 4 + (r - g) / delta;
-  };
+  }
 
   h = Math.min(h * 60, 360);
 
   if (h < 0) {
     h += 360;
-  };
+  }
 
   var l = (min + max) / 2;
 
@@ -38,7 +38,7 @@ convertColor.rgb.hsl = (rgb) => {
     s = delta / (max + min);
   } else {
     s = delta / (2 - max - min);
-  };
+  }
 
   return {
     h: Math.round(h),
@@ -72,13 +72,13 @@ convertColor.hsl.rgb = (hsl) => {
       g: Math.round(val),
       b: Math.round(val)
     };
-  };
+  }
 
   if (l < 0.5) {
     t2 = l * (1 + s);
   } else {
     t2 = l + s - l * s;
-  };
+  }
 
   var t1 = 2 * l - t2;
 
@@ -89,11 +89,11 @@ convertColor.hsl.rgb = (hsl) => {
 
     if (t3 < 0) {
       t3++;
-    };
+    }
 
     if (t3 > 1) {
       t3--;
-    };
+    }
 
     if (6 * t3 < 1) {
       val = t1 + (t2 - t1) * 6 * t3;
@@ -103,10 +103,10 @@ convertColor.hsl.rgb = (hsl) => {
       val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
     } else {
       val = t1;
-    };
+    }
 
     rgb[i] = val * 255;
-  };
+  }
 
   return {
     r: Math.round(rgb[0]),
@@ -124,7 +124,7 @@ convertColor.hex.rgb = (args) => {
       g: 0,
       b: 0
     };
-  };
+  }
 
   var colorString = match[0];
 
@@ -132,7 +132,7 @@ convertColor.hex.rgb = (args) => {
     colorString = colorString.split('').map((char) => {
       return char + char;
     }).join('');
-  };
+  }
 
   var integer = parseInt(colorString, 16);
   var r = (integer >> 16) & 0xFF;

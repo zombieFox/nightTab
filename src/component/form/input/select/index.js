@@ -4,7 +4,7 @@ import { trimString } from '../../../../utility/trimString';
 
 import './index.css';
 
-export const select = function({
+export const select = function ({
   id = false,
   classList = [],
   option = [],
@@ -16,7 +16,7 @@ export const select = function({
 
   if (id) {
     select.setAttribute('id', id);
-  };
+  }
 
   if (classList.length > 0) {
 
@@ -24,7 +24,7 @@ export const select = function({
       select.classList.add(item);
     });
 
-  };
+  }
 
   if (func) {
 
@@ -32,7 +32,7 @@ export const select = function({
       func();
     });
 
-  };
+  }
 
   if (option.length > 0) {
 
@@ -53,7 +53,7 @@ export const select = function({
 
     select.selectedIndex = selected;
 
-  };
+  }
 
   return select;
 

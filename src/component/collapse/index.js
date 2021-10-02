@@ -1,12 +1,9 @@
-import { form } from '../form';
-import { icon } from '../icon';
 
-import { complexNode } from '../../utility/complexNode';
 import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Collapse = function({
+export const Collapse = function ({
   type = false,
   radioGroup = false,
   checkbox = false,
@@ -49,7 +46,7 @@ export const Collapse = function({
         item.state.collapsed = false;
       } else {
         item.state.collapsed = true;
-      };
+      }
     });
 
     this.update();
@@ -64,7 +61,7 @@ export const Collapse = function({
       area.classList.remove('is-collapsed');
       // area.classList.add('is-pop');
       area.removeAttribute('aria-hidden');
-    };
+    }
   };
 
   this.renderToggle = (state, toggle) => {
@@ -74,7 +71,7 @@ export const Collapse = function({
     } else {
       toggle.classList.add('active');
       toggle.classList.add('is-collapsed');
-    };
+    }
   };
 
   this.update = () => {
@@ -107,7 +104,7 @@ export const Collapse = function({
 
           state = checkbox.checked();
 
-        };
+        }
 
         target.forEach((item, i) => {
           this.renderTarget(!state, item.area);
@@ -123,13 +120,13 @@ export const Collapse = function({
 
           if (item.toggle) {
             this.renderToggle(item.state.collapsed, item.toggle);
-          };
+          }
 
         });
 
         break;
 
-    };
+    }
 
   };
 

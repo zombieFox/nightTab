@@ -2,7 +2,7 @@ import { node } from '../../../utility/node';
 
 import './index.css';
 
-export const group = function({
+export const group = function ({
   direction = 'horizontal',
   reverse = false,
   block = false,
@@ -21,19 +21,19 @@ export const group = function({
     case 'vertical':
       group.classList.add('form-group-vertical');
       break;
-  };
+  }
 
   if (reverse) {
     group.classList.add('form-group-reverse');
-  };
+  }
 
   if (block) {
     group.classList.add('form-group-block');
-  };
+  }
 
   if (border) {
     group.classList.add('form-group-border');
-  };
+  }
 
   switch (justify) {
 
@@ -49,7 +49,7 @@ export const group = function({
       group.classList.add('form-group-justify-space-between');
       break;
 
-  };
+  }
 
   return group;
 

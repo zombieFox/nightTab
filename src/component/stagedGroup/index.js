@@ -3,7 +3,7 @@ import { groupDefault } from '../groupDefault';
 import { isValidString } from '../../utility/isValidString';
 import { trimString } from '../../utility/trimString';
 
-export const StagedGroup = function(groupData) {
+export const StagedGroup = function (groupData) {
 
   this.group = groupData || JSON.parse(JSON.stringify(groupDefault));
 
@@ -17,7 +17,7 @@ export const StagedGroup = function(groupData) {
 
     if (name && isValidString(name)) {
       this.group.name.text = trimString(name);
-    };
+    }
 
     this.position.destination = bookmark.all.length;
 

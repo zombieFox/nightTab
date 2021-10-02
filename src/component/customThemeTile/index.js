@@ -6,7 +6,6 @@ import { toolbar } from '../toolbar';
 import { layout } from '../layout';
 import { header } from '../header';
 import { bookmark } from '../bookmark';
-import { group } from '../group';
 import { groupAndBookmark } from '../groupAndBookmark';
 import { customTheme } from '../customTheme';
 import { themeSetting } from '../menuContent/themeSetting';
@@ -19,7 +18,6 @@ import { StagedCustomTheme } from '../stagedCustomTheme';
 import { node } from '../../utility/node';
 import { convertColor } from '../../utility/convertColor';
 import { isValidString } from '../../utility/isValidString';
-import { complexNode } from '../../utility/complexNode';
 import { applyCSSVar } from '../../utility/applyCSSVar';
 import { applyCSSClass } from '../../utility/applyCSSClass';
 import { applyCSSState } from '../../utility/applyCSSState';
@@ -393,13 +391,13 @@ export const CustomThemeTile = function({
   this.control.disable = () => {
     for (var key in this.control.button) {
       this.control.button[key].disable();
-    };
+    }
   };
 
   this.control.enable = () => {
     for (var key in this.control.button) {
       this.control.button[key].enable();
-    };
+    }
   };
 
   this.previewTile = () => {
@@ -432,13 +430,13 @@ export const CustomThemeTile = function({
           darken();
         } else if (window.matchMedia('(prefers-color-scheme:light)').matches) {
           lighten();
-        };
+        }
 
-      };
+      }
 
-      if (hsl.l < 0) { hsl.l = 0; };
+      if (hsl.l < 0) { hsl.l = 0; }
 
-      if (hsl.l > 100) { hsl.l = 100; };
+      if (hsl.l > 100) { hsl.l = 100; }
 
       let rgb = convertColor.hsl.rgb(hsl);
 
@@ -453,7 +451,7 @@ export const CustomThemeTile = function({
 
       this.element.preview.appendChild(node('span|class:theme-custom-background-0' + i));
 
-    };
+    }
 
     this.element.tile.style.setProperty('--theme-custom-text', '0, 0%, calc(((((var(--theme-custom-background-01-rgb-r) * var(--theme-t-r)) + (var(--theme-custom-background-01-rgb-g) * var(--theme-t-g)) + (var(--theme-custom-background-01-rgb-b) * var(--theme-t-b))) / 255) - var(--theme-t)) * -10000000%)');
 
@@ -465,7 +463,7 @@ export const CustomThemeTile = function({
 
     this.element.preview.appendChild(node('span|class:theme-custom-accent'));
 
-    return node('div|class:theme-custom-tile')
+    return node('div|class:theme-custom-tile');
 
   };
 
@@ -481,7 +479,7 @@ export const CustomThemeTile = function({
 
       this.element.custom.button.appendChild(this.element.name);
 
-    };
+    }
 
     this.element.front.appendChild(this.element.custom.button);
 
@@ -499,7 +497,7 @@ export const CustomThemeTile = function({
       this.control.enable();
     } else {
       this.control.disable();
-    };
+    }
 
   };
 

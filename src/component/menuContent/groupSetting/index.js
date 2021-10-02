@@ -1,45 +1,22 @@
 import { state } from '../../state';
 import { data } from '../../data';
-import { header } from '../../header';
 import { bookmark } from '../../bookmark';
 import { group } from '../../group';
-import { theme } from '../../theme';
-import { version } from '../../version';
-import { menu } from '../../menu';
-import { icon } from '../../icon';
-import { logo } from '../../logo';
-import { layout } from '../../layout';
-import { toolbar } from '../../toolbar';
 import { groupAndBookmark } from '../../groupAndBookmark';
 
 import * as form from '../../form';
 
 import { Button } from '../../button';
-import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
-import { Alert } from '../../alert';
-import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
-import { Control_inputButton } from '../../control/inputButton';
-import { Control_groupText } from '../../control/groupText';
 import { Control_radio } from '../../control/radio';
 import { Control_radioGrid } from '../../control/radioGrid';
-import { Control_checkbox } from '../../control/checkbox';
 import { Control_slider } from '../../control/slider';
-import { Control_sliderSlim } from '../../control/sliderSlim';
-import { Control_sliderDouble } from '../../control/sliderDouble';
-import { Control_colorMixer } from '../../control/colorMixer';
-import { Control_color } from '../../control/color';
-import { Control_text } from '../../control/text';
-import { Control_textReset } from '../../control/textReset';
-import { Control_textarea } from '../../control/textarea';
 
 import { node } from '../../../utility/node';
-import { complexNode } from '../../../utility/complexNode';
 import { applyCSSVar } from '../../../utility/applyCSSVar';
 import { applyCSSClass } from '../../../utility/applyCSSClass';
-import { applyCSSState } from '../../../utility/applyCSSState';
 
 const groupSetting = {};
 
@@ -78,7 +55,7 @@ groupSetting.disable = () => {
     groupSetting.control.toolbar.openAll.hide.disable();
     groupSetting.control.toolbar.openAll.show.disable();
     groupSetting.control.toolbar.openAll.helper.disable();
-  };
+  }
 
 };
 
@@ -131,7 +108,7 @@ groupSetting.name = (parent) => {
 
     groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
 
-  };
+  }
 
   groupSetting.control.name.size = new Control_slider({
     object: state.get.current(),
@@ -144,14 +121,14 @@ groupSetting.name = (parent) => {
     max: state.get.minMax().group.name.size.max,
     action: () => {
       applyCSSVar('group.name.size');
-      if (state.get.current().bookmark.show && group.area.current.length > 0 && bookmark.all[0].name.show && groupSetting.edge.name.size) { groupSetting.edge.name.size.track(); };
+      if (state.get.current().bookmark.show && group.area.current.length > 0 && bookmark.all[0].name.show && groupSetting.edge.name.size) { groupSetting.edge.name.size.track(); }
       data.save();
     },
     mouseDownAction: () => {
-      if (state.get.current().bookmark.show && group.area.current.length > 0 && bookmark.all[0].name.show && groupSetting.edge.name.size) { groupSetting.edge.name.size.show(); };
+      if (state.get.current().bookmark.show && group.area.current.length > 0 && bookmark.all[0].name.show && groupSetting.edge.name.size) { groupSetting.edge.name.size.show(); }
     },
     mouseUpAction: () => {
-      if (state.get.current().bookmark.show && group.area.current.length > 0 && bookmark.all[0].name.show && groupSetting.edge.name.size) { groupSetting.edge.name.size.hide(); };
+      if (state.get.current().bookmark.show && group.area.current.length > 0 && bookmark.all[0].name.show && groupSetting.edge.name.size) { groupSetting.edge.name.size.hide(); }
     }
   });
 
@@ -172,13 +149,13 @@ groupSetting.name = (parent) => {
 
           groupSetting.edge.name.size.update.secondary([group.area.current[0].element.header]);
 
-        };
+        }
 
       } else {
 
         groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
 
-      };
+      }
 
       if (groupSetting.edge.toolbar.size) {
 
@@ -188,13 +165,13 @@ groupSetting.name = (parent) => {
 
           groupSetting.edge.toolbar.size.update.secondary([group.area.current[0].element.header]);
 
-        };
+        }
 
       } else {
 
         groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[0].element.toolbar.toolbar, secondary: [group.area.current[0].element.header] });
 
-      };
+      }
 
       data.save();
 
@@ -218,13 +195,13 @@ groupSetting.name = (parent) => {
 
           groupSetting.edge.name.size.update.secondary([group.area.current[0].element.header]);
 
-        };
+        }
 
       } else {
 
         groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
 
-      };
+      }
 
       if (groupSetting.edge.toolbar.size) {
 
@@ -234,13 +211,13 @@ groupSetting.name = (parent) => {
 
           groupSetting.edge.toolbar.size.update.secondary([group.area.current[0].element.header]);
 
-        };
+        }
 
       } else {
 
         groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[0].element.toolbar.toolbar, secondary: [group.area.current[0].element.header] });
 
-      };
+      }
 
       data.save();
 
@@ -275,7 +252,7 @@ groupSetting.toolbar = (parent) => {
 
     groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[0].element.toolbar.toolbar, secondary: [group.area.current[0].element.header] });
 
-  };
+  }
 
   groupSetting.control.toolbar.size = new Control_slider({
     object: state.get.current(),
@@ -288,14 +265,14 @@ groupSetting.toolbar = (parent) => {
     max: state.get.minMax().group.toolbar.size.max,
     action: () => {
       applyCSSVar('group.toolbar.size');
-      if (state.get.current().bookmark.show && (bookmark.all[0].toolbar.collapse.show || (bookmark.all[0].toolbar.openAll.show && bookmark.all[0].items.length > 0))) { groupSetting.edge.toolbar.size.track(); };
+      if (state.get.current().bookmark.show && (bookmark.all[0].toolbar.collapse.show || (bookmark.all[0].toolbar.openAll.show && bookmark.all[0].items.length > 0))) { groupSetting.edge.toolbar.size.track(); }
       data.save();
     },
     mouseDownAction: () => {
-      if (state.get.current().bookmark.show && (bookmark.all[0].toolbar.collapse.show || (bookmark.all[0].toolbar.openAll.show && bookmark.all[0].items.length > 0))) { groupSetting.edge.toolbar.size.show(); };
+      if (state.get.current().bookmark.show && (bookmark.all[0].toolbar.collapse.show || (bookmark.all[0].toolbar.openAll.show && bookmark.all[0].items.length > 0))) { groupSetting.edge.toolbar.size.show(); }
     },
     mouseUpAction: () => {
-      if (state.get.current().bookmark.show && (bookmark.all[0].toolbar.collapse.show || (bookmark.all[0].toolbar.openAll.show && bookmark.all[0].items.length > 0))) { groupSetting.edge.toolbar.size.hide(); };
+      if (state.get.current().bookmark.show && (bookmark.all[0].toolbar.collapse.show || (bookmark.all[0].toolbar.openAll.show && bookmark.all[0].items.length > 0))) { groupSetting.edge.toolbar.size.hide(); }
     }
   });
 
@@ -317,13 +294,13 @@ groupSetting.toolbar = (parent) => {
 
             groupSetting.edge.name.size.update.secondary([group.area.current[0].element.header]);
 
-          };
+          }
 
         } else {
 
           groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
 
-        };
+        }
 
         if (groupSetting.edge.toolbar.size) {
 
@@ -333,13 +310,13 @@ groupSetting.toolbar = (parent) => {
 
             groupSetting.edge.toolbar.size.update.secondary([group.area.current[0].element.header]);
 
-          };
+          }
 
         } else {
 
           groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[0].element.toolbar.toolbar, secondary: [group.area.current[0].element.header] });
 
-        };
+        }
 
         data.save();
 
@@ -362,13 +339,13 @@ groupSetting.toolbar = (parent) => {
 
             groupSetting.edge.name.size.update.secondary([group.area.current[0].element.header]);
 
-          };
+          }
 
         } else {
 
           groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
 
-        };
+        }
 
         if (groupSetting.edge.toolbar.size) {
 
@@ -378,13 +355,13 @@ groupSetting.toolbar = (parent) => {
 
             groupSetting.edge.toolbar.size.update.secondary([group.area.current[0].element.header]);
 
-          };
+          }
 
         } else {
 
           groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[0].element.toolbar.toolbar, secondary: [group.area.current[0].element.header] });
 
-        };
+        }
 
         data.save();
 
@@ -413,13 +390,13 @@ groupSetting.toolbar = (parent) => {
 
             groupSetting.edge.name.size.update.secondary([group.area.current[0].element.header]);
 
-          };
+          }
 
         } else {
 
           groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
 
-        };
+        }
 
         if (groupSetting.edge.toolbar.size) {
 
@@ -429,13 +406,13 @@ groupSetting.toolbar = (parent) => {
 
             groupSetting.edge.toolbar.size.update.secondary([group.area.current[0].element.header]);
 
-          };
+          }
 
         } else {
 
           groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[0].element.toolbar.toolbar, secondary: [group.area.current[0].element.header] });
 
-        };
+        }
 
         data.save();
 
@@ -458,13 +435,13 @@ groupSetting.toolbar = (parent) => {
 
             groupSetting.edge.name.size.update.secondary([group.area.current[0].element.header]);
 
-          };
+          }
 
         } else {
 
           groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
 
-        };
+        }
 
         if (groupSetting.edge.toolbar.size) {
 
@@ -474,13 +451,13 @@ groupSetting.toolbar = (parent) => {
 
             groupSetting.edge.toolbar.size.update.secondary([group.area.current[0].element.header]);
 
-          };
+          }
 
         } else {
 
           groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[0].element.toolbar.toolbar, secondary: [group.area.current[0].element.header] });
 
-        };
+        }
 
         data.save();
 
@@ -523,4 +500,4 @@ groupSetting.toolbar = (parent) => {
 
 };
 
-export { groupSetting }
+export { groupSetting };

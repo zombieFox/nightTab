@@ -1,19 +1,11 @@
-import { state } from '../../state';
-import { data } from '../../data';
-import { bookmark } from '../../bookmark';
 
 import * as form from '../../form';
 
-import { Button } from '../../button';
-import { Collapse } from '../../collapse';
 
-import { node } from '../../../utility/node';
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
-import { convertColor } from '../../../utility/convertColor';
-import { isValidString } from '../../../utility/isValidString';
 
-export const Control_checkbox = function({
+export const Control_checkbox = function ({
   object = {},
   id = 'name',
   path = false,
@@ -32,7 +24,7 @@ export const Control_checkbox = function({
 
       set({ object: object, path: path, value: this.checkbox.checked });
 
-      if (action) { action(); };
+      if (action) { action(); }
 
     }
   });

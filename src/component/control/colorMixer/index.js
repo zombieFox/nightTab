@@ -1,6 +1,3 @@
-import { state } from '../../state';
-import { data } from '../../data';
-import { bookmark } from '../../bookmark';
 
 import * as form from '../../form';
 
@@ -11,12 +8,11 @@ import { node } from '../../../utility/node';
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
 import { convertColor } from '../../../utility/convertColor';
-import { isValidString } from '../../../utility/isValidString';
 
 import { Control_color } from '../color';
 import { Control_sliderSlim } from '../sliderSlim';
 
-export const Control_colorMixer = function({
+export const Control_colorMixer = function ({
   object = {},
   path = false,
   defaultValue = false,
@@ -64,7 +60,7 @@ export const Control_colorMixer = function({
       this.colorSliderL.update();
       if (action) {
         action();
-      };
+      }
     }
   });
 
@@ -90,7 +86,7 @@ export const Control_colorMixer = function({
       this.colorSliderL.update();
       if (action) {
         action();
-      };
+      }
     }
   });
 
@@ -116,7 +112,7 @@ export const Control_colorMixer = function({
       this.colorSliderL.update();
       if (action) {
         action();
-      };
+      }
     }
   });
 
@@ -142,7 +138,7 @@ export const Control_colorMixer = function({
       this.colorSliderS.update();
       if (action) {
         action();
-      };
+      }
     }
   });
 
@@ -168,7 +164,7 @@ export const Control_colorMixer = function({
       this.colorSliderL.update();
       if (action) {
         action();
-      };
+      }
     }
   });
 
@@ -194,7 +190,7 @@ export const Control_colorMixer = function({
       this.colorSliderL.update();
       if (action) {
         action();
-      };
+      }
     }
   });
 
@@ -220,7 +216,7 @@ export const Control_colorMixer = function({
       this.colorSliderL.update();
       if (action) {
         action();
-      };
+      }
     }
   });
 
@@ -255,7 +251,7 @@ export const Control_colorMixer = function({
           ]
         })
       ]
-    })
+    });
   };
 
   this.disable = () => {
@@ -270,7 +266,7 @@ export const Control_colorMixer = function({
       this.colorSliderB.disable();
     } else {
       this.moreControlsUpdate();
-    };
+    }
   };
 
   this.enable = () => {
@@ -285,7 +281,7 @@ export const Control_colorMixer = function({
       this.colorSliderB.enable();
     } else {
       this.moreControlsUpdate();
-    };
+    }
   };
 
   this.moreControlsUpdate = () => {
@@ -304,7 +300,7 @@ export const Control_colorMixer = function({
       this.colorSliderR.enable();
       this.colorSliderG.enable();
       this.colorSliderB.enable();
-    };
+    }
 
   };
 

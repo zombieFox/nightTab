@@ -20,7 +20,7 @@ export const feedback = ({
     });
 
     feedback.appendChild(feedbackText);
-  };
+  }
 
   return feedback;
 

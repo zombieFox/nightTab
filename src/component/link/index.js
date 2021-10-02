@@ -1,10 +1,9 @@
 import { icon } from '../icon';
-import { form } from '../form';
 
 import { node } from '../../utility/node';
 import { complexNode } from '../../utility/complexNode';
 
-export const Link = function({
+export const Link = function ({
   text = 'Link',
   href = '#',
   iconName = false,
@@ -48,18 +47,18 @@ export const Link = function({
               this.element.link.classList.add('button-ring');
               break;
 
-          };
+          }
         });
 
-      };
+      }
 
-    };
+    }
 
     const linkText = node('span:' + text);
 
     if (linkButton) {
       linkText.classList.add('button-text');
-    };
+    }
 
     this.element.link.appendChild(linkText);
 
@@ -75,23 +74,23 @@ export const Link = function({
           this.element.link.append(icon.render(iconName));
           break;
 
-      };
+      }
 
-    };
+    }
 
     if (openNew) {
       this.element.link.setAttribute('target', '_blank');
-    };
+    }
 
     if (title) {
       this.element.link.setAttribute('title', title);
-    };
+    }
 
     if (classList.length > 0) {
       classList.forEach((item, i) => {
         this.element.link.classList.add(item);
       });
-    };
+    }
 
   };
 
@@ -101,7 +100,7 @@ export const Link = function({
       this.element.link.addEventListener('click', (event) => {
         action();
       });
-    };
+    }
 
   };
 

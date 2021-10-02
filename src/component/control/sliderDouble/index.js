@@ -1,21 +1,14 @@
 import { state } from '../../state';
-import { data } from '../../data';
-import { bookmark } from '../../bookmark';
 
 import * as form from '../../form';
 
-import { Button } from '../../button';
-import { Collapse } from '../../collapse';
 import { Control_slider } from '../slider';
 
 import { node } from '../../../utility/node';
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
-import { convertColor } from '../../../utility/convertColor';
-import { isValidString } from '../../../utility/isValidString';
-import { minMax } from '../../../utility/minMax';
 
-export const Control_sliderDouble = function({
+export const Control_sliderDouble = function ({
   object = {},
   labelText = 'Name',
   style = false,
@@ -76,7 +69,7 @@ export const Control_sliderDouble = function({
       rightClipPostion = rightClipPostion + 1;
     } else {
       rightClipPostion = rightClipPostion - 1;
-    };
+    }
 
     this.element.sliderDouble.style.setProperty('--slider-double-right-clip', rightClipPostion);
 
@@ -98,12 +91,12 @@ export const Control_sliderDouble = function({
       action: () => {
 
         if (get({ object: state.get.current(), path: left.path }) > get({ object: state.get.minMax(), path: left.path }).max - 10) {
-          set({ object: state.get.current(), path: left.path, value: get({ object: state.get.minMax(), path: left.path }).max - 10 })
-        };
+          set({ object: state.get.current(), path: left.path, value: get({ object: state.get.minMax(), path: left.path }).max - 10 });
+        }
 
         if (get({ object: state.get.current(), path: left.path }) >= get({ object: state.get.current(), path: right.path }) - 10) {
-          set({ object: state.get.current(), path: right.path, value: get({ object: state.get.current(), path: left.path }) + 10 })
-        };
+          set({ object: state.get.current(), path: right.path, value: get({ object: state.get.current(), path: left.path }) + 10 });
+        }
 
         this.range.left.updateRange();
 
@@ -113,7 +106,7 @@ export const Control_sliderDouble = function({
 
         if (left.action) {
           left.action();
-        };
+        }
 
       },
       focusAction: left.focusAction,
@@ -139,12 +132,12 @@ export const Control_sliderDouble = function({
       action: () => {
 
         if (get({ object: state.get.current(), path: right.path }) < get({ object: state.get.minMax(), path: right.path }).min + 10) {
-          set({ object: state.get.current(), path: right.path, value: get({ object: state.get.minMax(), path: right.path }).min + 10 })
-        };
+          set({ object: state.get.current(), path: right.path, value: get({ object: state.get.minMax(), path: right.path }).min + 10 });
+        }
 
         if (get({ object: state.get.current(), path: right.path }) <= get({ object: state.get.current(), path: left.path }) + 10) {
-          set({ object: state.get.current(), path: left.path, value: get({ object: state.get.current(), path: right.path }) - 10 })
-        };
+          set({ object: state.get.current(), path: left.path, value: get({ object: state.get.current(), path: right.path }) - 10 });
+        }
 
         this.range.left.update();
 
@@ -154,7 +147,7 @@ export const Control_sliderDouble = function({
 
         if (right.action) {
           right.action();
-        };
+        }
 
       },
       focusAction: right.focusAction,
@@ -177,7 +170,7 @@ export const Control_sliderDouble = function({
 
     if (left.defaultValue || (typeof left.defaultValue === 'number' && left.defaultValue === 0)) {
       leftNumberReset.prepend(this.range.left.reset.button);
-    };
+    }
 
     const rightNumberReset = form.group({
       children: [
@@ -187,7 +180,7 @@ export const Control_sliderDouble = function({
 
     if (right.defaultValue || (typeof right.defaultValue === 'number' && right.defaultValue === 0)) {
       rightNumberReset.appendChild(this.range.right.reset.button);
-    };
+    }
 
     const wrap = form.wrap({
       children: [
@@ -244,7 +237,7 @@ export const Control_sliderDouble = function({
       this.delayedUpdate = setTimeout(updateControl, 2000);
     } else {
       updateControl();
-    };
+    }
 
     this.rightClip();
 

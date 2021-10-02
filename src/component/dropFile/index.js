@@ -1,14 +1,11 @@
-import { state } from '../state';
-import { data } from '../data';
 
 import * as form from '../form';
 
 import { node } from '../../utility/node';
-import { complexNode } from '../../utility/complexNode';
 
 import './index.css';
 
-export const DropFile = function({
+export const DropFile = function ({
   heading = 'Drop file here',
   dropAaction = false,
   enterAction = false,
@@ -38,7 +35,7 @@ export const DropFile = function({
 
       if (enterAction) {
         enterAction();
-      };
+      }
 
     });
 
@@ -51,7 +48,7 @@ export const DropFile = function({
 
       if (leaveAction) {
         leaveAction();
-      };
+      }
 
     });
 
@@ -75,7 +72,7 @@ export const DropFile = function({
 
       if (dropAaction) {
         dropAaction();
-      };
+      }
 
     });
 
@@ -90,7 +87,7 @@ export const DropFile = function({
       children: [
         this.element.drop
       ]
-    })
+    });
   };
 
   this.assemble();

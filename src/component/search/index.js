@@ -1,11 +1,9 @@
 import { data } from '../data';
 import { state } from '../state';
-import { group } from '../group';
 import { bookmark } from '../bookmark';
 import { groupAndBookmark } from '../groupAndBookmark';
 import { searchEnginePreset } from '../searchEnginePreset';
 
-import * as form from '../form';
 
 import { Button } from '../button';
 import { Control_text } from '../control/text';
@@ -13,11 +11,10 @@ import { Control_text } from '../control/text';
 import { node } from '../../utility/node';
 import { trimString } from '../../utility/trimString';
 import { isValidString } from '../../utility/isValidString';
-import { complexNode } from '../../utility/complexNode';
 
 import './index.css';
 
-export const Search = function() {
+export const Search = function () {
 
   this.element = {
     search: node('div|class:search'),
@@ -62,7 +59,7 @@ export const Search = function() {
 
       state.get.current().search = false;
 
-    };
+    }
 
     data.save();
 
@@ -76,7 +73,7 @@ export const Search = function() {
       placeholder = 'Find bookmarks or search';
     } else {
       placeholder = 'Search';
-    };
+    }
 
     switch (state.get.current().header.search.engine.selected) {
 
@@ -86,7 +83,7 @@ export const Search = function() {
 
           placeholder = placeholder + ' ' + state.get.current().header.search.engine.custom.name;
 
-        };
+        }
 
         break;
 
@@ -96,7 +93,7 @@ export const Search = function() {
 
         break;
 
-    };
+    }
 
     this.element.input.text.placeholder = placeholder;
 
@@ -122,7 +119,7 @@ export const Search = function() {
 
           this.element.form.setAttribute('action', '');
 
-        };
+        }
 
         break;
 
@@ -134,11 +131,11 @@ export const Search = function() {
 
         break;
 
-    };
+    }
 
     if (state.get.current().header.search.newTab) {
-      this.element.form.setAttribute("target", "_blank");
-    };
+      this.element.form.setAttribute('target', '_blank');
+    }
 
   };
 
@@ -168,7 +165,7 @@ export const Search = function() {
 
           if (matchUrl || matchName) {
             item.searchMatch = true;
-          };
+          }
 
         });
 
@@ -180,7 +177,7 @@ export const Search = function() {
 
       this.clearSearch();
 
-    };
+    }
 
     groupAndBookmark.render();
 
@@ -231,13 +228,13 @@ export const Search = function() {
       count.group.push({
         bookmarkCount: item.items.length,
         searchMatch: 0
-      })
+      });
 
       const groupIndex = i;
 
       item.items.forEach((item, i) => {
 
-        if (item.searchMatch) { count.group[groupIndex].searchMatch++ };
+        if (item.searchMatch) { count.group[groupIndex].searchMatch++; }
 
       });
 
@@ -263,7 +260,7 @@ export const Search = function() {
 
       html.classList.remove('is-header-search-opacity-low');
 
-    };
+    }
 
   };
 

@@ -126,11 +126,11 @@ icon.render = (name) => {
 
   if (icon.all[name].fill) {
     svg.setAttribute('clip-rule', icon.all[name].clip);
-  };
+  }
 
   if (icon.all[name].fill) {
     svg.setAttribute('fill-rule', icon.all[name].fill);
-  };
+  }
 
   const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 

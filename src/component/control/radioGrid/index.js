@@ -1,19 +1,11 @@
-import { state } from '../../state';
-import { data } from '../../data';
-import { bookmark } from '../../bookmark';
 
 import * as form from '../../form';
 
-import { Button } from '../../button';
-import { Collapse } from '../../collapse';
 
-import { node } from '../../../utility/node';
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
-import { convertColor } from '../../../utility/convertColor';
-import { isValidString } from '../../../utility/isValidString';
 
-export const Control_radioGrid = function({
+export const Control_radioGrid = function ({
   radioGroup = [],
   label = false,
   object = {},
@@ -37,7 +29,7 @@ export const Control_radioGrid = function({
     this.label = form.label({
       text: label
     });
-  };
+  }
 
   if (radioGroup.length > 0) {
     radioGroup.forEach((item, i) => {
@@ -54,7 +46,7 @@ export const Control_radioGrid = function({
 
           set({ object: object, path: radioGroupPath, value: item.value });
 
-          if (action) { action(); };
+          if (action) { action(); }
 
         }
       });
@@ -92,7 +84,7 @@ export const Control_radioGrid = function({
 
       this.radioSet.push(radioAndLabel);
     });
-  };
+  }
 
   this.value = () => {
     let currentSelectedRadio = false;
@@ -100,7 +92,7 @@ export const Control_radioGrid = function({
     this.radioSet.forEach((item, i) => {
       if (item.radio.checked) {
         currentSelectedRadio = item.radio.value;
-      };
+      }
     });
 
     return currentSelectedRadio;
@@ -131,7 +123,7 @@ export const Control_radioGrid = function({
       case '2x2':
         gridElement.classList.add('form-grid-2x2');
         break;
-    };
+    }
 
     this.radioSet.forEach((item, i) => {
       const wrap = form.wrap({
@@ -148,7 +140,7 @@ export const Control_radioGrid = function({
 
     if (label) {
       wrap.appendChild(this.label);
-    };
+    }
 
     wrap.appendChild(gridElement);
 
@@ -164,7 +156,7 @@ export const Control_radioGrid = function({
 
     if (label) {
       this.label.classList.add('disabled');
-    };
+    }
   };
 
   this.enable = () => {
@@ -176,7 +168,7 @@ export const Control_radioGrid = function({
 
     if (label) {
       this.label.classList.remove('disabled');
-    };
+    }
   };
 
 };

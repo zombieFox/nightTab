@@ -19,15 +19,15 @@ export const number = ({
 
   if (id) {
     input.setAttribute('id', id);
-  };
+  }
 
   if (value || (typeof value === 'number' && value === 0)) {
     input.setAttribute('value', value);
-  };
+  }
 
   if (placeholder) {
     input.setAttribute('placeholder', placeholder);
-  };
+  }
 
   if (classList.length > 0) {
 
@@ -35,7 +35,7 @@ export const number = ({
       input.classList.add(item);
     });
 
-  };
+  }
 
   if (func) {
 
@@ -43,7 +43,7 @@ export const number = ({
       func();
     });
 
-  };
+  }
 
   return input;
 

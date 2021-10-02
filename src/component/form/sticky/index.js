@@ -2,7 +2,7 @@ import { node } from '../../../utility/node';
 
 import './index.css';
 
-export const sticky = function({
+export const sticky = function ({
   children = false
 } = {}) {
 

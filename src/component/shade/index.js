@@ -2,7 +2,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Shade = function() {
+export const Shade = function () {
 
   this.element = {
     shade: node('div|class:shade')
@@ -16,7 +16,7 @@ export const Shade = function() {
     this.element.shade.addEventListener('transitionend', (event) => {
       if (event.propertyName === 'opacity' && getComputedStyle(this.element.shade).opacity == 0) {
         body.removeChild(this.element.shade);
-      };
+      }
     });
 
     body.appendChild(this.element.shade);
@@ -41,8 +41,8 @@ export const Shade = function() {
       const body = document.querySelector('body');
 
       if (body.contains(this.element.shade)) {
-        body.removeChild(this.element.shade)
-      };
+        body.removeChild(this.element.shade);
+      }
 
     }, 6000);
 

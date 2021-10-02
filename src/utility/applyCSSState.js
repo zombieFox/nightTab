@@ -15,7 +15,7 @@ export const applyCSSState = function(path) {
 
       html.classList.remove('is-' + path.replace(/\./g, '-').toLowerCase());
 
-    };
+    }
 
   };
 
@@ -27,6 +27,6 @@ export const applyCSSState = function(path) {
 
     apply(path);
 
-  };
+  }
 
 };

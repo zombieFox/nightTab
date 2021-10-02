@@ -7,7 +7,7 @@ export const node = (string, node) => {
     tag = string.slice(0, string.indexOf('|'));
   } else {
     tag = string;
-  };
+  }
 
   let text = false;
 
@@ -19,13 +19,13 @@ export const node = (string, node) => {
     tag = pair[0];
     // replace \: with :
     text = pair[1].replace('\\', ':');
-  };
+  }
 
   let element = document.createElement(tag);
 
   if (text && text != '') {
     element.innerHTML = text;
-  };
+  }
 
   let attributes = string.slice(string.indexOf('|') + 1, string.length).split(',');
 
@@ -58,7 +58,7 @@ export const node = (string, node) => {
       }
     });
 
-  };
+  }
 
   if (node) {
 
@@ -80,7 +80,7 @@ export const node = (string, node) => {
 
             element.appendChild(div.firstChild);
 
-          };
+          }
 
         });
 
@@ -98,13 +98,13 @@ export const node = (string, node) => {
 
           element.appendChild(div.firstChild);
 
-        };
+        }
 
-      };
+      }
 
-    };
+    }
 
-  };
+  }
 
   return element;
 };

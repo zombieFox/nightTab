@@ -1,29 +1,13 @@
-import * as form from '../form';
 
 import { Button } from '../button';
 
-import { Control_helperText } from '../control/helperText';
-import { Control_inputButton } from '../control/inputButton';
-import { Control_groupText } from '../control/groupText';
-import { Control_radio } from '../control/radio';
-import { Control_radioGrid } from '../control/radioGrid';
-import { Control_checkbox } from '../control/checkbox';
-import { Control_slider } from '../control/slider';
-import { Control_sliderSlim } from '../control/sliderSlim';
-import { Control_colorMixer } from '../control/colorMixer';
-import { Control_color } from '../control/color';
 import { Control_text } from '../control/text';
-import { Control_select } from '../control/select';
 
 import { node } from '../../utility/node';
-import { complexNode } from '../../utility/complexNode';
-import { isValidString } from '../../utility/isValidString';
-import { trimString } from '../../utility/trimString';
-import { ordinalNumber } from '../../utility/ordinalNumber';
 import { randomString } from '../../utility/randomString';
 import { randomNumber } from '../../utility/randomNumber';
 
-export const CustomThemeForm = function({
+export const CustomThemeForm = function ({
   customThemeData = false
 } = {}) {
 

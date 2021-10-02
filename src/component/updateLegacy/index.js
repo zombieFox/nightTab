@@ -1,16 +1,14 @@
-import { state } from '../state';
-import { version } from '../version';
 import { convertColor } from '../../utility/convertColor';
 
 const updateLegacy = {};
 
 updateLegacy.get = () => {
   return {
-    '1.0.0': function(data) {
+    '1.0.0': function (data) {
       data.version = '1.0.0';
       return data;
     },
-    '2.0.0': function(data) {
+    '2.0.0': function (data) {
       // major state overhaul for version 2.0.0 and up
       data.state = {
         header: {
@@ -99,21 +97,21 @@ updateLegacy.get = () => {
       data.bookmarks = [];
       return data;
     },
-    '2.1.0': function(data) {
+    '2.1.0': function (data) {
       data.state.layout.theme = {
         current: data.state.layout.theme.current,
         random: false
       };
       return data;
     },
-    '2.3.0': function(data) {
+    '2.3.0': function (data) {
       data.state.layout.theme.random = {
         active: data.state.layout.theme.random,
         style: 'any'
       };
       return data;
     },
-    '2.4.0': function(data) {
+    '2.4.0': function (data) {
       data.state.link.show = {
         active: true,
         name: true,
@@ -135,11 +133,11 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '2.5.0': function(data) {
+    '2.5.0': function (data) {
       data.state.header.search.focus = false;
       return data;
     },
-    '2.7.0': function(data) {
+    '2.7.0': function (data) {
       // update date character length
       data.state.header.date.character = {
         length: data.state.header.date.characterLength
@@ -190,11 +188,11 @@ updateLegacy.get = () => {
       data.state.modal = false;
       return data;
     },
-    '2.8.0': function(data) {
+    '2.8.0': function (data) {
       data.state.layout.title = 'New Tab';
       return data;
     },
-    '2.9.0': function(data) {
+    '2.9.0': function (data) {
       data.state.header.shade = {
         show: true,
         padding: 4,
@@ -207,7 +205,7 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '2.10.0': function(data) {
+    '2.10.0': function (data) {
       data.state.header.shade = {
         show: true,
         padding: 4,
@@ -220,7 +218,7 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '2.11.0': function(data) {
+    '2.11.0': function (data) {
       data.state.header.greeting = {
         show: false,
         type: 'good',
@@ -228,7 +226,7 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '2.11.0': function(data) {
+    '2.11.0': function (data) {
       data.state.header.greeting = {
         show: false,
         type: 'good',
@@ -236,7 +234,7 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '2.12.0': function(data) {
+    '2.12.0': function (data) {
       data.state.bookmarks.link = {
         show: data.state.bookmarks.show.link
       };
@@ -258,11 +256,11 @@ updateLegacy.get = () => {
       delete data.state.layout.theme;
       return data;
     },
-    '2.14.0': function(data) {
+    '2.14.0': function (data) {
       data.state.layout.width = 72;
       return data;
     },
-    '2.16.0': function(data) {
+    '2.16.0': function (data) {
       data.state.header.shade.padding = {
         top: data.state.header.shade.padding,
         bottom: data.state.header.shade.padding
@@ -279,13 +277,13 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '2.17.0': function(data) {
+    '2.17.0': function (data) {
       data.state.header.search.engine.google.name = 'Google';
       data.state.header.search.engine.duckduckgo.name = 'Duck Duck Go';
       data.state.header.search.engine.giphy.name = 'Giphy';
       return data;
     },
-    '2.19.0': function(data) {
+    '2.19.0': function (data) {
       data.state.header.search.engine.youtube = {
         url: 'https://www.youtube.com/results?search_query=',
         name: 'YouTube'
@@ -293,7 +291,7 @@ updateLegacy.get = () => {
       data.state.header.search.engine.custom.name = '';
       return data;
     },
-    '2.20.0': function(data) {
+    '2.20.0': function (data) {
       data.state.header.search.width = {
         style: 'auto',
         custom: 30
@@ -304,7 +302,7 @@ updateLegacy.get = () => {
       delete data.state.header.search.grow;
       return data;
     },
-    '2.21.0': function(data) {
+    '2.21.0': function (data) {
       data.state.header.clock = {
         hours: {
           show: data.state.header.clock.show.hours,
@@ -361,8 +359,8 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '2.22.0': function(data) {
-      data.bookmarks.forEach(function(arrayItem, index) {
+    '2.22.0': function (data) {
+      data.bookmarks.forEach(function (arrayItem, index) {
         arrayItem.accent = {
           override: false,
           color: {
@@ -374,8 +372,8 @@ updateLegacy.get = () => {
       });
       return data;
     },
-    '3.0.0': function(data) {
-      data.bookmarks.forEach(function(arrayItem, index) {
+    '3.0.0': function (data) {
+      data.bookmarks.forEach(function (arrayItem, index) {
         arrayItem.display = 'letter';
         arrayItem.icon = {
           name: null,
@@ -385,7 +383,7 @@ updateLegacy.get = () => {
       });
       return data;
     },
-    '3.1.0': function(data) {
+    '3.1.0': function (data) {
       data.state.header.area = {
         width: 90,
         alignment: {
@@ -424,7 +422,7 @@ updateLegacy.get = () => {
       data.state.autoSuggest = false;
       return data;
     },
-    '3.2.0': function(data) {
+    '3.2.0': function (data) {
       data.state.link.display = {
         show: true,
         alignment: {
@@ -440,14 +438,14 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '3.4.0': function(data) {
+    '3.4.0': function (data) {
       data.state.header.padding = data.state.header.shade.padding;
       delete data.state.header.shade.padding;
       data.state.header.border = data.state.header.shade.border;
       delete data.state.header.shade.border;
       return data;
     },
-    '3.6.0': function(data) {
+    '3.6.0': function (data) {
       data.state.header.item = data.state.header.items;
       delete data.state.header.items;
       data.state.link.area.gap = 2;
@@ -464,13 +462,13 @@ updateLegacy.get = () => {
       delete data.state.link.url;
       return data;
     },
-    '3.7.0': function(data) {
+    '3.7.0': function (data) {
       data.state.link.item.line = {
         show: true
       };
       return data;
     },
-    '3.8.0': function(data) {
+    '3.8.0': function (data) {
       data.state.header.clock.size = 1;
       data.state.header.date.size = 1;
       data.state.header.greeting.size = 1;
@@ -491,7 +489,7 @@ updateLegacy.get = () => {
       data.state.theme.radius = 0.2;
       return data;
     },
-    '3.9.0': function(data) {
+    '3.9.0': function (data) {
       delete data.state.header.padding;
       data.state.header.radius = false;
       data.state.header.border = {
@@ -504,32 +502,32 @@ updateLegacy.get = () => {
       delete data.state.link.area.gap;
       return data;
     },
-    '3.10.0': function(data) {
+    '3.10.0': function (data) {
       data.state.header.button.style = 'box';
       return data;
     },
-    '3.11.0': function(data) {
+    '3.11.0': function (data) {
       data.state.link.item.line = data.state.link.item.line.show;
       data.state.link.item.hoverScale = true;
       return data;
     },
-    '3.15.0': function(data) {
+    '3.15.0': function (data) {
       delete data.state.link.sort;
       return data;
     },
-    '3.18.0': function(data) {
+    '3.18.0': function (data) {
       data.nighttab = true;
       return data;
     },
-    '3.20.0': function(data) {
+    '3.20.0': function (data) {
       data.state.link.item.url = data.state.link.item.url.show;
       return data;
     },
-    '3.21.0': function(data) {
+    '3.21.0': function (data) {
       data.state.layout.order = 'headerLink';
       return data;
     },
-    '3.27.0': function(data) {
+    '3.27.0': function (data) {
       // swicth to single values for alignment controls
       // no more horizontal or vertical keys in state object
       data.state.header.area.alignment = data.state.header.area.alignment.horizontal;
@@ -541,14 +539,14 @@ updateLegacy.get = () => {
       data.state.layout.alignment = data.state.layout.alignment.vertical + data.state.layout.alignment.horizontal;
       return data;
     },
-    '3.28.0': function(data) {
+    '3.28.0': function (data) {
       data.state.header.search.engine.bing = {
         url: 'https://www.bing.com/search?q=',
         name: 'Bing'
       };
       return data;
     },
-    '3.29.0': function(data) {
+    '3.29.0': function (data) {
       // move new tab into link
       data.state.link.item.newTab = data.state.link.newTab;
       delete data.state.link.newTab;
@@ -565,32 +563,32 @@ updateLegacy.get = () => {
       data.state.layout.order = data.state.layout.order.toLowerCase();
       return data;
     },
-    '3.30.0': function(data) {
+    '3.30.0': function (data) {
       data.state.link.item.order = 'displayname';
       return data;
     },
-    '3.32.0': function(data) {
+    '3.32.0': function (data) {
       if (data.state.background.image.url == '') {
         data.state.background.image.from = 'file';
       } else {
         data.state.background.image.from = 'url';
-      };
+      }
       data.state.background.image.file = {
         name: '',
         data: ''
       };
       return data;
     },
-    '3.50.0': function(data) {
+    '3.50.0': function (data) {
       data.state.pagelock = false;
       data.state.shade = false;
       return data;
     },
-    '3.51.0': function(data) {
+    '3.51.0': function (data) {
       data.state.link.add = false;
       return data;
     },
-    '3.66.0': function(data) {
+    '3.66.0': function (data) {
       data.state.background.color = {
         by: 'theme',
         custom: {
@@ -601,22 +599,22 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '3.80.0': function(data) {
+    '3.80.0': function (data) {
       delete data.state.link.item.newtab;
       data.state.link.item.border = 0;
       return data;
     },
-    '3.81.0': function(data) {
+    '3.81.0': function (data) {
       data.state.link.orientation = 'bottom';
       return data;
     },
-    '3.82.0': function(data) {
+    '3.82.0': function (data) {
       data.state.link.item.shadow = {
         show: true
       };
       return data;
     },
-    '4.0.0': function(data) {
+    '4.0.0': function (data) {
       data.bookmarks = [{
         name: 'Group 1',
         items: data.bookmarks
@@ -668,28 +666,28 @@ updateLegacy.get = () => {
         data.state.link.item.display.order = 'letconname';
       } else if (data.state.link.item.order == 'namedisplay') {
         data.state.link.item.display.order = 'nameletcon';
-      };
+      }
       delete data.state.link.item.order;
       if (data.state.link.style == 'block') {
         data.state.link.item.display.direction = 'vertical';
       } else if (data.state.link.style == 'list') {
         data.state.link.item.display.direction = 'horizontal';
-      };
+      }
       delete data.state.link.fit;
       data.state.header.search.engine.duckduckgo.name = 'DuckDuckGo';
       return data;
     },
-    '4.1.0': function(data) {
+    '4.1.0': function (data) {
       data.state.link.item.display.gutter = 2;
       return data;
     },
-    '4.2.0': function(data) {
+    '4.2.0': function (data) {
       data.state.edit = false;
       data.state.link.edit = false;
       data.state.group.edit = false;
       return data;
     },
-    '4.3.0': function(data) {
+    '4.3.0': function (data) {
       data.state.theme.color = {
         hsl: {
           h: 222,
@@ -714,20 +712,20 @@ updateLegacy.get = () => {
       delete data.state.header.button.accent;
       return data;
     },
-    '4.4.0': function(data) {
+    '4.4.0': function (data) {
       data.state.header.button.colorAccent.dot = {
         show: true
       };
       return data;
     },
-    '4.6.0': function(data) {
+    '4.6.0': function (data) {
       data.state.theme.font = {
         display: '',
         ui: ''
       };
       return data;
     },
-    '4.7.0': function(data) {
+    '4.7.0': function (data) {
       data.state.theme.font.display = {
         name: data.state.theme.font.display,
         weight: 400,
@@ -740,55 +738,55 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '4.8.0': function(data) {
+    '4.8.0': function (data) {
       data.state.theme.custom = [];
       return data;
     },
-    '4.9.0': function(data) {
+    '4.9.0': function (data) {
       data.state.theme.color.contrast = {
         light: 4,
         dark: 4
       };
       return data;
     },
-    '4.10.0': function(data) {
+    '4.10.0': function (data) {
       data.state.theme.shadow = 1;
       return data;
     },
-    '4.11.0': function(data) {
+    '4.11.0': function (data) {
       data.state.theme.custom = {
         all: data.state.theme.custom,
         edit: false
       };
       return data;
     },
-    '4.17.0': function(data) {
+    '4.17.0': function (data) {
       data.state.theme.shade = {
         opacity: 0.4
       };
       return data;
     },
-    '4.18.0': function(data) {
+    '4.18.0': function (data) {
       data.state.theme.accent.rgb = data.state.theme.accent.current;
       delete data.state.theme.accent.current;
       return data;
     },
-    '4.19.2': function(data) {
-      data.bookmarks.forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
+    '4.19.2': function (data) {
+      data.bookmarks.forEach(function (arrayItem, index) {
+        arrayItem.items.forEach(function (arrayItem, index) {
           arrayItem.searchMatch = false;
         });
       });
       return data;
     },
-    '4.22.0': function(data) {
+    '4.22.0': function (data) {
       data.state.link.item.color.rgb = data.state.link.item.color.custom;
       delete data.state.link.item.color.custom;
       data.state.background.color.rgb = data.state.background.color.custom;
       delete data.state.background.color.custom;
       return data;
     },
-    '4.23.0': function(data) {
+    '4.23.0': function (data) {
       data.state.header.color = data.state.header.shade;
       delete data.state.header.shade;
       data.state.header.color.by = 'theme';
@@ -799,11 +797,11 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '4.33.0': function(data) {
+    '4.33.0': function (data) {
       data.state.layout.scrollbars = 'auto';
       return data;
     },
-    '4.37.0': function(data) {
+    '4.37.0': function (data) {
       data.state.header.order = ['greeting', 'transitional', 'clock', 'date', 'search', 'editAdd', 'colorAccent', 'menu'];
       data.state.header.menu = {
         show: true,
@@ -841,11 +839,11 @@ updateLegacy.get = () => {
       delete data.state.header.button;
       return data;
     },
-    '4.38.0': function(data) {
+    '4.38.0': function (data) {
       data.state.theme.color.generated = {};
       return data;
     },
-    '4.40.0': function(data) {
+    '4.40.0': function (data) {
       data.state.header.area.justify = data.state.header.area.alignment;
       delete data.state.header.area.alignment;
       data.state.header.item.justify = data.state.header.item.alignment;
@@ -859,11 +857,11 @@ updateLegacy.get = () => {
       data.state.header.area.align = 'center';
       return data;
     },
-    '4.41.0': function(data) {
+    '4.41.0': function (data) {
       data.state.header.search.newTab = false;
       return data;
     },
-    '4.42.0': function(data) {
+    '4.42.0': function (data) {
       data.state.group.openAll = {
         show: true,
         size: 1,
@@ -871,17 +869,17 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '4.44.0': function(data) {
+    '4.44.0': function (data) {
       if (!'newTab' in data.state.link.item && 'newTab' in data.state.link) {
         data.state.link.item.newTab = data.state.link.newTab;
         delete data.state.link.newTab;
-      };
+      }
       return data;
     },
-    '5.0.0': function(data) {
+    '5.0.0': function (data) {
       data.state.layout.direction = 'vertical';
       data.state.link.area.direction = 'ltr';
-      data.bookmarks.forEach(function(arrayItem, index) {
+      data.bookmarks.forEach(function (arrayItem, index) {
         arrayItem.name = {
           show: data.state.group.name.show,
           text: arrayItem.name
@@ -901,36 +899,36 @@ updateLegacy.get = () => {
       data.state.header.date.separator.text = '/';
       return data;
     },
-    '5.1.0': function(data) {
+    '5.1.0': function (data) {
       data.state.link.item.opacity = 1;
       return data;
     },
-    '5.2.0': function(data) {
+    '5.2.0': function (data) {
       if (data.state.header.search.style == 'box') {
         data.state.header.search.opacity = 1;
       } else if (data.state.header.search.style == 'clear') {
         data.state.header.search.opacity = 0;
-      };
+      }
       if (data.state.header.editAdd.style == 'box') {
         data.state.header.editAdd.opacity = 1;
       } else if (data.state.header.editAdd.style == 'clear') {
         data.state.header.editAdd.opacity = 0;
-      };
+      }
       if (data.state.header.colorAccent.style == 'box') {
         data.state.header.colorAccent.opacity = 1;
       } else if (data.state.header.colorAccent.style == 'clear') {
         data.state.header.colorAccent.opacity = 0;
-      };
+      }
       if (data.state.header.menu.style == 'box') {
         data.state.header.menu.opacity = 1;
       } else if (data.state.header.menu.style == 'clear') {
         data.state.header.menu.opacity = 0;
-      };
+      }
       if (data.state.group.openAll.style == 'box') {
         data.state.group.openAll.opacity = 1;
       } else if (data.state.group.openAll.style == 'clear') {
         data.state.group.openAll.opacity = 0;
-      };
+      }
       delete data.state.header.search.style;
       delete data.state.header.editAdd.style;
       delete data.state.header.colorAccent.style;
@@ -938,9 +936,9 @@ updateLegacy.get = () => {
       delete data.state.group.openAll.style;
       return data;
     },
-    '5.3.0': function(data) {
+    '5.3.0': function (data) {
       data.state.theme.accent.hsl = convertColor.rgb.hsl(data.state.theme.accent.rgb);
-      data.state.theme.custom.all.forEach(function(arrayItem, index) {
+      data.state.theme.custom.all.forEach(function (arrayItem, index) {
         arrayItem.accent.rgb = {
           r: arrayItem.accent.r,
           g: arrayItem.accent.g,
@@ -956,7 +954,7 @@ updateLegacy.get = () => {
       });
       return data;
     },
-    '5.4.0': function(data) {
+    '5.4.0': function (data) {
       data.state.background.image.vignette = {
         opacity: 0,
         start: 90,
@@ -964,21 +962,21 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '5.37.1': function(data) {
-      data.bookmarks.forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
+    '5.37.1': function (data) {
+      data.bookmarks.forEach(function (arrayItem, index) {
+        arrayItem.items.forEach(function (arrayItem, index) {
 
           if (arrayItem.name == null) {
             arrayItem.name = '';
-          };
+          }
           if (arrayItem.url == null) {
             arrayItem.url = '';
-          };
+          }
           for (var key in arrayItem.accent.color) {
             if (typeof arrayItem.accent.color[key] != 'number') {
               arrayItem.accent.color[key] = 0;
-            };
-          };
+            }
+          }
           arrayItem.accent.rgb = {
             r: arrayItem.accent.color.r,
             g: arrayItem.accent.color.g,
@@ -994,7 +992,7 @@ updateLegacy.get = () => {
             arrayItem.accent.by = 'custom';
           } else {
             arrayItem.accent.by = 'theme';
-          };
+          }
           delete arrayItem.accent.override;
           arrayItem.color = {
             by: 'theme',
@@ -1021,16 +1019,16 @@ updateLegacy.get = () => {
           delete arrayItem.icon;
           if (arrayItem.visual.letter == null) {
             arrayItem.visual.letter = '';
-          };
+          }
           if (arrayItem.visual.icon.label == null) {
             arrayItem.visual.icon.label = '';
-          };
+          }
           if (arrayItem.visual.icon.name == null) {
             arrayItem.visual.icon.name = '';
-          };
+          }
           if (arrayItem.visual.icon.prefix == null) {
             arrayItem.visual.icon.prefix = '';
-          };
+          }
 
         });
       });
@@ -1072,7 +1070,7 @@ updateLegacy.get = () => {
         data.state.link.item.display.order = 'visualname';
       } else if (data.state.link.item.display.order == 'nameletcon') {
         data.state.link.item.display.order = 'namevisual';
-      };
+      }
       data.state.background.color.hsl = {
         h: 0,
         s: 0,
@@ -1084,15 +1082,15 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '5.42.1': function(data) {
+    '5.42.1': function (data) {
       if (data.state.link.item.display.order == 'letconname') {
         data.state.link.item.display.order = 'visualname';
       } else if (data.state.link.item.display.order == 'nameletcon') {
         data.state.link.item.display.order = 'namevisual';
-      };
+      }
       return data;
     },
-    '5.44.0': function(data) {
+    '5.44.0': function (data) {
       data.state.link.item.color.opacity = data.state.link.item.opacity;
       delete data.state.link.item.opacity;
       data.state.link.item.image = {
@@ -1100,9 +1098,9 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '5.46.0': function(data) {
-      data.bookmarks.forEach(function(arrayItem, index) {
-        arrayItem.items.forEach(function(arrayItem, index) {
+    '5.46.0': function (data) {
+      data.bookmarks.forEach(function (arrayItem, index) {
+        arrayItem.items.forEach(function (arrayItem, index) {
           arrayItem.wide = false;
           arrayItem.tall = false;
         });
@@ -1110,9 +1108,9 @@ updateLegacy.get = () => {
       data.state.link.breakpoint = 'xs';
       return data;
     },
-    '5.50.0': function(data) {
-      data.bookmarks.forEach(function(group, index) {
-        group.items.forEach(function(item, index) {
+    '5.50.0': function (data) {
+      data.bookmarks.forEach(function (group, index) {
+        group.items.forEach(function (item, index) {
           var bookmarkData = {
             display: {
               direction: data.state.link.item.display.direction,
@@ -1191,130 +1189,130 @@ updateLegacy.get = () => {
 
           if ((bookmarkData.display.direction != 'vertical' && bookmarkData.display.direction != 'horizontal') || bookmarkData.display.direction == undefined) {
             bookmarkData.display.direction = 'vertical';
-          };
+          }
           if ((bookmarkData.display.order != 'visualname' && bookmarkData.display.order != 'namevisual') || bookmarkData.display.order == undefined) {
             bookmarkData.display.order = 'visualname';
-          };
+          }
           if ((bookmarkData.display.alignment != 'topleft' && bookmarkData.display.alignment != 'topcenter' && bookmarkData.display.alignment != 'topright' && bookmarkData.display.alignment != 'centerleft' && bookmarkData.display.alignment != 'centercenter' && bookmarkData.display.alignment != 'centerright' && bookmarkData.display.alignment != 'bottomleft' && bookmarkData.display.alignment != 'bottomcenter' && bookmarkData.display.alignment != 'bottomright') || bookmarkData.display.alignment == undefined) {
             bookmarkData.display.alignment = 'centercenter';
-          };
+          }
           if (typeof bookmarkData.display.gutter != 'number' || bookmarkData.display.gutter == undefined) {
             bookmarkData.display.gutter = 2;
-          };
+          }
           if (typeof bookmarkData.display.rotate != 'number' || bookmarkData.display.rotate == undefined) {
             bookmarkData.display.rotate = 0;
-          };
+          }
           if (typeof bookmarkData.display.translate.x != 'number' || bookmarkData.display.translate.x == undefined) {
             bookmarkData.display.translate.x = 0;
-          };
+          }
           if (typeof bookmarkData.display.translate.y != 'number' || bookmarkData.display.translate.y == undefined) {
             bookmarkData.display.translate.y = 0;
-          };
+          }
           if (bookmarkData.display.visual.show == undefined) {
             bookmarkData.display.visual.show = true;
-          };
+          }
           if ((bookmarkData.display.visual.type != 'letter' && bookmarkData.display.visual.type != 'icon' && bookmarkData.display.visual.type != 'image') || bookmarkData.display.visual.type == undefined) {
             bookmarkData.display.visual.type = 'letter';
-          };
+          }
           if (typeof bookmarkData.display.visual.letter.size != 'number' || bookmarkData.display.visual.letter.size == undefined) {
             bookmarkData.display.visual.letter.size = 3;
-          };
+          }
           if (bookmarkData.display.visual.letter.text == undefined) {
             bookmarkData.display.visual.letter.text = '';
-          };
+          }
           if (typeof bookmarkData.display.visual.image.size != 'number' || bookmarkData.display.visual.image.size == undefined) {
             bookmarkData.display.visual.image.size = 3;
-          };
+          }
           if (bookmarkData.display.visual.image.url == undefined) {
             bookmarkData.display.visual.image.url = '';
-          };
+          }
           if (typeof bookmarkData.display.visual.icon.size != 'number' || bookmarkData.display.visual.icon.size == undefined) {
             bookmarkData.display.visual.icon.size = 3;
-          };
+          }
           if (bookmarkData.display.visual.icon.name == undefined) {
             bookmarkData.display.visual.icon.name = '';
-          };
+          }
           if (bookmarkData.display.visual.icon.prefix == undefined) {
             bookmarkData.display.visual.icon.prefix = '';
-          };
+          }
           if (bookmarkData.display.visual.icon.label == undefined) {
             bookmarkData.display.visual.icon.label = '';
-          };
+          }
           if (typeof bookmarkData.display.visual.shadow.size != 'number' || bookmarkData.display.visual.shadow.size == undefined) {
             bookmarkData.display.visual.shadow.size = 0;
-          };
+          }
           if (bookmarkData.display.name.show == undefined) {
             bookmarkData.display.name.show = true;
-          };
+          }
           if (bookmarkData.display.name.text == undefined) {
             bookmarkData.display.name.text = '';
-          };
+          }
           if (typeof bookmarkData.display.name.size != 'number' || bookmarkData.display.name.size == undefined) {
             bookmarkData.display.name.size = 0.9;
-          };
+          }
           if (bookmarkData.url == undefined) {
             bookmarkData.url = '';
-          };
+          }
           if ((bookmarkData.accent.by != 'theme' && bookmarkData.accent.by != 'custom') || bookmarkData.accent.by == undefined) {
             bookmarkData.accent.by = 'theme';
-          };
+          }
           if (typeof bookmarkData.accent.hsl.h != 'number' || bookmarkData.accent.hsl.h == undefined) {
             bookmarkData.accent.hsl.h = 0;
-          };
+          }
           if (typeof bookmarkData.accent.hsl.s != 'number' || bookmarkData.accent.hsl.s == undefined) {
             bookmarkData.accent.hsl.s = 0;
-          };
+          }
           if (typeof bookmarkData.accent.hsl.l != 'number' || bookmarkData.accent.hsl.l == undefined) {
             bookmarkData.accent.hsl.l = 0;
-          };
+          }
           if (typeof bookmarkData.accent.rgb.r != 'number' || bookmarkData.accent.rgb.r == undefined) {
             bookmarkData.accent.rgb.r = 0;
-          };
+          }
           if (typeof bookmarkData.accent.rgb.g != 'number' || bookmarkData.accent.rgb.g == undefined) {
             bookmarkData.accent.rgb.g = 0;
-          };
+          }
           if (typeof bookmarkData.accent.rgb.b != 'number' || bookmarkData.accent.rgb.b == undefined) {
             bookmarkData.accent.rgb.b = 0;
-          };
+          }
           if ((bookmarkData.color.by != 'theme' && bookmarkData.color.by != 'custom') || bookmarkData.color.by == undefined) {
             bookmarkData.color.by = 'theme';
-          };
+          }
           if (typeof bookmarkData.color.hsl.h != 'number' || bookmarkData.color.hsl.h == undefined) {
             bookmarkData.color.hsl.h = 0;
-          };
+          }
           if (typeof bookmarkData.color.hsl.s != 'number' || bookmarkData.color.hsl.s == undefined) {
             bookmarkData.color.hsl.s = 0;
-          };
+          }
           if (typeof bookmarkData.color.hsl.l != 'number' || bookmarkData.color.hsl.l == undefined) {
             bookmarkData.color.hsl.l = 0;
-          };
+          }
           if (typeof bookmarkData.color.rgb.r != 'number' || bookmarkData.color.rgb.r == undefined) {
             bookmarkData.color.rgb.r = 0;
-          };
+          }
           if (typeof bookmarkData.color.rgb.g != 'number' || bookmarkData.color.rgb.g == undefined) {
             bookmarkData.color.rgb.g = 0;
-          };
+          }
           if (typeof bookmarkData.color.rgb.b != 'number' || bookmarkData.color.rgb.b == undefined) {
             bookmarkData.color.rgb.b = 0;
-          };
+          }
           if (typeof bookmarkData.color.opacity != 'number' || bookmarkData.color.opacity == undefined) {
             bookmarkData.color.opacity = 1;
-          };
+          }
           if (bookmarkData.image.url == undefined) {
             bookmarkData.image.url = '';
-          };
+          }
           if (typeof bookmarkData.image.opacity != 'number' || bookmarkData.image.opacity == undefined) {
             bookmarkData.image.opacity = 1;
-          };
+          }
           if (bookmarkData.wide == undefined) {
             bookmarkData.wide = false;
-          };
+          }
           if (bookmarkData.tall == undefined) {
             bookmarkData.tall = false;
-          };
+          }
           if (bookmarkData.searchMatch == undefined) {
             bookmarkData.searchMatch = false;
-          };
+          }
 
           group.items[index] = bookmarkData;
         });
@@ -1324,9 +1322,9 @@ updateLegacy.get = () => {
       delete data.state.link.item.display.visual.show;
       return data;
     },
-    '5.74.0': function(data) {
-      data.bookmarks.forEach(function(group, index) {
-        group.items.forEach(function(item, index) {
+    '5.74.0': function (data) {
+      data.bookmarks.forEach(function (group, index) {
+        group.items.forEach(function (item, index) {
           item.background = {
             show: false,
             type: 'image',
@@ -1340,7 +1338,7 @@ updateLegacy.get = () => {
           };
           if (item.image.url != '') {
             item.background.show = true;
-          };
+          }
           delete item.image;
         });
       });
@@ -1348,7 +1346,7 @@ updateLegacy.get = () => {
       delete data.state.link.item.image;
       return data;
     },
-    '5.78.0': function(data) {
+    '5.78.0': function (data) {
       var backgroundData = {
         show: data.state.background.image.show,
         type: 'video',
@@ -1376,12 +1374,12 @@ updateLegacy.get = () => {
       };
       if (data.state.background.image.show) {
         backgroundData.type = 'image';
-      };
+      }
       data.state.background.visual = backgroundData;
       delete data.state.background.image;
       return data;
     },
-    '6.5.0': function(data) {
+    '6.5.0': function (data) {
       data.state.header.greeting.custom = '';
       return data;
     }

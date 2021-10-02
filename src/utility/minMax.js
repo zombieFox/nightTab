@@ -20,6 +20,6 @@ export const minMax = ({
 
     return value;
 
-  };
+  }
 
 };

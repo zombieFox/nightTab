@@ -21,13 +21,13 @@ export const get = ({
           object[currentKey] = {};
         } else {
           object[currentKey] = [];
-        };
-      };
+        }
+      }
 
       // drill down the object with the first key
       object = object[currentKey];
 
-    };
+    }
 
     let finalKey = address.shift();
 
@@ -35,7 +35,7 @@ export const get = ({
       return '';
     } else {
       return object[finalKey];
-    };
+    }
 
   };
 
@@ -43,6 +43,6 @@ export const get = ({
     return getValue();
   } else {
     return false;
-  };
+  }
 
 };

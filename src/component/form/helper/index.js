@@ -1,9 +1,8 @@
 import { node } from '../../../utility/node';
-import { complexNode } from '../../../utility/complexNode';
 
 import './index.css';
 
-export const helper = function({
+export const helper = function ({
   text = 'text',
   complexText = false,
   classList = []
@@ -23,9 +22,9 @@ export const helper = function({
 
       helper.appendChild(textNode);
 
-    };
+    }
 
-  };
+  }
 
   if (classList.length > 0) {
 
@@ -33,7 +32,7 @@ export const helper = function({
       helper.classList.add(item);
     });
 
-  };
+  }
 
   return helper;
 

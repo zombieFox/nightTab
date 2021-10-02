@@ -14,15 +14,15 @@ export const checkbox = ({
 
   if (id) {
     input.setAttribute('id', id);
-  };
+  }
 
   if (value) {
     input.setAttribute('value', value);
-  };
+  }
 
   if (checked) {
     input.setAttribute('checked', '');
-  };
+  }
 
   if (classList.length > 0) {
 
@@ -30,7 +30,7 @@ export const checkbox = ({
       input.classList.add(item);
     });
 
-  };
+  }
 
   if (func) {
 
@@ -38,7 +38,7 @@ export const checkbox = ({
       func();
     });
 
-  };
+  }
 
   return input;
 

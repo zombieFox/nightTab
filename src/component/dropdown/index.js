@@ -1,15 +1,12 @@
-import { form } from '../form';
-import { icon } from '../icon';
 
 import { Button } from '../button';
 import { KeyboardShortcut } from '../keyboardShortcut';
 
-import { complexNode } from '../../utility/complexNode';
 import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Dropdown = function({
+export const Dropdown = function ({
   text = 'Dropdown',
   menuItem = [],
   buttonStyle = [],
@@ -37,7 +34,7 @@ export const Dropdown = function({
           this.close();
         } else {
           this.open();
-        };
+        }
 
       }
     })
@@ -74,8 +71,8 @@ export const Dropdown = function({
     const body = document.querySelector('body');
 
     if (body.contains(this.element.menu)) {
-      body.removeChild(this.element.menu)
-    };
+      body.removeChild(this.element.menu);
+    }
 
     this.bind.remove();
 
@@ -126,7 +123,7 @@ export const Dropdown = function({
 
       this.close();
 
-    };
+    }
 
   };
 
@@ -146,7 +143,7 @@ export const Dropdown = function({
       menuTop = dropdownRect.top - menuRect.height;
     } else {
       menuTop = dropdownRect.bottom;
-    };
+    }
 
     let menuLeft = dropdownRect.left + (dropdownRect.width / 2) - (menuRect.width / 2);
 
@@ -154,7 +151,7 @@ export const Dropdown = function({
       menuLeft = 0;
     } else if ((menuLeft + menuRect.width) > vWidth) {
       menuLeft = vWidth - menuRect.width;
-    };
+    }
 
     this.element.menu.style.setProperty('--dropdown-menu-top', menuTop);
 
@@ -178,7 +175,7 @@ export const Dropdown = function({
 
           if (item.action()) {
             item.action();
-          };
+          }
 
           this.close();
 
@@ -190,7 +187,7 @@ export const Dropdown = function({
 
       this.element.menu.appendChild(this.element.content);
 
-    };
+    }
 
   };
 

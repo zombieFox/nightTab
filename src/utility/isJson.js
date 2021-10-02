@@ -4,7 +4,7 @@ export const isJson = (string) => {
     JSON.parse(string);
   } catch (error) {
     return false;
-  };
+  }
 
   return true;
 

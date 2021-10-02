@@ -20,9 +20,9 @@ export const complexNode = ({
 
       element.appendChild(textNode);
 
-    };
+    }
 
-  };
+  }
 
   if (attr.length > 0) {
     attr.forEach((item, i) => {
@@ -31,10 +31,10 @@ export const complexNode = ({
         element.setAttribute(item.key, item.value);
       } else if ('key' in item) {
         element.setAttribute(item.key, '');
-      };
+      }
 
     });
-  };
+  }
 
   if (node) {
     if (typeof node != 'string') {
@@ -43,18 +43,18 @@ export const complexNode = ({
         node.forEach((item, i) => {
           if (item instanceof HTMLElement) {
             element.appendChild(item);
-          };
+          }
         });
 
       } else {
 
         if (node instanceof HTMLElement) {
           element.appendChild(node);
-        };
+        }
 
-      };
-    };
-  };
+      }
+    }
+  }
 
   return element;
 

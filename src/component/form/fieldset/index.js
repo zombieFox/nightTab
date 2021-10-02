@@ -2,7 +2,7 @@ import { node } from '../../../utility/node';
 
 import './index.css';
 
-export const fieldset = function({
+export const fieldset = function ({
   children = false
 } = {}) {
 

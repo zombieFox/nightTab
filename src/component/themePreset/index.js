@@ -1,4 +1,3 @@
-import { state } from '../state';
 
 import { acrid } from './acrid';
 import { aerial } from './aerial';

@@ -20,7 +20,7 @@ export const range = ({
 
   if (id) {
     input.setAttribute('id', id);
-  };
+  }
 
   if (classList.length > 0) {
 
@@ -28,7 +28,7 @@ export const range = ({
       input.classList.add(item);
     });
 
-  };
+  }
 
   if (func) {
 
@@ -36,7 +36,7 @@ export const range = ({
       func();
     });
 
-  };
+  }
 
   if (focusFunc) {
 
@@ -44,7 +44,7 @@ export const range = ({
       focusFunc();
     });
 
-  };
+  }
 
   if (blurFunc) {
 
@@ -52,7 +52,7 @@ export const range = ({
       blurFunc();
     });
 
-  };
+  }
 
   if (mouseDownFunc) {
 
@@ -60,7 +60,7 @@ export const range = ({
       mouseDownFunc();
     });
 
-  };
+  }
 
   if (mouseUpFunc) {
 
@@ -68,7 +68,7 @@ export const range = ({
       mouseUpFunc();
     });
 
-  };
+  }
 
   return input;
 

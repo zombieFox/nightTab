@@ -1,4 +1,3 @@
-import { menu } from '../menu';
 
 import { Button } from '../button';
 
@@ -6,7 +5,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const MenuNav = function({
+export const MenuNav = function ({
   navData = {},
   action = false
 } = {}) {
@@ -26,7 +25,7 @@ export const MenuNav = function({
 
       for (let key in this.state.current) {
         this.state.current[key] = false;
-      };
+      }
 
       this.state.current[this.makeId(name)] = true;
 
@@ -36,7 +35,7 @@ export const MenuNav = function({
 
         if (item.name === name || item.name.toLowerCase() === name) {
           item.active = true;
-        };
+        }
 
       });
 
@@ -59,7 +58,7 @@ export const MenuNav = function({
         item.subLevel.classList.add('active');
         item.subLevel.setAttribute('style', '--menu-subnav-height: ' + item.subLevel.getBoundingClientRect().height + 'px;');
         item.subLevel.classList.remove('active');
-      };
+      }
     });
 
     this.update();
@@ -78,13 +77,13 @@ export const MenuNav = function({
 
         if (item.sub) {
           this.element.item[i].subLevel.classList.add('active');
-        };
+        }
 
         if (this.element.item[i].subLevelItem.length > 0) {
           this.element.item[i].subLevelItem.forEach((item, i) => {
             item.tabIndex = 1;
           });
-        };
+        }
 
       } else {
 
@@ -94,15 +93,15 @@ export const MenuNav = function({
 
         if (item.sub) {
           this.element.item[i].subLevel.classList.remove('active');
-        };
+        }
 
         if (this.element.item[i].subLevelItem.length > 0) {
           this.element.item[i].subLevelItem.forEach((item, i) => {
             item.tabIndex = -1;
           });
-        };
+        }
 
-      };
+      }
 
     });
 
@@ -137,7 +136,7 @@ export const MenuNav = function({
 
           if (action) {
             action();
-          };
+          }
 
         }
       });
@@ -160,7 +159,7 @@ export const MenuNav = function({
 
         navItem.subLevel = subNav;
 
-      };
+      }
 
       this.element.item.push(navItem);
 
@@ -174,7 +173,7 @@ export const MenuNav = function({
 
       if (item.subLevel) {
         item.menuNavItem.appendChild(item.subLevel);
-      };
+      }
 
       this.element.nav.appendChild(item.menuNavItem);
 

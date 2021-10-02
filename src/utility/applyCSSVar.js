@@ -22,6 +22,6 @@ export const applyCSSVar = (path) => {
 
     apply(path);
 
-  };
+  }
 
 };

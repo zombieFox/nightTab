@@ -1,4 +1,4 @@
-export const KeyboardShortcut = function({
+export const KeyboardShortcut = function ({
   keycode = false,
   ctrl = false,
   alt = false,
@@ -13,10 +13,10 @@ export const KeyboardShortcut = function({
 
         if (action) {
           action();
-        };
+        }
 
-      };
-    };
+      }
+    }
   };
 
   this.add = () => { window.addEventListener('keydown', this.action); };

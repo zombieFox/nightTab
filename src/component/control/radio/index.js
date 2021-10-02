@@ -1,19 +1,11 @@
-import { state } from '../../state';
-import { data } from '../../data';
-import { bookmark } from '../../bookmark';
 
 import * as form from '../../form';
 
-import { Button } from '../../button';
-import { Collapse } from '../../collapse';
 
-import { node } from '../../../utility/node';
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
-import { convertColor } from '../../../utility/convertColor';
-import { isValidString } from '../../../utility/isValidString';
 
-export const Control_radio = function({
+export const Control_radio = function ({
   radioGroup = [],
   object = {},
   label = false,
@@ -38,7 +30,7 @@ export const Control_radio = function({
       text: label,
       noPadding: true
     });
-  };
+  }
 
   if (radioGroup.length > 0) {
     radioGroup.forEach((item, i) => {
@@ -52,7 +44,7 @@ export const Control_radio = function({
 
             set({ object: object, path: radioGroupPath, value: item.value });
 
-            if (action) { action(); };
+            if (action) { action(); }
 
           }
         }),
@@ -97,7 +89,7 @@ export const Control_radio = function({
 
       this.radioSet.push(radioAndLabel);
     });
-  };
+  }
 
   this.value = () => {
 
@@ -106,7 +98,7 @@ export const Control_radio = function({
     this.radioSet.forEach((item, i) => {
       if (item.radio.checked) {
         currentSelectedRadio = item.radio.value;
-      };
+      }
     });
 
     return currentSelectedRadio;
@@ -127,7 +119,7 @@ export const Control_radio = function({
 
     if (this.label) {
       wrap.appendChild(form.wrap({ children: [this.label] }));
-    };
+    }
 
     this.radioSet.forEach((item, i) => {
       wrap.appendChild(
@@ -181,7 +173,7 @@ export const Control_radio = function({
 
     if (this.label) {
       wrap.appendChild(form.wrap({ children: [this.label] }));
-    };
+    }
 
     wrap.appendChild(form.wrap({ children: [inline] }));
 
@@ -196,7 +188,7 @@ export const Control_radio = function({
 
     if (label) {
       this.label.classList.add('disabled');
-    };
+    }
   };
 
   this.enable = () => {
@@ -206,7 +198,7 @@ export const Control_radio = function({
 
     if (label) {
       this.label.classList.remove('disabled');
-    };
+    }
   };
 
 };

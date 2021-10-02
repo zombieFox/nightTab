@@ -1,6 +1,5 @@
 import { state } from '../state';
 import { data } from '../data';
-import { theme } from '../theme';
 import { group } from '../group';
 import { layout } from '../layout';
 import { bookmark } from '../bookmark';
@@ -12,12 +11,10 @@ import { GroupForm } from '../groupForm';
 import { StagedGroup } from '../stagedGroup';
 
 import { node } from '../../utility/node';
-import { complexNode } from '../../utility/complexNode';
 import { isValidString } from '../../utility/isValidString';
-import { trimString } from '../../utility/trimString';
 import { clearChildNode } from '../../utility/clearChildNode';
 
-export const GroupArea = function({
+export const GroupArea = function ({
   groupData = {}
 } = {}) {
 
@@ -57,7 +54,7 @@ export const GroupArea = function({
 
         if (groupData.position.destination < 0) {
           groupData.position.destination = 0;
-        };
+        }
 
         group.item.mod.move(groupData);
 
@@ -88,7 +85,7 @@ export const GroupArea = function({
 
         if (groupData.position.destination > bookmark.all.length - 1) {
           groupData.position.destination = bookmark.all.length - 1;
-        };
+        }
 
         group.item.mod.move(groupData);
 
@@ -202,9 +199,9 @@ export const GroupArea = function({
 
           window.location.href = first.url;
 
-        };
+        }
 
-      };
+      }
 
     }
   };
@@ -230,7 +227,7 @@ export const GroupArea = function({
         groupData.group.collapse = false;
       } else {
         groupData.group.collapse = true;
-      };
+      }
 
     },
     video: () => {
@@ -243,9 +240,9 @@ export const GroupArea = function({
               item.video.pause();
             } else {
               item.video.play();
-            };
-          };
-        };
+            }
+          }
+        }
 
       });
 
@@ -256,11 +253,11 @@ export const GroupArea = function({
 
     if (groupData.group.name.show && isValidString(groupData.group.name.text)) {
       this.element.group.classList.add('is-group-header');
-    };
+    }
 
     if (groupData.group.toolbar.collapse.show || (groupData.group.toolbar.openAll.show && groupData.group.items.length > 0)) {
       this.element.group.classList.add('is-group-toolbar');
-    };
+    }
 
   };
 
@@ -268,7 +265,7 @@ export const GroupArea = function({
 
     for (var key in this.control.button) {
       this.control.button[key].disable();
-    };
+    }
 
     this.control.searchState();
 
@@ -278,7 +275,7 @@ export const GroupArea = function({
 
     for (var key in this.control.button) {
       this.control.button[key].enable();
-    };
+    }
 
     this.control.searchState();
 
@@ -294,7 +291,7 @@ export const GroupArea = function({
       this.control.button.up.enable();
       this.control.button.down.enable();
       this.control.button.sort.enable();
-    };
+    }
 
   };
 
@@ -320,15 +317,15 @@ export const GroupArea = function({
 
     if (groupData.group.name.show && isValidString(groupData.group.name.text)) {
       this.element.header.appendChild(this.element.name.name);
-    };
+    }
 
     if (groupData.group.toolbar.collapse.show) {
       this.element.toolbar.group.appendChild(this.collapse.button.button);
-    };
+    }
 
     if (groupData.group.toolbar.openAll.show && groupData.group.items.length > 0) {
       this.element.toolbar.group.appendChild(this.openAll.button.button);
-    };
+    }
 
     if (groupData.group.toolbar.collapse.show || (groupData.group.toolbar.openAll.show && groupData.group.items.length > 0)) {
 
@@ -336,7 +333,7 @@ export const GroupArea = function({
 
       this.element.header.appendChild(this.element.toolbar.toolbar);
 
-    };
+    }
 
     this.element.group.appendChild(this.element.header);
 
@@ -348,7 +345,7 @@ export const GroupArea = function({
       this.control.enable();
     } else {
       this.control.disable();
-    };
+    }
 
   };
 
@@ -386,7 +383,7 @@ export const GroupArea = function({
 
       this.collapse.button.style.update(['line']);
 
-    };
+    }
 
     if (groupData.group.collapse) {
 
@@ -396,7 +393,7 @@ export const GroupArea = function({
 
       this.element.group.classList.remove('is-group-collapse');
 
-    };
+    }
 
   };
 

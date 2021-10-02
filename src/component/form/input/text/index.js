@@ -16,23 +16,23 @@ export const text = ({
 
   if (id) {
     input.setAttribute('id', id);
-  };
+  }
 
   if (value) {
     input.setAttribute('value', value);
-  };
+  }
 
   if (typeof min === 'number') {
     input.setAttribute('minlength', min);
-  };
+  }
 
   if (typeof max === 'number') {
     input.setAttribute('maxlength', max);
-  };
+  }
 
   if (placeholder) {
     input.setAttribute('placeholder', placeholder);
-  };
+  }
 
   if (classList.length > 0) {
 
@@ -40,7 +40,7 @@ export const text = ({
       input.classList.add(item);
     });
 
-  };
+  }
 
   if (func) {
 
@@ -48,7 +48,7 @@ export const text = ({
       func();
     });
 
-  };
+  }
 
   return input;
 

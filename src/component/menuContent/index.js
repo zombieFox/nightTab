@@ -1,4 +1,3 @@
-import { data } from '../data';
 import { debugSetting } from './debugSetting';
 import { APP_NAME } from '../../constants';
 import { layoutSetting } from './layoutSetting';
@@ -13,11 +12,10 @@ import { coffeeSetting } from './coffeeSetting';
 import { appSetting } from './appSetting';
 
 import { node } from '../../utility/node';
-import { clearChildNode } from '../../utility/clearChildNode';
 
 import './index.css';
 
-export const MenuContent = function({
+export const MenuContent = function ({
   activeNavData = {},
   container = false
 } = {}) {
@@ -37,7 +35,7 @@ export const MenuContent = function({
 
       if (indent) {
         formElement.classList.add('menu-item-form-indent');
-      };
+      }
 
       return formElement;
     }
@@ -89,7 +87,7 @@ export const MenuContent = function({
             debugSetting[this.makeId(item)](formElement);
             break;
 
-        };
+        }
 
         menuContentItem.appendChild(formElement);
 
@@ -123,7 +121,7 @@ export const MenuContent = function({
           themeSetting.disable();
           break;
 
-      };
+      }
 
     } else {
 
@@ -161,13 +159,13 @@ export const MenuContent = function({
 
           break;
 
-      };
+      }
 
       menuContentItem.appendChild(formElement);
 
       container.appendChild(menuContentItem);
 
-    };
+    }
 
   };
 

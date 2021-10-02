@@ -1,13 +1,12 @@
 import { state } from '../state';
 import { version } from '../version';
-import { convertColor } from '../../utility/convertColor';
 import { updateLegacy } from '../updateLegacy';
 
 const update = {};
 
 update.mod = updateLegacy.get();
 
-update.mod['7.0.0'] = function(data) {
+update.mod['7.0.0'] = function (data) {
 
   data.state.header.order.splice(data.state.header.order.indexOf('editAdd'), 1);
   data.state.header.order.splice(data.state.header.order.indexOf('colorAccent'), 1);
@@ -43,7 +42,7 @@ update.mod['7.0.0'] = function(data) {
       data.state.header.date.format = 'month-date';
       break;
 
-  };
+  }
 
   switch (data.state.header.transitional.type) {
 
@@ -51,7 +50,7 @@ update.mod['7.0.0'] = function(data) {
       data.state.header.transitional.type = 'time-and-date';
       break;
 
-  };
+  }
 
   data.state.header.order.push('toolbar');
 
@@ -93,7 +92,7 @@ update.mod['7.0.0'] = function(data) {
 
   if (toolbarSize < state.get.minMax().toolbar.size.min) {
     toolbarSize = state.get.minMax().toolbar.size.min;
-  };
+  }
 
   data.state.toolbar = {
     location: 'header',
@@ -147,7 +146,7 @@ update.mod['7.0.0'] = function(data) {
       data.state.layout.alignment = 'bottom-right';
       break;
 
-  };
+  }
 
   switch (data.state.layout.order) {
 
@@ -159,7 +158,7 @@ update.mod['7.0.0'] = function(data) {
       data.state.layout.order = 'bookmark-header';
       break;
 
-  };
+  }
 
   data.state.theme.opacity = { general: 100 };
 
@@ -177,7 +176,7 @@ update.mod['7.0.0'] = function(data) {
 
     data.state.theme.header.color.by = data.state.header.color.by;
 
-  };
+  }
 
   data.state.theme.header.color.hsl = data.state.header.color.hsl;
 
@@ -213,7 +212,7 @@ update.mod['7.0.0'] = function(data) {
       case 'video':
         data.state.theme.background.type = 'video';
         break;
-    };
+    }
 
   } else {
 
@@ -221,9 +220,9 @@ update.mod['7.0.0'] = function(data) {
       data.state.theme.background.type = 'color';
     } else {
       data.state.theme.background.type = 'theme';
-    };
+    }
 
-  };
+  }
 
   delete data.state.theme.background.color.by;
 
@@ -275,7 +274,7 @@ update.mod['7.0.0'] = function(data) {
 
   if (data.state.theme.color.contrast.end <= data.state.theme.color.contrast.start) {
     data.state.theme.color.contrast.end = data.state.theme.color.contrast.start + 10;
-  };
+  }
 
   if (data.state.theme.color.contrast.start > state.get.minMax().theme.color.contrast.start.max) {
 
@@ -285,7 +284,7 @@ update.mod['7.0.0'] = function(data) {
 
     data.state.theme.color.contrast.start = state.get.minMax().theme.color.contrast.start.min;
 
-  };
+  }
 
   if (data.state.theme.color.contrast.end > state.get.minMax().theme.color.contrast.end.max) {
 
@@ -295,7 +294,7 @@ update.mod['7.0.0'] = function(data) {
 
     data.state.theme.color.contrast.end = state.get.minMax().theme.color.contrast.end.min;
 
-  };
+  }
 
   data.state.theme.shade.opacity = data.state.theme.shade.opacity * 100;
   data.state.theme.shade.blur = 0;
@@ -334,11 +333,11 @@ update.mod['7.0.0'] = function(data) {
         end: Math.ceil((item.color.contrast.dark) * 16)
       };
 
-    };
+    }
 
     if (item.color.contrast.end <= item.color.contrast.start) {
       item.color.contrast.end = item.color.contrast.start + 1;
-    };
+    }
 
     if (item.color.contrast.start > state.get.minMax().theme.color.contrast.start.max) {
 
@@ -348,7 +347,7 @@ update.mod['7.0.0'] = function(data) {
 
       item.color.contrast.start = state.get.minMax().theme.color.contrast.start.min;
 
-    };
+    }
 
     if (item.color.contrast.end > state.get.minMax().theme.color.contrast.end.max) {
 
@@ -358,7 +357,7 @@ update.mod['7.0.0'] = function(data) {
 
       item.color.contrast.end = state.get.minMax().theme.color.contrast.end.min;
 
-    };
+    }
 
     delete item.color.hsl;
     delete item.color.rgb;
@@ -374,7 +373,7 @@ update.mod['7.0.0'] = function(data) {
       item.shade = {
         opacity: 20
       };
-    };
+    }
 
     item.shade.blur = 0;
 
@@ -437,7 +436,7 @@ update.mod['7.0.0'] = function(data) {
       data.state.group.order = 'body-header';
       break;
 
-  };
+  }
 
   data.state.group.name.size = data.state.group.name.size * 100;
   data.state.group.openAll.size = data.state.group.openAll.size * 100;
@@ -486,7 +485,7 @@ update.mod['7.0.0'] = function(data) {
           item.display.visual.size = item.display.visual.image.size * 10;
           break;
 
-      };
+      }
 
       delete item.display.visual.letter.size;
       delete item.display.visual.image.size;
@@ -507,7 +506,7 @@ update.mod['7.0.0'] = function(data) {
           item.display.order = 'name-visual';
           break;
 
-      };
+      }
 
       switch (item.display.alignment) {
         case 'topleft':
@@ -546,7 +545,7 @@ update.mod['7.0.0'] = function(data) {
           item.display.alignment = 'bottom-right';
           break;
 
-      };
+      }
 
       item.shape = {
         wide: item.wide,
@@ -573,7 +572,7 @@ update.mod['7.0.0'] = function(data) {
   return data;
 };
 
-update.mod['7.1.0'] = function(data) {
+update.mod['7.1.0'] = function (data) {
 
   data.state.layout.favicon = '';
 
@@ -615,14 +614,14 @@ update.run = (data) => {
       console.log('\t > running update', key);
       data = update.mod[key](data);
       data.version = key;
-    };
-  };
+    }
+  }
 
   // if no update is needed version bump
   if (version.compare(data.version, version.number) == -1) {
     console.log('\t > no state data to update, version bump to', version.number);
     data.version = version.number;
-  };
+  }
 
   return data;
 

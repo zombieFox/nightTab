@@ -1,14 +1,7 @@
 import { state } from '../../state';
 import { data } from '../../data';
-import { header } from '../../header';
 import { bookmark } from '../../bookmark';
-import { theme } from '../../theme';
-import { version } from '../../version';
-import { menu } from '../../menu';
-import { icon } from '../../icon';
-import { logo } from '../../logo';
 import { layout } from '../../layout';
-import { toolbar } from '../../toolbar';
 import { groupAndBookmark } from '../../groupAndBookmark';
 
 import * as form from '../../form';
@@ -16,26 +9,13 @@ import * as form from '../../form';
 import { Button } from '../../button';
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
-import { Alert } from '../../alert';
-import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
-import { Control_inputButton } from '../../control/inputButton';
-import { Control_groupText } from '../../control/groupText';
 import { Control_radio } from '../../control/radio';
-import { Control_radioGrid } from '../../control/radioGrid';
 import { Control_checkbox } from '../../control/checkbox';
 import { Control_slider } from '../../control/slider';
-import { Control_sliderSlim } from '../../control/sliderSlim';
-import { Control_sliderDouble } from '../../control/sliderDouble';
-import { Control_colorMixer } from '../../control/colorMixer';
-import { Control_color } from '../../control/color';
-import { Control_text } from '../../control/text';
-import { Control_textReset } from '../../control/textReset';
-import { Control_textarea } from '../../control/textarea';
 
 import { node } from '../../../utility/node';
-import { complexNode } from '../../../utility/complexNode';
 import { applyCSSVar } from '../../../utility/applyCSSVar';
 import { applyCSSClass } from '../../../utility/applyCSSClass';
 import { applyCSSState } from '../../../utility/applyCSSState';
@@ -77,7 +57,7 @@ bookmarkSetting.disable = () => {
     bookmarkSetting.control.sort.letter.disable();
     bookmarkSetting.control.sort.icon.disable();
     bookmarkSetting.control.sort.name.disable();
-  };
+  }
 
 };
 
@@ -91,7 +71,7 @@ bookmarkSetting.general = (parent) => {
 
     bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
 
-  };
+  }
 
   bookmarkSetting.control.general.show = new Control_checkbox({
     object: state.get.current(),
@@ -112,13 +92,13 @@ bookmarkSetting.general = (parent) => {
 
           bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
 
-        };
+        }
 
       } else {
 
         bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
 
-      };
+      }
 
       bookmarkSetting.control.general.collapse.update();
 
@@ -187,13 +167,13 @@ bookmarkSetting.general = (parent) => {
 
           bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
 
-        };
+        }
 
       } else {
 
         bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
 
-      };
+      }
 
       data.save();
 
@@ -211,14 +191,14 @@ bookmarkSetting.general = (parent) => {
     max: state.get.minMax().bookmark.size.max,
     action: () => {
       applyCSSVar('bookmark.size');
-      if (state.get.current().bookmark.show && bookmark.tile.current.length > 0 && bookmarkSetting.edge.general.size) { bookmarkSetting.edge.general.size.track(); };
+      if (state.get.current().bookmark.show && bookmark.tile.current.length > 0 && bookmarkSetting.edge.general.size) { bookmarkSetting.edge.general.size.track(); }
       data.save();
     },
     mouseDownAction: () => {
-      if (state.get.current().bookmark.show && bookmark.tile.current.length > 0 && bookmarkSetting.edge.general.size) { bookmarkSetting.edge.general.size.show(); };
+      if (state.get.current().bookmark.show && bookmark.tile.current.length > 0 && bookmarkSetting.edge.general.size) { bookmarkSetting.edge.general.size.show(); }
     },
     mouseUpAction: () => {
-      if (state.get.current().bookmark.show && bookmark.tile.current.length > 0 && bookmarkSetting.edge.general.size) { bookmarkSetting.edge.general.size.hide(); };
+      if (state.get.current().bookmark.show && bookmark.tile.current.length > 0 && bookmarkSetting.edge.general.size) { bookmarkSetting.edge.general.size.hide(); }
     }
   });
 
@@ -278,7 +258,7 @@ bookmarkSetting.style = (parent) => {
           bookmark.direction.mod.horizontal();
           break;
 
-      };
+      }
 
       applyCSSClass('bookmark.style');
 
@@ -290,13 +270,13 @@ bookmarkSetting.style = (parent) => {
 
           bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
 
-        };
+        }
 
       } else {
 
         bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
 
-      };
+      }
 
       data.save();
 
@@ -331,13 +311,13 @@ bookmarkSetting.orientation = (parent) => {
 
           bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
 
-        };
+        }
 
       } else {
 
         bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
 
-      };
+      }
 
       data.save();
 
@@ -374,13 +354,13 @@ bookmarkSetting.sort = (parent) => {
 
           bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
 
-        };
+        }
 
       } else {
 
         bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
 
-      };
+      }
 
       data.save();
 
@@ -402,13 +382,13 @@ bookmarkSetting.sort = (parent) => {
 
           bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
 
-        };
+        }
 
       } else {
 
         bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
 
-      };
+      }
 
       data.save();
 
@@ -430,13 +410,13 @@ bookmarkSetting.sort = (parent) => {
 
           bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
 
-        };
+        }
 
       } else {
 
         bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
 
-      };
+      }
 
       data.save();
 
@@ -464,4 +444,4 @@ bookmarkSetting.sort = (parent) => {
 
 };
 
-export { bookmarkSetting }
+export { bookmarkSetting };

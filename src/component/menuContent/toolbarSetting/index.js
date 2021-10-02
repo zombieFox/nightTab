@@ -1,42 +1,20 @@
 import { state } from '../../state';
 import { data } from '../../data';
 import { header } from '../../header';
-import { bookmark } from '../../bookmark';
-import { theme } from '../../theme';
-import { version } from '../../version';
-import { menu } from '../../menu';
-import { icon } from '../../icon';
-import { logo } from '../../logo';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 
-import * as form from '../../form';
 
-import { Button } from '../../button';
-import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
-import { Alert } from '../../alert';
-import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
-import { Control_inputButton } from '../../control/inputButton';
-import { Control_groupText } from '../../control/groupText';
 import { Control_radio } from '../../control/radio';
 import { Control_radioGrid } from '../../control/radioGrid';
 import { Control_checkbox } from '../../control/checkbox';
 import { Control_slider } from '../../control/slider';
-import { Control_sliderSlim } from '../../control/sliderSlim';
-import { Control_sliderDouble } from '../../control/sliderDouble';
-import { Control_colorMixer } from '../../control/colorMixer';
-import { Control_color } from '../../control/color';
-import { Control_text } from '../../control/text';
-import { Control_textReset } from '../../control/textReset';
-import { Control_textarea } from '../../control/textarea';
 
 import { node } from '../../../utility/node';
-import { complexNode } from '../../../utility/complexNode';
 import { applyCSSVar } from '../../../utility/applyCSSVar';
-import { applyCSSClass } from '../../../utility/applyCSSClass';
 import { applyCSSState } from '../../../utility/applyCSSState';
 
 const toolbarSetting = {};
@@ -65,7 +43,7 @@ toolbarSetting.disable = () => {
       toolbarSetting.control.location.newLine.enable();
       break;
 
-  };
+  }
 
 };
 
@@ -85,7 +63,7 @@ toolbarSetting.size = (parent) => {
       toolbarSetting.edge.size = new Edge({ primary: toolbar.current.element.toolbar });
       break;
 
-  };
+  }
 
   toolbarSetting.control.size = new Control_slider({
     object: state.get.current(),
@@ -148,7 +126,7 @@ toolbarSetting.location = (parent) => {
           toolbarSetting.edge.size = new Edge({ primary: toolbar.current.element.toolbar });
           break;
 
-      };
+      }
 
       data.save();
     }
@@ -164,7 +142,7 @@ toolbarSetting.location = (parent) => {
     id: 'header-newLine',
     labelText: 'New line',
     description: 'Force on to a new line and seperate from other Header items.',
-    action: function() {
+    action: function () {
       applyCSSState('toolbar.newLine');
       data.save();
     }
@@ -271,4 +249,4 @@ toolbarSetting.controls = (parent) => {
 
 };
 
-export { toolbarSetting }
+export { toolbarSetting };

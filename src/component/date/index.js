@@ -12,7 +12,7 @@ import moment from 'moment';
 
 import './index.css';
 
-export const Date = function({} = {}) {
+export const Date = function ({ } = {}) {
 
   this.now;
 
@@ -48,7 +48,7 @@ export const Date = function({} = {}) {
 
         if (state.get.current().header.date.day.length == 'short') {
           value = value.substring(0, 3);
-        };
+        }
 
         break;
 
@@ -59,14 +59,14 @@ export const Date = function({} = {}) {
         if (state.get.current().header.date.day.weekStart == 'monday') {
           if (value == 0) {
             value = 7;
-          };
+          }
         } else if (state.get.current().header.date.day.weekStart == 'sunday') {
           value = value + 1;
-        };
+        }
 
         break;
 
-    };
+    }
 
     return value;
 
@@ -84,7 +84,7 @@ export const Date = function({} = {}) {
           value = ordinalWord(wordNumber(this.now.date()));
         } else {
           value = wordNumber(this.now.date());
-        };
+        }
 
         break;
 
@@ -94,11 +94,11 @@ export const Date = function({} = {}) {
           value = this.now.format('Do');
         } else {
           value = this.now.format('D');
-        };
+        }
 
         break;
 
-    };
+    }
 
     return value;
 
@@ -115,7 +115,7 @@ export const Date = function({} = {}) {
         value = this.now.format('MMMM');
         if (state.get.current().header.date.month.length == 'short') {
           value = value.substring(0, 3);
-        };
+        }
 
         break;
 
@@ -125,11 +125,11 @@ export const Date = function({} = {}) {
           value = this.now.format('Mo');
         } else {
           value = this.now.format('M');
-        };
+        }
 
         break;
 
-    };
+    }
 
     return value;
 
@@ -153,7 +153,7 @@ export const Date = function({} = {}) {
 
         break;
 
-    };
+    }
 
     return value;
 
@@ -165,7 +165,7 @@ export const Date = function({} = {}) {
 
     if (state.get.current().header.date.day.show) {
       this.element.date.appendChild(this.element.day);
-    };
+    }
 
     if (state.get.current().header.date.date.show && state.get.current().header.date.month.show) {
 
@@ -175,11 +175,11 @@ export const Date = function({} = {}) {
 
           if (state.get.current().header.date.date.show) {
             this.element.date.appendChild(this.element.dateOfMonth);
-          };
+          }
 
           if (state.get.current().header.date.month.show) {
             this.element.date.appendChild(this.element.month);
-          };
+          }
 
           break;
 
@@ -187,31 +187,31 @@ export const Date = function({} = {}) {
 
           if (state.get.current().header.date.month.show) {
             this.element.date.appendChild(this.element.month);
-          };
+          }
 
           if (state.get.current().header.date.date.show) {
             this.element.date.appendChild(this.element.dateOfMonth);
-          };
+          }
 
           break;
 
-      };
+      }
 
     } else {
 
       if (state.get.current().header.date.date.show) {
         this.element.date.appendChild(this.element.dateOfMonth);
-      };
+      }
 
       if (state.get.current().header.date.month.show) {
         this.element.date.appendChild(this.element.month);
-      };
+      }
 
-    };
+    }
 
     if (state.get.current().header.date.year.show) {
       this.element.date.appendChild(this.element.year);
-    };
+    }
 
     if (state.get.current().header.date.separator.show) {
 
@@ -221,7 +221,7 @@ export const Date = function({} = {}) {
         separatorCharacter = trimString(state.get.current().header.date.separator.text);
       } else {
         separatorCharacter = '/';
-      };
+      }
 
       let parts = this.element.date.querySelectorAll('span');
 
@@ -241,12 +241,12 @@ export const Date = function({} = {}) {
 
             this.element.date.insertBefore(separator, item);
 
-          };
+          }
         });
 
-      };
+      }
 
-    };
+    }
 
   };
 
@@ -258,19 +258,19 @@ export const Date = function({} = {}) {
 
     if (state.get.current().header.date.day.show) {
       this.element.day.innerHTML = this.string.day();
-    };
+    }
 
     if (state.get.current().header.date.date.show) {
       this.element.dateOfMonth.innerHTML = this.string.dateOfMonth();
-    };
+    }
 
     if (state.get.current().header.date.month.show) {
       this.element.month.innerHTML = this.string.month();
-    };
+    }
 
     if (state.get.current().header.date.year.show) {
       this.element.year.innerHTML = this.string.year();
-    };
+    }
 
   };
 

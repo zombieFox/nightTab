@@ -22,7 +22,7 @@ toolbar.bar.render = () => {
 
       break;
 
-  };
+  }
 
 };
 
@@ -31,4 +31,4 @@ toolbar.init = () => {
   toolbar.current.update.edit();
 };
 
-export { toolbar }
+export { toolbar };

@@ -4,7 +4,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Edge = function({
+export const Edge = function ({
   primary = false,
   secondary = false,
   padding = 0
@@ -52,13 +52,13 @@ export const Edge = function({
 
         this.element.edge.primary.classList.remove('is-edge-opening');
 
-      };
+      }
 
       if (event.propertyName === 'opacity' && getComputedStyle(this.element.edge.primary).opacity == 0) {
 
         if (this.element.edge.primary.parentElement.contains(this.element.edge.primary)) {
           this.element.edge.primary.parentElement.removeChild(this.element.edge.primary);
-        };
+        }
 
         this.element.edge.primary.removeAttribute('style');
 
@@ -66,7 +66,7 @@ export const Edge = function({
 
         this.bind.remove();
 
-      };
+      }
 
     });
 
@@ -86,25 +86,25 @@ export const Edge = function({
 
             item.classList.remove('is-edge-opening');
 
-          };
+          }
 
           if (event.propertyName === 'opacity' && getComputedStyle(item).opacity == 0) {
 
             if (item.parentElement.contains(item)) {
               item.parentElement.removeChild(item);
-            };
+            }
 
             item.removeAttribute('style');
 
             item.classList.remove('is-edge-opening');
 
-          };
+          }
 
         });
 
       });
 
-    };
+    }
 
   };
 
@@ -124,7 +124,7 @@ export const Edge = function({
 
       });
 
-    };
+    }
 
   };
 
@@ -168,11 +168,11 @@ export const Edge = function({
 
           this.appear(this.element.edge.secondary[i]);
 
-        };
+        }
 
       });
 
-    };
+    }
 
     this.track();
 
@@ -230,7 +230,7 @@ export const Edge = function({
         this.style(item, this.element.edge.secondary[i]);
       });
 
-    };
+    }
 
   };
 
@@ -239,7 +239,7 @@ export const Edge = function({
 
       if (newPrimary) {
         primary = newPrimary;
-      };
+      }
 
       this.assemble();
 
@@ -248,7 +248,7 @@ export const Edge = function({
 
       if (newSecondary) {
         secondary = newSecondary;
-      };
+      }
 
       this.assemble();
 

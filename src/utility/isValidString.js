@@ -5,8 +5,8 @@ export const isValidString = (value) => {
     value = value.trim().replace(/\s/g, '');
     if (value != '') {
       result = true;
-    };
-  };
+    }
+  }
 
   return result;
 };

@@ -1,5 +1,4 @@
 import { state } from '../state';
-import { data } from '../data';
 import { pageLock } from '../pageLock';
 
 import { Button } from '../button';
@@ -13,7 +12,7 @@ import { isValidString } from '../../utility/isValidString';
 
 import './index.css';
 
-export const Modal = function({
+export const Modal = function ({
   heading = false,
   content = false,
   openAction = false,
@@ -56,7 +55,7 @@ export const Modal = function({
 
         body.removeChild(this.element.modal);
 
-      };
+      }
 
     });
 
@@ -80,7 +79,7 @@ export const Modal = function({
 
     if (openAction) {
       openAction();
-    };
+    }
 
     pageLock.render();
 
@@ -100,7 +99,7 @@ export const Modal = function({
 
     if (closeAction) {
       closeAction();
-    };
+    }
 
     clearTimeout(this.delayedForceRemove);
 
@@ -109,8 +108,8 @@ export const Modal = function({
       const body = document.querySelector('body');
 
       if (body.contains(this.element.modal)) {
-        body.removeChild(this.element.modal)
-      };
+        body.removeChild(this.element.modal);
+      }
 
     }, 6000);
 
@@ -169,7 +168,7 @@ export const Modal = function({
 
     if (!path.includes(this.element.modal) && !path.includes(suggest)) {
       this.close();
-    };
+    }
 
   };
 
@@ -203,9 +202,9 @@ export const Modal = function({
             event.preventDefault();
           }
 
-        };
+        }
 
-      };
+      }
 
 
     }
@@ -232,9 +231,9 @@ export const Modal = function({
           this.element.modal.style.setProperty('--modal-width', 70);
           break;
 
-      };
+      }
 
-    };
+    }
   };
 
   this.successButton = new Button({
@@ -246,7 +245,7 @@ export const Modal = function({
 
       if (successAction) {
         successAction();
-      };
+      }
 
       this.close();
 
@@ -262,7 +261,7 @@ export const Modal = function({
 
       if (cancelAction) {
         cancelAction();
-      };
+      }
 
       this.close();
 
@@ -277,7 +276,7 @@ export const Modal = function({
 
       if (headingString.length > maxHeadingLength) {
         headingString = trimString(headingString.substring(0, maxHeadingLength)) + '...';
-      };
+      }
 
       this.element.heading.text.innerHTML = headingString;
 
@@ -285,7 +284,7 @@ export const Modal = function({
 
       this.element.content.content.appendChild(this.element.heading.heading);
 
-    };
+    }
 
     if (content) {
       if (typeof content == 'string') {
@@ -298,8 +297,8 @@ export const Modal = function({
 
         this.element.content.content.appendChild(content);
 
-      };
-    };
+      }
+    }
 
     this.element.content.wrapper.appendChild(this.element.content.content);
 
@@ -313,7 +312,7 @@ export const Modal = function({
 
     if (maxHeight) {
       this.element.modal.classList.add('modal-max-height');
-    };
+    }
 
   };
 

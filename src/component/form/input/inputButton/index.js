@@ -2,7 +2,7 @@ import { node } from '../../../../utility/node';
 
 import './index.css';
 
-export const inputButton = function({
+export const inputButton = function ({
   children = false,
   inputHide = false,
   srOnly = false,
@@ -30,17 +30,17 @@ export const inputButton = function({
           inputButtonElement.classList.add('input-color-dot');
           break;
 
-      };
+      }
     });
-  };
+  }
 
   if (inputHide) {
     inputButtonElement.classList.add('form-input-hide');
-  };
+  }
 
   if (srOnly) {
     inputButtonElement.classList.add('form-input-button-sr-only');
-  };
+  }
 
   return inputButtonElement;
 

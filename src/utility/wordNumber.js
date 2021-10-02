@@ -32,18 +32,18 @@ export const wordNumber = (number) => {
     // We’re done
     if (number === 0) {
       return !words ? 'Zero' : words.join(' ').replace(/,$/, '');
-    };
+    }
 
     // First run
     if (!words) {
       words = [];
-    };
+    }
 
     // If negative, prepend “minus”
     if (number < 0) {
       words.push('minus');
       number = Math.abs(number);
-    };
+    }
 
     if (number < 20) {
       remainder = 0;
@@ -55,7 +55,7 @@ export const wordNumber = (number) => {
       if (remainder) {
         word += '-' + lessThanTwenty[remainder];
         remainder = 0;
-      };
+      }
     } else if (number < oneThousand) {
       remainder = number % oneHundred;
       word = generateWords(Math.floor(number / oneHundred)) + ' Hundred';
@@ -74,7 +74,7 @@ export const wordNumber = (number) => {
     } else if (number <= max) {
       remainder = number % oneQuadrillion;
       word = generateWords(Math.floor(number / oneQuadrillion)) + ' Quadrillion,';
-    };
+    }
 
     words.push(word);
 

@@ -1,12 +1,10 @@
 import { state } from '../state';
 import { data } from '../data';
 import { theme } from '../theme';
-import { menu } from '../menu';
 import { toolbar } from '../toolbar';
 import { layout } from '../layout';
 import { header } from '../header';
 import { bookmark } from '../bookmark';
-import { group } from '../group';
 import { groupAndBookmark } from '../groupAndBookmark';
 import { themeSetting } from '../menuContent/themeSetting';
 
@@ -15,14 +13,13 @@ import { Button } from '../button';
 import { node } from '../../utility/node';
 import { convertColor } from '../../utility/convertColor';
 import { isValidString } from '../../utility/isValidString';
-import { complexNode } from '../../utility/complexNode';
 import { applyCSSVar } from '../../utility/applyCSSVar';
 import { applyCSSClass } from '../../utility/applyCSSClass';
 import { applyCSSState } from '../../utility/applyCSSState';
 
 import './index.css';
 
-export const PresetThemeTile = function({
+export const PresetThemeTile = function ({
   presetThemeData = false
 } = {}) {
 
@@ -347,13 +344,13 @@ export const PresetThemeTile = function({
           darken();
         } else if (window.matchMedia('(prefers-color-scheme:light)').matches) {
           lighten();
-        };
+        }
 
-      };
+      }
 
-      if (hsl.l < 0) { hsl.l = 0; };
+      if (hsl.l < 0) { hsl.l = 0; }
 
-      if (hsl.l > 100) { hsl.l = 100; };
+      if (hsl.l > 100) { hsl.l = 100; }
 
       let rgb = convertColor.hsl.rgb(hsl);
 
@@ -368,7 +365,7 @@ export const PresetThemeTile = function({
 
       this.element.preview.appendChild(node('span|class:theme-preset-background-0' + i));
 
-    };
+    }
 
     this.element.tile.style.setProperty('--theme-preset-text', '0, 0%, calc(((((var(--theme-preset-background-01-rgb-r) * var(--theme-t-r)) + (var(--theme-preset-background-01-rgb-g) * var(--theme-t-g)) + (var(--theme-preset-background-01-rgb-b) * var(--theme-t-b))) / 255) - var(--theme-t)) * -10000000%)');
 
@@ -380,7 +377,7 @@ export const PresetThemeTile = function({
 
     this.element.preview.appendChild(node('span|class:theme-preset-accent'));
 
-    return node('div|class:theme-preset-tile')
+    return node('div|class:theme-preset-tile');
 
   };
 
@@ -396,7 +393,7 @@ export const PresetThemeTile = function({
 
       this.element.preset.button.appendChild(this.element.name);
 
-    };
+    }
 
     this.element.front.appendChild(this.element.preset.button);
 

@@ -4,6 +4,6 @@ export const trimString = (value) => {
     return value.trim().replace(/\s\s+/g, ' ');
   } else {
     return value;
-  };
+  }
 
 };

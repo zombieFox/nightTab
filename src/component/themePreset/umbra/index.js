@@ -24,4 +24,4 @@ export const umbra = {
   bookmark: { color: { by: 'theme', opacity: 10, hsl: { h: 0, s: 0, l: 0 }, rgb: { r: 0, g: 0, b: 0 } }, item: { border: 0, opacity: 70 } },
   group: { toolbar: { opacity: 0 } },
   toolbar: { opacity: 0 }
-}
+};

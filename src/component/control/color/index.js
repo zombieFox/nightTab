@@ -1,20 +1,14 @@
-import { state } from '../../state';
-import { data } from '../../data';
-import { bookmark } from '../../bookmark';
 
 import * as form from '../../form';
 
 import { Button } from '../../button';
-import { Collapse } from '../../collapse';
 
-import { node } from '../../../utility/node';
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
 import { convertColor } from '../../../utility/convertColor';
-import { isValidString } from '../../../utility/isValidString';
 import { randomNumber } from '../../../utility/randomNumber';
 
-export const Control_color = function({
+export const Control_color = function ({
   object = {},
   path = false,
   id = 'name',
@@ -55,9 +49,9 @@ export const Control_color = function({
           }))
         });
 
-      };
+      }
 
-      if (action) { action(); };
+      if (action) { action(); }
 
       this.text.value = convertColor.rgb.hex(get({ object: object, path: path + '.rgb' }));
 
@@ -78,9 +72,9 @@ export const Control_color = function({
 
         set({ object: object, path: path + '.rgb', value: convertColor.hex.rgb(this.text.value) });
 
-      };
+      }
 
-      if (action) { action(); };
+      if (action) { action(); }
 
       this.update({ delay: true });
 
@@ -99,7 +93,7 @@ export const Control_color = function({
 
       this.update({ all: true });
 
-      if (action) { action(); };
+      if (action) { action(); }
 
     }
   });
@@ -125,7 +119,7 @@ export const Control_color = function({
 
       this.update({ all: true });
 
-      if (action) { action(); };
+      if (action) { action(); }
 
     }
   });
@@ -149,7 +143,7 @@ export const Control_color = function({
           object: object,
           path: path + '.rgb'
         }));
-      };
+      }
 
     };
 
@@ -158,7 +152,7 @@ export const Control_color = function({
       this.delayedUpdate = setTimeout(updateControl, 2000);
     } else {
       updateControl();
-    };
+    }
 
   };
 
@@ -174,17 +168,17 @@ export const Control_color = function({
 
     if (randomColor) {
       formGroup.appendChild(this.random.button);
-    };
+    }
 
     if (defaultValue || (typeof defaultValue === 'number' && defaultValue === 0)) {
       formGroup.appendChild(this.reset.button);
-    };
+    }
 
     if (extraButtons.length > 0) {
       extraButtons.forEach((item, i) => {
         formGroup.appendChild(item.button);
       });
-    };
+    }
 
     const wrap = form.wrap({
       children: [
@@ -208,7 +202,7 @@ export const Control_color = function({
       extraButtons.forEach((item, i) => {
         item.disable();
       });
-    };
+    }
   };
 
   this.enable = () => {
@@ -222,7 +216,7 @@ export const Control_color = function({
       extraButtons.forEach((item, i) => {
         item.enable();
       });
-    };
+    }
   };
 
 };

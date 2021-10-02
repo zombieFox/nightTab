@@ -18,11 +18,11 @@ export const label = ({
     label = node('label|for:' + forInput);
   } else {
     label = node('label');
-  };
+  }
 
   if (noPadding) {
     label.classList.add('label-no-padding');
-  };
+  }
 
   const labelBlock = node('span|class:label-block');
 
@@ -31,12 +31,12 @@ export const label = ({
       labelBlock.classList.add('sr-only');
     } else {
       label.classList.add('sr-only');
-    };
-  };
+    }
+  }
 
   if (text) {
     labelBlock.appendChild(node('span:' + text + '|class:label-block-item'));
-  };
+  }
 
   if (description) {
     if (Array.isArray(description)) {
@@ -49,16 +49,16 @@ export const label = ({
 
       labelBlock.appendChild(node('span:' + description + '|class:label-block-item small muted'));
 
-    };
-  };
+    }
+  }
 
   if (text || description) {
     label.appendChild(labelBlock);
-  };
+  }
 
   if (icon) {
     label.prepend(node('span|class:label-icon'));
-  };
+  }
 
   if (classList.length > 0) {
 
@@ -66,7 +66,7 @@ export const label = ({
       label.classList.add(item);
     });
 
-  };
+  }
 
   return label;
 

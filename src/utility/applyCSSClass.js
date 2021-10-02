@@ -31,6 +31,6 @@ export const applyCSSClass = (path) => {
 
     apply(path);
 
-  };
+  }
 
 };

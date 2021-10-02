@@ -1,4 +1,3 @@
-import { state } from '../state';
 import { fontawesome } from '../fontawesome';
 
 import { Button } from '../button';
@@ -10,7 +9,7 @@ import { clearChildNode } from '../../utility/clearChildNode';
 
 import './index.css';
 
-export const Suggest = function({
+export const Suggest = function ({
   input = false,
   widthElement = false,
   type = false,
@@ -66,13 +65,13 @@ export const Suggest = function({
 
         this.state.open = true;
 
-      };
+      }
 
     } else {
 
       this.close();
 
-    };
+    }
 
   };
 
@@ -138,7 +137,7 @@ export const Suggest = function({
 
       box.left = widthElementRect.left;
 
-    };
+    }
 
     this.element.suggest.style.setProperty('--suggest-top', box.top);
 
@@ -164,7 +163,7 @@ export const Suggest = function({
 
         this.state.open = false;
 
-      };
+      }
 
     });
 
@@ -184,11 +183,11 @@ export const Suggest = function({
 
           if (action) {
             action(suggestData);
-          };
+          }
 
           if (postFocus) {
             postFocus.focus();
-          };
+          }
 
         };
 
@@ -211,7 +210,7 @@ export const Suggest = function({
             icon.classList.add('fas');
           } else if (item.styles.includes('brands')) {
             icon.classList.add('fab');
-          };
+          }
 
           let text = node('span:' + item.label + '|class:suggest-icon-text');
 
@@ -243,18 +242,18 @@ export const Suggest = function({
 
             if (item.name.toLowerCase().includes(string) || item.label.toLowerCase().includes(string)) {
               match = true;
-            };
+            }
 
             item.search.forEach((item, i) => {
               if (item.toLowerCase().includes(string)) {
                 match = true;
-              };
+              }
             });
 
             item.styles.forEach((item, i) => {
               if (item.toLowerCase().includes(string)) {
                 match = true;
-              };
+              }
             });
 
             return match;
@@ -262,7 +261,7 @@ export const Suggest = function({
 
         } else {
           return fontawesome;
-        };
+        }
       }
     };
 
@@ -285,9 +284,9 @@ export const Suggest = function({
 
         if (allSuggestItems[i] == document.activeElement) {
           focusIndex = i;
-        };
+        }
 
-      };
+      }
 
     };
 
@@ -303,9 +302,9 @@ export const Suggest = function({
             elementToFocus = allSuggestItems[focusIndex - columnCount];
           } else {
             elementToFocus = input;
-          };
-        };
-      };
+          }
+        }
+      }
 
       // down
       if (event.keyCode == 40) {
@@ -317,9 +316,9 @@ export const Suggest = function({
             elementToFocus = allSuggestItems[focusIndex + columnCount];
           } else {
             elementToFocus = input;
-          };
-        };
-      };
+          }
+        }
+      }
 
       // right
       if (event.keyCode == 39 && document.activeElement != input) {
@@ -331,9 +330,9 @@ export const Suggest = function({
             elementToFocus = allSuggestItems[focusIndex + 1];
           } else {
             elementToFocus = input;
-          };
-        };
-      };
+          }
+        }
+      }
 
       // left
       if (event.keyCode == 37 && document.activeElement != input) {
@@ -345,29 +344,29 @@ export const Suggest = function({
             elementToFocus = allSuggestItems[focusIndex - 1];
           } else {
             elementToFocus = input;
-          };
-        };
-      };
+          }
+        }
+      }
 
       // tab
       if (!event.shiftKey && event.keyCode == 9 && document.activeElement == input) {
         event.preventDefault();
         elementToFocus = allSuggestItems[0];
-      };
+      }
       if (!event.shiftKey && event.keyCode == 9 && document.activeElement == allSuggestItems[allSuggestItems.length - 1]) {
         event.preventDefault();
         elementToFocus = postFocus;
         this.close();
-      };
+      }
 
       // shift tab
       if (event.shiftKey && event.keyCode == 9 && document.activeElement == allSuggestItems[0]) {
         event.preventDefault();
         elementToFocus = input;
-      };
+      }
       if (event.shiftKey && event.keyCode == 9 && document.activeElement == input) {
         this.close();
-      };
+      }
 
     };
 
@@ -377,7 +376,7 @@ export const Suggest = function({
 
     if (elementToFocus) {
       elementToFocus.focus();
-    };
+    }
   };
 
   this.clickOut = (event) => {
@@ -386,7 +385,7 @@ export const Suggest = function({
 
     if (!path.includes(this.element.suggest) && !path.includes(this.element.input)) {
       this.close();
-    };
+    }
 
   };
 
@@ -398,7 +397,7 @@ export const Suggest = function({
 
       this.close();
 
-    };
+    }
 
   };
 

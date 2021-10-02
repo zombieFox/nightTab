@@ -3,7 +3,6 @@ import { data } from '../data';
 import { layout } from '../layout';
 import { group } from '../group';
 import { header } from '../header';
-import { bookmarkDefault } from '../bookmarkDefault';
 import { bookmarkPreset } from '../bookmarkPreset';
 import { groupAndBookmark } from '../groupAndBookmark';
 
@@ -15,12 +14,10 @@ import { StagedGroup } from '../stagedGroup';
 import { Modal } from '../modal';
 
 import { node } from '../../utility/node';
-import { clearChildNode } from '../../utility/clearChildNode';
 import { applyCSSVar } from '../../utility/applyCSSVar';
 import { applyCSSClass } from '../../utility/applyCSSClass';
 import { applyCSSState } from '../../utility/applyCSSState';
 import { set } from '../../utility/set';
-import { get } from '../../utility/get';
 import { sortArrayOfObject } from '../../utility/sortArrayOfObject';
 
 import Sortable from 'sortablejs';
@@ -87,7 +84,7 @@ bookmark.item = {
             if (bookmarkData.propagate.display) {
               item.display.visual.show = bookmarkData.link.display.visual.show;
               item.display.name.show = bookmarkData.link.display.name.show;
-            };
+            }
 
             if (bookmarkData.propagate.layout) {
               item.display.visual.size = bookmarkData.link.display.visual.size;
@@ -98,20 +95,20 @@ bookmark.item = {
               item.display.alignment = bookmarkData.link.display.alignment;
               item.display.direction = bookmarkData.link.display.direction;
               item.display.order = bookmarkData.link.display.order;
-            };
+            }
 
             if (bookmarkData.propagate.theme) {
               item.accent = bookmarkData.link.accent;
               item.color = bookmarkData.link.color;
               item.border = bookmarkData.link.border;
               item.display.visual.shadow = bookmarkData.link.display.visual.shadow;
-            };
+            }
 
           });
 
         });
 
-      };
+      }
 
     },
     applyVar: (path, value) => {
@@ -205,15 +202,15 @@ bookmark.item = {
 
                 addBookmarkToGroup(item, groupIndex, bookmarkIndex);
 
-              };
+              }
 
             });
 
-          };
+          }
 
         });
 
-      };
+      }
 
 
     } else {
@@ -238,11 +235,11 @@ bookmark.item = {
 
           addEmptyGroup(groupIndex);
 
-        };
+        }
 
       });
 
-    };
+    }
 
   },
   clear: () => {
@@ -273,7 +270,7 @@ bookmark.edit = {
       bookmark.edit.close();
     } else {
       bookmark.edit.open();
-    };
+    }
 
   },
   render: () => {
@@ -288,11 +285,11 @@ bookmark.edit = {
           item.control.enable();
         } else {
           item.control.disable();
-        };
+        }
 
       });
 
-    };
+    }
 
   }
 };
@@ -343,11 +340,11 @@ bookmark.add = {
       newBookmarkData.position.destination.group = groupIndex;
 
       newBookmarkData.position.destination.item = bookmark.all[groupIndex].items.length;
-    };
+    }
 
     if (!bookmark.all.length > 0) {
       newBookmarkData.group.destination = 'new';
-    };
+    }
 
     const bookmarkForm = new BookmarkForm({ bookmarkData: newBookmarkData });
 
@@ -390,7 +387,7 @@ bookmark.add = {
 
             break;
 
-        };
+        }
 
         newBookmarkData.link.timestamp = new Date().getTime();
 
@@ -473,7 +470,7 @@ bookmark.count = () => {
 
   let count = 0;
 
-  bookmark.all.forEach((item, i) => { count = count + item.items.length });
+  bookmark.all.forEach((item, i) => { count = count + item.items.length; });
 
   return count;
 
@@ -531,7 +528,7 @@ bookmark.reset = () => {
 
       newBookmarkData.position.destination.item = i;
 
-      bookmark.item.mod.edit(newBookmarkData)
+      bookmark.item.mod.edit(newBookmarkData);
 
     });
 

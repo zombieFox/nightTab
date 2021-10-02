@@ -2,7 +2,7 @@ import { node } from '../../../../utility/node';
 
 import './index.css';
 
-export const color = function({
+export const color = function ({
   id = false,
   value = '#000000',
   classList = [],
@@ -13,7 +13,7 @@ export const color = function({
 
   if (id) {
     input.setAttribute('id', id);
-  };
+  }
 
   if (classList.length > 0) {
 
@@ -21,7 +21,7 @@ export const color = function({
       input.classList.add(item);
     });
 
-  };
+  }
 
   if (func) {
 
@@ -29,7 +29,7 @@ export const color = function({
       func();
     });
 
-  };
+  }
 
   return input;
 

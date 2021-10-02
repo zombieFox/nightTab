@@ -12,7 +12,7 @@ export const file = ({
 
   if (id) {
     input.setAttribute('id', id);
-  };
+  }
 
   if (classList.length > 0) {
 
@@ -20,7 +20,7 @@ export const file = ({
       input.classList.add(item);
     });
 
-  };
+  }
 
   if (func) {
 
@@ -28,7 +28,7 @@ export const file = ({
       func();
     });
 
-  };
+  }
 
   return input;
 

@@ -7,7 +7,7 @@ export const isElementVisible = (element) => {
   const vHeight = window.innerHeight || doc.documentElement.clientHeight;
 
   const efp = (x, y) => {
-    return document.elementFromPoint(x, y)
+    return document.elementFromPoint(x, y);
   };
 
   // Return false if element is not in the viewport
@@ -18,7 +18,7 @@ export const isElementVisible = (element) => {
     rect.top > vHeight
   ) {
     return false;
-  };
+  }
 
   // Return true if any of the element four corners are visible
   return (

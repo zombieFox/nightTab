@@ -11,17 +11,17 @@ export const makePath = (string) => {
       for (var i = 0; i < array.length; i++) {
         if (array[i] == '') {
           array.splice(i, 1);
-        };
+        }
         if (!isNaN(parseInt(array[i], 10))) {
           array[i] = parseInt(array[i], 10);
-        };
-      };
+        }
+      }
 
     } else {
 
       array = string.split('.');
 
-    };
+    }
 
     return array;
 
@@ -29,6 +29,6 @@ export const makePath = (string) => {
 
     return false;
 
-  };
+  }
 
 };
