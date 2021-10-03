@@ -5,7 +5,7 @@ module.exports = {
     'es2021': true
   },
   'extends': 'eslint:recommended',
-  'ignorePatterns': ['webpack.*'],
+  'ignorePatterns': ['webpack.*', 'dist/'],
   'parserOptions': {
     'ecmaVersion': 12,
     'sourceType': 'module'
