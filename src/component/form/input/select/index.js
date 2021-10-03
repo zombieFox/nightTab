@@ -20,7 +20,7 @@ export const select = function ({
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       select.classList.add(item);
     });
 
@@ -28,7 +28,7 @@ export const select = function ({
 
   if (func) {
 
-    select.addEventListener('change', (event) => {
+    select.addEventListener('change', () => {
       func();
     });
 
@@ -36,7 +36,7 @@ export const select = function ({
 
   if (option.length > 0) {
 
-    option.forEach((item, i) => {
+    option.forEach((item) => {
 
       select.appendChild(
         complexNode({

@@ -238,9 +238,7 @@ export const ToolbarControl = function () {
         case 'gradient':
 
           switch (state.get.current().toolbar.location) {
-
-            case 'corner':
-
+            case 'corner': {
               let angle = state.get.current().theme.background.gradient.angle;
 
               switch (state.get.current().toolbar.position) {
@@ -274,6 +272,7 @@ export const ToolbarControl = function () {
               }
 
               break;
+            }
 
             case 'header':
 

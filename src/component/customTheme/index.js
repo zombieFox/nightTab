@@ -122,7 +122,7 @@ customTheme.edit = {
     applyCSSState('theme.custom.edit');
 
     if (customTheme.tile.current.length > 0) {
-      customTheme.tile.current.forEach((item, i) => {
+      customTheme.tile.current.forEach((item) => {
 
         if (state.get.current().theme.custom.edit) {
           item.control.enable();

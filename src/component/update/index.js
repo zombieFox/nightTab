@@ -303,7 +303,7 @@ update.mod['7.0.0'] = function (data) {
   delete data.state.theme.color.rgb;
   delete data.state.theme.color.generated;
 
-  data.state.theme.custom.all.forEach((item, i) => {
+  data.state.theme.custom.all.forEach((item) => {
 
     item.color.range = {
       primary: {
@@ -460,9 +460,9 @@ update.mod['7.0.0'] = function (data) {
 
   delete data.bookmarks;
 
-  data.bookmark.forEach((item, i) => {
+  data.bookmark.forEach((item) => {
 
-    item.items.forEach((item, i) => {
+    item.items.forEach((item) => {
 
       item.timestamp = item.timeStamp;
 
@@ -584,7 +584,7 @@ update.mod['7.1.0'] = function (data) {
 
   delete data.state.theme.group.openAll;
 
-  data.state.theme.custom.all.forEach((item, i) => {
+  data.state.theme.custom.all.forEach((item) => {
 
     item.group.toolbar = { opacity: item.group.openAll.opacity };
 
@@ -592,7 +592,7 @@ update.mod['7.1.0'] = function (data) {
 
   });
 
-  data.bookmark.forEach((item, i) => {
+  data.bookmark.forEach((item) => {
 
     item.toolbar = {
       openAll: { show: item.openAll.show },

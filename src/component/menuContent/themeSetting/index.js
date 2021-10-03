@@ -280,7 +280,7 @@ themeSetting.preset = (parent) => {
 
     const themePresetElement = node('div|class:theme-preset');
 
-    themePreset.get().forEach((item, i) => {
+    themePreset.get().forEach((item) => {
 
       const presetTheme = new PresetThemeTile({
         presetThemeData: item
@@ -544,7 +544,7 @@ themeSetting.accent = (parent) => {
 
     const themeAccentPreset = node('div|class:theme-accent-preset');
 
-    allPreset.forEach((item, i) => {
+    allPreset.forEach((item) => {
 
       const presetButton = new AccentPresetButton({
         presetData: item
@@ -1214,7 +1214,7 @@ themeSetting.opacity = (parent) => {
 
         if (group.area.current.length > 0) {
 
-          group.area.current.forEach((item, i) => {
+          group.area.current.forEach((item) => {
             item.update.style();
           });
 

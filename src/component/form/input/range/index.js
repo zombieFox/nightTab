@@ -24,7 +24,7 @@ export const range = ({
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       input.classList.add(item);
     });
 
@@ -32,7 +32,7 @@ export const range = ({
 
   if (func) {
 
-    input.addEventListener('input', (event) => {
+    input.addEventListener('input', () => {
       func();
     });
 
@@ -40,7 +40,7 @@ export const range = ({
 
   if (focusFunc) {
 
-    input.addEventListener('focus', (event) => {
+    input.addEventListener('focus', () => {
       focusFunc();
     });
 
@@ -48,7 +48,7 @@ export const range = ({
 
   if (blurFunc) {
 
-    input.addEventListener('blur', (event) => {
+    input.addEventListener('blur', () => {
       blurFunc();
     });
 
@@ -56,7 +56,7 @@ export const range = ({
 
   if (mouseDownFunc) {
 
-    input.addEventListener('mousedown', (event) => {
+    input.addEventListener('mousedown', () => {
       mouseDownFunc();
     });
 
@@ -64,7 +64,7 @@ export const range = ({
 
   if (mouseUpFunc) {
 
-    input.addEventListener('mouseup', (event) => {
+    input.addEventListener('mouseup', () => {
       mouseUpFunc();
     });
 

@@ -12,7 +12,7 @@ import moment from 'moment';
 
 import './index.css';
 
-export const Date = function ({ } = {}) {
+export const Date = function () {
 
   this.now;
 

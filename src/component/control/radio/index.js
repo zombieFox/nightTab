@@ -33,7 +33,7 @@ export const Control_radio = function ({
   }
 
   if (radioGroup.length > 0) {
-    radioGroup.forEach((item, i) => {
+    radioGroup.forEach((item) => {
       const radioAndLabel = {
         radio: form.input.radio({
           id: item.id,
@@ -95,7 +95,7 @@ export const Control_radio = function ({
 
     let currentSelectedRadio = false;
 
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       if (item.radio.checked) {
         currentSelectedRadio = item.radio.value;
       }
@@ -107,7 +107,7 @@ export const Control_radio = function ({
 
   this.update = () => {
 
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       item.radio.update();
     });
 
@@ -121,7 +121,7 @@ export const Control_radio = function ({
       wrap.appendChild(form.wrap({ children: [this.label] }));
     }
 
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       wrap.appendChild(
         item.wrap()
       );
@@ -132,14 +132,15 @@ export const Control_radio = function ({
   };
 
   this.inputButton = ({
-    inputHide = false
+    //FIXME deprecated property
+    inputHide = false //eslint-disable-line
   } = {}) => {
 
     const wrap = form.wrap();
 
     const group = form.group();
 
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       group.appendChild(
         item.inputButton()
       );
@@ -158,7 +159,7 @@ export const Control_radio = function ({
       wrap: true
     });
 
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       inline.appendChild(
         form.wrap({
           children: [
@@ -182,7 +183,7 @@ export const Control_radio = function ({
   };
 
   this.disable = () => {
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       item.radio.disable();
     });
 
@@ -192,7 +193,7 @@ export const Control_radio = function ({
   };
 
   this.enable = () => {
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       item.radio.enable();
     });
 

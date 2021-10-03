@@ -389,7 +389,7 @@ headerSetting.update = () => {
 
   for (let key in headerSetting.control) {
 
-    headerSetting.control[key].forEach((item, i) => {
+    headerSetting.control[key].forEach((item) => {
       item.update();
     });
 

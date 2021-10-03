@@ -27,7 +27,7 @@ export const ImportForm = function ({
 
       let count = 0;
 
-      dataToImport.bookmark.forEach((item, i) => { count = count + item.items.length; });
+      dataToImport.bookmark.forEach((item) => { count = count + item.items.length; });
 
       return count;
 

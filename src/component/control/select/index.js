@@ -56,7 +56,7 @@ export const Control_select = function ({
 
       clearChildNode(this.select);
 
-      option.forEach((item, i) => {
+      option.forEach((item) => {
 
         this.select.appendChild(
           complexNode({

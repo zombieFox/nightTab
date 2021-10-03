@@ -76,7 +76,7 @@ export const randomString = ({
       },
       long: () => {
 
-        const randomAdjective = '';
+        let randomAdjective = '';
 
         for (let i = 1; i <= adjectivesCount; i++) {
 

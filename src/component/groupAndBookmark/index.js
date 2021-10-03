@@ -24,7 +24,7 @@ groupAndBookmark.render = () => {
 
     if (bookmark.sort.sortable.length > 0) {
 
-      bookmark.sort.sortable.forEach((item, i) => {
+      bookmark.sort.sortable.forEach((item) => {
 
         item.option('disabled', true);
 

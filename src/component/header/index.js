@@ -1,5 +1,4 @@
 import { state } from '../state';
-import { data } from '../data';
 import { layout } from '../layout';
 import { toolbar } from '../toolbar';
 
@@ -16,7 +15,6 @@ import { applyCSSVar } from '../../utility/applyCSSVar';
 import { applyCSSClass } from '../../utility/applyCSSClass';
 import { applyCSSState } from '../../utility/applyCSSState';
 
-import Sortable from 'sortablejs';
 
 import './index.css';
 
@@ -50,7 +48,7 @@ header.item.mod = {
 
     const headerItems = ['greeting', 'transitional', 'clock', 'date', 'search', 'toolbar'];
 
-    headerItems.reverse().forEach((item, i) => {
+    headerItems.reverse().forEach((item) => {
 
       switch (item) {
 
@@ -276,7 +274,7 @@ header.item.render = () => {
 
   header.element.search = new Search();
 
-  order.forEach((item, i) => {
+  order.forEach((item) => {
 
     switch (item) {
 
@@ -382,8 +380,7 @@ header.item.render = () => {
 
         switch (state.get.current().toolbar.location) {
 
-          case 'header':
-
+          case 'header': {
             const headerItem = new HeaderItem({
               name: item,
               child: toolbar.current.toolbar()
@@ -394,6 +391,7 @@ header.item.render = () => {
             header.element.header.appendChild(headerItem.item());
 
             break;
+          }
 
         }
 
@@ -404,24 +402,6 @@ header.item.render = () => {
   });
 
   layout.element.header.appendChild(header.element.area);
-
-  const sortable = Sortable.create(header.element.header, {
-    handle: '.header-control-sort',
-    ghostClass: 'header-sort-placeholder',
-    animation: 500,
-    easing: 'cubic-bezier(0.8, 0.8, 0.4, 1.4)',
-    onEnd: (event) => {
-
-      // console.log('============ debug sort ============');
-      // console.log(event);
-      // console.log('item:', 'origin', event.oldIndex, 'destination', event.newIndex);
-
-      header.item.mod.move(event.oldIndex, event.newIndex);
-
-      data.save();
-
-    }
-  });
 
   const html = document.querySelector('html');
 
@@ -476,7 +456,7 @@ header.edit = {
     applyCSSState('header.edit');
 
     if (header.item.current.length > 0) {
-      header.item.current.forEach((item, i) => {
+      header.item.current.forEach((item) => {
 
         if (state.get.current().header.edit) {
           item.control.enable();

@@ -50,7 +50,7 @@ export const node = (string, node) => {
       }
     });
 
-    attributes.forEach((item, i) => {
+    attributes.forEach((item) => {
       if ('key' in item && item.key != undefined && 'value' in item && item.value != undefined) {
         element.setAttribute(item.key, item.value);
       } else if ('key' in item && item.key != undefined) {
@@ -66,7 +66,7 @@ export const node = (string, node) => {
 
       if (node.length > 0) {
 
-        node.forEach((item, i) => {
+        node.forEach((item) => {
 
           if (item instanceof HTMLElement) {
 

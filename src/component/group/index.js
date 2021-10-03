@@ -184,7 +184,7 @@ group.edit = {
 
     if (group.area.current.length > 0) {
 
-      group.area.current.forEach((item, i) => {
+      group.area.current.forEach((item) => {
 
         if (state.get.current().group.edit) {
           item.control.enable();

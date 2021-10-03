@@ -87,7 +87,7 @@ export const Control_inputButton = function ({
     if (inputButtonStyle) {
       if (inputButtonStyle.length > 0) {
 
-        inputButtonStyle.forEach((item, i) => {
+        inputButtonStyle.forEach((item) => {
 
           switch (item) {
             case 'link':
@@ -138,7 +138,7 @@ export const Control_inputButton = function ({
 
   if (inputButtonClassList.length > 0) {
 
-    inputButtonClassList.forEach((item, i) => {
+    inputButtonClassList.forEach((item) => {
       this.button.classList.add(item);
     });
 

@@ -8,7 +8,7 @@ import moment from 'moment';
 
 import './index.css';
 
-export const Greeting = function ({ } = {}) {
+export const Greeting = function () {
 
   this.now;
 

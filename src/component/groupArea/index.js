@@ -181,6 +181,8 @@ export const GroupArea = function ({
     }),
     open: () => {
 
+      // FIXME chrome is not defined. Does some package bring it into scope?
+      /* eslint-disable */
       if ('tabs' in chrome) {
 
         if (state.get.current().bookmark.newTab) {
@@ -202,6 +204,7 @@ export const GroupArea = function ({
         }
 
       }
+      /* eslint-enable */
 
     }
   };
@@ -232,7 +235,7 @@ export const GroupArea = function ({
     },
     video: () => {
 
-      bookmark.tile.current.forEach((item, i) => {
+      bookmark.tile.current.forEach((item) => {
 
         if (item.data.position.origin.group === groupData.position.origin) {
           if (item.video) {

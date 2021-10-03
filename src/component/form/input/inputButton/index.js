@@ -12,7 +12,7 @@ export const inputButton = function ({
   const inputButtonElement = node('div|class:form-input-button', children);
 
   if (style.length > 0) {
-    style.forEach((item, i) => {
+    style.forEach((item) => {
       switch (item) {
         case 'link':
           inputButtonElement.classList.add('form-input-button-link');

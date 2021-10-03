@@ -226,14 +226,6 @@ updateLegacy.get = () => {
       };
       return data;
     },
-    '2.11.0': function (data) {
-      data.state.header.greeting = {
-        show: false,
-        type: 'good',
-        name: ''
-      };
-      return data;
-    },
     '2.12.0': function (data) {
       data.state.bookmarks.link = {
         show: data.state.bookmarks.show.link
@@ -360,7 +352,7 @@ updateLegacy.get = () => {
       return data;
     },
     '2.22.0': function (data) {
-      data.bookmarks.forEach(function (arrayItem, index) {
+      data.bookmarks.forEach(function (arrayItem) {
         arrayItem.accent = {
           override: false,
           color: {
@@ -373,7 +365,7 @@ updateLegacy.get = () => {
       return data;
     },
     '3.0.0': function (data) {
-      data.bookmarks.forEach(function (arrayItem, index) {
+      data.bookmarks.forEach(function (arrayItem) {
         arrayItem.display = 'letter';
         arrayItem.icon = {
           name: null,
@@ -772,8 +764,8 @@ updateLegacy.get = () => {
       return data;
     },
     '4.19.2': function (data) {
-      data.bookmarks.forEach(function (arrayItem, index) {
-        arrayItem.items.forEach(function (arrayItem, index) {
+      data.bookmarks.forEach(function (arrayItem) {
+        arrayItem.items.forEach(function (arrayItem) {
           arrayItem.searchMatch = false;
         });
       });
@@ -870,7 +862,8 @@ updateLegacy.get = () => {
       return data;
     },
     '4.44.0': function (data) {
-      if (!'newTab' in data.state.link.item && 'newTab' in data.state.link) {
+      // FIXME Eslint warned about !'newTab' (which is always "false in item && ..." so this block is never run)
+      if (!'newTab' in data.state.link.item && 'newTab' in data.state.link) { // eslint-disable-line
         data.state.link.item.newTab = data.state.link.newTab;
         delete data.state.link.newTab;
       }
@@ -879,7 +872,7 @@ updateLegacy.get = () => {
     '5.0.0': function (data) {
       data.state.layout.direction = 'vertical';
       data.state.link.area.direction = 'ltr';
-      data.bookmarks.forEach(function (arrayItem, index) {
+      data.bookmarks.forEach(function (arrayItem) {
         arrayItem.name = {
           show: data.state.group.name.show,
           text: arrayItem.name
@@ -938,7 +931,7 @@ updateLegacy.get = () => {
     },
     '5.3.0': function (data) {
       data.state.theme.accent.hsl = convertColor.rgb.hsl(data.state.theme.accent.rgb);
-      data.state.theme.custom.all.forEach(function (arrayItem, index) {
+      data.state.theme.custom.all.forEach(function (arrayItem) {
         arrayItem.accent.rgb = {
           r: arrayItem.accent.r,
           g: arrayItem.accent.g,
@@ -963,8 +956,8 @@ updateLegacy.get = () => {
       return data;
     },
     '5.37.1': function (data) {
-      data.bookmarks.forEach(function (arrayItem, index) {
-        arrayItem.items.forEach(function (arrayItem, index) {
+      data.bookmarks.forEach(function (arrayItem) {
+        arrayItem.items.forEach(function (arrayItem) {
 
           if (arrayItem.name == null) {
             arrayItem.name = '';
@@ -1099,8 +1092,8 @@ updateLegacy.get = () => {
       return data;
     },
     '5.46.0': function (data) {
-      data.bookmarks.forEach(function (arrayItem, index) {
-        arrayItem.items.forEach(function (arrayItem, index) {
+      data.bookmarks.forEach(function (arrayItem) {
+        arrayItem.items.forEach(function (arrayItem) {
           arrayItem.wide = false;
           arrayItem.tall = false;
         });
@@ -1109,7 +1102,7 @@ updateLegacy.get = () => {
       return data;
     },
     '5.50.0': function (data) {
-      data.bookmarks.forEach(function (group, index) {
+      data.bookmarks.forEach(function (group) {
         group.items.forEach(function (item, index) {
           var bookmarkData = {
             display: {
@@ -1323,8 +1316,8 @@ updateLegacy.get = () => {
       return data;
     },
     '5.74.0': function (data) {
-      data.bookmarks.forEach(function (group, index) {
-        group.items.forEach(function (item, index) {
+      data.bookmarks.forEach(function (group) {
+        group.items.forEach(function (item) {
           item.background = {
             show: false,
             type: 'image',

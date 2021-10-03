@@ -153,9 +153,9 @@ export const Search = function () {
 
       const searchString = trimString(this.element.input.text.value).toLowerCase();
 
-      bookmark.all.forEach((item, i) => {
+      bookmark.all.forEach((item) => {
 
-        item.items.forEach((item, i) => {
+        item.items.forEach((item) => {
 
           item.searchMatch = false;
 
@@ -185,9 +185,9 @@ export const Search = function () {
 
   this.clearSearch = () => {
 
-    bookmark.all.forEach((item, i) => {
+    bookmark.all.forEach((item) => {
 
-      item.items.forEach((item, i) => {
+      item.items.forEach((item) => {
 
         delete item.searchMatch;
 
@@ -232,7 +232,7 @@ export const Search = function () {
 
       const groupIndex = i;
 
-      item.items.forEach((item, i) => {
+      item.items.forEach((item) => {
 
         if (item.searchMatch) { count.group[groupIndex].searchMatch++; }
 

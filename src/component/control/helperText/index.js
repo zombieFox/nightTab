@@ -10,7 +10,7 @@ export const Control_helperText = function ({
 
   this.para = [];
 
-  text.forEach((item, i) => {
+  text.forEach((item) => {
     this.para.push(form.helper({
       tag: 'p',
       text: item,
@@ -21,7 +21,7 @@ export const Control_helperText = function ({
   this.wrap = () => {
     const formWrap = form.wrap();
 
-    this.para.forEach((item, i) => {
+    this.para.forEach((item) => {
       formWrap.appendChild(item);
     });
 
@@ -29,13 +29,13 @@ export const Control_helperText = function ({
   };
 
   this.disable = () => {
-    this.para.forEach((item, i) => {
+    this.para.forEach((item) => {
       item.classList.add('disabled');
     });
   };
 
   this.enable = () => {
-    this.para.forEach((item, i) => {
+    this.para.forEach((item) => {
       item.classList.remove('disabled');
     });
   };

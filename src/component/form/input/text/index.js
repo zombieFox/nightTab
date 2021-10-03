@@ -36,7 +36,7 @@ export const text = ({
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       input.classList.add(item);
     });
 
@@ -44,7 +44,7 @@ export const text = ({
 
   if (func) {
 
-    input.addEventListener('input', (event) => {
+    input.addEventListener('input', () => {
       func();
     });
 

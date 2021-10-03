@@ -40,7 +40,7 @@ export const Edge = function ({
     }
   };
 
-  this.assemble = (edge) => {
+  this.assemble = () => {
 
     this.element.edge.primary = node('div|class:edge is-transparent');
 
@@ -74,11 +74,12 @@ export const Edge = function ({
 
     if (secondary.length > 0) {
 
-      secondary.forEach((item, i) => {
+      //TODO Check this still works as intended after change from .foreach() tp forof with _item
+      for (const _item of secondary) {
         this.element.edge.secondary.push(node('div|class:edge-secondary is-transparent'));
-      });
+      }
 
-      this.element.edge.secondary.forEach((item, i) => {
+      this.element.edge.secondary.forEach((item) => {
 
         item.addEventListener('transitionend', (event) => {
 
@@ -116,7 +117,7 @@ export const Edge = function ({
 
     if (this.element.edge.secondary.length > 0) {
 
-      this.element.edge.secondary.forEach((item, i) => {
+      this.element.edge.secondary.forEach((item) => {
 
         item.classList.remove('is-opaque');
 
@@ -129,13 +130,11 @@ export const Edge = function ({
   };
 
   this.appear = (edge) => {
-
-    const html = document.querySelector('html');
-
     const body = document.querySelector('body');
 
     body.appendChild(edge);
-
+    //TODO whats the point of this? getting properties but not doing anything with them
+    // or so it seems maybe?
     getComputedStyle(edge).opacity;
 
     getComputedStyle(edge).width;

@@ -16,7 +16,7 @@ export const file = ({
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       input.classList.add(item);
     });
 
@@ -24,7 +24,7 @@ export const file = ({
 
   if (func) {
 
-    input.addEventListener('change', (event) => {
+    input.addEventListener('change', () => {
       func();
     });
 

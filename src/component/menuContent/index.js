@@ -45,7 +45,7 @@ export const MenuContent = function ({
 
     if (activeNavData.sub && activeNavData.sub.length > 0) {
 
-      activeNavData.sub.forEach((item, i) => {
+      activeNavData.sub.forEach((item) => {
 
         const menuContentItem = this.element.content(item);
 

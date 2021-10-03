@@ -28,7 +28,7 @@ export const helper = function ({
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       helper.classList.add(item);
     });
 

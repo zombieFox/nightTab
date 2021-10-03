@@ -26,7 +26,7 @@ export const textarea = function ({
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       textarea.classList.add(item);
     });
 
@@ -34,7 +34,7 @@ export const textarea = function ({
 
   if (func) {
 
-    textarea.addEventListener('input', (event) => {
+    textarea.addEventListener('input', () => {
       func();
     });
 

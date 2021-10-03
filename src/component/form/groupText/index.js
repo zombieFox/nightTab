@@ -15,7 +15,7 @@ export const groupText = ({
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       textElement.classList.add(item);
     });
 

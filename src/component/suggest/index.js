@@ -191,7 +191,7 @@ export const Suggest = function ({
 
         };
 
-        results.forEach((item, i) => {
+        results.forEach((item) => {
 
           let li = node('li|class:suggest-list-item');
 
@@ -244,13 +244,13 @@ export const Suggest = function ({
               match = true;
             }
 
-            item.search.forEach((item, i) => {
+            item.search.forEach((item) => {
               if (item.toLowerCase().includes(string)) {
                 match = true;
               }
             });
 
-            item.styles.forEach((item, i) => {
+            item.styles.forEach((item) => {
               if (item.toLowerCase().includes(string)) {
                 match = true;
               }

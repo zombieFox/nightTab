@@ -141,7 +141,7 @@ layout.breakpoint = {
 
     const size = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'];
 
-    size.forEach((item, i) => {
+    size.forEach((item) => {
       html.classList.remove('is-layout-breakpoint-' + item);
     });
 

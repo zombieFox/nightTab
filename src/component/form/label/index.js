@@ -41,7 +41,7 @@ export const label = ({
   if (description) {
     if (Array.isArray(description)) {
 
-      description.forEach((item, i) => {
+      description.forEach((item) => {
         labelBlock.appendChild(node('span:' + item + '|class:label-block-item small muted'));
       });
 
@@ -62,7 +62,7 @@ export const label = ({
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       label.classList.add(item);
     });
 

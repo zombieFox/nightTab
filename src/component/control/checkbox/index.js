@@ -12,9 +12,10 @@ export const Control_checkbox = function ({
   labelText = 'name',
   description = false,
   action = false,
-  inputButton = false,
-  inputHide = false,
-  inputButtonStyle = false
+  //FIXME deprecated properties
+  inputButton = false, //eslint-disable-line
+  inputHide = false, //eslint-disable-line
+  inputButtonStyle = false //eslint-disable-line
 } = {}) {
 
   this.checkbox = form.input.checkbox({

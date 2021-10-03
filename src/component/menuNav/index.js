@@ -14,7 +14,7 @@ export const MenuNav = function ({
     current: {},
     set: () => {
 
-      navData.forEach((item, i) => {
+      navData.forEach((item) => {
 
         this.state.current[this.makeId(item.name)] = item.active;
 
@@ -29,7 +29,7 @@ export const MenuNav = function ({
 
       this.state.current[this.makeId(name)] = true;
 
-      navData.forEach((item, i) => {
+      navData.forEach((item) => {
 
         item.active = false;
 
@@ -53,7 +53,7 @@ export const MenuNav = function ({
 
   this.init = () => {
 
-    this.element.item.forEach((item, i) => {
+    this.element.item.forEach((item) => {
       if (item.subLevel) {
         item.subLevel.classList.add('active');
         item.subLevel.setAttribute('style', '--menu-subnav-height: ' + item.subLevel.getBoundingClientRect().height + 'px;');
@@ -80,7 +80,7 @@ export const MenuNav = function ({
         }
 
         if (this.element.item[i].subLevelItem.length > 0) {
-          this.element.item[i].subLevelItem.forEach((item, i) => {
+          this.element.item[i].subLevelItem.forEach((item) => {
             item.tabIndex = 1;
           });
         }
@@ -96,7 +96,7 @@ export const MenuNav = function ({
         }
 
         if (this.element.item[i].subLevelItem.length > 0) {
-          this.element.item[i].subLevelItem.forEach((item, i) => {
+          this.element.item[i].subLevelItem.forEach((item) => {
             item.tabIndex = -1;
           });
         }
@@ -115,7 +115,7 @@ export const MenuNav = function ({
 
   this.assemble = () => {
 
-    navData.forEach((item, i) => {
+    navData.forEach((item) => {
 
       const navItem = {
         topLevel: false,
@@ -147,7 +147,7 @@ export const MenuNav = function ({
 
         const subNav = node('div|class:menu-subnav');
 
-        item.sub.forEach((item, i) => {
+        item.sub.forEach((item) => {
 
           const subLevelLink = node('a:' + item + '|href:#menu-content-item-' + this.makeId(item) + ',class:menu-nav-sub button button-link button-small,tabindex:1');
 
@@ -165,7 +165,7 @@ export const MenuNav = function ({
 
     });
 
-    this.element.item.forEach((item, i) => {
+    this.element.item.forEach((item) => {
 
       item.menuNavItem = node('div|class:menu-nav-item');
 

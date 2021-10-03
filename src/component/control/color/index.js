@@ -14,7 +14,8 @@ export const Control_color = function ({
   id = 'name',
   labelText = 'Name',
   srOnly = false,
-  value = '#000000',
+  //FIXME deprecated property
+  value = '#000000', //eslint-disable-line
   defaultValue = false,
   action = false,
   randomColor = false,
@@ -175,7 +176,7 @@ export const Control_color = function ({
     }
 
     if (extraButtons.length > 0) {
-      extraButtons.forEach((item, i) => {
+      extraButtons.forEach((item) => {
         formGroup.appendChild(item.button);
       });
     }
@@ -199,7 +200,7 @@ export const Control_color = function ({
     this.reset.disable();
 
     if (extraButtons.length > 0) {
-      extraButtons.forEach((item, i) => {
+      extraButtons.forEach((item) => {
         item.disable();
       });
     }
@@ -213,7 +214,7 @@ export const Control_color = function ({
     this.reset.enable();
 
     if (extraButtons.length > 0) {
-      extraButtons.forEach((item, i) => {
+      extraButtons.forEach((item) => {
         item.enable();
       });
     }

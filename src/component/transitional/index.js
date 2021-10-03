@@ -5,7 +5,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Transitional = function ({ } = {}) {
+export const Transitional = function () {
 
   this.element = {
     transitional: node('div|class:transitional'),

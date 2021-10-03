@@ -129,9 +129,9 @@ export const Dropdown = function ({
 
   this.position = () => {
 
-    const vWidth = window.innerWidth || doc.documentElement.clientWidth;
+    const vWidth = window.innerWidth;
 
-    const vHeight = window.innerHeight || doc.documentElement.clientHeight;
+    const vHeight = window.innerHeight;
 
     const dropdownRect = this.element.toggle.button.getBoundingClientRect();
 
@@ -163,7 +163,7 @@ export const Dropdown = function ({
 
     if (menuItem.length > 0) {
 
-      menuItem.forEach((item, i) => {
+      menuItem.forEach((item) => {
 
         const dropdownMenuButton = new Button({
           text: item.text,
@@ -194,3 +194,6 @@ export const Dropdown = function ({
   this.assemble();
 
 };
+
+
+window.Dropdown = Dropdown;

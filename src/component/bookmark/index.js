@@ -77,9 +77,9 @@ bookmark.item = {
 
       if (bookmarkData.propagate.display || bookmarkData.propagate.layout || bookmarkData.propagate.theme) {
 
-        bookmark.all.forEach((item, i) => {
+        bookmark.all.forEach((item) => {
 
-          item.items.forEach((item, i) => {
+          item.items.forEach((item) => {
 
             if (bookmarkData.propagate.display) {
               item.display.visual.show = bookmarkData.link.display.visual.show;
@@ -113,9 +113,9 @@ bookmark.item = {
     },
     applyVar: (path, value) => {
 
-      bookmark.all.forEach((item, i) => {
+      bookmark.all.forEach((item) => {
 
-        item.items.forEach((item, i) => {
+        item.items.forEach((item) => {
 
           set({ object: item, path: path, value: value });
 
@@ -127,28 +127,28 @@ bookmark.item = {
     sort: {
       letter: () => {
 
-        bookmark.all.forEach((item, i) => {
+        bookmark.all.forEach((item) => {
           item.items = sortArrayOfObject(item.items, 'display.visual.letter.text');
         });
 
       },
       icon: () => {
 
-        bookmark.all.forEach((item, i) => {
+        bookmark.all.forEach((item) => {
           item.items = sortArrayOfObject(item.items, 'display.visual.icon.name');
         });
 
       },
       name: () => {
 
-        bookmark.all.forEach((item, i) => {
+        bookmark.all.forEach((item) => {
           item.items = sortArrayOfObject(item.items, 'display.name.text');
         });
 
       }
     }
   },
-  render: (groupIndex) => {
+  render: () => {
 
     const addBookmarkToGroup = (bookmarkData, groupIndex, bookmarkIndex) => {
 
@@ -279,7 +279,7 @@ bookmark.edit = {
 
     if (bookmark.tile.current.length > 0) {
 
-      bookmark.tile.current.forEach((item, i) => {
+      bookmark.tile.current.forEach((item) => {
 
         if (state.get.current().bookmark.edit) {
           item.control.enable();
@@ -298,8 +298,8 @@ bookmark.direction = {
   mod: {
     vertical: () => {
 
-      bookmark.all.forEach((item, i) => {
-        item.items.forEach((item, i) => {
+      bookmark.all.forEach((item) => {
+        item.items.forEach((item) => {
 
           item.display.direction = 'vertical';
 
@@ -309,8 +309,8 @@ bookmark.direction = {
     },
     horizontal: () => {
 
-      bookmark.all.forEach((item, i) => {
-        item.items.forEach((item, i) => {
+      bookmark.all.forEach((item) => {
+        item.items.forEach((item) => {
 
           item.display.direction = 'horizontal';
 
@@ -371,8 +371,7 @@ bookmark.add = {
       successAction: () => {
 
         switch (newBookmarkData.group.destination) {
-          case 'new':
-
+          case 'new': {
             const newGroupData = new StagedGroup();
 
             newGroupData.group.name.text = newBookmarkData.group.name;
@@ -386,6 +385,7 @@ bookmark.add = {
             layout.area.assemble();
 
             break;
+          }
 
         }
 
@@ -424,7 +424,7 @@ bookmark.sort = {
 
     bookmark.sort.sortable = [];
 
-    group.area.current.forEach((item, i) => {
+    group.area.current.forEach((item) => {
 
       bookmark.sort.sortable.push(Sortable.create(item.element.body, {
         handle: '.bookmark-control-sort',
@@ -470,7 +470,7 @@ bookmark.count = () => {
 
   let count = 0;
 
-  bookmark.all.forEach((item, i) => { count = count + item.items.length; });
+  bookmark.all.forEach((item) => { count = count + item.items.length; });
 
   return count;
 
@@ -486,7 +486,7 @@ bookmark.restore = (dataToRestore) => {
 
 bookmark.append = (dataToAppend) => {
 
-  dataToAppend.bookmark.forEach((item, i) => {
+  dataToAppend.bookmark.forEach((item) => {
 
     bookmark.all.push(item);
 
@@ -502,7 +502,7 @@ bookmark.reset = () => {
 
     const groupIndex = i;
 
-    item.items.forEach((item, i) => {
+    item.items.forEach((item) => {
 
       const newBookmarkData = new StagedBookmark();
 

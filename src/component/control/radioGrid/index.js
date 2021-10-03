@@ -32,7 +32,7 @@ export const Control_radioGrid = function ({
   }
 
   if (radioGroup.length > 0) {
-    radioGroup.forEach((item, i) => {
+    radioGroup.forEach((item) => {
       const radioAndLabel = {};
 
       radioAndLabel.position = item.position;
@@ -89,7 +89,7 @@ export const Control_radioGrid = function ({
   this.value = () => {
     let currentSelectedRadio = false;
 
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       if (item.radio.checked) {
         currentSelectedRadio = item.radio.value;
       }
@@ -99,7 +99,7 @@ export const Control_radioGrid = function ({
   };
 
   this.update = () => {
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       item.radio.update();
     });
   };
@@ -125,7 +125,7 @@ export const Control_radioGrid = function ({
         break;
     }
 
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       const wrap = form.wrap({
         children: [
           item.radio,
@@ -148,7 +148,7 @@ export const Control_radioGrid = function ({
   };
 
   this.disable = () => {
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       item.radio.disable();
     });
 
@@ -160,7 +160,7 @@ export const Control_radioGrid = function ({
   };
 
   this.enable = () => {
-    this.radioSet.forEach((item, i) => {
+    this.radioSet.forEach((item) => {
       item.radio.enable();
     });
 

@@ -11,7 +11,7 @@ import moment from 'moment';
 
 import './index.css';
 
-export const Clock = function ({ } = {}) {
+export const Clock = function () {
 
   this.now;
 

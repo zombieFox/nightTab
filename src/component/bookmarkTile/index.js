@@ -144,8 +144,7 @@ const BookmarkTile = function ({
           successAction: () => {
 
             switch (newBookmarkData.group.destination) {
-              case 'new':
-
+              case 'new': {
                 newBookmarkData.position.destination.group = bookmark.all.length;
 
                 const newGroupData = new StagedGroup();
@@ -157,6 +156,7 @@ const BookmarkTile = function ({
                 group.item.mod.add(newGroupData);
 
                 break;
+              }
             }
 
             bookmark.item.mod.edit(newBookmarkData);
@@ -280,17 +280,17 @@ const BookmarkTile = function ({
     if (preview) {
       const alignment = ['top-left', 'top-center', 'top-right', 'center-left', 'center-center', 'center-right', 'bottom-left', 'bottom-center', 'bottom-right'];
 
-      alignment.forEach((item, i) => {
+      alignment.forEach((item) => {
         this.element.bookmark.classList.remove('is-bookmark-alignment-' + item);
       });
       const order = ['visual-name', 'name-visual'];
 
-      order.forEach((item, i) => {
+      order.forEach((item) => {
         this.element.bookmark.classList.remove('is-bookmark-order-' + item);
       });
       const direction = ['vertical', 'horizontal'];
 
-      direction.forEach((item, i) => {
+      direction.forEach((item) => {
         this.element.bookmark.classList.remove('is-bookmark-direction-' + item);
       });
     }
@@ -521,7 +521,7 @@ const BookmarkTile = function ({
 
     if (isValidString(bookmarkData.link.url)) {
 
-      this.element.url.text.textContent = trimString(bookmarkData.link.url).replace(/^https?\:\/\//i, '').replace('www.', '').replace(/\/+$/, '');
+      this.element.url.text.textContent = trimString(bookmarkData.link.url).replace(/^https?:\/\//i, '').replace('www.', '').replace(/\/+$/, '');
 
       this.element.url.text.title = trimString(bookmarkData.link.url);
 

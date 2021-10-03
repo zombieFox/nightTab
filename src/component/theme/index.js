@@ -112,10 +112,7 @@ theme.font.ui = {
 
 theme.color = {
   render: () => {
-
     const html = document.querySelector('html');
-
-    const head = document.querySelector('head');
 
     let shades = (state.get.current().theme.color.contrast.end - state.get.current().theme.color.contrast.start) / (state.get.current().theme.color.shades - 1);
 
@@ -183,9 +180,9 @@ theme.accent.rainbow = {
 
     let degree = 0;
 
-    bookmark.all.forEach((item, i) => {
+    bookmark.all.forEach((item) => {
 
-      item.items.forEach((item, i) => {
+      item.items.forEach((item) => {
 
         item.accent.by = 'custom';
 
@@ -204,9 +201,9 @@ theme.accent.rainbow = {
   },
   clear: () => {
 
-    bookmark.all.forEach((item, i) => {
+    bookmark.all.forEach((item) => {
 
-      item.items.forEach((item, i) => {
+      item.items.forEach((item) => {
 
         item.accent = JSON.parse(JSON.stringify(bookmarkDefault.accent));
 
@@ -274,7 +271,7 @@ theme.accent.cycle = {
 
 theme.style = {
   bind: () => {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
       theme.style.initial();
     });
   },
@@ -350,10 +347,7 @@ theme.background = {
 
 theme.background.area = {
   render: () => {
-
-    const backgroundElement = node('div|class:background');
-
-    state.get.option().theme.background.type.forEach((item, i) => {
+    state.get.option().theme.background.type.forEach((item) => {
 
       switch (item) {
 

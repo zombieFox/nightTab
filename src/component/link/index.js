@@ -8,7 +8,9 @@ export const Link = function ({
   href = '#',
   iconName = false,
   iconPosition = 'right',
-  image = false,
+  // FIXME remove this property if it doesn't work anymore and remove all times data is passed to it
+  /**@deprecated property is deprecated*/
+  image = false, // eslint-disable-line
   linkButton = false,
   style = [],
   title = false,
@@ -31,7 +33,7 @@ export const Link = function ({
       this.element.link.classList.add('button');
 
       if (style.length > 0) {
-        style.forEach((item, i) => {
+        style.forEach((item) => {
 
           switch (item) {
 
@@ -87,7 +89,7 @@ export const Link = function ({
     }
 
     if (classList.length > 0) {
-      classList.forEach((item, i) => {
+      classList.forEach((item) => {
         this.element.link.classList.add(item);
       });
     }
@@ -97,7 +99,7 @@ export const Link = function ({
   this.bind = () => {
 
     if (action) {
-      this.element.link.addEventListener('click', (event) => {
+      this.element.link.addEventListener('click', () => {
         action();
       });
     }

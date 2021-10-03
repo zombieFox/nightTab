@@ -260,7 +260,7 @@ export const MenuFrame = function ({
 
     clearChildNode(this.element.content);
 
-    navData.forEach((item, i) => {
+    navData.forEach((item) => {
 
       if (item.active) {
 

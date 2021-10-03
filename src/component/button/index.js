@@ -67,13 +67,13 @@ export const Button = function ({
   }
 
   if (classList.length > 0) {
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       this.button.classList.add(item);
     });
   }
 
   if (func) {
-    this.button.addEventListener('click', (event) => {
+    this.button.addEventListener('click', () => {
       func();
     });
   }
@@ -85,7 +85,7 @@ export const Button = function ({
     if (style) {
 
       if (style.length > 0) {
-        style.forEach((item, i) => {
+        style.forEach((item) => {
           switch (item) {
             case 'link':
               this.button.classList.add('button-link');

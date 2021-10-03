@@ -15,8 +15,6 @@ export const number = ({
 
   const input = node('input|type:number,min:' + min + ',max:' + max + ',step:' + step + ',tabindex:1');
 
-  let delayUpdate = null;
-
   if (id) {
     input.setAttribute('id', id);
   }
@@ -31,7 +29,7 @@ export const number = ({
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       input.classList.add(item);
     });
 
@@ -39,7 +37,7 @@ export const number = ({
 
   if (func) {
 
-    input.addEventListener('input', (event) => {
+    input.addEventListener('input', () => {
       func();
     });
 
