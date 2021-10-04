@@ -1,3 +1,4 @@
+import { data } from '../data';
 import { state } from '../state';
 import { layout } from '../layout';
 import { toolbar } from '../toolbar';
@@ -15,6 +16,7 @@ import { applyCSSVar } from '../../utility/applyCSSVar';
 import { applyCSSClass } from '../../utility/applyCSSClass';
 import { applyCSSState } from '../../utility/applyCSSState';
 
+import Sortable from 'sortablejs';
 
 import './index.css';
 
@@ -402,6 +404,24 @@ header.item.render = () => {
   });
 
   layout.element.header.appendChild(header.element.area);
+
+  Sortable.create(header.element.header, {
+    handle: '.header-control-sort',
+    ghostClass: 'header-sort-placeholder',
+    animation: 500,
+    easing: 'cubic-bezier(0.8, 0.8, 0.4, 1.4)',
+    onEnd: (event) => {
+
+      // console.log('============ debug sort ============');
+      // console.log(event);
+      // console.log('item:', 'origin', event.oldIndex, 'destination', event.newIndex);
+
+      header.item.mod.move(event.oldIndex, event.newIndex);
+
+      data.save();
+
+    }
+  });
 
   const html = document.querySelector('html');
 

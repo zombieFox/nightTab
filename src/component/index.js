@@ -1,25 +1,25 @@
-import './index.css'
+import './index.css';
 
-import { base } from './base'
-import { state } from './state'
-import { data } from './data'
-import { version } from './version'
-import { fontawesome } from './fontawesome'
-import { icon } from './icon'
-import { keyboard } from './keyboard'
-import { layout } from './layout'
-import { logo } from './logo'
-import { menu } from './menu'
-import { pageLock } from './pageLock'
-import { theme } from './theme'
-import { update } from './update'
-import { bookmark } from './bookmark'
-import { header } from './header'
-import { group } from './group'
-import { toolbar } from './toolbar'
-import { groupAndBookmark } from './groupAndBookmark'
+import { base } from './base';
+import { state } from './state';
+import { data } from './data';
+import { version } from './version';
+import { fontawesome } from './fontawesome';
+import { icon } from './icon';
+import { keyboard } from './keyboard';
+import { layout } from './layout';
+import { logo } from './logo';
+import { menu } from './menu';
+import { pageLock } from './pageLock';
+import { theme } from './theme';
+import { update } from './update';
+import { bookmark } from './bookmark';
+import { header } from './header';
+import { group } from './group';
+import { toolbar } from './toolbar';
+import { groupAndBookmark } from './groupAndBookmark';
 
-import * as form from './form'
+import * as form from './form';
 
 export const component = {
   base,
@@ -41,4 +41,4 @@ export const component = {
   form,
   toolbar,
   groupAndBookmark
-}
+};
