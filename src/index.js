@@ -1,5 +1,5 @@
 import { component } from './component';
-import { APP_NAME } from './constants';
+import { APP_NAME } from './constant';
 
 console.log(APP_NAME + ' version:', component.version.number, component.version.name);
 

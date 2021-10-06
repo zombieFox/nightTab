@@ -133,8 +133,7 @@ export const Edge = function ({
     const body = document.querySelector('body');
 
     body.appendChild(edge);
-    //TODO whats the point of this? getting properties but not doing anything with them
-    // or so it seems maybe?
+
     getComputedStyle(edge).opacity;
 
     getComputedStyle(edge).width;

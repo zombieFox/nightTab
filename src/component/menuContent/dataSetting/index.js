@@ -1,6 +1,6 @@
 import { data } from '../../data';
 import { menu } from '../../menu';
-import { APP_NAME } from '../../../constants';
+import { APP_NAME } from '../../../constant';
 
 import * as form from '../../form';
 

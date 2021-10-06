@@ -8,8 +8,6 @@ import './index.css';
 
 export const HeaderItem = function ({
   name = false,
-  //FIXME Deprecated property
-  index = false, //eslint-disable-line
   child = false
 } = {}) {
 

@@ -1,5 +1,5 @@
 import { debugSetting } from './debugSetting';
-import { APP_NAME } from '../../constants';
+import { APP_NAME } from '../../constant';
 import { layoutSetting } from './layoutSetting';
 import { groupSetting } from './groupSetting';
 import { bookmarkSetting } from './bookmarkSetting';

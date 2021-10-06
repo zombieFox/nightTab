@@ -8,9 +8,6 @@ export const Link = function ({
   href = '#',
   iconName = false,
   iconPosition = 'right',
-  // FIXME remove this property if it doesn't work anymore and remove all times data is passed to it
-  /**@deprecated property is deprecated*/
-  image = false, // eslint-disable-line
   linkButton = false,
   style = [],
   title = false,

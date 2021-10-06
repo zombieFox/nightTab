@@ -862,8 +862,7 @@ updateLegacy.get = () => {
       return data;
     },
     '4.44.0': function (data) {
-      // FIXME Eslint warned about !'newTab' (which is always "false in item && ..." so this block is never run)
-      if (!'newTab' in data.state.link.item && 'newTab' in data.state.link) { // eslint-disable-line
+      if (!('newTab' in data.state.link.item) && 'newTab' in data.state.link) {
         data.state.link.item.newTab = data.state.link.newTab;
         delete data.state.link.newTab;
       }

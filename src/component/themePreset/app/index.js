@@ -1,5 +1,5 @@
 import { state } from '../../state';
-import { APP_NAME } from '../../../constants';
+import { APP_NAME } from '../../../constant';
 
 export const app = {
   name: APP_NAME + ' (default)',

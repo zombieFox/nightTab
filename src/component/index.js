@@ -1,4 +1,4 @@
-import './index.css';
+import '../style/reset.css';
 
 import { base } from './base';
 import { state } from './state';

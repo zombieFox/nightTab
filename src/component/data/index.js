@@ -3,7 +3,7 @@ import { bookmark } from '../bookmark';
 import { menu } from '../menu';
 import { version } from '../version';
 import { update } from '../update';
-import { APP_NAME } from '../../constants';
+import { APP_NAME } from '../../constant';
 
 import { Modal } from '../modal';
 import { ImportForm } from '../importForm';

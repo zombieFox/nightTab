@@ -1,6 +1,6 @@
 import { version } from '../../version';
 import { logo } from '../../logo';
-import { APP_NAME } from '../../../constants';
+import { APP_NAME } from '../../../constant';
 
 
 import { Link } from '../../link';
