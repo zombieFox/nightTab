@@ -74,10 +74,9 @@ export const Edge = function ({
 
     if (secondary.length > 0) {
 
-      //TODO Check this still works as intended after change from .foreach() tp forof with _item
-      for (const _item of secondary) {
+      secondary.forEach(() => {
         this.element.edge.secondary.push(node('div|class:edge-secondary is-transparent'));
-      }
+      });
 
       this.element.edge.secondary.forEach((item) => {
 
