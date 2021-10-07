@@ -12,22 +12,34 @@ module.exports = {
     clean: true
   },
   module: {
-    rules: [{
-      test: /\.css$/i,
-      use: ['style-loader', 'css-loader']
-    }, {
-      test: /\.(ttf|woff|woff2)$/,
-      type: 'asset/resource',
-      generator: {
-        filename: 'font/[name][ext]',
+    rules: [
+      {
+        test: /\.ts?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(ttf|woff|woff2)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'font/[name][ext]',
+        }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'image/[name][ext]',
+        }
       }
-    }, {
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      type: 'asset/resource',
-      generator: {
-        filename: 'image/[name][ext]',
-      }
-    }]
+    ]
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({

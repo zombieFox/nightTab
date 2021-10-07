@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "target": "es5",
+    /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    "lib": [
+      "DOM"
+    ],
+    /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
+    "allowJs": true,
+    /* Allow 'import x from y' when a module doesn't have a default export. */
+    "allowSyntheticDefaultImports": true,
+    /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+    "esModuleInterop": true,
+    /* Ensure that casing is correct in imports. */
+    "forceConsistentCasingInFileNames": true,
+    /* Enable importing .json files */
+    "resolveJsonModule": true,
+    /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true,
+    /* Enable all strict type-checking options. */
+    "strict": true,
+    /* Specify an output folder for all emitted files. */
+    "outDir": "./dist/",
+    /* Enable error reporting for expressions and declarations with an implied `any` type.. */
+    "noImplicitAny": true,
+  }
+}
