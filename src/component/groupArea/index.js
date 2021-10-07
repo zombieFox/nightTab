@@ -181,7 +181,6 @@ export const GroupArea = function ({
     }),
     open: () => {
 
-      /* eslint-disable no-undef*/
       if ('tabs' in chrome) {
 
         if (state.get.current().bookmark.newTab) {
@@ -203,7 +202,6 @@ export const GroupArea = function ({
         }
 
       }
-      /* eslint-enable */
 
     }
   };
