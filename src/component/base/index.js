@@ -1,11 +1,15 @@
-import './base/index.css';
-import './font/index.css';
-import './animation/index.css';
-import './spacing/index.css';
-import './state/index.css';
-import './typography/index.css';
-import './version/index.css';
-import './zindex/index.css';
-import './utility/index.css';
+// must be loaded first
+import '../../style/reset/index.css';
+
+// base styles for all components
+import '../../style/animation/index.css';
+import '../../style/font/index.css';
+import '../../style/spacing/index.css';
+import '../../style/state/index.css';
+import '../../style/typography/index.css';
+//FIXME version to move made into its own component
+import '../../style/version/index.css';
+import '../../style/zindex/index.css';
+import '../../style/utility/index.css';
 
 export const base = {};

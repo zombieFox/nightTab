@@ -1,6 +1,5 @@
-import '../style/reset.css';
-
 import { base } from './base';
+import { body } from './body';
 import { state } from './state';
 import { data } from './data';
 import { version } from './version';
@@ -23,6 +22,7 @@ import * as form from './form';
 
 export const component = {
   base,
+  body,
   state,
   data,
   version,

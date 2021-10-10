@@ -1,0 +1,26 @@
+/* open sans */
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Open Sans Regular"),
+    local("OpenSans-Regular"),
+    url("../../font/open-sans/open-sans-400.woff") format("woff"),
+    url("../../font/open-sans/open-sans-400.woff2") format("woff2"),
+    url("../../font/open-sans/open-sans-400.ttf") format("truetype");
+}
+
+/* fjalla one */
+@font-face {
+  font-family: "Fjalla One";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Fjalla One"),
+    url("../../font/fjalla-one/fjalla-one-400.woff") format("woff"),
+    url("../../font/fjalla-one/fjalla-one-400.woff2") format("woff2"),
+    url("../../font/fjalla-one/fjalla-one-400.ttf") format("truetype");
+}

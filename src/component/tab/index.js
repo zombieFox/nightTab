@@ -1,4 +1,3 @@
-
 import { Button } from '../button';
 
 import { node } from '../../utility/node';
@@ -88,8 +87,6 @@ export const Tab = function ({
       this.element.indicator.addEventListener('animationend', () => {
         this.element.tab.classList.add('tab-nav-indicator-active');
       });
-
-      this.element.indicator.addEventListener('transitionend', () => { });
 
     }
   };
