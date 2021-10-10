@@ -200,28 +200,6 @@ button .icon,
   width: 100%;
 }
 
-button [class^="button-"],
-button [class*=" button-"],
-.button [class^="button-"],
-.button [class*=" button-"] {
-  margin-left: 0.25em;
-  margin-right: 0.25em;
-}
-
-button [class^="button-"]:first-child,
-button [class*=" button-"]:first-child,
-.button [class^="button-"]:first-child,
-.button [class*=" button-"]:first-child {
-  margin-left: 0;
-}
-
-button [class^="button-"]:last-child,
-button [class*=" button-"]:last-child,
-.button [class^="button-"]:last-child,
-.button [class*=" button-"]:last-child {
-  margin-right: 0;
-}
-
 .button-link {
   background-color: transparent;
   border: 0;
