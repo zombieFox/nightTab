@@ -213,6 +213,8 @@ debugSetting.button = (parent) => {
 
   debugSetting.control.button.link = new Button({ text: 'Link button', size: 'medium', style: ['link'] });
 
+  debugSetting.control.button.icon = new Button({ text: 'Icon button', size: 'medium', style: ['line'], iconName: 'add' });
+
   parent.appendChild(
     node('div', [
       debugSetting.control.button.small.wrap(),
@@ -222,6 +224,7 @@ debugSetting.button = (parent) => {
       debugSetting.control.button.line.wrap(),
       debugSetting.control.button.ring.wrap(),
       debugSetting.control.button.link.wrap(),
+      debugSetting.control.button.icon.wrap()
     ])
   );
 
