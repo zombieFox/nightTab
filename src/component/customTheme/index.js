@@ -1,15 +1,12 @@
 import { state } from '../state';
 import { data } from '../data';
 
-import * as form from '../form';
 
 import { Modal } from '../modal';
 import { CustomThemeTile } from '../customThemeTile';
 import { CustomThemeForm } from '../customThemeForm';
 import { StagedCustomTheme } from '../stagedCustomTheme';
 
-import { node } from '../../utility/node';
-import { clearChildNode } from '../../utility/clearChildNode';
 import { applyCSSState } from '../../utility/applyCSSState';
 
 const customTheme = {};
@@ -117,7 +114,7 @@ customTheme.edit = {
       customTheme.edit.close();
     } else {
       customTheme.edit.open();
-    };
+    }
 
   },
   render: () => {
@@ -125,16 +122,16 @@ customTheme.edit = {
     applyCSSState('theme.custom.edit');
 
     if (customTheme.tile.current.length > 0) {
-      customTheme.tile.current.forEach((item, i) => {
+      customTheme.tile.current.forEach((item) => {
 
         if (state.get.current().theme.custom.edit) {
           item.control.enable();
         } else {
           item.control.disable();
-        };
+        }
 
       });
-    };
+    }
 
   }
 };

@@ -1,9 +1,8 @@
 import { node } from '../../../utility/node';
-import { complexNode } from '../../../utility/complexNode';
 
 import './index.css';
 
-export const helper = function({
+export const helper = function ({
   text = 'text',
   complexText = false,
   classList = []
@@ -23,17 +22,17 @@ export const helper = function({
 
       helper.appendChild(textNode);
 
-    };
+    }
 
-  };
+  }
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       helper.classList.add(item);
     });
 
-  };
+  }
 
   return helper;
 

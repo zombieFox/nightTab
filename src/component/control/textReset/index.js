@@ -1,19 +1,12 @@
-import { state } from '../../state';
-import { data } from '../../data';
-import { bookmark } from '../../bookmark';
 
 import * as form from '../../form';
 
 import { Button } from '../../button';
-import { Collapse } from '../../collapse';
 
-import { node } from '../../../utility/node';
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
-import { convertColor } from '../../../utility/convertColor';
-import { isValidString } from '../../../utility/isValidString';
 
-export const Control_textReset = function({
+export const Control_textReset = function ({
   object = {},
   path = false,
   id = 'name',
@@ -34,8 +27,8 @@ export const Control_textReset = function({
   });
 
   if (srOnly) {
-    this.label.classList.add('sr-only')
-  };
+    this.label.classList.add('sr-only');
+  }
 
   this.text = form.input.text({
     id: id,
@@ -47,28 +40,28 @@ export const Control_textReset = function({
           path: path,
           value: this.text.value
         });
-      };
+      }
       if (action) {
         action();
-      };
+      }
     }
   });
 
   if (value) {
     this.text.value = value;
-  };
+  }
 
   if (min) {
     this.text.min = min;
-  };
+  }
 
   if (max) {
     this.text.max = max;
-  };
+  }
 
   if (placeholder) {
     this.text.placeholder = placeholder;
-  };
+  }
 
   this.reset = new Button({
     text: false,
@@ -85,7 +78,7 @@ export const Control_textReset = function({
       this.update();
       if (action) {
         action();
-      };
+      }
     }
   });
 

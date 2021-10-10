@@ -8,6 +8,7 @@ import { Control_radio } from './radio';
 import { Control_radioGrid } from './radioGrid';
 import { Control_slider } from './slider';
 import { Control_sliderSlim } from './sliderSlim';
+import { Control_sliderDouble } from './sliderDouble';
 import { Control_text } from './text';
 import { Control_select } from './select';
 
@@ -23,6 +24,6 @@ export {
   Control_slider,
   Control_sliderSlim,
   Control_sliderDouble,
-  Control_text
+  Control_text,
   Control_select
 };

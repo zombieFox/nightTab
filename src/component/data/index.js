@@ -3,7 +3,7 @@ import { bookmark } from '../bookmark';
 import { menu } from '../menu';
 import { version } from '../version';
 import { update } from '../update';
-import { appName } from '../appName';
+import { APP_NAME } from '../../constant';
 
 import { Modal } from '../modal';
 import { ImportForm } from '../importForm';
@@ -17,11 +17,11 @@ import { clearChildNode } from '../../utility/clearChildNode';
 const data = {};
 
 data.set = (key, data) => {
-  localStorage.setItem(key, data);
+  window.localStorage.setItem(key, data);
 };
 
 data.get = (key) => {
-  return localStorage.getItem(key);
+  return window.localStorage.getItem(key);
 };
 
 data.import = {
@@ -31,7 +31,6 @@ data.import = {
     theme: { include: true }
   },
   reset: () => {
-
     data.import.state.setup.include = true;
 
     data.import.state.bookmark.include = true;
@@ -39,56 +38,46 @@ data.import = {
     data.import.state.bookmark.type = 'restore';
 
     data.import.state.theme.include = true;
-
   },
   file: ({
     fileList = false,
     feedback = false,
     input = false
   } = {}) => {
-
     if (fileList.length > 0) {
       data.validate.file({
         fileList: fileList,
         feedback: feedback,
         input: input
       });
-    };
-
+    }
   },
   drop: ({
     fileList = false,
     feedback = false
   }) => {
-
     if (fileList.length > 0) {
       data.validate.file({
         fileList: fileList,
         feedback: feedback
       });
-    };
-
+    }
   },
   paste: ({
     clipboardData = false,
     feedback = false
   }) => {
-
     data.validate.paste({
       clipboardData: clipboardData,
       feedback: feedback
     });
-
   },
   render: (dataToImport) => {
-
     let dataToCheck = JSON.parse(dataToImport);
 
-    if (dataToCheck.version != version.number) {
-
+    if (dataToCheck.version !== version.number) {
       dataToCheck = data.update(dataToCheck);
-
-    };
+    }
 
     const importForm = new ImportForm({
       dataToImport: dataToCheck,
@@ -96,41 +85,34 @@ data.import = {
     });
 
     const importModal = new Modal({
-      heading: 'Restoring from a ' + appName + ' backup',
+      heading: 'Restoring from a ' + APP_NAME + ' backup',
       content: importForm.form(),
       successText: 'Import',
       width: 'small',
       successAction: () => {
-
         if (data.import.state.setup.include || data.import.state.theme.include || data.import.state.bookmark.include) {
-
           let dataToRestore = JSON.parse(dataToImport);
 
-          if (dataToRestore.version != version.number) {
-
+          if (dataToRestore.version !== version.number) {
             data.backup(dataToRestore);
 
             dataToRestore = data.update(dataToRestore);
-
-          };
+          }
 
           data.restore(dataToRestore);
 
           data.save();
 
           data.reload.render();
-
-        };
+        }
 
         data.import.reset();
-
       },
       cancelAction: () => { data.import.reset(); },
       closeAction: () => { data.import.reset(); }
     });
 
     importModal.open();
-
   }
 };
 
@@ -138,94 +120,67 @@ data.validate = {
   paste: ({
     feedback = false
   } = {}) => {
-
     navigator.clipboard.readText().then(clipboardData => {
-
       // is the data a JSON object
       if (isJson(clipboardData)) {
-
         // is this JSON from this app
-        if (JSON.parse(clipboardData)[appName] || JSON.parse(clipboardData)[appName.toLowerCase()]) {
-
+        if (JSON.parse(clipboardData)[APP_NAME] || JSON.parse(clipboardData)[APP_NAME.toLowerCase()]) {
           data.feedback.clear.render(feedback);
 
           data.feedback.success.render(feedback, 'Clipboard data', () => {
-
             menu.close();
 
             data.import.render(clipboardData);
-
           });
-
         } else {
-
           data.feedback.clear.render(feedback);
 
           data.feedback.fail.notClipboardJson.render(feedback, 'Clipboard data');
-
-        };
-
+        }
       } else {
-
         // not a JSON object
 
         data.feedback.clear.render(feedback);
 
         data.feedback.fail.notClipboardJson.render(feedback, 'Clipboard data');
-
-      };
-
-    }).catch(error => {
-
+      }
+    }).catch(() => {
       data.feedback.clear.render(feedback);
 
       data.feedback.fail.notClipboardJson.render(feedback, 'Clipboard data');
-
     });
-
   },
   file: ({
     fileList = false,
     feedback = false,
     input = false
   } = {}) => {
-
     // make new file reader
-    var reader = new FileReader();
+    const reader = new window.FileReader();
 
     // define the on load event for the reader
     reader.onload = (event) => {
-
       // is this a JSON file
       if (isJson(event.target.result)) {
-
         // is this JSON from this app
-        if (JSON.parse(event.target.result)[appName] || JSON.parse(event.target.result)[appName.toLowerCase()]) {
-
+        if (JSON.parse(event.target.result)[APP_NAME] || JSON.parse(event.target.result)[APP_NAME.toLowerCase()]) {
           data.feedback.clear.render(feedback);
 
           data.feedback.success.render(feedback, fileList[0].name, () => {
-
             menu.close();
 
             data.import.render(event.target.result);
-
           });
 
-          if (input) { input.value = ''; };
-
+          if (input) { input.value = ''; }
         } else {
-
           data.feedback.clear.render(feedback);
 
           data.feedback.fail.notAppJson.render(feedback, fileList[0].name);
 
-          if (input) { input.value = ''; };
-
-        };
-
+          if (input) { input.value = ''; }
+        }
       } else {
-
         // not a JSON file
 
         data.feedback.clear.render(feedback);
@@ -233,18 +188,13 @@ data.validate = {
         data.feedback.fail.notJson.render(feedback, fileList[0].name);
 
         if (input) {
-
           input.value = '';
-
-        };
-
-      };
-
+        }
+      }
     };
 
     // invoke the reader
     reader.readAsText(fileList.item(0));
-
   }
 };
 
@@ -254,7 +204,7 @@ data.export = () => {
   const leadingZero = (value) => {
     if (value < 10) {
       value = '0' + value;
-    };
+    }
     return value;
   };
 
@@ -266,7 +216,7 @@ data.export = () => {
   timestamp.year = leadingZero(timestamp.year);
   timestamp = timestamp.year + '.' + timestamp.month + '.' + timestamp.date + ' - ' + timestamp.hours + ' ' + timestamp.minutes + ' ' + timestamp.seconds;
 
-  const fileName = appName + ' backup - ' + timestamp + '.json';
+  const fileName = APP_NAME + ' backup - ' + timestamp + '.json';
 
   const dataToExport = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data.load()));
 
@@ -284,55 +234,41 @@ data.export = () => {
 };
 
 data.remove = (key) => {
-  localStorage.removeItem(key);
+  window.localStorage.removeItem(key);
 };
 
 data.backup = (dataToBackup) => {
-
   if (dataToBackup) {
-
-    data.set(appName + 'Backup', JSON.stringify(dataToBackup));
+    data.set(APP_NAME + 'Backup', JSON.stringify(dataToBackup));
 
     console.log('data version ' + dataToBackup.version + ' backed up');
-
-  };
-
+  }
 };
 
 data.update = (dataToUpdate) => {
-
-  if (dataToUpdate.version != version.number) {
-
+  if (dataToUpdate.version !== version.number) {
     dataToUpdate = update.run(dataToUpdate);
-
   } else {
-
     console.log('data version:', version.number, 'no need to run update');
-
-  };
+  }
 
   return dataToUpdate;
-
 };
 
 data.restore = (dataToRestore) => {
-
   if (dataToRestore) {
-
     console.log('data found to load');
 
     if (data.import.state.setup.include) {
       state.set.restore.setup(dataToRestore);
-    };
+    }
 
     if (data.import.state.theme.include) {
       state.set.restore.theme(dataToRestore);
-    };
+    }
 
     if (data.import.state.bookmark.include) {
-
       switch (data.import.state.bookmark.type) {
-
         case 'restore':
           bookmark.restore(dataToRestore);
           break;
@@ -340,24 +276,18 @@ data.restore = (dataToRestore) => {
         case 'append':
           bookmark.append(dataToRestore);
           break;
-
-      };
-
-    };
-
+      }
+    }
   } else {
-
     console.log('no data found to load');
 
     state.set.default();
-
-  };
-
+  }
 };
 
 data.save = () => {
-  data.set(appName, JSON.stringify({
-    [appName]: true,
+  data.set(APP_NAME, JSON.stringify({
+    [APP_NAME]: true,
     version: version.number,
     state: state.get.current(),
     bookmark: bookmark.all
@@ -365,67 +295,54 @@ data.save = () => {
 };
 
 data.load = () => {
+  if (data.get(APP_NAME) !== null && data.get(APP_NAME) !== undefined) {
+    let dataToLoad = JSON.parse(data.get(APP_NAME));
 
-  if (data.get(appName) != null && data.get(appName) != undefined) {
-
-    let dataToLoad = JSON.parse(data.get(appName));
-
-    if (dataToLoad.version != version.number) {
-
+    if (dataToLoad.version !== version.number) {
       data.backup(dataToLoad);
 
       dataToLoad = data.update(dataToLoad);
-
-    };
+    }
 
     return dataToLoad;
-
   } else {
-
     return false;
-
-  };
-
+  }
 };
 
 data.wipe = {
   all: () => {
-
-    data.remove(appName);
+    data.remove(APP_NAME);
 
     data.reload.render();
-
   },
   partial: () => {
-
     bookmark.reset();
 
-    data.set(appName, JSON.stringify({
-      [appName]: true,
+    data.set(APP_NAME, JSON.stringify({
+      [APP_NAME]: true,
       version: version.number,
       state: state.get.default(),
       bookmark: bookmark.all
     }));
 
     data.reload.render();
-
   }
 };
 
 data.reload = {
   render: () => {
-    location.reload();
+    window.location.reload();
   }
 };
 
 data.clear = {
   all: {
     render: () => {
-
       const clearModal = new Modal({
-        heading: 'Clear all ' + appName + ' data?',
+        heading: 'Clear all ' + APP_NAME + ' data?',
         content: node('div', [
-          node('p:Are you sure you want to clear all ' + appName + ' Bookmarks and Settings? ' + appName + ' will be restore to the default state.'),
+          node('p:Are you sure you want to clear all ' + APP_NAME + ' Bookmarks and Settings? ' + APP_NAME + ' will be restore to the default state.'),
           node('p:This can not be undone.')
         ]),
         successText: 'Clear all data',
@@ -436,16 +353,14 @@ data.clear = {
       });
 
       clearModal.open();
-
     }
   },
   partial: {
     render: () => {
-
       const clearModal = new Modal({
-        heading: 'Clear ' + appName + ' data except bookmarks?',
+        heading: 'Clear ' + APP_NAME + ' data except bookmarks?',
         content: node('div', [
-          node('p:Are you sure you want to clear all ' + appName + ' Settings? ' + appName + ' will be restore to the default state but your Bookmarks and Groups will remain.'),
+          node('p:Are you sure you want to clear all ' + APP_NAME + ' Settings? ' + APP_NAME + ' will be restore to the default state but your Bookmarks and Groups will remain.'),
           node('p:This can not be undone.')
         ]),
         successText: 'Clear all except bookmarks',
@@ -456,7 +371,6 @@ data.clear = {
       });
 
       clearModal.open();
-
     }
   }
 };
@@ -477,36 +391,34 @@ data.feedback.clear = {
 
 data.feedback.success = {
   render: (feedback, filename, action) => {
-
-    feedback.appendChild(node('p:Success! Restoring ' + appName + ' Bookmarks and Settings.|class:muted small'));
+    feedback.appendChild(node('p:Success! Restoring ' + APP_NAME + ' Bookmarks and Settings.|class:muted small'));
 
     feedback.appendChild(node('p:' + filename));
 
     if (action) {
       data.feedback.animation.set.render(feedback, 'is-pop', action);
-    };
-
+    }
   }
 };
 
 data.feedback.fail = {
   notJson: {
     render: (feedback, filename) => {
-      feedback.appendChild(node('p:Not a JSON file. Make sure the selected file came from ' + appName + '.|class:small muted'));
+      feedback.appendChild(node('p:Not a JSON file. Make sure the selected file came from ' + APP_NAME + '.|class:small muted'));
       feedback.appendChild(complexNode({ tag: 'p', text: filename }));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
   },
   notAppJson: {
     render: (feedback, filename) => {
-      feedback.appendChild(node('p:Not the right kind of JSON file. Make sure the selected file came from ' + appName + '.|class:small muted'));
+      feedback.appendChild(node('p:Not the right kind of JSON file. Make sure the selected file came from ' + APP_NAME + '.|class:small muted'));
       feedback.appendChild(complexNode({ tag: 'p', text: filename }));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
   },
   notClipboardJson: {
     render: (feedback, name) => {
-      feedback.appendChild(node('p:Not the right kind of data. Make sure the clipboard holds data from ' + appName + ' or a ' + appName + ' backup JSON file.|class:small muted'));
+      feedback.appendChild(node('p:Not the right kind of data. Make sure the clipboard holds data from ' + APP_NAME + ' or a ' + APP_NAME + ' backup JSON file.|class:small muted'));
       feedback.appendChild(node('p:' + name));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
@@ -521,7 +433,7 @@ data.feedback.animation = {
       const animationEndAction = () => {
         if (action) {
           action();
-        };
+        }
         data.feedback.animation.reset.render(feedback);
       };
 

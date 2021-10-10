@@ -20,55 +20,55 @@ export const range = ({
 
   if (id) {
     input.setAttribute('id', id);
-  };
+  }
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       input.classList.add(item);
     });
 
-  };
+  }
 
   if (func) {
 
-    input.addEventListener('input', (event) => {
+    input.addEventListener('input', () => {
       func();
     });
 
-  };
+  }
 
   if (focusFunc) {
 
-    input.addEventListener('focus', (event) => {
+    input.addEventListener('focus', () => {
       focusFunc();
     });
 
-  };
+  }
 
   if (blurFunc) {
 
-    input.addEventListener('blur', (event) => {
+    input.addEventListener('blur', () => {
       blurFunc();
     });
 
-  };
+  }
 
   if (mouseDownFunc) {
 
-    input.addEventListener('mousedown', (event) => {
+    input.addEventListener('mousedown', () => {
       mouseDownFunc();
     });
 
-  };
+  }
 
   if (mouseUpFunc) {
 
-    input.addEventListener('mouseup', (event) => {
+    input.addEventListener('mouseup', () => {
       mouseUpFunc();
     });
 
-  };
+  }
 
   return input;
 

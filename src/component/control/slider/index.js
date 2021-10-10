@@ -1,20 +1,13 @@
-import { state } from '../../state';
-import { data } from '../../data';
-import { bookmark } from '../../bookmark';
 
 import * as form from '../../form';
 
 import { Button } from '../../button';
-import { Collapse } from '../../collapse';
 
-import { node } from '../../../utility/node';
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
-import { convertColor } from '../../../utility/convertColor';
-import { isValidString } from '../../../utility/isValidString';
 import { minMax } from '../../../utility/minMax';
 
-export const Control_slider = function({
+export const Control_slider = function ({
   object = {},
   path = false,
   id = 'name',
@@ -58,9 +51,9 @@ export const Control_slider = function({
         classList.push('input-range-contrast-spectrum');
         break;
 
-    };
+    }
 
-  };
+  }
 
   this.range = form.input.range({
     id: id,
@@ -75,11 +68,11 @@ export const Control_slider = function({
 
         set({ object: object, path: path, value: this.value() });
 
-      };
+      }
 
-      if (sliderAction) { sliderAction(); };
+      if (sliderAction) { sliderAction(); }
 
-      if (action) { action(); };
+      if (action) { action(); }
 
       this.updateNumber();
 
@@ -109,11 +102,11 @@ export const Control_slider = function({
           })
         });
 
-      };
+      }
 
-      if (numberAction) { numberAction(); };
+      if (numberAction) { numberAction(); }
 
-      if (action) { this.action({ delay: true }) };
+      if (action) { this.action({ delay: true }); }
 
       this.updateRange();
 
@@ -136,9 +129,9 @@ export const Control_slider = function({
         value: JSON.parse(JSON.stringify(defaultValue))
       });
 
-      if (action) { action(); };
+      if (action) { action(); }
 
-      if (resetAction) { resetAction(); };
+      if (resetAction) { resetAction(); }
 
       this.update();
 
@@ -161,7 +154,7 @@ export const Control_slider = function({
     } else {
       this.delayedAction = null;
       delayedAction();
-    };
+    }
 
   };
 
@@ -183,7 +176,7 @@ export const Control_slider = function({
     } else {
       this.delayedUpdateRange = null;
       updateControl();
-    };
+    }
 
   };
 
@@ -201,7 +194,7 @@ export const Control_slider = function({
     } else {
       this.delayedUpdateNumber = null;
       updateControl();
-    };
+    }
 
   };
 
@@ -228,7 +221,7 @@ export const Control_slider = function({
 
     if (defaultValue || (typeof defaultValue === 'number' && defaultValue === 0)) {
       formGroup.appendChild(this.reset.button);
-    };
+    }
 
     const formInline = form.inline({
       block: true,

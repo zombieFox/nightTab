@@ -6,7 +6,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Button = function({
+export const Button = function ({
   text = 'Button',
   srOnly = false,
   iconName = false,
@@ -26,10 +26,10 @@ export const Button = function({
 
     if (srOnly) {
       buttonText.classList.add('sr-only');
-    };
+    }
 
     this.button.appendChild(buttonText);
-  };
+  }
 
   if (iconName) {
 
@@ -44,13 +44,13 @@ export const Button = function({
         this.button.prepend(icon.render(iconName));
         break;
 
-    };
+    }
 
-  };
+  }
 
   if (block) {
     this.button.classList.add('button-block');
-  };
+  }
 
   switch (size) {
     case 'small':
@@ -60,23 +60,23 @@ export const Button = function({
     case 'large':
       this.button.classList.add('button-large');
       break;
-  };
+  }
 
   if (title) {
     this.button.setAttribute('title', title);
-  };
+  }
 
   if (classList.length > 0) {
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       this.button.classList.add(item);
     });
-  };
+  }
 
   if (func) {
-    this.button.addEventListener('click', (event) => {
+    this.button.addEventListener('click', () => {
       func();
     });
-  };
+  }
 
   this.style = {};
 
@@ -85,7 +85,7 @@ export const Button = function({
     if (style) {
 
       if (style.length > 0) {
-        style.forEach((item, i) => {
+        style.forEach((item) => {
           switch (item) {
             case 'link':
               this.button.classList.add('button-link');
@@ -98,11 +98,11 @@ export const Button = function({
             case 'ring':
               this.button.classList.add('button-ring');
               break;
-          };
+          }
         });
-      };
+      }
 
-    };
+    }
 
   };
 

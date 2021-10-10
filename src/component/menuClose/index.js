@@ -6,7 +6,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const MenuClose = function() {
+export const MenuClose = function () {
 
   this.element = {
     close: node('div|class:menu-close')

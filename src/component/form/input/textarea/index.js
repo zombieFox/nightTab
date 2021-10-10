@@ -2,7 +2,7 @@ import { node } from '../../../../utility/node';
 
 import './index.css';
 
-export const textarea = function({
+export const textarea = function ({
   id = false,
   value = false,
   placeholder = false,
@@ -14,31 +14,31 @@ export const textarea = function({
 
   if (id) {
     textarea.setAttribute('id', id);
-  };
+  }
 
   if (value) {
     textarea.setAttribute('value', value);
-  };
+  }
 
   if (placeholder) {
     textarea.setAttribute('placeholder', placeholder);
-  };
+  }
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       textarea.classList.add(item);
     });
 
-  };
+  }
 
   if (func) {
 
-    textarea.addEventListener('input', (event) => {
+    textarea.addEventListener('input', () => {
       func();
     });
 
-  };
+  }
 
   return textarea;
 

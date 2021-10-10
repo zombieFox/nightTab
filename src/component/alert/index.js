@@ -6,7 +6,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Alert = function({
+export const Alert = function ({
   children = [],
   iconName = false
 } = {}) {
@@ -29,7 +29,7 @@ export const Alert = function({
 
       this.element.alert.appendChild(this.element.header);
 
-    };
+    }
 
     this.element.body.appendChild(this.element.message);
 

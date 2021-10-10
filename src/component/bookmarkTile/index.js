@@ -16,7 +16,7 @@ import { complexNode } from '../../utility/complexNode';
 import { isValidString } from '../../utility/isValidString';
 import { trimString } from '../../utility/trimString';
 
-const BookmarkTile = function({
+const BookmarkTile = function ({
   bookmarkData = {},
   preview = false
 } = {}) {
@@ -57,7 +57,7 @@ const BookmarkTile = function({
     control: node('div|class:bookmark-control')
   };
 
-  if (preview) { this.element.bookmark.classList.add('bookmark-preview'); };
+  if (preview) { this.element.bookmark.classList.add('bookmark-preview'); }
 
   this.control = {};
 
@@ -75,7 +75,7 @@ const BookmarkTile = function({
 
         if (bookmarkData.position.destination.item < 0) {
           bookmarkData.position.destination.item = 0;
-        };
+        }
 
         bookmark.item.mod.move(bookmarkData);
 
@@ -106,7 +106,7 @@ const BookmarkTile = function({
 
         if (bookmarkData.position.destination.item > bookmark.all[bookmarkData.position.destination.group].items.length - 1) {
           bookmarkData.position.destination.item = bookmark.all[bookmarkData.position.destination.group].items.length - 1;
-        };
+        }
 
         bookmark.item.mod.move(bookmarkData);
 
@@ -144,8 +144,7 @@ const BookmarkTile = function({
           successAction: () => {
 
             switch (newBookmarkData.group.destination) {
-              case 'new':
-
+              case 'new': {
                 newBookmarkData.position.destination.group = bookmark.all.length;
 
                 const newGroupData = new StagedGroup();
@@ -157,7 +156,8 @@ const BookmarkTile = function({
                 group.item.mod.add(newGroupData);
 
                 break;
-            };
+              }
+            }
 
             bookmark.item.mod.edit(newBookmarkData);
 
@@ -211,7 +211,7 @@ const BookmarkTile = function({
 
     for (var key in this.control.button) {
       this.control.button[key].disable();
-    };
+    }
 
     this.control.searchState();
 
@@ -221,7 +221,7 @@ const BookmarkTile = function({
 
     for (var key in this.control.button) {
       this.control.button[key].enable();
-    };
+    }
 
     this.control.searchState();
 
@@ -237,7 +237,7 @@ const BookmarkTile = function({
       this.control.button.left.enable();
       this.control.button.right.enable();
       this.control.button.sort.enable();
-    };
+    }
 
   };
 
@@ -245,27 +245,27 @@ const BookmarkTile = function({
 
     if (newBookmarkData) {
       bookmarkData = newBookmarkData;
-    };
+    }
 
     if (isValidString(bookmarkData.link.url) && !preview) {
       this.element.content.link.setAttribute('href', trimString(bookmarkData.link.url));
     } else {
       this.element.content.link.setAttribute('href', '#');
-    };
+    }
 
     if (state.get.current().bookmark.newTab && !preview) {
       this.element.content.link.setAttribute('target', '_blank');
-    };
+    }
 
     if (!preview) {
       this.element.bookmark.style.setProperty('--bookmark-transition-delay', bookmarkData.position.origin.item);
-    };
+    }
 
     this.element.bookmark.style.setProperty('--theme-bookmark-item-opacity', bookmarkData.link.color.opacity);
 
     if (bookmarkData.link.color.opacity < 100) {
       this.element.bookmark.style.setProperty('--bookmark-clip-padding', 0);
-    };
+    }
 
     if (bookmarkData.link.color.opacity < 40) {
 
@@ -275,25 +275,25 @@ const BookmarkTile = function({
 
       this.element.bookmark.classList.remove('is-bookmark-opacity-low');
 
-    };
+    }
 
     if (preview) {
       const alignment = ['top-left', 'top-center', 'top-right', 'center-left', 'center-center', 'center-right', 'bottom-left', 'bottom-center', 'bottom-right'];
 
-      alignment.forEach((item, i) => {
+      alignment.forEach((item) => {
         this.element.bookmark.classList.remove('is-bookmark-alignment-' + item);
       });
       const order = ['visual-name', 'name-visual'];
 
-      order.forEach((item, i) => {
+      order.forEach((item) => {
         this.element.bookmark.classList.remove('is-bookmark-order-' + item);
       });
       const direction = ['vertical', 'horizontal'];
 
-      direction.forEach((item, i) => {
+      direction.forEach((item) => {
         this.element.bookmark.classList.remove('is-bookmark-direction-' + item);
       });
-    };
+    }
 
     this.element.bookmark.classList.add('is-bookmark-alignment-' + bookmarkData.link.display.alignment);
 
@@ -331,7 +331,7 @@ const BookmarkTile = function({
 
       this.element.bookmark.style.setProperty('--bookmark-display-visual-color', 'var(--theme-accent)');
 
-    };
+    }
 
     if (bookmarkData.link.display.visual.shadow.size > 0) {
 
@@ -371,7 +371,7 @@ const BookmarkTile = function({
 
       this.element.bookmark.style.removeProperty('--bookmark-display-visual-shadow');
 
-    };
+    }
 
     if (bookmarkData.link.color.by == 'custom') {
 
@@ -407,7 +407,7 @@ const BookmarkTile = function({
 
       this.element.bookmark.style.setProperty('--button-link-text-active', 'var(--theme-color-text)');
 
-    };
+    }
 
     if (bookmarkData.link.background.show) {
       this.element.bookmark.style.setProperty('--bookmark-background-opacity', bookmarkData.link.background.opacity);
@@ -416,18 +416,18 @@ const BookmarkTile = function({
         case 'image':
           if (isValidString(bookmarkData.link.background.image.url)) {
             this.element.bookmark.style.setProperty('--bookmark-background-image-url', 'url("' + trimString(bookmarkData.link.background.image.url) + '")');
-          };
+          }
           break;
-      };
-    };
+      }
+    }
 
     if (bookmarkData.link.shape.tall) {
       this.element.bookmark.classList.add('bookmark-tall');
-    };
+    }
 
     if (bookmarkData.link.shape.wide) {
       this.element.bookmark.classList.add('bookmark-wide');
-    };
+    }
 
   };
 
@@ -440,7 +440,7 @@ const BookmarkTile = function({
             if (isValidString(bookmarkData.link.display.visual.letter.text)) {
               this.element.content.display.visual.visual.appendChild(this.element.content.display.visual.letter);
               this.element.content.display.display.appendChild(this.element.content.display.visual.visual);
-            };
+            }
             break;
 
           case 'icon':
@@ -448,27 +448,27 @@ const BookmarkTile = function({
               this.element.content.display.visual.icon.appendChild(this.element.content.display.visual.faIcon);
               this.element.content.display.visual.visual.appendChild(this.element.content.display.visual.icon);
               this.element.content.display.display.appendChild(this.element.content.display.visual.visual);
-            };
+            }
             break;
 
           case 'image':
             if (isValidString(bookmarkData.link.display.visual.image.url)) {
               this.element.content.display.visual.visual.appendChild(this.element.content.display.visual.image);
               this.element.content.display.display.appendChild(this.element.content.display.visual.visual);
-            };
+            }
             break;
-        };
-      };
+        }
+      }
 
       if (bookmarkData.link.display.name.show && isValidString(bookmarkData.link.display.name.text)) {
         this.element.content.display.name.name.appendChild(this.element.content.display.name.text);
         this.element.content.display.display.appendChild(this.element.content.display.name.name);
-      };
+      }
 
       this.element.content.display.wrap.appendChild(this.element.content.display.display);
 
       this.element.content.link.appendChild(this.element.content.display.wrap);
-    };
+    }
 
     if (bookmarkData.link.background.show) {
 
@@ -492,14 +492,14 @@ const BookmarkTile = function({
 
             this.element.content.background.video.appendChild(this.video.video);
 
-          };
+          }
 
           break;
-      };
+      }
 
       this.element.content.link.appendChild(this.element.content.background.wrap);
 
-    };
+    }
 
     this.element.bookmark.appendChild(this.element.front);
 
@@ -521,7 +521,7 @@ const BookmarkTile = function({
 
     if (isValidString(bookmarkData.link.url)) {
 
-      this.element.url.text.textContent = trimString(bookmarkData.link.url).replace(/^https?\:\/\//i, '').replace('www.', '').replace(/\/+$/, '');
+      this.element.url.text.textContent = trimString(bookmarkData.link.url).replace(/^https?:\/\//i, '').replace('www.', '').replace(/\/+$/, '');
 
       this.element.url.text.title = trimString(bookmarkData.link.url);
 
@@ -529,13 +529,13 @@ const BookmarkTile = function({
 
       this.element.back.appendChild(this.element.url.url);
 
-    };
+    }
 
     if (state.get.current().bookmark.edit) {
       this.control.enable();
     } else {
       this.control.disable();
-    };
+    }
 
   };
 

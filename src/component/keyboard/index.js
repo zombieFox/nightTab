@@ -22,7 +22,7 @@ keyboard.esc = new KeyboardShortcut({
       group.edit.close();
       header.edit.close();
       toolbar.current.update.edit();
-    };
+    }
     data.save();
   }
 });
@@ -35,7 +35,7 @@ keyboard.ctrAltD = new KeyboardShortcut({
     theme.style.toggle();
     if (themeSetting.control.style.update) {
       themeSetting.control.style.update();
-    };
+    }
     data.save();
   }
 });
@@ -47,7 +47,7 @@ keyboard.ctrAltA = new KeyboardShortcut({
   action: () => {
     if (!state.get.current().bookmark.add) {
       bookmark.add.render();
-    };
+    }
   }
 });
 
@@ -71,7 +71,7 @@ keyboard.ctrAltG = new KeyboardShortcut({
   action: () => {
     if (!state.get.current().group.add) {
       group.add.render();
-    };
+    }
     data.save();
   }
 });
@@ -94,7 +94,7 @@ keyboard.ctrAltR = new KeyboardShortcut({
     toolbar.current.update.accent();
     if (themeSetting.control.accent.color) {
       themeSetting.control.accent.color.update();
-    };
+    }
     applyCSSVar([
       'theme.accent.rgb.r',
       'theme.accent.rgb.g',

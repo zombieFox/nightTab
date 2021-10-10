@@ -16,39 +16,39 @@ export const text = ({
 
   if (id) {
     input.setAttribute('id', id);
-  };
+  }
 
   if (value) {
     input.setAttribute('value', value);
-  };
+  }
 
   if (typeof min === 'number') {
     input.setAttribute('minlength', min);
-  };
+  }
 
   if (typeof max === 'number') {
     input.setAttribute('maxlength', max);
-  };
+  }
 
   if (placeholder) {
     input.setAttribute('placeholder', placeholder);
-  };
+  }
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       input.classList.add(item);
     });
 
-  };
+  }
 
   if (func) {
 
-    input.addEventListener('input', (event) => {
+    input.addEventListener('input', () => {
       func();
     });
 
-  };
+  }
 
   return input;
 

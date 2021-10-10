@@ -1,6 +1,5 @@
 import { state } from '../state';
-import { data } from '../data';
-import { appName } from '../appName';
+import { APP_NAME } from '../../constant';
 import { toolbar } from '../toolbar';
 import { bookmark } from '../bookmark';
 import { bookmarkDefault } from '../bookmarkDefault';
@@ -47,7 +46,7 @@ theme.font.display = {
         google: { families: [trimString(displayFont) + ':100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i'] }
       });
 
-    };
+    }
 
     theme.font.display.render();
 
@@ -64,7 +63,7 @@ theme.font.display = {
 
       html.style.removeProperty('--theme-font-display-name');
 
-    };
+    }
 
   }
 };
@@ -89,7 +88,7 @@ theme.font.ui = {
         google: { families: [trimString(uiFont) + ':100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i'] }
       });
 
-    };
+    }
 
     theme.font.ui.render();
 
@@ -106,17 +105,14 @@ theme.font.ui = {
 
       html.style.removeProperty('--theme-font-ui-name');
 
-    };
+    }
 
   }
 };
 
 theme.color = {
   render: () => {
-
     const html = document.querySelector('html');
-
-    const head = document.querySelector('head');
 
     let shades = (state.get.current().theme.color.contrast.end - state.get.current().theme.color.contrast.start) / (state.get.current().theme.color.shades - 1);
 
@@ -130,21 +126,21 @@ theme.color = {
 
         let rgb = convertColor.hsl.rgb(hsl);
 
-        for (var key in rgb) {
+        for (let key in rgb) {
           html.style.setProperty(`--theme-${type}-${i + 1}-${key}`, rgb[key]);
-        };
+        }
 
-        for (var key in hsl) {
+        for (let key in hsl) {
           html.style.setProperty(`--theme-${type}-${i + 1}-${key}`, hsl[key]);
-        };
+        }
 
-      };
+      }
 
-    };
+    }
 
     for (let i = 1; i <= state.get.current().theme.color.shades; i++) {
       html.style.setProperty(`--theme-primary-${i}`, `var(--theme-primary-${i}-h), calc(var(--theme-primary-${i}-s) * 1%), calc(var(--theme-primary-${i}-l) * 1%)`);
-    };
+    }
 
   }
 };
@@ -172,7 +168,7 @@ theme.accent.random = {
 
       state.get.current().theme.accent.hsl = hsl;
 
-    };
+    }
 
   }
 };
@@ -184,11 +180,11 @@ theme.accent.rainbow = {
 
     let degree = 0;
 
-    bookmark.all.forEach((item, i) => {
+    bookmark.all.forEach((item) => {
 
-      item.items.forEach((item, i) => {
+      item.items.forEach((item) => {
 
-        item.accent.by = "custom";
+        item.accent.by = 'custom';
 
         item.accent.hsl = { h: Math.round(degree), s: 100, l: 50 };
 
@@ -205,9 +201,9 @@ theme.accent.rainbow = {
   },
   clear: () => {
 
-    bookmark.all.forEach((item, i) => {
+    bookmark.all.forEach((item) => {
 
-      item.items.forEach((item, i) => {
+      item.items.forEach((item) => {
 
         item.accent = JSON.parse(JSON.stringify(bookmarkDefault.accent));
 
@@ -234,11 +230,11 @@ theme.accent.cycle = {
 
         if (state.get.current().menu) {
           themeSetting.control.accent.color.update();
-        };
+        }
 
         if (state.get.current().toolbar.accent.show) {
           toolbar.current.update.accent();
-        };
+        }
 
       }, state.get.current().theme.accent.cycle.speed);
 
@@ -248,14 +244,14 @@ theme.accent.cycle = {
 
       theme.accent.cycle.timer = false;
 
-    };
+    }
 
   },
   render: () => {
 
     let newValue = state.get.current().theme.accent.hsl.h + state.get.current().theme.accent.cycle.step;
 
-    if (newValue > 359) { newValue = 0; };
+    if (newValue > 359) { newValue = 0; }
 
     state.get.current().theme.accent.hsl.h = newValue;
 
@@ -275,7 +271,7 @@ theme.accent.cycle = {
 
 theme.style = {
   bind: () => {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
       theme.style.initial();
     });
   },
@@ -285,19 +281,19 @@ theme.style = {
       case 'dark':
       case 'light':
 
-        localStorage.setItem(appName + 'Style', state.get.current().theme.style);
+        localStorage.setItem(APP_NAME + 'Style', state.get.current().theme.style);
         break;
 
       case 'system':
 
         if (window.matchMedia('(prefers-color-scheme:dark)').matches) {
-          localStorage.setItem(appName + 'Style', 'dark');
+          localStorage.setItem(APP_NAME + 'Style', 'dark');
         } else if (window.matchMedia('(prefers-color-scheme:light)').matches) {
-          localStorage.setItem(appName + 'Style', 'light');
-        };
+          localStorage.setItem(APP_NAME + 'Style', 'light');
+        }
         break;
 
-    };
+    }
   },
   dark: () => {
     state.get.current().theme.style = 'dark';
@@ -320,7 +316,7 @@ theme.style = {
         theme.style.dark();
         break;
 
-    };
+    }
   }
 };
 
@@ -351,10 +347,7 @@ theme.background = {
 
 theme.background.area = {
   render: () => {
-
-    const backgroundElement = node('div|class:background');
-
-    state.get.option().theme.background.type.forEach((item, i) => {
+    state.get.option().theme.background.type.forEach((item) => {
 
       switch (item) {
 
@@ -380,7 +373,7 @@ theme.background.area = {
 
           theme.background.element.background.appendChild(theme.background.element.type[item]);
 
-      };
+      }
 
     });
 
@@ -404,7 +397,7 @@ theme.background.image = {
 
       html.style.removeProperty('--theme-background-image');
 
-    };
+    }
 
   }
 };
@@ -426,7 +419,7 @@ theme.background.video = {
 
       theme.background.video.clear();
 
-    };
+    }
 
   },
   clear: () => {
@@ -437,7 +430,7 @@ theme.background.video = {
 
       clearChildNode(theme.background.element.type.video.wrap);
 
-    };
+    }
 
   }
 };

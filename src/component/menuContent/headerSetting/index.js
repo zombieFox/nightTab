@@ -1,42 +1,25 @@
 import { state } from '../../state';
 import { data } from '../../data';
 import { header } from '../../header';
-import { bookmark } from '../../bookmark';
-import { theme } from '../../theme';
-import { version } from '../../version';
-import { menu } from '../../menu';
-import { icon } from '../../icon';
-import { logo } from '../../logo';
 import { layout } from '../../layout';
-import { toolbar } from '../../toolbar';
 import { searchEnginePreset } from '../../searchEnginePreset';
-import { appName } from '../../appName';
+import { APP_NAME } from '../../../constant';
 
 import * as form from '../../form';
 
-import { Button } from '../../button';
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
-import { Alert } from '../../alert';
 import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
-import { Control_inputButton } from '../../control/inputButton';
-import { Control_groupText } from '../../control/groupText';
 import { Control_radio } from '../../control/radio';
 import { Control_radioGrid } from '../../control/radioGrid';
 import { Control_checkbox } from '../../control/checkbox';
-import { Control_slider } from '../../control/slider';
 import { Control_sliderSlim } from '../../control/sliderSlim';
-import { Control_sliderDouble } from '../../control/sliderDouble';
-import { Control_colorMixer } from '../../control/colorMixer';
-import { Control_color } from '../../control/color';
 import { Control_text } from '../../control/text';
 import { Control_textReset } from '../../control/textReset';
-import { Control_textarea } from '../../control/textarea';
 
 import { node } from '../../../utility/node';
-import { complexNode } from '../../../utility/complexNode';
 import { applyCSSVar } from '../../../utility/applyCSSVar';
 import { applyCSSClass } from '../../../utility/applyCSSClass';
 import { applyCSSState } from '../../../utility/applyCSSState';
@@ -64,7 +47,7 @@ headerSetting.disable = () => {
     headerSetting.control.greeting.newLine.disable();
     headerSetting.control.greeting.type.disable();
     headerSetting.control.greeting.name.disable();
-  };
+  }
 
   if (state.get.current().header.greeting.show) {
 
@@ -80,13 +63,13 @@ headerSetting.disable = () => {
         headerSetting.control.greeting.custom.text.enable();
         break;
 
-    };
+    }
 
   } else {
 
     headerSetting.control.greeting.custom.text.disable();
 
-  };
+  }
 
   if (state.get.current().header.clock.second.show ||
     state.get.current().header.clock.minute.show ||
@@ -100,25 +83,25 @@ headerSetting.disable = () => {
       headerSetting.control.clock.second.display.enable();
     } else {
       headerSetting.control.clock.second.display.disable();
-    };
+    }
 
     if (state.get.current().header.clock.hour.show) {
       headerSetting.control.clock.hour.display.enable();
     } else {
       headerSetting.control.clock.hour.display.disable();
-    };
+    }
 
     if (state.get.current().header.clock.second.show) {
       headerSetting.control.clock.second.display.enable();
     } else {
       headerSetting.control.clock.second.display.disable();
-    };
+    }
 
     if (state.get.current().header.clock.hour24.show) {
       headerSetting.control.clock.meridiem.show.disable();
     } else {
       headerSetting.control.clock.meridiem.show.enable();
-    };
+    }
 
   } else {
 
@@ -127,7 +110,7 @@ headerSetting.disable = () => {
     headerSetting.control.clock.size.disable();
     headerSetting.control.clock.newLine.disable();
 
-  };
+  }
 
   if ([state.get.current().header.clock.second.show, state.get.current().header.clock.minute.show, state.get.current().header.clock.hour.show].filter(Boolean).length > 1) {
 
@@ -137,7 +120,7 @@ headerSetting.disable = () => {
 
     headerSetting.control.clock.separator.show.disable();
 
-  };
+  }
 
   if (
     [state.get.current().header.clock.second.show, state.get.current().header.clock.minute.show, state.get.current().header.clock.hour.show].filter(Boolean).length > 1 &&
@@ -150,7 +133,7 @@ headerSetting.disable = () => {
 
     headerSetting.control.clock.separator.text.disable();
 
-  };
+  }
 
   if (
     (state.get.current().header.clock.second.show && state.get.current().header.clock.minute.show) ||
@@ -164,7 +147,7 @@ headerSetting.disable = () => {
 
     headerSetting.control.clock.separator.show.disable();
 
-  };
+  }
 
   if (
     ((state.get.current().header.clock.second.show && state.get.current().header.clock.minute.show) ||
@@ -179,7 +162,7 @@ headerSetting.disable = () => {
 
     headerSetting.control.clock.separator.text.disable();
 
-  };
+  }
 
   if (state.get.current().header.date.day.show ||
     state.get.current().header.date.date.show ||
@@ -194,7 +177,7 @@ headerSetting.disable = () => {
     headerSetting.control.date.size.disable();
     headerSetting.control.date.newLine.disable();
 
-  };
+  }
 
   if (state.get.current().header.date.date.show && state.get.current().header.date.month.show) {
 
@@ -204,7 +187,7 @@ headerSetting.disable = () => {
 
     headerSetting.control.date.format.disable();
 
-  };
+  }
 
   if (state.get.current().header.date.day.show) {
 
@@ -222,7 +205,7 @@ headerSetting.disable = () => {
         headerSetting.control.date.day.weekStart.enable();
         break;
 
-    };
+    }
 
   } else {
 
@@ -230,7 +213,7 @@ headerSetting.disable = () => {
     headerSetting.control.date.day.length.disable();
     headerSetting.control.date.day.weekStart.disable();
 
-  };
+  }
 
   if (state.get.current().header.date.date.show) {
 
@@ -242,7 +225,7 @@ headerSetting.disable = () => {
     headerSetting.control.date.date.display.disable();
     headerSetting.control.date.date.ordinal.disable();
 
-  };
+  }
 
   if (state.get.current().header.date.month.show) {
 
@@ -258,7 +241,7 @@ headerSetting.disable = () => {
         headerSetting.control.date.month.length.disable();
         break;
 
-    };
+    }
 
     headerSetting.control.date.month.display.enable();
 
@@ -268,7 +251,7 @@ headerSetting.disable = () => {
     headerSetting.control.date.month.ordinal.disable();
     headerSetting.control.date.month.length.disable();
 
-  };
+  }
 
   if (state.get.current().header.date.year.show) {
 
@@ -278,7 +261,7 @@ headerSetting.disable = () => {
 
     headerSetting.control.date.year.display.disable();
 
-  };
+  }
 
   if ([state.get.current().header.date.day.show, state.get.current().header.date.date.show, state.get.current().header.date.month.show, state.get.current().header.date.year.show].filter(Boolean).length > 1) {
 
@@ -288,7 +271,7 @@ headerSetting.disable = () => {
 
     headerSetting.control.date.separator.show.disable();
 
-  };
+  }
 
   if (
     [state.get.current().header.date.day.show, state.get.current().header.date.date.show, state.get.current().header.date.month.show, state.get.current().header.date.year.show].filter(Boolean).length > 1 &&
@@ -301,7 +284,7 @@ headerSetting.disable = () => {
 
     headerSetting.control.date.separator.text.disable();
 
-  };
+  }
 
   if (
     state.get.current().header.clock.second.show ||
@@ -317,17 +300,17 @@ headerSetting.disable = () => {
   } else {
     headerSetting.control.transitional.show.disable();
     headerSetting.control.transitional.newLine.disable();
-  };
+  }
 
   if ((
-      state.get.current().header.clock.second.show ||
-      state.get.current().header.clock.minute.show ||
-      state.get.current().header.clock.hour.show ||
-      state.get.current().header.date.day.show ||
-      state.get.current().header.date.date.show ||
-      state.get.current().header.date.month.show ||
-      state.get.current().header.date.year.show
-    ) &&
+    state.get.current().header.clock.second.show ||
+    state.get.current().header.clock.minute.show ||
+    state.get.current().header.clock.hour.show ||
+    state.get.current().header.date.day.show ||
+    state.get.current().header.date.date.show ||
+    state.get.current().header.date.month.show ||
+    state.get.current().header.date.year.show
+  ) &&
     state.get.current().header.transitional.show) {
     headerSetting.control.transitional.type.enable();
     headerSetting.control.transitional.size.enable();
@@ -336,7 +319,7 @@ headerSetting.disable = () => {
     headerSetting.control.transitional.type.disable();
     headerSetting.control.transitional.size.disable();
     headerSetting.control.transitional.newLine.disable();
-  };
+  }
 
   if (state.get.current().header.search.show) {
     headerSetting.control.search.width.by.enable();
@@ -348,7 +331,7 @@ headerSetting.disable = () => {
     headerSetting.control.search.newTab.disable();
     headerSetting.control.search.size.disable();
     headerSetting.control.search.newLine.disable();
-  };
+  }
 
   if (state.get.current().header.search.show) {
 
@@ -363,13 +346,13 @@ headerSetting.disable = () => {
         headerSetting.control.search.width.size.enable();
         break;
 
-    };
+    }
 
   } else {
 
     headerSetting.control.search.width.size.disable();
 
-  };
+  }
 
   switch (state.get.current().header.search.engine.selected) {
 
@@ -389,7 +372,7 @@ headerSetting.disable = () => {
       headerSetting.control.search.engine.custom.queryNameHelper.disable();
       break;
 
-  };
+  }
 
 };
 
@@ -406,11 +389,11 @@ headerSetting.update = () => {
 
   for (let key in headerSetting.control) {
 
-    headerSetting.control[key].forEach((item, i) => {
+    headerSetting.control[key].forEach((item) => {
       item.update();
     });
 
-  };
+  }
 
 };
 
@@ -435,7 +418,7 @@ headerSetting.alignment = (parent) => {
 
   headerSetting.alignment.alignmentHelper = new Control_helperText({
     complexText: true,
-    text: [`Effects may not be visible if the ${(new Link({ text:'Search box size', href: '#menu-content-item-search'})).link().outerHTML} size is set to Auto and grows to fill available space.`]
+    text: [`Effects may not be visible if the ${(new Link({ text: 'Search box size', href: '#menu-content-item-search' })).link().outerHTML} size is set to Auto and grows to fill available space.`]
   });
 
   parent.appendChild(
@@ -456,7 +439,7 @@ headerSetting.greeting = (parent) => {
     path: 'header.greeting.show',
     id: 'header-greeting-show',
     labelText: 'Show Greeting',
-    action: function() {
+    action: function () {
       header.item.mod.order();
       header.item.clear();
       header.item.render();
@@ -500,7 +483,7 @@ headerSetting.greeting = (parent) => {
     id: 'header-greeting-newLine',
     labelText: 'New line',
     description: 'Force on to a new line and seperate from other Header items.',
-    action: function() {
+    action: function () {
       applyCSSState('header.greeting.newLine');
       data.save();
     }
@@ -669,7 +652,7 @@ headerSetting.transitional = (parent) => {
     id: 'header-transitional-newLine',
     labelText: 'New line',
     description: 'Force on to a new line and seperate from other Header items.',
-    action: function() {
+    action: function () {
       applyCSSState('header.transitional.newLine');
       data.save();
     }
@@ -885,7 +868,7 @@ headerSetting.clock = (parent) => {
       path: 'header.clock.hour24.show',
       id: 'header-clock-hour24-show',
       labelText: '24 hours',
-      action: function() {
+      action: function () {
         header.element.clock.update();
         headerSetting.disable();
         data.save();
@@ -899,7 +882,7 @@ headerSetting.clock = (parent) => {
       path: 'header.clock.meridiem.show',
       id: 'header-clock-meridiem-show',
       labelText: 'AM / PM',
-      action: function() {
+      action: function () {
         header.element.clock.update();
         data.save();
       }
@@ -934,7 +917,7 @@ headerSetting.clock = (parent) => {
     id: 'header-clock-newLine',
     labelText: 'New line',
     description: 'Force on to a new line and seperate from other Header items.',
-    action: function() {
+    action: function () {
       applyCSSState('header.clock.newLine');
       data.save();
     }
@@ -1483,7 +1466,7 @@ headerSetting.date = (parent) => {
     id: 'header-date-newLine',
     labelText: 'New line',
     description: 'Force on to a new line and seperate from other Header items.',
-    action: function() {
+    action: function () {
       applyCSSState('header.date.newLine');
       data.save();
     }
@@ -1593,7 +1576,7 @@ headerSetting.search = (parent) => {
     path: 'header.search.newTab',
     id: 'header-search-newTab',
     labelText: 'Open Search results in a new tab',
-    action: function() {
+    action: function () {
       header.item.mod.order();
       header.item.clear();
       header.item.render();
@@ -1613,7 +1596,7 @@ headerSetting.search = (parent) => {
     id: 'header-search-newLine',
     labelText: 'New line',
     description: 'Force on to a new line and seperate from other Header items.',
-    action: function() {
+    action: function () {
       applyCSSState('header.search.newLine');
       data.save();
     }
@@ -1625,9 +1608,9 @@ headerSetting.search = (parent) => {
 
     searchEngineList.push({ id: `header-search-engine-selected-${key}`, labelText: searchEnginePreset[key].name, value: key });
 
-  };
+  }
 
-  searchEngineList.push({ id: 'header-search-engine-selected-custom', labelText: 'Custom', value: 'custom' })
+  searchEngineList.push({ id: 'header-search-engine-selected-custom', labelText: 'Custom', value: 'custom' });
 
   headerSetting.control.search.engine = {
     selected: new Control_radio({
@@ -1693,7 +1676,7 @@ headerSetting.search = (parent) => {
         }
       }),
       urlHelper: new Control_helperText({
-        text: ['Enter a web address with the search parameters, eg: "https://vimeo.com/search?q="', appName + ' will add the search term entered into the Search box at the end of the above URL.']
+        text: ['Enter a web address with the search parameters, eg: "https://vimeo.com/search?q="', APP_NAME + ' will add the search term entered into the Search box at the end of the above URL.']
       }),
       queryName: new Control_text({
         object: state.get.current(),
@@ -1867,4 +1850,4 @@ headerSetting.search = (parent) => {
 
 };
 
-export { headerSetting }
+export { headerSetting };

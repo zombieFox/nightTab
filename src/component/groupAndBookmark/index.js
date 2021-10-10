@@ -1,4 +1,3 @@
-import { data } from '../data';
 import { state } from '../state';
 import { bookmark } from '../bookmark';
 import { group } from '../group';
@@ -21,17 +20,17 @@ groupAndBookmark.render = () => {
 
       group.sort.sortable.option('disabled', true);
 
-    };
+    }
 
     if (bookmark.sort.sortable.length > 0) {
 
-      bookmark.sort.sortable.forEach((item, i) => {
+      bookmark.sort.sortable.forEach((item) => {
 
         item.option('disabled', true);
 
       });
 
-    };
+    }
 
 
   } else {
@@ -40,7 +39,7 @@ groupAndBookmark.render = () => {
 
     bookmark.sort.bind();
 
-  };
+  }
 
 };
 

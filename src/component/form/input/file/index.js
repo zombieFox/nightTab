@@ -12,23 +12,23 @@ export const file = ({
 
   if (id) {
     input.setAttribute('id', id);
-  };
+  }
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       input.classList.add(item);
     });
 
-  };
+  }
 
   if (func) {
 
-    input.addEventListener('change', (event) => {
+    input.addEventListener('change', () => {
       func();
     });
 
-  };
+  }
 
   return input;
 

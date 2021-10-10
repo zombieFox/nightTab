@@ -1,7 +1,6 @@
 import { state } from '../state';
 
 import { node } from '../../utility/node';
-import { ordinalWord } from '../../utility/ordinalWord';
 import { wordNumber } from '../../utility/wordNumber';
 import { trimString } from '../../utility/trimString';
 import { isValidString } from '../../utility/isValidString';
@@ -12,7 +11,7 @@ import moment from 'moment';
 
 import './index.css';
 
-export const Clock = function({} = {}) {
+export const Clock = function () {
 
   this.now;
 
@@ -48,17 +47,17 @@ export const Clock = function({} = {}) {
 
         if (!state.get.current().header.clock.hour24.show && this.now.hours() > 12) {
           value = value - 12;
-        };
+        }
 
         if (!state.get.current().header.clock.hour24.show && this.now.hours() == 0) {
           value = 12;
-        };
+        }
 
         value = wordNumber(value);
 
         if (state.get.current().header.clock.hour24.show && this.now.hours() > 0 && this.now.hours() < 10) {
           value = 'Zero ' + value;
-        };
+        }
 
         break;
 
@@ -68,19 +67,19 @@ export const Clock = function({} = {}) {
 
         if (!state.get.current().header.clock.hour24.show && this.now.hours() > 12) {
           value = value - 12;
-        };
+        }
 
         if (!state.get.current().header.clock.hour24.show && this.now.hours() == 0) {
           value = 12;
-        };
+        }
 
         if (state.get.current().header.clock.hour24.show && this.now.hours() < 10) {
           value = '0' + value;
-        };
+        }
 
         break;
 
-    };
+    }
 
     return value;
 
@@ -98,7 +97,7 @@ export const Clock = function({} = {}) {
 
         if (this.now.minutes() > 0 && this.now.minutes() < 10) {
           value = 'Zero ' + value;
-        };
+        }
 
         break;
 
@@ -108,11 +107,11 @@ export const Clock = function({} = {}) {
 
         if (this.now.minutes() < 10) {
           value = '0' + value;
-        };
+        }
 
         break;
 
-    };
+    }
 
     return value;
 
@@ -130,7 +129,7 @@ export const Clock = function({} = {}) {
 
         if (this.now.seconds() > 0 && this.now.seconds() < 10) {
           value = 'Zero ' + value;
-        };
+        }
 
         break;
 
@@ -140,11 +139,11 @@ export const Clock = function({} = {}) {
 
         if (this.now.seconds() < 10) {
           value = '0' + value;
-        };
+        }
 
         break;
 
-    };
+    }
 
     return value;
 
@@ -162,19 +161,19 @@ export const Clock = function({} = {}) {
 
     if (state.get.current().header.clock.hour.show) {
       this.element.clock.appendChild(this.element.hour);
-    };
+    }
 
     if (state.get.current().header.clock.minute.show) {
       this.element.clock.appendChild(this.element.minute);
-    };
+    }
 
     if (state.get.current().header.clock.second.show) {
       this.element.clock.appendChild(this.element.second);
-    };
+    }
 
     if (!state.get.current().header.clock.hour24.show && state.get.current().header.clock.meridiem.show) {
       this.element.clock.appendChild(this.element.meridiem);
-    };
+    }
 
     if (state.get.current().header.clock.separator.show) {
 
@@ -184,7 +183,7 @@ export const Clock = function({} = {}) {
         separatorCharacter = trimString(state.get.current().header.clock.separator.text);
       } else {
         separatorCharacter = ':';
-      };
+      }
 
       let parts = this.element.clock.querySelectorAll('span');
 
@@ -205,12 +204,12 @@ export const Clock = function({} = {}) {
 
             this.element.clock.insertBefore(separator, item);
 
-          };
+          }
         });
 
-      };
+      }
 
-    };
+    }
 
   };
 
@@ -222,19 +221,19 @@ export const Clock = function({} = {}) {
 
     if (state.get.current().header.clock.hour.show) {
       this.element.hour.innerHTML = this.string.hour();
-    };
+    }
 
     if (state.get.current().header.clock.minute.show) {
       this.element.minute.innerHTML = this.string.minute();
-    };
+    }
 
     if (state.get.current().header.clock.second.show) {
       this.element.second.innerHTML = this.string.second();
-    };
+    }
 
     if (!state.get.current().header.clock.hour24.show && state.get.current().header.clock.meridiem.show) {
       this.element.meridiem.innerHTML = this.string.meridiem();
-    };
+    }
 
   };
 

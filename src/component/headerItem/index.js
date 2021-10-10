@@ -1,6 +1,4 @@
 import { state } from '../state';
-import { data } from '../data';
-import { header } from '../header';
 
 import { Button } from '../button';
 
@@ -8,9 +6,8 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const HeaderItem = function({
+export const HeaderItem = function ({
   name = false,
-  index = false,
   child = false
 } = {}) {
 
@@ -40,13 +37,13 @@ export const HeaderItem = function({
   this.control.disable = () => {
     for (var key in this.control.button) {
       this.control.button[key].disable();
-    };
+    }
   };
 
   this.control.enable = () => {
     for (var key in this.control.button) {
       this.control.button[key].enable();
-    };
+    }
   };
 
   this.assemble = () => {
@@ -62,7 +59,7 @@ export const HeaderItem = function({
 
       this.element.content.appendChild(this.element.body);
 
-    };
+    }
 
     this.element.item.appendChild(this.element.content);
 
@@ -76,7 +73,7 @@ export const HeaderItem = function({
       this.control.enable();
     } else {
       this.control.disable();
-    };
+    }
 
     return this.element.item;
 

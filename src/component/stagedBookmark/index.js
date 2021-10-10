@@ -1,6 +1,6 @@
 import { bookmarkDefault } from '../bookmarkDefault';
 
-export const StagedBookmark = function(bookmarkData) {
+export const StagedBookmark = function (bookmarkData) {
 
   this.link = bookmarkData || JSON.parse(JSON.stringify(bookmarkDefault));
 

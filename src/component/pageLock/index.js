@@ -10,7 +10,7 @@ pageLock.render = () => {
     html.classList.add('is-scroll-disabled');
   } else {
     html.classList.remove('is-scroll-disabled');
-  };
+  }
 
 };
 

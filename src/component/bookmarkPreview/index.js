@@ -4,7 +4,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const BookmarkPreview = function({
+export const BookmarkPreview = function ({
   bookmarkData = false
 } = {}) {
 
@@ -20,19 +20,19 @@ export const BookmarkPreview = function({
       this.grid.classList.add('bookmark-preview-grid-tall');
     } else {
       this.grid.classList.remove('bookmark-preview-grid-tall');
-    };
+    }
 
     if (bookmarkData.link.shape.wide) {
       this.grid.classList.add('bookmark-preview-grid-wide');
     } else {
       this.grid.classList.remove('bookmark-preview-grid-wide');
-    };
+    }
 
     if (bookmarkData.link.shape.tall || bookmarkData.link.shape.wide) {
       this.title.textContent = 'Preview (50% scale)';
     } else {
       this.title.textContent = 'Preview';
-    };
+    }
 
   };
 

@@ -10,7 +10,7 @@ export const applyCSSClass = (path) => {
     get({
       object: state.get.option(),
       path: path
-    }).forEach((item, i) => {
+    }).forEach((item) => {
 
       html.classList.remove('is-' + path.replace(/\./g, '-').toLowerCase() + '-' + item);
 
@@ -25,12 +25,12 @@ export const applyCSSClass = (path) => {
 
   if (Array.isArray(path)) {
 
-    path.forEach((item, i) => { apply(item); });
+    path.forEach((item) => { apply(item); });
 
   } else {
 
     apply(path);
 
-  };
+  }
 
 };

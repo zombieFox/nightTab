@@ -1,5 +1,4 @@
 import { data } from '../data';
-import { state } from '../state';
 import { menu } from '../menu';
 import { bookmark } from '../bookmark';
 import { group } from '../group';
@@ -8,7 +7,6 @@ import { groupAndBookmark } from '../groupAndBookmark';
 import { StagedBookmark } from '../stagedBookmark';
 import { StagedGroup } from '../stagedGroup';
 
-import { node } from '../../utility/node';
 import { randomNumber } from '../../utility/randomNumber';
 import { convertColor } from '../../utility/convertColor';
 
@@ -30,7 +28,7 @@ easterEgg.toaster.render = () => {
 
     group.item.mod.add(newGroupData);
 
-  };
+  }
 
   const newBookmarkData = new StagedBookmark();
 

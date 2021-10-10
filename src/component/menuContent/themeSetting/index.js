@@ -4,10 +4,7 @@ import { header } from '../../header';
 import { bookmark } from '../../bookmark';
 import { group } from '../../group';
 import { theme } from '../../theme';
-import { version } from '../../version';
 import { menu } from '../../menu';
-import { icon } from '../../icon';
-import { logo } from '../../logo';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
 import { themePreset } from '../../themePreset';
@@ -21,24 +18,18 @@ import * as form from '../../form';
 
 import { Button } from '../../button';
 import { Collapse } from '../../collapse';
-import { Edge } from '../../edge';
 import { PresetThemeTile } from '../../presetThemeTile';
 import { AccentPresetButton } from '../../accentPresetButton';
 import { Alert } from '../../alert';
 import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
-import { Control_inputButton } from '../../control/inputButton';
-import { Control_groupText } from '../../control/groupText';
 import { Control_radio } from '../../control/radio';
-import { Control_radioGrid } from '../../control/radioGrid';
 import { Control_checkbox } from '../../control/checkbox';
 import { Control_slider } from '../../control/slider';
 import { Control_sliderSlim } from '../../control/sliderSlim';
 import { Control_sliderDouble } from '../../control/sliderDouble';
 import { Control_colorMixer } from '../../control/colorMixer';
-import { Control_color } from '../../control/color';
-import { Control_text } from '../../control/text';
 import { Control_textReset } from '../../control/textReset';
 import { Control_textarea } from '../../control/textarea';
 
@@ -47,7 +38,6 @@ import { complexNode } from '../../../utility/complexNode';
 import { applyCSSVar } from '../../../utility/applyCSSVar';
 import { applyCSSClass } from '../../../utility/applyCSSClass';
 import { applyCSSState } from '../../../utility/applyCSSState';
-import { convertColor } from '../../../utility/convertColor';
 
 const themeSetting = {};
 
@@ -76,7 +66,7 @@ themeSetting.disable = () => {
   } else {
     themeSetting.control.accent.random.style.disable();
     themeSetting.control.accent.randomiseNow.disable();
-  };
+  }
 
   if (state.get.current().theme.accent.cycle.active) {
     themeSetting.control.accent.cycle.speed.enable();
@@ -86,7 +76,7 @@ themeSetting.disable = () => {
     themeSetting.control.accent.cycle.speed.disable();
     themeSetting.control.accent.cycle.step.disable();
     themeSetting.control.accent.cycle.stepHelper.disable();
-  };
+  }
 
   switch (state.get.current().theme.header.by) {
 
@@ -100,7 +90,7 @@ themeSetting.disable = () => {
       themeSetting.control.header.color.opacity.enable();
       break;
 
-  };
+  }
 
   switch (state.get.current().theme.background.type) {
 
@@ -230,7 +220,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.video.vignette.range.enable();
       break;
 
-  };
+  }
 
   switch (state.get.current().theme.layout.color.by) {
 
@@ -248,7 +238,7 @@ themeSetting.disable = () => {
       themeSetting.control.layout.color.blurHelper.enable();
       break;
 
-  };
+  }
 
   switch (state.get.current().theme.header.color.by) {
 
@@ -262,7 +252,7 @@ themeSetting.disable = () => {
       themeSetting.control.header.color.opacity.enable();
       break;
 
-  };
+  }
 
   switch (state.get.current().theme.bookmark.color.by) {
 
@@ -276,7 +266,7 @@ themeSetting.disable = () => {
       themeSetting.control.bookmark.color.opacity.enable();
       break;
 
-  };
+  }
 
 };
 
@@ -290,7 +280,7 @@ themeSetting.preset = (parent) => {
 
     const themePresetElement = node('div|class:theme-preset');
 
-    themePreset.get().forEach((item, i) => {
+    themePreset.get().forEach((item) => {
 
       const presetTheme = new PresetThemeTile({
         presetThemeData: item
@@ -385,7 +375,7 @@ themeSetting.saved = (parent) => {
       ])
     );
 
-  };
+  }
 
 };
 
@@ -433,14 +423,14 @@ themeSetting.colour = (parent) => {
 
       if (count < 10) {
         count = '0' + count;
-      };
+      }
 
       formGroup.appendChild(
         node('div|class:form-group-text form-group-text-borderless', [
           node('div|class:theme-color-box theme-color-shade-' + count + '')
         ])
       );
-    };
+    }
 
     formSticky.appendChild(formGroup);
 
@@ -554,7 +544,7 @@ themeSetting.accent = (parent) => {
 
     const themeAccentPreset = node('div|class:theme-accent-preset');
 
-    allPreset.forEach((item, i) => {
+    allPreset.forEach((item) => {
 
       const presetButton = new AccentPresetButton({
         presetData: item
@@ -781,7 +771,7 @@ themeSetting.font = (parent) => {
     nameHelper: new Control_helperText({
       complexText: true,
       text: [
-        `Use a ${(new Link({ text:'Google Font', href: `https://fonts.google.com/`, openNew: true })).link().outerHTML} to customise the Clock, Date, Group names and Bookmark Letters.`,
+        `Use a ${(new Link({ text: 'Google Font', href: 'https://fonts.google.com/', openNew: true })).link().outerHTML} to customise the Clock, Date, Group names and Bookmark Letters.`,
         'Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Fredoka One" or "Kanit"',
         'Clear the field to use the default font "Fjalla One".'
       ]
@@ -869,7 +859,7 @@ themeSetting.font = (parent) => {
     nameHelper: new Control_helperText({
       complexText: true,
       text: [
-        `Use a ${(new Link({ text:'Google Font', href: `https://fonts.google.com/`, openNew: true })).link().outerHTML} to customise the Bookmark name, URL and form elements.`,
+        `Use a ${(new Link({ text: 'Google Font', href: 'https://fonts.google.com/', openNew: true })).link().outerHTML} to customise the Bookmark name, URL and form elements.`,
         'Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Roboto", "Source Sans Pro" or "Noto Sans"',
         'Clear the field to use the default font "Open Sans".'
       ]
@@ -1224,11 +1214,11 @@ themeSetting.opacity = (parent) => {
 
         if (group.area.current.length > 0) {
 
-          group.area.current.forEach((item, i) => {
+          group.area.current.forEach((item) => {
             item.update.style();
           });
 
-        };
+        }
 
         data.save();
 
@@ -1266,8 +1256,8 @@ themeSetting.background = (parent) => {
         theme.background.element.video.play();
       } else {
         theme.background.element.video.pause();
-      };
-    };
+      }
+    }
 
   };
 
@@ -2132,4 +2122,4 @@ themeSetting.bookmark = (parent) => {
 
 };
 
-export { themeSetting }
+export { themeSetting };

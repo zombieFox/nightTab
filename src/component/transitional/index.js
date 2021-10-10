@@ -1,15 +1,11 @@
 import { state } from '../state';
 
 import { node } from '../../utility/node';
-import { trimString } from '../../utility/trimString';
-import { isValidString } from '../../utility/isValidString';
-import { complexNode } from '../../utility/complexNode';
 
-import moment from 'moment';
 
 import './index.css';
 
-export const Transitional = function({} = {}) {
+export const Transitional = function () {
 
   this.element = {
     transitional: node('div|class:transitional'),
@@ -20,7 +16,7 @@ export const Transitional = function({} = {}) {
 
     if (state.get.current().header.transitional.show) {
       this.element.transitional.appendChild(this.element.text);
-    };
+    }
 
   };
 
@@ -32,9 +28,9 @@ export const Transitional = function({} = {}) {
       case 'time-and-date':
 
         if ((state.get.current().header.date.day.show ||
-            state.get.current().header.date.date.show ||
-            state.get.current().header.date.month.show ||
-            state.get.current().header.date.year.show) && (state.get.current().header.clock.second.show ||
+          state.get.current().header.date.date.show ||
+          state.get.current().header.date.month.show ||
+          state.get.current().header.date.year.show) && (state.get.current().header.clock.second.show ||
             state.get.current().header.clock.minute.show ||
             state.get.current().header.clock.hour.show)) {
           if (state.get.current().header.date.day.show && !state.get.current().header.date.date.show && !state.get.current().header.date.month.show && !state.get.current().header.date.year.show) {
@@ -45,7 +41,7 @@ export const Transitional = function({} = {}) {
 
             value = 'The time and date is';
 
-          };
+          }
         } else if (
           state.get.current().header.date.day.show ||
           state.get.current().header.date.date.show ||
@@ -92,7 +88,7 @@ export const Transitional = function({} = {}) {
 
             value = 'The date is';
 
-          };
+          }
         } else if (
           state.get.current().header.clock.second.show ||
           state.get.current().header.clock.minute.show ||
@@ -101,7 +97,7 @@ export const Transitional = function({} = {}) {
 
           value = 'The time is';
 
-        };
+        }
 
         break;
 
@@ -110,7 +106,7 @@ export const Transitional = function({} = {}) {
 
         break;
 
-    };
+    }
 
     this.element.text.innerHTML = value;
 

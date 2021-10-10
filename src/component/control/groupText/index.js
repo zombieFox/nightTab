@@ -1,20 +1,11 @@
-import { state } from '../../state';
-import { data } from '../../data';
-import { bookmark } from '../../bookmark';
 
 import * as form from '../../form';
 
-import { Button } from '../../button';
-import { Collapse } from '../../collapse';
 
-import { node } from '../../../utility/node';
-import { get } from '../../../utility/get';
-import { set } from '../../../utility/set';
-import { convertColor } from '../../../utility/convertColor';
 import { isValidString } from '../../../utility/isValidString';
 import { clearChildNode } from '../../../utility/clearChildNode';
 
-export const Control_groupText = function({
+export const Control_groupText = function ({
   text = false,
   classList = []
 } = {}) {
@@ -32,7 +23,7 @@ export const Control_groupText = function({
       this.groupText.textContent = content;
     } else if (content && content != '') {
       this.groupText.appendChild(content);
-    };
+    }
   };
 
   this.wrap = () => {
@@ -40,7 +31,7 @@ export const Control_groupText = function({
       children: [
         this.groupText
       ]
-    })
+    });
   };
 
   this.disable = () => {

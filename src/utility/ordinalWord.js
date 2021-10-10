@@ -37,7 +37,7 @@ export const ordinalWord = (word) => {
     // Ends with one through twelve
   } else if (endsWithZeroThroughTwelvePattern.test(word)) {
     return word.replace(endsWithZeroThroughTwelvePattern, replaceWithOrdinalVariant);
-  };
+  }
 
   return word;
 

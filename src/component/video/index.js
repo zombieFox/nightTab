@@ -1,12 +1,8 @@
-import { state } from '../state';
-import { data } from '../data';
 
 import { node } from '../../utility/node';
-import { convertColor } from '../../utility/convertColor';
-import { trimString } from '../../utility/trimString';
 import { isValidString } from '../../utility/isValidString';
 
-export const Video = function({
+export const Video = function ({
   url = false
 } = {}) {
 
@@ -27,7 +23,7 @@ export const Video = function({
       playPromise.then(() => {
         this.video.pause();
       });
-    };
+    }
   };
 
   this.assemble = () => {
@@ -46,13 +42,13 @@ export const Video = function({
 
       this.source.type = 'video/webm';
 
-    };
+    }
 
     if (isValidString(url)) {
 
       this.source.src = url;
 
-    };
+    }
 
   };
 

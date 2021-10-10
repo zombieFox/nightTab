@@ -7,7 +7,7 @@ export const node = (string, node) => {
     tag = string.slice(0, string.indexOf('|'));
   } else {
     tag = string;
-  };
+  }
 
   let text = false;
 
@@ -19,13 +19,13 @@ export const node = (string, node) => {
     tag = pair[0];
     // replace \: with :
     text = pair[1].replace('\\', ':');
-  };
+  }
 
   let element = document.createElement(tag);
 
   if (text && text != '') {
     element.innerHTML = text;
-  };
+  }
 
   let attributes = string.slice(string.indexOf('|') + 1, string.length).split(',');
 
@@ -50,7 +50,7 @@ export const node = (string, node) => {
       }
     });
 
-    attributes.forEach((item, i) => {
+    attributes.forEach((item) => {
       if ('key' in item && item.key != undefined && 'value' in item && item.value != undefined) {
         element.setAttribute(item.key, item.value);
       } else if ('key' in item && item.key != undefined) {
@@ -58,7 +58,7 @@ export const node = (string, node) => {
       }
     });
 
-  };
+  }
 
   if (node) {
 
@@ -66,7 +66,7 @@ export const node = (string, node) => {
 
       if (node.length > 0) {
 
-        node.forEach((item, i) => {
+        node.forEach((item) => {
 
           if (item instanceof HTMLElement) {
 
@@ -80,7 +80,7 @@ export const node = (string, node) => {
 
             element.appendChild(div.firstChild);
 
-          };
+          }
 
         });
 
@@ -98,13 +98,13 @@ export const node = (string, node) => {
 
           element.appendChild(div.firstChild);
 
-        };
+        }
 
-      };
+      }
 
-    };
+    }
 
-  };
+  }
 
   return element;
 };

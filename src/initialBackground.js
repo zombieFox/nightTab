@@ -10,6 +10,6 @@ if (localStorage.getItem('nightTabStyle')) {
     case 'dark':
       style.innerHTML = 'html, body {background-color: rgb(0, 0, 0);}';
       break;
-  };
+  }
   document.querySelector('head').appendChild(style);
-};
+}

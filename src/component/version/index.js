@@ -18,21 +18,21 @@ version.compare = (a, b) => {
 
     if (na > nb) {
       return 1;
-    };
+    }
 
     if (nb > na) {
       return -1;
-    };
+    }
 
     if (!isNaN(na) && isNaN(nb)) {
       return 1;
-    };
+    }
 
     if (isNaN(na) && !isNaN(nb)) {
       return -1;
-    };
+    }
 
-  };
+  }
 
   return 0;
 };

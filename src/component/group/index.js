@@ -3,21 +3,16 @@ import { data } from '../data';
 import { layout } from '../layout';
 import { bookmark } from '../bookmark';
 import { header } from '../header';
-import { groupDefault } from '../groupDefault';
 import { groupAndBookmark } from '../groupAndBookmark';
 
 import { GroupArea } from '../groupArea';
-import { GroupEmpty } from '../groupEmpty';
 import { StagedGroup } from '../stagedGroup';
 import { GroupForm } from '../groupForm';
 import { Modal } from '../modal';
 import { SearchEmpty } from '../searchEmpty';
 import { BookmarkEmpty } from '../bookmarkEmpty';
 
-import { node } from '../../utility/node';
 import { clearChildNode } from '../../utility/clearChildNode';
-import { isValidString } from '../../utility/isValidString';
-import { trimString } from '../../utility/trimString';
 import { applyCSSVar } from '../../utility/applyCSSVar';
 import { applyCSSClass } from '../../utility/applyCSSClass';
 import { applyCSSState } from '../../utility/applyCSSState';
@@ -69,13 +64,13 @@ group.item = {
 
           bookmark.element.group.appendChild(groupArea.group());
 
-        };
+        }
 
       } else {
 
         bookmark.element.group.appendChild(groupArea.group());
 
-      };
+      }
 
     };
 
@@ -115,7 +110,7 @@ group.item = {
 
           addSearchEmpty();
 
-        };
+        }
 
       } else {
 
@@ -129,7 +124,7 @@ group.item = {
 
         });
 
-      };
+      }
 
     } else {
 
@@ -145,9 +140,9 @@ group.item = {
 
         addBookmarkEmpty();
 
-      };
+      }
 
-    };
+    }
 
   },
   clear: () => {
@@ -180,7 +175,7 @@ group.edit = {
       group.edit.close();
     } else {
       group.edit.open();
-    };
+    }
 
   },
   render: () => {
@@ -189,17 +184,17 @@ group.edit = {
 
     if (group.area.current.length > 0) {
 
-      group.area.current.forEach((item, i) => {
+      group.area.current.forEach((item) => {
 
         if (state.get.current().group.edit) {
           item.control.enable();
         } else {
           item.control.disable();
-        };
+        }
 
       });
 
-    };
+    }
 
   }
 };

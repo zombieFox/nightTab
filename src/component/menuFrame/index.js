@@ -1,9 +1,7 @@
 import { state } from '../state';
 import { data } from '../data';
-import { menu } from '../menu';
 import { pageLock } from '../pageLock';
 
-import { Button } from '../button';
 import { Shade } from '../shade';
 import { MenuNav } from '../menuNav';
 import { MenuClose } from '../menuClose';
@@ -15,7 +13,7 @@ import { clearChildNode } from '../../utility/clearChildNode';
 
 import './index.css';
 
-export const MenuFrame = function({
+export const MenuFrame = function ({
   navData = []
 } = {}) {
 
@@ -45,7 +43,7 @@ export const MenuFrame = function({
       html.classList.add('is-menu-open');
     } else {
       html.classList.remove('is-menu-open');
-    };
+    }
 
   };
 
@@ -65,7 +63,7 @@ export const MenuFrame = function({
 
         body.removeChild(this.element.menu);
 
-      };
+      }
 
     });
 
@@ -122,8 +120,8 @@ export const MenuFrame = function({
       const body = document.querySelector('body');
 
       if (body.contains(this.element.menu)) {
-        body.removeChild(this.element.menu)
-      };
+        body.removeChild(this.element.menu);
+      }
 
     }, 6000);
 
@@ -137,7 +135,7 @@ export const MenuFrame = function({
 
     if ('pushState' in history) {
       history.pushState('', document.title, location.origin + location.pathname + location.search);
-    };
+    }
 
   };
 
@@ -201,7 +199,7 @@ export const MenuFrame = function({
 
     if (!path.includes(this.element.menu)) {
       this.close();
-    };
+    }
 
   };
 
@@ -239,9 +237,9 @@ export const MenuFrame = function({
             event.preventDefault();
           }
 
-        };
+        }
 
-      };
+      }
 
     }
   };
@@ -262,7 +260,7 @@ export const MenuFrame = function({
 
     clearChildNode(this.element.content);
 
-    navData.forEach((item, i) => {
+    navData.forEach((item) => {
 
       if (item.active) {
 
@@ -270,7 +268,7 @@ export const MenuFrame = function({
           this.element.content.classList.add('menu-content-overscroll');
         } else {
           this.element.content.classList.remove('menu-content-overscroll');
-        };
+        }
 
         const menuContent = new MenuContent({
           activeNavData: item,
@@ -279,7 +277,7 @@ export const MenuFrame = function({
 
         menuContent.content();
 
-      };
+      }
 
     });
 

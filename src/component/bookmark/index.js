@@ -3,7 +3,6 @@ import { data } from '../data';
 import { layout } from '../layout';
 import { group } from '../group';
 import { header } from '../header';
-import { bookmarkDefault } from '../bookmarkDefault';
 import { bookmarkPreset } from '../bookmarkPreset';
 import { groupAndBookmark } from '../groupAndBookmark';
 
@@ -15,12 +14,10 @@ import { StagedGroup } from '../stagedGroup';
 import { Modal } from '../modal';
 
 import { node } from '../../utility/node';
-import { clearChildNode } from '../../utility/clearChildNode';
 import { applyCSSVar } from '../../utility/applyCSSVar';
 import { applyCSSClass } from '../../utility/applyCSSClass';
 import { applyCSSState } from '../../utility/applyCSSState';
 import { set } from '../../utility/set';
-import { get } from '../../utility/get';
 import { sortArrayOfObject } from '../../utility/sortArrayOfObject';
 
 import Sortable from 'sortablejs';
@@ -80,14 +77,14 @@ bookmark.item = {
 
       if (bookmarkData.propagate.display || bookmarkData.propagate.layout || bookmarkData.propagate.theme) {
 
-        bookmark.all.forEach((item, i) => {
+        bookmark.all.forEach((item) => {
 
-          item.items.forEach((item, i) => {
+          item.items.forEach((item) => {
 
             if (bookmarkData.propagate.display) {
               item.display.visual.show = bookmarkData.link.display.visual.show;
               item.display.name.show = bookmarkData.link.display.name.show;
-            };
+            }
 
             if (bookmarkData.propagate.layout) {
               item.display.visual.size = bookmarkData.link.display.visual.size;
@@ -98,27 +95,27 @@ bookmark.item = {
               item.display.alignment = bookmarkData.link.display.alignment;
               item.display.direction = bookmarkData.link.display.direction;
               item.display.order = bookmarkData.link.display.order;
-            };
+            }
 
             if (bookmarkData.propagate.theme) {
               item.accent = bookmarkData.link.accent;
               item.color = bookmarkData.link.color;
               item.border = bookmarkData.link.border;
               item.display.visual.shadow = bookmarkData.link.display.visual.shadow;
-            };
+            }
 
           });
 
         });
 
-      };
+      }
 
     },
     applyVar: (path, value) => {
 
-      bookmark.all.forEach((item, i) => {
+      bookmark.all.forEach((item) => {
 
-        item.items.forEach((item, i) => {
+        item.items.forEach((item) => {
 
           set({ object: item, path: path, value: value });
 
@@ -130,28 +127,28 @@ bookmark.item = {
     sort: {
       letter: () => {
 
-        bookmark.all.forEach((item, i) => {
+        bookmark.all.forEach((item) => {
           item.items = sortArrayOfObject(item.items, 'display.visual.letter.text');
         });
 
       },
       icon: () => {
 
-        bookmark.all.forEach((item, i) => {
+        bookmark.all.forEach((item) => {
           item.items = sortArrayOfObject(item.items, 'display.visual.icon.name');
         });
 
       },
       name: () => {
 
-        bookmark.all.forEach((item, i) => {
+        bookmark.all.forEach((item) => {
           item.items = sortArrayOfObject(item.items, 'display.name.text');
         });
 
       }
     }
   },
-  render: (groupIndex) => {
+  render: () => {
 
     const addBookmarkToGroup = (bookmarkData, groupIndex, bookmarkIndex) => {
 
@@ -205,15 +202,15 @@ bookmark.item = {
 
                 addBookmarkToGroup(item, groupIndex, bookmarkIndex);
 
-              };
+              }
 
             });
 
-          };
+          }
 
         });
 
-      };
+      }
 
 
     } else {
@@ -238,11 +235,11 @@ bookmark.item = {
 
           addEmptyGroup(groupIndex);
 
-        };
+        }
 
       });
 
-    };
+    }
 
   },
   clear: () => {
@@ -273,7 +270,7 @@ bookmark.edit = {
       bookmark.edit.close();
     } else {
       bookmark.edit.open();
-    };
+    }
 
   },
   render: () => {
@@ -282,17 +279,17 @@ bookmark.edit = {
 
     if (bookmark.tile.current.length > 0) {
 
-      bookmark.tile.current.forEach((item, i) => {
+      bookmark.tile.current.forEach((item) => {
 
         if (state.get.current().bookmark.edit) {
           item.control.enable();
         } else {
           item.control.disable();
-        };
+        }
 
       });
 
-    };
+    }
 
   }
 };
@@ -301,8 +298,8 @@ bookmark.direction = {
   mod: {
     vertical: () => {
 
-      bookmark.all.forEach((item, i) => {
-        item.items.forEach((item, i) => {
+      bookmark.all.forEach((item) => {
+        item.items.forEach((item) => {
 
           item.display.direction = 'vertical';
 
@@ -312,8 +309,8 @@ bookmark.direction = {
     },
     horizontal: () => {
 
-      bookmark.all.forEach((item, i) => {
-        item.items.forEach((item, i) => {
+      bookmark.all.forEach((item) => {
+        item.items.forEach((item) => {
 
           item.display.direction = 'horizontal';
 
@@ -343,11 +340,11 @@ bookmark.add = {
       newBookmarkData.position.destination.group = groupIndex;
 
       newBookmarkData.position.destination.item = bookmark.all[groupIndex].items.length;
-    };
+    }
 
     if (!bookmark.all.length > 0) {
       newBookmarkData.group.destination = 'new';
-    };
+    }
 
     const bookmarkForm = new BookmarkForm({ bookmarkData: newBookmarkData });
 
@@ -374,8 +371,7 @@ bookmark.add = {
       successAction: () => {
 
         switch (newBookmarkData.group.destination) {
-          case 'new':
-
+          case 'new': {
             const newGroupData = new StagedGroup();
 
             newGroupData.group.name.text = newBookmarkData.group.name;
@@ -389,8 +385,9 @@ bookmark.add = {
             layout.area.assemble();
 
             break;
+          }
 
-        };
+        }
 
         newBookmarkData.link.timestamp = new Date().getTime();
 
@@ -427,7 +424,7 @@ bookmark.sort = {
 
     bookmark.sort.sortable = [];
 
-    group.area.current.forEach((item, i) => {
+    group.area.current.forEach((item) => {
 
       bookmark.sort.sortable.push(Sortable.create(item.element.body, {
         handle: '.bookmark-control-sort',
@@ -473,7 +470,7 @@ bookmark.count = () => {
 
   let count = 0;
 
-  bookmark.all.forEach((item, i) => { count = count + item.items.length });
+  bookmark.all.forEach((item) => { count = count + item.items.length; });
 
   return count;
 
@@ -489,7 +486,7 @@ bookmark.restore = (dataToRestore) => {
 
 bookmark.append = (dataToAppend) => {
 
-  dataToAppend.bookmark.forEach((item, i) => {
+  dataToAppend.bookmark.forEach((item) => {
 
     bookmark.all.push(item);
 
@@ -505,7 +502,7 @@ bookmark.reset = () => {
 
     const groupIndex = i;
 
-    item.items.forEach((item, i) => {
+    item.items.forEach((item) => {
 
       const newBookmarkData = new StagedBookmark();
 
@@ -531,7 +528,7 @@ bookmark.reset = () => {
 
       newBookmarkData.position.destination.item = i;
 
-      bookmark.item.mod.edit(newBookmarkData)
+      bookmark.item.mod.edit(newBookmarkData);
 
     });
 

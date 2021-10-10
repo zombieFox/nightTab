@@ -1,4 +1,3 @@
-import { state } from '../state';
 import { bookmark } from '../bookmark';
 
 import { Button } from '../button';
@@ -7,7 +6,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const GroupEmpty = function({
+export const GroupEmpty = function ({
   groupIndex = false
 } = {}) {
 

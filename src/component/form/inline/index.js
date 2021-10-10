@@ -2,7 +2,7 @@ import { node } from '../../../utility/node';
 
 import './index.css';
 
-export const inline = function({
+export const inline = function ({
   direction = 'horizontal',
   reverse = false,
   block = false,
@@ -23,7 +23,7 @@ export const inline = function({
     case 'vertical':
       inline.classList.add('form-inline-vertical');
       break;
-  };
+  }
 
   switch (gap) {
 
@@ -39,11 +39,11 @@ export const inline = function({
       inline.classList.add('form-inline-gap-large');
       break;
 
-  };
+  }
 
   if (equalGap) {
     inline.classList.add('form-inline-gap-equal');
-  };
+  }
 
   switch (justify) {
 
@@ -59,19 +59,19 @@ export const inline = function({
       inline.classList.add('form-inline-justify-right');
       break;
 
-  };
+  }
 
   if (reverse) {
     inline.classList.add('form-inline-reverse');
-  };
+  }
 
   if (block) {
     inline.classList.add('form-inline-block');
-  };
+  }
 
   if (wrap) {
     inline.classList.add('form-inline-wrap');
-  };
+  }
 
   return inline;
 

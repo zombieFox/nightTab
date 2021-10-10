@@ -11,7 +11,7 @@ export const sortArrayOfObject = (array, key) => {
 
     if (typeof textA == 'string') {
       textA = textA.toLowerCase();
-    };
+    }
 
     let textB = get({
       object: b,
@@ -20,7 +20,7 @@ export const sortArrayOfObject = (array, key) => {
 
     if (typeof textB == 'string') {
       textB = textB.toLowerCase();
-    };
+    }
 
     if (textA < textB) {
       return -1;
@@ -28,7 +28,7 @@ export const sortArrayOfObject = (array, key) => {
       return 1;
     } else {
       return 0;
-    };
+    }
 
   });
 

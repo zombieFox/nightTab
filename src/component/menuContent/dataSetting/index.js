@@ -1,45 +1,18 @@
-import { state } from '../../state';
 import { data } from '../../data';
-import { header } from '../../header';
-import { bookmark } from '../../bookmark';
-import { theme } from '../../theme';
-import { version } from '../../version';
 import { menu } from '../../menu';
-import { icon } from '../../icon';
-import { logo } from '../../logo';
-import { layout } from '../../layout';
-import { toolbar } from '../../toolbar';
-import { appName } from '../../appName';
+import { APP_NAME } from '../../../constant';
 
 import * as form from '../../form';
 
 import { Button } from '../../button';
-import { Collapse } from '../../collapse';
-import { Edge } from '../../edge';
 import { Alert } from '../../alert';
 import { DropFile } from '../../dropFile';
 import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_inputButton } from '../../control/inputButton';
-import { Control_groupText } from '../../control/groupText';
-import { Control_radio } from '../../control/radio';
-import { Control_radioGrid } from '../../control/radioGrid';
-import { Control_checkbox } from '../../control/checkbox';
-import { Control_slider } from '../../control/slider';
-import { Control_sliderSlim } from '../../control/sliderSlim';
-import { Control_sliderDouble } from '../../control/sliderDouble';
-import { Control_colorMixer } from '../../control/colorMixer';
-import { Control_color } from '../../control/color';
-import { Control_text } from '../../control/text';
-import { Control_textReset } from '../../control/textReset';
-import { Control_textarea } from '../../control/textarea';
 
 import { node } from '../../../utility/node';
-import { complexNode } from '../../../utility/complexNode';
-import { applyCSSVar } from '../../../utility/applyCSSVar';
-import { applyCSSClass } from '../../../utility/applyCSSClass';
-import { applyCSSState } from '../../../utility/applyCSSState';
 
 const dataSetting = {};
 
@@ -77,7 +50,7 @@ dataSetting.restore = (parent) => {
   });
 
   dataSetting.control.restore.restoreHelper = new Control_helperText({
-    text: ['Restore a previously exported ' + appName + ' backup.']
+    text: ['Restore a previously exported ' + APP_NAME + ' backup.']
   });
 
   dataSetting.control.restore.feedback = form.feedback();
@@ -85,7 +58,7 @@ dataSetting.restore = (parent) => {
   data.feedback.empty.render(dataSetting.control.restore.feedback);
 
   dataSetting.control.restore.drop = new DropFile({
-    heading: 'Or drop a ' + appName + ' backup file here.',
+    heading: 'Or drop a ' + APP_NAME + ' backup file here.',
     dropAaction: () => {
       data.import.drop({
         fileList: dataSetting.control.restore.drop.files,
@@ -131,7 +104,7 @@ dataSetting.backup = (parent) => {
   });
 
   dataSetting.control.backup.exportHelper = new Control_helperText({
-    text: ['Download a backup of your ' + appName + ' Bookmarks and Settings.', 'This file can later be imported on this or another deivce.']
+    text: ['Download a backup of your ' + APP_NAME + ' Bookmarks and Settings.', 'This file can later be imported on this or another deivce.']
   });
 
   parent.appendChild(
@@ -179,12 +152,12 @@ dataSetting.clear = (parent) => {
     iconName: 'warning',
     children: [
       node('p:You will lose Bookmarks by clearing all data.|class:small'),
-      node(`p:Have you ${(new Link({ text:'backed up your data?', href: '#menu-content-item-backup'})).link().outerHTML}|class:small`)
+      node(`p:Have you ${(new Link({ text: 'backed up your data?', href: '#menu-content-item-backup' })).link().outerHTML}|class:small`)
     ]
   });
 
   dataSetting.control.clear.helper = new Control_helperText({
-    text: ['Clear all data to reset ' + appName + ' to the default state.', 'Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups.']
+    text: ['Clear all data to reset ' + APP_NAME + ' to the default state.', 'Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups.']
   });
 
   parent.appendChild(
@@ -209,4 +182,4 @@ dataSetting.clear = (parent) => {
 
 };
 
-export { dataSetting }
+export { dataSetting };

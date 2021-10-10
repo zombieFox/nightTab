@@ -1,7 +1,7 @@
 import { state } from '../component/state';
 import { get } from './get';
 
-export const applyCSSState = function(path) {
+export const applyCSSState = function (path) {
 
   const html = document.querySelector('html');
 
@@ -15,18 +15,18 @@ export const applyCSSState = function(path) {
 
       html.classList.remove('is-' + path.replace(/\./g, '-').toLowerCase());
 
-    };
+    }
 
   };
 
   if (Array.isArray(path)) {
 
-    path.forEach((item, i) => { apply(item); });
+    path.forEach((item) => { apply(item); });
 
   } else {
 
     apply(path);
 
-  };
+  }
 
 };

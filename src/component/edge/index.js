@@ -4,7 +4,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Edge = function({
+export const Edge = function ({
   primary = false,
   secondary = false,
   padding = 0
@@ -40,7 +40,7 @@ export const Edge = function({
     }
   };
 
-  this.assemble = (edge) => {
+  this.assemble = () => {
 
     this.element.edge.primary = node('div|class:edge is-transparent');
 
@@ -52,13 +52,13 @@ export const Edge = function({
 
         this.element.edge.primary.classList.remove('is-edge-opening');
 
-      };
+      }
 
       if (event.propertyName === 'opacity' && getComputedStyle(this.element.edge.primary).opacity == 0) {
 
         if (this.element.edge.primary.parentElement.contains(this.element.edge.primary)) {
           this.element.edge.primary.parentElement.removeChild(this.element.edge.primary);
-        };
+        }
 
         this.element.edge.primary.removeAttribute('style');
 
@@ -66,7 +66,7 @@ export const Edge = function({
 
         this.bind.remove();
 
-      };
+      }
 
     });
 
@@ -74,11 +74,11 @@ export const Edge = function({
 
     if (secondary.length > 0) {
 
-      secondary.forEach((item, i) => {
+      secondary.forEach(() => {
         this.element.edge.secondary.push(node('div|class:edge-secondary is-transparent'));
       });
 
-      this.element.edge.secondary.forEach((item, i) => {
+      this.element.edge.secondary.forEach((item) => {
 
         item.addEventListener('transitionend', (event) => {
 
@@ -86,25 +86,25 @@ export const Edge = function({
 
             item.classList.remove('is-edge-opening');
 
-          };
+          }
 
           if (event.propertyName === 'opacity' && getComputedStyle(item).opacity == 0) {
 
             if (item.parentElement.contains(item)) {
               item.parentElement.removeChild(item);
-            };
+            }
 
             item.removeAttribute('style');
 
             item.classList.remove('is-edge-opening');
 
-          };
+          }
 
         });
 
       });
 
-    };
+    }
 
   };
 
@@ -116,7 +116,7 @@ export const Edge = function({
 
     if (this.element.edge.secondary.length > 0) {
 
-      this.element.edge.secondary.forEach((item, i) => {
+      this.element.edge.secondary.forEach((item) => {
 
         item.classList.remove('is-opaque');
 
@@ -124,14 +124,11 @@ export const Edge = function({
 
       });
 
-    };
+    }
 
   };
 
   this.appear = (edge) => {
-
-    const html = document.querySelector('html');
-
     const body = document.querySelector('body');
 
     body.appendChild(edge);
@@ -168,11 +165,11 @@ export const Edge = function({
 
           this.appear(this.element.edge.secondary[i]);
 
-        };
+        }
 
       });
 
-    };
+    }
 
     this.track();
 
@@ -230,7 +227,7 @@ export const Edge = function({
         this.style(item, this.element.edge.secondary[i]);
       });
 
-    };
+    }
 
   };
 
@@ -239,7 +236,7 @@ export const Edge = function({
 
       if (newPrimary) {
         primary = newPrimary;
-      };
+      }
 
       this.assemble();
 
@@ -248,7 +245,7 @@ export const Edge = function({
 
       if (newSecondary) {
         secondary = newSecondary;
-      };
+      }
 
       this.assemble();
 

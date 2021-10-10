@@ -1,4 +1,3 @@
-import { menu } from '../menu';
 
 import { Button } from '../button';
 
@@ -6,7 +5,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const MenuNav = function({
+export const MenuNav = function ({
   navData = {},
   action = false
 } = {}) {
@@ -15,7 +14,7 @@ export const MenuNav = function({
     current: {},
     set: () => {
 
-      navData.forEach((item, i) => {
+      navData.forEach((item) => {
 
         this.state.current[this.makeId(item.name)] = item.active;
 
@@ -26,17 +25,17 @@ export const MenuNav = function({
 
       for (let key in this.state.current) {
         this.state.current[key] = false;
-      };
+      }
 
       this.state.current[this.makeId(name)] = true;
 
-      navData.forEach((item, i) => {
+      navData.forEach((item) => {
 
         item.active = false;
 
         if (item.name === name || item.name.toLowerCase() === name) {
           item.active = true;
-        };
+        }
 
       });
 
@@ -54,12 +53,12 @@ export const MenuNav = function({
 
   this.init = () => {
 
-    this.element.item.forEach((item, i) => {
+    this.element.item.forEach((item) => {
       if (item.subLevel) {
         item.subLevel.classList.add('active');
         item.subLevel.setAttribute('style', '--menu-subnav-height: ' + item.subLevel.getBoundingClientRect().height + 'px;');
         item.subLevel.classList.remove('active');
-      };
+      }
     });
 
     this.update();
@@ -78,13 +77,13 @@ export const MenuNav = function({
 
         if (item.sub) {
           this.element.item[i].subLevel.classList.add('active');
-        };
+        }
 
         if (this.element.item[i].subLevelItem.length > 0) {
-          this.element.item[i].subLevelItem.forEach((item, i) => {
+          this.element.item[i].subLevelItem.forEach((item) => {
             item.tabIndex = 1;
           });
-        };
+        }
 
       } else {
 
@@ -94,15 +93,15 @@ export const MenuNav = function({
 
         if (item.sub) {
           this.element.item[i].subLevel.classList.remove('active');
-        };
+        }
 
         if (this.element.item[i].subLevelItem.length > 0) {
-          this.element.item[i].subLevelItem.forEach((item, i) => {
+          this.element.item[i].subLevelItem.forEach((item) => {
             item.tabIndex = -1;
           });
-        };
+        }
 
-      };
+      }
 
     });
 
@@ -116,7 +115,7 @@ export const MenuNav = function({
 
   this.assemble = () => {
 
-    navData.forEach((item, i) => {
+    navData.forEach((item) => {
 
       const navItem = {
         topLevel: false,
@@ -137,7 +136,7 @@ export const MenuNav = function({
 
           if (action) {
             action();
-          };
+          }
 
         }
       });
@@ -148,7 +147,7 @@ export const MenuNav = function({
 
         const subNav = node('div|class:menu-subnav');
 
-        item.sub.forEach((item, i) => {
+        item.sub.forEach((item) => {
 
           const subLevelLink = node('a:' + item + '|href:#menu-content-item-' + this.makeId(item) + ',class:menu-nav-sub button button-link button-small,tabindex:1');
 
@@ -160,13 +159,13 @@ export const MenuNav = function({
 
         navItem.subLevel = subNav;
 
-      };
+      }
 
       this.element.item.push(navItem);
 
     });
 
-    this.element.item.forEach((item, i) => {
+    this.element.item.forEach((item) => {
 
       item.menuNavItem = node('div|class:menu-nav-item');
 
@@ -174,7 +173,7 @@ export const MenuNav = function({
 
       if (item.subLevel) {
         item.menuNavItem.appendChild(item.subLevel);
-      };
+      }
 
       this.element.nav.appendChild(item.menuNavItem);
 

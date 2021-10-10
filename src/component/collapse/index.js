@@ -1,19 +1,16 @@
-import { form } from '../form';
-import { icon } from '../icon';
 
-import { complexNode } from '../../utility/complexNode';
 import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Collapse = function({
+export const Collapse = function ({
   type = false,
   radioGroup = false,
   checkbox = false,
   target = false
 } = {}) {
 
-  target.forEach((item, i) => {
+  target.forEach((item) => {
     item.state = {
       collapsed: true
     };
@@ -32,7 +29,7 @@ export const Collapse = function({
   };
 
   this.collapse = () => {
-    target.forEach((item, i) => {
+    target.forEach((item) => {
       item.spacer.appendChild(item.content);
 
       item.area.appendChild(item.spacer);
@@ -44,12 +41,12 @@ export const Collapse = function({
   };
 
   this.toggle = () => {
-    target.forEach((item, i) => {
+    target.forEach((item) => {
       if (item.state.collapsed) {
         item.state.collapsed = false;
       } else {
         item.state.collapsed = true;
-      };
+      }
     });
 
     this.update();
@@ -64,7 +61,7 @@ export const Collapse = function({
       area.classList.remove('is-collapsed');
       // area.classList.add('is-pop');
       area.removeAttribute('aria-hidden');
-    };
+    }
   };
 
   this.renderToggle = (state, toggle) => {
@@ -74,25 +71,24 @@ export const Collapse = function({
     } else {
       toggle.classList.add('active');
       toggle.classList.add('is-collapsed');
-    };
+    }
   };
 
   this.update = () => {
 
     switch (type) {
 
-      case 'radio':
-
+      case 'radio': {
         const selectedRadioValue = radioGroup.value();
 
-        target.forEach((item, i) => {
+        target.forEach((item) => {
           this.renderTarget(!(item.id === selectedRadioValue), item.area);
         });
 
         break;
+      }
 
-      case 'checkbox':
-
+      case 'checkbox': {
         let state = true;
 
         if (checkbox.length > 1) {
@@ -107,29 +103,30 @@ export const Collapse = function({
 
           state = checkbox.checked();
 
-        };
+        }
 
-        target.forEach((item, i) => {
+        target.forEach((item) => {
           this.renderTarget(!state, item.area);
         });
 
         break;
+      }
 
       case 'toggle':
 
-        target.forEach((item, i) => {
+        target.forEach((item) => {
 
           this.renderTarget(item.state.collapsed, item.area);
 
           if (item.toggle) {
             this.renderToggle(item.state.collapsed, item.toggle);
-          };
+          }
 
         });
 
         break;
 
-    };
+    }
 
   };
 

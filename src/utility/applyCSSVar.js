@@ -16,12 +16,12 @@ export const applyCSSVar = (path) => {
 
   if (Array.isArray(path)) {
 
-    path.forEach((item, i) => { apply(item); });
+    path.forEach((item) => { apply(item); });
 
   } else {
 
     apply(path);
 
-  };
+  }
 
 };

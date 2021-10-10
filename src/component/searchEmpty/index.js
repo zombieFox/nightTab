@@ -9,7 +9,7 @@ import { isValidString } from '../../utility/isValidString';
 
 import './index.css';
 
-export const SearchEmpty = function() {
+export const SearchEmpty = function () {
 
   this.element = {
     empty: node('div|class:search-empty'),
@@ -34,7 +34,7 @@ export const SearchEmpty = function() {
 
           this.element.helper.textContent = 'Press "Enter" to Search ' + state.get.current().header.search.engine.custom.name;
 
-        };
+        }
 
         break;
 
@@ -44,7 +44,7 @@ export const SearchEmpty = function() {
 
         break;
 
-    };
+    }
 
     this.element.empty.appendChild(this.element.description);
 

@@ -1,5 +1,5 @@
-import { state } from '../state';
 import { data } from '../data';
+import { state } from '../state';
 import { layout } from '../layout';
 import { toolbar } from '../toolbar';
 
@@ -50,7 +50,7 @@ header.item.mod = {
 
     const headerItems = ['greeting', 'transitional', 'clock', 'date', 'search', 'toolbar'];
 
-    headerItems.reverse().forEach((item, i) => {
+    headerItems.reverse().forEach((item) => {
 
       switch (item) {
 
@@ -79,19 +79,19 @@ header.item.mod = {
 
                 position = state.get.current().header.order.indexOf('greeting') + 1;
 
-              };
+              }
 
               state.get.current().header.order.splice(position, 0, item);
 
-            };
+            }
 
           } else {
 
             if (state.get.current().header.order.includes(item)) {
               state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-            };
+            }
 
-          };
+          }
 
           break;
 
@@ -120,19 +120,19 @@ header.item.mod = {
 
                 position = state.get.current().header.order.indexOf('greeting') + 1;
 
-              };
+              }
 
               state.get.current().header.order.splice(position, 0, item);
 
-            };
+            }
 
           } else {
 
             if (state.get.current().header.order.includes(item)) {
               state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-            };
+            }
 
-          };
+          }
 
           break;
 
@@ -157,19 +157,19 @@ header.item.mod = {
 
                 position = state.get.current().header.order.indexOf('date');
 
-              };
+              }
 
               state.get.current().header.order.splice(position, 0, item);
 
-            };
+            }
 
           } else {
 
             if (state.get.current().header.order.includes(item)) {
               state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-            };
+            }
 
-          };
+          }
 
           break;
 
@@ -181,15 +181,15 @@ header.item.mod = {
 
               state.get.current().header.order.unshift(item);
 
-            };
+            }
 
           } else {
 
             if (state.get.current().header.order.includes(item)) {
               state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-            };
+            }
 
-          };
+          }
 
           break;
 
@@ -213,19 +213,19 @@ header.item.mod = {
 
                   position = state.get.current().header.order.length;
 
-              };
+              }
 
               state.get.current().header.order.splice(position, 0, item);
 
-            };
+            }
 
           } else {
 
             if (state.get.current().header.order.includes(item)) {
               state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-            };
+            }
 
-          };
+          }
 
           break;
 
@@ -237,7 +237,7 @@ header.item.mod = {
 
               if (state.get.current().header.order.includes(item)) {
                 state.get.current().header.order.splice(state.get.current().header.order.indexOf(item), 1);
-              };
+              }
 
               break;
 
@@ -245,15 +245,15 @@ header.item.mod = {
 
               if (!state.get.current().header.order.includes(item)) {
                 state.get.current().header.order.push(item);
-              };
+              }
 
               break;
 
-          };
+          }
 
           break;
 
-      };
+      }
 
     });
 
@@ -276,7 +276,7 @@ header.item.render = () => {
 
   header.element.search = new Search();
 
-  order.forEach((item, i) => {
+  order.forEach((item) => {
 
     switch (item) {
 
@@ -295,7 +295,7 @@ header.item.render = () => {
 
           header.element.header.appendChild(headerItem.item());
 
-        };
+        }
 
         break;
 
@@ -312,7 +312,7 @@ header.item.render = () => {
 
           header.element.header.appendChild(headerItem.item());
 
-        };
+        }
 
         break;
 
@@ -329,7 +329,7 @@ header.item.render = () => {
 
           header.element.header.appendChild(headerItem.item());
 
-        };
+        }
 
         break;
 
@@ -357,7 +357,7 @@ header.item.render = () => {
 
           header.element.header.appendChild(headerItem.item());
 
-        };
+        }
 
         break;
 
@@ -374,7 +374,7 @@ header.item.render = () => {
 
           header.element.header.appendChild(headerItem.item());
 
-        };
+        }
 
         break;
 
@@ -382,8 +382,7 @@ header.item.render = () => {
 
         switch (state.get.current().toolbar.location) {
 
-          case 'header':
-
+          case 'header': {
             const headerItem = new HeaderItem({
               name: item,
               child: toolbar.current.toolbar()
@@ -394,18 +393,19 @@ header.item.render = () => {
             header.element.header.appendChild(headerItem.item());
 
             break;
+          }
 
-        };
+        }
 
         break;
 
-    };
+    }
 
   });
 
   layout.element.header.appendChild(header.element.area);
 
-  const sortable = Sortable.create(header.element.header, {
+  Sortable.create(header.element.header, {
     handle: '.header-control-sort',
     ghostClass: 'header-sort-placeholder',
     animation: 500,
@@ -429,7 +429,7 @@ header.item.render = () => {
     html.classList.add('is-header-show');
   } else {
     html.classList.remove('is-header-show');
-  };
+  }
 
 };
 
@@ -468,7 +468,7 @@ header.edit = {
       header.edit.close();
     } else {
       header.edit.open();
-    };
+    }
 
   },
   render: () => {
@@ -476,16 +476,16 @@ header.edit = {
     applyCSSState('header.edit');
 
     if (header.item.current.length > 0) {
-      header.item.current.forEach((item, i) => {
+      header.item.current.forEach((item) => {
 
         if (state.get.current().header.edit) {
           item.control.enable();
         } else {
           item.control.disable();
-        };
+        }
 
       });
-    };
+    }
 
   }
 };

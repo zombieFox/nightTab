@@ -22,13 +22,13 @@ export const set = ({
           object[currentKey] = {};
         } else {
           object[currentKey] = [];
-        };
-      };
+        }
+      }
 
       // drill down the object with the first key
       object = object[currentKey];
 
-    };
+    }
 
     let finalKey = address.shift();
 
@@ -40,6 +40,6 @@ export const set = ({
     setValue();
   } else {
     return false;
-  };
+  }
 
 };

@@ -1,10 +1,6 @@
 import { state } from '../state';
-import { data } from '../data';
-import { bookmark } from '../bookmark';
 
 import { node } from '../../utility/node';
-import { get } from '../../utility/get';
-import { set } from '../../utility/set';
 import { clearChildNode } from '../../utility/clearChildNode';
 import { applyCSSVar } from '../../utility/applyCSSVar';
 import { applyCSSClass } from '../../utility/applyCSSClass';
@@ -14,7 +10,7 @@ import { isValidString } from '../../utility/isValidString';
 
 import './index.css';
 
-const layout = {}
+const layout = {};
 
 layout.element = {
   layout: node('div|class:layout'),
@@ -38,7 +34,7 @@ layout.area = {
 
       let breakpoint;
 
-      entries.forEach(function(entry) {
+      entries.forEach(function (entry) {
 
         if (entry.contentRect.width <= size.sm) {
           breakpoint = 'xs';
@@ -52,7 +48,7 @@ layout.area = {
           breakpoint = 'xl';
         } else if (entry.contentRect.width > size.xxl) {
           breakpoint = 'xxl';
-        };
+        }
 
       });
 
@@ -88,9 +84,9 @@ layout.area = {
 
         layout.element.layout.removeChild(layout.element.header);
 
-      };
+      }
 
-    };
+    }
 
     if (state.get.current().theme.layout.divider.size > 0) {
 
@@ -102,9 +98,9 @@ layout.area = {
 
         layout.element.layout.removeChild(layout.element.divider);
 
-      };
+      }
 
-    };
+    }
 
     if (state.get.current().bookmark.show) {
 
@@ -116,9 +112,9 @@ layout.area = {
 
         layout.element.layout.removeChild(layout.element.bookmark);
 
-      };
+      }
 
-    };
+    }
 
   },
   clear: () => {
@@ -145,7 +141,7 @@ layout.breakpoint = {
 
     const size = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'];
 
-    size.forEach((item, i) => {
+    size.forEach((item) => {
       html.classList.remove('is-layout-breakpoint-' + item);
     });
 
@@ -174,7 +170,7 @@ layout.breakpoint = {
         html.classList.add('is-layout-breakpoint-xxl');
         break;
 
-    };
+    }
   }
 };
 
@@ -191,7 +187,7 @@ layout.title = {
 
       title.textContent = 'New Tab';
 
-    };
+    }
 
   }
 };
@@ -209,7 +205,7 @@ layout.favicon = {
 
       favicon.href = 'icon/favicon.svg';
 
-    };
+    }
 
   }
 };

@@ -1,4 +1,3 @@
-import { state } from '../state';
 import { bookmark } from '../bookmark';
 import { group } from '../group';
 
@@ -8,7 +7,7 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const BookmarkEmpty = function() {
+export const BookmarkEmpty = function () {
 
   this.element = {
     empty: node('div|class:bookmark-empty'),

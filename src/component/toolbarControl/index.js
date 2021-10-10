@@ -4,7 +4,6 @@ import { data } from '../data';
 import { bookmark } from '../bookmark';
 import { group } from '../group';
 import { header } from '../header';
-import { theme } from '../theme';
 
 import * as form from '../form';
 
@@ -20,7 +19,7 @@ import { applyCSSState } from '../../utility/applyCSSState';
 
 import './index.css';
 
-export const ToolbarControl = function() {
+export const ToolbarControl = function () {
 
   this.element = {
     toolbar: node('div|class:toolbar'),
@@ -108,7 +107,7 @@ export const ToolbarControl = function() {
             this.element.group.classList.add('form-group-reverse');
             break;
 
-        };
+        }
 
         break;
 
@@ -116,7 +115,7 @@ export const ToolbarControl = function() {
         this.element.group.classList.remove('form-group-reverse');
         break;
 
-    };
+    }
 
     if (state.get.current().toolbar.accent.show) {
 
@@ -126,9 +125,9 @@ export const ToolbarControl = function() {
 
       if (this.element.group.contains(this.control.button.accent.button)) {
         this.element.group.removeChild(this.control.button.accent.button);
-      };
+      }
 
-    };
+    }
 
     if (state.get.current().toolbar.add.show) {
 
@@ -138,9 +137,9 @@ export const ToolbarControl = function() {
 
       if (this.element.group.contains(this.control.button.add.toggle)) {
         this.element.group.removeChild(this.control.button.add.toggle);
-      };
+      }
 
-    };
+    }
 
     if (state.get.current().toolbar.edit.show) {
 
@@ -150,9 +149,9 @@ export const ToolbarControl = function() {
 
       if (this.element.group.contains(this.control.button.edit.button)) {
         this.element.group.removeChild(this.control.button.edit.button);
-      };
+      }
 
-    };
+    }
 
     this.element.group.appendChild(this.control.button.setting.button);
 
@@ -182,7 +181,7 @@ export const ToolbarControl = function() {
 
       html.classList.remove('is-toolbar-opacity-low');
 
-    };
+    }
 
     const add = (rgb) => {
 
@@ -239,9 +238,7 @@ export const ToolbarControl = function() {
         case 'gradient':
 
           switch (state.get.current().toolbar.location) {
-
-            case 'corner':
-
+            case 'corner': {
               let angle = state.get.current().theme.background.gradient.angle;
 
               switch (state.get.current().toolbar.position) {
@@ -256,7 +253,7 @@ export const ToolbarControl = function() {
                     add(state.get.current().theme.background.gradient.start.rgb);
                   } else if (angle >= 270) {
                     add(state.get.current().theme.background.gradient.end.rgb);
-                  };
+                  }
                   break;
 
                 case 'bottom-right':
@@ -269,12 +266,13 @@ export const ToolbarControl = function() {
                     add(state.get.current().theme.background.gradient.end.rgb);
                   } else if (angle >= 270) {
                     add(state.get.current().theme.background.gradient.start.rgb);
-                  };
+                  }
                   break;
 
-              };
+              }
 
               break;
+            }
 
             case 'header':
 
@@ -282,11 +280,11 @@ export const ToolbarControl = function() {
 
               break;
 
-          };
+          }
 
           break;
 
-      };
+      }
 
       this.control.button.accent.inputButtonStyle.update(['dot', 'link']);
       this.control.button.edit.style.update(['line', 'link']);
@@ -302,7 +300,7 @@ export const ToolbarControl = function() {
       this.control.button.setting.style.update(['line']);
       this.control.button.add.buttonStyle.update(['line']);
 
-    };
+    }
 
   };
 
@@ -316,7 +314,7 @@ export const ToolbarControl = function() {
 
       this.control.button.edit.deactive();
 
-    };
+    }
 
   };
 
@@ -341,7 +339,7 @@ export const ToolbarControl = function() {
         this.element.group.classList.add('form-group-reverse');
         break;
 
-    };
+    }
 
     applyCSSVar('toolbar.size');
     applyCSSClass('toolbar.position');

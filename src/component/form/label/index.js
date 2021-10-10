@@ -18,11 +18,11 @@ export const label = ({
     label = node('label|for:' + forInput);
   } else {
     label = node('label');
-  };
+  }
 
   if (noPadding) {
     label.classList.add('label-no-padding');
-  };
+  }
 
   const labelBlock = node('span|class:label-block');
 
@@ -31,17 +31,17 @@ export const label = ({
       labelBlock.classList.add('sr-only');
     } else {
       label.classList.add('sr-only');
-    };
-  };
+    }
+  }
 
   if (text) {
     labelBlock.appendChild(node('span:' + text + '|class:label-block-item'));
-  };
+  }
 
   if (description) {
     if (Array.isArray(description)) {
 
-      description.forEach((item, i) => {
+      description.forEach((item) => {
         labelBlock.appendChild(node('span:' + item + '|class:label-block-item small muted'));
       });
 
@@ -49,24 +49,24 @@ export const label = ({
 
       labelBlock.appendChild(node('span:' + description + '|class:label-block-item small muted'));
 
-    };
-  };
+    }
+  }
 
   if (text || description) {
     label.appendChild(labelBlock);
-  };
+  }
 
   if (icon) {
     label.prepend(node('span|class:label-icon'));
-  };
+  }
 
   if (classList.length > 0) {
 
-    classList.forEach((item, i) => {
+    classList.forEach((item) => {
       label.classList.add(item);
     });
 
-  };
+  }
 
   return label;
 
