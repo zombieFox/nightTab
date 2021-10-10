@@ -194,6 +194,3 @@ export const Dropdown = function ({
   this.assemble();
 
 };
-
-
-window.Dropdown = Dropdown;
