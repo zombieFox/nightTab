@@ -185,7 +185,7 @@ export const GroupArea = function ({
 
         if (state.get.current().bookmark.newTab) {
 
-          groupData.group.items.forEach((item, i) => {
+          groupData.group.items.forEach((item) => {
             chrome.tabs.create({ url: item.url });
           });
 
@@ -193,7 +193,7 @@ export const GroupArea = function ({
 
           const first = groupData.group.items.shift();
 
-          groupData.group.items.forEach((item, i) => {
+          groupData.group.items.forEach((item) => {
             chrome.tabs.create({ url: item.url });
           });
 
