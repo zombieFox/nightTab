@@ -1,0 +1,33 @@
+.splash {
+  font-size: 1rem;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-gap: var(--wrap-space);
+  align-items: center;
+  justify-items: start;
+}
+
+.splash-logo {}
+
+.splash-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25em;
+}
+
+.splash-name {
+  margin-bottom: 0;
+}
+
+.splash-version-number:not(:last-child),
+.splash-version-name:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.splash-version-number {
+  background-color: rgb(var(--theme-accent));
+  color: hsl(var(--theme-accent-text));
+  border-radius: calc(var(--theme-radius) * 0.01em);
+  padding: 0 0.5em;
+}

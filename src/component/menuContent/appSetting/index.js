@@ -1,22 +1,19 @@
-import { version } from '../../version';
-import { logo } from '../../logo';
+import { node } from '../../../utility/node';
+
 import { APP_NAME } from '../../../constant';
 
-
 import { Link } from '../../link';
-
-
-import { node } from '../../../utility/node';
+import { Splash } from '../../splash';
 
 const appSetting = {};
 
 appSetting[APP_NAME.toLowerCase()] = (parent) => {
 
-  const githubLink = new Link({ text: 'GitHub.', href: 'https://github.com/zombieFox/' + APP_NAME, openNew: true });
+  const githubLink = new Link({ text: 'GitHub.', href: `https://github.com/zombieFox/${APP_NAME}`, openNew: true });
 
-  const redditLink = new Link({ text: `Reddit ${APP_NAME} community.`, href: 'https://www.reddit.com/r/' + APP_NAME, openNew: true });
+  const redditLink = new Link({ text: `Reddit ${APP_NAME} community.`, href: `https://www.reddit.com/r/${APP_NAME}`, openNew: true });
 
-  const licenseLink = new Link({ text: 'GNU General Public License v3.0', href: 'https://github.com/zombieFox/' + APP_NAME + '/blob/master/license', openNew: true });
+  const licenseLink = new Link({ text: 'GNU General Public License v3.0', href: `https://github.com/zombieFox/${APP_NAME}/blob/master/license`, openNew: true });
 
   const para1 = node('p');
 
@@ -30,16 +27,11 @@ appSetting[APP_NAME.toLowerCase()] = (parent) => {
 
   para3.innerHTML = `${APP_NAME} uses the ${licenseLink.link().outerHTML}`;
 
+  const splash = new Splash();
+
   parent.appendChild(
     node('div', [
-      node('div|class:version', [
-        logo.render(),
-        node('div|class:version-details', [
-          node('h1:' + APP_NAME + '|class:version-app-name'),
-          node('p:Version ' + version.number + '|class:version-number'),
-          node('p:' + version.name + '|class:version-name small')
-        ])
-      ]),
+      splash.splash(),
       node('hr'),
       para1,
       para2,
