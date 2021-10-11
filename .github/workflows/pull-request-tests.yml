@@ -13,5 +13,7 @@ jobs:
         with:
           node-version: '12' # TODO IDK what version nighttab is built with normally.
           cache: 'npm'
-      - run: npm install
-      - run: npm test
+      - run: |
+          npm install
+          npm run lint
+          npm test
