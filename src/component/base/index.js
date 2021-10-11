@@ -7,8 +7,6 @@ import '../../style/font/index.css';
 import '../../style/spacing/index.css';
 import '../../style/state/index.css';
 import '../../style/typography/index.css';
-//FIXME version to move made into its own component
-import '../../style/version/index.css';
 import '../../style/zindex/index.css';
 import '../../style/utility/index.css';
 

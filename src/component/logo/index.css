@@ -1,14 +1,21 @@
+:root {
+  --logo-size: 22;
+  --logo-width: calc((var(--logo-size) / 4) * 1em);
+}
+
 .logo {
+  font-size: 1rem;
+  width: var(--logo-width);
   transform: scale(1) rotate(0deg);
   transition: transform var(--layout-transition-extra-fast);
 }
 
 .logo:hover {
-  transform: scale(1.2) rotate(180deg);
+  transform: scale(1.1) rotate(180deg);
 }
 
 .logo:active {
-  transform: scale(1.4) rotate(180deg);
+  transform: scale(1.2) rotate(180deg);
 }
 
 .logo,
@@ -94,7 +101,7 @@
 
 @keyframes shrink {
   0% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   100% {
