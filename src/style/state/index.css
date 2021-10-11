@@ -1,0 +1,63 @@
+.is-hidden {
+  display: none !important;
+}
+
+.is-inline-block {
+  display: inline-block !important;
+}
+
+.is-block {
+  display: block !important;
+}
+
+.is-transparent {
+  opacity: 0 !important;
+}
+
+.is-opaque {
+  opacity: 1 !important;
+}
+
+.is-invisible {
+  visibility: hidden !important;
+}
+
+.is-visible {
+  visibility: visible !important;
+}
+
+.is-small {
+  transform: scale(0.5) !important;
+}
+
+.is-large {
+  transform: scale(1.5) !important;
+}
+
+.is-scroll-disabled {
+  overflow: hidden !important;
+}
+
+.is-scroll-x-disabled {
+  overflow-x: hidden !important;
+}
+
+.is-scroll-y-disabled {
+  overflow-y: hidden !important;
+}
+
+.is-appear {
+  animation: appear var(--layout-transition-medium) 1;
+}
+
+.is-shake {
+  animation: shake var(--layout-transition-slow) 1;
+}
+
+.is-pop {
+  animation: pop var(--layout-transition-medium) 1;
+}
+
+.is-jello {
+  animation: jello var(--layout-transition-slow) 1;
+}

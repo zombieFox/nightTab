@@ -1,4 +1,3 @@
-
 import * as form from '../../form';
 
 import { Button } from '../../button';
@@ -32,7 +31,7 @@ export const Control_sliderSlim = function ({
     forInput: id,
     text: labelText,
     noPadding: true,
-    classList: ['form-group-text', 'form-group-text-left', 'form-group-text-transparent', 'form-group-text-borderless', 'form-group-item-medium',]
+    classList: ['form-group-text', 'form-group-text-left', 'form-group-text-transparent', 'form-group-text-borderless', 'form-group-item-medium']
   });
 
   const classList = ['form-group-item-grow'];
