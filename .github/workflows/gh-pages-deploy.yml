@@ -13,10 +13,13 @@ jobs:
         uses: actions/checkout@v2.3.1
         with:
           persist-credentials: false
-
-      - name: Install and Build
-        run: |
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12' # TODO IDK what version nighttab is built with normally.
+          cache: 'npm'
+      - run: |
           npm install
+          npm test
           npm run build
 
       - name: Deploy
