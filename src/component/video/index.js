@@ -6,7 +6,7 @@ export const Video = function ({
   url = false
 } = {}) {
 
-  this.video = node('video|autoplay,loop,muted');
+  this.video = node('video|autoplay,loop');
 
   this.source = node('source');
 
@@ -17,7 +17,7 @@ export const Video = function ({
   };
 
   this.pause = () => {
-    var playPromise = this.video.play();
+    const playPromise = this.video.play();
 
     if (playPromise !== undefined) {
       playPromise.then(() => {
@@ -28,9 +28,12 @@ export const Video = function ({
 
   this.assemble = () => {
 
-    this.video.muted = true;
-
     this.video.loop = true;
+    
+    const params = new URLSearchParams(url);
+    const volume = params.get('volume') / 100;
+
+    this.video.volume = volume;
 
     this.video.autoplay = true;
 
