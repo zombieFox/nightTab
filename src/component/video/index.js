@@ -12,6 +12,16 @@ export const Video = function ({
 
   this.video.appendChild(this.source);
 
+  window.addEventListener('visibilitychange', e => {
+    e.preventDefault();
+
+    if (document.visibilityState === 'visible') {
+      this.play();
+    } else {
+      this.pause();
+    }
+  });
+
   this.play = () => {
     this.video.play();
   };
