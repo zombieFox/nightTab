@@ -1,3 +1,7 @@
 .group-form {
   display: block;
 }
+
+.group-form-description {
+  margin-bottom: 3em;
+}

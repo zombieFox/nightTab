@@ -16,6 +16,10 @@
   }
 }
 
+.bookmark-form-description {
+  margin-bottom: 3em;
+}
+
 .bookmark-form-main {
   padding-bottom: var(--bookmark-form-space);
 }
