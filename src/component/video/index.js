@@ -12,6 +12,7 @@ export const Video = function ({
 
   this.video.appendChild(this.source);
 
+
   this.play = () => {
     this.video.play();
   };
@@ -54,4 +55,16 @@ export const Video = function ({
 
   this.assemble();
 
+  const visibilitychangeEvent = (e) => {
+    e.preventDefault();
+  
+    if (document.visibilityState === 'visible') {
+      this.play();
+    } else {
+      this.pause();
+    }
+  };
+
+  window.removeEventListener('visibilitychange', visibilitychangeEvent);
+  window.addEventListener('visibilitychange', visibilitychangeEvent);
 };
