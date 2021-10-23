@@ -492,6 +492,14 @@ const BookmarkTile = function ({
 
             this.element.content.background.video.appendChild(this.video.video);
 
+            this.bind.add();
+
+          } else {
+
+            this.video = false;
+
+            this.bind.remove();
+
           }
 
           break;
@@ -548,6 +556,33 @@ const BookmarkTile = function ({
   this.update = (newBookmarkData) => {
 
     this.style(newBookmarkData);
+
+  };
+
+  this.bind = {
+    add: () => {
+
+      if (this.video) {
+
+        this.video.bind.add();
+
+      }
+
+    },
+    remove: () => {
+
+      if (this.video) {
+
+        this.video.bind.remove();
+
+      }
+
+    }
+  };
+
+  this.clear = () => {
+
+    this.bind.remove();
 
   };
 

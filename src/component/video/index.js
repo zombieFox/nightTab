@@ -1,4 +1,3 @@
-
 import { node } from '../../utility/node';
 import { isValidString } from '../../utility/isValidString';
 
@@ -12,7 +11,6 @@ export const Video = function ({
 
   this.video.appendChild(this.source);
 
-
   this.play = () => {
     this.video.play();
   };
@@ -25,6 +23,16 @@ export const Video = function ({
         this.video.pause();
       });
     }
+  };
+
+  this.autoPause = () => {
+
+    if (document.visibilityState === 'visible') {
+      this.video.play();
+    } else {
+      this.video.pause();
+    }
+
   };
 
   this.assemble = () => {
@@ -53,18 +61,20 @@ export const Video = function ({
 
   };
 
-  this.assemble();
+  this.bind = {};
 
-  const visibilitychangeEvent = (e) => {
-    e.preventDefault();
-  
-    if (document.visibilityState === 'visible') {
-      this.play();
-    } else {
-      this.pause();
-    }
+  this.bind.add = () => {
+
+    window.addEventListener('visibilitychange', this.autoPause);
+
   };
 
-  window.removeEventListener('visibilitychange', visibilitychangeEvent);
-  window.addEventListener('visibilitychange', visibilitychangeEvent);
+  this.bind.remove = () => {
+
+    window.removeEventListener('visibilitychange', this.autoPause);
+
+  };
+
+  this.assemble();
+
 };

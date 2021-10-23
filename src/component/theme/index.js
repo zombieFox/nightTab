@@ -413,6 +413,8 @@ theme.background.video = {
         url: allUrls[Math.floor(Math.random() * allUrls.length)]
       });
 
+      theme.background.element.video.bind.add();
+
       theme.background.element.type.video.wrap.appendChild(theme.background.element.video.video);
 
     } else {
@@ -424,9 +426,11 @@ theme.background.video = {
   },
   clear: () => {
 
-    theme.background.element.video = false;
+    if (theme.background.element.video) {
 
-    if (theme.background.element.type.video.wrap.lastChild) {
+      theme.background.element.video.bind.remove();
+
+      theme.background.element.video = false;
 
       clearChildNode(theme.background.element.type.video.wrap);
 
