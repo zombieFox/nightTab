@@ -244,6 +244,16 @@ bookmark.item = {
   },
   clear: () => {
 
+    if (bookmark.tile.current.length > 0) {
+
+      bookmark.tile.current.forEach(item => {
+
+        item.clear();
+
+      });
+
+    }
+
     bookmark.tile.current = [];
 
   }

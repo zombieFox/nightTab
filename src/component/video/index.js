@@ -1,4 +1,3 @@
-
 import { node } from '../../utility/node';
 import { isValidString } from '../../utility/isValidString';
 
@@ -26,6 +25,16 @@ export const Video = function ({
     }
   };
 
+  this.autoPause = () => {
+
+    if (document.visibilityState === 'visible') {
+      this.video.play();
+    } else {
+      this.video.pause();
+    }
+
+  };
+
   this.assemble = () => {
 
     this.video.muted = true;
@@ -49,6 +58,20 @@ export const Video = function ({
       this.source.src = url;
 
     }
+
+  };
+
+  this.bind = {};
+
+  this.bind.add = () => {
+
+    window.addEventListener('visibilitychange', this.autoPause);
+
+  };
+
+  this.bind.remove = () => {
+
+    window.removeEventListener('visibilitychange', this.autoPause);
 
   };
 
