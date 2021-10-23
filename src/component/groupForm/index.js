@@ -15,7 +15,7 @@ import { randomNumber } from '../../utility/randomNumber';
 
 import './index.css';
 
-export const GroupForm = function ({
+export const GroupForm = function({
   groupData = false
 } = {}) {
 
@@ -138,8 +138,10 @@ export const GroupForm = function ({
         children: [
           form.wrap({
             children: [
-              node('h2:Name|class:mb-2'),
-              node('p:Display a Name above this Group.|class:mb-5')
+              node('div|class:group-form-description', [
+                node('h2:Name'),
+                node('p:Display a Name above this Group.')
+              ])
             ]
           }),
           form.wrap({
@@ -174,8 +176,10 @@ export const GroupForm = function ({
         children: [
           form.wrap({
             children: [
-              node('h2:Toolbar|class:mb-2'),
-              node('p:Display controls to open all or show/hide the Bookmarks in this Group.|class:mb-5')
+              node('div|class:group-form-description', [
+                node('h2:Toolbar'),
+                node('p:Display controls to open all or show/hide the Bookmarks in this Group.')
+              ])
             ]
           }),
           form.wrap({
@@ -201,8 +205,10 @@ export const GroupForm = function ({
         children: [
           form.wrap({
             children: [
-              node('h2:Ordering|class:mb-2'),
-              node('p:The position of this Group.|class:mb-5')
+              node('div|class:group-form-description', [
+                node('h2:Ordering'),
+                node('p:The position of this Group.')
+              ])
             ]
           }),
           form.wrap({

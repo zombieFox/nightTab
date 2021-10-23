@@ -30,7 +30,7 @@ import { randomNumber } from '../../utility/randomNumber';
 
 import './index.css';
 
-export const BookmarkForm = function ({
+export const BookmarkForm = function({
   bookmarkData = false
 } = {}) {
 
@@ -768,8 +768,10 @@ export const BookmarkForm = function ({
       children: [
         form.wrap({
           children: [
-            node('h2:Visual & Name|class:mb-2'),
-            node('p:Display Letters, Icon, Image and a Name on this Bookmark tile.|class:mb-5')
+            node('div|class:bookmark-form-description', [
+              node('h2:Visual & Name'),
+              node('p:Display Letters, Icon, Image and a Name on this Bookmark tile.')
+            ])
           ]
         }),
         form.wrap({
@@ -796,8 +798,10 @@ export const BookmarkForm = function ({
       children: [
         form.wrap({
           children: [
-            node('h2:Address|class:mb-2'),
-            complexNode({ tag: 'p', text: 'Be sure to use the full URL and include <strong>"https://..."</strong>', complexText: true, attr: [{ key: 'class', value: 'mb-5' }] })
+            node('div|class:bookmark-form-description', [
+              node('h2:Address'),
+              complexNode({ tag: 'p', text: 'Be sure to use the full URL and include <strong>"https://..."</strong>', complexText: true })
+            ])
           ]
         }),
         form.wrap({
@@ -818,8 +822,10 @@ export const BookmarkForm = function ({
       children: [
         form.wrap({
           children: [
-            node('h2:Position|class:mb-2'),
-            node('p:The Group to place this Bookmark in.|class:mb-5')
+            node('div|class:bookmark-form-description', [
+              node('h2:Position'),
+              node('p:The Group to place this Bookmark in.')
+            ])
           ]
         }),
         form.wrap({
@@ -861,8 +867,10 @@ export const BookmarkForm = function ({
       children: [
         form.wrap({
           children: [
-            node('h2:Layout|class:mb-2'),
-            node('p:Change the Visual Element and Name position, scale and orientation.|class:mb-5')
+            node('div|class:bookmark-form-description', [
+              node('h2:Layout'),
+              node('p:Change the Visual Element and Name position, scale and orientation.')
+            ])
           ]
         }),
         form.wrap({
@@ -906,8 +914,10 @@ export const BookmarkForm = function ({
       children: [
         form.wrap({
           children: [
-            node('h2:Theme|class:mb-2'),
-            node('p:Override the Theme and Accent colour.|class:mb-5')
+            node('div|class:bookmark-form-description', [
+              node('h2:Theme'),
+              node('p:Override the Theme and Accent colour.')
+            ])
           ]
         }),
         form.wrap({
