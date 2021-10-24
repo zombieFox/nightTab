@@ -23,6 +23,7 @@ const groupSetting = {};
 groupSetting.control = {
   alignment: {},
   name: {},
+  collapse: {},
   toolbar: {}
 };
 
@@ -241,6 +242,117 @@ groupSetting.name = (parent) => {
         ]
       }),
       groupSetting.control.name.helper.wrap()
+    ])
+  );
+
+};
+
+groupSetting.collapse = (parent) => {
+
+  groupSetting.control.collapse = {
+    show: new Button({
+      text: 'Collapse all groups',
+      style: ['line'],
+      func: () => {
+
+        bookmark.all.forEach(item => { item.collapse = true; });
+
+        groupAndBookmark.render();
+
+        if (groupSetting.edge.name.size) {
+
+          if (state.get.current().bookmark.show && group.area.current.length > 0) {
+
+            groupSetting.edge.name.size.update.primary(group.area.current[0].element.name.name);
+
+            groupSetting.edge.name.size.update.secondary([group.area.current[0].element.header]);
+
+          }
+
+        } else {
+
+          groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
+
+        }
+
+        if (groupSetting.edge.toolbar.size) {
+
+          if (state.get.current().bookmark.show && group.area.current.length > 0) {
+
+            groupSetting.edge.toolbar.size.update.primary(group.area.current[0].element.toolbar.toolbar);
+
+            groupSetting.edge.toolbar.size.update.secondary([group.area.current[0].element.header]);
+
+          }
+
+        } else {
+
+          groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[0].element.toolbar.toolbar, secondary: [group.area.current[0].element.header] });
+
+        }
+
+        data.save();
+
+      }
+    }),
+    hide: new Button({
+      text: 'Open all groups',
+      style: ['line'],
+      func: () => {
+
+        bookmark.all.forEach(item => { item.collapse = false; });
+
+        groupAndBookmark.render();
+
+        if (groupSetting.edge.name.size) {
+
+          if (state.get.current().bookmark.show && group.area.current.length > 0) {
+
+            groupSetting.edge.name.size.update.primary(group.area.current[0].element.name.name);
+
+            groupSetting.edge.name.size.update.secondary([group.area.current[0].element.header]);
+
+          }
+
+        } else {
+
+          groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
+
+        }
+
+        if (groupSetting.edge.toolbar.size) {
+
+          if (state.get.current().bookmark.show && group.area.current.length > 0) {
+
+            groupSetting.edge.toolbar.size.update.primary(group.area.current[0].element.toolbar.toolbar);
+
+            groupSetting.edge.toolbar.size.update.secondary([group.area.current[0].element.header]);
+
+          }
+
+        } else {
+
+          groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[0].element.toolbar.toolbar, secondary: [group.area.current[0].element.header] });
+
+        }
+
+        data.save();
+
+      }
+    })
+  };
+
+  parent.appendChild(
+    node('div', [
+      form.inline({
+        gap: 'small',
+        wrap: true,
+        equalGap: true,
+        children: [
+          groupSetting.control.collapse.show.wrap(),
+          groupSetting.control.collapse.hide.wrap()
+        ]
+      })
     ])
   );
 
@@ -472,7 +584,7 @@ groupSetting.toolbar = (parent) => {
     node('div', [
       groupSetting.control.toolbar.size.wrap(),
       node('hr'),
-      node('label:Group Collapse'),
+      node('label:Group Collapse control'),
       form.inline({
         gap: 'small',
         wrap: true,
@@ -484,7 +596,7 @@ groupSetting.toolbar = (parent) => {
       }),
       groupSetting.control.toolbar.openAll.helper.wrap(),
       node('hr'),
-      node('label:Group Open all'),
+      node('label:Group Open all control'),
       form.inline({
         gap: 'small',
         wrap: true,
