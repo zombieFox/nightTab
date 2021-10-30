@@ -1,18 +1,14 @@
-name: gh-pages-deploy
+name: Run tests
 
-on:
-  push:
-    branches:
-      - main
+on: [push, pull_request]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1
-        with:
-          persist-credentials: false
+      - uses: actions/checkout@v2
+      - name: Install Dependecies & Test
       - uses: actions/setup-node@v2
         with:
           node-version: '12' # TODO IDK what version nighttab is built with normally.
@@ -21,10 +17,3 @@ jobs:
           npm install
           npm run lint
           npm test
-          npm run build
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.3
-        with:
-          branch: gh-pages
-          folder: dist/web
