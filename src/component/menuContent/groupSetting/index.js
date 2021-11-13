@@ -29,8 +29,52 @@ groupSetting.control = {
 };
 
 groupSetting.edge = {
-  name: {},
-  toolbar: {}
+  name: {
+    update: () => {
+
+      if (state.get.current().bookmark.show && group.area.current.length > 0) {
+
+        if (groupSetting.findIndex.name() !== null) {
+
+          groupSetting.edge.name.size = new Edge({ primary: group.area.current[groupSetting.findIndex.name()].element.name.name, secondary: [group.area.current[groupSetting.findIndex.name()].element.header] });
+
+        }
+
+      } else {
+
+        groupSetting.edge.name.size = null;
+
+      }
+
+    }
+  },
+  toolbar: {
+    update: () => {
+
+      if (state.get.current().bookmark.show && group.area.current.length > 0) {
+
+        if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() !== null) {
+
+          groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
+
+        } else if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() === null) {
+
+          groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.collapse()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.collapse()].element.header] });
+
+        } else if (groupSetting.findIndex.toolbar.collapse() === null && groupSetting.findIndex.toolbar.openAll() !== null) {
+
+          groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
+
+        } else {
+
+          groupSetting.edge.toolbar.size = null;
+
+        }
+
+      }
+
+    }
+  }
 };
 
 groupSetting.disable = () => {
@@ -176,15 +220,7 @@ groupSetting.findIndex = {
 
 groupSetting.name = (parent) => {
 
-  if (state.get.current().bookmark.show && group.area.current.length > 0) {
-
-    if (groupSetting.findIndex.name() == 0 || groupSetting.findIndex.name()) {
-
-      groupSetting.edge.name.size = new Edge({ primary: group.area.current[groupSetting.findIndex.name()].element.name.name, secondary: [group.area.current[groupSetting.findIndex.name()].element.header] });
-
-    }
-
-  }
+  groupSetting.edge.name.update();
 
   groupSetting.control.name.size = new Control_slider({
     object: state.get.current(),
@@ -242,25 +278,9 @@ groupSetting.name = (parent) => {
 
       groupAndBookmark.render();
 
-      if (groupSetting.edge.name.size) {
+      groupSetting.edge.name.update();
 
-        if (state.get.current().bookmark.show && group.area.current.length > 0) {
-
-          if (groupSetting.findIndex.name() == 0 || groupSetting.findIndex.name()) {
-
-            groupSetting.edge.name.size.update.primary(group.area.current[groupSetting.findIndex.name()].element.name.name);
-
-            groupSetting.edge.name.size.update.secondary([group.area.current[groupSetting.findIndex.name()].element.header]);
-
-          }
-
-        }
-
-      } else {
-
-        groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
-
-      }
+      groupSetting.edge.toolbar.update();
 
       data.save();
 
@@ -276,7 +296,9 @@ groupSetting.name = (parent) => {
 
       groupAndBookmark.render();
 
-      groupSetting.edge.name.size = null;
+      groupSetting.edge.name.update();
+
+      groupSetting.edge.toolbar.update();
 
       data.save();
 
@@ -317,43 +339,9 @@ groupSetting.collapse = (parent) => {
 
         groupAndBookmark.render();
 
-        if (groupSetting.edge.name.size) {
+        groupSetting.edge.name.update();
 
-          if (state.get.current().bookmark.show && group.area.current.length > 0) {
-
-            groupSetting.edge.name.size.update.primary(group.area.current[0].element.name.name);
-
-            groupSetting.edge.name.size.update.secondary([group.area.current[0].element.header]);
-
-          }
-
-        } else {
-
-          groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
-
-        }
-
-        if (state.get.current().bookmark.show && group.area.current.length > 0) {
-
-          if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() === null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.collapse()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.collapse()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() === null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else {
-
-            groupSetting.edge.toolbar.size = false;
-
-          }
-
-        }
+        groupSetting.edge.toolbar.update();
 
         data.save();
 
@@ -368,43 +356,9 @@ groupSetting.collapse = (parent) => {
 
         groupAndBookmark.render();
 
-        if (groupSetting.edge.name.size) {
+        groupSetting.edge.name.update();
 
-          if (state.get.current().bookmark.show && group.area.current.length > 0) {
-
-            groupSetting.edge.name.size.update.primary(group.area.current[0].element.name.name);
-
-            groupSetting.edge.name.size.update.secondary([group.area.current[0].element.header]);
-
-          }
-
-        } else {
-
-          groupSetting.edge.name.size = new Edge({ primary: group.area.current[0].element.name.name, secondary: [group.area.current[0].element.header] });
-
-        }
-
-        if (state.get.current().bookmark.show && group.area.current.length > 0) {
-
-          if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() === null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.collapse()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.collapse()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() === null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else {
-
-            groupSetting.edge.toolbar.size = false;
-
-          }
-
-        }
+        groupSetting.edge.toolbar.update();
 
         data.save();
 
@@ -430,27 +384,7 @@ groupSetting.collapse = (parent) => {
 
 groupSetting.toolbar = (parent) => {
 
-  if (state.get.current().bookmark.show && group.area.current.length > 0) {
-
-    if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-      groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-    } else if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() === null) {
-
-      groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.collapse()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.collapse()].element.header] });
-
-    } else if (groupSetting.findIndex.toolbar.collapse() === null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-      groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-    } else {
-
-      groupSetting.edge.toolbar.size = false;
-
-    }
-
-  }
+  groupSetting.edge.toolbar.update();
 
   groupSetting.control.toolbar.size = new Control_slider({
     object: state.get.current(),
@@ -524,27 +458,9 @@ groupSetting.toolbar = (parent) => {
 
         groupAndBookmark.render();
 
-        if (state.get.current().bookmark.show && group.area.current.length > 0) {
+        groupSetting.edge.name.update();
 
-          if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() === null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.collapse()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.collapse()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() === null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else {
-
-            groupSetting.edge.toolbar.size = false;
-
-          }
-
-        }
+        groupSetting.edge.toolbar.update();
 
         data.save();
 
@@ -559,27 +475,9 @@ groupSetting.toolbar = (parent) => {
 
         groupAndBookmark.render();
 
-        if (state.get.current().bookmark.show && group.area.current.length > 0) {
+        groupSetting.edge.name.update();
 
-          if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() === null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.collapse()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.collapse()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() === null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else {
-
-            groupSetting.edge.toolbar.size = false;
-
-          }
-
-        }
+        groupSetting.edge.toolbar.update();
 
         data.save();
 
@@ -601,27 +499,9 @@ groupSetting.toolbar = (parent) => {
 
         groupAndBookmark.render();
 
-        if (state.get.current().bookmark.show && group.area.current.length > 0) {
+        groupSetting.edge.name.update();
 
-          if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() === null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.collapse()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.collapse()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() === null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else {
-
-            groupSetting.edge.toolbar.size = false;
-
-          }
-
-        }
+        groupSetting.edge.toolbar.update();
 
         data.save();
 
@@ -636,27 +516,9 @@ groupSetting.toolbar = (parent) => {
 
         groupAndBookmark.render();
 
-        if (state.get.current().bookmark.show && group.area.current.length > 0) {
+        groupSetting.edge.name.update();
 
-          if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() !== null && groupSetting.findIndex.toolbar.openAll() === null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.collapse()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.collapse()].element.header] });
-
-          } else if (groupSetting.findIndex.toolbar.collapse() === null && groupSetting.findIndex.toolbar.openAll() !== null) {
-
-            groupSetting.edge.toolbar.size = new Edge({ primary: group.area.current[groupSetting.findIndex.toolbar.openAll()].element.toolbar.toolbar, secondary: [group.area.current[groupSetting.findIndex.toolbar.openAll()].element.header] });
-
-          } else {
-
-            groupSetting.edge.toolbar.size = false;
-
-          }
-
-        }
+        groupSetting.edge.toolbar.update();
 
         data.save();
 

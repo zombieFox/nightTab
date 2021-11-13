@@ -48,7 +48,7 @@ toolbarSetting.disable = () => {
 };
 
 toolbarSetting.edge = {
-  size: false
+  size: null
 };
 
 toolbarSetting.size = (parent) => {
