@@ -1,6 +1,4 @@
-
 import * as form from '../../form';
-
 
 import { isValidString } from '../../../utility/isValidString';
 import { clearChildNode } from '../../../utility/clearChildNode';

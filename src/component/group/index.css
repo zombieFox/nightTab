@@ -17,6 +17,7 @@
 
 .is-group-collapse.group {
   width: initial;
+  justify-content: center;
 }
 
 .is-group-order-header-body .group {

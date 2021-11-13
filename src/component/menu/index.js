@@ -12,7 +12,7 @@ menu.navData = [
   { name: 'Layout', active: false, overscroll: true, sub: ['Scaling', 'Area', 'Padding', 'Gutter', 'Alignment', 'Page'] },
   { name: 'Header', active: false, overscroll: true, sub: ['Alignment', 'Greeting', 'Transitional words', 'Clock', 'Date', 'Search'] },
   { name: 'Bookmark', active: false, overscroll: true, sub: ['General', 'Style', 'Orientation', 'Sort'] },
-  { name: 'Group', active: false, overscroll: true, sub: ['Alignment', 'Name', 'Toolbar'] },
+  { name: 'Group', active: false, overscroll: true, sub: ['Alignment', 'Name', 'Collapse', 'Toolbar'] },
   { name: 'Toolbar', active: false, overscroll: true, sub: ['Size', 'Location', 'Position', 'Controls'] },
   { name: 'Data', active: false, overscroll: true, sub: ['Restore', 'Backup', 'Clear'] },
   { name: 'Support', active: false, overscroll: false },
