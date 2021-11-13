@@ -1,6 +1,4 @@
-
 import * as form from '../../form';
-
 
 import { complexNode } from '../../../utility/complexNode';
 import { get } from '../../../utility/get';
