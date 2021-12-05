@@ -19,7 +19,7 @@ state.default = {
     scrollbar: 'auto',
     title: '',
     favicon: '',
-    overscroll: false
+    overscroll: { active: false, unblur: false }
   },
   header: {
     item: { justify: 'left' },

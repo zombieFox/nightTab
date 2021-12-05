@@ -3,6 +3,7 @@ import { data } from '../../data';
 import { header } from '../../header';
 import { bookmark } from '../../bookmark';
 import { layout } from '../../layout';
+import { theme } from '../../theme';
 
 import * as form from '../../form';
 
@@ -82,6 +83,12 @@ layoutSetting.disable = () => {
 
     }
 
+  }
+
+  if (state.get.current().layout.overscroll.active) {
+    layoutSetting.control.page.overscroll.unblur.enable();
+  } else {
+    layoutSetting.control.page.overscroll.unblur.disable();
   }
 
 };
@@ -467,16 +474,36 @@ layoutSetting.page = (parent) => {
     text: ['Not supported by all browsers.']
   });
 
-  layoutSetting.control.page.overscroll = new Control_checkbox({
-    object: state.get.current(),
-    path: 'layout.overscroll',
-    id: 'layout-overscroll',
-    labelText: 'Scroll past end',
-    action: () => {
-      applyCSSState('layout.overscroll');
-      data.save();
-    }
-  });
+  layoutSetting.control.page.overscroll = {
+    active: new Control_checkbox({
+      object: state.get.current(),
+      path: 'layout.overscroll.active',
+      id: 'layout-overscroll-active',
+      labelText: 'Scroll past end',
+      action: () => {
+        applyCSSState('layout.overscroll.active');
+        layoutSetting.disable();
+        data.save();
+      }
+    }),
+    unblur: new Control_checkbox({
+      object: state.get.current(),
+      path: 'layout.overscroll.unblur',
+      id: 'layout-overscroll-unblur-background',
+      labelText: 'Unblur background image or video',
+      description: [
+        'Background image or video will unblur when scrolled to the bottom of the page.',
+        'Image or video blur can be found under Theme Background.'
+      ],
+      action: () => {
+        theme.background.image.render();
+        theme.background.video.clear();
+        theme.background.video.render();
+        layout.overscroll.bind();
+        data.save();
+      }
+    })
+  };
 
   parent.appendChild(
     node('div', [
@@ -487,7 +514,16 @@ layoutSetting.page = (parent) => {
       layoutSetting.control.page.scrollbar.inline(),
       layoutSetting.control.page.scrollbarHelper.wrap(),
       node('hr'),
-      layoutSetting.control.page.overscroll.wrap()
+      layoutSetting.control.page.overscroll.active.wrap(),
+      form.wrap({
+        children: [
+          form.indent({
+            children: [
+              layoutSetting.control.page.overscroll.unblur.wrap()
+            ]
+          })
+        ]
+      })
     ])
   );
 

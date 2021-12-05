@@ -345,11 +345,11 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  opacity: calc(var(--theme-background-image-opacity) / 100);
   background-image: var(--theme-background-image);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  opacity: calc(var(--theme-background-image-opacity) / 100);
   transform: scale(calc(calc(var(--theme-background-image-scale) / 100) + calc(var(--theme-background-image-blur) / 400)));
   filter: blur(calc(var(--theme-background-image-blur) * 1px)) grayscale(calc(var(--theme-background-image-grayscale) / 100));
 }
@@ -385,8 +385,8 @@
   height: 100%;
   z-index: 1;
   opacity: calc(var(--theme-background-video-opacity) / 100);
+  transform: scale(calc(calc(var(--theme-background-video-scale) / 100) + calc(var(--theme-background-video-blur) / 400)));
   filter: blur(calc(var(--theme-background-video-blur) * 1px)) grayscale(calc(var(--theme-background-video-grayscale) / 100));
-  transform: scale(calc(var(--theme-background-video-scale) / 100));
 }
 
 .theme-background-type-video-accent {
