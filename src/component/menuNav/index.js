@@ -1,10 +1,13 @@
+import { state } from '../state';
+import { language } from '../../language';
+
 import { Button } from '../button';
 
 import { node } from '../../utility/node';
 
 import './index.css';
 
-export const MenuNav = function ({
+export const MenuNav = function({
   navData = {},
   action = false
 } = {}) {
@@ -116,6 +119,8 @@ export const MenuNav = function ({
 
     navData.forEach((item) => {
 
+      const navTop = item.name;
+
       const navItem = {
         topLevel: false,
         subLevel: false,
@@ -123,7 +128,7 @@ export const MenuNav = function ({
       };
 
       const navButton = new Button({
-        text: item.name,
+        text: language[state.get.current().language].menu[navTop].label,
         style: ['link'],
         block: true,
         classList: ['menu-nav-tab'],
@@ -148,7 +153,7 @@ export const MenuNav = function ({
 
         item.sub.forEach((item) => {
 
-          const subLevelLink = node('a:' + item + '|href:#menu-content-item-' + this.makeId(item) + ',class:menu-nav-sub button button-link button-small,tabindex:1');
+          const subLevelLink = node('a:' + language[state.get.current().language].menu[navTop].subNav[item] + '|href:#menu-content-item-' + this.makeId(item) + ',class:menu-nav-sub button button-link button-small,tabindex:1');
 
           subNav.appendChild(subLevelLink);
 

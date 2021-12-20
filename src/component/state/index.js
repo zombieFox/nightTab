@@ -3,6 +3,7 @@ const state = {};
 state.current = {};
 
 state.default = {
+  language: 'en',
   layout: {
     area: {
       header: { width: 100, justify: 'center' },
@@ -269,6 +270,7 @@ state.set = {
   restore: {
     setup: (dataToRestore) => {
 
+      state.current.language = dataToRestore.state.language;
       state.current.layout = dataToRestore.state.layout;
       state.current.header = dataToRestore.state.header;
       state.current.bookmark = dataToRestore.state.bookmark;

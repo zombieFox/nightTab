@@ -1,5 +1,6 @@
 import { debugSetting } from './debugSetting';
-import { APP_NAME } from '../../constant';
+import { state } from '../state';
+import { language } from '../../language';
 import { layoutSetting } from './layoutSetting';
 import { groupSetting } from './groupSetting';
 import { bookmarkSetting } from './bookmarkSetting';
@@ -11,11 +12,13 @@ import { supportSetting } from './supportSetting';
 import { coffeeSetting } from './coffeeSetting';
 import { appSetting } from './appSetting';
 
+import { APP_NAME } from '../../constant';
+
 import { node } from '../../utility/node';
 
 import './index.css';
 
-export const MenuContent = function ({
+export const MenuContent = function({
   activeNavData = {},
   container = false
 } = {}) {
@@ -49,7 +52,9 @@ export const MenuContent = function ({
 
         const menuContentItem = this.element.content(item);
 
-        menuContentItem.appendChild(this.element.header(item));
+        menuContentItem.appendChild(this.element.header(
+          language[state.get.current().language].menu[activeNavData.name].subNav[item]
+        ));
 
         const formElement = this.element.form({ indent: true });
 

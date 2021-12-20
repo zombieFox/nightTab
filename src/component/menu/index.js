@@ -1,22 +1,22 @@
 import { state } from '../state';
+
 import { APP_NAME } from '../../constant';
 
 import { MenuFrame } from '../menuFrame';
-
 
 const menu = {};
 
 menu.navData = [
   // { name: 'Debug', active: true, overscroll: true, sub: ['Input', 'Button', 'Bookmark', 'Icon'] },
-  { name: 'Theme', active: true, overscroll: true, sub: ['Preset', 'Saved', 'Style', 'Colour', 'Accent', 'Font', 'Radius', 'Shadow', 'Shade', 'Opacity', 'Background', 'Layout', 'Header', 'Bookmark'] },
-  { name: 'Layout', active: false, overscroll: true, sub: ['Scaling', 'Area', 'Padding', 'Gutter', 'Alignment', 'Page'] },
-  { name: 'Header', active: false, overscroll: true, sub: ['Alignment', 'Greeting', 'Transitional words', 'Clock', 'Date', 'Search'] },
-  { name: 'Bookmark', active: false, overscroll: true, sub: ['General', 'Style', 'Orientation', 'Sort'] },
-  { name: 'Group', active: false, overscroll: true, sub: ['Alignment', 'Name', 'Collapse', 'Toolbar'] },
-  { name: 'Toolbar', active: false, overscroll: true, sub: ['Size', 'Location', 'Position', 'Controls'] },
-  { name: 'Data', active: false, overscroll: true, sub: ['Restore', 'Backup', 'Clear'] },
-  { name: 'Support', active: false, overscroll: false },
-  { name: 'Coffee', active: false, overscroll: false },
+  { name: 'theme', active: true, overscroll: true, sub: ['preset', 'saved', 'style', 'colour', 'accent', 'font', 'radius', 'shadow', 'shade', 'opacity', 'background', 'layout', 'header', 'bookmark'] },
+  { name: 'layout', active: false, overscroll: true, sub: ['scaling', 'area', 'padding', 'gutter', 'alignment', 'page'] },
+  { name: 'header', active: false, overscroll: true, sub: ['alignment', 'greeting', 'transitional', 'clock', 'date', 'search'] },
+  { name: 'bookmark', active: false, overscroll: true, sub: ['general', 'style', 'orientation', 'sort'] },
+  { name: 'group', active: false, overscroll: true, sub: ['alignment', 'name', 'collapse', 'toolbar'] },
+  { name: 'toolbar', active: false, overscroll: true, sub: ['size', 'location', 'position', 'controls'] },
+  { name: 'data', active: false, overscroll: true, sub: ['restore', 'backup', 'clear'] },
+  { name: 'support', active: false, overscroll: false },
+  { name: 'coffee', active: false, overscroll: false },
   { name: APP_NAME, active: false, overscroll: false }
 ];
 

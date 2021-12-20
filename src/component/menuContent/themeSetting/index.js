@@ -1,3 +1,5 @@
+import { language } from '../../../language';
+
 import { state } from '../../state';
 import { data } from '../../data';
 import { header } from '../../header';
@@ -273,7 +275,7 @@ themeSetting.disable = () => {
 themeSetting.preset = (parent) => {
 
   themeSetting.control.preset.presetHelper = new Control_helperText({
-    text: ['Applying a Preset will replace the current Colour, Accent, Font, Style, Opacity, Radius, Shadow, Shade and Background.']
+    text: language[state.get.current().language].theme.preset.helper
   });
 
   const preset = () => {
@@ -310,10 +312,10 @@ themeSetting.saved = (parent) => {
   themeSetting.control.saved = {
     savedElement: node('div|class:theme-custom'),
     customHelper: new Control_helperText({
-      text: ['Saving a Theme will record the current Colour, Accent, Font, Style, Opacity, Radius, Shadow, Shade and Background.']
+      text: language[state.get.current().language].theme.saved.helper
     }),
     saveButton: new Button({
-      text: 'Save current theme',
+      text: language[state.get.current().language].theme.saved.save,
       style: ['line'],
       func: () => {
         menu.close();
@@ -321,7 +323,7 @@ themeSetting.saved = (parent) => {
       }
     }),
     edit: new Button({
-      text: 'Edit saved themes',
+      text: language[state.get.current().language].theme.saved.edit,
       iconName: 'edit',
       style: ['line'],
       srOnly: true,
@@ -384,9 +386,9 @@ themeSetting.style = (parent) => {
   themeSetting.control.style = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'theme-style-dark', labelText: 'Dark mode', description: false, value: 'dark' },
-      { id: 'theme-style-light', labelText: 'Light mode', description: false, value: 'light' },
-      { id: 'theme-style-system', labelText: 'Automatic', description: 'Follow the system Light or Dark mode.', value: 'system' }
+      { id: 'theme-style-dark', labelText: language[state.get.current().language].theme.style.dark.label, description: false, value: 'dark' },
+      { id: 'theme-style-light', labelText: language[state.get.current().language].theme.style.light.label, description: false, value: 'light' },
+      { id: 'theme-style-system', labelText: language[state.get.current().language].theme.style.automatic.label, description: language[state.get.current().language].theme.style.automatic.description, value: 'system' }
     ],
     groupName: 'theme-style',
     path: 'theme.style',
