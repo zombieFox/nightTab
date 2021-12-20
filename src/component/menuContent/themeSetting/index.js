@@ -1876,10 +1876,10 @@ themeSetting.header = (parent) => {
   themeSetting.control.header.color.by = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'theme-header-by-theme', labelText: 'Transparent', description: 'No background colour behind the Header area.', value: 'theme' },
-      { id: 'theme-header-by-custom', labelText: 'Custom colour', description: 'Use a custom colour behind the Header area.', value: 'custom' }
+      { id: 'theme-header-by-theme', labelText: language[state.get.current().language].theme.header.color.by.transparent.label, description: language[state.get.current().language].theme.header.color.by.transparent.description, value: 'theme' },
+      { id: 'theme-header-by-custom', labelText: language[state.get.current().language].theme.header.color.by.custom.label, description: language[state.get.current().language].theme.header.color.by.custom.description, value: 'custom' }
     ],
-    label: 'Header background colour',
+    label: language[state.get.current().language].theme.header.color.label,
     groupName: 'theme-header-by',
     path: 'theme.header.color.by',
     action: () => {
@@ -1894,7 +1894,7 @@ themeSetting.header = (parent) => {
     object: state.get.current(),
     path: 'theme.header.color',
     id: 'theme-header-color',
-    labelText: 'Header area background colour',
+    labelText: language[state.get.current().language].theme.header.color.color,
     defaultValue: state.get.default().theme.header.color.rgb,
     minMaxObject: state.get.minMax(),
     action: () => {
@@ -1914,7 +1914,7 @@ themeSetting.header = (parent) => {
     object: state.get.current(),
     path: 'theme.header.color.opacity',
     id: 'theme-header-color-opacity',
-    labelText: 'Background opacity',
+    labelText: language[state.get.current().language].theme.header.color.opacity,
     value: state.get.current().theme.header.color.opacity,
     defaultValue: state.get.default().theme.header.color.opacity,
     min: state.get.minMax().theme.header.color.opacity.min,
@@ -1965,10 +1965,10 @@ themeSetting.bookmark = (parent) => {
   themeSetting.control.bookmark.color.by = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'theme-bookmark-by-theme', labelText: 'Transparent', description: 'No background colour behind the Bookmark area.', value: 'theme' },
-      { id: 'theme-bookmark-by-custom', labelText: 'Custom colour', description: 'Use a custom colour behind the Bookmark area.', value: 'custom' }
+      { id: 'theme-bookmark-by-theme', labelText: language[state.get.current().language].theme.bookmark.color.by.transparent.label, description: language[state.get.current().language].theme.bookmark.color.by.transparent.description, value: 'theme' },
+      { id: 'theme-bookmark-by-custom', labelText: language[state.get.current().language].theme.bookmark.color.by.custom.label, description: language[state.get.current().language].theme.bookmark.color.by.transparent.description, value: 'custom' }
     ],
-    label: 'Bookmark area background colour',
+    label: language[state.get.current().language].theme.bookmark.color.label,
     groupName: 'theme-bookmark-by',
     path: 'theme.bookmark.color.by',
     action: () => {
@@ -1983,7 +1983,7 @@ themeSetting.bookmark = (parent) => {
     object: state.get.current(),
     path: 'theme.bookmark.color',
     id: 'theme-bookmark-color',
-    labelText: 'Header area background colour',
+    labelText: language[state.get.current().language].theme.bookmark.color.color,
     defaultValue: state.get.default().theme.bookmark.color.rgb,
     minMaxObject: state.get.minMax(),
     action: () => {
@@ -2003,7 +2003,7 @@ themeSetting.bookmark = (parent) => {
     object: state.get.current(),
     path: 'theme.bookmark.color.opacity',
     id: 'theme-bookmark-color-opacity',
-    labelText: 'Background opacity',
+    labelText: language[state.get.current().language].theme.bookmark.color.opacity,
     value: state.get.current().theme.bookmark.color.opacity,
     defaultValue: state.get.default().theme.bookmark.color.opacity,
     min: state.get.minMax().theme.bookmark.color.opacity.min,
@@ -2036,7 +2036,7 @@ themeSetting.bookmark = (parent) => {
     object: state.get.current(),
     path: 'theme.bookmark.item.border',
     id: 'theme-bookmark-item-border',
-    labelText: 'Bookmark border',
+    labelText: language[state.get.current().language].theme.bookmark.item.border.label,
     value: state.get.current().theme.bookmark.item.border,
     defaultValue: state.get.default().theme.bookmark.item.border,
     min: state.get.minMax().theme.bookmark.item.border.min,
@@ -2049,12 +2049,12 @@ themeSetting.bookmark = (parent) => {
   });
 
   themeSetting.control.bookmark.item.borderHelper = new Control_helperText({
-    text: ['Bookmark border can also be changed when editing individual Bookmarks.', 'The colour of the Border is defined by the Accent which can also be changed when editing individual Bookmarks.']
+    text: language[state.get.current().language].theme.bookmark.item.border.helper
   });
 
   themeSetting.control.bookmark.item.rainbow = {
     add: new Button({
-      text: 'Add unique accent to each Bookmark',
+      text: language[state.get.current().language].theme.bookmark.item.rainbow.add,
       style: ['line'],
       func: () => {
         theme.accent.rainbow.render();
@@ -2062,7 +2062,7 @@ themeSetting.bookmark = (parent) => {
       }
     }),
     remove: new Button({
-      text: 'Remove all accent overrides',
+      text: language[state.get.current().language].theme.bookmark.item.rainbow.remove,
       style: ['line'],
       func: () => {
         theme.accent.rainbow.clear();
@@ -2070,7 +2070,7 @@ themeSetting.bookmark = (parent) => {
       }
     }),
     helper: new Control_helperText({
-      text: ['Bookmark custom Accent can also be changed when editing individual Bookmarks.']
+      text: language[state.get.current().language].theme.bookmark.item.rainbow.helper
     })
   };
 

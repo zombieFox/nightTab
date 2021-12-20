@@ -360,5 +360,50 @@ en.theme = {
       }
     },
     divider: 'Divider between Header and Bookmark area'
+  },
+  header: {
+    color: {
+      label: 'Header background colour',
+      by: {
+        transparent: {
+          label: 'Transparent',
+          description: 'No background colour behind the Header area.'
+        },
+        custom: {
+          label: 'Custom colour',
+          description: 'Use a custom colour behind the Header area.'
+        }
+      },
+      color: 'Header background colour',
+      opacity: 'Background opacity',
+    }
+  },
+  bookmark: {
+    color: {
+      label: 'Bookmark background colour',
+      by: {
+        transparent: {
+          label: 'Transparent',
+          description: 'No background colour behind the Bookmark area.'
+        },
+        custom: {
+          label: 'Custom colour',
+          description: 'Use a custom colour behind the Bookmark area.'
+        }
+      },
+      color: 'Bookmark background colour',
+      opacity: 'Background opacity',
+    },
+    item: {
+      border: {
+        label: 'Bookmark border',
+        helper: ['Bookmark border can also be changed when editing individual Bookmarks.', 'The colour of the Border is defined by the Accent which can also be changed when editing individual Bookmarks.']
+      },
+      rainbow: {
+        add: 'Add unique accent to each Bookmark',
+        remove: 'Remove all accent overrides',
+        helper: ['Bookmark custom Accent can also be changed when editing individual Bookmarks.']
+      }
+    }
   }
 };

@@ -360,5 +360,53 @@ de.theme = {
       }
     },
     divider: 'Trenner zwischen Kopfzeile und Lesezeichenbereich'
+  },
+  header: {
+    color: {
+      label: 'Hintergrundfarbe der Kopfzeile',
+      by: {
+        transparent: {
+          label: 'Transparent',
+          description: 'Keine Hintergrundfarbe hinter dem Header-Bereich.'
+        },
+        custom: {
+          label: 'Benutzerdefinierte Farbe',
+          description: 'Verwenden Sie eine benutzerdefinierte Farbe hinter dem Kopfzeilenbereich.'
+        }
+      },
+      color: 'Hintergrundfarbe der Kopfzeile',
+      opacity: 'Hintergrundopazität',
+    }
+  },
+  bookmark: {
+    color: {
+      label: 'Hintergrundfarbe für Lesezeichen',
+      by: {
+        transparent: {
+          label: 'Transparent',
+          description: 'Keine Hintergrundfarbe hinter dem Lesezeichenbereich.'
+        },
+        custom: {
+          label: 'Benutzerdefinierte Farbe',
+          description: 'Verwenden Sie eine benutzerdefinierte Farbe hinter dem Lesezeichenbereich.'
+        }
+      },
+      color: 'Hintergrundfarbe für Lesezeichen',
+      opacity: 'Hintergrundopazität',
+    },
+    item: {
+      border: {
+        label: 'Lesezeichenrahmen',
+        helper: [
+          'Der Lesezeichenrahmen kann auch beim Bearbeiten einzelner Lesezeichen geändert werden.',
+          'Die Farbe des Rahmens wird durch den Akzent bestimmt, der auch beim Bearbeiten einzelner Lesezeichen geändert werden kann.'
+        ]
+      },
+      rainbow: {
+        add: 'Fügen Sie jedem Lesezeichen einen einzigartigen Akzent hinzu',
+        remove: 'Alle Akzentüberschreibungen entfernen',
+        helper: ['Der benutzerdefinierte Lesezeichenakzent kann auch beim Bearbeiten einzelner Lesezeichen geändert werden.']
+      }
+    }
   }
 };
