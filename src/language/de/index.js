@@ -9,7 +9,7 @@ de.menu = {
       preset: 'Voreinstellung',
       saved: 'Gerettet',
       style: 'Stil',
-      colour: 'Farbe',
+      color: 'Farbe',
       accent: 'Akzent',
       font: 'Schriftart',
       radius: 'Radius',
@@ -111,9 +111,9 @@ de.theme = {
       description: 'Folgen Sie dem System Hell- oder Dunkelmodus.'
     }
   },
-  colour: {
+  color: {
     shade: {
-      text: [
+      helper: [
         'Hintergründe, Lesezeichen und Modals verwenden Schattierungen von links.',
         'Text- und Formularelemente verwenden Schattierungen von rechts.',
         'Für einen hellen Look wechseln Sie zum Lichtstil und wählen dann eine Primärfarbe aus. Und umgekehrt für einen dunklen Look.'
@@ -129,7 +129,7 @@ de.theme = {
       label: 'Kontrastumfang',
       left: 'Kontraststart',
       right: 'Kontrast Ende',
-      header: [
+      helper: [
         'Bewegen Sie die Kontrastbereichsregler nah beieinander, um einen gedämpften Look zu erzielen.',
         'Bewegen Sie die Kontrastbereichsregler weit auseinander, um einen scharfen, lebendigen Look zu erzielen.'
       ]
@@ -181,8 +181,8 @@ de.theme = {
       active: 'Akzentfarbe automatisch ändern',
       speed: 'Verzögerung ändern',
       step: 'Schritte ändern',
-      helper: ['Die automatische Änderung des Akzentfarbtons funktioniert nicht, wenn die Akzentfarbe grau oder schwarz ist.'],
-      alert: 'Seien Sie vorsichtig, da ein sich schnell ändernder Akzentfarbton zu Leistungsproblemen führen kann.'
+      alert: 'Seien Sie vorsichtig, da ein sich schnell ändernder Akzentfarbton zu Leistungsproblemen führen kann.',
+      helper: ['Die automatische Änderung des Akzentfarbtons funktioniert nicht, wenn die Akzentfarbe grau oder schwarz ist.']
     }
   },
   font: {
@@ -196,7 +196,7 @@ de.theme = {
             a2: 'Google-Schriftart',
             a3: ' um Uhr, Datum, Gruppennamen und Lesezeichenbuchstaben anzupassen.',
           },
-          p2: 'Fügen Sie einen Schriftartnamen hinzu, wie er in Google Fonts angezeigt wird, einschließlich Großbuchstaben und Leerzeichen, Beispiel: eintreten "Fredoka One" oder "Kanit".',
+          p2: 'Fügen Sie einen Schriftartnamen hinzu, wie er in Google Fonts angezeigt wird, einschließlich Großbuchstaben und Leerzeichen, beispiel: eintreten "Fredoka One" oder "Kanit".',
           p3: 'Löschen Sie das Feld, um die Standardschriftart zu verwenden "Fjalla One".'
         }
       },
@@ -214,126 +214,151 @@ de.theme = {
     },
     ui: {
       name: {
-        label: 'User interface font',
-        placeholder: 'Google font name',
+        label: 'Schriftart der Benutzeroberfläche',
+        placeholder: 'Google-Schriftname',
         helper: {
           p1: {
-            a1: 'Use a ',
-            a2: 'Google Font',
-            a3: ' to customise the Bookmark name, URL and form elements.',
+            a1: 'Benutze einen ',
+            a2: 'Google-Schriftart',
+            a3: ' um den Lesezeichennamen, die URL und die Formularelemente anzupassen.',
           },
-          p2: 'Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Roboto", "Source Sans Pro" or "Noto Sans".',
-          p3: 'Clear the field to use the default font "Open Sans".'
+          p2: 'Fügen Sie einen Schriftartnamen hinzu, wie er in Google Fonts angezeigt wird, einschließlich Großbuchstaben und Leerzeichen, beispiel: eintreten "Roboto", "Source Sans Pro" or "Noto Sans".',
+          p3: 'Löschen Sie das Feld, um die Standardschriftart zu verwenden "Open Sans".'
         }
+      },
+      weight: {
+        label: 'Schriftstärke',
+        light: 'Hell',
+        regular: 'Regulär',
+        bold: 'Deutlich',
+        helper: ['Nicht alle Schriftarten unterstützen alle Gewichtungen. Sehen Sie auf der Google Font-Seite nach, welche verfügbar sind.']
+      },
+      style: {
+        normal: 'Normal',
+        italic: 'Kursiv'
       }
-    },
-    weight: {
-      label: 'Font weight',
-      light: 'Light',
-      regular: 'Regular',
-      bold: 'Bold',
-      helper: 'Not all fonts support all weights. Refer to the Google Font page to see which are available.'
-    },
-    style: {
-      normal: 'Normal',
-      italic: 'Italic'
     }
   },
-  radius: 'Corners radius',
-  shadow: 'Shadow size',
+  radius: 'Eckenradius',
+  shadow: 'Schattengröße',
   shade: {
-    opacity: 'Shade opacity',
+    opacity: 'Deckkraft des Schattens',
     blur: {
-      label: 'Shade blur',
-      helper: 'Not supported by all browsers.'
+      label: 'Schattenunschärfe',
+      helper: ['Nicht von allen Browsern unterstützt.']
     }
   },
   opacity: {
     general: {
-      label: 'All opacity',
-      helper: ['Change the opacity of Search bar, Bookmarks, Group controls and the Toolbar.', 'Opacity can also be changed when editing individual Bookmarks.']
+      label: 'Alle Deckkraft',
+      helper: [
+        'Ändern Sie die Deckkraft der Suchleiste, der Lesezeichen, der Gruppensteuerelemente und der Symbolleiste.',
+        'Die Deckkraft kann auch beim Bearbeiten einzelner Lesezeichen geändert werden.'
+      ]
     },
-    toolbar: 'Toolbar',
-    bookmark: 'Bookmark',
-    search: 'Search box',
-    groupToolbar: 'Group toolbar'
+    toolbar: 'Symbolleiste',
+    bookmark: 'Lesezeichen',
+    search: 'Suchbox',
+    groupToolbar: 'Gruppensymbolleiste'
   },
   background: {
     type: {
       theme: {
-        label: 'Background by Theme',
-        description: 'Use the Background colour defined by the Theme.'
+        label: 'Hintergrund nach Thema',
+        description: ['Verwenden Sie die vom Thema definierte Hintergrundfarbe.']
       },
       accent: {
-        label: 'Background by Accent',
-        description: 'Use the Accent colour for the Background.'
+        label: 'Hintergrund von Akzent',
+        description: ['Verwenden Sie die Akzentfarbe für den Hintergrund.']
       },
-      color: 'Custom colour',
+      color: 'Benutzerdefinierte Farbe',
       gradient: 'Gradient',
-      image: 'Image',
+      image: 'Bild',
       video: 'Video',
     },
-    color: 'Background colour',
+    color: 'Hintergrundfarbe',
     gradient: {
-      angle: 'Background gradient angle',
-      start: 'Background gradient start',
-      end: 'Background gradient end'
+      angle: 'Hintergrundverlaufswinkel',
+      start: 'Start des Hintergrundverlaufs',
+      end: 'Ende des Hintergrundverlaufs'
     },
     image: {
       alert: {
-        p1: 'Local images can no longer be used. Images must be hosted somewhere online.',
-        p2: 'Why has this changed?'
+        p1: 'Lokale Bilder können nicht mehr verwendet werden. Bilder müssen irgendwo online gehostet werden.',
+        p2: 'Warum hat sich das geändert?'
       },
       url: {
         lable: 'URL',
-        placeholder: 'https://www.example.com/image.jpg',
+        placeholder: 'https://www.beispiel.com/bild.jpg',
         helper: [
-          'Add more than one URL separated by spaces or on new lines for a random background image on load.',
-          'Unsplash can be used for random images, eg:',
-          'https://source.unsplash.com/random/1920x1080/?night,day,sky',
-          'Change parameters after .../random/ for more options. Loading times may vary.'
+          'Fügen Sie mehr als eine URL hinzu, die durch Leerzeichen oder in neuen Zeilen getrennt ist, um ein zufälliges Hintergrundbild beim Laden zu erhalten.',
+          'Unsplash kann für zufällige Bilder verwendet werden, beispiel:',
+          'https://source.unsplash.com/random/1920x1080/?nacht,tag,himmel',
+          'Parameter ändern nach .../random/ für mehr optionen. Ladezeiten können variieren.'
         ]
       },
-      blur: 'Blur',
-      grayscale: 'Grayscale',
-      scale: 'Scale',
-      accent: 'Accent',
+      blur: 'Verwischen',
+      grayscale: 'Graustufen',
+      scale: 'Skala',
+      accent: 'Akzent',
       opacity: 'Opacity',
       vignette: {
         opacity: 'Vignette',
         range: {
-          label: 'Shade start and end',
-          start: 'Shade end',
-          end: 'Shade start'
+          label: 'Schattenanfang und -ende',
+          left: 'Schattenende',
+          right: 'Schattenstart'
         }
       }
     },
     video: {
       alert: {
-        p1: 'YouTube page URLs can not be used.',
-        p2: 'How to link to a video file.'
+        p1: 'YouTube-Seiten-URLs können nicht verwendet werden.',
+        p2: 'So verlinken Sie eine videodatei.'
       },
       url: {
         lable: 'URL',
-        placeholder: 'https://www.example.com/video.mp4',
+        placeholder: 'https://www.beispiel.com/video.mp4',
         helper: [
-          'Background video only supports a direct URL to a video file. Supports MP4 and WebM format.',
-          'Add more than one URL separated by spaces or on new lines for a random background video on load.'
+          'Hintergrundvideo unterstützt nur eine direkte URL zu einer Videodatei. Unterstützt MP4 und WebM Format.',
+          'Fügen Sie mehr als eine URL hinzu, die durch Leerzeichen oder in neuen Zeilen getrennt ist, um ein zufälliges Hintergrundvideo beim Laden zu erhalten.'
         ]
       },
-      blur: 'Blur',
-      grayscale: 'Grayscale',
-      scale: 'Scale',
-      accent: 'Accent',
+      blur: 'Verwischen',
+      grayscale: 'Graustufen',
+      scale: 'Skala',
+      accent: 'Akzent',
       opacity: 'Opacity',
       vignette: {
         opacity: 'Vignette',
         range: {
-          label: 'Shade start and end',
-          start: 'Shade end',
-          end: 'Shade start'
+          label: 'Schattenanfang und -ende',
+          start: 'Schattenende',
+          end: 'Schattenstart'
         }
       }
     }
+  },
+  layout: {
+    color: {
+      label: 'Hintergrundfarbe des Layouts',
+      by: {
+        transparent: {
+          label: 'Transparent',
+          description: 'Keine Hintergrundfarbe hinter dem Layout.'
+        },
+        custom: {
+          label: 'Benutzerdefinierte Farbe',
+          description: 'Verwenden Sie eine benutzerdefinierte Farbe hinter dem Layout.'
+        }
+      },
+      color: 'Hintergrundfarbe des Layouts',
+      opacity: 'Hintergrundopazität',
+      blur: {
+        label: 'Hintergrundunschärfe',
+        helper: ['Nicht von allen Browsern unterstützt.']
+      }
+    },
+    divider: 'Trenner zwischen Kopfzeile und Lesezeichenbereich'
   }
 };

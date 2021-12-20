@@ -9,7 +9,7 @@ en.menu = {
       preset: 'Preset',
       saved: 'Saved',
       style: 'Style',
-      colour: 'Colour',
+      color: 'Colour',
       accent: 'Accent',
       font: 'Font',
       radius: 'Radius',
@@ -111,9 +111,9 @@ en.theme = {
       description: 'Follow the system Light or Dark mode.'
     }
   },
-  colour: {
+  color: {
     shade: {
-      text: [
+      helper: [
         'Backgrounds, Bookmarks and Modals use shades from the left.',
         'Text and form elements use shades from the right.',
         'For a light look switch to the Light Style and then select a Primary colour. And vice versa for a dark look.'
@@ -129,7 +129,7 @@ en.theme = {
       label: 'Contrast range',
       left: 'Contrast start',
       right: 'Contrast end',
-      header: [
+      helper: [
         'Move the Contrast range controls close together for a muted look.',
         'Move the Contrast range controls far apart from each other for a sharp vivid look.'
       ]
@@ -181,8 +181,8 @@ en.theme = {
       active: 'Auto change Accent hue',
       speed: 'Change delay',
       step: 'Change steps',
-      helper: ['Auto change Accent hue will not work when the Accent colour is a grey or black.'],
-      alert: 'Take care as a fast changing Accent hue may cause performance issues.'
+      alert: 'Take care as a fast changing Accent hue may cause performance issues.',
+      helper: ['Auto change Accent hue will not work when the Accent colour is a grey or black.']
     }
   },
   font: {
@@ -225,33 +225,36 @@ en.theme = {
           p2: 'Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter "Roboto", "Source Sans Pro" or "Noto Sans".',
           p3: 'Clear the field to use the default font "Open Sans".'
         }
+      },
+      weight: {
+        label: 'Font weight',
+        light: 'Light',
+        regular: 'Regular',
+        bold: 'Bold',
+        helper: ['Not all fonts support all weights. Refer to the Google Font page to see which are available.']
+      },
+      style: {
+        normal: 'Normal',
+        italic: 'Italic'
       }
     },
-    weight: {
-      label: 'Font weight',
-      light: 'Light',
-      regular: 'Regular',
-      bold: 'Bold',
-      helper: 'Not all fonts support all weights. Refer to the Google Font page to see which are available.'
-    },
-    style: {
-      normal: 'Normal',
-      italic: 'Italic'
-    }
   },
-  radius: 'Corners radius',
+  radius: 'Corner radius',
   shadow: 'Shadow size',
   shade: {
     opacity: 'Shade opacity',
     blur: {
       label: 'Shade blur',
-      helper: 'Not supported by all browsers.'
+      helper: ['Not supported by all browsers.']
     }
   },
   opacity: {
     general: {
       label: 'All opacity',
-      helper: ['Change the opacity of Search bar, Bookmarks, Group controls and the Toolbar.', 'Opacity can also be changed when editing individual Bookmarks.']
+      helper: [
+        'Change the opacity of Search bar, Bookmarks, Group controls and the Toolbar.',
+        'Opacity can also be changed when editing individual Bookmarks.'
+      ]
     },
     toolbar: 'Toolbar',
     bookmark: 'Bookmark',
@@ -262,11 +265,11 @@ en.theme = {
     type: {
       theme: {
         label: 'Background by Theme',
-        description: 'Use the Background colour defined by the Theme.'
+        description: ['Use the Background colour defined by the Theme.']
       },
       accent: {
         label: 'Background by Accent',
-        description: 'Use the Accent colour for the Background.'
+        description: ['Use the Accent colour for the Background.']
       },
       color: 'Custom colour',
       gradient: 'Gradient',
@@ -303,8 +306,8 @@ en.theme = {
         opacity: 'Vignette',
         range: {
           label: 'Shade start and end',
-          start: 'Shade end',
-          end: 'Shade start'
+          left: 'Shade end',
+          right: 'Shade start'
         }
       }
     },
@@ -335,5 +338,27 @@ en.theme = {
         }
       }
     }
+  },
+  layout: {
+    color: {
+      label: 'Layout background colour',
+      by: {
+        transparent: {
+          label: 'Transparent',
+          description: 'No background colour behind the Layout.'
+        },
+        custom: {
+          label: 'Custom colour',
+          description: 'Use a custom colour behind the Layout.'
+        }
+      },
+      color: 'Layout background colour',
+      opacity: 'Background opacity',
+      blur: {
+        label: 'Background blur',
+        helper: ['Not supported by all browsers.']
+      }
+    },
+    divider: 'Divider between Header and Bookmark area'
   }
 };
