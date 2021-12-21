@@ -138,7 +138,7 @@ export const MenuContent = function({
 
         case 'support':
 
-          menuContentItem.appendChild(this.element.header(activeNavData.name));
+          menuContentItem.appendChild(this.element.header(language[state.get.current().language].menu[activeNavData.name].label));
 
           formElement = this.element.form({ indent: true });
 
@@ -148,7 +148,7 @@ export const MenuContent = function({
 
         case 'coffee':
 
-          menuContentItem.appendChild(this.element.header(activeNavData.name));
+          menuContentItem.appendChild(this.element.header(language[state.get.current().language].menu[activeNavData.name].label));
 
           formElement = this.element.form({ indent: true });
 
