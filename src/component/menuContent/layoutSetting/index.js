@@ -382,8 +382,8 @@ layoutSetting.alignment = (parent) => {
   layoutSetting.control.alignment.direction = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'layout-direction-horizontal', labelText: 'Align horizontal', description: 'Stack the Header and Bookmarks in a row side by side.', value: 'horizontal' },
-      { id: 'layout-direction-vertical', labelText: 'Align vertical', description: 'Stack the Header and Bookmarks in a column one above the other.', value: 'vertical' }
+      { id: 'layout-direction-horizontal', labelText: language.current.menu.content.layout.direction.horizontal.label, description: language.current.menu.content.layout.direction.horizontal.description, value: 'horizontal' },
+      { id: 'layout-direction-vertical', labelText: language.current.menu.content.layout.direction.vertical.label, description: language.current.menu.content.layout.direction.vertical.description, value: 'vertical' }
     ],
     groupName: 'layout-direction',
     path: 'layout.direction',
@@ -397,8 +397,8 @@ layoutSetting.alignment = (parent) => {
   layoutSetting.control.alignment.order = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'layout-order-header-bookmark', labelText: 'Header then Bookmarks', description: 'Order the Header area to appear before the Bookmarks area.', value: 'header-bookmark' },
-      { id: 'layout-order-bookmark-header', labelText: 'Bookmarks then Header', description: 'Order the Bookmarks area to appear before the Header area.', value: 'bookmark-header' }
+      { id: 'layout-order-header-bookmark', labelText: language.current.menu.content.layout.order.headerBookmark.label, description: language.current.menu.content.layout.order.headerBookmark.description, value: 'header-bookmark' },
+      { id: 'layout-order-bookmark-header', labelText: language.current.menu.content.layout.order.bookmarkHeader.label, description: language.current.menu.content.layout.order.bookmarkHeader.description, value: 'bookmark-header' }
     ],
     groupName: 'layout-order',
     path: 'layout.order',
@@ -429,8 +429,8 @@ layoutSetting.page = (parent) => {
     id: 'layout-title',
     value: state.get.current().layout.title,
     defaultValue: state.get.default().layout.title,
-    placeholder: 'New Tab',
-    labelText: 'Title',
+    placeholder: language.current.menu.content.layout.page.title.label,
+    labelText: language.current.menu.content.layout.page.title.placeholder,
     action: () => {
       layout.title.render();
       data.save();
@@ -443,8 +443,8 @@ layoutSetting.page = (parent) => {
     id: 'layout-favicon',
     value: state.get.current().layout.favicon,
     defaultValue: state.get.default().layout.favicon,
-    placeholder: 'https://www.example.com/favicon.svg',
-    labelText: 'Favicon URL',
+    placeholder: language.current.menu.content.layout.page.favicon.placeholder,
+    labelText: language.current.menu.content.layout.page.favicon.label,
     action: () => {
       layout.favicon.render();
       data.save();
@@ -452,16 +452,16 @@ layoutSetting.page = (parent) => {
   });
 
   layoutSetting.control.page.faviconHelper = new Control_helperText({
-    text: ['Not supported by all browsers.']
+    text: language.current.menu.content.layout.page.favicon.helper
   });
 
   layoutSetting.control.page.scrollbar = new Control_radio({
     object: state.get.current(),
-    label: 'Scrollbar',
+    label: language.current.menu.content.layout.page.scrollbar.label,
     radioGroup: [
-      { id: 'layout-scrollbar-auto', labelText: 'Auto', value: 'auto' },
-      { id: 'layout-scrollbar-thin', labelText: 'Thin', value: 'thin' },
-      { id: 'layout-scrollbar-none', labelText: 'Hidden', value: 'none' }
+      { id: 'layout-scrollbar-auto', labelText: language.current.menu.content.layout.page.scrollbar.auto, value: 'auto' },
+      { id: 'layout-scrollbar-thin', labelText: language.current.menu.content.layout.page.scrollbar.thin, value: 'thin' },
+      { id: 'layout-scrollbar-none', labelText: language.current.menu.content.layout.page.scrollbar.none, value: 'none' }
     ],
     groupName: 'layout-scrollbar',
     path: 'layout.scrollbar',
@@ -472,7 +472,7 @@ layoutSetting.page = (parent) => {
   });
 
   layoutSetting.control.page.scrollbarHelper = new Control_helperText({
-    text: ['Not supported by all browsers.']
+    text: language.current.menu.content.layout.page.scrollbar.helper
   });
 
   layoutSetting.control.page.overscroll = {
@@ -480,7 +480,7 @@ layoutSetting.page = (parent) => {
       object: state.get.current(),
       path: 'layout.overscroll.active',
       id: 'layout-overscroll-active',
-      labelText: 'Scroll past end',
+      labelText: language.current.menu.content.layout.page.overscroll.active,
       action: () => {
         applyCSSState('layout.overscroll.active');
         layoutSetting.disable();
@@ -491,11 +491,8 @@ layoutSetting.page = (parent) => {
       object: state.get.current(),
       path: 'layout.overscroll.unblur',
       id: 'layout-overscroll-unblur-background',
-      labelText: 'Unblur background image or video',
-      description: [
-        'Background image or video will unblur when scrolled to the bottom of the page.',
-        'Image or video blur can be found under Theme Background.'
-      ],
+      labelText: language.current.menu.content.layout.page.overscroll.unblur.label,
+      description: language.current.menu.content.layout.page.overscroll.unblur.description,
       action: () => {
         theme.background.image.render();
         theme.background.video.clear();

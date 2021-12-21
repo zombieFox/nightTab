@@ -392,83 +392,86 @@
           "size": "Global size"
         },
         "area": {
-          "width": "Layout area width",
+          "width": "Breite des Layoutbereichs",
           "header": {
-            "width": "Header area width",
+            "width": "Breite des Kopfbereichs",
             "justify": {
-              "label": "Header area alignment",
-              "left": "Left",
-              "center": "Center",
-              "right": "Right",
-              "helper1": ["Effects may not be visible if the Header Area is full width."],
-              "helper2": ["Only available when Layout Direction is Vertical and Header items are shown."]
+              "label": "Ausrichtung des Kopfbereichs",
+              "left": "Links",
+              "center": "Zentrum",
+              "right": "Rechts",
+              "helper1": ["Effekte sind möglicherweise nicht sichtbar, wenn der Header-Bereich die volle Breite hat."],
+              "helper2": ["Nur verfügbar, wenn die Layoutrichtung Vertikal ist und Kopfzeilenelemente angezeigt werden."]
             }
           },
           "bookmark": {
-            "width": "Bookmark area width",
+            "width": "Breite des Lesezeichenbereichs",
             "justify": {
-              "label": "Bookmark area alignment",
-              "left": "Left",
-              "center": "Center",
-              "right": "Right",
-              "helper1": ["Effects may not be visible if the Bookmark Area is full width."],
-              "helper2": ["Only available when Layout Direction is Vertical and Header items are shown."]
+              "label": "Ausrichtung des Lesezeichenbereichs",
+              "left": "Links",
+              "center": "Zentrum",
+              "right": "Rechts",
+              "helper1": ["Effekte sind möglicherweise nicht sichtbar, wenn der Lesezeichenbereich die volle Breite hat."],
+              "helper2": ["Nur verfügbar, wenn die Layoutrichtung Vertikal ist und Kopfzeilenelemente angezeigt werden."]
             }
           }
         },
-        "padding": "Space around Header and Bookmark Area",
-        "gutter": "Space between Header and Bookmark items",
+        "padding": "Platz um Kopfzeile und Lesezeichenbereich",
+        "gutter": "Leerzeichen zwischen Kopfzeilen- und Lesezeichenelementen",
         "alignment": {
-          "label": "Area alignment",
-          "topLeft": "Top Left",
-          "topCenter": "Top Center",
-          "topRight": "Top Right",
-          "centerLeft": "Center Left",
-          "centerCenter": "Center Center",
-          "centerRight": "Center Right",
-          "bottomLeft": "Bottom Left",
-          "bottomCenter": "Bottom Center",
-          "bottomRight": "Bottom Right"
+          "label": "Bereichsausrichtung",
+          "topLeft": "Oben links",
+          "topCenter": "Oben zentrum",
+          "topRight": "Oben rechts",
+          "centerLeft": "Zentrum links",
+          "centerCenter": "Zentrum zentrum",
+          "centerRight": "Zentrum rechts",
+          "bottomLeft": "Unten links",
+          "bottomCenter": "Unten zentrum",
+          "bottomRight": "Unten rechts"
         },
         "direction": {
           "horizontal": {
-            "label": "Align horizontal",
-            "description": "Stack the Header and Bookmarks in a row side by side."
+            "label": "Horizontal ausrichten",
+            "description": "Stapeln Sie die Kopfzeile und die Lesezeichen in einer Reihe nebeneinander."
           },
           "vertical": {
-            "label": "Align vertical",
-            "description": "Stack the Header and Bookmarks in a column one above the other."
+            "label": "Vertikal ausrichten",
+            "description": "Stapeln Sie Kopfzeile und Lesezeichen in einer Spalte übereinander."
           }
         },
         "order": {
           "headerBookmark": {
-            "label": "Header then Bookmarks",
-            "description": "Order the Header area to appear before the Bookmarks area."
+            "label": "Kopfzeile, dann Lesezeichen",
+            "description": "Ordnen Sie an, dass der Kopfzeilenbereich vor dem Lesezeichenbereich angezeigt wird."
           },
           "bookmarkHeader": {
-            "label": "Bookmarks then Header",
-            "description": "Order the Bookmarks area to appear before the Header area."
+            "label": "Lesezeichen dann Kopfzeile",
+            "description": "Ordnen Sie den Lesezeichenbereich so an, dass er vor dem Kopfzeilenbereich angezeigt wird."
           }
         },
         "page": {
-          "title": "Title",
+          "title": {
+            "label": "Titel",
+            "placeholder": "Neue Tab"
+          },
           "favicon": {
             "label": "Favicon URL",
             "placeholder": "https://www.example.com/favicon.svg",
-            "helper": ["Not supported by all browsers."]
+            "helper": ["Nicht von allen Browsern unterstützt."]
           },
           "scrollbar": {
-            "label": "Scrollbar",
+            "label": "Scrollleiste",
             "auto": "Auto",
-            "thin": "Thin",
-            "none": "Hidden",
-            "helper": ["Not supported by all browsers."]
+            "thin": "Dünn",
+            "none": "Versteckt",
+            "helper": ["Nicht von allen Browsern unterstützt."]
           },
           "overscroll": {
-            "active": "Scroll past end",
+            "active": "Über das Ende scrollen",
             "unblur": {
-              "label": "Unblur background image or video",
-              "description": ["Background image or video will unblur when scrolled to the bottom of the page.", "Image or video blur can be found under Theme Background."]
+              "label": "Hintergrundbild oder Video unscharf machen",
+              "description": ["Hintergrundbild oder Video werden unscharf, wenn zum Ende der Seite gescrollt wird.", "Bild- oder Videounschärfe finden Sie unter Themenhintergrund."]
             }
           }
         }

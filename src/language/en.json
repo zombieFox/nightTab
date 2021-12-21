@@ -416,7 +416,7 @@
             "justify": {
               "label": "Header area alignment",
               "left": "Left",
-              "center": "Center",
+              "center": "Centre",
               "right": "Right",
               "helper1": ["Effects may not be visible if the Header Area is full width."],
               "helper2": ["Only available when Layout Direction is Vertical and Header items are shown."]
@@ -427,7 +427,7 @@
             "justify": {
               "label": "Bookmark area alignment",
               "left": "Left",
-              "center": "Center",
+              "center": "Centre",
               "right": "Right",
               "helper1": ["Effects may not be visible if the Bookmark Area is full width."],
               "helper2": ["Only available when Layout Direction is Vertical and Header items are shown."]
@@ -439,13 +439,13 @@
         "alignment": {
           "label": "Area alignment",
           "topLeft": "Top Left",
-          "topCenter": "Top Center",
+          "topCenter": "Top Centre",
           "topRight": "Top Right",
-          "centerLeft": "Center Left",
-          "centerCenter": "Center Center",
-          "centerRight": "Center Right",
+          "centerLeft": "Centre Left",
+          "centerCenter": "Centre Centre",
+          "centerRight": "Centre Right",
           "bottomLeft": "Bottom Left",
-          "bottomCenter": "Bottom Center",
+          "bottomCenter": "Bottom Centre",
           "bottomRight": "Bottom Right"
         },
         "direction": {
@@ -469,7 +469,10 @@
           }
         },
         "page": {
-          "title": "Title",
+          "title": {
+            "label": "Title",
+            "placeholder": "New Tab"
+          },
           "favicon": {
             "label": "Favicon URL",
             "placeholder": "https://www.example.com/favicon.svg",
