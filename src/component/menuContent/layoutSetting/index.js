@@ -8,7 +8,6 @@ import { theme } from '../../theme';
 import * as form from '../../form';
 
 import { Edge } from '../../edge';
-import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_radio } from '../../control/radio';
@@ -208,7 +207,7 @@ layoutSetting.area = (parent) => {
     }),
     justifyHelper2: new Control_helperText({
       complexText: true,
-      text: [`Only available when ${(new Link({ text: 'Layout Direction', href: '#menu-content-item-alignment' })).link().outerHTML} is Vertical and Header items are shown.`]
+      text: ['Only available when Layout Direction is Vertical and Header items are shown.']
     })
   };
 
@@ -255,7 +254,7 @@ layoutSetting.area = (parent) => {
     }),
     justifyHelper2: new Control_helperText({
       complexText: true,
-      text: [`Only available when ${(new Link({ text: 'Layout Direction', href: '#menu-content-item-alignment' })).link().outerHTML} is Vertical and Header items are shown.`]
+      text: ['Only available when Layout Direction is Vertical and Header items are shown.']
     })
   };
 

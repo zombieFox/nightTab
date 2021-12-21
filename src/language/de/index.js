@@ -14,7 +14,7 @@ de.menu = {
       font: 'Schriftart',
       radius: 'Radius',
       shadow: 'Schatten',
-      shade: 'Schatten',
+      shade: 'Abdeckung',
       opacity: 'Opazität',
       background: 'Hintergrund',
       layout: 'Layout',
@@ -406,6 +406,96 @@ de.theme = {
         add: 'Fügen Sie jedem Lesezeichen einen einzigartigen Akzent hinzu',
         remove: 'Alle Akzentüberschreibungen entfernen',
         helper: ['Der benutzerdefinierte Lesezeichenakzent kann auch beim Bearbeiten einzelner Lesezeichen geändert werden.']
+      }
+    }
+  }
+};
+
+de.layout = {
+  scaling: {
+    size: 'Global size'
+  },
+  area: {
+    width: 'Layout area width',
+    header: {
+      width: 'Header area width',
+      justify: {
+        label: 'Header area alignment',
+        left: 'Left',
+        center: 'Center',
+        right: 'Right',
+        helper1: ['Effects may not be visible if the Header Area is full width.'],
+        helper2: ['Only available when Layout Direction is Vertical and Header items are shown.']
+      }
+    },
+    bookmark: {
+      width: 'Bookmark area width',
+      justify: {
+        label: 'Bookmark area alignment',
+        left: 'Left',
+        center: 'Center',
+        right: 'Right',
+        helper1: ['Effects may not be visible if the Bookmark Area is full width.'],
+        helper2: ['Only available when Layout Direction is Vertical and Header items are shown.']
+      }
+    }
+  },
+  padding: 'Space around Header and Bookmark Area',
+  gutter: 'Space between Header and Bookmark items',
+  alignment: {
+    label: 'Area alignment',
+    topLeft: 'Top Left',
+    topCenter: 'Top Center',
+    topRight: 'Top Right',
+    centerLeft: 'Center Left',
+    centerCenter: 'Center Center',
+    centerRight: 'Center Right',
+    bottomLeft: 'Bottom Left',
+    bottomCenter: 'Bottom Center',
+    bottomRight: 'Bottom Right'
+  },
+  direction: {
+    horizontal: {
+      label: 'Align horizontal',
+      description: 'Stack the Header and Bookmarks in a row side by side.'
+    },
+    vertical: {
+      label: 'Align vertical',
+      description: 'Stack the Header and Bookmarks in a column one above the other.'
+    }
+  },
+  order: {
+    headerBookmark: {
+      label: 'Header then Bookmarks',
+      description: 'Order the Header area to appear before the Bookmarks area.'
+    },
+    bookmarkHeader: {
+      label: 'Bookmarks then Header',
+      description: 'Order the Bookmarks area to appear before the Header area.'
+    }
+  },
+  page: {
+    title: 'Title',
+    favicon: {
+      label: 'Favicon URL',
+      placeholder: 'https://www.example.com/favicon.svg',
+      helper: ['Not supported by all browsers.']
+    },
+    scrollbar: {
+      label: 'Scrollbar',
+      auto: 'Auto',
+      thin: 'Thin',
+      none: 'Hidden',
+      helper: ['Not supported by all browsers.']
+    },
+    overscroll: {
+      active: 'Scroll past end',
+      unblur: {
+        label: 'Unblur background image or video',
+        description: [
+          'Background image or video will unblur when scrolled to the bottom of the page.',
+          'Image or video blur can be found under Theme Background.'
+        ]
       }
     }
   }
