@@ -1,3 +1,5 @@
+import { language } from '../../../language';
+
 import { state } from '../../state';
 import { data } from '../../data';
 import { header } from '../../header';
@@ -108,7 +110,7 @@ layoutSetting.scaling = (parent) => {
     object: state.get.current(),
     path: 'layout.size',
     id: 'layout-size',
-    labelText: 'Global size',
+    labelText: language.current.menu.content.layout.scaling.size,
     value: state.get.current().layout.size,
     defaultValue: state.get.default().layout.size,
     min: state.get.minMax().layout.size.min,
@@ -146,7 +148,7 @@ layoutSetting.area = (parent) => {
     object: state.get.current(),
     path: 'layout.width',
     id: 'layout-width',
-    labelText: 'Layout area width',
+    labelText: language.current.menu.content.layout.area.width,
     value: state.get.current().layout.width,
     defaultValue: state.get.default().layout.width,
     min: state.get.minMax().layout.width.min,
@@ -169,7 +171,7 @@ layoutSetting.area = (parent) => {
       object: state.get.current(),
       path: 'layout.area.header.width',
       id: 'layout-area-header-width',
-      labelText: 'Header area width',
+      labelText: language.current.menu.content.layout.area.header.width,
       value: state.get.current().layout.area.header.width,
       defaultValue: state.get.default().layout.area.header.width,
       min: state.get.minMax().layout.area.header.width.min,
@@ -189,11 +191,11 @@ layoutSetting.area = (parent) => {
     justify: new Control_radioGrid({
       object: state.get.current(),
       radioGroup: [
-        { id: 'layout-area-header-justify-left', labelText: 'Left', value: 'left', position: 1 },
-        { id: 'layout-area-header-justify-center', labelText: 'Center', value: 'center', position: 2 },
-        { id: 'layout-area-header-justify-right', labelText: 'Right', value: 'right', position: 3 }
+        { id: 'layout-area-header-justify-left', labelText: language.current.menu.content.layout.area.header.justify.left, value: 'left', position: 1 },
+        { id: 'layout-area-header-justify-center', labelText: language.current.menu.content.layout.area.header.justify.center, value: 'center', position: 2 },
+        { id: 'layout-area-header-justify-right', labelText: language.current.menu.content.layout.area.header.justify.right, value: 'right', position: 3 }
       ],
-      label: 'Header area alignment',
+      label: language.current.menu.content.layout.area.header.justify.label,
       groupName: 'layout-area-header-justify',
       path: 'layout.area.header.justify',
       gridSize: '3x1',
@@ -203,11 +205,11 @@ layoutSetting.area = (parent) => {
       }
     }),
     justifyHelper1: new Control_helperText({
-      text: ['Effects may not be visible if the Header Area is full width.']
+      text: language.current.menu.content.layout.area.header.justify.helper1
     }),
     justifyHelper2: new Control_helperText({
       complexText: true,
-      text: ['Only available when Layout Direction is Vertical and Header items are shown.']
+      text: language.current.menu.content.layout.area.header.justify.helper2
     })
   };
 
@@ -216,7 +218,7 @@ layoutSetting.area = (parent) => {
       object: state.get.current(),
       path: 'layout.area.bookmark.width',
       id: 'layout-area-bookmark-width',
-      labelText: 'Bookmark area width',
+      labelText: language.current.menu.content.layout.area.bookmark.width,
       value: state.get.current().layout.area.bookmark.width,
       defaultValue: state.get.default().layout.area.bookmark.width,
       min: state.get.minMax().layout.area.bookmark.width.min,
@@ -236,11 +238,11 @@ layoutSetting.area = (parent) => {
     justify: new Control_radioGrid({
       object: state.get.current(),
       radioGroup: [
-        { id: 'layout-area-bookmark-justify-left', labelText: 'Left', value: 'left', position: 1 },
-        { id: 'layout-area-bookmark-justify-center', labelText: 'Center', value: 'center', position: 2 },
-        { id: 'layout-area-bookmark-justify-right', labelText: 'Right', value: 'right', position: 3 }
+        { id: 'layout-area-bookmark-justify-left', labelText: language.current.menu.content.layout.area.bookmark.justify.left, value: 'left', position: 1 },
+        { id: 'layout-area-bookmark-justify-center', labelText: language.current.menu.content.layout.area.bookmark.justify.center, value: 'center', position: 2 },
+        { id: 'layout-area-bookmark-justify-right', labelText: language.current.menu.content.layout.area.bookmark.justify.right, value: 'right', position: 3 }
       ],
-      label: 'Bookmark area alignment',
+      label: language.current.menu.content.layout.area.bookmark.justify.label,
       groupName: 'layout-area-bookmark-justify',
       path: 'layout.area.bookmark.justify',
       gridSize: '3x1',
@@ -250,11 +252,11 @@ layoutSetting.area = (parent) => {
       }
     }),
     justifyHelper1: new Control_helperText({
-      text: ['Effects may not be visible if the Bookmark Area is full width.']
+      text: language.current.menu.content.layout.area.bookmark.justify.helper1
     }),
     justifyHelper2: new Control_helperText({
       complexText: true,
-      text: ['Only available when Layout Direction is Vertical and Header items are shown.']
+      text: language.current.menu.content.layout.area.bookmark.justify.helper2
     })
   };
 
@@ -292,7 +294,7 @@ layoutSetting.padding = (parent) => {
     object: state.get.current(),
     path: 'layout.padding',
     id: 'layout-padding',
-    labelText: 'Space around Header and Bookmark Area',
+    labelText: language.current.menu.content.layout.padding,
     value: state.get.current().layout.padding,
     defaultValue: state.get.default().layout.padding,
     min: state.get.minMax().layout.padding.min,
@@ -326,7 +328,7 @@ layoutSetting.gutter = (parent) => {
     object: state.get.current(),
     path: 'layout.gutter',
     id: 'layout-gutter',
-    labelText: 'Space between Header and Bookmark items',
+    labelText: language.current.menu.content.layout.gutter,
     value: state.get.current().layout.gutter,
     defaultValue: state.get.default().layout.gutter,
     min: state.get.minMax().layout.gutter.min,
@@ -357,17 +359,17 @@ layoutSetting.alignment = (parent) => {
   layoutSetting.control.alignment.alignment = new Control_radioGrid({
     object: state.get.current(),
     radioGroup: [
-      { id: 'layout-alignment-top-left', labelText: 'Top Left', value: 'top-left', position: 1 },
-      { id: 'layout-alignment-top-center', labelText: 'Top Center', value: 'top-center', position: 2 },
-      { id: 'layout-alignment-top-right', labelText: 'Top Right', value: 'top-right', position: 3 },
-      { id: 'layout-alignment-center-left', labelText: 'Center Left', value: 'center-left', position: 4 },
-      { id: 'layout-alignment-center-center', labelText: 'Center Center', value: 'center-center', position: 5 },
-      { id: 'layout-alignment-center-right', labelText: 'Center Right', value: 'center-right', position: 6 },
-      { id: 'layout-alignment-bottom-left', labelText: 'Bottom Left', value: 'bottom-left', position: 7 },
-      { id: 'layout-alignment-bottom-center', labelText: 'Bottom Center', value: 'bottom-center', position: 8 },
-      { id: 'layout-alignment-bottom-right', labelText: 'Bottom Right', value: 'bottom-right', position: 9 }
+      { id: 'layout-alignment-top-left', labelText: language.current.menu.content.layout.alignment.topLeft, value: 'top-left', position: 1 },
+      { id: 'layout-alignment-top-center', labelText: language.current.menu.content.layout.alignment.topCenter, value: 'top-center', position: 2 },
+      { id: 'layout-alignment-top-right', labelText: language.current.menu.content.layout.alignment.topRight, value: 'top-right', position: 3 },
+      { id: 'layout-alignment-center-left', labelText: language.current.menu.content.layout.alignment.centerLeft, value: 'center-left', position: 4 },
+      { id: 'layout-alignment-center-center', labelText: language.current.menu.content.layout.alignment.centerCenter, value: 'center-center', position: 5 },
+      { id: 'layout-alignment-center-right', labelText: language.current.menu.content.layout.alignment.centerRight, value: 'center-right', position: 6 },
+      { id: 'layout-alignment-bottom-left', labelText: language.current.menu.content.layout.alignment.bottomLeft, value: 'bottom-left', position: 7 },
+      { id: 'layout-alignment-bottom-center', labelText: language.current.menu.content.layout.alignment.bottomCenter, value: 'bottom-center', position: 8 },
+      { id: 'layout-alignment-bottom-right', labelText: language.current.menu.content.layout.alignment.bottomRight, value: 'bottom-right', position: 9 }
     ],
-    label: 'Area alignment',
+    label: language.current.menu.content.layout.alignment.label,
     groupName: 'layout-alignment',
     path: 'layout.alignment',
     gridSize: '3x3',
