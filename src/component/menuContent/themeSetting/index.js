@@ -275,7 +275,7 @@ themeSetting.disable = () => {
 themeSetting.preset = (parent) => {
 
   themeSetting.control.preset.presetHelper = new Control_helperText({
-    text: language[state.get.current().language].theme.preset.helper
+    text: language.current().menu.content.theme.preset.helper
   });
 
   const preset = () => {
@@ -312,10 +312,10 @@ themeSetting.saved = (parent) => {
   themeSetting.control.saved = {
     savedElement: node('div|class:theme-custom'),
     customHelper: new Control_helperText({
-      text: language[state.get.current().language].theme.saved.helper
+      text: language.current().menu.content.theme.saved.helper
     }),
     saveButton: new Button({
-      text: language[state.get.current().language].theme.saved.save,
+      text: language.current().menu.content.theme.saved.save,
       style: ['line'],
       func: () => {
         menu.close();
@@ -323,7 +323,7 @@ themeSetting.saved = (parent) => {
       }
     }),
     edit: new Button({
-      text: language[state.get.current().language].theme.saved.edit,
+      text: language.current().menu.content.theme.saved.edit,
       iconName: 'edit',
       style: ['line'],
       srOnly: true,
@@ -386,9 +386,9 @@ themeSetting.style = (parent) => {
   themeSetting.control.style = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'theme-style-dark', labelText: language[state.get.current().language].theme.style.dark.label, description: false, value: 'dark' },
-      { id: 'theme-style-light', labelText: language[state.get.current().language].theme.style.light.label, description: false, value: 'light' },
-      { id: 'theme-style-system', labelText: language[state.get.current().language].theme.style.automatic.label, description: language[state.get.current().language].theme.style.automatic.description, value: 'system' }
+      { id: 'theme-style-dark', labelText: language.current().menu.content.theme.style.dark.label, description: false, value: 'dark' },
+      { id: 'theme-style-light', labelText: language.current().menu.content.theme.style.light.label, description: false, value: 'light' },
+      { id: 'theme-style-system', labelText: language.current().menu.content.theme.style.automatic.label, description: language.current().menu.content.theme.style.automatic.description, value: 'system' }
     ],
     groupName: 'theme-style',
     path: 'theme.style',
@@ -446,7 +446,7 @@ themeSetting.color = (parent) => {
           object: state.get.current(),
           path: 'theme.color.range.primary.h',
           id: 'theme-color-range-primary-h',
-          labelText: language[state.get.current().language].theme.color.range.primary.h,
+          labelText: language.current().menu.content.theme.color.range.primary.h,
           value: state.get.current().theme.color.range.primary.h,
           defaultValue: state.get.default().theme.color.range.primary.h,
           min: state.get.minMax().theme.color.range.primary.h.min,
@@ -461,7 +461,7 @@ themeSetting.color = (parent) => {
           object: state.get.current(),
           path: 'theme.color.range.primary.s',
           id: 'theme-color-range-primary-s',
-          labelText: language[state.get.current().language].theme.color.range.primary.s,
+          labelText: language.current().menu.content.theme.color.range.primary.s,
           value: state.get.current().theme.color.range.primary.s,
           defaultValue: state.get.default().theme.color.range.primary.s,
           min: state.get.minMax().theme.color.range.primary.s.min,
@@ -476,12 +476,12 @@ themeSetting.color = (parent) => {
     },
     contrast: new Control_sliderDouble({
       object: state.get.current(),
-      labelText: language[state.get.current().language].theme.color.contrast.label,
+      labelText: language.current().menu.content.theme.color.contrast.label,
       style: 'contrast',
       left: {
         path: 'theme.color.contrast.start',
         id: 'theme-color-contrast-start',
-        labelText: language[state.get.current().language].theme.color.contrast.left,
+        labelText: language.current().menu.content.theme.color.contrast.left,
         value: state.get.current().theme.color.contrast.start,
         defaultValue: state.get.default().theme.color.contrast.start,
         min: state.get.minMax().theme.color.contrast.start.min,
@@ -494,7 +494,7 @@ themeSetting.color = (parent) => {
       right: {
         path: 'theme.color.contrast.end',
         id: 'theme-color-contrast-end',
-        labelText: language[state.get.current().language].theme.color.contrast.right,
+        labelText: language.current().menu.content.theme.color.contrast.right,
         value: state.get.current().theme.color.contrast.end,
         defaultValue: state.get.default().theme.color.contrast.end,
         min: state.get.minMax().theme.color.contrast.end.min,
@@ -506,11 +506,11 @@ themeSetting.color = (parent) => {
       }
     }),
     contrastHelper: new Control_helperText({
-      text: language[state.get.current().language].theme.color.contrast.helper
+      text: language.current().menu.content.theme.color.contrast.helper
     }),
     shade: {
       helper: new Control_helperText({
-        text: language[state.get.current().language].theme.color.shade.helper
+        text: language.current().menu.content.theme.color.shade.helper
       })
     }
   };
@@ -559,7 +559,7 @@ themeSetting.accent = (parent) => {
     object: state.get.current(),
     path: 'theme.accent',
     id: 'theme-accent',
-    labelText: language[state.get.current().language].theme.accent.color,
+    labelText: language.current().menu.content.theme.accent.color,
     defaultValue: state.get.default().theme.accent.rgb,
     minMaxObject: state.get.minMax(),
     randomColor: true,
@@ -584,7 +584,7 @@ themeSetting.accent = (parent) => {
     object: state.get.current(),
     path: 'theme.accent.random.active',
     id: 'theme-accent-random-active',
-    labelText: language[state.get.current().language].theme.accent.random.active,
+    labelText: language.current().menu.content.theme.accent.random.active,
     action: () => {
       themeSetting.disable();
       themeSetting.control.accent.random.collapse.update();
@@ -595,11 +595,11 @@ themeSetting.accent = (parent) => {
   themeSetting.control.accent.random.style = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'theme-accent-random-style-any', labelText: language[state.get.current().language].theme.accent.random.style.any, value: 'any' },
-      { id: 'theme-accent-random-style-light', labelText: language[state.get.current().language].theme.accent.random.style.light, value: 'light' },
-      { id: 'theme-accent-random-style-dark', labelText: language[state.get.current().language].theme.accent.random.style.dark, value: 'dark' },
-      { id: 'theme-accent-random-style-pastel', labelText: language[state.get.current().language].theme.accent.random.style.pastel, value: 'pastel' },
-      { id: 'theme-accent-random-style-saturated', labelText: language[state.get.current().language].theme.accent.random.style.saturated, value: 'saturated' },
+      { id: 'theme-accent-random-style-any', labelText: language.current().menu.content.theme.accent.random.style.any, value: 'any' },
+      { id: 'theme-accent-random-style-light', labelText: language.current().menu.content.theme.accent.random.style.light, value: 'light' },
+      { id: 'theme-accent-random-style-dark', labelText: language.current().menu.content.theme.accent.random.style.dark, value: 'dark' },
+      { id: 'theme-accent-random-style-pastel', labelText: language.current().menu.content.theme.accent.random.style.pastel, value: 'pastel' },
+      { id: 'theme-accent-random-style-saturated', labelText: language.current().menu.content.theme.accent.random.style.saturated, value: 'saturated' },
     ],
     groupName: 'theme-accent-random-style',
     path: 'theme.accent.random.style',
@@ -609,7 +609,7 @@ themeSetting.accent = (parent) => {
   });
 
   themeSetting.control.accent.randomiseNow = new Button({
-    text: language[state.get.current().language].theme.accent.random.randomise,
+    text: language.current().menu.content.theme.accent.random.randomise,
     style: ['line'],
     func: () => {
       theme.accent.random.render();
@@ -646,7 +646,7 @@ themeSetting.accent = (parent) => {
   themeSetting.control.accent.cycle.alert = new Alert({
     iconName: 'info',
     children: [
-      node(`p:${language[state.get.current().language].theme.accent.cycle.alert}|class:small`)
+      node(`p:${language.current().menu.content.theme.accent.cycle.alert}|class:small`)
     ]
   });
 
@@ -654,7 +654,7 @@ themeSetting.accent = (parent) => {
     object: state.get.current(),
     path: 'theme.accent.cycle.active',
     id: 'theme-accent-random-cycle-active',
-    labelText: language[state.get.current().language].theme.accent.cycle.active,
+    labelText: language.current().menu.content.theme.accent.cycle.active,
     action: () => {
       themeSetting.control.accent.cycle.collapse.update();
       theme.accent.cycle.bind();
@@ -668,7 +668,7 @@ themeSetting.accent = (parent) => {
     object: state.get.current(),
     path: 'theme.accent.cycle.speed',
     id: 'theme-accent-random-cycle-speed',
-    labelText: language[state.get.current().language].theme.accent.cycle.speed,
+    labelText: language.current().menu.content.theme.accent.cycle.speed,
     value: state.get.current().theme.accent.cycle.speed,
     defaultValue: state.get.default().theme.accent.cycle.speed,
     min: state.get.minMax().theme.accent.cycle.speed.min,
@@ -683,7 +683,7 @@ themeSetting.accent = (parent) => {
     object: state.get.current(),
     path: 'theme.accent.cycle.step',
     id: 'theme-accent-random-cycle-step',
-    labelText: language[state.get.current().language].theme.accent.cycle.step,
+    labelText: language.current().menu.content.theme.accent.cycle.step,
     value: state.get.current().theme.accent.cycle.step,
     defaultValue: state.get.default().theme.accent.cycle.step,
     min: state.get.minMax().theme.accent.cycle.step.min,
@@ -695,7 +695,7 @@ themeSetting.accent = (parent) => {
   });
 
   themeSetting.control.accent.cycle.stepHelper = new Control_helperText({
-    text: language[state.get.current().language].theme.accent.cycle.helper
+    text: language.current().menu.content.theme.accent.cycle.helper
   });
 
   themeSetting.control.accent.cycle.area = node('div', [
@@ -756,8 +756,8 @@ themeSetting.font = (parent) => {
       id: 'theme-font-display-name',
       value: state.get.current().theme.font.display.name,
       defaultValue: state.get.default().theme.font.display.name,
-      placeholder: language[state.get.current().language].theme.font.display.name.placeholder,
-      labelText: language[state.get.current().language].theme.font.display.name.label,
+      placeholder: language.current().menu.content.theme.font.display.name.placeholder,
+      labelText: language.current().menu.content.theme.font.display.name.label,
       action: () => {
         theme.font.display.delay();
         data.save();
@@ -766,16 +766,16 @@ themeSetting.font = (parent) => {
     nameHelper: new Control_helperText({
       complexText: true,
       text: [
-        `${language[state.get.current().language].theme.font.display.name.helper.p1.a1} ${(new Link({ text: language[state.get.current().language].theme.font.display.name.helper.p1.a2, href: 'https://fonts.google.com/', openNew: true })).link().outerHTML} ${language[state.get.current().language].theme.font.display.name.helper.p1.a3}`,
-        language[state.get.current().language].theme.font.display.name.helper.p2,
-        language[state.get.current().language].theme.font.display.name.helper.p3
+        `${language.current().menu.content.theme.font.display.name.helper.p1.a1} ${(new Link({ text: language.current().menu.content.theme.font.display.name.helper.p1.a2, href: 'https://fonts.google.com/', openNew: true })).link().outerHTML} ${language.current().menu.content.theme.font.display.name.helper.p1.a3}`,
+        language.current().menu.content.theme.font.display.name.helper.p2,
+        language.current().menu.content.theme.font.display.name.helper.p3
       ]
     }),
     weight: new Control_slider({
       object: state.get.current(),
       path: 'theme.font.display.weight',
       id: 'theme-font-display-weight',
-      labelText: language[state.get.current().language].theme.font.display.weight.label,
+      labelText: language.current().menu.content.theme.font.display.weight.label,
       value: state.get.current().theme.font.display.weight,
       defaultValue: state.get.default().theme.font.display.weight,
       step: state.get.step().theme.font.display.weight,
@@ -787,7 +787,7 @@ themeSetting.font = (parent) => {
       }
     }),
     weightLight: new Button({
-      text: language[state.get.current().language].theme.font.display.weight.light,
+      text: language.current().menu.content.theme.font.display.weight.light,
       style: ['line'],
       func: () => {
         state.get.current().theme.font.display.weight = fontWeight.light;
@@ -797,7 +797,7 @@ themeSetting.font = (parent) => {
       }
     }),
     weightRegular: new Button({
-      text: language[state.get.current().language].theme.font.display.weight.regular,
+      text: language.current().menu.content.theme.font.display.weight.regular,
       style: ['line'],
       func: () => {
         state.get.current().theme.font.display.weight = fontWeight.regular;
@@ -807,7 +807,7 @@ themeSetting.font = (parent) => {
       }
     }),
     weightBold: new Button({
-      text: language[state.get.current().language].theme.font.display.weight.bold,
+      text: language.current().menu.content.theme.font.display.weight.bold,
       style: ['line'],
       func: () => {
         state.get.current().theme.font.display.weight = fontWeight.bold;
@@ -817,13 +817,13 @@ themeSetting.font = (parent) => {
       }
     }),
     weightHelper: new Control_helperText({
-      text: language[state.get.current().language].theme.font.display.weight.helper
+      text: language.current().menu.content.theme.font.display.weight.helper
     }),
     style: new Control_radio({
       object: state.get.current(),
       radioGroup: [
-        { id: 'theme-font-display-style-normal', labelText: language[state.get.current().language].theme.font.display.style.normal, value: 'normal' },
-        { id: 'theme-font-display-style-italic', labelText: language[state.get.current().language].theme.font.display.style.italic, value: 'italic' }
+        { id: 'theme-font-display-style-normal', labelText: language.current().menu.content.theme.font.display.style.normal, value: 'normal' },
+        { id: 'theme-font-display-style-italic', labelText: language.current().menu.content.theme.font.display.style.italic, value: 'italic' }
       ],
       groupName: 'theme-font-display-style',
       path: 'theme.font.display.style',
@@ -843,8 +843,8 @@ themeSetting.font = (parent) => {
       path: 'theme.font.ui.name',
       id: 'theme-font-ui-name',
       value: state.get.current().theme.font.ui.name,
-      defaultValue: language[state.get.current().language].theme.font.ui.name.placeholder,
-      placeholder: language[state.get.current().language].theme.font.ui.name.label,
+      defaultValue: language.current().menu.content.theme.font.ui.name.placeholder,
+      placeholder: language.current().menu.content.theme.font.ui.name.label,
       labelText: 'User interface font',
       action: () => {
         theme.font.ui.delay();
@@ -854,16 +854,16 @@ themeSetting.font = (parent) => {
     nameHelper: new Control_helperText({
       complexText: true,
       text: [
-        `${language[state.get.current().language].theme.font.ui.name.helper.p1.a1} ${(new Link({ text: language[state.get.current().language].theme.font.ui.name.helper.p1.a2, href: 'https://fonts.google.com/', openNew: true })).link().outerHTML} ${language[state.get.current().language].theme.font.ui.name.helper.p1.a3}`,
-        language[state.get.current().language].theme.font.ui.name.helper.p2,
-        language[state.get.current().language].theme.font.ui.name.helper.p3
+        `${language.current().menu.content.theme.font.ui.name.helper.p1.a1} ${(new Link({ text: language.current().menu.content.theme.font.ui.name.helper.p1.a2, href: 'https://fonts.google.com/', openNew: true })).link().outerHTML} ${language.current().menu.content.theme.font.ui.name.helper.p1.a3}`,
+        language.current().menu.content.theme.font.ui.name.helper.p2,
+        language.current().menu.content.theme.font.ui.name.helper.p3
       ]
     }),
     weight: new Control_slider({
       object: state.get.current(),
       path: 'theme.font.ui.weight',
       id: 'theme-font-ui-weight',
-      labelText: language[state.get.current().language].theme.font.ui.weight.label,
+      labelText: language.current().menu.content.theme.font.ui.weight.label,
       value: state.get.current().theme.font.ui.weight,
       defaultValue: state.get.default().theme.font.ui.weight,
       step: state.get.step().theme.font.ui.weight,
@@ -875,7 +875,7 @@ themeSetting.font = (parent) => {
       }
     }),
     weightLight: new Button({
-      text: language[state.get.current().language].theme.font.ui.weight.light,
+      text: language.current().menu.content.theme.font.ui.weight.light,
       style: ['line'],
       func: () => {
         state.get.current().theme.font.ui.weight = fontWeight.light;
@@ -885,7 +885,7 @@ themeSetting.font = (parent) => {
       }
     }),
     weightRegular: new Button({
-      text: language[state.get.current().language].theme.font.ui.weight.regular,
+      text: language.current().menu.content.theme.font.ui.weight.regular,
       style: ['line'],
       func: () => {
         state.get.current().theme.font.ui.weight = fontWeight.regular;
@@ -895,7 +895,7 @@ themeSetting.font = (parent) => {
       }
     }),
     weightBold: new Button({
-      text: language[state.get.current().language].theme.font.ui.weight.bold,
+      text: language.current().menu.content.theme.font.ui.weight.bold,
       style: ['line'],
       func: () => {
         state.get.current().theme.font.ui.weight = fontWeight.bold;
@@ -905,13 +905,13 @@ themeSetting.font = (parent) => {
       }
     }),
     weightHelper: new Control_helperText({
-      text: language[state.get.current().language].theme.font.ui.weight.helper
+      text: language.current().menu.content.theme.font.ui.weight.helper
     }),
     style: new Control_radio({
       object: state.get.current(),
       radioGroup: [
-        { id: 'theme-font-ui-style-normal', labelText: language[state.get.current().language].theme.font.ui.style.normal, value: 'normal' },
-        { id: 'theme-font-ui-style-italic', labelText: language[state.get.current().language].theme.font.ui.style.italic, value: 'italic' }
+        { id: 'theme-font-ui-style-normal', labelText: language.current().menu.content.theme.font.ui.style.normal, value: 'normal' },
+        { id: 'theme-font-ui-style-italic', labelText: language.current().menu.content.theme.font.ui.style.italic, value: 'italic' }
       ],
       groupName: 'theme-font-ui-style',
       path: 'theme.font.ui.style',
@@ -987,7 +987,7 @@ themeSetting.radius = (parent) => {
     object: state.get.current(),
     path: 'theme.radius',
     id: 'theme-radius',
-    labelText: language[state.get.current().language].theme.radius,
+    labelText: language.current().menu.content.theme.radius,
     value: state.get.current().theme.radius,
     defaultValue: state.get.default().theme.radius,
     min: state.get.minMax().theme.radius.min,
@@ -1012,7 +1012,7 @@ themeSetting.shadow = (parent) => {
     object: state.get.current(),
     path: 'theme.shadow',
     id: 'theme-shadow',
-    labelText: language[state.get.current().language].theme.shadow,
+    labelText: language.current().menu.content.theme.shadow,
     value: state.get.current().theme.shadow,
     defaultValue: state.get.default().theme.shadow,
     min: state.get.minMax().theme.shadow.min,
@@ -1038,7 +1038,7 @@ themeSetting.shade = (parent) => {
       object: state.get.current(),
       path: 'theme.shade.opacity',
       id: 'theme.shade.opacity',
-      labelText: language[state.get.current().language].theme.shade.opacity,
+      labelText: language.current().menu.content.theme.shade.opacity,
       value: state.get.current().theme.shade.opacity,
       defaultValue: state.get.default().theme.shade.opacity,
       min: state.get.minMax().theme.shade.opacity.min,
@@ -1052,7 +1052,7 @@ themeSetting.shade = (parent) => {
       object: state.get.current(),
       path: 'theme.shade.blur',
       id: 'theme.shade.blur',
-      labelText: language[state.get.current().language].theme.shade.blur.label,
+      labelText: language.current().menu.content.theme.shade.blur.label,
       value: state.get.current().theme.shade.blur,
       defaultValue: state.get.default().theme.shade.blur,
       min: state.get.minMax().theme.shade.blur.min,
@@ -1063,7 +1063,7 @@ themeSetting.shade = (parent) => {
       }
     }),
     blurHelper: new Control_helperText({
-      text: language[state.get.current().language].theme.shade.blur.helper
+      text: language.current().menu.content.theme.shade.blur.helper
     })
   };
 
@@ -1083,7 +1083,7 @@ themeSetting.opacity = (parent) => {
     object: state.get.current(),
     path: 'theme.opacity.general',
     id: 'theme-opacity-general',
-    labelText: language[state.get.current().language].theme.opacity.general.label,
+    labelText: language.current().menu.content.theme.opacity.general.label,
     value: state.get.current().theme.opacity.general,
     defaultValue: state.get.default().theme.opacity.general,
     min: state.get.minMax().theme.opacity.general.min,
@@ -1128,14 +1128,14 @@ themeSetting.opacity = (parent) => {
   });
 
   themeSetting.control.opacity.generalHelper = new Control_helperText({
-    text: language[state.get.current().language].theme.opacity.general.helper
+    text: language.current().menu.content.theme.opacity.general.helper
   });
 
   themeSetting.control.opacity.toolbar = new Control_sliderSlim({
     object: state.get.current(),
     path: 'theme.toolbar.opacity',
     id: 'theme-toolbar-opacity',
-    labelText: language[state.get.current().language].theme.opacity.toolbar,
+    labelText: language.current().menu.content.theme.opacity.toolbar,
     value: state.get.current().theme.toolbar.opacity,
     defaultValue: state.get.default().theme.toolbar.opacity,
     min: state.get.minMax().theme.toolbar.opacity.min,
@@ -1155,7 +1155,7 @@ themeSetting.opacity = (parent) => {
     object: state.get.current(),
     path: 'theme.bookmark.item.opacity',
     id: 'theme-bookmark-item-opacity',
-    labelText: language[state.get.current().language].theme.opacity.bookmark,
+    labelText: language.current().menu.content.theme.opacity.bookmark,
     value: state.get.current().theme.bookmark.item.opacity,
     defaultValue: state.get.default().theme.bookmark.item.opacity,
     min: state.get.minMax().theme.bookmark.item.opacity.min,
@@ -1177,7 +1177,7 @@ themeSetting.opacity = (parent) => {
     object: state.get.current(),
     path: 'theme.header.search.opacity',
     id: 'theme-header-search-opacity',
-    labelText: language[state.get.current().language].theme.opacity.search,
+    labelText: language.current().menu.content.theme.opacity.search,
     value: state.get.current().theme.header.search.opacity,
     defaultValue: state.get.default().theme.header.search.opacity,
     min: state.get.minMax().theme.header.search.opacity.min,
@@ -1198,7 +1198,7 @@ themeSetting.opacity = (parent) => {
       object: state.get.current(),
       path: 'theme.group.toolbar.opacity',
       id: 'theme-group-toolbar-opacity',
-      labelText: language[state.get.current().language].theme.opacity.groupToolbar,
+      labelText: language.current().menu.content.theme.opacity.groupToolbar,
       value: state.get.current().theme.group.toolbar.opacity,
       defaultValue: state.get.default().theme.group.toolbar.opacity,
       min: state.get.minMax().theme.group.toolbar.opacity.min,
@@ -1260,12 +1260,12 @@ themeSetting.background = (parent) => {
     type: new Control_radio({
       object: state.get.current(),
       radioGroup: [
-        { id: 'theme-background-type-theme', labelText: language[state.get.current().language].theme.background.type.theme.label, description: language[state.get.current().language].theme.background.type.theme.description, value: 'theme' },
-        { id: 'theme-background-type-accent', labelText: language[state.get.current().language].theme.background.type.accent.label, description: language[state.get.current().language].theme.background.type.accent.description, value: 'accent' },
-        { id: 'theme-background-type-color', labelText: language[state.get.current().language].theme.background.type.color, value: 'color' },
-        { id: 'theme-background-type-gradient', labelText: language[state.get.current().language].theme.background.type.gradient, value: 'gradient' },
-        { id: 'theme-background-type-image', labelText: language[state.get.current().language].theme.background.type.image, value: 'image' },
-        { id: 'theme-background-type-video', labelText: language[state.get.current().language].theme.background.type.video, value: 'video' }
+        { id: 'theme-background-type-theme', labelText: language.current().menu.content.theme.background.type.theme.label, description: language.current().menu.content.theme.background.type.theme.description, value: 'theme' },
+        { id: 'theme-background-type-accent', labelText: language.current().menu.content.theme.background.type.accent.label, description: language.current().menu.content.theme.background.type.accent.description, value: 'accent' },
+        { id: 'theme-background-type-color', labelText: language.current().menu.content.theme.background.type.color, value: 'color' },
+        { id: 'theme-background-type-gradient', labelText: language.current().menu.content.theme.background.type.gradient, value: 'gradient' },
+        { id: 'theme-background-type-image', labelText: language.current().menu.content.theme.background.type.image, value: 'image' },
+        { id: 'theme-background-type-video', labelText: language.current().menu.content.theme.background.type.video, value: 'video' }
       ],
       groupName: 'theme-background-type',
       path: 'theme.background.type',
@@ -1282,7 +1282,7 @@ themeSetting.background = (parent) => {
       object: state.get.current(),
       path: 'theme.background.color',
       id: 'theme-background-color',
-      labelText: language[state.get.current().language].theme.background.color,
+      labelText: language.current().menu.content.theme.background.color,
       defaultValue: state.get.default().theme.background.color.rgb,
       minMaxObject: state.get.minMax(),
       randomColor: true,
@@ -1304,7 +1304,7 @@ themeSetting.background = (parent) => {
         object: state.get.current(),
         path: 'theme.background.gradient.angle',
         id: 'theme-background-gradient-angle',
-        labelText: language[state.get.current().language].theme.background.gradient.angle,
+        labelText: language.current().menu.content.theme.background.gradient.angle,
         value: state.get.current().theme.background.gradient.angle,
         defaultValue: state.get.default().theme.background.gradient.angle,
         min: state.get.minMax().theme.background.gradient.angle.min,
@@ -1319,7 +1319,7 @@ themeSetting.background = (parent) => {
         object: state.get.current(),
         path: 'theme.background.gradient.start',
         id: 'theme-background-gradient-start',
-        labelText: language[state.get.current().language].theme.background.gradient.start,
+        labelText: language.current().menu.content.theme.background.gradient.start,
         defaultValue: state.get.default().theme.background.gradient.start.rgb,
         minMaxObject: state.get.minMax(),
         randomColor: true,
@@ -1340,7 +1340,7 @@ themeSetting.background = (parent) => {
         object: state.get.current(),
         path: 'theme.background.gradient.end',
         id: 'theme-background-gradient-end',
-        labelText: language[state.get.current().language].theme.background.gradient.end,
+        labelText: language.current().menu.content.theme.background.gradient.end,
         defaultValue: state.get.default().theme.background.gradient.end.rgb,
         minMaxObject: state.get.minMax(),
         randomColor: true,
@@ -1362,8 +1362,8 @@ themeSetting.background = (parent) => {
       alert: new Alert({
         iconName: 'info',
         children: [
-          node(`p:${language[state.get.current().language].theme.background.image.alert.p1}|class:small`),
-          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language[state.get.current().language].theme.background.image.alert.p2, href: supportSetting.link.url + supportSetting.link.page.localBackgroundImage, openNew: true })).link()] })
+          node(`p:${language.current().menu.content.theme.background.image.alert.p1}|class:small`),
+          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language.current().menu.content.theme.background.image.alert.p2, href: supportSetting.link.url + supportSetting.link.page.localBackgroundImage, openNew: true })).link()] })
         ]
       }),
       url: new Control_textarea({
@@ -1371,21 +1371,21 @@ themeSetting.background = (parent) => {
         path: 'theme.background.image.url',
         id: 'theme-background-image-url',
         value: state.get.current().theme.background.image.url,
-        placeholder: language[state.get.current().language].theme.background.image.url.placeholder,
-        labelText: language[state.get.current().language].theme.background.image.url.label,
+        placeholder: language.current().menu.content.theme.background.image.url.placeholder,
+        labelText: language.current().menu.content.theme.background.image.url.label,
         action: () => {
           theme.background.image.render();
           data.save();
         }
       }),
       urlHelper: new Control_helperText({
-        text: language[state.get.current().language].theme.background.image.url.helper
+        text: language.current().menu.content.theme.background.image.url.helper
       }),
       blur: new Control_sliderSlim({
         object: state.get.current(),
         path: 'theme.background.image.blur',
         id: 'theme-background-image-blur',
-        labelText: language[state.get.current().language].theme.background.image.blur,
+        labelText: language.current().menu.content.theme.background.image.blur,
         value: state.get.current().theme.background.image.blur,
         defaultValue: state.get.default().theme.background.image.blur,
         min: state.get.minMax().theme.background.image.blur.min,
@@ -1399,7 +1399,7 @@ themeSetting.background = (parent) => {
         object: state.get.current(),
         path: 'theme.background.image.grayscale',
         id: 'theme-background-image-grayscale',
-        labelText: language[state.get.current().language].theme.background.image.grayscale,
+        labelText: language.current().menu.content.theme.background.image.grayscale,
         value: state.get.current().theme.background.image.grayscale,
         defaultValue: state.get.default().theme.background.image.grayscale,
         min: state.get.minMax().theme.background.image.grayscale.min,
@@ -1413,7 +1413,7 @@ themeSetting.background = (parent) => {
         object: state.get.current(),
         path: 'theme.background.image.scale',
         id: 'theme-background-image-scale',
-        labelText: language[state.get.current().language].theme.background.image.scale,
+        labelText: language.current().menu.content.theme.background.image.scale,
         value: state.get.current().theme.background.image.scale,
         defaultValue: state.get.default().theme.background.image.scale,
         min: state.get.minMax().theme.background.image.scale.min,
@@ -1427,7 +1427,7 @@ themeSetting.background = (parent) => {
         object: state.get.current(),
         path: 'theme.background.image.accent',
         id: 'theme-background-image-accent',
-        labelText: language[state.get.current().language].theme.background.image.accent,
+        labelText: language.current().menu.content.theme.background.image.accent,
         value: state.get.current().theme.background.image.accent,
         defaultValue: state.get.default().theme.background.image.accent,
         min: state.get.minMax().theme.background.image.accent.min,
@@ -1441,7 +1441,7 @@ themeSetting.background = (parent) => {
         object: state.get.current(),
         path: 'theme.background.image.opacity',
         id: 'theme-background-image-opacity',
-        labelText: language[state.get.current().language].theme.background.image.opacity,
+        labelText: language.current().menu.content.theme.background.image.opacity,
         value: state.get.current().theme.background.image.opacity,
         defaultValue: state.get.default().theme.background.image.opacity,
         min: state.get.minMax().theme.background.image.opacity.min,
@@ -1456,7 +1456,7 @@ themeSetting.background = (parent) => {
           object: state.get.current(),
           path: 'theme.background.image.vignette.opacity',
           id: 'theme-background-image-vignette-opacity',
-          labelText: language[state.get.current().language].theme.background.image.vignette.opacity,
+          labelText: language.current().menu.content.theme.background.image.vignette.opacity,
           value: state.get.current().theme.background.image.vignette.opacity,
           defaultValue: state.get.default().theme.background.image.vignette.opacity,
           min: state.get.minMax().theme.background.image.vignette.opacity.min,
@@ -1468,11 +1468,11 @@ themeSetting.background = (parent) => {
         }),
         range: new Control_sliderDouble({
           object: state.get.current(),
-          labelText: language[state.get.current().language].theme.background.image.vignette.range.label,
+          labelText: language.current().menu.content.theme.background.image.vignette.range.label,
           left: {
             path: 'theme.background.image.vignette.end',
             id: 'theme-background-image-vignette-end',
-            labelText: language[state.get.current().language].theme.background.image.vignette.range.left,
+            labelText: language.current().menu.content.theme.background.image.vignette.range.left,
             value: state.get.current().theme.background.image.vignette.end,
             defaultValue: state.get.default().theme.background.image.vignette.end,
             min: state.get.minMax().theme.background.image.vignette.end.min,
@@ -1486,7 +1486,7 @@ themeSetting.background = (parent) => {
           right: {
             path: 'theme.background.image.vignette.start',
             id: 'theme-background-image-vignette-start',
-            labelText: language[state.get.current().language].theme.background.image.vignette.range.right,
+            labelText: language.current().menu.content.theme.background.image.vignette.range.right,
             value: state.get.current().theme.background.image.vignette.start,
             defaultValue: state.get.default().theme.background.image.vignette.start,
             min: state.get.minMax().theme.background.image.vignette.start.min,
@@ -1504,8 +1504,8 @@ themeSetting.background = (parent) => {
       alert: new Alert({
         iconName: 'info',
         children: [
-          node(`p:${language[state.get.current().language].theme.background.video.alert.p1}.|class:small`),
-          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language[state.get.current().language].theme.background.video.alert.p2, href: supportSetting.link.url + supportSetting.link.page.backgroundImageVideo, openNew: true })).link()] })
+          node(`p:${language.current().menu.content.theme.background.video.alert.p1}.|class:small`),
+          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language.current().menu.content.theme.background.video.alert.p2, href: supportSetting.link.url + supportSetting.link.page.backgroundImageVideo, openNew: true })).link()] })
         ]
       }),
       url: new Control_textarea({
@@ -1513,8 +1513,8 @@ themeSetting.background = (parent) => {
         path: 'theme.background.video.url',
         id: 'theme-background-video-url',
         value: state.get.current().theme.background.video.url,
-        placeholder: language[state.get.current().language].theme.background.video.url.placeholder,
-        labelText: language[state.get.current().language].theme.background.video.url.label,
+        placeholder: language.current().menu.content.theme.background.video.url.placeholder,
+        labelText: language.current().menu.content.theme.background.video.url.label,
         action: () => {
           theme.background.video.clear();
           theme.background.video.render();
@@ -1522,13 +1522,13 @@ themeSetting.background = (parent) => {
         }
       }),
       urlHelper: new Control_helperText({
-        text: language[state.get.current().language].theme.background.video.url.helper
+        text: language.current().menu.content.theme.background.video.url.helper
       }),
       blur: new Control_sliderSlim({
         object: state.get.current(),
         path: 'theme.background.video.blur',
         id: 'theme-background-video-blur',
-        labelText: language[state.get.current().language].theme.background.video.blur,
+        labelText: language.current().menu.content.theme.background.video.blur,
         value: state.get.current().theme.background.video.blur,
         defaultValue: state.get.default().theme.background.video.blur,
         min: state.get.minMax().theme.background.video.blur.min,
@@ -1542,7 +1542,7 @@ themeSetting.background = (parent) => {
         object: state.get.current(),
         path: 'theme.background.video.grayscale',
         id: 'theme-background-video-grayscale',
-        labelText: language[state.get.current().language].theme.background.video.grayscale,
+        labelText: language.current().menu.content.theme.background.video.grayscale,
         value: state.get.current().theme.background.video.grayscale,
         defaultValue: state.get.default().theme.background.video.grayscale,
         min: state.get.minMax().theme.background.video.grayscale.min,
@@ -1556,7 +1556,7 @@ themeSetting.background = (parent) => {
         object: state.get.current(),
         path: 'theme.background.video.scale',
         id: 'theme-background-video-scale',
-        labelText: language[state.get.current().language].theme.background.video.scale,
+        labelText: language.current().menu.content.theme.background.video.scale,
         value: state.get.current().theme.background.video.scale,
         defaultValue: state.get.default().theme.background.video.scale,
         min: state.get.minMax().theme.background.video.scale.min,
@@ -1570,7 +1570,7 @@ themeSetting.background = (parent) => {
         object: state.get.current(),
         path: 'theme.background.video.accent',
         id: 'theme-background-video-accent',
-        labelText: language[state.get.current().language].theme.background.video.accent,
+        labelText: language.current().menu.content.theme.background.video.accent,
         value: state.get.current().theme.background.video.accent,
         defaultValue: state.get.default().theme.background.video.accent,
         min: state.get.minMax().theme.background.video.accent.min,
@@ -1584,7 +1584,7 @@ themeSetting.background = (parent) => {
         object: state.get.current(),
         path: 'theme.background.video.opacity',
         id: 'theme-background-video-opacity',
-        labelText: language[state.get.current().language].theme.background.video.opacity,
+        labelText: language.current().menu.content.theme.background.video.opacity,
         value: state.get.current().theme.background.video.opacity,
         defaultValue: state.get.default().theme.background.video.opacity,
         min: state.get.minMax().theme.background.video.opacity.min,
@@ -1599,7 +1599,7 @@ themeSetting.background = (parent) => {
           object: state.get.current(),
           path: 'theme.background.video.vignette.opacity',
           id: 'theme-background-video-vignette-opacity',
-          labelText: language[state.get.current().language].theme.background.video.vignette.opacity,
+          labelText: language.current().menu.content.theme.background.video.vignette.opacity,
           value: state.get.current().theme.background.video.vignette.opacity,
           defaultValue: state.get.default().theme.background.video.vignette.opacity,
           min: state.get.minMax().theme.background.video.vignette.opacity.min,
@@ -1611,11 +1611,11 @@ themeSetting.background = (parent) => {
         }),
         range: new Control_sliderDouble({
           object: state.get.current(),
-          labelText: language[state.get.current().language].theme.background.video.vignette.range.label,
+          labelText: language.current().menu.content.theme.background.video.vignette.range.label,
           left: {
             path: 'theme.background.video.vignette.end',
             id: 'theme-background-video-vignette-end',
-            labelText: language[state.get.current().language].theme.background.video.vignette.range.left,
+            labelText: language.current().menu.content.theme.background.video.vignette.range.left,
             value: state.get.current().theme.background.video.vignette.end,
             defaultValue: state.get.default().theme.background.video.vignette.end,
             min: state.get.minMax().theme.background.video.vignette.end.min,
@@ -1629,7 +1629,7 @@ themeSetting.background = (parent) => {
           right: {
             path: 'theme.background.video.vignette.start',
             id: 'theme-background-video-vignette-start',
-            labelText: language[state.get.current().language].theme.background.video.vignette.range.right,
+            labelText: language.current().menu.content.theme.background.video.vignette.range.right,
             value: state.get.current().theme.background.video.vignette.start,
             defaultValue: state.get.default().theme.background.video.vignette.start,
             min: state.get.minMax().theme.background.video.vignette.start.min,
@@ -1739,10 +1739,10 @@ themeSetting.layout = (parent) => {
   themeSetting.control.layout.color.by = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'theme-layout-by-theme', labelText: language[state.get.current().language].theme.layout.color.by.transparent.label, description: language[state.get.current().language].theme.layout.color.by.transparent.description, value: 'theme' },
-      { id: 'theme-layout-by-custom', labelText: language[state.get.current().language].theme.layout.color.by.custom.label, description: language[state.get.current().language].theme.layout.color.by.custom.description, value: 'custom' }
+      { id: 'theme-layout-by-theme', labelText: language.current().menu.content.theme.layout.color.by.transparent.label, description: language.current().menu.content.theme.layout.color.by.transparent.description, value: 'theme' },
+      { id: 'theme-layout-by-custom', labelText: language.current().menu.content.theme.layout.color.by.custom.label, description: language.current().menu.content.theme.layout.color.by.custom.description, value: 'custom' }
     ],
-    label: language[state.get.current().language].theme.layout.color.label,
+    label: language.current().menu.content.theme.layout.color.label,
     groupName: 'theme-layout-by',
     path: 'theme.layout.color.by',
     action: () => {
@@ -1757,7 +1757,7 @@ themeSetting.layout = (parent) => {
     object: state.get.current(),
     path: 'theme.layout.color',
     id: 'theme-layout-color',
-    labelText: language[state.get.current().language].theme.layout.color.color,
+    labelText: language.current().menu.content.theme.layout.color.color,
     defaultValue: state.get.default().theme.layout.color.rgb,
     minMaxObject: state.get.minMax(),
     action: () => {
@@ -1777,7 +1777,7 @@ themeSetting.layout = (parent) => {
     object: state.get.current(),
     path: 'theme.layout.color.opacity',
     id: 'theme-layout-color-opacity',
-    labelText: language[state.get.current().language].theme.layout.color.opacity,
+    labelText: language.current().menu.content.theme.layout.color.opacity,
     value: state.get.current().theme.layout.color.opacity,
     defaultValue: state.get.default().theme.layout.color.opacity,
     min: state.get.minMax().theme.layout.color.opacity.min,
@@ -1794,7 +1794,7 @@ themeSetting.layout = (parent) => {
     object: state.get.current(),
     path: 'theme.layout.color.blur',
     id: 'theme.layout-blur',
-    labelText: language[state.get.current().language].theme.layout.color.blur.label,
+    labelText: language.current().menu.content.theme.layout.color.blur.label,
     value: state.get.current().theme.layout.color.blur,
     defaultValue: state.get.default().theme.layout.color.blur,
     min: state.get.minMax().theme.layout.color.blur.min,
@@ -1808,7 +1808,7 @@ themeSetting.layout = (parent) => {
   });
 
   themeSetting.control.layout.color.blurHelper = new Control_helperText({
-    text: language[state.get.current().language].theme.layout.color.blur.helper
+    text: language.current().menu.content.theme.layout.color.blur.helper
   });
 
   themeSetting.control.layout.color.area = node('div', [
@@ -1832,7 +1832,7 @@ themeSetting.layout = (parent) => {
       object: state.get.current(),
       path: 'theme.layout.divider.size',
       id: 'theme.layout-divider-size',
-      labelText: language[state.get.current().language].theme.layout.divider,
+      labelText: language.current().menu.content.theme.layout.divider,
       value: state.get.current().theme.layout.divider.size,
       defaultValue: state.get.default().theme.layout.divider.size,
       min: state.get.minMax().theme.layout.divider.size.min,
@@ -1876,10 +1876,10 @@ themeSetting.header = (parent) => {
   themeSetting.control.header.color.by = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'theme-header-by-theme', labelText: language[state.get.current().language].theme.header.color.by.transparent.label, description: language[state.get.current().language].theme.header.color.by.transparent.description, value: 'theme' },
-      { id: 'theme-header-by-custom', labelText: language[state.get.current().language].theme.header.color.by.custom.label, description: language[state.get.current().language].theme.header.color.by.custom.description, value: 'custom' }
+      { id: 'theme-header-by-theme', labelText: language.current().menu.content.theme.header.color.by.transparent.label, description: language.current().menu.content.theme.header.color.by.transparent.description, value: 'theme' },
+      { id: 'theme-header-by-custom', labelText: language.current().menu.content.theme.header.color.by.custom.label, description: language.current().menu.content.theme.header.color.by.custom.description, value: 'custom' }
     ],
-    label: language[state.get.current().language].theme.header.color.label,
+    label: language.current().menu.content.theme.header.color.label,
     groupName: 'theme-header-by',
     path: 'theme.header.color.by',
     action: () => {
@@ -1894,7 +1894,7 @@ themeSetting.header = (parent) => {
     object: state.get.current(),
     path: 'theme.header.color',
     id: 'theme-header-color',
-    labelText: language[state.get.current().language].theme.header.color.color,
+    labelText: language.current().menu.content.theme.header.color.color,
     defaultValue: state.get.default().theme.header.color.rgb,
     minMaxObject: state.get.minMax(),
     action: () => {
@@ -1914,7 +1914,7 @@ themeSetting.header = (parent) => {
     object: state.get.current(),
     path: 'theme.header.color.opacity',
     id: 'theme-header-color-opacity',
-    labelText: language[state.get.current().language].theme.header.color.opacity,
+    labelText: language.current().menu.content.theme.header.color.opacity,
     value: state.get.current().theme.header.color.opacity,
     defaultValue: state.get.default().theme.header.color.opacity,
     min: state.get.minMax().theme.header.color.opacity.min,
@@ -1965,10 +1965,10 @@ themeSetting.bookmark = (parent) => {
   themeSetting.control.bookmark.color.by = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'theme-bookmark-by-theme', labelText: language[state.get.current().language].theme.bookmark.color.by.transparent.label, description: language[state.get.current().language].theme.bookmark.color.by.transparent.description, value: 'theme' },
-      { id: 'theme-bookmark-by-custom', labelText: language[state.get.current().language].theme.bookmark.color.by.custom.label, description: language[state.get.current().language].theme.bookmark.color.by.transparent.description, value: 'custom' }
+      { id: 'theme-bookmark-by-theme', labelText: language.current().menu.content.theme.bookmark.color.by.transparent.label, description: language.current().menu.content.theme.bookmark.color.by.transparent.description, value: 'theme' },
+      { id: 'theme-bookmark-by-custom', labelText: language.current().menu.content.theme.bookmark.color.by.custom.label, description: language.current().menu.content.theme.bookmark.color.by.transparent.description, value: 'custom' }
     ],
-    label: language[state.get.current().language].theme.bookmark.color.label,
+    label: language.current().menu.content.theme.bookmark.color.label,
     groupName: 'theme-bookmark-by',
     path: 'theme.bookmark.color.by',
     action: () => {
@@ -1983,7 +1983,7 @@ themeSetting.bookmark = (parent) => {
     object: state.get.current(),
     path: 'theme.bookmark.color',
     id: 'theme-bookmark-color',
-    labelText: language[state.get.current().language].theme.bookmark.color.color,
+    labelText: language.current().menu.content.theme.bookmark.color.color,
     defaultValue: state.get.default().theme.bookmark.color.rgb,
     minMaxObject: state.get.minMax(),
     action: () => {
@@ -2003,7 +2003,7 @@ themeSetting.bookmark = (parent) => {
     object: state.get.current(),
     path: 'theme.bookmark.color.opacity',
     id: 'theme-bookmark-color-opacity',
-    labelText: language[state.get.current().language].theme.bookmark.color.opacity,
+    labelText: language.current().menu.content.theme.bookmark.color.opacity,
     value: state.get.current().theme.bookmark.color.opacity,
     defaultValue: state.get.default().theme.bookmark.color.opacity,
     min: state.get.minMax().theme.bookmark.color.opacity.min,
@@ -2036,7 +2036,7 @@ themeSetting.bookmark = (parent) => {
     object: state.get.current(),
     path: 'theme.bookmark.item.border',
     id: 'theme-bookmark-item-border',
-    labelText: language[state.get.current().language].theme.bookmark.item.border.label,
+    labelText: language.current().menu.content.theme.bookmark.item.border.label,
     value: state.get.current().theme.bookmark.item.border,
     defaultValue: state.get.default().theme.bookmark.item.border,
     min: state.get.minMax().theme.bookmark.item.border.min,
@@ -2049,12 +2049,12 @@ themeSetting.bookmark = (parent) => {
   });
 
   themeSetting.control.bookmark.item.borderHelper = new Control_helperText({
-    text: language[state.get.current().language].theme.bookmark.item.border.helper
+    text: language.current().menu.content.theme.bookmark.item.border.helper
   });
 
   themeSetting.control.bookmark.item.rainbow = {
     add: new Button({
-      text: language[state.get.current().language].theme.bookmark.item.rainbow.add,
+      text: language.current().menu.content.theme.bookmark.item.rainbow.add,
       style: ['line'],
       func: () => {
         theme.accent.rainbow.render();
@@ -2062,7 +2062,7 @@ themeSetting.bookmark = (parent) => {
       }
     }),
     remove: new Button({
-      text: language[state.get.current().language].theme.bookmark.item.rainbow.remove,
+      text: language.current().menu.content.theme.bookmark.item.rainbow.remove,
       style: ['line'],
       func: () => {
         theme.accent.rainbow.clear();
@@ -2070,7 +2070,7 @@ themeSetting.bookmark = (parent) => {
       }
     }),
     helper: new Control_helperText({
-      text: language[state.get.current().language].theme.bookmark.item.rainbow.helper
+      text: language.current().menu.content.theme.bookmark.item.rainbow.helper
     })
   };
 

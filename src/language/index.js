@@ -1,4 +1,12 @@
-import { en } from './en';
-import { de } from './de';
+import { state } from '../component/state';
 
-export const language = { en, de };
+import { default as en } from './en.json';
+import { default as de } from './de.json';
+
+const language = { en, de };
+
+language.current = () => {
+  return language[state.get.current().language];
+};
+
+export { language };

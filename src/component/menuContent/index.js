@@ -1,5 +1,4 @@
 import { debugSetting } from './debugSetting';
-import { state } from '../state';
 import { language } from '../../language';
 import { layoutSetting } from './layoutSetting';
 import { groupSetting } from './groupSetting';
@@ -53,7 +52,7 @@ export const MenuContent = function({
         const menuContentItem = this.element.content(item);
 
         menuContentItem.appendChild(this.element.header(
-          language[state.get.current().language].menu[activeNavData.name].subNav[item]
+          language.current().menu.nav[activeNavData.name].subNav[item]
         ));
 
         const formElement = this.element.form({ indent: true });
@@ -138,7 +137,7 @@ export const MenuContent = function({
 
         case 'support':
 
-          menuContentItem.appendChild(this.element.header(language[state.get.current().language].menu[activeNavData.name].label));
+          menuContentItem.appendChild(this.element.header(language.current().menu.nav[activeNavData.name].label));
 
           formElement = this.element.form({ indent: true });
 
@@ -148,7 +147,7 @@ export const MenuContent = function({
 
         case 'coffee':
 
-          menuContentItem.appendChild(this.element.header(language[state.get.current().language].menu[activeNavData.name].label));
+          menuContentItem.appendChild(this.element.header(language.current().menu.nav[activeNavData.name].label));
 
           formElement = this.element.form({ indent: true });
 
