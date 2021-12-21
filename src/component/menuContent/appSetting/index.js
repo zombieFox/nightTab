@@ -1,3 +1,5 @@
+import { language } from '../../../language';
+
 import { node } from '../../../utility/node';
 
 import { APP_NAME } from '../../../constant';
@@ -7,25 +9,25 @@ import { Splash } from '../../splash';
 
 const appSetting = {};
 
-appSetting[APP_NAME.toLowerCase()] = (parent) => {
+appSetting.app = (parent) => {
 
-  const githubLink = new Link({ text: 'GitHub.', href: `https://github.com/zombieFox/${APP_NAME}`, openNew: true });
+  const githubLink = new Link({ text: language.current.menu.content.app.link1.a2, href: `https://github.com/zombieFox/${APP_NAME}`, openNew: true });
 
-  const redditLink = new Link({ text: `Reddit ${APP_NAME} community.`, href: `https://www.reddit.com/r/${APP_NAME}`, openNew: true });
+  const redditLink = new Link({ text: language.current.menu.content.app.link2.a2, href: `https://www.reddit.com/r/${APP_NAME}`, openNew: true });
 
-  const licenseLink = new Link({ text: 'GNU General Public License v3.0', href: `https://github.com/zombieFox/${APP_NAME}/blob/master/license`, openNew: true });
+  const licenseLink = new Link({ text: language.current.menu.content.app.link3.a2, href: `https://github.com/zombieFox/${APP_NAME}/blob/master/license`, openNew: true });
 
   const para1 = node('p');
 
-  para1.innerHTML = `This project can be found on ${githubLink.link().outerHTML}`;
+  para1.innerHTML = `${language.current.menu.content.app.link1.a1} ${githubLink.link().outerHTML}`;
 
   const para2 = node('p');
 
-  para2.innerHTML = `Share your setup with the ${redditLink.link().outerHTML}`;
+  para2.innerHTML = `${language.current.menu.content.app.link2.a1} ${redditLink.link().outerHTML}`;
 
   const para3 = node('p');
 
-  para3.innerHTML = `${APP_NAME} uses the ${licenseLink.link().outerHTML}`;
+  para3.innerHTML = `${language.current.menu.content.app.link3.a1} ${licenseLink.link().outerHTML}`;
 
   const splash = new Splash();
 

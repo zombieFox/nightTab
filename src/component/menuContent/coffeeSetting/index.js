@@ -1,9 +1,8 @@
-import { APP_NAME } from '../../../constant';
+import { language } from '../../../language';
 
 import * as form from '../../form';
 
 import { Link } from '../../link';
-
 
 import { node } from '../../../utility/node';
 import { complexNode } from '../../../utility/complexNode';
@@ -16,11 +15,11 @@ coffeeSetting.coffee = (parent) => {
     node('div', [
       complexNode({
         tag: 'p',
-        text: APP_NAME + ' is free, appreciation is welcome in the form of coffee!'
+        text: language.current.menu.content.coffee.p1
       }),
       form.wrap({
         children: [(new Link({
-          text: 'Buy me a coffee',
+          text: language.current.menu.content.coffee.button,
           href: 'https://www.buymeacoffee.com/zombieFox',
           iconName: 'coffee',
           iconPosition: 'left',

@@ -83,8 +83,8 @@
       "coffee": {
         "label": "Kaffee"
       },
-      "nightTab": {
-        "label": "nightTab"
+      "app": {
+        "label": "{appName}"
       }
     },
     "content": {
@@ -474,6 +474,37 @@
               "description": ["Hintergrundbild oder Video werden unscharf, wenn zum Ende der Seite gescrollt wird.", "Bild- oder Videounschärfe finden Sie unter Themenhintergrund."]
             }
           }
+        }
+      },
+      "support": {
+        "applyToAll": "Applying bookmark settings to all",
+        "browser": "Browser support",
+        "cookies": "Cookies and cache",
+        "data": "Data backup and restore",
+        "localBackgroundImage": "Local background image",
+        "protectedUrl": "Protected URLs",
+        "recovering": "Recovering settings and bookmarks",
+        "resetting": "Resetting when opening the browser",
+        "privacy": "Respecting your privacy",
+        "backgroundImageVideo": "Setting a background video or image",
+        "firefox": "Setting {appName} as your Firefox homepage"
+      },
+      "coffee": {
+        "p1": "{appName} is free, appreciation is welcome in the form of coffee!",
+        "button": "Buy me a coffee"
+      },
+      "app": {
+        "link1": {
+          "a1": "This project can be found on",
+          "a2": "GitHub."
+        },
+        "link2": {
+          "a1": "Share your setup with the",
+          "a2": "Reddit {appName} community."
+        },
+        "link3": {
+          "a1": "{appName} uses the",
+          "a2": "GNU General Public License v3.0."
         }
       }
     }

@@ -1,5 +1,6 @@
-import { debugSetting } from './debugSetting';
 import { language } from '../../language';
+
+import { debugSetting } from './debugSetting';
 import { layoutSetting } from './layoutSetting';
 import { groupSetting } from './groupSetting';
 import { bookmarkSetting } from './bookmarkSetting';
@@ -10,8 +11,6 @@ import { dataSetting } from './dataSetting';
 import { supportSetting } from './supportSetting';
 import { coffeeSetting } from './coffeeSetting';
 import { appSetting } from './appSetting';
-
-import { APP_NAME } from '../../constant';
 
 import { node } from '../../utility/node';
 
@@ -155,7 +154,7 @@ export const MenuContent = function({
 
           break;
 
-        case this.makeId(APP_NAME):
+        case 'app':
 
           formElement = this.element.form();
 
