@@ -1,3 +1,5 @@
+import { language } from '../../../language';
+
 import { state } from '../../state';
 import { data } from '../../data';
 import { header } from '../../header';
@@ -9,7 +11,6 @@ import * as form from '../../form';
 
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
-import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_radio } from '../../control/radio';
@@ -304,12 +305,12 @@ headerSetting.disable = () => {
 
   if ((
     state.get.current().header.clock.second.show ||
-    state.get.current().header.clock.minute.show ||
-    state.get.current().header.clock.hour.show ||
-    state.get.current().header.date.day.show ||
-    state.get.current().header.date.date.show ||
-    state.get.current().header.date.month.show ||
-    state.get.current().header.date.year.show
+      state.get.current().header.clock.minute.show ||
+      state.get.current().header.clock.hour.show ||
+      state.get.current().header.date.day.show ||
+      state.get.current().header.date.date.show ||
+      state.get.current().header.date.month.show ||
+      state.get.current().header.date.year.show
   ) &&
     state.get.current().header.transitional.show) {
     headerSetting.control.transitional.type.enable();
@@ -402,11 +403,11 @@ headerSetting.alignment = (parent) => {
   headerSetting.alignment.alignment = new Control_radioGrid({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-item-justify-left', labelText: 'Left', value: 'left', position: 1 },
-      { id: 'header-item-justify-center', labelText: 'Center', value: 'center', position: 2 },
-      { id: 'header-item-justify-right', labelText: 'Right', value: 'right', position: 3 }
+      { id: 'header-item-justify-left', labelText: language.current.menu.content.header.alignment.justify.left, value: 'left', position: 1 },
+      { id: 'header-item-justify-center', labelText: language.current.menu.content.header.alignment.justify.center, value: 'center', position: 2 },
+      { id: 'header-item-justify-right', labelText: language.current.menu.content.header.alignment.justify.right, value: 'right', position: 3 }
     ],
-    label: 'Header item alignment',
+    label: language.current.menu.content.header.alignment.justify.label,
     groupName: 'header-item-justify',
     path: 'header.item.justify',
     gridSize: '3x1',
@@ -418,7 +419,7 @@ headerSetting.alignment = (parent) => {
 
   headerSetting.alignment.alignmentHelper = new Control_helperText({
     complexText: true,
-    text: [`Effects may not be visible if the ${(new Link({ text: 'Search box size', href: '#menu-content-item-search' })).link().outerHTML} size is set to Auto and grows to fill available space.`]
+    text: language.current.menu.content.header.alignment.helper
   });
 
   parent.appendChild(
@@ -438,8 +439,8 @@ headerSetting.greeting = (parent) => {
     object: state.get.current(),
     path: 'header.greeting.show',
     id: 'header-greeting-show',
-    labelText: 'Show Greeting',
-    action: function () {
+    labelText: language.current.menu.content.header.greeting.show,
+    action: function() {
       header.item.mod.order();
       header.item.clear();
       header.item.render();
@@ -459,7 +460,7 @@ headerSetting.greeting = (parent) => {
     object: state.get.current(),
     path: 'header.greeting.size',
     id: 'header-greeting-size',
-    labelText: 'Size',
+    labelText: language.current.menu.content.header.greeting.size,
     value: state.get.current().header.greeting.size,
     defaultValue: state.get.default().header.greeting.size,
     min: state.get.minMax().header.greeting.size.min,
@@ -481,9 +482,9 @@ headerSetting.greeting = (parent) => {
     object: state.get.current(),
     path: 'header.greeting.newLine',
     id: 'header-greeting-newLine',
-    labelText: 'New line',
-    description: 'Force on to a new line and seperate from other Header items.',
-    action: function () {
+    labelText: language.current.menu.content.header.greeting.newLine.label,
+    description: language.current.menu.content.header.greeting.newLine.description,
+    action: function() {
       applyCSSState('header.greeting.newLine');
       data.save();
     }
@@ -493,11 +494,11 @@ headerSetting.greeting = (parent) => {
     object: state.get.current(),
     label: 'Wording',
     radioGroup: [
-      { id: 'header-greeting-type-good', labelText: '"Good morning..."', value: 'good' },
-      { id: 'header-greeting-type-hello', labelText: '"Hello..."', value: 'hello' },
-      { id: 'header-greeting-type-hi', labelText: '"Hi..."', value: 'hi' },
-      { id: 'header-greeting-type-none', labelText: 'None', description: 'Useful for just displaying your name.', value: 'none' },
-      { id: 'header-greeting-type-custom', labelText: 'Custom', description: ['Use your own greeting.', 'Defaults to "Good morning..." if left blank.'], value: 'custom' }
+      { id: 'header-greeting-type-good', labelText: language.current.menu.content.header.greeting.type.good, value: 'good' },
+      { id: 'header-greeting-type-hello', labelText: language.current.menu.content.header.greeting.type.hello, value: 'hello' },
+      { id: 'header-greeting-type-hi', labelText: language.current.menu.content.header.greeting.type.hi, value: 'hi' },
+      { id: 'header-greeting-type-none', labelText: language.current.menu.content.header.greeting.type.none.label, description: language.current.menu.content.header.greeting.type.none.description, value: 'none' },
+      { id: 'header-greeting-type-custom', labelText: language.current.menu.content.header.greeting.type.custom.label, description: language.current.menu.content.header.greeting.type.custom.description, value: 'custom' }
     ],
     groupName: 'header-greeting-type',
     path: 'header.greeting.type',
@@ -516,8 +517,8 @@ headerSetting.greeting = (parent) => {
     path: 'header.greeting.custom',
     id: 'header-greeting-custom',
     value: state.get.current().header.greeting.custom,
-    placeholder: 'Howdy',
-    labelText: 'Custom greeting text',
+    placeholder: language.current.menu.content.header.greeting.custom.placeholder,
+    labelText: language.current.menu.content.header.greeting.custom.label,
     srOnly: true,
     action: () => {
       header.element.greeting.update();
@@ -543,8 +544,8 @@ headerSetting.greeting = (parent) => {
     path: 'header.greeting.name',
     id: 'header-greeting-name',
     value: state.get.current().header.greeting.name,
-    placeholder: 'Nickname, alias or superhero name',
-    labelText: 'Name',
+    placeholder: language.current.menu.content.header.greeting.name.placeholder,
+    labelText: language.current.menu.content.header.greeting.name.label,
     action: () => {
       header.element.greeting.update();
       data.save();
@@ -603,7 +604,7 @@ headerSetting.transitional = (parent) => {
     object: state.get.current(),
     path: 'header.transitional.show',
     id: 'header-transitional-show',
-    labelText: 'Show Transitional words',
+    labelText: language.current.menu.content.header.transitional.show.label,
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -621,14 +622,30 @@ headerSetting.transitional = (parent) => {
   });
 
   headerSetting.control.transitional.showHelper = new Control_helperText({
-    text: ['Only available when Date or Time is shown.']
+    text: language.current.menu.content.header.transitional.show.helper
+  });
+
+  headerSetting.control.transitional.type = new Control_radio({
+    object: state.get.current(),
+    label: language.current.menu.content.header.transitional.type.label,
+    radioGroup: [
+      { id: 'header-transitional-type-time-and-date', labelText: language.current.menu.content.header.transitional.type.timeAndDate, value: 'time-and-date' },
+      { id: 'header-transitional-type-its', labelText: language.current.menu.content.header.transitional.type.its, value: 'its' }
+    ],
+    groupName: 'header-transitional-type',
+    path: 'header.transitional.type',
+    action: () => {
+      header.element.transitional.update();
+      headerSetting.disable();
+      data.save();
+    }
   });
 
   headerSetting.control.transitional.size = new Control_sliderSlim({
     object: state.get.current(),
     path: 'header.transitional.size',
     id: 'header-transitional-size',
-    labelText: 'Size',
+    labelText: language.current.menu.content.header.transitional.size,
     value: state.get.current().header.transitional.size,
     defaultValue: state.get.default().header.transitional.size,
     min: state.get.minMax().header.transitional.size.min,
@@ -650,26 +667,10 @@ headerSetting.transitional = (parent) => {
     object: state.get.current(),
     path: 'header.transitional.newLine',
     id: 'header-transitional-newLine',
-    labelText: 'New line',
-    description: 'Force on to a new line and seperate from other Header items.',
-    action: function () {
+    labelText: language.current.menu.content.header.transitional.newLine.label,
+    description: language.current.menu.content.header.transitional.newLine.description,
+    action: function() {
       applyCSSState('header.transitional.newLine');
-      data.save();
-    }
-  });
-
-  headerSetting.control.transitional.type = new Control_radio({
-    object: state.get.current(),
-    label: 'Wording',
-    radioGroup: [
-      { id: 'header-transitional-type-time-and-date', labelText: '"The time and date is"', value: 'time-and-date' },
-      { id: 'header-transitional-type-its', labelText: '"It\'s"', value: 'its' }
-    ],
-    groupName: 'header-transitional-type',
-    path: 'header.transitional.type',
-    action: () => {
-      header.element.transitional.update();
-      headerSetting.disable();
       data.save();
     }
   });
@@ -718,7 +719,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.hour.show',
     id: 'header-clock-hour-show',
-    labelText: 'Show hours',
+    labelText: language.current.menu.content.header.clock.hour.show,
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -739,8 +740,8 @@ headerSetting.clock = (parent) => {
   headerSetting.control.clock.hour.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-clock-hour-display-number', labelText: 'As number', value: 'number' },
-      { id: 'header-clock-hour-display-word', labelText: 'As word', value: 'word' }
+      { id: 'header-clock-hour-display-number', labelText: language.current.menu.content.header.clock.hour.display.number, value: 'number' },
+      { id: 'header-clock-hour-display-word', labelText: language.current.menu.content.header.clock.hour.display.word, value: 'word' }
     ],
     groupName: 'header-clock-hour-display',
     path: 'header.clock.hour.display',
@@ -768,7 +769,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.minute.show',
     id: 'header-clock-minute-show',
-    labelText: 'Show minutes',
+    labelText: language.current.menu.content.header.clock.minute.show,
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -789,8 +790,8 @@ headerSetting.clock = (parent) => {
   headerSetting.control.clock.minute.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-clock-minute-display-number', labelText: 'As number', value: 'number' },
-      { id: 'header-clock-minute-display-word', labelText: 'As word', value: 'word' }
+      { id: 'header-clock-minute-display-number', labelText: language.current.menu.content.header.clock.minute.display.number, value: 'number' },
+      { id: 'header-clock-minute-display-word', labelText: language.current.menu.content.header.clock.minute.display.word, value: 'word' }
     ],
     groupName: 'header-clock-minute-display',
     path: 'header.clock.minute.display',
@@ -818,7 +819,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.second.show',
     id: 'header-clock-second-show',
-    labelText: 'Show seconds',
+    labelText: language.current.menu.content.header.clock.second.show,
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -839,8 +840,8 @@ headerSetting.clock = (parent) => {
   headerSetting.control.clock.second.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-clock-second-display-number', labelText: 'As number', value: 'number' },
-      { id: 'header-clock-second-display-word', labelText: 'As word', value: 'word' }
+      { id: 'header-clock-second-display-number', labelText: language.current.menu.content.header.clock.second.display.number, value: 'number' },
+      { id: 'header-clock-second-display-word', labelText: language.current.menu.content.header.clock.second.display.word, value: 'word' }
     ],
     groupName: 'header-clock-second-display',
     path: 'header.clock.second.display',
@@ -860,67 +861,6 @@ headerSetting.clock = (parent) => {
     target: [{
       content: headerSetting.control.clock.second.area
     }]
-  });
-
-  headerSetting.control.clock.hour24 = {
-    show: new Control_checkbox({
-      object: state.get.current(),
-      path: 'header.clock.hour24.show',
-      id: 'header-clock-hour24-show',
-      labelText: '24 hours',
-      action: function () {
-        header.element.clock.update();
-        headerSetting.disable();
-        data.save();
-      }
-    })
-  };
-
-  headerSetting.control.clock.meridiem = {
-    show: new Control_checkbox({
-      object: state.get.current(),
-      path: 'header.clock.meridiem.show',
-      id: 'header-clock-meridiem-show',
-      labelText: 'AM / PM',
-      action: function () {
-        header.element.clock.update();
-        data.save();
-      }
-    })
-  };
-
-  headerSetting.control.clock.size = new Control_sliderSlim({
-    object: state.get.current(),
-    path: 'header.clock.size',
-    id: 'header-clock-size',
-    labelText: 'Size',
-    value: state.get.current().header.clock.size,
-    defaultValue: state.get.default().header.clock.size,
-    min: state.get.minMax().header.clock.size.min,
-    max: state.get.minMax().header.clock.size.max,
-    action: () => {
-      applyCSSVar('header.clock.size');
-      headerSetting.edge.clock.size.track();
-      data.save();
-    },
-    mouseDownAction: () => {
-      headerSetting.edge.clock.size.show();
-    },
-    mouseUpAction: () => {
-      headerSetting.edge.clock.size.hide();
-    }
-  });
-
-  headerSetting.control.clock.newLine = new Control_checkbox({
-    object: state.get.current(),
-    path: 'header.clock.newLine',
-    id: 'header-clock-newLine',
-    labelText: 'New line',
-    description: 'Force on to a new line and seperate from other Header items.',
-    action: function () {
-      applyCSSState('header.clock.newLine');
-      data.save();
-    }
   });
 
   headerSetting.control.clock.separator = {};
@@ -963,6 +903,67 @@ headerSetting.clock = (parent) => {
     target: [{
       content: headerSetting.control.clock.separator.area
     }]
+  });
+
+  headerSetting.control.clock.hour24 = {
+    show: new Control_checkbox({
+      object: state.get.current(),
+      path: 'header.clock.hour24.show',
+      id: 'header-clock-hour24-show',
+      labelText: '24 hours',
+      action: function() {
+        header.element.clock.update();
+        headerSetting.disable();
+        data.save();
+      }
+    })
+  };
+
+  headerSetting.control.clock.meridiem = {
+    show: new Control_checkbox({
+      object: state.get.current(),
+      path: 'header.clock.meridiem.show',
+      id: 'header-clock-meridiem-show',
+      labelText: 'AM / PM',
+      action: function() {
+        header.element.clock.update();
+        data.save();
+      }
+    })
+  };
+
+  headerSetting.control.clock.size = new Control_sliderSlim({
+    object: state.get.current(),
+    path: 'header.clock.size',
+    id: 'header-clock-size',
+    labelText: 'Size',
+    value: state.get.current().header.clock.size,
+    defaultValue: state.get.default().header.clock.size,
+    min: state.get.minMax().header.clock.size.min,
+    max: state.get.minMax().header.clock.size.max,
+    action: () => {
+      applyCSSVar('header.clock.size');
+      headerSetting.edge.clock.size.track();
+      data.save();
+    },
+    mouseDownAction: () => {
+      headerSetting.edge.clock.size.show();
+    },
+    mouseUpAction: () => {
+      headerSetting.edge.clock.size.hide();
+    }
+  });
+
+  headerSetting.control.clock.newLine = new Control_checkbox({
+    object: state.get.current(),
+    path: 'header.clock.newLine',
+    id: 'header-clock-newLine',
+    labelText: 'New line',
+    description: 'Force on to a new line and seperate from other Header items.',
+    action: function() {
+      applyCSSState('header.clock.newLine');
+      data.save();
+    }
   });
 
   headerSetting.control.clock.area = node('div', [
@@ -1466,7 +1467,7 @@ headerSetting.date = (parent) => {
     id: 'header-date-newLine',
     labelText: 'New line',
     description: 'Force on to a new line and seperate from other Header items.',
-    action: function () {
+    action: function() {
       applyCSSState('header.date.newLine');
       data.save();
     }
@@ -1576,7 +1577,7 @@ headerSetting.search = (parent) => {
     path: 'header.search.newTab',
     id: 'header-search-newTab',
     labelText: 'Open Search results in a new tab',
-    action: function () {
+    action: function() {
       header.item.mod.order();
       header.item.clear();
       header.item.render();
@@ -1596,7 +1597,7 @@ headerSetting.search = (parent) => {
     id: 'header-search-newLine',
     labelText: 'New line',
     description: 'Force on to a new line and seperate from other Header items.',
-    action: function () {
+    action: function() {
       applyCSSState('header.search.newLine');
       data.save();
     }

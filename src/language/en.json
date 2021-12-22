@@ -494,7 +494,86 @@
           }
         }
       },
-      "header": {},
+      "header": {
+        "alignment": {
+          "justify": {
+            "label": "Header item alignment",
+            "left": "Left",
+            "center": "Center",
+            "right": "Right"
+          },
+          "helper": ["Effects may not be visible if  Search box size is set to Auto and grows to fill available space."]
+        },
+        "greeting": {
+          "show": "Show Greeting",
+          "size": "Size",
+          "newLine": {
+            "label": "New line",
+            "description": "Force on to a new line and seperate from other Header items."
+          },
+          "type": {
+            "label": "Wording",
+            "good": "\"Good morning...\"",
+            "hello": "\"Hello...\"",
+            "hi": "\"Hi...\"",
+            "none": {
+              "label": "None",
+              "description": "Useful for displaying just the name."
+            },
+            "custom": {
+              "label": "Custom",
+              "description": ["Use your own greeting.", "Defaults to \"Good morning...\" if left blank."]
+            }
+          },
+          "custom": {
+            "label": "Custom greeting text",
+            "placeholder": "Howdy"
+          },
+          "name": {
+            "label": "Name",
+            "placeholder": "Nickname, alias or superhero name"
+          }
+        },
+        "transitional": {
+          "show": {
+            "label": "Show Transitional words",
+            "helper": ["Only available when Date or Time is shown."]
+          },
+          "type": {
+            "label": "Wording",
+            "timeAndDate": "\"The time and date is\"",
+            "its": "\"It's\""
+          },
+          "size": "Size",
+          "newLine": {
+            "label": "New line",
+            "description": "Force on to a new line and seperate from other Header items."
+          }
+        },
+        "clock": {
+          "hour": {
+            "show": "Show hours",
+            "display": {
+              "number": "As number",
+              "word": "As word"
+            }
+          },
+          "minute": {
+            "show": "Show minutes",
+            "display": {
+              "number": "As number",
+              "word": "As word"
+            }
+          },
+          "second": {
+            "show": "Show seconds",
+            "display": {
+              "number": "As number",
+              "word": "As word"
+            }
+          }
+        }
+      },
       "bookmark": {},
       "group": {},
       "toolbar": {
