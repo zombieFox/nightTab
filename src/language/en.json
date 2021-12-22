@@ -498,19 +498,45 @@
       "bookmark": {},
       "group": {},
       "toolbar": {},
-      "data": {},
+      "data": {
+        "restore": {
+          "file": "Import from file",
+          "clipboard": "Import from clipboard",
+          "helper": ["Restore a previously exported {appName} backup."],
+          "drop": "Or drop a {appName} backup file here."
+        },
+        "backup": {
+          "file": "Export data",
+          "clipboard": "Copy to clipboard",
+          "helper": ["Download a backup of your {appName} Bookmarks and Settings.", "This file can later be imported on this or another deivce."]
+        },
+        "clear": {
+          "all": "Clear all data",
+          "partial": "Clear all except bookmarks",
+          "alert": {
+            "p1": "You will lose Bookmarks by clearing all data.",
+            "link": "Backup your data"
+          },
+          "helper": ["Clear all data to reset {appName} to the default state.", "Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups."]
+        }
+      },
       "support": {
-        "applyToAll": "Applying bookmark settings to all",
-        "browser": "Browser support",
-        "cookies": "Cookies and cache",
-        "data": "Data backup and restore",
-        "localBackgroundImage": "Local background image",
-        "protectedUrl": "Protected URLs",
-        "recovering": "Recovering settings and bookmarks",
-        "resetting": "Resetting when opening the browser",
-        "privacy": "Respecting your privacy",
-        "backgroundImageVideo": "Setting a background video or image",
-        "firefox": "Setting {appName} as your Firefox homepage"
+        "page": {
+          "applyToAll": "Applying bookmark settings to all",
+          "browser": "Browser support",
+          "cookies": "Cookies and cache",
+          "data": "Data backup and restore",
+          "localBackgroundImage": "Local background image",
+          "protectedUrl": "Protected URLs",
+          "recovering": "Recovering settings and bookmarks",
+          "resetting": "Resetting when opening the browser",
+          "privacy": "Respecting your privacy",
+          "backgroundImageVideo": "Setting a background video or image",
+          "firefox": "Setting {appName} as your Firefox homepage"
+        },
+        "p1": "For more support or feedback:",
+        "link1": "Submit an Issue",
+        "link2": "Check the Wiki"
       },
       "coffee": {
         "p1": "{appName} is free, appreciation is welcome in the form of coffee!",
