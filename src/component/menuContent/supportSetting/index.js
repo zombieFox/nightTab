@@ -107,8 +107,12 @@ supportSetting.support = (parent) => {
       makeLinks(),
       node('hr'),
       supportSetting.support.para,
-      node('p', supportSetting.support.linkIssue.link()),
-      node('p', supportSetting.support.linkWiki.link())
+      form.indent({
+        children: [
+          node('p', supportSetting.support.linkIssue.link()),
+          node('p', supportSetting.support.linkWiki.link())
+        ]
+      })
     ])
   );
 

@@ -1,9 +1,10 @@
+import { language } from '../../../language';
+
 import { state } from '../../state';
 import { data } from '../../data';
 import { header } from '../../header';
 import { layout } from '../../layout';
 import { toolbar } from '../../toolbar';
-
 
 import { Edge } from '../../edge';
 
@@ -69,7 +70,7 @@ toolbarSetting.size = (parent) => {
     object: state.get.current(),
     path: 'toolbar.size',
     id: 'toolbar-size',
-    labelText: 'Toolbar size',
+    labelText: language.current.menu.content.toolbar.size,
     value: state.get.current().toolbar.size,
     defaultValue: state.get.default().toolbar.size,
     min: state.get.minMax().toolbar.size.min,
@@ -99,8 +100,8 @@ toolbarSetting.location = (parent) => {
   toolbarSetting.control.location.locationElement = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'toolbar-location-corner', labelText: 'In a corner', value: 'corner' },
-      { id: 'toolbar-location-header', labelText: 'In the Header', value: 'header' }
+      { id: 'toolbar-location-corner', labelText: language.current.menu.content.toolbar.location.corner, value: 'corner' },
+      { id: 'toolbar-location-header', labelText: language.current.menu.content.toolbar.location.header, value: 'header' }
     ],
     groupName: 'toolbar-location',
     path: 'toolbar.location',
@@ -133,23 +134,23 @@ toolbarSetting.location = (parent) => {
   });
 
   toolbarSetting.control.location.locationHelper = new Control_helperText({
-    text: ['Position the Toolbar inside the Header or in a corner of the window.']
+    text: language.current.menu.content.toolbar.location.helper
   });
 
   toolbarSetting.control.location.newLine = new Control_checkbox({
     object: state.get.current(),
     path: 'toolbar.newLine',
     id: 'header-newLine',
-    labelText: 'New line',
-    description: 'Force on to a new line and seperate from other Header items.',
-    action: function () {
+    labelText: language.current.menu.content.toolbar.location.newLine.label,
+    description: language.current.menu.content.toolbar.location.newLine.description,
+    action: function() {
       applyCSSState('toolbar.newLine');
       data.save();
     }
   });
 
   toolbarSetting.control.location.newLineHelper = new Control_helperText({
-    text: ['Only available when the Toolbar is positioned inside the Header.']
+    text: language.current.menu.content.toolbar.location.newLine.helper
   });
 
   parent.appendChild(
@@ -169,12 +170,12 @@ toolbarSetting.position = (parent) => {
   toolbarSetting.control.positionElement = new Control_radioGrid({
     object: state.get.current(),
     radioGroup: [
-      { id: 'toolbar-position-top-left', labelText: 'Top left', value: 'top-left', position: 1 },
-      { id: 'toolbar-position-top-right', labelText: 'Top right', value: 'top-right', position: 2 },
-      { id: 'toolbar-position-bottom-left', labelText: 'Bottom left', value: 'bottom-left', position: 3 },
-      { id: 'toolbar-position-bottom-right', labelText: 'Bottom right', value: 'bottom-right', position: 4 }
+      { id: 'toolbar-position-top-left', labelText: language.current.menu.content.toolbar.position.topLeft, value: 'top-left', position: 1 },
+      { id: 'toolbar-position-top-right', labelText: language.current.menu.content.toolbar.position.topRight, value: 'top-right', position: 2 },
+      { id: 'toolbar-position-bottom-left', labelText: language.current.menu.content.toolbar.position.bottomLeft, value: 'bottom-left', position: 3 },
+      { id: 'toolbar-position-bottom-right', labelText: language.current.menu.content.toolbar.position.bottomRight, value: 'bottom-right', position: 4 }
     ],
-    label: 'Toolbar position',
+    label: language.current.menu.content.toolbar.position.label,
     groupName: 'toolbar-position',
     path: 'toolbar.position',
     gridSize: '2x2',
@@ -187,11 +188,11 @@ toolbarSetting.position = (parent) => {
   });
 
   toolbarSetting.control.positionElementHelper1 = new Control_helperText({
-    text: ['Position the Toolbar in one of the four corners of the window.']
+    text: language.current.menu.content.toolbar.position.helper1
   });
 
   toolbarSetting.control.positionElementHelper2 = new Control_helperText({
-    text: ['Only available when the Toolbar is positioned in a corner.']
+    text: language.current.menu.content.toolbar.position.helper2
   });
 
   parent.appendChild(
@@ -210,7 +211,7 @@ toolbarSetting.controls = (parent) => {
     object: state.get.current(),
     id: 'toolbar-accent-show',
     path: 'toolbar.accent.show',
-    labelText: 'Show Accent control',
+    labelText: language.current.menu.content.toolbar.controls.accent,
     action: () => {
       toolbar.current.update.control();
       data.save();
@@ -221,7 +222,7 @@ toolbarSetting.controls = (parent) => {
     object: state.get.current(),
     id: 'toolbar-add-show',
     path: 'toolbar.add.show',
-    labelText: 'Show Add control',
+    labelText: language.current.menu.content.toolbar.controls.add,
     action: () => {
       toolbar.current.update.control();
       data.save();
@@ -232,7 +233,7 @@ toolbarSetting.controls = (parent) => {
     object: state.get.current(),
     id: 'toolbar-edit-show',
     path: 'toolbar.edit.show',
-    labelText: 'Show Edit control',
+    labelText: language.current.menu.content.toolbar.controls.edit,
     action: () => {
       toolbar.current.update.control();
       data.save();

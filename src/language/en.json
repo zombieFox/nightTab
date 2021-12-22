@@ -497,7 +497,33 @@
       "header": {},
       "bookmark": {},
       "group": {},
-      "toolbar": {},
+      "toolbar": {
+        "size": "Toolbar size",
+        "location": {
+          "corner": "In a corner",
+          "header": "In the Header",
+          "helper": ["Position the Toolbar inside the Header or in a corner of the window."],
+          "newLine": {
+            "label": "New line",
+            "description": "Force on to a new line and seperate from other Header items.",
+            "helper": ["Only available when the Toolbar is positioned inside the Header."]
+          }
+        },
+        "position": {
+          "label": "Toolbar position",
+          "topLeft": "Top Left",
+          "topRight": "Top Right",
+          "bottomLeft": "Bottom Left",
+          "bottomRight": "Bottom Right",
+          "helper1": ["Position the Toolbar in one of the four corners of the window."],
+          "helper2": ["Only available when the Toolbar is positioned in a corner."]
+        },
+        "controls": {
+          "accent": "Show Accent control",
+          "add": "Show Add control",
+          "edit": "Show Edit control"
+        }
+      },
       "data": {
         "restore": {
           "file": "Import from file",
@@ -535,26 +561,19 @@
           "firefox": "Setting {appName} as your Firefox homepage"
         },
         "p1": "For more support or feedback:",
-        "link1": "Submit an Issue",
-        "link2": "Check the Wiki"
+        "link1": "Submit an Issue.",
+        "link2": "Check the Wiki."
       },
       "coffee": {
         "p1": "{appName} is free, appreciation is welcome in the form of coffee!",
         "button": "Buy me a coffee"
       },
       "app": {
-        "link1": {
-          "a1": "This project can be found on",
-          "a2": "GitHub."
-        },
-        "link2": {
-          "a1": "Share your setup with the",
-          "a2": "Reddit {appName} community."
-        },
-        "link3": {
-          "a1": "{appName} uses the",
-          "a2": "GNU General Public License v3.0."
-        }
+        "para1": "Share your setup with the community.",
+        "link1": "Found on Reddit /r/{appName}.",
+        "para2": "This project is open source.",
+        "link2": "Found on GitHub.",
+        "link3": "GNU General Public License v3.0."
       }
     }
   }
