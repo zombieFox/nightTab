@@ -286,7 +286,7 @@
               "p2": "Why has this changed?"
             },
             "url": {
-              "lable": "URL",
+              "label": "URL",
               "placeholder": "https://www.example.com/image.jpg",
               "helper": [
                 "Add more than one URL separated by spaces or on new lines for a random background image on load.",
@@ -315,7 +315,7 @@
               "p2": "How to link to a video file."
             },
             "url": {
-              "lable": "URL",
+              "label": "URL",
               "placeholder": "https://www.example.com/video.mp4",
               "helper": [
                 "Background video only supports a direct URL to a video file. Supports MP4 and WebM format.",
@@ -571,7 +571,132 @@
               "number": "As number",
               "word": "As word"
             }
+          },
+          "separator": {
+            "show": "Show separator",
+            "label": "Separator character",
+            "placeholder": ":"
+          },
+          "hour24": "24 hours",
+          "meridiem": "AM / PM",
+          "size": "Size",
+          "newLine": {
+            "label": "New line",
+            "description": "Force on to a new line and seperate from other Header items."
           }
+        },
+        "date": {
+          "day": {
+            "show": "Show Day",
+            "display": {
+              "number": "As number",
+              "word": "As word",
+              "weekStart": {
+                "label": "Start of the week",
+                "monday": "Monday",
+                "sunday": "Sunday"
+              },
+              "length": {
+                "label": "Word length",
+                "long": "Long",
+                "short": "Short"
+              }
+            }
+          },
+          "date": {
+            "show": "Show Date",
+            "display": {
+              "number": "As number",
+              "word": "As word",
+              "ordinal": "Ordinal numbers"
+            }
+          },
+          "month": {
+            "show": "Show Month",
+            "display": {
+              "number": "As number",
+              "word": "As word",
+              "ordinal": "Ordinal numbers",
+              "length": {
+                "label": "Word length",
+                "long": "Long",
+                "short": "Short"
+              }
+            }
+          },
+          "year": {
+            "show": "Show Year",
+            "display": {
+              "number": "As number",
+              "word": "As word"
+            }
+          },
+          "separator": {
+            "show": "Show separator",
+            "label": "Separator character",
+            "placeholder": "/"
+          },
+          "format": {
+            "label": "Format",
+            "dateMonth": "Date / Month",
+            "monthDate": "Month / Date"
+          },
+          "size": "Size",
+          "newLine": {
+            "label": "New line",
+            "description": "Force on to a new line and seperate from other Header items."
+          }
+        },
+        "search": {
+          "show": "Show Search",
+          "width": {
+            "label": "Search box width",
+            "auto": {
+              "label": "Auto width",
+              "description": "Search box will grow to best fit available space."
+            },
+            "custom": {
+              "label": "Custom width",
+              "description": "Define how wide the Search box should be inside the Header Area."
+            },
+            "size": "Width"
+          },
+          "size": "Size",
+          "newLine": {
+            "label": "New line",
+            "description": "Force on to a new line and seperate from other Header items."
+          },
+          "engine": {
+            "selected": {
+              "label": "Search engine",
+              "custom": "Custom"
+            },
+            "custom": {
+              "name": {
+                "label": "Name",
+                "placeholder": "Search engine name"
+              },
+              "url": {
+                "label": "URL",
+                "placeholder": "https://",
+                "helper": ["Enter a web address with the search parameters, eg: \"https://vimeo.com/search?q=\"", "{appName} will add the search term entered into the Search box at the end of the above URL."]
+              },
+              "queryName": {
+                "label": "Name attribute",
+                "placeholder": "q",
+                "helper": ["Sets the name attribute on the Search input field.", "This defines the name passed to the search engine when submitting. If not sure leave blank."]
+              }
+            },
+            "text": {
+              "justify": {
+                "label": "Search text alignment",
+                "left": "Left",
+                "center": "Centre",
+                "right": "Right"
+              }
+            }
+          },
+          "newTab": "Open Search results in a new tab"
         }
       },
       "bookmark": {},
