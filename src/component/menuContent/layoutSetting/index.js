@@ -429,8 +429,8 @@ layoutSetting.page = (parent) => {
     id: 'layout-title',
     value: state.get.current().layout.title,
     defaultValue: state.get.default().layout.title,
-    placeholder: language.current.menu.content.layout.page.title.label,
-    labelText: language.current.menu.content.layout.page.title.placeholder,
+    placeholder: language.current.menu.content.layout.page.title.placeholder,
+    labelText: language.current.menu.content.layout.page.title.label,
     action: () => {
       layout.title.render();
       data.save();

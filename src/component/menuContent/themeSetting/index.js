@@ -1970,7 +1970,7 @@ themeSetting.bookmark = (parent) => {
     object: state.get.current(),
     radioGroup: [
       { id: 'theme-bookmark-by-theme', labelText: language.current.menu.content.theme.bookmark.color.by.transparent.label, description: language.current.menu.content.theme.bookmark.color.by.transparent.description, value: 'theme' },
-      { id: 'theme-bookmark-by-custom', labelText: language.current.menu.content.theme.bookmark.color.by.custom.label, description: language.current.menu.content.theme.bookmark.color.by.transparent.description, value: 'custom' }
+      { id: 'theme-bookmark-by-custom', labelText: language.current.menu.content.theme.bookmark.color.by.custom.label, description: language.current.menu.content.theme.bookmark.color.by.custom.description, value: 'custom' }
     ],
     label: language.current.menu.content.theme.bookmark.color.label,
     groupName: 'theme-bookmark-by',

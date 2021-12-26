@@ -496,7 +496,7 @@
             "center": "Center",
             "right": "Right"
           },
-          "helper": ["Effects may not be visible if  Search box size is set to Auto and grows to fill available space."]
+          "helper": ["Effects may not be visible if the Search box size is set to Auto and grows to fill available space."]
         },
         "greeting": {
           "show": "Show Greeting",
