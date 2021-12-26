@@ -1010,7 +1010,10 @@
         },
         "gutter": "xxx",
         "visual": {
-          "show": "xxx",
+          "show": {
+            "label": "xxx",
+            "description": "xxx"
+          },
           "type": {
             "letter": "xxx",
             "icon": "xxx",
@@ -1118,7 +1121,7 @@
           "label": "xxx",
           "placeholder": "xxx"
         },
-        "random": "",
+        "random": "xxx",
         "position": {
           "group": "xxx",
           "item": "xxx"
@@ -1126,22 +1129,16 @@
       },
       "propagate": {
         "visual": {
-          "label": {
-            "label": "xxx",
-            "description": "xxx"
-          }
+          "label": "xxx",
+          "description": "xxx"
         },
         "layout": {
-          "label": {
-            "label": "xxx",
-            "description": "xxx"
-          }
+          "label": "xxx",
+          "description": "xxx"
         },
         "theme": {
-          "label": {
-            "label": "xxx",
-            "description": "xxx"
-          }
+          "label": "xxx",
+          "description": "xxx"
         }
       }
     },

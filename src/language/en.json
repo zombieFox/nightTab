@@ -935,138 +935,135 @@
         },
         "gutter": "Gutter",
         "visual": {
-          "show": "xxx",
-          "type": {
-            "letter": "xxx",
-            "icon": "xxx",
-            "image": "xxx"
+          "show": {
+            "label": "Show Visual Element",
+            "description": "Display Letters, Icon or an Image on this Bookmark hexagon."
           },
-          "size": "xxx",
+          "type": {
+            "letter": "Letter",
+            "icon": "Icon",
+            "image": "Image"
+          },
+          "size": "Visual size",
           "letter": {
             "text": {
-              "label": "xxx",
-              "placeholder": "xxx"
+              "label": "Bookmark letter",
+              "placeholder": "E"
             }
           },
           "icon": {
             "text": {
-              "label": "xxx",
-              "placeholder": "xxx"
+              "label": "Bookmark icon",
+              "placeholder": "FontAwesome Brands or Icons"
             },
-            "remove": "xxx"
+            "remove": "Remove icon"
           },
           "image": {
             "url": {
-              "label": "xxx",
-              "placeholder": "xxx"
+              "label": "Bookmark image",
+              "placeholder": "https://www.example.com/image.jpg"
             }
           },
           "shadow": {
-            "size": "xxx",
-            "helper": ["xxx"]
+            "size": "Visual shadow",
+            "helper": ["Visual shadow only applies to a Letter or Icon."]
           }
         },
         "name": {
-          "show": "xxx",
+          "show": "Show Name",
           "text": {
-            "label": "xxx",
-            "placeholder": "xxx"
+            "label": "Bookmark name",
+            "placeholder": "Example"
           },
-          "size": "xxx"
+          "size": "Name size"
         }
       },
       "accent": {
         "by": {
           "theme": {
-            "label": "xxx",
-            "description": "xxx"
+            "label": "Theme Accent",
+            "description": "Use the Accent defined by the Theme."
           },
           "custom": {
-            "label": "xxx",
-            "description": "xxx"
+            "label": "Custom Accent",
+            "description": "Override the Theme Accent."
           }
         },
-        "color": "xxx"
+        "color": "Accent"
       },
       "color": {
         "by": {
           "theme": {
-            "label": "xxx",
-            "description": "xxx"
+            "label": "Theme colour",
+            "description": "Use the Colour defined by the Theme."
           },
           "custom": {
-            "label": "xxx",
-            "description": "xxx"
+            "label": "Custom colour",
+            "description": "Override the Theme colour."
           }
         },
-        "color": "xxx",
-        "opacity": "xxx"
+        "color": "Colour",
+        "opacity": "Opacity"
       },
       "background": {
         "show": {
-          "label": "xxx",
-          "description": "xxx"
+          "label": "Show background",
+          "description": "Display an Image or video Background on this Bookmark tile."
         },
         "type": {
-          "image": "xxx",
-          "video": "xxx"
+          "image": "Image",
+          "video": "Video"
         },
-        "opacity": "xxx",
+        "opacity": "Opacity",
         "image": {
-          "label": "xxx",
-          "placeholder": "xxx",
-          "helper": ["xxx"]
+          "label": "Background image URL",
+          "placeholder": "https://www.example.com/image.jpg",
+          "helper": ["Background image only supports a direct URL to an image file."]
         },
         "video": {
-          "label": "xxx",
-          "placeholder": "xxx",
-          "helper": ["xxx"]
+          "label": "Background video URL",
+          "placeholder": "https://www.example.com/video.mp4",
+          "helper": ["Background video only supports a direct URL to a video file. Supports MP4 and WebM format.", "YouTube page URLs can not be used."]
         }
       },
-      "border": "xxx",
+      "border": "Border",
       "shape": {
         "wide": {
-          "label": "xxx",
-          "description": "xxx"
+          "label": "Wide tile",
+          "description": "Bookmark tile to span across two columns."
         },
         "tall": {
-          "label": "xxx",
-          "description": "xxx"
+          "label": "Tall tile",
+          "description": "Bookmark tile to span across two rows."
         }
       },
       "group": {
         "destination": {
-          "existing": "xxx",
-          "new": "xxx"
+          "existing": "Existing Group",
+          "new": "New Group"
         },
         "name": {
-          "label": "xxx",
-          "placeholder": "xxx"
+          "label": "URL",
+          "placeholder": "Example group"
         },
-        "random": "",
+        "random": "Random Group name",
         "position": {
-          "group": "xxx",
-          "item": "xxx"
+          "group": "Group",
+          "item": "Position"
         }
       },
       "propagate": {
         "visual": {
-          "label": {
-            "label": "xxx",
-            "description": "xxx"
-          }
+          "label": "Apply \"Show Visual Element\" and \"Show Name\" to other Bookmarks",
+          "description": ["The Letter, Icon, Image and Name text will not be shared.", "Useful for hiding the Visual Elements or Names on all Bookmarks."]
         },
         "layout": {
-          "label": {
-            "label": "xxx",
-            "description": "xxx"
-          }
+          "label": "Apply Layout to other Bookmarks",
+          "description": ["When saved, apply the above Layout to all other Bookmarks.", "Only the Visual and Name size, Alignment, Order, Position and Gutter will be will be applied to all."]
         },
         "theme": {
-          "label": {
-            "label": "xxx",
-            "description": "xxx"
-          }
+          "label": "Apply Theme to other Bookmarks",
+          "description": ["When saved, apply the above Theme to all other Bookmarks.", "Only the Colour, Accent, Opacity, Border and Visual shadow will be applied to all."]
         }
       }
     },

@@ -215,8 +215,8 @@ export const BookmarkForm = function({
           object: bookmarkData.link,
           path: 'display.visual.show',
           id: 'display-visual-show',
-          labelText: 'Show Visual Element',
-          description: 'Display Letters, Icon or an Image on this Bookmark hexagon.',
+          labelText: language.current.bookmark.form.display.visual.show.label,
+          description: language.current.bookmark.form.display.visual.show.description,
           action: () => {
             this.disable();
             this.collapse.display.visual.update();
@@ -226,9 +226,9 @@ export const BookmarkForm = function({
         type: new Control_radio({
           object: bookmarkData.link,
           radioGroup: [
-            { id: 'display-visual-type-letter', labelText: 'Letter', value: 'letter' },
-            { id: 'display-visual-type-icon', labelText: 'Icon', value: 'icon' },
-            { id: 'display-visual-type-image', labelText: 'Image', value: 'image' }
+            { id: 'display-visual-type-letter', labelText: language.current.bookmark.form.display.visual.type.letter, value: 'letter' },
+            { id: 'display-visual-type-icon', labelText: language.current.bookmark.form.display.visual.type.icon, value: 'icon' },
+            { id: 'display-visual-type-image', labelText: language.current.bookmark.form.display.visual.type.image, value: 'image' }
           ],
           groupName: 'display-visual-type',
           path: 'display.visual.type',
@@ -241,7 +241,7 @@ export const BookmarkForm = function({
           object: bookmarkData.link,
           path: 'display.visual.size',
           id: 'display-visual-size',
-          labelText: 'Visual size',
+          labelText: language.current.bookmark.form.display.visual.size,
           value: bookmarkData.link.display.visual.size,
           defaultValue: bookmarkDefault.display.visual.size,
           min: bookmarkMinMax.display.visual.size.min,
@@ -256,8 +256,8 @@ export const BookmarkForm = function({
             path: 'display.visual.letter.text',
             id: 'display-visual-letter-text',
             value: bookmarkData.link.display.visual.letter.text,
-            placeholder: 'E',
-            labelText: 'Bookmark letter',
+            placeholder: language.current.bookmark.form.display.visual.letter.text.placeholder,
+            labelText: language.current.bookmark.form.display.visual.letter.text.label,
             srOnly: true,
             action: () => {
               this.preview.update.assemble(bookmarkData);
@@ -270,8 +270,8 @@ export const BookmarkForm = function({
             path: 'display.visual.icon.label',
             id: 'display-visual-icon-label',
             value: bookmarkData.link.display.visual.icon.label,
-            placeholder: 'FontAwesome Brands or Icons',
-            labelText: 'Bookmark icon',
+            placeholder: language.current.bookmark.form.display.visual.icon.text.placeholder,
+            labelText: language.current.bookmark.form.display.visual.icon.text.label,
             srOnly: true,
             action: () => {
               this.preview.update.assemble(bookmarkData);
@@ -281,7 +281,7 @@ export const BookmarkForm = function({
             classList: ['bookmark-form-text-icon', 'form-group-item-small']
           }),
           remove: new Button({
-            text: 'Remove icon',
+            text: language.current.bookmark.form.display.visual.icon.remove,
             srOnly: true,
             style: ['line'],
             iconName: 'cross',
@@ -301,8 +301,8 @@ export const BookmarkForm = function({
             path: 'display.visual.image.url',
             id: 'display-visual-image-url',
             value: bookmarkData.link.display.visual.image.url,
-            placeholder: 'https://www.example.com/image.jpg',
-            labelText: 'Bookmark image',
+            placeholder: language.current.bookmark.form.display.visual.image.url.placeholder,
+            labelText: language.current.bookmark.form.display.visual.image.url.label,
             srOnly: true,
             action: () => {
               this.preview.update.assemble(bookmarkData);
@@ -314,7 +314,7 @@ export const BookmarkForm = function({
             object: bookmarkData.link,
             path: 'display.visual.shadow.size',
             id: 'display-visual-shadow-size',
-            labelText: 'Visual shadow',
+            labelText: language.current.bookmark.form.display.visual.shadow.size,
             value: bookmarkData.link.display.visual.shadow.size,
             defaultValue: bookmarkDefault.display.visual.shadow.size,
             min: bookmarkMinMax.display.visual.shadow.size.min,
@@ -330,7 +330,7 @@ export const BookmarkForm = function({
           object: bookmarkData.link,
           path: 'display.name.show',
           id: 'display-name-show',
-          labelText: 'Show Name',
+          labelText: language.current.bookmark.form.display.name.show,
           action: () => {
             this.disable();
             this.collapse.display.name.update();
@@ -342,8 +342,8 @@ export const BookmarkForm = function({
           path: 'display.name.text',
           id: 'display-name-text',
           value: bookmarkData.link.display.name.text,
-          placeholder: 'Example',
-          labelText: 'Bookmark name',
+          placeholder: language.current.bookmark.form.display.name.text.placeholder,
+          labelText: language.current.bookmark.form.display.name.text.label,
           srOnly: true,
           action: () => {
             this.preview.update.assemble(bookmarkData);
@@ -353,7 +353,7 @@ export const BookmarkForm = function({
           object: bookmarkData.link,
           path: 'display.name.size',
           id: 'display-name-size',
-          labelText: 'Name size',
+          labelText: language.current.bookmark.form.display.name.size,
           value: bookmarkData.link.display.name.size,
           defaultValue: bookmarkDefault.display.name.size,
           min: bookmarkMinMax.display.name.size.min,
@@ -368,8 +368,8 @@ export const BookmarkForm = function({
       by: new Control_radio({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'accent-by-theme', labelText: 'Theme Accent', description: 'Use the Accent defined by the Theme.', value: 'theme' },
-          { id: 'accent-by-custom', labelText: 'Custom Accent', description: 'Override the Theme Accent.', value: 'custom' }
+          { id: 'accent-by-theme', labelText: language.current.bookmark.form.accent.by.theme.label, description: language.current.bookmark.form.accent.by.theme.description, value: 'theme' },
+          { id: 'accent-by-custom', labelText: language.current.bookmark.form.accent.by.custom.label, description: language.current.bookmark.form.accent.by.custom.description, value: 'custom' }
         ],
         groupName: 'accent-by',
         path: 'accent.by',
@@ -383,7 +383,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'accent',
         id: 'accent',
-        labelText: 'Accent',
+        labelText: language.current.bookmark.form.accent.color,
         srOnly: true,
         defaultValue: bookmarkDefault.accent.rgb,
         minMaxObject: bookmarkMinMax,
@@ -397,8 +397,8 @@ export const BookmarkForm = function({
       by: new Control_radio({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'color-by-theme', labelText: 'Theme colour', description: 'Use the Colour defined by the Theme.', value: 'theme' },
-          { id: 'color-by-custom', labelText: 'Custom colour', description: 'Override the Theme colour.', value: 'custom' }
+          { id: 'color-by-theme', labelText: language.current.bookmark.form.color.by.theme.label, description: language.current.bookmark.form.color.by.theme.description, value: 'theme' },
+          { id: 'color-by-custom', labelText: language.current.bookmark.form.color.by.custom.label, description: language.current.bookmark.form.color.by.custom.description, value: 'custom' }
         ],
         groupName: 'color-by',
         path: 'color.by',
@@ -412,7 +412,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'color',
         id: 'color',
-        labelText: 'Colour',
+        labelText: language.current.bookmark.form.color.color,
         srOnly: true,
         defaultValue: bookmarkDefault.color.rgb,
         minMaxObject: bookmarkMinMax,
@@ -425,7 +425,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'color.opacity',
         id: 'color-opacity',
-        labelText: 'Opacity',
+        labelText: language.current.bookmark.form.color.opacity,
         value: bookmarkData.link.color.opacity,
         defaultValue: bookmarkDefault.color.opacity,
         min: bookmarkMinMax.color.opacity.min,
@@ -440,8 +440,8 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'background.show',
         id: 'background-show',
-        labelText: 'Show background',
-        description: 'Display an Image or video Background on this Bookmark tile.',
+        labelText: language.current.bookmark.form.background.show.label,
+        description: language.current.bookmark.form.background.show.description,
         action: () => {
           this.collapse.background.update();
           this.disable();
@@ -451,8 +451,8 @@ export const BookmarkForm = function({
       type: new Control_radio({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'background-type-image', labelText: 'Image', value: 'image' },
-          { id: 'background-type-video', labelText: 'Video', value: 'video' }
+          { id: 'background-type-image', labelText: language.current.bookmark.form.background.type.image, value: 'image' },
+          { id: 'background-type-video', labelText: language.current.bookmark.form.background.type.video, value: 'video' }
         ],
         groupName: 'background-type',
         path: 'background.type',
@@ -465,7 +465,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'background.opacity',
         id: 'background-opacity',
-        labelText: 'Opacity',
+        labelText: language.current.bookmark.form.background.opacity,
         value: bookmarkData.link.background.opacity,
         defaultValue: bookmarkDefault.background.opacity,
         min: bookmarkMinMax.background.opacity.min,
@@ -480,8 +480,8 @@ export const BookmarkForm = function({
           path: 'background.image.url',
           id: 'background-image-url',
           value: bookmarkData.link.background.image.url,
-          placeholder: 'https://www.example.com/image.jpg',
-          labelText: 'Background image URL',
+          placeholder: language.current.bookmark.form.background.image.placeholder,
+          labelText: language.current.bookmark.form.background.image.label,
           srOnly: true,
           action: () => {
             this.preview.update.assemble(bookmarkData);
@@ -494,8 +494,8 @@ export const BookmarkForm = function({
           path: 'background.video.url',
           id: 'background-video-url',
           value: bookmarkData.link.background.video.url,
-          placeholder: 'https://www.example.com/video.mp4',
-          labelText: 'Background video URL',
+          placeholder: language.current.bookmark.form.background.video.placeholder,
+          labelText: language.current.bookmark.form.background.video.label,
           srOnly: true,
           action: () => {
             this.preview.update.assemble(bookmarkData);
@@ -507,7 +507,7 @@ export const BookmarkForm = function({
       object: bookmarkData.link,
       path: 'border',
       id: 'border',
-      labelText: 'Border',
+      labelText: language.current.bookmark.form.border,
       value: bookmarkData.link.border,
       defaultValue: bookmarkDefault.border,
       min: bookmarkMinMax.border.min,
@@ -521,8 +521,8 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'shape.wide',
         id: 'shape-wide',
-        labelText: 'Wide tile',
-        description: 'Bookmark tile to span across two columns.',
+        labelText: language.current.bookmark.form.shape.wide.label,
+        description: language.current.bookmark.form.shape.wide.description,
         action: () => {
           this.preview.update.assemble(bookmarkData);
         }
@@ -531,8 +531,8 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'shape.tall',
         id: 'shape-tall',
-        labelText: 'Tall tile',
-        description: 'Bookmark tile to span across two columns.',
+        labelText: language.current.bookmark.form.shape.tall.label,
+        description: language.current.bookmark.form.shape.tall.description,
         action: () => {
           this.preview.update.assemble(bookmarkData);
         }
@@ -544,8 +544,8 @@ export const BookmarkForm = function({
     destination: new Control_radio({
       object: bookmarkData,
       radioGroup: [
-        { id: 'group-destination-existing', labelText: 'Existing Group', value: 'existing' },
-        { id: 'group-destination-new', labelText: 'New Group', value: 'new' }
+        { id: 'group-destination-existing', labelText: language.current.bookmark.form.group.destination.existing, value: 'existing' },
+        { id: 'group-destination-new', labelText: language.current.bookmark.form.group.destination.new, value: 'new' }
       ],
       groupName: 'group.destination',
       path: 'group.destination',
@@ -558,12 +558,12 @@ export const BookmarkForm = function({
       path: 'group.name',
       id: 'group-name',
       value: bookmarkData.group.name,
-      placeholder: 'Example group',
-      labelText: 'URL',
+      placeholder: language.current.bookmark.form.group.name.placeholder,
+      labelText: language.current.bookmark.form.group.name.label,
       srOnly: true
     }),
     random: new Button({
-      text: 'Random Group name',
+      text: language.current.bookmark.form.group.random,
       style: ['line'],
       func: () => {
         bookmarkData.group.name = randomString({ adjectivesCount: randomNumber(1, 3) });
@@ -575,7 +575,7 @@ export const BookmarkForm = function({
         object: bookmarkData,
         path: 'position.destination.group',
         id: 'position-destination-group',
-        labelText: 'Group',
+        labelText: language.current.bookmark.form.group.position.group,
         srOnly: true,
         option: (bookmark.all.length > 0) ? this.selectOption.group() : [],
         selected: bookmarkData.position.destination.group,
@@ -601,7 +601,7 @@ export const BookmarkForm = function({
         object: bookmarkData,
         path: 'position.destination.item',
         id: 'position-destination-item',
-        labelText: 'Position',
+        labelText: language.current.bookmark.form.group.position.item,
         option: (bookmark.all.length > 0) ? this.selectOption.item() : [],
         selected: bookmarkData.position.destination.item
       })
@@ -614,11 +614,8 @@ export const BookmarkForm = function({
     object: bookmarkData.propagate,
     path: 'display',
     id: 'apply-to-all-display',
-    labelText: 'Apply "Show Visual Element" and "Show Name" to other Bookmarks',
-    description: [
-      'The Letter, Icon, Image and Name text will not be shared.',
-      'Useful for hiding the Visual Elements or Names on all Bookmarks.'
-    ]
+    labelText: language.current.bookmark.form.propagate.visual.label,
+    description: language.current.bookmark.form.propagate.visual.description
   });
 
   this.control.propagate.visualAlert = new Alert({
@@ -630,11 +627,8 @@ export const BookmarkForm = function({
     object: bookmarkData.propagate,
     path: 'layout',
     id: 'apply-to-all-layout',
-    labelText: 'Apply Layout to other Bookmarks',
-    description: [
-      'When saved, apply the above Layout to all other Bookmarks.',
-      'Only the Visual and Name size, Alignment, Order, Position and Gutter will be will be applied to all.'
-    ]
+    labelText: language.current.bookmark.form.propagate.layout.label,
+    description: language.current.bookmark.form.propagate.layout.description
   });
 
   this.control.propagate.layoutAlert = new Alert({
@@ -646,11 +640,8 @@ export const BookmarkForm = function({
     object: bookmarkData.propagate,
     path: 'theme',
     id: 'apply-to-all-theme',
-    labelText: 'Apply Theme to other Bookmarks',
-    description: [
-      'When saved, apply the above Theme to all other Bookmarks.',
-      'Only the Colour, Accent, Opacity, Border and Visual shadow will be applied to all.'
-    ]
+    labelText: language.current.bookmark.form.propagate.theme.label,
+    description: language.current.bookmark.form.propagate.theme.description
   });
 
   this.control.propagate.themeAlert = new Alert({
@@ -664,17 +655,17 @@ export const BookmarkForm = function({
         visual: {
           shadow: {
             size: new Control_helperText({
-              text: ['Visual shadow only applies to a Letter or Icon.']
+              text: language.current.bookmark.form.display.visual.shadow.helper
             })
           }
         }
       },
       background: {
         image: new Control_helperText({
-          text: ['Background image only supports a direct URL to an image file.']
+          text: language.current.bookmark.form.background.image.helper
         }),
         video: new Control_helperText({
-          text: ['Background video only supports a direct URL to a video file. Supports MP4 and WebM format.', 'YouTube page URLs can not be used.']
+          text: language.current.bookmark.form.background.video.helper
         })
       }
     }
