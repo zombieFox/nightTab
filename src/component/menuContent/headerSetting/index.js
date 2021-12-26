@@ -303,14 +303,14 @@ headerSetting.disable = () => {
   }
 
   if ((
-      state.get.current().header.clock.second.show ||
+    state.get.current().header.clock.second.show ||
       state.get.current().header.clock.minute.show ||
       state.get.current().header.clock.hour.show ||
       state.get.current().header.date.day.show ||
       state.get.current().header.date.date.show ||
       state.get.current().header.date.month.show ||
       state.get.current().header.date.year.show
-    ) &&
+  ) &&
     state.get.current().header.transitional.show) {
     headerSetting.control.transitional.type.enable();
     headerSetting.control.transitional.size.enable();

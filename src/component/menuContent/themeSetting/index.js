@@ -766,8 +766,9 @@ themeSetting.font = (parent) => {
     nameHelper: new Control_helperText({
       complexText: true,
       text: [
-        `${language.current.menu.content.theme.font.display.name.helper.p1.a1} ${(new Link({ text: language.current.menu.content.theme.font.display.name.helper.p1.a2, href: 'https://fonts.google.com/', openNew: true })).link().outerHTML} ${language.current.menu.content.theme.font.display.name.helper.p1.a3}`,
+        language.current.menu.content.theme.font.display.name.helper.p1,
         language.current.menu.content.theme.font.display.name.helper.p2,
+        (new Link({ text: language.current.menu.content.theme.font.display.name.helper.link, href: 'https://fonts.google.com/', openNew: true })).link().outerHTML,
         language.current.menu.content.theme.font.display.name.helper.p3
       ]
     }),
@@ -843,8 +844,8 @@ themeSetting.font = (parent) => {
       path: 'theme.font.ui.name',
       id: 'theme-font-ui-name',
       value: state.get.current().theme.font.ui.name,
-      defaultValue: language.current.menu.content.theme.font.ui.name.placeholder,
-      placeholder: language.current.menu.content.theme.font.ui.name.label,
+      defaultValue: state.get.default().theme.font.ui.name,
+      placeholder: language.current.menu.content.theme.font.ui.name.placeholder,
       labelText: language.current.menu.content.theme.font.ui.name.label,
       action: () => {
         theme.font.ui.delay();
@@ -854,8 +855,9 @@ themeSetting.font = (parent) => {
     nameHelper: new Control_helperText({
       complexText: true,
       text: [
-        `${language.current.menu.content.theme.font.ui.name.helper.p1.a1} ${(new Link({ text: language.current.menu.content.theme.font.ui.name.helper.p1.a2, href: 'https://fonts.google.com/', openNew: true })).link().outerHTML} ${language.current.menu.content.theme.font.ui.name.helper.p1.a3}`,
+        language.current.menu.content.theme.font.ui.name.helper.p1,
         language.current.menu.content.theme.font.ui.name.helper.p2,
+        (new Link({ text: language.current.menu.content.theme.font.ui.name.helper.link, href: 'https://fonts.google.com/', openNew: true })).link().outerHTML,
         language.current.menu.content.theme.font.ui.name.helper.p3
       ]
     }),
@@ -1244,6 +1246,8 @@ themeSetting.opacity = (parent) => {
 
 themeSetting.background = (parent) => {
 
+  const supportLink = supportSetting.supportPage.get();
+
   const updateVideoPlayState = () => {
 
     if (theme.background.element.video) {
@@ -1363,7 +1367,7 @@ themeSetting.background = (parent) => {
         iconName: 'info',
         children: [
           node(`p:${language.current.menu.content.theme.background.image.alert.p1}|class:small`),
-          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language.current.menu.content.theme.background.image.alert.p2, href: supportSetting.link.url + supportSetting.link.page.localBackgroundImage, openNew: true })).link()] })
+          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language.current.menu.content.theme.background.image.alert.p2, href: supportLink.baseUrl + supportLink.page.localBackgroundImage.url, openNew: true })).link()] })
         ]
       }),
       url: new Control_textarea({
@@ -1505,7 +1509,7 @@ themeSetting.background = (parent) => {
         iconName: 'info',
         children: [
           node(`p:${language.current.menu.content.theme.background.video.alert.p1}.|class:small`),
-          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language.current.menu.content.theme.background.video.alert.p2, href: supportSetting.link.url + supportSetting.link.page.backgroundImageVideo, openNew: true })).link()] })
+          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language.current.menu.content.theme.background.video.alert.p2, href: supportLink.baseUrl + supportLink.page.backgroundImageVideo.url, openNew: true })).link()] })
         ]
       }),
       url: new Control_textarea({

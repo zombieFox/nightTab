@@ -762,8 +762,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node('h2:Visual & Name'),
-              node('p:Display Letters, Icon, Image and a Name on this Bookmark tile.')
+              node(`h2:${language.current.bookmark.form.section.visual.heading}`),
+              node(`p:${language.current.bookmark.form.section.visual.description}`)
             ])
           ]
         }),
@@ -792,8 +792,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node('h2:Address'),
-              complexNode({ tag: 'p', text: 'Be sure to use the full URL and include <strong>"https://..."</strong>', complexText: true })
+              node(`h2:${language.current.bookmark.form.section.address.heading}`),
+              complexNode({ tag: 'p', text: language.current.bookmark.form.section.address.description, complexText: true })
             ])
           ]
         }),
@@ -816,8 +816,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node('h2:Position'),
-              node('p:The Group to place this Bookmark in.')
+              node(`h2:${language.current.bookmark.form.section.position.heading}`),
+              node(`p:${language.current.bookmark.form.section.position.description}`)
             ])
           ]
         }),
@@ -861,8 +861,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node('h2:Layout'),
-              node('p:Change the Visual Element and Name position, scale and orientation.')
+              node(`h2:${language.current.bookmark.form.section.layout.heading}`),
+              node(`p:${language.current.bookmark.form.section.layout.description}`)
             ])
           ]
         }),
@@ -908,8 +908,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node('h2:Theme'),
-              node('p:Override the Theme and Accent colour.')
+              node(`h2:${language.current.bookmark.form.section.theme.heading}`),
+              node(`p:${language.current.bookmark.form.section.theme.description}`)
             ])
           ]
         }),

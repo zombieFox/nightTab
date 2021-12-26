@@ -93,7 +93,7 @@
           "helper": ["Applying a Preset will replace the current Colour, Accent, Font, Style, Radius, Shadow, Shade and Background."]
         },
         "saved": {
-          "helper": ["Saving a Theme will record the current Colour, Accent, Font, Style, Radius, Shadow, Shade and Background."],
+          "helper": ["Saving a Theme will record the current Colour, Accent, Font, Style, Opacity, Radius, Shadow, Shade and Background."],
           "save": "Save current theme",
           "edit": "Edit saved themes"
         },
@@ -189,12 +189,9 @@
               "label": "Display font",
               "placeholder": "Google font name",
               "helper": {
-                "p1": {
-                  "a1": "Use a ",
-                  "a2": "Google Font",
-                  "a3": " to customise the Clock, Date, Group names and Bookmark Letters."
-                },
+                "p1": "Use a Google Font to customise the Clock, Date, Group names and Bookmark Letters.",
                 "p2": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Fredoka One\" or \"Kanit\".",
+                "link": "Find a Google Font",
                 "p3": "Clear the field to use the default font \"Fjalla One\"."
               }
             },
@@ -215,12 +212,9 @@
               "label": "User interface font",
               "placeholder": "Google font name",
               "helper": {
-                "p1": {
-                  "a1": "Use a ",
-                  "a2": "Google Font",
-                  "a3": " to customise the Bookmark name, URL and form elements."
-                },
+                "p1": "Use a Google Font to customise the Bookmark name, URL and form elements.",
                 "p2": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Roboto\", \"Source Sans Pro\" or \"Noto Sans\".",
+                "link": "Find a Google Font",
                 "p3": "Clear the field to use the default font \"Open Sans\"."
               }
             },
@@ -889,6 +883,28 @@
         "position": "Position",
         "layout": "Layout",
         "theme": "Theme"
+      },
+      "section": {
+        "visual": {
+          "heading": "Visual & Name",
+          "description": "Display Letters, Icon, Image and a Name on this Bookmark tile."
+        },
+        "address": {
+          "heading": "Address",
+          "description": "Be sure to use the full URL and include \"https://...\""
+        },
+        "position": {
+          "heading": "Position",
+          "description": "The Group to place this Bookmark in."
+        },
+        "layout": {
+          "heading": "Layout",
+          "description": "Change the Visual Element and Name position, scale and orientation."
+        },
+        "theme": {
+          "heading": "Theme",
+          "description": "Override the Theme and Accent colour."
+        }
       },
       "url": {
         "label": "URL",

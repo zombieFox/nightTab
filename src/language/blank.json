@@ -195,12 +195,9 @@
               "label": "xxx",
               "placeholder": "xxx",
               "helper": {
-                "p1": {
-                  "a1": "xxx",
-                  "a2": "xxx",
-                  "a3": "xxx"
-                },
+                "p1": "xxx",
                 "p2": "xxx",
+                "link": "xxx",
                 "p3": "xxx"
               }
             },
@@ -223,12 +220,9 @@
               "label": "xxx",
               "placeholder": "xxx",
               "helper": {
-                "p1": {
-                  "a1": "xxx",
-                  "a2": "xxx",
-                  "a3": "xxx"
-                },
+                "p1": "xxx",
                 "p2": "xxx",
+                "link": "xxx",
                 "p3": "xxx"
               }
             },
@@ -964,6 +958,28 @@
         "position": "xxx",
         "layout": "xxx",
         "theme": "xxx"
+      },
+      "section": {
+        "visual": {
+          "heading": "xxx",
+          "description": "xxx"
+        },
+        "address": {
+          "heading": "xxx",
+          "description": "xxx"
+        },
+        "position": {
+          "heading": "xxx",
+          "description": "xxx"
+        },
+        "layout": {
+          "heading": "xxx",
+          "description": "xxx"
+        },
+        "theme": {
+          "heading": "xxx",
+          "description": "xxx"
+        }
       },
       "url": {
         "label": "xxx",

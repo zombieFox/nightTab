@@ -10,11 +10,14 @@ import { node } from '../../../utility/node';
 
 const supportSetting = {};
 
-supportSetting.support = (parent) => {
+supportSetting.supportPage = {
+  get: () => {
 
-  const supportLink = {
-    url: 'https://github.com/zombieFox/' + APP_NAME + '/wiki/',
-    page: {
+    const supportLink = {};
+
+    supportLink.baseUrl = 'https://github.com/zombieFox/' + APP_NAME + '/wiki/';
+
+    supportLink.page = {
       applyToAll: {
         label: language.current.menu.content.support.page.applyToAll,
         url: 'Applying-bookmark-settings-to-all'
@@ -59,8 +62,14 @@ supportSetting.support = (parent) => {
         label: language.current.menu.content.support.page.firefox,
         url: 'Setting-' + APP_NAME + '-as-your-Firefox-homepage'
       },
-    }
-  };
+    };
+
+    return supportLink;
+
+  }
+};
+
+supportSetting.support = (parent) => {
 
   const makeLinks = () => {
 
@@ -68,11 +77,13 @@ supportSetting.support = (parent) => {
 
     const list = node('ul|class:list-feature');
 
+    const supportLink = supportSetting.supportPage.get();
+
     for (var key in supportLink.page) {
 
       const linkItem = new Link({
         text: supportLink.page[key].label,
-        href: supportLink.url + supportLink.page[key].url,
+        href: supportLink.baseUrl + supportLink.page[key].url,
         openNew: true
       });
 
