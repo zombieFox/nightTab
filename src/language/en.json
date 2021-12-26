@@ -1084,7 +1084,7 @@
         },
         "layout": {
           "label": "Apply Layout to other Bookmarks",
-          "description": ["When saved, apply the above Layout to all other Bookmarks.", "Only the Visual and Name size, Alignment, Order, Position and Gutter will be will be applied to all."]
+          "description": ["When saved, apply the above Layout to all other Bookmarks.", "Only the Visual and Name size, Alignment, Order, Position and Gutter will be applied to all."]
         },
         "theme": {
           "label": "Apply Theme to other Bookmarks",
@@ -1157,7 +1157,7 @@
       "collapse": {
         "show": {
           "label": "Show Collapse",
-          "description": "The Collapse button will show or hide the Bookmaks in this Group."
+          "description": "The Collapse button will show or hide the Bookmarks in this Group."
         }
       },
       "openAll": {
