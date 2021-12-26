@@ -854,6 +854,15 @@
     }
   },
   "bookmark": {
+    "tile": {
+      "control": {
+        "left": "Move this bookmark left",
+        "sort": "Drag bookmark to reorder",
+        "right": "Move this bookmark right",
+        "edit": "Edit this bookmark",
+        "remove": "Remove this bookmark"
+      }
+    },
     "add": {
       "heading": "Add a new Bookmark",
       "successText": "Add",
@@ -1086,6 +1095,100 @@
     "preview": {
       "full": "Preview",
       "half": "Preview (50% scale)"
+    }
+  },
+  "group": {
+    "area": {
+      "control": {
+        "up": "Move this group up",
+        "sort": "Drag group to reorder",
+        "down": "Move this group down",
+        "edit": "Edit this group",
+        "remove": "Remove this group",
+        "openAll": "Open all bookmarks in this group",
+        "collapse": "Collapse this group"
+      }
+    },
+    "add": {
+      "heading": "Add a new Group",
+      "successText": "Add",
+      "cancelText": "Cancel"
+    },
+    "remove": {
+      "heading": {
+        "name": "Remove",
+        "unnamed": "Remove unnamed group"
+      },
+      "content": "Are you sure you want to remove this Group and all the Bookmarks within? This can not be undone.",
+      "successText": "Remove",
+      "cancelText": "Cancel"
+    },
+    "edit": {
+      "heading": {
+        "name": "Edit",
+        "unnamed": "Edit unnamed group"
+      },
+      "successText": "Save",
+      "cancelText": "Cancel"
+    },
+    "form": {
+      "section": {
+        "name": {
+          "heading": "Name",
+          "description": "Display a Name above this Group."
+        },
+        "toolbar": {
+          "heading": "Toolbar",
+          "description": "Display controls to open all or show/hide the Bookmarks in this Group."
+        },
+        "ordering": {
+          "heading": "Ordering",
+          "description": "The position of this Group."
+        }
+      },
+      "name": {
+        "show": "Show Group name",
+        "text": {
+          "label": "Group name",
+          "placeholder": "Example group"
+        },
+        "random": "Random Group name"
+      },
+      "collapse": {
+        "show": {
+          "label": "Show Collapse",
+          "description": "The Collapse button will show or hide the Bookmaks in this Group."
+        }
+      },
+      "openAll": {
+        "show": {
+          "label": "Show Open all",
+          "description": "Open all button will appear if there is at least one Bookmark in this Group."
+        }
+      },
+      "destination": "Position"
+    }
+  },
+  "control": {
+    "general": {
+      "reset": "Reset to default"
+    },
+    "color": {
+      "text": {
+        "placeholder": "Hex code"
+      },
+      "random": "Random colour"
+    },
+    "colorMixer": {
+      "moreControls": "More controls",
+      "slider": {
+        "h": "Hue",
+        "s": "Saturation",
+        "l": "Lightness",
+        "r": "Red",
+        "g": "Green",
+        "b": "Blue"
+      }
     }
   }
 }

@@ -18,7 +18,7 @@ import { complexNode } from '../../utility/complexNode';
 import { isValidString } from '../../utility/isValidString';
 import { trimString } from '../../utility/trimString';
 
-const BookmarkTile = function ({
+const BookmarkTile = function({
   bookmarkData = {},
   preview = false
 } = {}) {
@@ -65,11 +65,11 @@ const BookmarkTile = function ({
 
   this.control.button = {
     left: new Button({
-      text: 'Move this bookmark left',
+      text: language.current.bookmark.tile.control.left,
       srOnly: true,
       iconName: 'arrowKeyboardLeft',
       style: ['link'],
-      title: 'Move this bookmark left',
+      title: language.current.bookmark.tile.control.left,
       classList: ['bookmark-control-button', 'bookmark-control-left'],
       func: () => {
 
@@ -88,19 +88,19 @@ const BookmarkTile = function ({
       }
     }),
     sort: new Button({
-      text: 'Drag bookmark to reorder',
+      text: language.current.bookmark.tile.control.sort,
       srOnly: true,
       iconName: 'drag',
       style: ['link'],
-      title: 'Drag bookmark to reorder',
+      title: language.current.bookmark.tile.control.sort,
       classList: ['bookmark-control-button', 'bookmark-control-sort']
     }),
     right: new Button({
-      text: 'Move this bookmark right',
+      text: language.current.bookmark.tile.control.right,
       srOnly: true,
       iconName: 'arrowKeyboardRight',
       style: ['link'],
-      title: 'Move this bookmark right',
+      title: language.current.bookmark.tile.control.right,
       classList: ['bookmark-control-button', 'bookmark-control-right'],
       func: () => {
 
@@ -119,11 +119,11 @@ const BookmarkTile = function ({
       }
     }),
     edit: new Button({
-      text: 'Edit this bookmark',
+      text: language.current.bookmark.tile.control.edit,
       srOnly: true,
       iconName: 'edit',
       style: ['link'],
-      title: 'Edit this bookmark',
+      title: language.current.bookmark.tile.control.edit,
       classList: ['bookmark-control-button', 'bookmark-control-edit'],
       func: () => {
 
@@ -180,11 +180,11 @@ const BookmarkTile = function ({
       }
     }),
     remove: new Button({
-      text: 'Remove this bookmark',
+      text: language.current.bookmark.tile.control.remove,
       srOnly: true,
       iconName: 'cross',
       style: ['link'],
-      title: 'Remove this bookmark',
+      title: language.current.bookmark.tile.control.remove,
       classList: ['bookmark-control-button', 'bookmark-control-remove'],
       func: () => {
 

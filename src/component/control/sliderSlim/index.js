@@ -1,3 +1,5 @@
+import { language } from '../../../language';
+
 import * as form from '../../form';
 
 import { Button } from '../../button';
@@ -99,11 +101,12 @@ export const Control_sliderSlim = function ({
   });
 
   this.reset = new Button({
-    text: false,
+    text: language.current.control.general.reset,
     iconName: 'replay',
     style: ['line'],
     classList: ['form-group-item-small'],
-    title: 'Reset to default',
+    title: language.current.control.general.reset,
+    srOnly: true,
     func: () => {
 
       set({

@@ -31,3 +31,5 @@ component.keyboard.init();
 component.menu.open();
 
 // component.bookmark.add.render();
+
+// component.group.add.render();

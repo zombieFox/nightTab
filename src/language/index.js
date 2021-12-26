@@ -8,8 +8,9 @@ import { default as fr } from './fr.json';
 import { default as es } from './es.json';
 import { default as hi } from './hi.json';
 import { default as ru } from './ru.json';
+import { default as blank } from './blank.json';
 
-const language = { en, de, fr, es, hi, ru };
+const language = { en, de, fr, es, hi, ru, blank };
 
 language.init = () => {
 

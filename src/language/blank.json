@@ -929,6 +929,15 @@
     }
   },
   "bookmark": {
+    "tile": {
+      "control": {
+        "left": "xxx",
+        "sort": "xxx",
+        "right": "xxx",
+        "edit": "xxx",
+        "remove": "xxx"
+      }
+    },
     "add": {
       "heading": "xxx",
       "successText": "xxx",
@@ -1161,6 +1170,100 @@
     "preview": {
       "full": "xxx",
       "half": "xxx"
+    }
+  },
+  "group": {
+    "area": {
+      "control": {
+        "up": "xxx",
+        "sort": "xxx",
+        "down": "xxx",
+        "edit": "xxx",
+        "remove": "xxx",
+        "openAll": "xxx",
+        "collapse": "xxx"
+      }
+    },
+    "add": {
+      "heading": "xxx",
+      "successText": "xxx",
+      "cancelText": "xxx"
+    },
+    "remove": {
+      "heading": {
+        "name": "xxx",
+        "unnamed": "xxx"
+      },
+      "content": "xxx",
+      "successText": "xxx",
+      "cancelText": "xxx"
+    },
+    "edit": {
+      "heading": {
+        "name": "xxx",
+        "unnamed": "xxx"
+      },
+      "successText": "xxx",
+      "cancelText": "xxx"
+    },
+    "form": {
+      "section": {
+        "name": {
+          "heading": "xxx",
+          "description": "xxx"
+        },
+        "toolbar": {
+          "heading": "xxx",
+          "description": "xxx"
+        },
+        "ordering": {
+          "heading": "xxx",
+          "description": "xxx"
+        }
+      },
+      "name": {
+        "text": {
+          "label": "xxx",
+          "placeholder": "xxx"
+        },
+        "show": "xxx",
+        "random": "xxx"
+      },
+      "collapse": {
+        "show": {
+          "label": "xxx",
+          "description": "xxx"
+        }
+      },
+      "openAll": {
+        "show": {
+          "label": "xxx",
+          "description": "xxx"
+        }
+      },
+      "destination": "xxx"
+    }
+  },
+  "control": {
+    "general": {
+      "reset": "xxx"
+    },
+    "color": {
+      "text": {
+        "placeholder": "xxx"
+      },
+      "random": "xxx"
+    },
+    "colorMixer": {
+      "moreControls": "xxx",
+      "slider": {
+        "h": "xxx",
+        "s": "xxx",
+        "l": "xxx",
+        "r": "xxx",
+        "g": "xxx",
+        "b": "xxx"
+      }
     }
   }
 }
