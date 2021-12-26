@@ -878,7 +878,7 @@
           "file": "Aus Datei importieren",
           "clipboard": "Aus Zwischenablage importieren",
           "helper": [
-            "Stellen Sie ein zuvor exportiertes {appName} ."
+            "Stellen Sie ein zuvor exportiertes {appName}."
           ],
           "drop": "Oder legen Sie hier eine {appName} ab."
         },
@@ -927,7 +927,7 @@
       },
       "app": {
         "para1": "Teilen Sie Ihr Setup mit der Community.",
-        "link1": "Gefunden auf Reddit /r/{appName} .",
+        "link1": "Gefunden auf Reddit /r/{appName}.",
         "para2": "Dieses Projekt ist Open Source.",
         "link2": "Auf GitHub gefunden.",
         "link3": "GNU General Public License v3.0."

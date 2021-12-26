@@ -1,3 +1,5 @@
+import { language } from '../../language';
+
 import { state } from '../state';
 import { data } from '../data';
 import { layout } from '../layout';
@@ -359,9 +361,10 @@ bookmark.add = {
     const bookmarkForm = new BookmarkForm({ bookmarkData: newBookmarkData });
 
     const addModal = new Modal({
-      heading: 'Add a new Bookmark',
+      heading: language.current.bookmark.add.heading,
       content: bookmarkForm.form(),
-      successText: 'Add',
+      successText: language.current.bookmark.add.successText,
+      cancelText: language.current.bookmark.add.cancelText,
       width: (state.get.current().bookmark.style === 'block') ? 60 : 70,
       maxHeight: true,
       openAction: () => {

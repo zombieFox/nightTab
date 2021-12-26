@@ -845,7 +845,7 @@ themeSetting.font = (parent) => {
       value: state.get.current().theme.font.ui.name,
       defaultValue: language.current.menu.content.theme.font.ui.name.placeholder,
       placeholder: language.current.menu.content.theme.font.ui.name.label,
-      labelText: 'User interface font',
+      labelText: language.current.menu.content.theme.font.ui.name.label,
       action: () => {
         theme.font.ui.delay();
         data.save();

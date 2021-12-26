@@ -1,3 +1,5 @@
+import { language } from '../../language';
+
 import { state } from '../state';
 import { data } from '../data';
 import { bookmark } from '../bookmark';
@@ -136,9 +138,10 @@ const BookmarkTile = function ({
         const bookmarkForm = new BookmarkForm({ bookmarkData: newBookmarkData });
 
         const editModal = new Modal({
-          heading: isValidString(newBookmarkData.link.display.name.text) ? 'Edit ' + newBookmarkData.link.display.name.text : 'Edit unnamed bookmark',
+          heading: isValidString(newBookmarkData.link.display.name.text) ? `${language.current.bookmark.edit.heading.name} ${newBookmarkData.link.display.name.text}` : language.current.bookmark.edit.heading.unnamed,
           content: bookmarkForm.form(),
-          successText: 'Save',
+          successText: language.current.bookmark.edit.successText,
+          cancelText: language.current.bookmark.edit.cancelText,
           width: (state.get.current().bookmark.style === 'block') ? 60 : 70,
           maxHeight: true,
           successAction: () => {
@@ -186,9 +189,10 @@ const BookmarkTile = function ({
       func: () => {
 
         const removeModal = new Modal({
-          heading: isValidString(bookmarkData.link.display.name.text) ? 'Remove ' + bookmarkData.link.display.name.text : 'Remove unnamed bookmark',
-          content: 'Are you sure you want to remove this Bookmark? This can not be undone.',
-          successText: 'Remove',
+          heading: isValidString(bookmarkData.link.display.name.text) ? `${language.current.bookmark.remove.heading.name} ${bookmarkData.link.display.name.text}` : language.current.bookmark.remove.heading.unnamed,
+          content: language.current.bookmark.remove.content,
+          successText: language.current.bookmark.remove.successText,
+          cancelText: language.current.bookmark.remove.cancelText,
           width: 'small',
           successAction: () => {
 

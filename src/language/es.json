@@ -1,0 +1,937 @@
+{
+  "menu": {
+    "nav": {
+      "theme": {
+        "label": "Tema",
+        "subNav": {
+          "preset": "Preestablecido",
+          "saved": "Salvado",
+          "style": "Estilo",
+          "color": "Color",
+          "accent": "Acento",
+          "font": "Fuente",
+          "radius": "Radio",
+          "shadow": "Sombra",
+          "shade": "Sombra",
+          "opacity": "Opacidad",
+          "background": "Fondo",
+          "layout": "Disposición",
+          "header": "Encabezamiento",
+          "bookmark": "Marcador"
+        }
+      },
+      "layout": {
+        "label": "Disposición",
+        "subNav": {
+          "scaling": "Escalada",
+          "area": "Área",
+          "padding": "Relleno",
+          "gutter": "Canal",
+          "alignment": "Alineación",
+          "page": "Página"
+        }
+      },
+      "header": {
+        "label": "Encabezamiento",
+        "subNav": {
+          "alignment": "Alineación",
+          "greeting": "Saludo",
+          "transitional": "Palabras de transición",
+          "clock": "Reloj",
+          "date": "Fecha",
+          "search": "Búsqueda"
+        }
+      },
+      "bookmark": {
+        "label": "Marcador",
+        "subNav": {
+          "general": "General",
+          "style": "Estilo",
+          "orientation": "Orientación",
+          "sort": "Clasificar"
+        }
+      },
+      "group": {
+        "label": "Grupo",
+        "subNav": {
+          "alignment": "Alineación",
+          "name": "Nombre",
+          "collapse": "Colapso",
+          "toolbar": "Barra de herramientas"
+        }
+      },
+      "toolbar": {
+        "label": "Barra de herramientas",
+        "subNav": {
+          "size": "Tamaño",
+          "location": "Ubicación",
+          "position": "Posición",
+          "controls": "Control S"
+        }
+      },
+      "data": {
+        "label": "Datos",
+        "subNav": {
+          "restore": "Restaurar",
+          "backup": "Respaldo",
+          "clear": "Claro"
+        }
+      },
+      "support": {
+        "label": "Apoyo"
+      },
+      "coffee": {
+        "label": "Café"
+      },
+      "app": {
+        "label": "{appName}"
+      }
+    },
+    "content": {
+      "theme": {
+        "preset": {
+          "helper": [
+            "La aplicación de un ajuste preestablecido reemplazará el color, el acento, la fuente, el estilo, el radio, la sombra, la sombra y el fondo actuales."
+          ]
+        },
+        "saved": {
+          "helper": [
+            "Al guardar un tema, se registrarán el color, el acento, la fuente, el estilo, el radio, la sombra, la sombra y el fondo actuales."
+          ],
+          "save": "Guardar tema actual",
+          "edit": "Editar temas guardados"
+        },
+        "style": {
+          "dark": {
+            "label": "Modo oscuro"
+          },
+          "light": {
+            "label": "Modo de luz"
+          },
+          "automatic": {
+            "label": "Automático",
+            "description": "Siga el modo claro u oscuro del sistema."
+          }
+        },
+        "color": {
+          "shade": {
+            "helper": [
+              "Fondos, Marcadores y Modales usan sombras desde la izquierda.",
+              "Los elementos de texto y formulario usan sombras desde la derecha.",
+              "Para un aspecto claro, cambie al Estilo de luz y luego seleccione un color primario. Y viceversa para un look oscuro."
+            ]
+          },
+          "range": {
+            "primary": {
+              "h": "Color primario",
+              "s": "Saturación"
+            }
+          },
+          "contrast": {
+            "label": "Rango de contraste",
+            "left": "Inicio de contraste",
+            "right": "Final de contraste",
+            "helper": [
+              "Mueva los controles de rango de Contraste juntos para una apariencia apagada.",
+              "Mueva los controles de rango de Contraste lejos uno del otro para una apariencia vívida y nítida."
+            ]
+          }
+        },
+        "accent": {
+          "preset": {
+            "color": {
+              "grey": "Gris",
+              "red": "rojo",
+              "orange": "naranja",
+              "yellow": "Amarillo",
+              "lime": "Lima",
+              "green": "Verde",
+              "aqua": "Agua",
+              "cyan": "Cian",
+              "teal": "Verde azulado",
+              "blue": "Azul",
+              "purple": "Púrpura",
+              "magenta": "Magenta",
+              "fuchsia": "Fucsia"
+            },
+            "modifier": {
+              "light": {
+                "level3": "Super extra ligero",
+                "level2": "Extra ligero",
+                "level1": "Ligero"
+              },
+              "dark": {
+                "level3": "Super extra oscuro",
+                "level2": "Extra oscuro",
+                "level1": "Oscuro"
+              }
+            }
+          },
+          "color": "Color de acento",
+          "random": {
+            "active": "Color de acento aleatorio al cargar / actualizar",
+            "style": {
+              "any": "Ningún",
+              "light": "Ligero",
+              "dark": "Oscuro",
+              "pastel": "Pastel",
+              "saturated": "Saturado"
+            },
+            "randomise": "Aleatorizar ahora"
+          },
+          "cycle": {
+            "active": "Cambio automático de tono de acento",
+            "speed": "Cambio de demora",
+            "step": "Cambiar pasos",
+            "alert": "Tenga cuidado, ya que un tono Accent que cambia rápidamente puede causar problemas de rendimiento.",
+            "helper": [
+              "El cambio automático de tono de acento no funcionará cuando el color de acento sea gris o negro."
+            ]
+          }
+        },
+        "font": {
+          "display": {
+            "name": {
+              "label": "Fuente de pantalla",
+              "placeholder": "Nombre de fuente de Google",
+              "helper": {
+                "p1": {
+                  "a1": "Utilizar una",
+                  "a2": "Fuente de Google",
+                  "a3": "para personalizar el reloj, la fecha, los nombres de los grupos y las letras de los marcadores."
+                },
+                "p2": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Fredoka One\" o \"Kanit\".",
+                "p3": "Borre el campo para usar la fuente predeterminada \"Fjalla One\"."
+              }
+            },
+            "weight": {
+              "label": "Peso de fuente",
+              "light": "Ligero",
+              "regular": "Regular",
+              "bold": "Audaz",
+              "helper": [
+                "No todas las fuentes admiten todos los pesos. Consulte la página de fuentes de Google para ver cuáles están disponibles."
+              ]
+            },
+            "style": {
+              "normal": "Normal",
+              "italic": "Itálico"
+            }
+          },
+          "ui": {
+            "name": {
+              "label": "Fuente de la interfaz de usuario",
+              "placeholder": "Nombre de fuente de Google",
+              "helper": {
+                "p1": {
+                  "a1": "Utilizar una",
+                  "a2": "Fuente de Google",
+                  "a3": "para personalizar el nombre del marcador, la URL y los elementos del formulario."
+                },
+                "p2": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Roboto\", \"Source Sans Pro\" o \"Noto Sans\".",
+                "p3": "Borre el campo para usar la fuente predeterminada \"Open Sans\"."
+              }
+            },
+            "weight": {
+              "label": "Peso de fuente",
+              "light": "Ligero",
+              "regular": "Regular",
+              "bold": "Audaz",
+              "helper": [
+                "No todas las fuentes admiten todos los pesos. Consulte la página de fuentes de Google para ver cuáles están disponibles."
+              ]
+            },
+            "style": {
+              "normal": "Normal",
+              "italic": "Itálico"
+            }
+          }
+        },
+        "radius": "Radio de esquina",
+        "shadow": "Tamaño de la sombra",
+        "shade": {
+          "opacity": "Opacidad de la sombra",
+          "blur": {
+            "label": "Desenfoque de sombra",
+            "helper": [
+              "No es compatible con todos los navegadores."
+            ]
+          }
+        },
+        "opacity": {
+          "general": {
+            "label": "Toda opacidad",
+            "helper": [
+              "Cambie la opacidad de la barra de búsqueda, los marcadores, los controles de grupo y la barra de herramientas.",
+              "La opacidad también se puede cambiar al editar marcadores individuales."
+            ]
+          },
+          "toolbar": "Barra de herramientas",
+          "bookmark": "Marcador",
+          "search": "Caja de búsqeda",
+          "groupToolbar": "Barra de herramientas de grupo"
+        },
+        "background": {
+          "type": {
+            "theme": {
+              "label": "Fondo por tema",
+              "description": [
+                "Utilice el color de fondo definido por el tema."
+              ]
+            },
+            "accent": {
+              "label": "Fondo por acento",
+              "description": [
+                "Utilice el color de acento para el fondo."
+              ]
+            },
+            "color": "Color personalizado",
+            "gradient": "Degradado",
+            "image": "Imagen",
+            "video": "Video"
+          },
+          "color": "Color de fondo",
+          "gradient": {
+            "angle": "Ángulo de degradado de fondo",
+            "start": "Inicio del gradiente de fondo",
+            "end": "Final de gradiente de fondo"
+          },
+          "image": {
+            "alert": {
+              "p1": "Ya no se pueden utilizar imágenes locales. Las imágenes deben estar alojadas en algún lugar en línea.",
+              "p2": "¿Por qué ha cambiado esto?"
+            },
+            "url": {
+              "label": "URL",
+              "placeholder": "https://www.example.com/image.jpg",
+              "helper": [
+                "Agregue más de una URL separada por espacios o en nuevas líneas para obtener una imagen de fondo aleatoria al cargar.",
+                "Unsplash se puede utilizar para imágenes aleatorias, por ejemplo:",
+                "https://source.unsplash.com/random/1920x1080/?night,day,sky",
+                "Cambie los parámetros después de ... / random / para más opciones. Los tiempos de carga pueden variar."
+              ]
+            },
+            "blur": "Difuminar",
+            "grayscale": "Escala de grises",
+            "scale": "Escala",
+            "accent": "Acento",
+            "opacity": "Opacidad",
+            "vignette": {
+              "opacity": "Viñeta",
+              "range": {
+                "label": "Inicio y finalización de la sombra",
+                "left": "Final de la sombra",
+                "right": "Inicio de sombra"
+              }
+            }
+          },
+          "video": {
+            "alert": {
+              "p1": "No se pueden utilizar las URL de las páginas de YouTube.",
+              "p2": "Cómo vincular a un archivo de video."
+            },
+            "url": {
+              "label": "URL",
+              "placeholder": "https://www.example.com/video.mp4",
+              "helper": [
+                "El video de fondo solo admite una URL directa a un archivo de video. Soporta formato MP4 y WebM.",
+                "Agregue más de una URL separada por espacios o en nuevas líneas para un video de fondo aleatorio en la carga."
+              ]
+            },
+            "blur": "Difuminar",
+            "grayscale": "Escala de grises",
+            "scale": "Escala",
+            "accent": "Acento",
+            "opacity": "Opacidad",
+            "vignette": {
+              "opacity": "Viñeta",
+              "range": {
+                "label": "Inicio y finalización de la sombra",
+                "start": "Final de la sombra",
+                "end": "Inicio de sombra"
+              }
+            }
+          }
+        },
+        "layout": {
+          "color": {
+            "label": "Color de fondo del diseño",
+            "by": {
+              "transparent": {
+                "label": "Transparente",
+                "description": "Sin color de fondo detrás del diseño."
+              },
+              "custom": {
+                "label": "Color personalizado",
+                "description": "Utilice un color personalizado detrás del diseño."
+              }
+            },
+            "color": "Color de fondo del diseño",
+            "opacity": "Opacidad de fondo",
+            "blur": {
+              "label": "Desenfoque de fondo",
+              "helper": [
+                "No es compatible con todos los navegadores."
+              ]
+            }
+          },
+          "divider": "Divisor entre el área de encabezado y marcador"
+        },
+        "header": {
+          "color": {
+            "label": "Color de fondo del encabezado",
+            "by": {
+              "transparent": {
+                "label": "Transparente",
+                "description": "Sin color de fondo detrás del área del encabezado."
+              },
+              "custom": {
+                "label": "Color personalizado",
+                "description": "Utilice un color personalizado detrás del área del encabezado."
+              }
+            },
+            "color": "Color de fondo del encabezado",
+            "opacity": "Opacidad de fondo"
+          }
+        },
+        "bookmark": {
+          "color": {
+            "label": "Color de fondo del marcador",
+            "by": {
+              "transparent": {
+                "label": "Transparente",
+                "description": "No hay color de fondo detrás del área del marcador."
+              },
+              "custom": {
+                "label": "Color personalizado",
+                "description": "Utilice un color personalizado detrás del área del marcador."
+              }
+            },
+            "color": "Color de fondo del marcador",
+            "opacity": "Opacidad de fondo"
+          },
+          "item": {
+            "border": {
+              "label": "Borde del marcador",
+              "helper": [
+                "El borde del marcador también se puede cambiar al editar marcadores individuales.",
+                "El color del borde lo define el acento, que también se puede cambiar al editar marcadores individuales."
+              ]
+            },
+            "rainbow": {
+              "add": "Agregue un acento único a cada marcador",
+              "remove": "Quitar todas las anulaciones de acento",
+              "helper": [
+                "El acento personalizado de marcadores también se puede cambiar al editar marcadores individuales."
+              ]
+            }
+          }
+        }
+      },
+      "layout": {
+        "scaling": {
+          "size": "Tamaño global"
+        },
+        "area": {
+          "width": "Ancho del área de diseño",
+          "header": {
+            "width": "Ancho del área del encabezado",
+            "justify": {
+              "label": "Alineación del área de encabezado",
+              "left": "Izquierda",
+              "center": "Centrar",
+              "right": "Correcto",
+              "helper1": [
+                "Es posible que los efectos no sean visibles si el área del encabezado es de ancho completo."
+              ],
+              "helper2": [
+                "Solo está disponible cuando la Dirección del diseño es Vertical y se muestran los elementos de Encabezado."
+              ]
+            }
+          },
+          "bookmark": {
+            "width": "Ancho del área del marcador",
+            "justify": {
+              "label": "Alineación del área del marcador",
+              "left": "Izquierda",
+              "center": "Centrar",
+              "right": "Correcto",
+              "helper1": [
+                "Es posible que los efectos no sean visibles si el área del marcador es de ancho completo."
+              ],
+              "helper2": [
+                "Solo está disponible cuando la Dirección del diseño es Vertical y se muestran los elementos de Encabezado."
+              ]
+            }
+          }
+        },
+        "padding": "Espacio alrededor del área de encabezado y marcador",
+        "gutter": "Espacio entre elementos de encabezado y marcador",
+        "alignment": {
+          "label": "Alineación de áreas",
+          "topLeft": "Arriba a la izquierda",
+          "topCenter": "Centro superior",
+          "topRight": "Parte superior derecha",
+          "centerLeft": "Centro Izquierda",
+          "centerCenter": "Centro Centro",
+          "centerRight": "Centro Derecha",
+          "bottomLeft": "Abajo a la izquierda",
+          "bottomCenter": "Centro inferior",
+          "bottomRight": "Abajo a la derecha"
+        },
+        "direction": {
+          "horizontal": {
+            "label": "Alinear horizontal",
+            "description": "Apile el encabezado y los marcadores en una fila uno al lado del otro."
+          },
+          "vertical": {
+            "label": "Alinear verticalmente",
+            "description": "Apile el encabezado y los marcadores en una columna una encima de la otra."
+          }
+        },
+        "order": {
+          "headerBookmark": {
+            "label": "Encabezado y luego Marcadores",
+            "description": "Ordene que el área del encabezado aparezca antes que el área de marcadores."
+          },
+          "bookmarkHeader": {
+            "label": "Marcadores y luego encabezado",
+            "description": "Ordene que el área de Marcadores aparezca antes del área de Encabezado."
+          }
+        },
+        "page": {
+          "title": {
+            "label": "Título",
+            "placeholder": "Nueva pestaña"
+          },
+          "favicon": {
+            "label": "URL de favicon",
+            "placeholder": "https://www.example.com/favicon.svg",
+            "helper": [
+              "No es compatible con todos los navegadores."
+            ]
+          },
+          "scrollbar": {
+            "label": "Barra de desplazamiento",
+            "auto": "Auto",
+            "thin": "Delgado",
+            "none": "Oculto",
+            "helper": [
+              "No es compatible con todos los navegadores."
+            ]
+          },
+          "overscroll": {
+            "active": "Desplazarse más allá del final",
+            "unblur": {
+              "label": "Desenfocar imagen de fondo o video",
+              "description": [
+                "La imagen de fondo o el video se desenfocarán cuando se desplace hasta la parte inferior de la página.",
+                "El desenfoque de imagen o video se puede encontrar en Fondo del tema."
+              ]
+            }
+          }
+        }
+      },
+      "header": {
+        "alignment": {
+          "justify": {
+            "label": "Alineación del elemento de encabezado",
+            "left": "Izquierda",
+            "center": "Centrar",
+            "right": "Correcto"
+          },
+          "helper": [
+            "Es posible que los efectos no sean visibles si el tamaño del cuadro de búsqueda se establece en Automático y crece para llenar el espacio disponible."
+          ]
+        },
+        "greeting": {
+          "show": "Mostrar saludo",
+          "size": "Tamaño",
+          "newLine": {
+            "label": "Nueva línea",
+            "description": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+          },
+          "type": {
+            "label": "Fraseología",
+            "good": "\"Buenos días...\"",
+            "hello": "\"Hola...\"",
+            "hi": "\"Hola...\"",
+            "none": {
+              "label": "Ninguna",
+              "description": "Útil para mostrar solo el nombre."
+            },
+            "custom": {
+              "label": "Personalizado",
+              "description": [
+                "Utilice su propio saludo.",
+                "El valor predeterminado es \"Buenos días ...\" si se deja en blanco."
+              ]
+            }
+          },
+          "custom": {
+            "label": "Texto de saludo personalizado",
+            "placeholder": "Hola"
+          },
+          "name": {
+            "label": "Nombre",
+            "placeholder": "Apodo, alias o nombre de superhéroe"
+          }
+        },
+        "transitional": {
+          "show": {
+            "label": "Mostrar palabras de transición",
+            "helper": [
+              "Solo disponible cuando se muestra la fecha o la hora."
+            ]
+          },
+          "type": {
+            "label": "Fraseología",
+            "timeAndDate": "\"La hora y la fecha son\"",
+            "its": "\"Su\""
+          },
+          "size": "Tamaño",
+          "newLine": {
+            "label": "Nueva línea",
+            "description": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+          }
+        },
+        "clock": {
+          "hour": {
+            "show": "Mostrar horas",
+            "display": {
+              "number": "Como numero",
+              "word": "Una espada"
+            }
+          },
+          "minute": {
+            "show": "Mostrar minutos",
+            "display": {
+              "number": "Como numero",
+              "word": "Una espada"
+            }
+          },
+          "second": {
+            "show": "Mostrar segundos",
+            "display": {
+              "number": "Como numero",
+              "word": "Una espada"
+            }
+          },
+          "separator": {
+            "show": "Mostrar separador",
+            "label": "Carácter separador",
+            "placeholder": ":"
+          },
+          "hour24": "24 horas",
+          "meridiem": "AM PM",
+          "size": "Tamaño",
+          "newLine": {
+            "label": "Nueva línea",
+            "description": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+          }
+        },
+        "date": {
+          "day": {
+            "show": "Show Day",
+            "display": {
+              "number": "Como numero",
+              "word": "Una espada",
+              "weekStart": {
+                "label": "Comienzo de la semana",
+                "monday": "lunes",
+                "sunday": "domingo"
+              },
+              "length": {
+                "label": "Longitud de la palabra",
+                "long": "Largo",
+                "short": "Corto"
+              }
+            }
+          },
+          "date": {
+            "show": "Mostrar fecha",
+            "display": {
+              "number": "Como numero",
+              "word": "Una espada",
+              "ordinal": "Números ordinales"
+            }
+          },
+          "month": {
+            "show": "Mostrar mes",
+            "display": {
+              "number": "Como numero",
+              "word": "Una espada",
+              "ordinal": "Números ordinales",
+              "length": {
+                "label": "Longitud de la palabra",
+                "long": "Largo",
+                "short": "Corto"
+              }
+            }
+          },
+          "year": {
+            "show": "Mostrar año",
+            "display": {
+              "number": "Como numero",
+              "word": "Una espada"
+            }
+          },
+          "separator": {
+            "show": "Mostrar separador",
+            "label": "Carácter separador",
+            "placeholder": "/"
+          },
+          "format": {
+            "label": "Formato",
+            "dateMonth": "Fecha / mes",
+            "monthDate": "Mes / fecha"
+          },
+          "size": "Tamaño",
+          "newLine": {
+            "label": "Nueva línea",
+            "description": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+          }
+        },
+        "search": {
+          "show": "Mostrar búsqueda",
+          "width": {
+            "label": "Ancho del cuadro de búsqueda",
+            "auto": {
+              "label": "Ancho automático",
+              "description": "El cuadro de búsqueda crecerá para adaptarse mejor al espacio disponible."
+            },
+            "custom": {
+              "label": "Ancho personalizado",
+              "description": "Defina el ancho que debe tener el cuadro de búsqueda dentro del área de encabezado."
+            },
+            "size": "Ancho"
+          },
+          "size": "Tamaño",
+          "newLine": {
+            "label": "Nueva línea",
+            "description": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+          },
+          "engine": {
+            "selected": {
+              "label": "Buscador",
+              "custom": "Personalizado"
+            },
+            "custom": {
+              "name": {
+                "label": "Nombre",
+                "placeholder": "Nombre del motor de búsqueda"
+              },
+              "url": {
+                "label": "URL",
+                "placeholder": "https://",
+                "helper": [
+                  "Introduzca una dirección web con los parámetros de búsqueda, por ejemplo: \"https://vimeo.com/search?q=\"",
+                  "{appName} agregará el término de búsqueda ingresado en el cuadro de búsqueda al final de la URL anterior."
+                ]
+              },
+              "queryName": {
+                "label": "Atributo de nombre",
+                "placeholder": "q",
+                "helper": [
+                  "Establece el atributo de nombre en el campo de entrada de búsqueda.",
+                  "Esto define el nombre que se pasa al motor de búsqueda al enviar. Si no está seguro, déjelo en blanco."
+                ]
+              }
+            },
+            "text": {
+              "justify": {
+                "label": "Alineación del texto de búsqueda",
+                "left": "Izquierda",
+                "center": "Centrar",
+                "right": "Correcto"
+              }
+            }
+          },
+          "newTab": "Abrir resultados de búsqueda en una nueva pestaña"
+        }
+      },
+      "bookmark": {
+        "general": {
+          "show": "Mostrar marcadores",
+          "urlShow": "Mostrar URL al colocar el cursor sobre el marcador",
+          "lineShow": "Mostrar línea de marcador",
+          "shadowShow": {
+            "label": "Mostrar sombra al desplazar el marcador",
+            "description": "Es posible que los efectos no sean visibles si Theme Shadow se establece en 0."
+          },
+          "hoverScaleShow": "Crecer al desplazar el marcador",
+          "newTab": "Abrir marcadores en una nueva pestaña",
+          "size": "Tamaño del marcador"
+        },
+        "style": {
+          "block": {
+            "label": "Cuadra",
+            "description": "Azulejos de marcador de forma cuadrada."
+          },
+          "list": {
+            "label": "Lista",
+            "description": "Azulejos de marcadores cortos y anchos."
+          }
+        },
+        "orientation": {
+          "top": "Cima",
+          "bottom": "Fondo",
+          "helper": [
+            "Muestre la URL y los controles en la parte superior o inferior de un mosaico de marcadores."
+          ]
+        },
+        "sort": {
+          "letter": "Por carta",
+          "icon": "Por icono",
+          "name": "Por nombre"
+        }
+      },
+      "group": {
+        "alignment": {
+          "justify": {
+            "label": "Alineación del área de detalles del grupo",
+            "left": "Izquierda",
+            "center": "Centrar",
+            "right": "Correcto"
+          },
+          "order": {
+            "label": "Orden de detalles de grupo",
+            "headerBody": {
+              "label": "Detalles del grupo y luego Marcadores",
+              "description": "Ordene que el área de detalles del grupo aparezca antes del área de marcadores."
+            },
+            "bodyHeader": {
+              "label": "Marcadores y luego Detalles del grupo",
+              "description": "Ordene que el área de marcadores aparezca antes del área de detalles del grupo."
+            }
+          }
+        },
+        "name": {
+          "size": "Tamaño del nombre",
+          "show": "Mostrar todo",
+          "hide": "Ocultar todo",
+          "helper": [
+            "Los nombres de los grupos también se pueden cambiar editando grupos individuales."
+          ]
+        },
+        "collapse": {
+          "show": "Abrir todos los grupos",
+          "hide": "Contraer todos los grupos"
+        },
+        "toolbar": {
+          "size": "Tamaño de la barra de herramientas del grupo",
+          "collapse": {
+            "label": "Control de colapso de grupo",
+            "show": "Mostrar todo",
+            "hide": "Ocultar todo",
+            "helper": [
+              "El botón de contracción de la barra de herramientas de grupo también se puede cambiar editando grupos individuales."
+            ]
+          },
+          "openAll": {
+            "label": "Grupo Abrir todo el control",
+            "show": "Mostrar todo",
+            "hide": "Ocultar todo",
+            "helper": [
+              "El botón Abrir todo de la barra de herramientas de grupo también se puede cambiar editando Grupos individuales."
+            ]
+          }
+        }
+      },
+      "toolbar": {
+        "size": "Tamaño de la barra de herramientas",
+        "location": {
+          "corner": "En una esquina",
+          "header": "En el encabezado",
+          "helper": [
+            "Coloque la barra de herramientas dentro del encabezado o en una esquina de la ventana."
+          ],
+          "newLine": {
+            "label": "Nueva línea",
+            "description": "Forzar a una nueva línea y separar de otros elementos de Encabezado.",
+            "helper": [
+              "Solo disponible cuando la barra de herramientas se coloca dentro del encabezado."
+            ]
+          }
+        },
+        "position": {
+          "label": "Posición de la barra de herramientas",
+          "topLeft": "Arriba a la izquierda",
+          "topRight": "Parte superior derecha",
+          "bottomLeft": "Abajo a la izquierda",
+          "bottomRight": "Abajo a la derecha",
+          "helper1": [
+            "Coloque la barra de herramientas en una de las cuatro esquinas de la ventana."
+          ],
+          "helper2": [
+            "Solo disponible cuando la barra de herramientas está colocada en una esquina."
+          ]
+        },
+        "controls": {
+          "accent": "Mostrar control de acento",
+          "add": "Mostrar Agregar control",
+          "edit": "Mostrar control de edición"
+        }
+      },
+      "data": {
+        "restore": {
+          "file": "Importar desde archivo",
+          "clipboard": "Importar desde el portapapeles",
+          "helper": [
+            "Restaura una copia de seguridad de {appName}"
+          ],
+          "drop": "O suelte un archivo de copia de seguridad de {appName}"
+        },
+        "backup": {
+          "file": "Exportar datos",
+          "clipboard": "Copiar al portapapeles",
+          "helper": [
+            "Descarga una copia de seguridad de tus marcadores y configuración de {appName}",
+            "Este archivo se puede importar posteriormente en este u otro dispositivo."
+          ]
+        },
+        "clear": {
+          "all": "Borrar todos los datos",
+          "partial": "Borrar todo excepto los marcadores",
+          "alert": {
+            "p1": "Perderá los marcadores al borrar todos los datos.",
+            "link": "Copia de seguridad de sus datos"
+          },
+          "helper": [
+            "Borre todos los datos para restablecer {appName} al estado predeterminado.",
+            "Alternativamente, es posible borrar todas las configuraciones pero mantener los marcadores y grupos actuales."
+          ]
+        }
+      },
+      "support": {
+        "page": {
+          "applyToAll": "Aplicar la configuración de marcadores a todos",
+          "browser": "Soporte del navegador",
+          "cookies": "Cookies y caché",
+          "data": "Respaldo y restauración de datos",
+          "localBackgroundImage": "Imagen de fondo local",
+          "protectedUrl": "URL protegidas",
+          "recovering": "Recuperar configuraciones y marcadores",
+          "resetting": "Restablecimiento al abrir el navegador",
+          "privacy": "Respetando tu privacidad",
+          "backgroundImageVideo": "Configurar un video o una imagen de fondo",
+          "firefox": "Configurando {appName} como tu página de inicio de Firefox"
+        },
+        "p1": "Para obtener más apoyo o comentarios:",
+        "link1": "Envíe un problema.",
+        "link2": "Consulta la Wiki."
+      },
+      "coffee": {
+        "p1": "{appName} es gratis, ¡agradecimiento en forma de café!",
+        "button": "Cómprame un café"
+      },
+      "app": {
+        "para1": "Comparta su configuración con la comunidad.",
+        "link1": "Encontrado en Reddit /r/{appName}.",
+        "para2": "Este proyecto es de código abierto.",
+        "link2": "Encontrado en GitHub.",
+        "link3": "Licencia pública general GNU v3.0."
+      }
+    }
+  }
+}

@@ -303,14 +303,14 @@ headerSetting.disable = () => {
   }
 
   if ((
-    state.get.current().header.clock.second.show ||
+      state.get.current().header.clock.second.show ||
       state.get.current().header.clock.minute.show ||
       state.get.current().header.clock.hour.show ||
       state.get.current().header.date.day.show ||
       state.get.current().header.date.date.show ||
       state.get.current().header.date.month.show ||
       state.get.current().header.date.year.show
-  ) &&
+    ) &&
     state.get.current().header.transitional.show) {
     headerSetting.control.transitional.type.enable();
     headerSetting.control.transitional.size.enable();
@@ -491,7 +491,7 @@ headerSetting.greeting = (parent) => {
 
   headerSetting.control.greeting.type = new Control_radio({
     object: state.get.current(),
-    label: 'Wording',
+    label: language.current.menu.content.header.greeting.type.label,
     radioGroup: [
       { id: 'header-greeting-type-good', labelText: language.current.menu.content.header.greeting.type.good, value: 'good' },
       { id: 'header-greeting-type-hello', labelText: language.current.menu.content.header.greeting.type.hello, value: 'hello' },
@@ -1554,8 +1554,8 @@ headerSetting.search = (parent) => {
       object: state.get.current(),
       label: language.current.menu.content.header.search.width.label,
       radioGroup: [
-        { id: 'header-search-width-by-auto', labelText: language.current.menu.content.header.search.width.auto.label, description: 'Search box will grow to best fit available space.', value: 'auto' },
-        { id: 'header-search-width-by-custom', labelText: language.current.menu.content.header.search.width.custom.label, description: 'Define how wide the Search box should be inside the Header Area.', value: 'custom' }
+        { id: 'header-search-width-by-auto', labelText: language.current.menu.content.header.search.width.auto.label, description: language.current.menu.content.header.search.width.auto.description, value: 'auto' },
+        { id: 'header-search-width-by-custom', labelText: language.current.menu.content.header.search.width.custom.label, description: language.current.menu.content.header.search.width.custom.description, value: 'custom' }
       ],
       groupName: 'header-search-width-by',
       path: 'header.search.width.by',

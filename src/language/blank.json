@@ -1,0 +1,1153 @@
+{
+  "menu": {
+    "nav": {
+      "theme": {
+        "label": "xxx",
+        "subNav": {
+          "preset": "xxx",
+          "saved": "xxx",
+          "style": "xxx",
+          "color": "xxx",
+          "accent": "xxx",
+          "font": "xxx",
+          "radius": "xxx",
+          "shadow": "xxx",
+          "shade": "xxx",
+          "opacity": "xxx",
+          "background": "xxx",
+          "layout": "xxx",
+          "header": "xxx",
+          "bookmark": "xxx"
+        }
+      },
+      "layout": {
+        "label": "xxx",
+        "subNav": {
+          "scaling": "xxx",
+          "area": "xxx",
+          "padding": "xxx",
+          "gutter": "xxx",
+          "alignment": "xxx",
+          "page": "xxx"
+        }
+      },
+      "header": {
+        "label": "xxx",
+        "subNav": {
+          "alignment": "xxx",
+          "greeting": "xxx",
+          "transitional": "xxx",
+          "clock": "xxx",
+          "date": "xxx",
+          "search": "xxx"
+        }
+      },
+      "bookmark": {
+        "label": "xxx",
+        "subNav": {
+          "general": "xxx",
+          "style": "xxx",
+          "orientation": "xxx",
+          "sort": "xxx"
+        }
+      },
+      "group": {
+        "label": "xxx",
+        "subNav": {
+          "alignment": "xxx",
+          "name": "xxx",
+          "collapse": "xxx",
+          "toolbar": "xxx"
+        }
+      },
+      "toolbar": {
+        "label": "xxx",
+        "subNav": {
+          "size": "xxx",
+          "location": "xxx",
+          "position": "xxx",
+          "controls": "xxx"
+        }
+      },
+      "data": {
+        "label": "xxx",
+        "subNav": {
+          "restore": "xxx",
+          "backup": "xxx",
+          "clear": "xxx"
+        }
+      },
+      "support": {
+        "label": "xxx"
+      },
+      "coffee": {
+        "label": "xxx"
+      },
+      "app": {
+        "label": "xxx"
+      }
+    },
+    "content": {
+      "theme": {
+        "preset": {
+          "helper": [
+            "xxx"
+          ]
+        },
+        "saved": {
+          "helper": [
+            "xxx"
+          ],
+          "save": "xxx",
+          "edit": "xxx"
+        },
+        "style": {
+          "dark": {
+            "label": "xxx"
+          },
+          "light": {
+            "label": "xxx"
+          },
+          "automatic": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "color": {
+          "shade": {
+            "helper": [
+              "xxx",
+              "xxx",
+              "xxx"
+            ]
+          },
+          "range": {
+            "primary": {
+              "h": "xxx",
+              "s": "xxx"
+            }
+          },
+          "contrast": {
+            "label": "xxx",
+            "left": "xxx",
+            "right": "xxx",
+            "helper": [
+              "xxx",
+              "xxx"
+            ]
+          }
+        },
+        "accent": {
+          "preset": {
+            "color": {
+              "grey": "xxx",
+              "red": "xxx",
+              "orange": "xxx",
+              "yellow": "xxx",
+              "lime": "xxx",
+              "green": "xxx",
+              "aqua": "xxx",
+              "cyan": "xxx",
+              "teal": "xxx",
+              "blue": "xxx",
+              "purple": "xxx",
+              "magenta": "xxx",
+              "fuchsia": "xxx"
+            },
+            "modifier": {
+              "light": {
+                "level3": "xxx",
+                "level2": "xxx",
+                "level1": "xxx"
+              },
+              "dark": {
+                "level3": "xxx",
+                "level2": "xxx",
+                "level1": "xxx"
+              }
+            }
+          },
+          "color": "xxx",
+          "random": {
+            "active": "xxx",
+            "style": {
+              "any": "xxx",
+              "light": "xxx",
+              "dark": "xxx",
+              "pastel": "xxx",
+              "saturated": "xxx"
+            },
+            "randomise": "xxx"
+          },
+          "cycle": {
+            "active": "xxx",
+            "speed": "xxx",
+            "step": "xxx",
+            "alert": "xxx",
+            "helper": [
+              "xxx"
+            ]
+          }
+        },
+        "font": {
+          "display": {
+            "name": {
+              "label": "xxx",
+              "placeholder": "xxx",
+              "helper": {
+                "p1": {
+                  "a1": "xxx",
+                  "a2": "xxx",
+                  "a3": "xxx"
+                },
+                "p2": "xxx",
+                "p3": "xxx"
+              }
+            },
+            "weight": {
+              "label": "xxx",
+              "light": "xxx",
+              "regular": "xxx",
+              "bold": "xxx",
+              "helper": [
+                "xxx"
+              ]
+            },
+            "style": {
+              "normal": "xxx",
+              "italic": "xxx"
+            }
+          },
+          "ui": {
+            "name": {
+              "label": "xxx",
+              "placeholder": "xxx",
+              "helper": {
+                "p1": {
+                  "a1": "xxx",
+                  "a2": "xxx",
+                  "a3": "xxx"
+                },
+                "p2": "xxx",
+                "p3": "xxx"
+              }
+            },
+            "weight": {
+              "label": "xxx",
+              "light": "xxx",
+              "regular": "xxx",
+              "bold": "xxx",
+              "helper": [
+                "xxx"
+              ]
+            },
+            "style": {
+              "normal": "xxx",
+              "italic": "xxx"
+            }
+          }
+        },
+        "radius": "xxx",
+        "shadow": "xxx",
+        "shade": {
+          "opacity": "xxx",
+          "blur": {
+            "label": "xxx",
+            "helper": [
+              "xxx"
+            ]
+          }
+        },
+        "opacity": {
+          "general": {
+            "label": "xxx",
+            "helper": [
+              "xxx",
+              "xxx"
+            ]
+          },
+          "toolbar": "xxx",
+          "bookmark": "xxx",
+          "search": "xxx",
+          "groupToolbar": "xxx"
+        },
+        "background": {
+          "type": {
+            "theme": {
+              "label": "xxx",
+              "description": [
+                "xxx"
+              ]
+            },
+            "accent": {
+              "label": "xxx",
+              "description": [
+                "xxx"
+              ]
+            },
+            "color": "xxx",
+            "gradient": "xxx",
+            "image": "xxx",
+            "video": "xxx"
+          },
+          "color": "xxx",
+          "gradient": {
+            "angle": "xxx",
+            "start": "xxx",
+            "end": "xxx"
+          },
+          "image": {
+            "alert": {
+              "p1": "xxx",
+              "p2": "xxx"
+            },
+            "url": {
+              "label": "xxx",
+              "placeholder": "xxx",
+              "helper": [
+                "xxx",
+                "xxx",
+                "xxx",
+                "xxx"
+              ]
+            },
+            "blur": "xxx",
+            "grayscale": "xxx",
+            "scale": "xxx",
+            "accent": "xxx",
+            "opacity": "xxx",
+            "vignette": {
+              "opacity": "xxx",
+              "range": {
+                "label": "xxx",
+                "left": "xxx",
+                "right": "xxx"
+              }
+            }
+          },
+          "video": {
+            "alert": {
+              "p1": "xxx",
+              "p2": "xxx"
+            },
+            "url": {
+              "label": "xxx",
+              "placeholder": "xxx",
+              "helper": [
+                "xxx",
+                "xxx"
+              ]
+            },
+            "blur": "xxx",
+            "grayscale": "xxx",
+            "scale": "xxx",
+            "accent": "xxx",
+            "opacity": "xxx",
+            "vignette": {
+              "opacity": "xxx",
+              "range": {
+                "label": "xxx",
+                "start": "xxx",
+                "end": "xxx"
+              }
+            }
+          }
+        },
+        "layout": {
+          "color": {
+            "label": "xxx",
+            "by": {
+              "transparent": {
+                "label": "xxx",
+                "description": "xxx"
+              },
+              "custom": {
+                "label": "xxx",
+                "description": "xxx"
+              }
+            },
+            "color": "xxx",
+            "opacity": "xxx",
+            "blur": {
+              "label": "xxx",
+              "helper": [
+                "xxx"
+              ]
+            }
+          },
+          "divider": "xxx"
+        },
+        "header": {
+          "color": {
+            "label": "xxx",
+            "by": {
+              "transparent": {
+                "label": "xxx",
+                "description": "xxx"
+              },
+              "custom": {
+                "label": "xxx",
+                "description": "xxx"
+              }
+            },
+            "color": "xxx",
+            "opacity": "xxx"
+          }
+        },
+        "bookmark": {
+          "color": {
+            "label": "xxx",
+            "by": {
+              "transparent": {
+                "label": "xxx",
+                "description": "xxx"
+              },
+              "custom": {
+                "label": "xxx",
+                "description": "xxx"
+              }
+            },
+            "color": "xxx",
+            "opacity": "xxx"
+          },
+          "item": {
+            "border": {
+              "label": "xxx",
+              "helper": [
+                "xxx",
+                "xxx"
+              ]
+            },
+            "rainbow": {
+              "add": "xxx",
+              "remove": "xxx",
+              "helper": [
+                "xxx"
+              ]
+            }
+          }
+        }
+      },
+      "layout": {
+        "scaling": {
+          "size": "xxx"
+        },
+        "area": {
+          "width": "xxx",
+          "header": {
+            "width": "xxx",
+            "justify": {
+              "label": "xxx",
+              "left": "xxx",
+              "center": "xxx",
+              "right": "xxx",
+              "helper1": [
+                "xxx"
+              ],
+              "helper2": [
+                "xxx"
+              ]
+            }
+          },
+          "bookmark": {
+            "width": "xxx",
+            "justify": {
+              "label": "xxx",
+              "left": "xxx",
+              "center": "xxx",
+              "right": "xxx",
+              "helper1": [
+                "xxx"
+              ],
+              "helper2": [
+                "xxx"
+              ]
+            }
+          }
+        },
+        "padding": "xxx",
+        "gutter": "xxx",
+        "alignment": {
+          "label": "xxx",
+          "topLeft": "xxx",
+          "topCenter": "xxx",
+          "topRight": "xxx",
+          "centerLeft": "xxx",
+          "centerCenter": "xxx",
+          "centerRight": "xxx",
+          "bottomLeft": "xxx",
+          "bottomCenter": "xxx",
+          "bottomRight": "xxx"
+        },
+        "direction": {
+          "horizontal": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "vertical": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "order": {
+          "headerBookmark": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "bookmarkHeader": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "page": {
+          "title": {
+            "label": "xxx",
+            "placeholder": "xxx"
+          },
+          "favicon": {
+            "label": "xxx",
+            "placeholder": "xxx",
+            "helper": [
+              "xxx"
+            ]
+          },
+          "scrollbar": {
+            "label": "xxx",
+            "auto": "xxx",
+            "thin": "xxx",
+            "none": "xxx",
+            "helper": [
+              "xxx"
+            ]
+          },
+          "overscroll": {
+            "active": "xxx",
+            "unblur": {
+              "label": "xxx",
+              "description": [
+                "xxx",
+                "xxx"
+              ]
+            }
+          }
+        }
+      },
+      "header": {
+        "alignment": {
+          "justify": {
+            "label": "xxx",
+            "left": "xxx",
+            "center": "xxx",
+            "right": "xxx"
+          },
+          "helper": [
+            "xxx"
+          ]
+        },
+        "greeting": {
+          "show": "xxx",
+          "size": "xxx",
+          "newLine": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "type": {
+            "label": "xxx",
+            "good": "xxx",
+            "hello": "xxx",
+            "hi": "xxx",
+            "none": {
+              "label": "xxx",
+              "description": "xxx"
+            },
+            "custom": {
+              "label": "xxx",
+              "description": [
+                "xxx",
+                "xxx"
+              ]
+            }
+          },
+          "custom": {
+            "label": "xxx",
+            "placeholder": "xxx"
+          },
+          "name": {
+            "label": "xxx",
+            "placeholder": "xxx"
+          }
+        },
+        "transitional": {
+          "show": {
+            "label": "xxx",
+            "helper": [
+              "xxx"
+            ]
+          },
+          "type": {
+            "label": "xxx",
+            "timeAndDate": "xxx",
+            "its": "xxx"
+          },
+          "size": "xxx",
+          "newLine": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "clock": {
+          "hour": {
+            "show": "xxx",
+            "display": {
+              "number": "xxx",
+              "word": "xxx"
+            }
+          },
+          "minute": {
+            "show": "xxx",
+            "display": {
+              "number": "xxx",
+              "word": "xxx"
+            }
+          },
+          "second": {
+            "show": "xxx",
+            "display": {
+              "number": "xxx",
+              "word": "xxx"
+            }
+          },
+          "separator": {
+            "show": "xxx",
+            "label": "xxx",
+            "placeholder": "xxx"
+          },
+          "hour24": "xxx",
+          "meridiem": "xxx",
+          "size": "xxx",
+          "newLine": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "date": {
+          "day": {
+            "show": "xxx",
+            "display": {
+              "number": "xxx",
+              "word": "xxx",
+              "weekStart": {
+                "label": "xxx",
+                "monday": "xxx",
+                "sunday": "xxx"
+              },
+              "length": {
+                "label": "xxx",
+                "long": "xxx",
+                "short": "xxx"
+              }
+            }
+          },
+          "date": {
+            "show": "xxx",
+            "display": {
+              "number": "xxx",
+              "word": "xxx",
+              "ordinal": "xxx"
+            }
+          },
+          "month": {
+            "show": "xxx",
+            "display": {
+              "number": "xxx",
+              "word": "xxx",
+              "ordinal": "xxx",
+              "length": {
+                "label": "xxx",
+                "long": "xxx",
+                "short": "xxx"
+              }
+            }
+          },
+          "year": {
+            "show": "xxx",
+            "display": {
+              "number": "xxx",
+              "word": "xxx"
+            }
+          },
+          "separator": {
+            "show": "xxx",
+            "label": "xxx",
+            "placeholder": "xxx"
+          },
+          "format": {
+            "label": "xxx",
+            "dateMonth": "xxx",
+            "monthDate": "xxx"
+          },
+          "size": "xxx",
+          "newLine": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "search": {
+          "show": "xxx",
+          "width": {
+            "label": "xxx",
+            "auto": {
+              "label": "xxx",
+              "description": "xxx"
+            },
+            "custom": {
+              "label": "xxx",
+              "description": "xxx"
+            },
+            "size": "xxx"
+          },
+          "size": "xxx",
+          "newLine": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "engine": {
+            "selected": {
+              "label": "xxx",
+              "custom": "xxx"
+            },
+            "custom": {
+              "name": {
+                "label": "xxx",
+                "placeholder": "xxx"
+              },
+              "url": {
+                "label": "xxx",
+                "placeholder": "xxx",
+                "helper": [
+                  "xxx",
+                  "xxx"
+                ]
+              },
+              "queryName": {
+                "label": "xxx",
+                "placeholder": "xxx",
+                "helper": [
+                  "xxx",
+                  "xxx"
+                ]
+              }
+            },
+            "text": {
+              "justify": {
+                "label": "xxx",
+                "left": "xxx",
+                "center": "xxx",
+                "right": "xxx"
+              }
+            }
+          },
+          "newTab": "xxx"
+        }
+      },
+      "bookmark": {
+        "general": {
+          "show": "xxx",
+          "urlShow": "xxx",
+          "lineShow": "xxx",
+          "shadowShow": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "hoverScaleShow": "xxx",
+          "newTab": "xxx",
+          "size": "xxx"
+        },
+        "style": {
+          "block": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "list": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "orientation": {
+          "top": "xxx",
+          "bottom": "xxx",
+          "helper": [
+            "xxx"
+          ]
+        },
+        "sort": {
+          "letter": "xxx",
+          "icon": "xxx",
+          "name": "xxx"
+        }
+      },
+      "group": {
+        "alignment": {
+          "justify": {
+            "label": "xxx",
+            "left": "xxx",
+            "center": "xxx",
+            "right": "xxx"
+          },
+          "order": {
+            "label": "xxx",
+            "headerBody": {
+              "label": "xxx",
+              "description": "xxx"
+            },
+            "bodyHeader": {
+              "label": "xxx",
+              "description": "xxx"
+            }
+          }
+        },
+        "name": {
+          "size": "xxx",
+          "show": "xxx",
+          "hide": "xxx",
+          "helper": [
+            "xxx"
+          ]
+        },
+        "collapse": {
+          "show": "xxx",
+          "hide": "xxx"
+        },
+        "toolbar": {
+          "size": "xxx",
+          "collapse": {
+            "label": "xxx",
+            "show": "xxx",
+            "hide": "xxx",
+            "helper": [
+              "xxx"
+            ]
+          },
+          "openAll": {
+            "label": "xxx",
+            "show": "xxx",
+            "hide": "xxx",
+            "helper": [
+              "xxx"
+            ]
+          }
+        }
+      },
+      "toolbar": {
+        "size": "xxx",
+        "location": {
+          "corner": "xxx",
+          "header": "xxx",
+          "helper": [
+            "xxx"
+          ],
+          "newLine": {
+            "label": "xxx",
+            "description": "xxx",
+            "helper": [
+              "xxx"
+            ]
+          }
+        },
+        "position": {
+          "label": "xxx",
+          "topLeft": "xxx",
+          "topRight": "xxx",
+          "bottomLeft": "xxx",
+          "bottomRight": "xxx",
+          "helper1": [
+            "xxx"
+          ],
+          "helper2": [
+            "xxx"
+          ]
+        },
+        "controls": {
+          "accent": "xxx",
+          "add": "xxx",
+          "edit": "xxx"
+        }
+      },
+      "data": {
+        "restore": {
+          "file": "xxx",
+          "clipboard": "xxx",
+          "helper": [
+            "xxx"
+          ],
+          "drop": "xxx"
+        },
+        "backup": {
+          "file": "xxx",
+          "clipboard": "xxx",
+          "helper": [
+            "xxx",
+            "xxx"
+          ]
+        },
+        "clear": {
+          "all": "xxx",
+          "partial": "xxx",
+          "alert": {
+            "p1": "xxx",
+            "link": "xxx"
+          },
+          "helper": [
+            "xxx",
+            "xxx"
+          ]
+        }
+      },
+      "support": {
+        "page": {
+          "applyToAll": "xxx",
+          "browser": "xxx",
+          "cookies": "xxx",
+          "data": "xxx",
+          "localBackgroundImage": "xxx",
+          "protectedUrl": "xxx",
+          "recovering": "xxx",
+          "resetting": "xxx",
+          "privacy": "xxx",
+          "backgroundImageVideo": "xxx",
+          "firefox": "xxx"
+        },
+        "p1": "xxx",
+        "link1": "xxx",
+        "link2": "xxx"
+      },
+      "coffee": {
+        "p1": "xxx",
+        "button": "xxx"
+      },
+      "app": {
+        "para1": "xxx",
+        "link1": "xxx",
+        "para2": "xxx",
+        "link2": "xxx",
+        "link3": "xxx"
+      }
+    }
+  },
+  "bookmark": {
+    "add": {
+      "heading": "xxx",
+      "successText": "xxx",
+      "cancelText": "xxx"
+    },
+    "remove": {
+      "heading": {
+        "name": "xxx",
+        "unnamed": "xxx"
+      },
+      "content": "xxx",
+      "successText": "xxx",
+      "cancelText": "xxx"
+    },
+    "edit": {
+      "heading": {
+        "name": "xxx",
+        "unnamed": "xxx"
+      },
+      "successText": "xxx",
+      "cancelText": "xxx"
+    },
+    "form": {
+      "tab": {
+        "visual": "xxx",
+        "address": "xxx",
+        "position": "xxx",
+        "layout": "xxx",
+        "theme": "xxx"
+      },
+      "url": {
+        "label": "xxx",
+        "placeholder": "xxx"
+      },
+      "display": {
+        "alignment": {
+          "label": "xxx",
+          "topLeft": "xxx",
+          "topCenter": "xxx",
+          "topRight": "xxx",
+          "centerLeft": "xxx",
+          "centerCenter": "xxx",
+          "centerRight": "xxx",
+          "bottomLeft": "xxx",
+          "bottomCenter": "xxx",
+          "bottomRight": "xxx"
+        },
+        "direction": {
+          "vertical": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "horizontal": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "order": {
+          "visualName": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "nameVisual": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "rotate": "xxx",
+        "translate": {
+          "label": "xxx",
+          "x": "xxx",
+          "y": "xxx"
+        },
+        "gutter": "xxx",
+        "visual": {
+          "show": "xxx",
+          "type": {
+            "letter": "xxx",
+            "icon": "xxx",
+            "image": "xxx"
+          },
+          "size": "xxx",
+          "letter": {
+            "text": {
+              "label": "xxx",
+              "placeholder": "xxx"
+            }
+          },
+          "icon": {
+            "text": {
+              "label": "xxx",
+              "placeholder": "xxx"
+            },
+            "remove": "xxx"
+          },
+          "image": {
+            "url": {
+              "label": "xxx",
+              "placeholder": "xxx"
+            }
+          },
+          "shadow": {
+            "size": "xxx",
+            "helper": ["xxx"]
+          }
+        },
+        "name": {
+          "show": "xxx",
+          "text": {
+            "label": "xxx",
+            "placeholder": "xxx"
+          },
+          "size": "xxx"
+        }
+      },
+      "accent": {
+        "by": {
+          "theme": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "custom": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "color": "xxx"
+      },
+      "color": {
+        "by": {
+          "theme": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "custom": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "color": "xxx",
+        "opacity": "xxx"
+      },
+      "background": {
+        "show": {
+          "label": "xxx",
+          "description": "xxx"
+        },
+        "type": {
+          "image": "xxx",
+          "video": "xxx"
+        },
+        "opacity": "xxx",
+        "image": {
+          "label": "xxx",
+          "placeholder": "xxx",
+          "helper": ["xxx"]
+        },
+        "video": {
+          "label": "xxx",
+          "placeholder": "xxx",
+          "helper": ["xxx"]
+        }
+      },
+      "border": "xxx",
+      "shape": {
+        "wide": {
+          "label": "xxx",
+          "description": "xxx"
+        },
+        "tall": {
+          "label": "xxx",
+          "description": "xxx"
+        }
+      },
+      "group": {
+        "destination": {
+          "existing": "xxx",
+          "new": "xxx"
+        },
+        "name": {
+          "label": "xxx",
+          "placeholder": "xxx"
+        },
+        "random": "",
+        "position": {
+          "group": "xxx",
+          "item": "xxx"
+        }
+      },
+      "propagate": {
+        "visual": {
+          "label": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "layout": {
+          "label": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "theme": {
+          "label": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        }
+      }
+    },
+    "preview": {
+      "full": "xxx",
+      "half": "xxx"
+    }
+  }
+}

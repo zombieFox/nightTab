@@ -699,8 +699,86 @@
           "newTab": "Open Search results in a new tab"
         }
       },
-      "bookmark": {},
-      "group": {},
+      "bookmark": {
+        "general": {
+          "show": "Show Bookmarks",
+          "urlShow": "Show URL on Bookmark hover",
+          "lineShow": "Show Bookmark line",
+          "shadowShow": {
+            "label": "Show shadow on Bookmark hover",
+            "description": "Effects may not be visible if Theme Shadow is set to 0."
+          },
+          "hoverScaleShow": "Grow on Bookmark hover",
+          "newTab": "Open Bookmarks in a new tab",
+          "size": "Bookmark size"
+        },
+        "style": {
+          "block": {
+            "label": "Block",
+            "description": "Square shaped Bookmark tiles."
+          },
+          "list": {
+            "label": "List",
+            "description": "Short and wide Bookmark tiles."
+          }
+        },
+        "orientation": {
+          "top": "Top",
+          "bottom": "Bottom",
+          "helper": ["Display the URL and Controls either at the top or bottom of a Bookmark Tile."]
+        },
+        "sort": {
+          "letter": "By letter",
+          "icon": "By icon",
+          "name": "By name"
+        }
+      },
+      "group": {
+        "alignment": {
+          "justify": {
+            "label": "Group details area alignment",
+            "left": "Left",
+            "center": "Centre",
+            "right": "Right"
+          },
+          "order": {
+            "label": "Group details order",
+            "headerBody": {
+              "label": "Group details then Bookmarks",
+              "description": "Order the Group details area to appear before the Bookmarks area."
+            },
+            "bodyHeader": {
+              "label": "Bookmarks then Group details",
+              "description": "Order the Bookmarks area to appear before the Group details area."
+            }
+          }
+        },
+        "name": {
+          "size": "Name size",
+          "show": "Show all",
+          "hide": "Hide all",
+          "helper": ["Group Names can also be changed by editing individual Groups."]
+        },
+        "collapse": {
+          "show": "Open all groups",
+          "hide": "Collapse all groups"
+        },
+        "toolbar": {
+          "size": "Group toolbar size",
+          "collapse": {
+            "label": "Group Collapse control",
+            "show": "Show all",
+            "hide": "Hide all",
+            "helper": ["Group toolbar collapse button can also be changed by editing individual Groups."]
+          },
+          "openAll": {
+            "label": "Group Open all control",
+            "show": "Show all",
+            "hide": "Hide all",
+            "helper": ["Group toolbar open all button can also be changed by editing individual Groups."]
+          }
+        }
+      },
       "toolbar": {
         "size": "Toolbar size",
         "location": {
@@ -779,6 +857,222 @@
         "link2": "Found on GitHub.",
         "link3": "GNU General Public License v3.0."
       }
+    }
+  },
+  "bookmark": {
+    "add": {
+      "heading": "Add a new Bookmark",
+      "successText": "Add",
+      "cancelText": "Cancel"
+    },
+    "remove": {
+      "heading": {
+        "name": "Remove",
+        "unnamed": "Remove unnamed bookmark"
+      },
+      "content": "Are you sure you want to remove this Bookmark? This can not be undone.",
+      "successText": "Remove",
+      "cancelText": "Cancel"
+    },
+    "edit": {
+      "heading": {
+        "name": "Edit",
+        "unnamed": "Edit unnamed bookmark"
+      },
+      "successText": "Save",
+      "cancelText": "Cancel"
+    },
+    "form": {
+      "tab": {
+        "visual": "Visual & Name",
+        "address": "Address",
+        "position": "Position",
+        "layout": "Layout",
+        "theme": "Theme"
+      },
+      "url": {
+        "label": "URL",
+        "placeholder": "https://www.example.com/"
+      },
+      "display": {
+        "alignment": {
+          "label": "Visual Element and Name alignment",
+          "topLeft": "Top Left",
+          "topCenter": "Top Centre",
+          "topRight": "Top Right",
+          "centerLeft": "Centre Left",
+          "centerCenter": "Centre Centre",
+          "centerRight": "Centre Right",
+          "bottomLeft": "Bottom Left",
+          "bottomCenter": "Bottom Centre",
+          "bottomRight": "Bottom Right"
+        },
+        "direction": {
+          "vertical": {
+            "label": "Vertical",
+            "description": "Stack the Visual Element and Name one above the other."
+          },
+          "horizontal": {
+            "label": "Horizontal",
+            "description": "Arrange the Visual Element and Name side by side."
+          }
+        },
+        "order": {
+          "visualName": {
+            "label": "Visual element then name",
+            "description": "Place the Visual Element before the Name."
+          },
+          "nameVisual": {
+            "label": "Name then visual element",
+            "description": "Place the Name before the Visual Element."
+          }
+        },
+        "rotate": "Rotate",
+        "translate": {
+          "label": "Adjust Visual Element position",
+          "x": "Horizontal",
+          "y": "Vertical"
+        },
+        "gutter": "Gutter",
+        "visual": {
+          "show": "xxx",
+          "type": {
+            "letter": "xxx",
+            "icon": "xxx",
+            "image": "xxx"
+          },
+          "size": "xxx",
+          "letter": {
+            "text": {
+              "label": "xxx",
+              "placeholder": "xxx"
+            }
+          },
+          "icon": {
+            "text": {
+              "label": "xxx",
+              "placeholder": "xxx"
+            },
+            "remove": "xxx"
+          },
+          "image": {
+            "url": {
+              "label": "xxx",
+              "placeholder": "xxx"
+            }
+          },
+          "shadow": {
+            "size": "xxx",
+            "helper": ["xxx"]
+          }
+        },
+        "name": {
+          "show": "xxx",
+          "text": {
+            "label": "xxx",
+            "placeholder": "xxx"
+          },
+          "size": "xxx"
+        }
+      },
+      "accent": {
+        "by": {
+          "theme": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "custom": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "color": "xxx"
+      },
+      "color": {
+        "by": {
+          "theme": {
+            "label": "xxx",
+            "description": "xxx"
+          },
+          "custom": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "color": "xxx",
+        "opacity": "xxx"
+      },
+      "background": {
+        "show": {
+          "label": "xxx",
+          "description": "xxx"
+        },
+        "type": {
+          "image": "xxx",
+          "video": "xxx"
+        },
+        "opacity": "xxx",
+        "image": {
+          "label": "xxx",
+          "placeholder": "xxx",
+          "helper": ["xxx"]
+        },
+        "video": {
+          "label": "xxx",
+          "placeholder": "xxx",
+          "helper": ["xxx"]
+        }
+      },
+      "border": "xxx",
+      "shape": {
+        "wide": {
+          "label": "xxx",
+          "description": "xxx"
+        },
+        "tall": {
+          "label": "xxx",
+          "description": "xxx"
+        }
+      },
+      "group": {
+        "destination": {
+          "existing": "xxx",
+          "new": "xxx"
+        },
+        "name": {
+          "label": "xxx",
+          "placeholder": "xxx"
+        },
+        "random": "",
+        "position": {
+          "group": "xxx",
+          "item": "xxx"
+        }
+      },
+      "propagate": {
+        "visual": {
+          "label": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "layout": {
+          "label": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        },
+        "theme": {
+          "label": {
+            "label": "xxx",
+            "description": "xxx"
+          }
+        }
+      }
+    },
+    "preview": {
+      "full": "Preview",
+      "half": "Preview (50% scale)"
     }
   }
 }

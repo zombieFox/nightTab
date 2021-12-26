@@ -1,10 +1,12 @@
+import { language } from '../../language';
+
 import { BookmarkTile } from '../bookmarkTile';
 
 import { node } from '../../utility/node';
 
 import './index.css';
 
-export const BookmarkPreview = function ({
+export const BookmarkPreview = function({
   bookmarkData = false
 } = {}) {
 
@@ -29,9 +31,9 @@ export const BookmarkPreview = function ({
     }
 
     if (bookmarkData.link.shape.tall || bookmarkData.link.shape.wide) {
-      this.title.textContent = 'Preview (50% scale)';
+      this.title.textContent = language.current.bookmark.preview.half;
     } else {
-      this.title.textContent = 'Preview';
+      this.title.textContent = language.current.bookmark.preview.full;
     }
 
   };

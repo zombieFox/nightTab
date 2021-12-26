@@ -1,3 +1,5 @@
+import { language } from '../../language';
+
 import { bookmark } from '../bookmark';
 import { bookmarkDefault } from '../bookmarkDefault';
 import { bookmarkMinMax } from '../bookmarkMinMax';
@@ -96,8 +98,8 @@ export const BookmarkForm = function({
       path: 'url',
       id: 'url',
       value: bookmarkData.link.url,
-      placeholder: 'https://www.example.com/',
-      labelText: 'URL',
+      placeholder: language.current.bookmark.form.url.placeholder,
+      labelText: language.current.bookmark.form.url.label,
       action: () => {
         this.preview.update.assemble(bookmarkData);
       }
@@ -106,17 +108,17 @@ export const BookmarkForm = function({
       alignment: new Control_radioGrid({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'toolbar-position-top-left', labelText: 'Top Left', value: 'top-left', position: 1 },
-          { id: 'toolbar-position-top-center', labelText: 'Top Center', value: 'top-center', position: 2 },
-          { id: 'toolbar-position-top-right', labelText: 'Top Right', value: 'top-right', position: 3 },
-          { id: 'toolbar-position-center-left', labelText: 'Center Left', value: 'center-left', position: 4 },
-          { id: 'toolbar-position-center-center', labelText: 'Center Center', value: 'center-center', position: 5 },
-          { id: 'toolbar-position-center-right', labelText: 'Center Right', value: 'center-right', position: 6 },
-          { id: 'toolbar-position-bottom-left', labelText: 'Bottom Left', value: 'bottom-left', position: 7 },
-          { id: 'toolbar-position-bottom-center', labelText: 'Bottom Center', value: 'bottom-center', position: 8 },
-          { id: 'toolbar-position-bottom-right', labelText: 'Bottom Right', value: 'bottom-right', position: 9 }
+          { id: 'toolbar-position-top-left', labelText: language.current.bookmark.form.display.alignment.topLeft, value: 'top-left', position: 1 },
+          { id: 'toolbar-position-top-center', labelText: language.current.bookmark.form.display.alignment.topCenter, value: 'top-center', position: 2 },
+          { id: 'toolbar-position-top-right', labelText: language.current.bookmark.form.display.alignment.topRight, value: 'top-right', position: 3 },
+          { id: 'toolbar-position-center-left', labelText: language.current.bookmark.form.display.alignment.centerLeft, value: 'center-left', position: 4 },
+          { id: 'toolbar-position-center-center', labelText: language.current.bookmark.form.display.alignment.centerCenter, value: 'center-center', position: 5 },
+          { id: 'toolbar-position-center-right', labelText: language.current.bookmark.form.display.alignment.centerRight, value: 'center-right', position: 6 },
+          { id: 'toolbar-position-bottom-left', labelText: language.current.bookmark.form.display.alignment.bottomLeft, value: 'bottom-left', position: 7 },
+          { id: 'toolbar-position-bottom-center', labelText: language.current.bookmark.form.display.alignment.bottomCenter, value: 'bottom-center', position: 8 },
+          { id: 'toolbar-position-bottom-right', labelText: language.current.bookmark.form.display.alignment.bottomRight, value: 'bottom-right', position: 9 }
         ],
-        label: 'Visual Element and Name alignment',
+        label: language.current.bookmark.form.display.alignment.label,
         groupName: 'display-alignment',
         path: 'display.alignment',
         gridSize: '3x3',
@@ -127,8 +129,8 @@ export const BookmarkForm = function({
       direction: new Control_radio({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'display-direction-vertical', labelText: 'Vertical', description: 'Stack the Visual Element and Name one above the other.', value: 'vertical' },
-          { id: 'display-direction-horizontal', labelText: 'Horizontal', description: 'Arrange the Visual Element and Name side by side.', value: 'horizontal' }
+          { id: 'display-direction-vertical', labelText: language.current.bookmark.form.display.direction.vertical.label, description: language.current.bookmark.form.display.direction.vertical.description, value: 'vertical' },
+          { id: 'display-direction-horizontal', labelText: language.current.bookmark.form.display.direction.horizontal.label, description: language.current.bookmark.form.display.direction.horizontal.description, value: 'horizontal' }
         ],
         groupName: 'display-direction',
         path: 'display.direction',
@@ -140,8 +142,8 @@ export const BookmarkForm = function({
       order: new Control_radio({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'display-order-visual-name', labelText: 'Visual element then name', description: 'Place the Visual Element before the Name.', value: 'visual-name' },
-          { id: 'display-order-name-visual', labelText: 'Name then visual element', description: 'Place the Name before the Visual Element.', value: 'name-visual' }
+          { id: 'display-order-visual-name', labelText: language.current.bookmark.form.display.order.visualName.label, description: language.current.bookmark.form.display.order.visualName.description, value: 'visual-name' },
+          { id: 'display-order-name-visual', labelText: language.current.bookmark.form.display.order.nameVisual.label, description: language.current.bookmark.form.display.order.nameVisual.description, value: 'name-visual' }
         ],
         groupName: 'display-order',
         path: 'display.order',
@@ -154,7 +156,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'display.rotate',
         id: 'display-rotate',
-        labelText: 'Rotate',
+        labelText: language.current.bookmark.form.display.rotate,
         value: bookmarkData.link.display.rotate,
         defaultValue: bookmarkDefault.display.rotate,
         min: bookmarkMinMax.display.rotate.min,
@@ -165,14 +167,14 @@ export const BookmarkForm = function({
       }),
       translate: {
         label: form.label({
-          text: 'Adjust Visual Element position',
+          text: language.current.bookmark.form.display.translate.label,
           noPadding: true
         }),
         x: new Control_sliderSlim({
           object: bookmarkData.link,
           path: 'display.translate.x',
           id: 'display-translate-x',
-          labelText: 'Horizontal',
+          labelText: language.current.bookmark.form.display.translate.x,
           value: bookmarkData.link.display.translate.x,
           defaultValue: bookmarkDefault.display.translate.x,
           min: bookmarkMinMax.display.translate.x.min,
@@ -185,7 +187,7 @@ export const BookmarkForm = function({
           object: bookmarkData.link,
           path: 'display.translate.y',
           id: 'display-translate-y',
-          labelText: 'Vertical',
+          labelText: language.current.bookmark.form.display.translate.y,
           value: bookmarkData.link.display.translate.y,
           defaultValue: bookmarkDefault.display.translate.y,
           min: bookmarkMinMax.display.translate.y.min,
@@ -199,7 +201,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'display.gutter',
         id: 'display-gutter',
-        labelText: 'Gutter',
+        labelText: language.current.bookmark.form.display.gutter,
         value: bookmarkData.link.display.gutter,
         defaultValue: bookmarkDefault.display.gutter,
         min: bookmarkMinMax.display.gutter.min,
@@ -1053,23 +1055,23 @@ export const BookmarkForm = function({
 
   this.tab = new Tab({
     group: [{
-      tabText: 'Visual & Name',
+      tabText: language.current.bookmark.form.tab.visual,
       area: this.area.visual(),
       active: true
     }, {
-      tabText: 'Address',
+      tabText: language.current.bookmark.form.tab.address,
       area: this.area.address(),
       active: false
     }, {
-      tabText: 'Position',
+      tabText: language.current.bookmark.form.tab.position,
       area: this.area.position(),
       active: false
     }, {
-      tabText: 'Layout',
+      tabText: language.current.bookmark.form.tab.layout,
       area: this.area.layout(),
       active: false
     }, {
-      tabText: 'Theme',
+      tabText: language.current.bookmark.form.tab.theme,
       area: this.area.theme(),
       active: false
     }]
