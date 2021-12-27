@@ -1260,6 +1260,45 @@
       "destination": "Position"
     }
   },
+  "theme": {
+    "custom": {
+      "tile": {
+        "control": {
+          "edit": "Dieses gespeicherte benutzerdefinierte Design bearbeiten",
+          "remove": "Dieses gespeicherte benutzerdefinierte Design entfernen"
+        }
+      },
+      "form": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Beispielthema"
+        },
+        "random": "Zufälliger Themename"
+      },
+      "add": {
+        "heading": "Aktuelles Thema speichern",
+        "successText": "Speichern",
+        "cancelText": "Abbrechen"
+      },
+      "remove": {
+        "heading": {
+          "name": "Entfernen",
+          "unnamed": "Unbenanntes benutzerdefiniertes Design entfernen"
+        },
+        "content": "Möchten Sie dieses gespeicherte benutzerdefinierte Design wirklich entfernen? Das kann nicht rückgängig gemacht werden.",
+        "successText": "Speichern",
+        "cancelText": "Abbrechen"
+      },
+      "edit": {
+        "heading": {
+          "name": "Bearbeiten",
+          "unnamed": "Unbenanntes benutzerdefiniertes Design bearbeiten"
+        },
+        "successText": "Entfernen",
+        "cancelText": "Abbrechen"
+      }
+    }
+  },
   "control": {
     "general": {
       "reset": "Zurücksetzen"

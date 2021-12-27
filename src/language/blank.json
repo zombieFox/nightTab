@@ -1244,6 +1244,45 @@
       "destination": "xxx"
     }
   },
+  "theme": {
+    "custom": {
+      "tile": {
+        "control": {
+          "edit": "xxx",
+          "remove": "xxx"
+        }
+      },
+      "form": {
+        "name": {
+          "label": "xxx",
+          "placeholder": "xxx"
+        },
+        "random": "xxx"
+      },
+      "add": {
+        "heading": "xxx",
+        "successText": "xxx",
+        "cancelText": "xxx"
+      },
+      "remove": {
+        "heading": {
+          "name": "xxx",
+          "unnamed": "xxx"
+        },
+        "content": "xxx",
+        "successText": "xxx",
+        "cancelText": "xxx"
+      },
+      "edit": {
+        "heading": {
+          "name": "xxx",
+          "unnamed": "xxx"
+        },
+        "successText": "xxx",
+        "cancelText": "xxx"
+      }
+    }
+  },
   "control": {
     "general": {
       "reset": "xxx"

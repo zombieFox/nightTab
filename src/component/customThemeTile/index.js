@@ -1,3 +1,5 @@
+import { language } from '../../language';
+
 import { state } from '../state';
 import { data } from '../data';
 import { theme } from '../theme';
@@ -324,12 +326,12 @@ export const CustomThemeTile = function({
 
   this.control.button = {
     edit: new Button({
-      text: 'Edit this saved theme',
+      text: language.current.theme.custom.tile.control.edit,
       srOnly: true,
       iconName: 'edit',
       style: ['link'],
       size: 'small',
-      title: 'Edit this saved theme',
+      title: language.current.theme.custom.tile.control.edit,
       classList: ['theme-custom-control-button', 'theme-custom-control-edit'],
       func: () => {
 
@@ -342,9 +344,10 @@ export const CustomThemeTile = function({
         const bookmarkForm = new CustomThemeForm({ customThemeData: newCustomThemeData });
 
         const editModal = new Modal({
-          heading: isValidString(customThemeData.theme.name) ? 'Edit ' + customThemeData.theme.name : 'Edit unnamed custom theme',
+          heading: isValidString(customThemeData.theme.name) ? `${language.current.theme.custom.edit.heading.name} ${customThemeData.theme.name}` : language.current.theme.custom.edit.heading.unnamed,
           content: bookmarkForm.form(),
-          successText: 'Save',
+          successText: language.current.theme.custom.edit.successText,
+          cancelText: language.current.theme.custom.edit.cancelText,
           width: 'small',
           successAction: () => {
 
@@ -360,21 +363,22 @@ export const CustomThemeTile = function({
       }
     }),
     remove: new Button({
-      text: 'Remove this saved theme',
+      text: language.current.theme.custom.tile.control.remove,
       srOnly: true,
       iconName: 'cross',
       style: ['link'],
       size: 'small',
-      title: 'Remove this saved theme',
+      title: language.current.theme.custom.tile.control.remove,
       classList: ['theme-custom-control-button', 'theme-custom-control-remove'],
       func: () => {
 
         menu.close();
 
         const removeModal = new Modal({
-          heading: isValidString(customThemeData.theme.name) ? 'Remove ' + customThemeData.theme.name : 'Remove unnamed custom theme',
-          content: 'Are you sure you want to remove this saved theme? This can not be undone.',
-          successText: 'Remove',
+          heading: isValidString(customThemeData.theme.name) ? `${language.current.theme.custom.remove.heading.name} ${customThemeData.theme.name}` : language.current.theme.custom.remove.heading.unnamed,
+          content: language.current.theme.custom.remove.content,
+          successText: language.current.theme.custom.remove.successText,
+          cancelText: language.current.theme.custom.remove.cancelText,
           width: 'small',
           successAction: () => {
             customTheme.item.mod.remove(customThemeData);

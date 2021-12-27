@@ -1,6 +1,7 @@
+import { language } from '../../language';
+
 import { state } from '../state';
 import { data } from '../data';
-
 
 import { Modal } from '../modal';
 import { CustomThemeTile } from '../customThemeTile';
@@ -78,9 +79,10 @@ customTheme.add = {
     const bookmarkForm = new CustomThemeForm({ customThemeData: newCustomThemeData });
 
     const addModal = new Modal({
-      heading: 'Save current theme',
+      heading: language.current.theme.custom.add.heading,
       content: bookmarkForm.form(),
-      successText: 'Save',
+      successText: language.current.theme.custom.add.successText,
+      cancelText: language.current.theme.custom.add.cancelText,
       width: 'small',
       successAction: () => {
         customTheme.item.mod.add(newCustomThemeData);

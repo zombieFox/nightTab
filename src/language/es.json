@@ -1260,6 +1260,45 @@
       "destination": "Posición"
     }
   },
+  "theme": {
+    "custom": {
+      "tile": {
+        "control": {
+          "edit": "Editar este tema personalizado guardado",
+          "remove": "Eliminar este tema personalizado guardado"
+        }
+      },
+      "form": {
+        "name": {
+          "label": "Nombre",
+          "placeholder": "Tema de ejemplo"
+        },
+        "random": "Nombre de tema aleatorio"
+      },
+      "add": {
+        "heading": "Guardar tema actual",
+        "successText": "Ahorrar",
+        "cancelText": "Cancelar"
+      },
+      "remove": {
+        "heading": {
+          "name": "Eliminar",
+          "unnamed": "Eliminar tema personalizado sin nombre"
+        },
+        "content": "¿Está seguro de que desea eliminar este tema personalizado guardado? Esto no se puede deshacer.",
+        "successText": "Ahorrar",
+        "cancelText": "Cancelar"
+      },
+      "edit": {
+        "heading": {
+          "name": "Editar",
+          "unnamed": "Editar tema personalizado sin nombre"
+        },
+        "successText": "Eliminar",
+        "cancelText": "Cancelar"
+      }
+    }
+  },
   "control": {
     "general": {
       "reset": "Restablecen a los predeterminados"

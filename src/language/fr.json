@@ -1260,6 +1260,45 @@
       "destination": "Position"
     }
   },
+  "theme": {
+    "custom": {
+      "tile": {
+        "control": {
+          "edit": "Modifier ce thème personnalisé enregistré",
+          "remove": "Supprimer ce thème personnalisé enregistré"
+        }
+      },
+      "form": {
+        "name": {
+          "label": "Nom",
+          "placeholder": "Exemple de thème"
+        },
+        "random": "Nom de thème aléatoire"
+      },
+      "add": {
+        "heading": "Enregistrer le thème actuel",
+        "successText": "Sauvegarder",
+        "cancelText": "Annuler"
+      },
+      "remove": {
+        "heading": {
+          "name": "Supprimer",
+          "unnamed": "Supprimer le thème personnalisé sans nom"
+        },
+        "content": "Voulez-vous vraiment supprimer ce thème personnalisé enregistré ? Ça ne peut pas être annulé.",
+        "successText": "Sauvegarder",
+        "cancelText": "Annuler"
+      },
+      "edit": {
+        "heading": {
+          "name": "Éditer",
+          "unnamed": "Modifier le thème personnalisé sans nom"
+        },
+        "successText": "Supprimer",
+        "cancelText": "Annuler"
+      }
+    }
+  },
   "control": {
     "general": {
       "reset": "Réinitialiser par défaut"

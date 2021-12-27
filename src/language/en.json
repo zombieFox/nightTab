@@ -1260,6 +1260,45 @@
       "destination": "Position"
     }
   },
+  "theme": {
+    "custom": {
+      "tile": {
+        "control": {
+          "edit": "Edit this saved custom theme",
+          "remove": "Remove this saved custom theme"
+        }
+      },
+      "form": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Example theme"
+        },
+        "random": "Random theme name"
+      },
+      "add": {
+        "heading": "Save current theme",
+        "successText": "Save",
+        "cancelText": "Cancel"
+      },
+      "remove": {
+        "heading": {
+          "name": "Remove",
+          "unnamed": "Remove unnamed custom theme"
+        },
+        "content": "Are you sure you want to remove this saved custom theme? This can not be undone.",
+        "successText": "Save",
+        "cancelText": "Cancel"
+      },
+      "edit": {
+        "heading": {
+          "name": "Edit",
+          "unnamed": "Edit unnamed custom theme"
+        },
+        "successText": "Remove",
+        "cancelText": "Cancel"
+      }
+    }
+  },
   "control": {
     "general": {
       "reset": "Reset to default"
