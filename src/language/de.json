@@ -12,7 +12,7 @@
           "font": "Schriftart",
           "radius": "Radius",
           "shadow": "Schatten",
-          "shade": "Schatten",
+          "shade": "Startseite",
           "opacity": "Opazität",
           "background": "Hintergrund",
           "layout": "Layout",
@@ -91,12 +91,12 @@
       "theme": {
         "preset": {
           "helper": [
-            "Das Anwenden einer Voreinstellung ersetzt die aktuelle Farbe, den Akzent, die Schriftart, den Stil, den Radius, den Schatten, den Schatten und den Hintergrund."
+            "Das Anwenden einer Voreinstellung ersetzt die aktuelle Farbe, den Akzent, die Schriftart, den Stil, den Radius, den Schatten, den Startseite und den Hintergrund."
           ]
         },
         "saved": {
           "helper": [
-            "Beim Speichern eines Themas werden die aktuelle Farbe, der Akzent, die Schriftart, der Stil, der Radius, der Schatten, der Schatten und der Hintergrund aufgezeichnet."
+            "Beim Speichern eines Themas werden die aktuelle Farbe, der Akzent, die Schriftart, der Stil, die Deckkraft, der Radius, der Schatten, der Startseite und der Hintergrund aufgezeichnet."
           ],
           "save": "Aktuelles Thema speichern",
           "edit": "Gespeicherte Designs bearbeiten"
@@ -110,7 +110,7 @@
           },
           "automatic": {
             "label": "Automatisch",
-            "description": "Folgen Sie dem Hell- oder Dunkelmodus des Systems."
+            "description": "Folgen Sie dem System Hell- oder Dunkelmodus."
           }
         },
         "color": {
@@ -195,12 +195,9 @@
               "label": "Schriftart anzeigen",
               "placeholder": "Google-Schriftname",
               "helper": {
-                "p1": {
-                  "a1": "Benutze einen",
-                  "a2": "Google-Schriftart",
-                  "a3": "um die Uhr, das Datum, die Gruppennamen und die Lesezeichenbuchstaben anzupassen."
-                },
+                "p1": "Verwenden Sie eine Google-Schriftart, um Uhr, Datum, Gruppennamen und Lesezeichenbuchstaben anzupassen.",
                 "p2": "Fügen Sie einen Schriftartnamen hinzu, wie er in Google Fonts erscheint, einschließlich Großbuchstaben und Leerzeichen, zB: Geben Sie \"Fredoka One\" oder \"Kanit\" ein.",
+                "link": "Finden Sie eine Google-Schriftart",
                 "p3": "Löschen Sie das Feld, um die Standardschriftart \"Fjalla One\" zu verwenden."
               }
             },
@@ -223,12 +220,9 @@
               "label": "Schriftart der Benutzeroberfläche",
               "placeholder": "Google-Schriftname",
               "helper": {
-                "p1": {
-                  "a1": "Benutze einen",
-                  "a2": "Google-Schriftart",
-                  "a3": "um den Lesezeichennamen, die URL und die Formularelemente anzupassen."
-                },
+                "p1": "Verwenden Sie eine Google-Schriftart, um den Lesezeichennamen, die URL und die Formularelemente anzupassen.",
                 "p2": "Fügen Sie einen Schriftartnamen hinzu, wie er in Google Fonts erscheint, einschließlich Großbuchstaben und Leerzeichen, zB: Geben Sie \"Roboto\", \"Source Sans Pro\" oder \"Noto Sans\" ein.",
+                "link": "Finden Sie eine Google-Schriftart",
                 "p3": "Löschen Sie das Feld, um die Standardschriftart \"Open Sans\" zu verwenden."
               }
             },
@@ -335,7 +329,7 @@
               "placeholder": "https://www.example.com/video.mp4",
               "helper": [
                 "Hintergrundvideo unterstützt nur eine direkte URL zu einer Videodatei. Unterstützt MP4- und WebM-Format.",
-                "Fügen Sie mehr als eine URL hinzu, die durch Leerzeichen oder in neuen Zeilen getrennt ist, um ein zufälliges Hintergrundvideo beim Laden zu erhalten."
+                "Fügen Sie mehr als eine URL hinzu, die durch Leerzeichen oder in neuen Zeilen getrennt ist, um beim Laden ein zufälliges Hintergrundvideo zu erhalten."
               ]
             },
             "blur": "Verwischen",
@@ -927,10 +921,364 @@
       },
       "app": {
         "para1": "Teilen Sie Ihr Setup mit der Community.",
-        "link1": "Gefunden auf Reddit /r/{appName} .",
+        "link1": "Gefunden auf Reddit /r/{appName}.",
         "para2": "Dieses Projekt ist Open Source.",
         "link2": "Auf GitHub gefunden.",
         "link3": "GNU General Public License v3.0."
+      }
+    }
+  },
+  "bookmark": {
+    "tile": {
+      "control": {
+        "left": "Dieses Lesezeichen nach links verschieben",
+        "sort": "Ziehen Sie das Lesezeichen, um es neu anzuordnen",
+        "right": "Dieses Lesezeichen nach rechts verschieben",
+        "edit": "Dieses Lesezeichen bearbeiten",
+        "remove": "Dieses Lesezeichen entfernen"
+      }
+    },
+    "add": {
+      "heading": "Neues Lesezeichen hinzufügen",
+      "successText": "Hinzufügen",
+      "cancelText": "Abbrechen"
+    },
+    "remove": {
+      "heading": {
+        "name": "Entfernen",
+        "unnamed": "Unbenanntes Lesezeichen entfernen"
+      },
+      "content": "Möchten Sie dieses Lesezeichen wirklich entfernen? Das kann nicht rückgängig gemacht werden.",
+      "successText": "Entfernen",
+      "cancelText": "Abbrechen"
+    },
+    "edit": {
+      "heading": {
+        "name": "Bearbeiten",
+        "unnamed": "Unbenanntes Lesezeichen bearbeiten"
+      },
+      "successText": "Speichern",
+      "cancelText": "Abbrechen"
+    },
+    "form": {
+      "tab": {
+        "visual": "Bild & Name",
+        "address": "Adresse",
+        "position": "Position",
+        "layout": "Layout",
+        "theme": "Thema"
+      },
+      "section": {
+        "visual": {
+          "heading": "Bild & Name",
+          "description": "Zeigen Sie Buchstaben, Symbole, Bilder und einen Namen auf dieser Lesezeichenkachel an."
+        },
+        "address": {
+          "heading": "Adresse",
+          "description": "Stellen Sie sicher, dass Sie die vollständige URL verwenden und \"https://...\" angeben."
+        },
+        "position": {
+          "heading": "Position",
+          "description": "Die Gruppe, in die dieses Lesezeichen eingefügt werden soll."
+        },
+        "layout": {
+          "heading": "Layout",
+          "description": "Ändern Sie die Position, Skalierung und Ausrichtung des visuellen Elements und des Namens."
+        },
+        "theme": {
+          "heading": "Thema",
+          "description": "Überschreiben Sie die Farbe des Themas und des Akzents."
+        }
+      },
+      "url": {
+        "label": "URL",
+        "placeholder": "https://www.beispiel.com/"
+      },
+      "display": {
+        "alignment": {
+          "label": "Ausrichtung von visuellen Elementen und Namen",
+          "topLeft": "Oben links",
+          "topCenter": "Oben Mitte",
+          "topRight": "Oben rechts",
+          "centerLeft": "Mitte links",
+          "centerCenter": "Zentrum Zentrum",
+          "centerRight": "Mitte rechts",
+          "bottomLeft": "Unten links",
+          "bottomCenter": "Unten Mitte",
+          "bottomRight": "Unten rechts"
+        },
+        "direction": {
+          "vertical": {
+            "label": "Vertikal",
+            "description": "Stapeln Sie das visuelle Element und den Namen übereinander."
+          },
+          "horizontal": {
+            "label": "Horizontal",
+            "description": "Ordnen Sie das visuelle Element und den Namen nebeneinander an."
+          }
+        },
+        "order": {
+          "visualName": {
+            "label": "Visuelles Element dann Name",
+            "description": "Platzieren Sie das visuelle Element vor dem Namen."
+          },
+          "nameVisual": {
+            "label": "Benennen Sie dann das visuelle Element",
+            "description": "Platzieren Sie den Namen vor dem visuellen Element."
+          }
+        },
+        "rotate": "Drehen",
+        "translate": {
+          "label": "Position des visuellen Elements anpassen",
+          "x": "Horizontal",
+          "y": "Vertikal"
+        },
+        "gutter": "Rinne",
+        "visual": {
+          "show": {
+            "label": "Visuelles Element anzeigen",
+            "description": "Zeigen Sie Buchstaben, Symbole oder ein Bild auf diesem Lesezeichen-Sechseck an."
+          },
+          "type": {
+            "letter": "Buchstabe",
+            "icon": "Symbol",
+            "image": "Bild"
+          },
+          "size": "Visuelle Größe",
+          "letter": {
+            "text": {
+              "label": "Lesezeichen Brief",
+              "placeholder": "E"
+            }
+          },
+          "icon": {
+            "text": {
+              "label": "Lesezeichensymbol",
+              "placeholder": "FontAwesome Marken oder Icons"
+            },
+            "remove": "Symbol entfernen"
+          },
+          "image": {
+            "url": {
+              "label": "Lesezeichenbild",
+              "placeholder": "https://www.example.com/image.jpg"
+            }
+          },
+          "shadow": {
+            "size": "Visueller Schatten",
+            "helper": [
+              "Visueller Schatten gilt nur für einen Buchstaben oder ein Symbol."
+            ]
+          }
+        },
+        "name": {
+          "show": "Name anzeigen",
+          "text": {
+            "label": "Lesezeichenname",
+            "placeholder": "Beispiel"
+          },
+          "size": "Namensgröße"
+        }
+      },
+      "accent": {
+        "by": {
+          "theme": {
+            "label": "Thema Akzent",
+            "description": "Verwenden Sie den durch das Thema definierten Akzent."
+          },
+          "custom": {
+            "label": "Benutzerdefinierter Akzent",
+            "description": "Überschreiben Sie den Themenakzent."
+          }
+        },
+        "color": "Akzent"
+      },
+      "color": {
+        "by": {
+          "theme": {
+            "label": "Themenfarbe",
+            "description": "Verwenden Sie die vom Thema definierte Farbe."
+          },
+          "custom": {
+            "label": "Benutzerdefinierte Farbe",
+            "description": "Überschreiben Sie die Designfarbe."
+          }
+        },
+        "color": "Farbe",
+        "opacity": "Opazität"
+      },
+      "background": {
+        "show": {
+          "label": "Hintergrund anzeigen",
+          "description": "Zeigen Sie einen Bild- oder Videohintergrund auf dieser Lesezeichenkachel an."
+        },
+        "type": {
+          "image": "Bild",
+          "video": "Video"
+        },
+        "opacity": "Opazität",
+        "image": {
+          "label": "Hintergrundbild-URL",
+          "placeholder": "https://www.example.com/image.jpg",
+          "helper": [
+            "Hintergrundbild unterstützt nur eine direkte URL zu einer Bilddatei."
+          ]
+        },
+        "video": {
+          "label": "Hintergrundvideo-URL",
+          "placeholder": "https://www.example.com/video.mp4",
+          "helper": [
+            "Hintergrundvideo unterstützt nur eine direkte URL zu einer Videodatei. Unterstützt MP4- und WebM-Format.",
+            "URLs von YouTube-Seiten können nicht verwendet werden."
+          ]
+        }
+      },
+      "border": "Grenze",
+      "shape": {
+        "wide": {
+          "label": "Breite Fliese",
+          "description": "Lesezeichenkachel, um sich über zwei Spalten zu erstrecken."
+        },
+        "tall": {
+          "label": "Hohe Fliese",
+          "description": "Lesezeichenkachel, um sich über zwei Zeilen zu erstrecken."
+        }
+      },
+      "group": {
+        "destination": {
+          "existing": "Bestehende Gruppe",
+          "new": "Neue Gruppe"
+        },
+        "name": {
+          "label": "URL",
+          "placeholder": "Beispielgruppe"
+        },
+        "random": "Zufälliger Gruppenname",
+        "position": {
+          "group": "Gruppe",
+          "item": "Position"
+        }
+      },
+      "propagate": {
+        "visual": {
+          "label": "Wenden Sie \"Visuelles Element anzeigen\" und \"Namen anzeigen\" auf andere Lesezeichen an",
+          "description": [
+            "Der Brief-, Symbol-, Bild- und Namenstext wird nicht geteilt.",
+            "Nützlich, um die visuellen Elemente oder Namen auf allen Lesezeichen auszublenden."
+          ]
+        },
+        "layout": {
+          "label": "Layout auf andere Lesezeichen anwenden",
+          "description": [
+            "Wenden Sie nach dem Speichern das obige Layout auf alle anderen Lesezeichen an.",
+            "Nur die visuelle und Namensgröße, Ausrichtung, Reihenfolge, Position und Bundsteg werden auf alle angewendet."
+          ]
+        },
+        "theme": {
+          "label": "Theme auf andere Lesezeichen anwenden",
+          "description": [
+            "Wenden Sie das obige Design nach dem Speichern auf alle anderen Lesezeichen an.",
+            "Nur Farbe, Akzent, Deckkraft, Rahmen und visueller Schatten werden auf alle angewendet."
+          ]
+        }
+      }
+    },
+    "preview": {
+      "full": "Vorschau",
+      "half": "Vorschau (50 % Skalierung)"
+    }
+  },
+  "group": {
+    "area": {
+      "control": {
+        "up": "Diese Gruppe nach oben verschieben",
+        "sort": "Gruppe ziehen, um sie neu anzuordnen",
+        "down": "Verschiebe diese Gruppe nach unten",
+        "edit": "Diese Gruppe bearbeiten",
+        "remove": "Diese Gruppe entfernen",
+        "openAll": "Alle Lesezeichen in dieser Gruppe öffnen",
+        "collapse": "Diese Gruppe ausblenden"
+      }
+    },
+    "add": {
+      "heading": "Eine neue Gruppe hinzufügen",
+      "successText": "Hinzufügen",
+      "cancelText": "Abbrechen"
+    },
+    "remove": {
+      "heading": {
+        "name": "Entfernen",
+        "unnamed": "Unbenannte Gruppe entfernen"
+      },
+      "content": "Möchten Sie diese Gruppe und alle darin enthaltenen Lesezeichen wirklich entfernen? Das kann nicht rückgängig gemacht werden.",
+      "successText": "Entfernen",
+      "cancelText": "Abbrechen"
+    },
+    "edit": {
+      "heading": {
+        "name": "Bearbeiten",
+        "unnamed": "Unbenannte Gruppe bearbeiten"
+      },
+      "successText": "Speichern",
+      "cancelText": "Abbrechen"
+    },
+    "form": {
+      "section": {
+        "name": {
+          "heading": "Name",
+          "description": "Zeigen Sie einen Namen über dieser Gruppe an."
+        },
+        "toolbar": {
+          "heading": "Symbolleiste",
+          "description": "Steuerelemente anzeigen, um alle zu öffnen oder die Lesezeichen in dieser Gruppe anzuzeigen/auszublenden."
+        },
+        "ordering": {
+          "heading": "Bestellung",
+          "description": "Die Stellung dieser Gruppe."
+        }
+      },
+      "name": {
+        "show": "Gruppennamen anzeigen",
+        "text": {
+          "label": "Gruppenname",
+          "placeholder": "Beispielgruppe"
+        },
+        "random": "Zufälliger Gruppenname"
+      },
+      "collapse": {
+        "show": {
+          "label": "Ausblenden anzeigen",
+          "description": "Die Schaltfläche Reduzieren blendet die Lesezeichen in dieser Gruppe ein oder aus."
+        }
+      },
+      "openAll": {
+        "show": {
+          "label": "Alle öffnen",
+          "description": "Die Schaltfläche Alle öffnen wird angezeigt, wenn in dieser Gruppe mindestens ein Lesezeichen vorhanden ist."
+        }
+      },
+      "destination": "Position"
+    }
+  },
+  "control": {
+    "general": {
+      "reset": "Zurücksetzen"
+    },
+    "color": {
+      "text": {
+        "placeholder": "Hex-Code"
+      },
+      "random": "Zufällige Farbe"
+    },
+    "colorMixer": {
+      "moreControls": "Mehr Kontrollen",
+      "slider": {
+        "h": "Farbton",
+        "s": "Sättigung",
+        "l": "Leichtigkeit",
+        "r": "rot",
+        "g": "Grün",
+        "b": "Blau"
       }
     }
   }

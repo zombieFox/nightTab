@@ -96,7 +96,7 @@
         },
         "saved": {
           "helper": [
-            "Al guardar un tema, se registrarán el color, el acento, la fuente, el estilo, el radio, la sombra, la sombra y el fondo actuales."
+            "Al guardar un tema, se registrarán el color, el acento, la fuente, el estilo, la opacidad, el radio, la sombra, la sombra y el fondo actuales."
           ],
           "save": "Guardar tema actual",
           "edit": "Editar temas guardados"
@@ -195,12 +195,9 @@
               "label": "Fuente de pantalla",
               "placeholder": "Nombre de fuente de Google",
               "helper": {
-                "p1": {
-                  "a1": "Utilizar una",
-                  "a2": "Fuente de Google",
-                  "a3": "para personalizar el reloj, la fecha, los nombres de los grupos y las letras de los marcadores."
-                },
+                "p1": "Utilice una fuente de Google para personalizar el reloj, la fecha, los nombres de los grupos y las letras de los marcadores.",
                 "p2": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Fredoka One\" o \"Kanit\".",
+                "link": "Encuentra una fuente de Google",
                 "p3": "Borre el campo para usar la fuente predeterminada \"Fjalla One\"."
               }
             },
@@ -223,12 +220,9 @@
               "label": "Fuente de la interfaz de usuario",
               "placeholder": "Nombre de fuente de Google",
               "helper": {
-                "p1": {
-                  "a1": "Utilizar una",
-                  "a2": "Fuente de Google",
-                  "a3": "para personalizar el nombre del marcador, la URL y los elementos del formulario."
-                },
+                "p1": "Utilice una fuente de Google para personalizar el nombre del marcador, la URL y los elementos del formulario.",
                 "p2": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Roboto\", \"Source Sans Pro\" o \"Noto Sans\".",
+                "link": "Encuentra una fuente de Google",
                 "p3": "Borre el campo para usar la fuente predeterminada \"Open Sans\"."
               }
             },
@@ -541,7 +535,7 @@
             "right": "Correcto"
           },
           "helper": [
-            "Es posible que los efectos no sean visibles si el tamaño del cuadro de búsqueda se establece en Automático y crece para llenar el espacio disponible."
+            "Es posible que los efectos no sean visibles si el tamaño del cuadro de búsqueda está configurado en Automático y crece para llenar el espacio disponible."
           ]
         },
         "greeting": {
@@ -931,6 +925,360 @@
         "para2": "Este proyecto es de código abierto.",
         "link2": "Encontrado en GitHub.",
         "link3": "Licencia pública general GNU v3.0."
+      }
+    }
+  },
+  "bookmark": {
+    "tile": {
+      "control": {
+        "left": "Mover este marcador a la izquierda",
+        "sort": "Arrastra el marcador para reordenar",
+        "right": "Mover este marcador a la derecha",
+        "edit": "Editar este marcador",
+        "remove": "Quitar este marcador"
+      }
+    },
+    "add": {
+      "heading": "Agregar un nuevo marcador",
+      "successText": "Agregar",
+      "cancelText": "Cancelar"
+    },
+    "remove": {
+      "heading": {
+        "name": "Eliminar",
+        "unnamed": "Eliminar marcador sin nombre"
+      },
+      "content": "¿Está seguro de que desea eliminar este marcador? Esto no se puede deshacer.",
+      "successText": "Eliminar",
+      "cancelText": "Cancelar"
+    },
+    "edit": {
+      "heading": {
+        "name": "Editar",
+        "unnamed": "Editar marcador sin nombre"
+      },
+      "successText": "Ahorrar",
+      "cancelText": "Cancelar"
+    },
+    "form": {
+      "tab": {
+        "visual": "Visual y nombre",
+        "address": "Habla a",
+        "position": "Posición",
+        "layout": "Disposición",
+        "theme": "Tema"
+      },
+      "section": {
+        "visual": {
+          "heading": "Visual y nombre",
+          "description": "Muestra letras, icono, imagen y un nombre en este mosaico de marcador."
+        },
+        "address": {
+          "heading": "Habla a",
+          "description": "Asegúrese de utilizar la URL completa e incluir \"https:// ...\""
+        },
+        "position": {
+          "heading": "Posición",
+          "description": "El grupo en el que colocar este marcador."
+        },
+        "layout": {
+          "heading": "Disposición",
+          "description": "Cambie la posición, la escala y la orientación del elemento visual y el nombre."
+        },
+        "theme": {
+          "heading": "Tema",
+          "description": "Anula el color del tema y el acento."
+        }
+      },
+      "url": {
+        "label": "URL",
+        "placeholder": "https://www.example.com/"
+      },
+      "display": {
+        "alignment": {
+          "label": "Alineación visual de elementos y nombres",
+          "topLeft": "Arriba a la izquierda",
+          "topCenter": "Centro superior",
+          "topRight": "Parte superior derecha",
+          "centerLeft": "Centro Izquierda",
+          "centerCenter": "Centro Centro",
+          "centerRight": "Centro Derecha",
+          "bottomLeft": "Abajo a la izquierda",
+          "bottomCenter": "Centro inferior",
+          "bottomRight": "Abajo a la derecha"
+        },
+        "direction": {
+          "vertical": {
+            "label": "Vertical",
+            "description": "Apile el elemento visual y nombre uno encima del otro."
+          },
+          "horizontal": {
+            "label": "Horizontal",
+            "description": "Organice el elemento visual y el nombre uno al lado del otro."
+          }
+        },
+        "order": {
+          "visualName": {
+            "label": "Elemento visual luego nombre",
+            "description": "Coloque el elemento visual antes del nombre."
+          },
+          "nameVisual": {
+            "label": "Nombre luego elemento visual",
+            "description": "Coloque el nombre antes del elemento visual."
+          }
+        },
+        "rotate": "Girar",
+        "translate": {
+          "label": "Ajustar la posición del elemento visual",
+          "x": "Horizontal",
+          "y": "Vertical"
+        },
+        "gutter": "Canal",
+        "visual": {
+          "show": {
+            "label": "Mostrar elemento visual",
+            "description": "Muestre letras, íconos o una imagen en este hexágono de marcador."
+          },
+          "type": {
+            "letter": "Carta",
+            "icon": "Icono",
+            "image": "Imagen"
+          },
+          "size": "Tamaño visual",
+          "letter": {
+            "text": {
+              "label": "Letra de marcador",
+              "placeholder": "mi"
+            }
+          },
+          "icon": {
+            "text": {
+              "label": "Icono de marcador",
+              "placeholder": "FontAwesome Marcas o Iconos"
+            },
+            "remove": "Eliminar icono"
+          },
+          "image": {
+            "url": {
+              "label": "Imagen de marcador",
+              "placeholder": "https://www.example.com/image.jpg"
+            }
+          },
+          "shadow": {
+            "size": "Sombra visual",
+            "helper": [
+              "La sombra visual solo se aplica a una letra o icono."
+            ]
+          }
+        },
+        "name": {
+          "show": "Mostrar nombre",
+          "text": {
+            "label": "Nombre del marcador",
+            "placeholder": "Ejemplo"
+          },
+          "size": "Tamaño del nombre"
+        }
+      },
+      "accent": {
+        "by": {
+          "theme": {
+            "label": "Acento del tema",
+            "description": "Utilice el acento definido por el tema."
+          },
+          "custom": {
+            "label": "Acento personalizado",
+            "description": "Anula el acento del tema."
+          }
+        },
+        "color": "Acento"
+      },
+      "color": {
+        "by": {
+          "theme": {
+            "label": "Color del tema",
+            "description": "Utilice el color definido por el tema."
+          },
+          "custom": {
+            "label": "Color personalizado",
+            "description": "Anula el color del tema."
+          }
+        },
+        "color": "Color",
+        "opacity": "Opacidad"
+      },
+      "background": {
+        "show": {
+          "label": "Mostrar fondo",
+          "description": "Muestre un fondo de imagen o video en este mosaico de marcador."
+        },
+        "type": {
+          "image": "Imagen",
+          "video": "Video"
+        },
+        "opacity": "Opacidad",
+        "image": {
+          "label": "URL de la imagen de fondo",
+          "placeholder": "https://www.example.com/image.jpg",
+          "helper": [
+            "La imagen de fondo solo admite una URL directa a un archivo de imagen."
+          ]
+        },
+        "video": {
+          "label": "URL del video de fondo",
+          "placeholder": "https://www.example.com/video.mp4",
+          "helper": [
+            "El video de fondo solo admite una URL directa a un archivo de video. Soporta formato MP4 y WebM.",
+            "No se pueden utilizar las URL de las páginas de YouTube."
+          ]
+        }
+      },
+      "border": "Frontera",
+      "shape": {
+        "wide": {
+          "label": "Baldosa ancha",
+          "description": "Marcador de mosaico para abarcar dos columnas."
+        },
+        "tall": {
+          "label": "Azulejo alto",
+          "description": "Marcador de baldosas para abarcar dos filas."
+        }
+      },
+      "group": {
+        "destination": {
+          "existing": "Grupo existente",
+          "new": "Nuevo grupo"
+        },
+        "name": {
+          "label": "URL",
+          "placeholder": "Grupo de ejemplo"
+        },
+        "random": "Nombre de grupo aleatorio",
+        "position": {
+          "group": "Grupo",
+          "item": "Posición"
+        }
+      },
+      "propagate": {
+        "visual": {
+          "label": "Aplicar \"Mostrar elemento visual\" y \"Mostrar nombre\" a otros marcadores",
+          "description": [
+            "El texto de la letra, el icono, la imagen y el nombre no se compartirán.",
+            "Útil para ocultar los elementos visuales o los nombres en todos los marcadores."
+          ]
+        },
+        "layout": {
+          "label": "Aplicar diseño a otros marcadores",
+          "description": [
+            "Una vez guardado, aplique el diseño anterior a todos los demás marcadores.",
+            "Solo se aplicarán a todos el tamaño visual y del nombre, la alineación, el orden, la posición y el canal."
+          ]
+        },
+        "theme": {
+          "label": "Aplicar tema a otros marcadores",
+          "description": [
+            "Una vez guardado, aplique el tema anterior a todos los demás marcadores.",
+            "Solo se aplicarán a todos los colores, acento, opacidad, borde y sombra visual."
+          ]
+        }
+      }
+    },
+    "preview": {
+      "full": "Avance",
+      "half": "Vista previa (escala del 50%)"
+    }
+  },
+  "group": {
+    "area": {
+      "control": {
+        "up": "Mueve este grupo hacia arriba",
+        "sort": "Arrastra el grupo para reordenar",
+        "down": "Mueve este grupo hacia abajo",
+        "edit": "Editar este grupo",
+        "remove": "Quitar este grupo",
+        "openAll": "Abrir todos los marcadores de este grupo",
+        "collapse": "Contraer este grupo"
+      }
+    },
+    "add": {
+      "heading": "Agregar un nuevo grupo",
+      "successText": "Agregar",
+      "cancelText": "Cancelar"
+    },
+    "remove": {
+      "heading": {
+        "name": "Eliminar",
+        "unnamed": "Eliminar grupo sin nombre"
+      },
+      "content": "¿Está seguro de que desea eliminar este grupo y todos los marcadores que contiene? Esto no se puede deshacer.",
+      "successText": "Eliminar",
+      "cancelText": "Cancelar"
+    },
+    "edit": {
+      "heading": {
+        "name": "Editar",
+        "unnamed": "Editar grupo sin nombre"
+      },
+      "successText": "Ahorrar",
+      "cancelText": "Cancelar"
+    },
+    "form": {
+      "section": {
+        "name": {
+          "heading": "Nombre",
+          "description": "Muestre un nombre encima de este grupo."
+        },
+        "toolbar": {
+          "heading": "Barra de herramientas",
+          "description": "Mostrar controles para abrir todo o mostrar / ocultar los marcadores de este grupo."
+        },
+        "ordering": {
+          "heading": "Ordenando",
+          "description": "La posición de este Grupo."
+        }
+      },
+      "name": {
+        "show": "Mostrar nombre del grupo",
+        "text": {
+          "label": "Nombre del grupo",
+          "placeholder": "Grupo de ejemplo"
+        },
+        "random": "Nombre de grupo aleatorio"
+      },
+      "collapse": {
+        "show": {
+          "label": "Mostrar Colapsar",
+          "description": "El botón Contraer mostrará u ocultará los marcadores de este grupo."
+        }
+      },
+      "openAll": {
+        "show": {
+          "label": "Mostrar Abrir todo",
+          "description": "Aparecerá el botón Abrir todo si hay al menos un marcador en este grupo."
+        }
+      },
+      "destination": "Posición"
+    }
+  },
+  "control": {
+    "general": {
+      "reset": "Restablecen a los predeterminados"
+    },
+    "color": {
+      "text": {
+        "placeholder": "Código hexadecimal"
+      },
+      "random": "Color aleatorio"
+    },
+    "colorMixer": {
+      "moreControls": "Más controles",
+      "slider": {
+        "h": "Matiz",
+        "s": "Saturación",
+        "l": "Ligereza",
+        "r": "rojo",
+        "g": "Verde",
+        "b": "Azul"
       }
     }
   }

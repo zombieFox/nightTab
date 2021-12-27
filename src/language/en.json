@@ -90,10 +90,14 @@
     "content": {
       "theme": {
         "preset": {
-          "helper": ["Applying a Preset will replace the current Colour, Accent, Font, Style, Radius, Shadow, Shade and Background."]
+          "helper": [
+            "Applying a Preset will replace the current Colour, Accent, Font, Style, Radius, Shadow, Shade and Background."
+          ]
         },
         "saved": {
-          "helper": ["Saving a Theme will record the current Colour, Accent, Font, Style, Opacity, Radius, Shadow, Shade and Background."],
+          "helper": [
+            "Saving a Theme will record the current Colour, Accent, Font, Style, Opacity, Radius, Shadow, Shade and Background."
+          ],
           "save": "Save current theme",
           "edit": "Edit saved themes"
         },
@@ -180,7 +184,9 @@
             "speed": "Change delay",
             "step": "Change steps",
             "alert": "Take care as a fast changing Accent hue may cause performance issues.",
-            "helper": ["Auto change Accent hue will not work when the Accent colour is a grey or black."]
+            "helper": [
+              "Auto change Accent hue will not work when the Accent colour is a grey or black."
+            ]
           }
         },
         "font": {
@@ -200,7 +206,9 @@
               "light": "Light",
               "regular": "Regular",
               "bold": "Bold",
-              "helper": ["Not all fonts support all weights. Refer to the Google Font page to see which are available."]
+              "helper": [
+                "Not all fonts support all weights. Refer to the Google Font page to see which are available."
+              ]
             },
             "style": {
               "normal": "Normal",
@@ -223,7 +231,9 @@
               "light": "Light",
               "regular": "Regular",
               "bold": "Bold",
-              "helper": ["Not all fonts support all weights. Refer to the Google Font page to see which are available."]
+              "helper": [
+                "Not all fonts support all weights. Refer to the Google Font page to see which are available."
+              ]
             },
             "style": {
               "normal": "Normal",
@@ -237,7 +247,9 @@
           "opacity": "Shade opacity",
           "blur": {
             "label": "Shade blur",
-            "helper": ["Not supported by all browsers."]
+            "helper": [
+              "Not supported by all browsers."
+            ]
           }
         },
         "opacity": {
@@ -257,11 +269,15 @@
           "type": {
             "theme": {
               "label": "Background by Theme",
-              "description": ["Use the Background colour defined by the Theme."]
+              "description": [
+                "Use the Background colour defined by the Theme."
+              ]
             },
             "accent": {
               "label": "Background by Accent",
-              "description": ["Use the Accent colour for the Background."]
+              "description": [
+                "Use the Accent colour for the Background."
+              ]
             },
             "color": "Custom colour",
             "gradient": "Gradient",
@@ -348,7 +364,9 @@
             "opacity": "Background opacity",
             "blur": {
               "label": "Background blur",
-              "helper": ["Not supported by all browsers."]
+              "helper": [
+                "Not supported by all browsers."
+              ]
             }
           },
           "divider": "Divider between Header and Bookmark area"
@@ -389,12 +407,17 @@
           "item": {
             "border": {
               "label": "Bookmark border",
-              "helper": ["Bookmark border can also be changed when editing individual Bookmarks.", "The colour of the Border is defined by the Accent which can also be changed when editing individual Bookmarks."]
+              "helper": [
+                "Bookmark border can also be changed when editing individual Bookmarks.",
+                "The colour of the Border is defined by the Accent which can also be changed when editing individual Bookmarks."
+              ]
             },
             "rainbow": {
               "add": "Add unique accent to each Bookmark",
               "remove": "Remove all accent overrides",
-              "helper": ["Bookmark custom Accent can also be changed when editing individual Bookmarks."]
+              "helper": [
+                "Bookmark custom Accent can also be changed when editing individual Bookmarks."
+              ]
             }
           }
         }
@@ -412,8 +435,12 @@
               "left": "Left",
               "center": "Centre",
               "right": "Right",
-              "helper1": ["Effects may not be visible if the Header Area is full width."],
-              "helper2": ["Only available when Layout Direction is Vertical and Header items are shown."]
+              "helper1": [
+                "Effects may not be visible if the Header Area is full width."
+              ],
+              "helper2": [
+                "Only available when Layout Direction is Vertical and Header items are shown."
+              ]
             }
           },
           "bookmark": {
@@ -423,8 +450,12 @@
               "left": "Left",
               "center": "Centre",
               "right": "Right",
-              "helper1": ["Effects may not be visible if the Bookmark Area is full width."],
-              "helper2": ["Only available when Layout Direction is Vertical and Header items are shown."]
+              "helper1": [
+                "Effects may not be visible if the Bookmark Area is full width."
+              ],
+              "helper2": [
+                "Only available when Layout Direction is Vertical and Header items are shown."
+              ]
             }
           }
         },
@@ -470,20 +501,27 @@
           "favicon": {
             "label": "Favicon URL",
             "placeholder": "https://www.example.com/favicon.svg",
-            "helper": ["Not supported by all browsers."]
+            "helper": [
+              "Not supported by all browsers."
+            ]
           },
           "scrollbar": {
             "label": "Scrollbar",
             "auto": "Auto",
             "thin": "Thin",
             "none": "Hidden",
-            "helper": ["Not supported by all browsers."]
+            "helper": [
+              "Not supported by all browsers."
+            ]
           },
           "overscroll": {
             "active": "Scroll past end",
             "unblur": {
               "label": "Unblur background image or video",
-              "description": ["Background image or video will unblur when scrolled to the bottom of the page.", "Image or video blur can be found under Theme Background."]
+              "description": [
+                "Background image or video will unblur when scrolled to the bottom of the page.",
+                "Image or video blur can be found under Theme Background."
+              ]
             }
           }
         }
@@ -496,7 +534,9 @@
             "center": "Center",
             "right": "Right"
           },
-          "helper": ["Effects may not be visible if the Search box size is set to Auto and grows to fill available space."]
+          "helper": [
+            "Effects may not be visible if the Search box size is set to Auto and grows to fill available space."
+          ]
         },
         "greeting": {
           "show": "Show Greeting",
@@ -516,7 +556,10 @@
             },
             "custom": {
               "label": "Custom",
-              "description": ["Use your own greeting.", "Defaults to \"Good morning...\" if left blank."]
+              "description": [
+                "Use your own greeting.",
+                "Defaults to \"Good morning...\" if left blank."
+              ]
             }
           },
           "custom": {
@@ -531,7 +574,9 @@
         "transitional": {
           "show": {
             "label": "Show Transitional words",
-            "helper": ["Only available when Date or Time is shown."]
+            "helper": [
+              "Only available when Date or Time is shown."
+            ]
           },
           "type": {
             "label": "Wording",
@@ -673,12 +718,18 @@
               "url": {
                 "label": "URL",
                 "placeholder": "https://",
-                "helper": ["Enter a web address with the search parameters, eg: \"https://vimeo.com/search?q=\"", "{appName} will add the search term entered into the Search box at the end of the above URL."]
+                "helper": [
+                  "Enter a web address with the search parameters, eg: \"https://vimeo.com/search?q=\"",
+                  "{appName} will add the search term entered into the Search box at the end of the above URL."
+                ]
               },
               "queryName": {
                 "label": "Name attribute",
                 "placeholder": "q",
-                "helper": ["Sets the name attribute on the Search input field.", "This defines the name passed to the search engine when submitting. If not sure leave blank."]
+                "helper": [
+                  "Sets the name attribute on the Search input field.",
+                  "This defines the name passed to the search engine when submitting. If not sure leave blank."
+                ]
               }
             },
             "text": {
@@ -719,7 +770,9 @@
         "orientation": {
           "top": "Top",
           "bottom": "Bottom",
-          "helper": ["Display the URL and Controls either at the top or bottom of a Bookmark Tile."]
+          "helper": [
+            "Display the URL and Controls either at the top or bottom of a Bookmark Tile."
+          ]
         },
         "sort": {
           "letter": "By letter",
@@ -751,7 +804,9 @@
           "size": "Name size",
           "show": "Show all",
           "hide": "Hide all",
-          "helper": ["Group Names can also be changed by editing individual Groups."]
+          "helper": [
+            "Group Names can also be changed by editing individual Groups."
+          ]
         },
         "collapse": {
           "show": "Open all groups",
@@ -763,13 +818,17 @@
             "label": "Group Collapse control",
             "show": "Show all",
             "hide": "Hide all",
-            "helper": ["Group toolbar collapse button can also be changed by editing individual Groups."]
+            "helper": [
+              "Group toolbar collapse button can also be changed by editing individual Groups."
+            ]
           },
           "openAll": {
             "label": "Group Open all control",
             "show": "Show all",
             "hide": "Hide all",
-            "helper": ["Group toolbar open all button can also be changed by editing individual Groups."]
+            "helper": [
+              "Group toolbar open all button can also be changed by editing individual Groups."
+            ]
           }
         }
       },
@@ -778,11 +837,15 @@
         "location": {
           "corner": "In a corner",
           "header": "In the Header",
-          "helper": ["Position the Toolbar inside the Header or in a corner of the window."],
+          "helper": [
+            "Position the Toolbar inside the Header or in a corner of the window."
+          ],
           "newLine": {
             "label": "New line",
             "description": "Force on to a new line and seperate from other Header items.",
-            "helper": ["Only available when the Toolbar is positioned inside the Header."]
+            "helper": [
+              "Only available when the Toolbar is positioned inside the Header."
+            ]
           }
         },
         "position": {
@@ -791,8 +854,12 @@
           "topRight": "Top Right",
           "bottomLeft": "Bottom Left",
           "bottomRight": "Bottom Right",
-          "helper1": ["Position the Toolbar in one of the four corners of the window."],
-          "helper2": ["Only available when the Toolbar is positioned in a corner."]
+          "helper1": [
+            "Position the Toolbar in one of the four corners of the window."
+          ],
+          "helper2": [
+            "Only available when the Toolbar is positioned in a corner."
+          ]
         },
         "controls": {
           "accent": "Show Accent control",
@@ -804,13 +871,18 @@
         "restore": {
           "file": "Import from file",
           "clipboard": "Import from clipboard",
-          "helper": ["Restore a previously exported {appName} backup."],
+          "helper": [
+            "Restore a previously exported {appName} backup."
+          ],
           "drop": "Or drop a {appName} backup file here."
         },
         "backup": {
           "file": "Export data",
           "clipboard": "Copy to clipboard",
-          "helper": ["Download a backup of your {appName} Bookmarks and Settings.", "This file can later be imported on this or another deivce."]
+          "helper": [
+            "Download a backup of your {appName} Bookmarks and Settings.",
+            "This file can later be imported on this or another deivce."
+          ]
         },
         "clear": {
           "all": "Clear all data",
@@ -819,7 +891,10 @@
             "p1": "You will lose Bookmarks by clearing all data.",
             "link": "Backup your data"
           },
-          "helper": ["Clear all data to reset {appName} to the default state.", "Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups."]
+          "helper": [
+            "Clear all data to reset {appName} to the default state.",
+            "Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups."
+          ]
         }
       },
       "support": {
@@ -991,7 +1066,9 @@
           },
           "shadow": {
             "size": "Visual shadow",
-            "helper": ["Visual shadow only applies to a Letter or Icon."]
+            "helper": [
+              "Visual shadow only applies to a Letter or Icon."
+            ]
           }
         },
         "name": {
@@ -1043,12 +1120,17 @@
         "image": {
           "label": "Background image URL",
           "placeholder": "https://www.example.com/image.jpg",
-          "helper": ["Background image only supports a direct URL to an image file."]
+          "helper": [
+            "Background image only supports a direct URL to an image file."
+          ]
         },
         "video": {
           "label": "Background video URL",
           "placeholder": "https://www.example.com/video.mp4",
-          "helper": ["Background video only supports a direct URL to a video file. Supports MP4 and WebM format.", "YouTube page URLs can not be used."]
+          "helper": [
+            "Background video only supports a direct URL to a video file. Supports MP4 and WebM format.",
+            "YouTube page URLs can not be used."
+          ]
         }
       },
       "border": "Border",
@@ -1080,15 +1162,24 @@
       "propagate": {
         "visual": {
           "label": "Apply \"Show Visual Element\" and \"Show Name\" to other Bookmarks",
-          "description": ["The Letter, Icon, Image and Name text will not be shared.", "Useful for hiding the Visual Elements or Names on all Bookmarks."]
+          "description": [
+            "The Letter, Icon, Image and Name text will not be shared.",
+            "Useful for hiding the Visual Elements or Names on all Bookmarks."
+          ]
         },
         "layout": {
           "label": "Apply Layout to other Bookmarks",
-          "description": ["When saved, apply the above Layout to all other Bookmarks.", "Only the Visual and Name size, Alignment, Order, Position and Gutter will be applied to all."]
+          "description": [
+            "When saved, apply the above Layout to all other Bookmarks.",
+            "Only the Visual and Name size, Alignment, Order, Position and Gutter will be applied to all."
+          ]
         },
         "theme": {
           "label": "Apply Theme to other Bookmarks",
-          "description": ["When saved, apply the above Theme to all other Bookmarks.", "Only the Colour, Accent, Opacity, Border and Visual shadow will be applied to all."]
+          "description": [
+            "When saved, apply the above Theme to all other Bookmarks.",
+            "Only the Colour, Accent, Opacity, Border and Visual shadow will be applied to all."
+          ]
         }
       }
     },

@@ -2,86 +2,86 @@
   "menu": {
     "nav": {
       "theme": {
-        "label": "Thema",
+        "label": "Thème",
         "subNav": {
-          "preset": "Voreinstellung",
-          "saved": "Gerettet",
-          "style": "Stil",
-          "color": "Farbe",
-          "accent": "Akzent",
-          "font": "Schriftart",
-          "radius": "Radius",
-          "shadow": "Schatten",
-          "shade": "Schatten",
-          "opacity": "Opazität",
-          "background": "Hintergrund",
-          "layout": "Layout",
-          "header": "Header",
-          "bookmark": "Lesezeichen"
+          "preset": "Préréglage",
+          "saved": "Enregistré",
+          "style": "Style",
+          "color": "Couleur",
+          "accent": "Accent",
+          "font": "Police de caractère",
+          "radius": "Rayon",
+          "shadow": "Ombre",
+          "shade": "Ombre",
+          "opacity": "Opacité",
+          "background": "Fond",
+          "layout": "Disposition",
+          "header": "Entête",
+          "bookmark": "Signet"
         }
       },
       "layout": {
-        "label": "Layout",
+        "label": "Disposition",
         "subNav": {
-          "scaling": "Skalierung",
-          "area": "Bereich",
-          "padding": "Polsterung",
-          "gutter": "Rinne",
-          "alignment": "Ausrichtung",
-          "page": "Buchseite"
+          "scaling": "Mise à l'échelle",
+          "area": "Zone",
+          "padding": "Rembourrage",
+          "gutter": "Gouttière",
+          "alignment": "Alignement",
+          "page": "Page"
         }
       },
       "header": {
-        "label": "Header",
+        "label": "Entête",
         "subNav": {
-          "alignment": "Ausrichtung",
-          "greeting": "Gruß",
-          "transitional": "Übergangswörter",
-          "clock": "Uhr",
-          "date": "Datum",
-          "search": "Suche"
+          "alignment": "Alignement",
+          "greeting": "Salutation",
+          "transitional": "Mots de transition",
+          "clock": "Horloge",
+          "date": "Date",
+          "search": "Chercher"
         }
       },
       "bookmark": {
-        "label": "Lesezeichen",
+        "label": "Signet",
         "subNav": {
-          "general": "Allgemein",
-          "style": "Stil",
-          "orientation": "Orientierung",
-          "sort": "Sortieren"
+          "general": "Général",
+          "style": "Style",
+          "orientation": "Orientation",
+          "sort": "Sorte"
         }
       },
       "group": {
-        "label": "Gruppe",
+        "label": "Grouper",
         "subNav": {
-          "alignment": "Ausrichtung",
-          "name": "Name",
-          "collapse": "Zusammenbruch",
-          "toolbar": "Symbolleiste"
+          "alignment": "Alignement",
+          "name": "Nom",
+          "collapse": "Effondrer",
+          "toolbar": "Barre d'outils"
         }
       },
       "toolbar": {
-        "label": "Symbolleiste",
+        "label": "Barre d'outils",
         "subNav": {
-          "size": "Größe",
-          "location": "Ort",
+          "size": "Taille",
+          "location": "Emplacement",
           "position": "Position",
-          "controls": "Kontrollen"
+          "controls": "Contrôles"
         }
       },
       "data": {
-        "label": "Daten",
+        "label": "Données",
         "subNav": {
-          "restore": "Wiederherstellen",
-          "backup": "Sicherung",
-          "clear": "Klar"
+          "restore": "Restaurer",
+          "backup": "Sauvegarde",
+          "clear": "Dégager"
         }
       },
       "support": {
-        "label": "Unterstützung"
+        "label": "Soutien"
       },
       "coffee": {
-        "label": "Kaffee"
+        "label": "Café"
       },
       "app": {
         "label": "{appName}"
@@ -91,338 +91,332 @@
       "theme": {
         "preset": {
           "helper": [
-            "Das Anwenden einer Voreinstellung ersetzt die aktuelle Farbe, den Akzent, die Schriftart, den Stil, den Radius, den Schatten, den Schatten und den Hintergrund."
+            "L'application d'un préréglage remplacera la couleur, l'accent, la police, le style, le rayon, l'ombre, l'ombre et l'arrière-plan actuels."
           ]
         },
         "saved": {
           "helper": [
-            "Beim Speichern eines Themas werden die aktuelle Farbe, der Akzent, die Schriftart, der Stil, der Radius, der Schatten, der Schatten und der Hintergrund aufgezeichnet."
+            "L'enregistrement d'un thème enregistrera la couleur, l'accent, la police, le style, l'opacité, le rayon, l'ombre, la nuance et l'arrière-plan actuels."
           ],
-          "save": "Aktuelles Thema speichern",
-          "edit": "Gespeicherte Designs bearbeiten"
+          "save": "Enregistrer le thème actuel",
+          "edit": "Modifier les thèmes enregistrés"
         },
         "style": {
           "dark": {
-            "label": "Dunkelmodus"
+            "label": "Mode sombre"
           },
           "light": {
-            "label": "Lichtmodus"
+            "label": "Mode lumière"
           },
           "automatic": {
-            "label": "Automatisch",
-            "description": "Folgen Sie dem Hell- oder Dunkelmodus des Systems."
+            "label": "Automatique",
+            "description": "Suivez le système en mode clair ou sombre."
           }
         },
         "color": {
           "shade": {
             "helper": [
-              "Hintergründe, Lesezeichen und Modals verwenden Schattierungen von links.",
-              "Text- und Formularelemente verwenden Schattierungen von rechts.",
-              "Für einen hellen Look wechseln Sie zum Lichtstil und wählen dann eine Primärfarbe aus. Und umgekehrt für einen dunklen Look."
+              "Les arrière-plans, les signets et les modaux utilisent des nuances à partir de la gauche.",
+              "Les éléments de texte et de formulaire utilisent des nuances à partir de la droite.",
+              "Pour un look clair, passez au style d'éclairage, puis sélectionnez une couleur primaire. Et vice versa pour un look sombre."
             ]
           },
           "range": {
             "primary": {
-              "h": "Primärfarbe",
-              "s": "Sättigung"
+              "h": "Couleur primaire",
+              "s": "Saturation"
             }
           },
           "contrast": {
-            "label": "Kontrastumfang",
-            "left": "Kontraststart",
-            "right": "Kontrast Ende",
+            "label": "Plage de contraste",
+            "left": "Début du contraste",
+            "right": "Fin de contraste",
             "helper": [
-              "Bewegen Sie die Kontrastbereichsregler nah beieinander, um einen gedämpften Look zu erzielen.",
-              "Bewegen Sie die Kontrastbereichsregler weit auseinander, um einen scharfen, lebendigen Look zu erzielen."
+              "Rapprochez les commandes de la plage de contraste pour un look en sourdine.",
+              "Éloignez les commandes de la plage de contraste les unes des autres pour un look vif et net."
             ]
           }
         },
         "accent": {
           "preset": {
             "color": {
-              "grey": "Grau",
-              "red": "rot",
+              "grey": "Gris",
+              "red": "rouge",
               "orange": "Orange",
-              "yellow": "Gelb",
-              "lime": "Limette",
-              "green": "Grün",
+              "yellow": "Jaune",
+              "lime": "Chaux",
+              "green": "Vert",
               "aqua": "Aqua",
-              "cyan": "Cyan",
-              "teal": "Blaugrün",
-              "blue": "Blau",
-              "purple": "Violett",
+              "cyan": "cyan",
+              "teal": "Sarcelle",
+              "blue": "Bleu",
+              "purple": "Mauve",
               "magenta": "Magenta",
-              "fuchsia": "Fuchsie"
+              "fuchsia": "Fuchsia"
             },
             "modifier": {
               "light": {
-                "level3": "Super extra leicht",
-                "level2": "Extra-Licht",
-                "level1": "Hell"
+                "level3": "Super extra léger",
+                "level2": "Lumière supplémentaire",
+                "level1": "Lumière"
               },
               "dark": {
-                "level3": "Super extra dunkel",
-                "level2": "Extra dunkel",
-                "level1": "Dunkel"
+                "level3": "Super extra foncé",
+                "level2": "Très sombre",
+                "level1": "Foncé"
               }
             }
           },
-          "color": "Akzentfarbe",
+          "color": "Couleur d'accent",
           "random": {
-            "active": "Zufällige Akzentfarbe beim Laden/Aktualisieren",
+            "active": "Couleur d'accent aléatoire au chargement/rafraîchissement",
             "style": {
-              "any": "Beliebig",
-              "light": "Hell",
-              "dark": "Dunkel",
-              "pastel": "Pastell",
-              "saturated": "Gesättigt"
+              "any": "Quelconque",
+              "light": "Lumière",
+              "dark": "Foncé",
+              "pastel": "Pastel",
+              "saturated": "Saturé"
             },
-            "randomise": "Jetzt zufällig auswählen"
+            "randomise": "Randomiser maintenant"
           },
           "cycle": {
-            "active": "Akzentfarbe automatisch ändern",
-            "speed": "Verzögerung ändern",
-            "step": "Schritte ändern",
-            "alert": "Seien Sie vorsichtig, da ein sich schnell ändernder Akzentfarbton zu Leistungsproblemen führen kann.",
+            "active": "Changement automatique de teinte d'accent",
+            "speed": "Délai de changement",
+            "step": "Étapes de changement",
+            "alert": "Faites attention car une teinte Accent changeant rapidement peut entraîner des problèmes de performances.",
             "helper": [
-              "Die automatische Änderung des Akzentfarbtons funktioniert nicht, wenn die Akzentfarbe grau oder schwarz ist."
+              "Le changement automatique de teinte d'accent ne fonctionnera pas lorsque la couleur d'accent est un gris ou un noir."
             ]
           }
         },
         "font": {
           "display": {
             "name": {
-              "label": "Schriftart anzeigen",
-              "placeholder": "Google-Schriftname",
+              "label": "Police d'affichage",
+              "placeholder": "Nom de la police Google",
               "helper": {
-                "p1": {
-                  "a1": "Benutze einen",
-                  "a2": "Google-Schriftart",
-                  "a3": "um die Uhr, das Datum, die Gruppennamen und die Lesezeichenbuchstaben anzupassen."
-                },
-                "p2": "Fügen Sie einen Schriftartnamen hinzu, wie er in Google Fonts erscheint, einschließlich Großbuchstaben und Leerzeichen, zB: Geben Sie \"Fredoka One\" oder \"Kanit\" ein.",
-                "p3": "Löschen Sie das Feld, um die Standardschriftart \"Fjalla One\" zu verwenden."
+                "p1": "Utilisez une police Google pour personnaliser l'horloge, la date, les noms de groupe et les lettres de signet.",
+                "p2": "Ajoutez un nom de police tel qu'il apparaît sur Google Fonts, y compris les majuscules et les espaces, par exemple : saisissez « Fredoka One » ou « Kanit ».",
+                "link": "Trouver une police Google",
+                "p3": "Effacez le champ pour utiliser la police par défaut \"Fjalla One\"."
               }
             },
             "weight": {
-              "label": "Schriftstärke",
-              "light": "Hell",
-              "regular": "Regulär",
-              "bold": "Deutlich",
+              "label": "Poids de la police",
+              "light": "Lumière",
+              "regular": "Ordinaire",
+              "bold": "Audacieux",
               "helper": [
-                "Nicht alle Schriftarten unterstützen alle Gewichtungen. Sehen Sie auf der Google Font-Seite nach, welche verfügbar sind."
+                "Toutes les polices ne prennent pas en charge tous les poids. Reportez-vous à la page Google Fonts pour voir lesquelles sont disponibles."
               ]
             },
             "style": {
               "normal": "Normal",
-              "italic": "Kursiv"
+              "italic": "Italique"
             }
           },
           "ui": {
             "name": {
-              "label": "Schriftart der Benutzeroberfläche",
-              "placeholder": "Google-Schriftname",
+              "label": "Police de l'interface utilisateur",
+              "placeholder": "Nom de la police Google",
               "helper": {
-                "p1": {
-                  "a1": "Benutze einen",
-                  "a2": "Google-Schriftart",
-                  "a3": "um den Lesezeichennamen, die URL und die Formularelemente anzupassen."
-                },
-                "p2": "Fügen Sie einen Schriftartnamen hinzu, wie er in Google Fonts erscheint, einschließlich Großbuchstaben und Leerzeichen, zB: Geben Sie \"Roboto\", \"Source Sans Pro\" oder \"Noto Sans\" ein.",
-                "p3": "Löschen Sie das Feld, um die Standardschriftart \"Open Sans\" zu verwenden."
+                "p1": "Utilisez une police Google pour personnaliser le nom du signet, l'URL et les éléments du formulaire.",
+                "p2": "Ajoutez un nom de police tel qu'il apparaît sur Google Fonts, y compris les majuscules et les espaces, par exemple : saisissez \"Roboto\", \"Source Sans Pro\" ou \"Noto Sans\".",
+                "link": "Trouver une police Google",
+                "p3": "Effacez le champ pour utiliser la police par défaut \"Open Sans\"."
               }
             },
             "weight": {
-              "label": "Schriftstärke",
-              "light": "Hell",
-              "regular": "Regulär",
-              "bold": "Deutlich",
+              "label": "Poids de la police",
+              "light": "Lumière",
+              "regular": "Ordinaire",
+              "bold": "Audacieux",
               "helper": [
-                "Nicht alle Schriftarten unterstützen alle Gewichtungen. Sehen Sie auf der Google Font-Seite nach, welche verfügbar sind."
+                "Toutes les polices ne prennent pas en charge tous les poids. Reportez-vous à la page Google Fonts pour voir lesquelles sont disponibles."
               ]
             },
             "style": {
               "normal": "Normal",
-              "italic": "Kursiv"
+              "italic": "Italique"
             }
           }
         },
-        "radius": "Eckenradius",
-        "shadow": "Schattengröße",
+        "radius": "Rayon d'angle",
+        "shadow": "Taille de l'ombre",
         "shade": {
-          "opacity": "Deckkraft des Schattens",
+          "opacity": "Opacité de l'ombre",
           "blur": {
-            "label": "Schattenunschärfe",
+            "label": "Flou d'ombre",
             "helper": [
-              "Nicht von allen Browsern unterstützt."
+              "Non pris en charge par tous les navigateurs."
             ]
           }
         },
         "opacity": {
           "general": {
-            "label": "Alle Deckkraft",
+            "label": "Toute opacité",
             "helper": [
-              "Ändern Sie die Deckkraft der Suchleiste, der Lesezeichen, der Gruppensteuerelemente und der Symbolleiste.",
-              "Die Deckkraft kann auch beim Bearbeiten einzelner Lesezeichen geändert werden."
+              "Modifiez l'opacité de la barre de recherche, des signets, des commandes de groupe et de la barre d'outils.",
+              "L'opacité peut également être modifiée lors de l'édition de signets individuels."
             ]
           },
-          "toolbar": "Symbolleiste",
-          "bookmark": "Lesezeichen",
-          "search": "Suchbox",
-          "groupToolbar": "Gruppensymbolleiste"
+          "toolbar": "Barre d'outils",
+          "bookmark": "Signet",
+          "search": "Barre de recherche",
+          "groupToolbar": "Barre d'outils de groupe"
         },
         "background": {
           "type": {
             "theme": {
-              "label": "Hintergrund nach Thema",
+              "label": "Contexte par thème",
               "description": [
-                "Verwenden Sie die vom Thema definierte Hintergrundfarbe."
+                "Utilisez la couleur d'arrière-plan définie par le thème."
               ]
             },
             "accent": {
-              "label": "Hintergrund von Akzent",
+              "label": "Arrière-plan par accent",
               "description": [
-                "Verwenden Sie die Akzentfarbe für den Hintergrund."
+                "Utilisez la couleur d'accent pour l'arrière-plan."
               ]
             },
-            "color": "Benutzerdefinierte Farbe",
-            "gradient": "Gradient",
-            "image": "Bild",
-            "video": "Video"
+            "color": "Couleur personnalisée",
+            "gradient": "Pente",
+            "image": "Image",
+            "video": "Vidéo"
           },
-          "color": "Hintergrundfarbe",
+          "color": "La couleur de fond",
           "gradient": {
-            "angle": "Hintergrundverlaufswinkel",
-            "start": "Start des Hintergrundverlaufs",
-            "end": "Ende des Hintergrundverlaufs"
+            "angle": "Angle de dégradé d'arrière-plan",
+            "start": "Début du dégradé d'arrière-plan",
+            "end": "Fin du dégradé de fond"
           },
           "image": {
             "alert": {
-              "p1": "Lokale Bilder können nicht mehr verwendet werden. Bilder müssen irgendwo online gehostet werden.",
-              "p2": "Warum hat sich das geändert?"
+              "p1": "Les images locales ne peuvent plus être utilisées. Les images doivent être hébergées quelque part en ligne.",
+              "p2": "Pourquoi cela a-t-il changé ?"
             },
             "url": {
               "label": "URL",
-              "placeholder": "https://www.example.com/image.jpg",
+              "placeholder": "https://www.exemple.com/image.jpg",
               "helper": [
-                "Fügen Sie mehr als eine URL hinzu, die durch Leerzeichen oder in neuen Zeilen getrennt ist, um beim Laden ein zufälliges Hintergrundbild zu erhalten.",
-                "Unsplash kann für zufällige Bilder verwendet werden, zB:",
-                "https://source.unsplash.com/random/1920x1080/?night,day,sky",
-                "Ändern Sie die Parameter nach .../random/ für weitere Optionen. Die Ladezeiten können variieren."
+                "Ajoutez plusieurs URL séparées par des espaces ou sur de nouvelles lignes pour une image d'arrière-plan aléatoire lors du chargement.",
+                "Unsplash peut être utilisé pour des images aléatoires, par exemple :",
+                "https://source.unsplash.com/random/1920x1080/?nuit,jour,ciel",
+                "Modifiez les paramètres après .../random/ pour plus d'options. Les temps de chargement peuvent varier."
               ]
             },
-            "blur": "Verwischen",
-            "grayscale": "Graustufen",
-            "scale": "Skala",
-            "accent": "Akzent",
-            "opacity": "Opazität",
+            "blur": "Se brouiller",
+            "grayscale": "Niveaux de gris",
+            "scale": "Échelle",
+            "accent": "Accent",
+            "opacity": "Opacité",
             "vignette": {
               "opacity": "Vignette",
               "range": {
-                "label": "Schattenanfang und -ende",
-                "left": "Schattenende",
-                "right": "Schattenstart"
+                "label": "Début et fin de l'ombre",
+                "left": "Abat-jour",
+                "right": "Début de l'ombre"
               }
             }
           },
           "video": {
             "alert": {
-              "p1": "URLs von YouTube-Seiten können nicht verwendet werden.",
-              "p2": "So verlinken Sie eine Videodatei."
+              "p1": "Les URL des pages YouTube ne peuvent pas être utilisées.",
+              "p2": "Comment créer un lien vers un fichier vidéo."
             },
             "url": {
               "label": "URL",
               "placeholder": "https://www.example.com/video.mp4",
               "helper": [
-                "Hintergrundvideo unterstützt nur eine direkte URL zu einer Videodatei. Unterstützt MP4- und WebM-Format.",
-                "Fügen Sie mehr als eine URL hinzu, die durch Leerzeichen oder in neuen Zeilen getrennt ist, um ein zufälliges Hintergrundvideo beim Laden zu erhalten."
+                "La vidéo d'arrière-plan ne prend en charge qu'une URL directe vers un fichier vidéo. Prend en charge les formats MP4 et WebM.",
+                "Ajoutez plusieurs URL séparées par des espaces ou sur de nouvelles lignes pour une vidéo d'arrière-plan aléatoire au chargement."
               ]
             },
-            "blur": "Verwischen",
-            "grayscale": "Graustufen",
-            "scale": "Skala",
-            "accent": "Akzent",
-            "opacity": "Opazität",
+            "blur": "Se brouiller",
+            "grayscale": "Niveaux de gris",
+            "scale": "Échelle",
+            "accent": "Accent",
+            "opacity": "Opacité",
             "vignette": {
               "opacity": "Vignette",
               "range": {
-                "label": "Schattenanfang und -ende",
-                "start": "Schattenende",
-                "end": "Schattenstart"
+                "label": "Début et fin de l'ombre",
+                "start": "Abat-jour",
+                "end": "Début de l'ombre"
               }
             }
           }
         },
         "layout": {
           "color": {
-            "label": "Hintergrundfarbe des Layouts",
+            "label": "Couleur d'arrière-plan de la mise en page",
             "by": {
               "transparent": {
                 "label": "Transparent",
-                "description": "Keine Hintergrundfarbe hinter dem Layout."
+                "description": "Aucune couleur d'arrière-plan derrière la mise en page."
               },
               "custom": {
-                "label": "Benutzerdefinierte Farbe",
-                "description": "Verwenden Sie eine benutzerdefinierte Farbe hinter dem Layout."
+                "label": "Couleur personnalisée",
+                "description": "Utilisez une couleur personnalisée derrière la mise en page."
               }
             },
-            "color": "Hintergrundfarbe des Layouts",
-            "opacity": "Hintergrundopazität",
+            "color": "Couleur d'arrière-plan de la mise en page",
+            "opacity": "Opacité de l'arrière-plan",
             "blur": {
-              "label": "Hintergrundunschärfe",
+              "label": "Flou d'arrière-plan",
               "helper": [
-                "Nicht von allen Browsern unterstützt."
+                "Non pris en charge par tous les navigateurs."
               ]
             }
           },
-          "divider": "Trenner zwischen Kopfzeile und Lesezeichenbereich"
+          "divider": "Séparateur entre l'en-tête et la zone de signet"
         },
         "header": {
           "color": {
-            "label": "Hintergrundfarbe der Kopfzeile",
+            "label": "Couleur d'arrière-plan de l'en-tête",
             "by": {
               "transparent": {
                 "label": "Transparent",
-                "description": "Keine Hintergrundfarbe hinter dem Header-Bereich."
+                "description": "Aucune couleur d'arrière-plan derrière la zone d'en-tête."
               },
               "custom": {
-                "label": "Benutzerdefinierte Farbe",
-                "description": "Verwenden Sie eine benutzerdefinierte Farbe hinter dem Kopfzeilenbereich."
+                "label": "Couleur personnalisée",
+                "description": "Utilisez une couleur personnalisée derrière la zone d'en-tête."
               }
             },
-            "color": "Hintergrundfarbe der Kopfzeile",
-            "opacity": "Hintergrundopazität"
+            "color": "Couleur d'arrière-plan de l'en-tête",
+            "opacity": "Opacité de l'arrière-plan"
           }
         },
         "bookmark": {
           "color": {
-            "label": "Hintergrundfarbe für Lesezeichen",
+            "label": "Couleur d'arrière-plan du signet",
             "by": {
               "transparent": {
                 "label": "Transparent",
-                "description": "Keine Hintergrundfarbe hinter dem Lesezeichenbereich."
+                "description": "Aucune couleur d'arrière-plan derrière la zone des signets."
               },
               "custom": {
-                "label": "Benutzerdefinierte Farbe",
-                "description": "Verwenden Sie eine benutzerdefinierte Farbe hinter dem Lesezeichenbereich."
+                "label": "Couleur personnalisée",
+                "description": "Utilisez une couleur personnalisée derrière la zone des signets."
               }
             },
-            "color": "Hintergrundfarbe für Lesezeichen",
-            "opacity": "Hintergrundopazität"
+            "color": "Couleur d'arrière-plan du signet",
+            "opacity": "Opacité de l'arrière-plan"
           },
           "item": {
             "border": {
-              "label": "Lesezeichenrahmen",
+              "label": "Bordure de signet",
               "helper": [
-                "Der Lesezeichenrahmen kann auch beim Bearbeiten einzelner Lesezeichen geändert werden.",
-                "Die Farbe des Rahmens wird durch den Akzent bestimmt, der auch beim Bearbeiten einzelner Lesezeichen geändert werden kann."
+                "La bordure des signets peut également être modifiée lors de l'édition de signets individuels.",
+                "La couleur de la bordure est définie par l'accent qui peut également être modifié lors de l'édition de signets individuels."
               ]
             },
             "rainbow": {
-              "add": "Fügen Sie jedem Lesezeichen einen einzigartigen Akzent hinzu",
-              "remove": "Alle Akzentüberschreibungen entfernen",
+              "add": "Ajoutez un accent unique à chaque signet",
+              "remove": "Supprimer tous les remplacements d'accent",
               "helper": [
-                "Der benutzerdefinierte Lesezeichenakzent kann auch beim Bearbeiten einzelner Lesezeichen geändert werden."
+                "L'accent personnalisé des signets peut également être modifié lors de l'édition de signets individuels."
               ]
             }
           }
@@ -430,103 +424,103 @@
       },
       "layout": {
         "scaling": {
-          "size": "Globale Größe"
+          "size": "Taille globale"
         },
         "area": {
-          "width": "Breite des Layoutbereichs",
+          "width": "Largeur de la zone de mise en page",
           "header": {
-            "width": "Breite des Kopfbereichs",
+            "width": "Largeur de la zone d'en-tête",
             "justify": {
-              "label": "Ausrichtung des Kopfbereichs",
-              "left": "Links",
-              "center": "Center",
-              "right": "Richtig",
+              "label": "Alignement de la zone d'en-tête",
+              "left": "À gauche",
+              "center": "Centre",
+              "right": "À droite",
               "helper1": [
-                "Effekte sind möglicherweise nicht sichtbar, wenn der Kopfzeilenbereich die volle Breite hat."
+                "Les effets peuvent ne pas être visibles si la zone d'en-tête est pleine largeur."
               ],
               "helper2": [
-                "Nur verfügbar, wenn die Layoutrichtung Vertikal ist und Kopfzeilenelemente angezeigt werden."
+                "Uniquement disponible lorsque la direction de mise en page est verticale et que les éléments d'en-tête sont affichés."
               ]
             }
           },
           "bookmark": {
-            "width": "Breite des Lesezeichenbereichs",
+            "width": "Largeur de la zone de signet",
             "justify": {
-              "label": "Ausrichtung des Lesezeichenbereichs",
-              "left": "Links",
-              "center": "Center",
-              "right": "Richtig",
+              "label": "Alignement de la zone de signet",
+              "left": "À gauche",
+              "center": "Centre",
+              "right": "À droite",
               "helper1": [
-                "Effekte sind möglicherweise nicht sichtbar, wenn der Lesezeichenbereich die volle Breite hat."
+                "Les effets peuvent ne pas être visibles si la zone des signets est pleine largeur."
               ],
               "helper2": [
-                "Nur verfügbar, wenn die Layoutrichtung Vertikal ist und Kopfzeilenelemente angezeigt werden."
+                "Uniquement disponible lorsque la direction de mise en page est verticale et que les éléments d'en-tête sont affichés."
               ]
             }
           }
         },
-        "padding": "Platz um Kopfzeile und Lesezeichenbereich",
-        "gutter": "Leerzeichen zwischen Kopfzeilen- und Lesezeichenelementen",
+        "padding": "Espace autour de l'en-tête et de la zone de signet",
+        "gutter": "Espace entre les éléments d'en-tête et de signet",
         "alignment": {
-          "label": "Bereichsausrichtung",
-          "topLeft": "Oben links",
-          "topCenter": "Oben Mitte",
-          "topRight": "Oben rechts",
-          "centerLeft": "Mitte links",
-          "centerCenter": "Zentrum Zentrum",
-          "centerRight": "Mitte rechts",
-          "bottomLeft": "Unten links",
-          "bottomCenter": "Unten Mitte",
-          "bottomRight": "Unten rechts"
+          "label": "Alignement de zone",
+          "topLeft": "En haut à gauche",
+          "topCenter": "Haut au centre",
+          "topRight": "En haut à droite",
+          "centerLeft": "Centre gauche",
+          "centerCenter": "Centre Centre",
+          "centerRight": "Centre droit",
+          "bottomLeft": "En bas à gauche",
+          "bottomCenter": "En bas au centre",
+          "bottomRight": "En bas à droite"
         },
         "direction": {
           "horizontal": {
-            "label": "Horizontal ausrichten",
-            "description": "Stapeln Sie die Kopfzeile und die Lesezeichen in einer Reihe nebeneinander."
+            "label": "Aligner horizontalement",
+            "description": "Empilez l'en-tête et les signets côte à côte."
           },
           "vertical": {
-            "label": "Vertikal ausrichten",
-            "description": "Stapeln Sie Kopfzeile und Lesezeichen in einer Spalte übereinander."
+            "label": "Aligner verticalement",
+            "description": "Empilez l'en-tête et les signets dans une colonne l'une au-dessus de l'autre."
           }
         },
         "order": {
           "headerBookmark": {
-            "label": "Kopfzeile, dann Lesezeichen",
-            "description": "Ordnen Sie an, dass der Kopfzeilenbereich vor dem Lesezeichenbereich angezeigt wird."
+            "label": "En-tête puis Signets",
+            "description": "Ordonnez que la zone d'en-tête apparaisse avant la zone de signets."
           },
           "bookmarkHeader": {
-            "label": "Lesezeichen dann Kopfzeile",
-            "description": "Ordnen Sie den Lesezeichenbereich so an, dass er vor dem Kopfzeilenbereich angezeigt wird."
+            "label": "Signets puis en-tête",
+            "description": "Ordonnez que la zone Signets apparaisse avant la zone En-tête."
           }
         },
         "page": {
           "title": {
-            "label": "Titel",
-            "placeholder": "Neue Registerkarte"
+            "label": "Titre",
+            "placeholder": "Nouvel onglet"
           },
           "favicon": {
-            "label": "Favicon-URL",
+            "label": "URL de l'icône de favori",
             "placeholder": "https://www.example.com/favicon.svg",
             "helper": [
-              "Nicht von allen Browsern unterstützt."
+              "Non pris en charge par tous les navigateurs."
             ]
           },
           "scrollbar": {
-            "label": "Scrollleiste",
+            "label": "Barre de défilement",
             "auto": "Auto",
-            "thin": "Dünn",
-            "none": "Versteckt",
+            "thin": "Mince",
+            "none": "Caché",
             "helper": [
-              "Nicht von allen Browsern unterstützt."
+              "Non pris en charge par tous les navigateurs."
             ]
           },
           "overscroll": {
-            "active": "Über das Ende scrollen",
+            "active": "Faire défiler après la fin",
             "unblur": {
-              "label": "Hintergrundbild oder Video unscharf machen",
+              "label": "Annuler le flou d'une image ou d'une vidéo d'arrière-plan",
               "description": [
-                "Hintergrundbild oder Video werden unscharf, wenn Sie zum Ende der Seite scrollen.",
-                "Bild- oder Videounschärfe finden Sie unter Themenhintergrund."
+                "L'image d'arrière-plan ou la vidéo ne sera plus floue lors du défilement vers le bas de la page.",
+                "Le flou d'image ou de vidéo se trouve sous Arrière-plan du thème."
               ]
             }
           }
@@ -535,402 +529,756 @@
       "header": {
         "alignment": {
           "justify": {
-            "label": "Ausrichtung der Kopfzeilen",
-            "left": "Links",
-            "center": "Center",
-            "right": "Richtig"
+            "label": "Alignement des éléments d'en-tête",
+            "left": "À gauche",
+            "center": "Centre",
+            "right": "À droite"
           },
           "helper": [
-            "Effekte sind möglicherweise nicht sichtbar, wenn die Suchfeldgröße auf Auto eingestellt ist und wächst, um den verfügbaren Platz auszufüllen."
+            "Les effets peuvent ne pas être visibles si la taille de la zone de recherche est définie sur Auto et augmente pour remplir l'espace disponible."
           ]
         },
         "greeting": {
-          "show": "Gruß anzeigen",
-          "size": "Größe",
+          "show": "Afficher le message d'accueil",
+          "size": "Taille",
           "newLine": {
-            "label": "Neue Zeile",
-            "description": "Erzwingen Sie eine neue Zeile und trennen Sie sie von anderen Header-Elementen."
+            "label": "Nouvelle ligne",
+            "description": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête."
           },
           "type": {
-            "label": "Wortlaut",
-            "good": "\"Guten Morgen...\"",
-            "hello": "\"Hallo...\"",
-            "hi": "\"Hallo...\"",
+            "label": "Formulation",
+            "good": "\"Bonjour...\"",
+            "hello": "\"Bonjour...\"",
+            "hi": "\"Salut...\"",
             "none": {
-              "label": "Keiner",
-              "description": "Nützlich, um nur den Namen anzuzeigen."
+              "label": "Rien",
+              "description": "Utile pour afficher uniquement le nom."
             },
             "custom": {
-              "label": "Brauch",
+              "label": "Personnalisé",
               "description": [
-                "Verwenden Sie Ihren eigenen Gruß.",
-                "Standardmäßig ist \"Guten Morgen...\" leer, wenn es leer gelassen wird."
+                "Utilisez votre propre salutation.",
+                "La valeur par défaut est \"Bonjour...\" si elle est laissée vide."
               ]
             }
           },
           "custom": {
-            "label": "Benutzerdefinierter Grußtext",
-            "placeholder": "Hallo"
+            "label": "Texte d'accueil personnalisé",
+            "placeholder": "salut"
           },
           "name": {
-            "label": "Name",
-            "placeholder": "Spitzname, Alias oder Superheldenname"
+            "label": "Nom",
+            "placeholder": "Surnom, alias ou nom de super-héros"
           }
         },
         "transitional": {
           "show": {
-            "label": "Übergangswörter anzeigen",
+            "label": "Afficher les mots de transition",
             "helper": [
-              "Nur verfügbar, wenn Datum oder Uhrzeit angezeigt wird."
+              "Uniquement disponible lorsque la date ou l'heure est affichée."
             ]
           },
           "type": {
-            "label": "Wortlaut",
-            "timeAndDate": "\"Uhrzeit und Datum sind\"",
-            "its": "\"Es ist\""
+            "label": "Formulation",
+            "timeAndDate": "\"L'heure et la date sont\"",
+            "its": "\"Son\""
           },
-          "size": "Größe",
+          "size": "Taille",
           "newLine": {
-            "label": "Neue Zeile",
-            "description": "Erzwingen Sie eine neue Zeile und trennen Sie sie von anderen Header-Elementen."
+            "label": "Nouvelle ligne",
+            "description": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête."
           }
         },
         "clock": {
           "hour": {
-            "show": "Öffnungszeiten anzeigen",
+            "show": "Afficher les heures",
             "display": {
-              "number": "Als Zahl",
-              "word": "Ein Schwert"
+              "number": "Comme nombre",
+              "word": "Une épée"
             }
           },
           "minute": {
-            "show": "Minuten anzeigen",
+            "show": "Afficher les minutes",
             "display": {
-              "number": "Als Zahl",
-              "word": "Ein Schwert"
+              "number": "Comme nombre",
+              "word": "Une épée"
             }
           },
           "second": {
-            "show": "Sekunden anzeigen",
+            "show": "Afficher les secondes",
             "display": {
-              "number": "Als Zahl",
-              "word": "Ein Schwert"
+              "number": "Comme nombre",
+              "word": "Une épée"
             }
           },
           "separator": {
-            "show": "Trennzeichen anzeigen",
-            "label": "Trennzeichen",
+            "show": "Afficher le séparateur",
+            "label": "Caractère de séparation",
             "placeholder": ":"
           },
-          "hour24": "24 Stunden",
-          "meridiem": "AM / PM",
-          "size": "Größe",
+          "hour24": "24 heures",
+          "meridiem": "MATIN APRÈS-MIDI",
+          "size": "Taille",
           "newLine": {
-            "label": "Neue Zeile",
-            "description": "Erzwingen Sie eine neue Zeile und trennen Sie sie von anderen Header-Elementen."
+            "label": "Nouvelle ligne",
+            "description": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête."
           }
         },
         "date": {
           "day": {
-            "show": "Ausstellungstag",
+            "show": "Jour de spectacle",
             "display": {
-              "number": "Als Zahl",
-              "word": "Ein Schwert",
+              "number": "Comme nombre",
+              "word": "Une épée",
               "weekStart": {
-                "label": "Wochenstart",
-                "monday": "Montag",
-                "sunday": "Sonntag"
+                "label": "Début de semaine",
+                "monday": "Lundi",
+                "sunday": "dimanche"
               },
               "length": {
-                "label": "Wortlänge",
-                "long": "Lang",
-                "short": "Kurz"
+                "label": "Longueur du mot",
+                "long": "Long",
+                "short": "Court"
               }
             }
           },
           "date": {
-            "show": "Datum anzeigen",
+            "show": "Afficher la date",
             "display": {
-              "number": "Als Zahl",
-              "word": "Ein Schwert",
-              "ordinal": "Ordnungszahlen"
+              "number": "Comme nombre",
+              "word": "Une épée",
+              "ordinal": "Nombres ordinaux"
             }
           },
           "month": {
-            "show": "Monat anzeigen",
+            "show": "Afficher le mois",
             "display": {
-              "number": "Als Zahl",
-              "word": "Ein Schwert",
-              "ordinal": "Ordnungszahlen",
+              "number": "Comme nombre",
+              "word": "Une épée",
+              "ordinal": "Nombres ordinaux",
               "length": {
-                "label": "Wortlänge",
-                "long": "Lang",
-                "short": "Kurz"
+                "label": "Longueur du mot",
+                "long": "Long",
+                "short": "Court"
               }
             }
           },
           "year": {
-            "show": "Jahr anzeigen",
+            "show": "Afficher l'année",
             "display": {
-              "number": "Als Zahl",
-              "word": "Ein Schwert"
+              "number": "Comme nombre",
+              "word": "Une épée"
             }
           },
           "separator": {
-            "show": "Trennzeichen anzeigen",
-            "label": "Trennzeichen",
+            "show": "Afficher le séparateur",
+            "label": "Caractère de séparation",
             "placeholder": "/"
           },
           "format": {
             "label": "Format",
-            "dateMonth": "Datum / Monat",
-            "monthDate": "Monatsdatum"
+            "dateMonth": "Date / Mois",
+            "monthDate": "Mois / Date"
           },
-          "size": "Größe",
+          "size": "Taille",
           "newLine": {
-            "label": "Neue Zeile",
-            "description": "Erzwingen Sie eine neue Zeile und trennen Sie sie von anderen Header-Elementen."
+            "label": "Nouvelle ligne",
+            "description": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête."
           }
         },
         "search": {
-          "show": "Suche anzeigen",
+          "show": "Afficher la recherche",
           "width": {
-            "label": "Breite des Suchfelds",
+            "label": "Largeur du champ de recherche",
             "auto": {
-              "label": "Automatische Breite",
-              "description": "Das Suchfeld wird an den verfügbaren Platz angepasst."
+              "label": "Largeur automatique",
+              "description": "La zone de recherche s'agrandira pour s'adapter au mieux à l'espace disponible."
             },
             "custom": {
-              "label": "Benutzerdefinierte Breite",
-              "description": "Legen Sie fest, wie breit das Suchfeld im Kopfzeilenbereich sein soll."
+              "label": "Largeur personnalisée",
+              "description": "Définissez la largeur de la zone de recherche à l'intérieur de la zone d'en-tête."
             },
-            "size": "Breite"
+            "size": "Largeur"
           },
-          "size": "Größe",
+          "size": "Taille",
           "newLine": {
-            "label": "Neue Zeile",
-            "description": "Erzwingen Sie eine neue Zeile und trennen Sie sie von anderen Header-Elementen."
+            "label": "Nouvelle ligne",
+            "description": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête."
           },
           "engine": {
             "selected": {
-              "label": "Suchmaschine",
-              "custom": "Brauch"
+              "label": "Moteur de recherche",
+              "custom": "Personnalisé"
             },
             "custom": {
               "name": {
-                "label": "Name",
-                "placeholder": "Suchmaschinenname"
+                "label": "Nom",
+                "placeholder": "Nom du moteur de recherche"
               },
               "url": {
                 "label": "URL",
                 "placeholder": "https://",
                 "helper": [
-                  "Geben Sie eine Webadresse mit den Suchparametern ein, zB: \"https://vimeo.com/search?q=\"",
-                  "{appName} fügt den in das Suchfeld eingegebenen Suchbegriff am Ende der obigen URL hinzu."
+                  "Saisissez une adresse Web avec les paramètres de recherche, par exemple : \"https://vimeo.com/search?q=\"",
+                  "{appName} ajoutera le terme de recherche entré dans la zone de recherche à la fin de l'URL ci-dessus."
                 ]
               },
               "queryName": {
-                "label": "Namensattribut",
-                "placeholder": "Q",
+                "label": "Attribut de nom",
+                "placeholder": "q",
                 "helper": [
-                  "Setzt das Namensattribut im Eingabefeld Suche.",
-                  "Dies definiert den Namen, der beim Absenden an die Suchmaschine übergeben wird. Wenn Sie sich nicht sicher sind, lassen Sie das Feld leer."
+                  "Définit l'attribut de nom dans le champ de saisie Rechercher.",
+                  "Ceci définit le nom passé au moteur de recherche lors de la soumission. Si vous n'êtes pas sûr, laissez vide."
                 ]
               }
             },
             "text": {
               "justify": {
-                "label": "Textausrichtung suchen",
-                "left": "Links",
-                "center": "Center",
-                "right": "Richtig"
+                "label": "Alignement du texte de recherche",
+                "left": "À gauche",
+                "center": "Centre",
+                "right": "À droite"
               }
             }
           },
-          "newTab": "Suchergebnisse in einem neuen Tab öffnen"
+          "newTab": "Ouvrir les résultats de la recherche dans un nouvel onglet"
         }
       },
       "bookmark": {
         "general": {
-          "show": "Lesezeichen anzeigen",
-          "urlShow": "URL bei Lesezeichen-Hover anzeigen",
-          "lineShow": "Lesezeichenzeile anzeigen",
+          "show": "Afficher les signets",
+          "urlShow": "Afficher l'URL au survol des signets",
+          "lineShow": "Afficher la ligne de signet",
           "shadowShow": {
-            "label": "Schatten bei Lesezeichen-Hover anzeigen",
-            "description": "Effekte sind möglicherweise nicht sichtbar, wenn Theme Shadow auf 0 gesetzt ist."
+            "label": "Afficher l'ombre au survol du signet",
+            "description": "Les effets peuvent ne pas être visibles si Theme Shadow est défini sur 0."
           },
-          "hoverScaleShow": "Wachsen bei Lesezeichen-Hover",
-          "newTab": "Lesezeichen in einem neuen Tab öffnen",
-          "size": "Lesezeichengröße"
+          "hoverScaleShow": "Agrandir au survol des signets",
+          "newTab": "Ouvrir les signets dans un nouvel onglet",
+          "size": "Taille du signet"
         },
         "style": {
           "block": {
-            "label": "Block",
-            "description": "Quadratische Lesezeichenfliesen."
+            "label": "Bloquer",
+            "description": "Carreaux de marque-page en forme de carré."
           },
           "list": {
-            "label": "Aufführen",
-            "description": "Kurze und breite Lesezeichen-Kacheln."
+            "label": "Lister",
+            "description": "Tuiles marque-pages courtes et larges."
           }
         },
         "orientation": {
-          "top": "oben",
-          "bottom": "Unterseite",
+          "top": "Haut",
+          "bottom": "Bas",
           "helper": [
-            "Zeigen Sie die URL und die Steuerelemente entweder oben oder unten in einer Lesezeichenkachel an."
+            "Affichez l'URL et les commandes en haut ou en bas d'une vignette de signet."
           ]
         },
         "sort": {
-          "letter": "Per Brief",
-          "icon": "Nach Symbol",
-          "name": "Namentlich"
+          "letter": "Par lettre",
+          "icon": "Par icône",
+          "name": "De nom"
         }
       },
       "group": {
         "alignment": {
           "justify": {
-            "label": "Ausrichtung des Gruppendetailsbereichs",
-            "left": "Links",
-            "center": "Center",
-            "right": "Richtig"
+            "label": "Alignement de la zone des détails du groupe",
+            "left": "À gauche",
+            "center": "Centre",
+            "right": "À droite"
           },
           "order": {
-            "label": "Gruppendetails bestellen",
+            "label": "Ordre des détails du groupe",
             "headerBody": {
-              "label": "Gruppendetails, dann Lesezeichen",
-              "description": "Ordnen Sie an, dass der Bereich Gruppendetails vor dem Bereich Lesezeichen angezeigt wird."
+              "label": "Détails du groupe puis Signets",
+              "description": "Ordonnez que la zone Détails du groupe apparaisse avant la zone Signets."
             },
             "bodyHeader": {
-              "label": "Lesezeichen, dann Gruppendetails",
-              "description": "Ordnen Sie an, dass der Bereich Lesezeichen vor dem Bereich Gruppendetails angezeigt wird."
+              "label": "Signets puis Détails du groupe",
+              "description": "Faites en sorte que la zone Signets apparaisse avant la zone Détails du groupe."
             }
           }
         },
         "name": {
-          "size": "Namensgröße",
-          "show": "Zeige alles",
-          "hide": "Versteck alles",
+          "size": "Taille du nom",
+          "show": "Afficher tout",
+          "hide": "Cacher tout",
           "helper": [
-            "Gruppennamen können auch durch Bearbeiten einzelner Gruppen geändert werden."
+            "Les noms de groupe peuvent également être modifiés en éditant des groupes individuels."
           ]
         },
         "collapse": {
-          "show": "Alle Gruppen öffnen",
-          "hide": "Alle Gruppen ausblenden"
+          "show": "Ouvrir tous les groupes",
+          "hide": "Réduire tous les groupes"
         },
         "toolbar": {
-          "size": "Größe der Gruppensymbolleiste",
+          "size": "Taille de la barre d'outils du groupe",
           "collapse": {
-            "label": "Steuerung des Gruppenzusammenbruchs",
-            "show": "Zeige alles",
-            "hide": "Versteck alles",
+            "label": "Contrôle de réduction de groupe",
+            "show": "Afficher tout",
+            "hide": "Cacher tout",
             "helper": [
-              "Die Schaltfläche zum Zusammenklappen der Gruppensymbolleiste kann auch durch Bearbeiten einzelner Gruppen geändert werden."
+              "Le bouton de réduction de la barre d'outils des groupes peut également être modifié en modifiant des groupes individuels."
             ]
           },
           "openAll": {
-            "label": "Gruppe Alle Kontrolle öffnen",
-            "show": "Zeige alles",
-            "hide": "Versteck alles",
+            "label": "Groupe Ouvrir tous les contrôles",
+            "show": "Afficher tout",
+            "hide": "Cacher tout",
             "helper": [
-              "Die Schaltfläche Alle öffnen der Gruppensymbolleiste kann auch durch Bearbeiten einzelner Gruppen geändert werden."
+              "Le bouton ouvrir tout de la barre d'outils des groupes peut également être modifié en modifiant des groupes individuels."
             ]
           }
         }
       },
       "toolbar": {
-        "size": "Symbolleistengröße",
+        "size": "Taille de la barre d'outils",
         "location": {
-          "corner": "In einer Ecke",
-          "header": "In der Kopfzeile",
+          "corner": "Dans un coin",
+          "header": "Dans l'en-tête",
           "helper": [
-            "Positionieren Sie die Symbolleiste innerhalb der Kopfzeile oder in einer Ecke des Fensters."
+            "Placez la barre d'outils à l'intérieur de l'en-tête ou dans un coin de la fenêtre."
           ],
           "newLine": {
-            "label": "Neue Zeile",
-            "description": "Erzwingen Sie eine neue Zeile und trennen Sie sie von anderen Header-Elementen.",
+            "label": "Nouvelle ligne",
+            "description": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête.",
             "helper": [
-              "Nur verfügbar, wenn sich die Symbolleiste in der Kopfzeile befindet."
+              "Uniquement disponible lorsque la barre d'outils est positionnée à l'intérieur de l'en-tête."
             ]
           }
         },
         "position": {
-          "label": "Position der Symbolleiste",
-          "topLeft": "Oben links",
-          "topRight": "Oben rechts",
-          "bottomLeft": "Unten links",
-          "bottomRight": "Unten rechts",
+          "label": "Position de la barre d'outils",
+          "topLeft": "En haut à gauche",
+          "topRight": "En haut à droite",
+          "bottomLeft": "En bas à gauche",
+          "bottomRight": "En bas à droite",
           "helper1": [
-            "Positionieren Sie die Symbolleiste in einer der vier Ecken des Fensters."
+            "Positionnez la barre d'outils dans l'un des quatre coins de la fenêtre."
           ],
           "helper2": [
-            "Nur verfügbar, wenn die Symbolleiste in einer Ecke positioniert ist."
+            "Uniquement disponible lorsque la barre d'outils est positionnée dans un coin."
           ]
         },
         "controls": {
-          "accent": "Akzentsteuerung anzeigen",
-          "add": "Steuerelement hinzufügen anzeigen",
-          "edit": "Bearbeitungssteuerelement anzeigen"
+          "accent": "Afficher le contrôle d'accentuation",
+          "add": "Afficher Ajouter un contrôle",
+          "edit": "Afficher le contrôle d'édition"
         }
       },
       "data": {
         "restore": {
-          "file": "Aus Datei importieren",
-          "clipboard": "Aus Zwischenablage importieren",
+          "file": "Importer depuis un fichier",
+          "clipboard": "Importer depuis le presse-papiers",
           "helper": [
-            "Stellen Sie ein zuvor exportiertes {appName}."
+            "Restaurez une sauvegarde {appName}"
           ],
-          "drop": "Oder legen Sie hier eine {appName} ab."
+          "drop": "Ou déposez un fichier de sauvegarde {appName}"
         },
         "backup": {
-          "file": "Daten exportieren",
-          "clipboard": "In die Zwischenablage kopieren",
+          "file": "Exporter des données",
+          "clipboard": "Copier dans le presse-papier",
           "helper": [
-            "Laden Sie ein Backup Ihrer {appName} und -Einstellungen herunter.",
-            "Diese Datei kann später auf dieses oder ein anderes Gerät importiert werden."
+            "Téléchargez une sauvegarde de vos favoris et paramètres {appName}",
+            "Ce fichier pourra ensuite être importé sur cet appareil ou sur un autre."
           ]
         },
         "clear": {
-          "all": "Alle Daten löschen",
-          "partial": "Alles löschen außer Lesezeichen",
+          "all": "Effacer toutes les données",
+          "partial": "Tout effacer sauf les favoris",
           "alert": {
-            "p1": "Sie verlieren Lesezeichen, wenn Sie alle Daten löschen.",
-            "link": "Sichern Sie Ihre Daten"
+            "p1": "Vous perdrez les signets en effaçant toutes les données.",
+            "link": "Sauvegardez vos données"
           },
           "helper": [
-            "Löschen Sie alle Daten, um {appName} auf den Standardzustand zurückzusetzen.",
-            "Alternativ ist es möglich, alle Einstellungen zu löschen, aber die aktuellen Lesezeichen und Gruppen beizubehalten."
+            "Effacez toutes les données pour réinitialiser {appName} à l'état par défaut.",
+            "Alternativement, il est possible d'effacer tous les paramètres mais de conserver les signets et les groupes actuels."
           ]
         }
       },
       "support": {
         "page": {
-          "applyToAll": "Anwenden von Lesezeicheneinstellungen auf alle",
-          "browser": "Browser-Unterstützung",
-          "cookies": "Cookies und Cache",
-          "data": "Datensicherung und -wiederherstellung",
-          "localBackgroundImage": "Lokales Hintergrundbild",
-          "protectedUrl": "Geschützte URLs",
-          "recovering": "Wiederherstellen von Einstellungen und Lesezeichen",
-          "resetting": "Zurücksetzen beim Öffnen des Browsers",
-          "privacy": "Respektiere deine Privatsphäre",
-          "backgroundImageVideo": "Einstellen eines Hintergrundvideos oder -bilds",
-          "firefox": "{appName} als Ihre Firefox-Startseite einrichten"
+          "applyToAll": "Application des paramètres de signet à tous",
+          "browser": "Prise en charge du navigateur",
+          "cookies": "Cookies et cache",
+          "data": "Sauvegarde et restauration des données",
+          "localBackgroundImage": "Image de fond locale",
+          "protectedUrl": "URL protégées",
+          "recovering": "Récupération des paramètres et des signets",
+          "resetting": "Réinitialisation à l'ouverture du navigateur",
+          "privacy": "Respect de votre vie privée",
+          "backgroundImageVideo": "Définir une vidéo ou une image d'arrière-plan",
+          "firefox": "Définir {appName} comme page d'accueil de Firefox"
         },
-        "p1": "Für weitere Unterstützung oder Feedback:",
-        "link1": "Senden Sie ein Problem.",
-        "link2": "Überprüfen Sie das Wiki."
+        "p1": "Pour plus d'assistance ou de commentaires :",
+        "link1": "Soumettre un problème.",
+        "link2": "Vérifiez le Wiki."
       },
       "coffee": {
-        "p1": "{appName} ist kostenlos, Anerkennung in Form von Kaffee ist willkommen!",
-        "button": "Kauf mir einen Kaffee"
+        "p1": "{appName} est gratuit, l'appréciation est la bienvenue sous forme de café !",
+        "button": "Achetez-moi un café"
       },
       "app": {
-        "para1": "Teilen Sie Ihr Setup mit der Community.",
-        "link1": "Gefunden auf Reddit /r/{appName}.",
-        "para2": "Dieses Projekt ist Open Source.",
-        "link2": "Auf GitHub gefunden.",
-        "link3": "GNU General Public License v3.0."
+        "para1": "Partagez votre configuration avec la communauté.",
+        "link1": "Trouvé sur Reddit /r/{appName}.",
+        "para2": "Ce projet est open source.",
+        "link2": "Trouvé sur GitHub.",
+        "link3": "Licence publique générale GNU v3.0."
+      }
+    }
+  },
+  "bookmark": {
+    "tile": {
+      "control": {
+        "left": "Déplacer ce signet vers la gauche",
+        "sort": "Faites glisser le signet pour réorganiser",
+        "right": "Déplacer ce signet vers la droite",
+        "edit": "Modifier ce signet",
+        "remove": "Supprimer ce signet"
+      }
+    },
+    "add": {
+      "heading": "Ajouter un nouveau signet",
+      "successText": "Ajouter",
+      "cancelText": "Annuler"
+    },
+    "remove": {
+      "heading": {
+        "name": "Supprimer",
+        "unnamed": "Supprimer le signet sans nom"
+      },
+      "content": "Voulez-vous vraiment supprimer ce signet ? Ça ne peut pas être annulé.",
+      "successText": "Supprimer",
+      "cancelText": "Annuler"
+    },
+    "edit": {
+      "heading": {
+        "name": "Éditer",
+        "unnamed": "Modifier le signet sans nom"
+      },
+      "successText": "Sauvegarder",
+      "cancelText": "Annuler"
+    },
+    "form": {
+      "tab": {
+        "visual": "Visuel et nom",
+        "address": "Adresse",
+        "position": "Position",
+        "layout": "Disposition",
+        "theme": "Thème"
+      },
+      "section": {
+        "visual": {
+          "heading": "Visuel et nom",
+          "description": "Affichez des lettres, une icône, une image et un nom sur cette vignette de signet."
+        },
+        "address": {
+          "heading": "Adresse",
+          "description": "Assurez-vous d'utiliser l'URL complète et d'inclure \"https://...\""
+        },
+        "position": {
+          "heading": "Position",
+          "description": "Le groupe dans lequel placer ce signet."
+        },
+        "layout": {
+          "heading": "Disposition",
+          "description": "Modifiez la position, l'échelle et l'orientation de l'élément visuel et du nom."
+        },
+        "theme": {
+          "heading": "Thème",
+          "description": "Remplacez la couleur du thème et de l'accent."
+        }
+      },
+      "url": {
+        "label": "URL",
+        "placeholder": "https://www.exemple.com/"
+      },
+      "display": {
+        "alignment": {
+          "label": "Alignement des éléments visuels et des noms",
+          "topLeft": "En haut à gauche",
+          "topCenter": "Haut au centre",
+          "topRight": "En haut à droite",
+          "centerLeft": "Centre gauche",
+          "centerCenter": "Centre Centre",
+          "centerRight": "Centre droit",
+          "bottomLeft": "En bas à gauche",
+          "bottomCenter": "En bas au centre",
+          "bottomRight": "En bas à droite"
+        },
+        "direction": {
+          "vertical": {
+            "label": "Verticale",
+            "description": "Empilez l'élément visuel et le nom l'un au-dessus de l'autre."
+          },
+          "horizontal": {
+            "label": "Horizontal",
+            "description": "Disposez l'élément visuel et le nom côte à côte."
+          }
+        },
+        "order": {
+          "visualName": {
+            "label": "Élément visuel puis nom",
+            "description": "Placez l'élément visuel avant le nom."
+          },
+          "nameVisual": {
+            "label": "Nom puis élément visuel",
+            "description": "Placez le nom avant l'élément visuel."
+          }
+        },
+        "rotate": "Tourner",
+        "translate": {
+          "label": "Ajuster la position de l'élément visuel",
+          "x": "Horizontal",
+          "y": "Verticale"
+        },
+        "gutter": "Gouttière",
+        "visual": {
+          "show": {
+            "label": "Afficher l'élément visuel",
+            "description": "Affichez des lettres, une icône ou une image sur cet hexagone de signet."
+          },
+          "type": {
+            "letter": "Lettre",
+            "icon": "Icône",
+            "image": "Image"
+          },
+          "size": "Taille visuelle",
+          "letter": {
+            "text": {
+              "label": "Lettre de signet",
+              "placeholder": "E"
+            }
+          },
+          "icon": {
+            "text": {
+              "label": "Icône de signet",
+              "placeholder": "Marques ou icônes FontAwesome"
+            },
+            "remove": "Supprimer l'icône"
+          },
+          "image": {
+            "url": {
+              "label": "Image de signet",
+              "placeholder": "https://www.exemple.com/image.jpg"
+            }
+          },
+          "shadow": {
+            "size": "Ombre visuelle",
+            "helper": [
+              "L'ombre visuelle ne s'applique qu'à une lettre ou une icône."
+            ]
+          }
+        },
+        "name": {
+          "show": "Afficher le nom",
+          "text": {
+            "label": "Nom du signet",
+            "placeholder": "Exemple"
+          },
+          "size": "Taille du nom"
+        }
+      },
+      "accent": {
+        "by": {
+          "theme": {
+            "label": "Accent de thème",
+            "description": "Utilisez l'accent défini par le thème."
+          },
+          "custom": {
+            "label": "Accent personnalisé",
+            "description": "Remplacez l'accent du thème."
+          }
+        },
+        "color": "Accent"
+      },
+      "color": {
+        "by": {
+          "theme": {
+            "label": "Couleur du thème",
+            "description": "Utilisez la couleur définie par le thème."
+          },
+          "custom": {
+            "label": "Couleur personnalisée",
+            "description": "Remplacez la couleur du thème."
+          }
+        },
+        "color": "Couleur",
+        "opacity": "Opacité"
+      },
+      "background": {
+        "show": {
+          "label": "Afficher l'arrière-plan",
+          "description": "Affichez une image ou une vidéo d'arrière-plan sur cette vignette de signet."
+        },
+        "type": {
+          "image": "Image",
+          "video": "Vidéo"
+        },
+        "opacity": "Opacité",
+        "image": {
+          "label": "URL de l'image d'arrière-plan",
+          "placeholder": "https://www.exemple.com/image.jpg",
+          "helper": [
+            "L'image d'arrière-plan ne prend en charge qu'une URL directe vers un fichier image."
+          ]
+        },
+        "video": {
+          "label": "URL de la vidéo d'arrière-plan",
+          "placeholder": "https://www.example.com/video.mp4",
+          "helper": [
+            "La vidéo d'arrière-plan ne prend en charge qu'une URL directe vers un fichier vidéo. Prend en charge les formats MP4 et WebM.",
+            "Les URL des pages YouTube ne peuvent pas être utilisées."
+          ]
+        }
+      },
+      "border": "Frontière",
+      "shape": {
+        "wide": {
+          "label": "Tuile large",
+          "description": "Tuile de signet pour s'étendre sur deux colonnes."
+        },
+        "tall": {
+          "label": "Tuile haute",
+          "description": "La vignette des signets doit s'étendre sur deux rangées."
+        }
+      },
+      "group": {
+        "destination": {
+          "existing": "Groupe existant",
+          "new": "Nouveau groupe"
+        },
+        "name": {
+          "label": "URL",
+          "placeholder": "Exemple de groupe"
+        },
+        "random": "Nom du groupe aléatoire",
+        "position": {
+          "group": "Grouper",
+          "item": "Position"
+        }
+      },
+      "propagate": {
+        "visual": {
+          "label": "Appliquer \"Afficher l'élément visuel\" et \"Afficher le nom\" à d'autres signets",
+          "description": [
+            "Le texte de la lettre, de l'icône, de l'image et du nom ne sera pas partagé.",
+            "Utile pour masquer les éléments visuels ou les noms sur tous les signets."
+          ]
+        },
+        "layout": {
+          "label": "Appliquer la mise en page à d'autres signets",
+          "description": [
+            "Une fois enregistré, appliquez la mise en page ci-dessus à tous les autres signets.",
+            "Seuls la taille du visuel et du nom, l'alignement, l'ordre, la position et la gouttière seront appliqués à tous."
+          ]
+        },
+        "theme": {
+          "label": "Appliquer le thème à d'autres signets",
+          "description": [
+            "Une fois enregistré, appliquez le thème ci-dessus à tous les autres signets.",
+            "Seules la couleur, l'accent, l'opacité, la bordure et l'ombre visuelle seront appliqués à tous."
+          ]
+        }
+      }
+    },
+    "preview": {
+      "full": "Aperçu",
+      "half": "Aperçu (échelle 50 %)"
+    }
+  },
+  "group": {
+    "area": {
+      "control": {
+        "up": "Déplacer ce groupe vers le haut",
+        "sort": "Faites glisser le groupe pour réorganiser",
+        "down": "Déplacer ce groupe vers le bas",
+        "edit": "Modifier ce groupe",
+        "remove": "Supprimer ce groupe",
+        "openAll": "Ouvrir tous les signets de ce groupe",
+        "collapse": "Réduire ce groupe"
+      }
+    },
+    "add": {
+      "heading": "Ajouter un nouveau groupe",
+      "successText": "Ajouter",
+      "cancelText": "Annuler"
+    },
+    "remove": {
+      "heading": {
+        "name": "Supprimer",
+        "unnamed": "Supprimer le groupe sans nom"
+      },
+      "content": "Êtes-vous sûr de vouloir supprimer ce groupe et tous les signets qu'il contient ? Ça ne peut pas être annulé.",
+      "successText": "Supprimer",
+      "cancelText": "Annuler"
+    },
+    "edit": {
+      "heading": {
+        "name": "Éditer",
+        "unnamed": "Modifier le groupe sans nom"
+      },
+      "successText": "Sauvegarder",
+      "cancelText": "Annuler"
+    },
+    "form": {
+      "section": {
+        "name": {
+          "heading": "Nom",
+          "description": "Afficher un nom au-dessus de ce groupe."
+        },
+        "toolbar": {
+          "heading": "Barre d'outils",
+          "description": "Afficher les commandes pour tout ouvrir ou afficher/masquer les signets de ce groupe."
+        },
+        "ordering": {
+          "heading": "Commande",
+          "description": "La position de ce groupe."
+        }
+      },
+      "name": {
+        "show": "Afficher le nom du groupe",
+        "text": {
+          "label": "Nom de groupe",
+          "placeholder": "Exemple de groupe"
+        },
+        "random": "Nom du groupe aléatoire"
+      },
+      "collapse": {
+        "show": {
+          "label": "Afficher Réduire",
+          "description": "Le bouton Réduire affichera ou masquera les signets de ce groupe."
+        }
+      },
+      "openAll": {
+        "show": {
+          "label": "Afficher Tout ouvrir",
+          "description": "Le bouton Ouvrir tout apparaîtra s'il y a au moins un signet dans ce groupe."
+        }
+      },
+      "destination": "Position"
+    }
+  },
+  "control": {
+    "general": {
+      "reset": "Réinitialiser par défaut"
+    },
+    "color": {
+      "text": {
+        "placeholder": "Code hexadécimal"
+      },
+      "random": "Couleur aléatoire"
+    },
+    "colorMixer": {
+      "moreControls": "Plus de contrôles",
+      "slider": {
+        "h": "Teinte",
+        "s": "Saturation",
+        "l": "Légèreté",
+        "r": "rouge",
+        "g": "Vert",
+        "b": "Bleu"
       }
     }
   }
