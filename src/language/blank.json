@@ -928,6 +928,13 @@
       }
     }
   },
+  "header": {
+    "greeting": {
+      "good": ["xxx"],
+      "hello": "xxx",
+      "hi": "xxx"
+    }
+  },
   "bookmark": {
     "tile": {
       "control": {

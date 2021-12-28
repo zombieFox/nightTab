@@ -928,6 +928,13 @@
       }
     }
   },
+  "header": {
+    "greeting": {
+      "good": ["Bonne nuit", "Bonjour", "Bon après-midi", "Bonsoir"],
+      "hello": "Bonjour",
+      "hi": "Salut"
+    }
+  },
   "bookmark": {
     "tile": {
       "control": {

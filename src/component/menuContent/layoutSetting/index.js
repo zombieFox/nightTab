@@ -111,20 +111,21 @@ layoutSetting.scaling = (parent) => {
     path: 'language',
     id: 'language',
     labelText: 'Language',
-    option: language.name,
+    option: language.name[state.get.current().language],
     selected: language.code.indexOf(state.get.current().language),
     action: () => {
 
       state.get.current().language = language.code[layoutSetting.control.language.selected()];
       data.save();
       language.init();
+      header.item.clear();
+      header.item.render();
       groupAndBookmark.render();
       menu.close();
       menu.open();
 
     }
   });
-
 
   layoutSetting.edge.scaling.size = new Edge({ primary: layout.element.layout });
 

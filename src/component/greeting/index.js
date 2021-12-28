@@ -1,3 +1,5 @@
+import { language } from '../../language';
+
 import { state } from '../state';
 
 import { node } from '../../utility/node';
@@ -8,7 +10,7 @@ import moment from 'moment';
 
 import './index.css';
 
-export const Greeting = function () {
+export const Greeting = function() {
 
   this.now;
 
@@ -25,9 +27,9 @@ export const Greeting = function () {
 
   };
 
-  this.message = ['Good night', 'Good morning', 'Good afternoon', 'Good evening'];
-
   this.update = () => {
+
+    const goodMessage = language.current.header.greeting.good;
 
     this.now = moment();
 
@@ -43,19 +45,19 @@ export const Greeting = function () {
 
       case 'good':
 
-        value = this.message[Math.floor(this.now.hours() / 6)];
+        value = goodMessage[Math.floor(this.now.hours() / 6)];
 
         break;
 
       case 'hello':
 
-        value = 'Hello';
+        value = language.current.header.greeting.hello;
 
         break;
 
       case 'hi':
 
-        value = 'Hi';
+        value = language.current.header.greeting.hi;
 
         break;
 
@@ -67,7 +69,7 @@ export const Greeting = function () {
 
         } else {
 
-          value = this.message[Math.floor(this.now.hours() / 6)];
+          value = goodMessage[Math.floor(this.now.hours() / 6)];
 
         }
 

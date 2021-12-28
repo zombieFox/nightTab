@@ -111,7 +111,6 @@ toolbarSetting.location = (parent) => {
       toolbar.current.update.style();
       header.item.mod.order();
       header.item.clear();
-      header.item.clear();
       header.item.render();
       toolbar.bar.render();
       layout.area.assemble();
