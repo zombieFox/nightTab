@@ -195,10 +195,10 @@
               "label": "Display font",
               "placeholder": "Google font name",
               "helper": {
-                "p1": "Use a Google Font to customise the Clock, Date, Group names and Bookmark Letters.",
-                "p2": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Fredoka One\" or \"Kanit\".",
+                "para1": "Use a Google Font to customise the Clock, Date, Group names and Bookmark Letters.",
                 "link": "Find a Google Font",
-                "p3": "Clear the field to use the default font \"Fjalla One\"."
+                "para2": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Fredoka One\" or \"Kanit\".",
+                "para3": "Clear the field to use the default font \"Fjalla One\"."
               }
             },
             "weight": {
@@ -220,10 +220,10 @@
               "label": "User interface font",
               "placeholder": "Google font name",
               "helper": {
-                "p1": "Use a Google Font to customise the Bookmark name, URL and form elements.",
-                "p2": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Roboto\", \"Source Sans Pro\" or \"Noto Sans\".",
+                "para1": "Use a Google Font to customise the Bookmark name, URL and form elements.",
                 "link": "Find a Google Font",
-                "p3": "Clear the field to use the default font \"Open Sans\"."
+                "para2": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Roboto\", \"Source Sans Pro\" or \"Noto Sans\".",
+                "para3": "Clear the field to use the default font \"Open Sans\"."
               }
             },
             "weight": {
@@ -292,8 +292,8 @@
           },
           "image": {
             "alert": {
-              "p1": "Local images can no longer be used. Images must be hosted somewhere online.",
-              "p2": "Why has this changed?"
+              "para1": "Local images can no longer be used. Images must be hosted somewhere online.",
+              "para2": "Why has this changed?"
             },
             "url": {
               "label": "URL",
@@ -321,8 +321,8 @@
           },
           "video": {
             "alert": {
-              "p1": "YouTube page URLs can not be used.",
-              "p2": "How to link to a video file."
+              "para1": "YouTube page URLs can not be used.",
+              "para2": "How to link to a video file."
             },
             "url": {
               "label": "URL",
@@ -888,7 +888,7 @@
           "all": "Clear all data",
           "partial": "Clear all except bookmarks",
           "alert": {
-            "p1": "You will lose Bookmarks by clearing all data.",
+            "para": "You will lose Bookmarks by clearing all data.",
             "link": "Backup your data"
           },
           "helper": [
@@ -911,12 +911,12 @@
           "backgroundImageVideo": "Setting a background video or image",
           "firefox": "Setting {appName} as your Firefox homepage"
         },
-        "p1": "For more support or feedback:",
+        "para": "For more support or feedback:",
         "link1": "Submit an Issue.",
         "link2": "Check the Wiki."
       },
       "coffee": {
-        "p1": "{appName} is free, appreciation is welcome in the form of coffee!",
+        "para": "{appName} is free, appreciation is welcome in the form of coffee!",
         "button": "Buy me a coffee"
       },
       "app": {

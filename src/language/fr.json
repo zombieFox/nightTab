@@ -195,10 +195,10 @@
               "label": "Police d'affichage",
               "placeholder": "Nom de la police Google",
               "helper": {
-                "p1": "Utilisez une police Google pour personnaliser l'horloge, la date, les noms de groupe et les lettres de signet.",
-                "p2": "Ajoutez un nom de police tel qu'il apparaît sur Google Fonts, y compris les majuscules et les espaces, par exemple : saisissez « Fredoka One » ou « Kanit ».",
+                "para1": "Utilisez une police Google pour personnaliser l'horloge, la date, les noms de groupe et les lettres de signet.",
                 "link": "Trouver une police Google",
-                "p3": "Effacez le champ pour utiliser la police par défaut \"Fjalla One\"."
+                "para2": "Ajoutez un nom de police tel qu'il apparaît sur Google Fonts, y compris les majuscules et les espaces, par exemple : saisissez « Fredoka One » ou « Kanit ».",
+                "para3": "Effacez le champ pour utiliser la police par défaut \"Fjalla One\"."
               }
             },
             "weight": {
@@ -220,10 +220,10 @@
               "label": "Police de l'interface utilisateur",
               "placeholder": "Nom de la police Google",
               "helper": {
-                "p1": "Utilisez une police Google pour personnaliser le nom du signet, l'URL et les éléments du formulaire.",
-                "p2": "Ajoutez un nom de police tel qu'il apparaît sur Google Fonts, y compris les majuscules et les espaces, par exemple : saisissez \"Roboto\", \"Source Sans Pro\" ou \"Noto Sans\".",
+                "para1": "Utilisez une police Google pour personnaliser le nom du signet, l'URL et les éléments du formulaire.",
                 "link": "Trouver une police Google",
-                "p3": "Effacez le champ pour utiliser la police par défaut \"Open Sans\"."
+                "para2": "Ajoutez un nom de police tel qu'il apparaît sur Google Fonts, y compris les majuscules et les espaces, par exemple : saisissez \"Roboto\", \"Source Sans Pro\" ou \"Noto Sans\".",
+                "para3": "Effacez le champ pour utiliser la police par défaut \"Open Sans\"."
               }
             },
             "weight": {
@@ -292,8 +292,8 @@
           },
           "image": {
             "alert": {
-              "p1": "Les images locales ne peuvent plus être utilisées. Les images doivent être hébergées quelque part en ligne.",
-              "p2": "Pourquoi cela a-t-il changé ?"
+              "para1": "Les images locales ne peuvent plus être utilisées. Les images doivent être hébergées quelque part en ligne.",
+              "para2": "Pourquoi cela a-t-il changé ?"
             },
             "url": {
               "label": "URL",
@@ -321,8 +321,8 @@
           },
           "video": {
             "alert": {
-              "p1": "Les URL des pages YouTube ne peuvent pas être utilisées.",
-              "p2": "Comment créer un lien vers un fichier vidéo."
+              "para1": "Les URL des pages YouTube ne peuvent pas être utilisées.",
+              "para2": "Comment créer un lien vers un fichier vidéo."
             },
             "url": {
               "label": "URL",
@@ -888,7 +888,7 @@
           "all": "Effacer toutes les données",
           "partial": "Tout effacer sauf les favoris",
           "alert": {
-            "p1": "Vous perdrez les signets en effaçant toutes les données.",
+            "para": "Vous perdrez les signets en effaçant toutes les données.",
             "link": "Sauvegardez vos données"
           },
           "helper": [
@@ -911,12 +911,12 @@
           "backgroundImageVideo": "Définir une vidéo ou une image d'arrière-plan",
           "firefox": "Définir {appName} comme page d'accueil de Firefox"
         },
-        "p1": "Pour plus d'assistance ou de commentaires :",
+        "para": "Pour plus d'assistance ou de commentaires :",
         "link1": "Soumettre un problème.",
         "link2": "Vérifiez le Wiki."
       },
       "coffee": {
-        "p1": "{appName} est gratuit, l'appréciation est la bienvenue sous forme de café !",
+        "para": "{appName} est gratuit, l'appréciation est la bienvenue sous forme de café !",
         "button": "Achetez-moi un café"
       },
       "app": {
@@ -1296,6 +1296,73 @@
         },
         "successText": "Supprimer",
         "cancelText": "Annuler"
+      }
+    }
+  },
+  "data": {
+    "form": {
+      "description": "Vous pouvez restaurer tout ou partie d'un fichier de sauvegarde. Les données suivantes seront restaurées :",
+      "bookmark": {
+        "include": {
+          "label": "Signets",
+          "description": [
+            "Cela inclut tous les groupes et signets",
+            "Les signets conserveront toutes les couleurs, accents et bordures personnalisés lors de l'importation."
+          ]
+        },
+        "type": {
+          "restore": "Remplacer les signets existants",
+          "append": "Ajouter aux favoris existants"
+        }
+      },
+      "theme": {
+        "include": {
+          "label": "Thème",
+          "description": "Cela inclut la couleur, l'accent, les polices, l'arrière-plan et tous les thèmes personnalisés enregistrés."
+        }
+      },
+      "setup": {
+        "include": {
+          "label": "Réglages",
+          "description": "Cela inclut la taille et la position de la mise en page, la taille de la zone d'en-tête, la taille de la zone des signets et d'autres paramètres utilisateur."
+        }
+      }
+    },
+    "restore": {
+      "heading": "Restauration à partir d'une sauvegarde {appName}",
+      "successText": "Importer",
+      "cancelText": "Annuler"
+    },
+    "clear": {
+      "all": {
+        "heading": "Effacer toutes les données {appName}",
+        "content": {
+          "para1": "Voulez-vous vraiment effacer tous les favoris et paramètres de {appName} {appName} sera restauré à l'état par défaut.",
+          "para2": "Ça ne peut pas être annulé."
+        },
+        "successText": "Effacer toutes les données",
+        "cancelText": "Annuler"
+      },
+      "partial": {
+        "heading": "Effacer les {appName} l'exception des favoris ?",
+        "content": {
+          "para1": "Voulez-vous vraiment effacer tous les {appName} ? {appName} sera restauré à l'état par défaut, mais vos signets et groupes resteront.",
+          "para2": "Ça ne peut pas être annulé."
+        },
+        "successText": "Tout effacer sauf les favoris",
+        "cancelText": "Annuler"
+      }
+    },
+    "export": {
+      "backup": "sauvegarde"
+    },
+    "feedback": {
+      "empty": "Rien de sélectionné à importer.",
+      "success": "Succès! Restauration des signets et paramètres de {appName}",
+      "fail": {
+        "notJson": "Pas un fichier JSON. Assurez-vous que le fichier sélectionné provient de {appName} .",
+        "notAppJson": "Pas le bon type de fichier JSON. Assurez-vous que le fichier sélectionné provient de {appName} .",
+        "notClipboardJson": "Pas le bon type de données. Assurez-vous que le presse-papiers contient les données de {appName} ou d'un fichier JSON de sauvegarde {appName}"
       }
     }
   },

@@ -766,10 +766,10 @@ themeSetting.font = (parent) => {
     nameHelper: new Control_helperText({
       complexText: true,
       text: [
-        language.current.menu.content.theme.font.display.name.helper.p1,
-        language.current.menu.content.theme.font.display.name.helper.p2,
+        language.current.menu.content.theme.font.display.name.helper.para1,
         (new Link({ text: language.current.menu.content.theme.font.display.name.helper.link, href: 'https://fonts.google.com/', openNew: true })).link().outerHTML,
-        language.current.menu.content.theme.font.display.name.helper.p3
+        language.current.menu.content.theme.font.display.name.helper.para2,
+        language.current.menu.content.theme.font.display.name.helper.para3
       ]
     }),
     weight: new Control_slider({
@@ -855,10 +855,10 @@ themeSetting.font = (parent) => {
     nameHelper: new Control_helperText({
       complexText: true,
       text: [
-        language.current.menu.content.theme.font.ui.name.helper.p1,
-        language.current.menu.content.theme.font.ui.name.helper.p2,
+        language.current.menu.content.theme.font.ui.name.helper.para1,
         (new Link({ text: language.current.menu.content.theme.font.ui.name.helper.link, href: 'https://fonts.google.com/', openNew: true })).link().outerHTML,
-        language.current.menu.content.theme.font.ui.name.helper.p3
+        language.current.menu.content.theme.font.ui.name.helper.para2,
+        language.current.menu.content.theme.font.ui.name.helper.para3
       ]
     }),
     weight: new Control_slider({
@@ -1366,8 +1366,8 @@ themeSetting.background = (parent) => {
       alert: new Alert({
         iconName: 'info',
         children: [
-          node(`p:${language.current.menu.content.theme.background.image.alert.p1}|class:small`),
-          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language.current.menu.content.theme.background.image.alert.p2, href: supportLink.baseUrl + supportLink.page.localBackgroundImage.url, openNew: true })).link()] })
+          node(`p:${language.current.menu.content.theme.background.image.alert.para1}|class:small`),
+          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language.current.menu.content.theme.background.image.alert.para2, href: supportLink.baseUrl + supportLink.page.localBackgroundImage.url, openNew: true })).link()] })
         ]
       }),
       url: new Control_textarea({
@@ -1508,8 +1508,8 @@ themeSetting.background = (parent) => {
       alert: new Alert({
         iconName: 'info',
         children: [
-          node(`p:${language.current.menu.content.theme.background.video.alert.p1}.|class:small`),
-          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language.current.menu.content.theme.background.video.alert.p2, href: supportLink.baseUrl + supportLink.page.backgroundImageVideo.url, openNew: true })).link()] })
+          node(`p:${language.current.menu.content.theme.background.video.alert.para1}.|class:small`),
+          complexNode({ tag: 'p', attr: [{ key: 'class', value: 'small' }], node: [(new Link({ text: language.current.menu.content.theme.background.video.alert.para2, href: supportLink.baseUrl + supportLink.page.backgroundImageVideo.url, openNew: true })).link()] })
         ]
       }),
       url: new Control_textarea({

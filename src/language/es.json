@@ -195,10 +195,10 @@
               "label": "Fuente de pantalla",
               "placeholder": "Nombre de fuente de Google",
               "helper": {
-                "p1": "Utilice una fuente de Google para personalizar el reloj, la fecha, los nombres de los grupos y las letras de los marcadores.",
-                "p2": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Fredoka One\" o \"Kanit\".",
+                "para1": "Utilice una fuente de Google para personalizar el reloj, la fecha, los nombres de los grupos y las letras de los marcadores.",
                 "link": "Encuentra una fuente de Google",
-                "p3": "Borre el campo para usar la fuente predeterminada \"Fjalla One\"."
+                "para2": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Fredoka One\" o \"Kanit\".",
+                "para3": "Borre el campo para usar la fuente predeterminada \"Fjalla One\"."
               }
             },
             "weight": {
@@ -220,10 +220,10 @@
               "label": "Fuente de la interfaz de usuario",
               "placeholder": "Nombre de fuente de Google",
               "helper": {
-                "p1": "Utilice una fuente de Google para personalizar el nombre del marcador, la URL y los elementos del formulario.",
-                "p2": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Roboto\", \"Source Sans Pro\" o \"Noto Sans\".",
+                "para1": "Utilice una fuente de Google para personalizar el nombre del marcador, la URL y los elementos del formulario.",
                 "link": "Encuentra una fuente de Google",
-                "p3": "Borre el campo para usar la fuente predeterminada \"Open Sans\"."
+                "para2": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Roboto\", \"Source Sans Pro\" o \"Noto Sans\".",
+                "para3": "Borre el campo para usar la fuente predeterminada \"Open Sans\"."
               }
             },
             "weight": {
@@ -292,8 +292,8 @@
           },
           "image": {
             "alert": {
-              "p1": "Ya no se pueden utilizar imágenes locales. Las imágenes deben estar alojadas en algún lugar en línea.",
-              "p2": "¿Por qué ha cambiado esto?"
+              "para1": "Ya no se pueden utilizar imágenes locales. Las imágenes deben estar alojadas en algún lugar en línea.",
+              "para2": "¿Por qué ha cambiado esto?"
             },
             "url": {
               "label": "URL",
@@ -321,8 +321,8 @@
           },
           "video": {
             "alert": {
-              "p1": "No se pueden utilizar las URL de las páginas de YouTube.",
-              "p2": "Cómo vincular a un archivo de video."
+              "para1": "No se pueden utilizar las URL de las páginas de YouTube.",
+              "para2": "Cómo vincular a un archivo de video."
             },
             "url": {
               "label": "URL",
@@ -888,7 +888,7 @@
           "all": "Borrar todos los datos",
           "partial": "Borrar todo excepto los marcadores",
           "alert": {
-            "p1": "Perderá los marcadores al borrar todos los datos.",
+            "para": "Perderá los marcadores al borrar todos los datos.",
             "link": "Copia de seguridad de sus datos"
           },
           "helper": [
@@ -911,12 +911,12 @@
           "backgroundImageVideo": "Configurar un video o una imagen de fondo",
           "firefox": "Configurando {appName} como tu página de inicio de Firefox"
         },
-        "p1": "Para obtener más apoyo o comentarios:",
+        "para": "Para obtener más apoyo o comentarios:",
         "link1": "Envíe un problema.",
         "link2": "Consulta la Wiki."
       },
       "coffee": {
-        "p1": "{appName} es gratis, ¡agradecimiento en forma de café!",
+        "para": "{appName} es gratis, ¡agradecimiento en forma de café!",
         "button": "Cómprame un café"
       },
       "app": {
@@ -1296,6 +1296,73 @@
         },
         "successText": "Eliminar",
         "cancelText": "Cancelar"
+      }
+    }
+  },
+  "data": {
+    "form": {
+      "description": "Puede restaurar todo o parte de un archivo de copia de seguridad. Se restaurarán los siguientes datos:",
+      "bookmark": {
+        "include": {
+          "label": "Marcadores",
+          "description": [
+            "Esto incluye todos los grupos y marcadores",
+            "Los marcadores mantendrán los colores, acentos y bordes personalizados cuando se importen."
+          ]
+        },
+        "type": {
+          "restore": "Reemplazar marcadores existentes",
+          "append": "Agregar a marcadores existentes"
+        }
+      },
+      "theme": {
+        "include": {
+          "label": "Tema",
+          "description": "Esto incluye el color, el acento, las fuentes, el fondo y cualquier tema personalizado guardado."
+        }
+      },
+      "setup": {
+        "include": {
+          "label": "Ajustes",
+          "description": "Esto incluye el tamaño y la posición del diseño, el tamaño del área del encabezado, el tamaño del área del marcador y otras configuraciones del usuario."
+        }
+      }
+    },
+    "restore": {
+      "heading": "Restaurando desde una copia de seguridad de {appName}",
+      "successText": "Importar",
+      "cancelText": "Cancelar"
+    },
+    "clear": {
+      "all": {
+        "heading": "¿Borrar todos los datos de {appName}",
+        "content": {
+          "para1": "¿Estás seguro de que deseas borrar todos los marcadores y la configuración de {appName} {appName} se restaurará al estado predeterminado.",
+          "para2": "Esto no se puede deshacer."
+        },
+        "successText": "Borrar todos los datos",
+        "cancelText": "Cancelar"
+      },
+      "partial": {
+        "heading": "¿ {appName} datos de {appName} excepto los marcadores?",
+        "content": {
+          "para1": "¿Estás seguro de que deseas borrar todas las {appName} ? {appName} se restaurará al estado predeterminado, pero sus marcadores y grupos permanecerán.",
+          "para2": "Esto no se puede deshacer."
+        },
+        "successText": "Borrar todo excepto los marcadores",
+        "cancelText": "Cancelar"
+      }
+    },
+    "export": {
+      "backup": "respaldo"
+    },
+    "feedback": {
+      "empty": "Nada seleccionado para importar.",
+      "success": "¡Éxito! Restaurando los marcadores y la configuración de {appName}",
+      "fail": {
+        "notJson": "No es un archivo JSON. Asegúrese de que el archivo seleccionado provenga de {appName} .",
+        "notAppJson": "No es el tipo correcto de archivo JSON. Asegúrese de que el archivo seleccionado provenga de {appName} .",
+        "notClipboardJson": "No es el tipo correcto de datos. Asegúrese de que el portapapeles contenga datos de {appName} o un archivo JSON de respaldo de {appName}"
       }
     }
   },

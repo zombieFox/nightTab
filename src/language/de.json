@@ -195,10 +195,10 @@
               "label": "Schriftart anzeigen",
               "placeholder": "Google-Schriftname",
               "helper": {
-                "p1": "Verwenden Sie eine Google-Schriftart, um Uhr, Datum, Gruppennamen und Lesezeichenbuchstaben anzupassen.",
-                "p2": "Fügen Sie einen Schriftartnamen hinzu, wie er in Google Fonts erscheint, einschließlich Großbuchstaben und Leerzeichen, zB: Geben Sie \"Fredoka One\" oder \"Kanit\" ein.",
+                "para1": "Verwenden Sie eine Google-Schriftart, um Uhr, Datum, Gruppennamen und Lesezeichenbuchstaben anzupassen.",
                 "link": "Finden Sie eine Google-Schriftart",
-                "p3": "Löschen Sie das Feld, um die Standardschriftart \"Fjalla One\" zu verwenden."
+                "para2": "Fügen Sie einen Schriftartnamen hinzu, wie er in Google Fonts erscheint, einschließlich Großbuchstaben und Leerzeichen, zB: Geben Sie \"Fredoka One\" oder \"Kanit\" ein.",
+                "para3": "Löschen Sie das Feld, um die Standardschriftart \"Fjalla One\" zu verwenden."
               }
             },
             "weight": {
@@ -220,10 +220,10 @@
               "label": "Schriftart der Benutzeroberfläche",
               "placeholder": "Google-Schriftname",
               "helper": {
-                "p1": "Verwenden Sie eine Google-Schriftart, um den Lesezeichennamen, die URL und die Formularelemente anzupassen.",
-                "p2": "Fügen Sie einen Schriftartnamen hinzu, wie er in Google Fonts erscheint, einschließlich Großbuchstaben und Leerzeichen, zB: Geben Sie \"Roboto\", \"Source Sans Pro\" oder \"Noto Sans\" ein.",
+                "para1": "Verwenden Sie eine Google-Schriftart, um den Lesezeichennamen, die URL und die Formularelemente anzupassen.",
                 "link": "Finden Sie eine Google-Schriftart",
-                "p3": "Löschen Sie das Feld, um die Standardschriftart \"Open Sans\" zu verwenden."
+                "para2": "Fügen Sie einen Schriftartnamen hinzu, wie er in Google Fonts erscheint, einschließlich Großbuchstaben und Leerzeichen, zB: Geben Sie \"Roboto\", \"Source Sans Pro\" oder \"Noto Sans\" ein.",
+                "para3": "Löschen Sie das Feld, um die Standardschriftart \"Open Sans\" zu verwenden."
               }
             },
             "weight": {
@@ -292,8 +292,8 @@
           },
           "image": {
             "alert": {
-              "p1": "Lokale Bilder können nicht mehr verwendet werden. Bilder müssen irgendwo online gehostet werden.",
-              "p2": "Warum hat sich das geändert?"
+              "para1": "Lokale Bilder können nicht mehr verwendet werden. Bilder müssen irgendwo online gehostet werden.",
+              "para2": "Warum hat sich das geändert?"
             },
             "url": {
               "label": "URL",
@@ -321,8 +321,8 @@
           },
           "video": {
             "alert": {
-              "p1": "URLs von YouTube-Seiten können nicht verwendet werden.",
-              "p2": "So verlinken Sie eine Videodatei."
+              "para1": "URLs von YouTube-Seiten können nicht verwendet werden.",
+              "para2": "So verlinken Sie eine Videodatei."
             },
             "url": {
               "label": "URL",
@@ -888,7 +888,7 @@
           "all": "Alle Daten löschen",
           "partial": "Alles löschen außer Lesezeichen",
           "alert": {
-            "p1": "Sie verlieren Lesezeichen, wenn Sie alle Daten löschen.",
+            "para": "Sie verlieren Lesezeichen, wenn Sie alle Daten löschen.",
             "link": "Sichern Sie Ihre Daten"
           },
           "helper": [
@@ -911,12 +911,12 @@
           "backgroundImageVideo": "Einstellen eines Hintergrundvideos oder -bilds",
           "firefox": "{appName} als Ihre Firefox-Startseite einrichten"
         },
-        "p1": "Für weitere Unterstützung oder Feedback:",
+        "para": "Für weitere Unterstützung oder Feedback:",
         "link1": "Senden Sie ein Problem.",
         "link2": "Überprüfen Sie das Wiki."
       },
       "coffee": {
-        "p1": "{appName} ist kostenlos, Anerkennung in Form von Kaffee ist willkommen!",
+        "para": "{appName} ist kostenlos, Anerkennung in Form von Kaffee ist willkommen!",
         "button": "Kauf mir einen Kaffee"
       },
       "app": {
@@ -1296,6 +1296,73 @@
         },
         "successText": "Entfernen",
         "cancelText": "Abbrechen"
+      }
+    }
+  },
+  "data": {
+    "form": {
+      "description": "Sie können eine Sicherungsdatei ganz oder teilweise wiederherstellen. Die folgenden Daten werden wiederhergestellt:",
+      "bookmark": {
+        "include": {
+          "label": "Lesezeichen",
+          "description": [
+            "Dies umfasst alle Gruppen und Lesezeichen",
+            "Lesezeichen behalten beim Import alle benutzerdefinierten Farben, Akzente und Ränder."
+          ]
+        },
+        "type": {
+          "restore": "Vorhandene Lesezeichen ersetzen",
+          "append": "Zu bestehenden Lesezeichen hinzufügen"
+        }
+      },
+      "theme": {
+        "include": {
+          "label": "Thema",
+          "description": "Dazu gehören Farbe, Akzent, Schriftarten, Hintergrund und alle gespeicherten benutzerdefinierten Designs."
+        }
+      },
+      "setup": {
+        "include": {
+          "label": "Einstellungen",
+          "description": "Dazu gehören Layoutgröße und -position, Größe des Kopfzeilenbereichs, Größe des Lesezeichenbereichs und andere Benutzereinstellungen."
+        }
+      }
+    },
+    "restore": {
+      "heading": "Wiederherstellung aus einem {appName}",
+      "successText": "Importieren",
+      "cancelText": "Abbrechen"
+    },
+    "clear": {
+      "all": {
+        "heading": "Alle {appName} ?",
+        "content": {
+          "para1": "Möchten Sie {appName} und -Einstellungen löschen? {appName} wird auf den Standardzustand zurückgesetzt.",
+          "para2": "Das kann nicht rückgängig gemacht werden."
+        },
+        "successText": "Alle Daten löschen",
+        "cancelText": "Abbrechen"
+      },
+      "partial": {
+        "heading": "{appName} außer Lesezeichen löschen?",
+        "content": {
+          "para1": "Möchten Sie {appName} ? {appName} wird auf den Standardzustand zurückgesetzt, Ihre Lesezeichen und Gruppen bleiben jedoch erhalten.",
+          "para2": "Das kann nicht rückgängig gemacht werden."
+        },
+        "successText": "Alles löschen außer Lesezeichen",
+        "cancelText": "Abbrechen"
+      }
+    },
+    "export": {
+      "backup": "Backup"
+    },
+    "feedback": {
+      "empty": "Nichts zum Importieren ausgewählt.",
+      "success": "Erfolg! Wiederherstellen von {appName} und -Einstellungen.",
+      "fail": {
+        "notJson": "Keine JSON-Datei. Stellen Sie sicher, dass die ausgewählte Datei von {appName} .",
+        "notAppJson": "Nicht die richtige Art von JSON-Datei. Stellen Sie sicher, dass die ausgewählte Datei von {appName} .",
+        "notClipboardJson": "Nicht die richtigen Daten. Stellen Sie sicher, dass die Zwischenablage Daten aus {appName} oder einer {appName} JSON-Datei enthält."
       }
     }
   },

@@ -157,7 +157,7 @@ dataSetting.clear = (parent) => {
   dataSetting.control.clear.alert = new Alert({
     iconName: 'warning',
     children: [
-      node(`p:${language.current.menu.content.data.clear.alert.p1}|class:small`),
+      node(`p:${language.current.menu.content.data.clear.alert.para}|class:small`),
       node('p|class:small', dataSetting.control.clear.link.link())
     ]
   });

@@ -195,10 +195,10 @@
               "label": "xxx",
               "placeholder": "xxx",
               "helper": {
-                "p1": "xxx",
-                "p2": "xxx",
+                "para1": "xxx",
                 "link": "xxx",
-                "p3": "xxx"
+                "para2": "xxx",
+                "para3": "xxx"
               }
             },
             "weight": {
@@ -220,10 +220,10 @@
               "label": "xxx",
               "placeholder": "xxx",
               "helper": {
-                "p1": "xxx",
-                "p2": "xxx",
+                "para1": "xxx",
                 "link": "xxx",
-                "p3": "xxx"
+                "para2": "xxx",
+                "para3": "xxx"
               }
             },
             "weight": {
@@ -292,8 +292,8 @@
           },
           "image": {
             "alert": {
-              "p1": "xxx",
-              "p2": "xxx"
+              "para1": "xxx",
+              "para2": "xxx"
             },
             "url": {
               "label": "xxx",
@@ -321,8 +321,8 @@
           },
           "video": {
             "alert": {
-              "p1": "xxx",
-              "p2": "xxx"
+              "para1": "xxx",
+              "para2": "xxx"
             },
             "url": {
               "label": "xxx",
@@ -888,7 +888,7 @@
           "all": "xxx",
           "partial": "xxx",
           "alert": {
-            "p1": "xxx",
+            "para": "xxx",
             "link": "xxx"
           },
           "helper": [
@@ -911,12 +911,12 @@
           "backgroundImageVideo": "xxx",
           "firefox": "xxx"
         },
-        "p1": "xxx",
+        "para": "xxx",
         "link1": "xxx",
         "link2": "xxx"
       },
       "coffee": {
-        "p1": "xxx",
+        "para": "xxx",
         "button": "xxx"
       },
       "app": {

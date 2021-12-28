@@ -15,7 +15,7 @@ coffeeSetting.coffee = (parent) => {
     node('div', [
       complexNode({
         tag: 'p',
-        text: language.current.menu.content.coffee.p1
+        text: language.current.menu.content.coffee.para
       }),
       form.wrap({
         children: [(new Link({
