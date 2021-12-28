@@ -6,6 +6,8 @@ import { header } from '../../header';
 import { bookmark } from '../../bookmark';
 import { layout } from '../../layout';
 import { theme } from '../../theme';
+import { menu } from '../../menu';
+import { groupAndBookmark } from '../../groupAndBookmark';
 
 import * as form from '../../form';
 
@@ -17,6 +19,7 @@ import { Control_radioGrid } from '../../control/radioGrid';
 import { Control_checkbox } from '../../control/checkbox';
 import { Control_slider } from '../../control/slider';
 import { Control_textReset } from '../../control/textReset';
+import { Control_select } from '../../control/select';
 
 import { node } from '../../../utility/node';
 import { applyCSSVar } from '../../../utility/applyCSSVar';
@@ -104,6 +107,25 @@ layoutSetting.edge = {
 
 layoutSetting.scaling = (parent) => {
 
+  layoutSetting.control.language = new Control_select({
+    path: 'language',
+    id: 'language',
+    labelText: 'Language',
+    option: language.name,
+    selected: language.code.indexOf(state.get.current().language),
+    action: () => {
+
+      state.get.current().language = language.code[layoutSetting.control.language.selected()];
+      data.save();
+      language.init();
+      groupAndBookmark.render();
+      menu.close();
+      menu.open();
+
+    }
+  });
+
+
   layoutSetting.edge.scaling.size = new Edge({ primary: layout.element.layout });
 
   layoutSetting.control.scaling.size = new Control_slider({
@@ -130,6 +152,7 @@ layoutSetting.scaling = (parent) => {
 
   parent.appendChild(
     node('div', [
+      layoutSetting.control.language.wrap(),
       layoutSetting.control.scaling.size.wrap()
     ])
   );

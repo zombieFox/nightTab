@@ -6,7 +6,7 @@ import { set } from '../../../utility/set';
 import { trimString } from '../../../utility/trimString';
 import { clearChildNode } from '../../../utility/clearChildNode';
 
-export const Control_select = function ({
+export const Control_select = function({
   option = [],
   selected = 0,
   object = {},
@@ -24,7 +24,9 @@ export const Control_select = function ({
     selected: selected,
     func: () => {
 
-      set({ object: object, path: path, value: this.select.selectedIndex });
+      if (object) {
+        set({ object: object, path: path, value: this.select.selectedIndex });
+      }
 
       if (action) { action(); }
 

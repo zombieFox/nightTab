@@ -11,6 +11,10 @@ import { default as ru } from './ru.json';
 
 const language = { en, de, fr, es, hi, ru };
 
+language.name = ['English', 'German', 'French', 'Spanish', 'Hindi', 'Russian'];
+
+language.code = ['en', 'de', 'fr', 'es', 'hi', 'ru'];
+
 language.init = () => {
 
   let languageString = JSON.stringify(language[state.get.current().language]);
