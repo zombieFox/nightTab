@@ -1333,6 +1333,18 @@
         "successText": "xxx",
         "cancelText": "xxx"
       }
+    },
+    "export": {
+      "backup": "xxx"
+    },
+    "feedback": {
+      "empty": "xxx",
+      "success": "xxx",
+      "fail": {
+        "notJson": "xxx",
+        "notAppJson": "xxx",
+        "notClipboardJson": "xxx"
+      }
     }
   },
   "control": {

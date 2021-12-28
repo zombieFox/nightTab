@@ -1352,6 +1352,18 @@
         "successText": "Clear all except bookmarks",
         "cancelText": "Cancel"
       }
+    },
+    "export": {
+      "backup": "backup"
+    },
+    "feedback": {
+      "empty": "Nothing selected to import.",
+      "success": "Success! Restoring {appName} Bookmarks and Settings.",
+      "fail": {
+        "notJson": "Not a JSON file. Make sure the selected file came from {appName}.",
+        "notAppJson": "Not the right kind of JSON file. Make sure the selected file came from {appName}.",
+        "notClipboardJson": "Not the right kind of data. Make sure the clipboard holds data from {appName} or a {appName} backup JSON file."
+      }
     }
   },
   "control": {

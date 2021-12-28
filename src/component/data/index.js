@@ -219,7 +219,7 @@ data.export = () => {
   timestamp.year = leadingZero(timestamp.year);
   timestamp = timestamp.year + '.' + timestamp.month + '.' + timestamp.date + ' - ' + timestamp.hours + ' ' + timestamp.minutes + ' ' + timestamp.seconds;
 
-  const fileName = APP_NAME + ' backup - ' + timestamp + '.json';
+  const fileName = APP_NAME + ' ' + language.current.data.export.backup + ' - ' + timestamp + '.json';
 
   const dataToExport = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data.load()));
 
@@ -384,7 +384,7 @@ data.feedback = {};
 
 data.feedback.empty = {
   render: (feedback) => {
-    feedback.appendChild(node('p:Nothing selected to import.|class:muted small'));
+    feedback.appendChild(node(`p:${language.current.data.feedback.empty}|class:muted small`));
   }
 };
 
@@ -396,7 +396,7 @@ data.feedback.clear = {
 
 data.feedback.success = {
   render: (feedback, filename, action) => {
-    feedback.appendChild(node('p:Success! Restoring ' + APP_NAME + ' Bookmarks and Settings.|class:muted small'));
+    feedback.appendChild(node(`p:${language.current.data.feedback.success}|class:muted small`));
 
     feedback.appendChild(node('p:' + filename));
 
@@ -409,21 +409,21 @@ data.feedback.success = {
 data.feedback.fail = {
   notJson: {
     render: (feedback, filename) => {
-      feedback.appendChild(node('p:Not a JSON file. Make sure the selected file came from ' + APP_NAME + '.|class:small muted'));
+      feedback.appendChild(node(`p:${language.current.data.feedback.fail.notJson}|class:small muted`));
       feedback.appendChild(complexNode({ tag: 'p', text: filename }));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
   },
   notAppJson: {
     render: (feedback, filename) => {
-      feedback.appendChild(node('p:Not the right kind of JSON file. Make sure the selected file came from ' + APP_NAME + '.|class:small muted'));
+      feedback.appendChild(node(`p:${language.current.data.feedback.fail.notAppJson}|class:small muted`));
       feedback.appendChild(complexNode({ tag: 'p', text: filename }));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
   },
   notClipboardJson: {
     render: (feedback, name) => {
-      feedback.appendChild(node('p:Not the right kind of data. Make sure the clipboard holds data from ' + APP_NAME + ' or a ' + APP_NAME + ' backup JSON file.|class:small muted'));
+      feedback.appendChild(node(`p:${language.current.data.feedback.fail.notClipboardJson}|class:small muted`));
       feedback.appendChild(node('p:' + name));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
