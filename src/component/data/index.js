@@ -1,3 +1,5 @@
+import { language } from '../../language';
+
 import { state } from '../state';
 import { bookmark } from '../bookmark';
 import { menu } from '../menu';
@@ -85,9 +87,10 @@ data.import = {
     });
 
     const importModal = new Modal({
-      heading: 'Restoring from a ' + APP_NAME + ' backup',
+      heading: language.current.data.restore.heading,
       content: importForm.form(),
-      successText: 'Import',
+      successText: language.current.data.restore.successText,
+      cancelText: language.current.data.restore.cancelText,
       width: 'small',
       successAction: () => {
         if (data.import.state.setup.include || data.import.state.theme.include || data.import.state.bookmark.include) {
@@ -340,12 +343,13 @@ data.clear = {
   all: {
     render: () => {
       const clearModal = new Modal({
-        heading: 'Clear all ' + APP_NAME + ' data?',
+        heading: language.current.data.clear.all.heading,
         content: node('div', [
-          node('p:Are you sure you want to clear all ' + APP_NAME + ' Bookmarks and Settings? ' + APP_NAME + ' will be restore to the default state.'),
-          node('p:This can not be undone.')
+          node(`p:${language.current.data.clear.all.content.para1}`),
+          node(`p:${language.current.data.clear.all.content.para2}`)
         ]),
-        successText: 'Clear all data',
+        successText: language.current.data.clear.all.successText,
+        cancelText: language.current.data.clear.all.cancelText,
         width: 'small',
         successAction: () => {
           data.wipe.all();
@@ -358,12 +362,13 @@ data.clear = {
   partial: {
     render: () => {
       const clearModal = new Modal({
-        heading: 'Clear ' + APP_NAME + ' data except bookmarks?',
+        heading: language.current.data.clear.partial.heading,
         content: node('div', [
-          node('p:Are you sure you want to clear all ' + APP_NAME + ' Settings? ' + APP_NAME + ' will be restore to the default state but your Bookmarks and Groups will remain.'),
-          node('p:This can not be undone.')
+          node(`p:${language.current.data.clear.partial.content.para1}`),
+          node(`p:${language.current.data.clear.partial.content.para2}`)
         ]),
-        successText: 'Clear all except bookmarks',
+        successText: language.current.data.clear.partial.successText,
+        cancelText: language.current.data.clear.partial.cancelText,
         width: 35,
         successAction: () => {
           data.wipe.partial();

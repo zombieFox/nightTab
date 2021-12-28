@@ -1299,6 +1299,61 @@
       }
     }
   },
+  "data": {
+    "form": {
+      "description": "You can restore all or parts of a backup file. The following data will be restored:",
+      "bookmark": {
+        "include": {
+          "label": "Bookmarks",
+          "description": [
+            "This includes all Groups and Bookmarks",
+            "Bookmarks will keep any custom Colours, Accents and Borders when imported."
+          ]
+        },
+        "type": {
+          "restore": "Replace existing bookmarks",
+          "append": "Add to existing bookmarks"
+        }
+      },
+      "theme": {
+        "include": {
+          "label": "Theme",
+          "description": "This includes the Colour, Accent, Fonts, Background and any saved Custom Themes."
+        }
+      },
+      "setup": {
+        "include": {
+          "label": "Settings",
+          "description": "This includes Layout size and position, Header area size, Bookmark area size and other user settings."
+        }
+      }
+    },
+    "restore": {
+      "heading": "Restoring from a {appName} backup",
+      "successText": "Import",
+      "cancelText": "Cancel"
+    },
+    "clear": {
+      "all": {
+        "heading": "Clear all {appName} data?",
+        "content": {
+          "para1": "Are you sure you want to clear all {appName} Bookmarks and Settings? {appName} will be restore to the default state.",
+          "para2": "This can not be undone."
+        },
+        "successText": "Clear all data",
+        "cancelText": "Cancel"
+      },
+      "partial": {
+        "heading": "Clear {appName} data except bookmarks?",
+        "content": {
+          "para1": "Are you sure you want to clear all {appName} Settings? {appName} will be restore to the default state but your Bookmarks and Groups will remain.",
+          "para2": "This can not be undone."
+        },
+        "successText": "Clear all except bookmarks",
+        "cancelText": "Cancel"
+      }
+    }
+  },
   "control": {
     "general": {
       "reset": "Reset to default"

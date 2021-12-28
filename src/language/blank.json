@@ -1283,6 +1283,58 @@
       }
     }
   },
+  "data": {
+    "form": {
+      "description": "xxx",
+      "bookmark": {
+        "include": {
+          "label": "xxx",
+          "description": ["xxx"]
+        },
+        "type": {
+          "restore": "xxx",
+          "append": "xxx"
+        }
+      },
+      "theme": {
+        "include": {
+          "label": "xxx",
+          "description": "xxx"
+        }
+      },
+      "setup": {
+        "include": {
+          "label": "xxx",
+          "description": "xxx"
+        }
+      }
+    },
+    "restore": {
+      "heading": "xxx",
+      "successText": "xxx",
+      "cancelText": "xxx"
+    },
+    "clear": {
+      "all": {
+        "heading": "xxx",
+        "content": {
+          "para1": "xxx",
+          "para2": "xxx"
+        },
+        "successText": "xxx",
+        "cancelText": "xxx"
+      },
+      "partial": {
+        "heading": "xxx",
+        "content": {
+          "para1": "xxx",
+          "para2": "xxx"
+        },
+        "successText": "xxx",
+        "cancelText": "xxx"
+      }
+    }
+  },
   "control": {
     "general": {
       "reset": "xxx"
