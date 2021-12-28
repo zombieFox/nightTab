@@ -12,7 +12,7 @@
           "font": "Fuente",
           "radius": "Radio",
           "shadow": "Sombra",
-          "shade": "Sombra",
+          "shade": "Cubrir",
           "opacity": "Opacidad",
           "background": "Fondo",
           "layout": "Disposición",
@@ -244,9 +244,9 @@
         "radius": "Radio de esquina",
         "shadow": "Tamaño de la sombra",
         "shade": {
-          "opacity": "Opacidad de la sombra",
+          "opacity": "Cubrir la opacidad",
           "blur": {
-            "label": "Desenfoque de sombra",
+            "label": "Portada borrosa",
             "helper": [
               "No es compatible con todos los navegadores."
             ]
