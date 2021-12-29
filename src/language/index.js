@@ -20,7 +20,7 @@ language.list = [
   { code: 'es', name: 'Español' },
   { code: 'fr', name: 'Français' },
   { code: 'hi', name: 'हिंदी' },
-  { code: 'ja_JP', name: '日本' },
+  { code: 'ja_JP', name: '日本語' },
   { code: 'ru', name: 'Pусский' }
 ];
 
