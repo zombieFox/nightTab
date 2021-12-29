@@ -1,5 +1,3 @@
-import { language } from '../../language';
-
 import { state } from '../state';
 
 import { node } from '../../utility/node';
@@ -29,7 +27,7 @@ export const Greeting = function() {
 
   this.update = () => {
 
-    const goodMessage = language.current.header.greeting.good;
+    const goodMessage = ['Good night', 'Good morning', 'Good afternoon', 'Good evening'];
 
     this.now = moment();
 
@@ -51,13 +49,13 @@ export const Greeting = function() {
 
       case 'hello':
 
-        value = language.current.header.greeting.hello;
+        value = 'Hello';
 
         break;
 
       case 'hi':
 
-        value = language.current.header.greeting.hi;
+        value = 'hi';
 
         break;
 

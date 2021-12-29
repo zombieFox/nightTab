@@ -938,13 +938,6 @@
       }
     }
   },
-  "header": {
-    "greeting": {
-      "good": ["Gute Nacht", "Guten Morgen", "Guten Tag", "Guten Abend"],
-      "hello": "Hallo",
-      "hi": "Hi"
-    }
-  },
   "bookmark": {
     "tile": {
       "control": {

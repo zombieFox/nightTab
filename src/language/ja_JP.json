@@ -1,0 +1,1401 @@
+{
+  "menu": {
+    "nav": {
+      "theme": {
+        "label": "テーマ",
+        "subNav": {
+          "preset": "プリセット",
+          "saved": "保存しました",
+          "style": "スタイル",
+          "color": "色",
+          "accent": "アクセント",
+          "font": "フォント",
+          "radius": "半径",
+          "shadow": "風邪",
+          "shade": "シェード",
+          "opacity": "不透明度",
+          "background": "バックグラウンド",
+          "layout": "レイアウト",
+          "header": "ヘッダ",
+          "bookmark": "ブックマーク"
+        }
+      },
+      "layout": {
+        "label": "レイアウト",
+        "subNav": {
+          "scaling": "スケーリング",
+          "area": "領域",
+          "padding": "パディング",
+          "gutter": "側溝",
+          "alignment": "アラインメント",
+          "page": "ページ"
+        }
+      },
+      "header": {
+        "label": "ヘッダ",
+        "subNav": {
+          "alignment": "アラインメント",
+          "greeting": "挨拶",
+          "transitional": "過渡的な言葉",
+          "clock": "時計",
+          "date": "日にち",
+          "search": "検索"
+        }
+      },
+      "bookmark": {
+        "label": "ブックマーク",
+        "subNav": {
+          "general": "全般的",
+          "style": "スタイル",
+          "orientation": "オリエンテーション",
+          "sort": "選別"
+        }
+      },
+      "group": {
+        "label": "グループ",
+        "subNav": {
+          "alignment": "アラインメント",
+          "name": "名前",
+          "collapse": "崩壊",
+          "toolbar": "ツールバー"
+        }
+      },
+      "toolbar": {
+        "label": "ツールバー",
+        "subNav": {
+          "size": "サイズ",
+          "location": "位置",
+          "position": "ポジション",
+          "controls": "コントロール"
+        }
+      },
+      "data": {
+        "label": "データ",
+        "subNav": {
+          "restore": "戻す",
+          "backup": "バックアップ",
+          "clear": "クリア"
+        }
+      },
+      "language": {
+        "label": "言語"
+      },
+      "support": {
+        "label": "サポート"
+      },
+      "coffee": {
+        "label": "コーヒー"
+      },
+      "app": {
+        "label": "{appName}"
+      }
+    },
+    "content": {
+      "theme": {
+        "preset": {
+          "helper": [
+            "プリセットを適用すると、現在の色、アクセント、フォント、スタイル、半径、影、陰影、背景が置き換えられます。"
+          ]
+        },
+        "saved": {
+          "helper": [
+            "テーマを保存すると、現在の色、アクセント、フォント、スタイル、不透明度、半径、影、陰影、背景が記録されます。"
+          ],
+          "save": "現在のテーマを保存",
+          "edit": "保存したテーマを編集する"
+        },
+        "style": {
+          "dark": {
+            "label": "ダークモード"
+          },
+          "light": {
+            "label": "ライトモード"
+          },
+          "automatic": {
+            "label": "自動",
+            "description": "システムのライトモードまたはダークモードに従います。"
+          }
+        },
+        "color": {
+          "shade": {
+            "helper": [
+              "背景、ブックマーク、モーダルは左からの色合いを使用しています。",
+              "テキスト要素とフォーム要素は、右からの陰影を使用します。",
+              "明るい外観の場合は、ライトスタイルに切り替えてから、原色を選択します。暗い外観の場合はその逆です。"
+            ]
+          },
+          "range": {
+            "primary": {
+              "h": "原色",
+              "s": "飽和"
+            }
+          },
+          "contrast": {
+            "label": "コントラスト範囲",
+            "left": "コントラストスタート",
+            "right": "コントラストエンド",
+            "helper": [
+              "コントラスト範囲コントロールを近づけて、落ち着いた外観にします。",
+              "コントラストレンジコントロールを互いに遠くに移動して、シャープで鮮やかな外観にします。"
+            ]
+          }
+        },
+        "accent": {
+          "preset": {
+            "color": {
+              "grey": "グレー",
+              "red": "赤",
+              "orange": "オレンジ",
+              "yellow": "黄色",
+              "lime": "ライム",
+              "green": "緑",
+              "aqua": "アクア",
+              "cyan": "シアン",
+              "teal": "ティール",
+              "blue": "青い",
+              "purple": "紫の",
+              "magenta": "赤紫色",
+              "fuchsia": "フクシア"
+            },
+            "modifier": {
+              "light": {
+                "level3": "スーパーエクストラライト",
+                "level2": "エクストラライト",
+                "level1": "光"
+              },
+              "dark": {
+                "level3": "スーパーエクストラダーク",
+                "level2": "エクストラダーク",
+                "level1": "闇"
+              }
+            }
+          },
+          "color": "アクセントカラー",
+          "random": {
+            "active": "ロード\/リフレッシュ時のランダムなアクセントカラー",
+            "style": {
+              "any": "どれでも",
+              "light": "光",
+              "dark": "闇",
+              "pastel": "パステル",
+              "saturated": "飽和"
+            },
+            "randomise": "今すぐランダム化"
+          },
+          "cycle": {
+            "active": "アクセントの色相を自動変更",
+            "speed": "変更遅延",
+            "step": "手順を変更する",
+            "alert": "アクセントの色相が急速に変化すると、パフォーマンスの問題が発生する可能性があるため、注意してください。",
+            "helper": [
+              "アクセントカラーがグレーまたはブラックの場合、アクセントの色相の自動変更は機能しません。"
+            ]
+          }
+        },
+        "font": {
+          "display": {
+            "name": {
+              "label": "表示フォント",
+              "placeholder": "Googleフォント名",
+              "helper": {
+                "para1": "Google Fontsを使用して、時計、日付、グループ名、ブックマーク文字をカスタマイズします。",
+                "link": "GoogleFontを探す",
+                "para2": "Google Fontsに表示されるフォント名を、大文字とスペースを含めて追加します。例：「FredokaOne」または「Kanit」と入力します。",
+                "para3": "フィールドをクリアして、デフォルトのフォント「FjallaOne」を使用します。"
+              }
+            },
+            "weight": {
+              "label": "フォントの太さ",
+              "light": "光",
+              "regular": "通常",
+              "bold": "はげ",
+              "helper": [
+                "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、GoogleFontページを参照してください。"
+              ]
+            },
+            "style": {
+              "normal": "普通",
+              "italic": "イタリック"
+            }
+          },
+          "ui": {
+            "name": {
+              "label": "ユーザーインターフェイスフォント",
+              "placeholder": "Googleフォント名",
+              "helper": {
+                "para1": "Google Fontを使用して、ブックマーク名、URL、およびフォーム要素をカスタマイズします。",
+                "link": "GoogleFontを探す",
+                "para2": "Google Fontsに表示されるフォント名を、大文字とスペースを含めて追加します。例：「Roboto」、「Source Sans Pro」、「NotoSans」と入力します。",
+                "para3": "フィールドをクリアして、デフォルトのフォント「OpenSans」を使用します。"
+              }
+            },
+            "weight": {
+              "label": "フォントの太さ",
+              "light": "光",
+              "regular": "通常",
+              "bold": "はげ",
+              "helper": [
+                "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、GoogleFontページを参照してください。"
+              ]
+            },
+            "style": {
+              "normal": "普通",
+              "italic": "イタリック"
+            }
+          }
+        },
+        "radius": "コーナー半径",
+        "shadow": "影のサイズ",
+        "shade": {
+          "opacity": "日陰の不透明度",
+          "blur": {
+            "label": "シェードブラー",
+            "helper": [
+              "すべてのブラウザでサポートされているわけではありません。"
+            ]
+          }
+        },
+        "opacity": {
+          "general": {
+            "label": "すべての不透明度",
+            "helper": [
+              "検索バー、ブックマーク、グループコントロール、ツールバーの不透明度を変更します。",
+              "個々のブックマークを編集するときに不透明度を変更することもできます。"
+            ]
+          },
+          "toolbar": "ツールバー",
+          "bookmark": "ブックマーク",
+          "search": "検索ボックス",
+          "groupToolbar": "グループツールバー"
+        },
+        "background": {
+          "type": {
+            "theme": {
+              "label": "テーマ別の背景",
+              "description": [
+                "テーマで定義された背景色を使用します。"
+              ]
+            },
+            "accent": {
+              "label": "アクセントによる背景",
+              "description": [
+                "背景にはアクセントカラーを使用します。"
+              ]
+            },
+            "color": "カスタムカラー",
+            "gradient": "勾配",
+            "image": "画像",
+            "video": "ビデオ"
+          },
+          "color": "背景色",
+          "gradient": {
+            "angle": "背景のグラデーション角度",
+            "start": "背景グラデーション開始",
+            "end": "背景グラデーション終了"
+          },
+          "image": {
+            "alert": {
+              "para1": "ローカル画像は使用できなくなりました。画像はオンラインのどこかでホストする必要があります。",
+              "para2": "なぜこれが変わったのですか？"
+            },
+            "url": {
+              "label": "URL",
+              "placeholder": "https:\/\/www.example.com\/image.jpg",
+              "helper": [
+                "ロード時にランダムな背景画像を作成するために、スペースまたは新しい行で区切られた複数のURLを追加します。",
+                "Unsplashは、ランダムな画像に使用できます。例：",
+                "https:\/\/source.unsplash.com\/random\/1920x1080\/?night,day,sky",
+                "その他のオプションについては、... \/ random \/の後にパラメータを変更してください。読み込み時間は異なる場合があります。"
+              ]
+            },
+            "blur": "ぼかし",
+            "grayscale": "グレースケール",
+            "scale": "規模",
+            "accent": "アクセント",
+            "opacity": "不透明度",
+            "vignette": {
+              "opacity": "ビネット",
+              "range": {
+                "label": "シェードの開始と終了",
+                "left": "シェードエンド",
+                "right": "シェードスタート"
+              }
+            }
+          },
+          "video": {
+            "alert": {
+              "para1": "YouTubeページのURLは使用できません。",
+              "para2": "ビデオファイルにリンクする方法。"
+            },
+            "url": {
+              "label": "URL",
+              "placeholder": "https:\/\/www.example.com\/video.mp4",
+              "helper": [
+                "バックグラウンドビデオは、ビデオファイルへの直接URLのみをサポートします。 MP4およびWebM形式をサポートします。",
+                "読み込み時にランダムな背景動画を作成するために、スペースまたは新しい行で区切って複数のURLを追加します。"
+              ]
+            },
+            "blur": "ぼかし",
+            "grayscale": "グレースケール",
+            "scale": "規模",
+            "accent": "アクセント",
+            "opacity": "不透明度",
+            "vignette": {
+              "opacity": "ビネット",
+              "range": {
+                "label": "シェードの開始と終了",
+                "start": "シェードエンド",
+                "end": "シェードスタート"
+              }
+            }
+          }
+        },
+        "layout": {
+          "color": {
+            "label": "レイアウトの背景色",
+            "by": {
+              "transparent": {
+                "label": "透明",
+                "description": "レイアウトの背後に背景色はありません。"
+              },
+              "custom": {
+                "label": "カスタムカラー",
+                "description": "レイアウトの背後にあるカスタムカラーを使用します。"
+              }
+            },
+            "color": "レイアウトの背景色",
+            "opacity": "背景の不透明度",
+            "blur": {
+              "label": "背景のぼかし",
+              "helper": [
+                "すべてのブラウザでサポートされているわけではありません。"
+              ]
+            }
+          },
+          "divider": "ヘッダーとブックマーク領域を分割する"
+        },
+        "header": {
+          "color": {
+            "label": "ヘッダーの背景色",
+            "by": {
+              "transparent": {
+                "label": "透明",
+                "description": "ヘッダー領域の背後に背景色はありません。"
+              },
+              "custom": {
+                "label": "カスタムカラー",
+                "description": "ヘッダー領域の後ろにカスタムカラーを使用します。"
+              }
+            },
+            "color": "ヘッダーの背景色",
+            "opacity": "背景の不透明度"
+          }
+        },
+        "bookmark": {
+          "color": {
+            "label": "ブックマークの背景色",
+            "by": {
+              "transparent": {
+                "label": "透明",
+                "description": "ブックマーク領域の背後に背景色はありません。"
+              },
+              "custom": {
+                "label": "カスタムカラー",
+                "description": "ブックマーク領域の後ろにカスタムカラーを使用します。"
+              }
+            },
+            "color": "ブックマークの背景色",
+            "opacity": "背景の不透明度"
+          },
+          "item": {
+            "border": {
+              "label": "ブックマークの境界線",
+              "helper": [
+                "個々のブックマークを編集するときに、ブックマークの境界線を変更することもできます。",
+                "境界線の色はアクセントによって定義され、個々のブックマークを編集するときにも変更できます。"
+              ]
+            },
+            "rainbow": {
+              "add": "各ブックマークに独自のアクセントを追加します",
+              "remove": "すべてのアクセントオーバーライドを削除します",
+              "helper": [
+                "ブックマークのカスタムアクセントは、個々のブックマークを編集するときにも変更できます。"
+              ]
+            }
+          }
+        }
+      },
+      "layout": {
+        "scaling": {
+          "size": "グローバルサイズ"
+        },
+        "area": {
+          "width": "レイアウトエリア幅",
+          "header": {
+            "width": "ヘッダー領域の幅",
+            "justify": {
+              "label": "ヘッダー領域の配置",
+              "left": "左",
+              "center": "中心",
+              "right": "右",
+              "helper1": [
+                "ヘッダー領域が全幅の場合、エフェクトが表示されない場合があります。"
+              ],
+              "helper2": [
+                "レイアウト方向が垂直で、ヘッダー項目が表示されている場合にのみ使用できます。"
+              ]
+            }
+          },
+          "bookmark": {
+            "width": "ブックマーク領域の幅",
+            "justify": {
+              "label": "ブックマーク領域の配置",
+              "left": "左",
+              "center": "中心",
+              "right": "右",
+              "helper1": [
+                "ブックマークエリアが全幅の場合、エフェクトが表示されない場合があります。"
+              ],
+              "helper2": [
+                "レイアウト方向が垂直で、ヘッダー項目が表示されている場合にのみ使用できます。"
+              ]
+            }
+          }
+        },
+        "padding": "ヘッダーとブックマーク領域の周りのスペース",
+        "gutter": "ヘッダーアイテムとブックマークアイテムの間のスペース",
+        "alignment": {
+          "label": "エリアアライメント",
+          "topLeft": "左上",
+          "topCenter": "トップセンター",
+          "topRight": "右上",
+          "centerLeft": "中央左",
+          "centerCenter": "センターセンター",
+          "centerRight": "中道右派",
+          "bottomLeft": "左下",
+          "bottomCenter": "下部中央",
+          "bottomRight": "右下"
+        },
+        "direction": {
+          "horizontal": {
+            "label": "水平に揃える",
+            "description": "ヘッダーとブックマークを並べて積み重ねます。"
+          },
+          "vertical": {
+            "label": "垂直に揃える",
+            "description": "ヘッダーとブックマークを列に積み重ねます。"
+          }
+        },
+        "order": {
+          "headerBookmark": {
+            "label": "ヘッダー、ブックマーク",
+            "description": "ブックマーク領域の前にヘッダー領域を表示するように注文します。"
+          },
+          "bookmarkHeader": {
+            "label": "ブックマークしてからヘッダー",
+            "description": "ブックマーク領域をヘッダー領域の前に表示するように注文します。"
+          }
+        },
+        "page": {
+          "title": {
+            "label": "タイトル",
+            "placeholder": "新しいタブ"
+          },
+          "favicon": {
+            "label": "ファビコンURL",
+            "placeholder": "https:\/\/www.example.com\/favicon.svg",
+            "helper": [
+              "すべてのブラウザでサポートされているわけではありません。"
+            ]
+          },
+          "scrollbar": {
+            "label": "スクロール・バー",
+            "auto": "自動",
+            "thin": "薄い",
+            "none": "隠れた",
+            "helper": [
+              "すべてのブラウザでサポートされているわけではありません。"
+            ]
+          },
+          "overscroll": {
+            "active": "終わりを過ぎてスクロール",
+            "unblur": {
+              "label": "背景画像またはビデオをぼかす",
+              "description": [
+                "ページの一番下までスクロールすると、背景画像またはビデオのぼやけがなくなります。",
+                "画像またはビデオのぼかしは、テーマの背景の下にあります。"
+              ]
+            }
+          }
+        }
+      },
+      "header": {
+        "alignment": {
+          "justify": {
+            "label": "ヘッダーアイテムの配置",
+            "left": "左",
+            "center": "中心",
+            "right": "右"
+          },
+          "helper": [
+            "検索ボックスのサイズが[自動]に設定されていて、使用可能なスペースを埋めるように大きくなると、効果が表示されない場合があります。"
+          ]
+        },
+        "greeting": {
+          "show": "あいさつを表示",
+          "size": "サイズ",
+          "newLine": {
+            "label": "改行",
+            "description": "新しい行に強制し、他のヘッダー項目から分離します。"
+          },
+          "type": {
+            "label": "言葉遣い",
+            "good": "\"おはようございます...\"",
+            "hello": "\"こんにちは...\"",
+            "hi": "\"こんにちは...\"",
+            "none": {
+              "label": "なし",
+              "description": "名前だけを表示するのに便利です。"
+            },
+            "custom": {
+              "label": "カスタム",
+              "description": [
+                "あなた自身の挨拶を使用してください。",
+                "空白のままにすると、デフォルトで「おはよう...」になります。"
+              ]
+            }
+          },
+          "custom": {
+            "label": "カスタムグリーティングテキスト",
+            "placeholder": "ハウディ"
+          },
+          "name": {
+            "label": "名前",
+            "placeholder": "ニックネーム、エイリアス、またはスーパーヒーローの名前"
+          }
+        },
+        "transitional": {
+          "show": {
+            "label": "過渡的な言葉を表示する",
+            "helper": [
+              "日付または時刻が表示されている場合にのみ使用できます。"
+            ]
+          },
+          "type": {
+            "label": "言葉遣い",
+            "timeAndDate": "「日時は」",
+            "its": "\"これは\""
+          },
+          "size": "サイズ",
+          "newLine": {
+            "label": "改行",
+            "description": "新しい行に強制し、他のヘッダー項目から分離します。"
+          }
+        },
+        "clock": {
+          "hour": {
+            "show": "時間を表示",
+            "display": {
+              "number": "番号として",
+              "word": "言葉として"
+            }
+          },
+          "minute": {
+            "show": "分を表示",
+            "display": {
+              "number": "番号として",
+              "word": "言葉として"
+            }
+          },
+          "second": {
+            "show": "秒を表示",
+            "display": {
+              "number": "番号として",
+              "word": "言葉として"
+            }
+          },
+          "separator": {
+            "show": "セパレータを表示",
+            "label": "区切り文字",
+            "placeholder": "："
+          },
+          "hour24": "24時間",
+          "meridiem": "午前午後",
+          "size": "サイズ",
+          "newLine": {
+            "label": "改行",
+            "description": "新しい行に強制し、他のヘッダー項目から分離します。"
+          }
+        },
+        "date": {
+          "day": {
+            "show": "ショーデー",
+            "display": {
+              "number": "番号として",
+              "word": "言葉として",
+              "weekStart": {
+                "label": "週の始まり",
+                "monday": "月曜",
+                "sunday": "日曜日"
+              },
+              "length": {
+                "label": "単語の長さ",
+                "long": "長いです",
+                "short": "短い"
+              }
+            }
+          },
+          "date": {
+            "show": "日付を表示",
+            "display": {
+              "number": "番号として",
+              "word": "言葉として",
+              "ordinal": "序数"
+            }
+          },
+          "month": {
+            "show": "月を表示",
+            "display": {
+              "number": "番号として",
+              "word": "言葉として",
+              "ordinal": "序数",
+              "length": {
+                "label": "単語の長さ",
+                "long": "長いです",
+                "short": "短い"
+              }
+            }
+          },
+          "year": {
+            "show": "ショーイヤー",
+            "display": {
+              "number": "番号として",
+              "word": "言葉として"
+            }
+          },
+          "separator": {
+            "show": "セパレータを表示",
+            "label": "区切り文字",
+            "placeholder": "\/"
+          },
+          "format": {
+            "label": "フォーマット",
+            "dateMonth": "日付\/月",
+            "monthDate": "月\/日付"
+          },
+          "size": "サイズ",
+          "newLine": {
+            "label": "改行",
+            "description": "新しい行に強制し、他のヘッダー項目から分離します。"
+          }
+        },
+        "search": {
+          "show": "検索を表示",
+          "width": {
+            "label": "検索ボックスの幅",
+            "auto": {
+              "label": "自動幅",
+              "description": "検索ボックスは、利用可能なスペースに最も合うように大きくなります。"
+            },
+            "custom": {
+              "label": "カスタム幅",
+              "description": "ヘッダー領域内の検索ボックスの幅を定義します。"
+            },
+            "size": "幅"
+          },
+          "size": "サイズ",
+          "newLine": {
+            "label": "改行",
+            "description": "新しい行に強制し、他のヘッダー項目から分離します。"
+          },
+          "engine": {
+            "selected": {
+              "label": "検索エンジン",
+              "custom": "カスタム"
+            },
+            "custom": {
+              "name": {
+                "label": "名前",
+                "placeholder": "検索エンジン名"
+              },
+              "url": {
+                "label": "URL",
+                "placeholder": "https：\/\/",
+                "helper": [
+                  "検索パラメータを使用してウェブアドレスを入力します。例： \"https:\/\/vimeo.com\/search?q=\"",
+                  "{appName}は、上記のURLの最後にある検索ボックスに入力された検索語を追加します。"
+                ]
+              },
+              "queryName": {
+                "label": "名前属性",
+                "placeholder": "q",
+                "helper": [
+                  "検索入力フィールドにname属性を設定します。",
+                  "これは、送信時に検索エンジンに渡される名前を定義します。よくわからない場合は空白のままにしてください。"
+                ]
+              }
+            },
+            "text": {
+              "justify": {
+                "label": "テキストの配置を検索",
+                "left": "左",
+                "center": "中心",
+                "right": "右"
+              }
+            }
+          },
+          "newTab": "検索結果を新しいタブで開く"
+        }
+      },
+      "bookmark": {
+        "general": {
+          "show": "ブックマークを表示",
+          "urlShow": "ブックマークホバーにURLを表示",
+          "lineShow": "ブックマーク行を表示",
+          "shadowShow": {
+            "label": "ブックマークホバーに影を表示",
+            "description": "テーマシャドウが0に設定されている場合、エフェクトが表示されない場合があります。"
+          },
+          "hoverScaleShow": "ブックマークホバーで成長",
+          "newTab": "新しいタブでブックマークを開く",
+          "size": "ブックマークサイズ"
+        },
+        "style": {
+          "block": {
+            "label": "ブロック",
+            "description": "正方形のブックマークタイル。"
+          },
+          "list": {
+            "label": "リスト",
+            "description": "短くて広いブックマークタイル。"
+          }
+        },
+        "orientation": {
+          "top": "上",
+          "bottom": "下",
+          "helper": [
+            "ブックマークタイルの上部または下部にURLとコントロールを表示します。"
+          ]
+        },
+        "sort": {
+          "letter": "手紙で",
+          "icon": "アイコン別",
+          "name": "名前で"
+        }
+      },
+      "group": {
+        "alignment": {
+          "justify": {
+            "label": "グループの詳細領域の配置",
+            "left": "左",
+            "center": "中心",
+            "right": "右"
+          },
+          "order": {
+            "label": "グループ詳細注文",
+            "headerBody": {
+              "label": "グループの詳細、次にブックマーク",
+              "description": "ブックマーク領域の前に表示されるグループ詳細領域を注文します。"
+            },
+            "bodyHeader": {
+              "label": "ブックマークしてからグループの詳細",
+              "description": "[ブックマーク]領域を[グループの詳細]領域の前に表示するように注文します。"
+            }
+          }
+        },
+        "name": {
+          "size": "名前のサイズ",
+          "show": "すべて表示する",
+          "hide": "すべて非表示",
+          "helper": [
+            "グループ名は、個々のグループを編集して変更することもできます。"
+          ]
+        },
+        "collapse": {
+          "show": "すべてのグループを開く",
+          "hide": "すべてのグループを折りたたむ"
+        },
+        "toolbar": {
+          "size": "グループツールバーのサイズ",
+          "collapse": {
+            "label": "グループ折りたたみコントロール",
+            "show": "すべて表示する",
+            "hide": "すべて非表示",
+            "helper": [
+              "グループツールバーの折りたたみボタンは、個々のグループを編集して変更することもできます。"
+            ]
+          },
+          "openAll": {
+            "label": "グループすべてのコントロールを開く",
+            "show": "すべて表示する",
+            "hide": "すべて非表示",
+            "helper": [
+              "グループツールバーの[すべて開く]ボタンは、個々のグループを編集して変更することもできます。"
+            ]
+          }
+        }
+      },
+      "toolbar": {
+        "size": "ツールバーのサイズ",
+        "location": {
+          "corner": "隅に",
+          "header": "ヘッダー内",
+          "helper": [
+            "ツールバーをヘッダー内またはウィンドウの隅に配置します。"
+          ],
+          "newLine": {
+            "label": "改行",
+            "description": "新しい行に強制し、他のヘッダー項目から分離します。",
+            "helper": [
+              "ツールバーがヘッダー内に配置されている場合にのみ使用できます。"
+            ]
+          }
+        },
+        "position": {
+          "label": "ツールバーの位置",
+          "topLeft": "左上",
+          "topRight": "右上",
+          "bottomLeft": "左下",
+          "bottomRight": "右下",
+          "helper1": [
+            "ウィンドウの四隅の1つにツールバーを配置します。"
+          ],
+          "helper2": [
+            "ツールバーが隅に配置されている場合にのみ使用できます。"
+          ]
+        },
+        "controls": {
+          "accent": "アクセントコントロールを表示",
+          "add": "コントロールの追加を表示",
+          "edit": "編集コントロールを表示"
+        }
+      },
+      "data": {
+        "restore": {
+          "file": "ファイルからインポート",
+          "clipboard": "クリップボードからインポート",
+          "helper": [
+            "以前にエクスポートした{appName}バックアップを復元します。"
+          ],
+          "drop": "または、 {appName}バックアップファイルをここにドロップします。"
+        },
+        "backup": {
+          "file": "データのエクスポート",
+          "clipboard": "クリップボードにコピー",
+          "helper": [
+            "{appName}ブックマークと設定のバックアップをダウンロードします。",
+            "このファイルは、後でこのデバイスまたは別のデバイスにインポートできます。"
+          ]
+        },
+        "clear": {
+          "all": "すべてのデータをクリアする",
+          "partial": "ブックマークを除くすべてをクリアする",
+          "alert": {
+            "para": "すべてのデータをクリアするとブックマークが失われます。",
+            "link": "データをバックアップする"
+          },
+          "helper": [
+            "すべてのデータをクリアし{appName}をデフォルトの状態にリセットします。",
+            "または、すべての設定を消去して、現在のブックマークとグループを保持することもできます。"
+          ]
+        }
+      },
+      "language": {
+        "language": "言語",
+        "alert": {
+          "para": "正しくない翻訳を見つけましたか？",
+          "link": "{appName}翻訳を手伝ってください"
+        }
+      },
+      "support": {
+        "page": {
+          "applyToAll": "すべてにブックマーク設定を適用する",
+          "browser": "ブラウザのサポート",
+          "cookies": "クッキーとキャッシュ",
+          "data": "データのバックアップと復元",
+          "localBackgroundImage": "ローカル背景画像",
+          "protectedUrl": "保護されたURL",
+          "recovering": "設定とブックマークの回復",
+          "resetting": "ブラウザを開いたときにリセットする",
+          "privacy": "あなたのプライバシーを尊重する",
+          "backgroundImageVideo": "背景ビデオまたは画像の設定",
+          "firefox": "Firefoxのホームページとして{appName}を設定する"
+        },
+        "para": "より多くのサポートまたはフィードバックについて：",
+        "link1": "問題を送信します。",
+        "link2": "Wikiを確認してください。"
+      },
+      "coffee": {
+        "para": "{appName}は無料です。コーヒーの形で感謝を歓迎します！",
+        "button": "私にコーヒーを買う"
+      },
+      "app": {
+        "para1": "設定をコミュニティと共有します。",
+        "link1": "Reddit \/ r \/ {appName}見つかりました。",
+        "para2": "このプロジェクトはオープンソースです。",
+        "link2": "GitHubで見つかりました。",
+        "link3": "GNU General PublicLicensev3.0。"
+      }
+    }
+  },
+  "bookmark": {
+    "tile": {
+      "control": {
+        "left": "このブックマークを左に移動",
+        "sort": "ブックマークをドラッグして並べ替えます",
+        "right": "このブックマークを右に移動します",
+        "edit": "このブックマークを編集する",
+        "remove": "このブックマークを削除する"
+      }
+    },
+    "add": {
+      "heading": "新しいブックマークを追加する",
+      "successText": "追加",
+      "cancelText": "キャンセル"
+    },
+    "remove": {
+      "heading": {
+        "name": "削除する",
+        "unnamed": "名前のないブックマークを削除する"
+      },
+      "content": "このブックマークを削除してもよろしいですか？これは、元に戻すことはできません。",
+      "successText": "削除する",
+      "cancelText": "キャンセル"
+    },
+    "edit": {
+      "heading": {
+        "name": "編集",
+        "unnamed": "名前のないブックマークを編集する"
+      },
+      "successText": "保存する",
+      "cancelText": "キャンセル"
+    },
+    "form": {
+      "tab": {
+        "visual": "ビジュアルと名前",
+        "address": "住所",
+        "position": "ポジション",
+        "layout": "レイアウト",
+        "theme": "テーマ"
+      },
+      "section": {
+        "visual": {
+          "heading": "ビジュアルと名前",
+          "description": "このブックマークタイルに文字、アイコン、画像、名前を表示します。"
+        },
+        "address": {
+          "heading": "住所",
+          "description": "必ず完全なURLを使用し、「https：\/\/ ...」を含めてください"
+        },
+        "position": {
+          "heading": "ポジション",
+          "description": "このブックマークを配置するグループ。"
+        },
+        "layout": {
+          "heading": "レイアウト",
+          "description": "視覚要素と名前の位置、縮尺、向きを変更します。"
+        },
+        "theme": {
+          "heading": "テーマ",
+          "description": "テーマとアクセントの色を上書きします。"
+        }
+      },
+      "url": {
+        "label": "URL",
+        "placeholder": "https:\/\/www.example.com\/"
+      },
+      "display": {
+        "alignment": {
+          "label": "視覚要素と名前の配置",
+          "topLeft": "左上",
+          "topCenter": "トップセンター",
+          "topRight": "右上",
+          "centerLeft": "中央左",
+          "centerCenter": "センターセンター",
+          "centerRight": "中道右派",
+          "bottomLeft": "左下",
+          "bottomCenter": "下部中央",
+          "bottomRight": "右下"
+        },
+        "direction": {
+          "vertical": {
+            "label": "垂直",
+            "description": "ビジュアル要素を積み重ねて、上下に名前を付けます。"
+          },
+          "horizontal": {
+            "label": "水平",
+            "description": "ビジュアル要素と名前を並べて配置します。"
+          }
+        },
+        "order": {
+          "visualName": {
+            "label": "視覚要素と名前",
+            "description": "名前の前にビジュアル要素を配置します。"
+          },
+          "nameVisual": {
+            "label": "名前、次に視覚要素",
+            "description": "ビジュアル要素の前に名前を配置します。"
+          }
+        },
+        "rotate": "回転する",
+        "translate": {
+          "label": "ビジュアルエレメントの位置を調整する",
+          "x": "水平",
+          "y": "垂直"
+        },
+        "gutter": "側溝",
+        "visual": {
+          "show": {
+            "label": "ビジュアル要素を表示",
+            "description": "このブックマーク六角形に文字、アイコン、または画像を表示します。"
+          },
+          "type": {
+            "letter": "手紙",
+            "icon": "アイコン",
+            "image": "画像"
+          },
+          "size": "視覚的なサイズ",
+          "letter": {
+            "text": {
+              "label": "しおり",
+              "placeholder": "E"
+            }
+          },
+          "icon": {
+            "text": {
+              "label": "ブックマークアイコン",
+              "placeholder": "FontAwesomeのブランドまたはアイコン"
+            },
+            "remove": "アイコンを削除"
+          },
+          "image": {
+            "url": {
+              "label": "ブックマーク画像",
+              "placeholder": "https:\/\/www.example.com\/image.jpg"
+            }
+          },
+          "shadow": {
+            "size": "ビジュアルシャドウ",
+            "helper": [
+              "視覚的な影は、文字またはアイコンにのみ適用されます。"
+            ]
+          }
+        },
+        "name": {
+          "show": "名前を表示",
+          "text": {
+            "label": "ブックマーク名",
+            "placeholder": "例"
+          },
+          "size": "名前のサイズ"
+        }
+      },
+      "accent": {
+        "by": {
+          "theme": {
+            "label": "テーマアクセント",
+            "description": "テーマで定義されたアクセントを使用します。"
+          },
+          "custom": {
+            "label": "カスタムアクセント",
+            "description": "テーマアクセントを上書きします。"
+          }
+        },
+        "color": "アクセント"
+      },
+      "color": {
+        "by": {
+          "theme": {
+            "label": "テーマカラー",
+            "description": "テーマで定義された色を使用します。"
+          },
+          "custom": {
+            "label": "カスタムカラー",
+            "description": "テーマの色を上書きします。"
+          }
+        },
+        "color": "色",
+        "opacity": "不透明度"
+      },
+      "background": {
+        "show": {
+          "label": "背景を表示",
+          "description": "このブックマークタイルに画像またはビデオの背景を表示します。"
+        },
+        "type": {
+          "image": "画像",
+          "video": "ビデオ"
+        },
+        "opacity": "不透明度",
+        "image": {
+          "label": "背景画像のURL",
+          "placeholder": "https:\/\/www.example.com\/image.jpg",
+          "helper": [
+            "背景画像は、画像ファイルへの直接URLのみをサポートします。"
+          ]
+        },
+        "video": {
+          "label": "背景ビデオのURL",
+          "placeholder": "https:\/\/www.example.com\/video.mp4",
+          "helper": [
+            "バックグラウンドビデオは、ビデオファイルへの直接URLのみをサポートします。 MP4およびWebM形式をサポートします。",
+            "YouTubeページのURLは使用できません。"
+          ]
+        }
+      },
+      "border": "国境",
+      "shape": {
+        "wide": {
+          "label": "広いタイル",
+          "description": "2つの列にまたがるブックマークタイル。"
+        },
+        "tall": {
+          "label": "背の高いタイル",
+          "description": "2行にまたがるブックマークタイル。"
+        }
+      },
+      "group": {
+        "destination": {
+          "existing": "既存のグループ",
+          "new": "新しい集団"
+        },
+        "name": {
+          "label": "URL",
+          "placeholder": "グループ例"
+        },
+        "random": "ランダムグループ名",
+        "position": {
+          "group": "グループ",
+          "item": "ポジション"
+        }
+      },
+      "propagate": {
+        "visual": {
+          "label": "「視覚的要素の表示」と「名前の表示」を他のブックマークに適用します",
+          "description": [
+            "文字、アイコン、画像、名前のテキストは共有されません。",
+            "すべてのブックマークの視覚要素または名前を非表示にするのに便利です。"
+          ]
+        },
+        "layout": {
+          "label": "他のブックマークにレイアウトを適用する",
+          "description": [
+            "保存したら、上記のレイアウトを他のすべてのブックマークに適用します。",
+            "ビジュアルと名前のサイズ、配置、順序、位置、およびガターのみがすべてに適用されます。"
+          ]
+        },
+        "theme": {
+          "label": "テーマを他のブックマークに適用する",
+          "description": [
+            "保存したら、上記のテーマを他のすべてのブックマークに適用します。",
+            "色、アクセント、不透明度、境界線、視覚的な影のみがすべてに適用されます。"
+          ]
+        }
+      }
+    },
+    "preview": {
+      "full": "プレビュー",
+      "half": "プレビュー（50％スケール）"
+    }
+  },
+  "group": {
+    "area": {
+      "control": {
+        "up": "このグループを上に移動します",
+        "sort": "グループをドラッグして並べ替えます",
+        "down": "このグループを下に移動します",
+        "edit": "このグループを編集する",
+        "remove": "このグループを削除する",
+        "openAll": "このグループのすべてのブックマークを開きます",
+        "collapse": "このグループを折りたたむ"
+      }
+    },
+    "add": {
+      "heading": "新しいグループを追加する",
+      "successText": "追加",
+      "cancelText": "キャンセル"
+    },
+    "remove": {
+      "heading": {
+        "name": "削除する",
+        "unnamed": "名前のないグループを削除する"
+      },
+      "content": "このグループとその中のすべてのブックマークを削除してもよろしいですか？これは、元に戻すことはできません。",
+      "successText": "削除する",
+      "cancelText": "キャンセル"
+    },
+    "edit": {
+      "heading": {
+        "name": "編集",
+        "unnamed": "名前のないグループを編集する"
+      },
+      "successText": "保存する",
+      "cancelText": "キャンセル"
+    },
+    "form": {
+      "section": {
+        "name": {
+          "heading": "名前",
+          "description": "このグループの上に名前を表示します。"
+        },
+        "toolbar": {
+          "heading": "ツールバー",
+          "description": "コントロールを表示して、このグループのすべてのブックマークを開いたり、ブックマークを表示\/非表示にしたりします。"
+        },
+        "ordering": {
+          "heading": "注文",
+          "description": "このグループの位置。"
+        }
+      },
+      "name": {
+        "show": "グループ名を表示",
+        "text": {
+          "label": "グループ名",
+          "placeholder": "グループ例"
+        },
+        "random": "ランダムグループ名"
+      },
+      "collapse": {
+        "show": {
+          "label": "折りたたみを表示",
+          "description": "[折りたたみ]ボタンは、このグループのブックマークを表示または非表示にします。"
+        }
+      },
+      "openAll": {
+        "show": {
+          "label": "表示すべて開く",
+          "description": "このグループに少なくとも1つのブックマークがある場合は、[すべて開く]ボタンが表示されます。"
+        }
+      },
+      "destination": "ポジション"
+    }
+  },
+  "theme": {
+    "custom": {
+      "tile": {
+        "control": {
+          "edit": "この保存されたカスタムテーマを編集する",
+          "remove": "この保存されたカスタムテーマを削除します"
+        }
+      },
+      "form": {
+        "name": {
+          "label": "名前",
+          "placeholder": "テーマの例"
+        },
+        "random": "ランダムテーマ名"
+      },
+      "add": {
+        "heading": "現在のテーマを保存",
+        "successText": "保存する",
+        "cancelText": "キャンセル"
+      },
+      "remove": {
+        "heading": {
+          "name": "削除する",
+          "unnamed": "名前のないカスタムテーマを削除する"
+        },
+        "content": "この保存されたカスタムテーマを削除してもよろしいですか？これは、元に戻すことはできません。",
+        "successText": "保存する",
+        "cancelText": "キャンセル"
+      },
+      "edit": {
+        "heading": {
+          "name": "編集",
+          "unnamed": "名前のないカスタムテーマを編集する"
+        },
+        "successText": "削除する",
+        "cancelText": "キャンセル"
+      }
+    }
+  },
+  "data": {
+    "form": {
+      "description": "バックアップファイルの全部または一部を復元できます。次のデータが復元されます。",
+      "bookmark": {
+        "include": {
+          "label": "ブックマーク",
+          "description": [
+            "これには、すべてのグループとブックマークが含まれます",
+            "ブックマークは、インポート時にカスタムの色、アクセント、境界線を保持します。"
+          ]
+        },
+        "type": {
+          "restore": "既存のブックマークを置き換える",
+          "append": "既存のブックマークに追加"
+        }
+      },
+      "theme": {
+        "include": {
+          "label": "テーマ",
+          "description": "これには、色、アクセント、フォント、背景、および保存されているカスタムテーマが含まれます。"
+        }
+      },
+      "setup": {
+        "include": {
+          "label": "設定",
+          "description": "これには、レイアウトのサイズと位置、ヘッダー領域のサイズ、ブックマーク領域のサイズ、およびその他のユーザー設定が含まれます。"
+        }
+      }
+    },
+    "restore": {
+      "heading": "{appName}バックアップからの復元",
+      "successText": "輸入",
+      "cancelText": "キャンセル"
+    },
+    "clear": {
+      "all": {
+        "heading": "すべての{appName}データをクリアしますか？",
+        "content": {
+          "para1": "{appName}ブックマークと設定をクリアしてもよろしいですか？ {appName}はデフォルトの状態に復元されます。",
+          "para2": "これは、元に戻すことはできません。"
+        },
+        "successText": "すべてのデータをクリアする",
+        "cancelText": "キャンセル"
+      },
+      "partial": {
+        "heading": "ブックマーク以外の{appName}データをクリアしますか？",
+        "content": {
+          "para1": "{appName}設定をクリアしてもよろしいですか？ {appName}はデフォルトの状態に復元されますが、ブックマークとグループは残ります。",
+          "para2": "これは、元に戻すことはできません。"
+        },
+        "successText": "ブックマークを除くすべてをクリアする",
+        "cancelText": "キャンセル"
+      }
+    },
+    "export": {
+      "backup": "バックアップ"
+    },
+    "feedback": {
+      "empty": "インポートするものが選択されていません。",
+      "success": "成功！ {appName}ブックマークと設定を復元しています。",
+      "fail": {
+        "notJson": "JSONファイルではありません。 {appName}からのものであることを確認してください。",
+        "notAppJson": "適切な種類のJSONファイルではありません。 {appName}からのものであることを確認してください。",
+        "notClipboardJson": "適切な種類のデータではありません。 {appName}または{appName}バックアップJSONファイルからのデータを保持していることを確認してください。"
+      }
+    }
+  },
+  "control": {
+    "general": {
+      "reset": "デフォルトにリセット"
+    },
+    "color": {
+      "text": {
+        "placeholder": "16進コード"
+      },
+      "random": "ランダムカラー"
+    },
+    "colorMixer": {
+      "moreControls": "その他のコントロール",
+      "slider": {
+        "h": "色相",
+        "s": "飽和",
+        "l": "軽さ",
+        "r": "赤",
+        "g": "緑",
+        "b": "青い"
+      }
+    }
+  }
+}

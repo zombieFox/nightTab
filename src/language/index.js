@@ -8,9 +8,10 @@ import { default as de } from './de.json';
 import { default as fr } from './fr.json';
 import { default as es } from './es.json';
 import { default as hi } from './hi.json';
+import { default as ja_JP } from './ja_JP.json';
 import { default as ru } from './ru.json';
 
-const language = { en_GB, en_US, de, fr, es, hi, ru };
+const language = { en_GB, en_US, de, fr, es, hi, ja_JP, ru };
 
 language.list = [
   { code: 'de', name: 'Deutsch' },
@@ -19,6 +20,7 @@ language.list = [
   { code: 'es', name: 'Español' },
   { code: 'fr', name: 'Français' },
   { code: 'hi', name: 'हिंदी' },
+  { code: 'ja_JP', name: '日本' },
   { code: 'ru', name: 'Pусский' }
 ];
 
