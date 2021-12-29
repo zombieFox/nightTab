@@ -900,6 +900,13 @@
           ]
         }
       },
+      "language": {
+        "language": "Langue",
+        "alert": {
+          "para": "Vous avez trouvé une traduction qui n'est pas correcte ?",
+          "link": "Aidez à traduire {appName}"
+        }
+      },
       "support": {
         "page": {
           "applyToAll": "Application des paramètres de signet à tous",

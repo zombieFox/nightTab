@@ -900,6 +900,13 @@
           ]
         }
       },
+      "language": {
+        "language": "Sprache",
+        "alert": {
+          "para": "Sie haben eine Übersetzung gefunden, die nicht stimmt?",
+          "link": "Helfen Sie mit, {appName} zu übersetzen"
+        }
+      },
       "support": {
         "page": {
           "applyToAll": "Anwenden von Lesezeicheneinstellungen auf alle",

@@ -900,6 +900,13 @@
           ]
         }
       },
+      "language": {
+        "language": "Idioma",
+        "alert": {
+          "para": "¿Encontró una traducción que no es correcta?",
+          "link": "Ayuda a traducir {appName}"
+        }
+      },
       "support": {
         "page": {
           "applyToAll": "Aplicar la configuración de marcadores a todos",

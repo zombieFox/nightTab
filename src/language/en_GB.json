@@ -900,6 +900,13 @@
           ]
         }
       },
+      "language": {
+        "language": "Language",
+        "alert": {
+          "para": "Found a translation that isn't right?",
+          "link": "Help translate {appName}"
+        }
+      },
       "support": {
         "page": {
           "applyToAll": "Applying bookmark settings to all",

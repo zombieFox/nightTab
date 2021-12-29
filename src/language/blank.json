@@ -900,6 +900,11 @@
           ]
         }
       },
+      "language": {
+        "language": "xxx",
+        "helper": ["xxx"],
+        "link": "xxx"
+      },
       "support": {
         "page": {
           "applyToAll": "xxx",
