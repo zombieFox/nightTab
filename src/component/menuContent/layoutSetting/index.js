@@ -111,7 +111,7 @@ layoutSetting.scaling = (parent) => {
     path: 'language',
     id: 'language',
     labelText: 'Language',
-    option: language.name[state.get.current().language],
+    option: language.name,
     selected: language.code.indexOf(state.get.current().language),
     action: () => {
 

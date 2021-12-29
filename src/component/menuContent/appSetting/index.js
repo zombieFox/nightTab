@@ -17,7 +17,7 @@ appSetting.app = (parent) => {
 
   appSetting.app.link1 = new Link({
     text: language.current.menu.content.app.link1,
-    href: `https://github.com/zombieFox/${APP_NAME}/issues`,
+    href: `https://www.reddit.com/r/${APP_NAME}`,
     openNew: true
   });
 
@@ -25,13 +25,13 @@ appSetting.app = (parent) => {
 
   appSetting.app.link2 = new Link({
     text: language.current.menu.content.app.link2,
-    href: `https://github.com/zombieFox/${APP_NAME}/issues`,
+    href: `https://github.com/zombieFox/${APP_NAME}`,
     openNew: true
   });
 
   appSetting.app.link3 = new Link({
     text: language.current.menu.content.app.link3,
-    href: `https://github.com/zombieFox/${APP_NAME}/issues`,
+    href: `https://github.com/zombieFox/${APP_NAME}/blob/master/license`,
     openNew: true
   });
 

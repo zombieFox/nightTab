@@ -11,14 +11,14 @@ import { default as ru } from './ru.json';
 
 const language = { en, de, fr, es, hi, ru };
 
-language.name = {
-  en: ['English', 'German', 'French', 'Spanish', 'Hindi', 'Russian'],
-  de: ['Englisch', 'Deutsch', 'Französisch', 'Spanisch', 'Hindi', 'Russisch'],
-  fr: ['Anglais', 'Allemand', 'Français', 'Espagnol', 'Hindi', 'Russe'],
-  es: ['Inglés', 'Alemán', 'Francés', 'Español', 'Hindi', 'Ruso'],
-  hi: ['अंग्रेजी', 'जर्मन', 'फ्रेंच', 'स्पैनिश', 'हिंदी', 'रूसी'],
-  ru: ['Английский', 'немецкий', 'французский', 'испанский', 'хинди', 'русский']
-};
+language.name = [
+  'English (EN)',
+  'Deutsch (DE)',
+  'Français (FR)',
+  'Español (ES)',
+  'हिंदी (HI)',
+  'русский (RU)'
+];
 
 language.code = ['en', 'de', 'fr', 'es', 'hi', 'ru'];
 
