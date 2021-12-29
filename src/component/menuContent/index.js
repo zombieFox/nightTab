@@ -7,6 +7,7 @@ import { bookmarkSetting } from './bookmarkSetting';
 import { headerSetting } from './headerSetting';
 import { toolbarSetting } from './toolbarSetting';
 import { themeSetting } from './themeSetting';
+import { languageSetting } from './languageSetting';
 import { dataSetting } from './dataSetting';
 import { supportSetting } from './supportSetting';
 import { coffeeSetting } from './coffeeSetting';
@@ -86,6 +87,10 @@ export const MenuContent = function({
             dataSetting[this.makeId(item)](formElement);
             break;
 
+          case 'language':
+            languageSetting[this.makeId(item)](formElement);
+            break;
+
           case 'debug':
             debugSetting[this.makeId(item)](formElement);
             break;
@@ -133,6 +138,16 @@ export const MenuContent = function({
       let formElement;
 
       switch (this.makeId(activeNavData.name)) {
+
+        case 'language':
+
+          menuContentItem.appendChild(this.element.header(language.current.menu.nav[activeNavData.name].label));
+
+          formElement = this.element.form({ indent: true });
+
+          languageSetting[this.makeId(activeNavData.name)](formElement);
+
+          break;
 
         case 'support':
 

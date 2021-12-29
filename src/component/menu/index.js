@@ -1,6 +1,5 @@
 import { state } from '../state';
 
-
 import { MenuFrame } from '../menuFrame';
 
 const menu = {};
@@ -14,6 +13,7 @@ menu.navData = [
   { name: 'group', active: false, overscroll: true, sub: ['alignment', 'name', 'collapse', 'toolbar'] },
   { name: 'toolbar', active: false, overscroll: true, sub: ['size', 'location', 'position', 'controls'] },
   { name: 'data', active: false, overscroll: true, sub: ['restore', 'backup', 'clear'] },
+  { name: 'language', active: false, overscroll: false },
   { name: 'support', active: false, overscroll: false },
   { name: 'coffee', active: false, overscroll: false },
   { name: 'app', active: false, overscroll: false }
