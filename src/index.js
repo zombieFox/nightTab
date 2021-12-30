@@ -28,7 +28,7 @@ component.pageLock.init();
 
 component.keyboard.init();
 
-component.menu.open();
+// component.menu.open();
 
 // component.bookmark.add.render();
 

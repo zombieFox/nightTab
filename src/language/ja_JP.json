@@ -199,8 +199,8 @@
               "placeholder": "Googleフォント名",
               "helper": {
                 "para1": "Google Fontsを使用して、時計、日付、グループ名、ブックマーク文字をカスタマイズします。",
-                "link": "GoogleFontを探す",
-                "para2": "Google Fontsに表示されるフォント名を、大文字とスペースを含めて追加します。例：「FredokaOne」または「Kanit」と入力します。",
+                "link": "Google Font を探す",
+                "para2": "Google Fonts に表示されるフォント名を、大文字とスペースを含めて追加します。例：「FredokaOne」または「Kanit」と入力します。",
                 "para3": "フィールドをクリアして、デフォルトのフォント「FjallaOne」を使用します。"
               }
             },
@@ -210,7 +210,7 @@
               "regular": "通常",
               "bold": "はげ",
               "helper": [
-                "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、GoogleFontページを参照してください。"
+                "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、Google Font ページを参照してください。"
               ]
             },
             "style": {
@@ -224,7 +224,7 @@
               "placeholder": "Googleフォント名",
               "helper": {
                 "para1": "Google Fontを使用して、ブックマーク名、URL、およびフォーム要素をカスタマイズします。",
-                "link": "GoogleFontを探す",
+                "link": "Google Font を探す",
                 "para2": "Google Fontsに表示されるフォント名を、大文字とスペースを含めて追加します。例：「Roboto」、「Source Sans Pro」、「NotoSans」と入力します。",
                 "para3": "フィールドをクリアして、デフォルトのフォント「OpenSans」を使用します。"
               }
@@ -235,7 +235,7 @@
               "regular": "通常",
               "bold": "はげ",
               "helper": [
-                "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、GoogleFontページを参照してください。"
+                "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、Google Font ページを参照してください。"
               ]
             },
             "style": {
