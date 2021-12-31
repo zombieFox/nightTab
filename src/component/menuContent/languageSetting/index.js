@@ -5,6 +5,7 @@ import { data } from '../../data';
 import { header } from '../../header';
 import { groupAndBookmark } from '../../groupAndBookmark';
 import { menu } from '../../menu';
+import { toolbar } from '../../toolbar';
 
 import * as form from '../../form';
 
@@ -36,6 +37,7 @@ languageSetting.language = (parent) => {
       state.get.current().language = language.code()[languageSetting.control.language.selected()];
       data.save();
       language.init();
+      toolbar.bar.render();
       header.item.clear();
       header.item.render();
       groupAndBookmark.render();

@@ -1309,6 +1309,16 @@
       }
     }
   },
+  "toolbar": {
+    "accent": "Accent colour",
+    "add": {
+      "label": "Add",
+      "group": "New Group",
+      "bookmark": "New Bookmark"
+    },
+    "edit": "Edit groups and bookmarks",
+    "setting": "Open settings menu"
+  },
   "data": {
     "form": {
       "description": "You can restore all or parts of a backup file. The following data will be restored:",

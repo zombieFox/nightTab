@@ -1309,6 +1309,16 @@
       }
     }
   },
+  "toolbar": {
+    "accent": "Akzentfarbe",
+    "add": {
+      "label": "Hinzufügen",
+      "group": "Neue Gruppe",
+      "bookmark": "Neues Lesezeichen"
+    },
+    "edit": "Gruppen und Lesezeichen bearbeiten",
+    "setting": "Einstellungsmenü öffnen"
+  },
   "data": {
     "form": {
       "description": "Sie können eine Sicherungsdatei ganz oder teilweise wiederherstellen. Die folgenden Daten werden wiederhergestellt:",

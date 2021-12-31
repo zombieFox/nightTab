@@ -1291,6 +1291,16 @@
       }
     }
   },
+  "toolbar": {
+    "accent": "xxx",
+    "add": {
+      "label": "xxx",
+      "group": "xxx",
+      "bookmark": "xxx"
+    },
+    "edit": "xxx",
+    "setting": "xxx"
+  },
   "data": {
     "form": {
       "description": "xxx",

@@ -1309,6 +1309,16 @@
       }
     }
   },
+  "toolbar": {
+    "accent": "Color de acento",
+    "add": {
+      "label": "Para agregar",
+      "group": "Nuevo grupo",
+      "bookmark": "Nuevo marcador"
+    },
+    "edit": "Editar grupos y marcadores",
+    "setting": "Abrir menú de configuración"
+  },
   "data": {
     "form": {
       "description": "Puede restaurar todo o parte de un archivo de copia de seguridad. Se restaurarán los siguientes datos:",

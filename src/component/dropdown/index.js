@@ -1,4 +1,3 @@
-
 import { Button } from '../button';
 import { KeyboardShortcut } from '../keyboardShortcut';
 
@@ -6,7 +5,8 @@ import { node } from '../../utility/node';
 
 import './index.css';
 
-export const Dropdown = function ({
+export const Dropdown = function({
+  title = false,
   text = 'Dropdown',
   menuItem = [],
   buttonStyle = [],
@@ -23,6 +23,7 @@ export const Dropdown = function ({
     menu: node('div|class:dropdown-menu'),
     content: node('div|class:dropdown-content'),
     toggle: new Button({
+      title: title,
       text: text,
       srOnly: srOnly,
       iconName: iconName,

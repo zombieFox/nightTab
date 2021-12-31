@@ -1309,6 +1309,16 @@
       }
     }
   },
+  "toolbar": {
+    "accent": "Couleur d'accent",
+    "add": {
+      "label": "Ajouter",
+      "group": "Nouveau groupe",
+      "bookmark": "Nouveau signet"
+    },
+    "edit": "Modifier des groupes et des signets",
+    "setting": "Ouvrir le menu des paramètres"
+  },
   "data": {
     "form": {
       "description": "Vous pouvez restaurer tout ou partie d'un fichier de sauvegarde. Les données suivantes seront restaurées :",

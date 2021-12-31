@@ -1,3 +1,5 @@
+import { language } from '../../language';
+
 import { state } from '../state';
 import { menu } from '../menu';
 import { data } from '../data';
@@ -19,7 +21,7 @@ import { applyCSSState } from '../../utility/applyCSSState';
 
 import './index.css';
 
-export const ToolbarControl = function () {
+export const ToolbarControl = function() {
 
   this.element = {
     toolbar: node('div|class:toolbar'),
@@ -35,7 +37,7 @@ export const ToolbarControl = function () {
       path: 'theme.accent',
       id: 'theme-accent-quick',
       type: 'color',
-      labelText: 'Accent colour',
+      labelText: language.current.toolbar.accent,
       srOnly: true,
       inputButtonStyle: ['dot', 'line'],
       inputButtonClassList: ['toolbar-item'],
@@ -53,18 +55,20 @@ export const ToolbarControl = function () {
       }
     }),
     add: new Dropdown({
-      text: 'Add',
+      title: language.current.toolbar.add.label,
+      text: language.current.toolbar.add.label,
       buttonStyle: ['line'],
       buttonClassList: ['toolbar-item'],
       srOnly: true,
       iconName: 'add',
       menuItem: [
-        { text: 'New Group', iconName: 'addGroup', action: () => { group.add.render(); } },
-        { text: 'New Bookmark', iconName: 'addBookmark', action: () => { bookmark.add.render(); } }
+        { text: language.current.toolbar.add.group, iconName: 'addGroup', action: () => { group.add.render(); } },
+        { text: language.current.toolbar.add.bookmark, iconName: 'addBookmark', action: () => { bookmark.add.render(); } }
       ]
     }),
     edit: new Button({
-      text: 'Enter edit bookmark mode',
+      title: language.current.toolbar.edit,
+      text: language.current.toolbar.edit,
       srOnly: true,
       iconName: 'edit',
       classList: ['toolbar-item'],
@@ -78,7 +82,8 @@ export const ToolbarControl = function () {
       }
     }),
     setting: new Button({
-      text: 'Open settings menu',
+      title: language.current.toolbar.setting,
+      text: language.current.toolbar.setting,
       srOnly: true,
       iconName: 'settings',
       classList: ['toolbar-item'],
