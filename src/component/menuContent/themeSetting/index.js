@@ -506,11 +506,18 @@ themeSetting.color = (parent) => {
       }
     }),
     contrastHelper: new Control_helperText({
-      text: [message('menuContentThemeColorContrastHelperPara1')]
+      text: [
+        message('menuContentThemeColorContrastHelperPara1'),
+        message('menuContentThemeColorContrastHelperPara2')
+      ]
     }),
     shade: {
       helper: new Control_helperText({
-        text: [message('menuContentThemeColorShadeHelperPara1')]
+        text: [
+          message('menuContentThemeColorShadeHelperPara1'),
+          message('menuContentThemeColorShadeHelperPara2'),
+          message('menuContentThemeColorShadeHelperPara3')
+        ]
       })
     }
   };
@@ -1130,7 +1137,10 @@ themeSetting.opacity = (parent) => {
   });
 
   themeSetting.control.opacity.generalHelper = new Control_helperText({
-    text: [message('menuContentThemeOpacityGeneralHelperPara1')]
+    text: [
+      message('menuContentThemeOpacityGeneralHelperPara1'),
+      message('menuContentThemeOpacityGeneralHelperPara2')
+    ]
   });
 
   themeSetting.control.opacity.toolbar = new Control_sliderSlim({
@@ -1383,7 +1393,12 @@ themeSetting.background = (parent) => {
         }
       }),
       urlHelper: new Control_helperText({
-        text: [message('menuContentThemeBackgroundImageUrlHelperPara1')]
+        text: [
+          message('menuContentThemeBackgroundImageUrlHelperPara1'),
+          message('menuContentThemeBackgroundImageUrlHelperPara2'),
+          message('menuContentThemeBackgroundImageUrlHelperPara3'),
+          message('menuContentThemeBackgroundImageUrlHelperPara4')
+        ]
       }),
       blur: new Control_sliderSlim({
         object: state.get.current(),
@@ -1526,7 +1541,10 @@ themeSetting.background = (parent) => {
         }
       }),
       urlHelper: new Control_helperText({
-        text: [message('menuContentThemeBackgroundVideoUrlHelperPara1')]
+        text: [
+          message('menuContentThemeBackgroundVideoUrlHelperPara1'),
+          message('menuContentThemeBackgroundVideoUrlHelperPara2')
+        ]
       }),
       blur: new Control_sliderSlim({
         object: state.get.current(),
@@ -2053,7 +2071,10 @@ themeSetting.bookmark = (parent) => {
   });
 
   themeSetting.control.bookmark.item.borderHelper = new Control_helperText({
-    text: [message('menuContentThemeBookmarkItemBorderHelperPara1')]
+    text: [
+      message('menuContentThemeBookmarkItemBorderHelperPara1'),
+      message('menuContentThemeBookmarkItemBorderHelperPara2')
+    ]
   });
 
   themeSetting.control.bookmark.item.rainbow = {
