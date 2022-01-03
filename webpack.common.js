@@ -53,7 +53,7 @@ module.exports = {
         from: './src/icon/',
         to: './icon/'
       }, {
-        from: './src/locales',
+        from: './src/locale',
         to: './_locales'
       }, {
         from: './src/initialBackground.js',

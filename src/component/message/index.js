@@ -1,6 +1,6 @@
 import { APP_NAME } from '../../constant';
 
-import { default as en_GB } from '../../locales/en_GB/messages.json';
+import { default as en_GB } from '../../locale/en_GB/messages.json';
 
 export const message = (id) => {
 
