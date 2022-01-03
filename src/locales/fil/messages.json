@@ -1,0 +1,2066 @@
+{
+  "appName": {
+    "message": "nightTab"
+  },
+  "appShortName": {
+    "message": "nightTab"
+  },
+  "appDescription": {
+    "message": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab."
+  },
+  "menuNavThemeLabel": {
+    "message": "Tema"
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "Preset"
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "Nai-save"
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "Estilo"
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "Kulay"
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "Accent"
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "Font"
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "Radius"
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "anino"
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "Lilim"
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "Opacity"
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "Background"
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "Layout"
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "Header"
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "Bookmark"
+  },
+  "menuNavLayoutLabel": {
+    "message": "Layout"
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "Pagsusukat"
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "Lugar"
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "Padding"
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "Kanal"
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "Pag-align"
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "Pahina"
+  },
+  "menuNavHeaderLabel": {
+    "message": "Header"
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "Pag-align"
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "Pagbati"
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "Mga salitang transisyonal"
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "orasan"
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "Petsa"
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "Maghanap"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "Bookmark"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "Heneral"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "Estilo"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "Oryentasyon"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "Pagbukud-bukurin"
+  },
+  "menuNavGroupLabel": {
+    "message": "Grupo"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "Pag-align"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "Pangalan"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "Pagbagsak"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "Toolbar"
+  },
+  "menuNavToolbarLabel": {
+    "message": "Toolbar"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "Sukat"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "Lokasyon"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "Posisyon"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "Mga kontrol"
+  },
+  "menuNavDataLabel": {
+    "message": "Data"
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "Ibalik"
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "Backup"
+  },
+  "menuNavDataSubNavClear": {
+    "message": "Malinaw"
+  },
+  "menuNavLanguageLabel": {
+    "message": "Wika"
+  },
+  "menuNavSupportLabel": {
+    "message": "Suporta"
+  },
+  "menuNavCoffeeLabel": {
+    "message": "kape"
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}"
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "Papalitan ng paglalapat ng Preset ang kasalukuyang Kulay, Accent, Font, Estilo, Radius, Shadow, Shade at Background."
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "Ang pag-save ng Tema ay magtatala ng kasalukuyang Kulay, Accent, Font, Estilo, Opacity, Radius, Shadow, Shade at Background."
+  },
+  "menuContentThemeSavedSave": {
+    "message": "I-save ang kasalukuyang tema"
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "I-edit ang mga naka-save na tema"
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "Dark mode"
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "Light mode"
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "Awtomatiko"
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "Sundin ang system Light o Dark mode."
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "Ang mga background, Bookmark at Modals ay gumagamit ng mga shade mula sa kaliwa."
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "Gumagamit ang mga elemento ng text at form ng mga shade mula sa kanan."
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "Para sa isang light look lumipat sa Light Style at pagkatapos ay pumili ng Pangunahing kulay. At vice versa para sa isang madilim na hitsura."
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "Pangunahing kulay"
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "Saturation"
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "Contrast range"
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "Contrast simula"
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "Contrast na dulo"
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "Ilipat ang mga kontrol ng Contrast range nang magkakalapit para sa isang naka-mute na hitsura."
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "Ilipat ang mga kontrol ng Contrast range nang malayo sa isa't isa para sa isang matalas na matingkad na hitsura."
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "Kulay-abo"
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "Pula"
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "Kahel"
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "Dilaw"
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "kalamansi"
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "Berde"
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "Aqua"
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "Cyan"
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "Teal"
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "Bughaw"
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "Lila"
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "Magenta"
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "Fuchsia"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "Sobrang liwanag"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "Dagdag liwanag"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "Liwanag"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "Super sobrang dilim"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "Sobrang dilim"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "Madilim"
+  },
+  "menuContentThemeAccentColor": {
+    "message": "Kulay ng accent"
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "Random na kulay ng Accent sa pag-load\/pag-refresh"
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "Anuman"
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "Liwanag"
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "Madilim"
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "Pastel"
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "Busog"
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "Randomize ngayon"
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "Auto change Accent hue"
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "Baguhin ang pagkaantala"
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "Baguhin ang mga hakbang"
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "Mag-ingat dahil ang mabilis na pagbabago ng Accent hue ay maaaring magdulot ng mga isyu sa performance."
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "Auto change Accent hue ay hindi gagana kapag ang Accent color ay gray o black."
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "Display font"
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "Pangalan ng font ng Google"
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "Gumamit ng Google Font upang i-customize ang Orasan, Petsa, mga pangalan ng Grupo at Mga Bookmark na Sulat."
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "Maghanap ng Google Font"
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "Magdagdag ng pangalan ng font kung paano ito lumalabas sa Google Fonts, kasama ang malalaking titik at espasyo, hal: ilagay ang \"Fredoka One\" o \"Kanit\"."
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "I-clear ang field para magamit ang default na font na \"Fjalla One\"."
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "Timbang ng font"
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "Liwanag"
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "Regular"
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "Matapang"
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "Hindi lahat ng mga font ay sumusuporta sa lahat ng mga timbang. Sumangguni sa pahina ng Google Font upang makita kung alin ang available."
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "Normal"
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "Italic"
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "Font ng interface ng gumagamit"
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "Pangalan ng font ng Google"
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "Gumamit ng Google Font upang i-customize ang pangalan ng Bookmark, URL at mga elemento ng form."
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "Maghanap ng Google Font"
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "Magdagdag ng pangalan ng font kung paano ito lumalabas sa Google Fonts, kabilang ang malalaking titik at espasyo, hal: ilagay ang \"Roboto\", \"Source Sans Pro\" o \"Noto Sans\"."
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "I-clear ang field para magamit ang default na font na \"Open Sans\"."
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "Timbang ng font"
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "Liwanag"
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "Regular"
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "Matapang"
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "Hindi lahat ng mga font ay sumusuporta sa lahat ng mga timbang. Sumangguni sa pahina ng Google Font upang makita kung alin ang available."
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "Normal"
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "Italic"
+  },
+  "menuContentThemeRadius": {
+    "message": "Corner radius"
+  },
+  "menuContentThemeShadow": {
+    "message": "Laki ng anino"
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "Opacity ng shade"
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "Malabo ang lilim"
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "Hindi sinusuportahan ng lahat ng browser."
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "Lahat ng opacity"
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "Baguhin ang opacity ng Search bar, Bookmarks, Group controls at Toolbar."
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "Ang opacity ay maaari ding baguhin kapag nag-e-edit ng mga indibidwal na Bookmark."
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "Toolbar"
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "Bookmark"
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "Box para sa paghahanap"
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "Toolbar ng pangkat"
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "Background ayon sa Tema"
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "Gamitin ang kulay ng Background na tinukoy ng Tema."
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "Background sa pamamagitan ng Accent"
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "Gamitin ang kulay ng Accent para sa Background."
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "Pasadyang kulay"
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "Gradient"
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "Imahe"
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "Video"
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "Kulay ng background"
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "Anggulo ng gradient ng background"
+  },
+  "menuContentThemeBackgroundGradientStart": {
+    "message": "Pagsisimula ng gradient ng background"
+  },
+  "menuContentThemeBackgroundGradientEnd": {
+    "message": "pagtatapos ng gradient ng background"
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "Hindi na magagamit ang mga lokal na larawan. Ang mga larawan ay dapat na naka-host sa isang lugar online."
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "Bakit ito nagbago?"
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "Magdagdag ng higit sa isang URL na pinaghihiwalay ng mga puwang o sa mga bagong linya para sa isang random na larawan sa background sa pag-load."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "Maaaring gamitin ang Unsplash para sa mga random na larawan, hal:"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?gabi,araw,langit"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "Baguhin ang mga parameter pagkatapos ng ...\/random\/ para sa higit pang mga opsyon. Maaaring mag-iba ang mga oras ng paglo-load."
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "Malabo"
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "Grayscale"
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "Iskala"
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "Accent"
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "Opacity"
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "Vignette"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "Lilim sa simula at pagtatapos"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "Lilim na dulo"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "Pagsisimula ng shade"
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "Hindi magagamit ang mga URL ng pahina sa YouTube."
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "Paano mag-link sa isang video file."
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/video.mp4"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "Sinusuportahan lamang ng background na video ang isang direktang URL sa isang video file. Sinusuportahan ang MP4 at WebM na format."
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "Magdagdag ng higit sa isang URL na pinaghihiwalay ng mga puwang o sa mga bagong linya para sa isang random na background na video sa pag-load."
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "Malabo"
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "Grayscale"
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "Iskala"
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "Accent"
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "Opacity"
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "Vignette"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "Lilim sa simula at pagtatapos"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "Lilim na dulo"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "Pagsisimula ng shade"
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "Kulay ng background ng layout"
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "Transparent"
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "Walang kulay ng background sa likod ng Layout."
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "Pasadyang kulay"
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "Gumamit ng custom na kulay sa likod ng Layout."
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "Kulay ng background ng layout"
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "Opacity ng background"
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "Malabo ang background"
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "Hindi sinusuportahan ng lahat ng browser."
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "Divider sa pagitan ng Header at Bookmark area"
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "Kulay ng background ng header"
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "Transparent"
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "Walang kulay ng background sa likod ng lugar ng Header."
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "Pasadyang kulay"
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "Gumamit ng custom na kulay sa likod ng lugar ng Header."
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "Kulay ng background ng header"
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "Opacity ng background"
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "Kulay ng background ng bookmark"
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "Transparent"
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "Walang kulay ng background sa likod ng lugar ng Bookmark."
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "Pasadyang kulay"
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "Gumamit ng custom na kulay sa likod ng Bookmark area."
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "Kulay ng background ng bookmark"
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "Opacity ng background"
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "I-bookmark ang hangganan"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "Ang hangganan ng bookmark ay maaari ding baguhin kapag nag-e-edit ng mga indibidwal na Bookmark."
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "Ang kulay ng Border ay tinutukoy ng Accent na maaari ding baguhin kapag nag-e-edit ng mga indibidwal na Bookmark."
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "Magdagdag ng natatanging accent sa bawat Bookmark"
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "Alisin ang lahat ng accent override"
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "Maaari ding baguhin ang custom na Accent ng bookmark kapag nag-e-edit ng mga indibidwal na Bookmark."
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "Pandaigdigang laki"
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "Layout area lapad"
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "Lapad ng lugar ng header"
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "Pag-align ng lugar ng header"
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "Kaliwa"
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "Gitna"
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "Tama"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "Maaaring hindi makita ang mga epekto kung ang Header Area ay buong lapad."
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "Available lang kapag Vertical ang Layout Direction at ipinapakita ang mga item sa Header."
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "Lapad ng lugar ng bookmark"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "Pag-align ng lugar ng bookmark"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "Kaliwa"
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "Gitna"
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "Tama"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "Maaaring hindi makita ang mga epekto kung ang Bookmark Area ay buong lapad."
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "Available lang kapag Vertical ang Layout Direction at ipinapakita ang mga item sa Header."
+  },
+  "menuContentLayoutPadding": {
+    "message": "Space sa paligid ng Header at Bookmark Area"
+  },
+  "menuContentLayoutGutter": {
+    "message": "Space sa pagitan ng Header at Bookmark na mga item"
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "Pag-align ng lugar"
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "Kaliwa sa itaas"
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "Nangungunang Center"
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "Kanan sa itaas"
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "Gitnang Kaliwa"
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "Center Center"
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "Gitnang Kanan"
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "Babang kaliwa"
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "Ibabang Gitna"
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "Kanan sa ibaba"
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "Ihanay nang pahalang"
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "Isalansan ang Header at Mga Bookmark sa isang hilera nang magkatabi."
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "I-align patayo"
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "I-stack ang Header at Mga Bookmark sa isang column sa itaas ng isa."
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "Header pagkatapos Bookmarks"
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "I-order ang lugar ng Header na lumitaw bago ang lugar ng Mga Bookmark."
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "Mga bookmark pagkatapos ay Header"
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "I-order ang lugar ng Mga Bookmark na lumitaw bago ang lugar ng Header."
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "Pamagat"
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "Bagong tab"
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "URL ng Favicon"
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https:\/\/www.example.com\/favicon.svg"
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "Hindi sinusuportahan ng lahat ng browser."
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "Scroll bar"
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "Auto"
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "Manipis"
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "Nakatago"
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "Hindi sinusuportahan ng lahat ng browser."
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "Mag-scroll lampas sa dulo"
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "I-unblur ang background na larawan o video"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "Maaalis ang blur sa background na larawan o video kapag nag-scroll sa ibaba ng page."
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "Matatagpuan ang blur ng larawan o video sa ilalim ng Background ng Tema."
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "Pag-align ng item sa header"
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "Kaliwa"
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "Gitna"
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "Tama"
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "Maaaring hindi makita ang mga epekto kung ang laki ng Search box ay nakatakda sa Awtomatiko at lumalaki upang punan ang magagamit na espasyo."
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "Ipakita ang Pagbati"
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "Sukat"
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "Bagong linya"
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "Salita"
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"Magandang umaga...\""
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"Kamusta...\""
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"Hi...\""
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "wala"
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "Kapaki-pakinabang para sa pagpapakita lamang ng pangalan."
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "Custom"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "Gamitin ang iyong sariling pagbati."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "Default sa \"Magandang umaga...\" kung iwanang blangko."
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "Pasadyang teksto ng pagbati"
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "Kamusta"
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "Pangalan"
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "Nickname, alias o superhero name"
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "Ipakita ang mga salitang Transisyonal"
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "Available lang kapag ipinakita ang Petsa o Oras."
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "Salita"
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "\"Ang oras at petsa ay\""
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"ito ay\""
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "Sukat"
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "Bagong linya"
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "Mga oras ng palabas"
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "Bilang bilang"
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "Isang espada"
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "Ipakita ang mga minuto"
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "Bilang bilang"
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "Isang espada"
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "Ipakita ang mga segundo"
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "Bilang bilang"
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "Isang espada"
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "Ipakita ang separator"
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "Karakter ng separator"
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":"
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "24 na oras"
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "AM \/ PM"
+  },
+  "menuContentHeaderClockSize": {
+    "message": "Sukat"
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "Bagong linya"
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "Araw ng Palabas"
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "Bilang bilang"
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "Isang espada"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "Simula ng linggo"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "Lunes"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "Linggo"
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "Haba ng salita"
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "Mahaba"
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "Maikli"
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "Ipakita ang Petsa"
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "Bilang bilang"
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "Isang espada"
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "Ordinal na mga numero"
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "Buwan ng Palabas"
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "Bilang bilang"
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "Isang espada"
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "Ordinal na mga numero"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "Haba ng salita"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "Mahaba"
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "Maikli"
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "Show Year"
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "Bilang bilang"
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "Isang espada"
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "Ipakita ang separator"
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "Karakter ng separator"
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "\/"
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "Format"
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "Petsa \/ Buwan"
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "Buwan \/ Petsa"
+  },
+  "menuContentHeaderDateSize": {
+    "message": "Sukat"
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "Bagong linya"
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "Ipakita ang Paghahanap"
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "Lapad ng kahon ng paghahanap"
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "Auto lapad"
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "Ang box para sa paghahanap ay lalago upang maging pinakaangkop sa magagamit na espasyo."
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "Custom na lapad"
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "Tukuyin kung gaano kalawak dapat ang Search box sa loob ng Header Area."
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "Lapad"
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "Sukat"
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "Bagong linya"
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "Search engine"
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "Custom"
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "Pangalan"
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "Pangalan ng search engine"
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https:\/\/"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "Maglagay ng web address na may mga parameter sa paghahanap, hal: \"https:\/\/vimeo.com\/search?q=\""
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} ang termino para sa paghahanap na inilagay sa box para sa Paghahanap sa dulo ng URL sa itaas."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "Katangian ng pangalan"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "q"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "Itinatakda ang katangian ng pangalan sa field ng pag-input sa Paghahanap."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "Tinutukoy nito ang pangalang ipinasa sa search engine kapag nagsusumite. Kung hindi sigurado iwanang blangko."
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "Search text alignment"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "Kaliwa"
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "Gitna"
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "Tama"
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "Buksan ang mga resulta ng Paghahanap sa isang bagong tab"
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "Ipakita ang Mga Bookmark"
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "Ipakita ang URL sa Bookmark hover"
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "Ipakita ang linya ng Bookmark"
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "Ipakita ang anino sa Bookmark hover"
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "Maaaring hindi makita ang mga epekto kung ang Theme Shadow ay nakatakda sa 0."
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "Lumago sa Bookmark hover"
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "Buksan ang Mga Bookmark sa isang bagong tab"
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "Laki ng bookmark"
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "I-block"
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "Mga tile sa Bookmark na hugis parisukat."
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "Listahan"
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "Maikli at malawak na mga tile sa Bookmark."
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "Nangunguna"
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "Ibaba"
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "Ipakita ang URL at Mga Kontrol sa itaas o ibaba ng isang Bookmark Tile."
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "Sa pamamagitan ng sulat"
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "Sa pamamagitan ng icon"
+  },
+  "menuContentBookmarkSortName": {
+    "message": "Sa pamamagitan ng pangalan"
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "Pag-align ng lugar ng mga detalye ng pangkat"
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "Kaliwa"
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "Gitna"
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "Tama"
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "Pagkakasunod-sunod ng mga detalye ng pangkat"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "Mga detalye ng pangkat pagkatapos ay Mga Bookmark"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "I-order ang lugar ng mga detalye ng Grupo na lumabas bago ang lugar ng Mga Bookmark."
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "Mga bookmark pagkatapos ay Mga detalye ng pangkat"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "I-order ang lugar ng Mga Bookmark na lumitaw bago ang lugar ng mga detalye ng Grupo."
+  },
+  "menuContentGroupNameSize": {
+    "message": "Laki ng pangalan"
+  },
+  "menuContentGroupNameShow": {
+    "message": "Ipakita lahat"
+  },
+  "menuContentGroupNameHide": {
+    "message": "Itago lahat"
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "Ang Mga Pangalan ng Grupo ay maaari ding baguhin sa pamamagitan ng pag-edit ng mga indibidwal na Grupo."
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "Buksan ang lahat ng mga grupo"
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "I-collapse ang lahat ng grupo"
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "Laki ng toolbar ng pangkat"
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "Kontrol ng Group Collapse"
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "Ipakita lahat"
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "Itago lahat"
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "Ang pindutan ng pagbagsak ng toolbar ng grupo ay maaari ding baguhin sa pamamagitan ng pag-edit ng mga indibidwal na Grupo."
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "Pangkat Buksan ang lahat ng kontrol"
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "Ipakita lahat"
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "Itago lahat"
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "Group toolbar open all button ay maaari ding baguhin sa pamamagitan ng pag-edit ng indibidwal na Groups."
+  },
+  "menuContentToolbarSize": {
+    "message": "Laki ng toolbar"
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "Sa isang sulok"
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "Sa Header"
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "Iposisyon ang Toolbar sa loob ng Header o sa isang sulok ng window."
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "Bagong linya"
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "Available lang kapag nakaposisyon ang Toolbar sa loob ng Header."
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "Posisyon ng toolbar"
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "Kaliwa sa itaas"
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "Kanan sa itaas"
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "Babang kaliwa"
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "Kanan sa ibaba"
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "Iposisyon ang Toolbar sa isa sa apat na sulok ng window."
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "Available lang kapag nakaposisyon ang Toolbar sa isang sulok."
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "Ipakita ang kontrol ng Accent"
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "Ipakita ang Add control"
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "Ipakita ang kontrol sa Pag-edit"
+  },
+  "menuContentDataRestoreFile": {
+    "message": "Mag-import mula sa file"
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "Mag-import mula sa clipboard"
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "I-restore ang dati nang na-export na {appName} backup."
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "O mag-drop ng {appName} backup file dito."
+  },
+  "menuContentDataBackupFile": {
+    "message": "I-export ang data"
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "Kopyahin sa clipboard"
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "Mag-download ng backup ng iyong {appName} Bookmark at Setting."
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "Ang file na ito ay maaaring ma-import sa ibang pagkakataon dito o sa isa pang deivce."
+  },
+  "menuContentDataClearAll": {
+    "message": "I-clear ang lahat ng data"
+  },
+  "menuContentDataClearPartial": {
+    "message": "I-clear ang lahat maliban sa mga bookmark"
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "Mawawalan ka ng Mga Bookmark sa pamamagitan ng pag-clear sa lahat ng data."
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "I-backup ang iyong data"
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "I-clear ang lahat ng data para i-reset ang {appName} sa default na estado."
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "Bilang kahalili, posibleng i-wipe ang lahat ng setting ngunit panatilihin ang kasalukuyang Mga Bookmark at Grupo."
+  },
+  "menuContentLanguageLanguage": {
+    "message": "Wika"
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "Nakahanap ng pagsasalin na hindi tama?"
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "Tumulong sa pagsasalin ng {appName}"
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "Paglalapat ng mga setting ng bookmark sa lahat"
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "Suporta sa browser"
+  },
+  "menuContentSupportPageCookies": {
+    "message": "Cookies at cache"
+  },
+  "menuContentSupportPageData": {
+    "message": "Pag-backup at pagpapanumbalik ng data"
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "Lokal na larawan sa background"
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "Mga protektadong URL"
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "Pagbawi ng mga setting at bookmark"
+  },
+  "menuContentSupportPageResetting": {
+    "message": "Nire-reset kapag binubuksan ang browser"
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "Paggalang sa iyong privacy"
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "Pagtatakda ng background na video o larawan"
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "Itinatakda ang {appName} bilang iyong homepage ng Firefox"
+  },
+  "menuContentSupportPara": {
+    "message": "Para sa higit pang suporta o feedback:"
+  },
+  "menuContentSupportLink1": {
+    "message": "Magsumite ng Isyu."
+  },
+  "menuContentSupportLink2": {
+    "message": "Suriin ang Wiki."
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} ay libre, ang pagpapahalaga ay tinatanggap sa anyo ng kape!"
+  },
+  "menuContentCoffeeButton": {
+    "message": "Bilhan mo ako ng kape"
+  },
+  "menuContentAppPara1": {
+    "message": "Ibahagi ang iyong setup sa komunidad."
+  },
+  "menuContentAppLink1": {
+    "message": "Natagpuan sa Reddit \/r\/ {appName} ."
+  },
+  "menuContentAppPara2": {
+    "message": "Ang proyektong ito ay open source."
+  },
+  "menuContentAppLink2": {
+    "message": "Natagpuan sa GitHub."
+  },
+  "menuContentAppLink3": {
+    "message": "GNU General Public License v3.0."
+  },
+  "bookmarkTileControlLeft": {
+    "message": "Ilipat ang bookmark na ito pakaliwa"
+  },
+  "bookmarkTileControlSort": {
+    "message": "I-drag ang bookmark upang muling ayusin"
+  },
+  "bookmarkTileControlRight": {
+    "message": "Ilipat pakanan ang bookmark na ito"
+  },
+  "bookmarkTileControlEdit": {
+    "message": "I-edit ang bookmark na ito"
+  },
+  "bookmarkTileControlRemove": {
+    "message": "Alisin ang bookmark na ito"
+  },
+  "bookmarkAddHeading": {
+    "message": "Magdagdag ng bagong Bookmark"
+  },
+  "bookmarkAddSuccessText": {
+    "message": "Idagdag"
+  },
+  "bookmarkAddCancelText": {
+    "message": "Kanselahin"
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "Alisin"
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "Alisin ang hindi pinangalanang bookmark"
+  },
+  "bookmarkRemoveContent": {
+    "message": "Sigurado ka bang gusto mong alisin ang Bookmark na ito? Hindi na ito maaaring bawiin."
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "Alisin"
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "Kanselahin"
+  },
+  "bookmarkEditHeadingName": {
+    "message": "I-edit"
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "I-edit ang hindi pinangalanang bookmark"
+  },
+  "bookmarkEditSuccessText": {
+    "message": "I-save"
+  },
+  "bookmarkEditCancelText": {
+    "message": "Kanselahin"
+  },
+  "bookmarkFormTabVisual": {
+    "message": "Visual at Pangalan"
+  },
+  "bookmarkFormTabAddress": {
+    "message": "Address"
+  },
+  "bookmarkFormTabPosition": {
+    "message": "Posisyon"
+  },
+  "bookmarkFormTabLayout": {
+    "message": "Layout"
+  },
+  "bookmarkFormTabTheme": {
+    "message": "Tema"
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "Visual at Pangalan"
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "Display Letter, Icon, Image at isang Pangalan sa Bookmark tile na ito."
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "Address"
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "Tiyaking gamitin ang buong URL at isama ang \"https:\/\/...\""
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "Posisyon"
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "Ang Grupo kung saan ilalagay ang Bookmark na ito."
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "Layout"
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "Baguhin ang posisyon, sukat at oryentasyon ng Visual Element at Pangalan."
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "Tema"
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "I-override ang Tema at kulay ng Accent."
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/"
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "Pag-align ng Visual Element at Pangalan"
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "Kaliwa sa itaas"
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "Nangungunang Center"
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "Kanan sa itaas"
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "Gitnang Kaliwa"
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "Center Center"
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "Gitnang Kanan"
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "Babang kaliwa"
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "Ibabang Gitna"
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "Kanan sa ibaba"
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "Patayo"
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "I-stack ang Visual Element at Pangalanan ang isa sa itaas ng isa."
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "Pahalang"
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "Ayusin ang Visual Element at Pangalan nang magkatabi."
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "Visual na elemento pagkatapos ay pangalanan"
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "Ilagay ang Visual Element bago ang Pangalan."
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "Pangalanan pagkatapos ay visual na elemento"
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "Ilagay ang Pangalan bago ang Visual Element."
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "Iikot"
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "Ayusin ang posisyon ng Visual Element"
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "Pahalang"
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "Patayo"
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "Kanal"
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "Ipakita ang Visual Element"
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "Ipakita ang mga Letra, Icon o isang Imahe sa Bookmark hexagon na ito."
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "Sulat"
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "Icon"
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "Imahe"
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "Visual na laki"
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "I-bookmark ang liham"
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "E"
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "Icon ng bookmark"
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "Mga Brand o Icon ng FontAwesome"
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "Alisin ang icon"
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "I-bookmark ang larawan"
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "Biswal na anino"
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "Nalalapat lang ang visual shadow sa isang Letter o Icon."
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "Ipakita ang Pangalan"
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "Pangalan ng bookmark"
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "Halimbawa"
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "Laki ng pangalan"
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "Accent ng Tema"
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "Gamitin ang Accent na tinukoy ng Tema."
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "Custom na Accent"
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "I-override ang Theme Accent."
+  },
+  "bookmarkFormAccentColor": {
+    "message": "Accent"
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "Kulay ng tema"
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "Gamitin ang Kulay na tinukoy ng Tema."
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "Pasadyang kulay"
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "I-override ang kulay ng Tema."
+  },
+  "bookmarkFormColorColor": {
+    "message": "Kulay"
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "Opacity"
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "Ipakita ang background"
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "Magpakita ng Background ng Larawan o video sa Bookmark tile na ito."
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "Imahe"
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "Video"
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "Opacity"
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "URL ng larawan sa background"
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "Sinusuportahan lamang ng larawan sa background ang isang direktang URL sa isang file ng larawan."
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "URL ng background ng video"
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https:\/\/www.example.com\/video.mp4"
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "Sinusuportahan lamang ng background na video ang isang direktang URL sa isang video file. Sinusuportahan ang MP4 at WebM na format."
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "Hindi magagamit ang mga URL ng pahina sa YouTube."
+  },
+  "bookmarkFormBorder": {
+    "message": "Border"
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "Malapad na tile"
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "I-bookmark ang tile na sumasaklaw sa dalawang column."
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "Matangkad na tile"
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "I-bookmark ang tile na sumasaklaw sa dalawang hanay."
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "Umiiral na Grupo"
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "Bagong grupo"
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "Halimbawang pangkat"
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "Random na pangalan ng Grupo"
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "Grupo"
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "Posisyon"
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "Ilapat ang \"Ipakita ang Visual Element\" at \"Ipakita ang Pangalan\" sa iba pang mga Bookmark"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "Hindi ibabahagi ang Letter, Icon, Image at Name text."
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "Kapaki-pakinabang para sa pagtatago ng Mga Visual na Elemento o Pangalan sa lahat ng Mga Bookmark."
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "Ilapat ang Layout sa iba pang mga Bookmark"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "Kapag na-save, ilapat ang Layout sa itaas sa lahat ng iba pang mga Bookmark."
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "Tanging ang laki ng Visual at Pangalan, Alignment, Order, Position at Gutter ang ilalapat sa lahat."
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "Ilapat ang Tema sa iba pang mga Bookmark"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "Kapag na-save, ilapat ang Tema sa itaas sa lahat ng iba pang mga Bookmark."
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "Ang Kulay, Accent, Opacity, Border at Visual shadow lang ang ilalapat sa lahat."
+  },
+  "bookmarkPreviewFull": {
+    "message": "Silipin"
+  },
+  "bookmarkPreviewHalf": {
+    "message": "Preview (50% scale)"
+  },
+  "groupAreaControlUp": {
+    "message": "Itaas ang pangkat na ito"
+  },
+  "groupAreaControlSort": {
+    "message": "I-drag ang pangkat upang muling ayusin"
+  },
+  "groupAreaControlDown": {
+    "message": "Ibaba ang grupong ito"
+  },
+  "groupAreaControlEdit": {
+    "message": "I-edit ang grupong ito"
+  },
+  "groupAreaControlRemove": {
+    "message": "Alisin ang grupong ito"
+  },
+  "groupAreaControlOpenAll": {
+    "message": "Buksan ang lahat ng mga bookmark sa pangkat na ito"
+  },
+  "groupAreaControlCollapse": {
+    "message": "I-collapse ang grupong ito"
+  },
+  "groupAddHeading": {
+    "message": "Magdagdag ng bagong Grupo"
+  },
+  "groupAddSuccessText": {
+    "message": "Idagdag"
+  },
+  "groupAddCancelText": {
+    "message": "Kanselahin"
+  },
+  "groupRemoveHeadingName": {
+    "message": "Alisin"
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "Alisin ang hindi pinangalanang pangkat"
+  },
+  "groupRemoveContent": {
+    "message": "Sigurado ka bang gusto mong alisin ang Pangkat na ito at lahat ng Bookmark sa loob? Hindi na ito maaaring bawiin."
+  },
+  "groupRemoveSuccessText": {
+    "message": "Alisin"
+  },
+  "groupRemoveCancelText": {
+    "message": "Kanselahin"
+  },
+  "groupEditHeadingName": {
+    "message": "I-edit"
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "I-edit ang hindi pinangalanang pangkat"
+  },
+  "groupEditSuccessText": {
+    "message": "I-save"
+  },
+  "groupEditCancelText": {
+    "message": "Kanselahin"
+  },
+  "groupFormSectionNameHeading": {
+    "message": "Pangalan"
+  },
+  "groupFormSectionNameDescription": {
+    "message": "Magpakita ng Pangalan sa itaas ng Pangkat na ito."
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "Toolbar"
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "Ipakita ang mga kontrol upang buksan ang lahat o ipakita\/itago ang Mga Bookmark sa Pangkat na ito."
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "Pag-order"
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "Ang posisyon ng Grupo na ito."
+  },
+  "groupFormNameShow": {
+    "message": "Ipakita ang pangalan ng Grupo"
+  },
+  "groupFormNameTextLabel": {
+    "message": "Pangalan ng grupo"
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "Halimbawang pangkat"
+  },
+  "groupFormNameRandom": {
+    "message": "Random na pangalan ng Grupo"
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "Ipakita ang Pagbagsak"
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "Ipapakita o itatago ng button na I-collapse ang Mga Bookmark sa Pangkat na ito."
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "Ipakita ang Buksan lahat"
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "Lilitaw ang Open all button kung mayroong kahit isang Bookmark sa Group na ito."
+  },
+  "groupFormDestination": {
+    "message": "Posisyon"
+  },
+  "themeCustomTileControlEdit": {
+    "message": "I-edit itong naka-save na custom na tema"
+  },
+  "themeCustomTileControlRemove": {
+    "message": "Alisin ang naka-save na custom na tema na ito"
+  },
+  "themeCustomFormNameLabel": {
+    "message": "Pangalan"
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "Halimbawang tema"
+  },
+  "themeCustomFormRandom": {
+    "message": "Random na pangalan ng tema"
+  },
+  "themeCustomAddHeading": {
+    "message": "I-save ang kasalukuyang tema"
+  },
+  "themeCustomAddSuccessText": {
+    "message": "I-save"
+  },
+  "themeCustomAddCancelText": {
+    "message": "Kanselahin"
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "Alisin"
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "Alisin ang hindi pinangalanang custom na tema"
+  },
+  "themeCustomRemoveContent": {
+    "message": "Sigurado ka bang gusto mong alisin ang naka-save na custom na tema? Hindi na ito maaaring bawiin."
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "I-save"
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "Kanselahin"
+  },
+  "themeCustomEditHeadingName": {
+    "message": "I-edit"
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "I-edit ang hindi pinangalanang custom na tema"
+  },
+  "themeCustomEditSuccessText": {
+    "message": "Alisin"
+  },
+  "themeCustomEditCancelText": {
+    "message": "Kanselahin"
+  },
+  "toolbarAccent": {
+    "message": "Kulay ng accent"
+  },
+  "toolbarAddLabel": {
+    "message": "Idagdag"
+  },
+  "toolbarAddGroup": {
+    "message": "Bagong grupo"
+  },
+  "toolbarAddBookmark": {
+    "message": "Bagong Bookmark"
+  },
+  "toolbarEdit": {
+    "message": "I-edit ang mga pangkat at bookmark"
+  },
+  "toolbarSetting": {
+    "message": "Buksan ang menu ng mga setting"
+  },
+  "dataFormDescription": {
+    "message": "Maaari mong ibalik ang lahat o bahagi ng isang backup na file. Ibabalik ang sumusunod na data:"
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "Mga bookmark"
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "Kabilang dito ang lahat ng Mga Grupo at Mga Bookmark"
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "Papanatilihin ng mga bookmark ang anumang custom na Kulay, Accent at Border kapag na-import."
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "Palitan ang mga kasalukuyang bookmark"
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "Idagdag sa mga kasalukuyang bookmark"
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "Tema"
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "Kabilang dito ang Kulay, Accent, Font, Background at anumang naka-save na Custom na Tema."
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "Mga setting"
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "Kabilang dito ang laki at posisyon ng Layout, laki ng lugar ng header, laki ng lugar ng Bookmark at iba pang mga setting ng user."
+  },
+  "dataRestoreHeading": {
+    "message": "Nire-restore mula sa backup {appName}"
+  },
+  "dataRestoreSuccessText": {
+    "message": "Angkat"
+  },
+  "dataRestoreCancelText": {
+    "message": "Kanselahin"
+  },
+  "dataClearAllHeading": {
+    "message": "I-clear ang lahat ng data ng {appName}"
+  },
+  "dataClearAllContentPara1": {
+    "message": "Sigurado ka bang gusto mong i-clear ang lahat ng {appName} Bookmark at Settings? {appName} sa default na estado."
+  },
+  "dataClearAllContentPara2": {
+    "message": "Hindi na ito maaaring bawiin."
+  },
+  "dataClearAllSuccessText": {
+    "message": "I-clear ang lahat ng data"
+  },
+  "dataClearAllCancelText": {
+    "message": "Kanselahin"
+  },
+  "dataClearPartialHeading": {
+    "message": "I-clear ang {appName} maliban sa mga bookmark?"
+  },
+  "dataClearPartialContentPara1": {
+    "message": "Sigurado ka bang gusto mong i-clear ang lahat ng Setting ng {appName} {appName} sa default na estado ngunit mananatili ang iyong Mga Bookmark at Grupo."
+  },
+  "dataClearPartialContentPara2": {
+    "message": "Hindi na ito maaaring bawiin."
+  },
+  "dataClearPartialSuccessText": {
+    "message": "I-clear ang lahat maliban sa mga bookmark"
+  },
+  "dataClearPartialCancelText": {
+    "message": "Kanselahin"
+  },
+  "dataExportBackup": {
+    "message": "backup"
+  },
+  "dataFeedbackEmpty": {
+    "message": "Walang napiling i-import."
+  },
+  "dataFeedbackSuccess": {
+    "message": "Tagumpay! Ibinabalik ang {appName} Bookmark at Setting."
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "Hindi isang JSON file. Tiyaking nagmula ang napiling file sa {appName} ."
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "Hindi ang tamang uri ng JSON file. Tiyaking nagmula ang napiling file sa {appName} ."
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "Hindi ang tamang uri ng data. Tiyaking nagtataglay ang clipboard ng data mula sa {appName} o isang backup na JSON file {appName}"
+  },
+  "controlGeneralReset": {
+    "message": "I-reset sa default"
+  },
+  "controlColorTextPlaceholder": {
+    "message": "Hex code"
+  },
+  "controlColorRandom": {
+    "message": "Random na kulay"
+  },
+  "controlColorMixerMoreControls": {
+    "message": "Higit pang mga kontrol"
+  },
+  "controlColorMixerSliderH": {
+    "message": "Hue"
+  },
+  "controlColorMixerSliderS": {
+    "message": "Saturation"
+  },
+  "controlColorMixerSliderL": {
+    "message": "Kagaanan"
+  },
+  "controlColorMixerSliderR": {
+    "message": "Pula"
+  },
+  "controlColorMixerSliderG": {
+    "message": "Berde"
+  },
+  "controlColorMixerSliderB": {
+    "message": "Bughaw"
+  }
+}
