@@ -1,4 +1,4 @@
-import { language } from '../../../language';
+import { message } from '../../message';
 
 import { state } from '../../state';
 import { data } from '../../data';
@@ -402,11 +402,11 @@ headerSetting.alignment = (parent) => {
   headerSetting.alignment.alignment = new Control_radioGrid({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-item-justify-left', labelText: language.current.menu.content.header.alignment.justify.left, value: 'left', position: 1 },
-      { id: 'header-item-justify-center', labelText: language.current.menu.content.header.alignment.justify.center, value: 'center', position: 2 },
-      { id: 'header-item-justify-right', labelText: language.current.menu.content.header.alignment.justify.right, value: 'right', position: 3 }
+      { id: 'header-item-justify-left', labelText: message('menuContentHeaderAlignmentJustifyLeft'), value: 'left', position: 1 },
+      { id: 'header-item-justify-center', labelText: message('menuContentHeaderAlignmentJustifyCenter'), value: 'center', position: 2 },
+      { id: 'header-item-justify-right', labelText: message('menuContentHeaderAlignmentJustifyRight'), value: 'right', position: 3 }
     ],
-    label: language.current.menu.content.header.alignment.justify.label,
+    label: message('menuContentHeaderAlignmentJustifyLabel'),
     groupName: 'header-item-justify',
     path: 'header.item.justify',
     gridSize: '3x1',
@@ -418,7 +418,7 @@ headerSetting.alignment = (parent) => {
 
   headerSetting.alignment.alignmentHelper = new Control_helperText({
     complexText: true,
-    text: language.current.menu.content.header.alignment.helper
+    text: [message('menuContentHeaderAlignmentHelperPara1')]
   });
 
   parent.appendChild(
@@ -438,8 +438,8 @@ headerSetting.greeting = (parent) => {
     object: state.get.current(),
     path: 'header.greeting.show',
     id: 'header-greeting-show',
-    labelText: language.current.menu.content.header.greeting.show,
-    action: function() {
+    labelText: message('menuContentHeaderGreetingShow'),
+    action: () => {
       header.item.mod.order();
       header.item.clear();
       header.item.render();
@@ -459,7 +459,7 @@ headerSetting.greeting = (parent) => {
     object: state.get.current(),
     path: 'header.greeting.size',
     id: 'header-greeting-size',
-    labelText: language.current.menu.content.header.greeting.size,
+    labelText: message('menuContentHeaderGreetingSize'),
     value: state.get.current().header.greeting.size,
     defaultValue: state.get.default().header.greeting.size,
     min: state.get.minMax().header.greeting.size.min,
@@ -481,9 +481,9 @@ headerSetting.greeting = (parent) => {
     object: state.get.current(),
     path: 'header.greeting.newLine',
     id: 'header-greeting-newLine',
-    labelText: language.current.menu.content.header.greeting.newLine.label,
-    description: language.current.menu.content.header.greeting.newLine.description,
-    action: function() {
+    labelText: message('menuContentHeaderGreetingNewLineLabel'),
+    description: message('menuContentHeaderGreetingNewLineDescription'),
+    action: () => {
       applyCSSState('header.greeting.newLine');
       data.save();
     }
@@ -491,13 +491,13 @@ headerSetting.greeting = (parent) => {
 
   headerSetting.control.greeting.type = new Control_radio({
     object: state.get.current(),
-    label: language.current.menu.content.header.greeting.type.label,
+    label: message('menuContentHeaderGreetingTypeLabel'),
     radioGroup: [
-      { id: 'header-greeting-type-good', labelText: language.current.menu.content.header.greeting.type.good, value: 'good' },
-      { id: 'header-greeting-type-hello', labelText: language.current.menu.content.header.greeting.type.hello, value: 'hello' },
-      { id: 'header-greeting-type-hi', labelText: language.current.menu.content.header.greeting.type.hi, value: 'hi' },
-      { id: 'header-greeting-type-none', labelText: language.current.menu.content.header.greeting.type.none.label, description: language.current.menu.content.header.greeting.type.none.description, value: 'none' },
-      { id: 'header-greeting-type-custom', labelText: language.current.menu.content.header.greeting.type.custom.label, description: language.current.menu.content.header.greeting.type.custom.description, value: 'custom' }
+      { id: 'header-greeting-type-good', labelText: message('menuContentHeaderGreetingTypeGood'), value: 'good' },
+      { id: 'header-greeting-type-hello', labelText: message('menuContentHeaderGreetingTypeHello'), value: 'hello' },
+      { id: 'header-greeting-type-hi', labelText: message('menuContentHeaderGreetingTypeHi'), value: 'hi' },
+      { id: 'header-greeting-type-none', labelText: message('menuContentHeaderGreetingTypeNoneLabel'), description: message('menuContentHeaderGreetingTypeNoneDescription'), value: 'none' },
+      { id: 'header-greeting-type-custom', labelText: message('menuContentHeaderGreetingTypeCustomLabel'), description: [message('menuContentHeaderGreetingTypeCustomDescriptionPara1'), message('menuContentHeaderGreetingTypeCustomDescriptionPara2')], value: 'custom' }
     ],
     groupName: 'header-greeting-type',
     path: 'header.greeting.type',
@@ -516,8 +516,8 @@ headerSetting.greeting = (parent) => {
     path: 'header.greeting.custom',
     id: 'header-greeting-custom',
     value: state.get.current().header.greeting.custom,
-    placeholder: language.current.menu.content.header.greeting.custom.placeholder,
-    labelText: language.current.menu.content.header.greeting.custom.label,
+    placeholder: message('menuContentHeaderGreetingCustomPlaceholder'),
+    labelText: message('menuContentHeaderGreetingCustomLabel'),
     srOnly: true,
     action: () => {
       header.element.greeting.update();
@@ -543,8 +543,8 @@ headerSetting.greeting = (parent) => {
     path: 'header.greeting.name',
     id: 'header-greeting-name',
     value: state.get.current().header.greeting.name,
-    placeholder: language.current.menu.content.header.greeting.name.placeholder,
-    labelText: language.current.menu.content.header.greeting.name.label,
+    placeholder: message('menuContentHeaderGreetingNamePlaceholder'),
+    labelText: message('menuContentHeaderGreetingNameLabel'),
     action: () => {
       header.element.greeting.update();
       data.save();
@@ -603,7 +603,7 @@ headerSetting.transitional = (parent) => {
     object: state.get.current(),
     path: 'header.transitional.show',
     id: 'header-transitional-show',
-    labelText: language.current.menu.content.header.transitional.show.label,
+    labelText: message('menuContentHeaderTransitionalShowLabel'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -621,15 +621,15 @@ headerSetting.transitional = (parent) => {
   });
 
   headerSetting.control.transitional.showHelper = new Control_helperText({
-    text: language.current.menu.content.header.transitional.show.helper
+    text: [message('menuContentHeaderTransitionalShowHelperPara1')]
   });
 
   headerSetting.control.transitional.type = new Control_radio({
     object: state.get.current(),
-    label: language.current.menu.content.header.transitional.type.label,
+    label: message('menuContentHeaderTransitionalTypeLabel'),
     radioGroup: [
-      { id: 'header-transitional-type-time-and-date', labelText: language.current.menu.content.header.transitional.type.timeAndDate, value: 'time-and-date' },
-      { id: 'header-transitional-type-its', labelText: language.current.menu.content.header.transitional.type.its, value: 'its' }
+      { id: 'header-transitional-type-time-and-date', labelText: message('menuContentHeaderTransitionalTypeTimeAndDate'), value: 'time-and-date' },
+      { id: 'header-transitional-type-its', labelText: message('menuContentHeaderTransitionalTypeIts'), value: 'its' }
     ],
     groupName: 'header-transitional-type',
     path: 'header.transitional.type',
@@ -644,7 +644,7 @@ headerSetting.transitional = (parent) => {
     object: state.get.current(),
     path: 'header.transitional.size',
     id: 'header-transitional-size',
-    labelText: language.current.menu.content.header.transitional.size,
+    labelText: message('menuContentHeaderTransitionalSize'),
     value: state.get.current().header.transitional.size,
     defaultValue: state.get.default().header.transitional.size,
     min: state.get.minMax().header.transitional.size.min,
@@ -666,9 +666,9 @@ headerSetting.transitional = (parent) => {
     object: state.get.current(),
     path: 'header.transitional.newLine',
     id: 'header-transitional-newLine',
-    labelText: language.current.menu.content.header.transitional.newLine.label,
-    description: language.current.menu.content.header.transitional.newLine.description,
-    action: function() {
+    labelText: message('menuContentHeaderTransitionalNewLineLabel'),
+    description: message('menuContentHeaderTransitionalNewLineDescription'),
+    action: () => {
       applyCSSState('header.transitional.newLine');
       data.save();
     }
@@ -718,7 +718,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.hour.show',
     id: 'header-clock-hour-show',
-    labelText: language.current.menu.content.header.clock.hour.show,
+    labelText: message('menuContentHeaderClockHourShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -739,8 +739,8 @@ headerSetting.clock = (parent) => {
   headerSetting.control.clock.hour.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-clock-hour-display-number', labelText: language.current.menu.content.header.clock.hour.display.number, value: 'number' },
-      { id: 'header-clock-hour-display-word', labelText: language.current.menu.content.header.clock.hour.display.word, value: 'word' }
+      { id: 'header-clock-hour-display-number', labelText: message('menuContentHeaderClockHourDisplayNumber'), value: 'number' },
+      { id: 'header-clock-hour-display-word', labelText: message('menuContentHeaderClockHourDisplayWord'), value: 'word' }
     ],
     groupName: 'header-clock-hour-display',
     path: 'header.clock.hour.display',
@@ -768,7 +768,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.minute.show',
     id: 'header-clock-minute-show',
-    labelText: language.current.menu.content.header.clock.minute.show,
+    labelText: message('menuContentHeaderClockMinuteShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -789,8 +789,8 @@ headerSetting.clock = (parent) => {
   headerSetting.control.clock.minute.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-clock-minute-display-number', labelText: language.current.menu.content.header.clock.minute.display.number, value: 'number' },
-      { id: 'header-clock-minute-display-word', labelText: language.current.menu.content.header.clock.minute.display.word, value: 'word' }
+      { id: 'header-clock-minute-display-number', labelText: message('menuContentHeaderClockMinuteDisplayNumber'), value: 'number' },
+      { id: 'header-clock-minute-display-word', labelText: message('menuContentHeaderClockMinuteDisplayWord'), value: 'word' }
     ],
     groupName: 'header-clock-minute-display',
     path: 'header.clock.minute.display',
@@ -818,7 +818,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.second.show',
     id: 'header-clock-second-show',
-    labelText: language.current.menu.content.header.clock.second.show,
+    labelText: message('menuContentHeaderClockSecondShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -839,8 +839,8 @@ headerSetting.clock = (parent) => {
   headerSetting.control.clock.second.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-clock-second-display-number', labelText: language.current.menu.content.header.clock.second.display.number, value: 'number' },
-      { id: 'header-clock-second-display-word', labelText: language.current.menu.content.header.clock.second.display.word, value: 'word' }
+      { id: 'header-clock-second-display-number', labelText: message('menuContentHeaderClockSecondDisplayNumber'), value: 'number' },
+      { id: 'header-clock-second-display-word', labelText: message('menuContentHeaderClockSecondDisplayWord'), value: 'word' }
     ],
     groupName: 'header-clock-second-display',
     path: 'header.clock.second.display',
@@ -868,7 +868,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.separator.show',
     id: 'header-clock-separator-show',
-    labelText: language.current.menu.content.header.clock.separator.show,
+    labelText: message('menuContentHeaderClockSeparatorShow'),
     action: () => {
       header.element.clock.update();
       headerSetting.control.clock.separator.collapse.update();
@@ -883,8 +883,8 @@ headerSetting.clock = (parent) => {
     id: 'header-clock-separator-text',
     value: state.get.current().header.clock.separator.text,
     defaultValue: state.get.default().header.clock.separator.text,
-    placeholder: language.current.menu.content.header.clock.separator.placeholder,
-    labelText: language.current.menu.content.header.clock.separator.label,
+    placeholder: message('menuContentHeaderClockSeparatorPlaceholder'),
+    labelText: message('menuContentHeaderClockSeparatorLabel'),
     srOnly: true,
     action: () => {
       header.element.clock.update();
@@ -909,8 +909,8 @@ headerSetting.clock = (parent) => {
       object: state.get.current(),
       path: 'header.clock.hour24.show',
       id: 'header-clock-hour24-show',
-      labelText: language.current.menu.content.header.clock.hour24,
-      action: function() {
+      labelText: message('menuContentHeaderClockHour24'),
+      action: () => {
         header.element.clock.update();
         headerSetting.disable();
         data.save();
@@ -923,8 +923,8 @@ headerSetting.clock = (parent) => {
       object: state.get.current(),
       path: 'header.clock.meridiem.show',
       id: 'header-clock-meridiem-show',
-      labelText: language.current.menu.content.header.clock.meridiem,
-      action: function() {
+      labelText: message('menuContentHeaderClockMeridiem'),
+      action: () => {
         header.element.clock.update();
         data.save();
       }
@@ -935,7 +935,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.size',
     id: 'header-clock-size',
-    labelText: language.current.menu.content.header.clock.size,
+    labelText: message('menuContentHeaderClockSize'),
     value: state.get.current().header.clock.size,
     defaultValue: state.get.default().header.clock.size,
     min: state.get.minMax().header.clock.size.min,
@@ -957,9 +957,9 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.newLine',
     id: 'header-clock-newLine',
-    labelText: language.current.menu.content.header.clock.newLine.label,
-    description: language.current.menu.content.header.clock.newLine.description,
-    action: function() {
+    labelText: message('menuContentHeaderClockNewLineLabel'),
+    description: message('menuContentHeaderClockNewLineDescription'),
+    action: () => {
       applyCSSState('header.clock.newLine');
       data.save();
     }
@@ -1050,7 +1050,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.day.show',
     id: 'header-date-day-show',
-    labelText: language.current.menu.content.header.date.day.show,
+    labelText: message('menuContentHeaderDateDayShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -1071,8 +1071,8 @@ headerSetting.date = (parent) => {
   headerSetting.control.date.day.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-date-day-display-number', labelText: language.current.menu.content.header.date.day.display.number, value: 'number' },
-      { id: 'header-date-day-display-word', labelText: language.current.menu.content.header.date.day.display.word, value: 'word' }
+      { id: 'header-date-day-display-number', labelText: message('menuContentHeaderDateDayDisplayNumber'), value: 'number' },
+      { id: 'header-date-day-display-word', labelText: message('menuContentHeaderDateDayDisplayWord'), value: 'word' }
     ],
     groupName: 'header-date-day-display',
     path: 'header.date.day.display',
@@ -1093,10 +1093,10 @@ headerSetting.date = (parent) => {
 
   headerSetting.control.date.day.weekStart = new Control_radio({
     object: state.get.current(),
-    label: language.current.menu.content.header.date.day.display.weekStart.label,
+    label: message('menuContentHeaderDateDayDisplayWeekStartLabel'),
     radioGroup: [
-      { id: 'header-date-day-week-start-monday', labelText: language.current.menu.content.header.date.day.display.weekStart.monday, value: 'monday' },
-      { id: 'header-date-day-week-start-sunday', labelText: language.current.menu.content.header.date.day.display.weekStart.sunday, value: 'sunday' }
+      { id: 'header-date-day-week-start-monday', labelText: message('menuContentHeaderDateDayDisplayWeekStartMonday'), value: 'monday' },
+      { id: 'header-date-day-week-start-sunday', labelText: message('menuContentHeaderDateDayDisplayWeekStartSunday'), value: 'sunday' }
     ],
     groupName: 'header-date-day-week-start',
     path: 'header.date.day.weekStart',
@@ -1116,10 +1116,10 @@ headerSetting.date = (parent) => {
 
   headerSetting.control.date.day.length = new Control_radio({
     object: state.get.current(),
-    label: language.current.menu.content.header.date.day.display.length.label,
+    label: message('menuContentHeaderDateDayDisplayLengthLabel'),
     radioGroup: [
-      { id: 'header-date-day-length-long', labelText: language.current.menu.content.header.date.day.display.length.long, value: 'long' },
-      { id: 'header-date-day-length-short', labelText: language.current.menu.content.header.date.day.display.length.short, value: 'short' }
+      { id: 'header-date-day-length-long', labelText: message('menuContentHeaderDateDayDisplayLengthLong'), value: 'long' },
+      { id: 'header-date-day-length-short', labelText: message('menuContentHeaderDateDayDisplayLengthShort'), value: 'short' }
     ],
     groupName: 'header-date-day-length',
     path: 'header.date.day.length',
@@ -1158,7 +1158,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.date.show',
     id: 'header-date-date-show',
-    labelText: language.current.menu.content.header.date.date.show,
+    labelText: message('menuContentHeaderDateDateShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -1179,8 +1179,8 @@ headerSetting.date = (parent) => {
   headerSetting.control.date.date.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-date-date-display-number', labelText: language.current.menu.content.header.date.date.display.number, value: 'number' },
-      { id: 'header-date-date-display-word', labelText: language.current.menu.content.header.date.date.display.word, value: 'word' }
+      { id: 'header-date-date-display-number', labelText: message('menuContentHeaderDateDateDisplayNumber'), value: 'number' },
+      { id: 'header-date-date-display-word', labelText: message('menuContentHeaderDateDateDisplayWord'), value: 'word' }
     ],
     groupName: 'header-date-date-display',
     path: 'header.date.date.display',
@@ -1202,7 +1202,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.date.ordinal',
     id: 'header-date-date-ordinal',
-    labelText: language.current.menu.content.header.date.date.display.ordinal,
+    labelText: message('menuContentHeaderDateDateDisplayOrdinal'),
     action: () => {
       header.element.date.update();
       data.save();
@@ -1228,7 +1228,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.month.show',
     id: 'header-date-month-show',
-    labelText: language.current.menu.content.header.date.month.show,
+    labelText: message('menuContentHeaderDateMonthShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -1249,8 +1249,8 @@ headerSetting.date = (parent) => {
   headerSetting.control.date.month.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-date-month-display-number', labelText: language.current.menu.content.header.date.month.display.number, value: 'number' },
-      { id: 'header-date-month-display-word', labelText: language.current.menu.content.header.date.month.display.word, value: 'word' }
+      { id: 'header-date-month-display-number', labelText: message('menuContentHeaderDateMonthDisplayNumber'), value: 'number' },
+      { id: 'header-date-month-display-word', labelText: message('menuContentHeaderDateMonthDisplayWord'), value: 'word' }
     ],
     groupName: 'header-date-month-display',
     path: 'header.date.month.display',
@@ -1271,10 +1271,10 @@ headerSetting.date = (parent) => {
 
   headerSetting.control.date.month.length = new Control_radio({
     object: state.get.current(),
-    label: language.current.menu.content.header.date.month.display.length.label,
+    label: message('menuContentHeaderDateMonthDisplayLengthLabel'),
     radioGroup: [
-      { id: 'header-date-month-length-long', labelText: language.current.menu.content.header.date.month.display.length.long, value: 'long' },
-      { id: 'header-date-month-length-short', labelText: language.current.menu.content.header.date.month.display.length.short, value: 'short' }
+      { id: 'header-date-month-length-long', labelText: message('menuContentHeaderDateMonthDisplayLengthLong'), value: 'long' },
+      { id: 'header-date-month-length-short', labelText: message('menuContentHeaderDateMonthDisplayLengthShort'), value: 'short' }
     ],
     groupName: 'header-date-month-length',
     path: 'header.date.month.length',
@@ -1296,7 +1296,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.month.ordinal',
     id: 'header-date-month-ordinal',
-    labelText: language.current.menu.content.header.date.month.display.ordinal,
+    labelText: message('menuContentHeaderDateMonthDisplayOrdinal'),
     action: () => {
       header.element.date.update();
       data.save();
@@ -1324,7 +1324,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.year.show',
     id: 'header-date-year-show',
-    labelText: language.current.menu.content.header.date.year.show,
+    labelText: message('menuContentHeaderDateYearShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -1345,8 +1345,8 @@ headerSetting.date = (parent) => {
   headerSetting.control.date.year.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-date-year-display-number', labelText: language.current.menu.content.header.date.year.display.number, value: 'number' },
-      { id: 'header-date-year-display-word', labelText: language.current.menu.content.header.date.year.display.word, value: 'word' }
+      { id: 'header-date-year-display-number', labelText: message('menuContentHeaderDateYearDisplayNumber'), value: 'number' },
+      { id: 'header-date-year-display-word', labelText: message('menuContentHeaderDateYearDisplayWord'), value: 'word' }
     ],
     groupName: 'header-date-year-display',
     path: 'header.date.year.display',
@@ -1382,7 +1382,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.separator.show',
     id: 'header-date-separator-show',
-    labelText: language.current.menu.content.header.date.separator.show,
+    labelText: message('menuContentHeaderDateSeparatorShow'),
     action: () => {
       header.element.date.update();
       headerSetting.control.date.separator.collapse.update();
@@ -1402,8 +1402,8 @@ headerSetting.date = (parent) => {
     id: 'header-date-separator-text',
     value: state.get.current().header.date.separator.text,
     defaultValue: state.get.default().header.date.separator.text,
-    placeholder: language.current.menu.content.header.date.separator.placeholder,
-    labelText: language.current.menu.content.header.date.separator.label,
+    placeholder: message('menuContentHeaderDateSeparatorPlaceholder'),
+    labelText: message('menuContentHeaderDateSeparatorLabel'),
     srOnly: true,
     action: () => {
       header.element.date.update();
@@ -1425,10 +1425,10 @@ headerSetting.date = (parent) => {
 
   headerSetting.control.date.format = new Control_radio({
     object: state.get.current(),
-    label: language.current.menu.content.header.date.format.label,
+    label: message('menuContentHeaderDateFormatLabel'),
     radioGroup: [
-      { id: 'header-date-format-date-month', labelText: language.current.menu.content.header.date.format.dateMonth, value: 'date-month' },
-      { id: 'header-date-format-month-date', labelText: language.current.menu.content.header.date.format.monthDate, value: 'month-date' }
+      { id: 'header-date-format-date-month', labelText: message('menuContentHeaderDateFormatDateMonth'), value: 'date-month' },
+      { id: 'header-date-format-month-date', labelText: message('menuContentHeaderDateFormatMonthDate'), value: 'month-date' }
     ],
     groupName: 'header-date-format',
     path: 'header.date.format',
@@ -1442,7 +1442,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.size',
     id: 'header-date-size',
-    labelText: language.current.menu.content.header.date.size,
+    labelText: message('menuContentHeaderDateSize'),
     value: state.get.current().header.date.size,
     defaultValue: state.get.default().header.date.size,
     min: state.get.minMax().header.date.size.min,
@@ -1464,9 +1464,9 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.newLine',
     id: 'header-date-newLine',
-    labelText: language.current.menu.content.header.date.newLine.label,
-    description: language.current.menu.content.header.date.newLine.description,
-    action: function() {
+    labelText: message('menuContentHeaderDateNewLineLabel'),
+    description: message('menuContentHeaderDateNewLineDescription'),
+    action: () => {
       applyCSSState('header.date.newLine');
       data.save();
     }
@@ -1532,7 +1532,7 @@ headerSetting.search = (parent) => {
     object: state.get.current(),
     path: 'header.search.show',
     id: 'header-search-show',
-    labelText: language.current.menu.content.header.search.show,
+    labelText: message('menuContentHeaderSearchShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -1552,10 +1552,10 @@ headerSetting.search = (parent) => {
   headerSetting.control.search.width = {
     by: new Control_radio({
       object: state.get.current(),
-      label: language.current.menu.content.header.search.width.label,
+      label: message('menuContentHeaderSearchWidthLabel'),
       radioGroup: [
-        { id: 'header-search-width-by-auto', labelText: language.current.menu.content.header.search.width.auto.label, description: language.current.menu.content.header.search.width.auto.description, value: 'auto' },
-        { id: 'header-search-width-by-custom', labelText: language.current.menu.content.header.search.width.custom.label, description: language.current.menu.content.header.search.width.custom.description, value: 'custom' }
+        { id: 'header-search-width-by-auto', labelText: message('menuContentHeaderSearchWidthAutoLabel'), description: message('menuContentHeaderSearchWidthAutoDescription'), value: 'auto' },
+        { id: 'header-search-width-by-custom', labelText: message('menuContentHeaderSearchWidthCustomLabel'), description: message('menuContentHeaderSearchWidthCustomDescription'), value: 'custom' }
       ],
       groupName: 'header-search-width-by',
       path: 'header.search.width.by',
@@ -1570,7 +1570,7 @@ headerSetting.search = (parent) => {
       object: state.get.current(),
       path: 'header.search.width.size',
       id: 'header-search-size',
-      labelText: language.current.menu.content.header.search.width.size,
+      labelText: message('menuContentHeaderSearchWidthSize'),
       value: state.get.current().header.search.width.size,
       defaultValue: state.get.default().header.search.width.size,
       min: state.get.minMax().header.search.width.size.min,
@@ -1606,7 +1606,7 @@ headerSetting.search = (parent) => {
     object: state.get.current(),
     path: 'header.search.size',
     id: 'header-search-size',
-    labelText: language.current.menu.content.header.search.size,
+    labelText: message('menuContentHeaderSearchSize'),
     value: state.get.current().header.search.size,
     defaultValue: state.get.default().header.search.size,
     min: state.get.minMax().header.search.size.min,
@@ -1628,9 +1628,9 @@ headerSetting.search = (parent) => {
     object: state.get.current(),
     path: 'header.search.newLine',
     id: 'header-search-newLine',
-    labelText: language.current.menu.content.header.search.newLine.label,
-    description: language.current.menu.content.header.search.newLine.description,
-    action: function() {
+    labelText: message('menuContentHeaderSearchNewLineLabel'),
+    description: message('menuContentHeaderSearchNewLineDescription'),
+    action: () => {
       applyCSSState('header.search.newLine');
       data.save();
     }
@@ -1644,12 +1644,12 @@ headerSetting.search = (parent) => {
 
   }
 
-  searchEngineList.push({ id: 'header-search-engine-selected-custom', labelText: language.current.menu.content.header.search.engine.selected.custom, value: 'custom' });
+  searchEngineList.push({ id: 'header-search-engine-selected-custom', labelText: message('menuContentHeaderSearchEngineSelectedCustom'), value: 'custom' });
 
   headerSetting.control.search.engine = {
     selected: new Control_radio({
       object: state.get.current(),
-      label: language.current.menu.content.header.search.engine.selected.label,
+      label: message('menuContentHeaderSearchEngineSelectedLabel'),
       radioGroup: searchEngineList,
       groupName: 'header-search-engine-selected',
       path: 'header.search.engine.selected',
@@ -1674,8 +1674,8 @@ headerSetting.search = (parent) => {
         path: 'header.search.engine.custom.name',
         id: 'header-search-engine-custom-name',
         value: state.get.current().header.search.engine.custom.name,
-        placeholder: language.current.menu.content.header.search.engine.custom.name.placeholder,
-        labelText: language.current.menu.content.header.search.engine.custom.name.label,
+        placeholder: message('menuContentHeaderSearchEngineCustomNamePlaceholder'),
+        labelText: message('menuContentHeaderSearchEngineCustomNameLabel'),
         action: () => {
           header.item.mod.order();
           header.item.clear();
@@ -1694,8 +1694,8 @@ headerSetting.search = (parent) => {
         path: 'header.search.engine.custom.url',
         id: 'header-search-engine-custom-url',
         value: state.get.current().header.search.engine.custom.url,
-        placeholder: language.current.menu.content.header.search.engine.custom.url.placeholder,
-        labelText: language.current.menu.content.header.search.engine.custom.url.label,
+        placeholder: message('menuContentHeaderSearchEngineCustomUrlPlaceholder'),
+        labelText: message('menuContentHeaderSearchEngineCustomUrlLabel'),
         action: () => {
           header.item.mod.order();
           header.item.clear();
@@ -1710,15 +1710,18 @@ headerSetting.search = (parent) => {
         }
       }),
       urlHelper: new Control_helperText({
-        text: language.current.menu.content.header.search.engine.custom.url.helper
+        text: [
+          message('menuContentHeaderSearchEngineCustomUrlHelperPara1'),
+          message('menuContentHeaderSearchEngineCustomUrlHelperPara2')
+        ]
       }),
       queryName: new Control_text({
         object: state.get.current(),
         path: 'header.search.engine.custom.queryName',
         id: 'header-search-engine-custom-queryName',
         value: state.get.current().header.search.engine.custom.queryName,
-        placeholder: language.current.menu.content.header.search.engine.custom.queryName.placeholder,
-        labelText: language.current.menu.content.header.search.engine.custom.queryName.label,
+        placeholder: message('menuContentHeaderSearchEngineCustomQueryNamePlaceholder'),
+        labelText: message('menuContentHeaderSearchEngineCustomQueryNameLabel'),
         action: () => {
           header.item.mod.order();
           header.item.clear();
@@ -1733,7 +1736,10 @@ headerSetting.search = (parent) => {
         }
       }),
       queryNameHelper: new Control_helperText({
-        text: language.current.menu.content.header.search.engine.custom.queryName.helper
+        text: [
+          message('menuContentHeaderSearchEngineCustomQueryNameHelperPara1'),
+          message('menuContentHeaderSearchEngineCustomQueryNameHelperPara2')
+        ]
       })
     }
   };
@@ -1759,11 +1765,11 @@ headerSetting.search = (parent) => {
     justify: new Control_radioGrid({
       object: state.get.current(),
       radioGroup: [
-        { id: 'header-search-text-justify-left', labelText: language.current.menu.content.header.search.engine.text.justify.left, value: 'left', position: 1 },
-        { id: 'header-search-text-justify-center', labelText: language.current.menu.content.header.search.engine.text.justify.center, value: 'center', position: 2 },
-        { id: 'header-search-text-justify-right', labelText: language.current.menu.content.header.search.engine.text.justify.right, value: 'right', position: 3 }
+        { id: 'header-search-text-justify-left', labelText: message('menuContentHeaderSearchEngineTextJustifyLeft'), value: 'left', position: 1 },
+        { id: 'header-search-text-justify-center', labelText: message('menuContentHeaderSearchEngineTextJustifyCenter'), value: 'center', position: 2 },
+        { id: 'header-search-text-justify-right', labelText: message('menuContentHeaderSearchEngineTextJustifyRight'), value: 'right', position: 3 }
       ],
-      label: language.current.menu.content.header.search.engine.text.justify.label,
+      label: message('menuContentHeaderSearchEngineTextJustifyLabel'),
       groupName: 'header-search-text-justify',
       path: 'header.search.text.justify',
       gridSize: '3x1',
@@ -1778,8 +1784,8 @@ headerSetting.search = (parent) => {
     object: state.get.current(),
     path: 'header.search.newTab',
     id: 'header-search-newTab',
-    labelText: language.current.menu.content.header.search.newTab,
-    action: function() {
+    labelText: message('menuContentHeaderSearchNewTab'),
+    action: () => {
       header.item.mod.order();
       header.item.clear();
       header.item.render();

@@ -1,4 +1,4 @@
-import { language } from '../../language';
+import { message } from '../message';
 
 import * as form from '../form';
 
@@ -20,7 +20,7 @@ export const ImportForm = function({
     description: node('div|class:import-form-description', [
       complexNode({
         tag: 'p',
-        text: language.current.data.form.description
+        text: message('dataFormDescription')
       })
     ])
   };
@@ -44,8 +44,11 @@ export const ImportForm = function({
           object: state,
           path: 'bookmark.include',
           id: 'bookmark-include',
-          labelText: language.current.data.form.bookmark.include.label,
-          description: language.current.data.form.bookmark.include.description,
+          labelText: message('dataFormBookmarkIncludeLabel'),
+          description: [
+            message('dataFormBookmarkIncludeDescriptionPara1'),
+            message('dataFormBookmarkIncludeDescriptionPara2')
+          ],
           action: () => {
             this.disable();
           }
@@ -53,8 +56,8 @@ export const ImportForm = function({
         type: new Control_radio({
           object: state,
           radioGroup: [
-            { id: 'bookmark-type-restore', labelText: language.current.data.form.bookmark.type.restore, value: 'restore' },
-            { id: 'bookmark-type-append', labelText: language.current.data.form.bookmark.type.append, value: 'append' }
+            { id: 'bookmark-type-restore', labelText: message('dataFormBookmarkTypeRestore'), value: 'restore' },
+            { id: 'bookmark-type-append', labelText: message('dataFormBookmarkTypeAppend'), value: 'append' }
           ],
           groupName: 'bookmark-type',
           path: 'bookmark.type'
@@ -65,8 +68,8 @@ export const ImportForm = function({
           object: state,
           path: 'theme.include',
           id: 'theme-include',
-          labelText: language.current.data.form.theme.include.label,
-          description: language.current.data.form.theme.include.description
+          labelText: message('dataFormThemeIncludeLabel'),
+          description: message('dataFormThemeIncludeDescription')
         })
       },
       setup: {
@@ -74,8 +77,8 @@ export const ImportForm = function({
           object: state,
           path: 'setup.include',
           id: 'setup-include',
-          labelText: language.current.data.form.setup.include.label,
-          description: language.current.data.form.setup.include.description
+          labelText: message('dataFormSetupIncludeLabel'),
+          description: message('dataFormSetupIncludeDescription')
         })
       }
     }

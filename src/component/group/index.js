@@ -1,4 +1,4 @@
-import { language } from '../../language';
+import { message } from '../message';
 
 import { state } from '../state';
 import { data } from '../data';
@@ -215,10 +215,10 @@ group.add = {
     const groupForm = new GroupForm({ groupData: newGroupData });
 
     const addModal = new Modal({
-      heading: language.current.group.add.heading,
+      heading: message('groupAddHeading'),
       content: groupForm.form(),
-      successText: language.current.group.add.successText,
-      cancelText: language.current.group.add.cancelText,
+      successText: message('groupAddSuccessText'),
+      cancelText: message('groupAddCancelText'),
       width: 40,
       openAction: () => {
 

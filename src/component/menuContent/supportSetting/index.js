@@ -1,4 +1,4 @@
-import { language } from '../../../language';
+import { message } from '../../message';
 
 import { APP_NAME } from '../../../constant';
 
@@ -19,47 +19,47 @@ supportSetting.supportPage = {
 
     supportLink.page = {
       applyToAll: {
-        label: language.current.menu.content.support.page.applyToAll,
+        label: message('menuContentSupportPageApplyToAll'),
         url: 'Applying-bookmark-settings-to-all'
       },
       browser: {
-        label: language.current.menu.content.support.page.browser,
+        label: message('menuContentSupportPageBrowser'),
         url: 'Browser-support'
       },
       cookies: {
-        label: language.current.menu.content.support.page.cookies,
+        label: message('menuContentSupportPageCookies'),
         url: 'Cookies-and-cache'
       },
       data: {
-        label: language.current.menu.content.support.page.data,
+        label: message('menuContentSupportPageData'),
         url: 'Data-backup-and-restore'
       },
       localBackgroundImage: {
-        label: language.current.menu.content.support.page.localBackgroundImage,
+        label: message('menuContentSupportPageLocalBackgroundImage'),
         url: 'Local-background-image'
       },
       protectedUrl: {
-        label: language.current.menu.content.support.page.protectedUrl,
+        label: message('menuContentSupportPageProtectedUrl'),
         url: 'Protected-URLs'
       },
       recovering: {
-        label: language.current.menu.content.support.page.recovering,
+        label: message('menuContentSupportPageRecovering'),
         url: 'Recovering-settings-and-bookmarks'
       },
       resetting: {
-        label: language.current.menu.content.support.page.resetting,
+        label: message('menuContentSupportPageResetting'),
         url: 'Resetting-when-opening-the-browser'
       },
       privacy: {
-        label: language.current.menu.content.support.page.privacy,
+        label: message('menuContentSupportPagePrivacy'),
         url: 'Respecting-your-privacy'
       },
       backgroundImageVideo: {
-        label: language.current.menu.content.support.page.backgroundImageVideo,
+        label: message('menuContentSupportPageBackgroundImageVideo'),
         url: 'Setting-a-background-video-or-image'
       },
       firefox: {
-        label: language.current.menu.content.support.page.firefox,
+        label: message('menuContentSupportPageFirefox'),
         url: 'Setting-' + APP_NAME + '-as-your-Firefox-homepage'
       },
     };
@@ -99,16 +99,16 @@ supportSetting.support = (parent) => {
 
   supportSetting.support.para = node('p');
 
-  supportSetting.support.para.innerHTML = language.current.menu.content.support.para;
+  supportSetting.support.para.innerHTML = message('menuContentSupportPara');
 
   supportSetting.support.linkIssue = new Link({
-    text: language.current.menu.content.support.link1,
+    text: message('menuContentSupportLink1'),
     href: `https://github.com/zombieFox/${APP_NAME}/issues`,
     openNew: true
   });
 
   supportSetting.support.linkWiki = new Link({
-    text: language.current.menu.content.support.link2,
+    text: message('menuContentSupportLink2'),
     href: `https://github.com/zombieFox/${APP_NAME}/wiki`,
     openNew: true
   });

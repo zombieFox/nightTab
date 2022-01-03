@@ -1,0 +1,2066 @@
+{
+  "appName": {
+    "message": "nightTab"
+  },
+  "appShortName": {
+    "message": "nightTab"
+  },
+  "appDescription": {
+    "message": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab."
+  },
+  "menuNavThemeLabel": {
+    "message": "Tema"
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "Preestablecido"
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "Salvado"
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "Estilo"
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "Color"
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "Acento"
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "Fuente"
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "Radio"
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "Sombra"
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "Cubrir"
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "Opacidad"
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "Fondo"
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "Disposición"
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "Encabezamiento"
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "Marcador"
+  },
+  "menuNavLayoutLabel": {
+    "message": "Disposición"
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "Escalada"
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "Área"
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "Relleno"
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "Canal"
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "Alineación"
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "Página"
+  },
+  "menuNavHeaderLabel": {
+    "message": "Encabezamiento"
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "Alineación"
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "Saludo"
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "Palabras de transición"
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "Reloj"
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "Fecha"
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "Búsqueda"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "Marcador"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "General"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "Estilo"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "Orientación"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "Clasificar"
+  },
+  "menuNavGroupLabel": {
+    "message": "Grupo"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "Alineación"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "Nombre"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "Colapso"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "Barra de herramientas"
+  },
+  "menuNavToolbarLabel": {
+    "message": "Barra de herramientas"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "Tamaño"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "Ubicación"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "Posición"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "Control S"
+  },
+  "menuNavDataLabel": {
+    "message": "Datos"
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "Restaurar"
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "Respaldo"
+  },
+  "menuNavDataSubNavClear": {
+    "message": "Claro"
+  },
+  "menuNavLanguageLabel": {
+    "message": "Idioma"
+  },
+  "menuNavSupportLabel": {
+    "message": "Apoyo"
+  },
+  "menuNavCoffeeLabel": {
+    "message": "Café"
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}"
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "La aplicación de un ajuste preestablecido reemplazará el color, el acento, la fuente, el estilo, el radio, la sombra, la sombra y el fondo actuales."
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "Al guardar un tema, se registrarán el color, el acento, la fuente, el estilo, la opacidad, el radio, la sombra, la sombra y el fondo actuales."
+  },
+  "menuContentThemeSavedSave": {
+    "message": "Guardar tema actual"
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "Editar temas guardados"
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "Modo oscuro"
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "Modo de luz"
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "Automático"
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "Siga el modo claro u oscuro del sistema."
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "Fondos, Marcadores y Modales usan sombras desde la izquierda."
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "Los elementos de texto y formulario usan sombras desde la derecha."
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "Para un aspecto claro, cambie al Estilo de luz y luego seleccione un color primario. Y viceversa para un look oscuro."
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "Color primario"
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "Saturación"
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "Rango de contraste"
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "Inicio de contraste"
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "Final de contraste"
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "Mueva los controles de rango de Contraste juntos para una apariencia apagada."
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "Mueva los controles de rango de Contraste lejos uno del otro para una apariencia vívida y nítida."
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "Gris"
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "rojo"
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "naranja"
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "Amarillo"
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "Lima"
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "Verde"
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "Agua"
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "Cian"
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "Verde azulado"
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "Azul"
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "Púrpura"
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "Magenta"
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "Fucsia"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "Super extra ligero"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "Extra ligero"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "Ligero"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "Super extra oscuro"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "Extra oscuro"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "Oscuro"
+  },
+  "menuContentThemeAccentColor": {
+    "message": "Color de acento"
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "Color de acento aleatorio al cargar / actualizar"
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "Ningún"
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "Ligero"
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "Oscuro"
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "Pastel"
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "Saturado"
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "Aleatorizar ahora"
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "Cambio automático de tono de acento"
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "Cambio de demora"
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "Cambiar pasos"
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "Tenga cuidado, ya que un tono Accent que cambia rápidamente puede causar problemas de rendimiento."
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "El cambio automático de tono de acento no funcionará cuando el color de acento sea gris o negro."
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "Fuente de pantalla"
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "Nombre de fuente de Google"
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "Utilice una fuente de Google para personalizar el reloj, la fecha, los nombres de los grupos y las letras de los marcadores."
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "Encuentra una fuente de Google"
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Fredoka One\" o \"Kanit\"."
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "Borre el campo para usar la fuente predeterminada \"Fjalla One\"."
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "Peso de fuente"
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "Ligero"
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "Regular"
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "Audaz"
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "No todas las fuentes admiten todos los pesos. Consulte la página de fuentes de Google para ver cuáles están disponibles."
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "Normal"
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "Itálico"
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "Fuente de la interfaz de usuario"
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "Nombre de fuente de Google"
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "Utilice una fuente de Google para personalizar el nombre del marcador, la URL y los elementos del formulario."
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "Encuentra una fuente de Google"
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "Agregue un nombre de fuente tal como aparece en Google Fonts, incluidas letras mayúsculas y espacios, por ejemplo: ingrese \"Roboto\", \"Source Sans Pro\" o \"Noto Sans\"."
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "Borre el campo para usar la fuente predeterminada \"Open Sans\"."
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "Peso de fuente"
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "Ligero"
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "Regular"
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "Audaz"
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "No todas las fuentes admiten todos los pesos. Consulte la página de fuentes de Google para ver cuáles están disponibles."
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "Normal"
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "Itálico"
+  },
+  "menuContentThemeRadius": {
+    "message": "Radio de esquina"
+  },
+  "menuContentThemeShadow": {
+    "message": "Tamaño de la sombra"
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "Cubrir la opacidad"
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "Portada borrosa"
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "No es compatible con todos los navegadores."
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "Toda opacidad"
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "Cambie la opacidad de la barra de búsqueda, los marcadores, los controles de grupo y la barra de herramientas."
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "La opacidad también se puede cambiar al editar marcadores individuales."
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "Barra de herramientas"
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "Marcador"
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "Caja de búsqeda"
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "Barra de herramientas de grupo"
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "Fondo por tema"
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "Utilice el color de fondo definido por el tema."
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "Fondo por acento"
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "Utilice el color de acento para el fondo."
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "Color personalizado"
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "Degradado"
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "Imagen"
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "Video"
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "Color de fondo"
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "Ángulo de degradado de fondo"
+  },
+  "menuContentThemeBackgroundGradientStart": {
+    "message": "Inicio del gradiente de fondo"
+  },
+  "menuContentThemeBackgroundGradientEnd": {
+    "message": "Final de gradiente de fondo"
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "Ya no se pueden utilizar imágenes locales. Las imágenes deben estar alojadas en algún lugar en línea."
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "¿Por qué ha cambiado esto?"
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "Agregue más de una URL separada por espacios o en nuevas líneas para obtener una imagen de fondo aleatoria al cargar."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "Unsplash se puede utilizar para imágenes aleatorias, por ejemplo:"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "Cambie los parámetros después de ... / random / para más opciones. Los tiempos de carga pueden variar."
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "Difuminar"
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "Escala de grises"
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "Escala"
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "Acento"
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "Opacidad"
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "Viñeta"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "Inicio y finalización de la sombra"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "Final de la sombra"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "Inicio de sombra"
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "No se pueden utilizar las URL de las páginas de YouTube."
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "Cómo vincular a un archivo de video."
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "El video de fondo solo admite una URL directa a un archivo de video. Soporta formato MP4 y WebM."
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "Agregue más de una URL separada por espacios o en nuevas líneas para un video de fondo aleatorio en la carga."
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "Difuminar"
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "Escala de grises"
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "Escala"
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "Acento"
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "Opacidad"
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "Viñeta"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "Inicio y finalización de la sombra"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "Final de la sombra"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "Inicio de sombra"
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "Color de fondo del diseño"
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "Transparente"
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "Sin color de fondo detrás del diseño."
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "Color personalizado"
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "Utilice un color personalizado detrás del diseño."
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "Color de fondo del diseño"
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "Opacidad de fondo"
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "Desenfoque de fondo"
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "No es compatible con todos los navegadores."
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "Divisor entre el área de encabezado y marcador"
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "Color de fondo del encabezado"
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "Transparente"
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "Sin color de fondo detrás del área del encabezado."
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "Color personalizado"
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "Utilice un color personalizado detrás del área del encabezado."
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "Color de fondo del encabezado"
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "Opacidad de fondo"
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "Color de fondo del marcador"
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "Transparente"
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "No hay color de fondo detrás del área del marcador."
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "Color personalizado"
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "Utilice un color personalizado detrás del área del marcador."
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "Color de fondo del marcador"
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "Opacidad de fondo"
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "Borde del marcador"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "El borde del marcador también se puede cambiar al editar marcadores individuales."
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "El color del borde lo define el acento, que también se puede cambiar al editar marcadores individuales."
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "Agregue un acento único a cada marcador"
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "Quitar todas las anulaciones de acento"
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "El acento personalizado de marcadores también se puede cambiar al editar marcadores individuales."
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "Tamaño global"
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "Ancho del área de diseño"
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "Ancho del área del encabezado"
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "Alineación del área de encabezado"
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "Izquierda"
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "Centrar"
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "Correcto"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "Es posible que los efectos no sean visibles si el área del encabezado es de ancho completo."
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "Solo está disponible cuando la Dirección del diseño es Vertical y se muestran los elementos de Encabezado."
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "Ancho del área del marcador"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "Alineación del área del marcador"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "Izquierda"
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "Centrar"
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "Correcto"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "Es posible que los efectos no sean visibles si el área del marcador es de ancho completo."
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "Solo está disponible cuando la Dirección del diseño es Vertical y se muestran los elementos de Encabezado."
+  },
+  "menuContentLayoutPadding": {
+    "message": "Espacio alrededor del área de encabezado y marcador"
+  },
+  "menuContentLayoutGutter": {
+    "message": "Espacio entre elementos de encabezado y marcador"
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "Alineación de áreas"
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "Arriba a la izquierda"
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "Centro superior"
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "Parte superior derecha"
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "Centro Izquierda"
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "Centro Centro"
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "Centro Derecha"
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "Abajo a la izquierda"
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "Centro inferior"
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "Abajo a la derecha"
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "Alinear horizontal"
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "Apile el encabezado y los marcadores en una fila uno al lado del otro."
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "Alinear verticalmente"
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "Apile el encabezado y los marcadores en una columna una encima de la otra."
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "Encabezado y luego Marcadores"
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "Ordene que el área del encabezado aparezca antes que el área de marcadores."
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "Marcadores y luego encabezado"
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "Ordene que el área de Marcadores aparezca antes del área de Encabezado."
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "Título"
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "Nueva pestaña"
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "URL de favicon"
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https://www.example.com/favicon.svg"
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "No es compatible con todos los navegadores."
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "Barra de desplazamiento"
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "Auto"
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "Delgado"
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "Oculto"
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "No es compatible con todos los navegadores."
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "Desplazarse más allá del final"
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "Desenfocar imagen de fondo o video"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "La imagen de fondo o el video se desenfocarán cuando se desplace hasta la parte inferior de la página."
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "El desenfoque de imagen o video se puede encontrar en Fondo del tema."
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "Alineación del elemento de encabezado"
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "Izquierda"
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "Centrar"
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "Correcto"
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "Es posible que los efectos no sean visibles si el tamaño del cuadro de búsqueda está configurado en Automático y crece para llenar el espacio disponible."
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "Mostrar saludo"
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "Tamaño"
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "Nueva línea"
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "Fraseología"
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"Buenos días...\""
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"Hola...\""
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"Hola...\""
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "Ninguna"
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "Útil para mostrar solo el nombre."
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "Personalizado"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "Utilice su propio saludo."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "El valor predeterminado es \"Buenos días ...\" si se deja en blanco."
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "Texto de saludo personalizado"
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "Hola"
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "Nombre"
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "Apodo, alias o nombre de superhéroe"
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "Mostrar palabras de transición"
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "Solo disponible cuando se muestra la fecha o la hora."
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "Fraseología"
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "\"La hora y la fecha son\""
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"Su\""
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "Tamaño"
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "Nueva línea"
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "Mostrar horas"
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "Como numero"
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "Una espada"
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "Mostrar minutos"
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "Como numero"
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "Una espada"
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "Mostrar segundos"
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "Como numero"
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "Una espada"
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "Mostrar separador"
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "Carácter separador"
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":"
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "24 horas"
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "AM PM"
+  },
+  "menuContentHeaderClockSize": {
+    "message": "Tamaño"
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "Nueva línea"
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "Show Day"
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "Como numero"
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "Una espada"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "Comienzo de la semana"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "lunes"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "domingo"
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "Longitud de la palabra"
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "Largo"
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "Corto"
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "Mostrar fecha"
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "Como numero"
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "Una espada"
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "Números ordinales"
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "Mostrar mes"
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "Como numero"
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "Una espada"
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "Números ordinales"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "Longitud de la palabra"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "Largo"
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "Corto"
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "Mostrar año"
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "Como numero"
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "Una espada"
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "Mostrar separador"
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "Carácter separador"
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "/"
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "Formato"
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "Fecha / mes"
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "Mes / fecha"
+  },
+  "menuContentHeaderDateSize": {
+    "message": "Tamaño"
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "Nueva línea"
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "Mostrar búsqueda"
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "Ancho del cuadro de búsqueda"
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "Ancho automático"
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "El cuadro de búsqueda crecerá para adaptarse mejor al espacio disponible."
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "Ancho personalizado"
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "Defina el ancho que debe tener el cuadro de búsqueda dentro del área de encabezado."
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "Ancho"
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "Tamaño"
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "Nueva línea"
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "Buscador"
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "Personalizado"
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "Nombre"
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "Nombre del motor de búsqueda"
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https://"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "Introduzca una dirección web con los parámetros de búsqueda, por ejemplo: \"https://vimeo.com/search?q=\""
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} agregará el término de búsqueda ingresado en el cuadro de búsqueda al final de la URL anterior."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "Atributo de nombre"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "q"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "Establece el atributo de nombre en el campo de entrada de búsqueda."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "Esto define el nombre que se pasa al motor de búsqueda al enviar. Si no está seguro, déjelo en blanco."
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "Alineación del texto de búsqueda"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "Izquierda"
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "Centrar"
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "Correcto"
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "Abrir resultados de búsqueda en una nueva pestaña"
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "Mostrar marcadores"
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "Mostrar URL al colocar el cursor sobre el marcador"
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "Mostrar línea de marcador"
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "Mostrar sombra al desplazar el marcador"
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "Es posible que los efectos no sean visibles si Theme Shadow se establece en 0."
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "Crecer al desplazar el marcador"
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "Abrir marcadores en una nueva pestaña"
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "Tamaño del marcador"
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "Cuadra"
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "Azulejos de marcador de forma cuadrada."
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "Lista"
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "Azulejos de marcadores cortos y anchos."
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "Cima"
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "Fondo"
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "Muestre la URL y los controles en la parte superior o inferior de un mosaico de marcadores."
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "Por carta"
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "Por icono"
+  },
+  "menuContentBookmarkSortName": {
+    "message": "Por nombre"
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "Alineación del área de detalles del grupo"
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "Izquierda"
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "Centrar"
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "Correcto"
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "Orden de detalles de grupo"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "Detalles del grupo y luego Marcadores"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "Ordene que el área de detalles del grupo aparezca antes del área de marcadores."
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "Marcadores y luego Detalles del grupo"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "Ordene que el área de marcadores aparezca antes del área de detalles del grupo."
+  },
+  "menuContentGroupNameSize": {
+    "message": "Tamaño del nombre"
+  },
+  "menuContentGroupNameShow": {
+    "message": "Mostrar todo"
+  },
+  "menuContentGroupNameHide": {
+    "message": "Ocultar todo"
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "Los nombres de los grupos también se pueden cambiar editando grupos individuales."
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "Abrir todos los grupos"
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "Contraer todos los grupos"
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "Tamaño de la barra de herramientas del grupo"
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "Control de colapso de grupo"
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "Mostrar todo"
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "Ocultar todo"
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "El botón de contracción de la barra de herramientas de grupo también se puede cambiar editando grupos individuales."
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "Grupo Abrir todo el control"
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "Mostrar todo"
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "Ocultar todo"
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "El botón Abrir todo de la barra de herramientas de grupo también se puede cambiar editando Grupos individuales."
+  },
+  "menuContentToolbarSize": {
+    "message": "Tamaño de la barra de herramientas"
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "En una esquina"
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "En el encabezado"
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "Coloque la barra de herramientas dentro del encabezado o en una esquina de la ventana."
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "Nueva línea"
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "Solo disponible cuando la barra de herramientas se coloca dentro del encabezado."
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "Posición de la barra de herramientas"
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "Arriba a la izquierda"
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "Parte superior derecha"
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "Abajo a la izquierda"
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "Abajo a la derecha"
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "Coloque la barra de herramientas en una de las cuatro esquinas de la ventana."
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "Solo disponible cuando la barra de herramientas está colocada en una esquina."
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "Mostrar control de acento"
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "Mostrar Agregar control"
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "Mostrar control de edición"
+  },
+  "menuContentDataRestoreFile": {
+    "message": "Importar desde archivo"
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "Importar desde el portapapeles"
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "Restaura una copia de seguridad de {appName}"
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "O suelte un archivo de copia de seguridad de {appName}"
+  },
+  "menuContentDataBackupFile": {
+    "message": "Exportar datos"
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "Copiar al portapapeles"
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "Descarga una copia de seguridad de tus marcadores y configuración de {appName}"
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "Este archivo se puede importar posteriormente en este u otro dispositivo."
+  },
+  "menuContentDataClearAll": {
+    "message": "Borrar todos los datos"
+  },
+  "menuContentDataClearPartial": {
+    "message": "Borrar todo excepto los marcadores"
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "Perderá los marcadores al borrar todos los datos."
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "Copia de seguridad de sus datos"
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "Borre todos los datos para restablecer {appName} al estado predeterminado."
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "Alternativamente, es posible borrar todas las configuraciones pero mantener los marcadores y grupos actuales."
+  },
+  "menuContentLanguageLanguage": {
+    "message": "Idioma"
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "¿Encontró una traducción que no es correcta?"
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "Ayuda a traducir {appName}"
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "Aplicar la configuración de marcadores a todos"
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "Soporte del navegador"
+  },
+  "menuContentSupportPageCookies": {
+    "message": "Cookies y caché"
+  },
+  "menuContentSupportPageData": {
+    "message": "Respaldo y restauración de datos"
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "Imagen de fondo local"
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "URL protegidas"
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "Recuperar configuraciones y marcadores"
+  },
+  "menuContentSupportPageResetting": {
+    "message": "Restablecimiento al abrir el navegador"
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "Respetando tu privacidad"
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "Configurar un video o una imagen de fondo"
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "Configurando {appName} como tu página de inicio de Firefox"
+  },
+  "menuContentSupportPara": {
+    "message": "Para obtener más apoyo o comentarios:"
+  },
+  "menuContentSupportLink1": {
+    "message": "Envíe un problema."
+  },
+  "menuContentSupportLink2": {
+    "message": "Consulta la Wiki."
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} es gratis, ¡agradecimiento en forma de café!"
+  },
+  "menuContentCoffeeButton": {
+    "message": "Cómprame un café"
+  },
+  "menuContentAppPara1": {
+    "message": "Comparta su configuración con la comunidad."
+  },
+  "menuContentAppLink1": {
+    "message": "Encontrado en Reddit /r/{appName}."
+  },
+  "menuContentAppPara2": {
+    "message": "Este proyecto es de código abierto."
+  },
+  "menuContentAppLink2": {
+    "message": "Encontrado en GitHub."
+  },
+  "menuContentAppLink3": {
+    "message": "Licencia pública general GNU v3.0."
+  },
+  "bookmarkTileControlLeft": {
+    "message": "Mover este marcador a la izquierda"
+  },
+  "bookmarkTileControlSort": {
+    "message": "Arrastra el marcador para reordenar"
+  },
+  "bookmarkTileControlRight": {
+    "message": "Mover este marcador a la derecha"
+  },
+  "bookmarkTileControlEdit": {
+    "message": "Editar este marcador"
+  },
+  "bookmarkTileControlRemove": {
+    "message": "Quitar este marcador"
+  },
+  "bookmarkAddHeading": {
+    "message": "Agregar un nuevo marcador"
+  },
+  "bookmarkAddSuccessText": {
+    "message": "Agregar"
+  },
+  "bookmarkAddCancelText": {
+    "message": "Cancelar"
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "Eliminar"
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "Eliminar marcador sin nombre"
+  },
+  "bookmarkRemoveContent": {
+    "message": "¿Está seguro de que desea eliminar este marcador? Esto no se puede deshacer."
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "Eliminar"
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "Cancelar"
+  },
+  "bookmarkEditHeadingName": {
+    "message": "Editar"
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "Editar marcador sin nombre"
+  },
+  "bookmarkEditSuccessText": {
+    "message": "Ahorrar"
+  },
+  "bookmarkEditCancelText": {
+    "message": "Cancelar"
+  },
+  "bookmarkFormTabVisual": {
+    "message": "Visual y nombre"
+  },
+  "bookmarkFormTabAddress": {
+    "message": "Habla a"
+  },
+  "bookmarkFormTabPosition": {
+    "message": "Posición"
+  },
+  "bookmarkFormTabLayout": {
+    "message": "Disposición"
+  },
+  "bookmarkFormTabTheme": {
+    "message": "Tema"
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "Visual y nombre"
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "Muestra letras, icono, imagen y un nombre en este mosaico de marcador."
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "Habla a"
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "Asegúrese de utilizar la URL completa e incluir \"https:// ...\""
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "Posición"
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "El grupo en el que colocar este marcador."
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "Disposición"
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "Cambie la posición, la escala y la orientación del elemento visual y el nombre."
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "Tema"
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "Anula el color del tema y el acento."
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https://www.example.com/"
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "Alineación visual de elementos y nombres"
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "Arriba a la izquierda"
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "Centro superior"
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "Parte superior derecha"
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "Centro Izquierda"
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "Centro Centro"
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "Centro Derecha"
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "Abajo a la izquierda"
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "Centro inferior"
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "Abajo a la derecha"
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "Vertical"
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "Apile el elemento visual y nombre uno encima del otro."
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "Horizontal"
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "Organice el elemento visual y el nombre uno al lado del otro."
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "Elemento visual luego nombre"
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "Coloque el elemento visual antes del nombre."
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "Nombre luego elemento visual"
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "Coloque el nombre antes del elemento visual."
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "Girar"
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "Ajustar la posición del elemento visual"
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "Horizontal"
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "Vertical"
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "Canal"
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "Mostrar elemento visual"
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "Muestre letras, íconos o una imagen en este hexágono de marcador."
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "Carta"
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "Icono"
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "Imagen"
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "Tamaño visual"
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "Letra de marcador"
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "mi"
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "Icono de marcador"
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "FontAwesome Marcas o Iconos"
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "Eliminar icono"
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "Imagen de marcador"
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "Sombra visual"
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "La sombra visual solo se aplica a una letra o icono."
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "Mostrar nombre"
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "Nombre del marcador"
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "Ejemplo"
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "Tamaño del nombre"
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "Acento del tema"
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "Utilice el acento definido por el tema."
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "Acento personalizado"
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "Anula el acento del tema."
+  },
+  "bookmarkFormAccentColor": {
+    "message": "Acento"
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "Color del tema"
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "Utilice el color definido por el tema."
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "Color personalizado"
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "Anula el color del tema."
+  },
+  "bookmarkFormColorColor": {
+    "message": "Color"
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "Opacidad"
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "Mostrar fondo"
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "Muestre un fondo de imagen o video en este mosaico de marcador."
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "Imagen"
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "Video"
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "Opacidad"
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "URL de la imagen de fondo"
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "La imagen de fondo solo admite una URL directa a un archivo de imagen."
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "URL del video de fondo"
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "El video de fondo solo admite una URL directa a un archivo de video. Soporta formato MP4 y WebM."
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "No se pueden utilizar las URL de las páginas de YouTube."
+  },
+  "bookmarkFormBorder": {
+    "message": "Frontera"
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "Baldosa ancha"
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "Marcador de mosaico para abarcar dos columnas."
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "Azulejo alto"
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "Marcador de baldosas para abarcar dos filas."
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "Grupo existente"
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "Nuevo grupo"
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "Grupo de ejemplo"
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "Nombre de grupo aleatorio"
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "Grupo"
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "Posición"
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "Aplicar \"Mostrar elemento visual\" y \"Mostrar nombre\" a otros marcadores"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "El texto de la letra, el icono, la imagen y el nombre no se compartirán."
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "Útil para ocultar los elementos visuales o los nombres en todos los marcadores."
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "Aplicar diseño a otros marcadores"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "Una vez guardado, aplique el diseño anterior a todos los demás marcadores."
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "Solo se aplicarán a todos el tamaño visual y del nombre, la alineación, el orden, la posición y el canal."
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "Aplicar tema a otros marcadores"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "Una vez guardado, aplique el tema anterior a todos los demás marcadores."
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "Solo se aplicarán a todos los colores, acento, opacidad, borde y sombra visual."
+  },
+  "bookmarkPreviewFull": {
+    "message": "Avance"
+  },
+  "bookmarkPreviewHalf": {
+    "message": "Vista previa (escala del 50%)"
+  },
+  "groupAreaControlUp": {
+    "message": "Mueve este grupo hacia arriba"
+  },
+  "groupAreaControlSort": {
+    "message": "Arrastra el grupo para reordenar"
+  },
+  "groupAreaControlDown": {
+    "message": "Mueve este grupo hacia abajo"
+  },
+  "groupAreaControlEdit": {
+    "message": "Editar este grupo"
+  },
+  "groupAreaControlRemove": {
+    "message": "Quitar este grupo"
+  },
+  "groupAreaControlOpenAll": {
+    "message": "Abrir todos los marcadores de este grupo"
+  },
+  "groupAreaControlCollapse": {
+    "message": "Contraer este grupo"
+  },
+  "groupAddHeading": {
+    "message": "Agregar un nuevo grupo"
+  },
+  "groupAddSuccessText": {
+    "message": "Agregar"
+  },
+  "groupAddCancelText": {
+    "message": "Cancelar"
+  },
+  "groupRemoveHeadingName": {
+    "message": "Eliminar"
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "Eliminar grupo sin nombre"
+  },
+  "groupRemoveContent": {
+    "message": "¿Está seguro de que desea eliminar este grupo y todos los marcadores que contiene? Esto no se puede deshacer."
+  },
+  "groupRemoveSuccessText": {
+    "message": "Eliminar"
+  },
+  "groupRemoveCancelText": {
+    "message": "Cancelar"
+  },
+  "groupEditHeadingName": {
+    "message": "Editar"
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "Editar grupo sin nombre"
+  },
+  "groupEditSuccessText": {
+    "message": "Ahorrar"
+  },
+  "groupEditCancelText": {
+    "message": "Cancelar"
+  },
+  "groupFormSectionNameHeading": {
+    "message": "Nombre"
+  },
+  "groupFormSectionNameDescription": {
+    "message": "Muestre un nombre encima de este grupo."
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "Barra de herramientas"
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "Mostrar controles para abrir todo o mostrar / ocultar los marcadores de este grupo."
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "Ordenando"
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "La posición de este Grupo."
+  },
+  "groupFormNameShow": {
+    "message": "Mostrar nombre del grupo"
+  },
+  "groupFormNameTextLabel": {
+    "message": "Nombre del grupo"
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "Grupo de ejemplo"
+  },
+  "groupFormNameRandom": {
+    "message": "Nombre de grupo aleatorio"
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "Mostrar Colapsar"
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "El botón Contraer mostrará u ocultará los marcadores de este grupo."
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "Mostrar Abrir todo"
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "Aparecerá el botón Abrir todo si hay al menos un marcador en este grupo."
+  },
+  "groupFormDestination": {
+    "message": "Posición"
+  },
+  "themeCustomTileControlEdit": {
+    "message": "Editar este tema personalizado guardado"
+  },
+  "themeCustomTileControlRemove": {
+    "message": "Eliminar este tema personalizado guardado"
+  },
+  "themeCustomFormNameLabel": {
+    "message": "Nombre"
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "Tema de ejemplo"
+  },
+  "themeCustomFormRandom": {
+    "message": "Nombre de tema aleatorio"
+  },
+  "themeCustomAddHeading": {
+    "message": "Guardar tema actual"
+  },
+  "themeCustomAddSuccessText": {
+    "message": "Ahorrar"
+  },
+  "themeCustomAddCancelText": {
+    "message": "Cancelar"
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "Eliminar"
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "Eliminar tema personalizado sin nombre"
+  },
+  "themeCustomRemoveContent": {
+    "message": "¿Está seguro de que desea eliminar este tema personalizado guardado? Esto no se puede deshacer."
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "Ahorrar"
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "Cancelar"
+  },
+  "themeCustomEditHeadingName": {
+    "message": "Editar"
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "Editar tema personalizado sin nombre"
+  },
+  "themeCustomEditSuccessText": {
+    "message": "Eliminar"
+  },
+  "themeCustomEditCancelText": {
+    "message": "Cancelar"
+  },
+  "toolbarAccent": {
+    "message": "Color de acento"
+  },
+  "toolbarAddLabel": {
+    "message": "Para agregar"
+  },
+  "toolbarAddGroup": {
+    "message": "Nuevo grupo"
+  },
+  "toolbarAddBookmark": {
+    "message": "Nuevo marcador"
+  },
+  "toolbarEdit": {
+    "message": "Editar grupos y marcadores"
+  },
+  "toolbarSetting": {
+    "message": "Abrir menú de configuración"
+  },
+  "dataFormDescription": {
+    "message": "Puede restaurar todo o parte de un archivo de copia de seguridad. Se restaurarán los siguientes datos:"
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "Marcadores"
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "Esto incluye todos los grupos y marcadores"
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "Los marcadores mantendrán los colores, acentos y bordes personalizados cuando se importen."
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "Reemplazar marcadores existentes"
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "Agregar a marcadores existentes"
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "Tema"
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "Esto incluye el color, el acento, las fuentes, el fondo y cualquier tema personalizado guardado."
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "Ajustes"
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "Esto incluye el tamaño y la posición del diseño, el tamaño del área del encabezado, el tamaño del área del marcador y otras configuraciones del usuario."
+  },
+  "dataRestoreHeading": {
+    "message": "Restaurando desde una copia de seguridad de {appName}"
+  },
+  "dataRestoreSuccessText": {
+    "message": "Importar"
+  },
+  "dataRestoreCancelText": {
+    "message": "Cancelar"
+  },
+  "dataClearAllHeading": {
+    "message": "¿Borrar todos los datos de {appName}"
+  },
+  "dataClearAllContentPara1": {
+    "message": "¿Estás seguro de que deseas borrar todos los marcadores y la configuración de {appName} {appName} se restaurará al estado predeterminado."
+  },
+  "dataClearAllContentPara2": {
+    "message": "Esto no se puede deshacer."
+  },
+  "dataClearAllSuccessText": {
+    "message": "Borrar todos los datos"
+  },
+  "dataClearAllCancelText": {
+    "message": "Cancelar"
+  },
+  "dataClearPartialHeading": {
+    "message": "¿ {appName} datos de {appName} excepto los marcadores?"
+  },
+  "dataClearPartialContentPara1": {
+    "message": "¿Estás seguro de que deseas borrar todas las {appName} ? {appName} se restaurará al estado predeterminado, pero sus marcadores y grupos permanecerán."
+  },
+  "dataClearPartialContentPara2": {
+    "message": "Esto no se puede deshacer."
+  },
+  "dataClearPartialSuccessText": {
+    "message": "Borrar todo excepto los marcadores"
+  },
+  "dataClearPartialCancelText": {
+    "message": "Cancelar"
+  },
+  "dataExportBackup": {
+    "message": "respaldo"
+  },
+  "dataFeedbackEmpty": {
+    "message": "Nada seleccionado para importar."
+  },
+  "dataFeedbackSuccess": {
+    "message": "¡Éxito! Restaurando los marcadores y la configuración de {appName}"
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "No es un archivo JSON. Asegúrese de que el archivo seleccionado provenga de {appName} ."
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "No es el tipo correcto de archivo JSON. Asegúrese de que el archivo seleccionado provenga de {appName} ."
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "No es el tipo correcto de datos. Asegúrese de que el portapapeles contenga datos de {appName} o un archivo JSON de respaldo de {appName}"
+  },
+  "controlGeneralReset": {
+    "message": "Restablecen a los predeterminados"
+  },
+  "controlColorTextPlaceholder": {
+    "message": "Código hexadecimal"
+  },
+  "controlColorRandom": {
+    "message": "Color aleatorio"
+  },
+  "controlColorMixerMoreControls": {
+    "message": "Más controles"
+  },
+  "controlColorMixerSliderH": {
+    "message": "Matiz"
+  },
+  "controlColorMixerSliderS": {
+    "message": "Saturación"
+  },
+  "controlColorMixerSliderL": {
+    "message": "Ligereza"
+  },
+  "controlColorMixerSliderR": {
+    "message": "rojo"
+  },
+  "controlColorMixerSliderG": {
+    "message": "Verde"
+  },
+  "controlColorMixerSliderB": {
+    "message": "Azul"
+  }
+}

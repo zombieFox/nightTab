@@ -1,4 +1,4 @@
-import { language } from '../../../language';
+import { message } from '../../message';
 
 import * as form from '../../form';
 
@@ -15,11 +15,11 @@ coffeeSetting.coffee = (parent) => {
     node('div', [
       complexNode({
         tag: 'p',
-        text: language.current.menu.content.coffee.para
+        text: message('menuContentCoffeePara')
       }),
       form.wrap({
         children: [(new Link({
-          text: language.current.menu.content.coffee.button,
+          text: message('menuContentCoffeeButton'),
           href: 'https://www.buymeacoffee.com/zombieFox',
           iconName: 'coffee',
           iconPosition: 'left',

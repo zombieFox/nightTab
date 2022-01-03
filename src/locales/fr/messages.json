@@ -1,0 +1,2066 @@
+{
+  "appName": {
+    "message": "nightTab"
+  },
+  "appShortName": {
+    "message": "nightTab"
+  },
+  "appDescription": {
+    "message": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab."
+  },
+  "menuNavThemeLabel": {
+    "message": "Thème"
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "Préréglage"
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "Enregistré"
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "Style"
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "Couleur"
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "Accent"
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "Police de caractère"
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "Rayon"
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "Ombre"
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "Ombre"
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "Opacité"
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "Fond"
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "Disposition"
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "Entête"
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "Signet"
+  },
+  "menuNavLayoutLabel": {
+    "message": "Disposition"
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "Mise à l'échelle"
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "Zone"
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "Rembourrage"
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "Gouttière"
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "Alignement"
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "Page"
+  },
+  "menuNavHeaderLabel": {
+    "message": "Entête"
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "Alignement"
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "Salutation"
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "Mots de transition"
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "Horloge"
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "Date"
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "Chercher"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "Signet"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "Général"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "Style"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "Orientation"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "Sorte"
+  },
+  "menuNavGroupLabel": {
+    "message": "Grouper"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "Alignement"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "Nom"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "Effondrer"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "Barre d'outils"
+  },
+  "menuNavToolbarLabel": {
+    "message": "Barre d'outils"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "Taille"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "Emplacement"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "Position"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "Contrôles"
+  },
+  "menuNavDataLabel": {
+    "message": "Données"
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "Restaurer"
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "Sauvegarde"
+  },
+  "menuNavDataSubNavClear": {
+    "message": "Dégager"
+  },
+  "menuNavLanguageLabel": {
+    "message": "Langue"
+  },
+  "menuNavSupportLabel": {
+    "message": "Soutien"
+  },
+  "menuNavCoffeeLabel": {
+    "message": "Café"
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}"
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "L'application d'un préréglage remplacera la couleur, l'accent, la police, le style, le rayon, l'ombre, l'ombre et l'arrière-plan actuels."
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "L'enregistrement d'un thème enregistrera la couleur, l'accent, la police, le style, l'opacité, le rayon, l'ombre, la nuance et l'arrière-plan actuels."
+  },
+  "menuContentThemeSavedSave": {
+    "message": "Enregistrer le thème actuel"
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "Modifier les thèmes enregistrés"
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "Mode sombre"
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "Mode lumière"
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "Automatique"
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "Suivez le système en mode clair ou sombre."
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "Les arrière-plans, les signets et les modaux utilisent des nuances à partir de la gauche."
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "Les éléments de texte et de formulaire utilisent des nuances à partir de la droite."
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "Pour un look clair, passez au style d'éclairage, puis sélectionnez une couleur primaire. Et vice versa pour un look sombre."
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "Couleur primaire"
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "Saturation"
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "Plage de contraste"
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "Début du contraste"
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "Fin de contraste"
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "Rapprochez les commandes de la plage de contraste pour un look en sourdine."
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "Éloignez les commandes de la plage de contraste les unes des autres pour un look vif et net."
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "Gris"
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "rouge"
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "Orange"
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "Jaune"
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "Chaux"
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "Vert"
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "Aqua"
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "cyan"
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "Sarcelle"
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "Bleu"
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "Mauve"
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "Magenta"
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "Fuchsia"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "Super extra léger"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "Lumière supplémentaire"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "Lumière"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "Super extra foncé"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "Très sombre"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "Foncé"
+  },
+  "menuContentThemeAccentColor": {
+    "message": "Couleur d'accent"
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "Couleur d'accent aléatoire au chargement/rafraîchissement"
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "Quelconque"
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "Lumière"
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "Foncé"
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "Pastel"
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "Saturé"
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "Randomiser maintenant"
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "Changement automatique de teinte d'accent"
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "Délai de changement"
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "Étapes de changement"
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "Faites attention car une teinte Accent changeant rapidement peut entraîner des problèmes de performances."
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "Le changement automatique de teinte d'accent ne fonctionnera pas lorsque la couleur d'accent est un gris ou un noir."
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "Police d'affichage"
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "Nom de la police Google"
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "Utilisez une police Google pour personnaliser l'horloge, la date, les noms de groupe et les lettres de signet."
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "Trouver une police Google"
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "Ajoutez un nom de police tel qu'il apparaît sur Google Fonts, y compris les majuscules et les espaces, par exemple : saisissez « Fredoka One » ou « Kanit »."
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "Effacez le champ pour utiliser la police par défaut \"Fjalla One\"."
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "Poids de la police"
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "Lumière"
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "Ordinaire"
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "Audacieux"
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "Toutes les polices ne prennent pas en charge tous les poids. Reportez-vous à la page Google Fonts pour voir lesquelles sont disponibles."
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "Normal"
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "Italique"
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "Police de l'interface utilisateur"
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "Nom de la police Google"
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "Utilisez une police Google pour personnaliser le nom du signet, l'URL et les éléments du formulaire."
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "Trouver une police Google"
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "Ajoutez un nom de police tel qu'il apparaît sur Google Fonts, y compris les majuscules et les espaces, par exemple : saisissez \"Roboto\", \"Source Sans Pro\" ou \"Noto Sans\"."
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "Effacez le champ pour utiliser la police par défaut \"Open Sans\"."
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "Poids de la police"
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "Lumière"
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "Ordinaire"
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "Audacieux"
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "Toutes les polices ne prennent pas en charge tous les poids. Reportez-vous à la page Google Fonts pour voir lesquelles sont disponibles."
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "Normal"
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "Italique"
+  },
+  "menuContentThemeRadius": {
+    "message": "Rayon d'angle"
+  },
+  "menuContentThemeShadow": {
+    "message": "Taille de l'ombre"
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "Opacité de l'ombre"
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "Flou d'ombre"
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "Non pris en charge par tous les navigateurs."
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "Toute opacité"
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "Modifiez l'opacité de la barre de recherche, des signets, des commandes de groupe et de la barre d'outils."
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "L'opacité peut également être modifiée lors de l'édition de signets individuels."
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "Barre d'outils"
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "Signet"
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "Barre de recherche"
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "Barre d'outils de groupe"
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "Contexte par thème"
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "Utilisez la couleur d'arrière-plan définie par le thème."
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "Arrière-plan par accent"
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "Utilisez la couleur d'accent pour l'arrière-plan."
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "Couleur personnalisée"
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "Pente"
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "Image"
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "Vidéo"
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "La couleur de fond"
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "Angle de dégradé d'arrière-plan"
+  },
+  "menuContentThemeBackgroundGradientStart": {
+    "message": "Début du dégradé d'arrière-plan"
+  },
+  "menuContentThemeBackgroundGradientEnd": {
+    "message": "Fin du dégradé de fond"
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "Les images locales ne peuvent plus être utilisées. Les images doivent être hébergées quelque part en ligne."
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "Pourquoi cela a-t-il changé ?"
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https://www.exemple.com/image.jpg"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "Ajoutez plusieurs URL séparées par des espaces ou sur de nouvelles lignes pour une image d'arrière-plan aléatoire lors du chargement."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "Unsplash peut être utilisé pour des images aléatoires, par exemple :"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https://source.unsplash.com/random/1920x1080/?nuit,jour,ciel"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "Modifiez les paramètres après .../random/ pour plus d'options. Les temps de chargement peuvent varier."
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "Se brouiller"
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "Niveaux de gris"
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "Échelle"
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "Accent"
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "Opacité"
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "Vignette"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "Début et fin de l'ombre"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "Abat-jour"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "Début de l'ombre"
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "Les URL des pages YouTube ne peuvent pas être utilisées."
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "Comment créer un lien vers un fichier vidéo."
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "La vidéo d'arrière-plan ne prend en charge qu'une URL directe vers un fichier vidéo. Prend en charge les formats MP4 et WebM."
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "Ajoutez plusieurs URL séparées par des espaces ou sur de nouvelles lignes pour une vidéo d'arrière-plan aléatoire au chargement."
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "Se brouiller"
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "Niveaux de gris"
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "Échelle"
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "Accent"
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "Opacité"
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "Vignette"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "Début et fin de l'ombre"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "Abat-jour"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "Début de l'ombre"
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "Couleur d'arrière-plan de la mise en page"
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "Transparent"
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "Aucune couleur d'arrière-plan derrière la mise en page."
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "Couleur personnalisée"
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "Utilisez une couleur personnalisée derrière la mise en page."
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "Couleur d'arrière-plan de la mise en page"
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "Opacité de l'arrière-plan"
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "Flou d'arrière-plan"
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "Non pris en charge par tous les navigateurs."
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "Séparateur entre l'en-tête et la zone de signet"
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "Couleur d'arrière-plan de l'en-tête"
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "Transparent"
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "Aucune couleur d'arrière-plan derrière la zone d'en-tête."
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "Couleur personnalisée"
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "Utilisez une couleur personnalisée derrière la zone d'en-tête."
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "Couleur d'arrière-plan de l'en-tête"
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "Opacité de l'arrière-plan"
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "Couleur d'arrière-plan du signet"
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "Transparent"
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "Aucune couleur d'arrière-plan derrière la zone des signets."
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "Couleur personnalisée"
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "Utilisez une couleur personnalisée derrière la zone des signets."
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "Couleur d'arrière-plan du signet"
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "Opacité de l'arrière-plan"
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "Bordure de signet"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "La bordure des signets peut également être modifiée lors de l'édition de signets individuels."
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "La couleur de la bordure est définie par l'accent qui peut également être modifié lors de l'édition de signets individuels."
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "Ajoutez un accent unique à chaque signet"
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "Supprimer tous les remplacements d'accent"
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "L'accent personnalisé des signets peut également être modifié lors de l'édition de signets individuels."
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "Taille globale"
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "Largeur de la zone de mise en page"
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "Largeur de la zone d'en-tête"
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "Alignement de la zone d'en-tête"
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "À gauche"
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "Centre"
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "À droite"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "Les effets peuvent ne pas être visibles si la zone d'en-tête est pleine largeur."
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "Uniquement disponible lorsque la direction de mise en page est verticale et que les éléments d'en-tête sont affichés."
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "Largeur de la zone de signet"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "Alignement de la zone de signet"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "À gauche"
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "Centre"
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "À droite"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "Les effets peuvent ne pas être visibles si la zone des signets est pleine largeur."
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "Uniquement disponible lorsque la direction de mise en page est verticale et que les éléments d'en-tête sont affichés."
+  },
+  "menuContentLayoutPadding": {
+    "message": "Espace autour de l'en-tête et de la zone de signet"
+  },
+  "menuContentLayoutGutter": {
+    "message": "Espace entre les éléments d'en-tête et de signet"
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "Alignement de zone"
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "En haut à gauche"
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "Haut au centre"
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "En haut à droite"
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "Centre gauche"
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "Centre Centre"
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "Centre droit"
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "En bas à gauche"
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "En bas au centre"
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "En bas à droite"
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "Aligner horizontalement"
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "Empilez l'en-tête et les signets côte à côte."
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "Aligner verticalement"
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "Empilez l'en-tête et les signets dans une colonne l'une au-dessus de l'autre."
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "En-tête puis Signets"
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "Ordonnez que la zone d'en-tête apparaisse avant la zone de signets."
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "Signets puis en-tête"
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "Ordonnez que la zone Signets apparaisse avant la zone En-tête."
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "Titre"
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "Nouvel onglet"
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "URL de l'icône de favori"
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https://www.example.com/favicon.svg"
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "Non pris en charge par tous les navigateurs."
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "Barre de défilement"
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "Auto"
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "Mince"
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "Caché"
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "Non pris en charge par tous les navigateurs."
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "Faire défiler après la fin"
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "Annuler le flou d'une image ou d'une vidéo d'arrière-plan"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "L'image d'arrière-plan ou la vidéo ne sera plus floue lors du défilement vers le bas de la page."
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "Le flou d'image ou de vidéo se trouve sous Arrière-plan du thème."
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "Alignement des éléments d'en-tête"
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "À gauche"
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "Centre"
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "À droite"
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "Les effets peuvent ne pas être visibles si la taille de la zone de recherche est définie sur Auto et augmente pour remplir l'espace disponible."
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "Afficher le message d'accueil"
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "Taille"
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "Nouvelle ligne"
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête."
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "Formulation"
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"Bonjour...\""
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"Bonjour...\""
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"Salut...\""
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "Rien"
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "Utile pour afficher uniquement le nom."
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "Personnalisé"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "Utilisez votre propre salutation."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "La valeur par défaut est \"Bonjour...\" si elle est laissée vide."
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "Texte d'accueil personnalisé"
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "salut"
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "Nom"
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "Surnom, alias ou nom de super-héros"
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "Afficher les mots de transition"
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "Uniquement disponible lorsque la date ou l'heure est affichée."
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "Formulation"
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "\"L'heure et la date sont\""
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"Son\""
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "Taille"
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "Nouvelle ligne"
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête."
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "Afficher les heures"
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "Comme nombre"
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "Une épée"
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "Afficher les minutes"
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "Comme nombre"
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "Une épée"
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "Afficher les secondes"
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "Comme nombre"
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "Une épée"
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "Afficher le séparateur"
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "Caractère de séparation"
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":"
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "24 heures"
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "MATIN APRÈS-MIDI"
+  },
+  "menuContentHeaderClockSize": {
+    "message": "Taille"
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "Nouvelle ligne"
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête."
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "Jour de spectacle"
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "Comme nombre"
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "Une épée"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "Début de semaine"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "Lundi"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "dimanche"
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "Longueur du mot"
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "Long"
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "Court"
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "Afficher la date"
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "Comme nombre"
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "Une épée"
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "Nombres ordinaux"
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "Afficher le mois"
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "Comme nombre"
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "Une épée"
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "Nombres ordinaux"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "Longueur du mot"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "Long"
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "Court"
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "Afficher l'année"
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "Comme nombre"
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "Une épée"
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "Afficher le séparateur"
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "Caractère de séparation"
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "/"
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "Format"
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "Date / Mois"
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "Mois / Date"
+  },
+  "menuContentHeaderDateSize": {
+    "message": "Taille"
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "Nouvelle ligne"
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête."
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "Afficher la recherche"
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "Largeur du champ de recherche"
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "Largeur automatique"
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "La zone de recherche s'agrandira pour s'adapter au mieux à l'espace disponible."
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "Largeur personnalisée"
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "Définissez la largeur de la zone de recherche à l'intérieur de la zone d'en-tête."
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "Largeur"
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "Taille"
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "Nouvelle ligne"
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête."
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "Moteur de recherche"
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "Personnalisé"
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "Nom"
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "Nom du moteur de recherche"
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https://"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "Saisissez une adresse Web avec les paramètres de recherche, par exemple : \"https://vimeo.com/search?q=\""
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} ajoutera le terme de recherche entré dans la zone de recherche à la fin de l'URL ci-dessus."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "Attribut de nom"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "q"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "Définit l'attribut de nom dans le champ de saisie Rechercher."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "Ceci définit le nom passé au moteur de recherche lors de la soumission. Si vous n'êtes pas sûr, laissez vide."
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "Alignement du texte de recherche"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "À gauche"
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "Centre"
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "À droite"
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "Ouvrir les résultats de la recherche dans un nouvel onglet"
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "Afficher les signets"
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "Afficher l'URL au survol des signets"
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "Afficher la ligne de signet"
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "Afficher l'ombre au survol du signet"
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "Les effets peuvent ne pas être visibles si Theme Shadow est défini sur 0."
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "Agrandir au survol des signets"
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "Ouvrir les signets dans un nouvel onglet"
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "Taille du signet"
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "Bloquer"
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "Carreaux de marque-page en forme de carré."
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "Lister"
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "Tuiles marque-pages courtes et larges."
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "Haut"
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "Bas"
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "Affichez l'URL et les commandes en haut ou en bas d'une vignette de signet."
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "Par lettre"
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "Par icône"
+  },
+  "menuContentBookmarkSortName": {
+    "message": "De nom"
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "Alignement de la zone des détails du groupe"
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "À gauche"
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "Centre"
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "À droite"
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "Ordre des détails du groupe"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "Détails du groupe puis Signets"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "Ordonnez que la zone Détails du groupe apparaisse avant la zone Signets."
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "Signets puis Détails du groupe"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "Faites en sorte que la zone Signets apparaisse avant la zone Détails du groupe."
+  },
+  "menuContentGroupNameSize": {
+    "message": "Taille du nom"
+  },
+  "menuContentGroupNameShow": {
+    "message": "Afficher tout"
+  },
+  "menuContentGroupNameHide": {
+    "message": "Cacher tout"
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "Les noms de groupe peuvent également être modifiés en éditant des groupes individuels."
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "Ouvrir tous les groupes"
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "Réduire tous les groupes"
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "Taille de la barre d'outils du groupe"
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "Contrôle de réduction de groupe"
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "Afficher tout"
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "Cacher tout"
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "Le bouton de réduction de la barre d'outils des groupes peut également être modifié en modifiant des groupes individuels."
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "Groupe Ouvrir tous les contrôles"
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "Afficher tout"
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "Cacher tout"
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "Le bouton ouvrir tout de la barre d'outils des groupes peut également être modifié en modifiant des groupes individuels."
+  },
+  "menuContentToolbarSize": {
+    "message": "Taille de la barre d'outils"
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "Dans un coin"
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "Dans l'en-tête"
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "Placez la barre d'outils à l'intérieur de l'en-tête ou dans un coin de la fenêtre."
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "Nouvelle ligne"
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "Forcer sur une nouvelle ligne et séparer des autres éléments d'en-tête."
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "Uniquement disponible lorsque la barre d'outils est positionnée à l'intérieur de l'en-tête."
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "Position de la barre d'outils"
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "En haut à gauche"
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "En haut à droite"
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "En bas à gauche"
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "En bas à droite"
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "Positionnez la barre d'outils dans l'un des quatre coins de la fenêtre."
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "Uniquement disponible lorsque la barre d'outils est positionnée dans un coin."
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "Afficher le contrôle d'accentuation"
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "Afficher Ajouter un contrôle"
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "Afficher le contrôle d'édition"
+  },
+  "menuContentDataRestoreFile": {
+    "message": "Importer depuis un fichier"
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "Importer depuis le presse-papiers"
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "Restaurez une sauvegarde {appName}"
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "Ou déposez un fichier de sauvegarde {appName}"
+  },
+  "menuContentDataBackupFile": {
+    "message": "Exporter des données"
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "Copier dans le presse-papier"
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "Téléchargez une sauvegarde de vos favoris et paramètres {appName}"
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "Ce fichier pourra ensuite être importé sur cet appareil ou sur un autre."
+  },
+  "menuContentDataClearAll": {
+    "message": "Effacer toutes les données"
+  },
+  "menuContentDataClearPartial": {
+    "message": "Tout effacer sauf les favoris"
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "Vous perdrez les signets en effaçant toutes les données."
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "Sauvegardez vos données"
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "Effacez toutes les données pour réinitialiser {appName} à l'état par défaut."
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "Alternativement, il est possible d'effacer tous les paramètres mais de conserver les signets et les groupes actuels."
+  },
+  "menuContentLanguageLanguage": {
+    "message": "Langue"
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "Vous avez trouvé une traduction qui n'est pas correcte ?"
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "Aidez à traduire {appName}"
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "Application des paramètres de signet à tous"
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "Prise en charge du navigateur"
+  },
+  "menuContentSupportPageCookies": {
+    "message": "Cookies et cache"
+  },
+  "menuContentSupportPageData": {
+    "message": "Sauvegarde et restauration des données"
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "Image de fond locale"
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "URL protégées"
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "Récupération des paramètres et des signets"
+  },
+  "menuContentSupportPageResetting": {
+    "message": "Réinitialisation à l'ouverture du navigateur"
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "Respect de votre vie privée"
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "Définir une vidéo ou une image d'arrière-plan"
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "Définir {appName} comme page d'accueil de Firefox"
+  },
+  "menuContentSupportPara": {
+    "message": "Pour plus d'assistance ou de commentaires :"
+  },
+  "menuContentSupportLink1": {
+    "message": "Soumettre un problème."
+  },
+  "menuContentSupportLink2": {
+    "message": "Vérifiez le Wiki."
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} est gratuit, l'appréciation est la bienvenue sous forme de café !"
+  },
+  "menuContentCoffeeButton": {
+    "message": "Achetez-moi un café"
+  },
+  "menuContentAppPara1": {
+    "message": "Partagez votre configuration avec la communauté."
+  },
+  "menuContentAppLink1": {
+    "message": "Trouvé sur Reddit /r/{appName}."
+  },
+  "menuContentAppPara2": {
+    "message": "Ce projet est open source."
+  },
+  "menuContentAppLink2": {
+    "message": "Trouvé sur GitHub."
+  },
+  "menuContentAppLink3": {
+    "message": "Licence publique générale GNU v3.0."
+  },
+  "bookmarkTileControlLeft": {
+    "message": "Déplacer ce signet vers la gauche"
+  },
+  "bookmarkTileControlSort": {
+    "message": "Faites glisser le signet pour réorganiser"
+  },
+  "bookmarkTileControlRight": {
+    "message": "Déplacer ce signet vers la droite"
+  },
+  "bookmarkTileControlEdit": {
+    "message": "Modifier ce signet"
+  },
+  "bookmarkTileControlRemove": {
+    "message": "Supprimer ce signet"
+  },
+  "bookmarkAddHeading": {
+    "message": "Ajouter un nouveau signet"
+  },
+  "bookmarkAddSuccessText": {
+    "message": "Ajouter"
+  },
+  "bookmarkAddCancelText": {
+    "message": "Annuler"
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "Supprimer"
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "Supprimer le signet sans nom"
+  },
+  "bookmarkRemoveContent": {
+    "message": "Voulez-vous vraiment supprimer ce signet ? Ça ne peut pas être annulé."
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "Supprimer"
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "Annuler"
+  },
+  "bookmarkEditHeadingName": {
+    "message": "Éditer"
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "Modifier le signet sans nom"
+  },
+  "bookmarkEditSuccessText": {
+    "message": "Sauvegarder"
+  },
+  "bookmarkEditCancelText": {
+    "message": "Annuler"
+  },
+  "bookmarkFormTabVisual": {
+    "message": "Visuel et nom"
+  },
+  "bookmarkFormTabAddress": {
+    "message": "Adresse"
+  },
+  "bookmarkFormTabPosition": {
+    "message": "Position"
+  },
+  "bookmarkFormTabLayout": {
+    "message": "Disposition"
+  },
+  "bookmarkFormTabTheme": {
+    "message": "Thème"
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "Visuel et nom"
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "Affichez des lettres, une icône, une image et un nom sur cette vignette de signet."
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "Adresse"
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "Assurez-vous d'utiliser l'URL complète et d'inclure \"https://...\""
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "Position"
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "Le groupe dans lequel placer ce signet."
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "Disposition"
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "Modifiez la position, l'échelle et l'orientation de l'élément visuel et du nom."
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "Thème"
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "Remplacez la couleur du thème et de l'accent."
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https://www.exemple.com/"
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "Alignement des éléments visuels et des noms"
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "En haut à gauche"
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "Haut au centre"
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "En haut à droite"
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "Centre gauche"
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "Centre Centre"
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "Centre droit"
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "En bas à gauche"
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "En bas au centre"
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "En bas à droite"
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "Verticale"
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "Empilez l'élément visuel et le nom l'un au-dessus de l'autre."
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "Horizontal"
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "Disposez l'élément visuel et le nom côte à côte."
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "Élément visuel puis nom"
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "Placez l'élément visuel avant le nom."
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "Nom puis élément visuel"
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "Placez le nom avant l'élément visuel."
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "Tourner"
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "Ajuster la position de l'élément visuel"
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "Horizontal"
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "Verticale"
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "Gouttière"
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "Afficher l'élément visuel"
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "Affichez des lettres, une icône ou une image sur cet hexagone de signet."
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "Lettre"
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "Icône"
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "Image"
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "Taille visuelle"
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "Lettre de signet"
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "E"
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "Icône de signet"
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "Marques ou icônes FontAwesome"
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "Supprimer l'icône"
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "Image de signet"
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https://www.exemple.com/image.jpg"
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "Ombre visuelle"
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "L'ombre visuelle ne s'applique qu'à une lettre ou une icône."
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "Afficher le nom"
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "Nom du signet"
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "Exemple"
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "Taille du nom"
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "Accent de thème"
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "Utilisez l'accent défini par le thème."
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "Accent personnalisé"
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "Remplacez l'accent du thème."
+  },
+  "bookmarkFormAccentColor": {
+    "message": "Accent"
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "Couleur du thème"
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "Utilisez la couleur définie par le thème."
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "Couleur personnalisée"
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "Remplacez la couleur du thème."
+  },
+  "bookmarkFormColorColor": {
+    "message": "Couleur"
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "Opacité"
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "Afficher l'arrière-plan"
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "Affichez une image ou une vidéo d'arrière-plan sur cette vignette de signet."
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "Image"
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "Vidéo"
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "Opacité"
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "URL de l'image d'arrière-plan"
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https://www.exemple.com/image.jpg"
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "L'image d'arrière-plan ne prend en charge qu'une URL directe vers un fichier image."
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "URL de la vidéo d'arrière-plan"
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "La vidéo d'arrière-plan ne prend en charge qu'une URL directe vers un fichier vidéo. Prend en charge les formats MP4 et WebM."
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "Les URL des pages YouTube ne peuvent pas être utilisées."
+  },
+  "bookmarkFormBorder": {
+    "message": "Frontière"
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "Tuile large"
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "Tuile de signet pour s'étendre sur deux colonnes."
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "Tuile haute"
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "La vignette des signets doit s'étendre sur deux rangées."
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "Groupe existant"
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "Nouveau groupe"
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "Exemple de groupe"
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "Nom du groupe aléatoire"
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "Grouper"
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "Position"
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "Appliquer \"Afficher l'élément visuel\" et \"Afficher le nom\" à d'autres signets"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "Le texte de la lettre, de l'icône, de l'image et du nom ne sera pas partagé."
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "Utile pour masquer les éléments visuels ou les noms sur tous les signets."
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "Appliquer la mise en page à d'autres signets"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "Une fois enregistré, appliquez la mise en page ci-dessus à tous les autres signets."
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "Seuls la taille du visuel et du nom, l'alignement, l'ordre, la position et la gouttière seront appliqués à tous."
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "Appliquer le thème à d'autres signets"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "Une fois enregistré, appliquez le thème ci-dessus à tous les autres signets."
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "Seules la couleur, l'accent, l'opacité, la bordure et l'ombre visuelle seront appliqués à tous."
+  },
+  "bookmarkPreviewFull": {
+    "message": "Aperçu"
+  },
+  "bookmarkPreviewHalf": {
+    "message": "Aperçu (échelle 50 %)"
+  },
+  "groupAreaControlUp": {
+    "message": "Déplacer ce groupe vers le haut"
+  },
+  "groupAreaControlSort": {
+    "message": "Faites glisser le groupe pour réorganiser"
+  },
+  "groupAreaControlDown": {
+    "message": "Déplacer ce groupe vers le bas"
+  },
+  "groupAreaControlEdit": {
+    "message": "Modifier ce groupe"
+  },
+  "groupAreaControlRemove": {
+    "message": "Supprimer ce groupe"
+  },
+  "groupAreaControlOpenAll": {
+    "message": "Ouvrir tous les signets de ce groupe"
+  },
+  "groupAreaControlCollapse": {
+    "message": "Réduire ce groupe"
+  },
+  "groupAddHeading": {
+    "message": "Ajouter un nouveau groupe"
+  },
+  "groupAddSuccessText": {
+    "message": "Ajouter"
+  },
+  "groupAddCancelText": {
+    "message": "Annuler"
+  },
+  "groupRemoveHeadingName": {
+    "message": "Supprimer"
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "Supprimer le groupe sans nom"
+  },
+  "groupRemoveContent": {
+    "message": "Êtes-vous sûr de vouloir supprimer ce groupe et tous les signets qu'il contient ? Ça ne peut pas être annulé."
+  },
+  "groupRemoveSuccessText": {
+    "message": "Supprimer"
+  },
+  "groupRemoveCancelText": {
+    "message": "Annuler"
+  },
+  "groupEditHeadingName": {
+    "message": "Éditer"
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "Modifier le groupe sans nom"
+  },
+  "groupEditSuccessText": {
+    "message": "Sauvegarder"
+  },
+  "groupEditCancelText": {
+    "message": "Annuler"
+  },
+  "groupFormSectionNameHeading": {
+    "message": "Nom"
+  },
+  "groupFormSectionNameDescription": {
+    "message": "Afficher un nom au-dessus de ce groupe."
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "Barre d'outils"
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "Afficher les commandes pour tout ouvrir ou afficher/masquer les signets de ce groupe."
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "Commande"
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "La position de ce groupe."
+  },
+  "groupFormNameShow": {
+    "message": "Afficher le nom du groupe"
+  },
+  "groupFormNameTextLabel": {
+    "message": "Nom de groupe"
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "Exemple de groupe"
+  },
+  "groupFormNameRandom": {
+    "message": "Nom du groupe aléatoire"
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "Afficher Réduire"
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "Le bouton Réduire affichera ou masquera les signets de ce groupe."
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "Afficher Tout ouvrir"
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "Le bouton Ouvrir tout apparaîtra s'il y a au moins un signet dans ce groupe."
+  },
+  "groupFormDestination": {
+    "message": "Position"
+  },
+  "themeCustomTileControlEdit": {
+    "message": "Modifier ce thème personnalisé enregistré"
+  },
+  "themeCustomTileControlRemove": {
+    "message": "Supprimer ce thème personnalisé enregistré"
+  },
+  "themeCustomFormNameLabel": {
+    "message": "Nom"
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "Exemple de thème"
+  },
+  "themeCustomFormRandom": {
+    "message": "Nom de thème aléatoire"
+  },
+  "themeCustomAddHeading": {
+    "message": "Enregistrer le thème actuel"
+  },
+  "themeCustomAddSuccessText": {
+    "message": "Sauvegarder"
+  },
+  "themeCustomAddCancelText": {
+    "message": "Annuler"
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "Supprimer"
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "Supprimer le thème personnalisé sans nom"
+  },
+  "themeCustomRemoveContent": {
+    "message": "Voulez-vous vraiment supprimer ce thème personnalisé enregistré ? Ça ne peut pas être annulé."
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "Sauvegarder"
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "Annuler"
+  },
+  "themeCustomEditHeadingName": {
+    "message": "Éditer"
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "Modifier le thème personnalisé sans nom"
+  },
+  "themeCustomEditSuccessText": {
+    "message": "Supprimer"
+  },
+  "themeCustomEditCancelText": {
+    "message": "Annuler"
+  },
+  "toolbarAccent": {
+    "message": "Couleur d'accent"
+  },
+  "toolbarAddLabel": {
+    "message": "Ajouter"
+  },
+  "toolbarAddGroup": {
+    "message": "Nouveau groupe"
+  },
+  "toolbarAddBookmark": {
+    "message": "Nouveau signet"
+  },
+  "toolbarEdit": {
+    "message": "Modifier des groupes et des signets"
+  },
+  "toolbarSetting": {
+    "message": "Ouvrir le menu des paramètres"
+  },
+  "dataFormDescription": {
+    "message": "Vous pouvez restaurer tout ou partie d'un fichier de sauvegarde. Les données suivantes seront restaurées :"
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "Signets"
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "Cela inclut tous les groupes et signets"
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "Les signets conserveront toutes les couleurs, accents et bordures personnalisés lors de l'importation."
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "Remplacer les signets existants"
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "Ajouter aux favoris existants"
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "Thème"
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "Cela inclut la couleur, l'accent, les polices, l'arrière-plan et tous les thèmes personnalisés enregistrés."
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "Réglages"
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "Cela inclut la taille et la position de la mise en page, la taille de la zone d'en-tête, la taille de la zone des signets et d'autres paramètres utilisateur."
+  },
+  "dataRestoreHeading": {
+    "message": "Restauration à partir d'une sauvegarde {appName}"
+  },
+  "dataRestoreSuccessText": {
+    "message": "Importer"
+  },
+  "dataRestoreCancelText": {
+    "message": "Annuler"
+  },
+  "dataClearAllHeading": {
+    "message": "Effacer toutes les données {appName}"
+  },
+  "dataClearAllContentPara1": {
+    "message": "Voulez-vous vraiment effacer tous les favoris et paramètres de {appName} {appName} sera restauré à l'état par défaut."
+  },
+  "dataClearAllContentPara2": {
+    "message": "Ça ne peut pas être annulé."
+  },
+  "dataClearAllSuccessText": {
+    "message": "Effacer toutes les données"
+  },
+  "dataClearAllCancelText": {
+    "message": "Annuler"
+  },
+  "dataClearPartialHeading": {
+    "message": "Effacer les {appName} l'exception des favoris ?"
+  },
+  "dataClearPartialContentPara1": {
+    "message": "Voulez-vous vraiment effacer tous les {appName} ? {appName} sera restauré à l'état par défaut, mais vos signets et groupes resteront."
+  },
+  "dataClearPartialContentPara2": {
+    "message": "Ça ne peut pas être annulé."
+  },
+  "dataClearPartialSuccessText": {
+    "message": "Tout effacer sauf les favoris"
+  },
+  "dataClearPartialCancelText": {
+    "message": "Annuler"
+  },
+  "dataExportBackup": {
+    "message": "sauvegarde"
+  },
+  "dataFeedbackEmpty": {
+    "message": "Rien de sélectionné à importer."
+  },
+  "dataFeedbackSuccess": {
+    "message": "Succès! Restauration des signets et paramètres de {appName}"
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "Pas un fichier JSON. Assurez-vous que le fichier sélectionné provient de {appName} ."
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "Pas le bon type de fichier JSON. Assurez-vous que le fichier sélectionné provient de {appName} ."
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "Pas le bon type de données. Assurez-vous que le presse-papiers contient les données de {appName} ou d'un fichier JSON de sauvegarde {appName}"
+  },
+  "controlGeneralReset": {
+    "message": "Réinitialiser par défaut"
+  },
+  "controlColorTextPlaceholder": {
+    "message": "Code hexadécimal"
+  },
+  "controlColorRandom": {
+    "message": "Couleur aléatoire"
+  },
+  "controlColorMixerMoreControls": {
+    "message": "Plus de contrôles"
+  },
+  "controlColorMixerSliderH": {
+    "message": "Teinte"
+  },
+  "controlColorMixerSliderS": {
+    "message": "Saturation"
+  },
+  "controlColorMixerSliderL": {
+    "message": "Légèreté"
+  },
+  "controlColorMixerSliderR": {
+    "message": "rouge"
+  },
+  "controlColorMixerSliderG": {
+    "message": "Vert"
+  },
+  "controlColorMixerSliderB": {
+    "message": "Bleu"
+  }
+}

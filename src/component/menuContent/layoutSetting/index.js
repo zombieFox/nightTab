@@ -1,4 +1,4 @@
-import { language } from '../../../language';
+import { message } from '../../message';
 
 import { state } from '../../state';
 import { data } from '../../data';
@@ -110,7 +110,7 @@ layoutSetting.scaling = (parent) => {
     object: state.get.current(),
     path: 'layout.size',
     id: 'layout-size',
-    labelText: language.current.menu.content.layout.scaling.size,
+    labelText: message('menuContentLayoutScalingSize'),
     value: state.get.current().layout.size,
     defaultValue: state.get.default().layout.size,
     min: state.get.minMax().layout.size.min,
@@ -148,7 +148,7 @@ layoutSetting.area = (parent) => {
     object: state.get.current(),
     path: 'layout.width',
     id: 'layout-width',
-    labelText: language.current.menu.content.layout.area.width,
+    labelText: message('menuContentLayoutAreaWidth'),
     value: state.get.current().layout.width,
     defaultValue: state.get.default().layout.width,
     min: state.get.minMax().layout.width.min,
@@ -171,7 +171,7 @@ layoutSetting.area = (parent) => {
       object: state.get.current(),
       path: 'layout.area.header.width',
       id: 'layout-area-header-width',
-      labelText: language.current.menu.content.layout.area.header.width,
+      labelText: message('menuContentLayoutAreaHeaderWidth'),
       value: state.get.current().layout.area.header.width,
       defaultValue: state.get.default().layout.area.header.width,
       min: state.get.minMax().layout.area.header.width.min,
@@ -191,11 +191,11 @@ layoutSetting.area = (parent) => {
     justify: new Control_radioGrid({
       object: state.get.current(),
       radioGroup: [
-        { id: 'layout-area-header-justify-left', labelText: language.current.menu.content.layout.area.header.justify.left, value: 'left', position: 1 },
-        { id: 'layout-area-header-justify-center', labelText: language.current.menu.content.layout.area.header.justify.center, value: 'center', position: 2 },
-        { id: 'layout-area-header-justify-right', labelText: language.current.menu.content.layout.area.header.justify.right, value: 'right', position: 3 }
+        { id: 'layout-area-header-justify-left', labelText: message('menuContentLayoutAreaHeaderJustifyLeft'), value: 'left', position: 1 },
+        { id: 'layout-area-header-justify-center', labelText: message('menuContentLayoutAreaHeaderJustifyCenter'), value: 'center', position: 2 },
+        { id: 'layout-area-header-justify-right', labelText: message('menuContentLayoutAreaHeaderJustifyRight'), value: 'right', position: 3 }
       ],
-      label: language.current.menu.content.layout.area.header.justify.label,
+      label: message('menuContentLayoutAreaHeaderJustifyLabel'),
       groupName: 'layout-area-header-justify',
       path: 'layout.area.header.justify',
       gridSize: '3x1',
@@ -205,11 +205,11 @@ layoutSetting.area = (parent) => {
       }
     }),
     justifyHelper1: new Control_helperText({
-      text: language.current.menu.content.layout.area.header.justify.helper1
+      text: [message('menuContentLayoutAreaHeaderJustifyHelper1Para1')]
     }),
     justifyHelper2: new Control_helperText({
       complexText: true,
-      text: language.current.menu.content.layout.area.header.justify.helper2
+      text: [message('menuContentLayoutAreaHeaderJustifyHelper2Para1')]
     })
   };
 
@@ -218,7 +218,7 @@ layoutSetting.area = (parent) => {
       object: state.get.current(),
       path: 'layout.area.bookmark.width',
       id: 'layout-area-bookmark-width',
-      labelText: language.current.menu.content.layout.area.bookmark.width,
+      labelText: message('menuContentLayoutAreaBookmarkWidth'),
       value: state.get.current().layout.area.bookmark.width,
       defaultValue: state.get.default().layout.area.bookmark.width,
       min: state.get.minMax().layout.area.bookmark.width.min,
@@ -238,11 +238,11 @@ layoutSetting.area = (parent) => {
     justify: new Control_radioGrid({
       object: state.get.current(),
       radioGroup: [
-        { id: 'layout-area-bookmark-justify-left', labelText: language.current.menu.content.layout.area.bookmark.justify.left, value: 'left', position: 1 },
-        { id: 'layout-area-bookmark-justify-center', labelText: language.current.menu.content.layout.area.bookmark.justify.center, value: 'center', position: 2 },
-        { id: 'layout-area-bookmark-justify-right', labelText: language.current.menu.content.layout.area.bookmark.justify.right, value: 'right', position: 3 }
+        { id: 'layout-area-bookmark-justify-left', labelText: message('menuContentLayoutAreaBookmarkJustifyLeft'), value: 'left', position: 1 },
+        { id: 'layout-area-bookmark-justify-center', labelText: message('menuContentLayoutAreaBookmarkJustifyCenter'), value: 'center', position: 2 },
+        { id: 'layout-area-bookmark-justify-right', labelText: message('menuContentLayoutAreaBookmarkJustifyRight'), value: 'right', position: 3 }
       ],
-      label: language.current.menu.content.layout.area.bookmark.justify.label,
+      label: message('menuContentLayoutAreaBookmarkJustifyLabel'),
       groupName: 'layout-area-bookmark-justify',
       path: 'layout.area.bookmark.justify',
       gridSize: '3x1',
@@ -252,11 +252,11 @@ layoutSetting.area = (parent) => {
       }
     }),
     justifyHelper1: new Control_helperText({
-      text: language.current.menu.content.layout.area.bookmark.justify.helper1
+      text: [message('menuContentLayoutAreaBookmarkJustifyHelper1Para1')]
     }),
     justifyHelper2: new Control_helperText({
       complexText: true,
-      text: language.current.menu.content.layout.area.bookmark.justify.helper2
+      text: [message('menuContentLayoutAreaBookmarkJustifyHelper2Para1')]
     })
   };
 
@@ -294,7 +294,7 @@ layoutSetting.padding = (parent) => {
     object: state.get.current(),
     path: 'layout.padding',
     id: 'layout-padding',
-    labelText: language.current.menu.content.layout.padding,
+    labelText: message('menuContentLayoutPadding'),
     value: state.get.current().layout.padding,
     defaultValue: state.get.default().layout.padding,
     min: state.get.minMax().layout.padding.min,
@@ -328,7 +328,7 @@ layoutSetting.gutter = (parent) => {
     object: state.get.current(),
     path: 'layout.gutter',
     id: 'layout-gutter',
-    labelText: language.current.menu.content.layout.gutter,
+    labelText: message('menuContentLayoutGutter'),
     value: state.get.current().layout.gutter,
     defaultValue: state.get.default().layout.gutter,
     min: state.get.minMax().layout.gutter.min,
@@ -359,17 +359,17 @@ layoutSetting.alignment = (parent) => {
   layoutSetting.control.alignment.alignment = new Control_radioGrid({
     object: state.get.current(),
     radioGroup: [
-      { id: 'layout-alignment-top-left', labelText: language.current.menu.content.layout.alignment.topLeft, value: 'top-left', position: 1 },
-      { id: 'layout-alignment-top-center', labelText: language.current.menu.content.layout.alignment.topCenter, value: 'top-center', position: 2 },
-      { id: 'layout-alignment-top-right', labelText: language.current.menu.content.layout.alignment.topRight, value: 'top-right', position: 3 },
-      { id: 'layout-alignment-center-left', labelText: language.current.menu.content.layout.alignment.centerLeft, value: 'center-left', position: 4 },
-      { id: 'layout-alignment-center-center', labelText: language.current.menu.content.layout.alignment.centerCenter, value: 'center-center', position: 5 },
-      { id: 'layout-alignment-center-right', labelText: language.current.menu.content.layout.alignment.centerRight, value: 'center-right', position: 6 },
-      { id: 'layout-alignment-bottom-left', labelText: language.current.menu.content.layout.alignment.bottomLeft, value: 'bottom-left', position: 7 },
-      { id: 'layout-alignment-bottom-center', labelText: language.current.menu.content.layout.alignment.bottomCenter, value: 'bottom-center', position: 8 },
-      { id: 'layout-alignment-bottom-right', labelText: language.current.menu.content.layout.alignment.bottomRight, value: 'bottom-right', position: 9 }
+      { id: 'layout-alignment-top-left', labelText: message('menuContentLayoutAlignmentTopLeft'), value: 'top-left', position: 1 },
+      { id: 'layout-alignment-top-center', labelText: message('menuContentLayoutAlignmentTopCenter'), value: 'top-center', position: 2 },
+      { id: 'layout-alignment-top-right', labelText: message('menuContentLayoutAlignmentTopRight'), value: 'top-right', position: 3 },
+      { id: 'layout-alignment-center-left', labelText: message('menuContentLayoutAlignmentCenterLeft'), value: 'center-left', position: 4 },
+      { id: 'layout-alignment-center-center', labelText: message('menuContentLayoutAlignmentCenterCenter'), value: 'center-center', position: 5 },
+      { id: 'layout-alignment-center-right', labelText: message('menuContentLayoutAlignmentCenterRight'), value: 'center-right', position: 6 },
+      { id: 'layout-alignment-bottom-left', labelText: message('menuContentLayoutAlignmentBottomLeft'), value: 'bottom-left', position: 7 },
+      { id: 'layout-alignment-bottom-center', labelText: message('menuContentLayoutAlignmentBottomCenter'), value: 'bottom-center', position: 8 },
+      { id: 'layout-alignment-bottom-right', labelText: message('menuContentLayoutAlignmentBottomRight'), value: 'bottom-right', position: 9 }
     ],
-    label: language.current.menu.content.layout.alignment.label,
+    label: message('menuContentLayoutAlignmentLabel'),
     groupName: 'layout-alignment',
     path: 'layout.alignment',
     gridSize: '3x3',
@@ -382,8 +382,8 @@ layoutSetting.alignment = (parent) => {
   layoutSetting.control.alignment.direction = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'layout-direction-horizontal', labelText: language.current.menu.content.layout.direction.horizontal.label, description: language.current.menu.content.layout.direction.horizontal.description, value: 'horizontal' },
-      { id: 'layout-direction-vertical', labelText: language.current.menu.content.layout.direction.vertical.label, description: language.current.menu.content.layout.direction.vertical.description, value: 'vertical' }
+      { id: 'layout-direction-horizontal', labelText: message('menuContentLayoutDirectionHorizontalLabel'), description: message('menuContentLayoutDirectionHorizontalDescription'), value: 'horizontal' },
+      { id: 'layout-direction-vertical', labelText: message('menuContentLayoutDirectionVerticalLabel'), description: message('menuContentLayoutDirectionVerticalDescription'), value: 'vertical' }
     ],
     groupName: 'layout-direction',
     path: 'layout.direction',
@@ -397,8 +397,8 @@ layoutSetting.alignment = (parent) => {
   layoutSetting.control.alignment.order = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'layout-order-header-bookmark', labelText: language.current.menu.content.layout.order.headerBookmark.label, description: language.current.menu.content.layout.order.headerBookmark.description, value: 'header-bookmark' },
-      { id: 'layout-order-bookmark-header', labelText: language.current.menu.content.layout.order.bookmarkHeader.label, description: language.current.menu.content.layout.order.bookmarkHeader.description, value: 'bookmark-header' }
+      { id: 'layout-order-header-bookmark', labelText: message('menuContentLayoutOrderHeaderBookmarkLabel'), description: message('menuContentLayoutOrderHeaderBookmarkDescription'), value: 'header-bookmark' },
+      { id: 'layout-order-bookmark-header', labelText: message('menuContentLayoutOrderBookmarkHeaderLabel'), description: message('menuContentLayoutOrderBookmarkHeaderDescription'), value: 'bookmark-header' }
     ],
     groupName: 'layout-order',
     path: 'layout.order',
@@ -429,8 +429,8 @@ layoutSetting.page = (parent) => {
     id: 'layout-title',
     value: state.get.current().layout.title,
     defaultValue: state.get.default().layout.title,
-    placeholder: language.current.menu.content.layout.page.title.placeholder,
-    labelText: language.current.menu.content.layout.page.title.label,
+    placeholder: message('menuContentLayoutPageTitlePlaceholder'),
+    labelText: message('menuContentLayoutPageTitleLabel'),
     action: () => {
       layout.title.render();
       data.save();
@@ -443,8 +443,8 @@ layoutSetting.page = (parent) => {
     id: 'layout-favicon',
     value: state.get.current().layout.favicon,
     defaultValue: state.get.default().layout.favicon,
-    placeholder: language.current.menu.content.layout.page.favicon.placeholder,
-    labelText: language.current.menu.content.layout.page.favicon.label,
+    placeholder: message('menuContentLayoutPageFaviconPlaceholder'),
+    labelText: message('menuContentLayoutPageFaviconLabel'),
     action: () => {
       layout.favicon.render();
       data.save();
@@ -452,16 +452,16 @@ layoutSetting.page = (parent) => {
   });
 
   layoutSetting.control.page.faviconHelper = new Control_helperText({
-    text: language.current.menu.content.layout.page.favicon.helper
+    text: [message('menuContentLayoutPageFaviconHelperPara1')]
   });
 
   layoutSetting.control.page.scrollbar = new Control_radio({
     object: state.get.current(),
-    label: language.current.menu.content.layout.page.scrollbar.label,
+    label: message('menuContentLayoutPageScrollbarLabel'),
     radioGroup: [
-      { id: 'layout-scrollbar-auto', labelText: language.current.menu.content.layout.page.scrollbar.auto, value: 'auto' },
-      { id: 'layout-scrollbar-thin', labelText: language.current.menu.content.layout.page.scrollbar.thin, value: 'thin' },
-      { id: 'layout-scrollbar-none', labelText: language.current.menu.content.layout.page.scrollbar.none, value: 'none' }
+      { id: 'layout-scrollbar-auto', labelText: message('menuContentLayoutPageScrollbarAuto'), value: 'auto' },
+      { id: 'layout-scrollbar-thin', labelText: message('menuContentLayoutPageScrollbarThin'), value: 'thin' },
+      { id: 'layout-scrollbar-none', labelText: message('menuContentLayoutPageScrollbarNone'), value: 'none' }
     ],
     groupName: 'layout-scrollbar',
     path: 'layout.scrollbar',
@@ -472,7 +472,7 @@ layoutSetting.page = (parent) => {
   });
 
   layoutSetting.control.page.scrollbarHelper = new Control_helperText({
-    text: language.current.menu.content.layout.page.scrollbar.helper
+    text: [message('menuContentLayoutPageScrollbarHelperPara1')]
   });
 
   layoutSetting.control.page.overscroll = {
@@ -480,7 +480,7 @@ layoutSetting.page = (parent) => {
       object: state.get.current(),
       path: 'layout.overscroll.active',
       id: 'layout-overscroll-active',
-      labelText: language.current.menu.content.layout.page.overscroll.active,
+      labelText: message('menuContentLayoutPageOverscrollActive'),
       action: () => {
         applyCSSState('layout.overscroll.active');
         layoutSetting.disable();
@@ -491,8 +491,11 @@ layoutSetting.page = (parent) => {
       object: state.get.current(),
       path: 'layout.overscroll.unblur',
       id: 'layout-overscroll-unblur-background',
-      labelText: language.current.menu.content.layout.page.overscroll.unblur.label,
-      description: language.current.menu.content.layout.page.overscroll.unblur.description,
+      labelText: message('menuContentLayoutPageOverscrollUnblurLabel'),
+      description: [
+        message('menuContentLayoutPageOverscrollUnblurDescriptionPara1'),
+        message('menuContentLayoutPageOverscrollUnblurDescriptionPara2')
+      ],
       action: () => {
         theme.background.image.render();
         theme.background.video.clear();

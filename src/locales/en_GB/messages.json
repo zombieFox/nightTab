@@ -1,0 +1,2066 @@
+{
+  "appName": {
+    "message": "nightTab"
+  },
+  "appShortName": {
+    "message": "nightTab"
+  },
+  "appDescription": {
+    "message": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab."
+  },
+  "menuNavThemeLabel": {
+    "message": "Theme"
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "Preset"
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "Saved"
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "Style"
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "Colour"
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "Accent"
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "Font"
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "Radius"
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "Shadow"
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "Shade"
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "Opacity"
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "Background"
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "Layout"
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "Header"
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "Bookmark"
+  },
+  "menuNavLayoutLabel": {
+    "message": "Layout"
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "Scaling"
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "Area"
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "Padding"
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "Gutter"
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "Alignment"
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "Page"
+  },
+  "menuNavHeaderLabel": {
+    "message": "Header"
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "Alignment"
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "Greeting"
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "Transitional words"
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "Clock"
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "Date"
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "Search"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "Bookmark"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "General"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "Style"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "Orientation"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "Sort"
+  },
+  "menuNavGroupLabel": {
+    "message": "Group"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "Alignment"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "Name"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "Collapse"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "Toolbar"
+  },
+  "menuNavToolbarLabel": {
+    "message": "Toolbar"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "Size"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "Location"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "Position"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "Controls"
+  },
+  "menuNavDataLabel": {
+    "message": "Data"
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "Restore"
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "Backup"
+  },
+  "menuNavDataSubNavClear": {
+    "message": "Clear"
+  },
+  "menuNavLanguageLabel": {
+    "message": "Language"
+  },
+  "menuNavSupportLabel": {
+    "message": "Support"
+  },
+  "menuNavCoffeeLabel": {
+    "message": "Coffee"
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}"
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "Applying a Preset will replace the current Colour, Accent, Font, Style, Radius, Shadow, Shade and Background."
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "Saving a Theme will record the current Colour, Accent, Font, Style, Opacity, Radius, Shadow, Shade and Background."
+  },
+  "menuContentThemeSavedSave": {
+    "message": "Save current theme"
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "Edit saved themes"
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "Dark mode"
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "Light mode"
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "Automatic"
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "Follow the system Light or Dark mode."
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "Backgrounds, Bookmarks and Modals use shades from the left."
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "Text and form elements use shades from the right."
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "For a light look switch to the Light Style and then select a Primary colour. And vice versa for a dark look."
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "Primary colour"
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "Saturation"
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "Contrast range"
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "Contrast start"
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "Contrast end"
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "Move the Contrast range controls close together for a muted look."
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "Move the Contrast range controls far apart from each other for a sharp vivid look."
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "Grey"
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "Red"
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "Orange"
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "Yellow"
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "Lime"
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "Green"
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "Aqua"
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "Cyan"
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "Teal"
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "Blue"
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "Purple"
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "Magenta"
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "Fuchsia"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "Super extra light"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "Extra light"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "Light"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "Super extra dark"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "Extra dark"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "Dark"
+  },
+  "menuContentThemeAccentColor": {
+    "message": "Accent colour"
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "Random Accent colour on load/refresh"
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "Any"
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "Light"
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "Dark"
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "Pastel"
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "Saturated"
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "Randomise now"
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "Auto change Accent hue"
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "Change delay"
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "Change steps"
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "Take care as a fast changing Accent hue may cause performance issues."
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "Auto change Accent hue will not work when the Accent colour is a grey or black."
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "Display font"
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "Google font name"
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "Use a Google Font to customise the Clock, Date, Group names and Bookmark Letters."
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "Find a Google Font"
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Fredoka One\" or \"Kanit\"."
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "Clear the field to use the default font \"Fjalla One\"."
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "Font weight"
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "Light"
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "Regular"
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "Bold"
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "Not all fonts support all weights. Refer to the Google Font page to see which are available."
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "Normal"
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "Italic"
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "User interface font"
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "Google font name"
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "Use a Google Font to customise the Bookmark name, URL and form elements."
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "Find a Google Font"
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Roboto\", \"Source Sans Pro\" or \"Noto Sans\"."
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "Clear the field to use the default font \"Open Sans\"."
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "Font weight"
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "Light"
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "Regular"
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "Bold"
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "Not all fonts support all weights. Refer to the Google Font page to see which are available."
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "Normal"
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "Italic"
+  },
+  "menuContentThemeRadius": {
+    "message": "Corner radius"
+  },
+  "menuContentThemeShadow": {
+    "message": "Shadow size"
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "Shade opacity"
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "Shade blur"
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "Not supported by all browsers."
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "All opacity"
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "Change the opacity of Search bar, Bookmarks, Group controls and the Toolbar."
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "Opacity can also be changed when editing individual Bookmarks."
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "Toolbar"
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "Bookmark"
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "Search box"
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "Group toolbar"
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "Background by Theme"
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "Use the Background colour defined by the Theme."
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "Background by Accent"
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "Use the Accent colour for the Background."
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "Custom colour"
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "Gradient"
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "Image"
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "Video"
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "Background colour"
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "Background gradient angle"
+  },
+  "menuContentThemeBackgroundGradientStart": {
+    "message": "Background gradient start"
+  },
+  "menuContentThemeBackgroundGradientEnd": {
+    "message": "Background gradient end"
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "Local images can no longer be used. Images must be hosted somewhere online."
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "Why has this changed?"
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "Add more than one URL separated by spaces or on new lines for a random background image on load."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "Unsplash can be used for random images, eg:"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "Change parameters after .../random/ for more options. Loading times may vary."
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "Blur"
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "Grayscale"
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "Scale"
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "Accent"
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "Opacity"
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "Vignette"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "Shade start and end"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "Shade end"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "Shade start"
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "YouTube page URLs can not be used."
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "How to link to a video file."
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "Background video only supports a direct URL to a video file. Supports MP4 and WebM format."
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "Add more than one URL separated by spaces or on new lines for a random background video on load."
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "Blur"
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "Grayscale"
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "Scale"
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "Accent"
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "Opacity"
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "Vignette"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "Shade start and end"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "Shade end"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "Shade start"
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "Layout background colour"
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "Transparent"
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "No background colour behind the Layout."
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "Custom colour"
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "Use a custom colour behind the Layout."
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "Layout background colour"
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "Background opacity"
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "Background blur"
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "Not supported by all browsers."
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "Divider between Header and Bookmark area"
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "Header background colour"
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "Transparent"
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "No background colour behind the Header area."
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "Custom colour"
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "Use a custom colour behind the Header area."
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "Header background colour"
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "Background opacity"
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "Bookmark background colour"
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "Transparent"
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "No background colour behind the Bookmark area."
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "Custom colour"
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "Use a custom colour behind the Bookmark area."
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "Bookmark background colour"
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "Background opacity"
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "Bookmark border"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "Bookmark border can also be changed when editing individual Bookmarks."
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "The colour of the Border is defined by the Accent which can also be changed when editing individual Bookmarks."
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "Add unique accent to each Bookmark"
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "Remove all accent overrides"
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "Bookmark custom Accent can also be changed when editing individual Bookmarks."
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "Global size"
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "Layout area width"
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "Header area width"
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "Header area alignment"
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "Left"
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "Centre"
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "Right"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "Effects may not be visible if the Header Area is full width."
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "Only available when Layout Direction is Vertical and Header items are shown."
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "Bookmark area width"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "Bookmark area alignment"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "Left"
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "Centre"
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "Right"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "Effects may not be visible if the Bookmark Area is full width."
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "Only available when Layout Direction is Vertical and Header items are shown."
+  },
+  "menuContentLayoutPadding": {
+    "message": "Space around Header and Bookmark Area"
+  },
+  "menuContentLayoutGutter": {
+    "message": "Space between Header and Bookmark items"
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "Area alignment"
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "Top Left"
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "Top Centre"
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "Top Right"
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "Centre Left"
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "Centre Centre"
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "Centre Right"
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "Bottom Left"
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "Bottom Centre"
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "Bottom Right"
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "Align horizontal"
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "Stack the Header and Bookmarks in a row side by side."
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "Align vertical"
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "Stack the Header and Bookmarks in a column one above the other."
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "Header then Bookmarks"
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "Order the Header area to appear before the Bookmarks area."
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "Bookmarks then Header"
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "Order the Bookmarks area to appear before the Header area."
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "Title"
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "New Tab"
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "Favicon URL"
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https://www.example.com/favicon.svg"
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "Not supported by all browsers."
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "Scrollbar"
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "Auto"
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "Thin"
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "Hidden"
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "Not supported by all browsers."
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "Scroll past end"
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "Unblur background image or video"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "Background image or video will unblur when scrolled to the bottom of the page."
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "Image or video blur can be found under Theme Background."
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "Header item alignment"
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "Left"
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "Center"
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "Right"
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "Effects may not be visible if the Search box size is set to Auto and grows to fill available space."
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "Show Greeting"
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "Size"
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "New line"
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "Force on to a new line and seperate from other Header items."
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "Wording"
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"Good morning...\""
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"Hello...\""
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"Hi...\""
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "None"
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "Useful for displaying just the name."
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "Custom"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "Use your own greeting."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "Defaults to \"Good morning...\" if left blank."
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "Custom greeting text"
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "Howdy"
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "Name"
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "Nickname, alias or superhero name"
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "Show Transitional words"
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "Only available when Date or Time is shown."
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "Wording"
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "\"The time and date is\""
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"It's\""
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "Size"
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "New line"
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "Force on to a new line and seperate from other Header items."
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "Show hours"
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "As number"
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "As word"
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "Show minutes"
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "As number"
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "As word"
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "Show seconds"
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "As number"
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "As word"
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "Show separator"
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "Separator character"
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":"
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "24 hours"
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "AM / PM"
+  },
+  "menuContentHeaderClockSize": {
+    "message": "Size"
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "New line"
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "Force on to a new line and seperate from other Header items."
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "Show Day"
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "As number"
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "As word"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "Start of the week"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "Monday"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "Sunday"
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "Word length"
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "Long"
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "Short"
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "Show Date"
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "As number"
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "As word"
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "Ordinal numbers"
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "Show Month"
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "As number"
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "As word"
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "Ordinal numbers"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "Word length"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "Long"
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "Short"
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "Show Year"
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "As number"
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "As word"
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "Show separator"
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "Separator character"
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "/"
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "Format"
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "Date / Month"
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "Month / Date"
+  },
+  "menuContentHeaderDateSize": {
+    "message": "Size"
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "New line"
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "Force on to a new line and seperate from other Header items."
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "Show Search"
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "Search box width"
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "Auto width"
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "Search box will grow to best fit available space."
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "Custom width"
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "Define how wide the Search box should be inside the Header Area."
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "Width"
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "Size"
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "New line"
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "Force on to a new line and seperate from other Header items."
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "Search engine"
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "Custom"
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "Name"
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "Search engine name"
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https://"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "Enter a web address with the search parameters, eg: \"https://vimeo.com/search?q=\""
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} will add the search term entered into the Search box at the end of the above URL."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "Name attribute"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "q"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "Sets the name attribute on the Search input field."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "This defines the name passed to the search engine when submitting. If not sure leave blank."
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "Search text alignment"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "Left"
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "Centre"
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "Right"
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "Open Search results in a new tab"
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "Show Bookmarks"
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "Show URL on Bookmark hover"
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "Show Bookmark line"
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "Show shadow on Bookmark hover"
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "Effects may not be visible if Theme Shadow is set to 0."
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "Grow on Bookmark hover"
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "Open Bookmarks in a new tab"
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "Bookmark size"
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "Block"
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "Square shaped Bookmark tiles."
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "List"
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "Short and wide Bookmark tiles."
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "Top"
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "Bottom"
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "Display the URL and Controls either at the top or bottom of a Bookmark Tile."
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "By letter"
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "By icon"
+  },
+  "menuContentBookmarkSortName": {
+    "message": "By name"
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "Group details area alignment"
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "Left"
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "Centre"
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "Right"
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "Group details order"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "Group details then Bookmarks"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "Order the Group details area to appear before the Bookmarks area."
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "Bookmarks then Group details"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "Order the Bookmarks area to appear before the Group details area."
+  },
+  "menuContentGroupNameSize": {
+    "message": "Name size"
+  },
+  "menuContentGroupNameShow": {
+    "message": "Show all"
+  },
+  "menuContentGroupNameHide": {
+    "message": "Hide all"
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "Group Names can also be changed by editing individual Groups."
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "Open all groups"
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "Collapse all groups"
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "Group toolbar size"
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "Group Collapse control"
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "Show all"
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "Hide all"
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "Group toolbar collapse button can also be changed by editing individual Groups."
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "Group Open all control"
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "Show all"
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "Hide all"
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "Group toolbar open all button can also be changed by editing individual Groups."
+  },
+  "menuContentToolbarSize": {
+    "message": "Toolbar size"
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "In a corner"
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "In the Header"
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "Position the Toolbar inside the Header or in a corner of the window."
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "New line"
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "Force on to a new line and seperate from other Header items."
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "Only available when the Toolbar is positioned inside the Header."
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "Toolbar position"
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "Top Left"
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "Top Right"
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "Bottom Left"
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "Bottom Right"
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "Position the Toolbar in one of the four corners of the window."
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "Only available when the Toolbar is positioned in a corner."
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "Show Accent control"
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "Show Add control"
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "Show Edit control"
+  },
+  "menuContentDataRestoreFile": {
+    "message": "Import from file"
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "Import from clipboard"
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "Restore a previously exported {appName} backup."
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "Or drop a {appName} backup file here."
+  },
+  "menuContentDataBackupFile": {
+    "message": "Export data"
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "Copy to clipboard"
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "Download a backup of your {appName} Bookmarks and Settings."
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "This file can later be imported on this or another deivce."
+  },
+  "menuContentDataClearAll": {
+    "message": "Clear all data"
+  },
+  "menuContentDataClearPartial": {
+    "message": "Clear all except bookmarks"
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "You will lose Bookmarks by clearing all data."
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "Backup your data"
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "Clear all data to reset {appName} to the default state."
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups."
+  },
+  "menuContentLanguageLanguage": {
+    "message": "Language"
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "Found a translation that isn't right?"
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "Help translate {appName}"
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "Applying bookmark settings to all"
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "Browser support"
+  },
+  "menuContentSupportPageCookies": {
+    "message": "Cookies and cache"
+  },
+  "menuContentSupportPageData": {
+    "message": "Data backup and restore"
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "Local background image"
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "Protected URLs"
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "Recovering settings and bookmarks"
+  },
+  "menuContentSupportPageResetting": {
+    "message": "Resetting when opening the browser"
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "Respecting your privacy"
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "Setting a background video or image"
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "Setting {appName} as your Firefox homepage"
+  },
+  "menuContentSupportPara": {
+    "message": "For more support or feedback:"
+  },
+  "menuContentSupportLink1": {
+    "message": "Submit an Issue."
+  },
+  "menuContentSupportLink2": {
+    "message": "Check the Wiki."
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} is free, appreciation is welcome in the form of coffee!"
+  },
+  "menuContentCoffeeButton": {
+    "message": "Buy me a coffee"
+  },
+  "menuContentAppPara1": {
+    "message": "Share your setup with the community."
+  },
+  "menuContentAppLink1": {
+    "message": "Found on Reddit /r/{appName}."
+  },
+  "menuContentAppPara2": {
+    "message": "This project is open source."
+  },
+  "menuContentAppLink2": {
+    "message": "Found on GitHub."
+  },
+  "menuContentAppLink3": {
+    "message": "GNU General Public License v3.0."
+  },
+  "bookmarkTileControlLeft": {
+    "message": "Move this bookmark left"
+  },
+  "bookmarkTileControlSort": {
+    "message": "Drag bookmark to reorder"
+  },
+  "bookmarkTileControlRight": {
+    "message": "Move this bookmark right"
+  },
+  "bookmarkTileControlEdit": {
+    "message": "Edit this bookmark"
+  },
+  "bookmarkTileControlRemove": {
+    "message": "Remove this bookmark"
+  },
+  "bookmarkAddHeading": {
+    "message": "Add a new Bookmark"
+  },
+  "bookmarkAddSuccessText": {
+    "message": "Add"
+  },
+  "bookmarkAddCancelText": {
+    "message": "Cancel"
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "Remove"
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "Remove unnamed bookmark"
+  },
+  "bookmarkRemoveContent": {
+    "message": "Are you sure you want to remove this Bookmark? This can not be undone."
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "Remove"
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "Cancel"
+  },
+  "bookmarkEditHeadingName": {
+    "message": "Edit"
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "Edit unnamed bookmark"
+  },
+  "bookmarkEditSuccessText": {
+    "message": "Save"
+  },
+  "bookmarkEditCancelText": {
+    "message": "Cancel"
+  },
+  "bookmarkFormTabVisual": {
+    "message": "Visual & Name"
+  },
+  "bookmarkFormTabAddress": {
+    "message": "Address"
+  },
+  "bookmarkFormTabPosition": {
+    "message": "Position"
+  },
+  "bookmarkFormTabLayout": {
+    "message": "Layout"
+  },
+  "bookmarkFormTabTheme": {
+    "message": "Theme"
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "Visual & Name"
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "Display Letters, Icon, Image and a Name on this Bookmark tile."
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "Address"
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "Be sure to use the full URL and include \"https://...\""
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "Position"
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "The Group to place this Bookmark in."
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "Layout"
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "Change the Visual Element and Name position, scale and orientation."
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "Theme"
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "Override the Theme and Accent colour."
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https://www.example.com/"
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "Visual Element and Name alignment"
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "Top Left"
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "Top Centre"
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "Top Right"
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "Centre Left"
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "Centre Centre"
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "Centre Right"
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "Bottom Left"
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "Bottom Centre"
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "Bottom Right"
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "Vertical"
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "Stack the Visual Element and Name one above the other."
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "Horizontal"
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "Arrange the Visual Element and Name side by side."
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "Visual element then name"
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "Place the Visual Element before the Name."
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "Name then visual element"
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "Place the Name before the Visual Element."
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "Rotate"
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "Adjust Visual Element position"
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "Horizontal"
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "Vertical"
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "Gutter"
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "Show Visual Element"
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "Display Letters, Icon or an Image on this Bookmark hexagon."
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "Letter"
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "Icon"
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "Image"
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "Visual size"
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "Bookmark letter"
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "E"
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "Bookmark icon"
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "FontAwesome Brands or Icons"
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "Remove icon"
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "Bookmark image"
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "Visual shadow"
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "Visual shadow only applies to a Letter or Icon."
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "Show Name"
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "Bookmark name"
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "Example"
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "Name size"
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "Theme Accent"
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "Use the Accent defined by the Theme."
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "Custom Accent"
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "Override the Theme Accent."
+  },
+  "bookmarkFormAccentColor": {
+    "message": "Accent"
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "Theme colour"
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "Use the Colour defined by the Theme."
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "Custom colour"
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "Override the Theme colour."
+  },
+  "bookmarkFormColorColor": {
+    "message": "Colour"
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "Opacity"
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "Show background"
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "Display an Image or video Background on this Bookmark tile."
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "Image"
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "Video"
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "Opacity"
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "Background image URL"
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "Background image only supports a direct URL to an image file."
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "Background video URL"
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "Background video only supports a direct URL to a video file. Supports MP4 and WebM format."
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "YouTube page URLs can not be used."
+  },
+  "bookmarkFormBorder": {
+    "message": "Border"
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "Wide tile"
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "Bookmark tile to span across two columns."
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "Tall tile"
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "Bookmark tile to span across two rows."
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "Existing Group"
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "New Group"
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "Example group"
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "Random Group name"
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "Group"
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "Position"
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "Apply \"Show Visual Element\" and \"Show Name\" to other Bookmarks"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "The Letter, Icon, Image and Name text will not be shared."
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "Useful for hiding the Visual Elements or Names on all Bookmarks."
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "Apply Layout to other Bookmarks"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "When saved, apply the above Layout to all other Bookmarks."
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "Only the Visual and Name size, Alignment, Order, Position and Gutter will be applied to all."
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "Apply Theme to other Bookmarks"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "When saved, apply the above Theme to all other Bookmarks."
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "Only the Colour, Accent, Opacity, Border and Visual shadow will be applied to all."
+  },
+  "bookmarkPreviewFull": {
+    "message": "Preview"
+  },
+  "bookmarkPreviewHalf": {
+    "message": "Preview (50% scale)"
+  },
+  "groupAreaControlUp": {
+    "message": "Move this group up"
+  },
+  "groupAreaControlSort": {
+    "message": "Drag group to reorder"
+  },
+  "groupAreaControlDown": {
+    "message": "Move this group down"
+  },
+  "groupAreaControlEdit": {
+    "message": "Edit this group"
+  },
+  "groupAreaControlRemove": {
+    "message": "Remove this group"
+  },
+  "groupAreaControlOpenAll": {
+    "message": "Open all bookmarks in this group"
+  },
+  "groupAreaControlCollapse": {
+    "message": "Collapse this group"
+  },
+  "groupAddHeading": {
+    "message": "Add a new Group"
+  },
+  "groupAddSuccessText": {
+    "message": "Add"
+  },
+  "groupAddCancelText": {
+    "message": "Cancel"
+  },
+  "groupRemoveHeadingName": {
+    "message": "Remove"
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "Remove unnamed group"
+  },
+  "groupRemoveContent": {
+    "message": "Are you sure you want to remove this Group and all the Bookmarks within? This can not be undone."
+  },
+  "groupRemoveSuccessText": {
+    "message": "Remove"
+  },
+  "groupRemoveCancelText": {
+    "message": "Cancel"
+  },
+  "groupEditHeadingName": {
+    "message": "Edit"
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "Edit unnamed group"
+  },
+  "groupEditSuccessText": {
+    "message": "Save"
+  },
+  "groupEditCancelText": {
+    "message": "Cancel"
+  },
+  "groupFormSectionNameHeading": {
+    "message": "Name"
+  },
+  "groupFormSectionNameDescription": {
+    "message": "Display a Name above this Group."
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "Toolbar"
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "Display controls to open all or show/hide the Bookmarks in this Group."
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "Ordering"
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "The position of this Group."
+  },
+  "groupFormNameShow": {
+    "message": "Show Group name"
+  },
+  "groupFormNameTextLabel": {
+    "message": "Group name"
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "Example group"
+  },
+  "groupFormNameRandom": {
+    "message": "Random Group name"
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "Show Collapse"
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "The Collapse button will show or hide the Bookmarks in this Group."
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "Show Open all"
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "Open all button will appear if there is at least one Bookmark in this Group."
+  },
+  "groupFormDestination": {
+    "message": "Position"
+  },
+  "themeCustomTileControlEdit": {
+    "message": "Edit this saved custom theme"
+  },
+  "themeCustomTileControlRemove": {
+    "message": "Remove this saved custom theme"
+  },
+  "themeCustomFormNameLabel": {
+    "message": "Name"
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "Example theme"
+  },
+  "themeCustomFormRandom": {
+    "message": "Random theme name"
+  },
+  "themeCustomAddHeading": {
+    "message": "Save current theme"
+  },
+  "themeCustomAddSuccessText": {
+    "message": "Save"
+  },
+  "themeCustomAddCancelText": {
+    "message": "Cancel"
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "Remove"
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "Remove unnamed custom theme"
+  },
+  "themeCustomRemoveContent": {
+    "message": "Are you sure you want to remove this saved custom theme? This can not be undone."
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "Save"
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "Cancel"
+  },
+  "themeCustomEditHeadingName": {
+    "message": "Edit"
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "Edit unnamed custom theme"
+  },
+  "themeCustomEditSuccessText": {
+    "message": "Remove"
+  },
+  "themeCustomEditCancelText": {
+    "message": "Cancel"
+  },
+  "toolbarAccent": {
+    "message": "Accent colour"
+  },
+  "toolbarAddLabel": {
+    "message": "Add"
+  },
+  "toolbarAddGroup": {
+    "message": "New Group"
+  },
+  "toolbarAddBookmark": {
+    "message": "New Bookmark"
+  },
+  "toolbarEdit": {
+    "message": "Edit groups and bookmarks"
+  },
+  "toolbarSetting": {
+    "message": "Open settings menu"
+  },
+  "dataFormDescription": {
+    "message": "You can restore all or parts of a backup file. The following data will be restored:"
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "Bookmarks"
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "This includes all Groups and Bookmarks"
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "Bookmarks will keep any custom Colours, Accents and Borders when imported."
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "Replace existing bookmarks"
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "Add to existing bookmarks"
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "Theme"
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "This includes the Colour, Accent, Fonts, Background and any saved Custom Themes."
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "Settings"
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "This includes Layout size and position, Header area size, Bookmark area size and other user settings."
+  },
+  "dataRestoreHeading": {
+    "message": "Restoring from a {appName} backup"
+  },
+  "dataRestoreSuccessText": {
+    "message": "Import"
+  },
+  "dataRestoreCancelText": {
+    "message": "Cancel"
+  },
+  "dataClearAllHeading": {
+    "message": "Clear all {appName} data?"
+  },
+  "dataClearAllContentPara1": {
+    "message": "Are you sure you want to clear all {appName} Bookmarks and Settings? {appName} will be restore to the default state."
+  },
+  "dataClearAllContentPara2": {
+    "message": "This can not be undone."
+  },
+  "dataClearAllSuccessText": {
+    "message": "Clear all data"
+  },
+  "dataClearAllCancelText": {
+    "message": "Cancel"
+  },
+  "dataClearPartialHeading": {
+    "message": "Clear {appName} data except bookmarks?"
+  },
+  "dataClearPartialContentPara1": {
+    "message": "Are you sure you want to clear all {appName} Settings? {appName} will be restore to the default state but your Bookmarks and Groups will remain."
+  },
+  "dataClearPartialContentPara2": {
+    "message": "This can not be undone."
+  },
+  "dataClearPartialSuccessText": {
+    "message": "Clear all except bookmarks"
+  },
+  "dataClearPartialCancelText": {
+    "message": "Cancel"
+  },
+  "dataExportBackup": {
+    "message": "backup"
+  },
+  "dataFeedbackEmpty": {
+    "message": "Nothing selected to import."
+  },
+  "dataFeedbackSuccess": {
+    "message": "Success! Restoring {appName} Bookmarks and Settings."
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "Not a JSON file. Make sure the selected file came from {appName}."
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "Not the right kind of JSON file. Make sure the selected file came from {appName}."
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "Not the right kind of data. Make sure the clipboard holds data from {appName} or a {appName} backup JSON file."
+  },
+  "controlGeneralReset": {
+    "message": "Reset to default"
+  },
+  "controlColorTextPlaceholder": {
+    "message": "Hex code"
+  },
+  "controlColorRandom": {
+    "message": "Random colour"
+  },
+  "controlColorMixerMoreControls": {
+    "message": "More controls"
+  },
+  "controlColorMixerSliderH": {
+    "message": "Hue"
+  },
+  "controlColorMixerSliderS": {
+    "message": "Saturation"
+  },
+  "controlColorMixerSliderL": {
+    "message": "Lightness"
+  },
+  "controlColorMixerSliderR": {
+    "message": "Red"
+  },
+  "controlColorMixerSliderG": {
+    "message": "Green"
+  },
+  "controlColorMixerSliderB": {
+    "message": "Blue"
+  }
+}

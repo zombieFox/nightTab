@@ -1,0 +1,2066 @@
+{
+  "appName": {
+    "message": "nightTab"
+  },
+  "appShortName": {
+    "message": "nightTab"
+  },
+  "appDescription": {
+    "message": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab."
+  },
+  "menuNavThemeLabel": {
+    "message": "विषय"
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "प्रीसेट"
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "बचाया"
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "अंदाज"
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "रंग"
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "लहज़ा"
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "फ़ॉन्ट"
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "कोने"
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "साया"
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "छाया"
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "अस्पष्टता"
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "पृष्ठभूमि"
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "ख़ाका"
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "हैडर"
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "बुकमार्क"
+  },
+  "menuNavLayoutLabel": {
+    "message": "ख़ाका"
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "स्केलिंग"
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "क्षेत्र"
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "गद्दी"
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "नाली"
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "संरेखण"
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "पृष्ठ"
+  },
+  "menuNavHeaderLabel": {
+    "message": "हैडर"
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "संरेखण"
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "शुभकामना"
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "परिवर्ती शब्द"
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "घड़ी"
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "दिनांक"
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "खोज"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "बुकमार्क"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "आम"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "अंदाज"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "अभिविन्यास"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "तरह"
+  },
+  "menuNavGroupLabel": {
+    "message": "समूह"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "संरेखण"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "नाम"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "ढहने"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "उपकरण पट्टी"
+  },
+  "menuNavToolbarLabel": {
+    "message": "उपकरण पट्टी"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "आकार"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "स्थान"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "पद"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "नियंत्रण"
+  },
+  "menuNavDataLabel": {
+    "message": "आंकड़े"
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "पुनर्स्थापित"
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "बैकअप"
+  },
+  "menuNavDataSubNavClear": {
+    "message": "स्पष्ट"
+  },
+  "menuNavLanguageLabel": {
+    "message": "भाषा"
+  },
+  "menuNavSupportLabel": {
+    "message": "सहायता"
+  },
+  "menuNavCoffeeLabel": {
+    "message": "कॉफ़ी"
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}"
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "प्रीसेट लागू करने से वर्तमान रंग, उच्चारण, फ़ॉन्ट, शैली, त्रिज्या, छाया, छाया और पृष्ठभूमि बदल जाएगी।"
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "थीम को सहेजना वर्तमान रंग, उच्चारण, फ़ॉन्ट, शैली, अस्पष्टता, त्रिज्या, छाया, छाया और पृष्ठभूमि को रिकॉर्ड करेगा।"
+  },
+  "menuContentThemeSavedSave": {
+    "message": "वर्तमान विषय सहेजें"
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "सहेजी गई थीम संपादित करें"
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "डार्क मोड"
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "लाइट मोड"
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "स्वचालित"
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "सिस्टम लाइट या डार्क मोड का पालन करें।"
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "पृष्ठभूमि, बुकमार्क और मोडल बाईं ओर से रंगों का उपयोग करते हैं।"
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "पाठ और प्रपत्र तत्व दाईं ओर से रंगों का उपयोग करते हैं।"
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "लाइट लुक के लिए लाइट स्टाइल पर स्विच करें और फिर प्राइमरी कलर चुनें। और इसके विपरीत डार्क लुक के लिए।"
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "प्राथमिक रंग"
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "परिपूर्णता"
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "कंट्रास्ट रेंज"
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "कंट्रास्ट प्रारंभ"
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "कंट्रास्ट अंत"
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "म्यूट लुक के लिए कंट्रास्ट रेंज नियंत्रणों को एक साथ पास ले जाएं।"
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "शार्प विविड लुक के लिए कंट्रास्ट रेंज कंट्रोल को एक दूसरे से दूर ले जाएं।"
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "धूसर"
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "लाल"
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "संतरा"
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "पीला"
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "नींबू"
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "हरा"
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "पानी"
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "सियान"
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "टील"
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "नीला"
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "बैंगनी"
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "मैजेंटा"
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "फ्यूशिया"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "सुपर अतिरिक्त प्रकाश"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "अतिरिक्त प्रकाश"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "रोशनी"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "सुपर अतिरिक्त अंधेरा"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "अतिरिक्त अंधेरा"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "अंधेरा"
+  },
+  "menuContentThemeAccentColor": {
+    "message": "एक्सेंट रंग"
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "लोड/रीफ्रेश पर रैंडम एक्सेंट रंग"
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "कोई"
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "रोशनी"
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "अंधेरा"
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "पस्टेल"
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "तर-बतर"
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "अभी यादृच्छिक करें"
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "ऑटो चेंज एक्सेंट ह्यू"
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "देरी बदलें"
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "चरण बदलें"
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "ध्यान रखें कि तेजी से बदलते एक्सेंट ह्यू के कारण प्रदर्शन संबंधी समस्याएं हो सकती हैं।"
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "जब एक्सेंट का रंग ग्रे या काला होता है, तो ऑटो चेंज एक्सेंट ह्यू काम नहीं करेगा।"
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "फ़ॉन्ट प्रदर्शित करें"
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "गूगल फ़ॉन्ट नाम"
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "घड़ी, दिनांक, समूह नाम और बुकमार्क अक्षरों को अनुकूलित करने के लिए Google फ़ॉन्ट का उपयोग करें।"
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "एक Google फ़ॉन्ट खोजें"
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "एक फ़ॉन्ट नाम जोड़ें जैसा कि यह Google फ़ॉन्ट्स पर दिखाई देता है, जिसमें बड़े अक्षर और रिक्त स्थान शामिल हैं, उदाहरण के लिए: \"फ़्रेडोका वन\" या \"कानिट\" दर्ज करें।"
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "डिफ़ॉल्ट फ़ॉन्ट \"Fjalla One\" का उपयोग करने के लिए फ़ील्ड साफ़ करें।"
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "फ़ॉन्ट वजन"
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "रोशनी"
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "नियमित"
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "मोटा"
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "सभी फोंट सभी भारों का समर्थन नहीं करते हैं। कौन से उपलब्ध हैं यह देखने के लिए Google फ़ॉन्ट पृष्ठ देखें।"
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "साधारण"
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "तिरछा"
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "यूजर इंटरफेस फ़ॉन्ट"
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "गूगल फ़ॉन्ट नाम"
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "बुकमार्क नाम, URL और प्रपत्र तत्वों को अनुकूलित करने के लिए Google फ़ॉन्ट का उपयोग करें।"
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "एक Google फ़ॉन्ट खोजें"
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "एक फ़ॉन्ट नाम जोड़ें जैसा कि यह Google फ़ॉन्ट्स पर दिखाई देता है, जिसमें बड़े अक्षरों और रिक्त स्थान शामिल हैं, उदाहरण के लिए: \"रोबोटो\", \"सोर्स सैन्स प्रो\" या \"नोटो सैन्स\" दर्ज करें।"
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "डिफ़ॉल्ट फ़ॉन्ट \"ओपन सेन्स\" का उपयोग करने के लिए फ़ील्ड साफ़ करें।"
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "फ़ॉन्ट वजन"
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "रोशनी"
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "नियमित"
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "मोटा"
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "सभी फोंट सभी भारों का समर्थन नहीं करते हैं। कौन से उपलब्ध हैं यह देखने के लिए Google फ़ॉन्ट पृष्ठ देखें।"
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "साधारण"
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "तिरछा"
+  },
+  "menuContentThemeRadius": {
+    "message": "कोने का अर्द्ध व्यास"
+  },
+  "menuContentThemeShadow": {
+    "message": "छाया आकार"
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "छाया अस्पष्टता"
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "छाया धुंधला"
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "सभी ब्राउज़रों द्वारा समर्थित नहीं है।"
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "सभी अस्पष्टता"
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "खोज बार, बुकमार्क, समूह नियंत्रण और टूलबार की अस्पष्टता बदलें।"
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "अलग-अलग बुकमार्क संपादित करते समय अस्पष्टता को भी बदला जा सकता है।"
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "उपकरण पट्टी"
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "बुकमार्क"
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "खोज बॉक्स"
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "समूह टूलबार"
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "थीम द्वारा पृष्ठभूमि"
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "थीम द्वारा परिभाषित पृष्ठभूमि रंग का प्रयोग करें।"
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "उच्चारण द्वारा पृष्ठभूमि"
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "बैकग्राउंड के लिए एक्सेंट कलर का इस्तेमाल करें।"
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "कस्टम रंग"
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "ढाल"
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "छवि"
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "वीडियो"
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "पृष्ठभूमि का रंग"
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "पृष्ठभूमि ढाल कोण"
+  },
+  "menuContentThemeBackgroundGradientStart": {
+    "message": "बैकग्राउंड ग्रेडिएंट स्टार्ट"
+  },
+  "menuContentThemeBackgroundGradientEnd": {
+    "message": "पृष्ठभूमि ढाल अंत"
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "स्थानीय छवियों का अब उपयोग नहीं किया जा सकता है। छवियों को कहीं ऑनलाइन होस्ट किया जाना चाहिए।"
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "यह क्यों बदल गया है?"
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "यूआरएल"
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "लोड पर एक यादृच्छिक पृष्ठभूमि छवि के लिए रिक्त स्थान या नई पंक्तियों द्वारा अलग किए गए एक से अधिक URL जोड़ें।"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "यादृच्छिक छवियों के लिए अनप्लैश का उपयोग किया जा सकता है, उदाहरण के लिए:"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "अधिक विकल्पों के लिए .../यादृच्छिक/ के बाद पैरामीटर बदलें। लोडिंग समय भिन्न हो सकता है।"
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "कलंक"
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "स्केल"
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "स्केल"
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "लहज़ा"
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "अस्पष्टता"
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "विनेट"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "छाया प्रारंभ और अंत"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "छाया अंत"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "छाया प्रारंभ"
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "YouTube पृष्ठ URL का उपयोग नहीं किया जा सकता है।"
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "वीडियो फ़ाइल से कैसे लिंक करें।"
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "यूआरएल"
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "बैकग्राउंड वीडियो केवल वीडियो फ़ाइल के सीधे URL का समर्थन करता है। MP4 और WebM प्रारूप का समर्थन करता है।"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "लोड पर एक यादृच्छिक पृष्ठभूमि वीडियो के लिए रिक्त स्थान या नई पंक्तियों द्वारा अलग किए गए एक से अधिक URL जोड़ें।"
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "कलंक"
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "स्केल"
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "स्केल"
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "लहज़ा"
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "अस्पष्टता"
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "विनेट"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "छाया प्रारंभ और अंत"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "छाया अंत"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "छाया प्रारंभ"
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "लेआउट पृष्ठभूमि रंग"
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "पारदर्शी"
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "लेआउट के पीछे कोई पृष्ठभूमि रंग नहीं है।"
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "कस्टम रंग"
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "लेआउट के पीछे एक कस्टम रंग का प्रयोग करें।"
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "लेआउट पृष्ठभूमि रंग"
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "पृष्ठभूमि अस्पष्टता"
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "बैकग्राउंड ब्लर"
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "सभी ब्राउज़रों द्वारा समर्थित नहीं है।"
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "हैडर और बुकमार्क क्षेत्र के बीच विभक्त"
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "हैडर पृष्ठभूमि रंग"
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "पारदर्शी"
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "हैडर क्षेत्र के पीछे कोई पृष्ठभूमि रंग नहीं।"
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "कस्टम रंग"
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "हैडर क्षेत्र के पीछे एक कस्टम रंग का प्रयोग करें।"
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "हैडर पृष्ठभूमि रंग"
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "पृष्ठभूमि अस्पष्टता"
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "बुकमार्क पृष्ठभूमि रंग"
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "पारदर्शी"
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "बुकमार्क क्षेत्र के पीछे कोई पृष्ठभूमि रंग नहीं है।"
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "कस्टम रंग"
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "बुकमार्क क्षेत्र के पीछे एक कस्टम रंग का प्रयोग करें।"
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "बुकमार्क पृष्ठभूमि रंग"
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "पृष्ठभूमि अस्पष्टता"
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "बुकमार्क बॉर्डर"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "अलग-अलग बुकमार्क संपादित करते समय बुकमार्क बॉर्डर को भी बदला जा सकता है।"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "सीमा के रंग को एक्सेंट द्वारा परिभाषित किया जाता है जिसे व्यक्तिगत बुकमार्क संपादित करते समय भी बदला जा सकता है।"
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "प्रत्येक बुकमार्क में अद्वितीय उच्चारण जोड़ें"
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "सभी एक्सेंट ओवरराइड हटाएं"
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "व्यक्तिगत बुकमार्क संपादित करते समय बुकमार्क कस्टम एक्सेंट को भी बदला जा सकता है।"
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "वैश्विक आकार"
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "लेआउट क्षेत्र की चौड़ाई"
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "हैडर क्षेत्र की चौड़ाई"
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "हैडर क्षेत्र संरेखण"
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "बाएं"
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "केंद्र"
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "सही"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "यदि हैडर क्षेत्र पूरी चौड़ाई का है तो प्रभाव दिखाई नहीं दे सकते हैं।"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "केवल तभी उपलब्ध होता है जब लेआउट दिशा लंबवत होती है और शीर्षलेख आइटम दिखाए जाते हैं।"
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "बुकमार्क क्षेत्र की चौड़ाई"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "बुकमार्क क्षेत्र संरेखण"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "बाएं"
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "केंद्र"
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "सही"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "यदि बुकमार्क क्षेत्र पूर्ण चौड़ाई वाला है तो प्रभाव दिखाई नहीं दे सकते हैं।"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "केवल तभी उपलब्ध होता है जब लेआउट दिशा लंबवत होती है और शीर्षलेख आइटम दिखाए जाते हैं।"
+  },
+  "menuContentLayoutPadding": {
+    "message": "हैडर और बुकमार्क क्षेत्र के आसपास की जगह"
+  },
+  "menuContentLayoutGutter": {
+    "message": "हैडर और बुकमार्क आइटम के बीच की जगह"
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "क्षेत्र संरेखण"
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "बाएं से बाएं"
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "शीर्ष केंद्र"
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "दायां शीर्ष"
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "केंद्र वाम"
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "केंद्र केंद्र"
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "केंद्र दाएं"
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "नीचे बाएँ"
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "निचला केंद्र"
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "नीचे दाएं"
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "क्षैतिज संरेखित करें"
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "हेडर और बुकमार्क को एक साथ एक पंक्ति में ढेर करें।"
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "लंबवत संरेखित करें"
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "एक के ऊपर एक कॉलम में हैडर और बुकमार्क्स को स्टैक करें।"
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "हैडर फिर बुकमार्क"
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "शीर्षलेख क्षेत्र को बुकमार्क क्षेत्र के सामने प्रकट होने का आदेश दें।"
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "बुकमार्क फिर हैडर"
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "बुकमार्क क्षेत्र को हैडर क्षेत्र के सामने आने का आदेश दें।"
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "शीर्षक"
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "नया टैब"
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "फ़ेविकॉन यूआरएल"
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https://www.example.com/favicon.svg"
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "सभी ब्राउज़रों द्वारा समर्थित नहीं है।"
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "स्क्रॉल पट्टी"
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "ऑटो"
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "पतला"
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "छुपे हुए"
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "सभी ब्राउज़रों द्वारा समर्थित नहीं है।"
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "पिछले छोर पर स्क्रॉल करें"
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "पृष्ठभूमि छवि या वीडियो को धुंधला करें"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "पृष्ठ के निचले भाग तक स्क्रॉल करने पर पृष्ठभूमि छवि या वीडियो धुंधला हो जाएगा।"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "थीम बैकग्राउंड के तहत इमेज या वीडियो ब्लर पाया जा सकता है।"
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "हैडर आइटम संरेखण"
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "बाएं"
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "केंद्र"
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "सही"
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "यदि खोज बॉक्स का आकार स्वतः पर सेट है और उपलब्ध स्थान को भरने के लिए बढ़ता है तो प्रभाव दिखाई नहीं दे सकते हैं।"
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "अभिवादन दिखाएँ"
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "आकार"
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "नई पंक्ति"
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "एक नई लाइन पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "शब्दों"
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"सुबह बख़ैर...\""
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"नमस्ते...\""
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"नमस्ते...\""
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "कोई नहीं"
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "केवल नाम प्रदर्शित करने के लिए उपयोगी।"
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "रीति"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "अपने स्वयं के अभिवादन का प्रयोग करें।"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "अगर खाली छोड़ दिया जाता है, तो डिफ़ॉल्ट रूप से \"गुड मॉर्निंग...\" हो जाता है."
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "कस्टम ग्रीटिंग टेक्स्ट"
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "कैसे हो"
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "नाम"
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "उपनाम, उपनाम या सुपरहीरो का नाम"
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "संक्रमणकालीन शब्द दिखाएं"
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "केवल तभी उपलब्ध होता है जब दिनांक या समय दिखाया जाता है।"
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "शब्दों"
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "\"समय और तारीख है\""
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"इसका\""
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "आकार"
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "नई पंक्ति"
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "एक नई पंक्ति पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "घंटे दिखाएं"
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "संख्या के रूप में"
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "एक तलवार"
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "मिनट दिखाएं"
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "संख्या के रूप में"
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "एक तलवार"
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "सेकंड दिखाएं"
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "संख्या के रूप में"
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "एक तलवार"
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "विभाजक दिखाएँ"
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "विभाजक चरित्र"
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":"
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "चौबीस घंटे"
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "दोपहर से पूर्व दोपहर के बाद"
+  },
+  "menuContentHeaderClockSize": {
+    "message": "आकार"
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "नई पंक्ति"
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "एक नई लाइन पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "प्रदर्शन का दिन"
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "संख्या के रूप में"
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "एक तलवार"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "सप्ताह की शुरुआत"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "सोमवार"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "रविवार"
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "शब्द की लंबाई"
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "लंबा"
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "छोटा"
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "दिनांक दिखाएँ"
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "संख्या के रूप में"
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "एक तलवार"
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "क्रमसूचक संख्या"
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "महीना दिखाएँ"
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "संख्या के रूप में"
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "एक तलवार"
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "क्रमसूचक संख्या"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "शब्द की लंबाई"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "लंबा"
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "छोटा"
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "शो साल"
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "संख्या के रूप में"
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "एक तलवार"
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "विभाजक दिखाएँ"
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "विभाजक चरित्र"
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "/"
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "प्रारूप"
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "तिथि / माह"
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "महीना दिनांक"
+  },
+  "menuContentHeaderDateSize": {
+    "message": "आकार"
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "नई पंक्ति"
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "एक नई लाइन पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "खोज दिखाएँ"
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "खोज बॉक्स की चौड़ाई"
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "ऑटो चौड़ाई"
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "खोज बॉक्स सबसे उपयुक्त उपलब्ध स्थान तक बढ़ेगा।"
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "कस्टम चौड़ाई"
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "परिभाषित करें कि हैडर एरिया के अंदर सर्च बॉक्स कितना चौड़ा होना चाहिए।"
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "चौड़ाई"
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "आकार"
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "नई पंक्ति"
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "एक नई लाइन पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "खोज इंजन"
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "रीति"
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "नाम"
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "खोज इंजन का नाम"
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "यूआरएल"
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https://"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "खोज पैरामीटर के साथ एक वेब पता दर्ज करें, जैसे: \"https://vimeo.com/search?q=\""
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} उपरोक्त URL के अंत में खोज बॉक्स में दर्ज किए गए खोज शब्द को जोड़ देगा।"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "नाम विशेषता"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "क्यू"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "खोज इनपुट फ़ील्ड पर नाम विशेषता सेट करता है।"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "यह सबमिट करते समय सर्च इंजन को दिए गए नाम को परिभाषित करता है। यकीन न हो तो खाली छोड़ दें।"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "टेक्स्ट संरेखण खोजें"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "बाएं"
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "केंद्र"
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "सही"
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "एक नए टैब में खोज परिणाम खोलें"
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "बुकमार्क दिखाएँ"
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "बुकमार्क होवर पर URL दिखाएं"
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "बुकमार्क लाइन दिखाएं"
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "बुकमार्क होवर पर छाया दिखाएं"
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "यदि थीम शैडो को 0 पर सेट किया गया है, तो प्रभाव दिखाई नहीं दे सकते हैं।"
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "बुकमार्क होवर पर बढ़ो"
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "एक नए टैब में बुकमार्क खोलें"
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "बुकमार्क आकार"
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "खंड"
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "चौकोर आकार की बुकमार्क टाइलें।"
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "सूची"
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "छोटी और चौड़ी बुकमार्क टाइलें।"
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "शीर्ष"
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "नीचे"
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "किसी बुकमार्क टाइल के ऊपर या नीचे URL और नियंत्रण प्रदर्शित करें।"
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "पत्र के द्वारा"
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "आइकन द्वारा"
+  },
+  "menuContentBookmarkSortName": {
+    "message": "नाम से"
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "समूह विवरण क्षेत्र संरेखण"
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "बाएं"
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "केंद्र"
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "सही"
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "समूह विवरण आदेश"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "समूह विवरण फिर बुकमार्क"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "समूह विवरण क्षेत्र को बुकमार्क क्षेत्र के सामने उपस्थित होने का आदेश दें।"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "बुकमार्क फिर समूह विवरण"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "समूह विवरण क्षेत्र के सामने आने के लिए बुकमार्क क्षेत्र का आदेश दें।"
+  },
+  "menuContentGroupNameSize": {
+    "message": "नाम का आकार"
+  },
+  "menuContentGroupNameShow": {
+    "message": "सब दिखाओ"
+  },
+  "menuContentGroupNameHide": {
+    "message": "सभी को छिपाएं"
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "अलग-अलग समूहों को संपादित करके समूह के नाम भी बदले जा सकते हैं।"
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "सभी ग्रुप खोलें"
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "सभी समूहों को संक्षिप्त करें"
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "समूह टूलबार आकार"
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "समूह संक्षिप्त नियंत्रण"
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "सब दिखाओ"
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "सभी को छिपाएं"
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "समूह टूलबार संक्षिप्त करें बटन को अलग-अलग समूहों को संपादित करके भी बदला जा सकता है।"
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "समूह सभी नियंत्रण खोलें"
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "सब दिखाओ"
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "सभी को छिपाएं"
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "ग्रुप टूलबार ओपन ऑल बटन को अलग-अलग ग्रुप्स को एडिट करके भी बदला जा सकता है।"
+  },
+  "menuContentToolbarSize": {
+    "message": "टूलबार का आकार"
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "एक कोने में"
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "शीर्षलेख में"
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "टूलबार को हैडर के अंदर या विंडो के किसी कोने में रखें।"
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "नई पंक्ति"
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "एक नई लाइन पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "केवल तभी उपलब्ध होता है जब टूलबार हेडर के अंदर स्थित होता है।"
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "टूलबार स्थिति"
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "बाएं से बाएं"
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "दायां शीर्ष"
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "नीचे बाएँ"
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "नीचे दाएं"
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "टूलबार को विंडो के चारों कोनों में से किसी एक में रखें।"
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "केवल तभी उपलब्ध होता है जब टूलबार एक कोने में स्थित हो।"
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "एक्सेंट नियंत्रण दिखाएं"
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "नियंत्रण जोड़ें दिखाएँ"
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "संपादन नियंत्रण दिखाएं"
+  },
+  "menuContentDataRestoreFile": {
+    "message": "फ़ाइल से आयात करें"
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "क्लिपबोर्ड से आयात करें"
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "पहले निर्यात किए गए {appName} बैकअप को पुनर्स्थापित करें।"
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "या यहां एक {appName} बैकअप फ़ाइल छोड़ें।"
+  },
+  "menuContentDataBackupFile": {
+    "message": "निर्यात जानकारी"
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "क्लिपबोर्ड पर कॉपी करें"
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "{appName} बुकमार्क और सेटिंग का बैकअप डाउनलोड करें।"
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "इस फ़ाइल को बाद में इस या किसी अन्य डिवाइस पर आयात किया जा सकता है।"
+  },
+  "menuContentDataClearAll": {
+    "message": "सभी डेटा साफ़ करें"
+  },
+  "menuContentDataClearPartial": {
+    "message": "बुकमार्क को छोड़कर सभी साफ़ करें"
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "आप सभी डेटा साफ़ करके बुकमार्क खो देंगे।"
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "अपने डेटा का बैकअप लें"
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "{appName} को डिफ़ॉल्ट स्थिति में रीसेट करने के लिए सभी डेटा साफ़ करें।"
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "वैकल्पिक रूप से, सभी सेटिंग्स को मिटा देना संभव है लेकिन वर्तमान बुकमार्क और समूह रखें।"
+  },
+  "menuContentLanguageLanguage": {
+    "message": "भाषा"
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "एक अनुवाद मिला जो सही नहीं है?"
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "{appName} का अनुवाद करने में सहायता करें"
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "सभी पर बुकमार्क सेटिंग लागू करना"
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "ब्राउज़र समर्थन"
+  },
+  "menuContentSupportPageCookies": {
+    "message": "कुकीज़ और कैश"
+  },
+  "menuContentSupportPageData": {
+    "message": "डेटा बैकअप और पुनर्स्थापित करें"
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "स्थानीय पृष्ठभूमि छवि"
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "संरक्षित यूआरएल"
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "सेटिंग्स और बुकमार्क पुनर्प्राप्त करना"
+  },
+  "menuContentSupportPageResetting": {
+    "message": "ब्राउज़र खोलते समय रीसेट करना"
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "आपकी निजता का सम्मान"
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "बैकग्राउंड वीडियो या इमेज सेट करना"
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "{appName} को अपने Firefox होमपेज के रूप में सेट करना"
+  },
+  "menuContentSupportPara": {
+    "message": "अधिक समर्थन या प्रतिक्रिया के लिए:"
+  },
+  "menuContentSupportLink1": {
+    "message": "एक मुद्दा जमा करें।"
+  },
+  "menuContentSupportLink2": {
+    "message": "विकी की जाँच करें।"
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} मुफ़्त है, कॉफ़ी के रूप में प्रशंसा का स्वागत है!"
+  },
+  "menuContentCoffeeButton": {
+    "message": "मेरे लिए एक कॉफी खरीदें"
+  },
+  "menuContentAppPara1": {
+    "message": "समुदाय के साथ अपना सेटअप साझा करें।"
+  },
+  "menuContentAppLink1": {
+    "message": "Reddit /r/{appName} पर मिला।"
+  },
+  "menuContentAppPara2": {
+    "message": "यह प्रोजेक्ट ओपन सोर्स है।"
+  },
+  "menuContentAppLink2": {
+    "message": "गिटहब पर मिला।"
+  },
+  "menuContentAppLink3": {
+    "message": "जीएनयू जनरल पब्लिक लाइसेंस v3.0।"
+  },
+  "bookmarkTileControlLeft": {
+    "message": "इस बुकमार्क को बाएँ ले जाएँ"
+  },
+  "bookmarkTileControlSort": {
+    "message": "बुकमार्क को पुन: व्यवस्थित करने के लिए खींचें"
+  },
+  "bookmarkTileControlRight": {
+    "message": "इस बुकमार्क को दाईं ओर ले जाएं"
+  },
+  "bookmarkTileControlEdit": {
+    "message": "इस बुकमार्क को संपादित करें"
+  },
+  "bookmarkTileControlRemove": {
+    "message": "यह बुकमार्क हटाएं"
+  },
+  "bookmarkAddHeading": {
+    "message": "एक नया बुकमार्क जोड़ें"
+  },
+  "bookmarkAddSuccessText": {
+    "message": "जोड़ें"
+  },
+  "bookmarkAddCancelText": {
+    "message": "रद्द करें"
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "हटाना"
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "अनाम बुकमार्क हटाएं"
+  },
+  "bookmarkRemoveContent": {
+    "message": "क्या आप वाकई इस बुकमार्क को हटाना चाहते हैं? इसे असंपादित नहीं किया जा सकता है।"
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "हटाना"
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "रद्द करें"
+  },
+  "bookmarkEditHeadingName": {
+    "message": "संपादित करें"
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "अनाम बुकमार्क संपादित करें"
+  },
+  "bookmarkEditSuccessText": {
+    "message": "सहेजें"
+  },
+  "bookmarkEditCancelText": {
+    "message": "रद्द करें"
+  },
+  "bookmarkFormTabVisual": {
+    "message": "दृश्य और नाम"
+  },
+  "bookmarkFormTabAddress": {
+    "message": "पता"
+  },
+  "bookmarkFormTabPosition": {
+    "message": "पद"
+  },
+  "bookmarkFormTabLayout": {
+    "message": "ख़ाका"
+  },
+  "bookmarkFormTabTheme": {
+    "message": "विषय"
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "दृश्य और नाम"
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "इस बुकमार्क टाइल पर अक्षर, चिह्न, छवि और एक नाम प्रदर्शित करें।"
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "पता"
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "पूर्ण URL का उपयोग करना सुनिश्चित करें और \"https://...\" शामिल करें"
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "पद"
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "इस बुकमार्क को रखने वाला समूह।"
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "ख़ाका"
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "दृश्य तत्व और नाम की स्थिति, पैमाने और अभिविन्यास बदलें।"
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "विषय"
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "थीम और एक्सेंट रंग को ओवरराइड करें।"
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "यूआरएल"
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https://www.example.com/"
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "दृश्य तत्व और नाम संरेखण"
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "बाएं से बाएं"
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "शीर्ष केंद्र"
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "दायां शीर्ष"
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "केंद्र वाम"
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "केंद्र केंद्र"
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "केंद्र दाएं"
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "नीचे बाएँ"
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "निचला केंद्र"
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "नीचे दाएं"
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "खड़ा"
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "विज़ुअल एलिमेंट को स्टैक करें और एक को दूसरे के ऊपर नाम दें।"
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "क्षैतिज"
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "दृश्य तत्व और नाम को साथ-साथ व्यवस्थित करें।"
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "दृश्य तत्व तो नाम"
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "नाम से पहले दृश्य तत्व रखें।"
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "नाम फिर दृश्य तत्व"
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "नाम को दृश्य तत्व से पहले रखें।"
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "घुमाएँ"
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "दृश्य तत्व स्थिति समायोजित करें"
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "क्षैतिज"
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "खड़ा"
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "नाली"
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "दृश्य तत्व दिखाएं"
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "इस बुकमार्क षट्भुज पर पत्र, चिह्न या एक छवि प्रदर्शित करें।"
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "पत्र"
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "आइकन"
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "छवि"
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "दृश्य आकार"
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "बुकमार्क पत्र"
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "इ"
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "बुकमार्क आइकन"
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "FontAwesome ब्रांड या प्रतीक"
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "आइकन हटाएं"
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "बुकमार्क छवि"
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "दृश्य छाया"
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "दृश्य छाया केवल एक पत्र या चिह्न पर लागू होती है।"
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "नाम दिखाएं"
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "बुकमार्क नाम"
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "उदाहरण"
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "नाम का आकार"
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "थीम एक्सेंट"
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "थीम द्वारा परिभाषित एक्सेंट का प्रयोग करें।"
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "कस्टम एक्सेंट"
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "थीम एक्सेंट को ओवरराइड करें।"
+  },
+  "bookmarkFormAccentColor": {
+    "message": "लहज़ा"
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "थीम रंग"
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "थीम द्वारा परिभाषित रंग का प्रयोग करें।"
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "कस्टम रंग"
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "थीम रंग को ओवरराइड करें।"
+  },
+  "bookmarkFormColorColor": {
+    "message": "रंग"
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "अस्पष्टता"
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "पृष्ठभूमि दिखाएं"
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "इस बुकमार्क टाइल पर एक छवि या वीडियो पृष्ठभूमि प्रदर्शित करें।"
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "छवि"
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "वीडियो"
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "अस्पष्टता"
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "पृष्ठभूमि छवि URL"
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "पृष्ठभूमि छवि केवल छवि फ़ाइल के सीधे URL का समर्थन करती है।"
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "पृष्ठभूमि वीडियो URL"
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "बैकग्राउंड वीडियो केवल वीडियो फ़ाइल के सीधे URL का समर्थन करता है। MP4 और WebM प्रारूप का समर्थन करता है।"
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "YouTube पृष्ठ URL का उपयोग नहीं किया जा सकता है।"
+  },
+  "bookmarkFormBorder": {
+    "message": "बॉर्डर"
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "चौड़ी टाइल"
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "बुकमार्क टाइल दो स्तंभों में फैली हुई है।"
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "लंबा टाइल"
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "बुकमार्क टाइल दो पंक्तियों में फैली हुई है।"
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "मौजूदा समूह"
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "नया समूह"
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "यूआरएल"
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "उदाहरण समूह"
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "यादृच्छिक समूह का नाम"
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "समूह"
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "पद"
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "अन्य बुकमार्क पर \"दृश्य तत्व दिखाएं\" और \"नाम दिखाएं\" लागू करें"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "पत्र, चिह्न, छवि और नाम पाठ साझा नहीं किया जाएगा।"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "सभी बुकमार्क पर दृश्य तत्वों या नामों को छिपाने के लिए उपयोगी।"
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "अन्य बुकमार्क पर लेआउट लागू करें"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "सहेजे जाने पर, उपरोक्त लेआउट को अन्य सभी बुकमार्क पर लागू करें।"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "केवल दृश्य और नाम का आकार, संरेखण, क्रम, स्थिति और गटर सभी पर लागू होगा।"
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "अन्य बुकमार्क पर थीम लागू करें"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "सहेजे जाने पर, उपरोक्त थीम को अन्य सभी बुकमार्क पर लागू करें।"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "केवल रंग, उच्चारण, अस्पष्टता, सीमा और दृश्य छाया सभी पर लागू होगी।"
+  },
+  "bookmarkPreviewFull": {
+    "message": "पूर्वावलोकन"
+  },
+  "bookmarkPreviewHalf": {
+    "message": "पूर्वावलोकन (50% स्केल)"
+  },
+  "groupAreaControlUp": {
+    "message": "इस ग्रुप को ऊपर ले जाएँ"
+  },
+  "groupAreaControlSort": {
+    "message": "पुन: व्यवस्थित करने के लिए समूह खींचें"
+  },
+  "groupAreaControlDown": {
+    "message": "इस समूह को नीचे ले जाएँ"
+  },
+  "groupAreaControlEdit": {
+    "message": "इस समूह को संपादित करें"
+  },
+  "groupAreaControlRemove": {
+    "message": "इस समूह को हटा दें"
+  },
+  "groupAreaControlOpenAll": {
+    "message": "इस समूह के सभी बुकमार्क खोलें"
+  },
+  "groupAreaControlCollapse": {
+    "message": "इस समूह को संक्षिप्त करें"
+  },
+  "groupAddHeading": {
+    "message": "एक नया समूह जोड़ें"
+  },
+  "groupAddSuccessText": {
+    "message": "जोड़ें"
+  },
+  "groupAddCancelText": {
+    "message": "रद्द करें"
+  },
+  "groupRemoveHeadingName": {
+    "message": "हटाना"
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "अनाम समूह निकालें"
+  },
+  "groupRemoveContent": {
+    "message": "क्या आप वाकई इस समूह और सभी बुकमार्क को हटाना चाहते हैं? इसे असंपादित नहीं किया जा सकता है।"
+  },
+  "groupRemoveSuccessText": {
+    "message": "हटाना"
+  },
+  "groupRemoveCancelText": {
+    "message": "रद्द करें"
+  },
+  "groupEditHeadingName": {
+    "message": "संपादित करें"
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "अनाम समूह संपादित करें"
+  },
+  "groupEditSuccessText": {
+    "message": "सहेजें"
+  },
+  "groupEditCancelText": {
+    "message": "रद्द करें"
+  },
+  "groupFormSectionNameHeading": {
+    "message": "नाम"
+  },
+  "groupFormSectionNameDescription": {
+    "message": "इस समूह के ऊपर एक नाम प्रदर्शित करें।"
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "उपकरण पट्टी"
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "इस समूह में सभी को खोलने या बुकमार्क दिखाने/छिपाने के लिए नियंत्रण प्रदर्शित करें।"
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "आदेश"
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "इस समूह की स्थिति।"
+  },
+  "groupFormNameShow": {
+    "message": "समूह का नाम दिखाएं"
+  },
+  "groupFormNameTextLabel": {
+    "message": "समूह नाम"
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "उदाहरण समूह"
+  },
+  "groupFormNameRandom": {
+    "message": "यादृच्छिक समूह का नाम"
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "संक्षिप्त दिखाएँ"
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "संक्षिप्त करें बटन इस समूह में बुकमार्क दिखाएगा या छिपाएगा।"
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "सभी दिखाएँ"
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "इस ग्रुप में कम से कम एक बुकमार्क होने पर ओपन ऑल बटन दिखाई देगा।"
+  },
+  "groupFormDestination": {
+    "message": "पद"
+  },
+  "themeCustomTileControlEdit": {
+    "message": "इस सहेजी गई कस्टम थीम को संपादित करें"
+  },
+  "themeCustomTileControlRemove": {
+    "message": "इस सहेजी गई कस्टम थीम को हटा दें"
+  },
+  "themeCustomFormNameLabel": {
+    "message": "नाम"
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "उदाहरण विषय"
+  },
+  "themeCustomFormRandom": {
+    "message": "यादृच्छिक विषय का नाम"
+  },
+  "themeCustomAddHeading": {
+    "message": "वर्तमान विषय सहेजें"
+  },
+  "themeCustomAddSuccessText": {
+    "message": "सहेजें"
+  },
+  "themeCustomAddCancelText": {
+    "message": "रद्द करें"
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "हटाना"
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "अनाम कस्टम थीम निकालें"
+  },
+  "themeCustomRemoveContent": {
+    "message": "क्या आप वाकई सहेजी गई इस कस्टम थीम को हटाना चाहते हैं? इसे असंपादित नहीं किया जा सकता है।"
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "सहेजें"
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "रद्द करें"
+  },
+  "themeCustomEditHeadingName": {
+    "message": "संपादित करें"
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "अनाम कस्टम थीम संपादित करें"
+  },
+  "themeCustomEditSuccessText": {
+    "message": "हटाना"
+  },
+  "themeCustomEditCancelText": {
+    "message": "रद्द करें"
+  },
+  "toolbarAccent": {
+    "message": "एक्सेंट रंग"
+  },
+  "toolbarAddLabel": {
+    "message": "जोड़ें"
+  },
+  "toolbarAddGroup": {
+    "message": "नया समूह"
+  },
+  "toolbarAddBookmark": {
+    "message": "नया बुकमार्क"
+  },
+  "toolbarEdit": {
+    "message": "समूह और बुकमार्क संपादित करें"
+  },
+  "toolbarSetting": {
+    "message": "सेटिंग मेनू खोलें"
+  },
+  "dataFormDescription": {
+    "message": "आप बैकअप फ़ाइल के सभी या उसके कुछ हिस्सों को पुनर्स्थापित कर सकते हैं। निम्नलिखित डेटा को पुनर्स्थापित किया जाएगा:"
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "बुकमार्क"
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "इसमें सभी समूह और बुकमार्क शामिल हैं"
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "आयात होने पर बुकमार्क किसी भी कस्टम रंग, लहजे और बॉर्डर को बनाए रखेंगे।"
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "मौजूदा बुकमार्क बदलें"
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "मौजूदा बुकमार्क में जोड़ें"
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "विषय"
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "इसमें रंग, उच्चारण, फ़ॉन्ट, पृष्ठभूमि और कोई भी सहेजे गए कस्टम थीम शामिल हैं।"
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "समायोजन"
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "इसमें लेआउट आकार और स्थिति, हेडर क्षेत्र का आकार, बुकमार्क क्षेत्र का आकार और अन्य उपयोगकर्ता सेटिंग्स शामिल हैं।"
+  },
+  "dataRestoreHeading": {
+    "message": "{appName} बैकअप से पुनर्स्थापित किया जा रहा है"
+  },
+  "dataRestoreSuccessText": {
+    "message": "आयात"
+  },
+  "dataRestoreCancelText": {
+    "message": "रद्द करें"
+  },
+  "dataClearAllHeading": {
+    "message": "सभी {appName} डेटा साफ़ करें?"
+  },
+  "dataClearAllContentPara1": {
+    "message": "क्या आप वाकई सभी {appName} बुकमार्क और सेटिंग साफ़ करना चाहते हैं? {appName} को डिफ़ॉल्ट स्थिति में बहाल कर दिया जाएगा।"
+  },
+  "dataClearAllContentPara2": {
+    "message": "इसे असंपादित नहीं किया जा सकता है।"
+  },
+  "dataClearAllSuccessText": {
+    "message": "सभी डेटा साफ़ करें"
+  },
+  "dataClearAllCancelText": {
+    "message": "रद्द करें"
+  },
+  "dataClearPartialHeading": {
+    "message": "बुकमार्क के अलावा {appName} डेटा साफ़ करें?"
+  },
+  "dataClearPartialContentPara1": {
+    "message": "क्या आप वाकई सभी {appName} सेटिंग साफ़ करना चाहते हैं? {appName} को डिफ़ॉल्ट स्थिति में पुनर्स्थापित कर दिया जाएगा लेकिन आपके बुकमार्क और समूह बने रहेंगे।"
+  },
+  "dataClearPartialContentPara2": {
+    "message": "इसे असंपादित नहीं किया जा सकता है।"
+  },
+  "dataClearPartialSuccessText": {
+    "message": "बुकमार्क को छोड़कर सभी साफ़ करें"
+  },
+  "dataClearPartialCancelText": {
+    "message": "रद्द करें"
+  },
+  "dataExportBackup": {
+    "message": "बैकअप"
+  },
+  "dataFeedbackEmpty": {
+    "message": "आयात करने के लिए कुछ भी नहीं चुना गया।"
+  },
+  "dataFeedbackSuccess": {
+    "message": "सफलता! {appName} बुकमार्क और सेटिंग्स को पुनर्स्थापित करना।"
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "JSON फ़ाइल नहीं। सुनिश्चित करें कि चयनित फ़ाइल {appName} से आई है।"
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "सही प्रकार की JSON फ़ाइल नहीं है। सुनिश्चित करें कि चयनित फ़ाइल {appName} से आई है।"
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "सही प्रकार का डेटा नहीं। सुनिश्चित करें कि क्लिपबोर्ड में {appName} या {appName} बैकअप JSON फ़ाइल का डेटा है।"
+  },
+  "controlGeneralReset": {
+    "message": "वितथ पर ले जाएं"
+  },
+  "controlColorTextPlaceholder": {
+    "message": "हेक्स कोड"
+  },
+  "controlColorRandom": {
+    "message": "यादृच्छिक रंग"
+  },
+  "controlColorMixerMoreControls": {
+    "message": "अधिक नियंत्रण"
+  },
+  "controlColorMixerSliderH": {
+    "message": "रंग"
+  },
+  "controlColorMixerSliderS": {
+    "message": "परिपूर्णता"
+  },
+  "controlColorMixerSliderL": {
+    "message": "लपट"
+  },
+  "controlColorMixerSliderR": {
+    "message": "लाल"
+  },
+  "controlColorMixerSliderG": {
+    "message": "हरा"
+  },
+  "controlColorMixerSliderB": {
+    "message": "नीला"
+  }
+}

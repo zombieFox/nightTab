@@ -1,4 +1,4 @@
-import { language } from '../../language';
+import { message } from '../message';
 
 import { Button } from '../button';
 
@@ -20,11 +20,11 @@ export const CustomThemeForm = function({
       path: 'name',
       id: 'name',
       value: customThemeData.theme.name,
-      placeholder: language.current.theme.custom.form.name.placeholder,
-      labelText: language.current.theme.custom.form.name.label
+      placeholder: message('themeCustomFormNamePlaceholder'),
+      labelText: message('themeCustomFormNameLabel')
     }),
     randomName: new Button({
-      text: language.current.theme.custom.form.random,
+      text: message('themeCustomFormRandom'),
       style: ['line'],
       func: () => {
         customThemeData.theme.name = randomString({ adjectivesCount: randomNumber(1, 3) });

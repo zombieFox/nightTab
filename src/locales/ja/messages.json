@@ -1,0 +1,2066 @@
+{
+  "appName": {
+    "message": "nightTab"
+  },
+  "appShortName": {
+    "message": "nightTab"
+  },
+  "appDescription": {
+    "message": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab."
+  },
+  "menuNavThemeLabel": {
+    "message": "テーマ"
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "プリセット"
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "保存しました"
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "スタイル"
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "色"
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "アクセント"
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "フォント"
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "半径"
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "風邪"
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "シェード"
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "不透明度"
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "バックグラウンド"
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "レイアウト"
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "ヘッダ"
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "ブックマーク"
+  },
+  "menuNavLayoutLabel": {
+    "message": "レイアウト"
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "スケーリング"
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "領域"
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "パディング"
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "側溝"
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "アラインメント"
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "ページ"
+  },
+  "menuNavHeaderLabel": {
+    "message": "ヘッダ"
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "アラインメント"
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "挨拶"
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "過渡的な言葉"
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "時計"
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "日にち"
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "検索"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "ブックマーク"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "全般的"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "スタイル"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "オリエンテーション"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "選別"
+  },
+  "menuNavGroupLabel": {
+    "message": "グループ"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "アラインメント"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "名前"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "崩壊"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "ツールバー"
+  },
+  "menuNavToolbarLabel": {
+    "message": "ツールバー"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "サイズ"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "位置"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "ポジション"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "コントロール"
+  },
+  "menuNavDataLabel": {
+    "message": "データ"
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "戻す"
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "バックアップ"
+  },
+  "menuNavDataSubNavClear": {
+    "message": "クリア"
+  },
+  "menuNavLanguageLabel": {
+    "message": "言語"
+  },
+  "menuNavSupportLabel": {
+    "message": "サポート"
+  },
+  "menuNavCoffeeLabel": {
+    "message": "コーヒー"
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}"
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "プリセットを適用すると、現在の色、アクセント、フォント、スタイル、半径、影、陰影、背景が置き換えられます。"
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "テーマを保存すると、現在の色、アクセント、フォント、スタイル、不透明度、半径、影、陰影、背景が記録されます。"
+  },
+  "menuContentThemeSavedSave": {
+    "message": "現在のテーマを保存"
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "保存したテーマを編集する"
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "ダークモード"
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "ライトモード"
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "自動"
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "システムのライトモードまたはダークモードに従います。"
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "背景、ブックマーク、モーダルは左からの色合いを使用しています。"
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "テキスト要素とフォーム要素は、右からの陰影を使用します。"
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "明るい外観の場合は、ライトスタイルに切り替えてから、原色を選択します。暗い外観の場合はその逆です。"
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "原色"
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "飽和"
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "コントラスト範囲"
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "コントラストスタート"
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "コントラストエンド"
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "コントラスト範囲コントロールを近づけて、落ち着いた外観にします。"
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "コントラストレンジコントロールを互いに遠くに移動して、シャープで鮮やかな外観にします。"
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "グレー"
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "赤"
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "オレンジ"
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "黄色"
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "ライム"
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "緑"
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "アクア"
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "シアン"
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "ティール"
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "青い"
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "紫の"
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "赤紫色"
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "フクシア"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "スーパーエクストラライト"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "エクストラライト"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "光"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "スーパーエクストラダーク"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "エクストラダーク"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "闇"
+  },
+  "menuContentThemeAccentColor": {
+    "message": "アクセントカラー"
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "ロード/リフレッシュ時のランダムなアクセントカラー"
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "どれでも"
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "光"
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "闇"
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "パステル"
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "飽和"
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "今すぐランダム化"
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "アクセントの色相を自動変更"
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "変更遅延"
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "手順を変更する"
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "アクセントの色相が急速に変化すると、パフォーマンスの問題が発生する可能性があるため、注意してください。"
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "アクセントカラーがグレーまたはブラックの場合、アクセントの色相の自動変更は機能しません。"
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "表示フォント"
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "Googleフォント名"
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "Google Fontsを使用して、時計、日付、グループ名、ブックマーク文字をカスタマイズします。"
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "Google Font を探す"
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "Google Fonts に表示されるフォント名を、大文字とスペースを含めて追加します。例：「FredokaOne」または「Kanit」と入力します。"
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "フィールドをクリアして、デフォルトのフォント「FjallaOne」を使用します。"
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "フォントの太さ"
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "光"
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "通常"
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "はげ"
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、Google Font ページを参照してください。"
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "普通"
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "イタリック"
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "ユーザーインターフェイスフォント"
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "Googleフォント名"
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "Google Fontを使用して、ブックマーク名、URL、およびフォーム要素をカスタマイズします。"
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "Google Font を探す"
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "Google Fontsに表示されるフォント名を、大文字とスペースを含めて追加します。例：「Roboto」、「Source Sans Pro」、「NotoSans」と入力します。"
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "フィールドをクリアして、デフォルトのフォント「OpenSans」を使用します。"
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "フォントの太さ"
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "光"
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "通常"
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "はげ"
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、Google Font ページを参照してください。"
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "普通"
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "イタリック"
+  },
+  "menuContentThemeRadius": {
+    "message": "コーナー半径"
+  },
+  "menuContentThemeShadow": {
+    "message": "影のサイズ"
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "日陰の不透明度"
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "シェードブラー"
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "すべてのブラウザでサポートされているわけではありません。"
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "すべての不透明度"
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "検索バー、ブックマーク、グループコントロール、ツールバーの不透明度を変更します。"
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "個々のブックマークを編集するときに不透明度を変更することもできます。"
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "ツールバー"
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "ブックマーク"
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "検索ボックス"
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "グループツールバー"
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "テーマ別の背景"
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "テーマで定義された背景色を使用します。"
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "アクセントによる背景"
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "背景にはアクセントカラーを使用します。"
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "カスタムカラー"
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "勾配"
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "画像"
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "ビデオ"
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "背景色"
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "背景のグラデーション角度"
+  },
+  "menuContentThemeBackgroundGradientStart": {
+    "message": "背景グラデーション開始"
+  },
+  "menuContentThemeBackgroundGradientEnd": {
+    "message": "背景グラデーション終了"
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "ローカル画像は使用できなくなりました。画像はオンラインのどこかでホストする必要があります。"
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "なぜこれが変わったのですか？"
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "ロード時にランダムな背景画像を作成するために、スペースまたは新しい行で区切られた複数のURLを追加します。"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "Unsplashは、ランダムな画像に使用できます。例："
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "その他のオプションについては、... / random /の後にパラメータを変更してください。読み込み時間は異なる場合があります。"
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "ぼかし"
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "グレースケール"
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "規模"
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "アクセント"
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "不透明度"
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "ビネット"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "シェードの開始と終了"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "シェードエンド"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "シェードスタート"
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "YouTubeページのURLは使用できません。"
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "ビデオファイルにリンクする方法。"
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "バックグラウンドビデオは、ビデオファイルへの直接URLのみをサポートします。 MP4およびWebM形式をサポートします。"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "読み込み時にランダムな背景動画を作成するために、スペースまたは新しい行で区切って複数のURLを追加します。"
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "ぼかし"
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "グレースケール"
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "規模"
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "アクセント"
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "不透明度"
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "ビネット"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "シェードの開始と終了"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "シェードエンド"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "シェードスタート"
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "レイアウトの背景色"
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "透明"
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "レイアウトの背後に背景色はありません。"
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "カスタムカラー"
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "レイアウトの背後にあるカスタムカラーを使用します。"
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "レイアウトの背景色"
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "背景の不透明度"
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "背景のぼかし"
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "すべてのブラウザでサポートされているわけではありません。"
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "ヘッダーとブックマーク領域を分割する"
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "ヘッダーの背景色"
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "透明"
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "ヘッダー領域の背後に背景色はありません。"
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "カスタムカラー"
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "ヘッダー領域の後ろにカスタムカラーを使用します。"
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "ヘッダーの背景色"
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "背景の不透明度"
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "ブックマークの背景色"
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "透明"
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "ブックマーク領域の背後に背景色はありません。"
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "カスタムカラー"
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "ブックマーク領域の後ろにカスタムカラーを使用します。"
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "ブックマークの背景色"
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "背景の不透明度"
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "ブックマークの境界線"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "個々のブックマークを編集するときに、ブックマークの境界線を変更することもできます。"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "境界線の色はアクセントによって定義され、個々のブックマークを編集するときにも変更できます。"
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "各ブックマークに独自のアクセントを追加します"
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "すべてのアクセントオーバーライドを削除します"
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "ブックマークのカスタムアクセントは、個々のブックマークを編集するときにも変更できます。"
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "グローバルサイズ"
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "レイアウトエリア幅"
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "ヘッダー領域の幅"
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "ヘッダー領域の配置"
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "左"
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "中心"
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "右"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "ヘッダー領域が全幅の場合、エフェクトが表示されない場合があります。"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "レイアウト方向が垂直で、ヘッダー項目が表示されている場合にのみ使用できます。"
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "ブックマーク領域の幅"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "ブックマーク領域の配置"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "左"
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "中心"
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "右"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "ブックマークエリアが全幅の場合、エフェクトが表示されない場合があります。"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "レイアウト方向が垂直で、ヘッダー項目が表示されている場合にのみ使用できます。"
+  },
+  "menuContentLayoutPadding": {
+    "message": "ヘッダーとブックマーク領域の周りのスペース"
+  },
+  "menuContentLayoutGutter": {
+    "message": "ヘッダーアイテムとブックマークアイテムの間のスペース"
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "エリアアライメント"
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "左上"
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "トップセンター"
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "右上"
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "中央左"
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "センターセンター"
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "中道右派"
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "左下"
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "下部中央"
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "右下"
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "水平に揃える"
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "ヘッダーとブックマークを並べて積み重ねます。"
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "垂直に揃える"
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "ヘッダーとブックマークを列に積み重ねます。"
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "ヘッダー、ブックマーク"
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "ブックマーク領域の前にヘッダー領域を表示するように注文します。"
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "ブックマークしてからヘッダー"
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "ブックマーク領域をヘッダー領域の前に表示するように注文します。"
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "タイトル"
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "新しいタブ"
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "ファビコンURL"
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https://www.example.com/favicon.svg"
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "すべてのブラウザでサポートされているわけではありません。"
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "スクロール・バー"
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "自動"
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "薄い"
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "隠れた"
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "すべてのブラウザでサポートされているわけではありません。"
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "終わりを過ぎてスクロール"
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "背景画像またはビデオをぼかす"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "ページの一番下までスクロールすると、背景画像またはビデオのぼやけがなくなります。"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "画像またはビデオのぼかしは、テーマの背景の下にあります。"
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "ヘッダーアイテムの配置"
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "左"
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "中心"
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "右"
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "検索ボックスのサイズが[自動]に設定されていて、使用可能なスペースを埋めるように大きくなると、効果が表示されない場合があります。"
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "あいさつを表示"
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "サイズ"
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "改行"
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "新しい行に強制し、他のヘッダー項目から分離します。"
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "言葉遣い"
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"おはようございます...\""
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"こんにちは...\""
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"こんにちは...\""
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "なし"
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "名前だけを表示するのに便利です。"
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "カスタム"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "あなた自身の挨拶を使用してください。"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "空白のままにすると、デフォルトで「おはよう...」になります。"
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "カスタムグリーティングテキスト"
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "ハウディ"
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "名前"
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "ニックネーム、エイリアス、またはスーパーヒーローの名前"
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "過渡的な言葉を表示する"
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "日付または時刻が表示されている場合にのみ使用できます。"
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "言葉遣い"
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "「日時は」"
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"これは\""
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "サイズ"
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "改行"
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "新しい行に強制し、他のヘッダー項目から分離します。"
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "時間を表示"
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "番号として"
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "言葉として"
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "分を表示"
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "番号として"
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "言葉として"
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "秒を表示"
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "番号として"
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "言葉として"
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "セパレータを表示"
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "区切り文字"
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": "："
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "24時間"
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "午前午後"
+  },
+  "menuContentHeaderClockSize": {
+    "message": "サイズ"
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "改行"
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "新しい行に強制し、他のヘッダー項目から分離します。"
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "ショーデー"
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "番号として"
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "言葉として"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "週の始まり"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "月曜"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "日曜日"
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "単語の長さ"
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "長いです"
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "短い"
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "日付を表示"
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "番号として"
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "言葉として"
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "序数"
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "月を表示"
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "番号として"
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "言葉として"
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "序数"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "単語の長さ"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "長いです"
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "短い"
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "ショーイヤー"
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "番号として"
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "言葉として"
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "セパレータを表示"
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "区切り文字"
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "/"
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "フォーマット"
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "日付/月"
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "月/日付"
+  },
+  "menuContentHeaderDateSize": {
+    "message": "サイズ"
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "改行"
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "新しい行に強制し、他のヘッダー項目から分離します。"
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "検索を表示"
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "検索ボックスの幅"
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "自動幅"
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "検索ボックスは、利用可能なスペースに最も合うように大きくなります。"
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "カスタム幅"
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "ヘッダー領域内の検索ボックスの幅を定義します。"
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "幅"
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "サイズ"
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "改行"
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "新しい行に強制し、他のヘッダー項目から分離します。"
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "検索エンジン"
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "カスタム"
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "名前"
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "検索エンジン名"
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https：//"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "検索パラメータを使用してウェブアドレスを入力します。例： \"https://vimeo.com/search?q=\""
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName}は、上記のURLの最後にある検索ボックスに入力された検索語を追加します。"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "名前属性"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "q"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "検索入力フィールドにname属性を設定します。"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "これは、送信時に検索エンジンに渡される名前を定義します。よくわからない場合は空白のままにしてください。"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "テキストの配置を検索"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "左"
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "中心"
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "右"
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "検索結果を新しいタブで開く"
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "ブックマークを表示"
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "ブックマークホバーにURLを表示"
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "ブックマーク行を表示"
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "ブックマークホバーに影を表示"
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "テーマシャドウが0に設定されている場合、エフェクトが表示されない場合があります。"
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "ブックマークホバーで成長"
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "新しいタブでブックマークを開く"
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "ブックマークサイズ"
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "ブロック"
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "正方形のブックマークタイル。"
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "リスト"
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "短くて広いブックマークタイル。"
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "上"
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "下"
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "ブックマークタイルの上部または下部にURLとコントロールを表示します。"
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "手紙で"
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "アイコン別"
+  },
+  "menuContentBookmarkSortName": {
+    "message": "名前で"
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "グループの詳細領域の配置"
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "左"
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "中心"
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "右"
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "グループ詳細注文"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "グループの詳細、次にブックマーク"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "ブックマーク領域の前に表示されるグループ詳細領域を注文します。"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "ブックマークしてからグループの詳細"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "[ブックマーク]領域を[グループの詳細]領域の前に表示するように注文します。"
+  },
+  "menuContentGroupNameSize": {
+    "message": "名前のサイズ"
+  },
+  "menuContentGroupNameShow": {
+    "message": "すべて表示する"
+  },
+  "menuContentGroupNameHide": {
+    "message": "すべて非表示"
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "グループ名は、個々のグループを編集して変更することもできます。"
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "すべてのグループを開く"
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "すべてのグループを折りたたむ"
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "グループツールバーのサイズ"
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "グループ折りたたみコントロール"
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "すべて表示する"
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "すべて非表示"
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "グループツールバーの折りたたみボタンは、個々のグループを編集して変更することもできます。"
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "グループすべてのコントロールを開く"
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "すべて表示する"
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "すべて非表示"
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "グループツールバーの[すべて開く]ボタンは、個々のグループを編集して変更することもできます。"
+  },
+  "menuContentToolbarSize": {
+    "message": "ツールバーのサイズ"
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "隅に"
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "ヘッダー内"
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "ツールバーをヘッダー内またはウィンドウの隅に配置します。"
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "改行"
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "新しい行に強制し、他のヘッダー項目から分離します。"
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "ツールバーがヘッダー内に配置されている場合にのみ使用できます。"
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "ツールバーの位置"
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "左上"
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "右上"
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "左下"
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "右下"
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "ウィンドウの四隅の1つにツールバーを配置します。"
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "ツールバーが隅に配置されている場合にのみ使用できます。"
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "アクセントコントロールを表示"
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "コントロールの追加を表示"
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "編集コントロールを表示"
+  },
+  "menuContentDataRestoreFile": {
+    "message": "ファイルからインポート"
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "クリップボードからインポート"
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "以前にエクスポートした{appName}バックアップを復元します。"
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "または、 {appName}バックアップファイルをここにドロップします。"
+  },
+  "menuContentDataBackupFile": {
+    "message": "データのエクスポート"
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "クリップボードにコピー"
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "{appName}ブックマークと設定のバックアップをダウンロードします。"
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "このファイルは、後でこのデバイスまたは別のデバイスにインポートできます。"
+  },
+  "menuContentDataClearAll": {
+    "message": "すべてのデータをクリアする"
+  },
+  "menuContentDataClearPartial": {
+    "message": "ブックマークを除くすべてをクリアする"
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "すべてのデータをクリアするとブックマークが失われます。"
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "データをバックアップする"
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "すべてのデータをクリアし{appName}をデフォルトの状態にリセットします。"
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "または、すべての設定を消去して、現在のブックマークとグループを保持することもできます。"
+  },
+  "menuContentLanguageLanguage": {
+    "message": "言語"
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "正しくない翻訳を見つけましたか？"
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "{appName}翻訳を手伝ってください"
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "すべてにブックマーク設定を適用する"
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "ブラウザのサポート"
+  },
+  "menuContentSupportPageCookies": {
+    "message": "クッキーとキャッシュ"
+  },
+  "menuContentSupportPageData": {
+    "message": "データのバックアップと復元"
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "ローカル背景画像"
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "保護されたURL"
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "設定とブックマークの回復"
+  },
+  "menuContentSupportPageResetting": {
+    "message": "ブラウザを開いたときにリセットする"
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "あなたのプライバシーを尊重する"
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "背景ビデオまたは画像の設定"
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "Firefoxのホームページとして{appName}を設定する"
+  },
+  "menuContentSupportPara": {
+    "message": "より多くのサポートまたはフィードバックについて："
+  },
+  "menuContentSupportLink1": {
+    "message": "問題を送信します。"
+  },
+  "menuContentSupportLink2": {
+    "message": "Wikiを確認してください。"
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName}は無料です。コーヒーの形で感謝を歓迎します！"
+  },
+  "menuContentCoffeeButton": {
+    "message": "私にコーヒーを買う"
+  },
+  "menuContentAppPara1": {
+    "message": "設定をコミュニティと共有します。"
+  },
+  "menuContentAppLink1": {
+    "message": "Reddit / r / {appName}見つかりました。"
+  },
+  "menuContentAppPara2": {
+    "message": "このプロジェクトはオープンソースです。"
+  },
+  "menuContentAppLink2": {
+    "message": "GitHubで見つかりました。"
+  },
+  "menuContentAppLink3": {
+    "message": "GNU General PublicLicensev3.0。"
+  },
+  "bookmarkTileControlLeft": {
+    "message": "このブックマークを左に移動"
+  },
+  "bookmarkTileControlSort": {
+    "message": "ブックマークをドラッグして並べ替えます"
+  },
+  "bookmarkTileControlRight": {
+    "message": "このブックマークを右に移動します"
+  },
+  "bookmarkTileControlEdit": {
+    "message": "このブックマークを編集する"
+  },
+  "bookmarkTileControlRemove": {
+    "message": "このブックマークを削除する"
+  },
+  "bookmarkAddHeading": {
+    "message": "新しいブックマークを追加する"
+  },
+  "bookmarkAddSuccessText": {
+    "message": "追加"
+  },
+  "bookmarkAddCancelText": {
+    "message": "キャンセル"
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "削除する"
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "名前のないブックマークを削除する"
+  },
+  "bookmarkRemoveContent": {
+    "message": "このブックマークを削除してもよろしいですか？これは、元に戻すことはできません。"
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "削除する"
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "キャンセル"
+  },
+  "bookmarkEditHeadingName": {
+    "message": "編集"
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "名前のないブックマークを編集する"
+  },
+  "bookmarkEditSuccessText": {
+    "message": "保存する"
+  },
+  "bookmarkEditCancelText": {
+    "message": "キャンセル"
+  },
+  "bookmarkFormTabVisual": {
+    "message": "ビジュアルと名前"
+  },
+  "bookmarkFormTabAddress": {
+    "message": "住所"
+  },
+  "bookmarkFormTabPosition": {
+    "message": "ポジション"
+  },
+  "bookmarkFormTabLayout": {
+    "message": "レイアウト"
+  },
+  "bookmarkFormTabTheme": {
+    "message": "テーマ"
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "ビジュアルと名前"
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "このブックマークタイルに文字、アイコン、画像、名前を表示します。"
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "住所"
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "必ず完全なURLを使用し、「https：// ...」を含めてください"
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "ポジション"
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "このブックマークを配置するグループ。"
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "レイアウト"
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "視覚要素と名前の位置、縮尺、向きを変更します。"
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "テーマ"
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "テーマとアクセントの色を上書きします。"
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https://www.example.com/"
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "視覚要素と名前の配置"
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "左上"
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "トップセンター"
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "右上"
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "中央左"
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "センターセンター"
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "中道右派"
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "左下"
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "下部中央"
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "右下"
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "垂直"
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "ビジュアル要素を積み重ねて、上下に名前を付けます。"
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "水平"
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "ビジュアル要素と名前を並べて配置します。"
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "視覚要素と名前"
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "名前の前にビジュアル要素を配置します。"
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "名前、次に視覚要素"
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "ビジュアル要素の前に名前を配置します。"
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "回転する"
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "ビジュアルエレメントの位置を調整する"
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "水平"
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "垂直"
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "側溝"
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "ビジュアル要素を表示"
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "このブックマーク六角形に文字、アイコン、または画像を表示します。"
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "手紙"
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "アイコン"
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "画像"
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "視覚的なサイズ"
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "しおり"
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "E"
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "ブックマークアイコン"
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "FontAwesomeのブランドまたはアイコン"
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "アイコンを削除"
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "ブックマーク画像"
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "ビジュアルシャドウ"
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "視覚的な影は、文字またはアイコンにのみ適用されます。"
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "名前を表示"
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "ブックマーク名"
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "例"
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "名前のサイズ"
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "テーマアクセント"
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "テーマで定義されたアクセントを使用します。"
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "カスタムアクセント"
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "テーマアクセントを上書きします。"
+  },
+  "bookmarkFormAccentColor": {
+    "message": "アクセント"
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "テーマカラー"
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "テーマで定義された色を使用します。"
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "カスタムカラー"
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "テーマの色を上書きします。"
+  },
+  "bookmarkFormColorColor": {
+    "message": "色"
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "不透明度"
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "背景を表示"
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "このブックマークタイルに画像またはビデオの背景を表示します。"
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "画像"
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "ビデオ"
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "不透明度"
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "背景画像のURL"
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "背景画像は、画像ファイルへの直接URLのみをサポートします。"
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "背景ビデオのURL"
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "バックグラウンドビデオは、ビデオファイルへの直接URLのみをサポートします。 MP4およびWebM形式をサポートします。"
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "YouTubeページのURLは使用できません。"
+  },
+  "bookmarkFormBorder": {
+    "message": "国境"
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "広いタイル"
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "2つの列にまたがるブックマークタイル。"
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "背の高いタイル"
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "2行にまたがるブックマークタイル。"
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "既存のグループ"
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "新しい集団"
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "グループ例"
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "ランダムグループ名"
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "グループ"
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "ポジション"
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "「視覚的要素の表示」と「名前の表示」を他のブックマークに適用します"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "文字、アイコン、画像、名前のテキストは共有されません。"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "すべてのブックマークの視覚要素または名前を非表示にするのに便利です。"
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "他のブックマークにレイアウトを適用する"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "保存したら、上記のレイアウトを他のすべてのブックマークに適用します。"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "ビジュアルと名前のサイズ、配置、順序、位置、およびガターのみがすべてに適用されます。"
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "テーマを他のブックマークに適用する"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "保存したら、上記のテーマを他のすべてのブックマークに適用します。"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "色、アクセント、不透明度、境界線、視覚的な影のみがすべてに適用されます。"
+  },
+  "bookmarkPreviewFull": {
+    "message": "プレビュー"
+  },
+  "bookmarkPreviewHalf": {
+    "message": "プレビュー（50％スケール）"
+  },
+  "groupAreaControlUp": {
+    "message": "このグループを上に移動します"
+  },
+  "groupAreaControlSort": {
+    "message": "グループをドラッグして並べ替えます"
+  },
+  "groupAreaControlDown": {
+    "message": "このグループを下に移動します"
+  },
+  "groupAreaControlEdit": {
+    "message": "このグループを編集する"
+  },
+  "groupAreaControlRemove": {
+    "message": "このグループを削除する"
+  },
+  "groupAreaControlOpenAll": {
+    "message": "このグループのすべてのブックマークを開きます"
+  },
+  "groupAreaControlCollapse": {
+    "message": "このグループを折りたたむ"
+  },
+  "groupAddHeading": {
+    "message": "新しいグループを追加する"
+  },
+  "groupAddSuccessText": {
+    "message": "追加"
+  },
+  "groupAddCancelText": {
+    "message": "キャンセル"
+  },
+  "groupRemoveHeadingName": {
+    "message": "削除する"
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "名前のないグループを削除する"
+  },
+  "groupRemoveContent": {
+    "message": "このグループとその中のすべてのブックマークを削除してもよろしいですか？これは、元に戻すことはできません。"
+  },
+  "groupRemoveSuccessText": {
+    "message": "削除する"
+  },
+  "groupRemoveCancelText": {
+    "message": "キャンセル"
+  },
+  "groupEditHeadingName": {
+    "message": "編集"
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "名前のないグループを編集する"
+  },
+  "groupEditSuccessText": {
+    "message": "保存する"
+  },
+  "groupEditCancelText": {
+    "message": "キャンセル"
+  },
+  "groupFormSectionNameHeading": {
+    "message": "名前"
+  },
+  "groupFormSectionNameDescription": {
+    "message": "このグループの上に名前を表示します。"
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "ツールバー"
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "コントロールを表示して、このグループのすべてのブックマークを開いたり、ブックマークを表示/非表示にしたりします。"
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "注文"
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "このグループの位置。"
+  },
+  "groupFormNameShow": {
+    "message": "グループ名を表示"
+  },
+  "groupFormNameTextLabel": {
+    "message": "グループ名"
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "グループ例"
+  },
+  "groupFormNameRandom": {
+    "message": "ランダムグループ名"
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "折りたたみを表示"
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "[折りたたみ]ボタンは、このグループのブックマークを表示または非表示にします。"
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "表示すべて開く"
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "このグループに少なくとも1つのブックマークがある場合は、[すべて開く]ボタンが表示されます。"
+  },
+  "groupFormDestination": {
+    "message": "ポジション"
+  },
+  "themeCustomTileControlEdit": {
+    "message": "この保存されたカスタムテーマを編集する"
+  },
+  "themeCustomTileControlRemove": {
+    "message": "この保存されたカスタムテーマを削除します"
+  },
+  "themeCustomFormNameLabel": {
+    "message": "名前"
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "テーマの例"
+  },
+  "themeCustomFormRandom": {
+    "message": "ランダムテーマ名"
+  },
+  "themeCustomAddHeading": {
+    "message": "現在のテーマを保存"
+  },
+  "themeCustomAddSuccessText": {
+    "message": "保存する"
+  },
+  "themeCustomAddCancelText": {
+    "message": "キャンセル"
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "削除する"
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "名前のないカスタムテーマを削除する"
+  },
+  "themeCustomRemoveContent": {
+    "message": "この保存されたカスタムテーマを削除してもよろしいですか？これは、元に戻すことはできません。"
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "保存する"
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "キャンセル"
+  },
+  "themeCustomEditHeadingName": {
+    "message": "編集"
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "名前のないカスタムテーマを編集する"
+  },
+  "themeCustomEditSuccessText": {
+    "message": "削除する"
+  },
+  "themeCustomEditCancelText": {
+    "message": "キャンセル"
+  },
+  "toolbarAccent": {
+    "message": "アクセントカラー"
+  },
+  "toolbarAddLabel": {
+    "message": "追加"
+  },
+  "toolbarAddGroup": {
+    "message": "新しい集団"
+  },
+  "toolbarAddBookmark": {
+    "message": "新しいブックマーク"
+  },
+  "toolbarEdit": {
+    "message": "グループとブックマークを編集する"
+  },
+  "toolbarSetting": {
+    "message": "設定メニューを開く"
+  },
+  "dataFormDescription": {
+    "message": "バックアップファイルの全部または一部を復元できます。次のデータが復元されます。"
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "ブックマーク"
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "これには、すべてのグループとブックマークが含まれます"
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "ブックマークは、インポート時にカスタムの色、アクセント、境界線を保持します。"
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "既存のブックマークを置き換える"
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "既存のブックマークに追加"
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "テーマ"
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "これには、色、アクセント、フォント、背景、および保存されているカスタムテーマが含まれます。"
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "設定"
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "これには、レイアウトのサイズと位置、ヘッダー領域のサイズ、ブックマーク領域のサイズ、およびその他のユーザー設定が含まれます。"
+  },
+  "dataRestoreHeading": {
+    "message": "{appName}バックアップからの復元"
+  },
+  "dataRestoreSuccessText": {
+    "message": "輸入"
+  },
+  "dataRestoreCancelText": {
+    "message": "キャンセル"
+  },
+  "dataClearAllHeading": {
+    "message": "すべての{appName}データをクリアしますか？"
+  },
+  "dataClearAllContentPara1": {
+    "message": "{appName}ブックマークと設定をクリアしてもよろしいですか？ {appName}はデフォルトの状態に復元されます。"
+  },
+  "dataClearAllContentPara2": {
+    "message": "これは、元に戻すことはできません。"
+  },
+  "dataClearAllSuccessText": {
+    "message": "すべてのデータをクリアする"
+  },
+  "dataClearAllCancelText": {
+    "message": "キャンセル"
+  },
+  "dataClearPartialHeading": {
+    "message": "ブックマーク以外の{appName}データをクリアしますか？"
+  },
+  "dataClearPartialContentPara1": {
+    "message": "{appName}設定をクリアしてもよろしいですか？ {appName}はデフォルトの状態に復元されますが、ブックマークとグループは残ります。"
+  },
+  "dataClearPartialContentPara2": {
+    "message": "これは、元に戻すことはできません。"
+  },
+  "dataClearPartialSuccessText": {
+    "message": "ブックマークを除くすべてをクリアする"
+  },
+  "dataClearPartialCancelText": {
+    "message": "キャンセル"
+  },
+  "dataExportBackup": {
+    "message": "バックアップ"
+  },
+  "dataFeedbackEmpty": {
+    "message": "インポートするものが選択されていません。"
+  },
+  "dataFeedbackSuccess": {
+    "message": "成功！ {appName}ブックマークと設定を復元しています。"
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "JSONファイルではありません。 {appName}からのものであることを確認してください。"
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "適切な種類のJSONファイルではありません。 {appName}からのものであることを確認してください。"
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "適切な種類のデータではありません。 {appName}または{appName}バックアップJSONファイルからのデータを保持していることを確認してください。"
+  },
+  "controlGeneralReset": {
+    "message": "デフォルトにリセット"
+  },
+  "controlColorTextPlaceholder": {
+    "message": "16進コード"
+  },
+  "controlColorRandom": {
+    "message": "ランダムカラー"
+  },
+  "controlColorMixerMoreControls": {
+    "message": "その他のコントロール"
+  },
+  "controlColorMixerSliderH": {
+    "message": "色相"
+  },
+  "controlColorMixerSliderS": {
+    "message": "飽和"
+  },
+  "controlColorMixerSliderL": {
+    "message": "軽さ"
+  },
+  "controlColorMixerSliderR": {
+    "message": "赤"
+  },
+  "controlColorMixerSliderG": {
+    "message": "緑"
+  },
+  "controlColorMixerSliderB": {
+    "message": "青い"
+  }
+}

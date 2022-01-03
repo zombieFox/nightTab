@@ -1,4 +1,4 @@
-import { language } from '../../../language';
+import { message } from '../../message';
 
 import { state } from '../../state';
 import { data } from '../../data';
@@ -79,7 +79,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-show',
     path: 'bookmark.show',
-    labelText: language.current.menu.content.bookmark.general.show,
+    labelText: message('menuContentBookmarkGeneralShow'),
     action: () => {
 
       layout.area.assemble();
@@ -113,7 +113,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-url-show',
     path: 'bookmark.url.show',
-    labelText: language.current.menu.content.bookmark.general.urlShow,
+    labelText: message('menuContentBookmarkGeneralUrlShow'),
     action: () => {
       applyCSSState('bookmark.url.show');
       data.save();
@@ -124,7 +124,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-line-show',
     path: 'bookmark.line.show',
-    labelText: language.current.menu.content.bookmark.general.lineShow,
+    labelText: message('menuContentBookmarkGeneralLineShow'),
     action: () => {
       applyCSSState('bookmark.line.show');
       data.save();
@@ -135,8 +135,8 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-shadow-show',
     path: 'bookmark.shadow.show',
-    labelText: language.current.menu.content.bookmark.general.shadowShow.label,
-    description: language.current.menu.content.bookmark.general.shadowShow.description,
+    labelText: message('menuContentBookmarkGeneralShadowShowLabel'),
+    description: message('menuContentBookmarkGeneralShadowShowDescription'),
     action: () => {
       applyCSSState('bookmark.shadow.show');
       data.save();
@@ -147,7 +147,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-hoverScale-show',
     path: 'bookmark.hoverScale.show',
-    labelText: language.current.menu.content.bookmark.general.hoverScaleShow,
+    labelText: message('menuContentBookmarkGeneralHoverScaleShow'),
     action: () => {
       applyCSSState('bookmark.hoverScale.show');
       data.save();
@@ -158,7 +158,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-newTab',
     path: 'bookmark.newTab',
-    labelText: language.current.menu.content.bookmark.general.newTab,
+    labelText: message('menuContentBookmarkGeneralNewTab'),
     action: () => {
 
       groupAndBookmark.render();
@@ -186,7 +186,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     path: 'bookmark.size',
     id: 'bookmark-size',
-    labelText: language.current.menu.content.bookmark.general.size,
+    labelText: message('menuContentBookmarkGeneralSize'),
     value: state.get.current().bookmark.size,
     defaultValue: state.get.default().bookmark.size,
     min: state.get.minMax().bookmark.size.min,
@@ -243,8 +243,8 @@ bookmarkSetting.style = (parent) => {
   bookmarkSetting.control.style = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'bookmark-style-block', labelText: language.current.menu.content.bookmark.style.block.label, description: language.current.menu.content.bookmark.style.block.description, value: 'block' },
-      { id: 'bookmark-style-list', labelText: language.current.menu.content.bookmark.style.list.label, description: language.current.menu.content.bookmark.style.list.description, value: 'list' }
+      { id: 'bookmark-style-block', labelText: message('menuContentBookmarkStyleBlockLabel'), description: message('menuContentBookmarkStyleBlockDescription'), value: 'block' },
+      { id: 'bookmark-style-list', labelText: message('menuContentBookmarkStyleListLabel'), description: message('menuContentBookmarkStyleListDescription'), value: 'list' }
     ],
     groupName: 'bookmark-style',
     path: 'bookmark.style',
@@ -298,8 +298,8 @@ bookmarkSetting.orientation = (parent) => {
   bookmarkSetting.control.orientation.orientationElement = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'bookmark-orientation-top', labelText: language.current.menu.content.bookmark.orientation.top, value: 'top' },
-      { id: 'bookmark-orientation-bottom', labelText: language.current.menu.content.bookmark.orientation.bottom, value: 'bottom' }
+      { id: 'bookmark-orientation-top', labelText: message('menuContentBookmarkOrientationTop'), value: 'top' },
+      { id: 'bookmark-orientation-bottom', labelText: message('menuContentBookmarkOrientationBottom'), value: 'bottom' }
     ],
     groupName: 'bookmark-orientation',
     path: 'bookmark.orientation',
@@ -327,7 +327,7 @@ bookmarkSetting.orientation = (parent) => {
   });
 
   bookmarkSetting.control.orientation.orientationHelper = new Control_helperText({
-    text: language.current.menu.content.bookmark.orientation.helper
+    text: [message('menuContentBookmarkOrientationHelperPara1')]
   });
 
   parent.appendChild(
@@ -342,7 +342,7 @@ bookmarkSetting.orientation = (parent) => {
 bookmarkSetting.sort = (parent) => {
 
   bookmarkSetting.control.sort.letter = new Button({
-    text: language.current.menu.content.bookmark.sort.letter,
+    text: message('menuContentBookmarkSortLetter'),
     style: ['line'],
     func: () => {
 
@@ -370,7 +370,7 @@ bookmarkSetting.sort = (parent) => {
   });
 
   bookmarkSetting.control.sort.icon = new Button({
-    text: language.current.menu.content.bookmark.sort.icon,
+    text: message('menuContentBookmarkSortIcon'),
     style: ['line'],
     func: () => {
 
@@ -398,7 +398,7 @@ bookmarkSetting.sort = (parent) => {
   });
 
   bookmarkSetting.control.sort.name = new Button({
-    text: language.current.menu.content.bookmark.sort.name,
+    text: message('menuContentBookmarkSortName'),
     style: ['line'],
     func: () => {
 

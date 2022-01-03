@@ -1,4 +1,4 @@
-import { language } from '../../language';
+import { message } from '../message';
 
 import { state } from '../state';
 import { data } from '../data';
@@ -326,12 +326,12 @@ export const CustomThemeTile = function({
 
   this.control.button = {
     edit: new Button({
-      text: language.current.theme.custom.tile.control.edit,
+      text: message('themeCustomTileControlEdit'),
       srOnly: true,
       iconName: 'edit',
       style: ['link'],
       size: 'small',
-      title: language.current.theme.custom.tile.control.edit,
+      title: message('themeCustomTileControlEdit'),
       classList: ['theme-custom-control-button', 'theme-custom-control-edit'],
       func: () => {
 
@@ -344,10 +344,10 @@ export const CustomThemeTile = function({
         const bookmarkForm = new CustomThemeForm({ customThemeData: newCustomThemeData });
 
         const editModal = new Modal({
-          heading: isValidString(customThemeData.theme.name) ? `${language.current.theme.custom.edit.heading.name} ${customThemeData.theme.name}` : language.current.theme.custom.edit.heading.unnamed,
+          heading: isValidString(customThemeData.theme.name) ? `${message('themeCustomEditHeadingName')} ${customThemeData.theme.name}` : message('themeCustomEditHeadingUnnamed'),
           content: bookmarkForm.form(),
-          successText: language.current.theme.custom.edit.successText,
-          cancelText: language.current.theme.custom.edit.cancelText,
+          successText: message('themeCustomEditSuccessText'),
+          cancelText: message('themeCustomEditCancelText'),
           width: 'small',
           successAction: () => {
 
@@ -363,22 +363,22 @@ export const CustomThemeTile = function({
       }
     }),
     remove: new Button({
-      text: language.current.theme.custom.tile.control.remove,
+      text: message('themeCustomTileControlRemove'),
       srOnly: true,
       iconName: 'cross',
       style: ['link'],
       size: 'small',
-      title: language.current.theme.custom.tile.control.remove,
+      title: message('themeCustomTileControlRemove'),
       classList: ['theme-custom-control-button', 'theme-custom-control-remove'],
       func: () => {
 
         menu.close();
 
         const removeModal = new Modal({
-          heading: isValidString(customThemeData.theme.name) ? `${language.current.theme.custom.remove.heading.name} ${customThemeData.theme.name}` : language.current.theme.custom.remove.heading.unnamed,
-          content: language.current.theme.custom.remove.content,
-          successText: language.current.theme.custom.remove.successText,
-          cancelText: language.current.theme.custom.remove.cancelText,
+          heading: isValidString(customThemeData.theme.name) ? `${message('themeCustomRemoveHeadingName')} ${customThemeData.theme.name}` : message('themeCustomRemoveHeadingUnnamed'),
+          content: message('themeCustomRemoveContent'),
+          successText: message('themeCustomRemoveSuccessText'),
+          cancelText: message('themeCustomRemoveCancelText'),
           width: 'small',
           successAction: () => {
             customTheme.item.mod.remove(customThemeData);

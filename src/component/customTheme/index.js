@@ -1,4 +1,4 @@
-import { language } from '../../language';
+import { message } from '../message';
 
 import { state } from '../state';
 import { data } from '../data';
@@ -79,10 +79,10 @@ customTheme.add = {
     const bookmarkForm = new CustomThemeForm({ customThemeData: newCustomThemeData });
 
     const addModal = new Modal({
-      heading: language.current.theme.custom.add.heading,
+      heading: message('themeCustomAddHeading'),
       content: bookmarkForm.form(),
-      successText: language.current.theme.custom.add.successText,
-      cancelText: language.current.theme.custom.add.cancelText,
+      successText: message('themeCustomAddSuccessText'),
+      cancelText: message('themeCustomAddCancelText'),
       width: 'small',
       successAction: () => {
         customTheme.item.mod.add(newCustomThemeData);

@@ -1,4 +1,4 @@
-import { language } from '../../language';
+import { message } from '../message';
 
 import { state } from '../state';
 import { data } from '../data';
@@ -65,11 +65,11 @@ const BookmarkTile = function({
 
   this.control.button = {
     left: new Button({
-      text: language.current.bookmark.tile.control.left,
+      text: message('bookmarkTileControlLeft'),
       srOnly: true,
       iconName: 'arrowKeyboardLeft',
       style: ['link'],
-      title: language.current.bookmark.tile.control.left,
+      title: message('bookmarkTileControlLeft'),
       classList: ['bookmark-control-button', 'bookmark-control-left'],
       func: () => {
 
@@ -88,19 +88,19 @@ const BookmarkTile = function({
       }
     }),
     sort: new Button({
-      text: language.current.bookmark.tile.control.sort,
+      text: message('bookmarkTileControlSort'),
       srOnly: true,
       iconName: 'drag',
       style: ['link'],
-      title: language.current.bookmark.tile.control.sort,
+      title: message('bookmarkTileControlSort'),
       classList: ['bookmark-control-button', 'bookmark-control-sort']
     }),
     right: new Button({
-      text: language.current.bookmark.tile.control.right,
+      text: message('bookmarkTileControlRight'),
       srOnly: true,
       iconName: 'arrowKeyboardRight',
       style: ['link'],
-      title: language.current.bookmark.tile.control.right,
+      title: message('bookmarkTileControlRight'),
       classList: ['bookmark-control-button', 'bookmark-control-right'],
       func: () => {
 
@@ -119,11 +119,11 @@ const BookmarkTile = function({
       }
     }),
     edit: new Button({
-      text: language.current.bookmark.tile.control.edit,
+      text: message('bookmarkTileControlEdit'),
       srOnly: true,
       iconName: 'edit',
       style: ['link'],
-      title: language.current.bookmark.tile.control.edit,
+      title: message('bookmarkTileControlEdit'),
       classList: ['bookmark-control-button', 'bookmark-control-edit'],
       func: () => {
 
@@ -138,10 +138,10 @@ const BookmarkTile = function({
         const bookmarkForm = new BookmarkForm({ bookmarkData: newBookmarkData });
 
         const editModal = new Modal({
-          heading: isValidString(newBookmarkData.link.display.name.text) ? `${language.current.bookmark.edit.heading.name} ${newBookmarkData.link.display.name.text}` : language.current.bookmark.edit.heading.unnamed,
+          heading: isValidString(newBookmarkData.link.display.name.text) ? `${message('bookmarkEditHeadingName')} ${newBookmarkData.link.display.name.text}` : message('bookmarkEditHeadingUnnamed'),
           content: bookmarkForm.form(),
-          successText: language.current.bookmark.edit.successText,
-          cancelText: language.current.bookmark.edit.cancelText,
+          successText: message('bookmarkEditSuccessText'),
+          cancelText: message('bookmarkEditCancelText'),
           width: (state.get.current().bookmark.style === 'block') ? 60 : 70,
           maxHeight: true,
           successAction: () => {
@@ -180,19 +180,19 @@ const BookmarkTile = function({
       }
     }),
     remove: new Button({
-      text: language.current.bookmark.tile.control.remove,
+      text: message('bookmarkTileControlRemove'),
       srOnly: true,
       iconName: 'cross',
       style: ['link'],
-      title: language.current.bookmark.tile.control.remove,
+      title: message('bookmarkTileControlRemove'),
       classList: ['bookmark-control-button', 'bookmark-control-remove'],
       func: () => {
 
         const removeModal = new Modal({
-          heading: isValidString(bookmarkData.link.display.name.text) ? `${language.current.bookmark.remove.heading.name} ${bookmarkData.link.display.name.text}` : language.current.bookmark.remove.heading.unnamed,
-          content: language.current.bookmark.remove.content,
-          successText: language.current.bookmark.remove.successText,
-          cancelText: language.current.bookmark.remove.cancelText,
+          heading: isValidString(bookmarkData.link.display.name.text) ? `${message('bookmarkRemoveHeadingName')} ${bookmarkData.link.display.name.text}` : message('bookmarkRemoveHeadingUnnamed'),
+          content: message('bookmarkRemoveContent'),
+          successText: message('bookmarkRemoveSuccessText'),
+          cancelText: message('bookmarkRemoveCancelText'),
           width: 'small',
           successAction: () => {
 

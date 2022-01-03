@@ -1,4 +1,4 @@
-import { language } from '../../../language';
+import { message } from '../../message';
 
 import { data } from '../../data';
 import { menu } from '../../menu';
@@ -29,7 +29,7 @@ dataSetting.restore = (parent) => {
     id: 'restore-data',
     type: 'file',
     inputHide: true,
-    labelText: language.current.menu.content.data.restore.file,
+    labelText: message('menuContentDataRestoreFile'),
     inputButtonStyle: ['line'],
     action: () => {
       data.import.file({
@@ -41,7 +41,7 @@ dataSetting.restore = (parent) => {
   });
 
   dataSetting.control.restore.paste = new Button({
-    text: language.current.menu.content.data.restore.clipboard,
+    text: message('menuContentDataRestoreClipboard'),
     style: ['line'],
     func: () => {
       data.import.paste({
@@ -51,7 +51,7 @@ dataSetting.restore = (parent) => {
   });
 
   dataSetting.control.restore.restoreHelper = new Control_helperText({
-    text: language.current.menu.content.data.restore.helper
+    text: [message('menuContentDataRestoreHelperPara1')]
   });
 
   dataSetting.control.restore.feedback = form.feedback();
@@ -59,7 +59,7 @@ dataSetting.restore = (parent) => {
   data.feedback.empty.render(dataSetting.control.restore.feedback);
 
   dataSetting.control.restore.drop = new DropFile({
-    heading: language.current.menu.content.data.restore.drop,
+    heading: message('menuContentDataRestoreDrop'),
     dropAaction: () => {
       data.import.drop({
         fileList: dataSetting.control.restore.drop.files,
@@ -89,7 +89,7 @@ dataSetting.restore = (parent) => {
 dataSetting.backup = (parent) => {
 
   dataSetting.control.backup.export = new Button({
-    text: language.current.menu.content.data.backup.file,
+    text: message('menuContentDataBackupFile'),
     style: ['line'],
     func: () => {
       data.export();
@@ -97,7 +97,7 @@ dataSetting.backup = (parent) => {
   });
 
   dataSetting.control.backup.copy = new Button({
-    text: language.current.menu.content.data.backup.clipboard,
+    text: message('menuContentDataBackupClipboard'),
     style: ['line'],
     func: () => {
       navigator.clipboard.writeText(JSON.stringify(data.load()));
@@ -105,7 +105,10 @@ dataSetting.backup = (parent) => {
   });
 
   dataSetting.control.backup.exportHelper = new Control_helperText({
-    text: language.current.menu.content.data.backup.helper
+    text: [
+      message('menuContentDataBackupHelperPara1'),
+      message('menuContentDataBackupHelperPara2')
+    ]
   });
 
   parent.appendChild(
@@ -132,7 +135,7 @@ dataSetting.backup = (parent) => {
 dataSetting.clear = (parent) => {
 
   dataSetting.control.clear.all = new Button({
-    text: language.current.menu.content.data.clear.all,
+    text: message('menuContentDataClearAll'),
     style: ['line'],
     func: () => {
       menu.close();
@@ -141,7 +144,7 @@ dataSetting.clear = (parent) => {
   });
 
   dataSetting.control.clear.partial = new Button({
-    text: language.current.menu.content.data.clear.partial,
+    text: message('menuContentDataClearPartial'),
     style: ['line'],
     func: () => {
       menu.close();
@@ -150,20 +153,23 @@ dataSetting.clear = (parent) => {
   });
 
   dataSetting.control.clear.link = new Link({
-    text: language.current.menu.content.data.clear.alert.link,
+    text: message('menuContentDataClearAlertLink'),
     href: '#menu-content-item-backup'
   });
 
   dataSetting.control.clear.alert = new Alert({
     iconName: 'warning',
     children: [
-      node(`p:${language.current.menu.content.data.clear.alert.para}|class:small`),
+      node(`p:${message('menuContentDataClearAlertPara')}|class:small`),
       node('p|class:small', dataSetting.control.clear.link.link())
     ]
   });
 
   dataSetting.control.clear.helper = new Control_helperText({
-    text: language.current.menu.content.data.clear.helper
+    text: [
+      message('menuContentDataClearHelperPara1'),
+      message('menuContentDataClearHelperPara2')
+    ]
   });
 
   parent.appendChild(

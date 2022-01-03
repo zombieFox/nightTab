@@ -1,0 +1,2066 @@
+{
+  "appName": {
+    "message": "nightTab"
+  },
+  "appShortName": {
+    "message": "nightTab"
+  },
+  "appDescription": {
+    "message": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab."
+  },
+  "menuNavThemeLabel": {
+    "message": "Тема"
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "Предустановка"
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "Сохранено"
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "Стиль"
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "Цвет"
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "Акцент"
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "Шрифт"
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "Радиус"
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "Тень"
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "Оттенок"
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "Непрозрачность"
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "Задний план"
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "Макет"
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "Заголовок"
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "Закладка"
+  },
+  "menuNavLayoutLabel": {
+    "message": "Макет"
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "Масштабирование"
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "Площадь"
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "Обивка"
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "Желоб"
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "Выравнивание"
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "Страница"
+  },
+  "menuNavHeaderLabel": {
+    "message": "Заголовок"
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "Выравнивание"
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "Приветствие"
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "Переходные слова"
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "Часы"
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "Дата"
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "Поиск"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "Закладка"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "Общий"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "Стиль"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "Ориентация"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "Сортировать"
+  },
+  "menuNavGroupLabel": {
+    "message": "Группа"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "Выравнивание"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "Имя"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "Крах"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "Панель инструментов"
+  },
+  "menuNavToolbarLabel": {
+    "message": "Панель инструментов"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "Размер"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "Место расположения"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "Должность"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "Управление"
+  },
+  "menuNavDataLabel": {
+    "message": "Данные"
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "Восстановить"
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "Резервный"
+  },
+  "menuNavDataSubNavClear": {
+    "message": "Прозрачный"
+  },
+  "menuNavLanguageLabel": {
+    "message": "Язык"
+  },
+  "menuNavSupportLabel": {
+    "message": "Служба поддержки"
+  },
+  "menuNavCoffeeLabel": {
+    "message": "Кофе"
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}"
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "Применение предустановки заменит текущий цвет, акцент, шрифт, стиль, радиус, тень, тень и фон."
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "При сохранении темы будут записаны текущий цвет, акцент, шрифт, стиль, непрозрачность, радиус, тень, оттенок и фон."
+  },
+  "menuContentThemeSavedSave": {
+    "message": "Сохранить текущую тему"
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "Редактировать сохраненные темы"
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "Темный режим"
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "Легкий режим"
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "Автоматический"
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "Следуйте системному световому или темному режиму."
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "Фон, закладки и модальные окна используют оттенки слева."
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "Элементы текста и формы имеют оттенки справа."
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "Для более светлого вида переключитесь на стиль освещения, а затем выберите основной цвет. И наоборот для темного вида."
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "Основной цвет"
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "Насыщенность"
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "Контрастность"
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "Контрастное начало"
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "Контрастный конец"
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "Сдвиньте регуляторы диапазона контрастности близко друг к другу, чтобы получить приглушенный вид."
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "Разместите элементы управления диапазоном контрастности далеко друг от друга, чтобы получить четкое изображение."
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "Серый"
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "красный"
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "апельсин"
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "Желтый"
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "Лайм"
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "Зеленый"
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "Аква"
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "Голубой"
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "Бирюзовый"
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "Синий"
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "Фиолетовый"
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "Пурпурный"
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "Фуксия"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "Супер сверхлегкий"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "Дополнительный свет"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "Светлый"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "Супер экстра темный"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "Очень темный"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "Темно"
+  },
+  "menuContentThemeAccentColor": {
+    "message": "Акцентный цвет"
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "Случайный цвет акцента при загрузке / обновлении"
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "Любой"
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "Светлый"
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "Темно"
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "Пастель"
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "Насыщенный"
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "Выбрать сейчас"
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "Автоматическое изменение акцентного оттенка"
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "Задержка изменения"
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "Изменить шаги"
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "Будьте осторожны, так как быстро меняющийся оттенок Accent может вызвать проблемы с производительностью."
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "Автоматическое изменение оттенка акцента не работает, если цвет акцента серый или черный."
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "Шрифт дисплея"
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "Название шрифта Google"
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "Используйте шрифт Google, чтобы настроить часы, дату, имена групп и буквы закладок."
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "Найдите шрифт Google"
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "Добавьте название шрифта, как оно отображается в Google Fonts, включая заглавные буквы и пробелы, например: введите «Fredoka One» или «Kanit»."
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "Очистите поле, чтобы использовать шрифт по умолчанию «Fjalla One»."
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "Толщина шрифта"
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "Светлый"
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "Обычный"
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "Смелый"
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "Не все шрифты поддерживают любой вес. См. Страницу шрифтов Google, чтобы узнать, какие из них доступны."
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "Нормальный"
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "Курсив"
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "Шрифт пользовательского интерфейса"
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "Название шрифта Google"
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "Используйте шрифт Google для настройки имени закладки, URL-адреса и элементов формы."
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "Найдите шрифт Google"
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "Добавьте имя шрифта, как оно отображается в Google Fonts, включая заглавные буквы и пробелы, например: введите «Roboto», «Source Sans Pro» или «Noto Sans»."
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "Очистите поле, чтобы использовать шрифт по умолчанию «Open Sans»."
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "Толщина шрифта"
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "Светлый"
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "Обычный"
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "Смелый"
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "Не все шрифты поддерживают любой вес. См. Страницу шрифтов Google, чтобы узнать, какие из них доступны."
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "Нормальный"
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "Курсив"
+  },
+  "menuContentThemeRadius": {
+    "message": "Угловой радиус"
+  },
+  "menuContentThemeShadow": {
+    "message": "Размер тени"
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "Непрозрачность тени"
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "Размытие тени"
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "Поддерживается не всеми браузерами."
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "Вся непрозрачность"
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "Измените прозрачность панели поиска, закладок, элементов управления группой и панели инструментов."
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "Непрозрачность также можно изменить при редактировании отдельных закладок."
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "Панель инструментов"
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "Закладка"
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "Поисковая строка"
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "Панель инструментов группы"
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "Фон по теме"
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "Используйте цвет фона, определенный темой."
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "Фон от Accent"
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "Используйте цвет акцента для фона."
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "Пользовательский цвет"
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "Градиент"
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "Изображение"
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "видео"
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "Цвет фона"
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "Угол градиента фона"
+  },
+  "menuContentThemeBackgroundGradientStart": {
+    "message": "Начало градиента фона"
+  },
+  "menuContentThemeBackgroundGradientEnd": {
+    "message": "Конец фонового градиента"
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "Локальные образы больше использовать нельзя. Изображения должны быть размещены где-нибудь в Интернете."
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "Почему это изменилось?"
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "Добавьте более одного URL-адреса, разделенных пробелами, или в новые строки для случайного фонового изображения при загрузке."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "Unsplash можно использовать для случайных изображений, например:"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "Измените параметры после ... / random / для получения дополнительных опций. Время загрузки может отличаться."
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "Размытие"
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "Оттенки серого"
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "Масштаб"
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "Акцент"
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "Непрозрачность"
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "Виньетка"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "Начало и конец тени"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "Тень конец"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "Начало тени"
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "URL-адреса страниц YouTube не могут быть использованы."
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "Как сделать ссылку на видео файл."
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "Фоновое видео поддерживает только прямой URL-адрес видеофайла. Поддерживает форматы MP4 и WebM."
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "Добавьте несколько URL-адресов, разделенных пробелами, или добавьте в новые строки для случайного фонового видео при загрузке."
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "Размытие"
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "Оттенки серого"
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "Масштаб"
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "Акцент"
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "Непрозрачность"
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "Виньетка"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "Начало и конец тени"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "Тень конец"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "Начало тени"
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "Цвет фона макета"
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "Прозрачный"
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "Нет цвета фона позади макета."
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "Пользовательский цвет"
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "Используйте собственный цвет за макетом."
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "Цвет фона макета"
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "Непрозрачность фона"
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "Размытие фона"
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "Поддерживается не всеми браузерами."
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "Разделитель между областью заголовка и закладки"
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "Цвет фона заголовка"
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "Прозрачный"
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "Нет цвета фона за областью заголовка."
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "Пользовательский цвет"
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "Используйте собственный цвет за областью заголовка."
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "Цвет фона заголовка"
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "Непрозрачность фона"
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "Цвет фона закладки"
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "Прозрачный"
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "Нет цвета фона за областью закладки."
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "Пользовательский цвет"
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "Используйте собственный цвет за областью закладок."
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "Цвет фона закладки"
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "Непрозрачность фона"
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "Граница закладки"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "Границу закладки также можно изменить при редактировании отдельных закладок."
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "Цвет границы определяется акцентом, который также можно изменить при редактировании отдельных закладок."
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "Добавьте уникальный акцент каждой закладке"
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "Удалить все переопределения акцента"
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "Пользовательские закладки Акцент также можно изменить при редактировании отдельных закладок."
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "Глобальный размер"
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "Ширина области макета"
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "Ширина области заголовка"
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "Выравнивание области заголовка"
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "Левый"
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "Центр"
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "Правильно"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "Эффекты могут быть не видны, если область заголовка имеет полную ширину."
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "Доступно только в том случае, если для параметра «Направление макета» установлено значение «Вертикальное» и отображаются элементы заголовка."
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "Ширина области закладки"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "Выравнивание области закладки"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "Левый"
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "Центр"
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "Правильно"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "Эффекты могут быть не видны, если область закладок имеет полную ширину."
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "Доступно только в том случае, если для параметра «Направление макета» установлено значение «Вертикальное» и отображаются элементы заголовка."
+  },
+  "menuContentLayoutPadding": {
+    "message": "Пространство вокруг области заголовка и закладки"
+  },
+  "menuContentLayoutGutter": {
+    "message": "Расстояние между заголовком и закладкой"
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "Выравнивание по площади"
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "Верхний левый"
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "Верхний центр"
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "В правом верхнем углу"
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "В центре слева"
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "Центр Центр"
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "В центре справа"
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "Нижний левый"
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "Внизу по центру"
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "Нижний правый"
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "Выровнять по горизонтали"
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "Сложите заголовок и закладки в ряд бок о бок."
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "Выровнять по вертикали"
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "Сложите заголовок и закладки в столбец один над другим."
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "Заголовок, затем закладки"
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "Расположите область заголовка перед областью закладок."
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "Закладки, затем заголовок"
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "Сделайте так, чтобы область закладок отображалась перед областью заголовка."
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "Заголовок"
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "Новая вкладка"
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "URL-адрес фавикона"
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https://www.example.com/favicon.svg"
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "Поддерживается не всеми браузерами."
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "Полоса прокрутки"
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "Авто"
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "Тонкий"
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "Скрытый"
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "Поддерживается не всеми браузерами."
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "Прокрутите до конца"
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "Убрать размытие фонового изображения или видео"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "Фоновое изображение или видео не размываются при прокрутке вниз страницы."
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "Размытие изображения или видео можно найти в разделе «Фон темы»."
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "Выравнивание элемента заголовка"
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "Левый"
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "Центр"
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "Правильно"
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "Эффекты могут быть не видны, если для размера поля поиска установлено значение «Авто», и он увеличивается до заполнения доступного пространства."
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "Показать приветствие"
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "Размер"
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "Новая линия"
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "Формулировка"
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"Доброе утро...\""
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"Привет...\""
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"Привет...\""
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "Никто"
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "Полезно для отображения только имени."
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "Обычай"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "Используйте собственное приветствие."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "Если оставить поле пустым, по умолчанию используется «Доброе утро ...»."
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "Пользовательский текст приветствия"
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "Привет"
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "Имя"
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "Псевдоним, псевдоним или имя супергероя"
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "Показать переходные слова"
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "Доступно только при отображении даты или времени."
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "Формулировка"
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "«Время и дата»"
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"Его\""
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "Размер"
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "Новая линия"
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "Показать часы"
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "Как число"
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "Меч"
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "Показать минуты"
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "Как число"
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "Меч"
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "Показать секунды"
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "Как число"
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "Меч"
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "Показать разделитель"
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "Символ-разделитель"
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":"
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "24 часа"
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "ДО ПОЛУДНЯ ПОСЛЕ ПОЛУДНЯ"
+  },
+  "menuContentHeaderClockSize": {
+    "message": "Размер"
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "Новая линия"
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "Выставочный день"
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "Как число"
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "Меч"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "Начало недели"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "понедельник"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "Воскресенье"
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "Длина слова"
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "Длинная"
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "Короткий"
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "Показать дату"
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "Как число"
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "Меч"
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "Порядковые номера"
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "Показать месяц"
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "Как число"
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "Меч"
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "Порядковые номера"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "Длина слова"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "Длинная"
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "Короткий"
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "Показать год"
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "Как число"
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "Меч"
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "Показать разделитель"
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "Символ-разделитель"
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "/"
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "Формат"
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "Дата / Месяц"
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "Месяц / Дата"
+  },
+  "menuContentHeaderDateSize": {
+    "message": "Размер"
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "Новая линия"
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "Показать поиск"
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "Ширина окна поиска"
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "Авто ширина"
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "Поле поиска будет увеличиваться до максимального размера доступного места."
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "Нестандартная ширина"
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "Определите, насколько широким должно быть поле поиска внутри области заголовка."
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "Ширина"
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "Размер"
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "Новая линия"
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "Поисковый движок"
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "Обычай"
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "Имя"
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "Название поисковой системы"
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https://"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "Введите веб-адрес с параметрами поиска, например: \"https://vimeo.com/search?q=\""
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} добавит поисковый запрос, введенный в поле поиска, в конец указанного выше URL."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "Атрибут имени"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "q"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "Устанавливает атрибут имени в поле ввода поиска."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "Это определяет имя, передаваемое поисковой системе при отправке. Если не уверены, оставьте поле пустым."
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "Выравнивание текста поиска"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "Левый"
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "Центр"
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "Правильно"
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "Открыть результаты поиска в новой вкладке"
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "Показать закладки"
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "Показывать URL при наведении курсора на закладку"
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "Показать строку закладки"
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "Показывать тень при наведении на закладку"
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "Эффекты могут быть не видны, если для параметра «Тень темы установлено значение 0»."
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "Расти при наведении на закладку"
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "Открыть закладки в новой вкладке"
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "Размер закладки"
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "Блокировать"
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "Плитка Bookmark квадратной формы."
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "Список"
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "Короткие и широкие плитки закладок."
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "Вверх"
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "Нижний"
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "Отображайте URL-адрес и элементы управления вверху или внизу плитки закладок."
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "Письмом"
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "По иконке"
+  },
+  "menuContentBookmarkSortName": {
+    "message": "По имени"
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "Выравнивание области сведений о группе"
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "Левый"
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "Центр"
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "Правильно"
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "Порядок реквизитов группы"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "Сведения о группе, затем закладки"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "Сделайте так, чтобы область сведений о группе отображалась перед областью закладок."
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "Закладки, затем сведения о группе"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "Сделайте так, чтобы область закладок отображалась перед областью сведений о группе."
+  },
+  "menuContentGroupNameSize": {
+    "message": "Размер имени"
+  },
+  "menuContentGroupNameShow": {
+    "message": "Показать все"
+  },
+  "menuContentGroupNameHide": {
+    "message": "Скрыть все"
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "Имена групп также можно изменить, отредактировав отдельные группы."
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "Открыть все группы"
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "Свернуть все группы"
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "Размер панели инструментов группы"
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "Управление свертыванием группы"
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "Показать все"
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "Скрыть все"
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "Кнопку свертывания панели инструментов группы также можно изменить, отредактировав отдельные группы."
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "Группа Открыть весь контроль"
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "Показать все"
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "Скрыть все"
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "Панель инструментов группы открыть все кнопку также можно изменить, редактируя отдельные группы."
+  },
+  "menuContentToolbarSize": {
+    "message": "Размер панели инструментов"
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "В углу"
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "В заголовке"
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "Разместите панель инструментов внутри заголовка или в углу окна."
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "Новая линия"
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "Доступно только в том случае, если панель инструментов расположена внутри заголовка."
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "Положение панели инструментов"
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "Верхний левый"
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "В правом верхнем углу"
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "Нижний левый"
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "Нижний правый"
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "Разместите панель инструментов в одном из четырех углов окна."
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "Доступно, только если панель инструментов расположена в углу."
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "Показать управление акцентом"
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "Показать Добавить элемент управления"
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "Показать элемент управления редактирования"
+  },
+  "menuContentDataRestoreFile": {
+    "message": "Импортировать из файла"
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "Импортировать из буфера обмена"
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "Восстановите ранее экспортированную резервную копию {appName}"
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "Или перетащите сюда файл резервной копии {appName}"
+  },
+  "menuContentDataBackupFile": {
+    "message": "Экспорт данных"
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "Скопировать в буфер обмена"
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "Загрузите резервную копию ваших закладок и настроек {appName}"
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "Этот файл впоследствии можно будет импортировать на то или иное устройство."
+  },
+  "menuContentDataClearAll": {
+    "message": "Очистить все данные"
+  },
+  "menuContentDataClearPartial": {
+    "message": "Очистить все, кроме закладок"
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "Вы потеряете закладки, очистив все данные."
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "Сделайте резервную копию ваших данных"
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "Удалите все данные, чтобы восстановить для {appName} по умолчанию."
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "В качестве альтернативы можно стереть все настройки, но сохранить текущие закладки и группы."
+  },
+  "menuContentLanguageLanguage": {
+    "message": "Язык"
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "Нашли неправильный перевод?"
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "Помогите перевести {appName}"
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "Применение настроек закладок ко всем"
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "Поддержка браузера"
+  },
+  "menuContentSupportPageCookies": {
+    "message": "Файлы cookie и кеш"
+  },
+  "menuContentSupportPageData": {
+    "message": "Резервное копирование и восстановление данных"
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "Локальное фоновое изображение"
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "Защищенные URL"
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "Восстановление настроек и закладок"
+  },
+  "menuContentSupportPageResetting": {
+    "message": "Сброс при открытии браузера"
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "Уважая вашу конфиденциальность"
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "Установка фонового видео или изображения"
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "Установка {appName} качестве домашней страницы Firefox"
+  },
+  "menuContentSupportPara": {
+    "message": "Для получения дополнительной поддержки или обратной связи:"
+  },
+  "menuContentSupportLink1": {
+    "message": "Отправить вопрос."
+  },
+  "menuContentSupportLink2": {
+    "message": "Проверьте вики."
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} бесплатно, кофе приветствуется!"
+  },
+  "menuContentCoffeeButton": {
+    "message": "Купи мне кофе"
+  },
+  "menuContentAppPara1": {
+    "message": "Поделитесь своими настройками с сообществом."
+  },
+  "menuContentAppLink1": {
+    "message": "Найдено на Reddit /r/{appName}."
+  },
+  "menuContentAppPara2": {
+    "message": "Этот проект с открытым исходным кодом."
+  },
+  "menuContentAppLink2": {
+    "message": "Найдено на GitHub."
+  },
+  "menuContentAppLink3": {
+    "message": "Стандартная общественная лицензия GNU v3.0."
+  },
+  "bookmarkTileControlLeft": {
+    "message": "Переместите эту закладку влево"
+  },
+  "bookmarkTileControlSort": {
+    "message": "Перетащите закладку, чтобы изменить порядок"
+  },
+  "bookmarkTileControlRight": {
+    "message": "Переместите эту закладку вправо"
+  },
+  "bookmarkTileControlEdit": {
+    "message": "Редактировать эту закладку"
+  },
+  "bookmarkTileControlRemove": {
+    "message": "Удалить эту закладку"
+  },
+  "bookmarkAddHeading": {
+    "message": "Добавить новую закладку"
+  },
+  "bookmarkAddSuccessText": {
+    "message": "Добавлять"
+  },
+  "bookmarkAddCancelText": {
+    "message": "Отмена"
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "Удалять"
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "Удалить безымянную закладку"
+  },
+  "bookmarkRemoveContent": {
+    "message": "Вы действительно хотите удалить эту закладку? Это не может быть отменено."
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "Удалять"
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "Отмена"
+  },
+  "bookmarkEditHeadingName": {
+    "message": "Редактировать"
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "Редактировать безымянную закладку"
+  },
+  "bookmarkEditSuccessText": {
+    "message": "Сохранять"
+  },
+  "bookmarkEditCancelText": {
+    "message": "Отмена"
+  },
+  "bookmarkFormTabVisual": {
+    "message": "Визуализация и имя"
+  },
+  "bookmarkFormTabAddress": {
+    "message": "Адрес"
+  },
+  "bookmarkFormTabPosition": {
+    "message": "Должность"
+  },
+  "bookmarkFormTabLayout": {
+    "message": "Макет"
+  },
+  "bookmarkFormTabTheme": {
+    "message": "Тема"
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "Визуализация и имя"
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "Отображать буквы, значок, изображение и имя на этой плитке закладки."
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "Адрес"
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "Обязательно используйте полный URL и включите \"https://...\""
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "Должность"
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "Группа, в которую будет помещена эта Закладка."
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "Макет"
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "Измените положение, масштаб и ориентацию визуального элемента и имени."
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "Тема"
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "Переопределите цвет темы и акцента."
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https://www.example.com/"
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "Выравнивание визуального элемента и имени"
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "Верхний левый"
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "Верхний центр"
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "В правом верхнем углу"
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "В центре слева"
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "Центр Центр"
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "В центре справа"
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "Нижний левый"
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "Внизу по центру"
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "Нижний правый"
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "Вертикальный"
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "Сложите визуальный элемент и назовите один над другим."
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "По горизонтали"
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "Расположите визуальный элемент и имя рядом."
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "Визуальный элемент затем назовите"
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "Поместите визуальный элемент перед именем."
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "Назовите затем визуальный элемент"
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "Поместите имя перед визуальным элементом."
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "Повернуть"
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "Отрегулируйте положение визуального элемента"
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "По горизонтали"
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "Вертикальный"
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "Желоб"
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "Показать визуальный элемент"
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "Отобразите буквы, значок или изображение на этом шестиугольнике закладки."
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "Письмо"
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "Значок"
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "Изображение"
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "Визуальный размер"
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "Закладка письмо"
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "E"
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "Значок закладки"
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "FontAwesome бренды или значки"
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "Удалить значок"
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "Закладка изображения"
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "Визуальная тень"
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "Визуальная тень применяется только к букве или значку."
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "Показать имя"
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "Имя закладки"
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "Пример"
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "Размер имени"
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "Акцент на тему"
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "Используйте акцент, определенный темой."
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "Пользовательский акцент"
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "Отменить акцент темы."
+  },
+  "bookmarkFormAccentColor": {
+    "message": "Акцент"
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "Цвет темы"
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "Используйте цвет, определенный темой."
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "Пользовательский цвет"
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "Заменить цвет темы."
+  },
+  "bookmarkFormColorColor": {
+    "message": "Цвет"
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "Непрозрачность"
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "Показать фон"
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "Отобразите фон изображения или видео на этой плитке закладки."
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "Изображение"
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "видео"
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "Непрозрачность"
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "URL фонового изображения"
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https://www.example.com/image.jpg"
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "Фоновое изображение поддерживает только прямой URL-адрес файла изображения."
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "URL фонового видео"
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https://www.example.com/video.mp4"
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "Фоновое видео поддерживает только прямой URL-адрес видеофайла. Поддерживает форматы MP4 и WebM."
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "URL-адреса страниц YouTube не могут быть использованы."
+  },
+  "bookmarkFormBorder": {
+    "message": "Граница"
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "Широкая плитка"
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "Отметьте плитку закладкой, чтобы она занимала два столбца."
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "Высокая плитка"
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "Сделайте закладку для плитки, чтобы она занимала два ряда."
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "Существующая группа"
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "Новая группа"
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "Пример группы"
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "Имя случайной группы"
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "Группа"
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "Должность"
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "Примените «Показать визуальный элемент» и «Показать имя» к другим закладкам"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "Текст с буквой, значком, изображением и именем не будет передан."
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "Полезно для скрытия визуальных элементов или имен во всех закладках."
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "Применить макет к другим закладкам"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "После сохранения примените вышеуказанный макет ко всем другим закладкам."
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "Ко всем будут применяться только визуальный размер и размер имени, выравнивание, порядок, положение и отступ."
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "Применить тему к другим закладкам"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "После сохранения примените указанную выше тему ко всем другим закладкам."
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "Ко всем будут применены только цвет, акцент, непрозрачность, граница и визуальная тень."
+  },
+  "bookmarkPreviewFull": {
+    "message": "Предварительный просмотр"
+  },
+  "bookmarkPreviewHalf": {
+    "message": "Предварительный просмотр (масштаб 50%)"
+  },
+  "groupAreaControlUp": {
+    "message": "Переместить эту группу вверх"
+  },
+  "groupAreaControlSort": {
+    "message": "Перетащите группу, чтобы изменить порядок"
+  },
+  "groupAreaControlDown": {
+    "message": "Переместить эту группу вниз"
+  },
+  "groupAreaControlEdit": {
+    "message": "Редактировать эту группу"
+  },
+  "groupAreaControlRemove": {
+    "message": "Удалить эту группу"
+  },
+  "groupAreaControlOpenAll": {
+    "message": "Открыть все закладки в этой группе"
+  },
+  "groupAreaControlCollapse": {
+    "message": "Свернуть эту группу"
+  },
+  "groupAddHeading": {
+    "message": "Добавить новую группу"
+  },
+  "groupAddSuccessText": {
+    "message": "Добавлять"
+  },
+  "groupAddCancelText": {
+    "message": "Отмена"
+  },
+  "groupRemoveHeadingName": {
+    "message": "Удалять"
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "Удалить безымянную группу"
+  },
+  "groupRemoveContent": {
+    "message": "Вы действительно хотите удалить эту группу и все закладки в ней? Это не может быть отменено."
+  },
+  "groupRemoveSuccessText": {
+    "message": "Удалять"
+  },
+  "groupRemoveCancelText": {
+    "message": "Отмена"
+  },
+  "groupEditHeadingName": {
+    "message": "Редактировать"
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "Изменить безымянную группу"
+  },
+  "groupEditSuccessText": {
+    "message": "Сохранять"
+  },
+  "groupEditCancelText": {
+    "message": "Отмена"
+  },
+  "groupFormSectionNameHeading": {
+    "message": "Имя"
+  },
+  "groupFormSectionNameDescription": {
+    "message": "Отображение имени над этой группой."
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "Панель инструментов"
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "Отображение элементов управления для открытия всех или отображения / скрытия закладок в этой группе."
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "Заказ"
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "Позиция этой группы."
+  },
+  "groupFormNameShow": {
+    "message": "Показать название группы"
+  },
+  "groupFormNameTextLabel": {
+    "message": "Название группы"
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "Пример группы"
+  },
+  "groupFormNameRandom": {
+    "message": "Имя случайной группы"
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "Показать Свернуть"
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "Кнопка «Свернуть» отобразит или скроет закладки в этой группе."
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "Показать Открыть все"
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "Кнопка «Открыть все» появится, если в этой группе есть хотя бы одна закладка."
+  },
+  "groupFormDestination": {
+    "message": "Должность"
+  },
+  "themeCustomTileControlEdit": {
+    "message": "Отредактируйте сохраненную настраиваемую тему"
+  },
+  "themeCustomTileControlRemove": {
+    "message": "Удалить эту сохраненную пользовательскую тему"
+  },
+  "themeCustomFormNameLabel": {
+    "message": "Имя"
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "Пример темы"
+  },
+  "themeCustomFormRandom": {
+    "message": "Случайное название темы"
+  },
+  "themeCustomAddHeading": {
+    "message": "Сохранить текущую тему"
+  },
+  "themeCustomAddSuccessText": {
+    "message": "Сохранять"
+  },
+  "themeCustomAddCancelText": {
+    "message": "Отмена"
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "Удалять"
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "Удалить безымянную пользовательскую тему"
+  },
+  "themeCustomRemoveContent": {
+    "message": "Вы уверены, что хотите удалить эту сохраненную настраиваемую тему? Это не может быть отменено."
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "Сохранять"
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "Отмена"
+  },
+  "themeCustomEditHeadingName": {
+    "message": "Редактировать"
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "Редактировать безымянную пользовательскую тему"
+  },
+  "themeCustomEditSuccessText": {
+    "message": "Удалять"
+  },
+  "themeCustomEditCancelText": {
+    "message": "Отмена"
+  },
+  "toolbarAccent": {
+    "message": "Акцентный цвет"
+  },
+  "toolbarAddLabel": {
+    "message": "Добавлять"
+  },
+  "toolbarAddGroup": {
+    "message": "Новая группа"
+  },
+  "toolbarAddBookmark": {
+    "message": "Новая закладка"
+  },
+  "toolbarEdit": {
+    "message": "Редактировать группы и закладки"
+  },
+  "toolbarSetting": {
+    "message": "Открыть меню настроек"
+  },
+  "dataFormDescription": {
+    "message": "Вы можете восстановить файл резервной копии полностью или частично. Будут восстановлены следующие данные:"
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "Закладки"
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "Сюда входят все группы и закладки"
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "Закладки сохранят любые пользовательские цвета, акценты и границы при импорте."
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "Заменить существующие закладки"
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "Добавить в существующие закладки"
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "Тема"
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "Это включает в себя цвет, акцент, шрифты, фон и любые сохраненные пользовательские темы."
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "Настройки"
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "Сюда входят размер и положение макета, размер области заголовка, размер области закладки и другие пользовательские настройки."
+  },
+  "dataRestoreHeading": {
+    "message": "Восстановление из резервной копии {appName}"
+  },
+  "dataRestoreSuccessText": {
+    "message": "Импортировать"
+  },
+  "dataRestoreCancelText": {
+    "message": "Отмена"
+  },
+  "dataClearAllHeading": {
+    "message": "Удалить все данные {appName} ?"
+  },
+  "dataClearAllContentPara1": {
+    "message": "Вы действительно хотите удалить все закладки и настройки приложения {appName} {appName} будет восстановлено до состояния по умолчанию."
+  },
+  "dataClearAllContentPara2": {
+    "message": "Это не может быть отменено."
+  },
+  "dataClearAllSuccessText": {
+    "message": "Очистить все данные"
+  },
+  "dataClearAllCancelText": {
+    "message": "Отмена"
+  },
+  "dataClearPartialHeading": {
+    "message": "Удалить данные {appName} кроме закладок?"
+  },
+  "dataClearPartialContentPara1": {
+    "message": "Вы действительно хотите удалить все настройки {appName} {appName} будет восстановлено до состояния по умолчанию, но ваши закладки и группы останутся."
+  },
+  "dataClearPartialContentPara2": {
+    "message": "Это не может быть отменено."
+  },
+  "dataClearPartialSuccessText": {
+    "message": "Очистить все, кроме закладок"
+  },
+  "dataClearPartialCancelText": {
+    "message": "Отмена"
+  },
+  "dataExportBackup": {
+    "message": "резервный"
+  },
+  "dataFeedbackEmpty": {
+    "message": "Ничего не выбрано для импорта."
+  },
+  "dataFeedbackSuccess": {
+    "message": "Успех! Восстановление закладок и настроек {appName}"
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "Не файл JSON. Убедитесь, что выбранный файл был {appName} ."
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "Не тот файл JSON. Убедитесь, что выбранный файл был {appName} ."
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "Не те данные. Убедитесь, что в буфере обмена хранятся данные из {appName} или {appName} резервного файла JSON."
+  },
+  "controlGeneralReset": {
+    "message": "Восстановление значений по умолчанию"
+  },
+  "controlColorTextPlaceholder": {
+    "message": "Шестнадцатеричный код"
+  },
+  "controlColorRandom": {
+    "message": "Случайный цвет"
+  },
+  "controlColorMixerMoreControls": {
+    "message": "Больше элементов управления"
+  },
+  "controlColorMixerSliderH": {
+    "message": "Оттенок"
+  },
+  "controlColorMixerSliderS": {
+    "message": "Насыщенность"
+  },
+  "controlColorMixerSliderL": {
+    "message": "Легкость"
+  },
+  "controlColorMixerSliderR": {
+    "message": "красный"
+  },
+  "controlColorMixerSliderG": {
+    "message": "Зеленый"
+  },
+  "controlColorMixerSliderB": {
+    "message": "Синий"
+  }
+}

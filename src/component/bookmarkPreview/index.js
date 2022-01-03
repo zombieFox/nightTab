@@ -1,4 +1,4 @@
-import { language } from '../../language';
+import { message } from '../message';
 
 import { BookmarkTile } from '../bookmarkTile';
 
@@ -31,9 +31,9 @@ export const BookmarkPreview = function({
     }
 
     if (bookmarkData.link.shape.tall || bookmarkData.link.shape.wide) {
-      this.title.textContent = language.current.bookmark.preview.half;
+      this.title.textContent = message('bookmarkPreviewHalf');
     } else {
-      this.title.textContent = language.current.bookmark.preview.full;
+      this.title.textContent = message('bookmarkPreviewFull');
     }
 
   };

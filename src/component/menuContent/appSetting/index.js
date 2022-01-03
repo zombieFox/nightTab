@@ -1,4 +1,4 @@
-import { language } from '../../../language';
+import { message } from '../../message';
 
 import * as form from '../../form';
 
@@ -13,24 +13,24 @@ const appSetting = {};
 
 appSetting.app = (parent) => {
 
-  appSetting.app.para1 = node(`p:${language.current.menu.content.app.para1}`);
+  appSetting.app.para1 = node(`p:${message('menuContentAppPara1')}`);
 
   appSetting.app.link1 = new Link({
-    text: language.current.menu.content.app.link1,
+    text: message('menuContentAppLink1'),
     href: `https://www.reddit.com/r/${APP_NAME}`,
     openNew: true
   });
 
-  appSetting.app.para2 = node(`p:${language.current.menu.content.app.para2}`);
+  appSetting.app.para2 = node(`p:${message('menuContentAppPara2')}`);
 
   appSetting.app.link2 = new Link({
-    text: language.current.menu.content.app.link2,
+    text: message('menuContentAppLink2'),
     href: `https://github.com/zombieFox/${APP_NAME}`,
     openNew: true
   });
 
   appSetting.app.link3 = new Link({
-    text: language.current.menu.content.app.link3,
+    text: message('menuContentAppLink3'),
     href: `https://github.com/zombieFox/${APP_NAME}/blob/master/license`,
     openNew: true
   });

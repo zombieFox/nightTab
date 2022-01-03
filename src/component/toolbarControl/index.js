@@ -1,4 +1,4 @@
-import { language } from '../../language';
+import { message } from '../message';
 
 import { state } from '../state';
 import { menu } from '../menu';
@@ -37,7 +37,7 @@ export const ToolbarControl = function() {
       path: 'theme.accent',
       id: 'theme-accent-quick',
       type: 'color',
-      labelText: language.current.toolbar.accent,
+      labelText: message('toolbarAccent'),
       srOnly: true,
       inputButtonStyle: ['dot', 'line'],
       inputButtonClassList: ['toolbar-item'],
@@ -55,20 +55,20 @@ export const ToolbarControl = function() {
       }
     }),
     add: new Dropdown({
-      title: language.current.toolbar.add.label,
-      text: language.current.toolbar.add.label,
+      title: message('toolbarAddLabel'),
+      text: message('toolbarAddLabel'),
       buttonStyle: ['line'],
       buttonClassList: ['toolbar-item'],
       srOnly: true,
       iconName: 'add',
       menuItem: [
-        { text: language.current.toolbar.add.group, iconName: 'addGroup', action: () => { group.add.render(); } },
-        { text: language.current.toolbar.add.bookmark, iconName: 'addBookmark', action: () => { bookmark.add.render(); } }
+        { text: message('toolbarAddGroup'), iconName: 'addGroup', action: () => { group.add.render(); } },
+        { text: message('toolbarAddBookmark'), iconName: 'addBookmark', action: () => { bookmark.add.render(); } }
       ]
     }),
     edit: new Button({
-      title: language.current.toolbar.edit,
-      text: language.current.toolbar.edit,
+      title: message('toolbarEdit'),
+      text: message('toolbarEdit'),
       srOnly: true,
       iconName: 'edit',
       classList: ['toolbar-item'],
@@ -82,8 +82,8 @@ export const ToolbarControl = function() {
       }
     }),
     setting: new Button({
-      title: language.current.toolbar.setting,
-      text: language.current.toolbar.setting,
+      title: message('toolbarSetting'),
+      text: message('toolbarSetting'),
       srOnly: true,
       iconName: 'settings',
       classList: ['toolbar-item'],

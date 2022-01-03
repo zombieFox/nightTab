@@ -1,4 +1,4 @@
-import { language } from '../../language';
+import { message } from '../message';
 
 import { state } from '../state';
 import { data } from '../data';
@@ -361,10 +361,10 @@ bookmark.add = {
     const bookmarkForm = new BookmarkForm({ bookmarkData: newBookmarkData });
 
     const addModal = new Modal({
-      heading: language.current.bookmark.add.heading,
+      heading: message('bookmarkAddHeading'),
       content: bookmarkForm.form(),
-      successText: language.current.bookmark.add.successText,
-      cancelText: language.current.bookmark.add.cancelText,
+      successText: message('bookmarkAddSuccessText'),
+      cancelText: message('bookmarkAddCancelText'),
       width: (state.get.current().bookmark.style === 'block') ? 60 : 70,
       maxHeight: true,
       openAction: () => {

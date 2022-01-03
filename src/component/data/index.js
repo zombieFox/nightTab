@@ -1,4 +1,4 @@
-import { language } from '../../language';
+import { message } from '../message';
 
 import { state } from '../state';
 import { bookmark } from '../bookmark';
@@ -87,10 +87,10 @@ data.import = {
     });
 
     const importModal = new Modal({
-      heading: language.current.data.restore.heading,
+      heading: message('dataRestoreHeading'),
       content: importForm.form(),
-      successText: language.current.data.restore.successText,
-      cancelText: language.current.data.restore.cancelText,
+      successText: message('dataRestoreSuccessText'),
+      cancelText: message('dataRestoreCancelText'),
       width: 'small',
       successAction: () => {
         if (data.import.state.setup.include || data.import.state.theme.include || data.import.state.bookmark.include) {
@@ -219,7 +219,7 @@ data.export = () => {
   timestamp.year = leadingZero(timestamp.year);
   timestamp = timestamp.year + '.' + timestamp.month + '.' + timestamp.date + ' - ' + timestamp.hours + ' ' + timestamp.minutes + ' ' + timestamp.seconds;
 
-  const fileName = APP_NAME + ' ' + language.current.data.export.backup + ' - ' + timestamp + '.json';
+  const fileName = APP_NAME + ' ' + message('dataExportBackup') + ' - ' + timestamp + '.json';
 
   const dataToExport = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data.load()));
 
@@ -343,13 +343,13 @@ data.clear = {
   all: {
     render: () => {
       const clearModal = new Modal({
-        heading: language.current.data.clear.all.heading,
+        heading: message('dataClearAllHeading'),
         content: node('div', [
-          node(`p:${language.current.data.clear.all.content.para1}`),
-          node(`p:${language.current.data.clear.all.content.para2}`)
+          node(`p:${message('dataClearAllContentPara1')}`),
+          node(`p:${message('dataClearAllContentPara2')}`)
         ]),
-        successText: language.current.data.clear.all.successText,
-        cancelText: language.current.data.clear.all.cancelText,
+        successText: message('dataClearAllSuccessText'),
+        cancelText: message('dataClearAllCancelText'),
         width: 'small',
         successAction: () => {
           data.wipe.all();
@@ -362,13 +362,13 @@ data.clear = {
   partial: {
     render: () => {
       const clearModal = new Modal({
-        heading: language.current.data.clear.partial.heading,
+        heading: message('dataClearPartialHeading'),
         content: node('div', [
-          node(`p:${language.current.data.clear.partial.content.para1}`),
-          node(`p:${language.current.data.clear.partial.content.para2}`)
+          node(`p:${message('dataClearPartialContentPara1')}`),
+          node(`p:${message('dataClearPartialContentPara2')}`)
         ]),
-        successText: language.current.data.clear.partial.successText,
-        cancelText: language.current.data.clear.partial.cancelText,
+        successText: message('dataClearPartialSuccessText'),
+        cancelText: message('dataClearPartialCancelText'),
         width: 35,
         successAction: () => {
           data.wipe.partial();
@@ -384,7 +384,7 @@ data.feedback = {};
 
 data.feedback.empty = {
   render: (feedback) => {
-    feedback.appendChild(node(`p:${language.current.data.feedback.empty}|class:muted small`));
+    feedback.appendChild(node(`p:${message('dataFeedbackEmpty')}|class:muted small`));
   }
 };
 
@@ -396,7 +396,7 @@ data.feedback.clear = {
 
 data.feedback.success = {
   render: (feedback, filename, action) => {
-    feedback.appendChild(node(`p:${language.current.data.feedback.success}|class:muted small`));
+    feedback.appendChild(node(`p:${message('dataFeedbackSuccess')}|class:muted small`));
 
     feedback.appendChild(node('p:' + filename));
 
@@ -409,21 +409,21 @@ data.feedback.success = {
 data.feedback.fail = {
   notJson: {
     render: (feedback, filename) => {
-      feedback.appendChild(node(`p:${language.current.data.feedback.fail.notJson}|class:small muted`));
+      feedback.appendChild(node(`p:${message('dataFeedbackFailNotJson')}|class:small muted`));
       feedback.appendChild(complexNode({ tag: 'p', text: filename }));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
   },
   notAppJson: {
     render: (feedback, filename) => {
-      feedback.appendChild(node(`p:${language.current.data.feedback.fail.notAppJson}|class:small muted`));
+      feedback.appendChild(node(`p:${message('dataFeedbackFailNotAppJson')}|class:small muted`));
       feedback.appendChild(complexNode({ tag: 'p', text: filename }));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
   },
   notClipboardJson: {
     render: (feedback, name) => {
-      feedback.appendChild(node(`p:${language.current.data.feedback.fail.notClipboardJson}|class:small muted`));
+      feedback.appendChild(node(`p:${message('dataFeedbackFailNotClipboardJson')}|class:small muted`));
       feedback.appendChild(node('p:' + name));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }

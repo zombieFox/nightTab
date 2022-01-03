@@ -1,4 +1,4 @@
-import { language } from '../../../language';
+import { message } from '../../message';
 
 import * as form from '../../form';
 
@@ -67,7 +67,7 @@ export const Control_color = function ({
     })),
     max: 7,
     classList: ['form-group-item-half'],
-    placeholder: language.current.control.color.text.placeholder,
+    placeholder: message('controlColorTextPlaceholder'),
     func: () => {
 
       if (path) {
@@ -84,11 +84,11 @@ export const Control_color = function ({
   });
 
   this.reset = new Button({
-    text: language.current.control.general.reset,
+    text: message('controlGeneralReset'),
     iconName: 'replay',
     style: ['line'],
     classList: ['form-group-item-small'],
-    title: language.current.control.general.reset,
+    title: message('controlGeneralReset'),
     srOnly: true,
     func: () => {
 
@@ -102,11 +102,11 @@ export const Control_color = function ({
   });
 
   this.random = new Button({
-    text: language.current.control.color.random,
+    text: message('controlColorRandom'),
     iconName: 'random',
     style: ['line'],
     classList: ['form-group-item-small'],
-    title: language.current.control.color.random,
+    title: message('controlColorRandom'),
     srOnly: true,
     func: () => {
 

@@ -1,4 +1,4 @@
-import { language } from '../../language';
+import { message } from '../message';
 
 import { debugSetting } from './debugSetting';
 import { layoutSetting } from './layoutSetting';
@@ -14,6 +14,7 @@ import { coffeeSetting } from './coffeeSetting';
 import { appSetting } from './appSetting';
 
 import { node } from '../../utility/node';
+import { uppercaseFirstLetter } from '../../utility/uppercaseFirstLetter';
 
 import './index.css';
 
@@ -52,7 +53,7 @@ export const MenuContent = function({
         const menuContentItem = this.element.content(item);
 
         menuContentItem.appendChild(this.element.header(
-          language.current.menu.nav[activeNavData.name].subNav[item]
+          message(`menuNav${uppercaseFirstLetter(activeNavData.name)}SubNav${uppercaseFirstLetter(item)}`)
         ));
 
         const formElement = this.element.form({ indent: true });
@@ -141,7 +142,7 @@ export const MenuContent = function({
 
         case 'language':
 
-          menuContentItem.appendChild(this.element.header(language.current.menu.nav[activeNavData.name].label));
+          menuContentItem.appendChild(this.element.header(message(`menuNav${uppercaseFirstLetter(activeNavData.name)}Label`)));
 
           formElement = this.element.form({ indent: true });
 
@@ -151,7 +152,7 @@ export const MenuContent = function({
 
         case 'support':
 
-          menuContentItem.appendChild(this.element.header(language.current.menu.nav[activeNavData.name].label));
+          menuContentItem.appendChild(this.element.header(message(`menuNav${uppercaseFirstLetter(activeNavData.name)}Label`)));
 
           formElement = this.element.form({ indent: true });
 
@@ -161,7 +162,7 @@ export const MenuContent = function({
 
         case 'coffee':
 
-          menuContentItem.appendChild(this.element.header(language.current.menu.nav[activeNavData.name].label));
+          menuContentItem.appendChild(this.element.header(message(`menuNav${uppercaseFirstLetter(activeNavData.name)}Label`)));
 
           formElement = this.element.form({ indent: true });
 
