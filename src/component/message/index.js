@@ -16,7 +16,7 @@ export const message = (id) => {
 
   }
 
-  string.replaceAll('{appName}', APP_NAME);
+  string = string.replaceAll('{appName}', APP_NAME);
 
   return string;
 
