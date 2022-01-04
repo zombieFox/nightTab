@@ -15,11 +15,11 @@ coffeeSetting.coffee = (parent) => {
     node('div', [
       complexNode({
         tag: 'p',
-        text: message('menuContentCoffeePara')
+        text: message.get('menuContentCoffeePara')
       }),
       form.wrap({
         children: [(new Link({
-          text: message('menuContentCoffeeButton'),
+          text: message.get('menuContentCoffeeButton'),
           href: 'https://www.buymeacoffee.com/zombieFox',
           iconName: 'coffee',
           iconPosition: 'left',

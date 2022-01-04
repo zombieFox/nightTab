@@ -1337,8 +1337,11 @@
   "menuContentDataClearHelperPara2": {
     "message": "વૈકલ્પિક રીતે, બધી સેટિંગ્સને સાફ કરવું શક્ય છે પરંતુ વર્તમાન બુકમાર્ક્સ અને જૂથો રાખો."
   },
-  "menuContentLanguageLanguage": {
+  "menuContentLanguageSelect": {
     "message": "ભાષા"
+  },
+  "menuContentLanguageSystem": {
+    "message": "સિસ્ટમ ભાષાનો ઉપયોગ કરો"
   },
   "menuContentLanguageAlertPara": {
     "message": "એક અનુવાદ મળ્યો જે યોગ્ય નથી?"

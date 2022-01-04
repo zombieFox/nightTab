@@ -64,7 +64,7 @@ export const GroupForm = function({
         object: groupData.group,
         path: 'name.show',
         id: 'name-show',
-        labelText: message('groupFormNameShow'),
+        labelText: message.get('groupFormNameShow'),
         action: () => {
           this.disable();
         }
@@ -74,12 +74,12 @@ export const GroupForm = function({
         path: 'name.text',
         id: 'name-text',
         value: groupData.group.name.text,
-        placeholder: message('groupFormNameTextPlaceholder'),
-        labelText: message('groupFormNameTextLabel'),
+        placeholder: message.get('groupFormNameTextPlaceholder'),
+        labelText: message.get('groupFormNameTextLabel'),
         srOnly: true
       }),
       random: new Button({
-        text: message('groupFormNameRandom'),
+        text: message.get('groupFormNameRandom'),
         style: ['line'],
         func: () => {
           groupData.group.name.text = randomString({ adjectivesCount: randomNumber(1, 3) });
@@ -92,8 +92,8 @@ export const GroupForm = function({
         object: groupData.group,
         path: 'toolbar.collapse.show',
         id: 'toolbar-collapse-show',
-        labelText: message('groupFormCollapseShowLabel'),
-        description: message('groupFormCollapseShowDescription')
+        labelText: message.get('groupFormCollapseShowLabel'),
+        description: message.get('groupFormCollapseShowDescription')
       })
     },
     openAll: {
@@ -101,8 +101,8 @@ export const GroupForm = function({
         object: groupData.group,
         path: 'toolbar.openAll.show',
         id: 'toolbar-openAll-show',
-        labelText: message('groupFormOpenAllShowLabel'),
-        description: message('groupFormOpenAllShowDescription')
+        labelText: message.get('groupFormOpenAllShowLabel'),
+        description: message.get('groupFormOpenAllShowDescription')
       })
     }
   };
@@ -111,7 +111,7 @@ export const GroupForm = function({
     object: groupData,
     path: 'position.destination',
     id: 'position-destination',
-    labelText: message('groupFormDestination'),
+    labelText: message.get('groupFormDestination'),
     option: this.selectOption.group(),
     selected: groupData.position.destination
   });
@@ -141,8 +141,8 @@ export const GroupForm = function({
           form.wrap({
             children: [
               node('div|class:group-form-description', [
-                node(`h2:${message('groupFormSectionNameHeading')}`),
-                node(`p:${message('groupFormSectionNameDescription')}`)
+                node(`h2:${message.get('groupFormSectionNameHeading')}`),
+                node(`p:${message.get('groupFormSectionNameDescription')}`)
               ])
             ]
           }),
@@ -179,8 +179,8 @@ export const GroupForm = function({
           form.wrap({
             children: [
               node('div|class:group-form-description', [
-                node(`h2:${message('groupFormSectionToolbarHeading')}`),
-                node(`p:${message('groupFormSectionToolbarDescription')}`)
+                node(`h2:${message.get('groupFormSectionToolbarHeading')}`),
+                node(`p:${message.get('groupFormSectionToolbarDescription')}`)
               ])
             ]
           }),
@@ -208,8 +208,8 @@ export const GroupForm = function({
           form.wrap({
             children: [
               node('div|class:group-form-description', [
-                node(`h2:${message('groupFormSectionOrderingHeading')}`),
-                node(`p:${message('groupFormSectionOrderingDescription')}`)
+                node(`h2:${message.get('groupFormSectionOrderingHeading')}`),
+                node(`p:${message.get('groupFormSectionOrderingDescription')}`)
               ])
             ]
           }),

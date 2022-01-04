@@ -1337,8 +1337,11 @@
   "menuContentDataClearHelperPara2": {
     "message": "Alternativement, il est possible d'effacer tous les paramètres mais de conserver les signets et les groupes actuels."
   },
-  "menuContentLanguageLanguage": {
+  "menuContentLanguageSelect": {
     "message": "Langue"
+  },
+  "menuContentLanguageSystem": {
+    "message": "Utiliser la langue du système"
   },
   "menuContentLanguageAlertPara": {
     "message": "Vous avez trouvé une traduction qui n'est pas correcte ?"

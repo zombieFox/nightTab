@@ -53,7 +53,7 @@ export const MenuContent = function({
         const menuContentItem = this.element.content(item);
 
         menuContentItem.appendChild(this.element.header(
-          message(`menuNav${uppercaseFirstLetter(activeNavData.name)}SubNav${uppercaseFirstLetter(item)}`)
+          message.get(`menuNav${uppercaseFirstLetter(activeNavData.name)}SubNav${uppercaseFirstLetter(item)}`)
         ));
 
         const formElement = this.element.form({ indent: true });
@@ -86,10 +86,6 @@ export const MenuContent = function({
 
           case 'data':
             dataSetting[this.makeId(item)](formElement);
-            break;
-
-          case 'language':
-            languageSetting[this.makeId(item)](formElement);
             break;
 
           case 'debug':
@@ -142,7 +138,7 @@ export const MenuContent = function({
 
         case 'language':
 
-          menuContentItem.appendChild(this.element.header(message(`menuNav${uppercaseFirstLetter(activeNavData.name)}Label`)));
+          menuContentItem.appendChild(this.element.header(message.get(`menuNav${uppercaseFirstLetter(activeNavData.name)}Label`)));
 
           formElement = this.element.form({ indent: true });
 
@@ -152,7 +148,7 @@ export const MenuContent = function({
 
         case 'support':
 
-          menuContentItem.appendChild(this.element.header(message(`menuNav${uppercaseFirstLetter(activeNavData.name)}Label`)));
+          menuContentItem.appendChild(this.element.header(message.get(`menuNav${uppercaseFirstLetter(activeNavData.name)}Label`)));
 
           formElement = this.element.form({ indent: true });
 
@@ -162,7 +158,7 @@ export const MenuContent = function({
 
         case 'coffee':
 
-          menuContentItem.appendChild(this.element.header(message(`menuNav${uppercaseFirstLetter(activeNavData.name)}Label`)));
+          menuContentItem.appendChild(this.element.header(message.get(`menuNav${uppercaseFirstLetter(activeNavData.name)}Label`)));
 
           formElement = this.element.form({ indent: true });
 

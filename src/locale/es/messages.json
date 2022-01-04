@@ -1337,8 +1337,11 @@
   "menuContentDataClearHelperPara2": {
     "message": "Alternativamente, es posible borrar todas las configuraciones pero mantener los marcadores y grupos actuales."
   },
-  "menuContentLanguageLanguage": {
+  "menuContentLanguageSelect": {
     "message": "Idioma"
+  },
+  "menuContentLanguageSystem": {
+    "message": "Usar el idioma del sistema"
   },
   "menuContentLanguageAlertPara": {
     "message": "¿Encontró una traducción que no es correcta?"

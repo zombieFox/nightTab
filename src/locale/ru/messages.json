@@ -1337,8 +1337,11 @@
   "menuContentDataClearHelperPara2": {
     "message": "В качестве альтернативы можно стереть все настройки, но сохранить текущие закладки и группы."
   },
-  "menuContentLanguageLanguage": {
+  "menuContentLanguageSelect": {
     "message": "Язык"
+  },
+  "menuContentLanguageSystem": {
+    "message": "Использовать системный язык"
   },
   "menuContentLanguageAlertPara": {
     "message": "Нашли неправильный перевод?"

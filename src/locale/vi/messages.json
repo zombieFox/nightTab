@@ -1,0 +1,2069 @@
+{
+  "appName": {
+    "message": "nightTab"
+  },
+  "appShortName": {
+    "message": "nightTab"
+  },
+  "appDescription": {
+    "message": "Tùy chỉnh màu nhấn, bố cục, kiểu, nền và dấu trang trong nightTab."
+  },
+  "menuNavThemeLabel": {
+    "message": "Chủ đề"
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "Đặt trước"
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "Đã lưu"
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "Phong cách"
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "Màu sắc"
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "Giọng"
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "Nét chữ"
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "Bán kính"
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "Bong tôi"
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "Bóng râm"
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "Độ mờ"
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "Lý lịch"
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "Bố trí"
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "Tiêu đề"
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "Dấu trang"
+  },
+  "menuNavLayoutLabel": {
+    "message": "Bố trí"
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "Mở rộng quy mô"
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "Diện tích"
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "Đệm lót"
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "Mương nước"
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "Căn chỉnh"
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "Trang"
+  },
+  "menuNavHeaderLabel": {
+    "message": "Tiêu đề"
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "Căn chỉnh"
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "Lời chào"
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "Nói cách chuyển tiếp"
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "Cái đồng hồ"
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "Ngày"
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "Tìm kiếm"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "Dấu trang"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "Tổng quan"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "Phong cách"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "Sự định hướng"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "Loại"
+  },
+  "menuNavGroupLabel": {
+    "message": "Tập đoàn"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "Căn chỉnh"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "Tên"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "Sự sụp đổ"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "Thanh công cụ"
+  },
+  "menuNavToolbarLabel": {
+    "message": "Thanh công cụ"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "Kích cỡ"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "Địa điểm"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "Chức vụ"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "Kiểm soát"
+  },
+  "menuNavDataLabel": {
+    "message": "Dữ liệu"
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "Khôi phục"
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "Sao lưu"
+  },
+  "menuNavDataSubNavClear": {
+    "message": "Thông thoáng"
+  },
+  "menuNavLanguageLabel": {
+    "message": "Ngôn ngữ"
+  },
+  "menuNavSupportLabel": {
+    "message": "Hỗ trợ"
+  },
+  "menuNavCoffeeLabel": {
+    "message": "Cà phê"
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}"
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "Việc áp dụng Giá trị đặt trước sẽ thay thế Màu sắc, Điểm nhấn, Phông chữ, Kiểu, Bán kính, Bóng, Bóng và Nền hiện tại."
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "Lưu một Chủ đề sẽ ghi lại Màu sắc, Điểm nhấn, Phông chữ, Kiểu, Độ mờ, Bán kính, Bóng, Bóng và Nền hiện tại."
+  },
+  "menuContentThemeSavedSave": {
+    "message": "Lưu chủ đề hiện tại"
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "Chỉnh sửa các chủ đề đã lưu"
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "Chế độ tối"
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "Chế độ sáng"
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "Tự động"
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "Thực hiện theo hệ thống Chế độ sáng hoặc tối."
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "Hình nền, Dấu trang và Chế độ sử dụng các sắc thái từ bên trái."
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "Các phần tử văn bản và biểu mẫu sử dụng các sắc thái từ bên phải."
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "Để có giao diện ánh sáng, hãy chuyển sang Kiểu ánh sáng và sau đó chọn Màu chính. Và ngược lại để có một cái nhìn tối."
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "Màu cơ bản"
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "Bão hòa"
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "Phạm vi tương phản"
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "Bắt đầu tương phản"
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "Kết thúc tương phản"
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "Di chuyển các điều khiển Dải tương phản lại gần nhau để có giao diện tắt tiếng."
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "Di chuyển các nút điều khiển Dải tương phản ra xa nhau để có giao diện sống động sắc nét."
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "Xám"
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "màu đỏ"
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "trái cam"
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "Màu vàng"
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "Chanh xanh"
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "Màu xanh lá"
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "Aqua"
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "Lục lam"
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "Màu mòng két"
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "Màu xanh lam"
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "Màu tía"
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "Đỏ tươi"
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "Fuchsia"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "Siêu ánh sáng"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "Đèn dự phòng"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "Nhẹ"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "Siêu tối"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "Cực tối"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "Tối tăm"
+  },
+  "menuContentThemeAccentColor": {
+    "message": "Màu nhấn"
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "Màu dấu nhấn ngẫu nhiên khi tải \/ làm mới"
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "Bất kì"
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "Nhẹ"
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "Tối tăm"
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "Pastel"
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "Bão hòa"
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "Ngẫu nhiên ngay bây giờ"
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "Tự động thay đổi màu sắc trọng âm"
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "Thay đổi độ trễ"
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "Thay đổi các bước"
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "Hãy cẩn thận vì màu sắc của Accent thay đổi nhanh có thể gây ra các vấn đề về hiệu suất."
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "Tự động thay đổi Màu sắc của Accent sẽ không hoạt động khi màu Accent là xám hoặc đen."
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "Phông chữ hiển thị"
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "Tên phông chữ Google"
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "Sử dụng Phông chữ của Google để tùy chỉnh Đồng hồ, Ngày tháng, Tên nhóm và Chữ cái Đánh dấu."
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "Tìm một Phông chữ của Google"
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "Thêm tên phông chữ khi nó xuất hiện trên Google Fonts, bao gồm cả chữ in hoa và dấu cách, ví dụ: nhập \"Fredoka One\" hoặc \"Kanit\"."
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "Xóa trường để sử dụng phông chữ mặc định \"Fjalla One\"."
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "Độ đậm của phông chữ"
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "Nhẹ"
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "Thường xuyên"
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "Dũng cảm"
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "Không phải tất cả các phông chữ đều hỗ trợ tất cả các trọng số. Tham khảo trang Phông chữ của Google để xem những cái nào có sẵn."
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "Bình thường"
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "In nghiêng"
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "Phông chữ giao diện người dùng"
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "Tên phông chữ Google"
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "Sử dụng Phông chữ của Google để tùy chỉnh tên Dấu trang, URL và các thành phần biểu mẫu."
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "Tìm một Phông chữ của Google"
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "Thêm tên phông chữ khi nó xuất hiện trên Google Fonts, bao gồm cả chữ in hoa và khoảng trắng, ví dụ: nhập \"Roboto\", \"Source Sans Pro\" hoặc \"Noto Sans\"."
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "Xóa trường để sử dụng phông chữ mặc định \"Open Sans\"."
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "Độ đậm phông chữ"
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "Nhẹ"
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "Thường xuyên"
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "Dũng cảm"
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "Không phải tất cả các phông chữ đều hỗ trợ tất cả các trọng số. Tham khảo trang Phông chữ của Google để xem những cái nào có sẵn."
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "Bình thường"
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "In nghiêng"
+  },
+  "menuContentThemeRadius": {
+    "message": "Bán kính góc"
+  },
+  "menuContentThemeShadow": {
+    "message": "Kích thước bóng"
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "Độ mờ của bóng râm"
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "Bóng mờ"
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "Không được hỗ trợ bởi tất cả các trình duyệt."
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "Tất cả độ mờ"
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "Thay đổi độ mờ của thanh Tìm kiếm, Dấu trang, Điều khiển nhóm và Thanh công cụ."
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "Độ mờ cũng có thể được thay đổi khi chỉnh sửa các Dấu trang riêng lẻ."
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "Thanh công cụ"
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "Dấu trang"
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "Hộp tìm kiếm"
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "Thanh công cụ nhóm"
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "Nền theo chủ đề"
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "Sử dụng màu Nền được xác định bởi Chủ đề."
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "Nền bằng dấu"
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "Sử dụng màu Nhấn cho Nền."
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "Màu tùy chỉnh"
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "Dốc"
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "Hình ảnh"
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "Băng hình"
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "Màu nền"
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "Góc độ dốc nền"
+  },
+  "menuContentThemeBackgroundGradientStart": {
+    "message": "Bắt đầu gradient nền"
+  },
+  "menuContentThemeBackgroundGradientEnd": {
+    "message": "Kết thúc gradient nền"
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "Hình ảnh cục bộ không thể được sử dụng nữa. Hình ảnh phải được lưu trữ ở đâu đó trực tuyến."
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "Tại sao điều này lại thay đổi?"
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "Thêm nhiều URL được phân tách bằng dấu cách hoặc trên các dòng mới cho hình nền ngẫu nhiên khi tải."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "Unsplash có thể được sử dụng cho các hình ảnh ngẫu nhiên, ví dụ:"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?night,day,sky"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "Thay đổi các tham số sau ... \/ random \/ để có thêm tùy chọn. Thời gian tải có thể khác nhau."
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "Mơ hồ"
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "Thang độ xám"
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "Tỉ lệ"
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "Giọng"
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "Độ mờ"
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "Làm mờ nét ảnh"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "Bóng râm bắt đầu và kết thúc"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "Kết thúc bóng râm"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "Bắt đầu bóng râm"
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "Không thể sử dụng URL trang YouTube."
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "Cách liên kết đến tệp video."
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/video.mp4"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "Video nền chỉ hỗ trợ URL trực tiếp đến tệp video. Hỗ trợ định dạng MP4 và WebM."
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "Thêm nhiều URL được phân tách bằng dấu cách hoặc trên các dòng mới cho video nền ngẫu nhiên khi tải."
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "Mơ hồ"
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "Thang độ xám"
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "Tỉ lệ"
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "Giọng"
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "Độ mờ"
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "Làm mờ nét ảnh"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "Bóng râm bắt đầu và kết thúc"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "Kết thúc bóng râm"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "Bắt đầu bóng râm"
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "Màu nền của bố cục"
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "Trong suốt"
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "Không có màu nền đằng sau Bố cục."
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "Màu tùy chỉnh"
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "Sử dụng màu tùy chỉnh phía sau Bố cục."
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "Màu nền của bố cục"
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "Độ mờ của nền"
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "Mờ nền"
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "Không được hỗ trợ bởi tất cả các trình duyệt."
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "Dải phân cách giữa vùng Header và Bookmark"
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "Màu nền của tiêu đề"
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "Trong suốt"
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "Không có màu nền phía sau vùng Tiêu đề."
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "Màu tùy chỉnh"
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "Sử dụng màu tùy chỉnh phía sau vùng Tiêu đề."
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "Màu nền của tiêu đề"
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "Độ mờ của nền"
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "Màu nền của dấu trang"
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "Trong suốt"
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "Không có màu nền phía sau khu vực Dấu trang."
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "Màu tùy chỉnh"
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "Sử dụng màu tùy chỉnh phía sau khu vực Dấu trang."
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "Màu nền của dấu trang"
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "Độ mờ của nền"
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "Đường viền dấu trang"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "Đường viền của Dấu trang cũng có thể được thay đổi khi chỉnh sửa Dấu trang riêng lẻ."
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "Màu của Viền được xác định bởi Dấu, cũng có thể được thay đổi khi chỉnh sửa Dấu trang riêng lẻ."
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "Thêm điểm nhấn độc đáo cho mỗi Dấu trang"
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "Xóa tất cả các ghi đè trọng âm"
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "Dấu trang tùy chỉnh Accent cũng có thể được thay đổi khi chỉnh sửa các Dấu trang riêng lẻ."
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "Quy mô toàn cầu"
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "Chiều rộng vùng bố trí"
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "Chiều rộng vùng tiêu đề"
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "Căn chỉnh vùng tiêu đề"
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "Bên trái"
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "Trung tâm"
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "Đúng"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "Các hiệu ứng có thể không hiển thị nếu Vùng tiêu đề có chiều rộng đầy đủ."
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "Chỉ khả dụng khi Hướng bố trí là Dọc và các mục Tiêu đề được hiển thị."
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "Chiều rộng vùng đánh dấu"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "Căn chỉnh khu vực dấu trang"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "Bên trái"
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "Trung tâm"
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "Đúng"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "Các hiệu ứng có thể không hiển thị nếu Vùng đánh dấu có chiều rộng đầy đủ."
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "Chỉ khả dụng khi Hướng bố trí là Dọc và các mục Tiêu đề được hiển thị."
+  },
+  "menuContentLayoutPadding": {
+    "message": "Khoảng trống xung quanh Vùng đầu trang và Dấu trang"
+  },
+  "menuContentLayoutGutter": {
+    "message": "Khoảng cách giữa các mục Tiêu đề và Dấu trang"
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "Căn chỉnh khu vực"
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "Trên cùng bên trái"
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "Trung tâm hàng đầu"
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "Trên cùng bên phải"
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "Trung tâm bên trái"
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "Trung tâm Trung tâm"
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "Căn giữa bên phải"
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "Dưới cùng bên trái"
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "Trung tâm dưới cùng"
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "Góc phải ở phía dưới"
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "Căn chỉnh theo chiều ngang"
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "Xếp Tiêu đề và Dấu trang thành một hàng cạnh nhau."
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "Căn chỉnh theo chiều dọc"
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "Xếp chồng Tiêu đề và Dấu trang vào một cột bên trên cột kia."
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "Tiêu đề rồi đến Dấu trang"
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "Ra lệnh cho vùng Tiêu đề xuất hiện trước vùng Dấu trang."
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "Dấu trang rồi đến Tiêu đề"
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "Thứ tự cho khu vực Dấu trang xuất hiện trước khu vực Tiêu đề."
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "Chức vụ"
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "Tab mới"
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "URL yêu thích"
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https:\/\/www.example.com\/favicon.svg"
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "Không được hỗ trợ bởi tất cả các trình duyệt."
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "Thanh cuộn"
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "Tự động"
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "Gầy"
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "Ẩn giấu"
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "Không được hỗ trợ bởi tất cả các trình duyệt."
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "Cuộn qua cuối"
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "Làm mờ hình nền hoặc video"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "Hình nền hoặc video sẽ không bị mờ khi cuộn xuống cuối trang."
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "Hình ảnh hoặc video mờ có thể được tìm thấy trong Nền chủ đề."
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "Căn chỉnh mục tiêu đề"
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "Bên trái"
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "Trung tâm"
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "Đúng"
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "Các hiệu ứng có thể không hiển thị nếu kích thước hộp Tìm kiếm được đặt thành Tự động và lớn dần để lấp đầy không gian có sẵn."
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "Hiển thị lời chào"
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "Kích cỡ"
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "Dòng mới"
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "Bắt buộc chuyển sang một dòng mới và tách biệt khỏi các mục Tiêu đề khác."
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "Văn bản"
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"Buổi sáng tốt lành...\""
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"Xin chào...\""
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"Chào...\""
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "Không có"
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "Hữu ích khi chỉ hiển thị tên."
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "Tập quán"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "Sử dụng lời chào của riêng bạn."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "Mặc định là \"Chào buổi sáng ...\" nếu để trống."
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "Văn bản lời chào tùy chỉnh"
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "Chào"
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "Tên"
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "Biệt hiệu, bí danh hoặc tên siêu anh hùng"
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "Hiển thị các từ chuyển tiếp"
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "Chỉ khả dụng khi Ngày hoặc Giờ được hiển thị."
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "Văn bản"
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "\"Ngày và giờ là\""
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"Của nó\""
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "Kích cỡ"
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "Dòng mới"
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "Bắt buộc chuyển sang một dòng mới và tách biệt khỏi các mục Tiêu đề khác."
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "Hiển thị giờ"
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "Như số"
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "Như lời"
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "Hiển thị phút"
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "Như số"
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "Như lời"
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "Hiển thị giây"
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "Như số"
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "Như lời"
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "Hiển thị dấu phân cách"
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "Ký tự phân tách"
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":"
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "24 tiếng"
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "SA \/ CH"
+  },
+  "menuContentHeaderClockSize": {
+    "message": "Kích cỡ"
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "Dòng mới"
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "Bắt buộc chuyển sang một dòng mới và tách biệt khỏi các mục Tiêu đề khác."
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "Ngày hiển thị"
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "Như số"
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "Như lời"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "Đầu tuần"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "thứ hai"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "chủ nhật"
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "Độ dài từ"
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "Dài"
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "Ngắn ngủi"
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "Ngày hiển thị"
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "Như số"
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "Như lời"
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "Số thứ tự"
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "Hiển thị tháng"
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "Như số"
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "Như lời"
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "Số thứ tự"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "Độ dài từ"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "Dài"
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "Ngắn ngủi"
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "Hiển thị năm"
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "Như số"
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "Như lời"
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "Hiển thị dấu phân cách"
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "Ký tự phân tách"
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "\/"
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "Định dạng"
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "Ngày \/ tháng"
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "Ngày tháng"
+  },
+  "menuContentHeaderDateSize": {
+    "message": "Kích cỡ"
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "Dòng mới"
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "Bắt buộc chuyển sang một dòng mới và tách biệt khỏi các mục Tiêu đề khác."
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "Hiển thị Tìm kiếm"
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "Chiều rộng hộp tìm kiếm"
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "Chiều rộng tự động"
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "Hộp tìm kiếm sẽ phát triển để phù hợp nhất với không gian có sẵn."
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "Chiều rộng tùy chỉnh"
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "Xác định độ rộng của hộp Tìm kiếm bên trong Vùng tiêu đề."
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "Chiều rộng"
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "Kích cỡ"
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "Dòng mới"
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "Bắt buộc chuyển sang một dòng mới và tách biệt khỏi các mục Tiêu đề khác."
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "Máy tìm kiếm"
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "Tập quán"
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "Tên"
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "Tên công cụ tìm kiếm"
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https: \/\/"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "Nhập địa chỉ web với các tham số tìm kiếm, ví dụ: \"https:\/\/vimeo.com\/search?q=\""
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} sẽ thêm cụm từ tìm kiếm được nhập vào hộp Tìm kiếm ở cuối URL ở trên."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "Thuộc tính tên"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "q"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "Đặt thuộc tính tên trên trường nhập Tìm kiếm."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "Điều này xác định tên được chuyển đến công cụ tìm kiếm khi gửi. Nếu không chắc chắn để trống."
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "Căn chỉnh văn bản tìm kiếm"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "Bên trái"
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "Trung tâm"
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "Đúng"
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "Mở kết quả Tìm kiếm trong một tab mới"
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "Hiển thị Dấu trang"
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "Hiển thị URL khi di chuột qua Dấu trang"
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "Hiển thị dòng Dấu trang"
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "Hiển thị bóng khi di chuột qua Dấu trang"
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "Các hiệu ứng có thể không hiển thị nếu Theme Shadow được đặt thành 0."
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "Phát triển khi di chuột qua Dấu trang"
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "Mở Dấu trang trong tab mới"
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "Kích thước dấu trang"
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "Khối"
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "Gạch Bookmark hình vuông."
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "Danh sách"
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "Các ô Bookmark ngắn và rộng."
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "Đứng đầu"
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "Đáy"
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "Hiển thị URL và Điều khiển ở trên cùng hoặc dưới cùng của Xếp dấu trang."
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "Bằng thư"
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "Bằng biểu tượng"
+  },
+  "menuContentBookmarkSortName": {
+    "message": "Bằng tên"
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "Căn chỉnh khu vực chi tiết nhóm"
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "Bên trái"
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "Trung tâm"
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "Đúng"
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "Chi tiết nhóm đặt hàng"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "Chi tiết nhóm rồi đến Dấu trang"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "Ra lệnh cho khu vực Chi tiết nhóm xuất hiện trước khu vực Dấu trang."
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "Dấu trang rồi đến Chi tiết nhóm"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "Đặt khu vực Dấu trang xuất hiện trước khu vực Chi tiết nhóm."
+  },
+  "menuContentGroupNameSize": {
+    "message": "Kích thước tên"
+  },
+  "menuContentGroupNameShow": {
+    "message": "Hiển thị tất cả"
+  },
+  "menuContentGroupNameHide": {
+    "message": "Ẩn tất cả"
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "Tên Nhóm cũng có thể được thay đổi bằng cách chỉnh sửa các Nhóm riêng lẻ."
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "Mở tất cả các nhóm"
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "Thu gọn tất cả các nhóm"
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "Kích thước thanh công cụ nhóm"
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "Kiểm soát thu gọn nhóm"
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "Hiển thị tất cả"
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "Ẩn tất cả"
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "Nút thu gọn của thanh công cụ Nhóm cũng có thể được thay đổi bằng cách chỉnh sửa các Nhóm riêng lẻ."
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "Nhóm Mở tất cả điều khiển"
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "Hiển thị tất cả"
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "Ẩn tất cả"
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "Nút mở tất cả thanh công cụ Nhóm cũng có thể được thay đổi bằng cách chỉnh sửa các Nhóm riêng lẻ."
+  },
+  "menuContentToolbarSize": {
+    "message": "Kích thước thanh công cụ"
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "Ở một góc"
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "Trong tiêu đề"
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "Định vị Thanh công cụ bên trong Tiêu đề hoặc ở một góc của cửa sổ."
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "Dòng mới"
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "Bắt buộc chuyển sang một dòng mới và tách biệt khỏi các mục Tiêu đề khác."
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "Chỉ khả dụng khi Thanh công cụ được đặt bên trong Tiêu đề."
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "Vị trí thanh công cụ"
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "Trên cùng bên trái"
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "Trên cùng bên phải"
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "Dưới cùng bên trái"
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "Góc phải ở phía dưới"
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "Định vị Thanh công cụ ở một trong bốn góc của cửa sổ."
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "Chỉ khả dụng khi Thanh công cụ được đặt ở một góc."
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "Hiển thị điều khiển Accent"
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "Hiển thị Thêm điều khiển"
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "Hiển thị kiểm soát Chỉnh sửa"
+  },
+  "menuContentDataRestoreFile": {
+    "message": "Nhập từ tệp"
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "Nhập từ khay nhớ tạm"
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "Khôi phục bản sao lưu {appName} đã xuất trước đó."
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "Hoặc thả tệp sao lưu {appName}"
+  },
+  "menuContentDataBackupFile": {
+    "message": "Xuất dữ liệu"
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "Sao chép vào clipboard"
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "Tải xuống bản sao lưu Dấu trang và Cài đặt {appName}"
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "Tệp này sau đó có thể được nhập vào tài khoản này hoặc tài khoản khác."
+  },
+  "menuContentDataClearAll": {
+    "message": "Xóa tất cả dữ liệu"
+  },
+  "menuContentDataClearPartial": {
+    "message": "Xóa tất cả ngoại trừ dấu trang"
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "Bạn sẽ mất Dấu trang khi xóa tất cả dữ liệu."
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "Sao lưu dữ liệu của bạn"
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "Xóa tất cả dữ liệu để đặt lại {appName} về trạng thái mặc định."
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "Ngoài ra, có thể xóa tất cả cài đặt nhưng vẫn giữ Dấu trang và Nhóm hiện tại."
+  },
+  "menuContentLanguageSelect": {
+    "message": "Ngôn ngữ"
+  },
+  "menuContentLanguageSystem": {
+    "message": "Sử dụng ngôn ngữ hệ thống"
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "Tìm thấy một bản dịch không đúng?"
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "Giúp dịch {appName}"
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "Áp dụng cài đặt dấu trang cho tất cả"
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "Hỗ trợ trình duyệt"
+  },
+  "menuContentSupportPageCookies": {
+    "message": "Cookie và bộ nhớ cache"
+  },
+  "menuContentSupportPageData": {
+    "message": "Sao lưu và khôi phục dữ liệu"
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "Hình nền cục bộ"
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "URL được bảo vệ"
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "Khôi phục cài đặt và dấu trang"
+  },
+  "menuContentSupportPageResetting": {
+    "message": "Đặt lại khi mở trình duyệt"
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "Tôn trọng quyền riêng tư của bạn"
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "Đặt hình ảnh hoặc video nền"
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "Đặt {appName} làm trang chủ Firefox của bạn"
+  },
+  "menuContentSupportPara": {
+    "message": "Để được hỗ trợ thêm hoặc phản hồi:"
+  },
+  "menuContentSupportLink1": {
+    "message": "Gửi vấn đề."
+  },
+  "menuContentSupportLink2": {
+    "message": "Kiểm tra Wiki."
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} miễn phí, chúng tôi hoan nghênh sự đánh giá cao dưới hình thức cà phê!"
+  },
+  "menuContentCoffeeButton": {
+    "message": "Mua cho tôi một ly cà phê"
+  },
+  "menuContentAppPara1": {
+    "message": "Chia sẻ thiết lập của bạn với cộng đồng."
+  },
+  "menuContentAppLink1": {
+    "message": "Tìm thấy trên Reddit \/ r \/ {appName} ."
+  },
+  "menuContentAppPara2": {
+    "message": "Dự án này là mã nguồn mở."
+  },
+  "menuContentAppLink2": {
+    "message": "Tìm thấy trên GitHub."
+  },
+  "menuContentAppLink3": {
+    "message": "Giấy phép Công cộng GNU v3.0."
+  },
+  "bookmarkTileControlLeft": {
+    "message": "Di chuyển dấu trang này sang trái"
+  },
+  "bookmarkTileControlSort": {
+    "message": "Kéo dấu trang để sắp xếp lại"
+  },
+  "bookmarkTileControlRight": {
+    "message": "Di chuyển dấu trang này sang phải"
+  },
+  "bookmarkTileControlEdit": {
+    "message": "Chỉnh sửa dấu trang này"
+  },
+  "bookmarkTileControlRemove": {
+    "message": "Xóa dấu trang này"
+  },
+  "bookmarkAddHeading": {
+    "message": "Thêm Dấu trang mới"
+  },
+  "bookmarkAddSuccessText": {
+    "message": "cộng"
+  },
+  "bookmarkAddCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "Tẩy"
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "Xóa dấu trang không tên"
+  },
+  "bookmarkRemoveContent": {
+    "message": "Bạn có chắc chắn muốn xóa Dấu trang này không? Điều này không thể được hoàn tác."
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "Tẩy"
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "bookmarkEditHeadingName": {
+    "message": "Biên tập"
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "Chỉnh sửa dấu trang không tên"
+  },
+  "bookmarkEditSuccessText": {
+    "message": "Cứu"
+  },
+  "bookmarkEditCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "bookmarkFormTabVisual": {
+    "message": "Hình ảnh & Tên"
+  },
+  "bookmarkFormTabAddress": {
+    "message": "Địa chỉ nhà"
+  },
+  "bookmarkFormTabPosition": {
+    "message": "Chức vụ"
+  },
+  "bookmarkFormTabLayout": {
+    "message": "Bố trí"
+  },
+  "bookmarkFormTabTheme": {
+    "message": "Chủ đề"
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "Hình ảnh & Tên"
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "Hiển thị các Chữ cái, Biểu tượng, Hình ảnh và Tên trên ô Dấu trang này."
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "Địa chỉ nhà"
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "Đảm bảo sử dụng URL đầy đủ và bao gồm \"https: \/\/ ...\""
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "Chức vụ"
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "Nhóm đặt Dấu trang này vào."
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "Bố trí"
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "Thay đổi vị trí, tỷ lệ và hướng của Phần tử trực quan và Tên."
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "Chủ đề"
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "Ghi đè màu Chủ đề và Dấu trọng tâm."
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/"
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "Yếu tố hình ảnh và căn chỉnh tên"
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "Trên cùng bên trái"
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "Trung tâm hàng đầu"
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "Trên cùng bên phải"
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "Trung tâm bên trái"
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "Trung tâm Trung tâm"
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "Căn giữa bên phải"
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "Dưới cùng bên trái"
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "Trung tâm dưới cùng"
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "Góc phải ở phía dưới"
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "Thẳng đứng"
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "Xếp chồng Phần tử trực quan và Đặt tên một phần tử này lên phần tử kia."
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "Nằm ngang"
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "Sắp xếp Thành phần Hình ảnh và Tên cạnh nhau."
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "Yếu tố hình ảnh rồi đặt tên"
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "Đặt Phần tử Hình ảnh trước Tên."
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "Đặt tên rồi đến phần tử hình ảnh"
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "Đặt Tên trước Phần tử Trực quan."
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "Quay"
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "Điều chỉnh vị trí Phần tử trực quan"
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "Nằm ngang"
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "Thẳng đứng"
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "Mương nước"
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "Hiển thị phần tử hình ảnh"
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "Hiển thị các Chữ cái, Biểu tượng hoặc Hình ảnh trên hình lục giác Đánh dấu này."
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "Lá thư"
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "Biểu tượng"
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "Hình ảnh"
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "Kích thước trực quan"
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "Đánh dấu thư"
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "E"
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "Biểu tượng dấu trang"
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "Thương hiệu hoặc biểu tượng FontAwesome"
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "Xóa biểu tượng"
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "Đánh dấu hình ảnh"
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "Bóng trực quan"
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "Bóng trực quan chỉ áp dụng cho một Chữ cái hoặc Biểu tượng."
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "Hiện tên"
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "Tên dấu trang"
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "Thí dụ"
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "Kích thước tên"
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "Dấu chủ đề"
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "Sử dụng Trọng âm do Chủ đề xác định."
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "Trọng âm tùy chỉnh"
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "Ghi đè Dấu chủ đề."
+  },
+  "bookmarkFormAccentColor": {
+    "message": "Giọng"
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "Màu chủ đề"
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "Sử dụng Màu do Chủ đề xác định."
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "Màu tùy chỉnh"
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "Ghi đè màu Chủ đề."
+  },
+  "bookmarkFormColorColor": {
+    "message": "Màu sắc"
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "Độ mờ"
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "Hiển thị nền"
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "Hiển thị Nền hình ảnh hoặc video trên ô Dấu trang này."
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "Hình ảnh"
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "Băng hình"
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "Độ mờ"
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "URL hình nền"
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "Hình nền chỉ hỗ trợ URL trực tiếp đến tệp hình ảnh."
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "URL video nền"
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https:\/\/www.example.com\/video.mp4"
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "Video nền chỉ hỗ trợ URL trực tiếp đến tệp video. Hỗ trợ định dạng MP4 và WebM."
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "Không thể sử dụng URL trang YouTube."
+  },
+  "bookmarkFormBorder": {
+    "message": "Ranh giới"
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "Gạch rộng"
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "Ô đánh dấu để kéo dài qua hai cột."
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "Gạch cao"
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "Ô đánh dấu để kéo dài qua hai hàng."
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "Nhóm hiện có"
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "Nhóm mới"
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "Nhóm ví dụ"
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "Tên nhóm ngẫu nhiên"
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "Tập đoàn"
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "Chức vụ"
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "Áp dụng \"Hiển thị phần tử trực quan\" và \"Hiển thị tên\" cho các Dấu trang khác"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "Văn bản Chữ cái, Biểu tượng, Hình ảnh và Tên sẽ không được chia sẻ."
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "Hữu ích để ẩn các Phần tử Trực quan hoặc Tên trên tất cả các Dấu trang."
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "Áp dụng bố cục cho các Dấu trang khác"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "Khi đã lưu, hãy áp dụng Bố cục trên cho tất cả các Dấu trang khác."
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "Chỉ kích thước Hình ảnh và Tên, Căn chỉnh, Thứ tự, Vị trí và Máng xối sẽ được áp dụng cho tất cả."
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "Áp dụng Chủ đề cho các Dấu trang khác"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "Khi đã lưu, hãy áp dụng Chủ đề trên cho tất cả các Dấu trang khác."
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "Chỉ có Màu sắc, Điểm nhấn, Độ mờ, Đường viền và Bóng trực quan sẽ được áp dụng cho tất cả."
+  },
+  "bookmarkPreviewFull": {
+    "message": "Xem trước"
+  },
+  "bookmarkPreviewHalf": {
+    "message": "Xem trước (tỷ lệ 50%)"
+  },
+  "groupAreaControlUp": {
+    "message": "Di chuyển nhóm này lên"
+  },
+  "groupAreaControlSort": {
+    "message": "Kéo nhóm để sắp xếp lại"
+  },
+  "groupAreaControlDown": {
+    "message": "Di chuyển nhóm này xuống"
+  },
+  "groupAreaControlEdit": {
+    "message": "Chỉnh sửa nhóm này"
+  },
+  "groupAreaControlRemove": {
+    "message": "Xóa nhóm này"
+  },
+  "groupAreaControlOpenAll": {
+    "message": "Mở tất cả các dấu trang trong nhóm này"
+  },
+  "groupAreaControlCollapse": {
+    "message": "Thu gọn nhóm này"
+  },
+  "groupAddHeading": {
+    "message": "Thêm một nhóm mới"
+  },
+  "groupAddSuccessText": {
+    "message": "cộng"
+  },
+  "groupAddCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "groupRemoveHeadingName": {
+    "message": "Tẩy"
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "Xóa nhóm không có tên"
+  },
+  "groupRemoveContent": {
+    "message": "Bạn có chắc chắn muốn xóa Nhóm này và tất cả các Dấu trang bên trong không? Điều này không thể được hoàn tác."
+  },
+  "groupRemoveSuccessText": {
+    "message": "Tẩy"
+  },
+  "groupRemoveCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "groupEditHeadingName": {
+    "message": "Biên tập"
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "Chỉnh sửa nhóm không có tên"
+  },
+  "groupEditSuccessText": {
+    "message": "Cứu"
+  },
+  "groupEditCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "groupFormSectionNameHeading": {
+    "message": "Tên"
+  },
+  "groupFormSectionNameDescription": {
+    "message": "Hiển thị Tên phía trên Nhóm này."
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "Thanh công cụ"
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "Hiển thị các điều khiển để mở tất cả hoặc hiển thị \/ ẩn các Dấu trang trong Nhóm này."
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "Đặt hàng"
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "Vị thế của Tập đoàn này."
+  },
+  "groupFormNameShow": {
+    "message": "Hiển thị tên nhóm"
+  },
+  "groupFormNameTextLabel": {
+    "message": "Tên nhóm"
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "Nhóm ví dụ"
+  },
+  "groupFormNameRandom": {
+    "message": "Tên nhóm ngẫu nhiên"
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "Hiển thị Thu gọn"
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "Nút Thu gọn sẽ hiển thị hoặc ẩn Dấu trang trong Nhóm này."
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "Hiển thị Mở tất cả"
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "Nút mở tất cả sẽ xuất hiện nếu có ít nhất một Dấu trang trong Nhóm này."
+  },
+  "groupFormDestination": {
+    "message": "Chức vụ"
+  },
+  "themeCustomTileControlEdit": {
+    "message": "Chỉnh sửa chủ đề tùy chỉnh đã lưu này"
+  },
+  "themeCustomTileControlRemove": {
+    "message": "Xóa chủ đề tùy chỉnh đã lưu này"
+  },
+  "themeCustomFormNameLabel": {
+    "message": "Tên"
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "Chủ đề mẫu"
+  },
+  "themeCustomFormRandom": {
+    "message": "Tên chủ đề ngẫu nhiên"
+  },
+  "themeCustomAddHeading": {
+    "message": "Lưu chủ đề hiện tại"
+  },
+  "themeCustomAddSuccessText": {
+    "message": "Cứu"
+  },
+  "themeCustomAddCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "Tẩy"
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "Xóa chủ đề tùy chỉnh không có tên"
+  },
+  "themeCustomRemoveContent": {
+    "message": "Bạn có chắc chắn muốn xóa chủ đề tùy chỉnh đã lưu này không? Điều này không thể được hoàn tác."
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "Cứu"
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "themeCustomEditHeadingName": {
+    "message": "Biên tập"
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "Chỉnh sửa chủ đề tùy chỉnh không có tên"
+  },
+  "themeCustomEditSuccessText": {
+    "message": "Tẩy"
+  },
+  "themeCustomEditCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "toolbarAccent": {
+    "message": "Màu nhấn"
+  },
+  "toolbarAddLabel": {
+    "message": "cộng"
+  },
+  "toolbarAddGroup": {
+    "message": "Nhóm mới"
+  },
+  "toolbarAddBookmark": {
+    "message": "Dấu trang mới"
+  },
+  "toolbarEdit": {
+    "message": "Chỉnh sửa nhóm và dấu trang"
+  },
+  "toolbarSetting": {
+    "message": "Mở menu cài đặt"
+  },
+  "dataFormDescription": {
+    "message": "Bạn có thể khôi phục tất cả hoặc các phần của tệp sao lưu. Dữ liệu sau sẽ được khôi phục:"
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "Dấu trang"
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "Điều này bao gồm tất cả các Nhóm và Dấu trang"
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "Dấu trang sẽ giữ lại mọi Màu sắc, Dấu trọng âm và Đường viền tùy chỉnh khi được nhập."
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "Thay thế các dấu trang hiện có"
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "Thêm vào các dấu trang hiện có"
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "Chủ đề"
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "Điều này bao gồm Màu sắc, Trọng âm, Phông chữ, Nền và mọi Chủ đề tùy chỉnh đã lưu."
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "Cài đặt"
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "Điều này bao gồm kích thước và vị trí bố cục, kích thước vùng tiêu đề, kích thước vùng đánh dấu và các cài đặt người dùng khác."
+  },
+  "dataRestoreHeading": {
+    "message": "Khôi phục từ bản sao lưu {appName}"
+  },
+  "dataRestoreSuccessText": {
+    "message": "Nhập khẩu"
+  },
+  "dataRestoreCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "dataClearAllHeading": {
+    "message": "Xóa tất cả dữ liệu {appName}"
+  },
+  "dataClearAllContentPara1": {
+    "message": "Bạn có chắc chắn muốn xóa tất cả Dấu trang và Cài đặt của {appName} {appName} sẽ được khôi phục về trạng thái mặc định."
+  },
+  "dataClearAllContentPara2": {
+    "message": "Điều này không thể được hoàn tác."
+  },
+  "dataClearAllSuccessText": {
+    "message": "Xóa tất cả dữ liệu"
+  },
+  "dataClearAllCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "dataClearPartialHeading": {
+    "message": "Xóa {appName} ngoại trừ dấu trang?"
+  },
+  "dataClearPartialContentPara1": {
+    "message": "Bạn có chắc chắn muốn xóa tất cả Cài đặt {appName} {appName} sẽ được khôi phục về trạng thái mặc định nhưng Dấu trang và Nhóm của bạn sẽ vẫn còn."
+  },
+  "dataClearPartialContentPara2": {
+    "message": "Điều này không thể được hoàn tác."
+  },
+  "dataClearPartialSuccessText": {
+    "message": "Xóa tất cả ngoại trừ dấu trang"
+  },
+  "dataClearPartialCancelText": {
+    "message": "Hủy bỏ"
+  },
+  "dataExportBackup": {
+    "message": "sao lưu"
+  },
+  "dataFeedbackEmpty": {
+    "message": "Không có gì được chọn để nhập."
+  },
+  "dataFeedbackSuccess": {
+    "message": "Thành công! Khôi phục {appName} Dấu trang và Cài đặt."
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "Không phải là tệp JSON. Đảm bảo rằng tệp đã chọn đến từ {appName} ."
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "Không phải loại tệp JSON phù hợp. Đảm bảo rằng tệp đã chọn đến từ {appName} ."
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "Không phải loại dữ liệu phù hợp. Đảm bảo khay nhớ tạm giữ dữ liệu từ {appName} hoặc tệp JSON sao lưu của {appName}"
+  },
+  "controlGeneralReset": {
+    "message": "Đặt lại về mặc định"
+  },
+  "controlColorTextPlaceholder": {
+    "message": "Mã hex"
+  },
+  "controlColorRandom": {
+    "message": "Màu sắc ngẫu nhiên"
+  },
+  "controlColorMixerMoreControls": {
+    "message": "Thêm điều khiển"
+  },
+  "controlColorMixerSliderH": {
+    "message": "Huế"
+  },
+  "controlColorMixerSliderS": {
+    "message": "Bão hòa"
+  },
+  "controlColorMixerSliderL": {
+    "message": "Độ nhẹ"
+  },
+  "controlColorMixerSliderR": {
+    "message": "màu đỏ"
+  },
+  "controlColorMixerSliderG": {
+    "message": "Màu xanh lá"
+  },
+  "controlColorMixerSliderB": {
+    "message": "Màu xanh lam"
+  }
+}

@@ -6,2064 +6,2064 @@
     "message": "nightTab"
   },
   "appDescription": {
-    "message": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab."
+    "message": "Una nuova scheda neutra accentata con un colore scelto. Personalizza il layout, lo stile, lo sfondo e i segnalibri in nightTab."
   },
   "menuNavThemeLabel": {
-    "message": "Theme"
+    "message": "Tema"
   },
   "menuNavThemeSubNavPreset": {
-    "message": "Preset"
+    "message": "Preimpostato"
   },
   "menuNavThemeSubNavSaved": {
-    "message": "Saved"
+    "message": "Salvato"
   },
   "menuNavThemeSubNavStyle": {
-    "message": "Style"
+    "message": "Stile"
   },
   "menuNavThemeSubNavColor": {
-    "message": "Colour"
+    "message": "Colore"
   },
   "menuNavThemeSubNavAccent": {
-    "message": "Accent"
+    "message": "Accento"
   },
   "menuNavThemeSubNavFont": {
     "message": "Font"
   },
   "menuNavThemeSubNavRadius": {
-    "message": "Radius"
+    "message": "Raggio"
   },
   "menuNavThemeSubNavShadow": {
-    "message": "Shadow"
+    "message": "Ombra"
   },
   "menuNavThemeSubNavShade": {
-    "message": "Shade"
+    "message": "Ombra"
   },
   "menuNavThemeSubNavOpacity": {
-    "message": "Opacity"
+    "message": "Opacità"
   },
   "menuNavThemeSubNavBackground": {
-    "message": "Background"
+    "message": "Sfondo"
   },
   "menuNavThemeSubNavLayout": {
-    "message": "Layout"
+    "message": "Disposizione"
   },
   "menuNavThemeSubNavHeader": {
-    "message": "Header"
+    "message": "Intestazione"
   },
   "menuNavThemeSubNavBookmark": {
-    "message": "Bookmark"
+    "message": "Segnalibro"
   },
   "menuNavLayoutLabel": {
-    "message": "Layout"
+    "message": "Disposizione"
   },
   "menuNavLayoutSubNavScaling": {
-    "message": "Scaling"
+    "message": "ridimensionamento"
   },
   "menuNavLayoutSubNavArea": {
-    "message": "Area"
+    "message": "La zona"
   },
   "menuNavLayoutSubNavPadding": {
-    "message": "Padding"
+    "message": "Imbottitura"
   },
   "menuNavLayoutSubNavGutter": {
-    "message": "Gutter"
+    "message": "grondaia"
   },
   "menuNavLayoutSubNavAlignment": {
-    "message": "Alignment"
+    "message": "Allineamento"
   },
   "menuNavLayoutSubNavPage": {
-    "message": "Page"
+    "message": "Pagina"
   },
   "menuNavHeaderLabel": {
-    "message": "Header"
+    "message": "Intestazione"
   },
   "menuNavHeaderSubNavAlignment": {
-    "message": "Alignment"
+    "message": "Allineamento"
   },
   "menuNavHeaderSubNavGreeting": {
-    "message": "Greeting"
+    "message": "Saluto"
   },
   "menuNavHeaderSubNavTransitional": {
-    "message": "Transitional words"
+    "message": "Parole di transizione"
   },
   "menuNavHeaderSubNavClock": {
-    "message": "Clock"
+    "message": "Orologio"
   },
   "menuNavHeaderSubNavDate": {
-    "message": "Date"
-  },
-  "menuNavHeaderSubNavSearch": {
-    "message": "Search"
-  },
-  "menuNavBookmarkLabel": {
-    "message": "Bookmark"
-  },
-  "menuNavBookmarkSubNavGeneral": {
-    "message": "General"
-  },
-  "menuNavBookmarkSubNavStyle": {
-    "message": "Style"
-  },
-  "menuNavBookmarkSubNavOrientation": {
-    "message": "Orientation"
-  },
-  "menuNavBookmarkSubNavSort": {
-    "message": "Sort"
-  },
-  "menuNavGroupLabel": {
-    "message": "Group"
-  },
-  "menuNavGroupSubNavAlignment": {
-    "message": "Alignment"
-  },
-  "menuNavGroupSubNavName": {
-    "message": "Name"
-  },
-  "menuNavGroupSubNavCollapse": {
-    "message": "Collapse"
-  },
-  "menuNavGroupSubNavToolbar": {
-    "message": "Toolbar"
-  },
-  "menuNavToolbarLabel": {
-    "message": "Toolbar"
-  },
-  "menuNavToolbarSubNavSize": {
-    "message": "Size"
-  },
-  "menuNavToolbarSubNavLocation": {
-    "message": "Location"
-  },
-  "menuNavToolbarSubNavPosition": {
-    "message": "Position"
-  },
-  "menuNavToolbarSubNavControls": {
-    "message": "Controls"
-  },
-  "menuNavDataLabel": {
     "message": "Data"
   },
+  "menuNavHeaderSubNavSearch": {
+    "message": "Ricerca"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "Segnalibro"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "Generale"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "Stile"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "Orientamento"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "Ordinare"
+  },
+  "menuNavGroupLabel": {
+    "message": "Gruppo"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "Allineamento"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "Nome"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "Crollo"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "Barra degli strumenti"
+  },
+  "menuNavToolbarLabel": {
+    "message": "Barra degli strumenti"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "Misurare"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "Posizione"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "Posizione"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "controlli"
+  },
+  "menuNavDataLabel": {
+    "message": "Dati"
+  },
   "menuNavDataSubNavRestore": {
-    "message": "Restore"
+    "message": "Ristabilire"
   },
   "menuNavDataSubNavBackup": {
     "message": "Backup"
   },
   "menuNavDataSubNavClear": {
-    "message": "Clear"
+    "message": "Chiaro"
   },
   "menuNavLanguageLabel": {
-    "message": "Language"
+    "message": "Lingua"
   },
   "menuNavSupportLabel": {
-    "message": "Support"
+    "message": "Supporto"
   },
   "menuNavCoffeeLabel": {
-    "message": "Coffee"
+    "message": "Caffè"
   },
   "menuNavAppLabel": {
     "message": "{appName}"
   },
   "menuContentThemePresetHelperPara1": {
-    "message": "Applying a Preset will replace the current Colour, Accent, Font, Style, Radius, Shadow, Shade and Background."
+    "message": "L'applicazione di un predefinito sostituirà il colore, l'accento, il carattere, lo stile, il raggio, l'ombra, l'ombra e lo sfondo correnti."
   },
   "menuContentThemeSavedHelperPara1": {
-    "message": "Saving a Theme will record the current Colour, Accent, Font, Style, Opacity, Radius, Shadow, Shade and Background."
+    "message": "Il salvataggio di un tema registrerà il colore, l'accento, il carattere, lo stile, l'opacità, il raggio, l'ombra, l'ombra e lo sfondo correnti."
   },
   "menuContentThemeSavedSave": {
-    "message": "Save current theme"
+    "message": "Salva il tema corrente"
   },
   "menuContentThemeSavedEdit": {
-    "message": "Edit saved themes"
+    "message": "Modifica temi salvati"
   },
   "menuContentThemeStyleDarkLabel": {
-    "message": "Dark mode"
+    "message": "Modalità scura"
   },
   "menuContentThemeStyleLightLabel": {
-    "message": "Light mode"
+    "message": "Modalità luce"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Use system language"
+    "message": "Use system languageo"
   },
   "menuContentThemeStyleAutomaticDescription": {
-    "message": "Follow the system Light or Dark mode."
+    "message": "Segui la modalità Chiaro o Scuro del sistema."
   },
   "menuContentThemeColorShadeHelperPara1": {
-    "message": "Backgrounds, Bookmarks and Modals use shades from the left."
+    "message": "Gli sfondi, i segnalibri e i modali utilizzano le sfumature da sinistra."
   },
   "menuContentThemeColorShadeHelperPara2": {
-    "message": "Text and form elements use shades from the right."
+    "message": "Gli elementi di testo e modulo utilizzano le sfumature da destra."
   },
   "menuContentThemeColorShadeHelperPara3": {
-    "message": "For a light look switch to the Light Style and then select a Primary colour. And vice versa for a dark look."
+    "message": "Per un look leggero, passa allo Stile luce e poi seleziona un Colore primario. E viceversa per un look dark."
   },
   "menuContentThemeColorRangePrimaryH": {
-    "message": "Primary colour"
+    "message": "Colore primario"
   },
   "menuContentThemeColorRangePrimaryS": {
-    "message": "Saturation"
+    "message": "Saturazione"
   },
   "menuContentThemeColorContrastLabel": {
-    "message": "Contrast range"
+    "message": "Gamma di contrasto"
   },
   "menuContentThemeColorContrastLeft": {
-    "message": "Contrast start"
+    "message": "Inizio contrasto"
   },
   "menuContentThemeColorContrastRight": {
-    "message": "Contrast end"
+    "message": "Fine contrasto"
   },
   "menuContentThemeColorContrastHelperPara1": {
-    "message": "Move the Contrast range controls close together for a muted look."
+    "message": "Avvicina i controlli dell'intervallo di contrasto per un aspetto tenue."
   },
   "menuContentThemeColorContrastHelperPara2": {
-    "message": "Move the Contrast range controls far apart from each other for a sharp vivid look."
+    "message": "Sposta i controlli della gamma di contrasto distanti l'uno dall'altro per un aspetto nitido e vivido."
   },
   "menuContentThemeAccentPresetColorGrey": {
-    "message": "Grey"
+    "message": "Grigio"
   },
   "menuContentThemeAccentPresetColorRed": {
-    "message": "Red"
+    "message": "rosso"
   },
   "menuContentThemeAccentPresetColorOrange": {
-    "message": "Orange"
+    "message": "arancione"
   },
   "menuContentThemeAccentPresetColorYellow": {
-    "message": "Yellow"
+    "message": "Giallo"
   },
   "menuContentThemeAccentPresetColorLime": {
     "message": "Lime"
   },
   "menuContentThemeAccentPresetColorGreen": {
-    "message": "Green"
+    "message": "Verde"
   },
   "menuContentThemeAccentPresetColorAqua": {
-    "message": "Aqua"
+    "message": "Acqua"
   },
   "menuContentThemeAccentPresetColorCyan": {
-    "message": "Cyan"
+    "message": "ciano"
   },
   "menuContentThemeAccentPresetColorTeal": {
-    "message": "Teal"
+    "message": "verde acqua"
   },
   "menuContentThemeAccentPresetColorBlue": {
-    "message": "Blue"
+    "message": "Blu"
   },
   "menuContentThemeAccentPresetColorPurple": {
-    "message": "Purple"
+    "message": "Viola"
   },
   "menuContentThemeAccentPresetColorMagenta": {
     "message": "Magenta"
   },
   "menuContentThemeAccentPresetColorFuchsia": {
-    "message": "Fuchsia"
+    "message": "Fucsia"
   },
   "menuContentThemeAccentPresetModifierLightLevel3": {
-    "message": "Super extra light"
+    "message": "Super extra leggera"
   },
   "menuContentThemeAccentPresetModifierLightLevel2": {
-    "message": "Extra light"
+    "message": "Extra leggero"
   },
   "menuContentThemeAccentPresetModifierLightLevel1": {
-    "message": "Light"
+    "message": "Luce"
   },
   "menuContentThemeAccentPresetModifierDarkLevel3": {
-    "message": "Super extra dark"
+    "message": "Super extra scuro"
   },
   "menuContentThemeAccentPresetModifierDarkLevel2": {
-    "message": "Extra dark"
+    "message": "Extra scuro"
   },
   "menuContentThemeAccentPresetModifierDarkLevel1": {
-    "message": "Dark"
+    "message": "Buio"
   },
   "menuContentThemeAccentColor": {
-    "message": "Accent colour"
+    "message": "Colore accento"
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "Random Accent colour on load/refresh"
+    "message": "Colore con accento casuale al caricamento\/aggiornamento"
   },
   "menuContentThemeAccentRandomStyleAny": {
-    "message": "Any"
+    "message": "Qualsiasi"
   },
   "menuContentThemeAccentRandomStyleLight": {
-    "message": "Light"
+    "message": "Luce"
   },
   "menuContentThemeAccentRandomStyleDark": {
-    "message": "Dark"
+    "message": "Buio"
   },
   "menuContentThemeAccentRandomStylePastel": {
-    "message": "Pastel"
+    "message": "Pastello"
   },
   "menuContentThemeAccentRandomStyleSaturated": {
-    "message": "Saturated"
+    "message": "Saturato"
   },
   "menuContentThemeAccentRandomRandomise": {
-    "message": "Randomise now"
+    "message": "Randomizza ora"
   },
   "menuContentThemeAccentCycleActive": {
-    "message": "Auto change Accent hue"
+    "message": "Cambia automaticamente la tonalità dell'accento"
   },
   "menuContentThemeAccentCycleSpeed": {
-    "message": "Change delay"
+    "message": "Modifica ritardo"
   },
   "menuContentThemeAccentCycleStep": {
-    "message": "Change steps"
+    "message": "Cambia passaggi"
   },
   "menuContentThemeAccentCycleAlert": {
-    "message": "Take care as a fast changing Accent hue may cause performance issues."
+    "message": "Prestare attenzione poiché una tonalità di accento che cambia rapidamente può causare problemi di prestazioni."
   },
   "menuContentThemeAccentCycleHelperPara1": {
-    "message": "Auto change Accent hue will not work when the Accent colour is a grey or black."
+    "message": "La modifica automatica della tonalità dell'accento non funziona quando il colore dell'accento è grigio o nero."
   },
   "menuContentThemeFontDisplayNameLabel": {
-    "message": "Display font"
+    "message": "Visualizza carattere"
   },
   "menuContentThemeFontDisplayNamePlaceholder": {
-    "message": "Google font name"
+    "message": "Nome del carattere di Google"
   },
   "menuContentThemeFontDisplayNameHelperPara1": {
-    "message": "Use a Google Font to customise the Clock, Date, Group names and Bookmark Letters."
+    "message": "Usa un carattere Google per personalizzare l'orologio, la data, i nomi dei gruppi e le lettere dei segnalibri."
   },
   "menuContentThemeFontDisplayNameHelperLink": {
-    "message": "Find a Google Font"
+    "message": "Trova un carattere di Google"
   },
   "menuContentThemeFontDisplayNameHelperPara2": {
-    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Fredoka One\" or \"Kanit\"."
+    "message": "Aggiungi un nome di carattere come appare su Google Fonts, inclusi lettere maiuscole e spazi, ad esempio: inserisci \"Fredoka One\" o \"Kanit\"."
   },
   "menuContentThemeFontDisplayNameHelperPara3": {
-    "message": "Clear the field to use the default font \"Fjalla One\"."
+    "message": "Deseleziona il campo per utilizzare il carattere predefinito \"Fjalla One\"."
   },
   "menuContentThemeFontDisplayWeightLabel": {
-    "message": "Font weight"
+    "message": "Peso del carattere"
   },
   "menuContentThemeFontDisplayWeightLight": {
-    "message": "Light"
+    "message": "Luce"
   },
   "menuContentThemeFontDisplayWeightRegular": {
-    "message": "Regular"
+    "message": "Regolare"
   },
   "menuContentThemeFontDisplayWeightBold": {
-    "message": "Bold"
+    "message": "Grassetto"
   },
   "menuContentThemeFontDisplayWeightHelperPara1": {
-    "message": "Not all fonts support all weights. Refer to the Google Font page to see which are available."
+    "message": "Non tutti i caratteri supportano tutti i pesi. Fare riferimento alla pagina Google Font per vedere quali sono disponibili."
   },
   "menuContentThemeFontDisplayStyleNormal": {
-    "message": "Normal"
+    "message": "Normale"
   },
   "menuContentThemeFontDisplayStyleItalic": {
-    "message": "Italic"
+    "message": "Corsivo"
   },
   "menuContentThemeFontUiNameLabel": {
-    "message": "User interface font"
+    "message": "Carattere dell'interfaccia utente"
   },
   "menuContentThemeFontUiNamePlaceholder": {
-    "message": "Google font name"
+    "message": "Nome del carattere di Google"
   },
   "menuContentThemeFontUiNameHelperPara1": {
-    "message": "Use a Google Font to customise the Bookmark name, URL and form elements."
+    "message": "Utilizza un carattere Google per personalizzare il nome del segnalibro, l'URL e gli elementi del modulo."
   },
   "menuContentThemeFontUiNameHelperLink": {
-    "message": "Find a Google Font"
+    "message": "Trova un carattere di Google"
   },
   "menuContentThemeFontUiNameHelperPara2": {
-    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Roboto\", \"Source Sans Pro\" or \"Noto Sans\"."
+    "message": "Aggiungi un nome di carattere come appare su Google Fonts, inclusi lettere maiuscole e spazi, ad esempio: inserisci \"Roboto\", \"Source Sans Pro\" o \"Noto Sans\"."
   },
   "menuContentThemeFontUiNameHelperPara3": {
-    "message": "Clear the field to use the default font \"Open Sans\"."
+    "message": "Deseleziona il campo per utilizzare il carattere predefinito \"Open Sans\"."
   },
   "menuContentThemeFontUiWeightLabel": {
-    "message": "Font weight"
+    "message": "Peso del carattere"
   },
   "menuContentThemeFontUiWeightLight": {
-    "message": "Light"
+    "message": "Luce"
   },
   "menuContentThemeFontUiWeightRegular": {
-    "message": "Regular"
+    "message": "Regolare"
   },
   "menuContentThemeFontUiWeightBold": {
-    "message": "Bold"
+    "message": "Grassetto"
   },
   "menuContentThemeFontUiWeightHelperPara1": {
-    "message": "Not all fonts support all weights. Refer to the Google Font page to see which are available."
+    "message": "Non tutti i caratteri supportano tutti i pesi. Fare riferimento alla pagina Google Font per vedere quali sono disponibili."
   },
   "menuContentThemeFontUiStyleNormal": {
-    "message": "Normal"
+    "message": "Normale"
   },
   "menuContentThemeFontUiStyleItalic": {
-    "message": "Italic"
+    "message": "Corsivo"
   },
   "menuContentThemeRadius": {
-    "message": "Corner radius"
+    "message": "Raggio dell'angolo"
   },
   "menuContentThemeShadow": {
-    "message": "Shadow size"
+    "message": "Dimensione dell'ombra"
   },
   "menuContentThemeShadeOpacity": {
-    "message": "Shade opacity"
+    "message": "Opacità dell'ombra"
   },
   "menuContentThemeShadeBlurLabel": {
-    "message": "Shade blur"
+    "message": "Sfocatura ombra"
   },
   "menuContentThemeShadeBlurHelperPara1": {
-    "message": "Not supported by all browsers."
+    "message": "Non supportato da tutti i browser."
   },
   "menuContentThemeOpacityGeneralLabel": {
-    "message": "All opacity"
+    "message": "Tutta l'opacità"
   },
   "menuContentThemeOpacityGeneralHelperPara1": {
-    "message": "Change the opacity of Search bar, Bookmarks, Group controls and the Toolbar."
+    "message": "Modifica l'opacità della barra di ricerca, dei segnalibri, dei controlli di gruppo e della barra degli strumenti."
   },
   "menuContentThemeOpacityGeneralHelperPara2": {
-    "message": "Opacity can also be changed when editing individual Bookmarks."
+    "message": "L'opacità può essere modificata anche durante la modifica di singoli segnalibri."
   },
   "menuContentThemeOpacityToolbar": {
-    "message": "Toolbar"
+    "message": "Barra degli strumenti"
   },
   "menuContentThemeOpacityBookmark": {
-    "message": "Bookmark"
+    "message": "Segnalibro"
   },
   "menuContentThemeOpacitySearch": {
-    "message": "Search box"
+    "message": "Casella di ricerca"
   },
   "menuContentThemeOpacityGroupToolbar": {
-    "message": "Group toolbar"
+    "message": "Barra degli strumenti del gruppo"
   },
   "menuContentThemeBackgroundTypeThemeLabel": {
-    "message": "Background by Theme"
+    "message": "Sfondo per tema"
   },
   "menuContentThemeBackgroundTypeThemeDescription": {
-    "message": "Use the Background colour defined by the Theme."
+    "message": "Usa il colore di sfondo definito dal tema."
   },
   "menuContentThemeBackgroundTypeAccentLabel": {
-    "message": "Background by Accent"
+    "message": "Sfondo di accento"
   },
   "menuContentThemeBackgroundTypeAccentDescription": {
-    "message": "Use the Accent colour for the Background."
+    "message": "Usa il colore di accento per lo sfondo."
   },
   "menuContentThemeBackgroundTypeColor": {
-    "message": "Custom colour"
+    "message": "Colore personalizzato"
   },
   "menuContentThemeBackgroundTypeGradient": {
-    "message": "Gradient"
+    "message": "Pendenza"
   },
   "menuContentThemeBackgroundTypeImage": {
-    "message": "Image"
+    "message": "Immagine"
   },
   "menuContentThemeBackgroundTypeVideo": {
-    "message": "Video"
+    "message": "video"
   },
   "menuContentThemeBackgroundColor": {
-    "message": "Background colour"
+    "message": "Colore di sfondo"
   },
   "menuContentThemeBackgroundGradientAngle": {
-    "message": "Background gradient angle"
+    "message": "Angolo di sfumatura dello sfondo"
   },
   "menuContentThemeBackgroundGradientStart": {
-    "message": "Background gradient start"
+    "message": "Inizio sfumatura di sfondo"
   },
   "menuContentThemeBackgroundGradientEnd": {
-    "message": "Background gradient end"
+    "message": "Fine sfumatura di sfondo"
   },
   "menuContentThemeBackgroundImageAlertPara1": {
-    "message": "Local images can no longer be used. Images must be hosted somewhere online."
+    "message": "Le immagini locali non possono più essere utilizzate. Le immagini devono essere ospitate da qualche parte online."
   },
   "menuContentThemeBackgroundImageAlertPara2": {
-    "message": "Why has this changed?"
+    "message": "Perché è cambiato?"
   },
   "menuContentThemeBackgroundImageUrlLabel": {
     "message": "URL"
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
-    "message": "https://www.example.com/image.jpg"
+    "message": "https:\/\/www.example.com\/image.jpg"
   },
   "menuContentThemeBackgroundImageUrlHelperPara1": {
-    "message": "Add more than one URL separated by spaces or on new lines for a random background image on load."
+    "message": "Aggiungi più di un URL separato da spazi o su nuove righe per un'immagine di sfondo casuale al caricamento."
   },
   "menuContentThemeBackgroundImageUrlHelperPara2": {
-    "message": "Unsplash can be used for random images, eg:"
+    "message": "Unsplash può essere utilizzato per immagini casuali, ad esempio:"
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
-    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
+    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?night,day,sky"
   },
   "menuContentThemeBackgroundImageUrlHelperPara4": {
-    "message": "Change parameters after .../random/ for more options. Loading times may vary."
+    "message": "Modifica i parametri dopo ...\/random\/ per ulteriori opzioni. I tempi di caricamento possono variare."
   },
   "menuContentThemeBackgroundImageBlur": {
-    "message": "Blur"
+    "message": "Sfocatura"
   },
   "menuContentThemeBackgroundImageGrayscale": {
-    "message": "Grayscale"
+    "message": "Scala di grigi"
   },
   "menuContentThemeBackgroundImageScale": {
-    "message": "Scale"
+    "message": "Scala"
   },
   "menuContentThemeBackgroundImageAccent": {
-    "message": "Accent"
+    "message": "Accento"
   },
   "menuContentThemeBackgroundImageOpacity": {
-    "message": "Opacity"
+    "message": "Opacità"
   },
   "menuContentThemeBackgroundImageVignetteOpacity": {
-    "message": "Vignette"
+    "message": "vignetta"
   },
   "menuContentThemeBackgroundImageVignetteRangeLabel": {
-    "message": "Shade start and end"
+    "message": "Inizio e fine ombra"
   },
   "menuContentThemeBackgroundImageVignetteRangeLeft": {
-    "message": "Shade end"
+    "message": "Fine ombra"
   },
   "menuContentThemeBackgroundImageVignetteRangeRight": {
-    "message": "Shade start"
+    "message": "Inizio ombra"
   },
   "menuContentThemeBackgroundVideoAlertPara1": {
-    "message": "YouTube page URLs can not be used."
+    "message": "Gli URL delle pagine di YouTube non possono essere utilizzati."
   },
   "menuContentThemeBackgroundVideoAlertPara2": {
-    "message": "How to link to a video file."
+    "message": "Come collegare un file video."
   },
   "menuContentThemeBackgroundVideoUrlLabel": {
     "message": "URL"
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
-    "message": "https://www.example.com/video.mp4"
+    "message": "https:\/\/www.example.com\/video.mp4"
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
-    "message": "Background video only supports a direct URL to a video file. Supports MP4 and WebM format."
+    "message": "Il video in background supporta solo un URL diretto a un file video. Supporta il formato MP4 e WebM."
   },
   "menuContentThemeBackgroundVideoUrlHelperPara2": {
-    "message": "Add more than one URL separated by spaces or on new lines for a random background video on load."
+    "message": "Aggiungi più di un URL separato da spazi o su nuove righe per un video di sfondo casuale al caricamento."
   },
   "menuContentThemeBackgroundVideoBlur": {
-    "message": "Blur"
+    "message": "Sfocatura"
   },
   "menuContentThemeBackgroundVideoGrayscale": {
-    "message": "Grayscale"
+    "message": "Scala di grigi"
   },
   "menuContentThemeBackgroundVideoScale": {
-    "message": "Scale"
+    "message": "Scala"
   },
   "menuContentThemeBackgroundVideoAccent": {
-    "message": "Accent"
+    "message": "Accento"
   },
   "menuContentThemeBackgroundVideoOpacity": {
-    "message": "Opacity"
+    "message": "Opacità"
   },
   "menuContentThemeBackgroundVideoVignetteOpacity": {
-    "message": "Vignette"
+    "message": "vignetta"
   },
   "menuContentThemeBackgroundVideoVignetteRangeLabel": {
-    "message": "Shade start and end"
+    "message": "Inizio e fine ombra"
   },
   "menuContentThemeBackgroundVideoVignetteRangeLeft": {
-    "message": "Shade end"
+    "message": "Fine ombra"
   },
   "menuContentThemeBackgroundVideoVignetteRangeRight": {
-    "message": "Shade start"
+    "message": "Inizio ombra"
   },
   "menuContentThemeLayoutColorLabel": {
-    "message": "Layout background colour"
+    "message": "Colore di sfondo del layout"
   },
   "menuContentThemeLayoutColorByTransparentLabel": {
-    "message": "Transparent"
+    "message": "Trasparente"
   },
   "menuContentThemeLayoutColorByTransparentDescription": {
-    "message": "No background colour behind the Layout."
+    "message": "Nessun colore di sfondo dietro il layout."
   },
   "menuContentThemeLayoutColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Colore personalizzato"
   },
   "menuContentThemeLayoutColorByCustomDescription": {
-    "message": "Use a custom colour behind the Layout."
+    "message": "Usa un colore personalizzato dietro il layout."
   },
   "menuContentThemeLayoutColorColor": {
-    "message": "Layout background colour"
+    "message": "Colore di sfondo del layout"
   },
   "menuContentThemeLayoutColorOpacity": {
-    "message": "Background opacity"
+    "message": "Opacità dello sfondo"
   },
   "menuContentThemeLayoutColorBlurLabel": {
-    "message": "Background blur"
+    "message": "Sfocatura dello sfondo"
   },
   "menuContentThemeLayoutColorBlurHelperPara1": {
-    "message": "Not supported by all browsers."
+    "message": "Non supportato da tutti i browser."
   },
   "menuContentThemeLayoutDivider": {
-    "message": "Divider between Header and Bookmark area"
+    "message": "Divisore tra intestazione e area dei segnalibri"
   },
   "menuContentThemeHeaderColorLabel": {
-    "message": "Header background colour"
+    "message": "Colore di sfondo dell'intestazione"
   },
   "menuContentThemeHeaderColorByTransparentLabel": {
-    "message": "Transparent"
+    "message": "Trasparente"
   },
   "menuContentThemeHeaderColorByTransparentDescription": {
-    "message": "No background colour behind the Header area."
+    "message": "Nessun colore di sfondo dietro l'area dell'intestazione."
   },
   "menuContentThemeHeaderColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Colore personalizzato"
   },
   "menuContentThemeHeaderColorByCustomDescription": {
-    "message": "Use a custom colour behind the Header area."
+    "message": "Usa un colore personalizzato dietro l'area dell'intestazione."
   },
   "menuContentThemeHeaderColorColor": {
-    "message": "Header background colour"
+    "message": "Colore di sfondo dell'intestazione"
   },
   "menuContentThemeHeaderColorOpacity": {
-    "message": "Background opacity"
+    "message": "Opacità dello sfondo"
   },
   "menuContentThemeBookmarkColorLabel": {
-    "message": "Bookmark background colour"
+    "message": "Colore di sfondo del segnalibro"
   },
   "menuContentThemeBookmarkColorByTransparentLabel": {
-    "message": "Transparent"
+    "message": "Trasparente"
   },
   "menuContentThemeBookmarkColorByTransparentDescription": {
-    "message": "No background colour behind the Bookmark area."
+    "message": "Nessun colore di sfondo dietro l'area dei segnalibri."
   },
   "menuContentThemeBookmarkColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Colore personalizzato"
   },
   "menuContentThemeBookmarkColorByCustomDescription": {
-    "message": "Use a custom colour behind the Bookmark area."
+    "message": "Usa un colore personalizzato dietro l'area dei segnalibri."
   },
   "menuContentThemeBookmarkColorColor": {
-    "message": "Bookmark background colour"
+    "message": "Colore di sfondo del segnalibro"
   },
   "menuContentThemeBookmarkColorOpacity": {
-    "message": "Background opacity"
+    "message": "Opacità dello sfondo"
   },
   "menuContentThemeBookmarkItemBorderLabel": {
-    "message": "Bookmark border"
+    "message": "Bordo segnalibro"
   },
   "menuContentThemeBookmarkItemBorderHelperPara1": {
-    "message": "Bookmark border can also be changed when editing individual Bookmarks."
+    "message": "Il bordo del segnalibro può essere modificato anche durante la modifica di singoli segnalibri."
   },
   "menuContentThemeBookmarkItemBorderHelperPara2": {
-    "message": "The colour of the Border is defined by the Accent which can also be changed when editing individual Bookmarks."
+    "message": "Il colore del bordo è definito dall'accento che può essere modificato anche durante la modifica dei singoli segnalibri."
   },
   "menuContentThemeBookmarkItemRainbowAdd": {
-    "message": "Add unique accent to each Bookmark"
+    "message": "Aggiungi un accento unico a ciascun segnalibro"
   },
   "menuContentThemeBookmarkItemRainbowRemove": {
-    "message": "Remove all accent overrides"
+    "message": "Rimuovi tutte le sostituzioni di accento"
   },
   "menuContentThemeBookmarkItemRainbowHelperPara1": {
-    "message": "Bookmark custom Accent can also be changed when editing individual Bookmarks."
+    "message": "L'accento personalizzato dei segnalibri può essere modificato anche durante la modifica di singoli segnalibri."
   },
   "menuContentLayoutScalingSize": {
-    "message": "Global size"
+    "message": "Dimensione globale"
   },
   "menuContentLayoutAreaWidth": {
-    "message": "Layout area width"
+    "message": "Larghezza dell'area di layout"
   },
   "menuContentLayoutAreaHeaderWidth": {
-    "message": "Header area width"
+    "message": "Larghezza area intestazione"
   },
   "menuContentLayoutAreaHeaderJustifyLabel": {
-    "message": "Header area alignment"
+    "message": "Allineamento dell'area dell'intestazione"
   },
   "menuContentLayoutAreaHeaderJustifyLeft": {
-    "message": "Left"
+    "message": "Sono partiti"
   },
   "menuContentLayoutAreaHeaderJustifyCenter": {
-    "message": "Centre"
+    "message": "Centro"
   },
   "menuContentLayoutAreaHeaderJustifyRight": {
-    "message": "Right"
+    "message": "Destra"
   },
   "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
-    "message": "Effects may not be visible if the Header Area is full width."
+    "message": "Gli effetti potrebbero non essere visibili se l'area dell'intestazione è a larghezza intera."
   },
   "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
-    "message": "Only available when Layout Direction is Vertical and Header items are shown."
+    "message": "Disponibile solo quando Direzione layout è Verticale e vengono visualizzati gli elementi dell'intestazione."
   },
   "menuContentLayoutAreaBookmarkWidth": {
-    "message": "Bookmark area width"
+    "message": "Larghezza area segnalibro"
   },
   "menuContentLayoutAreaBookmarkJustifyLabel": {
-    "message": "Bookmark area alignment"
+    "message": "Allineamento dell'area dei segnalibri"
   },
   "menuContentLayoutAreaBookmarkJustifyLeft": {
-    "message": "Left"
+    "message": "Sono partiti"
   },
   "menuContentLayoutAreaBookmarkJustifyCenter": {
-    "message": "Centre"
+    "message": "Centro"
   },
   "menuContentLayoutAreaBookmarkJustifyRight": {
-    "message": "Right"
+    "message": "Destra"
   },
   "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
-    "message": "Effects may not be visible if the Bookmark Area is full width."
+    "message": "Gli effetti potrebbero non essere visibili se l'area dei segnalibri è a larghezza intera."
   },
   "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
-    "message": "Only available when Layout Direction is Vertical and Header items are shown."
+    "message": "Disponibile solo quando Direzione layout è Verticale e vengono visualizzati gli elementi dell'intestazione."
   },
   "menuContentLayoutPadding": {
-    "message": "Space around Header and Bookmark Area"
+    "message": "Spazio intorno all'intestazione e all'area dei segnalibri"
   },
   "menuContentLayoutGutter": {
-    "message": "Space between Header and Bookmark items"
+    "message": "Spazio tra gli elementi di intestazione e segnalibro"
   },
   "menuContentLayoutAlignmentLabel": {
-    "message": "Area alignment"
+    "message": "Allineamento dell'area"
   },
   "menuContentLayoutAlignmentTopLeft": {
-    "message": "Top Left"
+    "message": "A sinistra in alto"
   },
   "menuContentLayoutAlignmentTopCenter": {
-    "message": "Top Centre"
+    "message": "In alto al centro"
   },
   "menuContentLayoutAlignmentTopRight": {
-    "message": "Top Right"
+    "message": "In alto a destra"
   },
   "menuContentLayoutAlignmentCenterLeft": {
-    "message": "Centre Left"
+    "message": "Centro Sinistra"
   },
   "menuContentLayoutAlignmentCenterCenter": {
-    "message": "Centre Centre"
+    "message": "Centro Centro"
   },
   "menuContentLayoutAlignmentCenterRight": {
-    "message": "Centre Right"
+    "message": "Centro Destra"
   },
   "menuContentLayoutAlignmentBottomLeft": {
-    "message": "Bottom Left"
+    "message": "In basso a sinistra"
   },
   "menuContentLayoutAlignmentBottomCenter": {
-    "message": "Bottom Centre"
+    "message": "In basso al centro"
   },
   "menuContentLayoutAlignmentBottomRight": {
-    "message": "Bottom Right"
+    "message": "In basso a destra"
   },
   "menuContentLayoutDirectionHorizontalLabel": {
-    "message": "Align horizontal"
+    "message": "Allinea orizzontalmente"
   },
   "menuContentLayoutDirectionHorizontalDescription": {
-    "message": "Stack the Header and Bookmarks in a row side by side."
+    "message": "Impila l'intestazione e i segnalibri in una riga fianco a fianco."
   },
   "menuContentLayoutDirectionVerticalLabel": {
-    "message": "Align vertical"
+    "message": "Allinea in verticale"
   },
   "menuContentLayoutDirectionVerticalDescription": {
-    "message": "Stack the Header and Bookmarks in a column one above the other."
+    "message": "Impila l'intestazione e i segnalibri in una colonna uno sopra l'altro."
   },
   "menuContentLayoutOrderHeaderBookmarkLabel": {
-    "message": "Header then Bookmarks"
+    "message": "Intestazione quindi segnalibri"
   },
   "menuContentLayoutOrderHeaderBookmarkDescription": {
-    "message": "Order the Header area to appear before the Bookmarks area."
+    "message": "Ordina che l'area dell'intestazione appaia prima dell'area dei segnalibri."
   },
   "menuContentLayoutOrderBookmarkHeaderLabel": {
-    "message": "Bookmarks then Header"
+    "message": "Segnalibri e poi intestazione"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Order the Bookmarks area to appear before the Header area."
+    "message": "Ordina che l'area dei segnalibri appaia prima dell'area dell'intestazione."
   },
   "menuContentLayoutPageTitleLabel": {
-    "message": "Title"
+    "message": "Titolo"
   },
   "menuContentLayoutPageTitlePlaceholder": {
-    "message": "New Tab"
+    "message": "Nuova scheda"
   },
   "menuContentLayoutPageFaviconLabel": {
-    "message": "Favicon URL"
+    "message": "URL favicon"
   },
   "menuContentLayoutPageFaviconPlaceholder": {
-    "message": "https://www.example.com/favicon.svg"
+    "message": "https:\/\/www.example.com\/favicon.svg"
   },
   "menuContentLayoutPageFaviconHelperPara1": {
-    "message": "Not supported by all browsers."
+    "message": "Non supportato da tutti i browser."
   },
   "menuContentLayoutPageScrollbarLabel": {
-    "message": "Scrollbar"
+    "message": "Barra di scorrimento"
   },
   "menuContentLayoutPageScrollbarAuto": {
     "message": "Auto"
   },
   "menuContentLayoutPageScrollbarThin": {
-    "message": "Thin"
+    "message": "Magro"
   },
   "menuContentLayoutPageScrollbarNone": {
-    "message": "Hidden"
+    "message": "Nascosto"
   },
   "menuContentLayoutPageScrollbarHelperPara1": {
-    "message": "Not supported by all browsers."
+    "message": "Non supportato da tutti i browser."
   },
   "menuContentLayoutPageOverscrollActive": {
-    "message": "Scroll past end"
+    "message": "Scorri oltre la fine"
   },
   "menuContentLayoutPageOverscrollUnblurLabel": {
-    "message": "Unblur background image or video"
+    "message": "Annulla sfocatura dell'immagine o del video di sfondo"
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
-    "message": "Background image or video will unblur when scrolled to the bottom of the page."
+    "message": "L'immagine di sfondo o il video risulteranno sfocati quando vengono fatti scorrere fino alla fine della pagina."
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
-    "message": "Image or video blur can be found under Theme Background."
+    "message": "La sfocatura di immagini o video può essere trovata in Sfondo del tema."
   },
   "menuContentHeaderAlignmentJustifyLabel": {
-    "message": "Header item alignment"
+    "message": "Allineamento dell'elemento dell'intestazione"
   },
   "menuContentHeaderAlignmentJustifyLeft": {
-    "message": "Left"
+    "message": "Sono partiti"
   },
   "menuContentHeaderAlignmentJustifyCenter": {
-    "message": "Center"
+    "message": "Centro"
   },
   "menuContentHeaderAlignmentJustifyRight": {
-    "message": "Right"
+    "message": "Destra"
   },
   "menuContentHeaderAlignmentHelperPara1": {
-    "message": "Effects may not be visible if the Search box size is set to Auto and grows to fill available space."
+    "message": "Gli effetti potrebbero non essere visibili se la dimensione della casella di ricerca è impostata su Auto e cresce per riempire lo spazio disponibile."
   },
   "menuContentHeaderGreetingShow": {
-    "message": "Show Greeting"
+    "message": "Mostra saluto"
   },
   "menuContentHeaderGreetingSize": {
-    "message": "Size"
+    "message": "Misurare"
   },
   "menuContentHeaderGreetingNewLineLabel": {
-    "message": "New line"
+    "message": "Nuova linea"
   },
   "menuContentHeaderGreetingNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Forza su una nuova riga e separa dagli altri elementi dell'intestazione."
   },
   "menuContentHeaderGreetingTypeLabel": {
-    "message": "Wording"
+    "message": "Formulazione"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Good morning...\""
+    "message": "\"Buon giorno...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Hello...\""
+    "message": "\"Ciao...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Hi...\""
+    "message": "\"Ciao...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
-    "message": "None"
+    "message": "Nessuno"
   },
   "menuContentHeaderGreetingTypeNoneDescription": {
-    "message": "Useful for displaying just the name."
+    "message": "Utile per visualizzare solo il nome."
   },
   "menuContentHeaderGreetingTypeCustomLabel": {
-    "message": "Custom"
+    "message": "Costume"
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
-    "message": "Use your own greeting."
+    "message": "Usa il tuo saluto."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "Defaults to \"Good morning...\" if left blank."
+    "message": "Il valore predefinito è \"Buongiorno...\" se lasciato vuoto."
   },
   "menuContentHeaderGreetingCustomLabel": {
-    "message": "Custom greeting text"
+    "message": "Testo di saluto personalizzato"
   },
   "menuContentHeaderGreetingCustomPlaceholder": {
-    "message": "Howdy"
+    "message": "ciao"
   },
   "menuContentHeaderGreetingNameLabel": {
-    "message": "Name"
+    "message": "Nome"
   },
   "menuContentHeaderGreetingNamePlaceholder": {
-    "message": "Nickname, alias or superhero name"
+    "message": "Soprannome, alias o nome del supereroe"
   },
   "menuContentHeaderTransitionalShowLabel": {
-    "message": "Show Transitional words"
+    "message": "Mostra parole di transizione"
   },
   "menuContentHeaderTransitionalShowHelperPara1": {
-    "message": "Only available when Date or Time is shown."
+    "message": "Disponibile solo quando viene visualizzata la data o l'ora."
   },
   "menuContentHeaderTransitionalTypeLabel": {
-    "message": "Wording"
+    "message": "Formulazione"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"The time and date is\""
+    "message": "\"L'ora e la data sono\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"It's\""
+    "message": "\"Suo\""
   },
   "menuContentHeaderTransitionalSize": {
-    "message": "Size"
+    "message": "Misurare"
   },
   "menuContentHeaderTransitionalNewLineLabel": {
-    "message": "New line"
+    "message": "Nuova linea"
   },
   "menuContentHeaderTransitionalNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Forza su una nuova riga e separa dagli altri elementi dell'intestazione."
   },
   "menuContentHeaderClockHourShow": {
-    "message": "Show hours"
+    "message": "Mostra orari"
   },
   "menuContentHeaderClockHourDisplayNumber": {
-    "message": "As number"
+    "message": "come numero"
   },
   "menuContentHeaderClockHourDisplayWord": {
-    "message": "As word"
+    "message": "Una spada"
   },
   "menuContentHeaderClockMinuteShow": {
-    "message": "Show minutes"
+    "message": "Mostra minuti"
   },
   "menuContentHeaderClockMinuteDisplayNumber": {
-    "message": "As number"
+    "message": "come numero"
   },
   "menuContentHeaderClockMinuteDisplayWord": {
-    "message": "As word"
+    "message": "Una spada"
   },
   "menuContentHeaderClockSecondShow": {
-    "message": "Show seconds"
+    "message": "Mostra secondi"
   },
   "menuContentHeaderClockSecondDisplayNumber": {
-    "message": "As number"
+    "message": "come numero"
   },
   "menuContentHeaderClockSecondDisplayWord": {
-    "message": "As word"
+    "message": "Una spada"
   },
   "menuContentHeaderClockSeparatorShow": {
-    "message": "Show separator"
+    "message": "Mostra separatore"
   },
   "menuContentHeaderClockSeparatorLabel": {
-    "message": "Separator character"
+    "message": "Carattere separatore"
   },
   "menuContentHeaderClockSeparatorPlaceholder": {
     "message": ":"
   },
   "menuContentHeaderClockHour24": {
-    "message": "24 hours"
+    "message": "24 ore"
   },
   "menuContentHeaderClockMeridiem": {
-    "message": "AM / PM"
+    "message": "AM PM"
   },
   "menuContentHeaderClockSize": {
-    "message": "Size"
+    "message": "Misurare"
   },
   "menuContentHeaderClockNewLineLabel": {
-    "message": "New line"
+    "message": "Nuova linea"
   },
   "menuContentHeaderClockNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Forza su una nuova riga e separa dagli altri elementi dell'intestazione."
   },
   "menuContentHeaderDateDayShow": {
-    "message": "Show Day"
+    "message": "Mostra giorno"
   },
   "menuContentHeaderDateDayDisplayNumber": {
-    "message": "As number"
+    "message": "come numero"
   },
   "menuContentHeaderDateDayDisplayWord": {
-    "message": "As word"
+    "message": "Una spada"
   },
   "menuContentHeaderDateDayDisplayWeekStartLabel": {
-    "message": "Start of the week"
+    "message": "Inizio settimana"
   },
   "menuContentHeaderDateDayDisplayWeekStartMonday": {
-    "message": "Monday"
+    "message": "Lunedi"
   },
   "menuContentHeaderDateDayDisplayWeekStartSunday": {
-    "message": "Sunday"
+    "message": "domenica"
   },
   "menuContentHeaderDateDayDisplayLengthLabel": {
-    "message": "Word length"
+    "message": "Lunghezza della parola"
   },
   "menuContentHeaderDateDayDisplayLengthLong": {
-    "message": "Long"
+    "message": "Lungo"
   },
   "menuContentHeaderDateDayDisplayLengthShort": {
-    "message": "Short"
+    "message": "Corto"
   },
   "menuContentHeaderDateDateShow": {
-    "message": "Show Date"
+    "message": "Mostra data"
   },
   "menuContentHeaderDateDateDisplayNumber": {
-    "message": "As number"
+    "message": "come numero"
   },
   "menuContentHeaderDateDateDisplayWord": {
-    "message": "As word"
+    "message": "Una spada"
   },
   "menuContentHeaderDateDateDisplayOrdinal": {
-    "message": "Ordinal numbers"
+    "message": "Numeri ordinali"
   },
   "menuContentHeaderDateMonthShow": {
-    "message": "Show Month"
+    "message": "Mostra mese"
   },
   "menuContentHeaderDateMonthDisplayNumber": {
-    "message": "As number"
+    "message": "come numero"
   },
   "menuContentHeaderDateMonthDisplayWord": {
-    "message": "As word"
+    "message": "Una spada"
   },
   "menuContentHeaderDateMonthDisplayOrdinal": {
-    "message": "Ordinal numbers"
+    "message": "Numeri ordinali"
   },
   "menuContentHeaderDateMonthDisplayLengthLabel": {
-    "message": "Word length"
+    "message": "Lunghezza della parola"
   },
   "menuContentHeaderDateMonthDisplayLengthLong": {
-    "message": "Long"
+    "message": "Lungo"
   },
   "menuContentHeaderDateMonthDisplayLengthShort": {
-    "message": "Short"
+    "message": "Corto"
   },
   "menuContentHeaderDateYearShow": {
-    "message": "Show Year"
+    "message": "Mostra anno"
   },
   "menuContentHeaderDateYearDisplayNumber": {
-    "message": "As number"
+    "message": "come numero"
   },
   "menuContentHeaderDateYearDisplayWord": {
-    "message": "As word"
+    "message": "Una spada"
   },
   "menuContentHeaderDateSeparatorShow": {
-    "message": "Show separator"
+    "message": "Mostra separatore"
   },
   "menuContentHeaderDateSeparatorLabel": {
-    "message": "Separator character"
+    "message": "Carattere separatore"
   },
   "menuContentHeaderDateSeparatorPlaceholder": {
-    "message": "/"
+    "message": "\/"
   },
   "menuContentHeaderDateFormatLabel": {
-    "message": "Format"
+    "message": "Formato"
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "Date / Month"
+    "message": "Data \/ Mese"
   },
   "menuContentHeaderDateFormatMonthDate": {
-    "message": "Month / Date"
+    "message": "Mese \/ Data"
   },
   "menuContentHeaderDateSize": {
-    "message": "Size"
+    "message": "Misurare"
   },
   "menuContentHeaderDateNewLineLabel": {
-    "message": "New line"
+    "message": "Nuova linea"
   },
   "menuContentHeaderDateNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Forza su una nuova riga e separa dagli altri elementi dell'intestazione."
   },
   "menuContentHeaderSearchShow": {
-    "message": "Show Search"
+    "message": "Mostra ricerca"
   },
   "menuContentHeaderSearchWidthLabel": {
-    "message": "Search box width"
+    "message": "Larghezza casella di ricerca"
   },
   "menuContentHeaderSearchWidthAutoLabel": {
-    "message": "Auto width"
+    "message": "Larghezza automatica"
   },
   "menuContentHeaderSearchWidthAutoDescription": {
-    "message": "Search box will grow to best fit available space."
+    "message": "La casella di ricerca crescerà per adattarsi al meglio allo spazio disponibile."
   },
   "menuContentHeaderSearchWidthCustomLabel": {
-    "message": "Custom width"
+    "message": "Larghezza personalizzata"
   },
   "menuContentHeaderSearchWidthCustomDescription": {
-    "message": "Define how wide the Search box should be inside the Header Area."
+    "message": "Definisci la larghezza della casella di ricerca all'interno dell'area dell'intestazione."
   },
   "menuContentHeaderSearchWidthSize": {
-    "message": "Width"
+    "message": "Larghezza"
   },
   "menuContentHeaderSearchSize": {
-    "message": "Size"
+    "message": "Misurare"
   },
   "menuContentHeaderSearchNewLineLabel": {
-    "message": "New line"
+    "message": "Nuova linea"
   },
   "menuContentHeaderSearchNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Forza su una nuova riga e separa dagli altri elementi dell'intestazione."
   },
   "menuContentHeaderSearchEngineSelectedLabel": {
-    "message": "Search engine"
+    "message": "Motore di ricerca"
   },
   "menuContentHeaderSearchEngineSelectedCustom": {
-    "message": "Custom"
+    "message": "Costume"
   },
   "menuContentHeaderSearchEngineCustomNameLabel": {
-    "message": "Name"
+    "message": "Nome"
   },
   "menuContentHeaderSearchEngineCustomNamePlaceholder": {
-    "message": "Search engine name"
+    "message": "Nome del motore di ricerca"
   },
   "menuContentHeaderSearchEngineCustomUrlLabel": {
     "message": "URL"
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
-    "message": "https://"
+    "message": "https:\/\/"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "Enter a web address with the search parameters, eg: \"https://vimeo.com/search?q=\""
+    "message": "Inserisci un indirizzo web con i parametri di ricerca, ad esempio: \"https:\/\/vimeo.com\/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
-    "message": "{appName} will add the search term entered into the Search box at the end of the above URL."
+    "message": "{appName} aggiungerà il termine di ricerca inserito nella casella di ricerca alla fine dell'URL sopra."
   },
   "menuContentHeaderSearchEngineCustomQueryNameLabel": {
-    "message": "Name attribute"
+    "message": "Attributo nome"
   },
   "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
-    "message": "q"
+    "message": "Q"
   },
   "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
-    "message": "Sets the name attribute on the Search input field."
+    "message": "Imposta l'attributo del nome nel campo di input Cerca."
   },
   "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
-    "message": "This defines the name passed to the search engine when submitting. If not sure leave blank."
+    "message": "Questo definisce il nome passato al motore di ricerca durante l'invio. Se non sei sicuro, lascia vuoto."
   },
   "menuContentHeaderSearchEngineTextJustifyLabel": {
-    "message": "Search text alignment"
+    "message": "Allineamento del testo di ricerca"
   },
   "menuContentHeaderSearchEngineTextJustifyLeft": {
-    "message": "Left"
+    "message": "Sono partiti"
   },
   "menuContentHeaderSearchEngineTextJustifyCenter": {
-    "message": "Centre"
+    "message": "Centro"
   },
   "menuContentHeaderSearchEngineTextJustifyRight": {
-    "message": "Right"
+    "message": "Destra"
   },
   "menuContentHeaderSearchNewTab": {
-    "message": "Open Search results in a new tab"
+    "message": "Apri i risultati della ricerca in una nuova scheda"
   },
   "menuContentBookmarkGeneralShow": {
-    "message": "Show Bookmarks"
+    "message": "Mostra segnalibri"
   },
   "menuContentBookmarkGeneralUrlShow": {
-    "message": "Show URL on Bookmark hover"
+    "message": "Mostra URL al passaggio del mouse sui segnalibri"
   },
   "menuContentBookmarkGeneralLineShow": {
-    "message": "Show Bookmark line"
+    "message": "Mostra linea segnalibro"
   },
   "menuContentBookmarkGeneralShadowShowLabel": {
-    "message": "Show shadow on Bookmark hover"
+    "message": "Mostra ombra al passaggio del mouse sui segnalibri"
   },
   "menuContentBookmarkGeneralShadowShowDescription": {
-    "message": "Effects may not be visible if Theme Shadow is set to 0."
+    "message": "Gli effetti potrebbero non essere visibili se Theme Shadow è impostato su 0."
   },
   "menuContentBookmarkGeneralHoverScaleShow": {
-    "message": "Grow on Bookmark hover"
+    "message": "Cresci al passaggio del segnalibro"
   },
   "menuContentBookmarkGeneralNewTab": {
-    "message": "Open Bookmarks in a new tab"
+    "message": "Apri i segnalibri in una nuova scheda"
   },
   "menuContentBookmarkGeneralSize": {
-    "message": "Bookmark size"
+    "message": "Dimensione segnalibro"
   },
   "menuContentBookmarkStyleBlockLabel": {
-    "message": "Block"
+    "message": "Bloccare"
   },
   "menuContentBookmarkStyleBlockDescription": {
-    "message": "Square shaped Bookmark tiles."
+    "message": "Piastrelle segnalibro a forma quadrata."
   },
   "menuContentBookmarkStyleListLabel": {
-    "message": "List"
+    "message": "Elenco"
   },
   "menuContentBookmarkStyleListDescription": {
-    "message": "Short and wide Bookmark tiles."
+    "message": "Segnalibri corti e larghi."
   },
   "menuContentBookmarkOrientationTop": {
-    "message": "Top"
+    "message": "Superiore"
   },
   "menuContentBookmarkOrientationBottom": {
-    "message": "Bottom"
+    "message": "Metter il fondo a"
   },
   "menuContentBookmarkOrientationHelperPara1": {
-    "message": "Display the URL and Controls either at the top or bottom of a Bookmark Tile."
+    "message": "Visualizza l'URL e i controlli nella parte superiore o inferiore di un riquadro dei segnalibri."
   },
   "menuContentBookmarkSortLetter": {
-    "message": "By letter"
+    "message": "Per lettera"
   },
   "menuContentBookmarkSortIcon": {
-    "message": "By icon"
+    "message": "Per icona"
   },
   "menuContentBookmarkSortName": {
-    "message": "By name"
+    "message": "Per nome"
   },
   "menuContentGroupAlignmentJustifyLabel": {
-    "message": "Group details area alignment"
+    "message": "Allineamento area dettagli gruppo"
   },
   "menuContentGroupAlignmentJustifyLeft": {
-    "message": "Left"
+    "message": "Sono partiti"
   },
   "menuContentGroupAlignmentJustifyCenter": {
-    "message": "Centre"
+    "message": "Centro"
   },
   "menuContentGroupAlignmentJustifyRight": {
-    "message": "Right"
+    "message": "Destra"
   },
   "menuContentGroupAlignmentOrderLabel": {
-    "message": "Group details order"
+    "message": "Ordine dei dettagli del gruppo"
   },
   "menuContentGroupAlignmentOrderHeaderBodyLabel": {
-    "message": "Group details then Bookmarks"
+    "message": "Dettagli del gruppo e poi segnalibri"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Order the Group details area to appear before the Bookmarks area."
+    "message": "Ordina che l'area dei dettagli del gruppo appaia prima dell'area dei segnalibri."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
-    "message": "Bookmarks then Group details"
+    "message": "Segnalibri quindi Dettagli gruppo"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Order the Bookmarks area to appear before the Group details area."
+    "message": "Ordina che l'area dei segnalibri venga visualizzata prima dell'area dei dettagli del gruppo."
   },
   "menuContentGroupNameSize": {
-    "message": "Name size"
+    "message": "Dimensione del nome"
   },
   "menuContentGroupNameShow": {
-    "message": "Show all"
+    "message": "Mostra tutto"
   },
   "menuContentGroupNameHide": {
-    "message": "Hide all"
+    "message": "Nascondi tutto"
   },
   "menuContentGroupNameHelperPara1": {
-    "message": "Group Names can also be changed by editing individual Groups."
+    "message": "I nomi dei gruppi possono essere modificati anche modificando i singoli gruppi."
   },
   "menuContentGroupCollapseShow": {
-    "message": "Open all groups"
+    "message": "Apri tutti i gruppi"
   },
   "menuContentGroupCollapseHide": {
-    "message": "Collapse all groups"
+    "message": "Comprimi tutti i gruppi"
   },
   "menuContentGroupToolbarSize": {
-    "message": "Group toolbar size"
+    "message": "Dimensione della barra degli strumenti del gruppo"
   },
   "menuContentGroupToolbarCollapseLabel": {
-    "message": "Group Collapse control"
+    "message": "Controllo del collasso del gruppo"
   },
   "menuContentGroupToolbarCollapseShow": {
-    "message": "Show all"
+    "message": "Mostra tutto"
   },
   "menuContentGroupToolbarCollapseHide": {
-    "message": "Hide all"
+    "message": "Nascondi tutto"
   },
   "menuContentGroupToolbarCollapseHelperPara1": {
-    "message": "Group toolbar collapse button can also be changed by editing individual Groups."
+    "message": "Il pulsante di compressione della barra degli strumenti del gruppo può essere modificato anche modificando i singoli gruppi."
   },
   "menuContentGroupToolbarOpenAllLabel": {
-    "message": "Group Open all control"
+    "message": "Gruppo Apri tutto il controllo"
   },
   "menuContentGroupToolbarOpenAllShow": {
-    "message": "Show all"
+    "message": "Mostra tutto"
   },
   "menuContentGroupToolbarOpenAllHide": {
-    "message": "Hide all"
+    "message": "Nascondi tutto"
   },
   "menuContentGroupToolbarOpenAllHelperPara1": {
-    "message": "Group toolbar open all button can also be changed by editing individual Groups."
+    "message": "Il pulsante Apri tutto della barra degli strumenti del gruppo può essere modificato anche modificando i singoli gruppi."
   },
   "menuContentToolbarSize": {
-    "message": "Toolbar size"
+    "message": "Dimensione della barra degli strumenti"
   },
   "menuContentToolbarLocationCorner": {
-    "message": "In a corner"
+    "message": "In un angolo"
   },
   "menuContentToolbarLocationHeader": {
-    "message": "In the Header"
+    "message": "Nell'intestazione"
   },
   "menuContentToolbarLocationHelperPara1": {
-    "message": "Position the Toolbar inside the Header or in a corner of the window."
+    "message": "Posiziona la barra degli strumenti all'interno dell'intestazione o in un angolo della finestra."
   },
   "menuContentToolbarLocationNewLineLabel": {
-    "message": "New line"
+    "message": "Nuova linea"
   },
   "menuContentToolbarLocationNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Forza su una nuova riga e separa dagli altri elementi dell'intestazione."
   },
   "menuContentToolbarLocationNewLineHelperPara1": {
-    "message": "Only available when the Toolbar is positioned inside the Header."
+    "message": "Disponibile solo quando la barra degli strumenti è posizionata all'interno dell'intestazione."
   },
   "menuContentToolbarPositionLabel": {
-    "message": "Toolbar position"
+    "message": "Posizione della barra degli strumenti"
   },
   "menuContentToolbarPositionTopLeft": {
-    "message": "Top Left"
+    "message": "A sinistra in alto"
   },
   "menuContentToolbarPositionTopRight": {
-    "message": "Top Right"
+    "message": "In alto a destra"
   },
   "menuContentToolbarPositionBottomLeft": {
-    "message": "Bottom Left"
+    "message": "In basso a sinistra"
   },
   "menuContentToolbarPositionBottomRight": {
-    "message": "Bottom Right"
+    "message": "In basso a destra"
   },
   "menuContentToolbarPositionHelper1Para1": {
-    "message": "Position the Toolbar in one of the four corners of the window."
+    "message": "Posiziona la barra degli strumenti in uno dei quattro angoli della finestra."
   },
   "menuContentToolbarPositionHelper2Para1": {
-    "message": "Only available when the Toolbar is positioned in a corner."
+    "message": "Disponibile solo quando la barra degli strumenti è posizionata in un angolo."
   },
   "menuContentToolbarControlsAccent": {
-    "message": "Show Accent control"
+    "message": "Mostra controllo accento"
   },
   "menuContentToolbarControlsAdd": {
-    "message": "Show Add control"
+    "message": "Mostra Aggiungi controllo"
   },
   "menuContentToolbarControlsEdit": {
-    "message": "Show Edit control"
+    "message": "Mostra controllo Modifica"
   },
   "menuContentDataRestoreFile": {
-    "message": "Import from file"
+    "message": "Importa da file"
   },
   "menuContentDataRestoreClipboard": {
-    "message": "Import from clipboard"
+    "message": "Importa dagli appunti"
   },
   "menuContentDataRestoreHelperPara1": {
-    "message": "Restore a previously exported {appName} backup."
+    "message": "Ripristina un backup di {appName}"
   },
   "menuContentDataRestoreDrop": {
-    "message": "Or drop a {appName} backup file here."
+    "message": "Oppure trascina qui un file di backup {appName}"
   },
   "menuContentDataBackupFile": {
-    "message": "Export data"
+    "message": "Esporta dati"
   },
   "menuContentDataBackupClipboard": {
-    "message": "Copy to clipboard"
+    "message": "Copia negli appunti"
   },
   "menuContentDataBackupHelperPara1": {
-    "message": "Download a backup of your {appName} Bookmarks and Settings."
+    "message": "Scarica un backup dei tuoi segnalibri e impostazioni {appName}"
   },
   "menuContentDataBackupHelperPara2": {
-    "message": "This file can later be imported on this or another deivce."
+    "message": "Questo file può essere successivamente importato su questo o un altro dispositivo."
   },
   "menuContentDataClearAll": {
-    "message": "Clear all data"
+    "message": "Cancella tutti i dati"
   },
   "menuContentDataClearPartial": {
-    "message": "Clear all except bookmarks"
+    "message": "Cancella tutto tranne i segnalibri"
   },
   "menuContentDataClearAlertPara": {
-    "message": "You will lose Bookmarks by clearing all data."
+    "message": "Perderai i segnalibri cancellando tutti i dati."
   },
   "menuContentDataClearAlertLink": {
-    "message": "Backup your data"
+    "message": "Esegui il backup dei tuoi dati"
   },
   "menuContentDataClearHelperPara1": {
-    "message": "Clear all data to reset {appName} to the default state."
+    "message": "Cancella tutti i dati per ripristinare {appName} allo stato predefinito."
   },
   "menuContentDataClearHelperPara2": {
-    "message": "Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups."
+    "message": "In alternativa, è possibile cancellare tutte le impostazioni ma mantenere i segnalibri e i gruppi correnti."
   },
   "menuContentLanguageSelect": {
-    "message": "Language"
+    "message": "Lingua"
   },
   "menuContentLanguageSystem": {
-    "message": "Use system language"
+    "message": "Usa la lingua di sistema"
   },
   "menuContentLanguageAlertPara": {
-    "message": "Found a translation that isn't right?"
+    "message": "Hai trovato una traduzione che non va bene?"
   },
   "menuContentLanguageAlertLink": {
-    "message": "Help translate {appName}"
+    "message": "Aiuta a tradurre {appName}"
   },
   "menuContentSupportPageApplyToAll": {
-    "message": "Applying bookmark settings to all"
+    "message": "Applicare le impostazioni dei segnalibri a tutti"
   },
   "menuContentSupportPageBrowser": {
-    "message": "Browser support"
+    "message": "Supporto browser"
   },
   "menuContentSupportPageCookies": {
-    "message": "Cookies and cache"
+    "message": "Cookie e cache"
   },
   "menuContentSupportPageData": {
-    "message": "Data backup and restore"
+    "message": "Backup e ripristino dei dati"
   },
   "menuContentSupportPageLocalBackgroundImage": {
-    "message": "Local background image"
+    "message": "Immagine di sfondo locale"
   },
   "menuContentSupportPageProtectedUrl": {
-    "message": "Protected URLs"
+    "message": "URL protetti"
   },
   "menuContentSupportPageRecovering": {
-    "message": "Recovering settings and bookmarks"
+    "message": "Ripristino di impostazioni e segnalibri"
   },
   "menuContentSupportPageResetting": {
-    "message": "Resetting when opening the browser"
+    "message": "Ripristino all'apertura del browser"
   },
   "menuContentSupportPagePrivacy": {
-    "message": "Respecting your privacy"
+    "message": "Rispettando la tua privacy"
   },
   "menuContentSupportPageBackgroundImageVideo": {
-    "message": "Setting a background video or image"
+    "message": "Impostare un video o un'immagine di sfondo"
   },
   "menuContentSupportPageFirefox": {
-    "message": "Setting {appName} as your Firefox homepage"
+    "message": "Impostare {appName} come home page di Firefox"
   },
   "menuContentSupportPara": {
-    "message": "For more support or feedback:"
+    "message": "Per ulteriore supporto o feedback:"
   },
   "menuContentSupportLink1": {
-    "message": "Submit an Issue."
+    "message": "Invia un problema."
   },
   "menuContentSupportLink2": {
-    "message": "Check the Wiki."
+    "message": "Controlla il Wiki."
   },
   "menuContentCoffeePara": {
-    "message": "{appName} is free, appreciation is welcome in the form of coffee!"
+    "message": "{appName} è gratuito, l'apprezzamento è benvenuto sotto forma di caffè!"
   },
   "menuContentCoffeeButton": {
-    "message": "Buy me a coffee"
+    "message": "Offrimi un caffè"
   },
   "menuContentAppPara1": {
-    "message": "Share your setup with the community."
+    "message": "Condividi la tua configurazione con la community."
   },
   "menuContentAppLink1": {
-    "message": "Found on Reddit /r/{appName}."
+    "message": "Trovato su Reddit \/r\/ {appName} ."
   },
   "menuContentAppPara2": {
-    "message": "This project is open source."
+    "message": "Questo progetto è open source."
   },
   "menuContentAppLink2": {
-    "message": "Found on GitHub."
+    "message": "Trovato su GitHub."
   },
   "menuContentAppLink3": {
     "message": "GNU General Public License v3.0."
   },
   "bookmarkTileControlLeft": {
-    "message": "Move this bookmark left"
+    "message": "Sposta questo segnalibro a sinistra"
   },
   "bookmarkTileControlSort": {
-    "message": "Drag bookmark to reorder"
+    "message": "Trascina il segnalibro per riordinare"
   },
   "bookmarkTileControlRight": {
-    "message": "Move this bookmark right"
+    "message": "Sposta questo segnalibro a destra"
   },
   "bookmarkTileControlEdit": {
-    "message": "Edit this bookmark"
+    "message": "Modifica questo segnalibro"
   },
   "bookmarkTileControlRemove": {
-    "message": "Remove this bookmark"
+    "message": "Rimuovi questo segnalibro"
   },
   "bookmarkAddHeading": {
-    "message": "Add a new Bookmark"
+    "message": "Aggiungi un nuovo segnalibro"
   },
   "bookmarkAddSuccessText": {
-    "message": "Add"
+    "message": "Aggiungere"
   },
   "bookmarkAddCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "bookmarkRemoveHeadingName": {
-    "message": "Remove"
+    "message": "Rimuovere"
   },
   "bookmarkRemoveHeadingUnnamed": {
-    "message": "Remove unnamed bookmark"
+    "message": "Rimuovi segnalibro senza nome"
   },
   "bookmarkRemoveContent": {
-    "message": "Are you sure you want to remove this Bookmark? This can not be undone."
+    "message": "Sei sicuro di voler rimuovere questo segnalibro? Questo non può essere annullato."
   },
   "bookmarkRemoveSuccessText": {
-    "message": "Remove"
+    "message": "Rimuovere"
   },
   "bookmarkRemoveCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "bookmarkEditHeadingName": {
-    "message": "Edit"
+    "message": "Modificare"
   },
   "bookmarkEditHeadingUnnamed": {
-    "message": "Edit unnamed bookmark"
+    "message": "Modifica segnalibro senza nome"
   },
   "bookmarkEditSuccessText": {
-    "message": "Save"
+    "message": "Salva"
   },
   "bookmarkEditCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "bookmarkFormTabVisual": {
-    "message": "Visual & Name"
+    "message": "Visuale e nome"
   },
   "bookmarkFormTabAddress": {
-    "message": "Address"
+    "message": "Indirizzo"
   },
   "bookmarkFormTabPosition": {
-    "message": "Position"
+    "message": "Posizione"
   },
   "bookmarkFormTabLayout": {
-    "message": "Layout"
+    "message": "Disposizione"
   },
   "bookmarkFormTabTheme": {
-    "message": "Theme"
+    "message": "Tema"
   },
   "bookmarkFormSectionVisualHeading": {
-    "message": "Visual & Name"
+    "message": "Visuale e nome"
   },
   "bookmarkFormSectionVisualDescription": {
-    "message": "Display Letters, Icon, Image and a Name on this Bookmark tile."
+    "message": "Visualizza lettere, icona, immagine e un nome su questo riquadro segnalibro."
   },
   "bookmarkFormSectionAddressHeading": {
-    "message": "Address"
+    "message": "Indirizzo"
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "Be sure to use the full URL and include \"https://...\""
+    "message": "Assicurati di utilizzare l'URL completo e di includere \"https:\/\/...\""
   },
   "bookmarkFormSectionPositionHeading": {
-    "message": "Position"
+    "message": "Posizione"
   },
   "bookmarkFormSectionPositionDescription": {
-    "message": "The Group to place this Bookmark in."
+    "message": "Il gruppo in cui inserire questo segnalibro."
   },
   "bookmarkFormSectionLayoutHeading": {
-    "message": "Layout"
+    "message": "Disposizione"
   },
   "bookmarkFormSectionLayoutDescription": {
-    "message": "Change the Visual Element and Name position, scale and orientation."
+    "message": "Modificare la posizione, la scala e l'orientamento dell'elemento visivo e del nome."
   },
   "bookmarkFormSectionThemeHeading": {
-    "message": "Theme"
+    "message": "Tema"
   },
   "bookmarkFormSectionThemeDescription": {
-    "message": "Override the Theme and Accent colour."
+    "message": "Sostituisci il tema e il colore dell'accento."
   },
   "bookmarkFormUrlLabel": {
     "message": "URL"
   },
   "bookmarkFormUrlPlaceholder": {
-    "message": "https://www.example.com/"
+    "message": "https:\/\/www.esempio.com\/"
   },
   "bookmarkFormDisplayAlignmentLabel": {
-    "message": "Visual Element and Name alignment"
+    "message": "Allineamento di elementi visivi e nomi"
   },
   "bookmarkFormDisplayAlignmentTopLeft": {
-    "message": "Top Left"
+    "message": "A sinistra in alto"
   },
   "bookmarkFormDisplayAlignmentTopCenter": {
-    "message": "Top Centre"
+    "message": "In alto al centro"
   },
   "bookmarkFormDisplayAlignmentTopRight": {
-    "message": "Top Right"
+    "message": "In alto a destra"
   },
   "bookmarkFormDisplayAlignmentCenterLeft": {
-    "message": "Centre Left"
+    "message": "Centro Sinistra"
   },
   "bookmarkFormDisplayAlignmentCenterCenter": {
-    "message": "Centre Centre"
+    "message": "Centro Centro"
   },
   "bookmarkFormDisplayAlignmentCenterRight": {
-    "message": "Centre Right"
+    "message": "Centro Destra"
   },
   "bookmarkFormDisplayAlignmentBottomLeft": {
-    "message": "Bottom Left"
+    "message": "In basso a sinistra"
   },
   "bookmarkFormDisplayAlignmentBottomCenter": {
-    "message": "Bottom Centre"
+    "message": "In basso al centro"
   },
   "bookmarkFormDisplayAlignmentBottomRight": {
-    "message": "Bottom Right"
+    "message": "In basso a destra"
   },
   "bookmarkFormDisplayDirectionVerticalLabel": {
-    "message": "Vertical"
+    "message": "Verticale"
   },
   "bookmarkFormDisplayDirectionVerticalDescription": {
-    "message": "Stack the Visual Element and Name one above the other."
+    "message": "Impila l'elemento visivo e nomina uno sopra l'altro."
   },
   "bookmarkFormDisplayDirectionHorizontalLabel": {
-    "message": "Horizontal"
+    "message": "Orizzontale"
   },
   "bookmarkFormDisplayDirectionHorizontalDescription": {
-    "message": "Arrange the Visual Element and Name side by side."
+    "message": "Disporre l'elemento visivo e il nome fianco a fianco."
   },
   "bookmarkFormDisplayOrderVisualNameLabel": {
-    "message": "Visual element then name"
+    "message": "Elemento visivo quindi nome"
   },
   "bookmarkFormDisplayOrderVisualNameDescription": {
-    "message": "Place the Visual Element before the Name."
+    "message": "Posiziona l'elemento visivo prima del nome."
   },
   "bookmarkFormDisplayOrderNameVisualLabel": {
-    "message": "Name then visual element"
+    "message": "Nome quindi elemento visivo"
   },
   "bookmarkFormDisplayOrderNameVisualDescription": {
-    "message": "Place the Name before the Visual Element."
+    "message": "Posiziona il nome prima dell'elemento visivo."
   },
   "bookmarkFormDisplayRotate": {
-    "message": "Rotate"
+    "message": "Ruotare"
   },
   "bookmarkFormDisplayTranslateLabel": {
-    "message": "Adjust Visual Element position"
+    "message": "Regola la posizione dell'elemento visivo"
   },
   "bookmarkFormDisplayTranslateX": {
-    "message": "Horizontal"
+    "message": "Orizzontale"
   },
   "bookmarkFormDisplayTranslateY": {
-    "message": "Vertical"
+    "message": "Verticale"
   },
   "bookmarkFormDisplayGutter": {
-    "message": "Gutter"
+    "message": "grondaia"
   },
   "bookmarkFormDisplayVisualShowLabel": {
-    "message": "Show Visual Element"
+    "message": "Mostra elemento visivo"
   },
   "bookmarkFormDisplayVisualShowDescription": {
-    "message": "Display Letters, Icon or an Image on this Bookmark hexagon."
+    "message": "Visualizza lettere, icone o un'immagine su questo esagono segnalibro."
   },
   "bookmarkFormDisplayVisualTypeLetter": {
-    "message": "Letter"
+    "message": "Lettera"
   },
   "bookmarkFormDisplayVisualTypeIcon": {
-    "message": "Icon"
+    "message": "Icona"
   },
   "bookmarkFormDisplayVisualTypeImage": {
-    "message": "Image"
+    "message": "Immagine"
   },
   "bookmarkFormDisplayVisualSize": {
-    "message": "Visual size"
+    "message": "Dimensione visiva"
   },
   "bookmarkFormDisplayVisualLetterTextLabel": {
-    "message": "Bookmark letter"
+    "message": "Segnalibro lettera"
   },
   "bookmarkFormDisplayVisualLetterTextPlaceholder": {
     "message": "E"
   },
   "bookmarkFormDisplayVisualIconTextLabel": {
-    "message": "Bookmark icon"
+    "message": "Icona segnalibro"
   },
   "bookmarkFormDisplayVisualIconTextPlaceholder": {
-    "message": "FontAwesome Brands or Icons"
+    "message": "Marchi o icone FontAwesome"
   },
   "bookmarkFormDisplayVisualIconRemove": {
-    "message": "Remove icon"
+    "message": "Rimuovi icona"
   },
   "bookmarkFormDisplayVisualImageUrlLabel": {
-    "message": "Bookmark image"
+    "message": "Immagine segnalibro"
   },
   "bookmarkFormDisplayVisualImageUrlPlaceholder": {
-    "message": "https://www.example.com/image.jpg"
+    "message": "https:\/\/www.example.com\/image.jpg"
   },
   "bookmarkFormDisplayVisualShadowSize": {
-    "message": "Visual shadow"
+    "message": "ombra visiva"
   },
   "bookmarkFormDisplayVisualShadowHelperPara1": {
-    "message": "Visual shadow only applies to a Letter or Icon."
+    "message": "L'ombra visiva si applica solo a una lettera o un'icona."
   },
   "bookmarkFormDisplayNameShow": {
-    "message": "Show Name"
+    "message": "Mostra nome"
   },
   "bookmarkFormDisplayNameTextLabel": {
-    "message": "Bookmark name"
+    "message": "Nome del segnalibro"
   },
   "bookmarkFormDisplayNameTextPlaceholder": {
-    "message": "Example"
+    "message": "Esempio"
   },
   "bookmarkFormDisplayNameSize": {
-    "message": "Name size"
+    "message": "Dimensione del nome"
   },
   "bookmarkFormAccentByThemeLabel": {
-    "message": "Theme Accent"
+    "message": "Accento tema"
   },
   "bookmarkFormAccentByThemeDescription": {
-    "message": "Use the Accent defined by the Theme."
+    "message": "Usa l'accento definito dal tema."
   },
   "bookmarkFormAccentByCustomLabel": {
-    "message": "Custom Accent"
+    "message": "Accento personalizzato"
   },
   "bookmarkFormAccentByCustomDescription": {
-    "message": "Override the Theme Accent."
+    "message": "Sostituisci l'accento del tema."
   },
   "bookmarkFormAccentColor": {
-    "message": "Accent"
+    "message": "Accento"
   },
   "bookmarkFormColorByThemeLabel": {
-    "message": "Theme colour"
+    "message": "Colore del tema"
   },
   "bookmarkFormColorByThemeDescription": {
-    "message": "Use the Colour defined by the Theme."
+    "message": "Usa il Colore definito dal Tema."
   },
   "bookmarkFormColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Colore personalizzato"
   },
   "bookmarkFormColorByCustomDescription": {
-    "message": "Override the Theme colour."
+    "message": "Sostituisci il colore del tema."
   },
   "bookmarkFormColorColor": {
-    "message": "Colour"
+    "message": "Colore"
   },
   "bookmarkFormColorOpacity": {
-    "message": "Opacity"
+    "message": "Opacità"
   },
   "bookmarkFormBackgroundShowLabel": {
-    "message": "Show background"
+    "message": "Mostra sfondo"
   },
   "bookmarkFormBackgroundShowDescription": {
-    "message": "Display an Image or video Background on this Bookmark tile."
+    "message": "Visualizza un'immagine o uno sfondo video su questo riquadro segnalibro."
   },
   "bookmarkFormBackgroundTypeImage": {
-    "message": "Image"
+    "message": "Immagine"
   },
   "bookmarkFormBackgroundTypeVideo": {
-    "message": "Video"
+    "message": "video"
   },
   "bookmarkFormBackgroundOpacity": {
-    "message": "Opacity"
+    "message": "Opacità"
   },
   "bookmarkFormBackgroundImageLabel": {
-    "message": "Background image URL"
+    "message": "URL immagine di sfondo"
   },
   "bookmarkFormBackgroundImagePlaceholder": {
-    "message": "https://www.example.com/image.jpg"
+    "message": "https:\/\/www.example.com\/image.jpg"
   },
   "bookmarkFormBackgroundImageHelperPara1": {
-    "message": "Background image only supports a direct URL to an image file."
+    "message": "L'immagine di sfondo supporta solo un URL diretto a un file immagine."
   },
   "bookmarkFormBackgroundVideoLabel": {
-    "message": "Background video URL"
+    "message": "URL del video di sfondo"
   },
   "bookmarkFormBackgroundVideoPlaceholder": {
-    "message": "https://www.example.com/video.mp4"
+    "message": "https:\/\/www.example.com\/video.mp4"
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
-    "message": "Background video only supports a direct URL to a video file. Supports MP4 and WebM format."
+    "message": "Il video in background supporta solo un URL diretto a un file video. Supporta il formato MP4 e WebM."
   },
   "bookmarkFormBackgroundVideoHelperPara2": {
-    "message": "YouTube page URLs can not be used."
+    "message": "Gli URL delle pagine di YouTube non possono essere utilizzati."
   },
   "bookmarkFormBorder": {
-    "message": "Border"
+    "message": "Confine"
   },
   "bookmarkFormShapeWideLabel": {
-    "message": "Wide tile"
+    "message": "Piastrella larga"
   },
   "bookmarkFormShapeWideDescription": {
-    "message": "Bookmark tile to span across two columns."
+    "message": "Riquadro segnalibro che si estende su due colonne."
   },
   "bookmarkFormShapeTallLabel": {
-    "message": "Tall tile"
+    "message": "Piastrella alta"
   },
   "bookmarkFormShapeTallDescription": {
-    "message": "Bookmark tile to span across two rows."
+    "message": "Riquadro segnalibro che si estende su due righe."
   },
   "bookmarkFormGroupDestinationExisting": {
-    "message": "Existing Group"
+    "message": "Gruppo esistente"
   },
   "bookmarkFormGroupDestinationNew": {
-    "message": "New Group"
+    "message": "Nuovo gruppo"
   },
   "bookmarkFormGroupNameLabel": {
     "message": "URL"
   },
   "bookmarkFormGroupNamePlaceholder": {
-    "message": "Example group"
+    "message": "Gruppo di esempio"
   },
   "bookmarkFormGroupRandom": {
-    "message": "Random Group name"
+    "message": "Nome del gruppo casuale"
   },
   "bookmarkFormGroupPositionGroup": {
-    "message": "Group"
+    "message": "Gruppo"
   },
   "bookmarkFormGroupPositionItem": {
-    "message": "Position"
+    "message": "Posizione"
   },
   "bookmarkFormPropagateVisualLabel": {
-    "message": "Apply \"Show Visual Element\" and \"Show Name\" to other Bookmarks"
+    "message": "Applica \"Mostra elemento visivo\" e \"Mostra nome\" ad altri segnalibri"
   },
   "bookmarkFormPropagateVisualDescriptionPara1": {
-    "message": "The Letter, Icon, Image and Name text will not be shared."
+    "message": "Il testo di Lettera, Icona, Immagine e Nome non sarà condiviso."
   },
   "bookmarkFormPropagateVisualDescriptionPara2": {
-    "message": "Useful for hiding the Visual Elements or Names on all Bookmarks."
+    "message": "Utile per nascondere gli elementi visivi oi nomi su tutti i segnalibri."
   },
   "bookmarkFormPropagateLayoutLabel": {
-    "message": "Apply Layout to other Bookmarks"
+    "message": "Applica layout ad altri segnalibri"
   },
   "bookmarkFormPropagateLayoutDescriptionPara1": {
-    "message": "When saved, apply the above Layout to all other Bookmarks."
+    "message": "Una volta salvato, applica il layout sopra a tutti gli altri segnalibri."
   },
   "bookmarkFormPropagateLayoutDescriptionPara2": {
-    "message": "Only the Visual and Name size, Alignment, Order, Position and Gutter will be applied to all."
+    "message": "Verranno applicati a tutti solo le dimensioni dell'oggetto visivo e del nome, l'allineamento, l'ordine, la posizione e la grondaia."
   },
   "bookmarkFormPropagateThemeLabel": {
-    "message": "Apply Theme to other Bookmarks"
+    "message": "Applica il tema ad altri segnalibri"
   },
   "bookmarkFormPropagateThemeDescriptionPara1": {
-    "message": "When saved, apply the above Theme to all other Bookmarks."
+    "message": "Una volta salvato, applica il tema sopra a tutti gli altri segnalibri."
   },
   "bookmarkFormPropagateThemeDescriptionPara2": {
-    "message": "Only the Colour, Accent, Opacity, Border and Visual shadow will be applied to all."
+    "message": "Verranno applicati a tutti solo il colore, l'accento, l'opacità, il bordo e l'ombra visiva."
   },
   "bookmarkPreviewFull": {
-    "message": "Preview"
+    "message": "Anteprima"
   },
   "bookmarkPreviewHalf": {
-    "message": "Preview (50% scale)"
+    "message": "Anteprima (scala 50%)"
   },
   "groupAreaControlUp": {
-    "message": "Move this group up"
+    "message": "Sposta questo gruppo su"
   },
   "groupAreaControlSort": {
-    "message": "Drag group to reorder"
+    "message": "Trascina il gruppo per riordinare"
   },
   "groupAreaControlDown": {
-    "message": "Move this group down"
+    "message": "Sposta questo gruppo in basso"
   },
   "groupAreaControlEdit": {
-    "message": "Edit this group"
+    "message": "Modifica questo gruppo"
   },
   "groupAreaControlRemove": {
-    "message": "Remove this group"
+    "message": "Rimuovi questo gruppo"
   },
   "groupAreaControlOpenAll": {
-    "message": "Open all bookmarks in this group"
+    "message": "Apri tutti i segnalibri in questo gruppo"
   },
   "groupAreaControlCollapse": {
-    "message": "Collapse this group"
+    "message": "Comprimi questo gruppo"
   },
   "groupAddHeading": {
-    "message": "Add a new Group"
+    "message": "Aggiungi un nuovo gruppo"
   },
   "groupAddSuccessText": {
-    "message": "Add"
+    "message": "Aggiungere"
   },
   "groupAddCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "groupRemoveHeadingName": {
-    "message": "Remove"
+    "message": "Rimuovere"
   },
   "groupRemoveHeadingUnnamed": {
-    "message": "Remove unnamed group"
+    "message": "Rimuovi gruppo senza nome"
   },
   "groupRemoveContent": {
-    "message": "Are you sure you want to remove this Group and all the Bookmarks within? This can not be undone."
+    "message": "Sei sicuro di voler rimuovere questo gruppo e tutti i segnalibri all'interno? Questo non può essere annullato."
   },
   "groupRemoveSuccessText": {
-    "message": "Remove"
+    "message": "Rimuovere"
   },
   "groupRemoveCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "groupEditHeadingName": {
-    "message": "Edit"
+    "message": "Modificare"
   },
   "groupEditHeadingUnnamed": {
-    "message": "Edit unnamed group"
+    "message": "Modifica gruppo senza nome"
   },
   "groupEditSuccessText": {
-    "message": "Save"
+    "message": "Salva"
   },
   "groupEditCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "groupFormSectionNameHeading": {
-    "message": "Name"
+    "message": "Nome"
   },
   "groupFormSectionNameDescription": {
-    "message": "Display a Name above this Group."
+    "message": "Visualizza un nome sopra questo gruppo."
   },
   "groupFormSectionToolbarHeading": {
-    "message": "Toolbar"
+    "message": "Barra degli strumenti"
   },
   "groupFormSectionToolbarDescription": {
-    "message": "Display controls to open all or show/hide the Bookmarks in this Group."
+    "message": "Visualizza i controlli per aprire tutti o mostrare\/nascondere i segnalibri in questo gruppo."
   },
   "groupFormSectionOrderingHeading": {
-    "message": "Ordering"
+    "message": "Ordinazione"
   },
   "groupFormSectionOrderingDescription": {
-    "message": "The position of this Group."
+    "message": "La posizione di questo Gruppo."
   },
   "groupFormNameShow": {
-    "message": "Show Group name"
+    "message": "Mostra il nome del gruppo"
   },
   "groupFormNameTextLabel": {
-    "message": "Group name"
+    "message": "Nome del gruppo"
   },
   "groupFormNameTextPlaceholder": {
-    "message": "Example group"
+    "message": "Gruppo di esempio"
   },
   "groupFormNameRandom": {
-    "message": "Random Group name"
+    "message": "Nome del gruppo casuale"
   },
   "groupFormCollapseShowLabel": {
-    "message": "Show Collapse"
+    "message": "Mostra comprimi"
   },
   "groupFormCollapseShowDescription": {
-    "message": "The Collapse button will show or hide the Bookmarks in this Group."
+    "message": "Il pulsante Comprimi mostrerà o nasconderà i segnalibri in questo gruppo."
   },
   "groupFormOpenAllShowLabel": {
-    "message": "Show Open all"
+    "message": "Mostra Apri tutto"
   },
   "groupFormOpenAllShowDescription": {
-    "message": "Open all button will appear if there is at least one Bookmark in this Group."
+    "message": "Il pulsante Apri tutto apparirà se c'è almeno un segnalibro in questo gruppo."
   },
   "groupFormDestination": {
-    "message": "Position"
+    "message": "Posizione"
   },
   "themeCustomTileControlEdit": {
-    "message": "Edit this saved custom theme"
+    "message": "Modifica questo tema personalizzato salvato"
   },
   "themeCustomTileControlRemove": {
-    "message": "Remove this saved custom theme"
+    "message": "Rimuovi questo tema personalizzato salvato"
   },
   "themeCustomFormNameLabel": {
-    "message": "Name"
+    "message": "Nome"
   },
   "themeCustomFormNamePlaceholder": {
-    "message": "Example theme"
+    "message": "Tema di esempio"
   },
   "themeCustomFormRandom": {
-    "message": "Random theme name"
+    "message": "Nome tema casuale"
   },
   "themeCustomAddHeading": {
-    "message": "Save current theme"
+    "message": "Salva il tema corrente"
   },
   "themeCustomAddSuccessText": {
-    "message": "Save"
+    "message": "Salva"
   },
   "themeCustomAddCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "themeCustomRemoveHeadingName": {
-    "message": "Remove"
+    "message": "Rimuovere"
   },
   "themeCustomRemoveHeadingUnnamed": {
-    "message": "Remove unnamed custom theme"
+    "message": "Rimuovi il tema personalizzato senza nome"
   },
   "themeCustomRemoveContent": {
-    "message": "Are you sure you want to remove this saved custom theme? This can not be undone."
+    "message": "Sei sicuro di voler rimuovere questo tema personalizzato salvato? Questo non può essere annullato."
   },
   "themeCustomRemoveSuccessText": {
-    "message": "Save"
+    "message": "Salva"
   },
   "themeCustomRemoveCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "themeCustomEditHeadingName": {
-    "message": "Edit"
+    "message": "Modificare"
   },
   "themeCustomEditHeadingUnnamed": {
-    "message": "Edit unnamed custom theme"
+    "message": "Modifica tema personalizzato senza nome"
   },
   "themeCustomEditSuccessText": {
-    "message": "Remove"
+    "message": "Rimuovere"
   },
   "themeCustomEditCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "toolbarAccent": {
-    "message": "Accent colour"
+    "message": "Colore accento"
   },
   "toolbarAddLabel": {
-    "message": "Add"
+    "message": "Aggiungere"
   },
   "toolbarAddGroup": {
-    "message": "New Group"
+    "message": "Nuovo gruppo"
   },
   "toolbarAddBookmark": {
-    "message": "New Bookmark"
+    "message": "Nuovo segnalibro"
   },
   "toolbarEdit": {
-    "message": "Edit groups and bookmarks"
+    "message": "Modifica gruppi e segnalibri"
   },
   "toolbarSetting": {
-    "message": "Open settings menu"
+    "message": "Apri il menu delle impostazioni"
   },
   "dataFormDescription": {
-    "message": "You can restore all or parts of a backup file. The following data will be restored:"
+    "message": "È possibile ripristinare tutto o parte di un file di backup. Verranno ripristinati i seguenti dati:"
   },
   "dataFormBookmarkIncludeLabel": {
-    "message": "Bookmarks"
+    "message": "segnalibri"
   },
   "dataFormBookmarkIncludeDescriptionPara1": {
-    "message": "This includes all Groups and Bookmarks"
+    "message": "Questo include tutti i gruppi e i segnalibri"
   },
   "dataFormBookmarkIncludeDescriptionPara2": {
-    "message": "Bookmarks will keep any custom Colours, Accents and Borders when imported."
+    "message": "I segnalibri manterranno i colori, gli accenti e i bordi personalizzati quando importati."
   },
   "dataFormBookmarkTypeRestore": {
-    "message": "Replace existing bookmarks"
+    "message": "Sostituisci i segnalibri esistenti"
   },
   "dataFormBookmarkTypeAppend": {
-    "message": "Add to existing bookmarks"
+    "message": "Aggiungi ai segnalibri esistenti"
   },
   "dataFormThemeIncludeLabel": {
-    "message": "Theme"
+    "message": "Tema"
   },
   "dataFormThemeIncludeDescription": {
-    "message": "This includes the Colour, Accent, Fonts, Background and any saved Custom Themes."
+    "message": "Ciò include il colore, l'accento, i caratteri, lo sfondo e tutti i temi personalizzati salvati."
   },
   "dataFormSetupIncludeLabel": {
-    "message": "Settings"
+    "message": "Impostazioni"
   },
   "dataFormSetupIncludeDescription": {
-    "message": "This includes Layout size and position, Header area size, Bookmark area size and other user settings."
+    "message": "Ciò include le dimensioni e la posizione del layout, le dimensioni dell'area dell'intestazione, le dimensioni dell'area dei segnalibri e altre impostazioni utente."
   },
   "dataRestoreHeading": {
-    "message": "Restoring from a {appName} backup"
+    "message": "Ripristino da un backup di {appName}"
   },
   "dataRestoreSuccessText": {
-    "message": "Import"
+    "message": "Importare"
   },
   "dataRestoreCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "dataClearAllHeading": {
-    "message": "Clear all {appName} data?"
+    "message": "Cancellare tutti i dati di {appName}"
   },
   "dataClearAllContentPara1": {
-    "message": "Are you sure you want to clear all {appName} Bookmarks and Settings? {appName} will be restore to the default state."
+    "message": "Sei sicuro di voler cancellare tutti i segnalibri e le impostazioni di {appName} {appName} verrà ripristinato allo stato predefinito."
   },
   "dataClearAllContentPara2": {
-    "message": "This can not be undone."
+    "message": "Questo non può essere annullato."
   },
   "dataClearAllSuccessText": {
-    "message": "Clear all data"
+    "message": "Cancella tutti i dati"
   },
   "dataClearAllCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "dataClearPartialHeading": {
-    "message": "Clear {appName} data except bookmarks?"
+    "message": "Cancellare i {appName} tranne i segnalibri?"
   },
   "dataClearPartialContentPara1": {
-    "message": "Are you sure you want to clear all {appName} Settings? {appName} will be restore to the default state but your Bookmarks and Groups will remain."
+    "message": "Sei sicuro di voler cancellare tutte le impostazioni di {appName} {appName} verrà ripristinato allo stato predefinito ma i tuoi segnalibri e gruppi rimarranno."
   },
   "dataClearPartialContentPara2": {
-    "message": "This can not be undone."
+    "message": "Questo non può essere annullato."
   },
   "dataClearPartialSuccessText": {
-    "message": "Clear all except bookmarks"
+    "message": "Cancella tutto tranne i segnalibri"
   },
   "dataClearPartialCancelText": {
-    "message": "Cancel"
+    "message": "Annulla"
   },
   "dataExportBackup": {
     "message": "backup"
   },
   "dataFeedbackEmpty": {
-    "message": "Nothing selected to import."
+    "message": "Nessuna selezione da importare."
   },
   "dataFeedbackSuccess": {
-    "message": "Success! Restoring {appName} Bookmarks and Settings."
+    "message": "Successo! Ripristino dei segnalibri e delle impostazioni di {appName}"
   },
   "dataFeedbackFailNotJson": {
-    "message": "Not a JSON file. Make sure the selected file came from {appName}."
+    "message": "Non un file JSON. Assicurati che il file selezionato provenga da {appName} ."
   },
   "dataFeedbackFailNotAppJson": {
-    "message": "Not the right kind of JSON file. Make sure the selected file came from {appName}."
+    "message": "Non è il tipo giusto di file JSON. Assicurati che il file selezionato provenga da {appName} ."
   },
   "dataFeedbackFailNotClipboardJson": {
-    "message": "Not the right kind of data. Make sure the clipboard holds data from {appName} or a {appName} backup JSON file."
+    "message": "Non è il tipo di dati corretto. Assicurati che gli appunti contengano i dati di {appName} o di un file JSON di backup di {appName}"
   },
   "controlGeneralReset": {
-    "message": "Reset to default"
+    "message": "Riportare alle condizioni originali"
   },
   "controlColorTextPlaceholder": {
-    "message": "Hex code"
+    "message": "Codice esadecimale"
   },
   "controlColorRandom": {
-    "message": "Random colour"
+    "message": "Colore casuale"
   },
   "controlColorMixerMoreControls": {
-    "message": "More controls"
+    "message": "Più controlli"
   },
   "controlColorMixerSliderH": {
-    "message": "Hue"
+    "message": "Tinta"
   },
   "controlColorMixerSliderS": {
-    "message": "Saturation"
+    "message": "Saturazione"
   },
   "controlColorMixerSliderL": {
-    "message": "Lightness"
+    "message": "Leggerezza"
   },
   "controlColorMixerSliderR": {
-    "message": "Red"
+    "message": "rosso"
   },
   "controlColorMixerSliderG": {
-    "message": "Green"
+    "message": "Verde"
   },
   "controlColorMixerSliderB": {
-    "message": "Blue"
+    "message": "Blu"
   }
 }

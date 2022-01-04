@@ -1337,8 +1337,11 @@
   "menuContentDataClearHelperPara2": {
     "message": "Atau, dimungkinkan untuk menghapus semua pengaturan tetapi tetap menggunakan Bookmark dan Grup saat ini."
   },
-  "menuContentLanguageLanguage": {
+  "menuContentLanguageSelect": {
     "message": "Bahasa"
+  },
+  "menuContentLanguageSystem": {
+    "message": "Gunakan bahasa sistem"
   },
   "menuContentLanguageAlertPara": {
     "message": "Menemukan terjemahan yang tidak tepat?"

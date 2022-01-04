@@ -65,11 +65,11 @@ const BookmarkTile = function({
 
   this.control.button = {
     left: new Button({
-      text: message('bookmarkTileControlLeft'),
+      text: message.get('bookmarkTileControlLeft'),
       srOnly: true,
       iconName: 'arrowKeyboardLeft',
       style: ['link'],
-      title: message('bookmarkTileControlLeft'),
+      title: message.get('bookmarkTileControlLeft'),
       classList: ['bookmark-control-button', 'bookmark-control-left'],
       func: () => {
 
@@ -88,19 +88,19 @@ const BookmarkTile = function({
       }
     }),
     sort: new Button({
-      text: message('bookmarkTileControlSort'),
+      text: message.get('bookmarkTileControlSort'),
       srOnly: true,
       iconName: 'drag',
       style: ['link'],
-      title: message('bookmarkTileControlSort'),
+      title: message.get('bookmarkTileControlSort'),
       classList: ['bookmark-control-button', 'bookmark-control-sort']
     }),
     right: new Button({
-      text: message('bookmarkTileControlRight'),
+      text: message.get('bookmarkTileControlRight'),
       srOnly: true,
       iconName: 'arrowKeyboardRight',
       style: ['link'],
-      title: message('bookmarkTileControlRight'),
+      title: message.get('bookmarkTileControlRight'),
       classList: ['bookmark-control-button', 'bookmark-control-right'],
       func: () => {
 
@@ -119,11 +119,11 @@ const BookmarkTile = function({
       }
     }),
     edit: new Button({
-      text: message('bookmarkTileControlEdit'),
+      text: message.get('bookmarkTileControlEdit'),
       srOnly: true,
       iconName: 'edit',
       style: ['link'],
-      title: message('bookmarkTileControlEdit'),
+      title: message.get('bookmarkTileControlEdit'),
       classList: ['bookmark-control-button', 'bookmark-control-edit'],
       func: () => {
 
@@ -138,10 +138,10 @@ const BookmarkTile = function({
         const bookmarkForm = new BookmarkForm({ bookmarkData: newBookmarkData });
 
         const editModal = new Modal({
-          heading: isValidString(newBookmarkData.link.display.name.text) ? `${message('bookmarkEditHeadingName')} ${newBookmarkData.link.display.name.text}` : message('bookmarkEditHeadingUnnamed'),
+          heading: isValidString(newBookmarkData.link.display.name.text) ? `${message.get('bookmarkEditHeadingName')} ${newBookmarkData.link.display.name.text}` : message.get('bookmarkEditHeadingUnnamed'),
           content: bookmarkForm.form(),
-          successText: message('bookmarkEditSuccessText'),
-          cancelText: message('bookmarkEditCancelText'),
+          successText: message.get('bookmarkEditSuccessText'),
+          cancelText: message.get('bookmarkEditCancelText'),
           width: (state.get.current().bookmark.style === 'block') ? 60 : 70,
           maxHeight: true,
           successAction: () => {
@@ -180,19 +180,19 @@ const BookmarkTile = function({
       }
     }),
     remove: new Button({
-      text: message('bookmarkTileControlRemove'),
+      text: message.get('bookmarkTileControlRemove'),
       srOnly: true,
       iconName: 'cross',
       style: ['link'],
-      title: message('bookmarkTileControlRemove'),
+      title: message.get('bookmarkTileControlRemove'),
       classList: ['bookmark-control-button', 'bookmark-control-remove'],
       func: () => {
 
         const removeModal = new Modal({
-          heading: isValidString(bookmarkData.link.display.name.text) ? `${message('bookmarkRemoveHeadingName')} ${bookmarkData.link.display.name.text}` : message('bookmarkRemoveHeadingUnnamed'),
-          content: message('bookmarkRemoveContent'),
-          successText: message('bookmarkRemoveSuccessText'),
-          cancelText: message('bookmarkRemoveCancelText'),
+          heading: isValidString(bookmarkData.link.display.name.text) ? `${message.get('bookmarkRemoveHeadingName')} ${bookmarkData.link.display.name.text}` : message.get('bookmarkRemoveHeadingUnnamed'),
+          content: message.get('bookmarkRemoveContent'),
+          successText: message.get('bookmarkRemoveSuccessText'),
+          cancelText: message.get('bookmarkRemoveCancelText'),
           width: 'small',
           successAction: () => {
 

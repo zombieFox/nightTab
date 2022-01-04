@@ -70,7 +70,7 @@ toolbarSetting.size = (parent) => {
     object: state.get.current(),
     path: 'toolbar.size',
     id: 'toolbar-size',
-    labelText: message('menuContentToolbarSize'),
+    labelText: message.get('menuContentToolbarSize'),
     value: state.get.current().toolbar.size,
     defaultValue: state.get.default().toolbar.size,
     min: state.get.minMax().toolbar.size.min,
@@ -100,8 +100,8 @@ toolbarSetting.location = (parent) => {
   toolbarSetting.control.location.locationElement = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'toolbar-location-corner', labelText: message('menuContentToolbarLocationCorner'), value: 'corner' },
-      { id: 'toolbar-location-header', labelText: message('menuContentToolbarLocationHeader'), value: 'header' }
+      { id: 'toolbar-location-corner', labelText: message.get('menuContentToolbarLocationCorner'), value: 'corner' },
+      { id: 'toolbar-location-header', labelText: message.get('menuContentToolbarLocationHeader'), value: 'header' }
     ],
     groupName: 'toolbar-location',
     path: 'toolbar.location',
@@ -133,15 +133,15 @@ toolbarSetting.location = (parent) => {
   });
 
   toolbarSetting.control.location.locationHelper = new Control_helperText({
-    text: [message('menuContentToolbarLocationHelperPara1')]
+    text: [message.get('menuContentToolbarLocationHelperPara1')]
   });
 
   toolbarSetting.control.location.newLine = new Control_checkbox({
     object: state.get.current(),
     path: 'toolbar.newLine',
     id: 'header-newLine',
-    labelText: message('menuContentToolbarLocationNewLineLabel'),
-    description: message('menuContentToolbarLocationNewLineDescription'),
+    labelText: message.get('menuContentToolbarLocationNewLineLabel'),
+    description: message.get('menuContentToolbarLocationNewLineDescription'),
     action: function() {
       applyCSSState('toolbar.newLine');
       data.save();
@@ -149,7 +149,7 @@ toolbarSetting.location = (parent) => {
   });
 
   toolbarSetting.control.location.newLineHelper = new Control_helperText({
-    text: [message('menuContentToolbarLocationNewLineHelperPara1')]
+    text: [message.get('menuContentToolbarLocationNewLineHelperPara1')]
   });
 
   parent.appendChild(
@@ -169,12 +169,12 @@ toolbarSetting.position = (parent) => {
   toolbarSetting.control.positionElement = new Control_radioGrid({
     object: state.get.current(),
     radioGroup: [
-      { id: 'toolbar-position-top-left', labelText: message('menuContentToolbarPositionTopLeft'), value: 'top-left', position: 1 },
-      { id: 'toolbar-position-top-right', labelText: message('menuContentToolbarPositionTopRight'), value: 'top-right', position: 2 },
-      { id: 'toolbar-position-bottom-left', labelText: message('menuContentToolbarPositionBottomLeft'), value: 'bottom-left', position: 3 },
-      { id: 'toolbar-position-bottom-right', labelText: message('menuContentToolbarPositionBottomRight'), value: 'bottom-right', position: 4 }
+      { id: 'toolbar-position-top-left', labelText: message.get('menuContentToolbarPositionTopLeft'), value: 'top-left', position: 1 },
+      { id: 'toolbar-position-top-right', labelText: message.get('menuContentToolbarPositionTopRight'), value: 'top-right', position: 2 },
+      { id: 'toolbar-position-bottom-left', labelText: message.get('menuContentToolbarPositionBottomLeft'), value: 'bottom-left', position: 3 },
+      { id: 'toolbar-position-bottom-right', labelText: message.get('menuContentToolbarPositionBottomRight'), value: 'bottom-right', position: 4 }
     ],
-    label: message('menuContentToolbarPositionLabel'),
+    label: message.get('menuContentToolbarPositionLabel'),
     groupName: 'toolbar-position',
     path: 'toolbar.position',
     gridSize: '2x2',
@@ -187,11 +187,11 @@ toolbarSetting.position = (parent) => {
   });
 
   toolbarSetting.control.positionElementHelper1 = new Control_helperText({
-    text: [message('menuContentToolbarPositionHelper1Para1')]
+    text: [message.get('menuContentToolbarPositionHelper1Para1')]
   });
 
   toolbarSetting.control.positionElementHelper2 = new Control_helperText({
-    text: [message('menuContentToolbarPositionHelper2Para1')]
+    text: [message.get('menuContentToolbarPositionHelper2Para1')]
   });
 
   parent.appendChild(
@@ -210,7 +210,7 @@ toolbarSetting.controls = (parent) => {
     object: state.get.current(),
     id: 'toolbar-accent-show',
     path: 'toolbar.accent.show',
-    labelText: message('menuContentToolbarControlsAccent'),
+    labelText: message.get('menuContentToolbarControlsAccent'),
     action: () => {
       toolbar.current.update.control();
       data.save();
@@ -221,7 +221,7 @@ toolbarSetting.controls = (parent) => {
     object: state.get.current(),
     id: 'toolbar-add-show',
     path: 'toolbar.add.show',
-    labelText: message('menuContentToolbarControlsAdd'),
+    labelText: message.get('menuContentToolbarControlsAdd'),
     action: () => {
       toolbar.current.update.control();
       data.save();
@@ -232,7 +232,7 @@ toolbarSetting.controls = (parent) => {
     object: state.get.current(),
     id: 'toolbar-edit-show',
     path: 'toolbar.edit.show',
-    labelText: message('menuContentToolbarControlsEdit'),
+    labelText: message.get('menuContentToolbarControlsEdit'),
     action: () => {
       toolbar.current.update.control();
       data.save();

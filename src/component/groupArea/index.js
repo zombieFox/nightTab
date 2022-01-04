@@ -44,11 +44,11 @@ export const GroupArea = function({
 
   this.control.button = {
     up: new Button({
-      text: message('groupAreaControlUp'),
+      text: message.get('groupAreaControlUp'),
       srOnly: true,
       iconName: 'arrowKeyboardUp',
       style: ['line'],
-      title: message('groupAreaControlUp'),
+      title: message.get('groupAreaControlUp'),
       classList: ['group-control-button', 'group-control-up'],
       func: () => {
 
@@ -67,19 +67,19 @@ export const GroupArea = function({
       }
     }),
     sort: new Button({
-      text: message('groupAreaControlSort'),
+      text: message.get('groupAreaControlSort'),
       srOnly: true,
       iconName: 'drag',
       style: ['line'],
-      title: message('groupAreaControlSort'),
+      title: message.get('groupAreaControlSort'),
       classList: ['group-control-button', 'group-control-sort'],
     }),
     down: new Button({
-      text: message('groupAreaControlDown'),
+      text: message.get('groupAreaControlDown'),
       srOnly: true,
       iconName: 'arrowKeyboardDown',
       style: ['line'],
-      title: message('groupAreaControlDown'),
+      title: message.get('groupAreaControlDown'),
       classList: ['group-control-button', 'group-control-up'],
       func: () => {
 
@@ -98,11 +98,11 @@ export const GroupArea = function({
       }
     }),
     edit: new Button({
-      text: message('groupAreaControlEdit'),
+      text: message.get('groupAreaControlEdit'),
       srOnly: true,
       iconName: 'edit',
       style: ['line'],
-      title: message('groupAreaControlEdit'),
+      title: message.get('groupAreaControlEdit'),
       classList: ['group-control-button', 'group-control-edit'],
       func: () => {
 
@@ -117,10 +117,10 @@ export const GroupArea = function({
         const groupForm = new GroupForm({ groupData: newGroupData });
 
         const editModal = new Modal({
-          heading: isValidString(newGroupData.group.name.text) ? `${message('groupEditHeadingName')} ${newGroupData.group.name.text}` : message('groupEditHeadingUnnamed'),
+          heading: isValidString(newGroupData.group.name.text) ? `${message.get('groupEditHeadingName')} ${newGroupData.group.name.text}` : message.get('groupEditHeadingUnnamed'),
           content: groupForm.form(),
-          successText: message('groupEditSuccessText'),
-          cancelText: message('groupEditCancelText'),
+          successText: message.get('groupEditSuccessText'),
+          cancelText: message.get('groupEditCancelText'),
           width: 40,
           successAction: () => {
 
@@ -138,19 +138,19 @@ export const GroupArea = function({
       }
     }),
     remove: new Button({
-      text: message('groupAreaControlRemove'),
+      text: message.get('groupAreaControlRemove'),
       srOnly: true,
       iconName: 'cross',
       style: ['line'],
-      title: message('groupAreaControlRemove'),
+      title: message.get('groupAreaControlRemove'),
       classList: ['group-control-button', 'group-control-remove'],
       func: () => {
 
         const removeModal = new Modal({
-          heading: isValidString(groupData.group.name.text) ? `${message('groupRemoveHeadingName')} ${groupData.group.name.text}` : message('groupRemoveHeadingUnnamed'),
-          content: message('groupRemoveContent'),
-          successText: message('groupRemoveSuccessText'),
-          cancelText: message('groupRemoveCancelText'),
+          heading: isValidString(groupData.group.name.text) ? `${message.get('groupRemoveHeadingName')} ${groupData.group.name.text}` : message.get('groupRemoveHeadingUnnamed'),
+          content: message.get('groupRemoveContent'),
+          successText: message.get('groupRemoveSuccessText'),
+          cancelText: message.get('groupRemoveCancelText'),
           width: 'small',
           successAction: () => {
 
@@ -173,9 +173,9 @@ export const GroupArea = function({
 
   this.openAll = {
     button: new Button({
-      text: message('groupAreaControlOpenAll'),
+      text: message.get('groupAreaControlOpenAll'),
       style: ['line'],
-      title: message('groupAreaControlOpenAll'),
+      title: message.get('groupAreaControlOpenAll'),
       srOnly: true,
       iconName: 'openAll',
       classList: ['group-toolbar-button', 'group-toolbar-open-all'],
@@ -212,9 +212,9 @@ export const GroupArea = function({
 
   this.collapse = {
     button: new Button({
-      text: message('groupAreaControlCollapse'),
+      text: message.get('groupAreaControlCollapse'),
       style: ['line'],
-      title: message('groupAreaControlCollapse'),
+      title: message.get('groupAreaControlCollapse'),
       srOnly: true,
       iconName: 'arrowKeyboardUp',
       classList: ['group-toolbar-button', 'group-toolbar-collapse'],

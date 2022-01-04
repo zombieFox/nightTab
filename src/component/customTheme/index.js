@@ -79,10 +79,10 @@ customTheme.add = {
     const bookmarkForm = new CustomThemeForm({ customThemeData: newCustomThemeData });
 
     const addModal = new Modal({
-      heading: message('themeCustomAddHeading'),
+      heading: message.get('themeCustomAddHeading'),
       content: bookmarkForm.form(),
-      successText: message('themeCustomAddSuccessText'),
-      cancelText: message('themeCustomAddCancelText'),
+      successText: message.get('themeCustomAddSuccessText'),
+      cancelText: message.get('themeCustomAddCancelText'),
       width: 'small',
       successAction: () => {
         customTheme.item.mod.add(newCustomThemeData);

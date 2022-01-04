@@ -31,9 +31,9 @@ export const BookmarkPreview = function({
     }
 
     if (bookmarkData.link.shape.tall || bookmarkData.link.shape.wide) {
-      this.title.textContent = message('bookmarkPreviewHalf');
+      this.title.textContent = message.get('bookmarkPreviewHalf');
     } else {
-      this.title.textContent = message('bookmarkPreviewFull');
+      this.title.textContent = message.get('bookmarkPreviewFull');
     }
 
   };

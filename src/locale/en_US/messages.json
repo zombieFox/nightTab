@@ -183,7 +183,7 @@
     "message": "Light mode"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Automatic"
+    "message": "Use system language"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "Follow the system Light or Dark mode."
@@ -1337,8 +1337,11 @@
   "menuContentDataClearHelperPara2": {
     "message": "Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups."
   },
-  "menuContentLanguageLanguage": {
+  "menuContentLanguageSelect": {
     "message": "Language"
+  },
+  "menuContentLanguageSystem": {
+    "message": "Use system language"
   },
   "menuContentLanguageAlertPara": {
     "message": "Found a translation that isn't right?"

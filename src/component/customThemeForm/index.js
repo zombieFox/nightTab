@@ -20,11 +20,11 @@ export const CustomThemeForm = function({
       path: 'name',
       id: 'name',
       value: customThemeData.theme.name,
-      placeholder: message('themeCustomFormNamePlaceholder'),
-      labelText: message('themeCustomFormNameLabel')
+      placeholder: message.get('themeCustomFormNamePlaceholder'),
+      labelText: message.get('themeCustomFormNameLabel')
     }),
     randomName: new Button({
-      text: message('themeCustomFormRandom'),
+      text: message.get('themeCustomFormRandom'),
       style: ['line'],
       func: () => {
         customThemeData.theme.name = randomString({ adjectivesCount: randomNumber(1, 3) });

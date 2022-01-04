@@ -1337,8 +1337,11 @@
   "menuContentDataClearHelperPara2": {
     "message": "वैकल्पिक रूप से, सभी सेटिंग्स को मिटा देना संभव है लेकिन वर्तमान बुकमार्क और समूह रखें।"
   },
-  "menuContentLanguageLanguage": {
+  "menuContentLanguageSelect": {
     "message": "भाषा"
+  },
+  "menuContentLanguageSystem": {
+    "message": "सिस्टम भाषा का प्रयोग करें"
   },
   "menuContentLanguageAlertPara": {
     "message": "एक अनुवाद मिला जो सही नहीं है?"

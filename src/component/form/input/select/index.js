@@ -4,7 +4,7 @@ import { trimString } from '../../../../utility/trimString';
 
 import './index.css';
 
-export const select = function ({
+export const select = function({
   id = false,
   classList = [],
   option = [],
@@ -35,25 +35,40 @@ export const select = function ({
   }
 
   if (option.length > 0) {
-
     option.forEach((item) => {
 
-      select.appendChild(
-        complexNode({
-          tag: 'option',
-          text: item,
-          attr: [{
-            key: 'value',
-            value: trimString(item).replace(/\s+/g, '-').toLowerCase()
-          }]
-        })
-      );
+      if (typeof item == 'string') {
+
+        select.appendChild(
+          complexNode({
+            tag: 'option',
+            text: item,
+            attr: [{
+              key: 'value',
+              value: trimString(item).replace(/\s+/g, '-').toLowerCase()
+            }]
+          })
+        );
+
+      } else {
+
+        select.appendChild(
+          complexNode({
+            tag: 'option',
+            text: item.name,
+            attr: [{
+              key: 'value',
+              value: item.id
+            }]
+          })
+        );
+
+      }
 
     });
-
-    select.selectedIndex = selected;
-
   }
+
+  select.selectedIndex = selected;
 
   return select;
 

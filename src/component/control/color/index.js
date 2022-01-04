@@ -67,7 +67,7 @@ export const Control_color = function ({
     })),
     max: 7,
     classList: ['form-group-item-half'],
-    placeholder: message('controlColorTextPlaceholder'),
+    placeholder: message.get('controlColorTextPlaceholder'),
     func: () => {
 
       if (path) {
@@ -84,11 +84,11 @@ export const Control_color = function ({
   });
 
   this.reset = new Button({
-    text: message('controlGeneralReset'),
+    text: message.get('controlGeneralReset'),
     iconName: 'replay',
     style: ['line'],
     classList: ['form-group-item-small'],
-    title: message('controlGeneralReset'),
+    title: message.get('controlGeneralReset'),
     srOnly: true,
     func: () => {
 
@@ -102,11 +102,11 @@ export const Control_color = function ({
   });
 
   this.random = new Button({
-    text: message('controlColorRandom'),
+    text: message.get('controlColorRandom'),
     iconName: 'random',
     style: ['line'],
     classList: ['form-group-item-small'],
-    title: message('controlColorRandom'),
+    title: message.get('controlColorRandom'),
     srOnly: true,
     func: () => {
 

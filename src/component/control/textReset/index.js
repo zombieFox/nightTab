@@ -65,11 +65,11 @@ export const Control_textReset = function({
   }
 
   this.reset = new Button({
-    text: message('controlGeneralReset'),
+    text: message.get('controlGeneralReset'),
     iconName: 'replay',
     style: ['line'],
     classList: ['form-group-item-small'],
-    title: message('controlGeneralReset'),
+    title: message.get('controlGeneralReset'),
     srOnly: true,
     func: () => {
       set({

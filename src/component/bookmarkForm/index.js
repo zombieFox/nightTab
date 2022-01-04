@@ -98,8 +98,8 @@ export const BookmarkForm = function({
       path: 'url',
       id: 'url',
       value: bookmarkData.link.url,
-      placeholder: message('bookmarkFormUrlPlaceholder'),
-      labelText: message('bookmarkFormUrlLabel'),
+      placeholder: message.get('bookmarkFormUrlPlaceholder'),
+      labelText: message.get('bookmarkFormUrlLabel'),
       action: () => {
         this.preview.update.assemble(bookmarkData);
       }
@@ -108,17 +108,17 @@ export const BookmarkForm = function({
       alignment: new Control_radioGrid({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'toolbar-position-top-left', labelText: message('bookmarkFormDisplayAlignmentTopLeft'), value: 'top-left', position: 1 },
-          { id: 'toolbar-position-top-center', labelText: message('bookmarkFormDisplayAlignmentTopCenter'), value: 'top-center', position: 2 },
-          { id: 'toolbar-position-top-right', labelText: message('bookmarkFormDisplayAlignmentTopRight'), value: 'top-right', position: 3 },
-          { id: 'toolbar-position-center-left', labelText: message('bookmarkFormDisplayAlignmentCenterLeft'), value: 'center-left', position: 4 },
-          { id: 'toolbar-position-center-center', labelText: message('bookmarkFormDisplayAlignmentCenterCenter'), value: 'center-center', position: 5 },
-          { id: 'toolbar-position-center-right', labelText: message('bookmarkFormDisplayAlignmentCenterRight'), value: 'center-right', position: 6 },
-          { id: 'toolbar-position-bottom-left', labelText: message('bookmarkFormDisplayAlignmentBottomLeft'), value: 'bottom-left', position: 7 },
-          { id: 'toolbar-position-bottom-center', labelText: message('bookmarkFormDisplayAlignmentBottomCenter'), value: 'bottom-center', position: 8 },
-          { id: 'toolbar-position-bottom-right', labelText: message('bookmarkFormDisplayAlignmentBottomRight'), value: 'bottom-right', position: 9 }
+          { id: 'toolbar-position-top-left', labelText: message.get('bookmarkFormDisplayAlignmentTopLeft'), value: 'top-left', position: 1 },
+          { id: 'toolbar-position-top-center', labelText: message.get('bookmarkFormDisplayAlignmentTopCenter'), value: 'top-center', position: 2 },
+          { id: 'toolbar-position-top-right', labelText: message.get('bookmarkFormDisplayAlignmentTopRight'), value: 'top-right', position: 3 },
+          { id: 'toolbar-position-center-left', labelText: message.get('bookmarkFormDisplayAlignmentCenterLeft'), value: 'center-left', position: 4 },
+          { id: 'toolbar-position-center-center', labelText: message.get('bookmarkFormDisplayAlignmentCenterCenter'), value: 'center-center', position: 5 },
+          { id: 'toolbar-position-center-right', labelText: message.get('bookmarkFormDisplayAlignmentCenterRight'), value: 'center-right', position: 6 },
+          { id: 'toolbar-position-bottom-left', labelText: message.get('bookmarkFormDisplayAlignmentBottomLeft'), value: 'bottom-left', position: 7 },
+          { id: 'toolbar-position-bottom-center', labelText: message.get('bookmarkFormDisplayAlignmentBottomCenter'), value: 'bottom-center', position: 8 },
+          { id: 'toolbar-position-bottom-right', labelText: message.get('bookmarkFormDisplayAlignmentBottomRight'), value: 'bottom-right', position: 9 }
         ],
-        label: message('bookmarkFormDisplayAlignmentLabel'),
+        label: message.get('bookmarkFormDisplayAlignmentLabel'),
         groupName: 'display-alignment',
         path: 'display.alignment',
         gridSize: '3x3',
@@ -129,8 +129,8 @@ export const BookmarkForm = function({
       direction: new Control_radio({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'display-direction-vertical', labelText: message('bookmarkFormDisplayDirectionVerticalLabel'), description: message('bookmarkFormDisplayDirectionVerticalDescription'), value: 'vertical' },
-          { id: 'display-direction-horizontal', labelText: message('bookmarkFormDisplayDirectionHorizontalLabel'), description: message('bookmarkFormDisplayDirectionHorizontalDescription'), value: 'horizontal' }
+          { id: 'display-direction-vertical', labelText: message.get('bookmarkFormDisplayDirectionVerticalLabel'), description: message.get('bookmarkFormDisplayDirectionVerticalDescription'), value: 'vertical' },
+          { id: 'display-direction-horizontal', labelText: message.get('bookmarkFormDisplayDirectionHorizontalLabel'), description: message.get('bookmarkFormDisplayDirectionHorizontalDescription'), value: 'horizontal' }
         ],
         groupName: 'display-direction',
         path: 'display.direction',
@@ -142,8 +142,8 @@ export const BookmarkForm = function({
       order: new Control_radio({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'display-order-visual-name', labelText: message('bookmarkFormDisplayOrderVisualNameLabel'), description: message('bookmarkFormDisplayOrderVisualNameDescription'), value: 'visual-name' },
-          { id: 'display-order-name-visual', labelText: message('bookmarkFormDisplayOrderNameVisualLabel'), description: message('bookmarkFormDisplayOrderNameVisualDescription'), value: 'name-visual' }
+          { id: 'display-order-visual-name', labelText: message.get('bookmarkFormDisplayOrderVisualNameLabel'), description: message.get('bookmarkFormDisplayOrderVisualNameDescription'), value: 'visual-name' },
+          { id: 'display-order-name-visual', labelText: message.get('bookmarkFormDisplayOrderNameVisualLabel'), description: message.get('bookmarkFormDisplayOrderNameVisualDescription'), value: 'name-visual' }
         ],
         groupName: 'display-order',
         path: 'display.order',
@@ -156,7 +156,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'display.rotate',
         id: 'display-rotate',
-        labelText: message('bookmarkFormDisplayRotate'),
+        labelText: message.get('bookmarkFormDisplayRotate'),
         value: bookmarkData.link.display.rotate,
         defaultValue: bookmarkDefault.display.rotate,
         min: bookmarkMinMax.display.rotate.min,
@@ -167,14 +167,14 @@ export const BookmarkForm = function({
       }),
       translate: {
         label: form.label({
-          text: message('bookmarkFormDisplayTranslateLabel'),
+          text: message.get('bookmarkFormDisplayTranslateLabel'),
           noPadding: true
         }),
         x: new Control_sliderSlim({
           object: bookmarkData.link,
           path: 'display.translate.x',
           id: 'display-translate-x',
-          labelText: message('bookmarkFormDisplayTranslateX'),
+          labelText: message.get('bookmarkFormDisplayTranslateX'),
           value: bookmarkData.link.display.translate.x,
           defaultValue: bookmarkDefault.display.translate.x,
           min: bookmarkMinMax.display.translate.x.min,
@@ -187,7 +187,7 @@ export const BookmarkForm = function({
           object: bookmarkData.link,
           path: 'display.translate.y',
           id: 'display-translate-y',
-          labelText: message('bookmarkFormDisplayTranslateY'),
+          labelText: message.get('bookmarkFormDisplayTranslateY'),
           value: bookmarkData.link.display.translate.y,
           defaultValue: bookmarkDefault.display.translate.y,
           min: bookmarkMinMax.display.translate.y.min,
@@ -201,7 +201,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'display.gutter',
         id: 'display-gutter',
-        labelText: message('bookmarkFormDisplayGutter'),
+        labelText: message.get('bookmarkFormDisplayGutter'),
         value: bookmarkData.link.display.gutter,
         defaultValue: bookmarkDefault.display.gutter,
         min: bookmarkMinMax.display.gutter.min,
@@ -215,8 +215,8 @@ export const BookmarkForm = function({
           object: bookmarkData.link,
           path: 'display.visual.show',
           id: 'display-visual-show',
-          labelText: message('bookmarkFormDisplayVisualShowLabel'),
-          description: message('bookmarkFormDisplayVisualShowDescription'),
+          labelText: message.get('bookmarkFormDisplayVisualShowLabel'),
+          description: message.get('bookmarkFormDisplayVisualShowDescription'),
           action: () => {
             this.disable();
             this.collapse.display.visual.update();
@@ -226,9 +226,9 @@ export const BookmarkForm = function({
         type: new Control_radio({
           object: bookmarkData.link,
           radioGroup: [
-            { id: 'display-visual-type-letter', labelText: message('bookmarkFormDisplayVisualTypeLetter'), value: 'letter' },
-            { id: 'display-visual-type-icon', labelText: message('bookmarkFormDisplayVisualTypeIcon'), value: 'icon' },
-            { id: 'display-visual-type-image', labelText: message('bookmarkFormDisplayVisualTypeImage'), value: 'image' }
+            { id: 'display-visual-type-letter', labelText: message.get('bookmarkFormDisplayVisualTypeLetter'), value: 'letter' },
+            { id: 'display-visual-type-icon', labelText: message.get('bookmarkFormDisplayVisualTypeIcon'), value: 'icon' },
+            { id: 'display-visual-type-image', labelText: message.get('bookmarkFormDisplayVisualTypeImage'), value: 'image' }
           ],
           groupName: 'display-visual-type',
           path: 'display.visual.type',
@@ -241,7 +241,7 @@ export const BookmarkForm = function({
           object: bookmarkData.link,
           path: 'display.visual.size',
           id: 'display-visual-size',
-          labelText: message('bookmarkFormDisplayVisualSize'),
+          labelText: message.get('bookmarkFormDisplayVisualSize'),
           value: bookmarkData.link.display.visual.size,
           defaultValue: bookmarkDefault.display.visual.size,
           min: bookmarkMinMax.display.visual.size.min,
@@ -256,8 +256,8 @@ export const BookmarkForm = function({
             path: 'display.visual.letter.text',
             id: 'display-visual-letter-text',
             value: bookmarkData.link.display.visual.letter.text,
-            placeholder: message('bookmarkFormDisplayVisualLetterTextPlaceholder'),
-            labelText: message('bookmarkFormDisplayVisualLetterTextLabel'),
+            placeholder: message.get('bookmarkFormDisplayVisualLetterTextPlaceholder'),
+            labelText: message.get('bookmarkFormDisplayVisualLetterTextLabel'),
             srOnly: true,
             action: () => {
               this.preview.update.assemble(bookmarkData);
@@ -270,8 +270,8 @@ export const BookmarkForm = function({
             path: 'display.visual.icon.label',
             id: 'display-visual-icon-label',
             value: bookmarkData.link.display.visual.icon.label,
-            placeholder: message('bookmarkFormDisplayVisualIconTextPlaceholder'),
-            labelText: message('bookmarkFormDisplayVisualIconTextLabel'),
+            placeholder: message.get('bookmarkFormDisplayVisualIconTextPlaceholder'),
+            labelText: message.get('bookmarkFormDisplayVisualIconTextLabel'),
             srOnly: true,
             action: () => {
               this.preview.update.assemble(bookmarkData);
@@ -281,7 +281,7 @@ export const BookmarkForm = function({
             classList: ['bookmark-form-text-icon', 'form-group-item-small']
           }),
           remove: new Button({
-            text: message('bookmarkFormDisplayVisualIconRemove'),
+            text: message.get('bookmarkFormDisplayVisualIconRemove'),
             srOnly: true,
             style: ['line'],
             iconName: 'cross',
@@ -301,8 +301,8 @@ export const BookmarkForm = function({
             path: 'display.visual.image.url',
             id: 'display-visual-image-url',
             value: bookmarkData.link.display.visual.image.url,
-            placeholder: message('bookmarkFormDisplayVisualImageUrlPlaceholder'),
-            labelText: message('bookmarkFormDisplayVisualImageUrlLabel'),
+            placeholder: message.get('bookmarkFormDisplayVisualImageUrlPlaceholder'),
+            labelText: message.get('bookmarkFormDisplayVisualImageUrlLabel'),
             srOnly: true,
             action: () => {
               this.preview.update.assemble(bookmarkData);
@@ -314,7 +314,7 @@ export const BookmarkForm = function({
             object: bookmarkData.link,
             path: 'display.visual.shadow.size',
             id: 'display-visual-shadow-size',
-            labelText: message('bookmarkFormDisplayVisualShadowSize'),
+            labelText: message.get('bookmarkFormDisplayVisualShadowSize'),
             value: bookmarkData.link.display.visual.shadow.size,
             defaultValue: bookmarkDefault.display.visual.shadow.size,
             min: bookmarkMinMax.display.visual.shadow.size.min,
@@ -330,7 +330,7 @@ export const BookmarkForm = function({
           object: bookmarkData.link,
           path: 'display.name.show',
           id: 'display-name-show',
-          labelText: message('bookmarkFormDisplayNameShow'),
+          labelText: message.get('bookmarkFormDisplayNameShow'),
           action: () => {
             this.disable();
             this.collapse.display.name.update();
@@ -342,8 +342,8 @@ export const BookmarkForm = function({
           path: 'display.name.text',
           id: 'display-name-text',
           value: bookmarkData.link.display.name.text,
-          placeholder: message('bookmarkFormDisplayNameTextPlaceholder'),
-          labelText: message('bookmarkFormDisplayNameTextLabel'),
+          placeholder: message.get('bookmarkFormDisplayNameTextPlaceholder'),
+          labelText: message.get('bookmarkFormDisplayNameTextLabel'),
           srOnly: true,
           action: () => {
             this.preview.update.assemble(bookmarkData);
@@ -353,7 +353,7 @@ export const BookmarkForm = function({
           object: bookmarkData.link,
           path: 'display.name.size',
           id: 'display-name-size',
-          labelText: message('bookmarkFormDisplayNameSize'),
+          labelText: message.get('bookmarkFormDisplayNameSize'),
           value: bookmarkData.link.display.name.size,
           defaultValue: bookmarkDefault.display.name.size,
           min: bookmarkMinMax.display.name.size.min,
@@ -368,8 +368,8 @@ export const BookmarkForm = function({
       by: new Control_radio({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'accent-by-theme', labelText: message('bookmarkFormAccentByThemeLabel'), description: message('bookmarkFormAccentByThemeDescription'), value: 'theme' },
-          { id: 'accent-by-custom', labelText: message('bookmarkFormAccentByCustomLabel'), description: message('bookmarkFormAccentByCustomDescription'), value: 'custom' }
+          { id: 'accent-by-theme', labelText: message.get('bookmarkFormAccentByThemeLabel'), description: message.get('bookmarkFormAccentByThemeDescription'), value: 'theme' },
+          { id: 'accent-by-custom', labelText: message.get('bookmarkFormAccentByCustomLabel'), description: message.get('bookmarkFormAccentByCustomDescription'), value: 'custom' }
         ],
         groupName: 'accent-by',
         path: 'accent.by',
@@ -383,7 +383,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'accent',
         id: 'accent',
-        labelText: message('bookmarkFormAccentColor'),
+        labelText: message.get('bookmarkFormAccentColor'),
         srOnly: true,
         defaultValue: bookmarkDefault.accent.rgb,
         minMaxObject: bookmarkMinMax,
@@ -397,8 +397,8 @@ export const BookmarkForm = function({
       by: new Control_radio({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'color-by-theme', labelText: message('bookmarkFormColorByThemeLabel'), description: message('bookmarkFormColorByThemeDescription'), value: 'theme' },
-          { id: 'color-by-custom', labelText: message('bookmarkFormColorByCustomLabel'), description: message('bookmarkFormColorByCustomDescription'), value: 'custom' }
+          { id: 'color-by-theme', labelText: message.get('bookmarkFormColorByThemeLabel'), description: message.get('bookmarkFormColorByThemeDescription'), value: 'theme' },
+          { id: 'color-by-custom', labelText: message.get('bookmarkFormColorByCustomLabel'), description: message.get('bookmarkFormColorByCustomDescription'), value: 'custom' }
         ],
         groupName: 'color-by',
         path: 'color.by',
@@ -412,7 +412,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'color',
         id: 'color',
-        labelText: message('bookmarkFormColorColor'),
+        labelText: message.get('bookmarkFormColorColor'),
         srOnly: true,
         defaultValue: bookmarkDefault.color.rgb,
         minMaxObject: bookmarkMinMax,
@@ -425,7 +425,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'color.opacity',
         id: 'color-opacity',
-        labelText: message('bookmarkFormColorOpacity'),
+        labelText: message.get('bookmarkFormColorOpacity'),
         value: bookmarkData.link.color.opacity,
         defaultValue: bookmarkDefault.color.opacity,
         min: bookmarkMinMax.color.opacity.min,
@@ -440,8 +440,8 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'background.show',
         id: 'background-show',
-        labelText: message('bookmarkFormBackgroundShowLabel'),
-        description: message('bookmarkFormBackgroundShowDescription'),
+        labelText: message.get('bookmarkFormBackgroundShowLabel'),
+        description: message.get('bookmarkFormBackgroundShowDescription'),
         action: () => {
           this.collapse.background.update();
           this.disable();
@@ -451,8 +451,8 @@ export const BookmarkForm = function({
       type: new Control_radio({
         object: bookmarkData.link,
         radioGroup: [
-          { id: 'background-type-image', labelText: message('bookmarkFormBackgroundTypeImage'), value: 'image' },
-          { id: 'background-type-video', labelText: message('bookmarkFormBackgroundTypeVideo'), value: 'video' }
+          { id: 'background-type-image', labelText: message.get('bookmarkFormBackgroundTypeImage'), value: 'image' },
+          { id: 'background-type-video', labelText: message.get('bookmarkFormBackgroundTypeVideo'), value: 'video' }
         ],
         groupName: 'background-type',
         path: 'background.type',
@@ -465,7 +465,7 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'background.opacity',
         id: 'background-opacity',
-        labelText: message('bookmarkFormBackgroundOpacity'),
+        labelText: message.get('bookmarkFormBackgroundOpacity'),
         value: bookmarkData.link.background.opacity,
         defaultValue: bookmarkDefault.background.opacity,
         min: bookmarkMinMax.background.opacity.min,
@@ -480,8 +480,8 @@ export const BookmarkForm = function({
           path: 'background.image.url',
           id: 'background-image-url',
           value: bookmarkData.link.background.image.url,
-          placeholder: message('bookmarkFormBackgroundImagePlaceholder'),
-          labelText: message('bookmarkFormBackgroundImageLabel'),
+          placeholder: message.get('bookmarkFormBackgroundImagePlaceholder'),
+          labelText: message.get('bookmarkFormBackgroundImageLabel'),
           srOnly: true,
           action: () => {
             this.preview.update.assemble(bookmarkData);
@@ -494,8 +494,8 @@ export const BookmarkForm = function({
           path: 'background.video.url',
           id: 'background-video-url',
           value: bookmarkData.link.background.video.url,
-          placeholder: message('bookmarkFormBackgroundVideoPlaceholder'),
-          labelText: message('bookmarkFormBackgroundVideoLabel'),
+          placeholder: message.get('bookmarkFormBackgroundVideoPlaceholder'),
+          labelText: message.get('bookmarkFormBackgroundVideoLabel'),
           srOnly: true,
           action: () => {
             this.preview.update.assemble(bookmarkData);
@@ -507,7 +507,7 @@ export const BookmarkForm = function({
       object: bookmarkData.link,
       path: 'border',
       id: 'border',
-      labelText: message('bookmarkFormBorder'),
+      labelText: message.get('bookmarkFormBorder'),
       value: bookmarkData.link.border,
       defaultValue: bookmarkDefault.border,
       min: bookmarkMinMax.border.min,
@@ -521,8 +521,8 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'shape.wide',
         id: 'shape-wide',
-        labelText: message('bookmarkFormShapeWideLabel'),
-        description: message('bookmarkFormShapeWideDescription'),
+        labelText: message.get('bookmarkFormShapeWideLabel'),
+        description: message.get('bookmarkFormShapeWideDescription'),
         action: () => {
           this.preview.update.assemble(bookmarkData);
         }
@@ -531,8 +531,8 @@ export const BookmarkForm = function({
         object: bookmarkData.link,
         path: 'shape.tall',
         id: 'shape-tall',
-        labelText: message('bookmarkFormShapeTallLabel'),
-        description: message('bookmarkFormShapeTallDescription'),
+        labelText: message.get('bookmarkFormShapeTallLabel'),
+        description: message.get('bookmarkFormShapeTallDescription'),
         action: () => {
           this.preview.update.assemble(bookmarkData);
         }
@@ -544,8 +544,8 @@ export const BookmarkForm = function({
     destination: new Control_radio({
       object: bookmarkData,
       radioGroup: [
-        { id: 'group-destination-existing', labelText: message('bookmarkFormGroupDestinationExisting'), value: 'existing' },
-        { id: 'group-destination-new', labelText: message('bookmarkFormGroupDestinationNew'), value: 'new' }
+        { id: 'group-destination-existing', labelText: message.get('bookmarkFormGroupDestinationExisting'), value: 'existing' },
+        { id: 'group-destination-new', labelText: message.get('bookmarkFormGroupDestinationNew'), value: 'new' }
       ],
       groupName: 'group.destination',
       path: 'group.destination',
@@ -558,12 +558,12 @@ export const BookmarkForm = function({
       path: 'group.name',
       id: 'group-name',
       value: bookmarkData.group.name,
-      placeholder: message('bookmarkFormGroupNamePlaceholder'),
-      labelText: message('bookmarkFormGroupNameLabel'),
+      placeholder: message.get('bookmarkFormGroupNamePlaceholder'),
+      labelText: message.get('bookmarkFormGroupNameLabel'),
       srOnly: true
     }),
     random: new Button({
-      text: message('bookmarkFormGroupRandom'),
+      text: message.get('bookmarkFormGroupRandom'),
       style: ['line'],
       func: () => {
         bookmarkData.group.name = randomString({ adjectivesCount: randomNumber(1, 3) });
@@ -575,7 +575,7 @@ export const BookmarkForm = function({
         object: bookmarkData,
         path: 'position.destination.group',
         id: 'position-destination-group',
-        labelText: message('bookmarkFormGroupPositionGroup'),
+        labelText: message.get('bookmarkFormGroupPositionGroup'),
         srOnly: true,
         option: (bookmark.all.length > 0) ? this.selectOption.group() : [],
         selected: bookmarkData.position.destination.group,
@@ -601,7 +601,7 @@ export const BookmarkForm = function({
         object: bookmarkData,
         path: 'position.destination.item',
         id: 'position-destination-item',
-        labelText: message('bookmarkFormGroupPositionItem'),
+        labelText: message.get('bookmarkFormGroupPositionItem'),
         option: (bookmark.all.length > 0) ? this.selectOption.item() : [],
         selected: bookmarkData.position.destination.item
       })
@@ -614,10 +614,10 @@ export const BookmarkForm = function({
     object: bookmarkData.propagate,
     path: 'display',
     id: 'apply-to-all-display',
-    labelText: message('bookmarkFormPropagateVisualLabel'),
+    labelText: message.get('bookmarkFormPropagateVisualLabel'),
     description: [
-      message('bookmarkFormPropagateVisualDescriptionPara1'),
-      message('bookmarkFormPropagateVisualDescriptionPara2')
+      message.get('bookmarkFormPropagateVisualDescriptionPara1'),
+      message.get('bookmarkFormPropagateVisualDescriptionPara2')
     ]
   });
 
@@ -630,10 +630,10 @@ export const BookmarkForm = function({
     object: bookmarkData.propagate,
     path: 'layout',
     id: 'apply-to-all-layout',
-    labelText: message('bookmarkFormPropagateLayoutLabel'),
+    labelText: message.get('bookmarkFormPropagateLayoutLabel'),
     description: [
-      message('bookmarkFormPropagateLayoutDescriptionPara1'),
-      message('bookmarkFormPropagateLayoutDescriptionPara2')
+      message.get('bookmarkFormPropagateLayoutDescriptionPara1'),
+      message.get('bookmarkFormPropagateLayoutDescriptionPara2')
     ]
   });
 
@@ -646,10 +646,10 @@ export const BookmarkForm = function({
     object: bookmarkData.propagate,
     path: 'theme',
     id: 'apply-to-all-theme',
-    labelText: message('bookmarkFormPropagateThemeLabel'),
+    labelText: message.get('bookmarkFormPropagateThemeLabel'),
     description: [
-      message('bookmarkFormPropagateThemeDescriptionPara1'),
-      message('bookmarkFormPropagateThemeDescriptionPara2')
+      message.get('bookmarkFormPropagateThemeDescriptionPara1'),
+      message.get('bookmarkFormPropagateThemeDescriptionPara2')
     ]
   });
 
@@ -664,17 +664,17 @@ export const BookmarkForm = function({
         visual: {
           shadow: {
             size: new Control_helperText({
-              text: [message('bookmarkFormDisplayVisualShadowHelperPara1')]
+              text: [message.get('bookmarkFormDisplayVisualShadowHelperPara1')]
             })
           }
         }
       },
       background: {
         image: new Control_helperText({
-          text: [message('bookmarkFormBackgroundImageHelperPara1')]
+          text: [message.get('bookmarkFormBackgroundImageHelperPara1')]
         }),
         video: new Control_helperText({
-          text: [message('bookmarkFormBackgroundVideoHelperPara1')]
+          text: [message.get('bookmarkFormBackgroundVideoHelperPara1')]
         })
       }
     }
@@ -771,8 +771,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node(`h2:${message('bookmarkFormSectionVisualHeading')}`),
-              node(`p:${message('bookmarkFormSectionVisualDescription')}`)
+              node(`h2:${message.get('bookmarkFormSectionVisualHeading')}`),
+              node(`p:${message.get('bookmarkFormSectionVisualDescription')}`)
             ])
           ]
         }),
@@ -801,8 +801,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node(`h2:${message('bookmarkFormSectionAddressHeading')}`),
-              complexNode({ tag: 'p', text: message('bookmarkFormSectionAddressDescription'), complexText: true })
+              node(`h2:${message.get('bookmarkFormSectionAddressHeading')}`),
+              complexNode({ tag: 'p', text: message.get('bookmarkFormSectionAddressDescription'), complexText: true })
             ])
           ]
         }),
@@ -825,8 +825,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node(`h2:${message('bookmarkFormSectionPositionHeading')}`),
-              node(`p:${message('bookmarkFormSectionPositionDescription')}`)
+              node(`h2:${message.get('bookmarkFormSectionPositionHeading')}`),
+              node(`p:${message.get('bookmarkFormSectionPositionDescription')}`)
             ])
           ]
         }),
@@ -870,8 +870,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node(`h2:${message('bookmarkFormSectionLayoutHeading')}`),
-              node(`p:${message('bookmarkFormSectionLayoutDescription')}`)
+              node(`h2:${message.get('bookmarkFormSectionLayoutHeading')}`),
+              node(`p:${message.get('bookmarkFormSectionLayoutDescription')}`)
             ])
           ]
         }),
@@ -917,8 +917,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node(`h2:${message('bookmarkFormSectionThemeHeading')}`),
-              node(`p:${message('bookmarkFormSectionThemeDescription')}`)
+              node(`h2:${message.get('bookmarkFormSectionThemeHeading')}`),
+              node(`p:${message.get('bookmarkFormSectionThemeDescription')}`)
             ])
           ]
         }),
@@ -1055,23 +1055,23 @@ export const BookmarkForm = function({
 
   this.tab = new Tab({
     group: [{
-      tabText: message('bookmarkFormTabVisual'),
+      tabText: message.get('bookmarkFormTabVisual'),
       area: this.area.visual(),
       active: true
     }, {
-      tabText: message('bookmarkFormTabAddress'),
+      tabText: message.get('bookmarkFormTabAddress'),
       area: this.area.address(),
       active: false
     }, {
-      tabText: message('bookmarkFormTabPosition'),
+      tabText: message.get('bookmarkFormTabPosition'),
       area: this.area.position(),
       active: false
     }, {
-      tabText: message('bookmarkFormTabLayout'),
+      tabText: message.get('bookmarkFormTabLayout'),
       area: this.area.layout(),
       active: false
     }, {
-      tabText: message('bookmarkFormTabTheme'),
+      tabText: message.get('bookmarkFormTabTheme'),
       area: this.area.theme(),
       active: false
     }]

@@ -1,0 +1,2069 @@
+{
+  "appName": {
+    "message": "nightTab"
+  },
+  "appShortName": {
+    "message": "nightTab"
+  },
+  "appDescription": {
+    "message": "Нейтральна сторінка нової вкладки з акцентом вибраного кольору. Налаштуйте макет, стиль, фон і закладки в nightTab."
+  },
+  "menuNavThemeLabel": {
+    "message": "Тема"
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "Попередньо встановлені"
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "Збережено"
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "Стиль"
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "Колір"
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "Акцент"
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "Шрифт"
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "Радіус"
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "Тінь"
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "Тінь"
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "Непрозорість"
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "Фон"
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "Макет"
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "Заголовок"
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "Закладка"
+  },
+  "menuNavLayoutLabel": {
+    "message": "Макет"
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "Масштабування"
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "Площа"
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "Прокладка"
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "Жолоб"
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "Вирівнювання"
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "Сторінка"
+  },
+  "menuNavHeaderLabel": {
+    "message": "Заголовок"
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "Вирівнювання"
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "Привітання"
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "Перехідні слова"
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "Годинник"
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "Дата"
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "Пошук"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "Закладка"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "Генеральний"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "Стиль"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "Орієнтація"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "Сортувати"
+  },
+  "menuNavGroupLabel": {
+    "message": "Група"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "Вирівнювання"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "Ім'я"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "Згорнути"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "Панель інструментів"
+  },
+  "menuNavToolbarLabel": {
+    "message": "Панель інструментів"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "Розмір"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "Місцезнаходження"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "Позиція"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "Елементи керування"
+  },
+  "menuNavDataLabel": {
+    "message": "Дані"
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "Відновлення"
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "Резервне копіювання"
+  },
+  "menuNavDataSubNavClear": {
+    "message": "Ясно"
+  },
+  "menuNavLanguageLabel": {
+    "message": "Мову"
+  },
+  "menuNavSupportLabel": {
+    "message": "Підтримка"
+  },
+  "menuNavCoffeeLabel": {
+    "message": "кава"
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}"
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "Застосування попереднього налаштування замінить поточний колір, акцент, шрифт, стиль, радіус, тінь, відтінок і фон."
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "Збереження теми запише поточний колір, акцент, шрифт, стиль, непрозорість, радіус, тінь, відтінок і фон."
+  },
+  "menuContentThemeSavedSave": {
+    "message": "Зберегти поточну тему"
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "Редагувати збережені теми"
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "Темний режим"
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "Світлий режим"
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "Автоматичний"
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "Дотримуйтесь системного режиму Світлий або Темний."
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "Фон, закладки та модали використовують відтінки зліва."
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "Елементи тексту та форми використовують відтінки справа."
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "Щоб отримати світлий вигляд, перейдіть до стилю світла, а потім виберіть Основний колір. І навпаки для темного вигляду."
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "Основний колір"
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "Насичення"
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "Діапазон контрастності"
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "Контрастний початок"
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "Контрастний кінець"
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "Перемістіть елементи керування діапазоном контрастності близько один до одного, щоб виглядати приглушеним."
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "Перемістіть елементи керування діапазоном контрастності далеко один від одного, щоб отримати чіткий яскравий вигляд."
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "Сірий"
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "червоний"
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "Помаранчевий"
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "Жовтий"
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "Вапно"
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "Зелений"
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "Аква"
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "блакитний"
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "Чирково-зелений"
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "Синій"
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "фіолетовий"
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "Пурпурний"
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "Фуксія"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "Супер додаткове світло"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "Додаткове світло"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "Світло"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "Супер надзвичайно темний"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "Дуже темний"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "Темний"
+  },
+  "menuContentThemeAccentColor": {
+    "message": "Акцентний колір"
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "Випадковий колір акценту при завантаженні\/оновленні"
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "Будь-який"
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "Світло"
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "Темний"
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "Пастель"
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "Насичений"
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "Рандомізуйте зараз"
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "Автоматична зміна відтінку акценту"
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "Затримка зміни"
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "Змінити кроки"
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "Будьте обережні, оскільки швидко змінний відтінок Accent може спричинити проблеми з продуктивністю."
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "Автоматична зміна відтінку акценту не працюватиме, якщо колір акценту є сірим або чорним."
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "Шрифт дисплея"
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "Назва шрифту Google"
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "Використовуйте шрифт Google, щоб налаштувати годинник, дату, назви груп і літери закладок."
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "Знайдіть шрифт Google"
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "Додайте назву шрифту, як вона відображається у Google Fonts, включаючи великі літери та пробіли, наприклад: введіть «Fredoka One» або «Kanit»."
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "Очистіть поле, щоб використовувати шрифт за замовчуванням «Fjalla One»."
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "Вага шрифту"
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "Світло"
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "Звичайний"
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "Жирний"
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "Не всі шрифти підтримують усі ваги. Перегляньте сторінку шрифтів Google, щоб дізнатися, які з них доступні."
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "Нормальний"
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "Курсив"
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "Шрифт інтерфейсу користувача"
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "Назва шрифту Google"
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "Використовуйте шрифт Google, щоб налаштувати назву закладки, URL-адресу та елементи форми."
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "Знайдіть шрифт Google"
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "Додайте назву шрифту, як вона відображається у Google Fonts, включаючи великі літери та пробіли, наприклад: введіть \"Roboto\", \"Source Sans Pro\" або \"Noto Sans\"."
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "Очистіть поле, щоб використовувати шрифт за замовчуванням «Open Sans»."
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "Вага шрифту"
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "Світло"
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "Звичайний"
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "Жирний"
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "Не всі шрифти підтримують усі ваги. Перегляньте сторінку шрифтів Google, щоб дізнатися, які з них доступні."
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "Нормальний"
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "Курсив"
+  },
+  "menuContentThemeRadius": {
+    "message": "Кутовий радіус"
+  },
+  "menuContentThemeShadow": {
+    "message": "Розмір тіні"
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "Непрозорість тіні"
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "Розмиття тіні"
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "Підтримується не всіма браузерами."
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "Вся непрозорість"
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "Змініть непрозорість панелі пошуку, закладок, елементів керування групою та панелі інструментів."
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "Непрозорість також можна змінити під час редагування окремих закладок."
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "Панель інструментів"
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "Закладка"
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "Вікно пошуку"
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "Група інструментів"
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "Фон за темою"
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "Використовуйте колір фону, визначений темою."
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "Фон за акцентом"
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "Використовуйте колір акценту для фону."
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "Індивідуальний колір"
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "Градієнт"
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "Зображення"
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "Відео"
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "Колір фону"
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "Кут градієнта фону"
+  },
+  "menuContentThemeBackgroundGradientStart": {
+    "message": "Початок градієнта фону"
+  },
+  "menuContentThemeBackgroundGradientEnd": {
+    "message": "Закінчення градієнта фону"
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "Місцеві зображення більше не можна використовувати. Зображення мають бути розміщені десь в Інтернеті."
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "Чому це змінилося?"
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "Додайте кілька URL-адрес, розділених пробілами або в нових рядках, щоб отримати випадкове фонове зображення під час завантаження."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "Unsplash можна використовувати для випадкових зображень, наприклад:"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?ніч, день, небо"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "Змініть параметри після ...\/random\/, щоб отримати додаткові параметри. Час завантаження може відрізнятися."
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "Розмиття"
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "Відтінки сірого"
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "Масштаб"
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "Акцент"
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "Непрозорість"
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "Віньєтка"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "Початок і кінець тіні"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "Кінець тіні"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "Початок тіні"
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "URL-адреси сторінок YouTube не можна використовувати."
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "Як створити посилання на відеофайл."
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/video.mp4"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "Фонове відео підтримує лише пряму URL-адресу відеофайлу. Підтримує формати MP4 і WebM."
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "Додайте кілька URL-адрес, розділених пробілами або в нових рядках, для випадкового фонового відео під час завантаження."
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "Розмиття"
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "Відтінки сірого"
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "Масштаб"
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "Акцент"
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "Непрозорість"
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "Віньєтка"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "Початок і кінець тіні"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "Кінець тіні"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "Початок тіні"
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "Колір фону макета"
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "Прозорий"
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "Немає кольору фону за макетом."
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "Індивідуальний колір"
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "Використовуйте власний колір позаду макета."
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "Колір фону макета"
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "Непрозорість фону"
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "Розмиття фону"
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "Підтримується не всіма браузерами."
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "Роздільник між заголовком та областю закладок"
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "Колір фону заголовка"
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "Прозорий"
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "Немає кольору фону позаду області заголовка."
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "Індивідуальний колір"
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "Використовуйте власний колір позаду області заголовка."
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "Колір фону заголовка"
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "Непрозорість фону"
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "Колір фону закладки"
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "Прозорий"
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "Немає кольору фону за областю закладок."
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "Індивідуальний колір"
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "Використовуйте власний колір позаду області закладок."
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "Колір фону закладки"
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "Непрозорість фону"
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "Закладка кордону"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "Межу закладки також можна змінити під час редагування окремих закладок."
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "Колір межі визначається акцентом, який також можна змінити під час редагування окремих закладок."
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "Додайте унікальний акцент до кожної закладки"
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "Видаліть усі заміни акцентів"
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "Закладка спеціального акценту також можна змінити під час редагування окремих закладок."
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "Глобальний розмір"
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "Ширина області макету"
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "Ширина області заголовка"
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "Вирівнювання області заголовка"
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "Ліворуч"
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "Центр"
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "Правильно"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "Ефекти можуть бути невидимими, якщо область заголовка має повну ширину."
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "Доступно лише тоді, коли «Напрямок макета» має значення «Вертикальний» і відображаються елементи заголовка."
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "Ширина області закладки"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "Вирівнювання області закладок"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "Ліворуч"
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "Центр"
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "Правильно"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "Ефекти можуть бути невидимими, якщо область закладок має повну ширину."
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "Доступно лише тоді, коли «Напрямок макета» має значення «Вертикальний» і відображаються елементи заголовка."
+  },
+  "menuContentLayoutPadding": {
+    "message": "Пробіл навколо заголовка та області закладок"
+  },
+  "menuContentLayoutGutter": {
+    "message": "Пробіл між елементами заголовка та закладки"
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "Вирівнювання території"
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "Зліва вгорі"
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "Верхній центр"
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "Верхній правий"
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "Центр ліворуч"
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "Центр Центр"
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "Центр праворуч"
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "Внизу зліва"
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "Нижній центр"
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "Внизу справа"
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "Вирівняти по горизонталі"
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "Складіть верхній колонтитул і закладки в один ряд."
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "Вирівняти по вертикалі"
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "Розмістіть заголовок і закладки в стовпці один над одним."
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "Заголовок, а потім Закладки"
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "Упорядкуйте, щоб область заголовка відображалася перед областю закладок."
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "Закладки, а потім заголовок"
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "Упорядкуйте, щоб область закладок з’явилася перед областю заголовка."
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "Назва"
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "Нова вкладка"
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "URL-адреса значка Favicon"
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https:\/\/www.example.com\/favicon.svg"
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "Підтримується не всіма браузерами."
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "Прокрутки"
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "Авто"
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "Тонкий"
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "Прихований"
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "Підтримується не всіма браузерами."
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "Прокрутіть кінець"
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "Розмийте фонове зображення або відео"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "Фонове зображення або відео розмиватиметься, якщо їх прокрутити донизу сторінки."
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "Розмиття зображення або відео можна знайти в розділі Фон теми."
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "Вирівнювання елементів заголовка"
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "Ліворуч"
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "Центр"
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "Правильно"
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "Ефекти можуть бути невидимими, якщо розмір вікна пошуку встановлено на Авто і збільшується, щоб заповнити доступний простір."
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "Показати привітання"
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "Розмір"
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "Нова лінія"
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "Формулювання"
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"Добрий ранок...\""
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"Здрастуйте...\""
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"Привіт...\""
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "Жодного"
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "Корисно для відображення лише імені."
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "На замовлення"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "Використовуйте власне привітання."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "За замовчуванням значення \"Доброго ранку...\", якщо не заповнено."
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "Персональний текст привітання"
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "Привіт"
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "Ім'я"
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "Псевдонім, псевдонім або ім'я супергероя"
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "Показати перехідні слова"
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "Доступно лише тоді, коли відображається дата або час."
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "Формулювання"
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "\"Час і дата\""
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"Його\""
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "Розмір"
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "Нова лінія"
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "Показати години"
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "Як число"
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "Як слово"
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "Показати хвилини"
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "Як число"
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "Як слово"
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "Показати секунди"
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "Як число"
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "Як слово"
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "Показати роздільник"
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "Символ-роздільник"
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":"
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "24 години"
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "ДООБІДУ, ПІСЛЯ ОБІДУ"
+  },
+  "menuContentHeaderClockSize": {
+    "message": "Розмір"
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "Нова лінія"
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "День шоу"
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "Як число"
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "Як слово"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "Початок тижня"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "понеділок"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "неділя"
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "Довжина слова"
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "Довгота"
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "Короткий"
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "Показати дату"
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "Як число"
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "Як слово"
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "Порядкові номери"
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "Показати місяць"
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "Як число"
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "Як слово"
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "Порядкові номери"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "Довжина слова"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "Довгота"
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "Короткий"
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "Показати рік"
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "Як число"
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "Як слово"
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "Показати роздільник"
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "Символ-роздільник"
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "\/"
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "Формат"
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "Дата \/ місяць"
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "Місяць \/ число"
+  },
+  "menuContentHeaderDateSize": {
+    "message": "Розмір"
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "Нова лінія"
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "Показати пошук"
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "Ширина поля пошуку"
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "Авто ширина"
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "Вікно пошуку розшириться, щоб найкраще відповідати доступному простору."
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "Спеціальна ширина"
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "Визначте ширину поля пошуку в області заголовка."
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "Ширина"
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "Розмір"
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "Нова лінія"
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "Пошукова система"
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "На замовлення"
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "Ім'я"
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "Назва пошукової системи"
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https:\/\/"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "Введіть веб-адресу з параметрами пошуку, наприклад: \"https:\/\/vimeo.com\/search?q=\""
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} додасть пошуковий термін, введений у вікно пошуку в кінці URL-адреси вище."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "Атрибут імені"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "q"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "Встановлює атрибут імені в полі введення Пошук."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "Це визначає ім’я, яке передається пошуковій системі під час подання. Якщо не впевнені, залиште пустим."
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "Шукати вирівнювання тексту"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "Ліворуч"
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "Центр"
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "Правильно"
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "Відкрийте результати пошуку на новій вкладці"
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "Показати закладки"
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "Показати URL-адресу при наведенні курсора"
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "Показати рядок закладки"
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "Показати тінь при наведенні закладки"
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "Ефекти можуть бути невидимими, якщо для Теми Тінь встановлено значення 0."
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "Зростати при наведенні курсора в закладки"
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "Відкрийте закладки в новій вкладці"
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "Розмір закладки"
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "Блокувати"
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "Закладка квадратної форми."
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "Список"
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "Короткі та широкі плитки закладки."
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "Верхній"
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "Нижня частина"
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "Відображайте URL-адресу та елементи керування у верхній або нижній частині плитки закладок."
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "Листом"
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "За значком"
+  },
+  "menuContentBookmarkSortName": {
+    "message": "По імені"
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "Вирівнювання області деталей групи"
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "Ліворуч"
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "Центр"
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "Правильно"
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "Замовлення деталей групи"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "Деталі групи, потім Закладки"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "Упорядкуйте, щоб область відомостей про групу відображалася перед областю закладок."
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "Закладки, а потім деталі групи"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "Упорядкуйте, щоб область закладок з’являлася перед областю відомостей про групу."
+  },
+  "menuContentGroupNameSize": {
+    "message": "Розмір імені"
+  },
+  "menuContentGroupNameShow": {
+    "message": "Покажи все"
+  },
+  "menuContentGroupNameHide": {
+    "message": "Приховати все"
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "Назви груп також можна змінити шляхом редагування окремих груп."
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "Відкрийте всі групи"
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "Згорнути всі групи"
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "Розмір панелі інструментів групи"
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "Контроль згортання групи"
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "Покажи все"
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "Приховати все"
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "Кнопку згортання панелі інструментів групи також можна змінити, редагуючи окремі групи."
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "Група Відкрити всі елементи керування"
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "Покажи все"
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "Приховати все"
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "Кнопку «Відкрити всі» панелі інструментів групи також можна змінити шляхом редагування окремих груп."
+  },
+  "menuContentToolbarSize": {
+    "message": "Розмір панелі інструментів"
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "У кутку"
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "У заголовку"
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "Розташуйте панель інструментів у заголовку або в кутку вікна."
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "Нова лінія"
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "Доступно лише тоді, коли панель інструментів розташована всередині заголовка."
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "Позиція панелі інструментів"
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "Зліва вгорі"
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "Верхній правий"
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "Внизу зліва"
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "Внизу справа"
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "Розташуйте панель інструментів в одному з чотирьох кутів вікна."
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "Доступно лише тоді, коли панель інструментів розташована в кутку."
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "Показати керування акцентом"
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "Показати Додати елемент керування"
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "Показати елемент керування \"Редагувати\"."
+  },
+  "menuContentDataRestoreFile": {
+    "message": "Імпорт із файлу"
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "Імпорт із буфера обміну"
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "Відновіть раніше експортовану резервну копію {appName}"
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "Або перетягніть сюди файл резервної копії {appName}"
+  },
+  "menuContentDataBackupFile": {
+    "message": "Експортувати дані"
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "Копіювати в буфер обміну"
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "Завантажте резервну копію своїх закладок і налаштувань {appName}"
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "Цей файл пізніше можна імпортувати на той чи інший пристрій."
+  },
+  "menuContentDataClearAll": {
+    "message": "Очистити всі дані"
+  },
+  "menuContentDataClearPartial": {
+    "message": "Очистити все, крім закладок"
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "Ви втратите закладки, очистивши всі дані."
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "Резервне копіювання даних"
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "Очистіть усі дані, щоб скинути {appName} до стану за умовчанням."
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "Крім того, можна стерти всі налаштування, але зберегти поточні закладки та групи."
+  },
+  "menuContentLanguageSelect": {
+    "message": "Мову"
+  },
+  "menuContentLanguageSystem": {
+    "message": "Використовуйте мову системи"
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "Знайшли неправильний переклад?"
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "Допоможіть перекласти {appName}"
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "Застосування налаштувань закладок до всіх"
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "Підтримка браузера"
+  },
+  "menuContentSupportPageCookies": {
+    "message": "Файли cookie та кеш"
+  },
+  "menuContentSupportPageData": {
+    "message": "Резервне копіювання та відновлення даних"
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "Місцеве фонове зображення"
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "Захищені URL-адреси"
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "Відновлення налаштувань і закладок"
+  },
+  "menuContentSupportPageResetting": {
+    "message": "Скидання при відкритті браузера"
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "Поважаючи вашу конфіденційність"
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "Встановлення фонового відео або зображення"
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "Установлення {appName} як домашньої сторінки Firefox"
+  },
+  "menuContentSupportPara": {
+    "message": "Щоб отримати додаткову підтримку або відгук:"
+  },
+  "menuContentSupportLink1": {
+    "message": "Подати питання."
+  },
+  "menuContentSupportLink2": {
+    "message": "Перевірте Вікі."
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} безкоштовний, вітаємо подяку у вигляді кави!"
+  },
+  "menuContentCoffeeButton": {
+    "message": "Купи мені кави"
+  },
+  "menuContentAppPara1": {
+    "message": "Поділіться своїми налаштуваннями зі спільнотою."
+  },
+  "menuContentAppLink1": {
+    "message": "Знайдено на Reddit \/r\/ {appName} ."
+  },
+  "menuContentAppPara2": {
+    "message": "Цей проект є відкритим вихідним кодом."
+  },
+  "menuContentAppLink2": {
+    "message": "Знайдено на GitHub."
+  },
+  "menuContentAppLink3": {
+    "message": "Загальна публічна ліцензія GNU версії 3.0."
+  },
+  "bookmarkTileControlLeft": {
+    "message": "Перемістити цю закладку ліворуч"
+  },
+  "bookmarkTileControlSort": {
+    "message": "Перетягніть закладку, щоб змінити порядок"
+  },
+  "bookmarkTileControlRight": {
+    "message": "Перемістіть цю закладку вправо"
+  },
+  "bookmarkTileControlEdit": {
+    "message": "Редагувати цю закладку"
+  },
+  "bookmarkTileControlRemove": {
+    "message": "Видаліть цю закладку"
+  },
+  "bookmarkAddHeading": {
+    "message": "Додати нову закладку"
+  },
+  "bookmarkAddSuccessText": {
+    "message": "Додати"
+  },
+  "bookmarkAddCancelText": {
+    "message": "Скасувати"
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "Видалити"
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "Видалити закладку без імені"
+  },
+  "bookmarkRemoveContent": {
+    "message": "Ви впевнені, що хочете видалити цю закладку? Це не може бути скасовано."
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "Видалити"
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "Скасувати"
+  },
+  "bookmarkEditHeadingName": {
+    "message": "Редагувати"
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "Редагувати безіменну закладку"
+  },
+  "bookmarkEditSuccessText": {
+    "message": "Зберегти"
+  },
+  "bookmarkEditCancelText": {
+    "message": "Скасувати"
+  },
+  "bookmarkFormTabVisual": {
+    "message": "Візуальне зображення та назва"
+  },
+  "bookmarkFormTabAddress": {
+    "message": "Адреса"
+  },
+  "bookmarkFormTabPosition": {
+    "message": "Позиція"
+  },
+  "bookmarkFormTabLayout": {
+    "message": "Макет"
+  },
+  "bookmarkFormTabTheme": {
+    "message": "Тема"
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "Візуальне зображення та назва"
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "Відображати літери, піктограму, зображення та назву на цій плитці закладки."
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "Адреса"
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "Обов'язково використовуйте повну URL-адресу та включіть \"https:\/\/...\""
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "Позиція"
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "Група для розміщення цієї закладки."
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "Макет"
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "Змініть положення, масштаб і орієнтацію візуального елемента та імені."
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "Тема"
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "Замінити тему та колір акценту."
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/"
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "Вирівнювання візуального елемента та імені"
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "Зліва вгорі"
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "Верхній центр"
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "Верхній правий"
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "Центр ліворуч"
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "Центр Центр"
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "Центр праворуч"
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "Внизу зліва"
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "Нижній центр"
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "Внизу справа"
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "Вертикальні"
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "Складіть візуальний елемент і назвіть один над одним."
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "Горизонтальний"
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "Розташуйте візуальний елемент і назву поруч."
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "Візуальний елемент потім назва"
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "Помістіть візуальний елемент перед назвою."
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "Дайте назву візуальному елементу"
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "Помістіть назву перед візуальним елементом."
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "Поворот"
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "Налаштуйте положення візуального елемента"
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "Горизонтальний"
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "Вертикальні"
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "Жолоб"
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "Показати візуальний елемент"
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "Покажіть літери, піктограму або зображення на цьому шестикутнику закладки."
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "лист"
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "значок"
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "Зображення"
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "Візуальний розмір"
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "Лист закладки"
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "Е"
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "Значок закладки"
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "Бренди або значки FontAwesome"
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "Видалити значок"
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "Зображення закладки"
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "Візуальна тінь"
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "Візуальна тінь застосовується лише до літери чи значка."
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "Показати ім'я"
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "Назва закладки"
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "Приклад"
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "Розмір імені"
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "Тематичний акцент"
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "Використовуйте акцент, визначений темою."
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "Спеціальний акцент"
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "Замінити акцент теми."
+  },
+  "bookmarkFormAccentColor": {
+    "message": "Акцент"
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "Колір теми"
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "Використовуйте колір, визначений темою."
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "Індивідуальний колір"
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "Замінити колір теми."
+  },
+  "bookmarkFormColorColor": {
+    "message": "Колір"
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "Непрозорість"
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "Показати фон"
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "Відобразити фон зображення або відео на цій плитці закладки."
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "Зображення"
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "Відео"
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "Непрозорість"
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "URL-адреса фонового зображення"
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "Фонове зображення підтримує лише пряму URL-адресу файлу зображення."
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "URL-адреса фонового відео"
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https:\/\/www.example.com\/video.mp4"
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "Фонове відео підтримує лише пряму URL-адресу відеофайлу. Підтримує формати MP4 і WebM."
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "URL-адреси сторінок YouTube не можна використовувати."
+  },
+  "bookmarkFormBorder": {
+    "message": "Кордон"
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "Широка плитка"
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "Плитка закладок, щоб охопити два стовпці."
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "Висока плитка"
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "Закладка плитки, щоб охопити два ряди."
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "Існуюча група"
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "Нова група"
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "Прикладна група"
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "Випадкова назва групи"
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "Група"
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "Позиція"
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "Застосуйте «Показати візуальний елемент» і «Показати назву» до інших закладок"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "Текст літери, значка, зображення та імені не буде опубліковано."
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "Корисно для приховування візуальних елементів або імен у всіх закладках."
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "Застосувати макет до інших закладок"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "Після збереження застосуйте наведений вище макет до всіх інших закладок."
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "До всіх буде застосовано лише візуальний розмір та розмір назви, вирівнювання, порядок, положення та жолоб."
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "Застосуйте тему до інших закладок"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "Після збереження застосуйте вищевказану тему до всіх інших закладок."
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "До всіх буде застосовано лише колір, акцент, непрозорість, межі та візуальна тінь."
+  },
+  "bookmarkPreviewFull": {
+    "message": "Попередній перегляд"
+  },
+  "bookmarkPreviewHalf": {
+    "message": "Попередній перегляд (масштаб 50%)"
+  },
+  "groupAreaControlUp": {
+    "message": "Перемістіть цю групу вгору"
+  },
+  "groupAreaControlSort": {
+    "message": "Перетягніть групу, щоб змінити порядок"
+  },
+  "groupAreaControlDown": {
+    "message": "Перемістіть цю групу вниз"
+  },
+  "groupAreaControlEdit": {
+    "message": "Редагувати цю групу"
+  },
+  "groupAreaControlRemove": {
+    "message": "Видалити цю групу"
+  },
+  "groupAreaControlOpenAll": {
+    "message": "Відкрийте всі закладки в цій групі"
+  },
+  "groupAreaControlCollapse": {
+    "message": "Згорнути цю групу"
+  },
+  "groupAddHeading": {
+    "message": "Додати нову групу"
+  },
+  "groupAddSuccessText": {
+    "message": "Додати"
+  },
+  "groupAddCancelText": {
+    "message": "Скасувати"
+  },
+  "groupRemoveHeadingName": {
+    "message": "Видалити"
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "Видалити групу без імені"
+  },
+  "groupRemoveContent": {
+    "message": "Ви впевнені, що хочете видалити цю групу та всі закладки в ній? Це не може бути скасовано."
+  },
+  "groupRemoveSuccessText": {
+    "message": "Видалити"
+  },
+  "groupRemoveCancelText": {
+    "message": "Скасувати"
+  },
+  "groupEditHeadingName": {
+    "message": "Редагувати"
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "Редагувати групу без імені"
+  },
+  "groupEditSuccessText": {
+    "message": "Зберегти"
+  },
+  "groupEditCancelText": {
+    "message": "Скасувати"
+  },
+  "groupFormSectionNameHeading": {
+    "message": "Ім'я"
+  },
+  "groupFormSectionNameDescription": {
+    "message": "Відобразити назву над цією групою."
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "Панель інструментів"
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "Відображати елементи керування, щоб відкрити всі або показати\/приховати закладки в цій групі."
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "Замовлення"
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "Позиція цієї групи."
+  },
+  "groupFormNameShow": {
+    "message": "Показати назву групи"
+  },
+  "groupFormNameTextLabel": {
+    "message": "Назва групи"
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "Прикладна група"
+  },
+  "groupFormNameRandom": {
+    "message": "Випадкова назва групи"
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "Показати Згорнути"
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "Кнопка «Згорнути» відобразить або приховає закладки в цій групі."
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "Показати Відкрити все"
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "Кнопка «Відкрити все» з’явиться, якщо в цій групі є хоча б одна закладка."
+  },
+  "groupFormDestination": {
+    "message": "Позиція"
+  },
+  "themeCustomTileControlEdit": {
+    "message": "Редагувати цю збережену спеціальну тему"
+  },
+  "themeCustomTileControlRemove": {
+    "message": "Видаліть цю збережену спеціальну тему"
+  },
+  "themeCustomFormNameLabel": {
+    "message": "Ім'я"
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "Приклад теми"
+  },
+  "themeCustomFormRandom": {
+    "message": "Випадкова назва теми"
+  },
+  "themeCustomAddHeading": {
+    "message": "Зберегти поточну тему"
+  },
+  "themeCustomAddSuccessText": {
+    "message": "Зберегти"
+  },
+  "themeCustomAddCancelText": {
+    "message": "Скасувати"
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "Видалити"
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "Видаліть спеціальну тему без імені"
+  },
+  "themeCustomRemoveContent": {
+    "message": "Ви впевнені, що хочете видалити цю збережену спеціальну тему? Це не може бути скасовано."
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "Зберегти"
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "Скасувати"
+  },
+  "themeCustomEditHeadingName": {
+    "message": "Редагувати"
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "Редагувати спеціальну тему без імені"
+  },
+  "themeCustomEditSuccessText": {
+    "message": "Видалити"
+  },
+  "themeCustomEditCancelText": {
+    "message": "Скасувати"
+  },
+  "toolbarAccent": {
+    "message": "Акцентний колір"
+  },
+  "toolbarAddLabel": {
+    "message": "Додати"
+  },
+  "toolbarAddGroup": {
+    "message": "Нова група"
+  },
+  "toolbarAddBookmark": {
+    "message": "Нова закладка"
+  },
+  "toolbarEdit": {
+    "message": "Редагувати групи та закладки"
+  },
+  "toolbarSetting": {
+    "message": "Відкрийте меню налаштувань"
+  },
+  "dataFormDescription": {
+    "message": "Ви можете відновити всі або частини файлу резервної копії. Будуть відновлені такі дані:"
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "Закладки"
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "Сюди входять усі групи та закладки"
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "При імпортуванні закладки зберігатимуть будь-які користувацькі кольори, акценти та межі."
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "Замініть наявні закладки"
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "Додати до наявних закладок"
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "Тема"
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "Це включає колір, акцент, шрифти, фон і будь-які збережені користувацькі теми."
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "Налаштування"
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "Це включає розмір і положення макета, розмір області заголовка, розмір області закладок та інші налаштування користувача."
+  },
+  "dataRestoreHeading": {
+    "message": "Відновлення з резервної копії {appName}"
+  },
+  "dataRestoreSuccessText": {
+    "message": "Імпорт"
+  },
+  "dataRestoreCancelText": {
+    "message": "Скасувати"
+  },
+  "dataClearAllHeading": {
+    "message": "Очистити всі дані {appName} ?"
+  },
+  "dataClearAllContentPara1": {
+    "message": "Дійсно очистити всі закладки та налаштування {appName} {appName} буде відновлено до стану за умовчанням."
+  },
+  "dataClearAllContentPara2": {
+    "message": "Це не може бути скасовано."
+  },
+  "dataClearAllSuccessText": {
+    "message": "Очистити всі дані"
+  },
+  "dataClearAllCancelText": {
+    "message": "Скасувати"
+  },
+  "dataClearPartialHeading": {
+    "message": "Очистити дані {appName} крім закладок?"
+  },
+  "dataClearPartialContentPara1": {
+    "message": "Дійсно очистити всі налаштування {appName} {appName} буде відновлено до стану за умовчанням, але ваші закладки та групи залишаться."
+  },
+  "dataClearPartialContentPara2": {
+    "message": "Це не може бути скасовано."
+  },
+  "dataClearPartialSuccessText": {
+    "message": "Очистити все, крім закладок"
+  },
+  "dataClearPartialCancelText": {
+    "message": "Скасувати"
+  },
+  "dataExportBackup": {
+    "message": "резервне копіювання"
+  },
+  "dataFeedbackEmpty": {
+    "message": "Нічого не вибрано для імпорту."
+  },
+  "dataFeedbackSuccess": {
+    "message": "Успіху! Відновлення закладок і налаштувань {appName}"
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "Не файл JSON. Переконайтеся, що вибраний файл надійшов із {appName} ."
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "Не той тип файлу JSON. Переконайтеся, що вибраний файл надійшов із {appName} ."
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "Не той тип даних. Переконайтеся, що буфер обміну містить дані з {appName} або файлу JSON резервної копії {appName}"
+  },
+  "controlGeneralReset": {
+    "message": "Скинути налаштування за замовчуванням"
+  },
+  "controlColorTextPlaceholder": {
+    "message": "Шістнадцятковий код"
+  },
+  "controlColorRandom": {
+    "message": "Випадковий колір"
+  },
+  "controlColorMixerMoreControls": {
+    "message": "Більше елементів керування"
+  },
+  "controlColorMixerSliderH": {
+    "message": "Відтінок"
+  },
+  "controlColorMixerSliderS": {
+    "message": "Насичення"
+  },
+  "controlColorMixerSliderL": {
+    "message": "Легкість"
+  },
+  "controlColorMixerSliderR": {
+    "message": "червоний"
+  },
+  "controlColorMixerSliderG": {
+    "message": "Зелений"
+  },
+  "controlColorMixerSliderB": {
+    "message": "Синій"
+  }
+}

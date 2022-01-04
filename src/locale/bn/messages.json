@@ -1,0 +1,2069 @@
+{
+  "appName": {
+    "message": "nightTab"
+  },
+  "appShortName": {
+    "message": "nightTab"
+  },
+  "appDescription": {
+    "message": "নাইটট্যাবে উচ্চারণ রঙ, বিন্যাস, শৈলী, ব্যাকগ্রাউন্ড এবং বুকমার্ক কাস্টমাইজ করুন।"
+  },
+  "menuNavThemeLabel": {
+    "message": "থিম"
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "প্রিসেট"
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "সংরক্ষিত"
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "শৈলী"
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "রঙ"
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "উচ্চারণ"
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "হরফ"
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "ব্যাসার্ধ"
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "ছায়া"
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "ছায়া"
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "অস্বচ্ছতা"
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "পটভূমি"
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "লেআউট"
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "হেডার"
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "বুকমার্ক"
+  },
+  "menuNavLayoutLabel": {
+    "message": "লেআউট"
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "স্কেলিং"
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "এলাকা"
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "প্যাডিং"
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "নর্দমা"
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "প্রান্তিককরণ"
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "পাতা"
+  },
+  "menuNavHeaderLabel": {
+    "message": "হেডার"
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "প্রান্তিককরণ"
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "শুভেচ্ছা"
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "ট্রানজিশনাল শব্দ"
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "ঘড়ি"
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "তারিখ"
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "অনুসন্ধান করুন"
+  },
+  "menuNavBookmarkLabel": {
+    "message": "বুকমার্ক"
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "সাধারণ"
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "শৈলী"
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "ওরিয়েন্টেশন"
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "সাজান"
+  },
+  "menuNavGroupLabel": {
+    "message": "গ্রুপ"
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "প্রান্তিককরণ"
+  },
+  "menuNavGroupSubNavName": {
+    "message": "নাম"
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "পতন"
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "টুলবার"
+  },
+  "menuNavToolbarLabel": {
+    "message": "টুলবার"
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "আকার"
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "অবস্থান"
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "অবস্থান"
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "নিয়ন্ত্রণ করে"
+  },
+  "menuNavDataLabel": {
+    "message": "ডেটা"
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "পুনরুদ্ধার করুন"
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "ব্যাকআপ"
+  },
+  "menuNavDataSubNavClear": {
+    "message": "পরিষ্কার"
+  },
+  "menuNavLanguageLabel": {
+    "message": "ভাষা"
+  },
+  "menuNavSupportLabel": {
+    "message": "সমর্থন"
+  },
+  "menuNavCoffeeLabel": {
+    "message": "কফি"
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}"
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "একটি প্রিসেট প্রয়োগ করা বর্তমান রঙ, অ্যাকসেন্ট, ফন্ট, শৈলী, ব্যাসার্ধ, ছায়া, ছায়া এবং পটভূমি প্রতিস্থাপন করবে।"
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "একটি থিম সংরক্ষণ করা বর্তমান রঙ, অ্যাকসেন্ট, ফন্ট, শৈলী, অস্বচ্ছতা, ব্যাসার্ধ, ছায়া, ছায়া এবং পটভূমি রেকর্ড করবে।"
+  },
+  "menuContentThemeSavedSave": {
+    "message": "বর্তমান থিম সংরক্ষণ করুন"
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "সংরক্ষিত থিম সম্পাদনা করুন"
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "ডার্ক মোড"
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "হালকা মোড"
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "স্বয়ংক্রিয়"
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "সিস্টেম লাইট বা ডার্ক মোড অনুসরণ করুন।"
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "পটভূমি, বুকমার্ক এবং মডেল বাম থেকে ছায়া ব্যবহার করে।"
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "টেক্সট এবং ফর্ম উপাদান ডান থেকে ছায়া ব্যবহার."
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "হালকা চেহারার জন্য হালকা শৈলীতে স্যুইচ করুন এবং তারপরে একটি প্রাথমিক রঙ নির্বাচন করুন। এবং তদ্বিপরীত একটি অন্ধকার চেহারা জন্য."
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "প্রাথমিক রঙ"
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "স্যাচুরেশন"
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "বৈসাদৃশ্য পরিসীমা"
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "কন্ট্রাস্ট শুরু"
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "কনট্রাস্ট শেষ"
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "একটি নিঃশব্দ চেহারার জন্য কন্ট্রাস্ট পরিসর নিয়ন্ত্রণগুলিকে একত্রে সরান৷"
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "একটি তীক্ষ্ণ প্রাণবন্ত চেহারার জন্য কন্ট্রাস্ট পরিসর নিয়ন্ত্রণগুলি একে অপরের থেকে অনেক দূরে সরান৷"
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "ধূসর"
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "লাল"
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "কমলা"
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "হলুদ"
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "চুন"
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "সবুজ"
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "একুয়া"
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "সায়ান"
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "টিল"
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "নীল"
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "বেগুনি"
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "ম্যাজেন্টা"
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "ফুচিয়া"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "সুপার অতিরিক্ত আলো"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "অতিরিক্ত আলো"
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "আলো"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "সুপার অতিরিক্ত অন্ধকার"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "অতিরিক্ত অন্ধকার"
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "অন্ধকার"
+  },
+  "menuContentThemeAccentColor": {
+    "message": "অ্যাকসেন্ট রঙ"
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "লোড\/রিফ্রেশে র্যান্ডম অ্যাকসেন্ট রঙ"
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "যে কোন"
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "আলো"
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "অন্ধকার"
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "প্যাস্টেল"
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "সম্পৃক্ত"
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "এখন র্যান্ডমাইজ করুন"
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "স্বয়ংক্রিয়ভাবে অ্যাকসেন্ট রঙ পরিবর্তন করুন"
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "বিলম্ব পরিবর্তন করুন"
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "পদক্ষেপ পরিবর্তন করুন"
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "দ্রুত পরিবর্তনশীল অ্যাকসেন্ট বর্ণ কর্মক্ষমতা সমস্যা সৃষ্টি করতে পারে বলে সতর্কতা অবলম্বন করুন।"
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "স্বয়ংক্রিয় পরিবর্তন অ্যাকসেন্ট রঙটি ধূসর বা কালো হলে কাজ করবে না।"
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "ফন্ট প্রদর্শন করুন"
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "গুগল ফন্টের নাম"
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "ঘড়ি, তারিখ, গ্রুপের নাম এবং বুকমার্ক অক্ষর কাস্টমাইজ করতে একটি Google ফন্ট ব্যবহার করুন।"
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "একটি Google ফন্ট খুঁজুন"
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "বড় অক্ষর এবং স্পেস সহ Google ফন্টে প্রদর্শিত একটি ফন্টের নাম যোগ করুন, যেমন: \"Fredoka One\" বা \"Kanit\" লিখুন।"
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "ডিফল্ট ফন্ট \"Fjalla One\" ব্যবহার করতে ক্ষেত্রটি সাফ করুন।"
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "হরফের ওজন"
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "আলো"
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "নিয়মিত"
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "সাহসী"
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "সব ফন্ট সব ওজন সমর্থন করে না. কোনটি উপলব্ধ তা দেখতে Google ফন্ট পৃষ্ঠাটি দেখুন।"
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "স্বাভাবিক"
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "তির্যক"
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "ইউজার ইন্টারফেস ফন্ট"
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "গুগল ফন্টের নাম"
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "বুকমার্ক নাম, URL এবং ফর্ম উপাদানগুলি কাস্টমাইজ করতে একটি Google ফন্ট ব্যবহার করুন৷"
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "একটি Google ফন্ট খুঁজুন"
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "বড় অক্ষর এবং স্পেস সহ Google ফন্টে প্রদর্শিত একটি ফন্টের নাম যোগ করুন, যেমন: \"Roboto\", \"Source Sans Pro\" বা \"Noto Sans\" লিখুন।"
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "ডিফল্ট ফন্ট \"Open Sans\" ব্যবহার করতে ক্ষেত্রটি সাফ করুন।"
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "হরফের ওজন"
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "আলো"
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "নিয়মিত"
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "সাহসী"
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "সব ফন্ট সব ওজন সমর্থন করে না. কোনটি উপলব্ধ তা দেখতে Google ফন্ট পৃষ্ঠাটি দেখুন।"
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "স্বাভাবিক"
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "তির্যক"
+  },
+  "menuContentThemeRadius": {
+    "message": "কোণার ব্যাসার্ধ"
+  },
+  "menuContentThemeShadow": {
+    "message": "ছায়ার আকার"
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "ছায়ার অস্বচ্ছতা"
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "ছায়া ঝাপসা"
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "সব ব্রাউজার দ্বারা সমর্থিত নয়."
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "সমস্ত অস্বচ্ছতা"
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "অনুসন্ধান বার, বুকমার্ক, গ্রুপ নিয়ন্ত্রণ এবং টুলবারের অস্বচ্ছতা পরিবর্তন করুন।"
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "পৃথক বুকমার্ক সম্পাদনা করার সময় অস্বচ্ছতা পরিবর্তন করা যেতে পারে।"
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "টুলবার"
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "বুকমার্ক"
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "অনুসন্ধান বাক্স"
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "গ্রুপ টুলবার"
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "থিম দ্বারা পটভূমি"
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "থিম দ্বারা সংজ্ঞায়িত ব্যাকগ্রাউন্ড কালার ব্যবহার করুন।"
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "অ্যাকসেন্ট দ্বারা পটভূমি"
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "ব্যাকগ্রাউন্ডের জন্য অ্যাকসেন্ট রঙ ব্যবহার করুন।"
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "কাস্টম রঙ"
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "গ্রেডিয়েন্ট"
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "ছবি"
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "ভিডিও"
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "পটভূমির রঙ"
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "পটভূমি গ্রেডিয়েন্ট কোণ"
+  },
+  "menuContentThemeBackgroundGradientStart": {
+    "message": "পটভূমি গ্রেডিয়েন্ট শুরু"
+  },
+  "menuContentThemeBackgroundGradientEnd": {
+    "message": "পটভূমি গ্রেডিয়েন্ট শেষ"
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "স্থানীয় ছবি আর ব্যবহার করা যাবে না. ছবি অনলাইন কোথাও হোস্ট করা আবশ্যক."
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "কেন এই পরিবর্তন হয়েছে?"
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "লোডের সময় র্যান্ডম ব্যাকগ্রাউন্ড ইমেজের জন্য স্পেস বা নতুন লাইনে আলাদা করে একাধিক URL যোগ করুন।"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "আনস্প্ল্যাশ এলোমেলো চিত্রগুলির জন্য ব্যবহার করা যেতে পারে, যেমন:"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?night,day,sky"
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "আরো বিকল্পের জন্য ...\/random\/ এর পরে পরামিতি পরিবর্তন করুন। লোড করার সময় পরিবর্তিত হতে পারে।"
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "ঝাপসা"
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "গ্রেস্কেল"
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "স্কেল"
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "উচ্চারণ"
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "অস্বচ্ছতা"
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "ভিগনেট"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "ছায়া শুরু এবং শেষ"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "ছায়া শেষ"
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "ছায়া শুরু"
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "YouTube পৃষ্ঠার URL ব্যবহার করা যাবে না।"
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "কিভাবে একটি ভিডিও ফাইল লিঙ্ক."
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/video.mp4"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "পটভূমি ভিডিও শুধুমাত্র একটি ভিডিও ফাইলের সরাসরি URL সমর্থন করে। MP4 এবং WebM ফর্ম্যাট সমর্থন করে।"
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "লোডের সময় র্যান্ডম ব্যাকগ্রাউন্ড ভিডিওর জন্য স্পেস বা নতুন লাইনে একাধিক ইউআরএল যোগ করুন।"
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "ঝাপসা"
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "গ্রেস্কেল"
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "স্কেল"
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "উচ্চারণ"
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "অস্বচ্ছতা"
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "ভিগনেট"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "ছায়া শুরু এবং শেষ"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "ছায়া শেষ"
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "ছায়া শুরু"
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "লেআউট পটভূমির রঙ"
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "স্বচ্ছ"
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "লেআউটের পিছনে কোন পটভূমির রঙ নেই।"
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "কাস্টম রঙ"
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "লেআউটের পিছনে একটি কাস্টম রঙ ব্যবহার করুন।"
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "লেআউট পটভূমির রঙ"
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "পটভূমির অস্বচ্ছতা"
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "পটভূমি ঝাপসা"
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "সব ব্রাউজার দ্বারা সমর্থিত নয়."
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "হেডার এবং বুকমার্ক এলাকার মধ্যে বিভাজক"
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "হেডারের পটভূমির রঙ"
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "স্বচ্ছ"
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "হেডার এলাকার পিছনে কোনো পটভূমির রঙ নেই।"
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "কাস্টম রঙ"
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "হেডার এলাকার পিছনে একটি কাস্টম রঙ ব্যবহার করুন।"
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "হেডারের পটভূমির রঙ"
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "পটভূমির অস্বচ্ছতা"
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "বুকমার্ক পটভূমি রঙ"
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "স্বচ্ছ"
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "বুকমার্ক এলাকার পিছনে কোন পটভূমির রঙ নেই।"
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "কাস্টম রঙ"
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "বুকমার্ক এলাকার পিছনে একটি কাস্টম রঙ ব্যবহার করুন।"
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "বুকমার্ক পটভূমি রঙ"
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "পটভূমির অস্বচ্ছতা"
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "বুকমার্ক সীমানা"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "পৃথক বুকমার্ক সম্পাদনা করার সময় বুকমার্ক সীমানাও পরিবর্তন করা যেতে পারে।"
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "সীমানার রঙ অ্যাকসেন্ট দ্বারা সংজ্ঞায়িত করা হয় যা পৃথক বুকমার্ক সম্পাদনা করার সময়ও পরিবর্তন করা যেতে পারে।"
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "প্রতিটি বুকমার্কে অনন্য উচ্চারণ যোগ করুন"
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "সমস্ত উচ্চারণ ওভাররাইড সরান"
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "পৃথক বুকমার্ক সম্পাদনা করার সময় বুকমার্ক কাস্টম অ্যাকসেন্টও পরিবর্তন করা যেতে পারে।"
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "গ্লোবাল সাইজ"
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "লেআউট এলাকার প্রস্থ"
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "হেডার এলাকা প্রস্থ"
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "হেডার এলাকা সারিবদ্ধকরণ"
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "বাম"
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "কেন্দ্র"
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "ঠিক"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "হেডার এরিয়া পূর্ণ প্রস্থ হলে প্রভাব দৃশ্যমান নাও হতে পারে।"
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "শুধুমাত্র যখন লেআউটের দিকনির্দেশ উল্লম্ব এবং হেডার আইটেমগুলি দেখানো হয় তখনই উপলব্ধ৷"
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "বুকমার্ক এলাকা প্রস্থ"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "বুকমার্ক এলাকা প্রান্তিককরণ"
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "বাম"
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "কেন্দ্র"
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "ঠিক"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "বুকমার্ক এলাকা পূর্ণ প্রস্থ হলে প্রভাব দৃশ্যমান নাও হতে পারে।"
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "শুধুমাত্র যখন লেআউটের দিকনির্দেশ উল্লম্ব এবং হেডার আইটেমগুলি দেখানো হয় তখনই উপলব্ধ৷"
+  },
+  "menuContentLayoutPadding": {
+    "message": "হেডার এবং বুকমার্ক এরিয়ার চারপাশে স্থান"
+  },
+  "menuContentLayoutGutter": {
+    "message": "শিরোনাম এবং বুকমার্ক আইটেম মধ্যে স্থান"
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "এলাকা প্রান্তিককরণ"
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "উপরে বাঁদিকে"
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "শীর্ষ কেন্দ্র"
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "উপরের ডানে"
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "কেন্দ্র বাম"
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "কেন্দ্র কেন্দ্র"
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "কেন্দ্র ডান"
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "নিচে বামে"
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "নীচে কেন্দ্র"
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "নিচের ডানে"
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "অনুভূমিক সারিবদ্ধ করুন"
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "হেডার এবং বুকমার্কগুলিকে পাশাপাশি সারিতে স্ট্যাক করুন।"
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "উল্লম্ব সারিবদ্ধ"
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "শিরোনাম এবং বুকমার্কগুলিকে একটি কলামে অন্যটির উপরে স্ট্যাক করুন।"
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "হেডার তারপর বুকমার্ক"
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "হেডার এলাকাটিকে বুকমার্ক এলাকার আগে উপস্থিত হওয়ার জন্য আদেশ করুন।"
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "বুকমার্ক তারপর হেডার"
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "বুকমার্ক এলাকাটিকে হেডার এলাকার আগে উপস্থিত হওয়ার জন্য আদেশ করুন।"
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "শিরোনাম"
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "নতুন ট্যাব"
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "ফেভিকন URL"
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https:\/\/www.example.com\/favicon.svg"
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "সব ব্রাউজার দ্বারা সমর্থিত নয়."
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "স্ক্রল বার"
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "অটো"
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "পাতলা"
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "গোপন"
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "সব ব্রাউজার দ্বারা সমর্থিত নয়."
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "শেষ শেষ স্ক্রোল"
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "ব্যাকগ্রাউন্ড ইমেজ বা ভিডিও আনব্লার করুন"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "পৃষ্ঠার নীচে স্ক্রোল করলে পটভূমির ছবি বা ভিডিও অস্পষ্ট হয়ে যাবে।"
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "ছবি বা ভিডিও ব্লার থিম ব্যাকগ্রাউন্ডের অধীনে পাওয়া যাবে।"
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "হেডার আইটেম প্রান্তিককরণ"
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "বাম"
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "কেন্দ্র"
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "ঠিক"
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "সার্চ বাক্সের আকার স্বয়ংক্রিয় সেট করা থাকলে এবং উপলব্ধ স্থান পূরণ করতে বৃদ্ধি পেলে প্রভাবগুলি দৃশ্যমান নাও হতে পারে৷"
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "অভিবাদন দেখান"
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "আকার"
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "নতুন লাইন"
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "একটি নতুন লাইনে জোর করুন এবং অন্যান্য হেডার আইটেম থেকে আলাদা করুন।"
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "শব্দচয়ন"
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"সুপ্রভাত...\""
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"হ্যালো...\""
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"ওহে...\""
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "কোনোটিই নয়"
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "শুধু নাম প্রদর্শনের জন্য দরকারী."
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "কাস্টম"
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "আপনার নিজের অভিবাদন ব্যবহার করুন."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "ডিফল্ট হিসেবে \"শুভ সকাল...\" খালি থাকলে।"
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "কাস্টম অভিবাদন পাঠ্য"
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "হাউডি"
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "নাম"
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "ডাক নাম, উপনাম বা সুপারহিরো নাম"
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "ট্রানজিশনাল শব্দ দেখান"
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "শুধুমাত্র তারিখ বা সময় দেখানো হলেই উপলব্ধ।"
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "শব্দচয়ন"
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "\"সময় এবং তারিখ হল\""
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"এটি\""
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "আকার"
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "নতুন লাইন"
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "একটি নতুন লাইনে জোর করুন এবং অন্যান্য হেডার আইটেম থেকে আলাদা করুন।"
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "ঘন্টা দেখান"
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "সংখ্যা হিসাবে"
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "একটি তলোয়ার"
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "মিনিট দেখান"
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "সংখ্যা হিসাবে"
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "একটি তলোয়ার"
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "সেকেন্ড দেখান"
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "সংখ্যা হিসাবে"
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "একটি তলোয়ার"
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "বিভাজক দেখান"
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "বিভাজক চরিত্র"
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":"
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "২ 4 ঘন্টা"
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "পূর্বাহ্ণ অপরাহ্ণ"
+  },
+  "menuContentHeaderClockSize": {
+    "message": "আকার"
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "নতুন লাইন"
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "একটি নতুন লাইনে জোর করুন এবং অন্যান্য হেডার আইটেম থেকে আলাদা করুন।"
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "দিন দেখান"
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "সংখ্যা হিসাবে"
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "একটি তলোয়ার"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "সপ্তাহের শুরু"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "সোমবার"
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "রবিবার"
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "শব্দের দৈর্ঘ্য"
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "দীর্ঘ"
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "সংক্ষিপ্ত"
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "তারিখ দেখান"
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "সংখ্যা হিসাবে"
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "একটি তলোয়ার"
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "পূরণবাচক সংখ্যা"
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "মাস দেখান"
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "সংখ্যা হিসাবে"
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "একটি তলোয়ার"
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "পূরণবাচক সংখ্যা"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "শব্দের দৈর্ঘ্য"
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "দীর্ঘ"
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "সংক্ষিপ্ত"
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "শো বছর"
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "সংখ্যা হিসাবে"
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "একটি তলোয়ার"
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "বিভাজক দেখান"
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "বিভাজক চরিত্র"
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "\/"
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "বিন্যাস"
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "তারিখ\/মাস"
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "মাস\/তারিখ"
+  },
+  "menuContentHeaderDateSize": {
+    "message": "আকার"
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "নতুন লাইন"
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "একটি নতুন লাইনে জোর করুন এবং অন্যান্য হেডার আইটেম থেকে আলাদা করুন।"
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "অনুসন্ধান দেখান"
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "অনুসন্ধান বাক্স প্রস্থ"
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "স্বয়ংক্রিয় প্রস্থ"
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "অনুসন্ধান বাক্সটি উপলব্ধ স্থানের জন্য সর্বোত্তম ফিট হয়ে উঠবে।"
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "কাস্টম প্রস্থ"
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "হেডার এরিয়ার ভিতরে অনুসন্ধান বাক্সটি কতটা প্রশস্ত হওয়া উচিত তা নির্ধারণ করুন।"
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "প্রস্থ"
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "আকার"
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "নতুন লাইন"
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "একটি নতুন লাইনে জোর করুন এবং অন্যান্য হেডার আইটেম থেকে আলাদা করুন।"
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "খোঁজ যন্ত্র"
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "কাস্টম"
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "নাম"
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "সার্চ ইঞ্জিনের নাম"
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL"
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https:\/\/"
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "অনুসন্ধান পরামিতি সহ একটি ওয়েব ঠিকানা লিখুন, যেমন: \"https:\/\/vimeo.com\/search?q=\""
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} উপরের URL-এর শেষে অনুসন্ধান বাক্সে প্রবেশ করা অনুসন্ধান শব্দটি যোগ করবে।"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "নামের বৈশিষ্ট্য"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "q"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "অনুসন্ধান ইনপুট ক্ষেত্রে নামের বৈশিষ্ট্য সেট করে।"
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "এটি জমা দেওয়ার সময় সার্চ ইঞ্জিনে পাস করা নামটি সংজ্ঞায়িত করে। নিশ্চিত না হলে ফাঁকা ছেড়ে দিন।"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "টেক্সট প্রান্তিককরণ অনুসন্ধান করুন"
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "বাম"
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "কেন্দ্র"
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "ঠিক"
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "একটি নতুন ট্যাবে অনুসন্ধান ফলাফল খুলুন"
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "বুকমার্ক দেখান"
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "বুকমার্ক হোভারে ইউআরএল দেখান"
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "বুকমার্ক লাইন দেখান"
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "বুকমার্ক হোভারে ছায়া দেখান"
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "থিম শ্যাডো 0 তে সেট করা থাকলে প্রভাবগুলি দৃশ্যমান নাও হতে পারে৷"
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "বুকমার্ক হোভারে বেড়ে উঠুন"
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "একটি নতুন ট্যাবে বুকমার্ক খুলুন"
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "বুকমার্ক সাইজ"
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "ব্লক"
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "বর্গাকার আকৃতির বুকমার্ক টাইলস।"
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "তালিকা"
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "ছোট এবং প্রশস্ত বুকমার্ক টাইলস।"
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "শীর্ষ"
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "নীচে"
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "বুকমার্ক টাইলের উপরে বা নীচে URL এবং নিয়ন্ত্রণগুলি প্রদর্শন করুন৷"
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "চিঠির মাধ্যমে"
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "আইকন দ্বারা"
+  },
+  "menuContentBookmarkSortName": {
+    "message": "নামে"
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "গ্রুপ বিশদ এলাকা প্রান্তিককরণ"
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "বাম"
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "কেন্দ্র"
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "ঠিক"
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "গ্রুপ বিস্তারিত অর্ডার"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "গ্রুপের বিবরণ তারপর বুকমার্ক"
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "বুকমার্ক এলাকার আগে উপস্থিত হওয়ার জন্য গ্রুপের বিশদ এলাকাটি অর্ডার করুন।"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "বুকমার্ক তারপর গ্রুপ বিবরণ"
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "গ্রুপ বিশদ এলাকার আগে উপস্থিত হওয়ার জন্য বুকমার্ক এলাকাকে আদেশ করুন।"
+  },
+  "menuContentGroupNameSize": {
+    "message": "নামের আকার"
+  },
+  "menuContentGroupNameShow": {
+    "message": "সব দেখাও"
+  },
+  "menuContentGroupNameHide": {
+    "message": "সব লুকাও"
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "পৃথক গোষ্ঠী সম্পাদনা করেও গোষ্ঠীর নাম পরিবর্তন করা যেতে পারে।"
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "সমস্ত গ্রুপ খুলুন"
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "সমস্ত গ্রুপ সঙ্কুচিত করুন"
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "গ্রুপ টুলবারের আকার"
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "গ্রুপ সঙ্কুচিত নিয়ন্ত্রণ"
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "সব দেখাও"
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "সব লুকাও"
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "গ্রুপ টুলবার সঙ্কুচিত বোতাম এছাড়াও পৃথক গ্রুপ সম্পাদনা করে পরিবর্তন করা যেতে পারে."
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "গ্রুপ ওপেন সব নিয়ন্ত্রণ"
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "সব দেখাও"
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "সব লুকাও"
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "গ্রুপ টুলবার ওপেন অল বাটনও পৃথক গ্রুপ সম্পাদনা করে পরিবর্তন করা যেতে পারে।"
+  },
+  "menuContentToolbarSize": {
+    "message": "টুলবারের আকার"
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "এক কোণে"
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "হেডারে"
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "টুলবারটিকে হেডারের ভিতরে বা উইন্ডোর এক কোণে রাখুন।"
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "নতুন লাইন"
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "একটি নতুন লাইনে জোর করুন এবং অন্যান্য হেডার আইটেম থেকে আলাদা করুন।"
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "শুধুমাত্র উপলভ্য যখন টুলবার হেডারের ভিতরে অবস্থান করে।"
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "টুলবার অবস্থান"
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "উপরে বাঁদিকে"
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "উপরের ডানে"
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "নিচে বামে"
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "নিচের ডানে"
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "টুলবারটিকে উইন্ডোর চারটি কোণে একটিতে রাখুন।"
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "টুলবার একটি কোণে অবস্থান করলেই উপলব্ধ।"
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "অ্যাকসেন্ট নিয়ন্ত্রণ দেখান"
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "অ্যাড কন্ট্রোল দেখান"
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "সম্পাদনা নিয়ন্ত্রণ দেখান"
+  },
+  "menuContentDataRestoreFile": {
+    "message": "ফাইল থেকে আমদানি করুন"
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "ক্লিপবোর্ড থেকে আমদানি করুন"
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "পূর্বে এক্সপোর্ট করা {appName} ব্যাকআপ পুনরুদ্ধার করুন।"
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "অথবা {appName} ব্যাকআপ ফাইল ড্রপ করুন।"
+  },
+  "menuContentDataBackupFile": {
+    "message": "রপ্তানি তথ্য"
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "ক্লিপবোর্ডে কপি করুন"
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "{appName} বুকমার্ক এবং সেটিংসের একটি ব্যাকআপ ডাউনলোড করুন৷"
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "এই ফাইলটি পরে এই বা অন্য ডিভাইসে আমদানি করা যেতে পারে।"
+  },
+  "menuContentDataClearAll": {
+    "message": "সমস্ত ডেটা সাফ করুন"
+  },
+  "menuContentDataClearPartial": {
+    "message": "বুকমার্ক ছাড়া সব সাফ করুন"
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "আপনি সমস্ত ডেটা সাফ করে বুকমার্ক হারাবেন৷"
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "আপনার ডেটা ব্যাকআপ করুন"
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "ডিফল্ট অবস্থায় {appName} রিসেট করতে সমস্ত ডেটা সাফ করুন।"
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "বিকল্পভাবে, সমস্ত সেটিংস মুছে ফেলা সম্ভব কিন্তু বর্তমান বুকমার্ক এবং গোষ্ঠীগুলি রাখা সম্ভব৷"
+  },
+  "menuContentLanguageSelect": {
+    "message": "ভাষা"
+  },
+  "menuContentLanguageSystem": {
+    "message": "সিস্টেম ভাষা ব্যবহার করুন"
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "এমন একটি অনুবাদ পাওয়া গেছে যা সঠিক নয়?"
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "{appName} অনুবাদ করতে সাহায্য করুন"
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "সকলের জন্য বুকমার্ক সেটিংস প্রয়োগ করা হচ্ছে"
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "ব্রাউজার সমর্থন"
+  },
+  "menuContentSupportPageCookies": {
+    "message": "কুকিজ এবং ক্যাশে"
+  },
+  "menuContentSupportPageData": {
+    "message": "ডেটা ব্যাকআপ এবং পুনরুদ্ধার"
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "স্থানীয় পটভূমি চিত্র"
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "সুরক্ষিত ইউআরএল"
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "সেটিংস এবং বুকমার্ক পুনরুদ্ধার করা হচ্ছে"
+  },
+  "menuContentSupportPageResetting": {
+    "message": "ব্রাউজার খোলার সময় রিসেট করা হচ্ছে"
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "আপনার গোপনীয়তা সম্মান"
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "একটি ব্যাকগ্রাউন্ড ভিডিও বা ইমেজ সেট করা"
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "আপনার ফায়ারফক্স হোমপেজ হিসেবে {appName} সেট করা হচ্ছে"
+  },
+  "menuContentSupportPara": {
+    "message": "আরও সমর্থন বা প্রতিক্রিয়ার জন্য:"
+  },
+  "menuContentSupportLink1": {
+    "message": "একটি সমস্যা জমা দিন."
+  },
+  "menuContentSupportLink2": {
+    "message": "উইকি পরীক্ষা করুন।"
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} বিনামূল্যে, প্রশংসা কফি আকারে স্বাগত!"
+  },
+  "menuContentCoffeeButton": {
+    "message": "আমাকে একটা কফি কিনে দাও"
+  },
+  "menuContentAppPara1": {
+    "message": "সম্প্রদায়ের সাথে আপনার সেটআপ শেয়ার করুন."
+  },
+  "menuContentAppLink1": {
+    "message": "Reddit \/r\/ {appName} পাওয়া গেছে।"
+  },
+  "menuContentAppPara2": {
+    "message": "এই প্রকল্পটি ওপেন সোর্স।"
+  },
+  "menuContentAppLink2": {
+    "message": "GitHub এ পাওয়া গেছে।"
+  },
+  "menuContentAppLink3": {
+    "message": "GNU সাধারণ পাবলিক লাইসেন্স v3.0."
+  },
+  "bookmarkTileControlLeft": {
+    "message": "এই বুকমার্ক বামে সরান"
+  },
+  "bookmarkTileControlSort": {
+    "message": "পুনঃক্রম করতে বুকমার্ক টেনে আনুন"
+  },
+  "bookmarkTileControlRight": {
+    "message": "এই বুকমার্ক ডানদিকে সরান"
+  },
+  "bookmarkTileControlEdit": {
+    "message": "এই বুকমার্ক সম্পাদনা করুন"
+  },
+  "bookmarkTileControlRemove": {
+    "message": "এই বুকমার্ক সরান"
+  },
+  "bookmarkAddHeading": {
+    "message": "একটি নতুন বুকমার্ক যোগ করুন"
+  },
+  "bookmarkAddSuccessText": {
+    "message": "যোগ করুন"
+  },
+  "bookmarkAddCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "অপসারণ"
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "নামহীন বুকমার্ক সরান"
+  },
+  "bookmarkRemoveContent": {
+    "message": "আপনি কি এই বুকমার্ক সরানোর বিষয়ে নিশ্চিত? এটা অসম্পূর্ণ থাকতে পারে না."
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "অপসারণ"
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "bookmarkEditHeadingName": {
+    "message": "সম্পাদনা করুন"
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "নামবিহীন বুকমার্ক সম্পাদনা করুন"
+  },
+  "bookmarkEditSuccessText": {
+    "message": "সংরক্ষণ"
+  },
+  "bookmarkEditCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "bookmarkFormTabVisual": {
+    "message": "ভিজ্যুয়াল এবং নাম"
+  },
+  "bookmarkFormTabAddress": {
+    "message": "ঠিকানা"
+  },
+  "bookmarkFormTabPosition": {
+    "message": "অবস্থান"
+  },
+  "bookmarkFormTabLayout": {
+    "message": "লেআউট"
+  },
+  "bookmarkFormTabTheme": {
+    "message": "থিম"
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "ভিজ্যুয়াল এবং নাম"
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "এই বুকমার্ক টাইলে অক্ষর, আইকন, ছবি এবং একটি নাম প্রদর্শন করুন।"
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "ঠিকানা"
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "সম্পূর্ণ URL ব্যবহার করতে ভুলবেন না এবং \"https:\/\/...\" অন্তর্ভুক্ত করুন"
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "অবস্থান"
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "এই বুকমার্ক স্থাপন করার জন্য গ্রুপ."
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "লেআউট"
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "ভিজ্যুয়াল উপাদান এবং নামের অবস্থান, স্কেল এবং অভিযোজন পরিবর্তন করুন।"
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "থিম"
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "থিম এবং অ্যাকসেন্ট রঙ ওভাররাইড করুন।"
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/"
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "ভিজ্যুয়াল উপাদান এবং নাম প্রান্তিককরণ"
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "উপরে বাঁদিকে"
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "শীর্ষ কেন্দ্র"
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "উপরের ডানে"
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "কেন্দ্র বাম"
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "কেন্দ্র কেন্দ্র"
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "কেন্দ্র ডান"
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "নিচে বামে"
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "নীচে কেন্দ্র"
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "নিচের ডানে"
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "উল্লম্ব"
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "ভিজ্যুয়াল এলিমেন্ট স্ট্যাক করুন এবং একটির উপরে নাম দিন।"
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "অনুভূমিক"
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "ভিজ্যুয়াল এলিমেন্ট এবং নাম পাশাপাশি সাজান।"
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "ভিজ্যুয়াল উপাদান তারপর নাম"
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "নামের আগে ভিজ্যুয়াল এলিমেন্ট রাখুন।"
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "তারপর ভিজ্যুয়াল উপাদানের নাম দিন"
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "ভিজ্যুয়াল এলিমেন্টের আগে নামটি রাখুন।"
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "ঘুরান"
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "ভিজ্যুয়াল এলিমেন্টের অবস্থান সামঞ্জস্য করুন"
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "অনুভূমিক"
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "উল্লম্ব"
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "নর্দমা"
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "ভিজ্যুয়াল এলিমেন্ট দেখান"
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "এই বুকমার্ক ষড়ভুজে অক্ষর, আইকন বা একটি ছবি প্রদর্শন করুন।"
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "চিঠি"
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "আইকন"
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "ছবি"
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "ভিজ্যুয়াল আকার"
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "বুকমার্ক চিঠি"
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "ই"
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "বুকমার্ক আইকন"
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "FontAwesome ব্র্যান্ড বা আইকন"
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "আইকন সরান"
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "বুকমার্ক ইমেজ"
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "চাক্ষুষ ছায়া"
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "চাক্ষুষ ছায়া শুধুমাত্র একটি চিঠি বা আইকন প্রযোজ্য."
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "নাম দেখান"
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "বুকমার্ক নাম"
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "উদাহরণ"
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "নামের আকার"
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "থিম অ্যাকসেন্ট"
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "থিম দ্বারা সংজ্ঞায়িত অ্যাকসেন্ট ব্যবহার করুন।"
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "কাস্টম অ্যাকসেন্ট"
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "থিম অ্যাকসেন্ট ওভাররাইড করুন।"
+  },
+  "bookmarkFormAccentColor": {
+    "message": "উচ্চারণ"
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "থিম রঙ"
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "থিম দ্বারা সংজ্ঞায়িত রঙ ব্যবহার করুন."
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "কাস্টম রঙ"
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "থিমের রঙ ওভাররাইড করুন।"
+  },
+  "bookmarkFormColorColor": {
+    "message": "রঙ"
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "অস্বচ্ছতা"
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "ব্যাকগ্রাউন্ড দেখান"
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "এই বুকমার্ক টাইলে একটি ছবি বা ভিডিও পটভূমি প্রদর্শন করুন।"
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "ছবি"
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "ভিডিও"
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "অস্বচ্ছতা"
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "পটভূমি চিত্র URL"
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https:\/\/www.example.com\/image.jpg"
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "ব্যাকগ্রাউন্ড ইমেজ শুধুমাত্র একটি ইমেজ ফাইলের সরাসরি URL সমর্থন করে।"
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "পটভূমি ভিডিও URL"
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https:\/\/www.example.com\/video.mp4"
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "পটভূমি ভিডিও শুধুমাত্র একটি ভিডিও ফাইলের সরাসরি URL সমর্থন করে। MP4 এবং WebM ফর্ম্যাট সমর্থন করে।"
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "YouTube পৃষ্ঠার URL ব্যবহার করা যাবে না।"
+  },
+  "bookmarkFormBorder": {
+    "message": "বর্ডার"
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "প্রশস্ত টালি"
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "বুকমার্ক টাইল দুটি কলাম জুড়ে ছড়িয়ে দিন।"
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "লম্বা টালি"
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "দুটি সারি জুড়ে স্প্যান করার জন্য বুকমার্ক টাইল।"
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "বিদ্যমান গ্রুপ"
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "নতুন দল"
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL"
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "উদাহরণ গ্রুপ"
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "এলোমেলো গ্রুপের নাম"
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "গ্রুপ"
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "অবস্থান"
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "অন্যান্য বুকমার্কগুলিতে \"ভিজ্যুয়াল এলিমেন্ট দেখান\" এবং \"নাম দেখান\" প্রয়োগ করুন"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "চিঠি, আইকন, ছবি এবং নাম লেখা শেয়ার করা হবে না।"
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "সমস্ত বুকমার্কে ভিজ্যুয়াল উপাদান বা নাম লুকানোর জন্য দরকারী।"
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "অন্যান্য বুকমার্কে লেআউট প্রয়োগ করুন"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "সংরক্ষিত হলে, উপরের লেআউটটি অন্য সব বুকমার্কে প্রয়োগ করুন।"
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "শুধুমাত্র ভিজ্যুয়াল এবং নামের আকার, প্রান্তিককরণ, ক্রম, অবস্থান এবং গটার সকলের জন্য প্রয়োগ করা হবে।"
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "অন্যান্য বুকমার্কে থিম প্রয়োগ করুন"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "সংরক্ষিত হলে, উপরের থিমটি অন্য সব বুকমার্কে প্রয়োগ করুন।"
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "শুধুমাত্র কালার, অ্যাকসেন্ট, অপাসিটি, বর্ডার এবং ভিজ্যুয়াল শ্যাডো সবার জন্য প্রয়োগ করা হবে।"
+  },
+  "bookmarkPreviewFull": {
+    "message": "পূর্বরূপ"
+  },
+  "bookmarkPreviewHalf": {
+    "message": "পূর্বরূপ (50% স্কেল)"
+  },
+  "groupAreaControlUp": {
+    "message": "এই দলটিকে উপরে নিয়ে যান"
+  },
+  "groupAreaControlSort": {
+    "message": "পুনঃক্রম করতে গ্রুপ টেনে আনুন"
+  },
+  "groupAreaControlDown": {
+    "message": "এই গ্রুপটি নিচে সরান"
+  },
+  "groupAreaControlEdit": {
+    "message": "এই গ্রুপ সম্পাদনা করুন"
+  },
+  "groupAreaControlRemove": {
+    "message": "এই গ্রুপটি সরান"
+  },
+  "groupAreaControlOpenAll": {
+    "message": "এই গ্রুপের সমস্ত বুকমার্ক খুলুন"
+  },
+  "groupAreaControlCollapse": {
+    "message": "এই গ্রুপটি আড়াল করুন"
+  },
+  "groupAddHeading": {
+    "message": "একটি নতুন গ্রুপ যোগ করুন"
+  },
+  "groupAddSuccessText": {
+    "message": "যোগ করুন"
+  },
+  "groupAddCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "groupRemoveHeadingName": {
+    "message": "অপসারণ"
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "নামহীন গ্রুপ সরান"
+  },
+  "groupRemoveContent": {
+    "message": "আপনি কি নিশ্চিত যে আপনি এই গ্রুপ এবং এর মধ্যে থাকা সমস্ত বুকমার্ক মুছে ফেলতে চান? এটা অসম্পূর্ণ থাকতে পারে না."
+  },
+  "groupRemoveSuccessText": {
+    "message": "অপসারণ"
+  },
+  "groupRemoveCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "groupEditHeadingName": {
+    "message": "সম্পাদনা করুন"
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "নামহীন গোষ্ঠী সম্পাদনা করুন"
+  },
+  "groupEditSuccessText": {
+    "message": "সংরক্ষণ"
+  },
+  "groupEditCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "groupFormSectionNameHeading": {
+    "message": "নাম"
+  },
+  "groupFormSectionNameDescription": {
+    "message": "এই গ্রুপের উপরে একটি নাম প্রদর্শন করুন।"
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "টুলবার"
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "এই গ্রুপে বুকমার্কগুলি দেখাতে\/লুকাতে সমস্ত খুলতে নিয়ন্ত্রণ প্রদর্শন করুন।"
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "অর্ডার দিচ্ছে"
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "এই গ্রুপের অবস্থান।"
+  },
+  "groupFormNameShow": {
+    "message": "গ্রুপের নাম দেখান"
+  },
+  "groupFormNameTextLabel": {
+    "message": "দলের নাম"
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "উদাহরণ গ্রুপ"
+  },
+  "groupFormNameRandom": {
+    "message": "এলোমেলো গ্রুপের নাম"
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "সঙ্কুচিত দেখান৷"
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "সংকোচন বোতামটি এই গ্রুপে বুকমার্কগুলি দেখাবে বা লুকিয়ে রাখবে৷"
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "সব খুলুন দেখান"
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "এই গ্রুপে অন্তত একটি বুকমার্ক থাকলে সমস্ত খুলুন বোতামটি উপস্থিত হবে।"
+  },
+  "groupFormDestination": {
+    "message": "অবস্থান"
+  },
+  "themeCustomTileControlEdit": {
+    "message": "এই সংরক্ষিত কাস্টম থিম সম্পাদনা করুন"
+  },
+  "themeCustomTileControlRemove": {
+    "message": "এই সংরক্ষিত কাস্টম থিম সরান"
+  },
+  "themeCustomFormNameLabel": {
+    "message": "নাম"
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "উদাহরণ থিম"
+  },
+  "themeCustomFormRandom": {
+    "message": "এলোমেলো থিমের নাম"
+  },
+  "themeCustomAddHeading": {
+    "message": "বর্তমান থিম সংরক্ষণ করুন"
+  },
+  "themeCustomAddSuccessText": {
+    "message": "সংরক্ষণ"
+  },
+  "themeCustomAddCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "অপসারণ"
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "নামহীন কাস্টম থিম সরান"
+  },
+  "themeCustomRemoveContent": {
+    "message": "আপনি কি এই সংরক্ষিত কাস্টম থিমটি সরানোর বিষয়ে নিশ্চিত? এটা অসম্পূর্ণ থাকতে পারে না."
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "সংরক্ষণ"
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "themeCustomEditHeadingName": {
+    "message": "সম্পাদনা করুন"
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "নামহীন কাস্টম থিম সম্পাদনা করুন"
+  },
+  "themeCustomEditSuccessText": {
+    "message": "অপসারণ"
+  },
+  "themeCustomEditCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "toolbarAccent": {
+    "message": "অ্যাকসেন্ট রঙ"
+  },
+  "toolbarAddLabel": {
+    "message": "যোগ করুন"
+  },
+  "toolbarAddGroup": {
+    "message": "নতুন দল"
+  },
+  "toolbarAddBookmark": {
+    "message": "নতুন বুকমার্ক"
+  },
+  "toolbarEdit": {
+    "message": "গ্রুপ এবং বুকমার্ক সম্পাদনা করুন"
+  },
+  "toolbarSetting": {
+    "message": "সেটিংস মেনু খুলুন"
+  },
+  "dataFormDescription": {
+    "message": "আপনি একটি ব্যাকআপ ফাইলের সমস্ত বা অংশ পুনরুদ্ধার করতে পারেন। নিম্নলিখিত ডেটা পুনরুদ্ধার করা হবে:"
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "বুকমার্ক"
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "এটি সমস্ত গ্রুপ এবং বুকমার্ক অন্তর্ভুক্ত করে"
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "বুকমার্ক আমদানি করার সময় যেকোনো কাস্টম রং, উচ্চারণ এবং সীমানা রাখবে।"
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "বিদ্যমান বুকমার্কগুলি প্রতিস্থাপন করুন"
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "বিদ্যমান বুকমার্ক যোগ করুন"
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "থিম"
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "এর মধ্যে রয়েছে রঙ, অ্যাকসেন্ট, ফন্ট, পটভূমি এবং যেকোনো সংরক্ষিত কাস্টম থিম।"
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "সেটিংস"
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "এর মধ্যে লেআউটের আকার এবং অবস্থান, শিরোলেখ এলাকার আকার, বুকমার্ক এলাকার আকার এবং অন্যান্য ব্যবহারকারী সেটিংস অন্তর্ভুক্ত রয়েছে।"
+  },
+  "dataRestoreHeading": {
+    "message": "{appName} ব্যাকআপ থেকে পুনরুদ্ধার করা হচ্ছে"
+  },
+  "dataRestoreSuccessText": {
+    "message": "আমদানি"
+  },
+  "dataRestoreCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "dataClearAllHeading": {
+    "message": "{appName} ডেটা সাফ করবেন?"
+  },
+  "dataClearAllContentPara1": {
+    "message": "{appName} বুকমার্ক এবং সেটিংস সাফ করার বিষয়ে নিশ্চিত? {appName} ডিফল্ট অবস্থায় পুনরুদ্ধার করা হবে।"
+  },
+  "dataClearAllContentPara2": {
+    "message": "এটা অসম্পূর্ণ থাকতে পারে না."
+  },
+  "dataClearAllSuccessText": {
+    "message": "সমস্ত ডেটা সাফ করুন"
+  },
+  "dataClearAllCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "dataClearPartialHeading": {
+    "message": "বুকমার্ক ছাড়া {appName} ডেটা সাফ করবেন?"
+  },
+  "dataClearPartialContentPara1": {
+    "message": "আপনি কি নিশ্চিত যে আপনি সমস্ত {appName} সেটিংস সাফ করতে চান? {appName} ডিফল্ট অবস্থায় পুনরুদ্ধার করা হবে কিন্তু আপনার বুকমার্ক এবং গোষ্ঠীগুলি থাকবে৷"
+  },
+  "dataClearPartialContentPara2": {
+    "message": "এটা অসম্পূর্ণ থাকতে পারে না."
+  },
+  "dataClearPartialSuccessText": {
+    "message": "বুকমার্ক ছাড়া সব সাফ করুন"
+  },
+  "dataClearPartialCancelText": {
+    "message": "বাতিল করুন"
+  },
+  "dataExportBackup": {
+    "message": "ব্যাকআপ"
+  },
+  "dataFeedbackEmpty": {
+    "message": "আমদানি করার জন্য কিছুই নির্বাচন করা হয়নি৷"
+  },
+  "dataFeedbackSuccess": {
+    "message": "সফলতার ! {appName} বুকমার্ক এবং সেটিংস পুনরুদ্ধার করা হচ্ছে।"
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "একটি JSON ফাইল নয়। নিশ্চিত করুন যে নির্বাচিত ফাইলটি {appName} থেকে এসেছে।"
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "সঠিক ধরনের JSON ফাইল নয়। নিশ্চিত করুন যে নির্বাচিত ফাইলটি {appName} থেকে এসেছে।"
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "সঠিক ধরনের ডেটা নয়। নিশ্চিত করুন যে ক্লিপবোর্ডে {appName} বা একটি {appName} ব্যাকআপ JSON ফাইলের ডেটা আছে।"
+  },
+  "controlGeneralReset": {
+    "message": "ডিফল্টে রিসেট করুন"
+  },
+  "controlColorTextPlaceholder": {
+    "message": "হেক্স কোড"
+  },
+  "controlColorRandom": {
+    "message": "এলোমেলো রঙ"
+  },
+  "controlColorMixerMoreControls": {
+    "message": "আরও নিয়ন্ত্রণ"
+  },
+  "controlColorMixerSliderH": {
+    "message": "হিউ"
+  },
+  "controlColorMixerSliderS": {
+    "message": "স্যাচুরেশন"
+  },
+  "controlColorMixerSliderL": {
+    "message": "হালকাতা"
+  },
+  "controlColorMixerSliderR": {
+    "message": "লাল"
+  },
+  "controlColorMixerSliderG": {
+    "message": "সবুজ"
+  },
+  "controlColorMixerSliderB": {
+    "message": "নীল"
+  }
+}

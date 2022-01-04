@@ -1337,8 +1337,11 @@
   "menuContentDataClearHelperPara2": {
     "message": "Alternativ ist es möglich, alle Einstellungen zu löschen, aber die aktuellen Lesezeichen und Gruppen beizubehalten."
   },
-  "menuContentLanguageLanguage": {
+  "menuContentLanguageSelect": {
     "message": "Sprache"
+  },
+  "menuContentLanguageSystem": {
+    "message": "Systemsprache verwenden"
   },
   "menuContentLanguageAlertPara": {
     "message": "Sie haben eine Übersetzung gefunden, die nicht stimmt?"

@@ -19,47 +19,47 @@ supportSetting.supportPage = {
 
     supportLink.page = {
       applyToAll: {
-        label: message('menuContentSupportPageApplyToAll'),
+        label: message.get('menuContentSupportPageApplyToAll'),
         url: 'Applying-bookmark-settings-to-all'
       },
       browser: {
-        label: message('menuContentSupportPageBrowser'),
+        label: message.get('menuContentSupportPageBrowser'),
         url: 'Browser-support'
       },
       cookies: {
-        label: message('menuContentSupportPageCookies'),
+        label: message.get('menuContentSupportPageCookies'),
         url: 'Cookies-and-cache'
       },
       data: {
-        label: message('menuContentSupportPageData'),
+        label: message.get('menuContentSupportPageData'),
         url: 'Data-backup-and-restore'
       },
       localBackgroundImage: {
-        label: message('menuContentSupportPageLocalBackgroundImage'),
+        label: message.get('menuContentSupportPageLocalBackgroundImage'),
         url: 'Local-background-image'
       },
       protectedUrl: {
-        label: message('menuContentSupportPageProtectedUrl'),
+        label: message.get('menuContentSupportPageProtectedUrl'),
         url: 'Protected-URLs'
       },
       recovering: {
-        label: message('menuContentSupportPageRecovering'),
+        label: message.get('menuContentSupportPageRecovering'),
         url: 'Recovering-settings-and-bookmarks'
       },
       resetting: {
-        label: message('menuContentSupportPageResetting'),
+        label: message.get('menuContentSupportPageResetting'),
         url: 'Resetting-when-opening-the-browser'
       },
       privacy: {
-        label: message('menuContentSupportPagePrivacy'),
+        label: message.get('menuContentSupportPagePrivacy'),
         url: 'Respecting-your-privacy'
       },
       backgroundImageVideo: {
-        label: message('menuContentSupportPageBackgroundImageVideo'),
+        label: message.get('menuContentSupportPageBackgroundImageVideo'),
         url: 'Setting-a-background-video-or-image'
       },
       firefox: {
-        label: message('menuContentSupportPageFirefox'),
+        label: message.get('menuContentSupportPageFirefox'),
         url: 'Setting-' + APP_NAME + '-as-your-Firefox-homepage'
       },
     };
@@ -99,16 +99,16 @@ supportSetting.support = (parent) => {
 
   supportSetting.support.para = node('p');
 
-  supportSetting.support.para.innerHTML = message('menuContentSupportPara');
+  supportSetting.support.para.innerHTML = message.get('menuContentSupportPara');
 
   supportSetting.support.linkIssue = new Link({
-    text: message('menuContentSupportLink1'),
+    text: message.get('menuContentSupportLink1'),
     href: `https://github.com/zombieFox/${APP_NAME}/issues`,
     openNew: true
   });
 
   supportSetting.support.linkWiki = new Link({
-    text: message('menuContentSupportLink2'),
+    text: message.get('menuContentSupportLink2'),
     href: `https://github.com/zombieFox/${APP_NAME}/wiki`,
     openNew: true
   });

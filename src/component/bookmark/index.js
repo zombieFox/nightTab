@@ -361,10 +361,10 @@ bookmark.add = {
     const bookmarkForm = new BookmarkForm({ bookmarkData: newBookmarkData });
 
     const addModal = new Modal({
-      heading: message('bookmarkAddHeading'),
+      heading: message.get('bookmarkAddHeading'),
       content: bookmarkForm.form(),
-      successText: message('bookmarkAddSuccessText'),
-      cancelText: message('bookmarkAddCancelText'),
+      successText: message.get('bookmarkAddSuccessText'),
+      cancelText: message.get('bookmarkAddCancelText'),
       width: (state.get.current().bookmark.style === 'block') ? 60 : 70,
       maxHeight: true,
       openAction: () => {

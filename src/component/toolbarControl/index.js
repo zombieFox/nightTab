@@ -37,7 +37,7 @@ export const ToolbarControl = function() {
       path: 'theme.accent',
       id: 'theme-accent-quick',
       type: 'color',
-      labelText: message('toolbarAccent'),
+      labelText: message.get('toolbarAccent'),
       srOnly: true,
       inputButtonStyle: ['dot', 'line'],
       inputButtonClassList: ['toolbar-item'],
@@ -55,20 +55,20 @@ export const ToolbarControl = function() {
       }
     }),
     add: new Dropdown({
-      title: message('toolbarAddLabel'),
-      text: message('toolbarAddLabel'),
+      title: message.get('toolbarAddLabel'),
+      text: message.get('toolbarAddLabel'),
       buttonStyle: ['line'],
       buttonClassList: ['toolbar-item'],
       srOnly: true,
       iconName: 'add',
       menuItem: [
-        { text: message('toolbarAddGroup'), iconName: 'addGroup', action: () => { group.add.render(); } },
-        { text: message('toolbarAddBookmark'), iconName: 'addBookmark', action: () => { bookmark.add.render(); } }
+        { text: message.get('toolbarAddGroup'), iconName: 'addGroup', action: () => { group.add.render(); } },
+        { text: message.get('toolbarAddBookmark'), iconName: 'addBookmark', action: () => { bookmark.add.render(); } }
       ]
     }),
     edit: new Button({
-      title: message('toolbarEdit'),
-      text: message('toolbarEdit'),
+      title: message.get('toolbarEdit'),
+      text: message.get('toolbarEdit'),
       srOnly: true,
       iconName: 'edit',
       classList: ['toolbar-item'],
@@ -82,8 +82,8 @@ export const ToolbarControl = function() {
       }
     }),
     setting: new Button({
-      title: message('toolbarSetting'),
-      text: message('toolbarSetting'),
+      title: message.get('toolbarSetting'),
+      text: message.get('toolbarSetting'),
       srOnly: true,
       iconName: 'settings',
       classList: ['toolbar-item'],

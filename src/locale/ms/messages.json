@@ -6,235 +6,235 @@
     "message": "nightTab"
   },
   "appDescription": {
-    "message": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab."
+    "message": "Sesuaikan warna aksen, reka letak, gaya, latar belakang dan penanda halaman dalam nightTab."
   },
   "menuNavThemeLabel": {
-    "message": "Theme"
+    "message": "Tema"
   },
   "menuNavThemeSubNavPreset": {
-    "message": "Preset"
+    "message": "Pratetap"
   },
   "menuNavThemeSubNavSaved": {
-    "message": "Saved"
+    "message": "Disimpan"
   },
   "menuNavThemeSubNavStyle": {
-    "message": "Style"
+    "message": "Gaya"
   },
   "menuNavThemeSubNavColor": {
-    "message": "Colour"
+    "message": "Warna"
   },
   "menuNavThemeSubNavAccent": {
-    "message": "Accent"
+    "message": "Loghat"
   },
   "menuNavThemeSubNavFont": {
-    "message": "Font"
+    "message": "fon"
   },
   "menuNavThemeSubNavRadius": {
-    "message": "Radius"
+    "message": "Jejari"
   },
   "menuNavThemeSubNavShadow": {
-    "message": "Shadow"
+    "message": "Bayang-bayang"
   },
   "menuNavThemeSubNavShade": {
-    "message": "Shade"
+    "message": "teduh"
   },
   "menuNavThemeSubNavOpacity": {
-    "message": "Opacity"
+    "message": "Kelegapan"
   },
   "menuNavThemeSubNavBackground": {
-    "message": "Background"
+    "message": "Latar belakang"
   },
   "menuNavThemeSubNavLayout": {
-    "message": "Layout"
+    "message": "Susun atur"
   },
   "menuNavThemeSubNavHeader": {
-    "message": "Header"
+    "message": "Kepala"
   },
   "menuNavThemeSubNavBookmark": {
-    "message": "Bookmark"
+    "message": "Penanda buku"
   },
   "menuNavLayoutLabel": {
-    "message": "Layout"
+    "message": "Susun atur"
   },
   "menuNavLayoutSubNavScaling": {
-    "message": "Scaling"
+    "message": "Penskalaan"
   },
   "menuNavLayoutSubNavArea": {
-    "message": "Area"
+    "message": "kawasan"
   },
   "menuNavLayoutSubNavPadding": {
     "message": "Padding"
   },
   "menuNavLayoutSubNavGutter": {
-    "message": "Gutter"
+    "message": "Longkang"
   },
   "menuNavLayoutSubNavAlignment": {
-    "message": "Alignment"
+    "message": "Penjajaran"
   },
   "menuNavLayoutSubNavPage": {
-    "message": "Page"
+    "message": "Halaman"
   },
   "menuNavHeaderLabel": {
-    "message": "Header"
+    "message": "Kepala"
   },
   "menuNavHeaderSubNavAlignment": {
-    "message": "Alignment"
+    "message": "Penjajaran"
   },
   "menuNavHeaderSubNavGreeting": {
-    "message": "Greeting"
+    "message": "salam"
   },
   "menuNavHeaderSubNavTransitional": {
-    "message": "Transitional words"
+    "message": "Perkataan peralihan"
   },
   "menuNavHeaderSubNavClock": {
-    "message": "Clock"
+    "message": "jam"
   },
   "menuNavHeaderSubNavDate": {
-    "message": "Date"
+    "message": "Tarikh"
   },
   "menuNavHeaderSubNavSearch": {
-    "message": "Search"
+    "message": "Cari"
   },
   "menuNavBookmarkLabel": {
-    "message": "Bookmark"
+    "message": "Penanda buku"
   },
   "menuNavBookmarkSubNavGeneral": {
-    "message": "General"
+    "message": "Umum"
   },
   "menuNavBookmarkSubNavStyle": {
-    "message": "Style"
+    "message": "Gaya"
   },
   "menuNavBookmarkSubNavOrientation": {
-    "message": "Orientation"
+    "message": "Orientasi"
   },
   "menuNavBookmarkSubNavSort": {
-    "message": "Sort"
+    "message": "Isih"
   },
   "menuNavGroupLabel": {
-    "message": "Group"
+    "message": "Kumpulan"
   },
   "menuNavGroupSubNavAlignment": {
-    "message": "Alignment"
+    "message": "Penjajaran"
   },
   "menuNavGroupSubNavName": {
-    "message": "Name"
+    "message": "nama"
   },
   "menuNavGroupSubNavCollapse": {
-    "message": "Collapse"
+    "message": "Runtuh"
   },
   "menuNavGroupSubNavToolbar": {
-    "message": "Toolbar"
+    "message": "Bar alat"
   },
   "menuNavToolbarLabel": {
-    "message": "Toolbar"
+    "message": "Bar alat"
   },
   "menuNavToolbarSubNavSize": {
-    "message": "Size"
+    "message": "Saiz"
   },
   "menuNavToolbarSubNavLocation": {
-    "message": "Location"
+    "message": "Lokasi"
   },
   "menuNavToolbarSubNavPosition": {
-    "message": "Position"
+    "message": "kedudukan"
   },
   "menuNavToolbarSubNavControls": {
-    "message": "Controls"
+    "message": "Kawalan"
   },
   "menuNavDataLabel": {
     "message": "Data"
   },
   "menuNavDataSubNavRestore": {
-    "message": "Restore"
+    "message": "Pulihkan"
   },
   "menuNavDataSubNavBackup": {
-    "message": "Backup"
+    "message": "Sandaran"
   },
   "menuNavDataSubNavClear": {
-    "message": "Clear"
+    "message": "Jelas"
   },
   "menuNavLanguageLabel": {
-    "message": "Language"
+    "message": "Bahasa"
   },
   "menuNavSupportLabel": {
-    "message": "Support"
+    "message": "Sokongan"
   },
   "menuNavCoffeeLabel": {
-    "message": "Coffee"
+    "message": "kopi"
   },
   "menuNavAppLabel": {
     "message": "{appName}"
   },
   "menuContentThemePresetHelperPara1": {
-    "message": "Applying a Preset will replace the current Colour, Accent, Font, Style, Radius, Shadow, Shade and Background."
+    "message": "Menggunakan Pratetap akan menggantikan Warna, Aksen, Fon, Gaya, Jejari, Bayang, Lorek dan Latar Belakang semasa."
   },
   "menuContentThemeSavedHelperPara1": {
-    "message": "Saving a Theme will record the current Colour, Accent, Font, Style, Opacity, Radius, Shadow, Shade and Background."
+    "message": "Menyimpan Tema akan merekodkan Warna, Aksen, Fon, Gaya, Kelegapan, Jejari, Bayang, Lorek dan Latar Belakang semasa."
   },
   "menuContentThemeSavedSave": {
-    "message": "Save current theme"
+    "message": "Simpan tema semasa"
   },
   "menuContentThemeSavedEdit": {
-    "message": "Edit saved themes"
+    "message": "Edit tema yang disimpan"
   },
   "menuContentThemeStyleDarkLabel": {
-    "message": "Dark mode"
+    "message": "Mod gelap"
   },
   "menuContentThemeStyleLightLabel": {
-    "message": "Light mode"
+    "message": "Mod cahaya"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Use system language"
+    "message": "Automatik"
   },
   "menuContentThemeStyleAutomaticDescription": {
-    "message": "Follow the system Light or Dark mode."
+    "message": "Ikuti mod Cahaya atau Gelap sistem."
   },
   "menuContentThemeColorShadeHelperPara1": {
-    "message": "Backgrounds, Bookmarks and Modals use shades from the left."
+    "message": "Latar belakang, Penanda Halaman dan Modal menggunakan warna dari kiri."
   },
   "menuContentThemeColorShadeHelperPara2": {
-    "message": "Text and form elements use shades from the right."
+    "message": "Elemen teks dan bentuk menggunakan warna dari sebelah kanan."
   },
   "menuContentThemeColorShadeHelperPara3": {
-    "message": "For a light look switch to the Light Style and then select a Primary colour. And vice versa for a dark look."
+    "message": "Untuk melihat cahaya beralih kepada Gaya Cahaya dan kemudian pilih warna Utama. Dan begitu juga sebaliknya untuk kelihatan gelap."
   },
   "menuContentThemeColorRangePrimaryH": {
-    "message": "Primary colour"
+    "message": "Warna utama"
   },
   "menuContentThemeColorRangePrimaryS": {
-    "message": "Saturation"
+    "message": "Ketepuan"
   },
   "menuContentThemeColorContrastLabel": {
-    "message": "Contrast range"
+    "message": "Julat kontras"
   },
   "menuContentThemeColorContrastLeft": {
-    "message": "Contrast start"
+    "message": "Permulaan kontras"
   },
   "menuContentThemeColorContrastRight": {
-    "message": "Contrast end"
+    "message": "Hujung kontras"
   },
   "menuContentThemeColorContrastHelperPara1": {
-    "message": "Move the Contrast range controls close together for a muted look."
+    "message": "Gerakkan kawalan julat Kontras rapat bersama untuk rupa yang diredamkan."
   },
   "menuContentThemeColorContrastHelperPara2": {
-    "message": "Move the Contrast range controls far apart from each other for a sharp vivid look."
+    "message": "Gerakkan kawalan julat Kontras berjauhan antara satu sama lain untuk rupa yang jelas."
   },
   "menuContentThemeAccentPresetColorGrey": {
-    "message": "Grey"
+    "message": "kelabu"
   },
   "menuContentThemeAccentPresetColorRed": {
-    "message": "Red"
+    "message": "merah"
   },
   "menuContentThemeAccentPresetColorOrange": {
-    "message": "Orange"
+    "message": "Jingga"
   },
   "menuContentThemeAccentPresetColorYellow": {
-    "message": "Yellow"
+    "message": "Kuning"
   },
   "menuContentThemeAccentPresetColorLime": {
-    "message": "Lime"
+    "message": "kapur"
   },
   "menuContentThemeAccentPresetColorGreen": {
-    "message": "Green"
+    "message": "hijau"
   },
   "menuContentThemeAccentPresetColorAqua": {
     "message": "Aqua"
@@ -246,10 +246,10 @@
     "message": "Teal"
   },
   "menuContentThemeAccentPresetColorBlue": {
-    "message": "Blue"
+    "message": "biru"
   },
   "menuContentThemeAccentPresetColorPurple": {
-    "message": "Purple"
+    "message": "Ungu"
   },
   "menuContentThemeAccentPresetColorMagenta": {
     "message": "Magenta"
@@ -258,1812 +258,1812 @@
     "message": "Fuchsia"
   },
   "menuContentThemeAccentPresetModifierLightLevel3": {
-    "message": "Super extra light"
+    "message": "Cahaya tambahan super"
   },
   "menuContentThemeAccentPresetModifierLightLevel2": {
-    "message": "Extra light"
+    "message": "Cahaya tambahan"
   },
   "menuContentThemeAccentPresetModifierLightLevel1": {
-    "message": "Light"
+    "message": "Cahaya"
   },
   "menuContentThemeAccentPresetModifierDarkLevel3": {
-    "message": "Super extra dark"
+    "message": "Super lebih gelap"
   },
   "menuContentThemeAccentPresetModifierDarkLevel2": {
-    "message": "Extra dark"
+    "message": "Lebih gelap"
   },
   "menuContentThemeAccentPresetModifierDarkLevel1": {
-    "message": "Dark"
+    "message": "Gelap"
   },
   "menuContentThemeAccentColor": {
-    "message": "Accent colour"
+    "message": "Warna aksen"
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "Random Accent colour on load/refresh"
+    "message": "Warna Aksen Rawak semasa dimuatkan\/segar semula"
   },
   "menuContentThemeAccentRandomStyleAny": {
-    "message": "Any"
+    "message": "mana-mana"
   },
   "menuContentThemeAccentRandomStyleLight": {
-    "message": "Light"
+    "message": "Cahaya"
   },
   "menuContentThemeAccentRandomStyleDark": {
-    "message": "Dark"
+    "message": "Gelap"
   },
   "menuContentThemeAccentRandomStylePastel": {
     "message": "Pastel"
   },
   "menuContentThemeAccentRandomStyleSaturated": {
-    "message": "Saturated"
+    "message": "Jenuh"
   },
   "menuContentThemeAccentRandomRandomise": {
-    "message": "Randomise now"
+    "message": "Rawak sekarang"
   },
   "menuContentThemeAccentCycleActive": {
-    "message": "Auto change Accent hue"
+    "message": "Auto tukar warna Aksen"
   },
   "menuContentThemeAccentCycleSpeed": {
-    "message": "Change delay"
+    "message": "Tukar kelewatan"
   },
   "menuContentThemeAccentCycleStep": {
-    "message": "Change steps"
+    "message": "Ubah langkah"
   },
   "menuContentThemeAccentCycleAlert": {
-    "message": "Take care as a fast changing Accent hue may cause performance issues."
+    "message": "Berhati-hati kerana warna Aksen yang berubah pantas boleh menyebabkan masalah prestasi."
   },
   "menuContentThemeAccentCycleHelperPara1": {
-    "message": "Auto change Accent hue will not work when the Accent colour is a grey or black."
+    "message": "Auto tukar Rona aksen tidak akan berfungsi apabila warna Aksen adalah kelabu atau hitam."
   },
   "menuContentThemeFontDisplayNameLabel": {
-    "message": "Display font"
+    "message": "Fon paparan"
   },
   "menuContentThemeFontDisplayNamePlaceholder": {
-    "message": "Google font name"
+    "message": "Nama fon Google"
   },
   "menuContentThemeFontDisplayNameHelperPara1": {
-    "message": "Use a Google Font to customise the Clock, Date, Group names and Bookmark Letters."
+    "message": "Gunakan Fon Google untuk menyesuaikan Jam, Tarikh, nama Kumpulan dan Surat Penanda Halaman."
   },
   "menuContentThemeFontDisplayNameHelperLink": {
-    "message": "Find a Google Font"
+    "message": "Cari Fon Google"
   },
   "menuContentThemeFontDisplayNameHelperPara2": {
-    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Fredoka One\" or \"Kanit\"."
+    "message": "Tambahkan nama fon seperti yang dipaparkan pada Google Font, termasuk huruf besar dan ruang, cth: masukkan \"Fredoka One\" atau \"Kanit\"."
   },
   "menuContentThemeFontDisplayNameHelperPara3": {
-    "message": "Clear the field to use the default font \"Fjalla One\"."
+    "message": "Kosongkan medan untuk menggunakan fon lalai \"Fjalla One\"."
   },
   "menuContentThemeFontDisplayWeightLabel": {
-    "message": "Font weight"
+    "message": "Berat fon"
   },
   "menuContentThemeFontDisplayWeightLight": {
-    "message": "Light"
+    "message": "Cahaya"
   },
   "menuContentThemeFontDisplayWeightRegular": {
-    "message": "Regular"
+    "message": "Biasa"
   },
   "menuContentThemeFontDisplayWeightBold": {
-    "message": "Bold"
+    "message": "berani"
   },
   "menuContentThemeFontDisplayWeightHelperPara1": {
-    "message": "Not all fonts support all weights. Refer to the Google Font page to see which are available."
+    "message": "Tidak semua fon menyokong semua berat. Rujuk halaman Google Font untuk melihat yang tersedia."
   },
   "menuContentThemeFontDisplayStyleNormal": {
-    "message": "Normal"
+    "message": "Biasalah"
   },
   "menuContentThemeFontDisplayStyleItalic": {
     "message": "Italic"
   },
   "menuContentThemeFontUiNameLabel": {
-    "message": "User interface font"
+    "message": "Fon antara muka pengguna"
   },
   "menuContentThemeFontUiNamePlaceholder": {
-    "message": "Google font name"
+    "message": "Nama fon Google"
   },
   "menuContentThemeFontUiNameHelperPara1": {
-    "message": "Use a Google Font to customise the Bookmark name, URL and form elements."
+    "message": "Gunakan Fon Google untuk menyesuaikan nama Penanda Halaman, URL dan elemen borang."
   },
   "menuContentThemeFontUiNameHelperLink": {
-    "message": "Find a Google Font"
+    "message": "Cari Fon Google"
   },
   "menuContentThemeFontUiNameHelperPara2": {
-    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Roboto\", \"Source Sans Pro\" or \"Noto Sans\"."
+    "message": "Tambahkan nama fon seperti yang dipaparkan pada Google Font, termasuk huruf besar dan ruang, cth: masukkan \"Roboto\", \"Source Sans Pro\" atau \"Noto Sans\"."
   },
   "menuContentThemeFontUiNameHelperPara3": {
-    "message": "Clear the field to use the default font \"Open Sans\"."
+    "message": "Kosongkan medan untuk menggunakan fon lalai \"Open Sans\"."
   },
   "menuContentThemeFontUiWeightLabel": {
-    "message": "Font weight"
+    "message": "Berat fon"
   },
   "menuContentThemeFontUiWeightLight": {
-    "message": "Light"
+    "message": "Cahaya"
   },
   "menuContentThemeFontUiWeightRegular": {
-    "message": "Regular"
+    "message": "Biasa"
   },
   "menuContentThemeFontUiWeightBold": {
-    "message": "Bold"
+    "message": "berani"
   },
   "menuContentThemeFontUiWeightHelperPara1": {
-    "message": "Not all fonts support all weights. Refer to the Google Font page to see which are available."
+    "message": "Tidak semua fon menyokong semua berat. Rujuk halaman Google Font untuk melihat yang tersedia."
   },
   "menuContentThemeFontUiStyleNormal": {
-    "message": "Normal"
+    "message": "Biasalah"
   },
   "menuContentThemeFontUiStyleItalic": {
     "message": "Italic"
   },
   "menuContentThemeRadius": {
-    "message": "Corner radius"
+    "message": "Jejari sudut"
   },
   "menuContentThemeShadow": {
-    "message": "Shadow size"
+    "message": "Saiz bayang-bayang"
   },
   "menuContentThemeShadeOpacity": {
-    "message": "Shade opacity"
+    "message": "Kelegapan teduhan"
   },
   "menuContentThemeShadeBlurLabel": {
-    "message": "Shade blur"
+    "message": "Teduhan kabur"
   },
   "menuContentThemeShadeBlurHelperPara1": {
-    "message": "Not supported by all browsers."
+    "message": "Tidak disokong oleh semua pelayar."
   },
   "menuContentThemeOpacityGeneralLabel": {
-    "message": "All opacity"
+    "message": "Semua kelegapan"
   },
   "menuContentThemeOpacityGeneralHelperPara1": {
-    "message": "Change the opacity of Search bar, Bookmarks, Group controls and the Toolbar."
+    "message": "Tukar kelegapan bar Carian, Penanda Halaman, kawalan Kumpulan dan Bar Alat."
   },
   "menuContentThemeOpacityGeneralHelperPara2": {
-    "message": "Opacity can also be changed when editing individual Bookmarks."
+    "message": "Kelegapan juga boleh ditukar apabila mengedit Penanda Halaman individu."
   },
   "menuContentThemeOpacityToolbar": {
-    "message": "Toolbar"
+    "message": "Bar alat"
   },
   "menuContentThemeOpacityBookmark": {
-    "message": "Bookmark"
+    "message": "Penanda buku"
   },
   "menuContentThemeOpacitySearch": {
-    "message": "Search box"
+    "message": "Kotak carian"
   },
   "menuContentThemeOpacityGroupToolbar": {
-    "message": "Group toolbar"
+    "message": "Bar alat kumpulan"
   },
   "menuContentThemeBackgroundTypeThemeLabel": {
-    "message": "Background by Theme"
+    "message": "Latar belakang mengikut Tema"
   },
   "menuContentThemeBackgroundTypeThemeDescription": {
-    "message": "Use the Background colour defined by the Theme."
+    "message": "Gunakan warna Latar Belakang yang ditakrifkan oleh Tema."
   },
   "menuContentThemeBackgroundTypeAccentLabel": {
-    "message": "Background by Accent"
+    "message": "Latar belakang mengikut Aksen"
   },
   "menuContentThemeBackgroundTypeAccentDescription": {
-    "message": "Use the Accent colour for the Background."
+    "message": "Gunakan warna Aksen untuk Latar Belakang."
   },
   "menuContentThemeBackgroundTypeColor": {
-    "message": "Custom colour"
+    "message": "Warna tersuai"
   },
   "menuContentThemeBackgroundTypeGradient": {
-    "message": "Gradient"
+    "message": "Kecerunan"
   },
   "menuContentThemeBackgroundTypeImage": {
-    "message": "Image"
+    "message": "Gambar"
   },
   "menuContentThemeBackgroundTypeVideo": {
     "message": "Video"
   },
   "menuContentThemeBackgroundColor": {
-    "message": "Background colour"
+    "message": "Warna latar belakang"
   },
   "menuContentThemeBackgroundGradientAngle": {
-    "message": "Background gradient angle"
+    "message": "Sudut kecerunan latar belakang"
   },
   "menuContentThemeBackgroundGradientStart": {
-    "message": "Background gradient start"
+    "message": "Permulaan kecerunan latar belakang"
   },
   "menuContentThemeBackgroundGradientEnd": {
-    "message": "Background gradient end"
+    "message": "Akhir kecerunan latar belakang"
   },
   "menuContentThemeBackgroundImageAlertPara1": {
-    "message": "Local images can no longer be used. Images must be hosted somewhere online."
+    "message": "Imej tempatan tidak boleh digunakan lagi. Imej mesti dihoskan di suatu tempat dalam talian."
   },
   "menuContentThemeBackgroundImageAlertPara2": {
-    "message": "Why has this changed?"
+    "message": "Mengapa ini berubah?"
   },
   "menuContentThemeBackgroundImageUrlLabel": {
     "message": "URL"
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
-    "message": "https://www.example.com/image.jpg"
+    "message": "https:\/\/www.example.com\/image.jpg"
   },
   "menuContentThemeBackgroundImageUrlHelperPara1": {
-    "message": "Add more than one URL separated by spaces or on new lines for a random background image on load."
+    "message": "Tambahkan lebih daripada satu URL yang dipisahkan oleh ruang atau pada baris baharu untuk imej latar belakang rawak semasa dimuatkan."
   },
   "menuContentThemeBackgroundImageUrlHelperPara2": {
-    "message": "Unsplash can be used for random images, eg:"
+    "message": "Unsplash boleh digunakan untuk imej rawak, cth:"
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
-    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
+    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?malam,siang,langit"
   },
   "menuContentThemeBackgroundImageUrlHelperPara4": {
-    "message": "Change parameters after .../random/ for more options. Loading times may vary."
+    "message": "Tukar parameter selepas ...\/random\/ untuk lebih banyak pilihan. Masa memuatkan mungkin berbeza-beza."
   },
   "menuContentThemeBackgroundImageBlur": {
-    "message": "Blur"
+    "message": "Kabur"
   },
   "menuContentThemeBackgroundImageGrayscale": {
-    "message": "Grayscale"
+    "message": "Skala kelabu"
   },
   "menuContentThemeBackgroundImageScale": {
-    "message": "Scale"
+    "message": "Skala"
   },
   "menuContentThemeBackgroundImageAccent": {
-    "message": "Accent"
+    "message": "Loghat"
   },
   "menuContentThemeBackgroundImageOpacity": {
-    "message": "Opacity"
+    "message": "Kelegapan"
   },
   "menuContentThemeBackgroundImageVignetteOpacity": {
     "message": "Vignette"
   },
   "menuContentThemeBackgroundImageVignetteRangeLabel": {
-    "message": "Shade start and end"
+    "message": "Lorek mula dan tamat"
   },
   "menuContentThemeBackgroundImageVignetteRangeLeft": {
-    "message": "Shade end"
+    "message": "Hujung teduh"
   },
   "menuContentThemeBackgroundImageVignetteRangeRight": {
-    "message": "Shade start"
+    "message": "Mula teduh"
   },
   "menuContentThemeBackgroundVideoAlertPara1": {
-    "message": "YouTube page URLs can not be used."
+    "message": "URL halaman YouTube tidak boleh digunakan."
   },
   "menuContentThemeBackgroundVideoAlertPara2": {
-    "message": "How to link to a video file."
+    "message": "Bagaimana untuk memaut ke fail video."
   },
   "menuContentThemeBackgroundVideoUrlLabel": {
     "message": "URL"
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
-    "message": "https://www.example.com/video.mp4"
+    "message": "https:\/\/www.example.com\/video.mp4"
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
-    "message": "Background video only supports a direct URL to a video file. Supports MP4 and WebM format."
+    "message": "Video latar belakang hanya menyokong URL terus ke fail video. Menyokong format MP4 dan WebM."
   },
   "menuContentThemeBackgroundVideoUrlHelperPara2": {
-    "message": "Add more than one URL separated by spaces or on new lines for a random background video on load."
+    "message": "Tambahkan lebih daripada satu URL yang dipisahkan oleh ruang atau pada baris baharu untuk video latar belakang rawak yang dimuatkan."
   },
   "menuContentThemeBackgroundVideoBlur": {
-    "message": "Blur"
+    "message": "Kabur"
   },
   "menuContentThemeBackgroundVideoGrayscale": {
-    "message": "Grayscale"
+    "message": "Skala kelabu"
   },
   "menuContentThemeBackgroundVideoScale": {
-    "message": "Scale"
+    "message": "Skala"
   },
   "menuContentThemeBackgroundVideoAccent": {
-    "message": "Accent"
+    "message": "Loghat"
   },
   "menuContentThemeBackgroundVideoOpacity": {
-    "message": "Opacity"
+    "message": "Kelegapan"
   },
   "menuContentThemeBackgroundVideoVignetteOpacity": {
     "message": "Vignette"
   },
   "menuContentThemeBackgroundVideoVignetteRangeLabel": {
-    "message": "Shade start and end"
+    "message": "Lorek mula dan tamat"
   },
   "menuContentThemeBackgroundVideoVignetteRangeLeft": {
-    "message": "Shade end"
+    "message": "Hujung teduh"
   },
   "menuContentThemeBackgroundVideoVignetteRangeRight": {
-    "message": "Shade start"
+    "message": "Mula teduh"
   },
   "menuContentThemeLayoutColorLabel": {
-    "message": "Layout background colour"
+    "message": "Warna latar belakang reka letak"
   },
   "menuContentThemeLayoutColorByTransparentLabel": {
-    "message": "Transparent"
+    "message": "Telus"
   },
   "menuContentThemeLayoutColorByTransparentDescription": {
-    "message": "No background colour behind the Layout."
+    "message": "Tiada warna latar belakang di belakang Reka Letak."
   },
   "menuContentThemeLayoutColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Warna tersuai"
   },
   "menuContentThemeLayoutColorByCustomDescription": {
-    "message": "Use a custom colour behind the Layout."
+    "message": "Gunakan warna tersuai di belakang Reka Letak."
   },
   "menuContentThemeLayoutColorColor": {
-    "message": "Layout background colour"
+    "message": "Warna latar belakang reka letak"
   },
   "menuContentThemeLayoutColorOpacity": {
-    "message": "Background opacity"
+    "message": "Kelegapan latar belakang"
   },
   "menuContentThemeLayoutColorBlurLabel": {
-    "message": "Background blur"
+    "message": "Latar belakang kabur"
   },
   "menuContentThemeLayoutColorBlurHelperPara1": {
-    "message": "Not supported by all browsers."
+    "message": "Tidak disokong oleh semua pelayar."
   },
   "menuContentThemeLayoutDivider": {
-    "message": "Divider between Header and Bookmark area"
+    "message": "Pembahagi antara Pengepala dan kawasan Penanda Halaman"
   },
   "menuContentThemeHeaderColorLabel": {
-    "message": "Header background colour"
+    "message": "Warna latar belakang pengepala"
   },
   "menuContentThemeHeaderColorByTransparentLabel": {
-    "message": "Transparent"
+    "message": "Telus"
   },
   "menuContentThemeHeaderColorByTransparentDescription": {
-    "message": "No background colour behind the Header area."
+    "message": "Tiada warna latar belakang di belakang kawasan Pengepala."
   },
   "menuContentThemeHeaderColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Warna tersuai"
   },
   "menuContentThemeHeaderColorByCustomDescription": {
-    "message": "Use a custom colour behind the Header area."
+    "message": "Gunakan warna tersuai di belakang kawasan Pengepala."
   },
   "menuContentThemeHeaderColorColor": {
-    "message": "Header background colour"
+    "message": "Warna latar belakang pengepala"
   },
   "menuContentThemeHeaderColorOpacity": {
-    "message": "Background opacity"
+    "message": "Kelegapan latar belakang"
   },
   "menuContentThemeBookmarkColorLabel": {
-    "message": "Bookmark background colour"
+    "message": "Warna latar belakang penanda halaman"
   },
   "menuContentThemeBookmarkColorByTransparentLabel": {
-    "message": "Transparent"
+    "message": "Telus"
   },
   "menuContentThemeBookmarkColorByTransparentDescription": {
-    "message": "No background colour behind the Bookmark area."
+    "message": "Tiada warna latar belakang di belakang kawasan Penanda Halaman."
   },
   "menuContentThemeBookmarkColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Warna tersuai"
   },
   "menuContentThemeBookmarkColorByCustomDescription": {
-    "message": "Use a custom colour behind the Bookmark area."
+    "message": "Gunakan warna tersuai di belakang kawasan Penanda Halaman."
   },
   "menuContentThemeBookmarkColorColor": {
-    "message": "Bookmark background colour"
+    "message": "Warna latar belakang penanda halaman"
   },
   "menuContentThemeBookmarkColorOpacity": {
-    "message": "Background opacity"
+    "message": "Kelegapan latar belakang"
   },
   "menuContentThemeBookmarkItemBorderLabel": {
-    "message": "Bookmark border"
+    "message": "Penanda buku sempadan"
   },
   "menuContentThemeBookmarkItemBorderHelperPara1": {
-    "message": "Bookmark border can also be changed when editing individual Bookmarks."
+    "message": "Sempadan penanda halaman juga boleh ditukar apabila mengedit Penanda Halaman individu."
   },
   "menuContentThemeBookmarkItemBorderHelperPara2": {
-    "message": "The colour of the Border is defined by the Accent which can also be changed when editing individual Bookmarks."
+    "message": "Warna Sempadan ditakrifkan oleh Aksen yang juga boleh ditukar apabila mengedit Penanda Halaman individu."
   },
   "menuContentThemeBookmarkItemRainbowAdd": {
-    "message": "Add unique accent to each Bookmark"
+    "message": "Tambahkan aksen unik pada setiap Penanda Halaman"
   },
   "menuContentThemeBookmarkItemRainbowRemove": {
-    "message": "Remove all accent overrides"
+    "message": "Alih keluar semua penggantian aksen"
   },
   "menuContentThemeBookmarkItemRainbowHelperPara1": {
-    "message": "Bookmark custom Accent can also be changed when editing individual Bookmarks."
+    "message": "Penanda halaman Aksen tersuai juga boleh ditukar apabila mengedit Penanda Halaman individu."
   },
   "menuContentLayoutScalingSize": {
-    "message": "Global size"
+    "message": "Saiz global"
   },
   "menuContentLayoutAreaWidth": {
-    "message": "Layout area width"
+    "message": "Lebar kawasan susun atur"
   },
   "menuContentLayoutAreaHeaderWidth": {
-    "message": "Header area width"
+    "message": "Lebar kawasan pengepala"
   },
   "menuContentLayoutAreaHeaderJustifyLabel": {
-    "message": "Header area alignment"
+    "message": "Penjajaran kawasan pengepala"
   },
   "menuContentLayoutAreaHeaderJustifyLeft": {
-    "message": "Left"
+    "message": "Dibiarkan"
   },
   "menuContentLayoutAreaHeaderJustifyCenter": {
-    "message": "Centre"
+    "message": "Pusat"
   },
   "menuContentLayoutAreaHeaderJustifyRight": {
-    "message": "Right"
+    "message": "Betul"
   },
   "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
-    "message": "Effects may not be visible if the Header Area is full width."
+    "message": "Kesan mungkin tidak kelihatan jika Kawasan Pengepala adalah lebar penuh."
   },
   "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
-    "message": "Only available when Layout Direction is Vertical and Header items are shown."
+    "message": "Hanya tersedia apabila Arah Layout adalah Menegak dan item Pengepala ditunjukkan."
   },
   "menuContentLayoutAreaBookmarkWidth": {
-    "message": "Bookmark area width"
+    "message": "Penanda halaman lebar kawasan"
   },
   "menuContentLayoutAreaBookmarkJustifyLabel": {
-    "message": "Bookmark area alignment"
+    "message": "Penjajaran kawasan penanda halaman"
   },
   "menuContentLayoutAreaBookmarkJustifyLeft": {
-    "message": "Left"
+    "message": "Dibiarkan"
   },
   "menuContentLayoutAreaBookmarkJustifyCenter": {
-    "message": "Centre"
+    "message": "Pusat"
   },
   "menuContentLayoutAreaBookmarkJustifyRight": {
-    "message": "Right"
+    "message": "Betul"
   },
   "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
-    "message": "Effects may not be visible if the Bookmark Area is full width."
+    "message": "Kesan mungkin tidak kelihatan jika Kawasan Penanda Halaman mempunyai lebar penuh."
   },
   "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
-    "message": "Only available when Layout Direction is Vertical and Header items are shown."
+    "message": "Hanya tersedia apabila Arah Layout adalah Menegak dan item Pengepala ditunjukkan."
   },
   "menuContentLayoutPadding": {
-    "message": "Space around Header and Bookmark Area"
+    "message": "Ruang di sekitar Pengepala dan Kawasan Penanda Halaman"
   },
   "menuContentLayoutGutter": {
-    "message": "Space between Header and Bookmark items"
+    "message": "Ruang antara item Pengepala dan Penanda Halaman"
   },
   "menuContentLayoutAlignmentLabel": {
-    "message": "Area alignment"
+    "message": "Penjajaran kawasan"
   },
   "menuContentLayoutAlignmentTopLeft": {
-    "message": "Top Left"
+    "message": "Atas Kiri"
   },
   "menuContentLayoutAlignmentTopCenter": {
-    "message": "Top Centre"
+    "message": "Pusat Atas"
   },
   "menuContentLayoutAlignmentTopRight": {
-    "message": "Top Right"
+    "message": "Atas Kanan"
   },
   "menuContentLayoutAlignmentCenterLeft": {
-    "message": "Centre Left"
+    "message": "Tengah Kiri"
   },
   "menuContentLayoutAlignmentCenterCenter": {
-    "message": "Centre Centre"
+    "message": "Pusat Pusat"
   },
   "menuContentLayoutAlignmentCenterRight": {
-    "message": "Centre Right"
+    "message": "Tengah Kanan"
   },
   "menuContentLayoutAlignmentBottomLeft": {
-    "message": "Bottom Left"
+    "message": "Dibahagian bawah kiri"
   },
   "menuContentLayoutAlignmentBottomCenter": {
-    "message": "Bottom Centre"
+    "message": "Pusat Bawah"
   },
   "menuContentLayoutAlignmentBottomRight": {
-    "message": "Bottom Right"
+    "message": "Bawah Kanan"
   },
   "menuContentLayoutDirectionHorizontalLabel": {
-    "message": "Align horizontal"
+    "message": "Jajar mendatar"
   },
   "menuContentLayoutDirectionHorizontalDescription": {
-    "message": "Stack the Header and Bookmarks in a row side by side."
+    "message": "Susun Pengepala dan Penanda Halaman dalam satu baris bersebelahan."
   },
   "menuContentLayoutDirectionVerticalLabel": {
-    "message": "Align vertical"
+    "message": "Jajar menegak"
   },
   "menuContentLayoutDirectionVerticalDescription": {
-    "message": "Stack the Header and Bookmarks in a column one above the other."
+    "message": "Susun Pengepala dan Penanda Halaman dalam lajur satu di atas yang lain."
   },
   "menuContentLayoutOrderHeaderBookmarkLabel": {
-    "message": "Header then Bookmarks"
+    "message": "Pengepala kemudian Penanda Halaman"
   },
   "menuContentLayoutOrderHeaderBookmarkDescription": {
-    "message": "Order the Header area to appear before the Bookmarks area."
+    "message": "Perintahkan kawasan Pengepala untuk muncul sebelum kawasan Penanda Halaman."
   },
   "menuContentLayoutOrderBookmarkHeaderLabel": {
-    "message": "Bookmarks then Header"
+    "message": "Penanda halaman kemudian Pengepala"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Order the Bookmarks area to appear before the Header area."
+    "message": "Perintahkan kawasan Penanda Halaman untuk muncul sebelum kawasan Pengepala."
   },
   "menuContentLayoutPageTitleLabel": {
-    "message": "Title"
+    "message": "Tajuk"
   },
   "menuContentLayoutPageTitlePlaceholder": {
-    "message": "New Tab"
+    "message": "Tab baru"
   },
   "menuContentLayoutPageFaviconLabel": {
-    "message": "Favicon URL"
+    "message": "URL Favicon"
   },
   "menuContentLayoutPageFaviconPlaceholder": {
-    "message": "https://www.example.com/favicon.svg"
+    "message": "https:\/\/www.example.com\/favicon.svg"
   },
   "menuContentLayoutPageFaviconHelperPara1": {
-    "message": "Not supported by all browsers."
+    "message": "Tidak disokong oleh semua pelayar."
   },
   "menuContentLayoutPageScrollbarLabel": {
-    "message": "Scrollbar"
+    "message": "Bar skrol"
   },
   "menuContentLayoutPageScrollbarAuto": {
     "message": "Auto"
   },
   "menuContentLayoutPageScrollbarThin": {
-    "message": "Thin"
+    "message": "Nipis"
   },
   "menuContentLayoutPageScrollbarNone": {
-    "message": "Hidden"
+    "message": "Tersembunyi"
   },
   "menuContentLayoutPageScrollbarHelperPara1": {
-    "message": "Not supported by all browsers."
+    "message": "Tidak disokong oleh semua pelayar."
   },
   "menuContentLayoutPageOverscrollActive": {
-    "message": "Scroll past end"
+    "message": "Tatal melepasi hujung"
   },
   "menuContentLayoutPageOverscrollUnblurLabel": {
-    "message": "Unblur background image or video"
+    "message": "Nyahkaburkan imej atau video latar belakang"
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
-    "message": "Background image or video will unblur when scrolled to the bottom of the page."
+    "message": "Imej atau video latar belakang tidak akan kabur apabila ditatal ke bahagian bawah halaman."
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
-    "message": "Image or video blur can be found under Theme Background."
+    "message": "Imej atau video kabur boleh didapati di bawah Latar Belakang Tema."
   },
   "menuContentHeaderAlignmentJustifyLabel": {
-    "message": "Header item alignment"
+    "message": "Penjajaran item pengepala"
   },
   "menuContentHeaderAlignmentJustifyLeft": {
-    "message": "Left"
+    "message": "Dibiarkan"
   },
   "menuContentHeaderAlignmentJustifyCenter": {
-    "message": "Center"
+    "message": "Pusat"
   },
   "menuContentHeaderAlignmentJustifyRight": {
-    "message": "Right"
+    "message": "Betul"
   },
   "menuContentHeaderAlignmentHelperPara1": {
-    "message": "Effects may not be visible if the Search box size is set to Auto and grows to fill available space."
+    "message": "Kesan mungkin tidak kelihatan jika saiz kotak Carian ditetapkan kepada Auto dan membesar untuk mengisi ruang yang tersedia."
   },
   "menuContentHeaderGreetingShow": {
-    "message": "Show Greeting"
+    "message": "Tunjukkan Salam"
   },
   "menuContentHeaderGreetingSize": {
-    "message": "Size"
+    "message": "Saiz"
   },
   "menuContentHeaderGreetingNewLineLabel": {
-    "message": "New line"
+    "message": "Baris baru"
   },
   "menuContentHeaderGreetingNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Paksa ke baris baharu dan asingkan daripada item Pengepala lain."
   },
   "menuContentHeaderGreetingTypeLabel": {
-    "message": "Wording"
+    "message": "Perkataan"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Good morning...\""
+    "message": "\"Selamat Pagi...\""
   },
   "menuContentHeaderGreetingTypeHello": {
     "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Hi...\""
+    "message": "\"Hai...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
-    "message": "None"
+    "message": "tiada"
   },
   "menuContentHeaderGreetingTypeNoneDescription": {
-    "message": "Useful for displaying just the name."
+    "message": "Berguna untuk memaparkan hanya nama."
   },
   "menuContentHeaderGreetingTypeCustomLabel": {
-    "message": "Custom"
+    "message": "Adat"
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
-    "message": "Use your own greeting."
+    "message": "Gunakan ucapan anda sendiri."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "Defaults to \"Good morning...\" if left blank."
+    "message": "Lalai kepada \"Selamat pagi...\" jika dibiarkan kosong."
   },
   "menuContentHeaderGreetingCustomLabel": {
-    "message": "Custom greeting text"
+    "message": "Teks ucapan tersuai"
   },
   "menuContentHeaderGreetingCustomPlaceholder": {
-    "message": "Howdy"
+    "message": "apa khabar"
   },
   "menuContentHeaderGreetingNameLabel": {
-    "message": "Name"
+    "message": "nama"
   },
   "menuContentHeaderGreetingNamePlaceholder": {
-    "message": "Nickname, alias or superhero name"
+    "message": "Nama panggilan, alias atau nama adiwira"
   },
   "menuContentHeaderTransitionalShowLabel": {
-    "message": "Show Transitional words"
+    "message": "Tunjukkan perkataan Peralihan"
   },
   "menuContentHeaderTransitionalShowHelperPara1": {
-    "message": "Only available when Date or Time is shown."
+    "message": "Hanya tersedia apabila Tarikh atau Masa ditunjukkan."
   },
   "menuContentHeaderTransitionalTypeLabel": {
-    "message": "Wording"
+    "message": "Perkataan"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"The time and date is\""
+    "message": "\"Masa dan tarikh ialah\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"It's\""
+    "message": "\"Ia\""
   },
   "menuContentHeaderTransitionalSize": {
-    "message": "Size"
+    "message": "Saiz"
   },
   "menuContentHeaderTransitionalNewLineLabel": {
-    "message": "New line"
+    "message": "Baris baru"
   },
   "menuContentHeaderTransitionalNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Paksa ke baris baharu dan asingkan daripada item Pengepala lain."
   },
   "menuContentHeaderClockHourShow": {
-    "message": "Show hours"
+    "message": "Waktu persembahan"
   },
   "menuContentHeaderClockHourDisplayNumber": {
-    "message": "As number"
+    "message": "Sebagai nombor"
   },
   "menuContentHeaderClockHourDisplayWord": {
-    "message": "As word"
+    "message": "Sebilah pedang"
   },
   "menuContentHeaderClockMinuteShow": {
-    "message": "Show minutes"
+    "message": "Tunjukkan minit"
   },
   "menuContentHeaderClockMinuteDisplayNumber": {
-    "message": "As number"
+    "message": "Sebagai nombor"
   },
   "menuContentHeaderClockMinuteDisplayWord": {
-    "message": "As word"
+    "message": "Sebilah pedang"
   },
   "menuContentHeaderClockSecondShow": {
-    "message": "Show seconds"
+    "message": "Tunjukkan detik"
   },
   "menuContentHeaderClockSecondDisplayNumber": {
-    "message": "As number"
+    "message": "Sebagai nombor"
   },
   "menuContentHeaderClockSecondDisplayWord": {
-    "message": "As word"
+    "message": "Sebilah pedang"
   },
   "menuContentHeaderClockSeparatorShow": {
-    "message": "Show separator"
+    "message": "Tunjukkan pemisah"
   },
   "menuContentHeaderClockSeparatorLabel": {
-    "message": "Separator character"
+    "message": "Watak pemisah"
   },
   "menuContentHeaderClockSeparatorPlaceholder": {
     "message": ":"
   },
   "menuContentHeaderClockHour24": {
-    "message": "24 hours"
+    "message": "24 jam"
   },
   "menuContentHeaderClockMeridiem": {
-    "message": "AM / PM"
+    "message": "PAGI PETANG"
   },
   "menuContentHeaderClockSize": {
-    "message": "Size"
+    "message": "Saiz"
   },
   "menuContentHeaderClockNewLineLabel": {
-    "message": "New line"
+    "message": "Baris baru"
   },
   "menuContentHeaderClockNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Paksa ke baris baharu dan asingkan daripada item Pengepala lain."
   },
   "menuContentHeaderDateDayShow": {
-    "message": "Show Day"
+    "message": "Hari Pertunjukan"
   },
   "menuContentHeaderDateDayDisplayNumber": {
-    "message": "As number"
+    "message": "Sebagai nombor"
   },
   "menuContentHeaderDateDayDisplayWord": {
-    "message": "As word"
+    "message": "Sebilah pedang"
   },
   "menuContentHeaderDateDayDisplayWeekStartLabel": {
-    "message": "Start of the week"
+    "message": "Permulaan minggu"
   },
   "menuContentHeaderDateDayDisplayWeekStartMonday": {
-    "message": "Monday"
+    "message": "Isnin"
   },
   "menuContentHeaderDateDayDisplayWeekStartSunday": {
-    "message": "Sunday"
+    "message": "Ahad"
   },
   "menuContentHeaderDateDayDisplayLengthLabel": {
-    "message": "Word length"
+    "message": "Panjang perkataan"
   },
   "menuContentHeaderDateDayDisplayLengthLong": {
-    "message": "Long"
+    "message": "Panjang"
   },
   "menuContentHeaderDateDayDisplayLengthShort": {
-    "message": "Short"
+    "message": "Pendek"
   },
   "menuContentHeaderDateDateShow": {
-    "message": "Show Date"
+    "message": "Tunjukkan Tarikh"
   },
   "menuContentHeaderDateDateDisplayNumber": {
-    "message": "As number"
+    "message": "Sebagai nombor"
   },
   "menuContentHeaderDateDateDisplayWord": {
-    "message": "As word"
+    "message": "Sebilah pedang"
   },
   "menuContentHeaderDateDateDisplayOrdinal": {
-    "message": "Ordinal numbers"
+    "message": "Nombor ordinal"
   },
   "menuContentHeaderDateMonthShow": {
-    "message": "Show Month"
+    "message": "Bulan Paparan"
   },
   "menuContentHeaderDateMonthDisplayNumber": {
-    "message": "As number"
+    "message": "Sebagai nombor"
   },
   "menuContentHeaderDateMonthDisplayWord": {
-    "message": "As word"
+    "message": "Sebilah pedang"
   },
   "menuContentHeaderDateMonthDisplayOrdinal": {
-    "message": "Ordinal numbers"
+    "message": "Nombor ordinal"
   },
   "menuContentHeaderDateMonthDisplayLengthLabel": {
-    "message": "Word length"
+    "message": "Panjang perkataan"
   },
   "menuContentHeaderDateMonthDisplayLengthLong": {
-    "message": "Long"
+    "message": "Panjang"
   },
   "menuContentHeaderDateMonthDisplayLengthShort": {
-    "message": "Short"
+    "message": "Pendek"
   },
   "menuContentHeaderDateYearShow": {
-    "message": "Show Year"
+    "message": "Tahun Tayangan"
   },
   "menuContentHeaderDateYearDisplayNumber": {
-    "message": "As number"
+    "message": "Sebagai nombor"
   },
   "menuContentHeaderDateYearDisplayWord": {
-    "message": "As word"
+    "message": "Sebilah pedang"
   },
   "menuContentHeaderDateSeparatorShow": {
-    "message": "Show separator"
+    "message": "Tunjukkan pemisah"
   },
   "menuContentHeaderDateSeparatorLabel": {
-    "message": "Separator character"
+    "message": "Watak pemisah"
   },
   "menuContentHeaderDateSeparatorPlaceholder": {
-    "message": "/"
+    "message": "\/"
   },
   "menuContentHeaderDateFormatLabel": {
     "message": "Format"
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "Date / Month"
+    "message": "Tarikh \/ Bulan"
   },
   "menuContentHeaderDateFormatMonthDate": {
-    "message": "Month / Date"
+    "message": "Bulan \/ Tarikh"
   },
   "menuContentHeaderDateSize": {
-    "message": "Size"
+    "message": "Saiz"
   },
   "menuContentHeaderDateNewLineLabel": {
-    "message": "New line"
+    "message": "Baris baru"
   },
   "menuContentHeaderDateNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Paksa ke baris baharu dan asingkan daripada item Pengepala lain."
   },
   "menuContentHeaderSearchShow": {
-    "message": "Show Search"
+    "message": "Tunjukkan Carian"
   },
   "menuContentHeaderSearchWidthLabel": {
-    "message": "Search box width"
+    "message": "Lebar kotak carian"
   },
   "menuContentHeaderSearchWidthAutoLabel": {
-    "message": "Auto width"
+    "message": "Lebar automatik"
   },
   "menuContentHeaderSearchWidthAutoDescription": {
-    "message": "Search box will grow to best fit available space."
+    "message": "Kotak carian akan berkembang sesuai dengan ruang yang tersedia."
   },
   "menuContentHeaderSearchWidthCustomLabel": {
-    "message": "Custom width"
+    "message": "Lebar tersuai"
   },
   "menuContentHeaderSearchWidthCustomDescription": {
-    "message": "Define how wide the Search box should be inside the Header Area."
+    "message": "Tentukan sejauh mana kotak Carian sepatutnya berada di dalam Kawasan Pengepala."
   },
   "menuContentHeaderSearchWidthSize": {
-    "message": "Width"
+    "message": "Lebar"
   },
   "menuContentHeaderSearchSize": {
-    "message": "Size"
+    "message": "Saiz"
   },
   "menuContentHeaderSearchNewLineLabel": {
-    "message": "New line"
+    "message": "Baris baru"
   },
   "menuContentHeaderSearchNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Paksa ke baris baharu dan asingkan daripada item Pengepala lain."
   },
   "menuContentHeaderSearchEngineSelectedLabel": {
-    "message": "Search engine"
+    "message": "Enjin carian"
   },
   "menuContentHeaderSearchEngineSelectedCustom": {
-    "message": "Custom"
+    "message": "Adat"
   },
   "menuContentHeaderSearchEngineCustomNameLabel": {
-    "message": "Name"
+    "message": "nama"
   },
   "menuContentHeaderSearchEngineCustomNamePlaceholder": {
-    "message": "Search engine name"
+    "message": "Nama enjin carian"
   },
   "menuContentHeaderSearchEngineCustomUrlLabel": {
     "message": "URL"
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
-    "message": "https://"
+    "message": "https:\/\/"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "Enter a web address with the search parameters, eg: \"https://vimeo.com/search?q=\""
+    "message": "Masukkan alamat web dengan parameter carian, cth: \"https:\/\/vimeo.com\/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
-    "message": "{appName} will add the search term entered into the Search box at the end of the above URL."
+    "message": "{appName} akan menambah istilah carian yang dimasukkan ke dalam kotak Carian di hujung URL di atas."
   },
   "menuContentHeaderSearchEngineCustomQueryNameLabel": {
-    "message": "Name attribute"
+    "message": "Atribut nama"
   },
   "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
     "message": "q"
   },
   "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
-    "message": "Sets the name attribute on the Search input field."
+    "message": "Menetapkan atribut nama pada medan input Carian."
   },
   "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
-    "message": "This defines the name passed to the search engine when submitting. If not sure leave blank."
+    "message": "Ini mentakrifkan nama yang dihantar kepada enjin carian semasa menyerahkan. Jika tidak pasti biarkan kosong."
   },
   "menuContentHeaderSearchEngineTextJustifyLabel": {
-    "message": "Search text alignment"
+    "message": "Penjajaran teks carian"
   },
   "menuContentHeaderSearchEngineTextJustifyLeft": {
-    "message": "Left"
+    "message": "Dibiarkan"
   },
   "menuContentHeaderSearchEngineTextJustifyCenter": {
-    "message": "Centre"
+    "message": "Pusat"
   },
   "menuContentHeaderSearchEngineTextJustifyRight": {
-    "message": "Right"
+    "message": "Betul"
   },
   "menuContentHeaderSearchNewTab": {
-    "message": "Open Search results in a new tab"
+    "message": "Buka hasil carian dalam tab baharu"
   },
   "menuContentBookmarkGeneralShow": {
-    "message": "Show Bookmarks"
+    "message": "Tunjukkan Penanda Halaman"
   },
   "menuContentBookmarkGeneralUrlShow": {
-    "message": "Show URL on Bookmark hover"
+    "message": "Tunjukkan URL pada tuding Penanda Halaman"
   },
   "menuContentBookmarkGeneralLineShow": {
-    "message": "Show Bookmark line"
+    "message": "Tunjukkan baris Penanda Halaman"
   },
   "menuContentBookmarkGeneralShadowShowLabel": {
-    "message": "Show shadow on Bookmark hover"
+    "message": "Tunjukkan bayang pada tuding Penanda Halaman"
   },
   "menuContentBookmarkGeneralShadowShowDescription": {
-    "message": "Effects may not be visible if Theme Shadow is set to 0."
+    "message": "Kesan mungkin tidak kelihatan jika Bayangan Tema ditetapkan kepada 0."
   },
   "menuContentBookmarkGeneralHoverScaleShow": {
-    "message": "Grow on Bookmark hover"
+    "message": "Tumbuh pada tuding Penanda Halaman"
   },
   "menuContentBookmarkGeneralNewTab": {
-    "message": "Open Bookmarks in a new tab"
+    "message": "Buka Penanda Halaman dalam tab baharu"
   },
   "menuContentBookmarkGeneralSize": {
-    "message": "Bookmark size"
+    "message": "Saiz penanda halaman"
   },
   "menuContentBookmarkStyleBlockLabel": {
-    "message": "Block"
+    "message": "Sekat"
   },
   "menuContentBookmarkStyleBlockDescription": {
-    "message": "Square shaped Bookmark tiles."
+    "message": "Jubin Penanda Halaman berbentuk segi empat sama."
   },
   "menuContentBookmarkStyleListLabel": {
-    "message": "List"
+    "message": "Senaraikan"
   },
   "menuContentBookmarkStyleListDescription": {
-    "message": "Short and wide Bookmark tiles."
+    "message": "Jubin Penanda Halaman pendek dan lebar."
   },
   "menuContentBookmarkOrientationTop": {
-    "message": "Top"
+    "message": "Atas"
   },
   "menuContentBookmarkOrientationBottom": {
-    "message": "Bottom"
+    "message": "Bawah"
   },
   "menuContentBookmarkOrientationHelperPara1": {
-    "message": "Display the URL and Controls either at the top or bottom of a Bookmark Tile."
+    "message": "Paparkan URL dan Kawalan sama ada di bahagian atas atau bawah Jubin Penanda Halaman."
   },
   "menuContentBookmarkSortLetter": {
-    "message": "By letter"
+    "message": "Melalui surat"
   },
   "menuContentBookmarkSortIcon": {
-    "message": "By icon"
+    "message": "Mengikut ikon"
   },
   "menuContentBookmarkSortName": {
-    "message": "By name"
+    "message": "Dengan nama"
   },
   "menuContentGroupAlignmentJustifyLabel": {
-    "message": "Group details area alignment"
+    "message": "Penjajaran kawasan butiran kumpulan"
   },
   "menuContentGroupAlignmentJustifyLeft": {
-    "message": "Left"
+    "message": "Dibiarkan"
   },
   "menuContentGroupAlignmentJustifyCenter": {
-    "message": "Centre"
+    "message": "Pusat"
   },
   "menuContentGroupAlignmentJustifyRight": {
-    "message": "Right"
+    "message": "Betul"
   },
   "menuContentGroupAlignmentOrderLabel": {
-    "message": "Group details order"
+    "message": "Pesanan butiran kumpulan"
   },
   "menuContentGroupAlignmentOrderHeaderBodyLabel": {
-    "message": "Group details then Bookmarks"
+    "message": "Butiran kumpulan kemudian Penanda Halaman"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Order the Group details area to appear before the Bookmarks area."
+    "message": "Perintahkan kawasan butiran Kumpulan untuk dipaparkan sebelum kawasan Penanda Halaman."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
-    "message": "Bookmarks then Group details"
+    "message": "Penanda halaman kemudian butiran Kumpulan"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Order the Bookmarks area to appear before the Group details area."
+    "message": "Perintahkan kawasan Penanda Halaman untuk muncul sebelum kawasan butiran Kumpulan."
   },
   "menuContentGroupNameSize": {
-    "message": "Name size"
+    "message": "Saiz nama"
   },
   "menuContentGroupNameShow": {
-    "message": "Show all"
+    "message": "Tunjukkan semua"
   },
   "menuContentGroupNameHide": {
-    "message": "Hide all"
+    "message": "Sembunyikan semua"
   },
   "menuContentGroupNameHelperPara1": {
-    "message": "Group Names can also be changed by editing individual Groups."
+    "message": "Nama Kumpulan juga boleh ditukar dengan mengedit Kumpulan individu."
   },
   "menuContentGroupCollapseShow": {
-    "message": "Open all groups"
+    "message": "Buka semua kumpulan"
   },
   "menuContentGroupCollapseHide": {
-    "message": "Collapse all groups"
+    "message": "Runtuhkan semua kumpulan"
   },
   "menuContentGroupToolbarSize": {
-    "message": "Group toolbar size"
+    "message": "Saiz bar alat kumpulan"
   },
   "menuContentGroupToolbarCollapseLabel": {
-    "message": "Group Collapse control"
+    "message": "Kawalan Runtuh Kumpulan"
   },
   "menuContentGroupToolbarCollapseShow": {
-    "message": "Show all"
+    "message": "Tunjukkan semua"
   },
   "menuContentGroupToolbarCollapseHide": {
-    "message": "Hide all"
+    "message": "Sembunyikan semua"
   },
   "menuContentGroupToolbarCollapseHelperPara1": {
-    "message": "Group toolbar collapse button can also be changed by editing individual Groups."
+    "message": "Butang runtuh bar alat kumpulan juga boleh ditukar dengan mengedit Kumpulan individu."
   },
   "menuContentGroupToolbarOpenAllLabel": {
-    "message": "Group Open all control"
+    "message": "Kumpulan Buka semua kawalan"
   },
   "menuContentGroupToolbarOpenAllShow": {
-    "message": "Show all"
+    "message": "Tunjukkan semua"
   },
   "menuContentGroupToolbarOpenAllHide": {
-    "message": "Hide all"
+    "message": "Sembunyikan semua"
   },
   "menuContentGroupToolbarOpenAllHelperPara1": {
-    "message": "Group toolbar open all button can also be changed by editing individual Groups."
+    "message": "Bar alat kumpulan butang buka semua juga boleh ditukar dengan mengedit Kumpulan individu."
   },
   "menuContentToolbarSize": {
-    "message": "Toolbar size"
+    "message": "Saiz bar alat"
   },
   "menuContentToolbarLocationCorner": {
-    "message": "In a corner"
+    "message": "Di satu sudut"
   },
   "menuContentToolbarLocationHeader": {
-    "message": "In the Header"
+    "message": "Dalam Tajuk"
   },
   "menuContentToolbarLocationHelperPara1": {
-    "message": "Position the Toolbar inside the Header or in a corner of the window."
+    "message": "Letakkan Bar Alat di dalam Pengepala atau di sudut tetingkap."
   },
   "menuContentToolbarLocationNewLineLabel": {
-    "message": "New line"
+    "message": "Baris baru"
   },
   "menuContentToolbarLocationNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Paksa ke baris baharu dan asingkan daripada item Pengepala lain."
   },
   "menuContentToolbarLocationNewLineHelperPara1": {
-    "message": "Only available when the Toolbar is positioned inside the Header."
+    "message": "Hanya tersedia apabila Bar Alat diletakkan di dalam Pengepala."
   },
   "menuContentToolbarPositionLabel": {
-    "message": "Toolbar position"
+    "message": "Kedudukan bar alat"
   },
   "menuContentToolbarPositionTopLeft": {
-    "message": "Top Left"
+    "message": "Atas Kiri"
   },
   "menuContentToolbarPositionTopRight": {
-    "message": "Top Right"
+    "message": "Atas Kanan"
   },
   "menuContentToolbarPositionBottomLeft": {
-    "message": "Bottom Left"
+    "message": "Dibahagian bawah kiri"
   },
   "menuContentToolbarPositionBottomRight": {
-    "message": "Bottom Right"
+    "message": "Bawah Kanan"
   },
   "menuContentToolbarPositionHelper1Para1": {
-    "message": "Position the Toolbar in one of the four corners of the window."
+    "message": "Letakkan Bar Alat di salah satu daripada empat penjuru tetingkap."
   },
   "menuContentToolbarPositionHelper2Para1": {
-    "message": "Only available when the Toolbar is positioned in a corner."
+    "message": "Hanya tersedia apabila Bar Alat diletakkan di sudut."
   },
   "menuContentToolbarControlsAccent": {
-    "message": "Show Accent control"
+    "message": "Tunjukkan kawalan Aksen"
   },
   "menuContentToolbarControlsAdd": {
-    "message": "Show Add control"
+    "message": "Tunjukkan kawalan Tambah"
   },
   "menuContentToolbarControlsEdit": {
-    "message": "Show Edit control"
+    "message": "Tunjukkan kawalan Edit"
   },
   "menuContentDataRestoreFile": {
-    "message": "Import from file"
+    "message": "Import daripada fail"
   },
   "menuContentDataRestoreClipboard": {
-    "message": "Import from clipboard"
+    "message": "Import dari papan keratan"
   },
   "menuContentDataRestoreHelperPara1": {
-    "message": "Restore a previously exported {appName} backup."
+    "message": "Pulihkan sandaran {appName} dieksport sebelum ini."
   },
   "menuContentDataRestoreDrop": {
-    "message": "Or drop a {appName} backup file here."
+    "message": "Atau lepaskan {appName} di sini."
   },
   "menuContentDataBackupFile": {
-    "message": "Export data"
+    "message": "Eksport data"
   },
   "menuContentDataBackupClipboard": {
-    "message": "Copy to clipboard"
+    "message": "Salin ke papan keratan"
   },
   "menuContentDataBackupHelperPara1": {
-    "message": "Download a backup of your {appName} Bookmarks and Settings."
+    "message": "Muat turun sandaran Penanda Halaman dan Tetapan {appName}"
   },
   "menuContentDataBackupHelperPara2": {
-    "message": "This file can later be imported on this or another deivce."
+    "message": "Fail ini kemudiannya boleh diimport pada peranti ini atau peranti lain."
   },
   "menuContentDataClearAll": {
-    "message": "Clear all data"
+    "message": "Kosongkan semua data"
   },
   "menuContentDataClearPartial": {
-    "message": "Clear all except bookmarks"
+    "message": "Kosongkan semua kecuali penanda halaman"
   },
   "menuContentDataClearAlertPara": {
-    "message": "You will lose Bookmarks by clearing all data."
+    "message": "Anda akan kehilangan Penanda Halaman dengan mengosongkan semua data."
   },
   "menuContentDataClearAlertLink": {
-    "message": "Backup your data"
+    "message": "Sandarkan data anda"
   },
   "menuContentDataClearHelperPara1": {
-    "message": "Clear all data to reset {appName} to the default state."
+    "message": "Kosongkan semua data untuk menetapkan semula {appName} kepada keadaan lalai."
   },
   "menuContentDataClearHelperPara2": {
-    "message": "Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups."
+    "message": "Sebagai alternatif, anda boleh memadam semua tetapan tetapi mengekalkan Penanda Halaman dan Kumpulan semasa."
   },
   "menuContentLanguageSelect": {
-    "message": "Language"
+    "message": "Bahasa"
   },
   "menuContentLanguageSystem": {
-    "message": "Use system language"
+    "message": "Gunakan bahasa sistem"
   },
   "menuContentLanguageAlertPara": {
-    "message": "Found a translation that isn't right?"
+    "message": "Temui terjemahan yang tidak betul?"
   },
   "menuContentLanguageAlertLink": {
-    "message": "Help translate {appName}"
+    "message": "Bantu menterjemah {appName}"
   },
   "menuContentSupportPageApplyToAll": {
-    "message": "Applying bookmark settings to all"
+    "message": "Menggunakan tetapan penanda halaman kepada semua"
   },
   "menuContentSupportPageBrowser": {
-    "message": "Browser support"
+    "message": "Sokongan penyemak imbas"
   },
   "menuContentSupportPageCookies": {
-    "message": "Cookies and cache"
+    "message": "Kuki dan cache"
   },
   "menuContentSupportPageData": {
-    "message": "Data backup and restore"
+    "message": "Sandaran dan pemulihan data"
   },
   "menuContentSupportPageLocalBackgroundImage": {
-    "message": "Local background image"
+    "message": "Imej latar belakang tempatan"
   },
   "menuContentSupportPageProtectedUrl": {
-    "message": "Protected URLs"
+    "message": "URL yang dilindungi"
   },
   "menuContentSupportPageRecovering": {
-    "message": "Recovering settings and bookmarks"
+    "message": "Memulihkan tetapan dan penanda halaman"
   },
   "menuContentSupportPageResetting": {
-    "message": "Resetting when opening the browser"
+    "message": "Menetapkan semula apabila membuka penyemak imbas"
   },
   "menuContentSupportPagePrivacy": {
-    "message": "Respecting your privacy"
+    "message": "Menghormati privasi anda"
   },
   "menuContentSupportPageBackgroundImageVideo": {
-    "message": "Setting a background video or image"
+    "message": "Menetapkan video atau imej latar belakang"
   },
   "menuContentSupportPageFirefox": {
-    "message": "Setting {appName} as your Firefox homepage"
+    "message": "Menetapkan {appName} sebagai halaman utama Firefox anda"
   },
   "menuContentSupportPara": {
-    "message": "For more support or feedback:"
+    "message": "Untuk lebih banyak sokongan atau maklum balas:"
   },
   "menuContentSupportLink1": {
-    "message": "Submit an Issue."
+    "message": "Hantar Isu."
   },
   "menuContentSupportLink2": {
-    "message": "Check the Wiki."
+    "message": "Semak Wiki."
   },
   "menuContentCoffeePara": {
-    "message": "{appName} is free, appreciation is welcome in the form of coffee!"
+    "message": "{appName} adalah percuma, penghargaan dialu-alukan dalam bentuk kopi!"
   },
   "menuContentCoffeeButton": {
-    "message": "Buy me a coffee"
+    "message": "Belikan saya kopi"
   },
   "menuContentAppPara1": {
-    "message": "Share your setup with the community."
+    "message": "Kongsi persediaan anda dengan komuniti."
   },
   "menuContentAppLink1": {
-    "message": "Found on Reddit /r/{appName}."
+    "message": "Ditemui di Reddit \/r\/ {appName} ."
   },
   "menuContentAppPara2": {
-    "message": "This project is open source."
+    "message": "Projek ini adalah sumber terbuka."
   },
   "menuContentAppLink2": {
-    "message": "Found on GitHub."
+    "message": "Ditemui di GitHub."
   },
   "menuContentAppLink3": {
-    "message": "GNU General Public License v3.0."
+    "message": "Lesen Awam Am GNU v3.0."
   },
   "bookmarkTileControlLeft": {
-    "message": "Move this bookmark left"
+    "message": "Alihkan penanda halaman ini ke kiri"
   },
   "bookmarkTileControlSort": {
-    "message": "Drag bookmark to reorder"
+    "message": "Seret penanda halaman untuk menyusun semula"
   },
   "bookmarkTileControlRight": {
-    "message": "Move this bookmark right"
+    "message": "Alihkan penanda halaman ini ke kanan"
   },
   "bookmarkTileControlEdit": {
-    "message": "Edit this bookmark"
+    "message": "Edit penanda halaman ini"
   },
   "bookmarkTileControlRemove": {
-    "message": "Remove this bookmark"
+    "message": "Alih keluar penanda halaman ini"
   },
   "bookmarkAddHeading": {
-    "message": "Add a new Bookmark"
+    "message": "Tambahkan Penanda Halaman baharu"
   },
   "bookmarkAddSuccessText": {
-    "message": "Add"
+    "message": "Tambah"
   },
   "bookmarkAddCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "bookmarkRemoveHeadingName": {
-    "message": "Remove"
+    "message": "Alih keluar"
   },
   "bookmarkRemoveHeadingUnnamed": {
-    "message": "Remove unnamed bookmark"
+    "message": "Alih keluar penanda halaman yang tidak dinamakan"
   },
   "bookmarkRemoveContent": {
-    "message": "Are you sure you want to remove this Bookmark? This can not be undone."
+    "message": "Adakah anda pasti mahu mengalih keluar Penanda Halaman ini? Perkara ini tidak boleh diubah."
   },
   "bookmarkRemoveSuccessText": {
-    "message": "Remove"
+    "message": "Alih keluar"
   },
   "bookmarkRemoveCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "bookmarkEditHeadingName": {
-    "message": "Edit"
+    "message": "Sunting"
   },
   "bookmarkEditHeadingUnnamed": {
-    "message": "Edit unnamed bookmark"
+    "message": "Edit penanda halaman tanpa nama"
   },
   "bookmarkEditSuccessText": {
-    "message": "Save"
+    "message": "Jimat"
   },
   "bookmarkEditCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "bookmarkFormTabVisual": {
-    "message": "Visual & Name"
+    "message": "Visual & Nama"
   },
   "bookmarkFormTabAddress": {
-    "message": "Address"
+    "message": "Alamat"
   },
   "bookmarkFormTabPosition": {
-    "message": "Position"
+    "message": "kedudukan"
   },
   "bookmarkFormTabLayout": {
-    "message": "Layout"
+    "message": "Susun atur"
   },
   "bookmarkFormTabTheme": {
-    "message": "Theme"
+    "message": "Tema"
   },
   "bookmarkFormSectionVisualHeading": {
-    "message": "Visual & Name"
+    "message": "Visual & Nama"
   },
   "bookmarkFormSectionVisualDescription": {
-    "message": "Display Letters, Icon, Image and a Name on this Bookmark tile."
+    "message": "Paparkan Huruf, Ikon, Imej dan Nama pada jubin Penanda Halaman ini."
   },
   "bookmarkFormSectionAddressHeading": {
-    "message": "Address"
+    "message": "Alamat"
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "Be sure to use the full URL and include \"https://...\""
+    "message": "Pastikan anda menggunakan URL penuh dan sertakan \"https:\/\/...\""
   },
   "bookmarkFormSectionPositionHeading": {
-    "message": "Position"
+    "message": "kedudukan"
   },
   "bookmarkFormSectionPositionDescription": {
-    "message": "The Group to place this Bookmark in."
+    "message": "Kumpulan untuk meletakkan Penanda Halaman ini."
   },
   "bookmarkFormSectionLayoutHeading": {
-    "message": "Layout"
+    "message": "Susun atur"
   },
   "bookmarkFormSectionLayoutDescription": {
-    "message": "Change the Visual Element and Name position, scale and orientation."
+    "message": "Tukar kedudukan, skala dan orientasi Elemen Visual dan Nama."
   },
   "bookmarkFormSectionThemeHeading": {
-    "message": "Theme"
+    "message": "Tema"
   },
   "bookmarkFormSectionThemeDescription": {
-    "message": "Override the Theme and Accent colour."
+    "message": "Gantikan Tema dan warna Aksen."
   },
   "bookmarkFormUrlLabel": {
     "message": "URL"
   },
   "bookmarkFormUrlPlaceholder": {
-    "message": "https://www.example.com/"
+    "message": "https:\/\/www.example.com\/"
   },
   "bookmarkFormDisplayAlignmentLabel": {
-    "message": "Visual Element and Name alignment"
+    "message": "Penjajaran Elemen Visual dan Nama"
   },
   "bookmarkFormDisplayAlignmentTopLeft": {
-    "message": "Top Left"
+    "message": "Atas Kiri"
   },
   "bookmarkFormDisplayAlignmentTopCenter": {
-    "message": "Top Centre"
+    "message": "Pusat Atas"
   },
   "bookmarkFormDisplayAlignmentTopRight": {
-    "message": "Top Right"
+    "message": "Atas Kanan"
   },
   "bookmarkFormDisplayAlignmentCenterLeft": {
-    "message": "Centre Left"
+    "message": "Tengah Kiri"
   },
   "bookmarkFormDisplayAlignmentCenterCenter": {
-    "message": "Centre Centre"
+    "message": "Pusat Pusat"
   },
   "bookmarkFormDisplayAlignmentCenterRight": {
-    "message": "Centre Right"
+    "message": "Tengah Kanan"
   },
   "bookmarkFormDisplayAlignmentBottomLeft": {
-    "message": "Bottom Left"
+    "message": "Dibahagian bawah kiri"
   },
   "bookmarkFormDisplayAlignmentBottomCenter": {
-    "message": "Bottom Centre"
+    "message": "Pusat Bawah"
   },
   "bookmarkFormDisplayAlignmentBottomRight": {
-    "message": "Bottom Right"
+    "message": "Bawah Kanan"
   },
   "bookmarkFormDisplayDirectionVerticalLabel": {
-    "message": "Vertical"
+    "message": "Menegak"
   },
   "bookmarkFormDisplayDirectionVerticalDescription": {
-    "message": "Stack the Visual Element and Name one above the other."
+    "message": "Susun Elemen Visual dan Namakan satu di atas yang lain."
   },
   "bookmarkFormDisplayDirectionHorizontalLabel": {
-    "message": "Horizontal"
+    "message": "Mendatar"
   },
   "bookmarkFormDisplayDirectionHorizontalDescription": {
-    "message": "Arrange the Visual Element and Name side by side."
+    "message": "Susun Elemen Visual dan Nama bersebelahan."
   },
   "bookmarkFormDisplayOrderVisualNameLabel": {
-    "message": "Visual element then name"
+    "message": "Elemen visual kemudian namakan"
   },
   "bookmarkFormDisplayOrderVisualNameDescription": {
-    "message": "Place the Visual Element before the Name."
+    "message": "Letakkan Elemen Visual sebelum Nama."
   },
   "bookmarkFormDisplayOrderNameVisualLabel": {
-    "message": "Name then visual element"
+    "message": "Namakan kemudian elemen visual"
   },
   "bookmarkFormDisplayOrderNameVisualDescription": {
-    "message": "Place the Name before the Visual Element."
+    "message": "Letakkan Nama sebelum Elemen Visual."
   },
   "bookmarkFormDisplayRotate": {
-    "message": "Rotate"
+    "message": "Putar"
   },
   "bookmarkFormDisplayTranslateLabel": {
-    "message": "Adjust Visual Element position"
+    "message": "Laraskan kedudukan Elemen Visual"
   },
   "bookmarkFormDisplayTranslateX": {
-    "message": "Horizontal"
+    "message": "Mendatar"
   },
   "bookmarkFormDisplayTranslateY": {
-    "message": "Vertical"
+    "message": "Menegak"
   },
   "bookmarkFormDisplayGutter": {
-    "message": "Gutter"
+    "message": "Longkang"
   },
   "bookmarkFormDisplayVisualShowLabel": {
-    "message": "Show Visual Element"
+    "message": "Tunjukkan Elemen Visual"
   },
   "bookmarkFormDisplayVisualShowDescription": {
-    "message": "Display Letters, Icon or an Image on this Bookmark hexagon."
+    "message": "Paparkan Huruf, Ikon atau Imej pada heksagon Penanda Halaman ini."
   },
   "bookmarkFormDisplayVisualTypeLetter": {
-    "message": "Letter"
+    "message": "surat"
   },
   "bookmarkFormDisplayVisualTypeIcon": {
-    "message": "Icon"
+    "message": "ikon"
   },
   "bookmarkFormDisplayVisualTypeImage": {
-    "message": "Image"
+    "message": "Gambar"
   },
   "bookmarkFormDisplayVisualSize": {
-    "message": "Visual size"
+    "message": "Saiz visual"
   },
   "bookmarkFormDisplayVisualLetterTextLabel": {
-    "message": "Bookmark letter"
+    "message": "Surat penanda buku"
   },
   "bookmarkFormDisplayVisualLetterTextPlaceholder": {
     "message": "E"
   },
   "bookmarkFormDisplayVisualIconTextLabel": {
-    "message": "Bookmark icon"
+    "message": "Ikon penanda halaman"
   },
   "bookmarkFormDisplayVisualIconTextPlaceholder": {
-    "message": "FontAwesome Brands or Icons"
+    "message": "Jenama atau Ikon FontAwesome"
   },
   "bookmarkFormDisplayVisualIconRemove": {
-    "message": "Remove icon"
+    "message": "Alih keluar ikon"
   },
   "bookmarkFormDisplayVisualImageUrlLabel": {
-    "message": "Bookmark image"
+    "message": "Imej penanda halaman"
   },
   "bookmarkFormDisplayVisualImageUrlPlaceholder": {
-    "message": "https://www.example.com/image.jpg"
+    "message": "https:\/\/www.example.com\/image.jpg"
   },
   "bookmarkFormDisplayVisualShadowSize": {
-    "message": "Visual shadow"
+    "message": "Bayangan visual"
   },
   "bookmarkFormDisplayVisualShadowHelperPara1": {
-    "message": "Visual shadow only applies to a Letter or Icon."
+    "message": "Bayang visual hanya digunakan pada Surat atau Ikon."
   },
   "bookmarkFormDisplayNameShow": {
-    "message": "Show Name"
+    "message": "Tunjukkan Nama"
   },
   "bookmarkFormDisplayNameTextLabel": {
-    "message": "Bookmark name"
+    "message": "Nama penanda buku"
   },
   "bookmarkFormDisplayNameTextPlaceholder": {
-    "message": "Example"
+    "message": "Contoh"
   },
   "bookmarkFormDisplayNameSize": {
-    "message": "Name size"
+    "message": "Saiz nama"
   },
   "bookmarkFormAccentByThemeLabel": {
-    "message": "Theme Accent"
+    "message": "Aksen Tema"
   },
   "bookmarkFormAccentByThemeDescription": {
-    "message": "Use the Accent defined by the Theme."
+    "message": "Gunakan Aksen yang ditakrifkan oleh Tema."
   },
   "bookmarkFormAccentByCustomLabel": {
-    "message": "Custom Accent"
+    "message": "Loghat Tersuai"
   },
   "bookmarkFormAccentByCustomDescription": {
-    "message": "Override the Theme Accent."
+    "message": "Gantikan Aksen Tema."
   },
   "bookmarkFormAccentColor": {
-    "message": "Accent"
+    "message": "Loghat"
   },
   "bookmarkFormColorByThemeLabel": {
-    "message": "Theme colour"
+    "message": "Warna tema"
   },
   "bookmarkFormColorByThemeDescription": {
-    "message": "Use the Colour defined by the Theme."
+    "message": "Gunakan Warna yang ditakrifkan oleh Tema."
   },
   "bookmarkFormColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Warna tersuai"
   },
   "bookmarkFormColorByCustomDescription": {
-    "message": "Override the Theme colour."
+    "message": "Gantikan warna Tema."
   },
   "bookmarkFormColorColor": {
-    "message": "Colour"
+    "message": "Warna"
   },
   "bookmarkFormColorOpacity": {
-    "message": "Opacity"
+    "message": "Kelegapan"
   },
   "bookmarkFormBackgroundShowLabel": {
-    "message": "Show background"
+    "message": "Tunjukkan latar belakang"
   },
   "bookmarkFormBackgroundShowDescription": {
-    "message": "Display an Image or video Background on this Bookmark tile."
+    "message": "Paparkan Imej atau Latar Belakang video pada jubin Penanda Halaman ini."
   },
   "bookmarkFormBackgroundTypeImage": {
-    "message": "Image"
+    "message": "Gambar"
   },
   "bookmarkFormBackgroundTypeVideo": {
     "message": "Video"
   },
   "bookmarkFormBackgroundOpacity": {
-    "message": "Opacity"
+    "message": "Kelegapan"
   },
   "bookmarkFormBackgroundImageLabel": {
-    "message": "Background image URL"
+    "message": "URL imej latar belakang"
   },
   "bookmarkFormBackgroundImagePlaceholder": {
-    "message": "https://www.example.com/image.jpg"
+    "message": "https:\/\/www.example.com\/image.jpg"
   },
   "bookmarkFormBackgroundImageHelperPara1": {
-    "message": "Background image only supports a direct URL to an image file."
+    "message": "Imej latar belakang hanya menyokong URL terus ke fail imej."
   },
   "bookmarkFormBackgroundVideoLabel": {
-    "message": "Background video URL"
+    "message": "URL video latar belakang"
   },
   "bookmarkFormBackgroundVideoPlaceholder": {
-    "message": "https://www.example.com/video.mp4"
+    "message": "https:\/\/www.example.com\/video.mp4"
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
-    "message": "Background video only supports a direct URL to a video file. Supports MP4 and WebM format."
+    "message": "Video latar belakang hanya menyokong URL terus ke fail video. Menyokong format MP4 dan WebM."
   },
   "bookmarkFormBackgroundVideoHelperPara2": {
-    "message": "YouTube page URLs can not be used."
+    "message": "URL halaman YouTube tidak boleh digunakan."
   },
   "bookmarkFormBorder": {
-    "message": "Border"
+    "message": "sempadan"
   },
   "bookmarkFormShapeWideLabel": {
-    "message": "Wide tile"
+    "message": "Jubin lebar"
   },
   "bookmarkFormShapeWideDescription": {
-    "message": "Bookmark tile to span across two columns."
+    "message": "Penanda halaman jubin untuk merentangi dua lajur."
   },
   "bookmarkFormShapeTallLabel": {
-    "message": "Tall tile"
+    "message": "Jubin tinggi"
   },
   "bookmarkFormShapeTallDescription": {
-    "message": "Bookmark tile to span across two rows."
+    "message": "Penanda halaman jubin untuk merentangi dua baris."
   },
   "bookmarkFormGroupDestinationExisting": {
-    "message": "Existing Group"
+    "message": "Kumpulan Sedia Ada"
   },
   "bookmarkFormGroupDestinationNew": {
-    "message": "New Group"
+    "message": "Kumpulan Baru"
   },
   "bookmarkFormGroupNameLabel": {
     "message": "URL"
   },
   "bookmarkFormGroupNamePlaceholder": {
-    "message": "Example group"
+    "message": "Kumpulan contoh"
   },
   "bookmarkFormGroupRandom": {
-    "message": "Random Group name"
+    "message": "Nama Kumpulan Rawak"
   },
   "bookmarkFormGroupPositionGroup": {
-    "message": "Group"
+    "message": "Kumpulan"
   },
   "bookmarkFormGroupPositionItem": {
-    "message": "Position"
+    "message": "kedudukan"
   },
   "bookmarkFormPropagateVisualLabel": {
-    "message": "Apply \"Show Visual Element\" and \"Show Name\" to other Bookmarks"
+    "message": "Gunakan \"Tunjukkan Elemen Visual\" dan \"Tunjukkan Nama\" pada Penanda Halaman lain"
   },
   "bookmarkFormPropagateVisualDescriptionPara1": {
-    "message": "The Letter, Icon, Image and Name text will not be shared."
+    "message": "Teks Surat, Ikon, Imej dan Nama tidak akan dikongsi."
   },
   "bookmarkFormPropagateVisualDescriptionPara2": {
-    "message": "Useful for hiding the Visual Elements or Names on all Bookmarks."
+    "message": "Berguna untuk menyembunyikan Elemen atau Nama Visual pada semua Penanda Halaman."
   },
   "bookmarkFormPropagateLayoutLabel": {
-    "message": "Apply Layout to other Bookmarks"
+    "message": "Gunakan Reka Letak pada Penanda Halaman lain"
   },
   "bookmarkFormPropagateLayoutDescriptionPara1": {
-    "message": "When saved, apply the above Layout to all other Bookmarks."
+    "message": "Apabila disimpan, gunakan Reka Letak di atas pada semua Penanda Halaman lain."
   },
   "bookmarkFormPropagateLayoutDescriptionPara2": {
-    "message": "Only the Visual and Name size, Alignment, Order, Position and Gutter will be applied to all."
+    "message": "Hanya saiz Visual dan Nama, Penjajaran, Susunan, Kedudukan dan Longkang akan digunakan untuk semua."
   },
   "bookmarkFormPropagateThemeLabel": {
-    "message": "Apply Theme to other Bookmarks"
+    "message": "Gunakan Tema pada Penanda Halaman lain"
   },
   "bookmarkFormPropagateThemeDescriptionPara1": {
-    "message": "When saved, apply the above Theme to all other Bookmarks."
+    "message": "Apabila disimpan, gunakan Tema di atas pada semua Penanda Halaman lain."
   },
   "bookmarkFormPropagateThemeDescriptionPara2": {
-    "message": "Only the Colour, Accent, Opacity, Border and Visual shadow will be applied to all."
+    "message": "Hanya bayang Warna, Aksen, Kelegapan, Sempadan dan Visual akan digunakan pada semua."
   },
   "bookmarkPreviewFull": {
-    "message": "Preview"
+    "message": "Pratonton"
   },
   "bookmarkPreviewHalf": {
-    "message": "Preview (50% scale)"
+    "message": "Pratonton (skala 50%)"
   },
   "groupAreaControlUp": {
-    "message": "Move this group up"
+    "message": "Alihkan kumpulan ini ke atas"
   },
   "groupAreaControlSort": {
-    "message": "Drag group to reorder"
+    "message": "Seret kumpulan untuk menyusun semula"
   },
   "groupAreaControlDown": {
-    "message": "Move this group down"
+    "message": "Alihkan kumpulan ini ke bawah"
   },
   "groupAreaControlEdit": {
-    "message": "Edit this group"
+    "message": "Edit kumpulan ini"
   },
   "groupAreaControlRemove": {
-    "message": "Remove this group"
+    "message": "Alih keluar kumpulan ini"
   },
   "groupAreaControlOpenAll": {
-    "message": "Open all bookmarks in this group"
+    "message": "Buka semua penanda halaman dalam kumpulan ini"
   },
   "groupAreaControlCollapse": {
-    "message": "Collapse this group"
+    "message": "Runtuhkan kumpulan ini"
   },
   "groupAddHeading": {
-    "message": "Add a new Group"
+    "message": "Tambah Kumpulan baharu"
   },
   "groupAddSuccessText": {
-    "message": "Add"
+    "message": "Tambah"
   },
   "groupAddCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "groupRemoveHeadingName": {
-    "message": "Remove"
+    "message": "Alih keluar"
   },
   "groupRemoveHeadingUnnamed": {
-    "message": "Remove unnamed group"
+    "message": "Alih keluar kumpulan yang tidak dinamakan"
   },
   "groupRemoveContent": {
-    "message": "Are you sure you want to remove this Group and all the Bookmarks within? This can not be undone."
+    "message": "Adakah anda pasti mahu mengalih keluar Kumpulan ini dan semua Penanda Halaman dalam? Perkara ini tidak boleh diubah."
   },
   "groupRemoveSuccessText": {
-    "message": "Remove"
+    "message": "Alih keluar"
   },
   "groupRemoveCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "groupEditHeadingName": {
-    "message": "Edit"
+    "message": "Sunting"
   },
   "groupEditHeadingUnnamed": {
-    "message": "Edit unnamed group"
+    "message": "Edit kumpulan tanpa nama"
   },
   "groupEditSuccessText": {
-    "message": "Save"
+    "message": "Jimat"
   },
   "groupEditCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "groupFormSectionNameHeading": {
-    "message": "Name"
+    "message": "nama"
   },
   "groupFormSectionNameDescription": {
-    "message": "Display a Name above this Group."
+    "message": "Paparkan Nama di atas Kumpulan ini."
   },
   "groupFormSectionToolbarHeading": {
-    "message": "Toolbar"
+    "message": "Bar alat"
   },
   "groupFormSectionToolbarDescription": {
-    "message": "Display controls to open all or show/hide the Bookmarks in this Group."
+    "message": "Paparkan kawalan untuk membuka semua atau menunjukkan\/menyembunyikan Penanda Halaman dalam Kumpulan ini."
   },
   "groupFormSectionOrderingHeading": {
-    "message": "Ordering"
+    "message": "Memesan"
   },
   "groupFormSectionOrderingDescription": {
-    "message": "The position of this Group."
+    "message": "Kedudukan Kumpulan ini."
   },
   "groupFormNameShow": {
-    "message": "Show Group name"
+    "message": "Tunjukkan nama Kumpulan"
   },
   "groupFormNameTextLabel": {
-    "message": "Group name"
+    "message": "Nama kumpulan"
   },
   "groupFormNameTextPlaceholder": {
-    "message": "Example group"
+    "message": "Kumpulan contoh"
   },
   "groupFormNameRandom": {
-    "message": "Random Group name"
+    "message": "Nama Kumpulan Rawak"
   },
   "groupFormCollapseShowLabel": {
-    "message": "Show Collapse"
+    "message": "Tunjukkan Runtuh"
   },
   "groupFormCollapseShowDescription": {
-    "message": "The Collapse button will show or hide the Bookmarks in this Group."
+    "message": "Butang Runtuhkan akan menunjukkan atau menyembunyikan Penanda Halaman dalam Kumpulan ini."
   },
   "groupFormOpenAllShowLabel": {
-    "message": "Show Open all"
+    "message": "Tunjukkan Buka semua"
   },
   "groupFormOpenAllShowDescription": {
-    "message": "Open all button will appear if there is at least one Bookmark in this Group."
+    "message": "Butang buka semua akan muncul jika terdapat sekurang-kurangnya satu Penanda Halaman dalam Kumpulan ini."
   },
   "groupFormDestination": {
-    "message": "Position"
+    "message": "kedudukan"
   },
   "themeCustomTileControlEdit": {
-    "message": "Edit this saved custom theme"
+    "message": "Edit tema tersuai yang disimpan ini"
   },
   "themeCustomTileControlRemove": {
-    "message": "Remove this saved custom theme"
+    "message": "Alih keluar tema tersuai yang disimpan ini"
   },
   "themeCustomFormNameLabel": {
-    "message": "Name"
+    "message": "nama"
   },
   "themeCustomFormNamePlaceholder": {
-    "message": "Example theme"
+    "message": "Contoh tema"
   },
   "themeCustomFormRandom": {
-    "message": "Random theme name"
+    "message": "Nama tema rawak"
   },
   "themeCustomAddHeading": {
-    "message": "Save current theme"
+    "message": "Simpan tema semasa"
   },
   "themeCustomAddSuccessText": {
-    "message": "Save"
+    "message": "Jimat"
   },
   "themeCustomAddCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "themeCustomRemoveHeadingName": {
-    "message": "Remove"
+    "message": "Alih keluar"
   },
   "themeCustomRemoveHeadingUnnamed": {
-    "message": "Remove unnamed custom theme"
+    "message": "Alih keluar tema tersuai yang tidak dinamakan"
   },
   "themeCustomRemoveContent": {
-    "message": "Are you sure you want to remove this saved custom theme? This can not be undone."
+    "message": "Adakah anda pasti mahu mengalih keluar tema tersuai yang disimpan ini? Perkara ini tidak boleh diubah."
   },
   "themeCustomRemoveSuccessText": {
-    "message": "Save"
+    "message": "Jimat"
   },
   "themeCustomRemoveCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "themeCustomEditHeadingName": {
-    "message": "Edit"
+    "message": "Sunting"
   },
   "themeCustomEditHeadingUnnamed": {
-    "message": "Edit unnamed custom theme"
+    "message": "Edit tema tersuai tanpa nama"
   },
   "themeCustomEditSuccessText": {
-    "message": "Remove"
+    "message": "Alih keluar"
   },
   "themeCustomEditCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "toolbarAccent": {
-    "message": "Accent colour"
+    "message": "Warna aksen"
   },
   "toolbarAddLabel": {
-    "message": "Add"
+    "message": "Tambah"
   },
   "toolbarAddGroup": {
-    "message": "New Group"
+    "message": "Kumpulan Baru"
   },
   "toolbarAddBookmark": {
-    "message": "New Bookmark"
+    "message": "Penanda Halaman Baharu"
   },
   "toolbarEdit": {
-    "message": "Edit groups and bookmarks"
+    "message": "Edit kumpulan dan penanda halaman"
   },
   "toolbarSetting": {
-    "message": "Open settings menu"
+    "message": "Buka menu tetapan"
   },
   "dataFormDescription": {
-    "message": "You can restore all or parts of a backup file. The following data will be restored:"
+    "message": "Anda boleh memulihkan semua atau sebahagian daripada fail sandaran. Data berikut akan dipulihkan:"
   },
   "dataFormBookmarkIncludeLabel": {
-    "message": "Bookmarks"
+    "message": "Penanda buku"
   },
   "dataFormBookmarkIncludeDescriptionPara1": {
-    "message": "This includes all Groups and Bookmarks"
+    "message": "Ini termasuk semua Kumpulan dan Penanda Halaman"
   },
   "dataFormBookmarkIncludeDescriptionPara2": {
-    "message": "Bookmarks will keep any custom Colours, Accents and Borders when imported."
+    "message": "Penanda halaman akan menyimpan sebarang Warna, Aksen dan Sempadan tersuai apabila diimport."
   },
   "dataFormBookmarkTypeRestore": {
-    "message": "Replace existing bookmarks"
+    "message": "Gantikan penanda halaman sedia ada"
   },
   "dataFormBookmarkTypeAppend": {
-    "message": "Add to existing bookmarks"
+    "message": "Tambahkan pada penanda halaman sedia ada"
   },
   "dataFormThemeIncludeLabel": {
-    "message": "Theme"
+    "message": "Tema"
   },
   "dataFormThemeIncludeDescription": {
-    "message": "This includes the Colour, Accent, Fonts, Background and any saved Custom Themes."
+    "message": "Ini termasuk Warna, Aksen, Fon, Latar Belakang dan sebarang Tema Tersuai yang disimpan."
   },
   "dataFormSetupIncludeLabel": {
-    "message": "Settings"
+    "message": "tetapan"
   },
   "dataFormSetupIncludeDescription": {
-    "message": "This includes Layout size and position, Header area size, Bookmark area size and other user settings."
+    "message": "Ini termasuk saiz dan kedudukan susun atur, saiz kawasan pengepala, saiz kawasan penanda halaman dan tetapan pengguna lain."
   },
   "dataRestoreHeading": {
-    "message": "Restoring from a {appName} backup"
+    "message": "Memulihkan daripada sandaran {appName}"
   },
   "dataRestoreSuccessText": {
     "message": "Import"
   },
   "dataRestoreCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "dataClearAllHeading": {
-    "message": "Clear all {appName} data?"
+    "message": "Kosongkan semua data {appName}"
   },
   "dataClearAllContentPara1": {
-    "message": "Are you sure you want to clear all {appName} Bookmarks and Settings? {appName} will be restore to the default state."
+    "message": "Adakah anda pasti mahu mengosongkan semua Penanda Halaman dan Tetapan {appName} {appName} akan dipulihkan kepada keadaan lalai."
   },
   "dataClearAllContentPara2": {
-    "message": "This can not be undone."
+    "message": "Perkara ini tidak boleh diubah."
   },
   "dataClearAllSuccessText": {
-    "message": "Clear all data"
+    "message": "Kosongkan semua data"
   },
   "dataClearAllCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "dataClearPartialHeading": {
-    "message": "Clear {appName} data except bookmarks?"
+    "message": "Kosongkan {appName} kecuali penanda halaman?"
   },
   "dataClearPartialContentPara1": {
-    "message": "Are you sure you want to clear all {appName} Settings? {appName} will be restore to the default state but your Bookmarks and Groups will remain."
+    "message": "Adakah anda pasti mahu mengosongkan semua Tetapan {appName} {appName} akan dipulihkan kepada keadaan lalai tetapi Penanda Halaman dan Kumpulan anda akan kekal."
   },
   "dataClearPartialContentPara2": {
-    "message": "This can not be undone."
+    "message": "Perkara ini tidak boleh diubah."
   },
   "dataClearPartialSuccessText": {
-    "message": "Clear all except bookmarks"
+    "message": "Kosongkan semua kecuali penanda halaman"
   },
   "dataClearPartialCancelText": {
-    "message": "Cancel"
+    "message": "Batal"
   },
   "dataExportBackup": {
-    "message": "backup"
+    "message": "sandaran"
   },
   "dataFeedbackEmpty": {
-    "message": "Nothing selected to import."
+    "message": "Tiada apa-apa yang dipilih untuk diimport."
   },
   "dataFeedbackSuccess": {
-    "message": "Success! Restoring {appName} Bookmarks and Settings."
+    "message": "Berjaya! Memulihkan Penanda Halaman dan Tetapan {appName}"
   },
   "dataFeedbackFailNotJson": {
-    "message": "Not a JSON file. Make sure the selected file came from {appName}."
+    "message": "Bukan fail JSON. Pastikan fail yang dipilih datang daripada {appName} ."
   },
   "dataFeedbackFailNotAppJson": {
-    "message": "Not the right kind of JSON file. Make sure the selected file came from {appName}."
+    "message": "Bukan jenis fail JSON yang betul. Pastikan fail yang dipilih datang daripada {appName} ."
   },
   "dataFeedbackFailNotClipboardJson": {
-    "message": "Not the right kind of data. Make sure the clipboard holds data from {appName} or a {appName} backup JSON file."
+    "message": "Bukan jenis data yang betul. Pastikan papan keratan menyimpan data daripada {appName} atau fail JSON sandaran {appName}"
   },
   "controlGeneralReset": {
-    "message": "Reset to default"
+    "message": "Tetapkan semula kepada lalai"
   },
   "controlColorTextPlaceholder": {
-    "message": "Hex code"
+    "message": "Kod hex"
   },
   "controlColorRandom": {
-    "message": "Random colour"
+    "message": "Warna rawak"
   },
   "controlColorMixerMoreControls": {
-    "message": "More controls"
+    "message": "Lebih banyak kawalan"
   },
   "controlColorMixerSliderH": {
     "message": "Hue"
   },
   "controlColorMixerSliderS": {
-    "message": "Saturation"
+    "message": "Ketepuan"
   },
   "controlColorMixerSliderL": {
-    "message": "Lightness"
+    "message": "Keringanan"
   },
   "controlColorMixerSliderR": {
-    "message": "Red"
+    "message": "merah"
   },
   "controlColorMixerSliderG": {
-    "message": "Green"
+    "message": "hijau"
   },
   "controlColorMixerSliderB": {
-    "message": "Blue"
+    "message": "biru"
   }
 }

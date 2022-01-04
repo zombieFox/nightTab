@@ -326,12 +326,12 @@ export const CustomThemeTile = function({
 
   this.control.button = {
     edit: new Button({
-      text: message('themeCustomTileControlEdit'),
+      text: message.get('themeCustomTileControlEdit'),
       srOnly: true,
       iconName: 'edit',
       style: ['link'],
       size: 'small',
-      title: message('themeCustomTileControlEdit'),
+      title: message.get('themeCustomTileControlEdit'),
       classList: ['theme-custom-control-button', 'theme-custom-control-edit'],
       func: () => {
 
@@ -344,10 +344,10 @@ export const CustomThemeTile = function({
         const bookmarkForm = new CustomThemeForm({ customThemeData: newCustomThemeData });
 
         const editModal = new Modal({
-          heading: isValidString(customThemeData.theme.name) ? `${message('themeCustomEditHeadingName')} ${customThemeData.theme.name}` : message('themeCustomEditHeadingUnnamed'),
+          heading: isValidString(customThemeData.theme.name) ? `${message.get('themeCustomEditHeadingName')} ${customThemeData.theme.name}` : message.get('themeCustomEditHeadingUnnamed'),
           content: bookmarkForm.form(),
-          successText: message('themeCustomEditSuccessText'),
-          cancelText: message('themeCustomEditCancelText'),
+          successText: message.get('themeCustomEditSuccessText'),
+          cancelText: message.get('themeCustomEditCancelText'),
           width: 'small',
           successAction: () => {
 
@@ -363,22 +363,22 @@ export const CustomThemeTile = function({
       }
     }),
     remove: new Button({
-      text: message('themeCustomTileControlRemove'),
+      text: message.get('themeCustomTileControlRemove'),
       srOnly: true,
       iconName: 'cross',
       style: ['link'],
       size: 'small',
-      title: message('themeCustomTileControlRemove'),
+      title: message.get('themeCustomTileControlRemove'),
       classList: ['theme-custom-control-button', 'theme-custom-control-remove'],
       func: () => {
 
         menu.close();
 
         const removeModal = new Modal({
-          heading: isValidString(customThemeData.theme.name) ? `${message('themeCustomRemoveHeadingName')} ${customThemeData.theme.name}` : message('themeCustomRemoveHeadingUnnamed'),
-          content: message('themeCustomRemoveContent'),
-          successText: message('themeCustomRemoveSuccessText'),
-          cancelText: message('themeCustomRemoveCancelText'),
+          heading: isValidString(customThemeData.theme.name) ? `${message.get('themeCustomRemoveHeadingName')} ${customThemeData.theme.name}` : message.get('themeCustomRemoveHeadingUnnamed'),
+          content: message.get('themeCustomRemoveContent'),
+          successText: message.get('themeCustomRemoveSuccessText'),
+          cancelText: message.get('themeCustomRemoveCancelText'),
           width: 'small',
           successAction: () => {
             customTheme.item.mod.remove(customThemeData);

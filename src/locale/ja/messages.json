@@ -1337,8 +1337,11 @@
   "menuContentDataClearHelperPara2": {
     "message": "または、すべての設定を消去して、現在のブックマークとグループを保持することもできます。"
   },
-  "menuContentLanguageLanguage": {
+  "menuContentLanguageSelect": {
     "message": "言語"
+  },
+  "menuContentLanguageSystem": {
+    "message": "システム言語を使用する"
   },
   "menuContentLanguageAlertPara": {
     "message": "正しくない翻訳を見つけましたか？"

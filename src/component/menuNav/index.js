@@ -128,7 +128,7 @@ export const MenuNav = function({
       };
 
       const navButton = new Button({
-        text: message(`menuNav${uppercaseFirstLetter(navTop)}Label`),
+        text: message.get(`menuNav${uppercaseFirstLetter(navTop)}Label`),
         style: ['link'],
         block: true,
         classList: ['menu-nav-tab'],
@@ -153,7 +153,7 @@ export const MenuNav = function({
 
         item.sub.forEach((item) => {
 
-          const subLevelLink = node('a:' + message(`menuNav${uppercaseFirstLetter(navTop)}SubNav${uppercaseFirstLetter(item)}`) + '|href:#menu-content-item-' + this.makeId(item) + ',class:menu-nav-sub button button-link button-small,tabindex:1');
+          const subLevelLink = node('a:' + message.get(`menuNav${uppercaseFirstLetter(navTop)}SubNav${uppercaseFirstLetter(item)}`) + '|href:#menu-content-item-' + this.makeId(item) + ',class:menu-nav-sub button button-link button-small,tabindex:1');
 
           subNav.appendChild(subLevelLink);
 

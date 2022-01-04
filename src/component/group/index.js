@@ -215,10 +215,10 @@ group.add = {
     const groupForm = new GroupForm({ groupData: newGroupData });
 
     const addModal = new Modal({
-      heading: message('groupAddHeading'),
+      heading: message.get('groupAddHeading'),
       content: groupForm.form(),
-      successText: message('groupAddSuccessText'),
-      cancelText: message('groupAddCancelText'),
+      successText: message.get('groupAddSuccessText'),
+      cancelText: message.get('groupAddCancelText'),
       width: 40,
       openAction: () => {
 

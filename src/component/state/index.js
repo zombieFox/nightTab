@@ -3,6 +3,7 @@ const state = {};
 state.current = {};
 
 state.default = {
+  language: 'system',
   layout: {
     area: {
       header: { width: 100, justify: 'center' },

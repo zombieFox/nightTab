@@ -126,11 +126,11 @@ groupSetting.alignment = (parent) => {
   groupSetting.control.alignment.justify = new Control_radioGrid({
     object: state.get.current(),
     radioGroup: [
-      { id: 'group-area-justify-left', labelText: message('menuContentGroupAlignmentJustifyLeft'), value: 'left', position: 1 },
-      { id: 'group-area-justify-center', labelText: message('menuContentGroupAlignmentJustifyCenter'), value: 'center', position: 2 },
-      { id: 'group-area-justify-right', labelText: message('menuContentGroupAlignmentJustifyRight'), value: 'right', position: 3 }
+      { id: 'group-area-justify-left', labelText: message.get('menuContentGroupAlignmentJustifyLeft'), value: 'left', position: 1 },
+      { id: 'group-area-justify-center', labelText: message.get('menuContentGroupAlignmentJustifyCenter'), value: 'center', position: 2 },
+      { id: 'group-area-justify-right', labelText: message.get('menuContentGroupAlignmentJustifyRight'), value: 'right', position: 3 }
     ],
-    label: message('menuContentGroupAlignmentJustifyLabel'),
+    label: message.get('menuContentGroupAlignmentJustifyLabel'),
     groupName: 'group-area-justify',
     path: 'group.area.justify',
     gridSize: '3x1',
@@ -142,10 +142,10 @@ groupSetting.alignment = (parent) => {
 
   groupSetting.control.alignment.order = new Control_radio({
     object: state.get.current(),
-    label: message('menuContentGroupAlignmentOrderLabel'),
+    label: message.get('menuContentGroupAlignmentOrderLabel'),
     radioGroup: [
-      { id: 'group-order-header-body', labelText: message('menuContentGroupAlignmentOrderHeaderBodyLabel'), description: message('menuContentGroupAlignmentOrderHeaderBodyDescription'), value: 'header-body' },
-      { id: 'group-order-body-header', labelText: message('menuContentGroupAlignmentOrderBodyHeaderLabel'), description: message('menuContentGroupAlignmentOrderBodyHeaderDescription'), value: 'body-header' }
+      { id: 'group-order-header-body', labelText: message.get('menuContentGroupAlignmentOrderHeaderBodyLabel'), description: message.get('menuContentGroupAlignmentOrderHeaderBodyDescription'), value: 'header-body' },
+      { id: 'group-order-body-header', labelText: message.get('menuContentGroupAlignmentOrderBodyHeaderLabel'), description: message.get('menuContentGroupAlignmentOrderBodyHeaderDescription'), value: 'body-header' }
     ],
     groupName: 'group-order',
     path: 'group.order',
@@ -229,7 +229,7 @@ groupSetting.name = (parent) => {
     object: state.get.current(),
     path: 'group.name.size',
     id: 'group-name-size',
-    labelText: message('menuContentGroupNameSize'),
+    labelText: message.get('menuContentGroupNameSize'),
     value: state.get.current().group.name.size,
     defaultValue: state.get.default().group.name.size,
     min: state.get.minMax().group.name.size.min,
@@ -273,7 +273,7 @@ groupSetting.name = (parent) => {
   });
 
   groupSetting.control.name.show = new Button({
-    text: message('menuContentGroupNameShow'),
+    text: message.get('menuContentGroupNameShow'),
     style: ['line'],
     func: () => {
 
@@ -291,7 +291,7 @@ groupSetting.name = (parent) => {
   });
 
   groupSetting.control.name.hide = new Button({
-    text: message('menuContentGroupNameHide'),
+    text: message.get('menuContentGroupNameHide'),
     style: ['line'],
     func: () => {
 
@@ -309,7 +309,7 @@ groupSetting.name = (parent) => {
   });
 
   groupSetting.control.name.helper = new Control_helperText({
-    text: [message('menuContentGroupNameHelperPara1')]
+    text: [message.get('menuContentGroupNameHelperPara1')]
   });
 
   parent.appendChild(
@@ -334,7 +334,7 @@ groupSetting.collapse = (parent) => {
 
   groupSetting.control.collapse = {
     show: new Button({
-      text: message('menuContentGroupCollapseShow'),
+      text: message.get('menuContentGroupCollapseShow'),
       style: ['line'],
       func: () => {
 
@@ -351,7 +351,7 @@ groupSetting.collapse = (parent) => {
       }
     }),
     hide: new Button({
-      text: message('menuContentGroupCollapseHide'),
+      text: message.get('menuContentGroupCollapseHide'),
       style: ['line'],
       func: () => {
 
@@ -393,7 +393,7 @@ groupSetting.toolbar = (parent) => {
     object: state.get.current(),
     path: 'group.toolbar.size',
     id: 'group-toolbar-size',
-    labelText: message('menuContentGroupToolbarSize'),
+    labelText: message.get('menuContentGroupToolbarSize'),
     value: state.get.current().group.toolbar.size,
     defaultValue: state.get.default().group.toolbar.size,
     min: state.get.minMax().group.toolbar.size.min,
@@ -452,10 +452,10 @@ groupSetting.toolbar = (parent) => {
 
   groupSetting.control.toolbar.collapse = {
     label: new Control_label({
-      text: message('menuContentGroupToolbarCollapseLabel')
+      text: message.get('menuContentGroupToolbarCollapseLabel')
     }),
     show: new Button({
-      text: message('menuContentGroupToolbarCollapseShow'),
+      text: message.get('menuContentGroupToolbarCollapseShow'),
       style: ['line'],
       func: () => {
 
@@ -472,7 +472,7 @@ groupSetting.toolbar = (parent) => {
       }
     }),
     hide: new Button({
-      text: message('menuContentGroupToolbarCollapseHide'),
+      text: message.get('menuContentGroupToolbarCollapseHide'),
       style: ['line'],
       func: () => {
 
@@ -489,16 +489,16 @@ groupSetting.toolbar = (parent) => {
       }
     }),
     helper: new Control_helperText({
-      text: [message('menuContentGroupToolbarCollapseHelperPara1')]
+      text: [message.get('menuContentGroupToolbarCollapseHelperPara1')]
     })
   };
 
   groupSetting.control.toolbar.openAll = {
     label: new Control_label({
-      text: message('menuContentGroupToolbarOpenAllLabel')
+      text: message.get('menuContentGroupToolbarOpenAllLabel')
     }),
     show: new Button({
-      text: message('menuContentGroupToolbarOpenAllShow'),
+      text: message.get('menuContentGroupToolbarOpenAllShow'),
       style: ['line'],
       func: () => {
 
@@ -515,7 +515,7 @@ groupSetting.toolbar = (parent) => {
       }
     }),
     hide: new Button({
-      text: message('menuContentGroupToolbarOpenAllHide'),
+      text: message.get('menuContentGroupToolbarOpenAllHide'),
       style: ['line'],
       func: () => {
 
@@ -532,7 +532,7 @@ groupSetting.toolbar = (parent) => {
       }
     }),
     helper: new Control_helperText({
-      text: [message('menuContentGroupToolbarOpenAllHelperPara1')]
+      text: [message.get('menuContentGroupToolbarOpenAllHelperPara1')]
     })
   };
 

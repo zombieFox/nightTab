@@ -13,24 +13,24 @@ const appSetting = {};
 
 appSetting.app = (parent) => {
 
-  appSetting.app.para1 = node(`p:${message('menuContentAppPara1')}`);
+  appSetting.app.para1 = node(`p:${message.get('menuContentAppPara1')}`);
 
   appSetting.app.link1 = new Link({
-    text: message('menuContentAppLink1'),
+    text: message.get('menuContentAppLink1'),
     href: `https://www.reddit.com/r/${APP_NAME}`,
     openNew: true
   });
 
-  appSetting.app.para2 = node(`p:${message('menuContentAppPara2')}`);
+  appSetting.app.para2 = node(`p:${message.get('menuContentAppPara2')}`);
 
   appSetting.app.link2 = new Link({
-    text: message('menuContentAppLink2'),
+    text: message.get('menuContentAppLink2'),
     href: `https://github.com/zombieFox/${APP_NAME}`,
     openNew: true
   });
 
   appSetting.app.link3 = new Link({
-    text: message('menuContentAppLink3'),
+    text: message.get('menuContentAppLink3'),
     href: `https://github.com/zombieFox/${APP_NAME}/blob/master/license`,
     openNew: true
   });

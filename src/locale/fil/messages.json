@@ -1337,8 +1337,11 @@
   "menuContentDataClearHelperPara2": {
     "message": "Bilang kahalili, posibleng i-wipe ang lahat ng setting ngunit panatilihin ang kasalukuyang Mga Bookmark at Grupo."
   },
-  "menuContentLanguageLanguage": {
+  "menuContentLanguageSelect": {
     "message": "Wika"
+  },
+  "menuContentLanguageSystem": {
+    "message": "Gumamit ng wika ng system"
   },
   "menuContentLanguageAlertPara": {
     "message": "Nakahanap ng pagsasalin na hindi tama?"
