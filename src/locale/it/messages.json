@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "Una nuova scheda neutra accentata con un colore scelto. Personalizza il layout, lo stile, lo sfondo e i segnalibri in nightTab."
   },
+  "menuNavDebugLabel": {
+    "message": "Debug"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "Ingresso"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Pulsante"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "Segnalibro"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "Icona"
+  },
   "menuNavThemeLabel": {
     "message": "Tema"
   },

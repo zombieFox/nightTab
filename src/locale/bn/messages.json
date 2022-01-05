@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "নাইটট্যাবে উচ্চারণ রঙ, বিন্যাস, শৈলী, ব্যাকগ্রাউন্ড এবং বুকমার্ক কাস্টমাইজ করুন।"
   },
+  "menuNavDebugLabel": {
+    "message": "ডিবাগ"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "ইনপুট"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "বোতাম"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "বুকমার্ক"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "আইকন"
+  },
   "menuNavThemeLabel": {
     "message": "থিম"
   },

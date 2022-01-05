@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "Personalize a cor de destaque, layout, estilo, plano de fundo e marcadores no nightTab."
   },
+  "menuNavDebugLabel": {
+    "message": "Depurar"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "Entrada"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Botão"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "marca páginas"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "Ícone"
+  },
   "menuNavThemeLabel": {
     "message": "Tema"
   },

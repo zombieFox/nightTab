@@ -60,13 +60,16 @@ message.get = (stringId) => {
   switch (state.get.current().language) {
 
     case 'system':
+      // language set to use system language
 
       if (chrome.i18n) {
 
+        // installed as extension, use browser language
         string = chrome.i18n.getMessage(stringId);
 
       } else {
 
+        // not installed as extension, use default language
         string = message.language.en_GB[stringId].message;
 
       }
@@ -74,8 +77,19 @@ message.get = (stringId) => {
       break;
 
     default:
+      // language set to use user choice
 
-      string = message.language[state.get.current().language][stringId].message;
+      if (stringId in message.language[state.get.current().language]) {
+
+        // string found in chosen language
+        string = message.language[state.get.current().language][stringId].message;
+
+      } else {
+
+        // or use default language
+        string = message.language.en_GB[stringId].message;
+
+      }
 
       break;
 

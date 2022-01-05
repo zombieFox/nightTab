@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "Personalice el color de acento, el diseño, el estilo, el fondo y los marcadores en nightTab."
   },
+  "menuNavDebugLabel": {
+    "message": "Depurar"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "Aporte"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Botón"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "Marcador"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "Icono"
+  },
   "menuNavThemeLabel": {
     "message": "Tema"
   },

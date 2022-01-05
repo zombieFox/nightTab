@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "I-customize ang kulay ng accent, layout, istilo, background at mga bookmark sa nightTab."
   },
+  "menuNavDebugLabel": {
+    "message": "I-debug"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "Input"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Pindutan"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "Bookmark"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "Icon"
+  },
   "menuNavThemeLabel": {
     "message": "Tema"
   },

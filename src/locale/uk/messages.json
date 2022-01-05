@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "Нейтральна сторінка нової вкладки з акцентом вибраного кольору. Налаштуйте макет, стиль, фон і закладки в nightTab."
   },
+  "menuNavDebugLabel": {
+    "message": "Відлагоджувати"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "Вхідні дані"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Кнопка"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "Закладка"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "значок"
+  },
   "menuNavThemeLabel": {
     "message": "Тема"
   },

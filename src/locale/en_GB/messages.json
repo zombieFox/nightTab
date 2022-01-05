@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab."
   },
+  "menuNavDebugLabel": {
+    "message": "Debug"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "Input"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Button"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "Bookmark"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "Icon"
+  },
   "menuNavThemeLabel": {
     "message": "Theme"
   },

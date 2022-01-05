@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "नाइटटैब में उच्चारण रंग, लेआउट, शैली, पृष्ठभूमि और बुकमार्क को अनुकूलित करें।"
   },
+  "menuNavDebugLabel": {
+    "message": "डिबग"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "इनपुट"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "बटन"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "बुकमार्क"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "आइकन"
+  },
   "menuNavThemeLabel": {
     "message": "विषय"
   },

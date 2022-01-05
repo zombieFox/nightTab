@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "નાઇટટેબમાં એક્સેન્ટ કલર, લેઆઉટ, સ્ટાઇલ, બેકગ્રાઉન્ડ અને બુકમાર્ક્સને કસ્ટમાઇઝ કરો."
   },
+  "menuNavDebugLabel": {
+    "message": "ડીબગ"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "ઇનપુટ"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "બટન"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "બુકમાર્ક"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "ચિહ્ન"
+  },
   "menuNavThemeLabel": {
     "message": "થીમ"
   },

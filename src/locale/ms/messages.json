@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "Sesuaikan warna aksen, reka letak, gaya, latar belakang dan penanda halaman dalam nightTab."
   },
+  "menuNavDebugLabel": {
+    "message": "Nyahpepijat"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "Input"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Butang"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "Penanda buku"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "ikon"
+  },
   "menuNavThemeLabel": {
     "message": "Tema"
   },

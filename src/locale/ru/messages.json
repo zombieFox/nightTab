@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "Настройте цвет акцента, макет, стиль, фон и закладки в nightTab."
   },
+  "menuNavDebugLabel": {
+    "message": "Отлаживать"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "Вход"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Кнопка"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "Закладка"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "Значок"
+  },
   "menuNavThemeLabel": {
     "message": "Тема"
   },

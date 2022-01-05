@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "Personnalisez la couleur d'accent, la mise en page, le style, l'arrière-plan et les signets dans nightTab."
   },
+  "menuNavDebugLabel": {
+    "message": "Déboguer"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "Saisir"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Bouton"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "Signet"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "Icône"
+  },
   "menuNavThemeLabel": {
     "message": "Thème"
   },

@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "Tùy chỉnh màu nhấn, bố cục, kiểu, nền và dấu trang trong nightTab."
   },
+  "menuNavDebugLabel": {
+    "message": "Gỡ lỗi"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "Đầu vào"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Cái nút"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "Dấu trang"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "Biểu tượng"
+  },
   "menuNavThemeLabel": {
     "message": "Chủ đề"
   },

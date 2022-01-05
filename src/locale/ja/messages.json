@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "nightTabでアクセントの色、レイアウト、スタイル、背景、ブックマークをカスタマイズします。"
   },
+  "menuNavDebugLabel": {
+    "message": "デバッグ"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "入力"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "ボタン"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "ブックマーク"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "アイコン"
+  },
   "menuNavThemeLabel": {
     "message": "テーマ"
   },

@@ -8,6 +8,21 @@
   "appDescription": {
     "message": "Passen Sie Akzentfarbe, Layout, Stil, Hintergrund und Lesezeichen in nightTab an."
   },
+  "menuNavDebugLabel": {
+    "message": "Debuggen"
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "Eingang"
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "Taste"
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "Lesezeichen"
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "Symbol"
+  },
   "menuNavThemeLabel": {
     "message": "Thema"
   },
