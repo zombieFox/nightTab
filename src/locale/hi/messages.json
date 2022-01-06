@@ -198,7 +198,7 @@
     "message": "लाइट मोड"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "स्वचालित"
+    "message": "सिस्टम भाषा का प्रयोग करें"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "सिस्टम लाइट या डार्क मोड का पालन करें।"
@@ -327,7 +327,7 @@
     "message": "ध्यान रखें कि तेजी से बदलते एक्सेंट ह्यू के कारण प्रदर्शन संबंधी समस्याएं हो सकती हैं।"
   },
   "menuContentThemeAccentCycleHelperPara1": {
-    "message": "जब एक्सेंट का रंग ग्रे या काला होता है, तो ऑटो चेंज एक्सेंट ह्यू काम नहीं करेगा।"
+    "message": "जब एक्सेंट का रंग धूसर या काला हो, तो स्वतः परिवर्तन एक्सेंट ह्यू काम नहीं करेगा।"
   },
   "menuContentThemeFontDisplayNameLabel": {
     "message": "फ़ॉन्ट प्रदर्शित करें"
@@ -384,7 +384,7 @@
     "message": "एक फ़ॉन्ट नाम जोड़ें जैसा कि यह Google फ़ॉन्ट्स पर दिखाई देता है, जिसमें बड़े अक्षरों और रिक्त स्थान शामिल हैं, उदाहरण के लिए: \"रोबोटो\", \"सोर्स सैन्स प्रो\" या \"नोटो सैन्स\" दर्ज करें।"
   },
   "menuContentThemeFontUiNameHelperPara3": {
-    "message": "डिफ़ॉल्ट फ़ॉन्ट \"ओपन सेन्स\" का उपयोग करने के लिए फ़ील्ड साफ़ करें।"
+    "message": "डिफ़ॉल्ट फ़ॉन्ट \"ओपन सैन्स\" का उपयोग करने के लिए फ़ील्ड साफ़ करें।"
   },
   "menuContentThemeFontUiWeightLabel": {
     "message": "फ़ॉन्ट वजन"
@@ -429,7 +429,7 @@
     "message": "खोज बार, बुकमार्क, समूह नियंत्रण और टूलबार की अस्पष्टता बदलें।"
   },
   "menuContentThemeOpacityGeneralHelperPara2": {
-    "message": "अलग-अलग बुकमार्क संपादित करते समय अस्पष्टता को भी बदला जा सकता है।"
+    "message": "अलग-अलग बुकमार्क संपादित करते समय अस्पष्टता भी बदली जा सकती है।"
   },
   "menuContentThemeOpacityToolbar": {
     "message": "उपकरण पट्टी"
@@ -450,7 +450,7 @@
     "message": "थीम द्वारा परिभाषित पृष्ठभूमि रंग का प्रयोग करें।"
   },
   "menuContentThemeBackgroundTypeAccentLabel": {
-    "message": "उच्चारण द्वारा पृष्ठभूमि"
+    "message": "Accent . द्वारा पृष्ठभूमि"
   },
   "menuContentThemeBackgroundTypeAccentDescription": {
     "message": "बैकग्राउंड के लिए एक्सेंट कलर का इस्तेमाल करें।"
@@ -486,7 +486,7 @@
     "message": "यह क्यों बदल गया है?"
   },
   "menuContentThemeBackgroundImageUrlLabel": {
-    "message": "यूआरएल"
+    "message": "URL"
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
     "message": "https://www.example.com/image.jpg"
@@ -507,7 +507,7 @@
     "message": "कलंक"
   },
   "menuContentThemeBackgroundImageGrayscale": {
-    "message": "स्केल"
+    "message": "ग्रेस्केल"
   },
   "menuContentThemeBackgroundImageScale": {
     "message": "स्केल"
@@ -537,7 +537,7 @@
     "message": "वीडियो फ़ाइल से कैसे लिंक करें।"
   },
   "menuContentThemeBackgroundVideoUrlLabel": {
-    "message": "यूआरएल"
+    "message": "URL"
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
     "message": "https://www.example.com/video.mp4"
@@ -552,7 +552,7 @@
     "message": "कलंक"
   },
   "menuContentThemeBackgroundVideoGrayscale": {
-    "message": "स्केल"
+    "message": "ग्रेस्केल"
   },
   "menuContentThemeBackgroundVideoScale": {
     "message": "स्केल"
@@ -840,25 +840,25 @@
     "message": "नई पंक्ति"
   },
   "menuContentHeaderGreetingNewLineDescription": {
-    "message": "एक नई लाइन पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
+    "message": "एक नई पंक्ति पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
   },
   "menuContentHeaderGreetingTypeLabel": {
     "message": "शब्दों"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"सुबह बख़ैर...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"नमस्ते...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"नमस्ते...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "कोई नहीं"
   },
   "menuContentHeaderGreetingTypeNoneDescription": {
-    "message": "केवल नाम प्रदर्शित करने के लिए उपयोगी।"
+    "message": "सिर्फ नाम प्रदर्शित करने के लिए उपयोगी।"
   },
   "menuContentHeaderGreetingTypeCustomLabel": {
     "message": "रीति"
@@ -867,7 +867,7 @@
     "message": "अपने स्वयं के अभिवादन का प्रयोग करें।"
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "अगर खाली छोड़ दिया जाता है, तो डिफ़ॉल्ट रूप से \"गुड मॉर्निंग...\" हो जाता है."
+    "message": "अगर खाली छोड़ दिया जाता है, तो डिफ़ॉल्ट रूप से \"Good morning...\" हो जाता है."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "कस्टम ग्रीटिंग टेक्स्ट"
@@ -891,10 +891,10 @@
     "message": "शब्दों"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"समय और तारीख है\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"इसका\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "आकार"
@@ -954,7 +954,7 @@
     "message": "नई पंक्ति"
   },
   "menuContentHeaderClockNewLineDescription": {
-    "message": "एक नई लाइन पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
+    "message": "एक नई पंक्ति पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
   },
   "menuContentHeaderDateDayShow": {
     "message": "प्रदर्शन का दिन"
@@ -1050,7 +1050,7 @@
     "message": "नई पंक्ति"
   },
   "menuContentHeaderDateNewLineDescription": {
-    "message": "एक नई लाइन पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
+    "message": "एक नई पंक्ति पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।"
   },
   "menuContentHeaderSearchShow": {
     "message": "खोज दिखाएँ"
@@ -1095,7 +1095,7 @@
     "message": "खोज इंजन का नाम"
   },
   "menuContentHeaderSearchEngineCustomUrlLabel": {
-    "message": "यूआरएल"
+    "message": "URL"
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
     "message": "https://"
@@ -1212,7 +1212,7 @@
     "message": "बुकमार्क फिर समूह विवरण"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "समूह विवरण क्षेत्र के सामने आने के लिए बुकमार्क क्षेत्र का आदेश दें।"
+    "message": "बुकमार्क क्षेत्र को समूह विवरण क्षेत्र के सामने आने का आदेश दें।"
   },
   "menuContentGroupNameSize": {
     "message": "नाम का आकार"
@@ -1269,7 +1269,7 @@
     "message": "शीर्षलेख में"
   },
   "menuContentToolbarLocationHelperPara1": {
-    "message": "टूलबार को हैडर के अंदर या विंडो के किसी कोने में रखें।"
+    "message": "टूलबार को हैडर के अंदर या विंडो के एक कोने में रखें।"
   },
   "menuContentToolbarLocationNewLineLabel": {
     "message": "नई पंक्ति"
@@ -1332,7 +1332,7 @@
     "message": "{appName} बुकमार्क और सेटिंग का बैकअप डाउनलोड करें।"
   },
   "menuContentDataBackupHelperPara2": {
-    "message": "इस फ़ाइल को बाद में इस या किसी अन्य डिवाइस पर आयात किया जा सकता है।"
+    "message": "यह फ़ाइल बाद में इस या किसी अन्य डिवाइस पर आयात की जा सकती है।"
   },
   "menuContentDataClearAll": {
     "message": "सभी डेटा साफ़ करें"
@@ -1362,7 +1362,7 @@
     "message": "एक अनुवाद मिला जो सही नहीं है?"
   },
   "menuContentLanguageAlertLink": {
-    "message": "{appName} का अनुवाद करने में सहायता करें"
+    "message": "{appName} अनुवाद करने में सहायता करें"
   },
   "menuContentSupportPageApplyToAll": {
     "message": "सभी पर बुकमार्क सेटिंग लागू करना"
@@ -1416,7 +1416,7 @@
     "message": "समुदाय के साथ अपना सेटअप साझा करें।"
   },
   "menuContentAppLink1": {
-    "message": "Reddit /r/{appName} पर मिला।"
+    "message": "Reddit/r/{appName} पर मिला।"
   },
   "menuContentAppPara2": {
     "message": "यह प्रोजेक्ट ओपन सोर्स है।"
@@ -1434,7 +1434,7 @@
     "message": "बुकमार्क को पुन: व्यवस्थित करने के लिए खींचें"
   },
   "bookmarkTileControlRight": {
-    "message": "इस बुकमार्क को दाईं ओर ले जाएं"
+    "message": "इस बुकमार्क को दाएँ ले जाएँ"
   },
   "bookmarkTileControlEdit": {
     "message": "इस बुकमार्क को संपादित करें"
@@ -1524,7 +1524,7 @@
     "message": "थीम और एक्सेंट रंग को ओवरराइड करें।"
   },
   "bookmarkFormUrlLabel": {
-    "message": "यूआरएल"
+    "message": "URL"
   },
   "bookmarkFormUrlPlaceholder": {
     "message": "https://www.example.com/"
@@ -1746,7 +1746,7 @@
     "message": "नया समूह"
   },
   "bookmarkFormGroupNameLabel": {
-    "message": "यूआरएल"
+    "message": "URL"
   },
   "bookmarkFormGroupNamePlaceholder": {
     "message": "उदाहरण समूह"
@@ -2022,7 +2022,7 @@
     "message": "बुकमार्क के अलावा {appName} डेटा साफ़ करें?"
   },
   "dataClearPartialContentPara1": {
-    "message": "क्या आप वाकई सभी {appName} सेटिंग साफ़ करना चाहते हैं? {appName} को डिफ़ॉल्ट स्थिति में पुनर्स्थापित कर दिया जाएगा लेकिन आपके बुकमार्क और समूह बने रहेंगे।"
+    "message": "क्या आप वाकई सभी {appName} सेटिंग साफ़ करना चाहते हैं? {appName} को डिफ़ॉल्ट स्थिति में बहाल कर दिया जाएगा लेकिन आपके बुकमार्क और समूह बने रहेंगे।"
   },
   "dataClearPartialContentPara2": {
     "message": "इसे असंपादित नहीं किया जा सकता है।"

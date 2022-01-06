@@ -198,7 +198,7 @@
     "message": "Chế độ sáng"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Tự động"
+    "message": "Sử dụng ngôn ngữ hệ thống"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "Thực hiện theo hệ thống Chế độ sáng hoặc tối."
@@ -294,7 +294,7 @@
     "message": "Màu nhấn"
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "Màu dấu nhấn ngẫu nhiên khi tải \/ làm mới"
+    "message": "Màu dấu nhấn ngẫu nhiên khi tải / làm mới"
   },
   "menuContentThemeAccentRandomStyleAny": {
     "message": "Bất kì"
@@ -387,7 +387,7 @@
     "message": "Xóa trường để sử dụng phông chữ mặc định \"Open Sans\"."
   },
   "menuContentThemeFontUiWeightLabel": {
-    "message": "Độ đậm phông chữ"
+    "message": "Độ đậm của phông chữ"
   },
   "menuContentThemeFontUiWeightLight": {
     "message": "Nhẹ"
@@ -489,7 +489,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "menuContentThemeBackgroundImageUrlHelperPara1": {
     "message": "Thêm nhiều URL được phân tách bằng dấu cách hoặc trên các dòng mới cho hình nền ngẫu nhiên khi tải."
@@ -498,16 +498,16 @@
     "message": "Unsplash có thể được sử dụng cho các hình ảnh ngẫu nhiên, ví dụ:"
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
-    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?night,day,sky"
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
   },
   "menuContentThemeBackgroundImageUrlHelperPara4": {
-    "message": "Thay đổi các tham số sau ... \/ random \/ để có thêm tùy chọn. Thời gian tải có thể khác nhau."
+    "message": "Thay đổi các tham số sau ... / random / để có thêm tùy chọn. Thời gian tải có thể khác nhau."
   },
   "menuContentThemeBackgroundImageBlur": {
     "message": "Mơ hồ"
   },
   "menuContentThemeBackgroundImageGrayscale": {
-    "message": "Thang độ xám"
+    "message": "Greyscale"
   },
   "menuContentThemeBackgroundImageScale": {
     "message": "Tỉ lệ"
@@ -540,7 +540,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
     "message": "Video nền chỉ hỗ trợ URL trực tiếp đến tệp video. Hỗ trợ định dạng MP4 và WebM."
@@ -552,7 +552,7 @@
     "message": "Mơ hồ"
   },
   "menuContentThemeBackgroundVideoGrayscale": {
-    "message": "Thang độ xám"
+    "message": "Greyscale"
   },
   "menuContentThemeBackgroundVideoScale": {
     "message": "Tỉ lệ"
@@ -771,7 +771,7 @@
     "message": "Dấu trang rồi đến Tiêu đề"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Thứ tự cho khu vực Dấu trang xuất hiện trước khu vực Tiêu đề."
+    "message": "Thứ tự khu vực Dấu trang xuất hiện trước khu vực Tiêu đề."
   },
   "menuContentLayoutPageTitleLabel": {
     "message": "Chức vụ"
@@ -783,7 +783,7 @@
     "message": "URL yêu thích"
   },
   "menuContentLayoutPageFaviconPlaceholder": {
-    "message": "https:\/\/www.example.com\/favicon.svg"
+    "message": "https://www.example.com/favicon.svg"
   },
   "menuContentLayoutPageFaviconHelperPara1": {
     "message": "Không được hỗ trợ bởi tất cả các trình duyệt."
@@ -813,7 +813,7 @@
     "message": "Hình nền hoặc video sẽ không bị mờ khi cuộn xuống cuối trang."
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
-    "message": "Hình ảnh hoặc video mờ có thể được tìm thấy trong Nền chủ đề."
+    "message": "Làm mờ hình ảnh hoặc video có thể được tìm thấy trong Nền chủ đề."
   },
   "menuContentHeaderAlignmentJustifyLabel": {
     "message": "Căn chỉnh mục tiêu đề"
@@ -846,13 +846,13 @@
     "message": "Văn bản"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Buổi sáng tốt lành...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Xin chào...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Chào...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "Không có"
@@ -867,7 +867,7 @@
     "message": "Sử dụng lời chào của riêng bạn."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "Mặc định là \"Chào buổi sáng ...\" nếu để trống."
+    "message": "Mặc định là \"Good morning...\" nếu để trống."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "Văn bản lời chào tùy chỉnh"
@@ -891,10 +891,10 @@
     "message": "Văn bản"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"Ngày và giờ là\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"Của nó\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "Kích cỡ"
@@ -945,7 +945,7 @@
     "message": "24 tiếng"
   },
   "menuContentHeaderClockMeridiem": {
-    "message": "SA \/ CH"
+    "message": "SA / CH"
   },
   "menuContentHeaderClockSize": {
     "message": "Kích cỡ"
@@ -1032,13 +1032,13 @@
     "message": "Ký tự phân tách"
   },
   "menuContentHeaderDateSeparatorPlaceholder": {
-    "message": "\/"
+    "message": "/"
   },
   "menuContentHeaderDateFormatLabel": {
     "message": "Định dạng"
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "Ngày \/ tháng"
+    "message": "Ngày / tháng"
   },
   "menuContentHeaderDateFormatMonthDate": {
     "message": "Ngày tháng"
@@ -1098,10 +1098,10 @@
     "message": "URL"
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
-    "message": "https: \/\/"
+    "message": "https://"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "Nhập địa chỉ web với các tham số tìm kiếm, ví dụ: \"https:\/\/vimeo.com\/search?q=\""
+    "message": "Nhập địa chỉ web với các tham số tìm kiếm, ví dụ: \"https://vimeo.com/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
     "message": "{appName} sẽ thêm cụm từ tìm kiếm được nhập vào hộp Tìm kiếm ở cuối URL ở trên."
@@ -1206,13 +1206,13 @@
     "message": "Chi tiết nhóm rồi đến Dấu trang"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Ra lệnh cho khu vực Chi tiết nhóm xuất hiện trước khu vực Dấu trang."
+    "message": "Ra lệnh cho vùng Chi tiết nhóm xuất hiện trước vùng Dấu trang."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "Dấu trang rồi đến Chi tiết nhóm"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Đặt khu vực Dấu trang xuất hiện trước khu vực Chi tiết nhóm."
+    "message": "Đặt vùng Dấu trang xuất hiện trước vùng Chi tiết nhóm."
   },
   "menuContentGroupNameSize": {
     "message": "Kích thước tên"
@@ -1332,7 +1332,7 @@
     "message": "Tải xuống bản sao lưu Dấu trang và Cài đặt {appName}"
   },
   "menuContentDataBackupHelperPara2": {
-    "message": "Tệp này sau đó có thể được nhập vào tài khoản này hoặc tài khoản khác."
+    "message": "Tệp này sau đó có thể được nhập trên thiết bị này hoặc thiết bị khác."
   },
   "menuContentDataClearAll": {
     "message": "Xóa tất cả dữ liệu"
@@ -1416,7 +1416,7 @@
     "message": "Chia sẻ thiết lập của bạn với cộng đồng."
   },
   "menuContentAppLink1": {
-    "message": "Tìm thấy trên Reddit \/ r \/ {appName} ."
+    "message": "Tìm thấy trên Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "Dự án này là mã nguồn mở."
@@ -1503,7 +1503,7 @@
     "message": "Địa chỉ nhà"
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "Đảm bảo sử dụng URL đầy đủ và bao gồm \"https: \/\/ ...\""
+    "message": "Đảm bảo sử dụng URL đầy đủ và bao gồm \"https://...\""
   },
   "bookmarkFormSectionPositionHeading": {
     "message": "Chức vụ"
@@ -1527,7 +1527,7 @@
     "message": "URL"
   },
   "bookmarkFormUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/"
+    "message": "https://www.example.com/"
   },
   "bookmarkFormDisplayAlignmentLabel": {
     "message": "Yếu tố hình ảnh và căn chỉnh tên"
@@ -1635,7 +1635,7 @@
     "message": "Đánh dấu hình ảnh"
   },
   "bookmarkFormDisplayVisualImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormDisplayVisualShadowSize": {
     "message": "Bóng trực quan"
@@ -1692,7 +1692,7 @@
     "message": "Hiển thị nền"
   },
   "bookmarkFormBackgroundShowDescription": {
-    "message": "Hiển thị Nền hình ảnh hoặc video trên ô Dấu trang này."
+    "message": "Hiển thị Hình ảnh hoặc Hình nền video trên ô Dấu trang này."
   },
   "bookmarkFormBackgroundTypeImage": {
     "message": "Hình ảnh"
@@ -1707,7 +1707,7 @@
     "message": "URL hình nền"
   },
   "bookmarkFormBackgroundImagePlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormBackgroundImageHelperPara1": {
     "message": "Hình nền chỉ hỗ trợ URL trực tiếp đến tệp hình ảnh."
@@ -1716,7 +1716,7 @@
     "message": "URL video nền"
   },
   "bookmarkFormBackgroundVideoPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
     "message": "Video nền chỉ hỗ trợ URL trực tiếp đến tệp video. Hỗ trợ định dạng MP4 và WebM."
@@ -1860,7 +1860,7 @@
     "message": "Thanh công cụ"
   },
   "groupFormSectionToolbarDescription": {
-    "message": "Hiển thị các điều khiển để mở tất cả hoặc hiển thị \/ ẩn các Dấu trang trong Nhóm này."
+    "message": "Hiển thị các điều khiển để mở tất cả hoặc hiển thị / ẩn các Dấu trang trong Nhóm này."
   },
   "groupFormSectionOrderingHeading": {
     "message": "Đặt hàng"
@@ -2058,7 +2058,7 @@
     "message": "Mã hex"
   },
   "controlColorRandom": {
-    "message": "Màu sắc ngẫu nhiên"
+    "message": "Màu ngẫu nhiên"
   },
   "controlColorMixerMoreControls": {
     "message": "Thêm điều khiển"

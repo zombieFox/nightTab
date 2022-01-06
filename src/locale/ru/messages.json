@@ -198,7 +198,7 @@
     "message": "Легкий режим"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Автоматический"
+    "message": "Использовать системный язык"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "Следуйте системному световому или темному режиму."
@@ -210,7 +210,7 @@
     "message": "Элементы текста и формы имеют оттенки справа."
   },
   "menuContentThemeColorShadeHelperPara3": {
-    "message": "Для более светлого вида переключитесь на стиль освещения, а затем выберите основной цвет. И наоборот для темного вида."
+    "message": "Для более светлого вида переключитесь на стиль освещения, а затем выберите основной цвет. И наоборот для темного взгляда."
   },
   "menuContentThemeColorRangePrimaryH": {
     "message": "Основной цвет"
@@ -381,7 +381,7 @@
     "message": "Найдите шрифт Google"
   },
   "menuContentThemeFontUiNameHelperPara2": {
-    "message": "Добавьте имя шрифта, как оно отображается в Google Fonts, включая заглавные буквы и пробелы, например: введите «Roboto», «Source Sans Pro» или «Noto Sans»."
+    "message": "Добавьте название шрифта, как оно отображается в Google Fonts, включая заглавные буквы и пробелы, например: введите «Roboto», «Source Sans Pro» или «Noto Sans»."
   },
   "menuContentThemeFontUiNameHelperPara3": {
     "message": "Очистите поле, чтобы использовать шрифт по умолчанию «Open Sans»."
@@ -771,7 +771,7 @@
     "message": "Закладки, затем заголовок"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Сделайте так, чтобы область закладок отображалась перед областью заголовка."
+    "message": "Сделайте так, чтобы область закладки отображалась перед областью заголовка."
   },
   "menuContentLayoutPageTitleLabel": {
     "message": "Заголовок"
@@ -840,19 +840,19 @@
     "message": "Новая линия"
   },
   "menuContentHeaderGreetingNewLineDescription": {
-    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+    "message": "Перевести на новую строку и отделить от других элементов заголовка."
   },
   "menuContentHeaderGreetingTypeLabel": {
     "message": "Формулировка"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Доброе утро...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Привет...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Привет...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "Никто"
@@ -867,7 +867,7 @@
     "message": "Используйте собственное приветствие."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "Если оставить поле пустым, по умолчанию используется «Доброе утро ...»."
+    "message": "Если оставить поле пустым, по умолчанию используется «Good morning...»."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "Пользовательский текст приветствия"
@@ -891,10 +891,10 @@
     "message": "Формулировка"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "«Время и дата»"
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"Его\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "Размер"
@@ -903,7 +903,7 @@
     "message": "Новая линия"
   },
   "menuContentHeaderTransitionalNewLineDescription": {
-    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+    "message": "Перевести на новую строку и отделить от других элементов заголовка."
   },
   "menuContentHeaderClockHourShow": {
     "message": "Показать часы"
@@ -954,7 +954,7 @@
     "message": "Новая линия"
   },
   "menuContentHeaderClockNewLineDescription": {
-    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+    "message": "Перевести на новую строку и отделить от других элементов заголовка."
   },
   "menuContentHeaderDateDayShow": {
     "message": "Выставочный день"
@@ -1050,7 +1050,7 @@
     "message": "Новая линия"
   },
   "menuContentHeaderDateNewLineDescription": {
-    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+    "message": "Перевести на новую строку и отделить от других элементов заголовка."
   },
   "menuContentHeaderSearchShow": {
     "message": "Показать поиск"
@@ -1080,7 +1080,7 @@
     "message": "Новая линия"
   },
   "menuContentHeaderSearchNewLineDescription": {
-    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+    "message": "Перевести на новую строку и отделить от других элементов заголовка."
   },
   "menuContentHeaderSearchEngineSelectedLabel": {
     "message": "Поисковый движок"
@@ -1146,7 +1146,7 @@
     "message": "Показывать тень при наведении на закладку"
   },
   "menuContentBookmarkGeneralShadowShowDescription": {
-    "message": "Эффекты могут быть не видны, если для параметра «Тень темы установлено значение 0»."
+    "message": "Эффекты могут быть не видны, если для параметра «Тень темы» установлено значение 0."
   },
   "menuContentBookmarkGeneralHoverScaleShow": {
     "message": "Расти при наведении на закладку"
@@ -1275,7 +1275,7 @@
     "message": "Новая линия"
   },
   "menuContentToolbarLocationNewLineDescription": {
-    "message": "Перейдите к новой строке и отделитесь от других элементов заголовка."
+    "message": "Перевести на новую строку и отделить от других элементов заголовка."
   },
   "menuContentToolbarLocationNewLineHelperPara1": {
     "message": "Доступно только в том случае, если панель инструментов расположена внутри заголовка."
@@ -1416,7 +1416,7 @@
     "message": "Поделитесь своими настройками с сообществом."
   },
   "menuContentAppLink1": {
-    "message": "Найдено на Reddit /r/{appName}."
+    "message": "Найдено на Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "Этот проект с открытым исходным кодом."
@@ -1692,7 +1692,7 @@
     "message": "Показать фон"
   },
   "bookmarkFormBackgroundShowDescription": {
-    "message": "Отобразите фон изображения или видео на этой плитке закладки."
+    "message": "Отобразите фоновое изображение или видео на этой плитке закладки."
   },
   "bookmarkFormBackgroundTypeImage": {
     "message": "Изображение"
@@ -1737,7 +1737,7 @@
     "message": "Высокая плитка"
   },
   "bookmarkFormShapeTallDescription": {
-    "message": "Сделайте закладку для плитки, чтобы она занимала два ряда."
+    "message": "Отметьте плитку закладкой, чтобы она занимала два ряда."
   },
   "bookmarkFormGroupDestinationExisting": {
     "message": "Существующая группа"

@@ -28,6 +28,7 @@ message.language.list = () => {
 
   return [
     { id: 'system', name: message.get('menuContentLanguageSystem') }, // automatic
+    { name: '–', disabled: true },
     { id: 'bn', name: 'বাংলা' }, // Bengali
     { id: 'de', name: 'Deutsch' }, // German
     { id: 'en_GB', name: 'English (Great Britain)' }, // English (Great Britain)

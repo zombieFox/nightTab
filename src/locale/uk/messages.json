@@ -198,13 +198,13 @@
     "message": "Світлий режим"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Автоматичний"
+    "message": "Використовуйте мову системи"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "Дотримуйтесь системного режиму Світлий або Темний."
   },
   "menuContentThemeColorShadeHelperPara1": {
-    "message": "Фон, закладки та модали використовують відтінки зліва."
+    "message": "Фон, закладки та модали використовують тіні зліва."
   },
   "menuContentThemeColorShadeHelperPara2": {
     "message": "Елементи тексту та форми використовують відтінки справа."
@@ -219,7 +219,7 @@
     "message": "Насичення"
   },
   "menuContentThemeColorContrastLabel": {
-    "message": "Діапазон контрастності"
+    "message": "Діапазон контрасту"
   },
   "menuContentThemeColorContrastLeft": {
     "message": "Контрастний початок"
@@ -294,7 +294,7 @@
     "message": "Акцентний колір"
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "Випадковий колір акценту при завантаженні\/оновленні"
+    "message": "Випадковий колір акценту при завантаженні/оновленні"
   },
   "menuContentThemeAccentRandomStyleAny": {
     "message": "Будь-який"
@@ -324,7 +324,7 @@
     "message": "Змінити кроки"
   },
   "menuContentThemeAccentCycleAlert": {
-    "message": "Будьте обережні, оскільки швидко змінний відтінок Accent може спричинити проблеми з продуктивністю."
+    "message": "Будьте обережні, оскільки швидка зміна відтінку Accent може спричинити проблеми з продуктивністю."
   },
   "menuContentThemeAccentCycleHelperPara1": {
     "message": "Автоматична зміна відтінку акценту не працюватиме, якщо колір акценту є сірим або чорним."
@@ -489,7 +489,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "menuContentThemeBackgroundImageUrlHelperPara1": {
     "message": "Додайте кілька URL-адрес, розділених пробілами або в нових рядках, щоб отримати випадкове фонове зображення під час завантаження."
@@ -498,10 +498,10 @@
     "message": "Unsplash можна використовувати для випадкових зображень, наприклад:"
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
-    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?ніч, день, небо"
+    "message": "https://source.unsplash.com/random/1920x1080/?ніч, день, небо"
   },
   "menuContentThemeBackgroundImageUrlHelperPara4": {
-    "message": "Змініть параметри після ...\/random\/, щоб отримати додаткові параметри. Час завантаження може відрізнятися."
+    "message": "Змініть параметри після .../random/, щоб отримати додаткові параметри. Час завантаження може відрізнятися."
   },
   "menuContentThemeBackgroundImageBlur": {
     "message": "Розмиття"
@@ -540,7 +540,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
     "message": "Фонове відео підтримує лише пряму URL-адресу відеофайлу. Підтримує формати MP4 і WebM."
@@ -783,7 +783,7 @@
     "message": "URL-адреса значка Favicon"
   },
   "menuContentLayoutPageFaviconPlaceholder": {
-    "message": "https:\/\/www.example.com\/favicon.svg"
+    "message": "https://www.example.com/favicon.svg"
   },
   "menuContentLayoutPageFaviconHelperPara1": {
     "message": "Підтримується не всіма браузерами."
@@ -840,19 +840,19 @@
     "message": "Нова лінія"
   },
   "menuContentHeaderGreetingNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
   },
   "menuContentHeaderGreetingTypeLabel": {
     "message": "Формулювання"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Добрий ранок...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Здрастуйте...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Привіт...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "Жодного"
@@ -867,7 +867,7 @@
     "message": "Використовуйте власне привітання."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "За замовчуванням значення \"Доброго ранку...\", якщо не заповнено."
+    "message": "За замовчуванням значення \"Good morning...\", якщо не заповнено."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "Персональний текст привітання"
@@ -879,7 +879,7 @@
     "message": "Ім'я"
   },
   "menuContentHeaderGreetingNamePlaceholder": {
-    "message": "Псевдонім, псевдонім або ім'я супергероя"
+    "message": "Псевдонім, псевдонім або ім’я супергероя"
   },
   "menuContentHeaderTransitionalShowLabel": {
     "message": "Показати перехідні слова"
@@ -891,10 +891,10 @@
     "message": "Формулювання"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"Час і дата\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"Його\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "Розмір"
@@ -903,7 +903,7 @@
     "message": "Нова лінія"
   },
   "menuContentHeaderTransitionalNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
   },
   "menuContentHeaderClockHourShow": {
     "message": "Показати години"
@@ -954,7 +954,7 @@
     "message": "Нова лінія"
   },
   "menuContentHeaderClockNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
   },
   "menuContentHeaderDateDayShow": {
     "message": "День шоу"
@@ -1032,16 +1032,16 @@
     "message": "Символ-роздільник"
   },
   "menuContentHeaderDateSeparatorPlaceholder": {
-    "message": "\/"
+    "message": "/"
   },
   "menuContentHeaderDateFormatLabel": {
     "message": "Формат"
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "Дата \/ місяць"
+    "message": "Дата / місяць"
   },
   "menuContentHeaderDateFormatMonthDate": {
-    "message": "Місяць \/ число"
+    "message": "Місяць / число"
   },
   "menuContentHeaderDateSize": {
     "message": "Розмір"
@@ -1050,7 +1050,7 @@
     "message": "Нова лінія"
   },
   "menuContentHeaderDateNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
   },
   "menuContentHeaderSearchShow": {
     "message": "Показати пошук"
@@ -1080,7 +1080,7 @@
     "message": "Нова лінія"
   },
   "menuContentHeaderSearchNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
   },
   "menuContentHeaderSearchEngineSelectedLabel": {
     "message": "Пошукова система"
@@ -1098,10 +1098,10 @@
     "message": "URL"
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
-    "message": "https:\/\/"
+    "message": "https://"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "Введіть веб-адресу з параметрами пошуку, наприклад: \"https:\/\/vimeo.com\/search?q=\""
+    "message": "Введіть веб-адресу з параметрами пошуку, наприклад: \"https://vimeo.com/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
     "message": "{appName} додасть пошуковий термін, введений у вікно пошуку в кінці URL-адреси вище."
@@ -1116,7 +1116,7 @@
     "message": "Встановлює атрибут імені в полі введення Пошук."
   },
   "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
-    "message": "Це визначає ім’я, яке передається пошуковій системі під час подання. Якщо не впевнені, залиште пустим."
+    "message": "Це визначає ім’я, яке передається пошуковій системі під час подання. Якщо ви не впевнені, залиште пустим."
   },
   "menuContentHeaderSearchEngineTextJustifyLabel": {
     "message": "Шукати вирівнювання тексту"
@@ -1170,7 +1170,7 @@
     "message": "Короткі та широкі плитки закладки."
   },
   "menuContentBookmarkOrientationTop": {
-    "message": "Верхній"
+    "message": "Топ"
   },
   "menuContentBookmarkOrientationBottom": {
     "message": "Нижня частина"
@@ -1203,16 +1203,16 @@
     "message": "Замовлення деталей групи"
   },
   "menuContentGroupAlignmentOrderHeaderBodyLabel": {
-    "message": "Деталі групи, потім Закладки"
+    "message": "Деталі групи, а потім Закладки"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Упорядкуйте, щоб область відомостей про групу відображалася перед областю закладок."
+    "message": "Упорядкуйте, щоб область відомостей про групу з’явилася перед областю закладок."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "Закладки, а потім деталі групи"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Упорядкуйте, щоб область закладок з’являлася перед областю відомостей про групу."
+    "message": "Упорядкуйте, щоб область закладок з’явилася перед зоною відомостей про групу."
   },
   "menuContentGroupNameSize": {
     "message": "Розмір імені"
@@ -1275,7 +1275,7 @@
     "message": "Нова лінія"
   },
   "menuContentToolbarLocationNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремити від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
   },
   "menuContentToolbarLocationNewLineHelperPara1": {
     "message": "Доступно лише тоді, коли панель інструментів розташована всередині заголовка."
@@ -1332,7 +1332,7 @@
     "message": "Завантажте резервну копію своїх закладок і налаштувань {appName}"
   },
   "menuContentDataBackupHelperPara2": {
-    "message": "Цей файл пізніше можна імпортувати на той чи інший пристрій."
+    "message": "Цей файл пізніше можна імпортувати на цьому чи іншому пристрої."
   },
   "menuContentDataClearAll": {
     "message": "Очистити всі дані"
@@ -1416,7 +1416,7 @@
     "message": "Поділіться своїми налаштуваннями зі спільнотою."
   },
   "menuContentAppLink1": {
-    "message": "Знайдено на Reddit \/r\/ {appName} ."
+    "message": "Знайдено на Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "Цей проект є відкритим вихідним кодом."
@@ -1425,7 +1425,7 @@
     "message": "Знайдено на GitHub."
   },
   "menuContentAppLink3": {
-    "message": "Загальна публічна ліцензія GNU версії 3.0."
+    "message": "GNU General Public License v3.0."
   },
   "bookmarkTileControlLeft": {
     "message": "Перемістити цю закладку ліворуч"
@@ -1503,7 +1503,7 @@
     "message": "Адреса"
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "Обов'язково використовуйте повну URL-адресу та включіть \"https:\/\/...\""
+    "message": "Обов'язково використовуйте повну URL-адресу та включіть \"https://...\""
   },
   "bookmarkFormSectionPositionHeading": {
     "message": "Позиція"
@@ -1527,7 +1527,7 @@
     "message": "URL"
   },
   "bookmarkFormUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/"
+    "message": "https://www.example.com/"
   },
   "bookmarkFormDisplayAlignmentLabel": {
     "message": "Вирівнювання візуального елемента та імені"
@@ -1635,7 +1635,7 @@
     "message": "Зображення закладки"
   },
   "bookmarkFormDisplayVisualImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormDisplayVisualShadowSize": {
     "message": "Візуальна тінь"
@@ -1707,7 +1707,7 @@
     "message": "URL-адреса фонового зображення"
   },
   "bookmarkFormBackgroundImagePlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormBackgroundImageHelperPara1": {
     "message": "Фонове зображення підтримує лише пряму URL-адресу файлу зображення."
@@ -1716,7 +1716,7 @@
     "message": "URL-адреса фонового відео"
   },
   "bookmarkFormBackgroundVideoPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
     "message": "Фонове відео підтримує лише пряму URL-адресу відеофайлу. Підтримує формати MP4 і WebM."
@@ -1764,7 +1764,7 @@
     "message": "Застосуйте «Показати візуальний елемент» і «Показати назву» до інших закладок"
   },
   "bookmarkFormPropagateVisualDescriptionPara1": {
-    "message": "Текст літери, значка, зображення та імені не буде опубліковано."
+    "message": "Текст букви, значка, зображення та імені не буде опубліковано."
   },
   "bookmarkFormPropagateVisualDescriptionPara2": {
     "message": "Корисно для приховування візуальних елементів або імен у всіх закладках."
@@ -1776,7 +1776,7 @@
     "message": "Після збереження застосуйте наведений вище макет до всіх інших закладок."
   },
   "bookmarkFormPropagateLayoutDescriptionPara2": {
-    "message": "До всіх буде застосовано лише візуальний розмір та розмір назви, вирівнювання, порядок, положення та жолоб."
+    "message": "До всіх буде застосовано лише візуальний розмір і розмір назви, вирівнювання, порядок, положення та жолоб."
   },
   "bookmarkFormPropagateThemeLabel": {
     "message": "Застосуйте тему до інших закладок"
@@ -1860,7 +1860,7 @@
     "message": "Панель інструментів"
   },
   "groupFormSectionToolbarDescription": {
-    "message": "Відображати елементи керування, щоб відкрити всі або показати\/приховати закладки в цій групі."
+    "message": "Показати елементи керування, щоб відкрити всі або показати/приховати закладки в цій групі."
   },
   "groupFormSectionOrderingHeading": {
     "message": "Замовлення"
@@ -1896,7 +1896,7 @@
     "message": "Позиція"
   },
   "themeCustomTileControlEdit": {
-    "message": "Редагувати цю збережену спеціальну тему"
+    "message": "Відредагуйте цю збережену спеціальну тему"
   },
   "themeCustomTileControlRemove": {
     "message": "Видаліть цю збережену спеціальну тему"

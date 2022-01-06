@@ -198,10 +198,10 @@
     "message": "Lichtmodus"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Automatisch"
+    "message": "Systemsprache verwenden"
   },
   "menuContentThemeStyleAutomaticDescription": {
-    "message": "Folgen Sie dem System Hell- oder Dunkelmodus."
+    "message": "Folgen Sie dem Hell- oder Dunkelmodus des Systems."
   },
   "menuContentThemeColorShadeHelperPara1": {
     "message": "Hintergründe, Lesezeichen und Modals verwenden Schattierungen von links."
@@ -546,7 +546,7 @@
     "message": "Hintergrundvideo unterstützt nur eine direkte URL zu einer Videodatei. Unterstützt MP4- und WebM-Format."
   },
   "menuContentThemeBackgroundVideoUrlHelperPara2": {
-    "message": "Fügen Sie mehr als eine URL hinzu, die durch Leerzeichen oder in neuen Zeilen getrennt ist, um beim Laden ein zufälliges Hintergrundvideo zu erhalten."
+    "message": "Fügen Sie mehr als eine URL hinzu, die durch Leerzeichen oder in neuen Zeilen getrennt ist, um ein zufälliges Hintergrundvideo beim Laden zu erhalten."
   },
   "menuContentThemeBackgroundVideoBlur": {
     "message": "Verwischen"
@@ -846,13 +846,13 @@
     "message": "Wortlaut"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Guten Morgen...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Hallo...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Hallo...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "Keiner"
@@ -867,7 +867,7 @@
     "message": "Verwenden Sie Ihren eigenen Gruß."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "Standardmäßig ist \"Guten Morgen...\" leer, wenn es leer gelassen wird."
+    "message": "Standardmäßig ist \"Good morning...\" leer, wenn es leer gelassen wird."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "Benutzerdefinierter Grußtext"
@@ -891,10 +891,10 @@
     "message": "Wortlaut"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"Uhrzeit und Datum sind\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"Es ist\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "Größe"
@@ -1206,13 +1206,13 @@
     "message": "Gruppendetails, dann Lesezeichen"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Ordnen Sie an, dass der Bereich Gruppendetails vor dem Bereich Lesezeichen angezeigt wird."
+    "message": "Ordnen Sie an, dass der Gruppendetailbereich vor dem Lesezeichenbereich angezeigt wird."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "Lesezeichen, dann Gruppendetails"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Ordnen Sie an, dass der Bereich Lesezeichen vor dem Bereich Gruppendetails angezeigt wird."
+    "message": "Ordnen Sie an, dass der Lesezeichenbereich vor dem Gruppendetailbereich angezeigt wird."
   },
   "menuContentGroupNameSize": {
     "message": "Namensgröße"
@@ -1362,7 +1362,7 @@
     "message": "Sie haben eine Übersetzung gefunden, die nicht stimmt?"
   },
   "menuContentLanguageAlertLink": {
-    "message": "Helfen Sie mit, {appName} zu übersetzen"
+    "message": "Helfen Sie mit, {appName}"
   },
   "menuContentSupportPageApplyToAll": {
     "message": "Anwenden von Lesezeicheneinstellungen auf alle"
@@ -1416,7 +1416,7 @@
     "message": "Teilen Sie Ihr Setup mit der Community."
   },
   "menuContentAppLink1": {
-    "message": "Gefunden auf Reddit /r/{appName}."
+    "message": "Gefunden auf Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "Dieses Projekt ist Open Source."
@@ -1992,7 +1992,7 @@
     "message": "Einstellungen"
   },
   "dataFormSetupIncludeDescription": {
-    "message": "Dazu gehören Layoutgröße und -position, Größe des Kopfzeilenbereichs, Größe des Lesezeichenbereichs und andere Benutzereinstellungen."
+    "message": "Dazu gehören Layoutgröße und -position, Größe des Kopfbereichs, Größe des Lesezeichenbereichs und andere Benutzereinstellungen."
   },
   "dataRestoreHeading": {
     "message": "Wiederherstellung aus einem {appName}"

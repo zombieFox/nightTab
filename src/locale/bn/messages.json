@@ -198,7 +198,7 @@
     "message": "হালকা মোড"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "স্বয়ংক্রিয়"
+    "message": "সিস্টেম ভাষা ব্যবহার করুন"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "সিস্টেম লাইট বা ডার্ক মোড অনুসরণ করুন।"
@@ -294,7 +294,7 @@
     "message": "অ্যাকসেন্ট রঙ"
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "লোড\/রিফ্রেশে র্যান্ডম অ্যাকসেন্ট রঙ"
+    "message": "লোড/রিফ্রেশে র্যান্ডম অ্যাকসেন্ট রঙ"
   },
   "menuContentThemeAccentRandomStyleAny": {
     "message": "যে কোন"
@@ -327,7 +327,7 @@
     "message": "দ্রুত পরিবর্তনশীল অ্যাকসেন্ট বর্ণ কর্মক্ষমতা সমস্যা সৃষ্টি করতে পারে বলে সতর্কতা অবলম্বন করুন।"
   },
   "menuContentThemeAccentCycleHelperPara1": {
-    "message": "স্বয়ংক্রিয় পরিবর্তন অ্যাকসেন্ট রঙটি ধূসর বা কালো হলে কাজ করবে না।"
+    "message": "অ্যাকসেন্ট রঙটি ধূসর বা কালো হলে স্বয়ংক্রিয়ভাবে অ্যাকসেন্ট রঙ কাজ করবে না।"
   },
   "menuContentThemeFontDisplayNameLabel": {
     "message": "ফন্ট প্রদর্শন করুন"
@@ -489,19 +489,19 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "menuContentThemeBackgroundImageUrlHelperPara1": {
-    "message": "লোডের সময় র্যান্ডম ব্যাকগ্রাউন্ড ইমেজের জন্য স্পেস বা নতুন লাইনে আলাদা করে একাধিক URL যোগ করুন।"
+    "message": "লোডের সময় র্যান্ডম ব্যাকগ্রাউন্ড ইমেজের জন্য স্পেস বা নতুন লাইনে একাধিক ইউআরএল যোগ করুন।"
   },
   "menuContentThemeBackgroundImageUrlHelperPara2": {
     "message": "আনস্প্ল্যাশ এলোমেলো চিত্রগুলির জন্য ব্যবহার করা যেতে পারে, যেমন:"
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
-    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?night,day,sky"
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
   },
   "menuContentThemeBackgroundImageUrlHelperPara4": {
-    "message": "আরো বিকল্পের জন্য ...\/random\/ এর পরে পরামিতি পরিবর্তন করুন। লোড করার সময় পরিবর্তিত হতে পারে।"
+    "message": "আরও বিকল্পের জন্য .../random/ এর পরে পরামিতি পরিবর্তন করুন। লোডিং সময় পরিবর্তিত হতে পারে."
   },
   "menuContentThemeBackgroundImageBlur": {
     "message": "ঝাপসা"
@@ -540,13 +540,13 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
     "message": "পটভূমি ভিডিও শুধুমাত্র একটি ভিডিও ফাইলের সরাসরি URL সমর্থন করে। MP4 এবং WebM ফর্ম্যাট সমর্থন করে।"
   },
   "menuContentThemeBackgroundVideoUrlHelperPara2": {
-    "message": "লোডের সময় র্যান্ডম ব্যাকগ্রাউন্ড ভিডিওর জন্য স্পেস বা নতুন লাইনে একাধিক ইউআরএল যোগ করুন।"
+    "message": "লোডের সময় একটি এলোমেলো ব্যাকগ্রাউন্ড ভিডিওর জন্য স্পেস বা নতুন লাইনে আলাদা করে একাধিক URL যোগ করুন।"
   },
   "menuContentThemeBackgroundVideoBlur": {
     "message": "ঝাপসা"
@@ -765,7 +765,7 @@
     "message": "হেডার তারপর বুকমার্ক"
   },
   "menuContentLayoutOrderHeaderBookmarkDescription": {
-    "message": "হেডার এলাকাটিকে বুকমার্ক এলাকার আগে উপস্থিত হওয়ার জন্য আদেশ করুন।"
+    "message": "হেডার এলাকাটিকে বুকমার্ক এলাকার আগে উপস্থিত হওয়ার নির্দেশ দিন।"
   },
   "menuContentLayoutOrderBookmarkHeaderLabel": {
     "message": "বুকমার্ক তারপর হেডার"
@@ -783,7 +783,7 @@
     "message": "ফেভিকন URL"
   },
   "menuContentLayoutPageFaviconPlaceholder": {
-    "message": "https:\/\/www.example.com\/favicon.svg"
+    "message": "https://www.example.com/favicon.svg"
   },
   "menuContentLayoutPageFaviconHelperPara1": {
     "message": "সব ব্রাউজার দ্বারা সমর্থিত নয়."
@@ -810,10 +810,10 @@
     "message": "ব্যাকগ্রাউন্ড ইমেজ বা ভিডিও আনব্লার করুন"
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
-    "message": "পৃষ্ঠার নীচে স্ক্রোল করলে পটভূমির ছবি বা ভিডিও অস্পষ্ট হয়ে যাবে।"
+    "message": "পৃষ্ঠার নীচে স্ক্রোল করা হলে পটভূমির ছবি বা ভিডিও অস্পষ্ট হয়ে যাবে।"
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
-    "message": "ছবি বা ভিডিও ব্লার থিম ব্যাকগ্রাউন্ডের অধীনে পাওয়া যাবে।"
+    "message": "থিম ব্যাকগ্রাউন্ডের অধীনে ছবি বা ভিডিও ব্লার পাওয়া যাবে।"
   },
   "menuContentHeaderAlignmentJustifyLabel": {
     "message": "হেডার আইটেম প্রান্তিককরণ"
@@ -846,13 +846,13 @@
     "message": "শব্দচয়ন"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"সুপ্রভাত...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"হ্যালো...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"ওহে...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "কোনোটিই নয়"
@@ -867,7 +867,7 @@
     "message": "আপনার নিজের অভিবাদন ব্যবহার করুন."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "ডিফল্ট হিসেবে \"শুভ সকাল...\" খালি থাকলে।"
+    "message": "ডিফল্ট হিসেবে \"Good morning...\" খালি থাকলে।"
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "কাস্টম অভিবাদন পাঠ্য"
@@ -891,10 +891,10 @@
     "message": "শব্দচয়ন"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"সময় এবং তারিখ হল\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"এটি\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "আকার"
@@ -1032,16 +1032,16 @@
     "message": "বিভাজক চরিত্র"
   },
   "menuContentHeaderDateSeparatorPlaceholder": {
-    "message": "\/"
+    "message": "/"
   },
   "menuContentHeaderDateFormatLabel": {
     "message": "বিন্যাস"
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "তারিখ\/মাস"
+    "message": "তারিখ/মাস"
   },
   "menuContentHeaderDateFormatMonthDate": {
-    "message": "মাস\/তারিখ"
+    "message": "মাস/তারিখ"
   },
   "menuContentHeaderDateSize": {
     "message": "আকার"
@@ -1098,10 +1098,10 @@
     "message": "URL"
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
-    "message": "https:\/\/"
+    "message": "https://"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "অনুসন্ধান পরামিতি সহ একটি ওয়েব ঠিকানা লিখুন, যেমন: \"https:\/\/vimeo.com\/search?q=\""
+    "message": "অনুসন্ধান পরামিতি সহ একটি ওয়েব ঠিকানা লিখুন, যেমন: \"https://vimeo.com/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
     "message": "{appName} উপরের URL-এর শেষে অনুসন্ধান বাক্সে প্রবেশ করা অনুসন্ধান শব্দটি যোগ করবে।"
@@ -1167,7 +1167,7 @@
     "message": "তালিকা"
   },
   "menuContentBookmarkStyleListDescription": {
-    "message": "ছোট এবং প্রশস্ত বুকমার্ক টাইলস।"
+    "message": "সংক্ষিপ্ত এবং প্রশস্ত বুকমার্ক টাইলস."
   },
   "menuContentBookmarkOrientationTop": {
     "message": "শীর্ষ"
@@ -1206,7 +1206,7 @@
     "message": "গ্রুপের বিবরণ তারপর বুকমার্ক"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "বুকমার্ক এলাকার আগে উপস্থিত হওয়ার জন্য গ্রুপের বিশদ এলাকাটি অর্ডার করুন।"
+    "message": "গ্রুপ বিশদ এলাকাটিকে বুকমার্ক এলাকার আগে উপস্থিত হওয়ার জন্য আদেশ দিন।"
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "বুকমার্ক তারপর গ্রুপ বিবরণ"
@@ -1296,7 +1296,7 @@
     "message": "নিচের ডানে"
   },
   "menuContentToolbarPositionHelper1Para1": {
-    "message": "টুলবারটিকে উইন্ডোর চারটি কোণে একটিতে রাখুন।"
+    "message": "টুলবারটি উইন্ডোর চার কোনায় একটিতে রাখুন।"
   },
   "menuContentToolbarPositionHelper2Para1": {
     "message": "টুলবার একটি কোণে অবস্থান করলেই উপলব্ধ।"
@@ -1332,7 +1332,7 @@
     "message": "{appName} বুকমার্ক এবং সেটিংসের একটি ব্যাকআপ ডাউনলোড করুন৷"
   },
   "menuContentDataBackupHelperPara2": {
-    "message": "এই ফাইলটি পরে এই বা অন্য ডিভাইসে আমদানি করা যেতে পারে।"
+    "message": "এই ফাইলটি পরে এই বা অন্য ডিভাইসে আমদানি করা যেতে পারে৷"
   },
   "menuContentDataClearAll": {
     "message": "সমস্ত ডেটা সাফ করুন"
@@ -1413,10 +1413,10 @@
     "message": "আমাকে একটা কফি কিনে দাও"
   },
   "menuContentAppPara1": {
-    "message": "সম্প্রদায়ের সাথে আপনার সেটআপ শেয়ার করুন."
+    "message": "সম্প্রদায়ের সাথে আপনার সেটআপ ভাগ করুন."
   },
   "menuContentAppLink1": {
-    "message": "Reddit \/r\/ {appName} পাওয়া গেছে।"
+    "message": "Reddit/r/{appName} পাওয়া গেছে।"
   },
   "menuContentAppPara2": {
     "message": "এই প্রকল্পটি ওপেন সোর্স।"
@@ -1503,7 +1503,7 @@
     "message": "ঠিকানা"
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "সম্পূর্ণ URL ব্যবহার করতে ভুলবেন না এবং \"https:\/\/...\" অন্তর্ভুক্ত করুন"
+    "message": "সম্পূর্ণ URL ব্যবহার করতে ভুলবেন না এবং \"https://...\" অন্তর্ভুক্ত করুন"
   },
   "bookmarkFormSectionPositionHeading": {
     "message": "অবস্থান"
@@ -1515,7 +1515,7 @@
     "message": "লেআউট"
   },
   "bookmarkFormSectionLayoutDescription": {
-    "message": "ভিজ্যুয়াল উপাদান এবং নামের অবস্থান, স্কেল এবং অভিযোজন পরিবর্তন করুন।"
+    "message": "ভিজ্যুয়াল এলিমেন্ট এবং নামের অবস্থান, স্কেল এবং অভিযোজন পরিবর্তন করুন।"
   },
   "bookmarkFormSectionThemeHeading": {
     "message": "থিম"
@@ -1527,7 +1527,7 @@
     "message": "URL"
   },
   "bookmarkFormUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/"
+    "message": "https://www.example.com/"
   },
   "bookmarkFormDisplayAlignmentLabel": {
     "message": "ভিজ্যুয়াল উপাদান এবং নাম প্রান্তিককরণ"
@@ -1635,7 +1635,7 @@
     "message": "বুকমার্ক ইমেজ"
   },
   "bookmarkFormDisplayVisualImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormDisplayVisualShadowSize": {
     "message": "চাক্ষুষ ছায়া"
@@ -1659,7 +1659,7 @@
     "message": "থিম অ্যাকসেন্ট"
   },
   "bookmarkFormAccentByThemeDescription": {
-    "message": "থিম দ্বারা সংজ্ঞায়িত অ্যাকসেন্ট ব্যবহার করুন।"
+    "message": "থিম দ্বারা সংজ্ঞায়িত অ্যাকসেন্ট ব্যবহার করুন."
   },
   "bookmarkFormAccentByCustomLabel": {
     "message": "কাস্টম অ্যাকসেন্ট"
@@ -1707,7 +1707,7 @@
     "message": "পটভূমি চিত্র URL"
   },
   "bookmarkFormBackgroundImagePlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormBackgroundImageHelperPara1": {
     "message": "ব্যাকগ্রাউন্ড ইমেজ শুধুমাত্র একটি ইমেজ ফাইলের সরাসরি URL সমর্থন করে।"
@@ -1716,7 +1716,7 @@
     "message": "পটভূমি ভিডিও URL"
   },
   "bookmarkFormBackgroundVideoPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
     "message": "পটভূমি ভিডিও শুধুমাত্র একটি ভিডিও ফাইলের সরাসরি URL সমর্থন করে। MP4 এবং WebM ফর্ম্যাট সমর্থন করে।"
@@ -1737,7 +1737,7 @@
     "message": "লম্বা টালি"
   },
   "bookmarkFormShapeTallDescription": {
-    "message": "দুটি সারি জুড়ে স্প্যান করার জন্য বুকমার্ক টাইল।"
+    "message": "বুকমার্ক টাইল দুটি সারি জুড়ে স্প্যান করুন."
   },
   "bookmarkFormGroupDestinationExisting": {
     "message": "বিদ্যমান গ্রুপ"
@@ -1770,7 +1770,7 @@
     "message": "সমস্ত বুকমার্কে ভিজ্যুয়াল উপাদান বা নাম লুকানোর জন্য দরকারী।"
   },
   "bookmarkFormPropagateLayoutLabel": {
-    "message": "অন্যান্য বুকমার্কে লেআউট প্রয়োগ করুন"
+    "message": "অন্যান্য বুকমার্কগুলিতে লেআউট প্রয়োগ করুন"
   },
   "bookmarkFormPropagateLayoutDescriptionPara1": {
     "message": "সংরক্ষিত হলে, উপরের লেআউটটি অন্য সব বুকমার্কে প্রয়োগ করুন।"
@@ -1797,7 +1797,7 @@
     "message": "এই দলটিকে উপরে নিয়ে যান"
   },
   "groupAreaControlSort": {
-    "message": "পুনঃক্রম করতে গ্রুপ টেনে আনুন"
+    "message": "পুনরায় সাজাতে গ্রুপ টেনে আনুন"
   },
   "groupAreaControlDown": {
     "message": "এই গ্রুপটি নিচে সরান"
@@ -1860,7 +1860,7 @@
     "message": "টুলবার"
   },
   "groupFormSectionToolbarDescription": {
-    "message": "এই গ্রুপে বুকমার্কগুলি দেখাতে\/লুকাতে সমস্ত খুলতে নিয়ন্ত্রণ প্রদর্শন করুন।"
+    "message": "এই গ্রুপে বুকমার্কগুলি দেখাতে/লুকাতে সমস্ত খুলতে নিয়ন্ত্রণ প্রদর্শন করুন।"
   },
   "groupFormSectionOrderingHeading": {
     "message": "অর্ডার দিচ্ছে"

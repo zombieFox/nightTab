@@ -198,7 +198,7 @@
     "message": "લાઇટ મોડ"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "સ્વયંસંચાલિત"
+    "message": "સિસ્ટમ ભાષાનો ઉપયોગ કરો"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "સિસ્ટમ લાઇટ અથવા ડાર્ક મોડને અનુસરો."
@@ -294,7 +294,7 @@
     "message": "ઉચ્ચાર રંગ"
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "લોડ\/તાજું કરવા પર રેન્ડમ એક્સેન્ટ રંગ"
+    "message": "લોડ/તાજું કરવા પર રેન્ડમ એક્સેન્ટ રંગ"
   },
   "menuContentThemeAccentRandomStyleAny": {
     "message": "કોઈપણ"
@@ -429,7 +429,7 @@
     "message": "શોધ બાર, બુકમાર્ક્સ, જૂથ નિયંત્રણો અને ટૂલબારની અસ્પષ્ટતાને બદલો."
   },
   "menuContentThemeOpacityGeneralHelperPara2": {
-    "message": "વ્યક્તિગત બુકમાર્ક્સને સંપાદિત કરતી વખતે અસ્પષ્ટતાને પણ બદલી શકાય છે."
+    "message": "વ્યક્તિગત બુકમાર્ક્સને સંપાદિત કરતી વખતે અસ્પષ્ટતા પણ બદલી શકાય છે."
   },
   "menuContentThemeOpacityToolbar": {
     "message": "ટૂલબાર"
@@ -489,19 +489,19 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "menuContentThemeBackgroundImageUrlHelperPara1": {
     "message": "લોડ પર રેન્ડમ બેકગ્રાઉન્ડ ઈમેજ માટે જગ્યાઓ દ્વારા અથવા નવી લાઈનો પર એક કરતાં વધુ URL ઉમેરો."
   },
   "menuContentThemeBackgroundImageUrlHelperPara2": {
-    "message": "અનસ્પ્લેશનો ઉપયોગ રેન્ડમ ઈમેજો માટે થઈ શકે છે, દા.ત:"
+    "message": "અનસ્પ્લેશનો ઉપયોગ રેન્ડમ ઈમેજો માટે થઈ શકે છે, દા.ત."
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
-    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?night,day,sky"
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
   },
   "menuContentThemeBackgroundImageUrlHelperPara4": {
-    "message": "વધુ વિકલ્પો માટે ...\/રેન્ડમ\/ પછી પરિમાણો બદલો. લોડિંગ સમય અલગ અલગ હોઈ શકે છે."
+    "message": "વધુ વિકલ્પો માટે .../રેન્ડમ/ પછી પરિમાણો બદલો. લોડિંગ સમય અલગ અલગ હોઈ શકે છે."
   },
   "menuContentThemeBackgroundImageBlur": {
     "message": "અસ્પષ્ટતા"
@@ -540,7 +540,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
     "message": "પૃષ્ઠભૂમિ વિડિઓ ફક્ત વિડિઓ ફાઇલના સીધા URL ને સમર્થન આપે છે. MP4 અને WebM ફોર્મેટને સપોર્ટ કરે છે."
@@ -660,7 +660,7 @@
     "message": "દરેક બુકમાર્કમાં અનન્ય ઉચ્ચાર ઉમેરો"
   },
   "menuContentThemeBookmarkItemRainbowRemove": {
-    "message": "બધા એક્સેન્ટ ઓવરરાઇડ્સને દૂર કરો"
+    "message": "બધા ઉચ્ચાર ઓવરરાઇડ્સને દૂર કરો"
   },
   "menuContentThemeBookmarkItemRainbowHelperPara1": {
     "message": "વ્યક્તિગત બુકમાર્ક્સને સંપાદિત કરતી વખતે બુકમાર્ક કસ્ટમ એક્સેન્ટ પણ બદલી શકાય છે."
@@ -687,7 +687,7 @@
     "message": "અધિકાર"
   },
   "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
-    "message": "જો હેડર એરિયા સંપૂર્ણ પહોળાઈનો હોય તો અસરો કદાચ દેખાશે નહીં."
+    "message": "જો હેડર વિસ્તાર સંપૂર્ણ પહોળાઈનો હોય તો પ્રભાવો દેખાઈ શકશે નહીં."
   },
   "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
     "message": "માત્ર ત્યારે જ ઉપલબ્ધ છે જ્યારે લેઆઉટ દિશા ઊભી હોય અને હેડર આઇટમ્સ બતાવવામાં આવે."
@@ -771,7 +771,7 @@
     "message": "બુકમાર્ક્સ પછી હેડર"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "બુકમાર્ક્સ વિસ્તારને હેડર વિસ્તારની સામે આવવાનો આદેશ આપો."
+    "message": "બુકમાર્ક વિસ્તારને હેડર વિસ્તારની સામે આવવાનો આદેશ આપો."
   },
   "menuContentLayoutPageTitleLabel": {
     "message": "શીર્ષક"
@@ -783,7 +783,7 @@
     "message": "ફેવિકોન URL"
   },
   "menuContentLayoutPageFaviconPlaceholder": {
-    "message": "https:\/\/www.example.com\/favicon.svg"
+    "message": "https://www.example.com/favicon.svg"
   },
   "menuContentLayoutPageFaviconHelperPara1": {
     "message": "બધા બ્રાઉઝર્સ દ્વારા સપોર્ટેડ નથી."
@@ -846,13 +846,13 @@
     "message": "શબ્દરચના"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"સુપ્રભાત...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"નમસ્તે...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"હાય...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "કોઈ નહિ"
@@ -867,7 +867,7 @@
     "message": "તમારી પોતાની શુભેચ્છાનો ઉપયોગ કરો."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "જો ખાલી છોડવામાં આવે તો \"ગુડ મોર્નિંગ...\" માટે ડિફોલ્ટ."
+    "message": "જો ખાલી છોડવામાં આવે તો \"Good morning...\" માટે ડિફોલ્ટ."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "કસ્ટમ શુભેચ્છા ટેક્સ્ટ"
@@ -891,10 +891,10 @@
     "message": "શબ્દરચના"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"સમય અને તારીખ છે\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"તે\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "કદ"
@@ -1032,16 +1032,16 @@
     "message": "વિભાજક પાત્ર"
   },
   "menuContentHeaderDateSeparatorPlaceholder": {
-    "message": "\/"
+    "message": "/"
   },
   "menuContentHeaderDateFormatLabel": {
     "message": "ફોર્મેટ"
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "તારીખ \/ મહિનો"
+    "message": "તારીખ / મહિનો"
   },
   "menuContentHeaderDateFormatMonthDate": {
-    "message": "મહિનો\/તારીખ"
+    "message": "મહિનો/તારીખ"
   },
   "menuContentHeaderDateSize": {
     "message": "કદ"
@@ -1098,10 +1098,10 @@
     "message": "URL"
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
-    "message": "https:\/\/"
+    "message": "https://"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "શોધ પરિમાણો સાથે વેબ સરનામું દાખલ કરો, દા.ત: \"https:\/\/vimeo.com\/search?q=\""
+    "message": "શોધ પરિમાણો સાથે વેબ સરનામું દાખલ કરો, દા.ત: \"https://vimeo.com/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
     "message": "{appName} ઉપરના URL ના અંતે શોધ બોક્સમાં દાખલ કરેલ શોધ શબ્દ ઉમેરશે."
@@ -1113,10 +1113,10 @@
     "message": "q"
   },
   "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
-    "message": "શોધ ઇનપુટ ફીલ્ડ પર નામ વિશેષતા સુયોજિત કરે છે."
+    "message": "શોધ ઇનપુટ ફીલ્ડ પર નામ વિશેષતા સેટ કરે છે."
   },
   "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
-    "message": "સબમિટ કરતી વખતે આ શોધ એન્જિનને પસાર કરાયેલ નામને વ્યાખ્યાયિત કરે છે. જો ખાતરી ન હોય તો ખાલી છોડી દો."
+    "message": "સબમિટ કરતી વખતે આ શોધ એંજીનને પસાર કરાયેલ નામને વ્યાખ્યાયિત કરે છે. જો ખાતરી ન હોય તો ખાલી છોડી દો."
   },
   "menuContentHeaderSearchEngineTextJustifyLabel": {
     "message": "ટેક્સ્ટ સંરેખણ શોધો"
@@ -1206,13 +1206,13 @@
     "message": "જૂથ વિગતો પછી બુકમાર્ક્સ"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "ગ્રૂપ વિગતો વિસ્તારને બુકમાર્ક્સ વિસ્તારની પહેલાં હાજર થવાનો આદેશ આપો."
+    "message": "ગ્રૂપ ડિટેલ એરિયાને બુકમાર્ક્સ એરિયા સમક્ષ હાજર થવાનો ઓર્ડર આપો."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "બુકમાર્ક્સ પછી જૂથ વિગતો"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "બુકમાર્ક્સ વિસ્તારને ગ્રુપ વિગતો વિસ્તાર સમક્ષ હાજર થવાનો આદેશ આપો."
+    "message": "બુકમાર્ક વિસ્તારને ગ્રૂપ ડિટેલ એરિયા સમક્ષ હાજર થવાનો આદેશ આપો."
   },
   "menuContentGroupNameSize": {
     "message": "નામનું કદ"
@@ -1416,7 +1416,7 @@
     "message": "સમુદાય સાથે તમારું સેટઅપ શેર કરો."
   },
   "menuContentAppLink1": {
-    "message": "Reddit \/r\/ {appName} ."
+    "message": "Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "આ પ્રોજેક્ટ ઓપન સોર્સ છે."
@@ -1425,7 +1425,7 @@
     "message": "GitHub પર મળી."
   },
   "menuContentAppLink3": {
-    "message": "GNU જનરલ પબ્લિક લાઇસન્સ v3.0."
+    "message": "GNU જનરલ પબ્લિક લાયસન્સ v3.0."
   },
   "bookmarkTileControlLeft": {
     "message": "આ બુકમાર્કને ડાબે ખસેડો"
@@ -1503,7 +1503,7 @@
     "message": "સરનામું"
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "સંપૂર્ણ URL નો ઉપયોગ કરવાની ખાતરી કરો અને \"https:\/\/...\" શામેલ કરો."
+    "message": "સંપૂર્ણ URL નો ઉપયોગ કરવાની ખાતરી કરો અને \"https://...\" શામેલ કરો."
   },
   "bookmarkFormSectionPositionHeading": {
     "message": "પદ"
@@ -1527,7 +1527,7 @@
     "message": "URL"
   },
   "bookmarkFormUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/"
+    "message": "https://www.example.com/"
   },
   "bookmarkFormDisplayAlignmentLabel": {
     "message": "વિઝ્યુઅલ એલિમેન્ટ અને નામ સંરેખણ"
@@ -1569,7 +1569,7 @@
     "message": "આડું"
   },
   "bookmarkFormDisplayDirectionHorizontalDescription": {
-    "message": "વિઝ્યુઅલ એલિમેન્ટ અને નામને બાજુમાં ગોઠવો."
+    "message": "વિઝ્યુઅલ એલિમેન્ટ અને નામ સાથે સાથે ગોઠવો."
   },
   "bookmarkFormDisplayOrderVisualNameLabel": {
     "message": "વિઝ્યુઅલ તત્વ પછી નામ"
@@ -1635,7 +1635,7 @@
     "message": "બુકમાર્ક છબી"
   },
   "bookmarkFormDisplayVisualImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormDisplayVisualShadowSize": {
     "message": "વિઝ્યુઅલ શેડો"
@@ -1707,7 +1707,7 @@
     "message": "પૃષ્ઠભૂમિ છબી URL"
   },
   "bookmarkFormBackgroundImagePlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormBackgroundImageHelperPara1": {
     "message": "પૃષ્ઠભૂમિ ઇમેજ માત્ર ઇમેજ ફાઇલના સીધા URL ને સપોર્ટ કરે છે."
@@ -1716,10 +1716,10 @@
     "message": "પૃષ્ઠભૂમિ વિડિઓ URL"
   },
   "bookmarkFormBackgroundVideoPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
-    "message": "પૃષ્ઠભૂમિ વિડિઓ ફક્ત વિડિઓ ફાઇલના સીધા URL ને સમર્થન આપે છે. MP4 અને WebM ફોર્મેટને સપોર્ટ કરે છે."
+    "message": "પૃષ્ઠભૂમિ વિડિઓ ફક્ત વિડિઓ ફાઇલના સીધા URL ને સપોર્ટ કરે છે. MP4 અને WebM ફોર્મેટને સપોર્ટ કરે છે."
   },
   "bookmarkFormBackgroundVideoHelperPara2": {
     "message": "YouTube પૃષ્ઠ URL નો ઉપયોગ કરી શકાતો નથી."
@@ -1731,7 +1731,7 @@
     "message": "પહોળી ટાઇલ"
   },
   "bookmarkFormShapeWideDescription": {
-    "message": "બુકમાર્ક ટાઇલને બે કૉલમમાં ફેલાવો."
+    "message": "બુકમાર્ક ટાઇલને બે કૉલમ સુધી ફેલાવો."
   },
   "bookmarkFormShapeTallLabel": {
     "message": "ઊંચી ટાઇલ"
@@ -1776,7 +1776,7 @@
     "message": "જ્યારે સાચવવામાં આવે, ત્યારે ઉપરોક્ત લેઆઉટને અન્ય તમામ બુકમાર્ક્સ પર લાગુ કરો."
   },
   "bookmarkFormPropagateLayoutDescriptionPara2": {
-    "message": "ફક્ત વિઝ્યુઅલ અને નામનું કદ, સંરેખણ, ઓર્ડર, સ્થિતિ અને ગટર બધા પર લાગુ થશે."
+    "message": "ફક્ત વિઝ્યુઅલ અને નામનું કદ, સંરેખણ, ઓર્ડર, સ્થિતિ અને ગટર બધાને લાગુ કરવામાં આવશે."
   },
   "bookmarkFormPropagateThemeLabel": {
     "message": "અન્ય બુકમાર્ક્સ પર થીમ લાગુ કરો"
@@ -1860,7 +1860,7 @@
     "message": "ટૂલબાર"
   },
   "groupFormSectionToolbarDescription": {
-    "message": "આ ગ્રૂપમાં બધા ખોલવા અથવા બુકમાર્ક્સ બતાવવા\/છુપાવવા માટે નિયંત્રણો દર્શાવો."
+    "message": "આ ગ્રૂપમાં બધા ખોલવા અથવા બુકમાર્ક્સ બતાવવા/છુપાવવા માટે નિયંત્રણો દર્શાવો."
   },
   "groupFormSectionOrderingHeading": {
     "message": "ઓર્ડર કરી રહ્યા છે"

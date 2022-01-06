@@ -342,7 +342,7 @@
     "message": "Find a Google Font"
   },
   "menuContentThemeFontDisplayNameHelperPara2": {
-    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Fredoka One\" or \"Kanit\"."
+    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, e.g.: enter \"Fredoka One\" or \"Kanit\"."
   },
   "menuContentThemeFontDisplayNameHelperPara3": {
     "message": "Clear the field to use the default font \"Fjalla One\"."
@@ -381,7 +381,7 @@
     "message": "Find a Google Font"
   },
   "menuContentThemeFontUiNameHelperPara2": {
-    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Roboto\", \"Source Sans Pro\" or \"Noto Sans\"."
+    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, e.g.: enter \"Roboto\", \"Source Sans Pro\" or \"Noto Sans\"."
   },
   "menuContentThemeFontUiNameHelperPara3": {
     "message": "Clear the field to use the default font \"Open Sans\"."
@@ -495,7 +495,7 @@
     "message": "Add more than one URL separated by spaces or on new lines for a random background image on load."
   },
   "menuContentThemeBackgroundImageUrlHelperPara2": {
-    "message": "Unsplash can be used for random images, eg:"
+    "message": "Unsplash can be used for random images, e.g.:"
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
     "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
@@ -507,7 +507,7 @@
     "message": "Blur"
   },
   "menuContentThemeBackgroundImageGrayscale": {
-    "message": "Grayscale"
+    "message": "Greyscale"
   },
   "menuContentThemeBackgroundImageScale": {
     "message": "Scale"
@@ -552,7 +552,7 @@
     "message": "Blur"
   },
   "menuContentThemeBackgroundVideoGrayscale": {
-    "message": "Grayscale"
+    "message": "Greyscale"
   },
   "menuContentThemeBackgroundVideoScale": {
     "message": "Scale"
@@ -771,7 +771,7 @@
     "message": "Bookmarks then Header"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Order the Bookmarks area to appear before the Header area."
+    "message": "Order the Bookmark area to appear before the Header area."
   },
   "menuContentLayoutPageTitleLabel": {
     "message": "Title"
@@ -840,7 +840,7 @@
     "message": "New line"
   },
   "menuContentHeaderGreetingNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentHeaderGreetingTypeLabel": {
     "message": "Wording"
@@ -903,7 +903,7 @@
     "message": "New line"
   },
   "menuContentHeaderTransitionalNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentHeaderClockHourShow": {
     "message": "Show hours"
@@ -954,7 +954,7 @@
     "message": "New line"
   },
   "menuContentHeaderClockNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentHeaderDateDayShow": {
     "message": "Show Day"
@@ -1050,7 +1050,7 @@
     "message": "New line"
   },
   "menuContentHeaderDateNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentHeaderSearchShow": {
     "message": "Show Search"
@@ -1080,7 +1080,7 @@
     "message": "New line"
   },
   "menuContentHeaderSearchNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentHeaderSearchEngineSelectedLabel": {
     "message": "Search engine"
@@ -1101,7 +1101,7 @@
     "message": "https://"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "Enter a web address with the search parameters, eg: \"https://vimeo.com/search?q=\""
+    "message": "Enter a web address with the search parameters, e.g.: \"https://vimeo.com/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
     "message": "{appName} will add the search term entered into the Search box at the end of the above URL."
@@ -1206,13 +1206,13 @@
     "message": "Group details then Bookmarks"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Order the Group details area to appear before the Bookmarks area."
+    "message": "Order the Group detail area to appear before the Bookmarks area."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "Bookmarks then Group details"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Order the Bookmarks area to appear before the Group details area."
+    "message": "Order the Bookmark area to appear before the Group detail area."
   },
   "menuContentGroupNameSize": {
     "message": "Name size"
@@ -1275,7 +1275,7 @@
     "message": "New line"
   },
   "menuContentToolbarLocationNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentToolbarLocationNewLineHelperPara1": {
     "message": "Only available when the Toolbar is positioned inside the Header."
@@ -1332,7 +1332,7 @@
     "message": "Download a backup of your {appName} Bookmarks and Settings."
   },
   "menuContentDataBackupHelperPara2": {
-    "message": "This file can later be imported on this or another deivce."
+    "message": "This file can later be imported on this or another device."
   },
   "menuContentDataClearAll": {
     "message": "Clear all data"
@@ -1416,7 +1416,7 @@
     "message": "Share your setup with the community."
   },
   "menuContentAppLink1": {
-    "message": "Found on Reddit /r/{appName}."
+    "message": "Found on Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "This project is open source."
@@ -1425,7 +1425,7 @@
     "message": "Found on GitHub."
   },
   "menuContentAppLink3": {
-    "message": "GNU General Public License v3.0."
+    "message": "GNU General Public Licence v3.0."
   },
   "bookmarkTileControlLeft": {
     "message": "Move this bookmark left"
@@ -2007,7 +2007,7 @@
     "message": "Clear all {appName} data?"
   },
   "dataClearAllContentPara1": {
-    "message": "Are you sure you want to clear all {appName} Bookmarks and Settings? {appName} will be restore to the default state."
+    "message": "Are you sure you want to clear all {appName} Bookmarks and Settings? {appName} will be restored to the default state."
   },
   "dataClearAllContentPara2": {
     "message": "This can not be undone."
@@ -2022,7 +2022,7 @@
     "message": "Clear {appName} data except bookmarks?"
   },
   "dataClearPartialContentPara1": {
-    "message": "Are you sure you want to clear all {appName} Settings? {appName} will be restore to the default state but your Bookmarks and Groups will remain."
+    "message": "Are you sure you want to clear all {appName} Settings? {appName} will be restored to the default state but your Bookmarks and Groups will remain."
   },
   "dataClearPartialContentPara2": {
     "message": "This can not be undone."

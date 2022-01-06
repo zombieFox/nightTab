@@ -198,7 +198,7 @@
     "message": "Mode cahaya"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Otomatis"
+    "message": "Gunakan bahasa sistem"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "Ikuti sistem mode Terang atau Gelap."
@@ -294,7 +294,7 @@
     "message": "Warna aksen"
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "Warna Aksen Acak saat memuat\/menyegarkan"
+    "message": "Warna Aksen Acak saat memuat/menyegarkan"
   },
   "menuContentThemeAccentRandomStyleAny": {
     "message": "Setiap"
@@ -489,7 +489,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "menuContentThemeBackgroundImageUrlHelperPara1": {
     "message": "Tambahkan lebih dari satu URL yang dipisahkan oleh spasi atau pada baris baru untuk gambar latar acak saat dimuat."
@@ -498,10 +498,10 @@
     "message": "Unsplash dapat digunakan untuk gambar acak, misalnya:"
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
-    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?malam,siang,langit"
+    "message": "https://source.unsplash.com/random/1920x1080/?malam,siang,langit"
   },
   "menuContentThemeBackgroundImageUrlHelperPara4": {
-    "message": "Ubah parameter setelah ...\/random\/ untuk opsi lainnya. Waktu pemuatan dapat bervariasi."
+    "message": "Ubah parameter setelah .../random/ untuk opsi lainnya. Waktu pemuatan dapat bervariasi."
   },
   "menuContentThemeBackgroundImageBlur": {
     "message": "Mengaburkan"
@@ -540,7 +540,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
     "message": "Video latar belakang hanya mendukung URL langsung ke file video. Mendukung format MP4 dan WebM."
@@ -663,7 +663,7 @@
     "message": "Hapus semua penggantian aksen"
   },
   "menuContentThemeBookmarkItemRainbowHelperPara1": {
-    "message": "Aksen kustom bookmark juga dapat diubah saat mengedit masing-masing Bookmark."
+    "message": "Aksen kustom Bookmark juga dapat diubah saat mengedit masing-masing Bookmark."
   },
   "menuContentLayoutScalingSize": {
     "message": "Ukuran global"
@@ -711,7 +711,7 @@
     "message": "Efek mungkin tidak terlihat jika Area Bookmark lebar penuh."
   },
   "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
-    "message": "Hanya tersedia ketika Layout Direction adalah Vertikal dan item Header ditampilkan."
+    "message": "Hanya tersedia saat Arah Tata Letak Vertikal dan item Header ditampilkan."
   },
   "menuContentLayoutPadding": {
     "message": "Ruang di sekitar Area Header dan Bookmark"
@@ -771,7 +771,7 @@
     "message": "Bookmark lalu Header"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Perintahkan area Bookmark agar muncul sebelum area Header."
+    "message": "Perintahkan area Bookmark untuk muncul sebelum area Header."
   },
   "menuContentLayoutPageTitleLabel": {
     "message": "Judul"
@@ -783,7 +783,7 @@
     "message": "URL favorit"
   },
   "menuContentLayoutPageFaviconPlaceholder": {
-    "message": "https:\/\/www.example.com\/favicon.svg"
+    "message": "https://www.example.com/favicon.svg"
   },
   "menuContentLayoutPageFaviconHelperPara1": {
     "message": "Tidak didukung oleh semua browser."
@@ -846,13 +846,13 @@
     "message": "Susunan kata"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Selamat pagi...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Halo...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Hai...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "Tidak ada"
@@ -867,7 +867,7 @@
     "message": "Gunakan salam Anda sendiri."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "Defaultnya adalah \"Selamat pagi...\" jika dibiarkan kosong."
+    "message": "Defaultnya adalah \"Good morning...\" jika dibiarkan kosong."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "Teks ucapan khusus"
@@ -891,10 +891,10 @@
     "message": "Susunan kata"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"Waktu dan tanggalnya adalah\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"Nya\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "Ukuran"
@@ -936,7 +936,7 @@
     "message": "Tampilkan pemisah"
   },
   "menuContentHeaderClockSeparatorLabel": {
-    "message": "karakter pemisah"
+    "message": "Karakter pemisah"
   },
   "menuContentHeaderClockSeparatorPlaceholder": {
     "message": ":"
@@ -945,7 +945,7 @@
     "message": "24 jam"
   },
   "menuContentHeaderClockMeridiem": {
-    "message": "AM \/ PM"
+    "message": "AM / PM"
   },
   "menuContentHeaderClockSize": {
     "message": "Ukuran"
@@ -1029,19 +1029,19 @@
     "message": "Tampilkan pemisah"
   },
   "menuContentHeaderDateSeparatorLabel": {
-    "message": "Karakter pemisah"
+    "message": "karakter pemisah"
   },
   "menuContentHeaderDateSeparatorPlaceholder": {
-    "message": "\/"
+    "message": "/"
   },
   "menuContentHeaderDateFormatLabel": {
     "message": "Format"
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "Tanggal \/ Bulan"
+    "message": "Tanggal / Bulan"
   },
   "menuContentHeaderDateFormatMonthDate": {
-    "message": "Bulan \/ Tanggal"
+    "message": "Bulan / Tanggal"
   },
   "menuContentHeaderDateSize": {
     "message": "Ukuran"
@@ -1098,10 +1098,10 @@
     "message": "URL"
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
-    "message": "https:\/\/"
+    "message": "https://"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "Masukkan alamat web dengan parameter pencarian, misalnya: \"https:\/\/vimeo.com\/search?q=\""
+    "message": "Masukkan alamat web dengan parameter pencarian, misalnya: \"https://vimeo.com/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
     "message": "{appName} akan menambahkan istilah penelusuran yang dimasukkan ke dalam kotak Penelusuran di akhir URL di atas."
@@ -1149,7 +1149,7 @@
     "message": "Efek mungkin tidak terlihat jika Theme Shadow diatur ke 0."
   },
   "menuContentBookmarkGeneralHoverScaleShow": {
-    "message": "Tumbuh di Bookmark hover"
+    "message": "Tumbuh di Bookmark, arahkan kursor"
   },
   "menuContentBookmarkGeneralNewTab": {
     "message": "Buka Bookmark di tab baru"
@@ -1206,13 +1206,13 @@
     "message": "Detail grup lalu Bookmark"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Perintahkan area Detail grup untuk muncul sebelum area Bookmark."
+    "message": "Perintahkan area detail Grup untuk muncul sebelum area Bookmark."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "Bookmark lalu Detail grup"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Pesan area Bookmark agar muncul sebelum area Detail grup."
+    "message": "Perintahkan area Bookmark untuk muncul sebelum area detail Grup."
   },
   "menuContentGroupNameSize": {
     "message": "Nama ukuran"
@@ -1332,7 +1332,7 @@
     "message": "Unduh cadangan Bookmark dan Setelan {appName}"
   },
   "menuContentDataBackupHelperPara2": {
-    "message": "File ini nantinya dapat diimpor ke perangkat ini atau perangkat lain."
+    "message": "File ini nantinya dapat diimpor pada perangkat ini atau perangkat lain."
   },
   "menuContentDataClearAll": {
     "message": "Hapus semua data"
@@ -1416,7 +1416,7 @@
     "message": "Bagikan penyiapan Anda dengan komunitas."
   },
   "menuContentAppLink1": {
-    "message": "Ditemukan di Reddit \/r\/ {appName} ."
+    "message": "Ditemukan di Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "Proyek ini adalah sumber terbuka."
@@ -1503,7 +1503,7 @@
     "message": "Alamat"
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "Pastikan untuk menggunakan URL lengkap dan sertakan \"https:\/\/...\""
+    "message": "Pastikan untuk menggunakan URL lengkap dan sertakan \"https://...\""
   },
   "bookmarkFormSectionPositionHeading": {
     "message": "Posisi"
@@ -1527,7 +1527,7 @@
     "message": "URL"
   },
   "bookmarkFormUrlPlaceholder": {
-    "message": "https:\/\/www.contoh.com\/"
+    "message": "https://www.contoh.com/"
   },
   "bookmarkFormDisplayAlignmentLabel": {
     "message": "Elemen Visual dan Penyelarasan Nama"
@@ -1635,7 +1635,7 @@
     "message": "Tandai gambar"
   },
   "bookmarkFormDisplayVisualImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormDisplayVisualShadowSize": {
     "message": "Bayangan visual"
@@ -1692,7 +1692,7 @@
     "message": "Tampilkan latar belakang"
   },
   "bookmarkFormBackgroundShowDescription": {
-    "message": "Tampilkan Latar Belakang Gambar atau video pada ubin Bookmark ini."
+    "message": "Tampilkan Background Gambar atau video pada ubin Bookmark ini."
   },
   "bookmarkFormBackgroundTypeImage": {
     "message": "Gambar"
@@ -1707,7 +1707,7 @@
     "message": "URL gambar latar belakang"
   },
   "bookmarkFormBackgroundImagePlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormBackgroundImageHelperPara1": {
     "message": "Gambar latar belakang hanya mendukung URL langsung ke file gambar."
@@ -1716,7 +1716,7 @@
     "message": "URL video latar belakang"
   },
   "bookmarkFormBackgroundVideoPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
     "message": "Video latar belakang hanya mendukung URL langsung ke file video. Mendukung format MP4 dan WebM."
@@ -1860,7 +1860,7 @@
     "message": "Bilah Alat"
   },
   "groupFormSectionToolbarDescription": {
-    "message": "Tampilkan kontrol untuk membuka semua atau menampilkan\/menyembunyikan Bookmark di Grup ini."
+    "message": "Tampilkan kontrol untuk membuka semua atau menampilkan/menyembunyikan Bookmark di Grup ini."
   },
   "groupFormSectionOrderingHeading": {
     "message": "Memerintah"
@@ -2022,7 +2022,7 @@
     "message": "Hapus {appName} kecuali bookmark?"
   },
   "dataClearPartialContentPara1": {
-    "message": "Yakin ingin menghapus semua Setelan {appName} {appName} akan dikembalikan ke status default tetapi Bookmark dan Grup Anda akan tetap ada."
+    "message": "Yakin ingin menghapus semua Setelan {appName} {appName} akan dipulihkan ke status default tetapi Bookmark dan Grup Anda akan tetap ada."
   },
   "dataClearPartialContentPara2": {
     "message": "Ini tidak dapat dibatalkan."

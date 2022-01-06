@@ -198,7 +198,7 @@
     "message": "Mod cahaya"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Automatik"
+    "message": "Gunakan bahasa sistem"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "Ikuti mod Cahaya atau Gelap sistem."
@@ -294,7 +294,7 @@
     "message": "Warna aksen"
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "Warna Aksen Rawak semasa dimuatkan\/segar semula"
+    "message": "Warna Aksen Rawak semasa dimuatkan/segar semula"
   },
   "menuContentThemeAccentRandomStyleAny": {
     "message": "mana-mana"
@@ -393,7 +393,7 @@
     "message": "Cahaya"
   },
   "menuContentThemeFontUiWeightRegular": {
-    "message": "Biasa"
+    "message": "biasa"
   },
   "menuContentThemeFontUiWeightBold": {
     "message": "berani"
@@ -489,7 +489,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "menuContentThemeBackgroundImageUrlHelperPara1": {
     "message": "Tambahkan lebih daripada satu URL yang dipisahkan oleh ruang atau pada baris baharu untuk imej latar belakang rawak semasa dimuatkan."
@@ -498,10 +498,10 @@
     "message": "Unsplash boleh digunakan untuk imej rawak, cth:"
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
-    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?malam,siang,langit"
+    "message": "https://source.unsplash.com/random/1920x1080/?malam,siang,langit"
   },
   "menuContentThemeBackgroundImageUrlHelperPara4": {
-    "message": "Tukar parameter selepas ...\/random\/ untuk lebih banyak pilihan. Masa memuatkan mungkin berbeza-beza."
+    "message": "Tukar parameter selepas .../random/ untuk lebih banyak pilihan. Masa memuatkan mungkin berbeza-beza."
   },
   "menuContentThemeBackgroundImageBlur": {
     "message": "Kabur"
@@ -540,7 +540,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
     "message": "Video latar belakang hanya menyokong URL terus ke fail video. Menyokong format MP4 dan WebM."
@@ -765,7 +765,7 @@
     "message": "Pengepala kemudian Penanda Halaman"
   },
   "menuContentLayoutOrderHeaderBookmarkDescription": {
-    "message": "Perintahkan kawasan Pengepala untuk muncul sebelum kawasan Penanda Halaman."
+    "message": "Perintahkan kawasan Pengepala muncul sebelum kawasan Penanda Halaman."
   },
   "menuContentLayoutOrderBookmarkHeaderLabel": {
     "message": "Penanda halaman kemudian Pengepala"
@@ -783,7 +783,7 @@
     "message": "URL Favicon"
   },
   "menuContentLayoutPageFaviconPlaceholder": {
-    "message": "https:\/\/www.example.com\/favicon.svg"
+    "message": "https://www.example.com/favicon.svg"
   },
   "menuContentLayoutPageFaviconHelperPara1": {
     "message": "Tidak disokong oleh semua pelayar."
@@ -846,13 +846,13 @@
     "message": "Perkataan"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Selamat Pagi...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
     "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Hai...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "tiada"
@@ -867,7 +867,7 @@
     "message": "Gunakan ucapan anda sendiri."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "Lalai kepada \"Selamat pagi...\" jika dibiarkan kosong."
+    "message": "Lalai kepada \"Good morning...\" jika dibiarkan kosong."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "Teks ucapan tersuai"
@@ -891,10 +891,10 @@
     "message": "Perkataan"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"Masa dan tarikh ialah\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"Ia\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "Saiz"
@@ -1032,16 +1032,16 @@
     "message": "Watak pemisah"
   },
   "menuContentHeaderDateSeparatorPlaceholder": {
-    "message": "\/"
+    "message": "/"
   },
   "menuContentHeaderDateFormatLabel": {
     "message": "Format"
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "Tarikh \/ Bulan"
+    "message": "Tarikh / Bulan"
   },
   "menuContentHeaderDateFormatMonthDate": {
-    "message": "Bulan \/ Tarikh"
+    "message": "Bulan / Tarikh"
   },
   "menuContentHeaderDateSize": {
     "message": "Saiz"
@@ -1098,10 +1098,10 @@
     "message": "URL"
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
-    "message": "https:\/\/"
+    "message": "https://"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "Masukkan alamat web dengan parameter carian, cth: \"https:\/\/vimeo.com\/search?q=\""
+    "message": "Masukkan alamat web dengan parameter carian, cth: \"https://vimeo.com/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
     "message": "{appName} akan menambah istilah carian yang dimasukkan ke dalam kotak Carian di hujung URL di atas."
@@ -1206,7 +1206,7 @@
     "message": "Butiran kumpulan kemudian Penanda Halaman"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Perintahkan kawasan butiran Kumpulan untuk dipaparkan sebelum kawasan Penanda Halaman."
+    "message": "Perintahkan kawasan butiran Kumpulan untuk muncul sebelum kawasan Penanda Halaman."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "Penanda halaman kemudian butiran Kumpulan"
@@ -1416,7 +1416,7 @@
     "message": "Kongsi persediaan anda dengan komuniti."
   },
   "menuContentAppLink1": {
-    "message": "Ditemui di Reddit \/r\/ {appName} ."
+    "message": "Ditemui di Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "Projek ini adalah sumber terbuka."
@@ -1503,7 +1503,7 @@
     "message": "Alamat"
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "Pastikan anda menggunakan URL penuh dan sertakan \"https:\/\/...\""
+    "message": "Pastikan anda menggunakan URL penuh dan sertakan \"https://...\""
   },
   "bookmarkFormSectionPositionHeading": {
     "message": "kedudukan"
@@ -1527,7 +1527,7 @@
     "message": "URL"
   },
   "bookmarkFormUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/"
+    "message": "https://www.example.com/"
   },
   "bookmarkFormDisplayAlignmentLabel": {
     "message": "Penjajaran Elemen Visual dan Nama"
@@ -1635,7 +1635,7 @@
     "message": "Imej penanda halaman"
   },
   "bookmarkFormDisplayVisualImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormDisplayVisualShadowSize": {
     "message": "Bayangan visual"
@@ -1707,7 +1707,7 @@
     "message": "URL imej latar belakang"
   },
   "bookmarkFormBackgroundImagePlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormBackgroundImageHelperPara1": {
     "message": "Imej latar belakang hanya menyokong URL terus ke fail imej."
@@ -1716,7 +1716,7 @@
     "message": "URL video latar belakang"
   },
   "bookmarkFormBackgroundVideoPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
     "message": "Video latar belakang hanya menyokong URL terus ke fail video. Menyokong format MP4 dan WebM."
@@ -1860,7 +1860,7 @@
     "message": "Bar alat"
   },
   "groupFormSectionToolbarDescription": {
-    "message": "Paparkan kawalan untuk membuka semua atau menunjukkan\/menyembunyikan Penanda Halaman dalam Kumpulan ini."
+    "message": "Paparkan kawalan untuk membuka semua atau menunjukkan/menyembunyikan Penanda Halaman dalam Kumpulan ini."
   },
   "groupFormSectionOrderingHeading": {
     "message": "Memesan"

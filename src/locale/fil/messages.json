@@ -84,7 +84,7 @@
     "message": "Kanal"
   },
   "menuNavLayoutSubNavAlignment": {
-    "message": "Pag-align"
+    "message": "Paghahanay"
   },
   "menuNavLayoutSubNavPage": {
     "message": "Pahina"
@@ -198,7 +198,7 @@
     "message": "Light mode"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Awtomatiko"
+    "message": "Gumamit ng wika ng system"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "Sundin ang system Light o Dark mode."
@@ -294,7 +294,7 @@
     "message": "Kulay ng accent"
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "Random na kulay ng Accent sa pag-load\/pag-refresh"
+    "message": "Random na kulay ng Accent sa pag-load/pag-refresh"
   },
   "menuContentThemeAccentRandomStyleAny": {
     "message": "Anuman"
@@ -489,7 +489,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "menuContentThemeBackgroundImageUrlHelperPara1": {
     "message": "Magdagdag ng higit sa isang URL na pinaghihiwalay ng mga puwang o sa mga bagong linya para sa isang random na larawan sa background sa pag-load."
@@ -498,10 +498,10 @@
     "message": "Maaaring gamitin ang Unsplash para sa mga random na larawan, hal:"
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
-    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?gabi,araw,langit"
+    "message": "https://source.unsplash.com/random/1920x1080/?gabi,araw,langit"
   },
   "menuContentThemeBackgroundImageUrlHelperPara4": {
-    "message": "Baguhin ang mga parameter pagkatapos ng ...\/random\/ para sa higit pang mga opsyon. Maaaring mag-iba ang mga oras ng paglo-load."
+    "message": "Baguhin ang mga parameter pagkatapos ng .../random/ para sa higit pang mga opsyon. Maaaring mag-iba ang mga oras ng paglo-load."
   },
   "menuContentThemeBackgroundImageBlur": {
     "message": "Malabo"
@@ -540,7 +540,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
     "message": "Sinusuportahan lamang ng background na video ang isang direktang URL sa isang video file. Sinusuportahan ang MP4 at WebM na format."
@@ -771,7 +771,7 @@
     "message": "Mga bookmark pagkatapos ay Header"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "I-order ang lugar ng Mga Bookmark na lumitaw bago ang lugar ng Header."
+    "message": "I-order ang lugar ng Bookmark na lumitaw bago ang lugar ng Header."
   },
   "menuContentLayoutPageTitleLabel": {
     "message": "Pamagat"
@@ -783,7 +783,7 @@
     "message": "URL ng Favicon"
   },
   "menuContentLayoutPageFaviconPlaceholder": {
-    "message": "https:\/\/www.example.com\/favicon.svg"
+    "message": "https://www.example.com/favicon.svg"
   },
   "menuContentLayoutPageFaviconHelperPara1": {
     "message": "Hindi sinusuportahan ng lahat ng browser."
@@ -840,16 +840,16 @@
     "message": "Bagong linya"
   },
   "menuContentHeaderGreetingNewLineDescription": {
-    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+    "message": "Puwersa sa isang bagong linya at hiwalay sa iba pang item sa Header."
   },
   "menuContentHeaderGreetingTypeLabel": {
     "message": "Salita"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Magandang umaga...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Kamusta...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
     "message": "\"Hi...\""
@@ -867,7 +867,7 @@
     "message": "Gamitin ang iyong sariling pagbati."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "Default sa \"Magandang umaga...\" kung iwanang blangko."
+    "message": "Default sa \"Good morning...\" kung iwanang blangko."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "Pasadyang teksto ng pagbati"
@@ -891,10 +891,10 @@
     "message": "Salita"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"Ang oras at petsa ay\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"ito ay\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "Sukat"
@@ -903,7 +903,7 @@
     "message": "Bagong linya"
   },
   "menuContentHeaderTransitionalNewLineDescription": {
-    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+    "message": "Puwersa sa isang bagong linya at hiwalay sa iba pang item sa Header."
   },
   "menuContentHeaderClockHourShow": {
     "message": "Mga oras ng palabas"
@@ -945,7 +945,7 @@
     "message": "24 na oras"
   },
   "menuContentHeaderClockMeridiem": {
-    "message": "AM \/ PM"
+    "message": "AM / PM"
   },
   "menuContentHeaderClockSize": {
     "message": "Sukat"
@@ -954,7 +954,7 @@
     "message": "Bagong linya"
   },
   "menuContentHeaderClockNewLineDescription": {
-    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+    "message": "Puwersa sa isang bagong linya at hiwalay sa iba pang item sa Header."
   },
   "menuContentHeaderDateDayShow": {
     "message": "Araw ng Palabas"
@@ -1032,16 +1032,16 @@
     "message": "Karakter ng separator"
   },
   "menuContentHeaderDateSeparatorPlaceholder": {
-    "message": "\/"
+    "message": "/"
   },
   "menuContentHeaderDateFormatLabel": {
     "message": "Format"
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "Petsa \/ Buwan"
+    "message": "Petsa / Buwan"
   },
   "menuContentHeaderDateFormatMonthDate": {
-    "message": "Buwan \/ Petsa"
+    "message": "Buwan / Petsa"
   },
   "menuContentHeaderDateSize": {
     "message": "Sukat"
@@ -1050,7 +1050,7 @@
     "message": "Bagong linya"
   },
   "menuContentHeaderDateNewLineDescription": {
-    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+    "message": "Puwersa sa isang bagong linya at hiwalay sa iba pang item sa Header."
   },
   "menuContentHeaderSearchShow": {
     "message": "Ipakita ang Paghahanap"
@@ -1080,7 +1080,7 @@
     "message": "Bagong linya"
   },
   "menuContentHeaderSearchNewLineDescription": {
-    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+    "message": "Puwersa sa isang bagong linya at hiwalay sa iba pang item sa Header."
   },
   "menuContentHeaderSearchEngineSelectedLabel": {
     "message": "Search engine"
@@ -1098,10 +1098,10 @@
     "message": "URL"
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
-    "message": "https:\/\/"
+    "message": "https://"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "Maglagay ng web address na may mga parameter sa paghahanap, hal: \"https:\/\/vimeo.com\/search?q=\""
+    "message": "Maglagay ng web address na may mga parameter sa paghahanap, hal: \"https://vimeo.com/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
     "message": "{appName} ang termino para sa paghahanap na inilagay sa box para sa Paghahanap sa dulo ng URL sa itaas."
@@ -1206,13 +1206,13 @@
     "message": "Mga detalye ng pangkat pagkatapos ay Mga Bookmark"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "I-order ang lugar ng mga detalye ng Grupo na lumabas bago ang lugar ng Mga Bookmark."
+    "message": "I-order ang lugar ng detalye ng Grupo na lumitaw bago ang lugar ng Mga Bookmark."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "Mga bookmark pagkatapos ay Mga detalye ng pangkat"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "I-order ang lugar ng Mga Bookmark na lumitaw bago ang lugar ng mga detalye ng Grupo."
+    "message": "I-order ang Bookmark area na lumabas bago ang Group detail area."
   },
   "menuContentGroupNameSize": {
     "message": "Laki ng pangalan"
@@ -1275,7 +1275,7 @@
     "message": "Bagong linya"
   },
   "menuContentToolbarLocationNewLineDescription": {
-    "message": "Puwersa sa isang bagong linya at ihiwalay sa iba pang item sa Header."
+    "message": "Puwersa sa isang bagong linya at hiwalay sa iba pang item sa Header."
   },
   "menuContentToolbarLocationNewLineHelperPara1": {
     "message": "Available lang kapag nakaposisyon ang Toolbar sa loob ng Header."
@@ -1332,7 +1332,7 @@
     "message": "Mag-download ng backup ng iyong {appName} Bookmark at Setting."
   },
   "menuContentDataBackupHelperPara2": {
-    "message": "Ang file na ito ay maaaring ma-import sa ibang pagkakataon dito o sa isa pang deivce."
+    "message": "Maaaring ma-import ang file na ito sa ibang pagkakataon dito o sa ibang device."
   },
   "menuContentDataClearAll": {
     "message": "I-clear ang lahat ng data"
@@ -1416,7 +1416,7 @@
     "message": "Ibahagi ang iyong setup sa komunidad."
   },
   "menuContentAppLink1": {
-    "message": "Natagpuan sa Reddit \/r\/ {appName} ."
+    "message": "Natagpuan sa Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "Ang proyektong ito ay open source."
@@ -1503,7 +1503,7 @@
     "message": "Address"
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "Tiyaking gamitin ang buong URL at isama ang \"https:\/\/...\""
+    "message": "Tiyaking gamitin ang buong URL at isama ang \"https://...\""
   },
   "bookmarkFormSectionPositionHeading": {
     "message": "Posisyon"
@@ -1527,7 +1527,7 @@
     "message": "URL"
   },
   "bookmarkFormUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/"
+    "message": "https://www.example.com/"
   },
   "bookmarkFormDisplayAlignmentLabel": {
     "message": "Pag-align ng Visual Element at Pangalan"
@@ -1635,7 +1635,7 @@
     "message": "I-bookmark ang larawan"
   },
   "bookmarkFormDisplayVisualImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormDisplayVisualShadowSize": {
     "message": "Biswal na anino"
@@ -1707,7 +1707,7 @@
     "message": "URL ng larawan sa background"
   },
   "bookmarkFormBackgroundImagePlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormBackgroundImageHelperPara1": {
     "message": "Sinusuportahan lamang ng larawan sa background ang isang direktang URL sa isang file ng larawan."
@@ -1716,7 +1716,7 @@
     "message": "URL ng background ng video"
   },
   "bookmarkFormBackgroundVideoPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
     "message": "Sinusuportahan lamang ng background na video ang isang direktang URL sa isang video file. Sinusuportahan ang MP4 at WebM na format."
@@ -1860,7 +1860,7 @@
     "message": "Toolbar"
   },
   "groupFormSectionToolbarDescription": {
-    "message": "Ipakita ang mga kontrol upang buksan ang lahat o ipakita\/itago ang Mga Bookmark sa Pangkat na ito."
+    "message": "Ipakita ang mga kontrol upang buksan ang lahat o ipakita/itago ang Mga Bookmark sa Pangkat na ito."
   },
   "groupFormSectionOrderingHeading": {
     "message": "Pag-order"

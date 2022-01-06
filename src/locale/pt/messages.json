@@ -198,7 +198,7 @@
     "message": "Modo claro"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Automático"
+    "message": "Use a linguagem do sistema"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "Siga o modo claro ou escuro do sistema."
@@ -294,7 +294,7 @@
     "message": "Cor de destaque"
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "Cor de acento aleatório ao carregar \/ atualizar"
+    "message": "Cor de acento aleatório ao carregar / atualizar"
   },
   "menuContentThemeAccentRandomStyleAny": {
     "message": "Qualquer"
@@ -489,7 +489,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "menuContentThemeBackgroundImageUrlHelperPara1": {
     "message": "Adicione mais de um URL separado por espaços ou em novas linhas para uma imagem de plano de fundo aleatória no carregamento."
@@ -498,10 +498,10 @@
     "message": "O Unsplash pode ser usado para imagens aleatórias, por exemplo:"
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
-    "message": "https:\/\/source.unsplash.com\/random\/1920x1080\/?night,day,sky"
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
   },
   "menuContentThemeBackgroundImageUrlHelperPara4": {
-    "message": "Altere os parâmetros após ... \/ aleatório \/ para mais opções. Os tempos de carregamento podem variar."
+    "message": "Altere os parâmetros após ... / aleatório / para mais opções. Os tempos de carregamento podem variar."
   },
   "menuContentThemeBackgroundImageBlur": {
     "message": "Borrão"
@@ -540,7 +540,7 @@
     "message": "URL"
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
     "message": "O vídeo de fundo suporta apenas um URL direto para um arquivo de vídeo. Suporta formato MP4 e WebM."
@@ -771,7 +771,7 @@
     "message": "Marcadores e cabeçalho"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Ordene que a área de Marcadores apareça antes da área de Cabeçalho."
+    "message": "Ordene que a área do marcador apareça antes da área do cabeçalho."
   },
   "menuContentLayoutPageTitleLabel": {
     "message": "Título"
@@ -783,7 +783,7 @@
     "message": "URL do favicon"
   },
   "menuContentLayoutPageFaviconPlaceholder": {
-    "message": "https:\/\/www.example.com\/favicon.svg"
+    "message": "https://www.example.com/favicon.svg"
   },
   "menuContentLayoutPageFaviconHelperPara1": {
     "message": "Não é compatível com todos os navegadores."
@@ -810,7 +810,7 @@
     "message": "Desfocar imagem ou vídeo de fundo"
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
-    "message": "A imagem ou o vídeo de plano de fundo não serão borrados ao rolar para a parte inferior da página."
+    "message": "A imagem ou o vídeo de fundo não serão borrados ao rolar para a parte inferior da página."
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
     "message": "O desfoque de imagem ou vídeo pode ser encontrado em Fundo do tema."
@@ -846,13 +846,13 @@
     "message": "Redação"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Bom Dia...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Olá...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Oi...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "Nenhum"
@@ -867,7 +867,7 @@
     "message": "Use sua própria saudação."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "O padrão é \"Bom dia ...\" se deixado em branco."
+    "message": "O padrão é \"Good morning...\" se deixado em branco."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "Texto de saudação personalizado"
@@ -891,10 +891,10 @@
     "message": "Redação"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"A hora e a data são\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"Seu\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "Tamanho"
@@ -1032,13 +1032,13 @@
     "message": "Caractere separador"
   },
   "menuContentHeaderDateSeparatorPlaceholder": {
-    "message": "\/"
+    "message": "/"
   },
   "menuContentHeaderDateFormatLabel": {
     "message": "Formato"
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "Data \/ Mês"
+    "message": "Data / Mês"
   },
   "menuContentHeaderDateFormatMonthDate": {
     "message": "Data do mês"
@@ -1098,10 +1098,10 @@
     "message": "URL"
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
-    "message": "https: \/\/"
+    "message": "https://"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "Insira um endereço da web com os parâmetros de pesquisa, por exemplo: \"https:\/\/vimeo.com\/search?q=\""
+    "message": "Insira um endereço da web com os parâmetros de pesquisa, por exemplo: \"https://vimeo.com/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
     "message": "{appName} adicionará o termo de pesquisa inserido na caixa Pesquisar no final do URL acima."
@@ -1206,13 +1206,13 @@
     "message": "Detalhes do grupo e favoritos"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Ordene que a área de detalhes do grupo apareça antes da área de marcadores."
+    "message": "Ordene que a área de detalhes do Grupo apareça antes da área de Marcadores."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "Favoritos e detalhes do grupo"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Ordene que a área de Marcadores apareça antes da área de detalhes do Grupo."
+    "message": "Ordene que a área do marcador apareça antes da área de detalhes do grupo."
   },
   "menuContentGroupNameSize": {
     "message": "Tamanho do nome"
@@ -1416,7 +1416,7 @@
     "message": "Compartilhe sua configuração com a comunidade."
   },
   "menuContentAppLink1": {
-    "message": "Encontrado no Reddit \/ r \/ {appName} ."
+    "message": "Encontrado no Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "Este projeto é de código aberto."
@@ -1503,7 +1503,7 @@
     "message": "Endereço"
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "Certifique-se de usar o URL completo e incluir \"https: \/\/ ...\""
+    "message": "Certifique-se de usar o URL completo e incluir \"https://...\""
   },
   "bookmarkFormSectionPositionHeading": {
     "message": "Posição"
@@ -1515,7 +1515,7 @@
     "message": "Layout"
   },
   "bookmarkFormSectionLayoutDescription": {
-    "message": "Altere a posição, a escala e a orientação do elemento visual e do nome."
+    "message": "Altere a posição, escala e orientação do elemento visual e do nome."
   },
   "bookmarkFormSectionThemeHeading": {
     "message": "Tema"
@@ -1527,7 +1527,7 @@
     "message": "URL"
   },
   "bookmarkFormUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/"
+    "message": "https://www.example.com/"
   },
   "bookmarkFormDisplayAlignmentLabel": {
     "message": "Alinhamento de elemento visual e nome"
@@ -1635,7 +1635,7 @@
     "message": "Imagem favorita"
   },
   "bookmarkFormDisplayVisualImageUrlPlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormDisplayVisualShadowSize": {
     "message": "Sombra visual"
@@ -1707,7 +1707,7 @@
     "message": "URL da imagem de fundo"
   },
   "bookmarkFormBackgroundImagePlaceholder": {
-    "message": "https:\/\/www.example.com\/image.jpg"
+    "message": "https://www.example.com/image.jpg"
   },
   "bookmarkFormBackgroundImageHelperPara1": {
     "message": "A imagem de fundo suporta apenas um URL direto para um arquivo de imagem."
@@ -1716,7 +1716,7 @@
     "message": "URL do vídeo de fundo"
   },
   "bookmarkFormBackgroundVideoPlaceholder": {
-    "message": "https:\/\/www.example.com\/video.mp4"
+    "message": "https://www.example.com/video.mp4"
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
     "message": "O vídeo de fundo suporta apenas um URL direto para um arquivo de vídeo. Suporta formato MP4 e WebM."
@@ -1860,7 +1860,7 @@
     "message": "Barra de ferramentas"
   },
   "groupFormSectionToolbarDescription": {
-    "message": "Exibe os controles para abrir todos ou mostrar \/ ocultar os favoritos neste grupo."
+    "message": "Exibe os controles para abrir todos ou mostrar / ocultar os favoritos neste grupo."
   },
   "groupFormSectionOrderingHeading": {
     "message": "Encomenda"

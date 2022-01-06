@@ -198,7 +198,7 @@
     "message": "Mode lumière"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Automatique"
+    "message": "Utiliser la langue du système"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "Suivez le système en mode clair ou sombre."
@@ -771,7 +771,7 @@
     "message": "Signets puis en-tête"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Ordonnez que la zone Signets apparaisse avant la zone En-tête."
+    "message": "Ordonnez que la zone de signet apparaisse avant la zone d'en-tête."
   },
   "menuContentLayoutPageTitleLabel": {
     "message": "Titre"
@@ -846,13 +846,13 @@
     "message": "Formulation"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Bonjour...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Bonjour...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Salut...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "Rien"
@@ -867,7 +867,7 @@
     "message": "Utilisez votre propre salutation."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "La valeur par défaut est \"Bonjour...\" si elle est laissée vide."
+    "message": "La valeur par défaut est \"Good morning...\" si elle est laissée vide."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "Texte d'accueil personnalisé"
@@ -891,10 +891,10 @@
     "message": "Formulation"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"L'heure et la date sont\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"Son\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "Taille"
@@ -1206,13 +1206,13 @@
     "message": "Détails du groupe puis Signets"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Ordonnez que la zone Détails du groupe apparaisse avant la zone Signets."
+    "message": "Ordonnez que la zone de détail du groupe apparaisse avant la zone de signets."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "Signets puis Détails du groupe"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Faites en sorte que la zone Signets apparaisse avant la zone Détails du groupe."
+    "message": "Ordonnez que la zone de signet apparaisse avant la zone de détail du groupe."
   },
   "menuContentGroupNameSize": {
     "message": "Taille du nom"
@@ -1416,7 +1416,7 @@
     "message": "Partagez votre configuration avec la communauté."
   },
   "menuContentAppLink1": {
-    "message": "Trouvé sur Reddit /r/{appName}."
+    "message": "Trouvé sur Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "Ce projet est open source."
@@ -1926,7 +1926,7 @@
     "message": "Supprimer le thème personnalisé sans nom"
   },
   "themeCustomRemoveContent": {
-    "message": "Voulez-vous vraiment supprimer ce thème personnalisé enregistré ? Ça ne peut pas être annulé."
+    "message": "Voulez-vous vraiment supprimer ce thème personnalisé enregistré ? Ça ne peut pas être annulé."
   },
   "themeCustomRemoveSuccessText": {
     "message": "Sauvegarder"
@@ -1965,7 +1965,7 @@
     "message": "Ouvrir le menu des paramètres"
   },
   "dataFormDescription": {
-    "message": "Vous pouvez restaurer tout ou partie d'un fichier de sauvegarde. Les données suivantes seront restaurées :"
+    "message": "Vous pouvez restaurer tout ou partie d'un fichier de sauvegarde. Les données suivantes seront restaurées :"
   },
   "dataFormBookmarkIncludeLabel": {
     "message": "Signets"
@@ -2019,10 +2019,10 @@
     "message": "Annuler"
   },
   "dataClearPartialHeading": {
-    "message": "Effacer les {appName} l'exception des favoris ?"
+    "message": "Effacer les {appName} l'exception des favoris ?"
   },
   "dataClearPartialContentPara1": {
-    "message": "Voulez-vous vraiment effacer tous les {appName} ? {appName} sera restauré à l'état par défaut, mais vos signets et groupes resteront."
+    "message": "Voulez-vous vraiment effacer tous les {appName} ? {appName} sera restauré à l'état par défaut, mais vos signets et groupes resteront."
   },
   "dataClearPartialContentPara2": {
     "message": "Ça ne peut pas être annulé."

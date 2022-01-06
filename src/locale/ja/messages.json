@@ -198,7 +198,7 @@
     "message": "ライトモード"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "自動"
+    "message": "システム言語を使用する"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "システムのライトモードまたはダークモードに従います。"
@@ -339,10 +339,10 @@
     "message": "Google Fontsを使用して、時計、日付、グループ名、ブックマーク文字をカスタマイズします。"
   },
   "menuContentThemeFontDisplayNameHelperLink": {
-    "message": "Google Font を探す"
+    "message": "GoogleFontを探す"
   },
   "menuContentThemeFontDisplayNameHelperPara2": {
-    "message": "Google Fonts に表示されるフォント名を、大文字とスペースを含めて追加します。例：「FredokaOne」または「Kanit」と入力します。"
+    "message": "Google Fontsに表示されるフォント名を、大文字とスペースを含めて追加します。例：「FredokaOne」または「Kanit」と入力します。"
   },
   "menuContentThemeFontDisplayNameHelperPara3": {
     "message": "フィールドをクリアして、デフォルトのフォント「FjallaOne」を使用します。"
@@ -360,7 +360,7 @@
     "message": "はげ"
   },
   "menuContentThemeFontDisplayWeightHelperPara1": {
-    "message": "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、Google Font ページを参照してください。"
+    "message": "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、GoogleFontページを参照してください。"
   },
   "menuContentThemeFontDisplayStyleNormal": {
     "message": "普通"
@@ -378,7 +378,7 @@
     "message": "Google Fontを使用して、ブックマーク名、URL、およびフォーム要素をカスタマイズします。"
   },
   "menuContentThemeFontUiNameHelperLink": {
-    "message": "Google Font を探す"
+    "message": "GoogleFontを探す"
   },
   "menuContentThemeFontUiNameHelperPara2": {
     "message": "Google Fontsに表示されるフォント名を、大文字とスペースを含めて追加します。例：「Roboto」、「Source Sans Pro」、「NotoSans」と入力します。"
@@ -399,7 +399,7 @@
     "message": "はげ"
   },
   "menuContentThemeFontUiWeightHelperPara1": {
-    "message": "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、Google Font ページを参照してください。"
+    "message": "すべてのフォントがすべての重みをサポートしているわけではありません。利用可能なものを確認するには、GoogleFontページを参照してください。"
   },
   "menuContentThemeFontUiStyleNormal": {
     "message": "普通"
@@ -714,7 +714,7 @@
     "message": "レイアウト方向が垂直で、ヘッダー項目が表示されている場合にのみ使用できます。"
   },
   "menuContentLayoutPadding": {
-    "message": "ヘッダーとブックマーク領域の周りのスペース"
+    "message": "ヘッダーとブックマークエリアの周りのスペース"
   },
   "menuContentLayoutGutter": {
     "message": "ヘッダーアイテムとブックマークアイテムの間のスペース"
@@ -846,13 +846,13 @@
     "message": "言葉遣い"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"おはようございます...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"こんにちは...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"こんにちは...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "なし"
@@ -867,7 +867,7 @@
     "message": "あなた自身の挨拶を使用してください。"
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "空白のままにすると、デフォルトで「おはよう...」になります。"
+    "message": "空白のままにすると、デフォルトで「Good morning...」になります。"
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "カスタムグリーティングテキスト"
@@ -891,10 +891,10 @@
     "message": "言葉遣い"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "「日時は」"
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"これは\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "サイズ"
@@ -1212,7 +1212,7 @@
     "message": "ブックマークしてからグループの詳細"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "[ブックマーク]領域を[グループの詳細]領域の前に表示するように注文します。"
+    "message": "ブックマーク領域をグループ詳細領域の前に表示するように注文します。"
   },
   "menuContentGroupNameSize": {
     "message": "名前のサイズ"
@@ -1416,7 +1416,7 @@
     "message": "設定をコミュニティと共有します。"
   },
   "menuContentAppLink1": {
-    "message": "Reddit / r / {appName}見つかりました。"
+    "message": "Reddit/r/{appName}見つかりました。"
   },
   "menuContentAppPara2": {
     "message": "このプロジェクトはオープンソースです。"

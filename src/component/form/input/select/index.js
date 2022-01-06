@@ -52,16 +52,21 @@ export const select = function({
 
       } else {
 
-        select.appendChild(
-          complexNode({
-            tag: 'option',
-            text: item.name,
-            attr: [{
-              key: 'value',
-              value: item.id
-            }]
-          })
-        );
+        const option = complexNode({ tag: 'option' });
+
+        if (item.name) {
+          option.textContent = item.name;
+        }
+
+        if (item.id) {
+          option.value = item.id;
+        }
+
+        if (item.disabled) {
+          option.disabled = true;
+        }
+
+        select.appendChild(option);
 
       }
 

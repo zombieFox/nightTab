@@ -51,7 +51,7 @@
     "message": "Sombra"
   },
   "menuNavThemeSubNavShade": {
-    "message": "Cubrir"
+    "message": "Sombra"
   },
   "menuNavThemeSubNavOpacity": {
     "message": "Opacidad"
@@ -198,7 +198,7 @@
     "message": "Modo de luz"
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Automático"
+    "message": "Usar el idioma del sistema"
   },
   "menuContentThemeStyleAutomaticDescription": {
     "message": "Siga el modo claro u oscuro del sistema."
@@ -414,10 +414,10 @@
     "message": "Tamaño de la sombra"
   },
   "menuContentThemeShadeOpacity": {
-    "message": "Cubrir la opacidad"
+    "message": "Opacidad de la sombra"
   },
   "menuContentThemeShadeBlurLabel": {
-    "message": "Portada borrosa"
+    "message": "Desenfoque de sombra"
   },
   "menuContentThemeShadeBlurHelperPara1": {
     "message": "No es compatible con todos los navegadores."
@@ -771,7 +771,7 @@
     "message": "Marcadores y luego encabezado"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Ordene que el área de Marcadores aparezca antes del área de Encabezado."
+    "message": "Ordene que el área del marcador aparezca antes del área del encabezado."
   },
   "menuContentLayoutPageTitleLabel": {
     "message": "Título"
@@ -846,13 +846,13 @@
     "message": "Fraseología"
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Buenos días...\""
+    "message": "\"Good morning...\""
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Hola...\""
+    "message": "\"Hello...\""
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Hola...\""
+    "message": "\"Hi...\""
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
     "message": "Ninguna"
@@ -867,7 +867,7 @@
     "message": "Utilice su propio saludo."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "El valor predeterminado es \"Buenos días ...\" si se deja en blanco."
+    "message": "El valor predeterminado es \"Good morning...\" si se deja en blanco."
   },
   "menuContentHeaderGreetingCustomLabel": {
     "message": "Texto de saludo personalizado"
@@ -891,10 +891,10 @@
     "message": "Fraseología"
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"La hora y la fecha son\""
+    "message": "\"The time and date is\""
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"Su\""
+    "message": "\"It's\""
   },
   "menuContentHeaderTransitionalSize": {
     "message": "Tamaño"
@@ -903,7 +903,7 @@
     "message": "Nueva línea"
   },
   "menuContentHeaderTransitionalNewLineDescription": {
-    "message": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+    "message": "Forzar a una nueva línea y separar de otros elementos del encabezado."
   },
   "menuContentHeaderClockHourShow": {
     "message": "Mostrar horas"
@@ -954,7 +954,7 @@
     "message": "Nueva línea"
   },
   "menuContentHeaderClockNewLineDescription": {
-    "message": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+    "message": "Forzar a una nueva línea y separar de otros elementos del encabezado."
   },
   "menuContentHeaderDateDayShow": {
     "message": "Show Day"
@@ -1050,7 +1050,7 @@
     "message": "Nueva línea"
   },
   "menuContentHeaderDateNewLineDescription": {
-    "message": "Forzar a una nueva línea y separar de otros elementos de Encabezado."
+    "message": "Forzar a una nueva línea y separar de otros elementos del encabezado."
   },
   "menuContentHeaderSearchShow": {
     "message": "Mostrar búsqueda"
@@ -1212,7 +1212,7 @@
     "message": "Marcadores y luego Detalles del grupo"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Ordene que el área de marcadores aparezca antes del área de detalles del grupo."
+    "message": "Ordene que el área del marcador aparezca antes del área de detalles del grupo."
   },
   "menuContentGroupNameSize": {
     "message": "Tamaño del nombre"
@@ -1416,7 +1416,7 @@
     "message": "Comparta su configuración con la comunidad."
   },
   "menuContentAppLink1": {
-    "message": "Encontrado en Reddit /r/{appName}."
+    "message": "Encontrado en Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "Este proyecto es de código abierto."
@@ -1503,7 +1503,7 @@
     "message": "Habla a"
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "Asegúrese de utilizar la URL completa e incluir \"https:// ...\""
+    "message": "Asegúrese de utilizar la URL completa e incluir \"https://...\""
   },
   "bookmarkFormSectionPositionHeading": {
     "message": "Posición"
@@ -1950,7 +1950,7 @@
     "message": "Color de acento"
   },
   "toolbarAddLabel": {
-    "message": "Para agregar"
+    "message": "Agregar"
   },
   "toolbarAddGroup": {
     "message": "Nuevo grupo"

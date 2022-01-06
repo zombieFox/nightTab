@@ -6,7 +6,7 @@
     "message": "nightTab"
   },
   "appDescription": {
-    "message": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab."
+    "message": "A neutral new tab page accented with a chosen color. Customize the layout, style, background and bookmarks in nightTab."
   },
   "menuNavDebugLabel": {
     "message": "Debug"
@@ -210,10 +210,10 @@
     "message": "Text and form elements use shades from the right."
   },
   "menuContentThemeColorShadeHelperPara3": {
-    "message": "For a light look switch to the Light Style and then select a Primary colour. And vice versa for a dark look."
+    "message": "For a light look switch to the Light Style and then select a Primary color. And vice versa for a dark look."
   },
   "menuContentThemeColorRangePrimaryH": {
-    "message": "Primary colour"
+    "message": "Primary color"
   },
   "menuContentThemeColorRangePrimaryS": {
     "message": "Saturation"
@@ -291,10 +291,10 @@
     "message": "Dark"
   },
   "menuContentThemeAccentColor": {
-    "message": "Accent colour"
+    "message": "Accent color"
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "Random Accent colour on load/refresh"
+    "message": "Random Accent color on load/refresh"
   },
   "menuContentThemeAccentRandomStyleAny": {
     "message": "Any"
@@ -312,7 +312,7 @@
     "message": "Saturated"
   },
   "menuContentThemeAccentRandomRandomise": {
-    "message": "Randomise now"
+    "message": "Randomize now"
   },
   "menuContentThemeAccentCycleActive": {
     "message": "Auto change Accent hue"
@@ -327,7 +327,7 @@
     "message": "Take care as a fast changing Accent hue may cause performance issues."
   },
   "menuContentThemeAccentCycleHelperPara1": {
-    "message": "Auto change Accent hue will not work when the Accent colour is a grey or black."
+    "message": "Auto change Accent hue will not work when the Accent color is a gray or black."
   },
   "menuContentThemeFontDisplayNameLabel": {
     "message": "Display font"
@@ -336,13 +336,13 @@
     "message": "Google font name"
   },
   "menuContentThemeFontDisplayNameHelperPara1": {
-    "message": "Use a Google Font to customise the Clock, Date, Group names and Bookmark Letters."
+    "message": "Use a Google Font to customize the Clock, Date, Group names and Bookmark Letters."
   },
   "menuContentThemeFontDisplayNameHelperLink": {
     "message": "Find a Google Font"
   },
   "menuContentThemeFontDisplayNameHelperPara2": {
-    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Fredoka One\" or \"Kanit\"."
+    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, e.g.: enter \"Fredoka One\" or \"Kanit\"."
   },
   "menuContentThemeFontDisplayNameHelperPara3": {
     "message": "Clear the field to use the default font \"Fjalla One\"."
@@ -375,13 +375,13 @@
     "message": "Google font name"
   },
   "menuContentThemeFontUiNameHelperPara1": {
-    "message": "Use a Google Font to customise the Bookmark name, URL and form elements."
+    "message": "Use a Google Font to customize the Bookmark name, URL and form elements."
   },
   "menuContentThemeFontUiNameHelperLink": {
     "message": "Find a Google Font"
   },
   "menuContentThemeFontUiNameHelperPara2": {
-    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, eg: enter \"Roboto\", \"Source Sans Pro\" or \"Noto Sans\"."
+    "message": "Add a font name as it appears on Google Fonts, including capital letters and spaces, e.g.: enter \"Roboto\", \"Source Sans Pro\" or \"Noto Sans\"."
   },
   "menuContentThemeFontUiNameHelperPara3": {
     "message": "Clear the field to use the default font \"Open Sans\"."
@@ -447,16 +447,16 @@
     "message": "Background by Theme"
   },
   "menuContentThemeBackgroundTypeThemeDescription": {
-    "message": "Use the Background colour defined by the Theme."
+    "message": "Use the Background color defined by the Theme."
   },
   "menuContentThemeBackgroundTypeAccentLabel": {
     "message": "Background by Accent"
   },
   "menuContentThemeBackgroundTypeAccentDescription": {
-    "message": "Use the Accent colour for the Background."
+    "message": "Use the Accent color for the Background."
   },
   "menuContentThemeBackgroundTypeColor": {
-    "message": "Custom colour"
+    "message": "Custom color"
   },
   "menuContentThemeBackgroundTypeGradient": {
     "message": "Gradient"
@@ -468,7 +468,7 @@
     "message": "Video"
   },
   "menuContentThemeBackgroundColor": {
-    "message": "Background colour"
+    "message": "Background color"
   },
   "menuContentThemeBackgroundGradientAngle": {
     "message": "Background gradient angle"
@@ -495,7 +495,7 @@
     "message": "Add more than one URL separated by spaces or on new lines for a random background image on load."
   },
   "menuContentThemeBackgroundImageUrlHelperPara2": {
-    "message": "Unsplash can be used for random images, eg:"
+    "message": "Unsplash can be used for random images, e.g.:"
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
     "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky"
@@ -576,22 +576,22 @@
     "message": "Shade start"
   },
   "menuContentThemeLayoutColorLabel": {
-    "message": "Layout background colour"
+    "message": "Layout background color"
   },
   "menuContentThemeLayoutColorByTransparentLabel": {
     "message": "Transparent"
   },
   "menuContentThemeLayoutColorByTransparentDescription": {
-    "message": "No background colour behind the Layout."
+    "message": "No background color behind the Layout."
   },
   "menuContentThemeLayoutColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Custom color"
   },
   "menuContentThemeLayoutColorByCustomDescription": {
-    "message": "Use a custom colour behind the Layout."
+    "message": "Use a custom color behind the Layout."
   },
   "menuContentThemeLayoutColorColor": {
-    "message": "Layout background colour"
+    "message": "Layout background color"
   },
   "menuContentThemeLayoutColorOpacity": {
     "message": "Background opacity"
@@ -606,43 +606,43 @@
     "message": "Divider between Header and Bookmark area"
   },
   "menuContentThemeHeaderColorLabel": {
-    "message": "Header background colour"
+    "message": "Header background color"
   },
   "menuContentThemeHeaderColorByTransparentLabel": {
     "message": "Transparent"
   },
   "menuContentThemeHeaderColorByTransparentDescription": {
-    "message": "No background colour behind the Header area."
+    "message": "No background color behind the Header area."
   },
   "menuContentThemeHeaderColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Custom color"
   },
   "menuContentThemeHeaderColorByCustomDescription": {
-    "message": "Use a custom colour behind the Header area."
+    "message": "Use a custom color behind the Header area."
   },
   "menuContentThemeHeaderColorColor": {
-    "message": "Header background colour"
+    "message": "Header background color"
   },
   "menuContentThemeHeaderColorOpacity": {
     "message": "Background opacity"
   },
   "menuContentThemeBookmarkColorLabel": {
-    "message": "Bookmark background colour"
+    "message": "Bookmark background color"
   },
   "menuContentThemeBookmarkColorByTransparentLabel": {
     "message": "Transparent"
   },
   "menuContentThemeBookmarkColorByTransparentDescription": {
-    "message": "No background colour behind the Bookmark area."
+    "message": "No background color behind the Bookmark area."
   },
   "menuContentThemeBookmarkColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Custom color"
   },
   "menuContentThemeBookmarkColorByCustomDescription": {
-    "message": "Use a custom colour behind the Bookmark area."
+    "message": "Use a custom color behind the Bookmark area."
   },
   "menuContentThemeBookmarkColorColor": {
-    "message": "Bookmark background colour"
+    "message": "Bookmark background color"
   },
   "menuContentThemeBookmarkColorOpacity": {
     "message": "Background opacity"
@@ -654,7 +654,7 @@
     "message": "Bookmark border can also be changed when editing individual Bookmarks."
   },
   "menuContentThemeBookmarkItemBorderHelperPara2": {
-    "message": "The colour of the Border is defined by the Accent which can also be changed when editing individual Bookmarks."
+    "message": "The color of the Border is defined by the Accent which can also be changed when editing individual Bookmarks."
   },
   "menuContentThemeBookmarkItemRainbowAdd": {
     "message": "Add unique accent to each Bookmark"
@@ -681,7 +681,7 @@
     "message": "Left"
   },
   "menuContentLayoutAreaHeaderJustifyCenter": {
-    "message": "Centre"
+    "message": "Center"
   },
   "menuContentLayoutAreaHeaderJustifyRight": {
     "message": "Right"
@@ -702,7 +702,7 @@
     "message": "Left"
   },
   "menuContentLayoutAreaBookmarkJustifyCenter": {
-    "message": "Centre"
+    "message": "Center"
   },
   "menuContentLayoutAreaBookmarkJustifyRight": {
     "message": "Right"
@@ -726,25 +726,25 @@
     "message": "Top Left"
   },
   "menuContentLayoutAlignmentTopCenter": {
-    "message": "Top Centre"
+    "message": "Top Center"
   },
   "menuContentLayoutAlignmentTopRight": {
     "message": "Top Right"
   },
   "menuContentLayoutAlignmentCenterLeft": {
-    "message": "Centre Left"
+    "message": "Center Left"
   },
   "menuContentLayoutAlignmentCenterCenter": {
-    "message": "Centre Centre"
+    "message": "Center Center"
   },
   "menuContentLayoutAlignmentCenterRight": {
-    "message": "Centre Right"
+    "message": "Center Right"
   },
   "menuContentLayoutAlignmentBottomLeft": {
     "message": "Bottom Left"
   },
   "menuContentLayoutAlignmentBottomCenter": {
-    "message": "Bottom Centre"
+    "message": "Bottom Center"
   },
   "menuContentLayoutAlignmentBottomRight": {
     "message": "Bottom Right"
@@ -771,7 +771,7 @@
     "message": "Bookmarks then Header"
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Order the Bookmarks area to appear before the Header area."
+    "message": "Order the Bookmark area to appear before the Header area."
   },
   "menuContentLayoutPageTitleLabel": {
     "message": "Title"
@@ -840,7 +840,7 @@
     "message": "New line"
   },
   "menuContentHeaderGreetingNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentHeaderGreetingTypeLabel": {
     "message": "Wording"
@@ -903,7 +903,7 @@
     "message": "New line"
   },
   "menuContentHeaderTransitionalNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentHeaderClockHourShow": {
     "message": "Show hours"
@@ -954,7 +954,7 @@
     "message": "New line"
   },
   "menuContentHeaderClockNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentHeaderDateDayShow": {
     "message": "Show Day"
@@ -1050,7 +1050,7 @@
     "message": "New line"
   },
   "menuContentHeaderDateNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentHeaderSearchShow": {
     "message": "Show Search"
@@ -1080,7 +1080,7 @@
     "message": "New line"
   },
   "menuContentHeaderSearchNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentHeaderSearchEngineSelectedLabel": {
     "message": "Search engine"
@@ -1101,7 +1101,7 @@
     "message": "https://"
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "Enter a web address with the search parameters, eg: \"https://vimeo.com/search?q=\""
+    "message": "Enter a web address with the search parameters, e.g.: \"https://vimeo.com/search?q=\""
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
     "message": "{appName} will add the search term entered into the Search box at the end of the above URL."
@@ -1125,7 +1125,7 @@
     "message": "Left"
   },
   "menuContentHeaderSearchEngineTextJustifyCenter": {
-    "message": "Centre"
+    "message": "Center"
   },
   "menuContentHeaderSearchEngineTextJustifyRight": {
     "message": "Right"
@@ -1194,7 +1194,7 @@
     "message": "Left"
   },
   "menuContentGroupAlignmentJustifyCenter": {
-    "message": "Centre"
+    "message": "Center"
   },
   "menuContentGroupAlignmentJustifyRight": {
     "message": "Right"
@@ -1206,13 +1206,13 @@
     "message": "Group details then Bookmarks"
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Order the Group details area to appear before the Bookmarks area."
+    "message": "Order the Group detail area to appear before the Bookmarks area."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
     "message": "Bookmarks then Group details"
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Order the Bookmarks area to appear before the Group details area."
+    "message": "Order the Bookmark area to appear before the Group detail area."
   },
   "menuContentGroupNameSize": {
     "message": "Name size"
@@ -1275,7 +1275,7 @@
     "message": "New line"
   },
   "menuContentToolbarLocationNewLineDescription": {
-    "message": "Force on to a new line and seperate from other Header items."
+    "message": "Force on to a new line and separate from other Header items."
   },
   "menuContentToolbarLocationNewLineHelperPara1": {
     "message": "Only available when the Toolbar is positioned inside the Header."
@@ -1332,7 +1332,7 @@
     "message": "Download a backup of your {appName} Bookmarks and Settings."
   },
   "menuContentDataBackupHelperPara2": {
-    "message": "This file can later be imported on this or another deivce."
+    "message": "This file can later be imported on this or another device."
   },
   "menuContentDataClearAll": {
     "message": "Clear all data"
@@ -1416,7 +1416,7 @@
     "message": "Share your setup with the community."
   },
   "menuContentAppLink1": {
-    "message": "Found on Reddit /r/{appName}."
+    "message": "Found on Reddit/r/{appName}."
   },
   "menuContentAppPara2": {
     "message": "This project is open source."
@@ -1521,7 +1521,7 @@
     "message": "Theme"
   },
   "bookmarkFormSectionThemeDescription": {
-    "message": "Override the Theme and Accent colour."
+    "message": "Override the Theme and Accent color."
   },
   "bookmarkFormUrlLabel": {
     "message": "URL"
@@ -1536,25 +1536,25 @@
     "message": "Top Left"
   },
   "bookmarkFormDisplayAlignmentTopCenter": {
-    "message": "Top Centre"
+    "message": "Top Center"
   },
   "bookmarkFormDisplayAlignmentTopRight": {
     "message": "Top Right"
   },
   "bookmarkFormDisplayAlignmentCenterLeft": {
-    "message": "Centre Left"
+    "message": "Center Left"
   },
   "bookmarkFormDisplayAlignmentCenterCenter": {
-    "message": "Centre Centre"
+    "message": "Center Center"
   },
   "bookmarkFormDisplayAlignmentCenterRight": {
-    "message": "Centre Right"
+    "message": "Center Right"
   },
   "bookmarkFormDisplayAlignmentBottomLeft": {
     "message": "Bottom Left"
   },
   "bookmarkFormDisplayAlignmentBottomCenter": {
-    "message": "Bottom Centre"
+    "message": "Bottom Center"
   },
   "bookmarkFormDisplayAlignmentBottomRight": {
     "message": "Bottom Right"
@@ -1671,16 +1671,16 @@
     "message": "Accent"
   },
   "bookmarkFormColorByThemeLabel": {
-    "message": "Theme colour"
+    "message": "Theme color"
   },
   "bookmarkFormColorByThemeDescription": {
     "message": "Use the Color defined by the Theme."
   },
   "bookmarkFormColorByCustomLabel": {
-    "message": "Custom colour"
+    "message": "Custom color"
   },
   "bookmarkFormColorByCustomDescription": {
-    "message": "Override the Theme colour."
+    "message": "Override the Theme color."
   },
   "bookmarkFormColorColor": {
     "message": "Color"
@@ -1947,7 +1947,7 @@
     "message": "Cancel"
   },
   "toolbarAccent": {
-    "message": "Accent colour"
+    "message": "Accent color"
   },
   "toolbarAddLabel": {
     "message": "Add"
@@ -2007,7 +2007,7 @@
     "message": "Clear all {appName} data?"
   },
   "dataClearAllContentPara1": {
-    "message": "Are you sure you want to clear all {appName} Bookmarks and Settings? {appName} will be restore to the default state."
+    "message": "Are you sure you want to clear all {appName} Bookmarks and Settings? {appName} will be restored to the default state."
   },
   "dataClearAllContentPara2": {
     "message": "This can not be undone."
@@ -2022,7 +2022,7 @@
     "message": "Clear {appName} data except bookmarks?"
   },
   "dataClearPartialContentPara1": {
-    "message": "Are you sure you want to clear all {appName} Settings? {appName} will be restore to the default state but your Bookmarks and Groups will remain."
+    "message": "Are you sure you want to clear all {appName} Settings? {appName} will be restored to the default state but your Bookmarks and Groups will remain."
   },
   "dataClearPartialContentPara2": {
     "message": "This can not be undone."
@@ -2058,7 +2058,7 @@
     "message": "Hex code"
   },
   "controlColorRandom": {
-    "message": "Random colour"
+    "message": "Random color"
   },
   "controlColorMixerMoreControls": {
     "message": "More controls"
