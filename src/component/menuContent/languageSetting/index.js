@@ -28,7 +28,7 @@ languageSetting.language = (parent) => {
 
     let index = 0;
 
-    index = message.language.id().indexOf(state.get.current().language);
+    index = message.language.code().indexOf(state.get.current().language);
 
     return index;
 
@@ -43,7 +43,7 @@ languageSetting.language = (parent) => {
     selected: selectedLanguageIndex(),
     action: () => {
 
-      state.get.current().language = message.language.id()[languageSetting.control.language.selected.selected()];
+      state.get.current().language = message.language.code()[languageSetting.control.language.selected.selected()];
       data.save();
       toolbar.bar.render();
       header.item.clear();

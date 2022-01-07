@@ -1,6 +1,7 @@
 import { APP_NAME } from '../../constant';
 
 import { state } from '../state';
+import { browserDetect } from '../browserDetect';
 
 import { default as bn } from '../../locale/bn/messages.json';
 import { default as de } from '../../locale/de/messages.json';
@@ -27,32 +28,32 @@ message.language = { bn, de, en_GB, en_US, es, fil, fr, gu, hi, id, it, ja, ms, 
 message.language.list = () => {
 
   return [
-    { id: 'system', name: message.get('menuContentLanguageSystem') }, // automatic
+    { code: 'system', name: message.get('menuContentLanguageSystem') }, // automatic
     { name: '–', disabled: true },
-    { id: 'bn', name: 'বাংলা' }, // Bengali
-    { id: 'de', name: 'Deutsch' }, // German
-    { id: 'en_GB', name: 'English (Great Britain)' }, // English (Great Britain)
-    { id: 'en_US', name: 'English (USA)' }, // English (USA)
-    { id: 'es', name: 'Español' }, // Spanish
-    { id: 'fil', name: 'Filipino' }, // Filipino
-    { id: 'fr', name: 'Français' }, // French
-    { id: 'gu', name: 'ગુજરાતી' }, // Gujarati
-    { id: 'hi', name: 'हिंदी' }, // Hindi
-    { id: 'id', name: 'Indonesia' }, // Indonesian
-    { id: 'it', name: 'Italiano' }, // Italian
-    { id: 'ja', name: '日本語' }, // Japanese
-    { id: 'ms', name: 'Melayu' }, // Malay
-    { id: 'pt', name: 'Português' }, // Portuguese
-    { id: 'ru', name: 'Pусский' }, // Russian
-    { id: 'uk', name: 'український' }, // Ukrainian
-    { id: 'vi', name: 'англійська' } // Vietnamese
+    { code: 'bn', name: 'বাংলা' }, // Bengali
+    { code: 'de', name: 'Deutsch' }, // German
+    { code: 'en_GB', name: 'English (United Kingdom)' }, // English (Great Britain)
+    { code: 'en_US', name: 'English (USA)' }, // English (USA)
+    { code: 'es', name: 'Español' }, // Spanish
+    { code: 'fil', name: 'Filipino' }, // Filipino
+    { code: 'fr', name: 'Français' }, // French
+    { code: 'gu', name: 'ગુજરાતી' }, // Gujarati
+    { code: 'hi', name: 'हिंदी' }, // Hindi
+    { code: 'id', name: 'Indonesia' }, // Indonesian
+    { code: 'it', name: 'Italiano' }, // Italian
+    { code: 'ja', name: '日本語' }, // Japanese
+    { code: 'ms', name: 'Melayu' }, // Malay
+    { code: 'pt', name: 'Português' }, // Portuguese
+    { code: 'ru', name: 'Pусский' }, // Russian
+    { code: 'uk', name: 'український' }, // Ukrainian
+    { code: 'vi', name: 'англійська' } // Vietnamese
   ];
 
 };
 
 message.language.name = () => message.language.list().map(item => item.name);
 
-message.language.id = () => message.language.list().map(item => item.id);
+message.language.code = () => message.language.list().map(item => item.code);
 
 message.get = (stringId) => {
 
@@ -60,25 +61,47 @@ message.get = (stringId) => {
 
   switch (state.get.current().language) {
 
+    // use system language
     case 'system':
-      // language set to use system language
 
-      if (chrome.i18n) {
+      if (browserDetect().chrome && typeof chrome != 'undefined') {
+        // if browser is chrome
 
-        // installed as extension, use browser language
-        string = chrome.i18n.getMessage(stringId);
+        if ('i18n' in chrome) {
+          // if installed as extension
+
+          string = chrome.i18n.getMessage(stringId);
+
+        } else {
+
+          string = message.language.en_GB[stringId].message;
+
+        }
+
+      } else if (browserDetect().firefox && typeof browser != 'undefined') {
+        // if browser is firefox
+
+        if ('i18n' in browser) {
+          // if installed as addon
+
+          string = browser.i18n.getMessage(stringId);
+
+        } else {
+
+          string = message.language.en_GB[stringId].message;
+
+        }
 
       } else {
 
-        // not installed as extension, use default language
         string = message.language.en_GB[stringId].message;
 
       }
 
       break;
 
+      // use manually selected language
     default:
-      // language set to use user choice
 
       if (stringId in message.language[state.get.current().language]) {
 
