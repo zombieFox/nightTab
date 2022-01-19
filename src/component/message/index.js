@@ -32,23 +32,23 @@ message.language.list = () => {
   return [
     { code: 'system', name: message.get('menuContentLanguageSystem') }, // system
     { name: '–', disabled: true },
-    { code: 'bn', name: 'বাংলা' }, // Bengali
-    { code: 'de', name: 'Deutsch' }, // German
-    { code: 'en_GB', name: 'English (United Kingdom)' }, // English (Great Britain)
-    { code: 'en_US', name: 'English (USA)' }, // English (USA)
-    { code: 'es', name: 'Español' }, // Spanish
-    { code: 'fil', name: 'Filipino' }, // Filipino
-    { code: 'fr', name: 'Français' }, // French
-    { code: 'gu', name: 'ગુજરાતી' }, // Gujarati
-    { code: 'hi', name: 'हिंदी' }, // Hindi
-    { code: 'id', name: 'Indonesia' }, // Indonesian
-    { code: 'it', name: 'Italiano' }, // Italian
-    { code: 'ja', name: '日本語' }, // Japanese
-    { code: 'ms', name: 'Melayu' }, // Malay
-    { code: 'pt', name: 'Português' }, // Portuguese
-    { code: 'ru', name: 'Pусский' }, // Russian
-    { code: 'uk', name: 'український' }, // Ukrainian
-    { code: 'vi', name: 'англійська' } // Vietnamese
+    { code: 'bn', name: 'বাংলা [bn]' }, // Bengali
+    { code: 'de', name: 'Deutsch [de]' }, // German
+    { code: 'en_GB', name: 'English [en] (GB)' }, // English GB
+    { code: 'en_US', name: 'English [en] (US)' }, // English USA
+    { code: 'es', name: 'Español [es]' }, // Spanish
+    { code: 'fil', name: 'Filipino [fi]' }, // Filipino
+    { code: 'fr', name: 'Français [fr]' }, // French
+    { code: 'gu', name: 'ગુજરાતી [gu]' }, // Gujarati
+    { code: 'hi', name: 'हिंदी [hi]' }, // Hindi
+    { code: 'id', name: 'Indonesia [id]' }, // Indonesian
+    { code: 'it', name: 'Italiano [it]' }, // Italian
+    { code: 'ja', name: '日本語 [ja]' }, // Japanese
+    { code: 'ms', name: 'Melayu [ms]' }, // Malay
+    { code: 'pt', name: 'Português [pt]' }, // Portuguese
+    { code: 'ru', name: 'Pусский [ru]' }, // Russian
+    { code: 'uk', name: 'український [uk]' }, // Ukrainian
+    { code: 'vi', name: 'англійська [vi]' } // Vietnamese
   ];
 
 };
