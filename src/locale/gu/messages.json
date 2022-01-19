@@ -1,12 +1,15 @@
 {
   "appName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appShortName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appDescription": {
-    "message": "નાઇટટેબમાં એક્સેન્ટ કલર, લેઆઉટ, સ્ટાઇલ, બેકગ્રાઉન્ડ અને બુકમાર્ક્સને કસ્ટમાઇઝ કરો."
+    "message": "નાઇટટેબમાં એક્સેન્ટ કલર, લેઆઉટ, સ્ટાઇલ, બેકગ્રાઉન્ડ અને બુકમાર્ક્સને કસ્ટમાઇઝ કરો.",
+    "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
     "message": "ડીબગ"
@@ -473,10 +476,10 @@
   "menuContentThemeBackgroundGradientAngle": {
     "message": "પૃષ્ઠભૂમિ ઢાળ કોણ"
   },
-  "menuContentThemeBackgroundGradientStart": {
+  "menuContentThemeBackgroundGradientLeft": {
     "message": "પૃષ્ઠભૂમિ ઢાળ પ્રારંભ"
   },
-  "menuContentThemeBackgroundGradientEnd": {
+  "menuContentThemeBackgroundGradientRight": {
     "message": "પૃષ્ઠભૂમિ ઢાળ અંત"
   },
   "menuContentThemeBackgroundImageAlertPara1": {

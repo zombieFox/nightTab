@@ -23,12 +23,14 @@ import { default as vi } from '../../locale/vi/messages.json';
 
 const message = {};
 
-message.language = { bn, de, en_GB, en_US, es, fil, fr, gu, hi, id, it, ja, ms, pt, ru, uk, vi };
+message.language = {
+  pack: { bn, de, en_GB, en_US, es, fil, fr, gu, hi, id, it, ja, ms, pt, ru, uk, vi }
+};
 
 message.language.list = () => {
 
   return [
-    { code: 'system', name: message.get('menuContentLanguageSystem') }, // automatic
+    { code: 'system', name: message.get('menuContentLanguageSystem') }, // system
     { name: '–', disabled: true },
     { code: 'bn', name: 'বাংলা' }, // Bengali
     { code: 'de', name: 'Deutsch' }, // German
@@ -74,7 +76,7 @@ message.get = (stringId) => {
 
         } else {
 
-          string = message.language.en_GB[stringId].message;
+          string = message.language.pack.en_GB[stringId].message;
 
         }
 
@@ -88,13 +90,13 @@ message.get = (stringId) => {
 
         } else {
 
-          string = message.language.en_GB[stringId].message;
+          string = message.language.pack.en_GB[stringId].message;
 
         }
 
       } else {
 
-        string = message.language.en_GB[stringId].message;
+        string = message.language.pack.en_GB[stringId].message;
 
       }
 
@@ -103,15 +105,15 @@ message.get = (stringId) => {
       // use manually selected language
     default:
 
-      if (stringId in message.language[state.get.current().language]) {
+      if (stringId in message.language.pack[state.get.current().language]) {
 
         // string found in chosen language
-        string = message.language[state.get.current().language][stringId].message;
+        string = message.language.pack[state.get.current().language][stringId].message;
 
       } else {
 
         // or use default language
-        string = message.language.en_GB[stringId].message;
+        string = message.language.pack.en_GB[stringId].message;
 
       }
 

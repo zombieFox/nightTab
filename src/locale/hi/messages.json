@@ -1,12 +1,15 @@
 {
   "appName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appShortName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appDescription": {
-    "message": "नाइटटैब में उच्चारण रंग, लेआउट, शैली, पृष्ठभूमि और बुकमार्क को अनुकूलित करें।"
+    "message": "नाइटटैब में उच्चारण रंग, लेआउट, शैली, पृष्ठभूमि और बुकमार्क को अनुकूलित करें।",
+    "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
     "message": "डिबग"
@@ -473,10 +476,10 @@
   "menuContentThemeBackgroundGradientAngle": {
     "message": "पृष्ठभूमि ढाल कोण"
   },
-  "menuContentThemeBackgroundGradientStart": {
+  "menuContentThemeBackgroundGradientLeft": {
     "message": "बैकग्राउंड ग्रेडिएंट स्टार्ट"
   },
-  "menuContentThemeBackgroundGradientEnd": {
+  "menuContentThemeBackgroundGradientRight": {
     "message": "पृष्ठभूमि ढाल अंत"
   },
   "menuContentThemeBackgroundImageAlertPara1": {

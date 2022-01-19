@@ -1,12 +1,15 @@
 {
   "appName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appShortName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appDescription": {
-    "message": "Personalize a cor de destaque, layout, estilo, plano de fundo e marcadores no nightTab."
+    "message": "Personalize a cor de destaque, layout, estilo, plano de fundo e marcadores no nightTab.",
+    "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
     "message": "Depurar"
@@ -473,10 +476,10 @@
   "menuContentThemeBackgroundGradientAngle": {
     "message": "Ângulo de gradiente de fundo"
   },
-  "menuContentThemeBackgroundGradientStart": {
+  "menuContentThemeBackgroundGradientLeft": {
     "message": "Início do gradiente de fundo"
   },
-  "menuContentThemeBackgroundGradientEnd": {
+  "menuContentThemeBackgroundGradientRight": {
     "message": "Fim do gradiente de fundo"
   },
   "menuContentThemeBackgroundImageAlertPara1": {

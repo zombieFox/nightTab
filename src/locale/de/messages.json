@@ -1,12 +1,15 @@
 {
   "appName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appShortName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appDescription": {
-    "message": "Passen Sie Akzentfarbe, Layout, Stil, Hintergrund und Lesezeichen in nightTab an."
+    "message": "Passen Sie Akzentfarbe, Layout, Stil, Hintergrund und Lesezeichen in nightTab an.",
+    "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
     "message": "Debuggen"
@@ -473,10 +476,10 @@
   "menuContentThemeBackgroundGradientAngle": {
     "message": "Hintergrundverlaufswinkel"
   },
-  "menuContentThemeBackgroundGradientStart": {
+  "menuContentThemeBackgroundGradientLeft": {
     "message": "Start des Hintergrundverlaufs"
   },
-  "menuContentThemeBackgroundGradientEnd": {
+  "menuContentThemeBackgroundGradientRight": {
     "message": "Ende des Hintergrundverlaufs"
   },
   "menuContentThemeBackgroundImageAlertPara1": {

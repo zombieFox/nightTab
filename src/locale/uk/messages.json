@@ -1,12 +1,15 @@
 {
   "appName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appShortName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appDescription": {
-    "message": "Нейтральна сторінка нової вкладки з акцентом вибраного кольору. Налаштуйте макет, стиль, фон і закладки в nightTab."
+    "message": "Нейтральна сторінка нової вкладки з акцентом вибраного кольору. Налаштуйте макет, стиль, фон і закладки в nightTab.",
+    "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
     "message": "Відлагоджувати"
@@ -473,10 +476,10 @@
   "menuContentThemeBackgroundGradientAngle": {
     "message": "Кут градієнта фону"
   },
-  "menuContentThemeBackgroundGradientStart": {
+  "menuContentThemeBackgroundGradientLeft": {
     "message": "Початок градієнта фону"
   },
-  "menuContentThemeBackgroundGradientEnd": {
+  "menuContentThemeBackgroundGradientRight": {
     "message": "Закінчення градієнта фону"
   },
   "menuContentThemeBackgroundImageAlertPara1": {

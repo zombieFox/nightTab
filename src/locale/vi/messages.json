@@ -1,12 +1,15 @@
 {
   "appName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appShortName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appDescription": {
-    "message": "Tùy chỉnh màu nhấn, bố cục, kiểu, nền và dấu trang trong nightTab."
+    "message": "Tùy chỉnh màu nhấn, bố cục, kiểu, nền và dấu trang trong nightTab.",
+    "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
     "message": "Gỡ lỗi"
@@ -473,10 +476,10 @@
   "menuContentThemeBackgroundGradientAngle": {
     "message": "Góc độ dốc nền"
   },
-  "menuContentThemeBackgroundGradientStart": {
+  "menuContentThemeBackgroundGradientLeft": {
     "message": "Bắt đầu gradient nền"
   },
-  "menuContentThemeBackgroundGradientEnd": {
+  "menuContentThemeBackgroundGradientRight": {
     "message": "Kết thúc gradient nền"
   },
   "menuContentThemeBackgroundImageAlertPara1": {

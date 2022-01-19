@@ -1,12 +1,15 @@
 {
   "appName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appShortName": {
-    "message": "nightTab"
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
   },
   "appDescription": {
-    "message": "নাইটট্যাবে উচ্চারণ রঙ, বিন্যাস, শৈলী, ব্যাকগ্রাউন্ড এবং বুকমার্ক কাস্টমাইজ করুন।"
+    "message": "নাইটট্যাবে উচ্চারণ রঙ, বিন্যাস, শৈলী, ব্যাকগ্রাউন্ড এবং বুকমার্ক কাস্টমাইজ করুন।",
+    "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
     "message": "ডিবাগ"
@@ -473,10 +476,10 @@
   "menuContentThemeBackgroundGradientAngle": {
     "message": "পটভূমি গ্রেডিয়েন্ট কোণ"
   },
-  "menuContentThemeBackgroundGradientStart": {
+  "menuContentThemeBackgroundGradientLeft": {
     "message": "পটভূমি গ্রেডিয়েন্ট শুরু"
   },
-  "menuContentThemeBackgroundGradientEnd": {
+  "menuContentThemeBackgroundGradientRight": {
     "message": "পটভূমি গ্রেডিয়েন্ট শেষ"
   },
   "menuContentThemeBackgroundImageAlertPara1": {

@@ -16,6 +16,7 @@ import { header } from './header';
 import { group } from './group';
 import { toolbar } from './toolbar';
 import { groupAndBookmark } from './groupAndBookmark';
+import { message } from './message';
 
 import * as form from './form';
 
@@ -38,5 +39,6 @@ export const component = {
   group,
   form,
   toolbar,
-  groupAndBookmark
+  groupAndBookmark,
+  message
 };
