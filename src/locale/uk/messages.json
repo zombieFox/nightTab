@@ -12,2076 +12,2767 @@
     "description": "The description of the extension, displayed in the web store."
   },
   "menuNavDebugLabel": {
-    "message": "Відлагоджувати"
+    "message": "Відлагоджувати",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavDebugSubNavInput": {
-    "message": "Вхідні дані"
+    "message": "Вхідні дані",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavDebugSubNavButton": {
-    "message": "Кнопка"
+    "message": "Кнопка",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavDebugSubNavBookmark": {
-    "message": "Закладка"
+    "message": "Закладка",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavDebugSubNavIcon": {
-    "message": "значок"
+    "message": "значок",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeLabel": {
-    "message": "Тема"
+    "message": "Тема",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavPreset": {
-    "message": "Попередньо встановлені"
+    "message": "Попередньо встановлені",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavSaved": {
-    "message": "Збережено"
+    "message": "Збережено",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavStyle": {
-    "message": "Стиль"
+    "message": "Стиль",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavColor": {
-    "message": "Колір"
+    "message": "Колір",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavAccent": {
-    "message": "Акцент"
+    "message": "Акцент",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavFont": {
-    "message": "Шрифт"
+    "message": "Шрифт",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavRadius": {
-    "message": "Радіус"
+    "message": "Радіус",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavShadow": {
-    "message": "Тінь"
+    "message": "Тінь",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavShade": {
-    "message": "Тінь"
+    "message": "Тінь",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavOpacity": {
-    "message": "Непрозорість"
+    "message": "Непрозорість",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavBackground": {
-    "message": "Фон"
+    "message": "Фон",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavLayout": {
-    "message": "Макет"
+    "message": "Макет",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavHeader": {
-    "message": "Заголовок"
+    "message": "Заголовок",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavBookmark": {
-    "message": "Закладка"
+    "message": "Закладка",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutLabel": {
-    "message": "Макет"
+    "message": "Макет",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavScaling": {
-    "message": "Масштабування"
+    "message": "Масштабування",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavArea": {
-    "message": "Площа"
+    "message": "Площа",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavPadding": {
-    "message": "Прокладка"
+    "message": "Прокладка",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavGutter": {
-    "message": "Жолоб"
+    "message": "Жолоб",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavAlignment": {
-    "message": "Вирівнювання"
+    "message": "Вирівнювання",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavPage": {
-    "message": "Сторінка"
+    "message": "Сторінка",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderLabel": {
-    "message": "Заголовок"
+    "message": "Заголовок",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderSubNavAlignment": {
-    "message": "Вирівнювання"
+    "message": "Вирівнювання",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderSubNavGreeting": {
-    "message": "Привітання"
+    "message": "Привітання",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderSubNavTransitional": {
-    "message": "Перехідні слова"
+    "message": "Перехідні слова",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderSubNavClock": {
-    "message": "Годинник"
+    "message": "Годинник",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderSubNavDate": {
-    "message": "Дата"
+    "message": "Дата",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderSubNavSearch": {
-    "message": "Пошук"
+    "message": "Пошук",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkLabel": {
-    "message": "Закладка"
+    "message": "Закладка",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkSubNavGeneral": {
-    "message": "Генеральний"
+    "message": "Генеральний",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkSubNavStyle": {
-    "message": "Стиль"
+    "message": "Стиль",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkSubNavOrientation": {
-    "message": "Орієнтація"
+    "message": "Орієнтація",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavBookmarkSubNavSort": {
-    "message": "Сортувати"
+    "message": "Сортувати",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavGroupLabel": {
-    "message": "Група"
+    "message": "Група",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavAlignment": {
-    "message": "Вирівнювання"
+    "message": "Вирівнювання",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavName": {
-    "message": "Ім'я"
+    "message": "Ім'я",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavCollapse": {
-    "message": "Згорнути"
+    "message": "Згорнути",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavGroupSubNavToolbar": {
-    "message": "Панель інструментів"
+    "message": "Панель інструментів",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarLabel": {
-    "message": "Панель інструментів"
+    "message": "Панель інструментів",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavSize": {
-    "message": "Розмір"
+    "message": "Розмір",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavLocation": {
-    "message": "Місцезнаходження"
+    "message": "Місцезнаходження",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavPosition": {
-    "message": "Позиція"
+    "message": "Позиція",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavControls": {
-    "message": "Елементи керування"
+    "message": "Елементи керування",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavDataLabel": {
-    "message": "Дані"
+    "message": "Дані",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavDataSubNavRestore": {
-    "message": "Відновлення"
+    "message": "Відновлення",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavDataSubNavBackup": {
-    "message": "Резервне копіювання"
+    "message": "Резервне копіювання",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavDataSubNavClear": {
-    "message": "Ясно"
+    "message": "Ясно",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavLanguageLabel": {
-    "message": "Мову"
+    "message": "Мову",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavSupportLabel": {
-    "message": "Підтримка"
+    "message": "Підтримка",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavCoffeeLabel": {
-    "message": "кава"
+    "message": "кава",
+    "description": "Label for the settings menu navigation."
   },
   "menuNavAppLabel": {
-    "message": "{appName}"
+    "message": "{appName}",
+    "description": "Label for the settings menu navigation."
   },
   "menuContentThemePresetHelperPara1": {
-    "message": "Застосування попереднього налаштування замінить поточний колір, акцент, шрифт, стиль, радіус, тінь, відтінок і фон."
+    "message": "Застосування попереднього налаштування замінить поточний колір, акцент, шрифт, стиль, радіус, тінь, відтінок і фон.",
+    "description": "Helper text for preset theme."
   },
   "menuContentThemeSavedHelperPara1": {
-    "message": "Збереження теми запише поточний колір, акцент, шрифт, стиль, непрозорість, радіус, тінь, відтінок і фон."
+    "message": "Збереження теми запише поточний колір, акцент, шрифт, стиль, непрозорість, радіус, тінь, відтінок і фон.",
+    "description": "Helper text for saved themes."
   },
   "menuContentThemeSavedSave": {
-    "message": "Зберегти поточну тему"
+    "message": "Зберегти поточну тему",
+    "description": "Button to save the current theme setup."
   },
   "menuContentThemeSavedEdit": {
-    "message": "Редагувати збережені теми"
+    "message": "Редагувати збережені теми",
+    "description": "Button to enter edit mode for saved themes."
   },
   "menuContentThemeStyleDarkLabel": {
-    "message": "Темний режим"
+    "message": "Темний режим",
+    "description": "Radio for dark mode."
   },
   "menuContentThemeStyleLightLabel": {
-    "message": "Світлий режим"
+    "message": "Світлий режим",
+    "description": "Radio for light mode."
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Використовуйте мову системи"
+    "message": "Використовуйте мову системи",
+    "description": "Radio for automatic light or dark mode."
   },
   "menuContentThemeStyleAutomaticDescription": {
-    "message": "Дотримуйтесь системного режиму Світлий або Темний."
+    "message": "Дотримуйтесь системного режиму Світлий або Темний.",
+    "description": "Description for automatic light or dark mode."
   },
   "menuContentThemeColorShadeHelperPara1": {
-    "message": "Фон, закладки та модали використовують тіні зліва."
+    "message": "Фон, закладки та модали використовують тіні зліва.",
+    "description": "Helper text for primary colour."
   },
   "menuContentThemeColorShadeHelperPara2": {
-    "message": "Елементи тексту та форми використовують відтінки справа."
+    "message": "Елементи тексту та форми використовують відтінки справа.",
+    "description": "Helper text for primary colour."
   },
   "menuContentThemeColorShadeHelperPara3": {
-    "message": "Щоб отримати світлий вигляд, перейдіть до стилю світла, а потім виберіть Основний колір. І навпаки для темного вигляду."
+    "message": "Щоб отримати світлий вигляд, перейдіть до стилю світла, а потім виберіть Основний колір. І навпаки для темного вигляду.",
+    "description": "Helper text for primary colour."
   },
   "menuContentThemeColorRangePrimaryH": {
-    "message": "Основний колір"
+    "message": "Основний колір",
+    "description": "Range for primary colour hue."
   },
   "menuContentThemeColorRangePrimaryS": {
-    "message": "Насичення"
+    "message": "Насичення",
+    "description": "Range for primary colour saturation."
   },
   "menuContentThemeColorContrastLabel": {
-    "message": "Діапазон контрасту"
+    "message": "Діапазон контрасту",
+    "description": "Label for primary colour contrast."
   },
   "menuContentThemeColorContrastLeft": {
-    "message": "Контрастний початок"
+    "message": "Контрастний початок",
+    "description": "Range for primary colour contrast left side."
   },
   "menuContentThemeColorContrastRight": {
-    "message": "Контрастний кінець"
+    "message": "Контрастний кінець",
+    "description": "Range for primary colour contrast right side."
   },
   "menuContentThemeColorContrastHelperPara1": {
-    "message": "Перемістіть елементи керування діапазоном контрастності близько один до одного, щоб виглядати приглушеним."
+    "message": "Перемістіть елементи керування діапазоном контрастності близько один до одного, щоб виглядати приглушеним.",
+    "description": "Helper text for primary colour contrast."
   },
   "menuContentThemeColorContrastHelperPara2": {
-    "message": "Перемістіть елементи керування діапазоном контрастності далеко один від одного, щоб отримати чіткий яскравий вигляд."
+    "message": "Перемістіть елементи керування діапазоном контрастності далеко один від одного, щоб отримати чіткий яскравий вигляд.",
+    "description": "Helper text for primary colour contrast."
   },
   "menuContentThemeAccentPresetColorGrey": {
-    "message": "Сірий"
+    "message": "Сірий",
+    "description": "Label for grey preset accent colour."
   },
   "menuContentThemeAccentPresetColorRed": {
-    "message": "червоний"
+    "message": "червоний",
+    "description": "Label for red preset accent colour."
   },
   "menuContentThemeAccentPresetColorOrange": {
-    "message": "Помаранчевий"
+    "message": "Помаранчевий",
+    "description": "Label for orange preset accent colour."
   },
   "menuContentThemeAccentPresetColorYellow": {
-    "message": "Жовтий"
+    "message": "Жовтий",
+    "description": "Label for yellow preset accent colour."
   },
   "menuContentThemeAccentPresetColorLime": {
-    "message": "Вапно"
+    "message": "Вапно",
+    "description": "Label for lime preset accent colour."
   },
   "menuContentThemeAccentPresetColorGreen": {
-    "message": "Зелений"
+    "message": "Зелений",
+    "description": "Label for green preset accent colour."
   },
   "menuContentThemeAccentPresetColorAqua": {
-    "message": "Аква"
+    "message": "Аква",
+    "description": "Label for aqua preset accent colour."
   },
   "menuContentThemeAccentPresetColorCyan": {
-    "message": "блакитний"
+    "message": "блакитний",
+    "description": "Label for cyan preset accent colour."
   },
   "menuContentThemeAccentPresetColorTeal": {
-    "message": "Чирково-зелений"
+    "message": "Чирково-зелений",
+    "description": "Label for teal preset accent colour."
   },
   "menuContentThemeAccentPresetColorBlue": {
-    "message": "Синій"
+    "message": "Синій",
+    "description": "Label for blue preset accent colour."
   },
   "menuContentThemeAccentPresetColorPurple": {
-    "message": "фіолетовий"
+    "message": "фіолетовий",
+    "description": "Label for purple preset accent colour."
   },
   "menuContentThemeAccentPresetColorMagenta": {
-    "message": "Пурпурний"
+    "message": "Пурпурний",
+    "description": "Label for magenta preset accent colour."
   },
   "menuContentThemeAccentPresetColorFuchsia": {
-    "message": "Фуксія"
+    "message": "Фуксія",
+    "description": "Label for fuchsia preset accent colour."
   },
   "menuContentThemeAccentPresetModifierLightLevel3": {
-    "message": "Супер додаткове світло"
+    "message": "Супер додаткове світло",
+    "description": "Label for preset accent colour light level 3."
   },
   "menuContentThemeAccentPresetModifierLightLevel2": {
-    "message": "Додаткове світло"
+    "message": "Додаткове світло",
+    "description": "Label for preset accent colour light level 2."
   },
   "menuContentThemeAccentPresetModifierLightLevel1": {
-    "message": "Світло"
+    "message": "Світло",
+    "description": "Label for preset accent colour light level 1."
   },
   "menuContentThemeAccentPresetModifierDarkLevel3": {
-    "message": "Супер надзвичайно темний"
+    "message": "Супер надзвичайно темний",
+    "description": "Label for preset accent colour dark level 3."
   },
   "menuContentThemeAccentPresetModifierDarkLevel2": {
-    "message": "Дуже темний"
+    "message": "Дуже темний",
+    "description": "Label for preset accent colour dark level 2."
   },
   "menuContentThemeAccentPresetModifierDarkLevel1": {
-    "message": "Темний"
+    "message": "Темний",
+    "description": "Label for preset accent colour dark level 1."
   },
   "menuContentThemeAccentColor": {
-    "message": "Акцентний колір"
+    "message": "Акцентний колір",
+    "description": "Label for accent colour."
   },
   "menuContentThemeAccentRandomActive": {
-    "message": "Випадковий колір акценту при завантаженні/оновленні"
+    "message": "Випадковий колір акценту при завантаженні/оновленні",
+    "description": "Checkbox for random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleAny": {
-    "message": "Будь-який"
+    "message": "Будь-який",
+    "description": "Radio for any random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleLight": {
-    "message": "Світло"
+    "message": "Світло",
+    "description": "Radio for light random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleDark": {
-    "message": "Темний"
+    "message": "Темний",
+    "description": "Radio for dark random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStylePastel": {
-    "message": "Пастель"
+    "message": "Пастель",
+    "description": "Radio for pastel random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomStyleSaturated": {
-    "message": "Насичений"
+    "message": "Насичений",
+    "description": "Radio for saturated random accent colour on load or refresh."
   },
   "menuContentThemeAccentRandomRandomise": {
-    "message": "Рандомізуйте зараз"
+    "message": "Рандомізуйте зараз",
+    "description": "Button to randomise accent colour now."
   },
   "menuContentThemeAccentCycleActive": {
-    "message": "Автоматична зміна відтінку акценту"
+    "message": "Автоматична зміна відтінку акценту",
+    "description": "Checkbox for cycled accent colour."
   },
   "menuContentThemeAccentCycleSpeed": {
-    "message": "Затримка зміни"
+    "message": "Затримка зміни",
+    "description": "Range for cycled accent colour speed."
   },
   "menuContentThemeAccentCycleStep": {
-    "message": "Змінити кроки"
+    "message": "Змінити кроки",
+    "description": "Range for cycled accent colour steps."
   },
   "menuContentThemeAccentCycleAlert": {
-    "message": "Будьте обережні, оскільки швидка зміна відтінку Accent може спричинити проблеми з продуктивністю."
+    "message": "Будьте обережні, оскільки швидка зміна відтінку Accent може спричинити проблеми з продуктивністю.",
+    "description": "Alert for cycled accent colour."
   },
   "menuContentThemeAccentCycleHelperPara1": {
-    "message": "Автоматична зміна відтінку акценту не працюватиме, якщо колір акценту є сірим або чорним."
+    "message": "Автоматична зміна відтінку акценту не працюватиме, якщо колір акценту є сірим або чорним.",
+    "description": "Helper text for cycled accent colour."
   },
   "menuContentThemeFontDisplayNameLabel": {
-    "message": "Шрифт дисплея"
+    "message": "Шрифт дисплея",
+    "description": "Input for display font name."
   },
   "menuContentThemeFontDisplayNamePlaceholder": {
-    "message": "Назва шрифту Google"
+    "message": "Назва шрифту Google",
+    "description": "Placeholder for display font name."
   },
   "menuContentThemeFontDisplayNameHelperPara1": {
-    "message": "Використовуйте шрифт Google, щоб налаштувати годинник, дату, назви груп і літери закладок."
+    "message": "Використовуйте шрифт Google, щоб налаштувати годинник, дату, назви груп і літери закладок.",
+    "description": "Helper text for display font name."
   },
   "menuContentThemeFontDisplayNameHelperLink": {
-    "message": "Знайдіть шрифт Google"
+    "message": "Знайдіть шрифт Google",
+    "description": "Link to google fonts."
   },
   "menuContentThemeFontDisplayNameHelperPara2": {
-    "message": "Додайте назву шрифту, як вона відображається у Google Fonts, включаючи великі літери та пробіли, наприклад: введіть «Fredoka One» або «Kanit»."
+    "message": "Додайте назву шрифту, як вона відображається у Google Fonts, включаючи великі літери та пробіли, наприклад: введіть «Fredoka One» або «Kanit».",
+    "description": "Helper text for display font name."
   },
   "menuContentThemeFontDisplayNameHelperPara3": {
-    "message": "Очистіть поле, щоб використовувати шрифт за замовчуванням «Fjalla One»."
+    "message": "Очистіть поле, щоб використовувати шрифт за замовчуванням «Fjalla One».",
+    "description": "Helper text for display font name."
   },
   "menuContentThemeFontDisplayWeightLabel": {
-    "message": "Вага шрифту"
+    "message": "Вага шрифту",
+    "description": "Label for display font weight."
   },
   "menuContentThemeFontDisplayWeightLight": {
-    "message": "Світло"
+    "message": "Світло",
+    "description": "Button for light weight display font."
   },
   "menuContentThemeFontDisplayWeightRegular": {
-    "message": "Звичайний"
+    "message": "Звичайний",
+    "description": "Button for regular weight display font."
   },
   "menuContentThemeFontDisplayWeightBold": {
-    "message": "Жирний"
+    "message": "Жирний",
+    "description": "Button for bold weight display font."
   },
   "menuContentThemeFontDisplayWeightHelperPara1": {
-    "message": "Не всі шрифти підтримують усі ваги. Перегляньте сторінку шрифтів Google, щоб дізнатися, які з них доступні."
+    "message": "Не всі шрифти підтримують усі ваги. Перегляньте сторінку шрифтів Google, щоб дізнатися, які з них доступні.",
+    "description": "Helper text for display font weight."
   },
   "menuContentThemeFontDisplayStyleNormal": {
-    "message": "Нормальний"
+    "message": "Нормальний",
+    "description": "Radio for normal display font style."
   },
   "menuContentThemeFontDisplayStyleItalic": {
-    "message": "Курсив"
+    "message": "Курсив",
+    "description": "Radio for italic display font style."
   },
   "menuContentThemeFontUiNameLabel": {
-    "message": "Шрифт інтерфейсу користувача"
+    "message": "Шрифт інтерфейсу користувача",
+    "description": "Input for UI font name."
   },
   "menuContentThemeFontUiNamePlaceholder": {
-    "message": "Назва шрифту Google"
+    "message": "Назва шрифту Google",
+    "description": "Placeholder for UI font name."
   },
   "menuContentThemeFontUiNameHelperPara1": {
-    "message": "Використовуйте шрифт Google, щоб налаштувати назву закладки, URL-адресу та елементи форми."
+    "message": "Використовуйте шрифт Google, щоб налаштувати назву закладки, URL-адресу та елементи форми.",
+    "description": "Helper text for UI font name."
   },
   "menuContentThemeFontUiNameHelperLink": {
-    "message": "Знайдіть шрифт Google"
+    "message": "Знайдіть шрифт Google",
+    "description": "Link to google fonts."
   },
   "menuContentThemeFontUiNameHelperPara2": {
-    "message": "Додайте назву шрифту, як вона відображається у Google Fonts, включаючи великі літери та пробіли, наприклад: введіть \"Roboto\", \"Source Sans Pro\" або \"Noto Sans\"."
+    "message": "Додайте назву шрифту, як вона відображається у Google Fonts, включаючи великі літери та пробіли, наприклад: введіть \"Roboto\", \"Source Sans Pro\" або \"Noto Sans\".",
+    "description": "Helper text for UI font name."
   },
   "menuContentThemeFontUiNameHelperPara3": {
-    "message": "Очистіть поле, щоб використовувати шрифт за замовчуванням «Open Sans»."
+    "message": "Очистіть поле, щоб використовувати шрифт за замовчуванням «Open Sans».",
+    "description": "Helper text for UI font name."
   },
   "menuContentThemeFontUiWeightLabel": {
-    "message": "Вага шрифту"
+    "message": "Вага шрифту",
+    "description": "Label for UI font weight."
   },
   "menuContentThemeFontUiWeightLight": {
-    "message": "Світло"
+    "message": "Світло",
+    "description": "Button for light weight UI font."
   },
   "menuContentThemeFontUiWeightRegular": {
-    "message": "Звичайний"
+    "message": "Звичайний",
+    "description": "Button for regular weight UI font."
   },
   "menuContentThemeFontUiWeightBold": {
-    "message": "Жирний"
+    "message": "Жирний",
+    "description": "Button for bold weight UI font."
   },
   "menuContentThemeFontUiWeightHelperPara1": {
-    "message": "Не всі шрифти підтримують усі ваги. Перегляньте сторінку шрифтів Google, щоб дізнатися, які з них доступні."
+    "message": "Не всі шрифти підтримують усі ваги. Перегляньте сторінку шрифтів Google, щоб дізнатися, які з них доступні.",
+    "description": "Helper text for UI font weight."
   },
   "menuContentThemeFontUiStyleNormal": {
-    "message": "Нормальний"
+    "message": "Нормальний",
+    "description": "Radio for normal UI font style."
   },
   "menuContentThemeFontUiStyleItalic": {
-    "message": "Курсив"
+    "message": "Курсив",
+    "description": "Radio for italic UI font style."
   },
   "menuContentThemeRadius": {
-    "message": "Кутовий радіус"
+    "message": "Кутовий радіус",
+    "description": "Range for radius."
   },
   "menuContentThemeShadow": {
-    "message": "Розмір тіні"
+    "message": "Розмір тіні",
+    "description": "Range for shadow."
   },
   "menuContentThemeShadeOpacity": {
-    "message": "Непрозорість тіні"
+    "message": "Непрозорість тіні",
+    "description": "Range for shade opacity."
   },
   "menuContentThemeShadeBlurLabel": {
-    "message": "Розмиття тіні"
+    "message": "Розмиття тіні",
+    "description": "Range for shade blur."
   },
   "menuContentThemeShadeBlurHelperPara1": {
-    "message": "Підтримується не всіма браузерами."
+    "message": "Підтримується не всіма браузерами.",
+    "description": "Helper text for shade blur."
   },
   "menuContentThemeOpacityGeneralLabel": {
-    "message": "Вся непрозорість"
+    "message": "Вся непрозорість",
+    "description": "Range for all opacity."
   },
   "menuContentThemeOpacityGeneralHelperPara1": {
-    "message": "Змініть непрозорість панелі пошуку, закладок, елементів керування групою та панелі інструментів."
+    "message": "Змініть непрозорість панелі пошуку, закладок, елементів керування групою та панелі інструментів.",
+    "description": "Helper text for all opacity."
   },
   "menuContentThemeOpacityGeneralHelperPara2": {
-    "message": "Непрозорість також можна змінити під час редагування окремих закладок."
+    "message": "Непрозорість також можна змінити під час редагування окремих закладок.",
+    "description": "Helper text for all opacity."
   },
   "menuContentThemeOpacityToolbar": {
-    "message": "Панель інструментів"
+    "message": "Панель інструментів",
+    "description": "Range for toolbar opacity."
   },
   "menuContentThemeOpacityBookmark": {
-    "message": "Закладка"
+    "message": "Закладка",
+    "description": "Range for bookmark opacity."
   },
   "menuContentThemeOpacitySearch": {
-    "message": "Вікно пошуку"
+    "message": "Вікно пошуку",
+    "description": "Range for search opacity."
   },
   "menuContentThemeOpacityGroupToolbar": {
-    "message": "Група інструментів"
+    "message": "Група інструментів",
+    "description": "Range for group toolbar opacity."
   },
   "menuContentThemeBackgroundTypeThemeLabel": {
-    "message": "Фон за темою"
+    "message": "Фон за темою",
+    "description": "Radio for background type theme."
   },
   "menuContentThemeBackgroundTypeThemeDescription": {
-    "message": "Використовуйте колір фону, визначений темою."
+    "message": "Використовуйте колір фону, визначений темою.",
+    "description": "Description for background type theme."
   },
   "menuContentThemeBackgroundTypeAccentLabel": {
-    "message": "Фон за акцентом"
+    "message": "Фон за акцентом",
+    "description": "Radio for background type accent."
   },
   "menuContentThemeBackgroundTypeAccentDescription": {
-    "message": "Використовуйте колір акценту для фону."
+    "message": "Використовуйте колір акценту для фону.",
+    "description": "Description for background type accent."
   },
   "menuContentThemeBackgroundTypeColor": {
-    "message": "Індивідуальний колір"
+    "message": "Індивідуальний колір",
+    "description": "Radio for background type colour."
   },
   "menuContentThemeBackgroundTypeGradient": {
-    "message": "Градієнт"
+    "message": "Градієнт",
+    "description": "Radio for background type gradient."
   },
   "menuContentThemeBackgroundTypeImage": {
-    "message": "Зображення"
+    "message": "Зображення",
+    "description": "Radio for background type image."
   },
   "menuContentThemeBackgroundTypeVideo": {
-    "message": "Відео"
+    "message": "Відео",
+    "description": "Radio for background type video."
   },
   "menuContentThemeBackgroundColor": {
-    "message": "Колір фону"
+    "message": "Колір фону",
+    "description": "Label for background colour."
   },
   "menuContentThemeBackgroundGradientAngle": {
-    "message": "Кут градієнта фону"
+    "message": "Кут градієнта фону",
+    "description": "Label for background gradient angle."
   },
   "menuContentThemeBackgroundGradientLeft": {
-    "message": "Початок градієнта фону"
+    "message": "Початок градієнта фону",
+    "description": "Range for background gradient angle left."
   },
   "menuContentThemeBackgroundGradientRight": {
-    "message": "Закінчення градієнта фону"
+    "message": "Закінчення градієнта фону",
+    "description": "Range for background gradient angle right."
   },
   "menuContentThemeBackgroundImageAlertPara1": {
-    "message": "Місцеві зображення більше не можна використовувати. Зображення мають бути розміщені десь в Інтернеті."
+    "message": "Місцеві зображення більше не можна використовувати. Зображення мають бути розміщені десь в Інтернеті.",
+    "description": "Alert for image background."
   },
   "menuContentThemeBackgroundImageAlertPara2": {
-    "message": "Чому це змінилося?"
+    "message": "Чому це змінилося?",
+    "description": "Alert for image background."
   },
   "menuContentThemeBackgroundImageUrlLabel": {
-    "message": "URL"
+    "message": "URL",
+    "description": "Input for background image URL."
   },
   "menuContentThemeBackgroundImageUrlPlaceholder": {
-    "message": "https://www.example.com/image.jpg"
+    "message": "https://www.example.com/image.jpg",
+    "description": "Placeholder for background image URL."
   },
   "menuContentThemeBackgroundImageUrlHelperPara1": {
-    "message": "Додайте кілька URL-адрес, розділених пробілами або в нових рядках, щоб отримати випадкове фонове зображення під час завантаження."
+    "message": "Додайте кілька URL-адрес, розділених пробілами або в нових рядках, щоб отримати випадкове фонове зображення під час завантаження.",
+    "description": "Helper text for background image."
   },
   "menuContentThemeBackgroundImageUrlHelperPara2": {
-    "message": "Unsplash можна використовувати для випадкових зображень, наприклад:"
+    "message": "Unsplash можна використовувати для випадкових зображень, наприклад:",
+    "description": "Helper text for background image."
   },
   "menuContentThemeBackgroundImageUrlHelperPara3": {
-    "message": "https://source.unsplash.com/random/1920x1080/?ніч, день, небо"
+    "message": "https://source.unsplash.com/random/1920x1080/?ніч, день, небо",
+    "description": "Helper text for background image."
   },
   "menuContentThemeBackgroundImageUrlHelperPara4": {
-    "message": "Змініть параметри після .../random/, щоб отримати додаткові параметри. Час завантаження може відрізнятися."
+    "message": "Змініть параметри після .../random/, щоб отримати додаткові параметри. Час завантаження може відрізнятися.",
+    "description": "Helper text for background image."
   },
   "menuContentThemeBackgroundImageBlur": {
-    "message": "Розмиття"
+    "message": "Розмиття",
+    "description": "Range background image blur."
   },
   "menuContentThemeBackgroundImageGrayscale": {
-    "message": "Відтінки сірого"
+    "message": "Відтінки сірого",
+    "description": "Range background image grayscale."
   },
   "menuContentThemeBackgroundImageScale": {
-    "message": "Масштаб"
+    "message": "Масштаб",
+    "description": "Range background image scale."
   },
   "menuContentThemeBackgroundImageAccent": {
-    "message": "Акцент"
+    "message": "Акцент",
+    "description": "Range background image accent."
   },
   "menuContentThemeBackgroundImageOpacity": {
-    "message": "Непрозорість"
+    "message": "Непрозорість",
+    "description": "Range background image opacity."
   },
   "menuContentThemeBackgroundImageVignetteOpacity": {
-    "message": "Віньєтка"
+    "message": "Віньєтка",
+    "description": "Range for image vignette opacity."
   },
   "menuContentThemeBackgroundImageVignetteRangeLabel": {
-    "message": "Початок і кінець тіні"
+    "message": "Початок і кінець тіні",
+    "description": "Label for image vignette."
   },
   "menuContentThemeBackgroundImageVignetteRangeLeft": {
-    "message": "Кінець тіні"
+    "message": "Кінець тіні",
+    "description": "Range for image vignette left."
   },
   "menuContentThemeBackgroundImageVignetteRangeRight": {
-    "message": "Початок тіні"
+    "message": "Початок тіні",
+    "description": "Range for image vignette right."
   },
   "menuContentThemeBackgroundVideoAlertPara1": {
-    "message": "URL-адреси сторінок YouTube не можна використовувати."
+    "message": "URL-адреси сторінок YouTube не можна використовувати.",
+    "description": "Alert for video background."
   },
   "menuContentThemeBackgroundVideoAlertPara2": {
-    "message": "Як створити посилання на відеофайл."
+    "message": "Як створити посилання на відеофайл.",
+    "description": "Alert for video background."
   },
   "menuContentThemeBackgroundVideoUrlLabel": {
-    "message": "URL"
+    "message": "URL",
+    "description": "Input for background video URL."
   },
   "menuContentThemeBackgroundVideoUrlPlaceholder": {
-    "message": "https://www.example.com/video.mp4"
+    "message": "https://www.example.com/video.mp4",
+    "description": "Placeholder for background video URL."
   },
   "menuContentThemeBackgroundVideoUrlHelperPara1": {
-    "message": "Фонове відео підтримує лише пряму URL-адресу відеофайлу. Підтримує формати MP4 і WebM."
+    "message": "Фонове відео підтримує лише пряму URL-адресу відеофайлу. Підтримує формати MP4 і WebM.",
+    "description": "Helper text for background video."
   },
   "menuContentThemeBackgroundVideoUrlHelperPara2": {
-    "message": "Додайте кілька URL-адрес, розділених пробілами або в нових рядках, для випадкового фонового відео під час завантаження."
+    "message": "Додайте кілька URL-адрес, розділених пробілами або в нових рядках, для випадкового фонового відео під час завантаження.",
+    "description": "Helper text for background video."
   },
   "menuContentThemeBackgroundVideoBlur": {
-    "message": "Розмиття"
+    "message": "Розмиття",
+    "description": "Range background video blur."
   },
   "menuContentThemeBackgroundVideoGrayscale": {
-    "message": "Відтінки сірого"
+    "message": "Відтінки сірого",
+    "description": "Range background video grayscale."
   },
   "menuContentThemeBackgroundVideoScale": {
-    "message": "Масштаб"
+    "message": "Масштаб",
+    "description": "Range background video scale."
   },
   "menuContentThemeBackgroundVideoAccent": {
-    "message": "Акцент"
+    "message": "Акцент",
+    "description": "Range background video accent."
   },
   "menuContentThemeBackgroundVideoOpacity": {
-    "message": "Непрозорість"
+    "message": "Непрозорість",
+    "description": "Range background video opacity."
   },
   "menuContentThemeBackgroundVideoVignetteOpacity": {
-    "message": "Віньєтка"
+    "message": "Віньєтка",
+    "description": "Range for video vignette opacity."
   },
   "menuContentThemeBackgroundVideoVignetteRangeLabel": {
-    "message": "Початок і кінець тіні"
+    "message": "Початок і кінець тіні",
+    "description": "Label for video vignette."
   },
   "menuContentThemeBackgroundVideoVignetteRangeLeft": {
-    "message": "Кінець тіні"
+    "message": "Кінець тіні",
+    "description": "Range for video vignette left."
   },
   "menuContentThemeBackgroundVideoVignetteRangeRight": {
-    "message": "Початок тіні"
+    "message": "Початок тіні",
+    "description": "Range for video vignette right."
   },
   "menuContentThemeLayoutColorLabel": {
-    "message": "Колір фону макета"
+    "message": "Колір фону макета",
+    "description": "Label for layout area colour."
   },
   "menuContentThemeLayoutColorByTransparentLabel": {
-    "message": "Прозорий"
+    "message": "Прозорий",
+    "description": "Radio for transparent layout area background."
   },
   "menuContentThemeLayoutColorByTransparentDescription": {
-    "message": "Немає кольору фону за макетом."
+    "message": "Немає кольору фону за макетом.",
+    "description": "Description for transparent layout area background."
   },
   "menuContentThemeLayoutColorByCustomLabel": {
-    "message": "Індивідуальний колір"
+    "message": "Індивідуальний колір",
+    "description": "Radio for colour layout area background."
   },
   "menuContentThemeLayoutColorByCustomDescription": {
-    "message": "Використовуйте власний колір позаду макета."
+    "message": "Використовуйте власний колір позаду макета.",
+    "description": "Description for colour layout area background."
   },
   "menuContentThemeLayoutColorColor": {
-    "message": "Колір фону макета"
+    "message": "Колір фону макета",
+    "description": "Label for layout area background colour."
   },
   "menuContentThemeLayoutColorOpacity": {
-    "message": "Непрозорість фону"
+    "message": "Непрозорість фону",
+    "description": "Range for layout area background opacity."
   },
   "menuContentThemeLayoutColorBlurLabel": {
-    "message": "Розмиття фону"
+    "message": "Розмиття фону",
+    "description": "Range for layout background blur."
   },
   "menuContentThemeLayoutColorBlurHelperPara1": {
-    "message": "Підтримується не всіма браузерами."
+    "message": "Підтримується не всіма браузерами.",
+    "description": "Description for layout background blur."
   },
   "menuContentThemeLayoutDivider": {
-    "message": "Роздільник між заголовком та областю закладок"
+    "message": "Роздільник між заголовком та областю закладок",
+    "description": "Label for layout divider."
   },
   "menuContentThemeHeaderColorLabel": {
-    "message": "Колір фону заголовка"
+    "message": "Колір фону заголовка",
+    "description": "Label for header area colour."
   },
   "menuContentThemeHeaderColorByTransparentLabel": {
-    "message": "Прозорий"
+    "message": "Прозорий",
+    "description": "Radio for transparent header area background."
   },
   "menuContentThemeHeaderColorByTransparentDescription": {
-    "message": "Немає кольору фону позаду області заголовка."
+    "message": "Немає кольору фону позаду області заголовка.",
+    "description": "Description for transparent header area background."
   },
   "menuContentThemeHeaderColorByCustomLabel": {
-    "message": "Індивідуальний колір"
+    "message": "Індивідуальний колір",
+    "description": "Radio for colour header area background."
   },
   "menuContentThemeHeaderColorByCustomDescription": {
-    "message": "Використовуйте власний колір позаду області заголовка."
+    "message": "Використовуйте власний колір позаду області заголовка.",
+    "description": "Description for colour header area background."
   },
   "menuContentThemeHeaderColorColor": {
-    "message": "Колір фону заголовка"
+    "message": "Колір фону заголовка",
+    "description": "Label for header area background colour."
   },
   "menuContentThemeHeaderColorOpacity": {
-    "message": "Непрозорість фону"
+    "message": "Непрозорість фону",
+    "description": "Range for header area background opacity."
   },
   "menuContentThemeBookmarkColorLabel": {
-    "message": "Колір фону закладки"
+    "message": "Колір фону закладки",
+    "description": "Label for bookmark area colour."
   },
   "menuContentThemeBookmarkColorByTransparentLabel": {
-    "message": "Прозорий"
+    "message": "Прозорий",
+    "description": "Radio for transparent bookmark area background."
   },
   "menuContentThemeBookmarkColorByTransparentDescription": {
-    "message": "Немає кольору фону за областю закладок."
+    "message": "Немає кольору фону за областю закладок.",
+    "description": "Description for transparent bookmark area background."
   },
   "menuContentThemeBookmarkColorByCustomLabel": {
-    "message": "Індивідуальний колір"
+    "message": "Індивідуальний колір",
+    "description": "Radio for colour bookmark area background."
   },
   "menuContentThemeBookmarkColorByCustomDescription": {
-    "message": "Використовуйте власний колір позаду області закладок."
+    "message": "Використовуйте власний колір позаду області закладок.",
+    "description": "Description for colour bookmark area background."
   },
   "menuContentThemeBookmarkColorColor": {
-    "message": "Колір фону закладки"
+    "message": "Колір фону закладки",
+    "description": "Label for bookmark area background colour."
   },
   "menuContentThemeBookmarkColorOpacity": {
-    "message": "Непрозорість фону"
+    "message": "Непрозорість фону",
+    "description": "Range for bookmark area background opacity."
   },
   "menuContentThemeBookmarkItemBorderLabel": {
-    "message": "Закладка кордону"
+    "message": "Закладка кордону",
+    "description": "Label for bookmark item border."
   },
   "menuContentThemeBookmarkItemBorderHelperPara1": {
-    "message": "Межу закладки також можна змінити під час редагування окремих закладок."
+    "message": "Межу закладки також можна змінити під час редагування окремих закладок.",
+    "description": "Helper text for bookmark border."
   },
   "menuContentThemeBookmarkItemBorderHelperPara2": {
-    "message": "Колір межі визначається акцентом, який також можна змінити під час редагування окремих закладок."
+    "message": "Колір межі визначається акцентом, який також можна змінити під час редагування окремих закладок.",
+    "description": "Helper text for bookmark border."
   },
   "menuContentThemeBookmarkItemRainbowAdd": {
-    "message": "Додайте унікальний акцент до кожної закладки"
+    "message": "Додайте унікальний акцент до кожної закладки",
+    "description": "Button to add a unique accent colour to each bookmark."
   },
   "menuContentThemeBookmarkItemRainbowRemove": {
-    "message": "Видаліть усі заміни акцентів"
+    "message": "Видаліть усі заміни акцентів",
+    "description": "Button to remove a unique accent colour to each bookmark."
   },
   "menuContentThemeBookmarkItemRainbowHelperPara1": {
-    "message": "Закладка спеціального акценту також можна змінити під час редагування окремих закладок."
+    "message": "Закладка спеціального акценту також можна змінити під час редагування окремих закладок.",
+    "description": "Helper text for unique accent colours for each bookmark."
   },
   "menuContentLayoutScalingSize": {
-    "message": "Глобальний розмір"
+    "message": "Глобальний розмір",
+    "description": "Label for layout scaling."
   },
   "menuContentLayoutAreaWidth": {
-    "message": "Ширина області макету"
+    "message": "Ширина області макету",
+    "description": "Range for layout area width."
   },
   "menuContentLayoutAreaHeaderWidth": {
-    "message": "Ширина області заголовка"
+    "message": "Ширина області заголовка",
+    "description": "Label for header area width."
   },
   "menuContentLayoutAreaHeaderJustifyLabel": {
-    "message": "Вирівнювання області заголовка"
+    "message": "Вирівнювання області заголовка",
+    "description": "Label for header area justify."
   },
   "menuContentLayoutAreaHeaderJustifyLeft": {
-    "message": "Ліворуч"
+    "message": "Ліворуч",
+    "description": "Radio to justify the header area left."
   },
   "menuContentLayoutAreaHeaderJustifyCenter": {
-    "message": "Центр"
+    "message": "Центр",
+    "description": "Radio to justify the header area centre."
   },
   "menuContentLayoutAreaHeaderJustifyRight": {
-    "message": "Правильно"
+    "message": "Правильно",
+    "description": "Radio to justify the header area right."
   },
   "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
-    "message": "Ефекти можуть бути невидимими, якщо область заголовка має повну ширину."
+    "message": "Ефекти можуть бути невидимими, якщо область заголовка має повну ширину.",
+    "description": "Helper text for header area justify."
   },
   "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
-    "message": "Доступно лише тоді, коли «Напрямок макета» має значення «Вертикальний» і відображаються елементи заголовка."
+    "message": "Доступно лише тоді, коли «Напрямок макета» має значення «Вертикальний» і відображаються елементи заголовка.",
+    "description": "Helper text for header area justify."
   },
   "menuContentLayoutAreaBookmarkWidth": {
-    "message": "Ширина області закладки"
+    "message": "Ширина області закладки",
+    "description": "Label for width of the bookmark area."
   },
   "menuContentLayoutAreaBookmarkJustifyLabel": {
-    "message": "Вирівнювання області закладок"
+    "message": "Вирівнювання області закладок",
+    "description": "Label for justify bookmark area."
   },
   "menuContentLayoutAreaBookmarkJustifyLeft": {
-    "message": "Ліворуч"
+    "message": "Ліворуч",
+    "description": "Radio to justify the bookmark area left."
   },
   "menuContentLayoutAreaBookmarkJustifyCenter": {
-    "message": "Центр"
+    "message": "Центр",
+    "description": "Radio to justify the bookmark area centre."
   },
   "menuContentLayoutAreaBookmarkJustifyRight": {
-    "message": "Правильно"
+    "message": "Правильно",
+    "description": "Radio to justify the bookmark area right."
   },
   "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
-    "message": "Ефекти можуть бути невидимими, якщо область закладок має повну ширину."
+    "message": "Ефекти можуть бути невидимими, якщо область закладок має повну ширину.",
+    "description": "Helper text for bookmark area justify."
   },
   "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
-    "message": "Доступно лише тоді, коли «Напрямок макета» має значення «Вертикальний» і відображаються елементи заголовка."
+    "message": "Доступно лише тоді, коли «Напрямок макета» має значення «Вертикальний» і відображаються елементи заголовка.",
+    "description": "Helper text for bookmark area justify."
   },
   "menuContentLayoutPadding": {
-    "message": "Пробіл навколо заголовка та області закладок"
+    "message": "Пробіл навколо заголовка та області закладок",
+    "description": "Range for layout padding."
   },
   "menuContentLayoutGutter": {
-    "message": "Пробіл між елементами заголовка та закладки"
+    "message": "Пробіл між елементами заголовка та закладки",
+    "description": "Range for layout gutter."
   },
   "menuContentLayoutAlignmentLabel": {
-    "message": "Вирівнювання території"
+    "message": "Вирівнювання території",
+    "description": "Label for layout alignment."
   },
   "menuContentLayoutAlignmentTopLeft": {
-    "message": "Зліва вгорі"
+    "message": "Зліва вгорі",
+    "description": "Radio for layout alignment top left."
   },
   "menuContentLayoutAlignmentTopCenter": {
-    "message": "Верхній центр"
+    "message": "Верхній центр",
+    "description": "Radio for layout alignment top centre."
   },
   "menuContentLayoutAlignmentTopRight": {
-    "message": "Верхній правий"
+    "message": "Верхній правий",
+    "description": "Radio for layout alignment top right."
   },
   "menuContentLayoutAlignmentCenterLeft": {
-    "message": "Центр ліворуч"
+    "message": "Центр ліворуч",
+    "description": "Radio for layout alignment centre left."
   },
   "menuContentLayoutAlignmentCenterCenter": {
-    "message": "Центр Центр"
+    "message": "Центр Центр",
+    "description": "Radio for layout alignment centre centre."
   },
   "menuContentLayoutAlignmentCenterRight": {
-    "message": "Центр праворуч"
+    "message": "Центр праворуч",
+    "description": "Radio for layout alignment centre right."
   },
   "menuContentLayoutAlignmentBottomLeft": {
-    "message": "Внизу зліва"
+    "message": "Внизу зліва",
+    "description": "Radio for layout alignment bottom left."
   },
   "menuContentLayoutAlignmentBottomCenter": {
-    "message": "Нижній центр"
+    "message": "Нижній центр",
+    "description": "Radio for layout alignment bottom centre."
   },
   "menuContentLayoutAlignmentBottomRight": {
-    "message": "Внизу справа"
+    "message": "Внизу справа",
+    "description": "Radio for layout alignment bottom right."
   },
   "menuContentLayoutDirectionHorizontalLabel": {
-    "message": "Вирівняти по горизонталі"
+    "message": "Вирівняти по горизонталі",
+    "description": "Radio for layout direction horizontal."
   },
   "menuContentLayoutDirectionHorizontalDescription": {
-    "message": "Складіть верхній колонтитул і закладки в один ряд."
+    "message": "Складіть верхній колонтитул і закладки в один ряд.",
+    "description": "Helper text for layout direction horizontal."
   },
   "menuContentLayoutDirectionVerticalLabel": {
-    "message": "Вирівняти по вертикалі"
+    "message": "Вирівняти по вертикалі",
+    "description": "Radio for layout direction vertical."
   },
   "menuContentLayoutDirectionVerticalDescription": {
-    "message": "Розмістіть заголовок і закладки в стовпці один над одним."
+    "message": "Розмістіть заголовок і закладки в стовпці один над одним.",
+    "description": "Helper text for layout direction vertical."
   },
   "menuContentLayoutOrderHeaderBookmarkLabel": {
-    "message": "Заголовок, а потім Закладки"
+    "message": "Заголовок, а потім Закладки",
+    "description": "Radio for layout order header then bookmarks."
   },
   "menuContentLayoutOrderHeaderBookmarkDescription": {
-    "message": "Упорядкуйте, щоб область заголовка відображалася перед областю закладок."
+    "message": "Упорядкуйте, щоб область заголовка відображалася перед областю закладок.",
+    "description": "Helper text for layout order header then bookmarks."
   },
   "menuContentLayoutOrderBookmarkHeaderLabel": {
-    "message": "Закладки, а потім заголовок"
+    "message": "Закладки, а потім заголовок",
+    "description": "Radio for layout order bookmarks then header."
   },
   "menuContentLayoutOrderBookmarkHeaderDescription": {
-    "message": "Упорядкуйте, щоб область закладок з’явилася перед областю заголовка."
+    "message": "Упорядкуйте, щоб область закладок з’явилася перед областю заголовка.",
+    "description": "Helper text for layout order bookmarks then header."
   },
   "menuContentLayoutPageTitleLabel": {
-    "message": "Назва"
+    "message": "Назва",
+    "description": "Label for page title."
   },
   "menuContentLayoutPageTitlePlaceholder": {
-    "message": "Нова вкладка"
+    "message": "Нова вкладка",
+    "description": "Input for page title."
   },
   "menuContentLayoutPageFaviconLabel": {
-    "message": "URL-адреса значка Favicon"
+    "message": "URL-адреса значка Favicon",
+    "description": "Label for favicon URL."
   },
   "menuContentLayoutPageFaviconPlaceholder": {
-    "message": "https://www.example.com/favicon.svg"
+    "message": "https://www.example.com/favicon.svg",
+    "description": "Placeholder for favicon URL."
   },
   "menuContentLayoutPageFaviconHelperPara1": {
-    "message": "Підтримується не всіма браузерами."
+    "message": "Підтримується не всіма браузерами.",
+    "description": "Input for favicon URL."
   },
   "menuContentLayoutPageScrollbarLabel": {
-    "message": "Прокрутки"
+    "message": "Прокрутки",
+    "description": "Label for page scrollbar."
   },
   "menuContentLayoutPageScrollbarAuto": {
-    "message": "Авто"
+    "message": "Авто",
+    "description": "Radio for page scrollbar auto."
   },
   "menuContentLayoutPageScrollbarThin": {
-    "message": "Тонкий"
+    "message": "Тонкий",
+    "description": "Radio for page scrollbar thin."
   },
   "menuContentLayoutPageScrollbarNone": {
-    "message": "Прихований"
+    "message": "Прихований",
+    "description": "Radio for page scrollbar none."
   },
   "menuContentLayoutPageScrollbarHelperPara1": {
-    "message": "Підтримується не всіма браузерами."
+    "message": "Підтримується не всіма браузерами.",
+    "description": "Helper text for page scrollbar."
   },
   "menuContentLayoutPageOverscrollActive": {
-    "message": "Прокрутіть кінець"
+    "message": "Прокрутіть кінець",
+    "description": "Checkbox for layout page overscroll."
   },
   "menuContentLayoutPageOverscrollUnblurLabel": {
-    "message": "Розмийте фонове зображення або відео"
+    "message": "Розмийте фонове зображення або відео",
+    "description": "Label for background image or video unblur on overscroll."
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
-    "message": "Фонове зображення або відео розмиватиметься, якщо їх прокрутити донизу сторінки."
+    "message": "Фонове зображення або відео розмиватиметься, якщо їх прокрутити донизу сторінки.",
+    "description": "Helper text for background image or video unblur on overscroll."
   },
   "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
-    "message": "Розмиття зображення або відео можна знайти в розділі Фон теми."
+    "message": "Розмиття зображення або відео можна знайти в розділі Фон теми.",
+    "description": "Helper text for background image or video unblur on overscroll."
   },
   "menuContentHeaderAlignmentJustifyLabel": {
-    "message": "Вирівнювання елементів заголовка"
+    "message": "Вирівнювання елементів заголовка",
+    "description": "Label to justify header items."
   },
   "menuContentHeaderAlignmentJustifyLeft": {
-    "message": "Ліворуч"
+    "message": "Ліворуч",
+    "description": "Label to justify header items left."
   },
   "menuContentHeaderAlignmentJustifyCenter": {
-    "message": "Центр"
+    "message": "Центр",
+    "description": "Label to justify header items centre."
   },
   "menuContentHeaderAlignmentJustifyRight": {
-    "message": "Правильно"
+    "message": "Правильно",
+    "description": "Label to justify header items right."
   },
   "menuContentHeaderAlignmentHelperPara1": {
-    "message": "Ефекти можуть бути невидимими, якщо розмір вікна пошуку встановлено на Авто і збільшується, щоб заповнити доступний простір."
+    "message": "Ефекти можуть бути невидимими, якщо розмір вікна пошуку встановлено на Авто і збільшується, щоб заповнити доступний простір.",
+    "description": "Helper text to justify header items."
   },
   "menuContentHeaderGreetingShow": {
-    "message": "Показати привітання"
+    "message": "Показати привітання",
+    "description": "Checkbox to show header greeting."
   },
   "menuContentHeaderGreetingSize": {
-    "message": "Розмір"
+    "message": "Розмір",
+    "description": "Range for header greeting size."
   },
   "menuContentHeaderGreetingNewLineLabel": {
-    "message": "Нова лінія"
+    "message": "Нова лінія",
+    "description": "Checkbox to force header greeting onto a new line."
   },
   "menuContentHeaderGreetingNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка.",
+    "description": "Description for forcing header greeting onto a new line."
   },
   "menuContentHeaderGreetingTypeLabel": {
-    "message": "Формулювання"
+    "message": "Формулювання",
+    "description": "Label for header greeting."
   },
   "menuContentHeaderGreetingTypeGood": {
-    "message": "\"Good morning...\""
+    "message": "\"Good morning...\"",
+    "description": "Radio for \"Good morning\" header greeting."
   },
   "menuContentHeaderGreetingTypeHello": {
-    "message": "\"Hello...\""
+    "message": "\"Hello...\"",
+    "description": "Radio for \"Hello\" header greeting."
   },
   "menuContentHeaderGreetingTypeHi": {
-    "message": "\"Hi...\""
+    "message": "\"Hi...\"",
+    "description": "Radio for \"Hi\" header greeting."
   },
   "menuContentHeaderGreetingTypeNoneLabel": {
-    "message": "Жодного"
+    "message": "Жодного",
+    "description": "Radio for no header greeting."
   },
   "menuContentHeaderGreetingTypeNoneDescription": {
-    "message": "Корисно для відображення лише імені."
+    "message": "Корисно для відображення лише імені.",
+    "description": "Description for no header greeting."
   },
   "menuContentHeaderGreetingTypeCustomLabel": {
-    "message": "На замовлення"
+    "message": "На замовлення",
+    "description": "Radio for custom header greeting."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
-    "message": "Використовуйте власне привітання."
+    "message": "Використовуйте власне привітання.",
+    "description": "Description for custom header greeting."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
-    "message": "За замовчуванням значення \"Good morning...\", якщо не заповнено."
+    "message": "За замовчуванням значення \"Good morning...\", якщо не заповнено.",
+    "description": "Description for custom header greeting."
   },
   "menuContentHeaderGreetingCustomLabel": {
-    "message": "Персональний текст привітання"
+    "message": "Персональний текст привітання",
+    "description": "Label for custom header greeting."
   },
   "menuContentHeaderGreetingCustomPlaceholder": {
-    "message": "Привіт"
+    "message": "Привіт",
+    "description": "Placeholder for custom header greeting."
   },
   "menuContentHeaderGreetingNameLabel": {
-    "message": "Ім'я"
+    "message": "Ім'я",
+    "description": "Input for header greeting name."
   },
   "menuContentHeaderGreetingNamePlaceholder": {
-    "message": "Псевдонім, псевдонім або ім’я супергероя"
+    "message": "Псевдонім, псевдонім або ім’я супергероя",
+    "description": "Placeholder for header greeting name."
   },
   "menuContentHeaderTransitionalShowLabel": {
-    "message": "Показати перехідні слова"
+    "message": "Показати перехідні слова",
+    "description": "Checkbox to show header transitional text."
   },
   "menuContentHeaderTransitionalShowHelperPara1": {
-    "message": "Доступно лише тоді, коли відображається дата або час."
+    "message": "Доступно лише тоді, коли відображається дата або час.",
+    "description": "Helper text for header transitional text."
   },
   "menuContentHeaderTransitionalTypeLabel": {
-    "message": "Формулювання"
+    "message": "Формулювання",
+    "description": "Label for transitional text type."
   },
   "menuContentHeaderTransitionalTypeTimeAndDate": {
-    "message": "\"The time and date is\""
+    "message": "\"The time and date is\"",
+    "description": "Radio for \"The time and date is\" transitional text."
   },
   "menuContentHeaderTransitionalTypeIts": {
-    "message": "\"It's\""
+    "message": "\"It's\"",
+    "description": "Radio for \"It's \" transitional text."
   },
   "menuContentHeaderTransitionalSize": {
-    "message": "Розмір"
+    "message": "Розмір",
+    "description": "Range for transitional text size."
   },
   "menuContentHeaderTransitionalNewLineLabel": {
-    "message": "Нова лінія"
+    "message": "Нова лінія",
+    "description": "Checkbox to force transitional text onto a new line."
   },
   "menuContentHeaderTransitionalNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка.",
+    "description": "Description for forcing transitional text onto a new line."
   },
   "menuContentHeaderClockHourShow": {
-    "message": "Показати години"
+    "message": "Показати години",
+    "description": "Checkbox for clock hour."
   },
   "menuContentHeaderClockHourDisplayNumber": {
-    "message": "Як число"
+    "message": "Як число",
+    "description": "Radio for clock hour as numbers."
   },
   "menuContentHeaderClockHourDisplayWord": {
-    "message": "Як слово"
+    "message": "Як слово",
+    "description": "Radio for clock hour as words."
   },
   "menuContentHeaderClockMinuteShow": {
-    "message": "Показати хвилини"
+    "message": "Показати хвилини",
+    "description": "Checkbox for clock minutes."
   },
   "menuContentHeaderClockMinuteDisplayNumber": {
-    "message": "Як число"
+    "message": "Як число",
+    "description": "Radio for clock minutes as numbers."
   },
   "menuContentHeaderClockMinuteDisplayWord": {
-    "message": "Як слово"
+    "message": "Як слово",
+    "description": "Radio for clock minutes as words."
   },
   "menuContentHeaderClockSecondShow": {
-    "message": "Показати секунди"
+    "message": "Показати секунди",
+    "description": "Checkbox for clock seconds."
   },
   "menuContentHeaderClockSecondDisplayNumber": {
-    "message": "Як число"
+    "message": "Як число",
+    "description": "Radio for clock seconds as numbers."
   },
   "menuContentHeaderClockSecondDisplayWord": {
-    "message": "Як слово"
+    "message": "Як слово",
+    "description": "Radio for clock seconds as words."
   },
   "menuContentHeaderClockSeparatorShow": {
-    "message": "Показати роздільник"
+    "message": "Показати роздільник",
+    "description": "Checkbox for clock separator."
   },
   "menuContentHeaderClockSeparatorLabel": {
-    "message": "Символ-роздільник"
+    "message": "Символ-роздільник",
+    "description": "Label for clock separator."
   },
   "menuContentHeaderClockSeparatorPlaceholder": {
-    "message": ":"
+    "message": ":",
+    "description": "Placeholder for clock separator."
   },
   "menuContentHeaderClockHour24": {
-    "message": "24 години"
+    "message": "24 години",
+    "description": "Checkbox for 24 hour clock."
   },
   "menuContentHeaderClockMeridiem": {
-    "message": "ДООБІДУ, ПІСЛЯ ОБІДУ"
+    "message": "ДООБІДУ, ПІСЛЯ ОБІДУ",
+    "description": "Checkbox for meridiem clock."
   },
   "menuContentHeaderClockSize": {
-    "message": "Розмір"
+    "message": "Розмір",
+    "description": "Range for clock size."
   },
   "menuContentHeaderClockNewLineLabel": {
-    "message": "Нова лінія"
+    "message": "Нова лінія",
+    "description": "Checkbox to force clock onto a new line."
   },
   "menuContentHeaderClockNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка.",
+    "description": "Description for forcing clock onto a new line."
   },
   "menuContentHeaderDateDayShow": {
-    "message": "День шоу"
+    "message": "День шоу",
+    "description": "Checkbox for day."
   },
   "menuContentHeaderDateDayDisplayNumber": {
-    "message": "Як число"
+    "message": "Як число",
+    "description": "Radio for day as numbers."
   },
   "menuContentHeaderDateDayDisplayWord": {
-    "message": "Як слово"
+    "message": "Як слово",
+    "description": "Radio for day as words."
   },
   "menuContentHeaderDateDayDisplayWeekStartLabel": {
-    "message": "Початок тижня"
+    "message": "Початок тижня",
+    "description": "Label for the start of the week."
   },
   "menuContentHeaderDateDayDisplayWeekStartMonday": {
-    "message": "понеділок"
+    "message": "понеділок",
+    "description": "Radio for Monday as the start of the week."
   },
   "menuContentHeaderDateDayDisplayWeekStartSunday": {
-    "message": "неділя"
+    "message": "неділя",
+    "description": "Radio for Sunday as the start of the week."
   },
   "menuContentHeaderDateDayDisplayLengthLabel": {
-    "message": "Довжина слова"
+    "message": "Довжина слова",
+    "description": "Label for length of day of the week."
   },
   "menuContentHeaderDateDayDisplayLengthLong": {
-    "message": "Довгота"
+    "message": "Довгота",
+    "description": "Radio for a long length day of the week."
   },
   "menuContentHeaderDateDayDisplayLengthShort": {
-    "message": "Короткий"
+    "message": "Короткий",
+    "description": "Radio for short length day of the week."
   },
   "menuContentHeaderDateDateShow": {
-    "message": "Показати дату"
+    "message": "Показати дату",
+    "description": "Checkbox for date."
   },
   "menuContentHeaderDateDateDisplayNumber": {
-    "message": "Як число"
+    "message": "Як число",
+    "description": "Radio for date as numbers."
   },
   "menuContentHeaderDateDateDisplayWord": {
-    "message": "Як слово"
+    "message": "Як слово",
+    "description": "Radio for dates as words."
   },
   "menuContentHeaderDateDateDisplayOrdinal": {
-    "message": "Порядкові номери"
+    "message": "Порядкові номери",
+    "description": "Checkbox for ordinal date number."
   },
   "menuContentHeaderDateMonthShow": {
-    "message": "Показати місяць"
+    "message": "Показати місяць",
+    "description": "Checkbox for month."
   },
   "menuContentHeaderDateMonthDisplayNumber": {
-    "message": "Як число"
+    "message": "Як число",
+    "description": "Radio for month as numbers."
   },
   "menuContentHeaderDateMonthDisplayWord": {
-    "message": "Як слово"
+    "message": "Як слово",
+    "description": "Radio for month as words."
   },
   "menuContentHeaderDateMonthDisplayOrdinal": {
-    "message": "Порядкові номери"
+    "message": "Порядкові номери",
+    "description": "Checkbox for ordinal month number."
   },
   "menuContentHeaderDateMonthDisplayLengthLabel": {
-    "message": "Довжина слова"
+    "message": "Довжина слова",
+    "description": "Label for length of month of the year."
   },
   "menuContentHeaderDateMonthDisplayLengthLong": {
-    "message": "Довгота"
+    "message": "Довгота",
+    "description": "Radio for a long length month of the year."
   },
   "menuContentHeaderDateMonthDisplayLengthShort": {
-    "message": "Короткий"
+    "message": "Короткий",
+    "description": "Radio for a short length month of the year."
   },
   "menuContentHeaderDateYearShow": {
-    "message": "Показати рік"
+    "message": "Показати рік",
+    "description": "Checkbox for year."
   },
   "menuContentHeaderDateYearDisplayNumber": {
-    "message": "Як число"
+    "message": "Як число",
+    "description": "Radio for year as numbers."
   },
   "menuContentHeaderDateYearDisplayWord": {
-    "message": "Як слово"
+    "message": "Як слово",
+    "description": "Radio for year as words."
   },
   "menuContentHeaderDateSeparatorShow": {
-    "message": "Показати роздільник"
+    "message": "Показати роздільник",
+    "description": "Checkbox for date separator."
   },
   "menuContentHeaderDateSeparatorLabel": {
-    "message": "Символ-роздільник"
+    "message": "Символ-роздільник",
+    "description": "Checkbox for date separator."
   },
   "menuContentHeaderDateSeparatorPlaceholder": {
-    "message": "/"
+    "message": "/",
+    "description": "Placeholder for date separator."
   },
   "menuContentHeaderDateFormatLabel": {
-    "message": "Формат"
+    "message": "Формат",
+    "description": "Label for date format."
   },
   "menuContentHeaderDateFormatDateMonth": {
-    "message": "Дата / місяць"
+    "message": "Дата / місяць",
+    "description": "Radio for date then month format."
   },
   "menuContentHeaderDateFormatMonthDate": {
-    "message": "Місяць / число"
+    "message": "Місяць / число",
+    "description": "Radio for month then date format."
   },
   "menuContentHeaderDateSize": {
-    "message": "Розмір"
+    "message": "Розмір",
+    "description": "Range for date size."
   },
   "menuContentHeaderDateNewLineLabel": {
-    "message": "Нова лінія"
+    "message": "Нова лінія",
+    "description": "Checkbox to force date onto a new line."
   },
   "menuContentHeaderDateNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка.",
+    "description": "Description for forcing date onto a new line."
   },
   "menuContentHeaderSearchShow": {
-    "message": "Показати пошук"
+    "message": "Показати пошук",
+    "description": "Checkbox for search."
   },
   "menuContentHeaderSearchWidthLabel": {
-    "message": "Ширина поля пошуку"
+    "message": "Ширина поля пошуку",
+    "description": "Label for search width."
   },
   "menuContentHeaderSearchWidthAutoLabel": {
-    "message": "Авто ширина"
+    "message": "Авто ширина",
+    "description": "Radio for auto search width."
   },
   "menuContentHeaderSearchWidthAutoDescription": {
-    "message": "Вікно пошуку розшириться, щоб найкраще відповідати доступному простору."
+    "message": "Вікно пошуку розшириться, щоб найкраще відповідати доступному простору.",
+    "description": "Description for auto search width."
   },
   "menuContentHeaderSearchWidthCustomLabel": {
-    "message": "Спеціальна ширина"
+    "message": "Спеціальна ширина",
+    "description": "Radio for custom search width."
   },
   "menuContentHeaderSearchWidthCustomDescription": {
-    "message": "Визначте ширину поля пошуку в області заголовка."
+    "message": "Визначте ширину поля пошуку в області заголовка.",
+    "description": "Description for custom search width."
   },
   "menuContentHeaderSearchWidthSize": {
-    "message": "Ширина"
+    "message": "Ширина",
+    "description": "Range for search width."
   },
   "menuContentHeaderSearchSize": {
-    "message": "Розмір"
+    "message": "Розмір",
+    "description": "Range for search size."
   },
   "menuContentHeaderSearchNewLineLabel": {
-    "message": "Нова лінія"
+    "message": "Нова лінія",
+    "description": "Checkbox to force search onto a new line."
   },
   "menuContentHeaderSearchNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка.",
+    "description": "Description for forcing search onto a new line."
   },
   "menuContentHeaderSearchEngineSelectedLabel": {
-    "message": "Пошукова система"
+    "message": "Пошукова система",
+    "description": "Label for custom search."
   },
   "menuContentHeaderSearchEngineSelectedCustom": {
-    "message": "На замовлення"
+    "message": "На замовлення",
+    "description": "Select option for custom search."
   },
   "menuContentHeaderSearchEngineCustomNameLabel": {
-    "message": "Ім'я"
+    "message": "Ім'я",
+    "description": "Label for custom search name."
   },
   "menuContentHeaderSearchEngineCustomNamePlaceholder": {
-    "message": "Назва пошукової системи"
+    "message": "Назва пошукової системи",
+    "description": "Placeholder for custom search name."
   },
   "menuContentHeaderSearchEngineCustomUrlLabel": {
-    "message": "URL"
+    "message": "URL",
+    "description": "Label for custom search URL."
   },
   "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
-    "message": "https://"
+    "message": "https://",
+    "description": "Placeholder for custom search URL."
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
-    "message": "Введіть веб-адресу з параметрами пошуку, наприклад: \"https://vimeo.com/search?q=\""
+    "message": "Введіть веб-адресу з параметрами пошуку, наприклад: \"https://vimeo.com/search?q=\"",
+    "description": "Helper text for custom search URL."
   },
   "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
-    "message": "{appName} додасть пошуковий термін, введений у вікно пошуку в кінці URL-адреси вище."
+    "message": "{appName} додасть пошуковий термін, введений у вікно пошуку в кінці URL-адреси вище.",
+    "description": "Helper text for custom search URL."
   },
   "menuContentHeaderSearchEngineCustomQueryNameLabel": {
-    "message": "Атрибут імені"
+    "message": "Атрибут імені",
+    "description": "Label for custom search name."
   },
   "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
-    "message": "q"
+    "message": "q",
+    "description": "Placeholder for custom search name."
   },
   "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
-    "message": "Встановлює атрибут імені в полі введення Пошук."
+    "message": "Встановлює атрибут імені в полі введення Пошук.",
+    "description": "Helper text for custom search name."
   },
   "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
-    "message": "Це визначає ім’я, яке передається пошуковій системі під час подання. Якщо ви не впевнені, залиште пустим."
+    "message": "Це визначає ім’я, яке передається пошуковій системі під час подання. Якщо ви не впевнені, залиште пустим.",
+    "description": "Helper text for custom search name."
   },
   "menuContentHeaderSearchEngineTextJustifyLabel": {
-    "message": "Шукати вирівнювання тексту"
+    "message": "Шукати вирівнювання тексту",
+    "description": "Label to justify search text."
   },
   "menuContentHeaderSearchEngineTextJustifyLeft": {
-    "message": "Ліворуч"
+    "message": "Ліворуч",
+    "description": "Radio to justify the search text left."
   },
   "menuContentHeaderSearchEngineTextJustifyCenter": {
-    "message": "Центр"
+    "message": "Центр",
+    "description": "Radio to justify the search text centre."
   },
   "menuContentHeaderSearchEngineTextJustifyRight": {
-    "message": "Правильно"
+    "message": "Правильно",
+    "description": "Radio to justify the search text right."
   },
   "menuContentHeaderSearchNewTab": {
-    "message": "Відкрийте результати пошуку на новій вкладці"
+    "message": "Відкрийте результати пошуку на новій вкладці",
+    "description": "Checkbox for opening search results in a new tab."
   },
   "menuContentBookmarkGeneralShow": {
-    "message": "Показати закладки"
+    "message": "Показати закладки",
+    "description": "Checkbox for show bookmark."
   },
   "menuContentBookmarkGeneralUrlShow": {
-    "message": "Показати URL-адресу при наведенні курсора"
+    "message": "Показати URL-адресу при наведенні курсора",
+    "description": "Checkbox for show bookmark url on hover."
   },
   "menuContentBookmarkGeneralLineShow": {
-    "message": "Показати рядок закладки"
+    "message": "Показати рядок закладки",
+    "description": "Checkbox for show bookmark line."
   },
   "menuContentBookmarkGeneralShadowShowLabel": {
-    "message": "Показати тінь при наведенні закладки"
+    "message": "Показати тінь при наведенні закладки",
+    "description": "label for show bookmark shadow."
   },
   "menuContentBookmarkGeneralShadowShowDescription": {
-    "message": "Ефекти можуть бути невидимими, якщо для Теми Тінь встановлено значення 0."
+    "message": "Ефекти можуть бути невидимими, якщо для Теми Тінь встановлено значення 0.",
+    "description": "Description to show bookmark shadow."
   },
   "menuContentBookmarkGeneralHoverScaleShow": {
-    "message": "Зростати при наведенні курсора в закладки"
+    "message": "Зростати при наведенні курсора в закладки",
+    "description": "Checkbox for scale bookmark on hover."
   },
   "menuContentBookmarkGeneralNewTab": {
-    "message": "Відкрийте закладки в новій вкладці"
+    "message": "Відкрийте закладки в новій вкладці",
+    "description": "Checkbox for open bookmark in a new tab."
   },
   "menuContentBookmarkGeneralSize": {
-    "message": "Розмір закладки"
+    "message": "Розмір закладки",
+    "description": "Range for bookmark size."
   },
   "menuContentBookmarkStyleBlockLabel": {
-    "message": "Блокувати"
+    "message": "Блокувати",
+    "description": "Label for bookmark block style."
   },
   "menuContentBookmarkStyleBlockDescription": {
-    "message": "Закладка квадратної форми."
+    "message": "Закладка квадратної форми.",
+    "description": "Description for bookmark block style."
   },
   "menuContentBookmarkStyleListLabel": {
-    "message": "Список"
+    "message": "Список",
+    "description": "Label for bookmark list style."
   },
   "menuContentBookmarkStyleListDescription": {
-    "message": "Короткі та широкі плитки закладки."
+    "message": "Короткі та широкі плитки закладки.",
+    "description": "Description for bookmark list style."
   },
   "menuContentBookmarkOrientationTop": {
-    "message": "Топ"
+    "message": "Топ",
+    "description": "Radio for bookmark top orientation."
   },
   "menuContentBookmarkOrientationBottom": {
-    "message": "Нижня частина"
+    "message": "Нижня частина",
+    "description": "Radio for bookmark bottom orientation."
   },
   "menuContentBookmarkOrientationHelperPara1": {
-    "message": "Відображайте URL-адресу та елементи керування у верхній або нижній частині плитки закладок."
+    "message": "Відображайте URL-адресу та елементи керування у верхній або нижній частині плитки закладок.",
+    "description": "Helper text for bookmark orientation."
   },
   "menuContentBookmarkSortLetter": {
-    "message": "Листом"
+    "message": "Листом",
+    "description": "Button to sort bookmarks by letter."
   },
   "menuContentBookmarkSortIcon": {
-    "message": "За значком"
+    "message": "За значком",
+    "description": "Button to sort bookmarks by Icon."
   },
   "menuContentBookmarkSortName": {
-    "message": "По імені"
+    "message": "По імені",
+    "description": "Button to sort bookmarks by name."
   },
   "menuContentGroupAlignmentJustifyLabel": {
-    "message": "Вирівнювання області деталей групи"
+    "message": "Вирівнювання області деталей групи",
+    "description": "Label to justify group items."
   },
   "menuContentGroupAlignmentJustifyLeft": {
-    "message": "Ліворуч"
+    "message": "Ліворуч",
+    "description": "Label to justify group items left."
   },
   "menuContentGroupAlignmentJustifyCenter": {
-    "message": "Центр"
+    "message": "Центр",
+    "description": "Label to justify group items centre."
   },
   "menuContentGroupAlignmentJustifyRight": {
-    "message": "Правильно"
+    "message": "Правильно",
+    "description": "Label to justify group items right."
   },
   "menuContentGroupAlignmentOrderLabel": {
-    "message": "Замовлення деталей групи"
+    "message": "Замовлення деталей групи",
+    "description": "Label for group order."
   },
   "menuContentGroupAlignmentOrderHeaderBodyLabel": {
-    "message": "Деталі групи, а потім Закладки"
+    "message": "Деталі групи, а потім Закладки",
+    "description": "Radio for group details then bookmarks order."
   },
   "menuContentGroupAlignmentOrderHeaderBodyDescription": {
-    "message": "Упорядкуйте, щоб область відомостей про групу з’явилася перед областю закладок."
+    "message": "Упорядкуйте, щоб область відомостей про групу з’явилася перед областю закладок.",
+    "description": "Helper text for group details then bookmarks order."
   },
   "menuContentGroupAlignmentOrderBodyHeaderLabel": {
-    "message": "Закладки, а потім деталі групи"
+    "message": "Закладки, а потім деталі групи",
+    "description": "Radio for bookmarks then group details order."
   },
   "menuContentGroupAlignmentOrderBodyHeaderDescription": {
-    "message": "Упорядкуйте, щоб область закладок з’явилася перед зоною відомостей про групу."
+    "message": "Упорядкуйте, щоб область закладок з’явилася перед зоною відомостей про групу.",
+    "description": "Helper text for bookmarks then group details order."
   },
   "menuContentGroupNameSize": {
-    "message": "Розмір імені"
+    "message": "Розмір імені",
+    "description": "Range for group name size."
   },
   "menuContentGroupNameShow": {
-    "message": "Покажи все"
+    "message": "Покажи все",
+    "description": "Button to show all group names."
   },
   "menuContentGroupNameHide": {
-    "message": "Приховати все"
+    "message": "Приховати все",
+    "description": "Button to hide all group names."
   },
   "menuContentGroupNameHelperPara1": {
-    "message": "Назви груп також можна змінити шляхом редагування окремих груп."
+    "message": "Назви груп також можна змінити шляхом редагування окремих груп.",
+    "description": "Helper text for show and hide all group names."
   },
   "menuContentGroupCollapseShow": {
-    "message": "Відкрийте всі групи"
+    "message": "Відкрийте всі групи",
+    "description": "Button to open all groups."
   },
   "menuContentGroupCollapseHide": {
-    "message": "Згорнути всі групи"
+    "message": "Згорнути всі групи",
+    "description": "Button to collapse all groups."
   },
   "menuContentGroupToolbarSize": {
-    "message": "Розмір панелі інструментів групи"
+    "message": "Розмір панелі інструментів групи",
+    "description": "Range for group toolbar size."
   },
   "menuContentGroupToolbarCollapseLabel": {
-    "message": "Контроль згортання групи"
+    "message": "Контроль згортання групи",
+    "description": "Label for group toolbar collapse control."
   },
   "menuContentGroupToolbarCollapseShow": {
-    "message": "Покажи все"
+    "message": "Покажи все",
+    "description": "Button to show all group toolbar collapse control."
   },
   "menuContentGroupToolbarCollapseHide": {
-    "message": "Приховати все"
+    "message": "Приховати все",
+    "description": "Button to hide all group toolbar collapse control."
   },
   "menuContentGroupToolbarCollapseHelperPara1": {
-    "message": "Кнопку згортання панелі інструментів групи також можна змінити, редагуючи окремі групи."
+    "message": "Кнопку згортання панелі інструментів групи також можна змінити, редагуючи окремі групи.",
+    "description": "Helper text for group toolbar collapse control."
   },
   "menuContentGroupToolbarOpenAllLabel": {
-    "message": "Група Відкрити всі елементи керування"
+    "message": "Група Відкрити всі елементи керування",
+    "description": "Label for the bookmark group toolbar open all control."
   },
   "menuContentGroupToolbarOpenAllShow": {
-    "message": "Покажи все"
+    "message": "Покажи все",
+    "description": "Button to show all group toolbar open all control."
   },
   "menuContentGroupToolbarOpenAllHide": {
-    "message": "Приховати все"
+    "message": "Приховати все",
+    "description": "Button to hide all bookmark group toolbar open all control."
   },
   "menuContentGroupToolbarOpenAllHelperPara1": {
-    "message": "Кнопку «Відкрити всі» панелі інструментів групи також можна змінити шляхом редагування окремих груп."
+    "message": "Кнопку «Відкрити всі» панелі інструментів групи також можна змінити шляхом редагування окремих груп.",
+    "description": "Helper text for the bookmark group toolbar open all control."
   },
   "menuContentToolbarSize": {
-    "message": "Розмір панелі інструментів"
+    "message": "Розмір панелі інструментів",
+    "description": "Range for bookmark group toolbar size."
   },
   "menuContentToolbarLocationCorner": {
-    "message": "У кутку"
+    "message": "У кутку",
+    "description": "Radio for bookmark group toolbar in a corner."
   },
   "menuContentToolbarLocationHeader": {
-    "message": "У заголовку"
+    "message": "У заголовку",
+    "description": "Radio for bookmark group toolbar in header."
   },
   "menuContentToolbarLocationHelperPara1": {
-    "message": "Розташуйте панель інструментів у заголовку або в кутку вікна."
+    "message": "Розташуйте панель інструментів у заголовку або в кутку вікна.",
+    "description": "Helper text for toolbar location."
   },
   "menuContentToolbarLocationNewLineLabel": {
-    "message": "Нова лінія"
+    "message": "Нова лінія",
+    "description": "Checkbox to force the bookmark group toolbar onto a new line."
   },
   "menuContentToolbarLocationNewLineDescription": {
-    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка."
+    "message": "Примусово перейти до нового рядка та відокремитися від інших елементів заголовка.",
+    "description": "Description to force the bookmark group toolbar onto a new line."
   },
   "menuContentToolbarLocationNewLineHelperPara1": {
-    "message": "Доступно лише тоді, коли панель інструментів розташована всередині заголовка."
+    "message": "Доступно лише тоді, коли панель інструментів розташована всередині заголовка.",
+    "description": "Helper text for the bookmark group toolbar on a new line."
   },
   "menuContentToolbarPositionLabel": {
-    "message": "Позиція панелі інструментів"
+    "message": "Позиція панелі інструментів",
+    "description": "Label for toolbar corner location."
   },
   "menuContentToolbarPositionTopLeft": {
-    "message": "Зліва вгорі"
+    "message": "Зліва вгорі",
+    "description": "Radio for bookmark group toolbar positioned in the top left corner."
   },
   "menuContentToolbarPositionTopRight": {
-    "message": "Верхній правий"
+    "message": "Верхній правий",
+    "description": "Radio for bookmark group toolbar positioned in the top right corner."
   },
   "menuContentToolbarPositionBottomLeft": {
-    "message": "Внизу зліва"
+    "message": "Внизу зліва",
+    "description": "Radio for bookmark group toolbar positioned in the bottom left corner."
   },
   "menuContentToolbarPositionBottomRight": {
-    "message": "Внизу справа"
+    "message": "Внизу справа",
+    "description": "Radio for bookmark group toolbar positioned in the bottom right corner."
   },
   "menuContentToolbarPositionHelper1Para1": {
-    "message": "Розташуйте панель інструментів в одному з чотирьох кутів вікна."
+    "message": "Розташуйте панель інструментів в одному з чотирьох кутів вікна.",
+    "description": "Helper text for bookmark group toolbar corner location."
   },
   "menuContentToolbarPositionHelper2Para1": {
-    "message": "Доступно лише тоді, коли панель інструментів розташована в кутку."
+    "message": "Доступно лише тоді, коли панель інструментів розташована в кутку.",
+    "description": "Helper text for bookmark group toolbar corner location."
   },
   "menuContentToolbarControlsAccent": {
-    "message": "Показати керування акцентом"
+    "message": "Показати керування акцентом",
+    "description": "Checkbox to show bookmark group toolbar accent control."
   },
   "menuContentToolbarControlsAdd": {
-    "message": "Показати Додати елемент керування"
+    "message": "Показати Додати елемент керування",
+    "description": "Checkbox to show bookmark group toolbar add control."
   },
   "menuContentToolbarControlsEdit": {
-    "message": "Показати елемент керування \"Редагувати\"."
+    "message": "Показати елемент керування \"Редагувати\".",
+    "description": "Checkbox to show bookmark group toolbar edit control."
   },
   "menuContentDataRestoreFile": {
-    "message": "Імпорт із файлу"
+    "message": "Імпорт із файлу",
+    "description": "Input for backup data file import."
   },
   "menuContentDataRestoreClipboard": {
-    "message": "Імпорт із буфера обміну"
+    "message": "Імпорт із буфера обміну",
+    "description": "Button for clipboard backup data import."
   },
   "menuContentDataRestoreHelperPara1": {
-    "message": "Відновіть раніше експортовану резервну копію {appName}"
+    "message": "Відновіть раніше експортовану резервну копію {appName}",
+    "description": "Helper text for backup data import."
   },
   "menuContentDataRestoreDrop": {
-    "message": "Або перетягніть сюди файл резервної копії {appName}"
+    "message": "Або перетягніть сюди файл резервної копії {appName}",
+    "description": "Label for backup data file drop area."
   },
   "menuContentDataBackupFile": {
-    "message": "Експортувати дані"
+    "message": "Експортувати дані",
+    "description": "Button to export backup data file."
   },
   "menuContentDataBackupClipboard": {
-    "message": "Копіювати в буфер обміну"
+    "message": "Копіювати в буфер обміну",
+    "description": "Button to copy backup data to clipboard."
   },
   "menuContentDataBackupHelperPara1": {
-    "message": "Завантажте резервну копію своїх закладок і налаштувань {appName}"
+    "message": "Завантажте резервну копію своїх закладок і налаштувань {appName}",
+    "description": "Helper text for data backup."
   },
   "menuContentDataBackupHelperPara2": {
-    "message": "Цей файл пізніше можна імпортувати на цьому чи іншому пристрої."
+    "message": "Цей файл пізніше можна імпортувати на цьому чи іншому пристрої.",
+    "description": "Helper text for data backup."
   },
   "menuContentDataClearAll": {
-    "message": "Очистити всі дані"
+    "message": "Очистити всі дані",
+    "description": "Button to clear all data."
   },
   "menuContentDataClearPartial": {
-    "message": "Очистити все, крім закладок"
+    "message": "Очистити все, крім закладок",
+    "description": "Button to clear partial data."
   },
   "menuContentDataClearAlertPara": {
-    "message": "Ви втратите закладки, очистивши всі дані."
+    "message": "Ви втратите закладки, очистивши всі дані.",
+    "description": "Alert for clear all data."
   },
   "menuContentDataClearAlertLink": {
-    "message": "Резервне копіювання даних"
+    "message": "Резервне копіювання даних",
+    "description": "Link for backup data."
   },
   "menuContentDataClearHelperPara1": {
-    "message": "Очистіть усі дані, щоб скинути {appName} до стану за умовчанням."
+    "message": "Очистіть усі дані, щоб скинути {appName} до стану за умовчанням.",
+    "description": "Helper text for clear all data."
   },
   "menuContentDataClearHelperPara2": {
-    "message": "Крім того, можна стерти всі налаштування, але зберегти поточні закладки та групи."
+    "message": "Крім того, можна стерти всі налаштування, але зберегти поточні закладки та групи.",
+    "description": "Helper text for clear all data."
   },
   "menuContentLanguageSelect": {
-    "message": "Мову"
+    "message": "Мову",
+    "description": "Select for language."
   },
   "menuContentLanguageSystem": {
-    "message": "Використовуйте мову системи"
+    "message": "Використовуйте мову системи",
+    "description": "Option to use the system defined language."
   },
   "menuContentLanguageAlertPara": {
-    "message": "Знайшли неправильний переклад?"
+    "message": "Знайшли неправильний переклад?",
+    "description": "Alert for language select."
   },
   "menuContentLanguageAlertLink": {
-    "message": "Допоможіть перекласти {appName}"
+    "message": "Допоможіть перекласти {appName}",
+    "description": "Link to help translate the project."
   },
   "menuContentSupportPageApplyToAll": {
-    "message": "Застосування налаштувань закладок до всіх"
+    "message": "Застосування налаштувань закладок до всіх",
+    "description": "Support link to project wiki."
   },
   "menuContentSupportPageBrowser": {
-    "message": "Підтримка браузера"
+    "message": "Підтримка браузера",
+    "description": "Support link to project wiki."
   },
   "menuContentSupportPageCookies": {
-    "message": "Файли cookie та кеш"
+    "message": "Файли cookie та кеш",
+    "description": "Support link to project wiki."
   },
   "menuContentSupportPageData": {
-    "message": "Резервне копіювання та відновлення даних"
+    "message": "Резервне копіювання та відновлення даних",
+    "description": "Support link to project wiki."
   },
   "menuContentSupportPageLocalBackgroundImage": {
-    "message": "Місцеве фонове зображення"
+    "message": "Місцеве фонове зображення",
+    "description": "Support link to project wiki."
   },
   "menuContentSupportPageProtectedUrl": {
-    "message": "Захищені URL-адреси"
+    "message": "Захищені URL-адреси",
+    "description": "Support link to project wiki."
   },
   "menuContentSupportPageRecovering": {
-    "message": "Відновлення налаштувань і закладок"
+    "message": "Відновлення налаштувань і закладок",
+    "description": "Support link to project wiki."
   },
   "menuContentSupportPageResetting": {
-    "message": "Скидання при відкритті браузера"
+    "message": "Скидання при відкритті браузера",
+    "description": "Support link to project wiki."
   },
   "menuContentSupportPagePrivacy": {
-    "message": "Поважаючи вашу конфіденційність"
+    "message": "Поважаючи вашу конфіденційність",
+    "description": "Support link to project wiki."
   },
   "menuContentSupportPageBackgroundImageVideo": {
-    "message": "Встановлення фонового відео або зображення"
+    "message": "Встановлення фонового відео або зображення",
+    "description": "Support link to project wiki."
   },
   "menuContentSupportPageFirefox": {
-    "message": "Установлення {appName} як домашньої сторінки Firefox"
+    "message": "Установлення {appName} як домашньої сторінки Firefox",
+    "description": "Support link to project wiki."
   },
   "menuContentSupportPara": {
-    "message": "Щоб отримати додаткову підтримку або відгук:"
+    "message": "Щоб отримати додаткову підтримку або відгук:",
+    "description": "Paragraph to get more support or provide feedback."
   },
   "menuContentSupportLink1": {
-    "message": "Подати питання."
+    "message": "Подати питання.",
+    "description": "Link to open an issue."
   },
   "menuContentSupportLink2": {
-    "message": "Перевірте Вікі."
+    "message": "Перевірте Вікі.",
+    "description": "Link to the project wiki."
   },
   "menuContentCoffeePara": {
-    "message": "{appName} безкоштовний, вітаємо подяку у вигляді кави!"
+    "message": "{appName} безкоштовний, вітаємо подяку у вигляді кави!",
+    "description": "Paragraph to explain the project is free."
   },
   "menuContentCoffeeButton": {
-    "message": "Купи мені кави"
+    "message": "Купи мені кави",
+    "description": "Link to buy me a coffee to support the project."
   },
   "menuContentAppPara1": {
-    "message": "Поділіться своїми налаштуваннями зі спільнотою."
+    "message": "Поділіться своїми налаштуваннями зі спільнотою.",
+    "description": "Paragraph on where to share with the community."
   },
   "menuContentAppLink1": {
-    "message": "Знайдено на Reddit/r/{appName}."
+    "message": "Знайдено на Reddit/r/{appName}.",
+    "description": "Link to the community on Reddit."
   },
   "menuContentAppPara2": {
-    "message": "Цей проект є відкритим вихідним кодом."
+    "message": "Цей проект є відкритим вихідним кодом.",
+    "description": "Paragraph on this project being open source."
   },
   "menuContentAppLink2": {
-    "message": "Знайдено на GitHub."
+    "message": "Знайдено на GitHub.",
+    "description": "Link to project on GitHub."
   },
   "menuContentAppLink3": {
-    "message": "GNU General Public License v3.0."
+    "message": "GNU General Public License v3.0.",
+    "description": "Link to project project licence."
   },
   "bookmarkTileControlLeft": {
-    "message": "Перемістити цю закладку ліворуч"
+    "message": "Перемістити цю закладку ліворуч",
+    "description": "Button for bookmark tile move left control."
   },
   "bookmarkTileControlSort": {
-    "message": "Перетягніть закладку, щоб змінити порядок"
+    "message": "Перетягніть закладку, щоб змінити порядок",
+    "description": "Button for bookmark tile drag to sort control."
   },
   "bookmarkTileControlRight": {
-    "message": "Перемістіть цю закладку вправо"
+    "message": "Перемістіть цю закладку вправо",
+    "description": "Button for bookmark tile move right control."
   },
   "bookmarkTileControlEdit": {
-    "message": "Редагувати цю закладку"
+    "message": "Редагувати цю закладку",
+    "description": "Button for bookmark tile edit control."
   },
   "bookmarkTileControlRemove": {
-    "message": "Видаліть цю закладку"
+    "message": "Видаліть цю закладку",
+    "description": "Button for bookmark tile remove control."
   },
   "bookmarkAddHeading": {
-    "message": "Додати нову закладку"
+    "message": "Додати нову закладку",
+    "description": "Heading for bookmark add modal."
   },
   "bookmarkAddSuccessText": {
-    "message": "Додати"
+    "message": "Додати",
+    "description": "Button to confirm adding a bookmark."
   },
   "bookmarkAddCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel adding a bookmark."
   },
   "bookmarkRemoveHeadingName": {
-    "message": "Видалити"
+    "message": "Видалити",
+    "description": "Heading with a name for bookmark remove modal."
   },
   "bookmarkRemoveHeadingUnnamed": {
-    "message": "Видалити закладку без імені"
+    "message": "Видалити закладку без імені",
+    "description": "Heading without a name for bookmark remove modal."
   },
   "bookmarkRemoveContent": {
-    "message": "Ви впевнені, що хочете видалити цю закладку? Це не може бути скасовано."
+    "message": "Ви впевнені, що хочете видалити цю закладку? Це не може бути скасовано.",
+    "description": "Paragraph for bookmark remove modal."
   },
   "bookmarkRemoveSuccessText": {
-    "message": "Видалити"
+    "message": "Видалити",
+    "description": "Button to confirm removing a bookmark."
   },
   "bookmarkRemoveCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel removing a bookmark."
   },
   "bookmarkEditHeadingName": {
-    "message": "Редагувати"
+    "message": "Редагувати",
+    "description": "Heading with a name for bookmark edit modal."
   },
   "bookmarkEditHeadingUnnamed": {
-    "message": "Редагувати безіменну закладку"
+    "message": "Редагувати безіменну закладку",
+    "description": "Heading without a name for bookmark edit modal."
   },
   "bookmarkEditSuccessText": {
-    "message": "Зберегти"
+    "message": "Зберегти",
+    "description": "Button to confirm editing a bookmark."
   },
   "bookmarkEditCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel editing a bookmark."
   },
   "bookmarkFormTabVisual": {
-    "message": "Візуальне зображення та назва"
+    "message": "Візуальне зображення та назва",
+    "description": "Label for bookmark form visual tab."
   },
   "bookmarkFormTabAddress": {
-    "message": "Адреса"
+    "message": "Адреса",
+    "description": "Label for bookmark form address tab."
   },
   "bookmarkFormTabPosition": {
-    "message": "Позиція"
+    "message": "Позиція",
+    "description": "Label for bookmark form position tab."
   },
   "bookmarkFormTabLayout": {
-    "message": "Макет"
+    "message": "Макет",
+    "description": "Label for bookmark form layout tab."
   },
   "bookmarkFormTabTheme": {
-    "message": "Тема"
+    "message": "Тема",
+    "description": "Label for bookmark form theme tab."
   },
   "bookmarkFormSectionVisualHeading": {
-    "message": "Візуальне зображення та назва"
+    "message": "Візуальне зображення та назва",
+    "description": "Heading for bookmark form visual page."
   },
   "bookmarkFormSectionVisualDescription": {
-    "message": "Відображати літери, піктограму, зображення та назву на цій плитці закладки."
+    "message": "Відображати літери, піктограму, зображення та назву на цій плитці закладки.",
+    "description": "Description for bookmark form visual page."
   },
   "bookmarkFormSectionAddressHeading": {
-    "message": "Адреса"
+    "message": "Адреса",
+    "description": "Heading for bookmark form address page."
   },
   "bookmarkFormSectionAddressDescription": {
-    "message": "Обов'язково використовуйте повну URL-адресу та включіть \"https://...\""
+    "message": "Обов'язково використовуйте повну URL-адресу та включіть \"https://...\"",
+    "description": "Description for bookmark form address page."
   },
   "bookmarkFormSectionPositionHeading": {
-    "message": "Позиція"
+    "message": "Позиція",
+    "description": "Heading for bookmark form position page."
   },
   "bookmarkFormSectionPositionDescription": {
-    "message": "Група для розміщення цієї закладки."
+    "message": "Група для розміщення цієї закладки.",
+    "description": "Description for bookmark form position page."
   },
   "bookmarkFormSectionLayoutHeading": {
-    "message": "Макет"
+    "message": "Макет",
+    "description": "Heading for bookmark form layout page."
   },
   "bookmarkFormSectionLayoutDescription": {
-    "message": "Змініть положення, масштаб і орієнтацію візуального елемента та імені."
+    "message": "Змініть положення, масштаб і орієнтацію візуального елемента та імені.",
+    "description": "Description for bookmark form layout page."
   },
   "bookmarkFormSectionThemeHeading": {
-    "message": "Тема"
+    "message": "Тема",
+    "description": "Heading for bookmark form theme page."
   },
   "bookmarkFormSectionThemeDescription": {
-    "message": "Замінити тему та колір акценту."
+    "message": "Замінити тему та колір акценту.",
+    "description": "Description for bookmark form theme page."
   },
   "bookmarkFormUrlLabel": {
-    "message": "URL"
+    "message": "URL",
+    "description": "Label for bookmark url."
   },
   "bookmarkFormUrlPlaceholder": {
-    "message": "https://www.example.com/"
+    "message": "https://www.example.com/",
+    "description": "Placeholder for bookmark url."
   },
   "bookmarkFormDisplayAlignmentLabel": {
-    "message": "Вирівнювання візуального елемента та імені"
+    "message": "Вирівнювання візуального елемента та імені",
+    "description": "Label for bookmark tile display alignment."
   },
   "bookmarkFormDisplayAlignmentTopLeft": {
-    "message": "Зліва вгорі"
+    "message": "Зліва вгорі",
+    "description": "Radio to align bookmark tile display top left."
   },
   "bookmarkFormDisplayAlignmentTopCenter": {
-    "message": "Верхній центр"
+    "message": "Верхній центр",
+    "description": "Radio to align bookmark tile display top centre."
   },
   "bookmarkFormDisplayAlignmentTopRight": {
-    "message": "Верхній правий"
+    "message": "Верхній правий",
+    "description": "Radio to align bookmark tile display top right."
   },
   "bookmarkFormDisplayAlignmentCenterLeft": {
-    "message": "Центр ліворуч"
+    "message": "Центр ліворуч",
+    "description": "Radio to align bookmark tile display centre left."
   },
   "bookmarkFormDisplayAlignmentCenterCenter": {
-    "message": "Центр Центр"
+    "message": "Центр Центр",
+    "description": "Radio to align bookmark tile display centre centre."
   },
   "bookmarkFormDisplayAlignmentCenterRight": {
-    "message": "Центр праворуч"
+    "message": "Центр праворуч",
+    "description": "Radio to align bookmark tile display centre right."
   },
   "bookmarkFormDisplayAlignmentBottomLeft": {
-    "message": "Внизу зліва"
+    "message": "Внизу зліва",
+    "description": "Radio to align bookmark tile display bottom left."
   },
   "bookmarkFormDisplayAlignmentBottomCenter": {
-    "message": "Нижній центр"
+    "message": "Нижній центр",
+    "description": "Radio to align bookmark tile display bottom centre."
   },
   "bookmarkFormDisplayAlignmentBottomRight": {
-    "message": "Внизу справа"
+    "message": "Внизу справа",
+    "description": "Radio to align bookmark tile display bottom right."
   },
   "bookmarkFormDisplayDirectionVerticalLabel": {
-    "message": "Вертикальні"
+    "message": "Вертикальні",
+    "description": "Label for bookmark tile display vertical direction."
   },
   "bookmarkFormDisplayDirectionVerticalDescription": {
-    "message": "Складіть візуальний елемент і назвіть один над одним."
+    "message": "Складіть візуальний елемент і назвіть один над одним.",
+    "description": "Description for bookmark tile display vertical direction."
   },
   "bookmarkFormDisplayDirectionHorizontalLabel": {
-    "message": "Горизонтальний"
+    "message": "Горизонтальний",
+    "description": "Label for bookmark tile display horizontal direction."
   },
   "bookmarkFormDisplayDirectionHorizontalDescription": {
-    "message": "Розташуйте візуальний елемент і назву поруч."
+    "message": "Розташуйте візуальний елемент і назву поруч.",
+    "description": "Description for bookmark tile display horizontal direction."
   },
   "bookmarkFormDisplayOrderVisualNameLabel": {
-    "message": "Візуальний елемент потім назва"
+    "message": "Візуальний елемент потім назва",
+    "description": "Label for bookmark tile display visual then name order."
   },
   "bookmarkFormDisplayOrderVisualNameDescription": {
-    "message": "Помістіть візуальний елемент перед назвою."
+    "message": "Помістіть візуальний елемент перед назвою.",
+    "description": "Description for bookmark tile display visual then name order."
   },
   "bookmarkFormDisplayOrderNameVisualLabel": {
-    "message": "Дайте назву візуальному елементу"
+    "message": "Дайте назву візуальному елементу",
+    "description": "Label for bookmark tile display name then visual order."
   },
   "bookmarkFormDisplayOrderNameVisualDescription": {
-    "message": "Помістіть назву перед візуальним елементом."
+    "message": "Помістіть назву перед візуальним елементом.",
+    "description": "Description for bookmark tile display name then visual order."
   },
   "bookmarkFormDisplayRotate": {
-    "message": "Поворот"
+    "message": "Поворот",
+    "description": "Range for bookmark tile visual rotation."
   },
   "bookmarkFormDisplayTranslateLabel": {
-    "message": "Налаштуйте положення візуального елемента"
+    "message": "Налаштуйте положення візуального елемента",
+    "description": "Label for bookmark tile visual translation."
   },
   "bookmarkFormDisplayTranslateX": {
-    "message": "Горизонтальний"
+    "message": "Горизонтальний",
+    "description": "Range for bookmark tile visual translation along the x axis."
   },
   "bookmarkFormDisplayTranslateY": {
-    "message": "Вертикальні"
+    "message": "Вертикальні",
+    "description": "Range for bookmark tile visual translation along the y axis."
   },
   "bookmarkFormDisplayGutter": {
-    "message": "Жолоб"
+    "message": "Жолоб",
+    "description": "Range for bookmark tile gutter space between visual and name."
   },
   "bookmarkFormDisplayVisualShowLabel": {
-    "message": "Показати візуальний елемент"
+    "message": "Показати візуальний елемент",
+    "description": "Checkbox to show bookmark tile visual."
   },
   "bookmarkFormDisplayVisualShowDescription": {
-    "message": "Покажіть літери, піктограму або зображення на цьому шестикутнику закладки."
+    "message": "Покажіть літери, піктограму або зображення на цьому шестикутнику закладки.",
+    "description": "Description to show bookmark tile visual."
   },
   "bookmarkFormDisplayVisualTypeLetter": {
-    "message": "лист"
+    "message": "лист",
+    "description": "Radio for bookmark tile visual letter."
   },
   "bookmarkFormDisplayVisualTypeIcon": {
-    "message": "значок"
+    "message": "значок",
+    "description": "Radio for bookmark tile visual icon."
   },
   "bookmarkFormDisplayVisualTypeImage": {
-    "message": "Зображення"
+    "message": "Зображення",
+    "description": "Radio for bookmark tile visual image."
   },
   "bookmarkFormDisplayVisualSize": {
-    "message": "Візуальний розмір"
+    "message": "Візуальний розмір",
+    "description": "Range for bookmark tile visual size."
   },
   "bookmarkFormDisplayVisualLetterTextLabel": {
-    "message": "Лист закладки"
+    "message": "Лист закладки",
+    "description": "Label for bookmark tile visual text."
   },
   "bookmarkFormDisplayVisualLetterTextPlaceholder": {
-    "message": "Е"
+    "message": "Е",
+    "description": "Placeholder for bookmark tile visual text."
   },
   "bookmarkFormDisplayVisualIconTextLabel": {
-    "message": "Значок закладки"
+    "message": "Значок закладки",
+    "description": "Label for bookmark tile visual icon."
   },
   "bookmarkFormDisplayVisualIconTextPlaceholder": {
-    "message": "Бренди або значки FontAwesome"
+    "message": "Бренди або значки FontAwesome",
+    "description": "Placeholder for bookmark tile visual icon."
   },
   "bookmarkFormDisplayVisualIconRemove": {
-    "message": "Видалити значок"
+    "message": "Видалити значок",
+    "description": "Button to remove the bookmark tile visual icon."
   },
   "bookmarkFormDisplayVisualImageUrlLabel": {
-    "message": "Зображення закладки"
+    "message": "Зображення закладки",
+    "description": "Label for bookmark tile visual image URL."
   },
   "bookmarkFormDisplayVisualImageUrlPlaceholder": {
-    "message": "https://www.example.com/image.jpg"
+    "message": "https://www.example.com/image.jpg",
+    "description": "Placeholder for bookmark tile visual image URL."
   },
   "bookmarkFormDisplayVisualShadowSize": {
-    "message": "Візуальна тінь"
+    "message": "Візуальна тінь",
+    "description": "Range for bookmark tile visual shadow."
   },
   "bookmarkFormDisplayVisualShadowHelperPara1": {
-    "message": "Візуальна тінь застосовується лише до літери чи значка."
+    "message": "Візуальна тінь застосовується лише до літери чи значка.",
+    "description": "Helper text for bookmark tile visual shadow."
   },
   "bookmarkFormDisplayNameShow": {
-    "message": "Показати ім'я"
+    "message": "Показати ім'я",
+    "description": "Checkbox to show bookmark tile name."
   },
   "bookmarkFormDisplayNameTextLabel": {
-    "message": "Назва закладки"
+    "message": "Назва закладки",
+    "description": "Label for bookmark tile name."
   },
   "bookmarkFormDisplayNameTextPlaceholder": {
-    "message": "Приклад"
+    "message": "Приклад",
+    "description": "Placeholder for bookmark tile name."
   },
   "bookmarkFormDisplayNameSize": {
-    "message": "Розмір імені"
+    "message": "Розмір імені",
+    "description": "Range for bookmark tile name size."
   },
   "bookmarkFormAccentByThemeLabel": {
-    "message": "Тематичний акцент"
+    "message": "Тематичний акцент",
+    "description": "Label for bookmark tile to use the theme accent."
   },
   "bookmarkFormAccentByThemeDescription": {
-    "message": "Використовуйте акцент, визначений темою."
+    "message": "Використовуйте акцент, визначений темою.",
+    "description": "Description for bookmark tile to use the theme accent."
   },
   "bookmarkFormAccentByCustomLabel": {
-    "message": "Спеціальний акцент"
+    "message": "Спеціальний акцент",
+    "description": "Label for bookmark tile to use a custom accent."
   },
   "bookmarkFormAccentByCustomDescription": {
-    "message": "Замінити акцент теми."
+    "message": "Замінити акцент теми.",
+    "description": "Description for bookmark tile to use a custom accent."
   },
   "bookmarkFormAccentColor": {
-    "message": "Акцент"
+    "message": "Акцент",
+    "description": "Label for bookmark tile accent."
   },
   "bookmarkFormColorByThemeLabel": {
-    "message": "Колір теми"
+    "message": "Колір теми",
+    "description": "Label for bookmark tile to use the theme colour."
   },
   "bookmarkFormColorByThemeDescription": {
-    "message": "Використовуйте колір, визначений темою."
+    "message": "Використовуйте колір, визначений темою.",
+    "description": "Description for bookmark tile to use the theme colour."
   },
   "bookmarkFormColorByCustomLabel": {
-    "message": "Індивідуальний колір"
+    "message": "Індивідуальний колір",
+    "description": "Label for bookmark tile to use a custom colour."
   },
   "bookmarkFormColorByCustomDescription": {
-    "message": "Замінити колір теми."
+    "message": "Замінити колір теми.",
+    "description": "Description for bookmark tile to use a custom colour."
   },
   "bookmarkFormColorColor": {
-    "message": "Колір"
+    "message": "Колір",
+    "description": "Label for bookmark tile colour."
   },
   "bookmarkFormColorOpacity": {
-    "message": "Непрозорість"
+    "message": "Непрозорість",
+    "description": "Range for bookmark tile opacity."
   },
   "bookmarkFormBackgroundShowLabel": {
-    "message": "Показати фон"
+    "message": "Показати фон",
+    "description": "Label for bookmark tile background."
   },
   "bookmarkFormBackgroundShowDescription": {
-    "message": "Відобразити фон зображення або відео на цій плитці закладки."
+    "message": "Відобразити фон зображення або відео на цій плитці закладки.",
+    "description": "Description for bookmark tile background."
   },
   "bookmarkFormBackgroundTypeImage": {
-    "message": "Зображення"
+    "message": "Зображення",
+    "description": "Radio for bookmark tile image background."
   },
   "bookmarkFormBackgroundTypeVideo": {
-    "message": "Відео"
+    "message": "Відео",
+    "description": "Radio for bookmark tile video background."
   },
   "bookmarkFormBackgroundOpacity": {
-    "message": "Непрозорість"
+    "message": "Непрозорість",
+    "description": "Range for bookmark tile background opacity."
   },
   "bookmarkFormBackgroundImageLabel": {
-    "message": "URL-адреса фонового зображення"
+    "message": "URL-адреса фонового зображення",
+    "description": "Label for bookmark tile background image URL."
   },
   "bookmarkFormBackgroundImagePlaceholder": {
-    "message": "https://www.example.com/image.jpg"
+    "message": "https://www.example.com/image.jpg",
+    "description": "Placeholder for bookmark tile background image URL."
   },
   "bookmarkFormBackgroundImageHelperPara1": {
-    "message": "Фонове зображення підтримує лише пряму URL-адресу файлу зображення."
+    "message": "Фонове зображення підтримує лише пряму URL-адресу файлу зображення.",
+    "description": "Helper text for bookmark tile background image URL."
   },
   "bookmarkFormBackgroundVideoLabel": {
-    "message": "URL-адреса фонового відео"
+    "message": "URL-адреса фонового відео",
+    "description": "Label for bookmark tile background video URL."
   },
   "bookmarkFormBackgroundVideoPlaceholder": {
-    "message": "https://www.example.com/video.mp4"
+    "message": "https://www.example.com/video.mp4",
+    "description": "Placeholder for bookmark tile background video URL."
   },
   "bookmarkFormBackgroundVideoHelperPara1": {
-    "message": "Фонове відео підтримує лише пряму URL-адресу відеофайлу. Підтримує формати MP4 і WebM."
+    "message": "Фонове відео підтримує лише пряму URL-адресу відеофайлу. Підтримує формати MP4 і WebM.",
+    "description": "Helper text for bookmark tile background video URL."
   },
   "bookmarkFormBackgroundVideoHelperPara2": {
-    "message": "URL-адреси сторінок YouTube не можна використовувати."
+    "message": "URL-адреси сторінок YouTube не можна використовувати.",
+    "description": "Helper text for bookmark tile background video URL."
   },
   "bookmarkFormBorder": {
-    "message": "Кордон"
+    "message": "Кордон",
+    "description": "Range for bookmark tile border."
   },
   "bookmarkFormShapeWideLabel": {
-    "message": "Широка плитка"
+    "message": "Широка плитка",
+    "description": "Label for bookmark tile wide shape."
   },
   "bookmarkFormShapeWideDescription": {
-    "message": "Плитка закладок, щоб охопити два стовпці."
+    "message": "Плитка закладок, щоб охопити два стовпці.",
+    "description": "Description for bookmark tile wide shape."
   },
   "bookmarkFormShapeTallLabel": {
-    "message": "Висока плитка"
+    "message": "Висока плитка",
+    "description": "Label for bookmark tile tall shape."
   },
   "bookmarkFormShapeTallDescription": {
-    "message": "Закладка плитки, щоб охопити два ряди."
+    "message": "Закладка плитки, щоб охопити два ряди.",
+    "description": "Description for bookmark tile tall shape."
   },
   "bookmarkFormGroupDestinationExisting": {
-    "message": "Існуюча група"
+    "message": "Існуюча група",
+    "description": "Radio for bookmark position in existing bookmark group."
   },
   "bookmarkFormGroupDestinationNew": {
-    "message": "Нова група"
+    "message": "Нова група",
+    "description": "Radio for bookmark position in new bookmark group."
   },
   "bookmarkFormGroupNameLabel": {
-    "message": "URL"
+    "message": "URL",
+    "description": "Label for bookmark group name."
   },
   "bookmarkFormGroupNamePlaceholder": {
-    "message": "Прикладна група"
+    "message": "Прикладна група",
+    "description": "Placeholder for bookmark group name."
   },
   "bookmarkFormGroupRandom": {
-    "message": "Випадкова назва групи"
+    "message": "Випадкова назва групи",
+    "description": "Button for random group name."
   },
   "bookmarkFormGroupPositionGroup": {
-    "message": "Група"
+    "message": "Група",
+    "description": "Select for bookmark group position."
   },
   "bookmarkFormGroupPositionItem": {
-    "message": "Позиція"
+    "message": "Позиція",
+    "description": "Select for bookmark position in a group."
   },
   "bookmarkFormPropagateVisualLabel": {
-    "message": "Застосуйте «Показати візуальний елемент» і «Показати назву» до інших закладок"
+    "message": "Застосуйте «Показати візуальний елемент» і «Показати назву» до інших закладок",
+    "description": "Checkbox to share current bookmark visual settings to all other bookmarks."
   },
   "bookmarkFormPropagateVisualDescriptionPara1": {
-    "message": "Текст букви, значка, зображення та імені не буде опубліковано."
+    "message": "Текст букви, значка, зображення та імені не буде опубліковано.",
+    "description": "Helper text to share current bookmark visual settings to all other bookmarks."
   },
   "bookmarkFormPropagateVisualDescriptionPara2": {
-    "message": "Корисно для приховування візуальних елементів або імен у всіх закладках."
+    "message": "Корисно для приховування візуальних елементів або імен у всіх закладках.",
+    "description": "Helper text to share current bookmark visual settings to all other bookmarks."
   },
   "bookmarkFormPropagateLayoutLabel": {
-    "message": "Застосувати макет до інших закладок"
+    "message": "Застосувати макет до інших закладок",
+    "description": "Checkbox to share current bookmark layout settings to all other bookmarks."
   },
   "bookmarkFormPropagateLayoutDescriptionPara1": {
-    "message": "Після збереження застосуйте наведений вище макет до всіх інших закладок."
+    "message": "Після збереження застосуйте наведений вище макет до всіх інших закладок.",
+    "description": "Helper text to share current bookmark layout settings to all other bookmarks."
   },
   "bookmarkFormPropagateLayoutDescriptionPara2": {
-    "message": "До всіх буде застосовано лише візуальний розмір і розмір назви, вирівнювання, порядок, положення та жолоб."
+    "message": "До всіх буде застосовано лише візуальний розмір і розмір назви, вирівнювання, порядок, положення та жолоб.",
+    "description": "Helper text to share current bookmark layout settings to all other bookmarks."
   },
   "bookmarkFormPropagateThemeLabel": {
-    "message": "Застосуйте тему до інших закладок"
+    "message": "Застосуйте тему до інших закладок",
+    "description": "Checkbox to share current bookmark theme settings to all other bookmarks."
   },
   "bookmarkFormPropagateThemeDescriptionPara1": {
-    "message": "Після збереження застосуйте вищевказану тему до всіх інших закладок."
+    "message": "Після збереження застосуйте вищевказану тему до всіх інших закладок.",
+    "description": "Helper text to share current bookmark theme settings to all other bookmarks."
   },
   "bookmarkFormPropagateThemeDescriptionPara2": {
-    "message": "До всіх буде застосовано лише колір, акцент, непрозорість, межі та візуальна тінь."
+    "message": "До всіх буде застосовано лише колір, акцент, непрозорість, межі та візуальна тінь.",
+    "description": "Helper text to share current bookmark theme settings to all other bookmarks."
   },
   "bookmarkPreviewFull": {
-    "message": "Попередній перегляд"
+    "message": "Попередній перегляд",
+    "description": "Paragraph for bookmark full size preview."
   },
   "bookmarkPreviewHalf": {
-    "message": "Попередній перегляд (масштаб 50%)"
+    "message": "Попередній перегляд (масштаб 50%)",
+    "description": "Paragraph for bookmark half size preview."
   },
   "groupAreaControlUp": {
-    "message": "Перемістіть цю групу вгору"
+    "message": "Перемістіть цю групу вгору",
+    "description": "Button for bookmark group move up control."
   },
   "groupAreaControlSort": {
-    "message": "Перетягніть групу, щоб змінити порядок"
+    "message": "Перетягніть групу, щоб змінити порядок",
+    "description": "Button for bookmark group drag to sort control."
   },
   "groupAreaControlDown": {
-    "message": "Перемістіть цю групу вниз"
+    "message": "Перемістіть цю групу вниз",
+    "description": "Button for bookmark group move down control."
   },
   "groupAreaControlEdit": {
-    "message": "Редагувати цю групу"
+    "message": "Редагувати цю групу",
+    "description": "Button for bookmark group edit control."
   },
   "groupAreaControlRemove": {
-    "message": "Видалити цю групу"
+    "message": "Видалити цю групу",
+    "description": "Button for bookmark group remove control."
   },
   "groupAreaControlOpenAll": {
-    "message": "Відкрийте всі закладки в цій групі"
+    "message": "Відкрийте всі закладки в цій групі",
+    "description": "Button for bookmark group control to open all bookmarks."
   },
   "groupAreaControlCollapse": {
-    "message": "Згорнути цю групу"
+    "message": "Згорнути цю групу",
+    "description": "Button for bookmark group control to collapse bookmark group."
   },
   "groupAddHeading": {
-    "message": "Додати нову групу"
+    "message": "Додати нову групу",
+    "description": "Heading for bookmark group add modal."
   },
   "groupAddSuccessText": {
-    "message": "Додати"
+    "message": "Додати",
+    "description": "Button to confirm adding a bookmark group."
   },
   "groupAddCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel adding a bookmark group."
   },
   "groupRemoveHeadingName": {
-    "message": "Видалити"
+    "message": "Видалити",
+    "description": "Heading with a name for bookmark group remove modal."
   },
   "groupRemoveHeadingUnnamed": {
-    "message": "Видалити групу без імені"
+    "message": "Видалити групу без імені",
+    "description": "Heading without a name for bookmark group remove modal."
   },
   "groupRemoveContent": {
-    "message": "Ви впевнені, що хочете видалити цю групу та всі закладки в ній? Це не може бути скасовано."
+    "message": "Ви впевнені, що хочете видалити цю групу та всі закладки в ній? Це не може бути скасовано.",
+    "description": "Paragraph for bookmark group remove modal."
   },
   "groupRemoveSuccessText": {
-    "message": "Видалити"
+    "message": "Видалити",
+    "description": "Button to confirm removing a bookmark group."
   },
   "groupRemoveCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel removing a bookmark group."
   },
   "groupEditHeadingName": {
-    "message": "Редагувати"
+    "message": "Редагувати",
+    "description": "Heading with a name for bookmark group edit modal."
   },
   "groupEditHeadingUnnamed": {
-    "message": "Редагувати групу без імені"
+    "message": "Редагувати групу без імені",
+    "description": "Heading without a name for bookmark group edit modal."
   },
   "groupEditSuccessText": {
-    "message": "Зберегти"
+    "message": "Зберегти",
+    "description": "Button to confirm editing a bookmark group."
   },
   "groupEditCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel editing a bookmark group."
   },
   "groupFormSectionNameHeading": {
-    "message": "Ім'я"
+    "message": "Ім'я",
+    "description": "Heading for bookmark group form name."
   },
   "groupFormSectionNameDescription": {
-    "message": "Відобразити назву над цією групою."
+    "message": "Відобразити назву над цією групою.",
+    "description": "Description for bookmark group form name."
   },
   "groupFormSectionToolbarHeading": {
-    "message": "Панель інструментів"
+    "message": "Панель інструментів",
+    "description": "Heading for bookmark group form toolbar."
   },
   "groupFormSectionToolbarDescription": {
-    "message": "Показати елементи керування, щоб відкрити всі або показати/приховати закладки в цій групі."
+    "message": "Показати елементи керування, щоб відкрити всі або показати/приховати закладки в цій групі.",
+    "description": "Description for bookmark group form toolbar."
   },
   "groupFormSectionOrderingHeading": {
-    "message": "Замовлення"
+    "message": "Замовлення",
+    "description": "Heading for bookmark group form order."
   },
   "groupFormSectionOrderingDescription": {
-    "message": "Позиція цієї групи."
+    "message": "Позиція цієї групи.",
+    "description": "Description for bookmark group form order."
   },
   "groupFormNameShow": {
-    "message": "Показати назву групи"
+    "message": "Показати назву групи",
+    "description": "Checkbox to show bookmark group name."
   },
   "groupFormNameTextLabel": {
-    "message": "Назва групи"
+    "message": "Назва групи",
+    "description": "Label for bookmark group name."
   },
   "groupFormNameTextPlaceholder": {
-    "message": "Прикладна група"
+    "message": "Прикладна група",
+    "description": "Placeholder for bookmark group name."
   },
   "groupFormNameRandom": {
-    "message": "Випадкова назва групи"
+    "message": "Випадкова назва групи",
+    "description": "Button for random bookmark group name."
   },
   "groupFormCollapseShowLabel": {
-    "message": "Показати Згорнути"
+    "message": "Показати Згорнути",
+    "description": "Label to show bookmark group toolbar collapse button."
   },
   "groupFormCollapseShowDescription": {
-    "message": "Кнопка «Згорнути» відобразить або приховає закладки в цій групі."
+    "message": "Кнопка «Згорнути» відобразить або приховає закладки в цій групі.",
+    "description": "Description to show bookmark group toolbar collapse button."
   },
   "groupFormOpenAllShowLabel": {
-    "message": "Показати Відкрити все"
+    "message": "Показати Відкрити все",
+    "description": "Label to show bookmark group toolbar open all button."
   },
   "groupFormOpenAllShowDescription": {
-    "message": "Кнопка «Відкрити все» з’явиться, якщо в цій групі є хоча б одна закладка."
+    "message": "Кнопка «Відкрити все» з’явиться, якщо в цій групі є хоча б одна закладка.",
+    "description": "Description to show bookmark group toolbar open all button."
   },
   "groupFormDestination": {
-    "message": "Позиція"
+    "message": "Позиція",
+    "description": "Select for bookmark group position."
   },
   "themeCustomTileControlEdit": {
-    "message": "Відредагуйте цю збережену спеціальну тему"
+    "message": "Відредагуйте цю збережену спеціальну тему",
+    "description": "Button to edit saved custom theme."
   },
   "themeCustomTileControlRemove": {
-    "message": "Видаліть цю збережену спеціальну тему"
+    "message": "Видаліть цю збережену спеціальну тему",
+    "description": "Button to remove saved custom theme."
   },
   "themeCustomFormNameLabel": {
-    "message": "Ім'я"
+    "message": "Ім'я",
+    "description": "Label for saved custom theme name."
   },
   "themeCustomFormNamePlaceholder": {
-    "message": "Приклад теми"
+    "message": "Приклад теми",
+    "description": "Placeholder for saved custom theme name."
   },
   "themeCustomFormRandom": {
-    "message": "Випадкова назва теми"
+    "message": "Випадкова назва теми",
+    "description": "Button for random saved custom theme name."
   },
   "themeCustomAddHeading": {
-    "message": "Зберегти поточну тему"
+    "message": "Зберегти поточну тему",
+    "description": "Heading for saved custom theme add modal."
   },
   "themeCustomAddSuccessText": {
-    "message": "Зберегти"
+    "message": "Зберегти",
+    "description": "Button to confirm adding a saved custom theme."
   },
   "themeCustomAddCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel adding a saved custom theme."
   },
   "themeCustomRemoveHeadingName": {
-    "message": "Видалити"
+    "message": "Видалити",
+    "description": "Heading with a name for saved custom theme remove modal."
   },
   "themeCustomRemoveHeadingUnnamed": {
-    "message": "Видаліть спеціальну тему без імені"
+    "message": "Видаліть спеціальну тему без імені",
+    "description": "Heading without a name for saved custom theme remove modal."
   },
   "themeCustomRemoveContent": {
-    "message": "Ви впевнені, що хочете видалити цю збережену спеціальну тему? Це не може бути скасовано."
+    "message": "Ви впевнені, що хочете видалити цю збережену спеціальну тему? Це не може бути скасовано.",
+    "description": "Paragraph for saved custom theme remove modal."
   },
   "themeCustomRemoveSuccessText": {
-    "message": "Зберегти"
+    "message": "Зберегти",
+    "description": "Button to confirm removing a saved custom theme."
   },
   "themeCustomRemoveCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel removing a saved custom theme."
   },
   "themeCustomEditHeadingName": {
-    "message": "Редагувати"
+    "message": "Редагувати",
+    "description": "Heading with a name for saved custom theme edit modal."
   },
   "themeCustomEditHeadingUnnamed": {
-    "message": "Редагувати спеціальну тему без імені"
+    "message": "Редагувати спеціальну тему без імені",
+    "description": "Heading without a name for saved custom theme edit modal."
   },
   "themeCustomEditSuccessText": {
-    "message": "Видалити"
+    "message": "Видалити",
+    "description": "Button to confirm editing a saved custom theme."
   },
   "themeCustomEditCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel editing a saved custom theme."
   },
   "toolbarAccent": {
-    "message": "Акцентний колір"
+    "message": "Акцентний колір",
+    "description": "Button for toolbar accent control."
   },
   "toolbarAddLabel": {
-    "message": "Додати"
+    "message": "Додати",
+    "description": "Button for toolbar control to add."
   },
   "toolbarAddGroup": {
-    "message": "Нова група"
+    "message": "Нова група",
+    "description": "Button for toolbar control to add a new bookmark."
   },
   "toolbarAddBookmark": {
-    "message": "Нова закладка"
+    "message": "Нова закладка",
+    "description": "Button for toolbar control to add a new bookmark group."
   },
   "toolbarEdit": {
-    "message": "Редагувати групи та закладки"
+    "message": "Редагувати групи та закладки",
+    "description": "Button for toolbar to toggle edit mode."
   },
   "toolbarSetting": {
-    "message": "Відкрийте меню налаштувань"
+    "message": "Відкрийте меню налаштувань",
+    "description": "Button for toolbar to open settings menu."
   },
   "dataFormDescription": {
-    "message": "Ви можете відновити всі або частини файлу резервної копії. Будуть відновлені такі дані:"
+    "message": "Ви можете відновити всі або частини файлу резервної копії. Будуть відновлені такі дані:",
+    "description": "Description for restoring from backup data."
   },
   "dataFormBookmarkIncludeLabel": {
-    "message": "Закладки"
+    "message": "Закладки",
+    "description": "Heading for restoring backup data bookmarks."
   },
   "dataFormBookmarkIncludeDescriptionPara1": {
-    "message": "Сюди входять усі групи та закладки"
+    "message": "Сюди входять усі групи та закладки",
+    "description": "Description for restoring backup data bookmarks."
   },
   "dataFormBookmarkIncludeDescriptionPara2": {
-    "message": "При імпортуванні закладки зберігатимуть будь-які користувацькі кольори, акценти та межі."
+    "message": "При імпортуванні закладки зберігатимуть будь-які користувацькі кольори, акценти та межі.",
+    "description": "Description for restoring backup data bookmarks."
   },
   "dataFormBookmarkTypeRestore": {
-    "message": "Замініть наявні закладки"
+    "message": "Замініть наявні закладки",
+    "description": "Radio to replace existing bookmarks when restoring from backup data."
   },
   "dataFormBookmarkTypeAppend": {
-    "message": "Додати до наявних закладок"
+    "message": "Додати до наявних закладок",
+    "description": "Radio to append to existing bookmarks when restoring from backup data."
   },
   "dataFormThemeIncludeLabel": {
-    "message": "Тема"
+    "message": "Тема",
+    "description": "Label to restore theme date from backup data."
   },
   "dataFormThemeIncludeDescription": {
-    "message": "Це включає колір, акцент, шрифти, фон і будь-які збережені користувацькі теми."
+    "message": "Це включає колір, акцент, шрифти, фон і будь-які збережені користувацькі теми.",
+    "description": "Description to restore theme date from backup data."
   },
   "dataFormSetupIncludeLabel": {
-    "message": "Налаштування"
+    "message": "Налаштування",
+    "description": "Label to restore setting date from backup data."
   },
   "dataFormSetupIncludeDescription": {
-    "message": "Це включає розмір і положення макета, розмір області заголовка, розмір області закладок та інші налаштування користувача."
+    "message": "Це включає розмір і положення макета, розмір області заголовка, розмір області закладок та інші налаштування користувача.",
+    "description": "Description to restore setting date from backup data."
   },
   "dataRestoreHeading": {
-    "message": "Відновлення з резервної копії {appName}"
+    "message": "Відновлення з резервної копії {appName}",
+    "description": "Heading for restore backup data modal."
   },
   "dataRestoreSuccessText": {
-    "message": "Імпорт"
+    "message": "Імпорт",
+    "description": "Button to confirm restoring from backup data."
   },
   "dataRestoreCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel restoring from backup data."
   },
   "dataClearAllHeading": {
-    "message": "Очистити всі дані {appName} ?"
+    "message": "Очистити всі дані {appName} ?",
+    "description": "Heading for clear all data modal."
   },
   "dataClearAllContentPara1": {
-    "message": "Дійсно очистити всі закладки та налаштування {appName} {appName} буде відновлено до стану за умовчанням."
+    "message": "Дійсно очистити всі закладки та налаштування {appName} {appName} буде відновлено до стану за умовчанням.",
+    "description": "Paragraph for clear all data modal."
   },
   "dataClearAllContentPara2": {
-    "message": "Це не може бути скасовано."
+    "message": "Це не може бути скасовано.",
+    "description": "Paragraph for clear all data modal."
   },
   "dataClearAllSuccessText": {
-    "message": "Очистити всі дані"
+    "message": "Очистити всі дані",
+    "description": "Button to confirm clear all data."
   },
   "dataClearAllCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel clear all data."
   },
   "dataClearPartialHeading": {
-    "message": "Очистити дані {appName} крім закладок?"
+    "message": "Очистити дані {appName} крім закладок?",
+    "description": "Heading for clear partial data modal."
   },
   "dataClearPartialContentPara1": {
-    "message": "Дійсно очистити всі налаштування {appName} {appName} буде відновлено до стану за умовчанням, але ваші закладки та групи залишаться."
+    "message": "Дійсно очистити всі налаштування {appName} {appName} буде відновлено до стану за умовчанням, але ваші закладки та групи залишаться.",
+    "description": "Paragraph for clear partial data modal."
   },
   "dataClearPartialContentPara2": {
-    "message": "Це не може бути скасовано."
+    "message": "Це не може бути скасовано.",
+    "description": "Paragraph for clear partial data modal."
   },
   "dataClearPartialSuccessText": {
-    "message": "Очистити все, крім закладок"
+    "message": "Очистити все, крім закладок",
+    "description": "Button to confirm clear partial data."
   },
   "dataClearPartialCancelText": {
-    "message": "Скасувати"
+    "message": "Скасувати",
+    "description": "Button to cancel clear partial data."
   },
   "dataExportBackup": {
-    "message": "резервне копіювання"
+    "message": "резервне копіювання",
+    "description": "String for backup data file name."
   },
   "dataFeedbackEmpty": {
-    "message": "Нічого не вибрано для імпорту."
+    "message": "Нічого не вибрано для імпорту.",
+    "description": "Paragraph for validation when backup data is empty."
   },
   "dataFeedbackSuccess": {
-    "message": "Успіху! Відновлення закладок і налаштувань {appName}"
+    "message": "Успіху! Відновлення закладок і налаштувань {appName}",
+    "description": "Paragraph for when backup data is valid."
   },
   "dataFeedbackFailNotJson": {
-    "message": "Не файл JSON. Переконайтеся, що вибраний файл надійшов із {appName} ."
+    "message": "Не файл JSON. Переконайтеся, що вибраний файл надійшов із {appName} .",
+    "description": "Paragraph for when backup data is not valid JSON."
   },
   "dataFeedbackFailNotAppJson": {
-    "message": "Не той тип файлу JSON. Переконайтеся, що вибраний файл надійшов із {appName} ."
+    "message": "Не той тип файлу JSON. Переконайтеся, що вибраний файл надійшов із {appName} .",
+    "description": "Paragraph for when backup data is not valid JSON from this project."
   },
   "dataFeedbackFailNotClipboardJson": {
-    "message": "Не той тип даних. Переконайтеся, що буфер обміну містить дані з {appName} або файлу JSON резервної копії {appName}"
+    "message": "Не той тип даних. Переконайтеся, що буфер обміну містить дані з {appName} або файлу JSON резервної копії {appName}",
+    "description": "Paragraph for when backup data in clipboard is not valid JSON."
   },
   "controlGeneralReset": {
-    "message": "Скинути налаштування за замовчуванням"
+    "message": "Скинути налаштування за замовчуванням",
+    "description": "Button for reset button control."
   },
   "controlColorTextPlaceholder": {
-    "message": "Шістнадцятковий код"
+    "message": "Шістнадцятковий код",
+    "description": "Placeholder for hex colour code."
   },
   "controlColorRandom": {
-    "message": "Випадковий колір"
+    "message": "Випадковий колір",
+    "description": "Button for random colour."
   },
   "controlColorMixerMoreControls": {
-    "message": "Більше елементів керування"
+    "message": "Більше елементів керування",
+    "description": "Button to show more colour controls."
   },
   "controlColorMixerSliderH": {
-    "message": "Відтінок"
+    "message": "Відтінок",
+    "description": "Label for colour control hue."
   },
   "controlColorMixerSliderS": {
-    "message": "Насичення"
+    "message": "Насичення",
+    "description": "Label for colour control saturation."
   },
   "controlColorMixerSliderL": {
-    "message": "Легкість"
+    "message": "Легкість",
+    "description": "Label for colour control lightness."
   },
   "controlColorMixerSliderR": {
-    "message": "червоний"
+    "message": "червоний",
+    "description": "Label for colour control red."
   },
   "controlColorMixerSliderG": {
-    "message": "Зелений"
+    "message": "Зелений",
+    "description": "Label for colour control green."
   },
   "controlColorMixerSliderB": {
-    "message": "Синій"
+    "message": "Синій",
+    "description": "Label for colour control blue."
   }
 }
