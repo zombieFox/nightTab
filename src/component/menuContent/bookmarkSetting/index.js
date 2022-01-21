@@ -1,3 +1,5 @@
+import { message } from '../../message';
+
 import { state } from '../../state';
 import { data } from '../../data';
 import { bookmark } from '../../bookmark';
@@ -77,7 +79,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-show',
     path: 'bookmark.show',
-    labelText: 'Show Bookmarks',
+    labelText: message.get('menuContentBookmarkGeneralShow'),
     action: () => {
 
       layout.area.assemble();
@@ -111,7 +113,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-url-show',
     path: 'bookmark.url.show',
-    labelText: 'Show URL on Bookmark hover',
+    labelText: message.get('menuContentBookmarkGeneralUrlShow'),
     action: () => {
       applyCSSState('bookmark.url.show');
       data.save();
@@ -122,7 +124,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-line-show',
     path: 'bookmark.line.show',
-    labelText: 'Show Bookmark line',
+    labelText: message.get('menuContentBookmarkGeneralLineShow'),
     action: () => {
       applyCSSState('bookmark.line.show');
       data.save();
@@ -133,8 +135,8 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-shadow-show',
     path: 'bookmark.shadow.show',
-    labelText: 'Show shadow on Bookmark hover',
-    description: 'Effects may not be visible if Theme Shadow is set to 0.',
+    labelText: message.get('menuContentBookmarkGeneralShadowShowLabel'),
+    description: message.get('menuContentBookmarkGeneralShadowShowDescription'),
     action: () => {
       applyCSSState('bookmark.shadow.show');
       data.save();
@@ -145,7 +147,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-hoverScale-show',
     path: 'bookmark.hoverScale.show',
-    labelText: 'Grow on Bookmark hover',
+    labelText: message.get('menuContentBookmarkGeneralHoverScaleShow'),
     action: () => {
       applyCSSState('bookmark.hoverScale.show');
       data.save();
@@ -156,7 +158,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     id: 'bookmark-newTab',
     path: 'bookmark.newTab',
-    labelText: 'Open Bookmarks in a new tab',
+    labelText: message.get('menuContentBookmarkGeneralNewTab'),
     action: () => {
 
       groupAndBookmark.render();
@@ -184,7 +186,7 @@ bookmarkSetting.general = (parent) => {
     object: state.get.current(),
     path: 'bookmark.size',
     id: 'bookmark-size',
-    labelText: 'Bookmark size',
+    labelText: message.get('menuContentBookmarkGeneralSize'),
     value: state.get.current().bookmark.size,
     defaultValue: state.get.default().bookmark.size,
     min: state.get.minMax().bookmark.size.min,
@@ -241,8 +243,8 @@ bookmarkSetting.style = (parent) => {
   bookmarkSetting.control.style = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'bookmark-style-block', labelText: 'Block', description: 'Square shaped Bookmark tiles.', value: 'block' },
-      { id: 'bookmark-style-list', labelText: 'List', description: 'Short and wide Bookmark tiles.', value: 'list' }
+      { id: 'bookmark-style-block', labelText: message.get('menuContentBookmarkStyleBlockLabel'), description: message.get('menuContentBookmarkStyleBlockDescription'), value: 'block' },
+      { id: 'bookmark-style-list', labelText: message.get('menuContentBookmarkStyleListLabel'), description: message.get('menuContentBookmarkStyleListDescription'), value: 'list' }
     ],
     groupName: 'bookmark-style',
     path: 'bookmark.style',
@@ -296,8 +298,8 @@ bookmarkSetting.orientation = (parent) => {
   bookmarkSetting.control.orientation.orientationElement = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'bookmark-orientation-top', labelText: 'Top', value: 'top' },
-      { id: 'bookmark-orientation-bottom', labelText: 'Bottom', value: 'bottom' }
+      { id: 'bookmark-orientation-top', labelText: message.get('menuContentBookmarkOrientationTop'), value: 'top' },
+      { id: 'bookmark-orientation-bottom', labelText: message.get('menuContentBookmarkOrientationBottom'), value: 'bottom' }
     ],
     groupName: 'bookmark-orientation',
     path: 'bookmark.orientation',
@@ -325,7 +327,7 @@ bookmarkSetting.orientation = (parent) => {
   });
 
   bookmarkSetting.control.orientation.orientationHelper = new Control_helperText({
-    text: ['Display the URL and Controls either at the top or bottom of a Bookmark Tile.']
+    text: [message.get('menuContentBookmarkOrientationHelperPara1')]
   });
 
   parent.appendChild(
@@ -340,7 +342,7 @@ bookmarkSetting.orientation = (parent) => {
 bookmarkSetting.sort = (parent) => {
 
   bookmarkSetting.control.sort.letter = new Button({
-    text: 'By letter',
+    text: message.get('menuContentBookmarkSortLetter'),
     style: ['line'],
     func: () => {
 
@@ -368,7 +370,7 @@ bookmarkSetting.sort = (parent) => {
   });
 
   bookmarkSetting.control.sort.icon = new Button({
-    text: 'By icon',
+    text: message.get('menuContentBookmarkSortIcon'),
     style: ['line'],
     func: () => {
 
@@ -396,7 +398,7 @@ bookmarkSetting.sort = (parent) => {
   });
 
   bookmarkSetting.control.sort.name = new Button({
-    text: 'By name',
+    text: message.get('menuContentBookmarkSortName'),
     style: ['line'],
     func: () => {
 

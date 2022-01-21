@@ -8,7 +8,7 @@ import moment from 'moment';
 
 import './index.css';
 
-export const Greeting = function () {
+export const Greeting = function() {
 
   this.now;
 
@@ -25,9 +25,9 @@ export const Greeting = function () {
 
   };
 
-  this.message = ['Good night', 'Good morning', 'Good afternoon', 'Good evening'];
-
   this.update = () => {
+
+    const goodMessage = ['Good night', 'Good morning', 'Good afternoon', 'Good evening'];
 
     this.now = moment();
 
@@ -43,7 +43,7 @@ export const Greeting = function () {
 
       case 'good':
 
-        value = this.message[Math.floor(this.now.hours() / 6)];
+        value = goodMessage[Math.floor(this.now.hours() / 6)];
 
         break;
 
@@ -55,7 +55,7 @@ export const Greeting = function () {
 
       case 'hi':
 
-        value = 'Hi';
+        value = 'hi';
 
         break;
 
@@ -67,7 +67,7 @@ export const Greeting = function () {
 
         } else {
 
-          value = this.message[Math.floor(this.now.hours() / 6)];
+          value = goodMessage[Math.floor(this.now.hours() / 6)];
 
         }
 

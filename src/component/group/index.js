@@ -1,3 +1,5 @@
+import { message } from '../message';
+
 import { state } from '../state';
 import { data } from '../data';
 import { layout } from '../layout';
@@ -213,9 +215,10 @@ group.add = {
     const groupForm = new GroupForm({ groupData: newGroupData });
 
     const addModal = new Modal({
-      heading: 'Add a new Group',
+      heading: message.get('groupAddHeading'),
       content: groupForm.form(),
-      successText: 'Add',
+      successText: message.get('groupAddSuccessText'),
+      cancelText: message.get('groupAddCancelText'),
       width: 40,
       openAction: () => {
 

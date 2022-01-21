@@ -1,3 +1,5 @@
+import { message } from '../message';
+
 import { state } from '../state';
 import { data } from '../data';
 import { bookmark } from '../bookmark';
@@ -16,7 +18,7 @@ import { complexNode } from '../../utility/complexNode';
 import { isValidString } from '../../utility/isValidString';
 import { trimString } from '../../utility/trimString';
 
-const BookmarkTile = function ({
+const BookmarkTile = function({
   bookmarkData = {},
   preview = false
 } = {}) {
@@ -63,11 +65,11 @@ const BookmarkTile = function ({
 
   this.control.button = {
     left: new Button({
-      text: 'Move this bookmark left',
+      text: message.get('bookmarkTileControlLeft'),
       srOnly: true,
       iconName: 'arrowKeyboardLeft',
       style: ['link'],
-      title: 'Move this bookmark left',
+      title: message.get('bookmarkTileControlLeft'),
       classList: ['bookmark-control-button', 'bookmark-control-left'],
       func: () => {
 
@@ -86,19 +88,19 @@ const BookmarkTile = function ({
       }
     }),
     sort: new Button({
-      text: 'Drag bookmark to reorder',
+      text: message.get('bookmarkTileControlSort'),
       srOnly: true,
       iconName: 'drag',
       style: ['link'],
-      title: 'Drag bookmark to reorder',
+      title: message.get('bookmarkTileControlSort'),
       classList: ['bookmark-control-button', 'bookmark-control-sort']
     }),
     right: new Button({
-      text: 'Move this bookmark right',
+      text: message.get('bookmarkTileControlRight'),
       srOnly: true,
       iconName: 'arrowKeyboardRight',
       style: ['link'],
-      title: 'Move this bookmark right',
+      title: message.get('bookmarkTileControlRight'),
       classList: ['bookmark-control-button', 'bookmark-control-right'],
       func: () => {
 
@@ -117,11 +119,11 @@ const BookmarkTile = function ({
       }
     }),
     edit: new Button({
-      text: 'Edit this bookmark',
+      text: message.get('bookmarkTileControlEdit'),
       srOnly: true,
       iconName: 'edit',
       style: ['link'],
-      title: 'Edit this bookmark',
+      title: message.get('bookmarkTileControlEdit'),
       classList: ['bookmark-control-button', 'bookmark-control-edit'],
       func: () => {
 
@@ -136,9 +138,10 @@ const BookmarkTile = function ({
         const bookmarkForm = new BookmarkForm({ bookmarkData: newBookmarkData });
 
         const editModal = new Modal({
-          heading: isValidString(newBookmarkData.link.display.name.text) ? 'Edit ' + newBookmarkData.link.display.name.text : 'Edit unnamed bookmark',
+          heading: isValidString(newBookmarkData.link.display.name.text) ? `${message.get('bookmarkEditHeadingName')} ${newBookmarkData.link.display.name.text}` : message.get('bookmarkEditHeadingUnnamed'),
           content: bookmarkForm.form(),
-          successText: 'Save',
+          successText: message.get('bookmarkEditSuccessText'),
+          cancelText: message.get('bookmarkEditCancelText'),
           width: (state.get.current().bookmark.style === 'block') ? 60 : 70,
           maxHeight: true,
           successAction: () => {
@@ -177,18 +180,19 @@ const BookmarkTile = function ({
       }
     }),
     remove: new Button({
-      text: 'Remove this bookmark',
+      text: message.get('bookmarkTileControlRemove'),
       srOnly: true,
       iconName: 'cross',
       style: ['link'],
-      title: 'Remove this bookmark',
+      title: message.get('bookmarkTileControlRemove'),
       classList: ['bookmark-control-button', 'bookmark-control-remove'],
       func: () => {
 
         const removeModal = new Modal({
-          heading: isValidString(bookmarkData.link.display.name.text) ? 'Remove ' + bookmarkData.link.display.name.text : 'Remove unnamed bookmark',
-          content: 'Are you sure you want to remove this Bookmark? This can not be undone.',
-          successText: 'Remove',
+          heading: isValidString(bookmarkData.link.display.name.text) ? `${message.get('bookmarkRemoveHeadingName')} ${bookmarkData.link.display.name.text}` : message.get('bookmarkRemoveHeadingUnnamed'),
+          content: message.get('bookmarkRemoveContent'),
+          successText: message.get('bookmarkRemoveSuccessText'),
+          cancelText: message.get('bookmarkRemoveCancelText'),
           width: 'small',
           successAction: () => {
 

@@ -1,0 +1,2778 @@
+{
+  "appName": {
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
+  },
+  "appShortName": {
+    "message": "nightTab",
+    "description": "The name of the extension, displayed in the web store."
+  },
+  "appDescription": {
+    "message": "नाइटटैब में उच्चारण रंग, लेआउट, शैली, पृष्ठभूमि और बुकमार्क को अनुकूलित करें।",
+    "description": "The description of the extension, displayed in the web store."
+  },
+  "menuNavDebugLabel": {
+    "message": "डिबग",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDebugSubNavInput": {
+    "message": "इनपुट",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDebugSubNavButton": {
+    "message": "बटन",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDebugSubNavBookmark": {
+    "message": "बुकमार्क",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDebugSubNavIcon": {
+    "message": "आइकन",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeLabel": {
+    "message": "विषय",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavPreset": {
+    "message": "प्रीसेट",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavSaved": {
+    "message": "बचाया",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavStyle": {
+    "message": "अंदाज",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavColor": {
+    "message": "रंग",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavAccent": {
+    "message": "लहज़ा",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavFont": {
+    "message": "फ़ॉन्ट",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavRadius": {
+    "message": "कोने",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavShadow": {
+    "message": "साया",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavShade": {
+    "message": "छाया",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavOpacity": {
+    "message": "अस्पष्टता",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavBackground": {
+    "message": "पृष्ठभूमि",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavLayout": {
+    "message": "ख़ाका",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavHeader": {
+    "message": "हैडर",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavThemeSubNavBookmark": {
+    "message": "बुकमार्क",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutLabel": {
+    "message": "ख़ाका",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavScaling": {
+    "message": "स्केलिंग",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavArea": {
+    "message": "क्षेत्र",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavPadding": {
+    "message": "गद्दी",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavGutter": {
+    "message": "नाली",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavAlignment": {
+    "message": "संरेखण",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLayoutSubNavPage": {
+    "message": "पृष्ठ",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderLabel": {
+    "message": "हैडर",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavAlignment": {
+    "message": "संरेखण",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavGreeting": {
+    "message": "शुभकामना",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavTransitional": {
+    "message": "परिवर्ती शब्द",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavClock": {
+    "message": "घड़ी",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavDate": {
+    "message": "दिनांक",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavHeaderSubNavSearch": {
+    "message": "खोज",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavBookmarkLabel": {
+    "message": "बुकमार्क",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavBookmarkSubNavGeneral": {
+    "message": "आम",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavBookmarkSubNavStyle": {
+    "message": "अंदाज",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavBookmarkSubNavOrientation": {
+    "message": "अभिविन्यास",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavBookmarkSubNavSort": {
+    "message": "तरह",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavGroupLabel": {
+    "message": "समूह",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavGroupSubNavAlignment": {
+    "message": "संरेखण",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavGroupSubNavName": {
+    "message": "नाम",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavGroupSubNavCollapse": {
+    "message": "ढहने",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavGroupSubNavToolbar": {
+    "message": "उपकरण पट्टी",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavToolbarLabel": {
+    "message": "उपकरण पट्टी",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavToolbarSubNavSize": {
+    "message": "आकार",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavToolbarSubNavLocation": {
+    "message": "स्थान",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavToolbarSubNavPosition": {
+    "message": "पद",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavToolbarSubNavControls": {
+    "message": "नियंत्रण",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDataLabel": {
+    "message": "आंकड़े",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDataSubNavRestore": {
+    "message": "पुनर्स्थापित",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDataSubNavBackup": {
+    "message": "बैकअप",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavDataSubNavClear": {
+    "message": "स्पष्ट",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavLanguageLabel": {
+    "message": "भाषा",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavSupportLabel": {
+    "message": "सहायता",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavCoffeeLabel": {
+    "message": "कॉफ़ी",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuNavAppLabel": {
+    "message": "{appName}",
+    "description": "Label for the settings menu navigation."
+  },
+  "menuContentThemePresetHelperPara1": {
+    "message": "प्रीसेट लागू करने से वर्तमान रंग, उच्चारण, फ़ॉन्ट, शैली, त्रिज्या, छाया, छाया और पृष्ठभूमि बदल जाएगी।",
+    "description": "Helper text for preset theme."
+  },
+  "menuContentThemeSavedHelperPara1": {
+    "message": "थीम को सहेजना वर्तमान रंग, उच्चारण, फ़ॉन्ट, शैली, अस्पष्टता, त्रिज्या, छाया, छाया और पृष्ठभूमि को रिकॉर्ड करेगा।",
+    "description": "Helper text for saved themes."
+  },
+  "menuContentThemeSavedSave": {
+    "message": "वर्तमान विषय सहेजें",
+    "description": "Button to save the current theme setup."
+  },
+  "menuContentThemeSavedEdit": {
+    "message": "सहेजी गई थीम संपादित करें",
+    "description": "Button to enter edit mode for saved themes."
+  },
+  "menuContentThemeStyleDarkLabel": {
+    "message": "डार्क मोड",
+    "description": "Radio for dark mode."
+  },
+  "menuContentThemeStyleLightLabel": {
+    "message": "लाइट मोड",
+    "description": "Radio for light mode."
+  },
+  "menuContentThemeStyleAutomaticLabel": {
+    "message": "सिस्टम भाषा का प्रयोग करें",
+    "description": "Radio for automatic light or dark mode."
+  },
+  "menuContentThemeStyleAutomaticDescription": {
+    "message": "सिस्टम लाइट या डार्क मोड का पालन करें।",
+    "description": "Description for automatic light or dark mode."
+  },
+  "menuContentThemeColorShadeHelperPara1": {
+    "message": "पृष्ठभूमि, बुकमार्क और मोडल बाईं ओर से रंगों का उपयोग करते हैं।",
+    "description": "Helper text for primary colour."
+  },
+  "menuContentThemeColorShadeHelperPara2": {
+    "message": "पाठ और प्रपत्र तत्व दाईं ओर से रंगों का उपयोग करते हैं।",
+    "description": "Helper text for primary colour."
+  },
+  "menuContentThemeColorShadeHelperPara3": {
+    "message": "लाइट लुक के लिए लाइट स्टाइल पर स्विच करें और फिर प्राइमरी कलर चुनें। और इसके विपरीत डार्क लुक के लिए।",
+    "description": "Helper text for primary colour."
+  },
+  "menuContentThemeColorRangePrimaryH": {
+    "message": "प्राथमिक रंग",
+    "description": "Range for primary colour hue."
+  },
+  "menuContentThemeColorRangePrimaryS": {
+    "message": "परिपूर्णता",
+    "description": "Range for primary colour saturation."
+  },
+  "menuContentThemeColorContrastLabel": {
+    "message": "कंट्रास्ट रेंज",
+    "description": "Label for primary colour contrast."
+  },
+  "menuContentThemeColorContrastLeft": {
+    "message": "कंट्रास्ट प्रारंभ",
+    "description": "Range for primary colour contrast left side."
+  },
+  "menuContentThemeColorContrastRight": {
+    "message": "कंट्रास्ट अंत",
+    "description": "Range for primary colour contrast right side."
+  },
+  "menuContentThemeColorContrastHelperPara1": {
+    "message": "म्यूट लुक के लिए कंट्रास्ट रेंज नियंत्रणों को एक साथ पास ले जाएं।",
+    "description": "Helper text for primary colour contrast."
+  },
+  "menuContentThemeColorContrastHelperPara2": {
+    "message": "शार्प विविड लुक के लिए कंट्रास्ट रेंज कंट्रोल को एक दूसरे से दूर ले जाएं।",
+    "description": "Helper text for primary colour contrast."
+  },
+  "menuContentThemeAccentPresetColorGrey": {
+    "message": "धूसर",
+    "description": "Label for grey preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorRed": {
+    "message": "लाल",
+    "description": "Label for red preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorOrange": {
+    "message": "संतरा",
+    "description": "Label for orange preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorYellow": {
+    "message": "पीला",
+    "description": "Label for yellow preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorLime": {
+    "message": "नींबू",
+    "description": "Label for lime preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorGreen": {
+    "message": "हरा",
+    "description": "Label for green preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorAqua": {
+    "message": "पानी",
+    "description": "Label for aqua preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorCyan": {
+    "message": "सियान",
+    "description": "Label for cyan preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorTeal": {
+    "message": "टील",
+    "description": "Label for teal preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorBlue": {
+    "message": "नीला",
+    "description": "Label for blue preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorPurple": {
+    "message": "बैंगनी",
+    "description": "Label for purple preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorMagenta": {
+    "message": "मैजेंटा",
+    "description": "Label for magenta preset accent colour."
+  },
+  "menuContentThemeAccentPresetColorFuchsia": {
+    "message": "फ्यूशिया",
+    "description": "Label for fuchsia preset accent colour."
+  },
+  "menuContentThemeAccentPresetModifierLightLevel3": {
+    "message": "सुपर अतिरिक्त प्रकाश",
+    "description": "Label for preset accent colour light level 3."
+  },
+  "menuContentThemeAccentPresetModifierLightLevel2": {
+    "message": "अतिरिक्त प्रकाश",
+    "description": "Label for preset accent colour light level 2."
+  },
+  "menuContentThemeAccentPresetModifierLightLevel1": {
+    "message": "रोशनी",
+    "description": "Label for preset accent colour light level 1."
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel3": {
+    "message": "सुपर अतिरिक्त अंधेरा",
+    "description": "Label for preset accent colour dark level 3."
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel2": {
+    "message": "अतिरिक्त अंधेरा",
+    "description": "Label for preset accent colour dark level 2."
+  },
+  "menuContentThemeAccentPresetModifierDarkLevel1": {
+    "message": "अंधेरा",
+    "description": "Label for preset accent colour dark level 1."
+  },
+  "menuContentThemeAccentColor": {
+    "message": "एक्सेंट रंग",
+    "description": "Label for accent colour."
+  },
+  "menuContentThemeAccentRandomActive": {
+    "message": "लोड/रीफ्रेश पर रैंडम एक्सेंट रंग",
+    "description": "Checkbox for random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomStyleAny": {
+    "message": "कोई",
+    "description": "Radio for any random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomStyleLight": {
+    "message": "रोशनी",
+    "description": "Radio for light random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomStyleDark": {
+    "message": "अंधेरा",
+    "description": "Radio for dark random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomStylePastel": {
+    "message": "पस्टेल",
+    "description": "Radio for pastel random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomStyleSaturated": {
+    "message": "तर-बतर",
+    "description": "Radio for saturated random accent colour on load or refresh."
+  },
+  "menuContentThemeAccentRandomRandomise": {
+    "message": "अभी यादृच्छिक करें",
+    "description": "Button to randomise accent colour now."
+  },
+  "menuContentThemeAccentCycleActive": {
+    "message": "ऑटो चेंज एक्सेंट ह्यू",
+    "description": "Checkbox for cycled accent colour."
+  },
+  "menuContentThemeAccentCycleSpeed": {
+    "message": "देरी बदलें",
+    "description": "Range for cycled accent colour speed."
+  },
+  "menuContentThemeAccentCycleStep": {
+    "message": "चरण बदलें",
+    "description": "Range for cycled accent colour steps."
+  },
+  "menuContentThemeAccentCycleAlert": {
+    "message": "ध्यान रखें कि तेजी से बदलते एक्सेंट ह्यू के कारण प्रदर्शन संबंधी समस्याएं हो सकती हैं।",
+    "description": "Alert for cycled accent colour."
+  },
+  "menuContentThemeAccentCycleHelperPara1": {
+    "message": "जब एक्सेंट का रंग धूसर या काला हो, तो स्वतः परिवर्तन एक्सेंट ह्यू काम नहीं करेगा।",
+    "description": "Helper text for cycled accent colour."
+  },
+  "menuContentThemeFontDisplayNameLabel": {
+    "message": "फ़ॉन्ट प्रदर्शित करें",
+    "description": "Input for display font name."
+  },
+  "menuContentThemeFontDisplayNamePlaceholder": {
+    "message": "गूगल फ़ॉन्ट नाम",
+    "description": "Placeholder for display font name."
+  },
+  "menuContentThemeFontDisplayNameHelperPara1": {
+    "message": "घड़ी, दिनांक, समूह नाम और बुकमार्क अक्षरों को अनुकूलित करने के लिए Google फ़ॉन्ट का उपयोग करें।",
+    "description": "Helper text for display font name."
+  },
+  "menuContentThemeFontDisplayNameHelperLink": {
+    "message": "एक Google फ़ॉन्ट खोजें",
+    "description": "Link to google fonts."
+  },
+  "menuContentThemeFontDisplayNameHelperPara2": {
+    "message": "एक फ़ॉन्ट नाम जोड़ें जैसा कि यह Google फ़ॉन्ट्स पर दिखाई देता है, जिसमें बड़े अक्षर और रिक्त स्थान शामिल हैं, उदाहरण के लिए: \"फ़्रेडोका वन\" या \"कानिट\" दर्ज करें।",
+    "description": "Helper text for display font name."
+  },
+  "menuContentThemeFontDisplayNameHelperPara3": {
+    "message": "डिफ़ॉल्ट फ़ॉन्ट \"Fjalla One\" का उपयोग करने के लिए फ़ील्ड साफ़ करें।",
+    "description": "Helper text for display font name."
+  },
+  "menuContentThemeFontDisplayWeightLabel": {
+    "message": "फ़ॉन्ट वजन",
+    "description": "Label for display font weight."
+  },
+  "menuContentThemeFontDisplayWeightLight": {
+    "message": "रोशनी",
+    "description": "Button for light weight display font."
+  },
+  "menuContentThemeFontDisplayWeightRegular": {
+    "message": "नियमित",
+    "description": "Button for regular weight display font."
+  },
+  "menuContentThemeFontDisplayWeightBold": {
+    "message": "मोटा",
+    "description": "Button for bold weight display font."
+  },
+  "menuContentThemeFontDisplayWeightHelperPara1": {
+    "message": "सभी फोंट सभी भारों का समर्थन नहीं करते हैं। कौन से उपलब्ध हैं यह देखने के लिए Google फ़ॉन्ट पृष्ठ देखें।",
+    "description": "Helper text for display font weight."
+  },
+  "menuContentThemeFontDisplayStyleNormal": {
+    "message": "साधारण",
+    "description": "Radio for normal display font style."
+  },
+  "menuContentThemeFontDisplayStyleItalic": {
+    "message": "तिरछा",
+    "description": "Radio for italic display font style."
+  },
+  "menuContentThemeFontUiNameLabel": {
+    "message": "यूजर इंटरफेस फ़ॉन्ट",
+    "description": "Input for UI font name."
+  },
+  "menuContentThemeFontUiNamePlaceholder": {
+    "message": "गूगल फ़ॉन्ट नाम",
+    "description": "Placeholder for UI font name."
+  },
+  "menuContentThemeFontUiNameHelperPara1": {
+    "message": "बुकमार्क नाम, URL और प्रपत्र तत्वों को अनुकूलित करने के लिए Google फ़ॉन्ट का उपयोग करें।",
+    "description": "Helper text for UI font name."
+  },
+  "menuContentThemeFontUiNameHelperLink": {
+    "message": "एक Google फ़ॉन्ट खोजें",
+    "description": "Link to google fonts."
+  },
+  "menuContentThemeFontUiNameHelperPara2": {
+    "message": "एक फ़ॉन्ट नाम जोड़ें जैसा कि यह Google फ़ॉन्ट्स पर दिखाई देता है, जिसमें बड़े अक्षरों और रिक्त स्थान शामिल हैं, उदाहरण के लिए: \"रोबोटो\", \"सोर्स सैन्स प्रो\" या \"नोटो सैन्स\" दर्ज करें।",
+    "description": "Helper text for UI font name."
+  },
+  "menuContentThemeFontUiNameHelperPara3": {
+    "message": "डिफ़ॉल्ट फ़ॉन्ट \"ओपन सैन्स\" का उपयोग करने के लिए फ़ील्ड साफ़ करें।",
+    "description": "Helper text for UI font name."
+  },
+  "menuContentThemeFontUiWeightLabel": {
+    "message": "फ़ॉन्ट वजन",
+    "description": "Label for UI font weight."
+  },
+  "menuContentThemeFontUiWeightLight": {
+    "message": "रोशनी",
+    "description": "Button for light weight UI font."
+  },
+  "menuContentThemeFontUiWeightRegular": {
+    "message": "नियमित",
+    "description": "Button for regular weight UI font."
+  },
+  "menuContentThemeFontUiWeightBold": {
+    "message": "मोटा",
+    "description": "Button for bold weight UI font."
+  },
+  "menuContentThemeFontUiWeightHelperPara1": {
+    "message": "सभी फोंट सभी भारों का समर्थन नहीं करते हैं। कौन से उपलब्ध हैं यह देखने के लिए Google फ़ॉन्ट पृष्ठ देखें।",
+    "description": "Helper text for UI font weight."
+  },
+  "menuContentThemeFontUiStyleNormal": {
+    "message": "साधारण",
+    "description": "Radio for normal UI font style."
+  },
+  "menuContentThemeFontUiStyleItalic": {
+    "message": "तिरछा",
+    "description": "Radio for italic UI font style."
+  },
+  "menuContentThemeRadius": {
+    "message": "कोने का अर्द्ध व्यास",
+    "description": "Range for radius."
+  },
+  "menuContentThemeShadow": {
+    "message": "छाया आकार",
+    "description": "Range for shadow."
+  },
+  "menuContentThemeShadeOpacity": {
+    "message": "छाया अस्पष्टता",
+    "description": "Range for shade opacity."
+  },
+  "menuContentThemeShadeBlurLabel": {
+    "message": "छाया धुंधला",
+    "description": "Range for shade blur."
+  },
+  "menuContentThemeShadeBlurHelperPara1": {
+    "message": "सभी ब्राउज़रों द्वारा समर्थित नहीं है।",
+    "description": "Helper text for shade blur."
+  },
+  "menuContentThemeOpacityGeneralLabel": {
+    "message": "सभी अस्पष्टता",
+    "description": "Range for all opacity."
+  },
+  "menuContentThemeOpacityGeneralHelperPara1": {
+    "message": "खोज बार, बुकमार्क, समूह नियंत्रण और टूलबार की अस्पष्टता बदलें।",
+    "description": "Helper text for all opacity."
+  },
+  "menuContentThemeOpacityGeneralHelperPara2": {
+    "message": "अलग-अलग बुकमार्क संपादित करते समय अस्पष्टता भी बदली जा सकती है।",
+    "description": "Helper text for all opacity."
+  },
+  "menuContentThemeOpacityToolbar": {
+    "message": "उपकरण पट्टी",
+    "description": "Range for toolbar opacity."
+  },
+  "menuContentThemeOpacityBookmark": {
+    "message": "बुकमार्क",
+    "description": "Range for bookmark opacity."
+  },
+  "menuContentThemeOpacitySearch": {
+    "message": "खोज बॉक्स",
+    "description": "Range for search opacity."
+  },
+  "menuContentThemeOpacityGroupToolbar": {
+    "message": "समूह टूलबार",
+    "description": "Range for group toolbar opacity."
+  },
+  "menuContentThemeBackgroundTypeThemeLabel": {
+    "message": "थीम द्वारा पृष्ठभूमि",
+    "description": "Radio for background type theme."
+  },
+  "menuContentThemeBackgroundTypeThemeDescription": {
+    "message": "थीम द्वारा परिभाषित पृष्ठभूमि रंग का प्रयोग करें।",
+    "description": "Description for background type theme."
+  },
+  "menuContentThemeBackgroundTypeAccentLabel": {
+    "message": "Accent . द्वारा पृष्ठभूमि",
+    "description": "Radio for background type accent."
+  },
+  "menuContentThemeBackgroundTypeAccentDescription": {
+    "message": "बैकग्राउंड के लिए एक्सेंट कलर का इस्तेमाल करें।",
+    "description": "Description for background type accent."
+  },
+  "menuContentThemeBackgroundTypeColor": {
+    "message": "कस्टम रंग",
+    "description": "Radio for background type colour."
+  },
+  "menuContentThemeBackgroundTypeGradient": {
+    "message": "ढाल",
+    "description": "Radio for background type gradient."
+  },
+  "menuContentThemeBackgroundTypeImage": {
+    "message": "छवि",
+    "description": "Radio for background type image."
+  },
+  "menuContentThemeBackgroundTypeVideo": {
+    "message": "वीडियो",
+    "description": "Radio for background type video."
+  },
+  "menuContentThemeBackgroundColor": {
+    "message": "पृष्ठभूमि का रंग",
+    "description": "Label for background colour."
+  },
+  "menuContentThemeBackgroundGradientAngle": {
+    "message": "पृष्ठभूमि ढाल कोण",
+    "description": "Label for background gradient angle."
+  },
+  "menuContentThemeBackgroundGradientLeft": {
+    "message": "बैकग्राउंड ग्रेडिएंट स्टार्ट",
+    "description": "Range for background gradient angle left."
+  },
+  "menuContentThemeBackgroundGradientRight": {
+    "message": "पृष्ठभूमि ढाल अंत",
+    "description": "Range for background gradient angle right."
+  },
+  "menuContentThemeBackgroundImageAlertPara1": {
+    "message": "स्थानीय छवियों का अब उपयोग नहीं किया जा सकता है। छवियों को कहीं ऑनलाइन होस्ट किया जाना चाहिए।",
+    "description": "Alert for image background."
+  },
+  "menuContentThemeBackgroundImageAlertPara2": {
+    "message": "यह क्यों बदल गया है?",
+    "description": "Alert for image background."
+  },
+  "menuContentThemeBackgroundImageUrlLabel": {
+    "message": "URL",
+    "description": "Input for background image URL."
+  },
+  "menuContentThemeBackgroundImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg",
+    "description": "Placeholder for background image URL."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara1": {
+    "message": "लोड पर एक यादृच्छिक पृष्ठभूमि छवि के लिए रिक्त स्थान या नई पंक्तियों द्वारा अलग किए गए एक से अधिक URL जोड़ें।",
+    "description": "Helper text for background image."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara2": {
+    "message": "यादृच्छिक छवियों के लिए अनप्लैश का उपयोग किया जा सकता है, उदाहरण के लिए:",
+    "description": "Helper text for background image."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara3": {
+    "message": "https://source.unsplash.com/random/1920x1080/?night,day,sky",
+    "description": "Helper text for background image."
+  },
+  "menuContentThemeBackgroundImageUrlHelperPara4": {
+    "message": "अधिक विकल्पों के लिए .../यादृच्छिक/ के बाद पैरामीटर बदलें। लोडिंग समय भिन्न हो सकता है।",
+    "description": "Helper text for background image."
+  },
+  "menuContentThemeBackgroundImageBlur": {
+    "message": "कलंक",
+    "description": "Range background image blur."
+  },
+  "menuContentThemeBackgroundImageGrayscale": {
+    "message": "ग्रेस्केल",
+    "description": "Range background image grayscale."
+  },
+  "menuContentThemeBackgroundImageScale": {
+    "message": "स्केल",
+    "description": "Range background image scale."
+  },
+  "menuContentThemeBackgroundImageAccent": {
+    "message": "लहज़ा",
+    "description": "Range background image accent."
+  },
+  "menuContentThemeBackgroundImageOpacity": {
+    "message": "अस्पष्टता",
+    "description": "Range background image opacity."
+  },
+  "menuContentThemeBackgroundImageVignetteOpacity": {
+    "message": "विनेट",
+    "description": "Range for image vignette opacity."
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLabel": {
+    "message": "छाया प्रारंभ और अंत",
+    "description": "Label for image vignette."
+  },
+  "menuContentThemeBackgroundImageVignetteRangeLeft": {
+    "message": "छाया अंत",
+    "description": "Range for image vignette left."
+  },
+  "menuContentThemeBackgroundImageVignetteRangeRight": {
+    "message": "छाया प्रारंभ",
+    "description": "Range for image vignette right."
+  },
+  "menuContentThemeBackgroundVideoAlertPara1": {
+    "message": "YouTube पृष्ठ URL का उपयोग नहीं किया जा सकता है।",
+    "description": "Alert for video background."
+  },
+  "menuContentThemeBackgroundVideoAlertPara2": {
+    "message": "वीडियो फ़ाइल से कैसे लिंक करें।",
+    "description": "Alert for video background."
+  },
+  "menuContentThemeBackgroundVideoUrlLabel": {
+    "message": "URL",
+    "description": "Input for background video URL."
+  },
+  "menuContentThemeBackgroundVideoUrlPlaceholder": {
+    "message": "https://www.example.com/video.mp4",
+    "description": "Placeholder for background video URL."
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara1": {
+    "message": "बैकग्राउंड वीडियो केवल वीडियो फ़ाइल के सीधे URL का समर्थन करता है। MP4 और WebM प्रारूप का समर्थन करता है।",
+    "description": "Helper text for background video."
+  },
+  "menuContentThemeBackgroundVideoUrlHelperPara2": {
+    "message": "लोड पर एक यादृच्छिक पृष्ठभूमि वीडियो के लिए रिक्त स्थान या नई पंक्तियों द्वारा अलग किए गए एक से अधिक URL जोड़ें।",
+    "description": "Helper text for background video."
+  },
+  "menuContentThemeBackgroundVideoBlur": {
+    "message": "कलंक",
+    "description": "Range background video blur."
+  },
+  "menuContentThemeBackgroundVideoGrayscale": {
+    "message": "ग्रेस्केल",
+    "description": "Range background video grayscale."
+  },
+  "menuContentThemeBackgroundVideoScale": {
+    "message": "स्केल",
+    "description": "Range background video scale."
+  },
+  "menuContentThemeBackgroundVideoAccent": {
+    "message": "लहज़ा",
+    "description": "Range background video accent."
+  },
+  "menuContentThemeBackgroundVideoOpacity": {
+    "message": "अस्पष्टता",
+    "description": "Range background video opacity."
+  },
+  "menuContentThemeBackgroundVideoVignetteOpacity": {
+    "message": "विनेट",
+    "description": "Range for video vignette opacity."
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLabel": {
+    "message": "छाया प्रारंभ और अंत",
+    "description": "Label for video vignette."
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeLeft": {
+    "message": "छाया अंत",
+    "description": "Range for video vignette left."
+  },
+  "menuContentThemeBackgroundVideoVignetteRangeRight": {
+    "message": "छाया प्रारंभ",
+    "description": "Range for video vignette right."
+  },
+  "menuContentThemeLayoutColorLabel": {
+    "message": "लेआउट पृष्ठभूमि रंग",
+    "description": "Label for layout area colour."
+  },
+  "menuContentThemeLayoutColorByTransparentLabel": {
+    "message": "पारदर्शी",
+    "description": "Radio for transparent layout area background."
+  },
+  "menuContentThemeLayoutColorByTransparentDescription": {
+    "message": "लेआउट के पीछे कोई पृष्ठभूमि रंग नहीं है।",
+    "description": "Description for transparent layout area background."
+  },
+  "menuContentThemeLayoutColorByCustomLabel": {
+    "message": "कस्टम रंग",
+    "description": "Radio for colour layout area background."
+  },
+  "menuContentThemeLayoutColorByCustomDescription": {
+    "message": "लेआउट के पीछे एक कस्टम रंग का प्रयोग करें।",
+    "description": "Description for colour layout area background."
+  },
+  "menuContentThemeLayoutColorColor": {
+    "message": "लेआउट पृष्ठभूमि रंग",
+    "description": "Label for layout area background colour."
+  },
+  "menuContentThemeLayoutColorOpacity": {
+    "message": "पृष्ठभूमि अस्पष्टता",
+    "description": "Range for layout area background opacity."
+  },
+  "menuContentThemeLayoutColorBlurLabel": {
+    "message": "बैकग्राउंड ब्लर",
+    "description": "Range for layout background blur."
+  },
+  "menuContentThemeLayoutColorBlurHelperPara1": {
+    "message": "सभी ब्राउज़रों द्वारा समर्थित नहीं है।",
+    "description": "Description for layout background blur."
+  },
+  "menuContentThemeLayoutDivider": {
+    "message": "हैडर और बुकमार्क क्षेत्र के बीच विभक्त",
+    "description": "Label for layout divider."
+  },
+  "menuContentThemeHeaderColorLabel": {
+    "message": "हैडर पृष्ठभूमि रंग",
+    "description": "Label for header area colour."
+  },
+  "menuContentThemeHeaderColorByTransparentLabel": {
+    "message": "पारदर्शी",
+    "description": "Radio for transparent header area background."
+  },
+  "menuContentThemeHeaderColorByTransparentDescription": {
+    "message": "हैडर क्षेत्र के पीछे कोई पृष्ठभूमि रंग नहीं।",
+    "description": "Description for transparent header area background."
+  },
+  "menuContentThemeHeaderColorByCustomLabel": {
+    "message": "कस्टम रंग",
+    "description": "Radio for colour header area background."
+  },
+  "menuContentThemeHeaderColorByCustomDescription": {
+    "message": "हैडर क्षेत्र के पीछे एक कस्टम रंग का प्रयोग करें।",
+    "description": "Description for colour header area background."
+  },
+  "menuContentThemeHeaderColorColor": {
+    "message": "हैडर पृष्ठभूमि रंग",
+    "description": "Label for header area background colour."
+  },
+  "menuContentThemeHeaderColorOpacity": {
+    "message": "पृष्ठभूमि अस्पष्टता",
+    "description": "Range for header area background opacity."
+  },
+  "menuContentThemeBookmarkColorLabel": {
+    "message": "बुकमार्क पृष्ठभूमि रंग",
+    "description": "Label for bookmark area colour."
+  },
+  "menuContentThemeBookmarkColorByTransparentLabel": {
+    "message": "पारदर्शी",
+    "description": "Radio for transparent bookmark area background."
+  },
+  "menuContentThemeBookmarkColorByTransparentDescription": {
+    "message": "बुकमार्क क्षेत्र के पीछे कोई पृष्ठभूमि रंग नहीं है।",
+    "description": "Description for transparent bookmark area background."
+  },
+  "menuContentThemeBookmarkColorByCustomLabel": {
+    "message": "कस्टम रंग",
+    "description": "Radio for colour bookmark area background."
+  },
+  "menuContentThemeBookmarkColorByCustomDescription": {
+    "message": "बुकमार्क क्षेत्र के पीछे एक कस्टम रंग का प्रयोग करें।",
+    "description": "Description for colour bookmark area background."
+  },
+  "menuContentThemeBookmarkColorColor": {
+    "message": "बुकमार्क पृष्ठभूमि रंग",
+    "description": "Label for bookmark area background colour."
+  },
+  "menuContentThemeBookmarkColorOpacity": {
+    "message": "पृष्ठभूमि अस्पष्टता",
+    "description": "Range for bookmark area background opacity."
+  },
+  "menuContentThemeBookmarkItemBorderLabel": {
+    "message": "बुकमार्क बॉर्डर",
+    "description": "Label for bookmark item border."
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara1": {
+    "message": "अलग-अलग बुकमार्क संपादित करते समय बुकमार्क बॉर्डर को भी बदला जा सकता है।",
+    "description": "Helper text for bookmark border."
+  },
+  "menuContentThemeBookmarkItemBorderHelperPara2": {
+    "message": "सीमा के रंग को एक्सेंट द्वारा परिभाषित किया जाता है जिसे व्यक्तिगत बुकमार्क संपादित करते समय भी बदला जा सकता है।",
+    "description": "Helper text for bookmark border."
+  },
+  "menuContentThemeBookmarkItemRainbowAdd": {
+    "message": "प्रत्येक बुकमार्क में अद्वितीय उच्चारण जोड़ें",
+    "description": "Button to add a unique accent colour to each bookmark."
+  },
+  "menuContentThemeBookmarkItemRainbowRemove": {
+    "message": "सभी एक्सेंट ओवरराइड हटाएं",
+    "description": "Button to remove a unique accent colour to each bookmark."
+  },
+  "menuContentThemeBookmarkItemRainbowHelperPara1": {
+    "message": "व्यक्तिगत बुकमार्क संपादित करते समय बुकमार्क कस्टम एक्सेंट को भी बदला जा सकता है।",
+    "description": "Helper text for unique accent colours for each bookmark."
+  },
+  "menuContentLayoutScalingSize": {
+    "message": "वैश्विक आकार",
+    "description": "Label for layout scaling."
+  },
+  "menuContentLayoutAreaWidth": {
+    "message": "लेआउट क्षेत्र की चौड़ाई",
+    "description": "Range for layout area width."
+  },
+  "menuContentLayoutAreaHeaderWidth": {
+    "message": "हैडर क्षेत्र की चौड़ाई",
+    "description": "Label for header area width."
+  },
+  "menuContentLayoutAreaHeaderJustifyLabel": {
+    "message": "हैडर क्षेत्र संरेखण",
+    "description": "Label for header area justify."
+  },
+  "menuContentLayoutAreaHeaderJustifyLeft": {
+    "message": "बाएं",
+    "description": "Radio to justify the header area left."
+  },
+  "menuContentLayoutAreaHeaderJustifyCenter": {
+    "message": "केंद्र",
+    "description": "Radio to justify the header area centre."
+  },
+  "menuContentLayoutAreaHeaderJustifyRight": {
+    "message": "सही",
+    "description": "Radio to justify the header area right."
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper1Para1": {
+    "message": "यदि हैडर क्षेत्र पूरी चौड़ाई का है तो प्रभाव दिखाई नहीं दे सकते हैं।",
+    "description": "Helper text for header area justify."
+  },
+  "menuContentLayoutAreaHeaderJustifyHelper2Para1": {
+    "message": "केवल तभी उपलब्ध होता है जब लेआउट दिशा लंबवत होती है और शीर्षलेख आइटम दिखाए जाते हैं।",
+    "description": "Helper text for header area justify."
+  },
+  "menuContentLayoutAreaBookmarkWidth": {
+    "message": "बुकमार्क क्षेत्र की चौड़ाई",
+    "description": "Label for width of the bookmark area."
+  },
+  "menuContentLayoutAreaBookmarkJustifyLabel": {
+    "message": "बुकमार्क क्षेत्र संरेखण",
+    "description": "Label for justify bookmark area."
+  },
+  "menuContentLayoutAreaBookmarkJustifyLeft": {
+    "message": "बाएं",
+    "description": "Radio to justify the bookmark area left."
+  },
+  "menuContentLayoutAreaBookmarkJustifyCenter": {
+    "message": "केंद्र",
+    "description": "Radio to justify the bookmark area centre."
+  },
+  "menuContentLayoutAreaBookmarkJustifyRight": {
+    "message": "सही",
+    "description": "Radio to justify the bookmark area right."
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper1Para1": {
+    "message": "यदि बुकमार्क क्षेत्र पूर्ण चौड़ाई वाला है तो प्रभाव दिखाई नहीं दे सकते हैं।",
+    "description": "Helper text for bookmark area justify."
+  },
+  "menuContentLayoutAreaBookmarkJustifyHelper2Para1": {
+    "message": "केवल तभी उपलब्ध होता है जब लेआउट दिशा लंबवत होती है और शीर्षलेख आइटम दिखाए जाते हैं।",
+    "description": "Helper text for bookmark area justify."
+  },
+  "menuContentLayoutPadding": {
+    "message": "हैडर और बुकमार्क क्षेत्र के आसपास की जगह",
+    "description": "Range for layout padding."
+  },
+  "menuContentLayoutGutter": {
+    "message": "हैडर और बुकमार्क आइटम के बीच की जगह",
+    "description": "Range for layout gutter."
+  },
+  "menuContentLayoutAlignmentLabel": {
+    "message": "क्षेत्र संरेखण",
+    "description": "Label for layout alignment."
+  },
+  "menuContentLayoutAlignmentTopLeft": {
+    "message": "बाएं से बाएं",
+    "description": "Radio for layout alignment top left."
+  },
+  "menuContentLayoutAlignmentTopCenter": {
+    "message": "शीर्ष केंद्र",
+    "description": "Radio for layout alignment top centre."
+  },
+  "menuContentLayoutAlignmentTopRight": {
+    "message": "दायां शीर्ष",
+    "description": "Radio for layout alignment top right."
+  },
+  "menuContentLayoutAlignmentCenterLeft": {
+    "message": "केंद्र वाम",
+    "description": "Radio for layout alignment centre left."
+  },
+  "menuContentLayoutAlignmentCenterCenter": {
+    "message": "केंद्र केंद्र",
+    "description": "Radio for layout alignment centre centre."
+  },
+  "menuContentLayoutAlignmentCenterRight": {
+    "message": "केंद्र दाएं",
+    "description": "Radio for layout alignment centre right."
+  },
+  "menuContentLayoutAlignmentBottomLeft": {
+    "message": "नीचे बाएँ",
+    "description": "Radio for layout alignment bottom left."
+  },
+  "menuContentLayoutAlignmentBottomCenter": {
+    "message": "निचला केंद्र",
+    "description": "Radio for layout alignment bottom centre."
+  },
+  "menuContentLayoutAlignmentBottomRight": {
+    "message": "नीचे दाएं",
+    "description": "Radio for layout alignment bottom right."
+  },
+  "menuContentLayoutDirectionHorizontalLabel": {
+    "message": "क्षैतिज संरेखित करें",
+    "description": "Radio for layout direction horizontal."
+  },
+  "menuContentLayoutDirectionHorizontalDescription": {
+    "message": "हेडर और बुकमार्क को एक साथ एक पंक्ति में ढेर करें।",
+    "description": "Helper text for layout direction horizontal."
+  },
+  "menuContentLayoutDirectionVerticalLabel": {
+    "message": "लंबवत संरेखित करें",
+    "description": "Radio for layout direction vertical."
+  },
+  "menuContentLayoutDirectionVerticalDescription": {
+    "message": "एक के ऊपर एक कॉलम में हैडर और बुकमार्क्स को स्टैक करें।",
+    "description": "Helper text for layout direction vertical."
+  },
+  "menuContentLayoutOrderHeaderBookmarkLabel": {
+    "message": "हैडर फिर बुकमार्क",
+    "description": "Radio for layout order header then bookmarks."
+  },
+  "menuContentLayoutOrderHeaderBookmarkDescription": {
+    "message": "शीर्षलेख क्षेत्र को बुकमार्क क्षेत्र के सामने प्रकट होने का आदेश दें।",
+    "description": "Helper text for layout order header then bookmarks."
+  },
+  "menuContentLayoutOrderBookmarkHeaderLabel": {
+    "message": "बुकमार्क फिर हैडर",
+    "description": "Radio for layout order bookmarks then header."
+  },
+  "menuContentLayoutOrderBookmarkHeaderDescription": {
+    "message": "बुकमार्क क्षेत्र को हैडर क्षेत्र के सामने आने का आदेश दें।",
+    "description": "Helper text for layout order bookmarks then header."
+  },
+  "menuContentLayoutPageTitleLabel": {
+    "message": "शीर्षक",
+    "description": "Label for page title."
+  },
+  "menuContentLayoutPageTitlePlaceholder": {
+    "message": "नया टैब",
+    "description": "Input for page title."
+  },
+  "menuContentLayoutPageFaviconLabel": {
+    "message": "फ़ेविकॉन यूआरएल",
+    "description": "Label for favicon URL."
+  },
+  "menuContentLayoutPageFaviconPlaceholder": {
+    "message": "https://www.example.com/favicon.svg",
+    "description": "Placeholder for favicon URL."
+  },
+  "menuContentLayoutPageFaviconHelperPara1": {
+    "message": "सभी ब्राउज़रों द्वारा समर्थित नहीं है।",
+    "description": "Input for favicon URL."
+  },
+  "menuContentLayoutPageScrollbarLabel": {
+    "message": "स्क्रॉल पट्टी",
+    "description": "Label for page scrollbar."
+  },
+  "menuContentLayoutPageScrollbarAuto": {
+    "message": "ऑटो",
+    "description": "Radio for page scrollbar auto."
+  },
+  "menuContentLayoutPageScrollbarThin": {
+    "message": "पतला",
+    "description": "Radio for page scrollbar thin."
+  },
+  "menuContentLayoutPageScrollbarNone": {
+    "message": "छुपे हुए",
+    "description": "Radio for page scrollbar none."
+  },
+  "menuContentLayoutPageScrollbarHelperPara1": {
+    "message": "सभी ब्राउज़रों द्वारा समर्थित नहीं है।",
+    "description": "Helper text for page scrollbar."
+  },
+  "menuContentLayoutPageOverscrollActive": {
+    "message": "पिछले छोर पर स्क्रॉल करें",
+    "description": "Checkbox for layout page overscroll."
+  },
+  "menuContentLayoutPageOverscrollUnblurLabel": {
+    "message": "पृष्ठभूमि छवि या वीडियो को धुंधला करें",
+    "description": "Label for background image or video unblur on overscroll."
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara1": {
+    "message": "पृष्ठ के निचले भाग तक स्क्रॉल करने पर पृष्ठभूमि छवि या वीडियो धुंधला हो जाएगा।",
+    "description": "Helper text for background image or video unblur on overscroll."
+  },
+  "menuContentLayoutPageOverscrollUnblurDescriptionPara2": {
+    "message": "थीम बैकग्राउंड के तहत इमेज या वीडियो ब्लर पाया जा सकता है।",
+    "description": "Helper text for background image or video unblur on overscroll."
+  },
+  "menuContentHeaderAlignmentJustifyLabel": {
+    "message": "हैडर आइटम संरेखण",
+    "description": "Label to justify header items."
+  },
+  "menuContentHeaderAlignmentJustifyLeft": {
+    "message": "बाएं",
+    "description": "Label to justify header items left."
+  },
+  "menuContentHeaderAlignmentJustifyCenter": {
+    "message": "केंद्र",
+    "description": "Label to justify header items centre."
+  },
+  "menuContentHeaderAlignmentJustifyRight": {
+    "message": "सही",
+    "description": "Label to justify header items right."
+  },
+  "menuContentHeaderAlignmentHelperPara1": {
+    "message": "यदि खोज बॉक्स का आकार स्वतः पर सेट है और उपलब्ध स्थान को भरने के लिए बढ़ता है तो प्रभाव दिखाई नहीं दे सकते हैं।",
+    "description": "Helper text to justify header items."
+  },
+  "menuContentHeaderGreetingShow": {
+    "message": "अभिवादन दिखाएँ",
+    "description": "Checkbox to show header greeting."
+  },
+  "menuContentHeaderGreetingSize": {
+    "message": "आकार",
+    "description": "Range for header greeting size."
+  },
+  "menuContentHeaderGreetingNewLineLabel": {
+    "message": "नई पंक्ति",
+    "description": "Checkbox to force header greeting onto a new line."
+  },
+  "menuContentHeaderGreetingNewLineDescription": {
+    "message": "एक नई पंक्ति पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।",
+    "description": "Description for forcing header greeting onto a new line."
+  },
+  "menuContentHeaderGreetingTypeLabel": {
+    "message": "शब्दों",
+    "description": "Label for header greeting."
+  },
+  "menuContentHeaderGreetingTypeGood": {
+    "message": "\"Good morning...\"",
+    "description": "Radio for \"Good morning\" header greeting."
+  },
+  "menuContentHeaderGreetingTypeHello": {
+    "message": "\"Hello...\"",
+    "description": "Radio for \"Hello\" header greeting."
+  },
+  "menuContentHeaderGreetingTypeHi": {
+    "message": "\"Hi...\"",
+    "description": "Radio for \"Hi\" header greeting."
+  },
+  "menuContentHeaderGreetingTypeNoneLabel": {
+    "message": "कोई नहीं",
+    "description": "Radio for no header greeting."
+  },
+  "menuContentHeaderGreetingTypeNoneDescription": {
+    "message": "सिर्फ नाम प्रदर्शित करने के लिए उपयोगी।",
+    "description": "Description for no header greeting."
+  },
+  "menuContentHeaderGreetingTypeCustomLabel": {
+    "message": "रीति",
+    "description": "Radio for custom header greeting."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
+    "message": "अपने स्वयं के अभिवादन का प्रयोग करें।",
+    "description": "Description for custom header greeting."
+  },
+  "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
+    "message": "अगर खाली छोड़ दिया जाता है, तो डिफ़ॉल्ट रूप से \"Good morning...\" हो जाता है.",
+    "description": "Description for custom header greeting."
+  },
+  "menuContentHeaderGreetingCustomLabel": {
+    "message": "कस्टम ग्रीटिंग टेक्स्ट",
+    "description": "Label for custom header greeting."
+  },
+  "menuContentHeaderGreetingCustomPlaceholder": {
+    "message": "कैसे हो",
+    "description": "Placeholder for custom header greeting."
+  },
+  "menuContentHeaderGreetingNameLabel": {
+    "message": "नाम",
+    "description": "Input for header greeting name."
+  },
+  "menuContentHeaderGreetingNamePlaceholder": {
+    "message": "उपनाम, उपनाम या सुपरहीरो का नाम",
+    "description": "Placeholder for header greeting name."
+  },
+  "menuContentHeaderTransitionalShowLabel": {
+    "message": "संक्रमणकालीन शब्द दिखाएं",
+    "description": "Checkbox to show header transitional text."
+  },
+  "menuContentHeaderTransitionalShowHelperPara1": {
+    "message": "केवल तभी उपलब्ध होता है जब दिनांक या समय दिखाया जाता है।",
+    "description": "Helper text for header transitional text."
+  },
+  "menuContentHeaderTransitionalTypeLabel": {
+    "message": "शब्दों",
+    "description": "Label for transitional text type."
+  },
+  "menuContentHeaderTransitionalTypeTimeAndDate": {
+    "message": "\"The time and date is\"",
+    "description": "Radio for \"The time and date is\" transitional text."
+  },
+  "menuContentHeaderTransitionalTypeIts": {
+    "message": "\"It's\"",
+    "description": "Radio for \"It's \" transitional text."
+  },
+  "menuContentHeaderTransitionalSize": {
+    "message": "आकार",
+    "description": "Range for transitional text size."
+  },
+  "menuContentHeaderTransitionalNewLineLabel": {
+    "message": "नई पंक्ति",
+    "description": "Checkbox to force transitional text onto a new line."
+  },
+  "menuContentHeaderTransitionalNewLineDescription": {
+    "message": "एक नई पंक्ति पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।",
+    "description": "Description for forcing transitional text onto a new line."
+  },
+  "menuContentHeaderClockHourShow": {
+    "message": "घंटे दिखाएं",
+    "description": "Checkbox for clock hour."
+  },
+  "menuContentHeaderClockHourDisplayNumber": {
+    "message": "संख्या के रूप में",
+    "description": "Radio for clock hour as numbers."
+  },
+  "menuContentHeaderClockHourDisplayWord": {
+    "message": "एक तलवार",
+    "description": "Radio for clock hour as words."
+  },
+  "menuContentHeaderClockMinuteShow": {
+    "message": "मिनट दिखाएं",
+    "description": "Checkbox for clock minutes."
+  },
+  "menuContentHeaderClockMinuteDisplayNumber": {
+    "message": "संख्या के रूप में",
+    "description": "Radio for clock minutes as numbers."
+  },
+  "menuContentHeaderClockMinuteDisplayWord": {
+    "message": "एक तलवार",
+    "description": "Radio for clock minutes as words."
+  },
+  "menuContentHeaderClockSecondShow": {
+    "message": "सेकंड दिखाएं",
+    "description": "Checkbox for clock seconds."
+  },
+  "menuContentHeaderClockSecondDisplayNumber": {
+    "message": "संख्या के रूप में",
+    "description": "Radio for clock seconds as numbers."
+  },
+  "menuContentHeaderClockSecondDisplayWord": {
+    "message": "एक तलवार",
+    "description": "Radio for clock seconds as words."
+  },
+  "menuContentHeaderClockSeparatorShow": {
+    "message": "विभाजक दिखाएँ",
+    "description": "Checkbox for clock separator."
+  },
+  "menuContentHeaderClockSeparatorLabel": {
+    "message": "विभाजक चरित्र",
+    "description": "Label for clock separator."
+  },
+  "menuContentHeaderClockSeparatorPlaceholder": {
+    "message": ":",
+    "description": "Placeholder for clock separator."
+  },
+  "menuContentHeaderClockHour24": {
+    "message": "चौबीस घंटे",
+    "description": "Checkbox for 24 hour clock."
+  },
+  "menuContentHeaderClockMeridiem": {
+    "message": "दोपहर से पूर्व दोपहर के बाद",
+    "description": "Checkbox for meridiem clock."
+  },
+  "menuContentHeaderClockSize": {
+    "message": "आकार",
+    "description": "Range for clock size."
+  },
+  "menuContentHeaderClockNewLineLabel": {
+    "message": "नई पंक्ति",
+    "description": "Checkbox to force clock onto a new line."
+  },
+  "menuContentHeaderClockNewLineDescription": {
+    "message": "एक नई पंक्ति पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।",
+    "description": "Description for forcing clock onto a new line."
+  },
+  "menuContentHeaderDateDayShow": {
+    "message": "प्रदर्शन का दिन",
+    "description": "Checkbox for day."
+  },
+  "menuContentHeaderDateDayDisplayNumber": {
+    "message": "संख्या के रूप में",
+    "description": "Radio for day as numbers."
+  },
+  "menuContentHeaderDateDayDisplayWord": {
+    "message": "एक तलवार",
+    "description": "Radio for day as words."
+  },
+  "menuContentHeaderDateDayDisplayWeekStartLabel": {
+    "message": "सप्ताह की शुरुआत",
+    "description": "Label for the start of the week."
+  },
+  "menuContentHeaderDateDayDisplayWeekStartMonday": {
+    "message": "सोमवार",
+    "description": "Radio for Monday as the start of the week."
+  },
+  "menuContentHeaderDateDayDisplayWeekStartSunday": {
+    "message": "रविवार",
+    "description": "Radio for Sunday as the start of the week."
+  },
+  "menuContentHeaderDateDayDisplayLengthLabel": {
+    "message": "शब्द की लंबाई",
+    "description": "Label for length of day of the week."
+  },
+  "menuContentHeaderDateDayDisplayLengthLong": {
+    "message": "लंबा",
+    "description": "Radio for a long length day of the week."
+  },
+  "menuContentHeaderDateDayDisplayLengthShort": {
+    "message": "छोटा",
+    "description": "Radio for short length day of the week."
+  },
+  "menuContentHeaderDateDateShow": {
+    "message": "दिनांक दिखाएँ",
+    "description": "Checkbox for date."
+  },
+  "menuContentHeaderDateDateDisplayNumber": {
+    "message": "संख्या के रूप में",
+    "description": "Radio for date as numbers."
+  },
+  "menuContentHeaderDateDateDisplayWord": {
+    "message": "एक तलवार",
+    "description": "Radio for dates as words."
+  },
+  "menuContentHeaderDateDateDisplayOrdinal": {
+    "message": "क्रमसूचक संख्या",
+    "description": "Checkbox for ordinal date number."
+  },
+  "menuContentHeaderDateMonthShow": {
+    "message": "महीना दिखाएँ",
+    "description": "Checkbox for month."
+  },
+  "menuContentHeaderDateMonthDisplayNumber": {
+    "message": "संख्या के रूप में",
+    "description": "Radio for month as numbers."
+  },
+  "menuContentHeaderDateMonthDisplayWord": {
+    "message": "एक तलवार",
+    "description": "Radio for month as words."
+  },
+  "menuContentHeaderDateMonthDisplayOrdinal": {
+    "message": "क्रमसूचक संख्या",
+    "description": "Checkbox for ordinal month number."
+  },
+  "menuContentHeaderDateMonthDisplayLengthLabel": {
+    "message": "शब्द की लंबाई",
+    "description": "Label for length of month of the year."
+  },
+  "menuContentHeaderDateMonthDisplayLengthLong": {
+    "message": "लंबा",
+    "description": "Radio for a long length month of the year."
+  },
+  "menuContentHeaderDateMonthDisplayLengthShort": {
+    "message": "छोटा",
+    "description": "Radio for a short length month of the year."
+  },
+  "menuContentHeaderDateYearShow": {
+    "message": "शो साल",
+    "description": "Checkbox for year."
+  },
+  "menuContentHeaderDateYearDisplayNumber": {
+    "message": "संख्या के रूप में",
+    "description": "Radio for year as numbers."
+  },
+  "menuContentHeaderDateYearDisplayWord": {
+    "message": "एक तलवार",
+    "description": "Radio for year as words."
+  },
+  "menuContentHeaderDateSeparatorShow": {
+    "message": "विभाजक दिखाएँ",
+    "description": "Checkbox for date separator."
+  },
+  "menuContentHeaderDateSeparatorLabel": {
+    "message": "विभाजक चरित्र",
+    "description": "Checkbox for date separator."
+  },
+  "menuContentHeaderDateSeparatorPlaceholder": {
+    "message": "/",
+    "description": "Placeholder for date separator."
+  },
+  "menuContentHeaderDateFormatLabel": {
+    "message": "प्रारूप",
+    "description": "Label for date format."
+  },
+  "menuContentHeaderDateFormatDateMonth": {
+    "message": "तिथि / माह",
+    "description": "Radio for date then month format."
+  },
+  "menuContentHeaderDateFormatMonthDate": {
+    "message": "महीना दिनांक",
+    "description": "Radio for month then date format."
+  },
+  "menuContentHeaderDateSize": {
+    "message": "आकार",
+    "description": "Range for date size."
+  },
+  "menuContentHeaderDateNewLineLabel": {
+    "message": "नई पंक्ति",
+    "description": "Checkbox to force date onto a new line."
+  },
+  "menuContentHeaderDateNewLineDescription": {
+    "message": "एक नई पंक्ति पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।",
+    "description": "Description for forcing date onto a new line."
+  },
+  "menuContentHeaderSearchShow": {
+    "message": "खोज दिखाएँ",
+    "description": "Checkbox for search."
+  },
+  "menuContentHeaderSearchWidthLabel": {
+    "message": "खोज बॉक्स की चौड़ाई",
+    "description": "Label for search width."
+  },
+  "menuContentHeaderSearchWidthAutoLabel": {
+    "message": "ऑटो चौड़ाई",
+    "description": "Radio for auto search width."
+  },
+  "menuContentHeaderSearchWidthAutoDescription": {
+    "message": "खोज बॉक्स सबसे उपयुक्त उपलब्ध स्थान तक बढ़ेगा।",
+    "description": "Description for auto search width."
+  },
+  "menuContentHeaderSearchWidthCustomLabel": {
+    "message": "कस्टम चौड़ाई",
+    "description": "Radio for custom search width."
+  },
+  "menuContentHeaderSearchWidthCustomDescription": {
+    "message": "परिभाषित करें कि हैडर एरिया के अंदर सर्च बॉक्स कितना चौड़ा होना चाहिए।",
+    "description": "Description for custom search width."
+  },
+  "menuContentHeaderSearchWidthSize": {
+    "message": "चौड़ाई",
+    "description": "Range for search width."
+  },
+  "menuContentHeaderSearchSize": {
+    "message": "आकार",
+    "description": "Range for search size."
+  },
+  "menuContentHeaderSearchNewLineLabel": {
+    "message": "नई पंक्ति",
+    "description": "Checkbox to force search onto a new line."
+  },
+  "menuContentHeaderSearchNewLineDescription": {
+    "message": "एक नई लाइन पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।",
+    "description": "Description for forcing search onto a new line."
+  },
+  "menuContentHeaderSearchEngineSelectedLabel": {
+    "message": "खोज इंजन",
+    "description": "Label for custom search."
+  },
+  "menuContentHeaderSearchEngineSelectedCustom": {
+    "message": "रीति",
+    "description": "Select option for custom search."
+  },
+  "menuContentHeaderSearchEngineCustomNameLabel": {
+    "message": "नाम",
+    "description": "Label for custom search name."
+  },
+  "menuContentHeaderSearchEngineCustomNamePlaceholder": {
+    "message": "खोज इंजन का नाम",
+    "description": "Placeholder for custom search name."
+  },
+  "menuContentHeaderSearchEngineCustomUrlLabel": {
+    "message": "URL",
+    "description": "Label for custom search URL."
+  },
+  "menuContentHeaderSearchEngineCustomUrlPlaceholder": {
+    "message": "https://",
+    "description": "Placeholder for custom search URL."
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara1": {
+    "message": "खोज पैरामीटर के साथ एक वेब पता दर्ज करें, जैसे: \"https://vimeo.com/search?q=\"",
+    "description": "Helper text for custom search URL."
+  },
+  "menuContentHeaderSearchEngineCustomUrlHelperPara2": {
+    "message": "{appName} उपरोक्त URL के अंत में खोज बॉक्स में दर्ज किए गए खोज शब्द को जोड़ देगा।",
+    "description": "Helper text for custom search URL."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameLabel": {
+    "message": "नाम विशेषता",
+    "description": "Label for custom search name."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNamePlaceholder": {
+    "message": "क्यू",
+    "description": "Placeholder for custom search name."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara1": {
+    "message": "खोज इनपुट फ़ील्ड पर नाम विशेषता सेट करता है।",
+    "description": "Helper text for custom search name."
+  },
+  "menuContentHeaderSearchEngineCustomQueryNameHelperPara2": {
+    "message": "यह सबमिट करते समय सर्च इंजन को दिए गए नाम को परिभाषित करता है। यकीन न हो तो खाली छोड़ दें।",
+    "description": "Helper text for custom search name."
+  },
+  "menuContentHeaderSearchEngineTextJustifyLabel": {
+    "message": "टेक्स्ट संरेखण खोजें",
+    "description": "Label to justify search text."
+  },
+  "menuContentHeaderSearchEngineTextJustifyLeft": {
+    "message": "बाएं",
+    "description": "Radio to justify the search text left."
+  },
+  "menuContentHeaderSearchEngineTextJustifyCenter": {
+    "message": "केंद्र",
+    "description": "Radio to justify the search text centre."
+  },
+  "menuContentHeaderSearchEngineTextJustifyRight": {
+    "message": "सही",
+    "description": "Radio to justify the search text right."
+  },
+  "menuContentHeaderSearchNewTab": {
+    "message": "एक नए टैब में खोज परिणाम खोलें",
+    "description": "Checkbox for opening search results in a new tab."
+  },
+  "menuContentBookmarkGeneralShow": {
+    "message": "बुकमार्क दिखाएँ",
+    "description": "Checkbox for show bookmark."
+  },
+  "menuContentBookmarkGeneralUrlShow": {
+    "message": "बुकमार्क होवर पर URL दिखाएं",
+    "description": "Checkbox for show bookmark url on hover."
+  },
+  "menuContentBookmarkGeneralLineShow": {
+    "message": "बुकमार्क लाइन दिखाएं",
+    "description": "Checkbox for show bookmark line."
+  },
+  "menuContentBookmarkGeneralShadowShowLabel": {
+    "message": "बुकमार्क होवर पर छाया दिखाएं",
+    "description": "label for show bookmark shadow."
+  },
+  "menuContentBookmarkGeneralShadowShowDescription": {
+    "message": "यदि थीम शैडो को 0 पर सेट किया गया है, तो प्रभाव दिखाई नहीं दे सकते हैं।",
+    "description": "Description to show bookmark shadow."
+  },
+  "menuContentBookmarkGeneralHoverScaleShow": {
+    "message": "बुकमार्क होवर पर बढ़ो",
+    "description": "Checkbox for scale bookmark on hover."
+  },
+  "menuContentBookmarkGeneralNewTab": {
+    "message": "एक नए टैब में बुकमार्क खोलें",
+    "description": "Checkbox for open bookmark in a new tab."
+  },
+  "menuContentBookmarkGeneralSize": {
+    "message": "बुकमार्क आकार",
+    "description": "Range for bookmark size."
+  },
+  "menuContentBookmarkStyleBlockLabel": {
+    "message": "खंड",
+    "description": "Label for bookmark block style."
+  },
+  "menuContentBookmarkStyleBlockDescription": {
+    "message": "चौकोर आकार की बुकमार्क टाइलें।",
+    "description": "Description for bookmark block style."
+  },
+  "menuContentBookmarkStyleListLabel": {
+    "message": "सूची",
+    "description": "Label for bookmark list style."
+  },
+  "menuContentBookmarkStyleListDescription": {
+    "message": "छोटी और चौड़ी बुकमार्क टाइलें।",
+    "description": "Description for bookmark list style."
+  },
+  "menuContentBookmarkOrientationTop": {
+    "message": "शीर्ष",
+    "description": "Radio for bookmark top orientation."
+  },
+  "menuContentBookmarkOrientationBottom": {
+    "message": "नीचे",
+    "description": "Radio for bookmark bottom orientation."
+  },
+  "menuContentBookmarkOrientationHelperPara1": {
+    "message": "किसी बुकमार्क टाइल के ऊपर या नीचे URL और नियंत्रण प्रदर्शित करें।",
+    "description": "Helper text for bookmark orientation."
+  },
+  "menuContentBookmarkSortLetter": {
+    "message": "पत्र के द्वारा",
+    "description": "Button to sort bookmarks by letter."
+  },
+  "menuContentBookmarkSortIcon": {
+    "message": "आइकन द्वारा",
+    "description": "Button to sort bookmarks by Icon."
+  },
+  "menuContentBookmarkSortName": {
+    "message": "नाम से",
+    "description": "Button to sort bookmarks by name."
+  },
+  "menuContentGroupAlignmentJustifyLabel": {
+    "message": "समूह विवरण क्षेत्र संरेखण",
+    "description": "Label to justify group items."
+  },
+  "menuContentGroupAlignmentJustifyLeft": {
+    "message": "बाएं",
+    "description": "Label to justify group items left."
+  },
+  "menuContentGroupAlignmentJustifyCenter": {
+    "message": "केंद्र",
+    "description": "Label to justify group items centre."
+  },
+  "menuContentGroupAlignmentJustifyRight": {
+    "message": "सही",
+    "description": "Label to justify group items right."
+  },
+  "menuContentGroupAlignmentOrderLabel": {
+    "message": "समूह विवरण आदेश",
+    "description": "Label for group order."
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyLabel": {
+    "message": "समूह विवरण फिर बुकमार्क",
+    "description": "Radio for group details then bookmarks order."
+  },
+  "menuContentGroupAlignmentOrderHeaderBodyDescription": {
+    "message": "समूह विवरण क्षेत्र को बुकमार्क क्षेत्र के सामने उपस्थित होने का आदेश दें।",
+    "description": "Helper text for group details then bookmarks order."
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderLabel": {
+    "message": "बुकमार्क फिर समूह विवरण",
+    "description": "Radio for bookmarks then group details order."
+  },
+  "menuContentGroupAlignmentOrderBodyHeaderDescription": {
+    "message": "बुकमार्क क्षेत्र को समूह विवरण क्षेत्र के सामने आने का आदेश दें।",
+    "description": "Helper text for bookmarks then group details order."
+  },
+  "menuContentGroupNameSize": {
+    "message": "नाम का आकार",
+    "description": "Range for group name size."
+  },
+  "menuContentGroupNameShow": {
+    "message": "सब दिखाओ",
+    "description": "Button to show all group names."
+  },
+  "menuContentGroupNameHide": {
+    "message": "सभी को छिपाएं",
+    "description": "Button to hide all group names."
+  },
+  "menuContentGroupNameHelperPara1": {
+    "message": "अलग-अलग समूहों को संपादित करके समूह के नाम भी बदले जा सकते हैं।",
+    "description": "Helper text for show and hide all group names."
+  },
+  "menuContentGroupCollapseShow": {
+    "message": "सभी ग्रुप खोलें",
+    "description": "Button to open all groups."
+  },
+  "menuContentGroupCollapseHide": {
+    "message": "सभी समूहों को संक्षिप्त करें",
+    "description": "Button to collapse all groups."
+  },
+  "menuContentGroupToolbarSize": {
+    "message": "समूह टूलबार आकार",
+    "description": "Range for group toolbar size."
+  },
+  "menuContentGroupToolbarCollapseLabel": {
+    "message": "समूह संक्षिप्त नियंत्रण",
+    "description": "Label for group toolbar collapse control."
+  },
+  "menuContentGroupToolbarCollapseShow": {
+    "message": "सब दिखाओ",
+    "description": "Button to show all group toolbar collapse control."
+  },
+  "menuContentGroupToolbarCollapseHide": {
+    "message": "सभी को छिपाएं",
+    "description": "Button to hide all group toolbar collapse control."
+  },
+  "menuContentGroupToolbarCollapseHelperPara1": {
+    "message": "समूह टूलबार संक्षिप्त करें बटन को अलग-अलग समूहों को संपादित करके भी बदला जा सकता है।",
+    "description": "Helper text for group toolbar collapse control."
+  },
+  "menuContentGroupToolbarOpenAllLabel": {
+    "message": "समूह सभी नियंत्रण खोलें",
+    "description": "Label for the bookmark group toolbar open all control."
+  },
+  "menuContentGroupToolbarOpenAllShow": {
+    "message": "सब दिखाओ",
+    "description": "Button to show all group toolbar open all control."
+  },
+  "menuContentGroupToolbarOpenAllHide": {
+    "message": "सभी को छिपाएं",
+    "description": "Button to hide all bookmark group toolbar open all control."
+  },
+  "menuContentGroupToolbarOpenAllHelperPara1": {
+    "message": "ग्रुप टूलबार ओपन ऑल बटन को अलग-अलग ग्रुप्स को एडिट करके भी बदला जा सकता है।",
+    "description": "Helper text for the bookmark group toolbar open all control."
+  },
+  "menuContentToolbarSize": {
+    "message": "टूलबार का आकार",
+    "description": "Range for bookmark group toolbar size."
+  },
+  "menuContentToolbarLocationCorner": {
+    "message": "एक कोने में",
+    "description": "Radio for bookmark group toolbar in a corner."
+  },
+  "menuContentToolbarLocationHeader": {
+    "message": "शीर्षलेख में",
+    "description": "Radio for bookmark group toolbar in header."
+  },
+  "menuContentToolbarLocationHelperPara1": {
+    "message": "टूलबार को हैडर के अंदर या विंडो के एक कोने में रखें।",
+    "description": "Helper text for toolbar location."
+  },
+  "menuContentToolbarLocationNewLineLabel": {
+    "message": "नई पंक्ति",
+    "description": "Checkbox to force the bookmark group toolbar onto a new line."
+  },
+  "menuContentToolbarLocationNewLineDescription": {
+    "message": "एक नई लाइन पर बल दें और अन्य शीर्षलेख आइटम से अलग करें।",
+    "description": "Description to force the bookmark group toolbar onto a new line."
+  },
+  "menuContentToolbarLocationNewLineHelperPara1": {
+    "message": "केवल तभी उपलब्ध होता है जब टूलबार हेडर के अंदर स्थित होता है।",
+    "description": "Helper text for the bookmark group toolbar on a new line."
+  },
+  "menuContentToolbarPositionLabel": {
+    "message": "टूलबार स्थिति",
+    "description": "Label for toolbar corner location."
+  },
+  "menuContentToolbarPositionTopLeft": {
+    "message": "बाएं से बाएं",
+    "description": "Radio for bookmark group toolbar positioned in the top left corner."
+  },
+  "menuContentToolbarPositionTopRight": {
+    "message": "दायां शीर्ष",
+    "description": "Radio for bookmark group toolbar positioned in the top right corner."
+  },
+  "menuContentToolbarPositionBottomLeft": {
+    "message": "नीचे बाएँ",
+    "description": "Radio for bookmark group toolbar positioned in the bottom left corner."
+  },
+  "menuContentToolbarPositionBottomRight": {
+    "message": "नीचे दाएं",
+    "description": "Radio for bookmark group toolbar positioned in the bottom right corner."
+  },
+  "menuContentToolbarPositionHelper1Para1": {
+    "message": "टूलबार को विंडो के चारों कोनों में से किसी एक में रखें।",
+    "description": "Helper text for bookmark group toolbar corner location."
+  },
+  "menuContentToolbarPositionHelper2Para1": {
+    "message": "केवल तभी उपलब्ध होता है जब टूलबार एक कोने में स्थित हो।",
+    "description": "Helper text for bookmark group toolbar corner location."
+  },
+  "menuContentToolbarControlsAccent": {
+    "message": "एक्सेंट नियंत्रण दिखाएं",
+    "description": "Checkbox to show bookmark group toolbar accent control."
+  },
+  "menuContentToolbarControlsAdd": {
+    "message": "नियंत्रण जोड़ें दिखाएँ",
+    "description": "Checkbox to show bookmark group toolbar add control."
+  },
+  "menuContentToolbarControlsEdit": {
+    "message": "संपादन नियंत्रण दिखाएं",
+    "description": "Checkbox to show bookmark group toolbar edit control."
+  },
+  "menuContentDataRestoreFile": {
+    "message": "फ़ाइल से आयात करें",
+    "description": "Input for backup data file import."
+  },
+  "menuContentDataRestoreClipboard": {
+    "message": "क्लिपबोर्ड से आयात करें",
+    "description": "Button for clipboard backup data import."
+  },
+  "menuContentDataRestoreHelperPara1": {
+    "message": "पहले निर्यात किए गए {appName} बैकअप को पुनर्स्थापित करें।",
+    "description": "Helper text for backup data import."
+  },
+  "menuContentDataRestoreDrop": {
+    "message": "या यहां एक {appName} बैकअप फ़ाइल छोड़ें।",
+    "description": "Label for backup data file drop area."
+  },
+  "menuContentDataBackupFile": {
+    "message": "निर्यात जानकारी",
+    "description": "Button to export backup data file."
+  },
+  "menuContentDataBackupClipboard": {
+    "message": "क्लिपबोर्ड पर कॉपी करें",
+    "description": "Button to copy backup data to clipboard."
+  },
+  "menuContentDataBackupHelperPara1": {
+    "message": "{appName} बुकमार्क और सेटिंग का बैकअप डाउनलोड करें।",
+    "description": "Helper text for data backup."
+  },
+  "menuContentDataBackupHelperPara2": {
+    "message": "यह फ़ाइल बाद में इस या किसी अन्य डिवाइस पर आयात की जा सकती है।",
+    "description": "Helper text for data backup."
+  },
+  "menuContentDataClearAll": {
+    "message": "सभी डेटा साफ़ करें",
+    "description": "Button to clear all data."
+  },
+  "menuContentDataClearPartial": {
+    "message": "बुकमार्क को छोड़कर सभी साफ़ करें",
+    "description": "Button to clear partial data."
+  },
+  "menuContentDataClearAlertPara": {
+    "message": "आप सभी डेटा साफ़ करके बुकमार्क खो देंगे।",
+    "description": "Alert for clear all data."
+  },
+  "menuContentDataClearAlertLink": {
+    "message": "अपने डेटा का बैकअप लें",
+    "description": "Link for backup data."
+  },
+  "menuContentDataClearHelperPara1": {
+    "message": "{appName} को डिफ़ॉल्ट स्थिति में रीसेट करने के लिए सभी डेटा साफ़ करें।",
+    "description": "Helper text for clear all data."
+  },
+  "menuContentDataClearHelperPara2": {
+    "message": "वैकल्पिक रूप से, सभी सेटिंग्स को मिटा देना संभव है लेकिन वर्तमान बुकमार्क और समूह रखें।",
+    "description": "Helper text for clear all data."
+  },
+  "menuContentLanguageSelect": {
+    "message": "भाषा",
+    "description": "Select for language."
+  },
+  "menuContentLanguageSystem": {
+    "message": "सिस्टम भाषा का प्रयोग करें",
+    "description": "Option to use the system defined language."
+  },
+  "menuContentLanguageAlertPara": {
+    "message": "एक अनुवाद मिला जो सही नहीं है?",
+    "description": "Alert for language select."
+  },
+  "menuContentLanguageAlertLink": {
+    "message": "{appName} अनुवाद करने में सहायता करें",
+    "description": "Link to help translate the project."
+  },
+  "menuContentSupportPageApplyToAll": {
+    "message": "सभी पर बुकमार्क सेटिंग लागू करना",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageBrowser": {
+    "message": "ब्राउज़र समर्थन",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageCookies": {
+    "message": "कुकीज़ और कैश",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageData": {
+    "message": "डेटा बैकअप और पुनर्स्थापित करें",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageLocalBackgroundImage": {
+    "message": "स्थानीय पृष्ठभूमि छवि",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageProtectedUrl": {
+    "message": "संरक्षित यूआरएल",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageRecovering": {
+    "message": "सेटिंग्स और बुकमार्क पुनर्प्राप्त करना",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageResetting": {
+    "message": "ब्राउज़र खोलते समय रीसेट करना",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPagePrivacy": {
+    "message": "आपकी निजता का सम्मान",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageBackgroundImageVideo": {
+    "message": "बैकग्राउंड वीडियो या इमेज सेट करना",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPageFirefox": {
+    "message": "{appName} को अपने Firefox होमपेज के रूप में सेट करना",
+    "description": "Support link to project wiki."
+  },
+  "menuContentSupportPara": {
+    "message": "अधिक समर्थन या प्रतिक्रिया के लिए:",
+    "description": "Paragraph to get more support or provide feedback."
+  },
+  "menuContentSupportLink1": {
+    "message": "एक मुद्दा जमा करें।",
+    "description": "Link to open an issue."
+  },
+  "menuContentSupportLink2": {
+    "message": "विकी की जाँच करें।",
+    "description": "Link to the project wiki."
+  },
+  "menuContentCoffeePara": {
+    "message": "{appName} मुफ़्त है, कॉफ़ी के रूप में प्रशंसा का स्वागत है!",
+    "description": "Paragraph to explain the project is free."
+  },
+  "menuContentCoffeeButton": {
+    "message": "मेरे लिए एक कॉफी खरीदें",
+    "description": "Link to buy me a coffee to support the project."
+  },
+  "menuContentAppPara1": {
+    "message": "समुदाय के साथ अपना सेटअप साझा करें।",
+    "description": "Paragraph on where to share with the community."
+  },
+  "menuContentAppLink1": {
+    "message": "Reddit/r/{appName} पर मिला।",
+    "description": "Link to the community on Reddit."
+  },
+  "menuContentAppPara2": {
+    "message": "यह प्रोजेक्ट ओपन सोर्स है।",
+    "description": "Paragraph on this project being open source."
+  },
+  "menuContentAppLink2": {
+    "message": "गिटहब पर मिला।",
+    "description": "Link to project on GitHub."
+  },
+  "menuContentAppLink3": {
+    "message": "जीएनयू जनरल पब्लिक लाइसेंस v3.0।",
+    "description": "Link to project project licence."
+  },
+  "bookmarkTileControlLeft": {
+    "message": "इस बुकमार्क को बाएँ ले जाएँ",
+    "description": "Button for bookmark tile move left control."
+  },
+  "bookmarkTileControlSort": {
+    "message": "बुकमार्क को पुन: व्यवस्थित करने के लिए खींचें",
+    "description": "Button for bookmark tile drag to sort control."
+  },
+  "bookmarkTileControlRight": {
+    "message": "इस बुकमार्क को दाएँ ले जाएँ",
+    "description": "Button for bookmark tile move right control."
+  },
+  "bookmarkTileControlEdit": {
+    "message": "इस बुकमार्क को संपादित करें",
+    "description": "Button for bookmark tile edit control."
+  },
+  "bookmarkTileControlRemove": {
+    "message": "यह बुकमार्क हटाएं",
+    "description": "Button for bookmark tile remove control."
+  },
+  "bookmarkAddHeading": {
+    "message": "एक नया बुकमार्क जोड़ें",
+    "description": "Heading for bookmark add modal."
+  },
+  "bookmarkAddSuccessText": {
+    "message": "जोड़ें",
+    "description": "Button to confirm adding a bookmark."
+  },
+  "bookmarkAddCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel adding a bookmark."
+  },
+  "bookmarkRemoveHeadingName": {
+    "message": "हटाना",
+    "description": "Heading with a name for bookmark remove modal."
+  },
+  "bookmarkRemoveHeadingUnnamed": {
+    "message": "अनाम बुकमार्क हटाएं",
+    "description": "Heading without a name for bookmark remove modal."
+  },
+  "bookmarkRemoveContent": {
+    "message": "क्या आप वाकई इस बुकमार्क को हटाना चाहते हैं? इसे असंपादित नहीं किया जा सकता है।",
+    "description": "Paragraph for bookmark remove modal."
+  },
+  "bookmarkRemoveSuccessText": {
+    "message": "हटाना",
+    "description": "Button to confirm removing a bookmark."
+  },
+  "bookmarkRemoveCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel removing a bookmark."
+  },
+  "bookmarkEditHeadingName": {
+    "message": "संपादित करें",
+    "description": "Heading with a name for bookmark edit modal."
+  },
+  "bookmarkEditHeadingUnnamed": {
+    "message": "अनाम बुकमार्क संपादित करें",
+    "description": "Heading without a name for bookmark edit modal."
+  },
+  "bookmarkEditSuccessText": {
+    "message": "सहेजें",
+    "description": "Button to confirm editing a bookmark."
+  },
+  "bookmarkEditCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel editing a bookmark."
+  },
+  "bookmarkFormTabVisual": {
+    "message": "दृश्य और नाम",
+    "description": "Label for bookmark form visual tab."
+  },
+  "bookmarkFormTabAddress": {
+    "message": "पता",
+    "description": "Label for bookmark form address tab."
+  },
+  "bookmarkFormTabPosition": {
+    "message": "पद",
+    "description": "Label for bookmark form position tab."
+  },
+  "bookmarkFormTabLayout": {
+    "message": "ख़ाका",
+    "description": "Label for bookmark form layout tab."
+  },
+  "bookmarkFormTabTheme": {
+    "message": "विषय",
+    "description": "Label for bookmark form theme tab."
+  },
+  "bookmarkFormSectionVisualHeading": {
+    "message": "दृश्य और नाम",
+    "description": "Heading for bookmark form visual page."
+  },
+  "bookmarkFormSectionVisualDescription": {
+    "message": "इस बुकमार्क टाइल पर अक्षर, चिह्न, छवि और एक नाम प्रदर्शित करें।",
+    "description": "Description for bookmark form visual page."
+  },
+  "bookmarkFormSectionAddressHeading": {
+    "message": "पता",
+    "description": "Heading for bookmark form address page."
+  },
+  "bookmarkFormSectionAddressDescription": {
+    "message": "पूर्ण URL का उपयोग करना सुनिश्चित करें और \"https://...\" शामिल करें",
+    "description": "Description for bookmark form address page."
+  },
+  "bookmarkFormSectionPositionHeading": {
+    "message": "पद",
+    "description": "Heading for bookmark form position page."
+  },
+  "bookmarkFormSectionPositionDescription": {
+    "message": "इस बुकमार्क को रखने वाला समूह।",
+    "description": "Description for bookmark form position page."
+  },
+  "bookmarkFormSectionLayoutHeading": {
+    "message": "ख़ाका",
+    "description": "Heading for bookmark form layout page."
+  },
+  "bookmarkFormSectionLayoutDescription": {
+    "message": "दृश्य तत्व और नाम की स्थिति, पैमाने और अभिविन्यास बदलें।",
+    "description": "Description for bookmark form layout page."
+  },
+  "bookmarkFormSectionThemeHeading": {
+    "message": "विषय",
+    "description": "Heading for bookmark form theme page."
+  },
+  "bookmarkFormSectionThemeDescription": {
+    "message": "थीम और एक्सेंट रंग को ओवरराइड करें।",
+    "description": "Description for bookmark form theme page."
+  },
+  "bookmarkFormUrlLabel": {
+    "message": "URL",
+    "description": "Label for bookmark url."
+  },
+  "bookmarkFormUrlPlaceholder": {
+    "message": "https://www.example.com/",
+    "description": "Placeholder for bookmark url."
+  },
+  "bookmarkFormDisplayAlignmentLabel": {
+    "message": "दृश्य तत्व और नाम संरेखण",
+    "description": "Label for bookmark tile display alignment."
+  },
+  "bookmarkFormDisplayAlignmentTopLeft": {
+    "message": "बाएं से बाएं",
+    "description": "Radio to align bookmark tile display top left."
+  },
+  "bookmarkFormDisplayAlignmentTopCenter": {
+    "message": "शीर्ष केंद्र",
+    "description": "Radio to align bookmark tile display top centre."
+  },
+  "bookmarkFormDisplayAlignmentTopRight": {
+    "message": "दायां शीर्ष",
+    "description": "Radio to align bookmark tile display top right."
+  },
+  "bookmarkFormDisplayAlignmentCenterLeft": {
+    "message": "केंद्र वाम",
+    "description": "Radio to align bookmark tile display centre left."
+  },
+  "bookmarkFormDisplayAlignmentCenterCenter": {
+    "message": "केंद्र केंद्र",
+    "description": "Radio to align bookmark tile display centre centre."
+  },
+  "bookmarkFormDisplayAlignmentCenterRight": {
+    "message": "केंद्र दाएं",
+    "description": "Radio to align bookmark tile display centre right."
+  },
+  "bookmarkFormDisplayAlignmentBottomLeft": {
+    "message": "नीचे बाएँ",
+    "description": "Radio to align bookmark tile display bottom left."
+  },
+  "bookmarkFormDisplayAlignmentBottomCenter": {
+    "message": "निचला केंद्र",
+    "description": "Radio to align bookmark tile display bottom centre."
+  },
+  "bookmarkFormDisplayAlignmentBottomRight": {
+    "message": "नीचे दाएं",
+    "description": "Radio to align bookmark tile display bottom right."
+  },
+  "bookmarkFormDisplayDirectionVerticalLabel": {
+    "message": "खड़ा",
+    "description": "Label for bookmark tile display vertical direction."
+  },
+  "bookmarkFormDisplayDirectionVerticalDescription": {
+    "message": "विज़ुअल एलिमेंट को स्टैक करें और एक को दूसरे के ऊपर नाम दें।",
+    "description": "Description for bookmark tile display vertical direction."
+  },
+  "bookmarkFormDisplayDirectionHorizontalLabel": {
+    "message": "क्षैतिज",
+    "description": "Label for bookmark tile display horizontal direction."
+  },
+  "bookmarkFormDisplayDirectionHorizontalDescription": {
+    "message": "दृश्य तत्व और नाम को साथ-साथ व्यवस्थित करें।",
+    "description": "Description for bookmark tile display horizontal direction."
+  },
+  "bookmarkFormDisplayOrderVisualNameLabel": {
+    "message": "दृश्य तत्व तो नाम",
+    "description": "Label for bookmark tile display visual then name order."
+  },
+  "bookmarkFormDisplayOrderVisualNameDescription": {
+    "message": "नाम से पहले दृश्य तत्व रखें।",
+    "description": "Description for bookmark tile display visual then name order."
+  },
+  "bookmarkFormDisplayOrderNameVisualLabel": {
+    "message": "नाम फिर दृश्य तत्व",
+    "description": "Label for bookmark tile display name then visual order."
+  },
+  "bookmarkFormDisplayOrderNameVisualDescription": {
+    "message": "नाम को दृश्य तत्व से पहले रखें।",
+    "description": "Description for bookmark tile display name then visual order."
+  },
+  "bookmarkFormDisplayRotate": {
+    "message": "घुमाएँ",
+    "description": "Range for bookmark tile visual rotation."
+  },
+  "bookmarkFormDisplayTranslateLabel": {
+    "message": "दृश्य तत्व स्थिति समायोजित करें",
+    "description": "Label for bookmark tile visual translation."
+  },
+  "bookmarkFormDisplayTranslateX": {
+    "message": "क्षैतिज",
+    "description": "Range for bookmark tile visual translation along the x axis."
+  },
+  "bookmarkFormDisplayTranslateY": {
+    "message": "खड़ा",
+    "description": "Range for bookmark tile visual translation along the y axis."
+  },
+  "bookmarkFormDisplayGutter": {
+    "message": "नाली",
+    "description": "Range for bookmark tile gutter space between visual and name."
+  },
+  "bookmarkFormDisplayVisualShowLabel": {
+    "message": "दृश्य तत्व दिखाएं",
+    "description": "Checkbox to show bookmark tile visual."
+  },
+  "bookmarkFormDisplayVisualShowDescription": {
+    "message": "इस बुकमार्क षट्भुज पर पत्र, चिह्न या एक छवि प्रदर्शित करें।",
+    "description": "Description to show bookmark tile visual."
+  },
+  "bookmarkFormDisplayVisualTypeLetter": {
+    "message": "पत्र",
+    "description": "Radio for bookmark tile visual letter."
+  },
+  "bookmarkFormDisplayVisualTypeIcon": {
+    "message": "आइकन",
+    "description": "Radio for bookmark tile visual icon."
+  },
+  "bookmarkFormDisplayVisualTypeImage": {
+    "message": "छवि",
+    "description": "Radio for bookmark tile visual image."
+  },
+  "bookmarkFormDisplayVisualSize": {
+    "message": "दृश्य आकार",
+    "description": "Range for bookmark tile visual size."
+  },
+  "bookmarkFormDisplayVisualLetterTextLabel": {
+    "message": "बुकमार्क पत्र",
+    "description": "Label for bookmark tile visual text."
+  },
+  "bookmarkFormDisplayVisualLetterTextPlaceholder": {
+    "message": "इ",
+    "description": "Placeholder for bookmark tile visual text."
+  },
+  "bookmarkFormDisplayVisualIconTextLabel": {
+    "message": "बुकमार्क आइकन",
+    "description": "Label for bookmark tile visual icon."
+  },
+  "bookmarkFormDisplayVisualIconTextPlaceholder": {
+    "message": "FontAwesome ब्रांड या प्रतीक",
+    "description": "Placeholder for bookmark tile visual icon."
+  },
+  "bookmarkFormDisplayVisualIconRemove": {
+    "message": "आइकन हटाएं",
+    "description": "Button to remove the bookmark tile visual icon."
+  },
+  "bookmarkFormDisplayVisualImageUrlLabel": {
+    "message": "बुकमार्क छवि",
+    "description": "Label for bookmark tile visual image URL."
+  },
+  "bookmarkFormDisplayVisualImageUrlPlaceholder": {
+    "message": "https://www.example.com/image.jpg",
+    "description": "Placeholder for bookmark tile visual image URL."
+  },
+  "bookmarkFormDisplayVisualShadowSize": {
+    "message": "दृश्य छाया",
+    "description": "Range for bookmark tile visual shadow."
+  },
+  "bookmarkFormDisplayVisualShadowHelperPara1": {
+    "message": "दृश्य छाया केवल एक पत्र या चिह्न पर लागू होती है।",
+    "description": "Helper text for bookmark tile visual shadow."
+  },
+  "bookmarkFormDisplayNameShow": {
+    "message": "नाम दिखाएं",
+    "description": "Checkbox to show bookmark tile name."
+  },
+  "bookmarkFormDisplayNameTextLabel": {
+    "message": "बुकमार्क नाम",
+    "description": "Label for bookmark tile name."
+  },
+  "bookmarkFormDisplayNameTextPlaceholder": {
+    "message": "उदाहरण",
+    "description": "Placeholder for bookmark tile name."
+  },
+  "bookmarkFormDisplayNameSize": {
+    "message": "नाम का आकार",
+    "description": "Range for bookmark tile name size."
+  },
+  "bookmarkFormAccentByThemeLabel": {
+    "message": "थीम एक्सेंट",
+    "description": "Label for bookmark tile to use the theme accent."
+  },
+  "bookmarkFormAccentByThemeDescription": {
+    "message": "थीम द्वारा परिभाषित एक्सेंट का प्रयोग करें।",
+    "description": "Description for bookmark tile to use the theme accent."
+  },
+  "bookmarkFormAccentByCustomLabel": {
+    "message": "कस्टम एक्सेंट",
+    "description": "Label for bookmark tile to use a custom accent."
+  },
+  "bookmarkFormAccentByCustomDescription": {
+    "message": "थीम एक्सेंट को ओवरराइड करें।",
+    "description": "Description for bookmark tile to use a custom accent."
+  },
+  "bookmarkFormAccentColor": {
+    "message": "लहज़ा",
+    "description": "Label for bookmark tile accent."
+  },
+  "bookmarkFormColorByThemeLabel": {
+    "message": "थीम रंग",
+    "description": "Label for bookmark tile to use the theme colour."
+  },
+  "bookmarkFormColorByThemeDescription": {
+    "message": "थीम द्वारा परिभाषित रंग का प्रयोग करें।",
+    "description": "Description for bookmark tile to use the theme colour."
+  },
+  "bookmarkFormColorByCustomLabel": {
+    "message": "कस्टम रंग",
+    "description": "Label for bookmark tile to use a custom colour."
+  },
+  "bookmarkFormColorByCustomDescription": {
+    "message": "थीम रंग को ओवरराइड करें।",
+    "description": "Description for bookmark tile to use a custom colour."
+  },
+  "bookmarkFormColorColor": {
+    "message": "रंग",
+    "description": "Label for bookmark tile colour."
+  },
+  "bookmarkFormColorOpacity": {
+    "message": "अस्पष्टता",
+    "description": "Range for bookmark tile opacity."
+  },
+  "bookmarkFormBackgroundShowLabel": {
+    "message": "पृष्ठभूमि दिखाएं",
+    "description": "Label for bookmark tile background."
+  },
+  "bookmarkFormBackgroundShowDescription": {
+    "message": "इस बुकमार्क टाइल पर एक छवि या वीडियो पृष्ठभूमि प्रदर्शित करें।",
+    "description": "Description for bookmark tile background."
+  },
+  "bookmarkFormBackgroundTypeImage": {
+    "message": "छवि",
+    "description": "Radio for bookmark tile image background."
+  },
+  "bookmarkFormBackgroundTypeVideo": {
+    "message": "वीडियो",
+    "description": "Radio for bookmark tile video background."
+  },
+  "bookmarkFormBackgroundOpacity": {
+    "message": "अस्पष्टता",
+    "description": "Range for bookmark tile background opacity."
+  },
+  "bookmarkFormBackgroundImageLabel": {
+    "message": "पृष्ठभूमि छवि URL",
+    "description": "Label for bookmark tile background image URL."
+  },
+  "bookmarkFormBackgroundImagePlaceholder": {
+    "message": "https://www.example.com/image.jpg",
+    "description": "Placeholder for bookmark tile background image URL."
+  },
+  "bookmarkFormBackgroundImageHelperPara1": {
+    "message": "पृष्ठभूमि छवि केवल छवि फ़ाइल के सीधे URL का समर्थन करती है।",
+    "description": "Helper text for bookmark tile background image URL."
+  },
+  "bookmarkFormBackgroundVideoLabel": {
+    "message": "पृष्ठभूमि वीडियो URL",
+    "description": "Label for bookmark tile background video URL."
+  },
+  "bookmarkFormBackgroundVideoPlaceholder": {
+    "message": "https://www.example.com/video.mp4",
+    "description": "Placeholder for bookmark tile background video URL."
+  },
+  "bookmarkFormBackgroundVideoHelperPara1": {
+    "message": "बैकग्राउंड वीडियो केवल वीडियो फ़ाइल के सीधे URL का समर्थन करता है। MP4 और WebM प्रारूप का समर्थन करता है।",
+    "description": "Helper text for bookmark tile background video URL."
+  },
+  "bookmarkFormBackgroundVideoHelperPara2": {
+    "message": "YouTube पृष्ठ URL का उपयोग नहीं किया जा सकता है।",
+    "description": "Helper text for bookmark tile background video URL."
+  },
+  "bookmarkFormBorder": {
+    "message": "बॉर्डर",
+    "description": "Range for bookmark tile border."
+  },
+  "bookmarkFormShapeWideLabel": {
+    "message": "चौड़ी टाइल",
+    "description": "Label for bookmark tile wide shape."
+  },
+  "bookmarkFormShapeWideDescription": {
+    "message": "बुकमार्क टाइल दो स्तंभों में फैली हुई है।",
+    "description": "Description for bookmark tile wide shape."
+  },
+  "bookmarkFormShapeTallLabel": {
+    "message": "लंबा टाइल",
+    "description": "Label for bookmark tile tall shape."
+  },
+  "bookmarkFormShapeTallDescription": {
+    "message": "बुकमार्क टाइल दो पंक्तियों में फैली हुई है।",
+    "description": "Description for bookmark tile tall shape."
+  },
+  "bookmarkFormGroupDestinationExisting": {
+    "message": "मौजूदा समूह",
+    "description": "Radio for bookmark position in existing bookmark group."
+  },
+  "bookmarkFormGroupDestinationNew": {
+    "message": "नया समूह",
+    "description": "Radio for bookmark position in new bookmark group."
+  },
+  "bookmarkFormGroupNameLabel": {
+    "message": "URL",
+    "description": "Label for bookmark group name."
+  },
+  "bookmarkFormGroupNamePlaceholder": {
+    "message": "उदाहरण समूह",
+    "description": "Placeholder for bookmark group name."
+  },
+  "bookmarkFormGroupRandom": {
+    "message": "यादृच्छिक समूह का नाम",
+    "description": "Button for random group name."
+  },
+  "bookmarkFormGroupPositionGroup": {
+    "message": "समूह",
+    "description": "Select for bookmark group position."
+  },
+  "bookmarkFormGroupPositionItem": {
+    "message": "पद",
+    "description": "Select for bookmark position in a group."
+  },
+  "bookmarkFormPropagateVisualLabel": {
+    "message": "अन्य बुकमार्क पर \"दृश्य तत्व दिखाएं\" और \"नाम दिखाएं\" लागू करें",
+    "description": "Checkbox to share current bookmark visual settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateVisualDescriptionPara1": {
+    "message": "पत्र, चिह्न, छवि और नाम पाठ साझा नहीं किया जाएगा।",
+    "description": "Helper text to share current bookmark visual settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateVisualDescriptionPara2": {
+    "message": "सभी बुकमार्क पर दृश्य तत्वों या नामों को छिपाने के लिए उपयोगी।",
+    "description": "Helper text to share current bookmark visual settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateLayoutLabel": {
+    "message": "अन्य बुकमार्क पर लेआउट लागू करें",
+    "description": "Checkbox to share current bookmark layout settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara1": {
+    "message": "सहेजे जाने पर, उपरोक्त लेआउट को अन्य सभी बुकमार्क पर लागू करें।",
+    "description": "Helper text to share current bookmark layout settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateLayoutDescriptionPara2": {
+    "message": "केवल दृश्य और नाम का आकार, संरेखण, क्रम, स्थिति और गटर सभी पर लागू होगा।",
+    "description": "Helper text to share current bookmark layout settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateThemeLabel": {
+    "message": "अन्य बुकमार्क पर थीम लागू करें",
+    "description": "Checkbox to share current bookmark theme settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateThemeDescriptionPara1": {
+    "message": "सहेजे जाने पर, उपरोक्त थीम को अन्य सभी बुकमार्क पर लागू करें।",
+    "description": "Helper text to share current bookmark theme settings to all other bookmarks."
+  },
+  "bookmarkFormPropagateThemeDescriptionPara2": {
+    "message": "केवल रंग, उच्चारण, अस्पष्टता, सीमा और दृश्य छाया सभी पर लागू होगी।",
+    "description": "Helper text to share current bookmark theme settings to all other bookmarks."
+  },
+  "bookmarkPreviewFull": {
+    "message": "पूर्वावलोकन",
+    "description": "Paragraph for bookmark full size preview."
+  },
+  "bookmarkPreviewHalf": {
+    "message": "पूर्वावलोकन (50% स्केल)",
+    "description": "Paragraph for bookmark half size preview."
+  },
+  "groupAreaControlUp": {
+    "message": "इस ग्रुप को ऊपर ले जाएँ",
+    "description": "Button for bookmark group move up control."
+  },
+  "groupAreaControlSort": {
+    "message": "पुन: व्यवस्थित करने के लिए समूह खींचें",
+    "description": "Button for bookmark group drag to sort control."
+  },
+  "groupAreaControlDown": {
+    "message": "इस समूह को नीचे ले जाएँ",
+    "description": "Button for bookmark group move down control."
+  },
+  "groupAreaControlEdit": {
+    "message": "इस समूह को संपादित करें",
+    "description": "Button for bookmark group edit control."
+  },
+  "groupAreaControlRemove": {
+    "message": "इस समूह को हटा दें",
+    "description": "Button for bookmark group remove control."
+  },
+  "groupAreaControlOpenAll": {
+    "message": "इस समूह के सभी बुकमार्क खोलें",
+    "description": "Button for bookmark group control to open all bookmarks."
+  },
+  "groupAreaControlCollapse": {
+    "message": "इस समूह को संक्षिप्त करें",
+    "description": "Button for bookmark group control to collapse bookmark group."
+  },
+  "groupAddHeading": {
+    "message": "एक नया समूह जोड़ें",
+    "description": "Heading for bookmark group add modal."
+  },
+  "groupAddSuccessText": {
+    "message": "जोड़ें",
+    "description": "Button to confirm adding a bookmark group."
+  },
+  "groupAddCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel adding a bookmark group."
+  },
+  "groupRemoveHeadingName": {
+    "message": "हटाना",
+    "description": "Heading with a name for bookmark group remove modal."
+  },
+  "groupRemoveHeadingUnnamed": {
+    "message": "अनाम समूह निकालें",
+    "description": "Heading without a name for bookmark group remove modal."
+  },
+  "groupRemoveContent": {
+    "message": "क्या आप वाकई इस समूह और सभी बुकमार्क को हटाना चाहते हैं? इसे असंपादित नहीं किया जा सकता है।",
+    "description": "Paragraph for bookmark group remove modal."
+  },
+  "groupRemoveSuccessText": {
+    "message": "हटाना",
+    "description": "Button to confirm removing a bookmark group."
+  },
+  "groupRemoveCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel removing a bookmark group."
+  },
+  "groupEditHeadingName": {
+    "message": "संपादित करें",
+    "description": "Heading with a name for bookmark group edit modal."
+  },
+  "groupEditHeadingUnnamed": {
+    "message": "अनाम समूह संपादित करें",
+    "description": "Heading without a name for bookmark group edit modal."
+  },
+  "groupEditSuccessText": {
+    "message": "सहेजें",
+    "description": "Button to confirm editing a bookmark group."
+  },
+  "groupEditCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel editing a bookmark group."
+  },
+  "groupFormSectionNameHeading": {
+    "message": "नाम",
+    "description": "Heading for bookmark group form name."
+  },
+  "groupFormSectionNameDescription": {
+    "message": "इस समूह के ऊपर एक नाम प्रदर्शित करें।",
+    "description": "Description for bookmark group form name."
+  },
+  "groupFormSectionToolbarHeading": {
+    "message": "उपकरण पट्टी",
+    "description": "Heading for bookmark group form toolbar."
+  },
+  "groupFormSectionToolbarDescription": {
+    "message": "इस समूह में सभी को खोलने या बुकमार्क दिखाने/छिपाने के लिए नियंत्रण प्रदर्शित करें।",
+    "description": "Description for bookmark group form toolbar."
+  },
+  "groupFormSectionOrderingHeading": {
+    "message": "आदेश",
+    "description": "Heading for bookmark group form order."
+  },
+  "groupFormSectionOrderingDescription": {
+    "message": "इस समूह की स्थिति।",
+    "description": "Description for bookmark group form order."
+  },
+  "groupFormNameShow": {
+    "message": "समूह का नाम दिखाएं",
+    "description": "Checkbox to show bookmark group name."
+  },
+  "groupFormNameTextLabel": {
+    "message": "समूह नाम",
+    "description": "Label for bookmark group name."
+  },
+  "groupFormNameTextPlaceholder": {
+    "message": "उदाहरण समूह",
+    "description": "Placeholder for bookmark group name."
+  },
+  "groupFormNameRandom": {
+    "message": "यादृच्छिक समूह का नाम",
+    "description": "Button for random bookmark group name."
+  },
+  "groupFormCollapseShowLabel": {
+    "message": "संक्षिप्त दिखाएँ",
+    "description": "Label to show bookmark group toolbar collapse button."
+  },
+  "groupFormCollapseShowDescription": {
+    "message": "संक्षिप्त करें बटन इस समूह में बुकमार्क दिखाएगा या छिपाएगा।",
+    "description": "Description to show bookmark group toolbar collapse button."
+  },
+  "groupFormOpenAllShowLabel": {
+    "message": "सभी दिखाएँ",
+    "description": "Label to show bookmark group toolbar open all button."
+  },
+  "groupFormOpenAllShowDescription": {
+    "message": "इस ग्रुप में कम से कम एक बुकमार्क होने पर ओपन ऑल बटन दिखाई देगा।",
+    "description": "Description to show bookmark group toolbar open all button."
+  },
+  "groupFormDestination": {
+    "message": "पद",
+    "description": "Select for bookmark group position."
+  },
+  "themeCustomTileControlEdit": {
+    "message": "इस सहेजी गई कस्टम थीम को संपादित करें",
+    "description": "Button to edit saved custom theme."
+  },
+  "themeCustomTileControlRemove": {
+    "message": "इस सहेजी गई कस्टम थीम को हटा दें",
+    "description": "Button to remove saved custom theme."
+  },
+  "themeCustomFormNameLabel": {
+    "message": "नाम",
+    "description": "Label for saved custom theme name."
+  },
+  "themeCustomFormNamePlaceholder": {
+    "message": "उदाहरण विषय",
+    "description": "Placeholder for saved custom theme name."
+  },
+  "themeCustomFormRandom": {
+    "message": "यादृच्छिक विषय का नाम",
+    "description": "Button for random saved custom theme name."
+  },
+  "themeCustomAddHeading": {
+    "message": "वर्तमान विषय सहेजें",
+    "description": "Heading for saved custom theme add modal."
+  },
+  "themeCustomAddSuccessText": {
+    "message": "सहेजें",
+    "description": "Button to confirm adding a saved custom theme."
+  },
+  "themeCustomAddCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel adding a saved custom theme."
+  },
+  "themeCustomRemoveHeadingName": {
+    "message": "हटाना",
+    "description": "Heading with a name for saved custom theme remove modal."
+  },
+  "themeCustomRemoveHeadingUnnamed": {
+    "message": "अनाम कस्टम थीम निकालें",
+    "description": "Heading without a name for saved custom theme remove modal."
+  },
+  "themeCustomRemoveContent": {
+    "message": "क्या आप वाकई सहेजी गई इस कस्टम थीम को हटाना चाहते हैं? इसे असंपादित नहीं किया जा सकता है।",
+    "description": "Paragraph for saved custom theme remove modal."
+  },
+  "themeCustomRemoveSuccessText": {
+    "message": "सहेजें",
+    "description": "Button to confirm removing a saved custom theme."
+  },
+  "themeCustomRemoveCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel removing a saved custom theme."
+  },
+  "themeCustomEditHeadingName": {
+    "message": "संपादित करें",
+    "description": "Heading with a name for saved custom theme edit modal."
+  },
+  "themeCustomEditHeadingUnnamed": {
+    "message": "अनाम कस्टम थीम संपादित करें",
+    "description": "Heading without a name for saved custom theme edit modal."
+  },
+  "themeCustomEditSuccessText": {
+    "message": "हटाना",
+    "description": "Button to confirm editing a saved custom theme."
+  },
+  "themeCustomEditCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel editing a saved custom theme."
+  },
+  "toolbarAccent": {
+    "message": "एक्सेंट रंग",
+    "description": "Button for toolbar accent control."
+  },
+  "toolbarAddLabel": {
+    "message": "जोड़ें",
+    "description": "Button for toolbar control to add."
+  },
+  "toolbarAddGroup": {
+    "message": "नया समूह",
+    "description": "Button for toolbar control to add a new bookmark."
+  },
+  "toolbarAddBookmark": {
+    "message": "नया बुकमार्क",
+    "description": "Button for toolbar control to add a new bookmark group."
+  },
+  "toolbarEdit": {
+    "message": "समूह और बुकमार्क संपादित करें",
+    "description": "Button for toolbar to toggle edit mode."
+  },
+  "toolbarSetting": {
+    "message": "सेटिंग मेनू खोलें",
+    "description": "Button for toolbar to open settings menu."
+  },
+  "dataFormDescription": {
+    "message": "आप बैकअप फ़ाइल के सभी या उसके कुछ हिस्सों को पुनर्स्थापित कर सकते हैं। निम्नलिखित डेटा को पुनर्स्थापित किया जाएगा:",
+    "description": "Description for restoring from backup data."
+  },
+  "dataFormBookmarkIncludeLabel": {
+    "message": "बुकमार्क",
+    "description": "Heading for restoring backup data bookmarks."
+  },
+  "dataFormBookmarkIncludeDescriptionPara1": {
+    "message": "इसमें सभी समूह और बुकमार्क शामिल हैं",
+    "description": "Description for restoring backup data bookmarks."
+  },
+  "dataFormBookmarkIncludeDescriptionPara2": {
+    "message": "आयात होने पर बुकमार्क किसी भी कस्टम रंग, लहजे और बॉर्डर को बनाए रखेंगे।",
+    "description": "Description for restoring backup data bookmarks."
+  },
+  "dataFormBookmarkTypeRestore": {
+    "message": "मौजूदा बुकमार्क बदलें",
+    "description": "Radio to replace existing bookmarks when restoring from backup data."
+  },
+  "dataFormBookmarkTypeAppend": {
+    "message": "मौजूदा बुकमार्क में जोड़ें",
+    "description": "Radio to append to existing bookmarks when restoring from backup data."
+  },
+  "dataFormThemeIncludeLabel": {
+    "message": "विषय",
+    "description": "Label to restore theme date from backup data."
+  },
+  "dataFormThemeIncludeDescription": {
+    "message": "इसमें रंग, उच्चारण, फ़ॉन्ट, पृष्ठभूमि और कोई भी सहेजे गए कस्टम थीम शामिल हैं।",
+    "description": "Description to restore theme date from backup data."
+  },
+  "dataFormSetupIncludeLabel": {
+    "message": "समायोजन",
+    "description": "Label to restore setting date from backup data."
+  },
+  "dataFormSetupIncludeDescription": {
+    "message": "इसमें लेआउट आकार और स्थिति, हेडर क्षेत्र का आकार, बुकमार्क क्षेत्र का आकार और अन्य उपयोगकर्ता सेटिंग्स शामिल हैं।",
+    "description": "Description to restore setting date from backup data."
+  },
+  "dataRestoreHeading": {
+    "message": "{appName} बैकअप से पुनर्स्थापित किया जा रहा है",
+    "description": "Heading for restore backup data modal."
+  },
+  "dataRestoreSuccessText": {
+    "message": "आयात",
+    "description": "Button to confirm restoring from backup data."
+  },
+  "dataRestoreCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel restoring from backup data."
+  },
+  "dataClearAllHeading": {
+    "message": "सभी {appName} डेटा साफ़ करें?",
+    "description": "Heading for clear all data modal."
+  },
+  "dataClearAllContentPara1": {
+    "message": "क्या आप वाकई सभी {appName} बुकमार्क और सेटिंग साफ़ करना चाहते हैं? {appName} को डिफ़ॉल्ट स्थिति में बहाल कर दिया जाएगा।",
+    "description": "Paragraph for clear all data modal."
+  },
+  "dataClearAllContentPara2": {
+    "message": "इसे असंपादित नहीं किया जा सकता है।",
+    "description": "Paragraph for clear all data modal."
+  },
+  "dataClearAllSuccessText": {
+    "message": "सभी डेटा साफ़ करें",
+    "description": "Button to confirm clear all data."
+  },
+  "dataClearAllCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel clear all data."
+  },
+  "dataClearPartialHeading": {
+    "message": "बुकमार्क के अलावा {appName} डेटा साफ़ करें?",
+    "description": "Heading for clear partial data modal."
+  },
+  "dataClearPartialContentPara1": {
+    "message": "क्या आप वाकई सभी {appName} सेटिंग साफ़ करना चाहते हैं? {appName} को डिफ़ॉल्ट स्थिति में बहाल कर दिया जाएगा लेकिन आपके बुकमार्क और समूह बने रहेंगे।",
+    "description": "Paragraph for clear partial data modal."
+  },
+  "dataClearPartialContentPara2": {
+    "message": "इसे असंपादित नहीं किया जा सकता है।",
+    "description": "Paragraph for clear partial data modal."
+  },
+  "dataClearPartialSuccessText": {
+    "message": "बुकमार्क को छोड़कर सभी साफ़ करें",
+    "description": "Button to confirm clear partial data."
+  },
+  "dataClearPartialCancelText": {
+    "message": "रद्द करें",
+    "description": "Button to cancel clear partial data."
+  },
+  "dataExportBackup": {
+    "message": "बैकअप",
+    "description": "String for backup data file name."
+  },
+  "dataFeedbackEmpty": {
+    "message": "आयात करने के लिए कुछ भी नहीं चुना गया।",
+    "description": "Paragraph for validation when backup data is empty."
+  },
+  "dataFeedbackSuccess": {
+    "message": "सफलता! {appName} बुकमार्क और सेटिंग्स को पुनर्स्थापित करना।",
+    "description": "Paragraph for when backup data is valid."
+  },
+  "dataFeedbackFailNotJson": {
+    "message": "JSON फ़ाइल नहीं। सुनिश्चित करें कि चयनित फ़ाइल {appName} से आई है।",
+    "description": "Paragraph for when backup data is not valid JSON."
+  },
+  "dataFeedbackFailNotAppJson": {
+    "message": "सही प्रकार की JSON फ़ाइल नहीं है। सुनिश्चित करें कि चयनित फ़ाइल {appName} से आई है।",
+    "description": "Paragraph for when backup data is not valid JSON from this project."
+  },
+  "dataFeedbackFailNotClipboardJson": {
+    "message": "सही प्रकार का डेटा नहीं। सुनिश्चित करें कि क्लिपबोर्ड में {appName} या {appName} बैकअप JSON फ़ाइल का डेटा है।",
+    "description": "Paragraph for when backup data in clipboard is not valid JSON."
+  },
+  "controlGeneralReset": {
+    "message": "वितथ पर ले जाएं",
+    "description": "Button for reset button control."
+  },
+  "controlColorTextPlaceholder": {
+    "message": "हेक्स कोड",
+    "description": "Placeholder for hex colour code."
+  },
+  "controlColorRandom": {
+    "message": "यादृच्छिक रंग",
+    "description": "Button for random colour."
+  },
+  "controlColorMixerMoreControls": {
+    "message": "अधिक नियंत्रण",
+    "description": "Button to show more colour controls."
+  },
+  "controlColorMixerSliderH": {
+    "message": "रंग",
+    "description": "Label for colour control hue."
+  },
+  "controlColorMixerSliderS": {
+    "message": "परिपूर्णता",
+    "description": "Label for colour control saturation."
+  },
+  "controlColorMixerSliderL": {
+    "message": "लपट",
+    "description": "Label for colour control lightness."
+  },
+  "controlColorMixerSliderR": {
+    "message": "लाल",
+    "description": "Label for colour control red."
+  },
+  "controlColorMixerSliderG": {
+    "message": "हरा",
+    "description": "Label for colour control green."
+  },
+  "controlColorMixerSliderB": {
+    "message": "नीला",
+    "description": "Label for colour control blue."
+  }
+}

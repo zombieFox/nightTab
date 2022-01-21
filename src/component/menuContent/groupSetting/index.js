@@ -1,3 +1,5 @@
+import { message } from '../../message';
+
 import { state } from '../../state';
 import { data } from '../../data';
 import { bookmark } from '../../bookmark';
@@ -124,11 +126,11 @@ groupSetting.alignment = (parent) => {
   groupSetting.control.alignment.justify = new Control_radioGrid({
     object: state.get.current(),
     radioGroup: [
-      { id: 'group-area-justify-left', labelText: 'Left', value: 'left', position: 1 },
-      { id: 'group-area-justify-center', labelText: 'Center', value: 'center', position: 2 },
-      { id: 'group-area-justify-right', labelText: 'Right', value: 'right', position: 3 }
+      { id: 'group-area-justify-left', labelText: message.get('menuContentGroupAlignmentJustifyLeft'), value: 'left', position: 1 },
+      { id: 'group-area-justify-center', labelText: message.get('menuContentGroupAlignmentJustifyCenter'), value: 'center', position: 2 },
+      { id: 'group-area-justify-right', labelText: message.get('menuContentGroupAlignmentJustifyRight'), value: 'right', position: 3 }
     ],
-    label: 'Group details area alignment',
+    label: message.get('menuContentGroupAlignmentJustifyLabel'),
     groupName: 'group-area-justify',
     path: 'group.area.justify',
     gridSize: '3x1',
@@ -140,9 +142,10 @@ groupSetting.alignment = (parent) => {
 
   groupSetting.control.alignment.order = new Control_radio({
     object: state.get.current(),
+    label: message.get('menuContentGroupAlignmentOrderLabel'),
     radioGroup: [
-      { id: 'group-order-header-body', labelText: 'Group details then Bookmarks', description: 'Order the Group details area to appear before the Bookmarks area.', value: 'header-body' },
-      { id: 'group-order-body-header', labelText: 'Bookmarks then Group details', description: 'Order the Bookmarks area to appear before the Group details area.', value: 'body-header' }
+      { id: 'group-order-header-body', labelText: message.get('menuContentGroupAlignmentOrderHeaderBodyLabel'), description: message.get('menuContentGroupAlignmentOrderHeaderBodyDescription'), value: 'header-body' },
+      { id: 'group-order-body-header', labelText: message.get('menuContentGroupAlignmentOrderBodyHeaderLabel'), description: message.get('menuContentGroupAlignmentOrderBodyHeaderDescription'), value: 'body-header' }
     ],
     groupName: 'group-order',
     path: 'group.order',
@@ -226,7 +229,7 @@ groupSetting.name = (parent) => {
     object: state.get.current(),
     path: 'group.name.size',
     id: 'group-name-size',
-    labelText: 'Name size',
+    labelText: message.get('menuContentGroupNameSize'),
     value: state.get.current().group.name.size,
     defaultValue: state.get.default().group.name.size,
     min: state.get.minMax().group.name.size.min,
@@ -270,7 +273,7 @@ groupSetting.name = (parent) => {
   });
 
   groupSetting.control.name.show = new Button({
-    text: 'Show all',
+    text: message.get('menuContentGroupNameShow'),
     style: ['line'],
     func: () => {
 
@@ -288,7 +291,7 @@ groupSetting.name = (parent) => {
   });
 
   groupSetting.control.name.hide = new Button({
-    text: 'Hide all',
+    text: message.get('menuContentGroupNameHide'),
     style: ['line'],
     func: () => {
 
@@ -306,7 +309,7 @@ groupSetting.name = (parent) => {
   });
 
   groupSetting.control.name.helper = new Control_helperText({
-    text: ['Group Names can also be changed by editing individual Groups.']
+    text: [message.get('menuContentGroupNameHelperPara1')]
   });
 
   parent.appendChild(
@@ -331,11 +334,11 @@ groupSetting.collapse = (parent) => {
 
   groupSetting.control.collapse = {
     show: new Button({
-      text: 'Collapse all groups',
+      text: message.get('menuContentGroupCollapseShow'),
       style: ['line'],
       func: () => {
 
-        bookmark.all.forEach(item => { item.collapse = true; });
+        bookmark.all.forEach(item => { item.collapse = false; });
 
         groupAndBookmark.render();
 
@@ -348,11 +351,11 @@ groupSetting.collapse = (parent) => {
       }
     }),
     hide: new Button({
-      text: 'Open all groups',
+      text: message.get('menuContentGroupCollapseHide'),
       style: ['line'],
       func: () => {
 
-        bookmark.all.forEach(item => { item.collapse = false; });
+        bookmark.all.forEach(item => { item.collapse = true; });
 
         groupAndBookmark.render();
 
@@ -390,7 +393,7 @@ groupSetting.toolbar = (parent) => {
     object: state.get.current(),
     path: 'group.toolbar.size',
     id: 'group-toolbar-size',
-    labelText: 'Group toolbar size',
+    labelText: message.get('menuContentGroupToolbarSize'),
     value: state.get.current().group.toolbar.size,
     defaultValue: state.get.default().group.toolbar.size,
     min: state.get.minMax().group.toolbar.size.min,
@@ -448,9 +451,11 @@ groupSetting.toolbar = (parent) => {
   });
 
   groupSetting.control.toolbar.collapse = {
-    label: new Control_label({ text: 'Group Collapse control' }),
+    label: new Control_label({
+      text: message.get('menuContentGroupToolbarCollapseLabel')
+    }),
     show: new Button({
-      text: 'Show all',
+      text: message.get('menuContentGroupToolbarCollapseShow'),
       style: ['line'],
       func: () => {
 
@@ -467,7 +472,7 @@ groupSetting.toolbar = (parent) => {
       }
     }),
     hide: new Button({
-      text: 'Hide all',
+      text: message.get('menuContentGroupToolbarCollapseHide'),
       style: ['line'],
       func: () => {
 
@@ -484,14 +489,16 @@ groupSetting.toolbar = (parent) => {
       }
     }),
     helper: new Control_helperText({
-      text: ['Group toolbar collapse button can also be changed by editing individual Groups.']
+      text: [message.get('menuContentGroupToolbarCollapseHelperPara1')]
     })
   };
 
   groupSetting.control.toolbar.openAll = {
-    label: new Control_label({ text: 'Group Open all control' }),
+    label: new Control_label({
+      text: message.get('menuContentGroupToolbarOpenAllLabel')
+    }),
     show: new Button({
-      text: 'Show all',
+      text: message.get('menuContentGroupToolbarOpenAllShow'),
       style: ['line'],
       func: () => {
 
@@ -508,7 +515,7 @@ groupSetting.toolbar = (parent) => {
       }
     }),
     hide: new Button({
-      text: 'Hide all',
+      text: message.get('menuContentGroupToolbarOpenAllHide'),
       style: ['line'],
       func: () => {
 
@@ -525,7 +532,7 @@ groupSetting.toolbar = (parent) => {
       }
     }),
     helper: new Control_helperText({
-      text: ['Group toolbar open all button can also be changed by editing individual Groups.']
+      text: [message.get('menuContentGroupToolbarOpenAllHelperPara1')]
     })
   };
 

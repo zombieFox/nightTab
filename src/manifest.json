@@ -1,9 +1,10 @@
 {
-  "name": "nightTab",
-  "short_name": "nightTab",
-  "description": "A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab.",
-  "version": "7.4.0",
+  "name": "__MSG_appName__",
+  "short_name": "__MSG_appShortName__",
+  "description": "__MSG_appDescription__",
+  "version": "7.5.0",
   "manifest_version": 2,
+  "default_locale": "en_GB",
   "chrome_url_overrides": {
     "newtab": "index.html"
   },

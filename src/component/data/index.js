@@ -1,3 +1,5 @@
+import { message } from '../message';
+
 import { state } from '../state';
 import { bookmark } from '../bookmark';
 import { menu } from '../menu';
@@ -85,9 +87,10 @@ data.import = {
     });
 
     const importModal = new Modal({
-      heading: 'Restoring from a ' + APP_NAME + ' backup',
+      heading: message.get('dataRestoreHeading'),
       content: importForm.form(),
-      successText: 'Import',
+      successText: message.get('dataRestoreSuccessText'),
+      cancelText: message.get('dataRestoreCancelText'),
       width: 'small',
       successAction: () => {
         if (data.import.state.setup.include || data.import.state.theme.include || data.import.state.bookmark.include) {
@@ -216,7 +219,7 @@ data.export = () => {
   timestamp.year = leadingZero(timestamp.year);
   timestamp = timestamp.year + '.' + timestamp.month + '.' + timestamp.date + ' - ' + timestamp.hours + ' ' + timestamp.minutes + ' ' + timestamp.seconds;
 
-  const fileName = APP_NAME + ' backup - ' + timestamp + '.json';
+  const fileName = APP_NAME + ' ' + message.get('dataExportBackup') + ' - ' + timestamp + '.json';
 
   const dataToExport = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data.load()));
 
@@ -340,12 +343,13 @@ data.clear = {
   all: {
     render: () => {
       const clearModal = new Modal({
-        heading: 'Clear all ' + APP_NAME + ' data?',
+        heading: message.get('dataClearAllHeading'),
         content: node('div', [
-          node('p:Are you sure you want to clear all ' + APP_NAME + ' Bookmarks and Settings? ' + APP_NAME + ' will be restore to the default state.'),
-          node('p:This can not be undone.')
+          node(`p:${message.get('dataClearAllContentPara1')}`),
+          node(`p:${message.get('dataClearAllContentPara2')}`)
         ]),
-        successText: 'Clear all data',
+        successText: message.get('dataClearAllSuccessText'),
+        cancelText: message.get('dataClearAllCancelText'),
         width: 'small',
         successAction: () => {
           data.wipe.all();
@@ -358,12 +362,13 @@ data.clear = {
   partial: {
     render: () => {
       const clearModal = new Modal({
-        heading: 'Clear ' + APP_NAME + ' data except bookmarks?',
+        heading: message.get('dataClearPartialHeading'),
         content: node('div', [
-          node('p:Are you sure you want to clear all ' + APP_NAME + ' Settings? ' + APP_NAME + ' will be restore to the default state but your Bookmarks and Groups will remain.'),
-          node('p:This can not be undone.')
+          node(`p:${message.get('dataClearPartialContentPara1')}`),
+          node(`p:${message.get('dataClearPartialContentPara2')}`)
         ]),
-        successText: 'Clear all except bookmarks',
+        successText: message.get('dataClearPartialSuccessText'),
+        cancelText: message.get('dataClearPartialCancelText'),
         width: 35,
         successAction: () => {
           data.wipe.partial();
@@ -379,7 +384,7 @@ data.feedback = {};
 
 data.feedback.empty = {
   render: (feedback) => {
-    feedback.appendChild(node('p:Nothing selected to import.|class:muted small'));
+    feedback.appendChild(node(`p:${message.get('dataFeedbackEmpty')}|class:muted small`));
   }
 };
 
@@ -391,7 +396,7 @@ data.feedback.clear = {
 
 data.feedback.success = {
   render: (feedback, filename, action) => {
-    feedback.appendChild(node('p:Success! Restoring ' + APP_NAME + ' Bookmarks and Settings.|class:muted small'));
+    feedback.appendChild(node(`p:${message.get('dataFeedbackSuccess')}|class:muted small`));
 
     feedback.appendChild(node('p:' + filename));
 
@@ -404,21 +409,21 @@ data.feedback.success = {
 data.feedback.fail = {
   notJson: {
     render: (feedback, filename) => {
-      feedback.appendChild(node('p:Not a JSON file. Make sure the selected file came from ' + APP_NAME + '.|class:small muted'));
+      feedback.appendChild(node(`p:${message.get('dataFeedbackFailNotJson')}|class:small muted`));
       feedback.appendChild(complexNode({ tag: 'p', text: filename }));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
   },
   notAppJson: {
     render: (feedback, filename) => {
-      feedback.appendChild(node('p:Not the right kind of JSON file. Make sure the selected file came from ' + APP_NAME + '.|class:small muted'));
+      feedback.appendChild(node(`p:${message.get('dataFeedbackFailNotAppJson')}|class:small muted`));
       feedback.appendChild(complexNode({ tag: 'p', text: filename }));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }
   },
   notClipboardJson: {
     render: (feedback, name) => {
-      feedback.appendChild(node('p:Not the right kind of data. Make sure the clipboard holds data from ' + APP_NAME + ' or a ' + APP_NAME + ' backup JSON file.|class:small muted'));
+      feedback.appendChild(node(`p:${message.get('dataFeedbackFailNotClipboardJson')}|class:small muted`));
       feedback.appendChild(node('p:' + name));
       data.feedback.animation.set.render(feedback, 'is-shake');
     }

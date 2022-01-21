@@ -1,6 +1,6 @@
+import { message } from '../message';
 
 import * as form from '../form';
-
 
 import { Control_radio } from '../control/radio';
 import { Control_checkbox } from '../control/checkbox';
@@ -8,18 +8,21 @@ import { Control_checkbox } from '../control/checkbox';
 import { node } from '../../utility/node';
 import { complexNode } from '../../utility/complexNode';
 
-export const ImportForm = function ({
+import './index.css';
+
+export const ImportForm = function({
   dataToImport = false,
   state = false
 } = {}) {
 
   this.element = {
     form: node('form|class:import-form'),
-    description: complexNode({
-      tag: 'p',
-      text: 'You can restore all or parts of a backup file. The following data will be restored:',
-      attr: [{ key: 'class', value: 'mb-5' }]
-    })
+    description: node('div|class:import-form-description', [
+      complexNode({
+        tag: 'p',
+        text: message.get('dataFormDescription')
+      })
+    ])
   };
 
   this.count = {
@@ -41,8 +44,11 @@ export const ImportForm = function ({
           object: state,
           path: 'bookmark.include',
           id: 'bookmark-include',
-          labelText: 'Bookmarks',
-          description: [`This includes <strong>${this.count.bookmark()} ${this.count.bookmark() > 1 ? 'Bookmarks' : 'Bookmark'}</strong> in <strong>${dataToImport.bookmark.length} ${dataToImport.bookmark.length > 1 ? 'Groups' : 'Group'}.<strong>`, 'Bookmarks will keep any custom Colours, Accents and Borders when imported.'],
+          labelText: message.get('dataFormBookmarkIncludeLabel'),
+          description: [
+            message.get('dataFormBookmarkIncludeDescriptionPara1'),
+            message.get('dataFormBookmarkIncludeDescriptionPara2')
+          ],
           action: () => {
             this.disable();
           }
@@ -50,8 +56,8 @@ export const ImportForm = function ({
         type: new Control_radio({
           object: state,
           radioGroup: [
-            { id: 'bookmark-type-restore', labelText: 'Replace existing bookmarks', value: 'restore' },
-            { id: 'bookmark-type-append', labelText: 'Add to existing bookmarks', value: 'append' }
+            { id: 'bookmark-type-restore', labelText: message.get('dataFormBookmarkTypeRestore'), value: 'restore' },
+            { id: 'bookmark-type-append', labelText: message.get('dataFormBookmarkTypeAppend'), value: 'append' }
           ],
           groupName: 'bookmark-type',
           path: 'bookmark.type'
@@ -62,8 +68,8 @@ export const ImportForm = function ({
           object: state,
           path: 'theme.include',
           id: 'theme-include',
-          labelText: 'Theme',
-          description: 'This includes the Colour, Accent, Fonts, Background and any saved Custom Themes.'
+          labelText: message.get('dataFormThemeIncludeLabel'),
+          description: message.get('dataFormThemeIncludeDescription')
         })
       },
       setup: {
@@ -71,8 +77,8 @@ export const ImportForm = function ({
           object: state,
           path: 'setup.include',
           id: 'setup-include',
-          labelText: 'Settings',
-          description: 'This includes Layout size and position, Header area size, Bookmark area size and other user settings.'
+          labelText: message.get('dataFormSetupIncludeLabel'),
+          description: message.get('dataFormSetupIncludeDescription')
         })
       }
     }

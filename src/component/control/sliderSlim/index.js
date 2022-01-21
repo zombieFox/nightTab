@@ -1,3 +1,5 @@
+import { message } from '../../message';
+
 import * as form from '../../form';
 
 import { Button } from '../../button';
@@ -6,7 +8,7 @@ import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';
 import { minMax } from '../../../utility/minMax';
 
-export const Control_sliderSlim = function ({
+export const Control_sliderSlim = function({
   object = {},
   path = false,
   id = 'name',
@@ -99,11 +101,12 @@ export const Control_sliderSlim = function ({
   });
 
   this.reset = new Button({
-    text: false,
+    text: message.get('controlGeneralReset'),
     iconName: 'replay',
     style: ['line'],
     classList: ['form-group-item-small'],
-    title: 'Reset to default',
+    title: message.get('controlGeneralReset'),
+    srOnly: true,
     func: () => {
 
       set({

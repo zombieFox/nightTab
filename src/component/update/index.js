@@ -570,6 +570,7 @@ update.mod['7.0.0'] = function(data) {
   delete data.state.dropdown;
 
   return data;
+
 };
 
 update.mod['7.1.0'] = function(data) {
@@ -604,6 +605,7 @@ update.mod['7.1.0'] = function(data) {
   });
 
   return data;
+
 };
 
 update.mod['7.4.0'] = function(data) {
@@ -614,6 +616,15 @@ update.mod['7.4.0'] = function(data) {
   };
 
   return data;
+
+};
+
+update.mod['7.5.0'] = function(data) {
+
+  data.state.language = { system: true, selected: 'en_GB' };
+
+  return data;
+
 };
 
 update.run = (data) => {

@@ -1,3 +1,5 @@
+import { message } from '../message';
+
 import { state } from '../state';
 import { data } from '../data';
 import { group } from '../group';
@@ -14,7 +16,7 @@ import { node } from '../../utility/node';
 import { isValidString } from '../../utility/isValidString';
 import { clearChildNode } from '../../utility/clearChildNode';
 
-export const GroupArea = function ({
+export const GroupArea = function({
   groupData = {}
 } = {}) {
 
@@ -42,11 +44,11 @@ export const GroupArea = function ({
 
   this.control.button = {
     up: new Button({
-      text: 'Move this group up',
+      text: message.get('groupAreaControlUp'),
       srOnly: true,
       iconName: 'arrowKeyboardUp',
       style: ['line'],
-      title: 'Move this group up',
+      title: message.get('groupAreaControlUp'),
       classList: ['group-control-button', 'group-control-up'],
       func: () => {
 
@@ -65,19 +67,19 @@ export const GroupArea = function ({
       }
     }),
     sort: new Button({
-      text: 'Drag group to reorder',
+      text: message.get('groupAreaControlSort'),
       srOnly: true,
       iconName: 'drag',
       style: ['line'],
-      title: 'Drag group to reorder',
+      title: message.get('groupAreaControlSort'),
       classList: ['group-control-button', 'group-control-sort'],
     }),
     down: new Button({
-      text: 'Move this group down',
+      text: message.get('groupAreaControlDown'),
       srOnly: true,
       iconName: 'arrowKeyboardDown',
       style: ['line'],
-      title: 'Move this group right',
+      title: message.get('groupAreaControlDown'),
       classList: ['group-control-button', 'group-control-up'],
       func: () => {
 
@@ -96,11 +98,11 @@ export const GroupArea = function ({
       }
     }),
     edit: new Button({
-      text: 'Edit this group',
+      text: message.get('groupAreaControlEdit'),
       srOnly: true,
       iconName: 'edit',
       style: ['line'],
-      title: 'Edit this group',
+      title: message.get('groupAreaControlEdit'),
       classList: ['group-control-button', 'group-control-edit'],
       func: () => {
 
@@ -115,9 +117,10 @@ export const GroupArea = function ({
         const groupForm = new GroupForm({ groupData: newGroupData });
 
         const editModal = new Modal({
-          heading: isValidString(newGroupData.group.name.text) ? 'Edit ' + newGroupData.group.name.text : 'Edit unnamed group',
+          heading: isValidString(newGroupData.group.name.text) ? `${message.get('groupEditHeadingName')} ${newGroupData.group.name.text}` : message.get('groupEditHeadingUnnamed'),
           content: groupForm.form(),
-          successText: 'Save',
+          successText: message.get('groupEditSuccessText'),
+          cancelText: message.get('groupEditCancelText'),
           width: 40,
           successAction: () => {
 
@@ -135,18 +138,19 @@ export const GroupArea = function ({
       }
     }),
     remove: new Button({
-      text: 'Remove this group',
+      text: message.get('groupAreaControlRemove'),
       srOnly: true,
       iconName: 'cross',
       style: ['line'],
-      title: 'Remove this group',
+      title: message.get('groupAreaControlRemove'),
       classList: ['group-control-button', 'group-control-remove'],
       func: () => {
 
         const removeModal = new Modal({
-          heading: isValidString(groupData.group.name.text) ? 'Remove ' + groupData.group.name.text : 'Remove unnamed bookmark',
-          content: 'Are you sure you want to remove this Group and all the Bookmarks within? This can not be undone.',
-          successText: 'Remove',
+          heading: isValidString(groupData.group.name.text) ? `${message.get('groupRemoveHeadingName')} ${groupData.group.name.text}` : message.get('groupRemoveHeadingUnnamed'),
+          content: message.get('groupRemoveContent'),
+          successText: message.get('groupRemoveSuccessText'),
+          cancelText: message.get('groupRemoveCancelText'),
           width: 'small',
           successAction: () => {
 
@@ -169,9 +173,9 @@ export const GroupArea = function ({
 
   this.openAll = {
     button: new Button({
-      text: 'Open all Bookmarks in this Group',
+      text: message.get('groupAreaControlOpenAll'),
       style: ['line'],
-      title: 'Open all Bookmarks in this Group',
+      title: message.get('groupAreaControlOpenAll'),
       srOnly: true,
       iconName: 'openAll',
       classList: ['group-toolbar-button', 'group-toolbar-open-all'],
@@ -208,9 +212,9 @@ export const GroupArea = function ({
 
   this.collapse = {
     button: new Button({
-      text: 'Collapse this Group',
+      text: message.get('groupAreaControlCollapse'),
       style: ['line'],
-      title: 'Collapse this Group',
+      title: message.get('groupAreaControlCollapse'),
       srOnly: true,
       iconName: 'arrowKeyboardUp',
       classList: ['group-toolbar-button', 'group-toolbar-collapse'],
