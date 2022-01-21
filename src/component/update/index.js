@@ -621,7 +621,7 @@ update.mod['7.4.0'] = function(data) {
 
 update.mod['7.5.0'] = function(data) {
 
-  data.state.language = { system: true, selected: 'en_GB' };
+  data.state.language = 'system';
 
   return data;
 
