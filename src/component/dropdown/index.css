@@ -14,8 +14,8 @@
 
 .dropdown-content {
   background-color: hsl(var(--dropdown-background));
-  padding: 0.5em;
-  border-radius: calc(var(--theme-radius) * 0.01em);
+  padding: calc(0.5em + ((var(--theme-radius) / 8) * 0.01em)) calc(0.5em + ((var(--theme-radius) / 6) * 0.01em));
+  border-radius: calc(0.25em + (var(--theme-radius) * 0.01em));
   display: flex;
   flex-direction: column;
   gap: 0.25em;
