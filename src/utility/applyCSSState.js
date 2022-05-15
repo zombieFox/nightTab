@@ -1,7 +1,7 @@
 import { state } from '../component/state';
 import { get } from './get';
 
-export const applyCSSState = function (path) {
+export const applyCSSState = (path) => {
 
   const html = document.querySelector('html');
 

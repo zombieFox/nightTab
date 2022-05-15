@@ -129,10 +129,7 @@ export const Control_radio = function ({
 
   };
 
-  this.inputButton = ({
-    //FIXME deprecated property
-    inputHide = false //eslint-disable-line
-  } = {}) => {
+  this.inputButton = () => {
 
     const wrap = form.wrap();
 
