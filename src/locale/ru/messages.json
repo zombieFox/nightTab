@@ -36,11 +36,11 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavPreset": {
-    "message": "Предустановка",
+    "message": "Предустановки",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavSaved": {
-    "message": "Сохранено",
+    "message": "Сохраненные",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavStyle": {
@@ -196,11 +196,11 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavLocation": {
-    "message": "Место расположения",
+    "message": "Расположение",
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavPosition": {
-    "message": "Должность",
+    "message": "Позиция",
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavControls": {
@@ -216,11 +216,11 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavDataSubNavBackup": {
-    "message": "Резервный",
+    "message": "Резервное копирование",
     "description": "Label for the settings menu navigation."
   },
   "menuNavDataSubNavClear": {
-    "message": "Прозрачный",
+    "message": "Очистить",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLanguageLabel": {
@@ -260,15 +260,15 @@
     "description": "Radio for dark mode."
   },
   "menuContentThemeStyleLightLabel": {
-    "message": "Легкий режим",
+    "message": "Светлый режим",
     "description": "Radio for light mode."
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Использовать системный язык",
+    "message": "Использовать системные установки",
     "description": "Radio for automatic light or dark mode."
   },
   "menuContentThemeStyleAutomaticDescription": {
-    "message": "Следуйте системному световому или темному режиму.",
+    "message": "Следует системному Светлому или Тёмному режиму.",
     "description": "Description for automatic light or dark mode."
   },
   "menuContentThemeColorShadeHelperPara1": {
@@ -316,15 +316,15 @@
     "description": "Label for grey preset accent colour."
   },
   "menuContentThemeAccentPresetColorRed": {
-    "message": "красный",
+    "message": "Красный",
     "description": "Label for red preset accent colour."
   },
   "menuContentThemeAccentPresetColorOrange": {
-    "message": "апельсин",
+    "message": "Оранжевый",
     "description": "Label for orange preset accent colour."
   },
   "menuContentThemeAccentPresetColorYellow": {
-    "message": "Желтый",
+    "message": "Жёлтый",
     "description": "Label for yellow preset accent colour."
   },
   "menuContentThemeAccentPresetColorLime": {
@@ -332,7 +332,7 @@
     "description": "Label for lime preset accent colour."
   },
   "menuContentThemeAccentPresetColorGreen": {
-    "message": "Зеленый",
+    "message": "Зелёный",
     "description": "Label for green preset accent colour."
   },
   "menuContentThemeAccentPresetColorAqua": {
@@ -380,7 +380,7 @@
     "description": "Label for preset accent colour dark level 3."
   },
   "menuContentThemeAccentPresetModifierDarkLevel2": {
-    "message": "Очень темный",
+    "message": "Очень тёмный",
     "description": "Label for preset accent colour dark level 2."
   },
   "menuContentThemeAccentPresetModifierDarkLevel1": {
@@ -432,7 +432,7 @@
     "description": "Range for cycled accent colour steps."
   },
   "menuContentThemeAccentCycleAlert": {
-    "message": "Будьте осторожны, так как быстро меняющийся оттенок Accent может вызвать проблемы с производительностью.",
+    "message": "Будьте осторожны, так как быстро меняющийся оттенок акцента может вызвать проблемы с производительностью.",
     "description": "Alert for cycled accent colour."
   },
   "menuContentThemeAccentCycleHelperPara1": {
@@ -452,7 +452,7 @@
     "description": "Helper text for display font name."
   },
   "menuContentThemeFontDisplayNameHelperLink": {
-    "message": "Найдите шрифт Google",
+    "message": "Google Шрифты",
     "description": "Link to google fonts."
   },
   "menuContentThemeFontDisplayNameHelperPara2": {
@@ -1292,7 +1292,7 @@
     "description": "Label for the start of the week."
   },
   "menuContentHeaderDateDayDisplayWeekStartMonday": {
-    "message": "понедельник",
+    "message": "Понедельник",
     "description": "Radio for Monday as the start of the week."
   },
   "menuContentHeaderDateDayDisplayWeekStartSunday": {
@@ -2764,7 +2764,7 @@
     "description": "Label for colour control lightness."
   },
   "controlColorMixerSliderR": {
-    "message": "красный",
+    "message": "Красный",
     "description": "Label for colour control red."
   },
   "controlColorMixerSliderG": {
