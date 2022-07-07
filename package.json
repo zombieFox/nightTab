@@ -44,7 +44,7 @@
     "husky": "^7.0.4",
     "jest": "^27.4.7",
     "mini-css-extract-plugin": "^2.5.2",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "sortablejs": "^1.14.0",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.0",
