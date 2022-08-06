@@ -17,6 +17,7 @@ import { infrared } from './infrared';
 import { kapow } from './kapow';
 import { koto } from './koto';
 import { lex } from './lex';
+import { lunar } from './lunar';
 import { macaroon } from './macaroon';
 import { marker } from './marker';
 import { midnight } from './midnight';
@@ -68,6 +69,7 @@ themePreset.get = () => {
     kapow,
     koto,
     lex,
+    lunar,
     macaroon,
     marker,
     midnight,
