@@ -44,7 +44,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      chunks : ['index']
     }),
     new CopyPlugin({
       patterns: [{
