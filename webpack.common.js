@@ -4,10 +4,11 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, 'src', 'index.js')
+    index: path.resolve(__dirname, 'src', 'index.js'),
+    service_worker: path.resolve(__dirname, 'src', 'serviceWorker', 'service_worker.js'),
   },
   output: {
-    filename: '[name].[contenthash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist/web'),
     clean: true
   },
