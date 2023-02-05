@@ -20,11 +20,12 @@ import { default as pt } from '../../locale/pt/messages.json';
 import { default as ru } from '../../locale/ru/messages.json';
 import { default as uk } from '../../locale/uk/messages.json';
 import { default as vi } from '../../locale/vi/messages.json';
+import { default as zh_CN } from '../../locale/zh_CN/messages.json';
 
 const message = {};
 
 message.language = {
-  pack: { bn, de, en_GB, en_US, es, fil, fr, gu, hi, id, it, ja, ms, pt, ru, uk, vi }
+  pack: { bn, de, en_GB, en_US, es, fil, fr, gu, hi, id, it, ja, ms, pt, ru, uk, vi, zh_CN }
 };
 
 message.language.list = () => {
@@ -46,7 +47,8 @@ message.language.list = () => {
     { code: 'pt', name: 'Português' }, // Portuguese
     { code: 'ru', name: 'Pусский' }, // Russian
     { code: 'uk', name: 'український' }, // Ukrainian
-    { code: 'vi', name: 'англійська' } // Vietnamese
+    { code: 'vi', name: 'англійська' }, // Vietnamese
+    { code: 'zh_CN', name: '简体中文' } // Simplified Chinese
   ];
 
   list.forEach((item) => {
