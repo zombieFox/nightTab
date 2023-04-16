@@ -13,7 +13,7 @@ self.addEventListener('install', event => { // register
       }
       else
         cache.addAll([
-          '/',
+          '/', // alias for '/index.html'
           '/index.html',
         ]);
     });

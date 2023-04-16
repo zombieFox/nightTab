@@ -12,6 +12,11 @@ export const policies = [
     handle: networkOnly
   },
   {
+    // github pages
+    url: /^https:\/\/\w*\.github\.io\/nightTab\/.*$/i,
+    handle: cacheFirst
+  },
+  {
     // images
     url: /^(ftp|https?):.*\.(jpe?g|png|gif|svg)($|\?.*)/i,
     handle: cacheFirst
