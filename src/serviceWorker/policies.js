@@ -3,6 +3,11 @@ import { cacheFirst, networkFirst } from './cachingStrategy';
 // the various network policies for service workers
 export const policies = [
   {
+    // chrome extension
+    url: /^chrome-extension:.*$/i,
+    handle: networkOnly
+  },
+  {
     // images
     url: /^(ftp|https?):.*\.(jpe?g|png|gif|svg)($|\?.*)/i,
     handle: cacheFirst
