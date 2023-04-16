@@ -1,4 +1,4 @@
-import { cacheFirst, networkFirst, networkOnly } from './cachingStrategy';
+import { cacheFirst, networkFirst } from './cachingStrategy';
 
 // the various network policies for service workers
 export const policies = [
@@ -30,6 +30,6 @@ export const policies = [
   // fallback
   {
     url: /.+/i,
-    handle: networkOnly
-  }
+    handle: cacheFirst
+  },
 ];
