@@ -4,7 +4,12 @@ import {APP_NAME} from '../constant';
 self.addEventListener('install', event => { // register
   console.log('serviceWorker installed');
   event.waitUntil(async () => {
-    await caches.open(APP_NAME);
+    await caches.open(APP_NAME).then(
+      cache => cache.addAll([
+        '/',
+        '/index.html',
+      ])
+    );
     console.log('serviceWorker installed...');
   });
 });
