@@ -11,27 +11,23 @@ export const cacheFirst = async function (cacheName, event) {
   }
   // miss
   else {
-    return fetch(request).then(response => {
-      let responseClone = response.clone();
-      caches.open(cacheName).then(cache =>
-        cache.put(request, responseClone)
-      );
-      return response;
-    });
+    const fetchResponse = await fetch(request);
+    const fetchResponseClone = fetchResponse.clone();
+    const cache = await caches.open(cacheName);
+    await cache.put(request, fetchResponseClone);
+    return fetchResponse;
   }
 };
+
 
 export const networkFirst = async function (cacheName, event) {
   let request = event.request;
   try {
-    return fetch(request).then(
-      response => {
-        let responseClone = response.clone();
-        caches.open(cacheName).then(cache =>
-          cache.put(request, responseClone)
-        );
-        return response;
-      });
+    const fetchResponse = await fetch(request);
+    const fetchResponseClone = fetchResponse.clone();
+    const cache = await caches.open(cacheName);
+    await cache.put(request, fetchResponseClone);
+    return fetchResponse;
   }
   catch (err) {
     return caches.match(event.request);
