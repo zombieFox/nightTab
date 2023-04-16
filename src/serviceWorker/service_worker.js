@@ -30,6 +30,5 @@ self.addEventListener('fetch', event => { // intercept
   let policy = policies.find(
     pattern => pattern.url.test(event.request.url)
   );
-  console.log('fetch event ', event.request.url, ' with ', policy.handle.name);
   event.respondWith(policy.handle(APP_NAME, event));
 });
