@@ -1,6 +1,10 @@
-import { cacheFirst, networkFirst } from './cachingStrategy';
+import { cacheFirst, networkFirst, networkOnly } from './cachingStrategy';
 
-// the various network policies for service workers
+/* the various network policies for service workers
+these are used to determine how to handle a request
+based on the request's url
+determine which policy to select is done based on the
+first matching pattern */
 export const policies = [
   {
     // chrome extension
