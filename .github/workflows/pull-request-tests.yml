@@ -11,7 +11,7 @@ jobs:
       - name: Install Dependecies & Test
         uses: actions/setup-node@v3
         with:
-          node-version: '12' # TODO IDK what version nighttab is built with normally.
+          node-version: '18'
           cache: 'npm'
       - run: |
           npm install
