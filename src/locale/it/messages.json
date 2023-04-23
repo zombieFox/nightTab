@@ -1543,19 +1543,19 @@
     "message": "Dimensione segnalibro",
     "description": "Range for bookmark size."
   },
-  "menuContentBookmarkStyleBlockLabel": {
+  "menuContentBookmarkStyleTypeBlockLabel": {
     "message": "Bloccare",
     "description": "Label for bookmark block style."
   },
-  "menuContentBookmarkStyleBlockDescription": {
+  "menuContentBookmarkStyleTypeBlockDescription": {
     "message": "Piastrelle segnalibro a forma quadrata.",
     "description": "Description for bookmark block style."
   },
-  "menuContentBookmarkStyleListLabel": {
+  "menuContentBookmarkStyleTypeListLabel": {
     "message": "Elenco",
     "description": "Label for bookmark list style."
   },
-  "menuContentBookmarkStyleListDescription": {
+  "menuContentBookmarkStyleTypeListDescription": {
     "message": "Segnalibri corti e larghi.",
     "description": "Description for bookmark list style."
   },

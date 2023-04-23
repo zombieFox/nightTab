@@ -1,13 +1,3 @@
-.is-bookmark-style-block {
-  --group-cell-width: 11em;
-  --group-cell-height: 10em;
-}
-
-.is-bookmark-style-list {
-  --group-cell-width: 20em;
-  --group-cell-height: 4em;
-}
-
 .group {
   display: flex;
   gap: 0;

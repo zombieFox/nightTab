@@ -1543,19 +1543,19 @@
     "message": "বুকমার্ক সাইজ",
     "description": "Range for bookmark size."
   },
-  "menuContentBookmarkStyleBlockLabel": {
+  "menuContentBookmarkStyleTypeBlockLabel": {
     "message": "ব্লক",
     "description": "Label for bookmark block style."
   },
-  "menuContentBookmarkStyleBlockDescription": {
+  "menuContentBookmarkStyleTypeBlockDescription": {
     "message": "বর্গাকার আকৃতির বুকমার্ক টাইলস।",
     "description": "Description for bookmark block style."
   },
-  "menuContentBookmarkStyleListLabel": {
+  "menuContentBookmarkStyleTypeListLabel": {
     "message": "তালিকা",
     "description": "Label for bookmark list style."
   },
-  "menuContentBookmarkStyleListDescription": {
+  "menuContentBookmarkStyleTypeListDescription": {
     "message": "সংক্ষিপ্ত এবং প্রশস্ত বুকমার্ক টাইলস.",
     "description": "Description for bookmark list style."
   },

@@ -1543,19 +1543,19 @@
     "message": "Размер закладки",
     "description": "Range for bookmark size."
   },
-  "menuContentBookmarkStyleBlockLabel": {
+  "menuContentBookmarkStyleTypeBlockLabel": {
     "message": "Блокировать",
     "description": "Label for bookmark block style."
   },
-  "menuContentBookmarkStyleBlockDescription": {
+  "menuContentBookmarkStyleTypeBlockDescription": {
     "message": "Плитка Bookmark квадратной формы.",
     "description": "Description for bookmark block style."
   },
-  "menuContentBookmarkStyleListLabel": {
+  "menuContentBookmarkStyleTypeListLabel": {
     "message": "Список",
     "description": "Label for bookmark list style."
   },
-  "menuContentBookmarkStyleListDescription": {
+  "menuContentBookmarkStyleTypeListDescription": {
     "message": "Короткие и широкие плитки закладок.",
     "description": "Description for bookmark list style."
   },

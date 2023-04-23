@@ -1543,19 +1543,19 @@
     "message": "ブックマークサイズ",
     "description": "Range for bookmark size."
   },
-  "menuContentBookmarkStyleBlockLabel": {
+  "menuContentBookmarkStyleTypeBlockLabel": {
     "message": "ブロック",
     "description": "Label for bookmark block style."
   },
-  "menuContentBookmarkStyleBlockDescription": {
+  "menuContentBookmarkStyleTypeBlockDescription": {
     "message": "正方形のブックマークタイル。",
     "description": "Description for bookmark block style."
   },
-  "menuContentBookmarkStyleListLabel": {
+  "menuContentBookmarkStyleTypeListLabel": {
     "message": "リスト",
     "description": "Label for bookmark list style."
   },
-  "menuContentBookmarkStyleListDescription": {
+  "menuContentBookmarkStyleTypeListDescription": {
     "message": "短くて広いブックマークタイル。",
     "description": "Description for bookmark list style."
   },

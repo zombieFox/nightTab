@@ -7,25 +7,25 @@
   --bookmark-display-name-color-focus-hover: var(--theme-primary-text-030);
 }
 
-.is-bookmark-style-block {
+.is-bookmark-style-type-block {
   --bookmark-edit-height-tall: 5em;
   --bookmark-edit-height-short: calc(var(--bookmark-edit-height-tall) / 2);
   --bookmark-edit-height: var(--bookmark-edit-height-tall);
   --bookmark-url-height: 2.25em;
 }
 
-.is-bookmark-style-list {
+.is-bookmark-style-type-list {
   --bookmark-edit-height-tall: 5em;
   --bookmark-edit-height-short: 2em;
   --bookmark-edit-height: var(--bookmark-edit-height-short);
   --bookmark-url-height: 1.5em;
 }
 
-.is-bookmark-style-block {
+.is-bookmark-style-type-block {
   --bookmark-url-height: 2.25em;
 }
 
-.is-bookmark-style-list {
+.is-bookmark-style-type-list {
   --bookmark-url-height: 1.5em;
 }
 
@@ -136,17 +136,17 @@
 
 @media (min-width: 900px) {
 
-  .is-layout-breakpoint-md.is-bookmark-style-list .bookmark-wide,
-  .is-layout-breakpoint-lg.is-bookmark-style-list .bookmark-wide,
-  .is-layout-breakpoint-xl.is-bookmark-style-list .bookmark-wide,
-  .is-layout-breakpoint-xxl.is-bookmark-style-list .bookmark-wide {
+  .is-layout-breakpoint-md.is-bookmark-style-type-list .bookmark-wide,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-list .bookmark-wide,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-list .bookmark-wide,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-list .bookmark-wide {
     grid-column: span 2;
   }
 
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide {
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide {
     grid-column: span 2;
   }
 
@@ -280,11 +280,11 @@
   text-decoration: none;
 }
 
-.is-bookmark-style-block .bookmark-link {
+.is-bookmark-style-type-block .bookmark-link {
   padding: calc(var(--bookmark-padding) * 0.1em);
 }
 
-.is-bookmark-style-list .bookmark-link {
+.is-bookmark-style-type-list .bookmark-link {
   padding: calc((var(--bookmark-padding) * 0.5) * 0.1em) calc((var(--bookmark-padding) * 1.25) * 0.1em);
 }
 
@@ -807,22 +807,22 @@
   transition-delay: calc(var(--bookmark-transition-delay) * 0.03s);
 }
 
-.is-bookmark-style-block .bookmark-control {
+.is-bookmark-style-type-block .bookmark-control {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
 
-.is-bookmark-style-list .bookmark-control {
+.is-bookmark-style-type-list .bookmark-control {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
 }
 
 @media (min-width: 900px) {
 
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control {
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
   }
@@ -830,18 +830,18 @@
 
 @media (min-width: 900px) {
 
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control {
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control {
     padding-left: 3em;
     padding-right: 3em;
   }
 
-  .is-layout-breakpoint-md.is-bookmark-style-list .bookmark-wide .bookmark-control,
-  .is-layout-breakpoint-lg.is-bookmark-style-list .bookmark-wide .bookmark-control,
-  .is-layout-breakpoint-xl.is-bookmark-style-list .bookmark-wide .bookmark-control,
-  .is-layout-breakpoint-xxl.is-bookmark-style-list .bookmark-wide .bookmark-control {
+  .is-layout-breakpoint-md.is-bookmark-style-type-list .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-list .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-list .bookmark-wide .bookmark-control,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-list .bookmark-wide .bookmark-control {
     padding-left: 10em;
     padding-right: 10em;
   }
@@ -892,133 +892,133 @@
   opacity: 0.25;
 }
 
-.is-bookmark-orientation-top.is-bookmark-style-block .bookmark-control-left {
+.is-bookmark-orientation-top.is-bookmark-style-type-block .bookmark-control-left {
   grid-column: 1 / span 2;
   grid-row: 2;
 }
 
-.is-bookmark-orientation-top.is-bookmark-style-block .bookmark-control-sort {
+.is-bookmark-orientation-top.is-bookmark-style-type-block .bookmark-control-sort {
   grid-column: 3 / span 2;
   grid-row: 2;
 }
 
-.is-bookmark-orientation-top.is-bookmark-style-block .bookmark-control-right {
+.is-bookmark-orientation-top.is-bookmark-style-type-block .bookmark-control-right {
   grid-column: 5 / span 2;
   grid-row: 2;
 }
 
-.is-bookmark-orientation-top.is-bookmark-style-block .bookmark-control-edit {
+.is-bookmark-orientation-top.is-bookmark-style-type-block .bookmark-control-edit {
   grid-column: 1 / span 3;
   grid-row: 1;
 }
 
-.is-bookmark-orientation-top.is-bookmark-style-block .bookmark-control-remove {
+.is-bookmark-orientation-top.is-bookmark-style-type-block .bookmark-control-remove {
   grid-column: 4 / span 3;
   grid-row: 1;
 }
 
-.is-bookmark-orientation-bottom.is-bookmark-style-block .bookmark-control-left {
+.is-bookmark-orientation-bottom.is-bookmark-style-type-block .bookmark-control-left {
   grid-column: 1 / span 2;
   grid-row: 1;
 }
 
-.is-bookmark-orientation-bottom.is-bookmark-style-block .bookmark-control-sort {
+.is-bookmark-orientation-bottom.is-bookmark-style-type-block .bookmark-control-sort {
   grid-column: 3 / span 2;
   grid-row: 1;
 }
 
-.is-bookmark-orientation-bottom.is-bookmark-style-block .bookmark-control-right {
+.is-bookmark-orientation-bottom.is-bookmark-style-type-block .bookmark-control-right {
   grid-column: 5 / span 2;
   grid-row: 1;
 }
 
-.is-bookmark-orientation-bottom.is-bookmark-style-block .bookmark-control-edit {
+.is-bookmark-orientation-bottom.is-bookmark-style-type-block .bookmark-control-edit {
   grid-column: 1 / span 3;
   grid-row: 2;
 }
 
-.is-bookmark-orientation-bottom.is-bookmark-style-block .bookmark-control-remove {
+.is-bookmark-orientation-bottom.is-bookmark-style-type-block .bookmark-control-remove {
   grid-column: 4 / span 3;
   grid-row: 2;
 }
 
-.is-bookmark-style-list .bookmark-control-left {
+.is-bookmark-style-type-list .bookmark-control-left {
   grid-column: 1;
 }
 
-.is-bookmark-style-list .bookmark-control-sort {
+.is-bookmark-style-type-list .bookmark-control-sort {
   grid-column: 2;
 }
 
-.is-bookmark-style-list .bookmark-control-right {
+.is-bookmark-style-type-list .bookmark-control-right {
   grid-column: 3;
 }
 
-.is-bookmark-style-list .bookmark-control-edit {
+.is-bookmark-style-type-list .bookmark-control-edit {
   grid-column: 4;
 }
 
-.is-bookmark-style-list .bookmark-control-remove {
+.is-bookmark-style-type-list .bookmark-control-remove {
   grid-column: 5;
 }
 
 @media (min-width: 900px) {
 
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-remove {
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-remove {
     grid-row: 1;
   }
 
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-left,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-left {
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-left,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-left {
     grid-column: 1;
   }
 
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-sort,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-sort {
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-sort,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-sort {
     grid-column: 2;
   }
 
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-right,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-right {
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-right,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-right {
     grid-column: 3;
   }
 
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-edit,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-edit {
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-edit,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-edit {
     grid-column: 4;
   }
 
-  .is-layout-breakpoint-md.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
-  .is-layout-breakpoint-lg.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
-  .is-layout-breakpoint-xl.is-bookmark-style-block .bookmark-wide .bookmark-control-remove,
-  .is-layout-breakpoint-xxl.is-bookmark-style-block .bookmark-wide .bookmark-control-remove {
+  .is-layout-breakpoint-md.is-bookmark-style-type-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-lg.is-bookmark-style-type-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-xl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-remove,
+  .is-layout-breakpoint-xxl.is-bookmark-style-type-block .bookmark-wide .bookmark-control-remove {
     grid-column: 5;
   }
 }

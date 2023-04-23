@@ -1543,19 +1543,19 @@
     "message": "Kích thước dấu trang",
     "description": "Range for bookmark size."
   },
-  "menuContentBookmarkStyleBlockLabel": {
+  "menuContentBookmarkStyleTypeBlockLabel": {
     "message": "Khối",
     "description": "Label for bookmark block style."
   },
-  "menuContentBookmarkStyleBlockDescription": {
+  "menuContentBookmarkStyleTypeBlockDescription": {
     "message": "Gạch Bookmark hình vuông.",
     "description": "Description for bookmark block style."
   },
-  "menuContentBookmarkStyleListLabel": {
+  "menuContentBookmarkStyleTypeListLabel": {
     "message": "Danh sách",
     "description": "Label for bookmark list style."
   },
-  "menuContentBookmarkStyleListDescription": {
+  "menuContentBookmarkStyleTypeListDescription": {
     "message": "Các ô Bookmark ngắn và rộng.",
     "description": "Description for bookmark list style."
   },

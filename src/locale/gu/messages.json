@@ -1543,19 +1543,19 @@
     "message": "બુકમાર્કનું કદ",
     "description": "Range for bookmark size."
   },
-  "menuContentBookmarkStyleBlockLabel": {
+  "menuContentBookmarkStyleTypeBlockLabel": {
     "message": "બ્લોક",
     "description": "Label for bookmark block style."
   },
-  "menuContentBookmarkStyleBlockDescription": {
+  "menuContentBookmarkStyleTypeBlockDescription": {
     "message": "ચોરસ આકારની બુકમાર્ક ટાઇલ્સ.",
     "description": "Description for bookmark block style."
   },
-  "menuContentBookmarkStyleListLabel": {
+  "menuContentBookmarkStyleTypeListLabel": {
     "message": "યાદી",
     "description": "Label for bookmark list style."
   },
-  "menuContentBookmarkStyleListDescription": {
+  "menuContentBookmarkStyleTypeListDescription": {
     "message": "ટૂંકી અને પહોળી બુકમાર્ક ટાઇલ્સ.",
     "description": "Description for bookmark list style."
   },

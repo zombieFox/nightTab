@@ -13,11 +13,11 @@
   flex-wrap: wrap;
 }
 
-.is-bookmark-style-block .group-empty {
+.is-bookmark-style-type-block .group-empty {
   flex-direction: column;
 }
 
-.is-bookmark-style-list .group-empty {
+.is-bookmark-style-type-list .group-empty {
   flex-direction: row;
 }
 
