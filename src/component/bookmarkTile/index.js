@@ -142,7 +142,7 @@ const BookmarkTile = function({
           content: bookmarkForm.form(),
           successText: message.get('bookmarkEditSuccessText'),
           cancelText: message.get('bookmarkEditCancelText'),
-          width: (state.get.current().bookmark.style === 'block') ? 60 : 70,
+          width: (state.get.current().bookmark.style.type === 'block') ? 60 : 70,
           maxHeight: true,
           successAction: () => {
 

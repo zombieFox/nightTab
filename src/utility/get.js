@@ -31,7 +31,7 @@ export const get = ({
 
     let finalKey = address.shift();
 
-    if (!(finalKey in object)) {
+    if (!Object.prototype.hasOwnProperty.call(object, finalKey)) {
       return '';
     } else {
       return object[finalKey];

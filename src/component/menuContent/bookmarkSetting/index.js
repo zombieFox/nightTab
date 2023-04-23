@@ -16,6 +16,7 @@ import { Control_helperText } from '../../control/helperText';
 import { Control_radio } from '../../control/radio';
 import { Control_checkbox } from '../../control/checkbox';
 import { Control_slider } from '../../control/slider';
+import { Control_sliderSlim } from '../../control/sliderSlim';
 
 import { node } from '../../../utility/node';
 import { applyCSSVar } from '../../../utility/applyCSSVar';
@@ -40,7 +41,7 @@ bookmarkSetting.disable = () => {
     bookmarkSetting.control.general.shadowShow.enable();
     bookmarkSetting.control.general.hoverScaleShow.enable();
     bookmarkSetting.control.general.newTab.enable();
-    bookmarkSetting.control.style.enable();
+    bookmarkSetting.control.style.type.enable();
     bookmarkSetting.control.orientation.orientationElement.enable();
     bookmarkSetting.control.orientation.orientationHelper.enable();
     bookmarkSetting.control.sort.letter.enable();
@@ -53,7 +54,7 @@ bookmarkSetting.disable = () => {
     bookmarkSetting.control.general.shadowShow.disable();
     bookmarkSetting.control.general.hoverScaleShow.disable();
     bookmarkSetting.control.general.newTab.disable();
-    bookmarkSetting.control.style.disable();
+    bookmarkSetting.control.style.type.disable();
     bookmarkSetting.control.orientation.orientationElement.disable();
     bookmarkSetting.control.orientation.orientationHelper.disable();
     bookmarkSetting.control.sort.letter.disable();
@@ -240,29 +241,46 @@ bookmarkSetting.general = (parent) => {
 
 bookmarkSetting.style = (parent) => {
 
-  bookmarkSetting.control.style = new Control_radio({
+  bookmarkSetting.control.style.type = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'bookmark-style-block', labelText: message.get('menuContentBookmarkStyleBlockLabel'), description: message.get('menuContentBookmarkStyleBlockDescription'), value: 'block' },
-      { id: 'bookmark-style-list', labelText: message.get('menuContentBookmarkStyleListLabel'), description: message.get('menuContentBookmarkStyleListDescription'), value: 'list' }
+      { id: 'bookmark-style-type-block', labelText: message.get('menuContentBookmarkStyleTypeBlockLabel'), description: message.get('menuContentBookmarkStyleTypeBlockDescription'), value: 'block' },
+      { id: 'bookmark-style-type-list', labelText: message.get('menuContentBookmarkStyleTypeListLabel'), description: message.get('menuContentBookmarkStyleTypeListDescription'), value: 'list' }
     ],
-    groupName: 'bookmark-style',
-    path: 'bookmark.style',
+    groupName: 'bookmark-style-type',
+    path: 'bookmark.style.type',
     action: () => {
 
-      switch (state.get.current().bookmark.style) {
+      switch (state.get.current().bookmark.style.type) {
 
         case 'block':
           bookmark.direction.mod.vertical();
+
+          state.get.current().bookmark.style = {
+            type: 'block',
+            width: 11,
+            height: 10
+          };
+
           break;
 
         case 'list':
           bookmark.direction.mod.horizontal();
+
+          state.get.current().bookmark.style = {
+            type: 'list',
+            width: 20,
+            height: 4
+          };
+
           break;
 
       }
 
-      applyCSSClass('bookmark.style');
+      bookmarkSetting.control.style.width.update();
+      bookmarkSetting.control.style.height.update();
+
+      applyCSSClass('bookmark.style.type');
 
       groupAndBookmark.render();
 
@@ -285,9 +303,73 @@ bookmarkSetting.style = (parent) => {
     }
   });
 
+  bookmarkSetting.control.style.width = new Control_sliderSlim({
+    object: state.get.current(),
+    path: 'bookmark.style.width',
+    id: 'bookmark-style-width',
+    labelText: message.get('menuContentBookmarkStyleWidthLabel'),
+    value: state.get.current().bookmark.style.width,
+    defaultValue: state.get.default().bookmark.style.width,
+    min: state.get.minMax().bookmark.style.width.min,
+    max: state.get.minMax().bookmark.style.width.max,
+    action: () => {
+      groupAndBookmark.render();
+
+      if (bookmarkSetting.edge.general.size) {
+
+        if (state.get.current().bookmark.show && bookmark.tile.current.length > 0) {
+
+          bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
+
+        }
+
+      } else {
+
+        bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
+
+      }
+
+      data.save();
+    }
+  });
+
+  bookmarkSetting.control.style.height = new Control_sliderSlim({
+    object: state.get.current(),
+    path: 'bookmark.style.height',
+    id: 'bookmark-style-height',
+    labelText: message.get('menuContentBookmarkStyleHeightLabel'),
+    value: state.get.current().bookmark.style.height,
+    defaultValue: state.get.default().bookmark.style.height,
+    min: state.get.minMax().bookmark.style.height.min,
+    max: state.get.minMax().bookmark.style.height.max,
+    action: () => {
+      groupAndBookmark.render();
+
+      if (bookmarkSetting.edge.general.size) {
+
+        if (state.get.current().bookmark.show && bookmark.tile.current.length > 0) {
+
+          bookmarkSetting.edge.general.size.update.primary(bookmark.tile.current[0].tile());
+
+        }
+
+      } else {
+
+        bookmarkSetting.edge.general.size = new Edge({ primary: bookmark.tile.current[0].tile(), secondary: [bookmark.element.area] });
+
+      }
+
+      data.save();
+    }
+  });
+
   parent.appendChild(
     node('div', [
-      bookmarkSetting.control.style.wrap(),
+      bookmarkSetting.control.style.type.wrap(),
+      node('hr'),
+      bookmarkSetting.control.style.width.wrap(),
+      node('hr'),
+      bookmarkSetting.control.style.height.wrap()
     ])
   );
 
