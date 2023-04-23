@@ -59,6 +59,7 @@ state.default = {
     edit: false
   },
   bookmark: {
+    area: { justify: 'left' },
     size: 100,
     url: { show: true },
     line: { show: true },
@@ -236,6 +237,7 @@ state.option = {
     search: { width: { by: ['auto', 'custom'] }, text: { justify: ['left', 'center', 'right'] } }
   },
   bookmark: {
+    area: { justify: ['left', 'center', 'right'] },
     item: { justify: ['left', 'center', 'right'] },
     orientation: ['top', 'bottom'],
     style: ['block', 'list']

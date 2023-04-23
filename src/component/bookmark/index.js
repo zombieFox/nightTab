@@ -554,6 +554,7 @@ bookmark.init = () => {
     'bookmark.size'
   ]);
   applyCSSClass([
+    'bookmark.area.justify',
     'bookmark.item.justify',
     'bookmark.orientation',
     'bookmark.style'

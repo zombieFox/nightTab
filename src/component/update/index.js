@@ -627,6 +627,14 @@ update.mod['7.5.0'] = function(data) {
 
 };
 
+update.mod['7.6.0'] = function(data) {
+  data.state.bookmark.area =  {
+    justify: 'left'
+  };
+  
+  return data;
+};
+
 update.run = (data) => {
 
   // loop over all updates in mod.all object

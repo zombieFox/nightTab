@@ -103,6 +103,16 @@
   display: none;
 }
 
+.is-bookmark-area-justify-center .group-body {
+  display: flex;
+  justify-content: center;
+}
+
+.is-bookmark-area-justify-right .group-body {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .group-control {
   margin-left: calc(calc(var(--layout-space) * var(--layout-gutter)) * -1);
   height: 0;

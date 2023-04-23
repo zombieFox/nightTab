@@ -14,6 +14,7 @@ import { Edge } from '../../edge';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_radio } from '../../control/radio';
+import { Control_radioGrid } from '../../control/radioGrid';
 import { Control_checkbox } from '../../control/checkbox';
 import { Control_slider } from '../../control/slider';
 
@@ -28,6 +29,7 @@ bookmarkSetting.control = {
   general: {},
   style: {},
   orientation: {},
+  alignment: {},
   sort: {}
 };
 
@@ -43,6 +45,7 @@ bookmarkSetting.disable = () => {
     bookmarkSetting.control.style.enable();
     bookmarkSetting.control.orientation.orientationElement.enable();
     bookmarkSetting.control.orientation.orientationHelper.enable();
+    bookmarkSetting.control.alignment.justify.enable();
     bookmarkSetting.control.sort.letter.enable();
     bookmarkSetting.control.sort.icon.enable();
     bookmarkSetting.control.sort.name.enable();
@@ -56,6 +59,7 @@ bookmarkSetting.disable = () => {
     bookmarkSetting.control.style.disable();
     bookmarkSetting.control.orientation.orientationElement.disable();
     bookmarkSetting.control.orientation.orientationHelper.disable();
+    bookmarkSetting.control.alignment.justify.disable();
     bookmarkSetting.control.sort.letter.disable();
     bookmarkSetting.control.sort.icon.disable();
     bookmarkSetting.control.sort.name.disable();
@@ -337,6 +341,32 @@ bookmarkSetting.orientation = (parent) => {
     ])
   );
 
+};
+
+bookmarkSetting.alignment = (parent) => {
+
+  bookmarkSetting.control.alignment.justify = new Control_radioGrid({
+    object: state.get.current(),
+    radioGroup: [
+      { id: 'bookmark-area-justify-left', labelText: message.get('menuContentBookmarkAlignmentJustifyLeft'), value: 'left', position: 1 },
+      { id: 'bookmark-area-justify-center', labelText: message.get('menuContentBookmarkAlignmentJustifyCenter'), value: 'center', position: 2 },
+      { id: 'bookmark-area-justify-right', labelText: message.get('menuContentBookmarkAlignmentJustifyRight'), value: 'right', position: 3 }
+    ],
+    label: message.get('menuContentBookmarkAlignmentJustifyLabel'),
+    groupName: 'bookmark-area-justify',
+    path: 'bookmark.area.justify',
+    gridSize: '3x1',
+    action: () => {
+      applyCSSClass('bookmark.area.justify');
+      data.save();
+    }
+  });
+
+  parent.appendChild(
+    node('div', [
+      bookmarkSetting.control.alignment.justify.wrap(),
+    ])
+  );
 };
 
 bookmarkSetting.sort = (parent) => {

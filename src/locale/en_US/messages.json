@@ -163,6 +163,10 @@
     "message": "Orientation",
     "description": "Label for the settings menu navigation."
   },
+  "menuNavBookmarkSubNavAlignment": {
+    "message": "Alignment",
+    "description": "Label for the settings menu alignment."
+  },
   "menuNavBookmarkSubNavSort": {
     "message": "Sort",
     "description": "Label for the settings menu navigation."
@@ -1570,6 +1574,22 @@
   "menuContentBookmarkOrientationHelperPara1": {
     "message": "Display the URL and Controls either at the top or bottom of a Bookmark Tile.",
     "description": "Helper text for bookmark orientation."
+  },
+   "menuContentBookmarkAlignmentJustifyLabel": {
+    "message": "Bookmark area alignment",
+    "description": "Justify bookmarks."
+  },
+  "menuContentBookmarkAlignmentJustifyLeft": {
+    "message": "Left",
+    "description": "Justify bookmarks left."
+  },
+  "menuContentBookmarkAlignmentJustifyCenter": {
+    "message": "Center",
+    "description": "Justify bookmarks centre."
+  },
+  "menuContentBookmarkAlignmentJustifyRight": {
+    "message": "Right",
+    "description": "Justify bookmarks right."
   },
   "menuContentBookmarkSortLetter": {
     "message": "By letter",
