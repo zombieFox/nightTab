@@ -547,6 +547,10 @@ const BookmarkTile = function({
       this.control.enable();
     } else {
       this.control.disable();
+
+      this.element.content.link.addEventListener('click', () => {
+        this.element.content.link.blur();
+      });
     }
 
   };
