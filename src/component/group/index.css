@@ -113,6 +113,11 @@
   justify-content: flex-end;
 }
 
+.is-bookmark-area-justify-center .bookmark,
+.is-bookmark-area-justify-right .bookmark {
+  width: var(--group-cell-width)
+}
+
 .group-control {
   margin-left: calc(calc(var(--layout-space) * var(--layout-gutter)) * -1);
   height: 0;
