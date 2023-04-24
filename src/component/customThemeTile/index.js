@@ -86,7 +86,7 @@ export const CustomThemeTile = function({
 
         theme.font.ui.load();
 
-        theme.background.image.render();
+        theme.background.image.load();
 
         theme.background.video.clear();
 

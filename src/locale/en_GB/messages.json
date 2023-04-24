@@ -707,6 +707,14 @@
     "message": "Shade start",
     "description": "Range for image vignette right."
   },
+  "menuContentThemeBackgroundImageRefresh": {
+    "message": "Refresh",
+    "description": "Range background image refresh."
+  },
+  "menuContentThemeBackgroundImageRefreshHelperPara1": {
+    "message": "Load a random background image upon every refresh (in minutes).",
+    "description": "Helper text for background image refresh."
+  },
   "menuContentThemeBackgroundVideoAlertPara1": {
     "message": "YouTube page URLs can not be used.",
     "description": "Alert for video background."
