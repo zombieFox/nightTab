@@ -111,6 +111,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.image.opacity.disable();
       themeSetting.control.background.image.vignette.opacity.disable();
       themeSetting.control.background.image.vignette.range.disable();
+      themeSetting.control.background.image.refresh.disable();
       themeSetting.control.background.video.url.disable();
       themeSetting.control.background.video.urlHelper.disable();
       themeSetting.control.background.video.blur.disable();
@@ -136,6 +137,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.image.opacity.disable();
       themeSetting.control.background.image.vignette.opacity.disable();
       themeSetting.control.background.image.vignette.range.disable();
+      themeSetting.control.background.image.refresh.disable();
       themeSetting.control.background.video.url.disable();
       themeSetting.control.background.video.urlHelper.disable();
       themeSetting.control.background.video.blur.disable();
@@ -161,6 +163,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.image.opacity.disable();
       themeSetting.control.background.image.vignette.opacity.disable();
       themeSetting.control.background.image.vignette.range.disable();
+      themeSetting.control.background.image.refresh.disable();
       themeSetting.control.background.video.url.disable();
       themeSetting.control.background.video.urlHelper.disable();
       themeSetting.control.background.video.blur.disable();
@@ -186,6 +189,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.image.opacity.enable();
       themeSetting.control.background.image.vignette.opacity.enable();
       themeSetting.control.background.image.vignette.range.enable();
+      themeSetting.control.background.image.refresh.enable();
       themeSetting.control.background.video.url.disable();
       themeSetting.control.background.video.urlHelper.disable();
       themeSetting.control.background.video.blur.disable();
@@ -211,6 +215,7 @@ themeSetting.disable = () => {
       themeSetting.control.background.image.opacity.disable();
       themeSetting.control.background.image.vignette.opacity.disable();
       themeSetting.control.background.image.vignette.range.disable();
+      themeSetting.control.background.image.refresh.disable();
       themeSetting.control.background.video.url.enable();
       themeSetting.control.background.video.urlHelper.enable();
       themeSetting.control.background.video.blur.enable();
@@ -1517,7 +1522,27 @@ themeSetting.background = (parent) => {
             }
           }
         })
-      }
+      },
+      refresh: new Control_sliderSlim({
+        object: state.get.current(),
+        path: 'theme.background.image.refresh',
+        id: 'theme-background-image-refresh',
+        labelText: message.get('menuContentThemeBackgroundImageRefresh'),
+        value: state.get.current().theme.background.image.refresh,
+        defaultValue: state.get.default().theme.background.image.refresh,
+        min: state.get.minMax().theme.background.image.refresh.min,
+        max: state.get.minMax().theme.background.image.refresh.max,
+        action: () => {
+          theme.background.image.delay();
+          applyCSSVar('theme.background.image.refresh');
+          data.save();
+        }
+      }),
+      refreshHelper: new Control_helperText({
+        text: [
+          message.get('menuContentThemeBackgroundImageRefreshHelperPara1')
+        ]
+      })
     },
     video: {
       alert: new Alert({
@@ -1695,7 +1720,9 @@ themeSetting.background = (parent) => {
           ]
         })
       ]
-    })
+    }),
+    themeSetting.control.background.image.refresh.wrap(),
+    themeSetting.control.background.image.refreshHelper.wrap()
   ]);
 
   const themeBackgroundVideoArea = node('div', [

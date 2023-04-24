@@ -383,6 +383,30 @@ theme.background.area = {
 };
 
 theme.background.image = {
+  timer: false,
+  delay: () => {
+
+    if (theme.background.image.timer) {
+      clearTimeout(theme.background.image.timer);
+      
+      theme.background.image.timer = false;
+    }
+    
+    const timeout = state.get.current().theme.background.image.refresh;
+
+    if (timeout) {
+      theme.background.image.timer = setInterval(() => {
+        theme.background.image.render();
+      }, timeout * 1000 * 60);
+    }
+
+  },
+  load: () => {
+
+    theme.background.image.delay();
+    theme.background.image.render();
+
+  },
   render: () => {
 
     const html = document.querySelector('html');
@@ -448,7 +472,7 @@ theme.init = () => {
   theme.font.display.load();
   theme.font.ui.load();
   theme.background.area.render();
-  theme.background.image.render();
+  theme.background.image.load();
   theme.background.video.render();
   applyCSSVar([
     'theme.accent.rgb.r',
