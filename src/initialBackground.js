@@ -13,3 +13,13 @@ if (localStorage.getItem('nightTabStyle')) {
   }
   document.querySelector('head').appendChild(style);
 }
+
+// check if service worker is available
+if ('serviceWorker' in navigator) {
+  // register service worker
+  navigator.serviceWorker.register('./service_worker.js').then(() => {
+    console.log('serviceWorker registered');
+  }).catch(error => {
+    console.log('serviceWorker registration failed', error);
+  });
+}

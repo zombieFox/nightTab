@@ -1,38 +1,36 @@
-export const version = {};
+export const version = {
+  number: '7.5.0',
+  name: 'Delightful Komodo Dragon',
+  compare: (a, b) => {
 
-version.number = '7.5.0';
+    let pa = a.split('.');
 
-version.name = 'Delightful Komodo Dragon';
+    let pb = b.split('.');
 
-version.compare = (a, b) => {
+    for (let i = 0; i < 3; i++) {
 
-  let pa = a.split('.');
+      let na = Number(pa[i]);
 
-  let pb = b.split('.');
+      let nb = Number(pb[i]);
 
-  for (let i = 0; i < 3; i++) {
+      if (na > nb) {
+        return 1;
+      }
 
-    let na = Number(pa[i]);
+      if (nb > na) {
+        return -1;
+      }
 
-    let nb = Number(pb[i]);
+      if (!isNaN(na) && isNaN(nb)) {
+        return 1;
+      }
 
-    if (na > nb) {
-      return 1;
+      if (isNaN(na) && !isNaN(nb)) {
+        return -1;
+      }
+
     }
 
-    if (nb > na) {
-      return -1;
-    }
-
-    if (!isNaN(na) && isNaN(nb)) {
-      return 1;
-    }
-
-    if (isNaN(na) && !isNaN(nb)) {
-      return -1;
-    }
-
+    return 0;
   }
-
-  return 0;
 };
