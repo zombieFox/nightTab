@@ -1,5 +1,5 @@
 :root {
-  --bookmark-form-space: calc((var(--form-space) / 4) * 1em);
+  --bookmark-form-space: calc((var(--form-space) / 4) * 1.25em);
 }
 
 .bookmark-form {
@@ -17,12 +17,10 @@
 }
 
 .bookmark-form-description {
-  margin-bottom: 3em;
+  margin-bottom: var(--bookmark-form-space);
 }
 
-.bookmark-form-main {
-  padding-bottom: var(--bookmark-form-space);
-}
+.bookmark-form-main {}
 
 .bookmark-form-aside {
   display: none;

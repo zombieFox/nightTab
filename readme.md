@@ -8,6 +8,7 @@ A neutral new tab page accented with a chosen colour. Customise the layout, styl
 
 # Support
 
+- [Project goals](https://github.com/zombieFox/nightTab/wiki/Project-goals)
 - [Applying bookmark settings to all](https://github.com/zombieFox/nightTab/wiki/Applying-bookmark-settings-to-all)
 - [Browser support](https://github.com/zombieFox/nightTab/wiki/Browser-support)
 - [Cookies and cache](https://github.com/zombieFox/nightTab/wiki/Cookies-and-cache)

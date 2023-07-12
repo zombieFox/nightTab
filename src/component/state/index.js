@@ -3,6 +3,7 @@ const state = {};
 state.current = {};
 
 state.default = {
+  language: 'system',
   layout: {
     area: {
       header: { width: 100, justify: 'center' },
@@ -19,7 +20,7 @@ state.default = {
     scrollbar: 'auto',
     title: '',
     favicon: '',
-    overscroll: false
+    overscroll: { active: false, unblur: false }
   },
   header: {
     item: { justify: 'left' },
@@ -269,6 +270,7 @@ state.set = {
   restore: {
     setup: (dataToRestore) => {
 
+      state.current.language = dataToRestore.state.language;
       state.current.layout = dataToRestore.state.layout;
       state.current.header = dataToRestore.state.header;
       state.current.bookmark = dataToRestore.state.bookmark;

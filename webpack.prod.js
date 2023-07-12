@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const version = require('./src/manifest.json').version;
-const name = require('./src/manifest.json').name;
+const name = require('./src/locale/en_GB/messages.json').appName.message;
 
 module.exports = merge(common, {
   mode: 'production',

@@ -1,6 +1,7 @@
+import { message } from '../../message';
+
 import { data } from '../../data';
 import { menu } from '../../menu';
-import { APP_NAME } from '../../../constant';
 
 import * as form from '../../form';
 
@@ -28,7 +29,7 @@ dataSetting.restore = (parent) => {
     id: 'restore-data',
     type: 'file',
     inputHide: true,
-    labelText: 'Import from file',
+    labelText: message.get('menuContentDataRestoreFile'),
     inputButtonStyle: ['line'],
     action: () => {
       data.import.file({
@@ -40,7 +41,7 @@ dataSetting.restore = (parent) => {
   });
 
   dataSetting.control.restore.paste = new Button({
-    text: 'Import from clipboard',
+    text: message.get('menuContentDataRestoreClipboard'),
     style: ['line'],
     func: () => {
       data.import.paste({
@@ -50,7 +51,7 @@ dataSetting.restore = (parent) => {
   });
 
   dataSetting.control.restore.restoreHelper = new Control_helperText({
-    text: ['Restore a previously exported ' + APP_NAME + ' backup.']
+    text: [message.get('menuContentDataRestoreHelperPara1')]
   });
 
   dataSetting.control.restore.feedback = form.feedback();
@@ -58,7 +59,7 @@ dataSetting.restore = (parent) => {
   data.feedback.empty.render(dataSetting.control.restore.feedback);
 
   dataSetting.control.restore.drop = new DropFile({
-    heading: 'Or drop a ' + APP_NAME + ' backup file here.',
+    heading: message.get('menuContentDataRestoreDrop'),
     dropAaction: () => {
       data.import.drop({
         fileList: dataSetting.control.restore.drop.files,
@@ -88,7 +89,7 @@ dataSetting.restore = (parent) => {
 dataSetting.backup = (parent) => {
 
   dataSetting.control.backup.export = new Button({
-    text: 'Export data',
+    text: message.get('menuContentDataBackupFile'),
     style: ['line'],
     func: () => {
       data.export();
@@ -96,7 +97,7 @@ dataSetting.backup = (parent) => {
   });
 
   dataSetting.control.backup.copy = new Button({
-    text: 'Copy to clipboard',
+    text: message.get('menuContentDataBackupClipboard'),
     style: ['line'],
     func: () => {
       navigator.clipboard.writeText(JSON.stringify(data.load()));
@@ -104,7 +105,10 @@ dataSetting.backup = (parent) => {
   });
 
   dataSetting.control.backup.exportHelper = new Control_helperText({
-    text: ['Download a backup of your ' + APP_NAME + ' Bookmarks and Settings.', 'This file can later be imported on this or another deivce.']
+    text: [
+      message.get('menuContentDataBackupHelperPara1'),
+      message.get('menuContentDataBackupHelperPara2')
+    ]
   });
 
   parent.appendChild(
@@ -131,7 +135,7 @@ dataSetting.backup = (parent) => {
 dataSetting.clear = (parent) => {
 
   dataSetting.control.clear.all = new Button({
-    text: 'Clear all data',
+    text: message.get('menuContentDataClearAll'),
     style: ['line'],
     func: () => {
       menu.close();
@@ -140,7 +144,7 @@ dataSetting.clear = (parent) => {
   });
 
   dataSetting.control.clear.partial = new Button({
-    text: 'Clear all except bookmarks',
+    text: message.get('menuContentDataClearPartial'),
     style: ['line'],
     func: () => {
       menu.close();
@@ -148,16 +152,24 @@ dataSetting.clear = (parent) => {
     }
   });
 
+  dataSetting.control.clear.link = new Link({
+    text: message.get('menuContentDataClearAlertLink'),
+    href: '#menu-content-item-backup'
+  });
+
   dataSetting.control.clear.alert = new Alert({
     iconName: 'warning',
     children: [
-      node('p:You will lose Bookmarks by clearing all data.|class:small'),
-      node(`p:Have you ${(new Link({ text: 'backed up your data?', href: '#menu-content-item-backup' })).link().outerHTML}|class:small`)
+      node(`p:${message.get('menuContentDataClearAlertPara')}|class:small`),
+      node('p|class:small', dataSetting.control.clear.link.link())
     ]
   });
 
   dataSetting.control.clear.helper = new Control_helperText({
-    text: ['Clear all data to reset ' + APP_NAME + ' to the default state.', 'Alternatively, it is possible to wipe all settings but keep the current Bookmarks and Groups.']
+    text: [
+      message.get('menuContentDataClearHelperPara1'),
+      message.get('menuContentDataClearHelperPara2')
+    ]
   });
 
   parent.appendChild(

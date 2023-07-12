@@ -34,7 +34,7 @@ layout.area = {
 
       let breakpoint;
 
-      entries.forEach(function (entry) {
+      entries.forEach(function(entry) {
 
         if (entry.contentRect.width <= size.sm) {
           breakpoint = 'xs';
@@ -174,6 +174,60 @@ layout.breakpoint = {
   }
 };
 
+layout.overscroll = {
+  bind: () => {
+
+    if (state.get.current().layout.overscroll.unblur) {
+
+      window.addEventListener('scroll', layout.overscroll.unblur);
+
+    } else {
+
+      window.removeEventListener('scroll', layout.overscroll.unblur);
+
+    }
+
+  },
+  unblur: () => {
+
+    const html = document.querySelector('html');
+
+    const body = document.querySelector('body');
+
+    const overscrollHeight = parseInt(window.innerHeight * (parseFloat(getComputedStyle(html).getPropertyValue('--layout-overscroll'), 10) / 100), 10);
+
+    const bottomOfBody = (window.scrollY + window.innerHeight) - body.offsetHeight; // height of body not including the margin when scroll past end is true
+
+    if (body.offsetHeight < (window.scrollY + window.innerHeight)) {
+
+      switch (state.get.current().theme.background.type) {
+
+        case 'image':
+
+          html.style.setProperty('--theme-background-image-blur', parseInt(state.get.current().theme.background.image.blur - ((parseInt(((bottomOfBody) / overscrollHeight) * 100, 10) / 100) * state.get.current().theme.background.image.blur), 10));
+
+          break;
+
+        case 'video':
+
+          html.style.setProperty('--theme-background-video-blur', parseInt(state.get.current().theme.background.video.blur - ((parseInt(((bottomOfBody) / overscrollHeight) * 100, 10) / 100) * state.get.current().theme.background.video.blur), 10));
+
+          break;
+
+      }
+
+    } else {
+
+      applyCSSVar([
+        'theme.background.image.blur',
+        'theme.background.video.blur'
+      ]);
+
+    }
+
+  }
+};
+
 layout.title = {
   render: () => {
 
@@ -228,11 +282,12 @@ layout.init = () => {
     'layout.scrollbar'
   ]);
   applyCSSState([
-    'layout.overscroll'
+    'layout.overscroll.active'
   ]);
   layout.area.render();
   layout.title.render();
   layout.favicon.render();
+  layout.overscroll.bind();
 };
 
 export { layout };

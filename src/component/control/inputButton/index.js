@@ -1,6 +1,4 @@
-
 import * as form from '../../form';
-
 
 import { get } from '../../../utility/get';
 import { set } from '../../../utility/set';

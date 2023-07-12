@@ -1,3 +1,5 @@
+import { message } from '../message';
+
 import { bookmark } from '../bookmark';
 
 import * as form from '../form';
@@ -58,26 +60,26 @@ export const GroupForm = function({
 
   this.control.group = {
     name: {
+      show: new Control_checkbox({
+        object: groupData.group,
+        path: 'name.show',
+        id: 'name-show',
+        labelText: message.get('groupFormNameShow'),
+        action: () => {
+          this.disable();
+        }
+      }),
       text: new Control_text({
         object: groupData.group,
         path: 'name.text',
         id: 'name-text',
         value: groupData.group.name.text,
-        placeholder: 'Example group',
-        labelText: 'Group name',
+        placeholder: message.get('groupFormNameTextPlaceholder'),
+        labelText: message.get('groupFormNameTextLabel'),
         srOnly: true
       }),
-      show: new Control_checkbox({
-        object: groupData.group,
-        path: 'name.show',
-        id: 'name-show',
-        labelText: 'Show Group name',
-        action: () => {
-          this.disable();
-        }
-      }),
       random: new Button({
-        text: 'Random Group name',
+        text: message.get('groupFormNameRandom'),
         style: ['line'],
         func: () => {
           groupData.group.name.text = randomString({ adjectivesCount: randomNumber(1, 3) });
@@ -90,8 +92,8 @@ export const GroupForm = function({
         object: groupData.group,
         path: 'toolbar.collapse.show',
         id: 'toolbar-collapse-show',
-        labelText: 'Show Collapse',
-        description: 'The Collapse button will show or hide the Bookmaks in this Group.'
+        labelText: message.get('groupFormCollapseShowLabel'),
+        description: message.get('groupFormCollapseShowDescription')
       })
     },
     openAll: {
@@ -99,8 +101,8 @@ export const GroupForm = function({
         object: groupData.group,
         path: 'toolbar.openAll.show',
         id: 'toolbar-openAll-show',
-        labelText: 'Show Open all',
-        description: 'Open all button will appear if there is at least one Bookmark in this Group.'
+        labelText: message.get('groupFormOpenAllShowLabel'),
+        description: message.get('groupFormOpenAllShowDescription')
       })
     }
   };
@@ -109,7 +111,7 @@ export const GroupForm = function({
     object: groupData,
     path: 'position.destination',
     id: 'position-destination',
-    labelText: 'Position',
+    labelText: message.get('groupFormDestination'),
     option: this.selectOption.group(),
     selected: groupData.position.destination
   });
@@ -139,8 +141,8 @@ export const GroupForm = function({
           form.wrap({
             children: [
               node('div|class:group-form-description', [
-                node('h2:Name'),
-                node('p:Display a Name above this Group.')
+                node(`h2:${message.get('groupFormSectionNameHeading')}`),
+                node(`p:${message.get('groupFormSectionNameDescription')}`)
               ])
             ]
           }),
@@ -177,8 +179,8 @@ export const GroupForm = function({
           form.wrap({
             children: [
               node('div|class:group-form-description', [
-                node('h2:Toolbar'),
-                node('p:Display controls to open all or show/hide the Bookmarks in this Group.')
+                node(`h2:${message.get('groupFormSectionToolbarHeading')}`),
+                node(`p:${message.get('groupFormSectionToolbarDescription')}`)
               ])
             ]
           }),
@@ -206,8 +208,8 @@ export const GroupForm = function({
           form.wrap({
             children: [
               node('div|class:group-form-description', [
-                node('h2:Ordering'),
-                node('p:The position of this Group.')
+                node(`h2:${message.get('groupFormSectionOrderingHeading')}`),
+                node(`p:${message.get('groupFormSectionOrderingDescription')}`)
               ])
             ]
           }),

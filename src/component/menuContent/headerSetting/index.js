@@ -1,15 +1,15 @@
+import { message } from '../../message';
+
 import { state } from '../../state';
 import { data } from '../../data';
 import { header } from '../../header';
 import { layout } from '../../layout';
 import { searchEnginePreset } from '../../searchEnginePreset';
-import { APP_NAME } from '../../../constant';
 
 import * as form from '../../form';
 
 import { Collapse } from '../../collapse';
 import { Edge } from '../../edge';
-import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_radio } from '../../control/radio';
@@ -304,12 +304,12 @@ headerSetting.disable = () => {
 
   if ((
     state.get.current().header.clock.second.show ||
-    state.get.current().header.clock.minute.show ||
-    state.get.current().header.clock.hour.show ||
-    state.get.current().header.date.day.show ||
-    state.get.current().header.date.date.show ||
-    state.get.current().header.date.month.show ||
-    state.get.current().header.date.year.show
+      state.get.current().header.clock.minute.show ||
+      state.get.current().header.clock.hour.show ||
+      state.get.current().header.date.day.show ||
+      state.get.current().header.date.date.show ||
+      state.get.current().header.date.month.show ||
+      state.get.current().header.date.year.show
   ) &&
     state.get.current().header.transitional.show) {
     headerSetting.control.transitional.type.enable();
@@ -402,11 +402,11 @@ headerSetting.alignment = (parent) => {
   headerSetting.alignment.alignment = new Control_radioGrid({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-item-justify-left', labelText: 'Left', value: 'left', position: 1 },
-      { id: 'header-item-justify-center', labelText: 'Center', value: 'center', position: 2 },
-      { id: 'header-item-justify-right', labelText: 'Right', value: 'right', position: 3 }
+      { id: 'header-item-justify-left', labelText: message.get('menuContentHeaderAlignmentJustifyLeft'), value: 'left', position: 1 },
+      { id: 'header-item-justify-center', labelText: message.get('menuContentHeaderAlignmentJustifyCenter'), value: 'center', position: 2 },
+      { id: 'header-item-justify-right', labelText: message.get('menuContentHeaderAlignmentJustifyRight'), value: 'right', position: 3 }
     ],
-    label: 'Header item alignment',
+    label: message.get('menuContentHeaderAlignmentJustifyLabel'),
     groupName: 'header-item-justify',
     path: 'header.item.justify',
     gridSize: '3x1',
@@ -418,7 +418,7 @@ headerSetting.alignment = (parent) => {
 
   headerSetting.alignment.alignmentHelper = new Control_helperText({
     complexText: true,
-    text: [`Effects may not be visible if the ${(new Link({ text: 'Search box size', href: '#menu-content-item-search' })).link().outerHTML} size is set to Auto and grows to fill available space.`]
+    text: [message.get('menuContentHeaderAlignmentHelperPara1')]
   });
 
   parent.appendChild(
@@ -438,8 +438,8 @@ headerSetting.greeting = (parent) => {
     object: state.get.current(),
     path: 'header.greeting.show',
     id: 'header-greeting-show',
-    labelText: 'Show Greeting',
-    action: function () {
+    labelText: message.get('menuContentHeaderGreetingShow'),
+    action: () => {
       header.item.mod.order();
       header.item.clear();
       header.item.render();
@@ -459,7 +459,7 @@ headerSetting.greeting = (parent) => {
     object: state.get.current(),
     path: 'header.greeting.size',
     id: 'header-greeting-size',
-    labelText: 'Size',
+    labelText: message.get('menuContentHeaderGreetingSize'),
     value: state.get.current().header.greeting.size,
     defaultValue: state.get.default().header.greeting.size,
     min: state.get.minMax().header.greeting.size.min,
@@ -481,9 +481,9 @@ headerSetting.greeting = (parent) => {
     object: state.get.current(),
     path: 'header.greeting.newLine',
     id: 'header-greeting-newLine',
-    labelText: 'New line',
-    description: 'Force on to a new line and seperate from other Header items.',
-    action: function () {
+    labelText: message.get('menuContentHeaderGreetingNewLineLabel'),
+    description: message.get('menuContentHeaderGreetingNewLineDescription'),
+    action: () => {
       applyCSSState('header.greeting.newLine');
       data.save();
     }
@@ -491,13 +491,13 @@ headerSetting.greeting = (parent) => {
 
   headerSetting.control.greeting.type = new Control_radio({
     object: state.get.current(),
-    label: 'Wording',
+    label: message.get('menuContentHeaderGreetingTypeLabel'),
     radioGroup: [
-      { id: 'header-greeting-type-good', labelText: '"Good morning..."', value: 'good' },
-      { id: 'header-greeting-type-hello', labelText: '"Hello..."', value: 'hello' },
-      { id: 'header-greeting-type-hi', labelText: '"Hi..."', value: 'hi' },
-      { id: 'header-greeting-type-none', labelText: 'None', description: 'Useful for just displaying your name.', value: 'none' },
-      { id: 'header-greeting-type-custom', labelText: 'Custom', description: ['Use your own greeting.', 'Defaults to "Good morning..." if left blank.'], value: 'custom' }
+      { id: 'header-greeting-type-good', labelText: message.get('menuContentHeaderGreetingTypeGood'), value: 'good' },
+      { id: 'header-greeting-type-hello', labelText: message.get('menuContentHeaderGreetingTypeHello'), value: 'hello' },
+      { id: 'header-greeting-type-hi', labelText: message.get('menuContentHeaderGreetingTypeHi'), value: 'hi' },
+      { id: 'header-greeting-type-none', labelText: message.get('menuContentHeaderGreetingTypeNoneLabel'), description: message.get('menuContentHeaderGreetingTypeNoneDescription'), value: 'none' },
+      { id: 'header-greeting-type-custom', labelText: message.get('menuContentHeaderGreetingTypeCustomLabel'), description: [message.get('menuContentHeaderGreetingTypeCustomDescriptionPara1'), message.get('menuContentHeaderGreetingTypeCustomDescriptionPara2')], value: 'custom' }
     ],
     groupName: 'header-greeting-type',
     path: 'header.greeting.type',
@@ -516,8 +516,8 @@ headerSetting.greeting = (parent) => {
     path: 'header.greeting.custom',
     id: 'header-greeting-custom',
     value: state.get.current().header.greeting.custom,
-    placeholder: 'Howdy',
-    labelText: 'Custom greeting text',
+    placeholder: message.get('menuContentHeaderGreetingCustomPlaceholder'),
+    labelText: message.get('menuContentHeaderGreetingCustomLabel'),
     srOnly: true,
     action: () => {
       header.element.greeting.update();
@@ -543,8 +543,8 @@ headerSetting.greeting = (parent) => {
     path: 'header.greeting.name',
     id: 'header-greeting-name',
     value: state.get.current().header.greeting.name,
-    placeholder: 'Nickname, alias or superhero name',
-    labelText: 'Name',
+    placeholder: message.get('menuContentHeaderGreetingNamePlaceholder'),
+    labelText: message.get('menuContentHeaderGreetingNameLabel'),
     action: () => {
       header.element.greeting.update();
       data.save();
@@ -603,7 +603,7 @@ headerSetting.transitional = (parent) => {
     object: state.get.current(),
     path: 'header.transitional.show',
     id: 'header-transitional-show',
-    labelText: 'Show Transitional words',
+    labelText: message.get('menuContentHeaderTransitionalShowLabel'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -621,14 +621,30 @@ headerSetting.transitional = (parent) => {
   });
 
   headerSetting.control.transitional.showHelper = new Control_helperText({
-    text: ['Only available when Date or Time is shown.']
+    text: [message.get('menuContentHeaderTransitionalShowHelperPara1')]
+  });
+
+  headerSetting.control.transitional.type = new Control_radio({
+    object: state.get.current(),
+    label: message.get('menuContentHeaderTransitionalTypeLabel'),
+    radioGroup: [
+      { id: 'header-transitional-type-time-and-date', labelText: message.get('menuContentHeaderTransitionalTypeTimeAndDate'), value: 'time-and-date' },
+      { id: 'header-transitional-type-its', labelText: message.get('menuContentHeaderTransitionalTypeIts'), value: 'its' }
+    ],
+    groupName: 'header-transitional-type',
+    path: 'header.transitional.type',
+    action: () => {
+      header.element.transitional.update();
+      headerSetting.disable();
+      data.save();
+    }
   });
 
   headerSetting.control.transitional.size = new Control_sliderSlim({
     object: state.get.current(),
     path: 'header.transitional.size',
     id: 'header-transitional-size',
-    labelText: 'Size',
+    labelText: message.get('menuContentHeaderTransitionalSize'),
     value: state.get.current().header.transitional.size,
     defaultValue: state.get.default().header.transitional.size,
     min: state.get.minMax().header.transitional.size.min,
@@ -650,26 +666,10 @@ headerSetting.transitional = (parent) => {
     object: state.get.current(),
     path: 'header.transitional.newLine',
     id: 'header-transitional-newLine',
-    labelText: 'New line',
-    description: 'Force on to a new line and seperate from other Header items.',
-    action: function () {
-      applyCSSState('header.transitional.newLine');
-      data.save();
-    }
-  });
-
-  headerSetting.control.transitional.type = new Control_radio({
-    object: state.get.current(),
-    label: 'Wording',
-    radioGroup: [
-      { id: 'header-transitional-type-time-and-date', labelText: '"The time and date is"', value: 'time-and-date' },
-      { id: 'header-transitional-type-its', labelText: '"It\'s"', value: 'its' }
-    ],
-    groupName: 'header-transitional-type',
-    path: 'header.transitional.type',
+    labelText: message.get('menuContentHeaderTransitionalNewLineLabel'),
+    description: message.get('menuContentHeaderTransitionalNewLineDescription'),
     action: () => {
-      header.element.transitional.update();
-      headerSetting.disable();
+      applyCSSState('header.transitional.newLine');
       data.save();
     }
   });
@@ -718,7 +718,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.hour.show',
     id: 'header-clock-hour-show',
-    labelText: 'Show hours',
+    labelText: message.get('menuContentHeaderClockHourShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -739,8 +739,8 @@ headerSetting.clock = (parent) => {
   headerSetting.control.clock.hour.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-clock-hour-display-number', labelText: 'As number', value: 'number' },
-      { id: 'header-clock-hour-display-word', labelText: 'As word', value: 'word' }
+      { id: 'header-clock-hour-display-number', labelText: message.get('menuContentHeaderClockHourDisplayNumber'), value: 'number' },
+      { id: 'header-clock-hour-display-word', labelText: message.get('menuContentHeaderClockHourDisplayWord'), value: 'word' }
     ],
     groupName: 'header-clock-hour-display',
     path: 'header.clock.hour.display',
@@ -768,7 +768,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.minute.show',
     id: 'header-clock-minute-show',
-    labelText: 'Show minutes',
+    labelText: message.get('menuContentHeaderClockMinuteShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -789,8 +789,8 @@ headerSetting.clock = (parent) => {
   headerSetting.control.clock.minute.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-clock-minute-display-number', labelText: 'As number', value: 'number' },
-      { id: 'header-clock-minute-display-word', labelText: 'As word', value: 'word' }
+      { id: 'header-clock-minute-display-number', labelText: message.get('menuContentHeaderClockMinuteDisplayNumber'), value: 'number' },
+      { id: 'header-clock-minute-display-word', labelText: message.get('menuContentHeaderClockMinuteDisplayWord'), value: 'word' }
     ],
     groupName: 'header-clock-minute-display',
     path: 'header.clock.minute.display',
@@ -818,7 +818,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.second.show',
     id: 'header-clock-second-show',
-    labelText: 'Show seconds',
+    labelText: message.get('menuContentHeaderClockSecondShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -839,8 +839,8 @@ headerSetting.clock = (parent) => {
   headerSetting.control.clock.second.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-clock-second-display-number', labelText: 'As number', value: 'number' },
-      { id: 'header-clock-second-display-word', labelText: 'As word', value: 'word' }
+      { id: 'header-clock-second-display-number', labelText: message.get('menuContentHeaderClockSecondDisplayNumber'), value: 'number' },
+      { id: 'header-clock-second-display-word', labelText: message.get('menuContentHeaderClockSecondDisplayWord'), value: 'word' }
     ],
     groupName: 'header-clock-second-display',
     path: 'header.clock.second.display',
@@ -862,13 +862,55 @@ headerSetting.clock = (parent) => {
     }]
   });
 
+  headerSetting.control.clock.separator = {};
+
+  headerSetting.control.clock.separator.show = new Control_checkbox({
+    object: state.get.current(),
+    path: 'header.clock.separator.show',
+    id: 'header-clock-separator-show',
+    labelText: message.get('menuContentHeaderClockSeparatorShow'),
+    action: () => {
+      header.element.clock.update();
+      headerSetting.control.clock.separator.collapse.update();
+      headerSetting.disable();
+      data.save();
+    }
+  });
+
+  headerSetting.control.clock.separator.text = new Control_textReset({
+    object: state.get.current(),
+    path: 'header.clock.separator.text',
+    id: 'header-clock-separator-text',
+    value: state.get.current().header.clock.separator.text,
+    defaultValue: state.get.default().header.clock.separator.text,
+    placeholder: message.get('menuContentHeaderClockSeparatorPlaceholder'),
+    labelText: message.get('menuContentHeaderClockSeparatorLabel'),
+    srOnly: true,
+    action: () => {
+      header.element.clock.update();
+      data.save();
+    }
+  });
+
+  headerSetting.control.clock.separator.area = node('div', [
+    headerSetting.control.clock.separator.text.wrap()
+  ]);
+
+  headerSetting.control.clock.separator.collapse = new Collapse({
+    type: 'checkbox',
+    checkbox: headerSetting.control.clock.separator.show,
+    target: [{
+      content: headerSetting.control.clock.separator.area
+    }]
+  });
+
   headerSetting.control.clock.hour24 = {
     show: new Control_checkbox({
       object: state.get.current(),
       path: 'header.clock.hour24.show',
       id: 'header-clock-hour24-show',
-      labelText: '24 hours',
-      action: function () {
+      labelText: message.get('menuContentHeaderClockHour24'),
+      action: () => {
         header.element.clock.update();
         headerSetting.disable();
         data.save();
@@ -881,8 +923,8 @@ headerSetting.clock = (parent) => {
       object: state.get.current(),
       path: 'header.clock.meridiem.show',
       id: 'header-clock-meridiem-show',
-      labelText: 'AM / PM',
-      action: function () {
+      labelText: message.get('menuContentHeaderClockMeridiem'),
+      action: () => {
         header.element.clock.update();
         data.save();
       }
@@ -893,7 +935,7 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.size',
     id: 'header-clock-size',
-    labelText: 'Size',
+    labelText: message.get('menuContentHeaderClockSize'),
     value: state.get.current().header.clock.size,
     defaultValue: state.get.default().header.clock.size,
     min: state.get.minMax().header.clock.size.min,
@@ -915,54 +957,12 @@ headerSetting.clock = (parent) => {
     object: state.get.current(),
     path: 'header.clock.newLine',
     id: 'header-clock-newLine',
-    labelText: 'New line',
-    description: 'Force on to a new line and seperate from other Header items.',
-    action: function () {
+    labelText: message.get('menuContentHeaderClockNewLineLabel'),
+    description: message.get('menuContentHeaderClockNewLineDescription'),
+    action: () => {
       applyCSSState('header.clock.newLine');
       data.save();
     }
-  });
-
-  headerSetting.control.clock.separator = {};
-
-  headerSetting.control.clock.separator.show = new Control_checkbox({
-    object: state.get.current(),
-    path: 'header.clock.separator.show',
-    id: 'header-clock-separator-show',
-    labelText: 'Show separator',
-    action: () => {
-      header.element.clock.update();
-      headerSetting.control.clock.separator.collapse.update();
-      headerSetting.disable();
-      data.save();
-    }
-  });
-
-  headerSetting.control.clock.separator.text = new Control_textReset({
-    object: state.get.current(),
-    path: 'header.clock.separator.text',
-    id: 'header-clock-separator-text',
-    value: state.get.current().header.clock.separator.text,
-    defaultValue: state.get.default().header.clock.separator.text,
-    placeholder: ':',
-    labelText: 'Separator character',
-    srOnly: true,
-    action: () => {
-      header.element.clock.update();
-      data.save();
-    }
-  });
-
-  headerSetting.control.clock.separator.area = node('div', [
-    headerSetting.control.clock.separator.text.wrap()
-  ]);
-
-  headerSetting.control.clock.separator.collapse = new Collapse({
-    type: 'checkbox',
-    checkbox: headerSetting.control.clock.separator.show,
-    target: [{
-      content: headerSetting.control.clock.separator.area
-    }]
   });
 
   headerSetting.control.clock.area = node('div', [
@@ -1050,7 +1050,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.day.show',
     id: 'header-date-day-show',
-    labelText: 'Show Day',
+    labelText: message.get('menuContentHeaderDateDayShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -1071,8 +1071,8 @@ headerSetting.date = (parent) => {
   headerSetting.control.date.day.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-date-day-display-number', labelText: 'As number', value: 'number' },
-      { id: 'header-date-day-display-word', labelText: 'As word', value: 'word' }
+      { id: 'header-date-day-display-number', labelText: message.get('menuContentHeaderDateDayDisplayNumber'), value: 'number' },
+      { id: 'header-date-day-display-word', labelText: message.get('menuContentHeaderDateDayDisplayWord'), value: 'word' }
     ],
     groupName: 'header-date-day-display',
     path: 'header.date.day.display',
@@ -1093,10 +1093,10 @@ headerSetting.date = (parent) => {
 
   headerSetting.control.date.day.weekStart = new Control_radio({
     object: state.get.current(),
-    label: 'Start of the week',
+    label: message.get('menuContentHeaderDateDayDisplayWeekStartLabel'),
     radioGroup: [
-      { id: 'header-date-day-week-start-monday', labelText: 'Monday', value: 'monday' },
-      { id: 'header-date-day-week-start-sunday', labelText: 'Sunday', value: 'sunday' }
+      { id: 'header-date-day-week-start-monday', labelText: message.get('menuContentHeaderDateDayDisplayWeekStartMonday'), value: 'monday' },
+      { id: 'header-date-day-week-start-sunday', labelText: message.get('menuContentHeaderDateDayDisplayWeekStartSunday'), value: 'sunday' }
     ],
     groupName: 'header-date-day-week-start',
     path: 'header.date.day.weekStart',
@@ -1116,10 +1116,10 @@ headerSetting.date = (parent) => {
 
   headerSetting.control.date.day.length = new Control_radio({
     object: state.get.current(),
-    label: 'Word length',
+    label: message.get('menuContentHeaderDateDayDisplayLengthLabel'),
     radioGroup: [
-      { id: 'header-date-day-length-long', labelText: 'Long', value: 'long' },
-      { id: 'header-date-day-length-short', labelText: 'Short', value: 'short' }
+      { id: 'header-date-day-length-long', labelText: message.get('menuContentHeaderDateDayDisplayLengthLong'), value: 'long' },
+      { id: 'header-date-day-length-short', labelText: message.get('menuContentHeaderDateDayDisplayLengthShort'), value: 'short' }
     ],
     groupName: 'header-date-day-length',
     path: 'header.date.day.length',
@@ -1158,7 +1158,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.date.show',
     id: 'header-date-date-show',
-    labelText: 'Show Date',
+    labelText: message.get('menuContentHeaderDateDateShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -1179,8 +1179,8 @@ headerSetting.date = (parent) => {
   headerSetting.control.date.date.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-date-date-display-number', labelText: 'As number', value: 'number' },
-      { id: 'header-date-date-display-word', labelText: 'As word', value: 'word' }
+      { id: 'header-date-date-display-number', labelText: message.get('menuContentHeaderDateDateDisplayNumber'), value: 'number' },
+      { id: 'header-date-date-display-word', labelText: message.get('menuContentHeaderDateDateDisplayWord'), value: 'word' }
     ],
     groupName: 'header-date-date-display',
     path: 'header.date.date.display',
@@ -1202,7 +1202,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.date.ordinal',
     id: 'header-date-date-ordinal',
-    labelText: 'Ordinal numbers',
+    labelText: message.get('menuContentHeaderDateDateDisplayOrdinal'),
     action: () => {
       header.element.date.update();
       data.save();
@@ -1228,7 +1228,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.month.show',
     id: 'header-date-month-show',
-    labelText: 'Show Month',
+    labelText: message.get('menuContentHeaderDateMonthShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -1249,8 +1249,8 @@ headerSetting.date = (parent) => {
   headerSetting.control.date.month.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-date-month-display-number', labelText: 'As number', value: 'number' },
-      { id: 'header-date-month-display-word', labelText: 'As word', value: 'word' }
+      { id: 'header-date-month-display-number', labelText: message.get('menuContentHeaderDateMonthDisplayNumber'), value: 'number' },
+      { id: 'header-date-month-display-word', labelText: message.get('menuContentHeaderDateMonthDisplayWord'), value: 'word' }
     ],
     groupName: 'header-date-month-display',
     path: 'header.date.month.display',
@@ -1271,10 +1271,10 @@ headerSetting.date = (parent) => {
 
   headerSetting.control.date.month.length = new Control_radio({
     object: state.get.current(),
-    label: 'Word length',
+    label: message.get('menuContentHeaderDateMonthDisplayLengthLabel'),
     radioGroup: [
-      { id: 'header-date-month-length-long', labelText: 'Long', value: 'long' },
-      { id: 'header-date-month-length-short', labelText: 'Short', value: 'short' }
+      { id: 'header-date-month-length-long', labelText: message.get('menuContentHeaderDateMonthDisplayLengthLong'), value: 'long' },
+      { id: 'header-date-month-length-short', labelText: message.get('menuContentHeaderDateMonthDisplayLengthShort'), value: 'short' }
     ],
     groupName: 'header-date-month-length',
     path: 'header.date.month.length',
@@ -1296,7 +1296,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.month.ordinal',
     id: 'header-date-month-ordinal',
-    labelText: 'Ordinal numbers',
+    labelText: message.get('menuContentHeaderDateMonthDisplayOrdinal'),
     action: () => {
       header.element.date.update();
       data.save();
@@ -1324,7 +1324,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.year.show',
     id: 'header-date-year-show',
-    labelText: 'Show Year',
+    labelText: message.get('menuContentHeaderDateYearShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -1345,8 +1345,8 @@ headerSetting.date = (parent) => {
   headerSetting.control.date.year.display = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'header-date-year-display-number', labelText: 'As number', value: 'number' },
-      { id: 'header-date-year-display-word', labelText: 'As word', value: 'word' }
+      { id: 'header-date-year-display-number', labelText: message.get('menuContentHeaderDateYearDisplayNumber'), value: 'number' },
+      { id: 'header-date-year-display-word', labelText: message.get('menuContentHeaderDateYearDisplayWord'), value: 'word' }
     ],
     groupName: 'header-date-year-display',
     path: 'header.date.year.display',
@@ -1382,7 +1382,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.separator.show',
     id: 'header-date-separator-show',
-    labelText: 'Show separator',
+    labelText: message.get('menuContentHeaderDateSeparatorShow'),
     action: () => {
       header.element.date.update();
       headerSetting.control.date.separator.collapse.update();
@@ -1402,8 +1402,8 @@ headerSetting.date = (parent) => {
     id: 'header-date-separator-text',
     value: state.get.current().header.date.separator.text,
     defaultValue: state.get.default().header.date.separator.text,
-    placeholder: ':',
-    labelText: 'Separator character',
+    placeholder: message.get('menuContentHeaderDateSeparatorPlaceholder'),
+    labelText: message.get('menuContentHeaderDateSeparatorLabel'),
     srOnly: true,
     action: () => {
       header.element.date.update();
@@ -1425,10 +1425,10 @@ headerSetting.date = (parent) => {
 
   headerSetting.control.date.format = new Control_radio({
     object: state.get.current(),
-    label: 'Format',
+    label: message.get('menuContentHeaderDateFormatLabel'),
     radioGroup: [
-      { id: 'header-date-format-date-month', labelText: 'Date / Month', value: 'date-month' },
-      { id: 'header-date-format-month-date', labelText: 'Month / Date', value: 'month-date' }
+      { id: 'header-date-format-date-month', labelText: message.get('menuContentHeaderDateFormatDateMonth'), value: 'date-month' },
+      { id: 'header-date-format-month-date', labelText: message.get('menuContentHeaderDateFormatMonthDate'), value: 'month-date' }
     ],
     groupName: 'header-date-format',
     path: 'header.date.format',
@@ -1442,7 +1442,7 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.size',
     id: 'header-date-size',
-    labelText: 'Size',
+    labelText: message.get('menuContentHeaderDateSize'),
     value: state.get.current().header.date.size,
     defaultValue: state.get.default().header.date.size,
     min: state.get.minMax().header.date.size.min,
@@ -1464,9 +1464,9 @@ headerSetting.date = (parent) => {
     object: state.get.current(),
     path: 'header.date.newLine',
     id: 'header-date-newLine',
-    labelText: 'New line',
-    description: 'Force on to a new line and seperate from other Header items.',
-    action: function () {
+    labelText: message.get('menuContentHeaderDateNewLineLabel'),
+    description: message.get('menuContentHeaderDateNewLineDescription'),
+    action: () => {
       applyCSSState('header.date.newLine');
       data.save();
     }
@@ -1532,7 +1532,7 @@ headerSetting.search = (parent) => {
     object: state.get.current(),
     path: 'header.search.show',
     id: 'header-search-show',
-    labelText: 'Show Search',
+    labelText: message.get('menuContentHeaderSearchShow'),
     action: () => {
       header.item.mod.order();
       header.item.clear();
@@ -1549,204 +1549,13 @@ headerSetting.search = (parent) => {
     }
   });
 
-  headerSetting.control.search.size = new Control_sliderSlim({
-    object: state.get.current(),
-    path: 'header.search.size',
-    id: 'header-search-size',
-    labelText: 'Size',
-    value: state.get.current().header.search.size,
-    defaultValue: state.get.default().header.search.size,
-    min: state.get.minMax().header.search.size.min,
-    max: state.get.minMax().header.search.size.max,
-    action: () => {
-      applyCSSVar('header.search.size');
-      headerSetting.edge.search.size.track();
-      data.save();
-    },
-    mouseDownAction: () => {
-      headerSetting.edge.search.size.show();
-    },
-    mouseUpAction: () => {
-      headerSetting.edge.search.size.hide();
-    }
-  });
-
-  headerSetting.control.search.newTab = new Control_checkbox({
-    object: state.get.current(),
-    path: 'header.search.newTab',
-    id: 'header-search-newTab',
-    labelText: 'Open Search results in a new tab',
-    action: function () {
-      header.item.mod.order();
-      header.item.clear();
-      header.item.render();
-      layout.area.assemble();
-      headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
-      headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
-      headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
-      headerSetting.edge.date.size.update.primary(header.element.date.date());
-      headerSetting.edge.search.size.update.primary(header.element.search.search());
-      data.save();
-    }
-  });
-
-  headerSetting.control.search.newLine = new Control_checkbox({
-    object: state.get.current(),
-    path: 'header.search.newLine',
-    id: 'header-search-newLine',
-    labelText: 'New line',
-    description: 'Force on to a new line and seperate from other Header items.',
-    action: function () {
-      applyCSSState('header.search.newLine');
-      data.save();
-    }
-  });
-
-  const searchEngineList = [];
-
-  for (let key in searchEnginePreset) {
-
-    searchEngineList.push({ id: `header-search-engine-selected-${key}`, labelText: searchEnginePreset[key].name, value: key });
-
-  }
-
-  searchEngineList.push({ id: 'header-search-engine-selected-custom', labelText: 'Custom', value: 'custom' });
-
-  headerSetting.control.search.engine = {
-    selected: new Control_radio({
-      object: state.get.current(),
-      label: 'Search engine',
-      radioGroup: searchEngineList,
-      groupName: 'header-search-engine-selected',
-      path: 'header.search.engine.selected',
-      action: () => {
-        header.item.mod.order();
-        header.item.clear();
-        header.item.render();
-        layout.area.assemble();
-        headerSetting.disable();
-        headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
-        headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
-        headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
-        headerSetting.edge.date.size.update.primary(header.element.date.date());
-        headerSetting.edge.search.size.update.primary(header.element.search.search());
-        headerSetting.control.search.engine.custom.collapse.update();
-        data.save();
-      }
-    }),
-    custom: {
-      name: new Control_text({
-        object: state.get.current(),
-        path: 'header.search.engine.custom.name',
-        id: 'header-search-engine-custom-name',
-        value: state.get.current().header.search.engine.custom.name,
-        placeholder: 'Search engine name',
-        labelText: 'Name',
-        action: () => {
-          header.item.mod.order();
-          header.item.clear();
-          header.item.render();
-          layout.area.assemble();
-          headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
-          headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
-          headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
-          headerSetting.edge.date.size.update.primary(header.element.date.date());
-          headerSetting.edge.search.size.update.primary(header.element.search.search());
-          data.save();
-        }
-      }),
-      url: new Control_text({
-        object: state.get.current(),
-        path: 'header.search.engine.custom.url',
-        id: 'header-search-engine-custom-url',
-        value: state.get.current().header.search.engine.custom.url,
-        placeholder: 'HTTPS://',
-        labelText: 'URL',
-        action: () => {
-          header.item.mod.order();
-          header.item.clear();
-          header.item.render();
-          layout.area.assemble();
-          headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
-          headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
-          headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
-          headerSetting.edge.date.size.update.primary(header.element.date.date());
-          headerSetting.edge.search.size.update.primary(header.element.search.search());
-          data.save();
-        }
-      }),
-      urlHelper: new Control_helperText({
-        text: ['Enter a web address with the search parameters, eg: "https://vimeo.com/search?q="', APP_NAME + ' will add the search term entered into the Search box at the end of the above URL.']
-      }),
-      queryName: new Control_text({
-        object: state.get.current(),
-        path: 'header.search.engine.custom.queryName',
-        id: 'header-search-engine-custom-queryName',
-        value: state.get.current().header.search.engine.custom.queryName,
-        placeholder: 'q',
-        labelText: 'Name attribute',
-        action: () => {
-          header.item.mod.order();
-          header.item.clear();
-          header.item.render();
-          layout.area.assemble();
-          headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
-          headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
-          headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
-          headerSetting.edge.date.size.update.primary(header.element.date.date());
-          headerSetting.edge.search.size.update.primary(header.element.search.search());
-          data.save();
-        }
-      }),
-      queryNameHelper: new Control_helperText({
-        text: ['Sets the name attribute on the Search input field.', 'This defines the name passed to the search engine when submitting. If not sure leave blank.']
-      })
-    }
-  };
-
-  headerSetting.control.search.engine.custom.area = node('div', [
-    headerSetting.control.search.engine.custom.name.wrap(),
-    headerSetting.control.search.engine.custom.url.wrap(),
-    headerSetting.control.search.engine.custom.urlHelper.wrap(),
-    headerSetting.control.search.engine.custom.queryName.wrap(),
-    headerSetting.control.search.engine.custom.queryNameHelper.wrap()
-  ]);
-
-  headerSetting.control.search.engine.custom.collapse = new Collapse({
-    type: 'radio',
-    radioGroup: headerSetting.control.search.engine.selected,
-    target: [{
-      id: headerSetting.control.search.engine.selected.radioSet[headerSetting.control.search.engine.selected.radioSet.length - 1].radio.value,
-      content: headerSetting.control.search.engine.custom.area
-    }]
-  });
-
-  headerSetting.control.search.text = {
-    justify: new Control_radioGrid({
-      object: state.get.current(),
-      radioGroup: [
-        { id: 'header-search-text-justify-left', labelText: 'Left', value: 'left', position: 1 },
-        { id: 'header-search-text-justify-center', labelText: 'Center', value: 'center', position: 2 },
-        { id: 'header-search-text-justify-right', labelText: 'Right', value: 'right', position: 3 }
-      ],
-      label: 'Search text alignment',
-      groupName: 'header-search-text-justify',
-      path: 'header.search.text.justify',
-      gridSize: '3x1',
-      action: () => {
-        applyCSSClass('header.search.text.justify');
-        data.save();
-      }
-    })
-  };
-
   headerSetting.control.search.width = {
     by: new Control_radio({
       object: state.get.current(),
-      label: 'Search box width',
+      label: message.get('menuContentHeaderSearchWidthLabel'),
       radioGroup: [
-        { id: 'header-search-width-by-auto', labelText: 'Auto width', description: 'Search box will grow to best fit available space.', value: 'auto' },
-        { id: 'header-search-width-by-custom', labelText: 'Custom width', description: 'Define how wide the Search box should be inside the Header Area.', value: 'custom' }
+        { id: 'header-search-width-by-auto', labelText: message.get('menuContentHeaderSearchWidthAutoLabel'), description: message.get('menuContentHeaderSearchWidthAutoDescription'), value: 'auto' },
+        { id: 'header-search-width-by-custom', labelText: message.get('menuContentHeaderSearchWidthCustomLabel'), description: message.get('menuContentHeaderSearchWidthCustomDescription'), value: 'custom' }
       ],
       groupName: 'header-search-width-by',
       path: 'header.search.width.by',
@@ -1761,7 +1570,7 @@ headerSetting.search = (parent) => {
       object: state.get.current(),
       path: 'header.search.width.size',
       id: 'header-search-size',
-      labelText: 'Width',
+      labelText: message.get('menuContentHeaderSearchWidthSize'),
       value: state.get.current().header.search.width.size,
       defaultValue: state.get.default().header.search.width.size,
       min: state.get.minMax().header.search.width.size.min,
@@ -1791,6 +1600,203 @@ headerSetting.search = (parent) => {
       id: headerSetting.control.search.width.by.radioSet[headerSetting.control.search.width.by.radioSet.length - 1].radio.value,
       content: headerSetting.control.search.width.area
     }]
+  });
+
+  headerSetting.control.search.size = new Control_sliderSlim({
+    object: state.get.current(),
+    path: 'header.search.size',
+    id: 'header-search-size',
+    labelText: message.get('menuContentHeaderSearchSize'),
+    value: state.get.current().header.search.size,
+    defaultValue: state.get.default().header.search.size,
+    min: state.get.minMax().header.search.size.min,
+    max: state.get.minMax().header.search.size.max,
+    action: () => {
+      applyCSSVar('header.search.size');
+      headerSetting.edge.search.size.track();
+      data.save();
+    },
+    mouseDownAction: () => {
+      headerSetting.edge.search.size.show();
+    },
+    mouseUpAction: () => {
+      headerSetting.edge.search.size.hide();
+    }
+  });
+
+  headerSetting.control.search.newLine = new Control_checkbox({
+    object: state.get.current(),
+    path: 'header.search.newLine',
+    id: 'header-search-newLine',
+    labelText: message.get('menuContentHeaderSearchNewLineLabel'),
+    description: message.get('menuContentHeaderSearchNewLineDescription'),
+    action: () => {
+      applyCSSState('header.search.newLine');
+      data.save();
+    }
+  });
+
+  const searchEngineList = [];
+
+  for (let key in searchEnginePreset) {
+
+    searchEngineList.push({ id: `header-search-engine-selected-${key}`, labelText: searchEnginePreset[key].name, value: key });
+
+  }
+
+  searchEngineList.push({ id: 'header-search-engine-selected-custom', labelText: message.get('menuContentHeaderSearchEngineSelectedCustom'), value: 'custom' });
+
+  headerSetting.control.search.engine = {
+    selected: new Control_radio({
+      object: state.get.current(),
+      label: message.get('menuContentHeaderSearchEngineSelectedLabel'),
+      radioGroup: searchEngineList,
+      groupName: 'header-search-engine-selected',
+      path: 'header.search.engine.selected',
+      action: () => {
+        header.item.mod.order();
+        header.item.clear();
+        header.item.render();
+        layout.area.assemble();
+        headerSetting.disable();
+        headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+        headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+        headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+        headerSetting.edge.date.size.update.primary(header.element.date.date());
+        headerSetting.edge.search.size.update.primary(header.element.search.search());
+        headerSetting.control.search.engine.custom.collapse.update();
+        data.save();
+      }
+    }),
+    custom: {
+      name: new Control_text({
+        object: state.get.current(),
+        path: 'header.search.engine.custom.name',
+        id: 'header-search-engine-custom-name',
+        value: state.get.current().header.search.engine.custom.name,
+        placeholder: message.get('menuContentHeaderSearchEngineCustomNamePlaceholder'),
+        labelText: message.get('menuContentHeaderSearchEngineCustomNameLabel'),
+        action: () => {
+          header.item.mod.order();
+          header.item.clear();
+          header.item.render();
+          layout.area.assemble();
+          headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+          headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+          headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+          headerSetting.edge.date.size.update.primary(header.element.date.date());
+          headerSetting.edge.search.size.update.primary(header.element.search.search());
+          data.save();
+        }
+      }),
+      url: new Control_text({
+        object: state.get.current(),
+        path: 'header.search.engine.custom.url',
+        id: 'header-search-engine-custom-url',
+        value: state.get.current().header.search.engine.custom.url,
+        placeholder: message.get('menuContentHeaderSearchEngineCustomUrlPlaceholder'),
+        labelText: message.get('menuContentHeaderSearchEngineCustomUrlLabel'),
+        action: () => {
+          header.item.mod.order();
+          header.item.clear();
+          header.item.render();
+          layout.area.assemble();
+          headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+          headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+          headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+          headerSetting.edge.date.size.update.primary(header.element.date.date());
+          headerSetting.edge.search.size.update.primary(header.element.search.search());
+          data.save();
+        }
+      }),
+      urlHelper: new Control_helperText({
+        text: [
+          message.get('menuContentHeaderSearchEngineCustomUrlHelperPara1'),
+          message.get('menuContentHeaderSearchEngineCustomUrlHelperPara2')
+        ]
+      }),
+      queryName: new Control_text({
+        object: state.get.current(),
+        path: 'header.search.engine.custom.queryName',
+        id: 'header-search-engine-custom-queryName',
+        value: state.get.current().header.search.engine.custom.queryName,
+        placeholder: message.get('menuContentHeaderSearchEngineCustomQueryNamePlaceholder'),
+        labelText: message.get('menuContentHeaderSearchEngineCustomQueryNameLabel'),
+        action: () => {
+          header.item.mod.order();
+          header.item.clear();
+          header.item.render();
+          layout.area.assemble();
+          headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+          headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+          headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+          headerSetting.edge.date.size.update.primary(header.element.date.date());
+          headerSetting.edge.search.size.update.primary(header.element.search.search());
+          data.save();
+        }
+      }),
+      queryNameHelper: new Control_helperText({
+        text: [
+          message.get('menuContentHeaderSearchEngineCustomQueryNameHelperPara1'),
+          message.get('menuContentHeaderSearchEngineCustomQueryNameHelperPara2')
+        ]
+      })
+    }
+  };
+
+  headerSetting.control.search.engine.custom.area = node('div', [
+    headerSetting.control.search.engine.custom.name.wrap(),
+    headerSetting.control.search.engine.custom.url.wrap(),
+    headerSetting.control.search.engine.custom.urlHelper.wrap(),
+    headerSetting.control.search.engine.custom.queryName.wrap(),
+    headerSetting.control.search.engine.custom.queryNameHelper.wrap()
+  ]);
+
+  headerSetting.control.search.engine.custom.collapse = new Collapse({
+    type: 'radio',
+    radioGroup: headerSetting.control.search.engine.selected,
+    target: [{
+      id: headerSetting.control.search.engine.selected.radioSet[headerSetting.control.search.engine.selected.radioSet.length - 1].radio.value,
+      content: headerSetting.control.search.engine.custom.area
+    }]
+  });
+
+  headerSetting.control.search.text = {
+    justify: new Control_radioGrid({
+      object: state.get.current(),
+      radioGroup: [
+        { id: 'header-search-text-justify-left', labelText: message.get('menuContentHeaderSearchEngineTextJustifyLeft'), value: 'left', position: 1 },
+        { id: 'header-search-text-justify-center', labelText: message.get('menuContentHeaderSearchEngineTextJustifyCenter'), value: 'center', position: 2 },
+        { id: 'header-search-text-justify-right', labelText: message.get('menuContentHeaderSearchEngineTextJustifyRight'), value: 'right', position: 3 }
+      ],
+      label: message.get('menuContentHeaderSearchEngineTextJustifyLabel'),
+      groupName: 'header-search-text-justify',
+      path: 'header.search.text.justify',
+      gridSize: '3x1',
+      action: () => {
+        applyCSSClass('header.search.text.justify');
+        data.save();
+      }
+    })
+  };
+
+  headerSetting.control.search.newTab = new Control_checkbox({
+    object: state.get.current(),
+    path: 'header.search.newTab',
+    id: 'header-search-newTab',
+    labelText: message.get('menuContentHeaderSearchNewTab'),
+    action: () => {
+      header.item.mod.order();
+      header.item.clear();
+      header.item.render();
+      layout.area.assemble();
+      headerSetting.edge.greeting.size.update.primary(header.element.greeting.greeting());
+      headerSetting.edge.transitional.size.update.primary(header.element.transitional.transitional());
+      headerSetting.edge.clock.size.update.primary(header.element.clock.clock());
+      headerSetting.edge.date.size.update.primary(header.element.date.date());
+      headerSetting.edge.search.size.update.primary(header.element.search.search());
+      data.save();
+    }
   });
 
   headerSetting.control.search.area = node('div', [

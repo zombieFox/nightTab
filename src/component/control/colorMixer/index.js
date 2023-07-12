@@ -1,3 +1,5 @@
+import { message } from '../../message';
+
 import * as form from '../../form';
 
 import { Button } from '../../button';
@@ -24,11 +26,12 @@ export const Control_colorMixer = function ({
 } = {}) {
 
   this.moreControlsToggle = new Button({
-    text: false,
+    text: message.get('controlColorMixerMoreControls'),
     iconName: 'arrowKeyboardDown',
     style: ['line'],
     classList: ['collapse-toggle', 'form-group-item-small'],
-    title: 'More controls',
+    title: message.get('controlColorMixerMoreControls'),
+    srOnly: true,
     func: () => {
       this.moreControlsCollapse.toggle();
       this.moreControlsUpdate();
@@ -67,7 +70,7 @@ export const Control_colorMixer = function ({
     object: object,
     path: path + '.hsl.h',
     id: id + '-hsl-h',
-    labelText: 'Hue',
+    labelText: message.get('controlColorMixerSliderH'),
     value: get({ object: object, path: path + '.hsl.h' }),
     min: get({ object: minMaxObject, path: path + '.hsl.h.min' }),
     max: get({ object: minMaxObject, path: path + '.hsl.h.max' }),
@@ -93,7 +96,7 @@ export const Control_colorMixer = function ({
     object: object,
     path: path + '.hsl.s',
     id: id + '-hsl-s',
-    labelText: 'Saturation',
+    labelText: message.get('controlColorMixerSliderS'),
     value: get({ object: object, path: path + '.hsl.s' }),
     min: get({ object: minMaxObject, path: path + '.hsl.s.min' }),
     max: get({ object: minMaxObject, path: path + '.hsl.s.max' }),
@@ -119,7 +122,7 @@ export const Control_colorMixer = function ({
     object: object,
     path: path + '.hsl.l',
     id: id + '-hsl-l',
-    labelText: 'Lightness',
+    labelText: message.get('controlColorMixerSliderL'),
     value: get({ object: object, path: path + '.hsl.l' }),
     min: get({ object: minMaxObject, path: path + '.hsl.l.min' }),
     max: get({ object: minMaxObject, path: path + '.hsl.l.max' }),
@@ -145,7 +148,7 @@ export const Control_colorMixer = function ({
     object: object,
     path: path + '.rgb.r',
     id: id + '-rgb-r',
-    labelText: 'Red',
+    labelText: message.get('controlColorMixerSliderR'),
     value: get({ object: object, path: path + '.rgb.r' }),
     min: get({ object: minMaxObject, path: path + '.rgb.r.min' }),
     max: get({ object: minMaxObject, path: path + '.rgb.r.max' }),
@@ -171,7 +174,7 @@ export const Control_colorMixer = function ({
     object: object,
     path: path + '.rgb.g',
     id: id + '-rgb-g',
-    labelText: 'Green',
+    labelText: message.get('controlColorMixerSliderG'),
     value: get({ object: object, path: path + '.rgb.g' }),
     min: get({ object: minMaxObject, path: path + '.rgb.g.min' }),
     max: get({ object: minMaxObject, path: path + '.rgb.g.max' }),
@@ -197,7 +200,7 @@ export const Control_colorMixer = function ({
     object: object,
     path: path + '.rgb.b',
     id: id + '-rgb-b',
-    labelText: 'Blue',
+    labelText: message.get('controlColorMixerSliderB'),
     value: get({ object: object, path: path + '.rgb.b' }),
     min: get({ object: minMaxObject, path: path + '.rgb.b.min' }),
     max: get({ object: minMaxObject, path: path + '.rgb.b.max' }),

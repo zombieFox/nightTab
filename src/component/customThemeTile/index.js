@@ -1,3 +1,5 @@
+import { message } from '../message';
+
 import { state } from '../state';
 import { data } from '../data';
 import { theme } from '../theme';
@@ -324,12 +326,12 @@ export const CustomThemeTile = function({
 
   this.control.button = {
     edit: new Button({
-      text: 'Edit this saved theme',
+      text: message.get('themeCustomTileControlEdit'),
       srOnly: true,
       iconName: 'edit',
       style: ['link'],
       size: 'small',
-      title: 'Edit this saved theme',
+      title: message.get('themeCustomTileControlEdit'),
       classList: ['theme-custom-control-button', 'theme-custom-control-edit'],
       func: () => {
 
@@ -342,9 +344,10 @@ export const CustomThemeTile = function({
         const bookmarkForm = new CustomThemeForm({ customThemeData: newCustomThemeData });
 
         const editModal = new Modal({
-          heading: isValidString(customThemeData.theme.name) ? 'Edit ' + customThemeData.theme.name : 'Edit unnamed custom theme',
+          heading: isValidString(customThemeData.theme.name) ? `${message.get('themeCustomEditHeadingName')} ${customThemeData.theme.name}` : message.get('themeCustomEditHeadingUnnamed'),
           content: bookmarkForm.form(),
-          successText: 'Save',
+          successText: message.get('themeCustomEditSuccessText'),
+          cancelText: message.get('themeCustomEditCancelText'),
           width: 'small',
           successAction: () => {
 
@@ -360,21 +363,22 @@ export const CustomThemeTile = function({
       }
     }),
     remove: new Button({
-      text: 'Remove this saved theme',
+      text: message.get('themeCustomTileControlRemove'),
       srOnly: true,
       iconName: 'cross',
       style: ['link'],
       size: 'small',
-      title: 'Remove this saved theme',
+      title: message.get('themeCustomTileControlRemove'),
       classList: ['theme-custom-control-button', 'theme-custom-control-remove'],
       func: () => {
 
         menu.close();
 
         const removeModal = new Modal({
-          heading: isValidString(customThemeData.theme.name) ? 'Remove ' + customThemeData.theme.name : 'Remove unnamed custom theme',
-          content: 'Are you sure you want to remove this saved theme? This can not be undone.',
-          successText: 'Remove',
+          heading: isValidString(customThemeData.theme.name) ? `${message.get('themeCustomRemoveHeadingName')} ${customThemeData.theme.name}` : message.get('themeCustomRemoveHeadingUnnamed'),
+          content: message.get('themeCustomRemoveContent'),
+          successText: message.get('themeCustomRemoveSuccessText'),
+          cancelText: message.get('themeCustomRemoveCancelText'),
           width: 'small',
           successAction: () => {
             customTheme.item.mod.remove(customThemeData);

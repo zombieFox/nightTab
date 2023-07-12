@@ -1,13 +1,15 @@
+import { message } from '../../message';
+
 import { state } from '../../state';
 import { data } from '../../data';
 import { header } from '../../header';
 import { bookmark } from '../../bookmark';
 import { layout } from '../../layout';
+import { theme } from '../../theme';
 
 import * as form from '../../form';
 
 import { Edge } from '../../edge';
-import { Link } from '../../link';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_radio } from '../../control/radio';
@@ -84,6 +86,12 @@ layoutSetting.disable = () => {
 
   }
 
+  if (state.get.current().layout.overscroll.active) {
+    layoutSetting.control.page.overscroll.unblur.enable();
+  } else {
+    layoutSetting.control.page.overscroll.unblur.disable();
+  }
+
 };
 
 layoutSetting.edge = {
@@ -102,7 +110,7 @@ layoutSetting.scaling = (parent) => {
     object: state.get.current(),
     path: 'layout.size',
     id: 'layout-size',
-    labelText: 'Global size',
+    labelText: message.get('menuContentLayoutScalingSize'),
     value: state.get.current().layout.size,
     defaultValue: state.get.default().layout.size,
     min: state.get.minMax().layout.size.min,
@@ -140,7 +148,7 @@ layoutSetting.area = (parent) => {
     object: state.get.current(),
     path: 'layout.width',
     id: 'layout-width',
-    labelText: 'Layout area width',
+    labelText: message.get('menuContentLayoutAreaWidth'),
     value: state.get.current().layout.width,
     defaultValue: state.get.default().layout.width,
     min: state.get.minMax().layout.width.min,
@@ -163,7 +171,7 @@ layoutSetting.area = (parent) => {
       object: state.get.current(),
       path: 'layout.area.header.width',
       id: 'layout-area-header-width',
-      labelText: 'Header area width',
+      labelText: message.get('menuContentLayoutAreaHeaderWidth'),
       value: state.get.current().layout.area.header.width,
       defaultValue: state.get.default().layout.area.header.width,
       min: state.get.minMax().layout.area.header.width.min,
@@ -183,11 +191,11 @@ layoutSetting.area = (parent) => {
     justify: new Control_radioGrid({
       object: state.get.current(),
       radioGroup: [
-        { id: 'layout-area-header-justify-left', labelText: 'Left', value: 'left', position: 1 },
-        { id: 'layout-area-header-justify-center', labelText: 'Center', value: 'center', position: 2 },
-        { id: 'layout-area-header-justify-right', labelText: 'Right', value: 'right', position: 3 }
+        { id: 'layout-area-header-justify-left', labelText: message.get('menuContentLayoutAreaHeaderJustifyLeft'), value: 'left', position: 1 },
+        { id: 'layout-area-header-justify-center', labelText: message.get('menuContentLayoutAreaHeaderJustifyCenter'), value: 'center', position: 2 },
+        { id: 'layout-area-header-justify-right', labelText: message.get('menuContentLayoutAreaHeaderJustifyRight'), value: 'right', position: 3 }
       ],
-      label: 'Header area alignment',
+      label: message.get('menuContentLayoutAreaHeaderJustifyLabel'),
       groupName: 'layout-area-header-justify',
       path: 'layout.area.header.justify',
       gridSize: '3x1',
@@ -197,11 +205,11 @@ layoutSetting.area = (parent) => {
       }
     }),
     justifyHelper1: new Control_helperText({
-      text: ['Effects may not be visible if the Header Area is full width.']
+      text: [message.get('menuContentLayoutAreaHeaderJustifyHelper1Para1')]
     }),
     justifyHelper2: new Control_helperText({
       complexText: true,
-      text: [`Only available when ${(new Link({ text: 'Layout Direction', href: '#menu-content-item-alignment' })).link().outerHTML} is Vertical and Header items are shown.`]
+      text: [message.get('menuContentLayoutAreaHeaderJustifyHelper2Para1')]
     })
   };
 
@@ -210,7 +218,7 @@ layoutSetting.area = (parent) => {
       object: state.get.current(),
       path: 'layout.area.bookmark.width',
       id: 'layout-area-bookmark-width',
-      labelText: 'Bookmark area width',
+      labelText: message.get('menuContentLayoutAreaBookmarkWidth'),
       value: state.get.current().layout.area.bookmark.width,
       defaultValue: state.get.default().layout.area.bookmark.width,
       min: state.get.minMax().layout.area.bookmark.width.min,
@@ -230,11 +238,11 @@ layoutSetting.area = (parent) => {
     justify: new Control_radioGrid({
       object: state.get.current(),
       radioGroup: [
-        { id: 'layout-area-bookmark-justify-left', labelText: 'Left', value: 'left', position: 1 },
-        { id: 'layout-area-bookmark-justify-center', labelText: 'Center', value: 'center', position: 2 },
-        { id: 'layout-area-bookmark-justify-right', labelText: 'Right', value: 'right', position: 3 }
+        { id: 'layout-area-bookmark-justify-left', labelText: message.get('menuContentLayoutAreaBookmarkJustifyLeft'), value: 'left', position: 1 },
+        { id: 'layout-area-bookmark-justify-center', labelText: message.get('menuContentLayoutAreaBookmarkJustifyCenter'), value: 'center', position: 2 },
+        { id: 'layout-area-bookmark-justify-right', labelText: message.get('menuContentLayoutAreaBookmarkJustifyRight'), value: 'right', position: 3 }
       ],
-      label: 'Bookmark area alignment',
+      label: message.get('menuContentLayoutAreaBookmarkJustifyLabel'),
       groupName: 'layout-area-bookmark-justify',
       path: 'layout.area.bookmark.justify',
       gridSize: '3x1',
@@ -244,11 +252,11 @@ layoutSetting.area = (parent) => {
       }
     }),
     justifyHelper1: new Control_helperText({
-      text: ['Effects may not be visible if the Bookmark Area is full width.']
+      text: [message.get('menuContentLayoutAreaBookmarkJustifyHelper1Para1')]
     }),
     justifyHelper2: new Control_helperText({
       complexText: true,
-      text: [`Only available when ${(new Link({ text: 'Layout Direction', href: '#menu-content-item-alignment' })).link().outerHTML} is Vertical and Header items are shown.`]
+      text: [message.get('menuContentLayoutAreaBookmarkJustifyHelper2Para1')]
     })
   };
 
@@ -286,7 +294,7 @@ layoutSetting.padding = (parent) => {
     object: state.get.current(),
     path: 'layout.padding',
     id: 'layout-padding',
-    labelText: 'Space around Header and Bookmark Area',
+    labelText: message.get('menuContentLayoutPadding'),
     value: state.get.current().layout.padding,
     defaultValue: state.get.default().layout.padding,
     min: state.get.minMax().layout.padding.min,
@@ -320,7 +328,7 @@ layoutSetting.gutter = (parent) => {
     object: state.get.current(),
     path: 'layout.gutter',
     id: 'layout-gutter',
-    labelText: 'Space between Header and Bookmark items',
+    labelText: message.get('menuContentLayoutGutter'),
     value: state.get.current().layout.gutter,
     defaultValue: state.get.default().layout.gutter,
     min: state.get.minMax().layout.gutter.min,
@@ -351,17 +359,17 @@ layoutSetting.alignment = (parent) => {
   layoutSetting.control.alignment.alignment = new Control_radioGrid({
     object: state.get.current(),
     radioGroup: [
-      { id: 'layout-alignment-top-left', labelText: 'Top Left', value: 'top-left', position: 1 },
-      { id: 'layout-alignment-top-center', labelText: 'Top Center', value: 'top-center', position: 2 },
-      { id: 'layout-alignment-top-right', labelText: 'Top Right', value: 'top-right', position: 3 },
-      { id: 'layout-alignment-center-left', labelText: 'Center Left', value: 'center-left', position: 4 },
-      { id: 'layout-alignment-center-center', labelText: 'Center Center', value: 'center-center', position: 5 },
-      { id: 'layout-alignment-center-right', labelText: 'Center Right', value: 'center-right', position: 6 },
-      { id: 'layout-alignment-bottom-left', labelText: 'Bottom Left', value: 'bottom-left', position: 7 },
-      { id: 'layout-alignment-bottom-center', labelText: 'Bottom Center', value: 'bottom-center', position: 8 },
-      { id: 'layout-alignment-bottom-right', labelText: 'Bottom Right', value: 'bottom-right', position: 9 }
+      { id: 'layout-alignment-top-left', labelText: message.get('menuContentLayoutAlignmentTopLeft'), value: 'top-left', position: 1 },
+      { id: 'layout-alignment-top-center', labelText: message.get('menuContentLayoutAlignmentTopCenter'), value: 'top-center', position: 2 },
+      { id: 'layout-alignment-top-right', labelText: message.get('menuContentLayoutAlignmentTopRight'), value: 'top-right', position: 3 },
+      { id: 'layout-alignment-center-left', labelText: message.get('menuContentLayoutAlignmentCenterLeft'), value: 'center-left', position: 4 },
+      { id: 'layout-alignment-center-center', labelText: message.get('menuContentLayoutAlignmentCenterCenter'), value: 'center-center', position: 5 },
+      { id: 'layout-alignment-center-right', labelText: message.get('menuContentLayoutAlignmentCenterRight'), value: 'center-right', position: 6 },
+      { id: 'layout-alignment-bottom-left', labelText: message.get('menuContentLayoutAlignmentBottomLeft'), value: 'bottom-left', position: 7 },
+      { id: 'layout-alignment-bottom-center', labelText: message.get('menuContentLayoutAlignmentBottomCenter'), value: 'bottom-center', position: 8 },
+      { id: 'layout-alignment-bottom-right', labelText: message.get('menuContentLayoutAlignmentBottomRight'), value: 'bottom-right', position: 9 }
     ],
-    label: 'Area alignment',
+    label: message.get('menuContentLayoutAlignmentLabel'),
     groupName: 'layout-alignment',
     path: 'layout.alignment',
     gridSize: '3x3',
@@ -374,8 +382,8 @@ layoutSetting.alignment = (parent) => {
   layoutSetting.control.alignment.direction = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'layout-direction-horizontal', labelText: 'Align horizontal', description: 'Stack the Header and Bookmarks in a row side by side.', value: 'horizontal' },
-      { id: 'layout-direction-vertical', labelText: 'Align vertical', description: 'Stack the Header and Bookmarks in a column one above the other.', value: 'vertical' }
+      { id: 'layout-direction-horizontal', labelText: message.get('menuContentLayoutDirectionHorizontalLabel'), description: message.get('menuContentLayoutDirectionHorizontalDescription'), value: 'horizontal' },
+      { id: 'layout-direction-vertical', labelText: message.get('menuContentLayoutDirectionVerticalLabel'), description: message.get('menuContentLayoutDirectionVerticalDescription'), value: 'vertical' }
     ],
     groupName: 'layout-direction',
     path: 'layout.direction',
@@ -389,8 +397,8 @@ layoutSetting.alignment = (parent) => {
   layoutSetting.control.alignment.order = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'layout-order-header-bookmark', labelText: 'Header then Bookmarks', description: 'Order the Header area to appear before the Bookmarks area.', value: 'header-bookmark' },
-      { id: 'layout-order-bookmark-header', labelText: 'Bookmarks then Header', description: 'Order the Bookmarks area to appear before the Header area.', value: 'bookmark-header' }
+      { id: 'layout-order-header-bookmark', labelText: message.get('menuContentLayoutOrderHeaderBookmarkLabel'), description: message.get('menuContentLayoutOrderHeaderBookmarkDescription'), value: 'header-bookmark' },
+      { id: 'layout-order-bookmark-header', labelText: message.get('menuContentLayoutOrderBookmarkHeaderLabel'), description: message.get('menuContentLayoutOrderBookmarkHeaderDescription'), value: 'bookmark-header' }
     ],
     groupName: 'layout-order',
     path: 'layout.order',
@@ -421,8 +429,8 @@ layoutSetting.page = (parent) => {
     id: 'layout-title',
     value: state.get.current().layout.title,
     defaultValue: state.get.default().layout.title,
-    placeholder: 'New Tab',
-    labelText: 'Title',
+    placeholder: message.get('menuContentLayoutPageTitlePlaceholder'),
+    labelText: message.get('menuContentLayoutPageTitleLabel'),
     action: () => {
       layout.title.render();
       data.save();
@@ -435,8 +443,8 @@ layoutSetting.page = (parent) => {
     id: 'layout-favicon',
     value: state.get.current().layout.favicon,
     defaultValue: state.get.default().layout.favicon,
-    placeholder: 'https://www.example.com/favicon.svg',
-    labelText: 'Favicon URL',
+    placeholder: message.get('menuContentLayoutPageFaviconPlaceholder'),
+    labelText: message.get('menuContentLayoutPageFaviconLabel'),
     action: () => {
       layout.favicon.render();
       data.save();
@@ -444,16 +452,16 @@ layoutSetting.page = (parent) => {
   });
 
   layoutSetting.control.page.faviconHelper = new Control_helperText({
-    text: ['Not supported by all browsers.']
+    text: [message.get('menuContentLayoutPageFaviconHelperPara1')]
   });
 
   layoutSetting.control.page.scrollbar = new Control_radio({
     object: state.get.current(),
-    label: 'Scrollbar',
+    label: message.get('menuContentLayoutPageScrollbarLabel'),
     radioGroup: [
-      { id: 'layout-scrollbar-auto', labelText: 'Auto', value: 'auto' },
-      { id: 'layout-scrollbar-thin', labelText: 'Thin', value: 'thin' },
-      { id: 'layout-scrollbar-none', labelText: 'Hidden', value: 'none' }
+      { id: 'layout-scrollbar-auto', labelText: message.get('menuContentLayoutPageScrollbarAuto'), value: 'auto' },
+      { id: 'layout-scrollbar-thin', labelText: message.get('menuContentLayoutPageScrollbarThin'), value: 'thin' },
+      { id: 'layout-scrollbar-none', labelText: message.get('menuContentLayoutPageScrollbarNone'), value: 'none' }
     ],
     groupName: 'layout-scrollbar',
     path: 'layout.scrollbar',
@@ -464,19 +472,39 @@ layoutSetting.page = (parent) => {
   });
 
   layoutSetting.control.page.scrollbarHelper = new Control_helperText({
-    text: ['Not supported by all browsers.']
+    text: [message.get('menuContentLayoutPageScrollbarHelperPara1')]
   });
 
-  layoutSetting.control.page.overscroll = new Control_checkbox({
-    object: state.get.current(),
-    path: 'layout.overscroll',
-    id: 'layout-overscroll',
-    labelText: 'Scroll past end',
-    action: () => {
-      applyCSSState('layout.overscroll');
-      data.save();
-    }
-  });
+  layoutSetting.control.page.overscroll = {
+    active: new Control_checkbox({
+      object: state.get.current(),
+      path: 'layout.overscroll.active',
+      id: 'layout-overscroll-active',
+      labelText: message.get('menuContentLayoutPageOverscrollActive'),
+      action: () => {
+        applyCSSState('layout.overscroll.active');
+        layoutSetting.disable();
+        data.save();
+      }
+    }),
+    unblur: new Control_checkbox({
+      object: state.get.current(),
+      path: 'layout.overscroll.unblur',
+      id: 'layout-overscroll-unblur-background',
+      labelText: message.get('menuContentLayoutPageOverscrollUnblurLabel'),
+      description: [
+        message.get('menuContentLayoutPageOverscrollUnblurDescriptionPara1'),
+        message.get('menuContentLayoutPageOverscrollUnblurDescriptionPara2')
+      ],
+      action: () => {
+        theme.background.image.render();
+        theme.background.video.clear();
+        theme.background.video.render();
+        layout.overscroll.bind();
+        data.save();
+      }
+    })
+  };
 
   parent.appendChild(
     node('div', [
@@ -487,7 +515,16 @@ layoutSetting.page = (parent) => {
       layoutSetting.control.page.scrollbar.inline(),
       layoutSetting.control.page.scrollbarHelper.wrap(),
       node('hr'),
-      layoutSetting.control.page.overscroll.wrap()
+      layoutSetting.control.page.overscroll.active.wrap(),
+      form.wrap({
+        children: [
+          form.indent({
+            children: [
+              layoutSetting.control.page.overscroll.unblur.wrap()
+            ]
+          })
+        ]
+      })
     ])
   );
 

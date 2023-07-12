@@ -1,3 +1,5 @@
+import { message } from '../../message';
+
 import * as form from '../../form';
 
 import { Button } from '../../button';
@@ -65,7 +67,7 @@ export const Control_color = function ({
     })),
     max: 7,
     classList: ['form-group-item-half'],
-    placeholder: 'Hex code',
+    placeholder: message.get('controlColorTextPlaceholder'),
     func: () => {
 
       if (path) {
@@ -82,11 +84,12 @@ export const Control_color = function ({
   });
 
   this.reset = new Button({
-    text: false,
+    text: message.get('controlGeneralReset'),
     iconName: 'replay',
     style: ['line'],
     classList: ['form-group-item-small'],
-    title: 'Reset to default',
+    title: message.get('controlGeneralReset'),
+    srOnly: true,
     func: () => {
 
       set({ object: object, path: path + '.rgb', value: JSON.parse(JSON.stringify(defaultValue)) });
@@ -99,11 +102,12 @@ export const Control_color = function ({
   });
 
   this.random = new Button({
-    text: false,
+    text: message.get('controlColorRandom'),
     iconName: 'random',
     style: ['line'],
     classList: ['form-group-item-small'],
-    title: 'Random colour',
+    title: message.get('controlColorRandom'),
+    srOnly: true,
     func: () => {
 
       set({ object: object, path: path + '.hsl', value: { h: randomNumber(0, 360), s: randomNumber(0, 100), l: randomNumber(0, 100) } });

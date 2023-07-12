@@ -8,6 +8,10 @@
 }
 
 :root {
+  --layout-overscroll: 75;
+}
+
+:root {
   --layout-duration-01: 0.1s;
   --layout-duration-02: 0.2s;
   --layout-duration-03: 0.3s;
@@ -188,8 +192,8 @@
   margin-right: calc((var(--layout-space) * var(--layout-padding)) * -1);
 }
 
-.is-layout-overscroll body {
-  margin-bottom: 75vh;
+.is-layout-overscroll-active body {
+  margin-bottom: calc(var(--layout-overscroll) * 1vh);
 }
 
 html.is-layout-scrollbar-auto,

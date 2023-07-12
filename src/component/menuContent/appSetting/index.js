@@ -1,3 +1,7 @@
+import { message } from '../../message';
+
+import * as form from '../../form';
+
 import { node } from '../../../utility/node';
 
 import { APP_NAME } from '../../../constant';
@@ -7,25 +11,29 @@ import { Splash } from '../../splash';
 
 const appSetting = {};
 
-appSetting[APP_NAME.toLowerCase()] = (parent) => {
+appSetting.app = (parent) => {
 
-  const githubLink = new Link({ text: 'GitHub.', href: `https://github.com/zombieFox/${APP_NAME}`, openNew: true });
+  appSetting.app.para1 = node(`p:${message.get('menuContentAppPara1')}`);
 
-  const redditLink = new Link({ text: `Reddit ${APP_NAME} community.`, href: `https://www.reddit.com/r/${APP_NAME}`, openNew: true });
+  appSetting.app.link1 = new Link({
+    text: message.get('menuContentAppLink1'),
+    href: `https://www.reddit.com/r/${APP_NAME}`,
+    openNew: true
+  });
 
-  const licenseLink = new Link({ text: 'GNU General Public License v3.0', href: `https://github.com/zombieFox/${APP_NAME}/blob/master/license`, openNew: true });
+  appSetting.app.para2 = node(`p:${message.get('menuContentAppPara2')}`);
 
-  const para1 = node('p');
+  appSetting.app.link2 = new Link({
+    text: message.get('menuContentAppLink2'),
+    href: `https://github.com/zombieFox/${APP_NAME}`,
+    openNew: true
+  });
 
-  para1.innerHTML = `This project can be found on ${githubLink.link().outerHTML}`;
-
-  const para2 = node('p');
-
-  para2.innerHTML = `Share your setup with the ${redditLink.link().outerHTML}`;
-
-  const para3 = node('p');
-
-  para3.innerHTML = `${APP_NAME} uses the ${licenseLink.link().outerHTML}`;
+  appSetting.app.link3 = new Link({
+    text: message.get('menuContentAppLink3'),
+    href: `https://github.com/zombieFox/${APP_NAME}/blob/master/license`,
+    openNew: true
+  });
 
   const splash = new Splash();
 
@@ -33,9 +41,33 @@ appSetting[APP_NAME.toLowerCase()] = (parent) => {
     node('div', [
       splash.splash(),
       node('hr'),
-      para1,
-      para2,
-      para3
+      form.wrap({
+        children: [
+          appSetting.app.para1,
+          form.indent({
+            children: [
+              node('p', [
+                appSetting.app.link1.link()
+              ])
+            ]
+          })
+        ]
+      }),
+      form.wrap({
+        children: [
+          appSetting.app.para2,
+          form.indent({
+            children: [
+              node('p', [
+                appSetting.app.link2.link()
+              ]),
+              node('p', [
+                appSetting.app.link3.link()
+              ])
+            ]
+          })
+        ]
+      })
     ])
   );
 

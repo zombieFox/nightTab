@@ -64,3 +64,8 @@ select:disabled:active {
   cursor: default;
   box-shadow: none;
 }
+
+select option {
+  background-color: initial;
+  color: initial;
+}
