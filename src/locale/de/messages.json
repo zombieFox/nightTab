@@ -32,7 +32,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeLabel": {
-    "message": "Thema",
+    "message": "Theme",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavPreset": {
@@ -40,7 +40,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavSaved": {
-    "message": "Gerettet",
+    "message": "Backup",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavStyle": {
@@ -72,7 +72,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavOpacity": {
-    "message": "Opazität",
+    "message": "Transparenz",
     "description": "Label for the settings menu navigation."
   },
   "menuNavThemeSubNavBackground": {
@@ -104,11 +104,11 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavPadding": {
-    "message": "Polsterung",
+    "message": "Padding",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavGutter": {
-    "message": "Rinne",
+    "message": "Abstand",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavAlignment": {
@@ -116,7 +116,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavLayoutSubNavPage": {
-    "message": "Buchseite",
+    "message": "Seite",
     "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderLabel": {
@@ -128,7 +128,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderSubNavGreeting": {
-    "message": "Gruß",
+    "message": "Begrüßung",
     "description": "Label for the settings menu navigation."
   },
   "menuNavHeaderSubNavTransitional": {
@@ -196,7 +196,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavLocation": {
-    "message": "Ort",
+    "message": "Position",
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavPosition": {
@@ -204,7 +204,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavToolbarSubNavControls": {
-    "message": "Kontrollen",
+    "message": "Einstellungen",
     "description": "Label for the settings menu navigation."
   },
   "menuNavDataLabel": {
@@ -220,7 +220,7 @@
     "description": "Label for the settings menu navigation."
   },
   "menuNavDataSubNavClear": {
-    "message": "Klar",
+    "message": "Löschen",
     "description": "Label for the settings menu navigation."
   },
   "menuNavLanguageLabel": {
@@ -244,11 +244,11 @@
     "description": "Helper text for preset theme."
   },
   "menuContentThemeSavedHelperPara1": {
-    "message": "Beim Speichern eines Themas werden die aktuelle Farbe, der Akzent, die Schriftart, der Stil, die Deckkraft, der Radius, der Schatten, der Startseite und der Hintergrund aufgezeichnet.",
+    "message": "Beim Speichern eines Themes werden die aktuelle Farbe, der Akzent, die Schriftart, der Stil, die Deckkraft, der Radius, der Schatten, der Startseite und der Hintergrund aufgezeichnet.",
     "description": "Helper text for saved themes."
   },
   "menuContentThemeSavedSave": {
-    "message": "Aktuelles Thema speichern",
+    "message": "Aktuelles Theme speichern",
     "description": "Button to save the current theme setup."
   },
   "menuContentThemeSavedEdit": {
@@ -256,19 +256,19 @@
     "description": "Button to enter edit mode for saved themes."
   },
   "menuContentThemeStyleDarkLabel": {
-    "message": "Dunkelmodus",
+    "message": "Darkmode",
     "description": "Radio for dark mode."
   },
   "menuContentThemeStyleLightLabel": {
-    "message": "Lichtmodus",
+    "message": "Lightmode",
     "description": "Radio for light mode."
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Systemsprache verwenden",
+    "message": "Systemdesign verwenden",
     "description": "Radio for automatic light or dark mode."
   },
   "menuContentThemeStyleAutomaticDescription": {
-    "message": "Folgen Sie dem Hell- oder Dunkelmodus des Systems.",
+    "message": "Passt sich entsprechend des Light- oder Darkmode des Systems an.",
     "description": "Description for automatic light or dark mode."
   },
   "menuContentThemeColorShadeHelperPara1": {
@@ -564,7 +564,7 @@
     "description": "Helper text for shade blur."
   },
   "menuContentThemeOpacityGeneralLabel": {
-    "message": "Alle Deckkraft",
+    "message": "Gesamte Transparenz",
     "description": "Range for all opacity."
   },
   "menuContentThemeOpacityGeneralHelperPara1": {
@@ -592,11 +592,11 @@
     "description": "Range for group toolbar opacity."
   },
   "menuContentThemeBackgroundTypeThemeLabel": {
-    "message": "Hintergrund nach Thema",
+    "message": "Hintergrund nach Theme",
     "description": "Radio for background type theme."
   },
   "menuContentThemeBackgroundTypeThemeDescription": {
-    "message": "Verwenden Sie die vom Thema definierte Hintergrundfarbe.",
+    "message": "Verwenden Sie die vom Theme definierte Hintergrundfarbe.",
     "description": "Description for background type theme."
   },
   "menuContentThemeBackgroundTypeAccentLabel": {
@@ -612,7 +612,7 @@
     "description": "Radio for background type colour."
   },
   "menuContentThemeBackgroundTypeGradient": {
-    "message": "Gradient",
+    "message": "Farbübergang",
     "description": "Radio for background type gradient."
   },
   "menuContentThemeBackgroundTypeImage": {
@@ -688,7 +688,7 @@
     "description": "Range background image accent."
   },
   "menuContentThemeBackgroundImageOpacity": {
-    "message": "Opazität",
+    "message": "Transparenz",
     "description": "Range background image opacity."
   },
   "menuContentThemeBackgroundImageVignetteOpacity": {
@@ -748,7 +748,7 @@
     "description": "Range background video accent."
   },
   "menuContentThemeBackgroundVideoOpacity": {
-    "message": "Opazität",
+    "message": "Transparenz",
     "description": "Range background video opacity."
   },
   "menuContentThemeBackgroundVideoVignetteOpacity": {
@@ -772,7 +772,7 @@
     "description": "Label for layout area colour."
   },
   "menuContentThemeLayoutColorByTransparentLabel": {
-    "message": "Transparent",
+    "message": "Transparenz",
     "description": "Radio for transparent layout area background."
   },
   "menuContentThemeLayoutColorByTransparentDescription": {
@@ -792,7 +792,7 @@
     "description": "Label for layout area background colour."
   },
   "menuContentThemeLayoutColorOpacity": {
-    "message": "Hintergrundopazität",
+    "message": "Hintergrundtransparenz",
     "description": "Range for layout area background opacity."
   },
   "menuContentThemeLayoutColorBlurLabel": {
@@ -832,7 +832,7 @@
     "description": "Label for header area background colour."
   },
   "menuContentThemeHeaderColorOpacity": {
-    "message": "Hintergrundopazität",
+    "message": "Hintergrundtransparenz",
     "description": "Range for header area background opacity."
   },
   "menuContentThemeBookmarkColorLabel": {
@@ -860,7 +860,7 @@
     "description": "Label for bookmark area background colour."
   },
   "menuContentThemeBookmarkColorOpacity": {
-    "message": "Hintergrundopazität",
+    "message": "Hintergrundtransparenz",
     "description": "Range for bookmark area background opacity."
   },
   "menuContentThemeBookmarkItemBorderLabel": {
@@ -1108,7 +1108,7 @@
     "description": "Helper text to justify header items."
   },
   "menuContentHeaderGreetingShow": {
-    "message": "Gruß anzeigen",
+    "message": "Begrüßung anzeigen",
     "description": "Checkbox to show header greeting."
   },
   "menuContentHeaderGreetingSize": {
@@ -1148,11 +1148,11 @@
     "description": "Description for no header greeting."
   },
   "menuContentHeaderGreetingTypeCustomLabel": {
-    "message": "Brauch",
+    "message": "Eigene Begrüßung",
     "description": "Radio for custom header greeting."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara1": {
-    "message": "Verwenden Sie Ihren eigenen Gruß.",
+    "message": "Verwenden Sie Ihre eigene Begrüßung.",
     "description": "Description for custom header greeting."
   },
   "menuContentHeaderGreetingTypeCustomDescriptionPara2": {
@@ -1208,7 +1208,7 @@
     "description": "Description for forcing transitional text onto a new line."
   },
   "menuContentHeaderClockHourShow": {
-    "message": "Öffnungszeiten anzeigen",
+    "message": "Stunden anzeigen",
     "description": "Checkbox for clock hour."
   },
   "menuContentHeaderClockHourDisplayNumber": {
@@ -1216,7 +1216,7 @@
     "description": "Radio for clock hour as numbers."
   },
   "menuContentHeaderClockHourDisplayWord": {
-    "message": "Ein Schwert",
+    "message": "Als Wort",
     "description": "Radio for clock hour as words."
   },
   "menuContentHeaderClockMinuteShow": {
@@ -1228,7 +1228,7 @@
     "description": "Radio for clock minutes as numbers."
   },
   "menuContentHeaderClockMinuteDisplayWord": {
-    "message": "Ein Schwert",
+    "message": "Ein Wort",
     "description": "Radio for clock minutes as words."
   },
   "menuContentHeaderClockSecondShow": {
@@ -1276,7 +1276,7 @@
     "description": "Description for forcing clock onto a new line."
   },
   "menuContentHeaderDateDayShow": {
-    "message": "Ausstellungstag",
+    "message": "Wochentag",
     "description": "Checkbox for day."
   },
   "menuContentHeaderDateDayDisplayNumber": {
@@ -1572,7 +1572,7 @@
     "description": "Helper text for bookmark orientation."
   },
   "menuContentBookmarkSortLetter": {
-    "message": "Per Brief",
+    "message": "Nach Buchstaben",
     "description": "Button to sort bookmarks by letter."
   },
   "menuContentBookmarkSortIcon": {
@@ -1580,7 +1580,7 @@
     "description": "Button to sort bookmarks by Icon."
   },
   "menuContentBookmarkSortName": {
-    "message": "Namentlich",
+    "message": "Nach Name",
     "description": "Button to sort bookmarks by name."
   },
   "menuContentGroupAlignmentJustifyLabel": {
@@ -1888,7 +1888,7 @@
     "description": "Paragraph on where to share with the community."
   },
   "menuContentAppLink1": {
-    "message": "Gefunden auf Reddit/r/{appName}.",
+    "message": "Reddit /r/{appName}.",
     "description": "Link to the community on Reddit."
   },
   "menuContentAppPara2": {
@@ -1896,7 +1896,7 @@
     "description": "Paragraph on this project being open source."
   },
   "menuContentAppLink2": {
-    "message": "Auf GitHub gefunden.",
+    "message": "Auf GitHub ansehen.",
     "description": "Link to project on GitHub."
   },
   "menuContentAppLink3": {
@@ -1988,7 +1988,7 @@
     "description": "Label for bookmark form layout tab."
   },
   "bookmarkFormTabTheme": {
-    "message": "Thema",
+    "message": "Theme",
     "description": "Label for bookmark form theme tab."
   },
   "bookmarkFormSectionVisualHeading": {
@@ -2024,11 +2024,11 @@
     "description": "Description for bookmark form layout page."
   },
   "bookmarkFormSectionThemeHeading": {
-    "message": "Thema",
+    "message": "Theme",
     "description": "Heading for bookmark form theme page."
   },
   "bookmarkFormSectionThemeDescription": {
-    "message": "Überschreiben Sie die Farbe des Themas und des Akzents.",
+    "message": "Überschreiben Sie die Farbe des Themes und des Akzents.",
     "description": "Description for bookmark form theme page."
   },
   "bookmarkFormUrlLabel": {
@@ -2128,7 +2128,7 @@
     "description": "Range for bookmark tile visual translation along the y axis."
   },
   "bookmarkFormDisplayGutter": {
-    "message": "Rinne",
+    "message": "Abstand",
     "description": "Range for bookmark tile gutter space between visual and name."
   },
   "bookmarkFormDisplayVisualShowLabel": {
@@ -2208,11 +2208,11 @@
     "description": "Range for bookmark tile name size."
   },
   "bookmarkFormAccentByThemeLabel": {
-    "message": "Thema Akzent",
+    "message": "Theme Akzent",
     "description": "Label for bookmark tile to use the theme accent."
   },
   "bookmarkFormAccentByThemeDescription": {
-    "message": "Verwenden Sie den durch das Thema definierten Akzent.",
+    "message": "Verwenden Sie den durch das Theme definierten Akzent.",
     "description": "Description for bookmark tile to use the theme accent."
   },
   "bookmarkFormAccentByCustomLabel": {
@@ -2232,7 +2232,7 @@
     "description": "Label for bookmark tile to use the theme colour."
   },
   "bookmarkFormColorByThemeDescription": {
-    "message": "Verwenden Sie die vom Thema definierte Farbe.",
+    "message": "Verwenden Sie die vom Theme definierte Farbe.",
     "description": "Description for bookmark tile to use the theme colour."
   },
   "bookmarkFormColorByCustomLabel": {
@@ -2248,7 +2248,7 @@
     "description": "Label for bookmark tile colour."
   },
   "bookmarkFormColorOpacity": {
-    "message": "Opazität",
+    "message": "Transparenz",
     "description": "Range for bookmark tile opacity."
   },
   "bookmarkFormBackgroundShowLabel": {
@@ -2268,7 +2268,7 @@
     "description": "Radio for bookmark tile video background."
   },
   "bookmarkFormBackgroundOpacity": {
-    "message": "Opazität",
+    "message": "Transparenz",
     "description": "Range for bookmark tile background opacity."
   },
   "bookmarkFormBackgroundImageLabel": {
@@ -2540,7 +2540,7 @@
     "description": "Label for saved custom theme name."
   },
   "themeCustomFormNamePlaceholder": {
-    "message": "Beispielthema",
+    "message": "BeispielTheme",
     "description": "Placeholder for saved custom theme name."
   },
   "themeCustomFormRandom": {
@@ -2548,7 +2548,7 @@
     "description": "Button for random saved custom theme name."
   },
   "themeCustomAddHeading": {
-    "message": "Aktuelles Thema speichern",
+    "message": "Aktuelles Theme speichern",
     "description": "Heading for saved custom theme add modal."
   },
   "themeCustomAddSuccessText": {
@@ -2644,7 +2644,7 @@
     "description": "Radio to append to existing bookmarks when restoring from backup data."
   },
   "dataFormThemeIncludeLabel": {
-    "message": "Thema",
+    "message": "Theme",
     "description": "Label to restore theme date from backup data."
   },
   "dataFormThemeIncludeDescription": {
