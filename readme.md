@@ -2,9 +2,9 @@
 
 A neutral new tab page accented with a chosen colour. Customise the layout, style, background and bookmarks in nightTab -- a custom start page.
 
-| [See the demo in action](https://zombiefox.github.io/nightTab/) | [Install nightTab Extension](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [Install nightTab Add On](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [Buy me a coffee](https://www.buymeacoffee.com/zombieFox/) | [Join the community](https://www.reddit.com/r/nighttab/) |
-|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-| [<img src="./src/icon/icon-48.png" width="48px" height="48px">](https://zombiefox.github.io/nightTab/) | [![Chrome](asset/logo/chrome-48.png)](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [![Firefox](asset/logo/firefox-48.png)](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [![coffee](asset/logo/bymeacoffee-48.png)](https://www.buymeacoffee.com/zombieFox/) | [![Reddit](asset/logo/reddit-48.png)](https://www.reddit.com/r/nighttab/) |
+| [Install nightTab Extension](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [Install nightTab Add On](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [Buy me a coffee](https://www.buymeacoffee.com/zombieFox/) | [Join the community](https://www.reddit.com/r/nighttab/) |
+|:-------------:|:-------------:|:-------------:|:-------------:|
+| [![Chrome](asset/logo/chrome-48.png)](https://chrome.google.com/webstore/detail/nighttab/hdpcadigjkbcpnlcpbcohpafiaefanki) | [![Firefox](asset/logo/firefox-48.png)](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/) | [![coffee](asset/logo/bymeacoffee-48.png)](https://www.buymeacoffee.com/zombieFox/) | [![Reddit](asset/logo/reddit-48.png)](https://www.reddit.com/r/nighttab/) |
 
 # Support
 
@@ -37,20 +37,20 @@ A browser addon/extension ready zip will be created in `/dist/extension/`.
 
 # Screenshots
 
-[![nightTab Demo](asset/screenshot/screenshot-001.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-002.png)](https://zombiefox.github.io/nightTab/)
+![nightTab Demo](asset/screenshot/screenshot-001.png)
+![nightTab Demo](asset/screenshot/screenshot-002.png)
 
 ## Example nightTab setups:
 
 - [Where to find these setups](https://github.com/zombieFox/nightTab/tree/main/asset/screenshot)
 - [How to import these setups](https://github.com/zombieFox/nightTab/wiki/Data-backup-and-restore#restore-data)
 
-[![nightTab Demo](asset/screenshot/screenshot-003.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-004.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-005.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-006.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-007.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-008.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-009.gif)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-010.png)](https://zombiefox.github.io/nightTab/)
-[![nightTab Demo](asset/screenshot/screenshot-011.png)](https://zombiefox.github.io/nightTab/)
+![nightTab Demo](asset/screenshot/screenshot-003.png)
+![nightTab Demo](asset/screenshot/screenshot-004.png)
+![nightTab Demo](asset/screenshot/screenshot-005.png)
+![nightTab Demo](asset/screenshot/screenshot-006.png)
+![nightTab Demo](asset/screenshot/screenshot-007.png)
+![nightTab Demo](asset/screenshot/screenshot-008.png)
+![nightTab Demo](asset/screenshot/screenshot-009.gif)
+![nightTab Demo](asset/screenshot/screenshot-010.png)
+![nightTab Demo](asset/screenshot/screenshot-011.png)
