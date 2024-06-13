@@ -6,7 +6,7 @@ import { node } from '../../utility/node';
 import './index.css';
 
 export const DropFile = function ({
-  heading = 'Drop file here',
+  heading = 'Text',
   dropAaction = false,
   enterAction = false,
   leaveAction = false,

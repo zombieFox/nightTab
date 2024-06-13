@@ -141,8 +141,8 @@ export const GroupForm = function({
           form.wrap({
             children: [
               node('div|class:group-form-description', [
-                node(`h2:${message.get('groupFormSectionNameHeading')}`),
-                node(`p:${message.get('groupFormSectionNameDescription')}`)
+                node(`h2:${message.get('groupFormSectionNameHeading') || 'Content'}`),
+                node(`p:${message.get('groupFormSectionNameDescription') || 'Text'}`)
               ])
             ]
           }),
@@ -179,8 +179,8 @@ export const GroupForm = function({
           form.wrap({
             children: [
               node('div|class:group-form-description', [
-                node(`h2:${message.get('groupFormSectionToolbarHeading')}`),
-                node(`p:${message.get('groupFormSectionToolbarDescription')}`)
+                node(`h2:${message.get('groupFormSectionToolbarHeading') || 'Content'}`),
+                node(`p:${message.get('groupFormSectionToolbarDescription') || 'Text'}`)
               ])
             ]
           }),
@@ -208,8 +208,8 @@ export const GroupForm = function({
           form.wrap({
             children: [
               node('div|class:group-form-description', [
-                node(`h2:${message.get('groupFormSectionOrderingHeading')}`),
-                node(`p:${message.get('groupFormSectionOrderingDescription')}`)
+                node(`h2:${message.get('groupFormSectionOrderingHeading') || 'Content'}`),
+                node(`p:${message.get('groupFormSectionOrderingDescription') || 'Text'}`)
               ])
             ]
           }),

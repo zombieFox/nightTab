@@ -46,6 +46,10 @@ export const Link = function ({
               this.element.link.classList.add('button-ring');
               break;
 
+            case 'small':
+              this.element.link.classList.add('button-small');
+              break;
+
           }
         });
 

@@ -384,7 +384,7 @@ data.feedback = {};
 
 data.feedback.empty = {
   render: (feedback) => {
-    feedback.appendChild(node(`p:${message.get('dataFeedbackEmpty')}|class:muted small`));
+    feedback.appendChild(node(`p:${message.get('dataFeedbackEmpty') || 'Text'}|class:muted small`));
   }
 };
 

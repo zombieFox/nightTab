@@ -1,6 +1,7 @@
 import { message } from '../message';
 
 import { Button } from '../button';
+import { Link } from '../link';
 
 import { node } from '../../utility/node';
 import { uppercaseFirstLetter } from '../../utility/uppercaseFirstLetter';
@@ -153,11 +154,17 @@ export const MenuNav = function({
 
         item.sub.forEach((item) => {
 
-          const subLevelLink = node('a:' + message.get(`menuNav${uppercaseFirstLetter(navTop)}SubNav${uppercaseFirstLetter(item)}`) + '|href:#menu-content-item-' + this.makeId(item) + ',class:menu-nav-sub button button-link button-small,tabindex:1');
+          const subLevelLink = new Link({
+            text: message.get(`menuNav${uppercaseFirstLetter(navTop)}SubNav${uppercaseFirstLetter(item)}`),
+            href: '#menu-content-item-' + this.makeId(item),
+            linkButton: true,
+            style: ['link', 'small'],
+            classList: ['menu-nav-sub']
+          });
 
-          subNav.appendChild(subLevelLink);
+          subNav.appendChild(subLevelLink.link());
 
-          navItem.subLevelItem.push(subLevelLink);
+          navItem.subLevelItem.push(subLevelLink.link());
 
         });
 

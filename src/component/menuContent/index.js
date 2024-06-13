@@ -29,7 +29,7 @@ export const MenuContent = function({
     },
     header: (name) => {
       return node('div|class:menu-item-header', [
-        node('h1:' + name + '|class:menu-item-header-text')
+        node('h1:' + (name || 'Content') + '|class:menu-item-header-text')
       ]);
     },
     form: ({ indent = false } = {}) => {

@@ -99,7 +99,7 @@ supportSetting.support = (parent) => {
 
   supportSetting.support.para = node('p');
 
-  supportSetting.support.para.innerHTML = message.get('menuContentSupportPara');
+  supportSetting.support.para.innerHTML = message.get('menuContentSupportPara') || 'Text';
 
   supportSetting.support.linkIssue = new Link({
     text: message.get('menuContentSupportLink1'),

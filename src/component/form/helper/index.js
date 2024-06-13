@@ -3,7 +3,7 @@ import { node } from '../../../utility/node';
 import './index.css';
 
 export const helper = function ({
-  text = 'text',
+  text = 'Text',
   complexText = false,
   classList = []
 } = {}) {

@@ -5,7 +5,7 @@ import { set } from '../../../utility/set';
 
 export const Control_radioGrid = function ({
   radioGroup = [],
-  label = false,
+  label = 'Label',
   object = {},
   groupName = 'group',
   path = false,

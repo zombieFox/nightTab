@@ -13,7 +13,7 @@ export const Control_color = function ({
   object = {},
   path = false,
   id = 'name',
-  labelText = 'Name',
+  labelText = 'Label',
   srOnly = false,
   //FIXME deprecated property
   value = '#000000', //eslint-disable-line

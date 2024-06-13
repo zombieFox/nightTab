@@ -7,7 +7,7 @@ export const Control_checkbox = function ({
   object = {},
   id = 'name',
   path = false,
-  labelText = 'name',
+  labelText = 'Label',
   description = false,
   action = false,
   //FIXME deprecated properties

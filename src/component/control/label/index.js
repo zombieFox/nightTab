@@ -1,7 +1,7 @@
 import * as form from '../../form';
 
 export const Control_label = function({
-  text = 'label',
+  text = 'Label',
   description = false,
   srOnly = false,
   icon = false,

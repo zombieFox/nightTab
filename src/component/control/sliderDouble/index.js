@@ -10,12 +10,12 @@ import { set } from '../../../utility/set';
 
 export const Control_sliderDouble = function ({
   object = {},
-  labelText = 'Name',
+  labelText = 'Label',
   style = false,
   left = {
     path: false,
     id: 'name',
-    labelText: 'Name',
+    labelText: 'Label',
     hue: false,
     value: 0,
     defaultValue: false,
@@ -34,7 +34,7 @@ export const Control_sliderDouble = function ({
   right = {
     path: false,
     id: 'name',
-    labelText: 'Name',
+    labelText: 'Label',
     hue: false,
     value: 0,
     defaultValue: false,

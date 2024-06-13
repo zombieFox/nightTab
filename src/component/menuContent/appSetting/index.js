@@ -13,7 +13,7 @@ const appSetting = {};
 
 appSetting.app = (parent) => {
 
-  appSetting.app.para1 = node(`p:${message.get('menuContentAppPara1')}`);
+  appSetting.app.para1 = node(`p:${message.get('menuContentAppPara1') || 'Text'}`);
 
   appSetting.app.link1 = new Link({
     text: message.get('menuContentAppLink1'),
@@ -21,7 +21,7 @@ appSetting.app = (parent) => {
     openNew: true
   });
 
-  appSetting.app.para2 = node(`p:${message.get('menuContentAppPara2')}`);
+  appSetting.app.para2 = node(`p:${message.get('menuContentAppPara2') || 'Text'}`);
 
   appSetting.app.link2 = new Link({
     text: message.get('menuContentAppLink2'),

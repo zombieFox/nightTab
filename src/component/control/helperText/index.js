@@ -10,7 +10,7 @@ export const Control_helperText = function ({
   text.forEach((item) => {
     this.para.push(form.helper({
       tag: 'p',
-      text: item,
+      text: item || 'Text',
       complexText: complexText
     }));
   });

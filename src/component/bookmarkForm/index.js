@@ -771,8 +771,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node(`h2:${message.get('bookmarkFormSectionVisualHeading')}`),
-              node(`p:${message.get('bookmarkFormSectionVisualDescription')}`)
+              node(`h2:${message.get('bookmarkFormSectionVisualHeading') || 'Content'}`),
+              node(`p:${message.get('bookmarkFormSectionVisualDescription') || 'Text'}`)
             ])
           ]
         }),
@@ -801,8 +801,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node(`h2:${message.get('bookmarkFormSectionAddressHeading')}`),
-              complexNode({ tag: 'p', text: message.get('bookmarkFormSectionAddressDescription'), complexText: true })
+              node(`h2:${message.get('bookmarkFormSectionAddressHeading') || 'Content'}`),
+              complexNode({ tag: 'p', text: message.get('bookmarkFormSectionAddressDescription') || 'Text', complexText: true })
             ])
           ]
         }),
@@ -825,8 +825,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node(`h2:${message.get('bookmarkFormSectionPositionHeading')}`),
-              node(`p:${message.get('bookmarkFormSectionPositionDescription')}`)
+              node(`h2:${message.get('bookmarkFormSectionPositionHeading') || 'Content'}`),
+              node(`p:${message.get('bookmarkFormSectionPositionDescription') || 'Text'}`)
             ])
           ]
         }),
@@ -870,8 +870,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node(`h2:${message.get('bookmarkFormSectionLayoutHeading')}`),
-              node(`p:${message.get('bookmarkFormSectionLayoutDescription')}`)
+              node(`h2:${message.get('bookmarkFormSectionLayoutHeading') || 'Content'}`),
+              node(`p:${message.get('bookmarkFormSectionLayoutDescription') || 'Text'}`)
             ])
           ]
         }),
@@ -917,8 +917,8 @@ export const BookmarkForm = function({
         form.wrap({
           children: [
             node('div|class:bookmark-form-description', [
-              node(`h2:${message.get('bookmarkFormSectionThemeHeading')}`),
-              node(`p:${message.get('bookmarkFormSectionThemeDescription')}`)
+              node(`h2:${message.get('bookmarkFormSectionThemeHeading') || 'Content'}`),
+              node(`p:${message.get('bookmarkFormSectionThemeDescription') || 'Text'}`)
             ])
           ]
         }),

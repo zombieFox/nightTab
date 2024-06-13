@@ -4,7 +4,7 @@ import { complexNode } from '../../../utility/complexNode';
 import './index.css';
 
 export const feedback = ({
-  text = false
+  text = 'Text'
 } = {}) => {
 
   const feedback = node('div|class:form-feedback');

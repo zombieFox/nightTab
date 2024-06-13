@@ -4,7 +4,7 @@ import './index.css';
 
 export const label = ({
   forInput = false,
-  text = 'label',
+  text = 'Label',
   description = false,
   srOnly = false,
   icon = false,
@@ -42,12 +42,12 @@ export const label = ({
     if (Array.isArray(description)) {
 
       description.forEach((item) => {
-        labelBlock.appendChild(node('span:' + item + '|class:label-block-item small muted'));
+        labelBlock.appendChild(node('span:' + (item || 'Description') + '|class:label-block-item small muted'));
       });
 
     } else if (typeof description === 'string') {
 
-      labelBlock.appendChild(node('span:' + description + '|class:label-block-item small muted'));
+      labelBlock.appendChild(node('span:' + (description || 'Description') + '|class:label-block-item small muted'));
 
     }
   }
