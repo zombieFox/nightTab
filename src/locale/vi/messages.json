@@ -264,7 +264,7 @@
     "description": "Radio for light mode."
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Sử dụng ngôn ngữ hệ thống",
+    "message": "Tự động",
     "description": "Radio for automatic light or dark mode."
   },
   "menuContentThemeStyleAutomaticDescription": {

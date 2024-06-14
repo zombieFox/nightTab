@@ -264,7 +264,7 @@
     "description": "Radio for light mode."
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "システム言語を使用する",
+    "message": "自動",
     "description": "Radio for automatic light or dark mode."
   },
   "menuContentThemeStyleAutomaticDescription": {

@@ -264,7 +264,7 @@
     "description": "Radio for light mode."
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "Systemsprache verwenden",
+    "message": "Automatisch",
     "description": "Radio for automatic light or dark mode."
   },
   "menuContentThemeStyleAutomaticDescription": {

@@ -264,7 +264,7 @@
     "description": "Radio for light mode."
   },
   "menuContentThemeStyleAutomaticLabel": {
-    "message": "সিস্টেম ভাষা ব্যবহার করুন",
+    "message": "স্বয়ংক্রিয়",
     "description": "Radio for automatic light or dark mode."
   },
   "menuContentThemeStyleAutomaticDescription": {
