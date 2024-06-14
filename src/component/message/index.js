@@ -4,7 +4,7 @@ import { browserDetect } from '../browserDetect';
 
 // import { default as bn } from '../../locale/bn/messages.json';
 // import { default as de } from '../../locale/de/messages.json';
-// import { default as en_GB } from '../../locale/en_GB/messages.json';
+import { default as en_GB } from '../../locale/en_GB/messages.json';
 // import { default as en_US } from '../../locale/en_US/messages.json';
 // import { default as es } from '../../locale/es/messages.json';
 // import { default as fil } from '../../locale/fil/messages.json';
@@ -24,6 +24,7 @@ const message = {};
 
 message.language = {
   // pack: { bn, de, en_GB, en_US, es, fil, fr, gu, hi, id, it, ja, ms, pt, ru, uk, vi }
+  pack: { en_GB }
 };
 
 // message.language.list = () => {
@@ -82,6 +83,10 @@ message.get = (stringId) => {
 
       string = chrome.i18n.getMessage(stringId);
 
+    } else {
+
+      string = message.language.pack.en_GB[stringId].message;
+
     }
 
   } else if (browserDetect().firefox && typeof browser != 'undefined') {
@@ -91,6 +96,10 @@ message.get = (stringId) => {
       // if installed as addon
 
       string = browser.i18n.getMessage(stringId);
+
+    } else {
+
+      string = message.language.pack.en_GB[stringId].message;
 
     }
 
