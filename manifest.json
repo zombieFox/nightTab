@@ -1,0 +1,17 @@
+{
+  "name": "__MSG_appName__",
+  "short_name": "__MSG_appShortName__",
+  "description": "__MSG_appDescription__",
+  "version": "7.5.0",
+  "manifest_version": 3,
+  "default_locale": "en_GB",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "icons": {
+    "16": "icon/icon-16.png",
+    "48": "icon/icon-48.png",
+    "128": "icon/icon-128.png",
+    "512": "icon/icon-512.png"
+  }
+}

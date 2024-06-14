@@ -1,0 +1,31 @@
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .cross {
+      fill: #ffffff;
+    }
+    .circle {
+      fill: #000000;
+    }
+
+    @media (prefers-color-scheme: light) {
+      .cross {
+        fill: #ffffff;
+      }
+      .circle {
+        fill: #000000;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .cross {
+        fill: #000000;
+      }
+      .circle {
+        fill: #ffffff;
+      }
+    }
+  </style>
+  <circle cx="8" cy="8" r="8" class="circle"/>
+  <path d="M11.6875 7H4.3125C4.13991 7 4 7.13991 4 7.3125V8.6875C4 8.86009 4.13991 9 4.3125 9H11.6875C11.8601 9 12 8.86009 12 8.6875V7.3125C12 7.13991 11.8601 7 11.6875 7Z" class="cross"/>
+  <path d="M8.6875 4H7.3125C7.13991 4 7 4.13991 7 4.3125V11.6875C7 11.8601 7.13991 12 7.3125 12H8.6875C8.86009 12 9 11.8601 9 11.6875V4.3125C9 4.13991 8.86009 4 8.6875 4Z" class="cross"/>
+</svg>
