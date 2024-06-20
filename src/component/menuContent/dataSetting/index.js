@@ -56,6 +56,8 @@ dataSetting.restore = (parent) => {
 
   dataSetting.control.restore.feedback = form.feedback();
 
+  data.feedback.clear.render(dataSetting.control.restore.feedback);
+
   data.feedback.empty.render(dataSetting.control.restore.feedback);
 
   dataSetting.control.restore.drop = new DropFile({
