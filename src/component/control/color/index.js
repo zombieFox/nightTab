@@ -15,8 +15,7 @@ export const Control_color = function ({
   id = 'name',
   labelText = 'Label',
   srOnly = false,
-  //FIXME deprecated property
-  value = '#000000', //eslint-disable-line
+  value = '#000000',
   defaultValue = false,
   action = false,
   randomColor = false,

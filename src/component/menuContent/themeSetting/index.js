@@ -1782,6 +1782,7 @@ themeSetting.layout = (parent) => {
     labelText: message.get('menuContentThemeLayoutColorColor'),
     defaultValue: state.get.default().theme.layout.color.rgb,
     minMaxObject: state.get.minMax(),
+    randomColor: true,
     action: () => {
       applyCSSVar([
         'theme.layout.color.rgb.r',
@@ -1919,6 +1920,7 @@ themeSetting.header = (parent) => {
     labelText: message.get('menuContentThemeHeaderColorColor'),
     defaultValue: state.get.default().theme.header.color.rgb,
     minMaxObject: state.get.minMax(),
+    randomColor: true,
     action: () => {
       applyCSSVar([
         'theme.header.color.rgb.r',
@@ -2008,6 +2010,7 @@ themeSetting.bookmark = (parent) => {
     labelText: message.get('menuContentThemeBookmarkColorColor'),
     defaultValue: state.get.default().theme.bookmark.color.rgb,
     minMaxObject: state.get.minMax(),
+    randomColor: true,
     action: () => {
       applyCSSVar([
         'theme.bookmark.color.rgb.r',
