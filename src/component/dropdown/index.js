@@ -174,9 +174,7 @@ export const Dropdown = function({
 
         dropdownMenuButton.button.addEventListener('click', () => {
 
-          if (item.action()) {
-            item.action();
-          }
+          if (item.action) { item.action(); }
 
           this.close();
 
