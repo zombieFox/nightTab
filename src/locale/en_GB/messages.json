@@ -15,6 +15,10 @@
     "message": "Debug",
     "description": "Label for the settings menu navigation."
   },
+  "menuNavDebugSubNavShowcase": {
+    "message": "Showcase",
+    "description": "Label for the settings menu navigation."
+  },
   "menuNavDebugSubNavInput": {
     "message": "Input",
     "description": "Label for the settings menu navigation."

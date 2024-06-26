@@ -1,8 +1,10 @@
 import { data } from '../../data';
+import { menu } from '../../menu';
 import { bookmark } from '../../bookmark';
 import { group } from '../../group';
 import { icon } from '../../icon';
 import { layout } from '../../layout';
+import { showcase } from '../../showcase';
 import { groupAndBookmark } from '../../groupAndBookmark';
 import { fontawesome } from '../../fontawesome';
 
@@ -30,10 +32,30 @@ debugSetting.state = {
 };
 
 debugSetting.control = {
+  showcase: {},
   input: {},
   button: {},
   bookmark: {},
   icon: {}
+};
+
+debugSetting.showcase = (parent) => {
+
+  debugSetting.control.showcase.start = new Button({
+    text: 'Showcase controls',
+    func: () => {
+      menu.close();
+      layout.area.remove();
+      showcase.area.render();
+    }
+  });
+
+  parent.appendChild(
+    node('div', [
+      debugSetting.control.showcase.start.wrap()
+    ])
+  );
+
 };
 
 debugSetting.input = (parent) => {
@@ -58,7 +80,7 @@ debugSetting.input = (parent) => {
         { id: 'input-radio-b-b', labelText: 'B B', value: 'b' },
         { id: 'input-radio-b-c', labelText: 'B C', value: 'c' }
       ],
-      label: 'Radio group',
+      label: 'Radio group B',
       groupName: 'input-radio-b',
       path: 'input.radio.b',
       action: () => { console.log(debugSetting.state); }

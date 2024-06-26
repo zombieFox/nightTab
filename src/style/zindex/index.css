@@ -1,6 +1,7 @@
 :root {
   --z-index-background: 1000;
   --z-index-layout: 2000;
+  --z-index-showcase: 2000;
   --z-index-toolbar: 3000;
   --z-index-edge: 4000;
   --z-index-dropdown: 5000;

@@ -1,0 +1,6 @@
+.showcase {
+  padding: 2em;
+  width: 70vw;
+  min-height: 100vh;
+  z-index: var(--z-index-showcase);
+}
