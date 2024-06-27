@@ -10,6 +10,7 @@ import { AccentPresetButton } from '../accentPresetButton';
 import { Alert } from '../alert';
 import { Link } from '../link';
 import { Dropdown } from '../dropdown';
+import { ShadeBar } from '../shadeBar';
 
 import { Control_helperText } from '../control/helperText';
 import { Control_radio } from '../control/radio';
@@ -61,8 +62,8 @@ showcase.area.assemble = () => {
   showcase.control.style = new Control_radio({
     object: state.get.current(),
     radioGroup: [
-      { id: 'theme-style-dark', labelText: 'Dark mode', value: 'dark' },
-      { id: 'theme-style-light', labelText: 'Light mode', value: 'light' },
+      { id: 'theme-style-dark', labelText: 'Dark', value: 'dark' },
+      { id: 'theme-style-light', labelText: 'Light', value: 'light' },
       { id: 'theme-style-system', labelText: 'Automatic', value: 'system' }
     ],
     groupName: 'theme-style',
@@ -173,6 +174,7 @@ showcase.area.assemble = () => {
 
   showcase.element.showcase.appendChild(
     node('div|class:showcase-theme', [
+      new ShadeBar().shadeBar(),
       showcase.control.style.inline(),
       showcase.control.colour.range.primary.h.wrap(),
       showcase.control.colour.range.primary.s.wrap(),
@@ -183,36 +185,35 @@ showcase.area.assemble = () => {
   );
 
   showcase.element.showcase.appendChild(
-    node('div|class:showcase-button', [
-      node('div|class:showcase-button-style', [
-        node('div|class:form-inline form-inline-horizontal form-inline-gap-small form-inline-justify-left form-inline-wrap', [
-          new Button({ text: 'Button' }).wrap(),
-          new Button({ text: 'Button link', style: ['link'] }).wrap(),
-          new Button({ text: 'Button line', style: ['line'] }).wrap(),
-          new Button({ text: 'Button ring', style: ['ring'] }).wrap(),
-        ]),
-      ]),
-      node('div|class:showcase-button-size', [
-        node('div|class:form-inline form-inline-horizontal form-inline-gap-small form-inline-justify-left form-inline-wrap', [
-          new Button({ text: 'Button small', style: ['line'], size: 'small' }).wrap(),
-          new Button({ text: 'Button medium', style: ['line'] }).wrap(),
-          new Button({ text: 'Button large', style: ['line'], size: 'large' }).wrap(),
-        ])
-      ])
-    ])
-  );
-
-  showcase.element.showcase.appendChild(
     node('div|class:showcase-form', [
-      new Dropdown({
-        text: 'Dropdown',
-        buttonStyle: ['line'],
-        iconName: 'add',
-        menuItem: [
-          { text: 'One', iconName: 'addGroup' },
-          { text: 'Two', iconName: 'addBookmark' }
-        ]
-      }).toggle
+      node('div|class:showcase-button', [
+        node('div|class:showcase-button-style', [
+          node('div|class:form-inline form-inline-horizontal form-inline-gap-small form-inline-justify-left form-inline-wrap', [
+            new Button({ text: 'Button' }).wrap(),
+            new Button({ text: 'Button line', style: ['line'] }).wrap(),
+            new Button({ text: 'Button ring', style: ['ring'] }).wrap(),
+          ]),
+        ]),
+        node('div|class:showcase-button-size', [
+          node('div|class:form-inline form-inline-horizontal form-inline-gap-small form-inline-justify-left form-inline-wrap', [
+            new Button({ text: 'Button small', style: ['line'], size: 'small' }).wrap(),
+            new Button({ text: 'Button medium', style: ['line'] }).wrap(),
+            new Button({ text: 'Button large', style: ['line'], size: 'large' }).wrap(),
+          ])
+        ])
+      ]),
+      node('div|class:showcase-dropdown', [
+        new Dropdown({
+          text: 'Dropdown',
+          buttonStyle: ['line'],
+          iconName: 'add',
+          persist: true,
+          menuItem: [
+            { text: 'One', iconName: 'addGroup' },
+            { text: 'Two', iconName: 'addBookmark' }
+          ]
+        }).toggle
+      ])
     ])
   );
 

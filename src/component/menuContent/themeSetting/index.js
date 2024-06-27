@@ -24,6 +24,7 @@ import { PresetThemeTile } from '../../presetThemeTile';
 import { AccentPresetButton } from '../../accentPresetButton';
 import { Alert } from '../../alert';
 import { Link } from '../../link';
+import { ShadeBar } from '../../shadeBar';
 
 import { Control_helperText } from '../../control/helperText';
 import { Control_radio } from '../../control/radio';
@@ -409,36 +410,6 @@ themeSetting.style = (parent) => {
 
 themeSetting.color = (parent) => {
 
-  const shade = () => {
-
-    const formSticky = form.sticky();
-
-    const formGroup = form.group({
-      block: true,
-      border: true
-    });
-
-    const shadeCount = state.get.current().theme.color.shades;
-
-    for (var i = 1; i <= shadeCount; i++) {
-      let count = i;
-
-      if (count < 10) {
-        count = '0' + count;
-      }
-
-      formGroup.appendChild(
-        node('div|class:form-group-text form-group-text-borderless', [
-          node('div|class:theme-color-box theme-color-shade-' + count + '')
-        ])
-      );
-    }
-
-    formSticky.appendChild(formGroup);
-
-    return formSticky;
-  };
-
   themeSetting.control.color = {
     range: {
       primary: {
@@ -524,7 +495,9 @@ themeSetting.color = (parent) => {
 
   parent.appendChild(
     node('div', [
-      shade(),
+      form.sticky({
+        children: [new ShadeBar().shadeBar()]
+      }),
       themeSetting.control.color.shade.helper.wrap(),
       node('hr'),
       themeSetting.control.color.range.primary.h.wrap(),

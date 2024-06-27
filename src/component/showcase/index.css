@@ -1,6 +1,12 @@
 .showcase {
-  padding: 2em;
-  width: 70vw;
+  padding: 4em;
+  width: 100vw;
   min-height: 100vh;
   z-index: var(--z-index-showcase);
+}
+
+.showcase {
+  display: grid;
+  gap: 4em;
+  grid-template-columns: 2fr 5fr;
 }
