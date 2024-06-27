@@ -12,7 +12,8 @@ export const Dropdown = function({
   buttonStyle = [],
   buttonClassList = [],
   srOnly = false,
-  iconName = false
+  iconName = false,
+  persist = false
 } = {}) {
 
   this.state = {
@@ -55,6 +56,8 @@ export const Dropdown = function({
 
     this.state.open = true;
 
+    this.element.toggle.button.classList.add('active');
+
     const body = document.querySelector('body');
 
     body.appendChild(this.element.menu);
@@ -68,6 +71,8 @@ export const Dropdown = function({
   this.close = () => {
 
     this.state.open = false;
+
+    this.element.toggle.button.classList.remove('active');
 
     const body = document.querySelector('body');
 
@@ -120,9 +125,13 @@ export const Dropdown = function({
 
     const path = event.path || (event.composedPath && event.composedPath());
 
-    if (!path.includes(this.element.toggle.button) && !path.includes(this.element.menu)) {
+    if (!persist) {
 
-      this.close();
+      if (!path.includes(this.element.toggle.button) && !path.includes(this.element.menu)) {
+
+        this.close();
+
+      }
 
     }
 
@@ -176,7 +185,7 @@ export const Dropdown = function({
 
           if (item.action) { item.action(); }
 
-          this.close();
+          if (!persist) { this.close(); }
 
         });
 
