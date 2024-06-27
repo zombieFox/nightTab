@@ -38,6 +38,7 @@ showcase.control = {
   style: {},
   colour: {},
   accent: {},
+  shadow: {},
   radius: {}
 };
 
@@ -77,11 +78,11 @@ showcase.area.assemble = () => {
   showcase.control.colour = {
     range: {
       primary: {
-        h: new Control_slider({
+        h: new Control_sliderSlim({
           object: state.get.current(),
           path: 'theme.color.range.primary.h',
           id: 'theme-color-range-primary-h',
-          labelText: 'Primary colour',
+          labelText: 'Hue',
           value: state.get.current().theme.color.range.primary.h,
           defaultValue: state.get.default().theme.color.range.primary.h,
           min: state.get.minMax().theme.color.range.primary.h.min,
@@ -91,7 +92,7 @@ showcase.area.assemble = () => {
             theme.color.render();
           }
         }),
-        s: new Control_slider({
+        s: new Control_sliderSlim({
           object: state.get.current(),
           path: 'theme.color.range.primary.s',
           id: 'theme-color-range-primary-s',
@@ -158,11 +159,25 @@ showcase.area.assemble = () => {
     }
   });
 
-  showcase.control.radius = new Control_slider({
+  showcase.control.shadow = new Control_sliderSlim({
+    object: state.get.current(),
+    path: 'theme.shadow',
+    id: 'theme-shadow',
+    labelText: 'Shadow',
+    value: state.get.current().theme.shadow,
+    defaultValue: state.get.default().theme.shadow,
+    min: state.get.minMax().theme.shadow.min,
+    max: state.get.minMax().theme.shadow.max,
+    action: () => {
+      applyCSSVar('theme.shadow');
+    }
+  });
+
+  showcase.control.radius = new Control_sliderSlim({
     object: state.get.current(),
     path: 'theme.radius',
     id: 'theme-radius',
-    labelText: 'Corner radius',
+    labelText: 'Radius',
     value: state.get.current().theme.radius,
     defaultValue: state.get.default().theme.radius,
     min: state.get.minMax().theme.radius.min,
@@ -180,6 +195,7 @@ showcase.area.assemble = () => {
       showcase.control.colour.range.primary.s.wrap(),
       showcase.control.colour.contrast.wrap(),
       showcase.control.accent.wrap(),
+      showcase.control.shadow.wrap(),
       showcase.control.radius.wrap(),
     ])
   );
